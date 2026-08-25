@@ -28,11 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_storage_period
  * @description
  *
- * Information object `ms_storage_period`. This general-attribute indicates the period,
- * in seconds, for which the MS-user anticipates that storage of the entry will be
- * required, relative to its creation-time. An entry becomes subject to deletion by the
- * Auto-delete auto-action when its storage-period expires (see 13.4). See ITU-T X.413
- * (1999), §11.2.78.
+ * This general-attribute indicates the period, in seconds, for which the MS-user
+ * anticipates that storage of the entry will be required, relative to its creation-time.
+ * An entry becomes subject to deletion by the Auto-delete auto-action when its
+ * storage-period expires (see 13.4). See ITU-T X.413 (1999), §11.2.78.
  *
  * ### ASN.1 Definition:
  *

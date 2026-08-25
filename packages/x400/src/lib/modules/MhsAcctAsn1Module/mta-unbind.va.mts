@@ -18,8 +18,8 @@ import {
  * @summary mta_unbind
  * @description
  *
- * `mta_unbind`. The MTA-bind enables an MTA to establish an association with another
- * MTA. Abstract-operations other than MTA-bind can only be invoked in the context of an
+ * The MTA-bind enables an MTA to establish an association with another MTA.
+ * Abstract-operations other than MTA-bind can only be invoked in the context of an
  * established association. See ITU-T X.411 (1999), §11.1.
  *
  * ### ASN.1 Definition:

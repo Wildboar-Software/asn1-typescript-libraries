@@ -19,7 +19,7 @@ import { id_pro } from '../MHSRoutingObjectIdentifiers/id-pro.va.mjs';
  * @summary id_pro_x445
  * @description
  *
- * OBJECT IDENTIFIER `id_pro_x445`. Defined in ITU-T X.412 (1999) (Annex A).
+ * Defined in ITU-T X.412 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -15,8 +15,7 @@ import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_defaultDeliveryControlsPackage
  * @description
  *
- * OBJECT IDENTIFIER `id_package_defaultDeliveryControlsPackage`. Defined in ITU-T X.411
- * (1999) (MTA managed objects).
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

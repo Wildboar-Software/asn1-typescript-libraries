@@ -26,7 +26,7 @@ import { id_dat_edi_name } from '../EDIMUseOfDirectory/id-dat-edi-name.va.mjs';
  * @summary edi_name
  * @description
  *
- * Information object `edi_name`. Defined in ITU-T X.435 (1999) (§16).
+ * Defined in ITU-T X.435 (1999) (§16).
  *
  * ### ASN.1 Definition:
  *

@@ -15,7 +15,7 @@ import { id_dat } from '../EDIMUseOfDirectory/id-dat.va.mjs';
  * @summary id_dat_edi_name
  * @description
  *
- * OBJECT IDENTIFIER `id_dat_edi_name`. Defined in ITU-T X.435 (1999) (§16).
+ * Defined in ITU-T X.435 (1999) (§16).
  *
  * ### ASN.1 Definition:
  *

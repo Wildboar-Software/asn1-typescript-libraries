@@ -27,9 +27,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_per_message_indicators
  * @description
  *
- * Information object `mt_per_message_indicators`. This general-attribute comprises
- * various arguments of the Message-submission and (for the first two arguments) the
- * Probe-submission abstract-operations. These include the
+ * This general-attribute comprises various arguments of the Message-submission and (for
+ * the first two arguments) the Probe-submission abstract-operations. These include the
  * implicit-conversion-prohibited, alternate-recipient-allowed,
  * disclosure-of-other-recipients, and content-return-request arguments. See ITU-T X.413
  * (1999), §11.2.57.

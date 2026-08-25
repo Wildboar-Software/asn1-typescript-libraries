@@ -15,8 +15,8 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_ipn_originator
  * @description
  *
- * OBJECT IDENTIFIER `id_nat_ipn_originator`. The Originator heading field (O) identifies
- * the IPM's originator. It comprises an OR-descriptor. See ITU-T X.420 (1999), §7.2.2.
+ * The Originator heading field (O) identifies the IPM's originator. It comprises an
+ * OR-descriptor. See ITU-T X.420 (1999), §7.2.2.
  *
  * ### ASN.1 Definition:
  *

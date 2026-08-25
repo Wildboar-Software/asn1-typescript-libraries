@@ -46,12 +46,11 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary ms_message_submission
  * @description
  *
- * Information object `ms_message_submission`. When the MS-user invokes the
- * MS-message-submission abstract-operation, the MS performs the following actions: a) If
- * a security-policy is in force, then to ensure that such a security-policy is not
- * violated during MS-message- submission, the message-security-label is checked against
- * the security-context by the MS. If the MS- message-submission is barred either by the
- * security-policy or by temporary security… See ITU-T X.413 (1999), §16.2.1.
+ * When the MS-user invokes the MS-message-submission abstract-operation, the MS performs
+ * the following actions: a) If a security-policy is in force, then to ensure that such a
+ * security-policy is not violated during MS-message- submission, the
+ * message-security-label is checked against the security-context by the MS. See ITU-T
+ * X.413 (1999), §16.
  *
  * ### ASN.1 Definition:
  *

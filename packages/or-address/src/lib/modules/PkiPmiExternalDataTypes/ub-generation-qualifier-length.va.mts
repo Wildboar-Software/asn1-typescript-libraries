@@ -5,8 +5,7 @@ import { INTEGER } from "@wildboar/asn1";
  * @summary ub_generation_qualifier_length
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_generation_qualifier_length`. Defined in ITU-T X.402
- * (1999) (§18).
+ * Defined in ITU-T X.402 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

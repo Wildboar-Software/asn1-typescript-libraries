@@ -37,11 +37,7 @@ import {
  * @summary SummarizeArgument
  * @description
  *
- * `SummarizeArgument`.  The
- * parameters of summarize-argument have the following meaning: a) Entry-class (O): This
- * specifies which… See ITU-T X.413 (1999), §8.2.1.1. SEQUENCE SIZE (1..…): omit this
- * component rather than encode an empty SEQUENCE. ASN.1 DEFAULT `delivery`: that value
- * is assumed when the component is absent (do not encode the default unless required).
+ * See ITU-T X.413 (1999), §8.2.1.1.
  *
  * ### ASN.1 Definition:
  *

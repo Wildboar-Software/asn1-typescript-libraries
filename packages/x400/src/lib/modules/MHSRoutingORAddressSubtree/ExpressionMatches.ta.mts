@@ -19,11 +19,9 @@ import {
  * @summary ExpressionMatches
  * @description
  *
- * `ExpressionMatches`. The Expression Matches attribute type, which is single-valued,
- * contains information which enables a routing-MTA to relate routing-advice to an
- * OR-address that satisfies an OR-address pattern match expression. expressionMatches
- *  See ITU-T X.412 (1999), §8.2.2. SEQUENCE OF: element
- * order is significant unless the using specification says otherwise.
+ * The Expression Matches attribute type, which is single-valued, contains information
+ * which enables a routing-MTA to relate routing-advice to an OR-address that satisfies an
+ * OR-address pattern match expression. expressionMatches See ITU-T X.412 (1999), §8.2.2.
  *
  * ### ASN.1 Definition:
  *

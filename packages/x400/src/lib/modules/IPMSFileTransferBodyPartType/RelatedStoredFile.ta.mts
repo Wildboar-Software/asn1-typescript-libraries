@@ -19,13 +19,10 @@ import {
  * @summary RelatedStoredFile
  * @description
  *
- * `RelatedStoredFile`. The related stored file parameter indicates to the recipient any
- * intended relationship between the file in this body part and any file(s) held by the
- * recipient. Stored files may be identified either by pathname or by reference to
- * previous MHS messages sent. See ITU-T X.420 (1999), §7.4.12.1. SET OF: order is
- * insignificant; duplicates are typically meaningless. ASN.1 DEFAULT
- * `explicit-relationship`: that value is assumed when the component is absent (do not
- * encode the default unless required).
+ * The related stored file parameter indicates to the recipient any intended relationship
+ * between the file in this body part and any file(s) held by the recipient. Stored files
+ * may be identified either by pathname or by reference to previous MHS messages sent. See
+ * ITU-T X.420 (1999), §7.4.12.1.
  *
  * ### ASN.1 Definition:
  *

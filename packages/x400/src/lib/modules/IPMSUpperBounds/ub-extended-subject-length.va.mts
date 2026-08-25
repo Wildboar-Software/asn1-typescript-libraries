@@ -15,8 +15,7 @@ import {
  * @summary ub_extended_subject_length
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_extended_subject_length`. Defined in ITU-T X.420 (1999)
- * (Annex B).
+ * Defined in ITU-T X.420 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

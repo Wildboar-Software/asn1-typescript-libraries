@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Document_Type_Name
  * @description
  *
- * `Document_Type_Name`. Defined in ITU-T X.420 (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

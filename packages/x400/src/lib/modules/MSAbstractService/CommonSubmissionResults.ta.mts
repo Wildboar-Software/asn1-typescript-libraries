@@ -30,10 +30,7 @@ import {
  * @summary CommonSubmissionResults
  * @description
  *
- * `CommonSubmissionResults`. The common-submission-results parameter contains
- * information common to the results of the MS-message-submission and MS-probe-submission
- *  The components
- * of common-submission-results have the… See ITU-T X.413 (1999), §8.1.7.
+ * See ITU-T X.413 (1999), §8.
  *
  * ### ASN.1 Definition:
  *

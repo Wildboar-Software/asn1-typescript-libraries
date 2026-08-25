@@ -14,7 +14,7 @@ import { type ROS_OBJECT_CLASS } from '@wildboar/rose';
  * @summary MHS_OBJECT
  * @description
  *
- * Information object class `MHS_OBJECT`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

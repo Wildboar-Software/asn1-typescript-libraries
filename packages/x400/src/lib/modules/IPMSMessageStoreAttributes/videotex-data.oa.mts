@@ -26,7 +26,7 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary videotex_data
  * @description
  *
- * Information object `videotex_data`. Defined in ITU-T X.420 (1999) (§20).
+ * Defined in ITU-T X.420 (1999) (§20).
  *
  * ### ASN.1 Definition:
  *

@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MSGeneralAutoActionTypes` (ITU-T X.413 (1999), §12).
+ * ASN.1 module from ITU-T X.413 (1999), §12.
  */
 export * from "./AlertDestination.ta.mjs";
 export * from "./AutoActionErrorTable.osa.mjs";

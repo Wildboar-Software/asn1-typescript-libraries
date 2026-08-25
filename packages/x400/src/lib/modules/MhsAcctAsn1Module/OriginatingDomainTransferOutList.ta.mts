@@ -19,8 +19,7 @@ import {
  * @summary OriginatingDomainTransferOutList
  * @description
  *
- * `OriginatingDomainTransferOutList`. Defined in ITU-T X.411 (1999) (accounting
- * objects). SET OF: order is insignificant; duplicates are typically meaningless.
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

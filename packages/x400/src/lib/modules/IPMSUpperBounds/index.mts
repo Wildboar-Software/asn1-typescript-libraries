@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `IPMSUpperBounds` (ITU-T X.420 (1999), Annex B).
+ * ASN.1 module from ITU-T X.420 (1999), Annex B.
  */
 export * from "./index.mjs";
 export * from "./ub-alpha-code-length.va.mjs";

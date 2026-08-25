@@ -24,8 +24,7 @@ import {
  * @summary SequenceNumberError_problems_Item
  * @description
  *
- * `SequenceNumberError_problems_Item`. Defined in ITU-T X.411 (1999) (accounting
- * objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

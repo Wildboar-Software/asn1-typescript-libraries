@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LocalIdentifier
  * @description
  *
- * `LocalIdentifier`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

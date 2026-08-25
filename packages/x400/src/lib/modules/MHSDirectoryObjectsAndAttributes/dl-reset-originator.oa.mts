@@ -18,8 +18,7 @@ import { type CONTEXT } from '@wildboar/x500/InformationFramework';
  * @summary dl_reset_originator
  * @description
  *
- * Information object `dl_reset_originator`. Defined in ITU-T X.402 (1999) (§17 / Annex
- * A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

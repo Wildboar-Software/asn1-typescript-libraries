@@ -24,9 +24,8 @@ import {
  * @summary PrimaryBodyPart
  * @description
  *
- * `PrimaryBodyPart`. Some attributes bear the names of the Primary Body Part types and
- * have such body parts as their values. See 8.3.1 for semantics. See ITU-T X.435 (1999),
- * §18.8.4.3.
+ * Some attributes bear the names of the Primary Body Part types and have such body parts
+ * as their values. See 8.3.1 for semantics. See ITU-T X.435 (1999), §18.8.4.3.
  *
  * ### ASN.1 Definition:
  *

@@ -24,7 +24,7 @@ import {
  * @summary content_body_part_data
  * @description
  *
- * Information object `content_body_part_data`. Defined in ITU-T X.420 (1999) (§7.3).
+ * Defined in ITU-T X.420 (1999) (§7.3).
  *
  * ### ASN.1 Definition:
  *

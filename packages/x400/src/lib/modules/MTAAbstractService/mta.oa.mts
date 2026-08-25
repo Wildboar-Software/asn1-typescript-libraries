@@ -16,7 +16,7 @@ import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
  * @summary mta
  * @description
  *
- * Information object `mta`. Defined in ITU-T X.411 (1999) (§12).
+ * Defined in ITU-T X.411 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

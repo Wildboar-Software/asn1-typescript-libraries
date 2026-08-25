@@ -27,11 +27,7 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_report
  * @description
  *
- * Information object `receive_report`. The Receive Report abstract operation receives a
- * report. The
- * report received may concern any of the following previously originated by the report’s
- * recipient: a) A message whose content was an EDIM that was originated with the
- * Originate EDIM abstract operation or by… See ITU-T X.435 (1999), §12.2.1.
+ * The Receive Report abstract operation receives a report. See ITU-T X.435 (1999), §12.
  *
  * ### ASN.1 Definition:
  *

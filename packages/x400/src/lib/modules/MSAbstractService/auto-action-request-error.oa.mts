@@ -28,11 +28,8 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary auto_action_request_error
  * @description
  *
- * Information object `auto_action_request_error`. An Auto-action-request-error reports a
- * problem related to the registration of an auto-action. auto-action-request-error
- *  See ITU-T X.413 (1999), §9.3. SET
- * SIZE (1..…): omit this component rather than encode an empty SET; SET order is
- * insignificant.
+ * An Auto-action-request-error reports a problem related to the registration of an
+ * auto-action. auto-action-request-error See ITU-T X.413 (1999), §9.3. ;
  *
  * ### ASN.1 Definition:
  *

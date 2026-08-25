@@ -1,8 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MHSDirectoryObjectsAndAttributes` (ITU-T X.402 (1999), §17
- * / Annex A).
+ * ASN.1 module from ITU-T X.402 (1999), §17 / Annex A.
  */
 export * from "./addressCapabilitiesMatch.oa.mjs";
 export * from "./AddressCapabilities.ta.mjs";

@@ -19,7 +19,7 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  * @summary id_at_member_mta
  * @description
  *
- * OBJECT IDENTIFIER `id_at_member_mta`. Defined in ITU-T X.412 (1999) (Annex A).
+ * Defined in ITU-T X.412 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

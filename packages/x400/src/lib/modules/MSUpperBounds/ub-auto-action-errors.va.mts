@@ -15,12 +15,11 @@ import {
  * @summary ub_auto_action_errors
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_auto_action_errors`. The Auto-action-log entry-class
- * provides a record of the auto-actions performed by the MS (see 6.3.7.3), and is
- * available to the MS-user subject to subscription. The definition of an
- * auto-action-type specifies whether execution of that auto- action may result in the
- * generation of an entry in the Auto-action-log entry-class. See ITU-T X.413 (1999),
- * §6.5.3.
+ * The Auto-action-log entry-class provides a record of the auto-actions performed by the
+ * MS (see 6.3.7.3), and is available to the MS-user subject to subscription. The
+ * definition of an auto-action-type specifies whether execution of that auto- action may
+ * result in the generation of an entry in the Auto-action-log entry-class. See ITU-T X.413
+ * (1999), §6.5.3.
  *
  * ### ASN.1 Definition:
  *

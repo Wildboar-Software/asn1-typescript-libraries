@@ -16,9 +16,9 @@ import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED
  * @summary file_transfer_body_part
  * @description
  *
- * Information object `file_transfer_body_part`. The data component of the body part
- * contains the file contents being transferred. The syntax for representation of these
- * contents is implied by the contents-type parameter. See ITU-T X.420 (1999), §7.4.12.7.
+ * The data component of the body part contains the file contents being transferred. The
+ * syntax for representation of these contents is implied by the contents-type parameter.
+ * See ITU-T X.420 (1999), §7.4.12.7.
  *
  * ### ASN.1 Definition:
  *

@@ -18,7 +18,7 @@ import {
  * @summary op_message_submission
  * @description
  *
- * `op_message_submission`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

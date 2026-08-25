@@ -15,8 +15,7 @@ import { id_accounting } from '../MhsAcctObjectIdentifiers/id-accounting.va.mjs'
  * @summary id_attribute_group
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_group`. Defined in ITU-T X.411 (1999) (accounting
- * objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

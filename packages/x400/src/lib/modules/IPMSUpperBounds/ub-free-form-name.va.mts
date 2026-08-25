@@ -15,8 +15,7 @@ import {
  * @summary ub_free_form_name
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_free_form_name`. Defined in ITU-T X.420 (1999) (Annex
- * B).
+ * Defined in ITU-T X.420 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

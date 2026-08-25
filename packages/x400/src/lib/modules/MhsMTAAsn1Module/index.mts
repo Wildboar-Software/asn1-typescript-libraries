@@ -1,8 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MhsMTAAsn1Module` (ITU-T X.411 (1999), MTA managed
- * objects).
+ * ASN.1 module from ITU-T X.411 (1999), MTA managed objects.
  */
 export * from "./ApplicationContexts.ta.mjs";
 export * from "./ApplicationContext.ta.mjs";

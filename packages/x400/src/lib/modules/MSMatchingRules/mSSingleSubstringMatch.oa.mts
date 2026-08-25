@@ -20,8 +20,7 @@ import { id_mr_ms_single_substring_match } from '../MSObjectIdentifiers/id-mr-ms
  * @summary mSSingleSubstringMatch
  * @description
  *
- * Information object `mSSingleSubstringMatch`. Defined in ITU-T X.413 (1999) (§12.4 /
- * §13).
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
  *
  * ### ASN.1 Definition:
  *

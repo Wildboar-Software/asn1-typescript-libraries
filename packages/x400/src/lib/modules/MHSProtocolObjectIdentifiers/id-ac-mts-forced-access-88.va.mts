@@ -19,8 +19,7 @@ import { id_ac } from '../MHSProtocolObjectIdentifiers/id-ac.va.mjs';
  * @summary id_ac_mts_forced_access_88
  * @description
  *
- * OBJECT IDENTIFIER `id_ac_mts_forced_access_88`. Defined in ITU-T X.419 (1999) (Annex
- * A).
+ * Defined in ITU-T X.419 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

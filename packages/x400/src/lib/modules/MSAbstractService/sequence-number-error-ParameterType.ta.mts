@@ -19,7 +19,7 @@ import {
  * @summary sequence_number_error_ParameterType
  * @description
  *
- * `sequence_number_error_ParameterType`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

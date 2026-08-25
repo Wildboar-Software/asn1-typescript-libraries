@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `IPMSExtendedBodyPartTypes2` (ITU-T X.420 (1999), Annex C).
+ * ASN.1 module from ITU-T X.420 (1999), Annex C.
  */
 export * from "./CharacterSetRegistration.ta.mjs";
 export * from "./general-text-body-part-data.oa.mjs";

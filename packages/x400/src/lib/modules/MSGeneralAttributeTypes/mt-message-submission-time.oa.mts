@@ -28,11 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_submission_time
  * @description
  *
- * Information object `mt_message_submission_time`. This general-attribute indicates the
- * time at which the MTS a ccepted responsibility for the message or probe. It contains
- * the message-submission-time result of Message-submission, or the probe-submission-time
- * result of Probe-submission, or the message-submission-time argument of
- * Message-delivery. See ITU-T X.413 (1999), §11.2.43.
+ * This general-attribute indicates the time at which the MTS a ccepted responsibility for
+ * the message or probe. It contains the message-submission-time result of
+ * Message-submission, or the probe-submission-time result of Probe-submission, or the
+ * message-submission-time argument of Message-delivery. See ITU-T X.413 (1999), §11.2.43.
  *
  * ### ASN.1 Definition:
  *

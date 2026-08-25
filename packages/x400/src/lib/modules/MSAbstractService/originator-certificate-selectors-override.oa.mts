@@ -20,8 +20,7 @@ import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
  * @summary originator_certificate_selectors_override
  * @description
  *
- * Information object `originator_certificate_selectors_override`. Defined in ITU-T X.413
- * (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

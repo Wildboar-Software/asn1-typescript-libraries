@@ -14,10 +14,8 @@ import { type OPERATION } from '@wildboar/rose';
  * @summary ABSTRACT_OPERATION
  * @description
  *
- * Information object class `ABSTRACT_OPERATION`. This clause defines the following
- * transfer-port abstract-operations: a) Message-transfer b) Probe-transfer c)
- * Report-transfer. 12.2.1.1 Message-transfer The Message-transfer abstract-operation
- * enables an MTA to transfer a message to another MTA. See ITU-T X.411 (1999), §12.2.1.
+ * ROSE `OPERATION` alias used by MTS, MS, and IPMS abstract operations. See ITU-T X.411
+ * (1999).
  *
  * ### ASN.1 Definition:
  *

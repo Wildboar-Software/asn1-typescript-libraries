@@ -20,13 +20,10 @@ import {
  * @summary Attribute
  * @description
  *
- * `Attribute`. The entries of the Submission, Submission-log, and Draft entry-classes
- * created as a result of MS-message-submission and MS-probe-submission shall contain the
- * mandatory attributes indicated in Table 2, and such optional attributes as are
- * supported by the MS implementation and subscribed to by the MS-user. The generated
- * attributes form a new entry, or in some cases a parent-entry and one or more
- * child-entries (see… See ITU-T X.413 (1999), §16.2.5. SEQUENCE SIZE (1..…): omit this
- * component rather than encode an empty SEQUENCE.
+ * The entries of the Submission, Submission-log, and Draft entry-classes created as a
+ * result of MS-message-submission and MS-probe-submission shall contain the mandatory
+ * attributes indicated in Table 2, and such optional attributes as are supported by the MS
+ * implementation and subscribed to by the MS-user. See ITU-T X.413 (1999), §16.
  *
  * ### ASN.1 Definition:
  *

@@ -19,7 +19,7 @@ import { type TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
  * @summary bind_token_encrypted_data
  * @description
  *
- * Information object `bind_token_encrypted_data`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

@@ -20,7 +20,7 @@ import { id_et_ia5_text } from '../IPMSObjectIdentifiers/id-et-ia5-text.va.mjs';
  * @summary ia5_text_body_part_data
  * @description
  *
- * Information object `ia5_text_body_part_data`. Defined in ITU-T X.420 (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

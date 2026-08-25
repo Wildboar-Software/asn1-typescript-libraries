@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RangeProblem
  * @description
  *
- * `RangeProblem`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

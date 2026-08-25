@@ -19,9 +19,9 @@ import {
  * @summary SubjectSubmissionIdentifier
  * @description
  *
- * `SubjectSubmissionIdentifier`. This argument contains the
- * message-submission-identifier or the probe-submission-identifier of the subject of the
- * report. It shall be supplied by the MTS. See ITU-T X.411 (1999), §8.3.1.2.1.1.
+ * This argument contains the message-submission-identifier or the
+ * probe-submission-identifier of the subject of the report. It shall be supplied by the
+ * MTS. See ITU-T X.411 (1999), §8.3.1.2.1.1.
  *
  * ### ASN.1 Definition:
  *

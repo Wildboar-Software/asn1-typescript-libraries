@@ -18,7 +18,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AlertDestination
  * @description
  *
- * `AlertDestination`. Defined in ITU-T X.413 (1999) (§12).
+ * Defined in ITU-T X.413 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

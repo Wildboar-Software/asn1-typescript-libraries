@@ -15,8 +15,7 @@ import { id_act } from '../EDIMSObjectIdentifiers/id-act.va.mjs';
  * @summary id_act_edi_auto_forward_v2
  * @description
  *
- * OBJECT IDENTIFIER `id_act_edi_auto_forward_v2`. Defined in ITU-T X.435 (1999) (Annex
- * A).
+ * Defined in ITU-T X.435 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

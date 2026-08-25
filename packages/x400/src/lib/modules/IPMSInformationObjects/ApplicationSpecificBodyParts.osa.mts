@@ -14,11 +14,10 @@ import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED
  * @summary ApplicationSpecificBodyParts
  * @description
  *
- * Information object set `ApplicationSpecificBodyParts`. The IPM Body Part Table
- * information object set has as its members the types of body part that may appear in
- * the Body of an IPM:  The Standard Body Parts information object set has as
- * its members the types of body part defined in this Specification: StandardBodyParts
- *  See ITU-T X.420 (1999), §7.3.
+ * The IPM Body Part Table information object set has as its members the types of body part
+ * that may appear in the Body of an IPM: The Standard Body Parts information object set
+ * has as its members the types of body part defined in this Specification:
+ * StandardBodyParts See ITU-T X.420 (1999), §7.3.
  *
  * ### ASN.1 Definition:
  *

@@ -25,7 +25,7 @@ import {
  * @summary DeleteResult_delete_result_94
  * @description
  *
- * `DeleteResult_delete_result_94`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

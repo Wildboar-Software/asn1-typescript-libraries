@@ -13,10 +13,9 @@ import {
  *
  * Ordered SEQUENCE of 1..4 organizational unit names (ITU-T X.402 (1999), §18.3.10). The
  * first element is the highest-level unit (OU1); each subsequent name is a sub-unit of
- * those that precede it. SIZE (1..`ub-organizational-units`): omit the component rather
- * than encode empty. If this attribute is present in a mnemonic OR-address,
+ * those that precede it. If this attribute is present in a mnemonic OR-address,
  * `organization-name` shall also be present (X.402 §18.5.1). RFC 1685 and RFC 2156 print
- * units least-significant first (OU4 … OU1).
+ * units least-significant first (OU4 to OU1).
  *
  * ### ASN.1 Definition:
  *

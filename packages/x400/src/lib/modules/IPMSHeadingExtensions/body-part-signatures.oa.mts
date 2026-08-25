@@ -20,7 +20,7 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary body_part_signatures
  * @description
  *
- * Information object `body_part_signatures`. Defined in ITU-T X.420 (1999) (§18).
+ * Defined in ITU-T X.420 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

@@ -25,10 +25,7 @@ import {
  * @summary ConnectionInformation
  * @description
  *
- * `ConnectionInformation`. Defined in ITU-T X.412 (1999) (§11). SET OF: order is
- * insignificant; duplicates are typically meaningless. ASN.1 DEFAULT
- * `id-ac-mts-transfer`, `TRUE`, `TRUE`, `simple-password`: that value is assumed when
- * the component is absent (do not encode the default unless required).
+ * Defined in ITU-T X.412 (1999) (§11).
  *
  * ### ASN.1 Definition:
  *

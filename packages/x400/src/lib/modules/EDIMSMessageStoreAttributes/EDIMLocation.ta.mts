@@ -20,8 +20,7 @@ import {
  * @summary EDIMLocation
  * @description
  *
- * `EDIMLocation`. Defined in ITU-T X.435 (1999) (§19). SET OF: order is insignificant;
- * duplicates are typically meaningless.
+ * Defined in ITU-T X.435 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

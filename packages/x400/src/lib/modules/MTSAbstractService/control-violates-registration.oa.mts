@@ -25,11 +25,11 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary control_violates_registration
  * @description
  *
- * Information object `control_violates_registration`. The Control-violates-registration
- * abstract-error reports that the MTS is unable to accept the controls that the MTS-user
- * attempted to impose on delivery-port abstract-operations because they violate existing
- * registration parameters. The Control-violates-registration abstract-error has no
- * parameters. See ITU-T X.411 (1999), §8.3.2.2.
+ * The Control-violates-registration abstract-error reports that the MTS is unable to
+ * accept the controls that the MTS-user attempted to impose on delivery-port
+ * abstract-operations because they violate existing registration parameters. The
+ * Control-violates-registration abstract-error has no parameters. See ITU-T X.411 (1999),
+ * §8.3.2.2.
  *
  * ### ASN.1 Definition:
  *

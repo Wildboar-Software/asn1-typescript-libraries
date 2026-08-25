@@ -15,8 +15,7 @@ import { id_att } from '../MTSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_physicalRendition_basic
  * @description
  *
- * OBJECT IDENTIFIER `id_att_physicalRendition_basic`. Defined in ITU-T X.411 (1999)
- * (Annex A).
+ * Defined in ITU-T X.411 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

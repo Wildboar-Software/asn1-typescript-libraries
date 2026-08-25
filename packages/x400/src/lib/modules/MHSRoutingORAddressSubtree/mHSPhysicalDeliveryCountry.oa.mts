@@ -22,7 +22,7 @@ import { id_oc_mhs_physical_delivery_country_name } from '../MHSRoutingObjectIde
  * @summary mHSPhysicalDeliveryCountry
  * @description
  *
- * Information object `mHSPhysicalDeliveryCountry`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

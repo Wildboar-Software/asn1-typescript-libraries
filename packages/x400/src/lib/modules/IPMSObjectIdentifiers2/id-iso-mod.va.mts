@@ -15,7 +15,7 @@ import { id_iso_ipms } from '../IPMSObjectIdentifiers2/id-iso-ipms.va.mjs';
  * @summary id_iso_mod
  * @description
  *
- * OBJECT IDENTIFIER `id_iso_mod`. Defined in ITU-T X.420 (1999) (Annex A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

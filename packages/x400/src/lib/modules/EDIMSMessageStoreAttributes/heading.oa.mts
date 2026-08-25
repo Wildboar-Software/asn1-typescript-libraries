@@ -26,12 +26,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary heading
  * @description
  *
- * Information object `heading`. The Heading attribute is the (entire) Heading of an
- * EDIM. 
- * 
- * An MS that supports this attribute shall maintain it for an
- * information object that it holds if, and only if, that object is a message whose
- * content is an EDIM. See ITU-T X.435 (1999), §18.8.3.1.
+ * The Heading attribute is the (entire) Heading of an EDIM. An MS that supports this
+ * attribute shall maintain it for an information object that it holds if, and only if,
+ * that object is a message whose content is an EDIM. See ITU-T X.435 (1999), §18.8.3.1.
  *
  * ### ASN.1 Definition:
  *

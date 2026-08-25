@@ -26,11 +26,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary heading
  * @description
  *
- * Information object `heading`. The Heading attribute is the (entire) Heading of an IPM.
- * 
- * An IPMS-MS that supports this attribute shall maintain it for an
- * information object that it holds if, and only if, that object is a message whose
- * content is an IPM.
+ * The Heading attribute is the (entire) Heading of an IPM. An IPMS-MS that supports this
+ * attribute shall maintain it for an information object that it holds if, and only if,
+ * that object is a message whose content is an IPM.
  *
  * ### ASN.1 Definition:
  *

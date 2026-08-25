@@ -15,10 +15,10 @@ import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
  * @summary id_routing
  * @description
  *
- * OBJECT IDENTIFIER `id_routing`. In a routing event, an MTA selects the "adjacent" MTA
- * to which it will transfer a message, probe, or report. This event incrementally
- * determines an information object's route through the MTS and (obviously) may be taken
- * only if the MTS comprises several MTAs. See ITU-T X.402 (1999), §9.4.10.
+ * In a routing event, an MTA selects the "adjacent" MTA to which it will transfer a
+ * message, probe, or report. This event incrementally determines an information object's
+ * route through the MTS and (obviously) may be taken only if the MTS comprises several
+ * MTAs. See ITU-T X.402 (1999), §9.4.10.
  *
  * ### ASN.1 Definition:
  *

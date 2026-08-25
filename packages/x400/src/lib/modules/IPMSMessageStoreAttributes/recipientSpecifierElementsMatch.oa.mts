@@ -20,12 +20,9 @@ import { id_mr_recipient_specifier_elements } from '../IPMSObjectIdentifiers/id-
  * @summary recipientSpecifierElementsMatch
  * @description
  *
- * Information object `recipientSpecifierElementsMatch`. The
- * Recipient-specifier-elements-match determines whether a presented value is a subset of
- * the elements present in some value of an attribute of type recipient specifier.
- *  The rule is identical to the
- * OR-descriptor-elements-match rule as applied to the recipient component of the
- * presented and… See ITU-T X.420 (1999), §19.7.8.
+ * The Recipient-specifier-elements-match determines whether a presented value is a subset
+ * of the elements present in some value of an attribute of type recipient specifier. See
+ * ITU-T X.420 (1999), §19.
  *
  * ### ASN.1 Definition:
  *

@@ -26,9 +26,8 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary mt_per_recipient_probe_submission_fields
  * @description
  *
- * Information object `mt_per_recipient_probe_submission_fields`. This general-attribute,
- * which is multi-valued, contains the per-recipient-fields component of the
- * Probe-submission- envelope.
+ * This general-attribute, which is multi-valued, contains the per-recipient-fields
+ * component of the Probe-submission- envelope.
  *
  * ### ASN.1 Definition:
  *

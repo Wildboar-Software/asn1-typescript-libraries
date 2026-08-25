@@ -14,12 +14,11 @@ import { type OPERATION_PACKAGE } from '@wildboar/rose';
  * @summary PORT
  * @description
  *
- * Information object class `PORT`. The Message-submission abstract-operation enables an
- * MTS-user to submit a message to the MTS for transfer and delivery to one or more
- * recipient MTS-users. The Probe-submission abstract-operation enables an MTS-user to
- * submit a probe in order to determine whether or not a message could be transferred and
- * delivered to one or more recipient MTS-users if it were to be submitted. See ITU-T
- * X.411 (1999), §7.2.
+ * The Message-submission abstract-operation enables an MTS-user to submit a message to the
+ * MTS for transfer and delivery to one or more recipient MTS-users. The Probe-submission
+ * abstract-operation enables an MTS-user to submit a probe in order to determine whether
+ * or not a message could be transferred and delivered to one or more recipient MTS-users
+ * if it were to be submitted. See ITU-T X.411 (1999), §7.2.
  *
  * ### ASN.1 Definition:
  *

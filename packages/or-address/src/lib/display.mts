@@ -1180,7 +1180,7 @@ function formatRFC2156OrganizationalUnits(
  * @description
  *
  * Generates MIXER `std-or-address` pairs using the primary keywords from
- * RFC 2156 §4.1.1 (`ADMD`, `PRMD`, `NET-NUM`, `PD-ADDRESS`, `DD.type`, …).
+ * RFC 2156 §4.1.1 (`ADMD`, `PRMD`, `NET-NUM`, `PD-ADDRESS`, `DD.type`, and others).
  * Personal names are emitted as `G` / `I` / `S` / `GQ`. Organizational units
  * and domain-defined attributes are reversed so the rightmost value is the
  * most significant. Join with {@link formatRFC2156Address} to wrap in `/`.

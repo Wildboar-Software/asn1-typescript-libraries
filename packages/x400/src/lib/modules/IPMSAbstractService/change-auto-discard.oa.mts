@@ -27,10 +27,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary change_auto_discard
  * @description
  *
- * Information object `change_auto_discard`. The Change Auto-discard abstract operation
- * enables or disables auto-discard, the automatic discard by the IPMS of expired or
- * obsolete IPMs delivered to, but not yet received by the user. change-auto-discard
- *  See ITU-T X.420 (1999), §12.3.1.
+ * The Change Auto-discard abstract operation enables or disables auto-discard, the
+ * automatic discard by the IPMS of expired or obsolete IPMs delivered to, but not yet
+ * received by the user. change-auto-discard See ITU-T X.420 (1999), §12.3.1.
  *
  * ### ASN.1 Definition:
  *

@@ -10,9 +10,9 @@ import {
  * @description
  *
  * OR-address extension attribute for the Printable/Numeric encoding of `postal-code`
- * (ITU-T X.402 (1999), §18.3.19; X.411 (1999), Annex A). Printable, Teletex and
- * Universal encodings of the same value are equivalent for comparison (X.402 §18.4).
- * Universal language codes are ignored.
+ * (ITU-T X.402 (1999), §18.3.19; X.411 (1999), Annex A). Printable, Teletex and Universal
+ * encodings of the same value are equivalent for comparison (X.402 §18.4). Universal
+ * language codes are ignored.
  *
  * ### ASN.1 Definition:
  *

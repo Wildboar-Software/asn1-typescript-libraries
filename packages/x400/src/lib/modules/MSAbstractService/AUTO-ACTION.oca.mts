@@ -20,11 +20,10 @@ import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.o
  * @summary AUTO_ACTION
  * @description
  *
- * Information object class `AUTO_ACTION`. This general-attribute identifies the type of
- * the auto-action whose execution is the subject of this entry. The registered
- * auto-action is identified by this attribute combined with the corresponding value of
- * the auto-action-registration-identifier general-attribute. See ITU-T X.413 (1999),
- * §11.2.8.
+ * This general-attribute identifies the type of the auto-action whose execution is the
+ * subject of this entry. The registered auto-action is identified by this attribute
+ * combined with the corresponding value of the auto-action-registration-identifier
+ * general-attribute. See ITU-T X.413 (1999), §11.2.8.
  *
  * ### ASN.1 Definition:
  *

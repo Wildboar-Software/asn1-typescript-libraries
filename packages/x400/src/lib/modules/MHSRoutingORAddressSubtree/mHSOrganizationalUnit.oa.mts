@@ -23,7 +23,7 @@ import { id_oc_mhs_organizational_unit } from '../MHSRoutingObjectIdentifiers/id
  * @summary mHSOrganizationalUnit
  * @description
  *
- * Information object `mHSOrganizationalUnit`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

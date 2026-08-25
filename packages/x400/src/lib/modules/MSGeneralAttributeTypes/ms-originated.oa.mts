@@ -23,11 +23,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_originated
  * @description
  *
- * Information object `ms_originated`. This general-attribute indicates whether the
- * message represented by a submitted-message entry was submitted by the MS as a
- * consequence of the performance of an auto-action, or whether it was submitted by the
- * MS-user. The attribute is present in the former case and absent in the latter. See
- * ITU-T X.413 (1999), §11.2.45.
+ * This general-attribute indicates whether the message represented by a submitted-message
+ * entry was submitted by the MS as a consequence of the performance of an auto-action, or
+ * whether it was submitted by the MS-user. The attribute is present in the former case and
+ * absent in the latter. See ITU-T X.413 (1999), §11.2.45.
  *
  * ### ASN.1 Definition:
  *

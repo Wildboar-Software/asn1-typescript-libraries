@@ -15,13 +15,10 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_redirection_or_dl_expansion_single_element_match
  * @description
  *
- * OBJECT IDENTIFIER `id_mr_redirection_or_dl_expansion_single_element_match`. The
- * Redirection-or-DL-expansion-single-element-match rule determines whether a presented
- * string and some element present in the OR-address-and-optional-directory-name
- * component of a value of an attribute of type Redirection-history or
- * DL-expansion-history match for equality. redirectionOrDLExpansionSingleElementMatch
- *  See ITU-T X.413 (1999),
- * §12.4.11.
+ * The Redirection-or-DL-expansion-single-element-match rule determines whether a presented
+ * string and some element present in the OR-address-and-optional-directory-name component
+ * of a value of an attribute of type Redirection-history or DL-expansion-history match for
+ * equality. redirectionOrDLExpansionSingleElementMatch See ITU-T X.413 (1999), §12.4.11.
  *
  * ### ASN.1 Definition:
  *

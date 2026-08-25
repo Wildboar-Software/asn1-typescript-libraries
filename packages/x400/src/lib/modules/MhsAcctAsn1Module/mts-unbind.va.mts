@@ -18,10 +18,7 @@ import {
  * @summary mts_unbind
  * @description
  *
- * `mts_unbind`. This clause defines the MTS-bind and MTS-unbind used to establish and
- * release associations between an MTS-user and the MTS. 8.1.1 Abstract-bind and
- * Abstract-unbind This clause defines the following abstract-bind and abstract-unbind
- * operations: a) MTS-bind b) MTS-unbind. See ITU-T X.411 (1999), §8.1.
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

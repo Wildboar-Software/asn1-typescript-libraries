@@ -27,9 +27,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary replied_to_IPM
  * @description
  *
- * Information object `replied_to_IPM`. The Replied-to IPM heading field (C) identifies
- * the IPM to which the present IPM is a reply. It comprises an IPM identifier. See ITU-T
- * X.420 (1999), §7.2.7.
+ * The Replied-to IPM heading field (C) identifies the IPM to which the present IPM is a
+ * reply. It comprises an IPM identifier. See ITU-T X.420 (1999), §7.2.7.
  *
  * ### ASN.1 Definition:
  *

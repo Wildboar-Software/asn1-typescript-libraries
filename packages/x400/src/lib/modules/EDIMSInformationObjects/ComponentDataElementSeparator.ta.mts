@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ComponentDataElementSeparator
  * @description
  *
- * `ComponentDataElementSeparator`. Defined in ITU-T X.435 (1999) (§8).
+ * Defined in ITU-T X.435 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

@@ -11,8 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @description
  *
  * Country of physical delivery; same constraints as `CountryName` (ITU-T X.402 (1999),
- * §18.3.13). Presence of this attribute makes the OR-address a **postal** name form
- * (X.402 §18.5.5). Mandatory in postal addresses together with `postal-code`.
+ * §18.3.13). Presence of this attribute makes the OR-address a **postal** name form (X.402
+ * §18.5.5). Mandatory in postal addresses together with `postal-code`.
  *
  * ### ASN.1 Definition:
  *

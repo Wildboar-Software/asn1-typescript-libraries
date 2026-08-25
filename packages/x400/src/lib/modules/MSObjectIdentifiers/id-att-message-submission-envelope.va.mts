@@ -15,10 +15,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_message_submission_envelope
  * @description
  *
- * OBJECT IDENTIFIER `id_att_message_submission_envelope`. This general-attribute
- * contains the envelope component of the argument of the Message-submission
- * abstract-operation.
- * See ITU-T X.413 (1999), §11.2.42.
+ * This general-attribute contains the envelope component of the argument of the
+ * Message-submission abstract-operation. See ITU-T X.413 (1999), §11.2.42.
  *
  * ### ASN.1 Definition:
  *

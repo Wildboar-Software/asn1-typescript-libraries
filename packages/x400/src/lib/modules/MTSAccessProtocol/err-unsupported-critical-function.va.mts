@@ -18,7 +18,7 @@ import {
  * @summary err_unsupported_critical_function
  * @description
  *
- * `err_unsupported_critical_function`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

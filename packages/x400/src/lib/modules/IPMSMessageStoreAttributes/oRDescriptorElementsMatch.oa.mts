@@ -20,7 +20,7 @@ import { id_mr_or_descriptor_elements } from '../IPMSObjectIdentifiers/id-mr-or-
  * @summary oRDescriptorElementsMatch
  * @description
  *
- * Information object `oRDescriptorElementsMatch`. Defined in ITU-T X.420 (1999) (§20).
+ * Defined in ITU-T X.420 (1999) (§20).
  *
  * ### ASN.1 Definition:
  *

@@ -19,7 +19,7 @@ import { id_mhs_protocols } from '../MHSProtocolObjectIdentifiers/id-mhs-protoco
  * @summary id_as
  * @description
  *
- * OBJECT IDENTIFIER `id_as`. Defined in ITU-T X.419 (1999) (Annex A).
+ * Defined in ITU-T X.419 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

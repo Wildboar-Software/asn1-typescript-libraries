@@ -18,12 +18,7 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary reception
  * @description
  *
- * Information object `reception`. A UA or AU shall be said to support upon origination a
- * particular Heading field, Heading extension, EDIM Body Part type or Extended Body Part
- * type if, and only if, it accepts, preserves, and emits, in full accord with this
- * Recommen- dation | International Standard, that particular Heading field or extension,
- * or EDIM Body Part type or Extended Body Part type, whenever a user calls upon it to
- * convey an EDIM… See ITU-T X.435 (1999), §21.1.
+ * See ITU-T X.435 (1999), §21.
  *
  * ### ASN.1 Definition:
  *

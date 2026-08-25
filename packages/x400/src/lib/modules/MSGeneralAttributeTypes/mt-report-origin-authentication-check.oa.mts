@@ -26,10 +26,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_report_origin_authentication_check
  * @description
  *
- * Information object `mt_report_origin_authentication_check`. This general-attribute
- * contains the report-origin-authentication-check argument of the Report-delivery
- * abstract- operation. It provides a means of authenticating the origin of the report.
- * See ITU-T X.413 (1999), §11.2.73.
+ * This general-attribute contains the report-origin-authentication-check argument of the
+ * Report-delivery abstract- operation. It provides a means of authenticating the origin of
+ * the report. See ITU-T X.413 (1999), §11.2.73.
  *
  * ### ASN.1 Definition:
  *

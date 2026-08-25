@@ -16,7 +16,7 @@ import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
  * @summary edimg_user
  * @description
  *
- * Information object `edimg_user`. Defined in ITU-T X.435 (1999) (§6).
+ * Defined in ITU-T X.435 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

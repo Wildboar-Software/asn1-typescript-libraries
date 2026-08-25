@@ -20,7 +20,7 @@ import {
  * @summary DLPolicy_requested_delivery_method
  * @description
  *
- * `DLPolicy_requested_delivery_method`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

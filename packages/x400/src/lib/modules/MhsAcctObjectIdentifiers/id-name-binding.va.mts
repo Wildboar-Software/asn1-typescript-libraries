@@ -15,8 +15,7 @@ import { id_accounting } from '../MhsAcctObjectIdentifiers/id-accounting.va.mjs'
  * @summary id_name_binding
  * @description
  *
- * OBJECT IDENTIFIER `id_name_binding`. Defined in ITU-T X.411 (1999) (accounting
- * objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

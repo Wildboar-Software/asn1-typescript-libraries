@@ -17,7 +17,7 @@ import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
  * @summary suspend_auto_acknowledgement
  * @description
  *
- * Information object `suspend_auto_acknowledgement`. Defined in ITU-T X.420 (1999) (§7).
+ * Defined in ITU-T X.420 (1999) (§7).
  *
  * ### ASN.1 Definition:
  *

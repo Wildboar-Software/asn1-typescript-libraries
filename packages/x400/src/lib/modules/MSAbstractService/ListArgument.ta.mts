@@ -36,8 +36,7 @@ import {
  * @summary ListArgument
  * @description
  *
- * `ListArgument`.  See ITU-T X.413 (1999), §8.2.2.1. ASN.1 DEFAULT `delivery`: that value is
- * assumed when the component is absent (do not encode the default unless required).
+ * See ITU-T X.413 (1999), §8.2.2.1.
  *
  * ### ASN.1 Definition:
  *

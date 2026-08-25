@@ -18,7 +18,7 @@ import {
  * @summary op_ms_submission_control
  * @description
  *
- * `op_ms_submission_control`. Defined in ITU-T X.419 (1999) (§9).
+ * Defined in ITU-T X.419 (1999) (§9).
  *
  * ### ASN.1 Definition:
  *

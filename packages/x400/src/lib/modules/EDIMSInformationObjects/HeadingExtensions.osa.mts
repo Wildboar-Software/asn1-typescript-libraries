@@ -14,7 +14,7 @@ import { primary_body_part_compression_indication } from '../EDIMSInformationObj
 /**
  * @summary HeadingExtensions
  * @description
-
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

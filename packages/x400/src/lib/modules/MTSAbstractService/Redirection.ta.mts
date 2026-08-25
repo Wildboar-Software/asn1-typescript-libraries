@@ -25,9 +25,8 @@ import {
  * @summary Redirection
  * @description
  *
- * `Redirection`. This procedure redirects a message. NOTE – The use of redirection
- * facilities shall be subject to the security-policy in force. See ITU-T X.411 (1999),
- * §14.3.7.
+ * This procedure redirects a message. NOTE – The use of redirection facilities shall be
+ * subject to the security-policy in force. See ITU-T X.411 (1999), §14.3.7.
  *
  * ### ASN.1 Definition:
  *

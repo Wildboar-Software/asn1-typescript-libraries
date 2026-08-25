@@ -31,12 +31,12 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary proof_of_submission_request
  * @description
  *
- * Information object `proof_of_submission_request`. This argument indicates whether or
- * not the originator of the message requires proof-of-submission (to provide the Proof
- * of Submission element-of-service) as defined in This argument may have one of the
- * following values: proof-of-submission-requested or proof-of-submission-not- requested.
- * In the absence of this argument, the default proof-of-submission-not-requested shall
- * be assumed. See ITU-T X.411 (1999), §8.2.1.1.1.31.
+ * This argument indicates whether or not the originator of the message requires
+ * proof-of-submission (to provide the Proof of Submission element-of-service) as defined
+ * in This argument may have one of the following values: proof-of-submission-requested or
+ * proof-of-submission-not- requested. In the absence of this argument, the default
+ * proof-of-submission-not-requested shall be assumed. See ITU-T X.411 (1999),
+ * §8.2.1.1.1.31.
  *
  * ### ASN.1 Definition:
  *

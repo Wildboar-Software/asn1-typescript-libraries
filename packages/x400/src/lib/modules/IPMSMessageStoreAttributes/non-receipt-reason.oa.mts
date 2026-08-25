@@ -28,9 +28,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary non_receipt_reason
  * @description
  *
- * Information object `non_receipt_reason`. The Non-receipt Reason non-receipt field (M)
- * indicates why the NRN's originator has not received the subject IPM (even though it
- * was delivered to him). See ITU-T X.420 (1999), §8.2.1.
+ * The Non-receipt Reason non-receipt field (M) indicates why the NRN's originator has not
+ * received the subject IPM (even though it was delivered to him). See ITU-T X.420 (1999),
+ * §8.2.1.
  *
  * ### ASN.1 Definition:
  *

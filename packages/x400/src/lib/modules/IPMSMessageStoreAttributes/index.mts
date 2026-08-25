@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `IPMSMessageStoreAttributes` (ITU-T X.420 (1999), §20).
+ * ASN.1 module from ITU-T X.420 (1999), §20.
  */
 export * from "./ac-correlated-delivered-ipns.oa.mjs";
 export * from "./ac-correlated-delivered-replies.oa.mjs";

@@ -28,11 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_delivery_time
  * @description
  *
- * Information object `mt_message_delivery_time`. This general-attribute contains the
- * message-delivery-time argument of the Message-delivery abstract-operation. See
- * 8.3.1.1.1.2 of because in order to be useful, this delivery-time must be correlated
- * with the name of the recipient the message was delivered t o. See ITU-T X.413 (1999),
- * §11.2.36.
+ * This general-attribute contains the message-delivery-time argument of the
+ * Message-delivery abstract-operation. See 8.3.1.1.1.2 of because in order to be useful,
+ * this delivery-time must be correlated with the name of the recipient the message was
+ * delivered t o. See ITU-T X.413 (1999), §11.2.36.
  *
  * ### ASN.1 Definition:
  *

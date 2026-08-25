@@ -17,7 +17,7 @@ import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
  * @summary routingCollectiveNameForm
  * @description
  *
- * Information object `routingCollectiveNameForm`. Defined in ITU-T X.412 (1999) (§11).
+ * Defined in ITU-T X.412 (1999) (§11).
  *
  * ### ASN.1 Definition:
  *

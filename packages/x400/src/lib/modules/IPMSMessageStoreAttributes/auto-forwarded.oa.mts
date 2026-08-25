@@ -27,9 +27,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary auto_forwarded
  * @description
  *
- * Information object `auto_forwarded`. The Auto-forwarded heading field (D false)
- * indicates whether the IPM is the result of auto-forwarding. It is a Boolean. See ITU-T
- * X.420 (1999), §7.2.16.
+ * The Auto-forwarded heading field (D false) indicates whether the IPM is the result of
+ * auto-forwarding. It is a Boolean. See ITU-T X.420 (1999), §7.2.16.
  *
  * ### ASN.1 Definition:
  *

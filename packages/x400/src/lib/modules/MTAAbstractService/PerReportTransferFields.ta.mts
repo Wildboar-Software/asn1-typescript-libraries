@@ -55,8 +55,7 @@ import {
  * @summary PerReportTransferFields
  * @description
  *
- * `PerReportTransferFields`. Defined in ITU-T X.411 (1999) (§12). SET OF: order is
- * insignificant; duplicates are typically meaningless.
+ * Defined in ITU-T X.411 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

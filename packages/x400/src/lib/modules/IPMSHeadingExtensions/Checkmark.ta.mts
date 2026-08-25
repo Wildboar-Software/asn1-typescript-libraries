@@ -25,10 +25,7 @@ import {
  * @summary Checkmark
  * @description
  *
- * `Checkmark`. The Circulation-member-checkmark-match rule compares a presented value
- * with attribute-values of type Circulation Member for the presence of the checked
- * component value.  The rule returns true if,
- * and only if, the checked component is present. See ITU-T X.420 (1999), §19.7.15.
+ * See ITU-T X.420 (1999), §19.
  *
  * ### ASN.1 Definition:
  *

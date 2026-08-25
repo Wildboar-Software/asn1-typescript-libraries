@@ -28,11 +28,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_submitted_edins
  * @description
  *
- * Information object `ac_submitted_edins`. The AC Submitted EDINs attribute, which is
- * multi-valued, identifies the EDINs submitted in response to a delivered EDIM. The
- * EDI-MS shall record, by means of this attribute, any EDIN submitted by the EDI-MS-user
- * or caused as a consequence of auto-actions performed by the EDI-MS. See ITU-T X.435
- * (1999), §18.8.6.3.2.
+ * The AC Submitted EDINs attribute, which is multi-valued, identifies the EDINs submitted
+ * in response to a delivered EDIM. The EDI-MS shall record, by means of this attribute,
+ * any EDIN submitted by the EDI-MS-user or caused as a consequence of auto-actions
+ * performed by the EDI-MS. See ITU-T X.435 (1999), §18.8.6.3.2.
  *
  * ### ASN.1 Definition:
  *

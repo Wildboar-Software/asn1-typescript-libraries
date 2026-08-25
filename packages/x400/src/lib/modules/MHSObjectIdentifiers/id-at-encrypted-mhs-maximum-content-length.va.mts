@@ -15,8 +15,7 @@ import { id_at } from '../MHSObjectIdentifiers/id-at.va.mjs';
  * @summary id_at_encrypted_mhs_maximum_content_length
  * @description
  *
- * OBJECT IDENTIFIER `id_at_encrypted_mhs_maximum_content_length`. Defined in ITU-T X.402
- * (1999) (Annex A).
+ * Defined in ITU-T X.402 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -23,7 +23,7 @@ import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.o
  * @summary auto_forwarding_loop
  * @description
  *
- * Information object `auto_forwarding_loop`. Defined in ITU-T X.435 (1999) (§18).
+ * Defined in ITU-T X.435 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

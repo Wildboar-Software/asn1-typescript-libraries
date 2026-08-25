@@ -16,9 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AuthorizationInformation
  * @description
  *
- * `AuthorizationInformation`. The Authorization Information indicates who authorized the
- * interchange. This is semantically identical to the "Authorization information" in the
- * ANSIX12 Interchange. See ITU-T X.435 (1999), §8.2.3.12.
+ * The Authorization Information indicates who authorized the interchange. This is
+ * semantically identical to the "Authorization information" in the ANSIX12 Interchange.
+ * See ITU-T X.435 (1999), §8.2.3.12.
  *
  * ### ASN.1 Definition:
  *

@@ -87,13 +87,7 @@ import {
  * @summary DLPolicy
  * @description
  *
- * `DLPolicy`. Defined in ITU-T X.402 (1999) (§17 / Annex A). SEQUENCE OF: element order
- * is significant unless the using specification says otherwise. ASN.1 DEFAULT
- * `previous-dl-or-originator`, `whenever-requested`, `unchanged`, `unchanged`,
- * `unchanged`, `unchanged`, `unchanged`, `unchanged`, `unchanged`, `TRUE`, `TRUE`,
- * `dl-members`, `unchanged`: that value is assumed when the component is absent (do not
- * encode the default unless required). ENUMERATED value `0` is a named variant, not a
- * sentinel for 'absent' or 'unspecified'.
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -19,7 +19,7 @@ import {
  * @summary SupplReceiptInfoField
  * @description
  *
- * `SupplReceiptInfoField`. Defined in ITU-T X.420 (1999) (§7).
+ * Defined in ITU-T X.420 (1999) (§7).
  *
  * ### ASN.1 Definition:
  *

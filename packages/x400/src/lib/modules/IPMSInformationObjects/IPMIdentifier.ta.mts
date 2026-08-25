@@ -25,7 +25,7 @@ import {
  * @summary IPMIdentifier
  * @description
  *
- * `IPMIdentifier`. An IPM identifier is an information item that uniquely identifies an IPM.
+ * An IPM identifier is an information item that uniquely identifies an IPM.
  *
  * ### ASN.1 Definition:
  *

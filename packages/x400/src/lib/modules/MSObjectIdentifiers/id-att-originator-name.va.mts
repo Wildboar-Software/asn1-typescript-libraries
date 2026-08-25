@@ -15,9 +15,9 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_originator_name
  * @description
  *
- * OBJECT IDENTIFIER `id_att_originator_name`. This general-attribute contains the
- * originator-name argument of the Message-submission, Probe-submission, and
- * Message-delivery abstract-operations. See ITU-T X.413 (1999), §11.2.52.
+ * This general-attribute contains the originator-name argument of the Message-submission,
+ * Probe-submission, and Message-delivery abstract-operations. See ITU-T X.413 (1999),
+ * §11.2.52.
  *
  * ### ASN.1 Definition:
  *

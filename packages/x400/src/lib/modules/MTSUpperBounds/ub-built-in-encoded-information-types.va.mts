@@ -15,11 +15,10 @@ import {
  * @summary ub_built_in_encoded_information_types
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_built_in_encoded_information_types`. The
- * encoded-information-types of a message are the kind(s) of information that appear in
+ * The encoded-information-types of a message are the kind(s) of information that appear in
  * its content. Both basic encoded-information-types and externally-defined
- * encoded-information-types may be specified, otherwise the encoded-information-types of
- * a message are unspecified. See ITU-T X.411 (1999), §8.5.6.
+ * encoded-information-types may be specified, otherwise the encoded-information-types of a
+ * message are unspecified. See ITU-T X.411 (1999), §8.5.6.
  *
  * ### ASN.1 Definition:
  *

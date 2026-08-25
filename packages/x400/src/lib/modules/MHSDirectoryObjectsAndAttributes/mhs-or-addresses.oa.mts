@@ -27,7 +27,7 @@ import { id_at_mhs_or_addresses } from '../MHSObjectIdentifiers/id-at-mhs-or-add
  * @summary mhs_or_addresses
  * @description
  *
- * Information object `mhs_or_addresses`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

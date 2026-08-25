@@ -25,10 +25,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary register_rejected
  * @description
  *
- * Information object `register_rejected`. The Register-rejected abstract-error reports
- * that the requested parameters cannot be registered because one or more are improperly
- * specified. The Register-rejected abstract-error has no parameters. See ITU-T X.411
- * (1999), §8.4.2.1.
+ * The Register-rejected abstract-error reports that the requested parameters cannot be
+ * registered because one or more are improperly specified. The Register-rejected
+ * abstract-error has no parameters. See ITU-T X.411 (1999), §8.4.2.1.
  *
  * ### ASN.1 Definition:
  *

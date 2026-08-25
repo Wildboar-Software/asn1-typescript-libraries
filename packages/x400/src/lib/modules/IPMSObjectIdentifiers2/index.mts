@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `IPMSObjectIdentifiers2` (ITU-T X.420 (1999), Annex A).
+ * ASN.1 module from ITU-T X.420 (1999), Annex A.
  */
 export * from "./id-cs-eit-authority.va.mjs";
 export * from "./id-iso-cs.va.mjs";

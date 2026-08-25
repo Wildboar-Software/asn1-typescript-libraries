@@ -33,10 +33,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary mta_bind
  * @description
  *
- * Information object `mta_bind`. The MTA-bind enables an MTA to establish an association
- * with another MTA. The MTA-bind establishes the credentials of MTAs to interact, and
- * the application-context and security-context of the association. See ITU-T X.411
- * (1999), §12.1.1.1.
+ * The MTA-bind enables an MTA to establish an association with another MTA. The MTA-bind
+ * establishes the credentials of MTAs to interact, and the application-context and
+ * security-context of the association. See ITU-T X.411 (1999), §12.1.1.1.
  *
  * ### ASN.1 Definition:
  *

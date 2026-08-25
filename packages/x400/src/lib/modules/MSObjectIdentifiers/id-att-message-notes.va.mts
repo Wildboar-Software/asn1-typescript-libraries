@@ -15,10 +15,9 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_message_notes
  * @description
  *
- * OBJECT IDENTIFIER `id_att_message_notes`. This general-attribute, which is
- * multi-valued, contains textual annotations specified by the MS-user. The meaning
- * attached to message-notes is of concern only to the MS-user. See ITU-T X.413 (1999),
- * §11.2.39.
+ * This general-attribute, which is multi-valued, contains textual annotations specified by
+ * the MS-user. The meaning attached to message-notes is of concern only to the MS-user.
+ * See ITU-T X.413 (1999), §11.2.39.
  *
  * ### ASN.1 Definition:
  *

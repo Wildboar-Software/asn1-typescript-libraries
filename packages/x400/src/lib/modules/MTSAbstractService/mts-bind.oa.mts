@@ -33,11 +33,10 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary mts_bind
  * @description
  *
- * Information object `mts_bind`. The MTS-bind enables an MTS-user to establish an
- * association with the MTS, or the MTS to establish an association with an MTS-user. The
- * MTS-bind establishes the credentials of an MTS-user and the MTS to interact, and the
- * application-context and security-context of the association. See ITU-T X.411 (1999),
- * §8.1.1.1.
+ * The MTS-bind enables an MTS-user to establish an association with the MTS, or the MTS to
+ * establish an association with an MTS-user. The MTS-bind establishes the credentials of
+ * an MTS-user and the MTS to interact, and the application-context and security-context of
+ * the association. See ITU-T X.411 (1999), §8.1.1.1.
  *
  * ### ASN.1 Definition:
  *

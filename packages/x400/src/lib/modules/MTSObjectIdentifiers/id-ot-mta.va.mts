@@ -15,7 +15,7 @@ import { id_ot } from '../MTSObjectIdentifiers/id-ot.va.mjs';
  * @summary id_ot_mta
  * @description
  *
- * OBJECT IDENTIFIER `id_ot_mta`. Defined in ITU-T X.411 (1999) (Annex A).
+ * Defined in ITU-T X.411 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

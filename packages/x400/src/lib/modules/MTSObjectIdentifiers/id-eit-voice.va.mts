@@ -15,7 +15,7 @@ import { id_eit } from '../MTSObjectIdentifiers/id-eit.va.mjs';
  * @summary id_eit_voice
  * @description
  *
- * OBJECT IDENTIFIER `id_eit_voice`. Defined in ITU-T X.411 (1999) (Annex A).
+ * Defined in ITU-T X.411 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -20,9 +20,9 @@ import { type EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.o
  * @summary edi_submission_options
  * @description
  *
- * Information object `edi_submission_options`. The submission-options argument of the
- * MS-message-submission abstract-operation defined in 8.3.1.1 and 8.1.6 of of stored
- * EDIMs and stored body parts in submitted EDIMs. See ITU-T X.435 (1999), §18.6.2.
+ * The submission-options argument of the MS-message-submission abstract-operation defined
+ * in 8.3.1.1 and 8.1.6 of of stored EDIMs and stored body parts in submitted EDIMs. See
+ * ITU-T X.435 (1999), §18.6.2.
  *
  * ### ASN.1 Definition:
  *

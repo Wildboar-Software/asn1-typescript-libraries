@@ -26,11 +26,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary message_body_parts
  * @description
  *
- * Information object `message_body_parts`. The IPM Body Part Table information object
- * set has as its members the types of body part that may appear in the Body of an IPM:
- *  The Standard Body Parts information object set has as
- * its members the types of body part defined in this Specification: StandardBodyParts
- *  See ITU-T X.420 (1999), §7.3.
+ * The IPM Body Part Table information object set has as its members the types of body part
+ * that may appear in the Body of an IPM: The Standard Body Parts information object set
+ * has as its members the types of body part defined in this Specification:
+ * StandardBodyParts See ITU-T X.420 (1999), §7.3.
  *
  * ### ASN.1 Definition:
  *

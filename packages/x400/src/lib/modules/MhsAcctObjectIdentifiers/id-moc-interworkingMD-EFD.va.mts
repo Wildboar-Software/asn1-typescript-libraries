@@ -15,8 +15,7 @@ import { id_moc } from '../MhsAcctObjectIdentifiers/id-moc.va.mjs';
  * @summary id_moc_interworkingMD_EFD
  * @description
  *
- * OBJECT IDENTIFIER `id_moc_interworkingMD_EFD`. Defined in ITU-T X.411 (1999)
- * (accounting objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

@@ -20,7 +20,7 @@ import {
  * @summary User_Identity_Attribute
  * @description
  *
- * `User_Identity_Attribute`. Defined in ITU-T X.420 (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

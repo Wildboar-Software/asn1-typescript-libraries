@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MHSObjectIdentifiers` (ITU-T X.402 (1999), Annex A).
+ * ASN.1 module from ITU-T X.402 (1999), Annex A.
  */
 export * from "./id-arch.va.mjs";
 export * from "./id-at-encrypted-mhs-acceptable-eits.va.mjs";

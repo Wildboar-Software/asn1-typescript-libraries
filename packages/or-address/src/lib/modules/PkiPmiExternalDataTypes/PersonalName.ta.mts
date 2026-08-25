@@ -30,13 +30,13 @@ function isAlpha(c: number): boolean {
  * @description
  *
  * Person relative to another attribute (e.g. `organization-name`) (ITU-T X.402 (1999),
- * §18.3.12). `surname` is mandatory; `given-name`, `initials`, and
- * `generation-qualifier` are optional. `initials` are of all names *except* the surname.
- * Printable, Teletex, and Universal encodings of the same person are equivalent (X.402
- * §18.4 c). Letter case is insignificant (§18.4 f). Missing `given-name` or
- * `generation-qualifier` is not the same person as one that supplies them; initials are
- * often omitted in practice. Teletex/universal twins are extension attributes
- * `teletex-personal-name` / `universal-personal-name`.
+ * §18.3.12). `surname` is mandatory; `given-name`, `initials`, and `generation-qualifier`
+ * are optional. `initials` are of all names *except* the surname. Printable, Teletex, and
+ * Universal encodings of the same person are equivalent (X.402 §18.4 c). Letter case is
+ * insignificant (§18.4 f). Missing `given-name` or `generation-qualifier` is not the same
+ * person as one that supplies them; initials are often omitted in practice.
+ * Teletex/universal twins are extension attributes `teletex-personal-name` /
+ * `universal-personal-name`.
  *
  * ### ASN.1 Definition:
  *

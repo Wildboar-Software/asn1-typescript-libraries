@@ -15,7 +15,7 @@ import { id_cat } from '../EDIMSObjectIdentifiers/id-cat.va.mjs';
  * @summary id_cat_forwarding_edims
  * @description
  *
- * OBJECT IDENTIFIER `id_cat_forwarding_edims`. Defined in ITU-T X.435 (1999) (Annex A).
+ * Defined in ITU-T X.435 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

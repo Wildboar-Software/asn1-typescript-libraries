@@ -16,12 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EntryClass
  * @description
  *
- * `EntryClass`. The Stored-message entry-class contains entries which represent complete
- * messages, reports, probes, and draft messages for an unrestricted range of
- * content-types. Three subordinate entry-classes are defined which contain subsets of
- * the entries contained in the Stored-message entry-class: a) The Delivery entry-class
- * contains entries with entry-type delivered-message, delivered-report, and
- * returned-content, which… See ITU-T X.413 (1999), §6.3.7.1.
+ * The Stored-message entry-class contains entries which represent complete messages,
+ * reports, probes, and draft messages for an unrestricted range of content-types. See
+ * ITU-T X.413 (1999), §6.
  *
  * ### ASN.1 Definition:
  *

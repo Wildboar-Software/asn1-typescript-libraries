@@ -24,7 +24,7 @@ import {
  * @summary mta_name_Type
  * @description
  *
- * `mta_name_Type`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

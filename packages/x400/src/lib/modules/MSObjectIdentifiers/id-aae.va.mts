@@ -15,7 +15,7 @@ import { id_ms } from '../MHSObjectIdentifiers/id-ms.va.mjs';
  * @summary id_aae
  * @description
  *
- * OBJECT IDENTIFIER `id_aae`. Defined in ITU-T X.413 (1999) (Annex A).
+ * Defined in ITU-T X.413 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -33,8 +33,7 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_edim
  * @description
  *
- * Information object `originate_edim`. The Originate EDIM abstract operation originates
- * a message whose content is an EDIM.
+ * The Originate EDIM abstract operation originates a message whose content is an EDIM.
  *
  * ### ASN.1 Definition:
  *

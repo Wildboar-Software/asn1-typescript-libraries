@@ -27,7 +27,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edi_bodypart_type
  * @description
  *
- * Information object `edi_bodypart_type`. Defined in ITU-T X.435 (1999) (§19).
+ * Defined in ITU-T X.435 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

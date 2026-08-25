@@ -26,11 +26,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary mt_trace_information
  * @description
  *
- * Information object `mt_trace_information`. This general-attribute, which is
- * multi-valued, documents the actions taken on the message (or probe or report) by each
- * MD through which it passed as it transferred through the MTS. It is generated from the
- * Message-delivery-envelope and the Report-delivery-envelope. See ITU-T X.413 (1999),
- * §11.2.82.
+ * This general-attribute, which is multi-valued, documents the actions taken on the
+ * message (or probe or report) by each MD through which it passed as it transferred
+ * through the MTS. It is generated from the Message-delivery-envelope and the
+ * Report-delivery-envelope. See ITU-T X.413 (1999), §11.2.82.
  *
  * ### ASN.1 Definition:
  *

@@ -15,10 +15,9 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_subject_submission_identifier
  * @description
  *
- * OBJECT IDENTIFIER `id_att_subject_submission_identifier`. This general-attribute
- * contains the subject-submission-identifier argument of the Report-delivery
- * abstract-operation. It indicates the message-submission-identifier or the
- * probe-submission-identifier of the subject of the report. See ITU-T X.413 (1999),
+ * This general-attribute contains the subject-submission-identifier argument of the
+ * Report-delivery abstract-operation. It indicates the message-submission-identifier or
+ * the probe-submission-identifier of the subject of the report. See ITU-T X.413 (1999),
  * §11.2.80.
  *
  * ### ASN.1 Definition:

@@ -15,13 +15,11 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_proofOfSubmission
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_proofOfSubmission`. This result provides the
- * originator of the message with proof of submission of the message to the MTS (to
- * provide the Proof of Submission element-of-service as defined in Submission
- * element-of-service (as defined in The proof-of-submission is computed using the
- * algorithm identified by the proof-of-submission-algorithm-identifier (an
- * algorithm-identifier). The proof-of-submission contains the… See ITU-T X.411 (1999),
- * §8.2.1.1.2.4.
+ * This result provides the originator of the message with proof of submission of the
+ * message to the MTS (to provide the Proof of Submission element-of-service as defined in
+ * Submission element-of-service (as defined in The proof-of-submission is computed using
+ * the algorithm identified by the proof-of-submission-algorithm-identifier (an
+ * algorithm-identifier). See ITU-T X.411 (1999), §8.
  *
  * ### ASN.1 Definition:
  *

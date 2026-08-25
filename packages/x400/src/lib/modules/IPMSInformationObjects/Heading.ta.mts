@@ -107,11 +107,7 @@ import {
  * @summary Heading
  * @description
  *
- * IPM heading fields (ITU-T X.420 (1999), §7.2). `this-IPM` is mandatory. Recipient
- * fields (`primary-recipients`, `copy-recipients`, `blind-copy-recipients`) are SEQUENCE
- * OF `RecipientSpecifier`; order is display/processing order. Empty SEQUENCE means that
- * category has no recipients — omit vs empty is not always distinguished on the wire
- * because the components are OPTIONAL; omit them rather than send empty.
+ * IPM heading fields (ITU-T X.420 (1999), §7.2).
  *
  * ### ASN.1 Definition:
  *

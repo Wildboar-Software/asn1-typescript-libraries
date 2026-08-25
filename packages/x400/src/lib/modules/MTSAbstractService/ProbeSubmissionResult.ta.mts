@@ -35,8 +35,7 @@ import {
  * @summary ProbeSubmissionResult
  * @description
  *
- * `ProbeSubmissionResult`. Defined in ITU-T X.411 (1999) (§8). SET OF: order is
- * insignificant; duplicates are typically meaningless.
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

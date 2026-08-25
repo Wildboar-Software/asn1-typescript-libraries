@@ -19,7 +19,7 @@ import {
  * @summary MessageDeliveryPDUs88
  * @description
  *
- * `MessageDeliveryPDUs88`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

@@ -26,9 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ipm_synopsis
  * @description
  *
- * Information object `ipm_synopsis`. The IPM Synopsis attribute gives the structure,
- * characteristics, size, and processing status of an IPM at the granularity of
- * individual body parts.
+ * The IPM Synopsis attribute gives the structure, characteristics, size, and processing
+ * status of an IPM at the granularity of individual body parts.
  *
  * ### ASN.1 Definition:
  *

@@ -53,9 +53,8 @@ function teletexStringsAreEqual(
  * @description
  *
  * Teletex-string twin of `PersonalName` (ITU-T X.402 (1999), §18.2–§18.3.12). Equivalent
- * to the printable form if the characters are in the PrintableString repertoire (§18.4
- * d). Non-spacing underline and most control functions are insignificant in Teletex
- * (§18.4 h).
+ * to the printable form if the characters are in the PrintableString repertoire (§18.4 d).
+ * Non-spacing underline and most control functions are insignificant in Teletex (§18.4 h).
  *
  * ### ASN.1 Definition:
  *

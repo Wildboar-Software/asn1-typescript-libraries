@@ -15,8 +15,7 @@ import {
  * @summary ub_edi_document_release
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_edi_document_release`. Defined in ITU-T X.435 (1999)
- * (Annex B).
+ * Defined in ITU-T X.435 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

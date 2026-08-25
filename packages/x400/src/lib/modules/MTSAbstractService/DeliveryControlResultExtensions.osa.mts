@@ -15,8 +15,7 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
  * @summary DeliveryControlResultExtensions
  * @description
  *
- * Information object set `DeliveryControlResultExtensions`. Defined in ITU-T X.411
- * (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

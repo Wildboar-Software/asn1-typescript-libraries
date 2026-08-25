@@ -27,8 +27,7 @@ import { id_at_mhs_extended_network_address } from '../MHSRoutingObjectIdentifie
  * @summary mHSExtendedNetworkAddressAttribute
  * @description
  *
- * Information object `mHSExtendedNetworkAddressAttribute`. Defined in ITU-T X.412 (1999)
- * (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

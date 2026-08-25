@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MTSAbstractService88` (ITU-T X.411 (1999), §8).
+ * ASN.1 module from ITU-T X.411 (1999), §8.
  */
 export * from "./administration-88.oa.mjs";
 export * from "./delivery-88.oa.mjs";

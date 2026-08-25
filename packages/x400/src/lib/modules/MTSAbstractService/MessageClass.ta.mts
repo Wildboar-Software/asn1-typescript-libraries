@@ -57,11 +57,7 @@ import {
  * @summary MessageClass
  * @description
  *
- * `MessageClass`. Defined in ITU-T X.411 (1999) (§8). SEQUENCE OF: element order is
- * significant unless the using specification says otherwise. SET OF: order is
- * insignificant; duplicates are typically meaningless. ASN.1 DEFAULT `both`: that value
- * is assumed when the component is absent (do not encode the default unless required).
- * ENUMERATED value `0` is a named variant, not a sentinel for 'absent' or 'unspecified'.
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

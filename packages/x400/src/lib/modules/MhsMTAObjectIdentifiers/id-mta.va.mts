@@ -15,7 +15,7 @@ import { mhs_management } from '../MhsMTAObjectIdentifiers/mhs-management.va.mjs
  * @summary id_mta
  * @description
  *
- * OBJECT IDENTIFIER `id_mta`. Defined in ITU-T X.411 (1999) (MTA managed objects).
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

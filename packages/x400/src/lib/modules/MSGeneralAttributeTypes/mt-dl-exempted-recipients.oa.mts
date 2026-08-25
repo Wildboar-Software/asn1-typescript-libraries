@@ -30,11 +30,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary mt_dl_exempted_recipients
  * @description
  *
- * Information object `mt_dl_exempted_recipients`. This general-attribute, which is
- * multi-valued, contains components of the DL-exempted-recipients argument of the
- * Message-submission abstract-operation. When present, it identifies the recipients that
- * are requested not to be added to the set of intended recipients as a result of
- * DL-expansion. See ITU-T X.413 (1999), §11.2.27.
+ * This general-attribute, which is multi-valued, contains components of the
+ * DL-exempted-recipients argument of the Message-submission abstract-operation. When
+ * present, it identifies the recipients that are requested not to be added to the set of
+ * intended recipients as a result of DL-expansion. See ITU-T X.413 (1999), §11.2.27.
  *
  * ### ASN.1 Definition:
  *

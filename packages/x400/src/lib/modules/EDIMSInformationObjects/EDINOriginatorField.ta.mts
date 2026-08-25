@@ -19,7 +19,7 @@ import {
  * @summary EDINOriginatorField
  * @description
  *
- * `EDINOriginatorField`. Defined in ITU-T X.435 (1999) (§8).
+ * Defined in ITU-T X.435 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

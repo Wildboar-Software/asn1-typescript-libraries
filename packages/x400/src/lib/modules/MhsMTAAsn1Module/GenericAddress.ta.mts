@@ -17,7 +17,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GenericAddress
  * @description
  *
- * `GenericAddress`. Defined in ITU-T X.411 (1999) (MTA managed objects).
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

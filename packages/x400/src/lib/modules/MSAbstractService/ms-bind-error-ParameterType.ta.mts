@@ -25,7 +25,7 @@ import {
  * @summary ms_bind_error_ParameterType
  * @description
  *
- * `ms_bind_error_ParameterType`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

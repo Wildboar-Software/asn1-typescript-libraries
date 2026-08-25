@@ -23,7 +23,7 @@ import { id_oc_mhs_pds_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-pds
  * @summary mHSPDSName
  * @description
  *
- * Information object `mHSPDSName`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

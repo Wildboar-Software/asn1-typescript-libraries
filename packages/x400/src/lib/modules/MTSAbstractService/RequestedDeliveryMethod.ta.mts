@@ -19,9 +19,9 @@ import {
  * @summary RequestedDeliveryMethod
  * @description
  *
- * SEQUENCE OF INTEGER, **most preferred first**, each value different (ITU-T X.411
- * (1999), Annex A, extension 6). `any-delivery-method`(0) is the IF ABSENT default of
- * the extension. Empty SEQUENCE is allowed by ASN.1 but the extension default is `{
+ * SEQUENCE OF INTEGER, **most preferred first**, each value different (ITU-T X.411 (1999),
+ * Annex A, extension 6). `any-delivery-method`(0) is the IF ABSENT default of the
+ * extension. Empty SEQUENCE is allowed by ASN.1 but the extension default is `{
  * any-delivery-method }` when the extension is omitted.
  *
  * ### ASN.1 Definition:

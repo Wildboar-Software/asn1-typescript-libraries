@@ -30,11 +30,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_ipm_recipients
  * @description
  *
- * Information object `ac_ipm_recipients`. The AC IPM Recipients attribute, which is
- * multi-valued, contains one value for each distinct Primary, Copy, Blind Copy, and
- * Circulation List Recipient of the submitted IPM. Where two or more recipient
- * specifiers contain the same value of OR-name (i.e. See ITU-T X.420 (1999),
- * §19.6.5.2.1.
+ * The AC IPM Recipients attribute, which is multi-valued, contains one value for each
+ * distinct Primary, Copy, Blind Copy, and Circulation List Recipient of the submitted IPM.
+ * Where two or more recipient specifiers contain the same value of OR-name (i.e. See ITU-T
+ * X.420 (1999), §19.6.5.2.1.
  *
  * ### ASN.1 Definition:
  *

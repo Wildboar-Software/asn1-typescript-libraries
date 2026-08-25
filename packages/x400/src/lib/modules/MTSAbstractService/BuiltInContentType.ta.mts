@@ -17,8 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @description
  *
  * INTEGER content-type identifiers including unidentified(0), external(1),
- * interpersonal-messaging-1984(2), EDI(35), etc. (ITU-T X.411 (1999), Annex A). `0`
- * means unidentified, not 'absent'.
+ * interpersonal-messaging-1984(2), EDI(35), etc. (ITU-T X.411 (1999), Annex A). `0` means
+ * unidentified, not 'absent'.
  *
  * ### ASN.1 Definition:
  *

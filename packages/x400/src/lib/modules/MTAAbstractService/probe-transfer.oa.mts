@@ -27,11 +27,10 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary probe_transfer
  * @description
  *
- * Information object `probe_transfer`. The Probe-transfer abstract-operation enables an
- * MTA to transfer a probe to another MTA. 12.2.1.2.1 Arguments Table 31 lists the
- * arguments of the Probe-transfer abstract-operation, and for each argument qualifies
- * its presence and identifies the clause in which the argument is defined. See ITU-T
- * X.411 (1999), §12.2.1.2.
+ * The Probe-transfer abstract-operation enables an MTA to transfer a probe to another MTA.
+ * 12.2.1.2.1 Arguments Table 31 lists the arguments of the Probe-transfer
+ * abstract-operation, and for each argument qualifies its presence and identifies the
+ * clause in which the argument is defined. See ITU-T X.411 (1999), §12.2.1.2.
  *
  * ### ASN.1 Definition:
  *

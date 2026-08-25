@@ -15,8 +15,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AutoSubmitted
  * @description
  *
- * `AutoSubmitted`. Defined in ITU-T X.420 (1999) (§18). ENUMERATED value `0` is a named
- * variant, not a sentinel for 'absent' or 'unspecified'.
+ * Defined in ITU-T X.420 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

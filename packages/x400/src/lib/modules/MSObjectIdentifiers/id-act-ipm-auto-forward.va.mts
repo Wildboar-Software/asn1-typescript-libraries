@@ -15,7 +15,7 @@ import { id_act } from '../MSObjectIdentifiers/id-act.va.mjs';
  * @summary id_act_ipm_auto_forward
  * @description
  *
- * OBJECT IDENTIFIER `id_act_ipm_auto_forward`. Defined in ITU-T X.413 (1999) (Annex A).
+ * Defined in ITU-T X.413 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

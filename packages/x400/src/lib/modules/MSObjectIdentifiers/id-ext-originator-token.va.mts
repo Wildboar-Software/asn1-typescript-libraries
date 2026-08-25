@@ -15,7 +15,7 @@ import { id_ext } from '../MSObjectIdentifiers/id-ext.va.mjs';
  * @summary id_ext_originator_token
  * @description
  *
- * OBJECT IDENTIFIER `id_ext_originator_token`. Defined in ITU-T X.413 (1999) (Annex A).
+ * Defined in ITU-T X.413 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

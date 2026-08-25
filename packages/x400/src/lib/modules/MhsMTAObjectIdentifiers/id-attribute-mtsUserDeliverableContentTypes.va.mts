@@ -15,13 +15,9 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_mtsUserDeliverableContentTypes
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_mtsUserDeliverableContentTypes`. This component
- * indicates the content-types that the MTS shall permit to appear in messages delivered
- * to the MTS- user, if they are to be constrained within a deliverable-class. If the
- * content-length of the message to be delivered exceeds that specified by the
- * deliverable-maximum-content- length, then the message does not satisfy the constraints
- * of this deliverable-class and no other criteria of the… See ITU-T X.411 (1999),
- * §8.4.1.1.1.3.2.
+ * This component indicates the content-types that the MTS shall permit to appear in
+ * messages delivered to the MTS- user, if they are to be constrained within a
+ * deliverable-class. See ITU-T X.411 (1999), §8.
  *
  * ### ASN.1 Definition:
  *

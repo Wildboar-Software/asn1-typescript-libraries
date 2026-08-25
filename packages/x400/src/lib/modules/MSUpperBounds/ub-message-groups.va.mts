@@ -15,8 +15,7 @@ import {
  * @summary ub_message_groups
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_message_groups`. Defined in ITU-T X.413 (1999) (Annex
- * B).
+ * Defined in ITU-T X.413 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

@@ -20,7 +20,7 @@ import {
  * @summary Contents_Type_Attribute_document_type
  * @description
  *
- * `Contents_Type_Attribute_document_type`. Defined in ITU-T X.420 (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

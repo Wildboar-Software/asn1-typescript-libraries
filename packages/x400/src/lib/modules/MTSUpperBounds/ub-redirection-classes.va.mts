@@ -15,8 +15,7 @@ import {
  * @summary ub_redirection_classes
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_redirection_classes`. Defined in ITU-T X.411 (1999)
- * (Annex B).
+ * Defined in ITU-T X.411 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

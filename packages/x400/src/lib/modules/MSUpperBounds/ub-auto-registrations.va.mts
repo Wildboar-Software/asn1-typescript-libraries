@@ -15,8 +15,7 @@ import {
  * @summary ub_auto_registrations
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_auto_registrations`. Defined in ITU-T X.413 (1999)
- * (Annex B).
+ * Defined in ITU-T X.413 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

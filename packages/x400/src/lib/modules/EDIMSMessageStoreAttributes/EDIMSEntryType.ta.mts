@@ -15,11 +15,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDIMSEntryType
  * @description
  *
- * `EDIMSEntryType`. The EDIMS Entry Type attribute identifies an information object’s
- * type.
- * 
- * ENUMERATED value `0` is a named variant, not
- * a sentinel for 'absent' or 'unspecified'.
+ * The EDIMS Entry Type attribute identifies an information object’s type.
  *
  * ### ASN.1 Definition:
  *

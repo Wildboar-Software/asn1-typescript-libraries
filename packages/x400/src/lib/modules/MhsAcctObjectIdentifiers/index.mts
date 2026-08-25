@@ -1,8 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MhsAcctObjectIdentifiers` (ITU-T X.411 (1999), accounting
- * objects).
+ * ASN.1 module from ITU-T X.411 (1999), accounting objects.
  */
 export * from "./id-accounting.va.mjs";
 export * from "./id-action.va.mjs";

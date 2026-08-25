@@ -23,9 +23,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_locally_originated
  * @description
  *
- * Information object `ms_locally_originated`. This general-attribute indicates, by its
- * presence or absence, whether this delivered-message entry was originated by this
- * MS-user. See ITU-T X.413 (1999), §11.2.33.
+ * This general-attribute indicates, by its presence or absence, whether this
+ * delivered-message entry was originated by this MS-user. See ITU-T X.413 (1999),
+ * §11.2.33.
  *
  * ### ASN.1 Definition:
  *

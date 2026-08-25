@@ -26,9 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_delivery_envelope
  * @description
  *
- * Information object `mt_message_delivery_envelope`. This general-attribute contains the
- * message-delivery-envelope component of the argument of the Message-delivery
- * abstract-operation.
+ * This general-attribute contains the message-delivery-envelope component of the argument
+ * of the Message-delivery abstract-operation.
  *
  * ### ASN.1 Definition:
  *

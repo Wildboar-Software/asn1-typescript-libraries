@@ -26,11 +26,11 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_correlated_delivered_edins
  * @description
  *
- * Information object `ac_correlated_delivered_edins`. The AC Correlated Delivered EDINs
- * attribute, which is multi-valued, identifies the delivered EDINs that have been
- * correlated with each of the AC EDIM Recipients of a submitted EDIM. The initial value
- * of the attribute is set for each of the AC EDIM Recipients and indicates that no EDINs
- * have been received. See ITU-T X.435 (1999), §18.8.6.2.3.
+ * The AC Correlated Delivered EDINs attribute, which is multi-valued, identifies the
+ * delivered EDINs that have been correlated with each of the AC EDIM Recipients of a
+ * submitted EDIM. The initial value of the attribute is set for each of the AC EDIM
+ * Recipients and indicates that no EDINs have been received. See ITU-T X.435 (1999),
+ * §18.8.6.2.3.
  *
  * ### ASN.1 Definition:
  *

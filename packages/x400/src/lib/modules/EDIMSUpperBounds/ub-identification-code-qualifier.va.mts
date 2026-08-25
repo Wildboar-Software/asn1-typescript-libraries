@@ -15,11 +15,10 @@ import {
  * @summary ub_identification_code_qualifier
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_identification_code_qualifier`. The Identification Code
- * Qualifier, if present, is a qualifier to the Identification Code of a
- * sender/recipient. This is semantically identical to the "Identification code
- * qualifier" component of the Interchange sender/recipient of the EDIFACT UNB segment.
- * See ITU-T X.435 (1999), §8.1.1.2.
+ * The Identification Code Qualifier, if present, is a qualifier to the Identification Code
+ * of a sender/recipient. This is semantically identical to the "Identification code
+ * qualifier" component of the Interchange sender/recipient of the EDIFACT UNB segment. See
+ * ITU-T X.435 (1999), §8.1.1.2.
  *
  * ### ASN.1 Definition:
  *

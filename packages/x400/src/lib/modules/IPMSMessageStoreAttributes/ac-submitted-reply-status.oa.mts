@@ -28,9 +28,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ac_submitted_reply_status
  * @description
  *
- * Information object `ac_submitted_reply_status`. The AC Submitted Reply Status
- * attribute indicates whether a reply to a delivered IPM was requested and whether one
- * has been sent.
+ * The AC Submitted Reply Status attribute indicates whether a reply to a delivered IPM was
+ * requested and whether one has been sent.
  *
  * ### ASN.1 Definition:
  *

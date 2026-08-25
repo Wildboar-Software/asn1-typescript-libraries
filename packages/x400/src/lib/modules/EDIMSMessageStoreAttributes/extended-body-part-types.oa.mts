@@ -24,9 +24,9 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary extended_body_part_types
  * @description
  *
- * Information object `extended_body_part_types`. The types of body parts that may appear
- * in the Body of an EDIM are defined and described below. 8.3.1 EDI Body Part An EDI
- * Body Part carries a single EDI Interchange. See ITU-T X.435 (1999), §8.3.
+ * The types of body parts that may appear in the Body of an EDIM are defined and described
+ * below. 8.3.1 EDI Body Part An EDI Body Part carries a single EDI Interchange. See ITU-T
+ * X.435 (1999), §8.3.
  *
  * ### ASN.1 Definition:
  *

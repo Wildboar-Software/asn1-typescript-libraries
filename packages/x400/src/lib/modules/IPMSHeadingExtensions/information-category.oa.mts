@@ -20,11 +20,9 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary information_category
  * @description
  *
- * Information object `information_category`. The Information-category-match rule
- * compares for equality a presented value with attribute-values of type Information
- * Category as defined in A.1.10.  The rule returns true if, and only
- * if, one of the following conditions is fulfilled for the presented value and at least
- * one value of the attribute: a) the… See ITU-T X.420 (1999), §19.7.17.
+ * Heading extension identifying the character of the information in the IPM (ITU-T X.420
+ * (1999), Annex A.1.10). Recipient UAs may use it for presentation or other local
+ * processing.
  *
  * ### ASN.1 Definition:
  *

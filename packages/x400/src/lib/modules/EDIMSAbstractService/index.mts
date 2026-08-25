@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `EDIMSAbstractService` (ITU-T X.435 (1999), §9).
+ * ASN.1 module from ITU-T X.435 (1999), §9.
  */
 export * from "./index.mjs";
 export * from "./originate-edim-ArgumentType.ta.mjs";

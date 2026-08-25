@@ -15,11 +15,10 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_reply_recipients
  * @description
  *
- * OBJECT IDENTIFIER `id_hat_reply_recipients`. The Reply Recipients heading field (C)
- * identifies zero or more users and DLs whom the authorizing users request (but do not
- * demand) be among the recipients of any replies to the present IPM. It comprises a
- * Sequence of sub-fields, each an OR-descriptor, one for each user or DL. See ITU-T
- * X.420 (1999), §7.2.13.
+ * The Reply Recipients heading field (C) identifies zero or more users and DLs whom the
+ * authorizing users request (but do not demand) be among the recipients of any replies to
+ * the present IPM. It comprises a Sequence of sub-fields, each an OR-descriptor, one for
+ * each user or DL. See ITU-T X.420 (1999), §7.2.13.
  *
  * ### ASN.1 Definition:
  *

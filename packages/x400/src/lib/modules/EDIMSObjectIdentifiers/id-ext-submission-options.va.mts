@@ -15,8 +15,7 @@ import { id_ext } from '../EDIMSObjectIdentifiers/id-ext.va.mjs';
  * @summary id_ext_submission_options
  * @description
  *
- * OBJECT IDENTIFIER `id_ext_submission_options`. Defined in ITU-T X.435 (1999) (Annex
- * A).
+ * Defined in ITU-T X.435 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

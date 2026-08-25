@@ -15,10 +15,9 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_delivery_flags
  * @description
  *
- * OBJECT IDENTIFIER `id_att_delivery_flags`. This general-attribute contains information
- * derived from the arguments of the Message-delivery abstract-operation. It indicates
- * whether implicit-conversion of the content is prohibited. See ITU-T X.413 (1999),
- * §11.2.26.
+ * This general-attribute contains information derived from the arguments of the
+ * Message-delivery abstract-operation. It indicates whether implicit-conversion of the
+ * content is prohibited. See ITU-T X.413 (1999), §11.2.26.
  *
  * ### ASN.1 Definition:
  *

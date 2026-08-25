@@ -61,8 +61,7 @@ import {
  * @summary AutoForwardArguments
  * @description
  *
- * `AutoForwardArguments`. Defined in ITU-T X.420 (1999) (§19). SEQUENCE SIZE (1..…):
- * omit this component rather than encode an empty SEQUENCE.
+ * Defined in ITU-T X.420 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

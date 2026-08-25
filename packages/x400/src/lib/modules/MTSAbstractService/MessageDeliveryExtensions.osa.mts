@@ -43,8 +43,7 @@ import { physical_forwarding_prohibited } from "./physical-forwarding-prohibited
  * @summary MessageDeliveryExtensions
  * @description
  *
- * Information object set `MessageDeliveryExtensions`. Defined in ITU-T X.411 (1999)
- * (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

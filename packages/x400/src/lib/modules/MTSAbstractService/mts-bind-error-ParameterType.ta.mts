@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary mts_bind_error_ParameterType
  * @description
  *
- * `mts_bind_error_ParameterType`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

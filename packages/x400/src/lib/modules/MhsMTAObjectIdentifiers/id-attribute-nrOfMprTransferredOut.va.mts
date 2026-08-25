@@ -15,8 +15,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_nrOfMprTransferredOut
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_nrOfMprTransferredOut`. Defined in ITU-T X.411 (1999)
- * (MTA managed objects).
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

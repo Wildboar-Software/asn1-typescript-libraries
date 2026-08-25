@@ -20,7 +20,7 @@ import { id_et_message } from '../IPMSObjectIdentifiers/id-et-message.va.mjs';
  * @summary message_body_part_data
  * @description
  *
- * Information object `message_body_part_data`. Defined in ITU-T X.420 (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

@@ -20,8 +20,7 @@ import { id_mr_oraddress_substring_elements_match } from '../MSObjectIdentifiers
  * @summary oRAddressSubstringElementsMatch
  * @description
  *
- * Information object `oRAddressSubstringElementsMatch`. Defined in ITU-T X.413 (1999)
- * (§12.4 / §13).
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
  *
  * ### ASN.1 Definition:
  *

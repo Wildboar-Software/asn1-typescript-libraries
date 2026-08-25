@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RTTRapdu
  * @description
  *
- * `RTTRapdu`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

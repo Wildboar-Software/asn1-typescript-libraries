@@ -15,9 +15,8 @@ import { id_cat } from '../IPMSObjectIdentifiers/id-cat.va.mjs';
  * @summary id_cat_replied_to_ipm
  * @description
  *
- * OBJECT IDENTIFIER `id_cat_replied_to_ipm`. The Replied-to IPM heading field (C)
- * identifies the IPM to which the present IPM is a reply. It comprises an IPM
- * identifier. See ITU-T X.420 (1999), §7.2.7.
+ * The Replied-to IPM heading field (C) identifies the IPM to which the present IPM is a
+ * reply. It comprises an IPM identifier. See ITU-T X.420 (1999), §7.2.7.
  *
  * ### ASN.1 Definition:
  *

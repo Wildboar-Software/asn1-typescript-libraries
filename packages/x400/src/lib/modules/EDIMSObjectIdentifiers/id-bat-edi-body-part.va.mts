@@ -15,9 +15,9 @@ import { id_bat } from '../EDIMSObjectIdentifiers/id-bat.va.mjs';
  * @summary id_bat_edi_body_part
  * @description
  *
- * OBJECT IDENTIFIER `id_bat_edi_body_part`. An EDI Body Part carries a single EDI
- * Interchange. EDIBodyPart ::= OCTET STRING The reference definition of EDI Interchange
- * used is that used by EDIFACT (ISO 9735). See ITU-T X.435 (1999), §8.3.1.
+ * An EDI Body Part carries a single EDI Interchange. EDIBodyPart ::= OCTET STRING The
+ * reference definition of EDI Interchange used is that used by EDIFACT (ISO 9735). See
+ * ITU-T X.435 (1999), §8.3.1.
  *
  * ### ASN.1 Definition:
  *

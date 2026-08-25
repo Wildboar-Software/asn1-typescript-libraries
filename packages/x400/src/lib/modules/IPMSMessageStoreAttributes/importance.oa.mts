@@ -29,9 +29,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary importance
  * @description
  *
- * Information object `importance`. The Importance heading field (D normal) identifies
- * the importance that the authorizing users attach to the IPM. It may assume any one of
- * the following values: low, normal, or high. See ITU-T X.420 (1999), §7.2.14.
+ * The Importance heading field (D normal) identifies the importance that the authorizing
+ * users attach to the IPM. It may assume any one of the following values: low, normal, or
+ * high. See ITU-T X.420 (1999), §7.2.14.
  *
  * ### ASN.1 Definition:
  *

@@ -35,10 +35,9 @@ import {
  * @summary NegativeNotificationFields
  * @description
  *
- * `NegativeNotificationFields`. Some attributes bear the names of NN EDIN fields and
- * have those fields as their values. Some attributes bear the names of notification
- * fields and have subfields of the NN fields of a notification as their values. See
- * ITU-T X.435 (1999), §18.8.5.3.
+ * Some attributes bear the names of NN EDIN fields and have those fields as their values.
+ * Some attributes bear the names of notification fields and have subfields of the NN
+ * fields of a notification as their values. See ITU-T X.435 (1999), §18.8.5.3.
  *
  * ### ASN.1 Definition:
  *

@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AuthenticationMethod
  * @description
  *
- * `AuthenticationMethod`. Defined in ITU-T X.412 (1999) (§11).
+ * Defined in ITU-T X.412 (1999) (§11).
  *
  * ### ASN.1 Definition:
  *

@@ -28,11 +28,8 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary fetch_restriction_error
  * @description
  *
- * Information object `fetch_restriction_error`. A Fetch-restriction-error reports an
- * attempt to violate a restriction associated with the Fetch abstract-operation.
- *  See ITU-T X.413
- * (1999), §9.5. SET SIZE (1..…): omit this component rather than encode an empty SET;
- * SET order is insignificant.
+ * A Fetch-restriction-error reports an attempt to violate a restriction associated with
+ * the Fetch abstract-operation. See ITU-T X.413 (1999), §9.5. ;
  *
  * ### ASN.1 Definition:
  *

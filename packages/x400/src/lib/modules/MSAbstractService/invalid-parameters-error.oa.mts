@@ -25,11 +25,10 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary invalid_parameters_error
  * @description
  *
- * Information object `invalid_parameters_error`. An Invalid-parameters-error reports an
- * undefined problem in processing the argument of an abstract-operation. This error may
- * be used, for example, to report that an optional parameter was present in the wrong
- * context, or to report that a value for one of the parameters is inappropriate. See
- * ITU-T X.413 (1999), §9.6.
+ * An Invalid-parameters-error reports an undefined problem in processing the argument of
+ * an abstract-operation. This error may be used, for example, to report that an optional
+ * parameter was present in the wrong context, or to report that a value for one of the
+ * parameters is inappropriate. See ITU-T X.413 (1999), §9.6.
  *
  * ### ASN.1 Definition:
  *

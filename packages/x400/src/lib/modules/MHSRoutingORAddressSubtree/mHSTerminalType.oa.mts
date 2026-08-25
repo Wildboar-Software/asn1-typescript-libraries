@@ -23,7 +23,7 @@ import { id_oc_mhs_terminal_type } from '../MHSRoutingObjectIdentifiers/id-oc-mh
  * @summary mHSTerminalType
  * @description
  *
- * Information object `mHSTerminalType`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

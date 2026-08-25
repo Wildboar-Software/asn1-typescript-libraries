@@ -19,8 +19,7 @@ import {
  * @summary AdditionalBodyParts
  * @description
  *
- * `AdditionalBodyParts`. Defined in ITU-T X.435 (1999) (§8). SEQUENCE OF: element order
- * is significant unless the using specification says otherwise.
+ * Defined in ITU-T X.435 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

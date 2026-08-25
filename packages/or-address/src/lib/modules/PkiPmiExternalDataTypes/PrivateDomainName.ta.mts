@@ -12,8 +12,8 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * PRMD name (ITU-T X.402 (1999), §18.3.21). Identification is a national matter: unique
  * within the country, or unique relative to the ADMD. Numeric vs Printable digits are
- * equivalent (X.402 §18.4 b). SIZE (1..16): unlike `AdministrationDomainName`, the empty
- * string is not allowed.
+ * equivalent (X.402 §18.4 b). unlike `AdministrationDomainName`, the empty string is not
+ * allowed.
  *
  * ### ASN.1 Definition:
  *

@@ -15,10 +15,9 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_related_messages
  * @description
  *
- * OBJECT IDENTIFIER `id_hat_related_messages`. Identifies messages, EDIMs or other (for
- * example IPMs), that the originator of this EDIM considers related to it. It comprises
- * a sequence of one or more message references, one for each related message. See ITU-T
- * X.435 (1999), §8.2.9.
+ * Identifies messages, EDIMs or other (for example IPMs), that the originator of this EDIM
+ * considers related to it. It comprises a sequence of one or more message references, one
+ * for each related message. See ITU-T X.435 (1999), §8.2.9.
  *
  * ### ASN.1 Definition:
  *

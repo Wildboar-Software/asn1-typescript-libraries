@@ -24,12 +24,12 @@ import {
  * @summary DLExpansion
  * @description
  *
- * `DLExpansion`. This argument contains a sequence of OR-names and associated times
- * which document the history of the origin of the subject-message. The first OR-name in
- * the sequence is the OR-name of the originator of the subject, and the remainder of the
- * sequence is a sequence of OR-names of the DLs that have been expanded in directing the
- * subject towards the recipient (the latter being the same as the DL-expansion-history).
- * See ITU-T X.411 (1999), §8.3.1.2.1.3.
+ * This argument contains a sequence of OR-names and associated times which document the
+ * history of the origin of the subject-message. The first OR-name in the sequence is the
+ * OR-name of the originator of the subject, and the remainder of the sequence is a
+ * sequence of OR-names of the DLs that have been expanded in directing the subject towards
+ * the recipient (the latter being the same as the DL-expansion-history). See ITU-T X.411
+ * (1999), §8.3.1.2.1.3.
  *
  * ### ASN.1 Definition:
  *

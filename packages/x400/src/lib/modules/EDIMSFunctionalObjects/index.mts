@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `EDIMSFunctionalObjects` (ITU-T X.435 (1999), §6).
+ * ASN.1 module from ITU-T X.435 (1999), §6.
  */
 export * from "./edimg-user.oa.mjs";
 export * from "./edims-access-contract.oa.mjs";

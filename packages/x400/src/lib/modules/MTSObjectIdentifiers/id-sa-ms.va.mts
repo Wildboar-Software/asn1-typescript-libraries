@@ -15,7 +15,7 @@ import { id_sa } from '../MTSObjectIdentifiers/id-sa.va.mjs';
  * @summary id_sa_ms
  * @description
  *
- * OBJECT IDENTIFIER `id_sa_ms`. Defined in ITU-T X.411 (1999) (Annex A).
+ * Defined in ITU-T X.411 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

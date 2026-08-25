@@ -27,7 +27,7 @@ import {
  * @summary attribute_error_ParameterType_problems_Item
  * @description
  *
- * `attribute_error_ParameterType_problems_Item`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

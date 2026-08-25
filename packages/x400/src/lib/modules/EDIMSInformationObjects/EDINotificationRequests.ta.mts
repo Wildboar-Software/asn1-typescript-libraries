@@ -16,11 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDINotificationRequests
  * @description
  *
- * `EDINotificationRequests`. The EDI Notification Requests component (Default: no
- * notifications, no notification security and no reception security) may make certain
- * requests of the preferred recipient deNOTEd by the Recipient field. NOTE 1 – The fact
- * that a message can be redirected or forwarded is reflected in the word "preferred"
- * above. See ITU-T X.435 (1999), §8.2.3.3.
+ * Which EDINs are requested of the preferred recipient (ITU-T X.435 (1999), §8.2.3.3).
+ * Bits may be combined. Absent/empty means no EDI notification requests.
+ * `EDINotificationSecurity` and `EDIReceptionSecurity` shall not be requested if no EDI
+ * notifications are requested. Defined security combinations are: both `{proof}`, both
+ * `{non-repudiation}`, notification `{proof}` with empty reception, notification
+ * `{non-repudiation}` with empty reception, or both empty.
  *
  * ### ASN.1 Definition:
  *
@@ -33,36 +34,64 @@ export type EDINotificationRequests = BIT_STRING;
 
 /**
  * @summary EDINotificationRequests_pn
+ * @description
+ *
+ * Request a notification of acceptance of Responsibility (positive notification) in the
+ * circumstances of X.435 clause 9.
+ *
  * @constant
  */
 export const EDINotificationRequests_pn: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary pn
+ * @description
+ *
+ * Request a notification of acceptance of Responsibility (positive notification) in the
+ * circumstances of X.435 clause 9.
+ *
  * @constant
  */
 export const pn: number = EDINotificationRequests_pn; /* SHORT_NAMED_BIT */
 
 /**
  * @summary EDINotificationRequests_nn
+ * @description
+ *
+ * Request a notification of refusal of Responsibility (negative notification) in the
+ * circumstances of X.435 clause 9.
+ *
  * @constant
  */
 export const EDINotificationRequests_nn: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary nn
+ * @description
+ *
+ * Request a notification of refusal of Responsibility (negative notification) in the
+ * circumstances of X.435 clause 9.
+ *
  * @constant
  */
 export const nn: number = EDINotificationRequests_nn; /* SHORT_NAMED_BIT */
 
 /**
  * @summary EDINotificationRequests_fn
+ * @description
+ *
+ * Request a forwarded notification in the circumstances of X.435 clause 9.
+ *
  * @constant
  */
 export const EDINotificationRequests_fn: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary fn
+ * @description
+ *
+ * Request a forwarded notification in the circumstances of X.435 clause 9.
+ *
  * @constant
  */
 export const fn: number = EDINotificationRequests_fn; /* SHORT_NAMED_BIT */

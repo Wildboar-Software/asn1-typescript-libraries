@@ -23,7 +23,7 @@ import { id_oc_mhs_given_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-g
  * @summary mHSGivenName
  * @description
  *
- * Information object `mHSGivenName`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

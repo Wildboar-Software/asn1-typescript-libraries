@@ -26,7 +26,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ipm_security_label
  * @description
  *
- * Information object `ipm_security_label`. Defined in ITU-T X.420 (1999) (§20).
+ * Defined in ITU-T X.420 (1999) (§20).
  *
  * ### ASN.1 Definition:
  *

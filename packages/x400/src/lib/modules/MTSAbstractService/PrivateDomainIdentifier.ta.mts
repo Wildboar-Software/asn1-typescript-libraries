@@ -17,7 +17,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PrivateDomainIdentifier
  * @description
  *
- * `PrivateDomainIdentifier`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

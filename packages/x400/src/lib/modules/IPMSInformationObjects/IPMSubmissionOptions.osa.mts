@@ -17,7 +17,7 @@ import { originator_forwarded_content_token } from '../IPMSInformationObjects/or
  * @summary IPMSubmissionOptions
  * @description
  *
- * Information object set `IPMSubmissionOptions`. Defined in ITU-T X.420 (1999) (§7).
+ * Defined in ITU-T X.420 (1999) (§7).
  *
  * ### ASN.1 Definition:
  *

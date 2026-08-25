@@ -17,7 +17,7 @@ import { type CONNECTION_PACKAGE } from '@wildboar/rose';
  * @summary mta_connect
  * @description
  *
- * Information object `mta_connect`. Defined in ITU-T X.411 (1999) (§12).
+ * Defined in ITU-T X.411 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

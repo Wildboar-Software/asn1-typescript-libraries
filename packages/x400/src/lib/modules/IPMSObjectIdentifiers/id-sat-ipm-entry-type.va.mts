@@ -15,8 +15,7 @@ import { id_sat } from '../IPMSObjectIdentifiers/id-sat.va.mjs';
  * @summary id_sat_ipm_entry_type
  * @description
  *
- * OBJECT IDENTIFIER `id_sat_ipm_entry_type`. The IPM Entry Type attribute identifies an
- * information object's type.
+ * The IPM Entry Type attribute identifies an information object's type.
  *
  * ### ASN.1 Definition:
  *

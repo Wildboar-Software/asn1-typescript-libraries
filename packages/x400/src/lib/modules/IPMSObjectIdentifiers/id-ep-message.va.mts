@@ -15,9 +15,8 @@ import { id_ep } from '../IPMSObjectIdentifiers/id-ep.va.mjs';
  * @summary id_ep_message
  * @description
  *
- * OBJECT IDENTIFIER `id_ep_message`. A Message body part represents an IPM and,
- * optionally, its delivery envelope. It has Parameters and Data components. See ITU-T
- * X.420 (1999), §7.4.7.
+ * A Message body part represents an IPM and, optionally, its delivery envelope. It has
+ * Parameters and Data components. See ITU-T X.420 (1999), §7.4.7.
  *
  * ### ASN.1 Definition:
  *

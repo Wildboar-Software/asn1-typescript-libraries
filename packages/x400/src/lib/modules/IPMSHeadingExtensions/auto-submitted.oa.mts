@@ -21,7 +21,7 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary auto_submitted
  * @description
  *
- * Information object `auto_submitted`. Defined in ITU-T X.420 (1999) (§18).
+ * Defined in ITU-T X.420 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

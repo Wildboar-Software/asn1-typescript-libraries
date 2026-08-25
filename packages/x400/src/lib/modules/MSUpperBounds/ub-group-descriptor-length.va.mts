@@ -15,8 +15,7 @@ import {
  * @summary ub_group_descriptor_length
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_group_descriptor_length`. Defined in ITU-T X.413 (1999)
- * (Annex B).
+ * Defined in ITU-T X.413 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

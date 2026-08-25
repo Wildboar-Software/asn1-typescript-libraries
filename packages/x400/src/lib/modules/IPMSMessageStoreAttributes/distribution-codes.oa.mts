@@ -27,7 +27,7 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary distribution_codes
  * @description
  *
- * Information object `distribution_codes`. Defined in ITU-T X.420 (1999) (§20).
+ * Defined in ITU-T X.420 (1999) (§20).
  *
  * ### ASN.1 Definition:
  *

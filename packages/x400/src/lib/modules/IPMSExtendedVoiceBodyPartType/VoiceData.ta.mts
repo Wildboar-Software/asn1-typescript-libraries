@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary VoiceData
  * @description
  *
- * `VoiceData`. Defined in ITU-T X.420 (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

@@ -25,11 +25,10 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary old_credentials_incorrectly_specified
  * @description
  *
- * Information object `old_credentials_incorrectly_specified`. The
- * Old-credentials-incorrectly-specified abstract-error reports that the credentials
- * cannot be changed because the current (old-) credentials were incorrectly specified.
- * The Old-credentials-incorrectly-specified abstract-error has no parameters. See ITU-T
- * X.411 (1999), §8.4.2.3.
+ * The Old-credentials-incorrectly-specified abstract-error reports that the credentials
+ * cannot be changed because the current (old-) credentials were incorrectly specified. The
+ * Old-credentials-incorrectly-specified abstract-error has no parameters. See ITU-T X.411
+ * (1999), §8.4.2.3.
  *
  * ### ASN.1 Definition:
  *

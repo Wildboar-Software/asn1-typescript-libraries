@@ -27,9 +27,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_rn
  * @description
  *
- * Information object `receive_rn`. The Receive RN abstract operation receives a message
- * whose content is an RN. The RN is provoked by an IPM originated with the Originate IPM
- * abstract operation. See ITU-T X.420 (1999), §12.2.3.
+ * The Receive RN abstract operation receives a message whose content is an RN. The RN is
+ * provoked by an IPM originated with the Originate IPM abstract operation. See ITU-T X.420
+ * (1999), §12.2.3.
  *
  * ### ASN.1 Definition:
  *

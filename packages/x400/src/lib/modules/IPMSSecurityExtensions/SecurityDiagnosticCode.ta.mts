@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SecurityDiagnosticCode
  * @description
  *
- * `SecurityDiagnosticCode`. Defined in ITU-T X.420 (1999) (§15).
+ * Defined in ITU-T X.420 (1999) (§15).
  *
  * ### ASN.1 Definition:
  *

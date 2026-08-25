@@ -18,7 +18,7 @@ import {
  * @summary err_recipient_improperly_specified
  * @description
  *
- * `err_recipient_improperly_specified`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

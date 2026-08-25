@@ -15,7 +15,7 @@ import { id_pt } from '../MSObjectIdentifiers/id-pt.va.mjs';
  * @summary id_pt_retrieval_94
  * @description
  *
- * OBJECT IDENTIFIER `id_pt_retrieval_94`. Defined in ITU-T X.413 (1999) (Annex A).
+ * Defined in ITU-T X.413 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

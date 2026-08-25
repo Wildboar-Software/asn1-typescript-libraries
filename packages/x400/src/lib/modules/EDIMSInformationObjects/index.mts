@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `EDIMSInformationObjects` (ITU-T X.435 (1999), §8).
+ * ASN.1 module from ITU-T X.435 (1999), §8.
  */
 export * from "./AcknowledgementRequestField.ta.mjs";
 export * from "./ActionRequestField.ta.mjs";

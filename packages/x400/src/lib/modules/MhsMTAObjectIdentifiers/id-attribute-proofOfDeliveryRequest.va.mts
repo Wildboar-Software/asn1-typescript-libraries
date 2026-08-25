@@ -15,11 +15,11 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_proofOfDeliveryRequest
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_proofOfDeliveryRequest`. This argument indicates
- * whether or not the originator of the message requires proof-of-delivery (to provide
- * the Proof of Delivery element-of-service as defined in recipient of the message. This
- * argument may have one of the following values: proof-of-delivery-requested or
- * proof-of-delivery-not- requested. See ITU-T X.411 (1999), §8.2.1.1.1.32.
+ * This argument indicates whether or not the originator of the message requires
+ * proof-of-delivery (to provide the Proof of Delivery element-of-service as defined in
+ * recipient of the message. This argument may have one of the following values:
+ * proof-of-delivery-requested or proof-of-delivery-not- requested. See ITU-T X.411 (1999),
+ * §8.2.1.1.1.32.
  *
  * ### ASN.1 Definition:
  *

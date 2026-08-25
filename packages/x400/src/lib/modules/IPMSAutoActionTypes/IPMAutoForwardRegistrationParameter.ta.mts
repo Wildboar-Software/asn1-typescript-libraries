@@ -50,7 +50,7 @@ import {
  * @summary IPMAutoForwardRegistrationParameter
  * @description
  *
- * `IPMAutoForwardRegistrationParameter`. Defined in ITU-T X.420 (1999) (§19).
+ * Defined in ITU-T X.420 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

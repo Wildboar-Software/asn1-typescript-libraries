@@ -42,9 +42,7 @@ import {
  * @summary NonReceiptFields
  * @description
  *
- * `NonReceiptFields`. The non-receipt fields are defined and described below.
- *  See ITU-T X.420 (1999),
- * §8.2.
+ * The non-receipt fields are defined and described below. See ITU-T X.420 (1999), §8.2.
  *
  * ### ASN.1 Definition:
  *

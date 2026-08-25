@@ -21,8 +21,7 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary languages
  * @description
  *
- * Information object `languages`. Defined in ITU-T X.420 (1999) (§18). SET OF: order is
- * insignificant; duplicates are typically meaningless.
+ * Defined in ITU-T X.420 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

@@ -26,7 +26,7 @@ import {
  * @summary ForwardingInformation1988
  * @description
  *
- * `ForwardingInformation1988`. Defined in ITU-T X.420 (1999) (§19).
+ * Defined in ITU-T X.420 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

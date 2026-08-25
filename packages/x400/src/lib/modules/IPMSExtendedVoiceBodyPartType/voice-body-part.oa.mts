@@ -16,7 +16,7 @@ import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED
  * @summary voice_body_part
  * @description
  *
- * Information object `voice_body_part`. Defined in ITU-T X.420 (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

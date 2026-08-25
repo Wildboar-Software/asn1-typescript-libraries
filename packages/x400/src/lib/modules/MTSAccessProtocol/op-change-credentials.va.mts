@@ -18,7 +18,7 @@ import {
  * @summary op_change_credentials
  * @description
  *
- * `op_change_credentials`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

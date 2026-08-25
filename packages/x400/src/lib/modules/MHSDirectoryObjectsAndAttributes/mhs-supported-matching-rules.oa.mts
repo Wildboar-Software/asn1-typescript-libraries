@@ -24,8 +24,7 @@ import { id_at_mhs_supported_matching_rules } from '../MHSObjectIdentifiers/id-a
  * @summary mhs_supported_matching_rules
  * @description
  *
- * Information object `mhs_supported_matching_rules`. Defined in ITU-T X.402 (1999) (§17
- * / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

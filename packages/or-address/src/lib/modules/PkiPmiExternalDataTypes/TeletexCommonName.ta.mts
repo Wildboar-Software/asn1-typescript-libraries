@@ -6,10 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TeletexCommonName
  * @description
  *
- * `TeletexCommonName`. A common-name is a standard attribute that identifies a user or
- * DL relative to the entity denoted by another attribute (e.g., an organization-name).
- * The value of a common-name is a Printable String, Teletex String, Universal String, or
- * a combination of these types. See ITU-T X.402 (1999), §18.3.2.
+ * A common-name is a standard attribute that identifies a user or DL relative to the
+ * entity denoted by another attribute (e.g., an organization-name). The value of a
+ * common-name is a Printable String, Teletex String, Universal String, or a combination of
+ * these types. See ITU-T X.402 (1999), §18.3.2.
  *
  * ### ASN.1 Definition:
  *

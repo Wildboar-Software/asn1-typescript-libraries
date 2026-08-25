@@ -20,7 +20,7 @@ import { universalDomainDefinedAttributeFromString } from "../../parse.mjs";
  * @summary UniversalDomainDefinedAttribute
  * @description
  *
- * `UniversalDomainDefinedAttribute`. Defined in ITU-T X.402 (1999) (§18).
+ * Defined in ITU-T X.402 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

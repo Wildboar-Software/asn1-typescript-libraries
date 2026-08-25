@@ -10,11 +10,10 @@ import {
  * @summary UniversalStreetAddress
  * @description
  *
- * `UniversalStreetAddress`. A street-address is a standard attribute that specifies the
- * street address (e.g., house number and street name and type (e.g., "Road")) at which a
- * user takes delivery of physical messages. The value of a street-address is a Printable
- * String, Teletex String, Universal String, or a combination of these types. See ITU-T
- * X.402 (1999), §18.3.22.
+ * A street-address is a standard attribute that specifies the street address (e.g., house
+ * number and street name and type (e.g., "Road")) at which a user takes delivery of
+ * physical messages. The value of a street-address is a Printable String, Teletex String,
+ * Universal String, or a combination of these types. See ITU-T X.402 (1999), §18.3.22.
  *
  * ### ASN.1 Definition:
  *

@@ -15,8 +15,7 @@ import { id_cat } from '../IPMSObjectIdentifiers/id-cat.va.mjs';
  * @summary id_cat_submitted_reply_status
  * @description
  *
- * OBJECT IDENTIFIER `id_cat_submitted_reply_status`. Defined in ITU-T X.420 (1999)
- * (Annex A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

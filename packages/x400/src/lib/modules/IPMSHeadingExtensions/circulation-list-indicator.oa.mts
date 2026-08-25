@@ -17,7 +17,7 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary circulation_list_indicator
  * @description
  *
- * Information object `circulation_list_indicator`. Defined in ITU-T X.420 (1999) (§18).
+ * Defined in ITU-T X.420 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

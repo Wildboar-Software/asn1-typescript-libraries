@@ -18,7 +18,7 @@ import { type CONTEXT } from '@wildboar/x500/InformationFramework';
  * @summary dl_nested_dl
  * @description
  *
- * Information object `dl_nested_dl`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

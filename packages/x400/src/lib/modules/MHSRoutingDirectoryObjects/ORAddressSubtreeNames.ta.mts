@@ -19,8 +19,7 @@ import {
  * @summary ORAddressSubtreeNames
  * @description
  *
- * `ORAddressSubtreeNames`. Defined in ITU-T X.412 (1999) (§11). SEQUENCE OF: element
- * order is significant unless the using specification says otherwise.
+ * Defined in ITU-T X.412 (1999) (§11).
  *
  * ### ASN.1 Definition:
  *

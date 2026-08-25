@@ -16,10 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PhysicalDeliveryModes
  * @description
  *
- * BIT STRING (ITU-T X.411 (1999), Annex A, extension 9). Bits 0–6 (`ordinary-mail` …
+ * BIT STRING (ITU-T X.411 (1999), Annex A, extension 9). Bits 0–6 (`ordinary-mail` through
  * `counter-collection-with-teletex-advice`) are mutually exclusive; bit 7
  * `bureau-fax-delivery` may be set independently. IF ABSENT default is `ordinary-mail`.
- * An empty BIT STRING is not the default — omit the extension instead.
  *
  * ### ASN.1 Definition:
  *
@@ -39,96 +38,172 @@ export type PhysicalDeliveryModes = BIT_STRING;
 
 /**
  * @summary PhysicalDeliveryModes_ordinary_mail
+ * @description
+ *
+ * Ordinary mail. Mutually exclusive with bits 1–6. IF ABSENT default of the
+ * physical-delivery-modes extension.
+ *
  * @constant
  */
 export const PhysicalDeliveryModes_ordinary_mail: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary ordinary_mail
+ * @description
+ *
+ * Ordinary mail. Mutually exclusive with bits 1–6. IF ABSENT default of the
+ * physical-delivery-modes extension.
+ *
  * @constant
  */
 export const ordinary_mail: number = PhysicalDeliveryModes_ordinary_mail; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PhysicalDeliveryModes_special_delivery
+ * @description
+ *
+ * Special delivery. Mutually exclusive with bits 0 and 2–6.
+ *
  * @constant
  */
 export const PhysicalDeliveryModes_special_delivery: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary special_delivery
+ * @description
+ *
+ * Special delivery. Mutually exclusive with bits 0 and 2–6.
+ *
  * @constant
  */
 export const special_delivery: number = PhysicalDeliveryModes_special_delivery; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PhysicalDeliveryModes_express_mail
+ * @description
+ *
+ * Express mail. Mutually exclusive with bits 0–1 and 3–6.
+ *
  * @constant
  */
 export const PhysicalDeliveryModes_express_mail: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary express_mail
+ * @description
+ *
+ * Express mail. Mutually exclusive with bits 0–1 and 3–6.
+ *
  * @constant
  */
 export const express_mail: number = PhysicalDeliveryModes_express_mail; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PhysicalDeliveryModes_counter_collection
+ * @description
+ *
+ * Counter collection. Mutually exclusive with bits 0–2 and 4–6.
+ *
  * @constant
  */
 export const PhysicalDeliveryModes_counter_collection: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary counter_collection
+ * @description
+ *
+ * Counter collection. Mutually exclusive with bits 0–2 and 4–6.
+ *
  * @constant
  */
 export const counter_collection: number = PhysicalDeliveryModes_counter_collection; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PhysicalDeliveryModes_counter_collection_with_telephone_advice
+ * @description
+ *
+ * Counter collection with telephone advice. Mutually exclusive with bits 0–3 and 5–6. Used
+ * with `recipient-number-for-advice`.
+ *
  * @constant
  */
 export const PhysicalDeliveryModes_counter_collection_with_telephone_advice: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary counter_collection_with_telephone_advice
+ * @description
+ *
+ * Counter collection with telephone advice. Mutually exclusive with bits 0–3 and 5–6. Used
+ * with `recipient-number-for-advice`.
+ *
  * @constant
  */
 export const counter_collection_with_telephone_advice: number = PhysicalDeliveryModes_counter_collection_with_telephone_advice; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PhysicalDeliveryModes_counter_collection_with_telex_advice
+ * @description
+ *
+ * Counter collection with telex advice. Mutually exclusive with bits 0–4 and 6. Used with
+ * `recipient-number-for-advice`.
+ *
  * @constant
  */
 export const PhysicalDeliveryModes_counter_collection_with_telex_advice: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary counter_collection_with_telex_advice
+ * @description
+ *
+ * Counter collection with telex advice. Mutually exclusive with bits 0–4 and 6. Used with
+ * `recipient-number-for-advice`.
+ *
  * @constant
  */
 export const counter_collection_with_telex_advice: number = PhysicalDeliveryModes_counter_collection_with_telex_advice; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PhysicalDeliveryModes_counter_collection_with_teletex_advice
+ * @description
+ *
+ * Counter collection with teletex advice. Mutually exclusive with bits 0–5. Used with
+ * `recipient-number-for-advice`.
+ *
  * @constant
  */
 export const PhysicalDeliveryModes_counter_collection_with_teletex_advice: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary counter_collection_with_teletex_advice
+ * @description
+ *
+ * Counter collection with teletex advice. Mutually exclusive with bits 0–5. Used with
+ * `recipient-number-for-advice`.
+ *
  * @constant
  */
 export const counter_collection_with_teletex_advice: number = PhysicalDeliveryModes_counter_collection_with_teletex_advice; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PhysicalDeliveryModes_bureau_fax_delivery
+ * @description
+ *
+ * May be set independently of bits 0–6. Comprises CCITT Rec. F.170 modes A–H. When set
+ * together with one of bits 0–6, that first component is activated by the Bureau fax
+ * service.
+ *
  * @constant
  */
 export const PhysicalDeliveryModes_bureau_fax_delivery: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary bureau_fax_delivery
+ * @description
+ *
+ * May be set independently of bits 0–6. Comprises CCITT Rec. F.170 modes A–H. When set
+ * together with one of bits 0–6, that first component is activated by the Bureau fax
+ * service.
+ *
  * @constant
  */
 export const bureau_fax_delivery: number = PhysicalDeliveryModes_bureau_fax_delivery; /* SHORT_NAMED_BIT */

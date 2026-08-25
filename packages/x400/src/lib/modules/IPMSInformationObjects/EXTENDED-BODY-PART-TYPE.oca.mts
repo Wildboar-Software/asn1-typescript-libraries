@@ -16,11 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EXTENDED_BODY_PART_TYPE
  * @description
  *
- * Information object class `EXTENDED_BODY_PART_TYPE`. The Extended Body Part Types
- * attribute identifies the Extended body part types represented in an IPM. For the
- * purposes of this attribute, all body parts of an IPM are considered to be of type
- * Extended regardless of whether they were so conveyed to the IPMS-MS. See ITU-T X.420
- * (1999), §19.6.3.2.
+ * The Extended Body Part Types attribute identifies the Extended body part types
+ * represented in an IPM. For the purposes of this attribute, all body parts of an IPM are
+ * considered to be of type Extended regardless of whether they were so conveyed to the
+ * IPMS-MS. See ITU-T X.420 (1999), §19.6.3.2.
  *
  * ### ASN.1 Definition:
  *

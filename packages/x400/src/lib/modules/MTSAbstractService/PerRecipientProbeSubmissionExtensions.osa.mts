@@ -19,8 +19,7 @@ import { originator_requested_alternate_recipient } from "../MTSAbstractService/
  * @summary PerRecipientProbeSubmissionExtensions
  * @description
  *
- * Information object set `PerRecipientProbeSubmissionExtensions`. Defined in ITU-T X.411
- * (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

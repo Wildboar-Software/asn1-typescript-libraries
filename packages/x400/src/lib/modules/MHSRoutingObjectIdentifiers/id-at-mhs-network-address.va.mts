@@ -19,8 +19,7 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  * @summary id_at_mhs_network_address
  * @description
  *
- * OBJECT IDENTIFIER `id_at_mhs_network_address`. Defined in ITU-T X.412 (1999) (Annex
- * A).
+ * Defined in ITU-T X.412 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

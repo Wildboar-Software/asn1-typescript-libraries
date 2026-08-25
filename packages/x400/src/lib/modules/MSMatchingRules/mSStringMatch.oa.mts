@@ -20,7 +20,7 @@ import { id_mr_msstring_match } from '../MSObjectIdentifiers/id-mr-msstring-matc
  * @summary mSStringMatch
  * @description
  *
- * Information object `mSStringMatch`. Defined in ITU-T X.413 (1999) (§12.4 / §13).
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
  *
  * ### ASN.1 Definition:
  *

@@ -10,12 +10,11 @@ import {
  * @summary UniversalUniquePostalName
  * @description
  *
- * `UniversalUniquePostalName`. A unique-postal-name is a standard attribute that
- * identifies the point of delivery, other than that denoted by a street-address,
- * post-office-box-address, or poste-restante-address, (e.g., a building or hamlet) of a
- * user's physical messages. The value of a unique-postal-name is a Printable String,
- * Teletex String, Universal String, or a combination of these types. See ITU-T X.402
- * (1999), §18.3.26.
+ * A unique-postal-name is a standard attribute that identifies the point of delivery,
+ * other than that denoted by a street-address, post-office-box-address, or
+ * poste-restante-address, (e.g., a building or hamlet) of a user's physical messages. The
+ * value of a unique-postal-name is a Printable String, Teletex String, Universal String,
+ * or a combination of these types. See ITU-T X.402 (1999), §18.3.26.
  *
  * ### ASN.1 Definition:
  *

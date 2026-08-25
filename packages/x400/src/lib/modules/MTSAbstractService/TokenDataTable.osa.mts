@@ -18,7 +18,7 @@ import { bind_token_encrypted_data } from '../MTSAbstractService/bind-token-encr
  * @summary TokenDataTable
  * @description
  *
- * Information object set `TokenDataTable`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

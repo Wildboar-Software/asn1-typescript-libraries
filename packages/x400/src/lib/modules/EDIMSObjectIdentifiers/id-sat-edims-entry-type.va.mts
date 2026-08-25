@@ -15,8 +15,7 @@ import { id_sat } from '../EDIMSObjectIdentifiers/id-sat.va.mjs';
  * @summary id_sat_edims_entry_type
  * @description
  *
- * OBJECT IDENTIFIER `id_sat_edims_entry_type`. The EDIMS Entry Type attribute identifies
- * an information object’s type.
+ * The EDIMS Entry Type attribute identifies an information object’s type.
  *
  * ### ASN.1 Definition:
  *

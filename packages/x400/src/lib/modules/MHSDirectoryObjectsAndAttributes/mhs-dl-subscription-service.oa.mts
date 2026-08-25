@@ -27,8 +27,7 @@ import { id_at_mhs_dl_subscription_service } from '../MHSObjectIdentifiers/id-at
  * @summary mhs_dl_subscription_service
  * @description
  *
- * Information object `mhs_dl_subscription_service`. Defined in ITU-T X.402 (1999) (§17 /
- * Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

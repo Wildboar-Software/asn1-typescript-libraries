@@ -34,8 +34,8 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_ipm
  * @description
  *
- * Information object `originate_ipm`. The Originate IPM abstract operation originates a
- * message whose content is an IPM.  See ITU-T X.420 (1999), §12.1.2.
+ * The Originate IPM abstract operation originates a message whose content is an IPM. See
+ * ITU-T X.420 (1999), §12.1.2.
  *
  * ### ASN.1 Definition:
  *

@@ -15,8 +15,7 @@ import { id_rex } from '../IPMSObjectIdentifiers/id-rex.va.mjs';
  * @summary id_rex_circulation_list_indicator
  * @description
  *
- * OBJECT IDENTIFIER `id_rex_circulation_list_indicator`. Defined in ITU-T X.420 (1999)
- * (Annex A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

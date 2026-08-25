@@ -18,7 +18,7 @@ import {
  * @summary err_originator_invalid
  * @description
  *
- * `err_originator_invalid`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

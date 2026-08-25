@@ -27,9 +27,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary responsibility_forwarded
  * @description
  *
- * Information object `responsibility_forwarded`. The Responsibility Forwarded field is
- * used to indicate whether Responsibility was forwarded. Absence of this field shall be
- * interpreted as the value FALSE. See ITU-T X.435 (1999), §8.2.5.
+ * The Responsibility Forwarded field is used to indicate whether Responsibility was
+ * forwarded. Absence of this field shall be interpreted as the value FALSE. See ITU-T
+ * X.435 (1999), §8.2.5.
  *
  * ### ASN.1 Definition:
  *

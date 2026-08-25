@@ -27,7 +27,7 @@ import { id_at_mhs_surname } from '../MHSRoutingObjectIdentifiers/id-at-mhs-surn
  * @summary mHSSurnameAttribute
  * @description
  *
- * Information object `mHSSurnameAttribute`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

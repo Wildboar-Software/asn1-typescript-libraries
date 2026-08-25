@@ -19,8 +19,7 @@ import {
  * @summary ProcessingDetails
  * @description
  *
- * `ProcessingDetails`. Defined in ITU-T X.411 (1999) (accounting objects). SEQUENCE OF:
- * element order is significant unless the using specification says otherwise.
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

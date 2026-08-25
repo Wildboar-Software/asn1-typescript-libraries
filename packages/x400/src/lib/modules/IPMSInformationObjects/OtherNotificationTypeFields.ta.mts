@@ -19,7 +19,7 @@ import {
  * @summary OtherNotificationTypeFields
  * @description
  *
- * See ITU-T X.420 (1999), §8.4. SET OF: order is insignificant; duplicates are typically meaningless.
+ * See ITU-T X.420 (1999), §8.4.
  *
  * ### ASN.1 Definition:
  *

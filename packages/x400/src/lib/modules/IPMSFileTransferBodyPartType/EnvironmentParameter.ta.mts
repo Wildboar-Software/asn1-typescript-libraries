@@ -22,10 +22,9 @@ import {
  * @summary EnvironmentParameter
  * @description
  *
- * `EnvironmentParameter`. The environment parameter describes the environment (e.g.,
- * machine, operating system, and application) from which the file originated. It has the
- * following syntax:  See ITU-T X.420 (1999), §7.4.12.3. SEQUENCE OF: element order is
- * significant unless the using specification says otherwise.
+ * The environment parameter describes the environment (e.g., machine, operating system,
+ * and application) from which the file originated. It has the following syntax: See ITU-T
+ * X.420 (1999), §7.4.12.3.
  *
  * ### ASN.1 Definition:
  *

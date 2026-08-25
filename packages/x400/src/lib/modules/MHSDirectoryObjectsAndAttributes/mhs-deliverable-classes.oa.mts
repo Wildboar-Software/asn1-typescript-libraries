@@ -27,8 +27,7 @@ import { id_at_mhs_deliverable_classes } from '../MHSObjectIdentifiers/id-at-mhs
  * @summary mhs_deliverable_classes
  * @description
  *
- * Information object `mhs_deliverable_classes`. Defined in ITU-T X.402 (1999) (§17 /
- * Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

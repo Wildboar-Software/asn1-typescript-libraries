@@ -15,9 +15,8 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_interchange_sender
  * @description
  *
- * OBJECT IDENTIFIER `id_hat_interchange_sender`. Indicates the sender of the EDI
- * Interchange. This is semantically identical to the "Interchange sender" of the EDIFACT
- * UNB segment. See ITU-T X.435 (1999), §8.2.16.
+ * Indicates the sender of the EDI Interchange. This is semantically identical to the
+ * "Interchange sender" of the EDIFACT UNB segment. See ITU-T X.435 (1999), §8.2.16.
  *
  * ### ASN.1 Definition:
  *

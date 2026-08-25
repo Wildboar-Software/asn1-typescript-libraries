@@ -20,8 +20,7 @@ import { id_et_bilaterally_defined } from '../IPMSObjectIdentifiers/id-et-bilate
  * @summary bilaterally_defined_body_part_data
  * @description
  *
- * Information object `bilaterally_defined_body_part_data`. Defined in ITU-T X.420 (1999)
- * (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

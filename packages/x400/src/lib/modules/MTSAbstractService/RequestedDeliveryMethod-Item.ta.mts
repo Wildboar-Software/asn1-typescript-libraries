@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RequestedDeliveryMethod_Item
  * @description
  *
- * `RequestedDeliveryMethod_Item`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

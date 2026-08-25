@@ -58,10 +58,9 @@ import {
  * @summary FileAttributes
  * @description
  *
- * `FileAttributes`. The file attributes parameter conveys values of any of a set of
- * optional file attributes. When the recipient is to create a new file, these values are
- * to be used in establishing the initial file attributes. See ITU-T X.420 (1999),
- * §7.4.12.5.
+ * The file attributes parameter conveys values of any of a set of optional file
+ * attributes. When the recipient is to create a new file, these values are to be used in
+ * establishing the initial file attributes. See ITU-T X.420 (1999), §7.4.12.5.
  *
  * ### ASN.1 Definition:
  *

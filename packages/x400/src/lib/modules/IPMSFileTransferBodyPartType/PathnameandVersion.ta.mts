@@ -21,7 +21,7 @@ import {
  * @summary PathnameandVersion
  * @description
  *
- * `PathnameandVersion`. Defined in ITU-T X.420 (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

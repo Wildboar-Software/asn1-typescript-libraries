@@ -54,8 +54,7 @@ export interface PerMessageAutoForwardFields {
  * @summary PerMessageAutoForwardFields
  * @description
  *
- * `PerMessageAutoForwardFields`. Defined in ITU-T X.420 (1999) (§19). SET OF: order is
- * insignificant; duplicates are typically meaningless.
+ * Defined in ITU-T X.420 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

@@ -14,9 +14,9 @@ import { type ERROR } from '@wildboar/rose';
  * @summary ABSTRACT_ERROR
  * @description
  *
- * Information object class `ABSTRACT_ERROR`. The transfer-port has no abstract-errors.
- * 12.3 Common Parameter Types This clause defines a number of common parameter types of
- * the MTA Abstract Service. See ITU-T X.411 (1999), §12.2.2.
+ * The transfer-port has no abstract-errors. 12.3 Common Parameter Types This clause
+ * defines a number of common parameter types of the MTA Abstract Service. See ITU-T X.411
+ * (1999), §12.2.2.
  *
  * ### ASN.1 Definition:
  *

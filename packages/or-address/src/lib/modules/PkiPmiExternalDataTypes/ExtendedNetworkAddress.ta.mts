@@ -16,8 +16,8 @@ import {
  * @description
  *
  * Extension form of `network-address` (ITU-T X.402 (1999), §18.3.7): E.164 number plus
- * optional sub-address, or a PSAP address. Mutually exclusive with relying on the
- * built-in X.121 `network-address` for the same terminal.
+ * optional sub-address, or a PSAP address. Mutually exclusive with relying on the built-in
+ * X.121 `network-address` for the same terminal.
  *
  * ### ASN.1 Definition:
  *

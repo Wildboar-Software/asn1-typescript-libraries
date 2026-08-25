@@ -18,7 +18,7 @@ import {
  * @summary probe_transfer_in
  * @description
  *
- * `probe_transfer_in`. Defined in ITU-T X.411 (1999) (accounting objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

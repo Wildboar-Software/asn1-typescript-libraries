@@ -15,7 +15,7 @@ import { id_ot } from '../IPMSObjectIdentifiers/id-ot.va.mjs';
  * @summary id_ot_ipms
  * @description
  *
- * OBJECT IDENTIFIER `id_ot_ipms`. Defined in ITU-T X.420 (1999) (Annex A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

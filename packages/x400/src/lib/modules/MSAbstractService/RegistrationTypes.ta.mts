@@ -26,8 +26,7 @@ import {
  * @summary RegistrationTypes
  * @description
  *
- * `RegistrationTypes`. Defined in ITU-T X.413 (1999) (§6). SET OF: order is
- * insignificant; duplicates are typically meaningless.
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

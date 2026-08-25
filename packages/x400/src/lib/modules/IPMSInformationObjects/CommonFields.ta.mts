@@ -40,7 +40,7 @@ import {
  * @summary CommonFields
  * @description
  *
- * `CommonFields`. The common fields are defined and described  See ITU-T X.420 (1999), §8.1.
+ * The common fields are defined and described See ITU-T X.420 (1999), §8.1.
  *
  * ### ASN.1 Definition:
  *

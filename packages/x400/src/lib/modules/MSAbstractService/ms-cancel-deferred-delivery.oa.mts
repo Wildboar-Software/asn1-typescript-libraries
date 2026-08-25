@@ -23,10 +23,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary ms_cancel_deferred_delivery
  * @description
  *
- * Information object `ms_cancel_deferred_delivery`. When the MS-user invokes the
- * MS-cancel-deferred-delivery abstract-operation, the MS performs the following actions:
- * a) The MS verifies that the supplied arguments are valid for an
- * MS-cancel-deferred-delivery abstract-operation. For details see 8.2.1.3.1 of
+ * When the MS-user invokes the MS-cancel-deferred-delivery abstract-operation, the MS
+ * performs the following actions: a) The MS verifies that the supplied arguments are valid
+ * for an MS-cancel-deferred-delivery abstract-operation. For details see 8.2.1.3.1 of
  * abstract-association cannot be established, a remote-bind-error is returned to the
  * MS-user and the procedure terminates. See ITU-T X.413 (1999), §16.2.3.
  *

@@ -24,9 +24,7 @@ import {
  * @summary MSMessageSubmissionResult
  * @description
  *
- * `MSMessageSubmissionResult`. Should the request succeed, the
- * MS-message-submission-result shall be  The
- * parameters of MS-message-submission-result… See ITU-T X.413 (1999), §8.3.1.2.
+ * See ITU-T X.413 (1999), §8.
  *
  * ### ASN.1 Definition:
  *

@@ -20,7 +20,7 @@ import { id_mr_mts_identifier_match } from '../MSObjectIdentifiers/id-mr-mts-ide
  * @summary mTSIdentifierMatch
  * @description
  *
- * Information object `mTSIdentifierMatch`. Defined in ITU-T X.413 (1999) (§12.4 / §13).
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
  *
  * ### ASN.1 Definition:
  *

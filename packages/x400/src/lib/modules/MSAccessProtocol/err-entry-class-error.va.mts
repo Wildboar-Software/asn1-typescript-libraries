@@ -18,7 +18,7 @@ import {
  * @summary err_entry_class_error
  * @description
  *
- * `err_entry_class_error`. Defined in ITU-T X.419 (1999) (§9).
+ * Defined in ITU-T X.419 (1999) (§9).
  *
  * ### ASN.1 Definition:
  *

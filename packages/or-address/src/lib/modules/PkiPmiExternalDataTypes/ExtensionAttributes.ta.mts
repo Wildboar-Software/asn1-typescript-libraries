@@ -12,8 +12,8 @@ import {
  * @description
  *
  * SET SIZE (1..256) of `ExtensionAttribute` (ITU-T X.411 (1999), Annex A). SET encoding:
- * order does not matter. Each `extension-type` integer must be unique in the set. Omit
- * the component rather than encode an empty SET.
+ * order does not matter. Each `extension-type` integer must be unique in the set. Omit the
+ * component rather than encode an empty SET.
  *
  * ### ASN.1 Definition:
  *

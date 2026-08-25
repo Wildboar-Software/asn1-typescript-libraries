@@ -25,10 +25,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary element_of_service_not_subscribed
  * @description
  *
- * Information object `element_of_service_not_subscribed`. The
- * Element-of-service-not-subscribed service reports that the requested
- * abstract-operation cannot be provided by the MTS because the MTS-user has not
- * subscribed to one of the elements-of-service the request requires. The
+ * The Element-of-service-not-subscribed service reports that the requested
+ * abstract-operation cannot be provided by the MTS because the MTS-user has not subscribed
+ * to one of the elements-of-service the request requires. The
  * Element-of-service-not-subscribed abstract-error has no parameters. See ITU-T X.411
  * (1999), §8.2.2.2.
  *

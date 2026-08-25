@@ -19,7 +19,7 @@ import {
  * @summary ipm_auto_discard_error_ParameterType
  * @description
  *
- * `ipm_auto_discard_error_ParameterType`. Defined in ITU-T X.420 (1999) (§19).
+ * Defined in ITU-T X.420 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

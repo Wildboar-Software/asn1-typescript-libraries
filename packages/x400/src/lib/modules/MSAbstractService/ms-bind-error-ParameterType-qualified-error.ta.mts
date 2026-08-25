@@ -23,7 +23,7 @@ import {
  * @summary ms_bind_error_ParameterType_qualified_error
  * @description
  *
- * `ms_bind_error_ParameterType_qualified_error`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

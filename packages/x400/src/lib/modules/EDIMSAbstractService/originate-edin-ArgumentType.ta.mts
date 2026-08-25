@@ -24,7 +24,7 @@ import {
  * @summary originate_edin_ArgumentType
  * @description
  *
- * `originate_edin_ArgumentType`. Defined in ITU-T X.435 (1999) (§9).
+ * Defined in ITU-T X.435 (1999) (§9).
  *
  * ### ASN.1 Definition:
  *

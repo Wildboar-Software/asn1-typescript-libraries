@@ -15,7 +15,7 @@ import { id_moc } from '../MhsMTAObjectIdentifiers/id-moc.va.mjs';
  * @summary id_moc_mta
  * @description
  *
- * OBJECT IDENTIFIER `id_moc_mta`. Defined in ITU-T X.411 (1999) (MTA managed objects).
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

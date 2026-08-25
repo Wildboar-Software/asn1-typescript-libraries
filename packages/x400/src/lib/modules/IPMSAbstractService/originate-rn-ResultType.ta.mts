@@ -24,7 +24,7 @@ import {
  * @summary originate_rn_ResultType
  * @description
  *
- * `originate_rn_ResultType`. Defined in ITU-T X.420 (1999) (§8).
+ * Defined in ITU-T X.420 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

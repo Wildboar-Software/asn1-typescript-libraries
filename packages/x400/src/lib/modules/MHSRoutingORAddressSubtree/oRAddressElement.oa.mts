@@ -26,7 +26,7 @@ import { id_oc_mhs_or_address_element } from '../MHSRoutingObjectIdentifiers/id-
  * @summary oRAddressElement
  * @description
  *
- * Information object `oRAddressElement`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

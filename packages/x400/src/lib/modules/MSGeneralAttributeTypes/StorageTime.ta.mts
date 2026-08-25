@@ -16,10 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary StorageTime
  * @description
  *
- * `StorageTime`. This general-attribute indicates the date and time at which the MS-user
- * estimates that storage for the entry will no longer be required. An entry becomes
- * subject to deletion by the Auto-delete auto-action when its storage-time is reached
- * (see 13.4). See ITU-T X.413 (1999), §11.2.79.
+ * This general-attribute indicates the date and time at which the MS-user estimates that
+ * storage for the entry will no longer be required. An entry becomes subject to deletion
+ * by the Auto-delete auto-action when its storage-time is reached (see 13.4). See ITU-T
+ * X.413 (1999), §11.2.79.
  *
  * ### ASN.1 Definition:
  *

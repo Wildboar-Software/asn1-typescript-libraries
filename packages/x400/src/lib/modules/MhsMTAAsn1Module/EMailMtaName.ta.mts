@@ -24,10 +24,10 @@ import {
  * @summary EMailMtaName
  * @description
  *
- * `EMailMtaName`. An MTA-name is an identifier for an MTA that uniquely identifies the
- * MTA within the MD to which it belongs. 8.5.4 Time A Time parameter is specified in
- * terms of UTC (Coordinated Universal Time), and may optionally also contain an offset
- * to UTC to convey the local time. See ITU-T X.411 (1999), §8.5.3.
+ * An MTA-name is an identifier for an MTA that uniquely identifies the MTA within the MD
+ * to which it belongs. 8.5.4 Time A Time parameter is specified in terms of UTC
+ * (Coordinated Universal Time), and may optionally also contain an offset to UTC to convey
+ * the local time. See ITU-T X.411 (1999), §8.5.3.
  *
  * ### ASN.1 Definition:
  *

@@ -20,8 +20,7 @@ import {
  * @summary EMailEits
  * @description
  *
- * `EMailEits`. Defined in ITU-T X.411 (1999) (MTA managed objects). SEQUENCE OF: element
- * order is significant unless the using specification says otherwise.
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

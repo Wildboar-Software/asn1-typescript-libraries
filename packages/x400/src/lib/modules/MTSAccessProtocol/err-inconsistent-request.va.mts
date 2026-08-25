@@ -18,7 +18,7 @@ import {
  * @summary err_inconsistent_request
  * @description
  *
- * `err_inconsistent_request`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

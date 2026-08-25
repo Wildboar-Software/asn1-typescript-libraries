@@ -15,8 +15,8 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_edin_originator
  * @description
  *
- * OBJECT IDENTIFIER `id_nat_edin_originator`. Identifies the EDIM’s originator. It
- * comprises an OR-name. See ITU-T X.435 (1999), §8.2.2.
+ * Identifies the EDIM’s originator. It comprises an OR-name. See ITU-T X.435 (1999),
+ * §8.2.2.
  *
  * ### ASN.1 Definition:
  *

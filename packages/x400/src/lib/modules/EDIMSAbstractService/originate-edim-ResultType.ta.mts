@@ -24,7 +24,7 @@ import {
  * @summary originate_edim_ResultType
  * @description
  *
- * `originate_edim_ResultType`. Defined in ITU-T X.435 (1999) (§9).
+ * Defined in ITU-T X.435 (1999) (§9).
  *
  * ### ASN.1 Definition:
  *

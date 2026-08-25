@@ -26,10 +26,9 @@ import { id_at_specific_passwords } from '../MHSRoutingObjectIdentifiers/id-at-s
  * @summary specificPasswords
  * @description
  *
- * Information object `specificPasswords`. The Specific Passwords attribute type
- * identifies passwords required when communicating with MTAs that do not support
- * MHS-routing. It may be present in proxy entries created to represent these non-routing
- * MTAs. See ITU-T X.412 (1999), §7.2.4.4.
+ * The Specific Passwords attribute type identifies passwords required when communicating
+ * with MTAs that do not support MHS-routing. It may be present in proxy entries created to
+ * represent these non-routing MTAs. See ITU-T X.412 (1999), §7.2.4.4.
  *
  * ### ASN.1 Definition:
  *

@@ -15,8 +15,7 @@ import { id_bat } from '../IPMSObjectIdentifiers/id-bat.va.mjs';
  * @summary id_bat_encrypted_parameters
  * @description
  *
- * OBJECT IDENTIFIER `id_bat_encrypted_parameters`. Defined in ITU-T X.420 (1999) (Annex
- * A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

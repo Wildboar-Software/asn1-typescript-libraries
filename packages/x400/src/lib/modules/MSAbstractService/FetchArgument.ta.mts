@@ -36,11 +36,7 @@ import {
  * @summary FetchArgument
  * @description
  *
- * `FetchArgument`.  The parameters of fetch-argument have the following meaning:
- * a) Entry-class (O): This specifies which entry-class is addressed by the
- * abstract-operation… See ITU-T X.413 (1999), §8.2.3.1. ASN.1 DEFAULT `delivery`: that
- * value is assumed when the component is absent (do not encode the default unless
- * required).
+ * See ITU-T X.413 (1999), §8.2.3.1.
  *
  * ### ASN.1 Definition:
  *

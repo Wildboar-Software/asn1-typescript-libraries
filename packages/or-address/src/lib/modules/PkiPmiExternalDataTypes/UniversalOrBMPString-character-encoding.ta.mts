@@ -6,8 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UniversalOrBMPString_character_encoding
  * @description
  *
- * CHOICE of BMPString vs UniversalString (ITU-T X.402 (1999), §18.2). Different
- * encodings of the same character are equivalent for comparison (X.402 §18.4 j).
+ * CHOICE of BMPString vs UniversalString (ITU-T X.402 (1999), §18.2). Different encodings
+ * of the same character are equivalent for comparison (X.402 §18.4 j).
  *
  * ### ASN.1 Definition:
  *

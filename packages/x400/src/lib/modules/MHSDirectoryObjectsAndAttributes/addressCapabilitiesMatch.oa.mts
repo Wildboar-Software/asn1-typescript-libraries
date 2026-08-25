@@ -20,8 +20,7 @@ import { id_mr_address_capabilities_match } from '../MHSObjectIdentifiers/id-mr-
  * @summary addressCapabilitiesMatch
  * @description
  *
- * Information object `addressCapabilitiesMatch`. Defined in ITU-T X.402 (1999) (§17 /
- * Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

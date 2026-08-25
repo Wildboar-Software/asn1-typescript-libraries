@@ -15,8 +15,8 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_report
  * @description
  *
- * OBJECT IDENTIFIER `id_et_report`. A Report body part represents an MTS Report. It has
- * a Data component. See ITU-T X.420 (1999), §7.4.14.
+ * A Report body part represents an MTS Report. It has a Data component. See ITU-T X.420
+ * (1999), §7.4.14.
  *
  * ### ASN.1 Definition:
  *

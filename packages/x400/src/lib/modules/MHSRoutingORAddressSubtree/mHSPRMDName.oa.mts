@@ -27,7 +27,7 @@ import { id_at_mhs_prmd_name } from '../MHSRoutingObjectIdentifiers/id-at-mhs-pr
  * @summary mHSPRMDName
  * @description
  *
- * Information object `mHSPRMDName`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

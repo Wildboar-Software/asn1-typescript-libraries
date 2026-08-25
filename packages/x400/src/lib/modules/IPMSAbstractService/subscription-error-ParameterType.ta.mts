@@ -20,7 +20,7 @@ import {
  * @summary subscription_error_ParameterType
  * @description
  *
- * `subscription_error_ParameterType`. Defined in ITU-T X.420 (1999) (§8).
+ * Defined in ITU-T X.420 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

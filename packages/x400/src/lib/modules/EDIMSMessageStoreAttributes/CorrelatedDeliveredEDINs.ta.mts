@@ -20,8 +20,7 @@ import {
  * @summary CorrelatedDeliveredEDINs
  * @description
  *
- * `CorrelatedDeliveredEDINs`. Defined in ITU-T X.435 (1999) (§19). SEQUENCE OF: element
- * order is significant unless the using specification says otherwise.
+ * Defined in ITU-T X.435 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

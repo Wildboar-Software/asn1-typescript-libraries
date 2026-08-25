@@ -19,7 +19,7 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary delivery_88
  * @description
  *
- * Information object `delivery_88`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

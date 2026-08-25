@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MTSTransferProtocol` (ITU-T X.419 (1999), §7).
+ * ASN.1 module from ITU-T X.419 (1999), §7.
  */
 export * from "./AbortReason.ta.mjs";
 export * from "./index.mjs";

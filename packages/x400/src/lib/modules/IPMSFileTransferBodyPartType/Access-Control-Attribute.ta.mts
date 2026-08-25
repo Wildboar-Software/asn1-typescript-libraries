@@ -20,10 +20,8 @@ import {
  * @summary Access_Control_Attribute
  * @description
  *
- * `Access_Control_Attribute`. The access control attribute defines conditions under
- * which access to the file is See ITU-T
- * X.420 (1999), §7.4.12.5.8. SET OF: order is insignificant; duplicates are typically
- * meaningless.
+ * The access control attribute defines conditions under which access to the file is See
+ * ITU-T X.420 (1999), §7.4.12.5.8.
  *
  * ### ASN.1 Definition:
  *

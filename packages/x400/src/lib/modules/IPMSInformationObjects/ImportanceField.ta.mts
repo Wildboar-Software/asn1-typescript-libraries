@@ -15,9 +15,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ImportanceField
  * @description
  *
- * Heading importance (ITU-T X.420 (1999), §7.2.10): `low`(0), `normal`(1),
- * `high`(2). When the heading field is omitted the default is **`normal`**, not
- * `low`. `0` is a real 'low' importance, not a sentinel for unspecified.
+ * Heading importance (ITU-T X.420 (1999), §7.2.10): `low`(0), `normal`(1), `high`(2). When
+ * the heading field is omitted the default is **`normal`**, not `low`. `0` is a real 'low'
+ * importance, not a sentinel for unspecified.
  *
  * ### ASN.1 Definition:
  *

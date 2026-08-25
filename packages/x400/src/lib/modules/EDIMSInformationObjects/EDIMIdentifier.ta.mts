@@ -24,10 +24,10 @@ import {
  * @summary EDIMIdentifier
  * @description
  *
- * `EDIMIdentifier`. An EDIM Identifier is an information item that unambiguously,
- * globally and forever uniquely identifies an EDIM. It comprises an OR-name and a string
- * which may for example contain a time or sequence number or other sufficient
- * information to make this EDIM unique. See ITU-T X.435 (1999), §7.1.
+ * An EDIM Identifier is an information item that unambiguously, globally and forever
+ * uniquely identifies an EDIM. It comprises an OR-name and a string which may for example
+ * contain a time or sequence number or other sufficient information to make this EDIM
+ * unique. See ITU-T X.435 (1999), §7.1.
  *
  * ### ASN.1 Definition:
  *

@@ -28,12 +28,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edin_initiator
  * @description
  *
- * Information object `edin_initiator`. The EDIN Initiator field can take one of the
- * following values: a) "internal-UA" means that the UA generated the EDIN either for
- * local reasons or because the generation had been delegated to it by the user; b)
- * "internal-MS" means that the MS generated the EDIN either for local reasons or because
- * the generation had been delegated to it by the user; c) "external-UA" means that the
- * generation of the EDIN was… See ITU-T X.435 (1999), §9.1.6.
+ * See ITU-T X.435 (1999), §9.
  *
  * ### ASN.1 Definition:
  *

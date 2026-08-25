@@ -15,9 +15,7 @@ import { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va.
  * @summary id_name_binding_mdServiceManagementPointOfAccess_misManagementDomain
  * @description
  *
- * OBJECT IDENTIFIER
- * `id_name_binding_mdServiceManagementPointOfAccess_misManagementDomain`. Defined in
- * ITU-T X.411 (1999) (accounting objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `IPMSHeadingExtensions` (ITU-T X.420 (1999), §18).
+ * ASN.1 module from ITU-T X.420 (1999), §18.
  */
 export * from "./AlphaCode.ta.mjs";
 export * from "./authorization-time.oa.mjs";

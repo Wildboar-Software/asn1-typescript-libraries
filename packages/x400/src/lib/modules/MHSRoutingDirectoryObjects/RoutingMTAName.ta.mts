@@ -19,7 +19,7 @@ import {
  * @summary RoutingMTAName
  * @description
  *
- * `RoutingMTAName`. Defined in ITU-T X.412 (1999) (§11).
+ * Defined in ITU-T X.412 (1999) (§11).
  *
  * ### ASN.1 Definition:
  *

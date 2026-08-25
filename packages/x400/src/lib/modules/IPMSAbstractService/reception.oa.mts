@@ -20,10 +20,10 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary reception
  * @description
  *
- * Information object `reception`. A reception port is the means by which the IPMS
- * conveys to a single user messages containing information objects of the types defined
- * in section two. Through such a port the user receives interpersonal messages and
- * interpersonal notifications. See ITU-T X.420 (1999), §11.2.
+ * A reception port is the means by which the IPMS conveys to a single user messages
+ * containing information objects of the types defined in section two. Through such a port
+ * the user receives interpersonal messages and interpersonal notifications. See ITU-T
+ * X.420 (1999), §11.2.
  *
  * ### ASN.1 Definition:
  *

@@ -18,7 +18,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UserAddress_x121
  * @description
  *
- * `UserAddress_x121`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

@@ -25,8 +25,7 @@ import {
  * @summary IPMSecurityLabel
  * @description
  *
- * `IPMSecurityLabel`. Defined in ITU-T X.420 (1999) (§18). SEQUENCE OF: element order is
- * significant unless the using specification says otherwise.
+ * Defined in ITU-T X.420 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

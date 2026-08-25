@@ -16,9 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDIBodyPartType
  * @description
  *
- * `EDIBodyPartType`. Indicates the EDI standard and EDI character sets used in the
- * Primary Body Part. It is represented by a single object identifier. See ITU-T X.435
- * (1999), §8.2.6.
+ * Indicates the EDI standard and EDI character sets used in the Primary Body Part. It is
+ * represented by a single object identifier. See ITU-T X.435 (1999), §8.2.6.
  *
  * ### ASN.1 Definition:
  *

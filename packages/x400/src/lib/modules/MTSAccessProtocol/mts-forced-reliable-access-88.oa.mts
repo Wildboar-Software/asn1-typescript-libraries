@@ -23,8 +23,7 @@ import { type APPLICATION_CONTEXT } from '@wildboar/rose';
  * @summary mts_forced_reliable_access_88
  * @description
  *
- * Information object `mts_forced_reliable_access_88`. Defined in ITU-T X.419 (1999)
- * (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

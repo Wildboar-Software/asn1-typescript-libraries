@@ -55,8 +55,7 @@ import {
  * @summary RegisterArgument
  * @description
  *
- * `RegisterArgument`. Defined in ITU-T X.411 (1999) (§8). SET SIZE (1..…): omit this
- * component rather than encode an empty SET; SET order is insignificant.
+ * Defined in ITU-T X.411 (1999) (§8). ;
  *
  * ### ASN.1 Definition:
  *

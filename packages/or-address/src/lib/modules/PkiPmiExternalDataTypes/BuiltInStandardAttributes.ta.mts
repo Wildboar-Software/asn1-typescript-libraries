@@ -75,11 +75,10 @@ const DELIMITER = ';'.charCodeAt(0);
  * @summary BuiltInStandardAttributes
  * @description
  *
- * The standard (built-in) O/R address attributes as a SEQUENCE (ITU-T X.411 (1999),
- * Annex A; ITU-T X.402 (1999), §18.3). Relative order of standard attributes is
- * insignificant for equivalence (X.402 §18.4 a), but BER/DER still encode this SEQUENCE
- * in declaration order. `organizational-unit-names` is a SEQUENCE: first element is the
- * highest-level unit (OU1), then OU2, … (X.402 §18.3.10); RFC 1685/2156 print them
+ * The standard (built-in) O/R address attributes as a SEQUENCE (ITU-T X.411 (1999), Annex
+ * A; ITU-T X.402 (1999), §18.3). Relative order of standard attributes is insignificant
+ * for equivalence (X.402 §18.4 a). `organizational-unit-names` is a SEQUENCE: first element
+ * is the highest-level unit (OU1), then OU2 (X.402 §18.3.10); RFC 1685/2156 print them
  * least-significant first. `network-address` here is the X.121 form only; E.164 and PSAP
  * forms are the `extended-network-address` extension (X.402 §18.3.7). Printable
  * organization/personal/organizational-unit values have teletex and universal twins as

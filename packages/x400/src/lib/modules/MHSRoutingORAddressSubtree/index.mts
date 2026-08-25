@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MHSRoutingORAddressSubtree` (ITU-T X.412 (1999), §12).
+ * ASN.1 module from ITU-T X.412 (1999), §12.
  */
 export * from "./AlgorithmInformation.ta.mjs";
 export * from "./AliasRedirection.ta.mjs";

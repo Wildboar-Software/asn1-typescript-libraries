@@ -24,10 +24,10 @@ import { id_oc_routing_mta } from '../MHSRoutingObjectIdentifiers/id-oc-routing-
  * @summary routingMTA
  * @description
  *
- * Information object `routingMTA`. A routing-MTA is an MTA that participates in
- * MHS-routing as defined in this Recommendation | International Standard. By definition,
- * a routing-MTA is the smallest instance of a routing-collective and occupies the lowest
- * level in the routing-collective hierarchy, i.e. See ITU-T X.412 (1999), §6.2.2.
+ * A routing-MTA is an MTA that participates in MHS-routing as defined in this
+ * Recommendation | International Standard. By definition, a routing-MTA is the smallest
+ * instance of a routing-collective and occupies the lowest level in the routing-collective
+ * hierarchy, i.e. See ITU-T X.412 (1999), §6.2.2.
  *
  * ### ASN.1 Definition:
  *

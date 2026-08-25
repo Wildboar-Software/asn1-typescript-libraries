@@ -19,8 +19,7 @@ import {
  * @summary MprInfo
  * @description
  *
- * `MprInfo`. Defined in ITU-T X.411 (1999) (MTA managed objects). SET OF: order is
- * insignificant; duplicates are typically meaningless.
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

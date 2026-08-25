@@ -15,7 +15,7 @@ import { id_mct } from '../IPMSObjectIdentifiers/id-mct.va.mjs';
  * @summary id_mct_p2_1984
  * @description
  *
- * OBJECT IDENTIFIER `id_mct_p2_1984`. Defined in ITU-T X.420 (1999) (Annex A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

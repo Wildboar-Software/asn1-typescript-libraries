@@ -19,11 +19,10 @@ import {
  * @summary RoutingCollectiveName
  * @description
  *
- * `RoutingCollectiveName`. The Routing Collective Name attribute type specifies an
- * identifier for Routing Collective entries.
- * NOTE – This attribute is used, rather than Common
- * Name, because it makes possible an optimization in the Routing-decision procedure. See
- * ITU-T X.412 (1999), §7.2.1.1.
+ * The Routing Collective Name attribute type specifies an identifier for Routing
+ * Collective entries. NOTE – This attribute is used, rather than Common Name, because it
+ * makes possible an optimization in the Routing-decision procedure. See ITU-T X.412
+ * (1999), §7.2.1.1.
  *
  * ### ASN.1 Definition:
  *

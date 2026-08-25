@@ -16,7 +16,7 @@ import { type CONTRACT } from '@wildboar/rose';
  * @summary edims_access_contract
  * @description
  *
- * Information object `edims_access_contract`. Defined in ITU-T X.435 (1999) (§6).
+ * Defined in ITU-T X.435 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

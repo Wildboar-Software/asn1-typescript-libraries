@@ -15,10 +15,9 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_certificate
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_certificate`. A certificate may be used to convey a
- * verified copy of the public-asymmetric-encryption-key of the subject of the
- * certificate. A certificate contains one or more items of certification information.
- * See ITU-T X.411 (1999), §8.5.7.
+ * A certificate may be used to convey a verified copy of the
+ * public-asymmetric-encryption-key of the subject of the certificate. A certificate
+ * contains one or more items of certification information. See ITU-T X.411 (1999), §8.5.7.
  *
  * ### ASN.1 Definition:
  *

@@ -15,7 +15,7 @@ import { id_ipms } from '../IPMSObjectIdentifiers/id-ipms.va.mjs';
  * @summary id_mst
  * @description
  *
- * OBJECT IDENTIFIER `id_mst`. Defined in ITU-T X.420 (1999) (Annex A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

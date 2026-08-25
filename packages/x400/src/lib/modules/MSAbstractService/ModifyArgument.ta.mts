@@ -36,11 +36,7 @@ import {
  * @summary ModifyArgument
  * @description
  *
- * `ModifyArgument`.  The parameters of modify-argument have the following meaning: a)
- * Entry-class (O): This specifies the entry-class… See ITU-T X.413 (1999), §8.2.7.1.
- * SEQUENCE SIZE (1..…): omit this component rather than encode an empty SEQUENCE. ASN.1
- * DEFAULT `delivery`: that value is assumed when the component is absent (do not encode
- * the default unless required).
+ * See ITU-T X.413 (1999), §8.2.7.1.
  *
  * ### ASN.1 Definition:
  *

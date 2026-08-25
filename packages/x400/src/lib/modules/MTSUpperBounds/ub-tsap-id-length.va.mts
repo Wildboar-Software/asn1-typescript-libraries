@@ -15,8 +15,7 @@ import {
  * @summary ub_tsap_id_length
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_tsap_id_length`. Defined in ITU-T X.411 (1999) (Annex
- * B).
+ * Defined in ITU-T X.411 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

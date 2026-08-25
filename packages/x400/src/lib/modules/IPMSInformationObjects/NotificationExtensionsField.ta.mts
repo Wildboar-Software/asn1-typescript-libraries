@@ -19,8 +19,7 @@ import {
  * @summary NotificationExtensionsField
  * @description
  *
- * `NotificationExtensionsField`. Defined in ITU-T X.420 (1999) (§7). SET OF: order is
- * insignificant; duplicates are typically meaningless.
+ * Defined in ITU-T X.420 (1999) (§7).
  *
  * ### ASN.1 Definition:
  *

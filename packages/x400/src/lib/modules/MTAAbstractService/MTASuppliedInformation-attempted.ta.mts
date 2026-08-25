@@ -24,7 +24,7 @@ import {
  * @summary MTASuppliedInformation_attempted
  * @description
  *
- * `MTASuppliedInformation_attempted`. Defined in ITU-T X.411 (1999) (§12).
+ * Defined in ITU-T X.411 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

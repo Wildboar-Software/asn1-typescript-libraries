@@ -29,11 +29,10 @@ import { id_oc_connection_group } from '../MHSRoutingObjectIdentifiers/id-oc-con
  * @summary connectionGroup
  * @description
  *
- * Information object `connectionGroup`. A connection-group is a group of connections
- * over which messages may be directly exchanged between members of a set of MTAs, using
- * a specific MHS transfer protocol over a common network. It therefore represents the
- * topology of the MHS, i.e., how the MTAs are physically interconnected. See ITU-T X.412
- * (1999), §6.2.3.
+ * A connection-group is a group of connections over which messages may be directly
+ * exchanged between members of a set of MTAs, using a specific MHS transfer protocol over
+ * a common network. It therefore represents the topology of the MHS, i.e., how the MTAs
+ * are physically interconnected. See ITU-T X.412 (1999), §6.2.3.
  *
  * ### ASN.1 Definition:
  *

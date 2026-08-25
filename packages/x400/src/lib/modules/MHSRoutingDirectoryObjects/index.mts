@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MHSRoutingDirectoryObjects` (ITU-T X.412 (1999), §11).
+ * ASN.1 module from ITU-T X.412 (1999), §11.
  */
 export * from "./AuthenticationMethod.ta.mjs";
 export * from "./callingPSAPs.oa.mjs";

@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ID
  * @description
  *
- * `ID`. Defined in ITU-T X.420 (1999) (Annex A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

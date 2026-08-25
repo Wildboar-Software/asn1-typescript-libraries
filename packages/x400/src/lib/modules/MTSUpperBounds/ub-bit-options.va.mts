@@ -15,7 +15,7 @@ import {
  * @summary ub_bit_options
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_bit_options`. Defined in ITU-T X.411 (1999) (Annex B).
+ * Defined in ITU-T X.411 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

@@ -31,7 +31,7 @@ import {
  * @summary change_auto_forwarding_ArgumentType
  * @description
  *
- * `change_auto_forwarding_ArgumentType`. Defined in ITU-T X.420 (1999) (§8).
+ * Defined in ITU-T X.420 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

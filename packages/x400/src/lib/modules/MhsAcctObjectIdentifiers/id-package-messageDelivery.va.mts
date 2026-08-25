@@ -15,10 +15,10 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_messageDelivery
  * @description
  *
- * OBJECT IDENTIFIER `id_package_messageDelivery`. The Message-delivery
- * abstract-operation enables the MTS to deliver a message to an MTS-user. The MTS-user
- * shall not refuse delivery of a message unless the delivery would violate the
- * Delivery-control restrictions then in force. See ITU-T X.411 (1999), §8.3.1.1.
+ * The Message-delivery abstract-operation enables the MTS to deliver a message to an
+ * MTS-user. The MTS-user shall not refuse delivery of a message unless the delivery would
+ * violate the Delivery-control restrictions then in force. See ITU-T X.411 (1999),
+ * §8.3.1.1.
  *
  * ### ASN.1 Definition:
  *

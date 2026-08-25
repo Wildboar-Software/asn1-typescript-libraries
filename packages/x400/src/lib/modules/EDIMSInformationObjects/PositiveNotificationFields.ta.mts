@@ -30,10 +30,9 @@ import {
  * @summary PositiveNotificationFields
  * @description
  *
- * `PositiveNotificationFields`. Some attributes bear the names of PN EDIN fields and
- * have those fields as their values. Some attributes bear the names of notification
- * fields and have subfields of the PN fields of a notification as their values. See
- * ITU-T X.435 (1999), §18.8.5.2.
+ * Some attributes bear the names of PN EDIN fields and have those fields as their values.
+ * Some attributes bear the names of notification fields and have subfields of the PN
+ * fields of a notification as their values. See ITU-T X.435 (1999), §18.8.5.2.
  *
  * ### ASN.1 Definition:
  *

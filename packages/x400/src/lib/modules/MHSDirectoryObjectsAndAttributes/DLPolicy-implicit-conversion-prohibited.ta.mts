@@ -15,8 +15,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DLPolicy_implicit_conversion_prohibited
  * @description
  *
- * `DLPolicy_implicit_conversion_prohibited`. Defined in ITU-T X.402 (1999) (§17 / Annex
- * A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

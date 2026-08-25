@@ -21,11 +21,7 @@ import {
  * @summary AlertArgument
  * @description
  *
- * `AlertArgument`.  The parameters of the
- * alert-argument have the following meaning: a) Alert-registration-identifier (M):
- * Indicates the registration-identifier of the registered Auto-alert auto- action which
- * caused the alert (see 6.5.2 and 13.1). b) New-entry (O): This conveys the information
- * from the… See ITU-T X.413 (1999), §8.2.6.1.
+ * See ITU-T X.413 (1999), §8.2.6.1.
  *
  * ### ASN.1 Definition:
  *

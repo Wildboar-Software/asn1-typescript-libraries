@@ -19,12 +19,7 @@ import {
  * @summary id_mhs_routing
  * @description
  *
- * OBJECT IDENTIFIER `id_mhs_routing`. The following terms are defined in clauses 6 and 7
- * of this Recommendation | International Standard: – connection-group –
- * entry-connection-group – enumerated connection-group – indirect-exit-connection-group
- * – key-routing-collective – local-exit-connection-group – local-use-tables –
- * MHS-routing – next-MTA – OR-address-element – OR-address-subtree – routing-advice –
- * routing-collective – routing-collective-subtree –… See ITU-T X.412 (1999), §3.1.
+ * See ITU-T X.412 (1999), §3.
  *
  * ### ASN.1 Definition:
  *

@@ -18,7 +18,7 @@ import {
  * @summary err_message_submission_identifier_invalid
  * @description
  *
- * `err_message_submission_identifier_invalid`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

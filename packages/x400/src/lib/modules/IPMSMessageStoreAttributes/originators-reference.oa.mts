@@ -27,7 +27,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary originators_reference
  * @description
  *
- * Information object `originators_reference`. Defined in ITU-T X.420 (1999) (§20).
+ * Defined in ITU-T X.420 (1999) (§20).
  *
  * ### ASN.1 Definition:
  *

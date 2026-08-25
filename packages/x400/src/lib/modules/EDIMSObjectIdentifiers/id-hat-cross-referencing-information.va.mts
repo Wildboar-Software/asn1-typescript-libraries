@@ -15,10 +15,9 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_cross_referencing_information
  * @description
  *
- * OBJECT IDENTIFIER `id_hat_cross_referencing_information`. The Cross Referencing
- * Information allows an EDI application to reference individual body parts within the
- * same EDIM and within other EDIMs. It contains a set of cross reference data. See ITU-T
- * X.435 (1999), §8.2.12.
+ * The Cross Referencing Information allows an EDI application to reference individual body
+ * parts within the same EDIM and within other EDIMs. It contains a set of cross reference
+ * data. See ITU-T X.435 (1999), §8.2.12.
  *
  * ### ASN.1 Definition:
  *

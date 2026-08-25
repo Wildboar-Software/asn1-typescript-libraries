@@ -27,9 +27,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary forwarded_to
  * @description
  *
- * Information object `forwarded_to`. The Forwarded To field indicates the new recipient
- * of the (forwarded) subject EDIM. Its value is an OR-name. See ITU-T X.435 (1999),
- * §9.4.1.
+ * The Forwarded To field indicates the new recipient of the (forwarded) subject EDIM. Its
+ * value is an OR-name. See ITU-T X.435 (1999), §9.4.1.
  *
  * ### ASN.1 Definition:
  *

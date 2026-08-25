@@ -15,7 +15,7 @@ import { id_eit } from '../MTSObjectIdentifiers/id-eit.va.mjs';
  * @summary id_eit_mixed_mode
  * @description
  *
- * OBJECT IDENTIFIER `id_eit_mixed_mode`. Defined in ITU-T X.411 (1999) (Annex A).
+ * Defined in ITU-T X.411 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

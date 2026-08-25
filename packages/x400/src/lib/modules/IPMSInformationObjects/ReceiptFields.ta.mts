@@ -37,10 +37,7 @@ import {
  * @summary ReceiptFields
  * @description
  *
- * `ReceiptFields`. The non-receipt fields are defined and described below.
- *  See ITU-T X.420 (1999),
- * §8.2. ASN.1 DEFAULT `manual`: that value is assumed when the component is absent (do
- * not encode the default unless required).
+ * The non-receipt fields are defined and described below. See ITU-T X.420 (1999), §8.2.
  *
  * ### ASN.1 Definition:
  *

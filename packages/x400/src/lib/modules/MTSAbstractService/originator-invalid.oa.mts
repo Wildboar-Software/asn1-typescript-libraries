@@ -25,10 +25,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary originator_invalid
  * @description
  *
- * Information object `originator_invalid`. The Originator-invalid abstract-error reports
- * that the message or probe cannot be submitted because the originator is incorrectly
- * identified. The Originator-invalid abstract-error has no parameters. See ITU-T X.411
- * (1999), §8.2.2.4.
+ * The Originator-invalid abstract-error reports that the message or probe cannot be
+ * submitted because the originator is incorrectly identified. The Originator-invalid
+ * abstract-error has no parameters. See ITU-T X.411 (1999), §8.2.2.4.
  *
  * ### ASN.1 Definition:
  *

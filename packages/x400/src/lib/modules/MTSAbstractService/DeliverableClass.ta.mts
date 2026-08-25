@@ -19,12 +19,10 @@ import {
  * @summary DeliverableClass
  * @description
  *
- * `DeliverableClass`. This argument contains all the sets of criteria that determine
- * which messages shall be delivered to the MTS-user, if any of these criteria are to be
- * changed. If present, this argument replaces the previously registered
- * deliverable-classes. See ITU-T X.411 (1999), §8.4.1.1.1.3. ASN.1 DEFAULT `clause`:
- * that value is assumed when the component is absent (do not encode the default unless
- * required).
+ * This argument contains all the sets of criteria that determine which messages shall be
+ * delivered to the MTS-user, if any of these criteria are to be changed. If present, this
+ * argument replaces the previously registered deliverable-classes. See ITU-T X.411 (1999),
+ * §8.4.1.1.1.3.
  *
  * ### ASN.1 Definition:
  *

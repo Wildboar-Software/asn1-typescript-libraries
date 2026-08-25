@@ -27,9 +27,8 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_obsoleted_edims
  * @description
  *
- * Information object `ac_obsoleted_edims`. The Obsoleted EDIMs Field identifies one or
- * more EDIMs that the present EDIM obsoletes. It is a sequence of subfields, each an
- * EDIM Identifier. See ITU-T X.435 (1999), §8.2.10.
+ * The Obsoleted EDIMs Field identifies one or more EDIMs that the present EDIM obsoletes.
+ * It is a sequence of subfields, each an EDIM Identifier. See ITU-T X.435 (1999), §8.2.10.
  *
  * ### ASN.1 Definition:
  *

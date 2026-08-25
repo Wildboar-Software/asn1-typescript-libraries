@@ -16,7 +16,7 @@ import { change_of_address_advice } from '../IPMSInformationObjects/change-of-ad
  * @summary AdviceNotifications
  * @description
  *
- * Information object set `AdviceNotifications`. Defined in ITU-T X.420 (1999) (§7).
+ * Defined in ITU-T X.420 (1999) (§7).
  *
  * ### ASN.1 Definition:
  *

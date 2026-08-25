@@ -28,9 +28,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary date_and_time_of_preparation
  * @description
  *
- * Information object `date_and_time_of_preparation`. Indicates the Date/Time of
- * preparation of the EDI Interchange. This is in UTC Time and is derived from the "Date
- * and time of preparation" of the EDIFACT UNB segment. See ITU-T X.435 (1999), §8.2.17.
+ * Indicates the Date/Time of preparation of the EDI Interchange. This is in UTC Time and
+ * is derived from the "Date and time of preparation" of the EDIFACT UNB segment. See ITU-T
+ * X.435 (1999), §8.2.17.
  *
  * ### ASN.1 Definition:
  *

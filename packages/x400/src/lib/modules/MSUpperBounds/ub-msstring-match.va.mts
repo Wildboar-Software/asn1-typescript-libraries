@@ -15,8 +15,7 @@ import {
  * @summary ub_msstring_match
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_msstring_match`. Defined in ITU-T X.413 (1999) (Annex
- * B).
+ * Defined in ITU-T X.413 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

@@ -31,9 +31,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_originally_intended_recipient_name
  * @description
  *
- * Information object `mt_originally_intended_recipient_name`. This general-attribute
- * contains the originally-intended-recipient-name argument of the Message-delivery
- * abstract- operation, and is present if the message has been redirected.
+ * This general-attribute contains the originally-intended-recipient-name argument of the
+ * Message-delivery abstract- operation, and is present if the message has been redirected.
  *
  * ### ASN.1 Definition:
  *

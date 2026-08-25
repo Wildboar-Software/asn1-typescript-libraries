@@ -20,11 +20,10 @@ import { id_mr_recipient_specifier } from '../IPMSObjectIdentifiers/id-mr-recipi
  * @summary recipientSpecifierMatch
  * @description
  *
- * Information object `recipientSpecifierMatch`. The Recipient-specifier-match compares
- * for equality a presented value with the OR-descriptor components of attribute-values
- * of type recipient specifier.  The rule is identical to the
- * OR-descriptor-match rule as applied to the recipient component of the presented and
- * stored values of recipient specifier. See ITU-T X.420 (1999), §19.7.7.
+ * The Recipient-specifier-match compares for equality a presented value with the
+ * OR-descriptor components of attribute-values of type recipient specifier. The rule is
+ * identical to the OR-descriptor-match rule as applied to the recipient component of the
+ * presented and stored values of recipient specifier. See ITU-T X.420 (1999), §19.7.7.
  *
  * ### ASN.1 Definition:
  *

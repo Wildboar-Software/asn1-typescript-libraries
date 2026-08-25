@@ -22,9 +22,7 @@ import {
  * @summary MessageGroupsRestriction
  * @description
  *
- * `MessageGroupsRestriction`. Defined in ITU-T X.413 (1999) (§6). ASN.1 DEFAULT `TRUE`,
- * `TRUE`: that value is assumed when the component is absent (do not encode the default
- * unless required).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

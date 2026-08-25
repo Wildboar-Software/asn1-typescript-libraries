@@ -25,8 +25,7 @@ import {
  * @summary ForwardWithRespAccepted
  * @description
  *
- * `ForwardWithRespAccepted`. Defined in ITU-T X.435 (1999) (§18). SEQUENCE SIZE (1..…):
- * omit this component rather than encode an empty SEQUENCE.
+ * Defined in ITU-T X.435 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

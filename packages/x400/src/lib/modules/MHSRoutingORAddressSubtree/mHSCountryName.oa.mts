@@ -27,7 +27,7 @@ import { id_at_mhs_country_name } from '../MHSRoutingObjectIdentifiers/id-at-mhs
  * @summary mHSCountryName
  * @description
  *
- * Information object `mHSCountryName`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

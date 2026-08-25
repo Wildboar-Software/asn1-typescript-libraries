@@ -15,7 +15,7 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_edi_bodypart_type
  * @description
  *
- * OBJECT IDENTIFIER `id_hat_edi_bodypart_type`. Defined in ITU-T X.435 (1999) (Annex A).
+ * Defined in ITU-T X.435 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -1,8 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MHSProtocolObjectIdentifiers` (ITU-T X.419 (1999), Annex
- * A).
+ * ASN.1 module from ITU-T X.419 (1999), Annex A.
  */
 export * from "./id-ac-ms-access-88.va.mjs";
 export * from "./id-ac-ms-access-94.va.mjs";

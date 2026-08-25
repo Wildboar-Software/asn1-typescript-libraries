@@ -24,7 +24,7 @@ import {
  * @summary ForwardedContentToken_Item
  * @description
  *
- * `ForwardedContentToken_Item`. Defined in ITU-T X.420 (1999) (§15).
+ * Defined in ITU-T X.420 (1999) (§15).
  *
  * ### ASN.1 Definition:
  *

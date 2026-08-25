@@ -20,7 +20,7 @@ import {
  * @summary BodyPartReference_stored_body_part
  * @description
  *
- * `BodyPartReference_stored_body_part`. Defined in ITU-T X.420 (1999) (§7).
+ * Defined in ITU-T X.420 (1999) (§7).
  *
  * ### ASN.1 Definition:
  *

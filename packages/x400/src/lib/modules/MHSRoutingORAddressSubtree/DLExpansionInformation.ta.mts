@@ -26,9 +26,7 @@ import {
  * @summary DLExpansionInformation
  * @description
  *
- * `DLExpansionInformation`. Defined in ITU-T X.412 (1999) (§12). SET OF: order is
- * insignificant; duplicates are typically meaningless. ASN.1 DEFAULT `FALSE`: that value
- * is assumed when the component is absent (do not encode the default unless required).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

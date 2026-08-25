@@ -19,7 +19,7 @@ import { id_mhs_routing } from '../MHSRoutingObjectIdentifiers/id-mhs-routing.va
  * @summary id_nf
  * @description
  *
- * OBJECT IDENTIFIER `id_nf`. Defined in ITU-T X.412 (1999) (Annex A).
+ * Defined in ITU-T X.412 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

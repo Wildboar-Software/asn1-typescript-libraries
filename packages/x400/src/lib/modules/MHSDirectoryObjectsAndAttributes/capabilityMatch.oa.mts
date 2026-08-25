@@ -20,7 +20,7 @@ import { id_mr_capability_match } from '../MHSObjectIdentifiers/id-mr-capability
  * @summary capabilityMatch
  * @description
  *
- * Information object `capabilityMatch`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

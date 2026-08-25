@@ -15,11 +15,10 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_bindToken
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_bindToken`. A token may be used to convey to the
- * recipient of the token protected security-relevant information. The token provides
- * authentication of public security-relevant information, and confidentiality and
- * authentication of secret security-relevant information. See ITU-T X.411 (1999),
- * §8.5.8.
+ * A token may be used to convey to the recipient of the token protected security-relevant
+ * information. The token provides authentication of public security-relevant information,
+ * and confidentiality and authentication of secret security-relevant information. See
+ * ITU-T X.411 (1999), §8.5.8.
  *
  * ### ASN.1 Definition:
  *

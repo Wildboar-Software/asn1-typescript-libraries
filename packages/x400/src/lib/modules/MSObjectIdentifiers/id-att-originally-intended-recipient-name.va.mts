@@ -15,9 +15,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_originally_intended_recipient_name
  * @description
  *
- * OBJECT IDENTIFIER `id_att_originally_intended_recipient_name`. This general-attribute
- * contains the originally-intended-recipient-name argument of the Message-delivery
- * abstract- operation, and is present if the message has been redirected.
+ * This general-attribute contains the originally-intended-recipient-name argument of the
+ * Message-delivery abstract- operation, and is present if the message has been redirected.
  * See ITU-T X.413 (1999), §11.2.49.
  *
  * ### ASN.1 Definition:

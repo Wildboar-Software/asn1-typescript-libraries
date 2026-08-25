@@ -19,11 +19,10 @@ import {
  * @summary InternalTrace
  * @description
  *
- * `InternalTrace`. Trace-information documents the actions taken on a message, probe or
- * report by each MD through which it passes as it is transferred through the MTS.
- * Internal-trace-information documents the actions taken on a message, probe or report
- * by each MTA through which it passes as it is transferred through an MD. See ITU-T
- * X.411 (1999), §12.3.1.
+ * Trace-information documents the actions taken on a message, probe or report by each MD
+ * through which it passes as it is transferred through the MTS. Internal-trace-information
+ * documents the actions taken on a message, probe or report by each MTA through which it
+ * passes as it is transferred through an MD. See ITU-T X.411 (1999), §12.3.1.
  *
  * ### ASN.1 Definition:
  *

@@ -15,7 +15,7 @@ import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
  * @summary id_ms
  * @description
  *
- * OBJECT IDENTIFIER `id_ms`. Defined in ITU-T X.402 (1999) (Annex A).
+ * Defined in ITU-T X.402 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

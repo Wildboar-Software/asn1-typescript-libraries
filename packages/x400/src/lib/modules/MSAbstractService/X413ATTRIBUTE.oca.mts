@@ -20,8 +20,7 @@ import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
  * @summary X413ATTRIBUTE
  * @description
  *
- * Information object class `X413ATTRIBUTE`. Defined in ITU-T X.413 (1999) (§6).
- * ENUMERATED value `0` is a named variant, not a sentinel for 'absent' or 'unspecified'.
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

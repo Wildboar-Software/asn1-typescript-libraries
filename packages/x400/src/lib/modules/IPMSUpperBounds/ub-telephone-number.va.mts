@@ -15,8 +15,7 @@ import {
  * @summary ub_telephone_number
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_telephone_number`. Defined in ITU-T X.420 (1999) (Annex
- * B).
+ * Defined in ITU-T X.420 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

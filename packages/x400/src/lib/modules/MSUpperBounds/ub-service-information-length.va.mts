@@ -15,8 +15,7 @@ import {
  * @summary ub_service_information_length
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_service_information_length`. Defined in ITU-T X.413
- * (1999) (Annex B).
+ * Defined in ITU-T X.413 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

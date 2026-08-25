@@ -28,11 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_conversion_with_loss_prohibited
  * @description
  *
- * Information object `mt_conversion_with_loss_prohibited`. This general-attribute
- * contains the conversion-with-loss-prohibited argument of the Message-submission,
- * Probe- submission, and Message-delivery abstract-operations. It indicates whether
- * conversion with loss of information was allowed or prohibited by the originator. See
- * ITU-T X.413 (1999), §11.2.19.
+ * This general-attribute contains the conversion-with-loss-prohibited argument of the
+ * Message-submission, Probe- submission, and Message-delivery abstract-operations. It
+ * indicates whether conversion with loss of information was allowed or prohibited by the
+ * originator. See ITU-T X.413 (1999), §11.2.19.
  *
  * ### ASN.1 Definition:
  *

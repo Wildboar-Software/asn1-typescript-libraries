@@ -15,8 +15,7 @@ import {
  * @summary ub_diagnostic_codes
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_diagnostic_codes`. Defined in ITU-T X.411 (1999) (Annex
- * B).
+ * Defined in ITU-T X.411 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

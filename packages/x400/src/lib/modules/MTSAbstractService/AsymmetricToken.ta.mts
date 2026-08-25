@@ -25,8 +25,6 @@ import {
  * @summary AsymmetricToken
  * @description
  *
- * This definition was manually modified.
- *
  * ### ASN.1 Definition:
  *
  * ```asn1

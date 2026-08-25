@@ -12,13 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @description
  *
  * ADMD name relative to `country-name`, tagged `[APPLICATION 2]` (ITU-T X.402 (1999),
- * §18.3.1). Numeric and Printable encodings of the same digits are equivalent (X.402
- * §18.4 b). A single space (`" "`) means **any ADMD** in that country, if the country
- * permits it: addresses must still be unambiguous without the real ADMD, and ADMDs in
- * the country must interconnect. A single zero (`"0"`) is reserved for PRMDs that are
- * not connected to (and not reachable from) any ADMD; it must not be used by a PRMD that
- * is directly or indirectly connected to an ADMD. Presence of ADMD `0` on a recipient
- * with `responsibility` = not-responsible, or on a DL-expanded/redirected originator, is
+ * §18.3.1). Numeric and Printable encodings of the same digits are equivalent (X.402 §18.4
+ * b). A single space (`" "`) means **any ADMD** in that country, if the country permits
+ * it: addresses must still be unambiguous without the real ADMD, and ADMDs in the country
+ * must interconnect. A single zero (`"0"`) is reserved for PRMDs that are not connected to
+ * (and not reachable from) any ADMD; it must not be used by a PRMD that is directly or
+ * indirectly connected to an ADMD. Presence of ADMD `0` on a recipient with
+ * `responsibility` = not-responsible, or on a DL-expanded/redirected originator, is
  * legitimate and must not cause non-delivery. Empty strings are permitted by the SIZE
  * (0..16) constraint.
  *

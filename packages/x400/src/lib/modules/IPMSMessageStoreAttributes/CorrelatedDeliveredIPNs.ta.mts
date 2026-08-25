@@ -20,8 +20,7 @@ import {
  * @summary CorrelatedDeliveredIPNs
  * @description
  *
- * `CorrelatedDeliveredIPNs`. Defined in ITU-T X.420 (1999) (§20). SEQUENCE OF: element
- * order is significant unless the using specification says otherwise.
+ * Defined in ITU-T X.420 (1999) (§20).
  *
  * ### ASN.1 Definition:
  *

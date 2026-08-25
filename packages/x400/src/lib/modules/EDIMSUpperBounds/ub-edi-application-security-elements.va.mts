@@ -15,10 +15,8 @@ import {
  * @summary ub_edi_application_security_elements
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_edi_application_security_elements`. The EDI Application
- * Security Elements field allows an EDI application to exchange security elements having
- * an end-to-end
- * See ITU-T X.435 (1999), §8.2.11.
+ * The EDI Application Security Elements field allows an EDI application to exchange
+ * security elements having an end-to-end See ITU-T X.435 (1999), §8.2.11.
  *
  * ### ASN.1 Definition:
  *

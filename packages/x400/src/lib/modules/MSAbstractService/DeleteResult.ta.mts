@@ -20,11 +20,8 @@ import {
  * @summary DeleteResult
  * @description
  *
- * `DeleteResult`. Should the request succeed, the delete-result shall be returned:
- *  The parameters of delete-result
- * have the following meaning: a) Delete-result-88 (C): This parameter is returned if a
- * 1988… See ITU-T X.413 (1999), §8.2.4.2. SEQUENCE SIZE (1..…): omit this component
- * rather than encode an empty SEQUENCE.
+ * Should the request succeed, the delete-result shall be returned: See ITU-T X.413 (1999),
+ * §8.2.4.2.
  *
  * ### ASN.1 Definition:
  *

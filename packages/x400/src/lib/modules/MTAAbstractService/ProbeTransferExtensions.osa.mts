@@ -23,7 +23,7 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
  * @summary ProbeTransferExtensions
  * @description
  *
- * Information object set `ProbeTransferExtensions`. Defined in ITU-T X.411 (1999) (§12).
+ * Defined in ITU-T X.411 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

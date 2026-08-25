@@ -29,13 +29,7 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary report_origin_authentication_check
  * @description
  *
- * Information object `report_origin_authentication_check`. This argument provides the
- * originator of the subject-message (or -probe), and any other MTA through which the
- * report is transferred, with a means of authenticating the origin of the report (to
- * provide the Report Origin Authentication element-of-service as defined in The
- * report-origin-authentication-check provides proof of the origin of the report (Report
- * Origin Authentication), and proof of association between… See ITU-T X.411 (1999),
- * §8.3.1.2.1.14.
+ * See ITU-T X.411 (1999), §8.
  *
  * ### ASN.1 Definition:
  *

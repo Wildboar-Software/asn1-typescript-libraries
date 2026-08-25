@@ -26,11 +26,9 @@ import {
  * @summary DistributionCode
  * @description
  *
- * `DistributionCode`. The Distribution-code-match rule compares for equality a presented
- * value with attribute-values of type Distribution Code as defined in A.1.8.
- *  The rule returns true if, and only if, at least one of the
- * following conditions is fulfilled for the presented value and at least one value of
- * the attribute: a) the OID-code… See ITU-T X.420 (1999), §19.7.16.
+ * One element of the Distribution Codes heading extension (ITU-T X.420 (1999), Annex
+ * A.1.8). Semantics of the codes are by bilateral agreement. At least one component shall
+ * be present. `distributionCodeMatch` does not consider `or-descriptor`.
  *
  * ### ASN.1 Definition:
  *

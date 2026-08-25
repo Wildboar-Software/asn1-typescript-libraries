@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `IPMSAbstractService` (ITU-T X.420 (1999), §8).
+ * ASN.1 module from ITU-T X.420 (1999), §8.
  */
 export * from "./change-auto-acknowledgment-ArgumentType.ta.mjs";
 export * from "./change-auto-acknowledgment.oa.mjs";

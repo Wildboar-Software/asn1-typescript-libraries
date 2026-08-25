@@ -18,7 +18,7 @@ import {
  * @summary err_submission_control_violated
  * @description
  *
- * `err_submission_control_violated`. Defined in ITU-T X.419 (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

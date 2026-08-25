@@ -50,10 +50,7 @@ import {
  * @summary MSBindResult
  * @description
  *
- * `MSBindResult`.  See ITU-T X.413 (1999), §7.1.2. SET SIZE
- * (1..…): omit this component rather than encode an empty SET; SET order is
- * insignificant. ASN.1 DEFAULT `FALSE`, `FALSE`: that value is assumed when the
- * component is absent (do not encode the default unless required).
+ * See ITU-T X.413 (1999), §7.1.2.
  *
  * ### ASN.1 Definition:
  *

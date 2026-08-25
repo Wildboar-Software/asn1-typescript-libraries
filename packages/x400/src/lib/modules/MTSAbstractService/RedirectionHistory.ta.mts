@@ -20,8 +20,8 @@ import {
  * @description
  *
  * SEQUENCE SIZE (1..`ub-redirections`) of `Redirection`, **oldest redirection first**
- * (ITU-T X.411 (1999), Annex A). The order of alternate recipients themselves is
- * specified by the MTS-user (§8.3).
+ * (ITU-T X.411 (1999), Annex A). The order of alternate recipients themselves is specified
+ * by the MTS-user (§8.3).
  *
  * ### ASN.1 Definition:
  *

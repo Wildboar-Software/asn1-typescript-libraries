@@ -19,11 +19,9 @@ import {
  * @summary EDIMSynopsis
  * @description
  *
- * `EDIMSynopsis`. The EDIM Synopsis attribute gives the structure, characteristics,
- * size, and processing status of an EDIM at the granularity of individual body parts.
- * This attribute is created when an EDIM is delivered to the MS. See ITU-T X.435 (1999),
- * §18.8.1.2. SEQUENCE OF: element order is significant unless the using specification
- * says otherwise.
+ * The EDIM Synopsis attribute gives the structure, characteristics, size, and processing
+ * status of an EDIM at the granularity of individual body parts. This attribute is created
+ * when an EDIM is delivered to the MS. See ITU-T X.435 (1999), §18.8.1.2.
  *
  * ### ASN.1 Definition:
  *

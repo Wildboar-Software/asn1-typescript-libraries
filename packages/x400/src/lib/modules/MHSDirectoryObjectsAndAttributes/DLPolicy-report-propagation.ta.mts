@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DLPolicy_report_propagation
  * @description
  *
- * `DLPolicy_report_propagation`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -27,9 +27,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_on
  * @description
  *
- * Information object `receive_on`. The Receive ON abstract operation receives a message
- * whose content is an ON. The ON is provoked by an IPM originated with the Originate IPM
- * abstract operation. See ITU-T X.420 (1999), §12.2.5.
+ * The Receive ON abstract operation receives a message whose content is an ON. The ON is
+ * provoked by an IPM originated with the Originate IPM abstract operation. See ITU-T X.420
+ * (1999), §12.2.5.
  *
  * ### ASN.1 Definition:
  *

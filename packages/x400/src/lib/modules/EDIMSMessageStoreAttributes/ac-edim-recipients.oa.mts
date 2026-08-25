@@ -30,10 +30,9 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_edim_recipients
  * @description
  *
- * Information object `ac_edim_recipients`. The Recipients field identifies the user(s)
- * and distribution lists (DLs) who are the (preferred) recipient(s) of the EDIM. It
- * comprises a set of Recipients subfields, one for each recipient. See ITU-T X.435
- * (1999), §8.2.3.
+ * The Recipients field identifies the user(s) and distribution lists (DLs) who are the
+ * (preferred) recipient(s) of the EDIM. It comprises a set of Recipients subfields, one
+ * for each recipient. See ITU-T X.435 (1999), §8.2.3.
  *
  * ### ASN.1 Definition:
  *

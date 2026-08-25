@@ -15,9 +15,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_sequence_number
  * @description
  *
- * OBJECT IDENTIFIER `id_att_sequence_number`. This general-attribute identifies the
- * entry containing the attribute. It is allocated by the MS when the entry is created
- * (see 6.3.2). See ITU-T X.413 (1999), §11.2.76.
+ * This general-attribute identifies the entry containing the attribute. It is allocated by
+ * the MS when the entry is created (see 6.3.2). See ITU-T X.413 (1999), §11.2.76.
  *
  * ### ASN.1 Definition:
  *

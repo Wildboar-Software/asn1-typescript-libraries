@@ -24,7 +24,7 @@ import {
  * @summary ObjectName
  * @description
  *
- * `ObjectName`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

@@ -27,7 +27,7 @@ import { id_at_mhs_dl_members } from '../MHSObjectIdentifiers/id-at-mhs-dl-membe
  * @summary mhs_dl_members
  * @description
  *
- * Information object `mhs_dl_members`. Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

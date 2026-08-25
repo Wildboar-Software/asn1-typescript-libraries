@@ -16,7 +16,7 @@ import { ContentSpecificAutoActionErrors } from '../MSGeneralAutoActionTypes/Con
  * @summary AutoActionErrorTable
  * @description
  *
- * Information object set `AutoActionErrorTable`. Defined in ITU-T X.413 (1999) (§12).
+ * Defined in ITU-T X.413 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

@@ -25,7 +25,7 @@ import {
  * @summary RefusedOperation_refused_argument
  * @description
  *
- * `RefusedOperation_refused_argument`. Defined in ITU-T X.411 (1999) (§8).
+ * Defined in ITU-T X.411 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

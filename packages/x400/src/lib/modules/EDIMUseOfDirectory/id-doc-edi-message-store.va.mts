@@ -15,10 +15,10 @@ import { id_doc } from '../EDIMUseOfDirectory/id-doc.va.mjs';
  * @summary id_doc_edi_message_store
  * @description
  *
- * OBJECT IDENTIFIER `id_doc_edi_message_store`. An EDI message store (EDI-MS) is an MS
- * tailored so as to better assist a single UA engaged in EDI Messaging. It helps it
- * submit, take delivery of, or both submit and take delivery of messages containing
- * Information Objects of the types defined in 6. See ITU-T X.435 (1999), §15.2.
+ * An EDI message store (EDI-MS) is an MS tailored so as to better assist a single UA
+ * engaged in EDI Messaging. It helps it submit, take delivery of, or both submit and take
+ * delivery of messages containing Information Objects of the types defined in 6. See ITU-T
+ * X.435 (1999), §15.2.
  *
  * ### ASN.1 Definition:
  *

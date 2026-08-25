@@ -26,7 +26,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary message_data
  * @description
  *
- * Information object `message_data`. Defined in ITU-T X.435 (1999) (§19).
+ * Defined in ITU-T X.435 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

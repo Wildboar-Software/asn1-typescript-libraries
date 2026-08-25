@@ -28,7 +28,7 @@ import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.o
  * @summary ipm_auto_discard_error
  * @description
  *
- * Information object `ipm_auto_discard_error`. Defined in ITU-T X.420 (1999) (§19).
+ * Defined in ITU-T X.420 (1999) (§19).
  *
  * ### ASN.1 Definition:
  *

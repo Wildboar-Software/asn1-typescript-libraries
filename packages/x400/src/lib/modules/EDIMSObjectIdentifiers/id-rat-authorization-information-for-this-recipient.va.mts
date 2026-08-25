@@ -15,9 +15,8 @@ import { id_rat } from '../EDIMSObjectIdentifiers/id-rat.va.mjs';
  * @summary id_rat_authorization_information_for_this_recipient
  * @description
  *
- * OBJECT IDENTIFIER `id_rat_authorization_information_for_this_recipient`. A Recipient
- * identifies the preferred recipient in question. It comprises an OR-name. See ITU-T
- * X.435 (1999), §8.2.3.1.
+ * A Recipient identifies the preferred recipient in question. It comprises an OR-name. See
+ * ITU-T X.435 (1999), §8.2.3.1.
  *
  * ### ASN.1 Definition:
  *

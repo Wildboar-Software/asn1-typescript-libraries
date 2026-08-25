@@ -15,10 +15,9 @@ import {
  * @summary ub_recipient_reference
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_recipient_reference`. The Recipient Reference identifies
- * a reference meaningful to the recipient’s EDI application. This is semantically
- * identical to the "Recipient’s Reference, Password" of the EDIFACT UNB segment. See
- * ITU-T X.435 (1999), §8.2.3.6.
+ * The Recipient Reference identifies a reference meaningful to the recipient’s EDI
+ * application. This is semantically identical to the "Recipient’s Reference, Password" of
+ * the EDIFACT UNB segment. See ITU-T X.435 (1999), §8.2.3.6.
  *
  * ### ASN.1 Definition:
  *

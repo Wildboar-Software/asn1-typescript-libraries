@@ -5,8 +5,7 @@ import { INTEGER } from "@wildboar/asn1";
  * @summary ub_country_name_numeric_length
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_country_name_numeric_length`. Defined in ITU-T X.402
- * (1999) (§18).
+ * Defined in ITU-T X.402 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

@@ -15,8 +15,7 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_telephoneNumberList
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_telephoneNumberList`. Defined in ITU-T X.411 (1999)
- * (accounting objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

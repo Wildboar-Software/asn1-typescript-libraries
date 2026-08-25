@@ -26,9 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_report_delivery_envelope
  * @description
  *
- * Information object `mt_report_delivery_envelope`. This general-attribute contains the
- * report-delivery-envelope component of the argument of the Report-delivery abstract-
- * operation. See ITU-T X.413 (1999), §11.2.70.
+ * This general-attribute contains the report-delivery-envelope component of the argument
+ * of the Report-delivery abstract- operation. See ITU-T X.413 (1999), §11.2.70.
  *
  * ### ASN.1 Definition:
  *

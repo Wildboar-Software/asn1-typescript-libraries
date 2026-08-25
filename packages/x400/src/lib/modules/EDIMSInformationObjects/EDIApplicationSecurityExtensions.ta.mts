@@ -19,8 +19,6 @@ import {
  * @summary EDIApplicationSecurityExtensions
  * @description
  *
- * SET OF: order is insignificant; duplicates are typically meaningless.
- *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -51,10 +51,8 @@ import {
  * @summary MSProbeSubmissionResult
  * @description
  *
- * `MSProbeSubmissionResult`. Should the request succeed, the MS-probe-submission-result
- * is  The parameters of MS-probe-submission-result have
- * the following meaning: a) Probe-submission-result (M): This is the result of the
- * Probe-submission… See ITU-T X.413 (1999), §8.3.2.2.
+ * Should the request succeed, the MS-probe-submission-result is See ITU-T X.413 (1999),
+ * §8.3.2.2.
  *
  * ### ASN.1 Definition:
  *

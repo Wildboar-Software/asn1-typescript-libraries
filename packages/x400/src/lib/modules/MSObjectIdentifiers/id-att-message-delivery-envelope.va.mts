@@ -15,10 +15,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_message_delivery_envelope
  * @description
  *
- * OBJECT IDENTIFIER `id_att_message_delivery_envelope`. This general-attribute contains
- * the message-delivery-envelope component of the argument of the Message-delivery
- * abstract-operation.
- * See ITU-T X.413 (1999), §11.2.35.
+ * This general-attribute contains the message-delivery-envelope component of the argument
+ * of the Message-delivery abstract-operation. See ITU-T X.413 (1999), §11.2.35.
  *
  * ### ASN.1 Definition:
  *

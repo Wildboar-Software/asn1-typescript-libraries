@@ -15,7 +15,7 @@ import { id_aae } from '../MSObjectIdentifiers/id-aae.va.mjs';
  * @summary id_aae_auto_alert_error
  * @description
  *
- * OBJECT IDENTIFIER `id_aae_auto_alert_error`. Defined in ITU-T X.413 (1999) (Annex A).
+ * Defined in ITU-T X.413 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

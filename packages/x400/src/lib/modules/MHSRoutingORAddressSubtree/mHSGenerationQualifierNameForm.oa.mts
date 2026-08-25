@@ -17,8 +17,7 @@ import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
  * @summary mHSGenerationQualifierNameForm
  * @description
  *
- * Information object `mHSGenerationQualifierNameForm`. Defined in ITU-T X.412 (1999)
- * (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

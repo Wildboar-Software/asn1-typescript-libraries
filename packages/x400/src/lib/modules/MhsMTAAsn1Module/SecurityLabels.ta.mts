@@ -19,13 +19,11 @@ import {
  * @summary SecurityLabels
  * @description
  *
- * `SecurityLabels`. This component contains the security-labels of the MTS-user, if they
- * are to be constrained within a deliverable-class. If the security-labels of the
- * message to be delivered do not match those specified by the
- * deliverable-security-labels, then the message does not satisfy the constraints of this
- * deliverable-class and no other criteria of the deliverable-class need be considered.
- * See ITU-T X.411 (1999), §8.4.1.1.1.3.4. SET OF: order is insignificant; duplicates are
- * typically meaningless.
+ * This component contains the security-labels of the MTS-user, if they are to be
+ * constrained within a deliverable-class. If the security-labels of the message to be
+ * delivered do not match those specified by the deliverable-security-labels, then the
+ * message does not satisfy the constraints of this deliverable-class and no other criteria
+ * of the deliverable-class need be considered. See ITU-T X.411 (1999), §8.4.1.1.1.3.4.
  *
  * ### ASN.1 Definition:
  *

@@ -15,10 +15,10 @@ import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mj
  * @summary id_security
  * @description
  *
- * OBJECT IDENTIFIER `id_security`. The Unacceptable-security-context bind-error reports
- * that the security-context proposed by the initiator of the association is unacceptable
- * to the responder. The Unacceptable-security-context bind-error has no parameters. See
- * ITU-T X.411 (1999), §12.1.2.4.
+ * The Unacceptable-security-context bind-error reports that the security-context proposed
+ * by the initiator of the association is unacceptable to the responder. The
+ * Unacceptable-security-context bind-error has no parameters. See ITU-T X.411 (1999),
+ * §12.1.2.4.
  *
  * ### ASN.1 Definition:
  *

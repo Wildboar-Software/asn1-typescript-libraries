@@ -15,9 +15,9 @@ import {
  * @summary ub_processing_priority_code
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_processing_priority_code`. Indicates the EDI application
- * Processing Priority Code. This is semantically identical to the "Processing priority
- * code" in the EDIFACT UNB segment. See ITU-T X.435 (1999), §8.2.3.8.
+ * Indicates the EDI application Processing Priority Code. This is semantically identical
+ * to the "Processing priority code" in the EDIFACT UNB segment. See ITU-T X.435 (1999),
+ * §8.2.3.8.
  *
  * ### ASN.1 Definition:
  *

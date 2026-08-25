@@ -19,7 +19,7 @@ import { type CONTRACT } from '@wildboar/rose';
  * @summary ms_access_contract_88
  * @description
  *
- * Information object `ms_access_contract_88`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

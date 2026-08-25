@@ -40,10 +40,9 @@ import {
  * @summary ForwardedNotificationFields
  * @description
  *
- * `ForwardedNotificationFields`. Some attributes bear the names of FN EDIN fields and
- * have those fields as their values. Some attributes bear the names of notification
- * fields and have subfields of the FN fields of a notification as their values. See
- * ITU-T X.435 (1999), §18.8.5.4.
+ * Some attributes bear the names of FN EDIN fields and have those fields as their values.
+ * Some attributes bear the names of notification fields and have subfields of the FN
+ * fields of a notification as their values. See ITU-T X.435 (1999), §18.8.5.4.
  *
  * ### ASN.1 Definition:
  *

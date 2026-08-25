@@ -27,7 +27,7 @@ import { id_at_mhs_pds_name_attribute } from '../MHSRoutingObjectIdentifiers/id-
  * @summary mHSPDSNameAttribute
  * @description
  *
- * Information object `mHSPDSNameAttribute`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

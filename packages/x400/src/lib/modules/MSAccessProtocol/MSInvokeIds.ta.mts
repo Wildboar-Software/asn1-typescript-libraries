@@ -19,7 +19,7 @@ import {
  * @summary MSInvokeIds
  * @description
  *
- * `MSInvokeIds`. Defined in ITU-T X.419 (1999) (§9).
+ * Defined in ITU-T X.419 (1999) (§9).
  *
  * ### ASN.1 Definition:
  *

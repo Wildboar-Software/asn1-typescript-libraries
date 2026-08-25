@@ -19,7 +19,7 @@ import { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va.mjs';
  * @summary id_as_mtse
  * @description
  *
- * OBJECT IDENTIFIER `id_as_mtse`. Defined in ITU-T X.419 (1999) (Annex A).
+ * Defined in ITU-T X.419 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

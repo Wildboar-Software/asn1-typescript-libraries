@@ -20,8 +20,7 @@ import { id_ep_g3_facsimile } from '../IPMSObjectIdentifiers/id-ep-g3-facsimile.
  * @summary g3_facsimile_body_part_parameters
  * @description
  *
- * Information object `g3_facsimile_body_part_parameters`. Defined in ITU-T X.420 (1999)
- * (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

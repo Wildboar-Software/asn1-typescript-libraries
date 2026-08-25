@@ -28,8 +28,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ipm_entry_type
  * @description
  *
- * Information object `ipm_entry_type`. The IPM Entry Type attribute identifies an
- * information object's type.
+ * The IPM Entry Type attribute identifies an information object's type.
  *
  * ### ASN.1 Definition:
  *

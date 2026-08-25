@@ -20,12 +20,11 @@ import { id_mr_circulation_member } from '../IPMSObjectIdentifiers/id-mr-circula
  * @summary circulationMemberMatch
  * @description
  *
- * Information object `circulationMemberMatch`. The Circulation-member-match compares for
- * equality a presented value with the OR-descriptor components of attribute-values of
- * type Circulation Member.  The rule is identical to the
- * recipient-specifier-match rule as applied to the circulation-recipient component of
- * the presented and stored values of Circulation Member. See ITU-T X.420 (1999),
- * §19.7.11.
+ * The Circulation-member-match compares for equality a presented value with the
+ * OR-descriptor components of attribute-values of type Circulation Member. The rule is
+ * identical to the recipient-specifier-match rule as applied to the circulation-recipient
+ * component of the presented and stored values of Circulation Member. See ITU-T X.420
+ * (1999), §19.7.11.
  *
  * ### ASN.1 Definition:
  *

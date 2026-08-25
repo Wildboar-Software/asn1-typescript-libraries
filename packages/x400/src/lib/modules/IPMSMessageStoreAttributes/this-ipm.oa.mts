@@ -27,8 +27,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary this_ipm
  * @description
  *
- * Information object `this_ipm`. The This IPM heading field (M) identifies the IPM. It
- * comprises an IPM identifier. See ITU-T X.420 (1999), §7.2.1.
+ * The This IPM heading field (M) identifies the IPM. It comprises an IPM identifier. See
+ * ITU-T X.420 (1999), §7.2.1.
  *
  * ### ASN.1 Definition:
  *

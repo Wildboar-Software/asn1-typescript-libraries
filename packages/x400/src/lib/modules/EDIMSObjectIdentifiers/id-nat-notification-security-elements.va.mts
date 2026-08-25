@@ -15,10 +15,8 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_notification_security_elements
  * @description
  *
- * OBJECT IDENTIFIER `id_nat_notification_security_elements`. The Security Elements field
- * is used to provide "proof/non repudiation of content received", "EDI application
- * security"  See ITU-T X.435 (1999),
- * §9.1.5.
+ * The Security Elements field is used to provide "proof/non repudiation of content
+ * received", "EDI application security" See ITU-T X.435 (1999), §9.1.5.
  *
  * ### ASN.1 Definition:
  *

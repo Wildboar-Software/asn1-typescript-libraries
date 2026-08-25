@@ -19,9 +19,8 @@ import {
  * @summary EMailContentType
  * @description
  *
- * `EMailContentType`. This argument identifies the type of the content of the message.
- * It identifies the abstract syntax and the encoding rules used. See ITU-T X.411 (1999),
- * §8.2.1.1.1.34.
+ * This argument identifies the type of the content of the message. It identifies the
+ * abstract syntax and the encoding rules used. See ITU-T X.411 (1999), §8.2.1.1.1.34.
  *
  * ### ASN.1 Definition:
  *

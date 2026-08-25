@@ -27,9 +27,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary subject_ipm
  * @description
  *
- * Information object `subject_ipm`. The Subject IPM common field (M) contains the value
- * of the This IPM field of the subject IPM. It comprises an IPM identifier. See ITU-T
- * X.420 (1999), §8.1.1.
+ * The Subject IPM common field (M) contains the value of the This IPM field of the subject
+ * IPM. It comprises an IPM identifier. See ITU-T X.420 (1999), §8.1.1.
  *
  * ### ASN.1 Definition:
  *

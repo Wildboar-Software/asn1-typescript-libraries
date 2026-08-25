@@ -20,8 +20,7 @@ import { id_ep_voice } from '../IPMSObjectIdentifiers/id-ep-voice.va.mjs';
  * @summary voice_body_part_parameters
  * @description
  *
- * Information object `voice_body_part_parameters`. Defined in ITU-T X.420 (1999) (Annex
- * C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

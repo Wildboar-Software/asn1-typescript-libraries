@@ -14,9 +14,9 @@ import teletexToString from "@wildboar/teletex";
  * @description
  *
  * Printable and/or Teletex string used by several physical-delivery attributes (ITU-T
- * X.411 (1999), Annex A). Either or both may be present; if both, they should identify
- * the same locus (X.402 §18.2 b). Empty SET (neither component) is allowed by ASN.1 but
- * is not a useful address value.
+ * X.411 (1999), Annex A). Either or both may be present; if both, they should identify the
+ * same locus (X.402 §18.2 b). Empty SET (neither component) is allowed by ASN.1 but is not
+ * a useful address value.
  *
  * ### ASN.1 Definition:
  *

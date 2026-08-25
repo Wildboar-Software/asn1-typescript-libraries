@@ -19,7 +19,7 @@ import {
  * @summary id_mhs_protocols
  * @description
  *
- * OBJECT IDENTIFIER `id_mhs_protocols`. Defined in ITU-T X.419 (1999) (Annex A).
+ * Defined in ITU-T X.419 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -47,16 +47,16 @@ const DELIMITER = ';'.charCodeAt(0);
  * optional `built-in-domain-defined-attributes`, and optional `extension-attributes`
  * (ITU-T X.411 (1999), Annex A; semantics in ITU-T X.402 (1999), §18). Several attribute
  * lists may denote the same user; comparison uses the equivalence rules in X.402 §18.4
- * (case of letters, Numeric vs Printable for the same digits,
- * Printable/Teletex/Universal alternatives, collapsed spaces, and disregarding
- * `iso-639-language-code`). There is no single unambiguous whole-address equality. Name
- * form is determined by X.402 §18.5.5: `numeric-user-identifier` ⇒ numeric;
- * `network-address` ⇒ terminal; `physical-delivery-country-name` ⇒ postal; otherwise
- * mnemonic. `built-in-domain-defined-attributes` is a SEQUENCE SIZE (1..4): omit it
- * rather than send empty. `extension-attributes` is a SET SIZE (1..256) keyed by integer
- * `extension-type`; order in the SET does not matter, duplicate types are invalid.
- * Teletex and universal counterparts of printable attributes live in
- * `extension-attributes` (see the ASN.1 `-- see also` comments).
+ * (case of letters, Numeric vs Printable for the same digits, Printable/Teletex/Universal
+ * alternatives, collapsed spaces, and disregarding `iso-639-language-code`). There is no
+ * single unambiguous whole-address equality. Name form is determined by X.402 §18.5.5:
+ * `numeric-user-identifier` ⇒ numeric; `network-address` ⇒ terminal;
+ * `physical-delivery-country-name` ⇒ postal; otherwise mnemonic.
+ * `built-in-domain-defined-attributes` is a SEQUENCE omit it rather than send empty.
+ * `extension-attributes` is a SET SIZE (1..256) keyed by integer `extension-type`; order
+ * in the SET does not matter, duplicate types are invalid. Teletex and universal
+ * counterparts of printable attributes live in `extension-attributes` (see the ASN.1 `--
+ * see also` comments).
  *
  * ### ASN.1 Definition:
  *

@@ -20,11 +20,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MSString
  * @description
  *
- * `MSString`. The MS-string-list-elements-match determines whether a presented sequence
- * of strings is a leading subset of the sequence of strings present in some value of an
- * attribute containing sequences of MS-string without regard to the case (upper or
- * lower) of the strings.  The rule is…
- * See ITU-T X.413 (1999), §12.2.7.
+ * The MS-string-list-elements-match determines whether a presented sequence of strings is
+ * a leading subset of the sequence of strings present in some value of an attribute
+ * containing sequences of MS-string without regard to the case (upper or lower) of the
+ * strings. See ITU-T X.413 (1999), §12.
  *
  * ### ASN.1 Definition:
  *

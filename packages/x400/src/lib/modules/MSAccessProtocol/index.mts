@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MSAccessProtocol` (ITU-T X.419 (1999), §9).
+ * ASN.1 module from ITU-T X.419 (1999), §9.
  */
 export * from "./AbortReason.ta.mjs";
 export * from "./err-attribute-error.va.mjs";

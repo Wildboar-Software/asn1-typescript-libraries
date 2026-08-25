@@ -15,8 +15,7 @@ import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.mjs';
  * @summary id_parameter_serviceError
  * @description
  *
- * OBJECT IDENTIFIER `id_parameter_serviceError`. Defined in ITU-T X.411 (1999)
- * (accounting objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

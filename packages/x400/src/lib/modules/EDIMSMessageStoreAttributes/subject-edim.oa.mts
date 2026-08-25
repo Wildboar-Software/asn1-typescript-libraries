@@ -27,10 +27,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary subject_edim
  * @description
  *
- * Information object `subject_edim`. The Subject EDIM Identifier is the EDIM Identifier
- * either passed in the EDIN Receiver field, if Responsibility has been forwarded, or the
- * This EDIM field, if not. SubjectEDIMField ::= EDIMIdentifier NOTE – EDIM Identifier is
- * defined in 7.1. See ITU-T X.435 (1999), §9.1.1.
+ * The Subject EDIM Identifier is the EDIM Identifier either passed in the EDIN Receiver
+ * field, if Responsibility has been forwarded, or the This EDIM field, if not.
+ * SubjectEDIMField ::= EDIMIdentifier NOTE – EDIM Identifier is defined in 7.1. See ITU-T
+ * X.435 (1999), §9.1.1.
  *
  * ### ASN.1 Definition:
  *

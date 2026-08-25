@@ -16,7 +16,7 @@ import { ContentSpecificAutoActions } from '../MSGeneralAutoActionTypes/ContentS
  * @summary AutoActionTable
  * @description
  *
- * Information object set `AutoActionTable`. Defined in ITU-T X.413 (1999) (§12).
+ * Defined in ITU-T X.413 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

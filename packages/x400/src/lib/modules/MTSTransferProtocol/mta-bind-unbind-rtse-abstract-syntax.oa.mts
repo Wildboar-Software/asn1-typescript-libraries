@@ -20,8 +20,7 @@ import { id_as_mta_rtse } from '../MHSProtocolObjectIdentifiers/id-as-mta-rtse.v
  * @summary mta_bind_unbind_rtse_abstract_syntax
  * @description
  *
- * Information object `mta_bind_unbind_rtse_abstract_syntax`. Defined in ITU-T X.419
- * (1999) (§7).
+ * Defined in ITU-T X.419 (1999) (§7).
  *
  * ### ASN.1 Definition:
  *

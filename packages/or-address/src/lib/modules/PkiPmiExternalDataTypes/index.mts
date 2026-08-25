@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `PkiPmiExternalDataTypes` (ITU-T X.402 (1999), §18).
+ * ASN.1 module from ITU-T X.402 (1999), §18.
  */
 export * from "./AdministrationDomainName.ta.mjs";
 export * from "./BuiltInDomainDefinedAttributes.ta.mjs";

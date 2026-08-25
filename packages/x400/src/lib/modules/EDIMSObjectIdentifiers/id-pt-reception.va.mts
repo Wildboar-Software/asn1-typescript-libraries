@@ -15,7 +15,7 @@ import { id_pt } from '../EDIMSObjectIdentifiers/id-pt.va.mjs';
  * @summary id_pt_reception
  * @description
  *
- * OBJECT IDENTIFIER `id_pt_reception`. Defined in ITU-T X.435 (1999) (Annex A).
+ * Defined in ITU-T X.435 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

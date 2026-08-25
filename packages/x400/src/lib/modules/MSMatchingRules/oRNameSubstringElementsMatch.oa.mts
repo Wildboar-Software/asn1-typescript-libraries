@@ -20,8 +20,7 @@ import { id_mr_orname_substring_elements_match } from '../MSObjectIdentifiers/id
  * @summary oRNameSubstringElementsMatch
  * @description
  *
- * Information object `oRNameSubstringElementsMatch`. Defined in ITU-T X.413 (1999)
- * (§12.4 / §13).
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
  *
  * ### ASN.1 Definition:
  *

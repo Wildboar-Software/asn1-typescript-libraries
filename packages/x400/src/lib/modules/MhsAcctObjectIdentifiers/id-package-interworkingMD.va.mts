@@ -15,8 +15,7 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_interworkingMD
  * @description
  *
- * OBJECT IDENTIFIER `id_package_interworkingMD`. Defined in ITU-T X.411 (1999)
- * (accounting objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

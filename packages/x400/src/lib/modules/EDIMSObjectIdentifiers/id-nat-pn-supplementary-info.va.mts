@@ -15,8 +15,7 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_pn_supplementary_info
  * @description
  *
- * OBJECT IDENTIFIER `id_nat_pn_supplementary_info`. Defined in ITU-T X.435 (1999) (Annex
- * A).
+ * Defined in ITU-T X.435 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

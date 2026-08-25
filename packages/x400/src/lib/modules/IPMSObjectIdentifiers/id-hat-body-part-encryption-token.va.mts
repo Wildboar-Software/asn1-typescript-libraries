@@ -15,8 +15,7 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_body_part_encryption_token
  * @description
  *
- * OBJECT IDENTIFIER `id_hat_body_part_encryption_token`. Defined in ITU-T X.420 (1999)
- * (Annex A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

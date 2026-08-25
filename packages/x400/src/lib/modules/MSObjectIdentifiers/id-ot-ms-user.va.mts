@@ -15,7 +15,7 @@ import { id_ot } from '../MSObjectIdentifiers/id-ot.va.mjs';
  * @summary id_ot_ms_user
  * @description
  *
- * OBJECT IDENTIFIER `id_ot_ms_user`. Defined in ITU-T X.413 (1999) (Annex A).
+ * Defined in ITU-T X.413 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

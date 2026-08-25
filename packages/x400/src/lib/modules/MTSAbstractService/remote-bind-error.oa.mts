@@ -25,12 +25,11 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary remote_bind_error
  * @description
  *
- * Information object `remote_bind_error`. The Remote-bind-error abstract-error reports
- * that the requested abstract-operation cannot be provided by the MS because the MS is
- * unable to bind to the MTS, or because there is no association in existence between the
- * MS and the UA. This abstract-error occurs on an indirect submission to the MTS via an
- * MS, or on invocation by the MTS of a submission-control abstract-operation via an MS.
- * See ITU-T X.411 (1999), §8.2.2.10.
+ * The Remote-bind-error abstract-error reports that the requested abstract-operation
+ * cannot be provided by the MS because the MS is unable to bind to the MTS, or because
+ * there is no association in existence between the MS and the UA. This abstract-error
+ * occurs on an indirect submission to the MTS via an MS, or on invocation by the MTS of a
+ * submission-control abstract-operation via an MS. See ITU-T X.411 (1999), §8.2.2.10.
  *
  * ### ASN.1 Definition:
  *

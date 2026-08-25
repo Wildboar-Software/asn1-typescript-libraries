@@ -27,9 +27,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_edin
  * @description
  *
- * Information object `receive_edin`. The Receive EDIN abstract operation receives a
- * message whose content is an EDIN. The EDIN is provoked by an EDIM originated with the
- * Originate EDIM abstract operation. See ITU-T X.435 (1999), §12.2.3.
+ * The Receive EDIN abstract operation receives a message whose content is an EDIN. The
+ * EDIN is provoked by an EDIM originated with the Originate EDIM abstract operation. See
+ * ITU-T X.435 (1999), §12.2.3.
  *
  * ### ASN.1 Definition:
  *

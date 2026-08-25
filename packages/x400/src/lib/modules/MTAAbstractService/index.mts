@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MTAAbstractService` (ITU-T X.411 (1999), §12).
+ * ASN.1 module from ITU-T X.411 (1999), §12.
  */
 export * from "./ActualRecipientName.ta.mjs";
 export * from "./AdditionalActions.ta.mjs";

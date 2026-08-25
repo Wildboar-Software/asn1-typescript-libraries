@@ -32,10 +32,10 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary ipm_auto_advise
  * @description
  *
- * Information object `ipm_auto_advise`. The IPM auto-advise auto-action enables the
- * IPMS-MS-user to instruct the IPMS-MS to generate ANs automatically that will convey
- * additional advice to the originators of subsequently delivered IPMs. The auto-action
- * is performed when an IPM is delivered to the IPMS-MS. See ITU-T X.420 (1999), §19.8.6.
+ * The IPM auto-advise auto-action enables the IPMS-MS-user to instruct the IPMS-MS to
+ * generate ANs automatically that will convey additional advice to the originators of
+ * subsequently delivered IPMs. The auto-action is performed when an IPM is delivered to
+ * the IPMS-MS. See ITU-T X.420 (1999), §19.8.6.
  *
  * ### ASN.1 Definition:
  *

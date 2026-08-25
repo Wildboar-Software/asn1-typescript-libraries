@@ -43,12 +43,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary modify
  * @description
  *
- * Information object `modify`. The Auto-modify auto-action enables the MS-user to
- * instruct the MS to apply modifications automatically to the attributes of an entry
- * provided that the entry satisfies given criteria. The auto-action is performed
- * whenever an entry of the Stored-message or Message-log entry-classes is created, i.e.,
- * when a message or report is delivered, or when a draft message is stored, or when a
- * message or probe is submitted… See ITU-T X.413 (1999), §13.2.
+ * The Auto-modify auto-action enables the MS-user to instruct the MS to apply
+ * modifications automatically to the attributes of an entry provided that the entry
+ * satisfies given criteria. See ITU-T X.413 (1999), §13.
  *
  * ### ASN.1 Definition:
  *

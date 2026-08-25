@@ -23,12 +23,10 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary retrieval
  * @description
  *
- * Information object `retrieval`. The Retrieval Port abstract-services are realized on a
- * one-to-one basis between abstract-operations and real operations in the Message
- * Retrieval Service Element 1988 (MRSE-88) and Message Retrieval Service Element 1994
- * (MRSE-94) which are defined in Context. 17.2 MS-submission Port The MS-submission Port
- * abstract-services are realized on a one-to-one basis between abstract-operations and
- * real operations in the… See ITU-T X.413 (1999), §17.1.
+ * The Retrieval Port abstract-services are realized on a one-to-one basis between
+ * abstract-operations and real operations in the Message Retrieval Service Element 1988
+ * (MRSE-88) and Message Retrieval Service Element 1994 (MRSE-94) which are defined in
+ * Context. See ITU-T X.413 (1999), §17.
  *
  * ### ASN.1 Definition:
  *

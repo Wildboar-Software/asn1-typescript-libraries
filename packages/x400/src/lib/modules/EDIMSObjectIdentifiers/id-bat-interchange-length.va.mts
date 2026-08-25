@@ -15,8 +15,7 @@ import { id_bat } from '../EDIMSObjectIdentifiers/id-bat.va.mjs';
  * @summary id_bat_interchange_length
  * @description
  *
- * OBJECT IDENTIFIER `id_bat_interchange_length`. Defined in ITU-T X.435 (1999) (Annex
- * A).
+ * Defined in ITU-T X.435 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

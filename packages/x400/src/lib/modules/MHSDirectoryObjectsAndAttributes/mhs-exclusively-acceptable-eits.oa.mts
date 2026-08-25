@@ -27,8 +27,7 @@ import { id_at_mhs_exclusively_acceptable_eits } from '../MHSObjectIdentifiers/i
  * @summary mhs_exclusively_acceptable_eits
  * @description
  *
- * Information object `mhs_exclusively_acceptable_eits`. Defined in ITU-T X.402 (1999)
- * (§17 / Annex A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

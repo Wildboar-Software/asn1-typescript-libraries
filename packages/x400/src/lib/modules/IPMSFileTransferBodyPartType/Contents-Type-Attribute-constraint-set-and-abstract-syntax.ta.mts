@@ -24,8 +24,7 @@ import {
  * @summary Contents_Type_Attribute_constraint_set_and_abstract_syntax
  * @description
  *
- * `Contents_Type_Attribute_constraint_set_and_abstract_syntax`. Defined in ITU-T X.420
- * (1999) (Annex C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

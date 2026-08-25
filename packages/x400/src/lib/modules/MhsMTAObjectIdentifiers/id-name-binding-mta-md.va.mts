@@ -15,8 +15,7 @@ import { id_name_binding } from '../MhsMTAObjectIdentifiers/id-name-binding.va.m
  * @summary id_name_binding_mta_md
  * @description
  *
- * OBJECT IDENTIFIER `id_name_binding_mta_md`. Defined in ITU-T X.411 (1999) (MTA managed
- * objects).
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

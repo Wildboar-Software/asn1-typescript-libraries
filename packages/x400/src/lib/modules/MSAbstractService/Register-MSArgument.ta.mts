@@ -66,9 +66,7 @@ import {
  * @summary Register_MSArgument
  * @description
  *
- * `Register_MSArgument`.  See ITU-T X.413 (1999), §8.2.5.1. SET SIZE
- * (1..…): omit this component rather than encode an empty SET; SET order is
- * insignificant.
+ * See ITU-T X.413 (1999), §8.2.5.1. ;
  *
  * ### ASN.1 Definition:
  *

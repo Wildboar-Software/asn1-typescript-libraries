@@ -15,7 +15,7 @@ import { id_ms } from '../MHSObjectIdentifiers/id-ms.va.mjs';
  * @summary id_ext
  * @description
  *
- * OBJECT IDENTIFIER `id_ext`. Defined in ITU-T X.413 (1999) (Annex A).
+ * Defined in ITU-T X.413 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

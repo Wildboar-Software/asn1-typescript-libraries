@@ -20,10 +20,9 @@ import {
  * @summary IPMLocation
  * @description
  *
- * `IPMLocation`. The IPM-location-match compares for equality a presented value with an
- * element of the stored alternative of attribute-values of type IPM Location.
- * See ITU-T X.420 (1999), §19.7.2. SET OF: order is insignificant;
- * duplicates are typically meaningless.
+ * The IPM-location-match compares for equality a presented value with an element of the
+ * stored alternative of attribute-values of type IPM Location. See ITU-T X.420 (1999),
+ * §19.7.2.
  *
  * ### ASN.1 Definition:
  *

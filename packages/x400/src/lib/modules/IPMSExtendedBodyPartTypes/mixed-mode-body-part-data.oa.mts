@@ -20,8 +20,7 @@ import { id_et_mixed_mode } from '../IPMSObjectIdentifiers/id-et-mixed-mode.va.m
  * @summary mixed_mode_body_part_data
  * @description
  *
- * Information object `mixed_mode_body_part_data`. Defined in ITU-T X.420 (1999) (Annex
- * C).
+ * Defined in ITU-T X.420 (1999) (Annex C).
  *
  * ### ASN.1 Definition:
  *

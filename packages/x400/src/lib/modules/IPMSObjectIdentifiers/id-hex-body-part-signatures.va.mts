@@ -15,8 +15,7 @@ import { id_hex } from '../IPMSObjectIdentifiers/id-hex.va.mjs';
  * @summary id_hex_body_part_signatures
  * @description
  *
- * OBJECT IDENTIFIER `id_hex_body_part_signatures`. Defined in ITU-T X.420 (1999) (Annex
- * A).
+ * Defined in ITU-T X.420 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

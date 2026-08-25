@@ -10,12 +10,11 @@ import {
  * @summary UniversalLocalPostalAttributes
  * @description
  *
- * `UniversalLocalPostalAttributes`. A local-postal-attributes is a standard attribute
- * that identifies the locus of distribution, other than that denoted by a
- * physical-delivery-office-name attribute (e.g., a geographical area), of a user's
- * physical messages. The value of a local-postal-attributes is a Printable String,
- * Teletex String, Universal String, or a combination of these types. See ITU-T X.402
- * (1999), §18.3.6.
+ * A local-postal-attributes is a standard attribute that identifies the locus of
+ * distribution, other than that denoted by a physical-delivery-office-name attribute
+ * (e.g., a geographical area), of a user's physical messages. The value of a
+ * local-postal-attributes is a Printable String, Teletex String, Universal String, or a
+ * combination of these types. See ITU-T X.402 (1999), §18.3.6.
  *
  * ### ASN.1 Definition:
  *

@@ -15,8 +15,7 @@ import {
  * @summary ub_authorization_information_qualifier
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_authorization_information_qualifier`. Defined in ITU-T
- * X.435 (1999) (Annex B).
+ * Defined in ITU-T X.435 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

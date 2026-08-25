@@ -15,8 +15,7 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_responderStrongCredentials
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_responderStrongCredentials`. Defined in ITU-T X.411
- * (1999) (MTA managed objects).
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
  *
  * ### ASN.1 Definition:
  *

@@ -25,7 +25,7 @@ import {
  * @summary delete_error_ParameterType
  * @description
  *
- * `delete_error_ParameterType`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

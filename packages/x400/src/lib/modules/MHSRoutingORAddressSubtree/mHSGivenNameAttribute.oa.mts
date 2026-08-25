@@ -27,7 +27,7 @@ import { id_at_mhs_given_name } from '../MHSRoutingObjectIdentifiers/id-at-mhs-g
  * @summary mHSGivenNameAttribute
  * @description
  *
- * Information object `mHSGivenNameAttribute`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

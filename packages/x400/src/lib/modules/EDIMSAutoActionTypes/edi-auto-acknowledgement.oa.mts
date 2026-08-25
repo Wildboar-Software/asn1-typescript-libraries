@@ -33,11 +33,10 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary edi_auto_acknowledgement
  * @description
  *
- * Information object `edi_auto_acknowledgement`. The EDI auto-acknowledgement
- * auto-action enables the IPMS-MS-user to instruct the EDI-MS to automatically originate
- * PNs on the user’s behalf. The auto-action is performed when the retrieval-status of an
- * EDI entry in the Delivery entry-class changes to processed. See ITU-T X.435 (1999),
- * §18.7.3.
+ * The EDI auto-acknowledgement auto-action enables the IPMS-MS-user to instruct the EDI-MS
+ * to automatically originate PNs on the user’s behalf. The auto-action is performed when
+ * the retrieval-status of an EDI entry in the Delivery entry-class changes to processed.
+ * See ITU-T X.435 (1999), §18.7.3.
  *
  * ### ASN.1 Definition:
  *

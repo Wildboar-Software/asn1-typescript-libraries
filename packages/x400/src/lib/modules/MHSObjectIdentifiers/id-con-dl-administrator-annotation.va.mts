@@ -15,8 +15,7 @@ import { id_con } from '../MHSObjectIdentifiers/id-con.va.mjs';
  * @summary id_con_dl_administrator_annotation
  * @description
  *
- * OBJECT IDENTIFIER `id_con_dl_administrator_annotation`. Defined in ITU-T X.402 (1999)
- * (Annex A).
+ * Defined in ITU-T X.402 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -28,9 +28,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary reply_time
  * @description
  *
- * Information object `reply_time`. The Reply Time heading field (O) identifies by when
- * the authorizing users request (but do not demand) that any replies to the present IPM
- * be originated. It comprises a date and time. See ITU-T X.420 (1999), §7.2.12.
+ * The Reply Time heading field (O) identifies by when the authorizing users request (but
+ * do not demand) that any replies to the present IPM be originated. It comprises a date
+ * and time. See ITU-T X.420 (1999), §7.2.12.
  *
  * ### ASN.1 Definition:
  *

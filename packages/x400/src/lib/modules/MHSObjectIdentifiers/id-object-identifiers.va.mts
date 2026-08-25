@@ -15,7 +15,7 @@ import { id_mod } from '../MHSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_object_identifiers
  * @description
  *
- * OBJECT IDENTIFIER `id_object_identifiers`. Defined in ITU-T X.402 (1999) (Annex A).
+ * Defined in ITU-T X.402 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

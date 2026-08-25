@@ -15,7 +15,7 @@ import {
  * @summary ub_summaries
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_summaries`. Defined in ITU-T X.413 (1999) (Annex B).
+ * Defined in ITU-T X.413 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

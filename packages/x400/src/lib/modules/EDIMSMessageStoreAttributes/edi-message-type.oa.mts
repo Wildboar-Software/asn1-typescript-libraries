@@ -27,9 +27,8 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary edi_message_type
  * @description
  *
- * Information object `edi_message_type`. Indicates the Message type(s) present in the
- * EDI Interchange. It consists of a set of distinct strings. See ITU-T X.435 (1999),
- * §8.2.13.
+ * Indicates the Message type(s) present in the EDI Interchange. It consists of a set of
+ * distinct strings. See ITU-T X.435 (1999), §8.2.13.
  *
  * ### ASN.1 Definition:
  *

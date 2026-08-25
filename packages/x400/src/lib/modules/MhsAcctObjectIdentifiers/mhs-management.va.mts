@@ -15,7 +15,7 @@ import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mj
  * @summary mhs_management
  * @description
  *
- * `mhs_management`. Defined in ITU-T X.411 (1999) (accounting objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

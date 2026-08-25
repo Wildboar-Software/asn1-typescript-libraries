@@ -15,9 +15,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_other_recipient_names
  * @description
  *
- * OBJECT IDENTIFIER `id_att_other_recipient_names`. This general-attribute, which is
- * multi-valued, contains the other-recipient-names argument of the Message-delivery
- * abstract-operation. See ITU-T X.413 (1999), §11.2.55.
+ * This general-attribute, which is multi-valued, contains the other-recipient-names
+ * argument of the Message-delivery abstract-operation. See ITU-T X.413 (1999), §11.2.55.
  *
  * ### ASN.1 Definition:
  *

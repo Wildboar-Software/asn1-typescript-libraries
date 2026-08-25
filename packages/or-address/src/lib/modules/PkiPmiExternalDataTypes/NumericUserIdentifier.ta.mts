@@ -7,9 +7,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @description
  *
  * Numeric identification of a user relative to the MD (ITU-T X.402 (1999), §18.3.8).
- * Presence of this attribute makes the OR-address a **numeric** name form (X.402
- * §18.5.5). Only this component is required to be numeric in a numeric OR-address
- * (§18.5.2 NOTE).
+ * Presence of this attribute makes the OR-address a **numeric** name form (X.402 §18.5.5).
+ * Only this component is required to be numeric in a numeric OR-address (§18.5.2 NOTE).
  *
  * ### ASN.1 Definition:
  *

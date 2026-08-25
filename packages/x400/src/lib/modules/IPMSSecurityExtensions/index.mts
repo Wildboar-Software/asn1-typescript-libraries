@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `IPMSSecurityExtensions` (ITU-T X.420 (1999), §15).
+ * ASN.1 module from ITU-T X.420 (1999), §15.
  */
 export * from "./body-part-encryption-token.oa.mjs";
 export * from "./BodyPartTokens-Item-body-part-choice.ta.mjs";

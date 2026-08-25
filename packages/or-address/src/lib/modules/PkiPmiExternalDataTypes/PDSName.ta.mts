@@ -6,8 +6,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PDSName
  * @description
  *
- * Identifies a Physical Delivery System relative to the MD (ITU-T X.402 (1999),
- * §18.3.11). PrintableString only.
+ * Identifies a Physical Delivery System relative to the MD (ITU-T X.402 (1999), §18.3.11).
+ * PrintableString only.
  *
  * ### ASN.1 Definition:
  *

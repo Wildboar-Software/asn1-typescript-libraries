@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * Re-exports of ASN.1 module `MSMatchingRules` (ITU-T X.413 (1999), §12.4 / §13).
+ * ASN.1 module from ITU-T X.413 (1999), §12.4 / §13.
  */
 export * from "./contentCorrelatorMatch.oa.mjs";
 export * from "./contentIdentifierMatch.oa.mjs";

@@ -20,8 +20,7 @@ import { id_ep_notification } from '../IPMSObjectIdentifiers/id-ep-notification.
  * @summary notification_body_part_parameters
  * @description
  *
- * Information object `notification_body_part_parameters`. Defined in ITU-T X.420 (1999)
- * (§7.3).
+ * Defined in ITU-T X.420 (1999) (§7.3).
  *
  * ### ASN.1 Definition:
  *

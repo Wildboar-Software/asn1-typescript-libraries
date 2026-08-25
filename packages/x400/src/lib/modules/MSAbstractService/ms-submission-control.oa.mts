@@ -23,13 +23,7 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary ms_submission_control
  * @description
  *
- * Information object `ms_submission_control`. The argument, result, and errors of the
- * MS-submission-control abstract-operation are identical with those of the
- * Submission-control abstract-operation defined in 8.2.1.4 of 9 Abstract-errors This
- * clause defines the following abstract-errors associated with using the
- * abstract-operations at the Retrieval Port and MS-submission Port: a) Attribute error;
- * b) Auto-action request error; c) Delete error; d) Fetch… See ITU-T X.413 (1999),
- * §8.3.4.
+ * See ITU-T X.413 (1999), §8.
  *
  * ### ASN.1 Definition:
  *

@@ -15,11 +15,10 @@ import { id_act } from '../MSObjectIdentifiers/id-act.va.mjs';
  * @summary id_act_auto_alert
  * @description
  *
- * OBJECT IDENTIFIER `id_act_auto_alert`. The Auto-alert auto-action enables the MS-user
- * to instruct the MS to alert the user automatically when the delivery of selected
- * messages or reports causes the creation of an entry in the Delivery entry-class. The
- * alert may be conveyed to the MS-user by means of the Alert abstract-operation (see
- * 8.2.6). See ITU-T X.413 (1999), §13.1.
+ * The Auto-alert auto-action enables the MS-user to instruct the MS to alert the user
+ * automatically when the delivery of selected messages or reports causes the creation of
+ * an entry in the Delivery entry-class. The alert may be conveyed to the MS-user by means
+ * of the Alert abstract-operation (see 8.2.6). See ITU-T X.413 (1999), §13.1.
  *
  * ### ASN.1 Definition:
  *

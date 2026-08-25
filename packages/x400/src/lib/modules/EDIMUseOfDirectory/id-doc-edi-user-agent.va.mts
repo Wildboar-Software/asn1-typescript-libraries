@@ -15,10 +15,10 @@ import { id_doc } from '../EDIMUseOfDirectory/id-doc.va.mjs';
  * @summary id_doc_edi_user_agent
  * @description
  *
- * OBJECT IDENTIFIER `id_doc_edi_user_agent`. An EDI user agent (EDI-UA) is a UA tailored
- * so as to better assist a single user to engage in EDI Messaging. It helps him
- * originate, receive, or both originate and receive messages containing Information
- * Objects of the types defined in clause 6. See ITU-T X.435 (1999), §15.1.
+ * An EDI user agent (EDI-UA) is a UA tailored so as to better assist a single user to
+ * engage in EDI Messaging. It helps him originate, receive, or both originate and receive
+ * messages containing Information Objects of the types defined in clause 6. See ITU-T
+ * X.435 (1999), §15.1.
  *
  * ### ASN.1 Definition:
  *

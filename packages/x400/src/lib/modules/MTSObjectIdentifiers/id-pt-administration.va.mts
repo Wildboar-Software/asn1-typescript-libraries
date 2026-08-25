@@ -15,7 +15,7 @@ import { id_pt } from '../MTSObjectIdentifiers/id-pt.va.mjs';
  * @summary id_pt_administration
  * @description
  *
- * OBJECT IDENTIFIER `id_pt_administration`. Defined in ITU-T X.411 (1999) (Annex A).
+ * Defined in ITU-T X.411 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

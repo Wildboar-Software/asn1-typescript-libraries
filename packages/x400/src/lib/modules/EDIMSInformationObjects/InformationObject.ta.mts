@@ -24,12 +24,12 @@ import {
  * @summary InformationObject
  * @description
  *
- * `InformationObject`. An MS shall satisfy the following requirements related to the
- * information objects it maintains: a) The MS shall maintain a separate information
- * object for each message containing an EDIM or EDIN that is delivered to it. b) The MS
- * shall maintain as a separate information object not only each message containing a
- * forwarding EDIM [pursuant to Item a)] but also each message containing a forwarded
- * EDIM (recursively). See ITU-T X.435 (1999), §18.3.
+ * An MS shall satisfy the following requirements related to the information objects it
+ * maintains: a) The MS shall maintain a separate information object for each message
+ * containing an EDIM or EDIN that is delivered to it. b) The MS shall maintain as a
+ * separate information object not only each message containing a forwarding EDIM [pursuant
+ * to Item a)] but also each message containing a forwarded EDIM (recursively). See ITU-T
+ * X.435 (1999), §18.3.
  *
  * ### ASN.1 Definition:
  *

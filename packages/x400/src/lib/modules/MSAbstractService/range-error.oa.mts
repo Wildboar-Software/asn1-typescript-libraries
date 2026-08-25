@@ -28,10 +28,8 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary range_error
  * @description
  *
- * Information object `range_error`. A Range-error reports a problem related to the range
- * specified in a selector as an argument of an abstract-operation. range-error
- * See ITU-T X.413
- * (1999), §9.7.
+ * A Range-error reports a problem related to the range specified in a selector as an
+ * argument of an abstract-operation. range-error See ITU-T X.413 (1999), §9.7.
  *
  * ### ASN.1 Definition:
  *

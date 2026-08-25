@@ -26,9 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edim_body_part
  * @description
  *
- * Information object `edim_body_part`. An EDIM Body Part contains an EDIM, and
- * optionally, its delivery envelope. It is used for forwarding of EDIMs. See ITU-T X.435
- * (1999), §8.3.2.
+ * An EDIM Body Part contains an EDIM, and optionally, its delivery envelope. It is used
+ * for forwarding of EDIMs. See ITU-T X.435 (1999), §8.3.2.
  *
  * ### ASN.1 Definition:
  *

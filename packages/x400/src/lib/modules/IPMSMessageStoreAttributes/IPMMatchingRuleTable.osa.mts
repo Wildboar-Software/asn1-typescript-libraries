@@ -31,7 +31,7 @@ import { recipientSpecifierSubstringElementsMatch } from '../IPMSMessageStoreAtt
  * @summary IPMMatchingRuleTable
  * @description
  *
- * Information object set `IPMMatchingRuleTable`. Defined in ITU-T X.420 (1999) (§20).
+ * Defined in ITU-T X.420 (1999) (§20).
  *
  * ### ASN.1 Definition:
  *

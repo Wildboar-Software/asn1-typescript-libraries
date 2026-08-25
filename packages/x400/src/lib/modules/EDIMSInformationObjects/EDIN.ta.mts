@@ -29,8 +29,8 @@ import {
  * @summary EDIN
  * @description
  *
- * EDI notification (PN/NN/FN) (ITU-T X.435 (1999), §10). Which CHOICE alternative
- * appears selects the semantics of the notification fields.
+ * EDI notification (PN/NN/FN) (ITU-T X.435 (1999), §10). Which CHOICE alternative appears
+ * selects the semantics of the notification fields.
  *
  * ### ASN.1 Definition:
  *

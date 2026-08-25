@@ -17,7 +17,7 @@ import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
  * @summary connectionGroupNameForm
  * @description
  *
- * Information object `connectionGroupNameForm`. Defined in ITU-T X.412 (1999) (§11).
+ * Defined in ITU-T X.412 (1999) (§11).
  *
  * ### ASN.1 Definition:
  *

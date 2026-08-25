@@ -25,7 +25,7 @@ import {
  * @summary register_ms_error_ParameterType
  * @description
  *
- * `register_ms_error_ParameterType`. Defined in ITU-T X.413 (1999) (§6).
+ * Defined in ITU-T X.413 (1999) (§6).
  *
  * ### ASN.1 Definition:
  *

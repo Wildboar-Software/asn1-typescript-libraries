@@ -20,8 +20,7 @@ import { id_as_mts } from '../MHSProtocolObjectIdentifiers/id-as-mts.va.mjs';
  * @summary mts_bind_unbind_abstract_syntax
  * @description
  *
- * Information object `mts_bind_unbind_abstract_syntax`. Defined in ITU-T X.419 (1999)
- * (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

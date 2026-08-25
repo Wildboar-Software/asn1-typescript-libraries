@@ -15,8 +15,7 @@ import { id_mod } from '../MHSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_directory_objects_and_attributes
  * @description
  *
- * OBJECT IDENTIFIER `id_directory_objects_and_attributes`. Defined in ITU-T X.402 (1999)
- * (Annex A).
+ * Defined in ITU-T X.402 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

@@ -15,8 +15,7 @@ import { id_at } from '../MHSObjectIdentifiers/id-at.va.mjs';
  * @summary id_at_encrypted_mhs_dl_subscription_service
  * @description
  *
- * OBJECT IDENTIFIER `id_at_encrypted_mhs_dl_subscription_service`. Defined in ITU-T
- * X.402 (1999) (Annex A).
+ * Defined in ITU-T X.402 (1999) (Annex A).
  *
  * ### ASN.1 Definition:
  *

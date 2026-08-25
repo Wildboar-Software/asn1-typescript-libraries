@@ -25,11 +25,8 @@ import {
  * @summary ModifyResult
  * @description
  *
- * `ModifyResult`. Should the request succeed, the modify-result shall be returned.
- *  The
- * parameters of modify-result have the following meaning: a) Entries-modified (C): This
- * identifies the entries selected for modification. See ITU-T X.413 (1999), §8.2.7.2.
- * SEQUENCE SIZE (1..…): omit this component rather than encode an empty SEQUENCE.
+ * Should the request succeed, the modify-result shall be returned. See ITU-T X.413 (1999),
+ * §8.2.7.2.
  *
  * ### ASN.1 Definition:
  *

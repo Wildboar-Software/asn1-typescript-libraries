@@ -15,9 +15,8 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_subject_ipm
  * @description
  *
- * OBJECT IDENTIFIER `id_nat_subject_ipm`. The Subject IPM common field (M) contains the
- * value of the This IPM field of the subject IPM. It comprises an IPM identifier. See
- * ITU-T X.420 (1999), §8.1.1.
+ * The Subject IPM common field (M) contains the value of the This IPM field of the subject
+ * IPM. It comprises an IPM identifier. See ITU-T X.420 (1999), §8.1.1.
  *
  * ### ASN.1 Definition:
  *

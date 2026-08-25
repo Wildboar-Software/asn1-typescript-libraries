@@ -30,9 +30,9 @@ import {
  * @summary PerRecipientReportFields
  * @description
  *
- * One recipient's report fields. `per-recipient-fields` in a report is a SEQUENCE SIZE
- * (1..`ub-recipients`): order is the originator's recipient order where preserved; empty
- * is not allowed (ITU-T X.411 (1999), Annex A).
+ * One recipient's report fields. `per-recipient-fields` in a report is a SEQUENCE order is
+ * the originator's recipient order where preserved; empty is not allowed (ITU-T X.411
+ * (1999), Annex A).
  *
  * ### ASN.1 Definition:
  *

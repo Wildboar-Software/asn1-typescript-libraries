@@ -15,8 +15,7 @@ import {
  * @summary ub_extended_network_address_length
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_extended_network_address_length`. Defined in ITU-T X.412
- * (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

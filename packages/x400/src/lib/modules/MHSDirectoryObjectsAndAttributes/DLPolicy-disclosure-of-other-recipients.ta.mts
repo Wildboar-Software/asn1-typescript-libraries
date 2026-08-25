@@ -15,8 +15,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DLPolicy_disclosure_of_other_recipients
  * @description
  *
- * `DLPolicy_disclosure_of_other_recipients`. Defined in ITU-T X.402 (1999) (§17 / Annex
- * A).
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
  *
  * ### ASN.1 Definition:
  *

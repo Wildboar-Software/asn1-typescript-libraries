@@ -15,11 +15,10 @@ import { id_tok } from '../MTSObjectIdentifiers/id-tok.va.mjs';
  * @summary id_tok_asymmetricToken
  * @description
  *
- * OBJECT IDENTIFIER `id_tok_asymmetricToken`. A token may be used to convey to the
- * recipient of the token protected security-relevant information. The token provides
- * authentication of public security-relevant information, and confidentiality and
- * authentication of secret security-relevant information. See ITU-T X.411 (1999),
- * §8.5.8.
+ * A token may be used to convey to the recipient of the token protected security-relevant
+ * information. The token provides authentication of public security-relevant information,
+ * and confidentiality and authentication of secret security-relevant information. See
+ * ITU-T X.411 (1999), §8.5.8.
  *
  * ### ASN.1 Definition:
  *

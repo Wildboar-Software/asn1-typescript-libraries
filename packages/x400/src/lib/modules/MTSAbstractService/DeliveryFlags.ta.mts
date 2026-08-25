@@ -33,12 +33,20 @@ export type DeliveryFlags = BIT_STRING;
 
 /**
  * @summary DeliveryFlags_implicit_conversion_prohibited
+ * @description
+ *
+ * One: implicit conversion prohibited. Zero: implicit conversion allowed. Bit 0 is unused.
+ *
  * @constant
  */
 export const DeliveryFlags_implicit_conversion_prohibited: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary implicit_conversion_prohibited
+ * @description
+ *
+ * One: implicit conversion prohibited. Zero: implicit conversion allowed. Bit 0 is unused.
+ *
  * @constant
  */
 export const implicit_conversion_prohibited: number = DeliveryFlags_implicit_conversion_prohibited; /* SHORT_NAMED_BIT */

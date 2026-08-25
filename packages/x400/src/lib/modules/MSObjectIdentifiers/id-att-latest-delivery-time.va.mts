@@ -15,10 +15,10 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_latest_delivery_time
  * @description
  *
- * OBJECT IDENTIFIER `id_att_latest_delivery_time`. This general-attribute contains the
- * latest-delivery-time argument of the Message-submission abstract-operation; it
- * indicates the time after which a message shall not be delivered to its recipient(s).
- * See 8.2.1.1.1.13 of X.411 |  See ITU-T X.413 (1999), §11.2.32.
+ * This general-attribute contains the latest-delivery-time argument of the
+ * Message-submission abstract-operation; it indicates the time after which a message shall
+ * not be delivered to its recipient(s). See 8.2.1.1.1.13 of X.411 | See ITU-T X.413
+ * (1999), §11.2.32.
  *
  * ### ASN.1 Definition:
  *

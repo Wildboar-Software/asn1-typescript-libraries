@@ -15,8 +15,7 @@ import {
  * @summary ub_edi_association_assigned_code
  * @description
  *
- * ASN.1 upper-bound INTEGER `ub_edi_association_assigned_code`. Defined in ITU-T X.435
- * (1999) (Annex B).
+ * Defined in ITU-T X.435 (1999) (Annex B).
  *
  * ### ASN.1 Definition:
  *

@@ -10,7 +10,7 @@ import {
  * @summary UniversalExtensionORAddressComponents
  * @description
  *
- * `UniversalExtensionORAddressComponents`. Defined in ITU-T X.402 (1999) (§18).
+ * Defined in ITU-T X.402 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

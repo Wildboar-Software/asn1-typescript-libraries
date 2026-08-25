@@ -26,7 +26,7 @@ import { id_at_oraddress_subtrees } from '../MHSRoutingObjectIdentifiers/id-at-o
  * @summary oRAddressSubtrees
  * @description
  *
- * Information object `oRAddressSubtrees`. Defined in ITU-T X.412 (1999) (§11).
+ * Defined in ITU-T X.412 (1999) (§11).
  *
  * ### ASN.1 Definition:
  *

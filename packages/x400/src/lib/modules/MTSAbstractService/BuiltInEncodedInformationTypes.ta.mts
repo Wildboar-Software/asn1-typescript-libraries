@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BuiltInEncodedInformationTypes
  * @description
  *
- * BIT STRING of built-in EITs: unknown(0), ia5-text(2), g3-facsimile(3), … (ITU-T X.411
+ * BIT STRING of built-in EITs: unknown(0), ia5-text(2), g3-facsimile(3) (ITU-T X.411
  * (1999), Annex A). Bit 0 `unknown` is not 'no EITs'.
  *
  * ### ASN.1 Definition:

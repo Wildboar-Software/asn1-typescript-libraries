@@ -27,9 +27,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary acknowledgement_request_for_this_recipient
  * @description
  *
- * Information object `acknowledgement_request_for_this_recipient`. A Recipient
- * identifies the preferred recipient in question. It comprises an OR-name. See ITU-T
- * X.435 (1999), §8.2.3.1.
+ * A Recipient identifies the preferred recipient in question. It comprises an OR-name. See
+ * ITU-T X.435 (1999), §8.2.3.1.
  *
  * ### ASN.1 Definition:
  *

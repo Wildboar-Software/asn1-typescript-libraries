@@ -23,8 +23,7 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
  * @summary ReportTransferEnvelopeExtensions
  * @description
  *
- * Information object set `ReportTransferEnvelopeExtensions`. Defined in ITU-T X.411
- * (1999) (§12).
+ * Defined in ITU-T X.411 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

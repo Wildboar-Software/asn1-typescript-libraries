@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Precedence
  * @description
  *
- * `Precedence`. Defined in ITU-T X.420 (1999) (§18).
+ * Defined in ITU-T X.420 (1999) (§18).
  *
  * ### ASN.1 Definition:
  *

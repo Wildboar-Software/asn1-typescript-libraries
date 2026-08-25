@@ -20,11 +20,11 @@ import { id_mr_distribution_code } from '../IPMSObjectIdentifiers/id-mr-distribu
  * @summary distributionCodeMatch
  * @description
  *
- * Information object `distributionCodeMatch`. The Distribution-code-match rule compares
- * for equality a presented value with attribute-values of type Distribution Code as
- * defined in A.1.8.  The rule returns true if, and only if, at least one of the
- * following conditions is fulfilled for the presented value and at least one value of
- * the attribute: a) the OID-code… See ITU-T X.420 (1999), §19.7.16.
+ * True iff the presented value matches at least one attribute value (ITU-T X.420 (1999),
+ * §19.7.16): both have `oid-code` and they object-identifier-match, and `alphanumeric-code`
+ * is either present in both and MS-string-match or absent from both; or `oid-code` is
+ * absent from at least one value and `alphanumeric-code` is present in both and
+ * MS-string-match. `or-descriptor` is not considered.
  *
  * ### ASN.1 Definition:
  *

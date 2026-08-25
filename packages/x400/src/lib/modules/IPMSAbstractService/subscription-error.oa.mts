@@ -27,9 +27,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary subscription_error
  * @description
  *
- * Information object `subscription_error`. The Subscription Error abstract error reports
- * that the user has not subscribed to one or more of the elements of service implicit in
- * his invocation of the abstract operation whose performance is aborted.
+ * The Subscription Error abstract error reports that the user has not subscribed to one or
+ * more of the elements of service implicit in his invocation of the abstract operation
+ * whose performance is aborted.
  *
  * ### ASN.1 Definition:
  *

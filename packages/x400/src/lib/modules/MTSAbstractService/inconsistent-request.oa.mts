@@ -25,10 +25,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary inconsistent_request
  * @description
  *
- * Information object `inconsistent_request`. The Inconsistent-request abstract-error
- * reports that the requested abstract-operation cannot be provided by the MTS because
- * the MTS-user has made an inconsistent request. The Inconsistent-request abstract-error
- * has no parameters. See ITU-T X.411 (1999), §8.2.2.7.
+ * The Inconsistent-request abstract-error reports that the requested abstract-operation
+ * cannot be provided by the MTS because the MTS-user has made an inconsistent request. The
+ * Inconsistent-request abstract-error has no parameters. See ITU-T X.411 (1999), §8.2.2.7.
  *
  * ### ASN.1 Definition:
  *

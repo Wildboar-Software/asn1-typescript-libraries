@@ -22,9 +22,7 @@ import {
  * @summary IA5TextParameters
  * @description
  *
- * `IA5TextParameters`. Defined in ITU-T X.420 (1999) (§7). ASN.1 DEFAULT `ia5`: that
- * value is assumed when the component is absent (do not encode the default unless
- * required).
+ * Defined in ITU-T X.420 (1999) (§7).
  *
  * ### ASN.1 Definition:
  *

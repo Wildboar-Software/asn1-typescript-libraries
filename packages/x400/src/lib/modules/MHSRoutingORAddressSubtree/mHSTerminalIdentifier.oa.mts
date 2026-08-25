@@ -23,7 +23,7 @@ import { id_oc_mhs_terminal_identifier } from '../MHSRoutingObjectIdentifiers/id
  * @summary mHSTerminalIdentifier
  * @description
  *
- * Information object `mHSTerminalIdentifier`. Defined in ITU-T X.412 (1999) (§12).
+ * Defined in ITU-T X.412 (1999) (§12).
  *
  * ### ASN.1 Definition:
  *

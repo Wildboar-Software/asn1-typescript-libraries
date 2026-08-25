@@ -20,8 +20,7 @@ import { id_as_mdse_88 } from '../MHSProtocolObjectIdentifiers/id-as-mdse-88.va.
  * @summary message_delivery_abstract_syntax_88
  * @description
  *
- * Information object `message_delivery_abstract_syntax_88`. Defined in ITU-T X.419
- * (1999) (§8).
+ * Defined in ITU-T X.419 (1999) (§8).
  *
  * ### ASN.1 Definition:
  *

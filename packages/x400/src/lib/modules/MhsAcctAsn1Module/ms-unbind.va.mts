@@ -18,7 +18,7 @@ import {
  * @summary ms_unbind
  * @description
  *
- * `ms_unbind`. Defined in ITU-T X.411 (1999) (accounting objects).
+ * Defined in ITU-T X.411 (1999) (accounting objects).
  *
  * ### ASN.1 Definition:
  *

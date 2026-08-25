@@ -30,9 +30,7 @@ import {
  * @summary EntryInformation
  * @description
  *
- * `EntryInformation`. An entry-information parameter conveys selected information from
- * an  The… See ITU-T X.413 (1999), §8.1.5. SET SIZE (1..…): omit this
- * component rather than encode an empty SET; SET order is insignificant.
+ * ; See ITU-T X.413 (1999), §8.
  *
  * ### ASN.1 Definition:
  *

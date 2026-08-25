@@ -16,7 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PerRecipientIndicators
  * @description
  *
- * `PerRecipientIndicators`. Defined in ITU-T X.411 (1999) (§12).
+ * Per-recipient transfer indicators (ITU-T X.411 (1999), §12). Either
+ * `originating-MTA-report` or `originating-MTA-non-delivery-report` (or both, for an
+ * audited-report) shall be one. At most one of `originator-report` and
+ * `originator-non-delivery-report` shall be one (both zero is no-report). Bits 5–7 shall
+ * be zero. Bits 0–2 are don't-care for Report Transfer Content. SIZE starts at 8.
  *
  * ### ASN.1 Definition:
  *
@@ -47,96 +51,170 @@ export type PerRecipientIndicators = BIT_STRING;
 
 /**
  * @summary PerRecipientIndicators_responsibility
+ * @description
+ *
+ * One: this MTA is responsible for this recipient. Zero: not responsible.
+ *
  * @constant
  */
 export const PerRecipientIndicators_responsibility: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary responsibility
+ * @description
+ *
+ * One: this MTA is responsible for this recipient. Zero: not responsible.
+ *
  * @constant
  */
 export const responsibility: number = PerRecipientIndicators_responsibility; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerRecipientIndicators_originating_MTA_report
+ * @description
+ *
+ * Request a report to the originating MTA. Together with
+ * `originating-MTA-non-delivery-report` both one requests an audited-report. At least one
+ * of these two bits shall be one.
+ *
  * @constant
  */
 export const PerRecipientIndicators_originating_MTA_report: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary originating_MTA_report
+ * @description
+ *
+ * Request a report to the originating MTA. Together with
+ * `originating-MTA-non-delivery-report` both one requests an audited-report. At least one
+ * of these two bits shall be one.
+ *
  * @constant
  */
 export const originating_MTA_report: number = PerRecipientIndicators_originating_MTA_report; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerRecipientIndicators_originating_MTA_non_delivery_report
+ * @description
+ *
+ * Request a non-delivery-report to the originating MTA. Both this and
+ * `originating-MTA-report` one requests an audited-report.
+ *
  * @constant
  */
 export const PerRecipientIndicators_originating_MTA_non_delivery_report: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary originating_MTA_non_delivery_report
+ * @description
+ *
+ * Request a non-delivery-report to the originating MTA. Both this and
+ * `originating-MTA-report` one requests an audited-report.
+ *
  * @constant
  */
 export const originating_MTA_non_delivery_report: number = PerRecipientIndicators_originating_MTA_non_delivery_report; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerRecipientIndicators_originator_report
+ * @description
+ *
+ * Request a report to the originator. Must not be set together with
+ * `originator-non-delivery-report`.
+ *
  * @constant
  */
 export const PerRecipientIndicators_originator_report: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary originator_report
+ * @description
+ *
+ * Request a report to the originator. Must not be set together with
+ * `originator-non-delivery-report`.
+ *
  * @constant
  */
 export const originator_report: number = PerRecipientIndicators_originator_report; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerRecipientIndicators_originator_non_delivery_report
+ * @description
+ *
+ * Request a non-delivery-report to the originator. Both this and `originator-report` unset
+ * requests no-report.
+ *
  * @constant
  */
 export const PerRecipientIndicators_originator_non_delivery_report: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary originator_non_delivery_report
+ * @description
+ *
+ * Request a non-delivery-report to the originator. Both this and `originator-report` unset
+ * requests no-report.
+ *
  * @constant
  */
 export const originator_non_delivery_report: number = PerRecipientIndicators_originator_non_delivery_report; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerRecipientIndicators_reserved_5
+ * @description
+ *
+ * Shall be zero.
+ *
  * @constant
  */
 export const PerRecipientIndicators_reserved_5: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary reserved_5
+ * @description
+ *
+ * Shall be zero.
+ *
  * @constant
  */
 export const reserved_5: number = PerRecipientIndicators_reserved_5; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerRecipientIndicators_reserved_6
+ * @description
+ *
+ * Shall be zero.
+ *
  * @constant
  */
 export const PerRecipientIndicators_reserved_6: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary reserved_6
+ * @description
+ *
+ * Shall be zero.
+ *
  * @constant
  */
 export const reserved_6: number = PerRecipientIndicators_reserved_6; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerRecipientIndicators_reserved_7
+ * @description
+ *
+ * Shall be zero.
+ *
  * @constant
  */
 export const PerRecipientIndicators_reserved_7: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary reserved_7
+ * @description
+ *
+ * Shall be zero.
+ *
  * @constant
  */
 export const reserved_7: number = PerRecipientIndicators_reserved_7; /* SHORT_NAMED_BIT */

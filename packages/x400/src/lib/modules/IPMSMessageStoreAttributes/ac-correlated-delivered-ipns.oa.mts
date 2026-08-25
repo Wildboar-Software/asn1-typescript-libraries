@@ -26,11 +26,11 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_correlated_delivered_ipns
  * @description
  *
- * Information object `ac_correlated_delivered_ipns`. The AC Correlated Delivered IPNs
- * attribute, which is multi-valued, identifies the delivered IPNs that have been
- * correlated with each of the AC IPM Recipients of a submitted IPM. The initial value of
- * the attribute is set for each of the AC IPM Recipients and indicates that no IPNs have
- * been received. See ITU-T X.420 (1999), §19.6.5.2.5.
+ * The AC Correlated Delivered IPNs attribute, which is multi-valued, identifies the
+ * delivered IPNs that have been correlated with each of the AC IPM Recipients of a
+ * submitted IPM. The initial value of the attribute is set for each of the AC IPM
+ * Recipients and indicates that no IPNs have been received. See ITU-T X.420 (1999),
+ * §19.6.5.2.5.
  *
  * ### ASN.1 Definition:
  *
