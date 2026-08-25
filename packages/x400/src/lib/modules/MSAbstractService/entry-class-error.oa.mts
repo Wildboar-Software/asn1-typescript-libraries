@@ -30,10 +30,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  *
  * Information object `entry_class_error`. An Entry-class-error reports a problem in an
  * attempt to address an entry-class in an abstract-operation. entry-class-error
- * ABSTRACT-ERROR ::= { PARAMETER EntryClassErrorParameter CODE err-entry-class-error }
- * 56 EntryClassErrorParameter ::= SET { entry-class [0] EntryClass, problem [1] BIT
- * STRING { unsupported-entry-class (0), entry-class-not-subscribed (1),
- * inappropriate-entry-class (2) } } The parameter has the… See ITU-T X.413 (1999),
+ *  The parameter has the… See ITU-T X.413 (1999),
  * §9.17.
  *
  * ### ASN.1 Definition:

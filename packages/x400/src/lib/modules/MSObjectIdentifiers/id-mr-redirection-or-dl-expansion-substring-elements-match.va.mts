@@ -20,8 +20,7 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * presented value of element substrings is a matching subset of the elements present in
  * the OR-address-and-optional-directory-name component of some value of an attribute of
  * type Redirection-history or DL-expansion-history.
- * redirectionOrDLExpansionSubstringElementsMatch MATCHING-RULE ::= { SYNTAX
- * ORAddressAndOptionalDirectoryName ID… See ITU-T X.413 (1999), §12.4.10.
+ *  See ITU-T X.413 (1999), §12.4.10.
  *
  * ### ASN.1 Definition:
  *

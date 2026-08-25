@@ -33,11 +33,7 @@ import {
  * @description
  *
  * `SummarizeResult`. Should the request succeed, the summarize-result will be returned.
- * SummarizeResult ::= SET { next [0] SequenceNumber OPTIONAL, count [1] INTEGER
- * (0..ub-messages) -- of the entries selected--, span [2] Span OPTIONAL -- of the
- * entries selected, -- omitted if count is zero--, summaries [3] SEQUENCE SIZE
- * (1..ub-summaries) OF Summary OPTIONAL, -- 1994 extension --
- * summarize-result-extensions [4] MSExtensions OPTIONAL… See ITU-T X.413 (1999),
+ *  See ITU-T X.413 (1999),
  * §8.2.1.2. SEQUENCE SIZE (1..…): omit this component rather than encode an empty
  * SEQUENCE.
  *

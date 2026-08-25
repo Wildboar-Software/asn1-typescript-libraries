@@ -30,10 +30,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  *
  * Information object `auto_action_request_error`. An Auto-action-request-error reports a
  * problem related to the registration of an auto-action. auto-action-request-error
- * ABSTRACT-ERROR ::= { PARAMETER SET { problems [0] SET SIZE (1..ub-auto-registrations)
- * OF SET { problem [0] AutoActionRequestProblem, type [1] AUTO-ACTION.&id
- * ({AutoActionTable})} } CODE err-auto-action-request-error } AutoActionRequestProblem
- * ::= INTEGER { unavailable-auto-action-type (0),… See ITU-T X.413 (1999), §9.3. SET
+ *  See ITU-T X.413 (1999), §9.3. SET
  * SIZE (1..…): omit this component rather than encode an empty SET; SET order is
  * insignificant.
  *

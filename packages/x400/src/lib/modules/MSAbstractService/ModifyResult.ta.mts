@@ -26,8 +26,7 @@ import {
  * @description
  *
  * `ModifyResult`. Should the request succeed, the modify-result shall be returned.
- * ModifyResult ::= SET { entries-modified [0] SEQUENCE SIZE(1..ub-messages) OF
- * SequenceNumber OPTIONAL, modify-result-extensions [1] MSExtensions OPTIONAL } The
+ *  The
  * parameters of modify-result have the following meaning: a) Entries-modified (C): This
  * identifies the entries selected for modification. See ITU-T X.413 (1999), §8.2.7.2.
  * SEQUENCE SIZE (1..…): omit this component rather than encode an empty SEQUENCE.

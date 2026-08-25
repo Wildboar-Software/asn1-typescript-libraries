@@ -17,11 +17,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * OBJECT IDENTIFIER `id_att_originally_intended_recipient_name`. This general-attribute
  * contains the originally-intended-recipient-name argument of the Message-delivery
- * abstract- operation, and is present if the message has been redirected. See
- * 8.3.1.1.1.4 of WITH ATTRIBUTE-SYNTAX ORName, EQUALITY MATCHING-RULE oRNameMatch, OTHER
- * MATCHING-RULES {oRNameElementsMatch | oRNameSubstringElementsMatch |
- * oRNameSingleElementMatch, ...}, NUMERATION single-valued, ID… See ITU-T X.413 (1999),
- * §11.2.49.
+ * abstract- operation, and is present if the message has been redirected.
+ * See ITU-T X.413 (1999), §11.2.49.
  *
  * ### ASN.1 Definition:
  *

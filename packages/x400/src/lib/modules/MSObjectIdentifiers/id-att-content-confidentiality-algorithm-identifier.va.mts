@@ -15,13 +15,10 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_content_confidentiality_algorithm_identifier
  * @description
  *
- * OBJECT IDENTIFIER `id_att_content_confidentiality_algorithm_identifier`. This
+ * `OBJECT IDENTIFIER` `id_att_content_confidentiality_algorithm_identifier`. This
  * general-attribute contains the content-confidentiality-algorithm-identifier argument
- * of the Message-submission and Message-delivery abstract-operations. See 8.2.1.1.1.27
- * of WITH ATTRIBUTE-SYNTAX AlgorithmIdentifier, NUMERATION single-valued, ID
- * id-att-content-confidentiality-algorithm-identifier } 11.2.13 Content-correlator This
- * general-attribute contains the content-correlator argument of the… See ITU-T X.413
- * (1999), §11.2.12.
+ * of the Message-submission and Message-delivery abstract-operations.
+ * See ITU-T X.413 (1999), §11.2.12.
  *
  * ### ASN.1 Definition:
  *

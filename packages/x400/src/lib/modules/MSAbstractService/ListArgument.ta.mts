@@ -36,12 +36,7 @@ import {
  * @summary ListArgument
  * @description
  *
- * `ListArgument`. ListArgument ::= SET { entry-class [0] EntryClass DEFAULT delivery,
- * selector [1] Selector, requested-attributes [3] EntryInformationSelection OPTIONAL, --
- * 1994 extension -- list-extensions [4] MSExtensions OPTIONAL } 36 The parameters of
- * list-argument have the following meaning: a) Entry-class (O): This specifies which
- * entry-class is addressed by the abstract-operation (see 6.3.1). b) Selector (M): This
- * is a set… See ITU-T X.413 (1999), §8.2.2.1. ASN.1 DEFAULT `delivery`: that value is
+ * `ListArgument`.  See ITU-T X.413 (1999), §8.2.2.1. ASN.1 DEFAULT `delivery`: that value is
  * assumed when the component is absent (do not encode the default unless required).
  *
  * ### ASN.1 Definition:

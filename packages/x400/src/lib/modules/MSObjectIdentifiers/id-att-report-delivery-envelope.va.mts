@@ -17,10 +17,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * OBJECT IDENTIFIER `id_att_report_delivery_envelope`. This general-attribute contains
  * the report-delivery-envelope component of the argument of the Report-delivery
- * abstract- operation. See Figure 2 (Part 9) of WITH ATTRIBUTE-SYNTAX
- * ReportDeliveryEnvelope, NUMERATION single-valued, ID id-att-report-delivery-envelope }
- * 11.2.71 Reporting-DL-name This general-attribute contains the reporting-DL-name
- * argument of the Report-delivery abstract-operation. See ITU-T X.413 (1999), §11.2.70.
+ * abstract- operation.
+ * See ITU-T X.413 (1999), §11.2.70.
  *
  * ### ASN.1 Definition:
  *

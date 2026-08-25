@@ -29,11 +29,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @description
  *
  * Information object `message_group_error`. A Message-group-error reports a problem in
- * the use of a message-group-name. message-group-error ABSTRACT-ERROR ::= { PARAMETER
- * MessageGroupErrorParameter CODE err-message-group-error } MessageGroupErrorParameter
- * ::= SET { problem [0] MessageGroupProblem, name [1] MessageGroupName }
- * MessageGroupProblem ::= INTEGER { name-not-registered (0), name-already-registered
- * (1), parent-not-registered (2), group-not-empty… See ITU-T X.413 (1999), §9.11.
+ * the use of a message-group-name.  See ITU-T X.413 (1999), §9.11.
  *
  * ### ASN.1 Definition:
  *

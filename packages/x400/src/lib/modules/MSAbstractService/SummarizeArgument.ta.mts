@@ -37,10 +37,7 @@ import {
  * @summary SummarizeArgument
  * @description
  *
- * `SummarizeArgument`. SummarizeArgument ::= SET { entry-class [0] EntryClass DEFAULT
- * delivery, selector [1] Selector, summary-requests [2] SEQUENCE SIZE (1..ub-summaries)
- * OF ATTRIBUTE.&id ({AttributeTable}) OPTIONAL -- absent if no summaries are
- * requested--, -- 1994 extension -- summarize-extensions [3] MSExtensions OPTIONAL } The
+ * `SummarizeArgument`.  The
  * parameters of summarize-argument have the following meaning: a) Entry-class (O): This
  * specifies which… See ITU-T X.413 (1999), §8.2.1.1. SEQUENCE SIZE (1..…): omit this
  * component rather than encode an empty SEQUENCE. ASN.1 DEFAULT `delivery`: that value

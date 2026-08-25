@@ -15,12 +15,6 @@ import { id_mr } from '../IPMSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_or_descriptor
  * @description
  *
- * OBJECT IDENTIFIER `id_mr_or_descriptor`. An OR-descriptor is an information item that
- * identifies a user or DL. ORDescriptor ::= SET { formal-name ORName OPTIONAL,
- * free-form-name [0] FreeFormName OPTIONAL, telephone-number [1] TelephoneNumber
- * OPTIONAL} An OR-descriptor has the following components: a) Formal-name (C):
- * Identifies the user or DL in question. See ITU-T X.420 (1999), §7.1.3.
- *
  * ### ASN.1 Definition:
  *
  * ```asn1

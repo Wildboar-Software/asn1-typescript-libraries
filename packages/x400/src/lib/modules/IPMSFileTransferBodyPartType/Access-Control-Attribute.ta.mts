@@ -21,8 +21,7 @@ import {
  * @description
  *
  * `Access_Control_Attribute`. The access control attribute defines conditions under
- * which access to the file is valid. Access-Control-Attribute ::= CHOICE {
- * no-value-available [0] NULL, -- Indicates partial support of this attribute. See ITU-T
+ * which access to the file is See ITU-T
  * X.420 (1999), §7.4.12.5.8. SET OF: order is insignificant; duplicates are typically
  * meaningless.
  *

@@ -40,12 +40,7 @@ import {
  * @summary CommonFields
  * @description
  *
- * `CommonFields`. The common fields are defined and described below. CommonFields ::=
- * SET { subject-ipm SubjectIPMField, ipn-originator [1] IPNOriginatorField OPTIONAL,
- * ipm-intended-recipient [2] IPMIntendedRecipientField OPTIONAL, conversion-eits
- * ConversionEITsField OPTIONAL, notification-extensions [3] NotificationExtensionsField
- * OPTIONAL} 8.1.1 Subject IPM The Subject IPM common field (M) contains the value of the
- * This IPM… See ITU-T X.420 (1999), §8.1.
+ * `CommonFields`. The common fields are defined and described  See ITU-T X.420 (1999), §8.1.
  *
  * ### ASN.1 Definition:
  *

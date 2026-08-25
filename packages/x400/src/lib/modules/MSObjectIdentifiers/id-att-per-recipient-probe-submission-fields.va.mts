@@ -17,11 +17,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * OBJECT IDENTIFIER `id_att_per_recipient_probe_submission_fields`. This
  * general-attribute, which is multi-valued, contains the per-recipient-fields component
- * of the Probe-submission- envelope. See Figure 2 (Part 8) of WITH ATTRIBUTE-SYNTAX
- * PerRecipientProbeSubmissionFields, NUMERATION multi-valued, ID
- * id-att-per-recipient-probe-submission-fields } 11.2.60
- * Per-recipient-report-delivery-fields This general-attribute, which is multi-valued,
- * contains the per-recipient-fields… See ITU-T X.413 (1999), §11.2.59.
+ * of the Probe-submission- envelope.
+ * See ITU-T X.413 (1999), §11.2.59.
  *
  * ### ASN.1 Definition:
  *

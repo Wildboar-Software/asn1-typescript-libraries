@@ -38,11 +38,7 @@ import {
  * @description
  *
  * `ReceiptFields`. The non-receipt fields are defined and described below.
- * NonReceiptFields ::= SET { non-receipt-reason [0] NonReceiptReasonField,
- * discard-reason [1] DiscardReasonField OPTIONAL, auto-forward-comment [2]
- * AutoForwardCommentField OPTIONAL, returned-ipm [3] ReturnedIPMField OPTIONAL,
- * nrn-extensions [4] NRNExtensionsField OPTIONAL} 8.2.1 Non-receipt Reason The
- * Non-receipt Reason non-receipt field (M) indicates why the… See ITU-T X.420 (1999),
+ *  See ITU-T X.420 (1999),
  * §8.2. ASN.1 DEFAULT `manual`: that value is assumed when the component is absent (do
  * not encode the default unless required).
  *

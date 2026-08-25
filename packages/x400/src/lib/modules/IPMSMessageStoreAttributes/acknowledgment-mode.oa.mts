@@ -29,8 +29,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @description
  *
  * Information object `acknowledgment_mode`. The Acknowledgment Mode receipt field (D
- * manual) identifies the manner in which the RN was originated. AcknowledgmentModeField
- * ::= ENUMERATED { manual (0), automatic(1)} This field may assume any one of the
+ * manual) identifies the manner in which the RN was originated.
+ * This field may assume any one of the
  * following values: a) manual: The RN was originated by means of the Originate RN
  * abstract operation. See ITU-T X.420 (1999), §8.3.2.
  *

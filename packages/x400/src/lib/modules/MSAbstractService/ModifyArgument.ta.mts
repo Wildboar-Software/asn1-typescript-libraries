@@ -36,11 +36,7 @@ import {
  * @summary ModifyArgument
  * @description
  *
- * `ModifyArgument`. ModifyArgument ::= SET { entry-class [0] EntryClass DEFAULT
- * delivery, entries CHOICE { selector [1] Selector, specific-entries [2] SEQUENCE
- * SIZE(1..ub-messages) OF SequenceNumber }, modifications [3] SEQUENCE
- * SIZE(1..ub-modifications) OF EntryModification, modify-extensions [4] MSExtensions
- * OPTIONAL } The parameters of modify-argument have the following meaning: a)
+ * `ModifyArgument`.  The parameters of modify-argument have the following meaning: a)
  * Entry-class (O): This specifies the entry-class… See ITU-T X.413 (1999), §8.2.7.1.
  * SEQUENCE SIZE (1..…): omit this component rather than encode an empty SEQUENCE. ASN.1
  * DEFAULT `delivery`: that value is assumed when the component is absent (do not encode

@@ -17,10 +17,7 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  *
  * OBJECT IDENTIFIER `id_nat_discard_reason`. The Discard Reason non-receipt field (C)
  * indicates why the subject IPM was discarded (subsequent to its delivery to the NRN's
- * originator and prior to its receipt). [ ITU-T version: DiscardReasonField ::=
- * ENUMERATED { ipm-expired (0), ipm-obsoleted (1), user-subscription-terminated (2),
- * not-used (3) } | DiscardReasonField ::= ENUMERATED { ipm-expired (0), ipm-obsoleted
- * (1), user-subscription-terminated (2), -- The… See ITU-T X.420 (1999), §8.2.2.
+ * originator and prior to its receipt).  See ITU-T X.420 (1999), §8.2.2.
  *
  * ### ASN.1 Definition:
  *

@@ -32,11 +32,7 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  *
  * Information object `mt_other_recipient_names`. This general-attribute, which is
  * multi-valued, contains the other-recipient-names argument of the Message-delivery
- * abstract-operation. See 8.3.1.1.1.6 of WITH ATTRIBUTE-SYNTAX ORName, EQUALITY
- * MATCHING-RULE oRNameMatch, OTHER MATCHING-RULES {oRNameElementsMatch |
- * oRNameSubstringElementsMatch | oRNameSingleElementMatch, ...}, NUMERATION
- * multi-valued, ID id-att-other-recipient-names } 11.2.56 Parent-sequence-number… See
- * ITU-T X.413 (1999), §11.2.55.
+ * abstract-operation. See ITU-T X.413 (1999), §11.2.55.
  *
  * ### ASN.1 Definition:
  *

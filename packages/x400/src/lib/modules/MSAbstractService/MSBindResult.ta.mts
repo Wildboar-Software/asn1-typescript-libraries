@@ -50,12 +50,7 @@ import {
  * @summary MSBindResult
  * @description
  *
- * `MSBindResult`. MSBindResult ::= SET { responder-credentials [2] ResponderCredentials,
- * available-auto-actions [3] SET SIZE (1..ub-auto-actions) OF AUTO-ACTION.&id
- * ({AutoActionTable}) OPTIONAL, available-attribute-types [4] SET SIZE
- * (1..ub-attributes-supported) OF ATTRIBUTE.&id ({AttributeTable}) OPTIONAL,
- * alert-indication [5] BOOLEAN DEFAULT FALSE, content-types-supported [6] SET SIZE
- * (1..ub-content-types) OF OBJECT IDENTIFIER… See ITU-T X.413 (1999), §7.1.2. SET SIZE
+ * `MSBindResult`.  See ITU-T X.413 (1999), §7.1.2. SET SIZE
  * (1..…): omit this component rather than encode an empty SET; SET order is
  * insignificant. ASN.1 DEFAULT `FALSE`, `FALSE`: that value is assumed when the
  * component is absent (do not encode the default unless required).

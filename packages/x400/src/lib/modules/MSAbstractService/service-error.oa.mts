@@ -29,11 +29,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @description
  *
  * Information object `service_error`. A Service-error reports an error related to the
- * provision of the service. service-error ABSTRACT-ERROR ::= { PARAMETER
- * ServiceErrorParameter CODE err-service-error } ServiceErrorParameter ::= SET { problem
- * [0] ServiceProblem, -- 1994 extension -- supplementary-information [1] GeneralString
- * (SIZE(1..ub-supplementary-info-length)) OPTIONAL } ServiceProblem ::= INTEGER { busy
- * (0), unavailable (1),… See ITU-T X.413 (1999), §9.10.
+ * provision of the service.  See ITU-T X.413 (1999), §9.10.
  *
  * ### ASN.1 Definition:
  *

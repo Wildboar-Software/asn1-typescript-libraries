@@ -21,8 +21,7 @@ import {
  * @summary AlertArgument
  * @description
  *
- * `AlertArgument`. AlertArgument ::= SET { alert-registration-identifier [0] INTEGER
- * (1..ub-auto-actions), new-entry [2] EntryInformation OPTIONAL } The parameters of the
+ * `AlertArgument`.  The parameters of the
  * alert-argument have the following meaning: a) Alert-registration-identifier (M):
  * Indicates the registration-identifier of the registered Auto-alert auto- action which
  * caused the alert (see 6.5.2 and 13.1). b) New-entry (O): This conveys the information

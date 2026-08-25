@@ -30,10 +30,8 @@ import {
  * @summary ListResult
  * @description
  *
- * `ListResult`. Should the request succeed, the list-result will be returned. ListResult
- * ::= SET { next [0] SequenceNumber OPTIONAL, requested [1] SEQUENCE SIZE
- * (1..ub-messages) OF EntryInformation OPTIONAL --omitted if none found--, -- 1994
- * extension -- list-result-extensions [2] MSExtensions OPTIONAL } The parameters of
+ * `ListResult`. Should the request succeed, the list-result will be returned.
+ * The parameters of
  * list-result have the following meaning: a) Next (C): This is returned in the case
  * where the number of… See ITU-T X.413 (1999), §8.2.2.2. SEQUENCE SIZE (1..…): omit this
  * component rather than encode an empty SEQUENCE.

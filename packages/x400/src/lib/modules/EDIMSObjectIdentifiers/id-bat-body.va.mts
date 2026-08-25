@@ -16,10 +16,10 @@ import { id_bat } from '../EDIMSObjectIdentifiers/id-bat.va.mjs';
  * @description
  *
  * OBJECT IDENTIFIER `id_bat_body`. The Body attribute is the (entire) Body of an EDIM.
- * body ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX Body, NUMERATION single-valued, ID
- * id-bat-body } An MS that supports this attribute shall maintain it for an information
+ * 
+ * An MS that supports this attribute shall maintain it for an information
  * object that it holds if, and only if, that object is a message whose content is an
- * EDIM. See ITU-T X.435 (1999), §18.8.4.1.
+ * EDIM.
  *
  * ### ASN.1 Definition:
  *

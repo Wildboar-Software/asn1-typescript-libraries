@@ -16,11 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @description
  *
  * `IPMEntryType`. The IPM Entry Type attribute identifies an information object's type.
- * ipm-entry-type ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX IPMEntryType, EQUALITY
- * MATCHING-RULE integerMatch, NUMERATION single-valued, ID id-sat-ipm-entry-type }
- * IPMEntryType ::= ENUMERATED { ipm (0), rn (1), nrn (2), on (3)} This attribute may
- * assume any one of the following values: a) ipm: The information object is an IPM. See
- * ITU-T X.420 (1999), §19.6.1.1. ENUMERATED value `0` is a named variant, not a sentinel
+ * 
+ * ENUMERATED value `0` is a named variant, not a sentinel
  * for 'absent' or 'unspecified'.
  *
  * ### ASN.1 Definition:

@@ -22,9 +22,7 @@ import {
  * `ContentsTypeParameter`. The contents type parameter indicates the abstract data types
  * of the contents of the file and the structuring information which is necessary if the
  * complete file structure and semantics are to be maintained during the transfer of the
- * file. ContentsTypeParameter ::= Contents-Type-Attribute Contents-Type-Attribute ::=
- * CHOICE { document-type [0] SEQUENCE { document-type-name Document-Type-Name, parameter
- * [0]… See ITU-T X.420 (1999), §7.4.12.2.
+ *  See ITU-T X.420 (1999), §7.4.12.2.
  *
  * ### ASN.1 Definition:
  *

@@ -29,8 +29,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @description
  *
  * Information object `attribute_error`. An Attribute-error reports an attribute related
- * problem. attribute-error ABSTRACT-ERROR ::= { PARAMETER SET { problems [0] SET SIZE
- * (1.. See ITU-T X.413 (1999), §9.2. SET SIZE (1..…): omit this component rather than
+ * problem. See ITU-T X.413 (1999), §9.2. SET SIZE (1..…): omit this component rather than
  * encode an empty SET; SET order is insignificant.
  *
  * ### ASN.1 Definition:

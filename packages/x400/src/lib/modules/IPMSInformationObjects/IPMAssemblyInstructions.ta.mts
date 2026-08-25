@@ -22,9 +22,7 @@ import {
  * `IPMAssemblyInstructions`. This IPM submission option is used to request the
  * incorporation of stored IPMs and stored body parts in a submitted IPM. The
  * IPM-assembly-instructions- information object is defined as follows:
- * ipm-assembly-instructions MS-EXTENSION ::= { IPMAssemblyInstructions IDENTIFIED BY
- * id-mst-assembly-instructions } IPMAssemblyInstructions ::= SET { assembly-instructions
- * [0] BodyPartReferences } BodyPartReferences ::=… See ITU-T X.420 (1999), §19.5.3.1.
+ *  See ITU-T X.420 (1999), §19.5.3.1.
  *
  * ### ASN.1 Definition:
  *

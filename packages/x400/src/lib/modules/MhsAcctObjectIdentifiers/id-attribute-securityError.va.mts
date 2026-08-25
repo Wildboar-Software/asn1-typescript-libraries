@@ -15,12 +15,6 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_securityError
  * @description
  *
- * OBJECT IDENTIFIER `id_attribute_securityError`. The Security-error abstract-error
- * reports that the requested abstract-operation could not be provided by the MTS or
- * MTS-user because it would violate the security-policy in force. The Security-error
- * abstract-error has the following parameters: security-problem: an identifier for the
- * cause of the violation of the security-policy. See ITU-T X.411 (1999), §8.2.2.8.
- *
  * ### ASN.1 Definition:
  *
  * ```asn1

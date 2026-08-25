@@ -30,9 +30,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  *
  * Information object `ms_extension_error`. An MS-extension-error reports a problem
  * concerning an extension parameter presented in the argument of an abstract- operation.
- * ms-extension-error ABSTRACT-ERROR ::= { PARAMETER MSExtensionErrorParameter CODE
- * err-ms-extension-error } MSExtensionErrorParameter ::= CHOICE { ms-extension-problem
- * [0] MSExtensionItem, unknown-ms-extension [1] OBJECT IDENTIFIER } The parameter has
+ *  The parameter has
  * the following meaning: a)… See ITU-T X.413 (1999), §9.12.
  *
  * ### ASN.1 Definition:

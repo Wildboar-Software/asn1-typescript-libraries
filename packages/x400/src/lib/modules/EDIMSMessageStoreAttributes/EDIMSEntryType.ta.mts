@@ -16,11 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @description
  *
  * `EDIMSEntryType`. The EDIMS Entry Type attribute identifies an information object’s
- * type. edims-entry-type ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX EDIMSEntryType, EQUALITY
- * MATCHING-RULE integerMatch, NUMERATION single-valued, ID id-sat-edims-entry-type }
- * EDIMSEntryType ::= ENUMERATED { edim (0), pn (1), nn (2), fn (3) } Attribute Single/
- * multi valued Support level by EDI-MS Presence in delivered EDIM Presence in submitted
- * EDIM… See ITU-T X.435 (1999), §18.8.1.1. ENUMERATED value `0` is a named variant, not
+ * type.
+ * 
+ * ENUMERATED value `0` is a named variant, not
  * a sentinel for 'absent' or 'unspecified'.
  *
  * ### ASN.1 Definition:

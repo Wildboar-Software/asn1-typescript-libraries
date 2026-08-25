@@ -17,11 +17,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  *
  * OBJECT IDENTIFIER `id_att_per_recipient_report_delivery_fields`. This
  * general-attribute, which is multi-valued, contains the per-recipient-fields component
- * of the Report-delivery- envelope. See Figure 2 (Part 9) of WITH ATTRIBUTE-SYNTAX
- * PerRecipientReportDeliveryFields, NUMERATION multi-valued, ID
- * id-att-per-recipient-report-delivery-fields } 11.2.61 Priority This general-attribute
- * contains the priority argument of the Message-submission and Message-delivery
- * abstract- operations. See ITU-T X.413 (1999), §11.2.60.
+ * of the Report-delivery- envelope.
+ * See ITU-T X.413 (1999), §11.2.60.
  *
  * ### ASN.1 Definition:
  *

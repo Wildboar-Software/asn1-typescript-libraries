@@ -32,9 +32,7 @@ import {
  *
  * `CommonSubmissionResults`. The common-submission-results parameter contains
  * information common to the results of the MS-message-submission and MS-probe-submission
- * abstract-operations. CommonSubmissionResults ::= SET { created-entry [0]
- * SequenceNumber OPTIONAL, auto-action-error-indication [1] AutoActionErrorIndication
- * OPTIONAL, ms-submission-result-extensions [2] MSExtensions OPTIONAL } The components
+ *  The components
  * of common-submission-results have the… See ITU-T X.413 (1999), §8.1.7.
  *
  * ### ASN.1 Definition:

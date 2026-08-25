@@ -18,8 +18,7 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * OBJECT IDENTIFIER `id_mr_ms_single_substring_match`. The MS-single-substring-match
  * determines whether a presented string is a single substring of some value of an
  * attribute of type MS-string without regard to the case (upper or lower) of the
- * strings. mSSingleSubstringMatch MATCHING-RULE ::= { SYNTAX MSString
- * {ub-msstring-match} ID id-mr-ms-single-substring-match } The rule is identical to the
+ * strings.  The rule is identical to the
  * MS-substrings-match rule, except that the presented value is treated as… See ITU-T
  * X.413 (1999), §12.2.4.
  *

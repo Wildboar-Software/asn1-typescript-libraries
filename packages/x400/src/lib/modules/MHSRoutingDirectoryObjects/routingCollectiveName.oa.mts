@@ -23,9 +23,8 @@ import { id_at_routing_collective_name } from '../MHSRoutingObjectIdentifiers/id
  * @description
  *
  * Information object `routingCollectiveName`. The Routing Collective Name attribute type
- * specifies an identifier for Routing Collective entries. routingCollectiveName
- * ATTRIBUTE ::= { SUBTYPE OF commonName -- see ITU-T X.520 | SINGLE VALUE TRUE ID
- * id-at-routing-collective-name } NOTE – This attribute is used, rather than Common
+ * specifies an identifier for Routing Collective entries.
+ * NOTE – This attribute is used, rather than Common
  * Name, because it makes possible an optimization in the Routing-decision procedure. See
  * ITU-T X.412 (1999), §7.2.1.1.
  *

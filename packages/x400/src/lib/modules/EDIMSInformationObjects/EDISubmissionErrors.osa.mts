@@ -15,14 +15,6 @@ import { invalid_assembly_instructions } from '../EDIMSInformationObjects/invali
  * @summary EDISubmissionErrors
  * @description
  *
- * Information object set `EDISubmissionErrors`. When an EDI-MS performs the
- * MS-message-submission abstract-operation of EDISubmissionErrors EDIM-EXTENSION ::= {
- * invalid-assembly-instructions, ... -- For future extension additions -- } The
- * invalid-assembly-instructions error shall be reported where the assembly-instructions
- * component of EDI-submission-options is present, but the message submitted is not an
- * EDIM, or the assembly-instructions component contains a… See ITU-T X.435 (1999),
- * §18.6.3.
- *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -29,9 +29,7 @@ import { id_at_connection_type } from '../MHSRoutingObjectIdentifiers/id-at-conn
  * Information object `connectionType`. The Connection Type attribute type indicates
  * details of connection information specific to a connection-group: the
  * application-context, profiles, use of A-ASSOCIATE, use of network address, and the
- * authentication method. connectionType ATTRIBUTE ::= { WITH SYNTAX
- * ConnectionInformation SINGLE VALUE TRUE ID id-at-connection-type }
- * ConnectionInformation ::= SET { application-context [0] OBJECT IDENTIFIER DEFAULT… See
+ * authentication method.  See
  * ITU-T X.412 (1999), §7.2.3.2.
  *
  * ### ASN.1 Definition:

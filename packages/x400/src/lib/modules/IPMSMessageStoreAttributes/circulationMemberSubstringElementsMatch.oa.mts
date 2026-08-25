@@ -24,8 +24,7 @@ import { id_mr_circulation_member_substring_elements } from '../IPMSObjectIdenti
  * Circulation-member-substring-elements-match determines whether a presented value is a
  * subset of the elements present in some value of an attribute of type Circulation
  * Member, where each presented string value is a substring of the corresponding stored
- * value. circulationMemberSubstringElementsMatch MATCHING-RULE ::= { SYNTAX
- * CirculationMember ID id-mr-circulation-member-substring-elements } 92 The rule is… See
+ * value.  See
  * ITU-T X.420 (1999), §19.7.13.
  *
  * ### ASN.1 Definition:

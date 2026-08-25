@@ -25,7 +25,7 @@ import { id_mr_redirection_or_dl_expansion_single_element_match } from '../MSObj
  * string and some element present in the OR-address-and-optional-directory-name
  * component of a value of an attribute of type Redirection-history or
  * DL-expansion-history match for equality. redirectionOrDLExpansionSingleElementMatch
- * MATCHING-RULE ::= { SYNTAX MSString {ub-msstring-match} ID… See ITU-T X.413 (1999),
+ *  See ITU-T X.413 (1999),
  * §12.4.11.
  *
  * ### ASN.1 Definition:

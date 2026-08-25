@@ -24,8 +24,7 @@ import { id_mr_redirection_or_dl_expansion_match } from '../MSObjectIdentifiers/
  * Redirection-or-DL-expansion-match rule compares for equality a presented value with
  * the OR-address-and- optional-directory-name component of attribute-values of type
  * Redirection-history or DL-expansion-history. redirectionOrDLExpansionMatch
- * MATCHING-RULE ::= { SYNTAX ORAddressAndOptionalDirectoryName ID
- * id-mr-redirection-or-dl-expansion-match } The rule returns true if, and only if, the
+ *  The rule returns true if, and only if, the
  * presented value and at… See ITU-T X.413 (1999), §12.4.8.
  *
  * ### ASN.1 Definition:

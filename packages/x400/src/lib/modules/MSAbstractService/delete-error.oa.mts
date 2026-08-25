@@ -29,11 +29,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @description
  *
  * Information object `delete_error`. A Delete-error reports a problem in an attempt to
- * delete one or more entries of an entry-class. delete-error ABSTRACT-ERROR ::= {
- * PARAMETER SET { problems [0] SET SIZE (1..ub-messages) OF SET { problem [0]
- * DeleteProblem, sequence-number [1] SequenceNumber}, -- 1994 extension --
- * entries-deleted [1] SET SIZE (1..ub-messages) OF SequenceNumber OPTIONAL } CODE
- * err-delete-error } DeleteProblem ::= INTEGER {… See ITU-T X.413 (1999), §9.4. SET SIZE
+ * delete one or more entries of an entry-class.  See ITU-T X.413 (1999), §9.4. SET SIZE
  * (1..…): omit this component rather than encode an empty SET; SET order is
  * insignificant.
  *

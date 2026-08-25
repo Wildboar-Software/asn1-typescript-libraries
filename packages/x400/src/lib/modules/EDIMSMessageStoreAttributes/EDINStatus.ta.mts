@@ -18,11 +18,6 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * `EDINStatus`. The AC Submitted EDIN Status attribute indicates whether an EDIN for a
  * delivered message was requested and whether one has been sent.
- * ac-submitted-edin-status ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX EDINStatus, EQUALITY
- * MATCHING-RULE bitStringMatch, NUMERATION single-valued, ID
- * id-cat-submitted-edin-status } For each of positive notification, negative
- * notification, and forwarded notification, the attribute… See ITU-T X.435 (1999),
- * §18.8.6.3.1.
  *
  * ### ASN.1 Definition:
  *

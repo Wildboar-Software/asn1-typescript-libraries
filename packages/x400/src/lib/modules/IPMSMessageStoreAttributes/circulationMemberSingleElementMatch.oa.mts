@@ -24,8 +24,7 @@ import { id_mr_circulation_member_single_element } from '../IPMSObjectIdentifier
  * Circulation-member-single-element-match rule determines whether a presented string and
  * some element present in the circulation-recipient component of a value of an attribute
  * of type Circulation Member match for equality. circulationMemberSingleElementMatch
- * MATCHING-RULE ::= { SYNTAX MSString {ub-msstring-match} ID
- * id-mr-circulation-member-single-element } The rule is identical to the… See ITU-T
+ *  The rule is identical to the… See ITU-T
  * X.420 (1999), §19.7.14.
  *
  * ### ASN.1 Definition:

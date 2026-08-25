@@ -28,10 +28,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  *
  * Information object `mt_report_delivery_envelope`. This general-attribute contains the
  * report-delivery-envelope component of the argument of the Report-delivery abstract-
- * operation. See Figure 2 (Part 9) of WITH ATTRIBUTE-SYNTAX ReportDeliveryEnvelope,
- * NUMERATION single-valued, ID id-att-report-delivery-envelope } 11.2.71
- * Reporting-DL-name This general-attribute contains the reporting-DL-name argument of
- * the Report-delivery abstract-operation. See ITU-T X.413 (1999), §11.2.70.
+ * operation. See ITU-T X.413 (1999), §11.2.70.
  *
  * ### ASN.1 Definition:
  *

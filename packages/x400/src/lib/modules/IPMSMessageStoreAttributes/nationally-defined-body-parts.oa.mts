@@ -28,10 +28,9 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  *
  * Information object `nationally_defined_body_parts`. The IPM Body Part Table
  * information object set has as its members the types of body part that may appear in
- * the Body of an IPM: IPMBodyPartTable EXTENDED-BODY-PART-TYPE ::= { StandardBodyParts |
- * ApplicationSpecificBodyParts } The Standard Body Parts information object set has as
+ * the Body of an IPM:  The Standard Body Parts information object set has as
  * its members the types of body part defined in this Specification: StandardBodyParts
- * EXTENDED-BODY-PART-TYPE ::= { ia5-text-body-part |… See ITU-T X.420 (1999), §7.3.
+ *  See ITU-T X.420 (1999), §7.3.
  *
  * ### ASN.1 Definition:
  *

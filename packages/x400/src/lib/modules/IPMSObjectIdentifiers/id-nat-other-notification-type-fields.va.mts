@@ -16,9 +16,7 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @description
  *
  * OBJECT IDENTIFIER `id_nat_other_notification_type_fields`. The other notification type
- * fields are defined and described below. OtherNotificationTypeFields ::= SET OF
- * IPMSExtension {{ OtherNotifications }} OtherNotifications IPMS-EXTENSION ::= {
- * AdviceNotifications | PrivateIPMSExtensions, ... See ITU-T X.420 (1999), §8.4.
+ * fields are defined and described See ITU-T X.420 (1999), §8.4.
  *
  * ### ASN.1 Definition:
  *

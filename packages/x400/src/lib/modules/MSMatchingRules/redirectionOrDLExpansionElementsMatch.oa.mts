@@ -24,9 +24,7 @@ import { id_mr_redirection_or_dl_expansion_elements_match } from '../MSObjectIde
  * Redirection-or-DL-expansion-elements-match rule determines whether a presented value
  * is a subset of the elements present in the OR-address-and-optional-directory-name
  * component of some value of an attribute of type Redirection-history or
- * DL-expansion-history. redirectionOrDLExpansionElementsMatch MATCHING-RULE ::= { SYNTAX
- * ORAddressAndOptionalDirectoryName ID id-mr-redirection-or-dl-expansion-elements-match
- * }… See ITU-T X.413 (1999), §12.4.9.
+ * DL-expansion-history.  See ITU-T X.413 (1999), §12.4.9.
  *
  * ### ASN.1 Definition:
  *

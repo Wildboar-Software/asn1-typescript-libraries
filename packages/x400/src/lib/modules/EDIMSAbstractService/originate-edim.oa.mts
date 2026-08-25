@@ -34,11 +34,7 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @description
  *
  * Information object `originate_edim`. The Originate EDIM abstract operation originates
- * a message whose content is an EDIM. originate-edim ABSTRACT-OPERATION ::= { ARGUMENT
- * SET { envelope [0] MessageSubmissionEnvelope, content [1] EDIM } RESULT SET {
- * submission-identifier [0] MessageSubmissionIdentifier, submission-time [1]
- * MessageSubmissionTime } ERRORS { recipient-improperly-specified } } This abstract
- * operation has the following arguments: a)… See ITU-T X.435 (1999), §12.1.2.
+ * a message whose content is an EDIM.
  *
  * ### ASN.1 Definition:
  *

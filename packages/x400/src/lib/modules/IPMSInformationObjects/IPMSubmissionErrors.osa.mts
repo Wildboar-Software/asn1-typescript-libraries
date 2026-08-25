@@ -16,13 +16,6 @@ import { invalid_ipn } from '../IPMSInformationObjects/invalid-ipn.oa.mjs';
  * @summary IPMSubmissionErrors
  * @description
  *
- * Information object set `IPMSubmissionErrors`. When an IPMS-MS performs the
- * MS-message-submission abstract-operation of of IPMSubmissionErrors MS-EXTENSION ::= {
- * invalid-assembly-instructions | invalid-ipn, ... -- For future extension additions --
- * } The invalid-assembly-instructions error shall be reported where the IPM assembly
- * instructions component of IPM- submission-options is present, but the message
- * submitted is not an IPM, or the IPM assembly… See ITU-T X.420 (1999), §19.5.4.
- *
  * ### ASN.1 Definition:
  *
  * ```asn1

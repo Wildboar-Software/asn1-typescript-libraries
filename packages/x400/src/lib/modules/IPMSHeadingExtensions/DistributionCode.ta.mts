@@ -28,8 +28,7 @@ import {
  *
  * `DistributionCode`. The Distribution-code-match rule compares for equality a presented
  * value with attribute-values of type Distribution Code as defined in A.1.8.
- * distributionCodeMatch MATCHING-RULE ::= { SYNTAX DistributionCode ID
- * id-mr-distribution-code } The rule returns true if, and only if, at least one of the
+ *  The rule returns true if, and only if, at least one of the
  * following conditions is fulfilled for the presented value and at least one value of
  * the attribute: a) the OID-code… See ITU-T X.420 (1999), §19.7.16.
  *

@@ -24,10 +24,7 @@ import {
  *
  * `AutoActionRegistration`. An auto-action is registered with the MS by means of the
  * auto-action-registrations parameter of the Register-MS abstract-operation (see
- * 8.2.5.1, item a). AutoActionRegistration ::= SEQUENCE { auto-action-type
- * AUTO-ACTION.&id ({AutoActionTable}), registration-identifier [0] INTEGER
- * (1..ub-per-auto-action) DEFAULT 1, registration-parameter [1]
- * AUTO-ACTION.&RegistrationParameter ({AutoActionTable}… See ITU-T X.413 (1999), §6.5.2.
+ * 8.2.5.1, item a).  See ITU-T X.413 (1999), §6.5.2.
  * ASN.1 DEFAULT `1`: that value is assumed when the component is absent (do not encode
  * the default unless required).
  *

@@ -23,8 +23,7 @@ import { id_mr_redirection_reason_match } from '../MSObjectIdentifiers/id-mr-red
  *
  * Information object `redirectionReasonMatch`. The Redirection-reason-match rule
  * compares for equality a presented value with the Redirection-reason component of
- * attribute-values of type Redirection-history. redirectionReasonMatch MATCHING-RULE ::=
- * { SYNTAX RedirectionReason ID id-mr-redirection-reason-match } The rule returns true
+ * attribute-values of type Redirection-history.  The rule returns true
  * if, and only if, the presented value matches the redirection-reason component of at
  * least one value of the attribute according to… See ITU-T X.413 (1999), §12.4.12.
  *

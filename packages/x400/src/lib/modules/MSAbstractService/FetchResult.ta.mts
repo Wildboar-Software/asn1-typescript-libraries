@@ -31,10 +31,7 @@ import {
  * @description
  *
  * `FetchResult`. Should the request succeed, the fetch-result will be returned.
- * FetchResult ::= SET { entry-information [0] EntryInformation OPTIONAL --if an entry
- * was selected--, list [1] SEQUENCE SIZE (1..ub-messages) OF SequenceNumber OPTIONAL,
- * next [2] SequenceNumber OPTIONAL, -- 1994 extension -- fetch-result-extensions [3]
- * MSExtensions OPTIONAL } The parameters of fetch-result have the following meaning: a)…
+ *  The parameters of fetch-result have the following meaning: a)…
  * See ITU-T X.413 (1999), §8.2.3.2. SEQUENCE SIZE (1..…): omit this component rather
  * than encode an empty SEQUENCE.
  *

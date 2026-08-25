@@ -18,10 +18,7 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * `EDIApplicationSecurityElement`. The EDI Application Security Elements field allows an
  * EDI application to exchange security elements having an end-to-end significance.
- * EDIApplicationSecurityElementsField ::= SEQUENCE { edi-application-security-element
- * [0] EDIApplicationSecurityElement OPTIONAL, edi-encrypted-primary-bodypart [1] BOOLEAN
- * OPTIONAL, edi-application-security-extensions [2] EDIApplicationSecurityExtensions
- * OPTIONAL }… See ITU-T X.435 (1999), §8.2.11.
+ * See ITU-T X.435 (1999), §8.2.11.
  *
  * ### ASN.1 Definition:
  *

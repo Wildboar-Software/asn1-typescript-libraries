@@ -21,10 +21,7 @@ import {
  * @description
  *
  * `Account_Attribute`. The storage account attribute identifies the accountable
- * authority responsible for accumulated file storage charges. Account-Attribute ::=
- * CHOICE { no-value-available [0] NULL, -- Indicates partial support of this attribute
- * actual-values Account } Account ::= GraphicString 7.4.12.5.4 Date and Time Attributes
- * The date and time of creation attribute indicates when the file was created. See ITU-T
+ * authority responsible for accumulated file storage See ITU-T
  * X.420 (1999), §7.4.12.5.3.
  *
  * ### ASN.1 Definition:

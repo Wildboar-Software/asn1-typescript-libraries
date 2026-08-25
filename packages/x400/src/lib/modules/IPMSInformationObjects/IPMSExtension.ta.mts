@@ -17,12 +17,7 @@ import * as $ from '@wildboar/asn1/functional';
  * @description
  *
  * `IPMSExtension`. An IPMS extension (or extension) is an information item which enables
- * extensions to be defined. IPMSExtension {IPMS-EXTENSION:ChosenFrom} ::= SEQUENCE {
- * type IPMS-EXTENSION.&id({ChosenFrom}), value IPMS-EXTENSION.&Type({ChosenFrom}
- * {@type}) DEFAULT NULL:NULL } Each extension has the following components: a) Type (M):
- * Identifies the semantics and restricts the abstract syntax of the Value component. See
- * ITU-T X.420 (1999), §7.1.4. ASN.1 DEFAULT `NULL`: that value is assumed when the
- * component is absent (do not encode the default unless required).
+ * extensions to be defined.
  *
  * ### ASN.1 Definition:
  *

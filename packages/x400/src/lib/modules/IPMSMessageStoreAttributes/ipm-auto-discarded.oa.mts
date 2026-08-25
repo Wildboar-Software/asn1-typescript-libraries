@@ -27,9 +27,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * Information object `ipm_auto_discarded`. The IPM Auto-discarded attribute may be
  * present in entries of the Delivery-log entry-class, and indicates whether the
  * corresponding entry of the Delivery entry-class was deleted as a result of the
- * performance of the IPM auto-discard auto- action. ipm-auto-discarded ATTRIBUTE ::= {
- * WITH ATTRIBUTE-SYNTAX BOOLEAN, EQUALITY MATCHING-RULE booleanMatch, NUMERATION
- * single-valued, ID id-sat-ipm-auto-discarded } An… See ITU-T X.420 (1999), §19.6.1.4.
+ * performance of the IPM auto-discard auto- action.  An… See ITU-T X.420 (1999), §19.6.1.4.
  *
  * ### ASN.1 Definition:
  *

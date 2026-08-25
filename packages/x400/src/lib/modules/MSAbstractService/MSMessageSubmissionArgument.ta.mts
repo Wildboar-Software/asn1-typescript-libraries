@@ -39,9 +39,7 @@ import {
  * @summary MSMessageSubmissionArgument
  * @description
  *
- * `MSMessageSubmissionArgument`. MSMessageSubmissionArgument ::= SEQUENCE { COMPONENTS
- * OF MessageSubmissionArgument -- This imported type has IMPLICIT tags -- , -- 1994
- * extension -- submission-options [4] MSSubmissionOptions OPTIONAL } The parameters of
+ * `MSMessageSubmissionArgument`.  The parameters of
  * MS-message-submission-argument have the following meaning: a)
  * Message-submission-argument (M): This contains the argument of the Message-submission
  * abstract- operation as defined in 8.2.1.1.1 of… See ITU-T X.413 (1999), §8.3.1.1.

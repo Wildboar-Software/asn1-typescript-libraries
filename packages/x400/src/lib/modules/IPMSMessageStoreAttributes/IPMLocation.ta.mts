@@ -22,10 +22,7 @@ import {
  *
  * `IPMLocation`. The IPM-location-match compares for equality a presented value with an
  * element of the stored alternative of attribute-values of type IPM Location.
- * iPMLocationMatch MATCHING-RULE ::= { SYNTAX SequenceNumber ID id-mr-ipm-location } 90
- * The rule returns true, if and only if, the presented value matches an element of the
- * stored alternative of at least one value of the attribute according to the Integer
- * Match rule. See ITU-T X.420 (1999), §19.7.2. SET OF: order is insignificant;
+ * See ITU-T X.420 (1999), §19.7.2. SET OF: order is insignificant;
  * duplicates are typically meaningless.
  *
  * ### ASN.1 Definition:

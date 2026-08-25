@@ -26,11 +26,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary body
  * @description
  *
- * Information object `body`. The Body attribute is the (entire) Body of an IPM. body
- * ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX Body, NUMERATION single-valued, ID id-bat-body }
- * An IPMS-MS that supports this attribute shall maintain it for an information object
- * that it holds if, and only if, that object is a message whose content is an IPM. See
- * ITU-T X.420 (1999), §19.6.3.1.
+ * Information object `body`. The Body attribute is the (entire) Body of an IPM.
  *
  * ### ASN.1 Definition:
  *

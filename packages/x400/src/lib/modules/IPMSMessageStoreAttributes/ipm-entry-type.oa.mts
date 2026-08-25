@@ -29,11 +29,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @description
  *
  * Information object `ipm_entry_type`. The IPM Entry Type attribute identifies an
- * information object's type. ipm-entry-type ATTRIBUTE ::= { WITH ATTRIBUTE-SYNTAX
- * IPMEntryType, EQUALITY MATCHING-RULE integerMatch, NUMERATION single-valued, ID
- * id-sat-ipm-entry-type } IPMEntryType ::= ENUMERATED { ipm (0), rn (1), nrn (2), on
- * (3)} This attribute may assume any one of the following values: a) ipm: The
- * information object is an IPM. See ITU-T X.420 (1999), §19.6.1.1.
+ * information object's type.
  *
  * ### ASN.1 Definition:
  *

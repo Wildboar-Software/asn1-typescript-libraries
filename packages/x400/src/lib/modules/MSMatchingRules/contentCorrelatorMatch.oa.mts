@@ -22,8 +22,7 @@ import { id_mr_content_correlator_match } from '../MSObjectIdentifiers/id-mr-con
  *
  * Information object `contentCorrelatorMatch`. The Content-correlator-match rule
  * compares for equality the presented value with attribute-values of type content-
- * correlator. contentCorrelatorMatch MATCHING-RULE ::= { SYNTAX ContentCorrelator ID
- * id-mr-content-correlator-match } If the presented and stored values are encoded as
+ * correlator.  If the presented and stored values are encoded as
  * Octet Strings, then the rule matches according to the Octet String Match rule. See
  * ITU-T X.413 (1999), §12.4.14.
  *

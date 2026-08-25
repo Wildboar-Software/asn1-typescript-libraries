@@ -19,8 +19,7 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * MS-single-substring-list-match determines whether each string in a presented sequence
  * is a single substring of each corresponding string in a sequence that constitutes some
  * value of an attribute containing sequences of MS-string, without regard to the case
- * (upper or lower) of the strings. mSSingleSubstringListMatch MATCHING-RULE ::= { SYNTAX
- * SEQUENCE OF MSString {ub-msstring-match} ID… See ITU-T X.413 (1999), §12.2.8.
+ * (upper or lower) of the strings.  See ITU-T X.413 (1999), §12.2.8.
  *
  * ### ASN.1 Definition:
  *

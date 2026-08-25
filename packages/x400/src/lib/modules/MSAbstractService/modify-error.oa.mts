@@ -29,11 +29,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @description
  *
  * Information object `modify_error`. A Modify-error reports a problem in an attempt to
- * modify the attributes of an entry. modify-error ABSTRACT-ERROR ::= { PARAMETER
- * ModifyErrorParameter CODE err-modify-error } ModifyErrorParameter ::= SET {
- * entries-modified [0] SEQUENCE SIZE(1..ub-messages) OF SequenceNumber OPTIONAL,
- * failing-entry [1] SequenceNumber, modification-number [2] INTEGER, problem [3]
- * ModifyProblem } The parameter has the following… See ITU-T X.413 (1999), §9.16.
+ * modify the attributes of an entry.
  *
  * ### ASN.1 Definition:
  *

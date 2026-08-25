@@ -28,8 +28,7 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @description
  *
  * Information object `receive_report`. The Receive Report abstract operation receives a
- * report. receive-report ABSTRACT-OPERATION ::= { ARGUMENT SET { envelope [0]
- * ReportDeliveryEnvelope, undelivered-object [1] InformationObject OPTIONAL } } The
+ * report. The
  * report received may concern any of the following previously originated by the report’s
  * recipient: a) A message whose content was an EDIM that was originated with the
  * Originate EDIM abstract operation or by… See ITU-T X.435 (1999), §12.2.1.

@@ -24,8 +24,7 @@ import { id_mr_recipient_specifier_single_element } from '../IPMSObjectIdentifie
  * Recipient-specifier-single-element-match rule determines whether a presented string
  * and some element present in the recipient component of some value of an attribute of
  * type recipient specifier match for equality. recipientSpecifierSingleElementMatch
- * MATCHING-RULE ::= { SYNTAX MSString {ub-msstring-match} ID
- * id-mr-recipient-specifier-single-element } The rule is identical to the… See ITU-T
+ *  The rule is identical to the… See ITU-T
  * X.420 (1999), §19.7.10.
  *
  * ### ASN.1 Definition:

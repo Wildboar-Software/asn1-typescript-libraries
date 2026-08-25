@@ -21,9 +21,7 @@ import {
  * @description
  *
  * `DeleteResult`. Should the request succeed, the delete-result shall be returned:
- * DeleteResult ::= CHOICE { delete-result-88 NULL, -- 1994 extension -- delete-result-94
- * SET { entries-deleted [0] SEQUENCE SIZE(1..ub-messages) OF SequenceNumber OPTIONAL,
- * delete-result-extensions [1] MSExtensions OPTIONAL } } The parameters of delete-result
+ *  The parameters of delete-result
  * have the following meaning: a) Delete-result-88 (C): This parameter is returned if a
  * 1988… See ITU-T X.413 (1999), §8.2.4.2. SEQUENCE SIZE (1..…): omit this component
  * rather than encode an empty SEQUENCE.
