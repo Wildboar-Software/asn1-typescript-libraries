@@ -44,10 +44,7 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary register_MS
  * @description
  *
- * When the MS-user invokes the Register-MS abstract-operation, the MS performs the
- * following actions: a) The MS verifies that the supplied arguments are valid for the
- * Register-MS abstract-operation (see 8.2.5.1). If an error is found, the procedure
- * terminates and the error is returned. See ITU-T X.413 (1999), §16.1.5.
+ * See ITU-T X.413 (1999), §16.1.5.
  *
  * ### ASN.1 Definition:
  *

@@ -29,7 +29,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @description
  *
  * A Fetch-restriction-error reports an attempt to violate a restriction associated with
- * the Fetch abstract-operation. See ITU-T X.413 (1999), §9.5. ;
+ * the Fetch abstract-operation. See ITU-T X.413 (1999), §9.5.
  *
  * ### ASN.1 Definition:
  *

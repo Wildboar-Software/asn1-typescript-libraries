@@ -21,8 +21,7 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  *
  * The routing-advice present in an entry in an OR-address-subtree provides advice to the
  * routing-MTA that assists it in arriving at a routing decision for the OR-address
- * corresponding to the entry. It specifies one of the following actions: a) Transfer the
- * message to the target routing-collective indicated. See ITU-T X.412 (1999), §6.2.5.
+ * corresponding to the entry. See ITU-T X.412 (1999), §6.2.5.
  *
  * ### ASN.1 Definition:
  *

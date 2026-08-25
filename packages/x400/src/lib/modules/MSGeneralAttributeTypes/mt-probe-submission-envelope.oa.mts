@@ -27,11 +27,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @description
  *
  * This general-attribute contains the envelope component of the argument of the
- * Probe-submission abstract-operation. See Figure 2 (Part 3) of WITH ATTRIBUTE-SYNTAX
- * ProbeSubmissionEnvelope, NUMERATION single-valued, ID id-att-probe-submission-envelope }
- * 11.2.64 Proof-of-delivery-request This general-attribute contains the
- * proof-of-delivery-request argument of the Message-delivery abstract-operation. See ITU-T
- * X.413 (1999), §11.2.63.
+ * Probe-submission abstract-operation. See ITU-T X.413 (1999), §11.2.63.
  *
  * ### ASN.1 Definition:
  *

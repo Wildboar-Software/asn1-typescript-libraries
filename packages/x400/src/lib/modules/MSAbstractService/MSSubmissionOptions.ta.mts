@@ -35,7 +35,7 @@ import {
  * specified entry-class, containing attributes derived from the argument and result of the
  * associated MS-message-submission or MS-probe-submission abstract-operation. Other
  * components of MS-submission-options control the assignment of further attributes to the
- * created entry. See ITU-T X.413 (1999), §8.1.6. ;
+ * created entry. See ITU-T X.413 (1999), §8.1.6.
  *
  * ### ASN.1 Definition:
  *

@@ -31,7 +31,7 @@ import {
  * @summary DeleteArgument
  * @description
  *
- * See ITU-T X.413 (1999), §8.2.4.1. ;
+ * See ITU-T X.413 (1999), §8.2.4.1.
  *
  * ### ASN.1 Definition:
  *

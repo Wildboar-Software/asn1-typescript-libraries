@@ -29,7 +29,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @description
  *
  * A Sequence-number-error reports a problem related to the sequence-number specified in
- * the argument of an abstract- operation. See ITU-T X.413 (1999), §9.9. ;
+ * the argument of an abstract- operation. See ITU-T X.413 (1999), §9.9.
  *
  * ### ASN.1 Definition:
  *

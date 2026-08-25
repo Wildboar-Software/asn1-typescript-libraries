@@ -41,11 +41,7 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary summarize
  * @description
  *
- * When the MS-user invokes the Summarize abstract-operation, the MS performs the following
- * actions: a) The MS verifies that the supplied arguments are valid for the Summarize
- * abstract-operation. Any attribute- types specified in summary-requests must be available
- * for use with Summarize and subscribed to by the MS-user. See ITU-T X.413 (1999),
- * §16.1.1.
+ * See ITU-T X.413 (1999), §16.1.1.
  *
  * ### ASN.1 Definition:
  *

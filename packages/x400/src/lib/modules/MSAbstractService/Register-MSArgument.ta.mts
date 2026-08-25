@@ -66,7 +66,7 @@ import {
  * @summary Register_MSArgument
  * @description
  *
- * See ITU-T X.413 (1999), §8.2.5.1. ;
+ * See ITU-T X.413 (1999), §8.2.5.1.
  *
  * ### ASN.1 Definition:
  *
