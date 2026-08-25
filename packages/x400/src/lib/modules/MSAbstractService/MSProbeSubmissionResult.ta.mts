@@ -51,6 +51,9 @@ import {
  * @summary MSProbeSubmissionResult
  * @description
  *
+ * Should the request succeed, the MS-probe-submission-result is See ITU-T X.413 (1999),
+ * §8.3.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

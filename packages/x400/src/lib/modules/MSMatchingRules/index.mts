@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.413 (1999), §12.4 / §13.
+ */
 export * from "./contentCorrelatorMatch.oa.mjs";
 export * from "./contentIdentifierMatch.oa.mjs";
 export * from "./ContentSpecificMatchingRules.osa.mjs";

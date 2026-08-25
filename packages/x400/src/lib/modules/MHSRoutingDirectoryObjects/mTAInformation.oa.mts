@@ -26,6 +26,8 @@ import { id_oc_mta_information } from '../MHSRoutingObjectIdentifiers/id-oc-mta-
  * @summary mTAInformation
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

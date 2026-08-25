@@ -15,6 +15,11 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_redirection_history
  * @description
  *
+ * This general-attribute, which is multi-valued, contains the history of recipient
+ * redirection(s) with reason(s) from the Message-delivery or Report-delivery
+ * abstract-operations. In the latter case, the redirections concern the delivery report
+ * itself rather than the report's subject message. See ITU-T X.413 (1999), §11.2.69.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

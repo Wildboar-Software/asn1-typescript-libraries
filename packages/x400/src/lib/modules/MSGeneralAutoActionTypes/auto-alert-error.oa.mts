@@ -29,6 +29,8 @@ import { type AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.o
  * @summary auto_alert_error
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,12 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_reportDelivery
  * @description
  *
+ * The Report-delivery abstract-operation enables the MTS to acknowledge to the MTS-user
+ * one or more outcomes of a previous invocation of the Message-submission or
+ * Probe-submission abstract-operations. For the Message-submission abstract-operation, the
+ * Report-delivery abstract-operation indicates the delivery or non-delivery of the
+ * submitted message to one or more recipients. See ITU-T X.411 (1999), §8.3.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

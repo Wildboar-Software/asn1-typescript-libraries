@@ -16,6 +16,10 @@ import { ContentSpecificMatchingRules } from '../MSMatchingRules/ContentSpecific
  * @summary MatchingRuleTable
  * @description
  *
+ * The Matching-rule-table information object set is used as a constraining set in this
+ * Service Definition where related fields of the MATCHING-RULE information object class
+ * are referenced in the MS abstract-syntax. See ITU-T X.413 (1999), §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

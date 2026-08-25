@@ -20,6 +20,8 @@ import { id_et_g4_class1 } from '../IPMSObjectIdentifiers/id-et-g4-class1.va.mjs
  * @summary g4_class1_body_part_data
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

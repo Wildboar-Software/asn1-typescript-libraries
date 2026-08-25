@@ -15,6 +15,8 @@ import {
  * @summary ub_free_form_name
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,8 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  * @summary id_at_local_exit_connection_group_name
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -46,6 +46,9 @@ import {
  * @summary EncodedInformationTypes
  * @description
  *
+ * Built-in BIT STRING plus optional extended OIDs (ITU-T X.411 (1999), Annex A). Bit
+ * `unknown`(0) is a real EITs value.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

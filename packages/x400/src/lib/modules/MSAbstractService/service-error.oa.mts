@@ -28,6 +28,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary service_error
  * @description
  *
+ * A Service-error reports an error related to the provision of the service. See ITU-T
+ * X.413 (1999), §9.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_origin_authentication_check
  * @description
  *
+ * This general-attribute contains the message-origin-authentication-check argument of the
+ * Message-submission and Message-delivery abstract-operations. It provides the
+ * recipient(s) of a message with a means of authenticating its origin and may be generated
+ * by the originator of the message. See ITU-T X.413 (1999), §11.2.40.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

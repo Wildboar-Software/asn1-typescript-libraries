@@ -15,6 +15,8 @@ import {
  * @summary ub_attributes_supported
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

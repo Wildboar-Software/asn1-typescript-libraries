@@ -17,6 +17,8 @@ import { edi_auto_acknowledgement } from '../EDIMSAutoActionTypes/edi-auto-ackno
  * @summary EDIAutoActions
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

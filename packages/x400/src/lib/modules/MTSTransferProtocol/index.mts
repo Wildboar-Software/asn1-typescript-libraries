@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.419 (1999), §7.
+ */
 export * from "./AbortReason.ta.mjs";
 export * from "./index.mjs";
 export * from "./message-transfer-abstract-syntax.oa.mjs";

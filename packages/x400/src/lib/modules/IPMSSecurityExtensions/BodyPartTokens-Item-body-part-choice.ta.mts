@@ -24,6 +24,8 @@ import {
  * @summary BodyPartTokens_Item_body_part_choice
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

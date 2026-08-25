@@ -10,6 +10,9 @@ import {
  * @summary PhysicalDeliveryOfficeNumber
  * @description
  *
+ * Distinguishes several post offices sharing one office name (ITU-T X.402 (1999),
+ * §18.3.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

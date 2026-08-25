@@ -22,6 +22,8 @@ import { id_at_local_exit_connection_group_name } from '../MHSRoutingObjectIdent
  * @summary localExitConnectionGroupName
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

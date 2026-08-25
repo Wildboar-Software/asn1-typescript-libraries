@@ -15,6 +15,8 @@ import { id_cp } from '../MSObjectIdentifiers/id-cp.va.mjs';
  * @summary id_cp_ms_connection
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

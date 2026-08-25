@@ -107,6 +107,8 @@ import {
  * @summary Heading
  * @description
  *
+ * IPM heading fields (ITU-T X.420 (1999), §7.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

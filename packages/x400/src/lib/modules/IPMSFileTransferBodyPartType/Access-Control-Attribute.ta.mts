@@ -20,6 +20,9 @@ import {
  * @summary Access_Control_Attribute
  * @description
  *
+ * The access control attribute defines conditions under which access to the file is See
+ * ITU-T X.420 (1999), §7.4.12.5.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

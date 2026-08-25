@@ -15,6 +15,8 @@ import { id_mod } from '../MSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_upper_bounds
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

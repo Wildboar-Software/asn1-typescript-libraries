@@ -27,6 +27,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ac_submitted_edin_status
  * @description
  *
+ * The AC Submitted EDIN Status attribute indicates whether an EDIN for a delivered message
+ * was requested and whether one has been sent. See ITU-T X.435 (1999), §18.8.6.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

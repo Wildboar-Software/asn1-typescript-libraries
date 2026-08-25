@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TerminalIdentifier
  * @description
  *
+ * Terminal identifier, e.g. Telex answer-back or Teletex terminal id (ITU-T X.402 (1999),
+ * §18.3.23). PrintableString only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

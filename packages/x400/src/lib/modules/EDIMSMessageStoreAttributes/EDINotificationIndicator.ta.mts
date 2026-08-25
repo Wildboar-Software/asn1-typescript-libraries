@@ -15,6 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDINotificationIndicator
  * @description
  *
+ * The EDI Notification Indicator attribute contains information about whether any EDI
+ * Notifications have been sent by the MS in response to an EDIM, and if so which type of
+ * EDI Notifications were sent. The MS creates this attribute for each new EDIM and
+ * maintains the attribute values, depending on the auto-actions performed. See ITU-T X.435
+ * (1999), §18.8.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

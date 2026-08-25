@@ -28,6 +28,11 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_obsoleting_edims
  * @description
  *
+ * The AC Obsoleting EDIMs attribute, which is multi-valued, contains the sequence-numbers
+ * of the EDIM entries that indicate, by means of their Obsoleted EDIMs heading field, that
+ * they render obsolete the present EDIM. The attribute values are stored in ascending
+ * order of the obsoleting entries’ creation times. See ITU-T X.435 (1999), §18.8.6.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

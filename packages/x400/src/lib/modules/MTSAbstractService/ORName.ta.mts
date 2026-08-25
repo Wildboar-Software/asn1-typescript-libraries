@@ -46,6 +46,11 @@ import {
  * @summary ORName
  * @description
  *
+ * SEQUENCE: COMPONENTS OF `ORAddress` plus optional `directory-name` `[0] Name` (ITU-T
+ * X.411 (1999), Annex A). The directory name is an X.500 `Name`, not another OR-address.
+ * Used where a user may be identified by O/R address, directory name, or both
+ * (`ORAddressAndOptionalDirectoryName` / `ORAddressAndOrDirectoryName`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

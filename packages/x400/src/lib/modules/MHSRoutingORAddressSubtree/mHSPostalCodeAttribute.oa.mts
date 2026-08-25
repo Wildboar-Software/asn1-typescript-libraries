@@ -27,6 +27,8 @@ import { id_at_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-at-mhs-
  * @summary mHSPostalCodeAttribute
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

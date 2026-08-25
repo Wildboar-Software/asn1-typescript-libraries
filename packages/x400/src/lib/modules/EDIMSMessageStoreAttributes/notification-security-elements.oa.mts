@@ -26,6 +26,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary notification_security_elements
  * @description
  *
+ * The Security Elements field is used to provide "proof/non repudiation of content
+ * received", "EDI application security" See ITU-T X.435 (1999), §9.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { id_cat } from '../EDIMSObjectIdentifiers/id-cat.va.mjs';
  * @summary id_cat_subject_edim
  * @description
  *
+ * The Subject EDIM Identifier is the EDIM Identifier either passed in the EDIN Receiver
+ * field, if Responsibility has been forwarded, or the This EDIM field, if not.
+ * SubjectEDIMField ::= EDIMIdentifier NOTE – EDIM Identifier is defined in 7.1. See ITU-T
+ * X.435 (1999), §9.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

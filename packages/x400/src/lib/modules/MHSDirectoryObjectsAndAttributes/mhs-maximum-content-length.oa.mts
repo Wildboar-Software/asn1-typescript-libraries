@@ -27,6 +27,8 @@ import { id_at_mhs_maximum_content_length } from '../MHSObjectIdentifiers/id-at-
  * @summary mhs_maximum_content_length
  * @description
  *
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

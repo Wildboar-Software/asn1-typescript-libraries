@@ -15,6 +15,8 @@ import { id_doc } from '../EDIMUseOfDirectory/id-doc.va.mjs';
  * @summary id_doc_edi_user
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (§16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

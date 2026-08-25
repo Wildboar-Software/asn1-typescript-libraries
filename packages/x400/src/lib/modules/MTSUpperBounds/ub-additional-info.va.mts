@@ -15,6 +15,10 @@ import {
  * @summary ub_additional_info
  * @description
  *
+ * The specification of the contents of this argument is by bilateral agreement between
+ * MDs. 12.2.1.3.2 Results The Report-transfer abstract-operation does not return a result.
+ * See ITU-T X.411 (1999), §12.2.1.3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

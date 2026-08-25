@@ -51,6 +51,8 @@ import {
  * @summary CommonFields
  * @description
  *
+ * See ITU-T X.435 (1999), §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

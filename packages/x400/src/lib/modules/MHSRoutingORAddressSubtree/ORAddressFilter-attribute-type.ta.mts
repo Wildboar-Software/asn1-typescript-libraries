@@ -20,6 +20,8 @@ import {
  * @summary ORAddressFilter_attribute_type
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -23,6 +23,9 @@ import { id_at_enumerated_flag } from '../MHSRoutingObjectIdentifiers/id-at-enum
  * @summary enumeratedFlag
  * @description
  *
+ * The Enumerated Flag attribute type indicates whether a connection-group is of type
+ * enumerated or unenumerated. enumeratedFlag See ITU-T X.412 (1999), §7.2.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

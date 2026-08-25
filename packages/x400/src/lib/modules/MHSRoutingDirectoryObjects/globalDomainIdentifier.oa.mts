@@ -26,6 +26,10 @@ import { id_at_global_domain_identifier } from '../MHSRoutingObjectIdentifiers/i
  * @summary globalDomainIdentifier
  * @description
  *
+ * The Global Domain Identifier attribute type identifies the global-domain-identifier used
+ * by an MTA when generating trace information, and, where strong-authentication is in use,
+ * in the arguments and results of MTA-bind. See ITU-T X.412 (1999), §7.2.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

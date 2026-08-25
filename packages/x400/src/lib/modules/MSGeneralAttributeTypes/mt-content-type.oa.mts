@@ -24,6 +24,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_content_type
  * @description
  *
+ * This general-attribute identifies the type of the content of a message, and is generated
+ * from the content-type argument of the Message-submission, Probe-submission,
+ * Message-delivery, and Report-delivery abstract-operations. See 8.2.1.1.1.34 of presence
+ * of the attribute is conditional. See ITU-T X.413 (1999), §11.2.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

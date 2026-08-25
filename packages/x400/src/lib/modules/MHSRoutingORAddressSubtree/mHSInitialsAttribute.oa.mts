@@ -27,6 +27,8 @@ import { id_at_mhs_initials } from '../MHSRoutingObjectIdentifiers/id-at-mhs-ini
  * @summary mHSInitialsAttribute
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

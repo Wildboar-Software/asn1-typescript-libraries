@@ -15,6 +15,8 @@ import { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va.
  * @summary id_name_binding_customerEFD_customer
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

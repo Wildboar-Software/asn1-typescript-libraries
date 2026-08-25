@@ -15,6 +15,8 @@ import { id_cat } from '../EDIMSObjectIdentifiers/id-cat.va.mjs';
  * @summary id_cat_correlated_delivered_edins
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

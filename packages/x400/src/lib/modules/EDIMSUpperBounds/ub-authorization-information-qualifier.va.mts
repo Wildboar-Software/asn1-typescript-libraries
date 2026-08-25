@@ -15,6 +15,8 @@ import {
  * @summary ub_authorization_information_qualifier
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

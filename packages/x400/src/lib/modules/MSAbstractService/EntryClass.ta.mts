@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EntryClass
  * @description
  *
+ * The Stored-message entry-class contains entries which represent complete messages,
+ * reports, probes, and draft messages for an unrestricted range of content-types. See
+ * ITU-T X.413 (1999), §6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

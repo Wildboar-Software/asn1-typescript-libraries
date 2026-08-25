@@ -20,6 +20,8 @@ import { id_as_mase_94 } from '../MHSProtocolObjectIdentifiers/id-as-mase-94.va.
  * @summary message_administration_abstract_syntax_94
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_nextAdjMTAName
  * @description
  *
+ * An MTA-name is an identifier for an MTA that uniquely identifies the MTA within the MD
+ * to which it belongs. See ITU-T X.411 (1999), §8.5.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

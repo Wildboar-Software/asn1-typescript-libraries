@@ -22,6 +22,8 @@ export enum _enum_for_MessageClass_objects {
  * @summary MessageClass_objects
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

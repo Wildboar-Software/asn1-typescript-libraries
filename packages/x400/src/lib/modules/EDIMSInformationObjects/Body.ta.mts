@@ -25,6 +25,11 @@ import {
  * @summary Body
  * @description
  *
+ * EDI body (ITU-T X.435 (1999), §8.3): mandatory `primary-body-part` plus optional
+ * `additional-body-parts`. Additional parts are a SEQUENCE; order is the originator's
+ * order. Omit `additional-body-parts` rather than encode empty. This is not an IPM `Body`
+ * (X.420 §7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

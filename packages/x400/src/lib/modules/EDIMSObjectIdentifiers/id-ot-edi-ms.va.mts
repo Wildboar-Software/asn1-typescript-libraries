@@ -15,6 +15,8 @@ import { id_ot } from '../EDIMSObjectIdentifiers/id-ot.va.mjs';
  * @summary id_ot_edi_ms
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

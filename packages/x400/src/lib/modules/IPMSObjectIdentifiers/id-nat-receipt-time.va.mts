@@ -15,6 +15,9 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_receipt_time
  * @description
  *
+ * The Receipt Time receipt field (M) identifies when the RN's originator received the
+ * subject IPM. It comprises a date and time. See ITU-T X.420 (1999), §8.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

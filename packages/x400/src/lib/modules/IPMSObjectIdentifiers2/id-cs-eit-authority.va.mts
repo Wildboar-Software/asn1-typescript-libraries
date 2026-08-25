@@ -15,6 +15,8 @@ import { id_iso_cs } from '../IPMSObjectIdentifiers2/id-iso-cs.va.mjs';
  * @summary id_cs_eit_authority
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

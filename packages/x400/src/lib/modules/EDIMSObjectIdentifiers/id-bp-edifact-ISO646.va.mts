@@ -15,6 +15,8 @@ import { id_bp } from '../EDIMSObjectIdentifiers/id-bp.va.mjs';
  * @summary id_bp_edifact_ISO646
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

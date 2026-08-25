@@ -22,6 +22,10 @@ import {
  * @summary EnvironmentParameter
  * @description
  *
+ * The environment parameter describes the environment (e.g., machine, operating system,
+ * and application) from which the file originated. It has the following syntax: See ITU-T
+ * X.420 (1999), §7.4.12.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

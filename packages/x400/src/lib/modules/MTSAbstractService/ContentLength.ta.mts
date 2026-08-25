@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ContentLength
  * @description
  *
+ * INTEGER (0..`ub-content-length`) octets of content (ITU-T X.411 (1999), Annex A). Zero
+ * is a legal length (empty content), not a sentinel.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

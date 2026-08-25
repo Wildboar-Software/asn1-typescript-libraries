@@ -20,6 +20,8 @@ import { id_mr_or_descriptor_substring_elements } from '../IPMSObjectIdentifiers
  * @summary oRDescriptorSubstringElementsMatch
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

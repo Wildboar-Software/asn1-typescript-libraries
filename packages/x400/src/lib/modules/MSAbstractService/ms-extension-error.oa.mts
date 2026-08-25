@@ -28,6 +28,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary ms_extension_error
  * @description
  *
+ * An MS-extension-error reports a problem concerning an extension parameter presented in
+ * the argument of an abstract- operation. See ITU-T X.413 (1999), §9.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

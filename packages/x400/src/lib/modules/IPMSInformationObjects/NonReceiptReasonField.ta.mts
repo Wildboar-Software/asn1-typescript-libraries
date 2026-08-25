@@ -21,6 +21,8 @@ export enum _enum_for_NonReceiptReasonField {
  * @summary NonReceiptReasonField
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

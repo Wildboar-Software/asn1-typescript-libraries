@@ -20,6 +20,10 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary information_category
  * @description
  *
+ * Heading extension identifying the character of the information in the IPM (ITU-T X.420
+ * (1999), Annex A.1.10). Recipient UAs may use it for presentation or other local
+ * processing.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -23,6 +23,12 @@ export {
  * @summary ProofOfSubmission
  * @description
  *
+ * This result provides the originator of the message with proof of submission of the
+ * message to the MTS (to provide the Proof of Submission element-of-service as defined in
+ * Submission element-of-service (as defined in The proof-of-submission is computed using
+ * the algorithm identified by the proof-of-submission-algorithm-identifier (an
+ * algorithm-identifier). See ITU-T X.411 (1999), §8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

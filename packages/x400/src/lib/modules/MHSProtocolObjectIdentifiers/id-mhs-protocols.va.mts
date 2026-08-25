@@ -19,6 +19,8 @@ import {
  * @summary id_mhs_protocols
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

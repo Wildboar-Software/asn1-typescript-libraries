@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SubmittedIPNStatus
  * @description
  *
+ * The AC Submitted IPN Status attribute indicates whether an interpersonal notification
+ * for a delivered message was requested and whether one has been sent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

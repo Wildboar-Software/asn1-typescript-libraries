@@ -20,6 +20,9 @@ import {
  * @summary Account_Attribute
  * @description
  *
+ * The storage account attribute identifies the accountable authority responsible for
+ * accumulated file storage See ITU-T X.420 (1999), §7.4.12.5.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

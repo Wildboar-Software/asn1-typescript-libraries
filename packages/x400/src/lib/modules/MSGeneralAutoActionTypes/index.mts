@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.413 (1999), §12.
+ */
 export * from "./AlertDestination.ta.mjs";
 export * from "./AutoActionErrorTable.osa.mjs";
 export * from "./AutoActionTable.osa.mjs";

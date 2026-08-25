@@ -30,6 +30,9 @@ import {
  * @summary FetchResult
  * @description
  *
+ * Should the request succeed, the fetch-result will be returned. See ITU-T X.413 (1999),
+ * §8.2.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

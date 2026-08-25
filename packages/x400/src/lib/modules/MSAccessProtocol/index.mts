@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.419 (1999), §9.
+ */
 export * from "./AbortReason.ta.mjs";
 export * from "./err-attribute-error.va.mjs";
 export * from "./err-auto-action-request-error.va.mjs";

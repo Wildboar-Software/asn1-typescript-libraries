@@ -15,6 +15,8 @@ import {
  * @summary ub_service_information_length
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

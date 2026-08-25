@@ -15,6 +15,8 @@ import { id_mod } from '../EDIMSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_message_store_auto_actions
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

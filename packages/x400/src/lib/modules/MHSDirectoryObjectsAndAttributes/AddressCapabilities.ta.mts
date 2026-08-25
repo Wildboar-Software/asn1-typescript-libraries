@@ -26,6 +26,8 @@ import {
  * @summary AddressCapabilities
  * @description
  *
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

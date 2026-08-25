@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.419 (1999), §8.
+ */
 export * from "./AbortReason.ta.mjs";
 export * from "./err-control-violates-registration.va.mjs";
 export * from "./err-deferred-delivery-cancellation-rejected.va.mjs";

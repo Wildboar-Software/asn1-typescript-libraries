@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SyntaxIdentifier
  * @description
  *
+ * Indicates the syntax used. This is semantically identical to the "Syntax identifier" of
+ * the EDIFACT UNB segment. See ITU-T X.435 (1999), §8.2.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

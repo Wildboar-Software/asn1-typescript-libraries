@@ -9,6 +9,9 @@ import {
  * @summary terminal_type
  * @description
  *
+ * OR-address extension attribute number 23 carrying `TerminalType` (ITU-T X.411 (1999),
+ * Annex A; X.402 (1999), §18.3.24).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -29,6 +29,10 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary change_auto_forwarding
  * @description
  *
+ * The Change Auto-forwarding abstract operation enables or disables auto-forwarding, the
+ * automatic forwarding of IPMs by the IPMS to pre-specified users or DLs. Such forwarding
+ * occurs upon delivery of the IPMs. See ITU-T X.420 (1999), §12.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -43,6 +43,21 @@ const DELIMITER = ';'.charCodeAt(0);
  * @summary ORAddress
  * @description
  *
+ * Originator/recipient address: an ordered SEQUENCE of `built-in-standard-attributes`,
+ * optional `built-in-domain-defined-attributes`, and optional `extension-attributes`
+ * (ITU-T X.411 (1999), Annex A; semantics in ITU-T X.402 (1999), §18). Several attribute
+ * lists may denote the same user; comparison uses the equivalence rules in X.402 §18.4
+ * (case of letters, Numeric vs Printable for the same digits, Printable/Teletex/Universal
+ * alternatives, collapsed spaces, and disregarding `iso-639-language-code`). There is no
+ * single unambiguous whole-address equality. Name form is determined by X.402 §18.5.5:
+ * `numeric-user-identifier` ⇒ numeric; `network-address` ⇒ terminal;
+ * `physical-delivery-country-name` ⇒ postal; otherwise mnemonic.
+ * `built-in-domain-defined-attributes` is a SEQUENCE omit it rather than send empty.
+ * `extension-attributes` is a SET SIZE (1..256) keyed by integer `extension-type`; order
+ * in the SET does not matter, duplicate types are invalid. Teletex and universal
+ * counterparts of printable attributes live in `extension-attributes` (see the ASN.1 `--
+ * see also` comments).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,12 +79,25 @@ export class ORAddress {
         readonly built_in_standard_attributes: BuiltInStandardAttributes,
         /**
          * @summary `built_in_domain_defined_attributes`.
+         * @description
+         *
+         * SEQUENCE SIZE (1..4) of MD-defined PrintableString attributes
+         * (ITU-T X.402 (1999), §18.1). Omit this component rather than encode
+         * an empty SEQUENCE. Teletex/universal twins are extension attributes.
+         *
          * @public
          * @readonly
          */
         readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>,
         /**
          * @summary `extension_attributes`.
+         * @description
+         *
+         * SET SIZE (1..256) of `ExtensionAttribute` (ITU-T X.411 (1999),
+         * Annex A). SET order is insignificant; each `extension-type` must be
+         * unique. Omit rather than encode empty. Holds teletex/universal and
+         * physical-delivery attributes listed in X.402 Table 9.
+         *
          * @public
          * @readonly
          */

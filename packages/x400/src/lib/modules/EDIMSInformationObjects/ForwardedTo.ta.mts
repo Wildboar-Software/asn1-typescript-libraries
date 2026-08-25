@@ -19,6 +19,9 @@ import {
  * @summary ForwardedTo
  * @description
  *
+ * The Forwarded To field indicates the new recipient of the (forwarded) subject EDIM. Its
+ * value is an OR-name. See ITU-T X.435 (1999), §9.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,8 @@ import { id_mr_or_descriptor_single_element } from '../IPMSObjectIdentifiers/id-
  * @summary oRDescriptorSingleElementMatch
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

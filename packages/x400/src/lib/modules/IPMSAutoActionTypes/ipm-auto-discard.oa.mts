@@ -33,6 +33,8 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary ipm_auto_discard
  * @description
  *
+ * See ITU-T X.420 (1999), §18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

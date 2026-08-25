@@ -5,6 +5,8 @@ import { INTEGER } from "@wildboar/asn1";
  * @summary ub_universal_initials_length
  * @description
  *
+ * Defined in ITU-T X.402 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

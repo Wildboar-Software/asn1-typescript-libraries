@@ -26,6 +26,8 @@ import { id_at_calling_psaps } from '../MHSRoutingObjectIdentifiers/id-at-callin
  * @summary callingPSAPs
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

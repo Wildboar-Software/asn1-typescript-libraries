@@ -19,6 +19,10 @@ import {
  * @summary EntryInformationSelection
  * @description
  *
+ * An entry-information-selection parameter indicates what information from an entry is
+ * being requested. An empty set indicates that information about the entry itself, rather
+ * than the attributes of the entry, is being requested. See ITU-T X.413 (1999), §8.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

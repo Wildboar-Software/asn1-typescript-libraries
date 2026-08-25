@@ -31,6 +31,10 @@ import {
  * @summary RecipientSpecifier
  * @description
  *
+ * One IPM recipient: `recipient` plus optional notification requests and `reply-requested`
+ * (ITU-T X.420 (1999), §7.2.3). Notification-request bits ask for RN/NRN/IPN; zero/absent
+ * means not requested.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

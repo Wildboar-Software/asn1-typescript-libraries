@@ -15,6 +15,10 @@ import { id_ep } from '../IPMSObjectIdentifiers/id-ep.va.mjs';
  * @summary id_ep_encrypted
  * @description
  *
+ * An Encrypted body part represents the result of encrypting a body part of a type defined
+ * by this Specification. It has Parameters and Data components. See ITU-T X.420 (1999),
+ * §7.4.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,10 @@ import {
  * @summary InformationObject
  * @description
  *
+ * For the IPMS-MS, the members of the IPMS-attribute-table information object set are
+ * regarded as objects populating the Content-specific-attributes information object set
+ * defined in 11.3 of 84 See ITU-T X.420 (1999), §19.6.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

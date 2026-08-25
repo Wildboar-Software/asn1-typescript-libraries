@@ -15,6 +15,8 @@ import { id_aa } from '../IPMSObjectIdentifiers/id-aa.va.mjs';
  * @summary id_aa_ipm_auto_discard
  * @description
  *
+ * See ITU-T X.420 (1999), §18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

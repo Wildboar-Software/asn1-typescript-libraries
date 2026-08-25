@@ -15,6 +15,8 @@ import { id_cat } from '../IPMSObjectIdentifiers/id-cat.va.mjs';
  * @summary id_cat_replying_ipms
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,8 @@ import {
  * @summary err_new_credentials_unacceptable
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_marked_for_deletion
  * @description
  *
+ * This general-attribute indicates (by its presence or absence) whether the MS-user has
+ * marked the entry for subsequent deletion. Support for this attribute implies that the
+ * MS-user shall be able to create it or amend it by means of the Modify abstract-operation
+ * and the Auto-modify auto-action. See ITU-T X.413 (1999), §11.2.34.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

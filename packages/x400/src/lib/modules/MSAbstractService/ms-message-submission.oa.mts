@@ -45,6 +45,7 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
 /**
  * @summary ms_message_submission
  * @description
+ * See ITU-T X.413 (1999), §16.
  *
  * ### ASN.1 Definition:
  *

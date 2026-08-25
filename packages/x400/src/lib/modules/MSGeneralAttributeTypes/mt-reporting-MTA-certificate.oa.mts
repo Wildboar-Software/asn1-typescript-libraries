@@ -26,6 +26,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_reporting_MTA_certificate
  * @description
  *
+ * This general-attribute contains the reporting-MTA-certificate argument of the
+ * Report-delivery abstract-operation. It contains the certificate of the MTA that
+ * generated the report. See ITU-T X.413 (1999), §11.2.72.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

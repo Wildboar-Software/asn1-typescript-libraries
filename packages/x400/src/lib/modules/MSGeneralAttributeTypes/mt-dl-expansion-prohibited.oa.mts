@@ -28,6 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_dl_expansion_prohibited
  * @description
  *
+ * This general-attribute contains the DL-expansion-prohibited argument of the
+ * Message-submission and Probe-submission abstract-operations; it indicates whether
+ * DL-expansion within the MTS is prohibited for a recipient-name which denotes a DL.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

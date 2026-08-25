@@ -28,6 +28,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edin_initiator
  * @description
  *
+ * See ITU-T X.435 (1999), §9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

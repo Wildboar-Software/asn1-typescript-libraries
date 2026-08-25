@@ -15,6 +15,9 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_notification_time
  * @description
  *
+ * Notification Time contains the date and time, in UTC format, at which the notification
+ * for the subject EDIM was generated.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

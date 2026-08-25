@@ -27,6 +27,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edi_application_security_element
  * @description
  *
+ * The EDI Application Security Elements field allows an EDI application to exchange
+ * security elements having an end-to-end significance. See ITU-T X.435 (1999), §8.2.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

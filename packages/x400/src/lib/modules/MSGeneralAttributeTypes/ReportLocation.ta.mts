@@ -20,6 +20,8 @@ import {
  * @summary ReportLocation
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

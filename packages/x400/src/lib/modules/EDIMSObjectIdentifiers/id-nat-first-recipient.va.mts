@@ -15,6 +15,9 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_first_recipient
  * @description
  *
+ * A Recipient identifies the preferred recipient in question. It comprises an OR-name. See
+ * ITU-T X.435 (1999), §8.2.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

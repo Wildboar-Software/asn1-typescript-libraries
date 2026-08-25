@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.411 (1999), §8.
+ */
 export * from "./ABSTRACT-ERROR.oca.mjs";
 export * from "./ABSTRACT-OPERATION.oca.mjs";
 export * from "./ActualRecipientName.ta.mjs";

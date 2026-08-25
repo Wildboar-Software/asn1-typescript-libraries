@@ -20,6 +20,8 @@ import { id_as_msse } from '../MHSProtocolObjectIdentifiers/id-as-msse.va.mjs';
  * @summary message_submission_abstract_syntax
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

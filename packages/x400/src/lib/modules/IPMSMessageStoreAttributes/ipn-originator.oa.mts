@@ -30,6 +30,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ipn_originator
  * @description
  *
+ * The Originator heading field (O) identifies the IPM's originator. It comprises an
+ * OR-descriptor. See ITU-T X.420 (1999), §7.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

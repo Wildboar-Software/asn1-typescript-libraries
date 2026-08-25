@@ -15,6 +15,8 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_messageEventRecord
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

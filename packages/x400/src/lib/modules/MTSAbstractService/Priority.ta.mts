@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Priority
  * @description
  *
+ * ENUMERATED: `normal`(0), `non-urgent`(1), `urgent`(2) (ITU-T X.411 (1999),
+ * §8.2.1.1.1.8). When the argument is absent, **`normal` is the default**. `0` is a real
+ * priority, not a sentinel for 'unspecified'.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,11 @@ import {
  * @summary ChangeOfAddressAdvice
  * @description
  *
+ * The Change of Address Advice advice notification field (O) indicates a change of address
+ * for the AN’s originator. It contains information previously supplied for the purpose by
+ * the AN’s originator, and comprises an OR-descriptor, and, optionally, the time from
+ * which the new address will be effective. See ITU-T X.420 (1999), §8.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

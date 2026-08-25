@@ -28,6 +28,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary entry_class_error
  * @description
  *
+ * An Entry-class-error reports a problem in an attempt to address an entry-class in an
+ * abstract-operation. See ITU-T X.413 (1999), §9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

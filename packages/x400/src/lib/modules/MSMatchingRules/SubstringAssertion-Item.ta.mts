@@ -19,6 +19,8 @@ import {
  * @summary SubstringAssertion_Item
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

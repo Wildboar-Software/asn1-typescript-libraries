@@ -18,6 +18,8 @@ import {
  * @summary err_control_violates_registration
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

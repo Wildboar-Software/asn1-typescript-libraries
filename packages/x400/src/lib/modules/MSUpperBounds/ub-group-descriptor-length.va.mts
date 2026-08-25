@@ -15,6 +15,8 @@ import {
  * @summary ub_group_descriptor_length
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,11 @@ import {
  * @summary AttributeValueAssertion
  * @description
  *
+ * An attribute-value-assertion is a proposition, which may be true, false, or undefined,
+ * concerning the values of an entry. It is evaluated using a matching-rule specified for
+ * the attribute-type, and which is appropriate for the context in which the
+ * attribute-value-assertion is evaluated. See ITU-T X.413 (1999), §8.1.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

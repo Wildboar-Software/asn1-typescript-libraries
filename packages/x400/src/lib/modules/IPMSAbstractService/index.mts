@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.420 (1999), §8.
+ */
 export * from "./change-auto-acknowledgment-ArgumentType.ta.mjs";
 export * from "./change-auto-acknowledgment.oa.mjs";
 export * from "./change-auto-discard-ArgumentType.ta.mjs";

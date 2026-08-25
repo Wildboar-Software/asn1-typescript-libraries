@@ -32,6 +32,9 @@ import {
  * @summary SummarizeResult
  * @description
  *
+ * Should the request succeed, the summarize-result will be returned. See ITU-T X.413
+ * (1999), §8.2.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

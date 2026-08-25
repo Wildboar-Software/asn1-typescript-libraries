@@ -26,6 +26,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary body_part_encryption_token
  * @description
  *
+ * The Originator-body-part-encryption-token MS-submission-extension is used where the
+ * submitted message contains a Body Part Encryption Token (see B.6.1) that has been
+ * encrypted such that it cannot subsequently be decrypted by the originator. See ITU-T
+ * X.420 (1999), §19.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EXTENSION_ATTRIBUTE
  * @description
  *
+ * Information object class for OR-address extension attributes: unique INTEGER `&id` in
+ * 0..`ub-extension-attributes` and `&Type` (ITU-T X.411 (1999), Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

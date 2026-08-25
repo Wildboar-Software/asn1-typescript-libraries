@@ -28,6 +28,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_auto_action_subject_entry
  * @description
  *
+ * This general-attribute indicates the sequence-number of the Stored-message entry which
+ * was the subject of the auto- action processing recorded by the present entry. The
+ * attribute may be present only in entries of the Auto-action-log entry- class. See ITU-T
+ * X.413 (1999), §11.2.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OrganizationName
  * @description
  *
+ * Organization identifier (ITU-T X.402 (1999), §18.3.9). In a mnemonic OR-address,
+ * uniqueness may be national or relative to the MD (national matter; a national
+ * registration authority is required if names are country-wide unique). In a terminal
+ * OR-address the value is free-form and unregistered. Teletex/universal twins are
+ * extension attributes.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

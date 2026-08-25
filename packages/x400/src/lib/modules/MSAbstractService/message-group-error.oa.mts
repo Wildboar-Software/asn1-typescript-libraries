@@ -28,6 +28,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary message_group_error
  * @description
  *
+ * A Message-group-error reports a problem in the use of a message-group-name. See ITU-T
+ * X.413 (1999), §9.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

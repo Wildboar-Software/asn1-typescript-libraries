@@ -20,6 +20,8 @@ import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "
  * @summary Restriction
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

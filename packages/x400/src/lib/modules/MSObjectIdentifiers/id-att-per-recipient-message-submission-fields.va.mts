@@ -15,6 +15,9 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_per_recipient_message_submission_fields
  * @description
  *
+ * This general-attribute, which is multi-valued, contains the per-recipient-fields
+ * component of the Message-submission- envelope. See ITU-T X.413 (1999), §11.2.58.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

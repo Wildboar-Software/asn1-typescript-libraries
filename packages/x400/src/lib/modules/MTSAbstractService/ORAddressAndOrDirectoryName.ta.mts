@@ -19,6 +19,9 @@ import {
  * @summary ORAddressAndOrDirectoryName
  * @description
  *
+ * Alias of `ORName` used where either or both name forms may identify the user (ITU-T
+ * X.411 (1999), Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

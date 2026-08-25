@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.411 (1999), accounting objects.
+ */
 export * from "./AccessRatePerDeliveryServiceType.ta.mjs";
 export * from "./Actions.ta.mjs";
 export {

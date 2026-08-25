@@ -25,6 +25,9 @@ import {
  * @summary ModifyResult
  * @description
  *
+ * Should the request succeed, the modify-result shall be returned. See ITU-T X.413 (1999),
+ * §8.2.7.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

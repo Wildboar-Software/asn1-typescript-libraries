@@ -16,6 +16,10 @@ import { builtInDomainDefinedAttributeFromString } from "../../parse.mjs";
  * @summary BuiltInDomainDefinedAttribute
  * @description
  *
+ * One MD-defined attribute: `type` and `value` PrintableStrings (ITU-T X.402 (1999),
+ * §18.1). Intended as an interim native addressing convention; MDs should migrate to
+ * standard attributes.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

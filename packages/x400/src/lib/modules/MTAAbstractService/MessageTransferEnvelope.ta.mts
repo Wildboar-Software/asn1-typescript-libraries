@@ -87,6 +87,8 @@ import {
  * @summary MessageTransferEnvelope
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

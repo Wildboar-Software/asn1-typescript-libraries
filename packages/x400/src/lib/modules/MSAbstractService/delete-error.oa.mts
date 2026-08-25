@@ -28,6 +28,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary delete_error
  * @description
  *
+ * A Delete-error reports a problem in an attempt to delete one or more entries of an
+ * entry-class. See ITU-T X.413 (1999), §9.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

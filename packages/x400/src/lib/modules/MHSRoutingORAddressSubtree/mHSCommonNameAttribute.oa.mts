@@ -27,6 +27,8 @@ import { id_at_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-at-mhs-
  * @summary mHSCommonNameAttribute
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

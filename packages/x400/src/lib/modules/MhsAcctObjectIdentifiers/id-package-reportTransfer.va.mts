@@ -15,6 +15,9 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_reportTransfer
  * @description
  *
+ * The Report-transfer abstract-operation enables an MTA to transfer a report to another
+ * MTA. See ITU-T X.411 (1999), §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

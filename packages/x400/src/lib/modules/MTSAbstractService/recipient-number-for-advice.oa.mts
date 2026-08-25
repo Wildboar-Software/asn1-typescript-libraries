@@ -29,6 +29,10 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary recipient_number_for_advice
  * @description
  *
+ * This argument contains the Telephone, Telex or Teletex number of the recipient, to be
+ * used in conjunction with the counter-collection-with-advice and bureau-fax-delivery
+ * physical-delivery-modes . See ITU-T X.411 (1999), §8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

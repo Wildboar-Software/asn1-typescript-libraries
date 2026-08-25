@@ -28,6 +28,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edims_entry_type
  * @description
  *
+ * The EDIMS Entry Type attribute identifies an information object’s type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

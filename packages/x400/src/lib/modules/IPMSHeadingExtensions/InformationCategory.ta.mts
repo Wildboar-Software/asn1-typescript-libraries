@@ -21,6 +21,10 @@ import {
  * @summary InformationCategory
  * @description
  *
+ * One element of the Information Category heading extension (ITU-T X.420 (1999), Annex
+ * A.1.10). At least one component shall be present; if both are used, `reference` is
+ * primary and `description` qualifies it. Semantics are by bilateral agreement.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

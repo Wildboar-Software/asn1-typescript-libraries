@@ -37,6 +37,11 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary message_delivery
  * @description
  *
+ * The Message-delivery abstract-operation enables the MTS to deliver a message to an
+ * MTS-user. The MTS-user shall not refuse delivery of a message unless the delivery would
+ * violate the Delivery-control restrictions then in force. See ITU-T X.411 (1999),
+ * §8.3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

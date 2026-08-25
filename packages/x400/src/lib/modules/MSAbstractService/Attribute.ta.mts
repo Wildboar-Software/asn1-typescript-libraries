@@ -20,6 +20,11 @@ import {
  * @summary Attribute
  * @description
  *
+ * The entries of the Submission, Submission-log, and Draft entry-classes created as a
+ * result of MS-message-submission and MS-probe-submission shall contain the mandatory
+ * attributes indicated in Table 2, and such optional attributes as are supported by the MS
+ * implementation and subscribed to by the MS-user. See ITU-T X.413 (1999), §16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

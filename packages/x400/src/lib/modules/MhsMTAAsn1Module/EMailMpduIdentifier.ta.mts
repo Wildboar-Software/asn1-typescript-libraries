@@ -24,6 +24,8 @@ import {
  * @summary EMailMpduIdentifier
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

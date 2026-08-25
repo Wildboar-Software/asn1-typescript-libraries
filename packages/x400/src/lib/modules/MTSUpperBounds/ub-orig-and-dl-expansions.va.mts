@@ -15,6 +15,8 @@ import {
  * @summary ub_orig_and_dl_expansions
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

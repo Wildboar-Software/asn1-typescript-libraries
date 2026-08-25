@@ -28,6 +28,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary acknowledgment_mode
  * @description
  *
+ * The Acknowledgment Mode receipt field (D manual) identifies the manner in which the RN
+ * was originated. See ITU-T X.420 (1999), §8.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

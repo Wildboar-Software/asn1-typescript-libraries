@@ -15,6 +15,9 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_report_delivery_envelope
  * @description
  *
+ * This general-attribute contains the report-delivery-envelope component of the argument
+ * of the Report-delivery abstract- operation. See ITU-T X.413 (1999), §11.2.70.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

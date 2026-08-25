@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.419 (1999), Annex A.
+ */
 export * from "./id-ac-ms-access-88.va.mjs";
 export * from "./id-ac-ms-access-94.va.mjs";
 export * from "./id-ac-ms-reliable-access-88.va.mjs";

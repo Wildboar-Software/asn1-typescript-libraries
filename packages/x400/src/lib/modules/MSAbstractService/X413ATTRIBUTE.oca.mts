@@ -20,6 +20,8 @@ import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
  * @summary X413ATTRIBUTE
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

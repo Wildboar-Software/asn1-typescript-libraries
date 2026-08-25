@@ -20,6 +20,10 @@ import { id_et_file_transfer } from '../IPMSObjectIdentifiers/id-et-file-transfe
  * @summary file_transfer_body_part_data
  * @description
  *
+ * The data component of the body part contains the file contents being transferred. The
+ * syntax for representation of these contents is implied by the contents-type parameter.
+ * See ITU-T X.420 (1999), §7.4.12.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.420 (1999), §7.
+ */
 export * from "./absence-advice.oa.mjs";
 export * from "./AbsenceAdvice.ta.mjs";
 export * from "./AcknowledgmentModeField.ta.mjs";

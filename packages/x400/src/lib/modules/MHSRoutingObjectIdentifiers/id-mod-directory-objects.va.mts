@@ -19,6 +19,8 @@ import { id_mod } from '../MHSRoutingObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_directory_objects
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

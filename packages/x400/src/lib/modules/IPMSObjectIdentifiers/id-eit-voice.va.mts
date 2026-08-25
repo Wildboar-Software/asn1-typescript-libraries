@@ -15,6 +15,9 @@ import { id_eit } from '../IPMSObjectIdentifiers/id-eit.va.mjs';
  * @summary id_eit_voice
  * @description
  *
+ * A Voice body part represents speech, or other types of audio data such as music. It has
+ * Parameters and Data components. See ITU-T X.420 (1999), §7.4.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

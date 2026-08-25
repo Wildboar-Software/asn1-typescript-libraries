@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RetrievalStatus
  * @description
  *
+ * An important property of each entry in any entry-class is its retrieval-status: See
+ * ITU-T X.413 (1999), §6.3.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

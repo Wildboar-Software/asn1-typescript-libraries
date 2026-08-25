@@ -19,6 +19,10 @@ import {
  * @summary DLExemptedRecipients
  * @description
  *
+ * This argument contains the OR-names of potential recipients that are requested not to be
+ * added to the set of intended recipients as a result of DL-expansion. It may be generated
+ * by the originator of the message. See ITU-T X.411 (1999), §8.2.1.1.1.40.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -27,6 +27,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_retrieval_status
  * @description
  *
+ * See ITU-T X.413 (1999), §6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -33,6 +33,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_edin
  * @description
  *
+ * The Originate EDIN abstract operation originates a message whose content is an EDIN. See
+ * ITU-T X.435 (1999), §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

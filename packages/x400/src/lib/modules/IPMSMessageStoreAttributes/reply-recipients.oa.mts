@@ -30,6 +30,11 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary reply_recipients
  * @description
  *
+ * The Reply Recipients heading field (C) identifies zero or more users and DLs whom the
+ * authorizing users request (but do not demand) be among the recipients of any replies to
+ * the present IPM. It comprises a Sequence of sub-fields, each an OR-descriptor, one for
+ * each user or DL. See ITU-T X.420 (1999), §7.2.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary ub_reason_code
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

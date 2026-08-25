@@ -15,6 +15,9 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_contentIdentifier
  * @description
  *
+ * This argument contains an identifier for the content of the message. It may be generated
+ * by the originator of the message. See ITU-T X.411 (1999), §8.2.1.1.1.35.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

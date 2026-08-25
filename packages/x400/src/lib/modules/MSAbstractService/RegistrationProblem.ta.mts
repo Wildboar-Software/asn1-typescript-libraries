@@ -22,6 +22,8 @@ export enum _enum_for_RegistrationProblem {
  * @summary RegistrationProblem
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

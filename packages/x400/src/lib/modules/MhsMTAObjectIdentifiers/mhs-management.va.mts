@@ -15,6 +15,8 @@ import { ID, _decode_ID, _encode_ID } from '../MhsMTAObjectIdentifiers/ID.ta.mjs
  * @summary mhs_management
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

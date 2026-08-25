@@ -15,6 +15,11 @@ import { id_pt } from '../IPMSObjectIdentifiers/id-pt.va.mjs';
  * @summary id_pt_origination
  * @description
  *
+ * An origination port is the means by which a single user conveys to the IPMS messages
+ * containing information objects of the types defined in section two. Through such a port
+ * the user originates interpersonal messages and receipt notifications. See ITU-T X.420
+ * (1999), §11.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

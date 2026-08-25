@@ -15,6 +15,8 @@ import { id_sec } from '../IPMSObjectIdentifiers/id-sec.va.mjs';
  * @summary id_sec_ipm_security_request
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

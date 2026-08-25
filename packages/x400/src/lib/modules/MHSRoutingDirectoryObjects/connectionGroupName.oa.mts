@@ -26,6 +26,10 @@ import { id_at_connection_group_name } from '../MHSRoutingObjectIdentifiers/id-a
  * @summary connectionGroupName
  * @description
  *
+ * The Connection Group Name attribute type identifies entries of the Connection Group
+ * object class which represent connection-groups that may be used to transfer a message
+ * into, or out of a routing-collective. See ITU-T X.412 (1999), §7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

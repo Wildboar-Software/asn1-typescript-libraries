@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.402 (1999), §18.
+ */
 export * from "./AdministrationDomainName.ta.mjs";
 export * from "./BuiltInDomainDefinedAttributes.ta.mjs";
 export * from "./BuiltInDomainDefinedAttribute.ta.mjs";

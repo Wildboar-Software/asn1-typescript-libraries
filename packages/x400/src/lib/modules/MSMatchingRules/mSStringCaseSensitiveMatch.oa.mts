@@ -20,6 +20,8 @@ import { id_mr_msstring_case_sensitive_match } from '../MSObjectIdentifiers/id-m
  * @summary mSStringCaseSensitiveMatch
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

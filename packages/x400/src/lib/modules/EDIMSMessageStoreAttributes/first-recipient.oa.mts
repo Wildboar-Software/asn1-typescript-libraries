@@ -27,6 +27,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary first_recipient
  * @description
  *
+ * A Recipient identifies the preferred recipient in question. It comprises an OR-name. See
+ * ITU-T X.435 (1999), §8.2.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

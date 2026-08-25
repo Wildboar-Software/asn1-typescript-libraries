@@ -19,6 +19,8 @@ import {
  * @summary ORAddressSubtreeNames
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

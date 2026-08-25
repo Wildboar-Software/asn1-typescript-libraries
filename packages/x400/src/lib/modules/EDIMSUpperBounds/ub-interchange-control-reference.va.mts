@@ -15,6 +15,10 @@ import {
  * @summary ub_interchange_control_reference
  * @description
  *
+ * Indicates the Interchange Control Reference as assigned by the Interchange sender. This
+ * is semantically identical to the "Interchange control reference" of the EDIFACT UNB
+ * segment. See ITU-T X.435 (1999), §8.2.3.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,9 @@ import {
  * @summary Register_MSResult
  * @description
  *
+ * Should the request succeed, the register-MS-result shall be See ITU-T X.413 (1999),
+ * §8.2.5.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

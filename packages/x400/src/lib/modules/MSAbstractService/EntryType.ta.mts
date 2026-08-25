@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EntryType
  * @description
  *
+ * MS entry type INTEGER (ITU-T X.413 (1999), §11): delivered-message, delivered-report,
+ * returned-IPM, etc. Used to filter list/summarize.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

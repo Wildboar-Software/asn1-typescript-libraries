@@ -31,6 +31,12 @@ import {
  * @summary MSSubmissionOptions
  * @description
  *
+ * The MS-submission-options parameter is used to request the creation of an entry in a
+ * specified entry-class, containing attributes derived from the argument and result of the
+ * associated MS-message-submission or MS-probe-submission abstract-operation. Other
+ * components of MS-submission-options control the assignment of further attributes to the
+ * created entry. See ITU-T X.413 (1999), §8.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

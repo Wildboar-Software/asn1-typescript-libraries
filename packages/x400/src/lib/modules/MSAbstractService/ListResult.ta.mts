@@ -30,6 +30,9 @@ import {
  * @summary ListResult
  * @description
  *
+ * Should the request succeed, the list-result will be returned. See ITU-T X.413 (1999),
+ * §8.2.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -28,6 +28,8 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary modify_error
  * @description
  *
+ * A Modify-error reports a problem in an attempt to modify the attributes of an entry.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

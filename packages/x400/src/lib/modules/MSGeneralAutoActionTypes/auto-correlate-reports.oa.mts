@@ -19,6 +19,12 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary auto_correlate_reports
  * @description
  *
+ * The Auto-correlate-reports auto-action enables the MS-user to instruct the MS to
+ * correlate, automatically, delivered- report entries of the Delivery entry-class with the
+ * submitted messages and probes to which they are related. The auto- action also records
+ * each successful invocation of the MS-cancel-deferred-delivery abstract-operation. See
+ * ITU-T X.413 (1999), §13.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

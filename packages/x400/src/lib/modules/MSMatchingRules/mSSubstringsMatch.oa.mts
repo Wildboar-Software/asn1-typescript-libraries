@@ -20,6 +20,8 @@ import { id_mr_ms_substrings_match } from '../MSObjectIdentifiers/id-mr-ms-subst
  * @summary mSSubstringsMatch
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

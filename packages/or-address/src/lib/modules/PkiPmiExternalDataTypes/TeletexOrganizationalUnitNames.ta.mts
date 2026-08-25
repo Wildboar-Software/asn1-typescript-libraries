@@ -10,6 +10,11 @@ import {
  * @summary TeletexOrganizationalUnitNames
  * @description
  *
+ * An organizational-unit-names is a standard attribute that identifies one or more units
+ * (e.g., divisions or departments) of the organization denoted by an organization-name,
+ * each unit but the first being a sub-unit of the units whose names precede it in the
+ * attribute. See ITU-T X.402 (1999), §18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -30,6 +30,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ipm_intended_recipient
  * @description
  *
+ * The IPM Intended Recipient common field (C) identifies the originally specified
+ * recipient which gave rise to the subject IPM's delivery to the IPN's originator. It
+ * comprises an OR-descriptor. See ITU-T X.420 (1999), §8.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

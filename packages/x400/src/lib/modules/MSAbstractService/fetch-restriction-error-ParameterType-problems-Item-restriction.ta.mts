@@ -21,6 +21,8 @@ import {
  * @summary fetch_restriction_error_ParameterType_problems_Item_restriction
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

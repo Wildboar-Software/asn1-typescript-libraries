@@ -28,6 +28,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_deferred_delivery_time
  * @description
  *
+ * This general-attribute contains the deferred-delivery-time argument of the
+ * Message-submission abstract-operation. It indicates the time before which a submitted
+ * message shall not be delivered to its recipient(s). See ITU-T X.413 (1999), §11.2.23.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

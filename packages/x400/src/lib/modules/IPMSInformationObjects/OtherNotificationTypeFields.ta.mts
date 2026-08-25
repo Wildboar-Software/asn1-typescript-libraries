@@ -19,6 +19,8 @@ import {
  * @summary OtherNotificationTypeFields
  * @description
  *
+ * See ITU-T X.420 (1999), §8.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

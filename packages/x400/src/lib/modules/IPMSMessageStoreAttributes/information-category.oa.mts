@@ -27,6 +27,9 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary information_category
  * @description
  *
+ * MS attribute whose values are those of the Information Category heading extension (ITU-T
+ * X.420 (1999), §20 / Annex A.1.10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

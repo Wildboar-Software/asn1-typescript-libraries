@@ -27,6 +27,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary ms_bind_error
  * @description
  *
+ * An MS-bind-error reports a problem in attempting to establish an abstract-association.
+ * It is defined as follows: ms-bind-error See ITU-T X.413 (1999), §7.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

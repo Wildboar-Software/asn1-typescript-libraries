@@ -24,6 +24,9 @@ import {
  * @summary EDIM
  * @description
  *
+ * EDI message: heading plus body (ITU-T X.435 (1999), §8). Body parts carry EDI
+ * interchange data; order is the originator's order.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

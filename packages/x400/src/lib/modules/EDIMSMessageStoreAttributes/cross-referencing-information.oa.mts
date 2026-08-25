@@ -27,6 +27,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary cross_referencing_information
  * @description
  *
+ * The Cross Referencing Information allows an EDI application to reference individual body
+ * parts within the same EDIM and within other EDIMs. It contains a set of cross reference
+ * data. See ITU-T X.435 (1999), §8.2.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

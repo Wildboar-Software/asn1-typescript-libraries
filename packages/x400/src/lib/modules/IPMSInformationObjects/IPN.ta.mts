@@ -56,6 +56,10 @@ import {
  * @summary IPN
  * @description
  *
+ * Interpersonal notification CHOICE: `non-receipt-notification` (NRN),
+ * `receipt-notification` (RN), or `other-notification` (ON) (ITU-T X.420 (1999), §8).
+ * Which alternative is present drives required heading fields on the subject IPM.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ import {
  * @summary RestrictedDelivery
  * @description
  *
+ * This argument indicates the OR-names of other MTS-users from whom the MTS-user is
+ * willing (or unwilling) to receive messages, if restricted-delivery is to be changed. It
+ * comprises an ordered list of restrictions. See ITU-T X.411 (1999), §8.4.1.1.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

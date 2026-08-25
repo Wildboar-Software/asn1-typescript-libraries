@@ -19,6 +19,8 @@ import {
  * @summary OriginatorToken
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

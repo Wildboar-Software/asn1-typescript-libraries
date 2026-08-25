@@ -15,6 +15,8 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_maxSizeMprPassingFunction
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (MTA managed objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

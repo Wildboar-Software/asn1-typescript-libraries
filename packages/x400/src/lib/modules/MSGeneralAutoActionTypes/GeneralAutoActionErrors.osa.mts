@@ -19,6 +19,12 @@ import { message_group_error } from '../MSAbstractService/message-group-error.oa
  * @summary GeneralAutoActionErrors
  * @description
  *
+ * The Auto-action-log entry-class provides a record of the auto-actions performed by the
+ * MS (see 6.3.7.3), and is available to the MS-user subject to subscription. The
+ * definition of an auto-action-type specifies whether execution of that auto- action may
+ * result in the generation of an entry in the Auto-action-log entry-class. See ITU-T X.413
+ * (1999), §6.5.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

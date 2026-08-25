@@ -15,6 +15,8 @@ import { id_crt } from '../MSObjectIdentifiers/id-crt.va.mjs';
  * @summary id_crt_ms_access_88
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

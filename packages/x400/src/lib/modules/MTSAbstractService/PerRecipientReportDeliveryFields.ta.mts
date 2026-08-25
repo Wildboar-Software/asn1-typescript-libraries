@@ -45,6 +45,8 @@ import {
  * @summary PerRecipientReportDeliveryFields
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

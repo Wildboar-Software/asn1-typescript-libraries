@@ -22,6 +22,8 @@ import {
  * @summary IA5TextParameters
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

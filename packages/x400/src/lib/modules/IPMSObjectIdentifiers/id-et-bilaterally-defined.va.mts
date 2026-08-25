@@ -15,6 +15,10 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_bilaterally_defined
  * @description
  *
+ * A Bilaterally Defined body part represents an information object whose semantics and
+ * abstract syntax are bilaterally agreed by the IPM's originator and all of its potential
+ * recipients. It comprises an Octet String. See ITU-T X.420 (1999), §7.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

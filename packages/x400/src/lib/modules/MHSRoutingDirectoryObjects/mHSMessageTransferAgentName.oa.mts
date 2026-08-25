@@ -22,6 +22,8 @@ import { id_at_mhs_message_transfer_agent } from '../MHSRoutingObjectIdentifiers
  * @summary mHSMessageTransferAgentName
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

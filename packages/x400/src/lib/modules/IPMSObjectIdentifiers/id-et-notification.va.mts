@@ -15,6 +15,9 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_notification
  * @description
  *
+ * A Notification body part represents an IPN and, optionally, its delivery envelope. It
+ * has Parameters and Data components. See ITU-T X.420 (1999), §7.4.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

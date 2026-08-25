@@ -26,6 +26,10 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary related_messages
  * @description
  *
+ * Identifies messages, EDIMs or other (for example IPMs), that the originator of this EDIM
+ * considers related to it. It comprises a sequence of one or more message references, one
+ * for each related message. See ITU-T X.435 (1999), §8.2.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

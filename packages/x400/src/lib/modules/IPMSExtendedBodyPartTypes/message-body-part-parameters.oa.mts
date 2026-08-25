@@ -20,6 +20,8 @@ import { id_ep_message } from '../IPMSObjectIdentifiers/id-ep-message.va.mjs';
  * @summary message_body_part_parameters
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

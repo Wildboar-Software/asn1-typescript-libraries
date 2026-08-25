@@ -1,71 +1,12 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
-import {
-    ExtensionAttribute,
-    _decode_ExtensionAttribute,
-    _encode_ExtensionAttribute,
-} from '../MTSAbstractService/ExtensionAttribute.ta.mjs';
 /**
- * @summary ExtensionAttributes
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ExtensionAttributes  ::=
- *   SET SIZE (1..ub-extension-attributes) OF ExtensionAttribute
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type ExtensionAttributes = ExtensionAttribute[]; // SetOfType
+export type {
+    ExtensionAttributes,
+} from "@wildboar/or-address";
+export {
+    _decode_ExtensionAttributes,
+    _encode_ExtensionAttributes,
+} from "@wildboar/or-address";
 
-let _cached_decoder_for_ExtensionAttributes: $.ASN1Decoder<ExtensionAttributes> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ExtensionAttributes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ExtensionAttributes} The decoded data structure.
- */
-export function _decode_ExtensionAttributes(el: _Element): ExtensionAttributes {
-    if (!_cached_decoder_for_ExtensionAttributes) {
-        _cached_decoder_for_ExtensionAttributes = $._decodeSetOf<ExtensionAttribute>(
-            () => _decode_ExtensionAttribute
-        );
-    }
-    return _cached_decoder_for_ExtensionAttributes(el);
-}
-
-let _cached_encoder_for_ExtensionAttributes: $.ASN1Encoder<ExtensionAttributes> | null = null;
-
-/**
- * @summary Encodes a(n) ExtensionAttributes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExtensionAttributes, encoded as an ASN.1 Element.
- */
-export function _encode_ExtensionAttributes(
-    value: ExtensionAttributes,
-    elGetter: $.ASN1Encoder<ExtensionAttributes>
-): _Element {
-    if (!_cached_encoder_for_ExtensionAttributes) {
-        _cached_encoder_for_ExtensionAttributes = $._encodeSetOf<ExtensionAttribute>(
-            () => _encode_ExtensionAttribute,
-            $.BER
-        );
-    }
-    return _cached_encoder_for_ExtensionAttributes(value, elGetter);
-}
-
-
-/* eslint-enable */

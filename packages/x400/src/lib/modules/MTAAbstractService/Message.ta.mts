@@ -24,6 +24,10 @@ import {
  * @summary Message
  * @description
  *
+ * MTS message: envelope plus `Content` OCTET STRING (ITU-T X.411 (1999), §8.2). The
+ * content octets are the encoding of an application-specific information object (e.g. an
+ * IPM) whose type is identified by `content-type`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

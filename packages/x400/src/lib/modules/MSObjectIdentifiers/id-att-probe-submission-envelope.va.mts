@@ -15,6 +15,9 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_probe_submission_envelope
  * @description
  *
+ * This general-attribute contains the envelope component of the argument of the
+ * Probe-submission abstract-operation. See ITU-T X.413 (1999), §11.2.63.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import {
  * @summary ub_auto_actions
  * @description
  *
+ * An auto-action is an action performed automatically by the MS whenever the conditions
+ * defined for its performance are satisfied. These conditions are registered with the MS
+ * either by subscription, or by means of the Register-MS abstract- operation (see 8.2.5).
+ * See ITU-T X.413 (1999), §6.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

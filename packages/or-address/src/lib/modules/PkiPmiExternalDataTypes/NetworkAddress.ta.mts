@@ -11,6 +11,12 @@ import {
  * @summary NetworkAddress
  * @description
  *
+ * Built-in `network-address` is an X.121 NumericString (ITU-T X.402 (1999), §18.3.7 a).
+ * X.121 strings may include Telex/telephone numbers with a leading escape digit. MHS
+ * carries 16 digits, allowing escape + 15-digit E.164; mapping to protocols limited to 14
+ * digits is a local matter. E.164 two-string and PSAP forms are **not** this type — use
+ * extension `extended-network-address`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

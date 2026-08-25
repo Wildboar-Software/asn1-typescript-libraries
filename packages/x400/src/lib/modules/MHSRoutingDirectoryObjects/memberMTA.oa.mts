@@ -26,6 +26,11 @@ import { id_at_member_mta } from '../MHSRoutingObjectIdentifiers/id-at-member-mt
  * @summary memberMTA
  * @description
  *
+ * The Member MTA attribute type identifies the MTAs that are members of an enumerated
+ * connection-group. This attribute shall be present in entries of the Connection Group
+ * object class if the Enumerated Flag attribute has the value true, and shall be absent
+ * otherwise. See ITU-T X.412 (1999), §7.2.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

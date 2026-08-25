@@ -19,6 +19,8 @@ import { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va.mjs';
  * @summary id_as_ms_94
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

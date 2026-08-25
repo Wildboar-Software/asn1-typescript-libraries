@@ -26,6 +26,12 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_security_label
  * @description
  *
+ * This general-attribute contains the message-security-label argument of the
+ * Message-submission, Probe-submission, Message-delivery, and Report-delivery
+ * abstract-operations. It comprises a set of security attributes which may include a
+ * security-policy-identifier, a security-classification, a privacy-mark, and a set of
+ * security-categories. See ITU-T X.413 (1999), §11.2.41.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

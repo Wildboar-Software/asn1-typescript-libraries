@@ -28,6 +28,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary notification_time
  * @description
  *
+ * Notification Time contains the date and time, in UTC format, at which the notification
+ * for the subject EDIM was generated.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

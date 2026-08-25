@@ -29,6 +29,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary sensitivity
  * @description
  *
+ * The Sensitivity heading field (C) identifies the sensitivity that the authorizing users
+ * attribute to the message. See ITU-T X.420 (1999), §7.2.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

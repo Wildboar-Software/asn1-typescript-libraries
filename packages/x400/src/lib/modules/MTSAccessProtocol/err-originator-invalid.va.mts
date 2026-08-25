@@ -18,6 +18,8 @@ import {
  * @summary err_originator_invalid
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

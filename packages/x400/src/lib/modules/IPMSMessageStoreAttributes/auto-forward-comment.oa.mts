@@ -28,6 +28,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary auto_forward_comment
  * @description
  *
+ * The Auto-forward Comment non-receipt field (C) is information pre-supplied for this
+ * purpose by the NRN's originator. It comprises a Printable String[ of from zero to a
+ * prescribed number of characters (see annex L), chosen from the Printable String
+ * character set|]. See ITU-T X.420 (1999), §8.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

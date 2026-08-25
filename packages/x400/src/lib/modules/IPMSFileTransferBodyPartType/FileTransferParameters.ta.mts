@@ -48,6 +48,8 @@ import { Contents_Type_Attribute_document_type } from './Contents-Type-Attribute
  * @summary FileTransferParameters
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

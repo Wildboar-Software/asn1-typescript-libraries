@@ -34,6 +34,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_probe
  * @description
  *
+ * The Originate Probe abstract operation originates a probe concerning (a class of)
+ * messages whose contents are IPMs. See ITU-T X.420 (1999), §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_msBindArguments
  * @description
  *
+ * Table 1 lists the arguments of the MTS-bind, and for each argument qualifies its
+ * presence and indicates the clause in which the argument is defined. Table 1 – MTS-bind
+ * Arguments 8.1.1.1.1.1 Initiator-name This argument contains a name for the initiator of
+ * the association. See ITU-T X.411 (1999), §8.1.1.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_teletex
  * @description
  *
+ * A Teletex body part represents a Teletex document. It has Parameters and Data
+ * components. See ITU-T X.420 (1999), §7.4.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

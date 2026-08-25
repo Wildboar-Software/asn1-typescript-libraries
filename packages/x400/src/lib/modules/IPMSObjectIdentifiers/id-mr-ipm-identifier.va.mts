@@ -15,6 +15,9 @@ import { id_mr } from '../IPMSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_ipm_identifier
  * @description
  *
+ * An IPM identifier is an information item that unambiguously and uniquely identifies an
+ * IPM. See ITU-T X.420 (1999), §7.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

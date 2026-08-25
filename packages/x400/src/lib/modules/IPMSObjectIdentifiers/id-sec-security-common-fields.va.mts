@@ -15,6 +15,8 @@ import { id_sec } from '../IPMSObjectIdentifiers/id-sec.va.mjs';
  * @summary id_sec_security_common_fields
  * @description
  *
+ * The common fields are defined and described See ITU-T X.420 (1999), §8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.420 (1999), Annex A.
+ */
 export * from "./id-aae-auto-discard-error.va.mjs";
 export * from "./id-aae-auto-forwarding-loop.va.mjs";
 export * from "./id-aae-duplicate-ipn.va.mjs";

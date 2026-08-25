@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.411 (1999), accounting objects.
+ */
 export * from "./id-accounting.va.mjs";
 export * from "./id-action.va.mjs";
 export * from "./id-attribute-accessRatePerDeliveryServiceType.va.mjs";

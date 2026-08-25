@@ -15,6 +15,8 @@ import { id_edi } from '../EDIMSObjectIdentifiers/id-edi.va.mjs';
  * @summary id_edi_compression_v42bis
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

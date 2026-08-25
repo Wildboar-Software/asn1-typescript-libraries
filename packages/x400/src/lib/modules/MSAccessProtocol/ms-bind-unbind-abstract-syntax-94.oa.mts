@@ -20,6 +20,8 @@ import { id_as_ms_94 } from '../MHSProtocolObjectIdentifiers/id-as-ms-94.va.mjs'
  * @summary ms_bind_unbind_abstract_syntax_94
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

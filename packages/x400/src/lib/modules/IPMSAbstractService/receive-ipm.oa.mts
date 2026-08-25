@@ -27,6 +27,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_ipm
  * @description
  *
+ * The Receive IPM abstract operation receives a message whose content is an IPM. See ITU-T
+ * X.420 (1999), §12.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

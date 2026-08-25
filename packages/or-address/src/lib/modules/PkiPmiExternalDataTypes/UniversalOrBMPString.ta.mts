@@ -15,6 +15,13 @@ import {
  * @summary UniversalOrBMPString
  * @description
  *
+ * Universal-string wrapper (ITU-T X.402 (1999), §18.2): BMP (`two-octets`) if the value is
+ * in the Basic Multilingual Plane, else `four-octets` UniversalString. Optional
+ * `iso-639-language-code` is ISO 639 (2 chars) optionally plus space plus ISO 3166 country
+ * (5 chars), e.g. `en`, `en US`. **Language codes shall be disregarded when comparing
+ * OR-addresses** (X.402 §18.2). Universal-only values should be used only when recipients
+ * can render the characters.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +43,12 @@ export class UniversalOrBMPString {
         readonly character_encoding: UniversalOrBMPString_character_encoding,
         /**
          * @summary `iso_639_language_code`.
+         * @description
+         *
+         * ISO 639 language (2 chars) optionally plus space plus ISO 3166
+         * country (5 chars). **Ignored when comparing OR-addresses** (ITU-T
+         * X.402 (1999), §18.2).
+         *
          * @public
          * @readonly
          */

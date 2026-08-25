@@ -20,6 +20,11 @@ import { type TOKEN } from '../MTSAbstractService/TOKEN.oca.mjs';
  * @summary asymmetric_token
  * @description
  *
+ * A token may be used to convey to the recipient of the token protected security-relevant
+ * information. The token provides authentication of public security-relevant information,
+ * and confidentiality and authentication of secret security-relevant information. See
+ * ITU-T X.411 (1999), §8.5.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

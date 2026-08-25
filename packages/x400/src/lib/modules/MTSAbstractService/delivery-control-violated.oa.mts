@@ -25,6 +25,11 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary delivery_control_violated
  * @description
  *
+ * The Delivery-control-violated abstract-error reports the violation by the MTS of a
+ * control on delivery-port abstract-operations imposed by the MTS-user via the
+ * Delivery-control abstract-operation. The Deliver-control-violated abstract-error has no
+ * parameters. See ITU-T X.411 (1999), §8.3.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary NonMessageBodyPartSynopsis
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (§19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

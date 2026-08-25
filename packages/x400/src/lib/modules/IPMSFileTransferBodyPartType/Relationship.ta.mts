@@ -20,6 +20,8 @@ import {
  * @summary Relationship
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

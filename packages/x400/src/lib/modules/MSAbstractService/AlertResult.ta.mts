@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AlertResult
  * @description
  *
+ * Should the request succeed, the alert-result will be returned.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,8 @@ import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
  * @summary mts
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

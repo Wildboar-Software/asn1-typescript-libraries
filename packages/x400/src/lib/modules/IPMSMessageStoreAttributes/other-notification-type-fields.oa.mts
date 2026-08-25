@@ -26,6 +26,9 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary other_notification_type_fields
  * @description
  *
+ * The other notification type fields are defined and described See ITU-T X.420 (1999),
+ * §8.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

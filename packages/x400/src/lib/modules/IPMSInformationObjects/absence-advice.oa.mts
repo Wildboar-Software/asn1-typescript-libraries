@@ -20,6 +20,12 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary absence_advice
  * @description
  *
+ * The Absence Advice advice notification field (O) indicates that the AN’s originator is
+ * unable to receive the IPM at the present time. It contains information previously
+ * supplied for the purpose by the AN’s originator, and comprises an IPM body part, and,
+ * optionally, the time at which the user may next be available to take receipt of IPMs.
+ * See ITU-T X.420 (1999), §8.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

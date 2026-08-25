@@ -14,6 +14,9 @@ import { type OPERATION } from '@wildboar/rose';
  * @summary ABSTRACT_OPERATION
  * @description
  *
+ * ROSE `OPERATION` alias used by MTS, MS, and IPMS abstract operations. See ITU-T X.411
+ * (1999).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

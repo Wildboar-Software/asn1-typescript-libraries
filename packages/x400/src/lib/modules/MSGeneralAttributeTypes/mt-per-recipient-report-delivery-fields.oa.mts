@@ -26,6 +26,9 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary mt_per_recipient_report_delivery_fields
  * @description
  *
+ * This general-attribute, which is multi-valued, contains the per-recipient-fields
+ * component of the Report-delivery- envelope. See ITU-T X.413 (1999), §11.2.60.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_other_notification_type_fields
  * @description
  *
+ * The other notification type fields are defined and described See ITU-T X.420 (1999),
+ * §8.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

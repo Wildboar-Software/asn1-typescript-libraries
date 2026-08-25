@@ -20,6 +20,12 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary submission
  * @description
  *
+ * The Message-submission abstract-operation enables an MTS-user to submit a message to the
+ * MTS for transfer and delivery to one or more recipient MTS-users. The successful
+ * completion of the abstract-operation signifies that the MTS has accepted responsibility
+ * for the message (but not that it has yet delivered it to its intended recipients). See
+ * ITU-T X.411 (1999), §8.2.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

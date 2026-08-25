@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PerMessageIndicators
  * @description
  *
+ * Per-message submission/delivery indicators (ITU-T X.411 (1999), §8 / Annex A).
+ * `disclosure-of-other-recipients` and `content-return-request` are ignored for
+ * Probe-submission. Bits 5 and 6 together encode content-specific notification types 1–3
+ * (mapping is in the relevant content specification). `service-message` is used only by
+ * bilateral agreement.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,96 +60,172 @@ export type PerMessageIndicators = BIT_STRING;
 
 /**
  * @summary PerMessageIndicators_disclosure_of_other_recipients
+ * @description
+ *
+ * One: request disclosing other recipients to each recipient. Zero: prohibited. Ignored
+ * for Probe-submission.
+ *
  * @constant
  */
 export const PerMessageIndicators_disclosure_of_other_recipients: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary disclosure_of_other_recipients
+ * @description
+ *
+ * One: request disclosing other recipients to each recipient. Zero: prohibited. Ignored
+ * for Probe-submission.
+ *
  * @constant
  */
 export const disclosure_of_other_recipients: number = PerMessageIndicators_disclosure_of_other_recipients; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerMessageIndicators_implicit_conversion_prohibited
+ * @description
+ *
+ * One: implicit conversion prohibited. Zero: implicit conversion allowed.
+ *
  * @constant
  */
 export const PerMessageIndicators_implicit_conversion_prohibited: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary implicit_conversion_prohibited
+ * @description
+ *
+ * One: implicit conversion prohibited. Zero: implicit conversion allowed.
+ *
  * @constant
  */
 export const implicit_conversion_prohibited: number = PerMessageIndicators_implicit_conversion_prohibited; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerMessageIndicators_alternate_recipient_allowed
+ * @description
+ *
+ * One: alternate recipient allowed. Zero: alternate recipient prohibited.
+ *
  * @constant
  */
 export const PerMessageIndicators_alternate_recipient_allowed: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary alternate_recipient_allowed
+ * @description
+ *
+ * One: alternate recipient allowed. Zero: alternate recipient prohibited.
+ *
  * @constant
  */
 export const alternate_recipient_allowed: number = PerMessageIndicators_alternate_recipient_allowed; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerMessageIndicators_content_return_request
+ * @description
+ *
+ * One: content return requested. Zero: not requested. Ignored for Probe-submission.
+ *
  * @constant
  */
 export const PerMessageIndicators_content_return_request: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary content_return_request
+ * @description
+ *
+ * One: content return requested. Zero: not requested. Ignored for Probe-submission.
+ *
  * @constant
  */
 export const content_return_request: number = PerMessageIndicators_content_return_request; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerMessageIndicators_reserved
+ * @description
+ *
+ * Reserved by MOTIS 1986.
+ *
  * @constant
  */
 export const PerMessageIndicators_reserved: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary reserved
+ * @description
+ *
+ * Reserved by MOTIS 1986.
+ *
  * @constant
  */
 export const reserved: number = PerMessageIndicators_reserved; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerMessageIndicators_bit_5
+ * @description
+ *
+ * With bit 6, encodes notification type: type-1 = bit 5 zero and bit 6 one; type-2 = bit 5
+ * one and bit 6 zero; type-3 = both one. Mapping onto content-specific notification types
+ * is in the relevant content specification.
+ *
  * @constant
  */
 export const PerMessageIndicators_bit_5: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary bit_5
+ * @description
+ *
+ * With bit 6, encodes notification type: type-1 = bit 5 zero and bit 6 one; type-2 = bit 5
+ * one and bit 6 zero; type-3 = both one. Mapping onto content-specific notification types
+ * is in the relevant content specification.
+ *
  * @constant
  */
 export const bit_5: number = PerMessageIndicators_bit_5; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerMessageIndicators_bit_6
+ * @description
+ *
+ * With bit 5, encodes notification type: type-1 = bit 5 zero and bit 6 one; type-2 = bit 5
+ * one and bit 6 zero; type-3 = both one. Mapping onto content-specific notification types
+ * is in the relevant content specification.
+ *
  * @constant
  */
 export const PerMessageIndicators_bit_6: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary bit_6
+ * @description
+ *
+ * With bit 5, encodes notification type: type-1 = bit 5 zero and bit 6 one; type-2 = bit 5
+ * one and bit 6 zero; type-3 = both one. Mapping onto content-specific notification types
+ * is in the relevant content specification.
+ *
  * @constant
  */
 export const bit_6: number = PerMessageIndicators_bit_6; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PerMessageIndicators_service_message
+ * @description
+ *
+ * The message content is for service purposes; it may be a notification related to a
+ * service message. Used only by bilateral agreement.
+ *
  * @constant
  */
 export const PerMessageIndicators_service_message: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary service_message
+ * @description
+ *
+ * The message content is for service purposes; it may be a notification related to a
+ * service message. Used only by bilateral agreement.
+ *
  * @constant
  */
 export const service_message: number = PerMessageIndicators_service_message; /* SHORT_NAMED_BIT */

@@ -17,6 +17,8 @@ import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
  * @summary prevent_nrn_generation
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

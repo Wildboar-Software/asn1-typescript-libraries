@@ -27,6 +27,12 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary certificate_selectors_override
  * @description
  *
+ * This argument contains information sufficient to identify one certificate where a user
+ * has more than one certificate with the same algorithm-identifier. It allows a
+ * certificate of the originator to be identified to validate specific digital signatures
+ * within the content-integrity-check or message-token arguments, or to be used for key
+ * agreement for encryption. See ITU-T X.411 (1999), §8.2.1.1.1.44.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

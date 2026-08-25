@@ -9,6 +9,11 @@ import {
  * @summary universal_extension_physical_delivery_address_components
  * @description
  *
+ * OR-address extension attribute for the Universal encoding of
+ * `extension-physical-delivery-address-components` (ITU-T X.402 (1999), §18.3.5; X.411
+ * (1999), Annex A). Printable, Teletex and Universal encodings of the same value are
+ * equivalent for comparison (X.402 §18.4). Universal language codes are ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

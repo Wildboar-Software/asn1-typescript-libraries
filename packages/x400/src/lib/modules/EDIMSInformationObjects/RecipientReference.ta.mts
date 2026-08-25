@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RecipientReference
  * @description
  *
+ * The Recipient Reference identifies a reference meaningful to the recipient’s EDI
+ * application. This is semantically identical to the "Recipient’s Reference, Password" of
+ * the EDIFACT UNB segment. See ITU-T X.435 (1999), §8.2.3.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

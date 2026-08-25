@@ -15,6 +15,10 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_content_confidentiality_algorithm_identifier
  * @description
  *
+ * This general-attribute contains the content-confidentiality-algorithm-identifier
+ * argument of the Message-submission and Message-delivery abstract-operations. See ITU-T
+ * X.413 (1999), §11.2.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,11 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary ms_auto_action_registration_identifier
  * @description
  *
+ * This general-attribute indicates the registration-identifier of the auto-action whose
+ * execution is the subject of this entry in the Auto-action-log entry-class. The
+ * registered auto-action is identified by this attribute combined with the corresponding
+ * value of the auto-action-type general-attribute. See ITU-T X.413 (1999), §11.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

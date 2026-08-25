@@ -20,6 +20,8 @@ import { id_as_mrse_94 } from '../MHSProtocolObjectIdentifiers/id-as-mrse-94.va.
  * @summary message_retrieval_abstract_syntax_94
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

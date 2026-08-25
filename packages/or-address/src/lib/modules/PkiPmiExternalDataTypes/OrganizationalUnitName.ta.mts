@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OrganizationalUnitName
  * @description
  *
+ * One PrintableString unit name (SIZE 1..32). See `OrganizationalUnitNames` for sequence
+ * order (ITU-T X.402 (1999), §18.3.10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

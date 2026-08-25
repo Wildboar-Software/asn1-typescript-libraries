@@ -26,6 +26,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_submission_envelope
  * @description
  *
+ * This general-attribute contains the envelope component of the argument of the
+ * Message-submission abstract-operation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

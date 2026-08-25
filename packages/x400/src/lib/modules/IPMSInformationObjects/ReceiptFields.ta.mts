@@ -37,6 +37,8 @@ import {
  * @summary ReceiptFields
  * @description
  *
+ * The non-receipt fields are defined and described below. See ITU-T X.420 (1999), §8.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

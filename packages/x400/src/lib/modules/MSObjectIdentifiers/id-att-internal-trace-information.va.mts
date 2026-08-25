@@ -15,6 +15,11 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_internal_trace_information
  * @description
  *
+ * This general-attribute, which is multi-valued, documents the actions taken on the
+ * message (or probe or report) by each MTA through which it passed as it transferred
+ * within an MD. It is generated from the Message-delivery-envelope and the
+ * Report-delivery-envelope. See ITU-T X.413 (1999), §11.2.31.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

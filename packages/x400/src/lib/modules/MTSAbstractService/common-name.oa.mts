@@ -1,46 +1,8 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import {
-    CommonName,
-    _decode_CommonName,
-    _encode_CommonName,
-} from '../MTSAbstractService/CommonName.ta.mjs';
-import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
- * @summary common_name
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * common-name EXTENSION-ATTRIBUTE ::= {CommonName
- *                                      IDENTIFIED BY  1
- * }
- * ```
- *
- * @constant
- * @type {EXTENSION_ATTRIBUTE<CommonName>}
- * @implements {EXTENSION_ATTRIBUTE<CommonName>}
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const common_name: EXTENSION_ATTRIBUTE<CommonName> = {
-    class: 'EXTENSION-ATTRIBUTE',
-    decoderFor: {
-        '&Type': _decode_CommonName,
-    },
-    encoderFor: {
-        '&Type': _encode_CommonName,
-    },
-    '&id': 1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-    '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-};
+export {
+    common_name,
+} from "@wildboar/or-address";
 
-/* eslint-enable */

@@ -15,6 +15,8 @@ import { id_moc } from '../MhsAcctObjectIdentifiers/id-moc.va.mjs';
  * @summary id_moc_maseEventRecord
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

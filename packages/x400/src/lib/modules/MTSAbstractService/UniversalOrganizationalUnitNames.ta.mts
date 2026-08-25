@@ -1,74 +1,12 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
-import {
-    UniversalOrganizationalUnitName,
-    _decode_UniversalOrganizationalUnitName,
-    _encode_UniversalOrganizationalUnitName,
-} from '../MTSAbstractService/UniversalOrganizationalUnitName.ta.mjs';
 /**
- * @summary UniversalOrganizationalUnitNames
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * UniversalOrganizationalUnitNames  ::=
- *   SEQUENCE SIZE (1..ub-organizational-units) OF UniversalOrganizationalUnitName
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type UniversalOrganizationalUnitNames = UniversalOrganizationalUnitName[]; // SequenceOfType
+export type {
+    UniversalOrganizationalUnitNames,
+} from "@wildboar/or-address";
+export {
+    _decode_UniversalOrganizationalUnitNames,
+    _encode_UniversalOrganizationalUnitNames,
+} from "@wildboar/or-address";
 
-let _cached_decoder_for_UniversalOrganizationalUnitNames: $.ASN1Decoder<UniversalOrganizationalUnitNames> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UniversalOrganizationalUnitNames
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {UniversalOrganizationalUnitNames} The decoded data structure.
- */
-export function _decode_UniversalOrganizationalUnitNames(el: _Element): UniversalOrganizationalUnitNames {
-    if (!_cached_decoder_for_UniversalOrganizationalUnitNames) {
-        _cached_decoder_for_UniversalOrganizationalUnitNames = $._decodeSequenceOf<UniversalOrganizationalUnitName>(
-            () => _decode_UniversalOrganizationalUnitName
-        );
-    }
-    return _cached_decoder_for_UniversalOrganizationalUnitNames(el);
-}
-
-let _cached_encoder_for_UniversalOrganizationalUnitNames: $.ASN1Encoder<UniversalOrganizationalUnitNames> | null = null;
-
-/**
- * @summary Encodes a(n) UniversalOrganizationalUnitNames into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UniversalOrganizationalUnitNames, encoded as an ASN.1 Element.
- */
-export function _encode_UniversalOrganizationalUnitNames(
-    value: UniversalOrganizationalUnitNames,
-    elGetter: $.ASN1Encoder<UniversalOrganizationalUnitNames>
-): _Element {
-    if (!_cached_encoder_for_UniversalOrganizationalUnitNames) {
-        _cached_encoder_for_UniversalOrganizationalUnitNames = $._encodeSequenceOf<UniversalOrganizationalUnitName>(
-            () => _encode_UniversalOrganizationalUnitName,
-            $.BER
-        );
-    }
-    return _cached_encoder_for_UniversalOrganizationalUnitNames(
-        value,
-        elGetter
-    );
-}
-
-
-/* eslint-enable */

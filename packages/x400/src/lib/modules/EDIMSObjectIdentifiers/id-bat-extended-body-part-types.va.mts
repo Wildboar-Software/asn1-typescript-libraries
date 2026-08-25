@@ -15,6 +15,10 @@ import { id_bat } from '../EDIMSObjectIdentifiers/id-bat.va.mjs';
  * @summary id_bat_extended_body_part_types
  * @description
  *
+ * The types of body parts that may appear in the Body of an EDIM are defined and described
+ * below. 8.3.1 EDI Body Part An EDI Body Part carries a single EDI Interchange. See ITU-T
+ * X.435 (1999), §8.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

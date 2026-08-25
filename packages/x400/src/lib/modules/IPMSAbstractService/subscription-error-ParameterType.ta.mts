@@ -20,6 +20,8 @@ import {
  * @summary subscription_error_ParameterType
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

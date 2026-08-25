@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SubmittedReplyStatus
  * @description
  *
+ * The AC Submitted Reply Status attribute indicates whether a reply to a delivered IPM was
+ * requested and whether one has been sent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

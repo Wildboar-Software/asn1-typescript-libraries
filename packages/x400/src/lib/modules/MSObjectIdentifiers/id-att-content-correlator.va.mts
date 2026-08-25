@@ -15,6 +15,10 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_content_correlator
  * @description
  *
+ * This general-attribute contains the content-correlator argument of the
+ * Message-submission, Probe-submission, and Report-delivery abstract-operations. See ITU-T
+ * X.413 (1999), §11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

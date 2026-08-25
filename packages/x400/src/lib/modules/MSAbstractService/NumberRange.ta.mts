@@ -20,6 +20,9 @@ import {
  * @summary NumberRange
  * @description
  *
+ * A range parameter is used to select a contiguous sequence of entries of a specified See
+ * ITU-T X.413 (1999), §8.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

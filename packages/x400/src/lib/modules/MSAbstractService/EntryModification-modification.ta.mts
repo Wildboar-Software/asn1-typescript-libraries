@@ -30,6 +30,8 @@ import {
  * @summary EntryModification_modification
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

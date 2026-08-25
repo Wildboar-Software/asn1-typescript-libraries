@@ -29,6 +29,11 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary forwarded_content_token
  * @description
  *
+ * The Originator forwarded content token MS-submission-extension is used where the
+ * submitted message contains a Forwarded Content Token (see B.6.2) that has been encrypted
+ * such that it cannot subsequently be decrypted by the originator. See ITU-T X.420 (1999),
+ * §19.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

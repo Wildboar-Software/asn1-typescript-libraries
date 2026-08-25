@@ -19,6 +19,9 @@ import {
  * @summary LatestDeliveryTime
  * @description
  *
+ * After this time the MTS shall not deliver (ITU-T X.411 (1999), Annex A, extension 5).
+ * Recommended criticality `for-delivery`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

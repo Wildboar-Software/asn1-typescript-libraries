@@ -15,6 +15,11 @@ import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
  * @summary id_package_probeSubmission
  * @description
  *
+ * The Probe-submission abstract-operation enables an MTS-user to submit a probe in order
+ * to determine whether or not a message (the subject-message) could be transferred and
+ * delivered to one or more recipient MTS-users if it were to be submitted. See ITU-T X.411
+ * (1999), §8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import {
  * @summary ub_mta_name_length
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

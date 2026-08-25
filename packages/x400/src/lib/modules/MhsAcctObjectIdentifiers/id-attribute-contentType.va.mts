@@ -15,6 +15,9 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_contentType
  * @description
  *
+ * This argument identifies the type of the content of the message. It identifies the
+ * abstract syntax and the encoding rules used. See ITU-T X.411 (1999), §8.2.1.1.1.34.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

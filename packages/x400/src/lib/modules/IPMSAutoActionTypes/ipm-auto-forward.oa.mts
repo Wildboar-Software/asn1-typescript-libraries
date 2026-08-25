@@ -35,6 +35,11 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary ipm_auto_forward
  * @description
  *
+ * The IPM auto-forward auto-action enables the IPMS-MS-user to instruct the IPMS-MS to
+ * forward, automatically, any subsequently delivered information object (i.e., message or
+ * report) to another recipient or recipients. The auto-action is performed when an
+ * information object is delivered to the IPMS-MS. See ITU-T X.420 (1999), §19.8.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

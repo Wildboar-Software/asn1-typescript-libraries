@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.435 (1999), Annex A.
+ */
 export * from "./id-aae-duplicate-edin.va.mjs";
 export * from "./id-aae-edi-auto-forwarding-loop.va.mjs";
 export * from "./id-aae.va.mjs";

@@ -20,6 +20,8 @@ import { id_et_g3_facsimile } from '../IPMSObjectIdentifiers/id-et-g3-facsimile.
  * @summary g3_facsimile_body_part_data
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

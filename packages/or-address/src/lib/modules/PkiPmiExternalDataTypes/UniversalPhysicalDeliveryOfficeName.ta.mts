@@ -10,6 +10,10 @@ import {
  * @summary UniversalPhysicalDeliveryOfficeName
  * @description
  *
+ * A physical-delivery-office-name is a standard attribute that identifies the city,
+ * village, etc. in which is situated the post office through which a user takes delivery
+ * of physical messages. See ITU-T X.402 (1999), §18.3.14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

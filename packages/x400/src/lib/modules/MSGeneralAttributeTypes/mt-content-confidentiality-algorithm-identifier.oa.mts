@@ -26,6 +26,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_content_confidentiality_algorithm_identifier
  * @description
  *
+ * This general-attribute contains the content-confidentiality-algorithm-identifier
+ * argument of the Message-submission and Message-delivery abstract-operations.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

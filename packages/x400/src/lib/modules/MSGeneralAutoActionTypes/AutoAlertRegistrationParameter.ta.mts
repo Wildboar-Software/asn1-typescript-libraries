@@ -32,6 +32,8 @@ import {
  * @summary AutoAlertRegistrationParameter
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

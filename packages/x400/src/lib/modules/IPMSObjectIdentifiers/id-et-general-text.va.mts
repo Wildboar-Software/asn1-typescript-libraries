@@ -15,6 +15,9 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_general_text
  * @description
  *
+ * A General Text extended body part represents character text of a general nature. It has
+ * Parameters and Data components. See ITU-T X.420 (1999), §7.4.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

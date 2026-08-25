@@ -20,6 +20,8 @@ import { id_et_report } from '../IPMSObjectIdentifiers/id-et-report.va.mjs';
  * @summary report_body_part_data
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,10 @@ import { id_mr_redirection_reason_match } from '../MSObjectIdentifiers/id-mr-red
  * @summary redirectionReasonMatch
  * @description
  *
+ * The Redirection-reason-match rule compares for equality a presented value with the
+ * Redirection-reason component of attribute-values of type Redirection-history. See ITU-T
+ * X.413 (1999), §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

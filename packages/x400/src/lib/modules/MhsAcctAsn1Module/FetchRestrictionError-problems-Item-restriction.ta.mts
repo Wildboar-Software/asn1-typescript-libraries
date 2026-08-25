@@ -29,6 +29,8 @@ import {
  * @summary FetchRestrictionError_problems_Item_restriction
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (accounting objects).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

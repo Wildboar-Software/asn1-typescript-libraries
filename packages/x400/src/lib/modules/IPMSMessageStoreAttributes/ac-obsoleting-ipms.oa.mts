@@ -28,6 +28,11 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_obsoleting_ipms
  * @description
  *
+ * The AC Obsoleting IPMs attribute, which is multi-valued, contains the sequence-numbers
+ * of the IPM entries that indicate, by means of their Obsoleted IPMs heading field, that
+ * they render obsolete the present IPM. The attribute values are stored in ascending order
+ * of the obsoleting entries' creation times. See ITU-T X.420 (1999), §19.6.5.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

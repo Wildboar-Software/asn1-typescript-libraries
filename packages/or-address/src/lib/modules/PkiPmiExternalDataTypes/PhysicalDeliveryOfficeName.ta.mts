@@ -10,6 +10,8 @@ import {
  * @summary PhysicalDeliveryOfficeName
  * @description
  *
+ * City/village of the delivering post office (ITU-T X.402 (1999), §18.3.14).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

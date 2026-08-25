@@ -30,6 +30,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_this_recipient_name
  * @description
  *
+ * This general-attribute contains the this-recipient-name argument of the Message-delivery
+ * abstract-operation, and identifies the MS-user. See ITU-T X.413 (1999), §11.2.81.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

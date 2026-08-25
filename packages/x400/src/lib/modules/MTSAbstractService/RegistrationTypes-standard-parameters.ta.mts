@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RegistrationTypes_standard_parameters
  * @description
  *
+ * Which standard Register parameters to return in `retrieve-registrations` (ITU-T X.411
+ * (1999), §8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,72 +29,120 @@ export type RegistrationTypes_standard_parameters = BIT_STRING;
 
 /**
  * @summary RegistrationTypes_standard_parameters_user_name
+ * @description
+ *
+ * Return the registered user-name.
+ *
  * @constant
  */
 export const RegistrationTypes_standard_parameters_user_name: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary user_name
+ * @description
+ *
+ * Return the registered user-name.
+ *
  * @constant
  */
 export const user_name: number = RegistrationTypes_standard_parameters_user_name; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RegistrationTypes_standard_parameters_user_address
+ * @description
+ *
+ * Return the registered user-address.
+ *
  * @constant
  */
 export const RegistrationTypes_standard_parameters_user_address: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary user_address
+ * @description
+ *
+ * Return the registered user-address.
+ *
  * @constant
  */
 export const user_address: number = RegistrationTypes_standard_parameters_user_address; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RegistrationTypes_standard_parameters_deliverable_class
+ * @description
+ *
+ * Return the registered deliverable-class.
+ *
  * @constant
  */
 export const RegistrationTypes_standard_parameters_deliverable_class: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary deliverable_class
+ * @description
+ *
+ * Return the registered deliverable-class.
+ *
  * @constant
  */
 export const deliverable_class: number = RegistrationTypes_standard_parameters_deliverable_class; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RegistrationTypes_standard_parameters_default_delivery_controls
+ * @description
+ *
+ * Return the registered default-delivery-controls.
+ *
  * @constant
  */
 export const RegistrationTypes_standard_parameters_default_delivery_controls: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary default_delivery_controls
+ * @description
+ *
+ * Return the registered default-delivery-controls.
+ *
  * @constant
  */
 export const default_delivery_controls: number = RegistrationTypes_standard_parameters_default_delivery_controls; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RegistrationTypes_standard_parameters_redirections
+ * @description
+ *
+ * Return the registered redirections.
+ *
  * @constant
  */
 export const RegistrationTypes_standard_parameters_redirections: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary redirections
+ * @description
+ *
+ * Return the registered redirections.
+ *
  * @constant
  */
 export const redirections: number = RegistrationTypes_standard_parameters_redirections; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RegistrationTypes_standard_parameters_restricted_delivery
+ * @description
+ *
+ * Return the registered restricted-delivery.
+ *
  * @constant
  */
 export const RegistrationTypes_standard_parameters_restricted_delivery: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary restricted_delivery
+ * @description
+ *
+ * Return the registered restricted-delivery.
+ *
  * @constant
  */
 export const restricted_delivery: number = RegistrationTypes_standard_parameters_restricted_delivery; /* SHORT_NAMED_BIT */

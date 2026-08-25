@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.411 (1999), §12.
+ */
 export * from "./ActualRecipientName.ta.mjs";
 export * from "./AdditionalActions.ta.mjs";
 export * from "./AdditionalInformation.ta.mjs";

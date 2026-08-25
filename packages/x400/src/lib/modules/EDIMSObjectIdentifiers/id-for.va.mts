@@ -15,6 +15,8 @@ import { id_edims } from '../EDIMSObjectIdentifiers/id-edims.va.mjs';
  * @summary id_for
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ import {
  * @summary OtherRecipientNames
  * @description
  *
+ * SEQUENCE SIZE (1..`ub-recipients`) of other recipients disclosed at delivery (ITU-T
+ * X.411 (1999), §8.2.1.1.1.7 / Annex A). Only present if disclosure was requested. Empty
+ * not allowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

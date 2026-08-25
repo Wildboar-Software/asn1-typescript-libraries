@@ -20,6 +20,8 @@ import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
  * @summary invalid_assembly_instructions
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

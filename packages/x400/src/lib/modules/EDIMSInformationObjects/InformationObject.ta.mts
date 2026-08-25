@@ -24,6 +24,8 @@ import {
  * @summary InformationObject
  * @description
  *
+ * See ITU-T X.435 (1999), §18.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

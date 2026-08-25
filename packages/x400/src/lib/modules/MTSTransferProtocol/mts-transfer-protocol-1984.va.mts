@@ -15,6 +15,8 @@ import {
  * @summary mts_transfer_protocol_1984
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

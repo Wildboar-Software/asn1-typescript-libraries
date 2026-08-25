@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.402 (1999), §17 / Annex A.
+ */
 export * from "./addressCapabilitiesMatch.oa.mjs";
 export * from "./AddressCapabilities.ta.mjs";
 export * from "./AlgorithmInformation.ta.mjs";

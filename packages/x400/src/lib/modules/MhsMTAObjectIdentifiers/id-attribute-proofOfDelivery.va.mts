@@ -15,6 +15,12 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_proofOfDelivery
  * @description
  *
+ * This argument provides the originator of the message with proof that the message has
+ * been delivered to the recipient (to provide the Proof of Delivery element-of-service as
+ * defined in Delivery element-of-service (as defined in The proof-of-delivery is computed
+ * using the algorithm identified by the proof-of-delivery-algorithm-identifier (an
+ * algorithm-identifier). See ITU-T X.411 (1999), §8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

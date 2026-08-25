@@ -27,6 +27,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary receive_edim
  * @description
  *
+ * The Receive EDIM abstract operation receives a message whose content is an EDIM. See
+ * ITU-T X.435 (1999), §12.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

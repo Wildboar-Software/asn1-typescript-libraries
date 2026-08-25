@@ -10,6 +10,9 @@ import {
  * @summary UniversalPhysicalDeliveryPersonalName
  * @description
  *
+ * A personal-name is a standard attribute that identifies a person relative to the entity
+ * denoted by another attribute (e.g., an organization-name). See ITU-T X.402 (1999), §18.3.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

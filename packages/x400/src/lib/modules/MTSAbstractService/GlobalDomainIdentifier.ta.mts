@@ -30,6 +30,11 @@ import {
  * @summary GlobalDomainIdentifier
  * @description
  *
+ * A global-domain-identifier unambiguously identifies an MD within the MHS. A
+ * global-domain-identifier is used to ensure that an MTS-identifier is unambiguous
+ * throughout the MTS, and for identifying the source of a trace-information-element. See
+ * ITU-T X.411 (1999), §8.5.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

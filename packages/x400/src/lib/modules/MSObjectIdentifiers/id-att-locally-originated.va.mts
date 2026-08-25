@@ -15,6 +15,10 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_locally_originated
  * @description
  *
+ * This general-attribute indicates, by its presence or absence, whether this
+ * delivered-message entry was originated by this MS-user. See ITU-T X.413 (1999),
+ * §11.2.33.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

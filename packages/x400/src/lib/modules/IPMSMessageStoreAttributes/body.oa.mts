@@ -26,6 +26,8 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary body
  * @description
  *
+ * The Body attribute is the (entire) Body of an IPM.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

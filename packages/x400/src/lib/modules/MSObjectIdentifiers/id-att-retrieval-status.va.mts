@@ -15,6 +15,8 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_retrieval_status
  * @description
  *
+ * See ITU-T X.413 (1999), §6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

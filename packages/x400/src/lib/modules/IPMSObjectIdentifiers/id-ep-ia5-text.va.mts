@@ -15,6 +15,9 @@ import { id_ep } from '../IPMSObjectIdentifiers/id-ep.va.mjs';
  * @summary id_ep_ia5_text
  * @description
  *
+ * An IA5 Text body part represents IA5 text. It has Parameters and Data components. See
+ * ITU-T X.420 (1999), §7.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

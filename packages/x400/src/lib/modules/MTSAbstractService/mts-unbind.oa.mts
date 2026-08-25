@@ -23,6 +23,8 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary mts_unbind
  * @description
  *
+ * Releases an association between an MTS-user and the MTS. See ITU-T X.411 (1999), §8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

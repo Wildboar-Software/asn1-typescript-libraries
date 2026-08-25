@@ -17,6 +17,8 @@ import { id_mr_value_count_match } from '../MSObjectIdentifiers/id-mr-value-coun
  * @summary valueCountMatch
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§12.4 / §13).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

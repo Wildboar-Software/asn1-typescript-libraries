@@ -15,6 +15,10 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_redirection_or_dl_expansion_match
  * @description
  *
+ * The Redirection-or-DL-expansion-match rule compares for equality a presented value with
+ * the OR-address-and- optional-directory-name component of attribute-values of type
+ * Redirection-history or DL-expansion-history. See ITU-T X.413 (1999), §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

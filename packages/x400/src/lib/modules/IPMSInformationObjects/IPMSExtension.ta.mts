@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IPMSExtension
  * @description
  *
+ * An IPMS extension (or extension) is an information item which enables extensions to be
+ * defined.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

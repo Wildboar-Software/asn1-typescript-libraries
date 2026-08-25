@@ -1,3 +1,8 @@
+/**
+ * RFC 1685 labelled form and RFC 2156 MIXER `std-or-address` printers for
+ * O/R addresses. Organizational unit order is reversed in the string forms
+ * relative to the ASN.1 SEQUENCE (ITU-T X.402 (1999), §18.3.10).
+ */
 import {
     escapeRFC2156StdPrintable,
     escape_oraddress_attribute_value,
@@ -1175,7 +1180,7 @@ function formatRFC2156OrganizationalUnits(
  * @description
  *
  * Generates MIXER `std-or-address` pairs using the primary keywords from
- * RFC 2156 §4.1.1 (`ADMD`, `PRMD`, `NET-NUM`, `PD-ADDRESS`, `DD.type`, …).
+ * RFC 2156 §4.1.1 (`ADMD`, `PRMD`, `NET-NUM`, `PD-ADDRESS`, `DD.type`, and others).
  * Personal names are emitted as `G` / `I` / `S` / `GQ`. Organizational units
  * and domain-defined attributes are reversed so the rightmost value is the
  * most significant. Join with {@link formatRFC2156Address} to wrap in `/`.

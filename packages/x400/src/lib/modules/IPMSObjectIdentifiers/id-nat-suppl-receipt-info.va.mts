@@ -15,6 +15,11 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_suppl_receipt_info
  * @description
  *
+ * The Suppl Receipt Info receipt field (O) gives supplementary information about the
+ * receipt of the subject IPM by the RN's originator. It comprises a Printable String[ of
+ * from zero to a prescribed number of characters (see X.411), chosen from the Printable
+ * String character set|]. See ITU-T X.420 (1999), §8.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

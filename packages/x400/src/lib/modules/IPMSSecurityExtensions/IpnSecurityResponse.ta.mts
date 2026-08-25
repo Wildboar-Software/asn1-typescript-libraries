@@ -25,6 +25,8 @@ import {
  * @summary IpnSecurityResponse
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

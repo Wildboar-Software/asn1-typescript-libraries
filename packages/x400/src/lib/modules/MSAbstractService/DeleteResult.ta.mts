@@ -20,6 +20,9 @@ import {
  * @summary DeleteResult
  * @description
  *
+ * Should the request succeed, the delete-result shall be returned: See ITU-T X.413 (1999),
+ * §8.2.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,8 @@ import {
  * @summary EDIAutoForwardRegistrationParameter_edi_forwarding_mode
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

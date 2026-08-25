@@ -11,6 +11,12 @@ import {
  * @summary BuiltInDomainDefinedAttributes
  * @description
  *
+ * SEQUENCE of 1..4 domain-defined attributes (ITU-T X.402 (1999), §18.1). Order in the
+ * SEQUENCE is the encoded order; MDs may define extra equivalence rules for relative order
+ * (X.402 §18.4 NOTE). omit the OR-address component rather than send empty. Type and value
+ * are both PrintableString; teletex/universal twins are extension attributes. Both type
+ * and value must use the same string repertoire (X.402 §18.2 a).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

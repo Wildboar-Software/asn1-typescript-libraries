@@ -1,47 +1,8 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import {
-    UniversalDomainDefinedAttributes,
-    _decode_UniversalDomainDefinedAttributes,
-    _encode_UniversalDomainDefinedAttributes,
-} from '../MTSAbstractService/UniversalDomainDefinedAttributes.ta.mjs';
-import { type EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
 /**
- * @summary universal_domain_defined_attributes
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * universal-domain-defined-attributes EXTENSION-ATTRIBUTE ::= {
- *   UniversalDomainDefinedAttributes
- *   IDENTIFIED BY  28
- * }
- * ```
- *
- * @constant
- * @type {EXTENSION_ATTRIBUTE<UniversalDomainDefinedAttributes>}
- * @implements {EXTENSION_ATTRIBUTE<UniversalDomainDefinedAttributes>}
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const universal_domain_defined_attributes: EXTENSION_ATTRIBUTE<UniversalDomainDefinedAttributes> = {
-    class: 'EXTENSION-ATTRIBUTE',
-    decoderFor: {
-        '&Type': _decode_UniversalDomainDefinedAttributes,
-    },
-    encoderFor: {
-        '&Type': _encode_UniversalDomainDefinedAttributes,
-    },
-    '&id': 28 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-    '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-};
+export {
+    universal_domain_defined_attributes,
+} from "@wildboar/or-address";
 
-/* eslint-enable */

@@ -20,6 +20,10 @@ import { type MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
  * @summary ipm_assembly_instructions
  * @description
  *
+ * This IPM submission option is used to request the incorporation of stored IPMs and
+ * stored body parts in a submitted IPM. The IPM-assembly-instructions- information object
+ * is defined as follows: See ITU-T X.420 (1999), §19.5.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.420 (1999), §19.
+ */
 export * from "./AutoDiscardProblem.ta.mjs";
 export * from "./AutoForwardArguments.ta.mjs";
 export * from "./auto-forwarding-loop.oa.mjs";

@@ -19,6 +19,10 @@ import {
  * @summary NRN
  * @description
  *
+ * The Receive NRN abstract operation receives a message whose content is an NRN. The NRN
+ * is provoked by an IPM originated with the Originate IPM abstract operation. See ITU-T
+ * X.420 (1999), §12.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

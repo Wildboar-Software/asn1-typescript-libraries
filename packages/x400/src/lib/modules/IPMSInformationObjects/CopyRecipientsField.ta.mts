@@ -19,6 +19,8 @@ import {
  * @summary CopyRecipientsField
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

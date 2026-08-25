@@ -1,65 +1,12 @@
-/* eslint-disable */
-import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
-import {
-    UniversalPDSParameter,
-    _decode_UniversalPDSParameter,
-    _encode_UniversalPDSParameter,
-} from '../MTSAbstractService/UniversalPDSParameter.ta.mjs';
 /**
- * @summary UniversalStreetAddress
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * UniversalStreetAddress  ::=  UniversalPDSParameter
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type UniversalStreetAddress = UniversalPDSParameter; // DefinedType
+export type {
+    UniversalStreetAddress,
+} from "@wildboar/or-address";
+export {
+    _decode_UniversalStreetAddress,
+    _encode_UniversalStreetAddress,
+} from "@wildboar/or-address";
 
-let _cached_decoder_for_UniversalStreetAddress: $.ASN1Decoder<UniversalStreetAddress> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UniversalStreetAddress
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {UniversalStreetAddress} The decoded data structure.
- */
-export function _decode_UniversalStreetAddress(el: _Element): UniversalStreetAddress {
-    if (!_cached_decoder_for_UniversalStreetAddress) {
-        _cached_decoder_for_UniversalStreetAddress = _decode_UniversalPDSParameter;
-    }
-    return _cached_decoder_for_UniversalStreetAddress(el);
-}
-
-let _cached_encoder_for_UniversalStreetAddress: $.ASN1Encoder<UniversalStreetAddress> | null = null;
-
-/**
- * @summary Encodes a(n) UniversalStreetAddress into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UniversalStreetAddress, encoded as an ASN.1 Element.
- */
-export function _encode_UniversalStreetAddress(
-    value: UniversalStreetAddress,
-    elGetter: $.ASN1Encoder<UniversalStreetAddress>
-): _Element {
-    if (!_cached_encoder_for_UniversalStreetAddress) {
-        _cached_encoder_for_UniversalStreetAddress = _encode_UniversalPDSParameter;
-    }
-    return _cached_encoder_for_UniversalStreetAddress(value, elGetter);
-}
-
-
-/* eslint-enable */

@@ -15,6 +15,11 @@ import { id_mr } from '../MSObjectIdentifiers/id-mr.va.mjs';
  * @summary id_mr_ms_single_substring_list_match
  * @description
  *
+ * The MS-single-substring-list-match determines whether each string in a presented
+ * sequence is a single substring of each corresponding string in a sequence that
+ * constitutes some value of an attribute containing sequences of MS-string, without regard
+ * to the case (upper or lower) of the strings. See ITU-T X.413 (1999), §12.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

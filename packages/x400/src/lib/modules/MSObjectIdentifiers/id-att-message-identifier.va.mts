@@ -15,6 +15,13 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_message_identifier
  * @description
  *
+ * This general-attribute contains an MTS-identifier that distinguishes this message or
+ * probe from all other submitted messages and probes, and delivered messages. It contains
+ * the message-submission-identifier or probe-submission- identifier result of the
+ * Message-submission or Probe-submission abstract-operation , or the
+ * message-delivery-identifier argument of the Message-delivery abstract-operation. See
+ * ITU-T X.413 (1999), §11.2.38.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

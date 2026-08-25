@@ -18,6 +18,8 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary reception
  * @description
  *
+ * See ITU-T X.435 (1999), §21.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

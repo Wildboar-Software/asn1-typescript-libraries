@@ -23,6 +23,8 @@ import { id_oc_mhs_network_address } from '../MHSRoutingObjectIdentifiers/id-oc-
  * @summary mHSNetworkAddress
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,8 @@ import {
  * @summary op_ms_submission_control
  * @description
  *
+ * Defined in ITU-T X.419 (1999) (§9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

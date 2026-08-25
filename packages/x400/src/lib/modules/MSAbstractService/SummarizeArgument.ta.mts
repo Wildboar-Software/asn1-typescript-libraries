@@ -37,6 +37,8 @@ import {
  * @summary SummarizeArgument
  * @description
  *
+ * See ITU-T X.413 (1999), §8.2.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

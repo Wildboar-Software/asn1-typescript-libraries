@@ -28,6 +28,10 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary security_error
  * @description
  *
+ * The Security-error abstract-error reports that the requested abstract-operation could
+ * not be provided by the MTS or MTS-user because it would violate the security-policy in
+ * force. See ITU-T X.411 (1999), §8.2.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

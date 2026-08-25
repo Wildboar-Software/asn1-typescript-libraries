@@ -15,6 +15,8 @@ import {
  * @summary ub_recipient_number_for_advice_length
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

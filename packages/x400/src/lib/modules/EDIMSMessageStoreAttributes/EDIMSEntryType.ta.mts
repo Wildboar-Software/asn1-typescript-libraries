@@ -15,6 +15,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EDIMSEntryType
  * @description
  *
+ * The EDIMS Entry Type attribute identifies an information object’s type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

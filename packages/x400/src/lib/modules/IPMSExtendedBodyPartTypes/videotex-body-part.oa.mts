@@ -16,6 +16,8 @@ import { type EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED
  * @summary videotex_body_part
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

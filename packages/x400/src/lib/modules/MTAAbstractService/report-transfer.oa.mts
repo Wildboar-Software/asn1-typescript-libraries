@@ -27,6 +27,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary report_transfer
  * @description
  *
+ * The Report-transfer abstract-operation enables an MTA to transfer a report to another
+ * MTA. See ITU-T X.411 (1999), §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

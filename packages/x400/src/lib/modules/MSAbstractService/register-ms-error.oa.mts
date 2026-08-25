@@ -28,6 +28,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary register_ms_error
  * @description
  *
+ * A Register-MS-error reports a problem in an attempt to register information with the MS.
+ * See ITU-T X.413 (1999), §9.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

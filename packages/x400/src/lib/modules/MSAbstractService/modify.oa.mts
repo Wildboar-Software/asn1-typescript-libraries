@@ -43,6 +43,10 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary modify
  * @description
  *
+ * The Auto-modify auto-action enables the MS-user to instruct the MS to apply
+ * modifications automatically to the attributes of an entry provided that the entry
+ * satisfies given criteria. See ITU-T X.413 (1999), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ import {
  * @summary MessageOriginAuthenticationAlgorithmIdentifier
  * @description
  *
+ * An algorithm-identifier identifies an algorithm and any algorithm-parameters required by
+ * the algorithm. It shall also define the ASN.1 encoding rules used. See ITU-T X.411
+ * (1999), §8.5.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

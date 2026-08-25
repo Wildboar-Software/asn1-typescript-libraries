@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.435 (1999), §18.
+ */
 export * from "./auto-forwarding-loop.oa.mjs";
 export * from "./duplicate-edin.oa.mjs";
 export * from "./edi-auto-acknowledgement.oa.mjs";

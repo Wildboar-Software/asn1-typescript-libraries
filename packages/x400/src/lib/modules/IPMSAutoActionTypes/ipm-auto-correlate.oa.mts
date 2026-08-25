@@ -19,6 +19,11 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary ipm_auto_correlate
  * @description
  *
+ * The IPM auto-correlate auto-action correlates IPMs and IPNs related in the following
+ * ways: a) an IPM and the IPMs generated in reply; b) an IPM and the IPNs notifying
+ * receipt or non-receipt; c) an IPM and the IPMs which subsequently forward it, or
+ * obsolete it, or are related to it. See ITU-T X.420 (1999), §19.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,10 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_this_edim
  * @description
  *
+ * The This EDIM field identifies the EDIM. It comprises an EDIM Identifier which provides
+ * a globally and forever unique identification for the EDIM. See ITU-T X.435 (1999),
+ * §8.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

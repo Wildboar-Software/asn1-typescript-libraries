@@ -19,6 +19,10 @@ import {
  * @summary UserSecurityLabel
  * @description
  *
+ * Security-labels may be used to associate security-relevant information with objects
+ * within the MTS. Security-labels may be assigned to an object in line with the
+ * security-policy in force for that object. See ITU-T X.411 (1999), §8.5.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

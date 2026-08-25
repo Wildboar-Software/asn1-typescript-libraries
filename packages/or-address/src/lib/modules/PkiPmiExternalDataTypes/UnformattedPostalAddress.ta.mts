@@ -13,6 +13,14 @@ import { unformattedPostalAddressFromString } from "../../parse.mjs";
  * @summary UnformattedPostalAddress
  * @description
  *
+ * Free-form postal address (ITU-T X.402 (1999), §18.3.25). `printable-address` is a
+ * SEQUENCE of lines (SIZE 1..6 lines); `teletex-string` is a single TeletexString with
+ * lines separated by CR LF or LF CR (at most five separators ⇒ six lines). Either or both
+ * may be present. Presence of this attribute (and not the formatted postal attributes)
+ * makes a postal OR-address **unformatted** (X.402 §18.5.5). Total characters of postal
+ * attributes other than country/ADMD/`pds-name` should fit 6×30 for a typical envelope
+ * window (§18.5.3 NOTE).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

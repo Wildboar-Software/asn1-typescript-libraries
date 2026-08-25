@@ -15,6 +15,8 @@ import { id_san } from '../MHSObjectIdentifiers/id-san.va.mjs';
  * @summary id_san_mta_name
  * @description
  *
+ * Defined in ITU-T X.402 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

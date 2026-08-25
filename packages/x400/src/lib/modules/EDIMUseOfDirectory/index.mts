@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.435 (1999), §16.
+ */
 export * from "./AssociationAssignedCode.ta.mjs";
 export * from "./ControllingAgency.ta.mjs";
 export * from "./DocumentRelease.ta.mjs";

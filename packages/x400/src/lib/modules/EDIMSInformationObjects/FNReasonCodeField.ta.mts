@@ -29,6 +29,8 @@ import {
  * @summary FNReasonCodeField
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

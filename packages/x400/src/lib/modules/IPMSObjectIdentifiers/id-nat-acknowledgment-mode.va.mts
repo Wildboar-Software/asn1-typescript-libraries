@@ -15,6 +15,9 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_acknowledgment_mode
  * @description
  *
+ * The Acknowledgment Mode receipt field (D manual) identifies the manner in which the RN
+ * was originated. See ITU-T X.420 (1999), §8.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

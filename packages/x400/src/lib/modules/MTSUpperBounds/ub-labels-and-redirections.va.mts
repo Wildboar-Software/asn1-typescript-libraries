@@ -15,6 +15,8 @@ import {
  * @summary ub_labels_and_redirections
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

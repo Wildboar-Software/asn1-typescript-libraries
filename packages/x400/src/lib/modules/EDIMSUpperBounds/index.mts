@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.435 (1999), Annex B.
+ */
 export * from "./index.mjs";
 export * from "./ub-application-reference.va.mjs";
 export * from "./ub-authorization-information-qualifier.va.mjs";

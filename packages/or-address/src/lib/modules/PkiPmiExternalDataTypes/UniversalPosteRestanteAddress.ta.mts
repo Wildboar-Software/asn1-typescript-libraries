@@ -10,6 +10,11 @@ import {
  * @summary UniversalPosteRestanteAddress
  * @description
  *
+ * A poste-restante-address is a standard attribute that specifies the code that a user
+ * gives to a post office in order to collect the physical messages that await delivery to
+ * him. The value of a poste-restante-address is a Printable String, Teletex String,
+ * Universal String, or a combination of these types. See ITU-T X.402 (1999), §18.3.20.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

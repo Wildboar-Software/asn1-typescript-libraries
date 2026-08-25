@@ -15,6 +15,9 @@ import { id_ep } from '../IPMSObjectIdentifiers/id-ep.va.mjs';
  * @summary id_ep_videotex
  * @description
  *
+ * A Videotex body part represents Videotex data. It has Parameters and Data components.
+ * See ITU-T X.420 (1999), §7.4.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

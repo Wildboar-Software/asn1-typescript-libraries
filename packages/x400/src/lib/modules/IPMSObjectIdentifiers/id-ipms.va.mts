@@ -15,6 +15,11 @@ import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
  * @summary id_ipms
  * @description
  *
+ * The Obsoleted IPMs heading field (D no subfields (i.e., elements)) identifies zero or
+ * more IPMs that the authorizing users of the present IPM consider it to obsolete. It
+ * comprises a Sequence of sub-fields, each an IPM identifier, one for each IPM. See ITU-T
+ * X.420 (1999), §7.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

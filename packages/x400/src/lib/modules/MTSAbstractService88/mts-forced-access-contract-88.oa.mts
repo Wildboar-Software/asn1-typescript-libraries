@@ -19,6 +19,8 @@ import { type CONTRACT } from '@wildboar/rose';
  * @summary mts_forced_access_contract_88
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (§8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

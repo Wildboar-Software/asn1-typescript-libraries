@@ -20,6 +20,9 @@ import {
  * @summary Filter
  * @description
  *
+ * MS Filter CHOICE item/and/or/not (ITU-T X.413 (1999), §8.1.2). Empty `and` is true;
+ * empty `or` is false — same convention as X.511.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

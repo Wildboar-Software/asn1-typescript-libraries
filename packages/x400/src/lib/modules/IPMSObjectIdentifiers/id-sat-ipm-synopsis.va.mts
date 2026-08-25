@@ -15,6 +15,9 @@ import { id_sat } from '../IPMSObjectIdentifiers/id-sat.va.mjs';
  * @summary id_sat_ipm_synopsis
  * @description
  *
+ * The IPM Synopsis attribute gives the structure, characteristics, size, and processing
+ * status of an IPM at the granularity of individual body parts.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

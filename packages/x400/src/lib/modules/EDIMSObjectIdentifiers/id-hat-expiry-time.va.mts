@@ -15,6 +15,9 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_expiry_time
  * @description
  *
+ * Indicates when the originator considers this EDIM loses its validity. It comprises a
+ * date and time (UTC). See ITU-T X.435 (1999), §8.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

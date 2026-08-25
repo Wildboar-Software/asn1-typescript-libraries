@@ -26,6 +26,10 @@ import {
  * @summary DistributionCode
  * @description
  *
+ * One element of the Distribution Codes heading extension (ITU-T X.420 (1999), Annex
+ * A.1.8). Semantics of the codes are by bilateral agreement. At least one component shall
+ * be present. `distributionCodeMatch` does not consider `or-descriptor`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

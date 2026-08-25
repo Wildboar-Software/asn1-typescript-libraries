@@ -15,6 +15,10 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_proof_of_submission
  * @description
  *
+ * This general-attribute contains the proof-of-submission result of the Message-submission
+ * abstract-operation. It provides the MS-user with proof of submission of a message to the
+ * MTS. See ITU-T X.413 (1999), §11.2.65.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

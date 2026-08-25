@@ -28,6 +28,11 @@ import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.m
  * @summary ac_relating_edims
  * @description
  *
+ * The AC Relating EDIMs attribute, which is multi-valued, contains the sequence-numbers of
+ * the EDIM entries which indicate, by means of their Related Messages heading field, that
+ * they are related to the present EDIM. The attribute values are stored in ascending order
+ * of the relating entries’ creation times. See ITU-T X.435 (1999), §18.8.6.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

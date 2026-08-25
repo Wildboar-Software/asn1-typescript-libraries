@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IdentificationCodeQualifier
  * @description
  *
+ * The Identification Code Qualifier, if present, is a qualifier to the Identification Code
+ * of a sender/recipient. This is semantically identical to the "Identification code
+ * qualifier" component of the Interchange sender/recipient of the EDIFACT UNB segment. See
+ * ITU-T X.435 (1999), §8.1.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

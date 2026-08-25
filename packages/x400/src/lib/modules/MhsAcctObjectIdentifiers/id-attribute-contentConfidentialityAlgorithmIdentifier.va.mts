@@ -15,6 +15,13 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_contentConfidentialityAlgorithmIdentifier
  * @description
  *
+ * This argument contains an algorithm-identifier, which identifies the algorithm used by
+ * the originator of the message to encrypt the message content (to provide the Content
+ * Confidentiality element-of-service as defined in 18 The algorithm may be used by the
+ * recipient(s) of the message to decrypt the message content. The content-confidentiality
+ * algorithm may be either a symmetric- or an asymmetric-encryption-algorithm. See ITU-T
+ * X.411 (1999), §8.2.1.1.1.27.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

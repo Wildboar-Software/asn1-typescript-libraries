@@ -16,6 +16,8 @@ import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
  * @summary ipms_user
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

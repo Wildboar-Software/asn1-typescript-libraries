@@ -9,6 +9,11 @@ import {
  * @summary teletex_personal_name
  * @description
  *
+ * OR-address extension attribute for the Teletex encoding of `personal-name` (ITU-T X.402
+ * (1999), §18.3.12; X.411 (1999), Annex A). Printable, Teletex and Universal encodings of
+ * the same value are equivalent for comparison (X.402 §18.4). Universal language codes are
+ * ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,8 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary edi_auto_correlate
  * @description
  *
+ * See ITU-T X.435 (1999), §18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

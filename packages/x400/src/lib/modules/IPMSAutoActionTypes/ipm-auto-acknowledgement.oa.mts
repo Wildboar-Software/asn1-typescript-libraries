@@ -33,6 +33,10 @@ import { type AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
  * @summary ipm_auto_acknowledgement
  * @description
  *
+ * The IPM auto-acknowledgement auto-action enables the IPMS-MS-user to instruct the
+ * IPMS-MS to automatically originate RNs on the user's behalf. See ITU-T X.420 (1999),
+ * §19.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

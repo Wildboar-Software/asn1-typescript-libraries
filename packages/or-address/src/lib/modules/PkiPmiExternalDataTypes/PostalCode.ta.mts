@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PostalCode
  * @description
  *
+ * Postal code for the delivery area, Numeric or Printable, administered by the postal
+ * administration of `physical-delivery-country-name` (ITU-T X.402 (1999), §18.3.19).
+ * Mandatory in postal OR-addresses (X.402 Table 10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

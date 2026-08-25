@@ -15,6 +15,9 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_this_ipm
  * @description
  *
+ * The This IPM heading field (M) identifies the IPM. It comprises an IPM identifier. See
+ * ITU-T X.420 (1999), §7.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

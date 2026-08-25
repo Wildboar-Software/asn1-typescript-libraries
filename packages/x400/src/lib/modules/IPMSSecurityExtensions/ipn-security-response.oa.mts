@@ -20,6 +20,8 @@ import { type IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oc
  * @summary ipn_security_response
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

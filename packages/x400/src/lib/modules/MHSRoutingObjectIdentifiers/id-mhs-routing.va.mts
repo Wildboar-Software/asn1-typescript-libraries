@@ -19,6 +19,8 @@ import {
  * @summary id_mhs_routing
  * @description
  *
+ * See ITU-T X.412 (1999), §3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

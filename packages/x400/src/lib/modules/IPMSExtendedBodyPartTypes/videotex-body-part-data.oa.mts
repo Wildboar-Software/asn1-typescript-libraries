@@ -20,6 +20,8 @@ import { id_et_videotex } from '../IPMSObjectIdentifiers/id-et-videotex.va.mjs';
  * @summary videotex_body_part_data
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex C).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

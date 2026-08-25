@@ -26,6 +26,12 @@ import { id_at_security_context } from '../MHSRoutingObjectIdentifiers/id-at-sec
  * @summary securityContext
  * @description
  *
+ * The Security Context attribute type identifies the security-context within which members
+ * of a connection-group interact (see 12.1.1.1.1.3 of WITH SYNTAX SecurityContext SINGLE
+ * VALUE TRUE ID id-at-security-context } 16 7.2.4 MTA Information attribute types The
+ * attribute types defined below are specific to entries of the MTA Information object
+ * class. See ITU-T X.412 (1999), §7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

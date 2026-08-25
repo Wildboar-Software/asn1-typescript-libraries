@@ -15,6 +15,9 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_edi_message_type
  * @description
  *
+ * Indicates the Message type(s) present in the EDI Interchange. It consists of a set of
+ * distinct strings. See ITU-T X.435 (1999), §8.2.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

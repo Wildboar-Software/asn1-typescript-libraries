@@ -27,6 +27,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_security_classification
  * @description
  *
+ * This general-attribute comprises the security-classification component of the
+ * message-security-label. It is defined as a separate attribute to allow its use in the
+ * Summarize abstract-operation. See ITU-T X.413 (1999), §11.2.75.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

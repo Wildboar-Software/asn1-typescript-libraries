@@ -10,6 +10,8 @@ import {
  * @summary StreetAddress
  * @description
  *
+ * House number, street name and type (ITU-T X.402 (1999), §18.3.22).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

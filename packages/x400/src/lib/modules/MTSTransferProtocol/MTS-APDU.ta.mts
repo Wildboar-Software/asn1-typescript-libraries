@@ -29,6 +29,10 @@ import {
  * @summary MTS_APDU
  * @description
  *
+ * The value of the MTS-APDU shall be mapped onto the APDU parameter of the RT-TRANSFER
+ * request primitive by the sender. For the Message-transfer service, the MTS-APDU is a
+ * Message. See ITU-T X.419 (1999), §13.1.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

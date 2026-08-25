@@ -34,6 +34,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_on
  * @description
  *
+ * The Originate ON abstract operation originates a message whose content is an ON. See
+ * ITU-T X.420 (1999), §12.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

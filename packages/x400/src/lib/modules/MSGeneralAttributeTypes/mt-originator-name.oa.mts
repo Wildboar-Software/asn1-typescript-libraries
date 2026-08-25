@@ -30,6 +30,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_originator_name
  * @description
  *
+ * This general-attribute contains the originator-name argument of the Message-submission,
+ * Probe-submission, and Message-delivery abstract-operations. See ITU-T X.413 (1999),
+ * §11.2.52.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edi_body_part
  * @description
  *
+ * An EDI Body Part carries a single EDI Interchange.
+ * The reference definition of EDI Interchange used is that used by
+ * EDIFACT (ISO 9735). See ITU-T X.435 (1999), §8.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

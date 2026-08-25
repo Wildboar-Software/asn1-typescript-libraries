@@ -25,6 +25,11 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary submission_control_violated
  * @description
  *
+ * The Submission-control-violated abstract-error reports the violation by the MTS-user of
+ * a control on submission-port services imposed by the MTS via the Submission-control
+ * service. The Submission-control-violated abstract-error has no parameters. See ITU-T
+ * X.411 (1999), §8.2.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

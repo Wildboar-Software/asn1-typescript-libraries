@@ -34,6 +34,9 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary originate_rn
  * @description
  *
+ * The Originate RN abstract operation originates a message whose content is an RN. See
+ * ITU-T X.420 (1999), §12.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

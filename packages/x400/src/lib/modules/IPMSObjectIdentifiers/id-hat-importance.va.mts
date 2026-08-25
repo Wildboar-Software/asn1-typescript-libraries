@@ -15,6 +15,10 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @summary id_hat_importance
  * @description
  *
+ * The Importance heading field (D normal) identifies the importance that the authorizing
+ * users attach to the IPM. It may assume any one of the following values: low, normal, or
+ * high. See ITU-T X.420 (1999), §7.2.14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

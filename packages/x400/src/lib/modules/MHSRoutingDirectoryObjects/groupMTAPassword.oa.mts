@@ -26,6 +26,11 @@ import { id_at_group_mta_password } from '../MHSRoutingObjectIdentifiers/id-at-g
  * @summary groupMTAPassword
  * @description
  *
+ * The Group MTA Password attribute type contains a password used by members of an
+ * unenumerated connection-group. This attribute shall be absent from the connection-group
+ * object class if the Enumerated Flag attribute has the value true. See ITU-T X.412
+ * (1999), §7.2.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

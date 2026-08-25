@@ -15,6 +15,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DLPolicy_return_of_content
  * @description
  *
+ * Defined in ITU-T X.402 (1999) (§17 / Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

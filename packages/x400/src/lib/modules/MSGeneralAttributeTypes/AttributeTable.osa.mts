@@ -16,6 +16,10 @@ import { ContentSpecificAttributes } from '../MSGeneralAttributeTypes/ContentSpe
  * @summary AttributeTable
  * @description
  *
+ * The Attribute-table information object set is used as a constraining set in this Service
+ * Definition where related fields of the ATTRIBUTE information object class are referenced
+ * in the MS abstract-syntax. See ITU-T X.413 (1999), §11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

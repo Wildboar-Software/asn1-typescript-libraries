@@ -20,6 +20,11 @@ import { type PORT } from '../MTSAbstractService/PORT.oca.mjs';
  * @summary ms_submission
  * @description
  *
+ * The MS-submission Port abstract-services are realized on a one-to-one basis between
+ * abstract-operations and real operations in the Message Submission Service Element (MSSE)
+ * and MS Message Submission Service Element (MS- MSSE) which are defined in Context. See
+ * ITU-T X.413 (1999), §17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import { id_cont } from '../MTSObjectIdentifiers/id-cont.va.mjs';
  * @summary id_cont_unidentified
  * @description
  *
+ * Defined in ITU-T X.411 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

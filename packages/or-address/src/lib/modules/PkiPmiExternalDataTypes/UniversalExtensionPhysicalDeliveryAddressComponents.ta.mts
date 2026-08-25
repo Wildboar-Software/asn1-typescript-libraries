@@ -10,6 +10,12 @@ import {
  * @summary UniversalExtensionPhysicalDeliveryAddressComponents
  * @description
  *
+ * An is a standard attribute that specifies, in a postal address, additional information
+ * necessary to identify the exact point of delivery (e.g., room and floor numbers in a
+ * large building). The value of an extension-physical-delivery-address-components is a
+ * Printable String, Teletex String, Universal String, or a combination of these types. See
+ * ITU-T X.402 (1999), §18.3.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

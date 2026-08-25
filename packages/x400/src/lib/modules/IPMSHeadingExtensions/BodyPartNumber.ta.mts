@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BodyPartNumber
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

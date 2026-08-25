@@ -1,3 +1,8 @@
+/**
+ * @description
+ *
+ * ASN.1 module from ITU-T X.411 (1999), Annex A.
+ */
 export * from "./id-att-physicalRendition-basic.va.mjs";
 export * from "./id-att-physicalRendition-no-cover-page.va.mjs";
 export * from "./id-att.va.mjs";

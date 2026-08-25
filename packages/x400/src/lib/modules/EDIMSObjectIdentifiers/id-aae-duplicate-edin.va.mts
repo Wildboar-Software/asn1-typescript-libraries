@@ -15,6 +15,8 @@ import { id_aae } from '../EDIMSObjectIdentifiers/id-aae.va.mjs';
  * @summary id_aae_duplicate_edin
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

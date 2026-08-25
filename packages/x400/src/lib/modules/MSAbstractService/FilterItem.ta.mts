@@ -35,6 +35,10 @@ import {
  * @summary FilterItem
  * @description
  *
+ * A filter-item is an assertion about the presence or value(s) of an attribute of a
+ * particular type in the entry under test. Each such assertion is true, false, or
+ * undefined. See ITU-T X.413 (1999), §8.1.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

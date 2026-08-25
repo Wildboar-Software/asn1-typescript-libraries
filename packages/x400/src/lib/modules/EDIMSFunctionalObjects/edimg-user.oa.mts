@@ -16,6 +16,8 @@ import { type MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
  * @summary edimg_user
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

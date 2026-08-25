@@ -27,6 +27,8 @@ import { unsupported_critical_function } from '../MTSAbstractService/unsupported
  * @summary IPMAutoActionErrorTable
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

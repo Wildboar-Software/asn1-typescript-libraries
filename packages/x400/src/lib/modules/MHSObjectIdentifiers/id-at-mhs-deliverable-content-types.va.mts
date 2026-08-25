@@ -15,6 +15,8 @@ import { id_at } from '../MHSObjectIdentifiers/id-at.va.mjs';
  * @summary id_at_mhs_deliverable_content_types
  * @description
  *
+ * Defined in ITU-T X.402 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

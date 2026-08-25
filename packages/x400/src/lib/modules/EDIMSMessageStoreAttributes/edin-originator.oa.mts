@@ -27,6 +27,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary edin_originator
  * @description
  *
+ * Identifies the EDIM’s originator. It comprises an OR-name. See ITU-T X.435 (1999),
+ * §8.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

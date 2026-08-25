@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Restriction_source_type
  * @description
  *
+ * Which sources a `Restriction` in restricted-delivery applies to (ITU-T X.411 (1999),
+ * §8). DEFAULT is all three bits set. A single restriction with all source-types permitted
+ * and `source-name` omitted registers to receive all messages.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,36 +30,60 @@ export type Restriction_source_type = BIT_STRING;
 
 /**
  * @summary Restriction_source_type_originated_by
+ * @description
+ *
+ * The restriction matches messages originated by `source-name`.
+ *
  * @constant
  */
 export const Restriction_source_type_originated_by: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary originated_by
+ * @description
+ *
+ * The restriction matches messages originated by `source-name`.
+ *
  * @constant
  */
 export const originated_by: number = Restriction_source_type_originated_by; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Restriction_source_type_redirected_by
+ * @description
+ *
+ * The restriction matches messages redirected by `source-name`.
+ *
  * @constant
  */
 export const Restriction_source_type_redirected_by: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary redirected_by
+ * @description
+ *
+ * The restriction matches messages redirected by `source-name`.
+ *
  * @constant
  */
 export const redirected_by: number = Restriction_source_type_redirected_by; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Restriction_source_type_dl_expanded_by
+ * @description
+ *
+ * The restriction matches messages DL-expanded by `source-name`.
+ *
  * @constant
  */
 export const Restriction_source_type_dl_expanded_by: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary dl_expanded_by
+ * @description
+ *
+ * The restriction matches messages DL-expanded by `source-name`.
+ *
  * @constant
  */
 export const dl_expanded_by: number = Restriction_source_type_dl_expanded_by; /* SHORT_NAMED_BIT */

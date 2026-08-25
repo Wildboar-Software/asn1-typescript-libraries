@@ -31,6 +31,10 @@ import { type EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  * @summary conversion_with_loss_prohibited
  * @description
  *
+ * This argument indicates whether encoded-information-type conversion(s) may be carried
+ * out on the message content, if such conversion(s) would result in loss of information.
+ * Loss of information is defined in CCITT Rec. See ITU-T X.411 (1999), §8.2.1.1.1.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

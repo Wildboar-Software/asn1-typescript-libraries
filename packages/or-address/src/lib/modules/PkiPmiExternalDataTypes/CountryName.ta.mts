@@ -11,6 +11,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CountryName
  * @description
  *
+ * Country of the MD, tagged `[APPLICATION 1]` (ITU-T X.402 (1999), §18.3.3).
+ * `iso-3166-alpha2-code` is the ISO 3166 character pair (exactly 2); `x121-dcc-code` is an
+ * X.121 Data Country Code (exactly 3 digits). Which form is used is insignificant for
+ * equivalence (X.402 §18.4 b, NOTE); if X.121 allocates several numbers to a country,
+ * which number is used is not standardized. Printable value `XX` denotes the International
+ * Registration Authority for MD names (X.666 / ISO/IEC 9834-7). Some historic addresses
+ * used `WW` similarly; ISO 3166 has not assigned `WW`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -27,6 +27,12 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_message_token
  * @description
  *
+ * This general-attribute contains the message-token argument of the Message-delivery
+ * abstract-operation or the originator- token argument of the Message-submission
+ * abstract-operation. When present in a submitted-message entry, this attribute contains
+ * an encrypted-data component that is encrypted using the public key of the message
+ * originator rather than that of any recipient. See ITU-T X.413 (1999), §11.2.44.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

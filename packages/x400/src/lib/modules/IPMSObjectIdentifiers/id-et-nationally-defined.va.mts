@@ -15,6 +15,11 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_nationally_defined
  * @description
  *
+ * A Nationally Defined body part represents an information object whose semantics and
+ * abstract syntax are nationally defined by a country whose identity is bilaterally agreed
+ * by the IPM's originator and all of its potential recipients. It comprises an Any. See
+ * ITU-T X.420 (1999), §7.4.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

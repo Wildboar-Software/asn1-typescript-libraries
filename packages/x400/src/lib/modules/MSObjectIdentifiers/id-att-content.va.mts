@@ -15,6 +15,13 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_content
  * @description
  *
+ * This general-attribute contains the complete content of a message as submitted by the
+ * MS-message-submission abstract- operation, or as delivered by the Message-delivery
+ * abstract-operation, or as presented in the returned-content of the Report-delivery
+ * abstract-operation. In this last case, the content general-attribute is created in the
+ * returned-content child- entry, and not in the delivered-report entry itself. See ITU-T
+ * X.413 (1999), §11.2.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

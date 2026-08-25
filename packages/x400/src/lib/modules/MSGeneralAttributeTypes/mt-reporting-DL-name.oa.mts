@@ -30,6 +30,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_reporting_DL_name
  * @description
  *
+ * This general-attribute contains the reporting-DL-name argument of the Report-delivery
+ * abstract-operation. It identifies the DL that forwarded the report to the owner of the
+ * DL. See ITU-T X.413 (1999), §11.2.71.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

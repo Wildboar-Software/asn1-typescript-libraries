@@ -21,6 +21,8 @@ import {
  * @summary Summary_present_Item
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (§6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

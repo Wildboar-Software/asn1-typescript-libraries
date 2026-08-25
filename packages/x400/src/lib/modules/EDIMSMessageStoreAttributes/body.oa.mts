@@ -26,6 +26,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary body
  * @description
  *
+ * The Body attribute is the (entire) Body of an EDIM. body See ITU-T X.435 (1999),
+ * §18.8.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

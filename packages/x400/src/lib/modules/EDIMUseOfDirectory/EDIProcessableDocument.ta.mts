@@ -50,6 +50,8 @@ import {
  * @summary EDIProcessableDocument
  * @description
  *
+ * Defined in ITU-T X.435 (1999) (§16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

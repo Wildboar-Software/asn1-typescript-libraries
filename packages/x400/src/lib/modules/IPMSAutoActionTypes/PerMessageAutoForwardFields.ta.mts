@@ -54,6 +54,8 @@ export interface PerMessageAutoForwardFields {
  * @summary PerMessageAutoForwardFields
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (§19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -28,6 +28,8 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary attribute_error
  * @description
  *
+ * An Attribute-error reports an attribute related problem. See ITU-T X.413 (1999), §9.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

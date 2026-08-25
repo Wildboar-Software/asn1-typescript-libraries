@@ -15,6 +15,11 @@ import { id_mod } from '../EDIMSObjectIdentifiers/id-mod.va.mjs';
  * @summary id_mod_message_store_attributes
  * @description
  *
+ * As described in that may assume several values simultaneously (all pertaining to one
+ * object) are termed multi-valued, those that may assume just one value, single-valued.
+ * Some attributes pertain to information objects of all kinds, others only to those of
+ * e.g. See ITU-T X.435 (1999), §18.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

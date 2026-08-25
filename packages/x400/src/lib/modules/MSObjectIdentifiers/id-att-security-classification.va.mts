@@ -15,6 +15,10 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_security_classification
  * @description
  *
+ * This general-attribute comprises the security-classification component of the
+ * message-security-label. It is defined as a separate attribute to allow its use in the
+ * Summarize abstract-operation. See ITU-T X.413 (1999), §11.2.75.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -1,3 +1,17 @@
+/**
+ * @summary Replace an unescaped delimiter so the result stays a PrintableString.
+ * @description
+ *
+ * Used when a value cannot include the O/R-address display delimiter. Space
+ * delimiters become `?`; other delimiters become a space. This is a display
+ * helper, not an X.400 protocol rule (ITU-T X.402 (1999) does not define this
+ * substitution).
+ *
+ * @param s The string to sanitize.
+ * @param delim Code point of the delimiter.
+ * @returns The sanitized string.
+ * @function
+ */
 export function make_string_safe(s: string, delim: number): string {
     const replacement = (delim === " ".charCodeAt(0))
         ? "?" // Still PrintableString

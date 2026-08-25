@@ -19,6 +19,11 @@ import {
  * @summary EDISubmissionOptions
  * @description
  *
+ * The submission-options argument of the MS-message-submission abstract-operation defined
+ * in 8.3.1.1 and 8.1.6 of of stored EDIMs and stored body parts in submitted EDIMs. The
+ * EDI-submission-options information object is defined as follows: See ITU-T X.435 (1999),
+ * §18.6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

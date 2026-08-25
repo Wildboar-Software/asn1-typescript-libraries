@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary StoragePeriod
  * @description
  *
+ * This general-attribute indicates the period, in seconds, for which the MS-user
+ * anticipates that storage of the entry will be required, relative to its creation-time.
+ * An entry becomes subject to deletion by the Auto-delete auto-action when its
+ * storage-period expires (see 13.4). See ITU-T X.413 (1999), §11.2.78.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

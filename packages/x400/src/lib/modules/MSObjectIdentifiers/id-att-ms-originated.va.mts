@@ -15,6 +15,11 @@ import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
  * @summary id_att_ms_originated
  * @description
  *
+ * This general-attribute indicates whether the message represented by a submitted-message
+ * entry was submitted by the MS as a consequence of the performance of an auto-action, or
+ * whether it was submitted by the MS-user. The attribute is present in the former case and
+ * absent in the latter. See ITU-T X.413 (1999), §11.2.45.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ import {
  * @summary IPMSynopsis
  * @description
  *
+ * The IPM Synopsis attribute gives the structure, characteristics, size, and processing
+ * status of an IPM at the granularity of individual body parts. The synopsis of an IPM
+ * comprises a synopsis of each of its body parts. See ITU-T X.420 (1999), §19.6.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

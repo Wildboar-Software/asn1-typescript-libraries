@@ -15,6 +15,8 @@ import { id_alg } from '../MSObjectIdentifiers/id-alg.va.mjs';
  * @summary id_alg_password_xor
  * @description
  *
+ * Defined in ITU-T X.413 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

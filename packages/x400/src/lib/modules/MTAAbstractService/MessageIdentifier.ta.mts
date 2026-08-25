@@ -19,6 +19,9 @@ import {
  * @summary MessageIdentifier
  * @description
  *
+ * This argument contains an MTS-identifier that distinguishes the message from all other
+ * messages, probes and reports within the MTS. See ITU-T X.411 (1999), §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

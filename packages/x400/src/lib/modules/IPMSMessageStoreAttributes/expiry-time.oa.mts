@@ -28,6 +28,9 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary expiry_time
  * @description
  *
+ * The Expiry Time heading field (O) identifies when the authorizing users consider the IPM
+ * to lose its validity. It comprises a date and time. See ITU-T X.420 (1999), §7.2.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

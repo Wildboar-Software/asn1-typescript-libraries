@@ -28,6 +28,9 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary auto_action_request_error
  * @description
  *
+ * An Auto-action-request-error reports a problem related to the registration of an
+ * auto-action. auto-action-request-error See ITU-T X.413 (1999), §9.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

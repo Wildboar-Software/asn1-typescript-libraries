@@ -37,6 +37,12 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary delivery_control
  * @description
  *
+ * The Delivery-control abstract-operation enables the MTS-user to temporarily limit the
+ * delivery-port abstract-operations that the MTS may invoke, and the messages that the MTS
+ * may deliver to the MTS-user via the Message-delivery abstract-operation. The MTS shall
+ * hold until a later time, rather than abandon, abstract-operations and messages presently
+ * forbidden. See ITU-T X.411 (1999), §8.3.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

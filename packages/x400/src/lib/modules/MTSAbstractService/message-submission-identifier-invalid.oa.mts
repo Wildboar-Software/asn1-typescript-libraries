@@ -25,6 +25,12 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary message_submission_identifier_invalid
  * @description
  *
+ * The Message-submission-identifier-invalid abstract-error reports that the
+ * deferred-delivery of a message cannot be cancelled because the specified
+ * message-submission-identifier is invalid, or identifies a message submitted by another
+ * MTS-user. The Message-submission-identifier-invalid abstract-error has no parameters.
+ * See ITU-T X.411 (1999), §8.2.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

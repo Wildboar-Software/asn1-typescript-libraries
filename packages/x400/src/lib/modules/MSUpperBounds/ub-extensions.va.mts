@@ -15,6 +15,9 @@ import {
  * @summary ub_extensions
  * @description
  *
+ * This Service Definition defines MS operation regardless of the content-types of the
+ * messages present. See ITU-T X.413 (1999), §6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

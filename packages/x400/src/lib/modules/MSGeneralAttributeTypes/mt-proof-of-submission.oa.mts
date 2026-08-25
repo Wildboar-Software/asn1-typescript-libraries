@@ -26,6 +26,10 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * @summary mt_proof_of_submission
  * @description
  *
+ * This general-attribute contains the proof-of-submission result of the Message-submission
+ * abstract-operation. It provides the MS-user with proof of submission of a message to the
+ * MTS. See ITU-T X.413 (1999), §11.2.65.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

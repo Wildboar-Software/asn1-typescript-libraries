@@ -15,6 +15,9 @@ import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_thisRecipientName
  * @description
  *
+ * This argument contains the OR-name of a recipient of the message. It shall be generated
+ * by the originator of the message. See ITU-T X.411 (1999), §8.2.1.1.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

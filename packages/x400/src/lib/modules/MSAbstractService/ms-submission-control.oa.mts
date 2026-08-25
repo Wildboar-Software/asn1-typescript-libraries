@@ -23,6 +23,8 @@ import { type ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATIO
  * @summary ms_submission_control
  * @description
  *
+ * See ITU-T X.413 (1999), §8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,8 @@ import { id_at_mta_name } from '../MHSRoutingObjectIdentifiers/id-at-mta-name.va
  * @summary mTAName
  * @description
  *
+ * Defined in ITU-T X.412 (1999) (§11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

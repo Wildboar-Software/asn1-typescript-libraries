@@ -1,34 +1,12 @@
-/* eslint-disable */
-import {
-    PrintableString,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
-
 /**
- * @summary OrganizationName
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * OrganizationName  ::=  PrintableString(SIZE (1..ub-organization-name-length))
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type OrganizationName = PrintableString; // PrintableString
+export type {
+    OrganizationName,
+} from "@wildboar/or-address";
+export {
+    _decode_OrganizationName,
+    _encode_OrganizationName,
+} from "@wildboar/or-address";
 
-
-export const _decode_OrganizationName = $._decodePrintableString;
-
-
-export const _encode_OrganizationName = $._encodePrintableString;
-
-
-/* eslint-enable */

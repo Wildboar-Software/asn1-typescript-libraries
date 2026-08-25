@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DLPolicy_proof_of_delivery
  * @description
  *
+ * In a delivery step, an MTA conveys a message or report to an MS or UA. The MS and UA are
+ * those of a potential recipient of the message, or the originator of the report's subject
+ * message or probe. See ITU-T X.402 (1999), §9.3.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,9 @@ import {
  * @summary PostOfficeBoxAddress
  * @description
  *
+ * Post-office box number assigned by the office in `physical-delivery-office-name` (ITU-T
+ * X.402 (1999), §18.3.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,12 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  * @summary deferred_delivery_cancellation_rejected
  * @description
  *
+ * The Deferred-delivery-cancellation-rejected abstract-error reports that the MTS cannot
+ * cancel the deferred-delivery of a message, either because the message has already been
+ * progressed for transfer and/or delivery, or because the MTS had provided the originator
+ * with proof-of-submission. The Deferred-delivery-cancellation-rejected abstract-error has
+ * no parameters. See ITU-T X.411 (1999), §8.2.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

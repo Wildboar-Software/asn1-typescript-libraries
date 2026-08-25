@@ -15,6 +15,8 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @summary id_attribute_probeOriginAuthenticationCheck
  * @description
  *
+ * See ITU-T X.411 (1999), §8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import { id_mct } from '../IPMSObjectIdentifiers/id-mct.va.mjs';
  * @summary id_mct_p2_1988
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

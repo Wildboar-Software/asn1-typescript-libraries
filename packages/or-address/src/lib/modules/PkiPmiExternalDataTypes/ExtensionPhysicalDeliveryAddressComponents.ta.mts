@@ -10,6 +10,8 @@ import {
  * @summary ExtensionPhysicalDeliveryAddressComponents
  * @description
  *
+ * Exact point of delivery, e.g. room and floor (ITU-T X.402 (1999), §18.3.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

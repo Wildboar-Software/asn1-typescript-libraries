@@ -15,6 +15,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SensitivityField
  * @description
  *
+ * Heading sensitivity (ITU-T X.420 (1999), §7.2.11): `personal`(1), `private`(2),
+ * `company-confidential`(3). There is **no** `0` value. Omitting the field means not
+ * sensitive — that is not the same as `personal`(1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

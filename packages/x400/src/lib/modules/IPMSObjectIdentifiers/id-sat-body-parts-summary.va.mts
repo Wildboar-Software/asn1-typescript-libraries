@@ -15,6 +15,10 @@ import { id_sat } from '../IPMSObjectIdentifiers/id-sat.va.mjs';
  * @summary id_sat_body_parts_summary
  * @description
  *
+ * The Body Parts Summary attribute, which is multi-valued, provides a summary of the body
+ * parts present in an IPM. One value of body-part-descriptor shall be present for each
+ * body part present in the IPM. See ITU-T X.420 (1999), §19.6.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

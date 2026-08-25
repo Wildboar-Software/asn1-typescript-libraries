@@ -15,6 +15,8 @@ import { id_hex } from '../IPMSObjectIdentifiers/id-hex.va.mjs';
  * @summary id_hex_ipm_security_label
  * @description
  *
+ * Defined in ITU-T X.420 (1999) (Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

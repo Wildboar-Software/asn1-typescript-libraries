@@ -15,6 +15,11 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @summary id_et_pkcs7
  * @description
  *
+ * A PKCS7 body part represents an information object which has had some public key
+ * cryptographic service applied, typically encryption or signature. It provides a
+ * mechanism for securing an information object without using an encoding specific to any
+ * messaging system (e.g. See ITU-T X.420 (1999), §7.4.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

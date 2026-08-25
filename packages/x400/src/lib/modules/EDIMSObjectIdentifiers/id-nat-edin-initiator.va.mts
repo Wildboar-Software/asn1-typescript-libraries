@@ -15,6 +15,8 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  * @summary id_nat_edin_initiator
  * @description
  *
+ * See ITU-T X.435 (1999), §9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mj
  * @summary id_model
  * @description
  *
+ * 14.1.1 Organization and Modelling Technique The description of procedures for a single
+ * MTA is based on the model shown in Figures 5 through 11 and described below. It should
+ * be noted that the model is included for descriptive purposes only and is not intended to
+ * constrain in any way the implementation of an MTA. See ITU-T X.411 (1999), §14.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
