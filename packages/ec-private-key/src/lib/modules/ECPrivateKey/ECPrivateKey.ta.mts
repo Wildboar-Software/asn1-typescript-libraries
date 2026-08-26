@@ -20,6 +20,23 @@ import { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKI
  * @summary ECPrivateKey
  * @description
  *
+ * Elliptic Curve private key information
+ * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)):
+ * a private key, associated domain parameters, and optionally the
+ * corresponding public key. Syntax and semantics follow SECG
+ * ([RFC 5915 §1](https://datatracker.ietf.org/doc/html/rfc5915#section-1)).
+ *
+ * Useful when distributing EC private keys in PKCS #8
+ * `PrivateKeyInfo` ([RFC 5208](https://datatracker.ietf.org/doc/html/rfc5208)):
+ * put `id-ecPublicKey`, `id-ecDH`, or `id-ecMQV` (from
+ * [RFC 5480](https://datatracker.ietf.org/doc/html/rfc5480)) with
+ * `namedCurve` parameters in `privateKeyAlgorithm`, and encode this
+ * structure in the `privateKey` OCTET STRING. When a public key is
+ * carried in that distribution, use the `publicKey` field here.
+ *
+ * Generators SHOULD encode with DER; receivers SHOULD accept BER and
+ * DER ([RFC 5915 §4](https://datatracker.ietf.org/doc/html/rfc5915#section-4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,24 +54,59 @@ class ECPrivateKey {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Syntax version of the EC private key structure. For this
+         * document it SHALL be `ecPrivkeyVer1` (INTEGER value 1)
+         * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
+         *
          * @public
          * @readonly
          */
         readonly version: ECPrivateKey_version,
         /**
          * @summary `privateKey`.
+         * @description
+         *
+         * The EC private key as an OCTET STRING of length
+         * ceiling(log2(n)/8) (n = curve order), obtained from the
+         * unsigned integer via I2OSP
+         * ([RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447))
+         * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
+         *
          * @public
          * @readonly
          */
         readonly privateKey: OCTET_STRING,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Elliptic curve domain parameters for this private key.
+         * Type `ECParameters` is from
+         * [RFC 5480](https://datatracker.ietf.org/doc/html/rfc5480);
+         * only the `namedCurve` CHOICE is permitted. Though OPTIONAL
+         * in ASN.1, conforming implementations MUST always include
+         * this field
+         * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
+         *
          * @public
          * @readonly
          */
         readonly parameters?: OPTIONAL<ECParameters>,
         /**
          * @summary `publicKey`.
+         * @description
+         *
+         * Public key associated with `privateKey`. Format is
+         * [RFC 5480 §2.2](https://datatracker.ietf.org/doc/html/rfc5480#section-2.2)
+         * (ECPoint in a BIT STRING). Though OPTIONAL in ASN.1,
+         * conforming implementations SHOULD always include it; it may
+         * be omitted when the public key was distributed another way.
+         * It can always be recomputed from the private key and
+         * parameters
+         * ([RFC 5915 §3](https://datatracker.ietf.org/doc/html/rfc5915#section-3)).
+         *
          * @public
          * @readonly
          */

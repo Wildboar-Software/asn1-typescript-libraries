@@ -17,6 +17,26 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECParameters
  * @description
  *
+ * Elliptic curve domain parameters for PKIX algorithm identifiers
+ * ([RFC 5480 §2.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1)).
+ * Re-exported in module `PKIXAlgs-2009`
+ * ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)) and
+ * imported by `ECPrivateKey`
+ * ([RFC 5915](https://datatracker.ietf.org/doc/html/rfc5915)).
+ *
+ * This implementation exposes only the `namedCurve` alternative. An
+ * OBJECT IDENTIFIER names a full set of elliptic curve domain
+ * parameters; that choice MUST be supported
+ * ([RFC 5480 §2.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1),
+ * [§2.1.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1.1)).
+ *
+ * > -- implicitCurve and specifiedCurve MUST NOT be used in PKIX.
+ * > -- Details for SpecifiedECDomain can be found in [X9.62].
+ * > -- Any future additions to this CHOICE should be coordinated
+ * > -- with ANSI X9.
+ * >
+ * > — [RFC 5480 §2.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
