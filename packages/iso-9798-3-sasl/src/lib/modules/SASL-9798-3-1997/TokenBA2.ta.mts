@@ -27,6 +27,29 @@ import {
  * @summary TokenBA2
  * @description
  *
+ * Second server→client token, used only in mutual authentication
+ * (`9798-M-*`) (RFC 3163 §3.3 / §2.5). Carries a third nonce
+ * `randomC` (R_C), optional client identity, server certification
+ * data, and a `SIGNATURE` over DER-encoded `TBSDataBA`.
+ *
+ * The client verifies the server's signature (including PKIX path
+ * processing), that signed `randomB` / `randomA` match the values
+ * from steps 1 and 2, and that `entityA`, if present, matches the
+ * client's distinguishing identifier (RFC 3163 §2.5).
+ *
+ * Constraint (ASN.1 `CONSTRAINED BY`):
+ *
+ * > The `entityA` field shall be included in `TokenBA2` if and only
+ * > if it is also included in `TBSDataBA`. The `entityA` field SHOULD
+ * > be present and MUST contain the client's name from their X.509
+ * > certificate.
+ *
+ * R_C is included because R_B is already known to the client before
+ * R_A is chosen, so R_B alone does not give the server the same
+ * chosen-data protection that R_A gives the client (RFC 3163 §7).
+ *
+ * PDUs SHALL be DER-encoded before transmission (RFC 3163 §3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,24 +70,47 @@ class TokenBA2 {
     constructor (
         /**
          * @summary `randomC`.
+         * @description
+         *
+         * Third random R_C chosen by the server for mutual
+         * authentication (RFC 3163 §2.5 / §7). MUST be from a
+         * cryptographically strong RNG (RFC 3163 §7).
+         *
          * @public
          * @readonly
          */
         readonly randomC: RandomNumber,
         /**
          * @summary `entityA`.
+         * @description
+         *
+         * Optional client identity. SHALL be present in `TokenBA2` iff
+         * also present in `TBSDataBA`. SHOULD be present and MUST
+         * contain the client's name from their X.509 certificate
+         * (RFC 3163 §3.3).
+         *
          * @public
          * @readonly
          */
         readonly entityA: OPTIONAL<GeneralNames>,
         /**
          * @summary `certB`.
+         * @description
+         *
+         * Server's X.509 certificate and related chain sent to the
+         * client (RFC 3163 §3.3 / §3.5).
+         *
          * @public
          * @readonly
          */
         readonly certB: CertData,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Server signature over DER-encoded `TBSDataBA`
+         * (`SIGNATURE { TBSDataBA }`) (RFC 3163 §3.3 / §3.7).
+         *
          * @public
          * @readonly
          */

@@ -26,6 +26,19 @@ import {
  * @summary TrustedAuth
  * @description
  *
+ * Identifies a preferred trusted authority for use in `TokenBA1.certPref`
+ * (RFC 3163 §3.4). Alternatives:
+ *
+ * - `authorityName` [0]: `SubjectName` from the CA certificate.
+ * - `issuerNameHash` [1]: SHA-1 hash of the DER encoding of
+ *   `SubjectName` from the CA certificate.
+ * - `issuerKeyHash` [2]: SHA-1 hash of the authority's public key,
+ *   calculated over the value (excluding tag and length) of the
+ *   subject public key field in the issuer's certificate.
+ * - `authorityCertificate` [3]: the CA certificate itself.
+ * - `pkcs15KeyHash` [4]: hash of the CA's public key as defined in
+ *   PKCS #15 §6.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

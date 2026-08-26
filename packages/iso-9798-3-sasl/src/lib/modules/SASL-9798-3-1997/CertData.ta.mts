@@ -23,6 +23,20 @@ import {
  * @summary CertData
  * @description
  *
+ * Certification data for `TokenAB.certA` / `TokenBA2.certB`
+ * (RFC 3163 §3.5): either an inline certificate set or a URL.
+ *
+ * `certificateSet` is as in RFC 2630: intended to hold chains from a
+ * recognized root / top-level CA to the sender certificates associated
+ * with the set, though it may contain more or fewer certificates than
+ * necessary. Precise chain semantics are outside this document's
+ * scope.
+ *
+ * `certURL` MUST be a non-relative URL following RFC 1738 syntax and
+ * encoding: it must include a scheme (e.g. `http` or `ldap`) and a
+ * scheme-specific part with a fully qualified domain name or IP
+ * address as the host.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

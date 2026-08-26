@@ -26,6 +26,25 @@ import {
  * @summary TokenAB
  * @description
  *
+ * Client→server token in unilateral and mutual modes (RFC 3163 §3.2).
+ * Carries the client's nonce `randomA` (R_A), optional server identity,
+ * client certification data, optional authorization identity, and a
+ * `SIGNATURE` over DER-encoded `TBSDataAB`.
+ *
+ * The server verifies the client's signature (including PKIX path
+ * processing per RFC 2459), that signed `randomB` matches the R_B it
+ * sent in `TokenBA1`, and that `entityB`, if present, matches the
+ * server's distinguishing identifier (RFC 3163 §2.4 / §2.5).
+ *
+ * Constraint (ASN.1 `CONSTRAINED BY`):
+ *
+ * > The `entityB` and `authID` fields shall be included in `TokenAB`
+ * > if and only if they are also included in `TBSDataAB`. The
+ * > `entityB` field SHOULD be present in `TokenAB` whenever the
+ * > client believes it knows the identity of the server.
+ *
+ * PDUs SHALL be DER-encoded before transmission (RFC 3163 §3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,30 +66,62 @@ class TokenAB {
     constructor (
         /**
          * @summary `randomA`.
+         * @description
+         *
+         * Client nonce R_A. Included in the signed material so the
+         * server cannot obtain a client signature on data chosen before
+         * authentication starts (RFC 3163 §7). MUST be from a
+         * cryptographically strong RNG (RFC 3163 §7).
+         *
          * @public
          * @readonly
          */
         readonly randomA: RandomNumber,
         /**
          * @summary `entityB`.
+         * @description
+         *
+         * Optional server identity. SHALL be present in `TokenAB` iff
+         * also present in `TBSDataAB`. SHOULD be present whenever the
+         * client believes it knows the server's identity
+         * (RFC 3163 §3.2).
+         *
          * @public
          * @readonly
          */
         readonly entityB: OPTIONAL<GeneralNames>,
         /**
          * @summary `certA`.
+         * @description
+         *
+         * Client's X.509 certificate (or URL) and related chain sent to
+         * the server (RFC 3163 §3.2 / §3.5).
+         *
          * @public
          * @readonly
          */
         readonly certA: CertData,
         /**
          * @summary `authID`.
+         * @description
+         *
+         * Authorization identity when access-control identity differs
+         * from the signer's certificate identity. If absent, the
+         * identity from the client's X.509 certificate shall be used
+         * (RFC 3163 §3.2). SHALL be present in `TokenAB` iff also
+         * present in `TBSDataAB`.
+         *
          * @public
          * @readonly
          */
         readonly authID: OPTIONAL<GeneralNames>,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Client signature over DER-encoded `TBSDataAB`
+         * (`SIGNATURE { TBSDataAB }`) (RFC 3163 §3.2 / §3.7).
+         *
          * @public
          * @readonly
          */
