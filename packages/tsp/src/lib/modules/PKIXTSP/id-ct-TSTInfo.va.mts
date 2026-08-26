@@ -5,6 +5,11 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_ct_TSTInfo
  * @description
  *
+ * CMS content type OID for `TSTInfo`: used as
+ * `SignedData.encapContentInfo.eContentType` inside a `TimeStampToken`
+ * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+ * The corresponding `eContent` is the DER encoding of `TSTInfo`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

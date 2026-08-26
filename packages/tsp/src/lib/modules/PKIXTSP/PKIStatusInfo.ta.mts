@@ -24,6 +24,17 @@ import {
  * @summary PKIStatusInfo
  * @description
  *
+ * Status carried in `TimeStampResp`
+ * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+ * Based on CMP status in
+ * [RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510) §3.2.3, with
+ * TSP-specific `PKIStatus` / `PKIFailureInfo` values.
+ *
+ * When `status` is `granted`(0) or `grantedWithMods`(1), a
+ * `TimeStampToken` MUST be present in the response; otherwise it MUST
+ * NOT. When the token is absent, `failInfo` indicates why the request
+ * was rejected.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +49,40 @@ export class PKIStatusInfo {
     constructor(
         /**
          * @summary `status`.
+         * @description
+         *
+         * One of the `PKIStatus` values defined for TSP. Compliant
+         * servers SHOULD NOT produce other values; compliant clients
+         * MUST error on unrecognized values
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly status: PKIStatus,
         /**
          * @summary `statusString`.
+         * @description
+         *
+         * Optional human-readable reason text (e.g.,
+         * `"messageImprint field is not correctly formatted"`)
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         * Type is `PKIFreeText` from PKIXCMP
+         * ([RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510) §3.1.1).
+         *
          * @public
          * @readonly
          */
         readonly statusString?: OPTIONAL<PKIFreeText>,
         /**
          * @summary `failInfo`.
+         * @description
+         *
+         * When no `TimeStampToken` is present, reason the request was
+         * rejected. Only the `PKIFailureInfo` bits listed in
+         * [RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)
+         * SHALL be supported.
+         *
          * @public
          * @readonly
          */
