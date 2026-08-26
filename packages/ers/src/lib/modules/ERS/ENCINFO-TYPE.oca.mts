@@ -14,6 +14,17 @@ import {
 
 
 
+/**
+ * @summary ENCINFO_TYPE
+ * @description
+ *
+ * Information object class for `EncryptionInfo` open typing in the
+ * 1997 ASN.1 module: `ENCINFO-TYPE ::= TYPE-IDENTIFIER`. Each
+ * instance supplies an `&id` OID and associated `&Type` used as
+ * `encryptionInfoType` / `encryptionInfoValue`. Concrete instances
+ * are collected in `SupportedEncryptionAlgorithms`.
+ * (RFC 4998 §6.1.2.)
+ */
 export
 type ENCINFO_TYPE = TYPE_IDENTIFIER;
 

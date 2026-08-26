@@ -20,6 +20,13 @@ import {
  * @summary Attributes
  * @description
  *
+ * Non-empty `SET` of `Attribute` values used as
+ * `ArchiveTimeStamp.attributes`. An LTA may use these to document
+ * individual renewal steps and creation of Archive Timestamps
+ * (e.g. applied policies). A `SET` is used rather than a `SEQUENCE`
+ * because ordering is relevant when the structure is protected by
+ * hash and timestamps. (RFC 4998 §4.1.)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

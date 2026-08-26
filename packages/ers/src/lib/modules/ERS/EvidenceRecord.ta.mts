@@ -25,6 +25,18 @@ import { ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_Arc
  * @summary EvidenceRecord
  * @description
  *
+ * Unit of data that can prove existence of an archived data object or
+ * data object group at a certain time. Holds Archive Timestamps
+ * generated over a long archival period and optional validation data.
+ * May be stored separately from the archived objects or integrated
+ * into them (e.g. CMS attributes in Appendix A). (RFC 4998 §3, §3.1.)
+ *
+ * Generation (RFC 4998 §3.2): select objects; create the initial
+ * `ArchiveTimeStamp`; renew via Timestamp Renewal or Hash-Tree Renewal
+ * (§5) when needed. Verification (§3.3): optionally re-encrypt if
+ * `encryptionInfo` is used; then verify the
+ * `ArchiveTimeStampSequence`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,30 +54,70 @@ class EvidenceRecord {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Syntax version. Value `1` (`v1`) indicates this specification.
+         * Lower values indicate an earlier ERS version. An
+         * implementation conforming to RFC 4998 SHOULD reject a version
+         * value below 1. (RFC 4998 §3.1.)
+         *
          * @public
          * @readonly
          */
         readonly version: EvidenceRecord_version,
         /**
          * @summary `digestAlgorithms`.
+         * @description
+         *
+         * Sequence of all hash algorithms used to hash the data object
+         * over the archival period: the union of all
+         * `digestAlgorithm` values from the `ArchiveTimeStamp`s in this
+         * record. Ordering is not relevant. (RFC 4998 §3.1.)
+         *
          * @public
          * @readonly
          */
         readonly digestAlgorithms: AlgorithmIdentifier[],
         /**
          * @summary `cryptoInfos`.
+         * @description
+         *
+         * Optional data useful when validating
+         * `archiveTimeStampSequence` (e.g. trust anchors, certificates,
+         * revocation information, algorithm suitability). Policy may
+         * dictate what is included. (RFC 4998 §3.1.)
+         *
+         * > Since this data is not protected within any timestamp, the
+         * > data should be verifiable through other mechanisms. Such
+         * > verification is out of scope of this document.
+         *
          * @public
          * @readonly
          */
         readonly cryptoInfos: OPTIONAL<CryptoInfos>,
         /**
          * @summary `encryptionInfo`.
+         * @description
+         *
+         * Optional parameters needed when archive data objects were
+         * encrypted before Archive Timestamps were generated but a
+         * non-repudiation proof for the unencrypted data is required.
+         * Absent means objects are not encrypted, or proof for
+         * unencrypted data is not required. See RFC 4998 §6 / §6.1.
+         * (RFC 4998 §3.1.)
+         *
          * @public
          * @readonly
          */
         readonly encryptionInfo: OPTIONAL<EncryptionInfo>,
         /**
          * @summary `archiveTimeStampSequence`.
+         * @description
+         *
+         * Sequence of `ArchiveTimeStampChain` values covering the
+         * archived data over time, including renewals. See RFC 4998 §5.
+         * (RFC 4998 §3.1.)
+         *
          * @public
          * @readonly
          */

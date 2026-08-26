@@ -17,14 +17,26 @@ import {
 /**
  * @summary id_aa_er_internal
  * @description
- * 
+ *
+ * CMS attribute OID for an Evidence Record when the CMS object as a
+ * whole (including `contentInfo`) is selected as the archived data
+ * object: the hash of the CMS object MUST appear in the first hash-
+ * value list of the Archive Timestamps. Placed as an unsigned
+ * attribute (signed data) or unprotected attribute (enveloped data),
+ * preferably on the first signature. (RFC 4998 Appendix A.)
+ *
+ * SHOULD occur only once; if several appear, store them in the first
+ * signature in chronological order. Value
+ * `{ iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs9(9)
+ * smime(16) id-aa(2) 49 }`.
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * id-aa-er-internal  OBJECT IDENTIFIER ::= { iso(1) member-body(2)
  *     us(840) rsadsi(113549) pkcs(1) pkcs9(9) smime(16) id-aa(2) 49 }
  * ```
- * 
+ *
  * @constant
  */
 export

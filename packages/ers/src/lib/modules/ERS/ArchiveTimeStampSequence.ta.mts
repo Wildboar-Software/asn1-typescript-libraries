@@ -16,6 +16,19 @@ import { ArchiveTimeStampChain, _decode_ArchiveTimeStampChain, _encode_ArchiveTi
  * @summary ArchiveTimeStampSequence
  * @description
  *
+ * Sequence of `ArchiveTimeStampChain` values where each chain
+ * preserves non-repudiation of prior chains after the hash algorithm
+ * used in the previous chain's hash tree becomes weak (Hash-Tree
+ * Renewal). Non-repudiation holds until the last Archive Timestamp of
+ * the last chain becomes invalid. Relates to a data object / group if
+ * its first chain does. (RFC 4998 §1.3, §5, §5.1.)
+ *
+ * MUST be ordered ascending by timestamp time. Hash-Tree Renewal
+ * hashes both archived data objects and the DER-encoded prior
+ * `ArchiveTimeStampChain`s, then starts a new chain appended here
+ * (RFC 4998 §5.2). Verification of chains and their relation to data
+ * objects is in §5.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

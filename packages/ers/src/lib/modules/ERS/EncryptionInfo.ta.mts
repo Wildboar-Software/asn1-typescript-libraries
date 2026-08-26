@@ -16,6 +16,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncryptionInfo
  * @description
  *
+ * Extensible parameters for encryption methods when evidence records
+ * refer to encrypted archived data but clients may need to
+ * unambiguously re-encrypt unencrypted copies to match the
+ * originally archived bit-stream. Use of `encryptionInfoType` /
+ * `encryptionInfoValue` is mechanism-specific and defined elsewhere.
+ * (RFC 4998 §6, §6.1.2.)
+ *
+ * Present in `EvidenceRecord` when objects were encrypted before
+ * Archive Timestamps were generated and a non-repudiation proof for
+ * unencrypted data is required (RFC 4998 §3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +42,24 @@ class EncryptionInfo {
     constructor (
         /**
          * @summary `encryptionInfoType`.
+         * @description
+         *
+         * Object identifier selecting the encryption-info syntax
+         * (`ENCINFO-TYPE.&id` constrained by
+         * `SupportedEncryptionAlgorithms`). (RFC 4998 §6.1.2.)
+         *
          * @public
          * @readonly
          */
         readonly encryptionInfoType: OBJECT_IDENTIFIER,
         /**
          * @summary `encryptionInfoValue`.
+         * @description
+         *
+         * Type associated with `encryptionInfoType`
+         * (`ENCINFO-TYPE.&Type`). Encoding and meaning are defined by
+         * the mechanism identified by the OID. (RFC 4998 §6.1.2.)
+         *
          * @public
          * @readonly
          */

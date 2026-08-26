@@ -20,6 +20,12 @@ import {
  * @summary CryptoInfos
  * @description
  *
+ * Non-empty sequence of `Attribute` values carried in
+ * `EvidenceRecord.cryptoInfos` for material useful when validating
+ * `archiveTimeStampSequence` (e.g. trust anchors, certificates,
+ * revocation information, algorithm suitability). Not protected by
+ * any timestamp. (RFC 4998 §3.1.)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
