@@ -20,6 +20,32 @@ import {
  * @summary CertStatus
  * @description
  *
+ * Definitive certificate status in a `SingleResponse`
+ * ([RFC 6960 §2.2](https://datatracker.ietf.org/doc/html/rfc6960#section-2.2),
+ * [§4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ *
+ * - `good`: positive response; at a minimum, no certificate with the
+ *   requested serial currently within its validity interval is
+ *   revoked. Does not necessarily mean the certificate was ever
+ *   issued or that `producedAt` is within the certificate's validity
+ *   interval.
+ * - `revoked`: certificate has been revoked (temporarily via
+ *   `certificateHold`, or permanently). MAY also be returned for a
+ *   non-issued certificate (no record of issuance under any current
+ *   or previous issuing key); when so, see §2.2 and the extended
+ *   revoked definition extension (§4.4.8).
+ * - `unknown`: responder does not know about the certificate,
+ *   usually because of an unrecognized issuer not served by this
+ *   responder.
+ *
+ * > The "revoked" status indicates that a certificate with the
+ * > requested serial number should be rejected, while the "unknown"
+ * > status indicates that the status could not be determined by this
+ * > responder, thereby allowing the client to decide whether it wants
+ * > to try another source of status information (such as a CRL).
+ * >
+ * > — [RFC 6960 §2.2](https://datatracker.ietf.org/doc/html/rfc6960#section-2.2)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

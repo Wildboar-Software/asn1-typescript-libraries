@@ -12,6 +12,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ResponseBytes
  * @description
  *
+ * Typed OCSP response payload in a successful `OCSPResponse`
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * Consists of a response type OID and the response syntax identified
+ * by that OID, encoded as an OCTET STRING. For a basic OCSP
+ * responder, `responseType` is `id-pkix-ocsp-basic` and `response`
+ * is the DER encoding of `BasicOCSPResponse`.
+ *
+ * OCSP responders SHALL be capable of producing, and clients of
+ * receiving, the `id-pkix-ocsp-basic` response type (§4.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +37,25 @@ export class ResponseBytes {
     constructor(
         /**
          * @summary `responseType`.
+         * @description
+         *
+         * OBJECT IDENTIFIER of the response syntax (e.g.
+         * `id-pkix-ocsp-basic`)
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly responseType: OBJECT_IDENTIFIER,
         /**
          * @summary `response`.
+         * @description
+         *
+         * DER encoding of the response value identified by
+         * `responseType` (for basic OCSP, DER of
+         * `BasicOCSPResponse`)
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+         *
          * @public
          * @readonly
          */

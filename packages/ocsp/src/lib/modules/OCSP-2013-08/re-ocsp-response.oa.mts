@@ -12,6 +12,10 @@ import { id_pkix_ocsp_response } from "../OCSP-2013-08/id-pkix-ocsp-response.va.
  * @summary re_ocsp_response
  * @description
  *
+ * Request extension for Acceptable Response Types
+ * (`AcceptableResponses`), identified by `id-pkix-ocsp-response`
+ * ([RFC 6960 §4.4.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

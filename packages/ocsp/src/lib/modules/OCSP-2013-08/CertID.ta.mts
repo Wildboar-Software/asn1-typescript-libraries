@@ -20,6 +20,13 @@ import {
  * @summary CertID
  * @description
  *
+ * Identifier of a target certificate in an OCSP request or response
+ * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+ * Both the issuer name hash and issuer key hash are used because two
+ * CAs may share a Name; they will not share a public key unless they
+ * deliberately share a private key or one key was compromised
+ * (§4.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,24 +43,50 @@ export class CertID {
     constructor(
         /**
          * @summary `hashAlgorithm`.
+         * @description
+         *
+         * Hash algorithm used to generate `issuerNameHash` and
+         * `issuerKeyHash`
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */
         readonly hashAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `issuerNameHash`.
+         * @description
+         *
+         * Hash of the issuer's distinguished name, calculated over the
+         * DER encoding of the issuer's name field in the certificate
+         * being checked
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */
         readonly issuerNameHash: OCTET_STRING,
         /**
          * @summary `issuerKeyHash`.
+         * @description
+         *
+         * Hash of the issuer's public key, calculated over the value
+         * (excluding tag and length) of the subject public key field
+         * in the issuer's certificate
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */
         readonly issuerKeyHash: OCTET_STRING,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Serial number of the certificate for which status is
+         * requested
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */

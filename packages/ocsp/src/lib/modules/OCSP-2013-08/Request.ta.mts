@@ -21,6 +21,9 @@ import {
  * @summary Request
  * @description
  *
+ * Single certificate status request within `TBSRequest.requestList`
+ * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +39,23 @@ export class Request {
     constructor(
         /**
          * @summary `reqCert`.
+         * @description
+         *
+         * Identifier of the target certificate
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */
         readonly reqCert: CertID,
         /**
          * @summary `singleRequestExtensions`.
+         * @description
+         *
+         * Optional extensions applicable to this single certificate
+         * status request (e.g. service locator). See
+         * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
+         *
          * @public
          * @readonly
          */

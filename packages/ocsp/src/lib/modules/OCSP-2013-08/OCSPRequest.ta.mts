@@ -20,6 +20,16 @@ import {
  * @summary OCSPRequest
  * @description
  *
+ * OCSP status request sent by a client to a responder
+ * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+ * Contains an optionally signed `TBSRequest`. Transport formatting
+ * may vary (HTTP, SMTP, LDAP, etc.) (§4.1).
+ *
+ * The requestor MAY sign the request; the signature is computed over
+ * `tbsRequest`. If signed, the requestor SHALL set `requestorName`
+ * and MAY include certificates in `optionalSignature.certs` to help
+ * the responder verify the signature (§4.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +43,26 @@ export class OCSPRequest {
     constructor(
         /**
          * @summary `tbsRequest`.
+         * @description
+         *
+         * Optionally signed OCSP request body
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */
         readonly tbsRequest: TBSRequest,
         /**
          * @summary `optionalSignature`.
+         * @description
+         *
+         * Optional request signature: algorithm identifier and
+         * parameters in `signatureAlgorithm`, signature value in
+         * `signature`, and optionally certificates the server needs
+         * to verify the signed request (normally up to but not
+         * including the client's root certificate)
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */

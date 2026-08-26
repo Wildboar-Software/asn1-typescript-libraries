@@ -6,6 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AcceptableResponses
  * @description
  *
+ * Value of the Acceptable Response Types request extension
+ * (`id-pkix-ocsp-response`): OIDs of response types the client can
+ * accept (e.g. `id-pkix-ocsp-basic`)
+ * ([RFC 6960 §4.4.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.3)).
+ * Included as one of the `requestExtensions` in requests. OCSP
+ * responders and clients SHALL support `id-pkix-ocsp-basic`
+ * (§4.2.1, §4.4.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

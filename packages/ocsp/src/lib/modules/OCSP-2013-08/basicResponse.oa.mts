@@ -11,6 +11,12 @@ import { type RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.mjs";
  * @summary basicResponse
  * @description
  *
+ * `RESPONSE` information object for the basic OCSP response type
+ * identified by `id-pkix-ocsp-basic`, with syntax
+ * `BasicOCSPResponse`
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
+ * Appendix B.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

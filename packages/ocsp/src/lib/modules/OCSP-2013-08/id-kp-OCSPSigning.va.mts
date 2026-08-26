@@ -6,6 +6,12 @@ import { id_kp } from "@wildboar/x500/UsefulDefinitions";
  * @summary id_kp_OCSPSigning
  * @description
  *
+ * Extended key usage OID for OCSP signing delegation
+ * ([RFC 6960 §4.2.2.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.2)).
+ * Included in the OCSP response signer's certificate to designate
+ * Authorized Responder authority. That certificate MUST be issued
+ * directly by the CA identified in the request.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -30,6 +30,11 @@ import {
  * @summary TBSRequest
  * @description
  *
+ * To-be-signed OCSP request content
+ * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+ * When `OCSPRequest.optionalSignature` is present, the signature is
+ * computed over this structure (§4.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,24 +52,50 @@ export class TBSRequest {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Protocol version; for this document `v1`(0)
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         * DEFAULT `v1` when absent.
+         *
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<Version>,
         /**
          * @summary `requestorName`.
+         * @description
+         *
+         * Optional name of the OCSP requestor. SHALL be present when
+         * the request is signed
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1),
+         * [§4.1.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.2)).
+         *
          * @public
          * @readonly
          */
         readonly requestorName: OPTIONAL<GeneralName>,
         /**
          * @summary `requestList`.
+         * @description
+         *
+         * One or more single certificate status requests
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */
         readonly requestList: Request[],
         /**
          * @summary `requestExtensions`.
+         * @description
+         *
+         * Optional extensions applicable to the requests (e.g. nonce,
+         * acceptable responses, preferred signature algorithms). See
+         * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
+         * Support for any specific extension is OPTIONAL; unrecognized
+         * non-critical extensions MUST be ignored (§4.1.2).
+         *
          * @public
          * @readonly
          */
