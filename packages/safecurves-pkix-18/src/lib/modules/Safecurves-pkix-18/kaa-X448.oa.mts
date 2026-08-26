@@ -18,7 +18,15 @@ import { type KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
 /**
  * @summary kaa_X448
  * @description
- * 
+ *
+ * `KEY-AGREE` information object for X448 Diffie-Hellman
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * Identified by `id-X448`; parameters absent; public keys `{pk-X448}`;
+ * UKM has no ASN.1 wrapping and `ARE preferredPresent`.
+ * S/MIME capability carries
+ * `AlgorithmIdentifier{KEY-WRAP, {KeyWrapAlgorithms}}` identified by
+ * `id-X448`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

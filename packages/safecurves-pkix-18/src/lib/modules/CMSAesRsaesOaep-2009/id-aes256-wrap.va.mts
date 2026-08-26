@@ -15,7 +15,12 @@ import { aes } from "../CMSAesRsaesOaep-2009/aes.va.mjs";
 /**
  * @summary id_aes256_wrap
  * @description
- * 
+ *
+ * Object identifier for AES-256 Key Wrap
+ * ([RFC 5911 §4](https://datatracker.ietf.org/doc/html/rfc5911#section-4)); originally ([RFC 3565](https://datatracker.ietf.org/doc/html/rfc3565)).
+ * Used as the `IDENTIFIER` of `kwa-aes256-wrap`. Parameters are absent.
+ * Value `{ aes 45 }`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

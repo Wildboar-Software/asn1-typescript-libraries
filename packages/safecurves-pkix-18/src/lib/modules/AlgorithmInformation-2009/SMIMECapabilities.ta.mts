@@ -16,6 +16,9 @@ import { SMIMECapability, _decode_SMIMECapability, _encode_SMIMECapability } fro
  * @summary SMIMECapabilities
  * @description
  *
+ * Sequence of one or more `SMIMECapability` values ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ * Parameterized by a `SMIME-CAPS` object set (`CapabilitySet`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,7 +15,13 @@ import { id_edwards_curve_algs } from "../Safecurves-pkix-18/id-edwards-curve-al
 /**
  * @summary id_X448
  * @description
- * 
+ *
+ * Algorithm identifier OID for X448 Diffie-Hellman
+ * ([RFC 8410 §3](https://datatracker.ietf.org/doc/html/rfc8410#section-3)); ASN.1 ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * `AlgorithmIdentifier` parameters MUST be absent ([RFC 8410 §3](https://datatracker.ietf.org/doc/html/rfc8410#section-3)).
+ * Human-readable name: "X448"
+ * ([RFC 8410 §8](https://datatracker.ietf.org/doc/html/rfc8410#section-8)). Value `{ id-edwards-curve-algs 111 }` (= `{1 3 101 111}`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

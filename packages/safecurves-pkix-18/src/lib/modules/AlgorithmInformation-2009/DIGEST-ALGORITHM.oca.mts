@@ -16,7 +16,14 @@ import { ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_Par
 /**
  * @summary DIGEST_ALGORITHM
  * @description
- * 
+ *
+ * Information object class for a message-digest (hash) algorithm
+ * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2),
+ * also [RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3)).
+ * Suggested object prefix: `mda-`. Captures the algorithm OID, optional
+ * parameters type, and parameter presence constraint for parameterized
+ * `AlgorithmIdentifier`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,14 +61,29 @@ interface DIGEST_ALGORITHM<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * OID identifying the digest algorithm ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
      * @summary &Params
+     * @description
+     *
+     * If present, the ASN.1 type of the algorithm parameters; if absent,
+     * implies no parameters
+     * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&Params": Params;
     /**
      * @summary &paramPresence
+     * @description
+     *
+     * `ParamOptions` presence requirement for `&Params` ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     * Default `absent`.
+     *
      */
     readonly "&paramPresence"?: ParamOptions;
 };

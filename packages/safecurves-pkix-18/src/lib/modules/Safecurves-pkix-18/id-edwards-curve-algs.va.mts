@@ -17,7 +17,12 @@ import {
 /**
  * @summary id_edwards_curve_algs
  * @description
- * 
+ *
+ * Arc for Edwards-curve / Curve25519 family algorithm identifiers
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * Parent of `id-X25519`, `id-X448`, `id-Ed25519`, and `id-Ed448`.
+ * Value `{1 3 101}`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

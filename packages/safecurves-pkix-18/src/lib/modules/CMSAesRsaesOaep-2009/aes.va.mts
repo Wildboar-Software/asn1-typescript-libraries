@@ -17,7 +17,14 @@ import {
 /**
  * @summary aes
  * @description
- * 
+ *
+ * NIST AES algorithm arc under `nistAlgorithms`
+ * ([RFC 5911 §4](https://datatracker.ietf.org/doc/html/rfc5911#section-4)).
+ * Parent OID for AES CBC and AES Key Wrap algorithm identifiers from
+ * ([RFC 3565](https://datatracker.ietf.org/doc/html/rfc3565)) (2009 ASN.1 rewrite in RFC 5911).
+ * Value `{joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101)
+ * csor(3) nistAlgorithms(4) 1}`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

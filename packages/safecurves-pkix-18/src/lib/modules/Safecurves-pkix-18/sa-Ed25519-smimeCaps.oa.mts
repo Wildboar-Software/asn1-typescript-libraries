@@ -15,7 +15,11 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
 /**
  * @summary sa_Ed25519_smimeCaps
  * @description
- * 
+ *
+ * `SMIME-CAPS` for Ed25519 signatures
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)): `IDENTIFIED BY id-Ed25519` (no capability `TYPE`).
+ * Unnested from `sa-Ed25519.&smimeCaps`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SMIMECapability
  * @description
  *
+ * Encoding of a single S/MIME capability ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ * `capabilityID` selects a `SMIME-CAPS` object; optional `parameters`
+ * carry that object's `&Type`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +37,20 @@ class SMIMECapability {
     constructor (
         /**
          * @summary `capabilityID`.
+         * @description
+         *
+         * `SMIME-CAPS.&id` for the advertised capability ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+         *
          * @public
          * @readonly
          */
         readonly capabilityID: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Optional `SMIME-CAPS.&Type` parameters for `capabilityID` ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+         *
          * @public
          * @readonly
          */

@@ -15,7 +15,17 @@ import { id_edwards_curve_algs } from "../Safecurves-pkix-18/id-edwards-curve-al
 /**
  * @summary id_X25519
  * @description
- * 
+ *
+ * Algorithm identifier OID for X25519 Diffie-Hellman
+ * ([RFC 8410 §3](https://datatracker.ietf.org/doc/html/rfc8410#section-3);
+ * ASN.1 [RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * Used for public and private keys; for all four curve/algorithm OIDs in
+ * this document, `AlgorithmIdentifier` parameters MUST be absent
+ * ([RFC 8410 §3](https://datatracker.ietf.org/doc/html/rfc8410#section-3)).
+ * Human-readable name: "X25519"
+ * ([RFC 8410 §8](https://datatracker.ietf.org/doc/html/rfc8410#section-8)).
+ * Value `{ id-edwards-curve-algs 110 }` (= `{1 3 101 110}`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

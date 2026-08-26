@@ -17,6 +17,11 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * @summary kaa_X448_smimeCaps
  * @description
  *
+ * `SMIME-CAPS` for X448 key agreement
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * `TYPE` is `AlgorithmIdentifier{KEY-WRAP, {KeyWrapAlgorithms}}`;
+ * `IDENTIFIED BY id-X448`. Unnested from `kaa-X448.&smimeCaps`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

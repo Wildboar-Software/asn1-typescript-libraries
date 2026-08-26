@@ -16,7 +16,12 @@ import { kwa_aes256_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap.oa.mjs"
 /**
  * @summary KeyWrapAlgorithms
  * @description
- * 
+ *
+ * `KEY-WRAP` object set used in X25519/X448 S/MIME capabilities
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * Contains `kwa-aes128-wrap` and `kwa-aes256-wrap` (from
+ * `CMSAesRsaesOaep-2009`), and is extensible (`...`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

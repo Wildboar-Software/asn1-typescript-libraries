@@ -17,7 +17,14 @@ import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs
 /**
  * @summary pk_X25519
  * @description
- * 
+ *
+ * `PUBLIC-KEY` information object for X25519
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * Identified by `id-X25519`; no ASN.1 wrapping of the public key value;
+ * parameters absent. Certificate `keyUsage` MUST include `keyAgreement`
+ * when the extension is present ([RFC 8410 §5](https://datatracker.ietf.org/doc/html/rfc8410#section-5)); `encipherOnly` or `decipherOnly`
+ * MAY also appear. Private key type: `CurvePrivateKey`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

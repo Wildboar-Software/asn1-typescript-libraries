@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CurvePrivateKey
  * @description
- * 
+ *
+ * Opaque octet string holding an EdDSA, X25519, or X448 private key
+ * ([RFC 8410 §7](https://datatracker.ietf.org/doc/html/rfc8410#section-7)).
+ * When encoding `OneAsymmetricKey` ([RFC 5958](https://datatracker.ietf.org/doc/html/rfc5958)),
+ * the private key is wrapped in a `CurvePrivateKey` and then by the
+ * `privateKey` OCTET STRING field ([RFC 8410 §7](https://datatracker.ietf.org/doc/html/rfc8410#section-7)).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
