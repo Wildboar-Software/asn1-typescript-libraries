@@ -17,6 +17,10 @@ import {
  * @summary PublicKeyAndChallenge
  * @description
  *
+ * ASN.1 `SEQUENCE` of `spki` and `challenge` that is signed to form an
+ * SPKAC (draft-leggett-spkac §2.3). Encoded with DER (X.690) as part of
+ * the Signed Public Key and Challenge profile (§2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +36,24 @@ export class PublicKeyAndChallenge {
     constructor(
         /**
          * @summary `spki`.
+         * @description
+         *
+         * `SubjectPublicKeyInfo` (RFC 5912): algorithm used by the public
+         * key, and the public key itself (draft-leggett-spkac §2.1).
+         *
          * @public
          * @readonly
          */
         readonly spki: SubjectPublicKeyInfo,
         /**
          * @summary `challenge`.
+         * @description
+         *
+         * `IA5String` that MUST be a CA-provided value that is difficult
+         * to predict. The end entity encodes it in the SPKAC, signs with
+         * the private key for `spki`, and returns it to the CA
+         * (draft-leggett-spkac §2.2).
+         *
          * @public
          * @readonly
          */
