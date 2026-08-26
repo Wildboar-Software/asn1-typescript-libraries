@@ -85,9 +85,11 @@ class EvidenceRecord {
          * Optional data useful when validating
          * `archiveTimeStampSequence` (e.g. trust anchors, certificates,
          * revocation information, algorithm suitability). Policy may
-         * dictate what is included. Not protected by any timestamp;
-         * should be verifiable by other means (out of scope of
-         * RFC 4998). (RFC 4998 §3.1.)
+         * dictate what is included. (RFC 4998 §3.1.)
+         *
+         * > Since this data is not protected within any timestamp, the
+         * > data should be verifiable through other mechanisms. Such
+         * > verification is out of scope of this document.
          *
          * @public
          * @readonly

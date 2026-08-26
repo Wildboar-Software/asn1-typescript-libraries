@@ -60,12 +60,12 @@ class ArchiveTimeStamp {
          * @description
          *
          * Digest algorithm (and parameters) used within the reduced hash
-         * tree. If absent, the digest algorithm of the timestamp MUST
-         * be used. For RFC 3161 timestamps, that matches
-         * `hashAlgorithm` of `TSTInfo.messageImprint`. When requesting
-         * a timestamp for the root hash, the request hash algorithm
-         * MUST match the tree's algorithm, or this field MUST be
-         * present and specify it. (RFC 4998 §4.1, §4.2.)
+         * tree. For RFC 3161 timestamps when this field is absent, the
+         * value matches `hashAlgorithm` of `TSTInfo.messageImprint`.
+         * (RFC 4998 §4.1, §4.2.)
+         *
+         * > If the optional field digestAlgorithm is not present, the
+         * > digest algorithm of the timestamp MUST be used.
          *
          * @public
          * @readonly
