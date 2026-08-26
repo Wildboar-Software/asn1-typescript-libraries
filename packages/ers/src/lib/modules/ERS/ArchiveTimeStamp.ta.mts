@@ -30,6 +30,17 @@ import {
  * @summary ArchiveTimeStamp
  * @description
  *
+ * A timestamp plus optional lists of hash values from reducing an
+ * ordered Merkle hash tree. Leaves are hashes of data objects to be
+ * timestamped; inner nodes hash the concatenation of children; the
+ * root hash is timestamped. Relates to a data object if that object's
+ * hash is in the first hash-value list; to a data object group if it
+ * relates to every member and no others. (RFC 4998 §1.3, §4, §4.1.)
+ *
+ * If `reducedHashtree` is omitted, the structure is an ordinary
+ * timestamp covering a single data object (RFC 4998 §3.2, §4.1).
+ * Generation and reduction of the tree: §4.2. Verification: §4.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,24 +57,60 @@ class ArchiveTimeStamp {
     constructor (
         /**
          * @summary `digestAlgorithm`.
+         * @description
+         *
+         * Digest algorithm (and parameters) used within the reduced hash
+         * tree. If absent, the digest algorithm of the timestamp MUST
+         * be used. For RFC 3161 timestamps, that matches
+         * `hashAlgorithm` of `TSTInfo.messageImprint`. When requesting
+         * a timestamp for the root hash, the request hash algorithm
+         * MUST match the tree's algorithm, or this field MUST be
+         * present and specify it. (RFC 4998 §4.1, §4.2.)
+         *
          * @public
          * @readonly
          */
         readonly digestAlgorithm: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * Optional LTA information documenting renewal steps and
+         * creation of this `ArchiveTimeStamp` (e.g. applied policies).
+         * Ordering is relevant because the structure may be protected
+         * by hash and timestamps, hence ASN.1 `SET` rather than
+         * `SEQUENCE`. (RFC 4998 §4.1.)
+         *
          * @public
          * @readonly
          */
         readonly attributes: OPTIONAL<Attributes>,
         /**
          * @summary `reducedHashtree`.
+         * @description
+         *
+         * Lists of hash values as `PartialHashtree`s, derived by
+         * reducing a Merkle tree to nodes needed to verify a single
+         * data object (or group). Hash values are octet strings. If
+         * absent, this is simply an ordinary timestamp. (RFC 4998
+         * §4.1, §4.2.)
+         *
          * @public
          * @readonly
          */
         readonly reducedHashtree: OPTIONAL<PartialHashtree[]>,
         /**
          * @summary `timeStamp`.
+         * @description
+         *
+         * The timestamp (RFC 4998 §1.3), e.g. an RFC 3161
+         * `TimeStampToken` as CMS `ContentInfo`. Other timestamp types
+         * MAY be used if they contain time data, timestamped data, and
+         * a cryptographically secure TSA confirmation. Data needed to
+         * verify the timestamp MUST be preserved and SHOULD be stored
+         * in the timestamp itself unless that causes unnecessary
+         * duplication. (RFC 4998 §4.1, §4.2.)
+         *
          * @public
          * @readonly
          */

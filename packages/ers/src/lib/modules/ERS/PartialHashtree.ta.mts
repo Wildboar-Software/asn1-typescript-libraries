@@ -19,6 +19,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PartialHashtree
  * @description
  *
+ * One list of hash values (as octet strings) under the same father
+ * node in a reduced Merkle hash tree, arranged in binary ascending
+ * order. Father nodes themselves are not stored; they are
+ * recomputed by concatenating this list in that order and hashing
+ * with the Archive Timestamp's digest algorithm. The sequence of all
+ * such lists is `reducedHashtree`. (RFC 4998 §4.1, §4.2.)
+ *
+ * On verification, the data-object hash MUST appear in the first
+ * `PartialHashtree`; each computed father hash MUST appear in the
+ * next list until the root matches the timestamp imprint
+ * (RFC 4998 §4.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

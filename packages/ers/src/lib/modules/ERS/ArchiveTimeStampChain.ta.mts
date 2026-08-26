@@ -16,6 +16,19 @@ import { ArchiveTimeStamp, _decode_ArchiveTimeStamp, _encode_ArchiveTimeStamp } 
  * @summary ArchiveTimeStampChain
  * @description
  *
+ * Time-ordered sequence of `ArchiveTimeStamp` values where each
+ * preserves non-repudiation of the previous one after the previous
+ * becomes invalid (Timestamp Renewal). Overall non-repudiation holds
+ * until the newest Archive Timestamp itself becomes invalid.
+ * Relates to a data object / group if its first `ArchiveTimeStamp`
+ * does. (RFC 4998 §1.3, §5, §5.1.)
+ *
+ * MUST be ordered ascending by timestamp time. Within a chain, all
+ * `reducedHashtree`s MUST use the same hash algorithm. On Timestamp
+ * Renewal, the new Archive Timestamp covers the content of the prior
+ * `timeStamp` field and MUST use the same hash algorithm as the old
+ * one. (RFC 4998 §5.1, §5.2.)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
