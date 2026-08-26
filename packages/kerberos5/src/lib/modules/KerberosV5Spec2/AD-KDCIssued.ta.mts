@@ -36,6 +36,12 @@ import {
  * @summary AD_KDCIssued
  * @description
  *
+ * KDC-signed authorization data (`ad-type` 4). Carries privilege
+ * attributes authenticated by the KDC so they cannot be forged by
+ * the ticket bearer ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)). Application servers MUST
+ * ignore encapsulated elements if the checksum is absent or
+ * invalid.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,24 +58,45 @@ export class AD_KDCIssued {
   constructor(
     /**
      * @summary `ad_checksum`.
+     * @description
+     *
+     * Checksum over the DER encoding of `elements`, keyed with the
+     * session key. Checksum type is the mandatory type for the
+     * session-key encryption type; key usage 19 ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
+     *
      * @public
      * @readonly
      */
     readonly ad_checksum: Checksum,
     /**
      * @summary `i_realm`.
+     * @description
+     *
+     * Realm of the issuing principal if different from the KDC
+     * itself ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
+     *
      * @public
      * @readonly
      */
     readonly i_realm: OPTIONAL<Realm>,
     /**
      * @summary `i_sname`.
+     * @description
+     *
+     * Name of the issuing principal if different from the KDC
+     * itself ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
+     *
      * @public
      * @readonly
      */
     readonly i_sname: OPTIONAL<PrincipalName>,
     /**
      * @summary `elements`.
+     * @description
+     *
+     * Authorization data elements issued by the KDC
+     * ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
+     *
      * @public
      * @readonly
      */

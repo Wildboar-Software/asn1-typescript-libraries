@@ -27,6 +27,10 @@ import {
  * @summary EncryptedData
  * @description
  *
+ * Container for ciphertext plus key-selection hints
+ * ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)). Encryption mechanisms in RFC 3961 MUST
+ * incorporate integrity protection.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,18 +46,33 @@ export class EncryptedData {
   constructor(
     /**
      * @summary `etype`.
+     * @description
+     *
+     * Encryption algorithm used to encipher `cipher`
+     * ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+     *
      * @public
      * @readonly
      */
     readonly etype: Int32,
     /**
      * @summary `kvno`.
+     * @description
+     *
+     * Version of the long-term key under which data is encrypted.
+     * Present only for long-lasting keys (e.g. principal secret
+     * keys) ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+     *
      * @public
      * @readonly
      */
     readonly kvno: OPTIONAL<UInt32>,
     /**
      * @summary `cipher`.
+     * @description
+     *
+     * Enciphered text as OCTET STRING ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+     *
      * @public
      * @readonly
      */

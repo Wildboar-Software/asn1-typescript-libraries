@@ -25,6 +25,10 @@ import {
  * @summary PrincipalName
  * @description
  *
+ * Typed sequence of name components. Together with a `Realm`,
+ * forms a principal identifier ([RFC 4120 §5.2.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.2), [RFC 4120 §6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-6.2)).
+ * Most names have one or two components.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +43,23 @@ export class PrincipalName {
   constructor(
     /**
      * @summary `name_type`.
+     * @description
+     *
+     * Type of the following name. Pre-defined values in [RFC 4120 §6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-6.2) /
+     * [RFC 4120 §7.5.8](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.8). SHOULD be treated as a hint; ignoring type, no two
+     * names can be the same ([RFC 4120 §5.2.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.2)).
+     *
      * @public
      * @readonly
      */
     readonly name_type: Int32,
     /**
      * @summary `name_string`.
+     * @description
+     *
+     * Sequence of name components, each a `KerberosString`
+     * ([RFC 4120 §5.2.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.2)).
+     *
      * @public
      * @readonly
      */

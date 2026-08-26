@@ -46,6 +46,10 @@ import {
  * @summary KrbCredInfo
  * @description
  *
+ * Per-ticket credential info inside `EncKrbCredPart`
+ * ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)). Optional fields may be omitted if the
+ * recipient already knows them.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -69,66 +73,115 @@ export class KrbCredInfo {
   constructor(
     /**
      * @summary `key`.
+     * @description
+     *
+     * Session key from the corresponding ticket ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1),
+     * [RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+     *
      * @public
      * @readonly
      */
     readonly key: EncryptionKey,
     /**
      * @summary `prealm`.
+     * @description
+     *
+     * Realm of the delegated principal ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly prealm?: OPTIONAL<Realm>,
     /**
      * @summary `pname`.
+     * @description
+     *
+     * Name of the delegated principal ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly pname?: OPTIONAL<PrincipalName>,
     /**
      * @summary `flags`.
+     * @description
+     *
+     * Ticket flags from the corresponding ticket
+     * ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly flags?: OPTIONAL<TicketFlags>,
     /**
      * @summary `authtime`.
+     * @description
+     *
+     * From the corresponding ticket ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly authtime?: OPTIONAL<KerberosTime>,
     /**
      * @summary `starttime`.
+     * @description
+     *
+     * From the corresponding ticket ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly starttime?: OPTIONAL<KerberosTime>,
     /**
      * @summary `endtime`.
+     * @description
+     *
+     * From the corresponding ticket ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly endtime?: OPTIONAL<KerberosTime>,
     /**
      * @summary `renew_till`.
+     * @description
+     *
+     * From the corresponding ticket ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly renew_till?: OPTIONAL<KerberosTime>,
     /**
      * @summary `srealm`.
+     * @description
+     *
+     * Server realm from the corresponding ticket
+     * ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly srealm?: OPTIONAL<Realm>,
     /**
      * @summary `sname`.
+     * @description
+     *
+     * Server name from the corresponding ticket
+     * ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly sname?: OPTIONAL<PrincipalName>,
     /**
      * @summary `caddr`.
+     * @description
+     *
+     * Client addresses from the corresponding ticket
+     * ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */

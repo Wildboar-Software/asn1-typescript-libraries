@@ -20,6 +20,10 @@ import {
  * @summary AD_IF_RELEVANT
  * @description
  *
+ * Authorization-data wrapper (`ad-type` 1). Encapsulated
+ * elements are for application servers that understand them;
+ * others MAY ignore them ([RFC 4120 §5.2.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

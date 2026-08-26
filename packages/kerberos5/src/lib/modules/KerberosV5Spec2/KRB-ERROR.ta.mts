@@ -48,6 +48,18 @@ import {
  * @summary KRB_ERROR
  * @description
  *
+ * Error reply carrying as much diagnostic context as available
+ * ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1), [RFC 4120 §5.5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.3)). APPLICATION 30.
+ *
+ * > Note that because the KRB_ERROR message is not integrity
+ * > protected, it is quite possible for an intruder to synthesize
+ * > or modify it. In particular, this means that the client
+ * > SHOULD NOT use any fields in this message for security-critical
+ * > purposes, such as setting a system clock or generating a fresh
+ * > authenticator.
+ * >
+ * > — [RFC 4120 §5.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -73,78 +85,134 @@ export class KRB_ERROR {
   constructor(
     /**
      * @summary `pvno`.
+     * @description
+     *
+     * Protocol version 5 ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly pvno: INTEGER,
     /**
      * @summary `msg_type`.
+     * @description
+     *
+     * `KRB_ERROR` (30) ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly msg_type: INTEGER,
     /**
      * @summary `ctime`.
+     * @description
+     *
+     * Client time if known (e.g. from a failed request)
+     * ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly ctime: OPTIONAL<KerberosTime>,
     /**
      * @summary `cusec`.
+     * @description
+     *
+     * Client microseconds if known ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly cusec: OPTIONAL<Microseconds>,
     /**
      * @summary `stime`.
+     * @description
+     *
+     * Current time on the server ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly stime: KerberosTime,
     /**
      * @summary `susec`.
+     * @description
+     *
+     * Microsecond part of server time (0..999999)
+     * ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly susec: Microseconds,
     /**
      * @summary `error_code`.
+     * @description
+     *
+     * Error code; see [RFC 4120 §7.5.9](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.9) ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly error_code: Int32,
     /**
      * @summary `crealm`.
+     * @description
+     *
+     * Client realm when known; else omit ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly crealm: OPTIONAL<Realm>,
     /**
      * @summary `cname`.
+     * @description
+     *
+     * Client name when known; else omit ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly cname: OPTIONAL<PrincipalName>,
     /**
      * @summary `realm`.
+     * @description
+     *
+     * Service realm ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly realm: Realm,
     /**
      * @summary `sname`.
+     * @description
+     *
+     * Service principal name ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly sname: PrincipalName,
     /**
      * @summary `e_text`.
+     * @description
+     *
+     * Additional human-readable explanation ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly e_text?: OPTIONAL<KerberosString>,
     /**
      * @summary `e_data`.
+     * @description
+     *
+     * Additional recovery data. For `KDC_ERR_PREAUTH_REQUIRED`,
+     * encoding of `METHOD-DATA` (`SEQUENCE OF PA-DATA`). May
+     * instead be `TYPED-DATA` ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */

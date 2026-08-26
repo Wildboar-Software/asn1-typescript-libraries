@@ -56,6 +56,10 @@ import {
  * @summary EncTicketPart
  * @description
  *
+ * Cleartext of the ticket ciphertext (`Ticket.enc-part`)
+ * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)). APPLICATION 3. Encrypted in the server's
+ * secret key (usage 2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -81,66 +85,126 @@ export class EncTicketPart {
   constructor(
     /**
      * @summary `flags`.
+     * @description
+     *
+     * Ticket option flags (`TicketFlags`) set at issue
+     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)). Includes forwardable, proxy, postdated,
+     * renewable, initial, pre-authent, hw-authent,
+     * transited-policy-checked, ok-as-delegate, etc.
+     *
      * @public
      * @readonly
      */
     readonly flags: TicketFlags,
     /**
      * @summary `key`.
+     * @description
+     *
+     * Session key shared by client and application server
+     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly key: EncryptionKey,
     /**
      * @summary `crealm`.
+     * @description
+     *
+     * Realm where the client is registered and initial
+     * authentication occurred ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly crealm: Realm,
     /**
      * @summary `cname`.
+     * @description
+     *
+     * Client principal name part ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly cname: PrincipalName,
     /**
      * @summary `transited`.
+     * @description
+     *
+     * Kerberos realms that took part in authenticating the user
+     * (not ordered). Encoding details in [RFC 4120 §3.3.3.2](https://datatracker.ietf.org/doc/html/rfc4120#section-3.3.3.2)
+     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly transited: TransitedEncoding,
     /**
      * @summary `authtime`.
+     * @description
+     *
+     * Time of initial authentication for the named principal /
+     * issue time of the original ticket ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly authtime: KerberosTime,
     /**
      * @summary `starttime`.
+     * @description
+     *
+     * Time after which the ticket is valid. If absent, use
+     * `authtime` ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly starttime: OPTIONAL<KerberosTime>,
     /**
      * @summary `endtime`.
+     * @description
+     *
+     * Expiration time; upper bound — services MAY impose tighter
+     * limits ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly endtime: KerberosTime,
     /**
      * @summary `renew_till`.
+     * @description
+     *
+     * Present only if RENEWABLE: maximum `endtime` across renewals
+     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly renew_till?: OPTIONAL<KerberosTime>,
     /**
      * @summary `caddr`.
+     * @description
+     *
+     * Host addresses from which the ticket may be used. Omitted
+     * or empty → usable from any location, subject to policy
+     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly caddr?: OPTIONAL<HostAddresses>,
     /**
      * @summary `authorization_data`.
+     * @description
+     *
+     * Restrictions on authority from this ticket (“restrictions”
+     * would be a clearer name). Bearer MAY add entries; they MUST
+     * NOT amplify privileges unless KDC-issued ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3),
+     * [RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6)).
+     *
      * @public
      * @readonly
      */

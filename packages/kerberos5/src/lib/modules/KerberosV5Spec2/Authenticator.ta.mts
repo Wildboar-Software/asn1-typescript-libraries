@@ -57,6 +57,10 @@ import {
  * @summary Authenticator
  * @description
  *
+ * Proves recent knowledge of the ticket session key and helps
+ * select a true session key ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)). APPLICATION 2.
+ * Encrypted in the ticket session key.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -78,54 +82,99 @@ export class Authenticator {
   constructor(
     /**
      * @summary `authenticator_vno`.
+     * @description
+     *
+     * Authenticator format version; this document specifies 5
+     * ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly authenticator_vno: INTEGER,
     /**
      * @summary `crealm`.
+     * @description
+     *
+     * Client realm (as in the ticket) ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly crealm: Realm,
     /**
      * @summary `cname`.
+     * @description
+     *
+     * Client principal name ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly cname: PrincipalName,
     /**
      * @summary `cksum`.
+     * @description
+     *
+     * Checksum of accompanying application data (usage 10
+     * normally; usage 6 in TGS-REQ `PA-TGS-REQ`)
+     * ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly cksum: OPTIONAL<Checksum>,
     /**
      * @summary `cusec`.
+     * @description
+     *
+     * Microsecond part of the client timestamp (0..999999)
+     * ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly cusec: Microseconds,
     /**
      * @summary `ctime`.
+     * @description
+     *
+     * Current time on the client's host ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly ctime: KerberosTime,
     /**
      * @summary `subkey`.
+     * @description
+     *
+     * Client's choice of per-association encryption key. If
+     * omitted, use the ticket session key unless the application
+     * says otherwise ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly subkey?: OPTIONAL<EncryptionKey>,
     /**
      * @summary `seq_number`.
+     * @description
+     *
+     * Initial sequence number for `KRB_PRIV`/`KRB_SAFE` (and
+     * maybe app messages) from client→server. SHOULD be random
+     * across the full 32-bit space ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly seq_number?: OPTIONAL<UInt32>,
     /**
      * @summary `authorization_data`.
+     * @description
+     *
+     * Optional further restrictions beyond the ticket
+     * ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1), [RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */

@@ -26,6 +26,10 @@ import {
  * @summary KRB_SAFE
  * @description
  *
+ * Tamper-proof (integrity-protected) application message
+ * ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1), [RFC 4120 §3.4](https://datatracker.ietf.org/doc/html/rfc4120#section-3.4)). APPLICATION 20. Uses the
+ * negotiated subkey or session key.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,24 +46,41 @@ export class KRB_SAFE {
   constructor(
     /**
      * @summary `pvno`.
+     * @description
+     *
+     * Protocol version 5 ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly pvno: INTEGER,
     /**
      * @summary `msg_type`.
+     * @description
+     *
+     * `KRB_SAFE` (20) ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly msg_type: INTEGER,
     /**
      * @summary `safe_body`.
+     * @description
+     *
+     * Body of the safe message ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly safe_body: KRB_SAFE_BODY,
     /**
      * @summary `cksum`.
+     * @description
+     *
+     * Checksum over the `KRB-SAFE` encoding (cksum zeroed first),
+     * key usage 15 ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */

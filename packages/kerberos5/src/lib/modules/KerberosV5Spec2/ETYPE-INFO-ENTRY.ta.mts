@@ -22,6 +22,8 @@ import {
  * @summary ETYPE_INFO_ENTRY
  * @description
  *
+ * One entry of `ETYPE-INFO` ([RFC 4120 §5.2.7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +38,21 @@ export class ETYPE_INFO_ENTRY {
   constructor(
     /**
      * @summary `etype`.
+     * @description
+     *
+     * Encryption type for the associated key ([RFC 4120 §5.2.7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.4)).
+     *
      * @public
      * @readonly
      */
     readonly etype: Int32,
     /**
      * @summary `salt`.
+     * @description
+     *
+     * Optional salt for string-to-key; character set unspecified /
+     * likely locale-specific ([RFC 4120 §5.2.7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.4)).
+     *
      * @public
      * @readonly
      */

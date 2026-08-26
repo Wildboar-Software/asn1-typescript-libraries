@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Microseconds
  * @description
  *
+ * Microsecond component of a timestamp (0..999999)
+ * ([RFC 4120 §5.2.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.4)). Used with `KerberosTime` fields such as
+ * `ctime`/`cusec`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

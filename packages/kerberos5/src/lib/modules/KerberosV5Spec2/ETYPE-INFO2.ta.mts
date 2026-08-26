@@ -20,6 +20,11 @@ import {
  * @summary ETYPE_INFO2
  * @description
  *
+ * `PA-ETYPE-INFO2` payload (`padata-type` 19): preferred
+ * etype/salt/s2kparams hints ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)). Preferred over
+ * `ETYPE-INFO` and `PA-PW-SALT`. In `AS-REP`, exactly one entry
+ * matching `enc-part` etype.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

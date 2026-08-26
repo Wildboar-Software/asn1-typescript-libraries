@@ -21,6 +21,10 @@ import {
  * @summary AuthorizationData_Item
  * @description
  *
+ * One authorization element: typed OCTET STRING payload
+ * ([RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6)). Negative `ad-type` values are for local use;
+ * non-negative are registered ([RFC 4120 §7.5.4](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +36,22 @@ export class AuthorizationData_Item {
   constructor(
     /**
      * @summary `ad_type`.
+     * @description
+     *
+     * Format of `ad-data`. Negative values reserved for local use;
+     * non-negative for registered use ([RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6), [RFC 4120 §7.5.4](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.4)).
+     *
      * @public
      * @readonly
      */
     readonly ad_type: Int32,
     /**
      * @summary `ad_data`.
+     * @description
+     *
+     * Authorization data interpreted per `ad-type`
+     * ([RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6)).
+     *
      * @public
      * @readonly
      */

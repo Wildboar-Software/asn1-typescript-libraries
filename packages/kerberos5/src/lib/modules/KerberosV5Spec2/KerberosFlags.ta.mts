@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary KerberosFlags
  * @description
  *
+ * Compact boolean-vector bit string for options/flags
+ * ([RFC 4120 §5.2.8](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.8)). SIZE (32..MAX): at least 32 bits MUST be
+ * sent (accommodates widespread 32-bit wire practice vs.
+ * NamedBit DER truncation in RFC 1510).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,11 @@ import {
  * @summary TGS_REQ
  * @description
  *
+ * Ticket-Granting Service request for additional tickets
+ * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §3.3](https://datatracker.ietf.org/doc/html/rfc4120#section-3.3)). APPLICATION 12 wrapping
+ * `KDC-REQ`. MUST include `PA-TGS-REQ` in `padata`.
+ * `msg-type` is 12 (`KRB_TGS_REQ`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

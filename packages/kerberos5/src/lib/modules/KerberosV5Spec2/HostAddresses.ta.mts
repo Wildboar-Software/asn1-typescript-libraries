@@ -20,6 +20,9 @@ import {
  * @summary HostAddresses
  * @description
  *
+ * Sequence of `HostAddress` values ([RFC 4120 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.5)). Always used
+ * as an OPTIONAL field and SHOULD NOT be empty when present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

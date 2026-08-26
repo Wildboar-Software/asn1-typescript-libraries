@@ -42,6 +42,9 @@ import {
  * @summary KDC_REP
  * @description
  *
+ * Common reply structure for `AS-REP` / `TGS-REP`
+ * ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,42 +67,73 @@ export class KDC_REP {
   constructor(
     /**
      * @summary `pvno`.
+     * @description
+     *
+     * Protocol version number 5 ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+     *
      * @public
      * @readonly
      */
     readonly pvno: INTEGER,
     /**
      * @summary `msg_type`.
+     * @description
+     *
+     * 11 (`KRB_AS_REP`) or 13 (`KRB_TGS_REP`) ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+     *
      * @public
      * @readonly
      */
     readonly msg_type: INTEGER,
     /**
      * @summary `padata`.
+     * @description
+     *
+     * Optional pre-auth / salt hints; MUST NOT be empty when
+     * present ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2), [RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7)).
+     *
      * @public
      * @readonly
      */
     readonly padata: OPTIONAL<PA_DATA[]>,
     /**
      * @summary `crealm`.
+     * @description
+     *
+     * Client realm (as in the ticket) ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+     *
      * @public
      * @readonly
      */
     readonly crealm: Realm,
     /**
      * @summary `cname`.
+     * @description
+     *
+     * Client principal name ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+     *
      * @public
      * @readonly
      */
     readonly cname: PrincipalName,
     /**
      * @summary `ticket`.
+     * @description
+     *
+     * Newly issued ticket ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2), [RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly ticket: Ticket,
     /**
      * @summary `enc_part`.
+     * @description
+     *
+     * Encrypted `EncASRepPart` or `EncTGSRepPart` (key usages 3 /
+     * 8 / 9 as appropriate). Some implementations always use
+     * APPLICATION 26 ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+     *
      * @public
      * @readonly
      */

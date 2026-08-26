@@ -20,6 +20,9 @@ import {
  * @summary TYPED_DATA
  * @description
  *
+ * Optional typed-hole form for `KRB-ERROR.e-data` when not
+ * using `METHOD-DATA` ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)). SIZE (1..MAX).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

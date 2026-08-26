@@ -20,6 +20,9 @@ import {
  * @summary LastReq
  * @description
  *
+ * Sequence of last-request time records from the KDC
+ * ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -36,6 +36,9 @@ import {
  * @summary EncAPRepPart
  * @description
  *
+ * Cleartext of `AP-REP.enc-part` ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)). APPLICATION
+ * 27. Echoes client time; optional subkey and seq-number.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,24 +55,43 @@ export class EncAPRepPart {
   constructor(
     /**
      * @summary `ctime`.
+     * @description
+     *
+     * Client time from the authenticator ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+     *
      * @public
      * @readonly
      */
     readonly ctime: KerberosTime,
     /**
      * @summary `cusec`.
+     * @description
+     *
+     * Microseconds from the authenticator ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+     *
      * @public
      * @readonly
      */
     readonly cusec: Microseconds,
     /**
      * @summary `subkey`.
+     * @description
+     *
+     * Optional per-association key (see [RFC 4120 §3.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-3.2.6)). If
+     * omitted, use authenticator subkey or ticket session key
+     * ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+     *
      * @public
      * @readonly
      */
     readonly subkey?: OPTIONAL<EncryptionKey>,
     /**
      * @summary `seq_number`.
+     * @description
+     *
+     * Initial sequence number for messages from server→client
+     * ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+     *
      * @public
      * @readonly
      */

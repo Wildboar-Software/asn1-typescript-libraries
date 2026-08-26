@@ -16,6 +16,13 @@ import {
  * @summary id_krb5
  * @description
  *
+ * OID arc for Kerberos V5 ([RFC 4120 §7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-7.4)). MAY identify Kerberos
+ * messages encapsulated in other protocols; also the arc for
+ * future KerberosV5-related OIDs.
+ * Value: `{1 3 6 1 5 2}`
+ * (`iso.identified-organization.dod.internet.security.kerberosV5`).
+ * RFC 1510 had an incorrect “dod” arc component.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

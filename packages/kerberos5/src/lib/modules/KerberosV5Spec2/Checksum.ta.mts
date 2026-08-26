@@ -21,6 +21,9 @@ import {
  * @summary Checksum
  * @description
  *
+ * Authenticated checksum over cleartext data ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+ * Usually a keyed hash; exceptions are noted per use.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +38,20 @@ export class Checksum {
   constructor(
     /**
      * @summary `cksumtype`.
+     * @description
+     *
+     * Algorithm used to generate `checksum` ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+     *
      * @public
      * @readonly
      */
     readonly cksumtype: Int32,
     /**
      * @summary `checksum`.
+     * @description
+     *
+     * Checksum value as OCTET STRING ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+     *
      * @public
      * @readonly
      */

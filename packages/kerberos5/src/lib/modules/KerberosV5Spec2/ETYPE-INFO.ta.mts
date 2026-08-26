@@ -20,6 +20,12 @@ import {
  * @summary ETYPE_INFO
  * @description
  *
+ * `PA-ETYPE-INFO` payload (`padata-type` 11): sequence of
+ * encryption-type / salt hints ([RFC 4120 §5.2.7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.4)). Sent in
+ * `KRB-ERROR` for additional pre-auth, or in `AS-REP` (exactly
+ * one entry matching `enc-part` etype). KDC MUST NOT send this
+ * when the AS-REQ includes a “newer” etype.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -31,6 +31,10 @@ import {
  * @summary Ticket
  * @description
  *
+ * Kerberos ticket: opaque credential that helps a client
+ * authenticate to a service ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)). APPLICATION 1.
+ * When included in protocol messages it is treated as opaque.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,24 +51,45 @@ export class Ticket {
   constructor(
     /**
      * @summary `tkt_vno`.
+     * @description
+     *
+     * Ticket format version; this document describes version 5
+     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly tkt_vno: INTEGER,
     /**
      * @summary `realm`.
+     * @description
+     *
+     * Realm that issued the ticket; also the realm of the server
+     * principal. A KDC only issues tickets for servers in its
+     * realm, so these match ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly realm: Realm,
     /**
      * @summary `sname`.
+     * @description
+     *
+     * Server principal name components, including service instance
+     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly sname: PrincipalName,
     /**
      * @summary `enc_part`.
+     * @description
+     *
+     * Encrypted encoding of `EncTicketPart`, under the server's
+     * secret key, key usage 2 ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+     *
      * @public
      * @readonly
      */

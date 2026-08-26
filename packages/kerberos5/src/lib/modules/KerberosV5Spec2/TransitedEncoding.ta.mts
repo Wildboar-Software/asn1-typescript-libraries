@@ -21,6 +21,9 @@ import {
  * @summary TransitedEncoding
  * @description
  *
+ * Encoding of the ticket `transited` field ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+ * `tr-type` MUST be registered ([RFC 4120 §7.5.5](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +38,22 @@ export class TransitedEncoding {
   constructor(
     /**
      * @summary `tr_type`.
+     * @description
+     *
+     * Registered encoding type for `contents` ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3),
+     * [RFC 4120 §7.5.5](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.5)).
+     *
      * @public
      * @readonly
      */
     readonly tr_type: Int32,
     /**
      * @summary `contents`.
+     * @description
+     *
+     * Encoded list of transited realms ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3),
+     * [RFC 4120 §3.3.3.2](https://datatracker.ietf.org/doc/html/rfc4120#section-3.3.3.2)).
+     *
      * @public
      * @readonly
      */

@@ -20,6 +20,12 @@ import {
  * @summary TicketFlags
  * @description
  *
+ * Ticket flag bits as `KerberosFlags` ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)). Notable
+ * bits: forwardable(1), forwarded(2), proxiable(3), proxy(4),
+ * may-postdate(5), postdated(6), invalid(7), renewable(8),
+ * initial(9), pre-authent(10), hw-authent(11),
+ * transited-policy-checked(12), ok-as-delegate(13).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
