@@ -19,7 +19,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * Elliptic curve domain parameters for PKIX algorithm identifiers
  * ([RFC 5480 §2.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1)).
- * Re-exported in module `PKIXAlgs-2009`
+ * Carried in module `PKIXAlgs-2009`
  * ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)) and
  * imported by `ECPrivateKey`
  * ([RFC 5915](https://datatracker.ietf.org/doc/html/rfc5915)).
