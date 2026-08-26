@@ -23,6 +23,15 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x5
  * @summary TrustAnchorInfo
  * @description
  *
+ * Structure for representing trust anchor information: a public key
+ * and associated data used to constrain the types of information or
+ * actions for which the trust anchor is authoritative
+ * ([RFC 5914 §2](https://datatracker.ietf.org/doc/html/rfc5914#section-2)).
+ * Intended as a more compact alternative to X.509 certificates for
+ * exchanging trust anchor information, and a means of associating
+ * additional or alternative constraints without breaking a certificate
+ * signature ([RFC 5914 §1](https://datatracker.ietf.org/doc/html/rfc5914#section-1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,42 +51,99 @@ class TrustAnchorInfo {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Version of `TrustAnchorInfo`. Future updates may increment the
+         * number; the default `v1` cannot be changed
+         * ([RFC 5914 §2.1](https://datatracker.ietf.org/doc/html/rfc5914#section-2.1)).
+         *
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<TrustAnchorInfoVersion>,
         /**
          * @summary `pubKey`.
+         * @description
+         *
+         * Public key and algorithm of the trust anchor as
+         * `SubjectPublicKeyInfo` ([RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280)):
+         * `AlgorithmIdentifier` then the public key as a BIT STRING
+         * ([RFC 5914 §2.2](https://datatracker.ietf.org/doc/html/rfc5914#section-2.2)).
+         *
          * @public
          * @readonly
          */
         readonly pubKey: SubjectPublicKeyInfo,
         /**
          * @summary `keyId`.
+         * @description
+         *
+         * Public key identifier of the trust anchor public key. Common
+         * calculation methods: [RFC 5280 §4.2.1.2](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2)
+         * ([RFC 5914 §2.3](https://datatracker.ietf.org/doc/html/rfc5914#section-2.3)).
+         *
          * @public
          * @readonly
          */
         readonly keyId: KeyIdentifier,
         /**
          * @summary `taTitle`.
+         * @description
+         *
+         * Optional human-readable name for the trust anchor (UTF-8,
+         * size 1..64). Language is given by `taTitleLangTag`, or
+         * English (`"en"`) when that field is absent
+         * ([RFC 5914 §2.4](https://datatracker.ietf.org/doc/html/rfc5914#section-2.4)).
+         *
          * @public
          * @readonly
          */
         readonly taTitle?: OPTIONAL<TrustAnchorTitle>,
         /**
          * @summary `certPath`.
+         * @description
+         *
+         * Optional controls to initialize X.509 certification path
+         * validation ([RFC 5280 §6](https://datatracker.ietf.org/doc/html/rfc5280#section-6)).
+         * When absent, the trust anchor cannot be used to validate the
+         * signature on an X.509 certificate
+         * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+         *
          * @public
          * @readonly
          */
         readonly certPath?: OPTIONAL<CertPathControls>,
         /**
          * @summary `exts`.
+         * @description
+         *
+         * Optional additional information via the standard `Extensions`
+         * structure. Widely used path-control extensions live in
+         * `CertPathControls` instead. The following MUST NOT appear in
+         * `exts` and are ignored if they do: `id-ce-certificatePolicies`,
+         * `id-ce-policyConstraints`, `id-ce-inhibitAnyPolicy`,
+         * `id-ce-nameConstraints`
+         * ([RFC 5914 §2.6](https://datatracker.ietf.org/doc/html/rfc5914#section-2.6)).
+         *
+         * Constraints in `policySet`, `policyFlags`, `nameConstr`,
+         * `pathLenConstraint`, and `exts` replace or supply values
+         * relative to an enveloped certificate; TrustAnchorInfo values
+         * are always enforced, while certificate extensions are enforced
+         * only when there is no corresponding TrustAnchorInfo value
+         * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+         *
          * @public
          * @readonly
          */
         readonly exts?: OPTIONAL<Extensions>,
         /**
          * @summary `taTitleLangTag`.
+         * @description
+         *
+         * Language tag for `taTitle` ([RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+         * When absent, English (`"en"`) is used
+         * ([RFC 5914 §2.4](https://datatracker.ietf.org/doc/html/rfc5914#section-2.4)).
+         *
          * @public
          * @readonly
          */

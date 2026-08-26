@@ -18,6 +18,10 @@ import { type PKCS7_CONTENT_TYPE } from "../TrustAnchorInfoModule/PKCS7-CONTENT-
  * @summary trust_anchor_list
  * @description
  *
+ * `PKCS7-CONTENT-TYPE` / TYPE-IDENTIFIER object binding
+ * `TrustAnchorList` to `id-ct-trustAnchorList` for CMS content typing
+ * ([RFC 5914 §3](https://datatracker.ietf.org/doc/html/rfc5914#section-3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
