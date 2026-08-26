@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ESSVersion
  * @description
  *
+ * Version number for `Receipt` syntax; `v1(1)` for RFC 2634
+ * ([RFC 2634 §2.8](https://datatracker.ietf.org/doc/html/rfc2634#section-2.8)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

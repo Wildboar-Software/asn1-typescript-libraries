@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ESSPrivacyMark
  * @description
  *
+ * Privacy-mark CHOICE for `ESSSecurityLabel`: `pString`
+ * (`PrintableString` SIZE 1..`ub-privacy-mark-length`) or `utf8String`
+ * (`UTF8String` SIZE 1..MAX). Not used for access control; value semantics
+ * come from the label's security policy or the originator
+ * ([RFC 2634 §3.2](https://datatracker.ietf.org/doc/html/rfc2634#section-3.2); [RFC 2634 §3.3.3](https://datatracker.ietf.org/doc/html/rfc2634#section-3.3.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

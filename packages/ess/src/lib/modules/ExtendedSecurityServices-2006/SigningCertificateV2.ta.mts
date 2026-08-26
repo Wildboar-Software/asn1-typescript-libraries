@@ -20,6 +20,17 @@ import {
  * @summary SigningCertificateV2
  * @description
  *
+ * Version-2 signing-certificate signed attribute (OID
+ * `id-aa-signingCertificateV2`) with hash-algorithm agility via
+ * `ESSCertIDv2`. Same role as `SigningCertificate` (anti-substitution /
+ * authorization binding). MUST be used when any algorithm other than
+ * SHA-1 hashes the certificate; SHOULD NOT be used for SHA-1
+ * ([RFC 5035 §2](https://datatracker.ietf.org/doc/html/rfc5035#section-2); [RFC 5035 §3](https://datatracker.ietf.org/doc/html/rfc5035#section-3)).
+ *
+ * MUST be signed (not unsigned); at most one instance per `SignerInfo`
+ * and a single `AttributeValue`. If both v1 and v2 attributes appear they
+ * are evaluated independently ([RFC 5035 §2](https://datatracker.ietf.org/doc/html/rfc5035#section-2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +45,27 @@ export class SigningCertificateV2 {
     constructor(
         /**
          * @summary `certs`.
+         * @description
+         *
+         * Sequence of `ESSCertIDv2`. The first MUST identify the signing
+         * certificate used to verify the signature; hash mismatch ⇒ signature
+         * MUST be considered invalid. First entry's encoding SHOULD include
+         * `issuerSerial` (MAY omit if present via `SignerInfo`). Further
+         * certificates limit authorization or path validation; only the signing
+         * cert listed means no such restriction ([RFC 5035 §3](https://datatracker.ietf.org/doc/html/rfc5035#section-3)).
+         *
          * @public
          * @readonly
          */
         readonly certs: ESSCertIDv2[],
         /**
          * @summary `policies`.
+         * @description
+         *
+         * Optional `PolicyInformation` terms the signer asserts apply to the
+         * certificate ([RFC 5035 §3](https://datatracker.ietf.org/doc/html/rfc5035#section-3); policy ASN.1 from
+         * [RFC 3280](https://datatracker.ietf.org/doc/html/rfc3280)).
+         *
          * @public
          * @readonly
          */

@@ -16,6 +16,19 @@ import {
  * @summary MLReceiptPolicy
  * @description
  *
+ * CHOICE for a mail list's signed-receipt policy, superseding the
+ * originator's request when present ([RFC 2634 §4.4](https://datatracker.ietf.org/doc/html/rfc2634#section-4.4)):
+ *
+ * - `none` [0] — receipts MUST NOT be returned
+ * - `insteadOf` [1] — send receipts to the listed `GeneralNames` instead
+ *   of the originator's `receiptsTo`
+ * - `inAdditionTo` [2] — send to the listed names in addition to
+ *   `receiptsTo`
+ *
+ * An MLA cannot invent a receipt request if the originator did not ask
+ * for one. Policy composition across nested lists is tabulated in
+ * [RFC 2634 §4.3](https://datatracker.ietf.org/doc/html/rfc2634#section-4.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

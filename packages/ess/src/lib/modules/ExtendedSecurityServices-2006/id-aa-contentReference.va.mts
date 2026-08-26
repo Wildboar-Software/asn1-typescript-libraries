@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_aa_contentReference
  * @description
  *
+ * Signed-attribute OID for `ContentReference`
+ * (`… smime(16) id-aa(2) 10`) ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

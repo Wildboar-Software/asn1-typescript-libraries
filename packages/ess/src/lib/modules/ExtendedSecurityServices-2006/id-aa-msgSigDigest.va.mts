@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_aa_msgSigDigest
  * @description
  *
+ * Signed-attribute OID for `msgSigDigest` on signed receipts
+ * (`… smime(16) id-aa(2) 5`) ([RFC 2634 §2.10](https://datatracker.ietf.org/doc/html/rfc2634#section-2.10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,9 @@ import {
  * @summary EntityIdentifier
  * @description
  *
+ * CHOICE identifying an MLA or other entity in `MLData.mailListIdentifier`:
+ * `issuerAndSerialNumber` or `subjectKeyIdentifier` ([RFC 2634 §4.4](https://datatracker.ietf.org/doc/html/rfc2634#section-4.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,17 @@ import {
  * @summary Receipt
  * @description
  *
+ * Receipt content type proving a recipient verified the signature on a
+ * message that requested a signed receipt. MUST be encapsulated directly
+ * in `SignedData.encapContentInfo.eContent` with `eContentType`
+ * `id-ct-receipt` (not the `Data` content type; not wrapped in MIME
+ * before CMS encoding) ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4); [RFC 2634 §2.8](https://datatracker.ietf.org/doc/html/rfc2634#section-2.8)).
+ *
+ * Creation copies `contentType`, `signedContentIdentifier`, and the
+ * originator `SignerInfo` signature value from the request; `version` is
+ * 1. Signed receipts also carry `msgSigDigest` and `messageDigest` signed
+ * attributes used in validation ([RFC 2634 §2.6](https://datatracker.ietf.org/doc/html/rfc2634#section-2.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,24 +53,45 @@ export class Receipt {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Syntax version; `v1(1)` for this specification ([RFC 2634 §2.8](https://datatracker.ietf.org/doc/html/rfc2634#section-2.8)).
+         *
          * @public
          * @readonly
          */
         readonly version: ESSVersion,
         /**
          * @summary `contentType`.
+         * @description
+         *
+         * Copied from the `contentType` signed attribute of the original
+         * `SignerInfo` that included the `receiptRequest` ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4)).
+         *
          * @public
          * @readonly
          */
         readonly contentType: ContentType,
         /**
          * @summary `signedContentIdentifier`.
+         * @description
+         *
+         * Copied from `ReceiptRequest.signedContentIdentifier` of the verified
+         * request ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4)).
+         *
          * @public
          * @readonly
          */
         readonly signedContentIdentifier: ContentIdentifier,
         /**
          * @summary `originatorSignatureValue`.
+         * @description
+         *
+         * Copied from the signature value of the original `SignerInfo` that
+         * included the `receiptRequest`. Validation compares digests of a
+         * reconstructed `Receipt` containing this value
+         * ([RFC 2634 §2.4](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4); [RFC 2634 §2.6](https://datatracker.ietf.org/doc/html/rfc2634#section-2.6)).
+         *
          * @public
          * @readonly
          */

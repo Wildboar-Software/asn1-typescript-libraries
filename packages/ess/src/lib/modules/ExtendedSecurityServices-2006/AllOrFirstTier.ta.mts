@@ -7,6 +7,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AllOrFirstTier
  * @description
  *
+ * INTEGER formerly named `AllOrNone` ([RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)):
+ *
+ * - `allReceipts` (0) — every recipient SHOULD create a signed receipt
+ * - `firstTierRecipients` (1) — only recipients that are not mailing-list
+ *   expanders (no `mlExpansionHistory` on an outer `SignedData`) SHOULD
+ *   create a receipt; if `mlExpansionHistory` is present, a receipt MUST
+ *   NOT be created ([RFC 2634 §2.3](https://datatracker.ietf.org/doc/html/rfc2634#section-2.3))
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

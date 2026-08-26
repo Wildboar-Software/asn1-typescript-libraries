@@ -21,6 +21,10 @@ import {
  * @summary MLData
  * @description
  *
+ * One MLA expansion record: MLA identity, expansion time, and optional
+ * receipt policy. Appended by the MLA each time it expands and signs for
+ * list members ([RFC 2634 §4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-4.1); [RFC 2634 §4.4](https://datatracker.ietf.org/doc/html/rfc2634#section-4.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +40,36 @@ export class MLData {
     constructor(
         /**
          * @summary `mailListIdentifier`.
+         * @description
+         *
+         * MLA / mail-list identity (`EntityIdentifier`). Before expanding, an MLA
+         * examines prior `mailListIdentifier` values; finding its own identifier
+         * indicates a loop and expansion MUST stop
+         * ([RFC 2634 §4.1.1](https://datatracker.ietf.org/doc/html/rfc2634#section-4.1.1); [RFC 2634 §4.4](https://datatracker.ietf.org/doc/html/rfc2634#section-4.4)).
+         *
          * @public
          * @readonly
          */
         readonly mailListIdentifier: EntityIdentifier,
         /**
          * @summary `expansionTime`.
+         * @description
+         *
+         * Date and time of this MLA expansion (`GeneralizedTime`)
+         * ([RFC 2634 §4.4](https://datatracker.ietf.org/doc/html/rfc2634#section-4.4)).
+         *
          * @public
          * @readonly
          */
         readonly expansionTime: GeneralizedTime,
         /**
          * @summary `mlReceiptPolicy`.
+         * @description
+         *
+         * Optional policy that can supersede the originator's receipt request for
+         * list recipients (`none`, `insteadOf`, or `inAdditionTo`)
+         * ([RFC 2634 §4.4](https://datatracker.ietf.org/doc/html/rfc2634#section-4.4)).
+         *
          * @public
          * @readonly
          */

@@ -11,6 +11,20 @@ import {
  * @summary EquivalentLabels
  * @description
  *
+ * `SEQUENCE OF ESSSecurityLabel` signed attribute asserting labels the
+ * signer believes are semantically equivalent to the
+ * `ESSSecurityLabel` in the same `SignerInfo` (or standing alone when no
+ * `ESSSecurityLabel` is present). Attribute OID
+ * `id-aa-equivalentLabels`. MUST be signed; at most one attribute
+ * instance and one `AttributeValue` per `SignerInfo`
+ * ([RFC 2634 §3.4](https://datatracker.ietf.org/doc/html/rfc2634#section-3.4); [RFC 2634 §3.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-3.4.1)).
+ *
+ * All security-policy OIDs across `ESSSecurityLabel` and
+ * `EquivalentLabels` MUST be unique. Recipients SHOULD process
+ * `ESSSecurityLabel` first; if that policy is understood they MUST ignore
+ * `EquivalentLabels`. Act only on equivalent labels signed by an entity
+ * trusted to translate policies ([RFC 2634 §3.4.2](https://datatracker.ietf.org/doc/html/rfc2634#section-3.4.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

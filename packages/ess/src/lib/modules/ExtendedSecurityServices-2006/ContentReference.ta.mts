@@ -21,6 +21,13 @@ import {
  * @summary ContentReference
  * @description
  *
+ * Signed attribute linking one `SignedData` to another (for example a
+ * reply to an original message, or incorporation by reference). The first
+ * `SignedData` MUST include a `contentIdentifier` signed attribute; the
+ * second includes this attribute with that content type, identifier, and
+ * signature value. Attribute OID `id-aa-contentReference`
+ * ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +43,32 @@ export class ContentReference {
     constructor(
         /**
          * @summary `contentType`.
+         * @description
+         *
+         * Content type from the referenced `SignedData` ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
+         *
          * @public
          * @readonly
          */
         readonly contentType: ContentType,
         /**
          * @summary `signedContentIdentifier`.
+         * @description
+         *
+         * `ContentIdentifier` from the referenced `SignedData`'s
+         * `contentIdentifier` attribute (constructed as for receipt requests in
+         * [RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)) ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
+         *
          * @public
          * @readonly
          */
         readonly signedContentIdentifier: ContentIdentifier,
         /**
          * @summary `originatorSignatureValue`.
+         * @description
+         *
+         * Signature value from the referenced `SignedData` ([RFC 2634 §2.11](https://datatracker.ietf.org/doc/html/rfc2634#section-2.11)).
+         *
          * @public
          * @readonly
          */

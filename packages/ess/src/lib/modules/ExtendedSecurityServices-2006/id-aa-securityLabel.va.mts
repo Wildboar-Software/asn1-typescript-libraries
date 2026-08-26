@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_aa_securityLabel
  * @description
  *
+ * Signed-attribute OID for `ESSSecurityLabel`
+ * (`… smime(16) id-aa(2) 2`) ([RFC 2634 §3.2](https://datatracker.ietf.org/doc/html/rfc2634#section-3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
