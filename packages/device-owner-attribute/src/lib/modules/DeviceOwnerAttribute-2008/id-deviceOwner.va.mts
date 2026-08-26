@@ -17,16 +17,21 @@ import {
 /**
  * @summary id_deviceOwner
  * @description
- * 
+ *
+ * Object identifier for the Device Owner attribute
+ * ([RFC 5916 §2](https://datatracker.ietf.org/doc/html/rfc5916#section-2)).
+ * Identifies `at-deviceOwner` when the attribute appears in public key
+ * or attribute certificates.
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * id-deviceOwner OBJECT IDENTIFIER ::= {
  *     joint-iso-ccitt(2) country(16) us(840) organization(1) gov(101)
  *     dod(2) infosec(1) attributes(5) 69
  * }
  * ```
- * 
+ *
  * @constant
  */
 export
