@@ -20,6 +20,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SimpleSyntax
  * @description
  *
+ * Universal-syntax object values: INTEGER (Integer32), OCTET STRING
+ * (including SMIv2 BITS encoded as OCTET STRING), or OBJECT IDENTIFIER
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5),
+ * [§3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

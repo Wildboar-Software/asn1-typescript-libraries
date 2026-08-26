@@ -18,6 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Counter64
  * @description
  *
+ * Non-negative 64-bit counter, APPLICATION 6, range
+ * 0..18446744073709551615
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SMIv2 `Counter64` maps to `big-counter-value`
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

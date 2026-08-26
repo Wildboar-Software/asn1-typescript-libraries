@@ -17,6 +17,12 @@ import { VarBind_valueType, _decode_VarBind_valueType, _encode_VarBind_valueType
  * @summary VarBind
  * @description
  *
+ * Name/value pairing in a PDU. The value CHOICE carries an
+ * `ObjectSyntax`, `unSpecified` (NULL) in retrieval requests, or
+ * exception NULLs in responses
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3),
+ * [§4.2](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +48,24 @@ class VarBind {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         *
+         * `ObjectName` of the variable (or request name retained with
+         * `endOfMibView` / similar exceptions)
+         * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+         *
          * @public
          * @readonly
          */
         readonly name: ObjectName,
         /**
          * @summary `valueType`.
+         * @description
+         *
+         * Value or exception. Named `valueType` here because the RFC
+         * ASN.1 omits a component name on the inner CHOICE. See
+         * `VarBind_valueType`.
+         *
          * @public
          * @readonly
          */

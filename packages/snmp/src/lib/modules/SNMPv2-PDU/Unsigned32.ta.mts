@@ -18,6 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Unsigned32
  * @description
  *
+ * Unsigned 32-bit integer, APPLICATION 2, range 0..4294967295
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SMIv2 `Unsigned32` and `Gauge32` both map to
+ * `unsigned-integer-value` in `ApplicationSyntax`
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

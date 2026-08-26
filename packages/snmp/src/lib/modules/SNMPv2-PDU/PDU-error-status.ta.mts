@@ -18,10 +18,41 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PDU_error_status
  * @description
  *
+ * `error-status` INTEGER from `PDU`
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * Non-zero in a `Response-PDU` means an error prevented processing;
+ * pair with `error-index` when identifying a binding
+ * ([§4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1)).
+ * Set-request validation codes are defined in
+ * [§4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5).
+ * `noSuchName`, `badValue`, and `readOnly` are retained for proxy
+ * compatibility; generators MUST still handle them
+ * ([§4.2.4](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
- * PDU-error-status ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * error-status INTEGER {
+ *     noError(0),
+ *     tooBig(1),
+ *     noSuchName(2),      -- for proxy compatibility
+ *     badValue(3),        -- for proxy compatibility
+ *     readOnly(4),        -- for proxy compatibility
+ *     genErr(5),
+ *     noAccess(6),
+ *     wrongType(7),
+ *     wrongLength(8),
+ *     wrongEncoding(9),
+ *     wrongValue(10),
+ *     noCreation(11),
+ *     inconsistentValue(12),
+ *     resourceUnavailable(13),
+ *     commitFailed(14),
+ *     undoFailed(15),
+ *     authorizationError(16),
+ *     notWritable(17),
+ *     inconsistentName(18)
+ * }
  * ```
  */
 export
@@ -29,6 +60,10 @@ type PDU_error_status = INTEGER;
 
 /**
  * @summary PDU_error_status_noError
+ * @description
+ *
+ * Successful processing; typically with `error-index` 0 ([RFC 3416 §4.2.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.1) et seq.).
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +80,10 @@ const noError: PDU_error_status = PDU_error_status_noError; /* SHORT_NAMED_INTEG
 
 /**
  * @summary PDU_error_status_tooBig
+ * @description
+ *
+ * Generated Response would exceed local or originator max message size ([RFC 3416 §4.2.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.1), [§4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5)).
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +100,10 @@ const tooBig: PDU_error_status = PDU_error_status_tooBig; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary PDU_error_status_noSuchName
+ * @description
+ *
+ * Retained for proxy compatibility; command generators MUST handle it ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3), [§4.2.4](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.4)).
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +120,10 @@ const noSuchName: PDU_error_status = PDU_error_status_noSuchName; /* SHORT_NAMED
 
 /**
  * @summary PDU_error_status_badValue
+ * @description
+ *
+ * Retained for proxy compatibility; command generators MUST handle it ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3), [§4.2.4](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.4)).
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +140,10 @@ const badValue: PDU_error_status = PDU_error_status_badValue; /* SHORT_NAMED_INT
 
 /**
  * @summary PDU_error_status_readOnly
+ * @description
+ *
+ * Retained for proxy compatibility; command generators MUST handle it ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3), [§4.2.4](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.4)).
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +160,10 @@ const readOnly: PDU_error_status = PDU_error_status_readOnly; /* SHORT_NAMED_INT
 
 /**
  * @summary PDU_error_status_genErr
+ * @description
+ *
+ * Processing failed for a reason other than the specific codes listed for that operation ([RFC 3416 §4.2.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.1), [§4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5)).
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +180,10 @@ const genErr: PDU_error_status = PDU_error_status_genErr; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary PDU_error_status_noAccess
+ * @description
+ *
+ * Set: name is/would be denied by the MIB view ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (1)).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +200,10 @@ const noAccess: PDU_error_status = PDU_error_status_noAccess; /* SHORT_NAMED_INT
 
 /**
  * @summary PDU_error_status_wrongType
+ * @description
+ *
+ * Set: value ASN.1 type inconsistent with variables sharing that OID prefix ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (3)).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +220,10 @@ const wrongType: PDU_error_status = PDU_error_status_wrongType; /* SHORT_NAMED_I
 
 /**
  * @summary PDU_error_status_wrongLength
+ * @description
+ *
+ * Set: value length inconsistent with variables sharing that OID prefix ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (4)).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +240,10 @@ const wrongLength: PDU_error_status = PDU_error_status_wrongLength; /* SHORT_NAM
 
 /**
  * @summary PDU_error_status_wrongEncoding
+ * @description
+ *
+ * Set: value encoding inconsistent with its ASN.1 tag ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (5)).
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +260,10 @@ const wrongEncoding: PDU_error_status = PDU_error_status_wrongEncoding; /* SHORT
 
 /**
  * @summary PDU_error_status_wrongValue
+ * @description
+ *
+ * Set: value could under no circumstances be assigned ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (6)).
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +280,10 @@ const wrongValue: PDU_error_status = PDU_error_status_wrongValue; /* SHORT_NAMED
 
 /**
  * @summary PDU_error_status_noCreation
+ * @description
+ *
+ * Set: variable does not exist and could not ever be created ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (7)).
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +300,10 @@ const noCreation: PDU_error_status = PDU_error_status_noCreation; /* SHORT_NAMED
 
 /**
  * @summary PDU_error_status_inconsistentValue
+ * @description
+ *
+ * Set: value could be held under other circumstances but not presently ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (10)).
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +320,10 @@ const inconsistentValue: PDU_error_status = PDU_error_status_inconsistentValue; 
 
 /**
  * @summary PDU_error_status_resourceUnavailable
+ * @description
+ *
+ * Set: required resource presently unavailable ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (11)).
+ *
  * @constant
  * @type {number}
  */
@@ -253,6 +340,10 @@ const resourceUnavailable: PDU_error_status = PDU_error_status_resourceUnavailab
 
 /**
  * @summary PDU_error_status_commitFailed
+ * @description
+ *
+ * Set: assignment failed after validation; other assignments undone ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5)).
+ *
  * @constant
  * @type {number}
  */
@@ -269,6 +360,10 @@ const commitFailed: PDU_error_status = PDU_error_status_commitFailed; /* SHORT_N
 
 /**
  * @summary PDU_error_status_undoFailed
+ * @description
+ *
+ * Set: assignments could not all be undone; `error-index` set to zero ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5)).
+ *
  * @constant
  * @type {number}
  */
@@ -285,6 +380,10 @@ const undoFailed: PDU_error_status = PDU_error_status_undoFailed; /* SHORT_NAMED
 
 /**
  * @summary PDU_error_status_authorizationError
+ * @description
+ *
+ * `authorizationError(16)` in the `PDU` `error-status` ENUMERATION ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ *
  * @constant
  * @type {number}
  */
@@ -301,6 +400,10 @@ const authorizationError: PDU_error_status = PDU_error_status_authorizationError
 
 /**
  * @summary PDU_error_status_notWritable
+ * @description
+ *
+ * Set: no creatable/modifiable variable under that OID prefix, or exists but cannot be modified ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (2), (9)).
+ *
  * @constant
  * @type {number}
  */
@@ -317,6 +420,10 @@ const notWritable: PDU_error_status = PDU_error_status_notWritable; /* SHORT_NAM
 
 /**
  * @summary PDU_error_status_inconsistentName
+ * @description
+ *
+ * Set: variable does not exist and cannot be created under present circumstances ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5) (8)).
+ *
  * @constant
  * @type {number}
  */

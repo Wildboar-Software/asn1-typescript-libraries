@@ -15,6 +15,13 @@ import { PDU, _decode_PDU, _encode_PDU } from "../SNMPv2-PDU/PDU.ta.mjs";
  * @summary GetRequest_PDU
  * @description
  *
+ * Exact-match retrieval request encoded as `[0] IMPLICIT PDU`
+ * ([RFC 3416 §4.2.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.1)).
+ * For each binding: exact name → value; no OID prefix match →
+ * `noSuchObject`; otherwise `noSuchInstance`. Request binding values
+ * are ignored (`unSpecified`). Oversized successful response →
+ * `tooBig` with empty bindings.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { PDU, _decode_PDU, _encode_PDU } from "../SNMPv2-PDU/PDU.ta.mjs";
  * @summary GetNextRequest_PDU
  * @description
  *
+ * Lexicographic-successor retrieval, `[1] IMPLICIT PDU`
+ * ([RFC 3416 §4.2.2](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.2)).
+ * Each binding yields the next accessible name/value, or
+ * `endOfMibView` if none. Used for MIB table traversal (§4.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

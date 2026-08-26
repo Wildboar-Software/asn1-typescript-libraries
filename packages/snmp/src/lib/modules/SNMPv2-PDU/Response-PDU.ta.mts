@@ -15,6 +15,13 @@ import { PDU, _decode_PDU, _encode_PDU } from "../SNMPv2-PDU/PDU.ta.mjs";
  * @summary Response_PDU
  * @description
  *
+ * Reply to Get/GetNext/GetBulk/Set/Inform, `[2] IMPLICIT PDU`
+ * ([RFC 3416 §4.2.4](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.4)).
+ * Non-zero `error-status` → binding values ignored; with non-zero
+ * `error-index`, that index (1-based) identifies the failing request
+ * binding. Command generators MUST handle `noSuchName`, `badValue`,
+ * and `readOnly`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

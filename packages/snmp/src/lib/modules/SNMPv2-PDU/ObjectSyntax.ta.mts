@@ -16,6 +16,12 @@ import { ApplicationSyntax, _decode_ApplicationSyntax, _encode_ApplicationSyntax
  * @summary ObjectSyntax
  * @description
  *
+ * Value of a managed object: either `SimpleSyntax` or
+ * `ApplicationSyntax`
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SMIv2 base types map into these choices
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

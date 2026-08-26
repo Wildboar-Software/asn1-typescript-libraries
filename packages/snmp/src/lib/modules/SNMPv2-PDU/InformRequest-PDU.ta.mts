@@ -15,6 +15,12 @@ import { PDU, _decode_PDU, _encode_PDU } from "../SNMPv2-PDU/PDU.ta.mjs";
  * @summary InformRequest_PDU
  * @description
  *
+ * Confirmed notification, `[6] IMPLICIT PDU`
+ * ([RFC 3416 §4.2.7](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.7)).
+ * First two bindings are `sysUpTime.0` and `snmpTrapOID.0`. Receiver
+ * presents contents to an application and returns a `Response-PDU`
+ * with `noError` (or `tooBig` if the response would not fit).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

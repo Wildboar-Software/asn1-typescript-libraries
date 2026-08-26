@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary HeaderData
  * @description
  *
+ * Administrative parameters of an `SNMPv3Message`
+ * ([RFC 3412 §6](https://datatracker.ietf.org/doc/html/rfc3412#section-6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,24 +49,56 @@ class HeaderData {
     constructor (
         /**
          * @summary `msgID`.
+         * @description
+         *
+         * Coordinates request/response between SNMP entities and among
+         * subsystem models. Distinct from PDU `request-id`; no
+         * assumption they are equal. Response copies the request's
+         * `msgID`. Prefer a new value on retransmission
+         * ([RFC 3412 §6.2](https://datatracker.ietf.org/doc/html/rfc3412#section-6.2)).
+         * Range 0..2147483647.
+         *
          * @public
          * @readonly
          */
         readonly msgID: INTEGER,
         /**
          * @summary `msgMaxSize`.
+         * @description
+         *
+         * Maximum SNMP message size the sender can accept on this
+         * transport
+         * ([RFC 3412 §6.3](https://datatracker.ietf.org/doc/html/rfc3412#section-6.3)).
+         * Range 484..2147483647.
+         *
          * @public
          * @readonly
          */
         readonly msgMaxSize: INTEGER,
         /**
          * @summary `msgFlags`.
+         * @description
+         *
+         * One-octet bit field: bit0 `authFlag`, bit1 `privFlag`, bit2
+         * `reportableFlag`. Valid security levels: `00` noAuthNoPriv,
+         * `01` authNoPriv, `11` authPriv; `10` MUST NOT be used. If
+         * `privFlag` is set, `authFlag` MUST also be set. Remaining
+         * bits reserved (send as zero; ignore on receipt)
+         * ([RFC 3412 §6.4](https://datatracker.ietf.org/doc/html/rfc3412#section-6.4)).
+         *
          * @public
          * @readonly
          */
         readonly msgFlags: OCTET_STRING,
         /**
          * @summary `msgSecurityModel`.
+         * @description
+         *
+         * Security Model used by the sender; receiver MUST use the same
+         * model for security processing
+         * ([RFC 3412 §6.5](https://datatracker.ietf.org/doc/html/rfc3412#section-6.5)).
+         * Range 1..2147483647.
+         *
          * @public
          * @readonly
          */

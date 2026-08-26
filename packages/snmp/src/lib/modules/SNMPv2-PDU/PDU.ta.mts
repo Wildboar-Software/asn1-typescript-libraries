@@ -26,6 +26,13 @@ import {
  * @summary PDU
  * @description
  *
+ * Common SEQUENCE body for Get, GetNext, Response, Set, Inform,
+ * SNMPv2-Trap, and Report PDUs
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3),
+ * [§4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1)).
+ * Fields not referenced by a given operation's procedure are ignored
+ * by the receiver but must still have valid ASN.1 encoding (§4.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -69,24 +76,55 @@ class PDU {
     constructor (
         /**
          * @summary `request_id`.
+         * @description
+         *
+         * Correlates requests and responses; also helps detect network
+         * duplicates. Response copies the request's value. Same id on
+         * retransmission allows either reply to satisfy; a new id is
+         * recommended when measuring RTT
+         * ([RFC 3416 §4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1)).
+         * Range -214783648..214783647 (as in the ASN.1).
+         *
          * @public
          * @readonly
          */
         readonly request_id: INTEGER,
         /**
          * @summary `error_status`.
+         * @description
+         *
+         * Sometimes ignored (e.g. in requests). In a `Response-PDU`,
+         * non-zero means an error prevented processing the request
+         * ([RFC 3416 §4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1)).
+         *
          * @public
          * @readonly
          */
         readonly error_status: PDU_error_status,
         /**
          * @summary `error_index`.
+         * @description
+         *
+         * Sometimes ignored. With non-zero `error-status` in a
+         * Response, identifies the 1-based index of the failing
+         * variable binding (0 when unused / `tooBig`)
+         * ([RFC 3416 §4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1),
+         * [§4.2.4](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.4)).
+         * Range 0..`max-bindings`.
+         *
          * @public
          * @readonly
          */
         readonly error_index: INTEGER,
         /**
          * @summary `variable_bindings`.
+         * @description
+         *
+         * Variable-binding list; values are sometimes ignored (e.g.
+         * GetRequest uses names only)
+         * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3),
+         * [§4.2](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2)).
+         *
          * @public
          * @readonly
          */
