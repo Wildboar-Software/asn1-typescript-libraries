@@ -10,7 +10,7 @@ import { scrypt } from "../Scrypt-0/scrypt.oa.mjs";
  *
  * Extension of the PBES2 KDF algorithm set to include scrypt, so
  * scrypt can be used as the KDF under PBES2 in PKCS #8 [RFC 5208] and
- * Asymmetric Key Packages [RFC 5958] (RFC 7914 §7). This module’s set
+ * Asymmetric Key Packages [RFC 5958] (RFC 7914 §7). This module's set
  * contains `scrypt` (`Scrypt-params` identified by `id-scrypt`); the
  * open type (`...`) allows further KDFs.
  *
