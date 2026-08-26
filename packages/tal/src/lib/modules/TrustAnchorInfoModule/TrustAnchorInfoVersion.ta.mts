@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TrustAnchorInfoVersion
  * @description
  *
+ * Version of the `TrustAnchorInfo` structure. Currently only `v1(1)`;
+ * the default value `v1` cannot be changed
+ * ([RFC 5914 §2.1](https://datatracker.ietf.org/doc/html/rfc5914#section-2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +33,11 @@ type TrustAnchorInfoVersion = INTEGER;
 
 /**
  * @summary TrustAnchorInfoVersion_v1
+ * @description
+ *
+ * Named INTEGER value `v1(1)` for `TrustAnchorInfo.version`
+ * ([RFC 5914 §2.1](https://datatracker.ietf.org/doc/html/rfc5914#section-2.1)).
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +46,10 @@ const TrustAnchorInfoVersion_v1: TrustAnchorInfoVersion = 1; /* LONG_NAMED_INTEG
 
 /**
  * @summary TrustAnchorInfoVersion_v1
+ * @description
+ *
+ * Short name for `TrustAnchorInfoVersion_v1` (`v1(1)`).
+ *
  * @constant
  * @type {number}
  */

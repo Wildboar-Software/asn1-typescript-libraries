@@ -15,6 +15,13 @@ import { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice
  * @summary TrustAnchorList
  * @description
  *
+ * Sequence of one or more `TrustAnchorChoice` values for representing
+ * a collection of trust anchors
+ * ([RFC 5914 §3](https://datatracker.ietf.org/doc/html/rfc5914#section-3)).
+ * May be protected with CMS `SignedData`
+ * ([RFC 5652](https://datatracker.ietf.org/doc/html/rfc5652)) using
+ * content type `id-ct-trustAnchorList`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

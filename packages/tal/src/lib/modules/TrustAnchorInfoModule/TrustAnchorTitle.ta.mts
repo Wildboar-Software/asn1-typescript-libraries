@@ -16,6 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TrustAnchorTitle
  * @description
  *
+ * Human-readable trust anchor name: UTF-8 string of length 1..64.
+ * Used as optional `TrustAnchorInfo.taTitle`; language via
+ * `taTitleLangTag` or default `"en"`
+ * ([RFC 5914 §2.4](https://datatracker.ietf.org/doc/html/rfc5914#section-2.4);
+ * [RFC 3629](https://datatracker.ietf.org/doc/html/rfc3629)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

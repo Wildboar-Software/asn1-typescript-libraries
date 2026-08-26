@@ -19,6 +19,15 @@ import { TrustAnchorInfo, _decode_TrustAnchorInfo, _encode_TrustAnchorInfo } fro
  * @summary TrustAnchorChoice
  * @description
  *
+ * One trust anchor in a `TrustAnchorList`, with three representation
+ * options ([RFC 5914 §3](https://datatracker.ietf.org/doc/html/rfc5914#section-3)):
+ *
+ * - `certificate` — a certificate with no additional associated
+ *   constraints
+ * - `tbsCert` — associate constraints by removing the signature and
+ *   changing the extensions field of a `TBSCertificate`
+ * - `taInfo` — the `TrustAnchorInfo` structure defined in this document
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

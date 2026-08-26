@@ -23,6 +23,14 @@ import { NameConstraintsSyntax, _decode_NameConstraintsSyntax, _encode_NameConst
  * @summary CertPathControls
  * @description
  *
+ * Controls needed to initialize an X.509 certification path validation
+ * algorithm implementation ([RFC 5280 §6](https://datatracker.ietf.org/doc/html/rfc5280#section-6)).
+ * Carried in optional `TrustAnchorInfo.certPath`
+ * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+ * When validating a path, applications SHOULD NOT ignore these
+ * limitations but MAY tighten them (subset of policies/names, TRUE
+ * policy flags, smaller `pathLenConstraint`, extra excluded names).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,36 +49,106 @@ class CertPathControls {
     constructor (
         /**
          * @summary `taName`.
+         * @description
+         *
+         * X.500 distinguished name associated with the trust anchor,
+         * used to construct and validate an X.509 certification path.
+         * MUST NOT be an empty sequence
+         * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+         *
          * @public
          * @readonly
          */
         readonly taName: Name,
         /**
          * @summary `certificate`.
+         * @description
+         *
+         * Optional X.509 certificate representing the trust anchor in
+         * path development and validation. If present: subject MUST
+         * exactly match `taName`, public key MUST exactly match
+         * `TrustAnchorInfo.pubKey`, and `subjectKeyIdentifier` (if
+         * present) MUST exactly match `TrustAnchorInfo.keyId`
+         * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+         *
+         * Correspondence with TrustAnchorInfo fields (TrustAnchorInfo
+         * values always enforced; certificate extensions only if no
+         * corresponding TrustAnchorInfo value):
+         *
+         * - `id-ce-certificatePolicies` ↔ `policySet`
+         * - `id-ce-policyConstraints` ↔ `inhibitPolicyMapping` /
+         *   `requireExplicitPolicy`
+         * - `id-ce-inhibitAnyPolicy` ↔ `inhibitAnyPolicy`
+         * - `id-ce-nameConstraints` ↔ `nameConstr`
+         * - `BasicConstraints.pathLenConstraint` ↔ `pathLenConstraint`
+         *   (presence of `CertPathControls` corresponds to `cA` TRUE)
+         * - any other extension ↔ same type in `TrustAnchorInfo.exts`
+         *
          * @public
          * @readonly
          */
         readonly certificate?: OPTIONAL<Certificate>,
         /**
          * @summary `policySet`.
+         * @description
+         *
+         * Optional sequence of certificate policy identifiers as inputs
+         * to path validation. When absent, the special value any-policy
+         * is provided. Syntax/semantics of `CertificatePolicies` as in
+         * [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280); in
+         * this context `policyQualifiers` MUST NOT be included
+         * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+         *
          * @public
          * @readonly
          */
         readonly policySet?: OPTIONAL<CertificatePoliciesSyntax>,
         /**
          * @summary `policyFlags`.
+         * @description
+         *
+         * Optional BIT STRING of three Boolean inputs to path validation.
+         * When absent, the input is `{ FALSE, FALSE, FALSE }` (most
+         * liberal). See `CertPolicyFlags` named bits
+         * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+         *
          * @public
          * @readonly
          */
         readonly policyFlags?: OPTIONAL<CertPolicyFlags>,
         /**
          * @summary `nameConstr`.
+         * @description
+         *
+         * Optional name constraints with the same syntax and semantics
+         * as the Name Constraints certificate extension
+         * ([RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280)).
+         * Sets `initial-permitted-subtrees` and
+         * `initial-excluded-subtrees` for path validation
+         * ([RFC 5280 §6.1.1](https://datatracker.ietf.org/doc/html/rfc5280#section-6.1.1)).
+         * When absent, permitted is unbounded and excluded is empty
+         * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+         *
          * @public
          * @readonly
          */
         readonly nameConstr?: OPTIONAL<NameConstraintsSyntax>,
         /**
          * @summary `pathLenConstraint`.
+         * @description
+         *
+         * Maximum number of non-self-issued intermediate certificates
+         * that may follow this trust anchor in a valid path.
+         *
+         * > A pathLenConstraint of zero indicates that no non-self-issued
+         * > intermediate certification authority (CA) certificates may
+         * > follow in a valid certification path. Where it appears, the
+         * > pathLenConstraint field MUST be greater than or equal to
+         * > zero. Where pathLenConstraint does not appear, no limit is
+         * > imposed.
+         * >
+         * > — [RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)
+         *
          * @public
          * @readonly
          */

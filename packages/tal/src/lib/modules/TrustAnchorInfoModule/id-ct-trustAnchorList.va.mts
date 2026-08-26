@@ -15,6 +15,11 @@ import {
  * @summary id_ct_trustAnchorList
  * @description
  *
+ * Object identifier for `TrustAnchorList` payloads in CMS structures
+ * (e.g., `SignedData` content type)
+ * ([RFC 5914 §3](https://datatracker.ietf.org/doc/html/rfc5914#section-3);
+ * [RFC 5652](https://datatracker.ietf.org/doc/html/rfc5652)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

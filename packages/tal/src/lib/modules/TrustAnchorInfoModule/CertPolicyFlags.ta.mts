@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CertPolicyFlags
  * @description
  *
+ * Three Boolean inputs to the certification path validation algorithm,
+ * carried in optional `CertPathControls.policyFlags`. When
+ * `policyFlags` is absent, the input is `{ FALSE, FALSE, FALSE }`
+ * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +37,13 @@ type CertPolicyFlags = BIT_STRING;
 
 /**
  * @summary CertPolicyFlags_inhibitPolicyMapping
+ * @description
+ *
+ * Bit 0: when TRUE, policy mapping is not permitted. Maps to
+ * `initial-policy-mapping-inhibit`
+ * ([RFC 5280 §6.1.1](https://datatracker.ietf.org/doc/html/rfc5280#section-6.1.1);
+ * [RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+ *
  * @constant
  */
 export
@@ -39,6 +51,10 @@ const CertPolicyFlags_inhibitPolicyMapping: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary inhibitPolicyMapping
+ * @description
+ *
+ * Short name for bit 0 (`CertPolicyFlags_inhibitPolicyMapping`).
+ *
  * @constant
  */
 export
@@ -46,6 +62,15 @@ const inhibitPolicyMapping: number = CertPolicyFlags_inhibitPolicyMapping; /* SH
 
 /**
  * @summary CertPolicyFlags_requireExplicitPolicy
+ * @description
+ *
+ * Bit 1: when TRUE, the path MUST be valid for at least one policy in
+ * `policySet` (every certificate MUST contain an acceptable policy
+ * identifier). Maps to `initial-explicit-policy`
+ * ([RFC 5280 §6.1.1](https://datatracker.ietf.org/doc/html/rfc5280#section-6.1.1)).
+ * MUST be FALSE if `policySet` is absent
+ * ([RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+ *
  * @constant
  */
 export
@@ -53,6 +78,10 @@ const CertPolicyFlags_requireExplicitPolicy: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary requireExplicitPolicy
+ * @description
+ *
+ * Short name for bit 1 (`CertPolicyFlags_requireExplicitPolicy`).
+ *
  * @constant
  */
 export
@@ -60,6 +89,14 @@ const requireExplicitPolicy: number = CertPolicyFlags_requireExplicitPolicy; /* 
 
 /**
  * @summary CertPolicyFlags_inhibitAnyPolicy
+ * @description
+ *
+ * Bit 2: whether the special anyPolicy OID `{ 2 5 29 32 0 }` is an
+ * explicit match for other certificate policies. Maps to
+ * `initial-any-policy-inhibit`
+ * ([RFC 5280 §6.1.1](https://datatracker.ietf.org/doc/html/rfc5280#section-6.1.1);
+ * [RFC 5914 §2.5](https://datatracker.ietf.org/doc/html/rfc5914#section-2.5)).
+ *
  * @constant
  */
 export
@@ -67,6 +104,10 @@ const CertPolicyFlags_inhibitAnyPolicy: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary inhibitAnyPolicy
+ * @description
+ *
+ * Short name for bit 2 (`CertPolicyFlags_inhibitAnyPolicy`).
+ *
  * @constant
  */
 export
