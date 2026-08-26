@@ -12,6 +12,10 @@ import {
  * @summary NameRegistrationAuthorities
  * @description
  *
+ * Sequence of one or more `GeneralName` values naming registration
+ * authorities for subject attributes or names
+ * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

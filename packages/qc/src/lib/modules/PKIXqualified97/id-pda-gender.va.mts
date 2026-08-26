@@ -8,6 +8,10 @@ import { id_pda } from "../PKIXqualified97/id-pda.va.mjs";
  * @summary id_pda_gender
  * @description
  *
+ * Attribute type OID for `gender`
+ * ([RFC 3739 §3.2.2](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.2),
+ * Appendix A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

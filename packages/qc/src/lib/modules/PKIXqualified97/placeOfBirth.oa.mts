@@ -15,6 +15,14 @@ import { id_pda_placeOfBirth } from "../PKIXqualified97/id-pda-placeOfBirth.va.m
  * @summary placeOfBirth
  * @description
  *
+ * Subject directory attribute: place of birth of the subject
+ * ([RFC 3739 §3.2.2](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.2)).
+ * Compliant implementations SHALL be able to interpret this attribute
+ * when present in `subjectDirectoryAttributes`. How the place of
+ * birth is associated with the subject is outside the scope of
+ * RFC 3739. The `subjectDirectoryAttributes` extension MUST NOT be
+ * marked critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

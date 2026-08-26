@@ -7,6 +7,9 @@ import { id_pe } from "../PKIX1Explicit88/id-pe.va.mjs";
  * @summary id_pe_biometricInfo
  * @description
  *
+ * Extension OID for `biometricInfo`
+ * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

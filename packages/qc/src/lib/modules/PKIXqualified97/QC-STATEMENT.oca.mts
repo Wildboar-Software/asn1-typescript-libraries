@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary QC_STATEMENT
  * @description
  *
+ * Information object class for a Qualified Certificate statement:
+ * unique statement OID and optional associated type for
+ * `statementInfo`
+ * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6),
+ * Appendix A.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

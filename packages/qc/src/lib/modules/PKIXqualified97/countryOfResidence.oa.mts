@@ -12,6 +12,17 @@ import { id_pda_countryOfResidence } from "../PKIXqualified97/id-pda-countryOfRe
  * @summary countryOfResidence
  * @description
  *
+ * Subject directory attribute: at least one country in which the
+ * subject is resident
+ * ([RFC 3739 §3.2.2](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.2)).
+ * Value is an ISO 3166 country code (`PrintableString` size 2). If
+ * more than one country of residence is specified, each SHOULD be a
+ * separate, single-valued `countryOfResidence` attribute.
+ * Determination of residence is a matter of law and outside the scope
+ * of RFC 3739. Compliant implementations SHALL be able to interpret
+ * this attribute when present in `subjectDirectoryAttributes`. That
+ * extension MUST NOT be marked critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

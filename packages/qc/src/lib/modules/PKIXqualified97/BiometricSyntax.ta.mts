@@ -11,6 +11,10 @@ import {
  * @summary BiometricSyntax
  * @description
  *
+ * Syntax of the `biometricInfo` certificate extension: a sequence of
+ * `BiometricData` hash entries
+ * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

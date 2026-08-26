@@ -11,6 +11,10 @@ import {
  * @summary QCStatements
  * @description
  *
+ * Syntax of the `qcStatements` extension: a sequence of
+ * `QCStatement` values
+ * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
