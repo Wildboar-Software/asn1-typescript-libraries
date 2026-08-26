@@ -8,6 +8,10 @@ import { regInfo_utf8Pairs } from "../PKIXCRMF-2009/regInfo-utf8Pairs.oa.mjs";
  * @summary RegInfoSet
  * @description
  *
+ * `ATTRIBUTE` object set for `CertReqMsg.regInfo`:
+ * `utf8Pairs` and `certReq` ([RFC 4211 §7](https://datatracker.ietf.org/doc/html/rfc4211#section-7);
+ * [RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

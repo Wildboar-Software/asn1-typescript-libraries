@@ -12,6 +12,12 @@ import { regCtrl_regToken } from "../PKIXCRMF-2009/regCtrl-regToken.oa.mjs";
  * @summary RegControlSet
  * @description
  *
+ * `ATTRIBUTE` object set of defined registration controls:
+ * `regToken`, `authenticator`, `pkiPublicationInfo`,
+ * `pkiArchiveOptions`, `oldCertID`, `protocolEncrKey`
+ * ([RFC 4211 §6](https://datatracker.ietf.org/doc/html/rfc4211#section-6);
+ * [RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

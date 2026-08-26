@@ -20,6 +20,20 @@ import {
  * @summary ProofOfPossession
  * @description
  *
+ * Proof-of-possession of the private key corresponding to the
+ * requested public key
+ * ([RFC 4211 §4](https://datatracker.ietf.org/doc/html/rfc4211#section-4)).
+ *
+ * > Any CRP referencing this document MUST enforce POP by some
+ * > means. POP may be validated by the CA, the RA, or both.
+ *
+ * - `raVerified`: RA attested POP (requestor MUST NOT set this).
+ * - `signature`: POP for signature keys (§4.1).
+ * - `keyEncipherment`: POP for key-encipherment keys (§4.2).
+ * - `keyAgreement`: POP for key-agreement keys (§4.3).
+ *
+ * Omit the field when POP is verified out-of-band.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

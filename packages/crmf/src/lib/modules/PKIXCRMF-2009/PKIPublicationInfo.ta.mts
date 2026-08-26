@@ -20,6 +20,10 @@ import {
  * @summary PKIPublicationInfo
  * @description
  *
+ * Advisory control influencing whether/where the CA/RA publishes
+ * the certificate ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)). CAs/RAs
+ * MAY ignore it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,24 @@ export class PKIPublicationInfo {
     constructor(
         /**
          * @summary `action`.
+         * @description
+         *
+         * `dontPublish`(0): do not publish (`pubInfos` MUST be omitted).
+         * `pleasePublish`(1): request publication
+         * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+         *
          * @public
          * @readonly
          */
         readonly action: PKIPublicationInfo_action,
         /**
          * @summary `pubInfos`.
+         * @description
+         *
+         * Desired publication locations. Omitted for `dontPublish`.
+         * Include a `dontCare` `SinglePubInfo` to allow additional CA/RA
+         * locations ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+         *
          * @public
          * @readonly
          */

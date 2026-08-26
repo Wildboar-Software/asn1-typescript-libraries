@@ -6,6 +6,10 @@ import { id_pkix } from "@wildboar/x500/PkiPmiExternalDataTypes";
  * @summary id_pkip
  * @description
  *
+ * PKIX arc for Internet X.509 PKI protocols and components:
+ * `{ id-pkix 5 }`
+ * ([RFC 4211 §8](https://datatracker.ietf.org/doc/html/rfc4211#section-8)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

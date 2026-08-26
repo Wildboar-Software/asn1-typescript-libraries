@@ -12,6 +12,15 @@ import { hMAC_SHA1 } from "@wildboar/cms";
  * @summary maca_hMAC_SHA1
  * @description
  *
+ * `MAC-ALGORITHM` information object for HMAC-SHA-1 in
+ * `CryptographicMessageSyntaxAlgorithms-2009` (ASN.1 update of
+ * [RFC 3370](https://datatracker.ietf.org/doc/html/rfc3370) in [RFC 5911 §3](https://datatracker.ietf.org/doc/html/rfc5911#section-3)).
+ * Identifier `hMAC-SHA1`; `NULL` parameters `preferredAbsent`;
+ * keyed MAC; listed in `MessageAuthAlgs` and `SMimeCaps`.
+ *
+ * HMAC-SHA-1 itself is defined in [RFC 3370 §3.1](https://datatracker.ietf.org/doc/html/rfc3370#section-3.1)
+ * / [RFC 2104](https://datatracker.ietf.org/doc/html/rfc2104).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

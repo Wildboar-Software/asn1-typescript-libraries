@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SingleAttribute
  * @description
  *
+ * Parameterized `SEQUENCE` for a single-valued attribute: OID `type`
+ * and one `value`
+ * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2), module `PKIX-CommonTypes-2009`).
+ * CRMF uses this for `Controls` and `regInfo` entries in place of
+ * `AttributeTypeAndValue` from [RFC 4211](https://datatracker.ietf.org/doc/html/rfc4211)
+ * ([RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +33,22 @@ export class SingleAttribute {
     constructor(
         /**
          * @summary `type_`.
+         * @description
+         *
+         * Attribute type OID (`ATTRIBUTE.&id` selected from `AttrSet`)
+         * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
+         *
          * @public
          * @readonly
          */
         readonly type_: OBJECT_IDENTIFIER,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Single attribute value (`ATTRIBUTE.&Type` for `type`)
+         * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
+         *
          * @public
          * @readonly
          */

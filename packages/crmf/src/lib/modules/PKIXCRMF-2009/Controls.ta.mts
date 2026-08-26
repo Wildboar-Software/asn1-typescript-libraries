@@ -11,6 +11,12 @@ import {
  * @summary Controls
  * @description
  *
+ * One or more registration controls on a `CertRequest` (processing
+ * context, not certificate content)
+ * ([RFC 4211 §6](https://datatracker.ietf.org/doc/html/rfc4211#section-6)).
+ * 2009 ASN.1: `SEQUENCE OF SingleAttribute{{RegControlSet}}`
+ * ([RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

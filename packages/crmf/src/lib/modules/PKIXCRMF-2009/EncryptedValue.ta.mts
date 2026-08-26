@@ -18,6 +18,14 @@ import {
  * @summary EncryptedValue
  * @description
  *
+ * Legacy encrypted value structure; **deprecated** in favor of
+ * `EnvelopedData` ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+ *
+ * When carrying a private key, implementations MUST support
+ * `encValue` containing an encrypted `PrivateKeyInfo`;
+ * `intendedAlg` MUST identify the intended private-key algorithm
+ * unless known a priori.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,36 +52,69 @@ export class EncryptedValue {
     constructor(
         /**
          * @summary `intendedAlg`.
+         * @description
+         *
+         * Intended algorithm for which the value will be used; MUST
+         * identify the private-key algorithm OID when encrypting a
+         * private key ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+         *
          * @public
          * @readonly
          */
         readonly intendedAlg: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `symmAlg`.
+         * @description
+         *
+         * Symmetric algorithm used to encrypt the value
+         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+         *
          * @public
          * @readonly
          */
         readonly symmAlg: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `encSymmKey`.
+         * @description
+         *
+         * Encrypted symmetric key used to encrypt the value
+         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+         *
          * @public
          * @readonly
          */
         readonly encSymmKey: OPTIONAL<BIT_STRING>,
         /**
          * @summary `keyAlg`.
+         * @description
+         *
+         * Algorithm used to encrypt the symmetric key
+         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+         *
          * @public
          * @readonly
          */
         readonly keyAlg: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `valueHint`.
+         * @description
+         *
+         * Brief description/identifier of `encValue` content (may be
+         * meaningful only to the sender). First octet MAY indicate
+         * private-key format when not `PrivateKeyInfo`
+         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+         *
          * @public
          * @readonly
          */
         readonly valueHint: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `encValue`.
+         * @description
+         *
+         * Encrypted content (e.g. encrypted `PrivateKeyInfo`)
+         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+         *
          * @public
          * @readonly
          */

@@ -17,6 +17,12 @@ import {
  * @summary PKMACValue
  * @description
  *
+ * Password-based MAC over the DER-encoded subject public key
+ * ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)). All implementations MUST
+ * support `id-PasswordBasedMAC` (§4.4). The CA/RA selects the
+ * shared secret using the request general name or `regToken` /
+ * authenticator controls.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +37,22 @@ export class PKMACValue {
     constructor(
         /**
          * @summary `algId`.
+         * @description
+         *
+         * MAC algorithm; MUST support `id-PasswordBasedMAC`
+         * ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1), §4.4).
+         *
          * @public
          * @readonly
          */
         readonly algId: AlgorithmIdentifier,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Computed MAC over the DER-encoded public key of the
+         * certificate subject ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+         *
          * @public
          * @readonly
          */

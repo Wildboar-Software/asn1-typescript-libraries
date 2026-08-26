@@ -17,6 +17,10 @@ import {
  * @summary CertId
  * @description
  *
+ * Certificate identifier: issuer `GeneralName` and serial number
+ * ([RFC 4211 §6.5](https://datatracker.ietf.org/doc/html/rfc4211#section-6.5)). Used as `OldCertId` for
+ * the oldCertID control.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,20 @@ export class CertId {
     constructor(
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Issuer name ([RFC 4211 §6.5](https://datatracker.ietf.org/doc/html/rfc4211#section-6.5)).
+         *
          * @public
          * @readonly
          */
         readonly issuer: GeneralName,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Certificate serial number ([RFC 4211 §6.5](https://datatracker.ietf.org/doc/html/rfc4211#section-6.5)).
+         *
          * @public
          * @readonly
          */

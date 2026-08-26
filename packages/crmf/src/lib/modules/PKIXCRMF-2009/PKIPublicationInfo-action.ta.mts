@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PKIPublicationInfo_action
  * @description
  *
+ * Unnested `action` INTEGER from `PKIPublicationInfo`
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -18,6 +21,11 @@ export type PKIPublicationInfo_action = INTEGER;
 
 /**
  * @summary PKIPublicationInfo_action_dontPublish
+ * @description
+ *
+ * `dontPublish`(0): requester wishes the CA/RA not to publish;
+ * `pubInfos` MUST be omitted ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -26,6 +34,11 @@ export const PKIPublicationInfo_action_dontPublish: PKIPublicationInfo_action = 
 
 /**
  * @summary PKIPublicationInfo_action_dontPublish
+ * @description
+ *
+ * `dontPublish`(0): requester wishes the CA/RA not to publish;
+ * `pubInfos` MUST be omitted ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -34,6 +47,11 @@ export const dontPublish: PKIPublicationInfo_action = PKIPublicationInfo_action_
 
 /**
  * @summary PKIPublicationInfo_action_pleasePublish
+ * @description
+ *
+ * `pleasePublish`(1): requester wishes the CA/RA to publish the
+ * certificate ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +60,11 @@ export const PKIPublicationInfo_action_pleasePublish: PKIPublicationInfo_action 
 
 /**
  * @summary PKIPublicationInfo_action_pleasePublish
+ * @description
+ *
+ * `pleasePublish`(1): requester wishes the CA/RA to publish the
+ * certificate ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */

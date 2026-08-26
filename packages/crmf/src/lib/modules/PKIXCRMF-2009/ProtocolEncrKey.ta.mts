@@ -12,6 +12,10 @@ import {
  * @summary ProtocolEncrKey
  * @description
  *
+ * `SubjectPublicKeyInfo` naming a key the CA should use to
+ * encrypt a response to `CertReqMessages` (e.g. a CA-generated
+ * private key) ([RFC 4211 §6.6](https://datatracker.ietf.org/doc/html/rfc4211#section-6.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

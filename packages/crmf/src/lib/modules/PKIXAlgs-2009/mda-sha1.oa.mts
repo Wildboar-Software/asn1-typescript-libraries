@@ -12,6 +12,12 @@ import { id_sha1 } from "@wildboar/x500/AlgorithmObjectIdentifiers";
  * @summary mda_sha1
  * @description
  *
+ * `DIGEST-ALGORITHM` information object for SHA-1 in `PKIXAlgs-2009`
+ * (ASN.1 for [RFC 3279](https://datatracker.ietf.org/doc/html/rfc3279) in [RFC 5912 §6](https://datatracker.ietf.org/doc/html/rfc5912#section-6)).
+ * Identifier `id-sha1`; `NULL` parameters `preferredAbsent`.
+ *
+ * SHA-1 as a one-way hash is specified in [RFC 3279 §2.1](https://datatracker.ietf.org/doc/html/rfc3279#section-2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

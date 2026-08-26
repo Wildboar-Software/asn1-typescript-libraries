@@ -6,6 +6,9 @@ import { id_regInfo } from "../PKIXCRMF-2009/id-regInfo.va.mjs";
  * @summary id_regInfo_utf8Pairs
  * @description
  *
+ * OID for `utf8Pairs` regInfo: `{ id-regInfo 1 }`
+ * ([RFC 4211 §7.1](https://datatracker.ietf.org/doc/html/rfc4211#section-7.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

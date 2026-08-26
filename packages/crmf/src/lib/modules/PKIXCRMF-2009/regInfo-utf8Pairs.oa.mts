@@ -12,6 +12,10 @@ import {
  * @summary regInfo_utf8Pairs
  * @description
  *
+ * `ATTRIBUTE` information object for `regInfo-utf8Pairs`: type `UTF8Pairs`,
+ * identified by `id-regInfo-utf8Pairs`. Text name/value pairs in `regInfo`.
+ * ([RFC 4211 §7.1](https://datatracker.ietf.org/doc/html/rfc4211#section-7.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

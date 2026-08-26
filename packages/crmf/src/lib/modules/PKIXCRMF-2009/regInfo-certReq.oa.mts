@@ -12,6 +12,10 @@ import { id_regInfo_certReq } from "../PKIXCRMF-2009/id-regInfo-certReq.va.mjs";
  * @summary regInfo_certReq
  * @description
  *
+ * `ATTRIBUTE` information object for `regInfo-certReq`: type `CertReq`,
+ * identified by `id-regInfo-certReq`. RA-supplied replacement `CertRequest` when the Subject POP used the original template; at most one in `regInfo`.
+ * ([RFC 4211 §7.2](https://datatracker.ietf.org/doc/html/rfc4211#section-7.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

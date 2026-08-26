@@ -6,6 +6,9 @@ import { id_regInfo } from "../PKIXCRMF-2009/id-regInfo.va.mjs";
  * @summary id_regInfo_certReq
  * @description
  *
+ * OID for `certReq` regInfo: `{ id-regInfo 2 }`
+ * ([RFC 4211 §7.2](https://datatracker.ietf.org/doc/html/rfc4211#section-7.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

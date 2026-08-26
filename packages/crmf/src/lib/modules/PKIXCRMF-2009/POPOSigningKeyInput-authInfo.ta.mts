@@ -17,6 +17,10 @@ import {
  * @summary POPOSigningKeyInput_authInfo
  * @description
  *
+ * Unnested `authInfo` CHOICE from `POPOSigningKeyInput`
+ * ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)): `sender` (`GeneralName`)
+ * or `publicKeyMAC` (`PKMACValue`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

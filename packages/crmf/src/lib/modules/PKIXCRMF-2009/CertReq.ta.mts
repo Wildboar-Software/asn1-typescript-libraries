@@ -11,6 +11,9 @@ import {
  * @summary CertReq
  * @description
  *
+ * Alias for `CertRequest`; type of the `regInfo-certReq` attribute
+ * ([RFC 4211 §7.2](https://datatracker.ietf.org/doc/html/rfc4211#section-7.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

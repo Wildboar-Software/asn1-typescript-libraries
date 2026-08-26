@@ -17,6 +17,12 @@ import {
  * @summary EncryptedKey
  * @description
  *
+ * Encrypted private key for archive/POP: deprecated
+ * `EncryptedValue`, or preferred `EnvelopedData`
+ * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+ * Encrypted content MUST be `id-ct-encKeyWithID` when using
+ * `envelopedData`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

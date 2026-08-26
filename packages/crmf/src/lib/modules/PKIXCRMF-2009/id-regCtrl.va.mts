@@ -6,6 +6,9 @@ import { id_pkip } from "../PKIXCRMF-2009/id-pkip.va.mjs";
  * @summary id_regCtrl
  * @description
  *
+ * Arc for CRMF registration controls: `{ id-pkip 1 }`
+ * ([RFC 4211 §8](https://datatracker.ietf.org/doc/html/rfc4211#section-8)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

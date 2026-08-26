@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AttributeSet
  * @description
  *
+ * Parameterized `SEQUENCE` for a multi-valued attribute: OID `type`
+ * and a `SET` of `values` whose ASN.1 type is that of the attribute
+ * in `AttrSet`
+ * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2), module `PKIX-CommonTypes-2009`).
+ * Used when a set of attributes is to occur (vs `SingleAttribute`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +33,22 @@ export class AttributeSet {
     constructor(
         /**
          * @summary `type_`.
+         * @description
+         *
+         * Attribute type OID (`ATTRIBUTE.&id` selected from `AttrSet`)
+         * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
+         *
          * @public
          * @readonly
          */
         readonly type_: OBJECT_IDENTIFIER,
         /**
          * @summary `values`.
+         * @description
+         *
+         * One or more attribute values (`ATTRIBUTE.&Type` for `type`)
+         * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
+         *
          * @public
          * @readonly
          */

@@ -12,6 +12,10 @@ import {
  * @summary regCtrl_protocolEncrKey
  * @description
  *
+ * `ATTRIBUTE` information object for `regCtrl-protocolEncrKey`: type `ProtocolEncrKey`,
+ * identified by `id-regCtrl-protocolEncrKey`. Key for encrypting protocol responses to the subscriber.
+ * ([RFC 4211 §6.6](https://datatracker.ietf.org/doc/html/rfc4211#section-6.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

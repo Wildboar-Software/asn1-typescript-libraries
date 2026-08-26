@@ -22,6 +22,14 @@ import {
  * @summary POPOSigningKey
  * @description
  *
+ * Signature-key proof-of-possession: optional input, algorithm,
+ * and signature BIT STRING ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+ *
+ * If `poposkInput` is present, the signature is over its DER
+ * encoding; if absent, over the DER-encoded `certReq`.
+ * `poposkInput` MUST be present when the certificate template
+ * lacks both public key and subject name.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +45,34 @@ export class POPOSigningKey {
     constructor(
         /**
          * @summary `poposkInput`.
+         * @description
+         *
+         * Data to be signed when present. MUST be present when the
+         * certificate template does not contain both the public key
+         * and a subject name ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+         *
          * @public
          * @readonly
          */
         readonly poposkInput: OPTIONAL<POPOSigningKeyInput>,
         /**
          * @summary `algorithmIdentifier`.
+         * @description
+         *
+         * Signature algorithm (and parameters) used to produce the POP
+         * value ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+         *
          * @public
          * @readonly
          */
         readonly algorithmIdentifier: AlgorithmIdentifier,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * POP signature value: over DER(`poposkInput`) if present,
+         * else over DER(`certReq`) ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+         *
          * @public
          * @readonly
          */

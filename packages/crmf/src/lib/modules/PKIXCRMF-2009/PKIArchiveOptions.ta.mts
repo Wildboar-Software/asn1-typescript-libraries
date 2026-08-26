@@ -20,6 +20,14 @@ import {
  * @summary PKIArchiveOptions
  * @description
  *
+ * Control to archive the private key corresponding to the
+ * requested public key ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+ *
+ * - `encryptedPrivKey`: encrypted private key.
+ * - `keyGenParameters`: material to regenerate the key (CRP-defined).
+ * - `archiveRemGenPrivKey`: TRUE if CA/RA-generated key should be
+ *   archived.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

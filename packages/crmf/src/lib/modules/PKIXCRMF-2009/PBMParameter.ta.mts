@@ -18,6 +18,13 @@ import {
  * @summary PBMParameter
  * @description
  *
+ * Parameters for `id-PasswordBasedMAC`: salt, one-way function,
+ * iteration count, and MAC algorithm
+ * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+ *
+ * Used to derive a MAC key from a shared password and compute a
+ * check value (e.g. over a public key in `PKMACValue`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,24 +46,45 @@ export class PBMParameter {
     constructor(
         /**
          * @summary `salt`.
+         * @description
+         *
+         * Random value for MAC key computation; SHOULD be at least 8
+         * octets ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+         *
          * @public
          * @readonly
          */
         readonly salt: OCTET_STRING,
         /**
          * @summary `owf`.
+         * @description
+         *
+         * One-way function for key derivation; all implementations MUST
+         * support SHA-1 ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+         *
          * @public
          * @readonly
          */
         readonly owf: AlgorithmIdentifier,
         /**
          * @summary `iterationCount`.
+         * @description
+         *
+         * Hash iterations in key derivation; MUST be at least 100
+         * (higher minima such as 1000 are often suggested)
+         * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+         *
          * @public
          * @readonly
          */
         readonly iterationCount: INTEGER,
         /**
          * @summary `mac`.
+         * @description
+         *
+         * MAC algorithm; all implementations MUST support HMAC-SHA1
+         * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+         *
          * @public
          * @readonly
          */

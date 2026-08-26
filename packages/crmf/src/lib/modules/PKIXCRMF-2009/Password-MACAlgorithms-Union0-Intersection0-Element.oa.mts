@@ -15,6 +15,12 @@ import {
  * @summary Password_MACAlgorithms_Union0_Intersection0_Element
  * @description
  *
+ * Single `MAC-ALGORITHM` element of `Password-MACAlgorithms`:
+ * `id-PasswordBasedMac` with `PBMParameter` required
+ * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4);
+ * [RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ * Compiler-generated name from object-set unnesting.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

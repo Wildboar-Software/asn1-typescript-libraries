@@ -12,6 +12,10 @@ import {
  * @summary regCtrl_pkiArchiveOptions
  * @description
  *
+ * `ATTRIBUTE` information object for `regCtrl-pkiArchiveOptions`: type `PKIArchiveOptions`,
+ * identified by `id-regCtrl-pkiArchiveOptions`. Private-key archive options.
+ * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
