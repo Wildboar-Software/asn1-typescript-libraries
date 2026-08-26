@@ -13,6 +13,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Scrypt_params
  * @description
  *
+ * Parameters for the scrypt password-based KDF when carried in an
+ * `AlgorithmIdentifier` with algorithm `id-scrypt`. Same abstraction
+ * level as PKCS #5 `PBKDF2-params`: `id-scrypt` may be used where
+ * `id-PBKDF2` is used, with these parameters corresponding to
+ * `PBKDF2-params` (RFC 7914 §7). Intended applications include
+ * PKCS #8 and other key-management syntax.
+ *
+ * ASN.1 constrains each INTEGER field to `(1..MAX)`. Algorithmic
+ * bounds on N, r, p, and dkLen are in RFC 7914 §2 and §6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,30 +40,66 @@ class Scrypt_params {
     constructor (
         /**
          * @summary `salt`.
+         * @description
+         *
+         * Salt value (octet string). RFC 7914 §2: normally uniquely and
+         * randomly generated (see RFC 4086).
+         *
          * @public
          * @readonly
          */
         readonly salt: OCTET_STRING,
         /**
          * @summary `costParameter`.
+         * @description
+         *
+         * CPU/Memory cost parameter N (RFC 7914 §7). Per §2 / §6: must be
+         * larger than 1, a power of 2, and less than `2^(128 * r / 8)`
+         * where `r` is `blockSize`.
+         *
          * @public
          * @readonly
          */
         readonly costParameter: INTEGER,
         /**
          * @summary `blockSize`.
+         * @description
+         *
+         * Block size parameter r (RFC 7914 §7). Affects memory and the
+         * bounds on N and p (RFC 7914 §2).
+         *
          * @public
          * @readonly
          */
         readonly blockSize: INTEGER,
         /**
          * @summary `parallelizationParameter`.
+         * @description
+         *
+         * Parallelization parameter p (RFC 7914 §7). Per §2 / §6: a
+         * positive integer less than or equal to
+         * `((2^32 - 1) * 32) / (128 * r)` where `r` is `blockSize`.
+         * Independent `SMix` runs; large p raises CPU cost without
+         * raising memory (RFC 7914 §2).
+         *
          * @public
          * @readonly
          */
         readonly parallelizationParameter: INTEGER,
         /**
          * @summary `keyLength`.
+         * @description
+         *
+         * Optional intended length in octets of the derived key (dkLen).
+         *
+         * > The maximum key length allowed depends on the implementation;
+         * > it is expected that implementation profiles may further
+         * > constrain the bounds. This field only provides convenience;
+         * > the key length is not cryptographically protected.
+         *
+         * (RFC 7914 §7.) Per §2 / §6, dkLen is a positive integer less
+         * than or equal to `(2^32 - 1) * 32`.
+         *
          * @public
          * @readonly
          */
