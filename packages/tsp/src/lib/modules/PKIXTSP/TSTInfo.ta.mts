@@ -41,6 +41,16 @@ import {
  * @summary TSTInfo
  * @description
  *
+ * Time-stamp token info: DER-encoded as the `SignedData` encapsulated
+ * content (`eContent`) of a `TimeStampToken`, with `eContentType`
+ * `id-ct-TSTInfo`
+ * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+ *
+ * Conforming TSA servers MUST provide version 1 tokens. Among optional
+ * fields, only `nonce` MUST be supported by servers. Conforming
+ * requesters MUST recognize version 1 tokens with all optional fields
+ * present, but need not understand extension semantics.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -68,60 +78,137 @@ export class TSTInfo {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Version of the time-stamp token; currently `v1(1)`. Conforming
+         * servers MUST be able to provide version 1 tokens
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly version: TSTInfo_version,
         /**
          * @summary `policy`.
+         * @description
+         *
+         * TSA policy under which the response was produced. If
+         * `TimeStampReq.reqPolicy` was present, MUST equal that value;
+         * otherwise return `unacceptedPolicy`. Policy MAY describe
+         * conditions of use, token-log availability, etc.
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly policy: TSAPolicyId,
         /**
          * @summary `messageImprint`.
+         * @description
+         *
+         * MUST have the same value as `TimeStampReq.messageImprint`,
+         * provided the hash size matches `hashAlgorithm`
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly messageImprint: MessageImprint,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Integer assigned by the TSA to each `TimeStampToken`. MUST be
+         * unique for each token from a given TSA (TSA name + serial
+         * identify a unique token), including across service
+         * interruptions. Users MUST accommodate integers up to 160 bits
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly serialNumber: OCTET_STRING,
         /**
          * @summary `genTime`.
+         * @description
+         *
+         * Time at which the TSA created the token, as UTC
+         * (`GeneralizedTime`). Syntax `YYYYMMDDhhmmss[.s...]Z`; MUST
+         * include seconds. Fractional seconds allowed (unlike the
+         * one-second limit in
+         * [RFC 2459](https://datatracker.ietf.org/doc/html/rfc2459)
+         * §4.1.2.5.2). DER: terminate with `Z`; decimal point is `.`;
+         * omit trailing fractional zeros
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly genTime: GeneralizedTime,
         /**
          * @summary `accuracy`.
+         * @description
+         *
+         * Optional time deviation around `genTime`. If absent, accuracy
+         * MAY be available via `policy` (e.g., `TSAPolicyId`)
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly accuracy?: OPTIONAL<Accuracy>,
         /**
          * @summary `ordering`.
+         * @description
+         *
+         * Default `FALSE`. If missing or `FALSE`, `genTime` only marks
+         * creation time; ordering tokens (same or different TSAs)
+         * requires the `genTime` difference to exceed the sum of
+         * accuracies. If `TRUE`, every token from the same TSA can
+         * always be ordered by `genTime` regardless of accuracy
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly ordering?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `nonce`.
+         * @description
+         *
+         * MUST be present if present in `TimeStampReq`, and MUST equal
+         * that value. Only optional field that conforming servers MUST
+         * support
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly nonce?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `tsa`.
+         * @description
+         *
+         * Hint naming the TSA. If present, MUST match one of the subject
+         * names in the certificate used to verify the token. Actual
+         * signer identification is via `ESSCertID` in
+         * `SigningCertificate` on `signerInfo` (ESS §5)
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly tsa?: OPTIONAL<GeneralName>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Generic extension point (`Extensions` as in
+         * [RFC 2459](https://datatracker.ietf.org/doc/html/rfc2459)).
+         * Extension types may be defined in standards or registered by
+         * organizations
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */

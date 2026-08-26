@@ -11,6 +11,20 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Accuracy
  * @description
  *
+ * Time deviation around the UTC time in `TSTInfo.genTime`
+ * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+ * Add to `genTime` for an upper bound on creation time; subtract for a
+ * lower bound. Decomposed into seconds, milliseconds (1–999), and
+ * microseconds (1–999).
+ *
+ * > If either seconds, millis or micros is missing, then a value of
+ * > zero MUST be taken for the missing field.
+ * >
+ * > — [RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)
+ *
+ * When `Accuracy` is absent from `TSTInfo`, accuracy MAY be available
+ * through other means (e.g., `TSAPolicyId`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,18 +39,33 @@ export class Accuracy {
     constructor(
         /**
          * @summary `seconds`.
+         * @description
+         *
+         * Whole-second component of accuracy. If absent, treat as zero
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly seconds?: OPTIONAL<INTEGER>,
         /**
          * @summary `millis`.
+         * @description
+         *
+         * Milliseconds, range 1..999. If absent, treat as zero
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly millis?: OPTIONAL<INTEGER>,
         /**
          * @summary `micros`.
+         * @description
+         *
+         * Microseconds, range 1..999. If absent, treat as zero
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */

@@ -6,6 +6,22 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PKIFreeText
  * @description
  *
+ * Human-oriented free text from PKIXCMP
+ * ([RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510) §3.1.1),
+ * imported by the TSP ASN.1 module
+ * ([RFC 3161](https://datatracker.ietf.org/doc/html/rfc3161) Appendix A).
+ * A sequence of one or more UTF-8 strings.
+ *
+ * > text encoded as UTF-8 String (note: each UTF8String SHOULD
+ * > include an RFC 1766 language tag to indicate the language
+ * > of the contained text)
+ * >
+ * > — [RFC 2510 §3.1.1](https://datatracker.ietf.org/doc/html/rfc2510#section-3.1.1)
+ *
+ * In TSP, used as `PKIStatusInfo.statusString` for optional reason text
+ * (e.g., `"messageImprint field is not correctly formatted"`)
+ * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

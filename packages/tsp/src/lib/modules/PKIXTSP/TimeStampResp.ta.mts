@@ -19,6 +19,16 @@ import {
  * @summary TimeStampResp
  * @description
  *
+ * Time-stamping response from a TSA
+ * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+ * Second message of a TSA transaction (§2.2). The requester SHALL verify
+ * the status error and, if none, verify the `TimeStampToken` fields and
+ * signature (§2.2).
+ *
+ * When `status` is zero (`granted`) or one (`grantedWithMods`), a
+ * `TimeStampToken` MUST be present. For any other `status` value, a
+ * `TimeStampToken` MUST NOT be present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +42,25 @@ export class TimeStampResp {
     constructor(
         /**
          * @summary `status`.
+         * @description
+         *
+         * Outcome of the request. Based on CMP status
+         * ([RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510) §3.2.3)
+         * as adapted in
+         * [RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2).
+         *
          * @public
          * @readonly
          */
         readonly status: PKIStatusInfo,
         /**
          * @summary `timeStampToken`.
+         * @description
+         *
+         * Present if and only if `status` is `granted`(0) or
+         * `grantedWithMods`(1)
+         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+         *
          * @public
          * @readonly
          */

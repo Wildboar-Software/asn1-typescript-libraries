@@ -10,10 +10,24 @@ import {
  * @summary TimeStampToken
  * @description
  *
+ * Time-stamp token: a CMS `ContentInfo` that SHALL encapsulate a
+ * signed-data content type
+ * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+ *
+ * - `contentType` is `id-signedData` ([CMS](https://datatracker.ietf.org/doc/html/rfc2630)).
+ * - Within `SignedData` `encapContentInfo`, `eContentType` is
+ *   `id-ct-TSTInfo` and `eContent` is the DER-encoded `TSTInfo`.
+ *
+ * MUST NOT contain signatures other than the TSA's. The TSA certificate
+ * identifier (`ESSCertID`) MUST appear as a `signerInfo` attribute
+ * inside a `SigningCertificate` attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
  * TimeStampToken  ::=  ContentInfo
+ * -- contentType is id-signedData ([CMS])
+ * -- content is SignedData ([CMS])
  * ```
  */
 export type TimeStampToken = ContentInfo; // DefinedType

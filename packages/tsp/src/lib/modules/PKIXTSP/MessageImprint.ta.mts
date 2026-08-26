@@ -16,6 +16,15 @@ import {
  * @summary MessageImprint
  * @description
  *
+ * Hash algorithm and hash value of the datum to be time-stamped
+ * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+ * Carried in `TimeStampReq.messageImprint` and echoed in
+ * `TSTInfo.messageImprint` (MUST match the request when the hash size
+ * matches the algorithm).
+ *
+ * The TSA SHOULD refuse unrecognized or weak hash algorithms by
+ * returning `PKIStatusInfo` with `badAlg`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +38,26 @@ export class MessageImprint {
     constructor(
         /**
          * @summary `hashAlgorithm`.
+         * @description
+         *
+         * Identifies the hash algorithm. SHOULD be a known one-way,
+         * collision-resistant algorithm. The TSA SHOULD check whether
+         * it is still "sufficient"; if unrecognized or weak, return
+         * `badAlg`
+         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+         *
          * @public
          * @readonly
          */
         readonly hashAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `hashedMessage`.
+         * @description
+         *
+         * Hash of the datum as an `OCTET STRING`. Length MUST match the
+         * hash algorithm (e.g., 20 octets for SHA-1, 16 for MD5)
+         * ([RFC 3161 §2.4.1](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.1)).
+         *
          * @public
          * @readonly
          */
