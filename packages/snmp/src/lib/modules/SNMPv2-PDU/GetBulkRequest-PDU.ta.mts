@@ -15,6 +15,12 @@ import { BulkPDU, _decode_BulkPDU, _encode_BulkPDU } from "../SNMPv2-PDU/BulkPDU
  * @summary GetBulkRequest_PDU
  * @description
  *
+ * Bulk retrieval for large transfers/tables, `[5] IMPLICIT BulkPDU`
+ * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+ * First N bindings (`non-repeaters`) each yield one GetNext-style
+ * result; remaining R bindings each yield up to M (`max-repetitions`)
+ * successors. Response need not be 1:1 with request bindings.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

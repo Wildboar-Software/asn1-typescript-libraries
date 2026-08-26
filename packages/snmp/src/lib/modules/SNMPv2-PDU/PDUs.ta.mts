@@ -22,6 +22,12 @@ import { Report_PDU, _decode_Report_PDU, _encode_Report_PDU } from "../SNMPv2-PD
  * @summary PDUs
  * @description
  *
+ * CHOICE of all SNMPv2 protocol data units
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * Context tags: get-request [0], get-next-request [1], response [2],
+ * set-request [3], get-bulk-request [5], inform-request [6],
+ * snmpV2-trap [7], report [8]; [4] is obsolete.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

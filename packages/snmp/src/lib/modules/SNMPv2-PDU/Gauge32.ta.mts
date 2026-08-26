@@ -15,6 +15,12 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../SNMPv2-PD
  * @summary Gauge32
  * @description
  *
+ * Alias of `Unsigned32` in the SNMPv2-PDU module
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SMIv2 `Gauge32` shares the `unsigned-integer-value` encoding with
+ * `Unsigned32`
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

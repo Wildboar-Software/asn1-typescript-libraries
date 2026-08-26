@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ScopedPDU
  * @description
  *
+ * Context identification plus a PDU. Object identifiers in the PDU
+ * refer to managed objects accessible within the named context
+ * ([RFC 3412 §6.8](https://datatracker.ietf.org/doc/html/rfc3412#section-6.8)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,18 +38,38 @@ class ScopedPDU {
     constructor (
         /**
          * @summary `contextEngineID`.
+         * @description
+         *
+         * Uniquely identifies, within an administrative domain, an SNMP
+         * entity that may realize a context with a given `contextName`.
+         * With `pduType`, selects the receiving application
+         * ([RFC 3412 §6.8.1](https://datatracker.ietf.org/doc/html/rfc3412#section-6.8.1)).
+         *
          * @public
          * @readonly
          */
         readonly contextEngineID: OCTET_STRING,
         /**
          * @summary `contextName`.
+         * @description
+         *
+         * With `contextEngineID`, identifies the context for management
+         * information in the PDU. Unique within that SNMP entity
+         * ([RFC 3412 §6.8.2](https://datatracker.ietf.org/doc/html/rfc3412#section-6.8.2)).
+         *
          * @public
          * @readonly
          */
         readonly contextName: OCTET_STRING,
         /**
          * @summary `data`.
+         * @description
+         *
+         * The PDU (ANY). MUST be one of the PDUs in
+         * [RFC 3416](https://datatracker.ietf.org/doc/html/rfc3416);
+         * PDU type is used by the v3MP to classify the message
+         * ([RFC 3412 §6.8.3](https://datatracker.ietf.org/doc/html/rfc3412#section-6.8.3)).
+         *
          * @public
          * @readonly
          */

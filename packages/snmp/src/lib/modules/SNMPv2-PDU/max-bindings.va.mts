@@ -17,6 +17,12 @@ import {
  * @summary max_bindings
  * @description
  *
+ * Upper bound on the number of variable bindings in a `PDU` or
+ * `BulkPDU` (2147483647). Implementations must support as many bindings
+ * as fit the engine's maximum message size, but no more than this
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3),
+ * [§4.2](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

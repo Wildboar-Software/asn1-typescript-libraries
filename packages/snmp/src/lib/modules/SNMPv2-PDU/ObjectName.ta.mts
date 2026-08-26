@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ObjectName
  * @description
  *
+ * OBJECT IDENTIFIER naming a managed object / variable binding
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SNMP limits OIDs to at most 128 sub-identifiers, each ≤ 2**32-1
+ * ([RFC 3416 §4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,11 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../SNMPv2-PD
  * @summary ApplicationSyntax
  * @description
  *
+ * Application-tagged object values: `IpAddress`, `Counter32`,
+ * `TimeTicks`, `Opaque`, `Counter64`, `Unsigned32` (also `Gauge32`)
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5),
+ * [§3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

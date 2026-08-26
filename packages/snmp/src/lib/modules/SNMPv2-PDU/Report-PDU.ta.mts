@@ -15,6 +15,13 @@ import { PDU, _decode_PDU, _encode_PDU } from "../SNMPv2-PDU/PDU.ta.mjs";
  * @summary Report_PDU
  * @description
  *
+ * `[8] IMPLICIT PDU`. Usage and precise semantics are not defined in
+ * RFC 3416; any administrative framework that uses it must define them
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SNMPv3 Message Processing generates Report PDUs for engine-to-engine
+ * communication
+ * ([RFC 3412 §6.4](https://datatracker.ietf.org/doc/html/rfc3412#section-6.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

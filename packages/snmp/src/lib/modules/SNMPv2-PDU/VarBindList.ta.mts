@@ -15,6 +15,11 @@ import { VarBind, _decode_VarBind, _encode_VarBind } from "../SNMPv2-PDU/VarBind
  * @summary VarBindList
  * @description
  *
+ * SEQUENCE OF `VarBind`, size 0..`max-bindings`
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * Indexing for `error-index` is 1-based
+ * ([RFC 3416 §4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

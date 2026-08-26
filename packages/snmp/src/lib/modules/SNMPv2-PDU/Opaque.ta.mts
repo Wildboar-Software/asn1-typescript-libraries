@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Opaque
  * @description
  *
+ * OCTET STRING with APPLICATION tag 4
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SMIv2 `Opaque` maps to `arbitrary-value` of `ApplicationSyntax`
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

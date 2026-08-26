@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IpAddress
  * @description
  *
+ * Network address as OCTET STRING (SIZE (4)), APPLICATION 0
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SMIv2 `IpAddress` maps to `ipAddress-value` of `ApplicationSyntax`
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TimeTicks
  * @description
  *
+ * APPLICATION 3 INTEGER in range 0..4294967295
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)).
+ * SMIv2 `TimeTicks` maps to `timeticks-value` of `ApplicationSyntax`
+ * ([RFC 3416 §2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

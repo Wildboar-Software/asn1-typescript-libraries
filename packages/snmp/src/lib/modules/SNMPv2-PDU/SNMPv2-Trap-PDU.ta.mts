@@ -15,6 +15,12 @@ import { PDU, _decode_PDU, _encode_PDU } from "../SNMPv2-PDU/PDU.ta.mjs";
  * @summary SNMPv2_Trap_PDU
  * @description
  *
+ * Unconfirmed notification, `[7] IMPLICIT PDU`
+ * ([RFC 3416 §4.2.6](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.6)).
+ * No confirmation. First two bindings are `sysUpTime.0` and
+ * `snmpTrapOID.0`; further bindings from NOTIFICATION-TYPE OBJECTS
+ * and optional extras. Destinations are implementation-dependent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

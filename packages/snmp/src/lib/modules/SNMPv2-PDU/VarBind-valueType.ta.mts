@@ -16,6 +16,17 @@ import { ObjectSyntax, _decode_ObjectSyntax, _encode_ObjectSyntax } from "../SNM
  * @summary VarBind_valueType
  * @description
  *
+ * CHOICE for a `VarBind` value
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3)):
+ *
+ * - `value` — `ObjectSyntax`
+ * - `unSpecified` — NULL in retrieval requests (values ignored)
+ * - `noSuchObject` [0] — no accessible variable with that OID prefix
+ *   ([§4.2.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.1))
+ * - `noSuchInstance` [1] — prefix exists but instance does not
+ * - `endOfMibView` [2] — no lexicographic successor
+ *   ([§4.2.2](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.2))
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

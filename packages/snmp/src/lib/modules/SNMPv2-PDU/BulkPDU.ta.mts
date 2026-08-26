@@ -21,6 +21,13 @@ import {
  * @summary BulkPDU
  * @description
  *
+ * Body of `GetBulkRequest-PDU`; structure must be identical to `PDU`
+ * except `non-repeaters` / `max-repetitions` replace `error-status` /
+ * `error-index`
+ * ([RFC 3416 §3](https://datatracker.ietf.org/doc/html/rfc3416#section-3),
+ * [§4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+ * Binding values in the request are ignored.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,24 +46,52 @@ class BulkPDU {
     constructor (
         /**
          * @summary `request_id`.
+         * @description
+         *
+         * Same role as in `PDU`; echoed in the Response
+         * ([RFC 3416 §4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1),
+         * [§4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+         * Range -214783648..214783647.
+         *
          * @public
          * @readonly
          */
         readonly request_id: INTEGER,
         /**
          * @summary `non_repeaters`.
+         * @description
+         *
+         * N: number of leading request bindings that each produce one
+         * GetNext-style binding in the Response (capped by the binding
+         * count)
+         * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+         * Range 0..`max-bindings`.
+         *
          * @public
          * @readonly
          */
         readonly non_repeaters: INTEGER,
         /**
          * @summary `max_repetitions`.
+         * @description
+         *
+         * M: max lexicographic successors requested for each of the R
+         * repeating bindings after the first N
+         * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+         * Range 0..`max-bindings`.
+         *
          * @public
          * @readonly
          */
         readonly max_repetitions: INTEGER,
         /**
          * @summary `variable_bindings`.
+         * @description
+         *
+         * Request bindings (values ignored). Response may contain up to
+         * N + (M × R) bindings, possibly fewer for size or end-of-view
+         * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+         *
          * @public
          * @readonly
          */

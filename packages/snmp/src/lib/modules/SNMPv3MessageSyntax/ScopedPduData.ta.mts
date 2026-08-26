@@ -16,6 +16,11 @@ import { ScopedPDU, _decode_ScopedPDU, _encode_ScopedPDU } from "../SNMPv3Messag
  * @summary ScopedPduData
  * @description
  *
+ * Payload of an `SNMPv3Message`: plaintext `ScopedPDU` when
+ * `privFlag` is zero, or an encrypted scopedPDU OCTET STRING that the
+ * Security Model MUST decrypt
+ * ([RFC 3412 §6.7](https://datatracker.ietf.org/doc/html/rfc3412#section-6.7)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

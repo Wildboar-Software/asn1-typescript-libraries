@@ -15,6 +15,13 @@ import { PDU, _decode_PDU, _encode_PDU } from "../SNMPv2-PDU/PDU.ta.mjs";
  * @summary SetRequest_PDU
  * @description
  *
+ * Write request, `[3] IMPLICIT PDU`. Two-phase: validate all bindings,
+ * then assign as if simultaneously
+ * ([RFC 3416 §4.2.5](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.5)).
+ * Validation failures set `error-status` / `error-index` (e.g.
+ * `noAccess`, `wrongType`, `notWritable`). Assignment failure →
+ * `commitFailed` / `undoFailed`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
