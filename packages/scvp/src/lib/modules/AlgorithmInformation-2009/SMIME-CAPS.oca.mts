@@ -8,7 +8,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * Information object class associating an S/MIME capability type with
  * an object identifier ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)). Moved here from the RFC 3851 module
- * for reuse. Suggested object prefix: `cap-`. Also in ([RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3)).
+ * for reuse. Suggested object prefix: `cap-`. Also in [RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3).
  *
  * ### ASN.1 Definition:
  *

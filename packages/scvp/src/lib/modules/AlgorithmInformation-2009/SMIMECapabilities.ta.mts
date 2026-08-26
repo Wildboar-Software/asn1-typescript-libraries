@@ -12,7 +12,7 @@ import {
  *
  * Sequence of one or more `SMIMECapability` values ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
  * Parameterized by a `SMIME-CAPS` object set (`CapabilitySet`).
- * Also in ([RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3)).
+ * Also in [RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3).
  *
  * ### ASN.1 Definition:
  *
