@@ -15,6 +15,8 @@ import { id_svp } from '../SCVP-2009/id-svp.va.mjs';
  * @summary id_svp_nameValAlg
  * @description
  *
+ * OID for the name validation algorithm ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

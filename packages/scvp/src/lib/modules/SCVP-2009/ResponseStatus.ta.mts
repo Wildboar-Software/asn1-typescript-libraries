@@ -23,6 +23,9 @@ import {
  * @summary ResponseStatus
  * @description
  *
+ * Overall status of a `CVResponse`: `statusCode` (DEFAULT `okay`)
+ * and optional UTF-8 `errorMessage` ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +40,20 @@ export class ResponseStatus {
   constructor(
     /**
      * @summary `statusCode`.
+     * @description
+     *
+     * `CVStatusCode` for the whole request ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
+     *
      * @public
      * @readonly
      */
     readonly statusCode?: OPTIONAL<CVStatusCode>,
     /**
      * @summary `errorMessage`.
+     * @description
+     *
+     * Optional human-readable UTF-8 status text ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
+     *
      * @public
      * @readonly
      */

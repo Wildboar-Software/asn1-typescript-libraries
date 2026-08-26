@@ -15,6 +15,10 @@ import { type POLICY } from '../SCVP-2009/POLICY.oca.mjs';
  * @summary svp_defaultValPolicy
  * @description
  *
+ * Default validation policy object (`id-svp-defaultValPolicy`).
+ * Refers to the server's default policy and values from
+ * `ValPolResponse.defaultPolicyValues` ([RFC 5055 §3.2.4.1.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

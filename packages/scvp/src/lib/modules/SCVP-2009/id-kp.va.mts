@@ -15,6 +15,8 @@ import {
  * @summary id_kp
  * @description
  *
+ * PKIX key-purpose arc (`id-kp`) used for SCVP EKU OIDs ([RFC 5055 §4.14.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.14.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

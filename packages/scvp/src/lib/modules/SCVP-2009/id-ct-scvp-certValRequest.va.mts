@@ -15,6 +15,8 @@ import { id_ct } from '../SCVP-2009/id-ct.va.mjs';
  * @summary id_ct_scvp_certValRequest
  * @description
  *
+ * CMS content-type OID for `CVRequest` (`{ id-ct 10 }`) ([RFC 5055 §3](https://datatracker.ietf.org/doc/html/rfc5055#section-3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

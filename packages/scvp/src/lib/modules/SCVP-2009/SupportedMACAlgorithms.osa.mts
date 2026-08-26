@@ -15,6 +15,9 @@ import { type MAC_ALGORITHM } from '../AlgorithmInformation-2009/MAC-ALGORITHM.o
  * @summary SupportedMACAlgorithms
  * @description
  *
+ * Object set of supported MAC algorithms for `KeyAgreePublicKey`
+ * ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

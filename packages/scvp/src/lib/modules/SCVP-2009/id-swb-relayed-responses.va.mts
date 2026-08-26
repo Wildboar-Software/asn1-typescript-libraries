@@ -15,6 +15,8 @@ import { id_swb } from '../SCVP-2009/id-swb.va.mjs';
  * @summary id_swb_relayed_responses
  * @description
  *
+ * WantBack OID: relayed SCVP responses ([RFC 5055 §3.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

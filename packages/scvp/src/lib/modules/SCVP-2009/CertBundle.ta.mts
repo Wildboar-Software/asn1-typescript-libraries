@@ -20,6 +20,9 @@ import {
  * @summary CertBundle
  * @description
  *
+ * Ordered sequence of certificates (e.g., intermediate certs or a
+ * constructed path) ([RFC 5055 §3.2.8](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.8)) / ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

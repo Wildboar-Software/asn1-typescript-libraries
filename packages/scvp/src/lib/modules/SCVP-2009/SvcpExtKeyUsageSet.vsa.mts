@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SvcpExtKeyUsageSet
  * @description
  *
+ * Value set of SCVP-related extended key usage OIDs
+ * (`id-kp-scvpServer`, `id-kp-scvpClient`) ([RFC 5055 §4.14.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.14.2)) /
+ * ([RFC 5055 §7](https://datatracker.ietf.org/doc/html/rfc5055#section-7)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

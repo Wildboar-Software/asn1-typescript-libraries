@@ -15,6 +15,12 @@ export enum _enum_for_ParamOptions {
  * @summary ParamOptions
  * @description
  *
+ * Enumerated constraints on whether algorithm parameters appear in an
+ * `AlgorithmIdentifier` (and related structures)
+ * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)), also ([RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3)).
+ * Used as `&paramPresence` / `&ukmPresence` on algorithm information-object
+ * classes in module `AlgorithmInformation-2009`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +41,10 @@ export type ParamOptions = _enum_for_ParamOptions | ENUMERATED;
 
 /**
  * @summary ParamOptions_required
+ * @description
+ *
+ * Parameters MUST be encoded in the structure ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +52,10 @@ export const ParamOptions_required: ParamOptions = 0; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary required
+ * @description
+ *
+ * Short name for `ParamOptions_required`: parameters MUST be encoded.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +63,10 @@ export const required: ParamOptions = ParamOptions_required; /* SHORT_NAMED_ENUM
 
 /**
  * @summary ParamOptions_preferredPresent
+ * @description
+ *
+ * Parameters SHOULD be encoded in the structure ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +74,10 @@ export const ParamOptions_preferredPresent: ParamOptions = 1; /* LONG_NAMED_ENUM
 
 /**
  * @summary preferredPresent
+ * @description
+ *
+ * Short name for `ParamOptions_preferredPresent`: parameters SHOULD be encoded.
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +85,10 @@ export const preferredPresent: ParamOptions = ParamOptions_preferredPresent; /* 
 
 /**
  * @summary ParamOptions_preferredAbsent
+ * @description
+ *
+ * Parameters SHOULD NOT be encoded in the structure ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +96,10 @@ export const ParamOptions_preferredAbsent: ParamOptions = 2; /* LONG_NAMED_ENUME
 
 /**
  * @summary preferredAbsent
+ * @description
+ *
+ * Short name for `ParamOptions_preferredAbsent`: parameters SHOULD NOT be encoded.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +107,10 @@ export const preferredAbsent: ParamOptions = ParamOptions_preferredAbsent; /* SH
 
 /**
  * @summary ParamOptions_absent
+ * @description
+ *
+ * Parameters MUST NOT be encoded in the structure ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +118,10 @@ export const ParamOptions_absent: ParamOptions = 3; /* LONG_NAMED_ENUMERATED_VAL
 
 /**
  * @summary absent
+ * @description
+ *
+ * Short name for `ParamOptions_absent`: parameters MUST NOT be encoded.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +129,10 @@ export const absent: ParamOptions = ParamOptions_absent; /* SHORT_NAMED_ENUMERAT
 
 /**
  * @summary ParamOptions_inheritable
+ * @description
+ *
+ * Parameters are inherited if not present ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +140,10 @@ export const ParamOptions_inheritable: ParamOptions = 4; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary inheritable
+ * @description
+ *
+ * Short name for `ParamOptions_inheritable`: parameters are inherited if absent.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +151,10 @@ export const inheritable: ParamOptions = ParamOptions_inheritable; /* SHORT_NAME
 
 /**
  * @summary ParamOptions_optional
+ * @description
+ *
+ * Parameters MAY be encoded in the structure ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +162,10 @@ export const ParamOptions_optional: ParamOptions = 5; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary optional
+ * @description
+ *
+ * Short name for `ParamOptions_optional`: parameters MAY be encoded.
+ *
  * @constant
  * @type {number}
  */

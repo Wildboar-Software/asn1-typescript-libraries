@@ -20,6 +20,10 @@ import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
  * @summary swb_pkc_all_cert_paths
  * @description
  *
+ * WantBack information object for `id-swb-pkc-all-cert-paths`: A set of certification paths for the subject certificate. Server MAY limit how many; SHOULD NOT include `serverContextInfo`.
+ * Conformance: optional for conforming servers as specified in
+ * ([RFC 5055 §3.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

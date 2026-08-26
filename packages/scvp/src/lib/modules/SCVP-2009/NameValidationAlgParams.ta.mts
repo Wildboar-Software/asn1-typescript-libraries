@@ -21,6 +21,10 @@ import {
  * @summary NameValidationAlgParams
  * @description
  *
+ * Parameters for `id-svp-nameValAlg`: name comparison algorithm
+ * OID and `GeneralNames` that MUST match the end certificate
+ * ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)). All names MUST be the same type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,22 @@ export class NameValidationAlgParams {
   constructor(
     /**
      * @summary `nameCompAlgId`.
+     * @description
+     *
+     * Name matching rules OID (`id-nva-dnCompAlg`, `id-kp-serverAuth`,
+     * `id-kp-mailProtection`, …) ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
+     *
      * @public
      * @readonly
      */
     readonly nameCompAlgId: OBJECT_IDENTIFIER,
     /**
      * @summary `validationNames`.
+     * @description
+     *
+     * Names that MUST appear in the end certificate under the chosen
+     * matching rules ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
+     *
      * @public
      * @readonly
      */

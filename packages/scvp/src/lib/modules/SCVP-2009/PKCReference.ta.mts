@@ -25,6 +25,9 @@ import {
  * @summary PKCReference
  * @description
  *
+ * Public-key certificate by value (`cert`) or by `SCVPCertID`
+ * (`pkcRef`) ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

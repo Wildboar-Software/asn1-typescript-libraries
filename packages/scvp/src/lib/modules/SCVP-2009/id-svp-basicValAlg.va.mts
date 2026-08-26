@@ -15,6 +15,8 @@ import { id_svp } from '../SCVP-2009/id-svp.va.mjs';
  * @summary id_svp_basicValAlg
  * @description
  *
+ * OID for the basic validation algorithm ([RFC 5055 §3.2.4.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

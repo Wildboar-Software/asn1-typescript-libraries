@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AuthPolicy
  * @description
  *
+ * OID naming an authentication policy agreed between client and
+ * server ([RFC 5055 §6.11](https://datatracker.ietf.org/doc/html/rfc5055#section-6.11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

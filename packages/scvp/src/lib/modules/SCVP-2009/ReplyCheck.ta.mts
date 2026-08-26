@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReplyCheck
  * @description
  *
+ * Single check result: check OID and integer status
+ * ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)). Status 0 = all OK; positive = error;
+ * negative = unknown response status. Clients MUST treat any
+ * non-zero as a check failure.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +37,22 @@ export class ReplyCheck {
   constructor(
     /**
      * @summary `check`.
+     * @description
+     *
+     * OID of the check (matches a `checks` OID from the query)
+     * ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
+     *
      * @public
      * @readonly
      */
     readonly check: OBJECT_IDENTIFIER,
     /**
      * @summary `status`.
+     * @description
+     *
+     * Integer check outcome (0 success; >0 error; <0 unknown)
+     * ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
+     *
      * @public
      * @readonly
      */

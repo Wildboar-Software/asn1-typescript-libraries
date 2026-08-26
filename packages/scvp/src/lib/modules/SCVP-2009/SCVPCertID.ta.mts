@@ -31,6 +31,10 @@ import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.mjs';
  * @summary SCVPCertID
  * @description
  *
+ * Certificate identifier: hash of the certificate, issuer/serial,
+ * and hash algorithm (DEFAULT SHA-1 via `mda-sha1`)
+ * ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)) / ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +51,32 @@ export class SCVPCertID {
   constructor(
     /**
      * @summary `certHash`.
+     * @description
+     *
+     * Octet string hash of the DER-encoded certificate
+     * ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
+     *
      * @public
      * @readonly
      */
     readonly certHash: OCTET_STRING,
     /**
      * @summary `issuerSerial`.
+     * @description
+     *
+     * Issuer name(s) and serial number ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
+     *
      * @public
      * @readonly
      */
     readonly issuerSerial: SCVPIssuerSerial,
     /**
      * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Hash algorithm for `certHash`; DEFAULT uses `mda-sha1.&id`
+     * ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
+     *
      * @public
      * @readonly
      */

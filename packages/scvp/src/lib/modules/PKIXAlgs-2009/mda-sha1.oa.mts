@@ -24,6 +24,11 @@ import { type DIGEST_ALGORITHM } from '../AlgorithmInformation-2009/DIGEST-ALGOR
  * @summary mda_sha1
  * @description
  *
+ * `DIGEST-ALGORITHM` information object for SHA-1
+ * ([RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)) / [RFC 3279](https://datatracker.ietf.org/doc/html/rfc3279).
+ * Identifier `mda-sha1.&id` is the preferred default hash in several
+ * SCVP structures (`SCVPCertID`, `HashValue`) in ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

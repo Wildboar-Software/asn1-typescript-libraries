@@ -20,6 +20,10 @@ import { type POLICY } from '../SCVP-2009/POLICY.oca.mjs';
  * @summary svp_nameValAlg
  * @description
  *
+ * Name validation algorithm policy object (`id-svp-nameValAlg`).
+ * Extends basic validation with mandatory end-entity name matches;
+ * parameters are `NameValidationAlgParams` ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import type { EXTENSION } from '@wildboar/x500/AuthenticationFramework';
  * @summary CVResponseExtensions
  * @description
  *
+ * Extension object set for `CVResponse.cvResponseExtensions`
+ * (RFC 5055 defines none) ([RFC 5055 §4.12](https://datatracker.ietf.org/doc/html/rfc5055#section-4.12)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

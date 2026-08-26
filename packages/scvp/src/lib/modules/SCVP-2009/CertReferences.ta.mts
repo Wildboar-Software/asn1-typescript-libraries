@@ -24,6 +24,9 @@ import {
  * @summary CertReferences
  * @description
  *
+ * Choice of PKC or AC reference sequences for `queriedCerts`
+ * ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)) / ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

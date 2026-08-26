@@ -20,6 +20,10 @@ import { type WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
  * @summary swb_relayed_responses
  * @description
  *
+ * WantBack information object for `id-swb-relayed-responses`: Any SCVP responses the server used to generate this response.
+ * Conformance: MAY for conforming servers as specified in
+ * ([RFC 5055 §3.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

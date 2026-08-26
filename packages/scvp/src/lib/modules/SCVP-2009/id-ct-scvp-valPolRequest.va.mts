@@ -15,6 +15,8 @@ import { id_ct } from '../SCVP-2009/id-ct.va.mjs';
  * @summary id_ct_scvp_valPolRequest
  * @description
  *
+ * CMS content-type OID for `ValPolRequest` (`{ id-ct 12 }`) ([RFC 5055 §5](https://datatracker.ietf.org/doc/html/rfc5055#section-5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

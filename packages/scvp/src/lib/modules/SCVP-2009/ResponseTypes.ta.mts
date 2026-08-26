@@ -15,6 +15,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ResponseTypes
  * @description
  *
+ * Server-published CV response modes: cached-only, non-cached-only,
+ * or both ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,6 +40,9 @@ export enum _enum_for_ResponseTypes {
  * @summary ResponseTypes
  * @description
  *
+ * Server-published CV response modes: cached-only, non-cached-only,
+ * or both ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,6 +61,9 @@ export type ResponseTypes = _enum_for_ResponseTypes;
  * @summary ResponseTypes
  * @description
  *
+ * Server-published CV response modes: cached-only, non-cached-only,
+ * or both ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -71,6 +80,10 @@ export const ResponseTypes = _enum_for_ResponseTypes;
 
 /**
  * @summary ResponseTypes_cached_only
+ * @description
+ *
+ * `cached-only`(0): server only returns cached responses ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +92,10 @@ export const ResponseTypes_cached_only: ResponseTypes =
 
 /**
  * @summary cached_only
+ * @description
+ *
+ * Short name for `ResponseTypes_cached_only` ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +104,10 @@ export const cached_only: ResponseTypes =
 
 /**
  * @summary ResponseTypes_non_cached_only
+ * @description
+ *
+ * `non-cached-only`(1): server only returns request-specific responses ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +116,10 @@ export const ResponseTypes_non_cached_only: ResponseTypes =
 
 /**
  * @summary non_cached_only
+ * @description
+ *
+ * Short name for `ResponseTypes_non_cached_only` ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +128,10 @@ export const non_cached_only: ResponseTypes =
 
 /**
  * @summary ResponseTypes_cached_and_non_cached
+ * @description
+ *
+ * `cached-and-non-cached`(2): server supports both modes ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +140,10 @@ export const ResponseTypes_cached_and_non_cached: ResponseTypes =
 
 /**
  * @summary cached_and_non_cached
+ * @description
+ *
+ * Short name for `ResponseTypes_cached_and_non_cached` ([RFC 5055 §6.12](https://datatracker.ietf.org/doc/html/rfc5055#section-6.12)).
+ *
  * @constant
  * @type {number}
  */

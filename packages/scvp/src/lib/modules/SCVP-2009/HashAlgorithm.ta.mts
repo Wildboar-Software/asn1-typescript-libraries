@@ -20,6 +20,9 @@ import {
  * @summary HashAlgorithm
  * @description
  *
+ * `AlgorithmIdentifier` constrained to digest algorithms
+ * (including `mda-sha1`) used in SCVP hashes ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

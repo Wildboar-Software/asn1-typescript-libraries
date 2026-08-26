@@ -15,6 +15,8 @@ import { id_svp_nameValAlg } from '../SCVP-2009/id-svp-nameValAlg.va.mjs';
  * @summary id_nvae
  * @description
  *
+ * Arc for name validation algorithm errors (`id-nvae` ::= `id-svp-nameValAlg`) ([RFC 5055 §3.2.4.2.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ValPolRequest
  * @description
  *
+ * Request for an SCVP server's policies and configuration
+ * ([RFC 5055 §5](https://datatracker.ietf.org/doc/html/rfc5055#section-5)). Carried as CMS `ContentInfo` with
+ * `id-ct-scvp-valPolRequest`; the client does not sign it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +36,22 @@ export class ValPolRequest {
   constructor(
     /**
      * @summary `vpRequestVersion`.
+     * @description
+     *
+     * Version of the policy request (DEFAULT 1); same rules as
+     * `cvRequestVersion` ([RFC 5055 §5.1](https://datatracker.ietf.org/doc/html/rfc5055#section-5.1)).
+     *
      * @public
      * @readonly
      */
     readonly vpRequestVersion: OPTIONAL<INTEGER>,
     /**
      * @summary `requestNonce`.
+     * @description
+     *
+     * Client nonce; MUST be returned in a non-cached policy response
+     * and MUST NOT appear in a cached one ([RFC 5055 §5.2](https://datatracker.ietf.org/doc/html/rfc5055#section-5.2)).
+     *
      * @public
      * @readonly
      */

@@ -19,6 +19,9 @@ import {
  * @summary ReplyWantBacks
  * @description
  *
+ * Sequence of `ReplyWantBack` values answering `Query.wantBack`
+ * ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

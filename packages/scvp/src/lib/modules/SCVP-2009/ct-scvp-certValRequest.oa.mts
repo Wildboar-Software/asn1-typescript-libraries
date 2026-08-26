@@ -21,6 +21,10 @@ import type { CONTENT_TYPE } from '@wildboar/cms';
  * @summary ct_scvp_certValRequest
  * @description
  *
+ * CMS `CONTENT-TYPE` for an SCVP certificate validation request:
+ * `CVRequest` identified by `id-ct-scvp-certValRequest`
+ * ([RFC 5055 §3](https://datatracker.ietf.org/doc/html/rfc5055#section-3)) / ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

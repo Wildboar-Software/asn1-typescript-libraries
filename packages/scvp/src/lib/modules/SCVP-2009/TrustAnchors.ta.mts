@@ -19,6 +19,9 @@ import {
  * @summary TrustAnchors
  * @description
  *
+ * Sequence of PKC trust-anchor references for path validation
+ * ([RFC 5055 §3.2.4.7](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.7)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

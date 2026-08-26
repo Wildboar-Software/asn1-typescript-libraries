@@ -19,6 +19,8 @@ import {
  * @summary ReplyObjects
  * @description
  *
+ * Sequence of per-certificate `CertReply` values ([RFC 5055 §4.9](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -57,6 +57,10 @@ import {
  * @summary Query
  * @description
  *
+ * Core of an SCVP `CVRequest`: which certificates to check, which
+ * checks and wantBacks to apply, and under which validation policy
+ * ([RFC 5055 §3.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -80,66 +84,122 @@ export class Query {
   constructor(
     /**
      * @summary `queriedCerts`.
+     * @description
+     *
+     * One or more PKC or AC references to validate ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
+     *
      * @public
      * @readonly
      */
     readonly queriedCerts: CertReferences,
     /**
      * @summary `checks`.
+     * @description
+     *
+     * OIDs naming checks the server MUST perform (or return an error).
+     * Servers MAY do extra checks but generally cannot advertise them
+     * except via errors ([RFC 5055 §3.2.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.2)).
+     *
      * @public
      * @readonly
      */
     readonly checks: CertChecks,
     /**
      * @summary `wantBack`.
+     * @description
+     *
+     * Optional OIDs naming extra information to return beyond check
+     * results (e.g., path, revocation proofs) ([RFC 5055 §3.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.3)).
+     *
      * @public
      * @readonly
      */
     readonly wantBack: OPTIONAL<WantBack>,
     /**
      * @summary `validationPolicy`.
+     * @description
+     *
+     * Validation policy the server MUST use; otherwise an error
+     * response ([RFC 5055 §3.2.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4)).
+     *
      * @public
      * @readonly
      */
     readonly validationPolicy: ValidationPolicy,
     /**
      * @summary `responseFlags`.
+     * @description
+     *
+     * Optional flags controlling response formation (full request
+     * echo, policy-by-ref, protection, caching) ([RFC 5055 §3.2.5](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5)).
+     *
      * @public
      * @readonly
      */
     readonly responseFlags?: OPTIONAL<ResponseFlags>,
     /**
      * @summary `serverContextInfo`.
+     * @description
+     *
+     * Opaque server context from a prior response, used to obtain an
+     * alternate certification path ([RFC 5055 §3.2.6](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.6)).
+     *
      * @public
      * @readonly
      */
     readonly serverContextInfo?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `validationTime`.
+     * @description
+     *
+     * Optional time relative to which checks are performed. Absent
+     * means the server's processing time. Historical data may be
+     * unavailable ([RFC 5055 §3.2.7](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.7)).
+     *
      * @public
      * @readonly
      */
     readonly validationTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `intermediateCerts`.
+     * @description
+     *
+     * Optional certificates the server MAY use when building paths
+     * ([RFC 5055 §3.2.8](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.8)).
+     *
      * @public
      * @readonly
      */
     readonly intermediateCerts?: OPTIONAL<CertBundle>,
     /**
      * @summary `revInfos`.
+     * @description
+     *
+     * Optional revocation information (CRLs, delta-CRLs, OCSP, other)
+     * the server MAY use ([RFC 5055 §3.2.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.9)).
+     *
      * @public
      * @readonly
      */
     readonly revInfos?: OPTIONAL<RevocationInfos>,
     /**
      * @summary `producedAt`.
+     * @description
+     *
+     * Optional client-asserted production time for the request
+     * ([RFC 5055 §3.2.10](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.10)).
+     *
      * @public
      * @readonly
      */
     readonly producedAt?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `queryExtensions`.
+     * @description
+     *
+     * Optional query-level extensions. Unrecognized critical
+     * extensions yield `unrecognizedCritQueryExt` ([RFC 5055 §3.2.11](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.11)).
+     *
      * @public
      * @readonly
      */

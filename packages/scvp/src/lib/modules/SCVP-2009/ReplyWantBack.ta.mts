@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReplyWantBack
  * @description
  *
+ * Single wantBack result: OID plus encoded value
+ * ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +34,21 @@ export class ReplyWantBack {
   constructor(
     /**
      * @summary `wb`.
+     * @description
+     *
+     * WantBack OID from the request ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+     *
      * @public
      * @readonly
      */
     readonly wb: OBJECT_IDENTIFIER,
     /**
      * @summary `value`.
+     * @description
+     *
+     * OCTET STRING containing the DER encoding of the wantBack type
+     * ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+     *
      * @public
      * @readonly
      */

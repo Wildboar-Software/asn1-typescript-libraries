@@ -17,6 +17,9 @@ import { AnyWantBackSet } from '../SCVP-2009/AnyWantBackSet.osa.mjs';
  * @summary AllWantBacks
  * @description
  *
+ * Union of PKC, AC, and any-cert wantBack object sets
+ * ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,9 @@ import { ct_scvp_valPolResponse } from '../SCVP-2009/ct-scvp-valPolResponse.oa.m
  * @summary ContentTypes
  * @description
  *
+ * Object set of SCVP CMS content types: cert-val request/response and
+ * val-pol request/response ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

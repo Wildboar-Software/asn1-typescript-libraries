@@ -15,6 +15,9 @@ import { type KEY_DERIVATION } from '../AlgorithmInformation-2009/KEY-DERIVATION
  * @summary SupportedKeyDerivationFunctions
  * @description
  *
+ * Object set of supported key-derivation algorithms for
+ * `KeyAgreePublicKey` ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

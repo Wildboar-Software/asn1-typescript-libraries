@@ -45,6 +45,10 @@ import {
  * @summary CertReply
  * @description
  *
+ * Per-certificate result in a `CVResponse` ([RFC 5055 §4.9](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9)).
+ * `responseStatus` covers the whole request; `replyStatus` covers
+ * this certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -68,48 +72,85 @@ export class CertReply {
   constructor(
     /**
      * @summary `cert`.
+     * @description
+     *
+     * Reference to the certificate this reply concerns
+     * ([RFC 5055 §4.9.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly cert: CertReference,
     /**
      * @summary `replyStatus`.
+     * @description
+     *
+     * Per-certificate status (DEFAULT `success`) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+     *
      * @public
      * @readonly
      */
     readonly replyStatus: OPTIONAL<ReplyStatus>,
     /**
      * @summary `replyValTime`.
+     * @description
+     *
+     * Time at which the information in this reply was correct
+     * ([RFC 5055 §4.9.3](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.3)).
+     *
      * @public
      * @readonly
      */
     readonly replyValTime: GeneralizedTime,
     /**
      * @summary `replyChecks`.
+     * @description
+     *
+     * Results for each requested check ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
+     *
      * @public
      * @readonly
      */
     readonly replyChecks: ReplyChecks,
     /**
      * @summary `replyWantBacks`.
+     * @description
+     *
+     * Payloads for each requested wantBack ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+     *
      * @public
      * @readonly
      */
     readonly replyWantBacks: ReplyWantBacks,
     /**
      * @summary `validationErrors`.
+     * @description
+     *
+     * Optional validation-algorithm error OIDs (`BasicValidationErrorSet`
+     * / `NameValidationErrorSet`) ([RFC 5055 §4.9.6](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.6)).
+     *
      * @public
      * @readonly
      */
     readonly validationErrors?: OPTIONAL<OBJECT_IDENTIFIER[]>,
     /**
      * @summary `nextUpdate`.
+     * @description
+     *
+     * Optional time when fresher status may be available
+     * ([RFC 5055 §4.9.7](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.7)).
+     *
      * @public
      * @readonly
      */
     readonly nextUpdate?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `certReplyExtensions`.
+     * @description
+     *
+     * Optional reply extensions matching requested query extensions
+     * ([RFC 5055 §4.9.8](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.8)).
+     *
      * @public
      * @readonly
      */

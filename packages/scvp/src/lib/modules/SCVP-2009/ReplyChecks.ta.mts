@@ -19,6 +19,9 @@ import {
  * @summary ReplyChecks
  * @description
  *
+ * Sequence of `ReplyCheck` values answering `Query.checks`
+ * ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

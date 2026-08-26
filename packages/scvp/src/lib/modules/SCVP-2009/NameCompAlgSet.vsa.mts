@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary NameCompAlgSet
  * @description
  *
+ * Value set of name-comparison algorithm OIDs for
+ * `NameValidationAlgParams` ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
