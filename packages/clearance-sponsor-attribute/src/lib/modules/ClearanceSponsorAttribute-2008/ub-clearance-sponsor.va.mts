@@ -14,13 +14,18 @@ import {
 /**
  * @summary ub_clearance_sponsor
  * @description
- * 
+ *
+ * Upper size bound for the Clearance Sponsor `DirectoryString` value:
+ * maximum of 64 characters ([RFC 5917 §2](https://datatracker.ietf.org/doc/html/rfc5917#section-2)).
+ * The attribute type is `DirectoryString { ub-clearance-sponsor }` with
+ * `utf8String` required and a minimum size of 1 character.
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ub-clearance-sponsor INTEGER ::= 64
  * ```
- * 
+ *
  * @constant
  */
 export

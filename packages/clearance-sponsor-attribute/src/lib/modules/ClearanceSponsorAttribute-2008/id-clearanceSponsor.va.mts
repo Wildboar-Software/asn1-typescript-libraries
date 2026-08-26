@@ -14,17 +14,22 @@ import {
 /**
  * @summary id_clearanceSponsor
  * @description
- * 
+ *
+ * Object identifier for the Clearance Sponsor attribute
+ * ([RFC 5917 §2](https://datatracker.ietf.org/doc/html/rfc5917#section-2)).
+ * Identifies `at-clearanceSponsor` when the attribute appears in public
+ * key or attribute certificates.
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * id-clearanceSponsor OBJECT IDENTIFIER ::= {
  *     joint-iso-ccitt(2) country(16) us(840) organization(1) gov(101)
  *     dod(2) infosec(1) attributes(5) 68
- * 
+ *
  * }
  * ```
- * 
+ *
  * @constant
  */
 export
