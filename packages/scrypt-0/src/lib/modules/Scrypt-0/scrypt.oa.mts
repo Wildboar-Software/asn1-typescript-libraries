@@ -9,6 +9,15 @@ import type { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGO
  * @summary scrypt
  * @description
  *
+ * `ALGORITHM` information object for the scrypt KDF: parameters type
+ * `Scrypt-params`, identified by `id-scrypt` (RFC 7914 §7). Used where
+ * an `AlgorithmIdentifier` names scrypt instead of PBKDF2 (same
+ * abstraction level as PKCS #5).
+ *
+ * The scrypt algorithm itself (passphrase P, salt S, N, r, p, dkLen →
+ * derived key) is defined in RFC 7914 §6; it uses PBKDF2-HMAC-SHA-256
+ * and `scryptROMix`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
