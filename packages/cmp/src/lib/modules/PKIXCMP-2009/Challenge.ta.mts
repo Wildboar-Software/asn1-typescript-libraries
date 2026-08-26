@@ -22,6 +22,15 @@ import {
  * @summary Challenge
  * @description
  *
+ * One challenge in the direct POP challenge-response protocol for
+ * encryption (or key-agreement) private keys
+ * ([RFC 4210 §5.2.8.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.3)).
+ *
+ * `witness` is OWF(A) for a random INTEGER A; `challenge` encrypts
+ * `Rand` (SEQUENCE of `int` A and `sender` from `PKIHeader`) under
+ * the requested public key. Associated with the cert request via
+ * `transactionID` and message protection.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,18 +62,37 @@ export class Challenge {
   constructor(
     /**
      * @summary `owf`.
+     * @description
+     *
+     * OWF AlgorithmIdentifier. MUST be present in the first `Challenge`;
+     * MAY be omitted in subsequent challenges in
+     * `POPODecKeyChallContent` (then reuse the previous OWF)
+     * ([RFC 4210 §5.2.8.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.3)).
+     *
      * @public
      * @readonly
      */
     readonly owf: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `witness`.
+     * @description
+     *
+     * Result of applying the OWF to a randomly generated INTEGER A (a
+     * different A MUST be used for each `Challenge`)
+     * ([RFC 4210 §5.2.8.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.3)).
+     *
      * @public
      * @readonly
      */
     readonly witness: OCTET_STRING,
     /**
      * @summary `challenge`.
+     * @description
+     *
+     * Encryption (under the public key for which the cert request is
+     * made) of `Rand` ::= SEQUENCE { int INTEGER, sender GeneralName }
+     * ([RFC 4210 §5.2.8.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.3)).
+     *
      * @public
      * @readonly
      */

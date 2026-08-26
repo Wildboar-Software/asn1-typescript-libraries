@@ -115,6 +115,12 @@ import {
  * @summary PKIBody
  * @description
  *
+ * Message-specific body of a `PKIMessage` ([RFC 4210 §5.1.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.2)). CHOICE
+ * of operation-specific content defined in [RFC 4210 §5.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3) (e.g., `ir`/
+ * `ip` initialization, `cr`/`cp` certification, `kur`/`kup` key
+ * update, `rr`/`rp` revocation, `certConf`, `pollReq`/`pollRep`,
+ * `error`, nested and general messages).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,11 @@ import {
  * @summary CertAnnContent
  * @description
  *
+ * Certificate announcement: a `CMPCertificate`
+ * ([RFC 4210 §5.3.14](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.14)). For environments without a pre-existing
+ * publication method (not intended where, e.g., X.500 is used for
+ * publication).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

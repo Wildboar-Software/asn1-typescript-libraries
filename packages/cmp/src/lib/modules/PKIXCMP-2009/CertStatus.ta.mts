@@ -23,6 +23,10 @@ import {
  * @summary CertStatus
  * @description
  *
+ * One certificate confirmation status within `CertConfirmContent`
+ * ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)). Also used for indirect POP via correct
+ * `certHash` ([RFC 4210 §5.2.8.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +44,33 @@ export class CertStatus {
   constructor(
     /**
      * @summary `certHash`.
+     * @description
+     *
+     * Hash of the certificate, using the same hash algorithm as used to
+     * create and verify the certificate signature ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
+     *
      * @public
      * @readonly
      */
     readonly certHash: OCTET_STRING,
     /**
      * @summary `certReqId`.
+     * @description
+     *
+     * Matches this confirmation with the corresponding request/response
+     * ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
+     *
      * @public
      * @readonly
      */
     readonly certReqId: INTEGER,
     /**
      * @summary `statusInfo`.
+     * @description
+     *
+     * Optional explicit acceptance/rejection detail. Omitted means
+     * ACCEPTANCE ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
+     *
      * @public
      * @readonly
      */

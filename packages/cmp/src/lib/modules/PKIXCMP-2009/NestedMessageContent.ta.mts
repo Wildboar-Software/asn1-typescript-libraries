@@ -20,6 +20,15 @@ import {
  * @summary NestedMessageContent
  * @description
  *
+ * Nested (batched) PKI messages for multiple protection: an RA MAY
+ * forward EE messages to a CA inside a new `PKIMessage`, attaching
+ * its own MAC or signature ([RFC 4210 §5.1.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.4)).
+ *
+ * `NestedMessageContent` ::= `PKIMessages`. All messages in the batch
+ * MUST be of the same type (e.g., all `ir`). The original EE
+ * `PKIMessage`(s) MAY also appear in `PKIHeader.generalInfo` as
+ * `{id-it 15}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,10 @@ import {
  * @summary GenRepContent
  * @description
  *
+ * General response content: sequence of `InfoTypeAndValue`
+ * ([RFC 4210 §5.3.20](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.20)). MAY include the GenRep forms listed under
+ * [RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

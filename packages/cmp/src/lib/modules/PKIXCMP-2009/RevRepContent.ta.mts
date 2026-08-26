@@ -32,6 +32,9 @@ import {
  * @summary RevRepContent
  * @description
  *
+ * Revocation response to the requester ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)). A separate
+ * `RevAnnContent` MAY also be sent to the certificate subject.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,18 +54,33 @@ export class RevRepContent {
   constructor(
     /**
      * @summary `status`.
+     * @description
+     *
+     * Status for each request, in the same order as `RevReqContent`
+     * ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
+     *
      * @public
      * @readonly
      */
     readonly status: PKIStatusInfo[],
     /**
      * @summary `revCerts`.
+     * @description
+     *
+     * Optional identifiers of revoked certificates (`CertId`), same order
+     * as `status` ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
+     *
      * @public
      * @readonly
      */
     readonly revCerts?: OPTIONAL<CertId[]>,
     /**
      * @summary `crls`.
+     * @description
+     *
+     * Optional CRLs that may have been modified as a result of the
+     * request(s) ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
+     *
      * @public
      * @readonly
      */

@@ -28,6 +28,11 @@ import {
  * @summary OOBCertHash
  * @description
  *
+ * Hash of a root CA self-signed certificate for out-of-band
+ * verification ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5), §6.1). Anyone who has securely
+ * received `hashVal` can verify a candidate self-signed CA
+ * certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +51,32 @@ export class OOBCertHash {
   constructor(
     /**
      * @summary `hashAlg`.
+     * @description
+     *
+     * Optional hash AlgorithmIdentifier ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
+     *
      * @public
      * @readonly
      */
     readonly hashAlg: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `certId`.
+     * @description
+     *
+     * Optional certificate identifier (`CertId` from CRMF)
+     * ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
+     *
      * @public
      * @readonly
      */
     readonly certId: OPTIONAL<CertId>,
     /**
      * @summary `hashVal`.
+     * @description
+     *
+     * Hash value of the CA self-signed certificate for out-of-band
+     * integrity verification ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
+     *
      * @public
      * @readonly
      */

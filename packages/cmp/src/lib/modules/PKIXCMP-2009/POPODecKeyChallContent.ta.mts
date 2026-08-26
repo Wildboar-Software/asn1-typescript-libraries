@@ -20,6 +20,11 @@ import {
  * @summary POPODecKeyChallContent
  * @description
  *
+ * Proof-of-possession decryption-key challenge: sequence of
+ * `Challenge` values ([RFC 4210 §5.2.8.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.3)). Direct method between
+ * `CertReqMessages` and `CertRepMessage`, typically when an RA
+ * verifies POP before requesting a certificate from the CA.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

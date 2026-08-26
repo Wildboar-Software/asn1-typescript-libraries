@@ -49,6 +49,15 @@ import {
  * @summary PKIHeader
  * @description
  *
+ * Header common to CMP messages for addressing and transaction
+ * identification ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)). Protected with the body when
+ * `PKIProtection` is used (no assumption of secure transport).
+ *
+ * `pvno` is fixed at `cmp2000`(2) for this specification. Optional
+ * `generalInfo` may carry machine-processable extensions such as
+ * `implicitConfirm` (`{id-it 13}`) and `confirmWaitTime`
+ * (`{id-it 14}`) ([RFC 4210 §5.1.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1.1), [RFC 4210 §5.1.1.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -93,72 +102,142 @@ export class PKIHeader {
   constructor(
     /**
      * @summary `pvno`.
+     * @description
+     *
+     * Protocol version: `cmp1999`(1) or `cmp2000`(2). Fixed at 2 for
+     * RFC 4210 ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1); version negotiation in §7).
+     *
      * @public
      * @readonly
      */
     readonly pvno: PKIHeader_pvno,
     /**
      * @summary `sender`.
+     * @description
+     *
+     * Name of the sender. With `senderKID` (if supplied), should identify
+     * the key to verify protection. If the sender is unknown (e.g.,
+     * initialization request), MUST be a NULL name (empty RDN SEQUENCE)
+     * and `senderKID` MUST identify the shared secret
+     * ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly sender: GeneralName,
     /**
      * @summary `recipient`.
+     * @description
+     *
+     * Name of the intended recipient. With `recipKID` (if supplied),
+     * should be usable to verify protection ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly recipient: GeneralName,
     /**
      * @summary `messageTime`.
+     * @description
+     *
+     * Time the sender created the message; useful for EE clock
+     * consistency checks ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly messageTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `protectionAlg`.
+     * @description
+     *
+     * Algorithm used to calculate `PKIProtection`. MUST be omitted if
+     * protection bits are omitted; MUST be present if protection bits
+     * are supplied ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly protectionAlg?: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `senderKID`.
+     * @description
+     *
+     * Identifies the sender key used for protection. MUST be used if
+     * needed to uniquely identify a key; SHOULD be omitted otherwise.
+     * REQUIRED with a NULL `sender` to reference shared-secret material
+     * ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly senderKID?: OPTIONAL<KeyIdentifier>,
     /**
      * @summary `recipKID`.
+     * @description
+     *
+     * Identifies the recipient key used for protection (normally only
+     * needed with Diffie-Hellman protection) ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly recipKID?: OPTIONAL<KeyIdentifier>,
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * Correlates messages in a transaction. For multi-message exchanges,
+     * clients SHOULD generate one for the first request; servers MUST
+     * echo it or assign one if missing. RECOMMENDED: 128 bits of
+     * (pseudo-)random data. Duplicate in-use IDs yield
+     * `transactionIdInUse` ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly transactionID?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `senderNonce`.
+     * @description
+     *
+     * Replay protection: typically 128 bits of (pseudo-)random data from
+     * the creator of this message ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly senderNonce?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `recipNonce`.
+     * @description
+     *
+     * Replay protection: copied from the `senderNonce` of the previous
+     * message in the transaction ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly recipNonce?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `freeText`.
+     * @description
+     *
+     * Human-readable text in any number of languages; the first language
+     * indicates the desired language for replies ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly freeText?: OPTIONAL<PKIFreeText>,
     /**
      * @summary `generalInfo`.
+     * @description
+     *
+     * Machine-processable additional data (e.g., `implicitConfirm`,
+     * `confirmWaitTime`, original `PKIMessages` as `{id-it 15}`)
+     * ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1), [RFC 4210 §5.1.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.4)).
+     *
      * @public
      * @readonly
      */

@@ -27,6 +27,10 @@ import {
  * @summary RevDetails
  * @description
  *
+ * One revocation request detail ([RFC 4210 §5.3.9](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.9)): certificate
+ * template identifying the cert, optional CRL entry extensions
+ * (e.g., reason code).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,12 +50,22 @@ export class RevDetails {
   constructor(
     /**
      * @summary `certDetails`.
+     * @description
+     *
+     * `CertTemplate` identifying the certificate to revoke (as much as
+     * the requester can specify) ([RFC 4210 §5.3.9](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.9)).
+     *
      * @public
      * @readonly
      */
     readonly certDetails: CertTemplate,
     /**
      * @summary `crlEntryDetails`.
+     * @description
+     *
+     * Optional CRL entry extensions (e.g., reason code) requested for
+     * the revocation ([RFC 4210 §5.3.9](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.9)).
+     *
      * @public
      * @readonly
      */

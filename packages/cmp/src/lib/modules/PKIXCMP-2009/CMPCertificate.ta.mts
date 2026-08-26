@@ -21,6 +21,11 @@ import {
  * @summary CMPCertificate
  * @description
  *
+ * Certificate CHOICE used in CMP ([RFC 4210 §5.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1) / Appendix F). Bits
+ * on the wire compatible with X.509 `Certificate`, but structured as
+ * a CHOICE so future certificate types could be added. Implementations
+ * that only need X.509 MAY treat it as `Certificate`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

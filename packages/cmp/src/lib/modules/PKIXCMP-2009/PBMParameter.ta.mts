@@ -23,6 +23,18 @@ import {
  * @summary PBMParameter
  * @description
  *
+ * Parameters for `id-PasswordBasedMac` ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)). Salt is
+ * appended to the shared secret; the OWF is applied `iterationCount`
+ * times to derive BASEKEY, from which the MAC key is taken (or
+ * expanded if the MAC needs more bits than H).
+ *
+ * > it is RECOMMENDED that the fields of PBMParameter remain constant
+ * > throughout the messages of a single transaction (e.g.,
+ * > ir/ip/certConf/pkiConf) in order to reduce the overhead associated
+ * > with PasswordBasedMac computation
+ * >
+ * > — [RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,24 +62,45 @@ export class PBMParameter {
   constructor(
     /**
      * @summary `salt`.
+     * @description
+     *
+     * Salt appended to the shared secret before the OWF iterations.
+     * Implementations MAY limit acceptable sizes to reduce DoS risk
+     * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
+     *
      * @public
      * @readonly
      */
     readonly salt: OCTET_STRING,
     /**
      * @summary `owf`.
+     * @description
+     *
+     * AlgorithmIdentifier for a one-way function (SHA-1 recommended)
+     * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
+     *
      * @public
      * @readonly
      */
     readonly owf: AlgorithmIdentifier,
     /**
      * @summary `iterationCount`.
+     * @description
+     *
+     * Number of times the OWF is applied. Implementations MAY limit
+     * acceptable sizes to reduce DoS risk ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
+     *
      * @public
      * @readonly
      */
     readonly iterationCount: INTEGER,
     /**
      * @summary `mac`.
+     * @description
+     *
+     * MAC AlgorithmIdentifier (e.g., DES-MAC, Triple-DES-MAC, or HMAC)
+     * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
+     *
      * @public
      * @readonly
      */

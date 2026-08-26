@@ -25,6 +25,12 @@ import {
  * @summary CertOrEncCert
  * @description
  *
+ * CHOICE of cleartext `certificate` or `encryptedCert`
+ * (`EncryptedValue`) in a `CertifiedKeyPair` ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+ * Encrypted certificates support indirect POP: only the EE that can
+ * decrypt recovers the cert and can compute the correct `certHash`
+ * in `certConf` ([RFC 4210 §5.2.8.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

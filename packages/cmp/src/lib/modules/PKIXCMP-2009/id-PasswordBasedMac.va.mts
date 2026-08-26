@@ -16,6 +16,11 @@ import {
  * @summary id_PasswordBasedMac
  * @description
  *
+ * OID for password-based MAC protection of CMP messages when the
+ * sender and recipient share secret information
+ * (`1.2.840.113533.7.66.13`) ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)). Parameters are
+ * `PBMParameter`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

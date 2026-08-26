@@ -20,6 +20,10 @@ import {
  * @summary PollReqContent
  * @description
  *
+ * Polling request when the client received `waiting` status for an
+ * `ir`, `cr`, or `kur` transaction ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)). Sequence of
+ * items each carrying a `certReqId`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import {
  * @summary id_DHBasedMac
  * @description
  *
+ * OID for Diffie-Hellman-based MAC protection of CMP messages
+ * (`1.2.840.113533.7.66.30`) ([RFC 4210 §5.1.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.2)). Parameters are
+ * `DHBMParameter`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

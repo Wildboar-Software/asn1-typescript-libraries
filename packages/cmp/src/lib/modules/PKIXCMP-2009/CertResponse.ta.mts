@@ -28,6 +28,11 @@ import {
  * @summary CertResponse
  * @description
  *
+ * One certificate response within `CertRepMessage`
+ * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)). Only one of `failInfo` (in `status`) and a
+ * certificate (in `certifiedKeyPair`) can be present; for some
+ * statuses (e.g., `waiting`) neither optional field is present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,24 +54,46 @@ export class CertResponse {
   constructor(
     /**
      * @summary `certReqId`.
+     * @description
+     *
+     * Matches this response to the corresponding request (`-1` if not
+     * originally specified in the request)
+     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4) / ASN.1 comments).
+     *
      * @public
      * @readonly
      */
     readonly certReqId: INTEGER,
     /**
      * @summary `status`.
+     * @description
+     *
+     * Status for this certificate request (`PKIStatusInfo`)
+     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+     *
      * @public
      * @readonly
      */
     readonly status: PKIStatusInfo,
     /**
      * @summary `certifiedKeyPair`.
+     * @description
+     *
+     * Optional issued certificate and/or encrypted private key
+     * (`CertifiedKeyPair`). Absent on failure or `waiting`
+     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+     *
      * @public
      * @readonly
      */
     readonly certifiedKeyPair?: OPTIONAL<CertifiedKeyPair>,
     /**
      * @summary `rspInfo`.
+     * @description
+     *
+     * Optional response info analogous to CRMF `id-regInfo-utf8Pairs`
+     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+     *
      * @public
      * @readonly
      */

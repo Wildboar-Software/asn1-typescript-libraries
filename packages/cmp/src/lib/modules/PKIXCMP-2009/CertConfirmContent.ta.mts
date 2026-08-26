@@ -20,6 +20,14 @@ import {
  * @summary CertConfirmContent
  * @description
  *
+ * Certificate confirmation from client to CA/RA: sequence of
+ * `CertStatus` ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
+ *
+ * Omission of a `CertStatus` for a certificate from the prior response
+ * indicates REJECTION. An empty sequence MAY reject all supplied
+ * certificates. Omission of `statusInfo` within a `CertStatus`
+ * indicates ACCEPTANCE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

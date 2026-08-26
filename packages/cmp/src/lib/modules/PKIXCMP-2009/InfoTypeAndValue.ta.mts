@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InfoTypeAndValue
  * @description
  *
+ * Typed information pair used in `GenMsgContent` / `GenRepContent`
+ * and in `PKIHeader.generalInfo` ([RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19), [RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+ * `infoType` selects the information; `infoValue` is defined by that
+ * type (OPTIONAL in some cases).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +36,22 @@ export class InfoTypeAndValue {
   constructor(
     /**
      * @summary `infoType`.
+     * @description
+     *
+     * OID identifying the information type (e.g., id-it values in
+     * [RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19)).
+     *
      * @public
      * @readonly
      */
     readonly infoType: OBJECT_IDENTIFIER,
     /**
      * @summary `infoValue`.
+     * @description
+     *
+     * Value defined by `infoType`; may be absent for some types
+     * ([RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19)).
+     *
      * @public
      * @readonly
      */

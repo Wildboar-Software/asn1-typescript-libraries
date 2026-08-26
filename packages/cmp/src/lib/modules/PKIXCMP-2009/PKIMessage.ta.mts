@@ -36,6 +36,15 @@ import {
  * @summary PKIMessage
  * @description
  *
+ * Overall CMP message used for all PKI management exchanges
+ * ([RFC 4210 §5.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1)).
+ *
+ * The `PKIHeader` carries addressing and transaction identification;
+ * `PKIBody` carries message-specific content; optional `PKIProtection`
+ * integrity bits cover the DER encoding of `ProtectedPart`
+ * ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)); optional `extraCerts` may hold certificates useful
+ * to the recipient (not necessarily a certification path).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,24 +61,47 @@ export class PKIMessage {
   constructor(
     /**
      * @summary `header`.
+     * @description
+     *
+     * Common header (`PKIHeader`) for addressing and transaction
+     * identification ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+     *
      * @public
      * @readonly
      */
     readonly header: PKIHeader,
     /**
      * @summary `body`.
+     * @description
+     *
+     * Message-specific body (`PKIBody` CHOICE)
+     * ([RFC 4210 §5.1.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.2), [RFC 4210 §5.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3)).
+     *
      * @public
      * @readonly
      */
     readonly body: PKIBody,
     /**
      * @summary `protection`.
+     * @description
+     *
+     * Optional integrity bits (`BIT STRING`). Input is the DER encoding of
+     * `ProtectedPart` (`header`, `body`) ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)). MAY be
+     * omitted when external protection (e.g., CMS) is applied instead.
+     *
      * @public
      * @readonly
      */
     readonly protection?: OPTIONAL<PKIProtection>,
     /**
      * @summary `extraCerts`.
+     * @description
+     *
+     * Optional certificates that may help the recipient (e.g., for the EE
+     * to verify its new certificate when the issuing CA is not a root).
+     * The recipient may need to sort or select among them
+     * ([RFC 4210 §5.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1)).
+     *
      * @public
      * @readonly
      */

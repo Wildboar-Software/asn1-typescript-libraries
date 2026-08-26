@@ -17,6 +17,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PKIFreeText
  * @description
  *
+ * Human-oriented free text: sequence of one or more UTF-8 strings
+ * ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+ *
+ * > text encoded as UTF-8 String [RFC3629] (note: each UTF8String MAY
+ * > include an [RFC3066] language tag to indicate the language of the
+ * > contained text see [RFC2482] for details)
+ * >
+ * > — [RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1) / Appendix F
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
