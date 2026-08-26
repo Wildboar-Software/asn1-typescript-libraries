@@ -24,6 +24,13 @@ import {
  * @summary TBSDataAB
  * @description
  *
+ * To-be-signed content for the client's `TokenAB` signature
+ * (RFC 3163 §3.2). The signature operation is applied to the
+ * DER-encoded octets of a value of this type (RFC 3163 §3.7).
+ *
+ * Presence of `entityB` and `authID` here must match their presence
+ * in the enclosing `TokenAB` (ASN.1 `CONSTRAINED BY` on `TokenAB`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,24 +48,43 @@ class TBSDataAB {
     constructor (
         /**
          * @summary `randomA`.
+         * @description
+         *
+         * Client nonce R_A from `TokenAB` (RFC 3163 §3.2).
+         *
          * @public
          * @readonly
          */
         readonly randomA: RandomNumber,
         /**
          * @summary `randomB`.
+         * @description
+         *
+         * Echo of the server challenge R_B from `TokenBA1`. The server
+         * verifies this matches the value it sent (RFC 3163 §2.4 / §2.5).
+         *
          * @public
          * @readonly
          */
         readonly randomB: RandomNumber,
         /**
          * @summary `entityB`.
+         * @description
+         *
+         * Optional server identity; presence must match `TokenAB.entityB`
+         * (RFC 3163 §3.2).
+         *
          * @public
          * @readonly
          */
         readonly entityB?: OPTIONAL<GeneralNames>,
         /**
          * @summary `authID`.
+         * @description
+         *
+         * Optional authorization identity; presence must match
+         * `TokenAB.authID` (RFC 3163 §3.2).
+         *
          * @public
          * @readonly
          */

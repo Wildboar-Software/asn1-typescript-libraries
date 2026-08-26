@@ -24,6 +24,13 @@ import {
  * @summary TBSDataBA
  * @description
  *
+ * To-be-signed content for the server's `TokenBA2` signature in mutual
+ * authentication (RFC 3163 §3.3). The signature operation is applied
+ * to the DER-encoded octets of a value of this type (RFC 3163 §3.7).
+ *
+ * Presence of `entityA` here must match its presence in the enclosing
+ * `TokenBA2` (ASN.1 `CONSTRAINED BY` on `TokenBA2`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,24 +48,45 @@ class TBSDataBA {
     constructor (
         /**
          * @summary `randomB`.
+         * @description
+         *
+         * Server challenge R_B from `TokenBA1`. The client verifies this
+         * matches the value it received in step 1 (RFC 3163 §2.5).
+         *
          * @public
          * @readonly
          */
         readonly randomB: RandomNumber,
         /**
          * @summary `randomA`.
+         * @description
+         *
+         * Echo of the client nonce R_A from `TokenAB`. The client
+         * verifies this matches the value it sent in step 2
+         * (RFC 3163 §2.5).
+         *
          * @public
          * @readonly
          */
         readonly randomA: RandomNumber,
         /**
          * @summary `randomC`.
+         * @description
+         *
+         * Third server nonce R_C from `TokenBA2` (RFC 3163 §2.5 / §7).
+         *
          * @public
          * @readonly
          */
         readonly randomC: RandomNumber,
         /**
          * @summary `entityA`.
+         * @description
+         *
+         * Optional client identity; presence must match
+         * `TokenBA2.entityA`. When present MUST be the client's name
+         * from their X.509 certificate (RFC 3163 §3.3).
+         *
          * @public
          * @readonly
          */
