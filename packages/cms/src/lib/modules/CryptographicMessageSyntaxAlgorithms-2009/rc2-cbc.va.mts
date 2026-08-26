@@ -6,6 +6,10 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary rc2_cbc
  * @description
  *
+ * OID for RC2 CBC content encryption (`rc2-cbc`)
+ * ([RFC 3370 §5.2](https://datatracker.ietf.org/doc/html/rfc3370#section-5.2)).
+ * Parameters are `RC2CBCParameter`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

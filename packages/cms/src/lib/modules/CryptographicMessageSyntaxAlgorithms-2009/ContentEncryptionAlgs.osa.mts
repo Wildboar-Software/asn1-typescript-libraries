@@ -7,6 +7,8 @@ import { cea_RC2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/cea-RC
  * @summary ContentEncryptionAlgs
  * @description
  *
+ * Object set of CMS content-encryption algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

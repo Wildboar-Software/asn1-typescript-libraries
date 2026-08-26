@@ -7,6 +7,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_UniqueIdentifier
  * @description
  *
+ * OID for DBEKM unique-identifier attribute (ITU-T X.894 | ISO/IEC 24824-4 clause 9.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

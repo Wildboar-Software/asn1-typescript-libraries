@@ -11,6 +11,9 @@ import { id_envelopedData } from "../CryptographicMessageSyntax-2010/id-envelope
  * @summary ct_EnvelopedData
  * @description
  *
+ * `CONTENT-TYPE` information object for `EnvelopedData` identified by
+ * `id-envelopedData` ([RFC 5652 §6](https://datatracker.ietf.org/doc/html/rfc5652#section-6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

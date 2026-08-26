@@ -7,6 +7,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RC2ParameterVersion
  * @description
  *
+ * INTEGER encoding RC2 effective key bits for wrap/CBC parameters
+ * ([RFC 3370 §4.3.2](https://datatracker.ietf.org/doc/html/rfc3370#section-4.3.2),
+ * [§5.2](https://datatracker.ietf.org/doc/html/rfc3370#section-5.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

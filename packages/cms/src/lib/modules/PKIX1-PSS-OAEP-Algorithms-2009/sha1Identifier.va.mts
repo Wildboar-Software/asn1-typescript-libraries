@@ -16,6 +16,9 @@ import {
  * @summary sha1Identifier
  * @description
  *
+ * AlgorithmIdentifier for SHA-1 with NULL parameters
+ * ([RFC 4055 §2.1](https://datatracker.ietf.org/doc/html/rfc4055#section-2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

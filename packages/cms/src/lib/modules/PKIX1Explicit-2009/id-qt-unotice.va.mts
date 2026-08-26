@@ -6,6 +6,8 @@ import { id_qt } from "../PKIX1Explicit-2009/id-qt.va.mjs";
  * @summary id_qt_unotice
  * @description
  *
+ * OID for the user-notice policy qualifier (`id-qt-unotice`) ([RFC 5280 §4.2.1.4](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

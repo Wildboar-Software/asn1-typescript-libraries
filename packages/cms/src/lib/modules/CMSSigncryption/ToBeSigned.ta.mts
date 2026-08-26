@@ -20,6 +20,9 @@ import {
  * @summary ToBeSigned
  * @description
  *
+ * Manifest of signcrypted parts plus signed attributes — input to the
+ * signature in signcrypted-components mode (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

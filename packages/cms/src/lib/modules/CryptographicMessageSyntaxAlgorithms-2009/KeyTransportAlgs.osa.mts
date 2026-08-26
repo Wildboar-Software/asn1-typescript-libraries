@@ -6,6 +6,8 @@ import { kt_rsa } from "../CryptographicMessageSyntaxAlgorithms-2009/kt-rsa.oa.m
  * @summary KeyTransportAlgs
  * @description
  *
+ * Object set of CMS key-transport algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

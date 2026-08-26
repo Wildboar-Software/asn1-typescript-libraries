@@ -11,6 +11,10 @@ import {
  * @summary ct_SignedData
  * @description
  *
+ * `CONTENT-TYPE` information object for `SignedData` identified by
+ * `id-signedData` ([RFC 5652 §5](https://datatracker.ietf.org/doc/html/rfc5652#section-5);
+ * ASN.1 [RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

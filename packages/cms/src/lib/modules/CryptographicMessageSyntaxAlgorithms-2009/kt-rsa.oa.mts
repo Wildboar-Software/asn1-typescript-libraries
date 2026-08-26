@@ -12,6 +12,8 @@ import { rsaEncryption } from "../PKIXAlgs-2009/rsaEncryption.va.mjs";
  * @summary kt_rsa
  * @description
  *
+ * KEY-TRANSPORT object for RSA key transport (PKCS #1 v1.5) ([RFC 3370 §4.2.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

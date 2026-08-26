@@ -7,6 +7,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary xmlMarkup
  * @description
  *
+ * OID for XML markup under CMS attributes (ITU-T X.894 | ISO/IEC 24824-4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

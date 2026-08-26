@@ -16,6 +16,9 @@ import {
  * @summary DomainParameters
  * @description
  *
+ * X9.42 DH domain parameters
+ * ([RFC 3279 §2.3.3](https://datatracker.ietf.org/doc/html/rfc3279#section-2.3.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

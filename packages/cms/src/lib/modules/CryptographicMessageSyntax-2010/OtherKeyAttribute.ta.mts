@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OtherKeyAttribute
  * @description
  *
+ * Extensible key attribute: key-attribute OID plus optional value
+ * ([RFC 5652 §10.2.7](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.7)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

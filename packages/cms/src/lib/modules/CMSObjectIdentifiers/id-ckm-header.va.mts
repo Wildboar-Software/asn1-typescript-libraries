@@ -6,6 +6,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_ckm_header
  * @description
  *
+ * OID for CKM header. (ITU-T X.894 | ISO/IEC 24824-4 clause 9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

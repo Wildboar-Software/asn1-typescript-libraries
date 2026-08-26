@@ -13,6 +13,8 @@ import { sha1WithRSAEncryption } from "../PKIXAlgs-2009/sha1WithRSAEncryption.va
  * @summary sa_rsaWithSHA1
  * @description
  *
+ * SIGNATURE-ALGORITHM for SHA-1-with-RSA ([RFC 3279 §2.2.1](https://datatracker.ietf.org/doc/html/rfc3279#section-2.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

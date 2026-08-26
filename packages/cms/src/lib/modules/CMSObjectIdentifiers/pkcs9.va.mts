@@ -6,6 +6,9 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary pkcs9
  * @description
  *
+ * PKCS #9 arc OID — parent of S/MIME and attribute OIDs
+ * ([RFC 5652](https://datatracker.ietf.org/doc/html/rfc5652)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

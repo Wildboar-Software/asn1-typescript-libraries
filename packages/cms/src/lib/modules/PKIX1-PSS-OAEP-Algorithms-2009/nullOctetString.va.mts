@@ -5,6 +5,9 @@ import { EncodingParameters } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingPa
  * @summary nullOctetString
  * @description
  *
+ * Empty OCTET STRING used as default pSpecified encoding parameters
+ * ([RFC 4055 §4.1](https://datatracker.ietf.org/doc/html/rfc4055#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

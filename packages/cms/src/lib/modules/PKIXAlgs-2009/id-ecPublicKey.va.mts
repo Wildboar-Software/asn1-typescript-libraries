@@ -6,6 +6,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_ecPublicKey
  * @description
  *
+ * Unrestricted ECC public-key OID; parameters identify the curve ([RFC 5480 §2.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

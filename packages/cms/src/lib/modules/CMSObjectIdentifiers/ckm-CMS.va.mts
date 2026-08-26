@@ -6,6 +6,9 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary ckm_CMS
  * @description
  *
+ * Constructive Key Management (CKM) OID arc under CMS object identifiers
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 9.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

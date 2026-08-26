@@ -22,6 +22,10 @@ import {
  * @summary EncryptedData
  * @description
  *
+ * Encrypted-data content type: encrypted content of any type where keys
+ * are managed by other means (no per-recipient infos)
+ * ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +42,31 @@ export class EncryptedData {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * 0 if unprotectedAttrs absent; 2 if present
+         * ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `encryptedContentInfo`.
+         * @description
+         *
+         * Encrypted content ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+         *
          * @public
          * @readonly
          */
         readonly encryptedContentInfo: EncryptedContentInfo,
         /**
          * @summary `unprotectedAttrs`.
+         * @description
+         *
+         * Optional unprotected attributes ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+         *
          * @public
          * @readonly
          */

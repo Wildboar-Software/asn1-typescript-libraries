@@ -7,6 +7,8 @@ import { pk_rsaSSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaSSA-PSS.o
  * @summary PublicKeys
  * @description
  *
+ * Object set of PSS/OAEP-related public keys ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,9 @@ import {
  * @summary RecipientIdentifier
  * @description
  *
+ * CHOICE identifying a key-transport recipient by issuer+serial or subject
+ * key identifier ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,8 @@ import { id_alg_CMS3DESwrap } from "../CryptographicMessageSyntaxAlgorithms-2009
  * @summary kwa_3DESWrap
  * @description
  *
+ * KEY-WRAP object for Triple-DES wrap (`id-alg-CMS3DESwrap`) ([RFC 3370 §4.3.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.3.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

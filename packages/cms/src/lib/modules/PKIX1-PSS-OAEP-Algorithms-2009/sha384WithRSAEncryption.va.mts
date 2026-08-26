@@ -6,6 +6,8 @@ import { pkcs_1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/pkcs-1.va.mjs";
  * @summary sha384WithRSAEncryption
  * @description
  *
+ * OID for SHA384 with RSA encryption (PKCS #1 v1.5 style) ([RFC 4055 §5](https://datatracker.ietf.org/doc/html/rfc4055#section-5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

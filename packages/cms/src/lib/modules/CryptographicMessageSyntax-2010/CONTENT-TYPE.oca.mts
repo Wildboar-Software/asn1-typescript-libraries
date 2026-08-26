@@ -7,6 +7,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CONTENT_TYPE
  * @description
  *
+ * Information object class binding a content-type OID to an ASN.1 type
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268); CMS content types
+ * in [RFC 5652](https://datatracker.ietf.org/doc/html/rfc5652)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

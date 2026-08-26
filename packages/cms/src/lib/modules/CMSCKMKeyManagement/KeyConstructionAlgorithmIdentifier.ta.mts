@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary KeyConstructionAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier for a CKM key-construction algorithm
+ * (ITU-T X.894 | ISO/IEC 24824-4 Annex A.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

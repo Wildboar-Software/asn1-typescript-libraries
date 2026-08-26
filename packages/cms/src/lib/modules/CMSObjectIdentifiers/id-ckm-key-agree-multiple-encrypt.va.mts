@@ -7,6 +7,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_ckm_key_agree_multiple_encrypt
  * @description
  *
+ * OID for CKM key-agreement multiple-encryption construction. (ITU-T X.894 | ISO/IEC 24824-4 clause 9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

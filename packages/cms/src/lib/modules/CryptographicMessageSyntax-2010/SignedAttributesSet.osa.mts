@@ -11,6 +11,10 @@ import { tokenizedParts } from "../TokenizationManifest/tokenizedParts.oa.mjs";
  * @summary SignedAttributesSet
  * @description
  *
+ * Object set of attributes permitted in `signedAttrs`
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268);
+ * [RFC 5652 §11](https://datatracker.ietf.org/doc/html/rfc5652#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

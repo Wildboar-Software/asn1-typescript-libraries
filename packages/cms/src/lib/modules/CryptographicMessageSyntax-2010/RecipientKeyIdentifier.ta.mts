@@ -21,6 +21,9 @@ import {
  * @summary RecipientKeyIdentifier
  * @description
  *
+ * Subject key identifier plus optional date and other key attribute for
+ * key-agreement recipients ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

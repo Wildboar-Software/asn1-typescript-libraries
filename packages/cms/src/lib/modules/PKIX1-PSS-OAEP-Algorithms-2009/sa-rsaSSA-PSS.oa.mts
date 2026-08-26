@@ -21,6 +21,8 @@ import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
  * @summary sa_rsaSSA_PSS
  * @description
  *
+ * SIGNATURE-ALGORITHM for RSASSA-PSS ([RFC 4055 §3](https://datatracker.ietf.org/doc/html/rfc4055#section-3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

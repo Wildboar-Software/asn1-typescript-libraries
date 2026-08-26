@@ -6,6 +6,9 @@ import { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest
  * @summary Manifest
  * @description
  *
+ * Object set of tokenization manifests (includes XPath tokens)
+ * (ITU-T X.894 | ISO/IEC 24824-4 Annex A.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

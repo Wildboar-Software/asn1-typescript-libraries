@@ -6,6 +6,9 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary dbEKM
  * @description
  *
+ * Database Encryption Key Management (DBEKM) OID arc
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 9.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

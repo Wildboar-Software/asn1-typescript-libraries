@@ -11,6 +11,9 @@ import {
  * @summary SigncryptedPartsManifest
  * @description
  *
+ * Parameterized manifest locating signcrypted components within content
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

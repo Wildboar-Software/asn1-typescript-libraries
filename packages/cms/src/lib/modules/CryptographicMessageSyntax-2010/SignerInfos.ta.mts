@@ -11,6 +11,9 @@ import {
  * @summary SignerInfos
  * @description
  *
+ * `SET OF SignerInfo` — per-signer information collection in `SignedData`
+ * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

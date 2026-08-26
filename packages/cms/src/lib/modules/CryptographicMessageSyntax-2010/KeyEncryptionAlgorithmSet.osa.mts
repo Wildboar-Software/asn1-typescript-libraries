@@ -6,6 +6,9 @@ import { KeyWrapAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWra
  * @summary KeyEncryptionAlgorithmSet
  * @description
  *
+ * Object set of key-encryption algorithms for CMS recipient infos
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

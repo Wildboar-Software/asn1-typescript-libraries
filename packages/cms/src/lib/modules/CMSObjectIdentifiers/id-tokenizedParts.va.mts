@@ -7,6 +7,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_tokenizedParts
  * @description
  *
+ * OID for the tokenizedParts attribute (ITU-T X.894 | ISO/IEC 24824-4 clause 8.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,8 @@ import { id_md5 } from "../PKIXAlgs-2009/id-md5.va.mjs";
  * @summary mda_md5
  * @description
  *
+ * DIGEST-ALGORITHM object for MD5 ([RFC 3279](https://datatracker.ietf.org/doc/html/rfc3279)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

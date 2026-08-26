@@ -11,6 +11,9 @@ import {
  * @summary PBKDF2_params_salt
  * @description
  *
+ * CHOICE of specified OCTET STRING salt or other salt source for PBKDF2
+ * ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

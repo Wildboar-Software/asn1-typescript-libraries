@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary PBKDF2_PRFsAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier constrained to PBKDF2 PRF algorithms
+ * ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911) CMS algorithms module).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

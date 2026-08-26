@@ -7,6 +7,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DBRecord
  * @description
  *
+ * UTF8String database-record location pointer (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

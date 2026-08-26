@@ -11,6 +11,8 @@ import { id_ckm_symmetric } from "../CMSObjectIdentifiers/id-ckm-symmetric.va.mj
  * @summary symmetricConstruction
  * @description
  *
+ * CKM construction using symmetric key material. (ITU-T X.894 | ISO/IEC 24824-4 clause 9.1 / Annex A.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

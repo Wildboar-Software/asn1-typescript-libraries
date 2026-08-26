@@ -7,6 +7,8 @@ import { kaa_ssdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-ssdh.
  * @summary KeyAgreementAlgs
  * @description
  *
+ * Object set of CMS key-agreement algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

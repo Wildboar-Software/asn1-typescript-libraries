@@ -6,6 +6,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_namedkeyencryptedData
  * @description
  *
+ * OID related to named-key encrypted data (ANSI X9.73 / ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

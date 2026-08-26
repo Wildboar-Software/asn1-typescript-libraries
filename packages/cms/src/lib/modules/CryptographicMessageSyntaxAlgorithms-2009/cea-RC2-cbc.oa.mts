@@ -14,6 +14,8 @@ import {
  * @summary cea_RC2_cbc
  * @description
  *
+ * CONTENT-ENCRYPTION object for RC2 CBC ([RFC 3370 §5.2](https://datatracker.ietf.org/doc/html/rfc3370#section-5.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

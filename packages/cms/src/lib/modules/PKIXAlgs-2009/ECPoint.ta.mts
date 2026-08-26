@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECPoint
  * @description
  *
+ * OCTET STRING encoding of an elliptic curve point
+ * ([RFC 5480 §2.2](https://datatracker.ietf.org/doc/html/rfc5480#section-2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

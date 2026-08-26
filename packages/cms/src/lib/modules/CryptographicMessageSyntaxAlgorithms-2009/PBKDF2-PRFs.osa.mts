@@ -6,6 +6,8 @@ import { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-
  * @summary PBKDF2_PRFs
  * @description
  *
+ * Object set of PBKDF2 PRF algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -8,6 +8,9 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * @summary KEY_DERIVATION
  * @description
  *
+ * Information object class for a key-derivation algorithm
+ * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)). Suggested object prefix: `kda-`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

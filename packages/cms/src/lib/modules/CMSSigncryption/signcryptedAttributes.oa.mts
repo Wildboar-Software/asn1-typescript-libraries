@@ -6,6 +6,9 @@ import { type MODE } from "../CMSSigncryption/MODE.oca.mjs";
  * @summary signcryptedAttributes
  * @description
  *
+ * MODE object for signcrypted-attributes processing
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

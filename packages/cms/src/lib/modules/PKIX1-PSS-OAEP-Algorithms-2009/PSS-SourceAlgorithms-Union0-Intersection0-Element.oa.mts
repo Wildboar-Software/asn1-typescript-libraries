@@ -11,6 +11,8 @@ import { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.v
  * @summary PSS_SourceAlgorithms_Union0_Intersection0_Element
  * @description
  *
+ * pSpecified P-source algorithm information object ([RFC 4055 §4.1](https://datatracker.ietf.org/doc/html/rfc4055#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

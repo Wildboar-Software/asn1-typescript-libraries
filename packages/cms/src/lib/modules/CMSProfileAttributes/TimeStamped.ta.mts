@@ -16,6 +16,9 @@ import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mj
  * @summary TimeStamped
  * @description
  *
+ * Time stamp value plus optional time-stamp service URI
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

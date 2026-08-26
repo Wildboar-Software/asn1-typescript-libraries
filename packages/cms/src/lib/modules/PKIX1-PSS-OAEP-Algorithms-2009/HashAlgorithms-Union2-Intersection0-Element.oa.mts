@@ -11,6 +11,8 @@ import { id_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-sha256.va.mjs";
  * @summary HashAlgorithms_Union2_Intersection0_Element
  * @description
  *
+ * Hash algorithm information object (element of `HashAlgorithms`) ([RFC 4055 §2.1](https://datatracker.ietf.org/doc/html/rfc4055#section-2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

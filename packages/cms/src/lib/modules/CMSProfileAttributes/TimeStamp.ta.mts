@@ -12,6 +12,9 @@ import {
  * @summary TimeStamp
  * @description
  *
+ * CHOICE of X9.95 `TimeStampToken` or local `GeneralizedTime`
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

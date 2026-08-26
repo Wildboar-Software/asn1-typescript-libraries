@@ -8,6 +8,8 @@ import { hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/hMAC-SHA
  * @summary alg_hMAC_SHA1
  * @description
  *
+ * ALGORITHM object for HMAC-SHA1 as PBKDF2 PRF ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

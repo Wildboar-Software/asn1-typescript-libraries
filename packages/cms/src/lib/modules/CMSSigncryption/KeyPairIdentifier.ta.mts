@@ -11,6 +11,9 @@ import {
  * @summary KeyPairIdentifier
  * @description
  *
+ * Alias for `SignerIdentifier` identifying a public-private key pair used in
+ * signcryption (ITU-T X.894 | ISO/IEC 24824-4 clause 7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

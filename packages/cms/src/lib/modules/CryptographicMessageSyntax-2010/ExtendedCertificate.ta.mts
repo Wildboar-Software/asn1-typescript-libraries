@@ -25,6 +25,9 @@ import {
  * @summary ExtendedCertificate
  * @description
  *
+ * PKCS #6 extended certificate (obsolete; for backward compatibility)
+ * ([RFC 5652 §10.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

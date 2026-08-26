@@ -11,6 +11,9 @@ import {
  * @summary AuthAttributes
  * @description
  *
+ * Authenticated attributes for `AuthenticatedData` (SET OF Attribute)
+ * ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -31,6 +31,11 @@ import {
  * @summary RecipientInfo
  * @description
  *
+ * CHOICE of per-recipient keying info for enveloped-data
+ * ([RFC 5652 §6.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2)):
+ * key transport (`ktri`), key agreement (`kari`), KEK (`kekri`), password
+ * (`pwri`), or other (`ori`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

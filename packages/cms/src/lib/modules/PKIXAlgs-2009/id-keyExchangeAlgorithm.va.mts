@@ -6,6 +6,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_keyExchangeAlgorithm
  * @description
  *
+ * SKIP/KEA key-exchange algorithm OID ([RFC 3279 §2.3.3](https://datatracker.ietf.org/doc/html/rfc3279#section-2.3.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

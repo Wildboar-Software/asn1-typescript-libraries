@@ -28,6 +28,9 @@ import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier
  * @summary RSAES_OAEP_params
  * @description
  *
+ * RSAES-OAEP parameters: hash, mask gen, pSource
+ * ([RFC 4055 §4.1](https://datatracker.ietf.org/doc/html/rfc4055#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

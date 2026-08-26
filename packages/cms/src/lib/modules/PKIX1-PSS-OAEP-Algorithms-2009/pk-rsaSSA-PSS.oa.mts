@@ -19,6 +19,8 @@ import {
  * @summary pk_rsaSSA_PSS
  * @description
  *
+ * PUBLIC-KEY object for keys restricted to RSASSA-PSS ([RFC 4055 §3.1](https://datatracker.ietf.org/doc/html/rfc4055#section-3.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

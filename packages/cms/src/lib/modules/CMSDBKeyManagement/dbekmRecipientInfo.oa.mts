@@ -10,6 +10,10 @@ import { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info
  * @summary dbekmRecipientInfo
  * @description
  *
+ * KEY-MANAGEMENT object for Database Encryption Key Management (DBEKM):
+ * `DBEKMRecipientInfo` identified by `id-dbekm-recip-info`
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 9.2; ANSI X9.73).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

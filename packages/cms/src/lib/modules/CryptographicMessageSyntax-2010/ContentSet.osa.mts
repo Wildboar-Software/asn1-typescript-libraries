@@ -11,6 +11,9 @@ import { ct_SignedData } from "../CryptographicMessageSyntax-2010/ct-SignedData.
  * @summary ContentSet
  * @description
  *
+ * Information object set of supported CMS `CONTENT-TYPE` objects
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

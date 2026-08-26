@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_signedData
  * @description
  *
+ * OID for the CMS signed-data content type (`id-signedData`)
+ * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

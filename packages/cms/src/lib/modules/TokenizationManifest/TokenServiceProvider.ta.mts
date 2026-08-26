@@ -7,6 +7,8 @@ import { URI, _decode_URI, _encode_URI } from "../TokenizationManifest/URI.ta.mj
  * @summary TokenServiceProvider
  * @description
  *
+ * URI of a token service provider (ITU-T X.894 | ISO/IEC 24824-4 Annex A.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

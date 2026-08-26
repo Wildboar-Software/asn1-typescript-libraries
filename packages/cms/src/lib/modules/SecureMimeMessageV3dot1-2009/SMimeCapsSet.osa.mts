@@ -11,6 +11,9 @@ import { SMimeCaps as PKIX1_PSS_OAEP_Algorithms_SMimeCaps } from "../PKIX1-PSS-O
  * @summary SMimeCapsSet
  * @description
  *
+ * Object set of S/MIME capability objects for v3.1
+ * ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

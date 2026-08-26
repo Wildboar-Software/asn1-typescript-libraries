@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary DigestAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier for a message-digest algorithm
+ * ([RFC 5652 §10.1.1](https://datatracker.ietf.org/doc/html/rfc5652#section-10.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

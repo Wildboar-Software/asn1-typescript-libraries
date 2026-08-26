@@ -31,6 +31,10 @@ import {
  * @summary KeyAgreeRecipientInfo
  * @description
  *
+ * Recipient info for key agreement: CEK wrapped with a key-encryption key
+ * derived via key agreement with the recipient
+ * ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,30 +52,54 @@ export class KeyAgreeRecipientInfo {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * MUST be 3 ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `originator`.
+         * @description
+         *
+         * Originator public key identity or key material for key agreement
+         * ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+         *
          * @public
          * @readonly
          */
         readonly originator: OriginatorIdentifierOrKey,
         /**
          * @summary `ukm`.
+         * @description
+         *
+         * Optional user keying material; when used, ensures distinct KEKs per
+         * message ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+         *
          * @public
          * @readonly
          */
         readonly ukm: OPTIONAL<UserKeyingMaterial>,
         /**
          * @summary `keyEncryptionAlgorithm`.
+         * @description
+         *
+         * Key-encryption algorithm (typically a key-wrap algorithm with
+         * parameters) ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+         *
          * @public
          * @readonly
          */
         readonly keyEncryptionAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `recipientEncryptedKeys`.
+         * @description
+         *
+         * Per-recipient encrypted CEKs under the agreed KEK
+         * ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+         *
          * @public
          * @readonly
          */

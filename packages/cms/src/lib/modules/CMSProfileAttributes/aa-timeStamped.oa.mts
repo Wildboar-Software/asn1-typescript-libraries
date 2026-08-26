@@ -16,6 +16,9 @@ import {
  * @summary aa-timeStamped
  * @description
  *
+ * ATTRIBUTE binding a time stamp (X9.95 token or local time) to signed
+ * content (ITU-T X.894 | ISO/IEC 24824-4 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

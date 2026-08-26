@@ -5,6 +5,8 @@ import { type SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE
  * @summary SignatureAlgs
  * @description
  *
+ * Object set of CMS signature algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

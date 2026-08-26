@@ -5,6 +5,8 @@ import { type ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
  * @summary SigncryptAlgorithms
  * @description
  *
+ * Object set of signcryption algorithms (ITU-T X.894 | ISO/IEC 24824-4 clause 7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

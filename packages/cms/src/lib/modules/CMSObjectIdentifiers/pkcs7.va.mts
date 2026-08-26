@@ -6,6 +6,9 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary pkcs7
  * @description
  *
+ * PKCS #7 arc OID — parent of classic CMS content-type OIDs
+ * ([RFC 5652](https://datatracker.ietf.org/doc/html/rfc5652)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

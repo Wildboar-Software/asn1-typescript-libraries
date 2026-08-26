@@ -5,6 +5,9 @@ import { type KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRI
  * @summary SupportedKeyAttributes
  * @description
  *
+ * Object set of supported `KEY-ATTRIBUTE` objects
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

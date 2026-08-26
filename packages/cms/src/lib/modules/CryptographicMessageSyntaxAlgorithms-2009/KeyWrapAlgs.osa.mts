@@ -7,6 +7,8 @@ import { kwa_RC2Wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-RC
  * @summary KeyWrapAlgs
  * @description
  *
+ * Object set of CMS key-wrap algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_sha224
  * @description
  *
+ * OID for SHA224 hash (`id-sha224`) ([RFC 4055 §2.1](https://datatracker.ietf.org/doc/html/rfc4055#section-2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

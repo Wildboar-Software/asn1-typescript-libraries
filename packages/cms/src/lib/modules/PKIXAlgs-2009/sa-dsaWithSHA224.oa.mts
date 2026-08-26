@@ -18,6 +18,8 @@ import { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.mjs";
  * @summary sa_dsaWithSHA224
  * @description
  *
+ * SIGNATURE-ALGORITHM for DSA-with-SHA-224 ([RFC 5758 §3.1](https://datatracker.ietf.org/doc/html/rfc5758#section-3.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

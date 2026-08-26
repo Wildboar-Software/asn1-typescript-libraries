@@ -16,6 +16,8 @@ import { sa_rsaWithSHA1 } from "../PKIXAlgs-2009/sa-rsaWithSHA1.oa.mjs";
  * @summary SMimeCaps
  * @description
  *
+ * Object set of S/MIME capabilities derived from PKIX algorithms ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

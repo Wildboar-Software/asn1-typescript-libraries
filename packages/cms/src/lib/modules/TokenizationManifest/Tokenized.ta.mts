@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Tokenized
  * @description
  *
+ * Parameterized SEQUENCE binding a TOKENIZED object id to optional parts
+ * (ITU-T X.894 | ISO/IEC 24824-4 Annex A.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,8 @@ import {
  * @summary Sidechain
  * @description
  *
+ * Sidechain link encoded as `HashPointer` (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

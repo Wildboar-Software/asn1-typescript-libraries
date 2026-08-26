@@ -16,6 +16,9 @@ import {
  * @summary defaultPBKDF2
  * @description
  *
+ * Default PBKDF2 PRF AlgorithmIdentifier value (HMAC-SHA1 with NULL
+ * parameters) ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -45,6 +45,11 @@ import {
  * @summary SignerInfo
  * @description
  *
+ * Per-signer information within `SignedData`
+ * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+ * Carries signer identity, digest and signature algorithms, optional signed
+ * and unsigned attributes, and the signature value.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,42 +68,80 @@ export class SignerInfo {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Syntax version: 1 if `sid` is `issuerAndSerialNumber`; 3 if `sid` is
+         * `subjectKeyIdentifier` ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `sid`.
+         * @description
+         *
+         * Signer identifier: issuer+serial or subject key identifier
+         * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+         *
          * @public
          * @readonly
          */
         readonly sid: SignerIdentifier,
         /**
          * @summary `digestAlgorithm`.
+         * @description
+         *
+         * Message-digest algorithm (and parameters) used by this signer; SHOULD
+         * also appear in `SignedData.digestAlgorithms`
+         * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+         *
          * @public
          * @readonly
          */
         readonly digestAlgorithm: DigestAlgorithmIdentifier,
         /**
          * @summary `signedAttrs`.
+         * @description
+         *
+         * Optional signed attributes. MUST be present if content type is other
+         * than `id-data`; MUST include `content-type` and `message-digest` when
+         * present ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+         *
          * @public
          * @readonly
          */
         readonly signedAttrs: OPTIONAL<SignedAttributes>,
         /**
          * @summary `signatureAlgorithm`.
+         * @description
+         *
+         * Signature algorithm (and parameters) used by this signer
+         * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+         *
          * @public
          * @readonly
          */
         readonly signatureAlgorithm: SignatureAlgorithmIdentifier,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Result of the signature generation process over the message digest
+         * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3),
+         * [§5.5](https://datatracker.ietf.org/doc/html/rfc5652#section-5.5)).
+         *
          * @public
          * @readonly
          */
         readonly signature: SignatureValue,
         /**
          * @summary `unsignedAttrs`.
+         * @description
+         *
+         * Optional unsigned attributes (e.g., countersignatures); not covered by
+         * this signature ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+         *
          * @public
          * @readonly
          */

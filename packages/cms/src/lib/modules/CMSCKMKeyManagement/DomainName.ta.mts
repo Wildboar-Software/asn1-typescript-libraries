@@ -7,6 +7,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DomainName
  * @description
  *
+ * CKM domain name (ITU-T X.894 | ISO/IEC 24824-4 Annex A.15; ANSI X9.69).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

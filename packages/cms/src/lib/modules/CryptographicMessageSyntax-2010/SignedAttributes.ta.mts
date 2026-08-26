@@ -11,6 +11,9 @@ import {
  * @summary SignedAttributes
  * @description
  *
+ * SET OF Attribute constrained to signed-attribute object sets — values
+ * covered by the signature ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SimpleString
  * @description
  *
+ * Simple string DBEKM attribute value (ITU-T X.894 | ISO/IEC 24824-4 Annex A.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

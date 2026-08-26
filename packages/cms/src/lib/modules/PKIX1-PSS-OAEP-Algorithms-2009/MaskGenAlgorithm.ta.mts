@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary MaskGenAlgorithm
  * @description
  *
+ * AlgorithmIdentifier for a mask generation function (typically MGF1)
+ * ([RFC 4055 §2.2](https://datatracker.ietf.org/doc/html/rfc4055#section-2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

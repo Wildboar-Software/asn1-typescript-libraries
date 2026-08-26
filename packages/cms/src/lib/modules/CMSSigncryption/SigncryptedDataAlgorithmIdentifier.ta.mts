@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary SigncryptedDataAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier for a signcryption algorithm (ISO/IEC 29150)
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

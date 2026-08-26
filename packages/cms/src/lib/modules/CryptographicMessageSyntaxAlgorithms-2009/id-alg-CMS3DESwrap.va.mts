@@ -6,6 +6,10 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_alg_CMS3DESwrap
  * @description
  *
+ * OID for Triple-DES key wrap in CMS (`id-alg-CMS3DESwrap`)
+ * ([RFC 3370 §4.3.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.3.1)).
+ * Parameters MUST be absent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

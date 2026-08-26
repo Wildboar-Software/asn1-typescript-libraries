@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UniqueID
  * @description
  *
+ * Unique ID type for DBEKM (ITU-T X.894 | ISO/IEC 24824-4 Annex A.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

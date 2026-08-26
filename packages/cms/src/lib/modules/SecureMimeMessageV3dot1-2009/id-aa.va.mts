@@ -6,6 +6,10 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_aa
  * @description
  *
+ * S/MIME authenticated-attributes arc (`id-aa`)
+ * ([RFC 5751](https://datatracker.ietf.org/doc/html/rfc5751);
+ * [RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

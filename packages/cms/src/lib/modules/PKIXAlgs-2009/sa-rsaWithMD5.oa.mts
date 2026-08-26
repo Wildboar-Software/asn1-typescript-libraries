@@ -13,6 +13,8 @@ import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
  * @summary sa_rsaWithMD5
  * @description
  *
+ * SIGNATURE-ALGORITHM for MD5-with-RSA ([RFC 3279 §2.2.1](https://datatracker.ietf.org/doc/html/rfc3279#section-2.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

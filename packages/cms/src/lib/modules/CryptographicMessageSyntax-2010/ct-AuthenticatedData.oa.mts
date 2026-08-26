@@ -11,6 +11,9 @@ import { id_ct_authData } from "../CryptographicMessageSyntax-2010/id-ct-authDat
  * @summary ct_AuthenticatedData
  * @description
  *
+ * `CONTENT-TYPE` information object for `AuthenticatedData` identified by
+ * `id-ct-authData` ([RFC 5652 §9](https://datatracker.ietf.org/doc/html/rfc5652#section-9)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

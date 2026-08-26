@@ -11,6 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ContentInfo
  * @description
  *
+ * CMS protection content that associates a content-type OID with content
+ * ([RFC 5652 §3](https://datatracker.ietf.org/doc/html/rfc5652#section-3)).
+ * All CMS values are `ContentInfo`. Content types defined here include
+ * data, signed-data, enveloped-data, digested-data, encrypted-data, and
+ * authenticated-data; other specifications MAY define additional types
+ * (ASN.1 type SHOULD NOT be a CHOICE).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,12 +31,20 @@ export class ContentInfo {
     constructor(
         /**
          * @summary `contentType`.
+         * @description
+         *
+         * OID identifying the type of `content` ([RFC 5652 §3](https://datatracker.ietf.org/doc/html/rfc5652#section-3)).
+         *
          * @public
          * @readonly
          */
         readonly contentType: OBJECT_IDENTIFIER,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Content whose ASN.1 type is determined by `contentType` ([RFC 5652 §3](https://datatracker.ietf.org/doc/html/rfc5652#section-3)).
+         *
          * @public
          * @readonly
          */

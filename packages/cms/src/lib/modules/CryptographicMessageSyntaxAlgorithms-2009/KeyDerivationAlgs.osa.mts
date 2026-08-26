@@ -6,6 +6,8 @@ import { kda_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/kda-PBK
  * @summary KeyDerivationAlgs
  * @description
  *
+ * Object set of CMS key-derivation algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

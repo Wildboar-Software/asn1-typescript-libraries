@@ -7,6 +7,8 @@ import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
  * @summary id_contentType
  * @description
  *
+ * OID for the content-type attribute ([RFC 5652 §11.1](https://datatracker.ietf.org/doc/html/rfc5652#section-11.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

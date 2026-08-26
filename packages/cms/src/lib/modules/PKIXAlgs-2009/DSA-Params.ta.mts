@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSA_Params
  * @description
  *
+ * DSA domain parameters p, q, g
+ * ([RFC 3279 §2.3.2](https://datatracker.ietf.org/doc/html/rfc3279#section-2.3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

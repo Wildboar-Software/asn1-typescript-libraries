@@ -6,6 +6,8 @@ import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/as
  * @summary id_parentBlock
  * @description
  *
+ * OID for the parentBlock profile attribute. (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

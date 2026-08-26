@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_signingTime
  * @description
  *
+ * OID for the signing-time signed attribute (`id-signingTime`)
+ * ([RFC 5652 §11.3](https://datatracker.ietf.org/doc/html/rfc5652#section-11.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

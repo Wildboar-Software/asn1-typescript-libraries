@@ -11,6 +11,9 @@ import {
  * @summary xPathManifest
  * @description
  *
+ * SIGNCRYPTED object using XPath 2.0 location paths to identify signcrypted
+ * XML components (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

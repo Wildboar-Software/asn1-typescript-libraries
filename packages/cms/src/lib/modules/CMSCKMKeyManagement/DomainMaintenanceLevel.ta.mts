@@ -7,6 +7,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DomainMaintenanceLevel
  * @description
  *
+ * CKM domain maintenance level (ITU-T X.894 | ISO/IEC 24824-4 Annex A.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,9 @@ import {
  * @summary aa-precedingBlock
  * @description
  *
+ * ATTRIBUTE linking to a preceding content block via `HashPointer`
+ * (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

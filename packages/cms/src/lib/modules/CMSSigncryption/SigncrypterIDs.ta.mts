@@ -15,6 +15,9 @@ import {
  * @summary SigncrypterIDs
  * @description
  *
+ * Sender and recipient key-pair identifiers for signcryption
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

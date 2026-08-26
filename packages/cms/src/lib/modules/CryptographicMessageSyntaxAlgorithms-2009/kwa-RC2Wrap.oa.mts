@@ -14,6 +14,8 @@ import {
  * @summary kwa_RC2Wrap
  * @description
  *
+ * KEY-WRAP object for RC2 wrap (`id-alg-CMSRC2wrap`) ([RFC 3370 §4.3.2](https://datatracker.ietf.org/doc/html/rfc3370#section-4.3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

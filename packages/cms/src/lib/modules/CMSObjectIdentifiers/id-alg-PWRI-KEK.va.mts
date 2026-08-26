@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_alg_PWRI_KEK
  * @description
  *
+ * OID for password-based recipient info key-encryption (`id-alg-PWRI-KEK`)
+ * ([RFC 3211 §2.2](https://datatracker.ietf.org/doc/html/rfc3211#section-2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

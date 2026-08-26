@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RSAPublicKey
  * @description
  *
+ * RSA public key: modulus and public exponent
+ * ([RFC 3279 §2.3.1](https://datatracker.ietf.org/doc/html/rfc3279#section-2.3.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

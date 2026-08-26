@@ -11,6 +11,9 @@ import {
  * @summary Attributes
  * @description
  *
+ * SET OF Attribute — attribute collection used in several CMS contexts
+ * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

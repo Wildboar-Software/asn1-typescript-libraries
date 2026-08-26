@@ -6,6 +6,8 @@ import { maca_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/mac
  * @summary MessageAuthAlgs
  * @description
  *
+ * Object set of CMS MAC algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

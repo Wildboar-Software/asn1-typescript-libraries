@@ -21,6 +21,10 @@ import { NamedCurve_Union14_Intersection0_Element } from "./NamedCurve-Union14-I
  * @summary NamedCurve
  * @description
  *
+ * Object set of named curves for ECC
+ * ([RFC 5480](https://datatracker.ietf.org/doc/html/rfc5480);
+ * [RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,9 @@ import {
  * @summary aa-signerInfo
  * @description
  *
+ * ATTRIBUTE carrying a single `SignerInfo` for quantum-safe / long-term
+ * countersignature profiles (ITU-T X.894 | ISO/IEC 24824-4 clause 8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

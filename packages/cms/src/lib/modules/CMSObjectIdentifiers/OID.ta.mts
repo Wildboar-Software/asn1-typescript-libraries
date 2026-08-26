@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OID
  * @description
  *
+ * Type alias for OBJECT IDENTIFIER in the CMS object-identifier module
+ * (ITU-T X.894 | ISO/IEC 24824-4 Annex / ANSI X9.73).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

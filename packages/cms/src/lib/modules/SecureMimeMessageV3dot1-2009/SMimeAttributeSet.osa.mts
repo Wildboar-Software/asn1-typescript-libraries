@@ -7,6 +7,9 @@ import { aa_smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/aa-smimeCa
  * @summary SMimeAttributeSet
  * @description
  *
+ * Object set of S/MIME attributes (capabilities, encryption key preference)
+ * ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

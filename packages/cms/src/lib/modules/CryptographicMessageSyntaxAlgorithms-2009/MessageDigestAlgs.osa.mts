@@ -5,6 +5,8 @@ import { type DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGOR
  * @summary MessageDigestAlgs
  * @description
  *
+ * Object set of CMS message-digest algorithms ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

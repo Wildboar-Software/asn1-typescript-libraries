@@ -11,6 +11,9 @@ import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TY
  * @summary ct_SigncryptedData
  * @description
  *
+ * `CONTENT-TYPE` information object for `SigncryptedData`
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

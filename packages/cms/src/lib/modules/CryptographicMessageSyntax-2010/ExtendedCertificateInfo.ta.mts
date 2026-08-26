@@ -25,6 +25,9 @@ import {
  * @summary ExtendedCertificateInfo
  * @description
  *
+ * Info SEQUENCE inside a PKCS #6 extended certificate
+ * ([RFC 5652 §12.1](https://datatracker.ietf.org/doc/html/rfc5652#section-12.1) ASN.1 module).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

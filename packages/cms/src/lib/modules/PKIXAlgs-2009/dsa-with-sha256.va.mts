@@ -6,6 +6,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary dsa_with_sha256
  * @description
  *
+ * DSA with SHA-256 signature OID ([RFC 5758 §3.1](https://datatracker.ietf.org/doc/html/rfc5758#section-3.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

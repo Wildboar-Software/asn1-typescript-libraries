@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary KeyWrapAlgorithm
  * @description
  *
+ * AlgorithmIdentifier for the key-wrap algorithm used as a parameter to
+ * ESDH/SSDH ([RFC 3370 §4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

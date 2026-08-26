@@ -11,6 +11,11 @@ import {
  * @summary Countersignature
  * @description
  *
+ * Type alias for `SignerInfo` used as the value of a countersignature
+ * unsigned attribute ([RFC 5652 §11.4](https://datatracker.ietf.org/doc/html/rfc5652#section-11.4)).
+ * The countersignature signs the `signature` OCTET STRING of the preceding
+ * `SignerInfo`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

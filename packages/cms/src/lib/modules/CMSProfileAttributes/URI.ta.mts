@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary URI
  * @description
  *
+ * UTF8String URI for content location / time-stamp service
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 8.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,13 @@ export enum _enum_for_ParamOptions {
  * @summary ParamOptions
  * @description
  *
+ * Enumerated constraints on whether algorithm parameters appear in an
+ * `AlgorithmIdentifier` (and related structures)
+ * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2),
+ * also [RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3)).
+ * Used as `&paramPresence` / `&ukmPresence` on algorithm information-object
+ * classes in module `AlgorithmInformation-2009`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

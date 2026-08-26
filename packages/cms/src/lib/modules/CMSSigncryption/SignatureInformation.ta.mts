@@ -30,6 +30,10 @@ import {
  * @summary SignatureInformation
  * @description
  *
+ * Optional signature info for signcrypted-components mode: signer id,
+ * signature algorithm, `ToBeSigned`, and signature value
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

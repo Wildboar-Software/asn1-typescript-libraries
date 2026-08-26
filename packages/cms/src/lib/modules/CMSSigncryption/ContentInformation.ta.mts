@@ -16,6 +16,9 @@ import { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.mjs
  * @summary ContentInformation
  * @description
  *
+ * Identifies the SigncryptedData processing mode and optional content octets
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +33,20 @@ export class ContentInformation {
     constructor(
         /**
          * @summary `mode`.
+         * @description
+         *
+         * OID of a `MODE` object from `ProcessingModes` (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+         *
          * @public
          * @readonly
          */
         readonly mode: Mode,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Optional content octets; mode-specific presence rules (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+         *
          * @public
          * @readonly
          */

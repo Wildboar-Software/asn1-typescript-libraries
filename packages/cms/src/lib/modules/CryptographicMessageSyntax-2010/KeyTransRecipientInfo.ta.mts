@@ -26,6 +26,9 @@ import {
  * @summary KeyTransRecipientInfo
  * @description
  *
+ * Recipient info for key transport: CEK encrypted in the recipient's public
+ * key ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,24 +45,42 @@ export class KeyTransRecipientInfo {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * 0 if `rid` is `issuerAndSerialNumber`; 2 if `rid` is
+         * `subjectKeyIdentifier` ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `rid`.
+         * @description
+         *
+         * Recipient's certificate identifier ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly rid: RecipientIdentifier,
         /**
          * @summary `keyEncryptionAlgorithm`.
+         * @description
+         *
+         * Key-encryption (key transport) algorithm used to encrypt the CEK
+         * ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly keyEncryptionAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `encryptedKey`.
+         * @description
+         *
+         * CEK encrypted for this recipient ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+         *
          * @public
          * @readonly
          */

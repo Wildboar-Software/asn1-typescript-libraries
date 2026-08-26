@@ -17,6 +17,9 @@ import {
  * @summary pSpecifiedEmpty
  * @description
  *
+ * Default pSpecified AlgorithmIdentifier with empty encoding parameters
+ * ([RFC 4055 §4.1](https://datatracker.ietf.org/doc/html/rfc4055#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

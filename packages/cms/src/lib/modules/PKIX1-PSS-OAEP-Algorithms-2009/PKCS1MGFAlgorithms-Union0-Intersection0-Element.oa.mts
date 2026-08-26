@@ -11,6 +11,8 @@ import { id_mgf1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-mgf1.va.mjs";
  * @summary PKCS1MGFAlgorithms_Union0_Intersection0_Element
  * @description
  *
+ * MGF1 algorithm information object ([RFC 4055 §2.2](https://datatracker.ietf.org/doc/html/rfc4055#section-2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

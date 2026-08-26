@@ -7,6 +7,8 @@ import { pkcs7 } from "../CMSObjectIdentifiers/pkcs7.va.mjs";
  * @summary id_data
  * @description
  *
+ * OID for CMS `data` content type ([RFC 5652 §4](https://datatracker.ietf.org/doc/html/rfc5652#section-4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

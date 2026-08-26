@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Signature
  * @description
  *
+ * OCTET STRING alias for a signature value in CMS
+ * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

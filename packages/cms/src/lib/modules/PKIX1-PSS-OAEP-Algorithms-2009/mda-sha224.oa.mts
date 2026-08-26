@@ -11,6 +11,8 @@ import { id_sha224 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-sha224.va.mjs";
  * @summary mda_sha224
  * @description
  *
+ * DIGEST-ALGORITHM for SHA-224 ([RFC 4055 §2.1](https://datatracker.ietf.org/doc/html/rfc4055#section-2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

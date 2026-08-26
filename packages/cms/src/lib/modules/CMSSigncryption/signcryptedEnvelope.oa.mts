@@ -11,6 +11,9 @@ import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
  * @summary signcryptedEnvelope
  * @description
  *
+ * ATTRIBUTE carrying a `SigncryptedKey` in envelope mode
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

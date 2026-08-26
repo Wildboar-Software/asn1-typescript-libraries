@@ -11,6 +11,10 @@ import {
  * @summary aa_encrypKeyPref
  * @description
  *
+ * ATTRIBUTE for encryption key preference — which certificate recipients
+ * should use when encrypting to the signer
+ * ([RFC 5751 §2.5.3](https://datatracker.ietf.org/doc/html/rfc5751#section-2.5.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

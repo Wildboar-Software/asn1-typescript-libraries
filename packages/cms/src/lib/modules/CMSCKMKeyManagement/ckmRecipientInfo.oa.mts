@@ -10,6 +10,10 @@ import { id_ckm_recip_info } from "../CMSObjectIdentifiers/id-ckm-recip-info.va.
  * @summary ckmRecipientInfo
  * @description
  *
+ * KEY-MANAGEMENT / other-recipient info object for Constructive Key
+ * Management (CKM): `KeyConstructRecipientInfo` identified by
+ * `id-ckm-recip-info` (ITU-T X.894 | ISO/IEC 24824-4 clause 9.1; ANSI X9.69).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

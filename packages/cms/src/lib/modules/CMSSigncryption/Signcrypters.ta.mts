@@ -11,6 +11,9 @@ import {
  * @summary Signcrypters
  * @description
  *
+ * SEQUENCE OF Signcrypter — one per message recipient
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

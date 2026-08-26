@@ -30,6 +30,10 @@ import {
  * @summary PasswordRecipientInfo
  * @description
  *
+ * Recipient info deriving a KEK from a password (or other shared secret)
+ * then wrapping the CEK ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4);
+ * password-based recipient info also [RFC 3211](https://datatracker.ietf.org/doc/html/rfc3211)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,24 +50,43 @@ export class PasswordRecipientInfo {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * MUST be 0 ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `keyDerivationAlgorithm`.
+         * @description
+         *
+         * Optional key-derivation algorithm (e.g., PBKDF2) from password to KEK
+         * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
+         *
          * @public
          * @readonly
          */
         readonly keyDerivationAlgorithm: OPTIONAL<KeyDerivationAlgorithmIdentifier>,
         /**
          * @summary `keyEncryptionAlgorithm`.
+         * @description
+         *
+         * Algorithm used to encrypt the CEK with the derived KEK
+         * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
+         *
          * @public
          * @readonly
          */
         readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
         /**
          * @summary `encryptedKey`.
+         * @description
+         *
+         * CEK encrypted with the password-derived KEK
+         * ([RFC 5652 §6.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.4)).
+         *
          * @public
          * @readonly
          */

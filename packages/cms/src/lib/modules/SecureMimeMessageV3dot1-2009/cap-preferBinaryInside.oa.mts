@@ -6,6 +6,9 @@ import { id_cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/id-ca
  * @summary cap_preferBinaryInside
  * @description
  *
+ * SMIME-CAPS object for `preferBinaryInside` (no parameters)
+ * ([RFC 5751 §2.5.2](https://datatracker.ietf.org/doc/html/rfc5751#section-2.5.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,9 @@ import { MessageDigestAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/
  * @summary DigestAlgorithmSet
  * @description
  *
+ * Object set of digest algorithms usable in this CMS profile
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

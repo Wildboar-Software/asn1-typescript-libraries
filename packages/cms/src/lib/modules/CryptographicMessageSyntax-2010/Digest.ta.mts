@@ -7,6 +7,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Digest
  * @description
  *
+ * OCTET STRING message digest value ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

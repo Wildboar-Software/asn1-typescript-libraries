@@ -6,6 +6,9 @@ import { pkcs_1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/pkcs-1.va.mjs";
  * @summary id_RSASSA_PSS
  * @description
  *
+ * OID for RSASSA-PSS signature algorithm (`id-RSASSA-PSS`)
+ * ([RFC 4055 §3](https://datatracker.ietf.org/doc/html/rfc4055#section-3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

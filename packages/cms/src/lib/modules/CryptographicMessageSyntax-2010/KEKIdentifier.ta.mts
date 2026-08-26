@@ -17,6 +17,9 @@ import {
  * @summary KEKIdentifier
  * @description
  *
+ * Key identifier for a previously distributed KEK, with optional date and
+ * other key attribute ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

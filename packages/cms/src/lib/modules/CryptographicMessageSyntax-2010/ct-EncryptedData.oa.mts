@@ -11,6 +11,9 @@ import { id_encryptedData } from "../CryptographicMessageSyntax-2010/id-encrypte
  * @summary ct_EncryptedData
  * @description
  *
+ * `CONTENT-TYPE` information object for `EncryptedData` identified by
+ * `id-encryptedData` ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
