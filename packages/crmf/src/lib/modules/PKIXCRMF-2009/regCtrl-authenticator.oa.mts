@@ -12,6 +12,10 @@ import { id_regCtrl_authenticator } from "../PKIXCRMF-2009/id-regCtrl-authentica
  * @summary regCtrl_authenticator
  * @description
  *
+ * `ATTRIBUTE` information object for `regCtrl-authenticator`: type `Authenticator`,
+ * identified by `id-regCtrl-authenticator`. Long-term shared authenticator.
+ * ([RFC 4211 §6.2](https://datatracker.ietf.org/doc/html/rfc4211#section-6.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

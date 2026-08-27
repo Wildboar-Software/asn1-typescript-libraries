@@ -7,6 +7,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RegToken
  * @description
  *
+ * One-time registration token (`UTF8String`) for initial identity
+ * verification ([RFC 4211 §6.1](https://datatracker.ietf.org/doc/html/rfc4211#section-6.1)). Encoding
+ * SHALL be UTF8String (text or textual form of a binary value).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

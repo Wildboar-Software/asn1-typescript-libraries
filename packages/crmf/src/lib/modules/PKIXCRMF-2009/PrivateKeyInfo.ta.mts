@@ -23,6 +23,12 @@ import {
  * @summary PrivateKeyInfo
  * @description
  *
+ * Private-key encoding used inside `EncKeyWithID`, based on
+ * PKCS #8 with CRMF-specific usage rules
+ * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+ * `version` MUST be 0. Algorithm-specific private key formats for
+ * DH, DSA, and RSA are in §4.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,24 +46,44 @@ export class PrivateKeyInfo {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * MUST be the value 0 ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly version: INTEGER,
         /**
          * @summary `privateKeyAlgorithm`.
+         * @description
+         *
+         * Identifier for the private key algorithm
+         * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly privateKeyAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `privateKey`.
+         * @description
+         *
+         * Octet string whose contents are the private key; format
+         * defined by `privateKeyAlgorithm`
+         * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly privateKey: OCTET_STRING,
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * Optional set of attributes extending the private key info
+         * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+         *
          * @public
          * @readonly
          */

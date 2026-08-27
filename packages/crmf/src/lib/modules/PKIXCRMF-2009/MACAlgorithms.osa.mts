@@ -7,6 +7,11 @@ import { maca_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/mac
  * @summary MACAlgorithms
  * @description
  *
+ * MAC algorithms for CRMF; includes `maca-hMAC-SHA1`. DES/3DES
+ * MAC objects are commented pending updated modules
+ * ([RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10); HMAC-SHA1 also
+ * [RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

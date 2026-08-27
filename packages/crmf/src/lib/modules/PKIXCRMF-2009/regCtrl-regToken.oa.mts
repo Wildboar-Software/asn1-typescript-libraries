@@ -12,6 +12,10 @@ import {
  * @summary regCtrl_regToken
  * @description
  *
+ * `ATTRIBUTE` information object for `regCtrl-regToken`: type `RegToken`,
+ * identified by `id-regCtrl-regToken`. One-time identity token for PKI initialization.
+ * ([RFC 4211 §6.1](https://datatracker.ietf.org/doc/html/rfc4211#section-6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import {
  * @summary OptionalValidity
  * @description
  *
+ * Requested certificate validity window; at least one of
+ * `notBefore` / `notAfter` must be present ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+ * Times follow the same rules as in the certificate profile.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +33,22 @@ export class OptionalValidity {
     constructor(
         /**
          * @summary `notBefore`.
+         * @description
+         *
+         * Requested start time of the certificate
+         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+         *
          * @public
          * @readonly
          */
         readonly notBefore?: OPTIONAL<Time>,
         /**
          * @summary `notAfter`.
+         * @description
+         *
+         * Requested expiration time of the certificate
+         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+         *
          * @public
          * @readonly
          */

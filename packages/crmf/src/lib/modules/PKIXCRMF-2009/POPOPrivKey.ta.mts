@@ -26,6 +26,18 @@ import {
  * @summary POPOPrivKey
  * @description
  *
+ * POP for key-encipherment or key-agreement keys
+ * ([RFC 4211 §4.2](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2), §4.3).
+ *
+ * - `thisMessage`: encrypted private key in a BIT STRING
+ *   (deprecated; prefer `encryptedKey`).
+ * - `subsequentMessage`: indirect POP (`encrCert` or
+ *   `challengeResp`).
+ * - `dhMAC`: static DH MAC (deprecated; prefer `agreeMAC`).
+ * - `agreeMAC`: MAC from a shared secret (§4.3).
+ * - `encryptedKey`: `EnvelopedData` whose content type MUST be
+ *   `id-ct-encKeyWithID`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

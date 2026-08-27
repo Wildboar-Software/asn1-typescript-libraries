@@ -21,6 +21,9 @@ import {
  * @summary CertRequest
  * @description
  *
+ * Certificate request: request id, `CertTemplate`, optional
+ * `Controls` ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +40,34 @@ export class CertRequest {
     constructor(
         /**
          * @summary `certReqId`.
+         * @description
+         *
+         * Integer used by the requestor to match a request with its
+         * response ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+         *
          * @public
          * @readonly
          */
         readonly certReqId: INTEGER,
         /**
          * @summary `certTemplate`.
+         * @description
+         *
+         * Template of an X.509 certificate; requestor fills fields for
+         * which specific values are desired ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+         *
          * @public
          * @readonly
          */
         readonly certTemplate: CertTemplate,
         /**
          * @summary `controls`.
+         * @description
+         *
+         * Attributes that are not part of the certificate but control
+         * issuance context (e.g. `regToken`, archive options)
+         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5), §6).
+         *
          * @public
          * @readonly
          */

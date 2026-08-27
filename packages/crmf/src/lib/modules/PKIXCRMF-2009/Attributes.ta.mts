@@ -11,6 +11,10 @@ import {
  * @summary Attributes
  * @description
  *
+ * `SET OF AttributeSet{{PrivateKeyAttributes}}` on
+ * `PrivateKeyInfo` ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1);
+ * 2009 form in [RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

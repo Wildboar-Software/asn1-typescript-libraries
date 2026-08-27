@@ -6,6 +6,9 @@ import { id_ct } from "../PKIXCRMF-2009/id-ct.va.mjs";
  * @summary id_ct_encKeyWithID
  * @description
  *
+ * Content type OID for `EncKeyWithID`: `{ id-ct 21 }`
+ * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

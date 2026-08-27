@@ -12,6 +12,9 @@ import {
  * @summary EncKeyWithID_identifier
  * @description
  *
+ * Unnested `identifier` CHOICE from `EncKeyWithID`: `UTF8String`
+ * or `GeneralName` ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

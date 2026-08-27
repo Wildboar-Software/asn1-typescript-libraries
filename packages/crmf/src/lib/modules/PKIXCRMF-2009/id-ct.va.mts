@@ -6,6 +6,9 @@ import { id_smime } from "../PKIXCRMF-2009/id-smime.va.mjs";
  * @summary id_ct
  * @description
  *
+ * CMS content-types arc: `{ id-smime 1 }`
+ * ([RFC 4211 Appendix B](https://datatracker.ietf.org/doc/html/rfc4211#appendix-B)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

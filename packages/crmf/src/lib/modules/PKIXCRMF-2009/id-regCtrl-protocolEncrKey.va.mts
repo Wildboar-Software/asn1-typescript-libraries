@@ -6,6 +6,9 @@ import { id_regCtrl } from "../PKIXCRMF-2009/id-regCtrl.va.mjs";
  * @summary id_regCtrl_protocolEncrKey
  * @description
  *
+ * OID for the `protocolEncrKey` control: `{ id-regCtrl 6 }`
+ * ([RFC 4211 §6.6](https://datatracker.ietf.org/doc/html/rfc4211#section-6.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

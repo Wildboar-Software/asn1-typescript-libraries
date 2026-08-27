@@ -6,6 +6,9 @@ import { id_regCtrl } from "../PKIXCRMF-2009/id-regCtrl.va.mjs";
  * @summary id_regCtrl_regToken
  * @description
  *
+ * OID for the `regToken` control: `{ id-regCtrl 1 }`
+ * ([RFC 4211 §6.1](https://datatracker.ietf.org/doc/html/rfc4211#section-6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

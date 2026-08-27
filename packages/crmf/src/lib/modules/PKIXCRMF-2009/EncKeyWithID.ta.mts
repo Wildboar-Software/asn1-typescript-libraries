@@ -20,6 +20,14 @@ import {
  * @summary EncKeyWithID
  * @description
  *
+ * CMS content for proving possession of a private key or for key
+ * escrow/archive: `PrivateKeyInfo` plus optional identifier
+ * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+ *
+ * Content type OID `id-ct-encKeyWithID`. The identifier MUST be
+ * present for POP; SHOULD be present when archiving if the
+ * archive agent will decrypt the key.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +45,23 @@ export class EncKeyWithID {
     constructor(
         /**
          * @summary `privateKey`.
+         * @description
+         *
+         * Encoded private key (`PrivateKeyInfo`)
+         * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly privateKey: PrivateKeyInfo,
         /**
          * @summary `identifier`.
+         * @description
+         *
+         * Name the CA/RA can associate with the requestor (UTF8 token
+         * or `GeneralName`, often a certificate DN). MUST be present
+         * for POP ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+         *
          * @public
          * @readonly
          */

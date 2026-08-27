@@ -7,6 +7,11 @@ import { Password_MACAlgorithms_Union0_Intersection0_Element } from "../PKIXCRMF
  * @summary Password_MACAlgorithms
  * @description
  *
+ * MAC-ALGORITHM set for password-based MAC: `id-PasswordBasedMac`
+ * with required `PBMParameter`
+ * ([RFC 4211 §4.4](https://datatracker.ietf.org/doc/html/rfc4211#section-4.4);
+ * [RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

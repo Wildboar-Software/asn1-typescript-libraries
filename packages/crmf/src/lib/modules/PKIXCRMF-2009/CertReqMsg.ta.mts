@@ -25,6 +25,15 @@ import {
  * @summary CertReqMsg
  * @description
  *
+ * Single certificate request message: template/`CertRequest`,
+ * optional proof-of-possession, optional registration info
+ * ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3)).
+ *
+ * Content for the certificate SHOULD go in `certReq`; `regInfo`
+ * SHOULD hold only supplementary context. Data intended for
+ * certificate content MAY appear in `regInfo` when RA additions
+ * would invalidate `popo`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +50,39 @@ export class CertReqMsg {
     constructor(
         /**
          * @summary `certReq`.
+         * @description
+         *
+         * Template of the certificate being requested, filled in by
+         * (or on behalf of) the Subject; not all template fields need
+         * be specified ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3), §5).
+         *
          * @public
          * @readonly
          */
         readonly certReq: CertRequest,
         /**
          * @summary `popo`.
+         * @description
+         *
+         * Proof that the entity identified as Subject possesses the
+         * corresponding private key. Structure depends on public-key
+         * algorithm and intended key usage
+         * ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3), §4). Omit when POP is done
+         * out-of-band.
+         *
          * @public
          * @readonly
          */
         readonly popo?: OPTIONAL<ProofOfPossession>,
         /**
          * @summary `regInfo`.
+         * @description
+         *
+         * Supplementary information for fulfilling the request (contact,
+         * billing, ancillary data). SHOULD NOT duplicate certificate
+         * content that belongs in `certReq` ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3)).
+         * Controls for this field: §7 (`utf8Pairs`, `certReq`).
+         *
          * @public
          * @readonly
          */

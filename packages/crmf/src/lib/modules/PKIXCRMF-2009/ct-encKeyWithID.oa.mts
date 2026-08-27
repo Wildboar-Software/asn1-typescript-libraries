@@ -12,6 +12,10 @@ import { id_ct_encKeyWithID } from "../PKIXCRMF-2009/id-ct-encKeyWithID.va.mjs";
  * @summary ct_encKeyWithID
  * @description
  *
+ * `CONTENT-TYPE` for `EncKeyWithID`, identified by
+ * `id-ct-encKeyWithID` ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1);
+ * [RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

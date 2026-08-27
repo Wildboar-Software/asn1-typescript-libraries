@@ -12,6 +12,10 @@ import {
  * @summary regCtrl_pkiPublicationInfo
  * @description
  *
+ * `ATTRIBUTE` information object for `regCtrl-pkiPublicationInfo`: type `PKIPublicationInfo`,
+ * identified by `id-regCtrl-pkiPublicationInfo`. Advisory publication preferences.
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -12,6 +12,10 @@ import {
  * @summary regCtrl_oldCertID
  * @description
  *
+ * `ATTRIBUTE` information object for `regCtrl-oldCertID`: type `OldCertId`,
+ * identified by `id-regCtrl-oldCertID`. Identifies the certificate being updated.
+ * ([RFC 4211 §6.5](https://datatracker.ietf.org/doc/html/rfc4211#section-6.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

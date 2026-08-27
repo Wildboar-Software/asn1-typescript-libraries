@@ -7,6 +7,9 @@ import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
  * @summary DigestAlgorithms
  * @description
  *
+ * Digest algorithms permitted in this CRMF module; initially
+ * `mda-sha1` with extension (`...`) ([RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

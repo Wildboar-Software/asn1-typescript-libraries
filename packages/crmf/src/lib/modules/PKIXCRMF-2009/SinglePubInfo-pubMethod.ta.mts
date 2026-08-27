@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SinglePubInfo_pubMethod
  * @description
  *
+ * Unnested `pubMethod` INTEGER from `SinglePubInfo`
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -18,6 +21,11 @@ export type SinglePubInfo_pubMethod = INTEGER;
 
 /**
  * @summary SinglePubInfo_pubMethod_dontCare
+ * @description
+ *
+ * `dontCare`(0): CA/RA may publish wherever it chooses;
+ * `pubLocation` MUST be omitted ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -26,6 +34,11 @@ export const SinglePubInfo_pubMethod_dontCare: SinglePubInfo_pubMethod = 0; /* L
 
 /**
  * @summary SinglePubInfo_pubMethod_dontCare
+ * @description
+ *
+ * `dontCare`(0): CA/RA may publish wherever it chooses;
+ * `pubLocation` MUST be omitted ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -34,6 +47,11 @@ export const dontCare: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_dontCar
 
 /**
  * @summary SinglePubInfo_pubMethod_x500
+ * @description
+ *
+ * `x500`(1): publish at the X.500 location in `pubLocation`
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +60,11 @@ export const SinglePubInfo_pubMethod_x500: SinglePubInfo_pubMethod = 1; /* LONG_
 
 /**
  * @summary SinglePubInfo_pubMethod_x500
+ * @description
+ *
+ * `x500`(1): publish at the X.500 location in `pubLocation`
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +73,11 @@ export const x500: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_x500; /* SH
 
 /**
  * @summary SinglePubInfo_pubMethod_web
+ * @description
+ *
+ * `web`(2): publish at the HTTP location in `pubLocation`
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +86,11 @@ export const SinglePubInfo_pubMethod_web: SinglePubInfo_pubMethod = 2; /* LONG_N
 
 /**
  * @summary SinglePubInfo_pubMethod_web
+ * @description
+ *
+ * `web`(2): publish at the HTTP location in `pubLocation`
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +99,11 @@ export const web: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_web; /* SHOR
 
 /**
  * @summary SinglePubInfo_pubMethod_ldap
+ * @description
+ *
+ * `ldap`(3): publish at the LDAP location in `pubLocation`
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +112,11 @@ export const SinglePubInfo_pubMethod_ldap: SinglePubInfo_pubMethod = 3; /* LONG_
 
 /**
  * @summary SinglePubInfo_pubMethod_ldap
+ * @description
+ *
+ * `ldap`(3): publish at the LDAP location in `pubLocation`
+ * ([RFC 4211 §6.3](https://datatracker.ietf.org/doc/html/rfc4211#section-6.3)).
+ *
  * @constant
  * @type {number}
  */

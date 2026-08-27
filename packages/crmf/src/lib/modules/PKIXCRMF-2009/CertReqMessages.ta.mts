@@ -11,6 +11,11 @@ import {
  * @summary CertReqMessages
  * @description
  *
+ * Top-level CRMF PDU: one or more `CertReqMsg` values
+ * ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3)).
+ * ASN.1 module `PKIXCRMF-2009` also in
+ * [RFC 5912 §10](https://datatracker.ietf.org/doc/html/rfc5912#section-10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
