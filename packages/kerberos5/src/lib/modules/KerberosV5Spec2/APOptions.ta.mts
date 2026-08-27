@@ -20,6 +20,11 @@ import {
  * @summary APOptions
  * @description
  *
+ * AP-REQ option bits as `KerberosFlags` ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+ * use-session-key(1): ticket encrypted in server TGT session
+ * key (user-to-user). mutual-required(2): server MUST reply
+ * with `AP-REP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

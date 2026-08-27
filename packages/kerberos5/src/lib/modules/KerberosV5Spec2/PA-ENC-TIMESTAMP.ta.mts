@@ -20,6 +20,10 @@ import {
  * @summary PA_ENC_TIMESTAMP
  * @description
  *
+ * Encrypted timestamp pre-authentication (`padata-type` 2):
+ * `EncryptedData` containing `PA-ENC-TS-ENC`, encrypted with the
+ * client's secret key and key usage 1 ([RFC 4120 §5.2.7.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

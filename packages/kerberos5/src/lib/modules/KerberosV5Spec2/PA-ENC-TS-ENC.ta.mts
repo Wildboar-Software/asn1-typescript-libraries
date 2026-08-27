@@ -26,6 +26,10 @@ import {
  * @summary PA_ENC_TS_ENC
  * @description
  *
+ * Cleartext for encrypted-timestamp pre-authentication
+ * ([RFC 4120 §5.2.7.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.2)). Encrypted under the client key (usage 1)
+ * to form `PA-ENC-TIMESTAMP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +44,21 @@ export class PA_ENC_TS_ENC {
   constructor(
     /**
      * @summary `patimestamp`.
+     * @description
+     *
+     * Client's time ([RFC 4120 §5.2.7.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.2)).
+     *
      * @public
      * @readonly
      */
     readonly patimestamp: KerberosTime,
     /**
      * @summary `pausec`.
+     * @description
+     *
+     * Microseconds; MAY be omitted if the client will not generate
+     * more than one request per second ([RFC 4120 §5.2.7.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.2)).
+     *
      * @public
      * @readonly
      */

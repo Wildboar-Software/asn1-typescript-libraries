@@ -37,6 +37,8 @@ import {
  * @summary KRB_SAFE_BODY
  * @description
  *
+ * Body of `KRB-SAFE` ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,36 +57,63 @@ export class KRB_SAFE_BODY {
   constructor(
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * Application-specific payload ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly user_data: OCTET_STRING,
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Sender's current time for replay detection
+     * ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly timestamp: OPTIONAL<KerberosTime>,
     /**
      * @summary `usec`.
+     * @description
+     *
+     * Microsecond part of `timestamp` ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly usec: OPTIONAL<Microseconds>,
     /**
      * @summary `seq_number`.
+     * @description
+     *
+     * Sequence number for replay detection ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1),
+     * [RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly seq_number: OPTIONAL<UInt32>,
     /**
      * @summary `s_address`.
+     * @description
+     *
+     * Sender's address ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly s_address: HostAddress,
     /**
      * @summary `r_address`.
+     * @description
+     *
+     * Recipient's address; MAY be omitted (e.g. broadcast) but
+     * recipient MAY reject ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */

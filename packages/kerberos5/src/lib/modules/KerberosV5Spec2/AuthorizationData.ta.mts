@@ -20,6 +20,12 @@ import {
  * @summary AuthorizationData
  * @description
  *
+ * Sequence of authorization elements restricting ticket use
+ * ([RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6)). Always OPTIONAL and SHOULD NOT be empty when
+ * present. Unknown elements in a ticket or authenticator are
+ * critical unless encapsulated in a type that amends criticality
+ * (e.g. `AD-IF-RELEVANT`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

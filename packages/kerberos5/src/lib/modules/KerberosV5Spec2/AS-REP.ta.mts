@@ -20,6 +20,11 @@ import {
  * @summary AS_REP
  * @description
  *
+ * Authentication Service reply with initial credentials
+ * ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2), [RFC 4120 §3.1](https://datatracker.ietf.org/doc/html/rfc4120#section-3.1)). APPLICATION 11 wrapping
+ * `KDC-REP`. `enc-part` encrypted in the client's long-term
+ * key (usage 3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

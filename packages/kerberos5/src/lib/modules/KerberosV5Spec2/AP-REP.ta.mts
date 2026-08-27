@@ -21,6 +21,10 @@ import {
  * @summary AP_REP
  * @description
  *
+ * Application reply for mutual authentication when
+ * mutual-required was set in `AP-REQ` ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2),
+ * [RFC 4120 §3.2.4](https://datatracker.ietf.org/doc/html/rfc4120#section-3.2.4)). APPLICATION 15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +40,31 @@ export class AP_REP {
   constructor(
     /**
      * @summary `pvno`.
+     * @description
+     *
+     * Protocol version 5 ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+     *
      * @public
      * @readonly
      */
     readonly pvno: INTEGER,
     /**
      * @summary `msg_type`.
+     * @description
+     *
+     * `KRB_AP_REP` (15) ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+     *
      * @public
      * @readonly
      */
     readonly msg_type: INTEGER,
     /**
      * @summary `enc_part`.
+     * @description
+     *
+     * Encrypted `EncAPRepPart` under the ticket session key,
+     * key usage 12 ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+     *
      * @public
      * @readonly
      */

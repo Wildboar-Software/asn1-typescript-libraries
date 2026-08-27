@@ -20,6 +20,12 @@ import {
  * @summary KDCOptions
  * @description
  *
+ * KDC request option bits as `KerberosFlags` ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1),
+ * [RFC 4120 §2](https://datatracker.ietf.org/doc/html/rfc4120#section-2)). Includes forwardable(1), forwarded(2),
+ * proxiable(3), proxy(4), allow-postdate(5), postdated(6),
+ * renewable(8), disable-transited-check(26), renewable-ok(27),
+ * enc-tkt-in-skey(28), renew(30), validate(31).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

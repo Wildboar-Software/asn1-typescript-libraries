@@ -22,6 +22,8 @@ import {
  * @summary TYPED_DATA_Item
  * @description
  *
+ * One element of `TYPED-DATA` ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +35,20 @@ export class TYPED_DATA_Item {
   constructor(
     /**
      * @summary `data_type`.
+     * @description
+     *
+     * Type of `data-value` ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */
     readonly data_type: Int32,
     /**
      * @summary `data_value`.
+     * @description
+     *
+     * Optional typed payload ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+     *
      * @public
      * @readonly
      */

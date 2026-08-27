@@ -20,6 +20,10 @@ import {
  * @summary AS_REQ
  * @description
  *
+ * Authentication Service request: initial ticket request to the
+ * KDC ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §3.1](https://datatracker.ietf.org/doc/html/rfc4120#section-3.1)). APPLICATION 10 wrapping
+ * `KDC-REQ`. `msg-type` is 10 (`KRB_AS_REQ`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

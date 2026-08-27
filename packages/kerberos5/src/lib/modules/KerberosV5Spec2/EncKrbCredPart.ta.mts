@@ -41,6 +41,9 @@ import {
  * @summary EncKrbCredPart
  * @description
  *
+ * Cleartext of `KRB-CRED.enc-part` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)). APPLICATION
+ * 29. Holds per-ticket keys and optional freshness fields.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,36 +62,61 @@ export class EncKrbCredPart {
   constructor(
     /**
      * @summary `ticket_info`.
+     * @description
+     *
+     * One `KrbCredInfo` per ticket in `tickets` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly ticket_info: KrbCredInfo[],
     /**
      * @summary `nonce`.
+     * @description
+     *
+     * Optional recipient-generated nonce for freshness; MUST NEVER
+     * be reused ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly nonce?: OPTIONAL<UInt32>,
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Generation time of the `KRB-CRED` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly timestamp?: OPTIONAL<KerberosTime>,
     /**
      * @summary `usec`.
+     * @description
+     *
+     * Microseconds of `timestamp` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+     *
      * @public
      * @readonly
      */
     readonly usec?: OPTIONAL<Microseconds>,
     /**
      * @summary `s_address`.
+     * @description
+     *
+     * Optional sender address ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1), [RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly s_address?: OPTIONAL<HostAddress>,
     /**
      * @summary `r_address`.
+     * @description
+     *
+     * Optional recipient address ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1), [RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+     *
      * @public
      * @readonly
      */

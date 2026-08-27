@@ -20,6 +20,10 @@ import {
  * @summary TGS_REP
  * @description
  *
+ * Ticket-Granting Service reply ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2), [RFC 4120 §3.3](https://datatracker.ietf.org/doc/html/rfc4120#section-3.3)).
+ * APPLICATION 13 wrapping `KDC-REP`. `enc-part` encrypted in
+ * authenticator subkey (usage 9) or TGT session key (usage 8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

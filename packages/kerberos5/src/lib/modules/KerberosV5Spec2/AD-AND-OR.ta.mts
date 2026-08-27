@@ -25,6 +25,12 @@ import {
  * @summary AD_AND_OR
  * @description
  *
+ * Conditional authorization wrapper (`ad-type` 5). Satisfied iff
+ * at least `condition-count` encapsulated elements are satisfied
+ * ([RFC 4120 §5.2.6.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.3)). `condition-count` 1 is OR; equal to the
+ * element count is AND. Servers that do not implement this type
+ * MUST reject tickets containing it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class AD_AND_OR {
   constructor(
     /**
      * @summary `condition_count`.
+     * @description
+     *
+     * Minimum number of encapsulated elements that must be
+     * satisfied ([RFC 4120 §5.2.6.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.3)).
+     *
      * @public
      * @readonly
      */
     readonly condition_count: Int32,
     /**
      * @summary `elements`.
+     * @description
+     *
+     * Restrictive authorization elements under the AND/OR
+     * condition ([RFC 4120 §5.2.6.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.3)).
+     *
      * @public
      * @readonly
      */

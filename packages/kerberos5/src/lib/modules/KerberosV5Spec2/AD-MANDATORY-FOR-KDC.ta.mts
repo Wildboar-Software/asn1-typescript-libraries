@@ -20,6 +20,10 @@ import {
  * @summary AD_MANDATORY_FOR_KDC
  * @description
  *
+ * Authorization-data wrapper (`ad-type` 8). Encapsulated
+ * elements MUST be interpreted by the KDC; unknown embedded
+ * types cause the KDC to reject the request ([RFC 4120 §5.2.6.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,11 @@ import {
  * @summary PA_DATA
  * @description
  *
+ * Pre-authentication / protocol-extension typed hole in KDC
+ * exchanges ([RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7)). Historically “pre-authentication
+ * data”; also used to extend AS/TGS exchanges. First context
+ * tag is `[1]`, not `[0]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +41,24 @@ export class PA_DATA {
   constructor(
     /**
      * @summary `padata_type`.
+     * @description
+     *
+     * How to interpret `padata-value`. Negative values unregistered;
+     * non-negative registered ([RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7), [RFC 4120 §7.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.2)).
+     * Examples: 1=`pa-tgs-req`, 2=`pa-enc-timestamp`,
+     * 11=`pa-etype-info`, 19=`pa-etype-info2`.
+     *
      * @public
      * @readonly
      */
     readonly padata_type: Int32,
     /**
      * @summary `padata_value`.
+     * @description
+     *
+     * Usually DER of another type identified by `padata-type`
+     * (e.g. encoded `AP-REQ` for `pa-tgs-req`) ([RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7)).
+     *
      * @public
      * @readonly
      */

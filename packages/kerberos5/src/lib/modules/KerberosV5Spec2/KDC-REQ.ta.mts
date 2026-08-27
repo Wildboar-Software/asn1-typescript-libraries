@@ -27,6 +27,10 @@ import {
  * @summary KDC_REQ
  * @description
  *
+ * Common body of `AS-REQ` / `TGS-REQ` ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)). No
+ * application tag of its own; tagged via AS (10) or TGS (12).
+ * First context tag is `[1]`, not `[0]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,24 +49,46 @@ export class KDC_REQ {
   constructor(
     /**
      * @summary `pvno`.
+     * @description
+     *
+     * Protocol version number; this document specifies 5
+     * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §5.2.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.4)).
+     *
      * @public
      * @readonly
      */
     readonly pvno: INTEGER,
     /**
      * @summary `msg_type`.
+     * @description
+     *
+     * Message type: 10 (`KRB_AS_REQ`) or 12 (`KRB_TGS_REQ`)
+     * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)). Usually matches the APPLICATION tag.
+     *
      * @public
      * @readonly
      */
     readonly msg_type: INTEGER,
     /**
      * @summary `padata`.
+     * @description
+     *
+     * Pre-authentication / extension data. `KRB_TGS_REQ` MUST
+     * contain `PA-TGS-REQ`. Sequence MUST NOT be empty when
+     * present ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7)).
+     *
      * @public
      * @readonly
      */
     readonly padata: OPTIONAL<PA_DATA[]>,
     /**
      * @summary `req_body`.
+     * @description
+     *
+     * Remainder of the request. Checksums over the request are
+     * computed over the encoding of this `KDC-REQ-BODY`
+     * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */

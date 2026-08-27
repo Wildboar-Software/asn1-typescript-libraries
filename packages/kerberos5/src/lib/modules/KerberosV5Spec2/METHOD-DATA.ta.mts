@@ -20,6 +20,10 @@ import {
  * @summary METHOD_DATA
  * @description
  *
+ * Acceptable pre-authentication methods: `SEQUENCE OF PA-DATA`
+ * ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)). Stored in `KRB-ERROR.e-data` when
+ * `error-code` is `KDC_ERR_PREAUTH_REQUIRED`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

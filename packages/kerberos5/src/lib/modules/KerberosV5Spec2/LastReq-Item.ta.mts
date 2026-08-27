@@ -25,6 +25,8 @@ import {
  * @summary LastReq_Item
  * @description
  *
+ * One last-request record: typed timestamp ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +38,24 @@ export class LastReq_Item {
   constructor(
     /**
      * @summary `lr_type`.
+     * @description
+     *
+     * Interpretation of `lr-value`. Negative → responding server
+     * only; non-negative → all servers in the realm. 0=none,
+     * 1=last initial TGT request, 2=last initial request,
+     * 3=newest TGT issue, 4=last renewal, 5=last request,
+     * 6=password expire, 7=account expire ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+     *
      * @public
      * @readonly
      */
     readonly lr_type: Int32,
     /**
      * @summary `lr_value`.
+     * @description
+     *
+     * Time interpreted per `lr-type` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+     *
      * @public
      * @readonly
      */

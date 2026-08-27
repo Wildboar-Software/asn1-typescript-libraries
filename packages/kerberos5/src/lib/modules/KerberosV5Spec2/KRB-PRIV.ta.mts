@@ -21,6 +21,10 @@ import {
  * @summary KRB_PRIV
  * @description
  *
+ * Confidentiality- and integrity-protected application message
+ * ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1), [RFC 4120 §3.5](https://datatracker.ietf.org/doc/html/rfc4120#section-3.5)). APPLICATION 21. Note: no
+ * context tag `[2]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +41,31 @@ export class KRB_PRIV {
   constructor(
     /**
      * @summary `pvno`.
+     * @description
+     *
+     * Protocol version 5 ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
+     *
      * @public
      * @readonly
      */
     readonly pvno: INTEGER,
     /**
      * @summary `msg_type`.
+     * @description
+     *
+     * `KRB_PRIV` (21) ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
+     *
      * @public
      * @readonly
      */
     readonly msg_type: INTEGER,
     /**
      * @summary `enc_part`.
+     * @description
+     *
+     * Encrypted `EncKrbPrivPart` under the session key, key usage
+     * 13 ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
+     *
      * @public
      * @readonly
      */

@@ -27,6 +27,8 @@ import {
  * @summary ETYPE_INFO2_ENTRY
  * @description
  *
+ * One entry of `ETYPE-INFO2` ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,18 +44,32 @@ export class ETYPE_INFO2_ENTRY {
   constructor(
     /**
      * @summary `etype`.
+     * @description
+     *
+     * Encryption type ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
+     *
      * @public
      * @readonly
      */
     readonly etype: Int32,
     /**
      * @summary `salt`.
+     * @description
+     *
+     * Optional salt as `KerberosString` ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
+     *
      * @public
      * @readonly
      */
     readonly salt?: OPTIONAL<KerberosString>,
     /**
      * @summary `s2kparams`.
+     * @description
+     *
+     * Optional string-to-key parameters; interpretation is per
+     * cryptosystem for `etype`. Omitted → cryptosystem default
+     * ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
+     *
      * @public
      * @readonly
      */

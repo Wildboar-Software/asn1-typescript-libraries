@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Int32
  * @description
  *
+ * Signed integer representable in 32 bits
+ * (−2147483648..2147483647) ([RFC 4120 §5.2.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,11 @@ import {
  * @summary Realm
  * @description
  *
+ * Kerberos realm name encoded as a `KerberosString`
+ * ([RFC 4120 §5.2.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.2), [RFC 4120 §6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-6.1)). SHALL NOT contain US-ASCII NUL.
+ * Typical forms use period-separated Internet domain style or
+ * slash-separated X.500 style names.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

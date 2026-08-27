@@ -61,6 +61,10 @@ import {
  * @summary KDC_REQ_BODY
  * @description
  *
+ * Request body inside `KDC-REQ` ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)). Carries
+ * options, names, times, nonce, etypes, and optional addresses,
+ * encrypted authorization data, and additional tickets.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -92,72 +96,133 @@ export class KDC_REQ_BODY {
   constructor(
     /**
      * @summary `kdc_options`.
+     * @description
+     *
+     * Flags requesting ticket properties and KDC behavior
+     * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §2](https://datatracker.ietf.org/doc/html/rfc4120#section-2)). Not simply copied to ticket
+     * `flags`.
+     *
      * @public
      * @readonly
      */
     readonly kdc_options: KDCOptions,
     /**
      * @summary `cname`.
+     * @description
+     *
+     * Client name; used only in `AS-REQ` ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly cname: OPTIONAL<PrincipalName>,
     /**
      * @summary `realm`.
+     * @description
+     *
+     * Server's realm; in AS exchange also the client's realm
+     * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly realm: Realm,
     /**
      * @summary `sname`.
+     * @description
+     *
+     * Server principal name. MAY be absent only with
+     * ENC-TKT-IN-SKEY; then taken from the additional ticket's
+     * client ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly sname: OPTIONAL<PrincipalName>,
     /**
      * @summary `from_`.
+     * @description
+     *
+     * Desired start time for a postdated ticket. If omitted, KDC
+     * SHOULD use current time ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly from_: OPTIONAL<KerberosTime>,
     /**
      * @summary `till`.
+     * @description
+     *
+     * Requested expiration. Required; value 19700101000000Z means
+     * maximum endtime per KDC policy ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly till: KerberosTime,
     /**
      * @summary `rtime`.
+     * @description
+     *
+     * Requested renew-till when RENEWABLE is set ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly rtime: OPTIONAL<KerberosTime>,
     /**
      * @summary `nonce`.
+     * @description
+     *
+     * Client random number; echoed in encrypted KDC reply to prove
+     * freshness. MUST NEVER be reused ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly nonce: UInt32,
     /**
      * @summary `etype`.
+     * @description
+     *
+     * Desired encryption types for the response, in preference
+     * order ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly etype: Int32[],
     /**
      * @summary `addresses`.
+     * @description
+     *
+     * Addresses from which the ticket should be valid; usually
+     * copied into ticket `caddr` ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly addresses?: OPTIONAL<HostAddresses>,
     /**
      * @summary `enc_authorization_data`.
+     * @description
+     *
+     * Desired `AuthorizationData` encrypted under TGS
+     * sub-session key (usage 5) or TGT session key (usage 4).
+     * Only in TGS_REQ ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
     readonly enc_authorization_data?: OPTIONAL<EncryptedData>,
     /**
      * @summary `additional_tickets`.
+     * @description
+     *
+     * Extra tickets (e.g. for ENC-TKT-IN-SKEY / user-to-user).
+     * MUST NOT be empty when present ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+     *
      * @public
      * @readonly
      */
