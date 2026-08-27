@@ -7,6 +7,8 @@ import { signcryption_mode } from "../CMSObjectIdentifiers/signcryption-mode.va.
  * @summary signcrypted_envelope
  * @description
  *
+ * OID for signcrypted-envelope mode / attribute (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

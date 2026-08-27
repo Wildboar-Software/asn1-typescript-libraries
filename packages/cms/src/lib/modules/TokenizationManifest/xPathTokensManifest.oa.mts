@@ -11,6 +11,9 @@ import {
  * @summary xPathTokensManifest
  * @description
  *
+ * TOKENIZED object using XPath to locate tokenized XML elements
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 8.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

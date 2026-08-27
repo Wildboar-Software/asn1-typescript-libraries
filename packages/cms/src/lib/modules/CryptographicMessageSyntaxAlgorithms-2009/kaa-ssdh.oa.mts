@@ -16,6 +16,8 @@ import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
  * @summary kaa_ssdh
  * @description
  *
+ * KEY-AGREE object for Static-Static DH (`id-alg-SSDH`) ([RFC 3370 §4.1.2](https://datatracker.ietf.org/doc/html/rfc3370#section-4.1.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

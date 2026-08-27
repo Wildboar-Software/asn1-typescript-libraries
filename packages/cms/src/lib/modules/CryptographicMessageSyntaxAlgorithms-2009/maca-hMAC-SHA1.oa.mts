@@ -11,6 +11,8 @@ import { hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/hMAC-SHA
  * @summary maca_hMAC_SHA1
  * @description
  *
+ * MAC-ALGORITHM object for HMAC-SHA1 ([RFC 3370 §6](https://datatracker.ietf.org/doc/html/rfc3370#section-6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

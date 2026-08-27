@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MODE
  * @description
  *
+ * Information object class for a SigncryptedData processing mode
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

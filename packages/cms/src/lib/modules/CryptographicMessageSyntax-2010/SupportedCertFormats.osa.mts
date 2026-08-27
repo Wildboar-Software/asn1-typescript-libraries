@@ -5,6 +5,9 @@ import { type OTHER_CERT_FMT } from "../CryptographicMessageSyntax-2010/OTHER-CE
  * @summary SupportedCertFormats
  * @description
  *
+ * Object set of supported `OTHER-CERT-FMT` objects
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

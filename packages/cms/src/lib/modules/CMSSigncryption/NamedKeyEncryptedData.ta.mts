@@ -26,6 +26,9 @@ import {
  * @summary NamedKeyEncryptedData
  * @description
  *
+ * Encrypted content under a named symmetric key (ANSI X9.73), used in
+ * signcrypted-envelope mode (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

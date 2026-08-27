@@ -8,6 +8,8 @@ import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
  * @summary HashAlgs
  * @description
  *
+ * Object set of PKIX hash algorithms ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

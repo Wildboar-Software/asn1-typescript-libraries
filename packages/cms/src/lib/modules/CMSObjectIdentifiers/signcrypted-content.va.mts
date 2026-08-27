@@ -7,6 +7,8 @@ import { signcryption_mode } from "../CMSObjectIdentifiers/signcryption-mode.va.
  * @summary signcrypted_content
  * @description
  *
+ * OID for signcrypted-content mode (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

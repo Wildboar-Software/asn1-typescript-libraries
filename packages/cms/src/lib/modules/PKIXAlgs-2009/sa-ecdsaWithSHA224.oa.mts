@@ -18,6 +18,8 @@ import { pk_ec } from "../PKIXAlgs-2009/pk-ec.oa.mjs";
  * @summary sa_ecdsaWithSHA224
  * @description
  *
+ * SIGNATURE-ALGORITHM for ECDSA-with-SHA-224 ([RFC 5758 §3.2](https://datatracker.ietf.org/doc/html/rfc5758#section-3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OtherCertificateFormat
  * @description
  *
+ * Extensible certificate format: format OID plus value
+ * ([RFC 5652 §10.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,8 @@ import { id_ecPublicKey } from "../PKIXAlgs-2009/id-ecPublicKey.va.mjs";
  * @summary pk_ec
  * @description
  *
+ * PUBLIC-KEY object for unrestricted ECC (`id-ecPublicKey`) ([RFC 5480 §2.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

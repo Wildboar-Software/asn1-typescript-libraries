@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary SignatureAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier for a signature algorithm
+ * ([RFC 5652 §10.1.2](https://datatracker.ietf.org/doc/html/rfc5652#section-10.1.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

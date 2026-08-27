@@ -11,6 +11,10 @@ import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
  * @summary aa_messageDigest
  * @description
  *
+ * ATTRIBUTE information object for the message-digest attribute: digest of
+ * the content (or of authenticated attributes when those are used)
+ * ([RFC 5652 §11.2](https://datatracker.ietf.org/doc/html/rfc5652#section-11.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

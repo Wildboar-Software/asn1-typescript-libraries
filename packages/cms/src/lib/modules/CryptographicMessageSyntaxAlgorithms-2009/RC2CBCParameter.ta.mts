@@ -13,6 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RC2CBCParameter
  * @description
  *
+ * RC2 CBC parameters: version (effective key bits encoding) and IV
+ * ([RFC 3370 §5.2](https://datatracker.ietf.org/doc/html/rfc3370#section-5.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Mode
  * @description
  *
+ * OID naming a SigncryptedData processing mode (`MODE.&id`)
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

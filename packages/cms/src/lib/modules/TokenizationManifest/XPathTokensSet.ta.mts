@@ -20,6 +20,9 @@ import {
  * @summary XPathTokensSet
  * @description
  *
+ * Optional token-service provider URI plus XPath set locating tokenized
+ * parts (ITU-T X.894 | ISO/IEC 24824-4 Annex A.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

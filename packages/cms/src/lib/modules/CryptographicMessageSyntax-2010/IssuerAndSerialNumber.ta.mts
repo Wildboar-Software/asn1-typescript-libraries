@@ -21,6 +21,9 @@ import {
  * @summary IssuerAndSerialNumber
  * @description
  *
+ * Certificate issuer name and serial number — classic CMS signer/recipient
+ * identifier ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +37,20 @@ export class IssuerAndSerialNumber {
     constructor(
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Certificate issuer `Name` ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
+         *
          * @public
          * @readonly
          */
         readonly issuer: Name,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Certificate serial number ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
+         *
          * @public
          * @readonly
          */

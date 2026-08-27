@@ -55,6 +55,12 @@ import {
  * @summary AuthenticatedData
  * @description
  *
+ * Authenticated-data content type: content of any type with a MAC, for one
+ * or more recipients ([RFC 5652 §9](https://datatracker.ietf.org/doc/html/rfc5652#section-9),
+ * [§9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+ * A message-authentication key is encrypted for each recipient similarly to
+ * enveloped-data key management.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -75,54 +81,94 @@ export class AuthenticatedData {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Version from originatorInfo, RecipientInfo, and unauthAttrs per
+         * [RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `originatorInfo`.
+         * @description
+         *
+         * Optional originator certificates/CRLs ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+         *
          * @public
          * @readonly
          */
         readonly originatorInfo: OPTIONAL<OriginatorInfo>,
         /**
          * @summary `recipientInfos`.
+         * @description
+         *
+         * Per-recipient info for the MAC key; at least one
+         * ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+         *
          * @public
          * @readonly
          */
         readonly recipientInfos: RecipientInfos,
         /**
          * @summary `macAlgorithm`.
+         * @description
+         *
+         * MAC algorithm identifier ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+         *
          * @public
          * @readonly
          */
         readonly macAlgorithm: MessageAuthenticationCodeAlgorithm,
         /**
          * @summary `digestAlgorithm`.
+         * @description
+         *
+         * Optional digest algorithm when authenticated attributes are present
+         * ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+         *
          * @public
          * @readonly
          */
         readonly digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>,
         /**
          * @summary `encapContentInfo`.
+         * @description
+         *
+         * Authenticated content ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+         *
          * @public
          * @readonly
          */
         readonly encapContentInfo: EncapsulatedContentInfo,
         /**
          * @summary `authAttrs`.
+         * @description
+         *
+         * Optional authenticated attributes; MUST include content-type and
+         * message-digest when present ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+         *
          * @public
          * @readonly
          */
         readonly authAttrs: OPTIONAL<AuthAttributes>,
         /**
          * @summary `mac`.
+         * @description
+         *
+         * MAC value ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+         *
          * @public
          * @readonly
          */
         readonly mac: MessageAuthenticationCode,
         /**
          * @summary `unauthAttrs`.
+         * @description
+         *
+         * Optional unauthenticated attributes ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+         *
          * @public
          * @readonly
          */

@@ -6,6 +6,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_dsa
  * @description
  *
+ * DSA public-key algorithm OID ([RFC 3279 §2.3.2](https://datatracker.ietf.org/doc/html/rfc3279#section-2.3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

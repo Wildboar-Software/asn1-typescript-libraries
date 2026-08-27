@@ -11,6 +11,8 @@ import { id_sha1 } from "../PKIXAlgs-2009/id-sha1.va.mjs";
  * @summary mda_sha1
  * @description
  *
+ * DIGEST-ALGORITHM object for SHA-1 ([RFC 3279](https://datatracker.ietf.org/doc/html/rfc3279)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

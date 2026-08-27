@@ -6,6 +6,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary ecdsa_with_SHA256
  * @description
  *
+ * ECDSA with SHA-256 signature OID ([RFC 5758 §3.2](https://datatracker.ietf.org/doc/html/rfc5758#section-3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

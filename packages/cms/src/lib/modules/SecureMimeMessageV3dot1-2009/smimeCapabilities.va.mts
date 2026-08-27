@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary smimeCapabilities
  * @description
  *
+ * OID for the SMIMECapabilities signed attribute
+ * ([RFC 5751 §2.5.2](https://datatracker.ietf.org/doc/html/rfc5751#section-2.5.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

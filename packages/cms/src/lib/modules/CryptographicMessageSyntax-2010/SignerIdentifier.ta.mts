@@ -16,6 +16,10 @@ import {
  * @summary SignerIdentifier
  * @description
  *
+ * CHOICE identifying the signer's certificate by issuer and serial number
+ * or by subject key identifier
+ * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

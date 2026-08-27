@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary KeyEncryptionAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier for a key-encryption algorithm (key transport, key
+ * agreement, or symmetric wrap) ([RFC 5652 §10.1.3](https://datatracker.ietf.org/doc/html/rfc5652#section-10.1.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

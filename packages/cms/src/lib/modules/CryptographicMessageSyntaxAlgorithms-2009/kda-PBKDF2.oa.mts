@@ -14,6 +14,8 @@ import {
  * @summary kda_PBKDF2
  * @description
  *
+ * KEY-DERIVATION object for PBKDF2 (`id-PBKDF2`) ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

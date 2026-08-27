@@ -11,6 +11,9 @@ import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
  * @summary aa_signingTime
  * @description
  *
+ * ATTRIBUTE information object for the signing-time attribute
+ * ([RFC 5652 §11.3](https://datatracker.ietf.org/doc/html/rfc5652#section-11.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

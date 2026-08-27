@@ -11,6 +11,8 @@ import { id_ckm_key_agree_multiple_encrypt } from "../CMSObjectIdentifiers/id-ck
  * @summary keyAgreeMultipleEncryptionConstruction
  * @description
  *
+ * CKM construction using key-agreement multiple encryption. (ITU-T X.894 | ISO/IEC 24824-4 clause 9.1 / Annex A.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

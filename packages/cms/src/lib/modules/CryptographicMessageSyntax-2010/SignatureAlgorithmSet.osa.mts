@@ -6,6 +6,9 @@ import { SignatureAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/Sign
  * @summary SignatureAlgorithmSet
  * @description
  *
+ * Object set of signature algorithms usable in this CMS profile
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

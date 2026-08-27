@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary PBKDF2_SaltSourcesAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier constrained to PBKDF2 salt-source algorithms
+ * ([RFC 5911](https://datatracker.ietf.org/doc/html/rfc5911)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

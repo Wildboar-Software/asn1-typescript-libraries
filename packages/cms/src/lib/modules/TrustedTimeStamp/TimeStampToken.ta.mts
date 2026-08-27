@@ -11,6 +11,11 @@ import {
  * @summary TimeStampToken
  * @description
  *
+ * Trusted time-stamp token type imported for CMS profile time-stamp
+ * attributes (ITU-T X.894 | ISO/IEC 24824-4 clause 8.2; ANSI X9.95). Corresponds to a CMS
+ * `ContentInfo` carrying `SignedData` with `TSTInfo` as in
+ * [RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

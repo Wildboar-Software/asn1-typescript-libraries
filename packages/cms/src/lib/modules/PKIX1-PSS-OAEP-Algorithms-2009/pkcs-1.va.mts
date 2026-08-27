@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary pkcs_1
  * @description
  *
+ * PKCS #1 arc OID used as parent for PSS/OAEP algorithm identifiers
+ * ([RFC 4055](https://datatracker.ietf.org/doc/html/rfc4055)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

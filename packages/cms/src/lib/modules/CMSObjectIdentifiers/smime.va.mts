@@ -7,6 +7,9 @@ import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
  * @summary smime
  * @description
  *
+ * S/MIME arc under PKCS #9 (`id-smime`)
+ * ([RFC 5751](https://datatracker.ietf.org/doc/html/rfc5751)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

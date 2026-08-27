@@ -6,6 +6,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_ckm_algorithms
  * @description
  *
+ * OID arc for CKM algorithms. (ITU-T X.894 | ISO/IEC 24824-4 clause 9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

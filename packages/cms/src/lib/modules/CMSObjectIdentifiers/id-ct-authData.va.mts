@@ -7,6 +7,9 @@ import { smime } from "../CMSObjectIdentifiers/smime.va.mjs";
  * @summary id_ct_authData
  * @description
  *
+ * OID for CMS `authenticated-data` (`id-ct-authData`)
+ * ([RFC 5652 §9.1](https://datatracker.ietf.org/doc/html/rfc5652#section-9.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

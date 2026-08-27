@@ -6,6 +6,8 @@ import { id_pkix } from "../PKIX1Explicit-2009/id-pkix.va.mjs";
  * @summary id_pe
  * @description
  *
+ * PKIX private extensions arc (`id-pe`) ([RFC 5280 §4.2.2](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,8 @@ import {
  * @summary pk_rsa
  * @description
  *
+ * PUBLIC-KEY object for RSA (`rsaEncryption`) ([RFC 3279 §2.3.1](https://datatracker.ietf.org/doc/html/rfc3279#section-2.3.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

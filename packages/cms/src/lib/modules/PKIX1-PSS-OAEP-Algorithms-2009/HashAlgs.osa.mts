@@ -9,6 +9,8 @@ import { mda_sha512 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha512.oa.mjs"
  * @summary HashAlgs
  * @description
  *
+ * Object set of DIGEST-ALGORITHM objects for PSS/OAEP hashes ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

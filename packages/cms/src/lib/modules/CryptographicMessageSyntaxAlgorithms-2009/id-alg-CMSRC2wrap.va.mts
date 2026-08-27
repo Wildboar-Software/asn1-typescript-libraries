@@ -6,6 +6,10 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_alg_CMSRC2wrap
  * @description
  *
+ * OID for RC2 key wrap in CMS (`id-alg-CMSRC2wrap`)
+ * ([RFC 3370 §4.3.2](https://datatracker.ietf.org/doc/html/rfc3370#section-4.3.2)).
+ * Parameters are `RC2wrapParameter`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

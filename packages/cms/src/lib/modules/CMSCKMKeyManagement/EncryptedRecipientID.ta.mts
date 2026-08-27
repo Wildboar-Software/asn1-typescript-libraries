@@ -16,6 +16,8 @@ import {
  * @summary EncryptedRecipientID
  * @description
  *
+ * Encrypted recipient identifier in CKM (ITU-T X.894 | ISO/IEC 24824-4 Annex A.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

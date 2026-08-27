@@ -7,6 +7,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_BitSprayShares
  * @description
  *
+ * CKM BitSpray shares OID. (ITU-T X.894 | ISO/IEC 24824-4 / ANSI X9.69 CKM).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

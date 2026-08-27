@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_ct_contentInfo
  * @description
  *
+ * OID identifying the content-information content type
+ * (`id-ct-contentInfo`) ([RFC 5652 §3](https://datatracker.ietf.org/doc/html/rfc5652#section-3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

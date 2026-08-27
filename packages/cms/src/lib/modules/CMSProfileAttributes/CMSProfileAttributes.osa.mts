@@ -13,6 +13,8 @@ import { aa_timeStamped } from "../CMSProfileAttributes/aa-timeStamped.oa.mjs";
  * @summary CMSProfileAttributes
  * @description
  *
+ * Object set of CMS profile attributes defined in ITU-T X.894 | ISO/IEC 24824-4 Annex A.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

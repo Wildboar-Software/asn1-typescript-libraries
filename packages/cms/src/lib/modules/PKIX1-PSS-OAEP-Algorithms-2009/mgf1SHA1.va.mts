@@ -15,6 +15,9 @@ import {
  * @summary mgf1SHA1
  * @description
  *
+ * Default MGF1 AlgorithmIdentifier using SHA-1
+ * ([RFC 4055 §2.2](https://datatracker.ietf.org/doc/html/rfc4055#section-2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

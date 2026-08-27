@@ -31,6 +31,11 @@ import {
  * @summary SigncryptedData
  * @description
  *
+ * Signcrypted-data content type: simultaneously signs and encrypts content
+ * using ISO/IEC 29150 signcryption (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1). Four processing
+ * modes: signcrypted-content, signcrypted-attributes, signcrypted-components,
+ * and signcrypted-envelope.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,30 +53,50 @@ export class SigncryptedData {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Syntax version number (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `contentInformation`.
+         * @description
+         *
+         * Processing mode OID and optional content (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2).
+         *
          * @public
          * @readonly
          */
         readonly contentInformation: ContentInformation,
         /**
          * @summary `certificates`.
+         * @description
+         *
+         * Optional certificates to help validate signcrypter public keys (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+         *
          * @public
          * @readonly
          */
         readonly certificates: OPTIONAL<Certificates>,
         /**
          * @summary `crls`.
+         * @description
+         *
+         * Optional CRLs for signcrypter certificates (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+         *
          * @public
          * @readonly
          */
         readonly crls: OPTIONAL<CRLs>,
         /**
          * @summary `signcrypters`.
+         * @description
+         *
+         * Per-recipient signcrypter information; at least one (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+         *
          * @public
          * @readonly
          */

@@ -5,6 +5,9 @@ import { type OTHER_REVOK_INFO } from "../CryptographicMessageSyntax-2010/OTHER-
  * @summary SupportedOtherRevokInfo
  * @description
  *
+ * Object set of supported `OTHER-REVOK-INFO` objects
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

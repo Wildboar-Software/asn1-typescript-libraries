@@ -6,6 +6,8 @@ import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/as
  * @summary id_precedingBlock
  * @description
  *
+ * OID for the precedingBlock profile attribute. (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

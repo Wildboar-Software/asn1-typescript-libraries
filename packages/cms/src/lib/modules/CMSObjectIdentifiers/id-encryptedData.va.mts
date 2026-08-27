@@ -7,6 +7,8 @@ import { pkcs7 } from "../CMSObjectIdentifiers/pkcs7.va.mjs";
  * @summary id_encryptedData
  * @description
  *
+ * OID for CMS `encrypted-data` ([RFC 5652 §8](https://datatracker.ietf.org/doc/html/rfc5652#section-8)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

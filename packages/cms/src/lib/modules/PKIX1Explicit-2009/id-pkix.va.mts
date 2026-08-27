@@ -6,6 +6,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_pkix
  * @description
  *
+ * PKIX arc OID (`id-pkix`) ([RFC 5280 §4.2.2](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

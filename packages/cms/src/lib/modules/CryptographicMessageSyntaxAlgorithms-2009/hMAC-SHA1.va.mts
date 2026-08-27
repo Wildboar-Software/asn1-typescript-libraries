@@ -6,6 +6,10 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary hMAC_SHA1
  * @description
  *
+ * OID for HMAC-SHA1 (`hMAC-SHA1`), used as PBKDF2 PRF default and as a CMS
+ * MAC algorithm ([RFC 3370 §4.4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.4.1),
+ * [§6](https://datatracker.ietf.org/doc/html/rfc3370#section-6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

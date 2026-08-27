@@ -20,6 +20,9 @@ import {
  * @summary ToBeSigncrypted
  * @description
  *
+ * Content and attributes that are signcrypted together (attributes /
+ * envelope modes) (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.2, 7.2.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

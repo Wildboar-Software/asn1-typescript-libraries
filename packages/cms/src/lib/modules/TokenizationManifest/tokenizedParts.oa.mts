@@ -18,6 +18,9 @@ import {
  * @summary tokenizedParts
  * @description
  *
+ * ATTRIBUTE carrying a tokenization manifest — locations of tokenized
+ * elements within content (ITU-T X.894 | ISO/IEC 24824-4 clause 8.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,8 @@ import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
  * @summary kaa_esdh
  * @description
  *
+ * KEY-AGREE object for Ephemeral-Static DH (`id-alg-ESDH`) ([RFC 3370 §4.1.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,8 @@ import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
  * @summary id_cms_XKMS
  * @description
  *
+ * OID for CMS XKMS XML markup (ITU-T X.894 | ISO/IEC 24824-4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

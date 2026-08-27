@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSA_Sig_Value
  * @description
  *
+ * DSA signature value SEQUENCE { r, s }
+ * ([RFC 3279 §2.2.2](https://datatracker.ietf.org/doc/html/rfc3279#section-2.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

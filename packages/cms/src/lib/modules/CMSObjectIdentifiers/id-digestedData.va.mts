@@ -7,6 +7,8 @@ import { pkcs7 } from "../CMSObjectIdentifiers/pkcs7.va.mjs";
  * @summary id_digestedData
  * @description
  *
+ * OID for CMS `digested-data` ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,9 @@ import {
  * @summary aa-signerInfos
  * @description
  *
+ * ATTRIBUTE carrying `SignerInfos` collecting cosigner `SignerInfo` values
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

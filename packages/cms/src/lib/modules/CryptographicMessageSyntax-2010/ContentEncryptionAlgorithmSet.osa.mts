@@ -6,6 +6,9 @@ import { ContentEncryptionAlgs } from "../CryptographicMessageSyntaxAlgorithms-2
  * @summary ContentEncryptionAlgorithmSet
  * @description
  *
+ * Object set of content-encryption algorithms for CMS
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

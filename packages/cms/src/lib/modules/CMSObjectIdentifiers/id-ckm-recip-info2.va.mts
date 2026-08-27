@@ -6,6 +6,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_ckm_recip_info2
  * @description
  *
+ * OID for CKM recipient info version 2. (ITU-T X.894 | ISO/IEC 24824-4 clause 9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

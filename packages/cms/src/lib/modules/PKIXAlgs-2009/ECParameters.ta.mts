@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECParameters
  * @description
  *
+ * ECC parameters CHOICE — typically `namedCurve`
+ * ([RFC 5480 §2.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

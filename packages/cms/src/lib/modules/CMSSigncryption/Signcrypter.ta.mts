@@ -40,6 +40,10 @@ import {
  * @summary Signcrypter
  * @description
  *
+ * Per-recipient signcryption info: key identifiers, algorithm, signcryption
+ * value, optional signature info and unprotected attributes
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 7.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_signcryptedData
  * @description
  *
+ * OID for SigncryptedData content type (ITU-T X.894 | ISO/IEC 24824-4 clause 7.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

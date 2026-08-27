@@ -6,6 +6,8 @@ import { kta_rsaES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/kta-rsaES-OAEP
  * @summary KeyTransportAlgs
  * @description
  *
+ * Object set of OAEP key-transport algorithms ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

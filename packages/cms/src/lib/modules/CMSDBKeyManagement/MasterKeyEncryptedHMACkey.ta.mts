@@ -21,6 +21,9 @@ import {
  * @summary MasterKeyEncryptedHMACkey
  * @description
  *
+ * HMAC key encrypted under the DBEKM master key (HK cryptogram)
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 9.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

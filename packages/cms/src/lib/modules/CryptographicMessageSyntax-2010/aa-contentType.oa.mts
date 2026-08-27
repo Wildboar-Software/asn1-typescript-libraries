@@ -11,6 +11,10 @@ import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
  * @summary aa_contentType
  * @description
  *
+ * ATTRIBUTE information object for the content-type attribute: a single
+ * `ContentType` OID naming the signed content
+ * ([RFC 5652 §11.1](https://datatracker.ietf.org/doc/html/rfc5652#section-11.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

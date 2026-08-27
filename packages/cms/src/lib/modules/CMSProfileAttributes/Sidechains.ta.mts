@@ -11,6 +11,8 @@ import {
  * @summary Sidechains
  * @description
  *
+ * SEQUENCE OF Sidechain hash pointers (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

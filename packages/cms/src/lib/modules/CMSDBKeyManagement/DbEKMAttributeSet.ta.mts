@@ -11,6 +11,8 @@ import {
  * @summary DbEKMAttributeSet
  * @description
  *
+ * SET of DBEKM attributes (ITU-T X.894 | ISO/IEC 24824-4 Annex A.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

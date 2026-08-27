@@ -6,6 +6,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_cms_namespaces
  * @description
  *
+ * OID arc for CMS XML namespaces (ITU-T X.894 | ISO/IEC 24824-4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

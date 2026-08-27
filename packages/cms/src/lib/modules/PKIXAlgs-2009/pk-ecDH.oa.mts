@@ -19,6 +19,8 @@ import { id_ecDH } from "../PKIXAlgs-2009/id-ecDH.va.mjs";
  * @summary pk_ecDH
  * @description
  *
+ * PUBLIC-KEY object for ECDH (`id-ecDH`) ([RFC 5480 §2.1.2](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

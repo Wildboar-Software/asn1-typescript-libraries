@@ -11,6 +11,8 @@ import {
  * @summary keyAgreeHashConstruction
  * @description
  *
+ * CKM construction using key-agreement hash (`id-ckm-key-agree-hash`). (ITU-T X.894 | ISO/IEC 24824-4 clause 9.1 / Annex A.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

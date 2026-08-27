@@ -11,6 +11,9 @@ import {
  * @summary RecipientInfos
  * @description
  *
+ * `SET OF RecipientInfo` — must contain at least one element
+ * ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

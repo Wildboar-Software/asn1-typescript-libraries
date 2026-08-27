@@ -11,6 +11,8 @@ import {
  * @summary TokenizedParts
  * @description
  *
+ * Parameterized tokenization manifest value (ITU-T X.894 | ISO/IEC 24824-4 clause 8.3; Annex A.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

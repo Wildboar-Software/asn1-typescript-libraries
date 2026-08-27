@@ -6,6 +6,9 @@ import { id_smime } from "../SecureMimeMessageV3dot1-2009/id-smime.va.mjs";
  * @summary id_cap
  * @description
  *
+ * S/MIME capabilities arc (`id-cap`)
+ * ([RFC 5751 §2.5.2](https://datatracker.ietf.org/doc/html/rfc5751#section-2.5.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

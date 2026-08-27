@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SMIMECapabilitiesParametersForRC2CBC
  * @description
  *
+ * INTEGER parameter for advertising RC2 CBC effective key bits in
+ * SMIMECapabilities ([RFC 5751 §2.5.2](https://datatracker.ietf.org/doc/html/rfc5751#section-2.5.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

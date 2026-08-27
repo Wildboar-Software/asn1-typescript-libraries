@@ -16,6 +16,8 @@ import {
  * @summary KeyConstructionRecipient
  * @description
  *
+ * Per-recipient CKM key-construction data (ITU-T X.894 | ISO/IEC 24824-4 Annex A.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

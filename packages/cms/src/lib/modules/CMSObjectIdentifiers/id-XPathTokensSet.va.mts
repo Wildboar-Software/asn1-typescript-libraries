@@ -7,6 +7,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_XPathTokensSet
  * @description
  *
+ * OID for the XPath tokenization manifest type (ITU-T X.894 | ISO/IEC 24824-4 Annex A.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

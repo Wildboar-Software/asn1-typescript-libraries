@@ -10,6 +10,12 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * @summary SIGNATURE_ALGORITHM
  * @description
  *
+ * Information object class for a signature algorithm
+ * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ * Suggested object prefix: `sa-`. May bind a signature value type,
+ * parameters, hash-algorithm set, compatible public-key set, and S/MIME
+ * capability.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

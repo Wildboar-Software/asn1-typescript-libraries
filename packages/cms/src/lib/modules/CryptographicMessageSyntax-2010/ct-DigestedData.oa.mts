@@ -11,6 +11,9 @@ import { id_digestedData } from "../CryptographicMessageSyntax-2010/id-digestedD
  * @summary ct_DigestedData
  * @description
  *
+ * `CONTENT-TYPE` information object for `DigestedData` identified by
+ * `id-digestedData` ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

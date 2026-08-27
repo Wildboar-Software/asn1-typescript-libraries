@@ -16,6 +16,8 @@ import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
  * @summary kta_rsaES_OAEP
  * @description
  *
+ * KEY-TRANSPORT object for RSAES-OAEP ([RFC 4055 §4](https://datatracker.ietf.org/doc/html/rfc4055#section-4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

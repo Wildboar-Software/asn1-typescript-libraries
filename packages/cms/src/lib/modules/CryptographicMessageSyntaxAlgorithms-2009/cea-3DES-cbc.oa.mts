@@ -14,6 +14,8 @@ import {
  * @summary cea_3DES_cbc
  * @description
  *
+ * CONTENT-ENCRYPTION object for Triple-DES CBC ([RFC 3370 §5.1](https://datatracker.ietf.org/doc/html/rfc3370#section-5.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

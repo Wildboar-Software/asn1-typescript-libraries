@@ -24,6 +24,8 @@ const PKCS1MGFAlgorithms_0: ALGORITHM<HashAlgorithm> = {
  * @summary PKCS1MGFAlgorithms
  * @description
  *
+ * Object set of MGF algorithms (MGF1) ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

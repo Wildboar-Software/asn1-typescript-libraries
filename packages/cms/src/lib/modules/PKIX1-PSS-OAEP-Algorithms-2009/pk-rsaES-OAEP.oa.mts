@@ -19,6 +19,8 @@ import {
  * @summary pk_rsaES_OAEP
  * @description
  *
+ * PUBLIC-KEY object for keys restricted to RSAES-OAEP ([RFC 4055 §4.1](https://datatracker.ietf.org/doc/html/rfc4055#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,9 @@ import {
  * @summary CBCParameter
  * @description
  *
+ * CBC IV parameter type (`IV`) for Triple-DES CBC
+ * ([RFC 3370 §5.1](https://datatracker.ietf.org/doc/html/rfc3370#section-5.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

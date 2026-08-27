@@ -6,6 +6,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary sect571k1
  * @description
  *
+ * Named curve OID `sect571k1` (K-571) for ECC public keys ([RFC 5480 §2.1.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SignatureValue
  * @description
  *
+ * OCTET STRING holding the signature value produced by the signature
+ * generation process ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

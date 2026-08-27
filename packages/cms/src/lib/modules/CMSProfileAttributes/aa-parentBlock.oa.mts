@@ -16,6 +16,9 @@ import {
  * @summary aa-parentBlock
  * @description
  *
+ * ATTRIBUTE pointing to a parent block via `HashPointer`
+ * (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

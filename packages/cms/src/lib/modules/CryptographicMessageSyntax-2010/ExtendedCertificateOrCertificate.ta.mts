@@ -16,6 +16,9 @@ import {
  * @summary ExtendedCertificateOrCertificate
  * @description
  *
+ * CHOICE of PKCS #6 extended certificate or X.509 certificate (legacy)
+ * ([RFC 5652 §12.1](https://datatracker.ietf.org/doc/html/rfc5652#section-12.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

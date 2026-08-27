@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CMSVersion
  * @description
  *
+ * CMS version INTEGER reused by SigncryptedData (ITU-T X.894 | ISO/IEC 24824-4; aligned with
+ * [RFC 5652 §10.2.5](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

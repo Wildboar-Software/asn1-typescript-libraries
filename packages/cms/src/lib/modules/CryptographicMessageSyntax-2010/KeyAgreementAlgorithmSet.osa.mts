@@ -6,6 +6,9 @@ import { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/K
  * @summary KeyAgreementAlgorithmSet
  * @description
  *
+ * Object set of key-agreement algorithms for `KeyAgreeRecipientInfo`
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

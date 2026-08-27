@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KEA_Params_Id
  * @description
  *
+ * OCTET STRING KEA parameter identifier
+ * ([RFC 3279 §2.3.3](https://datatracker.ietf.org/doc/html/rfc3279#section-2.3.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

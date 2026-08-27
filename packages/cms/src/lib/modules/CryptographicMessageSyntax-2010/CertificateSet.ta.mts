@@ -11,6 +11,9 @@ import {
  * @summary CertificateSet
  * @description
  *
+ * SET of `CertificateChoices` for `SignedData` / `EnvelopedData` / etc.
+ * ([RFC 5652 §10.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

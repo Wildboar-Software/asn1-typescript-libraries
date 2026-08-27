@@ -7,6 +7,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_ckm_symmetric
  * @description
  *
+ * OID for CKM symmetric construction. (ITU-T X.894 | ISO/IEC 24824-4 clause 9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

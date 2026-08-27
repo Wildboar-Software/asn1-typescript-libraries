@@ -21,6 +21,10 @@ import {
  * @summary SMIMEEncryptionKeyPreference
  * @description
  *
+ * CHOICE identifying the signer's preferred encryption certificate
+ * (issuer+serial, recipient key id, or subject key id)
+ * ([RFC 5751 §2.5.3](https://datatracker.ietf.org/doc/html/rfc5751#section-2.5.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

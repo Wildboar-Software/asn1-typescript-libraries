@@ -6,6 +6,8 @@ import { sect163k1 } from "../PKIXAlgs-2009/sect163k1.va.mjs";
  * @summary NamedCurve_Union1_Intersection0_Element
  * @description
  *
+ * Named-curve information object (element of `NamedCurve`) ([RFC 5480 §2.1.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1.1); [RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

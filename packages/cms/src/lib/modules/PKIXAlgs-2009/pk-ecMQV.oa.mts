@@ -19,6 +19,8 @@ import { id_ecMQV } from "../PKIXAlgs-2009/id-ecMQV.va.mjs";
  * @summary pk_ecMQV
  * @description
  *
+ * PUBLIC-KEY object for ECMQV (`id-ecMQV`) ([RFC 5480 §2.1.2](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

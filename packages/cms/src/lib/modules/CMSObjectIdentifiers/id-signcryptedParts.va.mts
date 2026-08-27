@@ -7,6 +7,8 @@ import { signcryption_manifest } from "../CMSObjectIdentifiers/signcryption-mani
  * @summary id_signcryptedParts
  * @description
  *
+ * OID for signcrypted-parts manifest usage (ITU-T X.894 | ISO/IEC 24824-4 clause 7.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

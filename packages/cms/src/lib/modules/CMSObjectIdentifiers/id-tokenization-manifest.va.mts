@@ -6,6 +6,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary id_tokenization_manifest
  * @description
  *
+ * OID arc for tokenization manifests (ITU-T X.894 | ISO/IEC 24824-4 clause 8.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -12,6 +12,9 @@ import {
  * @summary AttributeCertificateV2
  * @description
  *
+ * Type reference for a version 2 AttributeCertificate in
+ * `CertificateChoices` ([RFC 5652 §10.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

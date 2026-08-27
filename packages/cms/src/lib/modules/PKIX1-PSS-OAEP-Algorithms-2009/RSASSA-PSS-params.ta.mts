@@ -23,6 +23,9 @@ import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier
  * @summary RSASSA_PSS_params
  * @description
  *
+ * RSASSA-PSS parameters: hash, mask gen, salt length, trailer field
+ * ([RFC 4055 §3.1](https://datatracker.ietf.org/doc/html/rfc4055#section-3.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

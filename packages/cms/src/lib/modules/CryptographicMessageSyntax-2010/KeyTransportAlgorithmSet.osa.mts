@@ -6,6 +6,9 @@ import { KeyTransportAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/K
  * @summary KeyTransportAlgorithmSet
  * @description
  *
+ * Object set of key-transport algorithms for `KeyTransRecipientInfo`
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

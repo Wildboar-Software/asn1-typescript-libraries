@@ -30,6 +30,9 @@ import {
  * @summary KEKRecipientInfo
  * @description
  *
+ * Recipient info using a previously distributed key-encryption key (KEK)
+ * to wrap the CEK ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,24 +48,41 @@ export class KEKRecipientInfo {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * MUST be 4 ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `kekid`.
+         * @description
+         *
+         * Identifies the KEK; may include date and other key attribute
+         * ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+         *
          * @public
          * @readonly
          */
         readonly kekid: KEKIdentifier,
         /**
          * @summary `keyEncryptionAlgorithm`.
+         * @description
+         *
+         * Key-encryption (wrap) algorithm ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+         *
          * @public
          * @readonly
          */
         readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
         /**
          * @summary `encryptedKey`.
+         * @description
+         *
+         * CEK encrypted with the KEK ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+         *
          * @public
          * @readonly
          */

@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CMSVersion
  * @description
  *
+ * Integer syntax version number used throughout CMS content types
+ * ([RFC 5652 §10.2.5](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

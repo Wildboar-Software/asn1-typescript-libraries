@@ -7,6 +7,8 @@ import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
  * @summary id_messageComponents
  * @description
  *
+ * OID for message-components XML markup (ITU-T X.894 | ISO/IEC 24824-4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

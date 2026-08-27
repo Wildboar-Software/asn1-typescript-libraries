@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary KeyDerivationAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier for a key-derivation algorithm
+ * ([RFC 5652 §10.1.6](https://datatracker.ietf.org/doc/html/rfc5652#section-10.1.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

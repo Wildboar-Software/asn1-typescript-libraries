@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECDSA_Sig_Value
  * @description
  *
+ * ECDSA signature value SEQUENCE { r, s }
+ * ([RFC 3279 §2.2.3](https://datatracker.ietf.org/doc/html/rfc3279#section-2.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

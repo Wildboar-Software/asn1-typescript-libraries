@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CURVE
  * @description
  *
+ * Information object class for a named elliptic curve OID
+ * ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

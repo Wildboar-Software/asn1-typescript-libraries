@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UserKeyingMaterial
  * @description
  *
+ * OCTET STRING user keying material (UKM) for key agreement
+ * ([RFC 5652 §10.2.6](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

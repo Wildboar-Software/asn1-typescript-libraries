@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MessageDigest
  * @description
  *
+ * OCTET STRING message digest used as the value of the message-digest
+ * attribute ([RFC 5652 §11.2](https://datatracker.ietf.org/doc/html/rfc5652#section-11.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

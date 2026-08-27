@@ -14,6 +14,8 @@ import {
  * @summary pk_kea
  * @description
  *
+ * PUBLIC-KEY object for KEA ([RFC 3279 §2.3.3](https://datatracker.ietf.org/doc/html/rfc3279#section-2.3.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

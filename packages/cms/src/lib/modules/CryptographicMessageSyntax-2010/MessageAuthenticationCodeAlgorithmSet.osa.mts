@@ -6,6 +6,9 @@ import { MessageAuthAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/Me
  * @summary MessageAuthenticationCodeAlgorithmSet
  * @description
  *
+ * Object set of MAC algorithms for `AuthenticatedData`
+ * ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

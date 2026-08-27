@@ -16,6 +16,9 @@ import {
  * @summary aa-contentLocations
  * @description
  *
+ * ATTRIBUTE with a sequence of content-location URIs
+ * (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

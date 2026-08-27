@@ -16,6 +16,9 @@ import {
  * @summary aa-contentLocation
  * @description
  *
+ * ATTRIBUTE with a URI pointing to detached SignedData content
+ * (ITU-T X.894 | ISO/IEC 24824-4 clause 8.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

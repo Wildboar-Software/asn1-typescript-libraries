@@ -6,6 +6,10 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary des_ede3_cbc
  * @description
  *
+ * OID for Triple-DES CBC content encryption (`des-ede3-cbc`)
+ * ([RFC 3370 §5.1](https://datatracker.ietf.org/doc/html/rfc3370#section-5.1)).
+ * Parameters are an 8-octet IV.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

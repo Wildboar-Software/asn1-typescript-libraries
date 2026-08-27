@@ -13,6 +13,8 @@ import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
  * @summary sa_sha224WithRSAEncryption
  * @description
  *
+ * SIGNATURE-ALGORITHM for SHA-224 with RSA ([RFC 4055 §5](https://datatracker.ietf.org/doc/html/rfc4055#section-5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

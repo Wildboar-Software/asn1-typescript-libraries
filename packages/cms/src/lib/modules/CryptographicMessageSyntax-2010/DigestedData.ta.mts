@@ -30,6 +30,10 @@ import {
  * @summary DigestedData
  * @description
  *
+ * Digested-data content type: content of any type with a message digest
+ * ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+ * Provides content integrity without authentication of originator.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,24 +49,42 @@ export class DigestedData {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * 1 if `eContentType` is `id-data`; 2 otherwise
+         * ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `digestAlgorithm`.
+         * @description
+         *
+         * Message-digest algorithm identifier
+         * ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+         *
          * @public
          * @readonly
          */
         readonly digestAlgorithm: DigestAlgorithmIdentifier,
         /**
          * @summary `encapContentInfo`.
+         * @description
+         *
+         * Content that was digested ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+         *
          * @public
          * @readonly
          */
         readonly encapContentInfo: EncapsulatedContentInfo,
         /**
          * @summary `digest`.
+         * @description
+         *
+         * Message digest of the content ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+         *
          * @public
          * @readonly
          */

@@ -14,6 +14,8 @@ import {
  * @summary pk_originator_dh
  * @description
  *
+ * PUBLIC-KEY object for originator DH public number ([RFC 3370 §4.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

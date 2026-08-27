@@ -6,6 +6,8 @@ import { id_alg_CMS3DESwrap } from "../CryptographicMessageSyntaxAlgorithms-2009
  * @summary cap_3DESwrap
  * @description
  *
+ * SMIME-CAPS capability for Triple-DES key wrap ([RFC 3370](https://datatracker.ietf.org/doc/html/rfc3370); [RFC 5751](https://datatracker.ietf.org/doc/html/rfc5751)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

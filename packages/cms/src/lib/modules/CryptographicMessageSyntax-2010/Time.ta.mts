@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Time
  * @description
  *
+ * CHOICE of `UTCTime` or `GeneralizedTime` for CMS time values
+ * ([RFC 5652 §11.3](https://datatracker.ietf.org/doc/html/rfc5652#section-11.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_envelopedData
  * @description
  *
+ * OID for the CMS enveloped-data content type (`id-envelopedData`)
+ * ([RFC 5652 §6.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary MessageAuthenticationCodeAlgorithm
  * @description
  *
+ * AlgorithmIdentifier for a MAC algorithm
+ * ([RFC 5652 §10.1.5](https://datatracker.ietf.org/doc/html/rfc5652#section-10.1.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

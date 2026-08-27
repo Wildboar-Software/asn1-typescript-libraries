@@ -7,6 +7,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary ContentEncryptionAlgorithmIdentifier
  * @description
  *
+ * AlgorithmIdentifier for a content-encryption algorithm
+ * ([RFC 5652 §10.1.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.1.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

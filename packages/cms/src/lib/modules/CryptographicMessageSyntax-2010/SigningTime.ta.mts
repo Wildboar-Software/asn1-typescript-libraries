@@ -11,6 +11,9 @@ import {
  * @summary SigningTime
  * @description
  *
+ * Time type used as the value of the signing-time attribute — the time the
+ * content was signed ([RFC 5652 §11.3](https://datatracker.ietf.org/doc/html/rfc5652#section-11.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

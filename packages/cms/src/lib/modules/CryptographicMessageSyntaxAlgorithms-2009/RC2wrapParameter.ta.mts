@@ -11,6 +11,9 @@ import {
  * @summary RC2wrapParameter
  * @description
  *
+ * Parameter for RC2 key wrap: `RC2ParameterVersion`
+ * ([RFC 3370 §4.3.2](https://datatracker.ietf.org/doc/html/rfc3370#section-4.3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

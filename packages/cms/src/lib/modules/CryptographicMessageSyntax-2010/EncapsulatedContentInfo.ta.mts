@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncapsulatedContentInfo
  * @description
  *
+ * Signed (or authenticated) content: content-type OID and optional content
+ * octets ([RFC 5652 §5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
+ * Omitting `eContent` yields a detached signature; then the content type
+ * within this value is irrelevant and `eContent` MUST be omitted.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +31,23 @@ export class EncapsulatedContentInfo {
     constructor(
         /**
          * @summary `eContentType`.
+         * @description
+         *
+         * OID for the content type. Does not imply a particular content transfer
+         * encoding ([RFC 5652 §5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
+         *
          * @public
          * @readonly
          */
         readonly eContentType: OBJECT_IDENTIFIER,
         /**
          * @summary `eContent`.
+         * @description
+         *
+         * Content octets, exclusive of DER/BER tag and length (i.e., the value
+         * octets). Absent for detached content
+         * ([RFC 5652 §5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
+         *
          * @public
          * @readonly
          */

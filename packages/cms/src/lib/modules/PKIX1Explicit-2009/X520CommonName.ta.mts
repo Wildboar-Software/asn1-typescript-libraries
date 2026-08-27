@@ -11,6 +11,8 @@ import {
  * @summary X520CommonName
  * @description
  *
+ * DirectoryString CHOICE for the X.520 `commonName` attribute type ([RFC 5280 Appendix A](https://datatracker.ietf.org/doc/html/rfc5280#appendix-A); [RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

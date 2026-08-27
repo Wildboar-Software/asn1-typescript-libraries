@@ -6,6 +6,9 @@ import { KeyAgreePublicKeys } from "../CryptographicMessageSyntaxAlgorithms-2009
  * @summary OriginatorKeySet
  * @description
  *
+ * Object set of public-key algorithms usable as originator keys in key
+ * agreement ([RFC 6268](https://datatracker.ietf.org/doc/html/rfc6268)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

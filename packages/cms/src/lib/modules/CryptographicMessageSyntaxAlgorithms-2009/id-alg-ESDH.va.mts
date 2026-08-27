@@ -6,6 +6,10 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_alg_ESDH
  * @description
  *
+ * OID for Ephemeral-Static Diffie-Hellman key agreement in CMS
+ * (`id-alg-ESDH`) ([RFC 3370 §4.1.1](https://datatracker.ietf.org/doc/html/rfc3370#section-4.1.1)).
+ * Parameters are `KeyWrapAlgorithm`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

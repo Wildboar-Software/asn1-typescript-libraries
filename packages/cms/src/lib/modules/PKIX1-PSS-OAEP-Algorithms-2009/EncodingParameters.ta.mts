@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncodingParameters
  * @description
  *
+ * OCTET STRING encoding parameters (P) for pSpecified
+ * ([RFC 4055 §4.1](https://datatracker.ietf.org/doc/html/rfc4055#section-4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,9 @@ import {
  * @summary RevocationInfoChoice
  * @description
  *
+ * CHOICE of `CertificateList` (CRL) or `OtherRevocationInfoFormat`
+ * ([RFC 5652 §10.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

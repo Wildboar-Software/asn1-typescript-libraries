@@ -11,6 +11,8 @@ import { id_SimpleString } from "../CMSObjectIdentifiers/id-SimpleString.va.mjs"
  * @summary simpleString
  * @description
  *
+ * DBEKM attribute object for a simple string. (ITU-T X.894 | ISO/IEC 24824-4 clause 9.2 / Annex A.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,8 @@ import { type KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.mj
  * @summary DB_Encryption_Key_Management
  * @description
  *
+ * Object set of DBEKM key-management constructions. (ITU-T X.894 | ISO/IEC 24824-4 clause 9.2 / Annex A.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

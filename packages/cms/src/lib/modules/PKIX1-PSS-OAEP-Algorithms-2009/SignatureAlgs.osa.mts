@@ -6,6 +6,8 @@ import { sa_rsaSSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/sa-rsaSSA-PSS.o
  * @summary SignatureAlgs
  * @description
  *
+ * Object set of PSS and SHA-with-RSA signature algorithms ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

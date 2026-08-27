@@ -20,6 +20,9 @@ import {
  * @summary HashPointer
  * @description
  *
+ * Pointer to related content: optional `DigestedData` hash and/or location
+ * pointers (at least one present) (ITU-T X.894 | ISO/IEC 24824-4 Annex A.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

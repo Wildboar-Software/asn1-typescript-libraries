@@ -11,6 +11,8 @@ import { HashAlgorithms_Union4_Intersection0_Element } from "./HashAlgorithms-Un
  * @summary HashAlgorithms
  * @description
  *
+ * Object set of hash algorithms for PSS/OAEP ([RFC 5912](https://datatracker.ietf.org/doc/html/rfc5912)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

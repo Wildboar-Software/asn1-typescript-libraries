@@ -6,6 +6,8 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @summary cms
  * @description
  *
+ * CMS object-identifier module arc used by X9.73 / ITU-T X.894 | ISO/IEC 24824-4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
