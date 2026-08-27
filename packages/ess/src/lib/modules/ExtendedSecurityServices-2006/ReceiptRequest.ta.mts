@@ -25,6 +25,16 @@ import {
  * @summary ReceiptRequest
  * @description
  *
+ * Signed attribute requesting a signed receipt for a signed message.
+ * Placed in `SignerInfo.signedAttrs` of the innermost `SignedData` only;
+ * at most one `receiptRequest` per `SignerInfo`
+ * ([RFC 2634 §2.2](https://datatracker.ietf.org/doc/html/rfc2634#section-2.2); syntax [RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
+ *
+ * Attribute OID `id-aa-receiptRequest`. MUST NOT appear on a
+ * `SignedData` that encapsulates a `Receipt`. If multiple `SignerInfo`s
+ * carry a request, the values MUST be identical. The covering signature
+ * MUST be verified before processing the request.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +50,39 @@ export class ReceiptRequest {
     constructor(
         /**
          * @summary `signedContentIdentifier`.
+         * @description
+         *
+         * Originator-created identifier associating the receipt with the message
+         * that requested it. MUST be created when building the request. For
+         * global uniqueness, the minimal value SHOULD concatenate user-specific
+         * identification, a `GeneralizedTime` string, and a random number
+         * ([RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
+         *
          * @public
          * @readonly
          */
         readonly signedContentIdentifier: ContentIdentifier,
         /**
          * @summary `receiptsFrom`.
+         * @description
+         *
+         * Which recipients are asked to return a signed receipt: all recipients,
+         * first-tier recipients only, or an explicit list ([RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
+         *
          * @public
          * @readonly
          */
         readonly receiptsFrom: ReceiptsFrom,
         /**
          * @summary `receiptsTo`.
+         * @description
+         *
+         * `SEQUENCE SIZE (1..ub-receiptsTo)` of `GeneralNames` naming entities
+         * that should receive the signed receipt. The originator MUST include a
+         * `GeneralNames` for itself if it wants the receipt. Each `GeneralNames`
+         * MUST at least carry the delivery address; other `GeneralName` choices
+         * MAY be included ([RFC 2634 §2.2](https://datatracker.ietf.org/doc/html/rfc2634#section-2.2); [RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
+         *
          * @public
          * @readonly
          */

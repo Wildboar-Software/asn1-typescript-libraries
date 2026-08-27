@@ -27,6 +27,10 @@ import {
  * @summary ESSCertIDv2
  * @description
  *
+ * Certificate identifier for `SigningCertificateV2`: hash algorithm
+ * (default SHA-256), certificate hash, and optional issuer/serial
+ * ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,18 +46,35 @@ export class ESSCertIDv2 {
     constructor(
         /**
          * @summary `hashAlgorithm`.
+         * @description
+         *
+         * Algorithm used to compute `certHash`. DEFAULT
+         * `{algorithm id-sha256}` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
+         *
          * @public
          * @readonly
          */
         readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `certHash`.
+         * @description
+         *
+         * Hash of the entire DER-encoded certificate (including the signature),
+         * using `hashAlgorithm` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
+         *
          * @public
          * @readonly
          */
         readonly certHash: Hash,
         /**
          * @summary `issuerSerial`.
+         * @description
+         *
+         * Optional certificate identification; normally present unless inferable
+         * (for example from `SignerInfo.sid`). Attribute and additional public-key
+         * certificates SHOULD be identified with `IssuerSerial` when not included
+         * in `SignedData` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
+         *
          * @public
          * @readonly
          */

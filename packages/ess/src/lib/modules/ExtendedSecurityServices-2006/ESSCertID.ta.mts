@@ -20,6 +20,10 @@ import {
  * @summary ESSCertID
  * @description
  *
+ * Certificate identifier for `SigningCertificate` (v1): SHA-1 hash of the
+ * entire certificate, with optional issuer/serial
+ * ([RFC 2634 §5.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4.1); [RFC 5035 §6](https://datatracker.ietf.org/doc/html/rfc5035#section-6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +38,25 @@ export class ESSCertID {
     constructor(
         /**
          * @summary `certHash`.
+         * @description
+         *
+         * SHA-1 hash over the entire DER-encoded certificate including the
+         * signature ([RFC 2634 §5.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4.1); [RFC 5035 §6](https://datatracker.ietf.org/doc/html/rfc5035#section-6)).
+         *
          * @public
          * @readonly
          */
         readonly certHash: Hash,
         /**
          * @summary `issuerSerial`.
+         * @description
+         *
+         * Optional issuer name and serial. Normally present unless inferable
+         * (for example from `SignerInfo.sid`). For non-attribute certificates
+         * the issuer MUST contain only the certificate issuer as
+         * `directoryName`; for attribute certificates, the attribute-certificate
+         * issuer name ([RFC 2634 §5.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4.1)).
+         *
          * @public
          * @readonly
          */

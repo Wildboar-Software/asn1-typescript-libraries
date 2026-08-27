@@ -16,6 +16,17 @@ import {
  * @summary ReceiptsFrom
  * @description
  *
+ * CHOICE selecting who should return a signed receipt ([RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)):
+ *
+ * - `allOrFirstTier` [0] — `allReceipts` (0) or `firstTierRecipients` (1);
+ *   first-tier means the recipient did not receive the message as a
+ *   mailing-list member (no outer `mlExpansionHistory`)
+ * - `receiptList` [1] — `SEQUENCE OF GeneralNames`; create a receipt only
+ *   if the list contains one of the recipient's names
+ *
+ * Combined processing with `mlExpansionHistory` / `mlReceiptPolicy` is
+ * specified in [RFC 2634 §2.3](https://datatracker.ietf.org/doc/html/rfc2634#section-2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

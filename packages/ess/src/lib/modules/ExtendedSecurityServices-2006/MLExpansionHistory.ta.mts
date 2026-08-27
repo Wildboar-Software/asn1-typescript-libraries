@@ -11,6 +11,18 @@ import {
  * @summary MLExpansionHistory
  * @description
  *
+ * `SEQUENCE SIZE (1..ub-ml-expansion-history) OF MLData` recording each
+ * Mail List Agent (MLA) that expanded the message. Attribute OID
+ * `id-aa-mlExpandHistory`, carried on the outer `SignedData` of a
+ * triple-wrapped message. Used to detect expansion loops and to apply
+ * mail-list receipt policy. Absence means the recipient is first-tier
+ * ([RFC 2634 §4](https://datatracker.ietf.org/doc/html/rfc2634#section-4); [RFC 2634 §4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-4.1); [RFC 2634 §4.4](https://datatracker.ietf.org/doc/html/rfc2634#section-4.4)).
+ *
+ * If more than `ub-ml-expansion-history` entries appear, the receiving
+ * agent should notify a human mail-list administrator ([RFC 2634 §4.4](https://datatracker.ietf.org/doc/html/rfc2634#section-4.4)).
+ * MUST NOT appear on a `SignedData` that encapsulates a `Receipt`
+ * ([RFC 2634 §2.4.1](https://datatracker.ietf.org/doc/html/rfc2634#section-2.4.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,9 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_aa_signingCertificate
  * @description
  *
+ * Signed-attribute OID for `SigningCertificate` (v1 / SHA-1)
+ * (`… smime(16) id-aa(2) 12`) ([RFC 2634 §5.4](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4); [RFC 5035 §5](https://datatracker.ietf.org/doc/html/rfc5035#section-5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

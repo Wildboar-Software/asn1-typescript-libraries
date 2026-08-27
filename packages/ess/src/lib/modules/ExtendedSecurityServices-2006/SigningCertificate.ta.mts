@@ -20,6 +20,18 @@ import {
  * @summary SigningCertificate
  * @description
  *
+ * Version-1 signing-certificate signed attribute (OID
+ * `id-aa-signingCertificate`). Binds certificate hash(es) under the
+ * signature to prevent simple substitution/re-issue attacks and to
+ * restrict authorization certificates used in verification. Forces SHA-1
+ * for certificate hashing via `ESSCertID`
+ * ([RFC 2634 §5.4](https://datatracker.ietf.org/doc/html/rfc2634#section-5.4); [RFC 5035 §5](https://datatracker.ietf.org/doc/html/rfc5035#section-5)).
+ *
+ * MUST be a signed attribute (not unsigned); at most one instance per
+ * `SignerInfo` and a single `AttributeValue`. When SHA-1 is used for
+ * certificate disambiguation, this attribute MUST be used; for other hash
+ * algorithms use `SigningCertificateV2` ([RFC 5035 §2](https://datatracker.ietf.org/doc/html/rfc5035#section-2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +46,29 @@ export class SigningCertificate {
     constructor(
         /**
          * @summary `certs`.
+         * @description
+         *
+         * Sequence of `ESSCertID`. The first MUST identify the certificate used
+         * to verify the signature; if that cert's hash does not match, the
+         * signature MUST be considered invalid. Encoding of the first
+         * `ESSCertID` SHOULD include `issuerSerial` (MAY omit if
+         * `issuerAndSerialNumber` is otherwise present in `SignerInfo`). Further
+         * entries limit authorization/path certificates; if only the signing
+         * cert is listed, authorization certs are unrestricted
+         * ([RFC 5035 §5](https://datatracker.ietf.org/doc/html/rfc5035#section-5)).
+         *
          * @public
          * @readonly
          */
         readonly certs: ESSCertID[],
         /**
          * @summary `policies`.
+         * @description
+         *
+         * Optional certificate policies the signer asserts apply to the
+         * certificate and under which it should be relied upon; suggests a policy
+         * for path validation ([RFC 5035 §5](https://datatracker.ietf.org/doc/html/rfc5035#section-5)).
+         *
          * @public
          * @readonly
          */
