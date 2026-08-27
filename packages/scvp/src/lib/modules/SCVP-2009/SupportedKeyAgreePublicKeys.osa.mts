@@ -17,6 +17,9 @@ import {
  * @summary SupportedKeyAgreePublicKeys
  * @description
  *
+ * Object set of supported key-agreement public-key algorithms for
+ * `KeyAgreePublicKey` ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

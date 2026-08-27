@@ -15,6 +15,9 @@ import { svp_basicValAlg } from '../SCVP-2009/svp-basicValAlg.oa.mjs';
  * @summary ValidationAlgSet
  * @description
  *
+ * Object set of validation algorithms (`svp-basicValAlg`, …)
+ * ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

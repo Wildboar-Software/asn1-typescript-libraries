@@ -15,6 +15,8 @@ import { id_nvae } from '../SCVP-2009/id-nvae.va.mjs';
  * @summary id_nvae_bad_name_type
  * @description
  *
+ * Name val error: inappropriate name type for the application identifier ([RFC 5055 §3.2.4.2.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

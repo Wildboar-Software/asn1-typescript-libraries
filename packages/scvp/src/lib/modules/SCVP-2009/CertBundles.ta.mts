@@ -19,6 +19,9 @@ import {
  * @summary CertBundles
  * @description
  *
+ * Sequence of `CertBundle` values (e.g., all certification paths
+ * wantBack) ([RFC 5055 §3.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

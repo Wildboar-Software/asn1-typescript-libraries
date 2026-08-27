@@ -22,6 +22,10 @@ import {
  * @summary KeyAgreePublicKey
  * @description
  *
+ * Server public key for CMS `AuthenticatedData` responses: key-
+ * agreement algorithm, public key bits, MAC algorithm, and optional
+ * KDF ([RFC 5055 §6.18](https://datatracker.ietf.org/doc/html/rfc5055#section-6.18)) / ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import { id_bvae } from '../SCVP-2009/id-bvae.va.mjs';
  * @summary id_bvae_invalidKeyUsage
  * @description
  *
+ * Basic val error: `keyUsage` does not satisfy the validation policy ([RFC 5055 §3.2.4.2.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import { svp_nameValAlg } from '../SCVP-2009/svp-nameValAlg.oa.mjs';
  * @summary NameValidationAlgSet
  * @description
  *
+ * Object set containing the name validation algorithm
+ * (`svp-nameValAlg`) ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

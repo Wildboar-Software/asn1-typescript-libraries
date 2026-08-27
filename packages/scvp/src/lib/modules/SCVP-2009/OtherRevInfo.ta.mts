@@ -15,6 +15,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary OtherRevInfo
  * @description
  *
+ * Extensible revocation info via `REV-INFO` type identifier
+ * ([RFC 5055 §3.2.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.9)) / ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

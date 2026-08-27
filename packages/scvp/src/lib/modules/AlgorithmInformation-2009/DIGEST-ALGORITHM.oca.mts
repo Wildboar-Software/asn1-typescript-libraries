@@ -6,6 +6,12 @@ import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
  * @summary DIGEST_ALGORITHM
  * @description
  *
+ * Information object class for a message-digest (hash) algorithm
+ * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2), also [RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3)).
+ * Suggested object prefix: `mda-`. Captures the algorithm OID, optional
+ * parameters type, and parameter presence constraint for parameterized
+ * `AlgorithmIdentifier`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

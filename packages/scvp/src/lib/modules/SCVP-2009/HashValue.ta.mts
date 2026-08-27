@@ -25,6 +25,9 @@ import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.mjs';
  * @summary HashValue
  * @description
  *
+ * Hash algorithm plus hash value; used for `requestHash` in
+ * `RequestReference` ([RFC 5055 §4.6.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +42,20 @@ export class HashValue {
   constructor(
     /**
      * @summary `algorithm`.
+     * @description
+     *
+     * Digest algorithm; DEFAULT SHA-1 (`mda-sha1`) ([RFC 5055 §4.6.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.6.1)).
+     *
      * @public
      * @readonly
      */
     readonly algorithm: OPTIONAL<HashAlgorithm>,
     /**
      * @summary `value`.
+     * @description
+     *
+     * Hash octets of the DER-encoded `CVRequest` ([RFC 5055 §4.6.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.6.1)).
+     *
      * @public
      * @readonly
      */

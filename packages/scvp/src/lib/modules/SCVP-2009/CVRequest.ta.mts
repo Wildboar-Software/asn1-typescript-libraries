@@ -41,6 +41,16 @@ import {
  * @summary CVRequest
  * @description
  *
+ * SCVP certificate validation request ([RFC 5055 §3](https://datatracker.ietf.org/doc/html/rfc5055#section-3)).
+ * A client request MUST be a single `CVRequest` (MIME type
+ * `application/scvp-cv-request` when carried as a MIME body part).
+ * May be unprotected (`ContentInfo` with `id-ct-scvp-certValRequest`)
+ * or protected (CMS `SignedData` / `AuthenticatedData` encapsulating
+ * DER-encoded `CVRequest`).
+ *
+ * Conforming servers MUST parse requests that contain any or all
+ * optional items.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -68,60 +78,117 @@ export class CVRequest {
   constructor(
     /**
      * @summary `cvRequestVersion`.
+     * @description
+     *
+     * Version of this `CVRequest`. DEFAULT 1. Clients SHOULD use 1;
+     * servers that do not support the requested version return
+     * `unsupportedVersion` ([RFC 5055 §3.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.1)).
+     *
      * @public
      * @readonly
      */
     readonly cvRequestVersion: OPTIONAL<INTEGER>,
     /**
      * @summary `query`.
+     * @description
+     *
+     * The validation query: certificates, checks, wantBacks, and
+     * validation policy ([RFC 5055 §3.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2)).
+     *
      * @public
      * @readonly
      */
     readonly query: Query,
     /**
      * @summary `requestorRef`.
+     * @description
+     *
+     * Optional names identifying the requestor, typically for servers
+     * that relay requests. Relaying servers MAY add a name; clients
+     * need not set this ([RFC 5055 §3.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.3)).
+     *
      * @public
      * @readonly
      */
     readonly requestorRef?: OPTIONAL<GeneralNames>,
     /**
      * @summary `requestNonce`.
+     * @description
+     *
+     * Client-generated nonce binding request to response. If present
+     * and the server returns a non-cached response, the same value MUST
+     * appear in `respNonce`. Cached responses omit `respNonce`
+     * ([RFC 5055 §3.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.4)).
+     *
      * @public
      * @readonly
      */
     readonly requestNonce?: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `requestorName`.
+     * @description
+     *
+     * Optional name of the requestor; used when authenticating the
+     * request (e.g., matching a certificate subject) ([RFC 5055 §3.5](https://datatracker.ietf.org/doc/html/rfc5055#section-3.5)).
+     *
      * @public
      * @readonly
      */
     readonly requestorName?: OPTIONAL<GeneralName>,
     /**
      * @summary `responderName`.
+     * @description
+     *
+     * Optional name of the SCVP server expected to answer. Servers
+     * without a matching certificate return
+     * `unrecognizedResponderName` ([RFC 5055 §3.6](https://datatracker.ietf.org/doc/html/rfc5055#section-3.6)).
+     *
      * @public
      * @readonly
      */
     readonly responderName?: OPTIONAL<GeneralName>,
     /**
      * @summary `requestExtensions`.
+     * @description
+     *
+     * Optional request-level extensions (`RequestExtensions` object
+     * set). Unrecognized critical extensions yield
+     * `unrecognizedCritRequestExt` ([RFC 5055 §3.7](https://datatracker.ietf.org/doc/html/rfc5055#section-3.7)).
+     *
      * @public
      * @readonly
      */
     readonly requestExtensions?: OPTIONAL<Extensions>,
     /**
      * @summary `signatureAlg`.
+     * @description
+     *
+     * Optional signature algorithm the client wants the server to use
+     * when protecting the response ([RFC 5055 §3.8](https://datatracker.ietf.org/doc/html/rfc5055#section-3.8)).
+     *
      * @public
      * @readonly
      */
     readonly signatureAlg?: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `hashAlg`.
+     * @description
+     *
+     * Optional hash algorithm OID the client wants used when computing
+     * `requestHash` in `RequestReference` ([RFC 5055 §3.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.9)).
+     *
      * @public
      * @readonly
      */
     readonly hashAlg?: OPTIONAL<OBJECT_IDENTIFIER>,
     /**
      * @summary `requestorText`.
+     * @description
+     *
+     * Optional UTF-8 text (1..256) supplied by the client. Echoed in
+     * non-cached responses; omitted from cached responses
+     * ([RFC 5055 §3.10](https://datatracker.ietf.org/doc/html/rfc5055#section-3.10)).
+     *
      * @public
      * @readonly
      */

@@ -15,6 +15,9 @@ import { svp_defaultValPolicy } from '../SCVP-2009/svp-defaultValPolicy.oa.mjs';
  * @summary ValidationPolRefSet
  * @description
  *
+ * Object set of validation policies (`svp-defaultValPolicy`, …)
+ * ([RFC 5055 §3.2.4.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.1)) / ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

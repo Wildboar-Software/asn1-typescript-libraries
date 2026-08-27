@@ -24,6 +24,9 @@ import {
  * @summary CertReference
  * @description
  *
+ * Single certificate reference used in `CertReply.cert`: either a
+ * `PKCReference` or `ACReference` ([RFC 5055 §4.9.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.1)) / ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

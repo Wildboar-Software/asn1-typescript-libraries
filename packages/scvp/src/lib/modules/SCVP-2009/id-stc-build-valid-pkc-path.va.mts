@@ -15,6 +15,8 @@ import { id_stc } from '../SCVP-2009/id-stc.va.mjs';
  * @summary id_stc_build_valid_pkc_path
  * @description
  *
+ * Check: build a validated PKC path (revocation checking not required) ([RFC 5055 §3.2.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

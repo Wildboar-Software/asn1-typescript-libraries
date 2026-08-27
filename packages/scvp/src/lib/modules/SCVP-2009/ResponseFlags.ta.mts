@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ResponseFlags
  * @description
  *
+ * Optional query flags controlling how the server builds the
+ * `CVResponse` ([RFC 5055 §3.2.5](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,24 +37,44 @@ export class ResponseFlags {
   constructor(
     /**
      * @summary `fullRequestInResponse`.
+     * @description
+     *
+     * If TRUE, ask the server to return the full `CVRequest` in
+     * `requestRef` (DEFAULT FALSE) ([RFC 5055 §3.2.5.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.1)).
+     *
      * @public
      * @readonly
      */
     readonly fullRequestInResponse?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `responseValidationPolByRef`.
+     * @description
+     *
+     * If TRUE (DEFAULT), prefer policy by reference in the response;
+     * FALSE asks for full policy by value ([RFC 5055 §3.2.5.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.2)).
+     *
      * @public
      * @readonly
      */
     readonly responseValidationPolByRef?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `protectResponse`.
+     * @description
+     *
+     * If TRUE (DEFAULT), ask for a protected response
+     * ([RFC 5055 §3.2.5.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.3)).
+     *
      * @public
      * @readonly
      */
     readonly protectResponse?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `cachedResponse`.
+     * @description
+     *
+     * If TRUE (DEFAULT), allow a cached response; FALSE asks for a
+     * request-specific response ([RFC 5055 §3.2.5.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.4)).
+     *
      * @public
      * @readonly
      */

@@ -19,6 +19,9 @@ import {
  * @summary RespValidationPolicy
  * @description
  *
+ * Validation policy echoed in `CVResponse` (`RespValidationPolicy`
+ * is `ValidationPolicy`) ([RFC 5055 §4.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

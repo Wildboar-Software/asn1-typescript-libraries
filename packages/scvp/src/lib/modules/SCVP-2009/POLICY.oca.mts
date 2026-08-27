@@ -15,6 +15,9 @@ import type { ATTRIBUTE } from '@wildboar/x500/InformationFramework';
  * @summary POLICY
  * @description
  *
+ * Alias of `ATTRIBUTE` used for SCVP validation-policy and
+ * validation-algorithm information objects ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

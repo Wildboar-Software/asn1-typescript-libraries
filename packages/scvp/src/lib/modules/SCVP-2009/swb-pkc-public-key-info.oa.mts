@@ -21,6 +21,10 @@ import type { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
  * @summary swb_pkc_public_key_info
  * @description
  *
+ * WantBack information object for `id-swb-pkc-public-key-info`: The public key from the certificate that was the subject of the request.
+ * Conformance: MUST for conforming servers as specified in
+ * ([RFC 5055 §3.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

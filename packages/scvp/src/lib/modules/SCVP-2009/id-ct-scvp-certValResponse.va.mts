@@ -15,6 +15,8 @@ import { id_ct } from '../SCVP-2009/id-ct.va.mjs';
  * @summary id_ct_scvp_certValResponse
  * @description
  *
+ * CMS content-type OID for `CVResponse` (`{ id-ct 11 }`) ([RFC 5055 §4](https://datatracker.ietf.org/doc/html/rfc5055#section-4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

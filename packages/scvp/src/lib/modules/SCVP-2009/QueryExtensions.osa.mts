@@ -15,6 +15,9 @@ import type { EXTENSION } from '@wildboar/x500/AuthenticationFramework';
  * @summary QueryExtensions
  * @description
  *
+ * Extension object set for `Query.queryExtensions`
+ * (extensible; RFC 5055 defines none) ([RFC 5055 §3.2.11](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

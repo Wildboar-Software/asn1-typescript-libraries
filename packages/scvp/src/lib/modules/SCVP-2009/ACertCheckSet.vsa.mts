@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ACertCheckSet
  * @description
  *
+ * Value set of attribute-certificate check OIDs (AA path build /
+ * validate / status-check, and AC status) ([RFC 5055 §3.2.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

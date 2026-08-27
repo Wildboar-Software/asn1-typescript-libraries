@@ -21,6 +21,10 @@ import type { CONTENT_TYPE } from '@wildboar/cms';
  * @summary ct_scvp_valPolResponse
  * @description
  *
+ * CMS `CONTENT-TYPE` for an SCVP validation-policy response:
+ * `ValPolResponse` identified by `id-ct-scvp-valPolResponse`
+ * ([RFC 5055 §6](https://datatracker.ietf.org/doc/html/rfc5055#section-6)) / ([RFC 5912 §11](https://datatracker.ietf.org/doc/html/rfc5912#section-11)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

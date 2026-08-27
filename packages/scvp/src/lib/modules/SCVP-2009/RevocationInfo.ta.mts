@@ -29,6 +29,9 @@ import {
  * @summary RevocationInfo
  * @description
  *
+ * One revocation artifact: CRL, delta-CRL, OCSP response, or
+ * `OtherRevInfo` ([RFC 5055 §3.2.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.9)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

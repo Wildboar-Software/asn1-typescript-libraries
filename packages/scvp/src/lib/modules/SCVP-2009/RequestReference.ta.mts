@@ -24,6 +24,9 @@ import {
  * @summary RequestReference
  * @description
  *
+ * Reference to the request: hash of `CVRequest` or the full request
+ * ([RFC 5055 §4.6](https://datatracker.ietf.org/doc/html/rfc5055#section-4.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

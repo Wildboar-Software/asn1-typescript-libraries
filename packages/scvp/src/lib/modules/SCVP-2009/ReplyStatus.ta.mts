@@ -15,6 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReplyStatus
  * @description
  *
+ * Per-certificate status in `CertReply` ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ * Distinct from `CVStatusCode` (whole-request status). For codes 1–4,
+ * `replyChecks` and `replyWantBacks` MUST be empty; for 5–8,
+ * `replyChecks` MUST cover each requested check and wantBacks are
+ * not populated.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,6 +55,12 @@ export enum _enum_for_ReplyStatus {
  * @summary ReplyStatus
  * @description
  *
+ * Per-certificate status in `CertReply` ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ * Distinct from `CVStatusCode` (whole-request status). For codes 1–4,
+ * `replyChecks` and `replyWantBacks` MUST be empty; for 5–8,
+ * `replyChecks` MUST cover each requested check and wantBacks are
+ * not populated.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -73,6 +85,12 @@ export type ReplyStatus = _enum_for_ReplyStatus;
  * @summary ReplyStatus
  * @description
  *
+ * Per-certificate status in `CertReply` ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ * Distinct from `CVStatusCode` (whole-request status). For codes 1–4,
+ * `replyChecks` and `replyWantBacks` MUST be empty; for 5–8,
+ * `replyChecks` MUST cover each requested check and wantBacks are
+ * not populated.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -95,6 +113,10 @@ export const ReplyStatus = _enum_for_ReplyStatus;
 
 /**
  * @summary ReplyStatus_success
+ * @description
+ *
+ * `success`(0): Success: all checks were performed successfully. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +125,10 @@ export const ReplyStatus_success: ReplyStatus =
 
 /**
  * @summary success
+ * @description
+ *
+ * Short name for `ReplyStatus_success` (0) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +137,10 @@ export const success: ReplyStatus =
 
 /**
  * @summary ReplyStatus_malformedPKC
+ * @description
+ *
+ * `malformedPKC`(1): Failure: the public key certificate was malformed. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +149,10 @@ export const ReplyStatus_malformedPKC: ReplyStatus =
 
 /**
  * @summary malformedPKC
+ * @description
+ *
+ * Short name for `ReplyStatus_malformedPKC` (1) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +161,10 @@ export const malformedPKC: ReplyStatus =
 
 /**
  * @summary ReplyStatus_malformedAC
+ * @description
+ *
+ * `malformedAC`(2): Failure: the attribute certificate was malformed. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +173,10 @@ export const ReplyStatus_malformedAC: ReplyStatus =
 
 /**
  * @summary malformedAC
+ * @description
+ *
+ * Short name for `ReplyStatus_malformedAC` (2) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +185,10 @@ export const malformedAC: ReplyStatus =
 
 /**
  * @summary ReplyStatus_unavailableValidationTime
+ * @description
+ *
+ * `unavailableValidationTime`(3): Failure: historical data for the requested validation time is not available. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +197,10 @@ export const ReplyStatus_unavailableValidationTime: ReplyStatus =
 
 /**
  * @summary unavailableValidationTime
+ * @description
+ *
+ * Short name for `ReplyStatus_unavailableValidationTime` (3) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +209,10 @@ export const unavailableValidationTime: ReplyStatus =
 
 /**
  * @summary ReplyStatus_referenceCertHashFail
+ * @description
+ *
+ * `referenceCertHashFail`(4): Failure: the server could not locate the reference certificate or the hash did not match. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +221,10 @@ export const ReplyStatus_referenceCertHashFail: ReplyStatus =
 
 /**
  * @summary referenceCertHashFail
+ * @description
+ *
+ * Short name for `ReplyStatus_referenceCertHashFail` (4) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +233,10 @@ export const referenceCertHashFail: ReplyStatus =
 
 /**
  * @summary ReplyStatus_certPathConstructFail
+ * @description
+ *
+ * `certPathConstructFail`(5): Failure: no certification path could be constructed. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +245,10 @@ export const ReplyStatus_certPathConstructFail: ReplyStatus =
 
 /**
  * @summary certPathConstructFail
+ * @description
+ *
+ * Short name for `ReplyStatus_certPathConstructFail` (5) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +257,10 @@ export const certPathConstructFail: ReplyStatus =
 
 /**
  * @summary ReplyStatus_certPathNotValid
+ * @description
+ *
+ * `certPathNotValid`(6): Failure: the constructed certification path is not valid with respect to the validation policy. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -199,6 +269,10 @@ export const ReplyStatus_certPathNotValid: ReplyStatus =
 
 /**
  * @summary certPathNotValid
+ * @description
+ *
+ * Short name for `ReplyStatus_certPathNotValid` (6) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -207,6 +281,10 @@ export const certPathNotValid: ReplyStatus =
 
 /**
  * @summary ReplyStatus_certPathNotValidNow
+ * @description
+ *
+ * `certPathNotValidNow`(7): Failure: path not valid now (e.g., hold, missing revocation info, or notYetValid), but a later query may succeed. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -215,6 +293,10 @@ export const ReplyStatus_certPathNotValidNow: ReplyStatus =
 
 /**
  * @summary certPathNotValidNow
+ * @description
+ *
+ * Short name for `ReplyStatus_certPathNotValidNow` (7) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -223,6 +305,10 @@ export const certPathNotValidNow: ReplyStatus =
 
 /**
  * @summary ReplyStatus_wantBackUnsatisfied
+ * @description
+ *
+ * `wantBackUnsatisfied`(8): Failure: checks succeeded, but one or more wantBacks could not be satisfied. ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */
@@ -231,6 +317,10 @@ export const ReplyStatus_wantBackUnsatisfied: ReplyStatus =
 
 /**
  * @summary wantBackUnsatisfied
+ * @description
+ *
+ * Short name for `ReplyStatus_wantBackUnsatisfied` (8) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+ *
  * @constant
  * @type {number}
  */

@@ -19,6 +19,9 @@ import {
  * @summary RevocationInfos
  * @description
  *
+ * Sequence of revocation info items supplied in a query or returned
+ * as wantBack ([RFC 5055 §3.2.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.9)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

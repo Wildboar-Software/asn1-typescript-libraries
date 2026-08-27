@@ -15,6 +15,8 @@ import {
  * @summary id_stc
  * @description
  *
+ * Arc for SCVP check (status-check) OIDs (`id-stc`) ([RFC 5055 §3.2.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary WantBack
  * @description
  *
+ * Sequence of wantBack OIDs (`AllWantBacks`) naming extra material
+ * to return with check results ([RFC 5055 §3.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

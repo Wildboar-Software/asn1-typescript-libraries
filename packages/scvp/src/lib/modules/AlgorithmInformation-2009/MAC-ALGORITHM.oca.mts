@@ -7,6 +7,11 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * @summary MAC_ALGORITHM
  * @description
  *
+ * Information object class for a message authentication code (MAC)
+ * algorithm ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)). Suggested object prefix: `maca-`. Includes
+ * `&keyed` (`IS-KEYED-MAC`) indicating whether the MAC is keyed.
+ * Also in [RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

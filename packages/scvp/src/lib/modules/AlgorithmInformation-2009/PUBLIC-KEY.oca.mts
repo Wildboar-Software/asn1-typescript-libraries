@@ -8,6 +8,11 @@ import { KeyUsage } from "@wildboar/x500/CertificateExtensions";
  * @summary PUBLIC_KEY
  * @description
  *
+ * Information object class for a public key ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ * Suggested object prefix: `pk-`. Binds the key OID, optional key-value
+ * and parameters types, certificate `keyUsage` bits legal for the key
+ * type, and an optional private-key encoding type. Also in [RFC 5912 §3](https://datatracker.ietf.org/doc/html/rfc5912#section-3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

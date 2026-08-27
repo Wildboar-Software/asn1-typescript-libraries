@@ -15,6 +15,8 @@ import { id_kp } from '../SCVP-2009/id-kp.va.mjs';
  * @summary id_kp_scvpClient
  * @description
  *
+ * EKU OID for an SCVP client certificate (`{ id-kp 16 }`) ([RFC 5055 §7](https://datatracker.ietf.org/doc/html/rfc5055#section-7)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

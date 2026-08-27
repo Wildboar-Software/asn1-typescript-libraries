@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BasicValidationErrorSet
  * @description
  *
+ * Value set of basic validation-algorithm error OIDs (`id-bvae-*`)
+ * for `CertReply.validationErrors` ([RFC 5055 §3.2.4.2.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

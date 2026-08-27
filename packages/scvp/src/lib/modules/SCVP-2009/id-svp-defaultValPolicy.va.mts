@@ -15,6 +15,8 @@ import { id_svp } from '../SCVP-2009/id-svp.va.mjs';
  * @summary id_svp_defaultValPolicy
  * @description
  *
+ * OID for the server default validation policy ([RFC 5055 §3.2.4.1.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.1.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

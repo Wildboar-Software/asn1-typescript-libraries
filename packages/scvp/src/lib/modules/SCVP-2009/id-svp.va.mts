@@ -15,6 +15,8 @@ import {
  * @summary id_svp
  * @description
  *
+ * Arc for SCVP validation policy/algorithm OIDs (`id-svp`) ([RFC 5055 §3.2.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

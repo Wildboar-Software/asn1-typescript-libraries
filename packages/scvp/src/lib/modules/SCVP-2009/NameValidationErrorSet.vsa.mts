@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary NameValidationErrorSet
  * @description
  *
+ * Value set of name validation-algorithm error OIDs (`id-nvae-*`)
+ * ([RFC 5055 §3.2.4.2.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
