@@ -9,6 +9,12 @@ import { id_pkix_ocsp_nonce } from "../OCSP-2013-08/id-pkix-ocsp-nonce.va.mjs";
  * @summary re_ocsp_nonce
  * @description
  *
+ * Request/response extension for Nonce (`OCTET STRING`), identified
+ * by `id-pkix-ocsp-nonce`
+ * ([RFC 6960 §4.4.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.1)).
+ * Cryptographically binds a request and a response to prevent replay
+ * attacks.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,17 @@ import {
  * @summary PreferredSignatureAlgorithm
  * @description
  *
+ * One preferred signature algorithm entry for the Preferred Signature
+ * Algorithms request extension
+ * ([RFC 6960 §4.4.7.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.7.1)).
+ * In the 1998/2008 ASN.1 modules (Appendix B), the optional second
+ * component is named `certIdentifier`; §4.4.7.1 describes the same
+ * role as `pubKeyAlgIdentifier` (`SMIMECapability`).
+ *
+ * The client MUST support each specified preferred signature
+ * algorithm and MUST list algorithms in order of preference (most to
+ * least preferred). Server selection rules are in §4.4.7.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +41,33 @@ export class PreferredSignatureAlgorithm {
     constructor(
         /**
          * @summary `sigIdentifier`.
+         * @description
+         *
+         * Signature algorithm the client prefers (e.g.
+         * `ecdsa-with-sha256`). Parameters are absent for most common
+         * signature algorithms
+         * ([RFC 6960 §4.4.7.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.7.1)).
+         * `AlgorithmIdentifier` syntax is
+         * [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280)
+         * §4.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly sigIdentifier: AlgorithmIdentifier,
         /**
          * @summary `certIdentifier`.
+         * @description
+         *
+         * Optional preferred subject public key algorithm identifier
+         * in the server's certificate used to validate the OCSP
+         * response (e.g. `id-ecPublicKey` with curve parameters).
+         * Distinguishes among different usages of a particular
+         * algorithm (e.g. which elliptic curve the client supports)
+         * ([RFC 6960 §4.4.7.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.7.1)).
+         * Named `pubKeyAlgIdentifier` / `SMIMECapability` in the
+         * §4.4.7.1 prose ([RFC 5751](https://datatracker.ietf.org/doc/html/rfc5751)).
+         *
          * @public
          * @readonly
          */

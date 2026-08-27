@@ -20,6 +20,14 @@ import {
  * @summary ServiceLocator
  * @description
  *
+ * Value of the Service Locator singleRequestExtension
+ * (`id-pkix-ocsp-service-locator`)
+ * ([RFC 6960 §4.4.6](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.6)).
+ * Used when an OCSP server receives a request and routes it to the
+ * OCSP server known to be authoritative for the identified
+ * certificate. Field values are obtained from the corresponding
+ * fields in the subject certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +41,23 @@ export class ServiceLocator {
     constructor(
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Issuer `Name` from the subject certificate
+         * ([RFC 6960 §4.4.6](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.6)).
+         *
          * @public
          * @readonly
          */
         readonly issuer: Name,
         /**
          * @summary `locator`.
+         * @description
+         *
+         * Authority Information Access syntax from the subject
+         * certificate, locating the authoritative OCSP service
+         * ([RFC 6960 §4.4.6](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.6)).
+         *
          * @public
          * @readonly
          */

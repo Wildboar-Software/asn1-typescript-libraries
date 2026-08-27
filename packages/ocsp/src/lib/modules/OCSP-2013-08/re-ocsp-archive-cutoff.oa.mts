@@ -12,6 +12,10 @@ import { id_pkix_ocsp_archive_cutoff } from "../OCSP-2013-08/id-pkix-ocsp-archiv
  * @summary re_ocsp_archive_cutoff
  * @description
  *
+ * Response singleExtension for Archive Cutoff (`ArchiveCutoff`),
+ * identified by `id-pkix-ocsp-archive-cutoff`
+ * ([RFC 6960 §4.4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

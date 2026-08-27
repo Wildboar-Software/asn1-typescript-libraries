@@ -21,6 +21,12 @@ import {
  * @summary Signature
  * @description
  *
+ * Optional signature on an `OCSPRequest`
+ * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+ * Computed over the DER encoding of `TBSRequest` (§4.1.2). Data to
+ * be signed uses DER ([X.690](https://www.itu.int/rec/T-REC-X.690))
+ * as stated in §4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +42,37 @@ export class Signature {
     constructor(
         /**
          * @summary `signatureAlgorithm`.
+         * @description
+         *
+         * Algorithm identifier and any associated parameters for the
+         * request signature
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */
         readonly signatureAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Signature value over `tbsRequest`
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+         *
          * @public
          * @readonly
          */
         readonly signature: BIT_STRING,
         /**
          * @summary `certs`.
+         * @description
+         *
+         * Optional certificates that help the OCSP responder verify
+         * the requestor's signature (normally up to but not including
+         * the client's root certificate)
+         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1),
+         * [§4.1.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.2)).
+         *
          * @public
          * @readonly
          */

@@ -24,6 +24,20 @@ import {
  * @summary BasicOCSPResponse
  * @description
  *
+ * Basic OCSP response type that MUST be supported by all OCSP
+ * servers and clients
+ * ([RFC 6960 §2.2](https://datatracker.ietf.org/doc/html/rfc6960#section-2.2),
+ * [§4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * All definitive response messages SHALL be digitally signed. The
+ * signature SHALL be computed on the hash of the DER encoding of
+ * `ResponseData`.
+ *
+ * The signing key MUST belong to the CA that issued the certificate,
+ * a Trusted Responder whose public key is trusted by the requestor,
+ * or a CA Designated Responder (Authorized Responder) holding a
+ * specially marked certificate issued directly by the CA (§2.2,
+ * §4.2.2.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,24 +55,52 @@ export class BasicOCSPResponse {
     constructor(
         /**
          * @summary `tbsResponseData`.
+         * @description
+         *
+         * To-be-signed response data; signature is over the DER
+         * encoding of this field
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly tbsResponseData: ResponseData,
         /**
          * @summary `signatureAlgorithm`.
+         * @description
+         *
+         * Signature algorithm OID (and parameters) used to sign
+         * `tbsResponseData`
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
+         * [§4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
+         * Clients SHALL support RSA with SHA-256; SHOULD also support
+         * RSA with SHA-1 and DSA with SHA-1 (§4.3).
+         *
          * @public
          * @readonly
          */
         readonly signatureAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Signature computed on the hash of the DER encoding of
+         * `ResponseData`
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+         *
          * @public
          * @readonly
          */
         readonly signature: BIT_STRING,
         /**
          * @summary `certs`.
+         * @description
+         *
+         * Optional certificates that help the OCSP client verify the
+         * responder's signature. If no certificates are included,
+         * then `certs` SHOULD be absent
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+         *
          * @public
          * @readonly
          */

@@ -11,6 +11,13 @@ import {
  * @summary PreferredSignatureAlgorithms
  * @description
  *
+ * SEQUENCE OF preferred signature algorithms for the Preferred
+ * Signature Algorithms request extension
+ * (`id-pkix-ocsp-pref-sig-algs`)
+ * ([RFC 6960 §4.4.7.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.7.1)).
+ * Included in `requestExtensions` of the `OCSPRequest`. Algorithms
+ * MUST be listed most preferred to least preferred.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

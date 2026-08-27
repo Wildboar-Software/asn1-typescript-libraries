@@ -21,6 +21,12 @@ import {
  * @summary OCSPResponse
  * @description
  *
+ * OCSP response from a responder to a client
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * At minimum carries `responseStatus`. If `responseStatus` is an
+ * error condition, `responseBytes` is not set. Error responses are
+ * not signed (§2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +40,26 @@ export class OCSPResponse {
     constructor(
         /**
          * @summary `responseStatus`.
+         * @description
+         *
+         * Processing status of the prior request
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+         * See also exception cases in
+         * [§2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3).
+         *
          * @public
          * @readonly
          */
         readonly responseStatus: OCSPResponseStatus,
         /**
          * @summary `responseBytes`.
+         * @description
+         *
+         * Present for successful responses: response type OID and the
+         * corresponding response syntax encoded as an OCTET STRING.
+         * Absent when `responseStatus` is an error condition
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+         *
          * @public
          * @readonly
          */

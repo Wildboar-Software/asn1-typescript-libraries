@@ -9,6 +9,13 @@ import { id_pkix_ocsp_nocheck } from "../OCSP-2013-08/id-pkix-ocsp-nocheck.va.mj
  * @summary ext_ocsp_nocheck
  * @description
  *
+ * Certificate extension (`EXTENSION`) for OCSP nocheck: value NULL,
+ * identified by `id-pkix-ocsp-nocheck`
+ * ([RFC 6960 §4.2.2.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.2.1)).
+ * Signals that a client may trust the Authorized Responder for the
+ * lifetime of the responder's certificate without revocation checking
+ * that certificate. SHOULD be non-critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

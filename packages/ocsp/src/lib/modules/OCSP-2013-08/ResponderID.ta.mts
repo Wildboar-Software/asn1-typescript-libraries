@@ -17,6 +17,12 @@ import {
  * @summary ResponderID
  * @description
  *
+ * Identifies the OCSP responder in `ResponseData`: either by name or
+ * by a hash of the responder's public key
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * MUST correspond to the certificate that was used to sign the
+ * response so clients can find that certificate (§4.2.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

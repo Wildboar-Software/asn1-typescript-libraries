@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OCSPResponseStatus
  * @description
  *
+ * Processing status of an OCSP request
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * Values other than `successful`(0) are unsigned error responses
+ * ([§2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ * Enumerated value (4) is not used.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,6 +43,12 @@ export enum _enum_for_OCSPResponseStatus {
  * @summary OCSPResponseStatus
  * @description
  *
+ * Processing status of an OCSP request
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * Values other than `successful`(0) are unsigned error responses
+ * ([§2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ * Enumerated value (4) is not used.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,6 +72,12 @@ export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  * @summary OCSPResponseStatus
  * @description
  *
+ * Processing status of an OCSP request
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * Values other than `successful`(0) are unsigned error responses
+ * ([§2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ * Enumerated value (4) is not used.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -81,6 +99,11 @@ export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
 
 /**
  * @summary OCSPResponseStatus_successful
+ * @description
+ *
+ * `successful`(0): response has valid confirmations
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +113,11 @@ export const OCSPResponseStatus_successful: OCSPResponseStatus =
 
 /**
  * @summary successful
+ * @description
+ *
+ * `successful`(0): response has valid confirmations
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +127,12 @@ export const successful: OCSPResponseStatus =
 
 /**
  * @summary OCSPResponseStatus_malformedRequest
+ * @description
+ *
+ * `malformedRequest`(1): request does not conform to OCSP syntax
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3),
+ * [§4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +142,12 @@ export const OCSPResponseStatus_malformedRequest: OCSPResponseStatus =
 
 /**
  * @summary malformedRequest
+ * @description
+ *
+ * `malformedRequest`(1): request does not conform to OCSP syntax
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3),
+ * [§4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +157,13 @@ export const malformedRequest: OCSPResponseStatus =
 
 /**
  * @summary OCSPResponseStatus_internalError
+ * @description
+ *
+ * `internalError`(2): OCSP responder reached an inconsistent internal
+ * state; the query should be retried, potentially with another
+ * responder
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +173,13 @@ export const OCSPResponseStatus_internalError: OCSPResponseStatus =
 
 /**
  * @summary internalError
+ * @description
+ *
+ * `internalError`(2): OCSP responder reached an inconsistent internal
+ * state; the query should be retried, potentially with another
+ * responder
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +189,12 @@ export const internalError: OCSPResponseStatus =
 
 /**
  * @summary OCSPResponseStatus_tryLater
+ * @description
+ *
+ * `tryLater`(3): service exists but is temporarily unable to return
+ * a status for the requested certificate
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +204,12 @@ export const OCSPResponseStatus_tryLater: OCSPResponseStatus =
 
 /**
  * @summary tryLater
+ * @description
+ *
+ * `tryLater`(3): service exists but is temporarily unable to return
+ * a status for the requested certificate
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +219,11 @@ export const tryLater: OCSPResponseStatus =
 
 /**
  * @summary OCSPResponseStatus_sigRequired
+ * @description
+ *
+ * `sigRequired`(5): server requires that the client sign the request
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -162,6 +233,11 @@ export const OCSPResponseStatus_sigRequired: OCSPResponseStatus =
 
 /**
  * @summary sigRequired
+ * @description
+ *
+ * `sigRequired`(5): server requires that the client sign the request
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -171,6 +247,14 @@ export const sigRequired: OCSPResponseStatus =
 
 /**
  * @summary OCSPResponseStatus_unauthorized
+ * @description
+ *
+ * `unauthorized`(6): client is not authorized to make this query to
+ * this server, or the server is not capable of responding
+ * authoritatively (cf. [RFC 5019](https://datatracker.ietf.org/doc/html/rfc5019)
+ * §2.2.3)
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ *
  * @constant
  * @type {number}
  */
@@ -180,12 +264,19 @@ export const OCSPResponseStatus_unauthorized: OCSPResponseStatus =
 
 /**
  * @summary unauthorized
+ * @description
+ *
+ * `unauthorized`(6): client is not authorized to make this query to
+ * this server, or the server is not capable of responding
+ * authoritatively (cf. [RFC 5019](https://datatracker.ietf.org/doc/html/rfc5019)
+ * §2.2.3)
+ * ([RFC 6960 §2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3)).
+ *
  * @constant
  * @type {number}
  */
 export const unauthorized: OCSPResponseStatus =
     OCSPResponseStatus.unauthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
-
 
 
 

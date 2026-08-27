@@ -6,6 +6,11 @@ import { id_pkix_ocsp } from "../OCSP-2013-08/id-pkix-ocsp.va.mjs";
  * @summary id_pkix_ocsp_basic
  * @description
  *
+ * Response type OID for the basic OCSP response
+ * (`BasicOCSPResponse`)
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * Responders SHALL produce and clients SHALL process this type.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

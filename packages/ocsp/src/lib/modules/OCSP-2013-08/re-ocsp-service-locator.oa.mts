@@ -12,6 +12,10 @@ import {
  * @summary re_ocsp_service_locator
  * @description
  *
+ * Request singleRequestExtension for Service Locator
+ * (`ServiceLocator`), identified by `id-pkix-ocsp-service-locator`
+ * ([RFC 6960 §4.4.6](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.6)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

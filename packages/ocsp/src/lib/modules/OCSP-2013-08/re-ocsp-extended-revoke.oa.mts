@@ -9,6 +9,14 @@ import { id_pkix_ocsp_extended_revoke } from "../OCSP-2013-08/id-pkix-ocsp-exten
  * @summary re_ocsp_extended_revoke
  * @description
  *
+ * Response extension (NULL value) indicating support for the
+ * extended definition of `revoked` to cover non-issued certificates,
+ * identified by `id-pkix-ocsp-extended-revoke`
+ * ([RFC 6960 §4.4.8](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.8),
+ * [§2.2](https://datatracker.ietf.org/doc/html/rfc6960#section-2.2)).
+ * MUST be in `responseExtensions`; MUST NOT be marked critical; MUST
+ * be included when returning `revoked` for a non-issued certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

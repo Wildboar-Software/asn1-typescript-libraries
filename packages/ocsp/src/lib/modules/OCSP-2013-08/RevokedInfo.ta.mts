@@ -17,6 +17,15 @@ import {
  * @summary RevokedInfo
  * @description
  *
+ * Details for a `revoked` `CertStatus`
+ * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+ * For a non-issued certificate returned as `revoked`, the responder
+ * MUST set `revocationReason` to `certificateHold`(6), MUST set
+ * `revocationTime` to January 1, 1970, MUST include the extended
+ * revoked definition response extension, and MUST NOT include a CRL
+ * references extension or any CRL entry extensions
+ * ([§2.2](https://datatracker.ietf.org/doc/html/rfc6960#section-2.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +39,24 @@ export class RevokedInfo {
     constructor(
         /**
          * @summary `revocationTime`.
+         * @description
+         *
+         * Time at which the certificate was revoked or placed on hold
+         * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4)).
+         *
          * @public
          * @readonly
          */
         readonly revocationTime: GeneralizedTime,
         /**
          * @summary `revocationReason`.
+         * @description
+         *
+         * Optional reason the certificate was revoked (`CRLReason`
+         * from [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280))
+         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
+         * [§4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
+         *
          * @public
          * @readonly
          */

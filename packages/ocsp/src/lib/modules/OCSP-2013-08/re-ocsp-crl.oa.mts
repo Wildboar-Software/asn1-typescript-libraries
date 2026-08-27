@@ -8,6 +8,10 @@ import { id_pkix_ocsp_crl } from "../OCSP-2013-08/id-pkix-ocsp-crl.va.mjs";
  * @summary re_ocsp_crl
  * @description
  *
+ * Response singleExtension for CRL References (`CrlID`), identified
+ * by `id-pkix-ocsp-crl`
+ * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

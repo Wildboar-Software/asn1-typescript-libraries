@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CrlID
  * @description
  *
+ * Identifies a CRL on which a revoked or onHold certificate is found,
+ * for the CRL References singleExtension (`id-pkix-ocsp-crl`)
+ * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
+ * Useful where OCSP is used between repositories and as an auditing
+ * mechanism. The CRL may be specified by URL, CRL number, and/or
+ * issuance time.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,18 +35,33 @@ export class CrlID {
     constructor(
         /**
          * @summary `crlUrl`.
+         * @description
+         *
+         * URL at which the CRL is available
+         * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly crlUrl?: OPTIONAL<IA5String>,
         /**
          * @summary `crlNum`.
+         * @description
+         *
+         * Value of the CRL number extension of the relevant CRL
+         * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
+         *
          * @public
          * @readonly
          */
         readonly crlNum?: OPTIONAL<INTEGER>,
         /**
          * @summary `crlTime`.
+         * @description
+         *
+         * Time at which the relevant CRL was issued
+         * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
+         *
          * @public
          * @readonly
          */
