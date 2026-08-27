@@ -20,6 +20,9 @@ import {
  * @summary RevReqContent
  * @description
  *
+ * Revocation request: sequence of `RevDetails`. Requester name is in
+ * `PKIHeader` ([RFC 4210 §5.3.9](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.9)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

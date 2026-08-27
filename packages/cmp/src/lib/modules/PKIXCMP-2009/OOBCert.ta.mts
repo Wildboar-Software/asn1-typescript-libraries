@@ -20,6 +20,12 @@ import {
  * @summary OOBCert
  * @description
  *
+ * Out-of-band root CA public key carried as a self-signed certificate
+ * ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)). MUST be self-signed; subject and issuer MUST be
+ * identical; if subject is NULL, `subjectAltName` and `issuerAltName`
+ * MUST be present and equal; other extensions must be suitable for a
+ * self-signed certificate.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

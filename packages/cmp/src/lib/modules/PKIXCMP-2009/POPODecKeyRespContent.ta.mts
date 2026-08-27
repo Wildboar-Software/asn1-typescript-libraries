@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary POPODecKeyRespContent
  * @description
  *
+ * Proof-of-possession decryption-key response: sequence of INTEGER
+ * values recovering each challenge's random A
+ * ([RFC 4210 §5.2.8.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

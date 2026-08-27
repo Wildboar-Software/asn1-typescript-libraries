@@ -25,6 +25,9 @@ import {
  * @summary ProtectedPart
  * @description
  *
+ * Input to `PKIProtection`: DER encoding of `header` and `body`
+ * ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +41,20 @@ export class ProtectedPart {
   constructor(
     /**
      * @summary `header`.
+     * @description
+     *
+     * `PKIHeader` included in the protected encoding ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)).
+     *
      * @public
      * @readonly
      */
     readonly header: PKIHeader,
     /**
      * @summary `body`.
+     * @description
+     *
+     * `PKIBody` included in the protected encoding ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)).
+     *
      * @public
      * @readonly
      */

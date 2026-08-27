@@ -31,6 +31,9 @@ import {
  * @summary KeyRecRepContent
  * @description
  *
+ * Key recovery response content ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)). For some status
+ * values (e.g., `waiting`) none of the optional fields are present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,24 +51,41 @@ export class KeyRecRepContent {
   constructor(
     /**
      * @summary `status`.
+     * @description
+     *
+     * Overall status (`PKIStatusInfo`) ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
+     *
      * @public
      * @readonly
      */
     readonly status: PKIStatusInfo,
     /**
      * @summary `newSigCert`.
+     * @description
+     *
+     * Optional new signature certificate ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
+     *
      * @public
      * @readonly
      */
     readonly newSigCert?: OPTIONAL<CMPCertificate>,
     /**
      * @summary `caCerts`.
+     * @description
+     *
+     * Optional CA certificates ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
+     *
      * @public
      * @readonly
      */
     readonly caCerts?: OPTIONAL<CMPCertificate[]>,
     /**
      * @summary `keyPairHist`.
+     * @description
+     *
+     * Optional recovered key pair history (`CertifiedKeyPair` sequence)
+     * ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
+     *
      * @public
      * @readonly
      */

@@ -27,6 +27,10 @@ import {
  * @summary ErrorMsgContent
  * @description
  *
+ * Error message content for EE, CA, or RA ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)). MAY be
+ * generated at any time; ends the transaction. Client protection MUST
+ * match the starting message technique; the CA MUST always sign it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,18 +48,31 @@ export class ErrorMsgContent {
   constructor(
     /**
      * @summary `pKIStatusInfo`.
+     * @description
+     *
+     * Status and optional failure info ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
+     *
      * @public
      * @readonly
      */
     readonly pKIStatusInfo: PKIStatusInfo,
     /**
      * @summary `errorCode`.
+     * @description
+     *
+     * Optional implementation-specific error code ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
+     *
      * @public
      * @readonly
      */
     readonly errorCode?: OPTIONAL<INTEGER>,
     /**
      * @summary `errorDetails`.
+     * @description
+     *
+     * Optional implementation-specific error details (`PKIFreeText`)
+     * ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PollReqContent_Item
  * @description
  *
+ * One element of `PollReqContent`: the `certReqId` of a pending
+ * certificate request ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,10 @@ export class PollReqContent_Item {
   constructor(
     /**
      * @summary `certReqId`.
+     * @description
+     *
+     * Certificate request identifier being polled ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PKIProtection
  * @description
  *
+ * Integrity protection bits for a `PKIMessage` ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)).
+ * Computed over the DER encoding of `ProtectedPart`. MAY contain a
+ * MAC (password-based or DH-based) or a digital signature
+ * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)–[RFC 4210 §5.1.3.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.3)). OPTIONAL when external
+ * protection is used instead.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

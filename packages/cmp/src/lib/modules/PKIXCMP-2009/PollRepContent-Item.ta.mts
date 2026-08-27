@@ -22,6 +22,8 @@ import {
  * @summary PollRepContent_Item
  * @description
  *
+ * One element of `PollRepContent` ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +35,32 @@ export class PollRepContent_Item {
   constructor(
     /**
      * @summary `certReqId`.
+     * @description
+     *
+     * Certificate request identifier still pending ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+     *
      * @public
      * @readonly
      */
     readonly certReqId: INTEGER,
     /**
      * @summary `checkAfter`.
+     * @description
+     *
+     * Minimum time in seconds the EE should wait before sending another
+     * `pollReq` ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+     *
      * @public
      * @readonly
      */
     readonly checkAfter: INTEGER,
     /**
      * @summary `reason`.
+     * @description
+     *
+     * Optional human-readable reason (`PKIFreeText`)
+     * ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+     *
      * @public
      * @readonly
      */

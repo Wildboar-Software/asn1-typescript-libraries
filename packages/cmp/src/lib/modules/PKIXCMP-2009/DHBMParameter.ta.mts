@@ -21,6 +21,11 @@ import {
  * @summary DHBMParameter
  * @description
  *
+ * Parameters for `id-DHBasedMac` ([RFC 4210 §5.1.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.2)). OWF is applied
+ * to the Diffie-Hellman shared secret result to form BASEKEY, from
+ * which the MAC key is derived (same expansion rule as
+ * PasswordBasedMac when K > H).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +43,22 @@ export class DHBMParameter {
   constructor(
     /**
      * @summary `owf`.
+     * @description
+     *
+     * AlgorithmIdentifier for a one-way function (SHA-1 recommended)
+     * ([RFC 4210 §5.1.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.2)).
+     *
      * @public
      * @readonly
      */
     readonly owf: AlgorithmIdentifier,
     /**
      * @summary `mac`.
+     * @description
+     *
+     * MAC AlgorithmIdentifier (e.g., DES-MAC, Triple-DES-MAC, or HMAC)
+     * ([RFC 4210 §5.1.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.2)).
+     *
      * @public
      * @readonly
      */

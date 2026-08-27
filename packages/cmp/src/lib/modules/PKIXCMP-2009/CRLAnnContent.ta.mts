@@ -21,6 +21,9 @@ import {
  * @summary CRLAnnContent
  * @description
  *
+ * CRL announcement: sequence of `CertificateList` values when a CA
+ * issues a new CRL (or set of CRLs) ([RFC 4210 §5.3.16](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.16)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

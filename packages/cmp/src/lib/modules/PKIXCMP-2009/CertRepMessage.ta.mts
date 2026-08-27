@@ -26,6 +26,12 @@ import {
  * @summary CertRepMessage
  * @description
  *
+ * Certification / initialization / key-update / cross-cert response
+ * body ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4); also [RFC 4210 §5.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.2), [RFC 4210 §5.3.6](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.6),
+ * [RFC 4210 §5.3.12](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.12)). Per-request `CertResponse` entries; optional
+ * `caPubs` CA certificates (directly trustable as root CA certs when
+ * protection is shared-secret — [RFC 4210 §5.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.2)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +46,23 @@ export class CertRepMessage {
   constructor(
     /**
      * @summary `caPubs`.
+     * @description
+     *
+     * Optional CA certificates. If PKI message protection is shared
+     * secret information, certificates here MAY be directly trusted as
+     * root CA certificates by the initiator ([RFC 4210 §5.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.2),
+     * [RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+     *
      * @public
      * @readonly
      */
     readonly caPubs: OPTIONAL<CMPCertificate[]>,
     /**
      * @summary `response`.
+     * @description
+     *
+     * One `CertResponse` per certificate requested ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+     *
      * @public
      * @readonly
      */

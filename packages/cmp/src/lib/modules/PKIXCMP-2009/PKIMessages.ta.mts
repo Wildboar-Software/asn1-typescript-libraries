@@ -20,6 +20,11 @@ import {
  * @summary PKIMessages
  * @description
  *
+ * Sequence of one or more `PKIMessage` values
+ * ([RFC 4210 §5.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1)). Used as `NestedMessageContent` so an RA can batch
+ * several EE requests of the same type in one nested message
+ * ([RFC 4210 §5.1.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

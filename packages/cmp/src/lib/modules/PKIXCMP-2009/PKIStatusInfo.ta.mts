@@ -31,6 +31,10 @@ import {
  * @summary PKIStatusInfo
  * @description
  *
+ * Status information included in PKI response messages
+ * ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)): a `PKIStatus` code with optional human-readable
+ * `statusString` and optional `failInfo` bits.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +49,32 @@ export class PKIStatusInfo {
   constructor(
     /**
      * @summary `status`.
+     * @description
+     *
+     * Primary status code (`PKIStatus`) ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+     *
      * @public
      * @readonly
      */
     readonly status: PKIStatus,
     /**
      * @summary `statusString`.
+     * @description
+     *
+     * Optional free-text status detail (`PKIFreeText`)
+     * ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+     *
      * @public
      * @readonly
      */
     readonly statusString?: OPTIONAL<PKIFreeText>,
     /**
      * @summary `failInfo`.
+     * @description
+     *
+     * Optional failure bits (`PKIFailureInfo`) for more detail on
+     * failure cases ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PKIHeader_pvno
  * @description
  *
+ * CMP protocol version number in `PKIHeader.pvno`
+ * ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)). `cmp2000`(2) is required for this specification;
+ * `cmp1999`(1) is the RFC 2510 version (see §7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +32,12 @@ export type PKIHeader_pvno = INTEGER;
 
 /**
  * @summary PKIHeader_pvno_cmp1999
+ * @description
+ *
+ * `cmp1999`(1): CMP as in
+ * [RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510)
+ * ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1), §7).
+ *
  * @constant
  * @type {number}
  */
@@ -36,6 +46,12 @@ export const PKIHeader_pvno_cmp1999: PKIHeader_pvno = 1; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary PKIHeader_pvno_cmp1999
+ * @description
+ *
+ * `cmp1999`(1): CMP as in
+ * [RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510)
+ * ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1), §7).
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +60,10 @@ export const cmp1999: PKIHeader_pvno = PKIHeader_pvno_cmp1999; /* SHORT_NAMED_IN
 
 /**
  * @summary PKIHeader_pvno_cmp2000
+ * @description
+ *
+ * `cmp2000`(2): this version of CMP ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +72,10 @@ export const PKIHeader_pvno_cmp2000: PKIHeader_pvno = 2; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary PKIHeader_pvno_cmp2000
+ * @description
+ *
+ * `cmp2000`(2): this version of CMP ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+ *
  * @constant
  * @type {number}
  */

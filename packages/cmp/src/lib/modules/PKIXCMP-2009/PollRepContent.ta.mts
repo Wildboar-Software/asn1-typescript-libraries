@@ -20,6 +20,11 @@ import {
  * @summary PollRepContent
  * @description
  *
+ * Polling response when pending certificates are not yet ready
+ * ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)). If one or more are ready, the CA/RA returns
+ * `ip`/`cp`/`kup` instead. The EE MUST wait at least `checkAfter`
+ * seconds before another `pollReq`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

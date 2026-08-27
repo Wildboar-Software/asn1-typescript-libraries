@@ -32,6 +32,10 @@ import {
  * @summary CertifiedKeyPair
  * @description
  *
+ * Certified key material in a `CertResponse`: certificate or
+ * encrypted certificate, optional encrypted private key, optional
+ * publication info ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +51,34 @@ export class CertifiedKeyPair {
   constructor(
     /**
      * @summary `certOrEncCert`.
+     * @description
+     *
+     * Either a cleartext certificate or an encrypted certificate
+     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)). Encrypted form supports indirect POP
+     * ([RFC 4210 §5.2.8.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.2)).
+     *
      * @public
      * @readonly
      */
     readonly certOrEncCert: CertOrEncCert,
     /**
      * @summary `privateKey`.
+     * @description
+     *
+     * Optional encrypted private key (`EncryptedValue`; see CRMF)
+     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+     *
      * @public
      * @readonly
      */
     readonly privateKey?: OPTIONAL<EncryptedValue>,
     /**
      * @summary `publicationInfo`.
+     * @description
+     *
+     * Optional PKI publication information (`PKIPublicationInfo` from
+     * CRMF) ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+     *
      * @public
      * @readonly
      */

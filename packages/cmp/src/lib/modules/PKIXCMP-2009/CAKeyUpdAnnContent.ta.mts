@@ -20,6 +20,11 @@ import {
  * @summary CAKeyUpdAnnContent
  * @description
  *
+ * CA key update announcement ([RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13), [RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1)): three
+ * certificates linking old and new CA key pairs — old public key
+ * signed with new private key, new public key signed with old private
+ * key, and new public key signed with new private key.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,18 +40,33 @@ export class CAKeyUpdAnnContent {
   constructor(
     /**
      * @summary `oldWithNew`.
+     * @description
+     *
+     * Old CA public key signed with the new private key
+     * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
+     *
      * @public
      * @readonly
      */
     readonly oldWithNew: CMPCertificate,
     /**
      * @summary `newWithOld`.
+     * @description
+     *
+     * New CA public key signed with the old private key
+     * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
+     *
      * @public
      * @readonly
      */
     readonly newWithOld: CMPCertificate,
     /**
      * @summary `newWithNew`.
+     * @description
+     *
+     * New CA public key signed with the new private key
+     * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
+     *
      * @public
      * @readonly
      */

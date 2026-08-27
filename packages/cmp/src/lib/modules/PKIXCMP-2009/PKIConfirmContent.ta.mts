@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PKIConfirmContent
  * @description
  *
+ * Final PKI confirmation: `NULL` content; required information is in
+ * `PKIHeader` ([RFC 4210 §5.3.17](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.17)).
+ *
+ * Use for certificate confirmation is NOT RECOMMENDED; `certConf`
+ * SHOULD be used instead. A recipient MAY treat a `PKIConfirm` for a
+ * certificate response as a `certConf` accepting all certificates.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

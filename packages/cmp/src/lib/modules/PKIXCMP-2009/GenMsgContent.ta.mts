@@ -20,6 +20,11 @@ import {
  * @summary GenMsgContent
  * @description
  *
+ * General message content: sequence of `InfoTypeAndValue`
+ * ([RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19)). Used for PKI information requests and other
+ * general exchanges (CA protocol encryption certificate, signing key
+ * pair types, preferred symmetric algorithm, etc.).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
