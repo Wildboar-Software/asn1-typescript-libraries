@@ -18,7 +18,12 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
 /**
  * @summary KEY_AGREE
  * @description
- * 
+ *
+ * Information object class for a key-agreement (asymmetric) algorithm
+ * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ * Suggested object prefix: `kaa-`. Includes optional user keying
+ * material (`UKM`) type and presence.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,30 +69,63 @@ interface KEY_AGREE<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * OID identifying the key agreement algorithm ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
      * @summary &Params
+     * @description
+     *
+     * If present, the ASN.1 type of the algorithm parameters; if absent,
+     * implies no parameters
+     * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&Params": Params;
     /**
      * @summary &paramPresence
+     * @description
+     *
+     * `ParamOptions` presence requirement for `&Params` ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     * Default `absent`.
+     *
      */
     readonly "&paramPresence"?: ParamOptions;
     /**
      * @summary &PublicKeySet
+     * @description
+     *
+     * Public keys used with this key-agreement algorithm ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&PublicKeySet"?: PUBLIC_KEY[];
     /**
      * @summary &Ukm
+     * @description
+     *
+     * Type of user keying material (UKM) used with the algorithm ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&Ukm": Ukm;
     /**
      * @summary &ukmPresence
+     * @description
+     *
+     * `ParamOptions` requirement for defining the UKM field ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     * Default `absent`.
+     *
      */
     readonly "&ukmPresence"?: ParamOptions;
     /**
      * @summary &smimeCaps
+     * @description
+     *
+     * Object describing how S/MIME capabilities are presented for this
+     * algorithm ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&smimeCaps"?: SMIME_CAPS;
 };

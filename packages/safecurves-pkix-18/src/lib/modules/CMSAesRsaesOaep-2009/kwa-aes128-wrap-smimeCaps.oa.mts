@@ -15,7 +15,11 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
 /**
  * @summary kwa_aes128_wrap_smimeCaps
  * @description
- * 
+ *
+ * `SMIME-CAPS` object for AES-128 Key Wrap
+ * ([RFC 5911 §4](https://datatracker.ietf.org/doc/html/rfc5911#section-4)): `IDENTIFIED BY id-aes128-wrap` (no capability `TYPE`).
+ * Unnested from `kwa-aes128-wrap.&smimeCaps`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

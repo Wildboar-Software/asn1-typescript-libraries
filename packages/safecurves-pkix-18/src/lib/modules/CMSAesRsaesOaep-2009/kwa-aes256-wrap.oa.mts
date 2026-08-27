@@ -17,7 +17,14 @@ import { type KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
 /**
  * @summary kwa_aes256_wrap
  * @description
- * 
+ *
+ * `KEY-WRAP` information object for AES-256 Key Wrap
+ * ([RFC 5911 §4](https://datatracker.ietf.org/doc/html/rfc5911#section-4)).
+ * Identified by `id-aes256-wrap`; `PARAMS ARE absent`; S/MIME capability
+ * identified by the same OID. Imported by `Safecurves-pkix-18` into
+ * `KeyWrapAlgorithms` for X25519/X448 key-agreement S/MIME caps
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

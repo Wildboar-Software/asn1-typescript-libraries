@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SMIME_CAPS
  * @description
- * 
+ *
+ * Information object class associating an S/MIME capability type with
+ * an object identifier ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ * Moved here from the RFC 3851 module for reuse (e.g., RFC 4262).
+ * Suggested object prefix: `cap-`. S/MIME capabilities advertise
+ * algorithm capabilities an endpoint supports.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,10 +59,19 @@ interface SMIME_CAPS<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * OID identifying the S/MIME capability ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
      * @summary &Type
+     * @description
+     *
+     * Optional type that describes capability parameters (e.g., key
+     * length) ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&Type": Type;
 };

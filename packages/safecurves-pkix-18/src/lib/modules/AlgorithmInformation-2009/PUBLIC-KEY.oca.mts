@@ -19,7 +19,13 @@ import { KeyUsage } from "@wildboar/x500/CertificateExtensions";
 /**
  * @summary PUBLIC_KEY
  * @description
- * 
+ *
+ * Information object class for a public key
+ * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+ * Suggested object prefix: `pk-`. Binds the key OID, optional key-value
+ * and parameters types, certificate `keyUsage` bits legal for the key
+ * type, and an optional private-key encoding type.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,26 +71,54 @@ interface PUBLIC_KEY<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * OID identifying the public key ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
      * @summary &KeyValue
+     * @description
+     *
+     * Type for the public key value ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&KeyValue": KeyValue;
     /**
      * @summary &Params
+     * @description
+     *
+     * If present, the ASN.1 type of the algorithm parameters; if absent,
+     * implies no parameters
+     * ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&Params": Params;
     /**
      * @summary &paramPresence
+     * @description
+     *
+     * `ParamOptions` presence requirement for `&Params` ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     * Default `absent`.
+     *
      */
     readonly "&paramPresence"?: ParamOptions;
     /**
      * @summary &keyUsage
+     * @description
+     *
+     * Set of `KeyUsage` bits that are legal for this key type. Does not
+     * state how bits may be paired ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&keyUsage"?: KeyUsage;
     /**
      * @summary &PrivateKey
+     * @description
+     *
+     * Type structure for encoding the private key information ([RFC 5911 §2](https://datatracker.ietf.org/doc/html/rfc5911#section-2)).
+     *
      */
     readonly "&PrivateKey": PrivateKey;
 };

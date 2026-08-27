@@ -11,6 +11,13 @@ import { id_sha512 } from "../PKIX1-PSS-OAEP-Algorithms/id-sha512.va.mjs";
  * @summary mda_sha512
  * @description
  *
+ * `DIGEST-ALGORITHM` information object for SHA-512
+ * ([RFC 5912 §8](https://datatracker.ietf.org/doc/html/rfc5912#section-8)) (`PKIX1-PSS-OAEP-Algorithms-2009`);
+ * hash OID ([RFC 4055 §2.1](https://datatracker.ietf.org/doc/html/rfc4055#section-2.1)).
+ * Identified by `id-sha512`; `PARAMS TYPE NULL ARE preferredAbsent`.
+ * Imported by `Safecurves-pkix-18`
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

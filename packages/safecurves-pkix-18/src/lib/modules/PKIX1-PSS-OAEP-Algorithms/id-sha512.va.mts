@@ -17,7 +17,17 @@ import {
 /**
  * @summary id_sha512
  * @description
- * 
+ *
+ * Object identifier for the SHA-512 one-way hash function
+ * ([RFC 4055 §2.1](https://datatracker.ietf.org/doc/html/rfc4055#section-2.1));
+ * 2009 ASN.1 module `PKIX1-PSS-OAEP-Algorithms-2009` ([RFC 5912 §8](https://datatracker.ietf.org/doc/html/rfc5912#section-8)).
+ * Value `{joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101)
+ * csor(3) nistAlgorithms(4) hashalgs(2) 3}`.
+ *
+ * When used in an `AlgorithmIdentifier`, parameters are preferably
+ * absent (`NULL` also historically used); implementations MUST accept
+ * both NULL and absent as equivalent ([RFC 4055 §2.1](https://datatracker.ietf.org/doc/html/rfc4055#section-2.1)).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

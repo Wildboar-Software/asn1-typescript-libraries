@@ -17,7 +17,17 @@ import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs
 /**
  * @summary pk_Ed25519
  * @description
- * 
+ *
+ * `PUBLIC-KEY` information object for Ed25519
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * Identified by `id-Ed25519`; no ASN.1 wrapping of the public key value;
+ * parameters absent. Certificate key usage bits ([RFC 8410 §5](https://datatracker.ietf.org/doc/html/rfc8410#section-5)), ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)):
+ * `digitalSignature`, `nonRepudiation`, `keyCertSign`, `cRLSign`.
+ * Private key type: `CurvePrivateKey`.
+ *
+ * In `SubjectPublicKeyInfo`, `subjectPublicKey` holds the raw public-key
+ * byte string (exact multiple of 8 bits) ([RFC 8410 §4](https://datatracker.ietf.org/doc/html/rfc8410#section-4)).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

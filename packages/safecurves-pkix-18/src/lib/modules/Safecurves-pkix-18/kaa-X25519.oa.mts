@@ -18,7 +18,15 @@ import { type KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
 /**
  * @summary kaa_X25519
  * @description
- * 
+ *
+ * `KEY-AGREE` information object for X25519 Diffie-Hellman
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)).
+ * Identified by `id-X25519`; parameters absent; public keys `{pk-X25519}`;
+ * UKM has no ASN.1 wrapping and `ARE preferredPresent`.
+ * S/MIME capability carries
+ * `AlgorithmIdentifier{KEY-WRAP, {KeyWrapAlgorithms}}` identified by
+ * `id-X25519`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

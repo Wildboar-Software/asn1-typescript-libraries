@@ -18,7 +18,16 @@ import { type SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE
 /**
  * @summary sa_Ed25519
  * @description
- * 
+ *
+ * `SIGNATURE-ALGORITHM` information object for Ed25519
+ * ([RFC 8410 §9](https://datatracker.ietf.org/doc/html/rfc8410#section-9)); signature encoding ([RFC 8410 §6](https://datatracker.ietf.org/doc/html/rfc8410#section-6)).
+ * Identified by `id-Ed25519`; parameters absent; public keys `{pk-Ed25519}`;
+ * S/MIME capability identified by `id-Ed25519`.
+ *
+ * The signature value is the opaque `ENC(R) || ENC(S)` from
+ * [RFC 8032](https://datatracker.ietf.org/doc/html/rfc8032) §3.3,
+ * encoded directly in the BIT STRING without added ASN.1 wrapping ([RFC 8410 §6](https://datatracker.ietf.org/doc/html/rfc8410#section-6)).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
