@@ -12,6 +12,18 @@ import { id_pda_dateOfBirth } from "../PKIXqualified97/id-pda-dateOfBirth.va.mjs
  * @summary dateOfBirth
  * @description
  *
+ * Subject directory attribute: date of birth of the subject
+ * ([RFC 3739 §3.2.2](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.2)).
+ * Compliant implementations SHALL be able to interpret this attribute
+ * when present in `subjectDirectoryAttributes`. Value is
+ * `GeneralizedTime` and SHOULD specify GMT 12.00.00 (noon) to second
+ * granularity (e.g., birth date 1959-09-27 as `"19590927120000Z"`) so
+ * time-zone adjustments do not change the calendar date. Parsing
+ * applications SHOULD ignore time data and present only the date.
+ * How the date is associated with the subject is outside the scope of
+ * RFC 3739. The `subjectDirectoryAttributes` extension MUST NOT be
+ * marked critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

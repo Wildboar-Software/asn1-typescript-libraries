@@ -11,6 +11,10 @@ import {
  * @summary TypeOfBiometricData
  * @description
  *
+ * CHOICE identifying the kind of biometric data hashed in
+ * `BiometricData`: either a predefined integer type or an OID
+ * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

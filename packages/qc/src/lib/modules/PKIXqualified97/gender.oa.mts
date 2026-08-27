@@ -12,6 +12,15 @@ import { id_pda_gender } from "../PKIXqualified97/id-pda-gender.va.mjs";
  * @summary gender
  * @description
  *
+ * Subject directory attribute: gender of the subject
+ * ([RFC 3739 §3.2.2](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.2)).
+ * For females the value `"F"` (or `"f"`), and for males `"M"` (or
+ * `"m"`), have to be used. How gender is associated with the subject
+ * is outside the scope of RFC 3739. Compliant implementations SHALL
+ * be able to interpret this attribute when present in
+ * `subjectDirectoryAttributes`. That extension MUST NOT be marked
+ * critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

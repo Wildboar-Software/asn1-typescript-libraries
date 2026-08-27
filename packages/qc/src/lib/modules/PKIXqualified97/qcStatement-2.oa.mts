@@ -11,6 +11,11 @@ import {
  * @summary qcStatement_2
  * @description
  *
+ * Predefined QC statement identifying conformance with requirements
+ * in this Qualified Certificate profile (version 2 / RFC 3739)
+ * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+ * Optional `SemanticsInformation` may accompany it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

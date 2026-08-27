@@ -23,6 +23,11 @@ import {
  * @summary BiometricData
  * @description
  *
+ * One biometric template hash entry in the `biometricInfo` extension
+ * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+ * Stores a hash of biometric data for authentication; the corresponding
+ * biometric information is not stored in the extension itself.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,24 +44,51 @@ export class BiometricData {
     constructor(
         /**
          * @summary `typeOfBiometricData`.
+         * @description
+         *
+         * Identifies the biometric data kind: a
+         * `PredefinedBiometricType` (`picture` or
+         * `handwritten-signature`) or an OID
+         * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+         *
          * @public
          * @readonly
          */
         readonly typeOfBiometricData: TypeOfBiometricData,
         /**
          * @summary `hashAlgorithm`.
+         * @description
+         *
+         * Algorithm used to compute `biometricDataHash`
+         * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+         *
          * @public
          * @readonly
          */
         readonly hashAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `biometricDataHash`.
+         * @description
+         *
+         * Hash of the biometric template (e.g., over the whole
+         * referenced image file for `picture` or
+         * `handwritten-signature`)
+         * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+         *
          * @public
          * @readonly
          */
         readonly biometricDataHash: OCTET_STRING,
         /**
          * @summary `sourceDataUri`.
+         * @description
+         *
+         * Optional URI referencing a file with the biometric data
+         * corresponding to this hash. If present, MUST use `http://`
+         * or `https://`. Encoding format of that file is outside this
+         * specification
+         * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+         *
          * @public
          * @readonly
          */

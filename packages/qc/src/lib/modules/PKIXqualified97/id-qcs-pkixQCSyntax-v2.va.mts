@@ -6,6 +6,10 @@ import { id_qcs } from "../PKIXqualified97/id-qcs.va.mjs";
  * @summary id_qcs_pkixQCSyntax_v2
  * @description
  *
+ * Statement OID for `qcStatement-2`: conformance with this Qualified
+ * Certificate profile (version 2 / RFC 3739)
+ * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

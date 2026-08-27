@@ -16,6 +16,14 @@ import {
  * @summary SemanticsInformation
  * @description
  *
+ * Optional qualifying data for `qcStatement-1` /
+ * `qcStatement-2` (`id-qcs-pkixQCSyntax-v1` / `v2`)
+ * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+ * At least one of `semanticsIdentifier` or
+ * `nameRegistrationAuthorities` must be present when this type is
+ * used. The `statementInfo` component of `QCStatement` need not be
+ * present even when the statement ID is v1 or v2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +39,28 @@ export class SemanticsInformation {
     constructor(
         /**
          * @summary `semanticsIdentifier`.
+         * @description
+         *
+         * If present, an OID defining semantics for attributes and names
+         * in basic certificate fields and certificate extensions (all
+         * or a subgroup)
+         * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+         *
          * @public
          * @readonly
          */
         readonly semanticsIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `nameRegistrationAuthorities`.
+         * @description
+         *
+         * If present, one or more name registration authorities
+         * responsible for registration of attributes or names
+         * associated with the subject. Association with present
+         * attributes MAY be defined by a semantics identifier OID, a
+         * certificate policy (or CPS), or other implicit factors
+         * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+         *
          * @public
          * @readonly
          */

@@ -11,6 +11,13 @@ import {
  * @summary qcStatement_1
  * @description
  *
+ * Predefined QC statement identifying conformance with requirements
+ * in the obsoleted RFC 3039 (profile version 1)
+ * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+ * Provided for identification of old certificates issued under
+ * RFC 3039. MUST NOT be included in certificates issued in accordance
+ * with RFC 3739. Optional `SemanticsInformation` may accompany it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

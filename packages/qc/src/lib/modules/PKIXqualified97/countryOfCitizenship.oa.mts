@@ -12,6 +12,18 @@ import { id_pda_countryOfCitizenship } from "../PKIXqualified97/id-pda-countryOf
  * @summary countryOfCitizenship
  * @description
  *
+ * Subject directory attribute: at least one of the subject's claimed
+ * countries of citizenship at the time the certificate was issued
+ * ([RFC 3739 §3.2.2](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.2)).
+ * Value is an ISO 3166 country code (`PrintableString` size 2). If
+ * more than one country of citizenship is specified, each SHOULD be
+ * a separate, single-valued `countryOfCitizenship` attribute.
+ * Determination of citizenship is a matter of law and outside the
+ * scope of RFC 3739. Compliant implementations SHALL be able to
+ * interpret this attribute when present in
+ * `subjectDirectoryAttributes`. That extension MUST NOT be marked
+ * critical.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

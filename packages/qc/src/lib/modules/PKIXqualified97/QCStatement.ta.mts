@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary QCStatement
  * @description
  *
+ * One statement in the `qcStatements` extension: an object identifier
+ * and optional qualifying data
+ * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6)).
+ * If `statementInfo` is present, the statement OID SHALL define the
+ * syntax and SHOULD define the semantics of that parameter.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +31,25 @@ export class QCStatement {
     constructor(
         /**
          * @summary `statementId`.
+         * @description
+         *
+         * Object identifier for the statement
+         * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6)).
+         *
          * @public
          * @readonly
          */
         readonly statementId: OBJECT_IDENTIFIER,
         /**
          * @summary `statementInfo`.
+         * @description
+         *
+         * Optional qualifying data whose syntax is defined by
+         * `statementId`. May be absent even when `statementId` is
+         * `id-qcs-pkixQCSyntax-v1` or `id-qcs-pkixQCSyntax-v2`
+         * ([RFC 3739 §3.2.6](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6),
+         * [§3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+         *
          * @public
          * @readonly
          */
