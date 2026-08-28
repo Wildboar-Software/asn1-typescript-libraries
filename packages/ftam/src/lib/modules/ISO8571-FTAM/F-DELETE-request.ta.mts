@@ -21,6 +21,12 @@ import {
  * @summary F_DELETE_request
  * @description
  *
+ * Deletes the selected file (it ceases to exist) and always
+ * releases selection. Limited file management FU; P-DATA. Needs
+ * delete-file access from the select/create that established the
+ * regime. ISO 8571-3:1988 §15.4 Table 18; ISO 8571-2:1988 §10.7;
+ * ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +40,10 @@ export class F_DELETE_request {
   constructor(
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.4.2.2 / §13.10.
+     *
      * @public
      * @readonly
      */

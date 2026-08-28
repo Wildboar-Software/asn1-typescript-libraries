@@ -32,6 +32,11 @@ import {
  * @summary F_GROUP_SELECT_response
  * @description
  *
+ * Confirms F-GROUP-SELECT.
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[46]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +52,33 @@ export class F_GROUP_SELECT_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Success, transient error, or permanent error. ISO
+     * 8571-3:1988 §13.2. Default `success`.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information on this primitive. ISO 8571-3:1988
+     * §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Detail accompanying `action-result`. ISO 8571-3:1988
+     * §13.13.
+     *
      * @public
      * @readonly
      */

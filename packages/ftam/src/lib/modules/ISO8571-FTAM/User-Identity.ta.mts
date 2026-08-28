@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary User_Identity
  * @description
  *
+ * Identifies the calling user. Sets the current initiator
+ * identity (ISO 8571-3:1988 §14.1.2.18;
+ * ISO 8571-2:1988 §13.3). Minimum range 1–8 characters
+ * (ISO 8571-2:1988 Table 4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

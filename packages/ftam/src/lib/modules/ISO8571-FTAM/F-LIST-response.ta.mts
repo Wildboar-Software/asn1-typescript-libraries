@@ -32,6 +32,11 @@ import {
  * @summary F_LIST_response
  * @description
  *
+ * Confirms F-LIST with per-object attributes.
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[44]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +52,33 @@ export class F_LIST_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Success, transient error, or permanent error. ISO
+     * 8571-3:1988 §13.2. Default `success`.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `objects_attributes_list`.
+     * @description
+     *
+     * Returned attributes per matched object. Each item
+     * parallels F-READ-ATTRIB (ISO 8571-3:1988 §16.1.2.3).
+     *
      * @public
      * @readonly
      */
     readonly objects_attributes_list?: OPTIONAL<Objects_Attributes_List>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Detail accompanying `action-result`. ISO 8571-3:1988
+     * §13.13.
+     *
      * @public
      * @readonly
      */

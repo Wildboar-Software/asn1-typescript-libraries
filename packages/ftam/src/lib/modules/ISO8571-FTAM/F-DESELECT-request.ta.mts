@@ -21,6 +21,11 @@ import {
  * @summary F_DESELECT_request
  * @description
  *
+ * Releases the binding between the select regime and the file; the
+ * file remains. Issued only while a file is selected. Kernel FU;
+ * P-DATA. ISO 8571-3:1988 §15.2 Table 16; ISO 8571-2:1988 §10.8;
+ * ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,10 @@ export class F_DESELECT_request {
   constructor(
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.2.2.3 / §13.10.
+     *
      * @public
      * @readonly
      */

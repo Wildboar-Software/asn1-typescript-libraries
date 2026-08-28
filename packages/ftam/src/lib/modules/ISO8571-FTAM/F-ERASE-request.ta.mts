@@ -20,6 +20,11 @@ import {
  * @summary F_ERASE_request
  * @description
  *
+ * Deletes a FADU and locates the next remaining FADU in preorder.
+ * Erasing the file root restores post-create state. Access FU;
+ * P-DATA. ISO 8571-2:1988 §11.6; ISO 8571-3:1988 §20.3 Table 29;
+ * ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +37,11 @@ export class F_ERASE_request {
   constructor(
     /**
      * @summary `file_access_data_unit_identity`.
+     * @description
+     *
+     * FADU to erase. ISO 8571-3:1988 §20.3.2.2 / §13.12;
+     * ISO 8571-2:1988 §11.6.
+     *
      * @public
      * @readonly
      */

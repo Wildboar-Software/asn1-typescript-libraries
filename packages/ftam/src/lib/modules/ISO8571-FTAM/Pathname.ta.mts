@@ -17,6 +17,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Pathname
  * @description
  *
+ * Kernel-group filename: vector of GraphicString components
+ * (ISO 8571-2:1988 §12.1, §14.1). ISO 8571 does not interpret
+ * the components; they are a transparent naming mechanism. Set
+ * at create; changeable (a vector change replaces the whole
+ * list, ISO 8571-2:1988 §9.2, §10.3). `no-value-available` is
+ * forbidden for kernel attributes (ISO 8571-2:1988 §14.1).
+ *
+ * ISO 8571-4:1988 Figure 11 names this `Filename-Attribute`
+ * (`SEQUENCE OF GraphicString`). This module renamed it to
+ * `Pathname`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

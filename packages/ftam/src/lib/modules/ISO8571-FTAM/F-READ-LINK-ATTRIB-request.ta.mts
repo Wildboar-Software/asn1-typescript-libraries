@@ -26,6 +26,12 @@ import {
  * @summary F_READ_LINK_ATTRIB_request
  * @description
  *
+ * Reads named attributes of a link. Same field pattern as
+ * F-READ-ATTRIB (ISO 8571-3:1988 §16.1).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[65]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +46,22 @@ export class F_READ_LINK_ATTRIB_request {
   constructor(
     /**
      * @summary `attribute_names`.
+     * @description
+     *
+     * Attribute names to return. Same role as F-READ-ATTRIB
+     * (ISO 8571-3:1988 §16.1.2.2).
+     *
      * @public
      * @readonly
      */
     readonly attribute_names: Attribute_Names,
     /**
      * @summary `attribute_extension_names`.
+     * @description
+     *
+     * Attribute-extension names to return. Absent from ISO
+     * 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */

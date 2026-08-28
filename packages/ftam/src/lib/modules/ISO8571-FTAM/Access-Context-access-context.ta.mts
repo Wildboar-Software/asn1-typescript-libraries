@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Access_Context_access_context
  * @description
  *
+ * The seven access contexts. Read uses this to filter what is
+ * transferred; nodes still appear in preorder.
+ * ISO 8571-2:1988 §7.5 Table 1; ISO 8571-3:1988 Table 27.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +32,9 @@ export type Access_Context_access_context = INTEGER;
 
 /**
  * @summary Access_Context_access_context_hierarchical_all_data_units
+ * @description HA. Node-Descriptor, Enter/Exit-Subtree, and
+ * File-Contents of the full addressed subtree (ISO 8571-2:1988
+ * §7.5.1).
  * @constant
  * @type {number}
  */
@@ -44,6 +51,8 @@ export const hierarchical_all_data_units: Access_Context_access_context = Access
 
 /**
  * @summary Access_Context_access_context_hierarchical_no_data_units
+ * @description HN. Structuring only: Node-Descriptor,
+ * Enter/Exit-Subtree; no File-Contents (ISO 8571-2:1988 §7.5.2).
  * @constant
  * @type {number}
  */
@@ -60,6 +69,8 @@ export const hierarchical_no_data_units: Access_Context_access_context = Access_
 
 /**
  * @summary Access_Context_access_context_flat_all_data_units
+ * @description FA. Node-Descriptor and File-Contents for nodes with
+ * `data-exists` TRUE; no enter/exit (ISO 8571-2:1988 §7.5.3).
  * @constant
  * @type {number}
  */
@@ -76,6 +87,9 @@ export const flat_all_data_units: Access_Context_access_context = Access_Context
 
 /**
  * @summary Access_Context_access_context_flat_one_level_data_unit
+ * @description FL. As FA, but only nodes at `level-number` relative
+ * to the addressed FADU root. `level-number` is present iff FL
+ * (ISO 8571-2:1988 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -92,6 +106,8 @@ export const flat_one_level_data_unit: Access_Context_access_context = Access_Co
 
 /**
  * @summary Access_Context_access_context_flat_Single_data_unit
+ * @description FS. Single Node-Descriptor and the DU of the
+ * addressed FADU root (ISO 8571-2:1988 §7.5.5).
  * @constant
  * @type {number}
  */
@@ -108,6 +124,8 @@ export const flat_Single_data_unit: Access_Context_access_context = Access_Conte
 
 /**
  * @summary Access_Context_access_context_unstructured_all_data_units
+ * @description UA. File-Contents only from the addressed FADU
+ * (ISO 8571-2:1988 §7.5.6).
  * @constant
  * @type {number}
  */
@@ -124,6 +142,8 @@ export const unstructured_all_data_units: Access_Context_access_context = Access
 
 /**
  * @summary Access_Context_access_context_unstructured_Single_data_unit
+ * @description US. File-Contents of the DU of the addressed FADU
+ * root (ISO 8571-2:1988 §7.5.7).
  * @constant
  * @type {number}
  */

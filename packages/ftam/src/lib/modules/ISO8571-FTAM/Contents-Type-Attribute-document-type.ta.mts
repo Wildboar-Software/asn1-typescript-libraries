@@ -21,6 +21,11 @@ import {
  * @summary Contents_Type_Attribute_document_type
  * @description
  *
+ * Document-type alternative of contents-type: document type
+ * name plus optional parameter whose type is defined by that
+ * document type (ISO 8571-2:1988 §12.3; ISO 8571-4:1988
+ * Figure 11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +37,22 @@ export class Contents_Type_Attribute_document_type {
   constructor(
     /**
      * @summary `document_type_name`.
+     * @description
+     *
+     * Identifies the document type; that definition supplies the
+     * parameter type (ISO 8571-2:1988 §12.3).
+     *
      * @public
      * @readonly
      */
     readonly document_type_name: Document_Type_Name,
     /**
      * @summary `parameter`.
+     * @description
+     *
+     * Optional value whose type is defined in the named document
+     * type (ISO 8571-4:1988 Figure 11).
+     *
      * @public
      * @readonly
      */

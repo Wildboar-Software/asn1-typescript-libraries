@@ -37,6 +37,10 @@ import {
  * @summary F_DELETE_response
  * @description
  *
+ * Confirm of F-DELETE. File is always deselected whatever
+ * `action-result`. Limited file management FU; P-DATA.
+ * ISO 8571-3:1988 §15.4 Table 18; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,24 +57,42 @@ export class F_DELETE_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Success or failure of deletion; file always deselected.
+     * Default `success`. ISO 8571-3:1988 §15.4.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.4.2.2 / §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `charging`.
+     * @description
+     *
+     * Only against an overriding account set at selection.
+     * ISO 8571-3:1988 §15.4.2.3.
+     *
      * @public
      * @readonly
      */
     readonly charging?: OPTIONAL<Charging>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.4.2.4 / §13.13.
+     *
      * @public
      * @readonly
      */

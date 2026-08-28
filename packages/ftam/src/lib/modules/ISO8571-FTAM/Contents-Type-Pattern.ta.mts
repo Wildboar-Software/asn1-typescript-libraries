@@ -25,6 +25,9 @@ import {
  * @summary Contents_Type_Pattern
  * @description
  *
+ * Matcher for the contents-type attribute: document-type OID, or
+ * constraint-set plus abstract-syntax OIDs.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

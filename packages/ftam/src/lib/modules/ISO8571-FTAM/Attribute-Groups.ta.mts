@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Attribute_Groups
  * @description
  *
+ * Optional file attribute groups for the association. Kernel
+ * group is always present and is not negotiated. 1988:
+ * `storage` (0), `security` (1), `private` (2). Responder may
+ * reduce the initiator's proposal. `extension` (3) is not in
+ * ISO 8571:1988. ISO 8571-2:1988 §14; ISO 8571-3:1988
+ * §14.1.2.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +36,10 @@ export type Attribute_Groups = BIT_STRING;
 
 /**
  * @summary Attribute_Groups_storage
+ * @description
+ *
+ * Bit 0: storage attribute group (ISO 8571-2:1988 §14.2).
+ *
  * @constant
  */
 export const Attribute_Groups_storage: number = 0; /* LONG_NAMED_BIT */
@@ -43,6 +54,10 @@ export const storage: number = Attribute_Groups_storage; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Attribute_Groups_security
+ * @description
+ *
+ * Bit 1: security attribute group.
+ *
  * @constant
  */
 export const Attribute_Groups_security: number = 1; /* LONG_NAMED_BIT */
@@ -57,6 +72,10 @@ export const security: number = Attribute_Groups_security; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Attribute_Groups_private_
+ * @description
+ *
+ * Bit 2: private attribute group.
+ *
  * @constant
  */
 export const Attribute_Groups_private_: number = 2; /* LONG_NAMED_BIT */
@@ -71,6 +90,10 @@ export const private_: number = Attribute_Groups_private_; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Attribute_Groups_extension
+ * @description
+ *
+ * Bit 3: later attribute-group extension; not in ISO 8571:1988.
+ *
  * @constant
  */
 export const Attribute_Groups_extension: number = 3; /* LONG_NAMED_BIT */

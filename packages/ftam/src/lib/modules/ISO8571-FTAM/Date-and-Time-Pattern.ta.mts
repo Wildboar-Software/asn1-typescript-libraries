@@ -21,6 +21,10 @@ import {
  * @summary Date_and_Time_Pattern
  * @description
  *
+ * Matcher for a GeneralizedTime filestore-object attribute. Despite
+ * the ASN.1 name `relational-camparision`, the field is
+ * `Equality-Comparision` (equals / `no-value-available` only).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,21 @@ export class Date_and_Time_Pattern {
   constructor(
     /**
      * @summary `relational_camparision`.
+     * @description
+     *
+     * Whether `no-value-available` and equals match. ASN.1 spelling
+     * `relational-camparision`; type is `Equality-Comparision`.
+     *
      * @public
      * @readonly
      */
     readonly relational_camparision: Equality_Comparision,
     /**
      * @summary `time_and_date_value`.
+     * @description
+     *
+     * Test time for the equality comparison.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Protocol_Version
  * @description
  *
+ * Versions this entity supports. ISO 8571-4:1988 line 47 defines
+ * only `version-1` (0). The initiator sets only version-1;
+ * trailing unused bits are omitted (ISO 8571-4:1988 §8.1.1).
+ * `version-2` is not in ISO 8571:1988 Parts 1–4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +34,11 @@ export type Protocol_Version = BIT_STRING;
 
 /**
  * @summary Protocol_Version_version_1
+ * @description
+ *
+ * Bit 0: ISO 8571:1988 protocol. Initiator sets only this bit
+ * (ISO 8571-4:1988 §8.1.1).
+ *
  * @constant
  */
 export const Protocol_Version_version_1: number = 0; /* LONG_NAMED_BIT */
@@ -43,6 +53,10 @@ export const version_1: number = Protocol_Version_version_1; /* SHORT_NAMED_BIT 
 
 /**
  * @summary Protocol_Version_version_2
+ * @description
+ *
+ * Bit 1: later protocol version; not in ISO 8571:1988 Parts 1–4.
+ *
  * @constant
  */
 export const Protocol_Version_version_2: number = 1; /* LONG_NAMED_BIT */

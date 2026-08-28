@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary State_Result
  * @description
  *
+ * Whether a confirmed service changed regimes as requested.
+ * Present only on response/confirm of services that can fail
+ * to change regimes. Omitted on primitives that do not change
+ * state or that cannot fail (e.g. F-DESELECT). When
+ * state-result is `failure`, action-result is transient or
+ * permanent error. ISO 8571-3:1988 §13.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +36,11 @@ export type State_Result = INTEGER;
 
 /**
  * @summary State_Result_success
+ * @description
+ *
+ * `success`(0): regime change succeeded
+ * (ISO 8571-3:1988 §13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +57,12 @@ export const success: State_Result = State_Result_success; /* SHORT_NAMED_INTEGE
 
 /**
  * @summary State_Result_failure
+ * @description
+ *
+ * `failure`(1): failed to change regimes as requested.
+ * Action-result is then transient or permanent error
+ * (ISO 8571-3:1988 §13.1, §13.2).
+ *
  * @constant
  * @type {number}
  */

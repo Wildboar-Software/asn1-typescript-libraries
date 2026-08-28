@@ -20,6 +20,10 @@ import {
  * @summary Scope
  * @description
  *
+ * Limits how far listing/selection walks. `[APPLICATION 28]`
+ * sequence of `Scope-Item`s: optional `root-directory` plus
+ * `retrieval-scope` (`child` or `all`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

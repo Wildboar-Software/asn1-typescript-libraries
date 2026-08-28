@@ -20,6 +20,11 @@ import {
  * @summary Objects_Attributes_List
  * @description
  *
+ * Sequence of `Read-Attributes` for listed objects
+ * (`[APPLICATION 25]`). Absent from ISO 8571:1988 Parts 1–4.
+ * Each item parallels F-READ-ATTRIB attributes (ISO
+ * 8571-3:1988 §16.1.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

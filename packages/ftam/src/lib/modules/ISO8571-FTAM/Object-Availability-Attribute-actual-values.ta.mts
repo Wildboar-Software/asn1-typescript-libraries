@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Object_Availability_Attribute_actual_values
  * @description
  *
+ * File-availability enumeration (ISO 8571-2:1988 §12.13;
+ * ISO 8571-4:1988 Figure 11). Actual use of the hint is
+ * implementation-dependent.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +32,12 @@ export type Object_Availability_Attribute_actual_values = INTEGER;
 
 /**
  * @summary Object_Availability_Attribute_actual_values_immediate_availability
+ * @description
+ *
+ * Assumed stored on a non-demountable device; no significant
+ * delay expected when accessing the file
+ * (ISO 8571-2:1988 §12.13).
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +54,11 @@ export const immediate_availability: Object_Availability_Attribute_actual_values
 
 /**
  * @summary Object_Availability_Attribute_actual_values_deferred_availability
+ * @description
+ *
+ * Initiator hint that the file may be stored on a demountable
+ * device (ISO 8571-2:1988 §12.13).
+ *
  * @constant
  * @type {number}
  */

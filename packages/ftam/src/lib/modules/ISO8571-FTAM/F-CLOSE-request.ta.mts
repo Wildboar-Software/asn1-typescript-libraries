@@ -32,6 +32,13 @@ import {
  * @summary F_CLOSE_request
  * @description
  *
+ * Releases the open regime. Always terminates open. Read or write
+ * FU; P-DATA. Updates storage-group attributes by processing mode
+ * (read → last-read; write modes → last-modification). IFS may
+ * carry `action-result` on the request for a transient error
+ * between FERPMs. ISO 8571-3:1988 §17.2 Table 22;
+ * ISO 8571-2:1988 §10.6; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +54,33 @@ export class F_CLOSE_request {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * IFS request: transient error between FERPMs. EFS: only on
+     * response/confirm. Open terminates regardless. Default
+     * `success`. ISO 8571-3:1988 §17.2.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * ISO 8571-3:1988 §17.2.2.2 / §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Qualifies `action-result` when that field is present.
+     * ISO 8571-3:1988 §17.2.2.3.
+     *
      * @public
      * @readonly
      */

@@ -20,6 +20,9 @@ import {
  * @summary Attribute_Extension_Names
  * @description
  *
+ * Names of extension attributes to read (not the values). Sequence
+ * of `Attribute-Extension-Set-Name`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

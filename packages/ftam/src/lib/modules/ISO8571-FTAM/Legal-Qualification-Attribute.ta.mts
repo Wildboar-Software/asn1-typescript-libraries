@@ -18,6 +18,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Legal_Qualification_Attribute
  * @description
  *
+ * Security-group GraphicString conveying legal status of the
+ * file and its use; implications depend on national data-
+ * protection legislation (ISO 8571-2:1988 §12.17, §14.3;
+ * ISO 8571-4:1988 Figure 11). Scalar. Set at create;
+ * changeable.
+ *
+ * `no-value-available` means partial support and shall appear
+ * only in response PDUs. Initiators shall not claim partial
+ * support (ISO 8571-2:1988 §9.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

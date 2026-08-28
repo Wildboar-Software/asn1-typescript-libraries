@@ -16,6 +16,11 @@ import {
  * @summary Extension_attribute_Patterns
  * @description
  *
+ * Empty `TYPE-IDENTIFIER` information object set `{...}` of patterns
+ * for extension attributes. ASN.1: dynamically extensible; a pattern
+ * is used with the extension attribute to match it, and may be
+ * defined in terms of other patterns in this module.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

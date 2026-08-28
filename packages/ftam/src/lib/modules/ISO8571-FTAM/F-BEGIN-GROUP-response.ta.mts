@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary F_BEGIN_GROUP_response
  * @description
  *
+ * Empty confirm of F-BEGIN-GROUP (ASN.1: no elements). Grouping
+ * FU; P-DATA. After a `state-result` failure, remaining responses
+ * except END-GROUP are omitted. ISO 8571-3:1988 §18 Table 23;
+ * ISO 8571-4:1988 Table 3 / F-BEGIN-GROUP-response.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

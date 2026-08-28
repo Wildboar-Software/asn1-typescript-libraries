@@ -20,6 +20,12 @@ import {
  * @summary AND_Set
  * @description
  *
+ * Conjunction of per-attribute patterns. A filestore object matches
+ * if every item matches the corresponding attribute. Used in group
+ * select / list. ASN.1 groups alternatives (kernel, storage,
+ * security, private, attribute extensions); access-control and
+ * private-use searches are disallowed.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

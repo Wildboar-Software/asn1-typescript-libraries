@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Action_Result
  * @description
  *
+ * Summarizes the diagnostic. Never less severe than the worst
+ * diagnostic. EFS: only `success` or `permanent-error`. IFS:
+ * all three. “Unsuccessful” means transient or permanent. A
+ * successful action-result may still carry an informative
+ * diagnostic. When state-result is failure, action-result is
+ * transient or permanent error. ISO 8571-3:1988 §13.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +36,11 @@ export type Action_Result = INTEGER;
 
 /**
  * @summary Action_Result_success
+ * @description
+ *
+ * `success`(0). May still carry an informative diagnostic
+ * (ISO 8571-3:1988 §13.2).
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +57,11 @@ export const success: Action_Result = Action_Result_success; /* SHORT_NAMED_INTE
 
 /**
  * @summary Action_Result_transient_error
+ * @description
+ *
+ * `transient-error`(1). IFS only; not a valid EFS value
+ * (ISO 8571-3:1988 §13.2).
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +78,11 @@ export const transient_error: Action_Result = Action_Result_transient_error; /* 
 
 /**
  * @summary Action_Result_permanent_error
+ * @description
+ *
+ * `permanent-error`(2). Valid in both IFS and EFS
+ * (ISO 8571-3:1988 §13.2).
+ *
  * @constant
  * @type {number}
  */

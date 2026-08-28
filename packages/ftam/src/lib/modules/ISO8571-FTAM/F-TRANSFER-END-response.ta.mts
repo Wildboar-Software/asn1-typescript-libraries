@@ -38,6 +38,10 @@ import {
  * @summary F_TRANSFER_END_response
  * @description
  *
+ * Completes the BDT. Receipt of the confirm tells the sender that no
+ * further error recovery for this transfer will be requested.
+ * ISO 8571-3:1988 §24.5 Table 37.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,30 +60,55 @@ export class F_TRANSFER_END_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Outcome of the transfer. Default `success`.
+     * ISO 8571-3:1988 §13.2, §24.5.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information bound to this primitive
+     * (ISO 8571-3:1988 §13.10).
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Amplifies action-result (ISO 8571-3:1988 §13.13, §24.5.2.3).
+     *
      * @public
      * @readonly
      */
     readonly diagnostic?: OPTIONAL<Diagnostic>,
     /**
      * @summary `request_type`.
+     * @description
+     *
+     * Direction of the BDT (read or write). Not in ISO 8571:1988
+     * Parts 1–4. Module comment: conditional on consecutive or
+     * concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly request_type?: OPTIONAL<Request_Type>,
     /**
      * @summary `transfer_number`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */

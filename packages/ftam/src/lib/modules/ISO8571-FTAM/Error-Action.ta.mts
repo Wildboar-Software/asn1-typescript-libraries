@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Error_Action
  * @description
  *
+ * What to do after an error on a group operation:
+ * `terminate(0)` or `continue(1)`. Absent from ISO 8571:1988
+ * Parts 1–4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +32,10 @@ export type Error_Action = INTEGER;
 
 /**
  * @summary Error_Action_terminate
+ * @description
+ *
+ * Stop remaining group work after an error.
+ *
  * @constant
  * @type {number}
  */
@@ -36,6 +44,10 @@ export const Error_Action_terminate: Error_Action = 0; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary Error_Action_terminate
+ * @description
+ *
+ * Stop remaining group work after an error.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +56,10 @@ export const terminate: Error_Action = Error_Action_terminate; /* SHORT_NAMED_IN
 
 /**
  * @summary Error_Action_continue_
+ * @description
+ *
+ * Continue remaining group work after an error.
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +68,10 @@ export const Error_Action_continue_: Error_Action = 1; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary Error_Action_continue_
+ * @description
+ *
+ * Continue remaining group work after an error.
+ *
  * @constant
  * @type {number}
  */

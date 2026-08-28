@@ -25,6 +25,9 @@ import {
  * @summary Pathname_Pattern
  * @description
  *
+ * Matcher for a pathname attribute. Equality bits plus a sequence of
+ * path components, each a `String-Pattern` or `any-match`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +45,20 @@ export class Pathname_Pattern {
   constructor(
     /**
      * @summary `equality_comparision`.
+     * @description
+     *
+     * Whether `no-value-available` and equals match.
+     *
      * @public
      * @readonly
      */
     readonly equality_comparision: Equality_Comparision,
     /**
      * @summary `pathname_value`.
+     * @description
+     *
+     * Path components to match, in order.
+     *
      * @public
      * @readonly
      */

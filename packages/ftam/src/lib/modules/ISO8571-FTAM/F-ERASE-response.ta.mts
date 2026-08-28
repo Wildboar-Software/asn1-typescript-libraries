@@ -27,6 +27,9 @@ import {
  * @summary F_ERASE_response
  * @description
  *
+ * Confirm of F-ERASE. Access FU; P-DATA. ISO 8571-2:1988 §11.6;
+ * ISO 8571-3:1988 §20.3 Table 29; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +44,20 @@ export class F_ERASE_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Default `success`. ISO 8571-3:1988 §20.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * ISO 8571-3:1988 §20.3.2.3 / §13.13.
+     *
      * @public
      * @readonly
      */

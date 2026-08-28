@@ -21,6 +21,9 @@ import {
  * @summary Pathname_Pattern_pathname_value_Item
  * @description
  *
+ * One pathname component: match with a `String-Pattern`, or
+ * `any-match` (wildcard component).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

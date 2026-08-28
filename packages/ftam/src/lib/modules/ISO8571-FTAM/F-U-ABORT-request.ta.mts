@@ -27,6 +27,12 @@ import {
  * @summary F_U_ABORT_request
  * @description
  *
+ * User-initiated abrupt FTAM-regime abort. Either user may
+ * issue after F-INITIALIZE request/indication. Regime ends
+ * unconditionally; selected file is left undefined. Local
+ * close then deselect if open. Mapped to A-ABORT
+ * (ISO 8571-4:1988 Table 2). ISO 8571-3:1988 §14.3, Table 13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +47,21 @@ export class F_U_ABORT_request {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Summary of `diagnostic`. ISO 8571-3:1988 §13.2, §14.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Detailed failure information amplifying `action-result`.
+     * ISO 8571-3:1988 §13.13, §14.3.2.2.
+     *
      * @public
      * @readonly
      */

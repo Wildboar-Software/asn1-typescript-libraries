@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Degree_Of_Overlap
  * @description
  *
+ * Not defined in ISO 8571:1988 Parts 1–4. Named values in this
+ * module are `normal`(0), `consecutive`(1), `concurrent`(2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +32,7 @@ export type Degree_Of_Overlap = INTEGER;
 
 /**
  * @summary Degree_Of_Overlap_normal
+ * @description Not defined in ISO 8571:1988 Parts 1–4.
  * @constant
  * @type {number}
  */
@@ -45,6 +49,7 @@ export const normal: Degree_Of_Overlap = Degree_Of_Overlap_normal; /* SHORT_NAME
 
 /**
  * @summary Degree_Of_Overlap_consecutive
+ * @description Not defined in ISO 8571:1988 Parts 1–4.
  * @constant
  * @type {number}
  */
@@ -61,6 +66,7 @@ export const consecutive: Degree_Of_Overlap = Degree_Of_Overlap_consecutive; /* 
 
 /**
  * @summary Degree_Of_Overlap_concurrent
+ * @description Not defined in ISO 8571:1988 Parts 1–4.
  * @constant
  * @type {number}
  */

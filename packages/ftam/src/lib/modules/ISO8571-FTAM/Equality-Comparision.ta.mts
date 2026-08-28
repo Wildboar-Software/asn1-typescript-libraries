@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Equality_Comparision
  * @description
  *
+ * Equality test bits for string, boolean, bitstring, pathname, OID,
+ * and date-time patterns. Bit 0: whether `no-value-available`
+ * (partial support, ISO 8571-2:1988 §9.4) matches. Bit 1: whether
+ * equal values match. Set = match; clear = fail.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +41,11 @@ export type Equality_Comparision = BIT_STRING;
 
 /**
  * @summary Equality_Comparision_no_value_available_matches
+ * @description
+ *
+ * Bit 0. Set: "No Value Available" matches; clear: it fails. Partial
+ * support of an attribute (ISO 8571-2:1988 §9.4).
+ *
  * @constant
  */
 export const Equality_Comparision_no_value_available_matches: number = 0; /* LONG_NAMED_BIT */
@@ -50,6 +60,10 @@ export const no_value_available_matches: number = Equality_Comparision_no_value_
 
 /**
  * @summary Equality_Comparision_equals_matches
+ * @description
+ *
+ * Bit 1. Set: equal items match; clear: equal items fail.
+ *
  * @constant
  */
 export const Equality_Comparision_equals_matches: number = 1; /* LONG_NAMED_BIT */

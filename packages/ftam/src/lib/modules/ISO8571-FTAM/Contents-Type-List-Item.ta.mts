@@ -25,6 +25,11 @@ import {
  * @summary Contents_Type_List_Item
  * @description
  *
+ * One contents-type: a `document-type-name` or an
+ * `abstract-syntax-name`. The initiator proposes a mix; unique
+ * abstract syntaxes are derived for A-ASSOCIATE.
+ * ISO 8571-3:1988 §14.1.2.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

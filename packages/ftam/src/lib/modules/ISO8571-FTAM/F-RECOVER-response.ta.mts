@@ -39,6 +39,10 @@ import {
  * @summary F_RECOVER_response
  * @description
  *
+ * Confirm of F-RECOVER. IFS only; recovery FU; P-DATA.
+ * `presentation-action` is as for F-OPEN. ISO 8571-3:1988 §19
+ * Table 24; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -67,54 +71,96 @@ export class F_RECOVER_response {
   constructor(
     /**
      * @summary `state_result`.
+     * @description
+     *
+     * Default `success`. ISO 8571-3:1988 §19.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly state_result: OPTIONAL<State_Result>,
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Default `success`. ISO 8571-3:1988 §19.1.2.2.
+     *
      * @public
      * @readonly
      */
     readonly action_result: OPTIONAL<Action_Result>,
     /**
      * @summary `contents_type`.
+     * @description
+     *
+     * File contents type name returned to the initiator.
+     * ISO 8571-3:1988 §19.1.2.7 / §17.1.2.4.
+     *
      * @public
      * @readonly
      */
     readonly contents_type: Contents_Type_Attribute,
     /**
      * @summary `recovety_Point`.
+     * @description
+     *
+     * 0 = beginning of file; point after last checkpoint = end of
+     * file (ASN.1). Conditional: present on request or response.
+     * Default 0. ISO 8571-3:1988 §19.1.2.8; ISO 8571-4:1988
+     * F-RECOVER-response.
+     *
      * @public
      * @readonly
      */
     readonly recovety_Point?: OPTIONAL<INTEGER>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * ISO 8571-3:1988 §19.1.2.9 / §13.13.
+     *
      * @public
      * @readonly
      */
     readonly diagnostic?: OPTIONAL<Diagnostic>,
     /**
      * @summary `presentation_action`.
+     * @description
+     *
+     * Responder will follow with P-ALTER-CONTEXT (ASN.1), as for
+     * F-OPEN. Default FALSE. ISO 8571-4:1988 F-RECOVER-response.
+     *
      * @public
      * @readonly
      */
     readonly presentation_action?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `concurrent_recovery_point`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: concurrent
+     * access.
+     *
      * @public
      * @readonly
      */
     readonly concurrent_recovery_point?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_request`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_request`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */

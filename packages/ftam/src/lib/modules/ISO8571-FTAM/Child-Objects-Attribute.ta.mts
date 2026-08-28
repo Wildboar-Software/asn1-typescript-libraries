@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Child_Objects_Attribute
  * @description
  *
+ * `SET OF GraphicString`. Not defined in ISO 8571:1988
+ * Parts 1–4 (ISO 8571-4:1988 Figure 11 has no such type). This
+ * module's `Read-Attributes` comments allow `child-objects`
+ * only when the limited-filestore-management functional unit
+ * is available.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

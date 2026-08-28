@@ -20,6 +20,10 @@ import {
  * @summary Select_Attributes
  * @description
  *
+ * 1988 F-SELECT identifier: kernel filename only
+ * (ISO 8571-3:1988 §15.1.2.3; ISO 8571-4:1988 Select-Attributes).
+ * This encoding uses `pathname` in place of `filename`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +38,12 @@ export class Select_Attributes {
   constructor(
     /**
      * @summary `pathname`.
+     * @description
+     *
+     * 1988 filename (kernel). The only attribute used to identify
+     * the file on F-SELECT. ISO 8571-2:1988 §12.1;
+     * ISO 8571-3:1988 §15.1.2.3.
+     *
      * @public
      * @readonly
      */

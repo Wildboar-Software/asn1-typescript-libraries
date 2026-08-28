@@ -18,6 +18,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Private_Use_Attribute
  * @description
  *
+ * Private-group scalar of any EXTERNAL; meaning is not defined
+ * (ISO 8571-2:1988 §12.18, §14.4; ISO 8571-4:1988 Figure 11).
+ * Strongly discouraged. Set at create; changeable.
+ *
+ * `no-value-available` means partial support and shall appear
+ * only in response PDUs. Initiators shall not claim partial
+ * support (ISO 8571-2:1988 §9.4). `abstract-Syntax-not-supported`
+ * if the abstract syntax is unavailable (ISO 8571-4:1988
+ * Figure 11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

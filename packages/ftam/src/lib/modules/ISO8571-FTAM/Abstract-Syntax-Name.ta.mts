@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Abstract_Syntax_Name
  * @description
  *
+ * Presentation abstract syntax for file contents or FTAM
+ * FADU (ISO 8571-2:1988 §7.3, §12.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -22,6 +22,11 @@ import {
  * @summary F_RESTART_response
  * @description
  *
+ * Confirms F-RESTART after a class I error (IFS;
+ * restart-data-transfer FU). Checkpoint identifier: 0 = beginning of
+ * FADU; 1..999998; one past the last checkpoint = end of transfer.
+ * ISO 8571-3:1988 §23.2, §25; ISO 8571-4:1988 §19.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,42 +47,79 @@ export class F_RESTART_response {
   constructor(
     /**
      * @summary `checkpoint_identifier`.
+     * @description
+     *
+     * 0 = beginning of FADU; 1..999998; one greater than the last
+     * checkpoint issued before data-end = end of transfer.
+     * ISO 8571-3:1988 §23.2.
+     *
      * @public
      * @readonly
      */
     readonly checkpoint_identifier: INTEGER,
     /**
      * @summary `request_type`.
+     * @description
+     *
+     * Direction of the BDT (read or write). Not in ISO 8571:1988
+     * Parts 1–4. Module comment: conditional on consecutive or
+     * concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly request_type: OPTIONAL<Request_Type>,
     /**
      * @summary `transfer_number`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly transfer_number: INTEGER,
     /**
      * @summary `last_transfer_end_read_request`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_response`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_request`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly last_transfer_end_write_request?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_response`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */

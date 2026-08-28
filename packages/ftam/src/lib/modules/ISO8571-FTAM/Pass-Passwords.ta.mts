@@ -20,6 +20,10 @@ import {
  * @summary Pass_Passwords
  * @description
  *
+ * Sequence of passwords used when passing through a path
+ * element. Absent from ISO 8571:1988 Parts 1–4. Carried
+ * inside `Access-Passwords` and `Path-Access-Passwords`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

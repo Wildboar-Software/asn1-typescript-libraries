@@ -17,6 +17,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Access_Request
  * @description
  *
+ * Vector of actions required for the select or recover regime
+ * (ISO 8571-3:1988 §13.6). Sets the current access request
+ * activity attribute (ISO 8571-2:1988 §13.2). Bits: `read`(0),
+ * `insert`(1), `replace`(2), `extend`(3), `erase`(4),
+ * `read-attribute`(5), `change-attribute`(6), `delete-Object`(7).
+ * ISO 8571-4:1988 names bit 7 `delete-file`. If any file-access
+ * action is allowed, `open` and `close` are also possible, and
+ * `locate` if the access FU is available. If the action-list
+ * term is satisfied, `select` and `deselect` are also possible
+ * (ISO 8571-2:1988 §12.16, §13.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +41,10 @@ export type Access_Request = BIT_STRING;
 
 /**
  * @summary Access_Request_read
+ * @description
+ *
+ * Bit 0: file-access action `read` (ISO 8571-2:1988 §13.2).
+ *
  * @constant
  */
 export const Access_Request_read: number = 0; /* LONG_NAMED_BIT */
@@ -44,6 +59,10 @@ export const read: number = Access_Request_read; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Access_Request_insert
+ * @description
+ *
+ * Bit 1: file-access action `insert` (ISO 8571-2:1988 §13.2).
+ *
  * @constant
  */
 export const Access_Request_insert: number = 1; /* LONG_NAMED_BIT */
@@ -58,6 +77,10 @@ export const insert: number = Access_Request_insert; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Access_Request_replace
+ * @description
+ *
+ * Bit 2: file-access action `replace` (ISO 8571-2:1988 §13.2).
+ *
  * @constant
  */
 export const Access_Request_replace: number = 2; /* LONG_NAMED_BIT */
@@ -72,6 +95,10 @@ export const replace: number = Access_Request_replace; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Access_Request_extend
+ * @description
+ *
+ * Bit 3: file-access action `extend` (ISO 8571-2:1988 §13.2).
+ *
  * @constant
  */
 export const Access_Request_extend: number = 3; /* LONG_NAMED_BIT */
@@ -86,6 +113,10 @@ export const extend: number = Access_Request_extend; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Access_Request_erase
+ * @description
+ *
+ * Bit 4: file-access action `erase` (ISO 8571-2:1988 §13.2).
+ *
  * @constant
  */
 export const Access_Request_erase: number = 4; /* LONG_NAMED_BIT */
@@ -100,6 +131,11 @@ export const erase: number = Access_Request_erase; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Access_Request_read_attribute
+ * @description
+ *
+ * Bit 5: complete-file action `read attribute`
+ * (ISO 8571-2:1988 §13.2).
+ *
  * @constant
  */
 export const Access_Request_read_attribute: number = 5; /* LONG_NAMED_BIT */
@@ -114,6 +150,11 @@ export const read_attribute: number = Access_Request_read_attribute; /* SHORT_NA
 
 /**
  * @summary Access_Request_change_attribute
+ * @description
+ *
+ * Bit 6: complete-file action `change attribute`
+ * (ISO 8571-2:1988 §13.2).
+ *
  * @constant
  */
 export const Access_Request_change_attribute: number = 6; /* LONG_NAMED_BIT */
@@ -128,6 +169,12 @@ export const change_attribute: number = Access_Request_change_attribute; /* SHOR
 
 /**
  * @summary Access_Request_delete_Object
+ * @description
+ *
+ * Bit 7: complete-file action `delete file`
+ * (ISO 8571-2:1988 §13.2). ISO 8571-4:1988 names this bit
+ * `delete-file`; this encoding uses `delete-Object`.
+ *
  * @constant
  */
 export const Access_Request_delete_Object: number = 7; /* LONG_NAMED_BIT */

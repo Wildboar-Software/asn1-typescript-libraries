@@ -26,6 +26,11 @@ import {
  * @summary F_READ_ATTRIB_request
  * @description
  *
+ * Interrogates attributes of the selected file. Limited file
+ * management FU; P-DATA. Request carries attribute names; provider
+ * reads after indication, before response. ISO 8571-3:1988 §16.1
+ * Table 19; ISO 8571-2:1988 §10.4; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +45,21 @@ export class F_READ_ATTRIB_request {
   constructor(
     /**
      * @summary `attribute_names`.
+     * @description
+     *
+     * Which kernel or negotiated-group attributes to read. Does not
+     * set activity attributes. ISO 8571-3:1988 §16.1.2.2.
+     *
      * @public
      * @readonly
      */
     readonly attribute_names: Attribute_Names,
     /**
      * @summary `attribute_extension_names`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */

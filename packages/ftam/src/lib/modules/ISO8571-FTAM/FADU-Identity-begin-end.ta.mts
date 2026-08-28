@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FADU_Identity_begin_end
  * @description
  *
+ * Begin or end of the file (ISO 8571-2:1988 §7.6). Exact meaning of
+ * begin depends on the constraint set.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,8 @@ export type FADU_Identity_begin_end = INTEGER;
 
 /**
  * @summary FADU_Identity_begin_end_begin
+ * @description Locate-next identifies the first FADU
+ * (ISO 8571-2:1988 §7.6).
  * @constant
  * @type {number}
  */
@@ -44,6 +49,8 @@ export const begin: FADU_Identity_begin_end = FADU_Identity_begin_end_begin; /* 
 
 /**
  * @summary FADU_Identity_begin_end_end
+ * @description No current location; previous identifies the last
+ * FADU in preorder (ISO 8571-2:1988 §7.6).
  * @constant
  * @type {number}
  */

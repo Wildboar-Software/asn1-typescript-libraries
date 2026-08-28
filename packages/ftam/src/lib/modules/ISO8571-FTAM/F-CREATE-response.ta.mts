@@ -43,6 +43,12 @@ import {
  * @summary F_CREATE_response
  * @description
  *
+ * Confirm of F-CREATE. `state-result` is whether a select regime
+ * exists (new or old file). Create can succeed while subsequent
+ * select fails (file exists unselected). Limited file management
+ * FU; P-DATA. ISO 8571-3:1988 §15.3 Table 17; ISO 8571-4:1988
+ * Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,30 +66,54 @@ export class F_CREATE_response {
   constructor(
     /**
      * @summary `state_result`.
+     * @description
+     *
+     * Select regime established for an existing or newly created
+     * file, or select failed. Default `success`.
+     * ISO 8571-3:1988 §15.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly state_result: OPTIONAL<State_Result>,
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Whether create succeeded. May succeed while select fails.
+     * Default `success`. ISO 8571-3:1988 §15.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly action_result: OPTIONAL<Action_Result>,
     /**
      * @summary `initial_attributes`.
+     * @description
+     *
+     * Associated values; responder reports local modification of
+     * filename or permitted-actions. ISO 8571-3:1988 §15.3.2.4.
+     *
      * @public
      * @readonly
      */
     readonly initial_attributes: Create_Attributes,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.3.2.9 / §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.3.2.11 / §13.13.
+     *
      * @public
      * @readonly
      */

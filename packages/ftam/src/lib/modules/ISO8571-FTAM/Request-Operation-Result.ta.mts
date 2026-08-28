@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Request_Operation_Result
  * @description
  *
+ * How the responder should report group-operation success:
+ * `summary(0)` or `fiii-list(1)` (ASN.1 spelling). Absent from
+ * ISO 8571:1988 Parts 1–4. Selects the `Operation-Result`
+ * alternative.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +34,10 @@ export type Request_Operation_Result = INTEGER;
 
 /**
  * @summary Request_Operation_Result_summary
+ * @description
+ *
+ * Return a success count (`success-Object-count`).
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +46,10 @@ export const Request_Operation_Result_summary: Request_Operation_Result = 0; /* 
 
 /**
  * @summary Request_Operation_Result_summary
+ * @description
+ *
+ * Return a success count (`success-Object-count`).
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +58,11 @@ export const summary: Request_Operation_Result = Request_Operation_Result_summar
 
 /**
  * @summary Request_Operation_Result_fiii_list
+ * @description
+ *
+ * Return successful object names (`success-Object-names`).
+ * ASN.1 identifier is `fiii-list`.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +71,11 @@ export const Request_Operation_Result_fiii_list: Request_Operation_Result = 1; /
 
 /**
  * @summary Request_Operation_Result_fiii_list
+ * @description
+ *
+ * Return successful object names (`success-Object-names`).
+ * ASN.1 identifier is `fiii-list`.
+ *
  * @constant
  * @type {number}
  */

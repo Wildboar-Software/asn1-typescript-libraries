@@ -20,6 +20,17 @@ import {
  * @summary Concurrency_Control
  * @description
  *
+ * One `Lock` per action (same eight actions as
+ * `Access-Request`). ISO 8571-3:1988 §13.8;
+ * ISO 8571-2:1988 §13.9 Table 3. Shared/exclusive only for
+ * actions in requested-access; others only `not-required` or
+ * `no-access`. Restrictiveness: `not-required` < `shared` <
+ * `exclusive` < `no-access` (ISO 8571-3:1988 §17.1.2.5).
+ * Without FADU locking, scope is the open regime. With FADU
+ * locking enabled, these locks apply during the data-transfer
+ * regime; elsewhere `not-required` unless an explicit FADU
+ * lock (ISO 8571-3:1988 §13.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,48 +51,81 @@ export class Concurrency_Control {
   constructor(
     /**
      * @summary `read`.
+     * @description
+     *
+     * Lock for file-access action `read`.
+     *
      * @public
      * @readonly
      */
     readonly read: Lock,
     /**
      * @summary `insert`.
+     * @description
+     *
+     * Lock for file-access action `insert`.
+     *
      * @public
      * @readonly
      */
     readonly insert: Lock,
     /**
      * @summary `replace`.
+     * @description
+     *
+     * Lock for file-access action `replace`.
+     *
      * @public
      * @readonly
      */
     readonly replace: Lock,
     /**
      * @summary `extend`.
+     * @description
+     *
+     * Lock for file-access action `extend`.
+     *
      * @public
      * @readonly
      */
     readonly extend: Lock,
     /**
      * @summary `erase`.
+     * @description
+     *
+     * Lock for file-access action `erase`.
+     *
      * @public
      * @readonly
      */
     readonly erase: Lock,
     /**
      * @summary `read_attribute`.
+     * @description
+     *
+     * Lock for complete-file action `read attribute`.
+     *
      * @public
      * @readonly
      */
     readonly read_attribute: Lock,
     /**
      * @summary `change_attribute`.
+     * @description
+     *
+     * Lock for complete-file action `change attribute`.
+     *
      * @public
      * @readonly
      */
     readonly change_attribute: Lock,
     /**
      * @summary `delete_Object`.
+     * @description
+     *
+     * Lock for complete-file action `delete file`.
+     * ISO 8571-4:1988 names this `delete-file`.
+     *
      * @public
      * @readonly
      */

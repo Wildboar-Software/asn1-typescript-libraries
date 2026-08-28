@@ -26,6 +26,10 @@ import {
  * @summary F_LOCATE_request
  * @description
  *
+ * Sets current location. Access FU; P-DATA. Failure leaves
+ * location unchanged. ISO 8571-2:1988 §11.1; ISO 8571-3:1988
+ * §20.2 Table 28; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +44,21 @@ export class F_LOCATE_request {
   constructor(
     /**
      * @summary `file_access_data_unit_identity`.
+     * @description
+     *
+     * Any ISO 8571-2 identity, including next, first, or last. Sets
+     * current location. ISO 8571-3:1988 §20.2.2.2 / §13.12.
+     *
      * @public
      * @readonly
      */
     readonly file_access_data_unit_identity: FADU_Identity,
     /**
      * @summary `fadu_lock`.
+     * @description
+     *
+     * ISO 8571-3:1988 §20.2.2.3 / §13.9.
+     *
      * @public
      * @readonly
      */

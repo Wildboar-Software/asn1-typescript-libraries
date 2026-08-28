@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Constraint_Set_Name
  * @description
  *
+ * Registered constraint set (ISO 8571-2:1988 §7.7, Annex A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

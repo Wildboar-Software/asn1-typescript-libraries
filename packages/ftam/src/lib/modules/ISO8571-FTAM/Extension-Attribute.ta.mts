@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Extension_Attribute
  * @description
  *
+ * One extra attribute: object identifier plus open-type value from
+ * the `Extension-Attributes` information object set.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +36,20 @@ export class Extension_Attribute {
   constructor(
     /**
      * @summary `extension_attribute_identifier`.
+     * @description
+     *
+     * OID of this extension attribute (`TYPE-IDENTIFIER.&id`).
+     *
      * @public
      * @readonly
      */
     readonly extension_attribute_identifier: OBJECT_IDENTIFIER,
     /**
      * @summary `extension_attribute`.
+     * @description
+     *
+     * Open-type value bound by that identifier.
+     *
      * @public
      * @readonly
      */

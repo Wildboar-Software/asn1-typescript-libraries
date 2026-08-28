@@ -20,6 +20,13 @@ import {
  * @summary Path_Access_Passwords
  * @description
  *
+ * Per-path-element access passwords (`[APPLICATION 27]`).
+ * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comments on
+ * F-SELECT-request allow this parameter only when
+ * limited-filestore-management, object-manipulation, or
+ * group-manipulation is available. The first eight passwords
+ * parallel ISO 8571-3:1988 §13.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

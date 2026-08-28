@@ -61,6 +61,12 @@ import {
  * @summary F_OPEN_request
  * @description
  *
+ * Establishes the open regime (processing mode, presentation
+ * contexts, concurrency). Read or write FU; P-DATA. Issued only if
+ * a file is selected and no open regime exists. Sets current
+ * location from the constraint set. ISO 8571-3:1988 §17.1 Table 21;
+ * ISO 8571-2:1988 §10.5; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -93,66 +99,127 @@ export class F_OPEN_request {
   constructor(
     /**
      * @summary `processing_mode`.
+     * @description
+     *
+     * Subset of the current access request: read, insert, replace,
+     * extend, erase. Sets current processing mode. Default
+     * `{f-read}`. ISO 8571-3:1988 §17.1.2.3.
+     *
      * @public
      * @readonly
      */
     readonly processing_mode: OPTIONAL<F_OPEN_request_processing_mode>,
     /**
      * @summary `contents_type`.
+     * @description
+     *
+     * `unknown` or proposed; must match the file attribute (write
+     * exact; read may simplify/relax document types per
+     * ISO 8571-2:1988 §12.3). Sets active contents type.
+     * ISO 8571-3:1988 §17.1.2.4.
+     *
      * @public
      * @readonly
      */
     readonly contents_type: F_OPEN_request_contents_type,
     /**
      * @summary `concurrency_control`.
+     * @description
+     *
+     * May only become more restrictive than select (not-required,
+     * shared, exclusive, no-access). ISO 8571-3:1988 §17.1.2.5.
+     *
      * @public
      * @readonly
      */
     readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * ISO 8571-3:1988 §17.1.2.6 / §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `enable_fadu_locking`.
+     * @description
+     *
+     * Only if FADU-locking FU + storage group + concurrency present
+     * (mandatory then). Sets current locking style. Open will not
+     * fail for concurrency, but later FADU locks may. Default FALSE.
+     * ISO 8571-3:1988 §17.1.2.7.
+     *
      * @public
      * @readonly
      */
     readonly enable_fadu_locking?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `activity_identifier`.
+     * @description
+     *
+     * IFS; mandatory if the recovery FU was negotiated.
+     * ISO 8571-3:1988 §17.1.2.9 / §13.11.
+     *
      * @public
      * @readonly
      */
     readonly activity_identifier?: OPTIONAL<Activity_Identifier>,
     /**
      * @summary `recovery_mode`.
+     * @description
+     *
+     * `none` / `at-start-of-file` / `at-any-active-checkpoint` in
+     * decreasing order. IFS; mandatory if restart or recovery was
+     * negotiated. Does not prevent open. Default `none`.
+     * ISO 8571-3:1988 §17.1.2.10.
+     *
      * @public
      * @readonly
      */
     readonly recovery_mode?: OPTIONAL<F_OPEN_request_recovery_mode>,
     /**
      * @summary `remove_contexts`.
+     * @description
+     *
+     * Abstract syntaxes to drop from the defined context list.
+     * ISO 8571-4:1988 F-OPEN-request.
+     *
      * @public
      * @readonly
      */
     readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
     /**
      * @summary `define_contexts`.
+     * @description
+     *
+     * Abstract syntaxes to add to the defined context list.
+     * ISO 8571-4:1988 F-OPEN-request.
+     *
      * @public
      * @readonly
      */
     readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
     /**
      * @summary `degree_of_overlap`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
+     * on consecutive-overlap or concurrent-overlap FUs.
+     *
      * @public
      * @readonly
      */
     readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>,
     /**
      * @summary `transfer_window`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
+     * on consecutive-overlap or concurrent-overlap FUs.
+     *
      * @public
      * @readonly
      */

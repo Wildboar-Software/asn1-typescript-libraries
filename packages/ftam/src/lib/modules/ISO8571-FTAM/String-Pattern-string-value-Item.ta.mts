@@ -19,6 +19,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary String_Pattern_string_value_Item
  * @description
  *
+ * One piece of a `String-Pattern`: substring, `any-match` (wildcard),
+ * or match by character count.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -27,6 +27,11 @@ import {
  * @summary F_P_ABORT_request
  * @description
  *
+ * Provider-initiated abrupt FTAM-regime abort. Issued by the
+ * file service provider after F-INITIALIZE request/indication.
+ * Same file-state rules as F-U-ABORT. Mapped to A-ABORT
+ * (ISO 8571-4:1988 Table 2). ISO 8571-3:1988 §14.3, Table 14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +46,21 @@ export class F_P_ABORT_request {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Summary of `diagnostic`. ISO 8571-3:1988 §13.2, §14.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Detailed failure information amplifying `action-result`.
+     * ISO 8571-3:1988 §13.13, §14.3.2.2.
+     *
      * @public
      * @readonly
      */

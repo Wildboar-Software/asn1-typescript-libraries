@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item
  * @description
  *
+ * One extension-attribute pattern: identifier plus open-type pattern
+ * (`TYPE-IDENTIFIER.&Type` from `Extension-attribute-Patterns`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +30,21 @@ export class Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_
   constructor(
     /**
      * @summary `extension_attribute_identifier`.
+     * @description
+     *
+     * OID of the extension attribute (`TYPE-IDENTIFIER.&id`).
+     *
      * @public
      * @readonly
      */
     readonly extension_attribute_identifier: OBJECT_IDENTIFIER,
     /**
      * @summary `extension_attribute_Pattern`.
+     * @description
+     *
+     * Pattern value whose type is bound by that identifier. ASN.1:
+     * may be defined in terms of other patterns in this module.
+     *
      * @public
      * @readonly
      */

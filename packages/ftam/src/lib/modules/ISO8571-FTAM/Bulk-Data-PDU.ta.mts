@@ -60,6 +60,13 @@ import {
  * @summary Bulk_Data_PDU
  * @description
  *
+ * Bulk-data FPDUs: read/write/data-end/transfer-end/cancel/
+ * restart. There is no F-DATA FPDU — file contents travel in a
+ * different presentation context as `Data-Element` from ISO
+ * 8571-2 (ISO 8571-4:1988 Figure 9). 1988 also has no F-CHECK
+ * PDU (mapped to P-SYNC-MINOR; ISO 8571-4:1988 Table 5 note 2).
+ * This encoding may still have later F-CHECK types elsewhere.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

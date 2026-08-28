@@ -28,6 +28,10 @@ import {
  * @summary Diagnostic_Item
  * @description
  *
+ * One diagnostic amplifying action-result. Types: informative
+ * (qualifies success), transient (IFS), permanent.
+ * ISO 8571-3:1988 §13.13, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,36 +43,67 @@ export class Diagnostic_Item {
   constructor(
     /**
      * @summary `diagnostic_type`.
+     * @description
+     *
+     * `informative`(0) / `transient`(1) / `permanent`(2)
+     * (ISO 8571-3:1988 Annex A.3).
+     *
      * @public
      * @readonly
      */
     readonly diagnostic_type: Diagnostic_Item_diagnostic_type,
     /**
      * @summary `error_identifier`.
+     * @description
+     *
+     * Categorized per ISO 8571-3:1988 Annex A.4. Groups e.g.
+     * 0–11 general, 1000+ protocol (`1000` conflicting
+     * parameters … `1016` grouping threshold).
+     *
      * @public
      * @readonly
      */
     readonly error_identifier: INTEGER,
     /**
      * @summary `error_observer`.
+     * @description
+     *
+     * Entity that detected the error (ISO 8571-3:1988 Annex A.5).
+     * Values 0 and 3 are not valid as observer.
+     *
      * @public
      * @readonly
      */
     readonly error_observer: Entity_Reference,
     /**
      * @summary `error_Source`.
+     * @description
+     *
+     * Presumed cause (ISO 8571-3:1988 Annex A.5). Values 0 and 3
+     * are valid only as error-source; 5 is the virtual filestore
+     * (ISO 8571-4:1988).
+     *
      * @public
      * @readonly
      */
     readonly error_Source: Entity_Reference,
     /**
      * @summary `suggested_delay`.
+     * @description
+     *
+     * Transient errors only. Integer `x` meaning 2^x seconds
+     * (ISO 8571-3:1988 Annex A.2 e).
+     *
      * @public
      * @readonly
      */
     readonly suggested_delay?: OPTIONAL<INTEGER>,
     /**
      * @summary `further_details`.
+     * @description
+     *
+     * Unstandardized local text (ISO 8571-3:1988 Annex A.2 f).
+     *
      * @public
      * @readonly
      */

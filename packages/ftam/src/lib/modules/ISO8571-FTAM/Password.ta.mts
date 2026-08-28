@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Password
  * @description
  *
+ * GraphicString or OCTET STRING. Matching need not be textual
+ * identity (e.g. group membership) — ISO 8571-2:1988 §12.16
+ * note 4. Minimum range 0–8 characters or octets
+ * (ISO 8571-2:1988 Table 4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

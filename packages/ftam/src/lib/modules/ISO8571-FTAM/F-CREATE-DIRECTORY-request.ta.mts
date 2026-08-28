@@ -41,6 +41,12 @@ import {
  * @summary F_CREATE_DIRECTORY_request
  * @description
  *
+ * Creates a directory. Field pattern parallels F-CREATE (ISO
+ * 8571-3:1988 §15.3).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[59]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,30 +64,55 @@ export class F_CREATE_DIRECTORY_request {
   constructor(
     /**
      * @summary `initial_attributes`.
+     * @description
+     *
+     * Initial Create-Attributes: kernel, storage, security, and
+     * private groups from ISO 8571-2:1988 §12. Same role
+     * as F-CREATE (ISO 8571-3:1988 §15.3.2.4).
+     *
      * @public
      * @readonly
      */
     readonly initial_attributes: Create_Attributes,
     /**
      * @summary `create_password`.
+     * @description
+     *
+     * Password to create in this filestore. ISO 8571-3:1988
+     * §15.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly create_password: OPTIONAL<Password>,
     /**
      * @summary `requested_access`.
+     * @description
+     *
+     * Actions required for this (group) selection. ISO
+     * 8571-3:1988 §13.6.
+     *
      * @public
      * @readonly
      */
     readonly requested_access: Access_Request,
     /**
      * @summary `shared_ASE_infonnation`.
+     * @description
+     *
+     * Other ASE information on this primitive. ISO 8571-3:1988
+     * §13.10. ASN.1 name is `shared-ASE-infonnation`.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_infonnation?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `account`.
+     * @description
+     *
+     * Account to charge for the regime. ISO 8571-3:1988 §13.3.
+     *
      * @public
      * @readonly
      */

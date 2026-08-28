@@ -26,6 +26,11 @@ import {
  * @summary F_TERMINATE_response
  * @description
  *
+ * Confirms orderly FTAM-regime release. `charging` is present
+ * iff `account` was given on F-INITIALIZE (nested select
+ * accounts excluded). Mapped to A-RELEASE. ISO 8571-3:1988
+ * §14.2, Table 12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +45,23 @@ export class F_TERMINATE_response {
   constructor(
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * `EXTERNAL` carrying other ASE information bound to this
+     * primitive. ISO 8571-3:1988 §13.10, §14.2.2.1.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `charging`.
+     * @description
+     *
+     * Costs of this FTAM regime against the F-INITIALIZE account,
+     * excluding nested select accounts. Present iff `account` was
+     * given on F-INITIALIZE. ISO 8571-3:1988 §13.4, §14.2.2.2.
+     *
      * @public
      * @readonly
      */

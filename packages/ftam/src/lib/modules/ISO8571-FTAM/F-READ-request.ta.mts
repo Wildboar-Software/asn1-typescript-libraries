@@ -32,6 +32,12 @@ import {
  * @summary F_READ_request
  * @description
  *
+ * Starts a read BDT (Read FU). Initiator is receiver; responder is
+ * sender until F-TRANSFER-END. One F-READ at a time. Identity
+ * addresses the FADU(s) to read; location after the read is
+ * unchanged. Reject via F-DATA-END with unsuccessful action-result.
+ * ISO 8571-3:1988 §24.1 Table 33; ISO 8571-2:1988 §11.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,24 +55,45 @@ export class F_READ_request {
   constructor(
     /**
      * @summary `file_access_data_unit_identity`.
+     * @description
+     *
+     * FADU(s) to read. Sets current location (ISO 8571-3:1988
+     * §13.12). Location after the read is unchanged
+     * (ISO 8571-2:1988 §11.2).
+     *
      * @public
      * @readonly
      */
     readonly file_access_data_unit_identity: FADU_Identity,
     /**
      * @summary `access_context`.
+     * @description
+     *
+     * View of the file access structure used for this transfer
+     * (ISO 8571-3:1988 §20.1.2 Table 27).
+     *
      * @public
      * @readonly
      */
     readonly access_context: Access_Context,
     /**
      * @summary `fadu_lock`.
+     * @description
+     *
+     * Optional per-FADU lock for this transfer (ISO 8571-3:1988
+     * §13.9; Table 25).
+     *
      * @public
      * @readonly
      */
     readonly fadu_lock?: OPTIONAL<FADU_Lock>,
     /**
      * @summary `transfer_number`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */

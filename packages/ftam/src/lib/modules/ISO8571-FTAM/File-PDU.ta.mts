@@ -145,6 +145,12 @@ import {
  * @summary File_PDU
  * @description
  *
+ * File-regime FPDUs: select/deselect/create/delete/read-attrib/
+ * change-attrib/open/close/begin-group/end-group/recover/locate/
+ * erase. Carried on P-DATA in the FTAM-PCI context
+ * (ISO 8571-4:1988 Table 3). ASN.1 names `f-Change-attrib-reques`
+ * and `f-Change-attrib-respon` are truncated in the module.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

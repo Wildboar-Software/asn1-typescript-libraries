@@ -37,6 +37,11 @@ import {
  * @summary F_RECOVER_request
  * @description
  *
+ * Recreates an open regime from a docket after failure. IFS only;
+ * recovery FU; P-DATA. Requested access and passwords must fully
+ * satisfy, else permanent error. ISO 8571-3:1988 §19 Table 24;
+ * ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,66 +75,122 @@ export class F_RECOVER_request {
   constructor(
     /**
      * @summary `activity_identifier`.
+     * @description
+     *
+     * Docket key for the suspended activity. ISO 8571-3:1988
+     * §19.1.2.3 / §13.11.
+     *
      * @public
      * @readonly
      */
     readonly activity_identifier: Activity_Identifier,
     /**
      * @summary `bulk_transfer_number`.
+     * @description
+     *
+     * Which bulk transfer to recover; first transfer in an open is
+     * 1, then consecutive (read and write share one sequence).
+     * ISO 8571-3:1988 §19.1.2.4.
+     *
      * @public
      * @readonly
      */
     readonly bulk_transfer_number: INTEGER,
     /**
      * @summary `requested_access`.
+     * @description
+     *
+     * With `access-passwords`, authenticates the recovering
+     * initiator. Incomplete satisfaction → permanent error.
+     * ISO 8571-3:1988 §19.1.2.5.
+     *
      * @public
      * @readonly
      */
     readonly requested_access: Access_Request,
     /**
      * @summary `access_passwords`.
+     * @description
+     *
+     * ISO 8571-3:1988 §19.1.2.6 / §13.7.
+     *
      * @public
      * @readonly
      */
     readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `recovefy_Point`.
+     * @description
+     *
+     * 0 = beginning of file; point after last checkpoint = end of
+     * file (ASN.1). Conditional: present on request or response.
+     * Default 0. ISO 8571-3:1988 §19.1.2.8; ISO 8571-4:1988
+     * F-RECOVER-request.
+     *
      * @public
      * @readonly
      */
     readonly recovefy_Point?: OPTIONAL<INTEGER>,
     /**
      * @summary `remove_contexts`.
+     * @description
+     *
+     * Abstract syntaxes to drop from the defined context list.
+     * ISO 8571-4:1988 F-RECOVER-request.
+     *
      * @public
      * @readonly
      */
     readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
     /**
      * @summary `define_contexts`.
+     * @description
+     *
+     * Abstract syntaxes to add to the defined context list.
+     * ISO 8571-4:1988 F-RECOVER-request.
+     *
      * @public
      * @readonly
      */
     readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
     /**
      * @summary `concurrent_bulk_transfer_number`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: concurrent
+     * access.
+     *
      * @public
      * @readonly
      */
     readonly concurrent_bulk_transfer_number?: OPTIONAL<INTEGER>,
     /**
      * @summary `concurrent_recovery_point`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: concurrent
+     * access.
+     *
      * @public
      * @readonly
      */
     readonly concurrent_recovery_point?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_response`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_response`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */

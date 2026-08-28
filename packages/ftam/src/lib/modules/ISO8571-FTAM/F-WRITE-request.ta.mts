@@ -32,6 +32,13 @@ import {
  * @summary F_WRITE_request
  * @description
  *
+ * Starts a write BDT (Write FU). Initiator is sender until
+ * F-TRANSFER-END. One F-WRITE at a time. Operation is insert,
+ * replace, or extend. Location of write targets: if no structuring
+ * info, FADU-identity; if structuring (HA/FA/FS), identity plus the
+ * first node-descriptor name, which must match the VFS.
+ * ISO 8571-3:1988 §24.2 Table 34; ISO 8571-2:1988 §11.3–11.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,24 +57,43 @@ export class F_WRITE_request {
   constructor(
     /**
      * @summary `file_access_data_unit_Operation`.
+     * @description
+     *
+     * insert(0), replace(1), or extend(2) (ISO 8571-3:1988 §20.1.1;
+     * ISO 8571-2:1988 §11.3–11.5).
+     *
      * @public
      * @readonly
      */
     readonly file_access_data_unit_Operation: F_WRITE_request_file_access_data_unit_Operation,
     /**
      * @summary `file_access_data_unit_identity`.
+     * @description
+     *
+     * Target FADU. Combined with the first node-descriptor name when
+     * structuring is transferred (ISO 8571-3:1988 §13.12).
+     *
      * @public
      * @readonly
      */
     readonly file_access_data_unit_identity: FADU_Identity,
     /**
      * @summary `fadu_lock`.
+     * @description
+     *
+     * Optional per-FADU lock (ISO 8571-3:1988 §13.9; Table 26).
+     *
      * @public
      * @readonly
      */
     readonly fadu_lock?: OPTIONAL<FADU_Lock>,
     /**
      * @summary `transfer_number`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */

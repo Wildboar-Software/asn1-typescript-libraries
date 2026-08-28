@@ -20,6 +20,11 @@ import {
  * @summary Application_Entity_Title
  * @description
  *
+ * ACSE AE-title (ISO 8650). Used for stable naming, recovery,
+ * and the access-control location term. ISO 8571-3:1988
+ * §14.1.2.3–5 and the note at clause 14; ISO 8571-4:1988
+ * comment “as defined in ISO 8650”.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

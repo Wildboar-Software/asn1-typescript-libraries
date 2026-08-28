@@ -43,6 +43,12 @@ import {
  * @summary F_CREATE_DIRECTORY_response
  * @description
  *
+ * Confirms F-CREATE-DIRECTORY. Same shape as
+ * F-CREATE-response (ISO 8571-3:1988 §15.3).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[60]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,30 +66,56 @@ export class F_CREATE_DIRECTORY_response {
   constructor(
     /**
      * @summary `state_result`.
+     * @description
+     *
+     * Whether the regime change succeeded. ISO 8571-3:1988
+     * §13.1. Default `success`.
+     *
      * @public
      * @readonly
      */
     readonly state_result: OPTIONAL<State_Result>,
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Success, transient error, or permanent error. ISO
+     * 8571-3:1988 §13.2. Default `success`.
+     *
      * @public
      * @readonly
      */
     readonly action_result: OPTIONAL<Action_Result>,
     /**
      * @summary `initial_attributes`.
+     * @description
+     *
+     * Initial Create-Attributes: kernel, storage, security, and
+     * private groups from ISO 8571-2:1988 §12. Same role
+     * as F-CREATE (ISO 8571-3:1988 §15.3.2.4).
+     *
      * @public
      * @readonly
      */
     readonly initial_attributes: Create_Attributes,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information on this primitive. ISO 8571-3:1988
+     * §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Detail accompanying `action-result`. ISO 8571-3:1988
+     * §13.13.
+     *
      * @public
      * @readonly
      */

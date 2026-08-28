@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AE_qualifier
  * @description
  *
+ * ACSE AE-qualifier component of `AE-title` (ISO 8650).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

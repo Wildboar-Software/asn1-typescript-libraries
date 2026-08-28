@@ -25,6 +25,11 @@ import {
  * @summary Contents_Type_Attribute_constraint_set_and_abstract_Syntax
  * @description
  *
+ * Constraint-set and abstract-syntax alternative of
+ * contents-type. If this alternative is given with an open,
+ * the match must be exact (ISO 8571-2:1988 §12.3;
+ * ISO 8571-4:1988 Figure 11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +41,22 @@ export class Contents_Type_Attribute_constraint_set_and_abstract_Syntax {
   constructor(
     /**
      * @summary `constraint_set_name`.
+     * @description
+     *
+     * Constraint set paired with `abstract_Syntax_name`
+     * (ISO 8571-2:1988 §12.3).
+     *
      * @public
      * @readonly
      */
     readonly constraint_set_name: Constraint_Set_Name,
     /**
      * @summary `abstract_Syntax_name`.
+     * @description
+     *
+     * Abstract syntax paired with `constraint_set_name`
+     * (ISO 8571-2:1988 §12.3).
+     *
      * @public
      * @readonly
      */

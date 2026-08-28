@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Service_Class
  * @description
  *
+ * Service class negotiated on F-INITIALIZE. Default
+ * `{transfer-class}`. Initiator may propose several; responder
+ * returns exactly one. Preference highest→lowest: access, TM,
+ * transfer, management, unconstrained. ISO 8571-3:1988 §8.2,
+ * §10.1, Tables 4–5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +36,10 @@ export type Service_Class = BIT_STRING;
 
 /**
  * @summary Service_Class_unconstrained_class
+ * @description
+ *
+ * Bit 0: unconstrained class (lowest preference).
+ *
  * @constant
  */
 export const Service_Class_unconstrained_class: number = 0; /* LONG_NAMED_BIT */
@@ -44,6 +54,10 @@ export const unconstrained_class: number = Service_Class_unconstrained_class; /*
 
 /**
  * @summary Service_Class_management_class
+ * @description
+ *
+ * Bit 1: management class.
+ *
  * @constant
  */
 export const Service_Class_management_class: number = 1; /* LONG_NAMED_BIT */
@@ -58,6 +72,10 @@ export const management_class: number = Service_Class_management_class; /* SHORT
 
 /**
  * @summary Service_Class_transfer_class
+ * @description
+ *
+ * Bit 2: transfer class. Default on F-INITIALIZE.
+ *
  * @constant
  */
 export const Service_Class_transfer_class: number = 2; /* LONG_NAMED_BIT */
@@ -72,6 +90,10 @@ export const transfer_class: number = Service_Class_transfer_class; /* SHORT_NAM
 
 /**
  * @summary Service_Class_transfer_and_management_class
+ * @description
+ *
+ * Bit 3: transfer-and-management class.
+ *
  * @constant
  */
 export const Service_Class_transfer_and_management_class: number = 3; /* LONG_NAMED_BIT */
@@ -86,6 +108,10 @@ export const transfer_and_management_class: number = Service_Class_transfer_and_
 
 /**
  * @summary Service_Class_access_class
+ * @description
+ *
+ * Bit 4: access class (highest preference).
+ *
  * @constant
  */
 export const Service_Class_access_class: number = 4; /* LONG_NAMED_BIT */

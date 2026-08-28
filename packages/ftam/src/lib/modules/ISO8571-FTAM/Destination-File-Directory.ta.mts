@@ -20,6 +20,10 @@ import {
  * @summary Destination_File_Directory
  * @description
  *
+ * Destination directory pathname (`[APPLICATION 24]`). Absent
+ * from ISO 8571:1988 Parts 1–4. The pathname form parallels
+ * filename in ISO 8571-2:1988 §12.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

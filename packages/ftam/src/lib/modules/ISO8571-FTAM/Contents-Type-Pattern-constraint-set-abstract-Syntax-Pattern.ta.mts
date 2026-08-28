@@ -21,6 +21,9 @@ import {
  * @summary Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
  * @description
  *
+ * Constraint-set / abstract-syntax half of `Contents-Type-Pattern`.
+ * ASN.1: absent pattern implies any object identifier is equal.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +35,20 @@ export class Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
   constructor(
     /**
      * @summary `constraint_Set_Pattern`.
+     * @description
+     *
+     * Absent implies any constraint-set OID equals.
+     *
      * @public
      * @readonly
      */
     readonly constraint_Set_Pattern?: OPTIONAL<Object_Identifier_Pattern>,
     /**
      * @summary `abstract_Syntax_Pattern`.
+     * @description
+     *
+     * Absent implies any abstract-syntax OID equals.
+     *
      * @public
      * @readonly
      */

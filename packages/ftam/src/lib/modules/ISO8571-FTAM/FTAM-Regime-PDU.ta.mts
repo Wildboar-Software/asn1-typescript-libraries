@@ -45,6 +45,11 @@ import {
  * @summary FTAM_Regime_PDU
  * @description
  *
+ * Kernel CHOICE of F-INITIALIZE / F-TERMINATE / F-U-ABORT /
+ * F-P-ABORT. Carried as user information on A-ASSOCIATE,
+ * A-RELEASE, and A-ABORT (ISO 8571-4:1988 Table 2). Service is
+ * ISO 8571-3:1988 §14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

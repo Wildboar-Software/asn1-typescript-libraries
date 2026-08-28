@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Extension_Set_Identifier
  * @description
  *
+ * Object identifier of an attribute-extension set.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -60,6 +60,14 @@ import {
  * @summary AND_Set_Item
  * @description
  *
+ * One per-attribute matcher in an `AND-Set`. ASN.1 groups:
+ * kernel (`pathname`, `object-type`, `permitted-actions`,
+ * `contents-type`, `linked-Object`, `child-objects`); storage
+ * (`primaty-pathname` [sic], account, dates, identities,
+ * availability, sizes); security (`legal-quailfication` [sic] —
+ * access-control searches are disallowed); attribute extensions.
+ * Private-use searches are disallowed (no alternative).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,13 @@ import {
  * @summary F_OPEN_request_contents_type
  * @description
  *
+ * Request/indication: `unknown` or a proposed document type /
+ * constraint-set+abstract-syntax. `unknown` does not prevent open;
+ * write must match the file attribute exactly; read may use a
+ * simplification or relaxation of document types
+ * (ISO 8571-2:1988 §12.3). Sets active contents type.
+ * ISO 8571-3:1988 §17.1.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,9 @@ import {
  * @summary Boolean_Pattern
  * @description
  *
+ * Matcher for a BOOLEAN filestore-object attribute (e.g. object
+ * availability).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +38,20 @@ export class Boolean_Pattern {
   constructor(
     /**
      * @summary `equality_comparision`.
+     * @description
+     *
+     * Whether `no-value-available` and equals match.
+     *
      * @public
      * @readonly
      */
     readonly equality_comparision: Equality_Comparision,
     /**
      * @summary `boolean_value`.
+     * @description
+     *
+     * Test boolean.
+     *
      * @public
      * @readonly
      */

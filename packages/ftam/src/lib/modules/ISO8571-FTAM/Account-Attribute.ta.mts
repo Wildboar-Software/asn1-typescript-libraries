@@ -21,6 +21,16 @@ import {
  * @summary Account_Attribute
  * @description
  *
+ * Storage-group storage account: GraphicString identifying the
+ * accountable authority for accumulated file storage charges
+ * (ISO 8571-2:1988 §12.4, §14.2; ISO 8571-4:1988 Figure 11).
+ * Scalar. Set at create; changeable.
+ *
+ * `no-value-available` means the responder only partially
+ * supports this attribute and shall appear only in response
+ * PDUs. Initiators shall not claim partial support
+ * (ISO 8571-2:1988 §9.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

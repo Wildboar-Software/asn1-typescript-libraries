@@ -21,6 +21,11 @@ import {
  * @summary F_SELECT_ANOTHER_request
  * @description
  *
+ * Selects another member of the current group.
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[57]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,11 @@ export class F_SELECT_ANOTHER_request {
   constructor(
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information on this primitive. ISO 8571-3:1988
+     * §13.10.
+     *
      * @public
      * @readonly
      */

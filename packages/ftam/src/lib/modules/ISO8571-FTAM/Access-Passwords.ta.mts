@@ -26,6 +26,15 @@ import {
  * @summary Access_Passwords
  * @description
  *
+ * One `Password` per action, in `Access-Request` order.
+ * Security group only (ISO 8571-2:1988 §14.3). Sets the
+ * current access passwords activity attribute
+ * (ISO 8571-3:1988 §13.7; ISO 8571-2:1988 §13.11). Matched
+ * against non-null strings in an access-control element's
+ * password vector (ISO 8571-2:1988 §12.16). ISO 8571-4:1988
+ * has only the eight action passwords; `pass-passwords` and
+ * `link-password` are not in that edition.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,60 +57,102 @@ export class Access_Passwords {
   constructor(
     /**
      * @summary `read_password`.
+     * @description
+     *
+     * Password for action `read`(0).
+     *
      * @public
      * @readonly
      */
     readonly read_password: Password,
     /**
      * @summary `insert_password`.
+     * @description
+     *
+     * Password for action `insert`(1).
+     *
      * @public
      * @readonly
      */
     readonly insert_password: Password,
     /**
      * @summary `replace_password`.
+     * @description
+     *
+     * Password for action `replace`(2).
+     *
      * @public
      * @readonly
      */
     readonly replace_password: Password,
     /**
      * @summary `extend_password`.
+     * @description
+     *
+     * Password for action `extend`(3).
+     *
      * @public
      * @readonly
      */
     readonly extend_password: Password,
     /**
      * @summary `erase_password`.
+     * @description
+     *
+     * Password for action `erase`(4).
+     *
      * @public
      * @readonly
      */
     readonly erase_password: Password,
     /**
      * @summary `read_attribute_password`.
+     * @description
+     *
+     * Password for action `read-attribute`(5).
+     *
      * @public
      * @readonly
      */
     readonly read_attribute_password: Password,
     /**
      * @summary `change_attribute_password`.
+     * @description
+     *
+     * Password for action `change-attribute`(6).
+     *
      * @public
      * @readonly
      */
     readonly change_attribute_password: Password,
     /**
      * @summary `delete_password`.
+     * @description
+     *
+     * Password for action `delete-file`(7) (ISO 8571-4:1988).
+     *
      * @public
      * @readonly
      */
     readonly delete_password: Password,
     /**
      * @summary `pass_passwords`.
+     * @description
+     *
+     * Not present in ISO 8571-4:1988 (eight action passwords
+     * only).
+     *
      * @public
      * @readonly
      */
     readonly pass_passwords?: OPTIONAL<Pass_Passwords>,
     /**
      * @summary `link_password`.
+     * @description
+     *
+     * Not present in ISO 8571-4:1988 (eight action passwords
+     * only).
+     *
      * @public
      * @readonly
      */

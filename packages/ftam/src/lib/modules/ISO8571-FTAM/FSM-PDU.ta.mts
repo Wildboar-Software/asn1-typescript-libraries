@@ -175,6 +175,11 @@ import {
  * @summary FSM_PDU
  * @description
  *
+ * Filestore-management FPDUs (change-prefix, list, group-*,
+ * create-directory, link/unlink, move/copy, select-another,
+ * link-attrib). Not in ISO 8571:1988 Parts 1–4; `PDU` in 1988
+ * §20.3 has only the first three alternatives.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

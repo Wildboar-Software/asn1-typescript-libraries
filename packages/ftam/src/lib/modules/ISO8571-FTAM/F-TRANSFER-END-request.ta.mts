@@ -27,6 +27,9 @@ import {
  * @summary F_TRANSFER_END_request
  * @description
  *
+ * Completes the BDT. Issued by the initiator after F-DATA-END.
+ * ISO 8571-3:1988 §24.5 Table 37.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,30 +48,56 @@ export class F_TRANSFER_END_request {
   constructor(
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information bound to this primitive
+     * (ISO 8571-3:1988 §13.10).
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `request_type`.
+     * @description
+     *
+     * Direction of the BDT (read or write). Not in ISO 8571:1988
+     * Parts 1–4. Module comment: conditional on consecutive or
+     * concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly request_type?: OPTIONAL<Request_Type>,
     /**
      * @summary `transfer_number`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly transfer_number?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_read_response`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */
     readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>,
     /**
      * @summary `last_transfer_end_write_response`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+     * consecutive or concurrent access.
+     *
      * @public
      * @readonly
      */

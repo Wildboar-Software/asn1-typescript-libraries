@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Override
  * @description
  *
+ * F-CREATE action if the named file already exists. Encoding uses
+ * `select-old-Object` for 1988 `select-old-file`.
+ * ISO 8571-3:1988 §15.3.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +35,11 @@ export type Override = INTEGER;
 
 /**
  * @summary Override_create_failure
+ * @description
+ *
+ * 0: fail the create if the file already exists.
+ * ISO 8571-3:1988 §15.3.2.3 (a).
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +56,11 @@ export const create_failure: Override = Override_create_failure; /* SHORT_NAMED_
 
 /**
  * @summary Override_select_old_Object
+ * @description
+ *
+ * 1: select the existing file (1988 `select-old-file`).
+ * ISO 8571-3:1988 §15.3.2.3 (b).
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +77,13 @@ export const select_old_Object: Override = Override_select_old_Object; /* SHORT_
 
 /**
  * @summary Override_delete_and_create_with_old_attributes
+ * @description
+ *
+ * 2: delete the existing file and create a new one using the old
+ * attributes (effectively delete contents and select). Needs a
+ * delete password if access control requires it.
+ * ISO 8571-3:1988 §15.3.2.3 (c).
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +100,12 @@ export const delete_and_create_with_old_attributes: Override = Override_delete_a
 
 /**
  * @summary Override_delete_and_create_with_new_attributes
+ * @description
+ *
+ * 3: delete the existing file and create a new one using the
+ * F-CREATE initial attributes. Needs a delete password if access
+ * control requires it. ISO 8571-3:1988 §15.3.2.3 (d).
+ *
  * @constant
  * @type {number}
  */

@@ -21,6 +21,10 @@ import {
  * @summary Operation_Result
  * @description
  *
+ * Outcome of a group operation: a success count or the names
+ * of successful objects (`[APPLICATION 30]`). Absent from ISO
+ * 8571:1988 Parts 1–4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

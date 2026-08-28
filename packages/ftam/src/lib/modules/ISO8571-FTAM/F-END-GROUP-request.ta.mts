@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary F_END_GROUP_request
  * @description
  *
+ * Empty request ending a grouped set started by F-BEGIN-GROUP
+ * (ASN.1: no elements). Always matches a BEGIN-GROUP unless the
+ * association is broken by abort. Grouping FU; P-DATA.
+ * ISO 8571-3:1988 §18.2; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

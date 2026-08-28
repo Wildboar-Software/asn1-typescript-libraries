@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary F_CHECK_request
  * @description
  *
+ * IFS checkpoint (ISO 8571-3:1988 §25): marks a point in the F-DATA
+ * sequence. Identifier 1..999998; the first in a BDT is 1, then +1
+ * (ISO 8571-3:1988 §23.2). ISO 8571-4:1988 Figure 9 has no F-CHECK
+ * FPDU — 1988 carries this on P-SYNC-MINOR with no additional
+ * syntax. This SEQUENCE is a later/internal encoding.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +37,21 @@ export class F_CHECK_request {
   constructor(
     /**
      * @summary `checkpoint_identifier`.
+     * @description
+     *
+     * 1..999998; first in a BDT is 1, then increment by 1
+     * (ISO 8571-3:1988 §23.2, §25.1.2.1).
+     *
      * @public
      * @readonly
      */
     readonly checkpoint_identifier: INTEGER,
     /**
      * @summary `transfer_number`.
+     * @description
+     *
+     * Not in ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */

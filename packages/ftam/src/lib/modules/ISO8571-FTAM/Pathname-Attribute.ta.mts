@@ -20,6 +20,15 @@ import {
  * @summary Pathname_Attribute
  * @description
  *
+ * Kernel-group filename semantics of ISO 8571-2:1988 §12.1,
+ * §14.1: vector of GraphicString components; transparent
+ * naming; set at create; changeable; `no-value-available`
+ * forbidden. 1988 encoded this as `Filename-Attribute`
+ * (`SEQUENCE OF GraphicString`; ISO 8571-4:1988 Figure 11).
+ * This encoding wraps `Pathname` in a CHOICE
+ * (`incomplete-pathname` / `complete-pathname`) that is not in
+ * that figure.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

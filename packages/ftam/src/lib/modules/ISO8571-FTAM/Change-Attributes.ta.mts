@@ -56,6 +56,12 @@ import {
  * @summary Change_Attributes
  * @description
  *
+ * F-CHANGE-ATTRIB payload. Filename is changeable; permitted-actions
+ * and contents-type are not (omitted here). Filesize is not
+ * settable. Access-control is a SET of conditions (OR of
+ * conditions, AND of terms within one). ISO 8571-2:1988 §12;
+ * ISO 8571-3:1988 §16.2.2.2; ISO 8571-4:1988 Change-Attributes.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -84,54 +90,96 @@ export class Change_Attributes {
   constructor(
     /**
      * @summary `pathname`.
+     * @description
+     *
+     * 1988 filename (kernel). Changeable. ISO 8571-2:1988 §12.1.
+     *
      * @public
      * @readonly
      */
     readonly pathname?: OPTIONAL<Pathname_Attribute>,
     /**
      * @summary `storage_account`.
+     * @description
+     *
+     * Storage group. Changeable. ISO 8571-2:1988 §12.4.
+     *
      * @public
      * @readonly
      */
     readonly storage_account?: OPTIONAL<Account_Attribute>,
     /**
      * @summary `object_availability`.
+     * @description
+     *
+     * 1988 file-availability (storage group). Changeable.
+     * ISO 8571-2:1988 §12.13.
+     *
      * @public
      * @readonly
      */
     readonly object_availability?: OPTIONAL<Object_Availability_Attribute>,
     /**
      * @summary `future_Object_size`.
+     * @description
+     *
+     * 1988 future-filesize (storage group). Changeable. Filesize
+     * itself is not settable on change. ISO 8571-2:1988 §12.15 /
+     * §12.14.
+     *
      * @public
      * @readonly
      */
     readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>,
     /**
      * @summary `access_control`.
+     * @description
+     *
+     * Security group. SET of conditions: OR of conditions, AND of
+     * terms within one. Changeable. ISO 8571-2:1988 §12.16.
+     *
      * @public
      * @readonly
      */
     readonly access_control?: OPTIONAL<Access_Control_Change_Attribute>,
     /**
      * @summary `path_access_control`.
+     * @description
+     *
+     * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
+     * comment: enhanced-filestore-management FU.
+     *
      * @public
      * @readonly
      */
     readonly path_access_control?: OPTIONAL<Access_Control_Change_Attribute>,
     /**
      * @summary `legal_qualification`.
+     * @description
+     *
+     * Security group. Changeable. ISO 8571-2:1988 §12.17.
+     *
      * @public
      * @readonly
      */
     readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>,
     /**
      * @summary `private_use`.
+     * @description
+     *
+     * Private group. Meaning not defined in ISO 8571-2:1988 §12.18.
+     * Changeable.
+     *
      * @public
      * @readonly
      */
     readonly private_use?: OPTIONAL<Private_Use_Attribute>,
     /**
      * @summary `attribute_extensions`.
+     * @description
+     *
+     * Later extension; absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */

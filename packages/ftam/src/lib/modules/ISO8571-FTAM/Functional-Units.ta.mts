@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Functional_Units
  * @description
  *
+ * Optional FUs excluding Kernel (always available; no bit).
+ * 1988 bits 2–10: read, write, file-access,
+ * limited-file-management, enhanced-file-management, grouping,
+ * fadu-locking, recovery, restart-data-transfer. Numbering
+ * aligns with ISO 8571-3 (ASN.1 comment). Recovery/restart only
+ * in IFS; EFS requests them via FTAM QoS. Bits 11–16 are not in
+ * ISO 8571:1988. ISO 8571-3:1988 §8.1, §10.3, §14.1.2.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +42,10 @@ export type Functional_Units = BIT_STRING;
 
 /**
  * @summary Functional_Units_read
+ * @description
+ *
+ * Bit 2: read FU — F-READ and related open/close.
+ *
  * @constant
  */
 export const Functional_Units_read: number = 2; /* LONG_NAMED_BIT */
@@ -48,6 +60,10 @@ export const read: number = Functional_Units_read; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Functional_Units_write
+ * @description
+ *
+ * Bit 3: write FU — F-WRITE and related open/close.
+ *
  * @constant
  */
 export const Functional_Units_write: number = 3; /* LONG_NAMED_BIT */
@@ -62,6 +78,10 @@ export const write: number = Functional_Units_write; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Functional_Units_file_access
+ * @description
+ *
+ * Bit 4: file-access FU — F-LOCATE, F-ERASE.
+ *
  * @constant
  */
 export const Functional_Units_file_access: number = 4; /* LONG_NAMED_BIT */
@@ -76,6 +96,10 @@ export const file_access: number = Functional_Units_file_access; /* SHORT_NAMED_
 
 /**
  * @summary Functional_Units_limited_file_management
+ * @description
+ *
+ * Bit 5: limited-file-management FU — create, delete, read-attrib.
+ *
  * @constant
  */
 export const Functional_Units_limited_file_management: number = 5; /* LONG_NAMED_BIT */
@@ -90,6 +114,10 @@ export const limited_file_management: number = Functional_Units_limited_file_man
 
 /**
  * @summary Functional_Units_enhanced_file_management
+ * @description
+ *
+ * Bit 6: enhanced-file-management FU — change-attrib.
+ *
  * @constant
  */
 export const Functional_Units_enhanced_file_management: number = 6; /* LONG_NAMED_BIT */
@@ -104,6 +132,10 @@ export const enhanced_file_management: number = Functional_Units_enhanced_file_m
 
 /**
  * @summary Functional_Units_grouping
+ * @description
+ *
+ * Bit 7: grouping FU — F-BEGIN-GROUP / F-END-GROUP.
+ *
  * @constant
  */
 export const Functional_Units_grouping: number = 7; /* LONG_NAMED_BIT */
@@ -118,6 +150,10 @@ export const grouping: number = Functional_Units_grouping; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Functional_Units_fadu_locking
+ * @description
+ *
+ * Bit 8: FADU-locking FU.
+ *
  * @constant
  */
 export const Functional_Units_fadu_locking: number = 8; /* LONG_NAMED_BIT */
@@ -132,6 +168,11 @@ export const fadu_locking: number = Functional_Units_fadu_locking; /* SHORT_NAME
 
 /**
  * @summary Functional_Units_recovery
+ * @description
+ *
+ * Bit 9: recovery FU — F-RECOVER. IFS only; EFS requests via
+ * FTAM QoS.
+ *
  * @constant
  */
 export const Functional_Units_recovery: number = 9; /* LONG_NAMED_BIT */
@@ -146,6 +187,11 @@ export const recovery: number = Functional_Units_recovery; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Functional_Units_restart_data_transfer
+ * @description
+ *
+ * Bit 10: restart-data-transfer FU — F-RESTART. IFS only; EFS
+ * requests via FTAM QoS.
+ *
  * @constant
  */
 export const Functional_Units_restart_data_transfer: number = 10; /* LONG_NAMED_BIT */
@@ -160,6 +206,10 @@ export const restart_data_transfer: number = Functional_Units_restart_data_trans
 
 /**
  * @summary Functional_Units_limited_filestore_management
+ * @description
+ *
+ * Bit 11: later filestore-management FU; not in ISO 8571:1988.
+ *
  * @constant
  */
 export const Functional_Units_limited_filestore_management: number = 11; /* LONG_NAMED_BIT */
@@ -174,6 +224,10 @@ export const limited_filestore_management: number = Functional_Units_limited_fil
 
 /**
  * @summary Functional_Units_enhanced_filestore_management
+ * @description
+ *
+ * Bit 12: later filestore-management FU; not in ISO 8571:1988.
+ *
  * @constant
  */
 export const Functional_Units_enhanced_filestore_management: number = 12; /* LONG_NAMED_BIT */
@@ -188,6 +242,10 @@ export const enhanced_filestore_management: number = Functional_Units_enhanced_f
 
 /**
  * @summary Functional_Units_object_manipulation
+ * @description
+ *
+ * Bit 13: later object-manipulation FU; not in ISO 8571:1988.
+ *
  * @constant
  */
 export const Functional_Units_object_manipulation: number = 13; /* LONG_NAMED_BIT */
@@ -202,6 +260,10 @@ export const object_manipulation: number = Functional_Units_object_manipulation;
 
 /**
  * @summary Functional_Units_group_manipulation
+ * @description
+ *
+ * Bit 14: later group-manipulation FU; not in ISO 8571:1988.
+ *
  * @constant
  */
 export const Functional_Units_group_manipulation: number = 14; /* LONG_NAMED_BIT */
@@ -216,6 +278,10 @@ export const group_manipulation: number = Functional_Units_group_manipulation; /
 
 /**
  * @summary Functional_Units_consecutive_access
+ * @description
+ *
+ * Bit 15: later consecutive-access FU; not in ISO 8571:1988.
+ *
  * @constant
  */
 export const Functional_Units_consecutive_access: number = 15; /* LONG_NAMED_BIT */
@@ -230,6 +296,10 @@ export const consecutive_access: number = Functional_Units_consecutive_access; /
 
 /**
  * @summary Functional_Units_concurrent_access
+ * @description
+ *
+ * Bit 16: later concurrent-access FU; not in ISO 8571:1988.
+ *
  * @constant
  */
 export const Functional_Units_concurrent_access: number = 16; /* LONG_NAMED_BIT */

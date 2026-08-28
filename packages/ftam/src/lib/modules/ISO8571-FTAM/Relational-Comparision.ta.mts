@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Relational_Comparision
  * @description
  *
+ * Relational test bits for integer patterns. Bit 0: whether
+ * `no-value-available` (partial support, ISO 8571-2:1988 §9.4)
+ * matches. Bits 1–3: equals, less-than, greater-than. Set = match;
+ * clear = fail. ASN.1: bits 1 through 3 shall not all have the same
+ * value.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,6 +48,11 @@ export type Relational_Comparision = BIT_STRING;
 
 /**
  * @summary Relational_Comparision_no_value_available_matches
+ * @description
+ *
+ * Bit 0. Set: "No Value Available" matches; clear: it fails. Partial
+ * support of an attribute (ISO 8571-2:1988 §9.4).
+ *
  * @constant
  */
 export const Relational_Comparision_no_value_available_matches: number = 0; /* LONG_NAMED_BIT */
@@ -56,6 +67,10 @@ export const no_value_available_matches: number = Relational_Comparision_no_valu
 
 /**
  * @summary Relational_Comparision_equals_matches
+ * @description
+ *
+ * Bit 1. Set: equal items match; clear: equal items fail.
+ *
  * @constant
  */
 export const Relational_Comparision_equals_matches: number = 1; /* LONG_NAMED_BIT */
@@ -70,6 +85,11 @@ export const equals_matches: number = Relational_Comparision_equals_matches; /* 
 
 /**
  * @summary Relational_Comparision_less_than_matches
+ * @description
+ *
+ * Bit 2. Set: a value less than the test case matches; clear: it
+ * fails.
+ *
  * @constant
  */
 export const Relational_Comparision_less_than_matches: number = 2; /* LONG_NAMED_BIT */
@@ -84,6 +104,11 @@ export const less_than_matches: number = Relational_Comparision_less_than_matche
 
 /**
  * @summary Relational_Comparision_greater_than_matches
+ * @description
+ *
+ * Bit 3. Set: a value greater than the test case matches; clear: it
+ * fails.
+ *
  * @constant
  */
 export const Relational_Comparision_greater_than_matches: number = 3; /* LONG_NAMED_BIT */

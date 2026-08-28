@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Node_Name
  * @description
  *
+ * Node identifier as `EXTERNAL`. The actual type is the ISO8571-FADU
+ * `Node-Name` CHOICE: `ftam-coded` GraphicString (same abstract
+ * syntax as structuring information; only when contents type is a
+ * document type name) or `user-coded` EXTERNAL (types from the
+ * file-contents abstract syntax). ISO 8571-2:1988 Figure 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

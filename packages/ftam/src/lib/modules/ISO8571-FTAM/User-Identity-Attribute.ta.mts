@@ -21,6 +21,25 @@ import {
  * @summary User_Identity_Attribute
  * @description
  *
+ * Storage-group GraphicString used for four scalar identities
+ * (ISO 8571-2:1988 §12.9–§12.12, §14.2; ISO 8571-4:1988
+ * Figure 11). A new file sets the last-modifier, last-reader,
+ * and last-attribute-modifier values equal to the creator.
+ *
+ * - Creator: current initiator identity at create; not
+ *   changeable.
+ * - Last modifier: set on close after open for modification or
+ *   extension (including connection failure); not changeable.
+ * - Last reader: set on close after open for reading
+ *   (including connection failure); not changeable.
+ * - Last attribute modifier: set on a successful
+ *   change-attribute to the Current Initiator Identity; not
+ *   changeable.
+ *
+ * `no-value-available` means partial support and shall appear
+ * only in response PDUs. Initiators shall not claim partial
+ * support (ISO 8571-2:1988 §9.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

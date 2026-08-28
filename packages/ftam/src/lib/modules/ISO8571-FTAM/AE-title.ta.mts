@@ -25,6 +25,10 @@ import {
  * @summary AE_title
  * @description
  *
+ * ACSE AE-title (`AP-title` + `AE-qualifier`) used in
+ * `Application-Entity-Title` and the access-control location
+ * term. ISO 8571-4:1988: “as defined in ISO 8650”.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +42,20 @@ export class AE_title {
   constructor(
     /**
      * @summary `ap`.
+     * @description
+     *
+     * Application-process title (ISO 8650).
+     *
      * @public
      * @readonly
      */
     readonly ap: AP_title,
     /**
      * @summary `ae`.
+     * @description
+     *
+     * Application-entity qualifier (ISO 8650).
+     *
      * @public
      * @readonly
      */

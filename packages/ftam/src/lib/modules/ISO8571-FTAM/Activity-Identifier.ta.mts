@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Activity_Identifier
  * @description
  *
+ * Unambiguous per initiator/responder pair for the open-regime
+ * activity (IFS; recovery FU). Reusable after F-CLOSE confirm.
+ * ISO 8571-3:1988 §13.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

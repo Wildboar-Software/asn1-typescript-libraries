@@ -41,6 +41,12 @@ import {
  * @summary Access_Control_Element
  * @description
  *
+ * One access condition. The whole condition is satisfied only
+ * if all terms in it are true (ISO 8571-2:1988 §12.16;
+ * ISO 8571-4:1988 Figure 11). Access to the file is allowed if
+ * at least one such condition is fully satisfied, not the
+ * union of several.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,30 +64,62 @@ export class Access_Control_Element {
   constructor(
     /**
      * @summary `action_list`.
+     * @description
+     *
+     * Required. Satisfied if all actions in the proposed current
+     * access request are present in this list
+     * (ISO 8571-2:1988 §12.16). If satisfied, select and deselect
+     * are also possible; file-access actions in the list also
+     * allow open and close.
+     *
      * @public
      * @readonly
      */
     readonly action_list: Access_Request,
     /**
      * @summary `concurrency_access`.
+     * @description
+     *
+     * Optional concurrency keys. Satisfied if the boolean for the
+     * requested lock is true in the key. If this term is omitted,
+     * the concurrency-control parameter shall not be present for
+     * access via this element (ISO 8571-2:1988 §12.16).
+     *
      * @public
      * @readonly
      */
     readonly concurrency_access?: OPTIONAL<Concurrency_Access>,
     /**
      * @summary `identity`.
+     * @description
+     *
+     * Optional. Satisfied if it matches the current initiator
+     * identity (ISO 8571-2:1988 §12.16). Matching is not
+     * necessarily textual identity.
+     *
      * @public
      * @readonly
      */
     readonly identity?: OPTIONAL<User_Identity>,
     /**
      * @summary `passwords`.
+     * @description
+     *
+     * Optional vector. Satisfied if each non-null element matches
+     * the corresponding current access password
+     * (ISO 8571-2:1988 §12.16).
+     *
      * @public
      * @readonly
      */
     readonly passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `location`.
+     * @description
+     *
+     * Optional AE-title. Satisfied if it matches the current
+     * calling application-entity title (ISO 8571-2:1988 §12.16).
+     *
      * @public
      * @readonly
      */

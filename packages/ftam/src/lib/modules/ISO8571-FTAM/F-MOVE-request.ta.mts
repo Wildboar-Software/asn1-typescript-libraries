@@ -47,6 +47,12 @@ import {
  * @summary F_MOVE_request
  * @description
  *
+ * Moves the selected filestore object into a destination
+ * directory.
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[69]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -67,36 +73,72 @@ export class F_MOVE_request {
   constructor(
     /**
      * @summary `destination_file_directory`.
+     * @description
+     *
+     * Destination directory pathname. Absent from ISO 8571:1988
+     * Parts 1–4; pathname form parallels ISO 8571-2:1988 §12.1.
+     *
      * @public
      * @readonly
      */
     readonly destination_file_directory: Destination_File_Directory,
     /**
      * @summary `override`.
+     * @description
+     *
+     * If the destination exists: 1988 F-CREATE override (ISO
+     * 8571-3:1988 §15.3.2.3). ASN.1 allows only
+     * `create-failure(0)` and
+     * `delete-and-create-with-new-attributes(3)`. Default
+     * `create-failure`.
+     *
      * @public
      * @readonly
      */
     readonly override?: OPTIONAL<Override>,
     /**
      * @summary `create_password`.
+     * @description
+     *
+     * Password to create in this filestore. ISO 8571-3:1988
+     * §15.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly create_password?: OPTIONAL<Password>,
     /**
      * @summary `access_passwords`.
+     * @description
+     *
+     * Passwords for the requested actions. Same role as ISO
+     * 8571-3:1988 §13.7; only if the security group was
+     * negotiated.
+     *
      * @public
      * @readonly
      */
     readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `path_access_passwords`.
+     * @description
+     *
+     * Per-path-element passwords. Absent from ISO 8571:1988.
+     * ASN.1 on F-SELECT-request: send only when
+     * limited-filestore-management, object-manipulation, or
+     * group-manipulation is available.
+     *
      * @public
      * @readonly
      */
     readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * New attribute values. Same role as F-CHANGE-ATTRIB (ISO
+     * 8571-3:1988 §16.2 / §13.5).
+     *
      * @public
      * @readonly
      */

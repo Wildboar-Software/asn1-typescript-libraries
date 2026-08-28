@@ -32,6 +32,12 @@ import {
  * @summary F_CHANGE_ATTRIB_response
  * @description
  *
+ * Confirm of F-CHANGE-ATTRIB. Unsuccessful `action-result` means
+ * none of the changes were performed. Passwords in access-control
+ * never returned; other attributes returned as implementation
+ * choice (ASN.1). Enhanced file management FU; P-DATA.
+ * ISO 8571-3:1988 §16.2 Table 20; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,18 +55,34 @@ export class F_CHANGE_ATTRIB_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Unsuccessful means none of the changes were performed.
+     * Default `success`. ISO 8571-3:1988 §16.2.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * Conditional on at least one name/value on the request.
+     * Passwords in access-control never returned; other attributes
+     * returned as implementation choice (ASN.1).
+     * ISO 8571-3:1988 §16.2.2.2; ISO 8571-4:1988 F-CHANGE-ATTRIB-response.
+     *
      * @public
      * @readonly
      */
     readonly attributes?: OPTIONAL<Change_Attributes>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * ISO 8571-3:1988 §16.2.2.3 / §13.13.
+     *
      * @public
      * @readonly
      */

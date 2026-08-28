@@ -20,6 +20,10 @@ import {
  * @summary Diagnostic
  * @description
  *
+ * Sequence of diagnostic items amplifying action-result.
+ * Types: informative (qualifies success), transient (IFS),
+ * permanent. ISO 8571-3:1988 §13.13, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

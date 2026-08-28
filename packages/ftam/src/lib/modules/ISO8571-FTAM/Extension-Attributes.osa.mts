@@ -16,6 +16,10 @@ import {
  * @summary Extension_Attributes
  * @description
  *
+ * Empty `TYPE-IDENTIFIER` information object set `{...}`. Extension
+ * attributes are specified elsewhere; this set is a placeholder
+ * (ASN.1: dynamically extensible).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,28 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Date_and_Time_Attribute
  * @description
  *
+ * Storage-group GeneralizedTime used for four scalar file
+ * attributes (ISO 8571-2:1988 §12.5–§12.8, §14.2;
+ * ISO 8571-4:1988 Figure 11). A new file sets all four equal
+ * to creation time. Resolution and accuracy are determined by
+ * the responder (ISO 8571-2:1988 §9.3).
+ *
+ * - Creation: set at create to the responder's local time; not
+ *   changeable.
+ * - Last modification: updated on close after open for
+ *   modification or extension (including connection failure);
+ *   not updated by attribute changes; not changeable.
+ * - Last read: updated on close after open for reading
+ *   (including connection failure); not if the file is only
+ *   selected; not changeable.
+ * - Last attribute modification: updated on a successful
+ *   change-attribute; not by implicit filesize changes; not
+ *   changeable.
+ *
+ * `no-value-available` means partial support and shall appear
+ * only in response PDUs. Initiators shall not claim partial
+ * support (ISO 8571-2:1988 §9.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

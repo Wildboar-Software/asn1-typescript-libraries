@@ -32,6 +32,12 @@ import {
  * @summary F_CHANGE_LINK_ATTRIB_response
  * @description
  *
+ * Confirms F-CHANGE-LINK-ATTRIB. Same shape as
+ * F-CHANGE-ATTRIB-response (ISO 8571-3:1988 §16.2).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[68]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +53,33 @@ export class F_CHANGE_LINK_ATTRIB_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Success, transient error, or permanent error. ISO
+     * 8571-3:1988 §13.2. Default `success`.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * Resulting attribute values. Same role as
+     * F-CHANGE-ATTRIB-response (ISO 8571-3:1988 §16.2 / §13.5).
+     *
      * @public
      * @readonly
      */
     readonly attributes?: OPTIONAL<Change_Attributes>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Detail accompanying `action-result`. ISO 8571-3:1988
+     * §13.13.
+     *
      * @public
      * @readonly
      */

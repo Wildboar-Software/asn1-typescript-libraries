@@ -17,6 +17,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary F_BEGIN_GROUP_request
  * @description
  *
+ * Starts a grouped set of requests. Grouping FU; P-DATA. Threshold
+ * is the number of inner primitives that must not fail
+ * (`state-result`) before any succeed. Transfer/management
+ * classes: threshold equals the count of primitives between begin
+ * and end. After a `state-result` failure, remaining responses
+ * (except END-GROUP) are omitted; earlier ones may carry
+ * subsequent-error diagnostics if the threshold was not met.
+ * ISO 8571-3:1988 §18 Table 23; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +38,14 @@ export class F_BEGIN_GROUP_request {
   constructor(
     /**
      * @summary `threshold`.
+     * @description
+     *
+     * Count of primitives after BEGIN-GROUP that must analyse
+     * without `state-result` failure before any part of the group
+     * succeeds. Primitives with only `action-result` count as
+     * successful. Does not set activity attributes.
+     * ISO 8571-3:1988 §18.1.2.1.
+     *
      * @public
      * @readonly
      */

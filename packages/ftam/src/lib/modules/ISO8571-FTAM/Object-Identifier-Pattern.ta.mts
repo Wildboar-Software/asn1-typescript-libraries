@@ -21,6 +21,8 @@ import {
  * @summary Object_Identifier_Pattern
  * @description
  *
+ * Matcher for an OBJECT IDENTIFIER filestore-object attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +37,20 @@ export class Object_Identifier_Pattern {
   constructor(
     /**
      * @summary `equality_comparision`.
+     * @description
+     *
+     * Whether `no-value-available` and equals match.
+     *
      * @public
      * @readonly
      */
     readonly equality_comparision: Equality_Comparision,
     /**
      * @summary `object_identifier_value`.
+     * @description
+     *
+     * Test object identifier.
+     *
      * @public
      * @readonly
      */

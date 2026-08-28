@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary F_OPEN_request_recovery_mode
  * @description
  *
+ * IFS recovery facilities for this open: `none`(0),
+ * `at-start-of-file`(1), `at-any-active-checkpoint`(2). Decreasing
+ * order; responder may return a lower value. Mandatory in IFS if
+ * restart or recovery was negotiated. `none` disables restart and
+ * recovery for this open. Does not prevent open. Default `none`.
+ * ISO 8571-3:1988 §17.1.2.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +35,10 @@ export type F_OPEN_request_recovery_mode = INTEGER;
 
 /**
  * @summary F_OPEN_request_recovery_mode_none
+ * @description
+ *
+ * 0: no restart/recovery in this open. ISO 8571-3:1988 §17.1.2.10.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +55,10 @@ export const none: F_OPEN_request_recovery_mode = F_OPEN_request_recovery_mode_n
 
 /**
  * @summary F_OPEN_request_recovery_mode_at_start_of_file
+ * @description
+ *
+ * 1: resume at start of file. ISO 8571-3:1988 §17.1.2.10.
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +75,11 @@ export const at_start_of_file: F_OPEN_request_recovery_mode = F_OPEN_request_rec
 
 /**
  * @summary F_OPEN_request_recovery_mode_at_any_active_Checkpoint
+ * @description
+ *
+ * 2: resume at any active checkpoint (highest capability).
+ * ISO 8571-3:1988 §17.1.2.10.
+ *
  * @constant
  * @type {number}
  */

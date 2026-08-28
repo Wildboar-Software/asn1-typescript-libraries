@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Concurrency_Key
  * @description
  *
+ * BIT STRING of the four lock values. Used in the
+ * access-control concurrency-access term: the term is
+ * satisfied if the bit for the requested lock is true
+ * (ISO 8571-2:1988 §12.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +34,10 @@ export type Concurrency_Key = BIT_STRING;
 
 /**
  * @summary Concurrency_Key_not_required
+ * @description
+ *
+ * Bit 0: lock `not-required` (ISO 8571-2:1988 §12.16).
+ *
  * @constant
  */
 export const Concurrency_Key_not_required: number = 0; /* LONG_NAMED_BIT */
@@ -43,6 +52,10 @@ export const not_required: number = Concurrency_Key_not_required; /* SHORT_NAMED
 
 /**
  * @summary Concurrency_Key_shared
+ * @description
+ *
+ * Bit 1: lock `shared` (ISO 8571-2:1988 §12.16).
+ *
  * @constant
  */
 export const Concurrency_Key_shared: number = 1; /* LONG_NAMED_BIT */
@@ -57,6 +70,10 @@ export const shared: number = Concurrency_Key_shared; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Concurrency_Key_exclusive
+ * @description
+ *
+ * Bit 2: lock `exclusive` (ISO 8571-2:1988 §12.16).
+ *
  * @constant
  */
 export const Concurrency_Key_exclusive: number = 2; /* LONG_NAMED_BIT */
@@ -71,6 +88,10 @@ export const exclusive: number = Concurrency_Key_exclusive; /* SHORT_NAMED_BIT *
 
 /**
  * @summary Concurrency_Key_no_access
+ * @description
+ *
+ * Bit 3: lock `no-access` (ISO 8571-2:1988 §12.16).
+ *
  * @constant
  */
 export const Concurrency_Key_no_access: number = 3; /* LONG_NAMED_BIT */

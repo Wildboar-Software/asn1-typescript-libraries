@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Request_Type
  * @description
  *
+ * Direction of the bulk data transfer: read or write. Not in ISO
+ * 8571:1988 Parts 1–4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,7 @@ export type Request_Type = INTEGER;
 
 /**
  * @summary Request_Type_read
+ * @description BDT is a read (responder is sender).
  * @constant
  * @type {number}
  */
@@ -44,6 +48,7 @@ export const read: Request_Type = Request_Type_read; /* SHORT_NAMED_INTEGER_VALU
 
 /**
  * @summary Request_Type_write
+ * @description BDT is a write (initiator is sender).
  * @constant
  * @type {number}
  */

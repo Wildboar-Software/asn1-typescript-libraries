@@ -48,6 +48,11 @@ import {
  * @summary F_SELECT_response
  * @description
  *
+ * Confirm of F-SELECT. `state-result` says whether the select
+ * regime was established. Filename only is returned (may differ
+ * from the request). Kernel FU; P-DATA. ISO 8571-3:1988 §15.1
+ * Table 15; ISO 8571-4:1988 §8.3 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -68,36 +73,63 @@ export class F_SELECT_response {
   constructor(
     /**
      * @summary `state_result`.
+     * @description
+     *
+     * Whether the select regime was established. Default `success`.
+     * ISO 8571-3:1988 §15.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly state_result: OPTIONAL<State_Result>,
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Default `success`. ISO 8571-3:1988 §15.1.2.2 / §13.2.
+     *
      * @public
      * @readonly
      */
     readonly action_result: OPTIONAL<Action_Result>,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * Filename only; may not match the request.
+     * ISO 8571-3:1988 §15.1.2.3.
+     *
      * @public
      * @readonly
      */
     readonly attributes: Select_Attributes,
     /**
      * @summary `referent_indicator`.
+     * @description
+     *
+     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: send only
+     * when the limited-filestore-management FU is available.
+     *
      * @public
      * @readonly
      */
     readonly referent_indicator?: OPTIONAL<Referent_Indicator>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.1.2.7 / §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.1.2.9 / §13.13.
+     *
      * @public
      * @readonly
      */

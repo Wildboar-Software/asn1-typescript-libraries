@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Shared_ASE_Information
  * @description
  *
+ * EXTERNAL carrying information of other ASEs associated with
+ * FTAM primitives (e.g. CCR per ISO 8571-3:1988 Annex C).
+ * Defined by the application context. ISO 8571-3:1988 §13.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

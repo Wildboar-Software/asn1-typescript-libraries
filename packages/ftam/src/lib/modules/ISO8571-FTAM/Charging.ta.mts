@@ -20,6 +20,12 @@ import {
  * @summary Charging
  * @description
  *
+ * List of charges attributed to the account during the regime
+ * being released. Implementation-dependent resource and unit
+ * strings; omit zero charges. Present only if account was
+ * provided when the regime was established.
+ * ISO 8571-3:1988 §13.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

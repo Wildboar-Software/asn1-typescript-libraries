@@ -20,6 +20,12 @@ import {
  * @summary F_CHANGE_LINK_ATTRIB_request
  * @description
  *
+ * Changes attributes of a link. Same field pattern as
+ * F-CHANGE-ATTRIB (ISO 8571-3:1988 §16.2).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[67]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,11 @@ export class F_CHANGE_LINK_ATTRIB_request {
   constructor(
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * New attribute values. Same role as F-CHANGE-ATTRIB (ISO
+     * 8571-3:1988 §16.2 / §13.5).
+     *
      * @public
      * @readonly
      */

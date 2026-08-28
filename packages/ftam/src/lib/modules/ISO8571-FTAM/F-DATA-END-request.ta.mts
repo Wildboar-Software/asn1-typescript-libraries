@@ -27,6 +27,11 @@ import {
  * @summary F_DATA_END_request
  * @description
  *
+ * Sender has sent all data, or rejects F-READ (unsuccessful
+ * action-result). There is no F-DATA FPDU — contents are
+ * `Data-Element` in file-contents / FADU presentation contexts.
+ * ISO 8571-3:1988 §24.4 Table 36; ISO 8571-4:1988 Figure 9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +46,22 @@ export class F_DATA_END_request {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Success, or unsuccessful as a rejection of F-READ. Default
+     * `success`. ISO 8571-3:1988 §13.2, §24.4.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Amplifies action-result; carries the reason when rejecting
+     * F-READ. ISO 8571-3:1988 §13.13, §24.4.2.2.
+     *
      * @public
      * @readonly
      */

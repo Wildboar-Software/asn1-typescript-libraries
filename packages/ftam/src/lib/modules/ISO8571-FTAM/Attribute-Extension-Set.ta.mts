@@ -25,6 +25,9 @@ import {
  * @summary Attribute_Extension_Set
  * @description
  *
+ * One group of extra attributes: set OID plus the attributes
+ * themselves.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +42,20 @@ export class Attribute_Extension_Set {
   constructor(
     /**
      * @summary `extension_set_identifier`.
+     * @description
+     *
+     * OID of this extension set.
+     *
      * @public
      * @readonly
      */
     readonly extension_set_identifier: Extension_Set_Identifier,
     /**
      * @summary `extension_set_attributes`.
+     * @description
+     *
+     * Extra attributes in this set, each keyed by object identifier.
+     *
      * @public
      * @readonly
      */

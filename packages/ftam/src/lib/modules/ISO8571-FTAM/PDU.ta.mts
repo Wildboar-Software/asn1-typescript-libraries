@@ -35,6 +35,13 @@ import {
  * @summary PDU
  * @description
  *
+ * Top-level CHOICE of FTAM PCI values. ISO 8571-4:1988 §20.3
+ * defines only `FTAM-Regime-PDU`, `File-PDU`, and
+ * `Bulk-Data-PDU`. `FSM-PDU` is a later filestore-management
+ * extension not in ISO 8571:1988 Parts 1–4. Abstract-syntax name
+ * `{ iso standard 8571 abstract-syntax(2) ftam-pci(1) }`
+ * ("FTAM PCI") is ISO 8571-4:1988 §20.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

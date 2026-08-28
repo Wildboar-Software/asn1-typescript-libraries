@@ -21,6 +21,10 @@ import {
  * @summary Bitstring_Pattern
  * @description
  *
+ * Matcher for a BIT STRING filestore-object attribute (e.g.
+ * permitted-actions): equality bits, `match-bitstring`, and
+ * `significance-bitstring`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +40,30 @@ export class Bitstring_Pattern {
   constructor(
     /**
      * @summary `equality_comparision`.
+     * @description
+     *
+     * Whether `no-value-available` and equals match.
+     *
      * @public
      * @readonly
      */
     readonly equality_comparision: Equality_Comparision,
     /**
      * @summary `match_bitstring`.
+     * @description
+     *
+     * Bit values used in the match.
+     *
      * @public
      * @readonly
      */
     readonly match_bitstring: BIT_STRING,
     /**
      * @summary `significance_bitstring`.
+     * @description
+     *
+     * Significance of corresponding bits in `match-bitstring`.
+     *
      * @public
      * @readonly
      */

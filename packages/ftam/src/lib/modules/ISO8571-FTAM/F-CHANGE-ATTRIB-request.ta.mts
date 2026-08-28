@@ -20,6 +20,12 @@ import {
  * @summary F_CHANGE_ATTRIB_request
  * @description
  *
+ * Modifies attributes of the selected file. Enhanced file
+ * management FU; P-DATA. All-or-nothing: any failure → no changes.
+ * Updates date/time of last attribute modification and identity of
+ * last attribute modifier. ISO 8571-3:1988 §16.2 Table 20;
+ * ISO 8571-2:1988 §10.3; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,12 @@ export class F_CHANGE_ATTRIB_request {
   constructor(
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * Names and new values for kernel or negotiated-group attributes
+     * that ISO 8571-2:1988 §12 permits to change. Unnamed attributes
+     * are neither changed nor returned. ISO 8571-3:1988 §16.2.2.2.
+     *
      * @public
      * @readonly
      */

@@ -18,6 +18,28 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Object_Size_Attribute
  * @description
  *
+ * Storage-group integer octet size (ISO 8571-2:1988
+ * §12.14–§12.15, §14.2). ISO 8571-4:1988 Figure 11 names this
+ * `Filesize-Attribute`; this encoding uses
+ * `Object-Size-Attribute`. The same ASN.1 type is used for
+ * current size (`object-size`) and future size
+ * (`future-Object-size`).
+ *
+ * Current filesize: octets of the complete file at close after
+ * open for modification or extension (including connection
+ * failure). Not changeable; not settable on create (starts 0).
+ * May be quantized to allocation units. Depends on the real
+ * representation and the negotiated transfer syntax.
+ *
+ * Future filesize: nominal size the file may grow to. Set at
+ * create; changeable. When current filesize reaches it, the
+ * responder may increase it, increase it and warn, or indicate
+ * an error.
+ *
+ * `no-value-available` means partial support and shall appear
+ * only in response PDUs. Initiators shall not claim partial
+ * support (ISO 8571-2:1988 §9.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

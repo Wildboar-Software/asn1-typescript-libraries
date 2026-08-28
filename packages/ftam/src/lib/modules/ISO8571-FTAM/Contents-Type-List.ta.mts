@@ -20,6 +20,12 @@ import {
  * @summary Contents_Type_List
  * @description
  *
+ * Document-type and/or abstract-syntax names used to build the
+ * P-CONNECT presentation-context list when Presentation
+ * context-management FU is not used. Mandatory in transfer,
+ * transfer-and-management, and access classes if PCM is not
+ * negotiated. ISO 8571-3:1988 §14.1.2.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

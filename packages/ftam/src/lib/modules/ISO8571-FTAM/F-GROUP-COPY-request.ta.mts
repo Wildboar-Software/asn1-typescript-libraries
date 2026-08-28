@@ -57,6 +57,12 @@ import {
  * @summary F_GROUP_COPY_request
  * @description
  *
+ * Copies the selected group of filestore objects into a
+ * destination directory.
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[51]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -79,48 +85,94 @@ export class F_GROUP_COPY_request {
   constructor(
     /**
      * @summary `destination_file_directory`.
+     * @description
+     *
+     * Destination directory pathname. Absent from ISO 8571:1988
+     * Parts 1–4; pathname form parallels ISO 8571-2:1988 §12.1.
+     *
      * @public
      * @readonly
      */
     readonly destination_file_directory: Destination_File_Directory,
     /**
      * @summary `override`.
+     * @description
+     *
+     * If the destination exists: 1988 F-CREATE override (ISO
+     * 8571-3:1988 §15.3.2.3). ASN.1 allows only
+     * `create-failure(0)` and
+     * `delete-and-create-with-new-attributes(3)`. Default
+     * `create-failure`.
+     *
      * @public
      * @readonly
      */
     readonly override: OPTIONAL<Override>,
     /**
      * @summary `error_action`.
+     * @description
+     *
+     * `terminate` or `continue` after a per-object error.
+     * Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly error_action: Error_Action,
     /**
      * @summary `create_password`.
+     * @description
+     *
+     * Password to create in this filestore. ISO 8571-3:1988
+     * §15.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly create_password?: OPTIONAL<Password>,
     /**
      * @summary `access_passwords`.
+     * @description
+     *
+     * Passwords for the requested actions. Same role as ISO
+     * 8571-3:1988 §13.7; only if the security group was
+     * negotiated.
+     *
      * @public
      * @readonly
      */
     readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `path_access_passwords`.
+     * @description
+     *
+     * Per-path-element passwords. Absent from ISO 8571:1988.
+     * ASN.1 on F-SELECT-request: send only when
+     * limited-filestore-management, object-manipulation, or
+     * group-manipulation is available.
+     *
      * @public
      * @readonly
      */
     readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
     /**
      * @summary `request_Operation_result`.
+     * @description
+     *
+     * Whether the response should carry a success count or
+     * names. Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * New attribute values. Same role as F-CHANGE-ATTRIB (ISO
+     * 8571-3:1988 §16.2 / §13.5).
+     *
      * @public
      * @readonly
      */

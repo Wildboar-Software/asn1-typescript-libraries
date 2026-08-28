@@ -21,6 +21,17 @@ import {
  * @summary Object_Availability_Attribute
  * @description
  *
+ * Storage-group file availability (ISO 8571-2:1988 §12.13,
+ * §14.2). ISO 8571-4:1988 Figure 11 names this
+ * `File-Availability-Attribute`; this encoding uses
+ * `Object-Availability-Attribute`. Scalar. Set at create;
+ * changeable. Hint about demountable versus immediately
+ * available storage; actual use is implementation-dependent.
+ *
+ * `no-value-available` means partial support and shall appear
+ * only in response PDUs. Initiators shall not claim partial
+ * support (ISO 8571-2:1988 §9.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

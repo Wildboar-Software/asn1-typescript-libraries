@@ -32,6 +32,11 @@ import {
  * @summary F_CHANGE_PREFIX_request
  * @description
  *
+ * Changes the current destination-file-directory prefix.
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[41]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,24 +53,46 @@ export class F_CHANGE_PREFIX_request {
   constructor(
     /**
      * @summary `reset`.
+     * @description
+     *
+     * When true, reset the prefix. Default `FALSE`.
+     *
      * @public
      * @readonly
      */
     readonly reset: OPTIONAL<BOOLEAN>,
     /**
      * @summary `destination_file_directory`.
+     * @description
+     *
+     * Destination directory pathname. Absent from ISO 8571:1988
+     * Parts 1–4; pathname form parallels ISO 8571-2:1988 §12.1.
+     *
      * @public
      * @readonly
      */
     readonly destination_file_directory: Destination_File_Directory,
     /**
      * @summary `access_passwords`.
+     * @description
+     *
+     * Passwords for the requested actions. Same role as ISO
+     * 8571-3:1988 §13.7; only if the security group was
+     * negotiated.
+     *
      * @public
      * @readonly
      */
     readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `path_access_passwords`.
+     * @description
+     *
+     * Per-path-element passwords. Absent from ISO 8571:1988.
+     * ASN.1 on F-SELECT-request: send only when
+     * limited-filestore-management, object-manipulation, or
+     * group-manipulation is available.
+     *
      * @public
      * @readonly
      */

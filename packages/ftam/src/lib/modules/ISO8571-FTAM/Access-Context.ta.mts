@@ -22,6 +22,11 @@ import {
  * @summary Access_Context
  * @description
  *
+ * Selects which data elements of the addressed FADU are transferred
+ * on read. Nodes stay in preorder. `level-number` is present if and
+ * only if the context is FL. ISO 8571-2:1988 §7.5 Table 1; ISO
+ * 8571-3:1988 Table 27.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,12 +48,21 @@ export class Access_Context {
   constructor(
     /**
      * @summary `access_context`.
+     * @description
+     *
+     * HA, HN, FA, FL, FS, UA or US (ISO 8571-2:1988 §7.5).
+     *
      * @public
      * @readonly
      */
     readonly access_context: Access_Context_access_context,
     /**
      * @summary `level_number`.
+     * @description
+     *
+     * Depth relative to the addressed FADU root. Present iff FL
+     * (ISO 8571-3:1988 §13.12; ISO 8571-4:1988 Access-Context).
+     *
      * @public
      * @readonly
      */

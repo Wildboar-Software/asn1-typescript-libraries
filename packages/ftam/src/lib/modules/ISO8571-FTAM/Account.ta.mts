@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Account
  * @description
  *
+ * Account to which costs of the regime being entered are
+ * charged. Sets the current account activity attribute; if
+ * omitted, that attribute is unset or retains a previous
+ * value. A nested select may override the FTAM-regime
+ * account; the previous value is restored on deselect.
+ * ISO 8571-3:1988 §13.3; ISO 8571-2:1988 §13.8. Minimum
+ * range 1–8 characters (ISO 8571-2:1988 Table 4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

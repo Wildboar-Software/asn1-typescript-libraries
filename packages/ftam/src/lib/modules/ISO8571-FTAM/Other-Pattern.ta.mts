@@ -20,6 +20,9 @@ import {
  * @summary Other_Pattern
  * @description
  *
+ * Equality comparison used as a pattern. ASN.1 comment: matches
+ * against "No Value Available".
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

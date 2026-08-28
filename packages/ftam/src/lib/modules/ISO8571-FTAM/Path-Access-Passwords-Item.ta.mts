@@ -25,6 +25,11 @@ import {
  * @summary Path_Access_Passwords_Item
  * @description
  *
+ * Passwords for one pathname element. Absent from ISO
+ * 8571:1988 Parts 1–4. The first eight fields parallel Access
+ * Passwords (ISO 8571-3:1988 §13.7); `pass-passwords` and
+ * `link-password` have no 1988 counterpart.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,60 +41,104 @@ export class Path_Access_Passwords_Item {
   constructor(
     /**
      * @summary `read_password`.
+     * @description
+     *
+     * Password for read. Parallels ISO 8571-3:1988 §13.7.
+     *
      * @public
      * @readonly
      */
     readonly read_password: Password,
     /**
      * @summary `insert_password`.
+     * @description
+     *
+     * Password for insert. Parallels ISO 8571-3:1988 §13.7.
+     *
      * @public
      * @readonly
      */
     readonly insert_password: Password,
     /**
      * @summary `replace_password`.
+     * @description
+     *
+     * Password for replace. Parallels ISO 8571-3:1988 §13.7.
+     *
      * @public
      * @readonly
      */
     readonly replace_password: Password,
     /**
      * @summary `extend_password`.
+     * @description
+     *
+     * Password for extend. Parallels ISO 8571-3:1988 §13.7.
+     *
      * @public
      * @readonly
      */
     readonly extend_password: Password,
     /**
      * @summary `erase_password`.
+     * @description
+     *
+     * Password for erase. Parallels ISO 8571-3:1988 §13.7.
+     *
      * @public
      * @readonly
      */
     readonly erase_password: Password,
     /**
      * @summary `read_attribute_password`.
+     * @description
+     *
+     * Password for read-attribute. Parallels ISO 8571-3:1988
+     * §13.7.
+     *
      * @public
      * @readonly
      */
     readonly read_attribute_password: Password,
     /**
      * @summary `change_attribute_password`.
+     * @description
+     *
+     * Password for change-attribute. Parallels ISO 8571-3:1988
+     * §13.7.
+     *
      * @public
      * @readonly
      */
     readonly change_attribute_password: Password,
     /**
      * @summary `delete_password`.
+     * @description
+     *
+     * Password for delete. Parallels ISO 8571-3:1988 §13.7.
+     *
      * @public
      * @readonly
      */
     readonly delete_password: Password,
     /**
      * @summary `pass_passwords`.
+     * @description
+     *
+     * Passwords for passing this path element. Absent from ISO
+     * 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly pass_passwords: Pass_Passwords,
     /**
      * @summary `link_password`.
+     * @description
+     *
+     * Password for the link action. Absent from ISO 8571:1988
+     * Parts 1–4.
+     *
      * @public
      * @readonly
      */

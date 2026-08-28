@@ -32,6 +32,12 @@ import {
  * @summary F_READ_LINK_ATTRIB_response
  * @description
  *
+ * Confirms F-READ-LINK-ATTRIB. Same shape as
+ * F-READ-ATTRIB-response (ISO 8571-3:1988 §16.1).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[66]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +53,33 @@ export class F_READ_LINK_ATTRIB_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Success, transient error, or permanent error. ISO
+     * 8571-3:1988 §13.2. Default `success`.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * Returned link attributes. Same role as F-READ-ATTRIB
+     * (ISO 8571-3:1988 §16.1.2.3).
+     *
      * @public
      * @readonly
      */
     readonly attributes?: OPTIONAL<Read_Attributes>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Detail accompanying `action-result`. ISO 8571-3:1988
+     * §13.13.
+     *
      * @public
      * @readonly
      */

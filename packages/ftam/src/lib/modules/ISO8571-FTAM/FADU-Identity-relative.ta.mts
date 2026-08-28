@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FADU_Identity_relative
  * @description
  *
+ * Previous, current, or next relative to the current location
+ * (ISO 8571-2:1988 §7.6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,8 @@ export type FADU_Identity_relative = INTEGER;
 
 /**
  * @summary FADU_Identity_relative_previous
+ * @description FADU preceding the currently identified FADU in
+ * preorder (ISO 8571-2:1988 §7.6).
  * @constant
  * @type {number}
  */
@@ -44,6 +49,7 @@ export const previous: FADU_Identity_relative = FADU_Identity_relative_previous;
 
 /**
  * @summary FADU_Identity_relative_current
+ * @description Current location unchanged (ISO 8571-2:1988 §7.6).
  * @constant
  * @type {number}
  */
@@ -60,6 +66,8 @@ export const current: FADU_Identity_relative = FADU_Identity_relative_current; /
 
 /**
  * @summary FADU_Identity_relative_next
+ * @description FADU following the currently identified FADU in
+ * preorder (ISO 8571-2:1988 §7.6).
  * @constant
  * @type {number}
  */

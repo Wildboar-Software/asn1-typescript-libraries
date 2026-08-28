@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Implementation_Information
  * @description
  *
+ * Implementor convenience to distinguish implementations of a
+ * version on different equipment. Not used for negotiation; not
+ * subject to conformance test. ISO 8571-4:1988 lines 50–52;
+ * §8.1.1 note 2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

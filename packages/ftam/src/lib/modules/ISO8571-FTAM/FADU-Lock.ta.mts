@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FADU_Lock
  * @description
  *
+ * Per-FADU lock. Available if the FADU-locking FU was negotiated and
+ * `enable-fadu-locking` was on at F-OPEN. On: lock applied before
+ * BDT. Off: transfer then unlock. Switching on upgrades
+ * not-required→no-access and shared→exclusive until unlock, the FADU
+ * is erased, or the file is closed. ISO 8571-3:1988 §13.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +34,8 @@ export type FADU_Lock = INTEGER;
 
 /**
  * @summary FADU_Lock_off
+ * @description Transfer, then release the FADU lock
+ * (ISO 8571-3:1988 §13.9).
  * @constant
  * @type {number}
  */
@@ -44,6 +52,8 @@ export const off: FADU_Lock = FADU_Lock_off; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FADU_Lock_on
+ * @description Apply the lock before the transfer
+ * (ISO 8571-3:1988 §13.9).
  * @constant
  * @type {number}
  */

@@ -20,6 +20,9 @@ import {
  * @summary User_Identity_Pattern
  * @description
  *
+ * Matcher for a user-identity attribute; same encoding as
+ * `String-Pattern`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

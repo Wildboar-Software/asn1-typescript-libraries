@@ -18,6 +18,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Charging_Item
  * @description
  *
+ * One charge triple: resource identifier, charging unit, and
+ * integer value. Implementation-dependent strings; omit the
+ * item if the charge is zero. ISO 8571-3:1988 §13.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,18 +33,33 @@ export class Charging_Item {
   constructor(
     /**
      * @summary `resource_identifier`.
+     * @description
+     *
+     * Implementation-dependent name of the resource charged
+     * (ISO 8571-3:1988 §13.4).
+     *
      * @public
      * @readonly
      */
     readonly resource_identifier: GraphicString,
     /**
      * @summary `charging_unit`.
+     * @description
+     *
+     * Implementation-dependent unit of charge
+     * (ISO 8571-3:1988 §13.4).
+     *
      * @public
      * @readonly
      */
     readonly charging_unit: GraphicString,
     /**
      * @summary `charging_value`.
+     * @description
+     *
+     * Integer charge; omit the item if the charge is zero
+     * (ISO 8571-3:1988 §13.4).
+     *
      * @public
      * @readonly
      */

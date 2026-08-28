@@ -36,6 +36,23 @@ import {
  * @summary FADU_Identity
  * @description
  *
+ * Addresses a FADU by referencing the root of its subtree. Sets the
+ * current location activity attribute (ISO 8571-3:1988 §13.12).
+ * Constraint set and permitted-actions may restrict which styles are
+ * allowed. Identity groups (ISO 8571-2:1988 §12.2): traversal
+ * (begin, first, next, last, end); reverse-traversal (begin, first,
+ * previous, last, end); random-order (current, single name, name
+ * list, number). ISO 8571-2:1988 §7.6.
+ *
+ * - `first_last`: first DU that exists, or last FADU, in preorder.
+ * - `relative`: previous, current, or next relative to current
+ *   location.
+ * - `begin_end`: begin (locate-next yields first) or end (no current
+ *   location; previous yields last).
+ * - `single_name`: child of the currently located node.
+ * - `name_list`: path from the file root (empty list = file root).
+ * - `fadu_number`: preorder index (root = 0).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

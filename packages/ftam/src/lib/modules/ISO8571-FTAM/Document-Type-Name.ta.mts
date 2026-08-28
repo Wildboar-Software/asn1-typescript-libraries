@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Document_Type_Name
  * @description
  *
+ * Registered document type (ISO 8571-2:1988 §12.3, Annex B).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

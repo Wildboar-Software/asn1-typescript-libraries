@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Lock
  * @description
  *
+ * `not-required`(0) I will not / others may; `shared`(1) I may
+ * / others may; `exclusive`(2) I may / others may not;
+ * `no-access`(3) nobody. ISO 8571-3:1988 §13.8;
+ * ISO 8571-2:1988 §13.9 Table 3. Shared/exclusive only for
+ * actions in requested-access; others only `not-required` or
+ * `no-access`. Restrictiveness: `not-required` < `shared` <
+ * `exclusive` < `no-access` (ISO 8571-3:1988 §17.1.2.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +36,11 @@ export type Lock = INTEGER;
 
 /**
  * @summary Lock_not_required
+ * @description
+ *
+ * `not-required`(0): I will not perform the action; others
+ * may (ISO 8571-3:1988 §13.8).
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +57,11 @@ export const not_required: Lock = Lock_not_required; /* SHORT_NAMED_INTEGER_VALU
 
 /**
  * @summary Lock_shared
+ * @description
+ *
+ * `shared`(1): I may perform the action; so may others
+ * (ISO 8571-3:1988 §13.8).
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +78,11 @@ export const shared: Lock = Lock_shared; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Lock_exclusive
+ * @description
+ *
+ * `exclusive`(2): I may perform the action; others may not
+ * (ISO 8571-3:1988 §13.8).
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +99,11 @@ export const exclusive: Lock = Lock_exclusive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Lock_no_access
+ * @description
+ *
+ * `no-access`(3): no one may perform the action
+ * (ISO 8571-3:1988 §13.8).
+ *
  * @constant
  * @type {number}
  */

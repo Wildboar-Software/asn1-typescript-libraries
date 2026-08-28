@@ -37,6 +37,11 @@ import {
  * @summary F_GROUP_COPY_response
  * @description
  *
+ * Confirms F-GROUP-COPY.
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[52]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,24 +58,44 @@ export class F_GROUP_COPY_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Success, transient error, or permanent error. ISO
+     * 8571-3:1988 §13.2. Default `success`.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `destination_file_directory`.
+     * @description
+     *
+     * Destination directory pathname. Absent from ISO 8571:1988
+     * Parts 1–4; pathname form parallels ISO 8571-2:1988 §12.1.
+     *
      * @public
      * @readonly
      */
     readonly destination_file_directory?: OPTIONAL<Destination_File_Directory>,
     /**
      * @summary `operation_result`.
+     * @description
+     *
+     * Success count or names of objects that succeeded.
+     * Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly operation_result?: OPTIONAL<Operation_Result>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * Detail accompanying `action-result`. ISO 8571-3:1988
+     * §13.13.
+     *
      * @public
      * @readonly
      */

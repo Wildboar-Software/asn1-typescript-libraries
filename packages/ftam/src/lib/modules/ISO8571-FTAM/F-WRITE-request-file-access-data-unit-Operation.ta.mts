@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary F_WRITE_request_file_access_data_unit_Operation
  * @description
  *
+ * Action the filestore takes on received data. Values are further
+ * qualified by the constraint set in use (ISO 8571-3:1988 §20.1.1).
+ * ISO 8571-2:1988 §11.3–11.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +32,9 @@ export type F_WRITE_request_file_access_data_unit_Operation = INTEGER;
 
 /**
  * @summary F_WRITE_request_file_access_data_unit_Operation_insert
+ * @description Creates a FADU; the constraint set places it.
+ * Hierarchical insert-as-child vs sister via Children vs Subtree
+ * (ISO 8571-2:1988 §11.3, §8.1 notes 2–3).
  * @constant
  * @type {number}
  */
@@ -44,6 +51,9 @@ export const insert: F_WRITE_request_file_access_data_unit_Operation = F_WRITE_r
 
 /**
  * @summary F_WRITE_request_file_access_data_unit_Operation_replace
+ * @description Replaces the entire FADU or only the DU. Cannot
+ * change the root node-name or arc-length. Location unchanged
+ * (ISO 8571-2:1988 §11.4).
  * @constant
  * @type {number}
  */
@@ -60,6 +70,9 @@ export const replace: F_WRITE_request_file_access_data_unit_Operation = F_WRITE_
 
 /**
  * @summary F_WRITE_request_file_access_data_unit_Operation_extend
+ * @description Appends to the DU of the currently located FADU
+ * root. Only existing DUs. Location unchanged
+ * (ISO 8571-2:1988 §11.5).
  * @constant
  * @type {number}
  */

@@ -36,6 +36,12 @@ import {
  * @summary F_GROUP_CHANGE_ATTRIB_request
  * @description
  *
+ * Changes attributes of objects in the selected group.
+ * Parallels F-CHANGE-ATTRIB (ISO 8571-3:1988 §16.2).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[55]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,24 +58,44 @@ export class F_GROUP_CHANGE_ATTRIB_request {
   constructor(
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * New attribute values. Same role as F-CHANGE-ATTRIB (ISO
+     * 8571-3:1988 §16.2 / §13.5).
+     *
      * @public
      * @readonly
      */
     readonly attributes: Change_Attributes,
     /**
      * @summary `error_action`.
+     * @description
+     *
+     * `terminate` or `continue` after a per-object error.
+     * Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly error_action: Error_Action,
     /**
      * @summary `request_Operation_result`.
+     * @description
+     *
+     * Whether the response should carry a success count or
+     * names. Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information on this primitive. ISO 8571-3:1988
+     * §13.10.
+     *
      * @public
      * @readonly
      */

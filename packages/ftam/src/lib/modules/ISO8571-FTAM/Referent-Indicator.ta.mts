@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Referent_Indicator
  * @description
  *
+ * Whether the selected object is a referent (`[APPLICATION 29]`
+ * BOOLEAN). Absent from ISO 8571:1988 Parts 1–4. Used on
+ * F-SELECT-ANOTHER-response.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,12 @@ import {
  * @summary F_GROUP_DELETE_request
  * @description
  *
+ * Deletes the selected group of filestore objects. Parallels
+ * F-DELETE (ISO 8571-3:1988 §15.4).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[47]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +46,22 @@ export class F_GROUP_DELETE_request {
   constructor(
     /**
      * @summary `request_Operation_result`.
+     * @description
+     *
+     * Whether the response should carry a success count or
+     * names. Absent from ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information on this primitive. ISO 8571-3:1988
+     * §13.10.
+     *
      * @public
      * @readonly
      */

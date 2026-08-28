@@ -21,6 +21,9 @@ import {
  * @summary Access_Control_Change_Attribute_actual_values
  * @description
  *
+ * Insert and/or delete access-control elements
+ * (ISO 8571-2:1988 §10.3, §12.16; ISO 8571-4:1988 Figure 11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +35,23 @@ export class Access_Control_Change_Attribute_actual_values {
   constructor(
     /**
      * @summary `insert_values`.
+     * @description
+     *
+     * New elements to insert into the access-control attribute
+     * (ISO 8571-4:1988 Figure 11; ISO 8571-2:1988 §10.3).
+     *
      * @public
      * @readonly
      */
     readonly insert_values?: OPTIONAL<Access_Control_Element[]>,
     /**
      * @summary `delete_values`.
+     * @description
+     *
+     * Existing elements to remove from the access-control
+     * attribute (ISO 8571-4:1988 Figure 11; ISO 8571-2:1988
+     * §10.3).
+     *
      * @public
      * @readonly
      */

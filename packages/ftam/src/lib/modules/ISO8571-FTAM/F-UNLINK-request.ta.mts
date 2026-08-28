@@ -21,6 +21,12 @@ import {
  * @summary F_UNLINK_request
  * @description
  *
+ * Removes a link. Same field pattern as F-DELETE (ISO
+ * 8571-3:1988 §15.4).
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[63]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +40,11 @@ export class F_UNLINK_request {
   constructor(
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information on this primitive. ISO 8571-3:1988
+     * §13.10.
+     *
      * @public
      * @readonly
      */

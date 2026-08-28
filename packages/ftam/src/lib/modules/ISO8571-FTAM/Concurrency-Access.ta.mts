@@ -20,6 +20,12 @@ import {
  * @summary Concurrency_Access
  * @description
  *
+ * One `Concurrency-Key` per action — optional term in an
+ * access-control element. Satisfied if the bit for the
+ * requested lock is true. If omitted from an element,
+ * concurrency-control shall not be present in access allowed
+ * by that element (ISO 8571-2:1988 §12.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,48 +46,81 @@ export class Concurrency_Access {
   constructor(
     /**
      * @summary `read`.
+     * @description
+     *
+     * Concurrency key for file-access action `read`.
+     *
      * @public
      * @readonly
      */
     readonly read: Concurrency_Key,
     /**
      * @summary `insert`.
+     * @description
+     *
+     * Concurrency key for file-access action `insert`.
+     *
      * @public
      * @readonly
      */
     readonly insert: Concurrency_Key,
     /**
      * @summary `replace`.
+     * @description
+     *
+     * Concurrency key for file-access action `replace`.
+     *
      * @public
      * @readonly
      */
     readonly replace: Concurrency_Key,
     /**
      * @summary `extend`.
+     * @description
+     *
+     * Concurrency key for file-access action `extend`.
+     *
      * @public
      * @readonly
      */
     readonly extend: Concurrency_Key,
     /**
      * @summary `erase`.
+     * @description
+     *
+     * Concurrency key for file-access action `erase`.
+     *
      * @public
      * @readonly
      */
     readonly erase: Concurrency_Key,
     /**
      * @summary `read_attribute`.
+     * @description
+     *
+     * Concurrency key for complete-file action `read attribute`.
+     *
      * @public
      * @readonly
      */
     readonly read_attribute: Concurrency_Key,
     /**
      * @summary `change_attribute`.
+     * @description
+     *
+     * Concurrency key for complete-file action `change attribute`.
+     *
      * @public
      * @readonly
      */
     readonly change_attribute: Concurrency_Key,
     /**
      * @summary `delete_Object`.
+     * @description
+     *
+     * Concurrency key for complete-file action `delete file`.
+     * ISO 8571-4:1988 names this `delete-file`.
+     *
      * @public
      * @readonly
      */

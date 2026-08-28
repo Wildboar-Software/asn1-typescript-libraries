@@ -20,6 +20,10 @@ import {
  * @summary Attribute_Value_Assertions
  * @description
  *
+ * Matchers for filestore-object attributes on group select / list.
+ * `[APPLICATION 26] IMPLICIT OR-Set`: disjunction of conjunctions of
+ * per-attribute patterns.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

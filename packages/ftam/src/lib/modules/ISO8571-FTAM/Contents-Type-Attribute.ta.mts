@@ -25,6 +25,17 @@ import {
  * @summary Contents_Type_Attribute
  * @description
  *
+ * Kernel-group scalar: document type (name plus optional ANY
+ * parameter defined by that document type) or
+ * constraint-set-name plus abstract-syntax-name
+ * (ISO 8571-2:1988 §12.3, §14.1; ISO 8571-4:1988 Figure 11).
+ * Set at create; not changeable. `no-value-available` is
+ * forbidden for kernel attributes (ISO 8571-2:1988 §14.1).
+ *
+ * Open for write fails if the proposed contents-type does not
+ * match this attribute. Open for read may use a simplification
+ * or relaxation of document types (ISO 8571-2:1988 §12.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

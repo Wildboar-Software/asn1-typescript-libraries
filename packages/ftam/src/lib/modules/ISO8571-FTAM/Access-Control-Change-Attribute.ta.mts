@@ -21,6 +21,15 @@ import {
  * @summary Access_Control_Change_Attribute
  * @description
  *
+ * Change encoding for the access-control set attribute
+ * (ISO 8571-2:1988 §10.3, §12.16; ISO 8571-4:1988 Figure 11).
+ * Insert and/or delete elements; do not replace the whole
+ * set.
+ *
+ * `no-value-available` means partial support and shall appear
+ * only in response PDUs. Initiators shall not claim partial
+ * support (ISO 8571-2:1988 §9.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

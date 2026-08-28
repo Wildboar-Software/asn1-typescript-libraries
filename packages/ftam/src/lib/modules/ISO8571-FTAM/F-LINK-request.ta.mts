@@ -61,6 +61,12 @@ import {
  * @summary F_LINK_request
  * @description
  *
+ * Creates a link to `target-object`. Field pattern parallels
+ * F-CREATE (ISO 8571-3:1988 §15.3) plus the target pathname.
+ * Absent from ISO 8571:1988 Parts 1–4 (ISO 8571-1:1988 §15.2
+ * left filestore-management operations "for study"). `FSM-PDU`
+ * alternative `[61]`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -82,54 +88,101 @@ export class F_LINK_request {
   constructor(
     /**
      * @summary `initial_attributes`.
+     * @description
+     *
+     * Initial Create-Attributes: kernel, storage, security, and
+     * private groups from ISO 8571-2:1988 §12. Same role
+     * as F-CREATE (ISO 8571-3:1988 §15.3.2.4).
+     *
      * @public
      * @readonly
      */
     readonly initial_attributes: Create_Attributes,
     /**
      * @summary `target_object`.
+     * @description
+     *
+     * Pathname of the object the link refers to. Absent from
+     * ISO 8571:1988 Parts 1–4.
+     *
      * @public
      * @readonly
      */
     readonly target_object: Pathname_Attribute,
     /**
      * @summary `create_password`.
+     * @description
+     *
+     * Password to create in this filestore. ISO 8571-3:1988
+     * §15.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly create_password: OPTIONAL<Password>,
     /**
      * @summary `requested_access`.
+     * @description
+     *
+     * Actions required for this (group) selection. ISO
+     * 8571-3:1988 §13.6.
+     *
      * @public
      * @readonly
      */
     readonly requested_access: Access_Request,
     /**
      * @summary `access_passwords`.
+     * @description
+     *
+     * Passwords for the requested actions. Same role as ISO
+     * 8571-3:1988 §13.7; only if the security group was
+     * negotiated.
+     *
      * @public
      * @readonly
      */
     readonly access_passwords?: OPTIONAL<Access_Passwords>,
     /**
      * @summary `path_access_passwords`.
+     * @description
+     *
+     * Per-path-element passwords. Absent from ISO 8571:1988.
+     * ASN.1 on F-SELECT-request: send only when
+     * limited-filestore-management, object-manipulation, or
+     * group-manipulation is available.
+     *
      * @public
      * @readonly
      */
     readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
     /**
      * @summary `concurrency_control`.
+     * @description
+     *
+     * Locks relative to other users. ISO 8571-3:1988 §13.8.
+     *
      * @public
      * @readonly
      */
     readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * Other ASE information on this primitive. ISO 8571-3:1988
+     * §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `account`.
+     * @description
+     *
+     * Account to charge for the regime. ISO 8571-3:1988 §13.3.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,19 @@ import {
  * @summary Access_Control_Attribute
  * @description
  *
+ * Security-group SET OF `Access-Control-Element`
+ * (ISO 8571-2:1988 §12.16, §14.3; ISO 8571-4:1988 Figure 11).
+ * Access is allowed if **one** condition is fully satisfied,
+ * not the union of several. The initial value at create is not
+ * defined by the standard. Changeable via
+ * `Access-Control-Change-Attribute` `insert-values` /
+ * `delete-values` (set insert and/or delete,
+ * ISO 8571-2:1988 §9.2, §10.3).
+ *
+ * `no-value-available` means partial support and shall appear
+ * only in response PDUs. Initiators shall not claim partial
+ * support (ISO 8571-2:1988 §9.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

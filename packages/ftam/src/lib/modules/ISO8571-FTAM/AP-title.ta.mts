@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AP_title
  * @description
  *
+ * ACSE AP-title component of `AE-title` (ISO 8650).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

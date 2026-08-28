@@ -37,6 +37,11 @@ import {
  * @summary F_DESELECT_response
  * @description
  *
+ * Confirm of F-DESELECT. Always terminates the selection regardless
+ * of `action-result`. EFS: concurrency released except inside a CCR
+ * atomic action. Current account reverts to the FTAM-regime account.
+ * ISO 8571-3:1988 §15.2 Table 16; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,24 +60,43 @@ export class F_DESELECT_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Selection terminates whatever the value. Default `success`.
+     * ISO 8571-3:1988 §15.2.2.1.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `charging`.
+     * @description
+     *
+     * Present iff `account` was on the PDU that established
+     * selection (ASN.1). Charges only against an overriding account
+     * set at selection. ISO 8571-3:1988 §15.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly charging?: OPTIONAL<Charging>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.2.2.3 / §13.10.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * ISO 8571-3:1988 §15.2.2.4 / §13.13.
+     *
      * @public
      * @readonly
      */

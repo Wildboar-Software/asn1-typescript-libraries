@@ -32,6 +32,13 @@ import {
  * @summary F_READ_ATTRIB_response
  * @description
  *
+ * Confirm of F-READ-ATTRIB. Attributes optional; presence
+ * conditional on at least one returnable requested name. Passwords
+ * in access-control are never returned (ASN.1). Other
+ * access-control parts: local choice, not conformance-tested.
+ * Partial support → no-value-available. ISO 8571-3:1988 §16.1
+ * Table 19; ISO 8571-4:1988 Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,18 +59,35 @@ export class F_READ_ATTRIB_response {
   constructor(
     /**
      * @summary `action_result`.
+     * @description
+     *
+     * Default `success`. ISO 8571-3:1988 §16.1.2.1 / §13.2.
+     *
      * @public
      * @readonly
      */
     readonly action_result?: OPTIONAL<Action_Result>,
     /**
      * @summary `attributes`.
+     * @description
+     *
+     * Conditional on at least one requested attribute with a
+     * returnable value. Unrequested names and non-negotiated groups
+     * are omitted. Passwords in access-control are never returned
+     * (ASN.1); other access-control parts are a local choice, not
+     * conformance-tested. Partial support → no-value-available.
+     * ISO 8571-3:1988 §16.1.2.3; ISO 8571-4:1988 F-READ-ATTRIB-response.
+     *
      * @public
      * @readonly
      */
     readonly attributes?: OPTIONAL<Read_Attributes>,
     /**
      * @summary `diagnostic`.
+     * @description
+     *
+     * ISO 8571-3:1988 §16.1.2.4 / §13.13.
+     *
      * @public
      * @readonly
      */

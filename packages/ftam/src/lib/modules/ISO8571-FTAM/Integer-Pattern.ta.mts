@@ -21,6 +21,9 @@ import {
  * @summary Integer_Pattern
  * @description
  *
+ * Matcher for an INTEGER filestore-object attribute (e.g. object
+ * type, object size). Relational bits plus the test integer.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +38,21 @@ export class Integer_Pattern {
   constructor(
     /**
      * @summary `relational_comparision`.
+     * @description
+     *
+     * Whether `no-value-available`, equals, less-than, and
+     * greater-than match.
+     *
      * @public
      * @readonly
      */
     readonly relational_comparision: Relational_Comparision,
     /**
      * @summary `integer_value`.
+     * @description
+     *
+     * Test value for the comparison.
+     *
      * @public
      * @readonly
      */

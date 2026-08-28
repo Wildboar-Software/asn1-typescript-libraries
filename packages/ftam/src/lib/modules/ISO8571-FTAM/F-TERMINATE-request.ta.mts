@@ -21,6 +21,11 @@ import {
  * @summary F_TERMINATE_request
  * @description
  *
+ * Orderly FTAM-regime release. Initiator only, when no file is
+ * selected and no actions are in progress. Mapped to A-RELEASE
+ * (ISO 8571-4:1988 Table 2). ISO 8571-3:1988 §14.2, Table 12;
+ * protocol ISO 8571-4:1988 §8.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,11 @@ export class F_TERMINATE_request {
   constructor(
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * `EXTERNAL` carrying other ASE information bound to this
+     * primitive. ISO 8571-3:1988 §13.10, §14.2.2.1.
+     *
      * @public
      * @readonly
      */

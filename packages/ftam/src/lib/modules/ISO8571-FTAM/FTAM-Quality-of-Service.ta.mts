@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FTAM_Quality_of_Service
  * @description
  *
+ * Error susceptibility of the EFS user; used to request
+ * recovery FUs indirectly. `no-recovery` (0): none;
+ * `class-1-recovery` (1): damage to the data-transfer regime;
+ * `class-2-recovery` (2): damage to open or data-transfer;
+ * `class-3-recovery` (3): damage to select/open/data-transfer
+ * or loss of association. ISO 8571-3:1988 §10.2, §14.1.2.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +37,10 @@ export type FTAM_Quality_of_Service = INTEGER;
 
 /**
  * @summary FTAM_Quality_of_Service_no_recovery
+ * @description
+ *
+ * Not susceptible to errors; no error recovery.
+ *
  * @constant
  * @type {number}
  */
@@ -37,7 +48,7 @@ export const FTAM_Quality_of_Service_no_recovery: FTAM_Quality_of_Service = 0; /
 
 
 /**
- * @summary FTAM_Quality_of_Service_no_recovery
+ * @summary no_recovery
  * @constant
  * @type {number}
  */
@@ -46,6 +57,10 @@ export const no_recovery: FTAM_Quality_of_Service = FTAM_Quality_of_Service_no_r
 
 /**
  * @summary FTAM_Quality_of_Service_class_1_recovery
+ * @description
+ *
+ * Susceptible to errors that damage the data-transfer regime.
+ *
  * @constant
  * @type {number}
  */
@@ -53,7 +68,7 @@ export const FTAM_Quality_of_Service_class_1_recovery: FTAM_Quality_of_Service =
 
 
 /**
- * @summary FTAM_Quality_of_Service_class_1_recovery
+ * @summary class_1_recovery
  * @constant
  * @type {number}
  */
@@ -62,6 +77,11 @@ export const class_1_recovery: FTAM_Quality_of_Service = FTAM_Quality_of_Service
 
 /**
  * @summary FTAM_Quality_of_Service_class_2_recovery
+ * @description
+ *
+ * Susceptible to errors that damage the open or data-transfer
+ * regime.
+ *
  * @constant
  * @type {number}
  */
@@ -69,7 +89,7 @@ export const FTAM_Quality_of_Service_class_2_recovery: FTAM_Quality_of_Service =
 
 
 /**
- * @summary FTAM_Quality_of_Service_class_2_recovery
+ * @summary class_2_recovery
  * @constant
  * @type {number}
  */
@@ -78,6 +98,11 @@ export const class_2_recovery: FTAM_Quality_of_Service = FTAM_Quality_of_Service
 
 /**
  * @summary FTAM_Quality_of_Service_class_3_recovery
+ * @description
+ *
+ * Susceptible to errors that damage select/open/data-transfer
+ * or that lose the association.
+ *
  * @constant
  * @type {number}
  */
@@ -85,7 +110,7 @@ export const FTAM_Quality_of_Service_class_3_recovery: FTAM_Quality_of_Service =
 
 
 /**
- * @summary FTAM_Quality_of_Service_class_3_recovery
+ * @summary class_3_recovery
  * @constant
  * @type {number}
  */

@@ -1,3 +1,46 @@
+/**
+ * ASN.1 data structures for File Transfer, Access and Management
+ * (FTAM) protocol control information, as defined in ISO 8571-4:1988
+ * (file protocol specification). Service semantics are ISO 8571-3:1988;
+ * the virtual filestore and file attributes are ISO 8571-2:1988;
+ * the general model is ISO 8571-1:1988.
+ *
+ * The module `ISO8571-FTAM` is the FTAM-PCI abstract syntax
+ * `{ iso standard 8571 abstract-syntax(2) ftam-pci(1) }`, object
+ * descriptor `"FTAM PCI"` (ISO 8571-4:1988 §20.4). The 1988 PDU
+ * CHOICE is `FTAM-Regime-PDU | File-PDU | Bulk-Data-PDU`. This
+ * encoding also includes later filestore-management types (`FSM-PDU`
+ * and related attributes) that are **not** in ISO 8571:1988 Parts 1–4
+ * as provided.
+ *
+ * FPDUs travel as P-DATA in the FTAM-PCI context, or as user
+ * information on A-ASSOCIATE / A-RELEASE / A-ABORT
+ * (ISO 8571-4:1988 Tables 2–3). There is no F-DATA FPDU: file
+ * contents use a different presentation context
+ * (ISO 8571-4:1988 Figure 9).
+ *
+ * @example
+ * ```typescript
+ * const init = new F_INITIALIZE_request(
+ *     undefined, // protocol-version defaults to {version-1}
+ *     undefined, // implementation-information
+ *     undefined, // presentation-context-management
+ *     undefined, // service-class defaults to {transfer-class}
+ *     functional_units,
+ *     undefined, // attribute-groups
+ *     undefined, // shared-ASE-information
+ *     ftam_qos,
+ *     contents_type_list,
+ *     initiator_identity,
+ *     account,
+ *     filestore_password,
+ *     undefined, // checkpoint-window defaults to 1
+ * );
+ * const bytes = _encode_F_INITIALIZE_request(init, BER).toBytes();
+ * ```
+ *
+ * @module
+ */
 export * from "./lib/modules/ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Access-Context-access-context.ta.mjs";
 export * from "./lib/modules/ISO8571-FTAM/Access-Context.ta.mjs";

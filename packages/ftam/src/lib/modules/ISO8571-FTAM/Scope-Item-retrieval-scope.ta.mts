@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Scope_Item_retrieval_scope
  * @description
  *
+ * How far listing/selection walks from `root-directory`: `child`(0)
+ * or `all`(1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,10 @@ export type Scope_Item_retrieval_scope = INTEGER;
 
 /**
  * @summary Scope_Item_retrieval_scope_child
+ * @description
+ *
+ * Restrict retrieval to children of `root-directory`.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +51,10 @@ export const child: Scope_Item_retrieval_scope = Scope_Item_retrieval_scope_chil
 
 /**
  * @summary Scope_Item_retrieval_scope_all
+ * @description
+ *
+ * Retrieve all objects under `root-directory`.
+ *
  * @constant
  * @type {number}
  */

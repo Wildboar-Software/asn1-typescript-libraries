@@ -20,6 +20,9 @@ import {
  * @summary OR_Set
  * @description
  *
+ * Disjunction of `AND-Set`s. A filestore object matches if any
+ * contained `AND-Set` matches (typical AVA style).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

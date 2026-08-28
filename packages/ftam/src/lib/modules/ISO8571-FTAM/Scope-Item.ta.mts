@@ -26,6 +26,9 @@ import {
  * @summary Scope_Item
  * @description
  *
+ * One retrieval bound: optional starting directory and how far
+ * listing/selection walks from it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +40,20 @@ export class Scope_Item {
   constructor(
     /**
      * @summary `root_directory`.
+     * @description
+     *
+     * Starting pathname for this bound. Optional.
+     *
      * @public
      * @readonly
      */
     readonly root_directory: OPTIONAL<Pathname_Attribute>,
     /**
      * @summary `retrieval_scope`.
+     * @description
+     *
+     * How far to walk: `child` (0) or `all` (1).
+     *
      * @public
      * @readonly
      */

@@ -20,6 +20,10 @@ import {
  * @summary Attribute_Extensions_Pattern
  * @description
  *
+ * Matcher for `Attribute-Extensions`: sequence of per-set identifier
+ * plus per-attribute patterns (`TYPE-IDENTIFIER` from
+ * `Extension-attribute-Patterns`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,9 @@ import {
  * @summary Attribute_Extensions
  * @description
  *
+ * Optional extra attributes keyed by object identifier, grouped into
+ * `Attribute-Extension-Set`s.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

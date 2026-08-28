@@ -25,6 +25,9 @@ import {
  * @summary Attribute_Extensions_Pattern_Item
  * @description
  *
+ * Patterns for one extension set: set identifier plus one pattern
+ * per extension attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +39,20 @@ export class Attribute_Extensions_Pattern_Item {
   constructor(
     /**
      * @summary `extension_set_identifier`.
+     * @description
+     *
+     * OID of the extension set whose attributes are matched.
+     *
      * @public
      * @readonly
      */
     readonly extension_set_identifier: Extension_Set_Identifier,
     /**
      * @summary `extension_set_attribute_Patterns`.
+     * @description
+     *
+     * Per-attribute patterns in this set.
+     *
      * @public
      * @readonly
      */

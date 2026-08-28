@@ -25,6 +25,9 @@ import {
  * @summary String_Pattern
  * @description
  *
+ * Matcher for a GraphicString filestore-object attribute. Equality
+ * bits plus a sequence of substring / any / character-count pieces.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,12 +48,20 @@ export class String_Pattern {
   constructor(
     /**
      * @summary `equality_comparision`.
+     * @description
+     *
+     * Whether `no-value-available` and equals match.
+     *
      * @public
      * @readonly
      */
     readonly equality_comparision: Equality_Comparision,
     /**
      * @summary `string_value`.
+     * @description
+     *
+     * Ordered pieces matched against the attribute string.
+     *
      * @public
      * @readonly
      */

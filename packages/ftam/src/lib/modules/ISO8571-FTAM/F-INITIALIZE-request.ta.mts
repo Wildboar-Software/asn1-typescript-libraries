@@ -75,6 +75,11 @@ import {
  * @summary F_INITIALIZE_request
  * @description
  *
+ * Establishes the FTAM regime (first phase of any file activity).
+ * Issued by the initiator; not nested in an existing regime.
+ * Mapped to A-ASSOCIATE (ISO 8571-4:1988 Table 2). ISO
+ * 8571-3:1988 §14.1, Table 11; protocol ISO 8571-4:1988 §8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -101,78 +106,161 @@ export class F_INITIALIZE_request {
   constructor(
     /**
      * @summary `protocol_Version`.
+     * @description
+     *
+     * Bit string of versions this entity supports; bit 0 is
+     * `version-1`. Initiator sets only version-1; trailing unused
+     * bits are omitted (ISO 8571-4:1988 §8.1.1). Default
+     * `{version-1}`.
+     *
      * @public
      * @readonly
      */
     readonly protocol_Version: OPTIONAL<Protocol_Version>,
     /**
      * @summary `implementation_information`.
+     * @description
+     *
+     * Implementor convenience; not used for negotiation and not
+     * subject to conformance test. ISO 8571-4:1988 lines 50–52.
+     *
      * @public
      * @readonly
      */
     readonly implementation_information: OPTIONAL<Implementation_Information>,
     /**
      * @summary `presentation_tontext_management`.
+     * @description
+     *
+     * Whether Presentation context-management FU is used during
+     * open/recover. Responder may refuse even if available, but
+     * must not indicate use if the initiator did not. ASN.1 name
+     * `presentation-tontext-management` is a typo for
+     * `presentation-context-management`. ISO 8571-3:1988
+     * §14.1.2.9.
+     *
      * @public
      * @readonly
      */
     readonly presentation_tontext_management: OPTIONAL<BOOLEAN>,
     /**
      * @summary `service_class`.
+     * @description
+     *
+     * Service class(es) the initiator proposes. Default
+     * `{transfer-class}`. Only combinations allowed by ISO 8571-3.
+     * ISO 8571-3:1988 §8.2, §10.1, §14.1.2.11.
+     *
      * @public
      * @readonly
      */
     readonly service_class: OPTIONAL<Service_Class>,
     /**
      * @summary `functional_units`.
+     * @description
+     *
+     * Optional FUs excluding Kernel: initiator capability.
+     * Recovery/restart only in IFS; EFS requests them via FTAM
+     * QoS. ISO 8571-3:1988 §14.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly functional_units: Functional_Units,
     /**
      * @summary `attribute_groups`.
+     * @description
+     *
+     * Optional attribute groups (`storage`, `security`, `private`).
+     * Kernel group is always present and is not negotiated.
+     * Default `{}`. ISO 8571-3:1988 §14.1.2.13; ISO 8571-2:1988
+     * §14.
+     *
      * @public
      * @readonly
      */
     readonly attribute_groups: OPTIONAL<Attribute_Groups>,
     /**
      * @summary `shared_ASE_information`.
+     * @description
+     *
+     * `EXTERNAL` carrying other ASE information (e.g. CCR) bound
+     * to this primitive. Meaning is application-context-defined.
+     * ISO 8571-3:1988 §13.10, §14.1.2.14.
+     *
      * @public
      * @readonly
      */
     readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
     /**
      * @summary `ftam_quality_of_Service`.
+     * @description
+     *
+     * Error susceptibility: none; data-transfer; open/data-transfer;
+     * select/open/data-transfer or loss of association. ISO
+     * 8571-3:1988 §10.2, §14.1.2.15.
+     *
      * @public
      * @readonly
      */
     readonly ftam_quality_of_Service: FTAM_Quality_of_Service,
     /**
      * @summary `contents_type_list`.
+     * @description
+     *
+     * Document-type and/or abstract-syntax names for P-CONNECT
+     * when PCM FU is not used. Mandatory in T/TM/A classes if PCM
+     * is not negotiated. ISO 8571-3:1988 §14.1.2.17.
+     *
      * @public
      * @readonly
      */
     readonly contents_type_list?: OPTIONAL<Contents_Type_List>,
     /**
      * @summary `initiator_identity`.
+     * @description
+     *
+     * Calling user; sets current initiator identity. Failure if
+     * the value or its omission is unacceptable. ISO 8571-3:1988
+     * §14.1.2.18.
+     *
      * @public
      * @readonly
      */
     readonly initiator_identity?: OPTIONAL<User_Identity>,
     /**
      * @summary `account`.
+     * @description
+     *
+     * Account charged for this FTAM regime (nested select may
+     * override). Sets current account activity attribute. ISO
+     * 8571-3:1988 §13.3, §14.1.2.19.
+     *
      * @public
      * @readonly
      */
     readonly account?: OPTIONAL<Account>,
     /**
      * @summary `filestore_password`.
+     * @description
+     *
+     * Authenticates the initiator to the responder. Failure if
+     * the value or its omission is unacceptable. ISO 8571-3:1988
+     * §14.1.2.20.
+     *
      * @public
      * @readonly
      */
     readonly filestore_password?: OPTIONAL<Password>,
     /**
      * @summary `checkpoint_window`.
+     * @description
+     *
+     * Max unacked checkpoints per direction when this entity is
+     * sender. IFS only if recovery/restart selected; each entity
+     * states its send-window independently (no negotiation).
+     * Default 1. ISO 8571-3:1988 §14.1.2.22.
+     *
      * @public
      * @readonly
      */
