@@ -20,6 +20,11 @@ import {
  * @summary UnexpandedEntityReference
  * @description
  *
+ * Unexpanded entity reference information item. [declaration
+ * base URI] is unsupported; [parent] is the element that lists
+ * this item in [children]. ITU-T Rec. X.891 (05/2005)
+ * [§7.6](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,18 +40,26 @@ export class UnexpandedEntityReference {
   constructor(
     /**
      * @summary `name`.
+     * @description [name]; OTHER NCNAME category. ITU-T Rec.
+     * X.891 (05/2005) §7.6.4.
      * @public
      * @readonly
      */
     readonly name: IdentifyingStringOrIndex,
     /**
      * @summary `system_identifier`.
+     * @description [system identifier]; OTHER URI category.
+     * Absent means the property has no value. ITU-T Rec. X.891
+     * (05/2005) §7.6.5.
      * @public
      * @readonly
      */
     readonly system_identifier?: OPTIONAL<IdentifyingStringOrIndex>,
     /**
      * @summary `public_identifier`.
+     * @description [public identifier]; OTHER URI category.
+     * Absent means the property has no value. ITU-T Rec. X.891
+     * (05/2005) §7.6.6.
      * @public
      * @readonly
      */

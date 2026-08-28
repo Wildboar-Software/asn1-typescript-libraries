@@ -19,6 +19,12 @@ import {
  * @summary URI
  * @description
  *
+ * URI as specified in IETF RFC 2396, stored as a non-empty
+ * UTF-8 octet string. Used for additional-data ids, external
+ * vocabularies, and encoding-algorithm identifiers. ITU-T Rec.
+ * X.891 (05/2005)
+ * [§7.2.3](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

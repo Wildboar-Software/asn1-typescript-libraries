@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary NonEmptyOctetString
  * @description
  *
+ * Octet string of length 1..2³². In `initial-vocabulary` string
+ * components, this is the UTF-8 encoding of a character string.
+ * ITU-T Rec. X.891 (05/2005)
+ * [§7.2.1](https://www.itu.int/rec/T-REC-X.891-200505-I),
+ * §7.2.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

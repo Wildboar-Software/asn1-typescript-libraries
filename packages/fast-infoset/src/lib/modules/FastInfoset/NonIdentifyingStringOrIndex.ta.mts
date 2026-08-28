@@ -20,6 +20,18 @@ import {
  * @summary NonIdentifyingStringOrIndex
  * @description
  *
+ * Non-identifying character string (attribute values, character
+ * chunks, PI/comment content, document version — category is
+ * given at each use): a literal `EncodedCharacterString` with
+ * an `add-to-table` flag, or an index 0..2²⁰. Index 0 is the
+ * empty string (always used for zero-length; empty strings are
+ * never table entries). Adding a literal to the table is a
+ * creator option, unlike identifying strings. Prefer
+ * `string-index` when an identical entry exists. A processor
+ * that cannot add a required entry shall stop with an error.
+ * ITU-T Rec. X.891 (05/2005)
+ * [§7.14](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

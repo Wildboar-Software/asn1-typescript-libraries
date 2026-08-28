@@ -20,6 +20,16 @@ import {
  * @summary QualifiedNameOrIndex_literal_qualified_name
  * @description
  *
+ * Literal alternative of `QualifiedNameOrIndex`. Prefix,
+ * namespace name, and local name use the PREFIX, NAMESPACE
+ * NAME, and LOCAL NAME string tables. If `namespace-name` is
+ * absent, `prefix` shall also be absent. Processing the
+ * identifying strings may add them to those tables and then
+ * add a name surrogate to the applicable name table. ITU-T Rec.
+ * X.891 (05/2005)
+ * [§7.16.6](https://www.itu.int/rec/T-REC-X.891-200505-I)–
+ * §7.16.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,18 +41,27 @@ export class QualifiedNameOrIndex_literal_qualified_name {
   constructor(
     /**
      * @summary `prefix`.
+     * @description Prefix of the qualified name (PREFIX
+     * category). Absent if the name is unprefixed. Shall be
+     * absent if `namespace-name` is absent. ITU-T Rec. X.891
+     * (05/2005) §7.16.6, §7.16.7.3 a.
      * @public
      * @readonly
      */
     readonly prefix: OPTIONAL<IdentifyingStringOrIndex>,
     /**
      * @summary `namespace_name`.
+     * @description Namespace name (NAMESPACE NAME category).
+     * Absent if the name has no namespace. ITU-T Rec. X.891
+     * (05/2005) §7.16.6, §7.16.7.3 b.
      * @public
      * @readonly
      */
     readonly namespace_name: OPTIONAL<IdentifyingStringOrIndex>,
     /**
      * @summary `local_name`.
+     * @description Local name (LOCAL NAME category). ITU-T Rec.
+     * X.891 (05/2005) §7.16.7.3 c.
      * @public
      * @readonly
      */

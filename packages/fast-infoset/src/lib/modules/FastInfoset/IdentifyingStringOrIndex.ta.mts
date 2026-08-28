@@ -20,6 +20,17 @@ import {
  * @summary IdentifyingStringOrIndex
  * @description
  *
+ * Identifying character string (prefix, namespace name, local
+ * name, NCName, or URI — category is given at each use):
+ * either UTF-8 octets, or an index 1..2²⁰ into the applicable
+ * string table. Unlike non-identifying strings, encoding is
+ * always UTF-8 and a literal is always added to the table
+ * (unless it already has 2²⁰ entries). Prefer `string-index`
+ * when an identical entry already exists. If a processor
+ * cannot add a required entry, it shall stop with an error.
+ * ITU-T Rec. X.891 (05/2005)
+ * [§7.13](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

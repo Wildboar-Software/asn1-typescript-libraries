@@ -15,6 +15,16 @@ import {
  * @summary finf_doc_opt_decl
  * @description
  *
+ * Identifies a fast infoset document that may begin with an
+ * XML declaration (`encoding='finf'`, optional version and
+ * standalone matching the document information item). After
+ * that declaration (if present) come the 16 bits
+ * `1110000000000000`, a 16-bit version (this edition is 1),
+ * one padding bit, then the ECN encoding of `Document`.
+ * ITU-T Rec. X.891 (05/2005)
+ * [§12.3](https://www.itu.int/rec/T-REC-X.891-200505-I)–
+ * §12.10, Annex E.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

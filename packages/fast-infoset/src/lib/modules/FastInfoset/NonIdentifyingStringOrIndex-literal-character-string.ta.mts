@@ -20,6 +20,14 @@ import {
  * @summary NonIdentifyingStringOrIndex_literal_character_string
  * @description
  *
+ * Literal alternative of `NonIdentifyingStringOrIndex`: the
+ * encoded string plus whether the processor shall append it to
+ * the applicable string table. `add-to-table` shall not be
+ * `TRUE` if that table already has 2²⁰ entries. ITU-T Rec.
+ * X.891 (05/2005)
+ * [§7.14.7](https://www.itu.int/rec/T-REC-X.891-200505-I)–
+ * §7.14.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +39,19 @@ export class NonIdentifyingStringOrIndex_literal_character_string {
   constructor(
     /**
      * @summary `add_to_table`.
+     * @description `TRUE` if the processor shall add
+     * `character-string` to the applicable string table;
+     * `FALSE` if this occurrence is not tabled. ITU-T Rec.
+     * X.891 (05/2005) §7.14.7 b, §7.14.8 b–c.
      * @public
      * @readonly
      */
     readonly add_to_table: BOOLEAN,
     /**
      * @summary `character_string`.
+     * @description The character string in the encoding named
+     * by `encoding-format`. ITU-T Rec. X.891 (05/2005) §7.14.4,
+     * §7.17.
      * @public
      * @readonly
      */

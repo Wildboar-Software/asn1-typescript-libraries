@@ -20,6 +20,19 @@ import {
  * @summary NamespaceAttribute
  * @description
  *
+ * Namespace declaration as a member of [namespace attributes].
+ * Distinct from `Attribute` for encoding. The XML Infoset
+ * [namespace name] of the attribute is always
+ * `http://www.w3.org/2000/xmlns/` and is not stored.
+ *
+ * Default declaration (`xmlns="..."`): `prefix` absent, [local
+ * name] is `"xmlns"`. Prefixed (`xmlns:p="..."`): `prefix` is
+ * [local name] of the attribute (the declared prefix). In both
+ * cases [normalized value] is the namespace name; empty
+ * normalized value means `namespace-name` is absent. ITU-T Rec.
+ * X.891 (05/2005)
+ * [§7.12](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +47,19 @@ export class NamespaceAttribute {
   constructor(
     /**
      * @summary `prefix`.
+     * @description Absent for a default namespace declaration;
+     * otherwise [local name] of the `xmlns:` attribute (PREFIX
+     * category). ITU-T Rec. X.891 (05/2005) §7.12.5.
      * @public
      * @readonly
      */
     readonly prefix?: OPTIONAL<IdentifyingStringOrIndex>,
     /**
      * @summary `namespace_name`.
+     * @description [normalized value] of the declaration
+     * (NAMESPACE NAME category). Absent if that value is empty
+     * (undeclare the default namespace). ITU-T Rec. X.891
+     * (05/2005) §7.12.6.
      * @public
      * @readonly
      */

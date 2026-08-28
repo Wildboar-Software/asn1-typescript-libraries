@@ -34,6 +34,15 @@ import {
  * @summary Document_children_Item
  * @description
  *
+ * One item of `Document.children` ([children] of the document
+ * information item). Exactly one item in the sequence shall be
+ * `element` (that item is [document element]); at most one
+ * shall be `document-type-declaration`; every other item is
+ * `processing-instruction` or `comment`. ITU-T Rec. X.891
+ * (05/2005)
+ * [§7.2.29](https://www.itu.int/rec/T-REC-X.891-200505-I)–
+ * §7.2.30.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

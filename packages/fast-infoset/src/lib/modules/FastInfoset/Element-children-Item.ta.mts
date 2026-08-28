@@ -39,6 +39,12 @@ import {
  * @summary Element_children_Item
  * @description
  *
+ * One item of `Element.children`. Adjacent character
+ * information items may be a single `character-chunk` or
+ * several consecutive chunks (prefer larger chunks). ITU-T Rec.
+ * X.891 (05/2005)
+ * [§7.3.7](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

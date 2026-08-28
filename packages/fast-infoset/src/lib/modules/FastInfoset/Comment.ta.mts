@@ -19,6 +19,11 @@ import {
  * @summary Comment
  * @description
  *
+ * Comment information item. [parent] is the document or
+ * element that lists this item in [children]. ITU-T Rec. X.891
+ * (05/2005)
+ * [§7.8](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +36,8 @@ export class Comment {
   constructor(
     /**
      * @summary `content`.
+     * @description [content]; OTHER STRING category. At most
+     * 2³² characters. ITU-T Rec. X.891 (05/2005) §7.8.4–§7.8.5.
      * @public
      * @readonly
      */

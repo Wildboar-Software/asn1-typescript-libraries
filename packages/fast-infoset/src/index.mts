@@ -1,3 +1,24 @@
+/**
+ * Fast Infoset ASN.1 types from ITU-T Rec. X.891 (05/2005) |
+ * ISO/IEC 24824-1:2005: a binary representation of a W3C XML
+ * Information Set. The root type is `Document`. Vocabulary
+ * tables (clauses 6 and 8) let typically-small integers replace
+ * repeated strings and qualified names. Restricted alphabets
+ * (clause 9) and encoding algorithms (clause 10) compact
+ * numeric, date, Base64, IEEE 754, UUID, and CDATA content.
+ *
+ * A fast infoset document (clause 12) is an optional XML
+ * declaration with `encoding='finf'`, the 16 bits
+ * `1110000000000000`, a 16-bit version (this edition is 1),
+ * one padding bit, then the ECN encoding of `Document`
+ * (Annex A.2). MIME type `application/fastinfoset` (Annex B).
+ * The generated codecs in this package use BER.
+ *
+ * ITU-T Rec. X.891 (05/2005)
+ * <https://www.itu.int/rec/T-REC-X.891-200505-I>.
+ *
+ * @module
+ */
 export * from "./lib/modules/FastInfoset/Attribute.ta.mjs";
 export * from "./lib/modules/FastInfoset/CharacterChunk.ta.mjs";
 export * from "./lib/modules/FastInfoset/Comment.ta.mjs";

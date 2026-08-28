@@ -15,6 +15,14 @@ import {
  * @summary one_meg
  * @description
  *
+ * 2²⁰. Upper bound on string-table and name-table indexes
+ * (and on the number of additional-data items and most
+ * initial-vocabulary sequences). Identifying indexes are
+ * 1..`one-meg`; non-identifying indexes are 0..`one-meg`
+ * (0 = empty string). ITU-T Rec. X.891 (05/2005)
+ * [§7.2.1](https://www.itu.int/rec/T-REC-X.891-200505-I),
+ * §7.2.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

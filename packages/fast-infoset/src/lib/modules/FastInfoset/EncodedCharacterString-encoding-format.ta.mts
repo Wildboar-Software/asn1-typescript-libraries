@@ -17,6 +17,21 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EncodedCharacterString_encoding_format
  * @description
  *
+ * Encoding used for `EncodedCharacterString.octets`. `utf-8`
+ * is UTF-8; `utf-16` is UTF-16BE (MSB first).
+ * `restricted-alphabet` is an index 1..256 into the restricted
+ * alphabet table (built-in: 1 = numeric `0-9-+.e `, 2 =
+ * date-and-time `0-9-:TZ `; 3–15 reserved). Each character
+ * becomes a bit-field sized from the alphabet length; all-ones
+ * is end-of-string, so a power-of-two alphabet uses one extra
+ * bit; leftover bits in the last octet are `1`.
+ * `encoding-algorithm` is an index 1..256 into the encoding
+ * algorithm table (built-in 1–10: hex, base64, short, int,
+ * long, boolean, float, double, uuid, cdata; 11–31 reserved).
+ * ITU-T Rec. X.891 (05/2005)
+ * [§7.17.4](https://www.itu.int/rec/T-REC-X.891-200505-I)–
+ * §7.17.7, clauses 9–10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

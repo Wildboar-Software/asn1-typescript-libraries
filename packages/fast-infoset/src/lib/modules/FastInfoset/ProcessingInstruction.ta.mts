@@ -24,6 +24,13 @@ import {
  * @summary ProcessingInstruction
  * @description
  *
+ * Processing instruction information item. [notation] is
+ * omitted (recoverable from [target] plus the document's
+ * [notations] in a restricted infoset); [parent] is the
+ * document, element, or DTD that lists this item in
+ * [children]. ITU-T Rec. X.891 (05/2005)
+ * [§7.5](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +45,16 @@ export class ProcessingInstruction {
   constructor(
     /**
      * @summary `target`.
+     * @description [target]; OTHER NCNAME category. ITU-T Rec.
+     * X.891 (05/2005) §7.5.4.
      * @public
      * @readonly
      */
     readonly target: IdentifyingStringOrIndex,
     /**
      * @summary `content`.
+     * @description [content]; OTHER STRING category. At most
+     * 2³² characters. ITU-T Rec. X.891 (05/2005) §7.5.5–§7.5.6.
      * @public
      * @readonly
      */

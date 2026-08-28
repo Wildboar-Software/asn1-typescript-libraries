@@ -24,6 +24,14 @@ import {
  * @summary EncodedCharacterString
  * @description
  *
+ * Reversible mapping of a character string to octets. UTF-8
+ * and UTF-16BE apply to any string; a restricted alphabet
+ * applies only if every character is in that alphabet; an
+ * encoding algorithm applies only to strings matching that
+ * algorithm.
+ * ITU-T Rec. X.891 (05/2005)
+ * [§7.17](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +50,19 @@ export class EncodedCharacterString {
   constructor(
     /**
      * @summary `encoding_format`.
+     * @description How `octets` maps to characters: UTF-8,
+     * UTF-16BE, a restricted-alphabet index, or an encoding-
+     * algorithm index. ITU-T Rec. X.891 (05/2005) §7.17.2–
+     * §7.17.7.
      * @public
      * @readonly
      */
     readonly encoding_format: EncodedCharacterString_encoding_format,
     /**
      * @summary `octets`.
+     * @description Encoding of the character string as
+     * specified by `encoding-format`. ITU-T Rec. X.891
+     * (05/2005) §7.17.3.
      * @public
      * @readonly
      */

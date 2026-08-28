@@ -19,6 +19,14 @@ import {
  * @summary CharacterChunk
  * @description
  *
+ * One or more adjacent character information items among an
+ * element's [children], not a single character. The chunk
+ * shall not be empty. [element content whitespace] is omitted;
+ * [parent] is the element that lists this chunk in [children].
+ * Length at most 2³² characters; longer element content uses
+ * multiple chunks. ITU-T Rec. X.891 (05/2005)
+ * [§7.7](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +39,9 @@ export class CharacterChunk {
   constructor(
     /**
      * @summary `character_codes`.
+     * @description Concatenated [character code] values of the
+     * chunk; CONTENT CHARACTER CHUNK category. ITU-T Rec.
+     * X.891 (05/2005) §7.7.5–§7.7.6.
      * @public
      * @readonly
      */

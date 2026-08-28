@@ -35,6 +35,15 @@ import {
  * @summary Element
  * @description
  *
+ * Element information item. [in-scope namespaces] is omitted
+ * (recoverable from this element's and ancestors' namespace
+ * attributes in a restricted infoset); [base URI] is
+ * unsupported; [parent] is the document or element that lists
+ * this item in [children]. Adjacent character children may be
+ * grouped into one or more `CharacterChunk`s; larger chunks
+ * produce more compact encodings. ITU-T Rec. X.891 (05/2005)
+ * [§7.3](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,24 +66,35 @@ export class Element {
   constructor(
     /**
      * @summary `namespace_attributes`.
+     * @description [namespace attributes]. Sequence-of rather
+     * than set-of. Typed as `NamespaceAttribute`, not
+     * `Attribute`. ITU-T Rec. X.891 (05/2005) §7.3.4.
      * @public
      * @readonly
      */
     readonly namespace_attributes: OPTIONAL<NamespaceAttribute[]>,
     /**
      * @summary `qualified_name`.
+     * @description [prefix], [namespace name], and [local
+     * name]; ELEMENT NAME category. ITU-T Rec. X.891 (05/2005)
+     * §7.3.5.
      * @public
      * @readonly
      */
     readonly qualified_name: QualifiedNameOrIndex,
     /**
      * @summary `attributes`.
+     * @description [attributes] (non-namespace). Sequence-of
+     * rather than set-of. ITU-T Rec. X.891 (05/2005) §7.3.6.
      * @public
      * @readonly
      */
     readonly attributes: OPTIONAL<Attribute[]>,
     /**
      * @summary `children`.
+     * @description [children]. Adjacent character information
+     * items may be one `character-chunk` or several. ITU-T Rec.
+     * X.891 (05/2005) §7.3.7.
      * @public
      * @readonly
      */

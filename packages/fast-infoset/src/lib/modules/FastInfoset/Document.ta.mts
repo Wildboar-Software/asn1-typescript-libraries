@@ -51,6 +51,23 @@ import {
  * @summary Document
  * @description
  *
+ * Root type of a fast infoset document: the W3C XML Information
+ * Set document information item, plus optional vocabulary seed
+ * and additional processing data. Every other information item
+ * is a property of this item or a descendant, so each `Document`
+ * is a complete XML infoset. A `Document` that does not
+ * reference an external vocabulary also defines a final
+ * vocabulary usable as another document's external vocabulary.
+ *
+ * [document element] is the one `element` child; [base URI]
+ * is unsupported; [all declarations processed] is assumed
+ * `true`. Fast infoset encoding is ECN (clause 12, Annex A.2);
+ * these codecs use BER. MIME type `application/fastinfoset`.
+ *
+ * ITU-T Rec. X.891 (05/2005)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.891-200505-I),
+ * clause 12, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -109,6 +126,12 @@ export class Document {
   constructor(
     /**
      * @summary `additional_data`.
+     * @description Optional extra processing data (for example
+     * indexes for random access). A processor may ignore any
+     * `additional-datum` whose URI it does not recognize;
+     * ignoring all still yields an equivalent XML infoset.
+     * Duplicate URIs are allowed. At most 2²⁰ items.
+     * ITU-T Rec. X.891 (05/2005) §7.2.7–§7.2.10.
      * @public
      * @readonly
      */
@@ -117,42 +140,69 @@ export class Document {
     >,
     /**
      * @summary `initial_vocabulary`.
+     * @description Seeds the restricted-alphabet, encoding-
+     * algorithm, string, and name tables. If absent, only
+     * built-in entries apply. If present, at least one nested
+     * component shall be present. ITU-T Rec. X.891 (05/2005)
+     * §7.2.11–§7.2.23.
      * @public
      * @readonly
      */
     readonly initial_vocabulary: OPTIONAL<Document_initial_vocabulary>,
     /**
      * @summary `notations`.
+     * @description [notations] of the document information
+     * item. Sequence-of rather than set-of so table indexes
+     * are assigned in a defined order. ITU-T Rec. X.891
+     * (05/2005) §7.2.24.
      * @public
      * @readonly
      */
     readonly notations: OPTIONAL<Notation[]>,
     /**
      * @summary `unparsed_entities`.
+     * @description [unparsed entities] of the document
+     * information item. Sequence-of rather than set-of so
+     * table indexes are assigned in a defined order.
+     * ITU-T Rec. X.891 (05/2005) §7.2.25.
      * @public
      * @readonly
      */
     readonly unparsed_entities: OPTIONAL<UnparsedEntity[]>,
     /**
      * @summary `character_encoding_scheme`.
+     * @description [character encoding scheme], UTF-8 encoded.
+     * Absent means `"UTF-8"`. Lets XML round-trip preserve the
+     * encoding declaration. ITU-T Rec. X.891 (05/2005) §7.2.26.
      * @public
      * @readonly
      */
     readonly character_encoding_scheme: OPTIONAL<NonEmptyOctetString>,
     /**
      * @summary `standalone`.
+     * @description [standalone]: `TRUE` is yes, `FALSE` is no.
+     * Absent means the property has no value. ITU-T Rec. X.891
+     * (05/2005) §7.2.27.
      * @public
      * @readonly
      */
     readonly standalone: OPTIONAL<BOOLEAN>,
     /**
      * @summary `version`.
+     * @description [version], OTHER STRING category. Absent
+     * means the property has no value. ITU-T Rec. X.891
+     * (05/2005) §7.2.28.
      * @public
      * @readonly
      */
     readonly version: OPTIONAL<NonIdentifyingStringOrIndex>,
     /**
      * @summary `children`.
+     * @description [children]. Exactly one item shall be
+     * `element`; at most one shall be
+     * `document-type-declaration`; the rest (if any) are
+     * `processing-instruction` or `comment`. ITU-T Rec. X.891
+     * (05/2005) §7.2.29–§7.2.30.
      * @public
      * @readonly
      */

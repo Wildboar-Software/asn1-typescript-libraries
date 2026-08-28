@@ -15,6 +15,13 @@ import {
  * @summary four_gig
  * @description
  *
+ * 2³². Maximum length of a `NonEmptyOctetString` and thus of
+ * identifying UTF-8 strings and of non-identifying character
+ * strings in a single chunk, attribute value, comment, or PI.
+ * ITU-T Rec. X.891 (05/2005)
+ * [§7.2.1](https://www.itu.int/rec/T-REC-X.891-200505-I),
+ * §7.4.6, §11.3 j.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

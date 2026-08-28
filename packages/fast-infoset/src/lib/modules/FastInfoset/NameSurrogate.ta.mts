@@ -17,6 +17,18 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary NameSurrogate
  * @description
  *
+ * Three vocabulary-table indexes (first two optional)
+ * identifying a qualified name: PREFIX, NAMESPACE NAME, and
+ * LOCAL NAME. `prefix-string-index` shall be present only if
+ * `namespace-name-string-index` is present. All three present:
+ * prefixed name; last two: unprefixed with a namespace; only
+ * local: no namespace. Occurs only in
+ * `Document.initial-vocabulary`. Each index shall be in range
+ * for the corresponding table of the initial vocabulary.
+ * ITU-T Rec. X.891 (05/2005)
+ * [§7.15](https://www.itu.int/rec/T-REC-X.891-200505-I),
+ * §8.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,18 +44,28 @@ export class NameSurrogate {
   constructor(
     /**
      * @summary `prefix_string_index`.
+     * @description PREFIX table index. Present only if
+     * `namespace-name-string-index` is present (prefixed
+     * name). ITU-T Rec. X.891 (05/2005) §7.15.4–§7.15.5,
+     * §8.5.3 a.
      * @public
      * @readonly
      */
     readonly prefix_string_index: OPTIONAL<INTEGER>,
     /**
      * @summary `namespace_name_string_index`.
+     * @description NAMESPACE NAME table index. Absent only
+     * when the name has no namespace (and then `prefix` is
+     * also absent). ITU-T Rec. X.891 (05/2005) §7.15.4,
+     * §8.5.3 b–c.
      * @public
      * @readonly
      */
     readonly namespace_name_string_index: OPTIONAL<INTEGER>,
     /**
      * @summary `local_name_string_index`.
+     * @description LOCAL NAME table index; always present.
+     * ITU-T Rec. X.891 (05/2005) §7.15.4, §8.5.2 c.
      * @public
      * @readonly
      */

@@ -20,6 +20,15 @@ import {
  * @summary Document_additional_data_additional_datum
  * @description
  *
+ * One `additional-datum` of `Document.additional-data`: a URI
+ * naming a specification of form and semantics, plus opaque
+ * octets. Ignored unless the URI is recognized and the extra
+ * processing is needed. Example: indexes for random access
+ * without reading the whole document. ITU-T Rec. X.891
+ * (05/2005)
+ * [§7.2.7](https://www.itu.int/rec/T-REC-X.891-200505-I)–
+ * §7.2.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +40,18 @@ export class Document_additional_data_additional_datum {
   constructor(
     /**
      * @summary `id`.
+     * @description URI of the specification that defines the
+     * form and semantics of `data`. ITU-T Rec. X.891 (05/2005)
+     * §7.2.8 a.
      * @public
      * @readonly
      */
     readonly id: URI,
     /**
      * @summary `data`.
+     * @description Additional processing octets as defined by
+     * the specification identified by `id`. ITU-T Rec. X.891
+     * (05/2005) §7.2.8 b.
      * @public
      * @readonly
      */

@@ -31,6 +31,17 @@ import {
  * @summary Document_initial_vocabulary
  * @description
  *
+ * Nested `initial-vocabulary` of `Document`. Together with
+ * built-in entries it fully determines the initial restricted-
+ * alphabet, encoding-algorithm, string, and name tables. If
+ * `external-vocabulary` is absent, start from built-ins and
+ * append these components; if present, start from that final
+ * vocabulary and append. At least one component shall be
+ * present. Alphabet and algorithm tables hold at most 256
+ * entries; the others at most 2²⁰. ITU-T Rec. X.891 (05/2005)
+ * [§7.2.11](https://www.itu.int/rec/T-REC-X.891-200505-I)–
+ * §7.2.23, Table 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,78 +53,126 @@ export class Document_initial_vocabulary {
   constructor(
     /**
      * @summary `external_vocabulary`.
+     * @description URI of a final vocabulary: another fast
+     * infoset document that itself has no external vocabulary;
+     * an XML document (conceptually encoded with
+     * `add-to-table` always `TRUE` and no duplicate strings);
+     * or any other precise table definition that includes
+     * built-ins. ITU-T Rec. X.891 (05/2005) §7.2.13–§7.2.15.
      * @public
      * @readonly
      */
     readonly external_vocabulary?: OPTIONAL<URI>,
     /**
      * @summary `restricted_alphabets`.
+     * @description UTF-8 strings of at least two distinct
+     * characters each, appended to the restricted alphabet
+     * table. Indexes start at 16 if only built-ins are present
+     * (1 = numeric, 2 = date-and-time; 3–15 reserved), else
+     * one plus the highest index in the external vocabulary.
+     * ITU-T Rec. X.891 (05/2005) §7.2.4, §7.2.19, clause 9.
      * @public
      * @readonly
      */
     readonly restricted_alphabets?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `encoding_algorithms`.
+     * @description URIs of encoding algorithms, appended to
+     * that table. Indexes start at 32 if only built-ins are
+     * present (1–10; 11–31 reserved), else one plus the
+     * highest index in the external vocabulary. ITU-T Rec.
+     * X.891 (05/2005) §7.2.5, §7.2.20, clause 10.
      * @public
      * @readonly
      */
     readonly encoding_algorithms?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `prefixes`.
+     * @description UTF-8 strings for the PREFIX table. Index 1
+     * is the built-in `"xml"`; these start at 2 if only that
+     * built-in is present. ITU-T Rec. X.891 (05/2005) §7.2.21,
+     * §8.4.2 a.
      * @public
      * @readonly
      */
     readonly prefixes?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `namespace_names`.
+     * @description UTF-8 strings for the NAMESPACE NAME
+     * table. Index 1 is
+     * `http://www.w3.org/XML/1998/namespace`; these start at 2
+     * if only that built-in is present. ITU-T Rec. X.891
+     * (05/2005) §7.2.22–§7.2.23, §8.4.2 b.
      * @public
      * @readonly
      */
     readonly namespace_names?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `local_names`.
+     * @description UTF-8 strings for the LOCAL NAME table
+     * ([local name] of elements and attributes). ITU-T Rec.
+     * X.891 (05/2005) Table 1, §8.4.2 c.
      * @public
      * @readonly
      */
     readonly local_names?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `other_ncnames`.
+     * @description UTF-8 strings for the OTHER NCNAME table
+     * (PI targets; unexpanded-entity, unparsed-entity, and
+     * notation names; unparsed-entity notation names).
+     * ITU-T Rec. X.891 (05/2005) Table 1, §8.4.2 d.
      * @public
      * @readonly
      */
     readonly other_ncnames?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `other_uris`.
+     * @description UTF-8 strings for the OTHER URI table
+     * (system and public identifiers). ITU-T Rec. X.891
+     * (05/2005) Table 1, §8.4.2 e.
      * @public
      * @readonly
      */
     readonly other_uris?: OPTIONAL<NonEmptyOctetString[]>,
     /**
      * @summary `attribute_values`.
+     * @description ATTRIBUTE VALUE table entries
+     * ([normalized value]). ITU-T Rec. X.891 (05/2005)
+     * Table 1, §8.4.2 f.
      * @public
      * @readonly
      */
     readonly attribute_values?: OPTIONAL<EncodedCharacterString[]>,
     /**
      * @summary `content_character_chunks`.
+     * @description CONTENT CHARACTER CHUNK table entries.
+     * ITU-T Rec. X.891 (05/2005) Table 1, §8.4.2 g.
      * @public
      * @readonly
      */
     readonly content_character_chunks?: OPTIONAL<EncodedCharacterString[]>,
     /**
      * @summary `other_strings`.
+     * @description OTHER STRING table entries (document
+     * [version]; PI and comment [content]). ITU-T Rec. X.891
+     * (05/2005) Table 1, §8.4.2 h.
      * @public
      * @readonly
      */
     readonly other_strings?: OPTIONAL<EncodedCharacterString[]>,
     /**
      * @summary `element_name_surrogates`.
+     * @description ELEMENT NAME table entries. ITU-T Rec.
+     * X.891 (05/2005) Table 1, §8.5.4 a.
      * @public
      * @readonly
      */
     readonly element_name_surrogates?: OPTIONAL<NameSurrogate[]>,
     /**
      * @summary `attribute_name_surrogates`.
+     * @description ATTRIBUTE NAME table entries. ITU-T Rec.
+     * X.891 (05/2005) Table 1, §8.5.4 b.
      * @public
      * @readonly
      */

@@ -24,6 +24,13 @@ import {
  * @summary Attribute
  * @description
  *
+ * Attribute information item (not a namespace declaration).
+ * [specified], [attribute type], and [references] are omitted
+ * ([references] is recoverable from [normalized value] in a
+ * restricted infoset); [owner element] is the element that
+ * lists this item in [attributes]. ITU-T Rec. X.891 (05/2005)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +45,18 @@ export class Attribute {
   constructor(
     /**
      * @summary `qualified_name`.
+     * @description [prefix], [namespace name], and [local
+     * name]; ATTRIBUTE NAME category. ITU-T Rec. X.891
+     * (05/2005) §7.4.4.
      * @public
      * @readonly
      */
     readonly qualified_name: QualifiedNameOrIndex,
     /**
      * @summary `normalized_value`.
+     * @description [normalized value]; ATTRIBUTE VALUE
+     * category. At most 2³² characters. ITU-T Rec. X.891
+     * (05/2005) §7.4.5–§7.4.6.
      * @public
      * @readonly
      */

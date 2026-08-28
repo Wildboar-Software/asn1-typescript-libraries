@@ -25,6 +25,11 @@ import {
  * @summary DocumentTypeDeclaration
  * @description
  *
+ * Document type declaration information item. [parent] is the
+ * document information item that lists this item in [children]
+ * (at most one such child). ITU-T Rec. X.891 (05/2005)
+ * [§7.9](https://www.itu.int/rec/T-REC-X.891-200505-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +45,26 @@ export class DocumentTypeDeclaration {
   constructor(
     /**
      * @summary `system_identifier`.
+     * @description [system identifier]; OTHER URI category.
+     * Absent means the property has no value. ITU-T Rec. X.891
+     * (05/2005) §7.9.4.
      * @public
      * @readonly
      */
     readonly system_identifier: OPTIONAL<IdentifyingStringOrIndex>,
     /**
      * @summary `public_identifier`.
+     * @description [public identifier]; OTHER URI category.
+     * Absent means the property has no value. ITU-T Rec. X.891
+     * (05/2005) §7.9.5.
      * @public
      * @readonly
      */
     readonly public_identifier: OPTIONAL<IdentifyingStringOrIndex>,
     /**
      * @summary `children`.
+     * @description [children] of the DTD: processing
+     * instructions only. ITU-T Rec. X.891 (05/2005) §7.9.6.
      * @public
      * @readonly
      */

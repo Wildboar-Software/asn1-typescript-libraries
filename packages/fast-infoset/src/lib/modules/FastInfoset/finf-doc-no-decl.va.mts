@@ -15,6 +15,15 @@ import {
  * @summary finf_doc_no_decl
  * @description
  *
+ * Identifies a fast infoset document with no XML declaration:
+ * the encoding starts with the 16 bits `1110000000000000`,
+ * then a 16-bit version (this edition is 1), one padding bit,
+ * then the ECN encoding of `Document`. Those 16 bits cannot
+ * begin a well-formed XML 1.0 or 1.1 document. ITU-T Rec.
+ * X.891 (05/2005)
+ * [§12.6](https://www.itu.int/rec/T-REC-X.891-200505-I)–
+ * §12.10, Annex E.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
