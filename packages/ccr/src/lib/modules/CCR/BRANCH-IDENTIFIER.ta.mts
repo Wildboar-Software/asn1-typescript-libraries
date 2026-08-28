@@ -25,6 +25,11 @@ import {
  * @summary BRANCH_IDENTIFIER
  * @description
  *
+ * Identifies an atomic-action branch: branch-initiator's AE-title
+ * plus a suffix. Carried in full on C-RECOVER; on C-BEGIN-RI only
+ * the suffix is sent (initiator name is the A-ASSOCIATE requestor).
+ * ITU-T Rec. X.852 (12/97) §7.2.5, §7.9.5, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,12 +50,23 @@ export class BRANCH_IDENTIFIER {
   constructor(
     /**
      * @summary `initiators_name`.
+     * @description
+     *
+     * Branch-initiator: `name` (`AE-title`) or `side`
+     * (`sender`/`receiver` of this APDU). ITU-T Rec. X.852 (12/97)
+     * Annex A, §7.9.5.
+     *
      * @public
      * @readonly
      */
     readonly initiators_name: BRANCH_IDENTIFIER_initiators_name,
     /**
      * @summary `branch_suffix`.
+     * @description
+     *
+     * Distinguishes this branch among those of the initiator
+     * (`form1` OCTET STRING or `form2` INTEGER).
+     *
      * @public
      * @readonly
      */

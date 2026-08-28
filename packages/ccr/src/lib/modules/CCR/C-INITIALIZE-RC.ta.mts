@@ -35,6 +35,12 @@ import {
  * @summary C_INITIALIZE_RC
  * @description
  *
+ * C-INITIALIZE response APDU (`[12]`). Carried in A-ASSOCIATE
+ * response User Information. Reports the selected CCR version and
+ * functional units. ITU-T Rec. X.852 (12/97)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.852-199712-I), §6.2.4,
+ * §7.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,18 +61,38 @@ export class C_INITIALIZE_RC {
   constructor(
     /**
      * @summary `version_number`.
+     * @description
+     *
+     * Exactly one bit set: the version selected for the association
+     * (highest mutually supported; this spec is Version 2). Leading
+     * bits for lower versions are zero; no trailing zero bits. That
+     * version is the C-INITIALIZE confirm Version parameter. ITU-T
+     * Rec. X.852 (12/97) §7.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly version_number?: OPTIONAL<C_INITIALIZE_RC_version_number>,
     /**
      * @summary `ccr_requirements`.
+     * @description
+     *
+     * Functional units selected. Mapped from C-INITIALIZE response CCR
+     * Requirements; only units proposed on the indication may appear.
+     * Default `{static-commitment}`. ITU-T Rec. X.852 (12/97)
+     * §7.1.5.2.
+     *
      * @public
      * @readonly
      */
     readonly ccr_requirements?: OPTIONAL<Ccr_requirements>,
     /**
      * @summary `ready_collision_reservation`.
+     * @description
+     *
+     * Same syntax as on C-INITIALIZE-RI; default `TRUE`. Table 3 lists
+     * it; §7.1.5 does not describe a distinct RC mapping.
+     *
      * @public
      * @readonly
      */
@@ -79,6 +105,11 @@ export class C_INITIALIZE_RC {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * Mapped from C-INITIALIZE response User Data to the confirm
+     * (X.852 §7.1.3.3, §7.1.5.3).
+     *
      * @public
      * @readonly
      */

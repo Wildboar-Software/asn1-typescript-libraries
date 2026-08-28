@@ -38,6 +38,13 @@ import {
  * @summary C_RECOVER_RC
  * @description
  *
+ * C-RECOVER response APDU (`[10]`). Recovery State is derived by the
+ * CCR service-user from atomic action data. `sender`/`receiver` in
+ * identifiers refer to roles on *this* APDU, not the procedure: a
+ * `sender` on C-RECOVER-RI is `receiver` on the matching RC. Mapped
+ * to P-TYPED-DATA. ITU-T Rec. X.852 (12/97)
+ * [§7.9](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,24 +67,46 @@ export class C_RECOVER_RC {
   constructor(
     /**
      * @summary `atomic_action_identifier`.
+     * @description
+     *
+     * Atomic Action Identifier of the recovered branch. On RC,
+     * `sender` is the C-RECOVER acceptor's AE-title (X.852 §7.9.6).
+     *
      * @public
      * @readonly
      */
     readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
     /**
      * @summary `branch_identifier`.
+     * @description
+     *
+     * Branch Identifier of the recovered branch (X.852 §7.9.6,
+     * Table 29).
+     *
      * @public
      * @readonly
      */
     readonly branch_identifier: BRANCH_IDENTIFIER,
     /**
      * @summary `recovery_state`.
+     * @description
+     *
+     * Derived by the CCR service-user from atomic action data. ITU-T
+     * Rec. X.852 (12/97) §7.9.4.3, §7.9.6.
+     *
      * @public
      * @readonly
      */
     readonly recovery_state: C_RECOVER_RC_recovery_state,
     /**
      * @summary `reversed_branch`.
+     * @description
+     *
+     * Default `FALSE`; shall be absent if `FALSE` (Annex A).
+     * Conditional on the C-RECOVER response. Table 29 labels a
+     * `was-initiator` field that is not in this APDU's ASN.1. ITU-T
+     * Rec. X.852 (12/97) §7.9.2, Table 27.
+     *
      * @public
      * @readonly
      */
@@ -90,6 +119,10 @@ export class C_RECOVER_RC {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-RECOVER response/confirm User Data (X.852 §7.9.6, Table 29).
+     *
      * @public
      * @readonly
      */

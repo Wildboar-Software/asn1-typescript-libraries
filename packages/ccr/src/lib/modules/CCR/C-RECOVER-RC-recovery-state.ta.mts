@@ -26,6 +26,12 @@ export enum _enum_for_C_RECOVER_RC_recovery_state {
  * @summary C_RECOVER_RC_recovery_state
  * @description
  *
+ * Recovery State on C-RECOVER-RC, taken from atomic action data by
+ * the CCR service-user. Same enumerants as on the RI. State-table
+ * events include RCV-RC(done), RCV-RC(retry-later),
+ * RCV-RC(unknown). ITU-T Rec. X.852 (12/97) §7.9.4.3, Table 31,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +47,7 @@ export type C_RECOVER_RC_recovery_state =
 
 /**
  * @summary C_RECOVER_RC_recovery_state_commit
+ * @description `commit` (0). ITU-T Rec. X.852 (12/97) Annex A.
  * @constant
  * @type {number}
  */
@@ -57,6 +64,7 @@ export const commit: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_c
 
 /**
  * @summary C_RECOVER_RC_recovery_state_ready
+ * @description `ready` (1). ITU-T Rec. X.852 (12/97) Annex A.
  * @constant
  * @type {number}
  */
@@ -73,6 +81,7 @@ export const ready: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_re
 
 /**
  * @summary C_RECOVER_RC_recovery_state_done
+ * @description `done` (2). State-table event RCV-RC(done).
  * @constant
  * @type {number}
  */
@@ -89,6 +98,7 @@ export const done: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_don
 
 /**
  * @summary C_RECOVER_RC_recovery_state_unknown
+ * @description `unknown` (3). State-table event RCV-RC(unknown).
  * @constant
  * @type {number}
  */
@@ -105,6 +115,7 @@ export const unknown: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_state_
 
 /**
  * @summary C_RECOVER_RC_recovery_state_retry_later
+ * @description `retry-later` (5). State-table event RCV-RC(retry-later).
  * @constant
  * @type {number}
  */

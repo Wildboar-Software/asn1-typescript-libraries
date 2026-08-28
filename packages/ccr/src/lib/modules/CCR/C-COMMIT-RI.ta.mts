@@ -21,6 +21,15 @@ import {
  * @summary C_COMMIT_RI
  * @description
  *
+ * C-COMMIT request APDU (`[5]`). Confirmed; requestor is the
+ * commit-superior, owns the synchronize-minor token, and has this
+ * branch's atomic action data in stable storage. Orders the
+ * commit-subordinate to release bound data in the final state.
+ * Mapped to P-SYNC-MINOR (Type `explicit` recommended, `optional`
+ * accepted). May be concatenated with C-BEGIN-RI (§7.10). ITU-T Rec.
+ * X.852 (12/97)
+ * [§7.5](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +50,10 @@ export class C_COMMIT_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-COMMIT request/indication User Data (X.852 §7.5.5, Table 14).
+     *
      * @public
      * @readonly
      */

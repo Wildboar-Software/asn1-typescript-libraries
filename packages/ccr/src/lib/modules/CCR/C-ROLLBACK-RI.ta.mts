@@ -21,6 +21,16 @@ import {
  * @summary C_ROLLBACK_RI
  * @description
  *
+ * C-ROLLBACK request APDU (`[7]`). Confirmed; either CCR
+ * service-user. Forces completion of the branch. Requestor has no
+ * atomic action data in stable storage, or has been ordered to
+ * rollback by its commit-superior. Mapped to
+ * P-RESYNCHRONIZE(abandon), which discards other CCR APDUs except a
+ * C-ROLLBACK-RI from the association-initiator — rollback takes
+ * precedence. Two colliding C-ROLLBACK-RI: association-initiator
+ * wins. ITU-T Rec. X.852 (12/97)
+ * [§7.6](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +51,12 @@ export class C_ROLLBACK_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-ROLLBACK request/indication User Data (X.852 §7.6.5,
+     * Table 18). Delivery is not guaranteed for the
+     * association-responder if two C-ROLLBACK-RI collide (§7.6.8).
+     *
      * @public
      * @readonly
      */

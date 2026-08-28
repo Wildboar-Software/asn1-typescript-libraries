@@ -21,6 +21,17 @@ import {
  * @summary C_CANCEL_RI
  * @description
  *
+ * C-CANCEL request APDU (`[15]`). Non-confirmed; either CCR
+ * service-user. Initiates rollback of the branch without session
+ * resynchronize, so it can be blocked by flow-control. Requires the
+ * cancel functional unit. Requestor has no atomic action data in
+ * stable storage, or has been ordered to rollback. Mapped to
+ * P-TYPED-DATA. Incoming C-BEGIN-RC / C-PREPARE-RI / C-NOCHANGE-RI /
+ * C-READY-RI colliding with a sent C-CANCEL-RI are discarded by the
+ * sender; the receiver of C-CANCEL-RI issues C-CANCEL indication.
+ * ITU-T Rec. X.852 (12/97)
+ * [§7.8](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +52,10 @@ export class C_CANCEL_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-CANCEL request/indication User Data (X.852 §7.8.5, Table 25).
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary User_data
  * @description
  *
+ * User information on a CCR primitive (`[30] SEQUENCE OF EXTERNAL`).
+ * Each `EXTERNAL` is a presentation data value in a context chosen by
+ * the requestor of that primitive. Mapped to/from the User Data
+ * parameter of the corresponding CCR service. ITU-T Rec. X.852
+ * (12/97) Annex A, §7, §9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

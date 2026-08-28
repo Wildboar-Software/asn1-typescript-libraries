@@ -21,6 +21,14 @@ import {
  * @summary C_PREPARE_RI
  * @description
  *
+ * C-PREPARE request APDU (`[3]`). Non-confirmed; either CCR
+ * service-user. Tells the neighbour that no further application
+ * semantics that affect bound data will be sent. Unconcatenated,
+ * mapped to P-TYPED-DATA. Collision with C-READY-RI is processed
+ * normally; collision with C-ROLLBACK is resolved in favour of
+ * rollback. ITU-T Rec. X.852 (12/97)
+ * [§7.3](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +49,10 @@ export class C_PREPARE_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-PREPARE request/indication User Data (X.852 §7.3.5, Table 9).
+     *
      * @public
      * @readonly
      */

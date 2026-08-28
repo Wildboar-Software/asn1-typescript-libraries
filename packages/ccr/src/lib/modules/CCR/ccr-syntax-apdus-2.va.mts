@@ -16,6 +16,11 @@ import { joint_CCR } from '../CCR/joint-CCR.va.mjs';
  * @summary ccr_syntax_apdus_2
  * @description
  *
+ * Abstract-syntax name for presentation data values that are values
+ * of `CCR-APDUS` (CCR protocol Version 2). Offered in the
+ * A-ASSOCIATE presentation-context-definition list. ITU-T Rec. X.852
+ * (12/97) Annex A.1.2, §9.1.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

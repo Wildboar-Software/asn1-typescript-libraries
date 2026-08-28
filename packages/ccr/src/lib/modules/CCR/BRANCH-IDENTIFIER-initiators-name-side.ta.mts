@@ -23,6 +23,11 @@ export enum _enum_for_BRANCH_IDENTIFIER_initiators_name_side {
  * @summary BRANCH_IDENTIFIER_initiators_name_side
  * @description
  *
+ * Shorthand for the branch-initiator's AE-title relative to this
+ * APDU. Same `sender`/`receiver` rules as
+ * `ATOMIC-ACTION-IDENTIFIER.owners-name.side`. ITU-T Rec. X.852
+ * (12/97) Annex A, §7.9.6 note.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +43,7 @@ export type BRANCH_IDENTIFIER_initiators_name_side =
 
 /**
  * @summary BRANCH_IDENTIFIER_initiators_name_side_sender
+ * @description AE-title of the sender of this APDU (X.852 Annex A).
  * @constant
  * @type {number}
  */
@@ -54,6 +60,7 @@ export const sender: BRANCH_IDENTIFIER_initiators_name_side = BRANCH_IDENTIFIER_
 
 /**
  * @summary BRANCH_IDENTIFIER_initiators_name_side_receiver
+ * @description AE-title of the recipient of this APDU (X.852 Annex A).
  * @constant
  * @type {number}
  */

@@ -17,6 +17,11 @@ import {
  * @summary joint_CCR
  * @description
  *
+ * Root OID for CCR information objects
+ * (`{joint-iso-itu-t ccr(7)}`). Identifies the procedures and shared
+ * semantics of this Protocol Specification. ITU-T Rec. X.852 (12/97)
+ * Annex A.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

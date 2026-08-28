@@ -21,6 +21,14 @@ import {
  * @summary C_READY_RI
  * @description
  *
+ * C-READY request APDU (`[4]`). Non-confirmed; either CCR
+ * service-user. Signals that the requestor is ready-to-commit.
+ * Requestor must have this branch's atomic action data in stable
+ * storage. Unconcatenated, mapped to P-TYPED-DATA. Collision with
+ * C-PREPARE-RI or another C-READY-RI is processed normally. ITU-T
+ * Rec. X.852 (12/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +49,10 @@ export class C_READY_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-READY request/indication User Data (X.852 §7.4.5, Table 11).
+     *
      * @public
      * @readonly
      */

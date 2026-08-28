@@ -21,6 +21,11 @@ import {
  * @summary C_BEGIN_RC
  * @description
  *
+ * C-BEGIN response APDU (`[2]`). Optional; may be issued later than
+ * the indication. Unconcatenated, mapped to P-SYNC-MINOR rsp/cnf;
+ * if delayed, to P-TYPED-DATA. ITU-T Rec. X.852 (12/97)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +46,10 @@ export class C_BEGIN_RC {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-BEGIN response/confirm User Data (X.852 §7.2.6, Table 7).
+     *
      * @public
      * @readonly
      */

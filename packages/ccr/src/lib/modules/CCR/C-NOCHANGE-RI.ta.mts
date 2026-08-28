@@ -28,6 +28,16 @@ import {
  * @summary C_NOCHANGE_RI
  * @description
  *
+ * C-NOCHANGE request APDU (`[13]`). Optionally confirmed; either CCR
+ * service-user. Completes the branch when the requestor has made no
+ * changes to bound data and will not join two-phase commit.
+ * Requires the no-change functional unit; requestor has no bound
+ * data for the atomic action. Mapped to P-DATA (§7.7.4); clause 9.7
+ * names P-TYPED-DATA. If `confirmation` is `not-required`, there may
+ * be no RC. Two colliding C-NOCHANGE-RI confirm each other with
+ * outcome `no-change`. ITU-T Rec. X.852 (12/97)
+ * [§7.7](https://www.itu.int/rec/T-REC-X.852-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +56,12 @@ export class C_NOCHANGE_RI {
   constructor(
     /**
      * @summary `confirmation`.
+     * @description
+     *
+     * Whether the requestor wants a C-NOCHANGE-RC. `not-required` (0):
+     * response/confirm may be omitted. `result-requested` (1): default.
+     * ITU-T Rec. X.852 (12/97) §7.7.4, §7.7.5, Table 22.
+     *
      * @public
      * @readonly
      */
@@ -58,6 +74,11 @@ export class C_NOCHANGE_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-NOCHANGE request/indication User Data (X.852 §7.7.5,
+     * Table 22).
+     *
      * @public
      * @readonly
      */

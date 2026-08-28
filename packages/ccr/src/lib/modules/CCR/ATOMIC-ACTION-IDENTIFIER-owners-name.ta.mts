@@ -26,6 +26,11 @@ import {
  * @summary ATOMIC_ACTION_IDENTIFIER_owners_name
  * @description
  *
+ * Owner of the atomic action: `name` is an `AE-title`; `side` is
+ * `sender` or `receiver` of the containing APDU. `sender` is
+ * synonymous with the sender's AE-title; `receiver` with the
+ * recipient's. ITU-T Rec. X.852 (12/97) Annex A, §7.2.5, §7.9.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

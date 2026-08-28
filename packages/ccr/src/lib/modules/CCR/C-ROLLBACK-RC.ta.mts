@@ -21,6 +21,11 @@ import {
  * @summary C_ROLLBACK_RC
  * @description
  *
+ * C-ROLLBACK response APDU (`[8]`). If the acceptor had atomic
+ * action data in stable storage, that data is forgotten. Mapped to
+ * P-RESYNCHRONIZE(abandon) rsp/cnf. ITU-T Rec. X.852 (12/97)
+ * [§7.6](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +46,10 @@ export class C_ROLLBACK_RC {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-ROLLBACK response/confirm User Data (X.852 §7.6.6, Table 19).
+     *
      * @public
      * @readonly
      */

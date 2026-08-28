@@ -25,6 +25,10 @@ import {
  * @summary ATOMIC_ACTION_IDENTIFIER
  * @description
  *
+ * Identifies an atomic action: owner's AE-title plus a suffix unique
+ * among that owner's actions. Used on C-BEGIN-RI and C-RECOVER.
+ * ITU-T Rec. X.852 (12/97) §7.2.5, §7.9.5, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,12 +50,23 @@ export class ATOMIC_ACTION_IDENTIFIER {
   constructor(
     /**
      * @summary `owners_name`.
+     * @description
+     *
+     * Atomic-action owner: `name` (`AE-title`) or `side`
+     * (`sender`/`receiver` of this APDU). ITU-T Rec. X.852 (12/97)
+     * Annex A, §7.2.5.
+     *
      * @public
      * @readonly
      */
     readonly owners_name: ATOMIC_ACTION_IDENTIFIER_owners_name,
     /**
      * @summary `atomic_action_suffix`.
+     * @description
+     *
+     * Distinguishes this atomic action among those of the owner
+     * (`form1` OCTET STRING or `form2` INTEGER). X.852 Table 6.
+     *
      * @public
      * @readonly
      */

@@ -23,6 +23,12 @@ export enum _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side {
  * @summary ATOMIC_ACTION_IDENTIFIER_owners_name_side
  * @description
  *
+ * Shorthand for an AE-title relative to this APDU. `sender` (0):
+ * sender of the APDU. `receiver` (1): recipient. Roles are per APDU,
+ * not per procedure: `sender` on C-RECOVER-RI is `receiver` on the
+ * matching C-RECOVER-RC. ITU-T Rec. X.852 (12/97) Annex A, §7.9.6
+ * note.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +44,7 @@ export type ATOMIC_ACTION_IDENTIFIER_owners_name_side =
 
 /**
  * @summary ATOMIC_ACTION_IDENTIFIER_owners_name_side_sender
+ * @description AE-title of the sender of this APDU (X.852 Annex A).
  * @constant
  * @type {number}
  */
@@ -54,6 +61,7 @@ export const sender: ATOMIC_ACTION_IDENTIFIER_owners_name_side = ATOMIC_ACTION_I
 
 /**
  * @summary ATOMIC_ACTION_IDENTIFIER_owners_name_side_receiver
+ * @description AE-title of the recipient of this APDU (X.852 Annex A).
  * @constant
  * @type {number}
  */

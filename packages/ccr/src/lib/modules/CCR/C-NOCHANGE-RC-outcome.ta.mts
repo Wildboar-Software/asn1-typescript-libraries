@@ -25,6 +25,11 @@ export enum _enum_for_C_NOCHANGE_RC_outcome {
  * @summary C_NOCHANGE_RC_outcome
  * @description
  *
+ * Outcome on C-NOCHANGE-RC. Default `not-determined`. `no-change` is
+ * used when two C-NOCHANGE-RI collide (X.852 §7.7.7.2). Meanings of
+ * `committed` and `rolled-back` are those of the CCR service
+ * (X.851). ITU-T Rec. X.852 (12/97) §7.7.6, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,6 +45,7 @@ export type C_NOCHANGE_RC_outcome =
 
 /**
  * @summary C_NOCHANGE_RC_outcome_not_determined
+ * @description Default; outcome not determined (X.852 Annex A).
  * @constant
  * @type {number}
  */
@@ -56,6 +62,7 @@ export const not_determined: C_NOCHANGE_RC_outcome = C_NOCHANGE_RC_outcome_not_d
 
 /**
  * @summary C_NOCHANGE_RC_outcome_committed
+ * @description Atomic action committed (service meaning in X.851).
  * @constant
  * @type {number}
  */
@@ -72,6 +79,7 @@ export const committed: C_NOCHANGE_RC_outcome = C_NOCHANGE_RC_outcome_committed;
 
 /**
  * @summary C_NOCHANGE_RC_outcome_rolled_back
+ * @description Atomic action rolled back (service meaning in X.851).
  * @constant
  * @type {number}
  */
@@ -88,6 +96,7 @@ export const rolled_back: C_NOCHANGE_RC_outcome = C_NOCHANGE_RC_outcome_rolled_b
 
 /**
  * @summary C_NOCHANGE_RC_outcome_no_change
+ * @description Mutual C-NOCHANGE-RI collision (X.852 §7.7.7.2).
  * @constant
  * @type {number}
  */

@@ -26,6 +26,11 @@ import {
  * @summary BRANCH_IDENTIFIER_initiators_name
  * @description
  *
+ * Branch-initiator: `name` is an `AE-title`; `side` is `sender` or
+ * `receiver` of the containing APDU. Same synonymy as
+ * `ATOMIC-ACTION-IDENTIFIER.owners-name`. ITU-T Rec. X.852 (12/97)
+ * Annex A, §7.9.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

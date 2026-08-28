@@ -31,6 +31,16 @@ import {
  * @summary C_BEGIN_RI
  * @description
  *
+ * C-BEGIN request APDU (`[1]`). Optionally confirmed; requestor is
+ * the branch-initiator and must own the session synchronize-minor
+ * token. No other atomic action branch may be active on the
+ * association. Unconcatenated, mapped to P-SYNC-MINOR User Data with
+ * Data Separation TRUE. May be concatenated with C-COMMIT-RI
+ * (order-commitment-and-begin, §7.10). Branch-initiator's AE-title is
+ * *not* encoded here — it is the requestor's AE-title from
+ * A-ASSOCIATE. ITU-T Rec. X.852 (12/97)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,12 +61,23 @@ export class C_BEGIN_RI {
   constructor(
     /**
      * @summary `atomic_action_identifier`.
+     * @description
+     *
+     * Atomic Action Identifier. Owner's Name may use `name` or, if it
+     * is the requestor's AE-title from A-ASSOCIATE, the `sender`
+     * value of `side`. ITU-T Rec. X.852 (12/97) §7.2.5, Table 6.
+     *
      * @public
      * @readonly
      */
     readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
     /**
      * @summary `branch_suffix`.
+     * @description
+     *
+     * Branch Identifier – Suffix. Branch-initiator's name is implied
+     * from A-ASSOCIATE, not carried on this APDU (X.852 §7.2.5).
+     *
      * @public
      * @readonly
      */
@@ -69,6 +90,10 @@ export class C_BEGIN_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-BEGIN request/indication User Data (X.852 §7.2.5, Table 6).
+     *
      * @public
      * @readonly
      */

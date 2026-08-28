@@ -17,6 +17,11 @@ import {
  * @summary ccr_basic_encoding
  * @description
  *
+ * Transfer-syntax name for BER of the CCR abstract syntax. Assigned
+ * in ITU-T Rec. X.690 | ISO/IEC 8825-1; a CCR implementation shall
+ * offer it in presentation negotiation for the CCR context (X.852
+ * §12.3, Annex A.1.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

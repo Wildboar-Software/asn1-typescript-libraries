@@ -18,6 +18,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix
  * @description
  *
+ * Suffix of an atomic-action identifier: `form1` OCTET STRING or
+ * `form2` INTEGER. X.852 does not constrain which form to use.
+ * ITU-T Rec. X.852 (12/97) §7.2.5, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

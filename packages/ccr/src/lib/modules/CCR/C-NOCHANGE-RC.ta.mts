@@ -28,6 +28,11 @@ import {
  * @summary C_NOCHANGE_RC
  * @description
  *
+ * C-NOCHANGE response APDU (`[14]`). Omitted if the RI asked
+ * `not-required`. Mapped to P-DATA (§7.7.4.3); clause 9.7 names
+ * P-TYPED-DATA. ITU-T Rec. X.852 (12/97)
+ * [§7.7](https://www.itu.int/rec/T-REC-X.852-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,6 +52,12 @@ export class C_NOCHANGE_RC {
   constructor(
     /**
      * @summary `outcome`.
+     * @description
+     *
+     * Result of the atomic action as known to the acceptor. Default
+     * `not-determined`. After two colliding C-NOCHANGE-RI, each user
+     * issues confirm with `no-change` (X.852 §7.7.6, §7.7.7.2).
+     *
      * @public
      * @readonly
      */
@@ -59,6 +70,10 @@ export class C_NOCHANGE_RC {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-NOCHANGE response/confirm User Data (X.852 §7.7.6, Table 23).
+     *
      * @public
      * @readonly
      */

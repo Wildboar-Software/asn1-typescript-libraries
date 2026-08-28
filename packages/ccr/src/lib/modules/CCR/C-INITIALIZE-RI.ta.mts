@@ -35,6 +35,13 @@ import {
  * @summary C_INITIALIZE_RI
  * @description
  *
+ * C-INITIALIZE request APDU (`[11]`). Confirmed; requestor is the
+ * association initiator (X.852 Table 1). Negotiates CCR protocol
+ * version and functional units. Carried in A-ASSOCIATE request User
+ * Information. Receiving CCRPM ignores undefined elements and unnamed
+ * bits (X.852 §6.6). ITU-T Rec. X.852 (12/97)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.852-199712-I), §6.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,18 +62,42 @@ export class C_INITIALIZE_RI {
   constructor(
     /**
      * @summary `version_number`.
+     * @description
+     *
+     * Bits this CCRPM offers; bit 0 is Version 1, bit 1 is Version 2
+     * (this specification). Multiple bits may be set. An
+     * implementation need not offer every version it can support on
+     * every C-INITIALIZE-RI. Default `{version2}`. The acceptor
+     * selects the highest mutually supported version and ignores
+     * unsupported bits. ITU-T Rec. X.852 (12/97) §7.1.4.1.
+     *
      * @public
      * @readonly
      */
     readonly version_number?: OPTIONAL<C_INITIALIZE_RI_version_number>,
     /**
      * @summary `ccr_requirements`.
+     * @description
+     *
+     * Functional units the requestor proposes. Mapped from the
+     * C-INITIALIZE request CCR Requirements parameter. The indication
+     * lists only units both proposed here and supported by the
+     * acceptor. Default `{static-commitment}`. ITU-T Rec. X.852
+     * (12/97) §7.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly ccr_requirements?: OPTIONAL<Ccr_requirements>,
     /**
      * @summary `ready_collision_reservation`.
+     * @description
+     *
+     * Mapped from the C-INITIALIZE request Ready-Collision-Reservation
+     * parameter. Default `TRUE`. X.852 does not define the reservation
+     * semantics (see X.851). ITU-T Rec. X.852 (12/97) §7.1.4.3,
+     * Table 2.
+     *
      * @public
      * @readonly
      */
@@ -79,6 +110,11 @@ export class C_INITIALIZE_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * Mapped from C-INITIALIZE request User Data to the indication
+     * (X.852 §7.1.4.4).
+     *
      * @public
      * @readonly
      */

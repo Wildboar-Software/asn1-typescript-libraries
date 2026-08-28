@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary C_INITIALIZE_RC_version_number
  * @description
  *
+ * `version-number` on C-INITIALIZE-RC: only the selected version bit
+ * is one (last set bit). ITU-T Rec. X.852 (12/97) §7.1.5.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,7 @@ export type C_INITIALIZE_RC_version_number = BIT_STRING;
 
 /**
  * @summary C_INITIALIZE_RC_version_number_version1
+ * @description Bit 0: CCR protocol Version 1 selected (X.852 §7.1.5.1).
  * @constant
  */
 export const C_INITIALIZE_RC_version_number_version1: number = 0; /* LONG_NAMED_BIT */
@@ -42,6 +46,7 @@ export const version1: number = C_INITIALIZE_RC_version_number_version1; /* SHOR
 
 /**
  * @summary C_INITIALIZE_RC_version_number_version2
+ * @description Bit 1: CCR protocol Version 2 selected (this spec).
  * @constant
  */
 export const C_INITIALIZE_RC_version_number_version2: number = 1; /* LONG_NAMED_BIT */

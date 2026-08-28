@@ -21,6 +21,11 @@ import {
  * @summary C_COMMIT_RC
  * @description
  *
+ * C-COMMIT response APDU (`[6]`). Acceptor shall have no atomic
+ * action data for this branch in stable storage. Mapped to
+ * P-SYNC-MINOR rsp/cnf. ITU-T Rec. X.852 (12/97)
+ * [§7.5](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +46,10 @@ export class C_COMMIT_RC {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-COMMIT response/confirm User Data (X.852 §7.5.6, Table 15).
+     *
      * @public
      * @readonly
      */

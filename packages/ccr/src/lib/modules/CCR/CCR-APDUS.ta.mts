@@ -90,6 +90,12 @@ import {
  * @summary CCR_APDUS
  * @description
  *
+ * Abstract syntax of the CCR presentation context: one APDU per
+ * presentation data value. `C-NOCHANGE-*` and `C-CANCEL-RI` are
+ * extension alternatives (after `...`). Concatenation of some APDUs
+ * is allowed (X.852 clause 10). ITU-T Rec. X.852 (12/97) §6.3.2,
+ * Annex A, [§7](https://www.itu.int/rec/T-REC-X.852-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

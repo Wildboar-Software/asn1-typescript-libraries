@@ -1,3 +1,14 @@
+/**
+ * Commitment, Concurrency and Recovery (CCR) protocol APDUs from
+ * ITU-T Rec. X.852 (12/97) | ISO/IEC 9805-1, for the service in
+ * ITU-T Rec. X.851 | ISO/IEC 9804.
+ *
+ * CCR groups actions into an atomic action: the entire set is
+ * performed or none is. This module is protocol Version 2 (Version 1
+ * is in the ASN.1 for completeness only). APDUs travel in the CCR
+ * presentation context named `ccr-syntax-apdus-2`. ITU-T Rec. X.852
+ * (12/97) [§6–§7, Annex A](https://www.itu.int/rec/T-REC-X.852-199712-I).
+ */
 export * from "./lib/modules/CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta.mjs";
 export {
     _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side,

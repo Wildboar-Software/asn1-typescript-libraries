@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary C_BEGIN_RI_branch_suffix
  * @description
  *
+ * Branch Identifier – Suffix on C-BEGIN-RI: `form1` OCTET STRING or
+ * `form2` INTEGER. Same CHOICE as `BRANCH-IDENTIFIER.branch-suffix`.
+ * X.852 does not constrain which form to use. ITU-T Rec. X.852
+ * (12/97) §7.2.5, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

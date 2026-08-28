@@ -38,6 +38,17 @@ import {
  * @summary C_RECOVER_RI
  * @description
  *
+ * C-RECOVER request APDU (`[9]`). Recovers a branch after
+ * application or communication failure. Confirmed when the requestor
+ * is commit-superior; if the requestor is commit-subordinate, the
+ * superior may reply with C-RECOVER-RC or with a new C-RECOVER-RI.
+ * More than one branch may be recovered on one association.
+ * Requestor has this branch's atomic action data in stable storage
+ * and, unless overlapped-recovery is selected, owns the
+ * synchronize-minor token and has no other active/recovering branch.
+ * Mapped to P-TYPED-DATA. ITU-T Rec. X.852 (12/97)
+ * [§7.9](https://www.itu.int/rec/T-REC-X.852-199712-I), §9.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,24 +71,48 @@ export class C_RECOVER_RI {
   constructor(
     /**
      * @summary `atomic_action_identifier`.
+     * @description
+     *
+     * Atomic Action Identifier of the disrupted branch. AE-titles of
+     * the C-RECOVER requestor/acceptor may use `name` or `side`
+     * (`sender`/`receiver`). ITU-T Rec. X.852 (12/97) §7.9.5,
+     * Table 28.
+     *
      * @public
      * @readonly
      */
     readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
     /**
      * @summary `branch_identifier`.
+     * @description
+     *
+     * Branch Identifier of the disrupted branch. Same `name`/`side`
+     * rules as `atomic-action-identifier` (X.852 §7.9.5).
+     *
      * @public
      * @readonly
      */
     readonly branch_identifier: BRANCH_IDENTIFIER,
     /**
      * @summary `recovery_state`.
+     * @description
+     *
+     * Derived by the CCR service-user from atomic action data
+     * (`commit`, `ready`, `done`, `unknown`, `retry-later`). ITU-T
+     * Rec. X.852 (12/97) §7.9.4.1, §7.9.5.
+     *
      * @public
      * @readonly
      */
     readonly recovery_state: C_RECOVER_RI_recovery_state,
     /**
      * @summary `reversed_branch`.
+     * @description
+     *
+     * Default `FALSE`; shall be absent if `FALSE` (Annex A).
+     * Conditional on the C-RECOVER request. X.852 does not specify
+     * when `TRUE` is sent. ITU-T Rec. X.852 (12/97) §7.9.2, Table 26.
+     *
      * @public
      * @readonly
      */
@@ -90,6 +125,11 @@ export class C_RECOVER_RI {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_data`.
+     * @description
+     *
+     * C-RECOVER request/indication User Data (X.852 §7.9.5,
+     * Table 28).
+     *
      * @public
      * @readonly
      */

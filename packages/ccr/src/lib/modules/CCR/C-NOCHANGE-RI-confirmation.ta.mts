@@ -23,6 +23,10 @@ export enum _enum_for_C_NOCHANGE_RI_confirmation {
  * @summary C_NOCHANGE_RI_confirmation
  * @description
  *
+ * Confirmation parameter on C-NOCHANGE-RI. `not-required` (0): no
+ * C-NOCHANGE-RC need be sent. `result-requested` (1): default; RC
+ * carries the outcome. ITU-T Rec. X.852 (12/97) §7.7.4, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +42,7 @@ export type C_NOCHANGE_RI_confirmation =
 
 /**
  * @summary C_NOCHANGE_RI_confirmation_not_required
+ * @description No C-NOCHANGE-RC required (X.852 §7.7.4).
  * @constant
  * @type {number}
  */
@@ -54,6 +59,7 @@ export const not_required: C_NOCHANGE_RI_confirmation = C_NOCHANGE_RI_confirmati
 
 /**
  * @summary C_NOCHANGE_RI_confirmation_result_requested
+ * @description Request a C-NOCHANGE-RC (default; X.852 Annex A).
  * @constant
  * @type {number}
  */
