@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VersionInformationData
  * @description
  *
+ * ASN.1 syntax version of the SPIF specification and associated
+ * semantics. `v1` (0) is the only named version; DEFAULT on
+ * `SPIF`. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.1](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -18,6 +23,7 @@ export type VersionInformationData = INTEGER;
 
 /**
  * @summary VersionInformationData_v1
+ * @description The only named SPIF syntax version (0). DEFAULT on `SPIF`.
  * @constant
  * @type {number}
  */
@@ -26,6 +32,7 @@ export const VersionInformationData_v1: VersionInformationData = 0; /* LONG_NAME
 
 /**
  * @summary VersionInformationData_v1
+ * @description The only named SPIF syntax version (0). DEFAULT on `SPIF`.
  * @constant
  * @type {number}
  */

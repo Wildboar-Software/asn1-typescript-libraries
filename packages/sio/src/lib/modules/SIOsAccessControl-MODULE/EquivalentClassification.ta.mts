@@ -21,6 +21,11 @@ import {
  * @summary EquivalentClassification
  * @description
  *
+ * A classification in another security policy that is equivalent
+ * to this SPIF classification's `labelAndCertValue`. ITU-T Rec.
+ * X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +41,33 @@ export class EquivalentClassification {
     constructor(
         /**
          * @summary `securityPolicyId`.
+         * @description
+         *
+         * Other policy in which `labelAndCertValue` is defined.
+         * X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly securityPolicyId: OBJECT_IDENTIFIER,
         /**
          * @summary `labelAndCertValue`.
+         * @description
+         *
+         * That other policy's classification value (and clearance
+         * `classList` bit) treated as equivalent. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly labelAndCertValue: LabelAndCertValue,
         /**
          * @summary `applied`.
+         * @description
+         *
+         * Whether the mapping applies when encrypting, decrypting,
+         * or both. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */

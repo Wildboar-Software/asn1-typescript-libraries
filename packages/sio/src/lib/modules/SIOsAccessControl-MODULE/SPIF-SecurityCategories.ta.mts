@@ -11,6 +11,12 @@ import {
  * @summary SPIF_SecurityCategories
  * @description
  *
+ * Every security category defined for the SPIF's policy. SIZE
+ * (0..MAX); OPTIONAL on `SPIF`. Each element's `type` must be
+ * consistent with `privilegeId`, `rbacId`, and `optCatDataId`.
+ * ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.7](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

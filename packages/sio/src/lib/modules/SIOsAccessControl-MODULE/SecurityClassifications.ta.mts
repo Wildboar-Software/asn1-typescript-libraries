@@ -11,6 +11,10 @@ import {
  * @summary SecurityClassifications
  * @description
  *
+ * Every classification defined for the SPIF's security policy.
+ * SIZE (0..MAX); OPTIONAL on `SPIF`. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

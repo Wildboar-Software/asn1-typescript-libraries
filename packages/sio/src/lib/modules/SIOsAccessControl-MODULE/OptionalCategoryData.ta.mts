@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OptionalCategoryData
  * @description
  *
+ * One required-category alternative: `optCatDataId` selects
+ * the `OC-DATA` syntax of `categorydata`. That syntax must be
+ * consistent with the SPIF `rbacId`, `privilegeId`, and
+ * `SecurityCategory` `type`. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +31,22 @@ export class OptionalCategoryData {
     constructor(
         /**
          * @summary `optCatDataId`.
+         * @description
+         *
+         * `OC-DATA.&id` selecting the encoding of `categorydata`.
+         * X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly optCatDataId: OBJECT_IDENTIFIER,
         /**
          * @summary `categorydata`.
+         * @description
+         *
+         * Open-type value (`OC-DATA.&Type`) identified by
+         * `optCatDataId`. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */

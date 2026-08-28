@@ -11,6 +11,10 @@ import {
  * @summary EquivalentPolicies
  * @description
  *
+ * Every other policy for which this SPIF includes equivalent
+ * values. SIZE (0..MAX). ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.8](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

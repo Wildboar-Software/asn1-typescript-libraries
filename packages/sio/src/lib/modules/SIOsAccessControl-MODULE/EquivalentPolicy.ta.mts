@@ -16,6 +16,10 @@ import {
  * @summary EquivalentPolicy
  * @description
  *
+ * Another security policy for which this SPIF includes equivalent
+ * classification or category values. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.8](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,21 @@ export class EquivalentPolicy {
     constructor(
         /**
          * @summary `securityPolicyId`.
+         * @description
+         *
+         * OID of the equivalent policy. X.841 §6.2.2.8.
+         *
          * @public
          * @readonly
          */
         readonly securityPolicyId: OBJECT_IDENTIFIER,
         /**
          * @summary `securityPolicyName`.
+         * @description
+         *
+         * Display name of that policy. SIZE 1..256
+         * (`ubObjectIdNameLength`). X.841 §6.2.2.8.
+         *
          * @public
          * @readonly
          */

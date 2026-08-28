@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PrivacyMark
  * @description
  *
+ * Human-readable privacy marking on a confidentiality label.
+ * SIZE (1..128) (`ub-privacy-mark-length`, from X.411). Unlike
+ * X.501 `PrivacyMark` (PrintableString only), this is a CHOICE of
+ * PrintableString or UTF8String. ITU-T Rec. X.841 (10/2000)
+ * [§6.1.2](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

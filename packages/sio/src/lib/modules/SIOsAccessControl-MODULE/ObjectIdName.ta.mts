@@ -11,6 +11,11 @@ import {
  * @summary ObjectIdName
  * @description
  *
+ * Display name of an object identified by OID (typically a
+ * security policy). `DirectoryString` SIZE 1..256
+ * (`ubObjectIdNameLength`). ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.3](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

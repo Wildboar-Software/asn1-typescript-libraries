@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncodedSPIF
  * @description
  *
+ * Open type constrained to a value of `SPIF`. Encoded as an
+ * opaque encoding of that SPIF, suitable for signature and
+ * verification (`SIGNED{EncodedSPIF}`). ITU-T Rec. X.841
+ * (10/2000)
+ * [§6.2.2](https://www.itu.int/rec/T-REC-X.841-200010-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,10 @@ import {
  * @summary MarkingDataInfo
  * @description
  *
+ * Marking phrases and display locations for one classification.
+ * SIZE (1..MAX). ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

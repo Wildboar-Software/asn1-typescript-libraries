@@ -20,6 +20,13 @@ import {
  * @summary OptionalCategoryGroup
  * @description
  *
+ * A conjunction of required security categories: `operation`
+ * says how many of `categoryGroup` must appear in the label.
+ * If several groups are listed under `requiredCategory`, every
+ * group must be satisfied. The user must select each value.
+ * ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +41,21 @@ export class OptionalCategoryGroup {
     constructor(
         /**
          * @summary `operation`.
+         * @description
+         *
+         * `onlyOne` — exactly one of `categoryGroup`; `oneOrMore` —
+         * at least one; `all` — every member. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly operation: Operation,
         /**
          * @summary `categoryGroup`.
+         * @description
+         *
+         * Candidate categories (SIZE 1..MAX). X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */

@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SPIFVersionNumber
  * @description
  *
+ * Version of the SPIF *data* for a given security policy (not
+ * the ASN.1 syntax version). Distinguishes successive SPIFs for
+ * the same `securityPolicyIdData`. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.2](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

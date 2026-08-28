@@ -1,3 +1,10 @@
+/**
+ * Security Information Objects for access control from ITU-T Rec.
+ * X.841 (10/2000) | ISO/IEC 15816: confidentiality labels, Security
+ * Policy Information Files (SPIFs), and the clearance attribute.
+ *
+ * @module
+ */
 export * from "./lib/modules/SIOsAccessControl-MODULE/AlgorithmIdentifier.ta.mjs";
 export * from "./lib/modules/SIOsAccessControl-MODULE/ALGORITHM.oca.mjs";
 export * from "./lib/modules/SIOsAccessControl-MODULE/Applied.ta.mjs";

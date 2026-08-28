@@ -22,6 +22,11 @@ import {
  * @summary UpdateInformationData
  * @description
  *
+ * Currency of one SPIF: which version of the policy data this is,
+ * when it was generated, who signed it, and which key signed it.
+ * ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.2](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,24 +43,42 @@ export class UpdateInformationData {
     constructor(
         /**
          * @summary `sPIFVersionNumber`.
+         * @description
+         *
+         * Distinguishes versions of SPIF information for the
+         * policy named in `securityPolicyIdData`. X.841 §6.2.2.2.
+         *
          * @public
          * @readonly
          */
         readonly sPIFVersionNumber: SPIFVersionNumber,
         /**
          * @summary `creationDate`.
+         * @description
+         *
+         * When this SPIF was generated. X.841 §6.2.2.2.
+         *
          * @public
          * @readonly
          */
         readonly creationDate: GeneralizedTime,
         /**
          * @summary `originatorDistinguishedName`.
+         * @description
+         *
+         * Distinguished name of the SPIF signer. X.841 §6.2.2.2.
+         *
          * @public
          * @readonly
          */
         readonly originatorDistinguishedName: Name,
         /**
          * @summary `keyIdentifier`.
+         * @description
+         *
+         * Identifies the key used to sign the SPIF. X.841
+         * §6.2.2.2.
+         *
          * @public
          * @readonly
          */

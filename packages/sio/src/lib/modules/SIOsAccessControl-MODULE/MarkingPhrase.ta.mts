@@ -11,6 +11,12 @@ import {
  * @summary MarkingPhrase
  * @description
  *
+ * Marking text attached to a data object.
+ * `DirectoryString` SIZE 1..256 (`ubMarkingPhraseLength`). If
+ * omitted from `MarkingData`, marking codes apply to the
+ * classification name. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

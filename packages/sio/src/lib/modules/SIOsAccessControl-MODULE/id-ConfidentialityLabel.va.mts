@@ -10,6 +10,11 @@ import {
  * @summary id_ConfidentialityLabel
  * @description
  *
+ * Identifies the confidentiality-label SIO class:
+ * `{joint-iso-itu-t sios(24) specification(0) securityLabels(1)
+ * confidentiality(0)}`. ITU-T Rec. X.841 (10/2000)
+ * [§6.1.2](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

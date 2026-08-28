@@ -11,6 +11,11 @@ import {
  * @summary SecurityPolicyName
  * @description
  *
+ * Display name of an equivalent security policy.
+ * `DirectoryString` SIZE 1..256 (`ubObjectIdNameLength`). ITU-T
+ * Rec. X.841 (10/2000)
+ * [§6.2.2.8](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

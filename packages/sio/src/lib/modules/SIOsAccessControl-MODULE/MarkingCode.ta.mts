@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MarkingCode
  * @description
  *
+ * Where a marking phrase is physically displayed on the data
+ * object. X.841 names the values but does not further define
+ * them. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

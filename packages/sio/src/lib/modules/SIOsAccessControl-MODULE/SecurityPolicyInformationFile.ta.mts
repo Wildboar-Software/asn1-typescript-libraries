@@ -16,6 +16,11 @@ import {
  * @summary SecurityPolicyInformationFile
  * @description
  *
+ * Signed SPIF: domain-specific access-control policy, protected
+ * against unauthorized change. The signature covers the opaque
+ * `EncodedSPIF`. ITU-T Rec. X.841 (10/2000)
+ * [§6.2](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

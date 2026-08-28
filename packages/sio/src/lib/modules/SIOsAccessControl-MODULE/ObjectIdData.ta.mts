@@ -16,6 +16,11 @@ import {
  * @summary ObjectIdData
  * @description
  *
+ * OID assigned to an object plus a display name. Used for the
+ * SPIF's own policy (`securityPolicyIdData`) and the default
+ * policy (`defaultSecurityPolicyIdData`). ITU-T Rec. X.841
+ * (10/2000) [§6.2.2.3](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +35,22 @@ export class ObjectIdData {
     constructor(
         /**
          * @summary `objectId`.
+         * @description
+         *
+         * OID assigned to the object (typically a security policy).
+         * X.841 §6.2.2.3.
+         *
          * @public
          * @readonly
          */
         readonly objectId: OBJECT_IDENTIFIER,
         /**
          * @summary `objectIdName`.
+         * @description
+         *
+         * Display name of that object. SIZE 1..256
+         * (`ubObjectIdNameLength`). X.841 §6.2.2.3.
+         *
          * @public
          * @readonly
          */

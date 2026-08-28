@@ -20,6 +20,12 @@ import {
  * @summary MarkingData
  * @description
  *
+ * Marking phrase and/or codes saying where that phrase is
+ * physically displayed. At least one component shall be present.
+ * If `markingPhrase` is absent, the codes apply to the
+ * classification name. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +40,22 @@ export class MarkingData {
     constructor(
         /**
          * @summary `markingPhrase`.
+         * @description
+         *
+         * Text attached to the data object. If omitted, marking
+         * codes apply to `classificationName`. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly markingPhrase?: OPTIONAL<MarkingPhrase>,
         /**
          * @summary `markingCodes`.
+         * @description
+         *
+         * Where the marking is physically displayed (page top,
+         * bottom, document start/end, etc.). X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */

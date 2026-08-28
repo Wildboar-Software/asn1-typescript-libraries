@@ -37,6 +37,11 @@ import {
  * @summary SecurityClassification
  * @description
  *
+ * One classification of the SPIF's security policy. Present once per
+ * defined classification value. Distinct from X.501's INTEGER
+ * `SecurityClassification`. ITU-T Rec. X.841 (10/2000)
+ * [§6.2.2.6](https://www.itu.int/rec/T-REC-X.841-200010-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,42 +61,84 @@ export class SecurityClassification {
     constructor(
         /**
          * @summary `labelAndCertValue`.
+         * @description
+         *
+         * Value of this classification in a security label, and the
+         * bit position of this classification in the clearance
+         * `classList` BIT STRING. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly labelAndCertValue: LabelAndCertValue,
         /**
          * @summary `classificationName`.
+         * @description
+         *
+         * Display text when selecting or viewing this classification
+         * in a security label. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly classificationName: ClassificationName,
         /**
          * @summary `equivalentClassifications`.
+         * @description
+         *
+         * Classification values defined in *other* policies that
+         * are equivalent to this `labelAndCertValue`. X.841
+         * §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly equivalentClassifications: OPTIONAL<EquivalentClassifications>,
         /**
          * @summary `hierarchyValue`.
+         * @description
+         *
+         * Relative rank of this classification in this policy's
+         * hierarchy. Must be unique within the policy. X.841
+         * §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly hierarchyValue: INTEGER,
         /**
          * @summary `markingData`.
+         * @description
+         *
+         * Marking phrases and where they are displayed. If a
+         * phrase is omitted, the marking codes apply to
+         * `classificationName`. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly markingData?: OPTIONAL<MarkingDataInfo>,
         /**
          * @summary `requiredCategory`.
+         * @description
+         *
+         * Categories that must appear in a label together with
+         * this classification. Absent means no category
+         * dependencies. Every group in the list must be
+         * satisfied. X.841 §6.2.2.6.
+         *
          * @public
          * @readonly
          */
         readonly requiredCategory?: OPTIONAL<OptionalCategoryGroups>,
         /**
          * @summary `obsolete`.
+         * @description
+         *
+         * TRUE: formerly valid, may still appear on old objects,
+         * must not be assigned to new ones. DEFAULT FALSE. X.841
+         * §6.2.2.6.
+         *
          * @public
          * @readonly
          */
