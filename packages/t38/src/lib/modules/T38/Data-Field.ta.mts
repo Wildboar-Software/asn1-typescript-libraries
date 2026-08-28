@@ -20,6 +20,17 @@ import {
  * @summary Data_Field
  * @description
  *
+ * Ordered fields of one IFP DATA element: T.30 HDLC control and
+ * Phase C (or BFT) data, plus V.8/V.34 signalling when used. One
+ * element may hold several fields, e.g. HDLC-data, FCS-OK,
+ * HDLC-data, FCS-OK-Sig-End. The emitting gateway chooses packet
+ * size; `*-sig-end` Field-Types close the message. V.21 frames
+ * shall be at most 7 octets per packet except at IAF devices.
+ * Method 2 transfers TCF as `t4-non-ecm-*` (mandatory for UDP,
+ * not recommended for TCP). Method 1 generates TCF locally
+ * (required for TCP). ITU-T Rec. T.38 (11/2015)
+ * [§7.4](https://www.itu.int/rec/T-REC-T.38-201511-I), §7.5, §8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

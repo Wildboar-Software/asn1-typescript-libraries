@@ -20,6 +20,22 @@ import {
  * @summary UDPTLPacket_error_recovery
  * @description
  *
+ * Error protection for the UDPTL primary. `secondary-ifp-packets`
+ * repeats prior primaries in monotonically decreasing contiguous
+ * sequence numbers (primary C, then C-1, C-2, ...). A payload with a
+ * primary plus two or more secondaries survives two consecutive
+ * lost UDPTL packets. Transmitters need not send secondaries;
+ * receivers may ignore them.
+ *
+ * `fec-info` is optional parity FEC (Annex C). A gateway that
+ * advertises only redundancy must not be sent FEC; a FEC receiver
+ * should also accept redundancy. ITU-T Rec. T.38 (11/2015)
+ * [§9.1.3](https://www.itu.int/rec/T-REC-T.38-201511-I)-§9.1.4,
+ * Annex C.
+ *
+ * Secondaries are open types constrained to `IFPPacket` - decode
+ * each with `_decode_IFPPacket`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

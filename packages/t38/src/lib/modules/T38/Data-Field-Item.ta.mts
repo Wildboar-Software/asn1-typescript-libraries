@@ -23,6 +23,12 @@ import {
  * @summary Data_Field_Item
  * @description
  *
+ * One Field of an IFP DATA element: a `field-type` and optional
+ * `field-data`. Several fields may appear in one IFP packet.
+ * Unrecognized Field-Types are skipped; processing continues with
+ * the next field. ITU-T Rec. T.38 (11/2015)
+ * [§7.4](https://www.itu.int/rec/T-REC-T.38-201511-I), Table 5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +40,21 @@ export class Data_Field_Item {
   constructor(
     /**
      * @summary `field_type`.
+     * @description What `field-data` holds, or a delimiter with
+     * no data (FCS result, HDLC energy drop, end of message).
+     * ITU-T Rec. T.38 (11/2015) §7.4, Table 5.
      * @public
      * @readonly
      */
     readonly field_type: Data_Field_Item_field_type,
     /**
      * @summary `field_data`.
+     * @description Payload octets, SIZE(1..65535). Omitted for
+     * FCS and `*-sig-end` types that have no data. First PSTN bit
+     * is the MSB of the first octet. For `hdlc-data`: one HDLC
+     * frame from the address octet up to but not including FCS,
+     * bit stuffing removed. ITU-T Rec. T.38 (11/2015) §7.1.2,
+     * §7.4.
      * @public
      * @readonly
      */

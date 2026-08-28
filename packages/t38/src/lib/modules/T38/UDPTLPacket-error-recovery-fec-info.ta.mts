@@ -18,6 +18,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UDPTLPacket_error_recovery_fec_info
  * @description
  *
+ * Parity FEC covering prior primary IFP packets. Each FEC message
+ * is a column-wise XOR of `fec-npackets` length-normalized
+ * primaries. A single lost primary among those covered can be
+ * rebuilt. Multiple octet strings in `fec-data` are interleaved
+ * (burst protection): for packet sequence `Seq`, FEC message I of
+ * m, covering n primaries each, the covered sequences are spaced
+ * by m as in Annex C §C.2.2. ITU-T Rec. T.38 (11/2015)
+ * [§9.1.3.1](https://www.itu.int/rec/T-REC-T.38-201511-I),
+ * Annex C.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +39,21 @@ export class UDPTLPacket_error_recovery_fec_info {
   constructor(
     /**
      * @summary `fec_npackets`.
+     * @description How many prior primary IFP packets each FEC
+     * message covers (`n` in Annex C). For one FEC message, the
+     * covered sequence numbers are taken from `seq-number` and
+     * this value as in §C.2.2. ITU-T Rec. T.38 (11/2015)
+     * §9.1.3.1, Annex C.
      * @public
      * @readonly
      */
     readonly fec_npackets: INTEGER,
     /**
      * @summary `fec_data`.
+     * @description One octet string per FEC message (`m` is the
+     * SEQUENCE OF count). Each string is the parity row (length
+     * of the longest contributing primary plus 2 octets). ITU-T
+     * Rec. T.38 (11/2015) §9.1.3.1, Annex C §C.2.1-§C.2.2.
      * @public
      * @readonly
      */

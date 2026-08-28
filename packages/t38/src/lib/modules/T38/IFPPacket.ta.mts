@@ -26,6 +26,18 @@ import {
  * @summary IFPPacket
  * @description
  *
+ * One Internet Facsimile Protocol packet: `type-of-msg` plus
+ * optional `data-field`. A T.30 "message" (one or more HDLC
+ * frames, a Phase C page, etc.) may span several IFP packets;
+ * each packet repeats the header. Used as the TCP/TPKT payload,
+ * the UDPTL primary (and redundant secondaries), or an RTP
+ * payload. Unrecognized TYPE is ignored with its data; absence of
+ * the expected T.38 application tag aborts the session.
+ *
+ * Annex A encoding is PER BASIC-ALIGNED; these codecs use BER.
+ * ITU-T Rec. T.38 (11/2015)
+ * [§7.2](https://www.itu.int/rec/T-REC-T.38-201511-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +52,23 @@ export class IFPPacket {
   constructor(
     /**
      * @summary `type_of_msg`.
+     * @description Discriminates indicator (CED/CNG, preamble,
+     * training) vs data (HDLC / Phase C / V.8 / V.34) and names
+     * the modulation. Mandatory, except `t30-indicator` is
+     * optional when both G3FEs are Internet-aware fax (IAF)
+     * devices. ITU-T Rec. T.38 (11/2015) §7.2.2, Table 2.
      * @public
      * @readonly
      */
     readonly type_of_msg: Type_of_msg,
     /**
      * @summary `data_field`.
+     * @description T.30 HDLC control and Phase C (or BFT)
+     * payload as a sequence of fields. May be omitted. A
+     * zero-length data field may announce that `t30-data`
+     * follows; alternatively send a high-speed `t30-indicator`.
+     * Implementations shall support both. ITU-T Rec. T.38
+     * (11/2015) §7.2.3, §7.4.
      * @public
      * @readonly
      */

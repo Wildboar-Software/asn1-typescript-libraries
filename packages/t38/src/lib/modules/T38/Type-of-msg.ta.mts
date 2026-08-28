@@ -27,6 +27,19 @@ import {
  * @summary Type_of_msg
  * @description
  *
+ * IFP TYPE: either a `t30-indicator` (presence of a facsimile
+ * signal, preamble, or modulation training) or `t30-data` (HDLC
+ * control / Phase C / V.8 / V.34 payload, naming the modulation
+ * that carried it). Both alternatives are mandatory except that
+ * `t30-indicator` is optional when both G3FEs are IAF. If both
+ * G3FEs are IAF, `t30-data` values shall be ignored. Unrecognized
+ * TYPE and its data are ignored.
+ *
+ * Values after `...` are version-3 additions (V.8, V.34, V.33).
+ * ITU-T Rec. T.38 (11/2015)
+ * [§7.2.2](https://www.itu.int/rec/T-REC-T.38-201511-I)-§7.3,
+ * Tables 2-4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
