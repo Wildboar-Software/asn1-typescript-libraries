@@ -20,6 +20,15 @@ import {
  * @summary DepositNotice
  * @description
  *
+ * Server-signed notice of deposit: the Cmail server's reply
+ * after `DATA` (`250 Notice-of-deposit`, base64). Postmark
+ * only (envelope id, delivery type, MIME hash), signed with
+ * the server's private key. The sender countersigns and adds
+ * envelope information with `DEPO`, producing
+ * `SignedDepositNotice`. ITU-T Rec. X.1341 (09/2015)
+ * [§8.14](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Table 1, 3.2.5, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

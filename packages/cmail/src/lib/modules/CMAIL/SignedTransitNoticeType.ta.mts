@@ -25,6 +25,12 @@ import {
  * @summary SignedTransitNoticeType
  * @description
  *
+ * Countersigned notice of transit: receiving server's
+ * postmark plus envelope information. ITU-T Rec. X.1341
+ * (09/2015)
+ * [§8.18](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B, Figure A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,18 @@ export class SignedTransitNoticeType {
   constructor(
     /**
      * @summary `digitalPostmark`.
+     * @description Receiving Cmail server's postmark from
+     * the notice of transit. ITU-T Rec. X.1341 (09/2015)
+     * §8.17–§8.18.
      * @public
      * @readonly
      */
     readonly digitalPostmark: DigitalPostmarkType,
     /**
      * @summary `envelopeInformation`.
+     * @description Envelope hashes, Message-ID, and
+     * entities, as on a signed deposit notice. ITU-T Rec.
+     * X.1341 (09/2015) §8.18, Figure A.4.
      * @public
      * @readonly
      */

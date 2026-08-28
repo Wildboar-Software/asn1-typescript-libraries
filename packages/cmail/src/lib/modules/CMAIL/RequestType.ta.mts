@@ -21,6 +21,13 @@ import {
  * @summary RequestType
  * @description
  *
+ * Secret-question request. May contain a random number that
+ * the recipient concatenates with RSCK before hashing
+ * (§8.15, §9.3). ASN.1 field is `randomNumer` (typo); XER
+ * name is `RandomNumber`. ITU-T Rec. X.1341 (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +41,10 @@ export class RequestType {
   constructor(
     /**
      * @summary `randomNumer`.
+     * @description Random nonce for the challenge (ASN.1
+     * spelling; XER `RandomNumber`). Concatenated with RSCK
+     * before hashing. ITU-T Rec. X.1341 (09/2015) §8.15,
+     * §9.3.
      * @public
      * @readonly
      */

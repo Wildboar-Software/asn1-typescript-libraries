@@ -26,6 +26,11 @@ import {
  * @summary ContentEnvelopeInformationType
  * @description
  *
+ * Hashes of the ENVELOPE before and after the RSCK cipher,
+ * plus the MIME Message-ID. ITU-T Rec. X.1341 (09/2015)
+ * [§8.13](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +46,27 @@ export class ContentEnvelopeInformationType {
   constructor(
     /**
      * @summary `uncipheredEnvelopeHash`.
+     * @description Hash of the ENVELOPE before AES (RSCK)
+     * encryption. Annex B's `HashValueType` names only the
+     * algorithm. ITU-T Rec. X.1341 (09/2015) Annex B.
      * @public
      * @readonly
      */
     readonly uncipheredEnvelopeHash: HashValueType,
     /**
      * @summary `cipheredEnvelopeHash`.
+     * @description Hash of the ciphered ENVELOPE. Annex B's
+     * `HashValueType` names only the algorithm. ITU-T Rec.
+     * X.1341 (09/2015) Annex B.
      * @public
      * @readonly
      */
     readonly cipheredEnvelopeHash: HashValueType,
     /**
      * @summary `messageId`.
+     * @description MIME Message-ID of the ENVELOPE. XER
+     * attribute `MessageId`. ITU-T Rec. X.1341 (09/2015)
+     * Annex B, Appendix I.4.
      * @public
      * @readonly
      */

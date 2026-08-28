@@ -21,6 +21,14 @@ import {
  * @summary SignatureType
  * @description
  *
+ * A signature on a notice. Annex B is `String`; Annex A XSD
+ * uses W3C XMLDSig `ds:SignatureType`. Notices are signed
+ * with the signer's private key (Cmail server, then
+ * sender, recipient, or peer server). ITU-T Rec. X.1341
+ * (09/2015)
+ * [§8.14](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex A–B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

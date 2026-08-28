@@ -25,6 +25,12 @@ import {
  * @summary SignedDepositNoticeType
  * @description
  *
+ * Countersigned notice of deposit: server postmark plus
+ * sender-built envelope information (entities/challenges).
+ * ITU-T Rec. X.1341 (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B, Figure A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,18 @@ export class SignedDepositNoticeType {
   constructor(
     /**
      * @summary `digitalPostmark`.
+     * @description Server postmark from the notice of deposit
+     * the sender received after `DATA`. ITU-T Rec. X.1341
+     * (09/2015) §8.14–§8.15.
      * @public
      * @readonly
      */
     readonly digitalPostmark: DigitalPostmarkType,
     /**
      * @summary `envelopeInformation`.
+     * @description Sender-built envelope hashes, Message-ID,
+     * and per-party `Entity` (including challenges). ITU-T
+     * Rec. X.1341 (09/2015) §8.15, Figure A.4.
      * @public
      * @readonly
      */

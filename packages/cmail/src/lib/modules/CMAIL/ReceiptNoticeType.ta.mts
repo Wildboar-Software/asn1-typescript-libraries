@@ -20,6 +20,13 @@ import {
  * @summary ReceiptNoticeType
  * @description
  *
+ * Body of a server-signed notice of reception: Cmail-server
+ * (`operator`) postmark only. Annex A XSD also includes
+ * `EnvelopeInformation`; Annex B does not. ITU-T Rec. X.1341
+ * (09/2015)
+ * [§9.2](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B, Figure A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +40,9 @@ export class ReceiptNoticeType {
   constructor(
     /**
      * @summary `operatorPostmark`.
+     * @description Cmail server's digital postmark on the
+     * notice of reception. ITU-T Rec. X.1341 (09/2015) §9.2,
+     * Annex B.
      * @public
      * @readonly
      */

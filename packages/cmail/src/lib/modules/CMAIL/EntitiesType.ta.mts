@@ -20,6 +20,10 @@ import {
  * @summary EntitiesType
  * @description
  *
+ * Non-empty list of parties (`Entity`) on a signed deposit
+ * or transit notice. XER: untagged `Entity` children. ITU-T
+ * Rec. X.1341 (09/2015) Annex B, Figure A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +37,9 @@ export class EntitiesType {
   constructor(
     /**
      * @summary `entity`.
+     * @description One or more parties (`SIZE(1..MAX)`):
+     * sender, recipients, cc, transit. ITU-T Rec. X.1341
+     * (09/2015) §8.15, Annex B.
      * @public
      * @readonly
      */

@@ -20,6 +20,13 @@ import {
  * @summary SignedTransitNotice
  * @description
  *
+ * Notice of transit countersigned by the sending Cmail
+ * server (`250 Signed-notice-of-transit`). Co-signed by both
+ * Cmail servers; evidence of transit (Appendix I.3). ITU-T
+ * Rec. X.1341 (09/2015)
+ * [§8.18](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * 3.2.7, Annex B, Figure A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

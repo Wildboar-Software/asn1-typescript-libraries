@@ -1,3 +1,22 @@
+/**
+ * Certified Mail (CMAIL) notice types from ITU-T Rec. X.1341
+ * (09/2015)
+ * [Annex B](https://www.itu.int/rec/T-REC-X.1341-201509-I).
+ *
+ * CMTP (SMTP extension) and CPOP (POP3 extension) carry
+ * co-signed notices of deposit, transit, and reception so a
+ * Cmail server can certify that an encrypted ENVELOPE was
+ * deposited, forwarded, and accepted without reading it.
+ * Notices may be DER or EXTENDED-XER (XER XML matches the
+ * Annex A XSD); commands typically carry them base64-encoded.
+ * ASN.1 module `{itu-t(0) recommendation(0) x(24) cmail(1341)
+ * asn1Module(1) cmail(1)}` (Annex E lists `asn1module(0)`).
+ *
+ * XSD types re-exported below are ITU-T X.694 `XSDv2`
+ * mappings; CMAIL imports `String` from that module.
+ *
+ * @module
+ */
 export * from "./lib/modules/CMAIL/CertificateType.ta.mjs";
 export * from "./lib/modules/CMAIL/CipheredEnvelopeKeyType.ta.mjs";
 export * from "./lib/modules/CMAIL/ContentEnvelopeInformationType.ta.mjs";

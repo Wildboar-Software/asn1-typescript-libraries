@@ -42,6 +42,16 @@ import {
  * @summary EntityType
  * @description
  *
+ * One party in the transaction. The challenge of Figure A.6
+ * is this structure: secret question, RSCK wrapped for this
+ * party, that party's PKC, RFC 822 address, and role. The
+ * sender builds one per recipient when countersigning the
+ * notice of deposit. On `RETR`, the server copies the
+ * recipient's `Entity` into the notice of reception and
+ * clears `Response`. ITU-T Rec. X.1341 (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * §9.2, Annex B, Figure A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -66,30 +76,46 @@ export class EntityType {
   constructor(
     /**
      * @summary `secretQuestion`.
+     * @description Random request plus hash algorithm for
+     * RandomNumber||RSCK. ITU-T Rec. X.1341 (09/2015)
+     * §8.15, §9.3.
      * @public
      * @readonly
      */
     readonly secretQuestion: SecretQuestionType,
     /**
      * @summary `cipheredEnvelopeKey`.
+     * @description RSCK wrapped with this party's public
+     * key so only they can open the ENVELOPE. ITU-T Rec.
+     * X.1341 (09/2015) §8.13, §8.15, §9.3.
      * @public
      * @readonly
      */
     readonly cipheredEnvelopeKey: CipheredEnvelopeKeyType,
     /**
      * @summary `certificate`.
+     * @description This party's public-key certificate
+     * (recipient's, in the §8.15 challenge). Annex C
+     * constrains Cmail client/server PKCs. ITU-T Rec. X.1341
+     * (09/2015) §8.15, Annex C.
      * @public
      * @readonly
      */
     readonly certificate: CertificateType,
     /**
      * @summary `emailAddress`.
+     * @description Shall be RFC 822 format (`CONSTRAINED
+     * BY` in Annex B; XSD annotation). XER attribute
+     * `EmailAddress`. ITU-T Rec. X.1341 (09/2015) Annex A–B.
      * @public
      * @readonly
      */
     readonly emailAddress: String,
     /**
      * @summary `type_`.
+     * @description Role: `from`, `to`, `cc`, or `transit`.
+     * XER attribute `Type`. ITU-T Rec. X.1341 (09/2015)
+     * Annex B.
      * @public
      * @readonly
      */

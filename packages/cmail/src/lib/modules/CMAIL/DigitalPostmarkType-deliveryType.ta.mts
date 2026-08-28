@@ -13,7 +13,14 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
+/**
+ * CMTP `DELV` delivery mode on a digital postmark. Only
+ * `certifiedMail` is named; the type is extensible (`...`).
+ * XER text is `CertifiedMail`. ITU-T Rec. X.1341 (09/2015)
+ * Table 1, §8.3, Annex B.
+ */
 export enum _enum_for_DigitalPostmarkType_deliveryType {
+  /** Sole named mode; CMTP `DELV certifiedMail`. */
   certifiedMail = 0,
 }
 
@@ -21,6 +28,10 @@ export enum _enum_for_DigitalPostmarkType_deliveryType {
 /**
  * @summary DigitalPostmarkType_deliveryType
  * @description
+ *
+ * CMTP `DELV` mode. Root `certifiedMail`; unknown values
+ * remain legal because the ENUMERATED is extensible. ITU-T
+ * Rec. X.1341 (09/2015) Table 1, Annex B.
  *
  * ### ASN.1 Definition:
  *
@@ -37,6 +48,7 @@ export type DigitalPostmarkType_deliveryType =
 
 /**
  * @summary DigitalPostmarkType_deliveryType_certifiedMail
+ * @description Sole named delivery mode (`DELV`).
  * @constant
  * @type {number}
  */
@@ -45,6 +57,7 @@ export const DigitalPostmarkType_deliveryType_certifiedMail: DigitalPostmarkType
 
 /**
  * @summary certifiedMail
+ * @description Sole named delivery mode (`DELV`).
  * @constant
  * @type {number}
  */

@@ -21,6 +21,16 @@ import {
  * @summary ResponseType
  * @description
  *
+ * Identifies the hash used to compute the secret-question
+ * result. The §8.15 example uses
+ * `"2.16.840.1.101.3.4.2.1"` (SHA-256). The recipient copies
+ * the digest into the signed notice of reception; Annex B
+ * does not name a component for that digest. The server
+ * cannot recompute it without RSCK but knows the expected
+ * value. ITU-T Rec. X.1341 (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * §9.3, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +44,10 @@ export class ResponseType {
   constructor(
     /**
      * @summary `algorithmIdentifier`.
+     * @description OID (as a string) of the hash applied
+     * to RandomNumber||RSCK. XER attribute
+     * `AlgorithmIdentifier`. ITU-T Rec. X.1341 (09/2015)
+     * §8.15, §9.3.
      * @public
      * @readonly
      */

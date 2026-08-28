@@ -21,6 +21,14 @@ import {
  * @summary CertificateType
  * @description
  *
+ * Public-key certificate of an `Entity`. Annex C requires
+ * X.509 v3 PKCs with Cmail server/client
+ * `certificatePolicies` OIDs. Annex B names only `encoding`;
+ * certificate octets are not a named component. ITU-T Rec.
+ * X.1341 (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex C, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +42,9 @@ export class CertificateType {
   constructor(
     /**
      * @summary `encoding`.
+     * @description Encoding of the certificate. The §8.15
+     * example uses `"base64"`. XER attribute `encoding`.
+     * ITU-T Rec. X.1341 (09/2015) §8.15, Annex B.
      * @public
      * @readonly
      */

@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EntityType_type
  * @description
  *
+ * Role of an `Entity` on a notice. ITU-T Rec. X.1341
+ * (09/2015) Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,9 +28,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @enum {number}
  */
 export enum _enum_for_EntityType_type {
+  /** Originator (`MAIL FROM`). ASN.1 `from`. */
   from_ = 0,
+  /** Primary recipient (`RCPT TO`). */
   to = 1,
+  /** Carbon-copy recipient. */
   cc = 2,
+  /** Transit Cmail server (inter-server hop). */
   transit = 3,
 }
 
@@ -35,6 +42,9 @@ export enum _enum_for_EntityType_type {
 /**
  * @summary EntityType_type
  * @description
+ *
+ * Role of an `Entity`: `from`, `to`, `cc`, or `transit`.
+ * ITU-T Rec. X.1341 (09/2015) Annex B.
  *
  * ### ASN.1 Definition:
  *
@@ -51,6 +61,9 @@ export type EntityType_type = _enum_for_EntityType_type;
  * @summary EntityType_type
  * @description
  *
+ * Role of an `Entity`: `from`, `to`, `cc`, or `transit`.
+ * ITU-T Rec. X.1341 (09/2015) Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +77,7 @@ export const EntityType_type = _enum_for_EntityType_type;
 
 /**
  * @summary EntityType_type_from_
+ * @description Originator. ASN.1 `from`.
  * @constant
  * @type {number}
  */
@@ -73,6 +87,7 @@ export const EntityType_type_from_: EntityType_type =
 
 /**
  * @summary from_
+ * @description Originator. ASN.1 `from`.
  * @constant
  * @type {number}
  */
@@ -82,6 +97,7 @@ export const from_: EntityType_type =
 
 /**
  * @summary EntityType_type_to
+ * @description Primary recipient.
  * @constant
  * @type {number}
  */
@@ -91,6 +107,7 @@ export const EntityType_type_to: EntityType_type =
 
 /**
  * @summary to
+ * @description Primary recipient.
  * @constant
  * @type {number}
  */
@@ -100,6 +117,7 @@ export const to: EntityType_type =
 
 /**
  * @summary EntityType_type_cc
+ * @description Carbon-copy recipient.
  * @constant
  * @type {number}
  */
@@ -109,6 +127,7 @@ export const EntityType_type_cc: EntityType_type =
 
 /**
  * @summary cc
+ * @description Carbon-copy recipient.
  * @constant
  * @type {number}
  */
@@ -118,6 +137,7 @@ export const cc: EntityType_type =
 
 /**
  * @summary EntityType_type_transit
+ * @description Transit Cmail server.
  * @constant
  * @type {number}
  */
@@ -127,6 +147,7 @@ export const EntityType_type_transit: EntityType_type =
 
 /**
  * @summary transit
+ * @description Transit Cmail server.
  * @constant
  * @type {number}
  */

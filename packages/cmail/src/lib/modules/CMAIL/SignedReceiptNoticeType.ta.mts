@@ -25,6 +25,12 @@ import {
  * @summary SignedReceiptNoticeType
  * @description
  *
+ * Countersigned notice of reception: operator postmark plus
+ * per-recipient envelope information (entity and challenge).
+ * ITU-T Rec. X.1341 (09/2015)
+ * [§9.3](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,20 @@ export class SignedReceiptNoticeType {
   constructor(
     /**
      * @summary `operatorPostmark`.
+     * @description Cmail server's digital postmark, as on
+     * the unsigned notice of reception. ITU-T Rec. X.1341
+     * (09/2015) §9.2–§9.3, Annex B.
      * @public
      * @readonly
      */
     readonly operatorPostmark: DigitalPostmarkType,
     /**
      * @summary `envelopeInformation`.
+     * @description Recipient `Entity` copied from the
+     * notice of deposit (Response emptied on `RETR`, then
+     * filled by the recipient) plus body hashes and
+     * `EntityChallenge`. ITU-T Rec. X.1341 (09/2015)
+     * §9.2–§9.3.
      * @public
      * @readonly
      */

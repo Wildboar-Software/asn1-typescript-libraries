@@ -21,6 +21,15 @@ import {
  * @summary CipheredEnvelopeKeyType
  * @description
  *
+ * Wraps the random symmetric cipher key (RSCK, e.g. AES-256)
+ * used to encrypt the ENVELOPE body (§8.13). The recipient
+ * recovers RSCK with their private key (§9.3). The server
+ * never learns RSCK. Annex B does not define a separate
+ * component for the wrapped-key octets. ITU-T Rec. X.1341
+ * (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * §8.13, §9.3, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,24 +46,39 @@ export class CipheredEnvelopeKeyType {
   constructor(
     /**
      * @summary `algorithm`.
+     * @description Symmetric algorithm for the ENVELOPE
+     * body. The §8.15 example uses `"AES"`. XER attribute
+     * `Algorithm`. ITU-T Rec. X.1341 (09/2015) §8.13, §8.15.
      * @public
      * @readonly
      */
     readonly algorithm: String,
     /**
      * @summary `cipherededKey`.
+     * @description ASN.1 spelling of XSD `CipheredKey`
+     * (XER attribute). The §8.15 example uses `"RSA"` (the
+     * public-key wrap). The Recommendation does not further
+     * define this field. ITU-T Rec. X.1341 (09/2015) §8.15,
+     * Annex B.
      * @public
      * @readonly
      */
     readonly cipherededKey: String,
     /**
      * @summary `encoding`.
+     * @description Encoding of the wrapped key. The §8.15
+     * example uses `"base64-DER"`. XER attribute `Encoding`.
+     * ITU-T Rec. X.1341 (09/2015) §8.15, Annex B.
      * @public
      * @readonly
      */
     readonly encoding: String,
     /**
      * @summary `keySize`.
+     * @description Symmetric key size. The §8.15 example
+     * uses `"256"`. XER attribute `KeySize` (XSD: `int`;
+     * Annex B: `String`). ITU-T Rec. X.1341 (09/2015)
+     * §8.13, §8.15, Annex B.
      * @public
      * @readonly
      */

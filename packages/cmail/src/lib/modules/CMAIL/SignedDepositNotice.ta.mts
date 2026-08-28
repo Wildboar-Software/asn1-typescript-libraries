@@ -20,6 +20,14 @@ import {
  * @summary SignedDepositNotice
  * @description
  *
+ * Sender-and-server-signed notice of deposit. The sender
+ * decodes the server notice, builds a challenge per recipient,
+ * countersigns with its private key, and sends `DEPO` (base64).
+ * Evidence of deposit for the sender (Appendix I.1). ITU-T
+ * Rec. X.1341 (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Table 1, 3.2.5, Annex B, Figure A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

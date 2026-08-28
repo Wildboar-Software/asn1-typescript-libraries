@@ -30,6 +30,13 @@ import {
  * @summary EnvelopeInformationType
  * @description
  *
+ * Sender-built envelope metadata added when countersigning a
+ * deposit or transit notice: hashes of the clear and cipher
+ * ENVELOPE, Message-ID, per-party `Entity` (challenges), and
+ * optional signatures. ITU-T Rec. X.1341 (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B, Figure A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +53,29 @@ export class EnvelopeInformationType {
   constructor(
     /**
      * @summary `contentEnvelopeInformation`.
+     * @description Hashes of the unciphered and ciphered
+     * ENVELOPE, plus Message-ID. ITU-T Rec. X.1341 (09/2015)
+     * Annex B.
      * @public
      * @readonly
      */
     readonly contentEnvelopeInformation: ContentEnvelopeInformationType,
     /**
      * @summary `entities`.
+     * @description At least one `Entity` (sender,
+     * recipients, cc, transit). Each recipient's `Entity`
+     * is the challenge of Figure A.6. ITU-T Rec. X.1341
+     * (09/2015) §8.15.
      * @public
      * @readonly
      */
     readonly entities: EntitiesType,
     /**
      * @summary `signature`.
+     * @description Additional signatures
+     * (`SIZE(0..MAX)`). XSD uses XMLDSig `ds:SignatureType`;
+     * Annex B is `String`. XER: untagged, name `Signature`.
+     * ITU-T Rec. X.1341 (09/2015) Annex A–B.
      * @public
      * @readonly
      */

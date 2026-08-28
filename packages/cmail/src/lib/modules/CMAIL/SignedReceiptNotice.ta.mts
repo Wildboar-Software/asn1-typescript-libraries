@@ -20,6 +20,16 @@ import {
  * @summary SignedReceiptNotice
  * @description
  *
+ * Recipient-and-server-signed notice of reception. The
+ * recipient recovers RSCK, computes the secret-question
+ * response, countersigns, and sends `CHLG RESP` (base64).
+ * Evidence of reception for the sender (Appendix I.2).
+ * Forwarded between Cmail servers as `SEND NORP` when the
+ * parties are on different servers. ITU-T Rec. X.1341
+ * (09/2015)
+ * [§9.3](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * §9.5–§9.6, Table 2, 3.2.6, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

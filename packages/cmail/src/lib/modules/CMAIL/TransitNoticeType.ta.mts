@@ -20,6 +20,12 @@ import {
  * @summary TransitNoticeType
  * @description
  *
+ * Body of a (server-signed) notice of transit: digital
+ * postmark only. Same shape as `DepositNoticeType`. ITU-T
+ * Rec. X.1341 (09/2015)
+ * [§8.17](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B, Figure A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +39,9 @@ export class TransitNoticeType {
   constructor(
     /**
      * @summary `digitalPostmark`.
+     * @description Receiving Cmail server's postmark
+     * (envelope id, `DELV` type, MIME hash). ITU-T Rec.
+     * X.1341 (09/2015) §8.17.
      * @public
      * @readonly
      */

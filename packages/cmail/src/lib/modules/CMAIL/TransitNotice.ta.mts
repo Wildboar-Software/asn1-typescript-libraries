@@ -20,6 +20,14 @@ import {
  * @summary TransitNotice
  * @description
  *
+ * Notice of transit built by the Cmail server that received
+ * the ENVELOPE from another Cmail server (`SEND EVLP`). Same
+ * postmark content as a notice of deposit; signed with that
+ * server's private key. Returned as `250 Notice-of-transit`
+ * (base64). ITU-T Rec. X.1341 (09/2015)
+ * [§8.17](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * 3.2.7, Annex B, Figure A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

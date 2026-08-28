@@ -25,6 +25,15 @@ import {
  * @summary SecretQuestionType
  * @description
  *
+ * Challenge proving the recipient can open the ENVELOPE
+ * without giving the Cmail server RSCK. Hash
+ * RandomNumber||RSCK with `Response.algorithmIdentifier`.
+ * The server stores the expected result; on `RETR` it strips
+ * the Response content and waits for `CHLG RESP`. ITU-T Rec.
+ * X.1341 (09/2015)
+ * [§8.15](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * §9.2–§9.3, Annex B, Figure A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +48,19 @@ export class SecretQuestionType {
   constructor(
     /**
      * @summary `request`.
+     * @description May hold a `RandomNumber` concatenated
+     * with RSCK before hashing. ITU-T Rec. X.1341 (09/2015)
+     * §8.15, §9.3.
      * @public
      * @readonly
      */
     readonly request: RequestType,
     /**
      * @summary `response`.
+     * @description Hash algorithm for the challenge; the
+     * recipient writes the digest into the signed notice of
+     * reception. Emptied by the server on `RETR`. ITU-T Rec.
+     * X.1341 (09/2015) §8.15, §9.2–§9.3.
      * @public
      * @readonly
      */

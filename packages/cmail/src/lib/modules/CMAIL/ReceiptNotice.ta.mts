@@ -20,6 +20,16 @@ import {
  * @summary ReceiptNotice
  * @description
  *
+ * Server-signed notice of reception: operator postmark only
+ * (Annex B). On `RETR` of a `CertifiedMail` message the
+ * server returns a notice of reception (with challenge)
+ * instead of the ENVELOPE; the client checks the signature
+ * and sender certificate. Annex A XSD also puts
+ * `EnvelopeInformation` on `ReceiptNoticeType`; Annex B does
+ * not. ITU-T Rec. X.1341 (09/2015)
+ * [§9.2](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * 3.2.6, Annex B, Figure A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

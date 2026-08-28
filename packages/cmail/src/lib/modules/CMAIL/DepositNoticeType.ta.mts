@@ -20,6 +20,12 @@ import {
  * @summary DepositNoticeType
  * @description
  *
+ * Body of a server-signed notice of deposit: digital postmark
+ * only. Same shape as `TransitNoticeType`. ITU-T Rec. X.1341
+ * (09/2015)
+ * [§8.14](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * Annex B, Figure A.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +39,9 @@ export class DepositNoticeType {
   constructor(
     /**
      * @summary `digitalPostmark`.
+     * @description Server postmark (envelope id, `DELV` type,
+     * MIME hash) signed with the Cmail server's private key.
+     * ITU-T Rec. X.1341 (09/2015) §8.14.
      * @public
      * @readonly
      */

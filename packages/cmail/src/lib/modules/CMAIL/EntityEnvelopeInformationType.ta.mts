@@ -30,6 +30,13 @@ import {
  * @summary EntityEnvelopeInformationType
  * @description
  *
+ * Envelope information on a signed notice of reception:
+ * body hashes, the recipient `Entity`, and
+ * `EntityChallenge`. XSD names the first component
+ * `BodyEnvelopeInformation`. ITU-T Rec. X.1341 (09/2015)
+ * [§9.2](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * §9.3, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +52,29 @@ export class EntityEnvelopeInformationType {
   constructor(
     /**
      * @summary `bodyEnvelopeInformation`.
+     * @description Hashes of the unciphered and ciphered
+     * ENVELOPE, plus Message-ID. XER name
+     * `BodyEnvelopeInformation`. ITU-T Rec. X.1341 (09/2015)
+     * Annex B.
      * @public
      * @readonly
      */
     readonly bodyEnvelopeInformation: ContentEnvelopeInformationType,
     /**
      * @summary `entity`.
+     * @description Recipient `Entity` copied from the
+     * notice of deposit; `Response` emptied on `RETR`, then
+     * filled by the recipient. ITU-T Rec. X.1341 (09/2015)
+     * §9.2–§9.3.
      * @public
      * @readonly
      */
     readonly entity: EntityType,
     /**
      * @summary `entityChallenge`.
+     * @description Secret question plus signature for the
+     * reception challenge. ITU-T Rec. X.1341 (09/2015)
+     * §9.2–§9.3, Figure A.6.
      * @public
      * @readonly
      */

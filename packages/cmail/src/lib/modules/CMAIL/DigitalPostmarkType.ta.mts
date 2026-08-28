@@ -37,6 +37,14 @@ import {
  * @summary DigitalPostmarkType
  * @description
  *
+ * Cmail-server postmark on a notice: MIME-ENVELOPE hash,
+ * optional signatures, envelope id, and delivery type. Filled
+ * after `DATA` (notice of deposit, §8.14) or after a peer
+ * Cmail server receives the ENVELOPE (notice of transit,
+ * §8.17). ITU-T Rec. X.1341 (09/2015)
+ * [§8.14](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * §8.17, Annex B, Figure A.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,24 +66,41 @@ export class DigitalPostmarkType {
   constructor(
     /**
      * @summary `mimeMessageHash`.
+     * @description Hash(es) of the MIME ENVELOPE (`SIZE(1..MAX)`).
+     * §8.14 calls this the "mime hash". Annex B's
+     * `HashValueType` names only the algorithm. XER:
+     * untagged, name `MimeMessageHash`. ITU-T Rec. X.1341
+     * (09/2015) §8.14, Annex B.
      * @public
      * @readonly
      */
     readonly mimeMessageHash: HashValueType[],
     /**
      * @summary `signature`.
+     * @description Signatures over the postmark
+     * (`SIZE(0..MAX)`; may be empty before signing). XSD
+     * uses XMLDSig `ds:SignatureType`; Annex B is `String`.
+     * XER: untagged, name `Signature`. ITU-T Rec. X.1341
+     * (09/2015) §8.14, Annex A–B.
      * @public
      * @readonly
      */
     readonly signature: SignatureType[],
     /**
      * @summary `envelopeId`.
+     * @description Identifier of this ENVELOPE. XER
+     * attribute `EnvelopeId`. ITU-T Rec. X.1341 (09/2015)
+     * §8.14, Annex B.
      * @public
      * @readonly
      */
     readonly envelopeId: String,
     /**
      * @summary `deliveryType`.
+     * @description CMTP `DELV` mode. Root value
+     * `certifiedMail`; extensible (`...`). XER attribute
+     * `DeliveryType`, text `CertifiedMail`. ITU-T Rec.
+     * X.1341 (09/2015) Table 1, §8.3, Annex B.
      * @public
      * @readonly
      */

@@ -21,6 +21,13 @@ import {
  * @summary HashValueType
  * @description
  *
+ * Identifies a hash algorithm used on the MIME ENVELOPE or
+ * on unciphered/ciphered envelope content. Annex B (and
+ * Annex A) name only `algorithmOID`; digest octets are not
+ * a named component. XER text is the dotted OID. ITU-T Rec.
+ * X.1341 (09/2015)
+ * [Annex B](https://www.itu.int/rec/T-REC-X.1341-201509-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,6 +44,10 @@ export class HashValueType {
   constructor(
     /**
      * @summary `algorithmOID`.
+     * @description `sha-1` (XER `1.3.14.3.2.26`) or
+     * `sha-256` (XER `2.16.840.1.101.3.4.2.1`). XER
+     * attribute `AlgorithmOID`. ITU-T Rec. X.1341 (09/2015)
+     * Annex B.
      * @public
      * @readonly
      */

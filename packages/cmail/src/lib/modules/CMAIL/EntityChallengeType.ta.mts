@@ -25,6 +25,12 @@ import {
  * @summary EntityChallengeType
  * @description
  *
+ * Reception challenge: secret question plus a signature.
+ * Carried on `SignedReceiptNotice`. ITU-T Rec. X.1341
+ * (09/2015)
+ * [§9.2](https://www.itu.int/rec/T-REC-X.1341-201509-I),
+ * §9.3, Annex B, Figure A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,18 @@ export class EntityChallengeType {
   constructor(
     /**
      * @summary `secretQuestion`.
+     * @description Random request plus hash algorithm for
+     * RandomNumber||RSCK (digest filled by the recipient).
+     * ITU-T Rec. X.1341 (09/2015) §9.2–§9.3.
      * @public
      * @readonly
      */
     readonly secretQuestion: SecretQuestionType,
     /**
      * @summary `signature`.
+     * @description Signature over the challenge. XSD uses
+     * XMLDSig `ds:SignatureType`; Annex B is `String`.
+     * ITU-T Rec. X.1341 (09/2015) Annex A–B.
      * @public
      * @readonly
      */
