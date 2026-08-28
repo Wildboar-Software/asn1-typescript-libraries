@@ -16,6 +16,10 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  * @summary gulsSecurityTransformations
  * @description
  *
+ * OID of the `GulsSecurityTransformations` module
+ * (`{modules 3}`). ITU-T Rec. X.830 (04/95) [Annex D](https://www.itu.int/rec/T-REC-X.830-199504-I),
+ * Annex F.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

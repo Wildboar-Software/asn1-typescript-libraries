@@ -18,6 +18,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary KEY_INFORMATION
  * @description
  *
+ * Key-information formats for a class of protection mechanism
+ * (e.g. symmetric vs asymmetric). Used as a parameter of
+ * `gulsSignedTransformation` and `gulsSignatureTransformation`.
+ * `local` `&kiClass` values are defined only in this module;
+ * `global` values are defined elsewhere. ITU-T Rec. X.830 (04/95)
+ * [Annex D.6](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -72,10 +79,18 @@ export interface KEY_INFORMATION<
   >;
   /**
    * @summary &kiClass
+   * @description
+   *
+   * `local` integer (this module only) or `global` OID.
+   * UNIQUE. ITU-T Rec. X.830 (04/95) Annex D.6.
    */
   readonly '&kiClass'?: { local: INTEGER } | { global: OBJECT_IDENTIFIER };
   /**
    * @summary &KiType
+   * @description
+   *
+   * Syntax of the key-information value for this class.
+   * ITU-T Rec. X.830 (04/95) Annex D.6.
    */
   readonly '&KiType': KiType;
 }

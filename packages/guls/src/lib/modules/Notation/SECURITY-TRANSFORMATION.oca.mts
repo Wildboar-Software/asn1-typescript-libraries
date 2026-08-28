@@ -17,6 +17,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SECURITY_TRANSFORMATION
  * @description
  *
+ * Information object class for one security transformation: an
+ * encoding process (and usually a decoding process) applied to
+ * protect data in transfer or storage. Identified by OID; used
+ * with the generic protecting transfer syntax (X.833) and/or
+ * `PROTECTED`. Default initial encoding rules are CER. A
+ * complete specification must also describe encoding/decoding
+ * processes, local inputs, outputs, parameters, qualifiers, and
+ * errors. ITU-T Rec. X.830 (04/95) [§7.2](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -114,26 +123,56 @@ export interface SECURITY_TRANSFORMATION<
   >;
   /**
    * @summary &sT-Identifier
+   * @description
+   *
+   * OID used in protocol to name this transformation.
+   * UNIQUE. ITU-T Rec. X.830 (04/95) §7.2, Annex A.
    */
   readonly '&sT-Identifier'?: OBJECT_IDENTIFIER;
   /**
    * @summary &initialEncodingRules
+   * @description
+   *
+   * Default rules used to encode an ASN.1 unprotected item
+   * to a bit string before the transformation encoding
+   * process. Default is CER; a transformation may override
+   * this with a static parameter. ITU-T Rec. X.830 (04/95)
+   * §7.1.4, §7.2.
    */
   readonly '&initialEncodingRules'?: OBJECT_IDENTIFIER;
   /**
    * @summary &StaticUnprotectedParm
+   * @description
+   *
+   * Type of static unprotected parameters (constant for a
+   * security association; sent when the transformation is
+   * first applied). ITU-T Rec. X.830 (04/95) §7.1.3, §7.2.
    */
   readonly '&StaticUnprotectedParm': StaticUnprotectedParm;
   /**
    * @summary &DynamicUnprotectedParm
+   * @description
+   *
+   * Type of dynamic unprotected parameters (may change
+   * during a security association). ITU-T Rec. X.830 (04/95)
+   * §7.1.3, §7.2.
    */
   readonly '&DynamicUnprotectedParm': DynamicUnprotectedParm;
   /**
    * @summary &XformedDataType
+   * @description
+   *
+   * Type of the value produced by the transformation
+   * encoding process. ITU-T Rec. X.830 (04/95) §7.1, §7.2.
    */
   readonly '&XformedDataType': XformedDataType;
   /**
    * @summary &QualifierType
+   * @description
+   *
+   * Type of the qualifier used with `PROTECTED-Q` (e.g. a
+   * security-association id, algorithm, or key id).
+   * ITU-T Rec. X.830 (04/95) §7.2, §8.2.
    */
   readonly '&QualifierType': QualifierType;
 }

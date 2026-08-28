@@ -27,6 +27,25 @@ import {
  * @summary PROTECTED
  * @description
  *
+ * Selective-field protection of `BaseType` under a
+ * `PROTECTION-MAPPING`. Alternatives:
+ *
+ * - `dirEncrypt` / `dirSign` — bit-compatible with X.509
+ *   `ENCRYPTED` / `SIGNED` / `SIGNATURE`; use only with the
+ *   corresponding Directory transformations.
+ * - `noTransform` — unprotected; only if
+ *   `&bypassPermitted` is TRUE and policy allows.
+ * - `direct` — inlines X.833 `SyntaxStructure` using the same
+ *   encoding rules as the surrounding ASN.1; supports
+ *   externally-established or single-item-bound associations,
+ *   not a negotiated presentation context. Preferred unless
+ *   another alternative applies.
+ * - `embedded` — `EMBEDDED PDV` with the mapping's protecting
+ *   transfer syntax; needed to bind protection to a negotiated
+ *   presentation context or to use a non-X.833 syntax.
+ *
+ * ITU-T Rec. X.830 (04/95) [§8.1](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

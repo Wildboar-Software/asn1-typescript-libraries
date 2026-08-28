@@ -21,6 +21,14 @@ import { type SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
  * @summary dirAuthenticationOneWay
  * @description
  *
+ * Directory Authentication Exchange (One-way): a single `credentials`
+ * SEI from claimant to verifier, for simple or strong unilateral
+ * entity authentication as in the Directory protocol. No errors
+ * are defined here; error signalling is left to other application
+ * protocol. Credentials and semantics: ITU-T Rec. X.511 |
+ * ISO/IEC 9594-3 and ITU-T Rec. X.509 | ISO/IEC 9594-8. ITU-T
+ * Rec. X.830 (04/95) [Annex C.1](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

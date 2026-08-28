@@ -16,6 +16,10 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  * @summary genericProtectingTransferSyntax
  * @description
  *
+ * OID of the `GenericProtectingTransferSyntax` module
+ * (`{modules 7}`). ITU-T Rec. X.830 (04/95) Annex F; ITU-T Rec.
+ * X.833 (04/95) [§6](https://www.itu.int/rec/T-REC-X.833-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

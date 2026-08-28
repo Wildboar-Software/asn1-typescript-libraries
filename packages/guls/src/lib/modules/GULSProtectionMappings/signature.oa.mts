@@ -19,6 +19,13 @@ import { asymmetricKeyInformation } from '../GulsSecurityTransformations/asymmet
  * @summary signature
  * @description
  *
+ * Maps `PROTECTED {BaseType, signature}` to
+ * `gulsSignatureTransformation` with symmetric and asymmetric
+ * key information. Services: data-origin authentication,
+ * integrity, and (in certain situations) non-repudiation.
+ * Distinct from Directory `signature`. ITU-T Rec. X.830 (04/95)
+ * [Annex E](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

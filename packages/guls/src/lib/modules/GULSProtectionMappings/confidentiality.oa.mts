@@ -17,6 +17,12 @@ import { type PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs'
  * @summary confidentiality
  * @description
  *
+ * Maps `PROTECTED {BaseType, confidentiality}` to
+ * `dirEncryptedTransformation`, with bypass permitted: the
+ * encoder may use `noTransform` according to local security
+ * policy. Service: confidentiality. ITU-T Rec. X.830 (04/95)
+ * [Annex E](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

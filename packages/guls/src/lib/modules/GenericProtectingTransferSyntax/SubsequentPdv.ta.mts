@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SubsequentPdv
  * @description
  *
+ * Subsequent PDV in a protecting presentation context. The
+ * transformation is that of the context (from the first PDV).
+ * On resynchronization, dynamic parameters should be
+ * re-established if the sender cannot tell whether the peer
+ * applied recent changes. ITU-T Rec. X.833 (04/95)
+ * [§5.4, §6, §8](https://www.itu.int/rec/T-REC-X.833-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +40,23 @@ export class SubsequentPdv {
   constructor(
     /**
      * @summary `dynamicUnprotParm`.
+     * @description
+     *
+     * Dynamic unprotected parameters; the transformation is
+     * implied by the presentation context. ITU-T Rec. X.833
+     * (04/95) §6.
+     *
      * @public
      * @readonly
      */
     readonly dynamicUnprotParm: OPTIONAL<_Element>,
     /**
      * @summary `xformedData`.
+     * @description
+     *
+     * `&XformedDataType` of the context's transformation.
+     * ITU-T Rec. X.833 (04/95) §6.
+     *
      * @public
      * @readonly
      */

@@ -22,6 +22,15 @@ import { type SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATIO
  * @summary dirSignatureTransformation
  * @description
  *
+ * Directory SIGNATURE transformation: functionally equivalent to
+ * X.509 `SIGNATURE`. Digital signature with appendix; the
+ * transformed item is the appendix only. Verification requires
+ * the unprotected item as a local input. Initial encoding rules:
+ * DER. Signature-verify failure is an error. Services:
+ * data-origin authentication, integrity, and (in certain
+ * situations) non-repudiation. ITU-T Rec. X.830 (04/95)
+ * [Annex D.3](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

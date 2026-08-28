@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GeneralProblem
  * @description
  *
+ * SE-P-ABORT problem not peculiar to one APDU type. ITU-T Rec.
+ * X.832 (04/95) [§6.4.1, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +36,9 @@ export enum _enum_for_GeneralProblem {
  * @summary GeneralProblem
  * @description
  *
+ * SE-P-ABORT problem not peculiar to one APDU type. ITU-T Rec.
+ * X.832 (04/95) [§6.4.1, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,6 +54,9 @@ export type GeneralProblem = _enum_for_GeneralProblem;
  * @summary GeneralProblem
  * @description
  *
+ * SE-P-ABORT problem not peculiar to one APDU type. ITU-T Rec.
+ * X.832 (04/95) [§6.4.1, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -61,6 +70,11 @@ export const GeneralProblem = _enum_for_GeneralProblem;
 
 /**
  * @summary GeneralProblem_invalidAPDU
+ * @description
+ *
+ * `invalidAPDU` (0): structure and/or encoding is not a
+ * SETR, SEAB, or SEPA. ITU-T Rec. X.832 (04/95) §6.4.1.
+ *
  * @constant
  * @type {number}
  */

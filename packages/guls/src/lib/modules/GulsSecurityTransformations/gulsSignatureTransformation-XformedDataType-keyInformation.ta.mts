@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary gulsSignatureTransformation_XformedDataType_keyInformation
  * @description
  *
+ * Open type pairing a `KEY-INFORMATION` class with its
+ * `&KiType` value, as carried in GULS SIGNATURE. ITU-T Rec.
+ * X.830 (04/95) [Annex D.5](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +32,22 @@ export class gulsSignatureTransformation_XformedDataType_keyInformation {
   constructor(
     /**
      * @summary `kiClass`.
+     * @description
+     *
+     * Which `KEY-INFORMATION` object applies. ITU-T Rec.
+     * X.830 (04/95) Annex D.5.
+     *
      * @public
      * @readonly
      */
     readonly kiClass: { local: INTEGER } | { global: OBJECT_IDENTIFIER },
     /**
      * @summary `keyInfo`.
+     * @description
+     *
+     * Value of that object's `&KiType`. ITU-T Rec. X.830
+     * (04/95) Annex D.5.
+     *
      * @public
      * @readonly
      */

@@ -22,6 +22,18 @@ import { type SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATIO
  * @summary dirSignedTransformation
  * @description
  *
+ * Directory SIGNED transformation: functionally equivalent to
+ * X.509 `SIGNED`. Digital signature with appendix; the
+ * transformed item includes both the unprotected data and the
+ * appendix. Hash of the DER encoding is BER-encoded then
+ * enciphered. Initial encoding rules: DER. Signature-verify
+ * failure is an error. Algorithm fields in the transformed item
+ * are unprotected; the spec recommends obtaining algorithm and
+ * parameters as local inputs. Services: data-origin
+ * authentication, integrity, and (in certain situations)
+ * non-repudiation. ITU-T Rec. X.830 (04/95)
+ * [Annex D.2](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

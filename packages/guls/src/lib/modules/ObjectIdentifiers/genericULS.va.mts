@@ -17,6 +17,11 @@ import {
  * @summary genericULS
  * @description
  *
+ * Root of the GULS OID tree `{joint-iso-itu-t genericULS(20)}`.
+ * All OIDs in this series of Recommendations hang under this
+ * arc. ITU-T Rec. X.830 (04/95)
+ * [Annex F](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

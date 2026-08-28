@@ -16,6 +16,12 @@ import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
  * @summary securityTransformations
  * @description
  *
+ * Arc for registered security-transformation OIDs
+ * (`{genericULS 5}`). GULS assigns `dir-encrypted(1)`,
+ * `dir-signed(2)`, `dir-signature(3)`, `guls-signed(4)`,
+ * `guls-signature(5)`. ITU-T Rec. X.830 (04/95)
+ * [Annex F](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex D; Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

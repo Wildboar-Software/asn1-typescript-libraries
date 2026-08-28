@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary gulsSignedTransformation_XformedDataType
  * @description
  *
+ * Transformed item of `gulsSignedTransformation`. The
+ * `EMBEDDED PDV` transfer syntax is that indicated by
+ * `initEncRules` inside the intermediate value. ITU-T Rec. X.830
+ * (04/95) [Annex D.4](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +34,23 @@ export class gulsSignedTransformation_XformedDataType {
   constructor(
     /**
      * @summary `intermediateValue`.
+     * @description
+     *
+     * `IntermediateType` encoded with the initial encoding
+     * rules; this encoding is what is signed or sealed. ITU-T
+     * Rec. X.830 (04/95) Annex D.4.
+     *
      * @public
      * @readonly
      */
     readonly intermediateValue: EMBEDDED_PDV,
     /**
      * @summary `appendix`.
+     * @description
+     *
+     * Signature or seal over that encoding (D.4 procedure).
+     * ITU-T Rec. X.830 (04/95) Annex D.4.
+     *
      * @public
      * @readonly
      */

@@ -16,6 +16,11 @@ import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
  * @summary securityExchanges
  * @description
  *
+ * Arc for registered security-exchange OIDs (`{genericULS 4}`).
+ * GULS assigns `dir-authent-one-way(1)`,
+ * `dir-authent-two-way(2)`, `simple-negotiation-se(3)`. ITU-T
+ * Rec. X.830 (04/95) [Annex F](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex C; Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

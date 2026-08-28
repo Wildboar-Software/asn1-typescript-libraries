@@ -19,6 +19,13 @@ import { type SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATIO
  * @summary dirEncryptedTransformation
  * @description
  *
+ * Directory ENCRYPTED transformation: functionally equivalent to
+ * X.509 `ENCRYPTED`. Enciphers an octet string to a BIT STRING
+ * (initial encoding rules: BER). Algorithm, parameters, and keys
+ * are local inputs; no transferred parameters or qualifiers.
+ * Service: confidentiality. No error behaviour specified. ITU-T
+ * Rec. X.830 (04/95) [Annex D.1](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

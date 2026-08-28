@@ -24,6 +24,18 @@ import { type KEY_INFORMATION } from './KEY-INFORMATION.oca.mjs';
  * @summary gulsSignatureTransformation
  * @description
  *
+ * GULS SIGNATURE: signature or seal with appendix; the
+ * transformed item is the appendix and protected parameters, not
+ * the unprotected data. Compared with Directory SIGNATURE: any
+ * appendix technique; any single-valued encoding rules (default
+ * CER); protected algorithm/key parameters; distinct signature
+ * vs hash OIDs; simpler encode/decode. Verification needs the
+ * unprotected item as a local input. Parameterized by supported
+ * `KEY-INFORMATION` classes. Verify failure is an error.
+ * Services: data-origin authentication, integrity, and (in
+ * certain situations) non-repudiation. ITU-T Rec. X.830 (04/95)
+ * [Annex D.5](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

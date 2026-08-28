@@ -20,6 +20,10 @@ import { type SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.mjs';
  * @summary offeredIds
  * @description
  *
+ * First SEI of `simpleNegotiationSE` (item-id 1): OIDs of
+ * security exchanges the initiator proposes. ITU-T Rec. X.830
+ * (04/95) [Annex C.3](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

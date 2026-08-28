@@ -17,6 +17,11 @@ import { type SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
  * @summary SEC_EXCHG_ITEM
  * @description
  *
+ * One Security Exchange Item (SEI): the ASN.1 type transferred,
+ * its item-id (1, 2, 3, …), and optional errors the receiver may
+ * signal. An SEI may itself contain `PROTECTED` components.
+ * ITU-T Rec. X.830 (04/95) [§6.2](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -67,14 +72,27 @@ export interface SEC_EXCHG_ITEM<
   >;
   /**
    * @summary &ItemType
+   * @description
+   *
+   * Abstract syntax of this SEI. ITU-T Rec. X.830 (04/95)
+   * §6.2, Annex A.
    */
   readonly '&ItemType': ItemType;
   /**
    * @summary &itemId
+   * @description
+   *
+   * Integer identifying this item within the exchange
+   * (typically 1, 2, 3, …). ITU-T Rec. X.830 (04/95) §6.2,
+   * Annex A.
    */
   readonly '&itemId'?: INTEGER;
   /**
    * @summary &Errors
+   * @description
+   *
+   * Errors that may result from transferring this SEI.
+   * ITU-T Rec. X.830 (04/95) §6.2, Annex A.
    */
   readonly '&Errors'?: SE_ERROR[];
 }

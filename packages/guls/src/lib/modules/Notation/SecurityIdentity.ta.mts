@@ -21,6 +21,11 @@ import {
  * @summary SecurityIdentity
  * @description
  *
+ * Globally-unique identity of an entity: a Directory `Name` or
+ * an OID. Used for systems that assign externally-established
+ * security-association identifiers, and for other security
+ * naming. ITU-T Rec. X.830 (04/95) Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

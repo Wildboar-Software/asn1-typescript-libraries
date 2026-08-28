@@ -18,6 +18,13 @@ import { type SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATIO
  * @summary PROTECTION_MAPPING
  * @description
  *
+ * Maps a named protection requirement in an abstract syntax to
+ * one or more `SECURITY-TRANSFORMATION`s. The abstract syntax
+ * stays mechanism-independent; the mapping (and thus the
+ * transformation) may differ by application-context. The encoder
+ * picks among the listed transformations using local policy.
+ * ITU-T Rec. X.830 (04/95) [§8.3–§8.4](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -72,14 +79,29 @@ export interface PROTECTION_MAPPING {
   >;
   /**
    * @summary &SecurityTransformation
+   * @description
+   *
+   * Object set of transformations that satisfy this mapping.
+   * The encoder chooses one. ITU-T Rec. X.830 (04/95) §8.3,
+   * §8.4.
    */
   readonly '&SecurityTransformation'?: SECURITY_TRANSFORMATION[];
   /**
    * @summary &protTransferSyntax
+   * @description
+   *
+   * Protecting transfer syntax OID for the `embedded`
+   * `PROTECTED` alternative. Default is
+   * `generalTransferSyntax`. ITU-T Rec. X.830 (04/95) §8.4.
    */
   readonly '&protTransferSyntax'?: OBJECT_IDENTIFIER;
   /**
    * @summary &bypassPermitted
+   * @description
+   *
+   * If true, the `noTransform` `PROTECTED` alternative may
+   * be used (lower-layer protection and trusted relays).
+   * Default FALSE. ITU-T Rec. X.830 (04/95) §8.1, §8.4.
    */
   readonly '&bypassPermitted'?: BOOLEAN;
 }

@@ -25,6 +25,11 @@ import {
  * @summary authenticationFailure
  * @description
  *
+ * Error on `initiatorCredentials`. Parameter is Directory
+ * `SecurityProblem`; error-code `local:1`. The responder may
+ * instead abort without this code. ITU-T Rec. X.830 (04/95)
+ * [Annex C.2](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,10 @@ import { type KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMA
  * @summary symmetricKeyInformation
  * @description
  *
+ * `KEY-INFORMATION` for symmetric keys (`local:0`): entity
+ * identity plus integer key identifier. ITU-T Rec. X.830 (04/95)
+ * [Annex D.6](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

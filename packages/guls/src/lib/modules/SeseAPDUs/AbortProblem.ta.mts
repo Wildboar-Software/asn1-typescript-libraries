@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AbortProblem
  * @description
  *
+ * SE-P-ABORT problem resulting from a received SE-U-ABORT.
+ * ITU-T Rec. X.832 (04/95) [§6.4.3, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +42,9 @@ export enum _enum_for_AbortProblem {
  * @summary AbortProblem
  * @description
  *
+ * SE-P-ABORT problem resulting from a received SE-U-ABORT.
+ * ITU-T Rec. X.832 (04/95) [§6.4.3, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,6 +62,9 @@ export type AbortProblem = _enum_for_AbortProblem;
  * @summary AbortProblem
  * @description
  *
+ * SE-P-ABORT problem resulting from a received SE-U-ABORT.
+ * ITU-T Rec. X.832 (04/95) [§6.4.3, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -71,6 +80,12 @@ export const AbortProblem = _enum_for_AbortProblem;
 
 /**
  * @summary AbortProblem_unrecognizedInvocationId
+ * @description
+ *
+ * `unrecognizedInvocationId` (0): id does not name an
+ * active or just-completed transfer. ITU-T Rec. X.832
+ * (04/95) §6.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +104,11 @@ export const unrecognizedInvocationId: AbortProblem =
 
 /**
  * @summary AbortProblem_abortUnexpected
+ * @description
+ *
+ * `abortUnexpected` (1): the exchange does not generate
+ * an abort for this SEI. ITU-T Rec. X.832 (04/95) §6.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +127,11 @@ export const abortUnexpected: AbortProblem =
 
 /**
  * @summary AbortProblem_unrecognizedError
+ * @description
+ *
+ * `unrecognizedError` (2): the exchange does not generate
+ * this error. ITU-T Rec. X.832 (04/95) §6.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +150,12 @@ export const unrecognizedError: AbortProblem =
 
 /**
  * @summary AbortProblem_unexpectedError
+ * @description
+ *
+ * `unexpectedError` (3): the exchange does not generate
+ * this error for this SEI. ITU-T Rec. X.832 (04/95)
+ * §6.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +174,12 @@ export const unexpectedError: AbortProblem =
 
 /**
  * @summary AbortProblem_mistypedErrorParameter
+ * @description
+ *
+ * `mistypedErrorParameter` (4): error parameter type does
+ * not match the error definition. ITU-T Rec. X.832
+ * (04/95) §6.4.3.
+ *
  * @constant
  * @type {number}
  */

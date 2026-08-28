@@ -16,6 +16,14 @@ import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
  * @summary specificTransferSyntax
  * @description
  *
+ * Prefix for a protecting transfer syntax that stipulates a
+ * specific set of encoding rules for `SyntaxStructure`. Remaining
+ * arcs match those after `{joint-iso-itu-t asn1(1)}` (e.g.
+ * `{… specificTransferSyntax(3) ber(1)}` for BER,
+ * `{… ber-derived(2) distinguished-encoding(1)}` for DER).
+ * ITU-T Rec. X.830 (04/95) [Annex F](https://www.itu.int/rec/T-REC-X.830-199504-I); ITU-T Rec. X.833
+ * (04/95) [§9](https://www.itu.int/rec/T-REC-X.833-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

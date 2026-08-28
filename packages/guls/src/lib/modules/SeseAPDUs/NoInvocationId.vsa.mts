@@ -20,6 +20,10 @@ import {
  * @summary NoInvocationId
  * @description
  *
+ * Invocation-id set containing only `noInvocationId`. Pass as
+ * `InvocationIdSet` when distinct invocations never overlap.
+ * ITU-T Rec. X.832 (04/95) [§7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

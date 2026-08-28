@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InvocationId
  * @description
  *
+ * Identifies a security-exchange invocation so overlapping
+ * exchanges can be correlated. `present` carries the integer;
+ * `absent` is used when correlation is not needed. ITU-T Rec.
+ * X.832 (04/95) [§7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

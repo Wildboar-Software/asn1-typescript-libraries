@@ -20,6 +20,11 @@ import { type KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMA
  * @summary asymmetricKeyInformation
  * @description
  *
+ * `KEY-INFORMATION` for asymmetric keys (`local:1`). All
+ * components of `&KiType` are optional; typical use is a
+ * certificate (issuer + serial) and/or signer name and key bits.
+ * ITU-T Rec. X.830 (04/95) [Annex D.6](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

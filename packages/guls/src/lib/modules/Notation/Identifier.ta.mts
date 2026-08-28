@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Identifier
  * @description
  *
+ * Local integer or global OID. Names a security exchange
+ * (`SECURITY-EXCHANGE.&sE-Identifier`) or an SE-ERROR
+ * (`&errorCode`). ITU-T Rec. X.830 (04/95) [§6.2](https://www.itu.int/rec/T-REC-X.830-199504-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

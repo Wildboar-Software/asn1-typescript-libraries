@@ -16,6 +16,11 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  * @summary dirProtectionMappings
  * @description
  *
+ * OID of the `DirectoryProtectionMappings` module
+ * (`{modules 4}`): mappings bit-compatible with X.509
+ * `ENCRYPTED` / `SIGNED` / `SIGNATURE`. ITU-T Rec. X.830 (04/95)
+ * [Annex E](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex F.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

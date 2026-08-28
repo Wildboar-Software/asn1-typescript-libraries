@@ -22,6 +22,14 @@ import { type SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
  * @summary dirAuthenticationTwoWay
  * @description
  *
+ * Directory Authentication Exchange (Two-way): initiator sends
+ * `initiatorCredentials`; if that fails, the responder should
+ * abort (optionally with `authenticationFailure`). Otherwise it
+ * returns `responderCredentials`. No errors are defined for the
+ * second SEI. For simple or strong mutual entity authentication
+ * as in the Directory protocol. ITU-T Rec. X.830 (04/95)
+ * [Annex C.2](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

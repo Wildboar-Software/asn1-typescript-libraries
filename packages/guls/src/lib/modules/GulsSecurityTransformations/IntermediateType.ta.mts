@@ -28,6 +28,12 @@ import {
  * @summary IntermediateType
  * @description
  *
+ * Protected-parameter wrapper signed/sealed by the GULS SIGNED
+ * and SIGNATURE transformations. Also used as the intermediate
+ * value for GULS SIGNATURE even though it is not transferred in
+ * that transformed item. ITU-T Rec. X.830 (04/95)
+ * [Annex D.4](https://www.itu.int/rec/T-REC-X.830-199504-I), D.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -69,30 +75,58 @@ export class IntermediateType {
   constructor(
     /**
      * @summary `unprotectedItem`.
+     * @description
+     *
+     * Item being protected, or a BIT STRING if it is not from
+     * an ASN.1 abstract syntax. ITU-T Rec. X.830 (04/95)
+     * Annex D.4.
+     *
      * @public
      * @readonly
      */
     readonly unprotectedItem: _Element,
     /**
      * @summary `initEncRules`.
+     * @description
+     *
+     * Initial encoding rules used on this intermediate value.
+     * Default CER; overrides the transformation default.
+     * ITU-T Rec. X.830 (04/95) §7.1.4, Annex D.4.
+     *
      * @public
      * @readonly
      */
     readonly initEncRules?: OPTIONAL<OBJECT_IDENTIFIER>,
     /**
      * @summary `signOrSealAlgorithm`.
+     * @description
+     *
+     * Signing or sealing algorithm and its parameters. ITU-T
+     * Rec. X.830 (04/95) Annex D.4.
+     *
      * @public
      * @readonly
      */
     readonly signOrSealAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Hash function, if one is required and not implied by
+     * `signOrSealAlgorithm`. ITU-T Rec. X.830 (04/95)
+     * Annex D.4.
+     *
      * @public
      * @readonly
      */
     readonly hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `keyInformation`.
+     * @description
+     *
+     * Key material in a `KEY-INFORMATION` format from the
+     * supported classes. ITU-T Rec. X.830 (04/95) Annex D.4.
+     *
      * @public
      * @readonly
      */

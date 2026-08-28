@@ -22,6 +22,14 @@ import { type SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
  * @summary simpleNegotiationSE
  * @description
  *
+ * Negotiation-SE: initiator proposes security-exchange OIDs in
+ * `offeredIds`; responder returns which of those will be used in
+ * `acceptedIds`. An application-context that supports several
+ * exchanges for the same services uses this to pick among them,
+ * and may repeat it later to change the selection. Contexts that
+ * need negotiation must specify use of this exchange. ITU-T Rec.
+ * X.830 (04/95) [Annex C.3](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

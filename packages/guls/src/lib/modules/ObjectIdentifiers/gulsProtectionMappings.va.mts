@@ -16,6 +16,10 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  * @summary gulsProtectionMappings
  * @description
  *
+ * OID of the `GULSProtectionMappings` module (`{modules 5}`):
+ * more general mappings than the Directory ones. ITU-T Rec.
+ * X.830 (04/95) [Annex E](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex F.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -22,6 +22,10 @@ import {
  * @summary dirSignedTransformation_XformedDataType
  * @description
  *
+ * Transformed item of `dirSignedTransformation`: unprotected
+ * value plus signature appendix. ITU-T Rec. X.830 (04/95)
+ * [Annex D.2](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +37,34 @@ export class dirSignedTransformation_XformedDataType {
   constructor(
     /**
      * @summary `toBeSigned`.
+     * @description
+     *
+     * Unprotected item (the to-be-signed type). ITU-T Rec.
+     * X.830 (04/95) Annex D.2.
+     *
      * @public
      * @readonly
      */
     readonly toBeSigned: _Element,
     /**
      * @summary `algorithmId`.
+     * @description
+     *
+     * Algorithms used to compute the signature. Carried
+     * unprotected; prefer local inputs for verification.
+     * ITU-T Rec. X.830 (04/95) Annex D.2.
+     *
      * @public
      * @readonly
      */
     readonly algorithmId: AlgorithmIdentifier,
     /**
      * @summary `encipheredHash`.
+     * @description
+     *
+     * BER encoding of the hash, enciphered. ITU-T Rec. X.830
+     * (04/95) Annex D.2.
+     *
      * @public
      * @readonly
      */

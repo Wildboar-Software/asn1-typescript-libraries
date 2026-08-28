@@ -16,6 +16,11 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  * @summary notation
  * @description
  *
+ * OID of the `Notation` module (`{modules 1}`): classes and
+ * parameterized types for exchanges, transformations, and
+ * `PROTECTED`. ITU-T Rec. X.830 (04/95) [Annex A](https://www.itu.int/rec/T-REC-X.830-199504-I),
+ * Annex F.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

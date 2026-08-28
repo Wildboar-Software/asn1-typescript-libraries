@@ -17,6 +17,13 @@ import { type PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs'
  * @summary signed
  * @description
  *
+ * Directory mapping so `PROTECTED {BaseType, signed}` replaces
+ * X.509 `SIGNED {BaseType}` with an identical bit-encoding
+ * (`dirSignedTransformation`). Services: data-origin
+ * authentication, integrity, and (in certain situations)
+ * non-repudiation. Distinct from GULS `signed`. ITU-T Rec.
+ * X.830 (04/95) [Annex E](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

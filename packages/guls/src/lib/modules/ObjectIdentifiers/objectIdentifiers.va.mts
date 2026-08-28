@@ -16,6 +16,9 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  * @summary objectIdentifiers
  * @description
  *
+ * OID of the `ObjectIdentifiers` module (`{modules 0}`). ITU-T
+ * Rec. X.830 (04/95) [Annex F](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

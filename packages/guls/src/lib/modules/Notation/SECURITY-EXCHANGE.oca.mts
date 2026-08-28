@@ -21,6 +21,14 @@ import {
  * @summary SECURITY_EXCHANGE
  * @description
  *
+ * Information object class for one security exchange: a sequence
+ * of Security Exchange Items (SEIs) identified by a local integer
+ * or a global OID. Used by SESE so application ASEs stay
+ * mechanism-independent. Exchanges are Alternating (one transfer
+ * at a time, directions alternate) or Arbitrary (no direction
+ * constraint; both directions may be active). ITU-T Rec. X.830
+ * (04/95) [§6](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,10 +78,18 @@ export interface SECURITY_EXCHANGE {
   >;
   /**
    * @summary &SE-Items
+   * @description
+   *
+   * Object set of `SEC-EXCHG-ITEM`s that make up the
+   * exchange. ITU-T Rec. X.830 (04/95) §6.2, Annex A.
    */
   readonly '&SE-Items'?: SEC_EXCHG_ITEM[];
   /**
    * @summary &sE-Identifier
+   * @description
+   *
+   * Local integer or global OID naming this exchange in
+   * protocol. UNIQUE. ITU-T Rec. X.830 (04/95) §6.2, Annex A.
    */
   readonly '&sE-Identifier'?: Identifier;
 }

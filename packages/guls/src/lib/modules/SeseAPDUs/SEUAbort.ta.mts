@@ -27,6 +27,13 @@ import {
  * @summary SEUAbort
  * @description
  *
+ * SE-U-ABORT APDU (SEAB). User-initiated abort of a security
+ * exchange in progress; may also abnormally release the
+ * ASO-association (possible loss of information in transit).
+ * With fatality set, maps to A-ABORT unless the context says
+ * otherwise. ITU-T Rec. X.832 (04/95)
+ * [§6.3, §7.1, §8.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,18 +60,34 @@ export class SEUAbort {
   constructor(
     /**
      * @summary `invocationId`.
+     * @description
+     *
+     * Must identify an active or just-completed security
+     * exchange. Default `noInvocationId`. ITU-T Rec. X.832
+     * (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly invocationId?: OPTIONAL<InvocationId>,
     /**
      * @summary `itemIdentifier`.
+     * @description
+     *
+     * Present only when the abort follows receipt of a
+     * SETransfer. ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly itemIdentifier?: OPTIONAL<_Element>,
     /**
      * @summary `errors`.
+     * @description
+     *
+     * One or more SE-ERRORs (multiple codes possible).
+     * ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */

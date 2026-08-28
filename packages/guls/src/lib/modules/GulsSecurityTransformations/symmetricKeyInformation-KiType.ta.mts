@@ -21,6 +21,9 @@ import {
  * @summary symmetricKeyInformation_KiType
  * @description
  *
+ * Symmetric-key information: who holds the key, and which key.
+ * ITU-T Rec. X.830 (04/95) [Annex D.6](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +35,22 @@ export class symmetricKeyInformation_KiType {
   constructor(
     /**
      * @summary `entityId`.
+     * @description
+     *
+     * Entity associated with the symmetric key. ITU-T Rec.
+     * X.830 (04/95) Annex D.6.
+     *
      * @public
      * @readonly
      */
     readonly entityId: SecurityIdentity,
     /**
      * @summary `keyIdentifier`.
+     * @description
+     *
+     * Identifies the symmetric key for that entity. ITU-T Rec.
+     * X.830 (04/95) Annex D.6.
+     *
      * @public
      * @readonly
      */

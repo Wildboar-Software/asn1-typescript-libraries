@@ -33,6 +33,10 @@ import {
  * @summary ProblemCode
  * @description
  *
+ * SE-P-ABORT problem: not specific to an APDU type (`general`),
+ * from a SE-TRANSFER (`transfer`), or from a SE-U-ABORT
+ * (`abort`). ITU-T Rec. X.832 (04/95) [§6.4, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

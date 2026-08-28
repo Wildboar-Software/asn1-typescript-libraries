@@ -22,6 +22,11 @@ import {
  * @summary initiatorCredentials
  * @description
  *
+ * First SEI of `dirAuthenticationTwoWay` (item-id 1), initiator
+ * to responder. Directory `Credentials`. May result in
+ * `authenticationFailure`. ITU-T Rec. X.830 (04/95)
+ * [Annex C.2](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

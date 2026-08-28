@@ -23,6 +23,11 @@ import {
  * @summary PROTECTED_dirSign
  * @description
  *
+ * `dirSign` alternative of `PROTECTED`. Same encoding as X.509
+ * `SIGNED` or `SIGNATURE`. Use only with
+ * `dirSignedTransformation` or `dirSignatureTransformation`.
+ * ITU-T Rec. X.830 (04/95) [§8.1](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,18 +39,34 @@ export class PROTECTED_dirSign<BaseType> {
   constructor(
     /**
      * @summary `baseType`.
+     * @description
+     *
+     * Present for `dirSignedTransformation`; omitted for
+     * `dirSignatureTransformation`. ITU-T Rec. X.830 (04/95)
+     * §8.1, Annex A.
+     *
      * @public
      * @readonly
      */
     readonly baseType: OPTIONAL<BaseType>,
     /**
      * @summary `algorithmId`.
+     * @description
+     *
+     * Hashing and encipherment algorithms used to compute the
+     * signature. ITU-T Rec. X.830 (04/95) §8.1, Annex D.2–D.3.
+     *
      * @public
      * @readonly
      */
     readonly algorithmId: AlgorithmIdentifier,
     /**
      * @summary `encipheredHash`.
+     * @description
+     *
+     * Enciphered hash of a `BaseType` value. ITU-T Rec. X.830
+     * (04/95) §8.1, Annex D.2–D.3.
+     *
      * @public
      * @readonly
      */

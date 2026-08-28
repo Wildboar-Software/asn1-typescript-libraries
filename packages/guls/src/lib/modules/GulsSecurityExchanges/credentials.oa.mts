@@ -21,6 +21,10 @@ import {
  * @summary credentials
  * @description
  *
+ * Sole SEI of `dirAuthenticationOneWay`. Carries Directory
+ * `Credentials` (item-id 1). ITU-T Rec. X.830 (04/95)
+ * [Annex C.1](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

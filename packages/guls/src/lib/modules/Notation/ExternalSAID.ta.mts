@@ -22,6 +22,12 @@ import {
  * @summary ExternalSAID
  * @description
  *
+ * Identifier of an externally-established security association:
+ * an integer plus, if not implicit (e.g. sender or receiver), the
+ * identity of the system that assigned it. Lifetime is not
+ * limited by GULS; establishment is out of scope. ITU-T Rec.
+ * X.830 (04/95) [§7.1.2](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +43,23 @@ export class ExternalSAID {
   constructor(
     /**
      * @summary `localSAID`.
+     * @description
+     *
+     * Integer assigned by `assignerIdentity` (or by an implicit
+     * party). ITU-T Rec. X.830 (04/95) §7.1.2, Annex A.
+     *
      * @public
      * @readonly
      */
     readonly localSAID: INTEGER,
     /**
      * @summary `assignerIdentity`.
+     * @description
+     *
+     * System that assigned `localSAID`. Omit when that identity
+     * is known implicitly. ITU-T Rec. X.830 (04/95) §7.1.2,
+     * Annex A.
+     *
      * @public
      * @readonly
      */

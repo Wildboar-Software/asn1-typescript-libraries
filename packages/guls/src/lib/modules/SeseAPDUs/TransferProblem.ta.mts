@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TransferProblem
  * @description
  *
+ * SE-P-ABORT problem resulting from a received SE-TRANSFER.
+ * ITU-T Rec. X.832 (04/95) [§6.4.2, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +42,9 @@ export enum _enum_for_TransferProblem {
  * @summary TransferProblem
  * @description
  *
+ * SE-P-ABORT problem resulting from a received SE-TRANSFER.
+ * ITU-T Rec. X.832 (04/95) [§6.4.2, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,6 +62,9 @@ export type TransferProblem = _enum_for_TransferProblem;
  * @summary TransferProblem
  * @description
  *
+ * SE-P-ABORT problem resulting from a received SE-TRANSFER.
+ * ITU-T Rec. X.832 (04/95) [§6.4.2, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -71,6 +80,11 @@ export const TransferProblem = _enum_for_TransferProblem;
 
 /**
  * @summary TransferProblem_duplicateInvocationId
+ * @description
+ *
+ * `duplicateInvocationId` (0): that invocation id is
+ * already in use. ITU-T Rec. X.832 (04/95) §6.4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +103,12 @@ export const duplicateInvocationId: TransferProblem =
 
 /**
  * @summary TransferProblem_unrecognizedSecurityExchange
+ * @description
+ *
+ * `unrecognizedSecurityExchange` (1): exchange is not
+ * valid for this ASO-context. ITU-T Rec. X.832 (04/95)
+ * §6.4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +127,11 @@ export const unrecognizedSecurityExchange: TransferProblem =
 
 /**
  * @summary TransferProblem_mistypedItem
+ * @description
+ *
+ * `mistypedItem` (2): SEI type does not match the object
+ * class definition. ITU-T Rec. X.832 (04/95) §6.4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +150,12 @@ export const mistypedItem: TransferProblem =
 
 /**
  * @summary TransferProblem_inappropriateInvocationId
+ * @description
+ *
+ * `inappropriateInvocationId` (3): id is outside the set
+ * specified for this ASO-context. ITU-T Rec. X.832
+ * (04/95) §6.4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +174,12 @@ export const inappropriateInvocationId: TransferProblem =
 
 /**
  * @summary TransferProblem_alternatingSequenceError
+ * @description
+ *
+ * `alternatingSequenceError` (4): SETR does not follow
+ * the Alternating-class sequence. ITU-T Rec. X.832
+ * (04/95) §6.2, §6.4.2.
+ *
  * @constant
  * @type {number}
  */

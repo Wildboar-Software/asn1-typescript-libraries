@@ -20,6 +20,15 @@ import {
  * @summary PROTECTED_Q
  * @description
  *
+ * `PROTECTED` plus a qualifier made available to the security
+ * transformation. Typical uses: identify an externally
+ * established security association, or pass algorithm / mode /
+ * key identifiers. If the mapping allows several transformations,
+ * the one used must have a `&QualifierType` consistent with the
+ * supplied value. The qualifier may (but need not) appear in the
+ * protecting transfer syntax. ITU-T Rec. X.830 (04/95)
+ * [§8.2](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

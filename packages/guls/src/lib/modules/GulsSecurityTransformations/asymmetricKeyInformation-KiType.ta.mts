@@ -23,6 +23,10 @@ import {
  * @summary asymmetricKeyInformation_KiType
  * @description
  *
+ * Asymmetric-key information. Spec does not further constrain
+ * which combination of fields must be present. ITU-T Rec. X.830
+ * (04/95) [Annex D.6](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,24 +38,43 @@ export class asymmetricKeyInformation_KiType {
   constructor(
     /**
      * @summary `issuerCAName`.
+     * @description
+     *
+     * Name of the CA that issued the certificate, if a
+     * certificate identifies the key. ITU-T Rec. X.830 (04/95)
+     * Annex D.6.
+     *
      * @public
      * @readonly
      */
     readonly issuerCAName?: OPTIONAL<SecurityIdentity>,
     /**
      * @summary `certSerialNumber`.
+     * @description
+     *
+     * Certificate serial number, if a certificate identifies
+     * the key. ITU-T Rec. X.830 (04/95) Annex D.6.
+     *
      * @public
      * @readonly
      */
     readonly certSerialNumber?: OPTIONAL<INTEGER>,
     /**
      * @summary `signerName`.
+     * @description
+     *
+     * Name of the signer. ITU-T Rec. X.830 (04/95) Annex D.6.
+     *
      * @public
      * @readonly
      */
     readonly signerName?: OPTIONAL<SecurityIdentity>,
     /**
      * @summary `keyIdentifier`.
+     * @description
+     *
+     * Key identifier bits. ITU-T Rec. X.830 (04/95) Annex D.6.
+     *
      * @public
      * @readonly
      */

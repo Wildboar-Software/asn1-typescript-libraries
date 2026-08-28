@@ -16,6 +16,10 @@ import { type SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
  * @summary Errors
  * @description
  *
+ * Object set of all `SE-ERROR`s defined on the SEIs of
+ * `ValidSEs`. Constrains `SEerror`. ITU-T Rec. X.832 (04/95)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

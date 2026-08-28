@@ -21,6 +21,11 @@ import {
  * @summary responderCredentials
  * @description
  *
+ * Second SEI of `dirAuthenticationTwoWay` (item-id 2), responder
+ * to initiator, sent only if the first transfer succeeded.
+ * Directory `Credentials`. ITU-T Rec. X.830 (04/95)
+ * [Annex C.2](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

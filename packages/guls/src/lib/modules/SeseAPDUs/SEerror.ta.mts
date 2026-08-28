@@ -22,6 +22,10 @@ import {
  * @summary SEerror
  * @description
  *
+ * One error in an SE-U-ABORT: code from the SE-ERROR objects of
+ * `ValidSEs`, plus optional parameter. ITU-T Rec. X.832 (04/95)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +41,22 @@ export class SEerror {
   constructor(
     /**
      * @summary `errorCode`.
+     * @description
+     *
+     * `SE-ERROR.&errorCode` from the identified security
+     * exchange. ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly errorCode?: OPTIONAL<Identifier>,
     /**
      * @summary `errorParameter`.
+     * @description
+     *
+     * `SE-ERROR.&ParameterType` for that error. ITU-T Rec.
+     * X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */

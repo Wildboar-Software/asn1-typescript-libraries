@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Negotiation_SEI
  * @description
  *
+ * Sequence of security-exchange OIDs for `offeredIds` /
+ * `acceptedIds`. ITU-T Rec. X.830 (04/95)
+ * [Annex C.3](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

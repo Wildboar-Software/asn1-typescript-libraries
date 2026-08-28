@@ -21,6 +21,13 @@ import {
  * @summary FirstPdvExternal
  * @description
  *
+ * First PDV of a protecting presentation context, or a protected
+ * PDV sent outside a presentation context, for an
+ * externally-established security association. The transformation
+ * and static parameters are attributes of that association, not
+ * carried here. ITU-T Rec. X.833 (04/95)
+ * [§5.4, §6](https://www.itu.int/rec/T-REC-X.833-199504-I); ITU-T Rec. X.830 (04/95) §7.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +48,34 @@ export class FirstPdvExternal {
   constructor(
     /**
      * @summary `externalSAID`.
+     * @description
+     *
+     * Identifies the externally-established security
+     * association (and thereby the transformation). ITU-T Rec.
+     * X.833 (04/95) §6.
+     *
      * @public
      * @readonly
      */
     readonly externalSAID: ExternalSAID,
     /**
      * @summary `dynamicUnprotParm`.
+     * @description
+     *
+     * Dynamic unprotected parameters of the transformation
+     * implied by `externalSAID`. ITU-T Rec. X.833 (04/95) §6.
+     *
      * @public
      * @readonly
      */
     readonly dynamicUnprotParm: OPTIONAL<_Element>,
     /**
      * @summary `xformedData`.
+     * @description
+     *
+     * `&XformedDataType` of the transformation implied by
+     * `externalSAID`. ITU-T Rec. X.833 (04/95) §6.
+     *
      * @public
      * @readonly
      */

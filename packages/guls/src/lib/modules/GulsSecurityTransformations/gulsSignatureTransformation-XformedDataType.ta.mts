@@ -30,6 +30,12 @@ import {
  * @summary gulsSignatureTransformation_XformedDataType
  * @description
  *
+ * Transformed item of `gulsSignatureTransformation`: protected
+ * parameters plus appendix. The signed intermediate value is
+ * rebuilt at the decoder from the locally supplied unprotected
+ * item plus these parameters. ITU-T Rec. X.830 (04/95)
+ * [Annex D.5](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,30 +47,57 @@ export class gulsSignatureTransformation_XformedDataType {
   constructor(
     /**
      * @summary `initEncRules`.
+     * @description
+     *
+     * Initial encoding rules for the (locally reconstructed)
+     * intermediate value. Default CER. ITU-T Rec. X.830
+     * (04/95) Annex D.5.
+     *
      * @public
      * @readonly
      */
     readonly initEncRules: OPTIONAL<OBJECT_IDENTIFIER>,
     /**
      * @summary `signOrSealAlgorithm`.
+     * @description
+     *
+     * Signing or sealing algorithm and its parameters. ITU-T
+     * Rec. X.830 (04/95) Annex D.5.
+     *
      * @public
      * @readonly
      */
     readonly signOrSealAlgorithm: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Hash function, if one is required and not implied by
+     * `signOrSealAlgorithm`. ITU-T Rec. X.830 (04/95)
+     * Annex D.5.
+     *
      * @public
      * @readonly
      */
     readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
     /**
      * @summary `keyInformation`.
+     * @description
+     *
+     * Key material in a `KEY-INFORMATION` format from the
+     * supported classes. ITU-T Rec. X.830 (04/95) Annex D.5.
+     *
      * @public
      * @readonly
      */
     readonly keyInformation: OPTIONAL<gulsSignatureTransformation_XformedDataType_keyInformation>,
     /**
      * @summary `appendix`.
+     * @description
+     *
+     * Signature or seal (D.5 procedure). ITU-T Rec. X.830
+     * (04/95) Annex D.5.
+     *
      * @public
      * @readonly
      */

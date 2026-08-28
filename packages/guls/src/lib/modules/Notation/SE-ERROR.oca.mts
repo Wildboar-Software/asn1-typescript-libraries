@@ -20,6 +20,10 @@ import {
  * @summary SE_ERROR
  * @description
  *
+ * Error that may result from transferring an SEI. Signalled back
+ * to the SEI sender, optionally with a parameter. ITU-T Rec.
+ * X.830 (04/95) [§6.2](https://www.itu.int/rec/T-REC-X.830-199504-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -68,10 +72,18 @@ export interface SE_ERROR<
   >;
   /**
    * @summary &ParameterType
+   * @description
+   *
+   * Optional parameter carried with the error indication.
+   * ITU-T Rec. X.830 (04/95) §6.2, Annex A.
    */
   readonly '&ParameterType': ParameterType;
   /**
    * @summary &errorCode
+   * @description
+   *
+   * Local or global identifier used when signalling the
+   * error. UNIQUE. ITU-T Rec. X.830 (04/95) §6.2, Annex A.
    */
   readonly '&errorCode'?: Identifier;
 }

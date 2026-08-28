@@ -17,6 +17,13 @@ import { type PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs'
  * @summary encrypted
  * @description
  *
+ * Directory mapping so `PROTECTED {BaseType, encrypted}`
+ * replaces X.509 `ENCRYPTED {BaseType}` with an identical
+ * bit-encoding (`dirEncryptedTransformation`). Service:
+ * confidentiality. Bypass not permitted. Distinct from GULS
+ * `confidentiality`. ITU-T Rec. X.830 (04/95)
+ * [Annex E](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

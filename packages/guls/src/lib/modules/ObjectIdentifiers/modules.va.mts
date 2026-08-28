@@ -16,6 +16,9 @@ import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
  * @summary modules
  * @description
  *
+ * Arc for GULS ASN.1 modules (`{genericULS 1}`). ITU-T Rec.
+ * X.830 (04/95) [Annex F](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

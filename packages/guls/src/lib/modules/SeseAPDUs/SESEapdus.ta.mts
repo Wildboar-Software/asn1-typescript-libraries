@@ -34,6 +34,14 @@ import {
  * @summary SESEapdus
  * @description
  *
+ * Parameterized CHOICE of SESE APDUs for a tailored SESE that
+ * supports `ValidSEs` and the invocation-id set
+ * `InvocationIdSet`. `se-transfer` is SETR (SE-TRANSFER);
+ * `se-u-abort` is SEAB (SE-U-ABORT); `se-p-abort` is SEPA
+ * (SE-P-ABORT). If invocations never overlap, use
+ * `NoInvocationId`. ITU-T Rec. X.832 (04/95)
+ * [§6.1, §7.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

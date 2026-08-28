@@ -29,6 +29,15 @@ import {
  * @summary SETransfer
  * @description
  *
+ * SE-TRANSFER APDU (SETR). Conveys one SEI of a security
+ * exchange. Generated on SE-TRANSFER req; receipt yields
+ * SE-TRANSFER ind. If the exchange is Alternating and the item
+ * is out of sequence, the SEPM issues SE-P-ABORT instead. Unless
+ * the application-context says otherwise, SETR maps to P-DATA;
+ * the first one or two transfers of an exchange may instead ride
+ * A-ASSOCIATE user-information or authentication-value. ITU-T
+ * Rec. X.832 (04/95) [§6.2, §7.1, §8](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -67,36 +76,69 @@ export class SETransfer {
   constructor(
     /**
      * @summary `seIdentifier`.
+     * @description
+     *
+     * Which of the SESE's supported security exchanges this
+     * SEI belongs to. ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly seIdentifier: Identifier,
     /**
      * @summary `itemIdentifier`.
+     * @description
+     *
+     * Which SEI of that exchange is carried (`&itemId`).
+     * ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly itemIdentifier: _Element,
     /**
      * @summary `seItem`.
+     * @description
+     *
+     * The SEI value (`&ItemType` of the identified item).
+     * ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly seItem: _Element,
     /**
      * @summary `invocationId`.
+     * @description
+     *
+     * Correlates this transfer with an active exchange.
+     * Must match an active invocation unless `startFlag` is
+     * true. Default `noInvocationId`. ITU-T Rec. X.832
+     * (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly invocationId?: OPTIONAL<InvocationId>,
     /**
      * @summary `startFlag`.
+     * @description
+     *
+     * Set only on the first SEI of an exchange. Default
+     * FALSE. ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly startFlag?: OPTIONAL<BOOLEAN>,
     /**
      * @summary `endFlag`.
+     * @description
+     *
+     * Set on the last SEI of an exchange (needed when the
+     * number of transfers is not known a priori). Default
+     * FALSE. ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */

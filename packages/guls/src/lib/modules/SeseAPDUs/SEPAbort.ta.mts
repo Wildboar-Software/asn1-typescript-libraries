@@ -26,6 +26,12 @@ import {
  * @summary SEPAbort
  * @description
  *
+ * SE-P-ABORT APDU (SEPA). Provider abort when the SEPM detects
+ * an error; terminates any security exchange in progress. May
+ * also abort the ASO-association (mapped to ASO-Association
+ * Abort / A-ABORT when severity requires it). ITU-T Rec. X.832
+ * (04/95) [§6.4, §7.1, §8.1](https://www.itu.int/rec/T-REC-X.832-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +52,33 @@ export class SEPAbort {
   constructor(
     /**
      * @summary `invocationId`.
+     * @description
+     *
+     * Invocation concerned, when applicable. ITU-T Rec. X.832
+     * (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly invocationId: OPTIONAL<InvocationId>,
     /**
      * @summary `itemIdentifier`.
+     * @description
+     *
+     * Present only when the abort follows receipt of a
+     * SETransfer. ITU-T Rec. X.832 (04/95) §7.1.
+     *
      * @public
      * @readonly
      */
     readonly itemIdentifier: OPTIONAL<_Element>,
     /**
      * @summary `problemCode`.
+     * @description
+     *
+     * Why the SEPM aborted: general, transfer, or abort
+     * problem. ITU-T Rec. X.832 (04/95) §6.4, §7.1.
+     *
      * @public
      * @readonly
      */

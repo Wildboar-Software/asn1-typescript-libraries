@@ -1,3 +1,22 @@
+/**
+ * Generic Upper Layers Security (GULS) notation, security exchanges,
+ * security transformations, protection mappings, SESE APDUs, and
+ * protecting transfer syntax from ITU-T Rec. X.830 (04/95) |
+ * ISO/IEC 11586-1, ITU-T Rec. X.832 (04/95) | ISO/IEC 11586-3, and
+ * ITU-T Rec. X.833 (04/95) | ISO/IEC 11586-4.
+ *
+ * GULS is a protocol-construction toolkit: security exchanges (via
+ * SESE) carry authentication and key-management items; security
+ * transformations (via a protecting transfer syntax and/or
+ * `PROTECTED`) provide integrity, confidentiality, data-origin
+ * authentication, and/or non-repudiation. These facilities do not
+ * themselves provide security services. ITU-T Rec. X.830 (04/95)
+ * [§5](https://www.itu.int/rec/T-REC-X.830-199504-I).
+ *
+ * Two `signed` / `signature` protection mappings exist (Directory
+ * vs GULS). They are not re-exported from this root to avoid a
+ * name clash; import them from the module path.
+ */
 export * from "./lib/modules/DirectoryProtectionMappings/encrypted.oa.mjs";
 // export * from "./lib/modules/DirectoryProtectionMappings/signature.oa.mjs"; (unresolvable conflict)
 // export * from "./lib/modules/DirectoryProtectionMappings/signed.oa.mjs"; (unresolvable conflict)

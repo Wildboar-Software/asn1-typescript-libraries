@@ -30,6 +30,14 @@ import {
  * @summary SyntaxStructure
  * @description
  *
+ * Generic protecting transfer syntax, parameterized by the set
+ * of `SECURITY-TRANSFORMATION`s. Conveys the transformed item,
+ * unprotected (and, via the transformation, protected)
+ * parameters, and — on a first PDV — either the transformation
+ * OID or an externally-established security-association id.
+ * Context-sensitive: encoder/decoder retain state. ITU-T Rec.
+ * X.833 (04/95) [§5, §6](https://www.itu.int/rec/T-REC-X.833-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
