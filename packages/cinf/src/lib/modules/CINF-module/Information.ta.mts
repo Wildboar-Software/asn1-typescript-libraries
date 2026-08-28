@@ -21,6 +21,12 @@ import {
  * @summary Information
  * @description
  *
+ * Disclosed children of this OID node, plus a count of
+ * children not listed. A parent shall not name a child
+ * without that child's agreement, and may always withhold
+ * the omitted count (C.2.2). ITU-T Rec. X.672 (06/2022)
+ * [C.2](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +42,24 @@ export class Information {
   constructor(
     /**
      * @summary `disclosedChildren`.
+     * @description
+     *
+     * Child arcs this parent has agreement to name (C.2.2).
+     * May be empty if every child is withheld.
+     *
      * @public
      * @readonly
      */
     readonly disclosedChildren: ChildDetails[],
     /**
      * @summary `otherChildren`.
+     * @description
+     *
+     * Number of additional children not listed, or `-1` if
+     * this node will not disclose that count (`-1..MAX`).
+     * Optional to reveal even when some children are named
+     * (C.2.2).
+     *
      * @public
      * @readonly
      */

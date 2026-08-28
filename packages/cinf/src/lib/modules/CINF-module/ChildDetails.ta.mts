@@ -21,6 +21,11 @@ import {
  * @summary ChildDetails
  * @description
  *
+ * One child arc this parent has agreement to name (C.2.2).
+ * ITU-T Rec. X.672 (06/2022)
+ * [C.2.2](https://www.itu.int/rec/T-REC-X.672-202206-I),
+ * C.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +41,25 @@ export class ChildDetails {
   constructor(
     /**
      * @summary `orsSupported`.
+     * @description
+     *
+     * `true` if this child is itself ORS-supported: every
+     * DNS-mapped name for it exists and its zone files meet
+     * X.672, including the mandatory NAPTR records
+     * (§3.2.23). If `false`, an ORS query on that child
+     * should return DNS RCODE 3.
+     *
      * @public
      * @readonly
      */
     readonly orsSupported: BOOLEAN,
     /**
      * @summary `unicodeLabels`.
+     * @description
+     *
+     * Integer-valued Unicode label of this child arc, plus
+     * any non-integer Unicode labels on the same arc.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Non_numericUnicodeLabel
  * @description
  *
+ * Non-integer Unicode label of an OID arc. Restricted per
+ * Rec. ITU-T X.660 | ISO/IEC 9834-1
+ * [§7.5](https://www.itu.int/rec/T-REC-X.660-201107-I)
+ * (X.672 C.2.3 cites this as 7.2.5, the 2008 numbering): at
+ * least one non-digit; the character set of that clause; no
+ * leading or trailing HYPHEN-MINUS; no `--` in positions
+ * 3–4. Labels compare equal after A-label conversion (IETF
+ * RFC 5891 §5.3). ITU-T Rec. X.672 (06/2022)
+ * [C.2.3](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

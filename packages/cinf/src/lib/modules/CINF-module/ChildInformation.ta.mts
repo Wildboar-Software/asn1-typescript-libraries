@@ -21,6 +21,20 @@ import {
  * @summary ChildInformation
  * @description
  *
+ * Root of a CINF XML file: the child arcs of an
+ * ORS-supported OID node. `noDisclosure` reveals nothing
+ * (always allowed). `disclosure` lists only children that
+ * have agreed to be named (C.2.2). Used by applications
+ * (e.g. crawlers) to walk the ORS-supported tree (Annex
+ * F.2).
+ *
+ * Fetch via NAPTR `ORS+CINF`; the regexp is a URL to a
+ * `.xml` file that shall be EXTENDED-XER of this type
+ * (C.1, C.2.1). A non-zero DNS RCODE, or a file that does
+ * not conform to C.2, should be reported; how is not
+ * standardized. ITU-T Rec. X.672 (06/2022)
+ * [Annex C](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

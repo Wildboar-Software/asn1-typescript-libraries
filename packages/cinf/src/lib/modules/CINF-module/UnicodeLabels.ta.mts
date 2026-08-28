@@ -21,6 +21,13 @@ import {
  * @summary UnicodeLabels
  * @description
  *
+ * Labels on the arc to a child: the required integer-valued
+ * Unicode label plus any additional non-integer Unicode
+ * labels. Canonical OID-IRI uses only integer-valued labels
+ * (X.672 §3.2.3). An arc may have several Unicode labels
+ * (Annex K). ITU-T Rec. X.672 (06/2022)
+ * [C.2.3](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +42,24 @@ export class UnicodeLabels {
   constructor(
     /**
      * @summary `numericLabel`.
+     * @description
+     *
+     * Integer-valued Unicode label (primary integer) of the
+     * child arc. Canonical OID-IRI is a path of only these
+     * values (X.672 §3.2.3).
+     *
      * @public
      * @readonly
      */
     readonly numericLabel: INTEGER,
     /**
      * @summary `non_numeric`.
+     * @description
+     *
+     * Non-integer Unicode labels on the same arc (may be
+     * empty). Each is unambiguous among sibling arcs but
+     * not globally unique (Annex K).
+     *
      * @public
      * @readonly
      */
