@@ -15,7 +15,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RSAENCRYPTED
  * @description
- * 
+ *
+ * BIT STRING of RSA ciphertext over the BER encoding of
+ * `ToBeEnciphered`. For KeyResponse, the CAM public key
+ * is the encipherment key. ITU-T Rec. J.1003 (10/2014)
+ * Annex A, [§8.1](https://www.itu.int/rec/T-REC-J.1003-201410-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

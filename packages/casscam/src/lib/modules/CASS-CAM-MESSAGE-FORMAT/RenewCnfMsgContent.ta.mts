@@ -19,7 +19,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RenewCnfMsgContent
  * @description
- * 
+ *
+ * Content of RenewConfirm (`0x0008`). CAM → CASS after
+ * CACS download. Annex C cloning detection differs
+ * depending on whether CASS reports this to the AC.
+ * ITU-T Rec. J.1003 (10/2014)
+ * [§7.4](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Annex C.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +43,20 @@ class RenewCnfMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `downloadStatus`.
+         * @description
+         *
+         * `TRUE` success, `FALSE` fail (Annex A).
+         *
          * @public
          * @readonly
          */

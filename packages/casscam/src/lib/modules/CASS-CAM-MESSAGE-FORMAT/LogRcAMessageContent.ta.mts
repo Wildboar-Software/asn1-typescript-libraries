@@ -20,6 +20,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LogRcAMessageContent
  * @description
  *
+ * Content of LogResponse (`0x000C`). Encoding of
+ * `logResponseInfo` is not specified. ITU-T Rec. J.1003
+ * (10/2014)
+ * [Table 2](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +41,21 @@ class LogRcAMessageContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `logResponseInfo`.
+         * @description
+         *
+         * Log payload. Format is not specified
+         * (Annex A).
+         *
          * @public
          * @readonly
          */

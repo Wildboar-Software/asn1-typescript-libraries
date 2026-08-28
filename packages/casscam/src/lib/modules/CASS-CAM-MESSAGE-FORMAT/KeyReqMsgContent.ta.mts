@@ -19,7 +19,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary KeyReqMsgContent
  * @description
- * 
+ *
+ * Content of KeyRequest (`0x0003`). CAM → CASS,
+ * digitally signed with the CAM private key; header and
+ * content are signed and carried with the message (not
+ * AES-encrypted). CASS forwards pairing ID and CASS ID
+ * to the AC. Pairing follows ITU-T J.1002; the AC also
+ * runs cloning detection (Annex C). ITU-T Rec. J.1003
+ * (10/2014)
+ * [§7.2](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * §8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +47,35 @@ class KeyReqMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets. Assignment is
+         * not specified (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `keyParingID`.
+         * @description
+         *
+         * KeyPairingID: `CAM_ID || DSC_ID` (§3.2.2).
+         * 48 octets (8-byte CAM_ID + 40-byte DSC_ID).
+         * ASN.1 spelling is `keyParingID`.
+         *
          * @public
          * @readonly
          */
         readonly keyParingID: OCTET_STRING,
         /**
          * @summary `cAMCertificate`.
+         * @description
+         *
+         * CAM X.509 certificate. Must be DER (Annex A;
+         * [ITU-T X.509]). The AC uses it to authenticate
+         * the CAM (§7.2).
+         *
          * @public
          * @readonly
          */

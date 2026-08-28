@@ -17,7 +17,15 @@ import { CASSInfo, _decode_CASSInfo, _encode_CASSInfo } from "../CASS-CAM-MESSAG
 /**
  * @summary RcasAncMsgContent
  * @description
- * 
+ *
+ * Content of RCASAnnounce (message type `0x0001`). CASS
+ * multicasts this to start the protocol and give CAMs
+ * CASS access information. HMAC-SHA1 with the common
+ * hash key (CHK). The CAM proceeds to key establishment
+ * if HMAC fails, CHK differs, it moved CASS zone, or it
+ * is virgin. ITU-T Rec. J.1003 (10/2014)
+ * [§7.1](https://www.itu.int/rec/T-REC-J.1003-201410-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +47,33 @@ class RcasAncMsgContent {
     constructor (
         /**
          * @summary `protocolTypeFlag`.
+         * @description
+         *
+         * `0x01` normal mode (this module); `0x02` fast
+         * mode (Annex B). Other values reserved.
+         *
          * @public
          * @readonly
          */
         readonly protocolTypeFlag: OCTET_STRING,
         /**
          * @summary `cAMClientVersion`.
+         * @description
+         *
+         * CAM hardware, bootloader, and CACS image
+         * versions announced to CAMs (§7.1).
+         *
          * @public
          * @readonly
          */
         readonly cAMClientVersion: CAMClientVersion[],
         /**
          * @summary `cASSInfo`.
+         * @description
+         *
+         * CASS unique ID, IP, UDP/TCP, and listening
+         * port so the CAM can reach this CASS (§7.1).
+         *
          * @public
          * @readonly
          */

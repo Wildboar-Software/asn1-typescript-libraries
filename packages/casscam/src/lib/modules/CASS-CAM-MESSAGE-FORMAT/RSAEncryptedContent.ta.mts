@@ -16,7 +16,14 @@ import { Content, _decode_Content, _encode_Content } from "../CASS-CAM-MESSAGE-F
 /**
  * @summary RSAEncryptedContent
  * @description
- * 
+ *
+ * Normal-mode KeyResponse RSA payload: `RSAENCRYPTED`
+ * of {@link Content}. Encrypted with the CAM public
+ * key. Fast mode (Annex B) encrypts only AK; that form
+ * is not in this module. ITU-T Rec. J.1003 (10/2014)
+ * [§7.2](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

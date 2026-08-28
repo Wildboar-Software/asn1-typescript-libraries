@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CAMClientInfo
  * @description
- * 
+ *
+ * One CACS image identity in RCASAnnounce: type,
+ * priority, vendor, and version. ITU-T Rec. J.1003
+ * (10/2014)
+ * [§7.1](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +47,46 @@ class CAMClientInfo {
     constructor (
         /**
          * @summary `clientType`.
+         * @description
+         *
+         * `0x01` CAS, `0x02` ASD, `0x03` DRM,
+         * `0x04`–`0xFF` reserved (Annex A).
+         * `RenewInfoMsgContent.clientType` uses a
+         * different mapping (DRM and ASD swapped).
+         *
          * @public
          * @readonly
          */
         readonly clientType: OCTET_STRING,
         /**
          * @summary `clientPriority`.
+         * @description
+         *
+         * 1 octet. Encoding is not specified beyond
+         * size (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly clientPriority: OCTET_STRING,
         /**
          * @summary `clientVendor`.
+         * @description
+         *
+         * 2 octets. Encoding is not specified beyond
+         * size (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly clientVendor: OCTET_STRING,
         /**
          * @summary `clientVersion`.
+         * @description
+         *
+         * 2 octets. Encoding is not specified beyond
+         * size (Annex A).
+         *
          * @public
          * @readonly
          */

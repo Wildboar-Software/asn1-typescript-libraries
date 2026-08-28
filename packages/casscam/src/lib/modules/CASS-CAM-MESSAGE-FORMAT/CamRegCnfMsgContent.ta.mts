@@ -18,7 +18,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CamRegCnfMsgContent
  * @description
- * 
+ *
+ * Content of CAMRegConfirm (`0x0006`). CASS → CAM when
+ * hashed MEK/ICCIEK match. HMAC-SHA1 with IHK;
+ * AES-128-CBC of CCCIEK plus IVs for MEK, ICCIEK, and
+ * CCCIEK (IVs unique per session). ITU-T Rec. J.1003
+ * (10/2014)
+ * [§7.3](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * §8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +46,55 @@ class CamRegCnfMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `mEK_IV`.
+         * @description
+         *
+         * AES-128-CBC IV for MEK, 16 octets, unique per
+         * session (§7.3, §8.3).
+         *
          * @public
          * @readonly
          */
         readonly mEK_IV: OCTET_STRING,
         /**
          * @summary `iCCIEK_IV`.
+         * @description
+         *
+         * AES-128-CBC IV for ICCIEK, 16 octets
+         * (§7.3, §8.3).
+         *
          * @public
          * @readonly
          */
         readonly iCCIEK_IV: OCTET_STRING,
         /**
          * @summary `cCCIEK_IV`.
+         * @description
+         *
+         * AES-128-CBC IV for CCCIEK, 16 octets
+         * (§7.3, §8.3).
+         *
          * @public
          * @readonly
          */
         readonly cCCIEK_IV: OCTET_STRING,
         /**
          * @summary `cCCIEK`.
+         * @description
+         *
+         * Common CAM client image encryption key, 16
+         * octets (128 bits). Generation is in Figure 5
+         * (§7.3, §8.3).
+         *
          * @public
          * @readonly
          */

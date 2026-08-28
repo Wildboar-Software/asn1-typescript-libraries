@@ -18,7 +18,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PrchsRptMsgContent
  * @description
- * 
+ *
+ * Content of PurchaseReport (`0x0009`). CAM → CASS when
+ * `purchaseReport-Req` was set (RCASRenewal or
+ * RenewInfo). HMAC then encrypt. Encoding of
+ * `purchaseInfo` is not specified. ITU-T Rec. J.1003
+ * (10/2014)
+ * [§7.1](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +42,21 @@ class PrchsRptMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `purchaseInfo`.
+         * @description
+         *
+         * Purchase data. Format is not specified
+         * (Annex A).
+         *
          * @public
          * @readonly
          */

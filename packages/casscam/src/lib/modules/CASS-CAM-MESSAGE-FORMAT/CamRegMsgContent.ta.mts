@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CamRegMsgContent
  * @description
- * 
+ *
+ * Content of CAMReg (`0x0005`). CAM → CASS in the
+ * registration phase, carrying a hash of MEK and ICCIEK
+ * so CASS can confirm both sides derived the same keys.
+ * ITU-T Rec. J.1003 (10/2014)
+ * [§7.3](https://www.itu.int/rec/T-REC-J.1003-201410-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +46,71 @@ class CamRegMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `nONCE_CAM`.
+         * @description
+         *
+         * Session-unique 16-octet random (`NONCE_CAM`).
+         * Each session is required to have a unique
+         * value (§8.3 Table 1).
+         *
          * @public
          * @readonly
          */
         readonly nONCE_CAM: OCTET_STRING,
         /**
          * @summary `cAMID`.
+         * @description
+         *
+         * CAM identifier, 40 octets in Annex A. §3.2.2
+         * defines `CAM_ID` as 8 bytes; the
+         * Recommendation does not reconcile the two
+         * sizes.
+         *
          * @public
          * @readonly
          */
         readonly cAMID: OCTET_STRING,
         /**
          * @summary `hWVersion`.
+         * @description
+         *
+         * CAM chip version, 4 octets. Used in cloning
+         * detection version checks (Annex C).
+         *
          * @public
          * @readonly
          */
         readonly hWVersion: OCTET_STRING,
         /**
          * @summary `sWversion`.
+         * @description
+         *
+         * Bootloader software version, 4 octets
+         * (Annex A, Annex C).
+         *
          * @public
          * @readonly
          */
         readonly sWversion: OCTET_STRING,
         /**
          * @summary `hashed_MEK_ICCIEK`.
+         * @description
+         *
+         * 20-octet hash of MEK and ICCIEK. CASS
+         * regenerates those keys (Figure 4) and
+         * compares; mismatch → Status `0x02`. How the
+         * two keys are combined before hashing is not
+         * specified (§7.3).
+         *
          * @public
          * @readonly
          */

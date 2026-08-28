@@ -19,7 +19,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LogRqtMsgContent
  * @description
- * 
+ *
+ * Content of LogRequest (`0x000B`). `logRequest-Req` is
+ * constrained to `TRUE`. The Recommendation does not
+ * describe this message beyond Annex A and Table 2.
+ * ITU-T Rec. J.1003 (10/2014)
+ * [Table 2](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +43,20 @@ class LogRqtMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `logRequest_Req`.
+         * @description
+         *
+         * Shall be `TRUE` (request). Annex A.
+         *
          * @public
          * @readonly
          */

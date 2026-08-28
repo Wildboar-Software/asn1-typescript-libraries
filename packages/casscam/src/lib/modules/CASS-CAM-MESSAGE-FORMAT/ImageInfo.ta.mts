@@ -21,6 +21,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ImageInfo
  * @description
  *
+ * Download parameters for one CACS image in RenewInfo.
+ * `dSIP` and `fn` only when the image is not a Common
+ * Image. ITU-T Rec. J.1003 (10/2014)
+ * [§7.4](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +52,35 @@ class ImageInfo {
     constructor (
         /**
          * @summary `dSIP`.
+         * @description
+         *
+         * Download server IP, 16 octets. Absent for a
+         * Common Image. IPv4 vs IPv6 layout is not
+         * specified (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly dSIP: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `tm`.
+         * @description
+         *
+         * Transport: `0x01` Carousel, `0x02` TFTP,
+         * `0x03` HTTP, `0x04`–`0xFF` reserved
+         * (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly tm: OCTET_STRING,
         /**
          * @summary `fn`.
+         * @description
+         *
+         * File name. Absent for a Common Image
+         * (Annex A).
+         *
          * @public
          * @readonly
          */

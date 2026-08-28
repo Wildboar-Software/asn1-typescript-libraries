@@ -17,7 +17,16 @@ import { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedC
 /**
  * @summary KeyRspMsgContent
  * @description
- * 
+ *
+ * Content of KeyResponse (`0x0004`). CASS → CAM after
+ * AC authentication. When `Auth_Rst` is true, CASS
+ * includes CHK and IHK (RSA-encrypted to the CAM public
+ * key) and signs the message with the CASS private key.
+ * Some parameters are public-key encrypted. ITU-T Rec.
+ * J.1003 (10/2014)
+ * [§7.2](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * §8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +45,46 @@ class KeyRspMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets; same session
+         * as the KeyRequest (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `cASSCertificate`.
+         * @description
+         *
+         * CASS X.509 certificate, DER. The CAM extracts
+         * the CASS public key from this (§7.2, Annex A).
+         *
          * @public
          * @readonly
          */
         readonly cASSCertificate: BIT_STRING,
         /**
          * @summary `rSAEncryptedContent`.
+         * @description
+         *
+         * RSA ciphertext of CHK, IHK, three RAND_AC
+         * values, and KPK, enciphered to the CAM
+         * (§7.2, Annex A).
+         *
          * @public
          * @readonly
          */
         readonly rSAEncryptedContent: RSAEncryptedContent,
         /**
          * @summary `sIGN_kpk`.
+         * @description
+         *
+         * 128 octets named `SIGN-kpk` in Annex A. The
+         * Recommendation does not further specify its
+         * construction.
+         *
          * @public
          * @readonly
          */

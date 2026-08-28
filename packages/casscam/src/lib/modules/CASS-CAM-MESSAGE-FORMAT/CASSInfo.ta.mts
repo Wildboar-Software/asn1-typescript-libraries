@@ -18,7 +18,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CASSInfo
  * @description
- * 
+ *
+ * How the CAM contacts this CASS: unique ID, IP,
+ * UDP/TCP, and port. Compared with the CASS ID stored
+ * in the CAM to detect a CASS-zone move. ITU-T Rec.
+ * J.1003 (10/2014)
+ * [§7.1](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * §7.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,30 +52,52 @@ class CASSInfo {
     constructor (
         /**
          * @summary `cASSUniqueID`.
+         * @description
+         *
+         * CASS identifier, 4 octets (§7.2 CASS ID).
+         *
          * @public
          * @readonly
          */
         readonly cASSUniqueID: OCTET_STRING,
         /**
          * @summary `cASSIPAddrType`.
+         * @description
+         *
+         * `0x01` IPv4, `0x02` IPv6 (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly cASSIPAddrType: OCTET_STRING,
         /**
          * @summary `cASSIPAddr`.
+         * @description
+         *
+         * CASS IP address, 50 octets. Layout of IPv4
+         * vs IPv6 in that field is not specified
+         * (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly cASSIPAddr: OCTET_STRING,
         /**
          * @summary `cASSConnectionType`.
+         * @description
+         *
+         * `0x01` UDP, `0x02` TCP (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly cASSConnectionType: OCTET_STRING,
         /**
          * @summary `cASSListeningPort`.
+         * @description
+         *
+         * CASS listening port, 4 octets (Annex A).
+         *
          * @public
          * @readonly
          */

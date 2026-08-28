@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary StcAMsgContent
  * @description
- * 
+ *
+ * Content of Status (`0x000A`). CASS sends this when
+ * CAM and CASS encryption keys differ during
+ * registration. ITU-T Rec. J.1003 (10/2014)
+ * [§7.3](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +46,25 @@ class StcAMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `statusInfo`.
+         * @description
+         *
+         * 1 octet (Annex A): `0x01` CAM-DSC ID
+         * validation fail; `0x02` MEK or ICCIEK hash
+         * verification fail; `0x03` CCI hash
+         * verification fail; `0x04` HMAC verification
+         * fail; `0x05` RSA signature verification fail;
+         * `0x06`–`0xFF` reserved.
+         *
          * @public
          * @readonly
          */

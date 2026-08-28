@@ -21,6 +21,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RCASRnMsgContent
  * @description
  *
+ * Content of RCASRenewal (message type `0x0002`; the
+ * Annex A comment also names this RCASDownload).
+ * Optional CASS multicast to stagger CACS download time
+ * and/or request a KeyRequest or PurchaseReport. HMAC
+ * as for RCASAnnounce. ITU-T Rec. J.1003 (10/2014)
+ * [§7.1](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Table 2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +47,34 @@ class RCASRnMsgContent {
     constructor (
         /**
          * @summary `downloadSchedule`.
+         * @description
+         *
+         * CACS download time as 12 octets
+         * `YYMMDDhhmmss`. Example: 2013-05-13 17:50:30
+         * → `130513175030` (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly downloadSchedule: OCTET_STRING,
         /**
          * @summary `keyRequest_Req`.
+         * @description
+         *
+         * Present and `TRUE` to ask the CAM to send
+         * KeyRequest (key upgrade). Annex A.
+         *
          * @public
          * @readonly
          */
         readonly keyRequest_Req?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `purchaseReport_Req`.
+         * @description
+         *
+         * Present and `TRUE` to ask the CAM to send
+         * PurchaseReport. Annex A.
+         *
          * @public
          * @readonly
          */

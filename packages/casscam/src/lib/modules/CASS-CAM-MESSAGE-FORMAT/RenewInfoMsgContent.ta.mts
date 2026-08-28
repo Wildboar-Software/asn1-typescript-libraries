@@ -19,6 +19,15 @@ import { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MES
  * @summary RenewInfoMsgContent
  * @description
  *
+ * Content of RenewInfo (`0x0007`). CASS → CAM in CACS
+ * renewal: where/how to download the CACS image, SHA-1
+ * image hashes for integrity, optional PurchaseReport
+ * request. HMAC then AES-128-CBC with MEK and `mEK-IV`.
+ * The CAM decrypts images with ICCIEK and CCCIEK.
+ * ITU-T Rec. J.1003 (10/2014)
+ * [§7.4](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * §8.1, §8.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,48 +61,93 @@ class RenewInfoMsgContent {
     constructor (
         /**
          * @summary `sessionID`.
+         * @description
+         *
+         * Session identifier, 10 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sessionID: OCTET_STRING,
         /**
          * @summary `clientType`.
+         * @description
+         *
+         * CAM client image kind (Annex A): `0x01` CAS,
+         * `0x02` DRM, `0x03` ASD. Differs from
+         * `CAMClientInfo.clientType`, where `0x02` is
+         * ASD and `0x03` is DRM.
+         *
          * @public
          * @readonly
          */
         readonly clientType: OCTET_STRING,
         /**
          * @summary `imageFlag`.
+         * @description
+         *
+         * `0x01` Common IM, `0x02` Individual IM,
+         * `0x03` both at once. `0x01`/`0x02` → one
+         * `ImageInfo`; `0x03` → two (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly imageFlag: OCTET_STRING,
         /**
          * @summary `imageInfo`.
+         * @description
+         *
+         * Download location(s). Count follows
+         * `imageFlag` (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly imageInfo: ImageInfo[],
         /**
          * @summary `purchaseReport_Req`.
+         * @description
+         *
+         * Present and `TRUE` to require PurchaseReport
+         * after renewal (HMAC then encrypt, §7.4).
+         *
          * @public
          * @readonly
          */
         readonly purchaseReport_Req: OPTIONAL<BOOLEAN>,
         /**
          * @summary `hashed_CCCI`.
+         * @description
+         *
+         * SHA-1 of the common CAM client image (20
+         * octets). Integrity check after AES-128-CBC
+         * decrypt (§8.2).
+         *
          * @public
          * @readonly
          */
         readonly hashed_CCCI: OCTET_STRING,
         /**
          * @summary `hashed_ICCI`.
+         * @description
+         *
+         * SHA-1 of the individual CAM client image (20
+         * octets). Integrity check after AES-128-CBC
+         * decrypt (§8.2).
+         *
          * @public
          * @readonly
          */
         readonly hashed_ICCI: OCTET_STRING,
         /**
          * @summary `directives`.
+         * @description
+         *
+         * Controls installation and launch of the CAM
+         * client image. Encoding is not specified
+         * (Annex A).
+         *
          * @public
          * @readonly
          */

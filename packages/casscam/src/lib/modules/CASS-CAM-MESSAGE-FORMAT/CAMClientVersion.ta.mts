@@ -16,7 +16,13 @@ import { CAMClientInfo, _decode_CAMClientInfo, _encode_CAMClientInfo } from "../
 /**
  * @summary CAMClientVersion
  * @description
- * 
+ *
+ * One CAM chip/bootloader version plus the CACS client
+ * images tied to it, carried in RCASAnnounce. ITU-T Rec.
+ * J.1003 (10/2014)
+ * [§7.1](https://www.itu.int/rec/T-REC-J.1003-201410-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +41,32 @@ class CAMClientVersion {
     constructor (
         /**
          * @summary `hWVersion`.
+         * @description
+         *
+         * CAM chip version, 4 octets (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly hWVersion: OCTET_STRING,
         /**
          * @summary `sWversion`.
+         * @description
+         *
+         * Bootloader software version, 4 octets
+         * (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly sWversion: OCTET_STRING,
         /**
          * @summary `cAMClientInfo`.
+         * @description
+         *
+         * Per-image CACS type, priority, vendor, and
+         * version (Annex A).
+         *
          * @public
          * @readonly
          */
