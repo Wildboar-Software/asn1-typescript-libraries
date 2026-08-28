@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary OPEN
  * @description
  *
+ * Stand-in for unconstrained `ANY` in X.228 (11/88) §9: each
+ * occurrence shall be replaced by a **single** ASN.1 type from the
+ * RTSE-user protocol. Used for RT-OPEN and RT-U-ABORT user data
+ * (`ConnectionData.open`, `RTORJapdu.userDataRJ`,
+ * `RTABapdu.userdataAB`). ITU-T Rec. X.218 (03/93) §8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +57,8 @@ export interface OPEN<Type = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
   >;
   /**
    * @summary &Type
+   * @description Single ASN.1 type supplied by the RTSE-user protocol
+   *     in place of `ANY` (ITU-T Rec. X.228 (11/88) §9).
    */
   readonly '&Type': Type;
 }

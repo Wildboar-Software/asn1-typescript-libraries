@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AdditionalReferenceInformation
  * @description
  *
+ * Optional Additional Reference Information component of the
+ * session-connection identifier. ITU-T Rec. X.228 (11/88)
+ * §8.1.1.1.3.5, §9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -31,6 +31,16 @@ import {
  * @summary SessionConnectionIdentifier
  * @description
  *
+ * Identifies the original session-connection so a recovered
+ * presentation connection can be bound to the existing
+ * application-association. Mapped to A-ASSOCIATE / P-CONNECT Session
+ * Connection Identifier as Calling SS-User Reference, Common
+ * Reference, and optional Additional Reference Information. The
+ * responder returns the calling reference as Called SS-User
+ * Reference; Called SS-User Reference is not used on
+ * P-ACTIVITY-RESUME. ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5,
+ * §8.1.1.1.4.6, §7.8.3.4.5, §8.2.8.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +57,33 @@ export class SessionConnectionIdentifier {
   constructor(
     /**
      * @summary `callingSSuserReference`.
+     * @description
+     *
+     * Calling SS-User Reference of the original session-connection.
+     * ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
+     *
      * @public
      * @readonly
      */
     readonly callingSSuserReference: CallingSSuserReference,
     /**
      * @summary `commonReference`.
+     * @description
+     *
+     * Common Reference of the original session-connection (UTCTime).
+     * ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
+     *
      * @public
      * @readonly
      */
     readonly commonReference: CommonReference,
     /**
      * @summary `additionalReferenceInformation`.
+     * @description
+     *
+     * Optional Additional Reference Information of the original
+     * session-connection. ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
+     *
      * @public
      * @readonly
      */

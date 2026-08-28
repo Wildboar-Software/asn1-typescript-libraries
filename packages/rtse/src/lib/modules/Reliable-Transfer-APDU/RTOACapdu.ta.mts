@@ -22,6 +22,11 @@ import {
  * @summary RTOACapdu
  * @description
  *
+ * RT-OPEN-ACCEPT (RTOAC). Positive response to establishment or
+ * recovery: user information of A-ASSOCIATE response/confirm when
+ * Result is `accepted`. ITU-T Rec. X.228 (11/88) §7.1.2.2, §7.1.3.3,
+ * §7.8.3.2.2; ITU-T Rec. X.218 (03/93) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +42,43 @@ export class RTOACapdu {
   constructor(
     /**
      * @summary `checkpointSize`.
+     * @description
+     *
+     * Agreed maximum data (units of 1024 octets) between minor
+     * synchronization points, governing both directions. If the RTORQ
+     * value was greater than zero, this shall be less than or equal
+     * to that value; otherwise the acceptor may choose. Zero (or
+     * absent) means checkpointing will not be used. ITU-T Rec. X.228
+     * (11/88) §7.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly checkpointSize: OPTIONAL<INTEGER>,
     /**
      * @summary `windowSize`.
+     * @description
+     *
+     * Used only if this APDU's `checkpointSize` is greater than
+     * zero. Agreed maximum outstanding minor synchronization points
+     * before data transfer is suspended, governing both directions.
+     * Shall be less than or equal to the RTORQ value. Absent means
+     * 3. ITU-T Rec. X.228 (11/88) §7.1.5.2.
+     *
      * @public
      * @readonly
      */
     readonly windowSize: OPTIONAL<INTEGER>,
     /**
      * @summary `connectionDataAC`.
+     * @description
+     *
+     * `open`: RT-OPEN response User-data (establishment only;
+     * transparent to the RTPM). `recover`: original
+     * session-connection-identifier (association-recovery only;
+     * mandatory then). ITU-T Rec. X.228 (11/88) Table 3/X.228 notes,
+     * §7.1.5.3–§7.1.5.4, §7.8.3.2.2.
+     *
      * @public
      * @readonly
      */

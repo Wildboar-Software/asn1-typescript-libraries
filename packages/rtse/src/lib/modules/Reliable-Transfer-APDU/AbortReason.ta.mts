@@ -17,6 +17,22 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AbortReason
  * @description
  *
+ * Reason carried in `RTABapdu.abortReason`. ITU-T Rec. X.228 (11/88)
+ * §7.7.3.4.1, §7.9.2.4.1, §7.9.3.4.1:
+ *
+ * - `localSystemProblem` (0)
+ * - `invalidParameter` (1) — `reflectedParameter` is supplied
+ * - `unrecognizedActivity` (2) — sending RTPM shall transfer-abort,
+ *   optionally then provider-abort
+ * - `temporaryProblem` (3) — do not attempt association-recovery for
+ *   a locally determined period
+ * - `protocolError` (4) — RTPM protocol error
+ * - `permanentProblem` (5) — provider-abort, solely in normal mode
+ *   (X.228 text: "permanent-error")
+ * - `userError` (6) — user-abort, solely in normal mode
+ * - `transferCompleted` (7) — receiving RTPM could not discard an
+ *   already completed transfer (X.228 Annex B.1.6)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,6 +53,8 @@ export type AbortReason = INTEGER;
 
 /**
  * @summary AbortReason_localSystemProblem
+ * @description Local system problem (ITU-T Rec. X.228 (11/88)
+ *     §7.7.3.4.1).
  * @constant
  * @type {number}
  */
@@ -45,6 +63,7 @@ export const AbortReason_localSystemProblem: AbortReason = 0; /* LONG_NAMED_INTE
 
 /**
  * @summary AbortReason_localSystemProblem
+ * @description Alias of {@link AbortReason_localSystemProblem}.
  * @constant
  * @type {number}
  */
@@ -53,6 +72,8 @@ export const localSystemProblem: AbortReason = AbortReason_localSystemProblem; /
 
 /**
  * @summary AbortReason_invalidParameter
+ * @description Invalid parameter; `reflectedParameter` identifies
+ *     which (ITU-T Rec. X.228 (11/88) §7.7.3.4.1).
  * @constant
  * @type {number}
  */
@@ -61,6 +82,7 @@ export const AbortReason_invalidParameter: AbortReason = 1; /* LONG_NAMED_INTEGE
 
 /**
  * @summary AbortReason_invalidParameter
+ * @description Alias of {@link AbortReason_invalidParameter}.
  * @constant
  * @type {number}
  */
@@ -69,6 +91,9 @@ export const invalidParameter: AbortReason = AbortReason_invalidParameter; /* SH
 
 /**
  * @summary AbortReason_unrecognizedActivity
+ * @description Unrecognized activity; sender transfer-aborts,
+ *     optionally then provider-aborts (ITU-T Rec. X.228 (11/88)
+ *     §7.7.3.4.1).
  * @constant
  * @type {number}
  */
@@ -77,6 +102,7 @@ export const AbortReason_unrecognizedActivity: AbortReason = 2; /* LONG_NAMED_IN
 
 /**
  * @summary AbortReason_unrecognizedActivity
+ * @description Alias of {@link AbortReason_unrecognizedActivity}.
  * @constant
  * @type {number}
  */
@@ -85,6 +111,8 @@ export const unrecognizedActivity: AbortReason = AbortReason_unrecognizedActivit
 
 /**
  * @summary AbortReason_temporaryProblem
+ * @description Do not attempt association-recovery for a locally
+ *     determined period (ITU-T Rec. X.228 (11/88) §7.7.3.4.1).
  * @constant
  * @type {number}
  */
@@ -93,6 +121,7 @@ export const AbortReason_temporaryProblem: AbortReason = 3; /* LONG_NAMED_INTEGE
 
 /**
  * @summary AbortReason_temporaryProblem
+ * @description Alias of {@link AbortReason_temporaryProblem}.
  * @constant
  * @type {number}
  */
@@ -101,6 +130,8 @@ export const temporaryProblem: AbortReason = AbortReason_temporaryProblem; /* SH
 
 /**
  * @summary AbortReason_protocolError
+ * @description RTPM protocol error (ITU-T Rec. X.228 (11/88)
+ *     §7.7.3.4.1).
  * @constant
  * @type {number}
  */
@@ -109,6 +140,7 @@ export const AbortReason_protocolError: AbortReason = 4; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary AbortReason_protocolError
+ * @description Alias of {@link AbortReason_protocolError}.
  * @constant
  * @type {number}
  */
@@ -117,6 +149,8 @@ export const protocolError: AbortReason = AbortReason_protocolError; /* SHORT_NA
 
 /**
  * @summary AbortReason_permanentProblem
+ * @description Provider-abort, solely in normal mode (X.228 text:
+ *     "permanent-error"). ITU-T Rec. X.228 (11/88) §7.9.2.4.1.
  * @constant
  * @type {number}
  */
@@ -125,6 +159,7 @@ export const AbortReason_permanentProblem: AbortReason = 5; /* LONG_NAMED_INTEGE
 
 /**
  * @summary AbortReason_permanentProblem
+ * @description Alias of {@link AbortReason_permanentProblem}.
  * @constant
  * @type {number}
  */
@@ -133,6 +168,8 @@ export const permanentProblem: AbortReason = AbortReason_permanentProblem; /* SH
 
 /**
  * @summary AbortReason_userError
+ * @description User-abort, solely in normal mode (ITU-T Rec. X.228
+ *     (11/88) §7.9.3.4.1).
  * @constant
  * @type {number}
  */
@@ -141,6 +178,7 @@ export const AbortReason_userError: AbortReason = 6; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary AbortReason_userError
+ * @description Alias of {@link AbortReason_userError}.
  * @constant
  * @type {number}
  */
@@ -149,6 +187,8 @@ export const userError: AbortReason = AbortReason_userError; /* SHORT_NAMED_INTE
 
 /**
  * @summary AbortReason_transferCompleted
+ * @description Receiving RTPM could not discard an already completed
+ *     transfer (ITU-T Rec. X.228 (11/88) §7.7.3.4.1).
  * @constant
  * @type {number}
  */
@@ -157,6 +197,7 @@ export const AbortReason_transferCompleted: AbortReason = 7; /* LONG_NAMED_INTEG
 
 /**
  * @summary AbortReason_transferCompleted
+ * @description Alias of {@link AbortReason_transferCompleted}.
  * @constant
  * @type {number}
  */

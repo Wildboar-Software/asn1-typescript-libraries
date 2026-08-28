@@ -21,6 +21,11 @@ import {
  * @summary RTORJapdu
  * @description
  *
+ * RT-OPEN-REJECT (RTORJ). Negative response to establishment or
+ * recovery: user information of A-ASSOCIATE response/confirm when
+ * the RTPM or acceptor rejects. ITU-T Rec. X.228 (11/88) §7.1.2.3,
+ * §7.1.3.3, §7.8.3.2.3; ITU-T Rec. X.218 (03/93) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +41,24 @@ export class RTORJapdu {
   constructor(
     /**
      * @summary `refuseReason`.
+     * @description
+     *
+     * Solely in X.410-1984 mode. Why the RTPM or acceptor refused
+     * establishment or recovery. ITU-T Rec. X.228 (11/88) Table
+     * 4/X.228 note 1, §7.1.6.1, §7.8.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly refuseReason?: OPTIONAL<RefuseReason>,
     /**
      * @summary `userDataRJ`.
+     * @description
+     *
+     * Solely in normal mode. RT-OPEN response User-data; transparent
+     * to the RTPM. Not used in association-recovery. ITU-T Rec.
+     * X.228 (11/88) Table 4/X.228 note 2, §7.1.6.2, §7.8.3.2.3.
+     *
      * @public
      * @readonly
      */

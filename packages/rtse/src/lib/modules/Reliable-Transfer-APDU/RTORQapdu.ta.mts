@@ -28,6 +28,13 @@ import {
  * @summary RTORQapdu
  * @description
  *
+ * RT-OPEN-REQUEST (RTORQ). User information of A-ASSOCIATE
+ * request/indication for association establishment and for
+ * association-recovery. Formed from the RT-OPEN request and RTPM
+ * internal data; RT-OPEN parameters except user-data are stored for
+ * recovery. ITU-T Rec. X.228 (11/88) §7.1.2.1, §7.1.3.1, §7.8.3;
+ * ITU-T Rec. X.218 (03/93) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,30 +54,62 @@ export class RTORQapdu {
   constructor(
     /**
      * @summary `checkpointSize`.
+     * @description
+     *
+     * Proposed maximum data (units of 1024 octets) between minor
+     * synchronization points. Zero invites the acceptor to choose.
+     * Absent means 0. ITU-T Rec. X.228 (11/88) §7.1.4.1.
+     *
      * @public
      * @readonly
      */
     readonly checkpointSize: OPTIONAL<INTEGER>,
     /**
      * @summary `windowSize`.
+     * @description
+     *
+     * Proposed maximum number of outstanding minor synchronization
+     * points before data transfer is suspended. Absent means 3.
+     * ITU-T Rec. X.228 (11/88) §7.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly windowSize: OPTIONAL<INTEGER>,
     /**
      * @summary `dialogueMode`.
+     * @description
+     *
+     * From the RT-OPEN Dialogue-mode parameter: `monologue` or
+     * two-way-alternate (`twa`). Absent means `monologue`. ITU-T Rec.
+     * X.218 (03/93) §9.1.1.1; X.228 (11/88) §7.1.4.3.
+     *
      * @public
      * @readonly
      */
     readonly dialogueMode: OPTIONAL<RTORQapdu_dialogueMode>,
     /**
      * @summary `connectionDataRQ`.
+     * @description
+     *
+     * `open`: RT-OPEN User-data (establishment only; transparent to
+     * the RTPM). `recover`: original session-connection-identifier
+     * (association-recovery only; mandatory then). ITU-T Rec. X.228
+     * (11/88) Table 2/X.228 notes, §7.1.4.4–§7.1.4.5, §7.8.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly connectionDataRQ: ConnectionData,
     /**
      * @summary `applicationProtocol`.
+     * @description
+     *
+     * Solely in X.410-1984 mode. Identifies the application protocol
+     * (normal mode uses Application Context Name instead) and the
+     * single abstract syntax of that mode. ITU-T Rec. X.218 (03/93)
+     * §8.1, §9.1.1.3; X.228 (11/88) §7.1.4.6.
+     *
      * @public
      * @readonly
      */

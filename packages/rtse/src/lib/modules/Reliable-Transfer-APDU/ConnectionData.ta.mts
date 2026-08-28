@@ -20,6 +20,12 @@ import {
  * @summary ConnectionData
  * @description
  *
+ * Payload of `connectionDataRQ` / `connectionDataAC`. `open` carries
+ * RT-OPEN User-data on establishment (encoded as `[0] IMPLICIT NULL`
+ * if that user data is absent). `recover` carries the original
+ * session-connection-identifier on association-recovery. ITU-T Rec.
+ * X.228 (11/88) §9, Table 2/X.228 and Table 3/X.228 notes, §7.8.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

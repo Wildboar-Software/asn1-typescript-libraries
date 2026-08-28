@@ -22,6 +22,12 @@ import {
  * @summary RTABapdu
  * @description
  *
+ * RT-ABORT (RTAB). User data of A-ABORT for association-abort during
+ * error handling, for provider-abort when recovery is not possible,
+ * and for user-abort. RT-U-ABORT is not supported in X.410-1984
+ * mode. ITU-T Rec. X.228 (11/88) §7.7.3, §7.9.2, §7.9.3; ITU-T Rec.
+ * X.218 (03/93) §9.6–§9.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +46,40 @@ export class RTABapdu {
   constructor(
     /**
      * @summary `abortReason`.
+     * @description
+     *
+     * Why the association is being aborted. Provider-abort uses
+     * `permanentProblem`; user-abort uses `userError`. ITU-T Rec.
+     * X.228 (11/88) §7.7.3.4.1, §7.9.2.4.1, §7.9.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly abortReason?: OPTIONAL<AbortReason>,
     /**
      * @summary `reflectedParameter`.
+     * @description
+     *
+     * Only if `abortReason` is `invalidParameter`; at most 8 bits.
+     * Identifies which parameters of the ACSE or presentation
+     * primitive received by the aborting RTPM are invalid. Bit 1 is
+     * the first parameter in the X.217 / X.216 service-parameter
+     * tables. Not used for provider-abort or user-abort. ITU-T Rec.
+     * X.228 (11/88) §7.7.3.4.2, §7.9.2.4.2, §7.9.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly reflectedParameter?: OPTIONAL<BIT_STRING>,
     /**
      * @summary `userdataAB`.
+     * @description
+     *
+     * Only in normal mode and only if `abortReason` is `userError`.
+     * RT-U-ABORT User-data; transparent to the RTPM. Not used in
+     * association-abort or provider-abort. ITU-T Rec. X.218 (03/93)
+     * §9.7.1.1; X.228 (11/88) §7.7.3.4.3, §7.9.3.4.3.
+     *
      * @public
      * @readonly
      */

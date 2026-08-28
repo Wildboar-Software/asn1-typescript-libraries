@@ -45,6 +45,21 @@ import {
  * @summary RTSE_apdus
  * @description
  *
+ * Top-level CHOICE of RTSE APDUs in **normal mode**. Carried as
+ * presentation user data. In **X.410-1984 mode** the CHOICE wrapper
+ * is not used: the SET types (and `INTEGER` / `OCTET STRING` for
+ * RTTP / RTTR) appear directly. ITU-T Rec. X.228 (11/88) §9.
+ *
+ * Context tags `[16]`, `[17]`, `[18]`, and `[22]` plus `INTEGER` and
+ * `OCTET STRING` are reserved for this CHOICE. ROSE APDUs use `[0]`
+ * through `[15]`; ROSE UNBIND uses `[19]`, `[20]`, and `[21]`. An
+ * RTSE-user protocol that shares this named abstract syntax must use
+ * distinct tags for RT-CLOSE and RT-TRANSFER user data. ITU-T Rec.
+ * X.228 (11/88) §9; ITU-T Rec. X.218 (03/93) §8.1.
+ *
+ * Unknown parameters on RTORQ, RTOAC, and RTORJ shall be ignored
+ * (X.228 §7.10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

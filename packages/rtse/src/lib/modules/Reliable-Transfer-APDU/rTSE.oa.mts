@@ -15,10 +15,16 @@ import {
  * @summary rTSE
  * @description
  *
- * **WARNING: Because there is a circular dependency from the ROSE modules and
- * RTSE modules, the `CONTRACT` type was removed from this file. Though this
- * object is not a `CONTRACT` in the eyes of TypeScript, this is still a
- * structurally valid `CONTRACT` information object.**
+ * RTSE identifier `{joint-iso-itu-t reliable-transfer(3) aseID(1)}`
+ * (`joint-iso-ccitt` in X.228 (11/88) Annex C). X.228 defined this
+ * as an `APPLICATION-SERVICE-ELEMENT`; this compilation represents
+ * it as a ROS `CONTRACT` with only `&id`.
+ *
+ * **WARNING: Because there is a circular dependency from the ROSE
+ * modules and RTSE modules, the `CONTRACT` type was removed from
+ * this file. Though this object is not a `CONTRACT` in the eyes of
+ * TypeScript, this is still a structurally valid `CONTRACT`
+ * information object.**
  *
  * ### ASN.1 Definition:
  *

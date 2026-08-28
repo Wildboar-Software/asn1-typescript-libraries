@@ -18,6 +18,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CallingSSuserReference
  * @description
  *
+ * Calling SS-User Reference component of the session-connection
+ * identifier. `t61String` solely in X.410-1984 mode; `octetString`
+ * solely in normal mode. ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5, §9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
