@@ -21,6 +21,14 @@ import {
  * @summary RegistrationDetails_registrant_enciphered_registrant
  * @description
  *
+ * Enciphered `RegistrantContactDetails`. `enciphered` is
+ * the ciphertext of the EXTENDED-XER encoding of that type
+ * (D.2.5). In XER this field is BASE64. Key distribution
+ * is not standardized; consult the parent node. ITU-T Rec.
+ * X.672 (06/2022)
+ * [D.2.4](https://www.itu.int/rec/T-REC-X.672-202206-I),
+ * D.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +40,22 @@ export class RegistrationDetails_registrant_enciphered_registrant {
   constructor(
     /**
      * @summary `algorithmIdentifier`.
+     * @description
+     *
+     * Encipherment algorithm, from X.509
+     * `AuthenticationFramework` `SupportedAlgorithms`.
+     *
      * @public
      * @readonly
      */
     readonly algorithmIdentifier: AlgorithmIdentifier,
     /**
      * @summary `enciphered`.
+     * @description
+     *
+     * Ciphertext of EXTENDED-XER
+     * `RegistrantContactDetails` (XER: BASE64).
+     *
      * @public
      * @readonly
      */

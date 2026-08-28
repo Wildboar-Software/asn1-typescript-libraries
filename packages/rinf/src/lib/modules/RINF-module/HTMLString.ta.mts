@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary HTMLString
  * @description
  *
+ * Restricted HTML used in RINF text fields. Shall be a
+ * valid HTML 4.01 document using only `<p>`, `<b>`,
+ * `</b>`, `<i>`, `</i>`, `<br/>`, `<a href>` and `</a>`
+ * (W3C HTML 4.01; D.2.5). ITU-T Rec. X.672 (06/2022)
+ * [D.2.5](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

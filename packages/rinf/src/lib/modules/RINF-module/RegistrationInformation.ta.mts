@@ -20,6 +20,19 @@ import {
  * @summary RegistrationInformation
  * @description
  *
+ * Root of a RINF XML file: registration data for an
+ * ORS-supported OID node. `noDisclosure` reveals nothing
+ * (always allowed, D.2.2). `disclosure` carries purpose,
+ * optional extra text, and first/current registrant
+ * (Annex F.3).
+ *
+ * Fetch via NAPTR `ORS+RINF`; the regexp is a URL to a
+ * `.xml` file that shall be EXTENDED-XER of this type
+ * (D.1, D.2.1). A non-zero DNS RCODE, or a file that does
+ * not conform to D.2, should be reported; how is not
+ * standardized. ITU-T Rec. X.672 (06/2022)
+ * [Annex D](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

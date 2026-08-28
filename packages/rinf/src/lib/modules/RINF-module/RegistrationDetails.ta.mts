@@ -20,6 +20,12 @@ import {
  * @summary RegistrationDetails
  * @description
  *
+ * When and by whom an OID node was registered. Contact
+ * details may be in the clear or enciphered, according to
+ * the node's security policy (D.2.4, F.3.3). ITU-T Rec.
+ * X.672 (06/2022)
+ * [D.2.5](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,12 +50,23 @@ export class RegistrationDetails {
   constructor(
     /**
      * @summary `registrationDate`.
+     * @description
+     *
+     * Calendar date of this registration (`TIME` with
+     * `Basic=Date Date=YMD`, not a time of day).
+     *
      * @public
      * @readonly
      */
     readonly registrationDate: TIME,
     /**
      * @summary `registrant`.
+     * @description
+     *
+     * Contact details in the clear
+     * (`non_enciphered`) or enciphered
+     * (`enciphered_registrant`). See D.2.4–D.2.5.
+     *
      * @public
      * @readonly
      */

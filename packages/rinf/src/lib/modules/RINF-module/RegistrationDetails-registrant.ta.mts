@@ -24,6 +24,16 @@ import {
  * @summary RegistrationDetails_registrant
  * @description
  *
+ * Registrant identity. `non_enciphered` is cleartext
+ * `RegistrantContactDetails`. `enciphered_registrant`
+ * holds the result of enciphering the EXTENDED-XER
+ * encoding of that type, per Rec. ITU-T X.509 | ISO/IEC
+ * 9594-8 §6.1. Obtain encryption keys from the parent
+ * node. Whether to encipher follows this OID node's
+ * security policy; how keys are distributed is not
+ * standardized (D.2.4–D.2.5). ITU-T Rec. X.672 (06/2022)
+ * [D.2.5](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

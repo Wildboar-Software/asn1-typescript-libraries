@@ -26,6 +26,14 @@ import {
  * @summary Information
  * @description
  *
+ * Disclosed registration data: purpose of this OID
+ * allocation, optional extra text, and first/current
+ * registrant (F.3.1). `currentRegistration` is recommended
+ * if available (D.2.5). Optional fields of either
+ * registrant require the current registrant's permission
+ * (D.2.3). ITU-T Rec. X.672 (06/2022)
+ * [D.2](https://www.itu.int/rec/T-REC-X.672-202206-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,24 +51,45 @@ export class Information {
   constructor(
     /**
      * @summary `description`.
+     * @description
+     *
+     * Purpose and use cases of this OID allocation (F.3.1).
+     *
      * @public
      * @readonly
      */
     readonly description: HTMLString,
     /**
      * @summary `additionalInformation`.
+     * @description
+     *
+     * Further text about the node; same markup rules as
+     * `description`.
+     *
      * @public
      * @readonly
      */
     readonly additionalInformation?: OPTIONAL<HTMLString>,
     /**
      * @summary `firstRegistration`.
+     * @description
+     *
+     * Original registration of this node, if disclosed.
+     * Optional fields need the current registrant's
+     * permission (D.2.3).
+     *
      * @public
      * @readonly
      */
     readonly firstRegistration?: OPTIONAL<RegistrationDetails>,
     /**
      * @summary `currentRegistration`.
+     * @description
+     *
+     * Current owner of this node. Recommended when
+     * available (D.2.5). Optional fields need that
+     * registrant's permission (D.2.3).
+     *
      * @public
      * @readonly
      */

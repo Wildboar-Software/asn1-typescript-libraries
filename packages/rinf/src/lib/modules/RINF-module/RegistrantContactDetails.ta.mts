@@ -18,6 +18,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RegistrantContactDetails
  * @description
  *
+ * Contact details for a registrant. All components are
+ * optional, but none of these fields of the first or
+ * current registrant shall be present without the current
+ * registrant's permission (D.2.3). Contact data is
+ * particularly sensitive. ITU-T Rec. X.672 (06/2022)
+ * [D.2.3](https://www.itu.int/rec/T-REC-X.672-202206-I),
+ * D.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,12 +62,20 @@ export class RegistrantContactDetails {
     readonly e_mailAddress?: OPTIONAL<UTF8String>,
     /**
      * @summary `phone`.
+     * @description
+     *
+     * Shall start with `+` (D.2.5).
+     *
      * @public
      * @readonly
      */
     readonly phone?: OPTIONAL<IA5String>,
     /**
      * @summary `fax`.
+     * @description
+     *
+     * Shall start with `+` (D.2.5).
+     *
      * @public
      * @readonly
      */
