@@ -25,6 +25,17 @@ import {
  * @summary Associate_source_diagnostic
  * @description
  *
+ * Who produced the AARE result and why. User diagnostics:
+ * `null` (0), `no-reason-given` (1),
+ * `application-context-name-not-supported` (2). Provider
+ * diagnostics: `null` (0), `no-reason-given` (1),
+ * `no-common-dialogue-portion` (2). Table 58 says
+ * "Application Context Name not supplied"; the ASN.1
+ * (`not-supported`) takes precedence (clause 2). ITU-T Rec.
+ * Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * Tables 55–59.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

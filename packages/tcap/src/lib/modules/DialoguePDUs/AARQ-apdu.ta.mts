@@ -25,6 +25,13 @@ import {
  * @summary AARQ_apdu
  * @description
  *
+ * Dialogue Request: opens a structured dialogue. Application
+ * context name is mandatory; protocol version defaults to
+ * version 1 if omitted; user information is optional. ITU-T
+ * Rec. Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * Table 38.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +48,34 @@ export class AARQ_apdu {
     constructor(
         /**
          * @summary `protocol_version`.
+         * @description
+         *
+         * BIT STRING `{version1(0)}`. If this element is
+         * omitted, the default is version 1 (Table 38 note b).
+         * BIT STRING must be primitive (§4.1.1).
+         *
          * @public
          * @readonly
          */
         readonly protocol_version: OPTIONAL<AARQ_apdu_protocol_version>,
         /**
          * @summary `application_context_name`.
+         * @description
+         *
+         * Application context for this dialogue, as an OBJECT
+         * IDENTIFIER. Mandatory (Table 38).
+         *
          * @public
          * @readonly
          */
         readonly application_context_name: OBJECT_IDENTIFIER,
         /**
          * @summary `user_information`.
+         * @description
+         *
+         * Optional sequence of EXTERNALs identified by a
+         * user-defined abstract syntax name (§4.2.3).
+         *
          * @public
          * @readonly
          */

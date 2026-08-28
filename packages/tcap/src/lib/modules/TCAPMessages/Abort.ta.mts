@@ -25,6 +25,16 @@ import {
  * @summary Abort
  * @description
  *
+ * Aborts a transaction. Destination Transaction ID only; no
+ * Component Portion. `p-abortCause` shall be present when the
+ * Transaction sublayer generates the Abort; `u-abortCause`
+ * (a Dialogue Portion) may be present only when the TC-User
+ * generates it — ABRT APDU from the component sublayer, or
+ * ABRT / user-defined syntax from the TC-User. ITU-T Rec.
+ * Q.773 (06/97)
+ * [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I)
+ * (NOTE), Table 7, Table 9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +50,24 @@ export class Abort {
   constructor(
     /**
      * @summary `dtid`.
+     * @description
+     *
+     * Destination Transaction ID of the transaction being
+     * aborted (1–4 octets). Mandatory (Table 9).
+     *
      * @public
      * @readonly
      */
     readonly dtid: DestTransactionID,
     /**
      * @summary `reason`.
+     * @description
+     *
+     * `p-abortCause` from the Transaction sublayer, or
+     * `u-abortCause` (Dialogue Portion) from the component
+     * sublayer or TC-User. Optional as a whole; presence
+     * rules are in Table 7 notes b and c.
+     *
      * @public
      * @readonly
      */

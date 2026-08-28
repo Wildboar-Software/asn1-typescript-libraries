@@ -21,6 +21,12 @@ import {
  * @summary ABRT_apdu
  * @description
  *
+ * Dialogue Abort for a structured dialogue. Abort source is
+ * mandatory; user information is optional. ITU-T Rec. Q.773
+ * (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * Table 40.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +41,23 @@ export class ABRT_apdu {
     constructor(
         /**
          * @summary `abort_source`.
+         * @description
+         *
+         * `dialogue-service-user` (0) or
+         * `dialogue-service-provider` (1) (Table 60).
+         * Mandatory.
+         *
          * @public
          * @readonly
          */
         readonly abort_source: ABRT_source,
         /**
          * @summary `user_information`.
+         * @description
+         *
+         * Optional sequence of EXTERNALs identified by a
+         * user-defined abstract syntax name (§4.2.3).
+         *
          * @public
          * @readonly
          */

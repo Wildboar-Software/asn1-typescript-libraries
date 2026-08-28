@@ -29,6 +29,15 @@ import {
  * @summary DialoguePDU
  * @description
  *
+ * Structured-dialogue APDUs carried in the Dialogue Portion
+ * when `direct-reference` is `dialogue-as-id`. Request
+ * (`AARQ`, `[APPLICATION 0]`), response (`AARE`,
+ * `[APPLICATION 1]`), abort (`ABRT`, `[APPLICATION 4]`).
+ * RLRQ/RLRE exist in the module but are not used. ITU-T Rec.
+ * Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.3.1, Table 41.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

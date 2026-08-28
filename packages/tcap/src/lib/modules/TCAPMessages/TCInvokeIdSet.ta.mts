@@ -20,6 +20,14 @@ import {
  * @summary TCInvokeIdSet
  * @description
  *
+ * Invoke IDs allowed in TCAP Components: X.880 `InvokeId`
+ * with `present` constrained to `-128..127` (one octet).
+ * Clause 3 names this `InvokeIdType`. A Linked ID uses the
+ * same range, tagged `[0]` so it is not confused with the
+ * operation code. ITU-T Rec. Q.773 (06/97)
+ * [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

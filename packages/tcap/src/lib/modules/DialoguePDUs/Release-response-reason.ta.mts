@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Release_response_reason
  * @description
  *
+ * Reason in an RLRE APDU: `normal` (0), `not-finished` (1),
+ * `user-defined` (30). Currently not used; included for
+ * completeness only. ITU-T Rec. Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

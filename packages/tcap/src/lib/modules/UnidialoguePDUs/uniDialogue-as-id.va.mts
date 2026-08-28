@@ -16,6 +16,13 @@ import {
  * @summary uniDialogue_as_id
  * @description
  *
+ * Abstract syntax name for unstructured-dialogue APDUs. Set
+ * as the EXTERNAL `direct-reference` of a Dialogue Portion
+ * when unstructured dialogue is used. Encoding of the OID
+ * value is in Table 36. ITU-T Rec. Q.773 (06/97)
+ * [§3.2.2](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

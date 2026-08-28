@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Associate_result
  * @description
  *
+ * Outcome of a Dialogue Request: `accepted` (0) or
+ * `reject-permanent` (1). Q.773 names these values (Table 54)
+ * but does not further define them. ITU-T Rec. Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +31,10 @@ export type Associate_result = INTEGER;
 
 /**
  * @summary Associate_result_accepted
+ * @description
+ *
+ * Dialogue Request accepted (Table 54).
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +49,10 @@ export const accepted: Associate_result = Associate_result_accepted; /* SHORT_NA
 
 /**
  * @summary Associate_result_reject_permanent
+ * @description
+ *
+ * Dialogue Request permanently rejected (Table 54).
+ *
  * @constant
  * @type {number}
  */

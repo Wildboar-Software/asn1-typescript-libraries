@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Associate_source_diagnostic_dialogue_service_user
  * @description
  *
+ * User-side AARE diagnostic (Table 58 / ASN.1): `null` (0),
+ * `no-reason-given` (1),
+ * `application-context-name-not-supported` (2). ITU-T Rec.
+ * Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,6 +60,12 @@ export const no_reason_given: Associate_source_diagnostic_dialogue_service_user 
 
 /**
  * @summary Associate_source_diagnostic_dialogue_service_user_application_context_name_not_supported
+ * @description
+ *
+ * Requested application context is not supported. Table 58
+ * says "not supplied"; the ASN.1 (`not-supported`) takes
+ * precedence (clause 2).
+ *
  * @constant
  * @type {number}
  */

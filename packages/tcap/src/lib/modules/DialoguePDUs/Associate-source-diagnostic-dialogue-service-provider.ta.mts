@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Associate_source_diagnostic_dialogue_service_provider
  * @description
  *
+ * Provider-side AARE diagnostic (Table 59): `null` (0),
+ * `no-reason-given` (1), `no-common-dialogue-portion` (2).
+ * ITU-T Rec. Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,6 +59,10 @@ export const no_reason_given: Associate_source_diagnostic_dialogue_service_provi
 
 /**
  * @summary Associate_source_diagnostic_dialogue_service_provider_no_common_dialogue_portion
+ * @description
+ *
+ * No common dialogue portion (Table 59).
+ *
  * @constant
  * @type {number}
  */

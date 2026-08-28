@@ -30,6 +30,12 @@ import {
  * @summary End
  * @description
  *
+ * Closes a transaction. Carries only the destination
+ * Transaction ID (the peer's originating ID); components
+ * are optional. ITU-T Rec. Q.773 (06/97)
+ * [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * Table 5, Table 9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +51,35 @@ export class End {
   constructor(
     /**
      * @summary `dtid`.
+     * @description
+     *
+     * Destination Transaction ID: the peer's originating ID
+     * (1–4 octets). Mandatory on End (Table 9).
+     *
      * @public
      * @readonly
      */
     readonly dtid: DestTransactionID,
     /**
      * @summary `dialoguePortion`.
+     * @description
+     *
+     * Optional EXTERNAL for a structured-dialogue APDU
+     * (`dialogue-as-id`) or user information. ITU-T Rec.
+     * Q.773 (06/97) §4.2.3.
+     *
      * @public
      * @readonly
      */
     readonly dialoguePortion?: OPTIONAL<DialoguePortion>,
     /**
      * @summary `components`.
+     * @description
+     *
+     * Optional; if present, one or more Components. The
+     * Component Portion tag shall be present only if this
+     * field is present (Table 5 note b).
+     *
      * @public
      * @readonly
      */

@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary OrigTransactionID
  * @description
  *
+ * Originating Transaction ID: 1–4 octets,
+ * `[APPLICATION 8]`. Present on Begin and Continue; absent
+ * on Unidirectional, End, and Abort. OCTET STRING must be
+ * primitive (§4.1.1). ITU-T Rec. Q.773 (06/97)
+ * [§4.2.1.3](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * Table 9, Table 10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

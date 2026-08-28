@@ -19,6 +19,12 @@ import {
  * @summary UniDialoguePDU
  * @description
  *
+ * Unstructured-dialogue APDU carried in the Dialogue Portion
+ * when `direct-reference` is `uniDialogue-as-id`. The only
+ * alternative is `AUDT-apdu`. ITU-T Rec. Q.773 (06/97)
+ * [§3.2.2](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.3, Table 34.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

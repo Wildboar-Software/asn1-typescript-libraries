@@ -21,6 +21,10 @@ import {
  * @summary RLRE_apdu
  * @description
  *
+ * Dialogue Release Response. Currently not used; included for
+ * completeness only. ITU-T Rec. Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,22 @@ export class RLRE_apdu {
     constructor(
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Optional release-response reason. This APDU is not
+         * used in this Recommendation.
+         *
          * @public
          * @readonly
          */
         readonly reason?: OPTIONAL<Release_response_reason>,
         /**
          * @summary `user_information`.
+         * @description
+         *
+         * Optional user information. This APDU is not used in
+         * this Recommendation.
+         *
          * @public
          * @readonly
          */

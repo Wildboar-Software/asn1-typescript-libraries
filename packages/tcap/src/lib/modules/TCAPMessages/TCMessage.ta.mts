@@ -27,6 +27,23 @@ import { Abort, _decode_Abort, _encode_Abort } from '../TCAPMessages/Abort.ta.mj
  * @summary TCMessage
  * @description
  *
+ * Top-level TCAP PDU. Application-wide constructor; the tag
+ * is the message type (Table 8). Alternatives:
+ *
+ * - `unidirectional` (`[APPLICATION 1]`): no transaction IDs;
+ *   components mandatory (Table 3, Table 9).
+ * - `begin` (`[APPLICATION 2]`): originating ID only
+ *   (Table 4).
+ * - `end` (`[APPLICATION 4]`): destination ID only (Table 5).
+ * - `continue` (`[APPLICATION 5]`): both IDs (Table 6).
+ * - `abort` (`[APPLICATION 7]`): destination ID; no
+ *   components (Table 7).
+ *
+ * Tags 3 and 6 are reserved. Parametrized by the invokable
+ * and returnable operation sets (Annex A). ITU-T Rec. Q.773
+ * (06/97) [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

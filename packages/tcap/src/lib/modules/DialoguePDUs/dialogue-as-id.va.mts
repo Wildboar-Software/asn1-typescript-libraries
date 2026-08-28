@@ -16,6 +16,13 @@ import {
  * @summary dialogue_as_id
  * @description
  *
+ * Abstract syntax name for structured-dialogue APDUs. Set as
+ * the EXTERNAL `direct-reference` of a Dialogue Portion when
+ * structured dialogue is used. Encoding of the OID value is
+ * in Table 37. ITU-T Rec. Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

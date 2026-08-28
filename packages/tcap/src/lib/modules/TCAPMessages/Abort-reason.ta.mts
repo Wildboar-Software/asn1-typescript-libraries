@@ -24,6 +24,15 @@ import {
  * @summary Abort_reason
  * @description
  *
+ * Abort cause CHOICE. `p-abortCause` is a Transaction-sublayer
+ * P-Abort Cause (`[APPLICATION 10]`). `u-abortCause` is a
+ * Dialogue Portion: ABRT APDU from the component sublayer, or
+ * ABRT / user-defined abstract syntax from the TC-User
+ * (including a 1988 Abort carrying only user information).
+ * ITU-T Rec. Q.773 (06/97)
+ * [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I)
+ * (NOTE), Table 7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

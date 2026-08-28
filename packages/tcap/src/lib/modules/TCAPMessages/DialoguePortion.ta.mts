@@ -16,6 +16,18 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DialoguePortion
  * @description
  *
+ * Dialogue control PDUs or user information, encoded as
+ * `[APPLICATION 11] EXPLICIT EXTERNAL`. Set
+ * `direct-reference` to `dialogue-as-id` for structured
+ * dialogue or `uniDialogue-as-id` for unstructured. Use a
+ * user-defined abstract syntax name when only user
+ * information is carried (e.g. a 1988 Abort). Using
+ * single-ASN.1-type is one possible EXTERNAL encoding, not
+ * the only one (Table 33 note b).
+ * ITU-T Rec. Q.773 (06/97)
+ * [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.3, Tables 30–34.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

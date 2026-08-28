@@ -21,6 +21,10 @@ import {
  * @summary RLRQ_apdu
  * @description
  *
+ * Dialogue Release Request. Currently not used; included for
+ * completeness only. ITU-T Rec. Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,22 @@ export class RLRQ_apdu {
     constructor(
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Optional release-request reason. This APDU is not
+         * used in this Recommendation.
+         *
          * @public
          * @readonly
          */
         readonly reason?: OPTIONAL<Release_request_reason>,
         /**
          * @summary `user_information`.
+         * @description
+         *
+         * Optional user information. This APDU is not used in
+         * this Recommendation.
+         *
          * @public
          * @readonly
          */

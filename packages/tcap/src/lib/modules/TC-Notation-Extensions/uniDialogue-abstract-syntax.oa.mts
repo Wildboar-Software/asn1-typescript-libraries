@@ -20,6 +20,13 @@ import { uniDialogue_as_id } from '../UnidialoguePDUs/uniDialogue-as-id.va.mjs';
  * @summary uniDialogue_abstract_syntax
  * @description
  *
+ * X.208 `ABSTRACT-SYNTAX` for unstructured-dialogue APDUs
+ * (`UniDialoguePDU`), identified by `uniDialogue-as-id`. Put
+ * that OID in the Dialogue Portion EXTERNAL
+ * `direct-reference`. ITU-T Rec. Q.773 (06/97)
+ * [§3.2.2](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

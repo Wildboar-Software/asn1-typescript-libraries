@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ABRT_source
  * @description
  *
+ * Source of a Dialogue Abort: `dialogue-service-user` (0) or
+ * `dialogue-service-provider` (1) (Table 60). ITU-T Rec.
+ * Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +32,10 @@ export type ABRT_source = INTEGER;
 
 /**
  * @summary ABRT_source_dialogue_service_user
+ * @description
+ *
+ * Abort originated by the dialogue-service user (Table 60).
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +50,11 @@ export const dialogue_service_user: ABRT_source = ABRT_source_dialogue_service_u
 
 /**
  * @summary ABRT_source_dialogue_service_provider
+ * @description
+ *
+ * Abort originated by the dialogue-service provider
+ * (Table 60).
+ *
  * @constant
  * @type {number}
  */

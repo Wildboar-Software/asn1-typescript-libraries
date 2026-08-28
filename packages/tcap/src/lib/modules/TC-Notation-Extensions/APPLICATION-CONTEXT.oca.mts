@@ -31,6 +31,14 @@ import {
  * @summary APPLICATION_CONTEXT
  * @description
  *
+ * Information object class for a TC application context.
+ * `&applicationContextName` is the OBJECT IDENTIFIER carried
+ * in AARQ, AARE, and AUDT. `&dialogueMode` selects structured
+ * vs unstructured dialogue (Q.773 §3.2). The class itself is
+ * defined in Q.775 / Q.680–Q.683, not in Q.773. ITU-T Rec.
+ * Q.773 (06/97)
+ * [§3.2](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -90,7 +98,11 @@ export interface APPLICATION_CONTEXT {
      */
     readonly '&associationContract'?: CONTRACT;
     /**
-     * @summary &dialogueMode
+     * @summary `&dialogueMode`
+     * @description
+     *
+     * Structured (`DialoguePDU`) or unstructured
+     * (`UniDialoguePDU`) per Q.773 §3.2.
      */
     readonly '&dialogueMode'?: DialogueMode;
     /**
@@ -114,7 +126,11 @@ export interface APPLICATION_CONTEXT {
      */
     readonly '&AbstractSyntaxes'?: ABSTRACT_SYNTAX[];
     /**
-     * @summary &applicationContextName
+     * @summary `&applicationContextName`
+     * @description
+     *
+     * Value of `application-context-name` in AARQ, AARE, and
+     * AUDT (Q.773 Tables 38, 39, 61).
      */
     readonly '&applicationContextName'?: OBJECT_IDENTIFIER;
 }

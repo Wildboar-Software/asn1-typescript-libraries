@@ -15,6 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DialogueMode
  * @description
  *
+ * Selects Q.773 structured dialogue (AARQ/AARE/ABRT,
+ * `dialogue-as-id`) or unstructured dialogue (AUDT,
+ * `uniDialogue-as-id`). ITU-T Rec. Q.773 (06/97)
+ * [§3.2](https://www.itu.int/rec/T-REC-Q.773-199706-I). This
+ * enumeration itself is from Q.775, not Q.773.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,12 @@ export enum _enum_for_DialogueMode {
  * @summary DialogueMode
  * @description
  *
+ * Selects Q.773 structured dialogue (AARQ/AARE/ABRT,
+ * `dialogue-as-id`) or unstructured dialogue (AUDT,
+ * `uniDialogue-as-id`). ITU-T Rec. Q.773 (06/97)
+ * [§3.2](https://www.itu.int/rec/T-REC-Q.773-199706-I). This
+ * enumeration itself is from Q.775, not Q.773.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +58,12 @@ export type DialogueMode = _enum_for_DialogueMode;
  * @summary DialogueMode
  * @description
  *
+ * Selects Q.773 structured dialogue (AARQ/AARE/ABRT,
+ * `dialogue-as-id`) or unstructured dialogue (AUDT,
+ * `uniDialogue-as-id`). ITU-T Rec. Q.773 (06/97)
+ * [§3.2](https://www.itu.int/rec/T-REC-Q.773-199706-I). This
+ * enumeration itself is from Q.775, not Q.773.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,6 +76,11 @@ export const DialogueMode = _enum_for_DialogueMode;
 
 /**
  * @summary DialogueMode_structured
+ * @description
+ *
+ * Structured dialogue: Dialogue Portion uses `dialogue-as-id`
+ * and `DialoguePDU` (Q.773 §3.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +97,11 @@ export const structured: DialogueMode =
 
 /**
  * @summary DialogueMode_unstructured
+ * @description
+ *
+ * Unstructured dialogue: Dialogue Portion uses
+ * `uniDialogue-as-id` and `UniDialoguePDU` (Q.773 §3.2.2).
+ *
  * @constant
  * @type {number}
  */

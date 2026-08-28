@@ -19,6 +19,14 @@ import {
  * @summary ComponentPortion
  * @description
  *
+ * Last field of the Transaction Portion when present: one or
+ * more Components (`SIZE (1..MAX)`), `[APPLICATION 12]`.
+ * Mandatory on Unidirectional; optional on Begin, End, and
+ * Continue (tag present only if components are included);
+ * absent on Abort. ITU-T Rec. Q.773 (06/97)
+ * [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.1.6, Tables 3–7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

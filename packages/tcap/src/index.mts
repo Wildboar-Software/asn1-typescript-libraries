@@ -1,3 +1,30 @@
+/**
+ * Transaction Capabilities Application Part (TCAP) formats
+ * and encodings from ITU-T Rec. Q.773 (06/97)
+ * [§1](https://www.itu.int/rec/T-REC-Q.773-199706-I).
+ *
+ * A TCAP message is one constructor information element: a
+ * Transaction Portion (message type and transaction IDs), an
+ * optional Dialogue Portion (application context and user
+ * information), and an optional Component Portion (ROSE-based
+ * operation APDUs). Encoding is X.209 BER with three extra
+ * constraints (§4.1.1): length less than 128 octets uses the
+ * short form; long-form length uses the fewest octets; OCTET
+ * STRING and BIT STRING are primitive. Unassigned
+ * Application-wide tags are reserved (§4.1.2.2.1). In SS No. 7
+ * connectionless use, the total message length is limited by
+ * the network (Figure 8 note).
+ *
+ * `TCMessage` is parametrized by the invokable and returnable
+ * operation sets (Annex A); encodings match the clause 3
+ * abstract syntax. Structured dialogue APDUs use
+ * `dialogue-as-id`; unstructured use `uniDialogue-as-id`.
+ *
+ * TCAP-Tools, TCAP-Examples, and TC-Notation-Extensions are
+ * from Q.775 / Q.680–Q.683; Q.773 does not define them.
+ *
+ * @module
+ */
 export {
     type AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1,

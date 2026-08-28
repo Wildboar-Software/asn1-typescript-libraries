@@ -25,6 +25,12 @@ import {
  * @summary Unidirectional
  * @description
  *
+ * One-way TCAP message: no transaction IDs. Components are
+ * mandatory; the dialogue portion is optional. ITU-T Rec.
+ * Q.773 (06/97)
+ * [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * Table 3, Table 9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,23 @@ export class Unidirectional {
   constructor(
     /**
      * @summary `dialoguePortion`.
+     * @description
+     *
+     * Optional EXTERNAL carrying a unidialogue APDU
+     * (`uniDialogue-as-id`) or user information. ITU-T Rec.
+     * Q.773 (06/97) §4.2.3.
+     *
      * @public
      * @readonly
      */
     readonly dialoguePortion: OPTIONAL<DialoguePortion>,
     /**
      * @summary `components`.
+     * @description
+     *
+     * One or more Components. Mandatory on Unidirectional
+     * (Table 3).
+     *
      * @public
      * @readonly
      */

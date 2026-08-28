@@ -25,6 +25,15 @@ import {
  * @summary AUDT_apdu
  * @description
  *
+ * Unidirectional Dialogue: unstructured-dialogue request.
+ * Application context name is mandatory; protocol version
+ * defaults to version 1 if omitted; user information is
+ * optional. Same APPLICATION 0 tag as AARQ; the enclosing
+ * EXTERNAL `direct-reference` distinguishes them. ITU-T Rec.
+ * Q.773 (06/97)
+ * [§3.2.2](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * Table 61.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +50,34 @@ export class AUDT_apdu {
     constructor(
         /**
          * @summary `protocol_version`.
+         * @description
+         *
+         * BIT STRING `{version1(0)}`. If this element is
+         * omitted, the default is version 1 (Table 61 note b).
+         * BIT STRING must be primitive (§4.1.1).
+         *
          * @public
          * @readonly
          */
         readonly protocol_version: OPTIONAL<AUDT_apdu_protocol_version>,
         /**
          * @summary `application_context_name`.
+         * @description
+         *
+         * Application context for this unstructured dialogue,
+         * as an OBJECT IDENTIFIER. Mandatory (Table 61).
+         *
          * @public
          * @readonly
          */
         readonly application_context_name: OBJECT_IDENTIFIER,
         /**
          * @summary `user_information`.
+         * @description
+         *
+         * Optional sequence of EXTERNALs identified by a
+         * user-defined abstract syntax name (§4.2.3).
+         *
          * @public
          * @readonly
          */

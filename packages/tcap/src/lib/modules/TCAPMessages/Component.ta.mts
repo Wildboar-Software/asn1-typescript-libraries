@@ -22,6 +22,18 @@ import {
  * @summary Component
  * @description
  *
+ * One Component sublayer APDU. `basicROS` is the X.880 ROS
+ * CHOICE (invoke `[1]`, returnResultLast `[2]`, returnError
+ * `[3]`, reject `[4]`). TCAP adds `returnResultNotLast`
+ * (`[7]`) so a result may be segmented; its format is
+ * identical to Return Result (Last). Invoke IDs are one
+ * octet (`-128..127`); a Linked ID associates an Invoke with
+ * a previous Invoke. If the Invoke ID cannot be derived,
+ * Reject uses UNIVERSAL NULL with length 0 (Table 21). ITU-T
+ * Rec. Q.773 (06/97)
+ * [§3.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.2, Table 19; Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

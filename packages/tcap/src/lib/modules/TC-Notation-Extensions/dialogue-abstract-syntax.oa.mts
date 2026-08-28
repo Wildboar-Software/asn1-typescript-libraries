@@ -20,6 +20,13 @@ import { dialogue_as_id } from '../DialoguePDUs/dialogue-as-id.va.mjs';
  * @summary dialogue_abstract_syntax
  * @description
  *
+ * X.208 `ABSTRACT-SYNTAX` for structured-dialogue APDUs
+ * (`DialoguePDU`), identified by `dialogue-as-id`. Put that
+ * OID in the Dialogue Portion EXTERNAL `direct-reference`.
+ * ITU-T Rec. Q.773 (06/97)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-Q.773-199706-I),
+ * §4.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
