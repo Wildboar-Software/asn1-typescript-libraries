@@ -31,6 +31,8 @@ import {
  * @summary Result_list_Item
  * @description
  *
+ * Reply to one proposed context (X.226 §6.2.3.5, §6.5.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,18 +44,31 @@ export class Result_list_Item {
     constructor(
         /**
          * @summary `result`.
+         * @description
+         *
+         * `acceptance`, `user-rejection`, or `provider-rejection`.
+         *
          * @public
          * @readonly
          */
         readonly result: Result,
         /**
          * @summary `transfer_syntax_name`.
+         * @description
+         *
+         * Present on `acceptance`: one of the names proposed for this
+         * context; that is the transfer syntax used on the connection.
+         *
          * @public
          * @readonly
          */
         readonly transfer_syntax_name?: OPTIONAL<Transfer_syntax_name>,
         /**
          * @summary `provider_reason`.
+         * @description
+         *
+         * Present on `provider-rejection`.
+         *
          * @public
          * @readonly
          */

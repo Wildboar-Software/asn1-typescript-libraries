@@ -25,6 +25,28 @@ import {
  * @summary User_data
  * @description
  *
+ * Presentation User data: one or more PDVs. Encoding choice is specified
+ * in X.226 §8.4 (when `User-data` is nested in another type, BER/PER
+ * still wrap this CHOICE; when it is the entire SS-user data of S-DATA,
+ * S-CAPABILITY-DATA, S-EXPEDITED-DATA, simple encoding omits identifier
+ * and length octets).
+ *
+ * **Simply-encoded:** default context; or DCS has exactly one member and
+ * context-management is not selected (X.226 §8.4.1). Also when
+ * `nominated-context` is selected and all PDVs are from the sender's
+ * nominated context (X.226/Amd.1 §8.4.1.3 bis). Not used in CP User data
+ * except when the default context is in use.
+ *
+ * **Fully-encoded:** otherwise, including CP/CPC unless default context
+ * is in use; or DCS has more than one member; or context-management is
+ * selected (unless nominated-context applies) (X.226 §8.4.2; Amd.1
+ * §8.4.2.2).
+ *
+ * TE PPDU User data is always from the default context (X.226 §6.1.1;
+ * X.216 §10.1). Other primitives follow DCS rules in X.226 §6.1.2 /
+ * X.216 §10.1. Session version 1 may reject request/response User data
+ * that does not fit SS-user data, except `P-U-ABORT` (X.226 §6.1 Note).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

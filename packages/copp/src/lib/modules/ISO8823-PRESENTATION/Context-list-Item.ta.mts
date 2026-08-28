@@ -30,6 +30,11 @@ import {
  * @summary Context_list_Item
  * @description
  *
+ * One proposed presentation context: identifier, abstract syntax, and
+ * transfer syntaxes the sending PPM can support (at least one)
+ * (X.226 §6.2.2.7, §6.5.2.1). The responding PPM picks one transfer
+ * syntax for each accepted context (X.226 §6.2.6.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +46,33 @@ export class Context_list_Item {
     constructor(
         /**
          * @summary `presentation_context_identifier`.
+         * @description
+         *
+         * Unique on the connection. Default context has no identifier
+         * (X.226 §3.5.7). Initiator-allocated values are odd.
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_identifier: Presentation_context_identifier,
         /**
          * @summary `abstract_syntax_name`.
+         * @description
+         *
+         * Registered name of the abstract syntax. Repeating the same name
+         * still creates a distinct context (X.216 §10.2.1.4).
+         *
          * @public
          * @readonly
          */
         readonly abstract_syntax_name: Abstract_syntax_name,
         /**
          * @summary `transfer_syntax_name_list`.
+         * @description
+         *
+         * Transfer syntaxes (or names of specifications producing them)
+         * the sending PPM can support for this abstract syntax.
+         *
          * @public
          * @readonly
          */

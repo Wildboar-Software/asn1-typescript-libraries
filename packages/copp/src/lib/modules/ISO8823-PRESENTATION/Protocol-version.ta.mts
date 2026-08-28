@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Protocol_version
  * @description
  *
+ * Presentation protocol versions. CP lists versions the initiator
+ * supports; CPA names the one selected (must be among those proposed);
+ * CPR may list versions the responder supports (X.226 §6.2.2.2,
+ * §6.2.3.2, §6.2.4.1, §6.2.6.4). This Recommendation is `version-1`.
+ * Unnamed bits on CP are ignored (X.226 §8.5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +34,11 @@ export type Protocol_version = BIT_STRING;
 
 /**
  * @summary Protocol_version_version_1
+ * @description
+ *
+ * Version defined by ITU-T Rec. X.226 (1994) | ISO/IEC 8823-1
+ * (X.226 §6.2.2.2).
+ *
  * @constant
  */
 export const Protocol_version_version_1: number = 0; /* LONG_NAMED_BIT */

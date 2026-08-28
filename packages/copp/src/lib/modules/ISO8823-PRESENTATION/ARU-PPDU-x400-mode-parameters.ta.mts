@@ -26,6 +26,10 @@ import {
  * @summary ARU_PPDU_x400_mode_parameters
  * @description
  *
+ * X.410-1984 mode ARU User data: `COMPONENTS OF RTABapdu`, bitwise
+ * compatible with CCITT Rec. X.410-1984 (X.226 §8.2). P-U-ABORT User
+ * data in this mode is a single SET (X.216 Annex A.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

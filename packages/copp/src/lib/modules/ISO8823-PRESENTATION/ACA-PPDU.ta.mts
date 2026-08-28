@@ -31,6 +31,13 @@ import {
  * @summary ACA_PPDU
  * @description
  *
+ * Alter Context Acknowledge (ACA) PPDU. Conveys `P-ALTER-CONTEXT`
+ * response/confirm in `S-TYPED-DATA` (X.226 §6.5.3–6.5.4, §7.4.2).
+ * Accepted additions join the DCS (and may appear in this User data)
+ * when the acceptor sends the response / requestor receives ACA;
+ * accepted deletions leave the DCS at the same points and must not
+ * appear in this User data (X.226 §6.5.4.4–6.5.4.6; X.216 §10.5.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,18 +55,36 @@ export class ACA_PPDU {
     constructor(
         /**
          * @summary `presentation_context_addition_result_list`.
+         * @description
+         *
+         * One result per AC addition-list item, same order. `acceptance`
+         * includes the selected transfer-syntax name; `provider-rejection`
+         * includes a provider reason (X.226 §6.5.3.1). Absent means all
+         * additions accepted (X.216 §10.5.1.3).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_addition_result_list?: OPTIONAL<Presentation_context_addition_result_list>,
         /**
          * @summary `presentation_context_deletion_result_list`.
+         * @description
+         *
+         * One `acceptance` or `user-rejection` per AC deletion-list item
+         * (X.226 §6.5.3.2). Absent means all deletions accepted
+         * (X.216 §10.5.1.4).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_deletion_result_list?: OPTIONAL<Presentation_context_deletion_result_list>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * PDVs from the DCS as it will be after this ACA (X.226 §6.1.2,
+         * §6.5.3.3).
+         *
          * @public
          * @readonly
          */

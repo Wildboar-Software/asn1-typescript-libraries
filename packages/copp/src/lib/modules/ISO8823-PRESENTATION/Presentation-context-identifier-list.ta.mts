@@ -20,6 +20,10 @@ import {
  * @summary Presentation_context_identifier_list
  * @description
  *
+ * Snapshot of a DCS: PCID plus transfer syntax in use. Used on ARU
+ * (which syntax encoded abort User data), RS, and RSA (resulting DCS)
+ * (X.226 §6.4.2.1, §6.8.2.4, §6.8.3.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

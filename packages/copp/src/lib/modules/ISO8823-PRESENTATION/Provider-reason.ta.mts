@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Provider_reason
  * @description
  *
+ * CPR `provider-reason`: present iff the responding
+ * presentation-service-provider (not the PS-user) refuses the
+ * connection (X.226 §6.2.4.9). Values marked transient vs permanent in
+ * the protocol text. Distinct from ARP `Abort-reason` and from
+ * result-list `provider-reason`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,7 @@ export type Provider_reason = INTEGER;
 
 /**
  * @summary Provider_reason_reason_not_specified
+ * @description Transient (X.226 §6.2.4.9).
  * @constant
  * @type {number}
  */
@@ -48,6 +55,7 @@ export const reason_not_specified: Provider_reason = Provider_reason_reason_not_
 
 /**
  * @summary Provider_reason_temporary_congestion
+ * @description Transient (X.226 §6.2.4.9).
  * @constant
  * @type {number}
  */
@@ -64,6 +72,7 @@ export const temporary_congestion: Provider_reason = Provider_reason_temporary_c
 
 /**
  * @summary Provider_reason_local_limit_exceeded
+ * @description Permanent (X.226 §6.2.4.9).
  * @constant
  * @type {number}
  */
@@ -80,6 +89,7 @@ export const local_limit_exceeded: Provider_reason = Provider_reason_local_limit
 
 /**
  * @summary Provider_reason_called_presentation_address_unknown
+ * @description Permanent (X.226 §6.2.4.9).
  * @constant
  * @type {number}
  */
@@ -96,6 +106,7 @@ export const called_presentation_address_unknown: Provider_reason = Provider_rea
 
 /**
  * @summary Provider_reason_protocol_version_not_supported
+ * @description Permanent (X.226 §6.2.4.9).
  * @constant
  * @type {number}
  */
@@ -112,6 +123,11 @@ export const protocol_version_not_supported: Provider_reason = Provider_reason_p
 
 /**
  * @summary Provider_reason_default_context_not_supported
+ * @description
+ *
+ * Permanent. Responding PPM does not support the named default context
+ * (X.226 §6.2.6.2).
+ *
  * @constant
  * @type {number}
  */
@@ -128,6 +144,11 @@ export const default_context_not_supported: Provider_reason = Provider_reason_de
 
 /**
  * @summary Provider_reason_user_data_not_readable
+ * @description
+ *
+ * Permanent. No examined CP PDV encoding uses a supported transfer
+ * syntax (X.226 §6.2.5.3).
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +165,11 @@ export const user_data_not_readable: Provider_reason = Provider_reason_user_data
 
 /**
  * @summary Provider_reason_no_PSAP_available
+ * @description
+ *
+ * Transient. No PSAP available from the called-presentation-address
+ * (X.226 §6.2.4.9).
+ *
  * @constant
  * @type {number}
  */

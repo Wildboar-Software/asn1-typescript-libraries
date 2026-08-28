@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Abstract_syntax_name
  * @description
  *
+ * Registered name of an abstract syntax (X.216 Annex B; X.226 §3.4).
+ * Together with a chosen transfer syntax it defines a presentation
+ * context.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

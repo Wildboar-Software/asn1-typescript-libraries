@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Presentation_context_deletion_result_list_Item
  * @description
  *
+ * `acceptance` (0) or `user-rejection` (1) for one proposed deletion
+ * (X.226 §6.5.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

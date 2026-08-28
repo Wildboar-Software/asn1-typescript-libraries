@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Presentation_selector
  * @description
  *
+ * Presentation-address component that distinguishes PSAPs at a session
+ * address (X.226 §3.3; X.216 §10.2.1.1–10.2.1.3). Session-address parts
+ * travel as SSAP addresses, not in PPDU SS-user data (X.226 Tables 1–3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

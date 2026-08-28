@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CP_type_normal_mode_parameters_extensions
  * @description
  *
+ * Extensibility placeholder (`SEQUENCE { ... }`) on CP normal-mode
+ * parameters (X.226 §8.2). Receivers ignore undefined elements
+ * (X.226 §8.5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

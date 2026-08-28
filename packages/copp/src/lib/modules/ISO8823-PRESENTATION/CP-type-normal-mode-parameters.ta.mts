@@ -73,6 +73,13 @@ import {
  * @summary CP_type_normal_mode_parameters
  * @description
  *
+ * Normal-mode fields of the CP PPDU (X.226 §6.2.2, §8.2). Session-layer
+ * parameters (QOS, calling/called session addresses, revised session
+ * requirements, tokens, sync serial numbers, session connection id) are
+ * **not** here; they map onto `S-CONNECT` itself (X.226 Table 1).
+ * `protocol-options`, `initiators-nominated-context`, and `extensions`
+ * are ITU-T Rec. X.226 (1994)/Amd.1 (1997) efficiency fields.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -84,66 +91,144 @@ export class CP_type_normal_mode_parameters {
     constructor(
         /**
          * @summary `protocol_version`.
+         * @description
+         *
+         * Versions the initiating PPM supports. This Recommendation is
+         * `version-1`. Default `{version-1}` (X.226 §6.2.2.2, §6.2.6.4).
+         *
          * @public
          * @readonly
          */
         readonly protocol_version?: OPTIONAL<Protocol_version>,
         /**
          * @summary `calling_presentation_selector`.
+         * @description
+         *
+         * Presentation-selector part of the Calling-presentation-address
+         * from `P-CONNECT` request (X.226 §6.2.2.3; X.216 §10.2.1.1).
+         * Session-address part is `Calling SSAP address` (X.226 Table 1).
+         *
          * @public
          * @readonly
          */
         readonly calling_presentation_selector?: OPTIONAL<Calling_presentation_selector>,
         /**
          * @summary `called_presentation_selector`.
+         * @description
+         *
+         * Presentation-selector part of the Called-presentation-address
+         * from `P-CONNECT` request (X.226 §6.2.2.5; X.216 §10.2.1.2).
+         *
          * @public
          * @readonly
          */
         readonly called_presentation_selector?: OPTIONAL<Called_presentation_selector>,
         /**
          * @summary `presentation_context_definition_list`.
+         * @description
+         *
+         * Proposed initial DCS. Each item: PCID (odd, distinct), abstract
+         * syntax name, and at least one transfer syntax the initiator can
+         * support (X.226 §6.2.2.7). Absent ⇒ DCS empty; User data then from
+         * the default context (X.216 §10.2.2.3). Same abstract-syntax name
+         * repeated still yields distinct contexts (X.216 §10.2.1.4).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_definition_list?: OPTIONAL<Presentation_context_definition_list>,
         /**
          * @summary `default_context_name`.
+         * @description
+         *
+         * Explicit default-context abstract and transfer syntax (X.226
+         * §6.2.2.8). Absent ⇒ default-context interpretation is by prior
+         * agreement, outside this protocol (X.226 §6.2.6.2; X.216
+         * §10.2.2.4). Used for TE PPDU User data always, and for other
+         * User data when the DCS is empty (X.226 §6.1.1–6.1.2).
+         *
          * @public
          * @readonly
          */
         readonly default_context_name?: OPTIONAL<Default_context_name>,
         /**
          * @summary `presentation_requirements`.
+         * @description
+         *
+         * Optional presentation FUs proposed by the initiating PS-user:
+         * context-management and/or restoration (X.226 §6.2.2.10; X.216
+         * §8.2–8.3). Kernel is always available and is not encoded here.
+         * Restoration shall not be selected without context-management.
+         *
          * @public
          * @readonly
          */
         readonly presentation_requirements?: OPTIONAL<Presentation_requirements>,
         /**
          * @summary `user_session_requirements`.
+         * @description
+         *
+         * Session FUs proposed by the PS-user (`P-CONNECT` Session
+         * requirements). Shall not be present if equal to Revised session
+         * requirements (X.226 §6.2.2.11, §8.2). Revised session
+         * requirements themselves go on `S-CONNECT` Session requirements.
+         *
          * @public
          * @readonly
          */
         readonly user_session_requirements?: OPTIONAL<User_session_requirements>,
         /**
          * @summary `protocol_options`.
+         * @description
+         *
+         * Options the initiator supports and proposes. Absent ⇒ none
+         * proposed. Shall be absent if no options are offered (ASN.1
+         * comment). Named bits: `nominated-context`, `short-encoding`,
+         * `packed-encoding-rules`. Null-encoding is also an Amd.1 option
+         * but is not a named bit in this module
+         * (X.226/Amd.1 §6.2.2.15 bis, §6.2.6.5).
+         *
          * @public
          * @readonly
          */
         readonly protocol_options?: OPTIONAL<Protocol_options>,
         /**
          * @summary `initiators_nominated_context`.
+         * @description
+         *
+         * PCID from the definition list proposed as the initiator's
+         * nominated context for subsequent User data it sends. Only if
+         * `nominated-context` is offered in `protocol-options` and the
+         * definition list is present (X.226/Amd.1 §6.2.2.8 bis). Becomes
+         * the initiator's nominated context only if that context is
+         * accepted and the option is selected (X.226/Amd.1 §6.2.6.6).
+         *
          * @public
          * @readonly
          */
         readonly initiators_nominated_context?: OPTIONAL<Presentation_context_identifier>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Empty SEQUENCE for future extensions (X.226 §8.2). Receivers
+         * ignore undefined elements (X.226 §8.5.1).
+         *
          * @public
          * @readonly
          */
         readonly extensions?: OPTIONAL<CP_type_normal_mode_parameters_extensions>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * `P-CONNECT` User data. If the definition list is present, PDVs
+         * (including nested) from those proposed contexts; otherwise from
+         * the default context (X.226 §6.2.2.16; X.216 §10.2.1.15). On CP,
+         * fully-encoded unless the default context is in use (X.226
+         * §8.4.2.3). If any part cannot be transferred, no indication is
+         * issued and confirm is `provider-rejection` (X.216 §10.2.2.5).
+         *
          * @public
          * @readonly
          */

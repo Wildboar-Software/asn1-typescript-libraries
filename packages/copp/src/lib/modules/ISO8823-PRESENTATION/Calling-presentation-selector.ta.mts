@@ -20,6 +20,8 @@ import {
  * @summary Calling_presentation_selector
  * @description
  *
+ * Calling PSAP selector from `P-CONNECT` request (X.226 §6.2.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

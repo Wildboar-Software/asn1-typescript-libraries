@@ -20,6 +20,11 @@ import {
  * @summary Presentation_context_deletion_result_list
  * @description
  *
+ * One `acceptance` or `user-rejection` per AC deletion-list item
+ * (X.226 §6.5.3.2). No `provider-rejection`. Absent means all deletions
+ * accepted (X.216 §10.5.1.4). Simultaneous ACs deleting the same
+ * context are not errors (X.226 §6.5.5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

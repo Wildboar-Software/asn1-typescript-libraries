@@ -20,6 +20,10 @@ import {
  * @summary Context_list
  * @description
  *
+ * Proposed presentation contexts (definition or addition list). Odd
+ * PCIDs from the initiator, even from the responder on alter-context
+ * (X.226 §6.2.2.7, §6.5.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

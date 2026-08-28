@@ -20,6 +20,9 @@ import {
  * @summary Presentation_context_deletion_list
  * @description
  *
+ * PCIDs of DCS members proposed for deletion on AC (X.226 §6.5.2.2).
+ * Those contexts remain usable in the AC User data (X.226 §6.5.4.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

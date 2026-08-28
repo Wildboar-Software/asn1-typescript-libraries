@@ -25,6 +25,13 @@ import {
  * @summary ARU_PPDU
  * @description
  *
+ * Abnormal Release User (ARU) PPDU. Maps `P-U-ABORT` onto `S-U-ABORT`
+ * (X.226 §6.4.2, §6.4.4.1, §7.3.1). Destructive; may be used whenever a
+ * connection is established or a CP has been sent and neither CPA nor
+ * CPR received (X.226 §6.4.4.1; X.216 §10.3). Receiver issues
+ * `P-U-ABORT` indication (X.226 §6.4.4.5). Session version 1 may drop
+ * User data if it does not fit in S-U-ABORT SS-user data (X.226 §6.4.2.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

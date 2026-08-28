@@ -20,6 +20,9 @@ import {
  * @summary Presentation_context_definition_list
  * @description
  *
+ * Proposed initial DCS on CP. PCIDs odd and distinct (X.226 §6.2.2.7).
+ * Absent ⇒ empty DCS (X.216 §10.2.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

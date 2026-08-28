@@ -23,6 +23,10 @@ import {
  * @summary CPR_PPDU_x400_mode_parameters
  * @description
  *
+ * X.410-1984 mode CPR User data: `COMPONENTS OF RTORJapdu`, bitwise
+ * compatible with CCITT Rec. X.410-1984 (X.226 §8.2). ASN.1 name is
+ * `x400-mode-parameters`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

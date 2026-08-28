@@ -25,6 +25,12 @@ import {
  * @summary Default_context_name
  * @description
  *
+ * Explicit default context for the connection: abstract syntax plus the
+ * transfer syntax the initiator requires (X.226 §6.2.2.8). TE PPDU User
+ * data is always from this context (X.226 §6.1.1). If the responding PPM
+ * cannot support it, CPR with Provider reason `default context not
+ * supported` (X.226 §6.2.6.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,21 @@ export class Default_context_name {
     constructor(
         /**
          * @summary `abstract_syntax_name`.
+         * @description
+         *
+         * Abstract syntax of the default context (X.216 §10.2.1.6).
+         *
          * @public
          * @readonly
          */
         readonly abstract_syntax_name: Abstract_syntax_name,
         /**
          * @summary `transfer_syntax_name`.
+         * @description
+         *
+         * Transfer syntax the initiating PPM requires for the default
+         * context (X.226 §6.2.2.8).
+         *
          * @public
          * @readonly
          */

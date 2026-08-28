@@ -20,6 +20,9 @@ import {
  * @summary Responding_presentation_selector
  * @description
  *
+ * Responding PSAP selector from `P-CONNECT` response (X.226 §6.2.3.3,
+ * §6.2.4.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

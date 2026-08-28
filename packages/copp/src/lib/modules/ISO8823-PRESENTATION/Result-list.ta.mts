@@ -20,6 +20,10 @@ import {
  * @summary Result_list
  * @description
  *
+ * Parallel to a `Context-list`: one result per proposed context, same
+ * order (X.226 §6.2.3.5, §6.5.3.1). Used as both presentation-context
+ * definition result list and addition result list.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

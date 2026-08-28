@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Result
  * @description
  *
+ * Outcome of a proposed presentation context (definition or addition)
+ * or of default-context negotiation / `P-CONNECT` Result
+ * (X.226 §6.2.3.5, §6.2.4.5; X.216 §10.2.1.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +32,7 @@ export type Result = INTEGER;
 
 /**
  * @summary Result_acceptance
+ * @description Context or connection accepted.
  * @constant
  * @type {number}
  */
@@ -44,6 +49,7 @@ export const acceptance: Result = Result_acceptance; /* SHORT_NAMED_INTEGER_VALU
 
 /**
  * @summary Result_user_rejection
+ * @description Rejected by the PS-user.
  * @constant
  * @type {number}
  */
@@ -60,6 +66,7 @@ export const user_rejection: Result = Result_user_rejection; /* SHORT_NAMED_INTE
 
 /**
  * @summary Result_provider_rejection
+ * @description Rejected by the presentation-service-provider / PPM.
  * @constant
  * @type {number}
  */

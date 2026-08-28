@@ -20,6 +20,10 @@ import {
  * @summary Fully_encoded_data
  * @description
  *
+ * One or more `PDV-list` values (X.226 §8.4.2). Each list holds PDVs from
+ * a single presentation context. BER-encoded as a SEQUENCE OF unless the
+ * packed-encoding-rules option is selected (X.226/Amd.1 §8.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -31,6 +31,14 @@ import {
  * @summary CP_type
  * @description
  *
+ * Connect Presentation (CP) PPDU. Sent by the initiator on `P-CONNECT` request
+ * in `S-CONNECT` SS-user data (ITU-T Rec. X.226 (1994) | ISO/IEC 8823-1
+ * §6.2, §7.1.1). Establishes a presentation-connection and proposes the
+ * initial DCS (ITU-T Rec. X.216 (1994) | ISO/IEC 8822 §10.2). Normal-mode
+ * SS-user data is this value followed, optionally, by one or more
+ * `CPC-type` encodings of the same user data in other transfer syntaxes
+ * (X.226 §6.2.5.2, §8.2, §8.3.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -82,18 +90,38 @@ export class CP_type {
     constructor(
         /**
          * @summary `mode_selector`.
+         * @description
+         *
+         * Mode from `P-CONNECT` request (`normal` or `X.410-1984`); appears
+         * on the indication if issued (X.226 §6.2.2.1; X.216 §10.2.1.10).
+         * Mandatory on the CP PPDU (X.226 Table 1).
+         *
          * @public
          * @readonly
          */
         readonly mode_selector: Mode_selector,
         /**
          * @summary `x410_mode_parameters`.
+         * @description
+         *
+         * X.410-1984 mode only: `COMPONENTS OF RTORQapdu`, bitwise compatible
+         * with CCITT Rec. X.410-1984; this is the CP User data in that mode.
+         * Absent for a nested presentation-connection (X.226 §8.2). X.410
+         * mode forbids Presentation context definition list, Default context
+         * name, and Presentation requirements on `P-CONNECT` request
+         * (X.216 §10.2.1.10, Annex A).
+         *
          * @public
          * @readonly
          */
         readonly x410_mode_parameters?: OPTIONAL<CP_type_x410_mode_parameters>,
         /**
          * @summary `normal_mode_parameters`.
+         * @description
+         *
+         * Normal-mode CP parameters (X.226 §6.2.2, §8.2). Mutually exclusive
+         * with `x410-mode-parameters` for a given connection mode.
+         *
          * @public
          * @readonly
          */

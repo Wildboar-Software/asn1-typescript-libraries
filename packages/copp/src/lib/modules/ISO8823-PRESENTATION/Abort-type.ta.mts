@@ -25,6 +25,11 @@ import {
  * @summary Abort_type
  * @description
  *
+ * SS-user data of `S-U-ABORT` request/indication: either ARU (PS-user
+ * abort) or ARP (presentation provider abort) (X.226 §7.3, §8.2).
+ * Either form forces release of the presentation-connection, including
+ * during establishment (X.226 §6.4; X.216 §10.3–10.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

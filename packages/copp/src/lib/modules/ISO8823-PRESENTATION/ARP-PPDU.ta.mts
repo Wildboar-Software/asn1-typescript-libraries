@@ -26,6 +26,14 @@ import {
  * @summary ARP_PPDU
  * @description
  *
+ * Abnormal Release Provider (ARP) PPDU. Sent on protocol error or invalid
+ * PPDU (unrecognized/unexpected PPDU or parameter, invalid parameter
+ * value, unexpected PCI, or bitstring that is not a valid PDV), if
+ * possible, together with `P-P-ABORT` indication (X.226 §6.4.3–6.4.4.3,
+ * §7.3.2). Receiver issues `P-P-ABORT` indication (X.226 §6.4.4.6).
+ * `S-P-ABORT` indication also yields `P-P-ABORT` with no ARP
+ * (X.226 §6.4.4.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +48,24 @@ export class ARP_PPDU {
     constructor(
         /**
          * @summary `provider_reason`.
+         * @description
+         *
+         * Why the PPM aborted (X.226 §6.4.3.1). Distinct from CPR
+         * `Provider-reason` (connection refusal).
+         *
          * @public
          * @readonly
          */
         readonly provider_reason?: OPTIONAL<Abort_reason>,
         /**
          * @summary `event_identifier`.
+         * @description
+         *
+         * PPDU or session primitive that triggered the abort. Required when
+         * reason is unexpected PPDU, unexpected session primitive,
+         * unrecognized/unexpected PPDU parameter, or invalid parameter
+         * value (X.226 §6.4.3.1–6.4.3.2).
+         *
          * @public
          * @readonly
          */

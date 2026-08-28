@@ -24,6 +24,10 @@ import {
  * @summary CPA_PPDU_x410_mode_parameters
  * @description
  *
+ * X.410-1984 mode CPA User data: `COMPONENTS OF RTOACapdu`, bitwise
+ * compatible with CCITT Rec. X.410-1984. Absent for a nested
+ * presentation-connection (X.226 §8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,16 @@ import {
  * @summary CPR_PPDU
  * @description
  *
+ * Connect Presentation Reject (CPR) PPDU. Refuses the proposed
+ * presentation-connection. Carried in `S-CONNECT` response/confirm when
+ * Result is `reject by SS-provider` or `reject by called SS-user`
+ * (X.226 §7.1.3). If `provider-reason` is present, rejection is by the
+ * responding PPM and `P-CONNECT` confirm Result is `provider-rejection`;
+ * if absent, rejection is by the responding PS-user (`user-rejection`)
+ * (X.226 §6.2.4.9, §6.2.5.5–6.2.5.7). User data is allowed only when
+ * the PS-user rejects (X.226 §7.1.3.2). Besides presentation-selectors,
+ * include only parameters corresponding to those on the CP (X.226 §6.2.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

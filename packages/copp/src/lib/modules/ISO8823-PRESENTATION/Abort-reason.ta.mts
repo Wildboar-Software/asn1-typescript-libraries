@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Abort_reason
  * @description
  *
+ * ARP `provider-reason` (X.226 §6.4.3.1). Not the CPR connection-refusal
+ * `Provider-reason`. For values other than `reason-not-specified` and
+ * `unrecognized-ppdu`, `event-identifier` is also present.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +35,7 @@ export type Abort_reason = INTEGER;
 
 /**
  * @summary Abort_reason_reason_not_specified
+ * @description No further diagnostic. `event-identifier` is not required.
  * @constant
  * @type {number}
  */
@@ -47,6 +52,7 @@ export const reason_not_specified: Abort_reason = Abort_reason_reason_not_specif
 
 /**
  * @summary Abort_reason_unrecognized_ppdu
+ * @description Received PPDU was not a recognized type (X.226 §6.4.4.2).
  * @constant
  * @type {number}
  */
@@ -63,6 +69,7 @@ export const unrecognized_ppdu: Abort_reason = Abort_reason_unrecognized_ppdu; /
 
 /**
  * @summary Abort_reason_unexpected_ppdu
+ * @description Valid PPDU type used out of sequence. `event-identifier` required.
  * @constant
  * @type {number}
  */
@@ -79,6 +86,7 @@ export const unexpected_ppdu: Abort_reason = Abort_reason_unexpected_ppdu; /* SH
 
 /**
  * @summary Abort_reason_unexpected_session_service_primitive
+ * @description Unexpected session primitive. `event-identifier` required.
  * @constant
  * @type {number}
  */
@@ -95,6 +103,7 @@ export const unexpected_session_service_primitive: Abort_reason = Abort_reason_u
 
 /**
  * @summary Abort_reason_unrecognized_ppdu_parameter
+ * @description Parameter not defined for that PPDU. `event-identifier` required.
  * @constant
  * @type {number}
  */
@@ -111,6 +120,7 @@ export const unrecognized_ppdu_parameter: Abort_reason = Abort_reason_unrecogniz
 
 /**
  * @summary Abort_reason_unexpected_ppdu_parameter
+ * @description Parameter not permitted in this state, including unexpected PCI. `event-identifier` required.
  * @constant
  * @type {number}
  */
@@ -127,6 +137,7 @@ export const unexpected_ppdu_parameter: Abort_reason = Abort_reason_unexpected_p
 
 /**
  * @summary Abort_reason_invalid_ppdu_parameter_value
+ * @description Invalid parameter value, or bitstring that is not a valid PDV. `event-identifier` required.
  * @constant
  * @type {number}
  */

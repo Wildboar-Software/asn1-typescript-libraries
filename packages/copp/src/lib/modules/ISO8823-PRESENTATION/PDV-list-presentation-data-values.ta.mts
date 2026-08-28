@@ -18,6 +18,20 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PDV_list_presentation_data_values
  * @description
  *
+ * How the PDV encodings are carried (X.226 §8.4.2.5):
+ *
+ * - `single-ASN1-type`: exactly one PDV that is a single ASN.1 type
+ *   encoded with BER.
+ * - `octet-aligned`: each encoding is an integral number of octets
+ *   (and the previous case does not apply); contents are the
+ *   concatenation of the transfer-syntax bitstrings.
+ * - `arbitrary`: otherwise; BIT STRING contents are that concatenation.
+ *   Non-self-delimiting transfer syntaxes risk ambiguity when
+ *   concatenating.
+ *
+ * If PER is used for presentation PCI, `single-ASN1-type` still applies
+ * only to a **BER**-encoded value (X.226/Amd.1 §8.4.2.5 ter Note).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

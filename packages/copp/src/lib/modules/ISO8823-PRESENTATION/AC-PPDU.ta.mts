@@ -31,6 +31,15 @@ import {
  * @summary AC_PPDU
  * @description
  *
+ * Alter Context (AC) PPDU. Conveys `P-ALTER-CONTEXT` request/indication
+ * in `S-TYPED-DATA` (X.226 §6.5, §7.4.1). Requires the context-management
+ * functional unit (X.216 §10.5). Proposes DCS additions and/or deletions;
+ * confirmed by ACA. Simultaneous AC from both sides are independent, even
+ * if both delete the same context (X.226 §6.5.5.1). Contexts proposed for
+ * deletion remain usable in this PPDU's User data (X.226 §6.5.4.1).
+ * RS, activity interrupt/discard, or exception report before ACA cancels
+ * the confirm (X.226 §6.5.5.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,18 +57,33 @@ export class AC_PPDU {
     constructor(
         /**
          * @summary `presentation_context_addition_list`.
+         * @description
+         *
+         * New contexts to add to the DCS. Same shape as a context-definition
+         * list. Identifiers must be unused on this connection; initiator
+         * uses odd integers, responder even (X.226 §6.5.2.1).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_addition_list?: OPTIONAL<Presentation_context_addition_list>,
         /**
          * @summary `presentation_context_deletion_list`.
+         * @description
+         *
+         * PCIDs of DCS members proposed for removal (X.226 §6.5.2.2;
+         * X.216 §10.5.1.2).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_deletion_list?: OPTIONAL<Presentation_context_deletion_list>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * PDVs from the DCS per X.226 §6.1.2 (X.226 §6.5.2.3).
+         *
          * @public
          * @readonly
          */

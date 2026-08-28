@@ -25,6 +25,8 @@ import {
  * @summary Presentation_context_identifier_list_Item
  * @description
  *
+ * One DCS member and the transfer syntax used for it.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +38,20 @@ export class Presentation_context_identifier_list_Item {
     constructor(
         /**
          * @summary `presentation_context_identifier`.
+         * @description
+         *
+         * Member of the DCS (or of abort User data).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_identifier: Presentation_context_identifier,
         /**
          * @summary `transfer_syntax_name`.
+         * @description
+         *
+         * Transfer syntax used for that context (X.226 §6.4.2.1).
+         *
          * @public
          * @readonly
          */

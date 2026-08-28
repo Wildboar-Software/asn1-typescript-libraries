@@ -26,6 +26,15 @@ import {
  * @summary RSA_PPDU
  * @description
  *
+ * Resynchronize Acknowledge (RSA) PPDU. Conveys `P-RESYNCHRONIZE`
+ * response/confirm in `S-RESYNCHRONIZE` SS-user data (X.226 §6.8.3,
+ * §7.8.2). Serial number and tokens are session parameters (X.226
+ * Table 13). If context management is selected (and restoration is not),
+ * the DCS is replaced by this identifier list (X.226 §6.8.4.13). With
+ * restoration, abandon (and some restart/set cases) replace the DCS from
+ * this list; otherwise it is unchanged (X.226 §6.8.4.14). Resynchronize
+ * type for those rules is the type from the associated RS.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +50,22 @@ export class RSA_PPDU {
     constructor(
         /**
          * @summary `presentation_context_identifier_list`.
+         * @description
+         *
+         * DCS that results from this RSA (X.226 §6.8.3.3). When context
+         * management is selected, corresponds to the DCS known to the
+         * accepting PPM (X.226 §6.8.4.11).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * PDVs from presentation contexts per X.226 §6.1.2 (X.226 §6.8.3.4).
+         *
          * @public
          * @readonly
          */

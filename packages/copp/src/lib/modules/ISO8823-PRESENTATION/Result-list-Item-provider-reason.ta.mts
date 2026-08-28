@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Result_list_Item_provider_reason
  * @description
  *
+ * Why the PPM refused a proposed context (X.226 §6.2.3.5, §6.5.3.1).
+ * Present only when that item's result is `provider-rejection`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,7 @@ export type Result_list_Item_provider_reason = INTEGER;
 
 /**
  * @summary Result_list_Item_provider_reason_reason_not_specified
+ * @description No further diagnostic.
  * @constant
  * @type {number}
  */
@@ -44,6 +48,11 @@ export const reason_not_specified: Result_list_Item_provider_reason = Result_lis
 
 /**
  * @summary Result_list_Item_provider_reason_abstract_syntax_not_supported
+ * @description
+ *
+ * Abstract syntax requirements not supported (connect: X.226 §6.2.3.5)
+ * / abstract syntax not supported (alter-context: X.226 §6.5.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +69,7 @@ export const abstract_syntax_not_supported: Result_list_Item_provider_reason = R
 
 /**
  * @summary Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported
+ * @description None of the proposed transfer syntaxes is supported.
  * @constant
  * @type {number}
  */
@@ -76,6 +86,7 @@ export const proposed_transfer_syntaxes_not_supported: Result_list_Item_provider
 
 /**
  * @summary Result_list_Item_provider_reason_local_limit_on_DCS_exceeded
+ * @description Local limit on DCS size exceeded.
  * @constant
  * @type {number}
  */

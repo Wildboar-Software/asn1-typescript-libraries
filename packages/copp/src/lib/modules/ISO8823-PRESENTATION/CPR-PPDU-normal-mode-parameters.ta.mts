@@ -48,6 +48,8 @@ import {
  * @summary CPR_PPDU_normal_mode_parameters
  * @description
  *
+ * Normal-mode fields of the CPR PPDU (X.226 §6.2.4, §8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,36 +61,72 @@ export class CPR_PPDU_normal_mode_parameters {
     constructor(
         /**
          * @summary `protocol_version`.
+         * @description
+         *
+         * Versions the responding PPM supports. Use of the list is a local
+         * matter (X.226 §6.2.4.1, §6.2.6.4).
+         *
          * @public
          * @readonly
          */
         readonly protocol_version?: OPTIONAL<Protocol_version>,
         /**
          * @summary `responding_presentation_selector`.
+         * @description
+         *
+         * Presentation-selector part of Responding-presentation-address
+         * (X.226 §6.2.4.2).
+         *
          * @public
          * @readonly
          */
         readonly responding_presentation_selector?: OPTIONAL<Responding_presentation_selector>,
         /**
          * @summary `presentation_context_definition_result_list`.
+         * @description
+         *
+         * Same structure as CPA result list: one reply per CP definition
+         * item (X.226 §6.2.4.4).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_definition_result_list?: OPTIONAL<Presentation_context_definition_result_list>,
         /**
          * @summary `default_context_result`.
+         * @description
+         *
+         * Present iff Default context name was on the CP. `acceptance`,
+         * `user-rejection`, or `provider-rejection` (X.226 §6.2.4.5,
+         * §6.2.6.2; X.216 §10.2.1.7). Provider rejection of the default
+         * context uses CPR with Provider reason `default context not
+         * supported`.
+         *
          * @public
          * @readonly
          */
         readonly default_context_result?: OPTIONAL<Default_context_result>,
         /**
          * @summary `provider_reason`.
+         * @description
+         *
+         * Present ⇒ rejection by the responding presentation-service-
+         * provider; absent ⇒ rejection by the responding PS-user
+         * (X.226 §6.2.4.9). Appears as `P-CONNECT` confirm Provider reason.
+         *
          * @public
          * @readonly
          */
         readonly provider_reason?: OPTIONAL<Provider_reason>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * From `P-CONNECT` response. Encodings from transfer syntaxes in
+         * this CPR's result list, else the default context. **Not present**
+         * if the presentation-service-provider rejects (X.226 §6.2.4.10,
+         * §7.1.3.2).
+         *
          * @public
          * @readonly
          */

@@ -20,6 +20,10 @@ import {
  * @summary Presentation_context_addition_list
  * @description
  *
+ * Contexts proposed for addition to the DCS on AC. PCIDs unused on this
+ * connection; odd if sender is initiator, even if responder
+ * (X.226 §6.5.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -31,6 +31,8 @@ import {
  * @summary PDV_list
  * @description
  *
+ * One or more PDVs from the **same** presentation context (X.226 §8.4.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,18 +58,33 @@ export class PDV_list {
     constructor(
         /**
          * @summary `transfer_syntax_name`.
+         * @description
+         *
+         * Required on a CP PPDU when more than one transfer syntax was
+         * proposed for this context (X.226 §8.4.2.7).
+         *
          * @public
          * @readonly
          */
         readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
         /**
          * @summary `presentation_context_identifier`.
+         * @description
+         *
+         * Context of these PDVs. On CP, identifies a proposed context
+         * (X.226 §8.4.2.6). Unexpected PCI is an invalid PPDU
+         * (X.226 §6.4.4.3).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_identifier: Presentation_context_identifier,
         /**
          * @summary `presentation_data_values`.
+         * @description
+         *
+         * See `PDV-list-presentation-data-values` (X.226 §8.4.2.5).
+         *
          * @public
          * @readonly
          */

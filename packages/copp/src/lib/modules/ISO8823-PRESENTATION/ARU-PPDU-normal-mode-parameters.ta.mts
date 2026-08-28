@@ -26,6 +26,8 @@ import {
  * @summary ARU_PPDU_normal_mode_parameters
  * @description
  *
+ * Normal-mode ARU fields (X.226 §6.4.2, §8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +39,27 @@ export class ARU_PPDU_normal_mode_parameters {
     constructor(
         /**
          * @summary `presentation_context_identifier_list`.
+         * @description
+         *
+         * Present if User data is present **and** either context-management
+         * is selected or a Presentation context definition list was on the
+         * CP. For each context used in User data, identifies the transfer
+         * syntax. Empty if the DCS is empty (X.226 §6.4.2.1).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * `P-U-ABORT` User data; interpretation is an Application Layer
+         * matter (X.216 §10.3.1.1). May be omitted if session length
+         * limits prevent inclusion (X.226 §6.4.2.2). PDVs from a proposed
+         * but unacknowledged context are delivered as if acknowledged
+         * (X.216 §10.3.1.1 Note).
+         *
          * @public
          * @readonly
          */

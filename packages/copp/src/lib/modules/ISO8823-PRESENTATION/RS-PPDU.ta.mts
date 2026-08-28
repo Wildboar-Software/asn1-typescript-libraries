@@ -26,6 +26,14 @@ import {
  * @summary RS_PPDU
  * @description
  *
+ * Resynchronize (RS) PPDU. Conveys `P-RESYNCHRONIZE` request/indication
+ * in `S-RESYNCHRONIZE` SS-user data (X.226 §6.8, §7.8.1). Session
+ * resynchronize-type, serial number(s), and tokens travel as session
+ * parameters, not in this SEQUENCE (X.226 Table 12). If context
+ * restoration is selected, restart/set may restore a DCS associated with
+ * a syncpoint (or the establishment DCS); abandon leaves the DCS
+ * unchanged unless an ACA is outstanding (X.226 §6.8.4.6, §6.8.4.9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +49,22 @@ export class RS_PPDU {
     constructor(
         /**
          * @summary `presentation_context_identifier_list`.
+         * @description
+         *
+         * DCS that results from this RS: each item is a PCID plus the
+         * transfer syntax in use (X.226 §6.8.2.4). Present when context
+         * management is selected (X.226 §6.8.4.5–6.8.4.6).
+         *
          * @public
          * @readonly
          */
         readonly presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * PDVs from presentation contexts per X.226 §6.1.2 (X.226 §6.8.2.5).
+         *
          * @public
          * @readonly
          */

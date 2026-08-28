@@ -31,6 +31,13 @@ import {
  * @summary CPA_PPDU
  * @description
  *
+ * Connect Presentation Accept (CPA) PPDU. Sent by the responder on
+ * `P-CONNECT` response with Result `acceptance`, in `S-CONNECT` response/
+ * confirm SS-user data with S-CONNECT Result `accept` (X.226 §6.2.3,
+ * §6.2.5.6–6.2.5.9, §7.1.2). Sets the DCS from its result list. Need not
+ * repeat every CP parameter; besides responding address, include values
+ * only for corresponding CP parameters that were present (X.226 §6.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -75,18 +82,32 @@ export class CPA_PPDU {
     constructor(
         /**
          * @summary `mode_selector`.
+         * @description
+         *
+         * Copied from the CP PPDU (X.226 §6.2.3.1). Mandatory (X.226 Table 2).
+         *
          * @public
          * @readonly
          */
         readonly mode_selector: Mode_selector,
         /**
          * @summary `x410_mode_parameters`.
+         * @description
+         *
+         * X.410-1984 mode only: `COMPONENTS OF RTOACapdu`, bitwise compatible
+         * with CCITT Rec. X.410-1984; this is the CPA User data in that mode.
+         * Absent for a nested presentation-connection (X.226 §8.2).
+         *
          * @public
          * @readonly
          */
         readonly x410_mode_parameters?: OPTIONAL<CPA_PPDU_x410_mode_parameters>,
         /**
          * @summary `normal_mode_parameters`.
+         * @description
+         *
+         * Normal-mode CPA parameters (X.226 §6.2.3, §8.2).
+         *
          * @public
          * @readonly
          */

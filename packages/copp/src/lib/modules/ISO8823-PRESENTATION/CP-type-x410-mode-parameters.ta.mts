@@ -28,6 +28,13 @@ import {
  * @summary CP_type_x410_mode_parameters
  * @description
  *
+ * X.410-1984 mode CP User data: `COMPONENTS OF RTORQapdu`, bitwise
+ * compatible with CCITT Rec. X.410-1984. Absent for a nested
+ * presentation-connection (X.226 §8.2). Field meanings are those of
+ * Reliable Transfer `RTORQapdu` (ISO 9066-2), not Presentation Layer
+ * parameters. P-CONNECT User data in this mode is a single SET
+ * (X.216 Annex A.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

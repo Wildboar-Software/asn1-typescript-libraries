@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Simply_encoded_data
  * @description
  *
+ * Concatenation of the transfer-syntax encodings of the PDVs. Transfer
+ * syntax must be octet-aligned or self-delimiting, or concatenated PDVs
+ * may be ambiguous (X.226 §8.4.1.4). When this type is the entire
+ * SS-user data (not nested), encoding is contents octets only.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

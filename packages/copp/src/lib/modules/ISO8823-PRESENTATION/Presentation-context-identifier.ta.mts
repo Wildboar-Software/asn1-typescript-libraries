@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Presentation_context_identifier
  * @description
  *
+ * Identifies a presentation context on one connection; unique and known
+ * to both PPMs. The default context has none (X.226 §3.5.7). Initiator
+ * allocates odd integers, responder even (X.226 §6.2.2.7, §6.5.2.1).
+ * Values must not be reused after deletion.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

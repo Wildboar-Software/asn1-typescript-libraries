@@ -20,6 +20,11 @@ import {
  * @summary Default_context_result
  * @description
  *
+ * Present on CPR iff Default context name was on the CP. `acceptance`,
+ * `user-rejection`, or `provider-rejection` (X.226 §6.2.4.5; X.216
+ * §10.2.1.7). `user-rejection` of the default context also requires
+ * Result `user-rejection` (X.216 §10.2.2.6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Event_identifier
  * @description
  *
+ * On ARP: the PPDU or session primitive that triggered provider abort
+ * (X.226 §6.4.3.2). Required except for `reason-not-specified` and
+ * `unrecognized-ppdu` (X.226 §6.4.3.1). Values 0–13 are PPDU types
+ * (including TD/TTD/TE/TC/TCC, which have no distinct ASN.1 SEQUENCE
+ * of their own—those are `User-data` mapped onto S-DATA /
+ * S-TYPED-DATA / S-EXPEDITED-DATA / S-CAPABILITY-DATA). Values 14–32
+ * are session primitives.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

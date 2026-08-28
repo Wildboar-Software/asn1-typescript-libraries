@@ -20,6 +20,9 @@ import {
  * @summary Presentation_context_definition_result_list
  * @description
  *
+ * One result per CP definition-list item (X.226 §6.2.3.5, §6.2.4.4).
+ * Accepted items become the initial DCS (X.226 §6.2.5.9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

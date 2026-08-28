@@ -20,6 +20,9 @@ import {
  * @summary Presentation_context_addition_result_list
  * @description
  *
+ * One result per AC addition-list item (X.226 §6.5.3.1). Absent on ACA
+ * means all additions accepted (X.216 §10.5.1.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

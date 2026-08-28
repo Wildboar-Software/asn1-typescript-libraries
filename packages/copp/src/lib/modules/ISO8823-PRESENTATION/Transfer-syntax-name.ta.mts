@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Transfer_syntax_name
  * @description
  *
+ * Registered name of a transfer syntax, or of a specification that
+ * produces one (X.226 §6.2.2.7, Annex B). Selected per accepted
+ * presentation context during connect or alter-context.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,11 @@ import {
  * @summary Mode_selector
  * @description
  *
+ * Mode of the PPM for this presentation-connection, from `P-CONNECT`
+ * Mode (X.226 §6.2.2.1; X.216 §10.2.1.10). `X.410-1984` restricts
+ * `P-CONNECT` parameters and User data of several primitives
+ * (X.216 Annex A). Mandatory on CP and CPA (X.226 Tables 1–2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +38,10 @@ export class Mode_selector {
     constructor(
         /**
          * @summary `mode_value`.
+         * @description
+         *
+         * `x410-1984-mode` (0) or `normal-mode` (1).
+         *
          * @public
          * @readonly
          */

@@ -30,6 +30,12 @@ import {
  * @summary Typed_data_type
  * @description
  *
+ * SS-user data of `S-TYPED-DATA` request/indication: AC, ACA, or TTD
+ * (Presentation Typed Data) (X.226 §8.2). TTD is used only if the session
+ * typed-data functional unit was proposed and selected in User session
+ * requirements of both CP and CPA (X.226 §6.6.3.2). TTD User data follows
+ * the same DCS rules as TD (X.226 §6.6.2.1, §6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

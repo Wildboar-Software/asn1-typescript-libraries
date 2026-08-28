@@ -20,6 +20,16 @@ import {
  * @summary CPC_type
  * @description
  *
+ * Optional extra encoding(s) of the CP User data, concatenated after
+ * `CP-type` in `S-CONNECT` SS-user data so the same PDVs can be offered
+ * in several transfer syntaxes (X.226 §6.2.5.2, §8.2, §8.3.3). Normal
+ * mode only. Forbidden if the CP has no Presentation context definition
+ * list. Each instance shall contain the full set of PDVs from the CP
+ * User data. The responding PPM need not examine more than one encoding
+ * per PDV; if none of those examined use a supported transfer syntax, it
+ * refuses with CPR Provider reason `user data not readable`
+ * (X.226 §6.2.5.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
