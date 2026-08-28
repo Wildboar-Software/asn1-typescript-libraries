@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Transfer_syntax_name
  * @description
  *
+ * OBJECT IDENTIFIER of a transfer syntax. See ITU-T Rec. X.216 |
+ * ISO/IEC 8822. Used here in `Default-P-context` (X.237 bis
+ * (1998) §7.1.4.14, §9.1). BER for this abstract syntax is
+ * `{joint-iso-itu-t asn1(1) basic-encoding(1)}` (X.237 (1995)
+ * §9.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

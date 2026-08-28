@@ -65,6 +65,28 @@ import {
  * @summary AUDT_apdu
  * @description
  *
+ * A-UNIT-DATA APDU (`[APPLICATION 0]`). Connectionless transfer
+ * between AEIs over P-UNIT-DATA; the association exists only for
+ * this invocation (ITU-T Rec. X.217 (1995) §7.2, §9.5).
+ * Non-confirmed. The sending ACPM builds this from the request
+ * plus its Protocol Version and Implementation Information, and
+ * carries it as P-UNIT-DATA User Data (ITU-T Rec.
+ * [X.237 (1995)](https://www.itu.int/rec/T-REC-X.237-199504-I)
+ * §7.1.3, §8). The receiver discards the APDU if presentation
+ * parameters, AUDT fields, or protocol version are unacceptable.
+ * Simultaneous AUDTs in both directions are both delivered
+ * (§7.1.5).
+ *
+ * Abstract syntax `{joint-iso-itu-t association-control(2)
+ * abstract-syntax(1) clapdu(1) version(1)}`; BER
+ * `{joint-iso-itu-t asn1(1) basic-encoding(1)}` (§9.2–§9.3).
+ * Unknown tags and bit names are ignored (§7.2).
+ *
+ * This encoding matches X.237 bis (1998) | ISO/IEC 15955
+ * (optional `aSO-context`, Authentication fields, `p-context`).
+ * Classic X.237 made Application Context Name and User
+ * Information mandatory and had no authentication.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -98,96 +120,220 @@ export class AUDT_apdu {
     constructor(
         /**
          * @summary `protocol_version`.
+         * @description
+         *
+         * ACPM option. Bit string of the single version this ACPM
+         * supports: bit 0 is version 1. The sender sets exactly one
+         * bit, which is the last bit of the string; trailing bits
+         * above that version are omitted. The receiver discards the
+         * AUDT if it does not support that version. Default
+         * `{version1}`. ITU-T Rec. X.237 (1995) §7.1.4.1 / Table 1.
+         *
          * @public
          * @readonly
          */
         readonly protocol_version: OPTIONAL<AUDT_apdu_protocol_version>,
         /**
          * @summary `aSO_context`.
+         * @description
+         *
+         * Application / ASO-context nominated by the requestor
+         * (ITU-T Rec. X.217 (1995) §9.5.1.1). Classic X.237 (1995)
+         * Table 1 / §7.1.4.2 makes Application Context Name
+         * mandatory. This module (X.237 bis §7.1.4.2) names it
+         * `aSO-context` and makes it optional; include it for
+         * interoperability with older ACSE.
+         *
          * @public
          * @readonly
          */
         readonly aSO_context: OPTIONAL<ASO_context_name>,
         /**
          * @summary `called_AP_title`.
+         * @description
+         *
+         * Application-process that contains the intended acceptor.
+         * User option; copied request → indication. ITU-T Rec.
+         * X.217 (1995) §9.5.1.6; X.237 (1995) §7.1.4.7. With
+         * `called-AE-qualifier`, forms the Called AE-title (X.217
+         * §9.5.1; X.650 | ISO 7498-3).
+         *
          * @public
          * @readonly
          */
         readonly called_AP_title: OPTIONAL<AP_title>,
         /**
          * @summary `called_AE_qualifier`.
+         * @description
+         *
+         * Particular AE of the called AP (ITU-T Rec. X.217 (1995)
+         * §9.5.1.7; X.237 (1995) §7.1.4.8). X.237 bis §7.1.4.8:
+         * present only when Called ASOI-tag has exactly one element
+         * whose ASO-qualifier is non-null.
+         *
          * @public
          * @readonly
          */
         readonly called_AE_qualifier: OPTIONAL<AE_qualifier>,
         /**
          * @summary `called_AP_invocation_id`.
+         * @description
+         *
+         * AP invocation that contains the intended acceptor.
+         * ITU-T Rec. X.217 (1995) §9.5.1.8; X.237 (1995) §7.1.4.9.
+         *
          * @public
          * @readonly
          */
         readonly called_AP_invocation_id: OPTIONAL<AP_invocation_id>,
         /**
          * @summary `called_AE_invocation_id`.
+         * @description
+         *
+         * AE invocation that contains the intended acceptor.
+         * ITU-T Rec. X.217 (1995) §9.5.1.9; X.237 (1995) §7.1.4.10.
+         * X.237 bis §7.1.4.10: present only when Called ASOI-tag has
+         * exactly one element whose ASOI-identifier is non-null.
+         *
          * @public
          * @readonly
          */
         readonly called_AE_invocation_id: OPTIONAL<AE_invocation_id>,
         /**
          * @summary `calling_AP_title`.
+         * @description
+         *
+         * Application-process that contains the requestor. User
+         * option; copied request → indication. ITU-T Rec. X.217
+         * (1995) §9.5.1.2; X.237 (1995) §7.1.4.3. With
+         * `calling-AE-qualifier`, forms the Calling AE-title (X.217
+         * §9.5.1; X.650 | ISO 7498-3).
+         *
          * @public
          * @readonly
          */
         readonly calling_AP_title: OPTIONAL<AP_title>,
         /**
          * @summary `calling_AE_qualifier`.
+         * @description
+         *
+         * Particular AE of the calling AP (ITU-T Rec. X.217 (1995)
+         * §9.5.1.3; X.237 (1995) §7.1.4.4). X.237 bis §7.1.4.4:
+         * present only when Calling ASOI-tag has exactly one element
+         * whose ASO-qualifier is non-null.
+         *
          * @public
          * @readonly
          */
         readonly calling_AE_qualifier: OPTIONAL<AE_qualifier>,
         /**
          * @summary `calling_AP_invocation_id`.
+         * @description
+         *
+         * AP invocation that contains the requestor. ITU-T Rec.
+         * X.217 (1995) §9.5.1.4; X.237 (1995) §7.1.4.5.
+         *
          * @public
          * @readonly
          */
         readonly calling_AP_invocation_id: OPTIONAL<AP_invocation_id>,
         /**
          * @summary `calling_AE_invocation_id`.
+         * @description
+         *
+         * AE invocation that contains the requestor. ITU-T Rec.
+         * X.217 (1995) §9.5.1.5; X.237 (1995) §7.1.4.6. X.237 bis
+         * §7.1.4.6: present only when Calling ASOI-tag has exactly
+         * one element whose ASOI-identifier is non-null.
+         *
          * @public
          * @readonly
          */
         readonly calling_AE_invocation_id: OPTIONAL<AE_invocation_id>,
         /**
          * @summary `mechanism_name`.
+         * @description
+         *
+         * Authentication-mechanism in use. Absent from X.237 (1995);
+         * X.217 (1995) §7.2 gives connectionless ACSE no functional
+         * units and no authentication. Present only if the
+         * Authentication FU is selected (ASN.1 comment; added by
+         * X.237 Amd.1 / X.237 bis §7.1.4.15). Presence of this or
+         * `calling-authentication-value` implies that FU; there is
+         * no ACSE-requirements field. Receivers that do not support
+         * authentication ignore both fields (X.237 bis §7.2 c).
+         *
          * @public
          * @readonly
          */
         readonly mechanism_name: OPTIONAL<Mechanism_name>,
         /**
          * @summary `calling_authentication_value`.
+         * @description
+         *
+         * Authentication-value from the requestor. Same presence
+         * rules as `mechanism-name` (X.237 bis §7.1.4.16, §7.2 c).
+         *
          * @public
          * @readonly
          */
         readonly calling_authentication_value: OPTIONAL<Authentication_value>,
         /**
          * @summary `p_context`.
+         * @description
+         *
+         * Presentation context for `user-information`. Absent from
+         * X.237 (1995), which maps the Presentation Context
+         * Definition List straight onto P-UNIT-DATA (§8.1.1).
+         * X.237 bis §7.1.4.14: include only when IA-UNIT-DATA is
+         * mapped to a supporting A-service (not directly to
+         * P-UNIT-DATA). Abstract-syntax optional; transfer-syntax
+         * required. Sender copies the P-context definition list
+         * ignoring the PCI; the receiver assigns a local PCI.
+         * User information on a supporting A-service uses a single
+         * presentation context.
+         *
          * @public
          * @readonly
          */
         readonly p_context: OPTIONAL<Default_P_context>,
         /**
          * @summary `implementation_information`.
+         * @description
+         *
+         * ACPM option: implementation-specific data chosen by the
+         * sending ACPM. Does not affect ACPM operation at the
+         * receiver; any use needs a prior understanding between
+         * implementations. ITU-T Rec. X.237 (1995) §7.1.4.11.
+         *
          * @public
          * @readonly
          */
         readonly implementation_information: OPTIONAL<GraphicString>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Tagged values not defined in this abstract syntax. The
+         * receiving ACPM shall ignore them (ITU-T Rec. X.237 (1995)
+         * §7.2 a; X.237 bis §7.2 a).
+         *
          * @public
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `user_information`.
+         * @description
+         *
+         * Mandatory user information (ITU-T Rec. X.217 (1995)
+         * §9.5.1.10; X.237 (1995) Table 1 / §7.1.4.12). Meaning is
+         * defined by the accompanying application / ASO-context.
+         * Encoded in presentation contexts named by the requestor
+         * (§8.1.2). This ASN.1 constrains the root to one
+         * `EXTERNAL`, with extensions allowing zero or two or more
+         * (X.237 bis §9.1, §9.4).
+         *
          * @public
          * @readonly
          */
@@ -231,6 +377,11 @@ export class AUDT_apdu {
 
     /**
      * @summary Getter that returns the default value for `protocol_version`.
+     * @description
+     *
+     * `{version1}`: bit 0 set. ITU-T Rec. X.237 (1995) §7.1.4.1 /
+     * §9.1 (`DEFAULT {version1}`).
+     *
      * @public
      * @static
      * @method

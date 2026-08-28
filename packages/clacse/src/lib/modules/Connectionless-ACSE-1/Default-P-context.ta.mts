@@ -26,6 +26,12 @@ import {
  * @summary Default_P_context
  * @description
  *
+ * Default presentation context for AUDT `user-information` when
+ * IA-UNIT-DATA is mapped to a supporting A-service rather than
+ * directly to P-UNIT-DATA. ITU-T Rec. X.237 bis (1998)
+ * §7.1.4.14, §9.1. Not present in X.237 (1995), which maps the
+ * Presentation Context Definition List onto P-UNIT-DATA (§8.1.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +46,22 @@ export class Default_P_context {
     constructor(
         /**
          * @summary `abstract_syntax`.
+         * @description
+         *
+         * Abstract syntax of this default context, if named.
+         * ITU-T Rec. X.237 bis (1998) §7.1.4.14, §9.1.
+         *
          * @public
          * @readonly
          */
         readonly abstract_syntax: OPTIONAL<Abstract_syntax_name>,
         /**
          * @summary `transfer_syntax`.
+         * @description
+         *
+         * Transfer (concrete) syntax of this default context;
+         * required. ITU-T Rec. X.237 bis (1998) §7.1.4.14, §9.1.
+         *
          * @public
          * @readonly
          */

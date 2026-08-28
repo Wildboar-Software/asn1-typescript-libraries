@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Abstract_syntax_name
  * @description
  *
+ * OBJECT IDENTIFIER of an abstract syntax in a presentation
+ * context. See ITU-T Rec. X.216 | ISO/IEC 8822. Used here in
+ * `Default-P-context` (X.237 bis (1998) §7.1.4.14, §9.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

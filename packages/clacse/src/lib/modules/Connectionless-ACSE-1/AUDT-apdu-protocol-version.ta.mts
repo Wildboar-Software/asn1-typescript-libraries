@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AUDT_apdu_protocol_version
  * @description
  *
+ * AUDT Protocol Version bit string. Bit 0 (`version1`) is the only
+ * named bit. The sending ACPM sets exactly one bit (the last bit
+ * of the string) and omits trailing bits above that version; the
+ * receiver discards the AUDT if that version is unsupported.
+ * ITU-T Rec. X.237 (1995) §7.1.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +32,21 @@ export type AUDT_apdu_protocol_version = BIT_STRING;
 
 /**
  * @summary AUDT_apdu_protocol_version_version1
+ * @description
+ *
+ * Bit 0 of `protocol-version`: ACSE protocol version 1.
+ * ITU-T Rec. X.237 (1995) §7.1.4.1.
+ *
  * @constant
  */
 export const AUDT_apdu_protocol_version_version1: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary version1
+ * @description
+ *
+ * Alias of {@link AUDT_apdu_protocol_version_version1}.
+ *
  * @constant
  */
 export const version1: number = AUDT_apdu_protocol_version_version1; /* SHORT_NAMED_BIT */

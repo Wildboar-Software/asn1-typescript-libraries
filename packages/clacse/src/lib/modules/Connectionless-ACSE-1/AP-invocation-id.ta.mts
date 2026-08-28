@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AP_invocation_id
  * @description
  *
+ * Distinguishes an application-process invocation (CCITT Rec.
+ * X.650 | ISO 7498-3). Used as Calling / Called AP
+ * Invocation-identifier on A-UNIT-DATA (ITU-T Rec. X.217 (1995)
+ * §9.5.1.4, §9.5.1.8; X.237 (1995) §7.1.4.5, §7.1.4.9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

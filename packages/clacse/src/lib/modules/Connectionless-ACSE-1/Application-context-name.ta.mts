@@ -20,6 +20,10 @@ import {
  * @summary Application_context_name
  * @description
  *
+ * Alias of `ASO-context-name`. Classic connectionless ACSE
+ * (ITU-T Rec. X.237 (1995) §7.1.4.2, §9.1) called this
+ * Application Context Name and made it mandatory on the AUDT.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

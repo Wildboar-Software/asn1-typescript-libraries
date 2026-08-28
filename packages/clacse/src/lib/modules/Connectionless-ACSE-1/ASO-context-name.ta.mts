@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ASO_context_name
  * @description
  *
+ * OBJECT IDENTIFIER naming the application / ASO-context used for
+ * this A-UNIT-DATA. Classic ACSE (ITU-T Rec. X.217 (1995)
+ * §9.5.1.1; X.237 (1995) §7.1.4.2) called this Application
+ * Context Name: the context nominated by the requestor. X.237 bis
+ * (1998) §7.1.4.2 uses the ASO-context name.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

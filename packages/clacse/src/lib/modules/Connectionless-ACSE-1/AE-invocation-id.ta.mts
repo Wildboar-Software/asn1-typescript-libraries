@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AE_invocation_id
  * @description
  *
+ * Distinguishes an application-entity invocation (CCITT Rec.
+ * X.650 | ISO 7498-3). Used as Calling / Called AE
+ * Invocation-identifier on A-UNIT-DATA (ITU-T Rec. X.217 (1995)
+ * §9.5.1.5, §9.5.1.9; X.237 (1995) §7.1.4.6, §7.1.4.10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
