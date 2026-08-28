@@ -25,6 +25,8 @@ import {
  * @summary Invoke_linkedId
  * @description
  *
+ * Optional link from this `Invoke` to an outstanding parent invocation. `present` is the parent's integer invoke-id (`[0] IMPLICIT`); `absent` is `NULL` (`[1] IMPLICIT`) and is not used in OSI ROSE (ITU-T Rec. X.880 (07/94) §9.3.1, §9.3.3 b).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

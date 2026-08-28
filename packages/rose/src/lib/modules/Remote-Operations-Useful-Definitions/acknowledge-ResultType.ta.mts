@@ -23,6 +23,8 @@ export enum _enum_for_acknowledge_ResultType {
  * @summary acknowledge_ResultType
  * @description
  *
+ * Result of `acknowledge`: return is now considered acknowledged, or the invocation is unknown (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.7.3). Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +40,7 @@ export type acknowledge_ResultType =
 
 /**
  * @summary acknowledge_ResultType_acknowledged
+ * @description Return is now considered acknowledged (Amd.1 §10.7.3).
  * @constant
  * @type {number}
  */
@@ -46,6 +49,7 @@ export const acknowledge_ResultType_acknowledged: acknowledge_ResultType = 0; /*
 
 /**
  * @summary acknowledged
+ * @description Return is now considered acknowledged (Amd.1 §10.7.3).
  * @constant
  * @type {number}
  */
@@ -54,6 +58,7 @@ export const acknowledged: acknowledge_ResultType = acknowledge_ResultType_ackno
 
 /**
  * @summary acknowledge_ResultType_unknown
+ * @description Invocation never happened or has been forgotten (Amd.1 §10.7.3 note).
  * @constant
  * @type {number}
  */
@@ -62,6 +67,7 @@ export const acknowledge_ResultType_unknown: acknowledge_ResultType = 1; /* LONG
 
 /**
  * @summary unknown
+ * @description Invocation never happened or has been forgotten (Amd.1 §10.7.3 note).
  * @constant
  * @type {number}
  */

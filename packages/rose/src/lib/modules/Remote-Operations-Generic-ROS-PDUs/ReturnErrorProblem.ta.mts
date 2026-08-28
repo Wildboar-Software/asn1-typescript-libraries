@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReturnErrorProblem
  * @description
  *
+ * Problem with a component of a `ReturnError` PDU, carried in `Reject.problem.returnError` (ITU-T Rec. X.880 (07/94) §9.6.6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +32,7 @@ export type ReturnErrorProblem = INTEGER;
 
 /**
  * @summary ReturnErrorProblem_unrecognizedInvocation
+ * @description invokeId is not that of an outstanding invocation (X.880 §9.5.3 a, §9.6.6 a).
  * @constant
  * @type {number}
  */
@@ -38,6 +41,7 @@ export const ReturnErrorProblem_unrecognizedInvocation: ReturnErrorProblem = 0; 
 
 /**
  * @summary ReturnErrorProblem_unrecognizedInvocation
+ * @description invokeId is not that of an outstanding invocation (X.880 §9.5.3 a, §9.6.6 a).
  * @constant
  * @type {number}
  */
@@ -46,6 +50,7 @@ export const unrecognizedInvocation: ReturnErrorProblem = ReturnErrorProblem_unr
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
+ * @description Outstanding invocation is of an operation that does not return an error (X.880 §9.5.3 a, §9.6.6 b).
  * @constant
  * @type {number}
  */
@@ -54,6 +59,7 @@ export const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1;
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
+ * @description Outstanding invocation is of an operation that does not return an error (X.880 §9.5.3 a, §9.6.6 b).
  * @constant
  * @type {number}
  */
@@ -62,6 +68,7 @@ export const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_er
 
 /**
  * @summary ReturnErrorProblem_unrecognizedError
+ * @description errcode is not one of the allowed errors (X.880 §9.5.3 b, §9.6.6 c).
  * @constant
  * @type {number}
  */
@@ -70,6 +77,7 @@ export const ReturnErrorProblem_unrecognizedError: ReturnErrorProblem = 2; /* LO
 
 /**
  * @summary ReturnErrorProblem_unrecognizedError
+ * @description errcode is not one of the allowed errors (X.880 §9.5.3 b, §9.6.6 c).
  * @constant
  * @type {number}
  */
@@ -78,6 +86,7 @@ export const unrecognizedError: ReturnErrorProblem = ReturnErrorProblem_unrecogn
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
+ * @description Error is not in the associated operation's `&Errors` (X.880 §9.5.3 b, §9.6.6 d).
  * @constant
  * @type {number}
  */
@@ -86,6 +95,7 @@ export const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
+ * @description Error is not in the associated operation's `&Errors` (X.880 §9.5.3 b, §9.6.6 d).
  * @constant
  * @type {number}
  */
@@ -94,6 +104,7 @@ export const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpected
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
+ * @description parameter missing or not of the error's `&ParameterType` (X.880 §9.5.3 c, §9.6.6 e).
  * @constant
  * @type {number}
  */
@@ -102,6 +113,7 @@ export const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LO
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
+ * @description parameter missing or not of the error's `&ParameterType` (X.880 §9.5.3 c, §9.6.6 e).
  * @constant
  * @type {number}
  */

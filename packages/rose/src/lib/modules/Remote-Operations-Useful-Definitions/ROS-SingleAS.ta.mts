@@ -24,6 +24,8 @@ import {
  * @summary ROS_SingleAS
  * @description
  *
+ * Abstract syntax allowing invocation and reporting of **all** operations in `package`, using invoke-ids from `InvokeIdSet` (ITU-T Rec. X.880 (07/94) §10.14).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,8 @@ import {
  * @summary NoInvokeId
  * @description
  *
+ * Value set of `InvokeId` containing only `noInvokeId`. Supply as `InvokeIdSet` when invocation correlation is provided by other means (ITU-T Rec. X.880 (07/94) §9.9.2, §9.2.2 a).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

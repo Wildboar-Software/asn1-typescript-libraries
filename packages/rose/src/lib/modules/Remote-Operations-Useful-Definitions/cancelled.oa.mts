@@ -23,6 +23,8 @@ import { type ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary cancelled
  * @description
  *
+ * Reported if an operation is cancelled. Include in the `&Errors` field of any cancellable operation. Code `local:-3` (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

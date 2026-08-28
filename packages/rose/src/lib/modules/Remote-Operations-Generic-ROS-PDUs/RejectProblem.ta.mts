@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RejectProblem
  * @description
  *
+ * Exception values signalled when a type or constraint in a ROS PDU definition is violated (ITU-T Rec. X.880 (07/94) §9.7). Identifier `α-β` is reported in `Reject.problem` as `α:β` (X.880 §9.7.1), e.g. `invoke-duplicateInvocation` → `invoke:duplicateInvocation`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +41,7 @@ export type RejectProblem = INTEGER;
 
 /**
  * @summary RejectProblem_general_unrecognizedPDU
+ * @description ROS alternative not recognized; maps to `general:unrecognizedPDU` (X.880 §9.2.3, §9.7).
  * @constant
  * @type {number}
  */
@@ -47,6 +50,7 @@ export const RejectProblem_general_unrecognizedPDU: RejectProblem = 0; /* LONG_N
 
 /**
  * @summary RejectProblem_general_unrecognizedPDU
+ * @description ROS alternative not recognized; maps to `general:unrecognizedPDU` (X.880 §9.2.3, §9.7).
  * @constant
  * @type {number}
  */
@@ -55,6 +59,7 @@ export const general_unrecognizedPDU: RejectProblem = RejectProblem_general_unre
 
 /**
  * @summary RejectProblem_general_mistypedPDU
+ * @description PDU structure does not match the applicable definition; maps to `general:mistypedPDU` (X.880 §9.7).
  * @constant
  * @type {number}
  */
@@ -63,6 +68,7 @@ export const RejectProblem_general_mistypedPDU: RejectProblem = 1; /* LONG_NAMED
 
 /**
  * @summary RejectProblem_general_mistypedPDU
+ * @description PDU structure does not match the applicable definition; maps to `general:mistypedPDU` (X.880 §9.7).
  * @constant
  * @type {number}
  */
@@ -71,6 +77,7 @@ export const general_mistypedPDU: RejectProblem = RejectProblem_general_mistyped
 
 /**
  * @summary RejectProblem_general_badlyStructuredPDU
+ * @description PDU structure cannot be determined from the expected abstract syntax; maps to `general:badlyStructuredPDU` (X.880 §9.7).
  * @constant
  * @type {number}
  */
@@ -79,6 +86,7 @@ export const RejectProblem_general_badlyStructuredPDU: RejectProblem = 2; /* LON
 
 /**
  * @summary RejectProblem_general_badlyStructuredPDU
+ * @description PDU structure cannot be determined from the expected abstract syntax; maps to `general:badlyStructuredPDU` (X.880 §9.7).
  * @constant
  * @type {number}
  */
@@ -87,6 +95,7 @@ export const general_badlyStructuredPDU: RejectProblem = RejectProblem_general_b
 
 /**
  * @summary RejectProblem_invoke_duplicateInvocation
+ * @description invokeId already in use; maps to `invoke:duplicateInvocation` (X.880 §9.3.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -95,6 +104,7 @@ export const RejectProblem_invoke_duplicateInvocation: RejectProblem = 10; /* LO
 
 /**
  * @summary RejectProblem_invoke_duplicateInvocation
+ * @description invokeId already in use; maps to `invoke:duplicateInvocation` (X.880 §9.3.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -103,6 +113,7 @@ export const invoke_duplicateInvocation: RejectProblem = RejectProblem_invoke_du
 
 /**
  * @summary RejectProblem_invoke_unrecognizedOperation
+ * @description opcode not among allowed operations; maps to `invoke:unrecognizedOperation` (X.880 §9.3.3 c, §9.7).
  * @constant
  * @type {number}
  */
@@ -111,6 +122,7 @@ export const RejectProblem_invoke_unrecognizedOperation: RejectProblem = 11; /* 
 
 /**
  * @summary RejectProblem_invoke_unrecognizedOperation
+ * @description opcode not among allowed operations; maps to `invoke:unrecognizedOperation` (X.880 §9.3.3 c, §9.7).
  * @constant
  * @type {number}
  */
@@ -119,6 +131,7 @@ export const invoke_unrecognizedOperation: RejectProblem = RejectProblem_invoke_
 
 /**
  * @summary RejectProblem_invoke_mistypedArgument
+ * @description argument missing or mistyped; maps to `invoke:mistypedArgument` (X.880 §9.3.3 d, §9.7).
  * @constant
  * @type {number}
  */
@@ -127,6 +140,7 @@ export const RejectProblem_invoke_mistypedArgument: RejectProblem = 12; /* LONG_
 
 /**
  * @summary RejectProblem_invoke_mistypedArgument
+ * @description argument missing or mistyped; maps to `invoke:mistypedArgument` (X.880 §9.3.3 d, §9.7).
  * @constant
  * @type {number}
  */
@@ -135,6 +149,7 @@ export const invoke_mistypedArgument: RejectProblem = RejectProblem_invoke_misty
 
 /**
  * @summary RejectProblem_invoke_resourceLimitation
+ * @description Performer refuses due to resource limitation; maps to `invoke:resourceLimitation` (X.880 §9.6.4 d, §9.7).
  * @constant
  * @type {number}
  */
@@ -143,6 +158,7 @@ export const RejectProblem_invoke_resourceLimitation: RejectProblem = 13; /* LON
 
 /**
  * @summary RejectProblem_invoke_resourceLimitation
+ * @description Performer refuses due to resource limitation; maps to `invoke:resourceLimitation` (X.880 §9.6.4 d, §9.7).
  * @constant
  * @type {number}
  */
@@ -151,6 +167,7 @@ export const invoke_resourceLimitation: RejectProblem = RejectProblem_invoke_res
 
 /**
  * @summary RejectProblem_invoke_releaseInProgress
+ * @description Performer is about to release the association; maps to `invoke:releaseInProgress` (X.880 §9.6.4 e, §9.7).
  * @constant
  * @type {number}
  */
@@ -159,6 +176,7 @@ export const RejectProblem_invoke_releaseInProgress: RejectProblem = 14; /* LONG
 
 /**
  * @summary RejectProblem_invoke_releaseInProgress
+ * @description Performer is about to release the association; maps to `invoke:releaseInProgress` (X.880 §9.6.4 e, §9.7).
  * @constant
  * @type {number}
  */
@@ -167,6 +185,7 @@ export const invoke_releaseInProgress: RejectProblem = RejectProblem_invoke_rele
 
 /**
  * @summary RejectProblem_invoke_unrecognizedLinkedId
+ * @description linkedId does not identify an outstanding invocation; maps to `invoke:unrecognizedLinkedId` (X.880 §9.3.3 b, §9.7).
  * @constant
  * @type {number}
  */
@@ -175,6 +194,7 @@ export const RejectProblem_invoke_unrecognizedLinkedId: RejectProblem = 15; /* L
 
 /**
  * @summary RejectProblem_invoke_unrecognizedLinkedId
+ * @description linkedId does not identify an outstanding invocation; maps to `invoke:unrecognizedLinkedId` (X.880 §9.3.3 b, §9.7).
  * @constant
  * @type {number}
  */
@@ -183,6 +203,7 @@ export const invoke_unrecognizedLinkedId: RejectProblem = RejectProblem_invoke_u
 
 /**
  * @summary RejectProblem_invoke_linkedResponseUnexpected
+ * @description Parent does not allow linked operations; maps to `invoke:linkedResponseUnexpected` (X.880 §9.3.3 b, §9.7).
  * @constant
  * @type {number}
  */
@@ -191,6 +212,7 @@ export const RejectProblem_invoke_linkedResponseUnexpected: RejectProblem = 16; 
 
 /**
  * @summary RejectProblem_invoke_linkedResponseUnexpected
+ * @description Parent does not allow linked operations; maps to `invoke:linkedResponseUnexpected` (X.880 §9.3.3 b, §9.7).
  * @constant
  * @type {number}
  */
@@ -199,6 +221,7 @@ export const invoke_linkedResponseUnexpected: RejectProblem = RejectProblem_invo
 
 /**
  * @summary RejectProblem_invoke_unexpectedLinkedOperation
+ * @description Operation not in parent's `&Linked`; maps to `invoke:unexpectedLinkedOperation` (X.880 §9.3.3 c, §9.7).
  * @constant
  * @type {number}
  */
@@ -207,6 +230,7 @@ export const RejectProblem_invoke_unexpectedLinkedOperation: RejectProblem = 17;
 
 /**
  * @summary RejectProblem_invoke_unexpectedLinkedOperation
+ * @description Operation not in parent's `&Linked`; maps to `invoke:unexpectedLinkedOperation` (X.880 §9.3.3 c, §9.7).
  * @constant
  * @type {number}
  */
@@ -215,6 +239,7 @@ export const invoke_unexpectedLinkedOperation: RejectProblem = RejectProblem_inv
 
 /**
  * @summary RejectProblem_returnResult_unrecognizedInvocation
+ * @description invokeId not outstanding; maps to `returnResult:unrecognizedInvocation` (X.880 §9.4.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -223,6 +248,7 @@ export const RejectProblem_returnResult_unrecognizedInvocation: RejectProblem = 
 
 /**
  * @summary RejectProblem_returnResult_unrecognizedInvocation
+ * @description invokeId not outstanding; maps to `returnResult:unrecognizedInvocation` (X.880 §9.4.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -231,6 +257,7 @@ export const returnResult_unrecognizedInvocation: RejectProblem = RejectProblem_
 
 /**
  * @summary RejectProblem_returnResult_resultResponseUnexpected
+ * @description Operation does not return a result; maps to `returnResult:resultResponseUnexpected` (X.880 §9.4.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -239,6 +266,7 @@ export const RejectProblem_returnResult_resultResponseUnexpected: RejectProblem 
 
 /**
  * @summary RejectProblem_returnResult_resultResponseUnexpected
+ * @description Operation does not return a result; maps to `returnResult:resultResponseUnexpected` (X.880 §9.4.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -247,6 +275,7 @@ export const returnResult_resultResponseUnexpected: RejectProblem = RejectProble
 
 /**
  * @summary RejectProblem_returnResult_mistypedResult
+ * @description result missing or mistyped; maps to `returnResult:mistypedResult` (X.880 §9.4.3 c, §9.7).
  * @constant
  * @type {number}
  */
@@ -255,6 +284,7 @@ export const RejectProblem_returnResult_mistypedResult: RejectProblem = 22; /* L
 
 /**
  * @summary RejectProblem_returnResult_mistypedResult
+ * @description result missing or mistyped; maps to `returnResult:mistypedResult` (X.880 §9.4.3 c, §9.7).
  * @constant
  * @type {number}
  */
@@ -263,6 +293,7 @@ export const returnResult_mistypedResult: RejectProblem = RejectProblem_returnRe
 
 /**
  * @summary RejectProblem_returnError_unrecognizedInvocation
+ * @description invokeId not outstanding; maps to `returnError:unrecognizedInvocation` (X.880 §9.5.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -271,6 +302,7 @@ export const RejectProblem_returnError_unrecognizedInvocation: RejectProblem = 3
 
 /**
  * @summary RejectProblem_returnError_unrecognizedInvocation
+ * @description invokeId not outstanding; maps to `returnError:unrecognizedInvocation` (X.880 §9.5.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -279,6 +311,7 @@ export const returnError_unrecognizedInvocation: RejectProblem = RejectProblem_r
 
 /**
  * @summary RejectProblem_returnError_errorResponseUnexpected
+ * @description Operation does not return an error; maps to `returnError:errorResponseUnexpected` (X.880 §9.5.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -287,6 +320,7 @@ export const RejectProblem_returnError_errorResponseUnexpected: RejectProblem = 
 
 /**
  * @summary RejectProblem_returnError_errorResponseUnexpected
+ * @description Operation does not return an error; maps to `returnError:errorResponseUnexpected` (X.880 §9.5.3 a, §9.7).
  * @constant
  * @type {number}
  */
@@ -295,6 +329,7 @@ export const returnError_errorResponseUnexpected: RejectProblem = RejectProblem_
 
 /**
  * @summary RejectProblem_returnError_unrecognizedError
+ * @description errcode not among allowed errors; maps to `returnError:unrecognizedError` (X.880 §9.5.3 b, §9.7).
  * @constant
  * @type {number}
  */
@@ -303,6 +338,7 @@ export const RejectProblem_returnError_unrecognizedError: RejectProblem = 32; /*
 
 /**
  * @summary RejectProblem_returnError_unrecognizedError
+ * @description errcode not among allowed errors; maps to `returnError:unrecognizedError` (X.880 §9.5.3 b, §9.7).
  * @constant
  * @type {number}
  */
@@ -311,6 +347,7 @@ export const returnError_unrecognizedError: RejectProblem = RejectProblem_return
 
 /**
  * @summary RejectProblem_returnError_unexpectedError
+ * @description Error not in the operation's `&Errors`; maps to `returnError:unexpectedError` (X.880 §9.5.3 b, §9.7).
  * @constant
  * @type {number}
  */
@@ -319,6 +356,7 @@ export const RejectProblem_returnError_unexpectedError: RejectProblem = 33; /* L
 
 /**
  * @summary RejectProblem_returnError_unexpectedError
+ * @description Error not in the operation's `&Errors`; maps to `returnError:unexpectedError` (X.880 §9.5.3 b, §9.7).
  * @constant
  * @type {number}
  */
@@ -327,6 +365,7 @@ export const returnError_unexpectedError: RejectProblem = RejectProblem_returnEr
 
 /**
  * @summary RejectProblem_returnError_mistypedParameter
+ * @description parameter missing or mistyped; maps to `returnError:mistypedParameter` (X.880 §9.5.3 c, §9.7).
  * @constant
  * @type {number}
  */
@@ -335,6 +374,7 @@ export const RejectProblem_returnError_mistypedParameter: RejectProblem = 34; /*
 
 /**
  * @summary RejectProblem_returnError_mistypedParameter
+ * @description parameter missing or mistyped; maps to `returnError:mistypedParameter` (X.880 §9.5.3 c, §9.7).
  * @constant
  * @type {number}
  */

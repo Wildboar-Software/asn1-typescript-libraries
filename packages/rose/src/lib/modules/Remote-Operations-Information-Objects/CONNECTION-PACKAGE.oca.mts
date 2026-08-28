@@ -18,6 +18,8 @@ import { type OPERATION } from '../Remote-Operations-Information-Objects/OPERATI
  * @summary CONNECTION_PACKAGE
  * @description
  *
+ * Bind and unbind operations (and related flags) used when associations are established and released dynamically. Specify a connection package only when bind/unbind are used for that purpose (ITU-T Rec. X.880 (07/94) §8.5). Defaults are `emptyBind` and `emptyUnbind` (X.880 §10.2–10.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,22 +66,27 @@ export interface CONNECTION_PACKAGE {
   >;
   /**
    * @summary &bind
+   * @description Operation performed as part of association establishment. Must have `&returnResult` and `&alwaysReturns` `TRUE` and a single error. Success returns a result; failure reports that error. Default `emptyBind` (X.880 §8.5.2).
    */
   readonly '&bind'?: OPERATION;
   /**
    * @summary &unbind
+   * @description Operation performed as part of association release. Must have `&returnResult` and `&alwaysReturns` `TRUE` and a single error. Successful release returns a result; unsuccessful release reports the error. Default `emptyUnbind` (X.880 §8.5.3).
    */
   readonly '&unbind'?: OPERATION;
   /**
    * @summary &responderCanUnbind
+   * @description If `TRUE`, the association responder (as well as the initiator) may invoke `&unbind` (X.880 §8.5.4). Default `FALSE`.
    */
   readonly '&responderCanUnbind'?: BOOLEAN;
   /**
    * @summary &unbindCanFail
+   * @description If `TRUE`, the association may still exist after `&unbind` has signalled an error (X.880 §8.5.5). Default `FALSE`.
    */
   readonly '&unbindCanFail'?: BOOLEAN;
   /**
    * @summary &id
+   * @description Object identifier for announcing or negotiating this connection package (X.880 §8.5.6).
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
 }

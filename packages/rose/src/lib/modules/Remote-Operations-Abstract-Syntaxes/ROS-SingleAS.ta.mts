@@ -24,6 +24,8 @@ import {
  * @summary ROS_SingleAS
  * @description
  *
+ * OSI ROSE single abstract syntax for a package: invoke and report all operations, using `ROSEInvokeIds` (ITU-T Rec. X.882 (07/94) §10.5.2; X.880 §10.14). Unusable if linked-operation depth exceeds the `Forward`/`Reverse` assumptions (X.882 §10.5.1 note).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

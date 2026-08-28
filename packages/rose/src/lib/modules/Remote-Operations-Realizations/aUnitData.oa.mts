@@ -21,6 +21,8 @@ import { type REALIZATION } from '../Remote-Operations-Information-Objects-exten
  * @summary aUnitData
  * @description
  *
+ * Transfer realization identified by `{joint-iso-itu-t association-control(2) abstract-syntax(1) apdus(1) version(1)}`. Not specified in X.882 (07/94), which defines `pData`, `pData-with-concatenation`, and `transfer-by-RTSE` only (X.882 §9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

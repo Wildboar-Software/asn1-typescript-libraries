@@ -19,6 +19,8 @@ import {
  * @summary noInvokeId
  * @description
  *
+ * `InvokeId` used when an integer is not needed or not available (`absent:NULL`) (ITU-T Rec. X.880 (07/94) §9.9.1). Used on `Reject` when the rejected PDU's invoke-id cannot be determined (X.880 §9.6.2 a). OSI ROSE does not use this value on `Invoke`/`ReturnResult`/`ReturnError` (X.880 §9.2.2 note 2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

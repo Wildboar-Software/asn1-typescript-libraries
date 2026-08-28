@@ -21,6 +21,8 @@ import {
  * @summary acse_abstract_syntax
  * @description
  *
+ * ACSE APDU abstract syntax, typically listed in `APPLICATION-CONTEXT.&AbstractSyntaxes` when associations are realized by ACSE (ITU-T Rec. X.882 (07/94) Annex B). OID `{joint-iso-itu-t association-control(2) abstract-syntax(1) apdus(0) version1(1)}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

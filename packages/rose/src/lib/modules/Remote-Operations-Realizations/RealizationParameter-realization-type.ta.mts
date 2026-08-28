@@ -16,6 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RealizationParameter_realization_type
  * @description
  *
+ * `realization-type` of `RealizationParameter`: association-service (0) or transfer-service (1) (ITU-T Rec. X.882 (07/94) §8.2.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +36,8 @@ export enum _enum_for_RealizationParameter_realization_type {
  * @summary RealizationParameter_realization_type
  * @description
  *
+ * `realization-type` of `RealizationParameter`: association-service (0) or transfer-service (1) (ITU-T Rec. X.882 (07/94) §8.2.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,6 +53,8 @@ export type RealizationParameter_realization_type = _enum_for_RealizationParamet
  * @summary RealizationParameter_realization_type
  * @description
  *
+ * `realization-type` of `RealizationParameter`: association-service (0) or transfer-service (1) (ITU-T Rec. X.882 (07/94) §8.2.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +68,7 @@ export const RealizationParameter_realization_type = _enum_for_RealizationParame
 
 /**
  * @summary RealizationParameter_realization_type_association_service
+ * @description Association establishment/release realization (X.882 §8).
  * @constant
  * @type {number}
  */
@@ -71,6 +78,7 @@ export const RealizationParameter_realization_type_association_service: Realizat
 
 /**
  * @summary association_service
+ * @description Association establishment/release realization (X.882 §8).
  * @constant
  * @type {number}
  */
@@ -80,6 +88,7 @@ export const association_service: RealizationParameter_realization_type =
 
 /**
  * @summary RealizationParameter_realization_type_transfer_service
+ * @description Transfer of ROSE APDUs (X.882 §9).
  * @constant
  * @type {number}
  */
@@ -89,6 +98,7 @@ export const RealizationParameter_realization_type_transfer_service: Realization
 
 /**
  * @summary transfer_service
+ * @description Transfer of ROSE APDUs (X.882 §9).
  * @constant
  * @type {number}
  */

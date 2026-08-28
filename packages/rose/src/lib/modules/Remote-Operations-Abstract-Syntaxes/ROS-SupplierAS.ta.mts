@@ -24,6 +24,8 @@ import {
  * @summary ROS_SupplierAS
  * @description
  *
+ * OSI ROSE supplier-side abstract syntax: invoke supplier-performed operations and report consumer-performed ones, using `ROSEInvokeIds` (ITU-T Rec. X.882 (07/94) §10.5.2; X.880 §10.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

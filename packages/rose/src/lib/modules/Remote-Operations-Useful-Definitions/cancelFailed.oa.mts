@@ -28,6 +28,8 @@ import { type ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary cancelFailed
  * @description
  *
+ * Problem performing `cancel`. Parameter is a SET of `problem` (`CancelProblem`) and `operation` (the `InvokeId` that was to be cancelled). Code `local:-2` (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

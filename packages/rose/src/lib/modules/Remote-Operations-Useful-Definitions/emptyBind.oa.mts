@@ -24,6 +24,8 @@ import { refuse } from '../Remote-Operations-Useful-Definitions/refuse.oa.mjs';
  * @summary emptyBind
  * @description
  *
+ * Default bind when a connection package does not specify one: no argument or result, single error `refuse` if the association is refused. Synchronous — no other synchronous operation may be invoked until the bind returns (ITU-T Rec. X.880 (07/94) §10.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

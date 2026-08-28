@@ -29,6 +29,8 @@ import { cancelFailed } from '../Remote-Operations-Useful-Definitions/cancelFail
  * @summary cancel
  * @description
  *
+ * Requests premature termination of an outstanding operation. Only operations that include `cancelled` in `&Errors` can be cancelled. Argument is that invocation's `InvokeId`. Failure returns `cancelFailed`. Idempotent. Code `local:-4` (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

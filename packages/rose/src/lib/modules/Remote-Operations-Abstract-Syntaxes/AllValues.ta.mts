@@ -30,6 +30,8 @@ import {
  * @summary AllValues
  * @description
  *
+ * Single abstract syntax covering an entire association contract: bind and unbind PDUs plus `ROS-SingleAS` of the combined operation packages (`OperationsOf | InitiatorConsumerOf | ResponderConsumerOf`) (ITU-T Rec. X.882 (07/94) §10.5.3). Operation and error codes across those packages must be unique.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

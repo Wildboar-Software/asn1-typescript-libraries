@@ -29,6 +29,8 @@ import {
  * @summary Reject
  * @description
  *
+ * PDU reporting erroneous use of another `ROS` PDU (ITU-T Rec. X.880 (07/94) §9.6). A mistyped `Reject` itself must not generate a further `Reject` (X.880 §9.6.7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,12 +51,14 @@ export class Reject {
   constructor(
     /**
      * @summary `invokeId`.
+     * @description Invoke-id from the rejected PDU, or `noInvokeId` if it cannot be determined (X.880 §9.6.2 a).
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId,
     /**
      * @summary `problem`.
+     * @description Category of problem: `general`, `invoke`, `returnResult`, or `returnError` (X.880 §9.6.2 b, §9.6.3–9.6.6).
      * @public
      * @readonly
      */

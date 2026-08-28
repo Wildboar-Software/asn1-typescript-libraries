@@ -21,6 +21,8 @@ import { type REALIZATION } from '../Remote-Operations-Information-Objects-exten
  * @summary transfer_by_RTSE
  * @description
  *
+ * Transfer realization using RT-TRANSFER. Requires an RTSE association (typically `association-by-RTSE`). The ROPM issues RT-TRANSFER only when it has the Turn and no confirm is outstanding (ITU-T Rec. X.882 (07/94) §9.3). OID `{... transfer-realizations(11) rTSE-transfer(2)}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

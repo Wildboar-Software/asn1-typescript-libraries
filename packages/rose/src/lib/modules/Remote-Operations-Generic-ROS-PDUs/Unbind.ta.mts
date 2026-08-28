@@ -15,6 +15,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Unbind
  * @description
  *
+ * Parameterized PDUs for invoking an unbind operation, returning its result, or reporting its error during association release (ITU-T Rec. X.880 (07/94) §9.12). Tags 19–21. In the ACSE realization these appear as user information of A-RELEASE (X.882 §8.2.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

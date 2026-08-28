@@ -20,6 +20,8 @@ import {
  * @summary ROSEInvokeIds
  * @description
  *
+ * Invoke-id value set used by OSI ROSE: all `InvokeId` values except `noInvokeId` (ITU-T Rec. X.882 (07/94) §10.1). Matches X.880 §9.2.2 note 2 that OSI does not use `noInvokeId` on Invoke/ReturnResult/ReturnError.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

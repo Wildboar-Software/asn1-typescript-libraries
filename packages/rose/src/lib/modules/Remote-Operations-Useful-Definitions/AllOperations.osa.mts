@@ -19,6 +19,8 @@ import { SupplierPerforms } from './SupplierPerforms.osa.mjs';
  * @summary AllOperations
  * @description
  *
+ * All operations involved in `package`: `ConsumerPerforms` union `SupplierPerforms` (ITU-T Rec. X.880 (07/94) §10.10).
+ *
  * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:

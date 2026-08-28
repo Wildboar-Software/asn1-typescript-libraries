@@ -21,6 +21,8 @@ import { type REALIZATION } from '../Remote-Operations-Information-Objects-exten
  * @summary acse
  * @description
  *
+ * Association realization using connection-oriented ACSE: ESTABLISH/RELEASE/ABORT map to A-ASSOCIATE/A-RELEASE/A-ABORT. Concatenation **prohibited**. Bind/unbind APDUs travel as A-ASSOCIATE/A-RELEASE user information. Pair with `pData` (ITU-T Rec. X.882 (07/94) §8.2). OID `{... association-realizations(10) acse-without-concatenation(0)}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

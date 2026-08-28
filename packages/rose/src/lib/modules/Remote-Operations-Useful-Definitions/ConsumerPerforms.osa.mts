@@ -18,6 +18,8 @@ import { Reverse } from './Reverse.osa.mjs';
  * @summary ConsumerPerforms
  * @description
  *
+ * Operations the **consumer** of `package` must be able to perform: forward of `&Consumer` and `&Both`, plus reverse of `&Supplier` and `&Both` (ITU-T Rec. X.880 (07/94) §10.8). Usable only if the `Forward`/`Reverse` linkage-depth assumptions hold.
+ *
  * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:

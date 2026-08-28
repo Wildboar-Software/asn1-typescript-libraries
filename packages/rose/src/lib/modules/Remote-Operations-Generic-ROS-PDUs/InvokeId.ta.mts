@@ -18,6 +18,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InvokeId
  * @description
  *
+ * Identifies a particular invocation so later reports can be correlated. `present` is an `INTEGER`; `absent` is `NULL` (ITU-T Rec. X.880 (07/94) §9.8). Use `noInvokeId` (`absent:NULL`) when an integer is not needed or not available (X.880 §9.9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

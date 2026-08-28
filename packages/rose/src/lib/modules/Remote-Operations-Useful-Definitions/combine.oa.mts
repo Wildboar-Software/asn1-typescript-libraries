@@ -16,6 +16,8 @@ import { type OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects
  * @summary combine
  * @description
  *
+ * Combines packages into one. `ConsumerConsumes`: packages in which the result's consumer plays consumer. `ConsumerSupplies`: packages in which the result's consumer plays supplier. `base` contributes only `&id` — its operations are not included unless they also appear in the other two (ITU-T Rec. X.880 (07/94) §10.13).
+ *
  * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:

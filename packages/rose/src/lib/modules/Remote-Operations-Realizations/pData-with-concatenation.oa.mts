@@ -21,6 +21,8 @@ import { type REALIZATION } from '../Remote-Operations-Information-Objects-exten
  * @summary pData_with_concatenation
  * @description
  *
+ * Transfer realization over P-DATA with concatenation: several nearby TRANSFER PDVs may share one P-DATA, and TRANSFER PDVs may ride with A-ASSOCIATE/A-RELEASE user information. TRANSFER in bind/unbind pending states is allowed only with this variant (ITU-T Rec. X.882 (07/94) §9.2.6 a). OID `{... transfer-realizations(11) pData-with-concatenation(1)}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

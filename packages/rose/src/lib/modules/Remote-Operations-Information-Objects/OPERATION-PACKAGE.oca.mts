@@ -17,6 +17,8 @@ import { type OPERATION } from '../Remote-Operations-Information-Objects/OPERATI
  * @summary OPERATION_PACKAGE
  * @description
  *
+ * Roles of a pair of ROS-objects in terms of which operations each may invoke of the other. Asymmetrical packages label the parties consumer and supplier (ITU-T Rec. X.880 (07/94) §8.4). In `WITH SYNTAX`, `CONSUMER INVOKES` fills `&Supplier` (operations the consumer invokes and the supplier performs) and `SUPPLIER INVOKES` fills `&Consumer`. All operations in the package must have distinct `&operationCode`s; all their errors, distinct `&errorCode`s (X.880 §8.4.6–8.4.7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,18 +64,22 @@ export interface OPERATION_PACKAGE {
   >;
   /**
    * @summary &Both
+   * @description Operations both parties shall be capable of performing (X.880 §8.4.2). Syntax: `OPERATIONS`.
    */
   readonly '&Both'?: OPERATION[];
   /**
    * @summary &Consumer
+   * @description Operations the **consumer** shall perform (i.e. the supplier invokes them). Syntax: `SUPPLIER INVOKES` (X.880 §8.4.3).
    */
   readonly '&Consumer'?: OPERATION[];
   /**
    * @summary &Supplier
+   * @description Operations the **supplier** shall perform (i.e. the consumer invokes them). Syntax: `CONSUMER INVOKES` (X.880 §8.4.4).
    */
   readonly '&Supplier'?: OPERATION[];
   /**
    * @summary &id
+   * @description Object identifier for announcing or negotiating the package. Without `&id` the package cannot be announced or negotiated (X.880 §8.4.5).
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
 }

@@ -17,6 +17,8 @@ import { type OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects
  * @summary switch
  * @description
  *
+ * Copy of a package with consumer and supplier roles reversed and `&id` set to `id` (ITU-T Rec. X.880 (07/94) §10.12). `CONSUMER INVOKES` fills `&Supplier` and `SUPPLIER INVOKES` fills `&Consumer`.
+ *
  * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:

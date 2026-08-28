@@ -21,6 +21,8 @@ import { type REALIZATION } from '../Remote-Operations-Information-Objects-exten
  * @summary acse_with_concatenation
  * @description
  *
+ * ACSE association realization with concatenation permitted: TRANSFER PDVs may be carried with Bind/Unbind APDUs on A-ASSOCIATE/A-RELEASE (ITU-T Rec. X.882 (07/94) §8.2.7–8.2.8). TRANSFER during bind/unbind pending is allowed only with a concatenating transfer realization (X.882 §9.2.6 a). OID `{... association-realizations(10) acse-with-concatenation(1)}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

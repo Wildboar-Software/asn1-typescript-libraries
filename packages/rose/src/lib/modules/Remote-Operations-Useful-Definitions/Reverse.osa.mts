@@ -16,6 +16,8 @@ import { Forward } from './Forward.osa.mjs';
  * @summary Reverse
  * @description
  *
+ * Operations directly or indirectly linked to `OperationSet` with **opposite** directionality: `Forward` of those operations' `&Linked` (ITU-T Rec. X.880 (07/94) §10.7). Assumes nothing appears only at the sixth or later linkage level.
+ *
  * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:

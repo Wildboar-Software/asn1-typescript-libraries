@@ -26,6 +26,8 @@ import {
  * @summary cancelFailed_ParameterType
  * @description
  *
+ * Parameter of `cancelFailed`: why cancellation failed and which invocation was targeted (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.10). Specified as a SET in the Recommendation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +39,14 @@ export class cancelFailed_ParameterType {
   constructor(
     /**
      * @summary `problem`.
+     * @description Why cancellation failed (Amd.1 §10.10.2.1).
      * @public
      * @readonly
      */
     readonly problem: CancelProblem,
     /**
      * @summary `operation`.
+     * @description `InvokeId` of the invocation that was to be cancelled (Amd.1 §10.10.2.2).
      * @public
      * @readonly
      */

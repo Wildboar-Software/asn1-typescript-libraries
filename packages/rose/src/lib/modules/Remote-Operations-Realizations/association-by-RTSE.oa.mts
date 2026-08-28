@@ -21,6 +21,8 @@ import { type REALIZATION } from '../Remote-Operations-Information-Objects-exten
  * @summary association_by_RTSE
  * @description
  *
+ * Association realization using RTSE (which itself requires ACSE): ESTABLISH/RELEASE/ABORT map to RT-OPEN/RT-CLOSE/RT-U-ABORT. `release can fail` is false. Pair with `transfer-by-RTSE` (ITU-T Rec. X.882 (07/94) §8.3). OID `{... association-realizations(10) association-by-rtse(2)}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

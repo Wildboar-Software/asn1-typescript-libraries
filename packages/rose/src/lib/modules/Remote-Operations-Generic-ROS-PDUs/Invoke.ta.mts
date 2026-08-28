@@ -36,6 +36,8 @@ import {
  * @summary Invoke
  * @description
  *
+ * PDU requesting performance of an operation (ITU-T Rec. X.880 (07/94) §9.3). Constraint violations are reported with `Reject` using the corresponding `invoke-*` / `general-mistypedPDU` problems. OSI ROSE does not use `linkedId` `absent:NULL` (X.880 §9.3.3 note).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -78,24 +80,28 @@ export class Invoke {
   constructor(
     /**
      * @summary `invokeId`.
+     * @description Identifies this invocation for later result/error/reject correlation. Must be in `InvokeIdSet` and not already in use, else `invoke-duplicateInvocation` (X.880 §9.3.3 a).
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId,
     /**
      * @summary `linkedId`.
+     * @description If present, this invoke is linked to an outstanding invocation in the opposite direction. Must identify an outstanding operation that allows linked operations, else `invoke-unrecognizedLinkedId` or `invoke-linkedResponseUnexpected` (X.880 §9.3.3 b).
      * @public
      * @readonly
      */
     readonly linkedId: OPTIONAL<Invoke_linkedId>,
     /**
      * @summary `opcode`.
+     * @description `&operationCode` of the operation being invoked. Must name one of `Operations`, and if `linkedId` is present must be in that operation's `&Linked`, else `invoke-unrecognizedOperation` / `invoke-unexpectedLinkedOperation` (X.880 §9.3.3 c).
      * @public
      * @readonly
      */
     readonly opcode: Code,
     /**
      * @summary `argument`.
+     * @description Argument of the identified operation. Required unless `&ArgumentType` is omitted or `&argumentTypeOptional` permits omission; mismatch yields `invoke-mistypedArgument` (X.880 §9.3.3 d).
      * @public
      * @readonly
      */

@@ -30,6 +30,8 @@ import {
  * @summary ReturnResult
  * @description
  *
+ * PDU reporting successful performance of an operation (ITU-T Rec. X.880 (07/94) §9.4). `invokeId` must name an outstanding invocation of an operation that returns a result. The nested `result` SEQUENCE is present iff a result value is returned; `opcode` inside it must match that invocation.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,12 +61,14 @@ export class ReturnResult {
   constructor(
     /**
      * @summary `invokeId`.
+     * @description Invocation whose success is being reported. Must be outstanding and of an operation that returns a result, else `returnResult-unrecognizedInvocation` / `returnResult-resultResponseUnexpected` (X.880 §9.4.3 a).
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId,
     /**
      * @summary `result`.
+     * @description Present iff the operation has a `&ResultType`. Contains `opcode` (must match the invocation) and the result value; mistype yields `returnResult-mistypedResult` (X.880 §9.4.3 b–c).
      * @public
      * @readonly
      */

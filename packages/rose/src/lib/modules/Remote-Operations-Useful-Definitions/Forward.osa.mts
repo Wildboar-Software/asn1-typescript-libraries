@@ -15,6 +15,8 @@ import { type OPERATION } from '../Remote-Operations-Information-Objects/OPERATI
  * @summary Forward
  * @description
  *
+ * Expanded operation set: `OperationSet` plus same-directionality linked operations through four levels of `&Linked` (odd linkage depths). Assumes nothing appears only at the fifth or later level (ITU-T Rec. X.880 (07/94) §10.6).
+ *
  * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:

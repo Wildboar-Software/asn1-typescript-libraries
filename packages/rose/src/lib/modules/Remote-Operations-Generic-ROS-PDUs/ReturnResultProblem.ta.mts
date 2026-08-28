@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReturnResultProblem
  * @description
  *
+ * Problem with a component of a `ReturnResult` PDU, carried in `Reject.problem.returnResult` (ITU-T Rec. X.880 (07/94) §9.6.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +32,7 @@ export type ReturnResultProblem = INTEGER;
 
 /**
  * @summary ReturnResultProblem_unrecognizedInvocation
+ * @description invokeId is not that of an outstanding invocation (X.880 §9.4.3 a, §9.6.5 a).
  * @constant
  * @type {number}
  */
@@ -38,6 +41,7 @@ export const ReturnResultProblem_unrecognizedInvocation: ReturnResultProblem = 0
 
 /**
  * @summary ReturnResultProblem_unrecognizedInvocation
+ * @description invokeId is not that of an outstanding invocation (X.880 §9.4.3 a, §9.6.5 a).
  * @constant
  * @type {number}
  */
@@ -46,6 +50,7 @@ export const unrecognizedInvocation: ReturnResultProblem = ReturnResultProblem_u
 
 /**
  * @summary ReturnResultProblem_resultResponseUnexpected
+ * @description Outstanding invocation is of an operation that does not return a result (X.880 §9.4.3 a, §9.6.5 b).
  * @constant
  * @type {number}
  */
@@ -54,6 +59,7 @@ export const ReturnResultProblem_resultResponseUnexpected: ReturnResultProblem =
 
 /**
  * @summary ReturnResultProblem_resultResponseUnexpected
+ * @description Outstanding invocation is of an operation that does not return a result (X.880 §9.4.3 a, §9.6.5 b).
  * @constant
  * @type {number}
  */
@@ -62,6 +68,7 @@ export const resultResponseUnexpected: ReturnResultProblem = ReturnResultProblem
 
 /**
  * @summary ReturnResultProblem_mistypedResult
+ * @description opcode/result mismatch or result not of `&ResultType` (X.880 §9.4.3 b–c, §9.6.5 c).
  * @constant
  * @type {number}
  */
@@ -70,6 +77,7 @@ export const ReturnResultProblem_mistypedResult: ReturnResultProblem = 2; /* LON
 
 /**
  * @summary ReturnResultProblem_mistypedResult
+ * @description opcode/result mismatch or result not of `&ResultType` (X.880 §9.4.3 b–c, §9.6.5 c).
  * @constant
  * @type {number}
  */

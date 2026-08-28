@@ -108,6 +108,7 @@ import type { InvokeId } from "./lib/modules/Remote-Operations-Generic-ROS-PDUs/
 
 /**
  * @summary Compare two `Code` values
+ * @description `local` integers compare by value; `global` OIDs by `isEqualTo`. A local code never equals a global code (X.880 §8.8).
  * @param a The first `Code` value
  * @param b The second `Code` value
  * @returns `true` if the two Code values are equal, `false` otherwise
@@ -125,6 +126,7 @@ export function compareCode (a: Code, b: Code): boolean {
 
 /**
  * @summary Compare two `InvokeId` values
+ * @description `present` integers compare by value; any two `absent` (`noInvokeId`) values are equal (X.880 §9.8–9.9).
  * @param a The first `InvokeId` value
  * @param b The second `InvokeId` value
  * @returns `true` if the two InvokeId values are equal, `false` otherwise

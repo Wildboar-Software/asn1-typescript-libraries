@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InvokeProblem
  * @description
  *
+ * Problem with a component of an `Invoke` PDU, carried in `Reject.problem.invoke` (ITU-T Rec. X.880 (07/94) §9.6.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +33,7 @@ export type InvokeProblem = INTEGER;
 
 /**
  * @summary InvokeProblem_duplicateInvocation
+ * @description Invoke-id already in use (X.880 §9.3.3 a, §9.6.4 a).
  * @constant
  * @type {number}
  */
@@ -39,6 +42,7 @@ export const InvokeProblem_duplicateInvocation: InvokeProblem = 0; /* LONG_NAMED
 
 /**
  * @summary InvokeProblem_duplicateInvocation
+ * @description Invoke-id already in use (X.880 §9.3.3 a, §9.6.4 a).
  * @constant
  * @type {number}
  */
@@ -47,6 +51,7 @@ export const duplicateInvocation: InvokeProblem = InvokeProblem_duplicateInvocat
 
 /**
  * @summary InvokeProblem_unrecognizedOperation
+ * @description opcode is not one of the allowed operations (X.880 §9.3.3 c, §9.6.4 b).
  * @constant
  * @type {number}
  */
@@ -55,6 +60,7 @@ export const InvokeProblem_unrecognizedOperation: InvokeProblem = 1; /* LONG_NAM
 
 /**
  * @summary InvokeProblem_unrecognizedOperation
+ * @description opcode is not one of the allowed operations (X.880 §9.3.3 c, §9.6.4 b).
  * @constant
  * @type {number}
  */
@@ -63,6 +69,7 @@ export const unrecognizedOperation: InvokeProblem = InvokeProblem_unrecognizedOp
 
 /**
  * @summary InvokeProblem_mistypedArgument
+ * @description argument missing or not of the operation's `&ArgumentType` (X.880 §9.3.3 d, §9.6.4 c).
  * @constant
  * @type {number}
  */
@@ -71,6 +78,7 @@ export const InvokeProblem_mistypedArgument: InvokeProblem = 2; /* LONG_NAMED_IN
 
 /**
  * @summary InvokeProblem_mistypedArgument
+ * @description argument missing or not of the operation's `&ArgumentType` (X.880 §9.3.3 d, §9.6.4 c).
  * @constant
  * @type {number}
  */
@@ -79,6 +87,7 @@ export const mistypedArgument: InvokeProblem = InvokeProblem_mistypedArgument; /
 
 /**
  * @summary InvokeProblem_resourceLimitation
+ * @description Performer refuses the operation due to a resource limitation (X.880 §9.6.4 d).
  * @constant
  * @type {number}
  */
@@ -87,6 +96,7 @@ export const InvokeProblem_resourceLimitation: InvokeProblem = 3; /* LONG_NAMED_
 
 /**
  * @summary InvokeProblem_resourceLimitation
+ * @description Performer refuses the operation due to a resource limitation (X.880 §9.6.4 d).
  * @constant
  * @type {number}
  */
@@ -95,6 +105,7 @@ export const resourceLimitation: InvokeProblem = InvokeProblem_resourceLimitatio
 
 /**
  * @summary InvokeProblem_releaseInProgress
+ * @description Performer refuses because it is about to release the association (X.880 §9.6.4 e).
  * @constant
  * @type {number}
  */
@@ -103,6 +114,7 @@ export const InvokeProblem_releaseInProgress: InvokeProblem = 4; /* LONG_NAMED_I
 
 /**
  * @summary InvokeProblem_releaseInProgress
+ * @description Performer refuses because it is about to release the association (X.880 §9.6.4 e).
  * @constant
  * @type {number}
  */
@@ -111,6 +123,7 @@ export const releaseInProgress: InvokeProblem = InvokeProblem_releaseInProgress;
 
 /**
  * @summary InvokeProblem_unrecognizedLinkedId
+ * @description linkedId does not identify an outstanding invocation (X.880 §9.3.3 b, §9.6.4 f).
  * @constant
  * @type {number}
  */
@@ -119,6 +132,7 @@ export const InvokeProblem_unrecognizedLinkedId: InvokeProblem = 5; /* LONG_NAME
 
 /**
  * @summary InvokeProblem_unrecognizedLinkedId
+ * @description linkedId does not identify an outstanding invocation (X.880 §9.3.3 b, §9.6.4 f).
  * @constant
  * @type {number}
  */
@@ -127,6 +141,7 @@ export const unrecognizedLinkedId: InvokeProblem = InvokeProblem_unrecognizedLin
 
 /**
  * @summary InvokeProblem_linkedResponseUnexpected
+ * @description Parent invocation does not allow linked operations (X.880 §9.3.3 b, §9.6.4 g).
  * @constant
  * @type {number}
  */
@@ -135,6 +150,7 @@ export const InvokeProblem_linkedResponseUnexpected: InvokeProblem = 6; /* LONG_
 
 /**
  * @summary InvokeProblem_linkedResponseUnexpected
+ * @description Parent invocation does not allow linked operations (X.880 §9.3.3 b, §9.6.4 g).
  * @constant
  * @type {number}
  */
@@ -143,6 +159,7 @@ export const linkedResponseUnexpected: InvokeProblem = InvokeProblem_linkedRespo
 
 /**
  * @summary InvokeProblem_unexpectedLinkedOperation
+ * @description This operation is not in the parent's `&Linked` (X.880 §9.3.3 c, §9.6.4 h).
  * @constant
  * @type {number}
  */
@@ -151,6 +168,7 @@ export const InvokeProblem_unexpectedLinkedOperation: InvokeProblem = 7; /* LONG
 
 /**
  * @summary InvokeProblem_unexpectedLinkedOperation
+ * @description This operation is not in the parent's `&Linked` (X.880 §9.3.3 c, §9.6.4 h).
  * @constant
  * @type {number}
  */

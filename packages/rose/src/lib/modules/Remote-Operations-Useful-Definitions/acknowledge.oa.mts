@@ -34,6 +34,8 @@ import {
  * @summary acknowledge
  * @description
  *
+ * Acknowledges receipt of the return of a (non-idempotent) invocation. Argument is that invocation's `InvokeId`. Result is `acknowledged` or `unknown`. Idempotent. Code `local:-3`. Must be included in every package that includes `probe` (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,8 @@ import { Code } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
  * @summary recode
  * @description
  *
+ * Copy of an operation identical except `&operationCode` is replaced by `code` (ITU-T Rec. X.880 (07/94) §10.11).
+ *
  * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:

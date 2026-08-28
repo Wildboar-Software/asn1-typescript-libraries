@@ -21,6 +21,8 @@ import { type REALIZATION } from '../Remote-Operations-Information-Objects-exten
  * @summary pData
  * @description
  *
+ * Transfer realization: each TRANSFER is a single P-DATA (concatenation prohibited). May also use A-ASSOCIATE/A-RELEASE user information. Requires a presentation connection and DCS covering the needed abstract syntaxes (ITU-T Rec. X.882 (07/94) §9.2). OID `{... transfer-realizations(11) pData-without-concatenation(0)}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

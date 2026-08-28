@@ -18,6 +18,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Code
  * @description
  *
+ * Identifier for an operation (`&operationCode`) or error (`&errorCode`): either a local `INTEGER` or a global `OBJECT IDENTIFIER` (ITU-T Rec. X.880 (07/94) §8.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

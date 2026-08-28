@@ -17,6 +17,8 @@ import { acknowledge } from '../Remote-Operations-Useful-Definitions/acknowledge
  * @summary ProbeAndAcknowledge
  * @description
  *
+ * `probe | acknowledge`. Include both in a package whenever `probe` is used (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

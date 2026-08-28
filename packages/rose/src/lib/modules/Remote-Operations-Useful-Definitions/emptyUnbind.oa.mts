@@ -23,6 +23,8 @@ import {
  * @summary emptyUnbind
  * @description
  *
+ * Default unbind when a connection package does not specify one: no argument, result, or error. Synchronous — cannot be invoked until any outstanding synchronous operation has returned (ITU-T Rec. X.880 (07/94) §10.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

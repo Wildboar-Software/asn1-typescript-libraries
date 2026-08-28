@@ -23,6 +23,8 @@ import {
  * @summary RealizationParameter
  * @description
  *
+ * Parameter of a `REALIZATION` object: whether it is an association or transfer service, and whether concatenation of PDVs is permitted (default `FALSE`) (ITU-T Rec. X.882 (07/94) §8.2.8, §9.2.7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +39,14 @@ export class RealizationParameter {
   constructor(
     /**
      * @summary `realization_type`.
+     * @description `association-service(0)` or `transfer-service(1)` (X.882 §8.2.8).
      * @public
      * @readonly
      */
     readonly realization_type: RealizationParameter_realization_type,
     /**
      * @summary `concatenation`.
+     * @description If `TRUE`, nearby TRANSFER PDVs may be concatenated (and, for P-DATA, combined with A-ASSOCIATE/A-RELEASE user information) (X.882 §9.2.6). Default `FALSE`.
      * @public
      * @readonly
      */

@@ -24,6 +24,8 @@ import {
  * @summary ROS_SupplierAS
  * @description
  *
+ * Abstract syntax from the **supplier** side: invoke supplier-performed operations and report consumer-performed ones (ITU-T Rec. X.880 (07/94) §10.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

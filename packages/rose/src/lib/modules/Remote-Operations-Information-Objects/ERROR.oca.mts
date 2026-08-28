@@ -26,6 +26,8 @@ import {
  * @summary ERROR
  * @description
  *
+ * Report of unsuccessful performance of an operation (ITU-T Rec. X.880 (07/94) §8.3). An error without `&errorCode` cannot be sent in a `ReturnError` PDU — typical for bind errors (X.880 §8.3.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -76,18 +78,22 @@ export interface ERROR<
   >;
   /**
    * @summary &ParameterType
+   * @description Data type of the error parameter. Omit if the error carries no parameter (X.880 §8.3.2).
    */
   readonly '&ParameterType': ParameterType;
   /**
    * @summary &parameterTypeOptional
+   * @description If `TRUE`, the parameter may be omitted from `ReturnError`. Present only when `&ParameterType` is present (X.880 §8.3.3).
    */
   readonly '&parameterTypeOptional'?: BOOLEAN;
   /**
    * @summary &ErrorPriority
+   * @description Permitted `Priority` values for transferring this error (X.880 §8.3.4, §8.9).
    */
   readonly '&ErrorPriority'?: Priority;
   /**
    * @summary &errorCode
+   * @description `Code` identifying this error in `ReturnError`. Unique among errors of a package. Needed except in special cases such as bind errors (X.880 §8.3.5).
    */
   readonly '&errorCode'?: Code;
 }

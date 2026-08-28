@@ -23,6 +23,8 @@ import {
  * @summary no_op
  * @description
  *
+ * Does nothing: idempotent and does not return. Code `local:-1` (ITU-T Rec. X.880 (07/94) §10.5; Amd.1 (11/95) §10.5.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

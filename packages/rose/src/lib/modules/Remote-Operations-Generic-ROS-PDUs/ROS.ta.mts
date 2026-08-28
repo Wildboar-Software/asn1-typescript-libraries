@@ -43,6 +43,8 @@ import {
  * @summary ROS
  * @description
  *
+ * Parameterized CHOICE of PDUs for invoking operations, returning results and errors, and rejecting invalid PDUs (ITU-T Rec. X.880 (07/94) §9.2). Parameters: `InvokeIdSet` (correlation ids; use `NoInvokeId` if correlation is provided by other means), `Invokable` (operations that may be invoked), `Returnable` (operations that may generate responses — those in `Invokable` whose `&alwaysReturns` is not `FALSE`). An unrecognized alternative yields `Reject` with `general-unrecognizedPDU` (X.880 §9.2.3). OSI ROSE does not use `noInvokeId` on invoke/result/error PDUs (X.880 §9.2.2 note 2; X.882 §10 uses `ROSEInvokeIds`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

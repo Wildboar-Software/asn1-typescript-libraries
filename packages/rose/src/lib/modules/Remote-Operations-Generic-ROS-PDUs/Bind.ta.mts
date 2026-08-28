@@ -15,6 +15,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Bind
  * @description
  *
+ * Parameterized PDUs for invoking a bind operation, returning its result, or reporting its error during association establishment (ITU-T Rec. X.880 (07/94) §9.11). Tags 16–18. In the ACSE realization these appear as user information of A-ASSOCIATE (X.882 §8.2.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

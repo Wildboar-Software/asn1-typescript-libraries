@@ -21,6 +21,8 @@ import {
  * @summary rtse_abstract_syntax
  * @description
  *
+ * RTSE APDU abstract syntax, listed in `&AbstractSyntaxes` when associations/transfer are realized by RTSE (ITU-T Rec. X.882 (07/94) Annex B, §8.3). OID `{joint-iso-itu-t reliable-transfer(3) apdus(0)}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,8 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 
-
+/**
+ * Parameterized error set `Errors{Operations}`: union of the `&Errors` fields of the given operations; used as the `ERROR` parameter of `ReturnError` (ITU-T Rec. X.880 (07/94) §9.10).
+ */
 
 /* eslint-enable */

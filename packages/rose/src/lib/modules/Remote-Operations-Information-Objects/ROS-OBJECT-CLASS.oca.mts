@@ -17,6 +17,8 @@ import { type CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT
  * @summary ROS_OBJECT_CLASS
  * @description
  *
+ * Capabilities of ROS-objects that interact under a particular set of association contracts (ITU-T Rec. X.880 (07/94) §8.7). `&id` is required (unlike most other ROS classes).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,22 +65,27 @@ export interface ROS_OBJECT_CLASS {
   >;
   /**
    * @summary &Is
+   * @description Superclasses; objects of this class support all contracts implied by those classes as well as those listed below (X.880 §8.7.2). Syntax: `IS`.
    */
   readonly '&Is'?: ROS_OBJECT_CLASS[];
   /**
    * @summary &Initiates
+   * @description Contracts for which objects of the class shall be capable of playing initiator (X.880 §8.7.4). Syntax: `INITIATES`.
    */
   readonly '&Initiates'?: CONTRACT[];
   /**
    * @summary &Responds
+   * @description Contracts for which objects of the class shall be capable of playing responder (X.880 §8.7.5). Syntax: `RESPONDS`.
    */
   readonly '&Responds'?: CONTRACT[];
   /**
    * @summary &InitiatesAndResponds
+   * @description Contracts for which objects of the class shall be capable of acting as both initiator and responder (X.880 §8.7.3). Syntax: `BOTH`.
    */
   readonly '&InitiatesAndResponds'?: CONTRACT[];
   /**
    * @summary &id
+   * @description Object identifier identifying this ROS-object class (required; X.880 §8.7.6).
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
 }

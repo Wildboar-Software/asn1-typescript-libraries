@@ -23,6 +23,8 @@ import { type ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary refuse
  * @description
  *
+ * Refusal of a request with no reason parameter. Used by `emptyBind` when association establishment is refused. Code `local:-1` (ITU-T Rec. X.880 (07/94) §10.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

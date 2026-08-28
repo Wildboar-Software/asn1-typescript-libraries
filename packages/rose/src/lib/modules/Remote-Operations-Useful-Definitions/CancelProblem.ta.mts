@@ -24,6 +24,8 @@ export enum _enum_for_CancelProblem {
  * @summary CancelProblem
  * @description
  *
+ * Why a `cancel` failed (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.10.2.1). Extensible (`...`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +41,7 @@ export type CancelProblem = _enum_for_CancelProblem | ENUMERATED;
 
 /**
  * @summary CancelProblem_unknownOperation
+ * @description Invocation never happened or has been forgotten (Amd.1 §10.10.2.1 a).
  * @constant
  * @type {number}
  */
@@ -47,6 +50,7 @@ export const CancelProblem_unknownOperation: CancelProblem = 0; /* LONG_NAMED_EN
 
 /**
  * @summary unknownOperation
+ * @description Invocation never happened or has been forgotten (Amd.1 §10.10.2.1 a).
  * @constant
  * @type {number}
  */
@@ -55,6 +59,7 @@ export const unknownOperation: CancelProblem = CancelProblem_unknownOperation; /
 
 /**
  * @summary CancelProblem_tooLate
+ * @description Operation already performed, or execution is past the point where cancellation is possible (Amd.1 §10.10.2.1 b).
  * @constant
  * @type {number}
  */
@@ -63,6 +68,7 @@ export const CancelProblem_tooLate: CancelProblem = 1; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary tooLate
+ * @description Operation already performed, or execution is past the point where cancellation is possible (Amd.1 §10.10.2.1 b).
  * @constant
  * @type {number}
  */
@@ -71,6 +77,7 @@ export const tooLate: CancelProblem = CancelProblem_tooLate; /* SHORT_NAMED_ENUM
 
 /**
  * @summary CancelProblem_operationNotCancellable
+ * @description Invoked operation does not include `cancelled` in `&Errors` (Amd.1 §10.10.2.1 c).
  * @constant
  * @type {number}
  */
@@ -79,6 +86,7 @@ export const CancelProblem_operationNotCancellable: CancelProblem = 2; /* LONG_N
 
 /**
  * @summary operationNotCancellable
+ * @description Invoked operation does not include `cancelled` in `&Errors` (Amd.1 §10.10.2.1 c).
  * @constant
  * @type {number}
  */

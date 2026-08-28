@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Priority
  * @description
  *
+ * Priority of transferring an invocation or its return relative to other invocations/returns between the same pair of ROS-objects. Lower value is higher priority (ITU-T Rec. X.880 (07/94) §8.9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

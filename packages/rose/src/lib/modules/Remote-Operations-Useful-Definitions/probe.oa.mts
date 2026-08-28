@@ -34,6 +34,8 @@ import {
  * @summary probe
  * @description
  *
+ * Enquires about the outcome of a previously invoked operation. Argument is that invocation's `InvokeId`. Result is `running`, `finished`, or `unknown` (never happened, or forgotten). Idempotent. Code `local:-2`. A result of `finished` causes retransmission of any return from that invocation unless the original operation was idempotent — so a performer of a non-idempotent operation must retain the response if `probe` is in the package (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,8 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AbortReason
  * @description
  *
+ * RTSE abort reason, used when ROSE is realized over RTSE (ITU-T Rec. X.882 (07/94) §8.3 maps ABORT to RT-U-ABORT / RT-P-ABORT). Named values come from the RTSE APDU module (ITU-T Rec. X.228).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,6 +39,7 @@ export type AbortReason = INTEGER;
 
 /**
  * @summary AbortReason_localSystemProblem
+ * @description Local system problem (X.228; used with ROSE's RTSE realization, X.882 §8.3).
  * @constant
  * @type {number}
  */
@@ -45,6 +48,7 @@ export const AbortReason_localSystemProblem: AbortReason = 0; /* LONG_NAMED_INTE
 
 /**
  * @summary AbortReason_localSystemProblem
+ * @description Local system problem (X.228; used with ROSE's RTSE realization, X.882 §8.3).
  * @constant
  * @type {number}
  */
@@ -53,6 +57,7 @@ export const localSystemProblem: AbortReason = AbortReason_localSystemProblem; /
 
 /**
  * @summary AbortReason_invalidParameter
+ * @description Invalid parameter; `reflectedParameter` is supplied.
  * @constant
  * @type {number}
  */
@@ -61,6 +66,7 @@ export const AbortReason_invalidParameter: AbortReason = 1; /* LONG_NAMED_INTEGE
 
 /**
  * @summary AbortReason_invalidParameter
+ * @description Invalid parameter; `reflectedParameter` is supplied.
  * @constant
  * @type {number}
  */
@@ -69,6 +75,7 @@ export const invalidParameter: AbortReason = AbortReason_invalidParameter; /* SH
 
 /**
  * @summary AbortReason_unrecognizedActivity
+ * @description Unrecognized activity.
  * @constant
  * @type {number}
  */
@@ -77,6 +84,7 @@ export const AbortReason_unrecognizedActivity: AbortReason = 2; /* LONG_NAMED_IN
 
 /**
  * @summary AbortReason_unrecognizedActivity
+ * @description Unrecognized activity.
  * @constant
  * @type {number}
  */
@@ -85,6 +93,7 @@ export const unrecognizedActivity: AbortReason = AbortReason_unrecognizedActivit
 
 /**
  * @summary AbortReason_temporaryProblem
+ * @description RTSE cannot accept a session for a period of time.
  * @constant
  * @type {number}
  */
@@ -93,6 +102,7 @@ export const AbortReason_temporaryProblem: AbortReason = 3; /* LONG_NAMED_INTEGE
 
 /**
  * @summary AbortReason_temporaryProblem
+ * @description RTSE cannot accept a session for a period of time.
  * @constant
  * @type {number}
  */
@@ -101,6 +111,7 @@ export const temporaryProblem: AbortReason = AbortReason_temporaryProblem; /* SH
 
 /**
  * @summary AbortReason_protocolError
+ * @description RTSE-level protocol error.
  * @constant
  * @type {number}
  */
@@ -109,6 +120,7 @@ export const AbortReason_protocolError: AbortReason = 4; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary AbortReason_protocolError
+ * @description RTSE-level protocol error.
  * @constant
  * @type {number}
  */
@@ -117,6 +129,7 @@ export const protocolError: AbortReason = AbortReason_protocolError; /* SHORT_NA
 
 /**
  * @summary AbortReason_permanentProblem
+ * @description Provider-abort, solely in normal mode.
  * @constant
  * @type {number}
  */
@@ -125,6 +138,7 @@ export const AbortReason_permanentProblem: AbortReason = 5; /* LONG_NAMED_INTEGE
 
 /**
  * @summary AbortReason_permanentProblem
+ * @description Provider-abort, solely in normal mode.
  * @constant
  * @type {number}
  */
@@ -133,6 +147,7 @@ export const permanentProblem: AbortReason = AbortReason_permanentProblem; /* SH
 
 /**
  * @summary AbortReason_userError
+ * @description User-abort, solely in normal mode.
  * @constant
  * @type {number}
  */
@@ -141,6 +156,7 @@ export const AbortReason_userError: AbortReason = 6; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary AbortReason_userError
+ * @description User-abort, solely in normal mode.
  * @constant
  * @type {number}
  */
@@ -149,6 +165,7 @@ export const userError: AbortReason = AbortReason_userError; /* SHORT_NAMED_INTE
 
 /**
  * @summary AbortReason_transferCompleted
+ * @description Transfer completed; the activity cannot be discarded.
  * @constant
  * @type {number}
  */
@@ -157,6 +174,7 @@ export const AbortReason_transferCompleted: AbortReason = 7; /* LONG_NAMED_INTEG
 
 /**
  * @summary AbortReason_transferCompleted
+ * @description Transfer completed; the activity cannot be discarded.
  * @constant
  * @type {number}
  */

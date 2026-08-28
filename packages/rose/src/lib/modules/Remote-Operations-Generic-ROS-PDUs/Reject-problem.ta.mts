@@ -35,6 +35,8 @@ import {
  * @summary Reject_problem
  * @description
  *
+ * `Reject.problem` CHOICE: structural (`general`), invoke-component, return-result, or return-error problems (ITU-T Rec. X.880 (07/94) §9.6.2 b). A `RejectProblem` identifier `α-β` is sent as `problem` `α:β` (X.880 §9.7.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

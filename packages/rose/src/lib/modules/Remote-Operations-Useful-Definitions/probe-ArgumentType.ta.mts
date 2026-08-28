@@ -20,6 +20,8 @@ import {
  * @summary probe_ArgumentType
  * @description
  *
+ * Argument of `probe`: `InvokeId` of the invocation being enquired about, tagged `[0]` (ITU-T Rec. X.880 (1994) Amd.1 (11/95) §10.6.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,6 +33,7 @@ export class probe_ArgumentType {
   constructor(
     /**
      * @summary `invokeId`.
+     * @description Invocation being enquired about (Amd.1 §10.6.2).
      * @public
      * @readonly
      */

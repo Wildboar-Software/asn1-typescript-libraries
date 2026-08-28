@@ -24,6 +24,8 @@ import {
  * @summary ROS_ConsumerAS
  * @description
  *
+ * OSI ROSE consumer-side abstract syntax: invoke consumer-performed operations and report supplier-performed ones, using `ROSEInvokeIds` (ITU-T Rec. X.882 (07/94) §10.5.2; X.880 §10.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

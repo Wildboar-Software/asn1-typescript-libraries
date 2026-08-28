@@ -25,6 +25,8 @@ import {
  * @summary ReturnResult_result
  * @description
  *
+ * Nested result of `ReturnResult`: `opcode` of the completed operation plus the result value (ITU-T Rec. X.880 (07/94) §9.4.1, §9.4.3 b–c). Omitted from `ReturnResult` when the operation has no `&ResultType`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +38,14 @@ export class ReturnResult_result {
   constructor(
     /**
      * @summary `opcode`.
+     * @description `&operationCode` of the operation identified by `invokeId` (X.880 §9.4.3 b).
      * @public
      * @readonly
      */
     readonly opcode: Code,
     /**
      * @summary `result`.
+     * @description Value of the operation's `&ResultType` (X.880 §9.4.3 c).
      * @public
      * @readonly
      */

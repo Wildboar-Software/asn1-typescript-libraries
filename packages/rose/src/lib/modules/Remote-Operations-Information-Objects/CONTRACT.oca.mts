@@ -19,6 +19,8 @@ import { type OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects
  * @summary CONTRACT
  * @description
  *
+ * Association contract: roles of a pair of ROS-objects that may establish an association, in terms of a connection package and operation packages (ITU-T Rec. X.880 (07/94) §8.6). In `WITH SYNTAX`, `RESPONDER CONSUMER OF` fills `&InitiatorSupplierOf` (initiator plays supplier when the responder is consumer).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -65,22 +67,27 @@ export interface CONTRACT {
   >;
   /**
    * @summary &connection
+   * @description If present, associations are established and released dynamically using this connection package's bind and unbind operations (X.880 §8.6.2).
    */
   readonly '&connection'?: CONNECTION_PACKAGE;
   /**
    * @summary &OperationsOf
+   * @description Packages applicable while the association exists that are symmetrical, or in which the initiator may play both consumer and supplier (X.880 §8.6.3). Syntax: `OPERATIONS OF`.
    */
   readonly '&OperationsOf'?: OPERATION_PACKAGE[];
   /**
    * @summary &InitiatorConsumerOf
+   * @description Packages in which the association initiator plays consumer (X.880 §8.6.4). Syntax: `INITIATOR CONSUMER OF`.
    */
   readonly '&InitiatorConsumerOf'?: OPERATION_PACKAGE[];
   /**
    * @summary &InitiatorSupplierOf
+   * @description Packages in which the association initiator plays supplier (X.880 §8.6.5). Syntax: `RESPONDER CONSUMER OF`.
    */
   readonly '&InitiatorSupplierOf'?: OPERATION_PACKAGE[];
   /**
    * @summary &id
+   * @description Object identifier for announcing or negotiating the contract. Without `&id` it cannot be announced or negotiated (X.880 §8.6.6).
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
 }

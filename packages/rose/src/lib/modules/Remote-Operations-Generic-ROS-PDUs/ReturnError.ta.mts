@@ -30,6 +30,8 @@ import {
  * @summary ReturnError
  * @description
  *
+ * PDU reporting unsuccessful performance of an operation (ITU-T Rec. X.880 (07/94) §9.5). `invokeId` must name an outstanding invocation that can return an error; `errcode` must be in that operation's `&Errors`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,18 +60,21 @@ export class ReturnError {
   constructor(
     /**
      * @summary `invokeId`.
+     * @description Invocation whose failure is being reported. Must be outstanding and of an operation that returns errors, else `returnError-unrecognizedInvocation` / `returnError-errorResponseUnexpected` (X.880 §9.5.3 a).
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId,
     /**
      * @summary `errcode`.
+     * @description `&errorCode` of the error. Must be in `Errors` and in the associated operation's `&Errors`, else `returnError-unrecognizedError` / `returnError-unexpectedError` (X.880 §9.5.3 b).
      * @public
      * @readonly
      */
     readonly errcode: Code,
     /**
      * @summary `parameter`.
+     * @description Parameter of the identified error. Present iff that error has `&ParameterType`; mismatch yields `returnError-mistypedParameter` (X.880 §9.5.3 c).
      * @public
      * @readonly
      */
