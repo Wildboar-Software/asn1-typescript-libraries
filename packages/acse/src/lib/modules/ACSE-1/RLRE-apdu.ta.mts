@@ -35,6 +35,15 @@ import {
  * @summary RLRE_apdu
  * @description
  *
+ * A-RELEASE-RESPONSE APDU (`[APPLICATION 3]`). Affirmative response
+ * releases the association (IA-UNBIND); negative keeps it Associated
+ * (STA5). The ASN.1 carries the Reason field, not a separate Result —
+ * `not-finished` is used when the acceptor is forced to release but
+ * has more to send/receive (classic: when Negotiated Release was not
+ * selected). ITU-T Rec. X.227 bis (1998)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.227bis-199809-I); ITU-T Rec.
+ * X.217 bis (1998) [§8.2](https://www.itu.int/rec/T-REC-X.217bis-199809-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,18 +64,36 @@ export class RLRE_apdu {
   constructor(
     /**
      * @summary `reason`.
+     * @description
+     *
+     * Why the acceptor accepted or rejected release: `normal` (0),
+     * `not-finished` (1), or `user-defined` (30). ITU-T Rec.
+     * X.217 bis (1998) §8.2.1.1; X.227 bis (1998) §7.2.5.1.
+     *
      * @public
      * @readonly
      */
     readonly reason?: OPTIONAL<Release_response_reason>,
     /**
      * @summary `aso_qualifier`.
+     * @description
+     *
+     * Distinguishes APDUs for different child ASOs under a parent.
+     * Conditional. Higher Level Association FU. ITU-T Rec. X.227 bis
+     * (1998) §7.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `asoi_identifier`.
+     * @description
+     *
+     * Distinguishes concurrent instances of the same ASO. Conditional.
+     * Higher Level Association FU. ITU-T Rec. X.227 bis (1998) §7.2.4.4
+     * (same use as on RLRQ).
+     *
      * @public
      * @readonly
      */
@@ -79,6 +106,12 @@ export class RLRE_apdu {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_information`.
+     * @description
+     *
+     * Optional user information; meaning depends on the ASO-context in
+     * effect. ITU-T Rec. X.217 bis (1998) §8.2.1.2; X.227 bis (1998)
+     * §7.2.5.2.
+     *
      * @public
      * @readonly
      */

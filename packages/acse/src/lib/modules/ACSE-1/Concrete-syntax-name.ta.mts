@@ -19,6 +19,10 @@ import {
  * @summary Concrete_syntax_name
  * @description
  *
+ * Alias of `Transfer-syntax-name`. Used on the presentation context
+ * result list for the transfer syntax actually selected. ITU-T Rec.
+ * X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

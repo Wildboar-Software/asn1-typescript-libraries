@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Implementation_data
  * @description
  *
+ * Implementation-specific ACPM information. Not used in negotiation;
+ * any use depends on common understanding between the two ACPMs.
+ * ITU-T Rec. X.227 bis (1998) §7.1.4.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

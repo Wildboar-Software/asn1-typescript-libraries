@@ -30,6 +30,9 @@ import {
  * @summary P_context_result_list_Item
  * @description
  *
+ * Result for one proposed presentation context. See ITU-T Rec. X.216 |
+ * ISO/IEC 8822. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +44,31 @@ export class P_context_result_list_Item {
   constructor(
     /**
      * @summary `result`.
+     * @description
+     *
+     * Acceptance or user/provider rejection of this proposed context.
+     *
      * @public
      * @readonly
      */
     readonly result: Result,
     /**
      * @summary `concrete_syntax_name`.
+     * @description
+     *
+     * Transfer syntax selected when `result` is `acceptance`.
+     *
      * @public
      * @readonly
      */
     readonly concrete_syntax_name?: OPTIONAL<Concrete_syntax_name>,
     /**
      * @summary `provider_reason`.
+     * @description
+     *
+     * Why the provider rejected this context, if `result` is
+     * `provider-rejection`.
+     *
      * @public
      * @readonly
      */

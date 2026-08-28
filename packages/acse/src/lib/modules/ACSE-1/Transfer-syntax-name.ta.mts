@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Transfer_syntax_name
  * @description
  *
+ * OBJECT IDENTIFIER of a transfer syntax. See ITU-T Rec. X.216 |
+ * ISO/IEC 8822. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

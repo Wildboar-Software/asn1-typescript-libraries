@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AP_title_form4
  * @description
  *
+ * RELATIVE-OID AP-title. Not listed in the 1998 printed X.227 bis
+ * `AP-title` CHOICE (form1–form3 only); present here as a later
+ * extension addition. Those specifications do not assign further
+ * semantics.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

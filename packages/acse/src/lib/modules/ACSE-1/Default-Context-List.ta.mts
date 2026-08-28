@@ -19,6 +19,12 @@ import {
  * @summary Default_Context_List
  * @description
  *
+ * Default presentation context list (abstract syntax optional; transfer
+ * syntax required). Corresponds to Default Context Name on A-ASSOCIATE
+ * (X.216), limited to a single presentation-context name in the
+ * service. ITU-T Rec. X.217 bis (1998) §8.1.1.24; X.227 bis (1998)
+ * §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ABRT_source
  * @description
  *
+ * Who initiated A-ABORT: `acse-service-user` (0) or
+ * `acse-service-provider` (1). Assigned by the sending ACPM. ITU-T
+ * Rec. X.217 bis (1998) §8.3.1.1; X.227 bis (1998) §7.3.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

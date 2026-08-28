@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Release_request_reason
  * @description
  *
+ * A-RELEASE request urgency: `normal` (0), `urgent` (1),
+ * `user-defined` (30). Example: `urgent` when session Negotiated
+ * Release was selected and the requestor wants immediate release.
+ * ITU-T Rec. X.217 (1995) §9.2.1.1; X.217 bis (1998) §8.2.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

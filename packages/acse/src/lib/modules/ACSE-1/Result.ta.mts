@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Result
  * @description
  *
+ * Per-context presentation result: `acceptance` (0), `user-rejection`
+ * (1), `provider-rejection` (2). Distinct from `Associate-result`.
+ * See ITU-T Rec. X.216 | ISO/IEC 8822. ITU-T Rec. X.227 bis (1998)
+ * §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

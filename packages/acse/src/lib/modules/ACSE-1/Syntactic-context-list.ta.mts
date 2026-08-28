@@ -24,6 +24,11 @@ import {
  * @summary Syntactic_context_list
  * @description
  *
+ * Either a full `context-list` or a `default-contact-list` (ASN.1 name
+ * in X.227 bis §9.1; that is the Default Context List). Used as
+ * presentation context definition list on AARQ/ACRQ. ITU-T Rec.
+ * X.227 bis (1998) §7.1.4.19, §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

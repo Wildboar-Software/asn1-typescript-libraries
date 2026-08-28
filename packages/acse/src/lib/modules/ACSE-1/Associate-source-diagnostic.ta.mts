@@ -28,6 +28,14 @@ import {
  * @summary Associate_source_diagnostic
  * @description
  *
+ * Combined Result source and Diagnostic on AARE. Choice alternative is
+ * the source (`acse-service-user` vs `acse-service-provider`); the
+ * INTEGER is the Diagnostic. Independent of Result. If Result is
+ * `accepted`, source is always ACSE service-user. Supporting
+ * service-provider rejection is signalled on the confirm without this
+ * field. ITU-T Rec. X.217 bis (1998) §8.1.1.17–8.1.1.18; X.227 bis
+ * (1998) §7.1.5.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

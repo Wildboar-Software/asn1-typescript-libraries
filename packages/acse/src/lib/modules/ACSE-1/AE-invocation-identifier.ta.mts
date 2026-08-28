@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AE_invocation_identifier
  * @description
  *
+ * Distinguishes an application-entity invocation (classic ACSE).
+ * ITU-T Rec. X.217 (1995) §9.1.1.6, §9.1.1.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

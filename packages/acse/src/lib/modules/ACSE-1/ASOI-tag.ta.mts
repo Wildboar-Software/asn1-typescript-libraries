@@ -19,6 +19,14 @@ import {
  * @summary ASOI_tag
  * @description
  *
+ * Sequence (SIZE 0..7, ...) of (ASO-qualifier, ASOI-identifier) pairs
+ * identifying an ASO-invocation. Either component of a pair may be
+ * absent. Shall include enough fields to disambiguate the ASOI in its
+ * ASO structure. Nested associations encode only the last element on
+ * AE-qualifier fields; earlier elements are implicit in the nesting
+ * association. ITU-T Rec. X.217 bis (1998) §8.1.1.5; X.227 bis (1998)
+ * §7.1.4.5, §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

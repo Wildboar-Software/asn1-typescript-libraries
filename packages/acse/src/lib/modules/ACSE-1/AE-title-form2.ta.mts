@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AE_title_form2
  * @description
  *
+ * OBJECT IDENTIFIER AE-title. Formed from AP-title-form2 and
+ * AE-qualifier-form2 as in X.665 | ISO/IEC 9834-6. ITU-T Rec.
+ * X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

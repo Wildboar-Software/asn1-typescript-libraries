@@ -16,6 +16,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Associate_source_diagnostic_acse_service_user
  * @description
  *
+ * Diagnostic when Result source is ACSE service-user: `null` (0, ACPM
+ * fills this if the response omitted Diagnostic), `no-reason-given`
+ * (1), `application-context-name-not-supported` (2), calling/called
+ * AP-title, AP-invocation-identifier, AE-qualifier, and
+ * AE-invocation-identifier not-recognized (3–10), and authentication
+ * mechanism-name not-recognized / required, authentication-failure,
+ * authentication-required (11–14). ITU-T Rec. X.217 (1995) §9.1.1.21;
+ * X.217 bis (1998) §8.1.1.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

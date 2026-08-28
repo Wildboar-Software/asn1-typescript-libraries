@@ -1,6 +1,10 @@
 /**
- * ASN.1 data structures for Association Control Service Element (ACSE) as
- * defined in ITU-T Recommendation X.227 and X.227bis.
+ * ASN.1 data structures for Association Control Service Element (ACSE)
+ * as defined in ITU-T Recommendation X.227 bis (1998) | ISO/IEC 15954
+ * (connection-mode protocol for ASO-association control) and ITU-T
+ * Recommendation X.217 bis (1998) | ISO/IEC 15953 (service definition).
+ * Classic AE-association ACSE is ITU-T Rec. X.227 (1995) | ISO/IEC
+ * 8650-1 and X.217 (1995) | ISO/IEC 8649.
  * 
  * @example
  * ```typescript

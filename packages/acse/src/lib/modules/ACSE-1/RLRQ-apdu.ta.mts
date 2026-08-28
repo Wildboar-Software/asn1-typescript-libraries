@@ -35,6 +35,17 @@ import {
  * @summary RLRQ_apdu
  * @description
  *
+ * A-RELEASE-REQUEST APDU (`[APPLICATION 2]`). Confirmed normal release.
+ * After sending, the requestor waits for RLRE and accepts only A-ABORT
+ * from its user. Mapped to IA-RELEASE-REQUEST user information.
+ * Collision (both sides send RLRQ) is resolved by association-initiator
+ * vs association-responder roles; can occur only if no session tokens
+ * were selected. ITU-T Rec. X.227 bis (1998)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.227bis-199809-I); ITU-T Rec.
+ * X.217 bis (1998) [§8.2](https://www.itu.int/rec/T-REC-X.217bis-199809-I).
+ * Classic: X.217 (1995) §9.2 (negative response only if session
+ * Negotiated Release was selected).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,18 +66,37 @@ export class RLRQ_apdu {
   constructor(
     /**
      * @summary `reason`.
+     * @description
+     *
+     * Urgency of the release request: `normal` (0), `urgent` (1), or
+     * `user-defined` (30). ITU-T Rec. X.217 bis (1998) §8.2.1.1;
+     * X.227 bis (1998) §7.2.4.1.
+     *
      * @public
      * @readonly
      */
     readonly reason?: OPTIONAL<Release_request_reason>,
     /**
      * @summary `aso_qualifier`.
+     * @description
+     *
+     * Distinguishes APDUs for different child ASOs under a parent
+     * (analogous to a protocol-id). Conditional: required only if
+     * multiple child ASOs exist. Higher Level Association FU.
+     * ITU-T Rec. X.227 bis (1998) §7.2.4.3.
+     *
      * @public
      * @readonly
      */
     readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `asoi_identifier`.
+     * @description
+     *
+     * Distinguishes concurrent instances of the same ASO. Conditional:
+     * required only if multiple instances are active. Higher Level
+     * Association FU. ITU-T Rec. X.227 bis (1998) §7.2.4.4.
+     *
      * @public
      * @readonly
      */
@@ -79,6 +109,12 @@ export class RLRQ_apdu {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_information`.
+     * @description
+     *
+     * Optional user information; meaning depends on the ASO-context in
+     * effect. ITU-T Rec. X.217 bis (1998) §8.2.1.2; X.227 bis (1998)
+     * §7.2.4.2.
+     *
      * @public
      * @readonly
      */

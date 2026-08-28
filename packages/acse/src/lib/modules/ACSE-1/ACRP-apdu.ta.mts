@@ -40,6 +40,13 @@ import {
  * @summary ACRP_apdu
  * @description
  *
+ * A-ALTER-CONTEXT-RESPONSE APDU (`[APPLICATION 7]`). If refused, the
+ * previous contexts remain; if accepted, the new context is in place.
+ * Rejected context changes discard ACRQ user-information. ITU-T Rec.
+ * X.227 bis (1998)
+ * [§7.5](https://www.itu.int/rec/T-REC-X.227bis-199809-I); ITU-T Rec.
+ * X.217 bis (1998) [§8.6](https://www.itu.int/rec/T-REC-X.217bis-199809-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,24 +66,45 @@ export class ACRP_apdu {
   constructor(
     /**
      * @summary `aso_qualifier`.
+     * @description
+     *
+     * Distinguishes child ASOs. Conditional. ITU-T Rec. X.227 bis
+     * (1998) §7.5.6.1.
+     *
      * @public
      * @readonly
      */
     readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `asoi_identifier`.
+     * @description
+     *
+     * Distinguishes concurrent ASO instances. Conditional. ITU-T Rec.
+     * X.227 bis (1998) §7.5.6.2.
+     *
      * @public
      * @readonly
      */
     readonly asoi_identifier?: OPTIONAL<ASOI_identifier>,
     /**
      * @summary `aSO_context_name`.
+     * @description
+     *
+     * ASO-context the acceptor returns (same or a refusal). Despite the
+     * field name, the ACSE-1 ASN.1 types this as `ASO-context-name-list`.
+     * ITU-T Rec. X.227 bis (1998) §7.5.6.3, §9.1.
+     *
      * @public
      * @readonly
      */
     readonly aSO_context_name?: OPTIONAL<ASO_context_name_list>,
     /**
      * @summary `p_context_result_list`.
+     * @description
+     *
+     * Presentation context result list (ITU-T Rec. X.216 | ISO/IEC 8822).
+     * ITU-T Rec. X.227 bis (1998) §7.5.6.4.
+     *
      * @public
      * @readonly
      */
@@ -89,6 +117,11 @@ export class ACRP_apdu {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_information`.
+     * @description
+     *
+     * Optional; interpreted in the contexts this response specifies.
+     * ITU-T Rec. X.217 bis (1998) §8.6.1.5; X.227 bis (1998) §7.5.6.5.
+     *
      * @public
      * @readonly
      */

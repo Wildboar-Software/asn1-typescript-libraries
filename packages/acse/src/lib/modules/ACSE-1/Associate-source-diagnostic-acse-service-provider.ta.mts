@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Associate_source_diagnostic_acse_service_provider
  * @description
  *
+ * Diagnostic when Result source is ACSE service-provider: `null` (0),
+ * `no-reason-given` (1), `no-common-acse-version` (2). The last is
+ * used when the ACPM rejects an AARQ for lack of a shared protocol
+ * version (no A-ASSOCIATE indication). ITU-T Rec. X.217 bis (1998)
+ * §8.1.1.18; X.227 bis (1998) §7.1.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,14 @@ export enum _enum_for_ABRT_diagnostic {
  * @summary ABRT_diagnostic
  * @description
  *
+ * A-ABORT Diagnostic (Authentication FU; omit if only Kernel).
+ * `no-reason-given` (1), `protocol-error` (2),
+ * `authentication-mechanism-name-not-recognized` (3),
+ * `authentication-mechanism-name-required` (4),
+ * `authentication-failure` (5), `authentication-required` (6). Annex B
+ * password mechanism uses 3, 4, and 5. ITU-T Rec. X.217 (1995)
+ * §9.3.1.2; X.227 bis (1998) Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

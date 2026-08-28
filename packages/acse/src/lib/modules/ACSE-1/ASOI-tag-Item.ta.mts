@@ -25,6 +25,9 @@ import {
  * @summary ASOI_tag_Item
  * @description
  *
+ * One (ASO-qualifier, ASOI-identifier) element of an `ASOI-tag`.
+ * Either or both may be absent. ITU-T Rec. X.217 bis (1998) §8.1.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +39,20 @@ export class ASOI_tag_Item {
   constructor(
     /**
      * @summary `qualifier`.
+     * @description
+     *
+     * ASO-qualifier of this path element (child ASO under its parent).
+     *
      * @public
      * @readonly
      */
     readonly qualifier?: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `identifier`.
+     * @description
+     *
+     * ASO-invocation identifier of this path element (INTEGER 1..128).
+     *
      * @public
      * @readonly
      */

@@ -16,6 +16,10 @@ import {
  * @summary aCSE_id
  * @description
  *
+ * May be used to identify the Association Control ASE.
+ * `{ joint-iso-itu-t association-control(2) ase-id(3) acse-ase(1) version(1) }`.
+ * ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

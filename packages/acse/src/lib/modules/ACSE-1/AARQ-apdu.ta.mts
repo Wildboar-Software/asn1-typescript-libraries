@@ -87,6 +87,15 @@ import {
  * @summary AARQ_apdu
  * @description
  *
+ * A-ASSOCIATE-REQUEST APDU (`[APPLICATION 0]`). Confirmed association
+ * establishment from the requestor: the ACPM builds this from the
+ * A-ASSOCIATE request and maps it to IA-BIND-REQUEST user information
+ * (typically P-CONNECT User data). ITU-T Rec. X.227 bis (1998)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.227bis-199809-I); ITU-T Rec.
+ * X.217 bis (1998) [§8.1](https://www.itu.int/rec/T-REC-X.217bis-199809-I).
+ * Classic AE-association ACSE is ITU-T Rec. X.227 (1995) §7.1 /
+ * X.217 (1995) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -128,108 +137,237 @@ export class AARQ_apdu {
   constructor(
     /**
      * @summary `protocol_version`.
+     * @description
+     *
+     * Bit string of versions this ACPM supports; bit 0 is version 1.
+     * Trailing bits above the highest supported version are omitted
+     * (last bit is 1). Acceptor ignores bits above versions it supports.
+     * Default `{version1}`. ITU-T Rec. X.227 bis (1998) §7.1.4.1.
+     *
      * @public
      * @readonly
      */
     readonly protocol_version: OPTIONAL<AARQ_apdu_protocol_version>,
     /**
      * @summary `aSO_context_name`.
+     * @description
+     *
+     * Single ASO-context the initiator proposes (role of the association
+     * and CFs of the communicating ASOs). If ASO-context negotiation is
+     * selected, the acceptor must return a name from this field or from
+     * `aSO-context-name-list`. ITU-T Rec. X.217 bis (1998) §8.1.1.1;
+     * X.227 bis (1998) §7.1.4.2. The service text calls this optional for
+     * older ACSE; this ASN.1 makes it mandatory.
+     *
      * @public
      * @readonly
      */
     readonly aSO_context_name: ASO_context_name,
     /**
      * @summary `called_AP_title`.
+     * @description
+     *
+     * Application-process that contains the intended acceptor.
+     * ITU-T Rec. X.217 bis (1998) §8.1.1.6; X.227 bis (1998) §7.1.4.8.
+     * If present with `called-AE-qualifier`, both shall use the same form
+     * so an AE-title can be built (X.665 | ISO/IEC 9834-6).
+     *
      * @public
      * @readonly
      */
     readonly called_AP_title?: OPTIONAL<AP_title>,
     /**
      * @summary `called_AE_qualifier`.
+     * @description
+     *
+     * Classic ACSE: particular AE of the called AP (ITU-T Rec. X.217
+     * (1995) §9.1.1.8). For nested associations, taken from the
+     * ASO-qualifier of the last Called ASOI-tag element; for a
+     * non-nested request with a one-element Called ASOI-tag, from that
+     * element's ASO-qualifier; otherwise absent. ITU-T Rec. X.227 bis
+     * (1998) §7.1.4.9.
+     *
      * @public
      * @readonly
      */
     readonly called_AE_qualifier?: OPTIONAL<AE_qualifier>,
     /**
      * @summary `called_AP_invocation_identifier`.
+     * @description
+     *
+     * AP invocation that contains the intended acceptor.
+     * ITU-T Rec. X.217 bis (1998) §8.1.1.7; X.227 bis (1998) §7.1.4.10.
+     *
      * @public
      * @readonly
      */
     readonly called_AP_invocation_identifier?: OPTIONAL<AP_invocation_identifier>,
     /**
      * @summary `called_AE_invocation_identifier`.
+     * @description
+     *
+     * AE invocation that contains the intended acceptor (ITU-T Rec. X.217
+     * (1995) §9.1.1.10). Nested mapping is specified under ITU-T Rec.
+     * X.227 bis (1998) §7.1.4.11; the printed 7.1.4.11.1 text repeats
+     * the Called AE-qualifier rules of §7.1.4.9.1 rather than stating a
+     * distinct invocation-identifier rule.
+     *
      * @public
      * @readonly
      */
     readonly called_AE_invocation_identifier?: OPTIONAL<AE_invocation_identifier>,
     /**
      * @summary `calling_AP_title`.
+     * @description
+     *
+     * Application-process that contains the requestor.
+     * ITU-T Rec. X.217 bis (1998) §8.1.1.3; X.227 bis (1998) §7.1.4.4.
+     *
      * @public
      * @readonly
      */
     readonly calling_AP_title?: OPTIONAL<AP_title>,
     /**
      * @summary `calling_AE_qualifier`.
+     * @description
+     *
+     * Classic ACSE: particular AE of the calling AP (ITU-T Rec. X.217
+     * (1995) §9.1.1.4). Nested mapping uses the ASOI-identifier of the
+     * last Calling ASOI-tag element (or the sole element if not nested).
+     * ITU-T Rec. X.227 bis (1998) §7.1.4.5.
+     *
      * @public
      * @readonly
      */
     readonly calling_AE_qualifier?: OPTIONAL<AE_qualifier>,
     /**
      * @summary `calling_AP_invocation_identifier`.
+     * @description
+     *
+     * AP invocation that contains the requestor.
+     * ITU-T Rec. X.217 bis (1998) §8.1.1.4; X.227 bis (1998) §7.1.4.6.
+     *
      * @public
      * @readonly
      */
     readonly calling_AP_invocation_identifier?: OPTIONAL<AP_invocation_identifier>,
     /**
      * @summary `calling_AE_invocation_identifier`.
+     * @description
+     *
+     * AE invocation that contains the requestor (ITU-T Rec. X.217 (1995)
+     * §9.1.1.6). ITU-T Rec. X.227 bis (1998) §7.1.4.7.
+     *
      * @public
      * @readonly
      */
     readonly calling_AE_invocation_identifier?: OPTIONAL<AE_invocation_identifier>,
     /**
      * @summary `sender_acse_requirements`.
+     * @description
+     *
+     * Functional units requested. Absent ⇒ Kernel only. Shall not be
+     * present if only Kernel is used. Authentication, ASO-context
+     * negotiation, Higher Level Association, and Nested Association
+     * must be requested here and accepted on the AARE. The ACPM strips
+     * units it does not support before the indication. ITU-T Rec.
+     * X.217 bis (1998) §8.1.1.12; X.227 bis (1998) §6.2, §7.1.4.12.
+     *
      * @public
      * @readonly
      */
     readonly sender_acse_requirements?: OPTIONAL<ACSE_requirements>,
     /**
      * @summary `mechanism_name`.
+     * @description
+     *
+     * Authentication-mechanism in use. Present only if Authentication
+     * FU is selected. If omitted, the mechanism is known by prior
+     * agreement. Password mechanism OID is
+     * `{joint-iso-ccitt association-control(2) authentication-mechanism(3) password-1(1)}`
+     * (X.227 bis Annex B). ITU-T Rec. X.217 bis (1998) §8.1.1.13;
+     * X.227 bis (1998) §7.1.4.13.
+     *
      * @public
      * @readonly
      */
     readonly mechanism_name?: OPTIONAL<Mechanism_name>,
     /**
      * @summary `calling_authentication_value`.
+     * @description
+     *
+     * Authentication-value from the requestor's authentication-function;
+     * opaque to the ACPM. Present only if Authentication FU is selected.
+     * Syntax is mechanism-defined (`charstring` for Annex B password).
+     * ITU-T Rec. X.217 bis (1998) §6.2.1.4, §8.1.1.14; X.227 bis (1998)
+     * §7.1.4.14.
+     *
      * @public
      * @readonly
      */
     readonly calling_authentication_value?: OPTIONAL<Authentication_value>,
     /**
      * @summary `aSO_context_name_list`.
+     * @description
+     *
+     * Alternate ASO-contexts the initiator can support. Present only if
+     * ASO-context negotiation FU is selected. On a successful associate
+     * the acceptor omits this; on rejection it may list contexts it
+     * could have supported. The selected `aSO-context-name` need not
+     * appear in this list. ITU-T Rec. X.217 bis (1998) §8.1.1.2;
+     * X.227 bis (1998) §7.1.4.3.
+     *
      * @public
      * @readonly
      */
     readonly aSO_context_name_list?: OPTIONAL<ASO_context_name_list>,
     /**
      * @summary `implementation_information`.
+     * @description
+     *
+     * Implementation-specific ACPM data. Not used in negotiation; use
+     * depends on common understanding between ACPMs. ITU-T Rec.
+     * X.227 bis (1998) §7.1.4.15.
+     *
      * @public
      * @readonly
      */
     readonly implementation_information?: OPTIONAL<Implementation_data>,
     /**
      * @summary `p_context_definition_list`.
+     * @description
+     *
+     * Higher Level Association FU: presentation context definition list
+     * as in ITU-T Rec. X.226 | ISO/IEC 8823-1 (also X.216). ITU-T Rec.
+     * X.227 bis (1998) §7.1.4.19.
+     *
      * @public
      * @readonly
      */
     readonly p_context_definition_list?: OPTIONAL<Syntactic_context_list>,
     /**
      * @summary `called_asoi_tag`.
+     * @description
+     *
+     * Sequence of (ASO-qualifier, ASOI-identifier) pairs identifying the
+     * ASO-invocation that should accept. Present when Higher Level
+     * Association is proposed. Shall disambiguate the ASOI in its ASO
+     * structure. ITU-T Rec. X.217 bis (1998) §8.1.1.8; X.227 bis (1998)
+     * §7.1.4.17.
+     *
      * @public
      * @readonly
      */
     readonly called_asoi_tag?: OPTIONAL<ASOI_tag>,
     /**
      * @summary `calling_asoi_tag`.
+     * @description
+     *
+     * Sequence of (ASO-qualifier, ASOI-identifier) pairs identifying the
+     * requesting ASO-invocation. Present when Higher Level Association
+     * is proposed. ITU-T Rec. X.217 bis (1998) §8.1.1.5; X.227 bis
+     * (1998) §7.1.4.18.
+     *
      * @public
      * @readonly
      */
@@ -242,6 +380,13 @@ export class AARQ_apdu {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_information`.
+     * @description
+     *
+     * Transparent SDU of the protocol using ACSE; meaning is defined by
+     * the accompanying ASO-context (typically initialization of other
+     * ASEs). May contain several pieces, one per proposed context.
+     * ITU-T Rec. X.217 bis (1998) §8.1.1.15; X.227 bis (1998) §7.1.4.16.
+     *
      * @public
      * @readonly
      */

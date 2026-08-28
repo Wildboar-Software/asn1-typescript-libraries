@@ -19,6 +19,10 @@ import {
  * @summary Context_list
  * @description
  *
+ * Proposed presentation contexts: PCI, abstract syntax, and one or
+ * more transfer syntaxes. See ITU-T Rec. X.216 | ISO/IEC 8822.
+ * ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

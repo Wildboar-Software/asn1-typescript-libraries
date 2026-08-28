@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Mechanism_name
  * @description
  *
+ * OBJECT IDENTIFIER of the authentication-mechanism (or of a more
+ * general security ASE). If absent, the mechanism is known by prior
+ * agreement. Registration: ITU-T Rec. X.227 bis (1998) §12. Annex B
+ * password: `{ joint-iso-ccitt association-control(2) authentication-mechanism(3) password-1(1) }`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

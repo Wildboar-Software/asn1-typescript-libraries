@@ -25,6 +25,9 @@ import {
  * @summary Default_Context_List_Item
  * @description
  *
+ * One default presentation context: optional abstract syntax and
+ * required transfer syntax. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +39,20 @@ export class Default_Context_List_Item {
   constructor(
     /**
      * @summary `abstract_syntax_name`.
+     * @description
+     *
+     * Abstract syntax of this default context, if named.
+     *
      * @public
      * @readonly
      */
     readonly abstract_syntax_name: OPTIONAL<Abstract_syntax_name>,
     /**
      * @summary `transfer_syntax_name`.
+     * @description
+     *
+     * Transfer syntax of this default context.
+     *
      * @public
      * @readonly
      */

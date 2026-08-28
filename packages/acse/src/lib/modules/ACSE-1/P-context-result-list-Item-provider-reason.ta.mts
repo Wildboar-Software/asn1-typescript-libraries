@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary P_context_result_list_Item_provider_reason
  * @description
  *
+ * Why the provider rejected a proposed presentation context:
+ * `reason-not-specified` (0), `abstract-syntax-not-supported` (1),
+ * `proposed-transfer-syntaxes-not-supported` (2),
+ * `local-limit-on-DCS-exceeded` (3). See ITU-T Rec. X.216 |
+ * ISO/IEC 8822. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

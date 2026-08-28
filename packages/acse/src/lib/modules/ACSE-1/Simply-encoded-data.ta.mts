@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Simply_encoded_data
  * @description
  *
+ * Presentation simply-encoded user data (OCTET STRING). See ITU-T Rec.
+ * X.226 | ISO/IEC 8823-1. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

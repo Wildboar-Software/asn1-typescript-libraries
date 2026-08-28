@@ -24,6 +24,13 @@ import {
  * @summary AE_title
  * @description
  *
+ * Application-entity title = AP-title + AE-qualifier (ITU-T Rec.
+ * X.650 | ISO/IEC 7498-3). ACSE transfers the components separately;
+ * this type is for standards that need a single syntactic structure.
+ * Form1 is the Directory Name (built from AP-title-form1 +
+ * AE-qualifier-form1); form2 is an OBJECT IDENTIFIER (see X.665 |
+ * ISO/IEC 9834-6). ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

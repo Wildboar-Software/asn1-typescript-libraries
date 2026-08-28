@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Association_data
  * @description
  *
+ * User information carried as `SEQUENCE SIZE (1, ..., 0 | 2..MAX) OF EXTERNAL`.
+ * Transparent to ACSE; meaning is defined by the ASO-context (e.g.
+ * initialization of other ASEs). ITU-T Rec. X.217 bis (1998) §8.1.1.15;
+ * X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -30,6 +30,14 @@ import {
  * @summary A_DT_apdu
  * @description
  *
+ * A-DATA APDU (`[APPLICATION 5]`). Non-confirmed transparent data on
+ * an established ASO-association (Higher Level Association FU). The
+ * ACPM demultiplexes with `aso-qualifier` (child ASO) and
+ * `asoi-identifier` (instance). Does not interpret `a-user-data`.
+ * ITU-T Rec. X.227 bis (1998)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.227bis-199809-I); ITU-T Rec.
+ * X.217 bis (1998) [§8.5](https://www.itu.int/rec/T-REC-X.217bis-199809-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,12 +55,22 @@ export class A_DT_apdu {
   constructor(
     /**
      * @summary `aso_qualifier`.
+     * @description
+     *
+     * Child ASO to which this APDU is delivered. Conditional: omit if
+     * there is only one child ASO. ITU-T Rec. X.227 bis (1998) §7.4.4.1.
+     *
      * @public
      * @readonly
      */
     readonly aso_qualifier: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `asoi_identifier`.
+     * @description
+     *
+     * Which concurrent instance of that ASO. Conditional: omit if only
+     * one instance is active. ITU-T Rec. X.227 bis (1998) §7.4.4.2.
+     *
      * @public
      * @readonly
      */
@@ -65,6 +83,12 @@ export class A_DT_apdu {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `a_user_data`.
+     * @description
+     *
+     * Mandatory user data; meaning only to the ASO on which the
+     * association terminates. ITU-T Rec. X.217 bis (1998) §8.5.1.1;
+     * X.227 bis (1998) §7.4.4.3.
+     *
      * @public
      * @readonly
      */

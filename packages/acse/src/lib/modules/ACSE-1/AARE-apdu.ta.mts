@@ -97,6 +97,14 @@ import {
  * @summary AARE_apdu
  * @description
  *
+ * A-ASSOCIATE-RESPONSE APDU (`[APPLICATION 1]`). Confirmed association
+ * reply: acceptor (or ACPM, if the AARQ is rejected before indication)
+ * maps this to IA-BIND-RESPONSE user information. `result` =
+ * `accepted` ⇒ Associated (STA5); otherwise the association is not
+ * established. ITU-T Rec. X.227 bis (1998)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.227bis-199809-I); ITU-T Rec.
+ * X.217 bis (1998) [§8.1](https://www.itu.int/rec/T-REC-X.217bis-199809-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -139,96 +147,196 @@ export class AARE_apdu {
   constructor(
     /**
      * @summary `protocol_version`.
+     * @description
+     *
+     * If accepted: exactly one bit set — the version selected from the
+     * AARQ proposal. If rejected: versions this ACPM could have
+     * supported (use on the initiator is a local option). ITU-T Rec.
+     * X.227 bis (1998) §7.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly protocol_version: OPTIONAL<AARE_apdu_protocol_version>,
     /**
      * @summary `aSO_context_name`.
+     * @description
+     *
+     * ASO-context the acceptor selects. Without negotiation FU, any
+     * value may be returned (user-specific limited negotiation; initiator
+     * may A-ABORT if it cannot operate in that context). With
+     * negotiation FU, must be a name from the indication's
+     * `aSO-context-name` or `aSO-context-name-list`. ITU-T Rec.
+     * X.217 bis (1998) §8.1.1.1; X.227 bis (1998) §7.1.5.2.
+     *
      * @public
      * @readonly
      */
     readonly aSO_context_name: ASO_context_name,
     /**
      * @summary `result`.
+     * @description
+     *
+     * `accepted` / `rejected-permanent` / `rejected-transient`. Assigned
+     * by the ACPM if it rejects the AARQ without indication; otherwise
+     * from the A-ASSOCIATE response. `accepted` ⇒ association
+     * established. ITU-T Rec. X.217 bis (1998) §8.1.1.16; X.227 bis
+     * (1998) §7.1.5.8.
+     *
      * @public
      * @readonly
      */
     readonly result: Associate_result,
     /**
      * @summary `result_source_diagnostic`.
+     * @description
+     *
+     * Result source plus Diagnostic. ACPM-rejected AARQ uses
+     * `acse-service-provider`; user response uses `acse-service-user`
+     * (Diagnostic `null` if the response omitted Diagnostic). Independent
+     * of Result. ITU-T Rec. X.217 bis (1998) §8.1.1.17–8.1.1.18;
+     * X.227 bis (1998) §7.1.5.9.
+     *
      * @public
      * @readonly
      */
     readonly result_source_diagnostic: Associate_source_diagnostic,
     /**
      * @summary `responding_AP_title`.
+     * @description
+     *
+     * AP that contains the actual acceptor. ITU-T Rec. X.217 bis (1998)
+     * §8.1.1.9; X.227 bis (1998) §7.1.5.4.
+     *
      * @public
      * @readonly
      */
     readonly responding_AP_title?: OPTIONAL<AP_title>,
     /**
      * @summary `responding_AE_qualifier`.
+     * @description
+     *
+     * Particular AE of the actual acceptor (ITU-T Rec. X.217 (1995)
+     * §9.1.1.12). ITU-T Rec. X.227 bis (1998) §7.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly responding_AE_qualifier?: OPTIONAL<AE_qualifier>,
     /**
      * @summary `responding_AP_invocation_identifier`.
+     * @description
+     *
+     * AP invocation that contains the actual acceptor. ITU-T Rec.
+     * X.217 bis (1998) §8.1.1.10; X.227 bis (1998) §7.1.5.6.
+     *
      * @public
      * @readonly
      */
     readonly responding_AP_invocation_identifier?: OPTIONAL<AP_invocation_identifier>,
     /**
      * @summary `responding_AE_invocation_identifier`.
+     * @description
+     *
+     * AE invocation that contains the actual acceptor (ITU-T Rec. X.217
+     * (1995) §9.1.1.14). ITU-T Rec. X.227 bis (1998) §7.1.5.7.
+     *
      * @public
      * @readonly
      */
     readonly responding_AE_invocation_identifier?: OPTIONAL<AE_invocation_identifier>,
     /**
      * @summary `responder_acse_requirements`.
+     * @description
+     *
+     * Functional units the acceptor selects; subset of those on the
+     * indication. Shall not be present if only Kernel is used. Refusing
+     * Higher Level Association means the association is not established.
+     * ITU-T Rec. X.217 bis (1998) §8.1.1.12; X.227 bis (1998) §7.1.5.10.
+     *
      * @public
      * @readonly
      */
     readonly responder_acse_requirements?: OPTIONAL<ACSE_requirements>,
     /**
      * @summary `mechanism_name`.
+     * @description
+     *
+     * Authentication-mechanism used on the response. Present only if
+     * Authentication FU is selected. ITU-T Rec. X.217 bis (1998)
+     * §8.1.1.13; X.227 bis (1998) §7.1.5.11.
+     *
      * @public
      * @readonly
      */
     readonly mechanism_name?: OPTIONAL<Mechanism_name>,
     /**
      * @summary `responding_authentication_value`.
+     * @description
+     *
+     * Authentication-value from the acceptor's authentication-function.
+     * Present only if Authentication FU is selected. ITU-T Rec.
+     * X.217 bis (1998) §8.1.1.14; X.227 bis (1998) §7.1.5.12.
+     *
      * @public
      * @readonly
      */
     readonly responding_authentication_value?: OPTIONAL<Authentication_value>,
     /**
      * @summary `aSO_context_name_list`.
+     * @description
+     *
+     * Present only if ASO-context negotiation FU is selected **and**
+     * result is rejected: contexts the acceptor could have supported.
+     * Omitted on acceptance. ITU-T Rec. X.217 bis (1998) §8.1.1.2;
+     * X.227 bis (1998) §7.1.5.3.
+     *
      * @public
      * @readonly
      */
     readonly aSO_context_name_list?: OPTIONAL<ASO_context_name_list>,
     /**
      * @summary `implementation_information`.
+     * @description
+     *
+     * Implementation-specific ACPM data; not used in negotiation.
+     * ITU-T Rec. X.227 bis (1998) §7.1.5.13.
+     *
      * @public
      * @readonly
      */
     readonly implementation_information?: OPTIONAL<Implementation_data>,
     /**
      * @summary `p_context_result_list`.
+     * @description
+     *
+     * Higher Level Association FU: presentation context result list as
+     * in ITU-T Rec. X.226 | ISO/IEC 8823-1. ITU-T Rec. X.227 bis (1998)
+     * §7.1.5.16.
+     *
      * @public
      * @readonly
      */
     readonly p_context_result_list?: OPTIONAL<P_context_result_list>,
     /**
      * @summary `called_asoi_tag`.
+     * @description
+     *
+     * Higher Level Association FU. ASN.1 names this `called-asoi-tag`;
+     * the service parameter is Responding ASOI-tag (actual acceptor).
+     * ITU-T Rec. X.217 bis (1998) §8.1.1.11; X.227 bis (1998) §7.1.5.15.
+     *
      * @public
      * @readonly
      */
     readonly called_asoi_tag?: OPTIONAL<ASOI_tag>,
     /**
      * @summary `calling_asoi_tag`.
+     * @description
+     *
+     * Higher Level Association FU companion to `called-asoi-tag` on the
+     * AARE. ITU-T Rec. X.227 bis (1998) §9.1 (AARE extensions).
+     *
      * @public
      * @readonly
      */
@@ -241,6 +349,12 @@ export class AARE_apdu {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_information`.
+     * @description
+     *
+     * Transparent user information whose meaning depends on the
+     * ASO-context in effect. ITU-T Rec. X.217 bis (1998) §8.1.1.15;
+     * X.227 bis (1998) §7.1.5.14.
+     *
      * @public
      * @readonly
      */

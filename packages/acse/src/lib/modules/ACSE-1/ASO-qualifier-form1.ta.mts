@@ -19,6 +19,9 @@ import {
  * @summary ASO_qualifier_form1
  * @description
  *
+ * Relative distinguished name of a particular AE of the AP identified
+ * by AP-title-form1. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

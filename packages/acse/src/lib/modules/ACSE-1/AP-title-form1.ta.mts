@@ -19,6 +19,9 @@ import {
  * @summary AP_title_form1
  * @description
  *
+ * Directory Name of an application-process title (ITU-T Rec. X.501 |
+ * ISO/IEC 9594-2). ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

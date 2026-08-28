@@ -29,6 +29,9 @@ import {
  * @summary Context_list_Item
  * @description
  *
+ * One proposed presentation context: PCI, abstract syntax, and offered
+ * transfer syntaxes. See ITU-T Rec. X.216 | ISO/IEC 8822.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +43,30 @@ export class Context_list_Item {
   constructor(
     /**
      * @summary `pci`.
+     * @description
+     *
+     * Presentation context identifier for this proposal.
+     *
      * @public
      * @readonly
      */
     readonly pci: Presentation_context_identifier,
     /**
      * @summary `abstract_syntax`.
+     * @description
+     *
+     * Abstract syntax proposed for this PCI.
+     *
      * @public
      * @readonly
      */
     readonly abstract_syntax: Abstract_syntax_name,
     /**
      * @summary `transfer_syntaxes`.
+     * @description
+     *
+     * Transfer syntaxes offered for this abstract syntax.
+     *
      * @public
      * @readonly
      */

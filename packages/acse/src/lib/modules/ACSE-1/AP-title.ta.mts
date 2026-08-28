@@ -34,6 +34,13 @@ import {
  * @summary AP_title
  * @description
  *
+ * Application-process title. Form1 = Directory `Name`; form2 =
+ * OBJECT IDENTIFIER; form3 = PrintableString (1998 extension);
+ * form4 = RELATIVE-OID (further extension; not in the 1998 printed
+ * X.227 bis CHOICE). Requestor and acceptor may each use form1 or
+ * form2 independently; both sides must be able to receive both.
+ * ITU-T Rec. X.227 bis (1998) §9.1, §10.3; X.217 bis (1998) §8.1.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,12 @@ import {
  * @summary AE_qualifier
  * @description
  *
+ * Alias of `ASO-qualifier`. Identifies a particular AE of an AP
+ * (ITU-T Rec. X.217 (1995) §9.1.1.4). When both AP-title and
+ * AE-qualifier appear on AARQ/AARE they must use the same form so an
+ * AE-title can be constructed (X.665 | ISO/IEC 9834-6). ITU-T Rec.
+ * X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

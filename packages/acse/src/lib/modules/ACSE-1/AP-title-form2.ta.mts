@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AP_title_form2
  * @description
  *
+ * OBJECT IDENTIFIER form of an application-process title. Combined
+ * with AE-qualifier-form2 as in X.665 | ISO/IEC 9834-6. ITU-T Rec.
+ * X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ASO_context_name
  * @description
  *
+ * OBJECT IDENTIFIER naming an ASO-context: the role of the association
+ * and the Control Functions of the ASOs communicating over it.
+ * Registration follows X.660 | ISO/IEC 9834-1 (no international RA is
+ * planned). ITU-T Rec. X.217 bis (1998) §6.1, §8.1.1.1; X.227 bis
+ * (1998) §12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,13 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 
+/**
+ * Information object class for authentication-mechanism names
+ * (`TYPE-IDENTIFIER`: `&id` OBJECT IDENTIFIER, `&Type` the
+ * authentication-value syntax). Names are registered per ITU-T Rec.
+ * X.227 bis (1998) §12. Annex B assigns
+ * `{ joint-iso-ccitt association-control(2) authentication-mechanism(3) password-1(1) }`.
+ */
 export type MECHANISM_NAME = TYPE_IDENTIFIER;
 
 /* eslint-enable */

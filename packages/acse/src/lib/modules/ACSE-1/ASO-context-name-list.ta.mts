@@ -19,6 +19,11 @@ import {
  * @summary ASO_context_name_list
  * @description
  *
+ * List of ASO-context names. On A-ASSOCIATE, used only with the
+ * ASO-context negotiation FU. On A-ALTER-CONTEXT, a set from which
+ * the acceptor may choose (then `aSO-context-name` is not used).
+ * ITU-T Rec. X.217 bis (1998) §8.1.1.2, §8.6.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

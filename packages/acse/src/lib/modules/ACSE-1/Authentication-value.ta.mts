@@ -22,6 +22,15 @@ import {
  * @summary Authentication_value
  * @description
  *
+ * Opaque output of an authentication-function (credentials, timestamp,
+ * signature, or an ASE APDU if the mechanism is a security ASE).
+ * Syntax is determined by the mechanism: either
+ * `MECHANISM-NAME.&id` (`other`) or prior agreement. If `other` is
+ * used, `mechanism-name` on AARQ/AARE must equal
+ * `other-mechanism-name`. Annex B password uses `charstring`
+ * (GraphicString). ITU-T Rec. X.217 bis (1998) §6.2.1.4, §8.1.1.14;
+ * X.227 bis (1998) §9.1, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

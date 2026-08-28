@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ASO_qualifier_form2
  * @description
  *
+ * INTEGER form of ASO/AE-qualifier. Combined with AP-title-form2 as
+ * in X.665 | ISO/IEC 9834-6. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

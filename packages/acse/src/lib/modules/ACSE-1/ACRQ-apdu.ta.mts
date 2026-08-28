@@ -45,6 +45,16 @@ import {
  * @summary ACRQ_apdu
  * @description
  *
+ * A-ALTER-CONTEXT-REQUEST APDU (`[APPLICATION 6]`). Confirmed
+ * modification of ASO-context and/or presentation context on an
+ * **existing** association (Higher Level Association FU). Does not
+ * change the Presentation Layer DCS. One outstanding ACRQ at a time.
+ * User-information (if present) is interpreted in the **new** context;
+ * omitting it can be used for a synchronized context change (the ASO
+ * must specify when that is allowed). ITU-T Rec. X.227 bis (1998)
+ * [§7.5](https://www.itu.int/rec/T-REC-X.227bis-199809-I); ITU-T Rec.
+ * X.217 bis (1998) [§8.6](https://www.itu.int/rec/T-REC-X.217bis-199809-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -65,30 +75,57 @@ export class ACRQ_apdu {
   constructor(
     /**
      * @summary `aso_qualifier`.
+     * @description
+     *
+     * Distinguishes child ASOs. Conditional. ITU-T Rec. X.227 bis
+     * (1998) §7.5.5.1.
+     *
      * @public
      * @readonly
      */
     readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
     /**
      * @summary `asoi_identifier`.
+     * @description
+     *
+     * Distinguishes concurrent ASO instances. Conditional. ITU-T Rec.
+     * X.227 bis (1998) §7.5.5.2.
+     *
      * @public
      * @readonly
      */
     readonly asoi_identifier?: OPTIONAL<ASOI_identifier>,
     /**
      * @summary `aSO_context_name`.
+     * @description
+     *
+     * ASO-context proposed by the requestor. Acceptor returns the same
+     * or refuses. ITU-T Rec. X.217 bis (1998) §8.6.1.1; X.227 bis (1998)
+     * §7.5.5.3. If `aSO-context-name-list` is used, this field is not
+     * used (X.217 bis §8.6.1.2).
+     *
      * @public
      * @readonly
      */
     readonly aSO_context_name?: OPTIONAL<ASO_context_name>,
     /**
      * @summary `aSO_context_name_list`.
+     * @description
+     *
+     * List of ASO-contexts from which the acceptor may choose one.
+     * ITU-T Rec. X.217 bis (1998) §8.6.1.2; X.227 bis (1998) §7.5.5.4.
+     *
      * @public
      * @readonly
      */
     readonly aSO_context_name_list?: OPTIONAL<ASO_context_name_list>,
     /**
      * @summary `p_context_definition_list`.
+     * @description
+     *
+     * Proposed presentation contexts (ITU-T Rec. X.216 | ISO/IEC 8822).
+     * ITU-T Rec. X.227 bis (1998) §7.5.5.5.
+     *
      * @public
      * @readonly
      */
@@ -101,6 +138,12 @@ export class ACRQ_apdu {
     readonly _unrecognizedExtensionsList: _Element[] = [],
     /**
      * @summary `user_information`.
+     * @description
+     *
+     * Optional; interpreted in the new contexts this APDU specifies.
+     * Omitting it can create a synchronized context change. ITU-T Rec.
+     * X.217 bis (1998) §8.6.1.5; X.227 bis (1998) §7.5.5.6.
+     *
      * @public
      * @readonly
      */

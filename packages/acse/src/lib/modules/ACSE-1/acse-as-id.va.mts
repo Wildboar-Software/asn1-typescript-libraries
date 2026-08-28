@@ -16,6 +16,10 @@ import {
  * @summary acse_as_id
  * @description
  *
+ * May be used to reference the abstract syntax of the ACSE APDUs.
+ * `{ joint-iso-itu-t association-control(2) abstract-syntax(1) apdus(0) version1(1) }`.
+ * ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

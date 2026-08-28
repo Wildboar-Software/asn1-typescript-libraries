@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AP_title_form3
  * @description
  *
+ * PrintableString AP-title. Extension addition in ITU-T Rec. X.227
+ * bis (1998) §9.1; that text does not assign further semantics.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

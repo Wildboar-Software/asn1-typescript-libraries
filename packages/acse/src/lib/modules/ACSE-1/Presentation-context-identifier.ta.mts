@@ -16,6 +16,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Presentation_context_identifier
  * @description
  *
+ * INTEGER identifying a presentation context (PCI). See ITU-T Rec.
+ * X.216 | ISO/IEC 8822. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

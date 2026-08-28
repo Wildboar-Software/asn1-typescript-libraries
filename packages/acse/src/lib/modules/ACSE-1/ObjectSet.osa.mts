@@ -14,6 +14,10 @@ import { type MECHANISM_NAME } from '../ACSE-1/MECHANISM-NAME.oca.mjs';
  * @summary ObjectSet
  * @description
  *
+ * Extensible object set of `MECHANISM-NAME` objects. The published
+ * module initializes it empty (`{...}`); implementations populate it
+ * with the mechanisms they support. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Associate_result
  * @description
  *
+ * A-ASSOCIATE Result: `accepted` (0) establishes the association;
+ * `rejected-permanent` (1) and `rejected-transient` (2) do not.
+ * Provided by the acceptor, the ACSE provider, or the supporting
+ * service. ITU-T Rec. X.217 bis (1998) §8.1.1.16; X.227 bis (1998)
+ * §7.1.5.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

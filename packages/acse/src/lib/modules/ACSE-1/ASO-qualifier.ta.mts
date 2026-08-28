@@ -34,6 +34,13 @@ import {
  * @summary ASO_qualifier
  * @description
  *
+ * Qualifier of an application-service-object (or AE, via the
+ * `AE-qualifier` alias). Form1 = RDN of an AE of the AP named by
+ * AP-title-form1; form2 = INTEGER; form3 = PrintableString; form4 =
+ * RELATIVE-OID (extension beyond the 1998 printed CHOICE). On
+ * A-DATA/A-RELEASE/A-ABORT/A-ALTER-CONTEXT, used like a protocol-id
+ * to select a child ASO. ITU-T Rec. X.227 bis (1998) §7.2.4.3, §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

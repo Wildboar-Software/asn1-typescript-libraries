@@ -19,6 +19,10 @@ import {
  * @summary AE_title_form1
  * @description
  *
+ * Directory Name of an AE-title. Constructed from AP-title-form1 and
+ * AE-qualifier-form1 (X.665 | ISO/IEC 9834-6). Used for Directory
+ * access (X.500 series). ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

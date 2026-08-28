@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PDV_list_presentation_data_values
  * @description
  *
+ * Encoding of a PDV: `simple-ASN1-type` (type of the PCI),
+ * `octet-aligned` OCTET STRING, or `arbitrary` BIT STRING. See ITU-T
+ * Rec. X.226 | ISO/IEC 8823-1. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

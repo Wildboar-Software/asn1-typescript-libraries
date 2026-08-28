@@ -19,6 +19,10 @@ import {
  * @summary User_information
  * @description
  *
+ * Alias of `Association-data`. User Information parameter of A-ASSOCIATE,
+ * A-RELEASE, A-ABORT, and A-ALTER-CONTEXT. ITU-T Rec. X.227 bis (1998)
+ * §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

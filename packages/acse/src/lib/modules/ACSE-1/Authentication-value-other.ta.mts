@@ -15,6 +15,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Authentication_value_other
  * @description
  *
+ * Mechanism identified by `other-mechanism-name` (`MECHANISM-NAME.&id`);
+ * `other-mechanism-value` is `MECHANISM-NAME.&Type` for that id. If
+ * this alternative is chosen, AARQ/AARE `mechanism-name` must match.
+ * ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +31,20 @@ export class Authentication_value_other {
   constructor(
     /**
      * @summary `other_mechanism_name`.
+     * @description
+     *
+     * OBJECT IDENTIFIER of the `MECHANISM-NAME` information object.
+     *
      * @public
      * @readonly
      */
     readonly other_mechanism_name: OBJECT_IDENTIFIER,
     /**
      * @summary `other_mechanism_value`.
+     * @description
+     *
+     * Open type whose abstract syntax is that of the named mechanism.
+     *
      * @public
      * @readonly
      */

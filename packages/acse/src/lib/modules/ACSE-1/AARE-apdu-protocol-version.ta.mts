@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AARE_apdu_protocol_version
  * @description
  *
+ * AARE Protocol Version bit string. On accept: a single bit for the
+ * selected version. On reject: versions this ACPM could support.
+ * ITU-T Rec. X.227 bis (1998) §7.1.5.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

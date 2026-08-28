@@ -19,6 +19,10 @@ import {
  * @summary P_context_result_list
  * @description
  *
+ * Result of proposed presentation contexts, in the same order as the
+ * definition list. See ITU-T Rec. X.216 | ISO/IEC 8822. ITU-T Rec.
+ * X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

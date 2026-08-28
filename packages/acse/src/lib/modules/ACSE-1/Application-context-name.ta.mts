@@ -19,6 +19,10 @@ import {
  * @summary Application_context_name
  * @description
  *
+ * Alias of `ASO-context-name`. Classic ACSE (ITU-T Rec. X.217 (1995)
+ * §9.1.1.2) called this Application Context Name: the application
+ * context proposed/selected for an AE-association.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Release_response_reason
  * @description
  *
+ * A-RELEASE response: `normal` (0), `not-finished` (1),
+ * `user-defined` (30). Example: `not-finished` when the acceptor is
+ * forced to release (no Negotiated Release) but still has data to
+ * send or receive. ITU-T Rec. X.217 (1995) §9.2.1.1; X.217 bis (1998)
+ * §8.2.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ASOI_identifier
  * @description
  *
+ * Distinguishes concurrent invocations of the same ASO (`INTEGER (1..128, ...)`).
+ * Conditional on A-DATA and related APDUs: required only if multiple
+ * instances are active. ITU-T Rec. X.227 bis (1998) §7.4.4.2, §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

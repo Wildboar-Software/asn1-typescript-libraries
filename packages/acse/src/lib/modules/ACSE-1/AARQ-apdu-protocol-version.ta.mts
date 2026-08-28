@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AARQ_apdu_protocol_version
  * @description
  *
+ * AARQ Protocol Version bit string. Bit 0 (`version1`) is the only
+ * named bit in this module. Multiple bits may be set. ITU-T Rec.
+ * X.227 bis (1998) §7.1.4.1, §10.1(b) (systems shall support version 1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

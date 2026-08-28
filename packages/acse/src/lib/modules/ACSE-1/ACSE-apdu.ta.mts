@@ -54,6 +54,13 @@ import {
  * @summary ACSE_apdu
  * @description
  *
+ * Top-level CHOICE of connection-mode ACSE APDUs. Kernel:
+ * AARQ/AARE/RLRQ/RLRE/ABRT. Higher Level Association extensions:
+ * A-DT, ACRQ, ACRP. Incoming AARQ: ignore unknown tags and unknown
+ * bit names; after association, undefined APDUs/fields are protocol
+ * errors. ITU-T Rec. X.227 bis (1998) §4.2, §7.6, §9.1. Connectionless
+ * A-UNIT-DATA is ITU-T Rec. X.237 bis, not this CHOICE.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

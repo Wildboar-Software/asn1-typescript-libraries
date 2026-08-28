@@ -29,6 +29,11 @@ import {
  * @summary User_Data
  * @description
  *
+ * A-DATA user data: `user-information` (`Association-data`),
+ * `simply-encoded-data` (OCTET STRING), or `fully-encoded-data`
+ * (`PDV-list`). See ITU-T Rec. X.226 | ISO/IEC 8823-1. ITU-T Rec.
+ * X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

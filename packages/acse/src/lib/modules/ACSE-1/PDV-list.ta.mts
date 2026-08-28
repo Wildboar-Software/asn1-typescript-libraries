@@ -30,6 +30,9 @@ import {
  * @summary PDV_list
  * @description
  *
+ * Fully-encoded presentation data value list. See ITU-T Rec. X.226 |
+ * ISO/IEC 8823-1. ITU-T Rec. X.227 bis (1998) §9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,18 +53,30 @@ export class PDV_list {
   constructor(
     /**
      * @summary `transfer_syntax_name`.
+     * @description
+     *
+     * Transfer syntax of these PDVs, if not implied by the PCI.
+     *
      * @public
      * @readonly
      */
     readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
     /**
      * @summary `presentation_context_identifier`.
+     * @description
+     *
+     * PCI whose abstract syntax applies to `presentation-data-values`.
+     *
      * @public
      * @readonly
      */
     readonly presentation_context_identifier: Presentation_context_identifier,
     /**
      * @summary `presentation_data_values`.
+     * @description
+     *
+     * Encoded user data for that PCI (X.226 | ISO/IEC 8823-1).
+     *
      * @public
      * @readonly
      */
