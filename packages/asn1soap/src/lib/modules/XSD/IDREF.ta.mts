@@ -16,6 +16,9 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  * @summary IDREF
  * @description
  *
+ * Mapping of XML Schema `xsd:IDREF` (an NCName).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

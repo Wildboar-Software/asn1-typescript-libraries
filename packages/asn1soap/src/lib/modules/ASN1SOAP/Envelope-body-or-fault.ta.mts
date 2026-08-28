@@ -17,6 +17,13 @@ import { Fault, _decode_Fault, _encode_Fault } from '../ASN1SOAP/Fault.ta.mjs';
  * @summary Envelope_body_or_fault
  * @description
  *
+ * Payload of an ASN.1 SOAP Envelope: a Body, or a Fault (which
+ * maps to a SOAP Body whose only child is Fault). See
+ * {@link Envelope.body_or_fault}.
+ * ITU-T Rec. X.892 (05/2005)
+ * [§7.1.4](https://www.itu.int/rec/T-REC-X.892-200505-I),
+ * §7.1.5, Table 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

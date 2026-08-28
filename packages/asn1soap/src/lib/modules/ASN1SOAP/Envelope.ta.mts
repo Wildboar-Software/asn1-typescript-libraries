@@ -21,6 +21,18 @@ import {
  * @summary Envelope
  * @description
  *
+ * An ASN.1 SOAP message: semantically equivalent to a W3C SOAP 1.2
+ * Envelope infoset. SOAP processing, extensibility, and binding
+ * models apply through the mappings in clauses 7 and 8 (Table 1).
+ * Those mappings are conceptual; an implementation need not build
+ * an infoset. Wire transfer uses MIME type `application/fastsoap`
+ * and Basic Aligned PER; these codecs use BER.
+ * ITU-T Rec. X.892 (05/2005)
+ * [§3.2.5](https://www.itu.int/rec/T-REC-X.892-200505-I),
+ * §6, §10.1, Annex A, Annex B.1.
+ * W3C SOAP 1.2 Part 1
+ * [§5.1](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soapenv).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +48,20 @@ export class Envelope {
   constructor(
     /**
      * @summary `header`.
+     * @description SOAP Header blocks. An empty sequence maps to
+     * no Header element information item.
+     * ITU-T Rec. X.892 (05/2005) §7.1.3, §7.2.1, Table 1.
      * @public
      * @readonly
      */
     readonly header: Header,
     /**
      * @summary `body_or_fault`.
+     * @description Either a Body or a Fault. A SOAP message with
+     * fault information may have only a Fault as child of Body
+     * (no other children); this choice encodes that constraint.
+     * Mapping a Fault alternative generates a Body wrapping the
+     * Fault. ITU-T Rec. X.892 (05/2005) §7.1.4–§7.1.5, §8.1.3–§8.1.4.
      * @public
      * @readonly
      */

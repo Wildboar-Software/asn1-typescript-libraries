@@ -15,6 +15,13 @@ import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
  * @summary ultimateReceiver
  * @description
  *
+ * Default SOAP role for a header block: the ultimate receiver.
+ * Omitted from the SOAP `role` attribute when this default applies.
+ * ITU-T Rec. X.892 (05/2005)
+ * [§7.2.2.3](https://www.itu.int/rec/T-REC-X.892-200505-I), Annex A.
+ * W3C SOAP 1.2 Part 1
+ * [§2.2](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soaproles).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

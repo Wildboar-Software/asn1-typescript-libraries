@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Int
  * @description
  *
+ * Mapping of XML Schema `xsd:int` (32-bit signed). Imported by
+ * the ASN1SOAP module; unused in Envelope types.
+ * ITU-T Rec. X.892 (05/2005) Annex A. ITU-T Rec. X.694.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

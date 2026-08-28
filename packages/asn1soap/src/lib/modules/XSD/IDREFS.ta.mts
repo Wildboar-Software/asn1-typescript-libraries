@@ -16,6 +16,9 @@ import { IDREF, _decode_IDREF, _encode_IDREF } from '../XSD/IDREF.ta.mjs';
  * @summary IDREFS
  * @description
  *
+ * Mapping of XML Schema `xsd:IDREFS`: non-empty list of IDREF.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

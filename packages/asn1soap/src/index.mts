@@ -1,3 +1,17 @@
+/**
+ * ASN.1 SOAP (Fast Web Services) types from ITU-T Rec. X.892
+ * (05/2005) | ISO/IEC 24824-2, plus the XSD module types that
+ * Annex A reuses from ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
+ * An {@link Envelope} is an ASN.1 SOAP message, semantically
+ * equivalent to a W3C SOAP 1.2 Envelope infoset. On the wire,
+ * X.892 specifies MIME type `application/fastsoap` and Basic
+ * Aligned PER; these codecs use BER.
+ *
+ * @see https://www.itu.int/rec/T-REC-X.892-200505-I
+ * @see https://www.w3.org/TR/2003/REC-soap12-part1-20030624/
+ * @module
+ */
 export * from "./lib/modules/ASN1SOAP/Body.ta.mjs";
 export * from "./lib/modules/ASN1SOAP/Code.ta.mjs";
 export * from "./lib/modules/ASN1SOAP/Content-encoded-value.ta.mjs";

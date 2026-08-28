@@ -20,6 +20,10 @@ import {
  * @summary String
  * @description
  *
+ * Mapping of XML Schema `xsd:string`. Character string restricted
+ * to XML 1.0 Char (see {@link XMLCompatibleString}).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5. X.892 Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

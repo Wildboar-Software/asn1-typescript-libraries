@@ -20,6 +20,9 @@ import {
  * @summary Month
  * @description
  *
+ * Supporting lexical type for `xsd:gMonth` (XML Schema Part 2,
+ * 3.2.14). ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

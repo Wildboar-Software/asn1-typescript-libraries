@@ -20,6 +20,10 @@ import {
  * @summary GDay
  * @description
  *
+ * Mapping of XML Schema `xsd:gDay` (day of month, optional
+ * time-zone). Lexical form; not an ASN.1 TIME value.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5 (Version 1 mapping retained).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

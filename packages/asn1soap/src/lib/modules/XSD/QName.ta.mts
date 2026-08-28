@@ -18,6 +18,13 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  * @summary QName
  * @description
  *
+ * Mapping of XML Schema `xsd:QName` (X.694). Used in ASN.1 SOAP
+ * for {@link Identifier}, Fault Subcodes, and
+ * {@link NotUnderstood}. `uri` is the namespace name (absent for
+ * an unqualified name); `name` is the local NCName.
+ * ITU-T Rec. X.892 (05/2005) Annex A, §7.4.2.5–§7.4.2.6.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +38,17 @@ export class QName {
   constructor(
     /**
      * @summary `uri`.
+     * @description Namespace name. Omit for no namespace. In SOAP
+     * Subcode Values, presence yields `prefix:local`; absence
+     * yields the local name alone (X.892 §7.4.2.5–§7.4.2.6).
      * @public
      * @readonly
      */
     readonly uri: OPTIONAL<AnyURI>,
     /**
      * @summary `name`.
+     * @description Local name (NCName). ITU-T Rec. X.892 (05/2005)
+     * §7.4.2.5–§7.4.2.6.
      * @public
      * @readonly
      */

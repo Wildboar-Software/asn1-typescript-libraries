@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary XMLStringWithNoWhitespace
  * @description
  *
+ * XML-compatible string excluding all whitespace (U+0009, U+000A,
+ * U+000D, U+0020). Used for `xsd:Name` / `xsd:NMTOKEN`.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

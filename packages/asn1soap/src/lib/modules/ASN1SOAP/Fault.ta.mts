@@ -24,6 +24,13 @@ import {
  * @summary Fault
  * @description
  *
+ * SOAP Fault. When this alternative of `body-or-fault` is used, a
+ * Body is generated whose only child is this Fault.
+ * ITU-T Rec. X.892 (05/2005)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.892-200505-I), Table 1.
+ * W3C SOAP 1.2 Part 1
+ * [§5.4](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soapfault).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,30 +48,51 @@ export class Fault {
   constructor(
     /**
      * @summary `code`.
+     * @description SOAP fault code (Value plus optional Subcodes).
+     * ITU-T Rec. X.892 (05/2005) §7.4.1.2, §7.4.2.
      * @public
      * @readonly
      */
     readonly code: Code,
     /**
      * @summary `reason`.
+     * @description Human-readable explanations; at least one
+     * `Text`. Each maps in order to a SOAP Reason/Text child.
+     * Distinct `lang` values are recommended.
+     * ITU-T Rec. X.892 (05/2005) §7.4.1.3.
+     * W3C SOAP 1.2 Part 1
+     * [§5.4.2](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#faultstringelement).
      * @public
      * @readonly
      */
     readonly reason: Text[],
     /**
      * @summary `node`.
+     * @description URI of the SOAP node that generated the fault
+     * (SOAP Node). ITU-T Rec. X.892 (05/2005) §7.4.1.4.
+     * W3C SOAP 1.2 Part 1
+     * [§5.4.3](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#faultactorelement).
      * @public
      * @readonly
      */
     readonly node?: OPTIONAL<AnyURI>,
     /**
      * @summary `role`.
+     * @description Role the faulting node was playing (SOAP Role).
+     * ITU-T Rec. X.892 (05/2005) §7.4.1.5.
+     * W3C SOAP 1.2 Part 1
+     * [§5.4.4](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#faultroleelement).
      * @public
      * @readonly
      */
     readonly role?: OPTIONAL<AnyURI>,
     /**
      * @summary `detail`.
+     * @description Application-specific fault detail (SOAP Detail).
+     * After processing, Detail may have at most one child and no
+     * attributes. ITU-T Rec. X.892 (05/2005) §7.4.1.6, §6.6.
+     * W3C SOAP 1.2 Part 1
+     * [§5.4.5](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#faultdetailelement).
      * @public
      * @readonly
      */

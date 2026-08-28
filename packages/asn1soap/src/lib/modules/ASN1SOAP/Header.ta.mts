@@ -20,6 +20,13 @@ import {
  * @summary Header
  * @description
  *
+ * Ordered SOAP header blocks. Empty means no SOAP Header element
+ * is generated. Each block is mapped in order to a child of Header.
+ * ITU-T Rec. X.892 (05/2005)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.892-200505-I), Table 1.
+ * W3C SOAP 1.2 Part 1
+ * [§5.2](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soaphead).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

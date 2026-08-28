@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Double
  * @description
  *
+ * Mapping of XML Schema `xsd:double` (IEEE 754 binary64), including
+ * 0, infinities, and NaN. ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

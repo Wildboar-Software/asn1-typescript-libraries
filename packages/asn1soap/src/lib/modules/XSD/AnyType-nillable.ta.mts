@@ -22,6 +22,11 @@ import {
  * @summary AnyType_nillable
  * @description
  *
+ * Mapping of nillable `xsd:anyType` (`xsi:nil`). Same as
+ * {@link AnyType} except child elements sit in optional `content`
+ * so the element may be empty/nil. XER `USE-NIL`.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5; X.693 clause 25.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +51,25 @@ export class AnyType_nillable {
   constructor(
     /**
      * @summary `embed_values`.
+     * @description Character data interleaved with child elements
+     * (XER `EMBED-VALUES`). ITU-T Rec. X.693 | ISO/IEC 8825-4,
+     * clause 25.
      * @public
      * @readonly
      */
     readonly embed_values: String[],
     /**
      * @summary `attr`.
+     * @description Wildcard attributes; each item is
+     * `AnyAttributeFormat` (X.693 clause 18).
      * @public
      * @readonly
      */
     readonly attr: String[],
     /**
      * @summary `content`.
+     * @description Child elements when the element is not nil.
+     * Omit for `xsi:nil="true"`. ITU-T Rec. X.694 (`USE-NIL`).
      * @public
      * @readonly
      */

@@ -22,6 +22,10 @@ import {
  * @summary GYear
  * @description
  *
+ * Mapping of XML Schema `xsd:gYear`. ASN.1 TIME (year) when no
+ * time-zone; otherwise a VisibleString (Part 2, 3.2.11).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

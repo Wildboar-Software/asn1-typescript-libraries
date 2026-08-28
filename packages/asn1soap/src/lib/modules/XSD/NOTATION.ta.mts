@@ -16,6 +16,9 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  * @summary NOTATION
  * @description
  *
+ * Mapping of XML Schema `xsd:NOTATION` (a QName).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

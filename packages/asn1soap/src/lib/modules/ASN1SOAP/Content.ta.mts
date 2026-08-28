@@ -26,6 +26,22 @@ import {
  * @summary Content
  * @description
  *
+ * Payload of a header block, Body, or Fault Detail. Either:
+ *
+ * - `encoded-value`: an ASN.1 value in Basic Aligned PER, identified
+ *   by {@link Identifier}. Maps to XML with `encodingStyle`
+ *   `urn:ohn:joint-iso-itu-t:asn1:generic-applications:fast-web-services:soap-envelope:encoding-style:aper`
+ *   and Base64 character content. If `id` equals Annex A's
+ *   `notUnderstoodIdentifier`, treat as {@link NotUnderstood}
+ *   (X.892 §7.5.1.4, §7.5.4).
+ * - `fast-infoset-document`: a Fast Infoset document (X.891
+ *   `finf-doc-no-decl`) whose root element is the content EII.
+ *   SOAP `role` / `mustUnderstand` / `relay` attributes on that
+ *   root are stripped so only {@link HeaderBlock} components apply.
+ *
+ * ITU-T Rec. X.892 (05/2005)
+ * [§7.5](https://www.itu.int/rec/T-REC-X.892-200505-I), §8.5, §9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

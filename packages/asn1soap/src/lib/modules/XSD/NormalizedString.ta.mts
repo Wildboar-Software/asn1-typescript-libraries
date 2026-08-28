@@ -16,6 +16,9 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  * @summary NormalizedString
  * @description
  *
+ * Mapping of XML Schema `xsd:normalizedString` (Part 2, 3.3.1):
+ * no CR, LF, or TAB. ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

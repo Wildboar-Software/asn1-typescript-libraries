@@ -20,6 +20,9 @@ import {
  * @summary Token
  * @description
  *
+ * Mapping of XML Schema `xsd:token` (Part 2, 3.3.2): collapsed
+ * whitespace. ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import { Name, _decode_Name, _encode_Name } from '../XSD/Name.ta.mjs';
  * @summary NCName
  * @description
  *
+ * Mapping of XML Schema `xsd:NCName`: a Name with no colon
+ * (W3C XML Namespaces, clause 2). Local part of {@link QName}.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5. X.892 Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

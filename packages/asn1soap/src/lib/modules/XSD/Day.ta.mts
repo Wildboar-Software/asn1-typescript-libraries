@@ -20,6 +20,9 @@ import {
  * @summary Day
  * @description
  *
+ * Supporting lexical type for `xsd:gDay` (XML Schema Part 2,
+ * 3.2.13). ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

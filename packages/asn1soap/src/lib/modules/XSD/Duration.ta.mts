@@ -22,6 +22,10 @@ import {
  * @summary Duration
  * @description
  *
+ * Mapping of XML Schema `xsd:duration`. Negative durations use the
+ * `othervalues` alternative (XML Schema 1.0 Part 2, 3.2.6).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

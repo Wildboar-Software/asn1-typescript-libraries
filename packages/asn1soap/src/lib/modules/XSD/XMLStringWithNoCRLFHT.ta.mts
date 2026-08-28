@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary XMLStringWithNoCRLFHT
  * @description
  *
+ * XML-compatible string excluding CR, LF, and TAB. Used for
+ * `xsd:normalizedString` and `xsd:anyURI`.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

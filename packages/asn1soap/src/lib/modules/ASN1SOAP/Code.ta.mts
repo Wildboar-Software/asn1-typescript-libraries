@@ -22,6 +22,17 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  * @summary Code
  * @description
  *
+ * SOAP fault Code: a {@link Value} plus a chain of Subcodes.
+ * Each `subcodes` QName maps to a nested Subcode/Value; the
+ * second child of a Subcode is the next Subcode, if any.
+ * If a node cannot identify the ASN.1 type of an embedded
+ * encoding, it faults with `sender` and Subcode `NotIdentified`
+ * in the Fast Web Services envelope namespace (X.892 §9.5).
+ * ITU-T Rec. X.892 (05/2005)
+ * [§7.4.2](https://www.itu.int/rec/T-REC-X.892-200505-I), Table 1.
+ * W3C SOAP 1.2 Part 1
+ * [§5.4.1](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#faultcodeelement).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +46,19 @@ export class Code {
   constructor(
     /**
      * @summary `value`.
+     * @description Top-level SOAP fault code (`env:Value`).
+     * Maps to a local name per X.892 Table 2.
+     * ITU-T Rec. X.892 (05/2005) §7.4.2.2, §7.4.3.
      * @public
      * @readonly
      */
     readonly value: Value,
     /**
      * @summary `subcodes`.
+     * @description Nested SOAP Subcodes, outermost first. Empty
+     * means no Subcode children. A QName with `uri` present is
+     * written as `prefix:local`; without `uri`, as the local name
+     * alone. ITU-T Rec. X.892 (05/2005) §7.4.2.3–§7.4.2.6.
      * @public
      * @readonly
      */

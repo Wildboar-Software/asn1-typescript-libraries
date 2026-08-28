@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DateTimeType
  * @description
  *
+ * VisibleString supporting type for X.694 mappings of XML Schema
+ * date/time types that use a lexical form (Part 2, 3.2.7).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

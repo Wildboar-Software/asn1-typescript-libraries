@@ -20,6 +20,9 @@ import {
  * @summary AnySimpleType
  * @description
  *
+ * Mapping of XML Schema `xsd:anySimpleType`.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5. X.892 Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Language
  * @description
  *
+ * Mapping of XML Schema `xsd:language`. RFC 3066 language tags
+ * (primary subtag 1–8 letters, optional `-` + 1–8 alphanumerics).
+ * In ASN.1 SOAP, `Text.lang` maps to SOAP `xml:lang`.
+ * ITU-T Rec. X.892 (05/2005) §7.4.4.2, Annex A. ITU-T Rec. X.694.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Time
  * @description
  *
+ * Mapping of XML Schema `xsd:time`. Time-zone −14..+14; seconds
+ * less than 60 (no leap seconds; XML Schema 1.0 Part 2, D.2);
+ * `Time=HMSFn`; midnight is start, not end.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

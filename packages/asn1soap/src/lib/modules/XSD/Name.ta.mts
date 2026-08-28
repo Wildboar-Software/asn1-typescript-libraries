@@ -16,6 +16,9 @@ import { Token, _decode_Token, _encode_Token } from '../XSD/Token.ta.mjs';
  * @summary Name
  * @description
  *
+ * Mapping of XML Schema `xsd:Name` (XML 1.0, 2.3).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

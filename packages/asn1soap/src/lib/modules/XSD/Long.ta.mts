@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Long
  * @description
  *
+ * Mapping of XML Schema `xsd:long` (64-bit signed).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5. X.892 Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

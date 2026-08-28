@@ -17,6 +17,17 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  * @summary Identifier
  * @description
  *
+ * Names the ASN.1 type of an embedded encoding. `qName` is the
+ * content element's namespace name and local name. `roid` is a
+ * relative OID (smaller than a QName when size is constrained);
+ * in XML it becomes local name `roid` in
+ * `urn:ohn:joint-iso-itu-t:asn1:generic-applications:fast-web-services:soap-envelope`
+ * with a `roid` attribute holding the XML number-form value.
+ * How a node obtains the Identifier-to-type mapping is not
+ * specified (a service description may supply it, X.892 §13.8).
+ * ITU-T Rec. X.892 (05/2005)
+ * [§9.2](https://www.itu.int/rec/T-REC-X.892-200505-I), §8.5.3.2–§8.5.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

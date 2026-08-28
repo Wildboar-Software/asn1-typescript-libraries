@@ -21,6 +21,13 @@ import {
  * @summary Text
  * @description
  *
+ * One SOAP Reason Text: a language tag plus the explanation
+ * string. Maps to SOAP `env:Text` with `xml:lang`.
+ * ITU-T Rec. X.892 (05/2005)
+ * [§7.4.4](https://www.itu.int/rec/T-REC-X.892-200505-I), Table 1.
+ * W3C SOAP 1.2 Part 1
+ * [§5.4.2](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#faultstringelement).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +41,17 @@ export class Text {
   constructor(
     /**
      * @summary `lang`.
+     * @description Language of `text`. Maps to `xml:lang` on the
+     * SOAP Text element (`http://www.w3.org/XML/1998/namespace`).
+     * ITU-T Rec. X.892 (05/2005) §7.4.4.2.
      * @public
      * @readonly
      */
     readonly lang: Language,
     /**
      * @summary `text`.
+     * @description Reason phrase (child character information of
+     * SOAP Text). ITU-T Rec. X.892 (05/2005) §7.4.4.3.
      * @public
      * @readonly
      */

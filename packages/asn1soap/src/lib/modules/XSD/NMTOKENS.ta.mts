@@ -16,6 +16,9 @@ import { NMTOKEN, _decode_NMTOKEN, _encode_NMTOKEN } from '../XSD/NMTOKEN.ta.mjs
  * @summary NMTOKENS
  * @description
  *
+ * Mapping of XML Schema `xsd:NMTOKENS`: non-empty list of NMTOKEN.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

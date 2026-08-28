@@ -16,6 +16,17 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  * @summary NotUnderstood
  * @description
  *
+ * Qualified name of a SOAP header block that was not understood.
+ * Carried as `encoded-value` whose `id` is Annex A's
+ * `notUnderstoodIdentifier` (`qName` with local name
+ * `NotUnderstood`); the PER encoding of this QName is
+ * `encoded-value.encoding`. Maps to SOAP `env:NotUnderstood` with
+ * a `qname` attribute. ITU-T Rec. X.892 (05/2005)
+ * [§7.5.4](https://www.itu.int/rec/T-REC-X.892-200505-I), §8.5.4,
+ * Annex A.
+ * W3C SOAP 1.2 Part 1
+ * [§5.4.8](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soapnotunderstood).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

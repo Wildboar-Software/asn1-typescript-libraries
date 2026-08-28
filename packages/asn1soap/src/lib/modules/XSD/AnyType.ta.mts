@@ -16,6 +16,11 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  * @summary AnyType
  * @description
  *
+ * Mapping of XML Schema `xsd:anyType` for XER: mixed content as
+ * embedded strings, attributes, and child elements. The SEQUENCE
+ * shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5. X.892 Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +43,25 @@ export class AnyType {
   constructor(
     /**
      * @summary `embed_values`.
+     * @description Character data interleaved with child elements
+     * (XER `EMBED-VALUES`). ITU-T Rec. X.693 | ISO/IEC 8825-4,
+     * clause 25.
      * @public
      * @readonly
      */
     readonly embed_values: String[],
     /**
      * @summary `attr`.
+     * @description Wildcard attributes; each item is
+     * `AnyAttributeFormat` (X.693 clause 18).
      * @public
      * @readonly
      */
     readonly attr: String[],
     /**
      * @summary `elem_list`.
+     * @description Wildcard child elements; each item is
+     * `AnyElementFormat` (X.693 clause 19).
      * @public
      * @readonly
      */

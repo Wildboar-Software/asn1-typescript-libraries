@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GenericTimeTypeChoice
  * @description
  *
+ * Supporting type for X.694 date/time mappings that ISO 8601 /
+ * ASN.1 TIME cannot represent (e.g. time-zone on `gDay`).
+ * `othervalues` must not duplicate `asn1supportedvalue`.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DateTime
  * @description
  *
+ * Mapping of XML Schema `xsd:dateTime`. Time-zone −14..+14;
+ * seconds less than 60 (no leap seconds; XML Schema 1.0 Part 2,
+ * 3.2.7); `Time=HMSFn`. ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

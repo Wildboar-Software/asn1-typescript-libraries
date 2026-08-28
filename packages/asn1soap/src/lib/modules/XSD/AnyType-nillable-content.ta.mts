@@ -16,6 +16,10 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  * @summary AnyType_nillable_content
  * @description
  *
+ * Child-element list of nillable `xsd:anyType`. Present when the
+ * element is not nil. Each item is `AnyElementFormat` (X.693
+ * clause 19). ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +31,8 @@ export class AnyType_nillable_content {
   constructor(
     /**
      * @summary `elem_list`.
+     * @description Wildcard child elements (`AnyElementFormat`).
+     * ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19.
      * @public
      * @readonly
      */

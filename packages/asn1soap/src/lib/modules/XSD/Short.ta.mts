@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Short
  * @description
  *
+ * Mapping of XML Schema `xsd:short` (−32768..32767).
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5. X.892 Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

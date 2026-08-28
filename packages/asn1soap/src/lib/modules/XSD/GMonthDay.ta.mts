@@ -20,6 +20,10 @@ import {
  * @summary GMonthDay
  * @description
  *
+ * Mapping of XML Schema `xsd:gMonthDay` (`--MM-DD`, optional
+ * time-zone). Lexical form; Version 1 mapping retained.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

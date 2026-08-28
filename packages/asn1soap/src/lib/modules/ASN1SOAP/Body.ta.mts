@@ -21,6 +21,14 @@ import {
  * @summary Body
  * @description
  *
+ * SOAP Body for a non-fault message. After SOAP-model processing,
+ * Body (and Detail) may have at most one child element and no
+ * attributes. ITU-T Rec. X.892 (05/2005)
+ * [§6.6](https://www.itu.int/rec/T-REC-X.892-200505-I), §7.3,
+ * Table 1.
+ * W3C SOAP 1.2 Part 1
+ * [§5.3](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soapbody).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +41,9 @@ export class Body {
   constructor(
     /**
      * @summary `content`.
+     * @description Optional single child of Body (RPC/document
+     * payload, or embedded ASN.1 / fast infoset). Omit for an
+     * empty Body. ITU-T Rec. X.892 (05/2005) §7.3.2, §8.3.2, §6.6.
      * @public
      * @readonly
      */

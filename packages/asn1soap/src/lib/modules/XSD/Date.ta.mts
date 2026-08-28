@@ -22,6 +22,10 @@ import {
  * @summary Date
  * @description
  *
+ * Mapping of XML Schema `xsd:date`. ASN.1 TIME (YMD) when no
+ * time-zone; otherwise a VisibleString per XML Schema 1.0 Part 2,
+ * 3.2.9. ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

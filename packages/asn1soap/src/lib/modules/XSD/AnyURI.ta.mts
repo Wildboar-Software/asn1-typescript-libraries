@@ -20,6 +20,11 @@ import {
  * @summary AnyURI
  * @description
  *
+ * Mapping of XML Schema `xsd:anyURI`. A URI/IRI per IETF RFC 2396
+ * (non-ASCII IRIs need not be escaped). In ASN.1 SOAP: header
+ * `role`, Fault `node`/`role`, and {@link ultimateReceiver}.
+ * ITU-T Rec. X.892 (05/2005) Annex A. ITU-T Rec. X.694.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

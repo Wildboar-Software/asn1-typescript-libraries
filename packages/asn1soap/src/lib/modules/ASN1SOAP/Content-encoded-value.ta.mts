@@ -22,6 +22,13 @@ import {
  * @summary Content_encoded_value
  * @description
  *
+ * Embedded ASN.1 encoding of a content EII. The octets are the
+ * Basic Aligned PER encoding of the type named by `id`. When
+ * mapped to XML they appear as Base64 character content.
+ * ITU-T Rec. X.892 (05/2005)
+ * [§7.5.3](https://www.itu.int/rec/T-REC-X.892-200505-I), §9.3,
+ * §13.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +40,26 @@ export class Content_encoded_value {
   constructor(
     /**
      * @summary `schema_identifier`.
+     * @description Optional 16-octet schema identifier. Ignored
+     * when mapping to a SOAP infoset, and omitted when mapping
+     * from one. ITU-T Rec. X.892 (05/2005) §7.5.3.6, §8.5.3.5.
      * @public
      * @readonly
      */
     readonly schema_identifier: OPTIONAL<OCTET_STRING>,
     /**
      * @summary `id`.
+     * @description Identifies the ASN.1 type of `encoding`. If the
+     * node cannot resolve it, it shall fault (`sender` /
+     * `NotIdentified`). ITU-T Rec. X.892 (05/2005) §9.2, §9.5.
      * @public
      * @readonly
      */
     readonly id: Identifier,
     /**
      * @summary `encoding`.
+     * @description Basic Aligned PER of the identified ASN.1
+     * value. ITU-T Rec. X.892 (05/2005) §7.5.3.5, §9.3, §13.9.
      * @public
      * @readonly
      */

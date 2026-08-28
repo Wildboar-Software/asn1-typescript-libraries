@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary XMLCompatibleString
  * @description
  *
+ * UTF-8 string of XML 1.0 Char: TAB, LF, CR, and the XML Char
+ * ranges excluding surrogates and noncharacters. Supporting type
+ * for the X.694 mapping of XML Schema strings.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

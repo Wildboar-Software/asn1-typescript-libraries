@@ -16,6 +16,9 @@ import { ENTITY, _decode_ENTITY, _encode_ENTITY } from '../XSD/ENTITY.ta.mjs';
  * @summary ENTITIES
  * @description
  *
+ * Mapping of XML Schema `xsd:ENTITIES`: non-empty list of ENTITY.
+ * ITU-T Rec. X.694 | ISO/IEC 8825-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
