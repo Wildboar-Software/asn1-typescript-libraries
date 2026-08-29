@@ -20,6 +20,12 @@ import {
  * @summary UsageMeteringControlObjectId
  * @description
  *
+ * Naming attribute of a usage metering control object
+ * (`controlObjectId`). Used by name binding
+ * `usageMeterControl-system` when the superior is `system`
+ * (X.721). ITU-T Rec. X.742 (04/95)
+ * [§8.1.2](https://www.itu.int/rec/T-REC-X.742-199504-I), A.7.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

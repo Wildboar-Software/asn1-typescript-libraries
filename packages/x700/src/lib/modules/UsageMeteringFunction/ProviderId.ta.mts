@@ -26,6 +26,12 @@ import {
  * @summary ProviderId
  * @description
  *
+ * Authority providing the facilities delivered through the
+ * accountable object. `unknown` (`NULL`) may be used when that
+ * provider owns the system managed object that contains the
+ * accountable object. ITU-T Rec. X.742 (04/95)
+ * [§8.2.3.8](https://www.itu.int/rec/T-REC-X.742-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

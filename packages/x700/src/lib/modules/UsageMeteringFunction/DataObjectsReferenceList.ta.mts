@@ -19,6 +19,14 @@ import {
  * @summary DataObjectsReferenceList
  * @description
  *
+ * Read-only set of data objects a control object governs. The
+ * implementation shall add a member when a data object is
+ * created and remove it when one is deleted. Each data object
+ * is controlled by exactly one control object. ITU-T Rec. X.742
+ * (04/95)
+ * [§8.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §7.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

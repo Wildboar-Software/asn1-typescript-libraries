@@ -19,6 +19,17 @@ import {
  * @summary ReportingTriggers
  * @description
  *
+ * Control-object attribute listing events that cause a data
+ * object to emit a `usageReport`. Settable GET-REPLACE
+ * ADD-REMOVE. Required at control-object creation. Kinds:
+ * periodic, induced (metering action, operational-state
+ * change, or data-object deletion), accountable events of
+ * §8.2.3, or an external stimulus OID. Distinct from recording
+ * triggers (which update meter values; not defined by this
+ * function). ITU-T Rec. X.742 (04/95)
+ * [§8.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §7.2.4, A.6 `triggerBehaviour`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

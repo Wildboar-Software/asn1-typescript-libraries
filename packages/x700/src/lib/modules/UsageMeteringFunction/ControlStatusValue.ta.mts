@@ -19,6 +19,12 @@ import {
  * @summary ControlStatusValue
  * @description
  *
+ * Permitted/required values of the data object's `controlStatus`
+ * (X.731) in the metering data condition package: `suspended`
+ * when the object is not metering. Set by suspend; cleared by
+ * start or resume. ITU-T Rec. X.742 (04/95)
+ * [§8.2.4.1](https://www.itu.int/rec/T-REC-X.742-199504-I), A.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

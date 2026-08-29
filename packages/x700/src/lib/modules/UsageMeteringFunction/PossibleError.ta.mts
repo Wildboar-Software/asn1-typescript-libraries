@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PossibleError
  * @description
  *
+ * Identifies a suspected error in usage data. X.742 does not
+ * assign any such OIDs; specializations (or other recs) must
+ * register them. ITU-T Rec. X.742 (04/95)
+ * [§8.2.3.8](https://www.itu.int/rec/T-REC-X.742-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

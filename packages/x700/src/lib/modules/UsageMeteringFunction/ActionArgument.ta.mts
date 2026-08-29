@@ -20,6 +20,15 @@ import {
  * @summary ActionArgument
  * @description
  *
+ * Information syntax of `startMetering`, `suspendMetering`, and
+ * `resumeMetering` (confirmed CMIS M-ACTION). Selects the data
+ * objects under this control object to which the action
+ * applies. `allObjects` (`NULL`) selects every referenced data
+ * object; for suspend, that stops the control activity and
+ * leaves all data objects suspended. ITU-T Rec. X.742 (04/95)
+ * [§8.1.4](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §9.1.1, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
