@@ -15,6 +15,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ErrorRatioReportType
  * @description
  *
+ * How an error ratio is expressed: number of error bits, or
+ * percentage of error seconds. ITU-T Rec. X.737 (11/95)
+ * [§8.1.8](https://www.itu.int/rec/T-REC-X.737-199511-I), A.6.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,10 @@ export enum _enum_for_ErrorRatioReportType {
  * @summary ErrorRatioReportType
  * @description
  *
+ * How an error ratio is expressed: number of error bits, or
+ * percentage of error seconds. ITU-T Rec. X.737 (11/95)
+ * [§8.1.8](https://www.itu.int/rec/T-REC-X.737-199511-I), A.6.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +54,10 @@ export type ErrorRatioReportType = _enum_for_ErrorRatioReportType;
  * @summary ErrorRatioReportType
  * @description
  *
+ * How an error ratio is expressed: number of error bits, or
+ * percentage of error seconds. ITU-T Rec. X.737 (11/95)
+ * [§8.1.8](https://www.itu.int/rec/T-REC-X.737-199511-I), A.6.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,6 +70,9 @@ export const ErrorRatioReportType = _enum_for_ErrorRatioReportType;
 
 /**
  * @summary ErrorRatioReportType_errorBitNumber
+ * @description
+ *
+ * Error ratio as a count of error bits (0). X.737 §8.1.8.
  * @constant
  * @type {number}
  */
@@ -66,6 +81,9 @@ export const ErrorRatioReportType_errorBitNumber: ErrorRatioReportType =
 
 /**
  * @summary errorBitNumber
+ * @description
+ *
+ * Error ratio as a count of error bits (0). X.737 §8.1.8.
  * @constant
  * @type {number}
  */
@@ -74,6 +92,9 @@ export const errorBitNumber: ErrorRatioReportType =
 
 /**
  * @summary ErrorRatioReportType_percentErrorSecond
+ * @description
+ *
+ * Error ratio as a percentage of error seconds (1). X.737 §8.1.8.
  * @constant
  * @type {number}
  */
@@ -82,6 +103,9 @@ export const ErrorRatioReportType_percentErrorSecond: ErrorRatioReportType =
 
 /**
  * @summary percentErrorSecond
+ * @description
+ *
+ * Error ratio as a percentage of error seconds (1). X.737 §8.1.8.
  * @constant
  * @type {number}
  */

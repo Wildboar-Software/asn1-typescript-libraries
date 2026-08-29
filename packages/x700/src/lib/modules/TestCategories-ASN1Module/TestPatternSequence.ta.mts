@@ -19,6 +19,12 @@ import {
  * @summary TestPatternSequence
  * @description
  *
+ * SEQUENCE OF `TestPattern`: test traffic for loopback
+ * (and connection) tests. Cor.1: `SEQUENCE OF TestPattern` (1995
+ * text said `TestSignal`). ITU-T Rec. X.737 (11/95)
+ * [§8.1.23](https://www.itu.int/rec/T-REC-X.737-199511-I), A.6.24; Cor.1
+ * [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

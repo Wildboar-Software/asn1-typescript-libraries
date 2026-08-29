@@ -37,6 +37,17 @@ import {
  * @summary SequenceOfEvents
  * @description
  *
+ * One resource-boundary test event: insert (`send`) or
+ * expect (`receive`) a signal at a PCO (AO) for a MORT. The
+ * performer handles events sequentially. Receive: wait until the
+ * signal or `waitDuration` expiry (failure). Send: wait
+ * `waitDuration` after the previous event, then insert. Cor.2
+ * replaced SET OF SEQUENCE / ANY DEFINED BY with this SEQUENCE
+ * and `CDTC-SIGNAL-TYPE`. ITU-T Rec. X.737 (11/95)
+ * [§8.1.20](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.6.2.2, A.6.20;
+ * Cor.2 (02/00)
+ * [https://www.itu.int/rec/T-REC-X.737-200002-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,42 +67,66 @@ export class SequenceOfEvents {
     constructor(
         /**
          * @summary `eventId`.
+         * @description
+         *
+         * Number of this event. X.737 §7.6.6, A.6.20.
          * @public
          * @readonly
          */
         readonly eventId: INTEGER,
         /**
          * @summary `signalType`.
+         * @description
+         *
+         * Id of the signal (`CDTC-SIGNAL-TYPE.&id` in `SignalTypeSet`). Cor.2.
          * @public
          * @readonly
          */
         readonly signalType: OBJECT_IDENTIFIER,
         /**
          * @summary `signalValue`.
+         * @description
+         *
+         * Value syntax `CDTC-SIGNAL-TYPE.&Value` for that type. Cor.2.
          * @public
          * @readonly
          */
         readonly signalValue: _Element,
         /**
          * @summary `signalDirection`.
+         * @description
+         *
+         * Insert (`send`) or expect (`receive`). X.737 §7.6.2.2.
          * @public
          * @readonly
          */
         readonly signalDirection: SignalDirection,
         /**
          * @summary `mORTs`.
+         * @description
+         *
+         * MORT into which the signal is inserted or from which it is received.
+         * X.737 §7.6.6.
          * @public
          * @readonly
          */
         readonly mORTs: MORTs,
         /**
          * @summary `associatedObjects`.
+         * @description
+         *
+         * AO (PCO) where the signal is inserted or received. X.737 §7.6.6.
          * @public
          * @readonly
          */
         readonly associatedObjects: AssociatedObjects,
         /**
          * @summary `waitDuration`.
+         * @description
+         *
+         * Receive: time allowed until the signal.
+         * Send: wait after the previous event before inserting. X.737
+         * §7.6.2.2, §8.1.20.
          * @public
          * @readonly
          */

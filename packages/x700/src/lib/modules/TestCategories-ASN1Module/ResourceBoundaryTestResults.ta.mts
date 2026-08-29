@@ -27,6 +27,15 @@ import {
  * @summary ResourceBoundaryTestResults
  * @description
  *
+ * Intermediate resource-boundary results (final X.745
+ * outcome is Inconclusive; only explicit termination). Content
+ * depends on the trigger (§7.6.7 cases 1–4): outcome always;
+ * received signal (type/value, MORTs, AOs) for unexpected or
+ * wrong signal; `eventId` of the failed event for wrong signal or
+ * wait-timer expiry. EVENT-INFO. ITU-T Rec. X.737 (11/95)
+ * [§7.6.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §8.1.16, A.5.16,
+ * A.6.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,18 +52,30 @@ export class ResourceBoundaryTestResults {
     constructor(
         /**
          * @summary `signalReceived`.
+         * @description
+         *
+         * Signal seen at a PCO when it was
+         * unexpected or wrong. Optional (cases 2 and 3). X.737 §7.6.8.
          * @public
          * @readonly
          */
         readonly signalReceived?: OPTIONAL<SignalReceived>,
         /**
          * @summary `intermediateResourceBoundaryTestOutcome`.
+         * @description
+         *
+         * Which of §7.6.7 cases 1–4 triggered this
+         * report. Optional. X.737 §7.6.8.
          * @public
          * @readonly
          */
         readonly intermediateResourceBoundaryTestOutcome?: OPTIONAL<IntermediateResourceBoundaryTestOutcome>,
         /**
          * @summary `eventId`.
+         * @description
+         *
+         * Failed event's id (cases 3 and 4). Optional.
+         * X.737 §7.6.8, §8.1.16.
          * @public
          * @readonly
          */

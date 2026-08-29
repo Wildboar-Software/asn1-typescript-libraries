@@ -25,6 +25,15 @@ import {
  * @summary LoopbackTestResult
  * @description
  *
+ * Loopback result corresponding to X.745 `testOutcome`.
+ * Pass: returned data and measured error (threshold not exceeded).
+ * Fail: `LoopbackFailInfo`. Timed-out: overall test time-out
+ * exceeded (`timeout`). Premature termination: procedural failure
+ * or TERMINATE REQUEST. Otherwise Inconclusive. 1995 rec used
+ * CHOICE; Cor.1 publishes this SEQUENCE. ITU-T Rec. X.737 (11/95)
+ * [§7.4.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §8.1.10; Cor.1
+ * (06/98) [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,30 +53,51 @@ export class LoopbackTestResult {
     constructor(
         /**
          * @summary `passed`.
+         * @description
+         *
+         * Returned looped-back data and measured error
+         * when all patterns succeeded and the threshold was not exceeded.
+         * X.737 §7.4.8.
          * @public
          * @readonly
          */
         readonly passed: LoopbackTestResult_passed,
         /**
          * @summary `fail`.
+         * @description
+         *
+         * Failure cause: error threshold or loopback
+         * time-out exceeded. X.737 §7.4.8.
          * @public
          * @readonly
          */
         readonly fail: LoopbackFailInfo,
         /**
          * @summary `timeout`.
+         * @description
+         *
+         * NULL: overall test time-out period exceeded
+         * (including set-up and loopback time-outs). X.737 §7.4.8, A.7.
          * @public
          * @readonly
          */
         readonly timeout: NULL,
         /**
          * @summary `prematureTermination`.
+         * @description
+         *
+         * NULL: procedural failure or
+         * TERMINATE REQUEST. X.737 §7.4.8.
          * @public
          * @readonly
          */
         readonly prematureTermination: NULL,
         /**
          * @summary `inconclusive`.
+         * @description
+         *
+         * NULL: none of the other outcomes.
+         * X.737 §7.4.8.
          * @public
          * @readonly
          */

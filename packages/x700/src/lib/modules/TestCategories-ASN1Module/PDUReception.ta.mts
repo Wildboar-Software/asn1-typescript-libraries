@@ -30,6 +30,15 @@ import {
  * @summary PDUReception
  * @description
  *
+ * Expected response PDU in a protocol integrity test:
+ * compared with what is received to decide which protocol element
+ * to send next and when. Must not be used together with
+ * `waitingInterval`. Attribute of the protocol-integrity TO when
+ * the wait-on-PDU condition is selected. ITU-T Rec. X.737 (11/95)
+ * [§8.1.13](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.5.6, A.3
+ * `pDUReceptionPackage`,
+ * A.6.14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +54,29 @@ export class PDUReception {
     constructor(
         /**
          * @summary `pDUType`.
+         * @description
+         *
+         * Expected PDU type (OID). X.737 §7.5.6, A.7.
          * @public
          * @readonly
          */
         readonly pDUType: PDUType,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * Parameters of the expected PDU. X.737 A.7.
          * @public
          * @readonly
          */
         readonly parameter: Parameter,
         /**
          * @summary `responseTimeout`.
+         * @description
+         *
+         * Time allowed to receive the matching
+         * PDU before treating the condition as unmet. Optional. X.737
+         * §7.5.6.
          * @public
          * @readonly
          */

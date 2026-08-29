@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DataRate
  * @description
  *
+ * Rate of test data: a REAL, or an OID naming a rate. Used
+ * in `DataUnits` and in `TestDuration.signalLength`. Cor.1 replaced
+ * the 1995 untagged CHOICE. ITU-T Rec. X.737 Cor.1 (06/98)
+ * [https://www.itu.int/rec/T-REC-X.737-199806-I]; X.737 (11/95) A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

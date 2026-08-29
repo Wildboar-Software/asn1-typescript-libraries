@@ -15,6 +15,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InternalResourceTestResults
  * @description
  *
+ * Result for one internal function of a resource: id of the
+ * function tested and a value whose syntax is that function's
+ * `CDTC-TEST-RESULTS` information object. Cor.2 replaced ANY
+ * DEFINED BY with `DMI-TYPE-IDENTIFIER`. Clause 8.1.17 describes
+ * resource self-test results as the function tested plus related
+ * result. ITU-T Rec. X.737 (11/95)
+ * [§8.1.17](https://www.itu.int/rec/T-REC-X.737-199511-I);
+ * Cor.2 (02/00) [https://www.itu.int/rec/T-REC-X.737-200002-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +39,20 @@ export class InternalResourceTestResults {
     constructor(
         /**
          * @summary `functionTested`.
+         * @description
+         *
+         * OID of the function (`CDTC-TEST-RESULTS.&id`
+         * constrained by `InternalResourceSet`). X.737 Cor.2 A.7.
          * @public
          * @readonly
          */
         readonly functionTested: OBJECT_IDENTIFIER,
         /**
          * @summary `testResult`.
+         * @description
+         *
+         * Value syntax `CDTC-TEST-RESULTS.&Value` for
+         * that id. X.737 Cor.2 A.7.
          * @public
          * @readonly
          */

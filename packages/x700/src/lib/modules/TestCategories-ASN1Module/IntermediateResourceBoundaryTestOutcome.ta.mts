@@ -15,6 +15,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IntermediateResourceBoundaryTestOutcome
  * @description
  *
+ * Why a resource-boundary intermediate report was emitted.
+ * `passed` — last signal of the sequence completed (case 1, if
+ * indicated). `unexpected` — signal at a PCO with no active
+ * sequence (case 2). `wrongSignalReceived` — signal other than the
+ * next expected receive (case 3). `waitDurationTimerExpired` —
+ * expected receive did not arrive in time (case 4). ITU-T Rec.
+ * X.737 (11/95) [§7.6.7](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.6.8,
+ * §8.1.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +45,15 @@ export enum _enum_for_IntermediateResourceBoundaryTestOutcome {
  * @summary IntermediateResourceBoundaryTestOutcome
  * @description
  *
+ * Why a resource-boundary intermediate report was emitted.
+ * `passed` — last signal of the sequence completed (case 1, if
+ * indicated). `unexpected` — signal at a PCO with no active
+ * sequence (case 2). `wrongSignalReceived` — signal other than the
+ * next expected receive (case 3). `waitDurationTimerExpired` —
+ * expected receive did not arrive in time (case 4). ITU-T Rec.
+ * X.737 (11/95) [§7.6.7](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.6.8,
+ * §8.1.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,6 +70,15 @@ export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateReso
  * @summary IntermediateResourceBoundaryTestOutcome
  * @description
  *
+ * Why a resource-boundary intermediate report was emitted.
+ * `passed` — last signal of the sequence completed (case 1, if
+ * indicated). `unexpected` — signal at a PCO with no active
+ * sequence (case 2). `wrongSignalReceived` — signal other than the
+ * next expected receive (case 3). `waitDurationTimerExpired` —
+ * expected receive did not arrive in time (case 4). ITU-T Rec.
+ * X.737 (11/95) [§7.6.7](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.6.8,
+ * §8.1.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -66,6 +93,9 @@ export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateRes
 
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_passed
+ * @description
+ *
+ * Sequence completed successfully (0). Case 1. X.737 §7.6.8.
  * @constant
  * @type {number}
  */
@@ -74,6 +104,9 @@ export const IntermediateResourceBoundaryTestOutcome_passed: IntermediateResourc
 
 /**
  * @summary passed
+ * @description
+ *
+ * Sequence completed successfully (0). Case 1. X.737 §7.6.8.
  * @constant
  * @type {number}
  */
@@ -82,6 +115,9 @@ export const passed: IntermediateResourceBoundaryTestOutcome =
 
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_unexpected
+ * @description
+ *
+ * Signal with no active sequence (1). Case 2. X.737 §7.6.8.
  * @constant
  * @type {number}
  */
@@ -90,6 +126,9 @@ export const IntermediateResourceBoundaryTestOutcome_unexpected: IntermediateRes
 
 /**
  * @summary unexpected
+ * @description
+ *
+ * Signal with no active sequence (1). Case 2. X.737 §7.6.8.
  * @constant
  * @type {number}
  */
@@ -98,6 +137,9 @@ export const unexpected: IntermediateResourceBoundaryTestOutcome =
 
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_wrongSignalReceived
+ * @description
+ *
+ * Wrong signal vs expected receive (2). Case 3. X.737 §7.6.8.
  * @constant
  * @type {number}
  */
@@ -106,6 +148,9 @@ export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: Interm
 
 /**
  * @summary wrongSignalReceived
+ * @description
+ *
+ * Wrong signal vs expected receive (2). Case 3. X.737 §7.6.8.
  * @constant
  * @type {number}
  */
@@ -114,6 +159,9 @@ export const wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
 
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired
+ * @description
+ *
+ * Expected receive timed out (3). Case 4. X.737 §7.6.8.
  * @constant
  * @type {number}
  */
@@ -122,6 +170,9 @@ export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: I
 
 /**
  * @summary waitDurationTimerExpired
+ * @description
+ *
+ * Expected receive timed out (3). Case 4. X.737 §7.6.8.
  * @constant
  * @type {number}
  */

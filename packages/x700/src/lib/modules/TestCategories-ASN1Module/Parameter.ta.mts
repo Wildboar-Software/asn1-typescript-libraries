@@ -16,6 +16,12 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar
  * @summary Parameter
  * @description
  *
+ * Typed attribute value used as PDU parameters in protocol
+ * integrity tests. Cor.2: `CMIP-ATTRIBUTE` information objects
+ * (`AttributeSet`) instead of ANY DEFINED BY. ITU-T Rec. X.737
+ * (11/95) [A.7](https://www.itu.int/rec/T-REC-X.737-199511-I); Cor.2 (02/00)
+ * [https://www.itu.int/rec/T-REC-X.737-200002-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +36,18 @@ export class Parameter {
     constructor(
         /**
          * @summary `attributeType`.
+         * @description
+         *
+         * CMIP attribute id (`CMIP-ATTRIBUTE.&id`). X.737 Cor.2.
          * @public
          * @readonly
          */
         readonly attributeType: AttributeId,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Value syntax `CMIP-ATTRIBUTE.&Value` for that id. X.737 Cor.2.
          * @public
          * @readonly
          */

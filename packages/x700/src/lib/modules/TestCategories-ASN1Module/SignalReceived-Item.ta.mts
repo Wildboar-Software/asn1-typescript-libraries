@@ -25,6 +25,10 @@ import {
  * @summary SignalReceived_Item
  * @description
  *
+ * One element of `SignalReceived`: the observed signal and
+ * where it was seen. ITU-T Rec. X.737 (11/95)
+ * [§7.6.8](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,24 +40,36 @@ export class SignalReceived_Item {
     constructor(
         /**
          * @summary `signalType`.
+         * @description
+         *
+         * Id of the received signal (`CDTC-SIGNAL-TYPE.&id`). Cor.2.
          * @public
          * @readonly
          */
         readonly signalType: OBJECT_IDENTIFIER,
         /**
          * @summary `signalValue`.
+         * @description
+         *
+         * Value of that signal type. Cor.2.
          * @public
          * @readonly
          */
         readonly signalValue: _Element,
         /**
          * @summary `mORTs`.
+         * @description
+         *
+         * MORTs from which the signal was received. X.737 §7.6.8.
          * @public
          * @readonly
          */
         readonly mORTs: MORTs,
         /**
          * @summary `associatedObjects`.
+         * @description
+         *
+         * AOs (PCOs) where the signal was received. X.737 §7.6.8.
          * @public
          * @readonly
          */

@@ -32,6 +32,15 @@ import {
  * @summary LoopbackTestInfo
  * @description
  *
+ * Initiation info for a loopback test: send and receive data
+ * over a path within a loopback time-out and acceptable error
+ * ratio (physical loopback, echo, analogue/digital, etc.). MORTs
+ * are the path (or part of it); AOs are loop points (omitted AOs
+ * mean a manual loopback). ACTION-INFO (A.5.12). Production
+ * rewritten by Cor.1. ITU-T Rec. X.737 (11/95)
+ * [§7.4.1](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.4.6; Cor.1 (06/98)
+ * [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,42 +60,76 @@ export class LoopbackTestInfo {
     constructor(
         /**
          * @summary `loopbackData`.
+         * @description
+         *
+         * Test-signal sequence. If omitted, the
+         * pattern is implementation-specific. X.737 §7.4.6, §8.1.23.
          * @public
          * @readonly
          */
         readonly loopbackData?: OPTIONAL<TestPatternSequence>,
         /**
          * @summary `testStartTime`.
+         * @description
+         *
+         * When to start (schedules the test;
+         * time-out period begins then). Optional. X.737 §3.9.8, §7.4.2.2,
+         * §7.4.6.
          * @public
          * @readonly
          */
         readonly testStartTime?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `testIntervalTime`.
+         * @description
+         *
+         * Delay after fully receiving one
+         * pattern before sending the next. May be nearly zero. Optional.
+         * X.737 §3.9.9, §7.4.2.2, §7.4.6.
          * @public
          * @readonly
          */
         readonly testIntervalTime?: OPTIONAL<Timespec>,
         /**
          * @summary `reportingIntervalTime`.
+         * @description
+         *
+         * Interval between intermediate
+         * reports from start time; zero means no intermediate reporting.
+         * Optional. X.737 §7.4.2.2, §7.4.6.
          * @public
          * @readonly
          */
         readonly reportingIntervalTime?: OPTIONAL<Timespec>,
         /**
          * @summary `loopbackType`.
+         * @description
+         *
+         * Kind of loopback (physical, echo,
+         * analogue/digital, …). If omitted, implementation-specific.
+         * X.737 §7.4.6, §8.1.12.
          * @public
          * @readonly
          */
         readonly loopbackType?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `loopbackTimeout`.
+         * @description
+         *
+         * How long the performer waits for
+         * returned data, measured from transmitting a pattern until
+         * reception. If delay exceeds this, the whole test Fails
+         * immediately. Optional. X.737 §3.9.5, §7.4.2.2, §7.4.6.
          * @public
          * @readonly
          */
         readonly loopbackTimeout?: OPTIONAL<Timespec>,
         /**
          * @summary `loopbackErrorThreshold`.
+         * @description
+         *
+         * Error threshold; crossing it
+         * terminates the test with Fail. Optional. X.737 §7.4.6, §8.1.11.
          * @public
          * @readonly
          */
