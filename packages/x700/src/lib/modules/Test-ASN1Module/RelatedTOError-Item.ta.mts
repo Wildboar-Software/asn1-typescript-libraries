@@ -20,6 +20,11 @@ import {
  * @summary RelatedTOError_Item
  * @description
  *
+ * One TO in a related-test error, in request order. `ableToCreateTO` NULL: this
+ * TO could have been instantiated. `unableToCreateTO`: why it could not. ITU-T
+ * Rec. X.745 (11/93) §8.4.4.11, A.7.4.
+ * [§8.4.4.11](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,12 @@ import {
  * @summary IndependentTestInvocationError
  * @description
  *
+ * Specific error when controlledTestRequestType was independent and one or more
+ * requested TOs could not be instantiated. SEQUENCE OF per-TO CHOICE, in
+ * request order: success (IndependentTestResponse) or failure (TONotCreated).
+ * ITU-T Rec. X.745 (11/93) §8.4.4.3, A.7.4.
+ * [§8.4.4.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

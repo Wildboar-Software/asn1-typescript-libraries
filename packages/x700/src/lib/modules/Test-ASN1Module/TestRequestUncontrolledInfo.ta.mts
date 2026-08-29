@@ -40,6 +40,12 @@ import {
  * @summary TestRequestUncontrolledInfo
  * @description
  *
+ * M-ACTION information of testRequestUncontrolledAction (confirmed). No TOs are
+ * created; results come back as one or more confirmations until the final one
+ * (which carries testOutcome). Invocation spans the request to the final
+ * response. ITU-T Rec. X.745 (11/93) §7.1.1, 9.6, 8.4.2.
+ * [§7.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,30 +63,59 @@ export class TestRequestUncontrolledInfo {
     constructor(
         /**
          * @summary `testCategoryInformation`.
+         * @description
+         *
+         * Mandatory category-specific input. ITU-T Rec. X.745 (11/93) §8.4.2.4,
+         * 9.6.
+         * [§8.4.2.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testCategoryInformation: TestCategoryInformation,
         /**
          * @summary `testSessionId`.
+         * @description
+         *
+         * Optional; if present, echoed on the response (Table 3 C(=)). ITU-T
+         * Rec. X.745 (11/93) §7.3.2, 9.6.
+         * [§7.3.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testSessionId?: OPTIONAL<TestSessionId>,
         /**
          * @summary `timeoutPeriod`.
+         * @description
+         *
+         * Optional maximum instantiation time. ITU-T Rec. X.745 (11/93) §8.1.7.
+         * [§8.1.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly timeoutPeriod?: OPTIONAL<TimeoutPeriod>,
         /**
          * @summary `associatedObjects`.
+         * @description
+         *
+         * Optional AOs; may also appear on the response (Table 3). ITU-T Rec.
+         * X.745 (11/93) §8.1.1, 9.6.
+         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly associatedObjects?: OPTIONAL<AssociatedObjects>,
         /**
          * @summary `toBeTestedMORTs`.
+         * @description
+         *
+         * Optional explicit MORTs (else implicit). ITU-T Rec. X.745 (11/93)
+         * §8.4.2.6.
+         * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

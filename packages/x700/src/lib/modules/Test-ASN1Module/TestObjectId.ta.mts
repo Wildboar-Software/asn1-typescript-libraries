@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TestObjectId
  * @description
  *
+ * RDN attribute uniquely identifying a TO. Assigned by the test conductor or
+ * the test performer. Mandatory on the testObject class. ITU-T Rec. X.745
+ * (11/93) §8.1.4, A.3.11.
+ * [§8.1.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

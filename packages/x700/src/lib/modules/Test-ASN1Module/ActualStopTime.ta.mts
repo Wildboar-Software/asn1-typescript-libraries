@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ActualStopTime
  * @description
  *
+ * Time the test performer expects a TO to end execution, or the time it did
+ * end. Not SET by the test conductor. Default unknown. Mandatory in a
+ * scheduling-conflict notification. If this becomes later than the requested
+ * stop, the TO shall cease execution (if executing) and emit
+ * schedulingConflict. ITU-T Rec. X.745 (11/93) §7.2.2, 8.2.1, 9.10.
+ * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

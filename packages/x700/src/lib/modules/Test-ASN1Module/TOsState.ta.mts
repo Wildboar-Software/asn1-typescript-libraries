@@ -25,6 +25,11 @@ import {
  * @summary TOsState
  * @description
  *
+ * Per-TO state in a suspend/resume result or error. On suspend, testState is
+ * the state before suspension; on resume, the state after resumption. ITU-T
+ * Rec. X.745 (11/93) §9.7, A.4.
+ * [§9.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +45,25 @@ export class TOsState {
     constructor(
         /**
          * @summary `tOInstance`.
+         * @description
+         *
+         * TO instance. Optional if the test invocation id is already a tOName
+         * (independent test identified by the TO DN). ITU-T Rec. X.745 (11/93)
+         * §A.7.2.
+         * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly tOInstance: OPTIONAL<ObjectInstance>,
         /**
          * @summary `testState`.
+         * @description
+         *
+         * TO state (X.731 mapping of 7.3.3). Before-suspend or after-resume,
+         * depending on the request. ITU-T Rec. X.745 (11/93) §9.7.
+         * [§9.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

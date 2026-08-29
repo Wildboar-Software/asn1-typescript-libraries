@@ -51,6 +51,12 @@ import {
  * @summary TestRequestControlledInfo
  * @description
  *
+ * M-ACTION information of testRequestControlledAction (confirmed). Directed at
+ * a TARR. Creates one or more TOs for monitoring and control. Mode confirmed.
+ * TO instance names shall not be supplied if scoping/filtering selects multiple
+ * TARRs. ITU-T Rec. X.745 (11/93) §9.5, 8.4.2, A.4.
+ * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,42 +76,86 @@ export class TestRequestControlledInfo {
     constructor(
         /**
          * @summary `controlledTestRequestType`.
+         * @description
+         *
+         * independent (one TO per test) or related (one test, several TOs).
+         * Mandatory. Selects the response CHOICE. ITU-T Rec. X.745 (11/93)
+         * §8.4.2.1.
+         * [§8.4.2.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly controlledTestRequestType: ControlledTestRequestType,
         /**
          * @summary `testCategoryInformation`.
+         * @description
+         *
+         * Optional category-specific input; not necessarily stored on TOs.
+         * ITU-T Rec. X.745 (11/93) §8.4.2.4.
+         * [§8.4.2.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testCategoryInformation: OPTIONAL<TestCategoryInformation>,
         /**
          * @summary `testSessionId`.
+         * @description
+         *
+         * Optional conductor-assigned session id; if present, copied to every
+         * TO and result notification. ITU-T Rec. X.745 (11/93) §7.3.2.
+         * [§7.3.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testSessionId: OPTIONAL<TestSessionId>,
         /**
          * @summary `toBeTestedMORTs`.
+         * @description
+         *
+         * Optional explicit MORT list or scope/filter. Else implicit (TARR is
+         * the MORT, or MORTs in TO initial attributes). ITU-T Rec. X.745
+         * (11/93) §8.4.2.6.
+         * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly toBeTestedMORTs: OPTIONAL<ToBeTestedMORTs>,
         /**
          * @summary `associatedObjects`.
+         * @description
+         *
+         * Optional AOs involved in the test, distinct from MORT/TO/TARR. ITU-T
+         * Rec. X.745 (11/93) §8.1.1, 8.4.2.7.
+         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly associatedObjects: OPTIONAL<AssociatedObjects>,
         /**
          * @summary `timeoutPeriod`.
+         * @description
+         *
+         * Optional maximum instantiation time. ITU-T Rec. X.745 (11/93) §8.1.7.
+         * [§8.1.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly timeoutPeriod: OPTIONAL<TimeoutPeriod>,
         /**
          * @summary `testObjectList`.
+         * @description
+         *
+         * TOs to create. Order is significant for correlating the response or
+         * error; it does not imply creation order. Mandatory. ITU-T Rec. X.745
+         * (11/93) §8.4.2.5.
+         * [§8.4.2.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

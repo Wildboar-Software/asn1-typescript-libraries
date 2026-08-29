@@ -25,6 +25,11 @@ import {
  * @summary TONotCreated
  * @description
  *
+ * Why a TO was not instantiated (independent or related error). Either an
+ * enumerated reason or an AttributeList of inappropriate initial values. ITU-T
+ * Rec. X.745 (11/93) §A.7.4, 8.4.4.3, 8.4.4.11.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

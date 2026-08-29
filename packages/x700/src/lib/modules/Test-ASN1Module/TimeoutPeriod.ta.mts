@@ -19,6 +19,12 @@ import {
  * @summary TimeoutPeriod
  * @description
  *
+ * Maximum time a test may remain instantiated. Optional on controlled and
+ * uncontrolled test requests. If the period expires the test terminates and
+ * outcome is timed-out (or a scheduling-conflict notification for a controlled
+ * TO). ITU-T Rec. X.745 (11/93) §8.1.7, 7.2.2, 8.4.2.7.
+ * [§8.1.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

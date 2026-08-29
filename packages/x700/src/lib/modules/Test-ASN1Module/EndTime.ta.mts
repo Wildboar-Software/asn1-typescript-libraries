@@ -21,6 +21,12 @@ import {
  * @summary EndTime
  * @description
  *
+ * Latest time the test conductor wants the TO to leave the Testing state
+ * (requested window). `continual` NULL means forever (the default). `specific`
+ * is absolute; `relative` is a Timespec. If startTime is later than endTime the
+ * TO shall emit schedulingConflict. ITU-T Rec. X.745 (11/93) §8.2.3, 7.2.2.
+ * [§8.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

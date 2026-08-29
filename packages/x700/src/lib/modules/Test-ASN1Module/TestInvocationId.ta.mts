@@ -24,6 +24,13 @@ import {
  * @summary TestInvocationId
  * @description
  *
+ * Identifies a controlled test from initiation to termination. `invocationId`
+ * (TARR DN + integer) shall be used for a related test; `tOName` (DN of the
+ * single TO) may be used for an independent test. The performer assigns the id
+ * and returns it in the controlled test response. Mandatory TO attribute. Same
+ * value on all TOs of one test. ITU-T Rec. X.745 (11/93) §7.3.1, 8.1.3.
+ * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

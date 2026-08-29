@@ -19,6 +19,14 @@ import {
  * @summary AssociatedObjects
  * @description
  *
+ * Managed objects distinct from MORT(s), TO(s) and the TARR that are involved
+ * in the test. Example: in a connectivity test, the AO is the entity the MORT
+ * resource should connect to. Optional extra information is a TMF-OBJECT
+ * id/value pair (Cor.3). ITU-T Rec. X.745 (11/93) §3.10.1, 8.1.1.
+ * [§3.10.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * Syntax: X.745 Cor.3 (02/00) A.7.1.
+ * https://www.itu.int/rec/T-REC-X.745-200002-I_Cor3
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,11 @@ import {
  * @summary NoSuchTestSessionId
  * @description
  *
+ * Specific error on suspend/resume/terminate: no test with this session id is
+ * under control of this TARR. Syntax is that TestSessionId. ITU-T Rec. X.745
+ * (11/93) §8.4.4.10, A.6.
+ * [§8.4.4.10](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
