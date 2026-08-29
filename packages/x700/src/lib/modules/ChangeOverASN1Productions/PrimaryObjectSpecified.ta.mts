@@ -19,6 +19,11 @@ import {
  * @summary PrimaryObjectSpecified
  * @description
  *
+ * Specific-error syntax for `changeOverCapabilityAbsent`: the named
+ * object lacks the change-over capability needed for back-up
+ * control. ITU-T Rec. X.751 (11/95)
+ * [§8.7.3](https://www.itu.int/rec/T-REC-X.751-199511-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import {
  * @summary part17Action
  * @description
  *
+ * Arc for change-over actions: `changeOver` (1) and `changeBack`
+ * (2). ITU-T Rec. X.751 (11/95)
+ * [A.5](https://www.itu.int/rec/T-REC-X.751-199511-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

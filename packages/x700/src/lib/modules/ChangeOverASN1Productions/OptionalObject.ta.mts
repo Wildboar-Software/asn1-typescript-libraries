@@ -20,6 +20,12 @@ import {
  * @summary OptionalObject
  * @description
  *
+ * Optional object-instance argument: `noObject` when the manager
+ * omits the participant (agent then selects, or the value is
+ * absent). ITU-T Rec. X.751 (11/95)
+ * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I),
+ * §7.3.1.1, §7.3.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

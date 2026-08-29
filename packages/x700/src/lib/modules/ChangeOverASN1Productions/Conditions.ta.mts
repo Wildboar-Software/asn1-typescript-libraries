@@ -20,6 +20,12 @@ import {
  * @summary Conditions
  * @description
  *
+ * Specific-error syntax for `preconditionsNotMet` and
+ * `postconditionsNotMet`. At least one of `primary` or `secondary`
+ * must be present. ITU-T Rec. X.751 (11/95)
+ * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I), §8.7.9,
+ * A.6, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +40,24 @@ export class Conditions {
     constructor(
         /**
          * @summary `primary`.
+         * @description
+         *
+         * Failed condition on the primary / backed-up participant.
+         * ITU-T Rec. X.751 (11/95)
+         * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+         * §8.7.9.
          * @public
          * @readonly
          */
         readonly primary?: OPTIONAL<Condition>,
         /**
          * @summary `secondary`.
+         * @description
+         *
+         * Failed condition on the secondary / back-up participant.
+         * ITU-T Rec. X.751 (11/95)
+         * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+         * §8.7.9.
          * @public
          * @readonly
          */

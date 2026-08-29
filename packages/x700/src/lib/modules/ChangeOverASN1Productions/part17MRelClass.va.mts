@@ -16,6 +16,10 @@ import {
  * @summary part17MRelClass
  * @description
  *
+ * Arc for change-over managed relationship classes:
+ * `changeOverRelationship` (1). ITU-T Rec. X.751 (11/95)
+ * [A.1](https://www.itu.int/rec/T-REC-X.751-199511-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

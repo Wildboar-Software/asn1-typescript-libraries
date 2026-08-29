@@ -20,6 +20,13 @@ import {
  * @summary BackUpInfo
  * @description
  *
+ * Specific-error syntax for `backup-backedup-Mismatch` (specified vs
+ * existing pair do not correspond) and for `notBackedUp` (the
+ * named object is not currently backed up). Each component defaults
+ * to `noObject`. ITU-T Rec. X.751 (11/95)
+ * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I), §8.7.7,
+ * A.6, Annex B (as corrected by Cor.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,24 +43,44 @@ export class BackUpInfo {
     constructor(
         /**
          * @summary `backedUpObjectSpecified`.
+         * @description
+         *
+         * Backed-up object named in the action, if any. ITU-T Rec.
+         * X.751 (11/95)
+         * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly backedUpObjectSpecified?: OPTIONAL<OptionalObject>,
         /**
          * @summary `backUpObjectSpecified`.
+         * @description
+         *
+         * Back-up object named in the action, if any. ITU-T Rec.
+         * X.751 (11/95)
+         * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly backUpObjectSpecified?: OPTIONAL<OptionalObject>,
         /**
          * @summary `backedUpObjectExisting`.
+         * @description
+         *
+         * Backed-up object actually bound in the relationship, if
+         * any. ITU-T Rec. X.751 (11/95)
+         * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly backedUpObjectExisting?: OPTIONAL<OptionalObject>,
         /**
          * @summary `backUpObjectExisting`.
+         * @description
+         *
+         * Back-up object actually bound in the relationship, if any.
+         * ITU-T Rec. X.751 (11/95)
+         * [§8.7.2](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */

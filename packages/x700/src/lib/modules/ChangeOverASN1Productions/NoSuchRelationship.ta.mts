@@ -21,6 +21,12 @@ import {
  * @summary NoSuchRelationship
  * @description
  *
+ * Specific-error syntax for `noSuchRelationships`: no change-over
+ * relationship exists to control (e.g. empty `secondary`
+ * attribute). ITU-T Rec. X.751 (11/95)
+ * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I), A.6,
+ * Annex B (as corrected by Cor.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +42,33 @@ export class NoSuchRelationship {
     constructor(
         /**
          * @summary `relationshipClass`.
+         * @description
+         *
+         * Relationship class that was required. ITU-T Rec. X.751
+         * (11/95)
+         * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly relationshipClass: OBJECT_IDENTIFIER,
         /**
          * @summary `relationshipBinding`.
+         * @description
+         *
+         * Optional relationship-binding identifier. ITU-T Rec.
+         * X.751 (11/95)
+         * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly relationshipBinding?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `relationshipInstance`.
+         * @description
+         *
+         * Optional names of relationship-instance participants. ITU-T
+         * Rec. X.751 (11/95)
+         * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */

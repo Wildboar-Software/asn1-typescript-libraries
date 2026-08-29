@@ -19,6 +19,13 @@ import {
  * @summary ExpectedAttributeList
  * @description
  *
+ * Set of requested attribute modifications applied after
+ * preconditions of `changeOver` or `changeBack`. Each item is a
+ * modify-operator, attribute id, and optional value. ITU-T Rec.
+ * X.751 (11/95)
+ * [§8.6.1.1](https://www.itu.int/rec/T-REC-X.751-199511-I),
+ * §8.6.2.1, Annex B (as corrected by Cor.1 and Cor.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

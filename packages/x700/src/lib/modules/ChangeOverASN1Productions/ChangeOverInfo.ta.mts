@@ -30,6 +30,13 @@ import {
  * @summary ChangeOverInfo
  * @description
  *
+ * Action information for the confirmed `changeOver` action (bind a
+ * secondary object into the back-up role and the primary into the
+ * backed-up role). Directed at the change-over control object.
+ * Reply identifies the selected secondary. ITU-T Rec. X.751 (11/95)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.751-199511-I), §7.3.1.1,
+ * A.5, Annex B (as corrected by Cor.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,24 +53,50 @@ export class ChangeOverInfo {
     constructor(
         /**
          * @summary `primary`.
+         * @description
+         *
+         * Object in the primary role that is to be backed up. Must
+         * already be bound in that role. ITU-T Rec. X.751 (11/95)
+         * [§7.3.1.1](https://www.itu.int/rec/T-REC-X.751-199511-I),
+         * §8.6.1.1.
          * @public
          * @readonly
          */
         readonly primary: ObjectInstance,
         /**
          * @summary `secondary`.
+         * @description
+         *
+         * Object in the secondary role to assume the back-up role.
+         * If omitted (`noObject`), the control object selects by the
+         * priority list in the `secondary` attribute. ITU-T Rec.
+         * X.751 (11/95)
+         * [§7.3.1.1](https://www.itu.int/rec/T-REC-X.751-199511-I),
+         * §8.6.1.1.
          * @public
          * @readonly
          */
         readonly secondary?: OPTIONAL<OptionalObject>,
         /**
          * @summary `primaryChanges`.
+         * @description
+         *
+         * Extra attribute modifications on the primary as it assumes
+         * the backed-up role. Applied after preconditions succeed.
+         * ITU-T Rec. X.751 (11/95)
+         * [§8.6.1.1](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly primaryChanges?: OPTIONAL<ExpectedAttributeList>,
         /**
          * @summary `secondaryChanges`.
+         * @description
+         *
+         * Extra attribute modifications on the secondary as it
+         * assumes the back-up role. Applied after preconditions
+         * succeed. ITU-T Rec. X.751 (11/95)
+         * [§8.6.1.1](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */

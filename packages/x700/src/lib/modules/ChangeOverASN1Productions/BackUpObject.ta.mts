@@ -19,6 +19,12 @@ import {
  * @summary BackUpObject
  * @description
  *
+ * Specific-error syntax for `alreadyBackedUp`: names the object
+ * already providing back-up (or `noObject` if none). ITU-T Rec.
+ * X.751 (11/95)
+ * [§8.7.1](https://www.itu.int/rec/T-REC-X.751-199511-I), A.6,
+ * Annex B (as corrected by Cor.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

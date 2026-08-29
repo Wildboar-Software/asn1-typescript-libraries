@@ -20,6 +20,13 @@ import {
  * @summary UnattainableAttributeList
  * @description
  *
+ * Specific-error syntax for `expectedResultUnsatisfied`: requested
+ * extra attribute changes that could not be performed, or that
+ * would violate postconditions. At least one of the two components
+ * must be present. ITU-T Rec. X.751 (11/95)
+ * [§8.7.4](https://www.itu.int/rec/T-REC-X.751-199511-I), A.6,
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +41,22 @@ export class UnattainableAttributeList {
     constructor(
         /**
          * @summary `primaryChanges`.
+         * @description
+         *
+         * Unattainable modifications requested on the primary (or
+         * backed-up) object. ITU-T Rec. X.751 (11/95)
+         * [§8.7.4](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly primaryChanges?: OPTIONAL<ExpectedAttributeList>,
         /**
          * @summary `secondaryChanges`.
+         * @description
+         *
+         * Unattainable modifications requested on the secondary (or
+         * back-up) object. ITU-T Rec. X.751 (11/95)
+         * [§8.7.4](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
