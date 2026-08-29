@@ -26,6 +26,14 @@ import {
  * @summary TerminateValidationArgument
  * @description
  *
+ * Confirmed `terminateValidation` M-ACTION information. Aborts a
+ * running validation on a softwareUnit. Pre-condition: the object
+ * is currently validating; otherwise the reply is
+ * `noOutStandingValidation`. `{… action(9)
+ * terminateValidation(5)}`. ITU-T Rec. X.744 (10/96)
+ * [§8.3.7](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §9.8 Table 12, A.5.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +48,21 @@ export class TerminateValidationArgument {
     constructor(
         /**
          * @summary `terminateValidationInfo`.
+         * @description
+         *
+         * Termination mode: `cancel` discards partial results;
+         * `truncate` returns them. Mandatory. ITU-T Rec. X.744
+         * (10/96) §8.3.7, §9.8 Table 12, A.5.5.
          * @public
          * @readonly
          */
         readonly terminateValidationInfo: TerminateValidationInfo,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 12. ITU-T Rec. X.744
+         * (10/96) §9.8 Table 12.
          * @public
          * @readonly
          */

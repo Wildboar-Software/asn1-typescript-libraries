@@ -25,6 +25,14 @@ import {
  * @summary RevertArgument
  * @description
  *
+ * Confirmed `revert` M-ACTION information. Instructs a softwareUnit
+ * (or executableSoftware) to undo an install or remove applied
+ * patches. Updates `appliedPatches`. Each patch is a GraphicString
+ * system identifier or an object instance. `{… action(9)
+ * revert(4)}`. ITU-T Rec. X.744 (10/96)
+ * [§8.3.6](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §7.3.1, §9.7 Table 11, A.5.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +47,20 @@ export class RevertArgument {
     constructor(
         /**
          * @summary `revertInfo`.
+         * @description
+         *
+         * Patch or patches to revert (mandatory). ITU-T Rec. X.744
+         * (10/96) §8.3.6, §9.7 Table 11, A.5.4.
          * @public
          * @readonly
          */
         readonly revertInfo: RevertInfo,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 11. ITU-T Rec. X.744
+         * (10/96) §9.7 Table 11.
          * @public
          * @readonly
          */

@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary NoteField
  * @description
  *
+ * Syntax of `noteField`: comments associated with the managed
+ * object, including installation instructions, startup parameters,
+ * and information needed to activate features. ITU-T Rec. X.744
+ * (10/96)
+ * [§8.2.20](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.20.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,13 @@ import {
  * @summary AutoRestoreSource
  * @description
  *
+ * Syntax of `futureAutoRestoreSource` and of the `source` field of
+ * `autoRestoreReport`. Local managed object, or a remote system
+ * (GraphicString; off-line). Trigger criteria are system-specific.
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.2.13](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.13, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

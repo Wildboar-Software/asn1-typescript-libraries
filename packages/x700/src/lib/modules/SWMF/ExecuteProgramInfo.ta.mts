@@ -19,6 +19,14 @@ import {
  * @summary ExecuteProgramInfo
  * @description
  *
+ * Confirmed `executeProgram` M-ACTION information, directed at an
+ * executableSoftware instance (must be installed). Extensions for
+ * start-up parameters; the rec does not define a fixed parameter
+ * set. Denied while `usageState` is busy until it becomes active or
+ * idle. `{… action(9) executeProgram(2)}`. ITU-T Rec. X.744 (10/96)
+ * [§8.3.3](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §7.4.2, §8.1.3, A.5.2, §9.4 Table 8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

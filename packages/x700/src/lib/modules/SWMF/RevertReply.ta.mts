@@ -25,6 +25,12 @@ import {
  * @summary RevertReply
  * @description
  *
+ * Positive `revert` reply. Present in a positive response;
+ * otherwise Errors. `revertedPatches` is the resulting
+ * `appliedPatches` value after the revert. ITU-T Rec. X.744 (10/96)
+ * [§8.3.6](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §9.7 Table 11, A.5.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,21 @@ export class RevertReply {
     constructor(
         /**
          * @summary `revertedPatches`.
+         * @description
+         *
+         * Patches that remain applied after the revert (Table 11
+         * "Applied patches"). ITU-T Rec. X.744 (10/96) §8.3.6,
+         * §9.7 Table 11.
          * @public
          * @readonly
          */
         readonly revertedPatches: AppliedPatches,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 11. ITU-T Rec. X.744
+         * (10/96) §9.7 Table 11.
          * @public
          * @readonly
          */

@@ -21,6 +21,20 @@ import {
  * @summary ValidateInfo
  * @description
  *
+ * Confirmed `validate` M-ACTION information, directed at a
+ * softwareUnit. Checks integrity (checksum, viruses, etc.) and that
+ * previously delivered software remains usable. Result is
+ * `ValidateReply`. If `terminateValidation` aborts first, the
+ * validate reply is `validationTerminated` (`NULL`).
+ *
+ * - `instanceDefaultValidationType` — local default
+ * - `registeredValidationType` — registered OID
+ * - `systemSpecificValidationType` — management extensions
+ *
+ * `{… action(9) validate(6)}`. ITU-T Rec. X.744 (10/96)
+ * [§8.3.8](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §7.1.10, §7.3.1, §9.9 Table 13, A.5.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

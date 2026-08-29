@@ -30,6 +30,14 @@ import {
  * @summary DeliverResultInfo
  * @description
  *
+ * Event information of `deliverResultNotification`, emitted by
+ * softwareDistributor when distribution completes. Also the
+ * positive deliver-action reply (`Deliver result info` in Table 7).
+ * `{… notification(10) deliverResultNotification(3)}`. ITU-T Rec.
+ * X.744 (10/96)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §9.3 Table 7, §9.12 Table 16, A.6.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +53,32 @@ export class DeliverResultInfo {
     constructor(
         /**
          * @summary `deliverId`.
+         * @description
+         *
+         * Same id as the originating `deliver` action, when one was
+         * supplied. User in Tables 7 and 16. ITU-T Rec. X.744
+         * (10/96) §9.3, §9.12.
          * @public
          * @readonly
          */
         readonly deliverId: OPTIONAL<DeliverId>,
         /**
          * @summary `deliverResult`.
+         * @description
+         *
+         * Delivery outcome (pass / specific failure / unknown).
+         * Conditional in the action reply; mandatory in the
+         * notification. ITU-T Rec. X.744 (10/96) §8.4.3, §9.12.
          * @public
          * @readonly
          */
         readonly deliverResult: DeliverResult,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Tables 7 and 16. ITU-T Rec.
+         * X.744 (10/96) §9.3, §9.12.
          * @public
          * @readonly
          */

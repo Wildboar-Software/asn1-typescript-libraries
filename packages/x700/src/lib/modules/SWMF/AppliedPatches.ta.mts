@@ -15,6 +15,13 @@ import { Patch, _decode_Patch, _encode_Patch } from '../SWMF/Patch.ta.mjs';
  * @summary AppliedPatches
  * @description
  *
+ * Syntax of the `appliedPatches` attribute: patches that have been
+ * applied and still exist in the softwareUnit. Read-only;
+ * automatically updated when a patch is applied or reverted. ITU-T
+ * Rec. X.744 (10/96)
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

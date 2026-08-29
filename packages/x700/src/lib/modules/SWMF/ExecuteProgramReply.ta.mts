@@ -27,6 +27,12 @@ import {
  * @summary ExecuteProgramReply
  * @description
  *
+ * Positive `executeProgram` reply: process id, owner, and start
+ * time of the new execution. Present in a positive response;
+ * otherwise Errors. ITU-T Rec. X.744 (10/96)
+ * [§8.3.3](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §9.4 Table 8, A.5.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,24 +49,41 @@ export class ExecuteProgramReply {
     constructor(
         /**
          * @summary `processId`.
+         * @description
+         *
+         * Identifier of the started process. Conditional in Table 8
+         * (present in a positive reply). ITU-T Rec. X.744 (10/96)
+         * §9.4 Table 8, A.5.2.
          * @public
          * @readonly
          */
         readonly processId: INTEGER,
         /**
          * @summary `processOwner`.
+         * @description
+         *
+         * Owner of the started process. ITU-T Rec. X.744 (10/96)
+         * §9.4 Table 8, A.5.2.
          * @public
          * @readonly
          */
         readonly processOwner: Identity,
         /**
          * @summary `startTime`.
+         * @description
+         *
+         * Time execution began. ITU-T Rec. X.744 (10/96) §9.4
+         * Table 8, A.5.2.
          * @public
          * @readonly
          */
         readonly startTime: GeneralizedTime,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 8. ITU-T Rec. X.744
+         * (10/96) §9.4 Table 8.
          * @public
          * @readonly
          */

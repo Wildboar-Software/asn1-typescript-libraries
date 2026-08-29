@@ -16,6 +16,27 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DeliverResult
  * @description
  *
+ * Outcome of a software delivery, carried in
+ * `deliverResultNotification` and the deliver action reply.
+ * Clause 8.4.3 summarizes values as pass, fail, or unknown; A.8
+ * distinguishes:
+ *
+ * - `pass` (0) — delivery completed successfully
+ * - `communicationError` (1)
+ * - `equipmentError` (2)
+ * - `qosError` (3)
+ * - `accessDenied` (4)
+ * - `notFound` (5)
+ * - `insufficientSpace` (6)
+ * - `alreadyDelivered` (7)
+ * - `inProgress` (8)
+ * - `unknown` (9)
+ *
+ * The rec does not define the named failure codes beyond these
+ * identifiers. ITU-T Rec. X.744 (10/96)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.6.3, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +50,10 @@ export type DeliverResult = INTEGER;
 
 /**
  * @summary DeliverResult_pass
+ * @description
+ *
+ * Delivery completed successfully. ITU-T Rec. X.744 (10/96)
+ * §8.4.3, A.8.
  * @constant
  * @type {number}
  */
@@ -155,6 +180,9 @@ export const inProgress: DeliverResult = DeliverResult_inProgress; /* SHORT_NAME
 
 /**
  * @summary DeliverResult_unknown
+ * @description
+ *
+ * Delivery outcome unknown. ITU-T Rec. X.744 (10/96) §8.4.3, A.8.
  * @constant
  * @type {number}
  */

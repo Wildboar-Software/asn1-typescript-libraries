@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GlobalTime
  * @description
  *
+ * GeneralizedTime used by `dateOfCreation`. Mandatory initial value
+ * is the actual time of object-instance creation (local means).
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.2.5](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

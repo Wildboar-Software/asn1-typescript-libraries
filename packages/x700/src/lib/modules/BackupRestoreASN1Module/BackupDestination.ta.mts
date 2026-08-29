@@ -21,6 +21,19 @@ import {
  * @summary BackupDestination
  * @description
  *
+ * Backup target for the `backup` action and for
+ * `futureAutoBackupDestination`.
+ *
+ * - `localObject` — same-class object in the managed system
+ * - `inLine` — copy returned to the managing system (action reply
+ *   or `autoBackupReport` Event Information)
+ * - `offLine` — remote system (GraphicString; e.g. FTAM)
+ *
+ * Also the syntax of `futureAutoBackupDestination`. ITU-T Rec.
+ * X.744 (10/96)
+ * [§8.3.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §8.2.10, A.9.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
