@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FilterSize
  * @description
  *
+ * Size of the NTP clock-filter shift register (0..32).
+ * Syntax of `filterSize`. ITU-T Rec. X.743 (06/98)
+ * [§B.3.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GlobalTime
  * @description
  *
+ * Eight-octet encoding of a time instant. Syntax of
+ * `clockValue` and `clockEventTime`. The rec points to the
+ * §8.1 representation (seconds + nanoseconds since an epoch,
+ * 1 ns precision, ~600 years per epoch); it does not specify
+ * the octet layout. ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ClockEventCounter
  * @description
  *
+ * Count of system exception events since the counter was last
+ * checked and cleared (0..255). Syntax of
+ * `clockEventCounter` (`MATCHES FOR EQUALITY, ORDERING`).
+ * ITU-T Rec. X.743 (06/98)
+ * [§8.3.5](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CumLeapSeconds
  * @description
  *
+ * Cumulative leap seconds since 1 January 1972 (0..255).
+ * Syntax of `leapSecondCount` in optional `leapSecondPkg`
+ * (`GET-REPLACE`, `SET-BY-CREATE`). Distinct from
+ * TimeRepresentation `CumLeapSeconds` (0..65536). ITU-T Rec. X.743 (06/98)
+ * [§8.3.13](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

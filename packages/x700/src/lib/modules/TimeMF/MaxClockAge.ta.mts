@@ -19,6 +19,12 @@ import {
  * @summary MaxClockAge
  * @description
  *
+ * Maximum interval without an update that a reference clock
+ * is still considered valid. Syntax of `maximumClockAge`.
+ * Also the interval over which `maximumSkew` is measured.
+ * ITU-T Rec. X.743 (06/98)
+ * [§B.3.3](https://www.itu.int/rec/T-REC-X.743-199806-I), B.3.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

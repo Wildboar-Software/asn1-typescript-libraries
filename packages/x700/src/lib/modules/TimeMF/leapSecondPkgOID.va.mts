@@ -15,6 +15,13 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary leapSecondPkgOID
  * @description
  *
+ * Registers conditional package `leapSecondPkg` on
+ * `clockSource`: `leapSecondIndication` and
+ * `leapSecondCount` (`GET-REPLACE`, `SET-BY-CREATE`).
+ * Present if the instance supports leap-second information.
+ * ITU-T Rec. X.743 (06/98)
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,12 @@ import {
  * @summary MaxDistance
  * @description
  *
+ * Maximum acceptable NTP synchronization distance. Syntax of
+ * `maximumDistance`. Synchronization distance is the sum of
+ * round-trip delays to the root of the subnet (H.1.5).
+ * ITU-T Rec. X.743 (06/98)
+ * [§B.3.5](https://www.itu.int/rec/T-REC-X.743-199806-I), Annex H.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

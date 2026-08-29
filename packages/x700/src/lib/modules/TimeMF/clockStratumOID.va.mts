@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockStratumOID
  * @description
  *
+ * Registers attribute `clockStratum`: current stratum of
+ * this local clock. On `localClock` (`GET`; equality and
+ * ordering). ITU-T Rec. X.743 (06/98)
+ * [§8.3.11](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

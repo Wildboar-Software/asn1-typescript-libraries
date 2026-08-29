@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReachRegSize
  * @description
  *
+ * Size of the NTP reachability register (0..32). Syntax of
+ * `reachabilityRegisterSize`. ITU-T Rec. X.743 (06/98)
+ * [§B.3.13](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

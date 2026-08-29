@@ -20,6 +20,12 @@ import {
  * @summary SinglePeerClock
  * @description
  *
+ * One peer currently maintained by a local clock: an
+ * association number and that peer's `ClockAddress`. Element
+ * type of `peerClockAddresses`. The rec does not further
+ * define `assocNum`. ITU-T Rec. X.743 (06/98)
+ * [§8.3.16](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +40,21 @@ export class SinglePeerClock {
     constructor(
         /**
          * @summary `assocNum`.
+         * @description
+         *
+         * Association number for this peer. The rec does not further
+         * specify this field. ITU-T Rec. X.743 (06/98)
+         * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly assocNum: INTEGER,
         /**
          * @summary `assocClock`.
+         * @description
+         *
+         * Network address of the peer. ITU-T Rec. X.743 (06/98)
+         * [§8.3.16](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
          * @public
          * @readonly
          */

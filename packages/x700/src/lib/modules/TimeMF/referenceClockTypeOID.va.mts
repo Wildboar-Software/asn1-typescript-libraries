@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary referenceClockTypeOID
  * @description
  *
+ * Registers attribute `referenceClockType`: type of
+ * reference clock or external source. On `referenceClock`
+ * (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.17](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

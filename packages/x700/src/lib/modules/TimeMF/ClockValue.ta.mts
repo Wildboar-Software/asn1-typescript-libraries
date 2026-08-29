@@ -19,6 +19,10 @@ import {
  * @summary ClockValue
  * @description
  *
+ * Current time of the clock. Syntax of `clockValue` (`GET`)
+ * and of `clockReset` action information. ITU-T Rec. X.743 (06/98)
+ * [§8.3.12](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.12, A.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

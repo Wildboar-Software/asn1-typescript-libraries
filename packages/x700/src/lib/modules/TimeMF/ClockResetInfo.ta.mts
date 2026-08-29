@@ -19,6 +19,14 @@ import {
  * @summary ClockResetInfo
  * @description
  *
+ * Information syntax of the confirmed `clockReset` action:
+ * the time value to which the clock source is reset (Table 1
+ * `Clock Value`). Generic definition: reset an instance of a
+ * clock source to a given value. Annex A.3.1 GDMO text says
+ * behaviour is undefined and repeats protocol-reset wording.
+ * ITU-T Rec. X.743 (06/98)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.743-199806-I), §9.6, A.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

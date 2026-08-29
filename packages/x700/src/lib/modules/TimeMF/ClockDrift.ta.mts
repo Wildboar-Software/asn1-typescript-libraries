@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ClockDrift
  * @description
  *
+ * Manufacturer's specified clock drift (maximum frequency
+ * offset, §3.7.12). Syntax of `clockDrift` in the optional
+ * `clockSourceDetailPkg`. ITU-T Rec. X.743 (06/98)
+ * [§8.3.2](https://www.itu.int/rec/T-REC-X.743-199806-I), §3.7.12, A.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

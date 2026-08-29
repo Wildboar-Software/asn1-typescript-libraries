@@ -15,6 +15,13 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary synchronizationProtocol_systemOID
  * @description
  *
+ * Registers name binding `synchronizationProtocol-system`: a
+ * `synchronizationProtocol` (and subclasses) is named by a
+ * `system` object with `synchronizationProtocolID`. Create
+ * with automatic instance naming; delete deletes contained
+ * objects. ITU-T Rec. X.743 (06/98)
+ * [§8.5.2](https://www.itu.int/rec/T-REC-X.743-199806-I), A.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

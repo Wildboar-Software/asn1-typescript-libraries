@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary leapSecondCountOID
  * @description
  *
+ * Registers attribute `leapSecondCount`: cumulative leap
+ * seconds since 1 January 1972. In `leapSecondPkg`
+ * (`GET-REPLACE`, `SET-BY-CREATE`; equality and ordering).
+ * ITU-T Rec. X.743 (06/98)
+ * [§8.3.13](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

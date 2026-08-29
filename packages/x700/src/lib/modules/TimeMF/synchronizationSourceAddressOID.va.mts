@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary synchronizationSourceAddressOID
  * @description
  *
+ * Registers attribute `synchronizationSourceAddress`:
+ * network address or reference-clock type of the current
+ * synchronization source for this node. On `localClock`
+ * (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.20](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.20.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

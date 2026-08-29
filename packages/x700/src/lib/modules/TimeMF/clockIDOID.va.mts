@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockIDOID
  * @description
  *
+ * Registers attribute `clockID`: identity of the clock.
+ * Naming attribute of `clockSource` (`GET`,
+ * `SET-BY-CREATE`, `NO-MODIFY`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.7](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

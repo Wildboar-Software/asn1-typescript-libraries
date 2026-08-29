@@ -15,6 +15,10 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockDriftOID
  * @description
  *
+ * Registers attribute `clockDrift`: manufacturer's specified
+ * drift. In `clockSourceDetailPkg` (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.2](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

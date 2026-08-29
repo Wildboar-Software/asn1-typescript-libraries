@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TimeInterval
  * @description
  *
+ * Eight-octet encoding of a time interval (same packed form
+ * as `GlobalTime`; see §8.1). Used as the syntax of
+ * precision, drift-related intervals, maximum/estimated
+ * error, adjustment interval, and NTP dispersion/skew/age
+ * attributes. The rec does not specify the octet layout.
+ * ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

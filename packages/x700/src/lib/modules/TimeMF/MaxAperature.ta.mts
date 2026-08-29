@@ -19,6 +19,11 @@ import {
  * @summary MaxAperature
  * @description
  *
+ * Time interval defined in the TimeMF ASN.1 module. The rec
+ * does not assign this type to a GDMO attribute or describe
+ * its use. ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

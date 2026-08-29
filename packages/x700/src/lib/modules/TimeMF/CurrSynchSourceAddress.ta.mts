@@ -24,6 +24,13 @@ import {
  * @summary CurrSynchSourceAddress
  * @description
  *
+ * Current synchronization source for this node: either the
+ * network address of a peer association (`refPeerAssoc`) or
+ * the type of an external reference clock (`refClockID`).
+ * Syntax of `synchronizationSourceAddress` on `localClock`
+ * (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.20](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.20, A.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -29,6 +29,12 @@ import {
  * @summary ClockTime
  * @description
  *
+ * Clock reading as a `TimeStamp` plus leap-second count and
+ * local timezone so the instant can be converted to other
+ * time formats without a discontinuity in the underlying
+ * second count. ITU-T Rec. X.743 (06/98)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,18 +50,33 @@ export class ClockTime {
     constructor(
         /**
          * @summary `time`.
+         * @description
+         *
+         * Instant and its maximum error (epoch, seconds,
+         * nanoseconds). ITU-T Rec. X.743 (06/98)
+         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
          * @public
          * @readonly
          */
         readonly time: TimeStamp,
         /**
          * @summary `leapSeconds`.
+         * @description
+         *
+         * Cumulative leap seconds for conversion to civil time and
+         * other formats. Does not alter `time`. ITU-T Rec. X.743 (06/98)
+         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
          * @public
          * @readonly
          */
         readonly leapSeconds: CumLeapSeconds,
         /**
          * @summary `localTimeZone`.
+         * @description
+         *
+         * Timezone in which the timestamp was created, minutes east
+         * of GMT (`unknown` if undefined). ITU-T Rec. X.743 (06/98)
+         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
          * @public
          * @readonly
          */

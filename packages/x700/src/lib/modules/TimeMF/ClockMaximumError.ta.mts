@@ -19,6 +19,12 @@ import {
  * @summary ClockMaximumError
  * @description
  *
+ * Maximum error bound of the absolute value of the clock's
+ * error versus UTC (§3.7.13). Syntax of `clockMaximumError`
+ * in `clockSourceDetailPkg`. A correct clock has |error|
+ * less than this bound (§3.7.6). ITU-T Rec. X.743 (06/98)
+ * [§8.3.8](https://www.itu.int/rec/T-REC-X.743-199806-I), §3.7.13, A.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

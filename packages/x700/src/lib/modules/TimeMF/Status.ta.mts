@@ -16,6 +16,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Status
  * @description
  *
+ * Current status of the clock. Syntax of `clockStatus`. A
+ * state attribute: a change, like a change of
+ * `operationalState`, causes a `stateChange` notification.
+ * Named values (A.5): `operatingWithinNominals` (0),
+ * `replyTimeout` (1), `badReplyFormat` (2),
+ * `hardwareSoftwareFault` (3), `propagationFailure` (4),
+ * `badDateFormatOrValue` (5), `badTimeFormatOrValue` (6).
+ * The rec does not further define those names. ITU-T Rec. X.743 (06/98)
+ * [§8.3.10](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.2.1, A.2.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
