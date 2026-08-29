@@ -16,6 +16,11 @@ import {
  * @summary grm_RelationshipClass
  * @description
  *
+ * Registration arc for GRM (X.725) managed relationship
+ * classes: `{joint-iso-itu-t ms(9) smi(3) part7(7)
+ * relationshipClass(11)}`. ITU-T Rec. X.725 (11/95)
+ * [Annex B.1](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

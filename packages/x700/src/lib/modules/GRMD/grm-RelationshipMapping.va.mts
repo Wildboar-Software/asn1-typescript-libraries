@@ -16,6 +16,13 @@ import {
  * @summary grm_RelationshipMapping
  * @description
  *
+ * Registration arc for GRM (X.725) relationship mappings:
+ * `{joint-iso-itu-t ms(9) smi(3) part7(7)
+ * relationshipMapping(12)}`. Used in protocol to identify a
+ * mapping unambiguously. ITU-T Rec. X.725 (11/95)
+ * [Annex A](https://www.itu.int/rec/T-REC-X.725-199511-I)
+ * REGISTERED AS construct, Annex B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
