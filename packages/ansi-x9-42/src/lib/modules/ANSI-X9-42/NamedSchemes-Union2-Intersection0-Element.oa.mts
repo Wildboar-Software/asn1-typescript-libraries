@@ -7,6 +7,8 @@ import { dhOneFlow_sha1 } from "./dhOneFlow-sha1.va.mjs";
  * @summary NamedSchemes_Union2_Intersection0_Element
  * @description
  *
+ * Named `dhOneFlow-sha1` (no PARMS). ANS X9.42-2003 §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

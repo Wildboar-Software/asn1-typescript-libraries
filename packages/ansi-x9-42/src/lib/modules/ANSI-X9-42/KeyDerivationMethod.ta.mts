@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyDerivationMethod
  * @description
  *
+ * OID identifying which KDF is used: `kdasn1der` (§7.7.1, DER
+ * `OtherInfo`) or `kdConcatenation` (§7.7.2, `ZZ || Counter ||
+ * [OtherInfo]`). Constrains `SchemeSyntax`. Both KDFs use an ASC
+ * X9-approved hash of at least 160 bits (SHA-1 in this edition).
+ * ANS X9.42-2003 §7.7, §A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

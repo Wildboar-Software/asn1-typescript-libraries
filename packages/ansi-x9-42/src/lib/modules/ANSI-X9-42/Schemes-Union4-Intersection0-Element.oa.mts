@@ -11,6 +11,9 @@ import {
  * @summary Schemes_Union4_Intersection0_Element
  * @description
  *
+ * `KEY-AGREEMENT` object `{ OID dhHybrid2 PARMS SchemeParameters }`.
+ * ANS X9.42-2003 §A.4.5, §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

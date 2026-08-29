@@ -7,6 +7,8 @@ import { mqv1_sha1 } from "./mqv1-sha1.va.mjs";
  * @summary NamedSchemes_Union7_Intersection0_Element
  * @description
  *
+ * Named `mqv1-sha1` (no PARMS). ANS X9.42-2003 §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

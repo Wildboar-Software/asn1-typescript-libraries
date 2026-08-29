@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SchemeOID
  * @description
  *
+ * OID from `NamedSchemes`: a scheme plus well-known SHA-1 KDF
+ * parameters (`{id-sha1, NULL}`), so parameters need not be sent.
+ * ANS X9.42-2003 §A.4, §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

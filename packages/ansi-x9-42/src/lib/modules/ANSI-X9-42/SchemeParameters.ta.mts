@@ -11,6 +11,10 @@ import {
  * @summary SchemeParameters
  * @description
  *
+ * KDF hash algorithm identifier. SHA-1 (`id-sha1` with NULL) is the
+ * only algorithm in this edition; the set is extensible. Written as
+ * `{ algorithm id-sha1, parameters NULL }`. ANS X9.42-2003 §A.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

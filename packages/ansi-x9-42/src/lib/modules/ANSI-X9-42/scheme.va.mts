@@ -6,6 +6,10 @@ import { ansi_X9_42 } from "../ANSI-X9-42/ansi-X9-42.va.mjs";
  * @summary scheme
  * @description
  *
+ * Arc for parameterized key-agreement scheme OIDs
+ * (`{ ansi-X9-42 schemes(3) }`). Associated parameters are
+ * `SchemeParameters`. ANS X9.42-2003 §A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ALGORITHM_ID
  * @description
  *
+ * Information-object class pairing an algorithm OID with an optional
+ * parameter type. Syntax `{ OID &id [PARMS &Type] }`. Governs
+ * `AlgorithmIdentifier`. ANS X9.42-2003 §A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,11 +53,19 @@ export interface ALGORITHM_ID<
         }
     >;
     /**
-     * @summary &id
+     * @summary `&id`
+     * @description
+     *
+     * Unique algorithm (or scheme) object identifier. ANS X9.42-2003
+     * §A.3.
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
-     * @summary &Type
+     * @summary `&Type`
+     * @description
+     *
+     * ASN.1 type of the optional `parameters` component. Absent when
+     * the object has no PARMS. ANS X9.42-2003 §A.3.
      */
     readonly "&Type": Type;
 }

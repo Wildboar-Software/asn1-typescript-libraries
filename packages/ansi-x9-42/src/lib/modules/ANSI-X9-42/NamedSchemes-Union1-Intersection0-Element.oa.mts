@@ -7,6 +7,8 @@ import { dhEphem_sha1 } from "./dhEphem-sha1.va.mjs";
  * @summary NamedSchemes_Union1_Intersection0_Element
  * @description
  *
+ * Named `dhEphem-sha1` (no PARMS). ANS X9.42-2003 §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

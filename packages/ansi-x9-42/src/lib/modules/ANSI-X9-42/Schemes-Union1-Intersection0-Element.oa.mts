@@ -11,6 +11,9 @@ import {
  * @summary Schemes_Union1_Intersection0_Element
  * @description
  *
+ * `KEY-AGREEMENT` object `{ OID dhEphem PARMS SchemeParameters }`.
+ * ANS X9.42-2003 §A.4.2, §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

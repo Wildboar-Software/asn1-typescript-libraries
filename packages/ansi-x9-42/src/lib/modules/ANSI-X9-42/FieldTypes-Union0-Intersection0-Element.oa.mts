@@ -10,6 +10,9 @@ import { gfPrime } from "../ANSI-X9-42/gfPrime.va.mjs";
  * @summary FieldTypes_Union0_Intersection0_Element
  * @description
  *
+ * `FIELD-ID` object `{ DomainParameters IDENTIFIED BY gfPrime }` for
+ * GF(p). ANS X9.42-2003 §A.1, §A.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

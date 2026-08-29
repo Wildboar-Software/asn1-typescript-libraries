@@ -11,6 +11,10 @@ import {
  * @summary KeyDerivationAlgorithm
  * @description
  *
+ * Hash algorithms allowed in `SchemeParameters`. This edition has only
+ * SHA-1 (`id-sha1` with NULL) from ANS X9.30 Part 2; the set is
+ * extensible. ANS X9.42-2003 §A.2.2, §7.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

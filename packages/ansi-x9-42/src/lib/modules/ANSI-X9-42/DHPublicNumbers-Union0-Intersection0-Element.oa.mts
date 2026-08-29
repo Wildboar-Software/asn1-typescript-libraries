@@ -11,6 +11,9 @@ import {
  * @summary DHPublicNumbers_Union0_Intersection0_Element
  * @description
  *
+ * `{ OID dhPublicNumber PARMS DomainParameters }`. ANS X9.42-2003
+ * §A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

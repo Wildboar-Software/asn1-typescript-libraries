@@ -21,6 +21,16 @@ import {
  * @summary SchemeSyntax
  * @description
  *
+ * How a key-agreement scheme is named. Adopting standards may use a
+ * subset of the three alternatives. Constrained by the KDF OID `kdm`
+ * (`kdasn1der` or `kdConcatenation`). ANS X9.42-2003 §A.4.
+ *
+ * - `schemeId`: verbose form (scheme OID + `SchemeParameters`).
+ * - `oid`: a `NamedSchemes` OID; SHA-1 KDF parameters are well-known
+ *   and not sent.
+ * - `number_`: small integer for environments that do not need a
+ *   globally unique OID; same schemes as `NamedSchemes`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

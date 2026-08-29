@@ -6,6 +6,9 @@ import { ansi_X9_42 } from "../ANSI-X9-42/ansi-X9-42.va.mjs";
  * @summary keyDerivationMethod
  * @description
  *
+ * Arc for KDF OIDs (`{ ansi-X9-42 kdMethods(5) }`). Constrains
+ * `SchemeSyntax`. ANS X9.42-2003 §7.7, §A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

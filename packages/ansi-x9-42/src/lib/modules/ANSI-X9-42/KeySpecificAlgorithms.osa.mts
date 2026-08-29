@@ -11,6 +11,10 @@ import { tripleDES } from "../ANSI-X9-42/tripleDES.va.mjs";
  * @summary KeySpecificAlgorithms
  * @description
  *
+ * Algorithms allowed in `OtherInfo.keyInfo`. This edition has only
+ * TDEA (`tripleDES` with a 4-octet `Counter`). Extensible. ANS
+ * X9.42-2003 §A.5, §7.7.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

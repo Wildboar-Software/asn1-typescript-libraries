@@ -3,6 +3,15 @@ import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+/**
+ * @summary `_enum_for_SchemeNumber`
+ * @description
+ *
+ * TypeScript enum backing `SchemeNumber`. Values match the ASN.1
+ * enumerations (0–7). ANS X9.42-2003 §A.4.
+ *
+ * @enum {number}
+ */
 export enum _enum_for_SchemeNumber {
     dhStatic_sha1 = 0,
     dhEphem_sha1 = 1,
@@ -18,6 +27,10 @@ export enum _enum_for_SchemeNumber {
 /**
  * @summary SchemeNumber
  * @description
+ *
+ * Enumerated form of `NamedSchemes` for environments that can rely on
+ * a small integer instead of a globally unique OID. Each value means
+ * `{ scheme, {id-sha1, NULL} }`. Extensible. ANS X9.42-2003 §A.4.
  *
  * ### ASN.1 Definition:
  *
@@ -42,6 +55,11 @@ export type SchemeNumber = _enum_for_SchemeNumber | ENUMERATED;
 
 /**
  * @summary SchemeNumber_dhStatic_sha1
+ * @description
+ *
+ * `dhStatic` with SHA-1 KDF. Both parties use only static keys on one
+ * group; `ZZ = oct(Zs)`. ANS X9.42-2003 §8.1.1, §A.4.1.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +76,12 @@ export const dhStatic_sha1: SchemeNumber = SchemeNumber_dhStatic_sha1; /* SHORT_
 
 /**
  * @summary SchemeNumber_dhEphem_sha1
+ * @description
+ *
+ * `dhEphem` with SHA-1 KDF. Both parties use only ephemeral keys;
+ * destroy ephemeral private keys after use; `ZZ = oct(Ze)`. ANS
+ * X9.42-2003 §8.1.2, §A.4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +98,11 @@ export const dhEphem_sha1: SchemeNumber = SchemeNumber_dhEphem_sha1; /* SHORT_NA
 
 /**
  * @summary SchemeNumber_dhOneFlow_sha1
+ * @description
+ *
+ * `dhOneFlow` with SHA-1 KDF. Initiator ephemeral, responder static,
+ * one group. ANS X9.42-2003 §8.1.3, §A.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +119,12 @@ export const dhOneFlow_sha1: SchemeNumber = SchemeNumber_dhOneFlow_sha1; /* SHOR
 
 /**
  * @summary SchemeNumber_dhHybrid1_sha1
+ * @description
+ *
+ * `dhHybrid1` with SHA-1 KDF. Both parties contribute static and
+ * ephemeral keys on one group; `ZZ = oct(Ze)||oct(Zs)`. ANS
+ * X9.42-2003 §8.1.4, §A.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +141,12 @@ export const dhHybrid1_sha1: SchemeNumber = SchemeNumber_dhHybrid1_sha1; /* SHOR
 
 /**
  * @summary SchemeNumber_dhHybrid2_sha1
+ * @description
+ *
+ * `dhHybrid2` with SHA-1 KDF. Static and ephemeral keys on two
+ * separately identified groups; `ZZ = oct(Ze)||oct(Zs)`. ANS
+ * X9.42-2003 §8.1.5, §A.4.5.
+ *
  * @constant
  * @type {number}
  */
@@ -122,6 +163,11 @@ export const dhHybrid2_sha1: SchemeNumber = SchemeNumber_dhHybrid2_sha1; /* SHOR
 
 /**
  * @summary SchemeNumber_dhHybridOneFlow_sha1
+ * @description
+ *
+ * `dhHybridOneFlow` with SHA-1 KDF. Initiator static+ephemeral,
+ * responder static only, one group. ANS X9.42-2003 §8.1.6, §A.4.6.
+ *
  * @constant
  * @type {number}
  */
@@ -138,6 +184,12 @@ export const dhHybridOneFlow_sha1: SchemeNumber = SchemeNumber_dhHybridOneFlow_s
 
 /**
  * @summary SchemeNumber_mqv2_sha1
+ * @description
+ *
+ * `mqv2` with SHA-1 KDF. Interactive MQV: both parties static and
+ * ephemeral keys, one group; `ZZ = oct(ZMQV)`. Provides forward
+ * secrecy to both. ANS X9.42-2003 §8.2.1, §7.5.2.1, §A.4.7.
+ *
  * @constant
  * @type {number}
  */
@@ -154,6 +206,13 @@ export const mqv2_sha1: SchemeNumber = SchemeNumber_mqv2_sha1; /* SHORT_NAMED_EN
 
 /**
  * @summary SchemeNumber_mqv1_sha1
+ * @description
+ *
+ * `mqv1` with SHA-1 KDF. Store-and-forward MQV: initiator
+ * static+ephemeral, responder static only (e.g. email). Forward
+ * secrecy for the initiator only. ANS X9.42-2003 §8.2.2, §7.5.2.2,
+ * §A.4.8.
+ *
  * @constant
  * @type {number}
  */

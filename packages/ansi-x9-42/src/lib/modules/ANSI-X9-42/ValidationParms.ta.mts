@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ValidationParms
  * @description
  *
+ * Values that let a party check `p` and `q` were generated with Annex
+ * B.1.2. Both components shall be present together. ANS X9.42-2003
+ * §7.2, §A.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +31,22 @@ export class ValidationParms {
     constructor(
         /**
          * @summary `seed`.
+         * @description
+         *
+         * Seed input to the prime-generation process. If specified,
+         * `pGenCounter` shall also be specified. ANS X9.42-2003 §A.2.1.
+         *
          * @public
          * @readonly
          */
         readonly seed: BIT_STRING,
         /**
          * @summary `pGenCounter`.
+         * @description
+         *
+         * Integer output of the prime-generation process. If specified,
+         * `seed` shall also be specified. ANS X9.42-2003 §A.2.1.
+         *
          * @public
          * @readonly
          */

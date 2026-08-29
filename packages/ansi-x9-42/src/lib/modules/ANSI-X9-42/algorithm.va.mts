@@ -6,6 +6,9 @@ import { ansi_X9_42 } from "../ANSI-X9-42/ansi-X9-42.va.mjs";
  * @summary algorithm
  * @description
  *
+ * Arc for algorithm OIDs (`{ ansi-X9-42 algorithms(1) }`). ANS
+ * X9.42-2003 §A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

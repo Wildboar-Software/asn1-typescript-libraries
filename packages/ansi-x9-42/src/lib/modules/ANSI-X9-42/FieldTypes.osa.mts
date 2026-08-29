@@ -11,6 +11,10 @@ import { gfPrime } from "../ANSI-X9-42/gfPrime.va.mjs";
  * @summary FieldTypes
  * @description
  *
+ * Valid (`fieldType`, parameters) pairs for `FieldID`. This edition
+ * has only `gfPrime` → `DomainParameters` (GF(p)); the extension
+ * marker allows further field kinds. ANS X9.42-2003 §A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

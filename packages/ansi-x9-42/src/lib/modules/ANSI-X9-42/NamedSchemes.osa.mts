@@ -14,6 +14,10 @@ import { NamedSchemes_Union7_Intersection0_Element } from "./NamedSchemes-Union7
  * @summary NamedSchemes
  * @description
  *
+ * Schemes whose KDF parameters are well-known (`{id-sha1, NULL}`) and
+ * need not be transferred. Constrains `SchemeOID`. Extensible. ANS
+ * X9.42-2003 §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

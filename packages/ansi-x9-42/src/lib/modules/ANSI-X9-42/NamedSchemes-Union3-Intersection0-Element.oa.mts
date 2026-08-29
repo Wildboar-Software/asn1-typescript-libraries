@@ -7,6 +7,8 @@ import { dhHybrid1_sha1 } from "./dhHybrid1-sha1.va.mjs";
  * @summary NamedSchemes_Union3_Intersection0_Element
  * @description
  *
+ * Named `dhHybrid1-sha1` (no PARMS). ANS X9.42-2003 §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,10 @@ import { Schemes_Union7_Intersection0_Element } from "./Schemes-Union7-Intersect
  * @summary Schemes
  * @description
  *
+ * All key-agreement objects in this standard: eight parameterized
+ * schemes (OID + `SchemeParameters`) plus `NamedSchemes` (OID only).
+ * Extensible. ANS X9.42-2003 §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

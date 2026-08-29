@@ -16,6 +16,13 @@ import {
  * @summary OtherInfo
  * @description
  *
+ * Per-party and supplementary input to the ASN.1 KDF. Hashed as
+ * `H(ZZ || DER(OtherInfo))`. When the same `ZZ` is reused, make
+ * `suppPubInfo` unique per invocation so distinct keys result (e.g.
+ * `"TDEA key"` then `"HMAC key"`). Omit `suppPubInfo` only if the
+ * derived key's use is unambiguous from context. All inputs shall be
+ * an integral number of octets. ANS X9.42-2003 §7.7.1, §A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,30 +40,61 @@ export class OtherInfo {
     constructor(
         /**
          * @summary `keyInfo`.
+         * @description
+         *
+         * Algorithm the keying data is for (e.g. TDEA) plus a 32-bit
+         * `Counter` starting at `00000001` hex. Incremented each hash
+         * block of the ASN.1 KDF. ANS X9.42-2003 §7.7.1 item 3.1,
+         * §A.5.
+         *
          * @public
          * @readonly
          */
         readonly keyInfo: AlgorithmIdentifier,
         /**
          * @summary `partyUInfo`.
+         * @description
+         *
+         * Public information contributed by the initiator. Contents
+         * are defined by the using protocol. ANS X9.42-2003 §7.7.1
+         * item 3.2, §A.5.
+         *
          * @public
          * @readonly
          */
         readonly partyUInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `partyVInfo`.
+         * @description
+         *
+         * Public information contributed by the responder. Contents
+         * are defined by the using protocol. ANS X9.42-2003 §7.7.1
+         * item 3.3, §A.5.
+         *
          * @public
          * @readonly
          */
         readonly partyVInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `suppPubInfo`.
+         * @description
+         *
+         * Additional mutually-known public information. Distinct values
+         * distinguish KDF invocations that share `ZZ`. Syntax is a
+         * protocol matter. ANS X9.42-2003 §7.7, §A.5.
+         *
          * @public
          * @readonly
          */
         readonly suppPubInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `suppPrivInfo`.
+         * @description
+         *
+         * Additional mutually-known private information (e.g. a shared
+         * secret from another channel). May include `ZZ`. Syntax is a
+         * protocol matter. ANS X9.42-2003 §7.7.1 item 3.4, §A.5.
+         *
          * @public
          * @readonly
          */

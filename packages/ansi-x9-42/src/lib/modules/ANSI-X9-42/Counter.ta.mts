@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Counter
  * @description
  *
+ * 32-bit (exactly 4 octets) counter in `OtherInfo.keyInfo`
+ * parameters. Initial value `00000001` hex; converted to INTEGER,
+ * incremented, and converted back each hash block of the ASN.1 KDF.
+ * ANS X9.42-2003 §7.7.1, §A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

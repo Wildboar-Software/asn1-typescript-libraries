@@ -11,6 +11,9 @@ import { tripleDES } from "../ANSI-X9-42/tripleDES.va.mjs";
  * @summary KeySpecificAlgorithms_Union0_Intersection0_Element
  * @description
  *
+ * `{ OID tripleDES PARMS Counter }` for TDEA keying data. ANS
+ * X9.42-2003 §A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

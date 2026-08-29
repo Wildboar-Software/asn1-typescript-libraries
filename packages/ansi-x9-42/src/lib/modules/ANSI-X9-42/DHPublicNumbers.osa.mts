@@ -11,6 +11,10 @@ import {
  * @summary DHPublicNumbers
  * @description
  *
+ * Algorithms allowed in `SubjectPublicKeyInfo.algorithm`. This edition
+ * has only `dhPublicNumber` with `DomainParameters`. ANS X9.42-2003
+ * §A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

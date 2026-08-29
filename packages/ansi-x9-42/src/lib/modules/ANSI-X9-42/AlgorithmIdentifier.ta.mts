@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AlgorithmIdentifier
  * @description
  *
+ * Pairs an algorithm OID with optional parameters whose type is bound
+ * by `IOSet`. Used for public keys (`DHPublicNumbers`), scheme
+ * parameters (`KeyDerivationAlgorithm`), and `OtherInfo.keyInfo`
+ * (`KeySpecificAlgorithms`). ANS X9.42-2003 §A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +30,23 @@ export class AlgorithmIdentifier {
     constructor(
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * OID unique in `IOSet`. Selects the matching object and thus
+         * the type of `parameters`. ANS X9.42-2003 §A.3.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Type from the matching `IOSet` object; omit if that object
+         * has no PARMS. For `id-sha1`, NULL. ANS X9.42-2003 §A.2.2,
+         * §A.3.
+         *
          * @public
          * @readonly
          */

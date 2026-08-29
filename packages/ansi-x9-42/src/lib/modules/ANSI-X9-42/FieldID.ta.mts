@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FieldID
  * @description
  *
+ * Identifies a finite field: `fieldType` is an OID unique in `IOSet`;
+ * `parameters` has the type bound to that OID. This edition restricts
+ * field types to GF(p). ANS X9.42-2003 §A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +29,22 @@ export class FieldID {
     constructor(
         /**
          * @summary `fieldType`.
+         * @description
+         *
+         * OID for the field kind. Currently only `gfPrime` (GF(p)).
+         * ANS X9.42-2003 §A.1.
+         *
          * @public
          * @readonly
          */
         readonly fieldType: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Parameters for that field type. For `gfPrime`,
+         * `DomainParameters`. ANS X9.42-2003 §A.1, §A.2.
+         *
          * @public
          * @readonly
          */

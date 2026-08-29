@@ -11,6 +11,9 @@ import {
  * @summary Schemes_Union7_Intersection0_Element
  * @description
  *
+ * `KEY-AGREEMENT` object `{ OID mqv1 PARMS SchemeParameters }`. ANS
+ * X9.42-2003 §A.4.8, §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

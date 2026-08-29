@@ -8,6 +8,9 @@ import { id_sha1 } from "../ANSI-X9-42/id-sha1.va.mjs";
  * @summary KeyDerivationAlgorithm_Union0_Intersection0_Element
  * @description
  *
+ * `{ OID id-sha1 PARMS NULL }` from ANS X9.30. ANS X9.42-2003
+ * §A.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

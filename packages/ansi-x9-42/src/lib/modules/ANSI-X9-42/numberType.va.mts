@@ -6,6 +6,10 @@ import { ansi_X9_42 } from "../ANSI-X9-42/ansi-X9-42.va.mjs";
  * @summary numberType
  * @description
  *
+ * Arc for number-type OIDs (`{ ansi-X9-42 numberTypes(2) }`). Only a
+ * public-key type is defined; the arc exists for extensibility and
+ * alignment with related public-key standards. ANS X9.42-2003 §A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

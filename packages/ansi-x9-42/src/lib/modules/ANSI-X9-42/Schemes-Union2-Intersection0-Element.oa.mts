@@ -11,6 +11,9 @@ import {
  * @summary Schemes_Union2_Intersection0_Element
  * @description
  *
+ * `KEY-AGREEMENT` object `{ OID dhOneFlow PARMS SchemeParameters }`.
+ * ANS X9.42-2003 §A.4.3, §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

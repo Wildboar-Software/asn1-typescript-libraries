@@ -6,6 +6,10 @@ import { ansi_X9_42 } from "../ANSI-X9-42/ansi-X9-42.va.mjs";
  * @summary namedScheme
  * @description
  *
+ * Arc for named-scheme OIDs (`{ ansi-X9-42 names(4) }`). Each named
+ * scheme implies SHA-1 KDF parameters and needs no PARMS. ANS
+ * X9.42-2003 §A.4.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

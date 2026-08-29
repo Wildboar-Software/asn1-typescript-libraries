@@ -11,6 +11,10 @@ import {
  * @summary FiniteFields
  * @description
  *
+ * `FieldID` constrained to `FieldTypes`. Currently only GF(p) via
+ * `gfPrime` / `DomainParameters`; the set is extensible. ANS
+ * X9.42-2003 §A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import {
  * @summary SubjectPublicKeyInfo
  * @description
  *
+ * X.509 encoding of a Diffie-Hellman public key. `algorithm` shall be
+ * `dhPublicNumber` with `DomainParameters`. Whether the key is static
+ * or ephemeral is a protocol matter. ANS X9.42-2003 §A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,24 @@ export class SubjectPublicKeyInfo {
     constructor(
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * Shall identify `dhPublicNumber`; parameters are the
+         * `DomainParameters` for this key. ANS X9.42-2003 §A.3.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: AlgorithmIdentifier,
         /**
          * @summary `subjectPublicKey`.
+         * @description
+         *
+         * BIT STRING whose contents are the **entire DER encoding** of
+         * `DiffieHellmanPublicNumber` (tag, length, and INTEGER
+         * octets). Same double-encoding as DSA public keys in
+         * ANS X9.57. ANS X9.42-2003 §A.3.
+         *
          * @public
          * @readonly
          */

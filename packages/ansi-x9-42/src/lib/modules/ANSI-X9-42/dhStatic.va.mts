@@ -6,6 +6,10 @@ import { scheme } from "../ANSI-X9-42/scheme.va.mjs";
  * @summary dhStatic
  * @description
  *
+ * Diffie-Hellman, static keys only, one group. Both parties compute
+ * `Zs = y_peer ^ x_own mod p_s`; `ZZ = oct(Zs)`. No ephemeral data.
+ * Parameters: `SchemeParameters`. ANS X9.42-2003 §8.1.1, §A.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

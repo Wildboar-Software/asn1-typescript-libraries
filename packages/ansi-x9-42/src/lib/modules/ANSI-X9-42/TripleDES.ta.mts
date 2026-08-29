@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TripleDES
  * @description
  *
+ * SEQUENCE of 1, 2, or 3 INTEGERs representing a TDEA key. 1-key is
+ * for backwards compatibility; 3-key is preferred (2-key already
+ * provides most of TDEA's strength). How each INTEGER encodes key
+ * bits is not specified beyond this type. ANS X9.42-2003 §A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

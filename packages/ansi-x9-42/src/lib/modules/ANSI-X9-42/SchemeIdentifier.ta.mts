@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SchemeIdentifier
  * @description
  *
+ * Verbose scheme identification in AlgorithmIdentifier style: a
+ * `Schemes` OID plus optional `SchemeParameters` (the KDF hash).
+ * ANS X9.42-2003 §A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +29,23 @@ export class SchemeIdentifier {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * A `Schemes` OID (`dhStatic`, `dhEphem`, …, or a named-scheme
+         * OID). ANS X9.42-2003 §A.4.9.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * For the eight parameterized schemes, `SchemeParameters` (hash
+         * algorithm). Named schemes omit this; their parameters are
+         * well-known. ANS X9.42-2003 §A.4.9.
+         *
          * @public
          * @readonly
          */
