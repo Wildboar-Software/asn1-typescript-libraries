@@ -23,6 +23,13 @@ import {
  * @summary defaultSequenceOfDays
  * @description
  *
+ * Default of `sequenceOfDays`: one day with
+ * `defaultIntervalsOfDayWps` (full-day interval). Results in
+ * the SMO activity being continually active. ITU-T Rec. X.746
+ * (02/00)
+ * [§8.3.4.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.3.1, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

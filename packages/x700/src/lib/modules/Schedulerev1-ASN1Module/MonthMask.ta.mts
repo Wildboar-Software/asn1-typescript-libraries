@@ -20,6 +20,13 @@ import {
  * @summary MonthMask
  * @description
  *
+ * One month of a monthly schedule: a set of masks, each
+ * pairing selected days of the month with times of day (so
+ * different days of the same month may have different
+ * intervals). Taken as a whole, a disjoint collection of
+ * intervals spanning a month. ITU-T Rec. X.746 (02/00)
+ * [§8.3.6](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

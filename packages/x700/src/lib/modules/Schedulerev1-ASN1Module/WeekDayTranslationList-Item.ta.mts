@@ -26,6 +26,10 @@ import {
  * @summary WeekDayTranslationList_Item
  * @description
  *
+ * One weekday-to-type-of-day mapping. Each weekday shall
+ * appear exactly once in the list. ITU-T Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +41,23 @@ export class WeekDayTranslationList_Item {
     constructor(
         /**
          * @summary `weekDay`.
+         * @description
+         *
+         * Weekday being classified. Shall occur only once in the
+         * list. ITU-T Rec. X.746 (02/00)
+         * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly weekDay: WeekDay,
         /**
          * @summary `typeOfDay`.
+         * @description
+         *
+         * Category assigned to this weekday unless a date mapping
+         * overrides it. ITU-T Rec. X.746 (02/00)
+         * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
+         * A.4.15.
          * @public
          * @readonly
          */

@@ -21,6 +21,14 @@ import {
  * @summary IndexOrOperSpec
  * @description
  *
+ * What a `schedulingData` member activates: `index` (SMO maps
+ * the integer to an activity; interval scheduling allows only
+ * this alternative) or `operation` (operations scheduling via
+ * aperiodic trigger on a multi-scheduler). ITU-T Rec. X.746
+ * (02/00)
+ * [§7.3.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.4.4, A.1.11, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

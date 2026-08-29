@@ -20,6 +20,13 @@ import {
  * @summary TypeOfDaysMaskWps
  * @description
  *
+ * Type-of-day schedule mask: pairs each `TypeOfDay` category
+ * (workday, weekend, or a special day) with times of day.
+ * Used with a `typeOfDayController` that maps dates/weekdays
+ * to those categories. ITU-T Rec. X.746 (02/00)
+ * [§7.3.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.2.11, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

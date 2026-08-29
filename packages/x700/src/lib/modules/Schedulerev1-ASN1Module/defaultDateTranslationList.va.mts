@@ -26,6 +26,12 @@ import {
  * @summary defaultDateTranslationList
  * @description
  *
+ * Default of `dateTranslationList`: empty set (no
+ * date-specific type-of-day overrides; weekday mapping
+ * applies). ITU-T Rec. X.746 (02/00)
+ * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.4.0.2, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

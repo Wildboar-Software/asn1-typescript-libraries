@@ -25,6 +25,9 @@ import {
  * @summary DateTranslationList_Item
  * @description
  *
+ * One date-to-type-of-day mapping. ITU-T Rec. X.746 (02/00)
+ * [A.4.0.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +39,24 @@ export class DateTranslationList_Item {
     constructor(
         /**
          * @summary `date`.
+         * @description
+         *
+         * Calendar date (`YYYYMMDD`) being classified. May occur
+         * only once in the list. ITU-T Rec. X.746 (02/00)
+         * [A.4.0.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly date: Date,
         /**
          * @summary `typeOfDay`.
+         * @description
+         *
+         * Category assigned to this date (`workday`, `weekend`, or
+         * a special day). Takes precedence over the weekday
+         * mapping. ITU-T Rec. X.746 (02/00)
+         * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
+         * A.4.0.2.
          * @public
          * @readonly
          */

@@ -17,6 +17,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TypeOfDay
  * @description
  *
+ * Day category for type-of-day scheduling and for
+ * `currentTypeOfDay`. `workday`(0) and `weekend`(1) are
+ * weekday types; `specialDay1`(2) through `specialDay16`(17)
+ * are the sixteen special-day categories (e.g. holidays). The
+ * rec does not assign a calendar meaning to each special day.
+ * A date mapping takes precedence over a weekday mapping.
+ * ITU-T Rec. X.746 (02/00)
+ * [§7.3.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.2.11, A.1.12, A.4.0.2, A.4.15, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +43,11 @@ export type TypeOfDay = INTEGER;
 
 /**
  * @summary TypeOfDay_workday
+ * @description
+ *
+ * Ordinary working day. Default weekday mapping for Sunday
+ * through Friday. ITU-T Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
  * @constant
  * @type {number}
  */
@@ -41,6 +56,11 @@ export const TypeOfDay_workday: TypeOfDay = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfDay_workday
+ * @description
+ *
+ * Ordinary working day. Default weekday mapping for Sunday
+ * through Friday. ITU-T Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
  * @constant
  * @type {number}
  */
@@ -49,6 +69,11 @@ export const workday: TypeOfDay = TypeOfDay_workday; /* SHORT_NAMED_INTEGER_VALU
 
 /**
  * @summary TypeOfDay_weekend
+ * @description
+ *
+ * Weekend day. Default weekday mapping for Saturday. ITU-T
+ * Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
  * @constant
  * @type {number}
  */
@@ -57,6 +82,11 @@ export const TypeOfDay_weekend: TypeOfDay = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfDay_weekend
+ * @description
+ *
+ * Weekend day. Default weekday mapping for Saturday. ITU-T
+ * Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
  * @constant
  * @type {number}
  */

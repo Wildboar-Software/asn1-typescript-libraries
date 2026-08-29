@@ -36,6 +36,12 @@ import { WeekDayTranslationList_Item } from '../Schedulerev1-ASN1Module/WeekDayT
  * @summary defaultWeekDayTranslationList
  * @description
  *
+ * Default of `weekDayTranslationList`: Sunday–Friday map to
+ * `workday`, Saturday to `weekend`. One mapping per weekday.
+ * ITU-T Rec. X.746 (02/00)
+ * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.4.15, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

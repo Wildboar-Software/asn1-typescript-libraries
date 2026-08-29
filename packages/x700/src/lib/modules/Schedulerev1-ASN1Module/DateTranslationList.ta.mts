@@ -19,6 +19,15 @@ import {
  * @summary DateTranslationList
  * @description
  *
+ * Syntax of `dateTranslationList` (`{schedAtt 13}`). Maps
+ * particular dates to a `TypeOfDay`. A date may occur only
+ * once. Date mappings take precedence over
+ * `weekDayTranslationList`. Default is the empty set. GET,
+ * REPLACE, REPLACE-WITH-DEFAULT, ADD, REMOVE. ITU-T Rec.
+ * X.746 (02/00)
+ * [A.4.0.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.3.16.2, A.1.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

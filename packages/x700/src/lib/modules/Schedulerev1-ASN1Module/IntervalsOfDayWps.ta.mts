@@ -20,6 +20,15 @@ import {
  * @summary IntervalsOfDayWps
  * @description
  *
+ * Set of interval start/stop times on a 24-hour clock. Within
+ * one schedule, intervals shall be distinct (non-overlapping);
+ * stop shall not be less than start. `{hour 0, minute 0}` as
+ * end is 24:00 and may continue into the next day if that
+ * day's first interval starts at 00:00. During excluded
+ * intervals the activity is inactive. ITU-T Rec. X.746 (02/00)
+ * [§8.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.3.4.2, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

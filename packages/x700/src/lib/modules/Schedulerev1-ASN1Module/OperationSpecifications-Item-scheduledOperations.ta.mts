@@ -30,6 +30,14 @@ import {
  * @summary OperationSpecifications_Item_scheduledOperations
  * @description
  *
+ * CMIS operation to perform on the scheduled SMOs: `set`
+ * (`ModificationList`), `action` (`ActionInfo`), or `get`
+ * (`GetArgument`). Daily/weekly/monthly operation schedulers
+ * require trigger times in their sequence attributes. ITU-T
+ * Rec. X.746 (02/00)
+ * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.2.6–8.2.9, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

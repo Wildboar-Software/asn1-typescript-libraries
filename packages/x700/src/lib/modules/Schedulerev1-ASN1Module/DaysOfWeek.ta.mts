@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DaysOfWeek
  * @description
  *
+ * Days of the week on which a weekly mask operates (`SIZE(7)`).
+ * Named bits: `sunday`(0) … `saturday`(6). If not present in a
+ * create request, defaults to all seven days. ITU-T Rec. X.746
+ * (02/00)
+ * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

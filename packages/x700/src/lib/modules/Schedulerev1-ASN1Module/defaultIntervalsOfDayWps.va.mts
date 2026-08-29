@@ -25,6 +25,12 @@ import { IntervalsOfDayWps_Item } from '../Schedulerev1-ASN1Module/IntervalsOfDa
  * @summary defaultIntervalsOfDayWps
  * @description
  *
+ * Default intervals of day: a single interval from 00:00 to
+ * 00:00, i.e. the entire 24-hour period (activity continually
+ * active). ITU-T Rec. X.746 (02/00)
+ * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

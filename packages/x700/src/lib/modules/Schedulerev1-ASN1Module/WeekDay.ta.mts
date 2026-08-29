@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary WeekDay
  * @description
  *
+ * Day of the week in a `weekDayTranslationList` entry.
+ * `sunday`(0) … `saturday`(6). The list shall contain exactly
+ * one mapping for each weekday. ITU-T Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +46,11 @@ export enum _enum_for_WeekDay {
  * @summary WeekDay
  * @description
  *
+ * Day of the week in a `weekDayTranslationList` entry.
+ * `sunday`(0) … `saturday`(6). The list shall contain exactly
+ * one mapping for each weekday. ITU-T Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,6 +67,11 @@ export type WeekDay = _enum_for_WeekDay;
 /**
  * @summary WeekDay
  * @description
+ *
+ * Day of the week in a `weekDayTranslationList` entry.
+ * `sunday`(0) … `saturday`(6). The list shall contain exactly
+ * one mapping for each weekday. ITU-T Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
  *
  * ### ASN.1 Definition:
  *

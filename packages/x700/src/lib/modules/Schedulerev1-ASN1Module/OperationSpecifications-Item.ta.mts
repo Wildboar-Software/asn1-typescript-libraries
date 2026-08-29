@@ -24,6 +24,12 @@ import {
  * @summary OperationSpecifications_Item
  * @description
  *
+ * One scheduled-operations entry: the SMOs to operate on and
+ * the CMIS get, set, or action to request. ITU-T Rec. X.746
+ * (02/00)
+ * [§8.3.10.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 7.3.3, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +41,23 @@ export class OperationSpecifications_Item {
     constructor(
         /**
          * @summary `scheduledObjects`.
+         * @description
+         *
+         * SMO instances on which the scheduled operation is
+         * performed. ITU-T Rec. X.746 (02/00)
+         * [§8.3.10.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly scheduledObjects: ObjectInstance[],
         /**
          * @summary `scheduledOperations`.
+         * @description
+         *
+         * The CMIS SET, ACTION, or GET to request at each trigger.
+         * ITU-T Rec. X.746 (02/00)
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+         * 8.2.6, A.6.
          * @public
          * @readonly
          */

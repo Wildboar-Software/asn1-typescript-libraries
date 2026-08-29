@@ -44,6 +44,12 @@ import {
  * @summary OperationResult_Item
  * @description
  *
+ * One CMIS outcome of a scheduled operation: get/set/action
+ * result, get/set list error, or `commonError` (Erratum 1
+ * form). ITU-T Rec. X.746 (02/00)
+ * [§8.3.11](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.6, Erratum 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

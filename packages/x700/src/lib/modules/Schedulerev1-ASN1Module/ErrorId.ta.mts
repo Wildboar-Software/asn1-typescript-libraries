@@ -18,6 +18,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ErrorId
  * @description
  *
+ * Identifier of a `SCHED-ERROR`: a local integer or a global
+ * object identifier. The rec does not assign particular local
+ * values. ITU-T Rec. X.746 (02/00)
+ * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * Erratum 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

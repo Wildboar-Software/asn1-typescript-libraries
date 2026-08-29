@@ -19,6 +19,11 @@ import {
  * @summary defaultTimePeriod
  * @description
  *
+ * Default of `timePeriod`: `seconds:0`. Triggering does not
+ * take place. ITU-T Rec. X.746 (02/00)
+ * [§8.3.7.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.3.4, A.4.10, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

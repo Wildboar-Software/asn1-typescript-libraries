@@ -20,6 +20,17 @@ import {
  * @summary SchedulingData
  * @description
  *
+ * Syntax of the `schedulingData` attribute of a
+ * `multiScheduler`. Set of independent schedules, each tying an
+ * index or operation specification to a `Schedule`. Intervals
+ * within one member shall be non-overlapping; intervals in
+ * different members may overlap, in which case `priority`
+ * shall be present in each overlapping member — the higher
+ * numerical priority wins. GET, REPLACE, ADD, REMOVE. ITU-T
+ * Rec. X.746 (02/00)
+ * [A.4.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.2.10, 8.3.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

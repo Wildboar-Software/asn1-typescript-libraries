@@ -20,6 +20,12 @@ import {
  * @summary SequenceOfTypeOfDays
  * @description
  *
+ * Type-of-day schedule for a `Schedule` alternative. Constrained
+ * to `SIZE(1)`: further elements have no meaning because,
+ * unlike daily/weekly/monthly sequences, there is no implied
+ * periodicity. ITU-T Rec. X.746 (02/00)
+ * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I), 7.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

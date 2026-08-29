@@ -24,6 +24,11 @@ import {
  * @summary TypeOfDaysMaskWps_Item
  * @description
  *
+ * One type-of-day mask: a day category and the intervals or
+ * trigger times that apply on days of that category. ITU-T
+ * Rec. X.746 (02/00)
+ * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I), 7.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +40,22 @@ export class TypeOfDaysMaskWps_Item {
     constructor(
         /**
          * @summary `typeOfDay`.
+         * @description
+         *
+         * Day category this mask applies to. ITU-T Rec. X.746
+         * (02/00)
+         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly typeOfDay: TypeOfDay,
         /**
          * @summary `timesOfDay`.
+         * @description
+         *
+         * Intervals or trigger times on days of this category.
+         * ITU-T Rec. X.746 (02/00)
+         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */

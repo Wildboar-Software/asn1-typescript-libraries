@@ -19,6 +19,15 @@ import {
  * @summary TriggerTimes
  * @description
  *
+ * Absolute times of day at which to trigger an activity
+ * (aperiodic scheduling), as opposed to a periodic interval
+ * relative to a start time. Required alternative of
+ * `TimesOfDayWps` for trigger scheduling and for operation
+ * schedulers (`sequenceOfDays` / weeks / months shall specify
+ * trigger times). ITU-T Rec. X.746 (02/00)
+ * [§7.3.2.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.2.6–8.2.8, 8.3.14, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

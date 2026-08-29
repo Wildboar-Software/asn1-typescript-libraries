@@ -19,6 +19,15 @@ import {
  * @summary ScheduledManagedObjectsList
  * @description
  *
+ * Syntax of `scheduledManagedObjects` (`{schedAtt 4}`). SMOs
+ * currently using this SO, optionally with the identifier of
+ * the SMO attribute that describes the scheduled activity.
+ * Deleting an SMO removes its entry; an empty list does not
+ * delete the SO. Not instantiated on operation schedulers or
+ * the multi-scheduler. ITU-T Rec. X.746 (02/00)
+ * [§8.3.2](https://www.itu.int/rec/T-REC-X.746-200002-I), 7.4,
+ * A.4.4, 8.2.6–8.2.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

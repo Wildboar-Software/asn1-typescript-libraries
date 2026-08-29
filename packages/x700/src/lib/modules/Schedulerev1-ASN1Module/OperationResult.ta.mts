@@ -19,6 +19,15 @@ import {
  * @summary OperationResult
  * @description
  *
+ * Syntax of `operationResult` (`{schedAtt 11}`) and of
+ * `operationResultNotification` (`{schedNotif 1}`). Results of
+ * operations performed by an operations scheduler. When the
+ * notification is issued, managed object class and instance
+ * shall be present in the result(s). Also stored on
+ * `operationResultRecord`. ITU-T Rec. X.746 (02/00)
+ * [§8.3.11](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 7.3.3, A.4.12, A.5.1, A.1.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
