@@ -20,6 +20,12 @@ import { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceRepo
  * @summary serviceResponse
  * @description
  *
+ * Service-report cause: notification generated because a
+ * request for service has been satisfied. ITU-T Rec. X.740
+ * (09/92)
+ * [§8.1.2](https://www.itu.int/rec/T-REC-X.740-199209-I),
+ * Table 4, A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

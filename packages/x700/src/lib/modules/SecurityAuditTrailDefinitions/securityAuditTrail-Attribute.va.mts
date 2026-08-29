@@ -16,6 +16,11 @@ import {
  * @summary securityAuditTrail_Attribute
  * @description
  *
+ * Arc for security-audit-trail attributes: `serviceReportCause`
+ * (1), an OID giving the reason for a service report. ITU-T
+ * Rec. X.740 (09/92)
+ * [A.3](https://www.itu.int/rec/T-REC-X.740-199209-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

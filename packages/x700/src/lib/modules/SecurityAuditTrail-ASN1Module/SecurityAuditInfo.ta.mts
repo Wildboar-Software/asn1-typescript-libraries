@@ -41,6 +41,14 @@ import {
  * @summary SecurityAuditInfo
  * @description
  *
+ * Event information for security-audit-trail notifications
+ * (`serviceReport` and `usageReport`). Carried in the
+ * M-EVENT-REPORT event-information MAPDU; also stored in
+ * `securityAuditTrailRecord` log entries. ITU-T Rec. X.740
+ * (09/92)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.740-199209-I),
+ * §9.2 Table 1, A.4, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,30 +66,64 @@ export class SecurityAuditInfo {
     constructor(
         /**
          * @summary `serviceReportCause`.
+         * @description
+         *
+         * Further qualification of the probable cause of a service
+         * report. Shall be supplied when the event type is service
+         * report (Table 1: C). Not listed among `usageReport`
+         * attribute IDs. ITU-T Rec. X.740 (09/92)
+         * [§8.1.2](https://www.itu.int/rec/T-REC-X.740-199209-I),
+         * §9.2, A.4.
          * @public
          * @readonly
          */
         readonly serviceReportCause?: OPTIONAL<ServiceReportCause>,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * User-optional (Table 1: U). May be assigned by the
+         * emitting managed object or by the managed system.
+         * Defined in ITU-T Rec. X.733. ITU-T Rec. X.740 (09/92)
+         * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
+         * §9.2.
          * @public
          * @readonly
          */
         readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * User-optional (Table 1: U). May be assigned by the
+         * emitting managed object or by the managed system.
+         * Defined in ITU-T Rec. X.733. ITU-T Rec. X.740 (09/92)
+         * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
+         * §9.2.
          * @public
          * @readonly
          */
         readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * User-optional (Table 1: U). Defined in ITU-T Rec. X.733.
+         * ITU-T Rec. X.740 (09/92)
+         * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
+         * §9.2.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * User-optional (Table 1: U). Defined in ITU-T Rec. X.733.
+         * ITU-T Rec. X.740 (09/92)
+         * [§8.3](https://www.itu.int/rec/T-REC-X.740-199209-I),
+         * §9.2.
          * @public
          * @readonly
          */

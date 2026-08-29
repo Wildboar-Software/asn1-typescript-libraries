@@ -17,6 +17,13 @@ import {
  * @summary securityAuditTrail_Package
  * @description
  *
+ * Arc for security-audit-trail packages:
+ * `serviceReportCausePackage` (1), present if the notification
+ * concerns a service report; provides further qualification of
+ * the probable cause (`serviceReportCause` GET). ITU-T Rec.
+ * X.740 (09/92)
+ * [A.2](https://www.itu.int/rec/T-REC-X.740-199209-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

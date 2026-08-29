@@ -20,6 +20,13 @@ import { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceRepo
  * @summary serviceFailure
  * @description
  *
+ * Service-report cause: notification generated because an
+ * abnormal condition that caused the service to fail has been
+ * detected during the provision of a service. ITU-T Rec.
+ * X.740 (09/92)
+ * [§8.1.2](https://www.itu.int/rec/T-REC-X.740-199209-I),
+ * Table 4, A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
