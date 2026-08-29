@@ -26,6 +26,12 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary roleMappingSpecificationSet
  * @description
  *
+ * Candidate managed object classes that may fulfil each role of the
+ * mapped relationship. Multi-valued (`RoleMappingSpecification` per
+ * role). ITU-T Rec. X.750 Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95) A.2.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

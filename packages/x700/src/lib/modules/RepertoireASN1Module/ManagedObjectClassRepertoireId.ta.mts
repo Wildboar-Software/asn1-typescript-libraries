@@ -19,6 +19,11 @@ import {
  * @summary ManagedObjectClassRepertoireId
  * @description
  *
+ * Naming attribute of a managed-object-class repertoire object: the
+ * OID with which that class was registered. ITU-T Rec. X.750 (10/96)
+ * [§8.2.1.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * A.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

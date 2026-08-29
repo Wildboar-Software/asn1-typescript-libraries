@@ -24,6 +24,13 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary sMASE
  * @description
  *
+ * Directory auxiliary class Systems management application service
+ * element. Used with structural class `applicationEntity`. Must contain
+ * supported SMASE functional units; may list MIT managed objects and
+ * whether MKM global names are handled. ITU-T Rec. X.750 (10/96)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

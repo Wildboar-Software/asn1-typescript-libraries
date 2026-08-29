@@ -15,6 +15,12 @@ import {
  * @summary mkmParameter
  * @description
  *
+ * Arc for MKM action parameters. Allocation 1 is
+ * `attributeNotAvailable` (get-textual-representation error). ITU-T
+ * Rec. X.750 (10/96)
+ * [A.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * A.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

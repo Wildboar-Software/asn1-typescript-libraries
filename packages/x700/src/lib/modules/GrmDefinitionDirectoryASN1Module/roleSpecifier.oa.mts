@@ -26,6 +26,12 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary roleSpecifier
  * @description
  *
+ * Roles associated with the managed relationship class (GRM `ROLE`
+ * productions). Single-valued in the Directory attribute (one
+ * `RoleSpecifier` SEQUENCE). ITU-T Rec. X.750 Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95) A.1.3.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

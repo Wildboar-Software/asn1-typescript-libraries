@@ -26,6 +26,14 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary mitMoList
  * @description
  *
+ * Management information tree managed object list: classes (and, for
+ * long-lived objects, instances) made visible by a systems management
+ * application entity. For objects that exist only briefly, only the
+ * class is expected to be registered. Optional on `sMASE`. ITU-T Rec.
+ * X.750 (10/96)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

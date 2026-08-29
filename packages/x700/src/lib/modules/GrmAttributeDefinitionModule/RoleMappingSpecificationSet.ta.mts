@@ -19,6 +19,12 @@ import {
  * @summary RoleMappingSpecificationSet
  * @description
  *
+ * Set of role-mapping specifications for a relationship mapping
+ * template. Identifies candidate classes that may fulfil each role.
+ * ITU-T Rec. X.750 Amd.1 (10/97)
+ * [§8.1.2.13](https://www.itu.int/rec/T-REC-X.750-199710-I),
+ * §8.6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

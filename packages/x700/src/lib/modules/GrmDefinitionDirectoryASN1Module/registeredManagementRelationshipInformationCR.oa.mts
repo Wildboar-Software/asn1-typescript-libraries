@@ -17,6 +17,11 @@ import { type CONTENT_RULE } from '@wildboar/x500/InformationFramework';
  * @summary registeredManagementRelationshipInformationCR
  * @description
  *
+ * DIT content rule: at most one of `managementRelationshipClass` or
+ * `managementRelationshipMapping` on a `registeredInformation` entry.
+ * ITU-T Rec. X.750 Amd.1 (10/97)
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -30,6 +30,14 @@ import {
  * @summary RoleMappingSpecification
  * @description
  *
+ * One GRM `ROLE … RELATED-CLASSES` production: candidate classes that
+ * may fulfil a role, optional representation method, and optional
+ * qualification attributes realized by those classes. ITU-T Rec. X.750
+ * Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95)
+ * [A.2.3.4](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,24 +54,44 @@ export class RoleMappingSpecification {
     constructor(
         /**
          * @summary `role`.
+         * @description
+         *
+         * Role name from the referenced relationship class template.
+         * ITU-T Rec. X.725 (11/95) A.2.3.4.
          * @public
          * @readonly
          */
         readonly role: Identifier,
         /**
          * @summary `relatedClasses`.
+         * @description
+         *
+         * Candidate managed object classes (and their subclasses)
+         * permitted to fulfil this role. Must be compatible with the
+         * class in `COMPATIBLE WITH`. ITU-T Rec. X.725 (11/95)
+         * A.2.3.4.
          * @public
          * @readonly
          */
         readonly relatedClasses: TemplateList,
         /**
          * @summary `representedBy`.
+         * @description
+         *
+         * How the role is represented: naming, participant-pointer
+         * attribute, relationship-object pointer, or operations.
+         * ITU-T Rec. X.725 (11/95) A.2.3.4.
          * @public
          * @readonly
          */
         readonly representedBy?: OPTIONAL<Representation>,
         /**
          * @summary `qualifies`.
+         * @description
+         *
+         * Relationship qualification attributes realized by the
+         * referenced managed object classes. ITU-T Rec. X.725 (11/95)
+         * A.2.3.4.
          * @public
          * @readonly
          */

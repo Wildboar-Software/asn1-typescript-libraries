@@ -25,6 +25,10 @@ import {
  * @summary OptionalLabelAndParameters
  * @description
  *
+ * CREATE mapping: optional class label of the created managed object
+ * and optional parameter labels. ITU-T Rec. X.725 (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +43,20 @@ export class OptionalLabelAndParameters {
     constructor(
         /**
          * @summary `label`.
+         * @description
+         *
+         * Class of the created managed object, if specified. ITU-T
+         * Rec. X.725 (11/95) A.2.3.5.
          * @public
          * @readonly
          */
         readonly label?: OPTIONAL<TemplateLabel>,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Parameter labels associated with the CREATE. ITU-T Rec.
+         * X.725 (11/95) A.2.3.5.
          * @public
          * @readonly
          */
