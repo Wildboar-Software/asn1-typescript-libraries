@@ -15,6 +15,22 @@ import {
  * @summary accessControl_Package
  * @description
  *
+ * Arc for X.741 GDMO package OIDs:
+ * `{joint-iso-itu-t ms(9) function(2) part9(9)
+ * package(4)}`. Leaves include
+ * `stateConditionsPackage`(1),
+ * `authenticationContextPackage`(2) (named in Cor.2),
+ * security/time/operational-violation alarm pkgs (3–5),
+ * `accessControlUsagePkg`(6),
+ * `accessControlServiceReportPkg`(7),
+ * `attributeIdsPackage`(8),
+ * `attributeModificationPackage`(9), `actionsPackage`(10),
+ * `scopePackage`(11), `aclPackage`(12),
+ * `capabilityPackage`(13), `labelPackage`(14),
+ * `operationsListPackage`(15). ITU-T Rec. X.741 (04/95)
+ * [§A.1](https://www.itu.int/rec/T-REC-X.741-199504-I);
+ * Cor.2 (06/98) A.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

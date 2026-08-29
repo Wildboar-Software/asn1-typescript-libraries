@@ -46,6 +46,15 @@ import {
  * @summary StatisticalScanReportInformation
  * @description
  *
+ * Event information of `statisticalReport` and reply of
+ * `activateStatisticalReport`. Emitted at the end of a
+ * scan with ensemble statistics over
+ * `numericAttributeIdList`, plus optional per-object
+ * scanned values. Multiple linked replies may carry one
+ * report. ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.3, A.5, A.6, Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -73,42 +82,78 @@ export class StatisticalScanReportInformation {
     constructor(
         /**
          * @summary `scanInitiationTime`.
+         * @description
+         *
+         * Date and time the reported scan was initiated.
+         * Required if `timeStampReportMode` is present with a
+         * non-zero value. X.738 §8.2.2.2.1, A.9.
          * @public
          * @readonly
          */
         readonly scanInitiationTime: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `observationReportList`.
+         * @description
+         *
+         * Objects that passed selection, with scan-attribute
+         * values. Omitted if object instances are suppressed
+         * and there are no scan attributes. If present and
+         * `suppressObjectInstance` is false, each entry shall
+         * include `objectInstance`. X.738 §8.2.2.2.2,
+         * §8.1.3.3, Table 3 note 1.
          * @public
          * @readonly
          */
         readonly observationReportList: OPTIONAL<NonStatisticalReportInformation>,
         /**
          * @summary `algorithmOutputs`.
+         * @description
+         *
+         * Per-attribute ordered results of the statistical
+         * algorithm (sample count, mean, variance, etc.).
+         * Mandatory. X.738 §8.2.2.2.3, Table 3.
          * @public
          * @readonly
          */
         readonly algorithmOutputs: AlgorithmOutputBuffer,
         /**
          * @summary `algorithmParameters`.
+         * @description
+         *
+         * Configurable algorithm parameters; present only if
+         * the algorithm has them. Positions are class-defined
+         * (percentile scanner: `j` first). X.738 §8.2.2.2.4,
+         * §8.1.6.2.
          * @public
          * @readonly
          */
         readonly algorithmParameters?: OPTIONAL<AlgorithmParameters>,
         /**
          * @summary `incompleteScan`.
+         * @description
+         *
+         * Present if the scan could not be completed. X.738
+         * §8.2.2.2.5, Table 3 note 2.
          * @public
          * @readonly
          */
         readonly incompleteScan?: OPTIONAL<IncompleteScan>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Optional textual extension as in X.733. X.738
+         * §8.2.2.2.6.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Optional structured extension as in X.733. X.738
+         * §8.2.2.2.7.
          * @public
          * @readonly
          */

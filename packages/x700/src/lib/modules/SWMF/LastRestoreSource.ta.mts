@@ -27,6 +27,18 @@ import {
  * @summary LastRestoreSource
  * @description
  *
+ * Syntax of `lastRestoreSource`: from where the managed object's
+ * information was last restored, if at all.
+ *
+ * - `notRestored` — no restore yet
+ * - `localObject` — object of the same class in the managed system
+ * - `managingSystem` — AE-title of the manager (in-line)
+ * - `remoteSystem` — off-line remote system
+ *
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.2.18](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

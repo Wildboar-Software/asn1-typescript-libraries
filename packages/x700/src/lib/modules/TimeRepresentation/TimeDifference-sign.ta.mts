@@ -15,6 +15,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TimeDifference_sign
  * @description
  *
+ * Sign of a `TimeDifference`: `positive` (0) or `negative`
+ * (1). ITU-T Rec. X.743 (06/98)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,10 @@ export enum _enum_for_TimeDifference_sign {
  * @summary TimeDifference_sign
  * @description
  *
+ * Sign of a `TimeDifference`: `positive` (0) or `negative`
+ * (1). ITU-T Rec. X.743 (06/98)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +54,10 @@ export type TimeDifference_sign = _enum_for_TimeDifference_sign;
  * @summary TimeDifference_sign
  * @description
  *
+ * Sign of a `TimeDifference`: `positive` (0) or `negative`
+ * (1). ITU-T Rec. X.743 (06/98)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,6 +70,10 @@ export const TimeDifference_sign = _enum_for_TimeDifference_sign;
 
 /**
  * @summary TimeDifference_sign_positive
+ * @description
+ *
+ * The difference is positive. ITU-T Rec. X.743 (06/98)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
  * @constant
  * @type {number}
  */
@@ -74,6 +90,10 @@ export const positive: TimeDifference_sign =
 
 /**
  * @summary TimeDifference_sign_negative
+ * @description
+ *
+ * The difference is negative. ITU-T Rec. X.743 (06/98)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
  * @constant
  * @type {number}
  */

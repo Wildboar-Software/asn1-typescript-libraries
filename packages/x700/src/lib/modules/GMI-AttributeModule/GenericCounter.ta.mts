@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GenericCounter
  * @description
  *
+ * Syntax of the non-instantiable generic wrapping and
+ * non-wrapping counters (mandatory initial value 0, an
+ * implementation-defined upper bound). Non-wrapping holds at
+ * the bound; wrapping wraps on the next increment. ITU-T Rec.
+ * X.723 (11/93)
+ * [§9.7](https://www.itu.int/rec/T-REC-X.723-199311-I)–§9.8,
+ * §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

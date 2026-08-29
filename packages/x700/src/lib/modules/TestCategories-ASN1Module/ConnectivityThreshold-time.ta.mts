@@ -24,6 +24,11 @@ import {
  * @summary ConnectivityThreshold_time
  * @description
  *
+ * Inner SEQUENCE of `ConnectivityThreshold.time`: a count
+ * (`unitsTotal`) of units identified by `unitsType`. A.7 does not
+ * further define the unit. ITU-T Rec. X.737 (11/95)
+ * [A.7](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +40,18 @@ export class ConnectivityThreshold_time {
     constructor(
         /**
          * @summary `unitsType`.
+         * @description
+         *
+         * OID identifying the unit. X.737 A.7.
          * @public
          * @readonly
          */
         readonly unitsType: UnitsType,
         /**
          * @summary `unitsTotal`.
+         * @description
+         *
+         * Count of those units. X.737 A.7.
          * @public
          * @readonly
          */

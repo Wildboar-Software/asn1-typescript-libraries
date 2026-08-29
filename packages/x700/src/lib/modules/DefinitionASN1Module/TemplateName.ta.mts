@@ -16,6 +16,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TemplateName
  * @description
  *
+ * GDMO template label (PrintableString; `/` allowed). Value of
+ * `templateName`, which names a template managed object under a
+ * document and equals the label of the represented template.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.12](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [§8.2.2.4](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

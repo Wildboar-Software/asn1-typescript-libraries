@@ -18,6 +18,11 @@ import {
  * @summary notYetResponded
  * @description
  *
+ * Initial `responseTime` before any response has been measured
+ * (`seconds:-1`). ITU-T Rec. X.748 (03/99)
+ * [A.7](https://www.itu.int/rec/T-REC-X.748-199903-I), A.2
+ * (`responseMonitor`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

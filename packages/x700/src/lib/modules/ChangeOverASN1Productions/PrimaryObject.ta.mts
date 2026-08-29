@@ -19,6 +19,11 @@ import {
  * @summary PrimaryObject
  * @description
  *
+ * Syntax of the `primaryObject` attribute: name of the managed
+ * object in the primary role of a change-over relationship. GET
+ * only. ITU-T Rec. X.751 (11/95)
+ * [§8.5.1](https://www.itu.int/rec/T-REC-X.751-199511-I), A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

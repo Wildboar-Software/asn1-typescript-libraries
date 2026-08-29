@@ -17,6 +17,12 @@ import { type NAME_FORM } from '@wildboar/x500/InformationFramework';
  * @summary registeredInformationNameForm
  * @description
  *
+ * Names `registeredInformation` with `commonName` (last OID component).
+ * Example DIT structure rules using this name form are in Annex H. ID
+ * `{mkmDirectoryNameForm 1}`. ITU-T Rec. X.750 (10/96)
+ * [§7.2.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

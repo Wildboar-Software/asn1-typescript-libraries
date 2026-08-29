@@ -19,6 +19,11 @@ import {
  * @summary NoSuchMORT
  * @description
  *
+ * Specific error: the TARR did not recognize one or more MORTs in
+ * ToBeTestedMORTs. Syntax is those unrecognized instances. Used on controlled
+ * and uncontrolled test request. ITU-T Rec. X.745 (11/93) §8.4.4.8, A.6.
+ * [§8.4.4.8](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CreateSpecification_createModifier
  * @description
  *
+ * GDMO create-modifiers. `withReferenceObject(0)` — a reference managed
+ * object may supply defaults and conditional-package choice;
+ * `withAutomaticInstanceNaming(1)` — the Create request may omit the
+ * instance name. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO:
+ * X.722 (01/92)
+ * [§8.6.3.5](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +36,10 @@ export type CreateSpecification_createModifier = BIT_STRING;
 
 /**
  * @summary CreateSpecification_createModifier_withReferenceObject
+ * @description
+ *
+ * WITH-REFERENCE-OBJECT: Create may name a reference object as source of
+ * defaults and conditional packages. X.722 §8.6.3.5.
  * @constant
  */
 export const CreateSpecification_createModifier_withReferenceObject: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +47,10 @@ export const CreateSpecification_createModifier_withReferenceObject: number = 0;
 
 /**
  * @summary withReferenceObject
+ * @description
+ *
+ * WITH-REFERENCE-OBJECT. Same as
+ * `CreateSpecification_createModifier_withReferenceObject`.
  * @constant
  */
 export const withReferenceObject: number = CreateSpecification_createModifier_withReferenceObject; /* SHORT_NAMED_BIT */
@@ -42,6 +58,10 @@ export const withReferenceObject: number = CreateSpecification_createModifier_wi
 
 /**
  * @summary CreateSpecification_createModifier_withAutomaticInstanceNaming
+ * @description
+ *
+ * WITH-AUTOMATIC-INSTANCE-NAMING: Create may omit the instance name. X.722
+ * §8.6.3.5.
  * @constant
  */
 export const CreateSpecification_createModifier_withAutomaticInstanceNaming: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +69,10 @@ export const CreateSpecification_createModifier_withAutomaticInstanceNaming: num
 
 /**
  * @summary withAutomaticInstanceNaming
+ * @description
+ *
+ * WITH-AUTOMATIC-INSTANCE-NAMING. Same as
+ * `CreateSpecification_createModifier_withAutomaticInstanceNaming`.
  * @constant
  */
 export const withAutomaticInstanceNaming: number = CreateSpecification_createModifier_withAutomaticInstanceNaming; /* SHORT_NAMED_BIT */

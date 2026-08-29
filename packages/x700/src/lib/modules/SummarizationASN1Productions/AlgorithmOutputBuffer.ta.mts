@@ -19,6 +19,16 @@ import {
  * @summary AlgorithmOutputBuffer
  * @description
  *
+ * Statistical algorithm results for each numeric
+ * attribute (`{summarizationAttribute 1}`). Positions
+ * in `algorithmOutput` depend on the scanner class:
+ * mean — N, mean; mean-variance — N, mean, variance;
+ * min-max — N, min, max, optional mean; percentile —
+ * N, min, jth, median, (100−j)th, max, optional mean.
+ * ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.2.3](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.4–8.1.7, A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

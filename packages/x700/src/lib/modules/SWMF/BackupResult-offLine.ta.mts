@@ -20,6 +20,12 @@ import {
  * @summary BackupResult_offLine
  * @description
  *
+ * Off-line automatic-backup outcome: remote-system destination and
+ * named result (success, security/licensing failure, or unknown).
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +37,20 @@ export class BackupResult_offLine {
     constructor(
         /**
          * @summary `destination`.
+         * @description
+         *
+         * Remote system that received the backup (e.g. FTAM
+         * address). ITU-T Rec. X.744 (10/96) A.8.
          * @public
          * @readonly
          */
         readonly destination: GraphicString,
         /**
          * @summary `result`.
+         * @description
+         *
+         * Off-line backup result (success or named failure). ITU-T
+         * Rec. X.744 (10/96) A.8.
          * @public
          * @readonly
          */

@@ -33,6 +33,19 @@ import {
  * @summary NotificationCause
  * @description
  *
+ * Why a `usageReport` was emitted: the reporting-trigger value
+ * that matched. Alternatives:
+ * - `periodic`: scheduled interval (time- or volume-based
+ *   usage);
+ * - `induced`: start, suspend, resume, data-object deletion,
+ *   or control-object operational-state change;
+ * - `event`: an accountable event of §8.2.3;
+ * - `stimulus`: an identified external stimulus (OID assigned
+ *   by a specialization).
+ * ITU-T Rec. X.742 (04/95)
+ * [§8.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §8.2.5, A.6 `usageReportBehaviour`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

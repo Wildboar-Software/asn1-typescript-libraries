@@ -24,6 +24,10 @@ import {
  * @summary MapsToPair
  * @description
  *
+ * One systems management operation applied to either a role
+ * participant or the relationship object. ITU-T Rec. X.725 (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +42,22 @@ export class MapsToPair {
     constructor(
         /**
          * @summary `systemsMgtOperation`.
+         * @description
+         *
+         * GET, REPLACE, ADD, REMOVE, CREATE, DELETE, ACTION, or
+         * NOTIFICATION, with labels and optional parameters. ITU-T
+         * Rec. X.725 (11/95) A.2.3.5.
          * @public
          * @readonly
          */
         readonly systemsMgtOperation: SystemsMgtOperation,
         /**
          * @summary `roleOrRelationshipObject`.
+         * @description
+         *
+         * Target or source: the managed object fulfilling a named
+         * role, or the relationship object. ITU-T Rec. X.725 (11/95)
+         * A.2.3.5.
          * @public
          * @readonly
          */

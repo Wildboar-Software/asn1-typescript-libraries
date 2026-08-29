@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary maximumSelectClockOID
  * @description
  *
+ * Registers NTP attribute `maximumSelectClock`: maximum
+ * number of peers considered for selection. On `ntpProtocol`
+ * (`GET`; equality and ordering). ITU-T Rec. X.743 (06/98)
+ * [§B.3.7](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

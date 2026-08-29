@@ -34,6 +34,13 @@ import {
  * @summary TimeStamp
  * @description
  *
+ * Time instant for the Time Management Function and other OSI
+ * management uses: seconds and nanoseconds since an epoch
+ * (base 1970-01-01 00:00:00 GMT), plus a maximum-error bound.
+ * Precision 1 ns; ~600 years per epoch. Leap seconds are not
+ * folded into this count. ITU-T Rec. X.743 (06/98)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,24 +57,44 @@ export class TimeStamp {
     constructor(
         /**
          * @summary `epoch`.
+         * @description
+         *
+         * Which ~600-year epoch contains this instant. 0 = period
+         * beginning 1970-01-01 00:00:00 GMT. ITU-T Rec. X.743 (06/98)
+         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly epoch: Epochs,
         /**
          * @summary `second`.
+         * @description
+         *
+         * Seconds since the start of `epoch` (0..2³²−1). Leap
+         * seconds do not step this count. ITU-T Rec. X.743 (06/98)
+         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly second: Seconds,
         /**
          * @summary `nanosecond`.
+         * @description
+         *
+         * Nanoseconds within the second (0..999 999 999).
+         * ITU-T Rec. X.743 (06/98)
+         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly nanosecond: Nanoseconds,
         /**
          * @summary `maximumError`.
+         * @description
+         *
+         * Maximum error bound of this time, in nanoseconds;
+         * `noEstimate` if none is available. ITU-T Rec. X.743 (06/98)
+         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */

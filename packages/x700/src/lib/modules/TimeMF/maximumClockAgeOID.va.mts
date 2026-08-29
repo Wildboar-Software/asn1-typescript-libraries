@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary maximumClockAgeOID
  * @description
  *
+ * Registers NTP attribute `maximumClockAge`: maximum
+ * interval without an update that a reference clock remains
+ * valid. On `ntpProtocol` (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§B.3.3](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,14 @@ import {
  * @summary securityAuditTrail_Notification
  * @description
  *
+ * Arc for security-audit-trail notifications: `serviceReport`
+ * (1) for provision, denial or recovery of a service (and
+ * related security-admin information); `usageReport` (2) for
+ * statistical information relevant to the security
+ * administrator. Both use `SecurityAuditInfo`. ITU-T Rec.
+ * X.740 (09/92)
+ * [§8.1.1](https://www.itu.int/rec/T-REC-X.740-199209-I), A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

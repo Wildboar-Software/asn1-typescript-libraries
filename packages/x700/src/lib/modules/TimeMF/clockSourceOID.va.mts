@@ -15,6 +15,14 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockSourceOID
  * @description
  *
+ * Registers the `clockSource` managed object class: dynamic
+ * state of a clock. Required for each manageable clock.
+ * Superclass of `localClock` and `referenceClock`. Mandatory
+ * attributes include `clockID`, `operationalState`,
+ * `clockStatus`, `clockValue`, and the event triple; action
+ * `clockReset`; notification `stateChange`. ITU-T Rec. X.743 (06/98)
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

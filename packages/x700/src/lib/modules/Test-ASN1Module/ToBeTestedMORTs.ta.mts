@@ -24,6 +24,16 @@ import {
  * @summary ToBeTestedMORTs
  * @description
  *
+ * Explicit identification of MORT(s) in a test request: either a SET of object
+ * instances (`normalForm`) or CMIS scope-and-filter (`scopedSet`). MORTs may
+ * instead be implicit (the TARR itself is the MORT, or they appear in a TO
+ * initial attribute list). ITU-T Rec. X.745 (11/93) §8.4.2.6.
+ * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * Cor.2: `base` is ObjectInstance (not tagged SObjectInstance); Scope DEFAULT
+ * namedNumbers:baseObject.
+ * X.745 Cor.2 (06/98) A.7.2.
+ * https://www.itu.int/rec/T-REC-X.745-199806-I_Cor2
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

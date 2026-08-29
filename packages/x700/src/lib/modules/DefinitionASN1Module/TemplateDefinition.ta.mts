@@ -20,6 +20,20 @@ import {
  * @summary TemplateDefinition
  * @description
  *
+ * Text of a template definition. In-line templates are omitted even if
+ * they appear in the superior document; GDMO comments need not be
+ * included. Present on a template managed object when the
+ * template-definition conditional package is present (`PRESENT IF` the
+ * template is represented as a text string); retrievable with
+ * `getTextualRepresentation`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.12](https://www.itu.int/rec/T-REC-X.750-199610-I) (renumbered
+ * §8.1.2.14 by Amd.1),
+ * [A.3.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I). Amd.1 [item
+ * 8](https://www.itu.int/rec/T-REC-X.750-199710-I)
+ * says "template" rather than "GDMO template" so GRM templates share
+ * this encoding.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

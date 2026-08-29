@@ -19,6 +19,11 @@ import {
  * @summary PeerClockAddresses
  * @description
  *
+ * Network addresses of the peers currently maintained by
+ * this node. Syntax of `peerClockAddresses` on `localClock`
+ * (`GET-REPLACE`, `ADD-REMOVE`, `SET-BY-CREATE`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.16](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.16, A.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

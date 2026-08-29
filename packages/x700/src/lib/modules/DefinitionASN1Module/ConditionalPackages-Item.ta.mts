@@ -20,6 +20,10 @@ import {
  * @summary ConditionalPackages_Item
  * @description
  *
+ * One conditional package: template label and `PRESENT IF` condition
+ * string. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +35,18 @@ export class ConditionalPackages_Item {
     constructor(
         /**
          * @summary `label`.
+         * @description
+         *
+         * Conditional package template.
          * @public
          * @readonly
          */
         readonly label: TemplateLabel,
         /**
          * @summary `condition`.
+         * @description
+         *
+         * `PRESENT IF` condition from the managed object class template.
          * @public
          * @readonly
          */

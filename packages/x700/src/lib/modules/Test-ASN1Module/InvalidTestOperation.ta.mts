@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InvalidTestOperation
  * @description
  *
+ * Specific error: the requested test operation is not valid for this managed
+ * object class. Syntax is the OID of the invalid operation (typically an
+ * action). Used on suspend/resume and terminate. ITU-T Rec. X.745 (11/93)
+ * §8.4.4.4, A.6.
+ * [§8.4.4.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

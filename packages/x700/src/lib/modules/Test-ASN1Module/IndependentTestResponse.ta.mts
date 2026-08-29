@@ -30,6 +30,11 @@ import {
  * @summary IndependentTestResponse
  * @description
  *
+ * One successfully instantiated independent test (one TO). Always includes the
+ * invocation id; TO name and attributes as specified by TO behaviour. ITU-T
+ * Rec. X.745 (11/93) §8.4.3.1, 7.3.1.
+ * [§8.4.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +50,36 @@ export class IndependentTestResponse {
     constructor(
         /**
          * @summary `testInvocationId`.
+         * @description
+         *
+         * Invocation id of this single-TO test (may be the TO DN). ITU-T Rec.
+         * X.745 (11/93) §7.3.1.
+         * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testInvocationId: TestInvocationId,
         /**
          * @summary `tOName`.
+         * @description
+         *
+         * TO name if required: NULL if the conductor named it, otherwise the
+         * performer-assigned instance. ITU-T Rec. X.745 (11/93) §7.3.1, A.7.2.
+         * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly tOName?: OPTIONAL<TOName>,
         /**
          * @summary `tOAttributeList`.
+         * @description
+         *
+         * Initial attribute values the TO behaviour specifies to return. ITU-T
+         * Rec. X.745 (11/93) §9.5.
+         * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

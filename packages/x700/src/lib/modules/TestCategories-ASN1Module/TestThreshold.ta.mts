@@ -21,6 +21,12 @@ import {
  * @summary TestThreshold
  * @description
  *
+ * Error threshold for a test. Crossing it terminates the
+ * test with Fail. Bit-count, percentage, or `ErrorUnitThreshold`.
+ * Used by connection, connectivity, data-integrity, and loopback
+ * threshold packages. ITU-T Rec. X.737 (11/95)
+ * [§8.1.24](https://www.itu.int/rec/T-REC-X.737-199511-I), A.3, A.6.25.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

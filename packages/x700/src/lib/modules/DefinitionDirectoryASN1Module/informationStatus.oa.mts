@@ -28,6 +28,11 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary informationStatus
  * @description
  *
+ * Whether the stored definition is active, deleted, or preliminary. ID
+ * `{mkmDirectoryAttributeType 34}`. ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I), Table 17,
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

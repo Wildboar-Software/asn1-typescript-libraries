@@ -20,6 +20,15 @@ import {
  * @summary SequenceOfWeeks
  * @description
  *
+ * Syntax of `sequenceOfWeeks` (`{schedAtt 8}`). Sequence of
+ * week masks with one-week periodicity. First element applies
+ * when the object becomes active; then the sequence repeats. A
+ * week begins at 12 am Sunday relative to the duration package
+ * time base. Unspecified at create defaults to all days, full
+ * day (continually active). ITU-T Rec. X.746 (02/00)
+ * [§8.3.5](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.4.9, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

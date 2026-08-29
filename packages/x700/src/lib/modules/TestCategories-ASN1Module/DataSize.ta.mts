@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DataSize
  * @description
  *
+ * Size of a test data unit. Interpreted with `DataCategory`
+ * (bits, octets, blocks, packets). The rec does not define a unit
+ * independent of `DataCategory`. ITU-T Rec. X.737 (11/95)
+ * [A.7](https://www.itu.int/rec/T-REC-X.737-199511-I), §8.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

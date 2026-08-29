@@ -27,6 +27,16 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary behaviour
  * @description
  *
+ * Behaviour templates associated with the represented element.
+ * Multi-valued `TemplateLabel` (Directory encoding of the CMIP SET).
+ * Uses `directoryStringFirstComponentMatch` (case-ignore); some matches can
+ * fail an exact-case test (X.750 B.2 IMPORTS note). ID
+ * `{mkmDirectoryAttributeType 11}`. ITU-T Rec. X.750
+ * (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

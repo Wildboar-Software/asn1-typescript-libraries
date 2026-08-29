@@ -17,6 +17,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Date
  * @description
  *
+ * Optional timestamp for softwareUnit file-information and backup
+ * attributes (`dateDelivered`, `dateInstalled`,
+ * `dateOfLastModification`, `lastBackupTime`, `lastRestoreTime`).
+ * `time` is GeneralizedTime; `noSuchInformation` (`NULL`) means
+ * the event has not occurred (not delivered, not installed, not
+ * modified, no backup, or no restore, depending on the attribute).
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.2.3](https://www.itu.int/rec/T-REC-X.744-199610-I)–§8.2.6,
+ * §8.2.17, §8.2.19, A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

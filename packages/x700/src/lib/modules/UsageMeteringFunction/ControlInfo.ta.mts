@@ -40,6 +40,14 @@ import {
  * @summary ControlInfo
  * @description
  *
+ * Event information of `meteringStarted`, `meteringSuspended`,
+ * and `meteringResumed`, emitted by a control object after the
+ * corresponding confirmed action completes without error.
+ * Identifies data objects the action applied to and the control
+ * attributes in force. ITU-T Rec. X.742 (04/95)
+ * [§8.1.5](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §9.1.2, A.4, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,30 +66,55 @@ export class ControlInfo {
     constructor(
         /**
          * @summary `actionResponse`.
+         * @description
+         *
+         * Data objects on which the action succeeded, failed, or
+         * was indeterminate. Mandatory in the control notification
+         * (Table 10). ITU-T Rec. X.742 (04/95) §8.1.4, §9.1.2.
          * @public
          * @readonly
          */
         readonly actionResponse: ActionResponse,
         /**
          * @summary `reportingTriggers`.
+         * @description
+         *
+         * Reporting triggers currently in force on the control
+         * object. User optional in the notification (Table 10).
+         * ITU-T Rec. X.742 (04/95) §8.1.3, §9.1.2.
          * @public
          * @readonly
          */
         readonly reportingTriggers: OPTIONAL<ReportingTriggers>,
         /**
          * @summary `accountableObjectsReferenceList`.
+         * @description
+         *
+         * Accountable objects this control object covers. User
+         * optional in the notification (Table 10). ITU-T Rec.
+         * X.742 (04/95) §8.1.3, §9.1.2.
          * @public
          * @readonly
          */
         readonly accountableObjectsReferenceList: OPTIONAL<AccountableObjectsReferenceList>,
         /**
          * @summary `dataObjectsReferenceList`.
+         * @description
+         *
+         * Data objects this control object currently references.
+         * User optional in the notification (Table 10). ITU-T Rec.
+         * X.742 (04/95) §8.1.3, §9.1.2.
          * @public
          * @readonly
          */
         readonly dataObjectsReferenceList: OPTIONAL<DataObjectsReferenceList>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Management extensions. Required in this SEQUENCE (may be
+         * empty); Table 10 does not list a corresponding event
+         * parameter. ITU-T Rec. X.742 (04/95) A.9.
          * @public
          * @readonly
          */

@@ -50,6 +50,15 @@ import {
  * @summary UsageDataInfo
  * @description
  *
+ * Event information of a `usageReport` notification emitted by
+ * a usage metering data object when a reporting trigger fires.
+ * Identifies the accountable resource, why the report was
+ * emitted, the collected usage, and whether the data are
+ * believed in error. Carried in CMIS M-EVENT-REPORT (Table 11).
+ * ITU-T Rec. X.742 (04/95)
+ * [§8.2.5](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §9.1.3, A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -69,42 +78,81 @@ export class UsageDataInfo {
     constructor(
         /**
          * @summary `accountableObjectReference`.
+         * @description
+         *
+         * Accountable object (not necessarily a managed object) for
+         * which this usage is maintained. Mandatory in the data
+         * report (Table 11). ITU-T Rec. X.742 (04/95) §8.2.3.8.
          * @public
          * @readonly
          */
         readonly accountableObjectReference: ObjectInstance,
         /**
          * @summary `notificationCause`.
+         * @description
+         *
+         * The reporting-trigger value that caused this report
+         * (periodic, induced, accountable event, or external
+         * stimulus). Mandatory. ITU-T Rec. X.742 (04/95) §8.2.5,
+         * A.6 `usageReportBehaviour`.
          * @public
          * @readonly
          */
         readonly notificationCause: NotificationCause,
         /**
          * @summary `usageInfo`.
+         * @description
+         *
+         * Service-specific usage blocks for this utilization
+         * (registration required). Mandatory. ITU-T Rec. X.742
+         * (04/95) §8.2.3, Table 11.
          * @public
          * @readonly
          */
         readonly usageInfo: UsageInfo,
         /**
          * @summary `auditInfo`.
+         * @description
+         *
+         * Source-side audit data (file or record numbers of the
+         * origin of these usage data) so completeness of records
+         * can be checked. Present when the data object includes
+         * the audit information package. ITU-T Rec. X.742 (04/95)
+         * §8.2.4.2, A.6 `usageObjectRecordsIdBehaviour`.
          * @public
          * @readonly
          */
         readonly auditInfo: OPTIONAL<AuditInfo>,
         /**
          * @summary `dataErrors`.
+         * @description
+         *
+         * Whether these usage data are believed in error
+         * (`noProblem` or a set of possible-error OIDs).
+         * Mandatory. ITU-T Rec. X.742 (04/95) §8.2.3.8, Table 11.
          * @public
          * @readonly
          */
         readonly dataErrors: DataErrors,
         /**
          * @summary `providerId`.
+         * @description
+         *
+         * Authority providing the facilities of the accountable
+         * object (e.g. a communication service provider). If that
+         * provider owns the containing system, may be `unknown`
+         * (`NULL`). Optional (Table 11). ITU-T Rec. X.742 (04/95)
+         * §8.2.3.8.
          * @public
          * @readonly
          */
         readonly providerId?: OPTIONAL<ProviderId>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Optional management extensions. Table 11 "Additional
+         * info" (user optional). ITU-T Rec. X.742 (04/95) §9.1.3.
          * @public
          * @readonly
          */

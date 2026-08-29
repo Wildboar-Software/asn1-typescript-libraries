@@ -19,6 +19,12 @@ import {
  * @summary QOSCounterRange
  * @description
  *
+ * GDMO example (X.722 Annex A). Permitted and required value
+ * set of the example `qOS-Error-Counter` attribute:
+ * `QOSErrorCounter(0..4294967296)` (commented as a 32-bit
+ * range). ITU-T Rec. X.722 (01/92)
+ * [A.4](https://www.itu.int/rec/T-REC-X.722-199201-I), A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

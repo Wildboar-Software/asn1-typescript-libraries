@@ -16,6 +16,19 @@ import {
  * @summary summarizationNameBinding
  * @description
  *
+ * OID arc for summarization name bindings. Registered
+ * leaves (X.738 A.7): `dynamicSimpleScanner-system`(2)
+ * — `dynamicSimpleScanner` (and subclasses) named by
+ * `system` using `scannerId`; CREATE with
+ * reference-object or automatic naming, DELETE
+ * only-if-no-contained-objects;
+ * `conflictingPackagesScanner-system`(9) — X.739
+ * `scanner` (and subclasses) named by `system` with
+ * the same create/delete rules. Both CREATE forms may
+ * return `conflictingPackagesRequestedError`. Number 1
+ * is unused. ITU-T Rec. X.738 (11/93)
+ * [A.7](https://www.itu.int/rec/T-REC-X.738-199311-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

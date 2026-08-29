@@ -40,6 +40,13 @@ import {
  * @summary DataUnits
  * @description
  *
+ * Type and quantity of test data to send. Used only if the
+ * test allows the manager to specify type and/or quantity. If
+ * absent from a data-integrity request, units are object-specific.
+ * Also used as loopback pattern-type in results. ITU-T Rec.
+ * X.737 (11/95) [§8.1.6](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.3.6,
+ * A.3, A.6.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,30 +64,45 @@ export class DataUnits {
     constructor(
         /**
          * @summary `dataType`.
+         * @description
+         *
+         * Pattern/kind of data. Required. X.737 A.7.
          * @public
          * @readonly
          */
         readonly dataType: DataType,
         /**
          * @summary `dataCategory`.
+         * @description
+         *
+         * Unit of counting (bits/octets/blocks/packets). Optional.
          * @public
          * @readonly
          */
         readonly dataCategory?: OPTIONAL<DataCategory>,
         /**
          * @summary `dataSize`.
+         * @description
+         *
+         * Size of each unit. Optional. X.737 A.7.
          * @public
          * @readonly
          */
         readonly dataSize?: OPTIONAL<DataSize>,
         /**
          * @summary `dataNumber`.
+         * @description
+         *
+         * How many units to send. Optional. X.737 §8.1.6.
          * @public
          * @readonly
          */
         readonly dataNumber?: OPTIONAL<UnitsTotal>,
         /**
          * @summary `dataRate`.
+         * @description
+         *
+         * Send rate as REAL or OID. Optional. Cor.1 tagging. X.737 A.7.
          * @public
          * @readonly
          */

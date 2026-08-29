@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary leapSecondActionOID
  * @description
  *
+ * Registers confirmed action `leapSecond`: distribute that a
+ * leap second is about to occur and set the corresponding
+ * protocol parameters (`LeapSecondInfo`). On
+ * `synchronizationProtocol`. ITU-T Rec. X.743 (06/98)
+ * [§8.4.2](https://www.itu.int/rec/T-REC-X.743-199806-I), §9.7, A.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

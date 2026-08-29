@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TerminationReason
  * @description
  *
+ * OID identifying a termination reason. A.7 only; the rec
+ * does not register values or assign this type to a clause-8
+ * attribute. ITU-T Rec. X.737 (11/95)
+ * [A.7](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

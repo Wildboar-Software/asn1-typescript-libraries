@@ -30,6 +30,12 @@ import {
  * @summary ChangeBackInfo
  * @description
  *
+ * Action information for the confirmed `changeBack` action (unbind
+ * from the backed-up and back-up roles). Directed at the change-over
+ * control object. No action-reply information. ITU-T Rec. X.751
+ * (11/95) [§8.6.2](https://www.itu.int/rec/T-REC-X.751-199511-I),
+ * §7.3.1.2, A.5, Annex B (as corrected by Cor.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,24 +52,49 @@ export class ChangeBackInfo {
     constructor(
         /**
          * @summary `backedUpObject`.
+         * @description
+         *
+         * Object in the backed-up role that is to leave that role.
+         * Mandatory. ITU-T Rec. X.751 (11/95)
+         * [§7.3.1.2](https://www.itu.int/rec/T-REC-X.751-199511-I),
+         * §8.6.2.1.
          * @public
          * @readonly
          */
         readonly backedUpObject: ObjectInstance,
         /**
          * @summary `backUpObject`.
+         * @description
+         *
+         * Object in the back-up role that is to leave that role. If
+         * omitted, the control object uses the `backUpObject`
+         * attribute. ITU-T Rec. X.751 (11/95)
+         * [§7.3.1.2](https://www.itu.int/rec/T-REC-X.751-199511-I),
+         * §8.6.2.1.
          * @public
          * @readonly
          */
         readonly backUpObject?: OPTIONAL<OptionalObject>,
         /**
          * @summary `backedUpObjectChanges`.
+         * @description
+         *
+         * Extra attribute modifications on the backed-up object as
+         * it leaves the backed-up role. Applied after preconditions
+         * succeed. ITU-T Rec. X.751 (11/95)
+         * [§8.6.2.1](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly backedUpObjectChanges?: OPTIONAL<ExpectedAttributeList>,
         /**
          * @summary `backUpObjectChanges`.
+         * @description
+         *
+         * Extra attribute modifications on the back-up object as
+         * it leaves the back-up role. Applied after preconditions
+         * succeed. ITU-T Rec. X.751 (11/95)
+         * [§8.6.2.1](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */

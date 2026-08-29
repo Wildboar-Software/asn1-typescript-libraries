@@ -19,6 +19,13 @@ import {
  * @summary BufferedObservationIdList
  * @description
  *
+ * Per-object selection for a buffered scanner
+ * (`{summarizationAttribute 5}`): observed instance plus
+ * optional scan-attribute, numeric-array, and
+ * report-time identifier lists. ITU-T Rec. X.738 (11/93)
+ * [§8.1.9.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

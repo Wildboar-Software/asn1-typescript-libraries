@@ -16,6 +16,15 @@ import {
  * @summary part12Package
  * @description
  *
+ * OID arc for X.745 GDMO packages `{joint-iso-ccitt ms(9) function(2)
+ * part12(12) package(4)}`. Leaves 1–19 (A.2): actualTestTime,
+ * associatedObjects, controlledTestRequest, initializingTime, mORTs,
+ * requestedWindow, supportedTOClasses, supportedUncontrolledTests,
+ * testActionPerformer, testInvocationId, testObject, testOutcome, testResult,
+ * testSession, testSteps, testSuspendResume, testTerminate, tOControlStatus,
+ * uncontrolledTestRequest. ITU-T Rec. X.745 (11/93) §A.2, A.7.
+ * [§A.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

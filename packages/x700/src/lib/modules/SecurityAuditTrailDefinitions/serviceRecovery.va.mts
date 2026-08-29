@@ -19,6 +19,12 @@ import { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceRepo
  * @summary serviceRecovery
  * @description
  *
+ * Service-report cause: notification generated because a
+ * service has recovered from an abnormal condition. ITU-T
+ * Rec. X.740 (09/92)
+ * [§8.1.2](https://www.itu.int/rec/T-REC-X.740-199209-I),
+ * Table 4, A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

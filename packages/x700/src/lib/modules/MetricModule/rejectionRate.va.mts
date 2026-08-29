@@ -19,6 +19,14 @@ import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs'
  * @summary rejectionRate
  * @description
  *
+ * `specificProblems` identifier for the rejection-rate
+ * workload model: rate of requests (or requested resources)
+ * rejected for lack of available capacity. ITU-T Rec. X.739
+ * (11/93)
+ * [§3.7.12](https://www.itu.int/rec/T-REC-X.739-199311-I),
+ * §7.4, §8.1.9.7.2, A.5. Cor.1 writes the value as
+ * `oi:{moaSpecificProblems 3}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

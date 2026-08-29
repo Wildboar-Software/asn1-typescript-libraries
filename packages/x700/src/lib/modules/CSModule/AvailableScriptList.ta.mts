@@ -19,6 +19,15 @@ import {
  * @summary AvailableScriptList
  * @description
  *
+ * Scripts a launch pad is allowed to run. On a trigger, each
+ * `scriptId` in the execution parameter list is checked against
+ * this set; only members execute. If none match, the launch pad
+ * returns `scriptRejectedError` and does not execute. Default
+ * `emptyScriptList`. GET-REPLACE, ADD-REMOVE, SET-BY-CREATE.
+ * ITU-T Rec. X.753 (10/97)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.1.6.3.1, A.2 (`triggerActionAccepter`), A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

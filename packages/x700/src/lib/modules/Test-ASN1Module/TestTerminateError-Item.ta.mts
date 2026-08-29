@@ -19,6 +19,11 @@ import {
  * @summary TestTerminateError_Item
  * @description
  *
+ * One test in a terminate error: the invocation id of a test that was
+ * terminated, or of one that was not. ITU-T Rec. X.745 (11/93) §8.4.4.13,
+ * A.7.4.
+ * [§8.4.4.13](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

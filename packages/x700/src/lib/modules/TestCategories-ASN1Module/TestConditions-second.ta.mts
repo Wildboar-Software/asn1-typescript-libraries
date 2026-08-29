@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TestConditions_second
  * @description
  *
+ * Inner INTEGER of `TestConditions.second`: whether the
+ * user of the MORT can cause the test to abort. ITU-T Rec. X.737
+ * (11/95) [§8.1.21](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +30,9 @@ export type TestConditions_second = INTEGER;
 
 /**
  * @summary TestConditions_second_customerOverrideTest
+ * @description
+ *
+ * User of the MORT may abort the test (0). X.737 §8.1.21.
  * @constant
  * @type {number}
  */
@@ -33,6 +40,9 @@ export const TestConditions_second_customerOverrideTest: TestConditions_second =
 
 /**
  * @summary TestConditions_second_customerOverrideTest
+ * @description
+ *
+ * User of the MORT may abort the test (0). X.737 §8.1.21.
  * @constant
  * @type {number}
  */
@@ -40,6 +50,9 @@ export const customerOverrideTest: TestConditions_second = TestConditions_second
 
 /**
  * @summary TestConditions_second_noCustomerOverrideTest
+ * @description
+ *
+ * User of the MORT may not abort the test (1). X.737 §8.1.21.
  * @constant
  * @type {number}
  */
@@ -47,6 +60,9 @@ export const TestConditions_second_noCustomerOverrideTest: TestConditions_second
 
 /**
  * @summary TestConditions_second_noCustomerOverrideTest
+ * @description
+ *
+ * User of the MORT may not abort the test (1). X.737 §8.1.21.
  * @constant
  * @type {number}
  */

@@ -25,6 +25,16 @@ import {
  * @summary BackupArgument
  * @description
  *
+ * Confirmed generic `backup` M-ACTION information. Copies the
+ * target object's information without altering the original. Generic
+ * action intended for reuse beyond software objects (on software,
+ * copies underlying resources). Destination is a local same-class
+ * object, the managing system (copy in the action reply), or a
+ * remote system (off-line via a locally chosen file-transfer
+ * protocol). `{… action(9) backup(7)}`. ITU-T Rec. X.744 (10/96)
+ * [§8.3.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §7.2.1, §9.2 Table 6, A.9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +49,21 @@ export class BackupArgument {
     constructor(
         /**
          * @summary `backupDestination`.
+         * @description
+         *
+         * Where the copy is written (local object, in-line to the
+         * manager, or off-line remote system). Mandatory. ITU-T Rec.
+         * X.744 (10/96) §8.3.1, §9.2 Table 6, A.9.1.
          * @public
          * @readonly
          */
         readonly backupDestination: BackupDestination,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 6. ITU-T Rec. X.744
+         * (10/96) §9.2 Table 6.
          * @public
          * @readonly
          */

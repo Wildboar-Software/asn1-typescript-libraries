@@ -20,6 +20,12 @@ import {
  * @summary IntervalsOfDayWps_Item
  * @description
  *
+ * One operable interval of a day: start and stop on a 24-hour
+ * clock synchronized to the duration package time base. ITU-T
+ * Rec. X.746 (02/00)
+ * [§8.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.3.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +37,23 @@ export class IntervalsOfDayWps_Item {
     constructor(
         /**
          * @summary `intervalStart`.
+         * @description
+         *
+         * Start of the interval. `{hour 0, minute 0}` is start of
+         * day. ITU-T Rec. X.746 (02/00)
+         * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly intervalStart: Time24Wps,
         /**
          * @summary `intervalEnd`.
+         * @description
+         *
+         * End of the interval. `{hour 0, minute 0}` is end of day
+         * (24:00); may continue into the next day if that day's
+         * first start is 00:00. ITU-T Rec. X.746 (02/00)
+         * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */

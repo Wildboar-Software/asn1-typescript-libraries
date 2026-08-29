@@ -19,6 +19,14 @@ import {
  * @summary ProtocolError
  * @description
  *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Information syntax of the example `protocolError`
+ * notification, generated when a protocol entity receives a
+ * PDU that is invalid or contains a protocol error. Includes
+ * the header of the received PDU via the example `pDUHeader`
+ * parameter (`PDUString`). ITU-T Rec. X.722 (01/92)
+ * [A.8](https://www.itu.int/rec/T-REC-X.722-199201-I), A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

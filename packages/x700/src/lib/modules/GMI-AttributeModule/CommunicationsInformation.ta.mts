@@ -26,6 +26,14 @@ import {
  * @summary CommunicationsInformation
  * @description
  *
+ * Information syntax of the `communicationsInformation`
+ * notification: normal-operation events that are worth
+ * reporting but do not require manager action. Faults use
+ * X.733 alarm types instead. Functional unit bit 0 of
+ * `{… part5(5) functionalUnitPackage(1)
+ * informationEventReports(0)}`. ITU-T Rec. X.723 (11/93)
+ * [§12.1](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +48,20 @@ export class CommunicationsInformation {
     constructor(
         /**
          * @summary `informationType`.
+         * @description
+         *
+         * Type of the reported communications information
+         * (X.723 §9.10). Bound as attribute id `informationType`.
          * @public
          * @readonly
          */
         readonly informationType: InformationType,
         /**
          * @summary `informationData`.
+         * @description
+         *
+         * Optional structured payload (X.723 §9.9). Bound as
+         * attribute id `informationData`.
          * @public
          * @readonly
          */

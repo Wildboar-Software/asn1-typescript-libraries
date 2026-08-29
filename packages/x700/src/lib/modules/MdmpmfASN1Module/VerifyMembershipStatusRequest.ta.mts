@@ -19,6 +19,11 @@ import {
  * @summary VerifyMembershipStatusRequest
  * @description
  *
+ * Action information for `verifyMembershipStatus`: name of the
+ * object whose membership status is requested. ITU-T Rec. X.749
+ * (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

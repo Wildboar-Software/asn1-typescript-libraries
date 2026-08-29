@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UnitsTotal
  * @description
  *
+ * Count of units (threshold totals, `DataUnits.dataNumber`,
+ * `ConnectivityThreshold-time`). ITU-T Rec. X.737 (11/95)
+ * [A.7](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

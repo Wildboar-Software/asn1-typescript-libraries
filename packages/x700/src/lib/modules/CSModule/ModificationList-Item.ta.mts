@@ -22,6 +22,10 @@ import {
  * @summary ModificationList_Item
  * @description
  *
+ * One SET modification: operator, attribute id, and optional
+ * value (omitted for `setToDefault`). ITU-T Rec. X.753 (10/97)
+ * [A.8](https://www.itu.int/rec/T-REC-X.753-199710-I), D.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +37,31 @@ export class ModificationList_Item {
     constructor(
         /**
          * @summary `modifyOperator`.
+         * @description
+         *
+         * How to apply the change (CMIP `ModifyOperator`; default
+         * `replace`). ITU-T Rec. X.753 (10/97) A.8; X.711.
          * @public
          * @readonly
          */
         readonly modifyOperator: OPTIONAL<ModifyOperator>,
         /**
          * @summary `attributeId`.
+         * @description
+         *
+         * Attribute to modify. Constrained by the
+         * `ModificationLists` TYPE-IDENTIFIER set. ITU-T Rec.
+         * X.753 (10/97) A.8, D.9.
          * @public
          * @readonly
          */
         readonly attributeId: OBJECT_IDENTIFIER,
         /**
          * @summary `attributeValue`.
+         * @description
+         *
+         * New value. Absent when `modifyOperator` is
+         * `setToDefault`. ITU-T Rec. X.753 (10/97) A.8.
          * @public
          * @readonly
          */

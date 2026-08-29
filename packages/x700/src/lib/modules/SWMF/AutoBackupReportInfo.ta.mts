@@ -25,6 +25,17 @@ import {
  * @summary AutoBackupReportInfo
  * @description
  *
+ * Event information of `autoBackupReport`, emitted when an
+ * automatic backup completes. Trigger is
+ * `futureAutoBackupTriggerThreshold` (count of modifications);
+ * destination is `futureAutoBackupDestination`. For local and
+ * off-line backup, reports success or failure; for backup to the
+ * managing system, the copy is carried in-line in this
+ * notification. `{… notification(10) autoBackupReport(1)}`. ITU-T
+ * Rec. X.744 (10/96)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §9.10 Table 14, A.6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +50,21 @@ export class AutoBackupReportInfo {
     constructor(
         /**
          * @summary `backupResult`.
+         * @description
+         *
+         * Outcome and destination of the automatic backup
+         * (local / in-line / off-line). Mandatory. ITU-T Rec. X.744
+         * (10/96) §8.4.1, §9.10 Table 14, A.6.1.
          * @public
          * @readonly
          */
         readonly backupResult: BackupResult,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 14. ITU-T Rec. X.744
+         * (10/96) §9.10 Table 14.
          * @public
          * @readonly
          */

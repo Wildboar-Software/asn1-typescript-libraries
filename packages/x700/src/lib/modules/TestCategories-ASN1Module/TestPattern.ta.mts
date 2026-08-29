@@ -25,6 +25,13 @@ import {
  * @summary TestPattern
  * @description
  *
+ * Signals or data applied to a communications path (test
+ * signal). `rawData` octets, a `standardType` pattern, or a
+ * `ManagementExtension`. Attribute `testPattern` / connection-
+ * test info. ITU-T Rec. X.737 (11/95)
+ * [§3.9.10](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * §8.1.22, A.6.23.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SelectClock
  * @description
  *
+ * Peer-count used by NTP selection (0..255). Syntax of
+ * `minimumSelectClock` (minimum peers acceptable for
+ * synchronization) and `maximumSelectClock` (maximum peers
+ * considered for selection). ITU-T Rec. X.743 (06/98)
+ * [§B.3.7](https://www.itu.int/rec/T-REC-X.743-199806-I), B.3.12, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

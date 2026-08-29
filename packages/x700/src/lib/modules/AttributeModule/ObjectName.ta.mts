@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ObjectName
  * @description
  *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Syntax of the example `objectName` naming attribute
+ * (equality matching). Used in `exampleNameBinding` to name
+ * `exampleObjectClass` under `system`. ITU-T Rec. X.722
+ * (01/92) [A.2](https://www.itu.int/rec/T-REC-X.722-199201-I),
+ * A.5, A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

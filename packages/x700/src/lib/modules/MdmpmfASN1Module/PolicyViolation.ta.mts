@@ -19,6 +19,12 @@ import {
  * @summary PolicyViolation
  * @description
  *
+ * Information syntax of the `policyViolation` notification: the
+ * domain member that violated a jurisdiction’s policy, and the
+ * policy that was violated. ITU-T Rec. X.749 (08/97)
+ * [§8.3.1](https://www.itu.int/rec/T-REC-X.749-199708-I), A.6,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +39,22 @@ export class PolicyViolation {
     constructor(
         /**
          * @summary `violatorName`.
+         * @description
+         *
+         * Object that violated the policy. ITU-T Rec. X.749 (08/97)
+         * [§8.3.1](https://www.itu.int/rec/T-REC-X.749-199708-I),
+         * §8.5.20.
          * @public
          * @readonly
          */
         readonly violatorName: ObjectInstance,
         /**
          * @summary `violatedPolicy`.
+         * @description
+         *
+         * Policy that evaluated to false. ITU-T Rec. X.749 (08/97)
+         * [§8.3.1](https://www.itu.int/rec/T-REC-X.749-199708-I),
+         * §8.5.19.
          * @public
          * @readonly
          */

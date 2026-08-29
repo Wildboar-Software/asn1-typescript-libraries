@@ -16,6 +16,11 @@ import {
  * @summary moaAlgorithmIdentifiers
  * @description
  *
+ * Arc for metric-object algorithm identifiers: `ewmaAlgorithm`
+ * (0), `uwmaAlgorithm` (1). Other identifiers may be registered
+ * outside X.739. ITU-T Rec. X.739 (11/93)
+ * [§8.1.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I), A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

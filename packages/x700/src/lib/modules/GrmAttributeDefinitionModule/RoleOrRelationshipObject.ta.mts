@@ -20,6 +20,11 @@ import {
  * @summary RoleOrRelationshipObject
  * @description
  *
+ * Target of a mapped systems management operation: a named role
+ * participant, or `NULL` for the relationship object itself. ITU-T
+ * Rec. X.725 (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

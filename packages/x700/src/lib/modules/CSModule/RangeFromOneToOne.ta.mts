@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RangeFromOneToOne
  * @description
  *
+ * GRM cardinality constraint: exactly one participant in the
+ * role or relationship. Used for `commandSequencerRole` (and
+ * related one-to-one constraints) in Annex B. ITU-T Rec. X.753
+ * (10/97)
+ * [A.8](https://www.itu.int/rec/T-REC-X.753-199710-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

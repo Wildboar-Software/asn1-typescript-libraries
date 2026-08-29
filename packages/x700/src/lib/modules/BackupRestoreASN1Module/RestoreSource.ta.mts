@@ -21,6 +21,17 @@ import {
  * @summary RestoreSource
  * @description
  *
+ * Restore origin for the `restore` action.
+ *
+ * - `localObject` — same-class object in the managed system
+ * - `inLine` — copy supplied by the managing system in this
+ *   argument
+ * - `offLine` — remote system (GraphicString; e.g. FTAM)
+ *
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.3.5](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.9.2, A.9.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

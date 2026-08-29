@@ -19,6 +19,12 @@ import {
  * @summary ResponseTimeout
  * @description
  *
+ * Alias of X.745 `TimeoutPeriod`. How long to wait for an
+ * expected PDU in `PDUReception`. Named type added by Cor.1.
+ * ITU-T Rec. X.737 (11/95)
+ * [§7.5.6](https://www.itu.int/rec/T-REC-X.737-199511-I); Cor.1 (06/98)
+ * [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

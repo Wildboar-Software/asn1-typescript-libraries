@@ -26,6 +26,15 @@ import {
  * @summary InvalidAccessControlFilter
  * @description
  *
+ * CMIS processing-failure specific error for a proposed
+ * access-control filter element
+ * (`invalidAccessControlFilter` parameter). Sequence of
+ * error id plus optional CMIS filter in error. Raised when
+ * setting `accessControlFilter`, `actionFilterList`, or
+ * derived filters. ITU-T Rec. X.741 (04/95)
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.4.1, A.5.2, A.5.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +49,21 @@ export class InvalidAccessControlFilter {
     constructor(
         /**
          * @summary `errorId`.
+         * @description
+         *
+         * Why the filter was rejected: `duplicateId`,
+         * `heterogeneousId`, or `invalidId`. X.741 §8.2.1,
+         * A.4.1.
          * @public
          * @readonly
          */
         readonly errorId: InvalidAccessControlFilter_errorId,
         /**
          * @summary `filter`.
+         * @description
+         *
+         * The CMIS filter in error, if the implementation
+         * supplies it. X.741 §8.2.1, A.4.1.
          * @public
          * @readonly
          */

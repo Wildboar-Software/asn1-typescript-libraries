@@ -27,6 +27,16 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary templateName
  * @description
  *
+ * Label of the represented template. Directory syntax is
+ * `TemplateLabel` (local name plus optional document id); the CMIP
+ * attribute uses `TemplateName` alone. Uses
+ * `directoryStringFirstComponentMatch` (case-ignore); some matches can fail an
+ * exact-case test (X.750 B.2 IMPORTS note). ID
+ * `{mkmDirectoryAttributeType 39}`. ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

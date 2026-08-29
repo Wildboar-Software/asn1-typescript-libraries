@@ -18,6 +18,13 @@ import {
  * @summary defaultActualStopTime
  * @description
  *
+ * DEFAULT VALUE of the actualStopTime attribute: unknown until the test
+ * performer knows the actual or expected stop. Added by Technical Corrigendum
+ * 1. ITU-T Rec. X.745 (11/93) §8.2.1.
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * X.745 Cor.1 (08/97) A.7.1.
+ * https://www.itu.int/rec/T-REC-X.745-199708-I_Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

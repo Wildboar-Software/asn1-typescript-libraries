@@ -20,6 +20,11 @@ import {
  * @summary BackupResult_local
  * @description
  *
+ * Local automatic-backup outcome: destination object in the managed
+ * system and whether the copy succeeded. ITU-T Rec. X.744 (10/96)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +36,20 @@ export class BackupResult_local {
     constructor(
         /**
          * @summary `destination`.
+         * @description
+         *
+         * Local object instance that received the backup (same class
+         * as the source). ITU-T Rec. X.744 (10/96) A.8.
          * @public
          * @readonly
          */
         readonly destination: ObjectInstance,
         /**
          * @summary `success`.
+         * @description
+         *
+         * `TRUE` if the local backup succeeded. ITU-T Rec. X.744
+         * (10/96) A.8.
          * @public
          * @readonly
          */

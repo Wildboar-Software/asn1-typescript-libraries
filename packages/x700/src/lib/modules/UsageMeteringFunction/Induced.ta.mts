@@ -15,6 +15,28 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Induced
  * @description
  *
+ * Induced reporting triggers and notification causes: a
+ * metering action, data-object deletion, or a change of the
+ * control object's operational state.
+ *
+ * - `start` (0): start metering completed (re-initializes
+ *   usage parameters; clears `suspended`).
+ * - `suspend` (1): suspend metering completed (usage held
+ *   constant; control status `suspended`).
+ * - `resume` (2): resume metering completed (does not
+ *   re-initialize).
+ * - `delete` (3): data object is being deleted; if this
+ *   trigger is set, a usage report is emitted first and
+ *   procedural status is `terminating`.
+ * - `disabled` (4): control-object operational state became
+ *   disabled.
+ * - `enabled` (5): control-object operational state became
+ *   enabled.
+ *
+ * ITU-T Rec. X.742 (04/95)
+ * [§8.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §7.2.4, Table 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +60,28 @@ export enum _enum_for_Induced {
  * @summary Induced
  * @description
  *
+ * Induced reporting triggers and notification causes: a
+ * metering action, data-object deletion, or a change of the
+ * control object's operational state.
+ *
+ * - `start` (0): start metering completed (re-initializes
+ *   usage parameters; clears `suspended`).
+ * - `suspend` (1): suspend metering completed (usage held
+ *   constant; control status `suspended`).
+ * - `resume` (2): resume metering completed (does not
+ *   re-initialize).
+ * - `delete` (3): data object is being deleted; if this
+ *   trigger is set, a usage report is emitted first and
+ *   procedural status is `terminating`.
+ * - `disabled` (4): control-object operational state became
+ *   disabled.
+ * - `enabled` (5): control-object operational state became
+ *   enabled.
+ *
+ * ITU-T Rec. X.742 (04/95)
+ * [§8.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §7.2.4, Table 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,6 +98,28 @@ export type Induced = _enum_for_Induced;
  * @summary Induced
  * @description
  *
+ * Induced reporting triggers and notification causes: a
+ * metering action, data-object deletion, or a change of the
+ * control object's operational state.
+ *
+ * - `start` (0): start metering completed (re-initializes
+ *   usage parameters; clears `suspended`).
+ * - `suspend` (1): suspend metering completed (usage held
+ *   constant; control status `suspended`).
+ * - `resume` (2): resume metering completed (does not
+ *   re-initialize).
+ * - `delete` (3): data object is being deleted; if this
+ *   trigger is set, a usage report is emitted first and
+ *   procedural status is `terminating`.
+ * - `disabled` (4): control-object operational state became
+ *   disabled.
+ * - `enabled` (5): control-object operational state became
+ *   enabled.
+ *
+ * ITU-T Rec. X.742 (04/95)
+ * [§8.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §7.2.4, Table 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -68,6 +134,10 @@ export const Induced = _enum_for_Induced;
 
 /**
  * @summary Induced_start
+ * @description
+ *
+ * Start metering completed. ITU-T Rec. X.742 (04/95) §8.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +146,10 @@ export const Induced_start: Induced =
 
 /**
  * @summary start
+ * @description
+ *
+ * Start metering completed. ITU-T Rec. X.742 (04/95) §8.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +157,10 @@ export const start: Induced = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Induced_suspend
+ * @description
+ *
+ * Suspend metering completed. ITU-T Rec. X.742 (04/95) §8.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +169,10 @@ export const Induced_suspend: Induced =
 
 /**
  * @summary suspend
+ * @description
+ *
+ * Suspend metering completed. ITU-T Rec. X.742 (04/95) §8.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +181,10 @@ export const suspend: Induced =
 
 /**
  * @summary Induced_resume
+ * @description
+ *
+ * Resume metering completed. ITU-T Rec. X.742 (04/95) §8.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +193,10 @@ export const Induced_resume: Induced =
 
 /**
  * @summary resume
+ * @description
+ *
+ * Resume metering completed. ITU-T Rec. X.742 (04/95) §8.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +205,11 @@ export const resume: Induced =
 
 /**
  * @summary Induced_delete_
+ * @description
+ *
+ * Data object is being deleted (`delete` in ASN.1). ITU-T Rec.
+ * X.742 (04/95) §7.2.4, Table 1.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +218,11 @@ export const Induced_delete_: Induced =
 
 /**
  * @summary delete_
+ * @description
+ *
+ * Data object is being deleted (`delete` in ASN.1). ITU-T Rec.
+ * X.742 (04/95) §7.2.4, Table 1.
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +231,11 @@ export const delete_: Induced =
 
 /**
  * @summary Induced_disabled
+ * @description
+ *
+ * Control-object operational state became disabled. ITU-T Rec.
+ * X.742 (04/95) §8.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +244,11 @@ export const Induced_disabled: Induced =
 
 /**
  * @summary disabled
+ * @description
+ *
+ * Control-object operational state became disabled. ITU-T Rec.
+ * X.742 (04/95) §8.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +257,11 @@ export const disabled: Induced =
 
 /**
  * @summary Induced_enabled
+ * @description
+ *
+ * Control-object operational state became enabled. ITU-T Rec.
+ * X.742 (04/95) §8.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +270,11 @@ export const Induced_enabled: Induced =
 
 /**
  * @summary enabled
+ * @description
+ *
+ * Control-object operational state became enabled. ITU-T Rec.
+ * X.742 (04/95) §8.1.3.
+ *
  * @constant
  * @type {number}
  */

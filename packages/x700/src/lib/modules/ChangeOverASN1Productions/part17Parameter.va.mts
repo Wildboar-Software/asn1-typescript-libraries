@@ -16,6 +16,14 @@ import {
  * @summary part17Parameter
  * @description
  *
+ * Arc for change-over specific-error parameters: `alreadyBackedUp`
+ * (1), `backup-backedup-Mismatch` (2), `changeOverCapabilityAbsent`
+ * (3), `expectedResultUnsatisfied` (4), `noSuchParticipant` (5),
+ * `noSuchRelationships` (6), `notBackedUp` (7),
+ * `postconditionsNotMet` (8), `preconditionsNotMet` (9),
+ * `secondaryInstanceUnavailable` (10). ITU-T Rec. X.751 (11/95)
+ * [A.6](https://www.itu.int/rec/T-REC-X.751-199511-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

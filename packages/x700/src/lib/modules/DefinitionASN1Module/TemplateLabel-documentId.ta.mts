@@ -25,6 +25,10 @@ import {
  * @summary TemplateLabel_documentId
  * @description
  *
+ * Optional document identity on a `TemplateLabel`: graphic
+ * `documentName` or `documentObjectIdentifier`. ITU-T Rec. X.750
+ * (10/96) [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

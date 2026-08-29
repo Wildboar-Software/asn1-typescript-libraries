@@ -19,6 +19,21 @@ import {
  * @summary FilterList
  * @description
  *
+ * Set of CMIS filters constraining parameters of management
+ * operations. Syntax of `accessControlFilter` (inherited by
+ * `attributeFilterList`, `scopeFilter`,
+ * `synchronizationFilter`) and of optional action-argument
+ * constraints. Each filter addresses a single element of
+ * management information; each element appears in at most
+ * one filter. Empty set: all possible values are targeted
+ * (for `accessControlFilter`) or no constraints (for
+ * `attributeFilterList`). Filter-item attribute ids in one
+ * filter must be homogeneous; else
+ * `invalidAccessControlFilter` (`heterogeneousId`,
+ * `duplicateId`, or `invalidId`). ITU-T Rec. X.741 (04/95)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.5.2, A.5.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

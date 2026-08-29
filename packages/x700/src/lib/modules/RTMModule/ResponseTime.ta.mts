@@ -17,6 +17,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ResponseTime
  * @description
  *
+ * Measured response time, or a sentinel: `seconds:-1` is
+ * `notYetResponded` on `responseTime`, and
+ * `noEstimateOnResponseTimeError` on
+ * `maximumResponseTimeError`. INTEGER units for raw time;
+ * `secondsPerBit` is REAL `(RTraw × 2) / (Ls + Lr)`. ITU-T Rec.
+ * X.748 (03/99)
+ * [§8.4.14](https://www.itu.int/rec/T-REC-X.748-199903-I),
+ * §8.2.4, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

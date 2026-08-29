@@ -20,6 +20,15 @@ import {
  * @summary SequenceOfMonths
  * @description
  *
+ * Syntax of `sequenceOfMonths` (`{schedAtt 7}`). Sequence of
+ * month masks with one-month periodicity. First element
+ * applies when the object becomes active; then the sequence
+ * repeats. A month begins at 12 am on the first; extraneous
+ * days are ignored. Unspecified at create defaults to every
+ * day, full day (continually active). ITU-T Rec. X.746 (02/00)
+ * [§8.3.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.4.8, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

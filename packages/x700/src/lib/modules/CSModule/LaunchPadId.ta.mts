@@ -19,6 +19,20 @@ import {
  * @summary LaunchPadId
  * @description
  *
+ * Names a launch pad: the object a trigger hits to start script
+ * execution. Acts as IVMO for a thread (supplies execution
+ * parameters). Subclass of `basicSpawnerClass` and
+ * `scriptReferencer`. Contained in a command sequencer.
+ *
+ * Asynchronous launch pad: spawns suspendable threads, then
+ * emits `triggerResultInfo` without waiting for script
+ * results (threads notify `executionResultInfo` themselves).
+ * Synchronous launch pad: waits until those threads complete,
+ * then emits `triggerResultInfo` (or a processing-error alarm)
+ * with synchronized results or errors. ITU-T Rec. X.753 (10/97)
+ * [§3.6.5](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §3.6.6–§3.6.7, §7.1–§7.2, §8.1.6–§8.1.8, A.4, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

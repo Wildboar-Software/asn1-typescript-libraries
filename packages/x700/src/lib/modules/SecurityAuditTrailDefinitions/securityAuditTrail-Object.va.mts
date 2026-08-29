@@ -16,6 +16,14 @@ import {
  * @summary securityAuditTrail_Object
  * @description
  *
+ * Arc for security-audit-trail managed object classes:
+ * `securityAuditTrailRecord` (1), a subclass of X.721
+ * `eventLogRecord` for information stored in a log from
+ * security-audit-trail notifications or event reports. ITU-T
+ * Rec. X.740 (09/92)
+ * [§8.2](https://www.itu.int/rec/T-REC-X.740-199209-I), A.1,
+ * A.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

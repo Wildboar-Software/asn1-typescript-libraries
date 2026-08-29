@@ -28,6 +28,15 @@ import { ErrorId, _decode_ErrorId, _encode_ErrorId } from '../Schedulerev1-ASN1M
  * @summary CommonError
  * @description
  *
+ * Failure of a scheduled operation that is not a CMIP list
+ * error (Erratum 1 form). Identifies the SMO class and
+ * instance, a `SCHED-ERROR.&id` from `CommonErrorSet`, and an
+ * optional associated value. Present in
+ * `operationResultNotification` when the SO reports failure.
+ * ITU-T Rec. X.746 (02/00)
+ * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I), 7.3.3,
+ * 8.3.11, Erratum 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,24 +54,48 @@ export class CommonError {
     constructor(
         /**
          * @summary `managedObjectClass`.
+         * @description
+         *
+         * Class of the SMO on which the scheduled operation failed.
+         * Shall be present in the notification. ITU-T Rec. X.746
+         * (02/00)
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly managedObjectClass: ObjectClass,
         /**
          * @summary `managedObjectInstance`.
+         * @description
+         *
+         * SMO instance on which the scheduled operation failed.
+         * Shall be present in the notification. ITU-T Rec. X.746
+         * (02/00)
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly managedObjectInstance: ObjectInstance,
         /**
          * @summary `errorId`.
+         * @description
+         *
+         * Identifies a `SCHED-ERROR` in `CommonErrorSet`. ITU-T
+         * Rec. X.746 (02/00)
+         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+         * Erratum 1.
          * @public
          * @readonly
          */
         readonly errorId: ErrorId,
         /**
          * @summary `errorValue`.
+         * @description
+         *
+         * Associated `SCHED-ERROR.&Value` for `errorId`, if the
+         * error object defines one. ITU-T Rec. X.746 (02/00)
+         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+         * Erratum 1.
          * @public
          * @readonly
          */

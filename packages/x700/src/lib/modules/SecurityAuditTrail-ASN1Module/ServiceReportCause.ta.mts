@@ -17,6 +17,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ServiceReportCause
  * @description
  *
+ * Registered reason for a service-report notification. Syntax is
+ * an object identifier; X.740 registers six values under
+ * `serviceReportCause` (request, denial, response, failure,
+ * recovery, other). Additional causes may be registered
+ * outside this Rec. using X.208 procedures. Shall be supplied
+ * when the event type is service report. ITU-T Rec. X.740
+ * (09/92)
+ * [§8.1.2](https://www.itu.int/rec/T-REC-X.740-199209-I),
+ * §11.2.6, A.3, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

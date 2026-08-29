@@ -24,6 +24,14 @@ import {
  * @summary AlgorithmOutputBuffer_Item
  * @description
  *
+ * Unnested SEQUENCE of `AlgorithmOutputBuffer`: one
+ * numeric attribute and the ordered algorithm results
+ * for that attribute. Positions depend on the scanner
+ * class (see `AlgorithmOutputBuffer`). ITU-T Rec.
+ * X.738 (11/93)
+ * [§8.2.2.2.3](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.4–8.1.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +43,22 @@ export class AlgorithmOutputBuffer_Item {
     constructor(
         /**
          * @summary `attributeId`.
+         * @description
+         *
+         * Numeric attribute to which `algorithmOutput`
+         * applies. X.738 §8.2.2.2.3.
          * @public
          * @readonly
          */
         readonly attributeId: AttributeId,
         /**
          * @summary `algorithmOutput`.
+         * @description
+         *
+         * Ordered results. Mean: N, mean. Mean-variance: N,
+         * mean, variance. Min-max: N, min, max, optional
+         * mean. Percentile: N, min, jth, median, (100−j)th,
+         * max, optional mean. X.738 §8.1.4.2–8.1.7.2.
          * @public
          * @readonly
          */

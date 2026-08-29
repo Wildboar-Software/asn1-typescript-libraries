@@ -15,6 +15,23 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DenialResponse
  * @description
  *
+ * Denial response returned when access is denied by the
+ * **default** rule (`defaultDenialResponse` on access
+ * control rules). Same four denial values as
+ * `EnforcementAction` without `allow`. Cor.2 removed the
+ * erroneous `::= EnforcementAction` from this production.
+ * ITU-T Rec. X.741 (04/95)
+ * [§A.5.9](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.2.1.2, §7.4.6.1; Cor.2 (06/98)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-199806-I).
+ *
+ * Values:
+ * - `denyWithResponse` (0): access-denied (confirmed).
+ * - `denyWithoutResponse` (1): no response.
+ * - `abortAssociation` (2): ACSE A-ABORT.
+ * - `denyWithFalseResponse` (3): incorrect information
+ *   (confirmed).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +53,23 @@ export enum _enum_for_DenialResponse {
  * @summary DenialResponse
  * @description
  *
+ * Denial response returned when access is denied by the
+ * **default** rule (`defaultDenialResponse` on access
+ * control rules). Same four denial values as
+ * `EnforcementAction` without `allow`. Cor.2 removed the
+ * erroneous `::= EnforcementAction` from this production.
+ * ITU-T Rec. X.741 (04/95)
+ * [§A.5.9](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.2.1.2, §7.4.6.1; Cor.2 (06/98)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-199806-I).
+ *
+ * Values:
+ * - `denyWithResponse` (0): access-denied (confirmed).
+ * - `denyWithoutResponse` (1): no response.
+ * - `abortAssociation` (2): ACSE A-ABORT.
+ * - `denyWithFalseResponse` (3): incorrect information
+ *   (confirmed).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,6 +86,23 @@ export type DenialResponse = _enum_for_DenialResponse;
  * @summary DenialResponse
  * @description
  *
+ * Denial response returned when access is denied by the
+ * **default** rule (`defaultDenialResponse` on access
+ * control rules). Same four denial values as
+ * `EnforcementAction` without `allow`. Cor.2 removed the
+ * erroneous `::= EnforcementAction` from this production.
+ * ITU-T Rec. X.741 (04/95)
+ * [§A.5.9](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.2.1.2, §7.4.6.1; Cor.2 (06/98)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-199806-I).
+ *
+ * Values:
+ * - `denyWithResponse` (0): access-denied (confirmed).
+ * - `denyWithoutResponse` (1): no response.
+ * - `abortAssociation` (2): ACSE A-ABORT.
+ * - `denyWithFalseResponse` (3): incorrect information
+ *   (confirmed).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -66,6 +117,12 @@ export const DenialResponse = _enum_for_DenialResponse;
 
 /**
  * @summary DenialResponse_denyWithResponse
+ * @description
+ *
+ * Access-denied error (confirmed-mode). Used as the default
+ * denial response of the default rule. X.741 §7.4.6.1,
+ * A.5.9.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +131,10 @@ export const DenialResponse_denyWithResponse: DenialResponse =
 
 /**
  * @summary denyWithResponse
+ * @description
+ *
+ * Access-denied error (confirmed-mode). X.741 §7.4.6.1.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +143,10 @@ export const denyWithResponse: DenialResponse =
 
 /**
  * @summary DenialResponse_denyWithoutResponse
+ * @description
+ *
+ * No response returned to the initiator. X.741 §7.4.6.1.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +155,10 @@ export const DenialResponse_denyWithoutResponse: DenialResponse =
 
 /**
  * @summary denyWithoutResponse
+ * @description
+ *
+ * No response returned to the initiator. X.741 §7.4.6.1.
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +167,10 @@ export const denyWithoutResponse: DenialResponse =
 
 /**
  * @summary DenialResponse_abortAssociation
+ * @description
+ *
+ * Invoke ACSE A-ABORT. X.741 §7.4.6.1.
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +179,10 @@ export const DenialResponse_abortAssociation: DenialResponse =
 
 /**
  * @summary abortAssociation
+ * @description
+ *
+ * Invoke ACSE A-ABORT. X.741 §7.4.6.1.
+ *
  * @constant
  * @type {number}
  */
@@ -114,6 +191,11 @@ export const abortAssociation: DenialResponse =
 
 /**
  * @summary DenialResponse_denyWithFalseResponse
+ * @description
+ *
+ * Incorrect management information (confirmed-mode). X.741
+ * §7.4.6.1.
+ *
  * @constant
  * @type {number}
  */
@@ -122,6 +204,11 @@ export const DenialResponse_denyWithFalseResponse: DenialResponse =
 
 /**
  * @summary denyWithFalseResponse
+ * @description
+ *
+ * Incorrect management information (confirmed-mode). X.741
+ * §7.4.6.1.
+ *
  * @constant
  * @type {number}
  */

@@ -16,6 +16,15 @@ import {
  * @summary smi2NameBinding
  * @description
  *
+ * Registration arc for DMI (X.721) name bindings:
+ * `{joint-iso-itu-t ms(9) smi(3) part2(2) nameBinding(6)}`.
+ * Assigned values (X.721 §7): 1 `discriminator-system`
+ * (discriminator named under system by `discriminatorId`),
+ * 2 `log-system` (log named under system by `logId`),
+ * 3 `logRecord-log` (log record named under log by
+ * `logRecordId`). ITU-T Rec. X.721 (02/92)
+ * [§7](https://www.itu.int/rec/T-REC-X.721-199202-I), §14.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

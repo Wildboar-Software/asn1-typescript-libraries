@@ -25,6 +25,11 @@ import {
  * @summary TestSuspendResumeInfo
  * @description
  *
+ * M-ACTION information of testSuspendResumeAction (confirmed), directed at the
+ * TARR that received the test request. Controlled tests only. ITU-T Rec. X.745
+ * (11/93) §9.7, 7.2.4, A.4.
+ * [§9.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,23 @@ export class TestSuspendResumeInfo {
     constructor(
         /**
          * @summary `indicatedTests`.
+         * @description
+         *
+         * Session id (best-effort) or invocation ids (all-or-error). ITU-T Rec.
+         * X.745 (11/93) §8.4.2.2, 7.2.4.
+         * [§8.4.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly indicatedTests: IndicatedTests,
         /**
          * @summary `suspendResumeChoice`.
+         * @description
+         *
+         * suspend or resume. ITU-T Rec. X.745 (11/93) §8.4.2.3.
+         * [§8.4.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

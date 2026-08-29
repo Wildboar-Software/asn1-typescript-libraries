@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary protocolResetActionOID
  * @description
  *
+ * Registers confirmed action `protocolReset`: restart the
+ * time synchronization protocol (`ProtocolResetInfo`). On
+ * `synchronizationProtocol`. ITU-T Rec. X.743 (06/98)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.743-199806-I), §9.8, A.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

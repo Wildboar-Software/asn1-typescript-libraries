@@ -15,6 +15,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TerminateValidationInfo
  * @description
  *
+ * Termination mode for `terminateValidation`. `cancel` (0)
+ * discards the partial validation result (ASN.1 comment: "partial
+ * audit"). `truncate` (1) returns the partial result in the action
+ * reply. ITU-T Rec. X.744 (10/96)
+ * [§8.3.7](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.5.5, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +41,13 @@ export enum _enum_for_TerminateValidationInfo {
  * @summary TerminateValidationInfo
  * @description
  *
+ * Termination mode for `terminateValidation`. `cancel` (0)
+ * discards the partial validation result (ASN.1 comment: "partial
+ * audit"). `truncate` (1) returns the partial result in the action
+ * reply. ITU-T Rec. X.744 (10/96)
+ * [§8.3.7](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.5.5, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +64,13 @@ export type TerminateValidationInfo = _enum_for_TerminateValidationInfo;
  * @summary TerminateValidationInfo
  * @description
  *
+ * Termination mode for `terminateValidation`. `cancel` (0)
+ * discards the partial validation result (ASN.1 comment: "partial
+ * audit"). `truncate` (1) returns the partial result in the action
+ * reply. ITU-T Rec. X.744 (10/96)
+ * [§8.3.7](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.5.5, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +85,11 @@ export const TerminateValidationInfo = _enum_for_TerminateValidationInfo;
 
 /**
  * @summary TerminateValidationInfo_cancel
+ * @description
+ *
+ * Cancel-mode: abort validation and discard the partial result.
+ * Reply is `validationCancelled`. ITU-T Rec. X.744 (10/96) §8.3.7,
+ * A.5.5.
  * @constant
  * @type {number}
  */
@@ -72,6 +98,10 @@ export const TerminateValidationInfo_cancel: TerminateValidationInfo =
 
 /**
  * @summary cancel
+ * @description
+ *
+ * Cancel-mode: abort validation and discard the partial result.
+ * ITU-T Rec. X.744 (10/96) §8.3.7.
  * @constant
  * @type {number}
  */
@@ -80,6 +110,11 @@ export const cancel: TerminateValidationInfo =
 
 /**
  * @summary TerminateValidationInfo_truncate
+ * @description
+ *
+ * Truncate-mode: abort validation and return the partial result in
+ * `resultOfPartialValidation`. ITU-T Rec. X.744 (10/96) §8.3.7,
+ * A.5.5.
  * @constant
  * @type {number}
  */
@@ -88,6 +123,10 @@ export const TerminateValidationInfo_truncate: TerminateValidationInfo =
 
 /**
  * @summary truncate
+ * @description
+ *
+ * Truncate-mode: abort validation and return the partial result.
+ * ITU-T Rec. X.744 (10/96) §8.3.7.
  * @constant
  * @type {number}
  */

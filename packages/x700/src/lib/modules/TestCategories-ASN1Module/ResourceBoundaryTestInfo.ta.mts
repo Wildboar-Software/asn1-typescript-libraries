@@ -26,6 +26,13 @@ import {
  * @summary ResourceBoundaryTestInfo
  * @description
  *
+ * Initiation (and later PT-SET) info for a resource
+ * boundary test: verify a resource by inserting/observing signals
+ * at PCOs (AOs) on its boundary. Controlled only. Initial content
+ * of `resultReportIndicator` and `sequenceOfEvents` on the TO.
+ * ACTION-INFO (A.5.17). ITU-T Rec. X.737 (11/95)
+ * [§7.6.1](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.6.6, A.5.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +47,23 @@ export class ResourceBoundaryTestInfo {
     constructor(
         /**
          * @summary `resultReportIndicator`.
+         * @description
+         *
+         * Whether to emit a result when a
+         * sequence of events passes (case 1). Optional. X.737 §7.6.6,
+         * §8.1.19.
          * @public
          * @readonly
          */
         readonly resultReportIndicator?: OPTIONAL<ResultReportIndicator>,
         /**
          * @summary `sequenceOfEvents`.
+         * @description
+         *
+         * Test event(s) to insert or expect.
+         * Cor.2 types this as one SEQUENCE (not SET OF). Optional; may
+         * also be set later via PT-SET. X.737 §7.6.6, §8.1.20; Cor.2
+         * [https://www.itu.int/rec/T-REC-X.737-200002-I].
          * @public
          * @readonly
          */

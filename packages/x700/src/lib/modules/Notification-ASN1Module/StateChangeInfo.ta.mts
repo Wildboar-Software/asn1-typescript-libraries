@@ -51,6 +51,15 @@ import {
  * @summary StateChangeInfo
  * @description
  *
+ * Event information for the DMI `stateChange` notification
+ * (`{smi2Notification 14}`). Reports a change in one or more
+ * generic or specific state attributes from resource operation
+ * or a management operation across the object boundary.
+ * ITU-T Rec. X.721 (02/92)
+ * [§13.14](https://www.itu.int/rec/T-REC-X.721-199202-I),
+ * §14.3. Semantics: ITU-T Rec. X.731 (01/92)
+ * [§8.2](https://www.itu.int/rec/T-REC-X.731-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,42 +79,77 @@ export class StateChangeInfo {
     constructor(
         /**
          * @summary `sourceIndicator`.
+         * @description
+         *
+         * Source of the state-attribute change:
+         * `resourceOperation`, `managementOperation`, or
+         * `unknown`. ITU-T Rec. X.731 (01/92) §8.2.2.1.
          * @public
          * @readonly
          */
         readonly sourceIndicator: OPTIONAL<SourceIndicator>,
         /**
          * @summary `attributeIdentifierList`.
+         * @description
+         *
+         * Identifiers of the state attributes whose value
+         * changes are reported. ITU-T Rec. X.731 (01/92)
+         * §8.2.2.2.
          * @public
          * @readonly
          */
         readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
         /**
          * @summary `stateChangeDefinition`.
+         * @description
+         *
+         * One sequence per changed state attribute: identifier,
+         * optional old value, and new (current) value. At least
+         * one new state-attribute value shall be present.
+         * ITU-T Rec. X.731 (01/92) §8.2.2.3.
          * @public
          * @readonly
          */
         readonly stateChangeDefinition: AttributeValueChangeDefinition,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * Identifier that later notifications may cite in
+         * `correlatedNotifications`. ITU-T Rec. X.731 (01/92)
+         * §8.2.2.4; X.733 (02/92) §8.1.2.8.
          * @public
          * @readonly
          */
         readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * Notifications correlated with this one. ITU-T Rec.
+         * X.731 (01/92) §8.2.2.4; X.733 (02/92) §8.1.2.9.
          * @public
          * @readonly
          */
         readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Free-form text; not required to interpret the
+         * notification. ITU-T Rec. X.731 (01/92) §8.2.2.4;
+         * X.733 (02/92) §8.1.2.13.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Extra identifier/significance/information structures.
+         * ITU-T Rec. X.731 (01/92) §8.2.2.4; X.733 (02/92)
+         * §8.1.2.14.
          * @public
          * @readonly
          */

@@ -19,6 +19,10 @@ import {
  * @summary TestSuspendResumeError_Item
  * @description
  *
+ * One test in a suspend/resume error. Success and failure both include the
+ * invocation id and TO states. ITU-T Rec. X.745 (11/93) §8.4.4.12, A.7.4.
+ * [§8.4.4.12](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

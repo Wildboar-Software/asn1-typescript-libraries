@@ -19,6 +19,19 @@ import {
  * @summary ActionFilterList
  * @description
  *
+ * Syntax of `actionFilterList` (actions package on
+ * `operations` when operation type is `action`). Identifies
+ * actions and optional CMIS-filter constraints on their
+ * argument values. Empty: all actions and information
+ * values are part of the target. Action identified without
+ * a value constraint: all values of that action information
+ * are targeted. Same homogeneity/duplicate/invalid-id
+ * constraints as `accessControlFilter`. Action parameters
+ * may be treated as attributes via the X.722 parameter
+ * template. ITU-T Rec. X.741 (04/95)
+ * [§8.1.6.3.3.1.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.2.6, A.5.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

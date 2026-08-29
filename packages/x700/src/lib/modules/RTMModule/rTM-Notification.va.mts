@@ -16,6 +16,11 @@ import {
  * @summary rTM_Notification
  * @description
  *
+ * Arc for RTM notifications: `responseConfirmation` (1), emitted
+ * when a monitored response arrives. ITU-T Rec. X.748 (03/99)
+ * [§8.5.1](https://www.itu.int/rec/T-REC-X.748-199903-I), A.5,
+ * A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

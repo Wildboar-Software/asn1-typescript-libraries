@@ -16,6 +16,11 @@ import {
  * @summary part17Role
  * @description
  *
+ * Arc for change-over relationship roles: `primaryRole` (1),
+ * `secondaryRole` (2), `backedupRole` (3), `backupRole` (4),
+ * `changeOverControlRole` (5). ITU-T Rec. X.751 (11/95)
+ * [A.1](https://www.itu.int/rec/T-REC-X.751-199511-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Timespec
  * @description
  *
+ * Relative duration used by timeoutPeriod, EndTime.relative, and
+ * InitializingTime.relativeTime. Alternatives are forever or a count of hours /
+ * minutes / seconds / millisecs / microsecs / nanosecs. For InitializingTime,
+ * `forever` means NOW (enter initializing immediately). ITU-T Rec. X.745
+ * (11/93) §A.7.1.
+ * [§A.7.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

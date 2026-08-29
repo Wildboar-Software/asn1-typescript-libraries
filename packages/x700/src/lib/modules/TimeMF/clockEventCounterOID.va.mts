@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockEventCounterOID
  * @description
  *
+ * Registers attribute `clockEventCounter`: number of system
+ * exception events since last checked and cleared.
+ * Mandatory on `clockSource` (`GET`; equality and ordering).
+ * ITU-T Rec. X.743 (06/98)
+ * [§8.3.5](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

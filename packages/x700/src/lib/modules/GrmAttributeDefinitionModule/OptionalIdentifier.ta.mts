@@ -20,6 +20,13 @@ import {
  * @summary OptionalIdentifier
  * @description
  *
+ * Optional GRM operation or notification name (`<identifier>`).
+ * `present` carries the name used to link behaviour and to
+ * disambiguate operations based on the same prototype; `absent` means
+ * no name was specified. ITU-T Rec. X.725 (11/95)
+ * [A.1.3.3](https://www.itu.int/rec/T-REC-X.725-199511-I),
+ * A.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,18 @@ import {
  * @summary rTM_Attribute
  * @description
  *
+ * Arc for RTM attributes: `maximumResponseTimeError` (1),
+ * `requestIdentifier` (2), `responseConfirmationObjectId` (3),
+ * `responseConfirmationObjectInd` (4),
+ * `responseConfirmationObjectIndList` (5), `responseDelayTime`
+ * (6), `responseLength` (7), `responseMonitorId` (8),
+ * `responseRequesterId` (9), `responseRequesterInd` (10),
+ * `responseRequesterIndList` (11), `responseRequestLength` (12),
+ * `responseSync` (13), `responseTime` (14), `responseTimeout` (15),
+ * `responseTimeSummarizationMode` (17), `routeId` (18). ITU-T Rec.
+ * X.748 (03/99)
+ * [A.4](https://www.itu.int/rec/T-REC-X.748-199903-I), A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ import {
  * @summary TestSuspendResumeResult
  * @description
  *
+ * Positive suspend/resume reply: every test that was suspended/resumed, with TO
+ * states. ITU-T Rec. X.745 (11/93) §8.4.3.6, 7.2.4.
+ * [§8.4.3.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

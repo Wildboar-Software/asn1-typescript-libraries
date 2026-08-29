@@ -22,6 +22,14 @@ import {
  * @summary emptyExecutionParameterList
  * @description
  *
+ * DEFAULT VALUE of a launch pad's
+ * `defaultExecutionParameterList`: no default scripts. If a
+ * trigger omits its execution parameter list and this default
+ * is empty, the launch pad returns `noScriptError`. ITU-T Rec.
+ * X.753 (10/97)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * A.2 (`triggerActionAccepter`), A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

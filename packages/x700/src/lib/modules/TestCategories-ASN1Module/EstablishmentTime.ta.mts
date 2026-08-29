@@ -19,6 +19,12 @@ import {
  * @summary EstablishmentTime
  * @description
  *
+ * Time to establish connectivity between two protocol
+ * entities (MORT request until AO confirmation). Alias of
+ * `Timespec`. ITU-T Rec. X.737 (11/95)
+ * [§3.9.1](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * §8.1.9, A.6.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

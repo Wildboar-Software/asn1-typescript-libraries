@@ -16,6 +16,11 @@ import {
  * @summary mdmpmfFunctionalUnitPackage
  * @description
  *
+ * Functional-unit package for SMASE negotiation: bit 0 membership
+ * query, 1 policy violation, 2 operation. ITU-T Rec. X.749 (08/97)
+ * [§11.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.1,
+ * clause 10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

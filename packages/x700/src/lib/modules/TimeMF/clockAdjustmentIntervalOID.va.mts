@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockAdjustmentIntervalOID
  * @description
  *
+ * Registers attribute `clockAdjustmentInterval`: interval
+ * over which gradual phase adjustments to the local clock
+ * are applied. On `localClock` (`GET-REPLACE`,
+ * `SET-BY-CREATE`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

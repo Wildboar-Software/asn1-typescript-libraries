@@ -15,6 +15,10 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary localClockAddressOID
  * @description
  *
+ * Registers attribute `localClockAddress`: network address
+ * of this node. On `localClock` (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.15](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.15.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,13 @@ import {
  * @summary SignalReceived
  * @description
  *
+ * SET OF signals observed at PCOs, used in resource-
+ * boundary results when a signal was unexpected or wrong. Each
+ * item is type/value plus MORTs and AOs. Cor.2 uses
+ * `CDTC-SIGNAL-TYPE`. ITU-T Rec. X.737 (11/95)
+ * [§7.6.8](https://www.itu.int/rec/T-REC-X.737-199511-I); Cor.2 (02/00)
+ * [https://www.itu.int/rec/T-REC-X.737-200002-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -55,6 +55,13 @@ import {
  * @summary SchedulingConflictInfo
  * @description
  *
+ * Event information of schedulingConflictNotification. Emitted when actual stop
+ * exceeds requested stop or actual start is before requested start; the TO
+ * shall cease execution if executing. Invocation id, start/end, and actual
+ * start/stop are mandatory; session id if it was in the request. ITU-T Rec.
+ * X.745 (11/93) §7.2.2, 9.10, 8.2.3.
+ * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -75,48 +82,94 @@ export class SchedulingConflictInfo {
     constructor(
         /**
          * @summary `testInvocationId`.
+         * @description
+         *
+         * The conflicting controlled test. Mandatory. ITU-T Rec. X.745 (11/93)
+         * §9.10.
+         * [§9.10](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testInvocationId: TestInvocationId,
         /**
          * @summary `testSessionId`.
+         * @description
+         *
+         * Present if supplied at initiation. ITU-T Rec. X.745 (11/93) §9.10,
+         * 7.3.2.
+         * [§9.10](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testSessionId: OPTIONAL<TestSessionId>,
         /**
          * @summary `startTime`.
+         * @description
+         *
+         * Requested earliest enter-Testing time. Mandatory. ITU-T Rec. X.745
+         * (11/93) §8.2.3, 9.10.
+         * [§8.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly startTime: StartTime,
         /**
          * @summary `endTime`.
+         * @description
+         *
+         * Requested latest leave-Testing time. Mandatory. ITU-T Rec. X.745
+         * (11/93) §8.2.3, 9.10.
+         * [§8.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly endTime: EndTime,
         /**
          * @summary `actualStartTime`.
+         * @description
+         *
+         * Performer actual/expected start that conflicts with the window. ITU-T
+         * Rec. X.745 (11/93) §7.2.2, 9.10.
+         * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly actualStartTime: ActualStartTime,
         /**
          * @summary `actualStopTime`.
+         * @description
+         *
+         * Performer actual/expected stop that conflicts with the window. ITU-T
+         * Rec. X.745 (11/93) §7.2.2, 9.10.
+         * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly actualStopTime: ActualStopTime,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * X.733 additionalText. ITU-T Rec. X.745 (11/93) §8.6, 9.10.
+         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * X.733 additionalInformation. ITU-T Rec. X.745 (11/93) §8.6, 9.10.
+         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

@@ -16,6 +16,13 @@ import {
  * @summary rTM_ManagedObjectClass
  * @description
  *
+ * Arc for RTM managed object classes:
+ * `responseConfirmationObject` (1),
+ * `responseConfirmationRecord` (2), `responseDelayMonitor` (3),
+ * `responseMonitor` (4), `responseRequester` (5), `route` (6).
+ * ITU-T Rec. X.748 (03/99)
+ * [A.2](https://www.itu.int/rec/T-REC-X.748-199903-I), A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

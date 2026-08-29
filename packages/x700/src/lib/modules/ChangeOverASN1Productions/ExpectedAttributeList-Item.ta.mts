@@ -23,6 +23,11 @@ import { AttributeId, _encode_AttributeId, _decode_AttributeId } from '@wildboar
  * @summary ExpectedAttributeList_Item
  * @description
  *
+ * One requested attribute modification. Default operator is
+ * `replace`. ITU-T Rec. X.751 (11/95)
+ * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I)
+ * (as corrected by Cor.1 and Cor.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,18 +39,32 @@ export class ExpectedAttributeList_Item {
     constructor(
         /**
          * @summary `modifyOperator`.
+         * @description
+         *
+         * How to apply `attributeValue` (default `replace`). ITU-T Rec.
+         * X.751 (11/95)
+         * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly modifyOperator: OPTIONAL<ModifyOperator>,
         /**
          * @summary `attributeId`.
+         * @description
+         *
+         * Attribute to modify. ITU-T Rec. X.751 (11/95)
+         * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */
         readonly attributeId: AttributeId,
         /**
          * @summary `attributeValue`.
+         * @description
+         *
+         * New value; omitted when the operator does not require one.
+         * ITU-T Rec. X.751 (11/95)
+         * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
          * @public
          * @readonly
          */

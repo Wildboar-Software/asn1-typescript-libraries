@@ -16,6 +16,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary QOSErrorCause
  * @description
  *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Syntax of the example `qOS-Error-Cause` attribute: reason
+ * for a quality-of-service failure associated with the
+ * managed object. Named values: `responseTimeExcessive` (0),
+ * `queueSizeExceeded` (1), `bandwidthReduced` (2),
+ * `retransmissionRateExcessive` (3). How these values relate
+ * to object operation is defined by the class behaviour.
+ * ITU-T Rec. X.722 (01/92)
+ * [A.5](https://www.itu.int/rec/T-REC-X.722-199201-I), A.9,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

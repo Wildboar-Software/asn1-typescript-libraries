@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IntegerDataType
  * @description
  *
+ * Well-known test-data patterns for `DataType`. `pn11` and
+ * `pn15` comments cite CCITT 0.152 and 0.151 (ITU-T Recs O.152 and
+ * O.151). Cor.3 keeps these INTEGER names and withdraws Cor.2's
+ * extensibility marker. ITU-T Rec. X.737 (11/95)
+ * [A.7](https://www.itu.int/rec/T-REC-X.737-199511-I);
+ * Cor.3 (03/01) [https://www.itu.int/rec/T-REC-X.737-200103-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,6 +37,9 @@ export type IntegerDataType = INTEGER;
 
 /**
  * @summary IntegerDataType_allBitOn
+ * @description
+ *
+ * All bits on (0).
  * @constant
  * @type {number}
  */
@@ -37,6 +47,9 @@ export const IntegerDataType_allBitOn: IntegerDataType = 0; /* LONG_NAMED_INTEGE
 
 /**
  * @summary IntegerDataType_allBitOn
+ * @description
+ *
+ * All bits on (0).
  * @constant
  * @type {number}
  */
@@ -44,6 +57,9 @@ export const allBitOn: IntegerDataType = IntegerDataType_allBitOn; /* SHORT_NAME
 
 /**
  * @summary IntegerDataType_allBitOff
+ * @description
+ *
+ * All bits off (1).
  * @constant
  * @type {number}
  */
@@ -51,6 +67,9 @@ export const IntegerDataType_allBitOff: IntegerDataType = 1; /* LONG_NAMED_INTEG
 
 /**
  * @summary IntegerDataType_allBitOff
+ * @description
+ *
+ * All bits off (1).
  * @constant
  * @type {number}
  */
@@ -58,6 +77,9 @@ export const allBitOff: IntegerDataType = IntegerDataType_allBitOff; /* SHORT_NA
 
 /**
  * @summary IntegerDataType_incrementNumber
+ * @description
+ *
+ * Incrementing values (2).
  * @constant
  * @type {number}
  */
@@ -65,6 +87,9 @@ export const IntegerDataType_incrementNumber: IntegerDataType = 2; /* LONG_NAMED
 
 /**
  * @summary IntegerDataType_incrementNumber
+ * @description
+ *
+ * Incrementing values (2).
  * @constant
  * @type {number}
  */
@@ -72,6 +97,9 @@ export const incrementNumber: IntegerDataType = IntegerDataType_incrementNumber;
 
 /**
  * @summary IntegerDataType_pn11
+ * @description
+ *
+ * Named pattern `pn11` (3). A.7 comment: CCITT 0.152.
  * @constant
  * @type {number}
  */
@@ -79,6 +107,9 @@ export const IntegerDataType_pn11: IntegerDataType = 3; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary IntegerDataType_pn11
+ * @description
+ *
+ * Named pattern `pn11` (3). A.7 comment: CCITT 0.152.
  * @constant
  * @type {number}
  */
@@ -86,6 +117,9 @@ export const pn11: IntegerDataType = IntegerDataType_pn11; /* SHORT_NAMED_INTEGE
 
 /**
  * @summary IntegerDataType_pn15
+ * @description
+ *
+ * Named pattern `pn15` (4). A.7 comment: CCITT 0.151.
  * @constant
  * @type {number}
  */
@@ -93,6 +127,9 @@ export const IntegerDataType_pn15: IntegerDataType = 4; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary IntegerDataType_pn15
+ * @description
+ *
+ * Named pattern `pn15` (4). A.7 comment: CCITT 0.151.
  * @constant
  * @type {number}
  */
@@ -100,6 +137,9 @@ export const pn15: IntegerDataType = IntegerDataType_pn15; /* SHORT_NAMED_INTEGE
 
 /**
  * @summary IntegerDataType_pn20
+ * @description
+ *
+ * Named pattern `pn20` (5). A.7 does not cite a rec.
  * @constant
  * @type {number}
  */
@@ -107,6 +147,9 @@ export const IntegerDataType_pn20: IntegerDataType = 5; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary IntegerDataType_pn20
+ * @description
+ *
+ * Named pattern `pn20` (5). A.7 does not cite a rec.
  * @constant
  * @type {number}
  */

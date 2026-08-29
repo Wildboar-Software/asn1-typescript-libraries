@@ -24,6 +24,14 @@ import {
  * @summary ConnectivityTestInfo_timeoutPeriod
  * @description
  *
+ * Inner CHOICE of `ConnectivityTestInfo.timeoutPeriod`.
+ * `timeUnits` is an explicit time; `attributeId` names a timer
+ * attribute of the MORT whose value is used as the time-out.
+ * X.737 [§7.2.2](https://www.itu.int/rec/T-REC-X.737-199511-I). Explicit tag
+ * added by Cor.1.
+ * ITU-T Rec. X.737 Cor.1 (06/98)
+ * [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

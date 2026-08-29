@@ -19,6 +19,14 @@ import { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceRepo
  * @summary otherReason
  * @description
  *
+ * Service-report cause: notification generated for reasons
+ * other than request, denial, response, failure, or recovery.
+ * The actual cause and other relevant information is specified
+ * in the other parameters of the report. ITU-T Rec. X.740
+ * (09/92)
+ * [§8.1.2](https://www.itu.int/rec/T-REC-X.740-199209-I),
+ * Table 4, A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

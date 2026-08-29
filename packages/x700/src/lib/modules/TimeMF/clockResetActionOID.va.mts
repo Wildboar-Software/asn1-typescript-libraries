@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockResetActionOID
  * @description
  *
+ * Registers confirmed action `clockReset`: reset a clock
+ * source to a given value (`ClockResetInfo` / clock value).
+ * On `clockSource`. ITU-T Rec. X.743 (06/98)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.743-199806-I), §9.6, A.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

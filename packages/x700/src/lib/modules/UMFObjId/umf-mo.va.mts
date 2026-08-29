@@ -16,6 +16,12 @@ import {
  * @summary umf_mo
  * @description
  *
+ * Arc for usage metering managed object class OIDs.
+ * `{umf-mo 1}` `usageMeteringControlObject`, `{umf-mo 2}`
+ * `usageMeteringDataObject`, `{umf-mo 3}` `usageMeteringRecord`.
+ * ITU-T Rec. X.742 (04/95)
+ * [A.1](https://www.itu.int/rec/T-REC-X.742-199504-I), A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

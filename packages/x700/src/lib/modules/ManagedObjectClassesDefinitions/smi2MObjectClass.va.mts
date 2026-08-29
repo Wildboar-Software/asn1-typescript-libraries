@@ -16,6 +16,18 @@ import {
  * @summary smi2MObjectClass
  * @description
  *
+ * Registration arc for DMI (X.721) managed object classes:
+ * `{joint-iso-itu-t ms(9) smi(3) part2(2)
+ * managedObjectClass(3)}`. Assigned values (X.721 §6):
+ * 1 `alarmRecord`, 2 `attributeValueChangeRecord`,
+ * 3 `discriminator`, 4 `eventForwardingDiscriminator`,
+ * 5 `eventLogRecord`, 6 `log`, 7 `logRecord`,
+ * 8 `objectCreationRecord`, 9 `objectDeletionRecord`,
+ * 10 `relationshipChangeRecord`,
+ * 11 `securityAlarmReportRecord`, 12 `stateChangeRecord`,
+ * 13 `system`, 14 `top`. ITU-T Rec. X.721 (02/92)
+ * [§6](https://www.itu.int/rec/T-REC-X.721-199202-I), §14.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

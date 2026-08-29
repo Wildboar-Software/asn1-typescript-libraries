@@ -20,6 +20,13 @@ import {
  * @summary DefinedAs
  * @description
  *
+ * GDMO behaviour `DEFINED AS` text. Syntax of `definedAs` on a
+ * behaviour-template managed object; retrievable with
+ * `getTextualRepresentation`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.5](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

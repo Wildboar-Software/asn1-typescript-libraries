@@ -19,6 +19,12 @@ import {
  * @summary TestSuspendResumeError
  * @description
  *
+ * Specific error: the TARR could not suspend or resume one or more of the
+ * specified tests. SET of CHOICE: success and failure each carry
+ * TestSuspendResumeElement (invocation id + TO states). ITU-T Rec. X.745
+ * (11/93) §8.4.4.12, A.7.4.
+ * [§8.4.4.12](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

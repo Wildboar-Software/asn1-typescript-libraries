@@ -16,6 +16,10 @@ import {
  * @summary part17Attribute
  * @description
  *
+ * Arc for change-over attributes: `primaryObject` (1). ITU-T Rec.
+ * X.751 (11/95)
+ * [A.4](https://www.itu.int/rec/T-REC-X.751-199511-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

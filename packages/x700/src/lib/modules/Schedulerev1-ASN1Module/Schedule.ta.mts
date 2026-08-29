@@ -35,6 +35,15 @@ import {
  * @summary Schedule
  * @description
  *
+ * Periodicity of one `schedulingData` member in a
+ * multi-scheduler: `daily`, `weekly`, `monthly`, or
+ * `typeOfDay`. Daily, weekly, and monthly sequences repeat
+ * when exhausted; `typeOfDay` has no implied periodicity
+ * (`SequenceOfTypeOfDays` is `SIZE(1)`). ITU-T Rec. X.746
+ * (02/00)
+ * [§7.3.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.2.10, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

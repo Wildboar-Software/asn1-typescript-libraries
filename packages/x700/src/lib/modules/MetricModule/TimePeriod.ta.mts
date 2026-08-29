@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TimePeriod
  * @description
  *
+ * Duration for metric scanning and averaging: granularity period
+ * (time between successive scans), moving time period (effective
+ * interval for mean estimates), and second moving time period
+ * (SMTP for variance/percentile EWMA). A system need not support
+ * sending every CHOICE alternative. ITU-T Rec. X.739 (11/93)
+ * [§8.1.1.3](https://www.itu.int/rec/T-REC-X.739-199311-I),
+ * §8.1.3.2, §8.1.7.2, §13.1.1, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

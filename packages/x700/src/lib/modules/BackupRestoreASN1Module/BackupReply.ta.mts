@@ -25,6 +25,13 @@ import {
  * @summary BackupReply
  * @description
  *
+ * Positive `backup` action reply (confirmed mode). For local or
+ * off-line backup, `reply.success` (`NULL`) means success; for
+ * in-line backup, `reply.inLine` holds the copy. Present in a
+ * positive response; otherwise Errors. ITU-T Rec. X.744 (10/96)
+ * [§8.3.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §9.2 Table 6, A.9.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +48,21 @@ export class BackupReply {
     constructor(
         /**
          * @summary `reply`.
+         * @description
+         *
+         * `success` (`NULL`) for local/off-line; `inLine` BIT STRING
+         * is the backup copy. Conditional in Table 6. ITU-T Rec.
+         * X.744 (10/96) §8.3.1, A.9.1.
          * @public
          * @readonly
          */
         readonly reply: BackupReply_reply,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 6. ITU-T Rec. X.744
+         * (10/96) §9.2 Table 6.
          * @public
          * @readonly
          */

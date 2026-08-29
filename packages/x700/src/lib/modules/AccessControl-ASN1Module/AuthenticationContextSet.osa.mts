@@ -14,6 +14,11 @@ import { type AC_AUTH_CONTEXT } from '../AccessControl-ASN1Module/AC-AUTH-CONTEX
  * @summary AuthenticationContextSet
  * @description
  *
+ * Extensible object set of `AC-AUTH-CONTEXT` policies used
+ * to type `AuthenticationContext.requirements`. Empty in
+ * this module (`{...}`). ITU-T Rec. X.741 Cor.3 (02/2000)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

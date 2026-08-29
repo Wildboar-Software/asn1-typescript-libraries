@@ -51,6 +51,15 @@ import {
  * @summary RelationshipChangeInfo
  * @description
  *
+ * Event information for the DMI `relationshipChange`
+ * notification (`{smi2Notification 12}`). Reports a change in
+ * one or more relationship attributes (generic or object-class
+ * specific) from resource operation or management operation.
+ * ITU-T Rec. X.721 (02/92)
+ * [§13.12](https://www.itu.int/rec/T-REC-X.721-199202-I),
+ * §14.3. Semantics: ITU-T Rec. X.732 (01/92)
+ * [§8.2](https://www.itu.int/rec/T-REC-X.732-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,42 +79,77 @@ export class RelationshipChangeInfo {
     constructor(
         /**
          * @summary `sourceIndicator`.
+         * @description
+         *
+         * Source of the relationship-attribute change:
+         * `resourceOperation`, `managementOperation`, or
+         * `unknown`. ITU-T Rec. X.732 (01/92) §8.2.2.1.
          * @public
          * @readonly
          */
         readonly sourceIndicator: OPTIONAL<SourceIndicator>,
         /**
          * @summary `attributeIdentifierList`.
+         * @description
+         *
+         * Identifiers of the relationship attributes whose
+         * value changes are reported. ITU-T Rec. X.732 (01/92)
+         * §8.2.2.2.
          * @public
          * @readonly
          */
         readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
         /**
          * @summary `relationshipChangeDefinition`.
+         * @description
+         *
+         * One sequence per changed relationship attribute:
+         * identifier, optional old value, and new (current)
+         * value. At least one new relationship-attribute value
+         * shall be present. ITU-T Rec. X.732 (01/92) §8.2.2.3.
          * @public
          * @readonly
          */
         readonly relationshipChangeDefinition: AttributeValueChangeDefinition,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * Identifier that later notifications may cite in
+         * `correlatedNotifications`. ITU-T Rec. X.732 (01/92)
+         * §8.2.2.4; X.733 (02/92) §8.1.2.8.
          * @public
          * @readonly
          */
         readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * Notifications correlated with this one. ITU-T Rec.
+         * X.732 (01/92) §8.2.2.4; X.733 (02/92) §8.1.2.9.
          * @public
          * @readonly
          */
         readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Free-form text; not required to interpret the
+         * notification. ITU-T Rec. X.732 (01/92) §8.2.2.4;
+         * X.733 (02/92) §8.1.2.13.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Extra identifier/significance/information structures.
+         * ITU-T Rec. X.732 (01/92) §8.2.2.4; X.733 (02/92)
+         * §8.1.2.14.
          * @public
          * @readonly
          */

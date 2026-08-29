@@ -52,6 +52,17 @@ import {
  * @summary ErrorInfo
  * @description
  *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Information syntax of the example `communicationError`
+ * notification, generated when the object detects a
+ * communication error. May contain any combination of
+ * probable cause, perceived severity, trend indication,
+ * backed-up status, proposed repair actions, threshold info,
+ * and other info. Precise definition of a communication error
+ * and parameter values is class-specific. ITU-T Rec. X.722
+ * (01/92) [A.8](https://www.itu.int/rec/T-REC-X.722-199201-I),
+ * A.9, A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -71,42 +82,70 @@ export class ErrorInfo {
     constructor(
         /**
          * @summary `probableCause`.
+         * @description
+         *
+         * Optional probable cause of the example communication
+         * error. ITU-T Rec. X.722 (01/92) A.9.
          * @public
          * @readonly
          */
         readonly probableCause?: OPTIONAL<ProbableCause>,
         /**
          * @summary `perceivedSeverity`.
+         * @description
+         *
+         * Optional perceived severity of the example
+         * communication error. ITU-T Rec. X.722 (01/92) A.9.
          * @public
          * @readonly
          */
         readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
         /**
          * @summary `trendIndication`.
+         * @description
+         *
+         * Optional severity trend for the example communication
+         * error. ITU-T Rec. X.722 (01/92) A.9.
          * @public
          * @readonly
          */
         readonly trendIndication?: OPTIONAL<TrendIndication>,
         /**
          * @summary `backedUpStatus`.
+         * @description
+         *
+         * Optional backed-up status for the example
+         * communication error. ITU-T Rec. X.722 (01/92) A.9.
          * @public
          * @readonly
          */
         readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
         /**
          * @summary `proposedRepairActions`.
+         * @description
+         *
+         * Optional proposed repair actions for the example
+         * communication error. ITU-T Rec. X.722 (01/92) A.9.
          * @public
          * @readonly
          */
         readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
         /**
          * @summary `thresholdInfo`.
+         * @description
+         *
+         * Optional threshold information for the example
+         * communication error. ITU-T Rec. X.722 (01/92) A.9.
          * @public
          * @readonly
          */
         readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
         /**
          * @summary `otherInfo`.
+         * @description
+         *
+         * Optional extra information for the example
+         * communication error. ITU-T Rec. X.722 (01/92) A.9.
          * @public
          * @readonly
          */

@@ -16,6 +16,14 @@ import {
  * @summary grm_RelationshipRole
  * @description
  *
+ * Registration arc for GRM (X.725) relationship roles:
+ * `{joint-iso-itu-t ms(9) smi(3) part7(7)
+ * relationshipRole(13)}`. A role is the properties common to
+ * a particular kind of participant in a managed relationship.
+ * ITU-T Rec. X.725 (11/95)
+ * [§3.8.16](https://www.itu.int/rec/T-REC-X.725-199511-I),
+ * Annex B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

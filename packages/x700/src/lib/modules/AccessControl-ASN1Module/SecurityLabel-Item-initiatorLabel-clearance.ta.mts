@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SecurityLabel_Item_initiatorLabel_clearance
  * @description
  *
+ * Clearance component of an initiator security label.
+ * `localForm` is an integer; `globalForm` is an object
+ * identifier. The rec does not specify the mapping of
+ * either form onto a clearance scale. ITU-T Rec. X.741
+ * (04/95)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.741-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

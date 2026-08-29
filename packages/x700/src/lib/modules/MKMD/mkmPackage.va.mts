@@ -15,6 +15,16 @@ import {
  * @summary mkmPackage
  * @description
  *
+ * Arc for MKM packages. Allocations: 1 supportedCmipProfilesPackage;
+ * 2 implementedValuesPackage; 3 templateDefinitionPackage;
+ * 4 documentSpecificationPackage; 5 relationshipClassSupportsPackage;
+ * 6 relationshipClassQualifiedByPackage;
+ * 7 relationshipClassRoleSpecifierPackage;
+ * 8 relationshipMappingRelationshipObjectPackage;
+ * 9 relationshipMappingOperationsMappingPackage. ITU-T Rec. X.750
+ * (10/96) [A.1](https://www.itu.int/rec/T-REC-X.750-199610-I);
+ * Amd.1 (10/97) A.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

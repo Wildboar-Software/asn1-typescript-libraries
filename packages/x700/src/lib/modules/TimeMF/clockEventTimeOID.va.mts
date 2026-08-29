@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockEventTimeOID
  * @description
  *
+ * Registers attribute `clockEventTime`: time of the latest
+ * system exception event. Mandatory on `clockSource`
+ * (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.6](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

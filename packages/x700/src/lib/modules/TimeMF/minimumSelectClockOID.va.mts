@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary minimumSelectClockOID
  * @description
  *
+ * Registers NTP attribute `minimumSelectClock`: minimum
+ * number of peers acceptable for synchronization. On
+ * `ntpProtocol` (`GET`; equality and ordering). ITU-T Rec. X.743 (06/98)
+ * [§B.3.12](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

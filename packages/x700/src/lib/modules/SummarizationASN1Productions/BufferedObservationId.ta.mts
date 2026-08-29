@@ -35,6 +35,11 @@ import {
  * @summary BufferedObservationId
  * @description
  *
+ * Selection of one object for a buffered scanner. An
+ * attribute identifier may appear in more than one of
+ * the three lists. ITU-T Rec. X.738 (11/93)
+ * [§8.1.9.2](https://www.itu.int/rec/T-REC-X.738-199311-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,24 +56,42 @@ export class BufferedObservationId {
     constructor(
         /**
          * @summary `observedObject`.
+         * @description
+         *
+         * Name of the managed object instance to observe.
+         * X.738 §8.1.9.2.
          * @public
          * @readonly
          */
         readonly observedObject: ObjectInstance,
         /**
          * @summary `scanAttributeIdList`.
+         * @description
+         *
+         * Attributes of any type observed every granularity
+         * period and retained until the report. X.738
+         * §8.1.9.2.
          * @public
          * @readonly
          */
         readonly scanAttributeIdList?: OPTIONAL<AttributeId[]>,
         /**
          * @summary `numericAttributeIdArray`.
+         * @description
+         *
+         * Ordered INTEGER/REAL attributes observed every
+         * granularity period; compact reporting without
+         * identifiers. X.738 §8.1.9.2.
          * @public
          * @readonly
          */
         readonly numericAttributeIdArray?: OPTIONAL<NumericAttributeIdArray>,
         /**
          * @summary `reportTimeAttributeIdList`.
+         * @description
+         *
+         * Attributes of arbitrary type scanned only at the
+         * end of the report period. X.738 §8.1.9.2.
          * @public
          * @readonly
          */

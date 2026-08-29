@@ -24,6 +24,11 @@ import {
  * @summary WeekMaskWps_Item
  * @description
  *
+ * One weekly mask component: days of the week and the
+ * intervals or trigger times that apply on those days. ITU-T
+ * Rec. X.746 (02/00)
+ * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +40,22 @@ export class WeekMaskWps_Item {
     constructor(
         /**
          * @summary `daysOfWeek`.
+         * @description
+         *
+         * Days on which this mask operates. If omitted at create,
+         * defaults to all seven days. ITU-T Rec. X.746 (02/00)
+         * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly daysOfWeek: DaysOfWeek,
         /**
          * @summary `timesOfDayWps`.
+         * @description
+         *
+         * Intervals or trigger times on the selected days. ITU-T
+         * Rec. X.746 (02/00)
+         * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */

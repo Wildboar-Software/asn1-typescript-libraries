@@ -26,6 +26,14 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary specification
  * @description
  *
+ * Text of the GDMO and ASN.1 (Amd.1: GDMO, GRM or ASN.1) specifications
+ * in a document. ID `{mkmDirectoryAttributeType 35}`. ITU-T Rec.
+ * X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ * Amd.1 [item 11](https://www.itu.int/rec/T-REC-X.750-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

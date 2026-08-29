@@ -19,6 +19,10 @@ import {
  * @summary RelationshipInstance
  * @description
  *
+ * Participant names of a change-over relationship instance, as
+ * returned with `noSuchRelationships`. ITU-T Rec. X.751 (11/95)
+ * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

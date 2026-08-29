@@ -25,6 +25,11 @@ import {
  * @summary MitMo
  * @description
  *
+ * One MIT class entry in `mitMoList`: the GDMO class OID and an
+ * optional set of instance names. ITU-T Rec. X.750 (10/96)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,21 @@ export class MitMo {
     constructor(
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * GDMO class of the managed objects listed. ITU-T Rec. X.750
+         * (10/96) §8.6.1.
          * @public
          * @readonly
          */
         readonly objectClass: GdmoObjectClass,
         /**
          * @summary `instances`.
+         * @description
+         *
+         * Instance names of long-lived objects of this class made
+         * visible by the SMAE. Omitted when only the class is
+         * registered. ITU-T Rec. X.750 (10/96) §8.6.1.
          * @public
          * @readonly
          */

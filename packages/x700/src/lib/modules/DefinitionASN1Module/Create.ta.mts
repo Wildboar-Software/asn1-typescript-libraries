@@ -21,6 +21,15 @@ import {
  * @summary Create
  * @description
  *
+ * GDMO name-binding `CREATE` construct. `present` holds the create
+ * element; `absent` (`NULL`) means the template has no CREATE (create
+ * is then not permitted under this name binding). If no create element
+ * is present, the `create` attribute shall be null. ITU-T Rec. X.750
+ * (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722 (01/92)
+ * [§8.6.3.5](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

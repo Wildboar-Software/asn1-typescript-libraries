@@ -16,6 +16,15 @@ import {
  * @summary part12AttributeId
  * @description
  *
+ * OID arc for X.745 test-management attributes `{joint-iso-ccitt ms(9)
+ * function(2) part12(12) attribute(7)}`. Leaves (A.3): 1 actualStartTime, 2
+ * actualStopTime, 3 associatedObjects, 4 endTime, 5 initializingTime, 6 mORTs,
+ * 7 supportedTOClasses, 8 supportedUncontrolledTests, 9 testActionPerformerId,
+ * 10 testInvocationId, 11 testObjectId, 12 testOutcome, 13 testSessionId, 14
+ * testStep, 15 testStepQualifier, 16 timeoutPeriod. ITU-T Rec. X.745 (11/93)
+ * §A.3, A.7.
+ * [§A.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

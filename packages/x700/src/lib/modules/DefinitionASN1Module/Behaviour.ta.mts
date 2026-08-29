@@ -20,6 +20,13 @@ import {
  * @summary Behaviour
  * @description
  *
+ * GDMO `BEHAVIOUR` construct: labels of behaviour templates associated
+ * with a package, parameter, name binding, attribute, action, or
+ * notification. Syntax of the `behaviour` attribute. ITU-T Rec. X.750
+ * (10/96) [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722
+ * (01/92)
+ * [§8.4.3.1](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

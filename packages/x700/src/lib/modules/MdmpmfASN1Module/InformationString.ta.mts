@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InformationString
  * @description
  *
+ * Syntax of descriptive administrative attributes (`administrativeAuthority`,
+ * `administrativeContactInformation`, `administrativeOwner`,
+ * `administrativeSpecifier`, `versionIdentifier`). ITU-T Rec.
+ * X.749 (08/97)
+ * [A.5](https://www.itu.int/rec/T-REC-X.749-199708-I), A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

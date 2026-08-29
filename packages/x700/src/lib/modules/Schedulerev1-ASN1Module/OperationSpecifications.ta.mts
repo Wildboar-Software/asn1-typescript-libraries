@@ -20,6 +20,13 @@ import {
  * @summary OperationSpecifications
  * @description
  *
+ * Syntax of `operationSpecifications` (`{schedAtt 10}`).
+ * Identifies SMOs and the get, set, or action operations to
+ * perform on them according to the SO's schedule. GET,
+ * REPLACE, ADD, REMOVE. ITU-T Rec. X.746 (02/00)
+ * [§8.3.10](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 7.3.3, A.4.11, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

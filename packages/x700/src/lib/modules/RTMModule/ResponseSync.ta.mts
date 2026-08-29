@@ -15,6 +15,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ResponseSync
  * @description
  *
+ * How a response monitor treats multiple replies to one request.
+ * Default `singleCast`. ITU-T Rec. X.748 (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I),
+ * §8.2.4, A.7.
+ *
+ * - `singleCast` (−1): first response only.
+ * - `bestEffort` (0): time until the first of several responses.
+ * - `atomic` (1): time until all responses return.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +42,15 @@ export enum _enum_for_ResponseSync {
  * @summary ResponseSync
  * @description
  *
+ * How a response monitor treats multiple replies to one request.
+ * Default `singleCast`. ITU-T Rec. X.748 (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I),
+ * §8.2.4, A.7.
+ *
+ * - `singleCast` (−1): first response only.
+ * - `bestEffort` (0): time until the first of several responses.
+ * - `atomic` (1): time until all responses return.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,6 +65,15 @@ export type ResponseSync = _enum_for_ResponseSync;
  * @summary ResponseSync
  * @description
  *
+ * How a response monitor treats multiple replies to one request.
+ * Default `singleCast`. ITU-T Rec. X.748 (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I),
+ * §8.2.4, A.7.
+ *
+ * - `singleCast` (−1): first response only.
+ * - `bestEffort` (0): time until the first of several responses.
+ * - `atomic` (1): time until all responses return.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,6 +86,11 @@ export const ResponseSync = _enum_for_ResponseSync;
 
 /**
  * @summary ResponseSync_singleCast
+ * @description
+ *
+ * Monitor only the first response to a request. ITU-T Rec.
+ * X.748 (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */
@@ -67,6 +99,11 @@ export const ResponseSync_singleCast: ResponseSync =
 
 /**
  * @summary singleCast
+ * @description
+ *
+ * Monitor only the first response to a request. ITU-T Rec.
+ * X.748 (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */
@@ -75,6 +112,11 @@ export const singleCast: ResponseSync =
 
 /**
  * @summary ResponseSync_bestEffort
+ * @description
+ *
+ * Time until the first of several responses. ITU-T Rec. X.748
+ * (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */
@@ -83,6 +125,11 @@ export const ResponseSync_bestEffort: ResponseSync =
 
 /**
  * @summary bestEffort
+ * @description
+ *
+ * Time until the first of several responses. ITU-T Rec. X.748
+ * (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */
@@ -91,6 +138,10 @@ export const bestEffort: ResponseSync =
 
 /**
  * @summary ResponseSync_atomic
+ * @description
+ *
+ * Time until all responses return. ITU-T Rec. X.748 (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */
@@ -99,6 +150,10 @@ export const ResponseSync_atomic: ResponseSync =
 
 /**
  * @summary atomic
+ * @description
+ *
+ * Time until all responses return. ITU-T Rec. X.748 (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */

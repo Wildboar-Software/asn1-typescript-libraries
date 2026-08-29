@@ -15,6 +15,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TimeStampReportMode
  * @description
  *
+ * How time stamps appear in summary reports when
+ * `timeStampReportPackage` is present (attribute
+ * `timeStampReportMode`, `{summarizationAttribute 29}`).
+ * `timeStampingOff`(0) — none; `globalTimeStampOnly`(1)
+ * — only scan initiation time; `individualTimeStamping`
+ * (2) — scan initiation time plus each value’s offset
+ * from that time. Default is `timeStampingOff`. ITU-T
+ * Rec. X.738 (11/93)
+ * [§8.1.12.4](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4, A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +46,14 @@ export enum _enum_for_TimeStampReportMode {
  * @summary TimeStampReportMode
  * @description
  *
+ * How time stamps appear in summary reports when
+ * `timeStampReportPackage` is present.
+ * `timeStampingOff`(0) — none; `globalTimeStampOnly`(1)
+ * — only scan initiation time; `individualTimeStamping`
+ * (2) — scan initiation time plus each value’s offset.
+ * Default is `timeStampingOff`. ITU-T Rec. X.738 (11/93)
+ * [§8.1.12.4](https://www.itu.int/rec/T-REC-X.738-199311-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +70,10 @@ export type TimeStampReportMode = _enum_for_TimeStampReportMode;
  * @summary TimeStampReportMode
  * @description
  *
+ * Namespace of `TimeStampReportMode` enumerators. ITU-T
+ * Rec. X.738 (11/93)
+ * [§8.1.12.4](https://www.itu.int/rec/T-REC-X.738-199311-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -65,6 +88,11 @@ export const TimeStampReportMode = _enum_for_TimeStampReportMode;
 
 /**
  * @summary TimeStampReportMode_timeStampingOff
+ * @description
+ *
+ * No time stamping in the summary report. Default of
+ * `timeStampReportMode`. X.738 §8.1.12.4.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +101,11 @@ export const TimeStampReportMode_timeStampingOff: TimeStampReportMode =
 
 /**
  * @summary timeStampingOff
+ * @description
+ *
+ * No time stamping in the summary report. Default of
+ * `timeStampReportMode`. X.738 §8.1.12.4.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +114,12 @@ export const timeStampingOff: TimeStampReportMode =
 
 /**
  * @summary TimeStampReportMode_globalTimeStampOnly
+ * @description
+ *
+ * Report only the scan initiation time (or first-scan
+ * time in a buffered report). Per-value offsets are
+ * omitted. X.738 §8.1.12.4.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +128,12 @@ export const TimeStampReportMode_globalTimeStampOnly: TimeStampReportMode =
 
 /**
  * @summary globalTimeStampOnly
+ * @description
+ *
+ * Report only the scan initiation time (or first-scan
+ * time in a buffered report). Per-value offsets are
+ * omitted. X.738 §8.1.12.4.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +142,13 @@ export const globalTimeStampOnly: TimeStampReportMode =
 
 /**
  * @summary TimeStampReportMode_individualTimeStamping
+ * @description
+ *
+ * Report scan initiation time and each value’s offset
+ * from that time (`timeStamp` in `AttributeMeasure` /
+ * `NumericMeasure`). Required when this mode is in
+ * force. X.738 §8.1.12.4, A.9.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +157,11 @@ export const TimeStampReportMode_individualTimeStamping: TimeStampReportMode =
 
 /**
  * @summary individualTimeStamping
+ * @description
+ *
+ * Report scan initiation time and each value’s offset
+ * from that time. X.738 §8.1.12.4, A.9.
+ *
  * @constant
  * @type {number}
  */

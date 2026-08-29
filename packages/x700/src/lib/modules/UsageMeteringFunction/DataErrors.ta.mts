@@ -20,6 +20,13 @@ import {
  * @summary DataErrors
  * @description
  *
+ * Whether usage data are believed in error: `noProblem`, or
+ * `possibleErrors` as a set of error OIDs. Set matching is
+ * permitted only for the set-valued alternative. ITU-T Rec.
+ * X.742 (04/95)
+ * [§8.2.3.8](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * A.6 `dataErrorBehaviour`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

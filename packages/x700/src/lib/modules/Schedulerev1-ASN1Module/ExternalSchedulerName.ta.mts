@@ -19,6 +19,15 @@ import {
  * @summary ExternalSchedulerName
  * @description
  *
+ * Syntax of `externalSchedulerName` (`{schedAtt 1}`). Names of
+ * the SO instances that control an activity in an SMO. Empty
+ * set means no scheduler is specified (e.g. the SO was
+ * deleted). If multiple SMO activities are scheduled, each
+ * needs an attribute derived from this one. AVC on change.
+ * ITU-T Rec. X.746 (02/00)
+ * [§8.4.1.1](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 7.4, A.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

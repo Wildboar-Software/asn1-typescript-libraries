@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TestInfrastructureTestResults
  * @description
  *
+ * Additional result syntax for the test-infrastructure
+ * ('null') test: no resource exercises are performed; this type
+ * is NULL. X.745 `testOutcome` still reports Pass / Fail /
+ * Timed-out / Premature termination / Inconclusive. Named type
+ * added by Cor.1. ITU-T Rec. X.737 (11/95)
+ * [§7.8.1](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * §7.8.8; Cor.1 (06/98) [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

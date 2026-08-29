@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ErrorCode_Item
  * @description
  *
+ * One named outcome in `ErrorCode`. Meanings: ITU-T Rec. X.753
+ * (10/97)
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +31,10 @@ export type ErrorCode_Item = INTEGER;
 
 /**
  * @summary ErrorCode_Item_noError
+ * @description
+ *
+ * Execution succeeded. ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -33,6 +42,10 @@ export const ErrorCode_Item_noError: ErrorCode_Item = 0; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary ErrorCode_Item_noError
+ * @description
+ *
+ * Execution succeeded. ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +53,12 @@ export const noError: ErrorCode_Item = ErrorCode_Item_noError; /* SHORT_NAMED_IN
 
 /**
  * @summary ErrorCode_Item_noScriptError
+ * @description
+ *
+ * Failed because no script name was specified (no execution
+ * parameter list on the trigger and no default). ITU-T Rec.
+ * X.753 (10/97) §7.1, §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +66,12 @@ export const ErrorCode_Item_noScriptError: ErrorCode_Item = 1; /* LONG_NAMED_INT
 
 /**
  * @summary ErrorCode_Item_noScriptError
+ * @description
+ *
+ * Failed because no script name was specified (no execution
+ * parameter list on the trigger and no default). ITU-T Rec.
+ * X.753 (10/97) §7.1, §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +79,11 @@ export const noScriptError: ErrorCode_Item = ErrorCode_Item_noScriptError; /* SH
 
 /**
  * @summary ErrorCode_Item_scriptRejectedError
+ * @description
+ *
+ * Script is not in the launch pad's `availableScriptList`.
+ * ITU-T Rec. X.753 (10/97) §7.1, §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +91,11 @@ export const ErrorCode_Item_scriptRejectedError: ErrorCode_Item = 2; /* LONG_NAM
 
 /**
  * @summary ErrorCode_Item_scriptRejectedError
+ * @description
+ *
+ * Script is not in the launch pad's `availableScriptList`.
+ * ITU-T Rec. X.753 (10/97) §7.1, §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +103,11 @@ export const scriptRejectedError: ErrorCode_Item = ErrorCode_Item_scriptRejected
 
 /**
  * @summary ErrorCode_Item_invalidParameterTypeError
+ * @description
+ *
+ * Parameter type expected by the script does not match the
+ * type supplied. ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +115,11 @@ export const ErrorCode_Item_invalidParameterTypeError: ErrorCode_Item = 3; /* LO
 
 /**
  * @summary ErrorCode_Item_invalidParameterTypeError
+ * @description
+ *
+ * Parameter type expected by the script does not match the
+ * type supplied. ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +127,11 @@ export const invalidParameterTypeError: ErrorCode_Item = ErrorCode_Item_invalidP
 
 /**
  * @summary ErrorCode_Item_invalidParameterValueError
+ * @description
+ *
+ * Parameter value is invalid (e.g. out of range). ITU-T Rec.
+ * X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +139,11 @@ export const ErrorCode_Item_invalidParameterValueError: ErrorCode_Item = 4; /* L
 
 /**
  * @summary ErrorCode_Item_invalidParameterValueError
+ * @description
+ *
+ * Parameter value is invalid (e.g. out of range). ITU-T Rec.
+ * X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +151,11 @@ export const invalidParameterValueError: ErrorCode_Item = ErrorCode_Item_invalid
 
 /**
  * @summary ErrorCode_Item_scriptSyntaxError
+ * @description
+ *
+ * Script failed due to a syntax error. ITU-T Rec. X.753 (10/97)
+ * §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +163,11 @@ export const ErrorCode_Item_scriptSyntaxError: ErrorCode_Item = 5; /* LONG_NAMED
 
 /**
  * @summary ErrorCode_Item_scriptSyntaxError
+ * @description
+ *
+ * Script failed due to a syntax error. ITU-T Rec. X.753 (10/97)
+ * §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +175,11 @@ export const scriptSyntaxError: ErrorCode_Item = ErrorCode_Item_scriptSyntaxErro
 
 /**
  * @summary ErrorCode_Item_scriptExecutionFailedError
+ * @description
+ *
+ * Script failed for a reason other than improper syntax. ITU-T
+ * Rec. X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +187,11 @@ export const ErrorCode_Item_scriptExecutionFailedError: ErrorCode_Item = 6; /* L
 
 /**
  * @summary ErrorCode_Item_scriptExecutionFailedError
+ * @description
+ *
+ * Script failed for a reason other than improper syntax. ITU-T
+ * Rec. X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -124,6 +199,12 @@ export const scriptExecutionFailedError: ErrorCode_Item = ErrorCode_Item_scriptE
 
 /**
  * @summary ErrorCode_Item_invalidParmeterNumber
+ * @description
+ *
+ * Number of parameters supplied does not match the number the
+ * script expects. ASN.1 identifier omits an "a" in
+ * "Parameter". ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +212,12 @@ export const ErrorCode_Item_invalidParmeterNumber: ErrorCode_Item = 7; /* LONG_N
 
 /**
  * @summary ErrorCode_Item_invalidParmeterNumber
+ * @description
+ *
+ * Number of parameters supplied does not match the number the
+ * script expects. ASN.1 identifier omits an "a" in
+ * "Parameter". ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -138,6 +225,11 @@ export const invalidParmeterNumber: ErrorCode_Item = ErrorCode_Item_invalidParme
 
 /**
  * @summary ErrorCode_Item_unauthorizedAccessError
+ * @description
+ *
+ * Access denied to one or more object instances the script
+ * uses. ITU-T Rec. X.753 (10/97) §7.5, §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +237,11 @@ export const ErrorCode_Item_unauthorizedAccessError: ErrorCode_Item = 8; /* LONG
 
 /**
  * @summary ErrorCode_Item_unauthorizedAccessError
+ * @description
+ *
+ * Access denied to one or more object instances the script
+ * uses. ITU-T Rec. X.753 (10/97) §7.5, §8.2.1–§8.2.2.
+ *
  * @constant
  * @type {number}
  */

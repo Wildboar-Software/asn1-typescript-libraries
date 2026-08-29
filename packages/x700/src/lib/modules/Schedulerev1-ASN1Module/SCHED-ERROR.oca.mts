@@ -20,6 +20,14 @@ import {
  * @summary SCHED_ERROR
  * @description
  *
+ * Information object class for errors reported in
+ * `CommonError` (Erratum 1). `&id` uniquely identifies the
+ * error; `&Value` is the associated parameter type. Objects of
+ * this class populate `CommonErrorSet`. ITU-T Rec. X.746
+ * (02/00)
+ * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * Erratum 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -61,10 +69,22 @@ export interface SCHED_ERROR<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique error identifier (`ErrorId`) in `CommonErrorSet`.
+     * ITU-T Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * Erratum 1.
      */
     readonly '&id'?: ErrorId;
     /**
      * @summary &Value
+     * @description
+     *
+     * Associated error parameter type. The rec does not define
+     * particular `&Value` types. ITU-T Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * Erratum 1.
      */
     readonly '&Value': Value;
 }

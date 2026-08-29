@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Nanoseconds
  * @description
  *
+ * Sub-second part of a time value or interval, in nanoseconds
+ * (0..999 999 999). The time representation has 1 ns
+ * precision. ITU-T Rec. X.743 (06/98)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

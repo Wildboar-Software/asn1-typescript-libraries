@@ -19,6 +19,11 @@ import {
  * @summary defaultDaysOfMonth
  * @description
  *
+ * Default of `daysOfMonth`: all 31 bits set in both strings,
+ * i.e. every day of the month. ITU-T Rec. X.746 (02/00)
+ * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,11 @@ import {
  * @summary Condition
  * @description
  *
+ * One object and the attribute values that failed a pre- or
+ * postcondition of `changeOver` or `changeBack`. ITU-T Rec. X.751
+ * (11/95) [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+ * §8.7.9, Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +42,24 @@ export class Condition {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Participant that did not meet the condition. ITU-T Rec.
+         * X.751 (11/95)
+         * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+         * §8.7.9.
          * @public
          * @readonly
          */
         readonly object: ObjectInstance,
         /**
          * @summary `details`.
+         * @description
+         *
+         * Attribute values that failed the pre- or postcondition.
+         * ITU-T Rec. X.751 (11/95)
+         * [§8.7.8](https://www.itu.int/rec/T-REC-X.751-199511-I),
+         * §8.7.9.
          * @public
          * @readonly
          */

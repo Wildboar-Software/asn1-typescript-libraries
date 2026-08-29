@@ -70,6 +70,14 @@ import {
  * @summary TestResultInfo
  * @description
  *
+ * Event information of testResultNotification (unsolicited controlled-test
+ * results). A result notification shall include the invocation id; the session
+ * id if it was in the request; and testOutcome on the last report for this
+ * execution of this TO. Invocation id is required if the TO was created as a
+ * related test. MORTs are mandatory in the notification if they were in the
+ * initiation request. ITU-T Rec. X.745 (11/93) §7.2.3, 9.9, 8.3.2.
+ * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -93,66 +101,130 @@ export class TestResultInfo {
     constructor(
         /**
          * @summary `testInvocationId`.
+         * @description
+         *
+         * Required if this TO was part of a related test; identifies the
+         * invocation. ITU-T Rec. X.745 (11/93) §9.9, 8.1.3.
+         * [§9.9](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testInvocationId?: OPTIONAL<TestInvocationId>,
         /**
          * @summary `testSessionId`.
+         * @description
+         *
+         * Present if the conductor supplied it at initiation. ITU-T Rec. X.745
+         * (11/93) §9.9, 7.3.2.
+         * [§9.9](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testSessionId?: OPTIONAL<TestSessionId>,
         /**
          * @summary `testOutcome`.
+         * @description
+         *
+         * Present if this is the last report for this execution of this TO.
+         * ITU-T Rec. X.745 (11/93) §7.2.3, 9.9.
+         * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testOutcome?: OPTIONAL<TestOutcome>,
         /**
          * @summary `mORTs`.
+         * @description
+         *
+         * MORTs; mandatory here if also used in the test request. ITU-T Rec.
+         * X.745 (11/93) §8.1.2.
+         * [§8.1.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly mORTs?: OPTIONAL<MORTs>,
         /**
          * @summary `associatedObjects`.
+         * @description
+         *
+         * AOs involved in this execution, if any. ITU-T Rec. X.745 (11/93)
+         * §8.1.1, 9.9.
+         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly associatedObjects?: OPTIONAL<AssociatedObjects>,
         /**
          * @summary `monitoredAttributes`.
+         * @description
+         *
+         * X.733 monitoredAttributes of the TO. ITU-T Rec. X.745 (11/93) §8.6,
+         * 9.9.
+         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
         /**
          * @summary `proposedRepairActions`.
+         * @description
+         *
+         * X.733 proposedRepairActions; typical when outcome is fail. ITU-T Rec.
+         * X.745 (11/93) §7.2.3, 8.6.
+         * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * X.733 additionalText. ITU-T Rec. X.745 (11/93) §8.6, 9.9.
+         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * X.733 additionalInformation; category-specific result data. ITU-T
+         * Rec. X.745 (11/93) §8.6, 7.4.6.2.
+         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly additionalInformation?: OPTIONAL<AdditionalInformation>,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * X.733 notificationIdentifier. ITU-T Rec. X.745 (11/93) §8.6, 9.9.
+         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * X.733 correlatedNotifications (Cor.2 spelling fix in the GDMO
+         * template). ITU-T Rec. X.745 (11/93) §8.6, 9.9.
+         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

@@ -26,6 +26,14 @@ import {
  * @summary NumericMeasure_qualifiedValue
  * @description
  *
+ * Unnested SEQUENCE of `NumericMeasure.qualifiedValue`.
+ * Required when `timeStampReportMode` is
+ * `individualTimeStamping` (2). At least one of
+ * `timeStamp` or `suspectFlag` shall be present (Table
+ * 2 C3). ITU-T Rec. X.738 (11/93)
+ * [A.9](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * Table 2, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +45,32 @@ export class NumericMeasure_qualifiedValue {
     constructor(
         /**
          * @summary `value`.
+         * @description
+         *
+         * Observed numeric value. X.738 A.9, Table 2.
          * @public
          * @readonly
          */
         readonly value: ObservedValue,
         /**
          * @summary `timeStamp`.
+         * @description
+         *
+         * Offset forward from the report’s scan initiation
+         * time. Required (with or instead of `suspectFlag`)
+         * when `timeStampReportMode` is 2. X.738 A.9.
          * @public
          * @readonly
          */
         readonly timeStamp?: OPTIONAL<TimePeriod>,
         /**
          * @summary `suspectFlag`.
+         * @description
+         *
+         * True when integrity of the value is in question.
+         * Default false. At least one of `timeStamp` or this
+         * flag shall be present. X.738 §8.1.8.3, A.9,
+         * Table 2 C3.
          * @public
          * @readonly
          */

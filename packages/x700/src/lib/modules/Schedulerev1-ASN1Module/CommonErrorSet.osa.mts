@@ -14,6 +14,12 @@ import { type SCHED_ERROR } from '../Schedulerev1-ASN1Module/SCHED-ERROR.oca.mjs
  * @summary CommonErrorSet
  * @description
  *
+ * Extensible set of `SCHED-ERROR` objects that may appear in
+ * `CommonError.errorId`. Published as `{...}`; the rec defines
+ * no members. ITU-T Rec. X.746 (02/00)
+ * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * Erratum 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

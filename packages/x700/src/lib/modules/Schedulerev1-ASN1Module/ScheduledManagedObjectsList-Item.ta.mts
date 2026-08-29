@@ -25,6 +25,11 @@ import {
  * @summary ScheduledManagedObjectsList_Item
  * @description
  *
+ * One SMO currently scheduled by this SO, optionally naming
+ * the activity attribute in that SMO. ITU-T Rec. X.746 (02/00)
+ * [§8.3.2.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.4.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +41,25 @@ export class ScheduledManagedObjectsList_Item {
     constructor(
         /**
          * @summary `objectInstance`.
+         * @description
+         *
+         * SMO instance using this SO. Removed from the list if the
+         * SMO is deleted. ITU-T Rec. X.746 (02/00)
+         * [§7.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
+         * 8.3.2.2.
          * @public
          * @readonly
          */
         readonly objectInstance: ObjectInstance,
         /**
          * @summary `activity`.
+         * @description
+         *
+         * Identifier of the SMO attribute that describes the
+         * activity being scheduled (e.g. `onDuty` or a derived
+         * attribute). ITU-T Rec. X.746 (02/00)
+         * [§8.3.2.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+         * 8.4.1.2.
          * @public
          * @readonly
          */

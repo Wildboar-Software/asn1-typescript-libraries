@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary referenceClockOID
  * @description
  *
+ * Registers the `referenceClock` managed object class:
+ * interface in a system to an external time reference (GPS,
+ * radio such as WWV, atomic oscillators). Subclass of
+ * `clockSource`; adds `referenceClockType`. ITU-T Rec. X.743 (06/98)
+ * [§8.2.3](https://www.itu.int/rec/T-REC-X.743-199806-I), A.1.3, §7.2.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,11 @@ import {
  * @summary timeManagement
  * @description
  *
+ * Root OID of the Time Management Function (ISO/IEC
+ * 10164-20). All TimeMF GDMO registrations hang off
+ * `{joint-iso-itu-t ms(9) function(2) part20(20)}`. ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

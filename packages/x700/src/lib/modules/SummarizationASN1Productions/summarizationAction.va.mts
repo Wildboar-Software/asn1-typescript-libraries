@@ -16,6 +16,22 @@ import {
  * @summary summarizationAction
  * @description
  *
+ * OID arc for summarization actions. Registered leaves
+ * (X.738 A.6, Table 11):
+ * `activateDynamicSimpleScanReport`(1) — scan using
+ * selection in the action argument, reply
+ * `ScanReportInformation`; `activateScanReport`(2) —
+ * scan using the scanner’s current selection, same
+ * reply; `activateStatisticalReport`(3) — scan and
+ * return ensemble statistics as
+ * `StatisticalScanReportInformation`; `reportBuffer`(4)
+ * — report retained buffered scans plus report-time
+ * attributes as `BufferedScanReportInformation`. All
+ * four are confirmed; replies may be linked. ITU-T Rec.
+ * X.738 (11/93)
+ * [A.6](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.3, §9.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

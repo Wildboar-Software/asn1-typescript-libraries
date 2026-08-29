@@ -25,6 +25,10 @@ import {
  * @summary TestObjectResponse
  * @description
  *
+ * One TO in a related-test reply: name, plus attributes the TO behaviour
+ * specifies. ITU-T Rec. X.745 (11/93) §8.4.3.3.
+ * [§8.4.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +43,24 @@ export class TestObjectResponse {
     constructor(
         /**
          * @summary `tOName`.
+         * @description
+         *
+         * Conductor-provided (NULL) or performer-assigned instance. ITU-T Rec.
+         * X.745 (11/93) §A.7.2.
+         * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly tOName: TOName,
         /**
          * @summary `tOAttributeList`.
+         * @description
+         *
+         * Initial attributes the TO behaviour specifies to return. ITU-T Rec.
+         * X.745 (11/93) §9.5.
+         * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

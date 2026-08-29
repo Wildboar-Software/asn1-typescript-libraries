@@ -19,6 +19,13 @@ import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs'
  * @summary resourceRequestRate
  * @description
  *
+ * `specificProblems` identifier for the resource-request-rate
+ * workload model: rate of the number of requests or of the
+ * amount of resources requested. ITU-T Rec. X.739 (11/93)
+ * [§3.7.13](https://www.itu.int/rec/T-REC-X.739-199311-I),
+ * §7.4, §8.1.9.7.2, A.5. Cor.1 writes the value as
+ * `oi:{moaSpecificProblems 1}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

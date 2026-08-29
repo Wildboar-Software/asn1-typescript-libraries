@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DateOfLeap
  * @description
  *
+ * Date/time of the leap second carried in `LeapSecondInfo`
+ * (mandatory `Date of Leap` on the leap-second action,
+ * Table 2). ITU-T Rec. X.743 (06/98)
+ * [§9.7](https://www.itu.int/rec/T-REC-X.743-199806-I), A.3.2, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

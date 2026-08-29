@@ -21,6 +21,14 @@ import {
  * @summary TestSessionId
  * @description
  *
+ * Identifies a test session (a set of test invocations). Assigned by the test
+ * conductor and, if present in the request, copied onto every created TO and
+ * every result / scheduling-conflict notification. Used to correlate results
+ * (algorithm out of scope) and to address suspend / resume / terminate in a
+ * best-effort fashion across the session. All performers shall support every
+ * component. ITU-T Rec. X.745 (11/93) §7.3.2, 8.1.6.
+ * [§7.3.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +45,25 @@ export class TestSessionId {
     constructor(
         /**
          * @summary `localId`.
+         * @description
+         *
+         * Integer part of the session identifier; always present. ITU-T Rec.
+         * X.745 (11/93) §8.1.6.
+         * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly localId: INTEGER,
         /**
          * @summary `globalRef`.
+         * @description
+         *
+         * Optional global qualifier: a Distinguished Name or an OBJECT
+         * IDENTIFIER, for uniqueness across systems. ITU-T Rec. X.745 (11/93)
+         * §8.1.6.
+         * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

@@ -20,6 +20,12 @@ import {
  * @summary WeekMaskWps
  * @description
  *
+ * One week of a weekly schedule: a set of masks, each pairing
+ * selected days of the week with times of day. Taken as a
+ * whole, the set is a disjoint collection of intervals spanning
+ * a week. ITU-T Rec. X.746 (02/00)
+ * [§8.3.5](https://www.itu.int/rec/T-REC-X.746-200002-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

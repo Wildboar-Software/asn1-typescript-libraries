@@ -19,6 +19,13 @@ import {
  * @summary OnceReportAttributeList
  * @description
  *
+ * Values of once-report attributes that were the same
+ * across all observed objects (`{summarizationAttribute
+ * 17}`). Present in a scan report when the once-report
+ * package applied. ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.1.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

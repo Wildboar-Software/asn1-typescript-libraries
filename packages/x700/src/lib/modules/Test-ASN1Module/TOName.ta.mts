@@ -20,6 +20,12 @@ import {
  * @summary TOName
  * @description
  *
+ * How a TO was named in a controlled-test reply. `conductorProvidedName` NULL:
+ * the request already supplied the instance. `performerProvidedName`: the
+ * performer assigned this ObjectInstance (returned when the request omitted
+ * tOInstance). ITU-T Rec. X.745 (11/93) §7.1.2, A.4, A.7.2.
+ * [§7.1.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

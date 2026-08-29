@@ -25,6 +25,12 @@ import {
  * @summary Actions_Item
  * @description
  *
+ * One element of `Actions`: a package action and optional parameters.
+ * Unnested from `SET OF SEQUENCE` in X.750 A.3.5. ITU-T Rec. X.750
+ * (10/96) [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722
+ * (01/92)
+ * [§8.4.3.4](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +42,19 @@ export class Actions_Item {
     constructor(
         /**
          * @summary `action`.
+         * @description
+         *
+         * Action template included in the package.
          * @public
          * @readonly
          */
         readonly action: TemplateLabel,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * Optional parameter templates for action information, reply, or
+         * processing failures of this action.
          * @public
          * @readonly
          */

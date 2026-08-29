@@ -18,6 +18,11 @@ import {
  * @summary defaultDefaultIndex
  * @description
  *
+ * Default of `defaultIndex`: 0. Used when no
+ * `schedulingData` interval is valid. ITU-T Rec. X.746 (02/00)
+ * [A.1.11](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.3.13, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

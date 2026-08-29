@@ -21,6 +21,12 @@ import { WeekMaskWps_Item } from '../Schedulerev1-ASN1Module/WeekMaskWps-Item.ta
  * @summary defaultWeekMaskWps
  * @description
  *
+ * Default week mask: all seven days with
+ * `defaultIntervalsOfDayWps` (full-day interval). ITU-T Rec.
+ * X.746 (02/00)
+ * [§8.3.5.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

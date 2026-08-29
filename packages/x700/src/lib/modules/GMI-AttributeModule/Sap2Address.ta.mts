@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Sap2Address
  * @description
  *
+ * Set of addresses associated with an (N) SAP (X.723 §7.7).
+ * MATCHES FOR EQUALITY, SET-COMPARISON, SET-INTERSECTION.
+ * Registered as `{… attribute(7) sap2Address(9)}`. ITU-T Rec.
+ * X.723 (11/93)
+ * [§9.15](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

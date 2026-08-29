@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DaysOfMonth
  * @description
  *
+ * Selected days of a month for a month mask. A day is selected
+ * if the corresponding bit is set in either string. If not
+ * present at create, defaults to every day. Extraneous bits
+ * for short months are ignored. ITU-T Rec. X.746 (02/00)
+ * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +37,23 @@ export class DaysOfMonth {
     constructor(
         /**
          * @summary `daysFromFirst`.
+         * @description
+         *
+         * Days counted from the first of the month: first bit is
+         * day 1, second bit day 2, etc. ITU-T Rec. X.746 (02/00)
+         * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */
         readonly daysFromFirst: BIT_STRING,
         /**
          * @summary `daysFromLast`.
+         * @description
+         *
+         * Days counted backwards from the end of the month: first
+         * bit is the last day (e.g. the 30th of a 30-day month),
+         * second bit the day before, etc. ITU-T Rec. X.746 (02/00)
+         * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
          * @public
          * @readonly
          */

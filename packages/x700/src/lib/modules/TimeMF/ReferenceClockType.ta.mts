@@ -16,6 +16,18 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReferenceClockType
  * @description
  *
+ * Type of reference clock or external source represented by
+ * a `referenceClock` object (GPS, radio such as WWV, atomic
+ * oscillators, etc.). Syntax of `referenceClockType` and of
+ * the `refClockID` alternative of
+ * `synchronizationSourceAddress`. Named values (A.5):
+ * `unspecifiedOrUnknown` (0), `calibratedAtomicClock` (1),
+ * `radioVLForLF` (2), `radioHF` (3), `radioUHF` (4),
+ * `localNet` (5), `synch` (6), `wallclock` (7),
+ * `telephoneModem` (8), `gps` (9), `loranC` (10), `other`
+ * (11). ITU-T Rec. X.743 (06/98)
+ * [§8.3.17](https://www.itu.int/rec/T-REC-X.743-199806-I), §7.2.4.2, A.2.17.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

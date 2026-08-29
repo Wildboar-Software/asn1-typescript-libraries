@@ -20,6 +20,13 @@ import {
  * @summary InformationData
  * @description
  *
+ * Structure of information held in a
+ * `communicationsInformationRecord` managed object (and the
+ * optional payload of `communicationsInformation`).
+ * Registered as `{… attribute(7) informationData(4)}`.
+ * ITU-T Rec. X.723 (11/93)
+ * [§9.9](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

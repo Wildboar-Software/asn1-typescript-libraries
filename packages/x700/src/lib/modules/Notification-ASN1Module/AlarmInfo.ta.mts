@@ -87,6 +87,19 @@ import {
  * @summary AlarmInfo
  * @description
  *
+ * Event information for the five DMI alarm notifications
+ * (`communicationsAlarm`, `environmentalAlarm`, `equipmentAlarm`,
+ * `processingErrorAlarm`, `qualityofServiceAlarm`). Carried as CMIS
+ * M-EVENT-REPORT event information and stored in `alarmRecord`.
+ * Alarm types (X.733 §8.1.1): communications (procedures that
+ * convey information); QoS (service degradation); processing
+ * error (software/processing fault); equipment (equipment
+ * fault); environmental (enclosure condition). ITU-T Rec.
+ * X.721 (02/92)
+ * [§13.2](https://www.itu.int/rec/T-REC-X.721-199202-I)–§13.4,
+ * §13.10–§13.11, §14.3. Parameters: ITU-T Rec. X.733 (02/92)
+ * [§8.1.2](https://www.itu.int/rec/T-REC-X.733-199202-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -113,84 +126,180 @@ export class AlarmInfo {
     constructor(
         /**
          * @summary `probableCause`.
+         * @description
+         *
+         * Further qualification of the alarm cause. The object-class
+         * behaviour shall name the values used. Prefer the most
+         * specific registered cause. In the systems management
+         * application context, standard causes are object
+         * identifiers registered in X.721. ITU-T Rec. X.733
+         * (02/92) §8.1.2.1.
          * @public
          * @readonly
          */
         readonly probableCause: ProbableCause,
         /**
          * @summary `specificProblems`.
+         * @description
+         *
+         * Optional refinements of `probableCause`: a set of
+         * identifiers chosen by the object-class definer. In the
+         * systems management context, only object identifiers.
+         * ITU-T Rec. X.733 (02/92) §8.1.2.2.
          * @public
          * @readonly
          */
         readonly specificProblems: OPTIONAL<SpecificProblems>,
         /**
          * @summary `perceivedSeverity`.
+         * @description
+         *
+         * How the object's capability is perceived to be affected.
+         * `cleared` clears prior alarms of the same alarm type,
+         * probable cause, and specific problems (if given); X.733
+         * does not require reporting of clearing. `indeterminate`
+         * if severity cannot be determined. Service-affecting,
+         * most to least severe: `critical` (immediate restore),
+         * `major` (urgent restore), `minor` (non-service-affecting
+         * fault), `warning` (impending fault). ITU-T Rec. X.733
+         * (02/92) §8.1.2.3.
          * @public
          * @readonly
          */
         readonly perceivedSeverity: PerceivedSeverity,
         /**
          * @summary `backedUpStatus`.
+         * @description
+         *
+         * When present, whether the emitting object has been
+         * backed up so user service was not disrupted. `true` =
+         * backed up; `false` = not. ITU-T Rec. X.733 (02/92)
+         * §8.1.2.4.
          * @public
          * @readonly
          */
         readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
         /**
          * @summary `backUpObject`.
+         * @description
+         *
+         * Object instance providing back-up service. Present when
+         * `backedUpStatus` is present and `true`; absent when
+         * `backedUpStatus` is `false` or omitted (X.721 Cor.2
+         * table after AlarmInfo). Same value as the X.732
+         * back-up-object relationship attribute when the alarm is
+         * emitted. ITU-T Rec. X.733 (02/92) §8.1.2.5; X.721
+         * (02/92)/Cor.2 (10/96) item 120.
          * @public
          * @readonly
          */
         readonly backUpObject?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `trendIndication`.
+         * @description
+         *
+         * Severity trend vs outstanding (uncleared) alarms on the
+         * same object: `moreSevere`, `noChange`, or `lessSevere`.
+         * Shall be absent if there are no outstanding alarms;
+         * absence does not imply that. ITU-T Rec. X.733 (02/92)
+         * §8.1.2.6.
          * @public
          * @readonly
          */
         readonly trendIndication?: OPTIONAL<TrendIndication>,
         /**
          * @summary `thresholdInfo`.
+         * @description
+         *
+         * Present when the alarm is a threshold crossing: triggered
+         * threshold id, observed value, threshold level (gauge:
+         * crossed value plus hysteresis; counter: threshold only),
+         * and arm time. ITU-T Rec. X.733 (02/92) §8.1.2.7.
          * @public
          * @readonly
          */
         readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * Identifier that later notifications may cite in
+         * `correlatedNotifications`. Unique among this object's
+         * notifications for as long as correlation matters; may
+         * be reused once correlation is no longer required.
+         * ITU-T Rec. X.733 (02/92) §8.1.2.8.
          * @public
          * @readonly
          */
         readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * Notification identifiers (and source instance if not
+         * this object) of notifications correlated with this
+         * one. The correlation algorithm is not specified.
+         * ITU-T Rec. X.733 (02/92) §8.1.2.9.
          * @public
          * @readonly
          */
         readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `stateChangeDefinition`.
+         * @description
+         *
+         * State transition associated with the alarm (X.731). If
+         * the class includes state-change notifications, it shall
+         * also emit that notification. ITU-T Rec. X.733 (02/92)
+         * §8.1.2.10.
          * @public
          * @readonly
          */
         readonly stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>,
         /**
          * @summary `monitoredAttributes`.
+         * @description
+         *
+         * Attribute identifiers and values of interest at the
+         * time of the alarm, as specified by the object-class
+         * definer. ITU-T Rec. X.733 (02/92) §8.1.2.11.
          * @public
          * @readonly
          */
         readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
         /**
          * @summary `proposedRepairActions`.
+         * @description
+         *
+         * Suggested solutions when the cause is known (for
+         * example switch in standby, retry, replace media). In
+         * the systems management context, object identifiers.
+         * ITU-T Rec. X.733 (02/92) §8.1.2.12.
          * @public
          * @readonly
          */
         readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Free-form text; understanding it is not required to
+         * interpret the notification. Format and meaning are not
+         * specified and are not subject to OSI Management
+         * conformance. ITU-T Rec. X.733 (02/92) §8.1.2.13.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Extra structures, each with a registered identifier,
+         * a significance flag (`true` if the receiver must parse
+         * the information for full understanding), and the
+         * information. An indication is still issued if not
+         * fully understood. ITU-T Rec. X.733 (02/92) §8.1.2.14.
          * @public
          * @readonly
          */

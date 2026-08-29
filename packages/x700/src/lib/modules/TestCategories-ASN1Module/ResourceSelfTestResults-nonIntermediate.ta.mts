@@ -22,6 +22,11 @@ import {
  * @summary ResourceSelfTestResults_nonIntermediate
  * @description
  *
+ * Inner SEQUENCE of `ResourceSelfTestResults.nonIntermediate`.
+ * Optional `finalResponse` may carry exercise-specific info or
+ * follow-up actions (§7.7.8). ITU-T Rec. X.737 (11/95)
+ * [§7.7.8](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,24 +38,37 @@ export class ResourceSelfTestResults_nonIntermediate {
     constructor(
         /**
          * @summary `phases`.
+         * @description
+         *
+         * Phases that were run. X.737 A.7.
          * @public
          * @readonly
          */
         readonly phases: INTEGER[],
         /**
          * @summary `iteration`.
+         * @description
+         *
+         * Iterations performed. X.737 A.7.
          * @public
          * @readonly
          */
         readonly iteration: INTEGER,
         /**
          * @summary `timeoutPeriod`.
+         * @description
+         *
+         * Time-out that applied. X.737 A.7.
          * @public
          * @readonly
          */
         readonly timeoutPeriod: TimeoutPeriod,
         /**
          * @summary `finalResponse`.
+         * @description
+         *
+         * Printable additional result (exercise-
+         * specific info or follow-up). Optional. X.737 §7.7.8.
          * @public
          * @readonly
          */

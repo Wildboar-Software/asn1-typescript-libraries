@@ -16,6 +16,14 @@ import {
  * @summary part17Package
  * @description
  *
+ * Arc for change-over packages: `backedUpObjectAttributePackage`
+ * (1), `backUpObjectAttributePackage` (2; Cor.1),
+ * `changeBackActionPackage` (3), `changeOverActionPackage` (4),
+ * `primaryAttributePackage` (5), `secondaryAttributePackage` (6).
+ * ITU-T Rec. X.751 (11/95)
+ * [A.3](https://www.itu.int/rec/T-REC-X.751-199511-I), Annex B;
+ * Cor.1 §3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

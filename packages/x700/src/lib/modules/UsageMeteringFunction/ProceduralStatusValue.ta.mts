@@ -19,6 +19,15 @@ import {
  * @summary ProceduralStatusValue
  * @description
  *
+ * Permitted/required values of the data object's
+ * `proceduralStatus` (X.731) in the metering data condition
+ * package: `terminating` after a delete request until a
+ * required usage report has been emitted. Start/suspend/resume
+ * in this state return `deniedMeteringAction`. ITU-T Rec. X.742
+ * (04/95)
+ * [§8.2.4.1](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §8.4.1, Table 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

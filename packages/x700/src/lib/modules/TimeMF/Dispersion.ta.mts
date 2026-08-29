@@ -19,6 +19,12 @@ import {
  * @summary Dispersion
  * @description
  *
+ * NTP dispersion (positive values only). Syntax of
+ * `maximumDispersion` (maximum increment, and value assumed
+ * for missing data) and `minimumDispersion` (minimum
+ * increment per stratum). ITU-T Rec. X.743 (06/98)
+ * [§B.3.4](https://www.itu.int/rec/T-REC-X.743-199806-I), B.3.10, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

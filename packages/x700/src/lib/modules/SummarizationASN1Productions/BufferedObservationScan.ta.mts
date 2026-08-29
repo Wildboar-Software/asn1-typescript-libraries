@@ -30,6 +30,14 @@ import {
  * @summary BufferedObservationScan
  * @description
  *
+ * One observed object in a buffered scan report:
+ * report-time attributes (scanned once at reporting),
+ * time-ordered scan-attribute buffer, and numeric
+ * buffer ordered by `numericAttributeIdArray` then
+ * time. ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.3.4](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,24 +57,47 @@ export class BufferedObservationScan {
     constructor(
         /**
          * @summary `objectInstance`.
+         * @description
+         *
+         * Name of the observed object. Shall be present if
+         * `suppressObjectInstance` is false. X.738
+         * §8.2.2.3.4, Table 4 note 1.
          * @public
          * @readonly
          */
         readonly objectInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `reportTimeAttributeList`.
+         * @description
+         *
+         * Attributes from `reportTimeAttributeIdList`,
+         * scanned at reporting time only. Identifiers of
+         * missing values are indicated. X.738 §8.2.2.3.4,
+         * §8.1.9.2.
          * @public
          * @readonly
          */
         readonly reportTimeAttributeList?: OPTIONAL<AttributeMeasure[]>,
         /**
          * @summary `attributesBuffer`.
+         * @description
+         *
+         * Scan-attribute values with identifiers, each inner
+         * sequence ordered by observation time. Absence of a
+         * value for a scan means missing data. X.738
+         * §8.2.2.3.4.
          * @public
          * @readonly
          */
         readonly attributesBuffer?: OPTIONAL<AttributeMeasure[][]>,
         /**
          * @summary `numericAttributesBuff`.
+         * @description
+         *
+         * Outer sequence in `numericAttributeIdArray`
+         * order; each inner sequence is time-ordered
+         * numeric measures. Missing values use
+         * `missingData`. X.738 §8.2.2.3.4, Table 4 C2.
          * @public
          * @readonly
          */

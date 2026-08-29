@@ -21,6 +21,13 @@ import {
  * @summary SecurityLabel_Item_initiatorLabel
  * @description
  *
+ * Initiator-bound security label: clearance (local integer
+ * or globally registered OID) and optional category bit
+ * string. The rec does not specify the clearance scale or
+ * category bit assignment. ITU-T Rec. X.741 (04/95)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.10.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +39,21 @@ export class SecurityLabel_Item_initiatorLabel {
     constructor(
         /**
          * @summary `clearance`.
+         * @description
+         *
+         * Security clearance: `localForm` (integer) or
+         * `globalForm` (OID). Meaning of values is not specified
+         * by X.741. X.741 A.6.
          * @public
          * @readonly
          */
         readonly clearance: SecurityLabel_Item_initiatorLabel_clearance,
         /**
          * @summary `category`.
+         * @description
+         *
+         * Optional category bits of the label. Bit assignment is
+         * not specified by X.741. X.741 A.6.
          * @public
          * @readonly
          */

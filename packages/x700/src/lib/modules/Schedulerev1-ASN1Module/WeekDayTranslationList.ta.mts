@@ -19,6 +19,15 @@ import {
  * @summary WeekDayTranslationList
  * @description
  *
+ * Syntax of `weekDayTranslationList` (`{schedAtt 18}`). Maps
+ * each weekday to a `TypeOfDay`. There shall be one mapping
+ * for every weekday and a weekday value shall occur only once.
+ * Default: Sunday–Friday `workday`, Saturday `weekend`. Date
+ * mappings take precedence. GET, REPLACE,
+ * REPLACE-WITH-DEFAULT. ITU-T Rec. X.746 (02/00)
+ * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.3.16.2, A.1.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

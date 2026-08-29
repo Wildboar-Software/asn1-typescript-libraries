@@ -16,6 +16,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LoopbackTxDelayInfo
  * @description
  *
+ * EVENT-INFO parameter `loopbackTxDelayParam` (A.5.13 after
+ * Cor.1). Syntax is NULL. Returned on test-result notifications
+ * when measured loopback transmission delay is less than
+ * `loopbackTimeout`. Delay itself is a physical measurement
+ * (§3.9.6). ITU-T Rec. X.737 (11/95)
+ * [§7.4.2.2](https://www.itu.int/rec/T-REC-X.737-199511-I);
+ * Cor.1 (06/98) [https://www.itu.int/rec/T-REC-X.737-199806-I], A.3
+ * `loopbackTimeoutPkg`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

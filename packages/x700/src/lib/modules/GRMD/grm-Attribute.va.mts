@@ -16,6 +16,15 @@ import {
  * @summary grm_Attribute
  * @description
  *
+ * Registration arc for GRM (X.725) attributes:
+ * `{joint-iso-itu-t ms(9) smi(3) part7(7) attribute(7)}`.
+ * Assigned values (Annex B.4): 1 `relationshipName`,
+ * 2 `relationshipClass`, 3 `relationshipMapping`. Derived
+ * participant-pointer attributes identify objects fulfilling a
+ * role. ITU-T Rec. X.725 (11/95)
+ * [§7.4.3](https://www.itu.int/rec/T-REC-X.725-199511-I),
+ * Annex B.1, B.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

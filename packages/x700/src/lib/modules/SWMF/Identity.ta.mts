@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Identity
  * @description
  *
+ * GraphicString identifying an entity: `identityOfCreator`,
+ * `identityOfLastModifier`, or `ExecuteProgramReply.processOwner`.
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.2.14](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §8.2.15, A.3.14, A.3.15, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

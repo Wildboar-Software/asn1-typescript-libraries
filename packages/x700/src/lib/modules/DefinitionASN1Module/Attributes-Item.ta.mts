@@ -30,6 +30,11 @@ import {
  * @summary Attributes_Item
  * @description
  *
+ * One package attribute: label, propertylist, and optional
+ * processing-failure parameters. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722 (01/92)
+ * [§8.4.3.2](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +46,29 @@ export class Attributes_Item {
     constructor(
         /**
          * @summary `attributeLabel`.
+         * @description
+         *
+         * Attribute template included in the package.
          * @public
          * @readonly
          */
         readonly attributeLabel: TemplateLabel,
         /**
          * @summary `property`.
+         * @description
+         *
+         * Operations and value constraints that apply to this attribute in the
+         * package (GDMO propertylist).
          * @public
          * @readonly
          */
         readonly property: PropertyList,
         /**
          * @summary `parameterLabel`.
+         * @description
+         *
+         * Optional processing-failure parameters for management operations on
+         * this attribute.
          * @public
          * @readonly
          */

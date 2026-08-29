@@ -71,6 +71,12 @@ import {
  * @summary ResponseConfirmationInfo
  * @description
  *
+ * Information syntax of the `responseConfirmation` notification,
+ * issued when a monitored response arrives at the confirmation
+ * object. ITU-T Rec. X.748 (03/99)
+ * [§8.5.1](https://www.itu.int/rec/T-REC-X.748-199903-I), A.5,
+ * A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -99,96 +105,179 @@ export class ResponseConfirmationInfo {
     constructor(
         /**
          * @summary `responseMonitor`.
+         * @description
+         *
+         * Monitor that produced this notification (`responseMonitorId`).
+         * ITU-T Rec. X.748 (03/99)
+         * [§8.5.1.2.5](https://www.itu.int/rec/T-REC-X.748-199903-I),
+         * A.5.
          * @public
          * @readonly
          */
         readonly responseMonitor: ObjectInstance,
         /**
          * @summary `responseRequester`.
+         * @description
+         *
+         * Requester whose request is being monitored. ITU-T Rec.
+         * X.748 (03/99)
+         * [§8.5.1.2.6](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly responseRequester: ObjectInstance,
         /**
          * @summary `responseConfirmationObject`.
+         * @description
+         *
+         * Confirmation object that received the response. ITU-T Rec.
+         * X.748 (03/99)
+         * [§8.5.1.2.3](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly responseConfirmationObject: ObjectInstance,
         /**
          * @summary `routeList`.
+         * @description
+         *
+         * Route-role objects through which the response was
+         * monitored. ITU-T Rec. X.748 (03/99)
+         * [§8.5.1.2.10](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly routeList: GroupObjects,
         /**
          * @summary `requestIdentifier`.
+         * @description
+         *
+         * Identifies the response request. ITU-T Rec. X.748 (03/99)
+         * [§8.5.1.2.2](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly requestIdentifier: RequestIdentifier,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * Identifies this notification instance (X.733). ITU-T Rec.
+         * X.748 (03/99)
+         * [§8.5.1.2.11](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly notificationIdentifier: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * Related notifications (X.733). ITU-T Rec. X.748 (03/99)
+         * [§8.5.1.2.12](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly correlatedNotifications: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `responseTime`.
+         * @description
+         *
+         * Elapsed time from request send to response arrival. ITU-T
+         * Rec. X.748 (03/99)
+         * [§8.5.1.2.8](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly responseTime: ResponseTime,
         /**
          * @summary `maximumResponseTimeError`.
+         * @description
+         *
+         * Precision of `responseTime`; omitted or
+         * `noEstimateOnResponseTimeError` if unknown. ITU-T Rec.
+         * X.748 (03/99)
+         * [§8.5.1.2.1](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly maximumResponseTimeError: OPTIONAL<ResponseTime>,
         /**
          * @summary `responseRequestLength`.
+         * @description
+         *
+         * Bit length of the request PDU; present if
+         * `reqResLengthPkg` is supported. ITU-T Rec. X.748 (03/99)
+         * [§8.4.9](https://www.itu.int/rec/T-REC-X.748-199903-I),
+         * §8.3.1.
          * @public
          * @readonly
          */
         readonly responseRequestLength: OPTIONAL<Integer>,
         /**
          * @summary `responseLength`.
+         * @description
+         *
+         * Bit length of the response PDU; present if
+         * `reqResLengthPkg` is supported. ITU-T Rec. X.748 (03/99)
+         * [§8.4.7](https://www.itu.int/rec/T-REC-X.748-199903-I),
+         * §8.3.1.
          * @public
          * @readonly
          */
         readonly responseLength: OPTIONAL<Integer>,
         /**
          * @summary `responseSync`.
+         * @description
+         *
+         * Synchronization used for this measurement. ITU-T Rec.
+         * X.748 (03/99)
+         * [§8.5.1.2.7](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly responseSync: ResponseSync,
         /**
          * @summary `responseDelayTime`.
+         * @description
+         *
+         * `responseTime` minus `responseTimeout` (delay monitor).
+         * ITU-T Rec. X.748 (03/99)
+         * [§8.5.1.2.4](https://www.itu.int/rec/T-REC-X.748-199903-I),
+         * §8.4.6.
          * @public
          * @readonly
          */
         readonly responseDelayTime?: OPTIONAL<TimePeriod>,
         /**
          * @summary `responseTimeout`.
+         * @description
+         *
+         * Configured timeout, or the interval until timeout without a
+         * response. ITU-T Rec. X.748 (03/99)
+         * [§8.5.1.2.9](https://www.itu.int/rec/T-REC-X.748-199903-I),
+         * §8.4.16.
          * @public
          * @readonly
          */
         readonly responseTimeout?: OPTIONAL<TimePeriod>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Optional extension text (X.733). ITU-T Rec. X.748 (03/99)
+         * [§8.5.1.2.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Optional extension information (X.733). ITU-T Rec. X.748
+         * (03/99)
+         * [§8.5.1.2.14](https://www.itu.int/rec/T-REC-X.748-199903-I).
          * @public
          * @readonly
          */

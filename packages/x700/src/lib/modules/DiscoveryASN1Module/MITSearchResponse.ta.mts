@@ -19,6 +19,14 @@ import {
  * @summary MITSearchResponse
  * @description
  *
+ * Reply of `mITSearch`: a set of rooted name trees that together cover
+ * the requested scope under the requested base. Each tree names its
+ * root with a full `ObjectInstance`; subordinates use only the RDN
+ * (common name components are not repeated). Class of each object is
+ * present only if `classRequest` was true. ITU-T Rec. X.750 (10/96)
+ * [§8.3.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * §8.3.2.4, A.4.4–A.4.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

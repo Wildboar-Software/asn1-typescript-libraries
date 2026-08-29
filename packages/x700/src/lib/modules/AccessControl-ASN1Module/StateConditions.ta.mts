@@ -19,6 +19,16 @@ import {
  * @summary StateConditions
  * @description
  *
+ * Syntax of `stateConditions` (conditional package on
+ * `rule`). Each member identifies a managed object and a
+ * CMIS filter on its attributes. When the package is
+ * present, the rule pertains only if those objects exist
+ * and every filter evaluates to TRUE; otherwise the rule
+ * evaluates to FALSE. Contextual constraint (context-based
+ * scheme). ITU-T Rec. X.741 (04/95)
+ * [§8.1.3.3](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.2.3, A.5.25, Annex H.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

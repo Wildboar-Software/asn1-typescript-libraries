@@ -19,6 +19,15 @@ import {
  * @summary TestCategoryInformation
  * @description
  *
+ * Test-specific input whose syntax is a GDMO parameter of the test category
+ * (alias of X.721 AdditionalInformation; added as a named type by Cor.2). May
+ * include data needed to execute but not held in TO attributes. Optional on
+ * controlled requests; mandatory on uncontrolled requests. ITU-T Rec. X.745
+ * (11/93) §8.4.2.4.
+ * [§8.4.2.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * X.745 Cor.2 (06/98) A.7.2.
+ * https://www.itu.int/rec/T-REC-X.745-199806-I_Cor2
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

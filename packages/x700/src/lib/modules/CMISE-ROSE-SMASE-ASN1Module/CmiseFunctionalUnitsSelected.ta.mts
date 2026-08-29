@@ -19,6 +19,13 @@ import {
  * @summary CmiseFunctionalUnitsSelected
  * @description
  *
+ * Syntax of the X.727 `cmiseFunctionalUnitsSelected`
+ * attribute (`{crsAttribute 3}`) on `cmiseInvocation`: CMISE
+ * functional units selected on the association. ITU-T Rec.
+ * X.727 (03/99)
+ * [§7.3](https://www.itu.int/rec/T-REC-X.727-199903-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

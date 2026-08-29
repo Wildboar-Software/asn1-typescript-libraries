@@ -21,6 +21,16 @@ import {
  * @summary WithSyntax
  * @description
  *
+ * GDMO `WITH INFORMATION SYNTAX` / `WITH REPLY SYNTAX`. `present` is
+ * the ASN.1 type of the action/notification argument or reply; `absent`
+ * (`NULL`) means that construct is omitted (no action- or
+ * notification-specific information or reply). Syntax of
+ * `withInformationSyntax` and `withReplySyntax`. ITU-T Rec. X.750
+ * (10/96) [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722
+ * (01/92)
+ * [§8.10.3.4](https://www.itu.int/rec/T-REC-X.722-199201-I)–[§8.10.3.5](https://www.itu.int/rec/T-REC-X.722-199201-I),
+ * [§8.11.3.3](https://www.itu.int/rec/T-REC-X.722-199201-I)–[§8.11.3.4](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

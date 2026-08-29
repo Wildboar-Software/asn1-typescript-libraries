@@ -19,6 +19,13 @@ import {
  * @summary ObservationScanList
  * @description
  *
+ * One entry per observed object in a scan report or
+ * activate-scan reply (`{summarizationAttribute 15}`).
+ * Mandatory in `ScanReportInformation`. ITU-T Rec.
+ * X.738 (11/93)
+ * [§8.2.2.1.3](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4, Table 2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

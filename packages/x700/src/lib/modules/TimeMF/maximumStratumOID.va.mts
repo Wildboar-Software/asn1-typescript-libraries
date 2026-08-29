@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary maximumStratumOID
  * @description
  *
+ * Registers NTP attribute `maximumStratum`: maximum stratum
+ * encodable as a packet variable; also interpreted as
+ * network unreachable. On `ntpProtocol` (`GET`; equality and
+ * ordering). ITU-T Rec. X.743 (06/98)
+ * [§B.3.9](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

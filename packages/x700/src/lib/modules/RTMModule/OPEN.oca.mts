@@ -15,6 +15,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary OPEN
  * @description
  *
+ * Open type for the `identifier` alternative of
+ * `RequestIdentifier` (ANY defined by the type of request). ITU-T
+ * Rec. X.748 (03/99)
+ * [§8.4.2](https://www.itu.int/rec/T-REC-X.748-199903-I), A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

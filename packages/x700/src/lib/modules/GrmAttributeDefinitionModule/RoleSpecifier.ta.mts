@@ -40,6 +40,14 @@ import {
  * @summary RoleSpecifier
  * @description
  *
+ * One GRM `ROLE` production of a relationship class template: role
+ * name, compatible class, cardinality constraints, bind/unbind
+ * support, and optional role registration. ITU-T Rec. X.750 Amd.1
+ * (10/97)
+ * [§8.1.2.12](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95)
+ * [A.1.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,48 +68,90 @@ export class RoleSpecifier {
     constructor(
         /**
          * @summary `role`.
+         * @description
+         *
+         * Reference name of the role. ITU-T Rec. X.725 (11/95)
+         * A.1.3.5.
          * @public
          * @readonly
          */
         readonly role: Identifier,
         /**
          * @summary `compatibleWith`.
+         * @description
+         *
+         * Compatible managed object class whose characteristics a
+         * participant must fulfil. If absent, `top` is assumed.
+         * ITU-T Rec. X.725 (11/95) A.1.3.5.1.
          * @public
          * @readonly
          */
         readonly compatibleWith: OPTIONAL<TemplateLabel>,
         /**
          * @summary `permittedRoleCardinality`.
+         * @description
+         *
+         * ASN.1 subtype of non-negative integers: how many objects
+         * this relationship may support in the role. If the set
+         * contains 0 the role is optional. Default if neither present
+         * nor inherited: `INTEGER (0..MAX)`. ITU-T Rec. X.725 (11/95)
+         * A.1.3.5.2.
          * @public
          * @readonly
          */
         readonly permittedRoleCardinality: OPTIONAL<DefinedType>,
         /**
          * @summary `requiredRoleCardinality`.
+         * @description
+         *
+         * How many objects this relationship is required to support
+         * in the role. Shall be a subset of permitted cardinality.
+         * ITU-T Rec. X.725 (11/95) A.1.3.5.3.
          * @public
          * @readonly
          */
         readonly requiredRoleCardinality: OPTIONAL<DefinedType>,
         /**
          * @summary `bindingSupport`.
+         * @description
+         *
+         * Present if objects may join the role during the
+         * relationship's existence (BIND). Absence means they may
+         * not. ITU-T Rec. X.725 (11/95) A.1.3.5.4.
          * @public
          * @readonly
          */
         readonly bindingSupport: OPTIONAL<OptionalIdentifier>,
         /**
          * @summary `unbindingSupport`.
+         * @description
+         *
+         * Present if participants may leave the role during the
+         * relationship's existence (UNBIND). Absence means they may
+         * not. ITU-T Rec. X.725 (11/95) A.1.3.5.5.
          * @public
          * @readonly
          */
         readonly unbindingSupport: OPTIONAL<OptionalIdentifier>,
         /**
          * @summary `permittedRelationshipCardinality`.
+         * @description
+         *
+         * How many instances of this relationship class a managed
+         * object may participate in, in this role. Default if neither
+         * present nor inherited: `INTEGER (0..MAX)`. ITU-T Rec. X.725
+         * (11/95) A.1.3.5.6.
          * @public
          * @readonly
          */
         readonly permittedRelationshipCardinality: OPTIONAL<DefinedType>,
         /**
          * @summary `optionalRegisteredAs`.
+         * @description
+         *
+         * Globally unique OID registering the role, or null if
+         * unregistered. Shall not be present if the role was
+         * inherited. ITU-T Rec. X.725 (11/95) A.1.3.5.7.
          * @public
          * @readonly
          */

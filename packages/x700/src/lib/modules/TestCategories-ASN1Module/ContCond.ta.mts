@@ -24,6 +24,14 @@ import {
  * @summary ContCond
  * @description
  *
+ * Condition before sending the next protocol element in a
+ * protocol integrity test: a fixed interval since last
+ * transmission (`intervalTime`), or receipt of a matching PDU
+ * within a wait (`pDUReception`). Exactly one of `pDUReception` or
+ * `waitingInterval` is used on `ProtocolIntegrityTestInfo`. ITU-T
+ * Rec. X.737 (11/95) [§7.5.2](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * §7.5.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

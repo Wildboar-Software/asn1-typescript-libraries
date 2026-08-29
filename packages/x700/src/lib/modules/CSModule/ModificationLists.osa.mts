@@ -15,6 +15,14 @@ import {
  * @summary ModificationLists
  * @description
  *
+ * Dynamically extensible TYPE-IDENTIFIER object set for
+ * `ModificationList` `attributeId` / `attributeValue` pairs.
+ * Empty here; implementations add members for the attributes a
+ * CMIS SET script may modify. Rec A.8 uses `ANY DEFINED BY
+ * attributeId` rather than naming this set. ITU-T Rec. X.753
+ * (10/97)
+ * [A.8](https://www.itu.int/rec/T-REC-X.753-199710-I), D.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

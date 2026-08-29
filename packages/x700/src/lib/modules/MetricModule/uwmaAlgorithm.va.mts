@@ -19,6 +19,13 @@ import { moaAlgorithmIdentifiers } from '../MetricModule/moaAlgorithmIdentifiers
  * @summary uwmaAlgorithm
  * @description
  *
+ * Algorithm identifier for Uniformly Weighted Moving Average
+ * smoothing (Annex C.2). Mean is the average of N =
+ * floor(MTP/GP) derived-gauge samples in a sliding window of
+ * length MTP. ITU-T Rec. X.739 (11/93)
+ * [§8.1.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I),
+ * C.2, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

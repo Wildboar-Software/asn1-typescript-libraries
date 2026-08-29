@@ -19,6 +19,14 @@ import {
  * @summary OtherInfo
  * @description
  *
+ * GDMO example (X.722 Annex A). Optional extra information in
+ * the example `communicationError` notification (`ErrorInfo`).
+ * The example behaviour allows any combination of probable
+ * cause, severity, trend indication, backed-up status,
+ * proposed repair action, threshold info, and other info.
+ * ITU-T Rec. X.722 (01/92)
+ * [A.9](https://www.itu.int/rec/T-REC-X.722-199201-I), A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

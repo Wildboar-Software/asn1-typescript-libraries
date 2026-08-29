@@ -19,6 +19,14 @@ import {
  * @summary SoftwareProcessingFailure
  * @description
  *
+ * CMIP `ProcessingFailure` specific-error syntax for SWMF
+ * M-ACTIONs denied for reasons other than those already in CMIP.
+ * Includes the emitting object's state attributes; any other
+ * attributes are a local matter. Registered as `{… parameter(5)
+ * softwareProcessingFailureParameter(2)}`. ITU-T Rec. X.744 (10/96)
+ * [§8.5.2](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.7.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

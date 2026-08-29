@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SupportedRelationshipClassList
  * @description
  *
+ * Managed relationship classes supported by the system in the agent
+ * role. Mandatory, read-only on a repertoire object. Matches for
+ * set-comparison and set-intersection. ITU-T Rec. X.750 (10/96)
+ * [§8.1.1.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * A.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

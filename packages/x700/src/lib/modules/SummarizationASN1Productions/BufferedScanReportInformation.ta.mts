@@ -47,6 +47,15 @@ import {
  * @summary BufferedScanReportInformation
  * @description
  *
+ * Event information of `bufferedScanReport` and reply
+ * of `reportBuffer`. Covers all scans in a report
+ * period (including the last, excluding the scan at
+ * the period start). After a scheduled notification
+ * the buffer is cleared; a `reportBuffer` action does
+ * not clear it. ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.3](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.9.3, A.5, A.6, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,42 +79,73 @@ export class BufferedScanReportInformation {
     constructor(
         /**
          * @summary `granularityPeriod`.
+         * @description
+         *
+         * Time between successive scans, as in X.739.
+         * Mandatory. X.738 §8.2.2.3.1, §8.10.
          * @public
          * @readonly
          */
         readonly granularityPeriod: TimePeriod,
         /**
          * @summary `firstScanInitiationTime`.
+         * @description
+         *
+         * Start time of the first scan in the buffer.
+         * Required if `timeStampReportMode` is present with a
+         * non-zero value. X.738 §8.2.2.3.2, A.9.
          * @public
          * @readonly
          */
         readonly firstScanInitiationTime: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `suspectIntervals`.
+         * @description
+         *
+         * Number of scheduled scans with any attribute
+         * missing or suspect. Default 0. X.738 §8.2.2.3.3,
+         * §8.1.9.3.
          * @public
          * @readonly
          */
         readonly suspectIntervals: OPTIONAL<SuspectIntervals>,
         /**
          * @summary `bufferedObservationList`.
+         * @description
+         *
+         * One entry per observed object: report-time
+         * attributes, time-ordered scan buffer, and numeric
+         * buffer. Mandatory. X.738 §8.2.2.3.4, Table 4.
          * @public
          * @readonly
          */
         readonly bufferedObservationList: BufferedObservationList,
         /**
          * @summary `incompleteScan`.
+         * @description
+         *
+         * Present if the scan could not be completed. X.738
+         * §8.2.2.3.5, Table 4 note 2.
          * @public
          * @readonly
          */
         readonly incompleteScan?: OPTIONAL<IncompleteScan>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Optional textual extension as in X.733. X.738
+         * §8.2.2.3.6.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Optional structured extension as in X.733. X.738
+         * §8.2.2.3.7.
          * @public
          * @readonly
          */

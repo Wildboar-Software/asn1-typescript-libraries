@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Null
  * @description
  *
+ * Supporting `NULL` production in SWMF. The rec does not assign
+ * this alias to a distinct attribute or parameter beyond the ASN.1
+ * supporting productions. ITU-T Rec. X.744 (10/96)
+ * [A.8](https://www.itu.int/rec/T-REC-X.744-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

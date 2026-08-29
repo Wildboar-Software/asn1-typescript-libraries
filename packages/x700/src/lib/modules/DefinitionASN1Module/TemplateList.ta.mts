@@ -20,6 +20,11 @@ import {
  * @summary TemplateList
  * @description
  *
+ * Set of template labels. Shared syntax for behaviour lists, mandatory
+ * packages, parameters, group elements, and similar SET OF references.
+ * ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,10 @@ import {
  * @summary MappingPair
  * @description
  *
+ * One `relationship-operation MAPS-TO-OPERATION …` production.
+ * ITU-T Rec. X.725 (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +42,22 @@ export class MappingPair {
     constructor(
         /**
          * @summary `relationshipOperation`.
+         * @description
+         *
+         * ESTABLISH, TERMINATE, BIND, UNBIND, QUERY, NOTIFY, or
+         * USER DEFINED, with optional names. ITU-T Rec. X.725 (11/95)
+         * A.2.3.5.
          * @public
          * @readonly
          */
         readonly relationshipOperation: RelationshipOperation,
         /**
          * @summary `mapsTo`.
+         * @description
+         *
+         * Systems management operations (and their targets) that
+         * realize this relationship operation. ITU-T Rec. X.725
+         * (11/95) A.2.3.5.
          * @public
          * @readonly
          */

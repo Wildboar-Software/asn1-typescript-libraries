@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FilterWeight
  * @description
  *
+ * Weight used to compute NTP filter dispersion (REAL 0..1).
+ * Syntax of `filterWeight`. ITU-T Rec. X.743 (06/98)
+ * [§B.3.2](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

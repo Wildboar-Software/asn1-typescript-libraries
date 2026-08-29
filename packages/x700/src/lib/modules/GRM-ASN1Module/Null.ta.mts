@@ -16,6 +16,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Null
  * @description
  *
+ * Syntax of GRM specific-error parameters
+ * `roleCardinalityViolation` (`{grm-Parameter 3}`) and
+ * `relationshipCardinalityViolation` (`{grm-Parameter 4}`).
+ * Signalled when a bind or unbind would violate a role or
+ * relationship cardinality constraint; the parameter value
+ * shall be null. ITU-T Rec. X.725 (11/95)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.725-199511-I),
+ * §8.6.4, Annex B.5, B.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

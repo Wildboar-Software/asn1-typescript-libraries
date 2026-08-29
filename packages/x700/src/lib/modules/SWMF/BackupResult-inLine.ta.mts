@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BackupResult_inLine
  * @description
  *
+ * In-line automatic-backup outcome: the copy is the `success` BIT
+ * STRING, or a named failure (`fail-pduSizeLimitation`,
+ * `fail-securityLicensing`, `fail-unknown`). ITU-T Rec. X.744
+ * (10/96)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

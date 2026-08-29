@@ -51,6 +51,19 @@ import {
  * @summary AttributeValueChangeInfo
  * @description
  *
+ * Event information for the DMI `attributeValueChange`
+ * notification (`{smi2Notification 1}`). Reports addition or
+ * deletion of members of set-valued attributes, replacement of
+ * attribute values, or setting values to defaults, from resource
+ * operation or management operation. Shall not be used for
+ * changes that already have a specific notification type
+ * (for example state or relationship change). ITU-T Rec.
+ * X.721 (02/92)
+ * [§13.1](https://www.itu.int/rec/T-REC-X.721-199202-I),
+ * §14.3. Semantics: ITU-T Rec. X.730 (01/92)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.730-199201-I),
+ * §8.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,42 +83,77 @@ export class AttributeValueChangeInfo {
     constructor(
         /**
          * @summary `sourceIndicator`.
+         * @description
+         *
+         * Source of the change: `resourceOperation` (internal
+         * operation of the resource), `managementOperation`
+         * (SMI operation across the object boundary), or
+         * `unknown`. ITU-T Rec. X.730 (01/92) §8.2.3.1.
          * @public
          * @readonly
          */
         readonly sourceIndicator: OPTIONAL<SourceIndicator>,
         /**
          * @summary `attributeIdentifierList`.
+         * @description
+         *
+         * Identifiers of the attributes whose value changes are
+         * reported. ITU-T Rec. X.730 (01/92) §8.2.3.2.
          * @public
          * @readonly
          */
         readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
         /**
          * @summary `attributeValueChangeDefinition`.
+         * @description
+         *
+         * One sequence per changed attribute: identifier, optional
+         * old value, and new (current) value. At least one new
+         * value shall be present. ITU-T Rec. X.730 (01/92)
+         * §8.2.3.3.
          * @public
          * @readonly
          */
         readonly attributeValueChangeDefinition: AttributeValueChangeDefinition,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * Identifier that later notifications may cite in
+         * `correlatedNotifications`. ITU-T Rec. X.730 (01/92)
+         * §8.2.3.4; X.733 (02/92) §8.1.2.8.
          * @public
          * @readonly
          */
         readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * Notifications correlated with this one. ITU-T Rec.
+         * X.730 (01/92) §8.2.3.4; X.733 (02/92) §8.1.2.9.
          * @public
          * @readonly
          */
         readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Free-form text; not required to interpret the
+         * notification. ITU-T Rec. X.730 (01/92) §8.2.3.4;
+         * X.733 (02/92) §8.1.2.13.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Extra identifier/significance/information structures.
+         * ITU-T Rec. X.730 (01/92) §8.2.3.4; X.733 (02/92)
+         * §8.1.2.14.
          * @public
          * @readonly
          */

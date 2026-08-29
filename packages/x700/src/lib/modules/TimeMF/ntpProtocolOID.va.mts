@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary ntpProtocolOID
  * @description
  *
+ * Registers the `ntpProtocol` managed object class: NTP
+ * (RFC 1305) as a subclass of `synchronizationProtocol`.
+ * Adds the NTP filter, poll, stratum, dispersion, distance,
+ * skew, and selection attributes of Annex B. ITU-T Rec. X.743 (06/98)
+ * [§B.2](https://www.itu.int/rec/T-REC-X.743-199806-I), B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,15 @@ import {
  * @summary SequenceOfDays
  * @description
  *
+ * Syntax of `sequenceOfDays` (`{schedAtt 6}`). Sequence of
+ * daily time-of-day schedules with 24-hour periodicity. The
+ * first element applies when the object becomes active; each
+ * successor in turn, then the sequence repeats. Unspecified at
+ * create defaults to a single full-day interval (SMO activity
+ * continually active). ITU-T Rec. X.746 (02/00)
+ * [§8.3.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.4.7, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

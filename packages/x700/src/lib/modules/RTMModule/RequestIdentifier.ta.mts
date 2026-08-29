@@ -20,6 +20,12 @@ import {
  * @summary RequestIdentifier
  * @description
  *
+ * Identifies a response request. `invokeID` is used when the
+ * request is an OSI APDU; otherwise an integer or an open type
+ * defined by the request. ITU-T Rec. X.748 (03/99)
+ * [§8.4.2](https://www.itu.int/rec/T-REC-X.748-199903-I),
+ * §8.5.1.2.2, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

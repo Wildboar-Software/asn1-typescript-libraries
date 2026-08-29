@@ -26,6 +26,13 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary subordinateObjectClass
  * @description
  *
+ * Subordinate managed object class of a name binding (with optional AND
+ * SUBCLASSES). ID `{mkmDirectoryAttributeType 36}`. ITU-T Rec. X.750
+ * (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

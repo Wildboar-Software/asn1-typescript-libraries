@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Generic64BitCounter
  * @description
  *
+ * Counter syntax with upper bound `2^64-1`
+ * (`0..18446744073709551615`). Used by the non-instantiable
+ * `nonWrapping64BitCounter` (§9.12) and
+ * `wrapping64BitCounter` (§9.24); derived attributes specify
+ * when the value increments. ITU-T Rec. X.723 (11/93)
+ * [§9.12](https://www.itu.int/rec/T-REC-X.723-199311-I),
+ * §9.24, §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

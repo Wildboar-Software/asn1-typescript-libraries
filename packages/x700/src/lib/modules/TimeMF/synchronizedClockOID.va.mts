@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary synchronizedClockOID
  * @description
  *
+ * Registers attribute `synchronizedClock`: clock being
+ * synchronized by this protocol instance. On
+ * `synchronizationProtocol` (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.21](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.21.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

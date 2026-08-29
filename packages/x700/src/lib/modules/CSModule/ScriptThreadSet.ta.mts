@@ -24,6 +24,11 @@ import {
  * @summary ScriptThreadSet
  * @description
  *
+ * Script instance and the thread executing it. Returned in
+ * trigger-result `executionType` after spawn. ITU-T Rec. X.753
+ * (10/97)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.753-199710-I), A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +42,21 @@ export class ScriptThreadSet {
     constructor(
         /**
          * @summary `scriptId`.
+         * @description
+         *
+         * Launch-script instance this thread is executing. ITU-T
+         * Rec. X.753 (10/97) §8.1.2.3.2, A.4.
          * @public
          * @readonly
          */
         readonly scriptId: ScriptId,
         /**
          * @summary `threadId`.
+         * @description
+         *
+         * Thread that was spawned for that script. Supply this to
+         * suspend/resume a suspendable thread. ITU-T Rec. X.753
+         * (10/97) §7.2, §8.3.1–§8.3.2, A.4.
          * @public
          * @readonly
          */

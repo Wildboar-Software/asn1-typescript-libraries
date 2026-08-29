@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LoopbackType
  * @description
  *
+ * OID naming the loopback kind: e.g. physical loopback,
+ * echo, analogue or digital, non-transparent / transparent /
+ * payload physical loopback, echo data back. The rec does not
+ * register specific values. ITU-T Rec. X.737 (11/95)
+ * [§8.1.12](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.4.1, A.6.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

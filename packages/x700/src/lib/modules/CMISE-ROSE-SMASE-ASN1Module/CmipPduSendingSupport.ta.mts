@@ -19,6 +19,12 @@ import {
  * @summary CmipPduSendingSupport
  * @description
  *
+ * Syntax of the X.727 `cmipPduSendingSupport` attribute
+ * (`{crsAttribute 2}`) on `cmise`: CMIP PDU types supported
+ * for sending. ITU-T Rec. X.727 (03/99)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.727-199903-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

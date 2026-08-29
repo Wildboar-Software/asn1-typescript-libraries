@@ -20,6 +20,14 @@ import {
  * @summary DomainIdentity
  * @description
  *
+ * Syntax of `domainIdentity` on access control rules:
+ * identifies the access control domain governing those
+ * rules. Either a Directory distinguished name or a
+ * private (octet-string) name. The rec does not specify
+ * when to use each alternative. ITU-T Rec. X.741 (04/95)
+ * [§8.1.2.1.3](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.5.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

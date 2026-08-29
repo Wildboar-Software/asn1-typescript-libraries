@@ -24,6 +24,12 @@ import {
  * @summary ConnectivityThreshold
  * @description
  *
+ * Threshold expressed either as a count of units of a given
+ * type (`time`) or as `rawData`. A.7 only; clause 8 does not
+ * describe this type (the connectivity-threshold package uses
+ * `TestThreshold` for maximum acceptable error rate). ITU-T Rec.
+ * X.737 (11/95) [A.7](https://www.itu.int/rec/T-REC-X.737-199511-I), A.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

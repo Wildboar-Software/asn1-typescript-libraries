@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BackupReply_reply
  * @description
  *
+ * `backup` reply CHOICE: `success` (`NULL`) for local or off-line
+ * backup; `inLine` BIT STRING is the copy sent to the manager.
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.3.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.9.1, A.9.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

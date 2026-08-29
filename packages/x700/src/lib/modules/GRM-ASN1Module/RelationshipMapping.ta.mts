@@ -16,6 +16,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RelationshipMapping
  * @description
  *
+ * Object identifier of a GRM relationship mapping: a named
+ * specification of how a managed relationship class is
+ * represented in terms of managed object classes (naming,
+ * attributes, relationship object, or management operations).
+ * Syntax of the `relationshipMapping` attribute of
+ * `genericRelationshipObject`, which identifies the mapping in
+ * effect. There may be more than one mapping per class.
+ * ITU-T Rec. X.725 (11/95)
+ * [§3.8.14](https://www.itu.int/rec/T-REC-X.725-199511-I),
+ * §7.4, §7.4.3, Annex B.4, B.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

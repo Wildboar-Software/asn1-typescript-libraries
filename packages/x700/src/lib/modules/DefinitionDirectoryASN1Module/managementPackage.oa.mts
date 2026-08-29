@@ -28,6 +28,14 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary managementPackage
  * @description
  *
+ * Directory auxiliary for a GDMO package template. MUST CONTAIN
+ * `behaviour`, `attributes`, `attributeGroups`, `actions`,
+ * `notifications`, and `optionallyRegisteredAs` (OID or null). ID
+ * `{mkmDirectoryObjectClass 7}`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.10](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

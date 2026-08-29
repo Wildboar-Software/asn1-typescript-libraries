@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary synchronizingClocksOID
  * @description
  *
+ * Registers attribute `synchronizingClocks`: set of clocks
+ * exchanging information with this clock for synchronization.
+ * On `synchronizationProtocol` (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.22](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.22.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

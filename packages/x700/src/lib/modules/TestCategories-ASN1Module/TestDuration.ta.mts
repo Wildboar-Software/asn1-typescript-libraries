@@ -24,6 +24,13 @@ import {
  * @summary TestDuration
  * @description
  *
+ * How long a test pattern is applied (`pattern period
+ * time`): a time (`signalDuration`) or a length in bits/octets/
+ * packets/blocks (`signalLength.size`) optionally at a given
+ * `dataRate`. ITU-T Rec. X.737 (11/95)
+ * [§3.9.7](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * §7.4.2.2, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

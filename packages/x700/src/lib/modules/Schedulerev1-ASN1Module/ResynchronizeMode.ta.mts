@@ -17,6 +17,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ResynchronizeMode
  * @description
  *
+ * Syntax of `resynchronizeMode` (`{schedAtt 3}`). How a
+ * periodic scheduler resynchronizes triggering when it is
+ * activated (administrative state unlocked and operational
+ * state enabled). `FALSE`: synchronize to the initial
+ * triggering point, or to the pre-suspension points on
+ * resume. `TRUE`: trigger on resumption and synchronize the
+ * period to the resumption time. Mutually exclusive with the
+ * period-synchronization package. ITU-T Rec. X.746 (02/00)
+ * [§8.3.8](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 7.3.2.1, A.4.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

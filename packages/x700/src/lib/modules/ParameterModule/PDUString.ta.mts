@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PDUString
  * @description
  *
+ * GDMO example (X.722 Annex A). Syntax of the example
+ * `pDUHeader` parameter (CONTEXT EVENT-INFO): the PDU header
+ * carried in the CMIP `eventInfo` field of the example
+ * `protocolError` notification. ITU-T Rec. X.722 (01/92)
+ * [A.3](https://www.itu.int/rec/T-REC-X.722-199201-I), A.8,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

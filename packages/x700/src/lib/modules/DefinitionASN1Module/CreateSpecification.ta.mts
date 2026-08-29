@@ -26,6 +26,11 @@ import {
  * @summary CreateSpecification
  * @description
  *
+ * CREATE element of a name binding: optional create-modifiers and
+ * create-specific error parameters. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722 (01/92)
+ * [§8.6.3.5](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +47,19 @@ export class CreateSpecification {
     constructor(
         /**
          * @summary `createModifier`.
+         * @description
+         *
+         * WITH-REFERENCE-OBJECT and/or WITH-AUTOMATIC-INSTANCE-NAMING. Omitted
+         * if the CREATE construct has no modifiers.
          * @public
          * @readonly
          */
         readonly createModifier?: OPTIONAL<CreateSpecification_createModifier>,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * Name-binding-specific Create error parameters (processing failures).
          * @public
          * @readonly
          */

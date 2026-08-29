@@ -14,6 +14,12 @@ import { type CDTC_TEST_RESULTS } from '../TestCategories-ASN1Module/CDTC-TEST-R
  * @summary InternalResourceSet
  * @description
  *
+ * Extensible object set of `CDTC-TEST-RESULTS` information
+ * objects naming internal functions that may appear in
+ * `InternalResourceTestResults`. Published empty (`{...}`);
+ * implementations populate it. ITU-T Rec. X.737 Cor.2 (02/00)
+ * [https://www.itu.int/rec/T-REC-X.737-200002-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,13 @@ import {
  * @summary EndConnectionTestResults
  * @description
  *
+ * Alias of `ConnectionTestResults`. Introduced by Cor.1;
+ * clause 8.1.7 only says this attribute contains end-connection
+ * test results and does not define a distinct meaning. ITU-T Rec.
+ * X.737 (11/95) [§8.1.7](https://www.itu.int/rec/T-REC-X.737-199511-I), A.6.7;
+ * Cor.1 (06/98)
+ * [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

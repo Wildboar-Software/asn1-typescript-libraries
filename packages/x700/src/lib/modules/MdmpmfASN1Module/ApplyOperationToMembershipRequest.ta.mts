@@ -29,6 +29,13 @@ import {
  * @summary ApplyOperationToMembershipRequest
  * @description
  *
+ * Action information for `applyOperationToMembership`: a CMIP
+ * `GetArgument`, `SetArgument` (replace/add/remove/set-to-default),
+ * or `ActionArgument` applied to each qualifying domain member.
+ * Confirmed. ITU-T Rec. X.749 (08/97)
+ * [§8.4.5](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

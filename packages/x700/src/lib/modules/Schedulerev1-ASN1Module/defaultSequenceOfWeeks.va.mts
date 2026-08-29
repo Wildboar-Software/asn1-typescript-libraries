@@ -23,6 +23,12 @@ import {
  * @summary defaultSequenceOfWeeks
  * @description
  *
+ * Default of `sequenceOfWeeks`: `{defaultWeekMaskWps}` (all
+ * days, full-day interval). Results in the SMO activity being
+ * continually active. ITU-T Rec. X.746 (02/00)
+ * [§8.3.5.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * A.3.3, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

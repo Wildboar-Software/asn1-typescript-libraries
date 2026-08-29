@@ -19,6 +19,17 @@ import {
  * @summary NumericAttributeIdList
  * @description
  *
+ * Unordered identifiers of INTEGER or REAL attributes
+ * for which ensemble statistics are calculated across
+ * observed objects (`{summarizationAttribute 11}`).
+ * Used by `ensembleStatisticScanner` and subclasses.
+ * If an attribute is absent on an object, that object
+ * is omitted from the calculation for that attribute;
+ * the report includes the sample count. ITU-T Rec.
+ * X.738 (11/93)
+ * [§8.1.3.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.3.3, A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

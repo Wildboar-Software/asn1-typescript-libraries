@@ -19,6 +19,11 @@ import {
  * @summary TestObjectList
  * @description
  *
+ * TOs to instantiate for a controlled test request. Order is used to correlate
+ * the positive or negative reply with the request; creation order is a local
+ * matter. ITU-T Rec. X.745 (11/93) §8.4.2.5.
+ * [§8.4.2.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

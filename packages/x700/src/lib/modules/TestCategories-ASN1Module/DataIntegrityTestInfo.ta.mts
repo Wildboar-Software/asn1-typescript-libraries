@@ -19,6 +19,16 @@ import {
  * @summary DataIntegrityTestInfo
  * @description
  *
+ * Initiation info for a data integrity test: whether two
+ * entities (MORT and AO) can exchange data without corruption, and
+ * the time taken. SEQUENCE OF `DataUnits` to send; if omitted from
+ * the request, units are object-specific. Intrusive. The AO
+ * reflects received data back to the MORT (CO or CL). ACTION-INFO
+ * (A.5.9). ITU-T Rec. X.737 (11/95)
+ * [§7.3.1](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * §7.3.2, §7.3.6. Cor.1: `SEQUENCE OF DataUnits`
+ * [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

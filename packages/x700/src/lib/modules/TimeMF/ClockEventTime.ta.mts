@@ -19,6 +19,10 @@ import {
  * @summary ClockEventTime
  * @description
  *
+ * Time at which the latest system exception event occurred.
+ * Syntax of `clockEventTime`. ITU-T Rec. X.743 (06/98)
+ * [§8.3.6](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

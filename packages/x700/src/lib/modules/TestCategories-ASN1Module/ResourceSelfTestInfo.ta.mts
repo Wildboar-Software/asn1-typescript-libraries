@@ -21,6 +21,12 @@ import {
  * @summary ResourceSelfTestInfo
  * @description
  *
+ * Initiation info for a resource self-test: whether a
+ * single MORT (no AOs) can perform its allotted function. Nature
+ * of exercises is system-specific. ACTION-INFO (A.5.18). ITU-T
+ * Rec. X.737 (11/95) [§7.7.1](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * §7.7.6, A.5.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,24 +43,39 @@ export class ResourceSelfTestInfo {
     constructor(
         /**
          * @summary `diagnosticType`.
+         * @description
+         *
+         * Which diagnostic to run. If omitted,
+         * the type is specific and known to the MORT. Values are not
+         * registered in the rec. X.737 §7.7.6, A.7.
          * @public
          * @readonly
          */
         readonly diagnosticType: OPTIONAL<INTEGER>,
         /**
          * @summary `phases`.
+         * @description
+         *
+         * Phases to run. Values are not specified in the rec. X.737 §7.7.6,
+         * A.7.
          * @public
          * @readonly
          */
         readonly phases: INTEGER[],
         /**
          * @summary `iteration`.
+         * @description
+         *
+         * Iterations for each phase. X.737 §7.7.6, A.7.
          * @public
          * @readonly
          */
         readonly iteration: INTEGER,
         /**
          * @summary `timeoutPeriod`.
+         * @description
+         *
+         * Time-out for the test (from X.745). X.737 §7.7.6.
          * @public
          * @readonly
          */

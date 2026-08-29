@@ -15,6 +15,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MembershipStatus
  * @description
  *
+ * Membership of a named object: unknown, member, or non-member.
+ * Reply of `verifyMembershipStatus`. ITU-T Rec. X.749 (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7,
+ * A.10.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `member` (2): object is a member.
+ * - `non-member` (3): object is not a member.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +42,15 @@ export enum _enum_for_MembershipStatus {
  * @summary MembershipStatus
  * @description
  *
+ * Membership of a named object: unknown, member, or non-member.
+ * Reply of `verifyMembershipStatus`. ITU-T Rec. X.749 (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7,
+ * A.10.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `member` (2): object is a member.
+ * - `non-member` (3): object is not a member.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,6 +65,15 @@ export type MembershipStatus = _enum_for_MembershipStatus;
  * @summary MembershipStatus
  * @description
  *
+ * Membership of a named object: unknown, member, or non-member.
+ * Reply of `verifyMembershipStatus`. ITU-T Rec. X.749 (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7,
+ * A.10.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `member` (2): object is a member.
+ * - `non-member` (3): object is not a member.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,6 +86,11 @@ export const MembershipStatus = _enum_for_MembershipStatus;
 
 /**
  * @summary MembershipStatus_unknown
+ * @description
+ *
+ * Membership status could not be determined. ITU-T Rec. X.749
+ * (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -67,6 +99,11 @@ export const MembershipStatus_unknown: MembershipStatus =
 
 /**
  * @summary unknown
+ * @description
+ *
+ * Membership status could not be determined. ITU-T Rec. X.749
+ * (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -75,6 +112,10 @@ export const unknown: MembershipStatus =
 
 /**
  * @summary MembershipStatus_member
+ * @description
+ *
+ * The named object is a member. ITU-T Rec. X.749 (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -83,6 +124,10 @@ export const MembershipStatus_member: MembershipStatus =
 
 /**
  * @summary member
+ * @description
+ *
+ * The named object is a member. ITU-T Rec. X.749 (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -91,6 +136,10 @@ export const member: MembershipStatus =
 
 /**
  * @summary MembershipStatus_non_member
+ * @description
+ *
+ * The named object is not a member. ITU-T Rec. X.749 (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -99,6 +148,10 @@ export const MembershipStatus_non_member: MembershipStatus =
 
 /**
  * @summary non_member
+ * @description
+ *
+ * The named object is not a member. ITU-T Rec. X.749 (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */

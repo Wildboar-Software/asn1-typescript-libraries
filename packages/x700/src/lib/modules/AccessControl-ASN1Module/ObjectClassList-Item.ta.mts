@@ -21,6 +21,12 @@ import {
  * @summary ObjectClassList_Item
  * @description
  *
+ * One protected managed object class and optional name
+ * binding used when selecting targets. ITU-T Rec. X.741
+ * (04/95)
+ * [§A.5.18](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +38,20 @@ export class ObjectClassList_Item {
     constructor(
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * Protected managed object class. Must be known in the
+         * domain. X.741 A.5.18, A.2.5.
          * @public
          * @readonly
          */
         readonly objectClass: ObjectClass,
         /**
          * @summary `nameBinding`.
+         * @description
+         *
+         * Optional name binding restricting which instances of
+         * `objectClass` are selected. X.741 A.2.5.
          * @public
          * @readonly
          */

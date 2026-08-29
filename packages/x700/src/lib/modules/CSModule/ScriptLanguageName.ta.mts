@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ScriptLanguageName
  * @description
  *
+ * Language that defines syntax and semantics of a
+ * general-string script. Rec does not assign an OID for SMSL
+ * (Annexes F and G). ITU-T Rec. X.753 (10/97)
+ * [§8.1.9.2.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

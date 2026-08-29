@@ -24,6 +24,17 @@ import {
  * @summary TimesOfDayWps
  * @description
  *
+ * Times of day for a day mask: `intervalsOfDayWps` (interval
+ * scheduling; the only valid alternative in
+ * `intervalSchedulingPackage`) or `triggerTimes` (aperiodic
+ * trigger / operations scheduling; required by
+ * `triggerSchedulingPackage` and operation schedulers). If
+ * both interval and trigger apply to one activity, triggering
+ * is effective only within the intervals. ITU-T Rec. X.746
+ * (02/00)
+ * [§7.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+ * 8.3.13–8.3.14, A.1.11, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

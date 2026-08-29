@@ -20,6 +20,13 @@ import {
  * @summary deny
  * @description
  *
+ * Named value `deny` of `EnforcementAction`:
+ * `denyWithResponse`. Default for each `DefaultAccess`
+ * component and (after Cor.2) for `enforcementAction` on
+ * `rule`. ITU-T Rec. X.741 (04/95)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.741-199504-I);
+ * Cor.2 (06/98) A.2.3 (`deny`, not `denyAccess`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

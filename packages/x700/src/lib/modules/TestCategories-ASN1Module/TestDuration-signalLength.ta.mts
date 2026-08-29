@@ -21,6 +21,11 @@ import {
  * @summary TestDuration_signalLength
  * @description
  *
+ * Inner SEQUENCE of `TestDuration.signalLength`: size, and
+ * optional rate. ITU-T Rec. X.737 (11/95)
+ * [§3.9.7](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +37,19 @@ export class TestDuration_signalLength {
     constructor(
         /**
          * @summary `size`.
+         * @description
+         *
+         * Length of the pattern (units implied by the data category in use).
+         * X.737 §3.9.7.
          * @public
          * @readonly
          */
         readonly size: INTEGER,
         /**
          * @summary `dataRate`.
+         * @description
+         *
+         * Optional rate at which that length is sent. X.737 §3.9.7, A.7.
          * @public
          * @readonly
          */

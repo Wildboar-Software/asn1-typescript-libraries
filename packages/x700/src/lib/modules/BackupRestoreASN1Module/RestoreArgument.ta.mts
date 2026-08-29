@@ -25,6 +25,17 @@ import {
  * @summary RestoreArgument
  * @description
  *
+ * Confirmed generic `restore` M-ACTION information. Restores a
+ * previously backed-up copy onto the target object. Generic action
+ * intended for reuse beyond software. Source is a local same-class
+ * object, the managing system (copy in this argument), or a remote
+ * system (off-line via a locally chosen file-transfer protocol).
+ * Always confirmed. No reply syntax in A.9.2 (A.9.2 text says a
+ * `NULL` reply means success). `{… action(9) restore(8)}`. ITU-T
+ * Rec. X.744 (10/96)
+ * [§8.3.5](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §7.2.2, §9.6 Table 10, A.9.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +50,22 @@ export class RestoreArgument {
     constructor(
         /**
          * @summary `restoreSource`.
+         * @description
+         *
+         * Where the copy is read from (local object, in-line BIT
+         * STRING from the manager, or off-line remote system).
+         * Mandatory. ITU-T Rec. X.744 (10/96) §8.3.5, §9.6 Table 10,
+         * A.9.2.
          * @public
          * @readonly
          */
         readonly restoreSource: RestoreSource,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 10. ITU-T Rec. X.744
+         * (10/96) §9.6 Table 10.
          * @public
          * @readonly
          */

@@ -24,6 +24,13 @@ import {
  * @summary ErrorUnitThreshold
  * @description
  *
+ * Error threshold as a count of units of a given type.
+ * `TestThreshold.errorUnitThreshold` alternative. Crossing the
+ * threshold terminates the test with Fail. ITU-T Rec. X.737
+ * (11/95) [§8.1.24](https://www.itu.int/rec/T-REC-X.737-199511-I), A.7. Cor.1:
+ * `unitType` is
+ * `UnitsType` [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +45,18 @@ export class ErrorUnitThreshold {
     constructor(
         /**
          * @summary `unitType`.
+         * @description
+         *
+         * OID identifying the unit counted. X.737 A.7.
          * @public
          * @readonly
          */
         readonly unitType: UnitsType,
         /**
          * @summary `unitsTotal`.
+         * @description
+         *
+         * Count of those units that is the threshold. X.737 A.7.
          * @public
          * @readonly
          */
