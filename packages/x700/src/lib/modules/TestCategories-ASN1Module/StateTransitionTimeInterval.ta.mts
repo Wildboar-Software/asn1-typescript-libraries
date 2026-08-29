@@ -19,6 +19,14 @@ import {
  * @summary StateTransitionTimeInterval
  * @description
  *
+ * Time between test-state transitions of a controlled test
+ * infrastructure test (X.745 states). Defaults to an
+ * implementation-specific value if omitted from the request.
+ * Alias of `Timespec`. ITU-T Rec. X.737 (11/95)
+ * [§7.8.6](https://www.itu.int/rec/T-REC-X.737-199511-I), A.3
+ * `stateTransitionTimeIntervalPkg`,
+ * A.6.21.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,11 @@ import {
  * @summary DataType
  * @description
  *
+ * Kind of test data: a well-known `IntegerDataType` pattern,
+ * or an OID naming a registered pattern. Used in `DataUnits` and
+ * as `TestPattern.standardType`. ITU-T Rec. X.737 (11/95)
+ * [A.7](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

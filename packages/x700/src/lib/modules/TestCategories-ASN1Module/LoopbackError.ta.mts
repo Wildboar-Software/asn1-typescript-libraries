@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LoopbackError
  * @description
  *
+ * Measured loopback error: count of error bits, or a
+ * percentage. Matches the two forms of `ErrorRatioReportType`.
+ * Used as the request threshold and as the error returned on Pass.
+ * ITU-T Rec. X.737 (11/95)
+ * [§8.1.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.4.6,
+ * §7.4.8, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

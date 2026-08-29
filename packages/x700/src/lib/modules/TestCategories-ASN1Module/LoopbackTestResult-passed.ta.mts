@@ -24,6 +24,10 @@ import {
  * @summary LoopbackTestResult_passed
  * @description
  *
+ * Inner SEQUENCE of `LoopbackTestResult.passed`. Required
+ * on Pass: the returned sequence and the measured error. ITU-T
+ * Rec. X.737 (11/95) [§7.4.8](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,18 @@ export class LoopbackTestResult_passed {
     constructor(
         /**
          * @summary `loopbackDataReceived`.
+         * @description
+         *
+         * Data received from the loop. X.737 §7.4.8.
          * @public
          * @readonly
          */
         readonly loopbackDataReceived: TestPatternSequence,
         /**
          * @summary `loopbackErrorReceived`.
+         * @description
+         *
+         * Measured error (bit count or percent). X.737 §7.4.8.
          * @public
          * @readonly
          */

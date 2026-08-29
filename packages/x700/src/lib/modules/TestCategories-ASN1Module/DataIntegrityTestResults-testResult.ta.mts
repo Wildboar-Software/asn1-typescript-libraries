@@ -25,6 +25,11 @@ import {
  * @summary DataIntegrityTestResults_testResult
  * @description
  *
+ * Inner SEQUENCE of `DataIntegrityTestResults.testResult`.
+ * Pass includes establishment time and original data; Fail due to
+ * received data includes `corruptedData`. ITU-T Rec. X.737 (11/95)
+ * [§7.3.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §8.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +41,31 @@ export class DataIntegrityTestResults_testResult {
     constructor(
         /**
          * @summary `establishmentTime`.
+         * @description
+         *
+         * Time for the data exchange (Pass)
+         * or time until fail/termination (Fail). Optional. X.737 §7.3.8.
          * @public
          * @readonly
          */
         readonly establishmentTime: OPTIONAL<EstablishmentTime>,
         /**
          * @summary `originalData`.
+         * @description
+         *
+         * Data units used. Required in this
+         * alternative; returned if they were not supplied in the request
+         * and the test failed due to received data. X.737 §7.3.8, §8.1.5.
          * @public
          * @readonly
          */
         readonly originalData: DataUnits,
         /**
          * @summary `corruptedData`.
+         * @description
+         *
+         * Data actually received when the test
+         * failed because of received data. Optional. X.737 §7.3.8.
          * @public
          * @readonly
          */

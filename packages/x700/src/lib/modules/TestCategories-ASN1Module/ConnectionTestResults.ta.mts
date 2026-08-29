@@ -31,6 +31,18 @@ import {
  * @summary ConnectionTestResults
  * @description
  *
+ * Additional connection-test result information (X.745 carries
+ * `testOutcome` separately). Optional components of the result
+ * report: received test signal, detected error ratio, direction
+ * tested, and duration made. Final outcome: Pass if every exercise
+ * completed correctly; Fail if any exercise detected an error;
+ * Timed-out if duration exceeded the time-out period; Premature
+ * termination on procedural error or TERMINATION REQUEST;
+ * otherwise Inconclusive. Used as EVENT-INFO (controlled) and
+ * ACTION-REPLY (uncontrolled). ITU-T Rec. X.737 (11/95)
+ * [§7.1.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §8.1.1, A.5.1, A.5.3,
+ * A.6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,24 +59,40 @@ export class ConnectionTestResults {
     constructor(
         /**
          * @summary `receivedTestPattern`.
+         * @description
+         *
+         * Signal actually received. Optional
+         * in the result report. X.737 §7.1.8.
          * @public
          * @readonly
          */
         readonly receivedTestPattern?: OPTIONAL<TestPattern>,
         /**
          * @summary `errorRatio`.
+         * @description
+         *
+         * Error ratio measured through the test.
+         * Optional. Form may follow `ErrorRatioReportType`. X.737 §7.1.8.
          * @public
          * @readonly
          */
         readonly errorRatio?: OPTIONAL<REAL>,
         /**
          * @summary `testDirection`.
+         * @description
+         *
+         * Direction that was exercised on the
+         * MORT. Optional. X.737 §7.1.8.
          * @public
          * @readonly
          */
         readonly testDirection?: OPTIONAL<TestDirection>,
         /**
          * @summary `testDurationMade`.
+         * @description
+         *
+         * Duration of the test as performed.
+         * Optional. X.737 §7.1.8.
          * @public
          * @readonly
          */

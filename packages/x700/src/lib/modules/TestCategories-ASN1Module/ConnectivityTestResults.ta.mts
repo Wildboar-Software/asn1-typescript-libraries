@@ -30,6 +30,16 @@ import {
  * @summary ConnectivityTestResults
  * @description
  *
+ * Connectivity-test result (in addition to X.745
+ * `testOutcome`). Alternatives: `establishmentTime` — time from
+ * MORT request to AO confirmation (Pass) or until fail/termination
+ * (Fail); `timeoutPeriod` — confirmation not received before
+ * time-out (Timed-out); `testThreshold` — threshold used when that
+ * is the deciding factor; `specificError` — implementation-specific
+ * error. EVENT-INFO / ACTION-REPLY. ITU-T Rec. X.737 (11/95)
+ * [§7.2.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §8.1.2, A.5.4, A.5.5,
+ * A.6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

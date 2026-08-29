@@ -19,6 +19,13 @@ import {
  * @summary WaitingInterval
  * @description
  *
+ * Wait before transmitting the next protocol element,
+ * measured from when the last element was emitted. Used instead
+ * of `pDUReception` when the continuation condition is a fixed
+ * interval. Alias of `Timespec`. ITU-T Rec. X.737 (11/95)
+ * [§8.1.25](https://www.itu.int/rec/T-REC-X.737-199511-I), A.3
+ * `waitingIntervalPackage`, A.6.26.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

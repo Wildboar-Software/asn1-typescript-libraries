@@ -35,6 +35,14 @@ import {
  * @summary PDUSequence
  * @description
  *
+ * One protocol element to emit in a protocol integrity
+ * test, plus the continuation condition and optional wait. The
+ * MORT emits elements in sequence; the first at start time, later
+ * ones after `intervalTime` or after a correct response within
+ * time-out. Attribute of the protocol-integrity TO. ITU-T Rec.
+ * X.737 (11/95) [§8.1.14](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * §7.5.2, A.6.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,24 +59,38 @@ export class PDUSequence {
     constructor(
         /**
          * @summary `pDUType`.
+         * @description
+         *
+         * Type of PDU to transmit (OID). X.737 §7.5.6.
          * @public
          * @readonly
          */
         readonly pDUType: PDUType,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * Parameters of that PDU. X.737 A.7.
          * @public
          * @readonly
          */
         readonly parameter: Parameter,
         /**
          * @summary `contCond`.
+         * @description
+         *
+         * When to send the next element: fixed
+         * interval, or after matching `pDUReception`. X.737 §7.5.6.
          * @public
          * @readonly
          */
         readonly contCond: ContCond,
         /**
          * @summary `waitDuration`.
+         * @description
+         *
+         * Wait associated with this element.
+         * Optional. X.737 A.7.
          * @public
          * @readonly
          */

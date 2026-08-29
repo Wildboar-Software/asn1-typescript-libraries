@@ -24,6 +24,14 @@ import {
  * @summary ConnectivityTestInfo
  * @description
  *
+ * Initiation info for a connectivity test: verify that
+ * connectivity can be established between a MORT and an AO within
+ * a specified time (connection-oriented: establish a connection;
+ * connectionless: e.g. LLC XID exchange). Intrusive to MORT and
+ * AO. `timeoutPeriod` may be a `Timespec` or a MORT timer
+ * `AttributeId`. ACTION-INFO (A.5.6). ITU-T Rec. X.737 (11/95)
+ * [§7.2.1](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.2.2, §7.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +48,23 @@ export class ConnectivityTestInfo {
     constructor(
         /**
          * @summary `timeoutPeriod`.
+         * @description
+         *
+         * Time allowed for establishment, given
+         * directly (`timeUnits`) or as the id of a timer attribute on the
+         * MORT (`attributeId`). Required in the test request if not
+         * implicitly known by the MORT. X.737 §7.2.2, §7.2.6.
          * @public
          * @readonly
          */
         readonly timeoutPeriod: ConnectivityTestInfo_timeoutPeriod,
         /**
          * @summary `effectiveTime`.
+         * @description
+         *
+         * Present and required in A.7. The rec
+         * does not define this field beyond the ASN.1 (Annex F lists it
+         * with the test-info parameters).
          * @public
          * @readonly
          */

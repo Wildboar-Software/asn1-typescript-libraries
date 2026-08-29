@@ -25,6 +25,14 @@ import {
  * @summary TestConditions
  * @description
  *
+ * How resources are allocated to a test: whether to start
+ * if the MORT is busy, and whether the user of the MORT may abort
+ * the test. Conditional package on several TOs when present in
+ * `initAttributeList`. Production rewritten by Cor.1 (`first` /
+ * `second`). ITU-T Rec. X.737 (11/95)
+ * [§8.1.21](https://www.itu.int/rec/T-REC-X.737-199511-I),
+ * A.3, A.6.22; Cor.1 [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +47,20 @@ export class TestConditions {
     constructor(
         /**
          * @summary `first`.
+         * @description
+         *
+         * Busy handling: run anyway, reject, or wait.
+         * X.737 §8.1.21, A.7.
          * @public
          * @readonly
          */
         readonly first: TestConditions_first,
         /**
          * @summary `second`.
+         * @description
+         *
+         * Whether the MORT's user may override/abort
+         * the test. Optional. X.737 §8.1.21.
          * @public
          * @readonly
          */

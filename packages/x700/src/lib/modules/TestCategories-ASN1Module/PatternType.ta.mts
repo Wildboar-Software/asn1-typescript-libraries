@@ -19,6 +19,12 @@ import {
  * @summary PatternType
  * @description
  *
+ * Alias of `DataType`. Loopback results use it to tell the
+ * conductor the kind of data a result applies to (same value as
+ * the `DataUnits` used). ITU-T Rec. X.737 (11/95)
+ * [A.3](https://www.itu.int/rec/T-REC-X.737-199511-I)
+ * `loopbackResultsPkg`; A.7 (Cor.1 spelling `PatternType`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -29,6 +29,16 @@ import {
  * @summary DataIntegrityTestResults
  * @description
  *
+ * Data-integrity result (plus X.745 `testOutcome`).
+ * `testResult` — Pass: time for the exchange and original data
+ * (§8.1.5); Fail because received data was wrong: `corruptedData`
+ * (and `originalData` if units were not in the request).
+ * `timeoutPeriod` — Timed-out. `testThreshold` — fail because the
+ * threshold was crossed. EVENT-INFO / ACTION-REPLY. ITU-T Rec.
+ * X.737 (11/95) [§7.3.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §8.1.5,
+ * A.5.7, A.5.8,
+ * A.6.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

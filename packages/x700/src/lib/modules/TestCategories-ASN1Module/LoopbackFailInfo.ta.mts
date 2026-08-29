@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LoopbackFailInfo
  * @description
  *
+ * Why a loopback test failed: error-ratio threshold crossed,
+ * or loopback time-out exceeded (returned data not seen in time).
+ * Either causes Fail and implicit termination. Split out by Cor.1.
+ * ITU-T Rec. X.737 (11/95)
+ * [§7.4.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §3.9.5;
+ * Cor.1 (06/98) [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,6 +34,9 @@ export type LoopbackFailInfo = INTEGER;
 
 /**
  * @summary LoopbackFailInfo_errorRatioThresholdExceeded
+ * @description
+ *
+ * Error threshold crossed (0). Test outcome Fail. X.737 §7.4.8.
  * @constant
  * @type {number}
  */
@@ -34,6 +44,9 @@ export const LoopbackFailInfo_errorRatioThresholdExceeded: LoopbackFailInfo = 0;
 
 /**
  * @summary LoopbackFailInfo_errorRatioThresholdExceeded
+ * @description
+ *
+ * Error threshold crossed (0). Test outcome Fail. X.737 §7.4.8.
  * @constant
  * @type {number}
  */
@@ -41,6 +54,9 @@ export const errorRatioThresholdExceeded: LoopbackFailInfo = LoopbackFailInfo_er
 
 /**
  * @summary LoopbackFailInfo_loopbackTimeoutExceeded
+ * @description
+ *
+ * Loopback time-out exceeded (1). Test outcome Fail. X.737 §7.4.2.2, §7.4.8.
  * @constant
  * @type {number}
  */
@@ -48,6 +64,9 @@ export const LoopbackFailInfo_loopbackTimeoutExceeded: LoopbackFailInfo = 1; /* 
 
 /**
  * @summary LoopbackFailInfo_loopbackTimeoutExceeded
+ * @description
+ *
+ * Loopback time-out exceeded (1). Test outcome Fail. X.737 §7.4.2.2, §7.4.8.
  * @constant
  * @type {number}
  */

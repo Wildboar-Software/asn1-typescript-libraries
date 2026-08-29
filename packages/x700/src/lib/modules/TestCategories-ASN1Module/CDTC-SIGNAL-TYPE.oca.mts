@@ -14,6 +14,11 @@ import { type DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module';
  * @summary CDTC_SIGNAL_TYPE
  * @description
  *
+ * Information object class for resource-boundary signal
+ * types (`DMI-TYPE-IDENTIFIER`). Cor.2 replacement for ANY
+ * DEFINED BY on `signalType`/`signalValue`. ITU-T Rec. X.737
+ * Cor.2 (02/00) [https://www.itu.int/rec/T-REC-X.737-200002-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

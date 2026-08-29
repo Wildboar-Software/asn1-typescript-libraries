@@ -25,6 +25,17 @@ import {
  * @summary ResourceSelfTestResults
  * @description
  *
+ * Resource self-test results. `intermediateResponse` —
+ * status during the exercise (typically at phase ends).
+ * `nonIntermediate` — phases, iteration, time-out, and optional
+ * printable follow-up (`finalResponse`). X.745 `testOutcome` on
+ * the final report: Pass if all procedures succeeded; Fail if any
+ * detected an error; TIMEOUT; Premature termination; else
+ * Inconclusive. Cor.1 named the SEQUENCE `nonIntermediate`.
+ * ITU-T Rec. X.737 (11/95)
+ * [§7.7.8](https://www.itu.int/rec/T-REC-X.737-199511-I), §8.1.17,
+ * A.6.17; Cor.1 [https://www.itu.int/rec/T-REC-X.737-199806-I].
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

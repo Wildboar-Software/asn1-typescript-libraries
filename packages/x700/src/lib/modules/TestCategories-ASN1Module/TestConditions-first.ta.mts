@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TestConditions_first
  * @description
  *
+ * Inner INTEGER of `TestConditions.first`: behaviour when
+ * the MORT is busy. ITU-T Rec. X.737 (11/95)
+ * [§8.1.21](https://www.itu.int/rec/T-REC-X.737-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +30,9 @@ export type TestConditions_first = INTEGER;
 
 /**
  * @summary TestConditions_first_testIfBusy
+ * @description
+ *
+ * Initiate even if the MORT is busy (0). X.737 §8.1.21.
  * @constant
  * @type {number}
  */
@@ -33,6 +40,9 @@ export const TestConditions_first_testIfBusy: TestConditions_first = 0; /* LONG_
 
 /**
  * @summary TestConditions_first_testIfBusy
+ * @description
+ *
+ * Initiate even if the MORT is busy (0). X.737 §8.1.21.
  * @constant
  * @type {number}
  */
@@ -40,6 +50,9 @@ export const testIfBusy: TestConditions_first = TestConditions_first_testIfBusy;
 
 /**
  * @summary TestConditions_first_rejectIfBusy
+ * @description
+ *
+ * Reject the test if the MORT is busy (1). X.737 §8.1.21.
  * @constant
  * @type {number}
  */
@@ -47,6 +60,9 @@ export const TestConditions_first_rejectIfBusy: TestConditions_first = 1; /* LON
 
 /**
  * @summary TestConditions_first_rejectIfBusy
+ * @description
+ *
+ * Reject the test if the MORT is busy (1). X.737 §8.1.21.
  * @constant
  * @type {number}
  */
@@ -54,6 +70,9 @@ export const rejectIfBusy: TestConditions_first = TestConditions_first_rejectIfB
 
 /**
  * @summary TestConditions_first_waitIfBusy
+ * @description
+ *
+ * Wait if the MORT is busy (2). X.737 §8.1.21.
  * @constant
  * @type {number}
  */
@@ -61,6 +80,9 @@ export const TestConditions_first_waitIfBusy: TestConditions_first = 2; /* LONG_
 
 /**
  * @summary TestConditions_first_waitIfBusy
+ * @description
+ *
+ * Wait if the MORT is busy (2). X.737 §8.1.21.
  * @constant
  * @type {number}
  */

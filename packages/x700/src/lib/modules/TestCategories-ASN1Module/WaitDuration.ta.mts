@@ -19,6 +19,12 @@ import {
  * @summary WaitDuration
  * @description
  *
+ * Alias of `Timespec`. Wait associated with a resource-
+ * boundary event or a protocol-integrity PDU: for receive, time
+ * allowed until the signal; for send, delay after the previous
+ * event before inserting. ITU-T Rec. X.737 (11/95)
+ * [§8.1.20](https://www.itu.int/rec/T-REC-X.737-199511-I), §7.6.2.2, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
