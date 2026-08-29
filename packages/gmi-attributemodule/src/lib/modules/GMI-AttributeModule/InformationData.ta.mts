@@ -20,6 +20,15 @@ import {
  * @summary InformationData
  * @description
  *
+ * Optional payload of a `communicationsInformation`
+ * notification, and the corresponding attribute of
+ * `communicationsInformationRecord`. Present in the log
+ * record only if present in the event report. Registered
+ * as `{joint-iso-ccitt ms(9) smi(3) part5(5) attribute(7)
+ * informationData(4)}`. ITU-T Rec. X.723 (11/1993)
+ * [§9.9](https://www.itu.int/rec/T-REC-X.723-199311-I),
+ * §7.3, §12.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,23 @@ import {
  * @summary ApplicationProcessTitle
  * @description
  *
+ * Title of an `applicationProcess`: Directory name form,
+ * object-identifier name form, or unknown. GDMO MATCHES
+ * FOR EQUALITY. If the title is not known, the value is
+ * `notKnown` (`NULL`). Registered as
+ * `{joint-iso-ccitt ms(9) smi(3) part5(5) attribute(7)
+ * applicationProcessTitle(17)}`.
+ *
+ * `directory` is a sequence of RDNs. X.723 originally
+ * imported `RelativeDistinguishedName` from X.501 (1988);
+ * Cor.1 noted that syntax also in an informative annex of
+ * X.711 (1997). Cor.2 imports it from `CMIP-1`.
+ *
+ * ITU-T Rec. X.723 (11/1993)
+ * [§9.2](https://www.itu.int/rec/T-REC-X.723-199311-I),
+ * §7.1; Cor.1 (06/1998) clause 13; Cor.2 (02/2000)
+ * clause 13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,27 @@ import { InformationData, _decode_InformationData, _encode_InformationData } fro
  * @summary CommunicationsInformation
  * @description
  *
+ * Information syntax of the `communicationsInformation`
+ * notification. Reports events of normal operation that
+ * are worth logging but do not require manager action.
+ * Faults and abnormal conditions use X.733 event types
+ * instead. Mapped to attributes `informationType` and
+ * `informationData`. Logged as
+ * `communicationsInformationRecord` (X.721
+ * `eventLogRecord` subclass); the `informationData`
+ * package is present only if this notification carried
+ * `informationData`.
+ *
+ * Functional unit bit 0 of
+ * `{joint-iso-ccitt ms(9) smi(3) part5(5)
+ * functionalUnitPackage(1) informationEventReports(0)}`
+ * negotiates communication-information event reports.
+ * Registered as `{joint-iso-ccitt ms(9) smi(3) part5(5)
+ * notification(10) comsinfo(0)}`. ITU-T Rec. X.723
+ * (11/1993)
+ * [§12.1](https://www.itu.int/rec/T-REC-X.723-199311-I),
+ * §7.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +54,23 @@ class CommunicationsInformation {
     constructor (
         /**
          * @summary `informationType`.
+         * @description
+         *
+         * Kind of communications information. Required.
+         * GDMO MATCHES FOR EQUALITY. X.723 §9.10, §12.1.
+         *
          * @public
          * @readonly
          */
         readonly informationType: InformationType,
         /**
          * @summary `informationData`.
+         * @description
+         *
+         * Optional payload. Present in the corresponding
+         * log record iff present in the event report.
+         * X.723 §9.9, §7.3.
+         *
          * @public
          * @readonly
          */

@@ -18,28 +18,48 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Timer
  * @description
- * 
+ *
+ * Generic interval-timer attribute. Value is
+ * `mantissa * 10^exponent`. GDMO MATCHES FOR EQUALITY,
+ * ORDERING. Non-instantiable; derived timers shall
+ * specify the unit of time. May be set and read to the
+ * precision of this syntax; the precision of protocol
+ * events the timer controls is implementation-defined
+ * and stated in the MOCS.
+ * ITU-T Rec. X.723 (11/1993)
+ * [§9.20](https://www.itu.int/rec/T-REC-X.723-199311-I).
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * Timer ::= SEQUENCE {
  *   exponent  [1]  INTEGER(-62..63),
  *   mantissa  [2]  INTEGER(0..65535)
  * }
  * ```
- * 
+ *
  */
 export
 class Timer {
     constructor (
         /**
          * @summary `exponent`.
+         * @description
+         *
+         * Power of ten. Constrained to `-62..63`. Combined
+         * with `mantissa` as `mantissa * 10^exponent`.
+         *
          * @public
          * @readonly
          */
         readonly exponent: INTEGER,
         /**
          * @summary `mantissa`.
+         * @description
+         *
+         * Constrained to `0..65535`. Combined with
+         * `exponent` as `mantissa * 10^exponent`.
+         *
          * @public
          * @readonly
          */

@@ -20,6 +20,15 @@ import {
  * @summary ActionReply
  * @description
  *
+ * Confirmed-reply syntax of `activate`, `deactivate`, and
+ * `deactivateWhenNoUsers` (`WITH REPLY SYNTAX`). X.723
+ * does not specify which `ManagementExtension` values
+ * appear. Failure of those actions is a CMIP
+ * `processingFailure` error, not a value of this type.
+ * ITU-T Rec. X.723 (11/1993)
+ * [§11.1](https://www.itu.int/rec/T-REC-X.723-199311-I),
+ * §11.2, §11.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

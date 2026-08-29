@@ -18,9 +18,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Sap2Address
  * @description
- * 
+ *
+ * Set of addresses of a `sap2` (N)-SAP whose address is
+ * independent of the underlying layer. GDMO MATCHES FOR
+ * EQUALITY, SET-COMPARISON, SET-INTERSECTION. Registered
+ * as `{joint-iso-ccitt ms(9) smi(3) part5(5) attribute(7)
+ * sap2Address(9)}`. ITU-T Rec. X.723 (11/1993)
+ * [§9.15](https://www.itu.int/rec/T-REC-X.723-199311-I),
+ * §7.7.
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * Sap2Address  ::=  SET OF OCTET STRING
  * ```

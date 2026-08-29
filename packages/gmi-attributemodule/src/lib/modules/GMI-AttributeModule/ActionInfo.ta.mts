@@ -20,6 +20,38 @@ import {
  * @summary ActionInfo
  * @description
  *
+ * Information syntax of the confirmed `activate`,
+ * `deactivate`, and `deactivateWhenNoUsers` actions
+ * (`WITH INFORMATION SYNTAX`). X.723 does not specify
+ * which `ManagementExtension` values appear.
+ *
+ * `activate` initializes the resource for normal use.
+ * Supporting objects cannot always be created enabled.
+ * Used when procedural status contains Initialization
+ * Required and operational state is Disabled. Completes
+ * successfully if the resource is or can be enabled;
+ * otherwise CMIP `processingFailure`. During the
+ * procedure, procedural status is Initializing. On
+ * success: Initializing removed, operational state
+ * Enabled. On failure: Initialization Required restored,
+ * operational state Disabled. Operational state and
+ * procedural status need not be visible to management.
+ *
+ * `deactivate` terminates operation immediately.
+ * Succeeds if the resource is or can be disabled;
+ * otherwise `processingFailure`. During termination:
+ * procedural status Terminating, operational state
+ * Disabled. Terminating is cleared when done.
+ *
+ * `deactivateWhenNoUsers` waits until the user count is
+ * zero, then runs the same termination procedure.
+ *
+ * Registered as `{joint-iso-ccitt ms(9) smi(3) part5(5)
+ * action(9) activate(0)}`, `deactivate(1)`, and
+ * `deactivateWhenNoUsers(2)`. ITU-T Rec. X.723 (11/1993)
+ * [§11.1](https://www.itu.int/rec/T-REC-X.723-199311-I),
+ * §11.2, §11.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

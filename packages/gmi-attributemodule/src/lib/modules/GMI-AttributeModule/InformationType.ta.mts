@@ -18,9 +18,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary InformationType
  * @description
- * 
+ *
+ * Identifies the kind of information in a
+ * `communicationsInformation` notification or
+ * `communicationsInformationRecord`. GDMO MATCHES FOR
+ * EQUALITY. Registered as `{joint-iso-ccitt ms(9) smi(3)
+ * part5(5) attribute(7) informationType(5)}`. ITU-T Rec.
+ * X.723 (11/1993)
+ * [§9.10](https://www.itu.int/rec/T-REC-X.723-199311-I),
+ * §7.3, §12.1.
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * InformationType  ::=  OBJECT IDENTIFIER
  * ```
