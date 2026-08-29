@@ -19,6 +19,14 @@ import {
  * @summary TriggerId
  * @description
  *
+ * Identifies the trigger that started script execution (action,
+ * scheduler, notification, or local action). Carried in the
+ * trigger, suspend, resume, and terminate actions and in
+ * result notifications. Terminate action information is this
+ * type alone. ITU-T Rec. X.753 (10/97)
+ * [§3.6.8](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §7.2, §8.3, §9.4, A.4, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

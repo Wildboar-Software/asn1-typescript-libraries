@@ -19,6 +19,19 @@ import {
  * @summary ScriptList
  * @description
  *
+ * One script or a sequential/parallel group of script ids.
+ * Element type of `availableScriptList`.
+ *
+ * - `scriptId`: a single launch script.
+ * - `sequentialScriptList`: ids in execution order (next after
+ *   the previous completes).
+ * - `parallelScriptList`: ids that may run in any order /
+ *   concurrently.
+ *
+ * ITU-T Rec. X.753 (10/97)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.1.6.3.1, A.4, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

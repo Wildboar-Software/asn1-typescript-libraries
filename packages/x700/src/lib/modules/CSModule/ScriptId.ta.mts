@@ -19,6 +19,16 @@ import {
  * @summary ScriptId
  * @description
  *
+ * Names a launch script: the instructions a command sequencer
+ * performs. Specialized classes (`generalStringScript`,
+ * `cmisScript`, …) derive from `launchScript`. Existence is
+ * independent of launch-pad or thread references; several of
+ * either may share one script. Locked administrative state:
+ * other launch pads may not start it (in-flight executions
+ * continue). ITU-T Rec. X.753 (10/97)
+ * [§3.6.2](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §7.1, §8.1.4, A.4, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

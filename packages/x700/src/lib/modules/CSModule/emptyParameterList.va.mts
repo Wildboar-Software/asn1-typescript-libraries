@@ -22,6 +22,12 @@ import {
  * @summary emptyParameterList
  * @description
  *
+ * Empty sequential execution-parameter list. Same encoding as
+ * `emptyExecutionParameterList`. A.8 defines both; GDMO uses
+ * only `emptyExecutionParameterList` as the DEFAULT VALUE of
+ * `defaultExecutionParameterList`. ITU-T Rec. X.753 (10/97)
+ * [A.8](https://www.itu.int/rec/T-REC-X.753-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

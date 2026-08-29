@@ -19,6 +19,19 @@ import {
  * @summary ExecutionParameterList
  * @description
  *
+ * Scripts and inputs a trigger (or a launch pad default)
+ * supplies. Spawn vs wait:
+ *
+ * - `executionParameter`: one thread for one script.
+ * - `sequentialExecutionList`: one thread at a time, in order;
+ *   the next starts only after the previous completes.
+ * - `parallelExecutionList`: threads for the set run together.
+ *
+ * If the trigger omits this and the launch pad has no default,
+ * `noScriptError`. ITU-T Rec. X.753 (10/97)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.1.6.3.2, §8.3.4, A.2, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

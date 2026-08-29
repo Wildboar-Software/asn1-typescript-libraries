@@ -19,6 +19,13 @@ import {
  * @summary ModificationList
  * @description
  *
+ * Attribute modifications for a CMIS SET script
+ * (`setCmisScript`). Mirrors the CMIP SET modification list
+ * (X.711). `attributeValue` is absent for `setToDefault`. ITU-T
+ * Rec. X.753 (10/97)
+ * [D.1.1](https://www.itu.int/rec/T-REC-X.753-199710-I), D.9,
+ * A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

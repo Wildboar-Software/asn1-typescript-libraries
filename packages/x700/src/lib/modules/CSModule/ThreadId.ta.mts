@@ -19,6 +19,17 @@ import {
  * @summary ThreadId
  * @description
  *
+ * Names a thread: one script instance in execution. Subclass of
+ * `basicSpawnerClass` and `scriptReferencer`. A launch pad
+ * (or another thread, when a script invokes another) spawns it
+ * and contains it. Completes only after all sub-threads succeed
+ * or report an error; then it is deleted. Async launch pads
+ * spawn `suspendableThread` (suspend/resume actions). Threads
+ * of a synchronous launch pad are not individually
+ * suspendable. ITU-T Rec. X.753 (10/97)
+ * [§3.6.3](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §3.6.4, §7.1–§7.2, §8.1.2–§8.1.3, A.4, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
