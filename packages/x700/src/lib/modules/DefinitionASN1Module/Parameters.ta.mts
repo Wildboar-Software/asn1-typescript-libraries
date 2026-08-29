@@ -20,6 +20,11 @@ import {
  * @summary Parameters
  * @description
  *
+ * GDMO `PARAMETERS` construct: parameter templates associated with an
+ * attribute, action, notification, or similar. Syntax of `parameters`.
+ * ITU-T Rec. X.750 (10/96)
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

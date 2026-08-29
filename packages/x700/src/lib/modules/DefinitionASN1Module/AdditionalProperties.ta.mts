@@ -19,6 +19,11 @@ import {
  * @summary AdditionalProperties
  * @description
  *
+ * Optional extra properties on a package `ATTRIBUTES` propertylist,
+ * carried as X.721 `ManagementExtension`s. X.750 A.3.5 defines the type
+ * but does not list particular extensions. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

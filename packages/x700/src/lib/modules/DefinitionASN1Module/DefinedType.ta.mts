@@ -21,6 +21,11 @@ import {
  * @summary DefinedType
  * @description
  *
+ * Reference to an ASN.1 type: optional module identifier and type
+ * reference. Used for `WITH SYNTAX` / `WITH ATTRIBUTE SYNTAX`,
+ * `PERMITTED VALUES`, and `REQUIRED VALUES`. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +40,18 @@ export class DefinedType {
     constructor(
         /**
          * @summary `module_`.
+         * @description
+         *
+         * ASN.1 module of the type, if the reference is not unique in context.
          * @public
          * @readonly
          */
         readonly module_: OPTIONAL<Identifier>,
         /**
          * @summary `reference`.
+         * @description
+         *
+         * ASN.1 type identifier.
          * @public
          * @readonly
          */

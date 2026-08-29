@@ -26,6 +26,11 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary additionalInformation
  * @description
  *
+ * Optional creation date and comment on a Registered information entry.
+ * ID `{mkmDirectoryAttributeType 7}`. ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I), Table 17,
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

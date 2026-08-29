@@ -16,6 +16,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DeleteSpecification_deleteModifier
  * @description
  *
+ * GDMO delete-modifiers (X.722 §8.6.3.6):
+ * `onlyIfNoContainedObjects(0)` — Delete fails if contained objects
+ * exist; they must be deleted first.
+ * `deletesContainedObjects(1)` — a successful Delete also deletes
+ * contained objects, unless a contained object has
+ * `ONLY-IF-NO-CONTAINED-OBJECTS` and itself contains objects.
+ * ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +71,10 @@ export const DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_
 
 /**
  * @summary DeleteSpecification_deleteModifier_onlyIfNoContainedObjects
+ * @description
+ *
+ * ONLY-IF-NO-CONTAINED-OBJECTS: Delete fails while contained objects exist.
+ * X.722 §8.6.3.6.
  * @constant
  * @type {number}
  */
@@ -71,6 +84,10 @@ export const DeleteSpecification_deleteModifier_onlyIfNoContainedObjects: Delete
 
 /**
  * @summary onlyIfNoContainedObjects
+ * @description
+ *
+ * ONLY-IF-NO-CONTAINED-OBJECTS. Same as
+ * `DeleteSpecification_deleteModifier_onlyIfNoContainedObjects`.
  * @constant
  * @type {number}
  */
@@ -80,6 +97,10 @@ export const onlyIfNoContainedObjects: DeleteSpecification_deleteModifier =
 
 /**
  * @summary DeleteSpecification_deleteModifier_deletesContainedObjects
+ * @description
+ *
+ * DELETES-CONTAINED-OBJECTS: successful Delete also deletes contained objects,
+ * subject to nested ONLY-IF-NO-CONTAINED-OBJECTS. X.722 §8.6.3.6.
  * @constant
  * @type {number}
  */
@@ -89,6 +110,10 @@ export const DeleteSpecification_deleteModifier_deletesContainedObjects: DeleteS
 
 /**
  * @summary deletesContainedObjects
+ * @description
+ *
+ * DELETES-CONTAINED-OBJECTS. Same as
+ * `DeleteSpecification_deleteModifier_deletesContainedObjects`.
  * @constant
  * @type {number}
  */

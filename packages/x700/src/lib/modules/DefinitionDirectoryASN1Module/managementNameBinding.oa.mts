@@ -29,6 +29,15 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary managementNameBinding
  * @description
  *
+ * Directory auxiliary for a GDMO name-binding template. MUST CONTAIN
+ * `subordinateObjectClass`, `namedBySuperiorObjectClass`,
+ * `withAttribute`, `behaviour`, `create`, `delete`, and `registeredAs`.
+ * `create`/`delete` are null when those GDMO constructs are absent. ID
+ * `{mkmDirectoryObjectClass 9}`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.8](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

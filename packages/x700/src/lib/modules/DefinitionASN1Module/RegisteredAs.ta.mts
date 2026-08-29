@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RegisteredAs
  * @description
  *
+ * Registration object identifier of the represented template (always
+ * assigned). Syntax of `registeredAs` on classes, name bindings,
+ * attribute groups, actions, and notifications. ITU-T Rec. X.750
+ * (10/96) [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

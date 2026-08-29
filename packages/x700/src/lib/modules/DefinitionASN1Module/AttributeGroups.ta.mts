@@ -19,6 +19,13 @@ import {
  * @summary AttributeGroups
  * @description
  *
+ * GDMO package `ATTRIBUTE GROUPS` construct: attribute groups of a
+ * package, with optional extra member attributes for extensible groups.
+ * Syntax of `attributeGroups`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.10](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722 (01/92)
+ * [§8.4.3.3](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

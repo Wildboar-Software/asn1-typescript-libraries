@@ -25,6 +25,13 @@ import {
  * @summary Context_keyword
  * @description
  *
+ * External parameter context: ASN.1 type of a management PDU and the
+ * identifier of a field in that PDU (for example a named field of CMIS
+ * event information). ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ * GDMO: X.722 (01/92)
+ * [§8.5.3.1](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +43,18 @@ export class Context_keyword {
     constructor(
         /**
          * @summary `type_reference`.
+         * @description
+         *
+         * ASN.1 type of the management PDU that defines the context.
          * @public
          * @readonly
          */
         readonly type_reference: DefinedType,
         /**
          * @summary `field`.
+         * @description
+         *
+         * Identifier of the PDU field to which the parameter applies.
          * @public
          * @readonly
          */

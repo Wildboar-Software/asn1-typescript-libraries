@@ -26,6 +26,18 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary registeredInformation
  * @description
  *
+ * Structural Directory class for an information object that has an
+ * object identifier (X.680 OID tree). `commonName` is the last OID
+ * arc and is the RDN; the DN of the arcs is the OID (a DIT prefix may
+ * be added — Annex H). MAY CONTAIN `nameForm` (symbolic arc name),
+ * `informationStatus`, and `additionalInformation`. Auxiliary classes
+ * from `registeredManagementInformationCR` add template-specific
+ * attributes. ID `{mkmDirectoryObjectClass 3}`. ITU-T Rec. X.750
+ * (10/96)
+ * [§7.2.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

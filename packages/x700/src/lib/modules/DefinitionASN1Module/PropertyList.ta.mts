@@ -44,6 +44,16 @@ import {
  * @summary PropertyList
  * @description
  *
+ * GDMO package-attribute propertylist: operations allowed on the
+ * attribute and default/initial/permitted/required values. Encodes
+ * `REPLACE-WITH-DEFAULT`, `DEFAULT VALUE`, `INITIAL VALUE`,
+ * `PERMITTED VALUES`, `REQUIRED VALUES`, `GET`/`REPLACE`/`GET-REPLACE`,
+ * `ADD`/`REMOVE`/`ADD-REMOVE`, and `SET-BY-CREATE` (X.722 Amd.1).
+ * ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722 (01/92)
+ * [§8.4.3.2](https://www.itu.int/rec/T-REC-X.722-199201-I); Amd.1 [item
+ * 6](https://www.itu.int/rec/T-REC-X.722-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -67,54 +77,90 @@ export class PropertyList {
     constructor(
         /**
          * @summary `replaceWithDefault`.
+         * @description
+         *
+         * `TRUE` if REPLACE-WITH-DEFAULT is present (default value may be set
+         * by Replace-with-default). Default `FALSE`.
          * @public
          * @readonly
          */
         readonly replaceWithDefault?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `defaultValue`.
+         * @description
+         *
+         * DEFAULT VALUE: value used by Replace-with-default or when the package
+         * is instantiated. If REPLACE-WITH-DEFAULT is present and this is
+         * omitted, the default is local to the managed system.
          * @public
          * @readonly
          */
         readonly defaultValue?: OPTIONAL<ValueSpecifier>,
         /**
          * @summary `initialValue`.
+         * @description
+         *
+         * INITIAL VALUE: mandatory value at Create.
          * @public
          * @readonly
          */
         readonly initialValue?: OPTIONAL<ValueSpecifier>,
         /**
          * @summary `permittedValues`.
+         * @description
+         *
+         * PERMITTED VALUES: ASN.1 subtype restricting the attribute syntax.
          * @public
          * @readonly
          */
         readonly permittedValues?: OPTIONAL<DefinedType>,
         /**
          * @summary `requiredValues`.
+         * @description
+         *
+         * REQUIRED VALUES: subtype the implementation shall be capable of
+         * taking (conformance value set).
          * @public
          * @readonly
          */
         readonly requiredValues?: OPTIONAL<DefinedType>,
         /**
          * @summary `getReplace`.
+         * @description
+         *
+         * GET, REPLACE, or GET-REPLACE. Omitted if none of those properties is
+         * present.
          * @public
          * @readonly
          */
         readonly getReplace?: OPTIONAL<PropertyList_getReplace>,
         /**
          * @summary `addRemove`.
+         * @description
+         *
+         * ADD, REMOVE, or ADD-REMOVE. Omitted if none of those properties is
+         * present.
          * @public
          * @readonly
          */
         readonly addRemove?: OPTIONAL<PropertyList_addRemove>,
         /**
          * @summary `setByCreate`.
+         * @description
+         *
+         * `TRUE` if SET-BY-CREATE is present. Redundant if REPLACE or
+         * ADD/REMOVE is already present; even if `FALSE`, Create may still
+         * succeed in setting the value. Default `FALSE`. X.722 Amd.1 item 6.
          * @public
          * @readonly
          */
         readonly setByCreate?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `additionalProperties`.
+         * @description
+         *
+         * Further propertylist extensions as `ManagementExtension`s. X.750 does
+         * not enumerate them.
          * @public
          * @readonly
          */

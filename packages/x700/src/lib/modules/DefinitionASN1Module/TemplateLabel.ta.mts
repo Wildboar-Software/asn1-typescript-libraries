@@ -26,6 +26,12 @@ import {
  * @summary TemplateLabel
  * @description
  *
+ * Qualified template reference: local label plus optional document
+ * identity (graphic name or document OID), aligned with the GDMO
+ * document identifier. Used throughout definition knowledge to name
+ * other templates. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +48,19 @@ export class TemplateLabel {
     constructor(
         /**
          * @summary `localName`.
+         * @description
+         *
+         * Template label within the document (GDMO label).
          * @public
          * @readonly
          */
         readonly localName: TemplateName,
         /**
          * @summary `documentId`.
+         * @description
+         *
+         * Document that defines the template, if it is not the current
+         * document. Graphic name or document OID.
          * @public
          * @readonly
          */

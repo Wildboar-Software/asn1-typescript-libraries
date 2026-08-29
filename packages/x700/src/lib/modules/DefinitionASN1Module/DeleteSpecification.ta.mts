@@ -26,6 +26,11 @@ import {
  * @summary DeleteSpecification
  * @description
  *
+ * DELETE element of a name binding: optional delete-modifier and
+ * delete-specific error parameters. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722 (01/92)
+ * [§8.6.3.6](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +47,19 @@ export class DeleteSpecification {
     constructor(
         /**
          * @summary `deleteModifier`.
+         * @description
+         *
+         * ONLY-IF-NO-CONTAINED-OBJECTS or DELETES-CONTAINED-OBJECTS. Omitted if
+         * the DELETE construct has no modifier.
          * @public
          * @readonly
          */
         readonly deleteModifier?: OPTIONAL<DeleteSpecification_deleteModifier>,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * Name-binding-specific Delete error parameters (processing failures).
          * @public
          * @readonly
          */

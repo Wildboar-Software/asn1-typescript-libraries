@@ -24,6 +24,15 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary managementDocument
  * @description
  *
+ * Directory auxiliary for a document that contains GDMO (and, after
+ * Amd.1, GRM) or ASN.1 specifications. MUST CONTAIN `documentName` and
+ * `documentObjectIdentifier`; MAY CONTAIN `specification` (textual
+ * GDMO/ASN.1). Included in a `registeredInformation` entry. ID
+ * `{mkmDirectoryObjectClass 4}`. ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I). Amd.1 [item
+ * 11](https://www.itu.int/rec/T-REC-X.750-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

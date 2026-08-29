@@ -23,6 +23,13 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary managementBehaviour
  * @description
  *
+ * Directory auxiliary for a GDMO behaviour template. MUST CONTAIN
+ * `definedAs` (the `DEFINED AS` text). ID
+ * `{mkmDirectoryObjectClass 12}`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.5](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

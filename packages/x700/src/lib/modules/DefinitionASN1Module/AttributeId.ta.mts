@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AttributeId
  * @description
  *
+ * Object identifier of a managed-object attribute. Argument of
+ * `getTextualRepresentation`: names the attribute whose value is
+ * returned as a sequence of line images. ITU-T Rec. X.750 (10/96)
+ * [§8.3.1.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.4](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

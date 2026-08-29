@@ -26,6 +26,16 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary managementObjectClass
  * @description
  *
+ * Directory auxiliary for a GDMO managed object class template (MKM
+ * `managedObjectClassTemplate`). MUST CONTAIN `derivedFrom`
+ * (immediate superclasses), `characterizedBy` (mandatory packages),
+ * `conditionalPackages`, and `registeredAs`. Included in a
+ * `registeredInformation` entry. ID `{mkmDirectoryObjectClass 6}`.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.7](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * Table 15, [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

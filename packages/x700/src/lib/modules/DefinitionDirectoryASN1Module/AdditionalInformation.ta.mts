@@ -18,6 +18,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AdditionalInformation
  * @description
  *
+ * Optional commentary on a Registered information Directory entry:
+ * creation date and a comment. MAY CONTAIN of `registeredInformation`.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +38,18 @@ export class AdditionalInformation {
     constructor(
         /**
          * @summary `creationDate`.
+         * @description
+         *
+         * When the definition information was created. Optional.
          * @public
          * @readonly
          */
         readonly creationDate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `comment`.
+         * @description
+         *
+         * Free-text comment on the definition. Optional.
          * @public
          * @readonly
          */

@@ -25,6 +25,15 @@ import {
  * @summary ValueSpecifier
  * @description
  *
+ * GDMO `value-specifier`: `valueReference` is an ASN.1 value;
+ * `derivationRule` is a behaviour template that says how the value is
+ * determined. Used for `DEFAULT VALUE` and `INITIAL VALUE`. ITU-T Rec.
+ * X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO:
+ * X.722 (01/92)
+ * [§8.4.2](https://www.itu.int/rec/T-REC-X.722-199201-I),
+ * [§8.4.3.2](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

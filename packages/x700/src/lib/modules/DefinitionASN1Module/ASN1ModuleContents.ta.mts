@@ -20,6 +20,13 @@ import {
  * @summary ASN1ModuleContents
  * @description
  *
+ * Textual contents of an ASN.1 module. Syntax of `asn1ModuleContents` on
+ * an ASN.1-module managed object; retrievable with
+ * `getTextualRepresentation`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

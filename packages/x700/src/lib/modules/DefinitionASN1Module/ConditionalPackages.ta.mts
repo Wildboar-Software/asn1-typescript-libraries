@@ -20,6 +20,13 @@ import {
  * @summary ConditionalPackages
  * @description
  *
+ * GDMO `CONDITIONAL PACKAGES` construct: conditional packages of a
+ * managed object class and the `PRESENT IF` condition text of each.
+ * Syntax of `conditionalPackages`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.7](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

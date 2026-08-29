@@ -19,6 +19,14 @@ import {
  * @summary WithAttribute
  * @description
  *
+ * GDMO name-binding `WITH ATTRIBUTE`: the naming attribute used to
+ * build the subordinate RDN. Syntax of `withAttribute`.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.8](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722
+ * (01/92)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
