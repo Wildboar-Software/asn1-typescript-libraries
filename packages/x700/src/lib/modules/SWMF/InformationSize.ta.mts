@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InformationSize
  * @description
  *
+ * Syntax of `fileSize`: size of the softwareUnit, as a bit count
+ * or a byte count. ITU-T Rec. X.744 (10/96)
+ * [§8.2.8](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

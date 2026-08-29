@@ -40,6 +40,16 @@ import {
  * @summary DeliverInfo
  * @description
  *
+ * Confirmed `deliver` M-ACTION information, sent to a
+ * softwareDistributor. Names the software to copy and may name the
+ * target system and transfer mechanism. Success copies the software
+ * to the target and may create softwareUnit objects there
+ * (delivered state). If `targetSystem` is omitted, the agent uses
+ * local means. Confirmed mode. `{… action(9) deliver(1)}`. ITU-T
+ * Rec. X.744 (10/96)
+ * [§8.3.2](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §7.1.3, §7.5, §9.3 Table 7, A.5.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,30 +68,52 @@ export class DeliverInfo {
     constructor(
         /**
          * @summary `deliverId`.
+         * @description
+         *
+         * Optional correlation id matching this action to a later
+         * `deliverResultNotification`. User in Table 7. ITU-T Rec.
+         * X.744 (10/96) §8.3.2, §9.3 Table 7, A.8.
          * @public
          * @readonly
          */
         readonly deliverId: OPTIONAL<DeliverId>,
         /**
          * @summary `targetSoftware`.
+         * @description
+         *
+         * Software units to distribute (mandatory). Several may be
+         * delivered together. ITU-T Rec. X.744 (10/96) §8.3.2,
+         * §9.3 Table 7.
          * @public
          * @readonly
          */
         readonly targetSoftware: DistributedSoftware[],
         /**
          * @summary `targetSystem`.
+         * @description
+         *
+         * Destination managed system. Absent: agent chooses by local
+         * means. ITU-T Rec. X.744 (10/96) A.5.1, §9.3 Table 7.
          * @public
          * @readonly
          */
         readonly targetSystem?: OPTIONAL<Destination>,
         /**
          * @summary `transferInfo`.
+         * @description
+         *
+         * Transfer protocol and protocol-specific parameters.
+         * User in Table 7. ITU-T Rec. X.744 (10/96) §8.1.4, §9.3.
          * @public
          * @readonly
          */
         readonly transferInfo?: OPTIONAL<TransferInfo>,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Management extensions. User in Table 7. ITU-T Rec. X.744
+         * (10/96) §9.3 Table 7.
          * @public
          * @readonly
          */

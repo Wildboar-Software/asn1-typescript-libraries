@@ -20,6 +20,13 @@ import {
  * @summary RevertInfo_Item
  * @description
  *
+ * One patch named in `RevertInfo`. `patchId` is a system-specific
+ * GraphicString; `patchPointer` is an object instance of
+ * executableSoftware (A.5.4) or softwareUnit (§8.3.6). ITU-T Rec.
+ * X.744 (10/96)
+ * [§8.3.6](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.5.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

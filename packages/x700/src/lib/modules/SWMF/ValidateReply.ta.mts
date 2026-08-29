@@ -20,6 +20,20 @@ import {
  * @summary ValidateReply
  * @description
  *
+ * `validate` action reply (and truncated-mode payload of
+ * `terminateValidation`). Present in a positive validate response.
+ *
+ * - `validationTerminated` — aborted by `terminateValidation`
+ *   before normal completion
+ * - `passValidation` / `passValidationWithResult` — integrity
+ *   check succeeded (optional extensions)
+ * - `failValidation` / `failValidationWithResult` — failed
+ *   (optional extensions)
+ *
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.3.8](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.5.6, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

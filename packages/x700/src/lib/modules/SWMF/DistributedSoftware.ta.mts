@@ -20,6 +20,13 @@ import {
  * @summary DistributedSoftware
  * @description
  *
+ * One software item named in `deliver` / `install` action
+ * information. `distibutedSoftwareId` (ASN.1 spelling) is a
+ * GraphicString identifier; `distributedSoftwarePointer` names a
+ * managed-object instance. ITU-T Rec. X.744 (10/96)
+ * [A.8](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §8.3.2, §8.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

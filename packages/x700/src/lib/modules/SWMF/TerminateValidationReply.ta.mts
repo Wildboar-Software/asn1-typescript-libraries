@@ -20,6 +20,17 @@ import {
  * @summary TerminateValidationReply
  * @description
  *
+ * `terminateValidation` action reply.
+ *
+ * - `noOutStandingValidation` — no active validation to abort
+ * - `validationCancelled` — cancel-mode completed
+ * - `resultOfPartialValidation` — truncate-mode; payload is a
+ *   `ValidateReply` for the completed portion
+ *
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.3.7](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.5.5, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

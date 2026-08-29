@@ -16,6 +16,16 @@ import {
  * @summary softwareManagement
  * @description
  *
+ * Root OID for the Software management function (ISO/IEC 10164-18).
+ * Sub-arcs register SWMF packages (`package(4)`), parameters
+ * (`parameter(5)`), name bindings (`nameBinding(6)`), attributes
+ * (`attribute(7)`), actions (`action(9)`), and notifications
+ * (`notification(10)`). ASN.1 modules hang off
+ * `{… part18(18) asn1Module(2)}` (`0` = SWMF, `1` =
+ * BackupRestoreASN1Module). ITU-T Rec. X.744 (10/96)
+ * [A.8](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.1–A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

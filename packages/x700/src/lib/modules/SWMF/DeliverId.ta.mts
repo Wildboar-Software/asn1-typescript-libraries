@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DeliverId
  * @description
  *
+ * Optional identifier correlating a `deliver` action with the
+ * subsequent `deliverResultNotification` (and the action reply).
+ * `globalValue` is an OID; `localValue` is an INTEGER assigned in
+ * the managed system. ITU-T Rec. X.744 (10/96)
+ * [A.8](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §9.3 Table 7, §9.12 Table 16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,12 @@ import {
  * @summary RevertInfo
  * @description
  *
+ * Sequence of patches to revert. Each item is a system-specific
+ * GraphicString or an object instance (A.5.4: executableSoftware;
+ * §8.3.6: softwareUnit). ITU-T Rec. X.744 (10/96)
+ * [§8.3.6](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.5.4, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

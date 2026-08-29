@@ -15,6 +15,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TransferInfo
  * @description
  *
+ * Optional deliver-action field selecting how software is copied to
+ * the target. `transferProtocol` is an `&id` from `TransferInfoSet`;
+ * `protocolSpecificInfo` is the matching `&Value`. Cor.2 replaced
+ * `TransferProtocol` plus `ANY DEFINED BY` with this
+ * `SWMF-TRANSFER` form. ITU-T Rec. X.744 (10/96)
+ * [§8.1.4](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §9.3 Table 7; Cor.2 (02/2000)
+ * [item 5](https://www.itu.int/rec/T-REC-X.744-200002-I_Cor2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +39,22 @@ export class TransferInfo {
     constructor(
         /**
          * @summary `transferProtocol`.
+         * @description
+         *
+         * OID of the chosen transfer mechanism (`SWMF-TRANSFER.&id`
+         * constrained by `TransferInfoSet`). ITU-T Rec. X.744 Cor.2
+         * (02/2000) item 5.
          * @public
          * @readonly
          */
         readonly transferProtocol: OBJECT_IDENTIFIER,
         /**
          * @summary `protocolSpecificInfo`.
+         * @description
+         *
+         * Protocol-specific parameters (`SWMF-TRANSFER.&Value` for
+         * `transferProtocol`). ITU-T Rec. X.744 Cor.2 (02/2000)
+         * item 5.
          * @public
          * @readonly
          */

@@ -24,6 +24,17 @@ import {
  * @summary InstallInfo
  * @description
  *
+ * Confirmed `install` M-ACTION information, directed at a
+ * softwareUnit (or subclass). Installation customizes delivered
+ * software for use (configuration/dependency relationships; may
+ * copy current resources and apply changes). Transitions the unit
+ * from delivered to installed. May update `appliedPatches`. Invalid
+ * state yields `operationStateMismatch`. No action-reply syntax;
+ * errors only if not positive. `{… action(9) install(3)}`. ITU-T
+ * Rec. X.744 (10/96)
+ * [§8.3.4](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * §7.3.1, §9.5 Table 9, A.5.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +49,20 @@ export class InstallInfo {
     constructor(
         /**
          * @summary `targetSoftware`.
+         * @description
+         *
+         * Software units to install (mandatory). ITU-T Rec. X.744
+         * (10/96) §9.5 Table 9.
          * @public
          * @readonly
          */
         readonly targetSoftware: DistributedSoftware[],
         /**
          * @summary `installInfo`.
+         * @description
+         *
+         * Installation-specific extensions (mandatory in Table 9).
+         * ITU-T Rec. X.744 (10/96) §9.5 Table 9.
          * @public
          * @readonly
          */

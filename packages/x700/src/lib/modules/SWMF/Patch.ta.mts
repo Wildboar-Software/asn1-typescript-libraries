@@ -20,6 +20,15 @@ import {
  * @summary Patch
  * @description
  *
+ * Identifier of a patch applied to a softwareUnit. Patches are
+ * updates to executable programs. `patchId` is a system-specific
+ * GraphicString (patch not represented as an object);
+ * `patchPointer` names a softwareUnit instance. Used by
+ * `appliedPatches` (read-only; updated when a patch is applied).
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.1, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

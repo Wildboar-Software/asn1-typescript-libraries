@@ -27,6 +27,18 @@ import {
  * @summary LastBackupDestination
  * @description
  *
+ * Syntax of `lastBackupDestination`: where the managed object's
+ * information was last backed up, if at all.
+ *
+ * - `notBackedUp` — no backup yet
+ * - `localObject` — object of the same class in the managed system
+ * - `managingSystem` — AE-title of the manager (in-line)
+ * - `remoteSystem` — off-line remote system
+ *
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.2.16](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FileLocation
  * @description
  *
+ * Syntax of `fileLocation`: full logical or physical address(es)
+ * of the file(s) represented by a softwareUnit. Address format is
+ * implementation-dependent (managed-system file-addressing
+ * conventions). Empty SET means the file is not installed (A.8 /
+ * A.3.7). ITU-T Rec. X.744 (10/96)
+ * [§8.2.7](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -29,6 +29,22 @@ import {
  * @summary BackupResult
  * @description
  *
+ * Outcome of an automatic backup, carried in `autoBackupReport`.
+ *
+ * - `inLine` — copy sent to the managing system (`success` BIT
+ *   STRING holds the backup; else PDU-size, security/licensing, or
+ *   unknown failure)
+ * - `local` — another object of the same class in the managed
+ *   system (`success` BOOLEAN)
+ * - `offLine` — remote system via a file-transfer protocol (e.g.
+ *   FTAM)
+ *
+ * Cor.3 only inserts a missing comma after `fail-unknown` in the
+ * in-line CHOICE. ITU-T Rec. X.744 (10/96)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.6.1, A.8; Cor.3 (03/2001)
+ * [item 1](https://www.itu.int/rec/T-REC-X.744-200103-I_Cor3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

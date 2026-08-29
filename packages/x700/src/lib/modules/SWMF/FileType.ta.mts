@@ -16,6 +16,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FileType
  * @description
  *
+ * Syntax of `fileType` for a softwareUnit:
+ *
+ * - `unstructuredText` (0) — FTAM-1; e.g. non-executable text
+ * - `unstructuredBinary` (1) — FTAM-3; e.g. executable file
+ * - `blockSpecial` (2) — block special file
+ *
+ * ITU-T Rec. X.744 (10/96)
+ * [§8.2.9](https://www.itu.int/rec/T-REC-X.744-199610-I),
+ * A.3.9, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +39,10 @@ export type FileType = INTEGER;
 
 /**
  * @summary FileType_unstructuredText
+ * @description
+ *
+ * Unstructured text file (FTAM-1); e.g. non-executable. ITU-T Rec.
+ * X.744 (10/96) §8.2.9, A.8.
  * @constant
  * @type {number}
  */
@@ -36,6 +50,10 @@ export const FileType_unstructuredText: FileType = 0; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary FileType_unstructuredText
+ * @description
+ *
+ * Unstructured text file (FTAM-1); e.g. non-executable. ITU-T Rec.
+ * X.744 (10/96) §8.2.9, A.8.
  * @constant
  * @type {number}
  */
@@ -43,6 +61,10 @@ export const unstructuredText: FileType = FileType_unstructuredText; /* SHORT_NA
 
 /**
  * @summary FileType_unstructuredBinary
+ * @description
+ *
+ * Unstructured binary file (FTAM-3); e.g. executable. ITU-T Rec.
+ * X.744 (10/96) §8.2.9, A.8.
  * @constant
  * @type {number}
  */
@@ -50,6 +72,10 @@ export const FileType_unstructuredBinary: FileType = 1; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary FileType_unstructuredBinary
+ * @description
+ *
+ * Unstructured binary file (FTAM-3); e.g. executable. ITU-T Rec.
+ * X.744 (10/96) §8.2.9, A.8.
  * @constant
  * @type {number}
  */
@@ -57,6 +83,9 @@ export const unstructuredBinary: FileType = FileType_unstructuredBinary; /* SHOR
 
 /**
  * @summary FileType_blockSpecial
+ * @description
+ *
+ * Block special file. ITU-T Rec. X.744 (10/96) §8.2.9, A.8.
  * @constant
  * @type {number}
  */
@@ -64,6 +93,9 @@ export const FileType_blockSpecial: FileType = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FileType_blockSpecial
+ * @description
+ *
+ * Block special file. ITU-T Rec. X.744 (10/96) §8.2.9, A.8.
  * @constant
  * @type {number}
  */
