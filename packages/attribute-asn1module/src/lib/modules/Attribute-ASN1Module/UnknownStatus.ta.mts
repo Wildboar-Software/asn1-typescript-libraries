@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UnknownStatus
  * @description
  * 
+ * TRUE means other status attributes of the object should not be relied upon.
+ * MATCHES FOR EQUALITY. `{smi2AttributeID 38}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.2.8, §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

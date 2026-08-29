@@ -15,6 +15,11 @@ import { ControlStatus_Item, _decode_ControlStatus_Item, _encode_ControlStatus_I
  * @summary ControlStatus
  * @description
  * 
+ * Set of control-activity qualifications (subject to test, part of services
+ * locked, reserved for test, suspended). MATCHES FOR EQUALITY, SET-COMPARISON,
+ * SET-INTERSECTION. `{smi2AttributeID 34}`. ITU-T Rec. X.721 (02/92) §10.7.2.4;
+ * ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

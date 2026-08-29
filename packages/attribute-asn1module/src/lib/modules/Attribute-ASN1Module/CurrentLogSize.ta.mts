@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CurrentLogSize
  * @description
  * 
+ * Current size of the log in octets. MATCHES FOR EQUALITY, ORDERING.
+ * `{smi2AttributeID 54}`. ITU-T Rec. X.721 (02/92) §10.7.4.6; ITU-T Rec. X.735
+ * | ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

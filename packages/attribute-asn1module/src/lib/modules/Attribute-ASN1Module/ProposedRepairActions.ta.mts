@@ -15,6 +15,12 @@ import { SpecificIdentifier, _decode_SpecificIdentifier, _encode_SpecificIdentif
  * @summary ProposedRepairActions
  * @description
  * 
+ * Set of suggested repair identifiers (OID or int). CCITT-registered values
+ * `noActionRequired` / `repairActionRequired` are subject to ITU-T Rec. X.733 |
+ * ISO/IEC 10164-4 §8.1.2.12. MATCHES FOR EQUALITY, SET-COMPARISON,
+ * SET-INTERSECTION. `{smi2AttributeID 19}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.1.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

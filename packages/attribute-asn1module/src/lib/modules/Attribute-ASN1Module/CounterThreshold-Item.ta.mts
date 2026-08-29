@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CounterThreshold_Item
  * @description
  * 
+ * One member of `CounterThreshold`. Comparison level and offset are
+ * non-negative integers; the switch enables or suppresses the notification.
+ * ITU-T Rec. X.721 (02/92) §9.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +35,34 @@ class CounterThreshold_Item {
     constructor (
         /**
          * @summary `comparisonLevel`.
+         * @description
+         *
+         * Counter value that triggers the defined notification. Non-negative.
+         * ITU-T Rec. X.721 (02/92) §9.3.1.
+         *
          * @public
          * @readonly
          */
         readonly comparisonLevel: INTEGER,
         /**
          * @summary `offsetValue`.
+         * @description
+         *
+         * Added to `comparisonLevel` immediately after a trigger when non-zero,
+         * so the next trigger is one interval later. Non-negative. ITU-T Rec.
+         * X.721 (02/92) §9.3.1.
+         *
          * @public
          * @readonly
          */
         readonly offsetValue: INTEGER,
         /**
          * @summary `notificationOnOff`.
+         * @description
+         *
+         * Whether reaching this level emits the related notification. ITU-T
+         * Rec. X.721 (02/92) §9.3.1.
+         *
          * @public
          * @readonly
          */

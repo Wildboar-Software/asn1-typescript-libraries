@@ -15,6 +15,11 @@ import { AttributeValueChangeDefinition_Item, _decode_AttributeValueChangeDefini
  * @summary AttributeValueChangeDefinition
  * @description
  * 
+ * Set of (attribute id, optional old value, new value). Used for
+ * attribute-value-change, state-change, and relationship-change notifications.
+ * Open type via `CMIP-ATTRIBUTE` (Cor.4). `{smi2AttributeID 10}`. ITU-T Rec.
+ * X.721 (02/92) §10.7.1.5, §10.7.1.15, §10.7.1.23.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

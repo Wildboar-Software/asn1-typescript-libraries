@@ -15,6 +15,10 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "@wildboar/cmip"
  * @summary AttributeList
  * @description
  *
+ * Set of CMIP `Attribute` (id + value). Carried in object creation/deletion
+ * notifications. MATCHES FOR EQUALITY, SET-COMPARISON, SET-INTERSECTION.
+ * `{smi2AttributeID 9}`. ITU-T Rec. X.721 (02/92) §8.4, §10.7.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

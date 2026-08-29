@@ -15,6 +15,12 @@ import { WeekMask_Item, _decode_WeekMask_Item, _encode_WeekMask_Item } from "../
  * @summary WeekMask
  * @description
  * 
+ * Weekly schedule: for selected days of the week, the daily intervals during
+ * which the resource is on-duty. Default is all seven days with
+ * `defaultIntervalsOfDay`. MATCHES FOR EQUALITY. `{smi2AttributeID 71}`. ITU-T
+ * Rec. X.721 (02/92) §8.12, §10.7.4.23; ITU-T Rec. X.734 | ISO/IEC 10164-5;
+ * ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

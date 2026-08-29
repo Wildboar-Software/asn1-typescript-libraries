@@ -15,6 +15,14 @@ import { CounterThreshold_Item, _decode_CounterThreshold_Item, _encode_CounterTh
  * @summary CounterThreshold
  * @description
  * 
+ * Set of comparison levels that generate a defined notification when a related
+ * counter equals a level. If `offsetValue` is non-zero, that level is then
+ * incremented by the offset (instantaneously, before the next count) so
+ * notifications repeat every offset interval; the comparison wraps with the
+ * counter modulus. Arm-time is when the offset was last applied or the count
+ * last initialized. GET, SET, ADD, REMOVE. MATCHES FOR EQUALITY. Related to
+ * exactly one count. ITU-T Rec. X.721 (02/92) §9.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

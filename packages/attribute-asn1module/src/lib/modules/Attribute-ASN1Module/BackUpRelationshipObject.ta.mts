@@ -16,6 +16,11 @@ import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "
  * @summary BackUpRelationshipObject
  * @description
  *
+ * Peer/back-up/backed-up relationship: a managed-object instance, or `noObject`
+ * when none is assigned. Used by `backUpObject`, `backedUpObject`, and `peer`.
+ * MATCHES FOR EQUALITY. ITU-T Rec. X.721 (02/92) §10.7.3.1–§10.7.3.2,
+ * §10.7.3.5; ITU-T Rec. X.732 | ISO/IEC 10164-3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

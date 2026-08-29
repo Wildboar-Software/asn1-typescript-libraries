@@ -15,6 +15,10 @@ import { CorrelatedNotifications_Item, _decode_CorrelatedNotifications_Item, _en
  * @summary CorrelatedNotifications
  * @description
  * 
+ * Sets of notification identifiers (and optional source object) considered
+ * correlated to this notification. `{smi2AttributeID 12}`. ITU-T Rec. X.721
+ * (02/92) §8.6, §10.7.1.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

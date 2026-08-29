@@ -19,6 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ObservedValue
  * @description
  * 
+ * Syntax of the generic gauge attribute: integer or real current value of a
+ * dynamic variable. May move up or down by arbitrary amounts; it does not wrap
+ * — values that would exceed the specified min/max stay at that bound. GET-only
+ * so multiple managers can share it. MATCHES FOR EQUALITY, ORDERING. At most
+ * one (possibly multi-level) `GaugeThreshold` and one min plus one max
+ * tide-mark. ITU-T Rec. X.721 (02/92) §9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

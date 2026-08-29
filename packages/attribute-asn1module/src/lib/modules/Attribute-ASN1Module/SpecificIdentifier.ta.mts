@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SpecificIdentifier
  * @description
  * 
+ * OID or integer identifier used in `SpecificProblems` and
+ * `ProposedRepairActions`. ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OperationalState
  * @description
  *
+ * Whether the resource is operable. Independent of administrative/usage state.
+ * MATCHES FOR EQUALITY. `{smi2AttributeID 35}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.2.5; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +39,10 @@ enum _enum_for_OperationalState {
  * @summary OperationalState
  * @description
  *
+ * Whether the resource is operable. Independent of administrative/usage state.
+ * MATCHES FOR EQUALITY. `{smi2AttributeID 35}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.2.5; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +58,10 @@ type OperationalState = _enum_for_OperationalState;
  * @summary OperationalState
  * @description
  *
+ * Whether the resource is operable. Independent of administrative/usage state.
+ * MATCHES FOR EQUALITY. `{smi2AttributeID 35}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.2.5; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +75,11 @@ const OperationalState = _enum_for_OperationalState;
 
 /**
  * @summary OperationalState_disabled
+ * @description
+ *
+ * Resource is totally inoperable and cannot provide service. ITU-T Rec. X.721
+ * (02/92) §10.7.2.5; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +88,11 @@ const OperationalState_disabled: OperationalState = OperationalState.disabled; /
 
 /**
  * @summary disabled
+ * @description
+ *
+ * Resource is totally inoperable and cannot provide service. ITU-T Rec. X.721
+ * (02/92) §10.7.2.5; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +101,11 @@ const disabled: OperationalState = OperationalState.disabled; /* SHORT_NAMED_ENU
 
 /**
  * @summary OperationalState_enabled
+ * @description
+ *
+ * Resource is partially or fully operable and available for use. ITU-T Rec.
+ * X.721 (02/92) §10.7.2.5; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +114,11 @@ const OperationalState_enabled: OperationalState = OperationalState.enabled; /* 
 
 /**
  * @summary enabled
+ * @description
+ *
+ * Resource is partially or fully operable and available for use. ITU-T Rec.
+ * X.721 (02/92) §10.7.2.5; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.2.
+ *
  * @constant
  * @type {number}
  */

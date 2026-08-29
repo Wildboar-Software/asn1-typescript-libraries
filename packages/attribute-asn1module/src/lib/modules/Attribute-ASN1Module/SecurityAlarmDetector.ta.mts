@@ -17,6 +17,10 @@ import { AE_title, _decode_AE_title, _encode_AE_title } from "@wildboar/acse";
  * @summary SecurityAlarmDetector
  * @description
  *
+ * Entity that detected a security alarm: a mechanism OID, a managed-object
+ * instance, or an AE-title. MATCHES FOR EQUALITY. `{smi2AttributeID 22}`. ITU-T
+ * Rec. X.721 (02/92) §10.7.1.17; ITU-T Rec. X.736 | ISO/IEC 10164-7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,10 @@ import { SimpleNameType, _decode_SimpleNameType, _encode_SimpleNameType } from "
  * @summary LogRecordId
  * @description
  * 
+ * Naming attribute of log-record instances: `SimpleNameType` constrained to the
+ * `number` alternative. MATCHES FOR EQUALITY, ORDERING. `{smi2AttributeID 3}`.
+ * ITU-T Rec. X.721 (02/92) §10.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

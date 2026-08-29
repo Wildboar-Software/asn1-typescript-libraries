@@ -17,6 +17,10 @@ import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName
  * @summary SystemTitle
  * @description
  *
+ * Optional naming attribute of `system`. Distinguished name, OID, or `nothing`.
+ * MATCHES FOR EQUALITY. `{smi2AttributeID 5}`. ITU-T Rec. X.721 (02/92)
+ * §10.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

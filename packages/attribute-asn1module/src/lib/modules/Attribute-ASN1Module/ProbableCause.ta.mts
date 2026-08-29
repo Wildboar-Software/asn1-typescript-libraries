@@ -19,6 +19,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProbableCause
  * @description
  * 
+ * Cause of an alarm: a registered OID (`globalValue`, the X.733 values under
+ * `arfProbableCause`) or a locally assigned integer. MATCHES FOR EQUALITY.
+ * `{smi2AttributeID 18}`. ITU-T Rec. X.721 (02/92) §10.7.1.13, §14.2; ITU-T
+ * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

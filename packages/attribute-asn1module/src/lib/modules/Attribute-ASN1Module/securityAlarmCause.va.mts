@@ -18,6 +18,10 @@ import {
  * @summary securityAlarmCause
  * @description
  * 
+ * Arc for X.736 security-alarm-cause values: `{joint-iso-ccitt ms(9) smi(3)
+ * part2(2) standardSpecificExtension(0) sarf(1)}`. ITU-T Rec. X.721 (02/92)
+ * §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

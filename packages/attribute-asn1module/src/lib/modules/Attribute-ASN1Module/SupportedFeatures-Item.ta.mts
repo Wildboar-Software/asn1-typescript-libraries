@@ -15,6 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SupportedFeatures_Item
  * @description
  * 
+ * One managed feature. Open type via `DMI-SUPPORTEDFEATURES` (Cor.4). ITU-T
+ * Rec. X.721 (02/92) §10.7.4.22.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +30,22 @@ class SupportedFeatures_Item {
     constructor (
         /**
          * @summary `featureIdentifier`.
+         * @description
+         *
+         * `DMI-SUPPORTEDFEATURES.&id` from `SupportedFeaturesSet`. ITU-T Rec.
+         * X.721 (02/92) Cor.4 §14.2.
+         *
          * @public
          * @readonly
          */
         readonly featureIdentifier: OBJECT_IDENTIFIER,
         /**
          * @summary `featureInfo`.
+         * @description
+         *
+         * `DMI-SUPPORTEDFEATURES.&Value` selected by `featureIdentifier`. ITU-T
+         * Rec. X.721 (02/92) Cor.4 §14.2.
+         *
          * @public
          * @readonly
          */

@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AlarmStatus_Item
  * @description
  * 
+ * One member of `AlarmStatus`. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec. X.731
+ * | ISO/IEC 10164-2 §7.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type AlarmStatus_Item = INTEGER;
 
 /**
  * @summary AlarmStatus_Item_underRepair
+ * @description
+ *
+ * Resource is being repaired. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec. X.731
+ * | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +45,11 @@ const AlarmStatus_Item_underRepair: AlarmStatus_Item = 0; /* LONG_NAMED_INTEGER_
 
 /**
  * @summary AlarmStatus_Item_underRepair
+ * @description
+ *
+ * Resource is being repaired. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec. X.731
+ * | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +58,11 @@ const underRepair: AlarmStatus_Item = AlarmStatus_Item_underRepair; /* SHORT_NAM
 
 /**
  * @summary AlarmStatus_Item_critical
+ * @description
+ *
+ * One or more critical alarms outstanding. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +71,11 @@ const AlarmStatus_Item_critical: AlarmStatus_Item = 1; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary AlarmStatus_Item_critical
+ * @description
+ *
+ * One or more critical alarms outstanding. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +84,11 @@ const critical: AlarmStatus_Item = AlarmStatus_Item_critical; /* SHORT_NAMED_INT
 
 /**
  * @summary AlarmStatus_Item_major
+ * @description
+ *
+ * One or more major (and no critical) alarms outstanding. ITU-T Rec. X.721
+ * (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +97,11 @@ const AlarmStatus_Item_major: AlarmStatus_Item = 2; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary AlarmStatus_Item_major
+ * @description
+ *
+ * One or more major (and no critical) alarms outstanding. ITU-T Rec. X.721
+ * (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +110,11 @@ const major: AlarmStatus_Item = AlarmStatus_Item_major; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary AlarmStatus_Item_minor
+ * @description
+ *
+ * One or more minor (and no major/critical) alarms outstanding. ITU-T Rec.
+ * X.721 (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +123,11 @@ const AlarmStatus_Item_minor: AlarmStatus_Item = 3; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary AlarmStatus_Item_minor
+ * @description
+ *
+ * One or more minor (and no major/critical) alarms outstanding. ITU-T Rec.
+ * X.721 (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +136,11 @@ const minor: AlarmStatus_Item = AlarmStatus_Item_minor; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary AlarmStatus_Item_alarmOutstanding
+ * @description
+ *
+ * One or more alarms have been raised against the resource. ITU-T Rec. X.721
+ * (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +149,11 @@ const AlarmStatus_Item_alarmOutstanding: AlarmStatus_Item = 4; /* LONG_NAMED_INT
 
 /**
  * @summary AlarmStatus_Item_alarmOutstanding
+ * @description
+ *
+ * One or more alarms have been raised against the resource. ITU-T Rec. X.721
+ * (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * @constant
  * @type {number}
  */

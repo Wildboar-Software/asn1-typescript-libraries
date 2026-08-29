@@ -15,6 +15,11 @@ import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cm
  * @summary DiscriminatorConstruct
  * @description
  *
+ * CMIS filter that an event-forwarding discriminator or log applies to
+ * potential event reports. `{smi2AttributeID 56}`. Default `and:{}` (matches
+ * everything). ITU-T Rec. X.721 (02/92) §10.7.4.8, §14.2; ITU-T Rec. X.734 |
+ * ISO/IEC 10164-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_Priorit
  * @summary PrioritisedObject
  * @description
  * 
+ * Set of (object, priority) pairs. Priority 0 is highest, 127 is lowest. Used
+ * by `primary`, `providerObject`, `secondary`, and `userObject`. ITU-T Rec.
+ * X.721 (02/92) §10.7.3.6–§10.7.3.7, §10.7.3.9–§10.7.3.10, §14.2; ITU-T Rec.
+ * X.732 | ISO/IEC 10164-3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

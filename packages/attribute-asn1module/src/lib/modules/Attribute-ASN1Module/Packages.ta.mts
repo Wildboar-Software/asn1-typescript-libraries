@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Packages
  * @description
  * 
+ * Present when any registered package other than `packagePackage` was
+ * instantiated: OIDs of those packages. MATCHES FOR EQUALITY, SET-COMPARISON,
+ * SET-INTERSECTION. `{smi2AttributeID 66}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.4.18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

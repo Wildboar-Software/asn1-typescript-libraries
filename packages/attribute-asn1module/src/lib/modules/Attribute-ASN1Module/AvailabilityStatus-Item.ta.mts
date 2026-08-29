@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AvailabilityStatus_Item
  * @description
  * 
+ * One member of `AvailabilityStatus`. ITU-T Rec. X.721 (02/92) §14.2; ITU-T
+ * Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type AvailabilityStatus_Item = INTEGER;
 
 /**
  * @summary AvailabilityStatus_Item_inTest
+ * @description
+ *
+ * Resource is undergoing a test procedure. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +45,11 @@ const AvailabilityStatus_Item_inTest: AvailabilityStatus_Item = 0; /* LONG_NAMED
 
 /**
  * @summary AvailabilityStatus_Item_inTest
+ * @description
+ *
+ * Resource is undergoing a test procedure. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +58,11 @@ const inTest: AvailabilityStatus_Item = AvailabilityStatus_Item_inTest; /* SHORT
 
 /**
  * @summary AvailabilityStatus_Item_failed
+ * @description
+ *
+ * Internal fault prevents operation. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +71,11 @@ const AvailabilityStatus_Item_failed: AvailabilityStatus_Item = 1; /* LONG_NAMED
 
 /**
  * @summary AvailabilityStatus_Item_failed
+ * @description
+ *
+ * Internal fault prevents operation. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +84,11 @@ const failed: AvailabilityStatus_Item = AvailabilityStatus_Item_failed; /* SHORT
 
 /**
  * @summary AvailabilityStatus_Item_powerOff
+ * @description
+ *
+ * Resource requires power to be applied. ITU-T Rec. X.721 (02/92) §14.2; ITU-T
+ * Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +97,11 @@ const AvailabilityStatus_Item_powerOff: AvailabilityStatus_Item = 2; /* LONG_NAM
 
 /**
  * @summary AvailabilityStatus_Item_powerOff
+ * @description
+ *
+ * Resource requires power to be applied. ITU-T Rec. X.721 (02/92) §14.2; ITU-T
+ * Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +110,11 @@ const powerOff: AvailabilityStatus_Item = AvailabilityStatus_Item_powerOff; /* S
 
 /**
  * @summary AvailabilityStatus_Item_offLine
+ * @description
+ *
+ * Requires a manual operation to become available. ITU-T Rec. X.721 (02/92)
+ * §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +123,11 @@ const AvailabilityStatus_Item_offLine: AvailabilityStatus_Item = 3; /* LONG_NAME
 
 /**
  * @summary AvailabilityStatus_Item_offLine
+ * @description
+ *
+ * Requires a manual operation to become available. ITU-T Rec. X.721 (02/92)
+ * §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +136,12 @@ const offLine: AvailabilityStatus_Item = AvailabilityStatus_Item_offLine; /* SHO
 
 /**
  * @summary AvailabilityStatus_Item_offDuty
+ * @description
+ *
+ * Made inactive by an internal control process on a predetermined schedule.
+ * ITU-T Rec. X.721 (02/92) §8.5, §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2
+ * §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +150,12 @@ const AvailabilityStatus_Item_offDuty: AvailabilityStatus_Item = 4; /* LONG_NAME
 
 /**
  * @summary AvailabilityStatus_Item_offDuty
+ * @description
+ *
+ * Made inactive by an internal control process on a predetermined schedule.
+ * ITU-T Rec. X.721 (02/92) §8.5, §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2
+ * §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +164,11 @@ const offDuty: AvailabilityStatus_Item = AvailabilityStatus_Item_offDuty; /* SHO
 
 /**
  * @summary AvailabilityStatus_Item_dependency
+ * @description
+ *
+ * Cannot operate because a required resource is unavailable. ITU-T Rec. X.721
+ * (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +177,11 @@ const AvailabilityStatus_Item_dependency: AvailabilityStatus_Item = 5; /* LONG_N
 
 /**
  * @summary AvailabilityStatus_Item_dependency
+ * @description
+ *
+ * Cannot operate because a required resource is unavailable. ITU-T Rec. X.721
+ * (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +190,11 @@ const dependency: AvailabilityStatus_Item = AvailabilityStatus_Item_dependency; 
 
 /**
  * @summary AvailabilityStatus_Item_degraded
+ * @description
+ *
+ * Service is degraded in some respect. ITU-T Rec. X.721 (02/92) §14.2; ITU-T
+ * Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +203,11 @@ const AvailabilityStatus_Item_degraded: AvailabilityStatus_Item = 6; /* LONG_NAM
 
 /**
  * @summary AvailabilityStatus_Item_degraded
+ * @description
+ *
+ * Service is degraded in some respect. ITU-T Rec. X.721 (02/92) §14.2; ITU-T
+ * Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +216,11 @@ const degraded: AvailabilityStatus_Item = AvailabilityStatus_Item_degraded; /* S
 
 /**
  * @summary AvailabilityStatus_Item_notInstalled
+ * @description
+ *
+ * Resource is not present or is incomplete. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +229,11 @@ const AvailabilityStatus_Item_notInstalled: AvailabilityStatus_Item = 7; /* LONG
 
 /**
  * @summary AvailabilityStatus_Item_notInstalled
+ * @description
+ *
+ * Resource is not present or is incomplete. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +242,11 @@ const notInstalled: AvailabilityStatus_Item = AvailabilityStatus_Item_notInstall
 
 /**
  * @summary AvailabilityStatus_Item_logFull
+ * @description
+ *
+ * Log cannot accept further records (from ITU-T Rec. X.735 | ISO/IEC 10164-6).
+ * ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +255,11 @@ const AvailabilityStatus_Item_logFull: AvailabilityStatus_Item = 8; /* LONG_NAME
 
 /**
  * @summary AvailabilityStatus_Item_logFull
+ * @description
+ *
+ * Log cannot accept further records (from ITU-T Rec. X.735 | ISO/IEC 10164-6).
+ * ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  * @type {number}
  */

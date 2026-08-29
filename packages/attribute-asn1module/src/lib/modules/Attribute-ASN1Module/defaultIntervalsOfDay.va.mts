@@ -17,6 +17,9 @@ import { IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item
  * @summary defaultIntervalsOfDay
  * @description
  * 
+ * Default daily window: 00:00 through 23:59 (one full day). DEFAULT VALUE of
+ * `intervalsOfDay` in dailyScheduling. ITU-T Rec. X.721 (02/92) §8.8, §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

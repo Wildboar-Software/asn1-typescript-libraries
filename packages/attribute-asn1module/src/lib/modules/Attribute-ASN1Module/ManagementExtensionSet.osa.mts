@@ -14,6 +14,10 @@ import { type DMI_EXTENSION } from "../Attribute-ASN1Module/DMI-EXTENSION.oca.mj
  * @summary ManagementExtensionSet
  * @description
  * 
+ * Extensible object set of `DMI-EXTENSION` values that may appear in
+ * `ManagementExtension`. Starts empty (`{...}`); other modules add members.
+ * ITU-T Rec. X.721 (02/92) Cor.4 §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

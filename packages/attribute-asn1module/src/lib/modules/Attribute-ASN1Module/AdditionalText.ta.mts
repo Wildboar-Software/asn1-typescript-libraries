@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AdditionalText
  * @description
  * 
+ * Free-form graphic string in notifications. MATCHES FOR EQUALITY, SUBSTRINGS.
+ * Semantics: Additional Text of ITU-T Rec. X.733 | ISO/IEC 10164-4.
+ * `{smi2AttributeID 7}`. ITU-T Rec. X.721 (02/92) §8.2, §10.7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

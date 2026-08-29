@@ -15,6 +15,10 @@ import { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attrib
  * @summary ServiceProvider
  * @description
  * 
+ * Alias of `ServiceUser` for the service provider of the request that caused a
+ * security alarm. MATCHES FOR EQUALITY. `{smi2AttributeID 24}`. ITU-T Rec.
+ * X.721 (02/92) §10.7.1.19; ITU-T Rec. X.736 | ISO/IEC 10164-7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

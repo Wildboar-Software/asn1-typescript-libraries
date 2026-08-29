@@ -15,6 +15,9 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
  * @summary ThresholdLevelInd_down
  * @description
  * 
+ * Downward-crossing indication (gauge). Both high and low are present. ITU-T
+ * Rec. X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +30,21 @@ class ThresholdLevelInd_down {
     constructor (
         /**
          * @summary `high`.
+         * @description
+         *
+         * High comparison level of the pair that was crossed downward. ITU-T
+         * Rec. X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */
         readonly high: ObservedValue,
         /**
          * @summary `low`.
+         * @description
+         *
+         * Low comparison level of that pair. ITU-T Rec. X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */

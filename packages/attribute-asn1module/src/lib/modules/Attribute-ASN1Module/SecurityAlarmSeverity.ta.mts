@@ -15,6 +15,11 @@ import { PerceivedSeverity, _enum_for_PerceivedSeverity, _decode_PerceivedSeveri
  * @summary SecurityAlarmSeverity
  * @description
  * 
+ * `PerceivedSeverity` constrained to exclude `cleared` (indeterminate |
+ * critical | major | minor | warning). MATCHES FOR EQUALITY. `{smi2AttributeID
+ * 23}`. ITU-T Rec. X.721 (02/92) §10.7.1.18, §14.2; ITU-T Rec. X.736 | ISO/IEC
+ * 10164-7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

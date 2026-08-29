@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PrioritisedObject_Item_priority
  * @description
  * 
+ * Priority of a related object: `highest(0)` through `lowest(127)`. ITU-T Rec.
+ * X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,10 @@ type PrioritisedObject_Item_priority = INTEGER;
 
 /**
  * @summary PrioritisedObject_Item_priority_highest
+ * @description
+ *
+ * Highest priority (0). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +44,10 @@ const PrioritisedObject_Item_priority_highest: PrioritisedObject_Item_priority =
 
 /**
  * @summary PrioritisedObject_Item_priority_highest
+ * @description
+ *
+ * Highest priority (0). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +56,10 @@ const highest: PrioritisedObject_Item_priority = PrioritisedObject_Item_priority
 
 /**
  * @summary PrioritisedObject_Item_priority_lowest
+ * @description
+ *
+ * Lowest priority (127). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +68,10 @@ const PrioritisedObject_Item_priority_lowest: PrioritisedObject_Item_priority = 
 
 /**
  * @summary PrioritisedObject_Item_priority_lowest
+ * @description
+ *
+ * Lowest priority (127). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  * @type {number}
  */

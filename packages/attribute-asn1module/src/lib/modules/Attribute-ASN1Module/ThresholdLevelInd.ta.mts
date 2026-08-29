@@ -16,6 +16,9 @@ import { ThresholdLevelInd_down, _decode_ThresholdLevelInd_down, _encode_Thresho
  * @summary ThresholdLevelInd
  * @description
  * 
+ * High/low indication for a multi-level threshold crossing. `up` is the only
+ * permitted choice for a counter. ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

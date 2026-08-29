@@ -14,6 +14,9 @@ import { type DMI_SERVICEUSER } from "../Attribute-ASN1Module/DMI-SERVICEUSER.oc
  * @summary ServiceUserSet
  * @description
  * 
+ * Extensible object set of `DMI-SERVICEUSER` values that may appear in
+ * `ServiceUser`. Starts empty (`{...}`). ITU-T Rec. X.721 (02/92) Cor.4 §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

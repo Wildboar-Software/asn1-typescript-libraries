@@ -14,6 +14,10 @@ import { type DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTE
  * @summary SupportedFeaturesSet
  * @description
  * 
+ * Extensible object set of `DMI-SUPPORTEDFEATURES` values that may appear in
+ * `SupportedFeatures`. Starts empty (`{...}`). ITU-T Rec. X.721 (02/92) Cor.4
+ * §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

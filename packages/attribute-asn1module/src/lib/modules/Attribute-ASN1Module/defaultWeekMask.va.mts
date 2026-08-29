@@ -17,6 +17,9 @@ import { WeekMask_Item } from "../Attribute-ASN1Module/WeekMask-Item.ta.mjs";
  * @summary defaultWeekMask
  * @description
  * 
+ * All seven days, each with `defaultIntervalsOfDay`. DEFAULT VALUE of
+ * `weekMask` in weeklyScheduling. ITU-T Rec. X.721 (02/92) §8.12, §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

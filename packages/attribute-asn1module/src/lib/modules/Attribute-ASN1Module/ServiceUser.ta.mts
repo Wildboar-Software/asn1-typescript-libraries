@@ -15,6 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceUser
  * @description
  * 
+ * Service user associated with the request that caused a security alarm. Open
+ * type via `DMI-SERVICEUSER` (Cor.4). MATCHES FOR EQUALITY. `{smi2AttributeID
+ * 25}`. ITU-T Rec. X.721 (02/92) §10.7.1.20; ITU-T Rec. X.736 | ISO/IEC
+ * 10164-7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +35,22 @@ class ServiceUser {
     constructor (
         /**
          * @summary `identifier`.
+         * @description
+         *
+         * `DMI-SERVICEUSER.&id` from `ServiceUserSet`. ITU-T Rec. X.721 (02/92)
+         * Cor.4 §14.2.
+         *
          * @public
          * @readonly
          */
         readonly identifier: OBJECT_IDENTIFIER,
         /**
          * @summary `details`.
+         * @description
+         *
+         * `DMI-SERVICEUSER.&Value` selected by `identifier`. ITU-T Rec. X.721
+         * (02/92) Cor.4 §14.2.
+         *
          * @public
          * @readonly
          */

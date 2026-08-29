@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary WeekMask_Item_daysOfWeek
  * @description
  * 
+ * Bit string `sunday(0)` through `saturday(6)`, `(SIZE (7))`. ITU-T Rec. X.721
+ * (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,10 @@ type WeekMask_Item_daysOfWeek = BIT_STRING;
 
 /**
  * @summary WeekMask_Item_daysOfWeek_sunday
+ * @description
+ *
+ * Bit 0 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -36,6 +43,10 @@ const WeekMask_Item_daysOfWeek_sunday: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary sunday
+ * @description
+ *
+ * Bit 0 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -43,6 +54,10 @@ const sunday: number = WeekMask_Item_daysOfWeek_sunday; /* SHORT_NAMED_BIT */
 
 /**
  * @summary WeekMask_Item_daysOfWeek_monday
+ * @description
+ *
+ * Bit 1 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -50,6 +65,10 @@ const WeekMask_Item_daysOfWeek_monday: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary monday
+ * @description
+ *
+ * Bit 1 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -57,6 +76,10 @@ const monday: number = WeekMask_Item_daysOfWeek_monday; /* SHORT_NAMED_BIT */
 
 /**
  * @summary WeekMask_Item_daysOfWeek_tuesday
+ * @description
+ *
+ * Bit 2 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -64,6 +87,10 @@ const WeekMask_Item_daysOfWeek_tuesday: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary tuesday
+ * @description
+ *
+ * Bit 2 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -71,6 +98,10 @@ const tuesday: number = WeekMask_Item_daysOfWeek_tuesday; /* SHORT_NAMED_BIT */
 
 /**
  * @summary WeekMask_Item_daysOfWeek_wednesday
+ * @description
+ *
+ * Bit 3 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -78,6 +109,10 @@ const WeekMask_Item_daysOfWeek_wednesday: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary wednesday
+ * @description
+ *
+ * Bit 3 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -85,6 +120,10 @@ const wednesday: number = WeekMask_Item_daysOfWeek_wednesday; /* SHORT_NAMED_BIT
 
 /**
  * @summary WeekMask_Item_daysOfWeek_thursday
+ * @description
+ *
+ * Bit 4 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -92,6 +131,10 @@ const WeekMask_Item_daysOfWeek_thursday: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary thursday
+ * @description
+ *
+ * Bit 4 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -99,6 +142,10 @@ const thursday: number = WeekMask_Item_daysOfWeek_thursday; /* SHORT_NAMED_BIT *
 
 /**
  * @summary WeekMask_Item_daysOfWeek_friday
+ * @description
+ *
+ * Bit 5 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -106,6 +153,10 @@ const WeekMask_Item_daysOfWeek_friday: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary friday
+ * @description
+ *
+ * Bit 5 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -113,6 +164,10 @@ const friday: number = WeekMask_Item_daysOfWeek_friday; /* SHORT_NAMED_BIT */
 
 /**
  * @summary WeekMask_Item_daysOfWeek_saturday
+ * @description
+ *
+ * Bit 6 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export
@@ -120,6 +175,10 @@ const WeekMask_Item_daysOfWeek_saturday: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary saturday
+ * @description
+ *
+ * Bit 6 of `daysOfWeek` (SIZE 7). ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * @constant
  */
 export

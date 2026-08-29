@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BackedUpStatus
  * @description
  * 
+ * Whether the object that emitted an alarm is backed up. TRUE = backed up;
+ * FALSE = not backed up. MATCHES FOR EQUALITY. Semantics: ITU-T Rec. X.733 |
+ * ISO/IEC 10164-4 Backed-up Status. `{smi2AttributeID 11}`. ITU-T Rec. X.721
+ * (02/92) §10.7.1.6, §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

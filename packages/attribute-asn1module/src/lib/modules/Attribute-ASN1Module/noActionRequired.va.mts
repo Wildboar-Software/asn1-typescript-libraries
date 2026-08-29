@@ -15,6 +15,9 @@ import { arfProposedRepairAction } from "../Attribute-ASN1Module/arfProposedRepa
  * @summary noActionRequired
  * @description
  * 
+ * `{arfProposedRepairAction 1}`. CCITT applications only; use subject to ITU-T
+ * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.12. ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

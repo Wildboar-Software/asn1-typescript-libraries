@@ -16,6 +16,12 @@ import { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1M
  * @summary TideMarkInfo
  * @description
  * 
+ * Syntax of the generic tide-mark attribute. Records the extreme of a gauge
+ * over a measurement period. GET returns current value, value immediately
+ * before last reset, and reset time. SET-TO-DEFAULT copies current→previous,
+ * sets current to the gauge, and sets reset time to now. MATCHES FOR EQUALITY.
+ * Related to one gauge. ITU-T Rec. X.721 (02/92) §9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +38,32 @@ class TideMarkInfo {
     constructor (
         /**
          * @summary `currentTideMark`.
+         * @description
+         *
+         * Extreme reached since the last reset. ITU-T Rec. X.721 (02/92) §9.4.
+         *
          * @public
          * @readonly
          */
         readonly currentTideMark: TideMark,
         /**
          * @summary `previousTideMark`.
+         * @description
+         *
+         * Value immediately before the last reset. ITU-T Rec. X.721 (02/92)
+         * §9.4.
+         *
          * @public
          * @readonly
          */
         readonly previousTideMark: TideMark,
         /**
          * @summary `resetTime`.
+         * @description
+         *
+         * Time of the last reset (SET-TO-DEFAULT). ITU-T Rec. X.721 (02/92)
+         * §9.4.
+         *
          * @public
          * @readonly
          */

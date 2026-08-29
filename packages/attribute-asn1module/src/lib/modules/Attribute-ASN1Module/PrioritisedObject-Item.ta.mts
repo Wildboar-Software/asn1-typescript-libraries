@@ -16,6 +16,9 @@ import { PrioritisedObject_Item_priority, _decode_PrioritisedObject_Item_priorit
  * @summary PrioritisedObject_Item
  * @description
  *
+ * One prioritised related object. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.732 | ISO/IEC 10164-3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +31,20 @@ class PrioritisedObject_Item {
     constructor (
         /**
          * @summary `object`.
+         * @description
+         *
+         * Related managed-object instance. ITU-T Rec. X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */
         readonly object: ObjectInstance,
         /**
          * @summary `priority`.
+         * @description
+         *
+         * `0` = highest, `127` = lowest. ITU-T Rec. X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */

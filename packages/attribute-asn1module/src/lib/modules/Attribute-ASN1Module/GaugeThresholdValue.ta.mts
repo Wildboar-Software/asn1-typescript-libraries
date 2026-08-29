@@ -15,6 +15,9 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
  * @summary GaugeThresholdValue
  * @description
  * 
+ * Alias of `ObservedValue` for a gauge-threshold level. ITU-T Rec. X.721
+ * (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

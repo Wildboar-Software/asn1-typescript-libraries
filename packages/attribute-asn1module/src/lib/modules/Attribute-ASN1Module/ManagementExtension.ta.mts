@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ManagementExtension
  * @description
  * 
+ * One additional-information item: registered identifier, optional significance
+ * flag, and type-selected payload. Open type uses `DMI-EXTENSION` (Cor.4).
+ * ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +38,34 @@ class ManagementExtension {
     constructor (
         /**
          * @summary `identifier`.
+         * @description
+         *
+         * `DMI-EXTENSION.&id` from `ManagementExtensionSet`. ITU-T Rec. X.721
+         * (02/92) Cor.4 §14.2.
+         *
          * @public
          * @readonly
          */
         readonly identifier: OBJECT_IDENTIFIER,
         /**
          * @summary `significance`.
+         * @description
+         *
+         * `DEFAULT FALSE`. TRUE means the information is significant to
+         * interpreting the notification. ITU-T Rec. X.721 (02/92) §14.2; ITU-T
+         * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.14.
+         *
          * @public
          * @readonly
          */
         readonly significance: OPTIONAL<BOOLEAN>,
         /**
          * @summary `information`.
+         * @description
+         *
+         * `DMI-EXTENSION.&Value` selected by `identifier`. ITU-T Rec. X.721
+         * (02/92) Cor.4 §14.2.
+         *
          * @public
          * @readonly
          */
@@ -70,6 +90,11 @@ class ManagementExtension {
 
     /**
      * @summary Getter that returns the default value for `significance`.
+     * @description
+     *
+     * `FALSE`: the extension is not marked significant. ITU-T Rec. X.721
+     * (02/92) §14.2.
+     *
      * @public
      * @static
      * @method

@@ -19,6 +19,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StopTime
  * @description
  * 
+ * End of a duration window: a specific `GeneralizedTime`, or `continual` (no
+ * end). ORDERING applies only to the `specific` alternative. Default
+ * `continual:NULL`. `{smi2AttributeID 69}`. ITU-T Rec. X.721 (02/92) §8.9,
+ * §10.7.4.21 and Cor.2; ITU-T Rec. X.734 | ISO/IEC 10164-5; ITU-T Rec. X.735 |
+ * ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

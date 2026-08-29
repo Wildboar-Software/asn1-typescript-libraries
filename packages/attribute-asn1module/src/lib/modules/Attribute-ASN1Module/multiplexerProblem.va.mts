@@ -15,6 +15,10 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  * @summary multiplexerProblem
  * @description
  * 
+ * Registered `ProbableCause` `globalValue` `{arfProbableCause 31}` for X.733
+ * equipment-alarm notifications. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.733 | ISO/IEC 10164-4 §8.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

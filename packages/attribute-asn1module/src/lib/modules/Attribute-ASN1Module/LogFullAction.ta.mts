@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LogFullAction
  * @description
  *
+ * What the log does when full: wrap (overwrite oldest) or halt (stop logging).
+ * MATCHES FOR EQUALITY. `{smi2AttributeID 58}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.4.10; ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +39,10 @@ enum _enum_for_LogFullAction {
  * @summary LogFullAction
  * @description
  *
+ * What the log does when full: wrap (overwrite oldest) or halt (stop logging).
+ * MATCHES FOR EQUALITY. `{smi2AttributeID 58}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.4.10; ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +58,10 @@ type LogFullAction = _enum_for_LogFullAction;
  * @summary LogFullAction
  * @description
  *
+ * What the log does when full: wrap (overwrite oldest) or halt (stop logging).
+ * MATCHES FOR EQUALITY. `{smi2AttributeID 58}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.4.10; ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +75,11 @@ const LogFullAction = _enum_for_LogFullAction;
 
 /**
  * @summary LogFullAction_wrap
+ * @description
+ *
+ * When full, overwrite the oldest records. ITU-T Rec. X.721 (02/92) §10.7.4.10;
+ * ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +88,11 @@ const LogFullAction_wrap: LogFullAction = LogFullAction.wrap; /* LONG_NAMED_ENUM
 
 /**
  * @summary wrap
+ * @description
+ *
+ * When full, overwrite the oldest records. ITU-T Rec. X.721 (02/92) §10.7.4.10;
+ * ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +101,11 @@ const wrap: LogFullAction = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary LogFullAction_halt
+ * @description
+ *
+ * When full, stop accepting new records. ITU-T Rec. X.721 (02/92) §10.7.4.10;
+ * ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +114,11 @@ const LogFullAction_halt: LogFullAction = LogFullAction.halt; /* LONG_NAMED_ENUM
 
 /**
  * @summary halt
+ * @description
+ *
+ * When full, stop accepting new records. ITU-T Rec. X.721 (02/92) §10.7.4.10;
+ * ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * @constant
  * @type {number}
  */

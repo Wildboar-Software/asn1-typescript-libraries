@@ -14,6 +14,9 @@ import { type DMI_TYPE_IDENTIFIER } from "../Attribute-ASN1Module/DMI-TYPE-IDENT
  * @summary DMI_SUPPORTEDFEATURES
  * @description
  * 
+ * Alias of `DMI-TYPE-IDENTIFIER` for `SupportedFeatures` members. ITU-T Rec.
+ * X.721 (02/92) Cor.4 §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LifecycleState
  * @description
  *
+ * Lifecycle of the resource: planned, installed, or pending removal. Added by
+ * X.721 Amendment 1 (08/2001). MATCHES FOR EQUALITY. `{smi2AttributeID 105}`.
+ * ITU-T Rec. X.721 (02/92) Amd.1 §10.7.2.y; ITU-T Rec. X.731 | ISO/IEC 10164-2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +40,10 @@ enum _enum_for_LifecycleState {
  * @summary LifecycleState
  * @description
  *
+ * Lifecycle of the resource: planned, installed, or pending removal. Added by
+ * X.721 Amendment 1 (08/2001). MATCHES FOR EQUALITY. `{smi2AttributeID 105}`.
+ * ITU-T Rec. X.721 (02/92) Amd.1 §10.7.2.y; ITU-T Rec. X.731 | ISO/IEC 10164-2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +59,10 @@ type LifecycleState = _enum_for_LifecycleState;
  * @summary LifecycleState
  * @description
  *
+ * Lifecycle of the resource: planned, installed, or pending removal. Added by
+ * X.721 Amendment 1 (08/2001). MATCHES FOR EQUALITY. `{smi2AttributeID 105}`.
+ * ITU-T Rec. X.721 (02/92) Amd.1 §10.7.2.y; ITU-T Rec. X.731 | ISO/IEC 10164-2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +76,11 @@ const LifecycleState = _enum_for_LifecycleState;
 
 /**
  * @summary LifecycleState_planned
+ * @description
+ *
+ * Resource is planned but not yet installed. ITU-T Rec. X.721 (02/92) Amd.1
+ * §10.7.2.y.
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +89,11 @@ const LifecycleState_planned: LifecycleState = LifecycleState.planned; /* LONG_N
 
 /**
  * @summary planned
+ * @description
+ *
+ * Resource is planned but not yet installed. ITU-T Rec. X.721 (02/92) Amd.1
+ * §10.7.2.y.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +102,10 @@ const planned: LifecycleState = LifecycleState.planned; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary LifecycleState_installed
+ * @description
+ *
+ * Resource is installed. ITU-T Rec. X.721 (02/92) Amd.1 §10.7.2.y.
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +114,10 @@ const LifecycleState_installed: LifecycleState = LifecycleState.installed; /* LO
 
 /**
  * @summary installed
+ * @description
+ *
+ * Resource is installed. ITU-T Rec. X.721 (02/92) Amd.1 §10.7.2.y.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +126,10 @@ const installed: LifecycleState = LifecycleState.installed; /* SHORT_NAMED_ENUME
 
 /**
  * @summary LifecycleState_pendingRemoval
+ * @description
+ *
+ * Resource is pending removal. ITU-T Rec. X.721 (02/92) Amd.1 §10.7.2.y.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +138,10 @@ const LifecycleState_pendingRemoval: LifecycleState = LifecycleState.pendingRemo
 
 /**
  * @summary pendingRemoval
+ * @description
+ *
+ * Resource is pending removal. ITU-T Rec. X.721 (02/92) Amd.1 §10.7.2.y.
+ *
  * @constant
  * @type {number}
  */

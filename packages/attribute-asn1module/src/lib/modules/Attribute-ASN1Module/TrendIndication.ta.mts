@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TrendIndication
  * @description
  *
+ * Whether perceived severity of an alarm is becoming less severe, unchanged, or
+ * more severe. MATCHES FOR EQUALITY. `{smi2AttributeID 30}`. ITU-T Rec. X.721
+ * (02/92) §10.7.1.25; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +40,10 @@ enum _enum_for_TrendIndication {
  * @summary TrendIndication
  * @description
  *
+ * Whether perceived severity of an alarm is becoming less severe, unchanged, or
+ * more severe. MATCHES FOR EQUALITY. `{smi2AttributeID 30}`. ITU-T Rec. X.721
+ * (02/92) §10.7.1.25; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +59,10 @@ type TrendIndication = _enum_for_TrendIndication;
  * @summary TrendIndication
  * @description
  *
+ * Whether perceived severity of an alarm is becoming less severe, unchanged, or
+ * more severe. MATCHES FOR EQUALITY. `{smi2AttributeID 30}`. ITU-T Rec. X.721
+ * (02/92) §10.7.1.25; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +76,11 @@ const TrendIndication = _enum_for_TrendIndication;
 
 /**
  * @summary TrendIndication_lessSevere
+ * @description
+ *
+ * Perceived severity is decreasing. ITU-T Rec. X.721 (02/92) §10.7.1.25; ITU-T
+ * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +89,11 @@ const TrendIndication_lessSevere: TrendIndication = TrendIndication.lessSevere; 
 
 /**
  * @summary lessSevere
+ * @description
+ *
+ * Perceived severity is decreasing. ITU-T Rec. X.721 (02/92) §10.7.1.25; ITU-T
+ * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +102,11 @@ const lessSevere: TrendIndication = TrendIndication.lessSevere; /* SHORT_NAMED_E
 
 /**
  * @summary TrendIndication_noChange
+ * @description
+ *
+ * Perceived severity is unchanged. ITU-T Rec. X.721 (02/92) §10.7.1.25; ITU-T
+ * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +115,11 @@ const TrendIndication_noChange: TrendIndication = TrendIndication.noChange; /* L
 
 /**
  * @summary noChange
+ * @description
+ *
+ * Perceived severity is unchanged. ITU-T Rec. X.721 (02/92) §10.7.1.25; ITU-T
+ * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +128,11 @@ const noChange: TrendIndication = TrendIndication.noChange; /* SHORT_NAMED_ENUME
 
 /**
  * @summary TrendIndication_moreSevere
+ * @description
+ *
+ * Perceived severity is increasing. ITU-T Rec. X.721 (02/92) §10.7.1.25; ITU-T
+ * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +141,11 @@ const TrendIndication_moreSevere: TrendIndication = TrendIndication.moreSevere; 
 
 /**
  * @summary moreSevere
+ * @description
+ *
+ * Perceived severity is increasing. ITU-T Rec. X.721 (02/92) §10.7.1.25; ITU-T
+ * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.6.
+ *
  * @constant
  * @type {number}
  */

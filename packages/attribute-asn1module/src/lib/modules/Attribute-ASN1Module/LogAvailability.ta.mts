@@ -15,6 +15,10 @@ import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilitySta
  * @summary LogAvailability
  * @description
  * 
+ * `AvailabilityStatus` constrained to `logFull` or `offDuty` — the availability
+ * values a log may report. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec. X.735 |
+ * ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

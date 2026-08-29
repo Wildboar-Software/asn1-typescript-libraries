@@ -16,6 +16,9 @@ import { _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip";
  * @summary defaultDiscriminatorConstruct
  * @description
  *
+ * `and:{}` — empty AND, which matches every potential event report. ITU-T Rec.
+ * X.721 (02/92) §14.2; ITU-T Rec. X.734 | ISO/IEC 10164-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

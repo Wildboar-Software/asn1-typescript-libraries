@@ -16,6 +16,9 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar
  * @summary AttributeValueChangeDefinition_Item
  * @description
  *
+ * One changed attribute in an attribute-value-change, state-change, or
+ * relationship-change notification. ITU-T Rec. X.721 (02/92) §10.7.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,18 +31,32 @@ class AttributeValueChangeDefinition_Item {
     constructor (
         /**
          * @summary `attributeId`.
+         * @description
+         *
+         * `CMIP-ATTRIBUTE.&id` from `AttributeSet`. ITU-T Rec. X.721 (02/92)
+         * Cor.4 §14.2.
+         *
          * @public
          * @readonly
          */
         readonly attributeId: AttributeId,
         /**
          * @summary `oldAttributeValue`.
+         * @description
+         *
+         * Value before the change, if known. Absent e.g. when a set-valued
+         * member is added. ITU-T Rec. X.721 (02/92) §10.7.1.5.
+         *
          * @public
          * @readonly
          */
         readonly oldAttributeValue: OPTIONAL<_Element>,
         /**
          * @summary `newAttributeValue`.
+         * @description
+         *
+         * Value after the change. ITU-T Rec. X.721 (02/92) §10.7.1.5.
+         *
          * @public
          * @readonly
          */

@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CapacityAlarmThreshold
  * @description
  * 
+ * Set of integer percentages (0..100) at which a log capacity alarm is issued.
+ * MATCHES FOR EQUALITY, SET-COMPARISON, SET-INTERSECTION. `{smi2AttributeID
+ * 52}`. ITU-T Rec. X.721 (02/92) §10.7.4.4; ITU-T Rec. X.735 | ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

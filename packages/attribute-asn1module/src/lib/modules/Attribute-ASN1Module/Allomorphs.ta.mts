@@ -15,6 +15,10 @@ import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "@wildboar
  * @summary Allomorphs
  * @description
  *
+ * Present iff the managed object supports allomorphism: the object classes as
+ * which it may be viewed. MATCHES FOR EQUALITY, SET-COMPARISON,
+ * SET-INTERSECTION. `{smi2AttributeID 50}`. ITU-T Rec. X.721 (02/92) §10.7.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

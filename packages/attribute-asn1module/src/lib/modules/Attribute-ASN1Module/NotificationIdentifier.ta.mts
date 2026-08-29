@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NotificationIdentifier
  * @description
  * 
+ * Unique identifier of a notification so others can cite it in
+ * `CorrelatedNotifications`. Reuse only when no requirement remains to
+ * correlate a prior notification. MATCHES FOR EQUALITY. `{smi2AttributeID 16}`.
+ * ITU-T Rec. X.721 (02/92) §8.7, §10.7.1.11, §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

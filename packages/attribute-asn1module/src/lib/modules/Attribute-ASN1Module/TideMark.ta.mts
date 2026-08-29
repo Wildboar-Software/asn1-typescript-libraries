@@ -15,6 +15,11 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
  * @summary TideMark
  * @description
  * 
+ * Direction of a tide-mark: records the maximum (`maxTideMar`, spec spelling)
+ * or minimum (`minTideMark`) reached by a related gauge. Other than on reset, a
+ * max mark only increases and a min mark only decreases. ITU-T Rec. X.721
+ * (02/92) §9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

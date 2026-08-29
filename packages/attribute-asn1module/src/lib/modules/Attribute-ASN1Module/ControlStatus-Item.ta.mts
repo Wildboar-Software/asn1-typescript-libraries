@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ControlStatus_Item
  * @description
  * 
+ * One member of `ControlStatus`. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type ControlStatus_Item = INTEGER;
 
 /**
  * @summary ControlStatus_Item_subjectToTest
+ * @description
+ *
+ * Resource is under test control. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +45,11 @@ const ControlStatus_Item_subjectToTest: ControlStatus_Item = 0; /* LONG_NAMED_IN
 
 /**
  * @summary ControlStatus_Item_subjectToTest
+ * @description
+ *
+ * Resource is under test control. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +58,11 @@ const subjectToTest: ControlStatus_Item = ControlStatus_Item_subjectToTest; /* S
 
 /**
  * @summary ControlStatus_Item_partOfServicesLocked
+ * @description
+ *
+ * Some of the resource's services are administratively locked. ITU-T Rec. X.721
+ * (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +71,11 @@ const ControlStatus_Item_partOfServicesLocked: ControlStatus_Item = 1; /* LONG_N
 
 /**
  * @summary ControlStatus_Item_partOfServicesLocked
+ * @description
+ *
+ * Some of the resource's services are administratively locked. ITU-T Rec. X.721
+ * (02/92) §14.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +84,11 @@ const partOfServicesLocked: ControlStatus_Item = ControlStatus_Item_partOfServic
 
 /**
  * @summary ControlStatus_Item_reservedForTest
+ * @description
+ *
+ * Resource is reserved for testing. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +97,11 @@ const ControlStatus_Item_reservedForTest: ControlStatus_Item = 2; /* LONG_NAMED_
 
 /**
  * @summary ControlStatus_Item_reservedForTest
+ * @description
+ *
+ * Resource is reserved for testing. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +110,11 @@ const reservedForTest: ControlStatus_Item = ControlStatus_Item_reservedForTest; 
 
 /**
  * @summary ControlStatus_Item_suspended
+ * @description
+ *
+ * Operation has been suspended. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +123,11 @@ const ControlStatus_Item_suspended: ControlStatus_Item = 3; /* LONG_NAMED_INTEGE
 
 /**
  * @summary ControlStatus_Item_suspended
+ * @description
+ *
+ * Operation has been suspended. ITU-T Rec. X.721 (02/92) §14.2; ITU-T Rec.
+ * X.731 | ISO/IEC 10164-2 §7.2.3.
+ *
  * @constant
  * @type {number}
  */

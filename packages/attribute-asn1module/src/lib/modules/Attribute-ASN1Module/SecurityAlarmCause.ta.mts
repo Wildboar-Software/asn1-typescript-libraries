@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SecurityAlarmCause
  * @description
  * 
+ * Cause of a security alarm (OID). Registered values are under
+ * `securityAlarmCause`. MATCHES FOR EQUALITY. `{smi2AttributeID 21}`. ITU-T
+ * Rec. X.721 (02/92) §10.7.1.16; ITU-T Rec. X.736 | ISO/IEC 10164-7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

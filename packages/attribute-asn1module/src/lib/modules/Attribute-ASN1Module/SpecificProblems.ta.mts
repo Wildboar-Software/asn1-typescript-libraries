@@ -15,6 +15,11 @@ import { SpecificIdentifier, _decode_SpecificIdentifier, _encode_SpecificIdentif
  * @summary SpecificProblems
  * @description
  * 
+ * Further qualification of `ProbableCause` (set of OID or int identifiers).
+ * MATCHES FOR EQUALITY, SET-COMPARISON, SET-INTERSECTION. `{smi2AttributeID
+ * 27}`. ITU-T Rec. X.721 (02/92) §10.7.1.22; ITU-T Rec. X.733 | ISO/IEC 10164-4
+ * §8.1.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

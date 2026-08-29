@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MaxLogSize
  * @description
  * 
+ * Maximum log size in octets. `unlimited(0)` denotes infinite size and is
+ * largest under ORDERING (otherwise as sequentially increasing positive
+ * integers). MATCHES FOR EQUALITY, ORDERING. `{smi2AttributeID 62}`. ITU-T Rec.
+ * X.721 (02/92) §10.7.4.14, §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,10 @@ type MaxLogSize = INTEGER;
 
 /**
  * @summary MaxLogSize_unlimited
+ * @description
+ *
+ * Infinite size; largest under ORDERING. ITU-T Rec. X.721 (02/92) §10.7.4.14.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +46,10 @@ const MaxLogSize_unlimited: MaxLogSize = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MaxLogSize_unlimited
+ * @description
+ *
+ * Infinite size; largest under ORDERING. ITU-T Rec. X.721 (02/92) §10.7.4.14.
+ *
  * @constant
  * @type {number}
  */

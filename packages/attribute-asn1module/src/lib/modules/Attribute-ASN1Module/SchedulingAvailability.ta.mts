@@ -15,6 +15,11 @@ import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilitySta
  * @summary SchedulingAvailability
  * @description
  * 
+ * `AvailabilityStatus` constrained to `offDuty`. Used by
+ * `availabilityStatusPackage` for scheduled on/off. ITU-T Rec. X.721 (02/92)
+ * §8.5, §14.2; ITU-T Rec. X.734 | ISO/IEC 10164-5; ITU-T Rec. X.735 | ISO/IEC
+ * 10164-6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

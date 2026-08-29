@@ -17,6 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SourceIndicator
  * @description
  *
+ * In notifications, whether the triggering operation was a resource operation,
+ * a management operation, or unknown. MATCHES FOR EQUALITY. `{smi2AttributeID
+ * 26}`. ITU-T Rec. X.721 (02/92) §8.11, §10.7.1.21; ITU-T Rec. X.730 | ISO/IEC
+ * 10164-1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,6 +42,11 @@ enum _enum_for_SourceIndicator {
  * @summary SourceIndicator
  * @description
  *
+ * In notifications, whether the triggering operation was a resource operation,
+ * a management operation, or unknown. MATCHES FOR EQUALITY. `{smi2AttributeID
+ * 26}`. ITU-T Rec. X.721 (02/92) §8.11, §10.7.1.21; ITU-T Rec. X.730 | ISO/IEC
+ * 10164-1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,6 +63,11 @@ type SourceIndicator = _enum_for_SourceIndicator;
  * @summary SourceIndicator
  * @description
  *
+ * In notifications, whether the triggering operation was a resource operation,
+ * a management operation, or unknown. MATCHES FOR EQUALITY. `{smi2AttributeID
+ * 26}`. ITU-T Rec. X.721 (02/92) §8.11, §10.7.1.21; ITU-T Rec. X.730 | ISO/IEC
+ * 10164-1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -67,6 +82,11 @@ const SourceIndicator = _enum_for_SourceIndicator;
 
 /**
  * @summary SourceIndicator_resourceOperation
+ * @description
+ *
+ * The change was caused by operation of the resource. ITU-T Rec. X.721 (02/92)
+ * §10.7.1.21; ITU-T Rec. X.730 | ISO/IEC 10164-1.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +95,11 @@ const SourceIndicator_resourceOperation: SourceIndicator = SourceIndicator.resou
 
 /**
  * @summary resourceOperation
+ * @description
+ *
+ * The change was caused by operation of the resource. ITU-T Rec. X.721 (02/92)
+ * §10.7.1.21; ITU-T Rec. X.730 | ISO/IEC 10164-1.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +108,11 @@ const resourceOperation: SourceIndicator = SourceIndicator.resourceOperation; /*
 
 /**
  * @summary SourceIndicator_managementOperation
+ * @description
+ *
+ * The change was caused by a management operation. ITU-T Rec. X.721 (02/92)
+ * §10.7.1.21; ITU-T Rec. X.730 | ISO/IEC 10164-1.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +121,11 @@ const SourceIndicator_managementOperation: SourceIndicator = SourceIndicator.man
 
 /**
  * @summary managementOperation
+ * @description
+ *
+ * The change was caused by a management operation. ITU-T Rec. X.721 (02/92)
+ * §10.7.1.21; ITU-T Rec. X.730 | ISO/IEC 10164-1.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +134,10 @@ const managementOperation: SourceIndicator = SourceIndicator.managementOperation
 
 /**
  * @summary SourceIndicator_unknown
+ * @description
+ *
+ * Source of the change is unknown. ITU-T Rec. X.721 (02/92) §10.7.1.21.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +146,10 @@ const SourceIndicator_unknown: SourceIndicator = SourceIndicator.unknown; /* LON
 
 /**
  * @summary unknown
+ * @description
+ *
+ * Source of the change is unknown. ITU-T Rec. X.721 (02/92) §10.7.1.21.
+ *
  * @constant
  * @type {number}
  */

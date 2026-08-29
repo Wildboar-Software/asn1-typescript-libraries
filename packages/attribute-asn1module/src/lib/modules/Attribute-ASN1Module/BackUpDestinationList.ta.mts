@@ -15,6 +15,11 @@ import { AE_title, _decode_AE_title, _encode_AE_title } from "@wildboar/acse";
  * @summary BackUpDestinationList
  * @description
  *
+ * Ordered AE-titles used as backup destinations by an event-forwarding
+ * discriminator. After Cor.1, MATCHES FOR EQUALITY only. `{smi2AttributeID
+ * 51}`. ITU-T Rec. X.721 (02/92) §10.7.4.3 and Cor.1; ITU-T Rec. X.734 |
+ * ISO/IEC 10164-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

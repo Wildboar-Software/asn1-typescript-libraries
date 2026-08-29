@@ -15,6 +15,11 @@ import { AE_title, _decode_AE_title, _encode_AE_title } from "@wildboar/acse";
  * @summary Destination
  * @description
  *
+ * One AE-title or a set of AE-titles to which event reports are sent. AE-title
+ * syntax is that of X.227 / ISO 8650, not ANY. MATCHES FOR EQUALITY.
+ * `{smi2AttributeID 55}`. ITU-T Rec. X.721 (02/92) §10.7.4.7, §14.2; ITU-T Rec.
+ * X.734 | ISO/IEC 10164-5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

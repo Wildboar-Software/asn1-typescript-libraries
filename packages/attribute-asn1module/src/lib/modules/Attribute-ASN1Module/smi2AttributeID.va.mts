@@ -18,6 +18,10 @@ import {
  * @summary smi2AttributeID
  * @description
  * 
+ * Arc for DMI attribute OIDs: `{joint-iso-itu-t ms(9) smi(3) part2(2)
+ * attribute(7)}`. Specific attributes are `{smi2AttributeID n}`. ITU-T Rec.
+ * X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

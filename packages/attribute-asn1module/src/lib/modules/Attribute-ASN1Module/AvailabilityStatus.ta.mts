@@ -15,6 +15,12 @@ import { AvailabilityStatus_Item, _decode_AvailabilityStatus_Item, _encode_Avail
  * @summary AvailabilityStatus
  * @description
  * 
+ * Set of additional availability qualifications of the operational state
+ * (in-test, failed, power-off, etc.). `logFull` is from ITU-T Rec. X.735 |
+ * ISO/IEC 10164-6. MATCHES FOR EQUALITY, SET-COMPARISON, SET-INTERSECTION.
+ * `{smi2AttributeID 33}`. ITU-T Rec. X.721 (02/92) §8.5, §10.7.2.3, §14.2;
+ * ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

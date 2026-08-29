@@ -15,6 +15,10 @@ import { securityAlarmCause } from "../Attribute-ASN1Module/securityAlarmCause.v
  * @summary proceduralError
  * @description
  * 
+ * Registered `SecurityAlarmCause` `{securityAlarmCause 15}`. Typical with the
+ * X.736 operationalViolation notification. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.736 | ISO/IEC 10164-7 §8.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

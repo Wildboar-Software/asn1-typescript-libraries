@@ -15,6 +15,12 @@ import { SupportedFeatures_Item, _decode_SupportedFeatures_Item, _encode_Support
  * @summary SupportedFeatures
  * @description
  * 
+ * Set of features in the system that can be managed. Each feature's
+ * registration (by its development authority) typically points at a
+ * specification of what can be managed. MATCHES FOR SET-COMPARISON,
+ * SET-INTERSECTION, EQUALITY. `{smi2AttributeID 70}`. ITU-T Rec. X.721 (02/92)
+ * §10.7.4.22.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

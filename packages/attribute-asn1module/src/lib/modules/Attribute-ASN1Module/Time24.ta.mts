@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Time24
  * @description
  * 
+ * Time of day as hour 0..23 and minute 0..59. ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +34,20 @@ class Time24 {
     constructor (
         /**
          * @summary `hour`.
+         * @description
+         *
+         * 0..23. ITU-T Rec. X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */
         readonly hour: INTEGER,
         /**
          * @summary `minute`.
+         * @description
+         *
+         * 0..59. ITU-T Rec. X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */

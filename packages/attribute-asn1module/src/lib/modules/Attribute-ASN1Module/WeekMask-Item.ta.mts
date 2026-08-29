@@ -16,6 +16,9 @@ import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "
  * @summary WeekMask_Item
  * @description
  * 
+ * One weekly-schedule row: a 7-bit day mask plus the intervals that apply on
+ * those days. ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +31,21 @@ class WeekMask_Item {
     constructor (
         /**
          * @summary `daysOfWeek`.
+         * @description
+         *
+         * SIZE(7) bit string: bit 0 Sunday through bit 6 Saturday. ITU-T Rec.
+         * X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */
         readonly daysOfWeek: WeekMask_Item_daysOfWeek,
         /**
          * @summary `intervalsOfDay`.
+         * @description
+         *
+         * Time windows on the selected days. ITU-T Rec. X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */

@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NumberOfRecords
  * @description
  * 
+ * Count of records currently in the log. MATCHES FOR EQUALITY, ORDERING.
+ * `{smi2AttributeID 64}`. ITU-T Rec. X.721 (02/92) §10.7.4.16; ITU-T Rec. X.735
+ * | ISO/IEC 10164-6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

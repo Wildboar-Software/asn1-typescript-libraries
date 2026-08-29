@@ -15,6 +15,10 @@ import { ProceduralStatus_Item, _decode_ProceduralStatus_Item, _encode_Procedura
  * @summary ProceduralStatus
  * @description
  * 
+ * Set of initialization / reporting / termination phases. MATCHES FOR EQUALITY,
+ * SET-COMPARISON, SET-INTERSECTION. `{smi2AttributeID 36}`. ITU-T Rec. X.721
+ * (02/92) §10.7.2.6; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

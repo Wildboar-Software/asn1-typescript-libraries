@@ -15,6 +15,11 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar
  * @summary AttributeIdentifierList
  * @description
  *
+ * Set of attribute IDs. Used in object-management, state, and
+ * relationship-change notifications to name which attributes changed. MATCHES
+ * FOR EQUALITY, SET-COMPARISON, SET-INTERSECTION. `{smi2AttributeID 8}`. ITU-T
+ * Rec. X.721 (02/92) §8.3, §10.7.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

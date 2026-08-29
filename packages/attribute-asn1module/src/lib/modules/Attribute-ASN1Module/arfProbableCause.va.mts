@@ -18,6 +18,10 @@ import {
  * @summary arfProbableCause
  * @description
  * 
+ * Arc for the X.733 alarm-reporting-function probable-cause values:
+ * `{joint-iso-ccitt ms(9) smi(3) part2(2) standardSpecificExtension(0)
+ * arf(0)}`. ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

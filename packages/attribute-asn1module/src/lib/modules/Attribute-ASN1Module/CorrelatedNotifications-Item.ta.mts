@@ -17,6 +17,9 @@ import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "
  * @summary CorrelatedNotifications_Item
  * @description
  *
+ * One correlated-notification group. Names may be omitted when they are the
+ * same managed object. ITU-T Rec. X.721 (02/92) §10.7.1.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +32,22 @@ class CorrelatedNotifications_Item {
     constructor (
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * `NotificationIdentifier` values of the related notifications. ITU-T
+         * Rec. X.721 (02/92) §10.7.1.7.
+         *
          * @public
          * @readonly
          */
         readonly correlatedNotifications: NotificationIdentifier[],
         /**
          * @summary `sourceObjectInst`.
+         * @description
+         *
+         * Managed object that issued those notifications, if not this object.
+         * ITU-T Rec. X.721 (02/92) §10.7.1.7.
+         *
          * @public
          * @readonly
          */

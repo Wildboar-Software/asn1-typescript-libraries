@@ -14,6 +14,9 @@ import { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1M
  * @summary defaultStopTime
  * @description
  * 
+ * `continual:NULL` — no scheduled stop. DEFAULT VALUE of `stopTime` in the
+ * duration package. ITU-T Rec. X.721 (02/92) §8.9, §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,13 @@ import { GaugeThreshold_Item, _decode_GaugeThreshold_Item, _encode_GaugeThreshol
  * @summary GaugeThreshold
  * @description
  * 
+ * Set of high/low pairs that generate notifications from a gauge, with
+ * hysteresis so small oscillations around a level do not retrigger.
+ * `notifyHigh` ≥ `notifyLow`, same numeric type as the gauge. After a high
+ * crossing, further high crossings are suppressed until the gauge falls to or
+ * below the low; symmetrically for low crossings. Arm-time is when notification
+ * is re-enabled. MATCHES FOR EQUALITY. ITU-T Rec. X.721 (02/92) §9.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

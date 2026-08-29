@@ -15,6 +15,10 @@ import { AlarmStatus_Item, _decode_AlarmStatus_Item, _encode_AlarmStatus_Item } 
  * @summary AlarmStatus
  * @description
  * 
+ * Set of outstanding alarm conditions on the resource. MATCHES FOR EQUALITY,
+ * SET-COMPARISON, SET-INTERSECTION. `{smi2AttributeID 32}`. ITU-T Rec. X.721
+ * (02/92) §10.7.2.2; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

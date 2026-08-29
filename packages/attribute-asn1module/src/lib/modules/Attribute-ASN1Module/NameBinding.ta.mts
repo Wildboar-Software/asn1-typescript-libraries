@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NameBinding
  * @description
  * 
+ * Present in every managed object: OID of the name binding used at
+ * instantiation. MATCHES FOR EQUALITY. `{smi2AttributeID 63}`. ITU-T Rec. X.721
+ * (02/92) §10.7.4.15; ITU-T Rec. X.720 | ISO/IEC 10165-1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,11 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
  * @summary AdditionalInformation
  * @description
  * 
+ * Set of `ManagementExtension` values supplying extra data in notifications.
+ * Semantics: Additional Information parameter of ITU-T Rec. X.733 | ISO/IEC
+ * 10164-4. GET in `additionalInformationPackage`. `{smi2AttributeID 6}`. ITU-T
+ * Rec. X.721 (02/92) §8.1, §10.7.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

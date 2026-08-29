@@ -20,6 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SystemId
  * @description
  * 
+ * Optional naming attribute of `system`. `nothing` when the system is not
+ * identified by name or number. MATCHES FOR EQUALITY. `{smi2AttributeID 4}`.
+ * ITU-T Rec. X.721 (02/92) §10.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

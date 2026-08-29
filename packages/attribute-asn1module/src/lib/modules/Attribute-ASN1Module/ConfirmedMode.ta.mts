@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ConfirmedMode
  * @description
  * 
+ * TRUE means event reports from this discriminator / forwarding object use
+ * confirmed mode. MATCHES FOR EQUALITY. `{smi2AttributeID 53}`. ITU-T Rec.
+ * X.721 (02/92) §10.7.4.5, §14.2; ITU-T Rec. X.734 | ISO/IEC 10164-5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

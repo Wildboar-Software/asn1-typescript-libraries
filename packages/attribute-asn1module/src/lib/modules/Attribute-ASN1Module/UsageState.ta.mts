@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UsageState
  * @description
  *
+ * Whether the resource is idle, serving users with spare capacity, or fully
+ * occupied. MATCHES FOR EQUALITY. `{smi2AttributeID 39}`. ITU-T Rec. X.721
+ * (02/92) §10.7.2.9; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +40,10 @@ enum _enum_for_UsageState {
  * @summary UsageState
  * @description
  *
+ * Whether the resource is idle, serving users with spare capacity, or fully
+ * occupied. MATCHES FOR EQUALITY. `{smi2AttributeID 39}`. ITU-T Rec. X.721
+ * (02/92) §10.7.2.9; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +59,10 @@ type UsageState = _enum_for_UsageState;
  * @summary UsageState
  * @description
  *
+ * Whether the resource is idle, serving users with spare capacity, or fully
+ * occupied. MATCHES FOR EQUALITY. `{smi2AttributeID 39}`. ITU-T Rec. X.721
+ * (02/92) §10.7.2.9; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +76,11 @@ const UsageState = _enum_for_UsageState;
 
 /**
  * @summary UsageState_idle
+ * @description
+ *
+ * Resource is not currently in use. ITU-T Rec. X.721 (02/92) §10.7.2.9; ITU-T
+ * Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +89,11 @@ const UsageState_idle: UsageState = UsageState.idle; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary idle
+ * @description
+ *
+ * Resource is not currently in use. ITU-T Rec. X.721 (02/92) §10.7.2.9; ITU-T
+ * Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +102,11 @@ const idle: UsageState = UsageState.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UsageState_active
+ * @description
+ *
+ * In use, with spare capacity for additional users. ITU-T Rec. X.721 (02/92)
+ * §10.7.2.9; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +115,11 @@ const UsageState_active: UsageState = UsageState.active; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary active
+ * @description
+ *
+ * In use, with spare capacity for additional users. ITU-T Rec. X.721 (02/92)
+ * §10.7.2.9; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +128,11 @@ const active: UsageState = UsageState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UsageState_busy
+ * @description
+ *
+ * In use, with no spare capacity for additional users. ITU-T Rec. X.721 (02/92)
+ * §10.7.2.9; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +141,11 @@ const UsageState_busy: UsageState = UsageState.busy; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary busy
+ * @description
+ *
+ * In use, with no spare capacity for additional users. ITU-T Rec. X.721 (02/92)
+ * §10.7.2.9; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.3.
+ *
  * @constant
  * @type {number}
  */

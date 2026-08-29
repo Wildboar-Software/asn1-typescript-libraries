@@ -15,6 +15,10 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "@wildboar/cmip"
  * @summary MonitoredAttributes
  * @description
  *
+ * Set of attributes and values of the managed object at the time of an alarm.
+ * Semantics: Monitored Attributes of ITU-T Rec. X.733 | ISO/IEC 10164-4.
+ * `{smi2AttributeID 15}`. ITU-T Rec. X.721 (02/92) §10.7.1.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

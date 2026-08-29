@@ -15,6 +15,10 @@ import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "
  * @summary GroupObjects
  * @description
  *
+ * Set of managed-object instances. Used by `member` and `owner`. MATCHES FOR
+ * EQUALITY, SET-COMPARISON, SET-INTERSECTION. ITU-T Rec. X.721 (02/92)
+ * §10.7.3.3–§10.7.3.4; ITU-T Rec. X.732 | ISO/IEC 10164-3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

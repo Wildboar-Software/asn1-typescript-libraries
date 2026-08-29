@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SimpleNameType
  * @description
  * 
+ * Naming syntax for `discriminatorId` and `logId`. String choice MATCHES FOR
+ * SUBSTRINGS; number choice MATCHES FOR ORDERING (`rDNIdBehaviour`). ITU-T Rec.
+ * X.721 (02/92) §10.1.1–§10.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

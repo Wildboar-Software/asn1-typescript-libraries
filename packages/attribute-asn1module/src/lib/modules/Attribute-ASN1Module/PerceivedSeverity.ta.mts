@@ -17,6 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PerceivedSeverity
  * @description
  *
+ * Perceived severity of an alarm. `indeterminate` when none of the other values
+ * can be assigned. Semantics: ITU-T Rec. X.733 | ISO/IEC 10164-4 Perceived
+ * Severity. MATCHES FOR EQUALITY. `{smi2AttributeID 17}`. ITU-T Rec. X.721
+ * (02/92) §10.7.1.12, §14.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,6 +47,11 @@ enum _enum_for_PerceivedSeverity {
  * @summary PerceivedSeverity
  * @description
  *
+ * Perceived severity of an alarm. `indeterminate` when none of the other values
+ * can be assigned. Semantics: ITU-T Rec. X.733 | ISO/IEC 10164-4 Perceived
+ * Severity. MATCHES FOR EQUALITY. `{smi2AttributeID 17}`. ITU-T Rec. X.721
+ * (02/92) §10.7.1.12, §14.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,6 +70,11 @@ type PerceivedSeverity = _enum_for_PerceivedSeverity;
  * @summary PerceivedSeverity
  * @description
  *
+ * Perceived severity of an alarm. `indeterminate` when none of the other values
+ * can be assigned. Semantics: ITU-T Rec. X.733 | ISO/IEC 10164-4 Perceived
+ * Severity. MATCHES FOR EQUALITY. `{smi2AttributeID 17}`. ITU-T Rec. X.721
+ * (02/92) §10.7.1.12, §14.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -76,6 +91,11 @@ const PerceivedSeverity = _enum_for_PerceivedSeverity;
 
 /**
  * @summary PerceivedSeverity_indeterminate
+ * @description
+ *
+ * None of the other values can be assigned. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +104,11 @@ const PerceivedSeverity_indeterminate: PerceivedSeverity = PerceivedSeverity.ind
 
 /**
  * @summary indeterminate
+ * @description
+ *
+ * None of the other values can be assigned. ITU-T Rec. X.721 (02/92) §14.2;
+ * ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +117,11 @@ const indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* SHO
 
 /**
  * @summary PerceivedSeverity_critical
+ * @description
+ *
+ * Service-affecting condition; immediate corrective action required. ITU-T Rec.
+ * X.721 (02/92) §10.7.1.12; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +130,11 @@ const PerceivedSeverity_critical: PerceivedSeverity = PerceivedSeverity.critical
 
 /**
  * @summary critical
+ * @description
+ *
+ * Service-affecting condition; immediate corrective action required. ITU-T Rec.
+ * X.721 (02/92) §10.7.1.12; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +143,11 @@ const critical: PerceivedSeverity = PerceivedSeverity.critical; /* SHORT_NAMED_E
 
 /**
  * @summary PerceivedSeverity_major
+ * @description
+ *
+ * Service-affecting condition; urgent corrective action required. ITU-T Rec.
+ * X.721 (02/92) §10.7.1.12; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +156,11 @@ const PerceivedSeverity_major: PerceivedSeverity = PerceivedSeverity.major; /* L
 
 /**
  * @summary major
+ * @description
+ *
+ * Service-affecting condition; urgent corrective action required. ITU-T Rec.
+ * X.721 (02/92) §10.7.1.12; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -124,6 +169,12 @@ const major: PerceivedSeverity = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary PerceivedSeverity_minor
+ * @description
+ *
+ * Not currently service-affecting; corrective action needed to stop a more
+ * serious fault. ITU-T Rec. X.721 (02/92) §10.7.1.12; ITU-T Rec. X.733 |
+ * ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -132,6 +183,12 @@ const PerceivedSeverity_minor: PerceivedSeverity = PerceivedSeverity.minor; /* L
 
 /**
  * @summary minor
+ * @description
+ *
+ * Not currently service-affecting; corrective action needed to stop a more
+ * serious fault. ITU-T Rec. X.721 (02/92) §10.7.1.12; ITU-T Rec. X.733 |
+ * ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -140,6 +197,12 @@ const minor: PerceivedSeverity = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary PerceivedSeverity_warning
+ * @description
+ *
+ * Potential or impending service-affecting fault; diagnose and correct to
+ * prevent degradation. ITU-T Rec. X.721 (02/92) §10.7.1.12; ITU-T Rec. X.733 |
+ * ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -148,6 +211,12 @@ const PerceivedSeverity_warning: PerceivedSeverity = PerceivedSeverity.warning; 
 
 /**
  * @summary warning
+ * @description
+ *
+ * Potential or impending service-affecting fault; diagnose and correct to
+ * prevent degradation. ITU-T Rec. X.721 (02/92) §10.7.1.12; ITU-T Rec. X.733 |
+ * ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -156,6 +225,11 @@ const warning: PerceivedSeverity = PerceivedSeverity.warning; /* SHORT_NAMED_ENU
 
 /**
  * @summary PerceivedSeverity_cleared
+ * @description
+ *
+ * Clears one or more previously reported alarms. ITU-T Rec. X.721 (02/92)
+ * §10.7.1.12; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -164,6 +238,11 @@ const PerceivedSeverity_cleared: PerceivedSeverity = PerceivedSeverity.cleared; 
 
 /**
  * @summary cleared
+ * @description
+ *
+ * Clears one or more previously reported alarms. ITU-T Rec. X.721 (02/92)
+ * §10.7.1.12; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.3.
+ *
  * @constant
  * @type {number}
  */

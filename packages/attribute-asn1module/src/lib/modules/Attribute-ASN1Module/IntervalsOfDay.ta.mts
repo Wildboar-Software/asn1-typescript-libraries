@@ -15,6 +15,11 @@ import { IntervalsOfDay_Item, _decode_IntervalsOfDay_Item, _encode_IntervalsOfDa
  * @summary IntervalsOfDay
  * @description
  * 
+ * Set of daily time windows. Used by daily and weekly scheduling. Default is
+ * 00:00–23:59. `{smi2AttributeID 57}`. ITU-T Rec. X.721 (02/92) §8.8,
+ * §10.7.4.9; ITU-T Rec. X.734 | ISO/IEC 10164-5; ITU-T Rec. X.735 | ISO/IEC
+ * 10164-6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

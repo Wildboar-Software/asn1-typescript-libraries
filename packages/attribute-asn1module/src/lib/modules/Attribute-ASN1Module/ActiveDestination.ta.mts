@@ -15,6 +15,11 @@ import { Destination, _decode_Destination, _encode_Destination } from "../Attrib
  * @summary ActiveDestination
  * @description
  * 
+ * `Destination` constrained to a single AE-title (the destination currently in
+ * use by an event-forwarding discriminator). MATCHES FOR EQUALITY.
+ * `{smi2AttributeID 49}`. ITU-T Rec. X.721 (02/92) §10.7.4.1; ITU-T Rec. X.734
+ * | ISO/IEC 10164-5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AdministrativeState
  * @description
  *
+ * Manager's permission for the resource to provide service. Independent of
+ * operational/usage state. MATCHES FOR EQUALITY. `{smi2AttributeID 31}`. ITU-T
+ * Rec. X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +40,10 @@ enum _enum_for_AdministrativeState {
  * @summary AdministrativeState
  * @description
  *
+ * Manager's permission for the resource to provide service. Independent of
+ * operational/usage state. MATCHES FOR EQUALITY. `{smi2AttributeID 31}`. ITU-T
+ * Rec. X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +59,10 @@ type AdministrativeState = _enum_for_AdministrativeState;
  * @summary AdministrativeState
  * @description
  *
+ * Manager's permission for the resource to provide service. Independent of
+ * operational/usage state. MATCHES FOR EQUALITY. `{smi2AttributeID 31}`. ITU-T
+ * Rec. X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +76,12 @@ const AdministrativeState = _enum_for_AdministrativeState;
 
 /**
  * @summary AdministrativeState_locked
+ * @description
+ *
+ * Resource is administratively prohibited from performing services for users.
+ * ITU-T Rec. X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2
+ * §7.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +90,12 @@ const AdministrativeState_locked: AdministrativeState = AdministrativeState.lock
 
 /**
  * @summary locked
+ * @description
+ *
+ * Resource is administratively prohibited from performing services for users.
+ * ITU-T Rec. X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2
+ * §7.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +104,11 @@ const locked: AdministrativeState = AdministrativeState.locked; /* SHORT_NAMED_E
 
 /**
  * @summary AdministrativeState_unlocked
+ * @description
+ *
+ * Resource is administratively permitted to perform services for users. ITU-T
+ * Rec. X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +117,11 @@ const AdministrativeState_unlocked: AdministrativeState = AdministrativeState.un
 
 /**
  * @summary unlocked
+ * @description
+ *
+ * Resource is administratively permitted to perform services for users. ITU-T
+ * Rec. X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +130,11 @@ const unlocked: AdministrativeState = AdministrativeState.unlocked; /* SHORT_NAM
 
 /**
  * @summary AdministrativeState_shuttingDown
+ * @description
+ *
+ * Existing users may finish; new users are administratively refused. ITU-T Rec.
+ * X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +143,11 @@ const AdministrativeState_shuttingDown: AdministrativeState = AdministrativeStat
 
 /**
  * @summary shuttingDown
+ * @description
+ *
+ * Existing users may finish; new users are administratively refused. ITU-T Rec.
+ * X.721 (02/92) §10.7.2.1; ITU-T Rec. X.731 | ISO/IEC 10164-2 §7.1.1.
+ *
  * @constant
  * @type {number}
  */

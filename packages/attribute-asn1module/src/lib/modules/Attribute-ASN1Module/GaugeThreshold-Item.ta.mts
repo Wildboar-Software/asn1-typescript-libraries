@@ -15,6 +15,8 @@ import { NotifyThreshold, _decode_NotifyThreshold, _encode_NotifyThreshold } fro
  * @summary GaugeThreshold_Item
  * @description
  * 
+ * One hysteresis pair of a `GaugeThreshold`. ITU-T Rec. X.721 (02/92) §9.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +29,24 @@ class GaugeThreshold_Item {
     constructor (
         /**
          * @summary `notifyLow`.
+         * @description
+         *
+         * Level the gauge must fall to or below (negative-going) to optionally
+         * notify; subsequent lows are ignored until the high is crossed. ITU-T
+         * Rec. X.721 (02/92) §9.3.2.
+         *
          * @public
          * @readonly
          */
         readonly notifyLow: NotifyThreshold,
         /**
          * @summary `notifyHigh`.
+         * @description
+         *
+         * Level the gauge must reach or exceed (positive-going) to optionally
+         * notify; subsequent highs are ignored until the low is crossed. Must
+         * be ≥ `notifyLow`. ITU-T Rec. X.721 (02/92) §9.3.2.
+         *
          * @public
          * @readonly
          */

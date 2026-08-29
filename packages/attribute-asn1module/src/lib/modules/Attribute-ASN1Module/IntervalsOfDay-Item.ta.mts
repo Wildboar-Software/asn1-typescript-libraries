@@ -15,6 +15,9 @@ import { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/
  * @summary IntervalsOfDay_Item
  * @description
  * 
+ * One daily interval. Start is the beginning of that minute; end is the end of
+ * that minute. ITU-T Rec. X.721 (02/92) §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +30,21 @@ class IntervalsOfDay_Item {
     constructor (
         /**
          * @summary `intervalStart`.
+         * @description
+         *
+         * Inclusive start (beginning of this minute). ITU-T Rec. X.721 (02/92)
+         * §14.2.
+         *
          * @public
          * @readonly
          */
         readonly intervalStart: Time24,
         /**
          * @summary `intervalEnd`.
+         * @description
+         *
+         * Inclusive end (end of this minute). ITU-T Rec. X.721 (02/92) §14.2.
+         *
          * @public
          * @readonly
          */

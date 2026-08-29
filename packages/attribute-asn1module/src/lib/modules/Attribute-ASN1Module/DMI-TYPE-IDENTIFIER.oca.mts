@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DMI_TYPE_IDENTIFIER
  * @description
  * 
+ * Open-type CLASS added by X.721 Technical Corrigendum 4 (ASN.1:1997). Unique
+ * `&id` plus associated `&Value`. Used as `DMI-EXTENSION`, `DMI-SERVICEUSER`,
+ * and `DMI-SUPPORTEDFEATURES`. ITU-T Rec. X.721 (02/92) Cor.4 §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,10 +57,19 @@ interface DMI_TYPE_IDENTIFIER<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique object identifier of this information-object instance. ITU-T Rec.
+     * X.721 (02/92) Cor.4 §14.2.
+     *
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
      * @summary &Value
+     * @description
+     *
+     * Open type selected by `&id`. ITU-T Rec. X.721 (02/92) Cor.4 §14.2.
+     *
      */
     readonly "&Value": Value;
 };
