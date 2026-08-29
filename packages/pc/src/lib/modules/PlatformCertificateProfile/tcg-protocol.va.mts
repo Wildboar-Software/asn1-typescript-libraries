@@ -14,7 +14,10 @@ import { tcg } from "../PlatformCertificateProfile/tcg.va.mjs";
 /**
  * @summary tcg_protocol
  * @description
- * 
+ *
+ * Arc for TCG protocol OIDs (`{ tcg 3 }`). TCG Platform
+ * Certificate Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

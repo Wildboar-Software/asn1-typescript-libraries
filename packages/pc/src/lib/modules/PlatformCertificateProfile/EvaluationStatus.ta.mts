@@ -17,6 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EvaluationStatus
  * @description
  *
+ * Status of the TBB's Common Criteria evaluation. TCG Platform
+ * Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +42,9 @@ enum _enum_for_EvaluationStatus {
  * @summary EvaluationStatus
  * @description
  *
+ * Status of the TBB's Common Criteria evaluation. TCG Platform
+ * Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,6 +63,9 @@ type EvaluationStatus = _enum_for_EvaluationStatus;
  * @summary EvaluationStatus
  * @description
  *
+ * Status of the TBB's Common Criteria evaluation. TCG Platform
+ * Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -73,6 +82,10 @@ const EvaluationStatus = _enum_for_EvaluationStatus;
 
 /**
  * @summary EvaluationStatus_designedToMeet
+ * @description
+ *
+ * Designed to meet the claimed CC profile/target. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +94,10 @@ const EvaluationStatus_designedToMeet: EvaluationStatus = EvaluationStatus.desig
 
 /**
  * @summary designedToMeet
+ * @description
+ *
+ * Designed to meet the claimed CC profile/target. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +106,10 @@ const designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* SHO
 
 /**
  * @summary EvaluationStatus_evaluationInProgress
+ * @description
+ *
+ * CC evaluation is in progress. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +118,10 @@ const EvaluationStatus_evaluationInProgress: EvaluationStatus = EvaluationStatus
 
 /**
  * @summary evaluationInProgress
+ * @description
+ *
+ * CC evaluation is in progress. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +130,10 @@ const evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProg
 
 /**
  * @summary EvaluationStatus_evaluationCompleted
+ * @description
+ *
+ * CC evaluation has completed. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +142,10 @@ const EvaluationStatus_evaluationCompleted: EvaluationStatus = EvaluationStatus.
 
 /**
  * @summary evaluationCompleted
+ * @description
+ *
+ * CC evaluation has completed. §3.1.1.
+ *
  * @constant
  * @type {number}
  */

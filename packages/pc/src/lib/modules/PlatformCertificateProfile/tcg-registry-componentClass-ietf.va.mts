@@ -14,7 +14,12 @@ import { tcg_registry_componentClass } from "../PlatformCertificateProfile/tcg-r
 /**
  * @summary tcg_registry_componentClass_ietf
  * @description
- * 
+ *
+ * IETF component-class registry
+ * (`{ tcg-registry-componentClass 2 }`). Refers to IETF RFC 8348
+ * IANA Hardware Class. TCG Platform Certificate Profile v1.1 r19
+ * §3.1.6, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

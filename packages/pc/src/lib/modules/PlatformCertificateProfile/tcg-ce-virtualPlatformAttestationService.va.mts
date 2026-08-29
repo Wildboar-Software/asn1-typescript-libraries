@@ -14,7 +14,12 @@ import { tcg_ce } from "../PlatformCertificateProfile/tcg-ce.va.mjs";
 /**
  * @summary tcg_ce_virtualPlatformAttestationService
  * @description
- * 
+ *
+ * TCG certificate-extension OID (`{ tcg-ce 4 }`). Assigned in §4
+ * under "TCG Certificate Extensions"; this profile does not
+ * specify its contents or criticality. TCG Platform Certificate
+ * Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

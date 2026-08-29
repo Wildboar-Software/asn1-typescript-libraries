@@ -14,7 +14,12 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tcgCredentialType
  * @description
- * 
+ *
+ * Certificate-type attribute (`{ tcg-attribute 25 }`). Distinguishes
+ * Platform vs Delta attribute certificates. SHOULD appear in a
+ * Platform Certificate. MUST appear in a Delta. TCG Platform
+ * Certificate Profile v1.1 r19 §3.1.4, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

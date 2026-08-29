@@ -23,6 +23,11 @@ import { tcg_at_platformManufacturerStr } from "../PlatformCertificateProfile/tc
  * @summary platformManufacturerStr
  * @description
  *
+ * Platform manufacturer name as a UTF-8 string. MUST appear as an
+ * RDN in subject alternative name. In a Delta, MUST equal the base
+ * certificate. Bounded by `strmax`. TCG Platform Certificate
+ * Profile v1.1 r19 §2.1.5.3, §3.1.2, §3.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

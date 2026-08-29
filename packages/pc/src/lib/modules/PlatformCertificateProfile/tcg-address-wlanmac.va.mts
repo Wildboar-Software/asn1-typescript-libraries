@@ -14,7 +14,11 @@ import { tcg_address } from "../PlatformCertificateProfile/tcg-address.va.mjs";
 /**
  * @summary tcg_address_wlanmac
  * @description
- * 
+ *
+ * WLAN MAC address type (`{ tcg-address 2 }`). Used as
+ * `AddressType` in `ComponentAddress`. TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.6, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

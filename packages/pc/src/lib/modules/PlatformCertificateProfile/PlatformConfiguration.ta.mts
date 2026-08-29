@@ -18,6 +18,16 @@ import { Properties, _decode_Properties, _encode_Properties } from "../PlatformC
  * @summary PlatformConfiguration
  * @description
  *
+ * Non-security platform properties: component identifiers, a URI
+ * for that list, issuer-chosen properties, and a URI describing
+ * those properties. MAY appear in a Platform Certificate. In a
+ * Delta Platform Certificate, include only fields that changed
+ * relative to the base certificate, and MUST set `status` on
+ * those entries. Identified by `tcg-at-platformConfiguration-v2`.
+ * If a later profile changes existing field semantics, the OID
+ * becomes `tcg-at-platformConfiguration-v3`. TCG Platform
+ * Certificate Profile v1.1 r19 §2.1.5.14, §3.1.6, Table 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,24 +44,47 @@ class PlatformConfiguration {
     constructor (
         /**
          * @summary `componentIdentifiers`.
+         * @description
+         *
+         * Components that constitute the platform. The issuer MUST
+         * include class, manufacturer, and model for each; serial,
+         * revision, manufacturer IANA PEN, FRU flag, addresses,
+         * and component Platform Certificate are optional. §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly componentIdentifiers?: OPTIONAL<ComponentIdentifier[]>,
         /**
          * @summary `componentIdentifiersUri`.
+         * @description
+         *
+         * URI where the component-identifier list may be obtained.
+         * §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly componentIdentifiersUri?: OPTIONAL<URIReference>,
         /**
          * @summary `platformProperties`.
+         * @description
+         *
+         * Issuer-chosen characteristics of interest to the consumer.
+         * This profile does not prescribe which names or values to
+         * include. §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly platformProperties?: OPTIONAL<Properties[]>,
         /**
          * @summary `platformPropertiesUri`.
+         * @description
+         *
+         * URI where the issuer MAY publish the `propertyName` list
+         * and its semantics. §3.1.6.
+         *
          * @public
          * @readonly
          */

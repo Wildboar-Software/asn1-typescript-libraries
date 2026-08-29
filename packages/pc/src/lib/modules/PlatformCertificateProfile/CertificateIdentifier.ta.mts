@@ -23,6 +23,11 @@ import {
  * @summary CertificateIdentifier
  * @description
  *
+ * Reference to a component's Platform Certificate. The issuer
+ * MUST include `attributeCertIdentifier` or
+ * `genericCertIdentifier` so a verifier can walk the certificate
+ * tree. TCG Platform Certificate Profile v1.1 r19 §3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +42,22 @@ class CertificateIdentifier {
     constructor (
         /**
          * @summary `attributeCertIdentifier`.
+         * @description
+         *
+         * Hash over the referenced attribute certificate's
+         * `signatureValue`. §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly attributeCertIdentifier?: OPTIONAL<AttributeCertificateIdentifier>,
         /**
          * @summary `genericCertIdentifier`.
+         * @description
+         *
+         * Issuer name and serial number of the referenced
+         * certificate (`IssuerSerial` from RFC 5755). §3.1.6.
+         *
          * @public
          * @readonly
          */

@@ -14,7 +14,10 @@ import { tcg_registry } from "../PlatformCertificateProfile/tcg-registry.va.mjs"
 /**
  * @summary tcg_registry_componentClass
  * @description
- * 
+ *
+ * Arc for component-class registries (`{ tcg-registry 3 }`). TCG
+ * Platform Certificate Profile v1.1 r19 §3.1.6, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

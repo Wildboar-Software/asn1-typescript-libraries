@@ -16,6 +16,14 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary AttributeCertificateIdentifier
  * @description
  *
+ * Identifies an attribute certificate by hashing its signature.
+ * `hashOverSignatureValue` is computed over the Platform
+ * Certificate's BIT STRING `signatureValue` (excluding tag,
+ * length, and unused-bits). Hash algorithm OIDs may be taken
+ * from RFC 3279, RFC 4055, SHA-3 PKIX identifiers, or
+ * GB/T 33560-2017. `AlgorithmIdentifier.parameters` SHOULD NOT
+ * be used. TCG Platform Certificate Profile v1.1 r19 §3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +38,24 @@ class AttributeCertificateIdentifier {
     constructor (
         /**
          * @summary `hashAlgorithm`.
+         * @description
+         *
+         * Hash algorithm used for `hashOverSignatureValue`, as
+         * RFC 5280 `AlgorithmIdentifier`. `parameters` SHOULD NOT
+         * be used. §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly hashAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `hashOverSignatureValue`.
+         * @description
+         *
+         * Digest of the referenced certificate's BIT STRING
+         * `signatureValue` (excluding tag, length, and unused-bits).
+         * §3.1.6.
+         *
          * @public
          * @readonly
          */

@@ -22,6 +22,11 @@ import { tcg_at_platformManufacturerId } from "../PlatformCertificateProfile/tcg
  * @summary platformManufacturerId
  * @description
  *
+ * Platform manufacturer IANA Private Enterprise Number. Optional
+ * SAN RDN. If included, SHALL be the manufacturer's PEN. In a
+ * Delta, MUST equal the base certificate. TCG Platform Certificate
+ * Profile v1.1 r19 §2.1.5.4, §3.1.2, §3.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

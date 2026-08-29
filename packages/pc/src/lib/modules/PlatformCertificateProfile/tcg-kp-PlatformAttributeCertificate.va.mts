@@ -14,7 +14,12 @@ import { tcg_kp } from "../PlatformCertificateProfile/tcg-kp.va.mjs";
 /**
  * @summary tcg_kp_PlatformAttributeCertificate
  * @description
- * 
+ *
+ * Key purpose / credential type: Platform Certificate in
+ * attribute-certificate format (`{ tcg-kp 2 }`). Used as
+ * `CredentialType` and as `tCGCredentialType`. TCG Platform
+ * Certificate Profile v1.1 r19 §3.1.4, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

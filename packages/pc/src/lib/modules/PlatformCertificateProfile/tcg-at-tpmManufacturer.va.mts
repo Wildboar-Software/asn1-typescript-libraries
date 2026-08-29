@@ -14,7 +14,13 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tpmManufacturer
  * @description
- * 
+ *
+ * TPM manufacturer name attribute (`{ tcg-attribute 1 }`).
+ * Documented for compatibility with earlier TCG/TCPA
+ * specifications; SHOULD NOT be included in Platform Certificates
+ * issued under this profile. TCG Platform Certificate Profile
+ * v1.1 r19 §3.2.10, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

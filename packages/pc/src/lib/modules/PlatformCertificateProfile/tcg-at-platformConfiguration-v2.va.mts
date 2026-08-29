@@ -14,7 +14,13 @@ import { tcg_at_platformConfiguration } from "../PlatformCertificateProfile/tcg-
 /**
  * @summary tcg_at_platformConfiguration_v2
  * @description
- * 
+ *
+ * Platform configuration attribute version 2
+ * (`{ tcg-at-platformConfiguration 2 }`). Current ID of the
+ * `platformConfiguration` ATTRIBUTE. A later incompatible change
+ * would become v3. TCG Platform Certificate Profile v1.1 r19
+ * §3.1.6, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

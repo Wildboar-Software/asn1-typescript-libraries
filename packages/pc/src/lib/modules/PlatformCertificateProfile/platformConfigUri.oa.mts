@@ -22,6 +22,11 @@ import { tcg_at_platformConfigUri } from "../PlatformCertificateProfile/tcg-at-p
  * @summary platformConfigUri
  * @description
  *
+ * URI where the verifier may obtain reference integrity
+ * measurements (vendor-specific format). MAY appear in a Platform
+ * Certificate. In a Delta, MAY appear only if the URI changed.
+ * TCG Platform Certificate Profile v1.1 r19 §2.1.5.15, §3.1.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

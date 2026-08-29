@@ -14,7 +14,11 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tpmIdLabel
  * @description
- * 
+ *
+ * TPM identity-label attribute (`{ tcg-attribute 15 }`). Assigned
+ * in §4; this profile does not specify its use in Platform
+ * Certificates. TCG Platform Certificate Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,12 @@ import { tcg_kp } from "../PlatformCertificateProfile/tcg-kp.va.mjs";
 /**
  * @summary tcg_kp_AIKCertificate
  * @description
- * 
+ *
+ * Key purpose: Attestation Identity Key certificate
+ * (`{ tcg-kp 3 }`). A Privacy-CA may copy Platform Certificate
+ * fields into an AK Certificate. TCG Platform Certificate
+ * Profile v1.1 r19 §2.1.1, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

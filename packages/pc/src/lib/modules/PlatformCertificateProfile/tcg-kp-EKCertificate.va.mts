@@ -14,7 +14,10 @@ import { tcg_kp } from "../PlatformCertificateProfile/tcg-kp.va.mjs";
 /**
  * @summary tcg_kp_EKCertificate
  * @description
- * 
+ *
+ * Key purpose: Endorsement Key certificate (`{ tcg-kp 1 }`). TCG
+ * Platform Certificate Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

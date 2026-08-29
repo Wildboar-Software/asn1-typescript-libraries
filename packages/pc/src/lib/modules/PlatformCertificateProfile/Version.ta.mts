@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Version
  * @description
- * 
+ *
+ * Assertion-syntax version for `TBBSecurityAssertions`. `v1` is
+ * 0. Later profile versions append fields and increase this
+ * value. TCG Platform Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +33,10 @@ type Version = INTEGER;
 
 /**
  * @summary Version_v1
+ * @description
+ *
+ * First assertion-syntax version (`v1(0)`). §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -36,7 +44,11 @@ export
 const Version_v1: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary Version_v1
+ * @summary v1
+ * @description
+ *
+ * First assertion-syntax version (`v1(0)`). §3.1.1.
+ *
  * @constant
  * @type {number}
  */

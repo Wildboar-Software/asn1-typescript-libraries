@@ -17,6 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StrengthOfFunction
  * @description
  *
+ * Common Criteria strength of function claimed for the TBB. TCG
+ * Platform Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +42,9 @@ enum _enum_for_StrengthOfFunction {
  * @summary StrengthOfFunction
  * @description
  *
+ * Common Criteria strength of function claimed for the TBB. TCG
+ * Platform Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,6 +63,9 @@ type StrengthOfFunction = _enum_for_StrengthOfFunction;
  * @summary StrengthOfFunction
  * @description
  *
+ * Common Criteria strength of function claimed for the TBB. TCG
+ * Platform Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -73,6 +82,10 @@ const StrengthOfFunction = _enum_for_StrengthOfFunction;
 
 /**
  * @summary StrengthOfFunction_basic
+ * @description
+ *
+ * Basic strength of function. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +94,10 @@ const StrengthOfFunction_basic: StrengthOfFunction = StrengthOfFunction.basic; /
 
 /**
  * @summary basic
+ * @description
+ *
+ * Basic strength of function. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +106,10 @@ const basic: StrengthOfFunction = StrengthOfFunction.basic; /* SHORT_NAMED_ENUME
 
 /**
  * @summary StrengthOfFunction_medium
+ * @description
+ *
+ * Medium strength of function. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +118,10 @@ const StrengthOfFunction_medium: StrengthOfFunction = StrengthOfFunction.medium;
 
 /**
  * @summary medium
+ * @description
+ *
+ * Medium strength of function. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +130,10 @@ const medium: StrengthOfFunction = StrengthOfFunction.medium; /* SHORT_NAMED_ENU
 
 /**
  * @summary StrengthOfFunction_high
+ * @description
+ *
+ * High strength of function. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +142,10 @@ const StrengthOfFunction_high: StrengthOfFunction = StrengthOfFunction.high; /* 
 
 /**
  * @summary high
+ * @description
+ *
+ * High strength of function. §3.1.1.
+ *
  * @constant
  * @type {number}
  */

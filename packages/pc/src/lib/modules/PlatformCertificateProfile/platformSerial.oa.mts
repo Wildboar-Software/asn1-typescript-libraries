@@ -23,6 +23,12 @@ import { tcg_at_platformSerial } from "../PlatformCertificateProfile/tcg-at-plat
  * @summary platformSerial
  * @description
  *
+ * Customer-visible platform serial number. OPTIONAL as a SAN RDN,
+ * but MUST be included for Enterprise remote-provisioning use
+ * cases. In a Delta, MUST equal the base certificate. Bounded by
+ * `strmax`. TCG Platform Certificate Profile v1.1 r19 §2.1.5.12,
+ * §3.1.2, §3.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -14,7 +14,11 @@ import { tcg_protocol } from "../PlatformCertificateProfile/tcg-protocol.va.mjs"
 /**
  * @summary tcg_prt_tpmIdProtocol
  * @description
- * 
+ *
+ * TCG protocol OID (`{ tcg-protocol 1 }`). Assigned in §4; this
+ * profile does not specify its use in Platform Certificates. TCG
+ * Platform Certificate Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

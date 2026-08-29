@@ -14,7 +14,13 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tpmSecurityTarget
  * @description
- * 
+ *
+ * TPM Common Criteria security-target identifier
+ * (`{ tcg-attribute 12 }`). Include only if the TPM was
+ * successfully evaluated against a CC ST; this profile says
+ * SHOULD NOT include it in new Platform Certificates. TCG
+ * Platform Certificate Profile v1.1 r19 §3.2.10, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

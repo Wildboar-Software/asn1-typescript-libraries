@@ -14,7 +14,11 @@ import { tcg_common } from "../PlatformCertificateProfile/tcg-common.va.mjs";
 /**
  * @summary tcg_at_platformConfigUri
  * @description
- * 
+ *
+ * Platform configuration URI attribute (`{ tcg-common 3 }`). URI
+ * where PCR / reference integrity measurements may be obtained.
+ * TCG Platform Certificate Profile v1.1 r19 §3.1.7, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

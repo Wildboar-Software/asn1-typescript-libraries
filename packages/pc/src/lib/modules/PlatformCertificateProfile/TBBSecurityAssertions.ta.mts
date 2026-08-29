@@ -28,6 +28,16 @@ import {
  * @summary TBBSecurityAssertions
  * @description
  *
+ * Security assertions about the platform Trusted Building Block
+ * (TBB). A TBB is the parts of the Root of Trust that do not have
+ * shielded locations or protected capabilities, typically the Core
+ * Root of Trust for Measurement (CRTM) and TPM initialization.
+ * SHOULD appear in a Platform Certificate. MUST NOT appear in a
+ * Delta Platform Certificate. `version` identifies the assertion
+ * syntax; later profile versions may append fields and increase
+ * it. TCG Platform Certificate Profile v1.1 r19 §2.1, §2.1.5.13,
+ * §3.1.1, Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,36 +56,67 @@ class TBBSecurityAssertions {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Assertion syntax version. Default `v1` (0). Later profile
+         * versions append fields and increase this value. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly version?: OPTIONAL<Version>,
         /**
          * @summary `ccInfo`.
+         * @description
+         *
+         * Common Criteria evaluation of the TBB. Profile and target
+         * may be given as an OID, a URI, or both. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly ccInfo?: OPTIONAL<CommonCriteriaMeasures>,
         /**
          * @summary `fipsLevel`.
+         * @description
+         *
+         * FIPS 140 evaluation of the TBB. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly fipsLevel?: OPTIONAL<FIPSLevel>,
         /**
          * @summary `rtmType`.
+         * @description
+         *
+         * Root of Trust for Measurement types implemented as part of
+         * the platform TBB. A static RTM is required; a dynamic RTM
+         * is optional. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly rtmType?: OPTIONAL<MeasurementRootType>,
         /**
          * @summary `iso9000Certified`.
+         * @description
+         *
+         * Default `FALSE`. The profile lists this field but does not
+         * define further semantics. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly iso9000Certified?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `iso9000Uri`.
+         * @description
+         *
+         * URI related to ISO 9000. Bounded by `urimax`. The profile
+         * lists this field but does not define further semantics.
+         * §3.1.1.
+         *
          * @public
          * @readonly
          */

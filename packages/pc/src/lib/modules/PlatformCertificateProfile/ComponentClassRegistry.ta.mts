@@ -17,7 +17,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ComponentClassRegistry
  * @description
- * 
+ *
+ * Component-class catalogue used in `ComponentClass`. Three OIDs
+ * are defined: `tcg-registry-componentClass-tcg` (placeholder for a
+ * future TCG registry), `tcg-registry-componentClass-ietf` (IETF
+ * RFC 8348 IANA Hardware Class), and
+ * `tcg-registry-componentClass-dmtf` (placeholder for a future
+ * SMBIOS-based registry). TCG Platform Certificate Profile v1.1
+ * r19 §3.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

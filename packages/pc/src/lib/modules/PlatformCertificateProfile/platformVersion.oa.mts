@@ -23,6 +23,11 @@ import { tcg_at_platformVersion } from "../PlatformCertificateProfile/tcg-at-pla
  * @summary platformVersion
  * @description
  *
+ * Manufacturer-specific platform version. MUST appear as a SAN
+ * RDN. In a Delta, MUST equal the base certificate. Bounded by
+ * `strmax`. TCG Platform Certificate Profile v1.1 r19 §2.1.5.6,
+ * §3.1.2, §3.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

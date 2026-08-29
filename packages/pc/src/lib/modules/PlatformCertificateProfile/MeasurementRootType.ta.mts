@@ -17,6 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MeasurementRootType
  * @description
  *
+ * Root of Trust for Measurement types implemented as part of the
+ * platform TBB. A static RTM is required; a dynamic RTM is
+ * optional. TPMs or RTMs might leverage lower-layer RTMs to
+ * virtualize platform capabilities. TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,6 +51,12 @@ enum _enum_for_MeasurementRootType {
  * @summary MeasurementRootType
  * @description
  *
+ * Root of Trust for Measurement types implemented as part of the
+ * platform TBB. A static RTM is required; a dynamic RTM is
+ * optional. TPMs or RTMs might leverage lower-layer RTMs to
+ * virtualize platform capabilities. TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -66,6 +78,12 @@ type MeasurementRootType = _enum_for_MeasurementRootType;
  * @summary MeasurementRootType
  * @description
  *
+ * Root of Trust for Measurement types implemented as part of the
+ * platform TBB. A static RTM is required; a dynamic RTM is
+ * optional. TPMs or RTMs might leverage lower-layer RTMs to
+ * virtualize platform capabilities. TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -85,6 +103,10 @@ const MeasurementRootType = _enum_for_MeasurementRootType;
 
 /**
  * @summary MeasurementRootType_static_
+ * @description
+ *
+ * Static RTM. Required as part of the TBB. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +115,10 @@ const MeasurementRootType_static_: MeasurementRootType = MeasurementRootType.sta
 
 /**
  * @summary static_
+ * @description
+ *
+ * Static RTM. Required as part of the TBB. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +127,10 @@ const static_: MeasurementRootType = MeasurementRootType.static_; /* SHORT_NAMED
 
 /**
  * @summary MeasurementRootType_dynamic
+ * @description
+ *
+ * Dynamic RTM. Optional. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +139,10 @@ const MeasurementRootType_dynamic: MeasurementRootType = MeasurementRootType.dyn
 
 /**
  * @summary dynamic
+ * @description
+ *
+ * Dynamic RTM. Optional. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +151,11 @@ const dynamic: MeasurementRootType = MeasurementRootType.dynamic; /* SHORT_NAMED
 
 /**
  * @summary MeasurementRootType_nonHost
+ * @description
+ *
+ * Non-host RTM. The profile lists this value but does not define
+ * further semantics. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +164,11 @@ const MeasurementRootType_nonHost: MeasurementRootType = MeasurementRootType.non
 
 /**
  * @summary nonHost
+ * @description
+ *
+ * Non-host RTM. The profile lists this value but does not define
+ * further semantics. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +177,10 @@ const nonHost: MeasurementRootType = MeasurementRootType.nonHost; /* SHORT_NAMED
 
 /**
  * @summary MeasurementRootType_hybrid
+ * @description
+ *
+ * Measurement root capable of both static and dynamic. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +189,10 @@ const MeasurementRootType_hybrid: MeasurementRootType = MeasurementRootType.hybr
 
 /**
  * @summary hybrid
+ * @description
+ *
+ * Measurement root capable of both static and dynamic. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +201,10 @@ const hybrid: MeasurementRootType = MeasurementRootType.hybrid; /* SHORT_NAMED_E
 
 /**
  * @summary MeasurementRootType_physical
+ * @description
+ *
+ * Root anchored by a physical TPM. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +213,10 @@ const MeasurementRootType_physical: MeasurementRootType = MeasurementRootType.ph
 
 /**
  * @summary physical
+ * @description
+ *
+ * Root anchored by a physical TPM. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +225,10 @@ const physical: MeasurementRootType = MeasurementRootType.physical; /* SHORT_NAM
 
 /**
  * @summary MeasurementRootType_virtual
+ * @description
+ *
+ * TPM is virtualized (possibly running in a VMM). §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +237,10 @@ const MeasurementRootType_virtual: MeasurementRootType = MeasurementRootType.vir
 
 /**
  * @summary virtual
+ * @description
+ *
+ * TPM is virtualized (possibly running in a VMM). §3.1.1.
+ *
  * @constant
  * @type {number}
  */

@@ -14,7 +14,13 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tcgCredentialSpecification
  * @description
- * 
+ *
+ * Certificate-profile version attribute (`{ tcg-attribute 23 }`).
+ * Major, minor, and revision of this specification. SHOULD appear
+ * in a Platform Certificate. MAY appear in a Delta if the spec
+ * version differs from the base. TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.5, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

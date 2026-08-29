@@ -16,6 +16,11 @@ import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_Compone
  * @summary ComponentClass
  * @description
  *
+ * Identifies the type of a platform component. The registry OID
+ * says which class catalogue is in use; `componentClassValue` is
+ * that catalogue's 4-octet class. TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +35,22 @@ class ComponentClass {
     constructor (
         /**
          * @summary `componentClassRegistry`.
+         * @description
+         *
+         * Catalogue used to name the class: TCG (placeholder), IETF
+         * RFC 8348 IANA Hardware Class, or DMTF/SMBIOS
+         * (placeholder). §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly componentClassRegistry: ComponentClassRegistry,
         /**
          * @summary `componentClassValue`.
+         * @description
+         *
+         * 4-octet class value from the chosen registry. §3.1.6.
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AddressType
  * @description
- * 
+ *
+ * Kind of network address on a platform component. Constrained to
+ * the TCG address OIDs for Ethernet, WLAN, and Bluetooth MAC.
+ * TCG Platform Certificate Profile v1.1 r19 §3.1.6, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

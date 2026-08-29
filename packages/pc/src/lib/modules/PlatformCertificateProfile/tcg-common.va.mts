@@ -14,7 +14,11 @@ import { tcg_platformClass } from "../PlatformCertificateProfile/tcg-platformCla
 /**
  * @summary tcg_common
  * @description
- * 
+ *
+ * Arc for TCG platform-class common attribute OIDs
+ * (`{ tcg-platformClass 1 }`). TCG Platform Certificate Profile
+ * v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

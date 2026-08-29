@@ -18,6 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TCGSpecificationVersion
  * @description
  *
+ * Major, minor, and revision of a TCG specification. Used both
+ * for the platform-specific spec (`tCGPlatformSpecification`)
+ * and for this certificate profile
+ * (`tCGCredentialSpecification`). TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.3, §3.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +39,30 @@ class TCGSpecificationVersion {
     constructor (
         /**
          * @summary `majorVersion`.
+         * @description
+         *
+         * Specification major version. §3.1.3, §3.1.5.
+         *
          * @public
          * @readonly
          */
         readonly majorVersion: INTEGER,
         /**
          * @summary `minorVersion`.
+         * @description
+         *
+         * Specification minor version. §3.1.3, §3.1.5.
+         *
          * @public
          * @readonly
          */
         readonly minorVersion: INTEGER,
         /**
          * @summary `revision`.
+         * @description
+         *
+         * Specification revision. §3.1.3, §3.1.5.
+         *
          * @public
          * @readonly
          */

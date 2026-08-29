@@ -14,7 +14,12 @@ import { tcg_at_platformConfiguration } from "../PlatformCertificateProfile/tcg-
 /**
  * @summary tcg_at_platformConfiguration_v1
  * @description
- * 
+ *
+ * Platform configuration attribute version 1
+ * (`{ tcg-at-platformConfiguration 1 }`). Parsers SHOULD be
+ * version-aware of prior `platformConfiguration` encodings. TCG
+ * Platform Certificate Profile v1.1 r19 §3.1.6, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

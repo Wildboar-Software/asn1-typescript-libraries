@@ -16,7 +16,12 @@ import {
 /**
  * @summary urimax
  * @description
- * 
+ *
+ * Upper bound on URI fields in this profile. SHOULD NOT exceed
+ * 1024 (HTML `<A>` LITLEN in RFC 1866). Aids ASN.1 parsers and
+ * limits certificate size. TCG Platform Certificate Profile v1.1
+ * r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,7 +16,13 @@ import {
 /**
  * @summary enterprise
  * @description
- * 
+ *
+ * IANA Private Enterprise Number arc
+ * `{ iso(1) identified-organization(3) dod(6) internet(1)
+ * private(4) enterprise(1) }`. Assigned numbers:
+ * http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+ * TCG Platform Certificate Profile v1.1 r19 §3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

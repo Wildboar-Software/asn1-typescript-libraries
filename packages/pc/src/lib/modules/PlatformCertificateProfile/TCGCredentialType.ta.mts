@@ -15,6 +15,13 @@ import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "
  * @summary TCGCredentialType
  * @description
  *
+ * Distinguishes a Platform Certificate from a Delta Platform
+ * Certificate via a TCG-registered OID. SHOULD appear in a
+ * Platform Certificate. MUST appear in a Delta Platform
+ * Certificate so it can be distinguished from a Platform
+ * Certificate. TCG Platform Certificate Profile v1.1 r19
+ * §3.1.4, Table 3, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +35,11 @@ class TCGCredentialType {
     constructor (
         /**
          * @summary `certificateType`.
+         * @description
+         *
+         * `tcg-kp-PlatformAttributeCertificate` or
+         * `tcg-kp-DeltaPlatformAttributeCertificate`. §3.1.4.
+         *
          * @public
          * @readonly
          */

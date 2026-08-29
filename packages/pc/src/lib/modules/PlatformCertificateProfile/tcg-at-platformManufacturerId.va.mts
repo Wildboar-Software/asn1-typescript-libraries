@@ -14,7 +14,11 @@ import { tcg_common } from "../PlatformCertificateProfile/tcg-common.va.mjs";
 /**
  * @summary tcg_at_platformManufacturerId
  * @description
- * 
+ *
+ * Platform manufacturer IANA PEN attribute (`{ tcg-common 2 }`).
+ * Optional SAN RDN. TCG Platform Certificate Profile v1.1 r19
+ * §3.1.2, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

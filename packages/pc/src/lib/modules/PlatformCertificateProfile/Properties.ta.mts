@@ -17,6 +17,12 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
  * @summary Properties
  * @description
  *
+ * An issuer-chosen name/value pair describing a non-security
+ * platform characteristic. This profile does not prescribe names
+ * or values. `status` MUST be used only in Delta Platform
+ * Certificates. TCG Platform Certificate Profile v1.1 r19
+ * §3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,18 +38,34 @@ class Properties {
     constructor (
         /**
          * @summary `propertyName`.
+         * @description
+         *
+         * Property name chosen by the issuer. Bounded by `strmax`.
+         * §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly propertyName: UTF8String,
         /**
          * @summary `propertyValue`.
+         * @description
+         *
+         * Property value chosen by the issuer. Bounded by `strmax`.
+         * §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly propertyValue: UTF8String,
         /**
          * @summary `status`.
+         * @description
+         *
+         * Whether this property was added, modified, or removed
+         * relative to the base certificate. MUST be used only in
+         * Delta Platform Certificates. §3.1.6.
+         *
          * @public
          * @readonly
          */

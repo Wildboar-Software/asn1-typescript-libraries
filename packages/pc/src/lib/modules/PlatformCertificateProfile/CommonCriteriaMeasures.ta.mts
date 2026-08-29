@@ -28,6 +28,12 @@ import {
  * @summary CommonCriteriaMeasures
  * @description
  *
+ * Common Criteria evaluation of the TBB. The protection profile
+ * and security target may each be an OID, a URI, or both. If both
+ * an OID and a URI are present for the same item, they MUST
+ * represent consistent values. TCG Platform Certificate Profile
+ * v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,54 +55,102 @@ class CommonCriteriaMeasures {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Common Criteria version string, e.g. `"2.2"` or `"3.1"`.
+         * Future syntax is defined by CC. Bounded by `strmax`.
+         * §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly version: IA5String,
         /**
          * @summary `assurancelevel`.
+         * @description
+         *
+         * Common Criteria Evaluation Assurance Level (EAL 1–7).
+         * §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly assurancelevel: EvaluationAssuranceLevel,
         /**
          * @summary `evaluationStatus`.
+         * @description
+         *
+         * Whether the TBB is designed to meet, is undergoing, or has
+         * completed CC evaluation. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly evaluationStatus: EvaluationStatus,
         /**
          * @summary `plus`.
+         * @description
+         *
+         * Default `FALSE`. The profile lists this field but does not
+         * define further semantics. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly plus?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `strengthOfFunction`.
+         * @description
+         *
+         * Common Criteria strength of function: basic, medium, or
+         * high. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly strengthOfFunction?: OPTIONAL<StrengthOfFunction>,
         /**
          * @summary `profileOid`.
+         * @description
+         *
+         * Protection profile as an OID. If `profileUri` is also
+         * present, both MUST represent consistent values. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly profileOid?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `profileUri`.
+         * @description
+         *
+         * Protection profile as a document URI (with optional hash).
+         * If `profileOid` is also present, both MUST represent
+         * consistent values. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly profileUri?: OPTIONAL<URIReference>,
         /**
          * @summary `targetOid`.
+         * @description
+         *
+         * Security target as an OID. If `targetUri` is also present,
+         * both MUST represent consistent values. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly targetOid?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `targetUri`.
+         * @description
+         *
+         * Security target as a document URI (with optional hash).
+         * If `targetOid` is also present, both MUST represent
+         * consistent values. §3.1.1.
+         *
          * @public
          * @readonly
          */

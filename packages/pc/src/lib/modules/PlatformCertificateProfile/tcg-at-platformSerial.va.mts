@@ -14,7 +14,12 @@ import { tcg_common } from "../PlatformCertificateProfile/tcg-common.va.mjs";
 /**
  * @summary tcg_at_platformSerial
  * @description
- * 
+ *
+ * Platform serial-number attribute (`{ tcg-common 6 }`). Optional
+ * SAN RDN; MUST be included for Enterprise remote provisioning.
+ * TCG Platform Certificate Profile v1.1 r19 §2.1.5.12, §3.1.2,
+ * §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

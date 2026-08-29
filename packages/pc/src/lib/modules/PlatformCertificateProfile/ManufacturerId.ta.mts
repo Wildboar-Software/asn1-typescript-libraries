@@ -15,6 +15,13 @@ import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_Priva
  * @summary ManufacturerId
  * @description
  *
+ * Platform manufacturer's IANA Private Enterprise Number, used
+ * as the optional Platform Manufacturer Identifier RDN. If
+ * included, the issuer SHALL use the manufacturer's PEN. In a
+ * Delta Platform Certificate this MUST equal the base
+ * certificate. TCG Platform Certificate Profile v1.1 r19
+ * §2.1.5.4, §3.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +35,13 @@ class ManufacturerId {
     constructor (
         /**
          * @summary `manufacturerIdentifier`.
+         * @description
+         *
+         * IANA Private Enterprise Number OID of the manufacturer.
+         * Assigned numbers:
+         * http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+         * §3.1.2.
+         *
          * @public
          * @readonly
          */

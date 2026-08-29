@@ -22,6 +22,13 @@ import { tcg_at_tbbSecurityAssertions } from "../PlatformCertificateProfile/tcg-
  * @summary tBBSecurityAssertions
  * @description
  *
+ * TBB security assertions (Common Criteria, FIPS 140, RTM type,
+ * ISO 9000). A TBB is the parts of the Root of Trust without
+ * shielded locations or protected capabilities (typically CRTM and
+ * TPM initialization). SHOULD appear in a Platform Certificate.
+ * MUST NOT appear in a Delta Platform Certificate. TCG Platform
+ * Certificate Profile v1.1 r19 §2.1, §2.1.5.13, §3.1.1, Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

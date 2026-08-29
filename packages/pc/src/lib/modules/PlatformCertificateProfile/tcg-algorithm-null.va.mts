@@ -14,7 +14,11 @@ import { tcg_algorithm } from "../PlatformCertificateProfile/tcg-algorithm.va.mj
 /**
  * @summary tcg_algorithm_null
  * @description
- * 
+ *
+ * TCG null algorithm (`{ tcg-algorithm 1 }`). Assigned in §4;
+ * this profile does not specify its use in Platform Certificates.
+ * TCG Platform Certificate Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

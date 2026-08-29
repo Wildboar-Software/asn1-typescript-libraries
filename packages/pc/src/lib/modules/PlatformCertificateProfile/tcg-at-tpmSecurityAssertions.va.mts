@@ -14,7 +14,12 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tpmSecurityAssertions
  * @description
- * 
+ *
+ * TPM security-assertions attribute (`{ tcg-attribute 18 }`).
+ * Assigned in §4; this profile's TBB assertions use
+ * `tcg-at-tbbSecurityAssertions` instead. TCG Platform
+ * Certificate Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,12 @@ import { tcg_kp } from "../PlatformCertificateProfile/tcg-kp.va.mjs";
 /**
  * @summary tcg_kp_PlatformKeyCertificate
  * @description
- * 
+ *
+ * Key purpose: Platform Certificate in public-key certificate
+ * format (`{ tcg-kp 4 }`). The public-key format was removed in
+ * this profile as redundant; the OID remains in the namespace.
+ * TCG Platform Certificate Profile v1.1 r19 §1.1, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

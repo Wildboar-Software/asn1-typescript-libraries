@@ -16,7 +16,11 @@ import {
 /**
  * @summary strmax
  * @description
- * 
+ *
+ * Upper bound on string fields in this profile. SHOULD NOT exceed
+ * 256. Aids ASN.1 parsers and limits certificate size. TCG
+ * Platform Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

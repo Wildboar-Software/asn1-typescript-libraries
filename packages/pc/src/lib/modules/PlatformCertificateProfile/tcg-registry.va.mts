@@ -14,7 +14,10 @@ import { tcg } from "../PlatformCertificateProfile/tcg.va.mjs";
 /**
  * @summary tcg_registry
  * @description
- * 
+ *
+ * Arc for TCG registry OIDs (`{ tcg 18 }`). Parent of component-
+ * class registries. TCG Platform Certificate Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

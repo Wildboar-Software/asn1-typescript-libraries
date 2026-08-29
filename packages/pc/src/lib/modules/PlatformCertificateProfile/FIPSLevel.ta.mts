@@ -18,6 +18,10 @@ import { SecurityLevel, _enum_for_SecurityLevel, _decode_SecurityLevel, _encode_
  * @summary FIPSLevel
  * @description
  *
+ * FIPS 140 evaluation of the TBB. `version` is `"140-1"`,
+ * `"140-2"`, or `"140-3"`. TCG Platform Certificate Profile
+ * v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +37,32 @@ class FIPSLevel {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * FIPS 140 standard version: `"140-1"`, `"140-2"`, or
+         * `"140-3"`. Bounded by `strmax`. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly version: IA5String,
         /**
          * @summary `level`.
+         * @description
+         *
+         * FIPS 140 security level 1 through 4. §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly level: SecurityLevel,
         /**
          * @summary `plus`.
+         * @description
+         *
+         * Default `FALSE`. The profile lists this field but does not
+         * define further semantics. §3.1.1.
+         *
          * @public
          * @readonly
          */

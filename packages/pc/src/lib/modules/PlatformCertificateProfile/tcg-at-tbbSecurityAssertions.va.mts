@@ -14,7 +14,11 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tbbSecurityAssertions
  * @description
- * 
+ *
+ * TBB security-assertions attribute (`{ tcg-attribute 19 }`).
+ * SHOULD appear in a Platform Certificate. MUST NOT appear in a
+ * Delta. TCG Platform Certificate Profile v1.1 r19 §3.1.1, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

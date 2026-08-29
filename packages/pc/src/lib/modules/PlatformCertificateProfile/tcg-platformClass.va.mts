@@ -14,7 +14,10 @@ import { tcg } from "../PlatformCertificateProfile/tcg.va.mjs";
 /**
  * @summary tcg_platformClass
  * @description
- * 
+ *
+ * Arc for TCG platform-class OIDs (`{ tcg 5 }`). Parent of
+ * `tcg-common`. TCG Platform Certificate Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

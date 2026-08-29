@@ -23,6 +23,12 @@ import { tcg_at_platformModel } from "../PlatformCertificateProfile/tcg-at-platf
  * @summary platformModel
  * @description
  *
+ * Manufacturer-specific platform model. MUST appear as a SAN RDN.
+ * Used by a Privacy-CA to verify a specific root-of-trust
+ * implementation. In a Delta, MUST equal the base certificate.
+ * Bounded by `strmax`. TCG Platform Certificate Profile v1.1 r19
+ * §2.1.5.5, §3.1.2, §3.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

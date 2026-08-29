@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PrivateEnterpriseNumber
  * @description
- * 
+ *
+ * IANA Private Enterprise Number as an OID under `enterprise`
+ * (`{ iso identified-organization dod internet private enterprise }`).
+ * Assigned numbers:
+ * http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+ * TCG Platform Certificate Profile v1.1 r19 §3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,13 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tbbProtectionProfile
  * @description
- * 
+ *
+ * TBB Common Criteria protection-profile identifier
+ * (`{ tcg-attribute 13 }`). For the RTM and how the TPM and RTM
+ * were incorporated into the platform. This profile says SHOULD
+ * NOT include it in new Platform Certificates. TCG Platform
+ * Certificate Profile v1.1 r19 §3.2.10, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

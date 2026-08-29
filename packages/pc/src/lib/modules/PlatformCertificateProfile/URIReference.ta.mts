@@ -23,6 +23,11 @@ import {
  * @summary URIReference
  * @description
  *
+ * Reference to an external document. `hashAlgorithm` and
+ * `hashValue` MUST both be present if either appears. URI length
+ * is bounded by `urimax` (SHOULD NOT exceed 1024). TCG Platform
+ * Certificate Profile v1.1 r19 §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +43,36 @@ class URIReference {
     constructor (
         /**
          * @summary `uniformResourceIdentifier`.
+         * @description
+         *
+         * Location of the referenced document. Bounded by `urimax`.
+         * §3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly uniformResourceIdentifier: IA5String,
         /**
          * @summary `hashAlgorithm`.
+         * @description
+         *
+         * Hash algorithm of `hashValue`, as RFC 5280
+         * `AlgorithmIdentifier`. MUST be present iff `hashValue`
+         * is. Because these are hashing algorithms, `parameters`
+         * SHOULD NOT be used. §3.1.1, §3.1.6.
+         *
          * @public
          * @readonly
          */
         readonly hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `hashValue`.
+         * @description
+         *
+         * Digest of the referenced document. MUST be present iff
+         * `hashAlgorithm` is. Pins a specific version of the
+         * document. §3.1.1.
+         *
          * @public
          * @readonly
          */

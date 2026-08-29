@@ -24,6 +24,12 @@ import { tcg_at_tcgCredentialSpecification } from "../PlatformCertificateProfile
  * @summary tCGCredentialSpecification
  * @description
  *
+ * Version of this Platform Certificate Profile under which the
+ * certificate was issued (major, minor, revision). SHOULD appear
+ * in a Platform Certificate. MAY appear in a Delta if issued under
+ * a different specification version than the base. TCG Platform
+ * Certificate Profile v1.1 r19 §2.1.5.9, §3.1.5, Table 3, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

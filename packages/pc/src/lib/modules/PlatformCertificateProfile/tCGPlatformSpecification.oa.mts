@@ -22,6 +22,11 @@ import { tcg_at_tcgPlatformSpecification } from "../PlatformCertificateProfile/t
  * @summary tCGPlatformSpecification
  * @description
  *
+ * Platform-specific TCG specification (class, version, revision)
+ * with which the platform complies. SHOULD appear in a Platform
+ * Certificate. MUST NOT appear in a Delta. TCG Platform
+ * Certificate Profile v1.1 r19 §2.1.5.8, §3.1.3, Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

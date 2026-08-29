@@ -14,7 +14,14 @@ import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mj
 /**
  * @summary tcg_at_tpmSpecification
  * @description
- * 
+ *
+ * TPM specification attribute (`{ tcg-attribute 16 }`). Assigned
+ * in §4. This profile does not define its syntax; §3.2.10 lists a
+ * related "TCPA Specification Version" compatibility attribute
+ * that SHOULD NOT be included in Platform Certificates issued
+ * under this profile. TCG Platform Certificate Profile v1.1 r19
+ * §3.2.10, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

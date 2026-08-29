@@ -14,7 +14,12 @@ import { tcg_kp } from "../PlatformCertificateProfile/tcg-kp.va.mjs";
 /**
  * @summary tcg_kp_DeltaPlatformAttributeCertificate
  * @description
- * 
+ *
+ * Key purpose / credential type: Delta Platform Certificate in
+ * attribute-certificate format (`{ tcg-kp 5 }`). MUST appear in
+ * `tCGCredentialType` of a Delta. TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.4, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

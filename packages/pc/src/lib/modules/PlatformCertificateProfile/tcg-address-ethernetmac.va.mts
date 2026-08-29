@@ -14,7 +14,11 @@ import { tcg_address } from "../PlatformCertificateProfile/tcg-address.va.mjs";
 /**
  * @summary tcg_address_ethernetmac
  * @description
- * 
+ *
+ * Ethernet MAC address type (`{ tcg-address 1 }`). Used as
+ * `AddressType` in `ComponentAddress`. TCG Platform Certificate
+ * Profile v1.1 r19 §3.1.6, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

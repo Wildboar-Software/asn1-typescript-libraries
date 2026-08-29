@@ -14,7 +14,10 @@ import { tcg_common } from "../PlatformCertificateProfile/tcg-common.va.mjs";
 /**
  * @summary tcg_at_platformModel
  * @description
- * 
+ *
+ * Platform model attribute (`{ tcg-common 4 }`). MUST appear as a
+ * SAN RDN. TCG Platform Certificate Profile v1.1 r19 §3.1.2, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,13 @@ import { tcg } from "../PlatformCertificateProfile/tcg.va.mjs";
 /**
  * @summary tcg_tcpaSpecVersion
  * @description
- * 
+ *
+ * TCPA specification-version attribute OID (`{ tcg 1 }`).
+ * Documented for compatibility with earlier TCG/TCPA
+ * specifications; SHOULD NOT be included in Platform Certificates
+ * issued under this profile. TCG Platform Certificate Profile
+ * v1.1 r19 §3.2.10, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

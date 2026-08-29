@@ -16,6 +16,14 @@ import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSp
  * @summary TCGPlatformSpecification
  * @description
  *
+ * Platform-specific TCG specification with which the platform
+ * complies (PC Client Platform TPM Profile or Generic Server
+ * Specification). SHOULD appear in a Platform Certificate. MUST
+ * NOT appear in a Delta Platform Certificate. Standardized
+ * `platformClass` values are in §4 of the TCG Registry of
+ * Reserved TPM 2.0 Handles and Localities. TCG Platform
+ * Certificate Profile v1.1 r19 §2.1.5.8, §3.1.3, Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +38,23 @@ class TCGPlatformSpecification {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Major, minor, and revision of the platform-specific TCG
+         * specification. §3.1.3.
+         *
          * @public
          * @readonly
          */
         readonly version: TCGSpecificationVersion,
         /**
          * @summary `platformClass`.
+         * @description
+         *
+         * 4-octet platform class. Values are defined in the TCG
+         * Registry of Reserved TPM 2.0 Handles and Localities §4.
+         * §3.1.3.
+         *
          * @public
          * @readonly
          */

@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EvaluationAssuranceLevel
  * @description
  *
+ * Common Criteria Evaluation Assurance Level of the TBB (EAL 1
+ * through EAL 7). TCG Platform Certificate Profile v1.1 r19
+ * §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,6 +51,10 @@ enum _enum_for_EvaluationAssuranceLevel {
  * @summary EvaluationAssuranceLevel
  * @description
  *
+ * Common Criteria Evaluation Assurance Level of the TBB (EAL 1
+ * through EAL 7). TCG Platform Certificate Profile v1.1 r19
+ * §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -69,6 +77,10 @@ type EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
  * @summary EvaluationAssuranceLevel
  * @description
  *
+ * Common Criteria Evaluation Assurance Level of the TBB (EAL 1
+ * through EAL 7). TCG Platform Certificate Profile v1.1 r19
+ * §3.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -89,6 +101,10 @@ const EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
 
 /**
  * @summary EvaluationAssuranceLevel_level1
+ * @description
+ *
+ * Common Criteria EAL 1. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +113,10 @@ const EvaluationAssuranceLevel_level1: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level1
+ * @description
+ *
+ * Common Criteria EAL 1. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +125,10 @@ const level1: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level1; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level2
+ * @description
+ *
+ * Common Criteria EAL 2. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +137,10 @@ const EvaluationAssuranceLevel_level2: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level2
+ * @description
+ *
+ * Common Criteria EAL 2. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +149,10 @@ const level2: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level2; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level3
+ * @description
+ *
+ * Common Criteria EAL 3. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +161,10 @@ const EvaluationAssuranceLevel_level3: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level3
+ * @description
+ *
+ * Common Criteria EAL 3. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +173,10 @@ const level3: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level3; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level4
+ * @description
+ *
+ * Common Criteria EAL 4. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +185,10 @@ const EvaluationAssuranceLevel_level4: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level4
+ * @description
+ *
+ * Common Criteria EAL 4. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +197,10 @@ const level4: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level4; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level5
+ * @description
+ *
+ * Common Criteria EAL 5. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +209,10 @@ const EvaluationAssuranceLevel_level5: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level5
+ * @description
+ *
+ * Common Criteria EAL 5. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +221,10 @@ const level5: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level5; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level6
+ * @description
+ *
+ * Common Criteria EAL 6. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +233,10 @@ const EvaluationAssuranceLevel_level6: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level6
+ * @description
+ *
+ * Common Criteria EAL 6. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -185,6 +245,10 @@ const level6: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level6; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level7
+ * @description
+ *
+ * Common Criteria EAL 7. §3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +257,10 @@ const EvaluationAssuranceLevel_level7: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level7
+ * @description
+ *
+ * Common Criteria EAL 7. §3.1.1.
+ *
  * @constant
  * @type {number}
  */

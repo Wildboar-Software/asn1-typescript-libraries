@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CredentialType
  * @description
- * 
+ *
+ * TCG key-purpose OID identifying the certificate as a Platform
+ * Attribute Certificate or a Delta Platform Attribute Certificate.
+ * TCG Platform Certificate Profile v1.1 r19 §3.1.4, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

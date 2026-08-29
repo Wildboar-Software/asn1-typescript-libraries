@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AttributeStatus
  * @description
  *
+ * How a `ComponentIdentifier` or `Properties` entry relates to the
+ * base certificate. MUST be used only in Delta Platform
+ * Certificates. TCG Platform Certificate Profile v1.1 r19 §3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +43,10 @@ enum _enum_for_AttributeStatus {
  * @summary AttributeStatus
  * @description
  *
+ * How a `ComponentIdentifier` or `Properties` entry relates to the
+ * base certificate. MUST be used only in Delta Platform
+ * Certificates. TCG Platform Certificate Profile v1.1 r19 §3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,6 +65,10 @@ type AttributeStatus = _enum_for_AttributeStatus;
  * @summary AttributeStatus
  * @description
  *
+ * How a `ComponentIdentifier` or `Properties` entry relates to the
+ * base certificate. MUST be used only in Delta Platform
+ * Certificates. TCG Platform Certificate Profile v1.1 r19 §3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -73,6 +85,10 @@ const AttributeStatus = _enum_for_AttributeStatus;
 
 /**
  * @summary AttributeStatus_added
+ * @description
+ *
+ * Entry was added relative to the base certificate. Delta-only. §3.1.6.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +97,10 @@ const AttributeStatus_added: AttributeStatus = AttributeStatus.added; /* LONG_NA
 
 /**
  * @summary added
+ * @description
+ *
+ * Entry was added relative to the base certificate. Delta-only. §3.1.6.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +109,10 @@ const added: AttributeStatus = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary AttributeStatus_modified
+ * @description
+ *
+ * Entry was modified relative to the base certificate. Delta-only. §3.1.6.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +121,10 @@ const AttributeStatus_modified: AttributeStatus = AttributeStatus.modified; /* L
 
 /**
  * @summary modified
+ * @description
+ *
+ * Entry was modified relative to the base certificate. Delta-only. §3.1.6.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +133,10 @@ const modified: AttributeStatus = AttributeStatus.modified; /* SHORT_NAMED_ENUME
 
 /**
  * @summary AttributeStatus_removed
+ * @description
+ *
+ * Entry was removed relative to the base certificate. Delta-only. §3.1.6.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +145,10 @@ const AttributeStatus_removed: AttributeStatus = AttributeStatus.removed; /* LON
 
 /**
  * @summary removed
+ * @description
+ *
+ * Entry was removed relative to the base certificate. Delta-only. §3.1.6.
+ *
  * @constant
  * @type {number}
  */

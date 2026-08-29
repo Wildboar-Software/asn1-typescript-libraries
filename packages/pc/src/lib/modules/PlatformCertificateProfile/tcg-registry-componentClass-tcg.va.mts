@@ -14,7 +14,11 @@ import { tcg_registry_componentClass } from "../PlatformCertificateProfile/tcg-r
 /**
  * @summary tcg_registry_componentClass_tcg
  * @description
- * 
+ *
+ * TCG component-class registry (`{ tcg-registry-componentClass 1 }`).
+ * Placeholder for a future TCG Component Class Registry. TCG
+ * Platform Certificate Profile v1.1 r19 §3.1.6, §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

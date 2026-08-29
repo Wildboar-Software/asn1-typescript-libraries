@@ -16,7 +16,12 @@ import {
 /**
  * @summary tcg
  * @description
- * 
+ *
+ * TCG object-identifier namespace, registered as an international
+ * body: `{ joint-iso-itu-t(2) international-organizations(23)
+ * tcg(133) }`. Inherited from TCPA. TCG Platform Certificate
+ * Profile v1.1 r19 §4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

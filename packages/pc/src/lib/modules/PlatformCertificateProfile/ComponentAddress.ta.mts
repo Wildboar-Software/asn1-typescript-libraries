@@ -16,6 +16,10 @@ import { AddressType, _decode_AddressType, _encode_AddressType } from "../Platfo
  * @summary ComponentAddress
  * @description
  *
+ * A network address of a platform component (Ethernet, WLAN, or
+ * Bluetooth MAC). TCG Platform Certificate Profile v1.1 r19
+ * §2.1.5.14, §3.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,22 @@ class ComponentAddress {
     constructor (
         /**
          * @summary `addressType`.
+         * @description
+         *
+         * Address kind: `tcg-address-ethernetmac`,
+         * `tcg-address-wlanmac`, or `tcg-address-bluetoothmac`.
+         * §3.1.6, §4.
+         *
          * @public
          * @readonly
          */
         readonly addressType: AddressType,
         /**
          * @summary `addressValue`.
+         * @description
+         *
+         * Address encoded as UTF-8. Bounded by `strmax`. §3.1.6.
+         *
          * @public
          * @readonly
          */

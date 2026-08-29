@@ -29,6 +29,12 @@ import {
  * @summary platformConfiguration
  * @description
  *
+ * Platform Configuration attribute (`tcg-at-platformConfiguration-v2`).
+ * Non-security component identifiers and issuer-chosen properties.
+ * MAY appear in a Platform Certificate. In a Delta, include only
+ * changed fields and MUST set `status`. TCG Platform Certificate
+ * Profile v1.1 r19 §2.1.5.14, §3.1.6, Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
