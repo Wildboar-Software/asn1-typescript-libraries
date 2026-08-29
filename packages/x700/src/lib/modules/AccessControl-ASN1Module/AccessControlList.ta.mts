@@ -19,6 +19,15 @@ import {
  * @summary AccessControlList
  * @description
  *
+ * Syntax of the `accessControlList` attribute on ACL
+ * initiators. Each member is either a named initiator or a
+ * proxy (anonymous / non-DN identity). Used in ACL schemes
+ * to grant or deny access. Matches EQUALITY,
+ * SET-COMPARISON, SET-INTERSECTION. ITU-T Rec. X.741
+ * (04/95)
+ * [§A.5.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.8.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

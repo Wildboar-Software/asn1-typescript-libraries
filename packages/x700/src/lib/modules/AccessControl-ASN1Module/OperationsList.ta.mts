@@ -20,6 +20,16 @@ import {
  * @summary OperationsList
  * @description
  *
+ * Syntax of `operationsList` on a targets object: set of
+ * operation types granted or denied (per the containing
+ * rule) on those targets, when no parameter constraints
+ * apply. Alternative to contained `operations` managed
+ * objects; the package may be present only if no operations
+ * object is contained. Empty `targetsList` on a rule makes
+ * it a global rule (all targets). ITU-T Rec. X.741 (04/95)
+ * [§A.5.21](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.5.2, A.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

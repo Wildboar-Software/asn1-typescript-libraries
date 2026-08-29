@@ -25,6 +25,17 @@ import {
  * @summary DefaultAccess
  * @description
  *
+ * Syntax of `defaultAccess` on access control rules: default
+ * enforcement action per operation type, applied when no
+ * global/item grant or deny rule matched (ADF procedure
+ * 7.4.3.1.6). Each component DEFAULT `deny`
+ * (`denyWithResponse`). Value `denyAll` is `{}` (all
+ * omitted → all deny). REPLACE-WITH-DEFAULT. ITU-T Rec.
+ * X.741 (04/95)
+ * [§8.1.2.1.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §7.4.3.1.6, A.5.8; Cor.2 (06/98) A.2.3 (`deny` not
+ * `denyAccess`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,60 +58,100 @@ export class DefaultAccess {
     constructor(
         /**
          * @summary `action`.
+         * @description
+         *
+         * Default enforcement for `action` (0). DEFAULT `deny`.
+         * X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly action?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `create`.
+         * @description
+         *
+         * Default enforcement for `create` (1). DEFAULT `deny`.
+         * X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly create?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `delete_`.
+         * @description
+         *
+         * Default enforcement for `delete` (2). DEFAULT `deny`.
+         * X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly delete_?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `get_`.
+         * @description
+         *
+         * Default enforcement for `get` (3). DEFAULT `deny`.
+         * X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly get_?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `replace`.
+         * @description
+         *
+         * Default enforcement for `replace` (4). DEFAULT `deny`.
+         * X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly replace?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `addMember`.
+         * @description
+         *
+         * Default enforcement for `addMember` (5). DEFAULT
+         * `deny`. X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly addMember?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `removeMember`.
+         * @description
+         *
+         * Default enforcement for `removeMember` (6). DEFAULT
+         * `deny`. X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly removeMember?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `replaceWithDefault`.
+         * @description
+         *
+         * Default enforcement for `replaceWithDefault` (7).
+         * DEFAULT `deny`. X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly replaceWithDefault?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `multipleObjectSelection`.
+         * @description
+         *
+         * Default enforcement for `multipleObjectSelection` (8).
+         * DEFAULT `deny`. X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */
         readonly multipleObjectSelection?: OPTIONAL<EnforcementAction>,
         /**
          * @summary `filter`.
+         * @description
+         *
+         * Default enforcement for `filter` (9). DEFAULT `deny`.
+         * X.741 §8.1.2.1.1, A.5.8.
          * @public
          * @readonly
          */

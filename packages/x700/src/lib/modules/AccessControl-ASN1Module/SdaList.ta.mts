@@ -19,6 +19,12 @@ import {
  * @summary SdaList
  * @description
  *
+ * Optional per-authority constraints on a known-form
+ * capability: each member pairs a security domain authority
+ * with an operation type. ITU-T Rec. X.741 (04/95)
+ * [§A.5.7](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * Annex H.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

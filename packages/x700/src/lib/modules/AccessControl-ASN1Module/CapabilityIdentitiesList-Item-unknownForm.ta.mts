@@ -15,6 +15,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CapabilityIdentitiesList_Item_unknownForm
  * @description
  *
+ * Capability identity whose form is not specified by this
+ * rec. Typed by `AC-CAP-IDENTITY` from
+ * `CapabilityIdentitiesSet` (Cor.3). ITU-T Rec. X.741
+ * (04/95)
+ * [§A.5.7](https://www.itu.int/rec/T-REC-X.741-199504-I);
+ * Cor.3 (02/2000)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,12 +34,19 @@ export class CapabilityIdentitiesList_Item_unknownForm {
     constructor(
         /**
          * @summary `identifier`.
+         * @description
+         *
+         * `AC-CAP-IDENTITY.&id` from `CapabilityIdentitiesSet`.
+         * X.741 Cor.3 A.6.
          * @public
          * @readonly
          */
         readonly identifier: OBJECT_IDENTIFIER,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Identity value typed by `identifier`. X.741 Cor.3 A.6.
          * @public
          * @readonly
          */

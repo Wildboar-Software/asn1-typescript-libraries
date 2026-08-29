@@ -19,6 +19,19 @@ import {
  * @summary SecurityLabel
  * @description
  *
+ * Syntax of the `securityLabel` attribute: a security label
+ * assigned to initiators (label initiators) or targets
+ * (`assignedLabels` and subclasses). In a label-based
+ * scheme the ADF compares initiator and target labels for
+ * compatibility (algorithm not specified here). If a label
+ * initiators object is present, the initiator's label must
+ * also be a member of this set, in addition to
+ * compatibility matching. The rec does not define the
+ * meaning of `clearance` encodings or `category` bits.
+ * ITU-T Rec. X.741 (04/95)
+ * [§A.5.24](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.10, §7.4.3.2 d), Annex H.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

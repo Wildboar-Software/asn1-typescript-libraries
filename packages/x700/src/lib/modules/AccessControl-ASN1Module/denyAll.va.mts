@@ -23,6 +23,12 @@ import {
  * @summary denyAll
  * @description
  *
+ * Default value of `defaultAccess`: empty sequence, so every
+ * operation type takes DEFAULT `deny`
+ * (`denyWithResponse`). ITU-T Rec. X.741 (04/95)
+ * [§A.5.8](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

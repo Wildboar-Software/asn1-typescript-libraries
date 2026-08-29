@@ -19,6 +19,15 @@ import {
  * @summary CommandSequencerId
  * @description
  *
+ * Names a command sequencer: a management support object in a
+ * manager role (notification destination and invoker of
+ * operations determined by launch scripts; may delegate
+ * management). Contains launch pads and provides the services
+ * they and their spawn use. Contained in `system`. ITU-T Rec.
+ * X.753 (10/97)
+ * [§3.6.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.1.1, A.1.1, A.4, A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

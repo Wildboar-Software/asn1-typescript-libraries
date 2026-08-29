@@ -19,6 +19,16 @@ import {
  * @summary TriggerResultInfo_resultType
  * @description
  *
+ * Spawn-shaped grouping of `ResultInfoFromThread`:
+ *
+ * - `singleTriggerResult`: one thread.
+ * - `sequentialTriggerResult`: ordered list (sequential spawn).
+ * - `parallelTriggerResult`: set (parallel spawn).
+ *
+ * ITU-T Rec. X.753 (10/97)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §7.2, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

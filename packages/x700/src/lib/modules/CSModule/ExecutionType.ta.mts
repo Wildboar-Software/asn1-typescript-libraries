@@ -19,6 +19,19 @@ import {
  * @summary ExecutionType
  * @description
  *
+ * Which script/thread pairs ran for a trigger result
+ * (`ResultInfoFromThread.executionType`). Mirrors spawn
+ * topology:
+ *
+ * - `singleExecution`: one `ScriptThreadSet`.
+ * - `parallelExecution`: set of pairs (parallel spawn).
+ * - `sequentialExecution`: ordered pairs (sequential spawn).
+ *
+ * Async launch pad includes these ids in `triggerResultInfo`
+ * as soon as threads are spawned, without waiting for script
+ * results. ITU-T Rec. X.753 (10/97)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.753-199710-I), A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

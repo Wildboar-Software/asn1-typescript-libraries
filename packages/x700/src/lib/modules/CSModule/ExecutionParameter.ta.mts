@@ -24,6 +24,13 @@ import {
  * @summary ExecutionParameter
  * @description
  *
+ * One script to run plus the CMIP attributes supplied as its
+ * inputs. Launch pad copies this into the thread's
+ * `executingParameters`. Parameter-passing semantics are those
+ * of the script's language. ITU-T Rec. X.753 (10/97)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.1.2.3.3, A.4 (`executingParameters`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +45,26 @@ export class ExecutionParameter {
     constructor(
         /**
          * @summary `scriptId`.
+         * @description
+         *
+         * Launch-script instance to execute. Must also appear in
+         * the launch pad's `availableScriptList` or it is skipped
+         * (all missing → `scriptRejectedError`). ITU-T Rec. X.753
+         * (10/97) §7.1, §8.1.6.3.1.
          * @public
          * @readonly
          */
         readonly scriptId: ScriptId,
         /**
          * @summary `scriptParameters`.
+         * @description
+         *
+         * Input values for that script (CMIP `Attribute` values).
+         * May be empty. Type, value, and count mismatches yield
+         * `invalidParameterTypeError`,
+         * `invalidParameterValueError`, or
+         * `invalidParmeterNumber` (spec spelling). ITU-T Rec.
+         * X.753 (10/97) §7.1, §8.2.1–§8.2.2.
          * @public
          * @readonly
          */

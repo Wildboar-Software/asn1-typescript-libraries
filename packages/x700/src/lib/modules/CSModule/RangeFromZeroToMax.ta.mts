@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RangeFromZeroToMax
  * @description
  *
+ * GRM cardinality constraint: zero or more participants. Used
+ * for `launchPadRole` and script-reference roles in Annex B.
+ * ITU-T Rec. X.753 (10/97)
+ * [A.8](https://www.itu.int/rec/T-REC-X.753-199710-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

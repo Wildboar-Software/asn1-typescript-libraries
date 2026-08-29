@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AccessControlObjectName
  * @description
  *
+ * Naming attribute of specializations of the `accessControl`
+ * managed object class (rules, targets, initiators,
+ * notification emitter, etc.). Matches EQUALITY,
+ * SUBSTRINGS. ITU-T Rec. X.741 (04/95)
+ * [§8.1.1.1.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.5.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,11 @@ import {
  * @summary SdaList_Item
  * @description
  *
+ * One (security domain authority, operation type) pair
+ * constraining a capability. ITU-T Rec. X.741 (04/95)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * Annex H.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +41,20 @@ export class SdaList_Item {
     constructor(
         /**
          * @summary `securityDomainAuthorityName`.
+         * @description
+         *
+         * Security domain authority that issued or constrains
+         * this capability. X.741 Annex H.4, A.6.
          * @public
          * @readonly
          */
         readonly securityDomainAuthorityName: SecurityDomainAuthorityName,
         /**
          * @summary `operationType`.
+         * @description
+         *
+         * Operation type allowed under that authority. X.741
+         * Annex H.4, A.6.
          * @public
          * @readonly
          */

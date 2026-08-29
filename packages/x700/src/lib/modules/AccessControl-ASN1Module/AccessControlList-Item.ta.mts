@@ -24,6 +24,13 @@ import {
  * @summary AccessControlList_Item
  * @description
  *
+ * One ACL entry: `proxy` when the identity is not a
+ * specific initiator, group, role, or AE-title (anonymous
+ * form); `initiatorName` otherwise (DN of an individual,
+ * group or role, or an application entity title). ITU-T Rec.
+ * X.741 (04/95)
+ * [§A.5.1](https://www.itu.int/rec/T-REC-X.741-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

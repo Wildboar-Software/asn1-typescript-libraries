@@ -19,6 +19,12 @@ import {
  * @summary SecurityLabel_Item
  * @description
  *
+ * One security-label component: an initiator-style label
+ * with clearance and optional category. The rec's ASN.1
+ * only defines this CHOICE alternative. ITU-T Rec. X.741
+ * (04/95)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.741-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

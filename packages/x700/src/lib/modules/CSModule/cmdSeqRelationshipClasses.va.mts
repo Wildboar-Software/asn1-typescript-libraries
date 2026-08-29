@@ -16,6 +16,20 @@ import {
  * @summary cmdSeqRelationshipClasses
  * @description
  *
+ * OID arc for GRM relationship classes of the command
+ * sequencer: `{joint-iso-itu-t ms(9) function(2) part21(21)
+ * relationshipClass(11)}`. Annex B children:
+ *
+ * - `{… 1}` — `commandSequencer-launchPad-RelationshipClass`
+ *   (command sequencer to its launch pads).
+ * - `{… 2}` — `scriptReferencerRelationshipClass` (script user
+ *   to launch script).
+ * - `{… 3}` — `spawner-progeny-RelationshipClass` (spawner as
+ *   IVMO of contained threads).
+ *
+ * ITU-T Rec. X.753 (10/97)
+ * [A.8](https://www.itu.int/rec/T-REC-X.753-199710-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

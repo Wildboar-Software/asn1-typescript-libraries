@@ -15,6 +15,18 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AuthenticationContext
  * @description
  *
+ * Syntax of the `authenticationContext` attribute. When the
+ * authentication-context package is present on a rule, these
+ * requirements must be satisfied before any further
+ * evaluation of the initiator; otherwise the rule evaluates
+ * to FALSE. Sequence of policy identifier plus the
+ * requirements that policy defines. Cor.3 replaced `ANY
+ * DEFINED BY` with `AC-AUTH-CONTEXT` /
+ * `AuthenticationContextSet`. ITU-T Rec. X.741 (04/95)
+ * [§A.5.6](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.3.4, A.2.3; Cor.3 (02/2000)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +44,22 @@ export class AuthenticationContext {
     constructor(
         /**
          * @summary `authenticationPolicyId`.
+         * @description
+         *
+         * `AC-AUTH-CONTEXT.&id` from
+         * `AuthenticationContextSet`; identifies the
+         * authentication policy. X.741 §8.1.3.4.1.1, Cor.3 A.6.
          * @public
          * @readonly
          */
         readonly authenticationPolicyId: OBJECT_IDENTIFIER,
         /**
          * @summary `requirements`.
+         * @description
+         *
+         * Policy-defined authentication requirements, typed by
+         * `authenticationPolicyId`. X.741 §8.1.3.4.1.1, Cor.3
+         * A.6.
          * @public
          * @readonly
          */
