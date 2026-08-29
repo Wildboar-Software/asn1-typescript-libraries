@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ImplementedValues_Item
  * @description
  *
+ * One element of `ImplementedValues`: implementation information for a
+ * single attribute of the class. ITU-T Rec. X.750 (10/96)
+ * [A.2.3](https://www.itu.int/rec/T-REC-X.750-199610-I);
+ * Cor.1 (02/00) A.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,30 +32,54 @@ export class ImplementedValues_Item {
     constructor(
         /**
          * @summary `attributeId`.
+         * @description
+         *
+         * OID of the GDMO attribute this element describes. Unique
+         * within the set. ITU-T Rec. X.750 (10/96) A.2.3.
          * @public
          * @readonly
          */
         readonly attributeId: OBJECT_IDENTIFIER,
         /**
          * @summary `defaultValue`.
+         * @description
+         *
+         * Value applied when a set-to-default management operation
+         * is issued on the attribute. ITU-T Rec. X.750 (10/96) A.2.3.
          * @public
          * @readonly
          */
         readonly defaultValue?: OPTIONAL<_Element>,
         /**
          * @summary `initialValue`.
+         * @description
+         *
+         * Value the attribute first takes when an instance of the
+         * class comes into existence. ITU-T Rec. X.750 (10/96) A.2.3.
          * @public
          * @readonly
          */
         readonly initialValue?: OPTIONAL<_Element>,
         /**
          * @summary `minValue`.
+         * @description
+         *
+         * For INTEGER or REAL (or a subtype) with both permitted and
+         * required ranges: minimum value an instance may take. Shall
+         * be ≥ the smallest permitted value and ≤ the smallest
+         * required value. ITU-T Rec. X.750 (10/96) A.2.3.
          * @public
          * @readonly
          */
         readonly minValue?: OPTIONAL<_Element>,
         /**
          * @summary `maxValue`.
+         * @description
+         *
+         * For INTEGER or REAL (or a subtype) with both permitted and
+         * required ranges: maximum value an instance may take. Shall
+         * be ≤ the largest permitted value and ≥ the largest required
+         * value. ITU-T Rec. X.750 (10/96) A.2.3.
          * @public
          * @readonly
          */

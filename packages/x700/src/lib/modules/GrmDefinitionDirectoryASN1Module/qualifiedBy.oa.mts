@@ -26,6 +26,12 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary qualifiedBy
  * @description
  *
+ * Attributes associated with the managed relationship as a whole
+ * (GRM `QUALIFIED BY`). Multi-valued; each value is a template
+ * label. ITU-T Rec. X.750 Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95) A.1.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

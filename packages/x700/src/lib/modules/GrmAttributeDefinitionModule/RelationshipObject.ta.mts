@@ -25,6 +25,14 @@ import {
  * @summary RelationshipObject
  * @description
  *
+ * GRM `RELATIONSHIP OBJECT` construct: class of the managed object
+ * that represents the relationship (a subclass of
+ * `genericRelationshipObject`), and optional qualification attributes
+ * realized by that object. ITU-T Rec. X.750 Amd.1 (10/97)
+ * [§8.1.2.13](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95)
+ * [A.2.3.3](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +47,22 @@ export class RelationshipObject {
     constructor(
         /**
          * @summary `class_`.
+         * @description
+         *
+         * Label of the relationship-object class (or a subclass
+         * thereof in a real implementation). ITU-T Rec. X.725 (11/95)
+         * A.2.3.3.
          * @public
          * @readonly
          */
         readonly class_: TemplateLabel,
         /**
          * @summary `qualifies`.
+         * @description
+         *
+         * Qualification attributes from the relationship class
+         * template realized by the relationship object. ITU-T Rec.
+         * X.725 (11/95) A.2.3.3.
          * @public
          * @readonly
          */

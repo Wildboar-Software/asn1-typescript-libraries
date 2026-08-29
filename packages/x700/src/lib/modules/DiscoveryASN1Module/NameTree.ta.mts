@@ -21,6 +21,12 @@ import {
  * @summary NameTree
  * @description
  *
+ * One node of a discovered MIT subtree below the rooted name. Only the
+ * RDN (plus optional class) is carried; ancestors' name components
+ * are not repeated. ITU-T Rec. X.750 (10/96)
+ * [§8.3.2.4](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * A.4.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +41,20 @@ export class NameTree {
     constructor(
         /**
          * @summary `rdnInfo`.
+         * @description
+         *
+         * RDN of this discovered object and, if requested, its class.
+         * ITU-T Rec. X.750 (10/96) §8.3.2.4.
          * @public
          * @readonly
          */
         readonly rdnInfo: RDNInfo,
         /**
          * @summary `subordinates`.
+         * @description
+         *
+         * Nested RDN trees of contained objects still in scope.
+         * ITU-T Rec. X.750 (10/96) §8.3.2.4.
          * @public
          * @readonly
          */

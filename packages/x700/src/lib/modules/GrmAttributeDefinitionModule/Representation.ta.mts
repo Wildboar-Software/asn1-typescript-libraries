@@ -20,6 +20,18 @@ import {
  * @summary Representation
  * @description
  *
+ * How a GRM role is represented:
+ *
+ * - `nameBindingSuperior` / `nameBindingSubordinate`: naming via the
+ *   named name binding's superior or subordinate class
+ * - `attribute`: participant-pointer attribute
+ * - `relationshipObjectPointer`: pointer attribute on the
+ *   relationship object
+ * - `operation`: mapping is given in `OPERATIONS MAPPING`
+ *
+ * ITU-T Rec. X.725 (11/95)
+ * [A.2.3.4](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

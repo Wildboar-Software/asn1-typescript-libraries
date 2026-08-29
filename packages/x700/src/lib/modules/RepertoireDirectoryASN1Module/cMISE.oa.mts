@@ -24,6 +24,13 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary cMISE
  * @description
  *
+ * Directory auxiliary class Common management information service
+ * element. Used with structural class `applicationEntity` to publish
+ * CMIP version, CMIP profiles, and CMIS functional units of a systems
+ * management application entity. ITU-T Rec. X.750 (10/96)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

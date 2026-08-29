@@ -22,6 +22,13 @@ import { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip';
  * @summary MITSearch
  * @description
  *
+ * Argument of the management information tree (MIT) search action
+ * (`mITSearch`). Identifies the base object and CMIP `Scope` of the
+ * subtree to discover. Maps onto CMIS M-ACTION; the reply may be split
+ * across linked replies. ITU-T Rec. X.750 (10/96)
+ * [§8.3.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * §9.4.2, A.4.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +45,31 @@ export class MITSearch {
     constructor(
         /**
          * @summary `base`.
+         * @description
+         *
+         * Base of the managed system's subtree to be discovered.
+         * ITU-T Rec. X.750 (10/96) §8.3.2.1.
          * @public
          * @readonly
          */
         readonly base: ObjectInstance,
         /**
          * @summary `discoveryScope`.
+         * @description
+         *
+         * Scope of the subtree to discover; same syntax as CMIP
+         * `Scope`. ITU-T Rec. X.750 (10/96) §8.3.2.2.
          * @public
          * @readonly
          */
         readonly discoveryScope: Scope,
         /**
          * @summary `classRequest`.
+         * @description
+         *
+         * If true, each node in the result shall include managed
+         * object class. Default `FALSE`. ITU-T Rec. X.750 (10/96)
+         * §8.3.2.3.
          * @public
          * @readonly
          */

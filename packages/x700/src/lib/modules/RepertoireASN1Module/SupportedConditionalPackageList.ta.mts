@@ -19,6 +19,13 @@ import {
  * @summary SupportedConditionalPackageList
  * @description
  *
+ * Conditional packages supported in the implementation of a particular
+ * managed object class. Mandatory, read-only on a managed-object-class
+ * repertoire object. Matches for set-comparison and set-intersection.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.1.1.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * A.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

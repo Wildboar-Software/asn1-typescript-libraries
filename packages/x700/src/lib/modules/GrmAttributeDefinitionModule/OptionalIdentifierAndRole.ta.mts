@@ -25,6 +25,12 @@ import {
  * @summary OptionalIdentifierAndRole
  * @description
  *
+ * Optional operation name plus optional role name. Used for BIND,
+ * UNBIND, and QUERY relationship operations; role-name is optional
+ * when the relationship defines only one role. ITU-T Rec. X.725
+ * (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,21 @@ export class OptionalIdentifierAndRole {
     constructor(
         /**
          * @summary `optionalOperationName`.
+         * @description
+         *
+         * Optional operation or notification name from the related
+         * relationship class template. ITU-T Rec. X.725 (11/95)
+         * A.2.3.5.
          * @public
          * @readonly
          */
         readonly optionalOperationName: OptionalIdentifier,
         /**
          * @summary `optionalRoleName`.
+         * @description
+         *
+         * Role the operation refers to. Optional if the relationship
+         * defines only one role. ITU-T Rec. X.725 (11/95) A.2.3.5.
          * @public
          * @readonly
          */

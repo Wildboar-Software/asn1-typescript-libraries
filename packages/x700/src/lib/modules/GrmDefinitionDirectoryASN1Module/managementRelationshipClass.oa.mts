@@ -27,6 +27,13 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary managementRelationshipClass
  * @description
  *
+ * Directory auxiliary class for a GRM relationship class template,
+ * included in a `registeredInformation` entry. Must contain
+ * `derivedFrom` and `behaviour`; may contain `supports`,
+ * `qualifiedBy`, and `roleSpecifier`. ITU-T Rec. X.750 Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I),
+ * B.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

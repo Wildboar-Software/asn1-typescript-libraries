@@ -19,6 +19,13 @@ import {
  * @summary OperationsMapping
  * @description
  *
+ * GRM `OPERATIONS MAPPING`: each pair maps one relationship management
+ * operation or notification to one or more systems management
+ * operations. ITU-T Rec. X.750 Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

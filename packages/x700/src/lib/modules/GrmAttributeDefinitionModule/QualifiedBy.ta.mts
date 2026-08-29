@@ -19,6 +19,13 @@ import {
  * @summary QualifiedBy
  * @description
  *
+ * GRM `QUALIFIED BY` construct: attributes associated with the
+ * managed relationship as a whole, independent of representation.
+ * ITU-T Rec. X.750 Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95)
+ * [A.1.3.4](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

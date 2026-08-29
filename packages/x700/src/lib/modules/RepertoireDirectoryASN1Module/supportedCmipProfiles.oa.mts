@@ -24,6 +24,13 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary supportedCmipProfiles
  * @description
  *
+ * Standardized CMIP profiles the SMAE supports. Mandatory on `cMISE`;
+ * single-valued; equality via `bitStringMatch`. Bit names match
+ * `SupportedCmipProfiles` (`aom10`/`aom11`/`aom12`). ITU-T Rec. X.750
+ * (10/96)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

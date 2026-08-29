@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GdmoObjectClass
  * @description
  *
+ * Object identifier of a GDMO managed object class (actual or
+ * allomorphic). Used in repertoire lists and in MIT-search class
+ * fields. ITU-T Rec. X.750 (10/96)
+ * [A.2.4](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

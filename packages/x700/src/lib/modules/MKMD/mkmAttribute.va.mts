@@ -15,6 +15,16 @@ import {
  * @summary mkmAttribute
  * @description
  *
+ * Arc for MKM managed-object attributes. Repertoire: 1 repertoireId;
+ * 2 managedObjectClassRepertoireId; 3 supportedManagedObjectClassList;
+ * 4 supportedCmipProfiles; 5 supportedConditionalPackageList;
+ * 6 implementedValues; 42 supportedNameBindingList;
+ * 44 supportedRelationshipClassList. Discovery: 41 discoveryId.
+ * Definition-template attributes occupy 7–40, 43, 45. GRM-in-Directory
+ * (Amd.1): 46 mappedRelationshipClass … 52 supports. ITU-T Rec. X.750
+ * (10/96) [A.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * Table D.1; Amd.1 (10/97) D.3.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

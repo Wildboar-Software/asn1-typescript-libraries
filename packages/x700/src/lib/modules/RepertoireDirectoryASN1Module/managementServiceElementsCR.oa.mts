@@ -17,6 +17,11 @@ import { type CONTENT_RULE } from '@wildboar/x500/InformationFramework';
  * @summary managementServiceElementsCR
  * @description
  *
+ * DIT content rule: `cMISE` and `sMASE` auxiliaries on an
+ * `applicationEntity` entry. ITU-T Rec. X.750 (10/96)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

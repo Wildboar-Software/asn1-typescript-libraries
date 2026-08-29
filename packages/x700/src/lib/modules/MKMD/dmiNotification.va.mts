@@ -15,6 +15,10 @@ import {
  * @summary dmiNotification
  * @description
  *
+ * X.721 DMI notification OID arc, aliased by MKM (object creation,
+ * deletion, attribute-value change). ITU-T Rec. X.750 (10/96)
+ * [A.1](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

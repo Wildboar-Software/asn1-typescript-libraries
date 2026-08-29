@@ -19,6 +19,16 @@ import {
  * @summary ImplementedValues
  * @description
  *
+ * Set-valued syntax of the `implementedValues` attribute: per-attribute
+ * implementation constraints (initial, default, min, max) for one
+ * managed object class. Shall not contain two elements with the same
+ * `attributeId`. Applies only to instances of that class; not inherited
+ * by derived classes. Present when the implemented-values conditional
+ * package is supported. ITU-T Rec. X.750 (10/96)
+ * [A.2.3](https://www.itu.int/rec/T-REC-X.750-199610-I);
+ * Cor.1 (02/00) A.2.4 replaces `ANY DEFINED BY` with
+ * `DMI-TYPE-IDENTIFIER`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

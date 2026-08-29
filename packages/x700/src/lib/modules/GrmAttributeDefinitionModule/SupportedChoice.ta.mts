@@ -19,6 +19,12 @@ import {
  * @summary SupportedChoice
  * @description
  *
+ * One prototypical relationship management operation or notification
+ * from the GRM `SUPPORTS` production: ESTABLISH, TERMINATE, QUERY,
+ * NOTIFY, or USER DEFINED, each with an optional operation or
+ * notification name. ITU-T Rec. X.725 (11/95)
+ * [A.1.3.3](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

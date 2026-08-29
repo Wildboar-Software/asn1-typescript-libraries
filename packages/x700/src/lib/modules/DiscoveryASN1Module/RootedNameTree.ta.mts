@@ -30,6 +30,12 @@ import {
  * @summary RootedNameTree
  * @description
  *
+ * One tree in an MIT-search reply: the distinguished name of the root
+ * object, optional class of that root, and optional subordinate RDN
+ * trees. ITU-T Rec. X.750 (10/96)
+ * [§8.3.2.4](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * A.4.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +51,30 @@ export class RootedNameTree {
     constructor(
         /**
          * @summary `rootObject`.
+         * @description
+         *
+         * Distinguished name of the root of this discovered subtree.
+         * ITU-T Rec. X.750 (10/96) §8.3.2.4.
          * @public
          * @readonly
          */
         readonly rootObject: ObjectInstance,
         /**
          * @summary `classOfRoot`.
+         * @description
+         *
+         * Class of the root object. Present when `classRequest` was
+         * true. ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
          * @public
          * @readonly
          */
         readonly classOfRoot?: OPTIONAL<GdmoObjectClass>,
         /**
          * @summary `subordinates`.
+         * @description
+         *
+         * Recursively nested RDNs of contained managed objects in
+         * scope. ITU-T Rec. X.750 (10/96) §8.3.2.4.
          * @public
          * @readonly
          */
