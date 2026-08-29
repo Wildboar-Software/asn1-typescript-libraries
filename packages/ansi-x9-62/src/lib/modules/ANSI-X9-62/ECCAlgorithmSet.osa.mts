@@ -13,6 +13,9 @@ import { ECCAlgorithmSet_Union8_Intersection0_Element } from "./ECCAlgorithmSet-
  * @summary ECCAlgorithmSet
  * @description
  *
+ * ECDSA algorithm identifiers, including later SHA-2 variants.
+ * ANSI X9.62-1998 §6.5 defined only `ecdsa-with-SHA1`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

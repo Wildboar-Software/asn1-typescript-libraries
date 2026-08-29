@@ -10,6 +10,11 @@ import {
  * @summary ECPKAlgorithm
  * @description
  *
+ * AlgorithmIdentifier constrained to `ECPKAlgorithms`. Later
+ * profile of the algorithm field of `SubjectPublicKeyInfo`. ANSI
+ * X9.62-1998 §6.4 used `AlgorithmIdentifier {{ECPKAlgorithms}}`
+ * with only `ecPublicKeyType`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

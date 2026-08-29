@@ -10,6 +10,12 @@ import {
  * @summary ECDomainParameters
  * @description
  *
+ * Later CHOICE for public-key / domain parameters. Not in ANSI
+ * X9.62-1998 (that edition uses `Parameters` with `ECParameters`
+ * and `CurveNames`). Same three alternatives: explicit
+ * (`SpecifiedECDomain`), named (`ANSIX9NamedDomains`), or
+ * `implicitCA` NULL.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

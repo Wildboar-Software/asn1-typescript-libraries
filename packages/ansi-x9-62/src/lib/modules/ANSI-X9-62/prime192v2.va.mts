@@ -5,6 +5,11 @@ import { primeCurve } from "../ANSI-X9-62/primeCurve.va.mjs";
  * @summary prime192v2
  * @description
  *
+ * Named example curve over a 192-bit prime field Fp.
+ * Generated verifiably at random (Annex A.3.3.2). Full domain
+ * parameters are in ANSI X9.62-1998 J.5.1, example 2.
+ * Use as `Parameters.namedCurve`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

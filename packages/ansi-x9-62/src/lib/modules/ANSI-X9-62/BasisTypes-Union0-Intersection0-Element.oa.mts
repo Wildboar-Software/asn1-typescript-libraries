@@ -7,6 +7,9 @@ import { gnBasis } from "../ANSI-X9-62/gnBasis.va.mjs";
  * @summary BasisTypes_Union0_Intersection0_Element
  * @description
  *
+ * Information-object member for NULL identified by `gnBasis`. ANSI X9.62-1998
+ * §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

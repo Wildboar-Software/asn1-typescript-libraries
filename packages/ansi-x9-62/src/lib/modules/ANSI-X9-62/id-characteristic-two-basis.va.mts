@@ -5,6 +5,8 @@ import { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field
  * @summary id_characteristic_two_basis
  * @description
  *
+ * Arc for F2^m basis types. ANSI X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

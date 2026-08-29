@@ -5,6 +5,8 @@ import { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va.mjs";
  * @summary id_ecSigType
  * @description
  *
+ * Arc for ECDSA signature-type OIDs. ANSI X9.62-1998 §6.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,10 @@ import {
  * @summary ECCAlgorithms
  * @description
  *
+ * Ordered list of `ECCAlgorithm` values (preference allowed).
+ * Not in ANSI X9.62-1998. Used in `ECPKRestrictions` to name the
+ * algorithms permitted for a restricted EC public key.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

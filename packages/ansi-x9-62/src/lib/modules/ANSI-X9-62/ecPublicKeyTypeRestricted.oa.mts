@@ -10,6 +10,9 @@ import { id_ecPublicKeyRestricted } from "../ANSI-X9-62/id-ecPublicKeyRestricted
  * @summary ecPublicKeyTypeRestricted
  * @description
  *
+ * EC public key whose permitted algorithms are listed in
+ * `ECPKRestrictions`. Not in ANSI X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

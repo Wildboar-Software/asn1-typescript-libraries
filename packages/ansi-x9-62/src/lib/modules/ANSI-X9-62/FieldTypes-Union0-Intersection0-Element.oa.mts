@@ -10,6 +10,9 @@ import {
  * @summary FieldTypes_Union0_Intersection0_Element
  * @description
  *
+ * Information-object member for `Prime-p` identified by `prime-field`. ANSI
+ * X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

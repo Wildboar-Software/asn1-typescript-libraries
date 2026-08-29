@@ -6,6 +6,8 @@ import { c2tnb191v3 } from "./c2tnb191v3.va.mjs";
  * @summary CurveNames_Union6_Intersection0_Element
  * @description
  *
+ * Information-object member for c2tnb191v3 (J.4.3 ex. 3)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -5,6 +5,10 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary ansi_X9_62
  * @description
  *
+ * Root of all OIDs defined in this Standard:
+ * `{iso(1) member-body(2) us(840) 10045}`.
+ * ANSI X9.62-1998 §6 (before §6.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

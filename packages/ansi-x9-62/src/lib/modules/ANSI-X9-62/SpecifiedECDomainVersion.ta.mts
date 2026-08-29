@@ -6,6 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SpecifiedECDomainVersion
  * @description
  *
+ * Version of `SpecifiedECDomain`. Not in ANSI X9.62-1998, which
+ * only defined `ecpVer1(1)` on `ECParameters`. `ecdpVer2` and
+ * `ecdpVer3` require `Curve.seed`. Meanings of versions 2 and 3
+ * beyond that are not stated in X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,6 +21,11 @@ export type SpecifiedECDomainVersion = INTEGER;
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer1
+ * @description
+ *
+ * Version 1 of later `SpecifiedECDomain`. Corresponds to the
+ * single `ECParameters` version of ANSI X9.62-1998 §6.3.
+ *
  * @constant
  * @type {number}
  */
@@ -23,6 +33,10 @@ export const SpecifiedECDomainVersion_ecdpVer1: SpecifiedECDomainVersion = 1; /*
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer1
+ * @description
+ *
+ * Alias of `SpecifiedECDomainVersion_ecdpVer1`.
+ *
  * @constant
  * @type {number}
  */
@@ -30,6 +44,11 @@ export const ecdpVer1: SpecifiedECDomainVersion = SpecifiedECDomainVersion_ecdpV
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer2
+ * @description
+ *
+ * Version 2 of later `SpecifiedECDomain`. Requires
+ * `Curve.seed`. Not in ANSI X9.62-1998.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +56,10 @@ export const SpecifiedECDomainVersion_ecdpVer2: SpecifiedECDomainVersion = 2; /*
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer2
+ * @description
+ *
+ * Alias of `SpecifiedECDomainVersion_ecdpVer2`.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +67,11 @@ export const ecdpVer2: SpecifiedECDomainVersion = SpecifiedECDomainVersion_ecdpV
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer3
+ * @description
+ *
+ * Version 3 of later `SpecifiedECDomain`. Requires
+ * `Curve.seed`. Not in ANSI X9.62-1998.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +79,10 @@ export const SpecifiedECDomainVersion_ecdpVer3: SpecifiedECDomainVersion = 3; /*
 
 /**
  * @summary SpecifiedECDomainVersion_ecdpVer3
+ * @description
+ *
+ * Alias of `SpecifiedECDomainVersion_ecdpVer3`.
+ *
  * @constant
  * @type {number}
  */

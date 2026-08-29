@@ -5,6 +5,9 @@ import { id_SHA384 } from "../ANSI-X9-62/id-SHA384.va.mjs";
  * @summary ANSIX9HashFunctions_Union6_Intersection0_Element
  * @description
  *
+ * Information-object member for `id-SHA384` with no parameters. Not in
+ * X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

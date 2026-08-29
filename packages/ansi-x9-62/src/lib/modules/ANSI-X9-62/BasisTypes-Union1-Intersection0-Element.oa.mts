@@ -10,6 +10,9 @@ import {
  * @summary BasisTypes_Union1_Intersection0_Element
  * @description
  *
+ * Information-object member for `Trinomial` identified by `tpBasis`. ANSI
+ * X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

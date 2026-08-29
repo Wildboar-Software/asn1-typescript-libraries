@@ -5,6 +5,10 @@ import { id_characteristic_two_basis } from "../ANSI-X9-62/id-characteristic-two
  * @summary tpBasis
  * @description
  *
+ * Trinomial polynomial basis for F2^m. Parameters are
+ * `Trinomial`. Prefer TPB over PPB when an irreducible trinomial
+ * exists. ANSI X9.62-1998 §6.1, §4.1.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

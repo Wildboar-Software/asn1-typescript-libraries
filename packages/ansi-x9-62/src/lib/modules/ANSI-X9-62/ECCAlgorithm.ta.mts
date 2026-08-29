@@ -10,6 +10,10 @@ import {
  * @summary ECCAlgorithm
  * @description
  *
+ * AlgorithmIdentifier constrained to `ECCAlgorithmSet`. Not in
+ * ANSI X9.62-1998, which identifies ECDSA+SHA-1 only by
+ * `ecdsa-with-SHA1`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

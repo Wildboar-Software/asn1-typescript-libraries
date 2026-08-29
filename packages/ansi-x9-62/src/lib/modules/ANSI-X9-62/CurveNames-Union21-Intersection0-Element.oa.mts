@@ -5,6 +5,8 @@ import { prime192v2 } from "../ANSI-X9-62/prime192v2.va.mjs";
  * @summary CurveNames_Union21_Intersection0_Element
  * @description
  *
+ * Information-object member for prime192v2 (J.5.1 ex. 2)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

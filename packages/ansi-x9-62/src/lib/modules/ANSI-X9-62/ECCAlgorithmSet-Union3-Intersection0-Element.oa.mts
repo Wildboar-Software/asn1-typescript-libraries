@@ -7,6 +7,9 @@ import { ecdsa_with_Recommended } from "../ANSI-X9-62/ecdsa-with-Recommended.va.
  * @summary ECCAlgorithmSet_Union3_Intersection0_Element
  * @description
  *
+ * Information-object member for `ecdsa-with-Recommended` with NULL parameters.
+ * Not in X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

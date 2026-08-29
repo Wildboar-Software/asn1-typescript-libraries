@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CURVES
  * @description
  *
+ * Class for named example curves. Each object is a unique OID
+ * from `CurveNames`. ANSI X9.62-1998 §6.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,6 +45,10 @@ export interface CURVES {
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of a named example curve in `CurveNames`.
+     * ANSI X9.62-1998 §6.4.
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }

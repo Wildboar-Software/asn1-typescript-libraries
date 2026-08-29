@@ -5,6 +5,8 @@ import { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va.mjs";
  * @summary ECCAlgorithmSet_Union8_Intersection0_Element
  * @description
  *
+ * Information-object member for `ecdsa-with-Sha512`. Not in X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

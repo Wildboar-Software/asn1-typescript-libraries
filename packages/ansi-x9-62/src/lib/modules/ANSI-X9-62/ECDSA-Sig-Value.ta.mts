@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECDSA_Sig_Value
  * @description
  *
+ * ECDSA signature pair (r, s) from §5.3. Both integers lie in
+ * `[1, n-1]`. ANSI X9.62-1998 hashes with SHA-1 only. When the
+ * signature is identified by `ecdsa-with-SHA1`, an X.509/CRL BIT
+ * STRING holds the entire encoding of this SEQUENCE.
+ * ANSI X9.62-1998 §6.5, §5.3–§5.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,12 +31,22 @@ export class ECDSA_Sig_Value {
     constructor(
         /**
          * @summary `r`.
+         * @description
+         *
+         * `x1 mod n` where `(x1, y1) = kG`. Regenerated if `r = 0`.
+         * ANSI X9.62-1998 §5.3.3, §6.5.
+         *
          * @public
          * @readonly
          */
         readonly r: INTEGER,
         /**
          * @summary `s`.
+         * @description
+         *
+         * `k^{-1}(e + d r) mod n`, with `e = SHA-1(M)`. Regenerated
+         * if `s = 0`. ANSI X9.62-1998 §5.3.3, §6.5.
+         *
          * @public
          * @readonly
          */

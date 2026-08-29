@@ -31,6 +31,12 @@ import {
  * @summary SpecifiedECDomain
  * @description
  *
+ * Later explicit domain-parameter SEQUENCE. Not in ANSI
+ * X9.62-1998 (that edition uses `ECParameters` with version 1
+ * only). Adds optional `hash` and versions `ecdpVer1`–`ecdpVer3`.
+ * `Curve.seed` shall be present when version is `ecdpVer2` or
+ * `ecdpVer3`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,42 +57,75 @@ export class SpecifiedECDomain {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * `ecdpVer1`, `ecdpVer2`, or `ecdpVer3`. Not in ANSI
+         * X9.62-1998 (that edition used `ecpVer1` only). Versions
+         * 2 and 3 require `curve.seed`.
+         *
          * @public
          * @readonly
          */
         readonly version: SpecifiedECDomainVersion,
         /**
          * @summary `fieldID`.
+         * @description
+         *
+         * Underlying field Fq. Same role as `ECParameters.fieldID`
+         * in ANSI X9.62-1998 §6.3.
+         *
          * @public
          * @readonly
          */
         readonly fieldID: FieldID,
         /**
          * @summary `curve`.
+         * @description
+         *
+         * Coefficients `a`, `b` and optional SEED. SEED shall be
+         * present when `version` is `ecdpVer2` or `ecdpVer3`.
+         *
          * @public
          * @readonly
          */
         readonly curve: Curve,
         /**
          * @summary `base`.
+         * @description
+         *
+         * Base point G of prime order n.
+         *
          * @public
          * @readonly
          */
         readonly base: ECPoint,
         /**
          * @summary `order`.
+         * @description
+         *
+         * Prime order n of G.
+         *
          * @public
          * @readonly
          */
         readonly order: INTEGER,
         /**
          * @summary `cofactor`.
+         * @description
+         *
+         * `h = #E(Fq) / n`. Optional, as in ANSI X9.62-1998 §6.3.
+         *
          * @public
          * @readonly
          */
         readonly cofactor?: OPTIONAL<INTEGER>,
         /**
          * @summary `hash`.
+         * @description
+         *
+         * Hash used when generating the curve. Not in ANSI
+         * X9.62-1998 `ECParameters`.
+         *
          * @public
          * @readonly
          */

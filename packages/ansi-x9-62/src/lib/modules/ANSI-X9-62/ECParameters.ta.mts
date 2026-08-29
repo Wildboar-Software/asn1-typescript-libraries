@@ -26,6 +26,13 @@ import {
  * @summary ECParameters
  * @description
  *
+ * Explicit elliptic-curve domain parameters. `version` shall be 1
+ * (`ecpVer1`) in this edition. `n` shall be prime, `n > 2^160`, and
+ * `n > 4 * sqrt(q)`. Cofactor `h` is not used by ECDSA; it is
+ * present for ANSI X9.63 compatibility. ASN.1 is not required for
+ * domain parameters, but if used it shall follow this syntax.
+ * ANSI X9.62-1998 §6.3, §5.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,36 +52,65 @@ export class ECParameters {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Shall be 1 (`ecpVer1`) in ANSI X9.62-1998 §6.3.
+         *
          * @public
          * @readonly
          */
         readonly version: ECParameters_version,
         /**
          * @summary `fieldID`.
+         * @description
+         *
+         * Underlying field Fq (`prime-field` or
+         * `characteristic-two-field`). ANSI X9.62-1998 §6.3.
+         *
          * @public
          * @readonly
          */
         readonly fieldID: FieldID,
         /**
          * @summary `curve`.
+         * @description
+         *
+         * Coefficients `a`, `b` and optional SEED of E.
+         * ANSI X9.62-1998 §6.3.
+         *
          * @public
          * @readonly
          */
         readonly curve: Curve,
         /**
          * @summary `base`.
+         * @description
+         *
+         * Base point G of prime order n; G is not the point at
+         * infinity. ANSI X9.62-1998 §6.3, §5.1.
+         *
          * @public
          * @readonly
          */
         readonly base: ECPoint,
         /**
          * @summary `order`.
+         * @description
+         *
+         * Prime order n of G. Require `n > 2^160` and
+         * `n > 4 * sqrt(q)`. ANSI X9.62-1998 §6.3, §5.1.
+         *
          * @public
          * @readonly
          */
         readonly order: INTEGER,
         /**
          * @summary `cofactor`.
+         * @description
+         *
+         * `h = #E(Fq) / n`. Unused by ECDSA; optional for X9.63
+         * compatibility. ANSI X9.62-1998 §6.3, §5.1.1.2 note 1.
+         *
          * @public
          * @readonly
          */

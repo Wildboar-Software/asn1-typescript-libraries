@@ -10,6 +10,10 @@ import {
  * @summary HashAlgorithm
  * @description
  *
+ * Hash function identified by `ANSIX9HashFunctions`. Not in ANSI
+ * X9.62-1998, which always uses SHA-1 via `ecdsa-with-SHA1`. Used
+ * as parameters of `ecdsa-with-Specified`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

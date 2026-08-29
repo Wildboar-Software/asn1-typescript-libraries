@@ -5,6 +5,8 @@ import { ecdsa_with_Sha384 } from "../ANSI-X9-62/ecdsa-with-Sha384.va.mjs";
  * @summary ECCAlgorithmSet_Union7_Intersection0_Element
  * @description
  *
+ * Information-object member for `ecdsa-with-Sha384`. Not in X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

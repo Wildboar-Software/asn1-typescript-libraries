@@ -5,6 +5,9 @@ import { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.mjs"
  * @summary ecdsa_with_Sha384
  * @description
  *
+ * ECDSA with SHA-384. Not in ANSI X9.62-1998
+ * (`{ecdsa-with-Specified 3}`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { ANSIX9HashFunctions_Union9_Intersection0_Element } from "./ANSIX9HashFu
  * @summary ANSIX9HashFunctions
  * @description
  *
+ * Approved hash functions for `HashAlgorithm`. Not in ANSI
+ * X9.62-1998, which uses SHA-1 only (ANSI X9.30 Part 2) via
+ * `ecdsa-with-SHA1`. Each hash may appear with or without NULL
+ * parameters.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

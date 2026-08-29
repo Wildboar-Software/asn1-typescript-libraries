@@ -10,6 +10,9 @@ import { ppBasis } from "../ANSI-X9-62/ppBasis.va.mjs";
  * @summary BasisTypes_Union2_Intersection0_Element
  * @description
  *
+ * Information-object member for `Pentanomial` identified by `ppBasis`. ANSI
+ * X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

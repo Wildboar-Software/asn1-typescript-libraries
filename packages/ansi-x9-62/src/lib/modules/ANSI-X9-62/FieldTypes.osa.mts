@@ -6,6 +6,10 @@ import { FieldTypes_Union1_Intersection0_Element } from "./FieldTypes-Union1-Int
  * @summary FieldTypes
  * @description
  *
+ * Allowed field kinds: `prime-field` → `Prime-p`,
+ * `characteristic-two-field` → `Characteristic-two`. Extensible.
+ * ANSI X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECParameters_version
  * @description
  *
+ * Version of `ECParameters`. Shall be 1 (`ecpVer1`) in ANSI
+ * X9.62-1998 §6.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -16,6 +19,11 @@ export type ECParameters_version = INTEGER;
 
 /**
  * @summary ECParameters_version_ecpVerl
+ * @description
+ *
+ * Version 1 of `ECParameters` (the only version in ANSI
+ * X9.62-1998 §6.3). The ASN.1 name is `ecpVerl`.
+ *
  * @constant
  * @type {number}
  */
@@ -23,6 +31,10 @@ export const ECParameters_version_ecpVerl: ECParameters_version = 1; /* LONG_NAM
 
 /**
  * @summary ECParameters_version_ecpVerl
+ * @description
+ *
+ * Alias of `ECParameters_version_ecpVerl`. ANSI X9.62-1998 §6.3.
+ *
  * @constant
  * @type {number}
  */

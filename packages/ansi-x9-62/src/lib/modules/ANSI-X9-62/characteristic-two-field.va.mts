@@ -5,6 +5,9 @@ import { id_fieldType } from "../ANSI-X9-62/id-fieldType.va.mjs";
  * @summary characteristic_two_field
  * @description
  *
+ * Identifies F2^m. Parameters are `Characteristic-two`.
+ * ANSI X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

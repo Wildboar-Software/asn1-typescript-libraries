@@ -5,6 +5,8 @@ import { type CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
  * @summary CurveNames_Union2_Intersection0_Element
  * @description
  *
+ * Information-object member for c2pnb163v3 (J.4.1 ex. 3)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

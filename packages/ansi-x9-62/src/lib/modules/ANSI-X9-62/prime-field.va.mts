@@ -5,6 +5,9 @@ import { id_fieldType } from "../ANSI-X9-62/id-fieldType.va.mjs";
  * @summary prime_field
  * @description
  *
+ * Identifies Fp. Parameters are `Prime-p`.
+ * ANSI X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

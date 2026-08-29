@@ -5,6 +5,8 @@ import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
  * @summary id_SHA224
  * @description
  *
+ * NIST SHA-224. Not in ANSI X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

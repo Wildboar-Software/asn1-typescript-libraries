@@ -5,6 +5,9 @@ import { id_SHA224 } from "../ANSI-X9-62/id-SHA224.va.mjs";
  * @summary ANSIX9HashFunctions_Union2_Intersection0_Element
  * @description
  *
+ * Information-object member for `id-SHA224` with no parameters. Not in
+ * X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

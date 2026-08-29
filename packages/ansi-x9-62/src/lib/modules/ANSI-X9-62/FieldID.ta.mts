@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FieldID
  * @description
  *
+ * Identifies the finite field Fq. `fieldType` is an OID from
+ * `FieldTypes`; `parameters` is the matching type (`Prime-p` or
+ * `Characteristic-two`). The two components are tightly bound: the
+ * OID uniquely determines the parameter type. Extensible for later
+ * field kinds. ANSI X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,12 +30,23 @@ export class FieldID {
     constructor(
         /**
          * @summary `fieldType`.
+         * @description
+         *
+         * OID naming the field kind (`prime-field` or
+         * `characteristic-two-field`). Determines the type of
+         * `parameters`. ANSI X9.62-1998 §6.1.
+         *
          * @public
          * @readonly
          */
         readonly fieldType: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Field parameters: `Prime-p` or `Characteristic-two`, as
+         * selected by `fieldType`. ANSI X9.62-1998 §6.1.
+         *
          * @public
          * @readonly
          */

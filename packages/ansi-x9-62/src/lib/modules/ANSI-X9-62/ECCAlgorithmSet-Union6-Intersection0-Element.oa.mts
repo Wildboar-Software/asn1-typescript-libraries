@@ -5,6 +5,8 @@ import { ecdsa_with_Sha256 } from "../ANSI-X9-62/ecdsa-with-Sha256.va.mjs";
  * @summary ECCAlgorithmSet_Union6_Intersection0_Element
  * @description
  *
+ * Information-object member for `ecdsa-with-Sha256`. Not in X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECDOMAIN
  * @description
  *
+ * Class for named EC domain parameters. Not in ANSI X9.62-1998
+ * (that edition used `CURVES` / `CurveNames`). Used with
+ * `ANSIX9NamedDomains`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,6 +46,10 @@ export interface ECDOMAIN {
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of a named EC domain in `ANSIX9NamedDomains`.
+     * Not in ANSI X9.62-1998 (that edition used `CURVES`).
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }

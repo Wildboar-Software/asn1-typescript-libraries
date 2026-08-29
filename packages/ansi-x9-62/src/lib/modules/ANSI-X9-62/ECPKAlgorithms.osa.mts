@@ -6,6 +6,10 @@ import { ecPublicKeyTypeRestricted } from "../ANSI-X9-62/ecPublicKeyTypeRestrict
  * @summary ECPKAlgorithms
  * @description
  *
+ * Algorithm objects allowed in `SubjectPublicKeyInfo`. ANSI
+ * X9.62-1998 §6.4 defined only `ecPublicKeyType`. This set also
+ * includes later `ecPublicKeyTypeRestricted`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

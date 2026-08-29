@@ -7,6 +7,9 @@ import { id_SHA256 } from "../ANSI-X9-62/id-SHA256.va.mjs";
  * @summary ANSIX9HashFunctions_Union5_Intersection0_Element
  * @description
  *
+ * Information-object member for `id-SHA256` with NULL parameters. Not in
+ * X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

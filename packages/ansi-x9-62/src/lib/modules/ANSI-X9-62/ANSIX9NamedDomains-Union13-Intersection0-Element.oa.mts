@@ -5,6 +5,9 @@ import { type ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
  * @summary ANSIX9NamedDomains_Union13_Intersection0_Element
  * @description
  *
+ * Information-object member for `ansix9p224r1` (later-module L.6.3.3). Not in
+ * X9.62-1998 Annex J.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

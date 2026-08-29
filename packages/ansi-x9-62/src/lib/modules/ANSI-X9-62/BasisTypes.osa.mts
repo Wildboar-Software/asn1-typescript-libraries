@@ -7,6 +7,9 @@ import { BasisTypes_Union2_Intersection0_Element } from "./BasisTypes-Union2-Int
  * @summary BasisTypes
  * @description
  *
+ * Allowed F2^m bases: `gnBasis` → NULL, `tpBasis` → `Trinomial`,
+ * `ppBasis` → `Pentanomial`. Extensible. ANSI X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -5,6 +5,11 @@ import { primeCurve } from "../ANSI-X9-62/primeCurve.va.mjs";
  * @summary ansix9p256r1
  * @description
  *
+ * Same OID as `prime256v1` (`{primeCurve 7}`). ANSI X9.62-1998
+ * J.5.3 example 1 (256-bit Fp, verifiably at random). Later
+ * module also lists this as L.6.4.3 under the `ansix9p256r1`
+ * name.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

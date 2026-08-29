@@ -5,6 +5,9 @@ import { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va.mjs";
  * @summary c_TwoCurve
  * @description
  *
+ * Arc for named example curves over F2^m.
+ * ANSI X9.62-1998 §6.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

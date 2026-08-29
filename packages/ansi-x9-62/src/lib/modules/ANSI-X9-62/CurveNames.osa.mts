@@ -31,6 +31,11 @@ import { type CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
  * @summary CurveNames
  * @description
  *
+ * Named example curves of ANSI X9.62-1998 Annex J. Names encode
+ * field (`c2` or `prime`), basis (`pnb`/`tnb`/`onb`), bit size,
+ * selection (`v` seeded-hash, `r` random, `w` Weil), and example
+ * number. ANSI X9.62-1998 §6.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

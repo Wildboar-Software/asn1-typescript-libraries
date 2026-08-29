@@ -5,6 +5,10 @@ import { id_ecSigType } from "../ANSI-X9-62/id-ecSigType.va.mjs";
  * @summary ecdsa_with_Recommended
  * @description
  *
+ * ECDSA with the "natural size" hash. Not in ANSI X9.62-1998.
+ * Later-module comment: the natural-size hash is strongly
+ * recommended.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

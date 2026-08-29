@@ -10,6 +10,9 @@ import {
  * @summary ECCAlgorithmSet_Union4_Intersection0_Element
  * @description
  *
+ * Information-object member for `ecdsa-with-Specified` with `HashAlgorithm`
+ * parameters. Not in X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,10 @@ import {
  * @summary ECPKRestrictions
  * @description
  *
+ * Parameters of `id-ecPublicKeyRestricted`. Not in ANSI
+ * X9.62-1998. Names the EC domain and the ECC algorithms that
+ * may be used with this public key.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,22 @@ export class ECPKRestrictions {
     constructor(
         /**
          * @summary `ecDomain`.
+         * @description
+         *
+         * Domain parameters for this public key. Not in ANSI
+         * X9.62-1998.
+         *
          * @public
          * @readonly
          */
         readonly ecDomain: ECDomainParameters,
         /**
          * @summary `eccAlgorithms`.
+         * @description
+         *
+         * Algorithms permitted with this key, in preference order.
+         * Not in ANSI X9.62-1998.
+         *
          * @public
          * @readonly
          */

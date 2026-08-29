@@ -5,6 +5,9 @@ import { sha_1 } from "../ANSI-X9-62/sha-1.va.mjs";
  * @summary ANSIX9HashFunctions_Union0_Intersection0_Element
  * @description
  *
+ * Information-object member for `sha-1` with no parameters. Not used as a hash
+ * OID in X9.62-1998 §6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

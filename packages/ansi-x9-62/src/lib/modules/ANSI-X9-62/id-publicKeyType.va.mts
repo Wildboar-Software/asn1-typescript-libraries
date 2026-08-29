@@ -5,6 +5,8 @@ import { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va.mjs";
  * @summary id_publicKeyType
  * @description
  *
+ * Arc for public-key type OIDs. ANSI X9.62-1998 §6.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,8 @@ import { sha_1 } from "../ANSI-X9-62/sha-1.va.mjs";
  * @summary ANSIX9HashFunctions_Union1_Intersection0_Element
  * @description
  *
+ * Information-object member for `sha-1` with NULL parameters.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

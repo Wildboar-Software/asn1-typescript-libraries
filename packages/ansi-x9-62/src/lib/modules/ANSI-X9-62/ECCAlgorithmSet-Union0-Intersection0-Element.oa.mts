@@ -5,6 +5,8 @@ import { ecdsa_with_Sha1 } from "../ANSI-X9-62/ecdsa-with-Sha1.va.mjs";
  * @summary ECCAlgorithmSet_Union0_Intersection0_Element
  * @description
  *
+ * Information-object member for `ecdsa-with-Sha1` with no parameters.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -10,6 +10,11 @@ import {
  * @summary Parameters
  * @description
  *
+ * Algorithm parameters for `id-ecPublicKey` in
+ * `SubjectPublicKeyInfo`: explicit `ECParameters`, a named curve
+ * from `CurveNames`, or `NULL` meaning the CA's parameters apply.
+ * ANSI X9.62-1998 §6.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

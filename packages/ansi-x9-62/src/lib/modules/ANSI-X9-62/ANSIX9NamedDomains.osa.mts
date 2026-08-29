@@ -22,6 +22,11 @@ import { ANSIX9NamedDomains_Union9_Intersection0_Element } from "./ANSIX9NamedDo
  * @summary ANSIX9NamedDomains
  * @description
  *
+ * Named EC domains from a later X9.62 module. Not in ANSI
+ * X9.62-1998 Annex J (that edition used `CurveNames`). Cross-
+ * references of the form L.x.y are from that later module, not
+ * from X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

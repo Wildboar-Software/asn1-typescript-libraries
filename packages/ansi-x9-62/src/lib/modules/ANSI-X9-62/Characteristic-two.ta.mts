@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Characteristic_two
  * @description
  *
+ * Parameters for F2^m. `m` is the degree. `basis` is `gnBasis`,
+ * `tpBasis`, or `ppBasis`; `parameters` is `NULL`, `Trinomial`, or
+ * `Pentanomial` respectively. One of TPB, PPB, or GNB shall be
+ * used. ANSI X9.62-1998 §6.1, §4.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,18 +31,32 @@ export class Characteristic_two {
     constructor(
         /**
          * @summary `m`.
+         * @description
+         *
+         * Degree of F2^m (field size `2^m`). ANSI X9.62-1998 §6.1.
+         *
          * @public
          * @readonly
          */
         readonly m: INTEGER,
         /**
          * @summary `basis`.
+         * @description
+         *
+         * Representation: `gnBasis`, `tpBasis`, or `ppBasis`.
+         * ANSI X9.62-1998 §6.1, §4.1.2.
+         *
          * @public
          * @readonly
          */
         readonly basis: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * `NULL` (GNB), `Trinomial` (TPB), or `Pentanomial` (PPB).
+         * ANSI X9.62-1998 §6.1.
+         *
          * @public
          * @readonly
          */

@@ -5,6 +5,10 @@ import { secgCurve } from "../ANSI-X9-62/secgCurve.va.mjs";
  * @summary ansix9p160r2
  * @description
  *
+ * Named EC domain parameters (160-bit prime field). Not in ANSI X9.62-1998
+ * Annex J; assigned in a later X9.62 / X.894 module compiled
+ * into this package.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

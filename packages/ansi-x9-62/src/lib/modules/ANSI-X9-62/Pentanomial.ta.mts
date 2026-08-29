@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Pentanomial
  * @description
  *
+ * Irreducible pentanomial `x^m + x^k3 + x^k2 + x^k1 + 1` over F2,
+ * with `1 ≤ k1 < k2 < k3 ≤ m-1`. Used when no irreducible trinomial
+ * of degree m exists. For interoperability, choose the smallest
+ * such `(k1, k2, k3)` as in Annex C Table C-3.
+ * ANSI X9.62-1998 §6.1 note 5, §4.1.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,18 +32,33 @@ export class Pentanomial {
     constructor(
         /**
          * @summary `k1`.
+         * @description
+         *
+         * Smallest exponent; `1 ≤ k1 < k2 < k3 ≤ m-1`.
+         * ANSI X9.62-1998 §6.1 note 5, §4.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly k1: INTEGER,
         /**
          * @summary `k2`.
+         * @description
+         *
+         * Middle exponent of `x^m + x^k3 + x^k2 + x^k1 + 1`.
+         * ANSI X9.62-1998 §6.1 note 5.
+         *
          * @public
          * @readonly
          */
         readonly k2: INTEGER,
         /**
          * @summary `k3`.
+         * @description
+         *
+         * Largest exponent of the reduction pentanomial.
+         * ANSI X9.62-1998 §6.1 note 5.
+         *
          * @public
          * @readonly
          */

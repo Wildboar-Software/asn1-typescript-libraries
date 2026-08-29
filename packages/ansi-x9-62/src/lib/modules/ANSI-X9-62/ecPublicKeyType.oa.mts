@@ -12,6 +12,12 @@ import {
  * @summary ecPublicKeyType
  * @description
  *
+ * Unrestricted EC public key. ANSI X9.62-1998 §6.4 identifies
+ * `Parameters` by `id-ecPublicKey`. This package's later module
+ * uses `ECDomainParameters` as the parameter type. The public
+ * key BIT STRING is the `ECPoint` octet string mapped bit-for-
+ * bit. ANSI X9.62-1998 §6.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

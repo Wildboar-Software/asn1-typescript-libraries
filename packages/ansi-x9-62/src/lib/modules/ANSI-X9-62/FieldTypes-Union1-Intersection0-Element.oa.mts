@@ -10,6 +10,9 @@ import { type FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
  * @summary FieldTypes_Union1_Intersection0_Element
  * @description
  *
+ * Information-object member for `Characteristic-two` identified by
+ * `characteristic-two-field`. ANSI X9.62-1998 §6.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

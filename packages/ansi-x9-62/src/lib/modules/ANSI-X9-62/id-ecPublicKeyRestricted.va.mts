@@ -5,6 +5,9 @@ import { id_publicKeyType } from "../ANSI-X9-62/id-publicKeyType.va.mjs";
  * @summary id_ecPublicKeyRestricted
  * @description
  *
+ * Restricted EC public key (`ECPKRestrictions` parameters).
+ * Not in ANSI X9.62-1998.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
