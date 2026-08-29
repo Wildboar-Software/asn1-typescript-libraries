@@ -19,6 +19,20 @@ import {
  * @summary SeverityIndicatingGaugeThreshold
  * @description
  *
+ * Set of threshold levels applied to a derived gauge (or, via
+ * `estimateOfMeanSeverityIndicatingGaugeThreshold`, to the
+ * estimate of mean). Each member is a notify-low / notify-high
+ * pair. Hysteresis: after a notify-high (increasing) crossing,
+ * further high crossings are suppressed until the gauge falls
+ * to or below notify-low; after a notify-low (decreasing)
+ * crossing, further low crossings are suppressed until the
+ * gauge rises to or above notify-high. A clear notification is
+ * emitted for a pair only after the corresponding level
+ * notification and with no intervening clear for that pair.
+ * ITU-T Rec. X.739 (11/93)
+ * [§7.3](https://www.itu.int/rec/T-REC-X.739-199311-I),
+ * §8.1.9.4.2, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

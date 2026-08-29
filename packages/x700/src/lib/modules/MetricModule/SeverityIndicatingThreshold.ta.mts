@@ -27,6 +27,14 @@ import {
  * @summary SeverityIndicatingThreshold
  * @description
  *
+ * One notify-high or notify-low submember of a severity
+ * indicating gauge-threshold level: a crossing value, an
+ * on/off switch, and optional perceived severity for the QoS
+ * alarm. If `notifyOnOff` is true, `severityIndication` is
+ * mandatory. ITU-T Rec. X.739 (11/93)
+ * [§7.3](https://www.itu.int/rec/T-REC-X.739-199311-I),
+ * §8.1.9.4.2, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,18 +50,37 @@ export class SeverityIndicatingThreshold {
     constructor(
         /**
          * @summary `threshold`.
+         * @description
+         *
+         * Observed value compared against the derived gauge (or
+         * estimate of mean). ITU-T Rec. X.739 (11/93)
+         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
          * @public
          * @readonly
          */
         readonly threshold: ObservedValue,
         /**
          * @summary `notifyOnOff`.
+         * @description
+         *
+         * Notification switch for this submember. If false, this
+         * submember does not emit notifications. If true,
+         * `severityIndication` shall be present. ITU-T Rec. X.739
+         * (11/93)
+         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
          * @public
          * @readonly
          */
         readonly notifyOnOff: BOOLEAN,
         /**
          * @summary `severityIndication`.
+         * @description
+         *
+         * Perceived severity of the alarm for this submember. If
+         * both notify-high and notify-low switches are true for
+         * one threshold level, one of the two values shall be
+         * `clear`. ITU-T Rec. X.739 (11/93)
+         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
          * @public
          * @readonly
          */

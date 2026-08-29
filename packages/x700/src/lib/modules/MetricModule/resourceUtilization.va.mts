@@ -19,6 +19,13 @@ import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs'
  * @summary resourceUtilization
  * @description
  *
+ * `specificProblems` identifier for the resource-utilization
+ * workload model: amount of capacity in use (instantaneous or
+ * estimated mean over an interval). ITU-T Rec. X.739 (11/93)
+ * [§3.7.14](https://www.itu.int/rec/T-REC-X.739-199311-I),
+ * §7.4, §8.1.9.7.2, A.5. Cor.1 writes the value as
+ * `oi:{moaSpecificProblems 2}`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
