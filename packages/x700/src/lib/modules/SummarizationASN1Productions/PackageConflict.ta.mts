@@ -19,6 +19,16 @@ import {
  * @summary PackageConflict
  * @description
  *
+ * Syntax of `conflictingPackagesRequestedError`
+ * (`{summarizationParameter 2}`). Returned on CREATE
+ * when requested conditional packages are mutually
+ * exclusive or required co-present packages are
+ * missing. Each item names either packages that must
+ * not all be present, or packages that must be present
+ * together. ITU-T Rec. X.738 (11/93)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SuppressObjectInstance
  * @description
  *
+ * If true, the observed object instance is omitted from
+ * all summary reports (`{summarizationAttribute 26}`).
+ * Set true only when the instance can be determined by
+ * other means or is not required (e.g. statistics).
+ * ITU-T Rec. X.738 (11/93)
+ * [§8.1.2.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.2.3, A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

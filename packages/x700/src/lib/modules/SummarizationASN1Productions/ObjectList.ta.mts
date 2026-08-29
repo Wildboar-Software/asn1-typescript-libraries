@@ -19,6 +19,15 @@ import {
  * @summary ObjectList
  * @description
  *
+ * Explicit names of managed objects that share the same
+ * attributes to observe (`{summarizationAttribute 12}`).
+ * Used by `managedObjectInstanceSelectionPackage` and
+ * as the `objectList` alternative of
+ * `DynamicSimpleScanArgument`. Mutually exclusive with
+ * scoped selection. ITU-T Rec. X.738 (11/93)
+ * [§8.1.12.1](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

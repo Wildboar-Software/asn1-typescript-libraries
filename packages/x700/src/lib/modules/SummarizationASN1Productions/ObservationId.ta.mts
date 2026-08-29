@@ -30,6 +30,12 @@ import {
  * @summary ObservationId
  * @description
  *
+ * Selection of one object for a heterogeneous scanner:
+ * instance plus optional scan-attribute list and
+ * numeric array (possibly different per object).
+ * ITU-T Rec. X.738 (11/93)
+ * [§8.1.8.2](https://www.itu.int/rec/T-REC-X.738-199311-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +51,30 @@ export class ObservationId {
     constructor(
         /**
          * @summary `observedObject`.
+         * @description
+         *
+         * Managed object instance to observe. X.738
+         * §8.1.8.2.
          * @public
          * @readonly
          */
         readonly observedObject: ObjectInstance,
         /**
          * @summary `scanAttributeIdList`.
+         * @description
+         *
+         * Attributes of any type reported with identifiers.
+         * X.738 §8.1.8.2.
          * @public
          * @readonly
          */
         readonly scanAttributeIdList?: OPTIONAL<ScanAttributeIdList>,
         /**
          * @summary `numericAttributeIdArray`.
+         * @description
+         *
+         * Ordered numeric attributes reported without
+         * identifiers. X.738 §8.1.8.2.
          * @public
          * @readonly
          */

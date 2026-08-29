@@ -19,6 +19,14 @@ import {
  * @summary NonStatisticalReportInformation
  * @description
  *
+ * Per-object scanned attribute values in a statistical
+ * report (`observationReportList`,
+ * `{summarizationAttribute 14}`). Omitted if object
+ * instances are suppressed and the scan-attribute list
+ * is empty. ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.2.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.3.3, A.4, A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

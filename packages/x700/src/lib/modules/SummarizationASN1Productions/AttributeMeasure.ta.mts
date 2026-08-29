@@ -23,6 +23,17 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar
  * @summary AttributeMeasure
  * @description
  *
+ * One scanned attribute: identifier, optional value
+ * (absent means missing data), optional offset from
+ * scan initiation time, and suspect flag (default
+ * false). Time stamp is required when
+ * `timeStampReportMode` is `individualTimeStamping`
+ * (2). Cor.2 replaces `ANY DEFINED BY` with
+ * `CMIP-ATTRIBUTE` information-object references.
+ * ITU-T Rec. X.738 (11/93)
+ * [A.9](https://www.itu.int/rec/T-REC-X.738-199311-I);
+ * Cor.2 (02/2000) A.9; §8.1.8.3, §8.2.2.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,24 +54,43 @@ export class AttributeMeasure {
     constructor(
         /**
          * @summary `attributeId`.
+         * @description
+         *
+         * Identifier of the scanned attribute. Cor.2: a
+         * `CMIP-ATTRIBUTE.&id` from `AttributeSet`. X.738
+         * A.9; Cor.2 A.9.
          * @public
          * @readonly
          */
         readonly attributeId: AttributeId,
         /**
          * @summary `attributeValue`.
+         * @description
+         *
+         * Scanned value. Absence means missing data (object
+         * lacks the attribute, or the value could not be
+         * obtained). X.738 A.9, §8.1.2.3; Cor.2 A.9.
          * @public
          * @readonly
          */
         readonly attributeValue?: OPTIONAL<_Element>,
         /**
          * @summary `timeStamp`.
+         * @description
+         *
+         * Offset forward from the report’s scan initiation
+         * time. Required if `timeStampReportMode` is 2.
+         * X.738 A.9, §8.1.12.4.
          * @public
          * @readonly
          */
         readonly timeStamp?: OPTIONAL<TimePeriod>,
         /**
          * @summary `suspectFlag`.
+         * @description
+         *
+         * True when integrity of the value is in question.
+         * Default false. X.738 §8.1.8.3, A.9.
          * @public
          * @readonly
          */

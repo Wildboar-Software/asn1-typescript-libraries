@@ -25,6 +25,16 @@ import {
  * @summary NumericMeasure
  * @description
  *
+ * One numeric observation. Exactly one alternative
+ * (Table 2 C1 / Table 4 C2): `missingData` — attribute
+ * absent; `valueOnly` — value with no qualifier;
+ * `qualifiedValue` — value plus time stamp and/or
+ * suspect flag (at least one of those two; this
+ * alternative is required when `timeStampReportMode`
+ * is 2). ITU-T Rec. X.738 (11/93)
+ * [A.9](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * Table 2, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

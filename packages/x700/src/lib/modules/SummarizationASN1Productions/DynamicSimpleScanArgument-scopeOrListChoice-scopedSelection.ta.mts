@@ -25,6 +25,13 @@ import {
  * @summary DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection
  * @description
  *
+ * Unnested SEQUENCE of scoped selection in
+ * `activateDynamicSimpleScanReport`: same CMIS-like
+ * scoping and filtering as `scopedSelectionPackage`.
+ * ITU-T Rec. X.738 (11/93)
+ * [§8.1.12.3](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.11.3, §8.3.1.3–8.3.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +43,34 @@ export class DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection {
     constructor(
         /**
          * @summary `baseManagedObject`.
+         * @description
+         *
+         * Existing managed object that is the base of
+         * scoping. X.738 §8.1.12.3.2, §8.3.1.3, A.4.
          * @public
          * @readonly
          */
         readonly baseManagedObject: ObjectInstance,
         /**
          * @summary `scope`.
+         * @description
+         *
+         * Level(s) in the naming hierarchy from which
+         * instances are selected by the filter. Semantics as
+         * CMIS scope. X.738 §8.1.12.3.2, §8.3.1.4.
          * @public
          * @readonly
          */
         readonly scope: Scope,
         /**
          * @summary `scanningFilter`.
+         * @description
+         *
+         * Filter applied to objects in scope. Semantics as
+         * the CMIS filter in X.720 | ISO/IEC 10165-1.
+         * Default on the scanner attribute is true
+         * (`scanningFilterDefault`). X.738 §8.1.12.3.2,
+         * §8.1.1.3, §8.3.1.5.
          * @public
          * @readonly
          */

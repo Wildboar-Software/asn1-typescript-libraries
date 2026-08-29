@@ -19,6 +19,16 @@ import {
  * @summary ScanAttributeIdList
  * @description
  *
+ * Identifiers of attributes of any ASN.1 type whose
+ * values are reported paired with their identifiers
+ * (`{summarizationAttribute 21}`). May be empty; if
+ * empty, the corresponding report parameter is omitted.
+ * At least one of this list and
+ * `numericAttributeIdArray` shall be specified on a
+ * simple scanner. ITU-T Rec. X.738 (11/93)
+ * [§8.1.1.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.2.3, A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

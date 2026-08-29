@@ -19,6 +19,15 @@ import {
  * @summary PackageConflict_Item
  * @description
  *
+ * Unnested CHOICE of `PackageConflict`.
+ * `conflictingPackagesPresent` — packages that shall
+ * not all be present together;
+ * `packagesMissing` — packages that must be present
+ * together but were not in the CREATE request. ITU-T
+ * Rec. X.738 (11/93)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

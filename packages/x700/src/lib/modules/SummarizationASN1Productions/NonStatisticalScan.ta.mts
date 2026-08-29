@@ -25,6 +25,13 @@ import {
  * @summary NonStatisticalScan
  * @description
  *
+ * One observed object in a statistical report’s
+ * `observationReportList`: instance name (unless
+ * suppressed) and scan-attribute values. ITU-T Rec.
+ * X.738 (11/93)
+ * [§8.2.2.2.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.9, Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +48,23 @@ export class NonStatisticalScan {
     constructor(
         /**
          * @summary `objectInstance`.
+         * @description
+         *
+         * Name of the observed object. Omitted if
+         * `suppressObjectInstance` is true; required in the
+         * list if that attribute is false. X.738 §8.2.2.2.2,
+         * A.9, Table 3 note 1.
          * @public
          * @readonly
          */
         readonly objectInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `attributeValues`.
+         * @description
+         *
+         * Scanned values with identifiers. Omitted if the
+         * scan-attribute list is empty. Missing attributes
+         * are indicated. X.738 §8.2.2.2.2, A.9.
          * @public
          * @readonly
          */

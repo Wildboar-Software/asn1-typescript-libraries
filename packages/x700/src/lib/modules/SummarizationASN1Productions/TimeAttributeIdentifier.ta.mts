@@ -19,6 +19,14 @@ import {
  * @summary TimeAttributeIdentifier
  * @description
  *
+ * Identifies which attribute of an observed managed
+ * object is used for time-window selection in
+ * `timingSelectionPackage` (`{summarizationAttribute
+ * 28}`). That attribute shall have `GeneralizedTime`
+ * syntax. ITU-T Rec. X.738 (11/93)
+ * [§8.1.12.5.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

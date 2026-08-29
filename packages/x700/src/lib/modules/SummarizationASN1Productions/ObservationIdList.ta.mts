@@ -19,6 +19,13 @@ import {
  * @summary ObservationIdList
  * @description
  *
+ * Per-object selection for a heterogeneous scanner
+ * (`{summarizationAttribute 13}`): each entry names an
+ * observed object and the (possibly different)
+ * attributes to scan. ITU-T Rec. X.738 (11/93)
+ * [§8.1.8.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
