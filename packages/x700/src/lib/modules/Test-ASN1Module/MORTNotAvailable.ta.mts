@@ -19,6 +19,11 @@ import {
  * @summary MORTNotAvailable
  * @description
  *
+ * Specific error: one or more MORTs are not in a state in which they may be
+ * tested. Syntax identifies those instances. ITU-T Rec. X.745 (11/93) §8.4.4.6,
+ * A.6.
+ * [§8.4.4.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

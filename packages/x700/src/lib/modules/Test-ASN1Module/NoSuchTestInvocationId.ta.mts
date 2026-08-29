@@ -19,6 +19,11 @@ import {
  * @summary NoSuchTestInvocationId
  * @description
  *
+ * Specific error on suspend/resume/terminate: no test with this invocation id
+ * exists. Syntax is that TestInvocationId. ITU-T Rec. X.745 (11/93) §8.4.4.9,
+ * A.6.
+ * [§8.4.4.9](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

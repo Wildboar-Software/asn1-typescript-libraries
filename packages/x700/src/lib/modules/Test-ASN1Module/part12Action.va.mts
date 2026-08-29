@@ -16,6 +16,16 @@ import {
  * @summary part12Action
  * @description
  *
+ * OID arc for ISO/IEC 10164-12 | X.745 test-management actions
+ * `{joint-iso-ccitt ms(9) function(2) part12(12) action(9)}`. Leaves: 1
+ * testRequestControlledAction (A.4, confirmed M-ACTION; info
+ * TestRequestControlledInfo; reply TestRequestControlledResponse per Cor.1
+ * A.4), 2 testSuspendResumeAction, 3 testTerminateAction, 4
+ * testRequestUncontrolledAction. ITU-T Rec. X.745 (11/93) §A.4, A.7.
+ * [§A.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * Reply-syntax name: X.745 Cor.1 (08/97) A.4.
+ * https://www.itu.int/rec/T-REC-X.745-199708-I_Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

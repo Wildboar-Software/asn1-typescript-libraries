@@ -19,6 +19,13 @@ import {
  * @summary RelatedTOError
  * @description
  *
+ * Specific error when controlledTestRequestType was related and the test could
+ * not be initiated because one or more required TOs could not be created.
+ * SEQUENCE OF per-TO CHOICE in request order: ableToCreateTO (NULL — would have
+ * succeeded) or unableToCreateTO (TONotCreated). ITU-T Rec. X.745 (11/93)
+ * §8.4.4.11, A.7.4.
+ * [§8.4.4.11](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

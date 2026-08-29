@@ -24,6 +24,11 @@ import {
  * @summary RelatedTestResponse
  * @description
  *
+ * Positive related-test reply: one invocation id for the whole test, then TO
+ * names (and optional attributes) in request order. ITU-T Rec. X.745 (11/93)
+ * §8.4.3.2, 8.4.3.3.
+ * [§8.4.3.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +43,24 @@ export class RelatedTestResponse {
     constructor(
         /**
          * @summary `testInvocationId`.
+         * @description
+         *
+         * Single TARR+integer invocation id shared by all related TOs. ITU-T
+         * Rec. X.745 (11/93) §7.3.1.
+         * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testInvocationId: TestInvocationId,
         /**
          * @summary `testObjectResponseList`.
+         * @description
+         *
+         * Created TOs in the same sequence as the request, for correlation.
+         * ITU-T Rec. X.745 (11/93) §8.4.3.3.
+         * [§8.4.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

@@ -24,6 +24,10 @@ import {
  * @summary TestSuspendResumeElement
  * @description
  *
+ * One test in a suspend/resume result or error: invocation id and per-TO
+ * states. ITU-T Rec. X.745 (11/93) §8.4.3.6, 8.4.4.12.
+ * [§8.4.3.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +42,24 @@ export class TestSuspendResumeElement {
     constructor(
         /**
          * @summary `testInvocationId`.
+         * @description
+         *
+         * The test that was (or failed to be) suspended or resumed. ITU-T Rec.
+         * X.745 (11/93) §8.4.3.6.
+         * [§8.4.3.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly testInvocationId: TestInvocationId,
         /**
          * @summary `tOsStates`.
+         * @description
+         *
+         * State of each TO: before suspend, or after resume. ITU-T Rec. X.745
+         * (11/93) §9.7.
+         * [§9.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

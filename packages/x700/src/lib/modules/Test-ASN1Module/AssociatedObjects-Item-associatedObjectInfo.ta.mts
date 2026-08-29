@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AssociatedObjects_Item_associatedObjectInfo
  * @description
  *
+ * Extra information about one associated object. The id selects a TMF-OBJECT in
+ * AssociatedObjectSet; the value is that object's &Value (optional).
+ * X.745 Cor.3 (02/00) A.7.1.
+ * https://www.itu.int/rec/T-REC-X.745-200002-I_Cor3
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +32,25 @@ export class AssociatedObjects_Item_associatedObjectInfo {
     constructor(
         /**
          * @summary `associatedObjectInfoId`.
+         * @description
+         *
+         * TMF-OBJECT.&id drawn from AssociatedObjectSet.
+         * X.745 Cor.3 (02/00) A.7.1.
+         * https://www.itu.int/rec/T-REC-X.745-200002-I_Cor3
+         *
          * @public
          * @readonly
          */
         readonly associatedObjectInfoId: OBJECT_IDENTIFIER,
         /**
          * @summary `associatedObjectInform`.
+         * @description
+         *
+         * TMF-OBJECT.&Value matching associatedObjectInfoId, if any extra
+         * information is supplied.
+         * X.745 Cor.3 (02/00) A.7.1.
+         * https://www.itu.int/rec/T-REC-X.745-200002-I_Cor3
+         *
          * @public
          * @readonly
          */

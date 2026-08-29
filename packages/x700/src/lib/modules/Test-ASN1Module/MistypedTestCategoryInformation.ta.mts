@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MistypedTestCategoryInformation
  * @description
  *
+ * Specific error: testCategoryInformation in the request was not valid. Syntax
+ * is the OID of the invalid information. ITU-T Rec. X.745 (11/93) §8.4.4.5,
+ * A.6.
+ * [§8.4.4.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -19,6 +19,14 @@ import {
  * @summary TestActionPerformerId
  * @description
  *
+ * Naming / identifying attribute of a testActionPerformer support object
+ * (optional TARR). Syntax SimpleNameType; added in Cor.1. MATCHES FOR EQUALITY
+ * (Cor.1 A.3.9, replacing SET-COMPARISON / SET-INTERSECTION). ITU-T Rec. X.745
+ * (11/93) §8.5.2.3, A.3.9.
+ * [§8.5.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * X.745 Cor.1 (08/97) A.3.9, A.7.1.
+ * https://www.itu.int/rec/T-REC-X.745-199708-I_Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

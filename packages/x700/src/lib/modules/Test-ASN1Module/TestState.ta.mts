@@ -36,6 +36,19 @@ import {
  * @summary TestState
  * @description
  *
+ * X.731 state attributes of a TO, mapped from the seven test states in 7.3.3 /
+ * Table 1. All TOs support at least Testing. Not initialized: enabled,
+ * procedural not-initialized, not suspended, off-duty. Idle: enabled, empty or
+ * reporting, not suspended, off-duty. Initializing: enabled, initializing, not
+ * suspended, empty or off-duty. Testing: enabled, empty or reporting, not
+ * suspended, empty. Terminating: enabled, terminating (may also be reporting),
+ * not suspended, empty. Suspended: enabled, any procedural, suspended, any
+ * availability. Disabled: disabled, any other. Tags on controlStatus [2] and
+ * availabilityStatus [3] are from Cor.1. ITU-T Rec. X.745 (11/93) §7.3.3.
+ * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * Tags: X.745 Cor.1 (08/97) A.7.2.
+ * https://www.itu.int/rec/T-REC-X.745-199708-I_Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,24 +65,49 @@ export class TestState {
     constructor(
         /**
          * @summary `operationalState`.
+         * @description
+         *
+         * X.731 operationalState. Enabled for every test state except Disabled.
+         * ITU-T Rec. X.745 (11/93) §7.3.3.
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly operationalState: OperationalState,
         /**
          * @summary `proceduralStatus`.
+         * @description
+         *
+         * X.731 proceduralStatus: not-initialized, initializing, terminating,
+         * reporting, or empty, per Table 1. ITU-T Rec. X.745 (11/93) §7.3.3.
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly proceduralStatus: ProceduralStatus,
         /**
          * @summary `controlStatus`.
+         * @description
+         *
+         * X.731 controlStatus; required only if the TO supports Suspended.
+         * Present as [2] (Cor.1). ITU-T Rec. X.745 (11/93) §7.3.3.
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly controlStatus?: OPTIONAL<ControlStatus>,
         /**
          * @summary `availabilityStatus`.
+         * @description
+         *
+         * X.731 availabilityStatus; required only if scheduling is supported
+         * (Idle / off-duty). Present as [3] (Cor.1). ITU-T Rec. X.745 (11/93)
+         * §7.3.3.
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

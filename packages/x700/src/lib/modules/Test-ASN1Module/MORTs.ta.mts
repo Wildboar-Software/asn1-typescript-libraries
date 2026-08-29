@@ -19,6 +19,12 @@ import {
  * @summary MORTs
  * @description
  *
+ * Managed object(s) referring to the functionalities being tested. Each test
+ * involves one or more MORT. Mandatory in notifications about the invocation
+ * when also used in the initiation request. ITU-T Rec. X.745 (11/93) §3.10.4,
+ * 8.1.2.
+ * [§3.10.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

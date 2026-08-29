@@ -19,6 +19,11 @@ import {
  * @summary AssociatedObjectNotAvailable
  * @description
  *
+ * Specific error: one or more associated objects are not in the correct state
+ * for the test. Syntax identifies those instances. ITU-T Rec. X.745 (11/93)
+ * §8.4.4.2, A.6.
+ * [§8.4.4.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,18 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TONotCreated_reason
  * @description
  *
+ * Enumerated reasons a TO was not created (A.7.4). The rec lists the names
+ * only; they correspond to class/instance/MORT/AO checks and to the
+ * MORT-not-available / AO-not-available errors.
+ * invalidTOclass (0): requested TO class is not valid for this TARR.
+ * duplicateTOInstance (1): that TO instance already exists.
+ * invalidMORTClass (2): a MORT class is not valid for this test.
+ * invalidAssociatedObjectClass (3): an AO class is not valid for this test.
+ * mORTNotAvailable (4): a MORT is not in a testable state (8.4.4.6).
+ * associatedObjectNotAvailable (5): an AO is not in the correct state
+ * (8.4.4.2). ITU-T Rec. X.745 (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +48,18 @@ export enum _enum_for_TONotCreated_reason {
  * @summary TONotCreated_reason
  * @description
  *
+ * Enumerated reasons a TO was not created (A.7.4). The rec lists the names
+ * only; they correspond to class/instance/MORT/AO checks and to the
+ * MORT-not-available / AO-not-available errors.
+ * invalidTOclass (0): requested TO class is not valid for this TARR.
+ * duplicateTOInstance (1): that TO instance already exists.
+ * invalidMORTClass (2): a MORT class is not valid for this test.
+ * invalidAssociatedObjectClass (3): an AO class is not valid for this test.
+ * mORTNotAvailable (4): a MORT is not in a testable state (8.4.4.6).
+ * associatedObjectNotAvailable (5): an AO is not in the correct state
+ * (8.4.4.2). ITU-T Rec. X.745 (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +74,18 @@ export type TONotCreated_reason = _enum_for_TONotCreated_reason;
  * @summary TONotCreated_reason
  * @description
  *
+ * Enumerated reasons a TO was not created (A.7.4). The rec lists the names
+ * only; they correspond to class/instance/MORT/AO checks and to the
+ * MORT-not-available / AO-not-available errors.
+ * invalidTOclass (0): requested TO class is not valid for this TARR.
+ * duplicateTOInstance (1): that TO instance already exists.
+ * invalidMORTClass (2): a MORT class is not valid for this test.
+ * invalidAssociatedObjectClass (3): an AO class is not valid for this test.
+ * mORTNotAvailable (4): a MORT is not in a testable state (8.4.4.6).
+ * associatedObjectNotAvailable (5): an AO is not in the correct state
+ * (8.4.4.2). ITU-T Rec. X.745 (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +98,12 @@ export const TONotCreated_reason = _enum_for_TONotCreated_reason;
 
 /**
  * @summary TONotCreated_reason_invalidTOclass
+ * @description
+ *
+ * Requested TO class is not valid for this TARR. ITU-T Rec. X.745 (11/93)
+ * §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +112,12 @@ export const TONotCreated_reason_invalidTOclass: TONotCreated_reason =
 
 /**
  * @summary invalidTOclass
+ * @description
+ *
+ * Requested TO class is not valid for this TARR. ITU-T Rec. X.745 (11/93)
+ * §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +126,11 @@ export const invalidTOclass: TONotCreated_reason =
 
 /**
  * @summary TONotCreated_reason_duplicateTOInstance
+ * @description
+ *
+ * A TO with that instance name already exists. ITU-T Rec. X.745 (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +139,11 @@ export const TONotCreated_reason_duplicateTOInstance: TONotCreated_reason =
 
 /**
  * @summary duplicateTOInstance
+ * @description
+ *
+ * A TO with that instance name already exists. ITU-T Rec. X.745 (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -94,6 +152,11 @@ export const duplicateTOInstance: TONotCreated_reason =
 
 /**
  * @summary TONotCreated_reason_invalidMORTClass
+ * @description
+ *
+ * A MORT class is not valid for this test. ITU-T Rec. X.745 (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +165,11 @@ export const TONotCreated_reason_invalidMORTClass: TONotCreated_reason =
 
 /**
  * @summary invalidMORTClass
+ * @description
+ *
+ * A MORT class is not valid for this test. ITU-T Rec. X.745 (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +178,12 @@ export const invalidMORTClass: TONotCreated_reason =
 
 /**
  * @summary TONotCreated_reason_invalidAssociatedObjectClass
+ * @description
+ *
+ * An associated-object class is not valid for this test. ITU-T Rec. X.745
+ * (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +192,12 @@ export const TONotCreated_reason_invalidAssociatedObjectClass: TONotCreated_reas
 
 /**
  * @summary invalidAssociatedObjectClass
+ * @description
+ *
+ * An associated-object class is not valid for this test. ITU-T Rec. X.745
+ * (11/93) §A.7.4.
+ * [§A.7.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +206,12 @@ export const invalidAssociatedObjectClass: TONotCreated_reason =
 
 /**
  * @summary TONotCreated_reason_mORTNotAvailable
+ * @description
+ *
+ * A MORT is not in a state in which it may be tested. ITU-T Rec. X.745 (11/93)
+ * §8.4.4.6, A.7.4.
+ * [§8.4.4.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -134,6 +220,12 @@ export const TONotCreated_reason_mORTNotAvailable: TONotCreated_reason =
 
 /**
  * @summary mORTNotAvailable
+ * @description
+ *
+ * A MORT is not in a state in which it may be tested. ITU-T Rec. X.745 (11/93)
+ * §8.4.4.6, A.7.4.
+ * [§8.4.4.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -142,6 +234,12 @@ export const mORTNotAvailable: TONotCreated_reason =
 
 /**
  * @summary TONotCreated_reason_associatedObjectNotAvailable
+ * @description
+ *
+ * An associated object is not in the correct state for the test. ITU-T Rec.
+ * X.745 (11/93) §8.4.4.2, A.7.4.
+ * [§8.4.4.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */
@@ -150,6 +248,12 @@ export const TONotCreated_reason_associatedObjectNotAvailable: TONotCreated_reas
 
 /**
  * @summary associatedObjectNotAvailable
+ * @description
+ *
+ * An associated object is not in the correct state for the test. ITU-T Rec.
+ * X.745 (11/93) §8.4.4.2, A.7.4.
+ * [§8.4.4.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * @constant
  * @type {number}
  */

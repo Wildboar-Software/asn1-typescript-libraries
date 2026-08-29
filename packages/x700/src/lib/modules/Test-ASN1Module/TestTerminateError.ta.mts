@@ -19,6 +19,11 @@ import {
  * @summary TestTerminateError
  * @description
  *
+ * Specific error: the TARR could not terminate one or more of the specified
+ * tests. SET of CHOICE naming each invocation that succeeded and each that
+ * failed. ITU-T Rec. X.745 (11/93) §8.4.4.13, A.7.4.
+ * [§8.4.4.13](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

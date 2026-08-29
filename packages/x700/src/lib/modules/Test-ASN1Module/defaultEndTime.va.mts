@@ -22,6 +22,14 @@ import {
  * @summary defaultEndTime
  * @description
  *
+ * DEFAULT VALUE of the requested-window endTime attribute: continual (NULL),
+ * meaning the window has no latest leave-Testing time (forever).
+ * REPLACE-WITH-DEFAULT restores this. ITU-T Rec. X.745 (11/93) §8.2.3, A.2,
+ * A.7.1.
+ * [§8.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * Property order: X.745 Cor.2 (06/98) A.2.
+ * https://www.itu.int/rec/T-REC-X.745-199806-I_Cor2
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

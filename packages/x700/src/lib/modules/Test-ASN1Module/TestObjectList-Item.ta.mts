@@ -26,6 +26,10 @@ import {
  * @summary TestObjectList_Item
  * @description
  *
+ * One TO to create: class, optional instance name, optional reference TO,
+ * optional initial attributes. ITU-T Rec. X.745 (11/93) §8.4.2.5, A.7.2.
+ * [§8.4.2.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,24 +41,51 @@ export class TestObjectList_Item {
     constructor(
         /**
          * @summary `tOClass`.
+         * @description
+         *
+         * Managed object class of the TO to instantiate. Mandatory. ITU-T Rec.
+         * X.745 (11/93) §8.4.2.5.
+         * [§8.4.2.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly tOClass: OBJECT_IDENTIFIER,
         /**
          * @summary `tOInstance`.
+         * @description
+         *
+         * Optional conductor-assigned TO name. Shall be omitted if
+         * scoping/filtering selects multiple TARRs. If omitted, the performer
+         * assigns the name and returns it. ITU-T Rec. X.745 (11/93) §9.5, A.4.
+         * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly tOInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `referenceTOInstance`.
+         * @description
+         *
+         * Optional existing TO whose attributes seed this TO.
+         * initialAttributeList overrides those values. ITU-T Rec. X.745 (11/93)
+         * §A.7.2.
+         * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly referenceTOInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `initialAttributeList`.
+         * @description
+         *
+         * Optional initial TO attributes. Overrides any referenceTOInstance
+         * values. A positive reply returns only those attributes the TO
+         * behaviour specifies. ITU-T Rec. X.745 (11/93) §A.7.2, 9.5.
+         * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

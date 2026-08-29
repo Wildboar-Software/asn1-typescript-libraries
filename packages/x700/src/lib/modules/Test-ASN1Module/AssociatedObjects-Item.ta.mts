@@ -24,6 +24,10 @@ import {
  * @summary AssociatedObjects_Item
  * @description
  *
+ * One associated object in AssociatedObjects: instance plus optional typed
+ * extra information. ITU-T Rec. X.745 (11/93) §8.1.1.
+ * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +39,24 @@ export class AssociatedObjects_Item {
     constructor(
         /**
          * @summary `associatedObject`.
+         * @description
+         *
+         * Instance of the associated object (not a MORT, TO, or TARR). ITU-T
+         * Rec. X.745 (11/93) §8.1.1.
+         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly associatedObject: ObjectInstance,
         /**
          * @summary `associatedObjectInfo`.
+         * @description
+         *
+         * TMF-OBJECT id and optional value describing this AO; id is from
+         * AssociatedObjectSet (Cor.3). ITU-T Rec. X.745 (11/93) §8.1.1.
+         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

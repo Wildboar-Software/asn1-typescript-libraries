@@ -19,6 +19,10 @@ import {
  * @summary NoSuchAssociatedObject
  * @description
  *
+ * Specific error: one or more specified associated objects do not exist. Syntax
+ * identifies those instances. ITU-T Rec. X.745 (11/93) §8.4.4.7, A.6.
+ * [§8.4.4.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -24,6 +24,12 @@ import {
  * @summary IndicatedTests
  * @description
  *
+ * Which controlled tests a suspend, resume, or terminate request addresses: a
+ * test session (best-effort for every invocation in the session) or an explicit
+ * SET of invocation ids (all TOs of each id, else an error). ITU-T Rec. X.745
+ * (11/93) §8.4.2.2, 7.2.4, 7.2.5.
+ * [§8.4.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

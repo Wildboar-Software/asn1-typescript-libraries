@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SupportedTOClasses
  * @description
  *
+ * SET of TO class OIDs this TARR can instantiate for controlled tests. ITU-T
+ * Rec. X.745 (11/93) §8.5.2.2, A.3.7.
+ * [§8.5.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

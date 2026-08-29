@@ -20,6 +20,12 @@ import {
  * @summary InitializingTime
  * @description
  *
+ * When the TO shall enter the Initializing state: an absolute time, or a
+ * Timespec relative to the time it will enter Testing. `relativeTime` with
+ * Timespec `forever` means NOW. Controls the Not-initialized → Initializing
+ * transition. ITU-T Rec. X.745 (11/93) §7.2.2, 8.2.2, A.7.1.
+ * [§7.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

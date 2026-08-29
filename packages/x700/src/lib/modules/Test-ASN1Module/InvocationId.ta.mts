@@ -20,6 +20,12 @@ import {
  * @summary InvocationId
  * @description
  *
+ * Related-test (and optional independent-test) form of a test invocation
+ * identifier: DN of the TARR that received the request plus an integer assigned
+ * by the test performer. Used when TestInvocationId chooses `invocationId`.
+ * Mandatory on every TO. ITU-T Rec. X.745 (11/93) §7.3.1, 8.1.3.
+ * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +39,24 @@ export class InvocationId {
     constructor(
         /**
          * @summary `tARRName`.
+         * @description
+         *
+         * Distinguished name of the managed object with TARR functionality that
+         * received the test request. ITU-T Rec. X.745 (11/93) §8.1.3.
+         * [§8.1.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */
         readonly tARRName: DistinguishedName,
         /**
          * @summary `testId`.
+         * @description
+         *
+         * Integer assigned by the test performer that, with tARRName, uniquely
+         * identifies this test invocation. ITU-T Rec. X.745 (11/93) §7.3.1.
+         * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+         *
          * @public
          * @readonly
          */

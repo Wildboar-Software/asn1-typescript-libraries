@@ -19,6 +19,15 @@ import {
  * @summary TestTerminateInfo
  * @description
  *
+ * M-ACTION information of testTerminateAction (confirmed): the session or
+ * invocation ids to terminate. Directed at the original TARR. Controlled tests
+ * only. Successful terminate runs each TO's termination sequence (possible
+ * result reports with premature-termination if outcome not concluded, then
+ * cleanup of MORT/AO test activity) and then deletes the TOs. Distinct from
+ * abort (PT-DELETE of TOs, which emits no further result reports). ITU-T Rec.
+ * X.745 (11/93) §9.8, 7.2.5, A.4.
+ * [§9.8](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

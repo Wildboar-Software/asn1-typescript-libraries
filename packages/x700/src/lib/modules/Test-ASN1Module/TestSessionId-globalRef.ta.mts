@@ -20,6 +20,10 @@ import {
  * @summary TestSessionId_globalRef
  * @description
  *
+ * Optional global part of TestSessionId: Distinguished Name (`dnGlobRef`) or
+ * OBJECT IDENTIFIER (`oidGlobRef`). ITU-T Rec. X.745 (11/93) §8.1.6, A.7.1.
+ * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

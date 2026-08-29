@@ -24,6 +24,14 @@ import {
  * @summary TestRequestControlledResponse
  * @description
  *
+ * Positive reply to testRequestControlledAction (Cor.1 renamed this from
+ * TestRequestControlledResult). Independent requests return a list of per-TO
+ * IndependentTestResponse; related requests return one RelatedTestResponse.
+ * ITU-T Rec. X.745 (11/93) §8.4.3.4, 7.3.1.
+ * [§8.4.3.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+ * Name: X.745 Cor.1 (08/97) A.4.
+ * https://www.itu.int/rec/T-REC-X.745-199708-I_Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
