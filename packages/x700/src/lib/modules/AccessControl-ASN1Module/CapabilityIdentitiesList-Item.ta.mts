@@ -24,6 +24,11 @@ import {
  * @summary CapabilityIdentitiesList_Item
  * @description
  *
+ * One capability identity: `knownForm` (named initiator,
+ * optional SDA list) or `unknownForm` (unspecified
+ * identity). ITU-T Rec. X.741 (04/95)
+ * [§A.5.7](https://www.itu.int/rec/T-REC-X.741-199504-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

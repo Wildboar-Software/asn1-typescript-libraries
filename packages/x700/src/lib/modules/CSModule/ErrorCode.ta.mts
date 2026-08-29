@@ -19,6 +19,30 @@ import {
  * @summary ErrorCode
  * @description
  *
+ * Outcome of script execution, as a set of named integers, in
+ * `executionResultInfo` and `triggerResultInfo`. `{noError}`
+ * on success; otherwise one or more of:
+ *
+ * - `noError` (0) — success.
+ * - `noScriptError` (1) — script name not specified (no
+ *   execution parameter list and no default).
+ * - `scriptRejectedError` (2) — script not in the launch pad's
+ *   `availableScriptList`.
+ * - `invalidParameterTypeError` (3) — parameter type mismatch.
+ * - `invalidParameterValueError` (4) — parameter value invalid
+ *   (e.g. out of range).
+ * - `scriptSyntaxError` (5) — script syntax error.
+ * - `scriptExecutionFailedError` (6) — failed for a reason
+ *   other than syntax.
+ * - `invalidParmeterNumber` (7) — wrong parameter count
+ *   (spec spelling).
+ * - `unauthorizedAccessError` (8) — access denied to an object
+ *   the script uses.
+ *
+ * ITU-T Rec. X.753 (10/97)
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.2.2, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

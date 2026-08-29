@@ -24,6 +24,14 @@ import {
  * @summary TriggerParameters
  * @description
  *
+ * Action information of the `trigger` action: start script
+ * execution by causing a launch pad to spawn one or more
+ * threads. `executionParameterList` names the scripts and
+ * inputs; if empty/absent, the launch pad uses
+ * `defaultExecutionParameterList`. ITU-T Rec. X.753 (10/97)
+ * [§8.3.4](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §9.4 Table 8, A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +46,23 @@ export class TriggerParameters {
     constructor(
         /**
          * @summary `triggerId`.
+         * @description
+         *
+         * Identifies this trigger. Mandatory in the trigger action
+         * service. Correlated in later result notifications and in
+         * suspend/resume/terminate. ITU-T Rec. X.753 (10/97)
+         * §8.3.4, §9.4 Table 8.
          * @public
          * @readonly
          */
         readonly triggerId: TriggerId,
         /**
          * @summary `executionParameterList`.
+         * @description
+         *
+         * Scripts and inputs to run (single, sequential, or
+         * parallel). User-optional as "Attribute list" in Table 8.
+         * ITU-T Rec. X.753 (10/97) §7.1, §8.3.4, §9.4.
          * @public
          * @readonly
          */

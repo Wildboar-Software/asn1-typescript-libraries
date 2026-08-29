@@ -19,6 +19,16 @@ import {
  * @summary ObjectClassList
  * @description
  *
+ * Syntax of `managedObjectClasses` on targets (and class
+ * labels): protected managed object classes with optional
+ * associated name bindings. Used to select target objects
+ * in the security domain (with specified name bindings).
+ * Including a value not known as a managed object class in
+ * the domain yields CMIS invalid-attribute-value. ITU-T
+ * Rec. X.741 (04/95)
+ * [§A.5.18](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.5.1.1, A.2.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

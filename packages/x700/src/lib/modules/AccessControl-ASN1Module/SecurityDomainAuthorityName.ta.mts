@@ -24,6 +24,13 @@ import {
  * @summary SecurityDomainAuthorityName
  * @description
  *
+ * Identity of a security domain authority (entity
+ * responsible for implementing a security policy). Either a
+ * Directory distinguished name or a proxy (anonymous /
+ * alternative) name. ITU-T Rec. X.741 (04/95)
+ * [§3.11.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

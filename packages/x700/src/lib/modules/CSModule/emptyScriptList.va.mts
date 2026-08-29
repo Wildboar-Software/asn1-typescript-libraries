@@ -22,6 +22,10 @@ import {
  * @summary emptyScriptList
  * @description
  *
+ * DEFAULT VALUE of `availableScriptList`: no scripts until
+ * configured. ITU-T Rec. X.753 (10/97)
+ * [A.2](https://www.itu.int/rec/T-REC-X.753-199710-I), A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

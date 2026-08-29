@@ -25,6 +25,17 @@ import {
  * @summary InitiatorName
  * @description
  *
+ * Named initiator in an ACL or capability identity.
+ * `individualName`, `groupName`, and `role` are Directory
+ * distinguished names (a group name may be used with the
+ * OSI Directory); `application` is an AE-title identifying
+ * the application entity (and by reference the system) that
+ * initiated the request. Cor.2 uses `AE-title` from ACSE-1.
+ * ITU-T Rec. X.741 (04/95)
+ * [§A.5.1](https://www.itu.int/rec/T-REC-X.741-199504-I);
+ * Cor.2 (06/98)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

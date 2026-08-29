@@ -25,6 +25,12 @@ import {
  * @summary ActionFilterList_Item
  * @description
  *
+ * One action in an action filter list: the action type and
+ * an optional CMIS-filter constraint on its arguments.
+ * ITU-T Rec. X.741 (04/95)
+ * [§A.5.4](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.2.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +42,22 @@ export class ActionFilterList_Item {
     constructor(
         /**
          * @summary `actionTypeId`.
+         * @description
+         *
+         * Action type included in the target. If no
+         * `attributeFilterList`, all information values of this
+         * action are targeted. X.741 A.2.6, A.5.4.
          * @public
          * @readonly
          */
         readonly actionTypeId: ActionTypeId,
         /**
          * @summary `attributeFilterList`.
+         * @description
+         *
+         * Optional CMIS filters on this action's arguments.
+         * Omit to leave argument values unconstrained. X.741
+         * A.2.6, A.5.4.
          * @public
          * @readonly
          */

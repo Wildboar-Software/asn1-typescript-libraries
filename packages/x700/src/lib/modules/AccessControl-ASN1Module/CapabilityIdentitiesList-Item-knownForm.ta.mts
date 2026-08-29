@@ -25,6 +25,13 @@ import {
  * @summary CapabilityIdentitiesList_Item_knownForm
  * @description
  *
+ * Capability identity in a form defined by this rec:
+ * initiator name plus an optional list of security-domain
+ * authority / operation-type pairs (per-authority
+ * constraints). ITU-T Rec. X.741 (04/95)
+ * [§A.5.7](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * Annex H.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +43,22 @@ export class CapabilityIdentitiesList_Item_knownForm {
     constructor(
         /**
          * @summary `initiatorName`.
+         * @description
+         *
+         * Individual, group, role, or application name of the
+         * initiator allowed to use the capability. X.741 §A.5.7.
          * @public
          * @readonly
          */
         readonly initiatorName: InitiatorName,
         /**
          * @summary `sdaList`.
+         * @description
+         *
+         * Optional per-authority constraints: security domain
+         * authority names paired with operation types. Omit for
+         * capabilities without specific operations. X.741
+         * Annex H.4.
          * @public
          * @readonly
          */

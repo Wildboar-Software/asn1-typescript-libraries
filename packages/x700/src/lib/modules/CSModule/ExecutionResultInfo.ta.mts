@@ -44,6 +44,18 @@ import {
  * @summary ExecutionResultInfo
  * @description
  *
+ * Information syntax of the `executionResultInfo`
+ * notification: outcome of one thread's script. Emitted by the
+ * thread. With an asynchronous launch pad, forwarded to
+ * external destinations (manager does not wait on
+ * `triggerResultInfo`). With a synchronous launch pad,
+ * forwarded to the launch pad, which waits and folds results
+ * into `triggerResultInfo`. Intermediate and final results.
+ * `errorCode` is `{noError}` on success. ITU-T Rec. X.753
+ * (10/97)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.2.2, §9.3.1 Table 6, A.3, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,36 +74,66 @@ export class ExecutionResultInfo {
     constructor(
         /**
          * @summary `triggerId`.
+         * @description
+         *
+         * Trigger that caused this thread to be spawned. Mandatory
+         * in the execution-result service. ITU-T Rec. X.753 (10/97)
+         * §9.3.1 Table 6.
          * @public
          * @readonly
          */
         readonly triggerId: TriggerId,
         /**
          * @summary `scriptId`.
+         * @description
+         *
+         * Launch script this thread executed. Mandatory in the
+         * execution-result service. ITU-T Rec. X.753 (10/97)
+         * §9.3.1 Table 6.
          * @public
          * @readonly
          */
         readonly scriptId: ScriptId,
         /**
          * @summary `threadId`.
+         * @description
+         *
+         * Thread that produced this result. Mandatory in the
+         * execution-result service. ITU-T Rec. X.753 (10/97)
+         * §9.3.1 Table 6.
          * @public
          * @readonly
          */
         readonly threadId: ThreadId,
         /**
          * @summary `errorCode`.
+         * @description
+         *
+         * Outcome: `{noError}` if successful, otherwise the
+         * applicable failure code(s). User-optional in Table 6;
+         * present in this SEQUENCE. ITU-T Rec. X.753 (10/97)
+         * §8.2.2, §9.3.1.
          * @public
          * @readonly
          */
         readonly errorCode: ErrorCode,
         /**
          * @summary `executionResultType`.
+         * @description
+         *
+         * Type of `executionResult`; should match the script's
+         * `executionResultType` attribute. User-optional in
+         * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
          * @public
          * @readonly
          */
         readonly executionResultType: ExecutionResultType,
         /**
          * @summary `executionResult`.
+         * @description
+         *
+         * Result attributes from the script. User-optional in
+         * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
          * @public
          * @readonly
          */

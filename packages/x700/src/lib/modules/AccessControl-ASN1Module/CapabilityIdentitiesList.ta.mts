@@ -19,6 +19,22 @@ import {
  * @summary CapabilityIdentitiesList
  * @description
  *
+ * Syntax of the `capabilityIdentitiesList` attribute on
+ * capability initiators. Each identity is matched against
+ * the initiator of the request to decide whether that
+ * capability may be used. Known form: individual, group,
+ * role or application name, optionally with
+ * (security-domain-authority, operation-type) pairs.
+ * Unknown form: identity not specified by this rec (typed
+ * by `AC-CAP-IDENTITY`). Absence of an identity means the
+ * capability is not valid; deny-permission rules and
+ * targets/operations objects are not required unless local
+ * refinements apply. Cor.3 replaced `ANY DEFINED BY` for
+ * the unknown form. ITU-T Rec. X.741 (04/95)
+ * [§A.5.7](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.9.1.1, A.2.9, Annex H.4; Cor.3 (02/2000)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

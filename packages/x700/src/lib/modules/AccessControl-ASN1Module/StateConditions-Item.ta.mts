@@ -24,6 +24,13 @@ import {
  * @summary StateConditions_Item
  * @description
  *
+ * One state-condition: a managed object whose attributes
+ * are filtered. Missing object or FALSE filter makes the
+ * containing rule evaluate to FALSE. ITU-T Rec. X.741
+ * (04/95)
+ * [§A.2.3](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.5.25.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +42,21 @@ export class StateConditions_Item {
     constructor(
         /**
          * @summary `conditionalObject`.
+         * @description
+         *
+         * Managed object whose state is a context for the rule.
+         * If it is not available, the rule evaluates to FALSE.
+         * X.741 A.2.3, A.5.25.
          * @public
          * @readonly
          */
         readonly conditionalObject: ObjectInstance,
         /**
          * @summary `state`.
+         * @description
+         *
+         * CMIS filter on attributes of `conditionalObject`.
+         * FALSE ⇒ rule evaluates to FALSE. X.741 A.2.3, A.5.25.
          * @public
          * @readonly
          */

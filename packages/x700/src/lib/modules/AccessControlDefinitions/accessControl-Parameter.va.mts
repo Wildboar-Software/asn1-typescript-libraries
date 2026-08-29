@@ -15,6 +15,14 @@ import {
  * @summary accessControl_Parameter
  * @description
  *
+ * Arc for X.741 GDMO parameter OIDs:
+ * `{joint-iso-itu-t ms(9) function(2) part9(9)
+ * parameter(5)}`. Leaf `invalidAccessControlFilter`(1)
+ * is the CMIS processing-failure specific error for a bad
+ * access-control filter. ITU-T Rec. X.741 (04/95)
+ * [§A.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.4.1, Table 3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

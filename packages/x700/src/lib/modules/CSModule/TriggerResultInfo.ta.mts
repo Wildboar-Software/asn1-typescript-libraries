@@ -24,6 +24,19 @@ import {
  * @summary TriggerResultInfo
  * @description
  *
+ * Information syntax of the `triggerResultInfo` notification
+ * from a launch pad.
+ *
+ * Asynchronous launch pad: emit as soon as all threads for the
+ * trigger have been spawned (do not wait for script results).
+ * Synchronous launch pad: wait until those threads complete,
+ * then emit with execution results or errors.
+ *
+ * `resultType` matches spawn shape: one thread, ordered
+ * sequence, or parallel set. ITU-T Rec. X.753 (10/97)
+ * [§3.6.6](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §3.6.7, §7.2, §8.1.7–§8.1.8, §8.2.1, A.3, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +54,21 @@ export class TriggerResultInfo {
     constructor(
         /**
          * @summary `triggerId`.
+         * @description
+         *
+         * Trigger this result answers. Mandatory in the trigger-
+         * result service. ITU-T Rec. X.753 (10/97) §9.3.1 Table 7.
          * @public
          * @readonly
          */
         readonly triggerId: TriggerId,
         /**
          * @summary `resultType`.
+         * @description
+         *
+         * Per-thread results grouped as single, sequential, or
+         * parallel, matching how the launch pad spawned. ITU-T Rec.
+         * X.753 (10/97) §7.1–§7.2, A.8.
          * @public
          * @readonly
          */

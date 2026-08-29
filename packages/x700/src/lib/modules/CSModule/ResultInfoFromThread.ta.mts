@@ -34,6 +34,16 @@ import {
  * @summary ResultInfoFromThread
  * @description
  *
+ * Per-thread payload of `TriggerResultInfo`: what ran, error,
+ * result type, and result attributes. A synchronous launch pad
+ * waits for threads to finish and includes this in
+ * `triggerResultInfo`. An asynchronous launch pad's trigger
+ * result carries spawn identities (`executionType`) without
+ * waiting; script outcomes go via `executionResultInfo`. ITU-T
+ * Rec. X.753 (10/97)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.1.7–§8.1.8, A.3, A.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,24 +60,44 @@ export class ResultInfoFromThread {
     constructor(
         /**
          * @summary `executionType`.
+         * @description
+         *
+         * Script/thread pairs spawned for this trigger (single,
+         * parallel set, or sequential list). ITU-T Rec. X.753
+         * (10/97) §7.2, A.8.
          * @public
          * @readonly
          */
         readonly executionType: ExecutionType,
         /**
          * @summary `errorCode`.
+         * @description
+         *
+         * `{noError}` if this thread succeeded; otherwise the
+         * failure code(s). ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
          * @public
          * @readonly
          */
         readonly errorCode: ErrorCode,
         /**
          * @summary `executionResultType`.
+         * @description
+         *
+         * Type of `executionResult`; should match the script's
+         * `executionResultType`. ITU-T Rec. X.753 (10/97) §7.2.
          * @public
          * @readonly
          */
         readonly executionResultType: ExecutionResultType,
         /**
          * @summary `executionResult`.
+         * @description
+         *
+         * Result attributes from the thread. Present in a
+         * synchronous launch pad's trigger result after wait;
+         * async launch pads deliver these via
+         * `executionResultInfo` instead. ITU-T Rec. X.753 (10/97)
+         * §7.2, §8.1.7–§8.1.8.
          * @public
          * @readonly
          */

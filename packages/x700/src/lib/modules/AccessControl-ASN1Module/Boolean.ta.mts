@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Boolean
  * @description
  *
+ * Syntax of `initiatorACImandated` on initiators: TRUE
+ * means initiator ACI is required on every management
+ * operation request (else access is denied); FALSE means
+ * none is required. Default of that attribute is `false`.
+ * ITU-T Rec. X.741 (04/95)
+ * [§A.5.14](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * §8.1.7.1.1, A.2.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

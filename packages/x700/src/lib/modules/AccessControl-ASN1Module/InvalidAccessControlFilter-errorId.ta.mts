@@ -15,6 +15,19 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InvalidAccessControlFilter_errorId
  * @description
  *
+ * Error identifier of `invalidAccessControlFilter`. ITU-T
+ * Rec. X.741 (04/95)
+ * [§A.5.2](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.4.1.
+ *
+ * Values:
+ * - `duplicateId` (0): an attribute is associated with
+ *   more than one CMIS filter.
+ * - `heterogeneousId` (1): filter items in one filter
+ *   do not all identify the same attribute.
+ * - `invalidId` (2): an attribute identifier is not valid
+ *   for this specialization of the filter attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +46,19 @@ export enum _enum_for_InvalidAccessControlFilter_errorId {
  * @summary InvalidAccessControlFilter_errorId
  * @description
  *
+ * Error identifier of `invalidAccessControlFilter`. ITU-T
+ * Rec. X.741 (04/95)
+ * [§A.5.2](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.4.1.
+ *
+ * Values:
+ * - `duplicateId` (0): an attribute is associated with
+ *   more than one CMIS filter.
+ * - `heterogeneousId` (1): filter items in one filter
+ *   do not all identify the same attribute.
+ * - `invalidId` (2): an attribute identifier is not valid
+ *   for this specialization of the filter attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,6 +73,19 @@ export type InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlF
  * @summary InvalidAccessControlFilter_errorId
  * @description
  *
+ * Error identifier of `invalidAccessControlFilter`. ITU-T
+ * Rec. X.741 (04/95)
+ * [§A.5.2](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * A.4.1.
+ *
+ * Values:
+ * - `duplicateId` (0): an attribute is associated with
+ *   more than one CMIS filter.
+ * - `heterogeneousId` (1): filter items in one filter
+ *   do not all identify the same attribute.
+ * - `invalidId` (2): an attribute identifier is not valid
+ *   for this specialization of the filter attribute.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,6 +98,11 @@ export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControl
 
 /**
  * @summary InvalidAccessControlFilter_errorId_duplicateId
+ * @description
+ *
+ * An attribute is associated with more than one CMIS
+ * filter. X.741 A.5.2, A.4.1.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +111,11 @@ export const InvalidAccessControlFilter_errorId_duplicateId: InvalidAccessContro
 
 /**
  * @summary duplicateId
+ * @description
+ *
+ * An attribute is associated with more than one CMIS
+ * filter. X.741 A.5.2.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +124,11 @@ export const duplicateId: InvalidAccessControlFilter_errorId =
 
 /**
  * @summary InvalidAccessControlFilter_errorId_heterogeneousId
+ * @description
+ *
+ * Filter items in one filter do not all identify the same
+ * attribute. X.741 A.5.2, A.4.1.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +137,11 @@ export const InvalidAccessControlFilter_errorId_heterogeneousId: InvalidAccessCo
 
 /**
  * @summary heterogeneousId
+ * @description
+ *
+ * Filter items in one filter do not all identify the same
+ * attribute. X.741 A.5.2.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +150,12 @@ export const heterogeneousId: InvalidAccessControlFilter_errorId =
 
 /**
  * @summary InvalidAccessControlFilter_errorId_invalidId
+ * @description
+ *
+ * An attribute identifier is not valid for this
+ * specialization of the filter attribute. X.741 A.5.2,
+ * A.4.1.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +164,11 @@ export const InvalidAccessControlFilter_errorId_invalidId: InvalidAccessControlF
 
 /**
  * @summary invalidId
+ * @description
+ *
+ * An attribute identifier is not valid for this
+ * specialization of the filter attribute. X.741 A.5.2.
+ *
  * @constant
  * @type {number}
  */

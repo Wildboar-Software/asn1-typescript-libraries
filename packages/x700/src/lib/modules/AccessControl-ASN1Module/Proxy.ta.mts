@@ -15,6 +15,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Proxy
  * @description
  *
+ * Anonymous initiator identity: an `AC-PROXY` type
+ * identifier plus the value it defines. Used in ACL entries
+ * and as `alternativeAuthorityName` of a security domain
+ * authority when the name is not a distinguished name.
+ * Cor.3 replaced `ANY DEFINED BY proxyId` with
+ * `DMI-TYPE-IDENTIFIER` (`AC-PROXY` / `ProxySet`). ITU-T
+ * Rec. X.741 (04/95)
+ * [§A.5.1](https://www.itu.int/rec/T-REC-X.741-199504-I);
+ * Cor.3 (02/2000)
+ * [A.6](https://www.itu.int/rec/T-REC-X.741-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +40,20 @@ export class Proxy {
     constructor(
         /**
          * @summary `proxyId`.
+         * @description
+         *
+         * `AC-PROXY.&id` from `ProxySet`; selects the syntax of
+         * `proxyValue`. X.741 Cor.3 A.6.
          * @public
          * @readonly
          */
         readonly proxyId: OBJECT_IDENTIFIER,
         /**
          * @summary `proxyValue`.
+         * @description
+         *
+         * Value of the proxy identity, typed by `proxyId`. X.741
+         * Cor.3 A.6.
          * @public
          * @readonly
          */

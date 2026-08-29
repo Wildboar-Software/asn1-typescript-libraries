@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ExecutionResultType
  * @description
  *
+ * Type of result a script is expected to produce, and the type
+ * carried in an execution result. The two should correspond.
+ * Rec does not enumerate result-type OIDs. ITU-T Rec. X.753
+ * (10/97)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.753-199710-I),
+ * §8.1.4.2.2, A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

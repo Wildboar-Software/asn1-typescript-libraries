@@ -15,6 +15,20 @@ import {
  * @summary accessControl_Object
  * @description
  *
+ * Arc for X.741 managed object class OIDs:
+ * `{joint-iso-itu-t ms(9) function(2) part9(9)
+ * managedObjectClass(3)}`. Leaves: `accessControl`(1)
+ * (not instantiated), `accessControlRules`(2) (one per ADF
+ * in a domain), `rule`(3) (global or item),
+ * `notificationEmitter`(4), `targets`(5), `operations`(6),
+ * `initiators`(7), `aclInitiators`(8),
+ * `capabilityInitiators`(9), `labelInitiators`(10),
+ * `assignedLabels`(11), `attributeLabel`(12),
+ * `instanceLabel`(13), `classLabel`(14). ITU-T Rec. X.741
+ * (04/95)
+ * [§A.1](https://www.itu.int/rec/T-REC-X.741-199504-I),
+ * Table 1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
