@@ -21,6 +21,17 @@ import {
  * @summary BioAPI_BIR_HEADER
  * @description
  *
+ * Header-only BIR for BIP PDUs (empty BDB and SB), not the BioAPI
+ * C header struct. Same patron rules as `BioAPI-BIR`: default
+ * owner 257, type 8 (ISO/IEC 19784-1 Annex B). Bindings may
+ * convert to another CBEFF patron that meets §13.16.
+ * Unsupported patron yields
+ * `BioAPIERR_PATRON_FORMAT_NOT_SUPPORTED`.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.13](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §10, §13.16–13.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +47,33 @@ export class BioAPI_BIR_HEADER {
   constructor(
     /**
      * @summary `patronFormatOwner`.
+     * @description
+     *
+     * CBEFF patron-format owner. Default 257. X.1083 §13.17–13.18,
+     * §15.13.
+     *
      * @public
      * @readonly
      */
     readonly patronFormatOwner: UnsignedShort,
     /**
      * @summary `patronFormatType`.
+     * @description
+     *
+     * CBEFF patron-format type. Default 8 (ISO/IEC 19784-1
+     * Annex B). X.1083 §13.17–13.18, §15.13.
+     *
      * @public
      * @readonly
      */
     readonly patronFormatType: UnsignedShort,
     /**
      * @summary `formattedBIR`.
+     * @description
+     *
+     * Octets of a header-only BIR (empty BDB/SB) in the named
+     * patron. X.1083 §10, §13.16–13.18, §15.13.
+     *
      * @public
      * @readonly
      */

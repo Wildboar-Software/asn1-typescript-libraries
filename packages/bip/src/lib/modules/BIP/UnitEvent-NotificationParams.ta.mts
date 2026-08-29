@@ -37,6 +37,13 @@ import {
  * @summary UnitEvent_NotificationParams
  * @description
  *
+ * Parameter of a `unitEvent` notification BIP message
+ * (`BIPNotification`, slave → master). Converted from
+ * `BioSPI_EVENT_HANDLER` when a local BSP raises a unit event
+ * (Table 122). The receiver shall not send an acknowledgement
+ * (X.1083 §17.1.6). ITU-T Rec. X.1083 (11/2007)
+ * [§17.1](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,24 +60,43 @@ export class UnitEvent_NotificationParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP that raised the event (`BSPUuid` of
+     * `BioSPI_EVENT_HANDLER`). X.1083 §17.1.7, Table 122.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit that raised the event. X.1083 §17.1.7, Table 122.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `unitSchema`.
+     * @description
+     *
+     * Schema of that unit, if the BSP supplied one. X.1083
+     * §17.1.7, Table 122.
+     *
      * @public
      * @readonly
      */
     readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
     /**
      * @summary `unitEventType`.
+     * @description
+     *
+     * Kind of unit event (`EventType` of
+     * `BioSPI_EVENT_HANDLER`). X.1083 §17.1.7, Table 122.
+     *
      * @public
      * @readonly
      */

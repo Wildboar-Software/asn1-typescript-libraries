@@ -26,6 +26,12 @@ import {
  * @summary BioAPI_UNIT_LIST_ELEMENT
  * @description
  *
+ * One unit in a `QueryUnits` list. No `hostingEndpointIRI`: all
+ * listed units are in the BSP's hosting endpoint.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.56](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

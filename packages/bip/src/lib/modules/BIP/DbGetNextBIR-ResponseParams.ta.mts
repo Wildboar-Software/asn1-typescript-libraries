@@ -25,6 +25,11 @@ import {
  * @summary DbGetNextBIR_ResponseParams
  * @description
  *
+ * Parameters of a `dbGetNextBIR` response BIP message
+ * (`BioAPI_DbGetNextBIR`). Slave→master. Written into the C output
+ * pointers (cl.20) (`X.1083 §16.50`). BioAPI outcome is
+ * `BIPResponse.returnValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,22 @@ export class DbGetNextBIR_ResponseParams {
   constructor(
     /**
      * @summary `retrievedBIR`.
+     * @description
+     *
+     * Next BIR handle written to C `RetrievedBIR` (cl.20, §15.12).
+     * Required on a conforming response (`X.1083 §16.50`, Table 110).
+     *
      * @public
      * @readonly
      */
     readonly retrievedBIR: BioAPI_BIR_HANDLE,
     /**
      * @summary `birUuid`.
+     * @description
+     *
+     * Next-BIR UUID written to C `BirUuid` (cl.20, §15.58). Required on
+     * a conforming response (`X.1083 §16.50`, Table 110).
+     *
      * @public
      * @readonly
      */

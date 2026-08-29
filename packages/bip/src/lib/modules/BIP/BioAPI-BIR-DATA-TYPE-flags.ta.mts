@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_BIR_DATA_TYPE_flags
  * @description
  *
+ * Four MSBs of the C `BioAPI_BIR_DATA_TYPE` byte. Bit 0 of this
+ * string is C `0x10` (encrypted); bit 1 is `0x20` (signed); bit 3
+ * is `0x80` (index-present). Bit 2 (C `0x40`) is unnamed.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.11](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

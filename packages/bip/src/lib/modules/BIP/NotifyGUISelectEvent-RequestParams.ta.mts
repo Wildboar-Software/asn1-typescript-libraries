@@ -64,6 +64,16 @@ import {
  * @summary NotifyGUISelectEvent_RequestParams
  * @description
  *
+ * Parameters of a `notifyGUISelectEvent` request BIP message
+ * (master→slave) for `BioAPI_NotifyGUISelectEvent`. This is a
+ * request/response exchange on the request/response channel,
+ * not a clause 17 `guiSelectEvent` notification PDU. A host
+ * that received a primary GUI select callback (or a redirected
+ * host) uses it to deliver a secondary GUI select event that
+ * needs an acknowledgement-like response. `originalBSPHandle`
+ * is omitted when building `GUISelectEventInfo`. X.1083
+ * §16.25, §8.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -88,72 +98,139 @@ export class NotifyGUISelectEvent_RequestParams {
   constructor(
     /**
      * @summary `subscriberEndpointIRI`.
+     * @description
+     *
+     * Endpoint IRI of the secondary GUI handler. BioAPI `NULL`
+     * `SubscriberEndpointIRI` is rewritten to the local
+     * endpoint IRI (X.1083 §15.3). X.1083 §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly subscriberEndpointIRI: EndpointIRI,
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * UUID of the secondary GUI-event subscription that shall
+     * receive this event. Required (unlike
+     * `subscribeToGUIEvents`, where it is OPTIONAL). C `NULL`
+     * is unconvertible (clause 19). X.1083 §16.25.5, §8.5.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: BioAPI_UUID,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP that originated the GUI event.
+     * Converted from BioAPI `BSPUuid` via clause 25. X.1083
+     * §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit that originated the GUI select event. Forwarded from
+     * the primary callback. X.1083 §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `enrollType`.
+     * @description
+     *
+     * Enrollment type from the primary GUI select callback.
+     * Forwarded unchanged to the secondary handler. X.1083
+     * §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly enrollType: BioAPI_GUI_ENROLL_TYPE,
     /**
      * @summary `operation`.
+     * @description
+     *
+     * GUI operation from the primary select callback.
+     * Forwarded to the secondary handler. X.1083 §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly operation: BioAPI_GUI_OPERATION,
     /**
      * @summary `moment`.
+     * @description
+     *
+     * GUI moment from the primary select callback. Forwarded
+     * to the secondary handler. X.1083 §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly moment: BioAPI_GUI_MOMENT,
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Result code from the primary select callback. Forwarded
+     * to the secondary handler. X.1083 §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: BioAPI_RETURN,
     /**
      * @summary `maxNumEnrollSamples`.
+     * @description
+     *
+     * Maximum number of enroll samples from the primary select
+     * callback. Forwarded to the secondary handler. X.1083
+     * §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly maxNumEnrollSamples: UnsignedInt,
     /**
      * @summary `selectableInstances`.
+     * @description
+     *
+     * Subtype mask of instances the subject may select.
+     * Forwarded from the primary callback; the handler returns
+     * `selectedInstances` on the response. X.1083 §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK,
     /**
      * @summary `capturedInstances`.
+     * @description
+     *
+     * Subtype mask of instances already captured. Forwarded
+     * from the primary callback. X.1083 §16.25.5.
+     *
      * @public
      * @readonly
      */
     readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK,
     /**
      * @summary `text`.
+     * @description
+     *
+     * Prompt or status text from the primary callback. C
+     * `NULL` ↔ absent (X.1083 §15.2). X.1083 §16.25.5.
+     *
      * @public
      * @readonly
      */

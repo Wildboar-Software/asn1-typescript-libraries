@@ -69,6 +69,17 @@ import {
  * @summary GUISelectEventHandlerCallbackParams
  * @description
  *
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message exchanged between
+ * endpoints. Converted to the parameters of
+ * `BioAPI_GUI_SELECT_EVENT_HANDLER` (Table 126) when the
+ * framework invokes a local GUI select handler. Output
+ * parameters `SelectedInstances` and `Response` are not in this
+ * type; they come from the acknowledgement (clause 22). ITU-T
+ * Rec. X.1083 (11/2007)
+ * [§17.2.4](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §17.2.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -94,78 +105,135 @@ export class GUISelectEventHandlerCallbackParams {
   constructor(
     /**
      * @summary `guiSelectEventHandlerAddress`.
+     * @description
+     *
+     * Address of the function to invoke; not a function
+     * parameter. Conversion applies X.1083 §15.1.7. X.1083
+     * §17.2.11, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventHandlerAddress: MemoryAddress,
     /**
      * @summary `guiSelectEventHandlerContext`.
+     * @description
+     *
+     * Passed as `GUISelectEventHandlerCtx`. X.1083 §17.2.10,
+     * Table 126.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventHandlerContext: MemoryAddress,
     /**
      * @summary `bspUuid`.
+     * @description
+     *
+     * Passed as `BSPUuid`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly bspUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Passed as `UnitID`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `bspHandle`.
+     * @description
+     *
+     * Passed as `BSPHandle`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly bspHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `enrollType`.
+     * @description
+     *
+     * Corresponds to `EnrollType` of
+     * `BioAPI_GUI_SELECT_EVENT_HANDLER` (X.1083 §17.2.1). Table
+     * 126 does not list this component.
+     *
      * @public
      * @readonly
      */
     readonly enrollType: BioAPI_GUI_ENROLL_TYPE,
     /**
      * @summary `operation`.
+     * @description
+     *
+     * Passed as `Operation`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly operation: BioAPI_GUI_OPERATION,
     /**
      * @summary `moment`.
+     * @description
+     *
+     * Passed as `Moment`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly moment: BioAPI_GUI_MOMENT,
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Passed as `ResultCode`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: BioAPI_RETURN,
     /**
      * @summary `maxNumEnrollSamples`.
+     * @description
+     *
+     * Passed as `MaxNumEnrollSamples`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly maxNumEnrollSamples: UnsignedInt,
     /**
      * @summary `selectableInstances`.
+     * @description
+     *
+     * Passed as `SelectableInstances`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK,
     /**
      * @summary `capturedInstances`.
+     * @description
+     *
+     * Passed as `CapturedInstances`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */
     readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK,
     /**
      * @summary `text`.
+     * @description
+     *
+     * Passed as `Text`. X.1083 §17.2.10, Table 126.
+     *
      * @public
      * @readonly
      */

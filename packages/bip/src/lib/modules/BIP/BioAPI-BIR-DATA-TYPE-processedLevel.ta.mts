@@ -24,6 +24,14 @@ export enum _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel {
  * @summary BioAPI_BIR_DATA_TYPE_processedLevel
  * @description
  *
+ * Four LSBs of the C data-type byte, as a single enumerator:
+ * `raw` = `0x01`, `intermediate` = `0x02`, `processed` = `0x04`.
+ * Any other combination of those bits is unconvertible (clause
+ * 33). C `0x08` is unused.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.11](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,12 @@ import {
  * @summary Identify_ResponseParams
  * @description
  *
+ * Parameters of an `identify` response BIP message
+ * (slave→master) for `BioAPI_Identify`. Maps to BioAPI
+ * `Candidates`/`NumberOfResults` via clause 20 and
+ * §16.38.7–16.38.8. `auditData` is present only when
+ * requested. X.1083 §16.38.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +47,23 @@ export class Identify_ResponseParams {
   constructor(
     /**
      * @summary `candidates`.
+     * @description
+     *
+     * Identification candidates, in order. Length is BioAPI
+     * `NumberOfResults`. Empty when none match. X.1083
+     * §16.38.6–16.38.8.
+     *
      * @public
      * @readonly
      */
     readonly candidates: BioAPI_CANDIDATE[],
     /**
      * @summary `auditData`.
+     * @description
+     *
+     * Handle of the audit BIR, if requested. Absent when
+     * `no-auditData` was `TRUE`. X.1083 §16.38.6.
+     *
      * @public
      * @readonly
      */

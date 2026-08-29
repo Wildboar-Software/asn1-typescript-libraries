@@ -27,6 +27,16 @@ import { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
  * @summary Discovery
  * @description
  *
+ * Service-request packet sent by a BIP master to discover slave
+ * endpoints. Encoded in aligned PER and sent as UDP multicast
+ * (or IPv4 broadcast) on port 4376 by default. This is version
+ * 1.0 of the discovery protocol. After sending, the master
+ * listens on port 4376 (or `masterEndPort`) for
+ * `Announcement` replies. Not a BIP message. ITU-T Rec. X.1083
+ * (11/2007)
+ * [Annex B.8](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * B.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,18 +53,34 @@ export class Discovery {
   constructor(
     /**
      * @summary `protocolVersion`.
+     * @description
+     *
+     * Discovery protocol version; this annex specifies major 1,
+     * minor 0. X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */
     readonly protocolVersion: ProtocolVersion,
     /**
      * @summary `masterEndpointAddress`.
+     * @description
+     *
+     * IP address to which the slave shall send its
+     * `Announcement`. Use `ipv4` on IPv4 networks and `ipv6` on
+     * IPv6 networks. X.1083 Annex B.11–B.12.
+     *
      * @public
      * @readonly
      */
     readonly masterEndpointAddress: IPAddress,
     /**
      * @summary `masterEndPort`.
+     * @description
+     *
+     * UDP port on which the master listens for announcements.
+     * Default 4376. X.1083 Annex B.8.2, B.12.
+     *
      * @public
      * @readonly
      */

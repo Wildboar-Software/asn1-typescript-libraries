@@ -20,6 +20,12 @@ import {
  * @summary EnumFrameworksCallOutputParams
  * @description
  *
+ * Aids specification of `BioAPI_EnumFrameworks`. Abstract
+ * values do not occur in any BIP message exchanged between
+ * BIP endpoints. Filled from the `VisibleEndpoints` table
+ * (local plus every linked slave). The function itself is
+ * purely local. X.1083 §12.3, §16.6.3, §16.6.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

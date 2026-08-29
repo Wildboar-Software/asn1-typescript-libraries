@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BSPUnload_ResponseParams
  * @description
  *
+ * Success payload of a `bspUnload` response (slave→master) for
+ * BioAPI_BSPUnload. Always `NULL`; outcome is
+ * `BIPResponse.returnValue` (0, or
+ * `BioAPIERR_NOT_A_RUNNING_BSP`). X.1083 §16.10.2, §16.10.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

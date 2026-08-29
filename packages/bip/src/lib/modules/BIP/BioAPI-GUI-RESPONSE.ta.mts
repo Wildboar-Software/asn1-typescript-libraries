@@ -31,6 +31,14 @@ export enum _enum_for_BioAPI_GUI_RESPONSE {
  * @summary BioAPI_GUI_RESPONSE
  * @description
  *
+ * Application response to a GUI event. C values 0–9 map to the
+ * ASN.1 enumerators in order. `progressCancel` is C
+ * `BioAPI_GUI_RESPONSE_PROGRESS_ABORT` (8), not a distinct
+ * “cancel” code. Other C values are unconvertible.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.40](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -175,6 +183,10 @@ export const progressContinue: BioAPI_GUI_RESPONSE = BioAPI_GUI_RESPONSE_progres
 
 /**
  * @summary BioAPI_GUI_RESPONSE_progressCancel
+ * @description
+ *
+ * C `BioAPI_GUI_RESPONSE_PROGRESS_ABORT` (8).
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +195,10 @@ export const BioAPI_GUI_RESPONSE_progressCancel: BioAPI_GUI_RESPONSE = 8; /* LON
 
 /**
  * @summary progressCancel
+ * @description
+ *
+ * C `BioAPI_GUI_RESPONSE_PROGRESS_ABORT` (8).
+ *
  * @constant
  * @type {number}
  */

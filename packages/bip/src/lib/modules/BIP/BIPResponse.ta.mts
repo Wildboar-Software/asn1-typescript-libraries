@@ -35,6 +35,11 @@ import {
  * @summary BIPResponse
  * @description
  *
+ * Slave-to-master reply to one `BIPRequest` on the same BIP
+ * link. Unsolicited responses are not allowed.
+ * ITU-T Rec. X.1083 (11/2007) §7.4.4, §13.3, §14.1.
+ * https://www.itu.int/rec/T-REC-X.1083-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -109,36 +114,66 @@ export class BIPResponse {
   constructor(
     /**
      * @summary `slaveEndpointIRI`.
+     * @description
+     *
+     * Copied from the matching request. X.1083 §13.3.
+     *
      * @public
      * @readonly
      */
     readonly slaveEndpointIRI: EndpointIRI,
     /**
      * @summary `masterEndpointIRI`.
+     * @description
+     *
+     * Copied from the matching request. Destination of this
+     * response. Implicitly identifies the application whose
+     * call is returning. X.1083 §11.2, §13.3.
+     *
      * @public
      * @readonly
      */
     readonly masterEndpointIRI: EndpointIRI,
     /**
      * @summary `linkNumber`.
+     * @description
+     *
+     * Copied from the matching request. X.1083 §13.3.
+     *
      * @public
      * @readonly
      */
     readonly linkNumber: UnsignedInt,
     /**
      * @summary `requestId`.
+     * @description
+     *
+     * Copied from the matching request so the master can pair
+     * the two. X.1083 §7.2.4, §13.3.
+     *
      * @public
      * @readonly
      */
     readonly requestId: UnsignedInt,
     /**
      * @summary `params`.
+     * @description
+     *
+     * Result parameters. Shall use the same alternative name as
+     * the corresponding request. X.1083 §13.3, §13.6.
+     *
      * @public
      * @readonly
      */
     readonly params: BIPResponse_params,
     /**
      * @summary `returnValue`.
+     * @description
+     *
+     * BioAPI status of the invoked operation. 0 means success;
+     * any other value is a BioAPI error code. X.1083 §13.3,
+     * §15.52.
+     *
      * @public
      * @readonly
      */

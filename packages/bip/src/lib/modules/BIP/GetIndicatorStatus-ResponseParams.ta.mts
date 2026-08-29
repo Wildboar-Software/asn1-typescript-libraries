@@ -21,6 +21,11 @@ import {
  * @summary GetIndicatorStatus_ResponseParams
  * @description
  *
+ * Parameters of a `getIndicatorStatus` response BIP message
+ * (`BioAPI_GetIndicatorStatus`). Slave→master. Written into C
+ * `IndicatorStatus` (cl.20) (`X.1083 §16.55`). BioAPI outcome is
+ * `BIPResponse.returnValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,11 @@ export class GetIndicatorStatus_ResponseParams {
   constructor(
     /**
      * @summary `indicatorStatus`.
+     * @description
+     *
+     * Indicator status written to C `IndicatorStatus` (cl.20, §15.45).
+     * Required on a conforming response (`X.1083 §16.55`, Table 116).
+     *
      * @public
      * @readonly
      */

@@ -20,6 +20,14 @@ import {
  * @summary AttachSessionLocalReferences
  * @description
  *
+ * Conceptual table present in all BIP endpoints. Defined to aid
+ * specification of framework behaviour; abstract values do not
+ * occur in any BIP message and are never encoded. Added on
+ * `BioAPI_BSPAttach`; deleted on `BioAPI_BSPDetach` or deletion
+ * of the last matching `RunningBSPLocalReferences` row. ITU-T
+ * Rec. X.1083 (11/2007)
+ * [§18.8](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

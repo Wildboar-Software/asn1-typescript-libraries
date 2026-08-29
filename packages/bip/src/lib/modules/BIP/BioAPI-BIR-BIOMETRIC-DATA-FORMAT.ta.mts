@@ -20,6 +20,12 @@ import {
  * @summary BioAPI_BIR_BIOMETRIC_DATA_FORMAT
  * @description
  *
+ * CBEFF BDB format owner/type pair. X.1083 maps the C `uint16_t`
+ * members 1:1 and adds no further PDU semantics.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.8](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

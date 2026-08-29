@@ -20,6 +20,12 @@ import {
  * @summary BioAPI_UNIT_ID
  * @description
  *
+ * Unit identifier within a BSP attach session. X.1083 maps the
+ * C `uint32_t` 1:1 and adds no further PDU semantics.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.55](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

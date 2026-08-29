@@ -26,6 +26,12 @@ import {
  * @summary NotifyGUISelectEvent_ResponseParams
  * @description
  *
+ * Parameters of a `notifyGUISelectEvent` response BIP message
+ * (slave→master) for `BioAPI_NotifyGUISelectEvent`. Copied
+ * from the GUI-select acknowledgement produced by clause 30.
+ * Maps to BioAPI output pointers via clause 20. X.1083
+ * §16.25.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +46,24 @@ export class NotifyGUISelectEvent_ResponseParams {
   constructor(
     /**
      * @summary `selectedInstances`.
+     * @description
+     *
+     * Subtype mask of instances selected by the GUI handler.
+     * With no subscriber, clause 30 defaults this to
+     * `selectableInstances`. X.1083 §16.25.6, clause 30.
+     *
      * @public
      * @readonly
      */
     readonly selectedInstances: BioAPI_BIR_SUBTYPE_MASK,
     /**
      * @summary `response`.
+     * @description
+     *
+     * GUI handler's response to the select event. With no
+     * subscriber, clause 30 defaults this to `default`. X.1083
+     * §16.25.6, clause 30.
+     *
      * @public
      * @readonly
      */

@@ -22,6 +22,27 @@ import {
  * @summary TCPIPBIPMessage_content
  * @description
  *
+ * Alternatives of the TCP/IP transport-level message
+ * (Table A.1):
+ *
+ * - `bIPMessage`: either endpoint; aligned PER encoding of a
+ *   `BIPMessage` (X.691).
+ * - `keepalive`: either endpoint; empty; frequency is
+ *   implementation-defined (X.1083 A.3.3).
+ * - `requestLinkChannelOnSpecifiedPort`: master only, and only
+ *   before a notification/acknowledgement channel exists;
+ *   asks the slave to open a new TCP connection to the given
+ *   port on the master.
+ * - `requestLinkChannel`: master only, same precondition; asks
+ *   the slave to use this TCP connection for both link
+ *   channels.
+ *
+ * A master shall send at most one of the two request
+ * alternatives on a connection; a slave ignores subsequent
+ * ones. ITU-T Rec. X.1083 (11/2007)
+ * [Annex A.2](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * A.3, A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

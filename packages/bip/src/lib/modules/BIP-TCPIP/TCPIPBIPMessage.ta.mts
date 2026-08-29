@@ -26,6 +26,16 @@ import {
  * @summary TCPIPBIPMessage
  * @description
  *
+ * Transport-level message of the TCP/IP binding of BIP
+ * (OSI layers 5–7 over TCP). A TCP connection may carry a
+ * request/response link channel, a notification/acknowledgement
+ * link channel, or both as part of the same BIP link.
+ * Recommended port is 4376. The master may ask the slave to
+ * open a second TCP connection for notifications, or to reuse
+ * the existing connection for both channels. `magicNumber`
+ * SHALL be `'3AC49E70'H`. ITU-T Rec. X.1083 (11/2007)
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +56,34 @@ export class TCPIPBIPMessage {
   constructor(
     /**
      * @summary `magicNumber`.
+     * @description
+     *
+     * SHALL be the four octets `'3AC49E70'H`. X.1083 Annex A.2.
+     *
      * @public
      * @readonly
      */
     readonly magicNumber: OCTET_STRING,
     /**
      * @summary `version`.
+     * @description
+     *
+     * Transport-message version; this Recommendation defines
+     * `version-1(1)`. X.1083 Annex A.2.
+     *
      * @public
      * @readonly
      */
     readonly version: TCPIPBIPMessage_version,
     /**
      * @summary `content`.
+     * @description
+     *
+     * Payload: encoded `BIPMessage`, keepalive, or a master's
+     * request that the slave open (or share) a
+     * notification/acknowledgement link channel. Table A.1.
+     * X.1083 Annex A.2.
+     *
      * @public
      * @readonly
      */

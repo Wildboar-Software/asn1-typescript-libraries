@@ -20,6 +20,13 @@ import {
  * @summary BioAPI_BIR_ARRAY_POPULATION
  * @description
  *
+ * In-memory BIR array used as an identify population. Length is
+ * the C `NumberOfMembers`; each element is a `BioAPI-BIR` (patron
+ * format, not the C struct).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.7](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +40,10 @@ export class BioAPI_BIR_ARRAY_POPULATION {
   constructor(
     /**
      * @summary `members`.
+     * @description
+     *
+     * BIRs in order. C count is the sequence length. X.1083 §15.7.
+     *
      * @public
      * @readonly
      */

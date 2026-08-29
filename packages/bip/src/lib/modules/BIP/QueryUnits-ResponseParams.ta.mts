@@ -20,6 +20,11 @@ import {
  * @summary QueryUnits_ResponseParams
  * @description
  *
+ * Parameters of a `queryUnits` response (slave→master) for
+ * BioAPI_QueryUnits. Required output: C `UnitSchemaArray` must be
+ * non-NULL (clause 22); maps via clause 20. X.1083 §16.11,
+ * Table 44.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,12 @@ export class QueryUnits_ResponseParams {
   constructor(
     /**
      * @summary `unitSchemas`.
+     * @description
+     *
+     * Unit schemas of the queried BSP. Maps to
+     * UnitSchemaArray/NumberOfElements (clause 20).
+     * X.1083 §16.11.6–16.11.8, Table 44.
+     *
      * @public
      * @readonly
      */

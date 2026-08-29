@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EnableEventNotifications_ResponseParams
  * @description
  *
+ * Success payload of an `enableEventNotifications` response
+ * (slave→master) for BioAPI_EnableEventNotifications. Always
+ * `NULL`; outcome is `BIPResponse.returnValue`. X.1083 §16.16.2,
+ * §16.16.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

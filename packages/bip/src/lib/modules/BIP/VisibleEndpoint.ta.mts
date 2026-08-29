@@ -20,6 +20,17 @@ import {
  * @summary VisibleEndpoint
  * @description
  *
+ * Row of the `VisibleEndpoints` conceptual table. Defined to
+ * aid specification of framework behaviour; abstract values do
+ * not occur in any BIP message and are never encoded. One row
+ * per visible endpoint (the local endpoint plus each slave): a
+ * copy of that endpoint's framework schema.
+ * `hostingEndpointIRI` (inherited from
+ * `BioAPI-FRAMEWORK-SCHEMA`) is unique in the table and names
+ * the local or slave endpoint. Present in all BIP endpoints.
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§18](https://www.itu.int/rec/T-REC-X.1083-200711-I), §18.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

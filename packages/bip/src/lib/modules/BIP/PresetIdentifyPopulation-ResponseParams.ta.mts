@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PresetIdentifyPopulation_ResponseParams
  * @description
  *
+ * Parameters of a successful `presetIdentifyPopulation`
+ * response BIP message (slave→master) for
+ * `BioAPI_PresetIdentifyPopulation`. Always `NULL`; outcome
+ * is the BIP return value. X.1083 §16.40.2, §16.40.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

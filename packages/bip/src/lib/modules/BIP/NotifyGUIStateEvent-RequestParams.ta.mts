@@ -71,6 +71,14 @@ import {
  * @summary NotifyGUIStateEvent_RequestParams
  * @description
  *
+ * Parameters of a `notifyGUIStateEvent` request BIP message
+ * (master→slave) for `BioAPI_NotifyGUIStateEvent`. Request/
+ * response on the request/response channel, not a clause 17
+ * `guiStateEvent` notification PDU. Delivers a secondary GUI
+ * state event that needs an acknowledgement-like response.
+ * `originalBSPHandle` is omitted when building
+ * `GUIStateEventInfo`. X.1083 §16.26, §8.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -95,72 +103,135 @@ export class NotifyGUIStateEvent_RequestParams {
   constructor(
     /**
      * @summary `subscriberEndpointIRI`.
+     * @description
+     *
+     * Endpoint IRI of the secondary GUI handler. BioAPI `NULL`
+     * is rewritten to the local endpoint IRI (X.1083 §15.3).
+     * X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly subscriberEndpointIRI: EndpointIRI,
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * UUID of the secondary GUI-event subscription that shall
+     * receive this event. Required. C `NULL` is unconvertible
+     * (clause 19). X.1083 §16.26.5, §8.5.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: BioAPI_UUID,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP that originated the GUI event.
+     * Converted from BioAPI `BSPUuid` via clause 25. X.1083
+     * §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit that originated the GUI state event. Forwarded from
+     * the primary callback. X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `operation`.
+     * @description
+     *
+     * GUI operation from the primary state callback. Forwarded
+     * to the secondary handler. X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly operation: BioAPI_GUI_OPERATION,
     /**
      * @summary `suboperation`.
+     * @description
+     *
+     * GUI suboperation from the primary state callback.
+     * Forwarded to the secondary handler. X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly suboperation: BioAPI_GUI_SUBOPERATION,
     /**
      * @summary `purpose`.
+     * @description
+     *
+     * BIR purpose from the primary state callback. Forwarded
+     * to the secondary handler. X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly purpose: BioAPI_BIR_PURPOSE,
     /**
      * @summary `moment`.
+     * @description
+     *
+     * GUI moment from the primary state callback. Forwarded
+     * to the secondary handler. X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly moment: BioAPI_GUI_MOMENT,
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Result code from the primary state callback. Forwarded
+     * to the secondary handler. X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: BioAPI_RETURN,
     /**
      * @summary `enrollSampleIndex`.
+     * @description
+     *
+     * Enroll-sample index from the primary state callback.
+     * Forwarded to the secondary handler. X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly enrollSampleIndex: SignedInt,
     /**
      * @summary `bitmaps`.
+     * @description
+     *
+     * Optional GUI bitmaps from the primary state callback.
+     * C `NULL` ↔ absent (clause 19). X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */
     readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
     /**
      * @summary `text`.
+     * @description
+     *
+     * Prompt or status text from the primary callback. C
+     * `NULL` ↔ absent (X.1083 §15.2). X.1083 §16.26.5.
+     *
      * @public
      * @readonly
      */

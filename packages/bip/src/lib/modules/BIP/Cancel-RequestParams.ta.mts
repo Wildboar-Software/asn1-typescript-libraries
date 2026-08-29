@@ -20,6 +20,12 @@ import {
  * @summary Cancel_RequestParams
  * @description
  *
+ * Parameters of a `cancel` request BIP message (`BioAPI_Cancel`).
+ * Master→slave. `originalBSPHandle` is the hosting-endpoint BSP
+ * handle (cl.26), not the master's local `BSPHandle`
+ * (`X.1083 §16.57`). Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,11 @@ export class Cancel_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.57`, Table 117).
+     *
      * @public
      * @readonly
      */

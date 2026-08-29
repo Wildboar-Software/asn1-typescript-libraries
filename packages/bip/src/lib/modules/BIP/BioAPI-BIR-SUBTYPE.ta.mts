@@ -25,6 +25,14 @@ import {
  * @summary BioAPI_BIR_SUBTYPE
  * @description
  *
+ * Body-part subtype. C is a `uint8_t`; `0x80`
+ * (`BioAPI_BIR_SUBTYPE_VEIN_ONLY_MASK`) selects
+ * `vein-only-subtype`, otherwise `anySubtype`. BIT STRING bit 0
+ * is C `0x01`. All-zero is `BioAPI_NO_SUBTYPE_AVAILABLE`.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.16](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

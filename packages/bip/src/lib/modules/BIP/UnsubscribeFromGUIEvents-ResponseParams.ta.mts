@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UnsubscribeFromGUIEvents_ResponseParams
  * @description
  *
+ * Parameters of a successful `unsubscribeFromGUIEvents`
+ * response BIP message (slave→master) for
+ * `BioAPI_UnsubscribeFromGUIEvents`. Always `NULL`; a missing
+ * matching row yields
+ * `BioAPIERR_NO_SUCH_SUBSCRIPTION_FOUND`. X.1083 §16.23.2,
+ * §16.23.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

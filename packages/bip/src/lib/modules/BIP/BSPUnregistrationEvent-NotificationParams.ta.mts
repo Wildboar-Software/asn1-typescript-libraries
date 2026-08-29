@@ -20,6 +20,15 @@ import {
  * @summary BSPUnregistrationEvent_NotificationParams
  * @description
  *
+ * Parameter of a `bspUnregistrationEvent` notification BIP
+ * message (`BIPNotification`, slave → remaining masters). Sent
+ * after a BSP is unregistered from the slave's component
+ * registry so each master can drop the corresponding
+ * `VisibleBSPRegistrations` row. The receiver shall not send an
+ * acknowledgement (X.1083 §16.60.5). ITU-T Rec. X.1083
+ * (11/2007)
+ * [§16.60.2](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +42,11 @@ export class BSPUnregistrationEvent_NotificationParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP that was unregistered. X.1083
+     * §16.60.2.
+     *
      * @public
      * @readonly
      */

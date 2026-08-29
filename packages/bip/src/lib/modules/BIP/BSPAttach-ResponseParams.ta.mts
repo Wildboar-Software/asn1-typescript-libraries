@@ -20,6 +20,12 @@ import {
  * @summary BSPAttach_ResponseParams
  * @description
  *
+ * Parameters of a `bspAttach` response (slave→master) for
+ * BioAPI_BSPAttach. Returns the handle allocated at the hosting
+ * endpoint. The master invents a local handle, stores the mapping
+ * in AttachSessionLocalReferences, and returns the local handle to
+ * the application. X.1083 §16.13.4.2, Table 48.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,12 @@ export class BSPAttach_ResponseParams {
   constructor(
     /**
      * @summary `newOriginalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle allocated at the hosting endpoint.
+     * Master does not return this to the application.
+     * X.1083 §16.13.4.2 g, Table 48.
+     *
      * @public
      * @readonly
      */

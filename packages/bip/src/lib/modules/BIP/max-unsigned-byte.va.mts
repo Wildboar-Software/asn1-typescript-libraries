@@ -16,6 +16,9 @@ import {
  * @summary max_unsigned_byte
  * @description
  *
+ * Inclusive upper bound of `UnsignedByte` (255). X.1083
+ * §15.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

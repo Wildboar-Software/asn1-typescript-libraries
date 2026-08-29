@@ -25,6 +25,12 @@ import {
  * @summary DbGetBIR_ResponseParams
  * @description
  *
+ * Parameters of a `dbGetBIR` response BIP message
+ * (`BioAPI_DbGetBIR`). Slave→master. Written into the C output
+ * pointers (cl.20). No local/original rewrite is specified for these
+ * handles (`X.1083 §16.49`). BioAPI outcome is
+ * `BIPResponse.returnValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class DbGetBIR_ResponseParams {
   constructor(
     /**
      * @summary `retrievedBIR`.
+     * @description
+     *
+     * Retrieved BIR handle written to C `RetrievedBIR` (cl.20, §15.12).
+     * Required on a conforming response (`X.1083 §16.49`, Table 108).
+     *
      * @public
      * @readonly
      */
     readonly retrievedBIR: BioAPI_BIR_HANDLE,
     /**
      * @summary `markerHandle`.
+     * @description
+     *
+     * Marker handle written to C `MarkerHandle` (cl.20, §15.25).
+     * Required on a conforming response (`X.1083 §16.49`, Table 108).
+     *
      * @public
      * @readonly
      */

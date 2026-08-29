@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Cancel_ResponseParams
  * @description
  *
+ * Payload of a `cancel` response BIP message (`BioAPI_Cancel`).
+ * Slave→master. Always `NULL`; the BioAPI outcome is
+ * `BIPResponse.returnValue` (`X.1083 §16.57`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

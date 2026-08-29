@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_BIR_SUBTYPE_MASK
  * @description
  *
+ * Capture/identify subtype mask. `SIZE(32)` matches the C
+ * `uint32_t`. ASN.1 bit 0 is the LSB (`0x00000001` = left).
+ * Named bits occupy 0–17; 18–31 are unnamed.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.17](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

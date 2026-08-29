@@ -46,6 +46,11 @@ import {
  * @summary Identify_RequestParams
  * @description
  *
+ * Parameters of an `identify` request BIP message
+ * (master→slave) for `BioAPI_Identify`. `BSPHandle` is
+ * rewritten via clause 26. `NumberOfResults` and `Candidates`
+ * have no request components (clause 22). X.1083 §16.38.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -67,54 +72,100 @@ export class Identify_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle on the hosting (slave) endpoint.
+     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+     * X.1083 §16.38.5.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `maxFMRRequested`.
+     * @description
+     *
+     * Maximum false-match rate requested, from BioAPI
+     * `MaxFMRRequested`. X.1083 §16.38.5.
+     *
      * @public
      * @readonly
      */
     readonly maxFMRRequested: BioAPI_FMR,
     /**
      * @summary `subtype`.
+     * @description
+     *
+     * Requested BIR subtype, from BioAPI `Subtype`. X.1083
+     * §16.38.5.
+     *
      * @public
      * @readonly
      */
     readonly subtype: BioAPI_BIR_SUBTYPE,
     /**
      * @summary `population`.
+     * @description
+     *
+     * Identification population to search. C `NULL` is
+     * unconvertible (clause 19). X.1083 §16.38.5.
+     *
      * @public
      * @readonly
      */
     readonly population: BioAPI_IDENTIFY_POPULATION,
     /**
      * @summary `totalNumberOfTemplates`.
+     * @description
+     *
+     * Total number of templates in the population, from BioAPI
+     * `TotalNumberOfTemplates`. X.1083 §16.38.5.
+     *
      * @public
      * @readonly
      */
     readonly totalNumberOfTemplates: UnsignedInt,
     /**
      * @summary `binning`.
+     * @description
+     *
+     * Whether binning is requested, from BioAPI `Binning`.
+     * X.1083 §16.38.5.
+     *
      * @public
      * @readonly
      */
     readonly binning: BOOLEAN,
     /**
      * @summary `maxNumberOfResults`.
+     * @description
+     *
+     * Maximum number of candidates to return, from BioAPI
+     * `MaxNumberOfResults`. X.1083 §16.38.5.
+     *
      * @public
      * @readonly
      */
     readonly maxNumberOfResults: UnsignedInt,
     /**
      * @summary `timeout`.
+     * @description
+     *
+     * Identify timeout from BioAPI `Timeout`. X.1083 §16.38.5.
+     *
      * @public
      * @readonly
      */
     readonly timeout: SignedInt,
     /**
      * @summary `no_auditData`.
+     * @description
+     *
+     * `TRUE` if the caller passed a NULL `AuditData` pointer
+     * (do not return an audit BIR). X.1083 §16.38.5,
+     * clause 21.
+     *
      * @public
      * @readonly
      */

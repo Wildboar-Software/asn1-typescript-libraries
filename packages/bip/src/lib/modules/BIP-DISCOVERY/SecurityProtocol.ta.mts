@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SecurityProtocol
  * @description
  *
+ * One security protocol offered by a slave in an
+ * `Announcement`. Identified by an object identifier and a
+ * protocol-specific parameter. The information object set
+ * `SecurityProtocols` is empty in this Recommendation and is
+ * to be populated. ITU-T Rec. X.1083 (11/2007)
+ * [Annex B.12](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +37,22 @@ export class SecurityProtocol {
   constructor(
     /**
      * @summary `id`.
+     * @description
+     *
+     * Object identifier of the security protocol
+     * (`SECURITY-PROTOCOL.&id`). X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */
     readonly id: OBJECT_IDENTIFIER,
     /**
      * @summary `parameter`.
+     * @description
+     *
+     * Parameter of that protocol
+     * (`SECURITY-PROTOCOL.&Parameter`). X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */

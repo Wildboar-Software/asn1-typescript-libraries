@@ -52,6 +52,14 @@ import {
  * @summary BioAPI_UNIT_SCHEMA
  * @description
  *
+ * Unit registry entry. No `hostingEndpointIRI` or BSP access
+ * UUID: `QueryUnits` returns only units in the BSP's hosting
+ * endpoint. Event-handler schemas belong to a unit of the BSP
+ * whose UUID is passed to that handler.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.57](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -80,6 +88,11 @@ export class BioAPI_UNIT_SCHEMA {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP that manages this unit. X.1083
+     * §15.57.
+     *
      * @public
      * @readonly
      */

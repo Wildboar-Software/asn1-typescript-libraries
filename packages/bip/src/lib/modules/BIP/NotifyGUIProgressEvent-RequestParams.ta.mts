@@ -66,6 +66,15 @@ import {
  * @summary NotifyGUIProgressEvent_RequestParams
  * @description
  *
+ * Parameters of a `notifyGUIProgressEvent` request BIP
+ * message (master→slave) for
+ * `BioAPI_NotifyGUIProgressEvent`. Request/response on the
+ * request/response channel, not a clause 17
+ * `guiProgressEvent` notification PDU. Delivers a secondary
+ * GUI progress event that needs an acknowledgement-like
+ * response. `originalBSPHandle` is omitted when building
+ * `GUIProgressEventInfo`. X.1083 §16.27, §8.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -89,66 +98,125 @@ export class NotifyGUIProgressEvent_RequestParams {
   constructor(
     /**
      * @summary `subscriberEndpointIRI`.
+     * @description
+     *
+     * Endpoint IRI of the secondary GUI handler. BioAPI `NULL`
+     * is rewritten to the local endpoint IRI (X.1083 §15.3).
+     * X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly subscriberEndpointIRI: EndpointIRI,
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * UUID of the secondary GUI-event subscription that shall
+     * receive this event. Required. C `NULL` is unconvertible
+     * (clause 19). X.1083 §16.27.5, §8.5.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: BioAPI_UUID,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP that originated the GUI event.
+     * Converted from BioAPI `BSPUuid` via clause 25. X.1083
+     * §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit that originated the GUI progress event. Forwarded
+     * from the primary callback. X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `operation`.
+     * @description
+     *
+     * GUI operation from the primary progress callback.
+     * Forwarded to the secondary handler. X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly operation: BioAPI_GUI_OPERATION,
     /**
      * @summary `suboperation`.
+     * @description
+     *
+     * GUI suboperation from the primary progress callback.
+     * Forwarded to the secondary handler. X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly suboperation: BioAPI_GUI_SUBOPERATION,
     /**
      * @summary `purpose`.
+     * @description
+     *
+     * BIR purpose from the primary progress callback.
+     * Forwarded to the secondary handler. X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly purpose: BioAPI_BIR_PURPOSE,
     /**
      * @summary `moment`.
+     * @description
+     *
+     * GUI moment from the primary progress callback.
+     * Forwarded to the secondary handler. X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly moment: BioAPI_GUI_MOMENT,
     /**
      * @summary `suboperationProgress`.
+     * @description
+     *
+     * Progress of the current suboperation from the primary
+     * callback (`SuboperationInProgress`). Forwarded to the
+     * secondary handler. X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly suboperationProgress: UnsignedByte,
     /**
      * @summary `bitmaps`.
+     * @description
+     *
+     * Optional GUI bitmaps from the primary progress callback.
+     * C `NULL` ↔ absent (clause 19). X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */
     readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
     /**
      * @summary `text`.
+     * @description
+     *
+     * Prompt or status text from the primary callback. C
+     * `NULL` ↔ absent (X.1083 §15.2). X.1083 §16.27.5.
+     *
      * @public
      * @readonly
      */

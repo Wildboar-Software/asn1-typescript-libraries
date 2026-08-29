@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MasterDeletionEvent_NotificationParams
  * @description
  *
+ * Parameter of a `masterDeletionEvent` notification BIP message
+ * (`BIPNotification`, slave → remaining masters). Always `NULL`.
+ * Sent when the slave processes `BioAPI_Terminate` (X.1083
+ * §16.3.3.2). The receiving master deletes the slave's row from
+ * `VisibleEndpoints` and shall not send an acknowledgement
+ * (X.1083 §16.3.4). ITU-T Rec. X.1083 (11/2007)
+ * [§16.3.2](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

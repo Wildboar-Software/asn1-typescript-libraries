@@ -30,6 +30,13 @@ import {
  * @summary Transform_RequestParams
  * @description
  *
+ * Parameters of a `transform` request BIP message
+ * (master→slave) for `BioAPI_Transform`. Despite the
+ * component name `bspHandle`, conversion uses clause 26: the
+ * value is the hosting-endpoint attach handle, not the
+ * caller's local handle. `OutputBIRs`/`NumberOfOutputBIRs`
+ * have no request components (clause 22). X.1083 §16.41.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +52,35 @@ export class Transform_RequestParams {
   constructor(
     /**
      * @summary `bspHandle`.
+     * @description
+     *
+     * Attach-session handle on the hosting (slave) endpoint.
+     * Table 95 maps BioAPI `BSPHandle` here via clause 26
+     * (same rewriting as `originalBSPHandle` on other PDUs).
+     * X.1083 §16.41.5.
+     *
      * @public
      * @readonly
      */
     readonly bspHandle: BioAPI_HANDLE,
     /**
      * @summary `operationUuid`.
+     * @description
+     *
+     * UUID of the transform operation to apply, from BioAPI
+     * `OperationUuid`. X.1083 §16.41.5.
+     *
      * @public
      * @readonly
      */
     readonly operationUuid: BioAPI_UUID,
     /**
      * @summary `inputBIRs`.
+     * @description
+     *
+     * Input BIRs to transform, in order. Length is BioAPI
+     * `NumberOfInputBIRs`. X.1083 §16.41.5–16.41.7.
+     *
      * @public
      * @readonly
      */

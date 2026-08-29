@@ -25,6 +25,11 @@ import {
  * @summary GetBIRFromHandle_RequestParams
  * @description
  *
+ * Parameters of a `getBIRFromHandle` request (master→slave) for
+ * BioAPI_GetBIRFromHandle. `BSPHandle` rewritten to the
+ * hosting-endpoint handle (clause 26). `BIR` is a required output
+ * with no request component (clause 22). X.1083 §16.20, Table 58.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,21 @@ export class GetBIRFromHandle_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle at the hosting endpoint, not the
+     * application's local handle. X.1083 Table 58, clause 26.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `birHandle`.
+     * @description
+     *
+     * BIR handle whose BIR is requested. X.1083 Table 58, §15.12.
+     *
      * @public
      * @readonly
      */

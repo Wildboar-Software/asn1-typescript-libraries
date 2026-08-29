@@ -20,6 +20,11 @@ import {
  * @summary IdentifyMatch_ResponseParams
  * @description
  *
+ * Parameters of an `identifyMatch` response BIP message
+ * (slave→master) for `BioAPI_IdentifyMatch`. Maps to BioAPI
+ * `Candidates`/`NumberOfResults` via clause 20 and
+ * §16.35.7–16.35.8. X.1083 §16.35.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,12 @@ export class IdentifyMatch_ResponseParams {
   constructor(
     /**
      * @summary `candidates`.
+     * @description
+     *
+     * Identification candidates, in order. Length is BioAPI
+     * `NumberOfResults`. Empty when none match. X.1083
+     * §16.35.6–16.35.8.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,15 @@ import {
  * @summary BSPRegistrationEvent_NotificationParams
  * @description
  *
+ * Parameter of a `bspRegistrationEvent` notification BIP
+ * message (`BIPNotification`, slave → remaining masters). Sent
+ * after a BSP is registered (or updated) in the slave's
+ * component registry so each master can update
+ * `VisibleBSPRegistrations`. The receiver shall not send an
+ * acknowledgement (X.1083 §16.59.5). ITU-T Rec. X.1083
+ * (11/2007)
+ * [§16.59.2](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +44,23 @@ export class BSPRegistrationEvent_NotificationParams {
   constructor(
     /**
      * @summary `bspSchema`.
+     * @description
+     *
+     * BSP schema as registered (or updated) in the slave
+     * registry. X.1083 §16.59.2.
+     *
      * @public
      * @readonly
      */
     readonly bspSchema: BioAPI_BSP_SCHEMA,
     /**
      * @summary `update`.
+     * @description
+     *
+     * `TRUE` if this replaces an existing registration of the
+     * same BSP product UUID at that endpoint; `FALSE` if it is a
+     * new registration. X.1083 §16.59.3.1, §16.59.5.
+     *
      * @public
      * @readonly
      */

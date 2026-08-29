@@ -20,6 +20,15 @@ import {
  * @summary BFPUnregistrationEvent_NotificationParams
  * @description
  *
+ * Parameter of a `bfpUnregistrationEvent` notification BIP
+ * message (`BIPNotification`, slave → remaining masters). Sent
+ * after a BFP is unregistered from the slave's component
+ * registry so each master can drop the corresponding
+ * `VisibleBFPRegistrations` row. The receiver shall not send an
+ * acknowledgement (X.1083 §16.62.5). ITU-T Rec. X.1083
+ * (11/2007)
+ * [§16.62.2](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +42,11 @@ export class BFPUnregistrationEvent_NotificationParams {
   constructor(
     /**
      * @summary `bfpProductUuid`.
+     * @description
+     *
+     * Product UUID of the BFP that was unregistered. X.1083
+     * §16.62.2.
+     *
      * @public
      * @readonly
      */

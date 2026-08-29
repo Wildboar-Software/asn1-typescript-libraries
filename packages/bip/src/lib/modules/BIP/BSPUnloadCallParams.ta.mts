@@ -25,6 +25,11 @@ import {
  * @summary BSPUnloadCallParams
  * @description
  *
+ * Aids specification of `BioAPI_BSPUnload`. Abstract values do
+ * not occur in any BIP message exchanged between BIP
+ * endpoints. Used to find and delete the matching
+ * `RunningBSPLocalReferences` entry. X.1083 §16.10.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +45,35 @@ export class BSPUnloadCallParams {
   constructor(
     /**
      * @summary `bspUuid`.
+     * @description
+     *
+     * `BSPUuid` of `BioAPI_BSPUnload`: BSP product or access
+     * UUID. X.1083 §16.10.6.
+     *
      * @public
      * @readonly
      */
     readonly bspUuid: BioAPI_UUID,
     /**
      * @summary `unitEventHandlerAddress`.
+     * @description
+     *
+     * `EventHandler` of `BioAPI_BSPUnload`. Must match the
+     * address stored at load. A non-zero value sets
+     * `unitEventSubscription` TRUE on the wire request.
+     * X.1083 §16.10.4.2, §16.10.6, §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly unitEventHandlerAddress: MemoryAddress,
     /**
      * @summary `unitEventHandlerContext`.
+     * @description
+     *
+     * `EventHandlerCtx` of `BioAPI_BSPUnload`. Must match the
+     * context stored at load. X.1083 §16.10.4.1, §16.10.6.
+     *
      * @public
      * @readonly
      */

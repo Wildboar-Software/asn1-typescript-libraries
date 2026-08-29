@@ -25,6 +25,12 @@ import {
  * @summary EnableUnitEvents_RequestParams
  * @description
  *
+ * Parameters of an `enableUnitEvents` request (master→slave) for
+ * BioAPI_EnableEvents. §16.15.2 names the ASN.1 type
+ * `EnableEvents-RequestParams`; Table 51 and this module use
+ * `EnableUnitEvents-RequestParams`. `BSPHandle` rewritten to the
+ * hosting-endpoint handle (clause 26). X.1083 §16.15, Table 51.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class EnableUnitEvents_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle at the hosting endpoint, not the
+     * application's local handle. X.1083 Table 51, clause 26.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `unitEvents`.
+     * @description
+     *
+     * Unit-event type mask from Events (insert, remove, fault,
+     * sourcePresent, sourceRemoved). X.1083 Table 51, §15.31.
+     *
      * @public
      * @readonly
      */

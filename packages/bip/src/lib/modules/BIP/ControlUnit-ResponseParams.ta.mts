@@ -20,6 +20,10 @@ import {
  * @summary ControlUnit_ResponseParams
  * @description
  *
+ * Parameters of a `controlUnit` response (slave→master) for
+ * BioAPI_ControlUnit. Maps to OutputData (clause 20). Always
+ * present (not OPTIONAL). X.1083 §16.17, Table 54.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,11 @@ export class ControlUnit_ResponseParams {
   constructor(
     /**
      * @summary `outputData`.
+     * @description
+     *
+     * Output payload of the control operation. Maps to OutputData
+     * (clause 20, §15.22). X.1083 Table 54.
+     *
      * @public
      * @readonly
      */

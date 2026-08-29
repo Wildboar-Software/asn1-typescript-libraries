@@ -30,6 +30,16 @@ import {
  * @summary UnitEventNotificationDisabler
  * @description
  *
+ * Row of the `UnitEventNotificationDisablers` conceptual table.
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message and are never encoded.
+ * Forbids sending `unitEvent` notifications to a given master,
+ * or calling local unit-event handlers, for a given BSP and
+ * selected event types. Independent of whether the BSP is
+ * loaded. Unique on (`referrerEndpointIRI`, `bspProductUuid`).
+ * Present in all endpoints. ITU-T Rec. X.1083 (11/2007)
+ * [§18.7](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +55,35 @@ export class UnitEventNotificationDisabler {
   constructor(
     /**
      * @summary `referrerEndpointIRI`.
+     * @description
+     *
+     * Local endpoint IRI (disable callbacks to the local
+     * application) or a master's IRI (disable `unitEvent`
+     * notifications to that master). X.1083 §18.7.2.1.
+     *
      * @public
      * @readonly
      */
     readonly referrerEndpointIRI: EndpointIRI,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP whose unit events are disabled.
+     * X.1083 §18.7.2.2.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitEventTypes`.
+     * @description
+     *
+     * Event types that are disabled. Shall never indicate that
+     * all unit-event notifications are enabled. X.1083
+     * §18.7.2.3.
+     *
      * @public
      * @readonly
      */

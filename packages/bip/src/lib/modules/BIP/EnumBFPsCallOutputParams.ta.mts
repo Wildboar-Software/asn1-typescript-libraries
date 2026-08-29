@@ -20,6 +20,12 @@ import {
  * @summary EnumBFPsCallOutputParams
  * @description
  *
+ * Aids specification of `BioAPI_EnumBFPs`. Abstract values do
+ * not occur in any BIP message exchanged between BIP
+ * endpoints. Filled from the `VisibleBFPRegistrations` table
+ * (local plus every linked slave). The function itself is
+ * purely local. X.1083 §12.3, §16.8.3, §16.8.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

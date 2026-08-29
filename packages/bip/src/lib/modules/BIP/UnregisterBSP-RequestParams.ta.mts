@@ -20,6 +20,17 @@ import {
  * @summary UnregisterBSP_RequestParams
  * @description
  *
+ * Parameters of an `unregisterBSP` request BIP message
+ * (`BioAPI_UnregisterBSP`). Master→slave. C `HostingEndpointIRI` is
+ * not in this type: it only selects the hosting endpoint; conversion
+ * to C sets it to NULL (local endpoint) (`X.1083 §16.60.7`).
+ *
+ * On success the slave deletes the matching VisibleBSPRegistrations
+ * row and sends `bspUnregistrationEvent` to every master
+ * (`X.1083 §16.60.4`). Missing row:
+ * `BioAPIERR_NO_SUCH_COMPONENT_FOUND`. Unknown endpoint:
+ * `BioAPIERR_UNABLE_TO_LOCATE_ENDPOINT`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +43,11 @@ export class UnregisterBSP_RequestParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP to unregister, from C `BSPProductUuid`
+     * (`X.1083 §16.60`, Table 119, §15.58).
+     *
      * @public
      * @readonly
      */

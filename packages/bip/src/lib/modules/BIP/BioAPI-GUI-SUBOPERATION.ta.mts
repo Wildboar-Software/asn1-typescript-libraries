@@ -26,6 +26,12 @@ export enum _enum_for_BioAPI_GUI_SUBOPERATION {
  * @summary BioAPI_GUI_SUBOPERATION
  * @description
  *
+ * GUI sub-operation. ASN.1 enumerators are 0-based; C values
+ * are 1–5 (`capture` = C 1). Other C values are unconvertible.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.41](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

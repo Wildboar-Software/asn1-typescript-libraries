@@ -16,6 +16,10 @@ import {
  * @summary max_unsigned_int
  * @description
  *
+ * Inclusive upper bound of `UnsignedInt` (4294967295). Request
+ * and notification identifiers wrap from this value to 0.
+ * X.1083 §7.2.4, §15.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

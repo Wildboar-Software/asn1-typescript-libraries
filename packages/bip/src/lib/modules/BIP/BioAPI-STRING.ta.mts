@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_STRING
  * @description
  *
+ * UTF-8 text with no NUL octets and at most 268 octets (C array
+ * is 269 including the terminator).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.53](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

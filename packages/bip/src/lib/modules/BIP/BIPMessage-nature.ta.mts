@@ -35,6 +35,14 @@ import {
  * @summary BIPMessage_nature
  * @description
  *
+ * CHOICE of the four BIP message kinds. A master endpoint may
+ * send only `request` and `acknowledgement`; a slave may send
+ * only `response` and `notification`. Each request is followed
+ * by one response; some notifications (GUI events) are followed
+ * by an acknowledgement. Unsolicited responses and
+ * acknowledgements are not allowed. X.1083 §7.2, §7.4.3,
+ * §7.4.4, §14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,13 @@ export enum _enum_for_BioAPI_INDICATOR_STATUS {
  * @summary BioAPI_INDICATOR_STATUS
  * @description
  *
+ * Sensor-indicator state. ASN.1 enumerators are 0-based; C
+ * values are 1–5 (`accept` = C 1). Other C values are
+ * unconvertible.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.45](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

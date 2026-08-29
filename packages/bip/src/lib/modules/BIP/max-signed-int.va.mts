@@ -16,6 +16,9 @@ import {
  * @summary max_signed_int
  * @description
  *
+ * Inclusive upper bound of `SignedInt` (2147483647). X.1083
+ * §15.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -20,6 +20,11 @@ import {
  * @summary QueryUnits_RequestParams
  * @description
  *
+ * Parameters of a `queryUnits` request (master→slave) for
+ * BioAPI_QueryUnits. `BSPUuid` rewritten to product UUID
+ * (clause 25). Unit-schema outputs have no request component
+ * (clause 22). X.1083 §16.11, Table 43.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +37,12 @@ export class QueryUnits_RequestParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP whose units are queried. Application
+     * may have passed an access UUID; this component is always the
+     * product UUID. X.1083 Table 43, clause 25.
+     *
      * @public
      * @readonly
      */

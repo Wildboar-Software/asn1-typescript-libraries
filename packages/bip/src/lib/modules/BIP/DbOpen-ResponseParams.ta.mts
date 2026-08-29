@@ -25,6 +25,11 @@ import {
  * @summary DbOpen_ResponseParams
  * @description
  *
+ * Parameters of a `dbOpen` response BIP message (`BioAPI_DbOpen`).
+ * Slave→master. Written into the C output pointers (cl.20). No
+ * local/original rewrite is specified for these handles
+ * (`X.1083 §16.42`). BioAPI outcome is `BIPResponse.returnValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,22 @@ export class DbOpen_ResponseParams {
   constructor(
     /**
      * @summary `dbHandle`.
+     * @description
+     *
+     * Opened-database handle written to C `DbHandle` (cl.20, §15.26).
+     * Required on a conforming response (`X.1083 §16.42`, Table 98).
+     *
      * @public
      * @readonly
      */
     readonly dbHandle: BioAPI_DB_HANDLE,
     /**
      * @summary `markerHandle`.
+     * @description
+     *
+     * Marker handle written to C `MarkerHandle` (cl.20, §15.25).
+     * Required on a conforming response (`X.1083 §16.42`, Table 98).
+     *
      * @public
      * @readonly
      */

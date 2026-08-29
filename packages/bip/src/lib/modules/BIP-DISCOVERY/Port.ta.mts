@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Port
  * @description
  *
+ * UDP/TCP port number (`0..65535`). Default for BIP discovery,
+ * announcement, and the recommended TCP BIP port is 4376
+ * (changeable via a management interface). ITU-T Rec. X.1083
+ * (11/2007)
+ * [Annex B.12](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * A.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

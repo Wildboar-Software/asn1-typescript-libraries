@@ -20,6 +20,12 @@ import {
  * @summary BSPAttachCallOutputParams
  * @description
  *
+ * Aids specification of `BioAPI_BSPAttach` output. Abstract
+ * values do not occur in any BIP message exchanged between
+ * BIP endpoints. Holds the handle returned to the local
+ * application, which may differ from the original handle in
+ * the attach response. X.1083 §16.13.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,14 @@ export class BSPAttachCallOutputParams {
   constructor(
     /**
      * @summary `newBSPHandle`.
+     * @description
+     *
+     * Handle returned to the local application
+     * (`localBSPHandle`). Any value distinct from all current
+     * `AttachSessionLocalReferences` local handles; the
+     * generation method is unspecified. X.1083 §16.13.4.1,
+     * §16.13.10.
+     *
      * @public
      * @readonly
      */

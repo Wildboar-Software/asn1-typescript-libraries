@@ -20,6 +20,10 @@ import {
  * @summary UnlinkCallParams
  * @description
  *
+ * Aids specification of `BioAPI_UnlinkFromEndpoint`. Abstract
+ * values do not occur in any BIP message exchanged between
+ * BIP endpoints. X.1083 §16.5.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,13 @@ export class UnlinkCallParams {
   constructor(
     /**
      * @summary `slaveEndpointIRI`.
+     * @description
+     *
+     * `SlaveEndpointIRI` of `BioAPI_UnlinkFromEndpoint`: slave
+     * to unlink. Must already appear in `VisibleEndpoints`. A
+     * NULL C pointer maps to the local endpoint IRI. X.1083
+     * §16.5.4, §16.5.6, §15.3.
+     *
      * @public
      * @readonly
      */

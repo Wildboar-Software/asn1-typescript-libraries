@@ -27,6 +27,16 @@ import {
  * @summary SubscribeToGUIEvents_RequestParams
  * @description
  *
+ * Parameters of a `subscribeToGUIEvents` request BIP message
+ * (master→slave) for `BioAPI_SubscribeToGUIEvents`. Handler
+ * callback addresses and contexts are local `MemoryAddress`
+ * values and are omitted from the PDU; only the three
+ * subscribed flags travel on the wire. Exactly one of
+ * `bspProductUuid` and `originalBSPHandle` shall be present
+ * (both present: `BioAPIERR_UUID_AND_HANDLE_BOTH_PRESENT`;
+ * both absent: `BioAPIERR_UUID_AND_HANDLE_BOTH_ABSENT`).
+ * X.1083 §16.22, §8.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,36 +55,76 @@ export class SubscribeToGUIEvents_RequestParams {
   constructor(
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * UUID of a secondary GUI-event subscription. Absent for a
+     * primary subscription (ISO/IEC 19784-1 does not pass a
+     * UUID for primary GUI callbacks). C `NULL` ↔ absent
+     * (clause 19). X.1083 §16.22, §8.3.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP whose GUI events are subscribed.
+     * Mutually exclusive with `originalBSPHandle`. Resolved
+     * from BioAPI `BSPUuid` via clause 23/25 (product UUID,
+     * not access UUID). C `NULL` ↔ absent (clause 19).
+     * X.1083 §16.22.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle on the hosting (slave) endpoint.
+     * Mutually exclusive with `bspProductUuid`. BioAPI
+     * `BSPHandle` is rewritten via clauses 24 and 26. C `NULL`
+     * ↔ absent (clause 19). X.1083 §16.22.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `guiSelectEventSubscribed`.
+     * @description
+     *
+     * `TRUE` if the caller supplied a GUI select-event handler
+     * (non-zero handler address). The address itself is local
+     * and omitted from the PDU. X.1083 §16.22.4.2.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventSubscribed: BOOLEAN,
     /**
      * @summary `guiStateEventSubscribed`.
+     * @description
+     *
+     * `TRUE` if the caller supplied a GUI state-event handler
+     * (non-zero handler address). The address itself is local
+     * and omitted from the PDU. X.1083 §16.22.4.2.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventSubscribed: BOOLEAN,
     /**
      * @summary `guiProgressEventSubscribed`.
+     * @description
+     *
+     * `TRUE` if the caller supplied a GUI progress-event
+     * handler (non-zero handler address). The address itself
+     * is local and omitted from the PDU. X.1083 §16.22.4.2.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DeleteMaster_ResponseParams
  * @description
  *
+ * Success payload of a `deleteMaster` response (slave→master) for
+ * BioAPI_UnlinkFromEndpoint. Always `NULL`; outcome is
+ * `BIPResponse.returnValue` (0, or
+ * `BioAPIERR_NO_SUCH_MASTER_FOUND`). X.1083 §16.5.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

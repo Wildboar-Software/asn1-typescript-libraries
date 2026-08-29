@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_QUALITY
  * @description
  *
+ * Sample quality. Allowed range −2..100; values outside are
+ * unconvertible (clause 33). X.1083 does not define the scale.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.51](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DeleteMaster_RequestParams
  * @description
  *
+ * Parameters of a `deleteMaster` request (master→slave) for
+ * BioAPI_UnlinkFromEndpoint. Always `NULL`; the slave endpoint IRI
+ * is on the BIP message. X.1083 §16.5.2, Table 37.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

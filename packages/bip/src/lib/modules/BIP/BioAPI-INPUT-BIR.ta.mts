@@ -20,6 +20,14 @@ import {
  * @summary BioAPI_INPUT_BIR
  * @description
  *
+ * Input BIR for a BioAPI operation. The CHOICE replaces C
+ * `Form` (`DATABASE_ID_INPUT` / `BIR_HANDLE_INPUT` /
+ * `FULLBIR_INPUT`).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.46](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §15.47.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +44,10 @@ export class BioAPI_INPUT_BIR {
   constructor(
     /**
      * @summary `inputBIR`.
+     * @description
+     *
+     * Database key, BSP handle, or full BIR. X.1083 §15.46–15.47.
+     *
      * @public
      * @readonly
      */

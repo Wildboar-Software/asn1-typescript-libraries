@@ -30,6 +30,12 @@ import {
  * @summary BIPNotification
  * @description
  *
+ * Slave-to-master event: unit, GUI, component registration, or
+ * master deletion. GUI select, state, and progress events are
+ * followed by an acknowledgement; the others are not.
+ * ITU-T Rec. X.1083 (11/2007) §7.4.4, §12.4, §13.4, §14.1.
+ * https://www.itu.int/rec/T-REC-X.1083-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,30 +63,60 @@ export class BIPNotification {
   constructor(
     /**
      * @summary `masterEndpointIRI`.
+     * @description
+     *
+     * Destination: the master endpoint. X.1083 §13.4.
+     *
      * @public
      * @readonly
      */
     readonly masterEndpointIRI: EndpointIRI,
     /**
      * @summary `slaveEndpointIRI`.
+     * @description
+     *
+     * Sender: the local (slave) endpoint. X.1083 §13.4.
+     *
      * @public
      * @readonly
      */
     readonly slaveEndpointIRI: EndpointIRI,
     /**
      * @summary `linkNumber`.
+     * @description
+     *
+     * BIP link this message traverses; the number associated
+     * with the link from this master to the local slave.
+     * Copied into a matching acknowledgement. X.1083 §13.4,
+     * §13.5.
+     *
      * @public
      * @readonly
      */
     readonly linkNumber: UnsignedInt,
     /**
      * @summary `notificationId`.
+     * @description
+     *
+     * Pairs this notification with its acknowledgement, when
+     * one is sent. Numbered per link, independently of
+     * `requestId`. Starts at a random value when the slave
+     * accepts the link; incremented on each notification;
+     * wraps from 4294967295 to 0. X.1083 §7.2.4, §13.4,
+     * §16.4.5.
+     *
      * @public
      * @readonly
      */
     readonly notificationId: UnsignedInt,
     /**
      * @summary `params`.
+     * @description
+     *
+     * Event kind and its parameters. If an acknowledgement is
+     * sent, it shall use the same alternative name. X.1083
+     * §13.4, §13.5.
+     *
      * @public
      * @readonly
      */

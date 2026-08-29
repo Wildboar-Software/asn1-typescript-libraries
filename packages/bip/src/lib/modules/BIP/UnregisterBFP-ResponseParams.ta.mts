@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UnregisterBFP_ResponseParams
  * @description
  *
+ * Payload of an `unregisterBFP` response BIP message
+ * (`BioAPI_UnregisterBFP`). Slave→master. Always `NULL`; the BioAPI
+ * outcome is `BIPResponse.returnValue` (`X.1083 §16.62`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

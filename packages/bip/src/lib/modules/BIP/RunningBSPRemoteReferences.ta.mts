@@ -20,6 +20,14 @@ import {
  * @summary RunningBSPRemoteReferences
  * @description
  *
+ * Conceptual table present in all slave endpoints. Defined to
+ * aid specification of framework behaviour; abstract values do
+ * not occur in any BIP message and are never encoded. Added on
+ * `bspLoad` from a master; deleted on `bspUnload`, deletion of
+ * the `MasterEndpoints` row, or deletion of the matching
+ * `VisibleBSPRegistrations` row. ITU-T Rec. X.1083 (11/2007)
+ * [§18.6](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

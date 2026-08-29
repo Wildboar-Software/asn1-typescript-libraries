@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ProtocolVersion
  * @description
  *
+ * Version of the BIP discovery/announcement protocol. This annex
+ * specifies major 1 and minor 0 (protocol 1.0). ITU-T Rec.
+ * X.1083 (11/2007)
+ * [Annex B.12](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * B.8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +36,20 @@ export class ProtocolVersion {
   constructor(
     /**
      * @summary `major`.
+     * @description
+     *
+     * Major version; this protocol uses 1. X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */
     readonly major: INTEGER,
     /**
      * @summary `minor`.
+     * @description
+     *
+     * Minor version; this protocol uses 0. X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,18 @@ import {
  * @summary BioAPI_BIR
  * @description
  *
+ * Serialized BIR for BIP PDUs, not the BioAPI C struct. Default
+ * patron is CBEFF owner 257, type 8 (ISO/IEC 19784-1 Annex B). A
+ * binding may convert `formattedBIR` to another CBEFF patron that
+ * meets §13.16 before encoding. On decode, owner/type other than
+ * 257/8 is converted to that patron (if known) or left unchanged.
+ * An unsupported patron yields
+ * `BioAPIERR_PATRON_FORMAT_NOT_SUPPORTED`.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.6](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §10, §13.16–13.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,18 +48,34 @@ export class BioAPI_BIR {
   constructor(
     /**
      * @summary `patronFormatOwner`.
+     * @description
+     *
+     * CBEFF patron-format owner. Default 257 (BioAPI patron).
+     * X.1083 §13.17–13.18, §15.6.
+     *
      * @public
      * @readonly
      */
     readonly patronFormatOwner: UnsignedShort,
     /**
      * @summary `patronFormatType`.
+     * @description
+     *
+     * CBEFF patron-format type. Default 8 (ISO/IEC 19784-1
+     * Annex B). X.1083 §13.17–13.18, §15.6.
+     *
      * @public
      * @readonly
      */
     readonly patronFormatType: UnsignedShort,
     /**
      * @summary `formattedBIR`.
+     * @description
+     *
+     * Octets of the BIR in the named patron format. For owner 257
+     * type 8, ISO/IEC 19784-1 Annex B. X.1083 §10, §13.16–13.18,
+     * §15.6.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,11 @@ import {
  * @summary Capture_ResponseParams
  * @description
  *
+ * Parameters of a `capture` response BIP message
+ * (slave→master) for `BioAPI_Capture`. Maps to BioAPI output
+ * pointers via clause 20. `auditData` is present only when
+ * requested (`no-auditData` was `FALSE`). X.1083 §16.30.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +40,23 @@ export class Capture_ResponseParams {
   constructor(
     /**
      * @summary `capturedBIR`.
+     * @description
+     *
+     * Handle of the captured BIR on the hosting endpoint. Maps
+     * to BioAPI `CapturedBIR` (clause 20). X.1083 §16.30.6.
+     *
      * @public
      * @readonly
      */
     readonly capturedBIR: BioAPI_BIR_HANDLE,
     /**
      * @summary `auditData`.
+     * @description
+     *
+     * Handle of the audit BIR, if requested. Absent when
+     * `no-auditData` was `TRUE` (or the caller passed NULL
+     * `AuditData`, clause 20). X.1083 §16.30.6.
+     *
      * @public
      * @readonly
      */

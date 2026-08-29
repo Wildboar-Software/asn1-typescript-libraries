@@ -20,6 +20,11 @@ import {
  * @summary BioAPI_GUI_BITMAP_ARRAY
  * @description
  *
+ * Ordered GUI bitmaps. Length is the C `NumberOfMembers`.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.35](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,11 @@ export class BioAPI_GUI_BITMAP_ARRAY {
   constructor(
     /**
      * @summary `guiBitmaps`.
+     * @description
+     *
+     * Bitmaps in order. C count is the sequence length. X.1083
+     * §15.35.
+     *
      * @public
      * @readonly
      */

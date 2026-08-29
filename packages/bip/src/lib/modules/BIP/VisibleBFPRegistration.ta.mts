@@ -20,6 +20,18 @@ import {
  * @summary VisibleBFPRegistration
  * @description
  *
+ * Row of the `VisibleBFPRegistrations` conceptual table.
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message and are never encoded.
+ * One row per BFP registered in the local registry or in a
+ * slave's registry (a BFP registered in two endpoints yields
+ * two rows, differing at least in `hostingEndpointIRI`). Unique
+ * on (`hostingEndpointIRI`, `bfpProductUuid`). The BFP is
+ * available to the local application through a registered BSP
+ * in the same endpoint. Present in all BIP endpoints. ITU-T
+ * Rec. X.1083 (11/2007)
+ * [§18.4](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

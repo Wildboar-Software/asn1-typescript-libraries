@@ -20,6 +20,14 @@ import {
  * @summary QueryGUIEventSubscriptions_ResponseParams
  * @description
  *
+ * Parameters of a `queryGUIEventSubscriptions` response BIP
+ * message (slave→master) for
+ * `BioAPI_QueryGUIEventSubscriptions`. Lists secondary
+ * subscriptions (local and remote) that have a GUI event
+ * subscription UUID for the requested BSP. Maps to BioAPI
+ * `GUIEventSubscriptionList`/`NumberOfElements` (clause 20).
+ * X.1083 §16.24.6–16.24.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +43,13 @@ export class QueryGUIEventSubscriptions_ResponseParams {
   constructor(
     /**
      * @summary `guiEventSubscriptions`.
+     * @description
+     *
+     * Secondary GUI-event subscriptions for the named BSP.
+     * Empty when none exist. Maps to BioAPI
+     * `GUIEventSubscriptionList`/`NumberOfElements` (clause
+     * 20). X.1083 §16.24.6–16.24.8.
+     *
      * @public
      * @readonly
      */

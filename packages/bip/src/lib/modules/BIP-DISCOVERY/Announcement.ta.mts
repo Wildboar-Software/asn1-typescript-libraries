@@ -38,6 +38,15 @@ import {
  * @summary Announcement
  * @description
  *
+ * Service-announcement packet from a BIP slave. Encoded in
+ * aligned PER. Sent as a unicast UDP reply to a `Discovery`
+ * request (B.11), or autonomously as broadcast/multicast on
+ * port 4376 to introduce the slave or to report configuration
+ * changes (B.13). The slave does not wait for a reply. Not a
+ * BIP message. ITU-T Rec. X.1083 (11/2007)
+ * [Annex B.12](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * B.13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,36 +66,69 @@ export class Announcement {
   constructor(
     /**
      * @summary `protocolVersion`.
+     * @description
+     *
+     * Discovery protocol version; this annex specifies major 1,
+     * minor 0. X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */
     readonly protocolVersion: ProtocolVersion,
     /**
      * @summary `slaveEndpointIPAddress`.
+     * @description
+     *
+     * IP address of the slave. Use `ipv4` on IPv4 networks and
+     * `ipv6` on IPv6 networks. X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */
     readonly slaveEndpointIPAddress: IPAddress,
     /**
      * @summary `slaveEndpointMACAddress`.
+     * @description
+     *
+     * Ethernet address of the slave's interface (ISO/IEC TR
+     * 8802-1). X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */
     readonly slaveEndpointMACAddress: MACAddress,
     /**
      * @summary `slaveEndpointName`.
+     * @description
+     *
+     * Name of the slave endpoint (1..32 IA5 characters). A
+     * change of this name should trigger a new announcement
+     * (X.1083 B.13). X.1083 Annex B.12.
+     *
      * @public
      * @readonly
      */
     readonly slaveEndpointName: IA5String,
     /**
      * @summary `bipMessagePort`.
+     * @description
+     *
+     * TCP port for BIP messages. Default 4376; the master
+     * learns the actual port from this field. X.1083 Annex
+     * B.12.
+     *
      * @public
      * @readonly
      */
     readonly bipMessagePort?: OPTIONAL<Port>,
     /**
      * @summary `securityProtocols`.
+     * @description
+     *
+     * Security protocols the slave supports. Absence means no
+     * security is used for BIP transfers. Each entry is an OID
+     * plus a parameter. X.1083 Annex B.7, B.12.
+     *
      * @public
      * @readonly
      */

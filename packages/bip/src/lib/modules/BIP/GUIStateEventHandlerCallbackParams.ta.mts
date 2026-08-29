@@ -76,6 +76,15 @@ import {
  * @summary GUIStateEventHandlerCallbackParams
  * @description
  *
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message exchanged between
+ * endpoints. Converted to the parameters of
+ * `BioAPI_GUI_STATE_EVENT_HANDLER` (Table 130). Output
+ * parameters `Response` and `EnrollSampleIndexToRecapture` are
+ * not in this type (clause 22). ITU-T Rec. X.1083 (11/2007)
+ * [§17.3.4](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §17.3.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -101,78 +110,133 @@ export class GUIStateEventHandlerCallbackParams {
   constructor(
     /**
      * @summary `guiStateEventHandlerAddress`.
+     * @description
+     *
+     * Address of the function to invoke; not a function
+     * parameter. Conversion applies X.1083 §15.1.7. X.1083
+     * §17.3.11, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventHandlerAddress: MemoryAddress,
     /**
      * @summary `guiStateEventHandlerContext`.
+     * @description
+     *
+     * Passed as `GUIStateEventHandlerCtx`. X.1083 §17.3.10,
+     * Table 130.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventHandlerContext: MemoryAddress,
     /**
      * @summary `bspUuid`.
+     * @description
+     *
+     * Passed as `BSPUuid`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly bspUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Passed as `UnitID`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `bspHandle`.
+     * @description
+     *
+     * Passed as `BSPHandle`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly bspHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `operation`.
+     * @description
+     *
+     * Passed as `Operation`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly operation: BioAPI_GUI_OPERATION,
     /**
      * @summary `suboperation`.
+     * @description
+     *
+     * Passed as `Suboperation`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly suboperation: BioAPI_GUI_SUBOPERATION,
     /**
      * @summary `purpose`.
+     * @description
+     *
+     * Passed as `Purpose`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly purpose: BioAPI_BIR_PURPOSE,
     /**
      * @summary `moment`.
+     * @description
+     *
+     * Passed as `Moment`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly moment: BioAPI_GUI_MOMENT,
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Passed as `ResultCode`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: BioAPI_RETURN,
     /**
      * @summary `enrollSampleIndex`.
+     * @description
+     *
+     * Passed as `EnrollSampleIndex`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly enrollSampleIndex: SignedInt,
     /**
      * @summary `bitmaps`.
+     * @description
+     *
+     * Passed as `Bitmaps`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */
     readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
     /**
      * @summary `text`.
+     * @description
+     *
+     * Passed as `Text`. X.1083 §17.3.10, Table 130.
+     *
      * @public
      * @readonly
      */

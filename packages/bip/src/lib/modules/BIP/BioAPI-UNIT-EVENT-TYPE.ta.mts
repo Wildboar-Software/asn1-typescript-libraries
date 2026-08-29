@@ -26,6 +26,13 @@ export enum _enum_for_BioAPI_UNIT_EVENT_TYPE {
  * @summary BioAPI_UNIT_EVENT_TYPE
  * @description
  *
+ * Unit notification kind. ASN.1 enumerators are 0-based; C
+ * `BioAPI_EVENT` values are 1–5 (`insert` = C 1). Other C values
+ * are unconvertible.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.30](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_VERSION
  * @description
  *
+ * Spec/product version. C packs both nibbles into one `uint8_t`:
+ * high nibble → `major`, low nibble → `minor` (each 0–15).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.59](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +36,20 @@ export class BioAPI_VERSION {
   constructor(
     /**
      * @summary `major`.
+     * @description
+     *
+     * High nibble of the C `uint8_t`. X.1083 §15.59.
+     *
      * @public
      * @readonly
      */
     readonly major: INTEGER,
     /**
      * @summary `minor`.
+     * @description
+     *
+     * Low nibble of the C `uint8_t`. X.1083 §15.59.
+     *
      * @public
      * @readonly
      */

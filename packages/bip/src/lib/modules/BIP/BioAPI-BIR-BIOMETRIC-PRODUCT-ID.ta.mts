@@ -20,6 +20,13 @@ import {
  * @summary BioAPI_BIR_BIOMETRIC_PRODUCT_ID
  * @description
  *
+ * CBEFF product owner/type pair identifying the BSP that created
+ * the BIR. X.1083 maps the C `uint16_t` members 1:1 and adds no
+ * further PDU semantics.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.9](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

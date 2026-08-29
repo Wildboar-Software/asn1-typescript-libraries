@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UnredirectGUIEvents_ResponseParams
  * @description
  *
+ * Parameters of a successful `unredirectGUIEvents` response
+ * BIP message (slave→master) for
+ * `BioAPI_UnredirectGUIEvents`. Always `NULL`; a missing
+ * matching row yields
+ * `BioAPIERR_NO_SUCH_REDIRECTOR_FOUND`. X.1083 §16.29.2,
+ * §16.29.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

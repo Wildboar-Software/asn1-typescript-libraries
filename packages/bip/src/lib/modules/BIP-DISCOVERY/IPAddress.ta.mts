@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IPAddress
  * @description
  *
+ * Network-layer address of a BIP endpoint. Use the `ipv4`
+ * alternative (4 octets) on an IPv4 network and `ipv6` (16
+ * octets) on an IPv6 network. ITU-T Rec. X.1083 (11/2007)
+ * [Annex B.12](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

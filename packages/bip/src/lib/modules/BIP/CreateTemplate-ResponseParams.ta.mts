@@ -26,6 +26,12 @@ import {
  * @summary CreateTemplate_ResponseParams
  * @description
  *
+ * Parameters of a `createTemplate` response BIP message
+ * (slave→master) for `BioAPI_CreateTemplate`. Maps to BioAPI
+ * output pointers via clause 20. `templateUuid` is present
+ * only when requested (`no-templateUuid` was `FALSE`).
+ * X.1083 §16.31.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +46,23 @@ export class CreateTemplate_ResponseParams {
   constructor(
     /**
      * @summary `newTemplate`.
+     * @description
+     *
+     * Handle of the newly created template BIR on the hosting
+     * endpoint. Maps to BioAPI `NewTemplate` (clause 20).
+     * X.1083 §16.31.6.
+     *
      * @public
      * @readonly
      */
     readonly newTemplate: BioAPI_BIR_HANDLE,
     /**
      * @summary `templateUuid`.
+     * @description
+     *
+     * UUID assigned to the new template, if requested. Absent
+     * when `no-templateUuid` was `TRUE`. X.1083 §16.31.6.
+     *
      * @public
      * @readonly
      */

@@ -32,6 +32,12 @@ import {
  * @summary VerifyMatch_ResponseParams
  * @description
  *
+ * Parameters of a `verifyMatch` response BIP message
+ * (slave→master) for `BioAPI_VerifyMatch`. Maps to BioAPI
+ * output pointers via clause 20. OPTIONAL outputs are
+ * present only when the matching `no-*` request flag was
+ * `FALSE`. `result` is always returned. X.1083 §16.34.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,24 +54,44 @@ export class VerifyMatch_ResponseParams {
   constructor(
     /**
      * @summary `adaptedBIR`.
+     * @description
+     *
+     * Handle of the adapted BIR, if requested. Absent when
+     * `no-adaptedBIR` was `TRUE`. X.1083 §16.34.6.
+     *
      * @public
      * @readonly
      */
     readonly adaptedBIR: OPTIONAL<BioAPI_BIR_HANDLE>,
     /**
      * @summary `result`.
+     * @description
+     *
+     * BioAPI `Result` of the comparison. Always returned (no
+     * `no-*` flag). X.1083 §16.34.6.
+     *
      * @public
      * @readonly
      */
     readonly result: BOOLEAN,
     /**
      * @summary `fmrAchieved`.
+     * @description
+     *
+     * Achieved false-match rate, if requested. Absent when
+     * `no-fmrAchieved` was `TRUE`. X.1083 §16.34.6.
+     *
      * @public
      * @readonly
      */
     readonly fmrAchieved?: OPTIONAL<BioAPI_FMR>,
     /**
      * @summary `payload`.
+     * @description
+     *
+     * Payload output, if requested. Absent when `no-payload`
+     * was `TRUE`. X.1083 §16.34.6.
+     *
      * @public
      * @readonly
      */

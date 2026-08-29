@@ -21,6 +21,13 @@ import {
  * @summary GUIProgressEvent_AcknowledgementParams
  * @description
  *
+ * Parameter of a `guiProgressEvent` acknowledgement BIP message
+ * (`BIPAcknowledgement`, master → slave). Carries the
+ * subscriber's `Response` back to the BSP (Tables 133 and 135).
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§17.4.3](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §17.4.9, §17.4.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +41,11 @@ export class GUIProgressEvent_AcknowledgementParams {
   constructor(
     /**
      * @summary `response`.
+     * @description
+     *
+     * Handler's GUI response; written to `Response`. X.1083
+     * §17.4.9, Table 133.
+     *
      * @public
      * @readonly
      */

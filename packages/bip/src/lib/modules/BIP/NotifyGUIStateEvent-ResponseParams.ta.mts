@@ -26,6 +26,12 @@ import {
  * @summary NotifyGUIStateEvent_ResponseParams
  * @description
  *
+ * Parameters of a `notifyGUIStateEvent` response BIP message
+ * (slave→master) for `BioAPI_NotifyGUIStateEvent`. Copied
+ * from the GUI-state acknowledgement produced by clause 31.
+ * Maps to BioAPI output pointers via clause 20. X.1083
+ * §16.26.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +46,24 @@ export class NotifyGUIStateEvent_ResponseParams {
   constructor(
     /**
      * @summary `response`.
+     * @description
+     *
+     * GUI handler's response to the state event. With no
+     * subscriber, clause 31 defaults this to `default`. X.1083
+     * §16.26.6, clause 31.
+     *
      * @public
      * @readonly
      */
     readonly response: BioAPI_GUI_RESPONSE,
     /**
      * @summary `enrollSampleIndexToRecapture`.
+     * @description
+     *
+     * Index of the enroll sample to recapture, as returned by
+     * the GUI handler. With no subscriber, clause 31 defaults
+     * this to 0. X.1083 §16.26.6, clause 31.
+     *
      * @public
      * @readonly
      */

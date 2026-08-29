@@ -26,6 +26,15 @@ import {
  * @summary BioAPI_IDENTIFY_POPULATION_birs
  * @description
  *
+ * C `Type` 1 (`DB_TYPE`) → `birDataBase`; 2 (`ARRAY_TYPE`) →
+ * `birArray`; 3 (`PRESET_ARRAY_TYPE`) → `birPresetArray` (NULL).
+ * For preset, the C `BIRArray` pointer must be NULL; any other
+ * value is unconvertible. OPTIONAL C pointers follow clause 19.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.43](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §15.44.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

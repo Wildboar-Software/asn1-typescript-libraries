@@ -26,6 +26,15 @@ import {
  * @summary GUISelectEvent_AcknowledgementParams
  * @description
  *
+ * Parameter of a `guiSelectEvent` acknowledgement BIP message
+ * (`BIPAcknowledgement`, master → slave). Carries the
+ * subscriber's output (`SelectedInstances`, `Response`) back to
+ * the BSP. Converted to BioSPI output parameters with Table 125
+ * and from `BioAPI_GUI_SELECT_EVENT_HANDLER` with Table 127.
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§17.2.3](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §17.2.9, §17.2.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +49,22 @@ export class GUISelectEvent_AcknowledgementParams {
   constructor(
     /**
      * @summary `selectedInstances`.
+     * @description
+     *
+     * Instances chosen by the GUI handler; written to
+     * `SelectedInstances`. X.1083 §17.2.9, Table 125.
+     *
      * @public
      * @readonly
      */
     readonly selectedInstances: BioAPI_BIR_SUBTYPE_MASK,
     /**
      * @summary `response`.
+     * @description
+     *
+     * Handler's GUI response; written to `Response`. X.1083
+     * §17.2.9, Table 125.
+     *
      * @public
      * @readonly
      */

@@ -31,6 +31,11 @@ import {
  * @summary AddMaster_ResponseParams
  * @description
  *
+ * Parameters of an `addMaster` response (slave→master) for
+ * BioAPI_LinkToEndpoint. Slave sends BSP access UUIDs as sixteen
+ * zero octets; the master generates a new access UUID per BSP.
+ * X.1083 §16.4.4 o, §16.4.5 i.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,18 +53,39 @@ export class AddMaster_ResponseParams {
   constructor(
     /**
      * @summary `fwSchema`.
+     * @description
+     *
+     * Slave's framework schema. OPTIONAL here; a conforming slave
+     * always includes it. Master returns
+     * `BioAPIERR_FRAMEWORK_SCHEMA_ABSENT` if missing.
+     * X.1083 §16.4.4 k, §16.4.5 h.
+     *
      * @public
      * @readonly
      */
     readonly fwSchema: OPTIONAL<BioAPI_FRAMEWORK_SCHEMA>,
     /**
      * @summary `bspSchemas`.
+     * @description
+     *
+     * BSP schemas hosted at the slave. Each `bspAccessUuid` is
+     * sixteen zero octets; master generates a new access UUID.
+     * Duplicate `bspProductUuid` →
+     * `BioAPIERR_DUPLICATE_BSP_PRODUCT_UUID`. X.1083 §16.4.4 l, o,
+     * §16.4.5 i.
+     *
      * @public
      * @readonly
      */
     readonly bspSchemas: BioAPI_BSP_SCHEMA[],
     /**
      * @summary `bfpSchemas`.
+     * @description
+     *
+     * BFP schemas hosted at the slave. Duplicate `bfpProductUuid` →
+     * `BioAPIERR_DUPLICATE_BFP_PRODUCT_UUID`. X.1083 §16.4.4 m, p,
+     * §16.4.5 j.
+     *
      * @public
      * @readonly
      */

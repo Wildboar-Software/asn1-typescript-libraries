@@ -30,6 +30,10 @@ import {
  * @summary BIPAcknowledgement_params
  * @description
  *
+ * Acknowledgement CHOICE: only GUI select, state, and
+ * progress. Shall match the alternative name of the
+ * corresponding `BIPNotification`. X.1083 §13.5, §13.7, §14.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

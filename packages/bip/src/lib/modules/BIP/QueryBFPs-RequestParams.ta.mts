@@ -20,6 +20,11 @@ import {
  * @summary QueryBFPs_RequestParams
  * @description
  *
+ * Parameters of a `queryBFPs` request (master→slave) for
+ * BioAPI_QueryBFPs. `BSPUuid` rewritten to product UUID
+ * (clause 25). BFP-list outputs have no request component
+ * (clause 22). X.1083 §16.12, Table 45.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +37,12 @@ export class QueryBFPs_RequestParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP whose BFPs are queried. Application
+     * may have passed an access UUID; this component is always the
+     * product UUID. X.1083 Table 45, clause 25.
+     *
      * @public
      * @readonly
      */

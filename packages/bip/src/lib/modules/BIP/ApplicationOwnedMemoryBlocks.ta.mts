@@ -20,6 +20,15 @@ import {
  * @summary ApplicationOwnedMemoryBlocks
  * @description
  *
+ * Conceptual table present in all BIP endpoints. Defined to aid
+ * specification of framework behaviour; abstract values do not
+ * occur in any BIP message and are never encoded. Added when
+ * the framework allocates a variable or array while processing
+ * an incoming BioAPI call from the local application (X.1083
+ * §13.13); deleted on `BioAPI_Free` or `BioAPI_Terminate`.
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§18.13](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

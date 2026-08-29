@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary TCPIPBIPMessage_version
  * @description
  *
+ * Version of `TCPIPBIPMessage`. This Recommendation defines
+ * `version-1(1)`. Constrained to `0..255`. ITU-T Rec. X.1083
+ * (11/2007)
+ * [Annex A.2](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +33,11 @@ export type TCPIPBIPMessage_version = INTEGER;
 
 /**
  * @summary TCPIPBIPMessage_version_version_1
+ * @description
+ *
+ * Version 1 of the TCP/IP transport-level message. X.1083
+ * Annex A.2.
+ *
  * @constant
  * @type {number}
  */
@@ -36,6 +46,11 @@ export const TCPIPBIPMessage_version_version_1: TCPIPBIPMessage_version = 1; /* 
 
 /**
  * @summary TCPIPBIPMessage_version_version_1
+ * @description
+ *
+ * Version 1 of the TCP/IP transport-level message. X.1083
+ * Annex A.2.
+ *
  * @constant
  * @type {number}
  */

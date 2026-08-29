@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SignedInt
  * @description
  *
+ * Maps the C type `int32_t` (-2147483648..2147483647).
+ * Conversion is the corresponding 32-bit signed integer.
+ * X.1083 §15.1.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

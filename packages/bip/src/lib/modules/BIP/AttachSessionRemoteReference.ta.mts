@@ -30,6 +30,15 @@ import {
  * @summary AttachSessionRemoteReference
  * @description
  *
+ * Row of the `AttachSessionRemoteReferences` conceptual table.
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message and are never encoded.
+ * A reference held by a master to an attach session of a BSP
+ * running in this slave. Unique on `originalBSPHandle`. Present
+ * in all slave endpoints. Added on `bspAttach` (X.1083
+ * §18.9.4.1). ITU-T Rec. X.1083 (11/2007)
+ * [§18.9](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +54,32 @@ export class AttachSessionRemoteReference {
   constructor(
     /**
      * @summary `referrerEndpointIRI`.
+     * @description
+     *
+     * Master that holds this reference; not the local endpoint.
+     * X.1083 §18.9.2.1.
+     *
      * @public
      * @readonly
      */
     readonly referrerEndpointIRI: EndpointIRI,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the registered BSP. X.1083 §18.9.2.2.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle; unique in this table. X.1083
+     * §18.9.2.3–18.9.2.4.
+     *
      * @public
      * @readonly
      */

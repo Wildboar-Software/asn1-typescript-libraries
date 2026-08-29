@@ -31,6 +31,12 @@ import {
  * @summary SetIndicatorStatus_RequestParams
  * @description
  *
+ * Parameters of a `setIndicatorStatus` request BIP message
+ * (`BioAPI_SetIndicatorStatus`). Master→slave. `originalBSPHandle`
+ * is the hosting-endpoint BSP handle (cl.26), not the master's local
+ * `BSPHandle` (`X.1083 §16.54`). Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +52,33 @@ export class SetIndicatorStatus_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.54`, Table 114).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit whose indicator is set, from C `UnitID` (`X.1083 §16.54`,
+     * Table 114, §15.55).
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `indicatorStatus`.
+     * @description
+     *
+     * From C `IndicatorStatus` (`accept`/`reject`/`ready`/`busy`/
+     * `failure`) (`X.1083 §16.54`, Table 114, §15.45).
+     *
      * @public
      * @readonly
      */

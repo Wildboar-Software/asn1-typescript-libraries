@@ -31,6 +31,19 @@ import {
  * @summary AttachSessionLocalReference
  * @description
  *
+ * Row of the `AttachSessionLocalReferences` conceptual table.
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message and are never encoded.
+ * A reference held by the local application (via
+ * `BioAPI_BSPAttach`) to an attach session of a BSP running
+ * locally or in a slave. Translates between the original BSP
+ * handle (unique only in the generating framework) and the
+ * local BSP handle returned to the application. Unique on
+ * `localBSPHandle` and on (`hostingEndpointIRI`,
+ * `originalBSPHandle`). Present in all BIP endpoints. ITU-T
+ * Rec. X.1083 (11/2007)
+ * [§18.8](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,30 +61,54 @@ export class AttachSessionLocalReference {
   constructor(
     /**
      * @summary `hostingEndpointIRI`.
+     * @description
+     *
+     * Endpoint containing the referenced BSP (local or a slave).
+     * X.1083 §18.8.2.1.
+     *
      * @public
      * @readonly
      */
     readonly hostingEndpointIRI: EndpointIRI,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of that BSP. X.1083 §18.8.2.2.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `useBSPAccessUuid`.
+     * @description
+     *
+     * `TRUE` if `BioAPI_BSPAttach` identified the BSP by access
+     * UUID rather than product UUID. X.1083 §18.8.2.3.
+     *
      * @public
      * @readonly
      */
     readonly useBSPAccessUuid: BOOLEAN,
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Handle generated in the hosting framework. X.1083
+     * §18.8.2.4.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `localBSPHandle`.
+     * @description
+     *
+     * Handle returned to the local application; unique in this
+     * table. X.1083 §18.8.2.5–18.8.2.6.
+     *
      * @public
      * @readonly
      */

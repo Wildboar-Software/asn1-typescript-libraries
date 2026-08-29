@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_DATE
  * @description
  *
+ * Calendar date. The triple year=0, month=0, day=0 is valid
+ * (unspecified). Otherwise year 1900–9999, month 1–12, day 1–31;
+ * other values are unconvertible (clause 33).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.23](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,18 +39,33 @@ export class BioAPI_DATE {
   constructor(
     /**
      * @summary `year`.
+     * @description
+     *
+     * 0 only as part of the all-zero date; else 1900–9999.
+     * X.1083 §15.23.4.
+     *
      * @public
      * @readonly
      */
     readonly year: INTEGER,
     /**
      * @summary `month`.
+     * @description
+     *
+     * 0 only as part of the all-zero date; else 1–12. X.1083
+     * §15.23.4.
+     *
      * @public
      * @readonly
      */
     readonly month: INTEGER,
     /**
      * @summary `day`.
+     * @description
+     *
+     * 0 only as part of the all-zero date; else 1–31. X.1083
+     * §15.23.4.
+     *
      * @public
      * @readonly
      */

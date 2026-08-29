@@ -20,6 +20,13 @@ import {
  * @summary BioAPI_BIR_HANDLE
  * @description
  *
+ * BSP-local BIR handle. C `BioAPI_INVALID_BIR_HANDLE` is −1;
+ * `BioAPI_UNSUPPORTED_BIR_HANDLE` is −2. X.1083 adds no further
+ * PDU semantics.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.12](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

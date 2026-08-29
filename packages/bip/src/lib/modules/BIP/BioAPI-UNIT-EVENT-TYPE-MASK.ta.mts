@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_UNIT_EVENT_TYPE_MASK
  * @description
  *
+ * Unit-event subscription mask. `SIZE(32)` matches the C
+ * `uint32_t`. ASN.1 bit 0 is the LSB (`0x00000001` = insert).
+ * Named bits occupy 0–4; 5–31 are unnamed.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.31](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

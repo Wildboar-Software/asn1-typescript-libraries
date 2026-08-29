@@ -20,6 +20,11 @@ import {
  * @summary DbCreate_ResponseParams
  * @description
  *
+ * Parameters of a `dbCreate` response BIP message
+ * (`BioAPI_DbCreate`). Slave→master. Written into C `DbHandle`
+ * (cl.20). No local/original rewrite is specified for this handle
+ * (`X.1083 §16.44`). BioAPI outcome is `BIPResponse.returnValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +37,11 @@ export class DbCreate_ResponseParams {
   constructor(
     /**
      * @summary `dbHandle`.
+     * @description
+     *
+     * Created-database handle written to C `DbHandle` (cl.20, §15.26).
+     * Required on a conforming response (`X.1083 §16.44`, Table 101).
+     *
      * @public
      * @readonly
      */

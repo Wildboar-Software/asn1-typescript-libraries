@@ -42,6 +42,16 @@ import {
  * @summary UnitEventInfo
  * @description
  *
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message exchanged between
+ * endpoints. Built from a `unitEvent` notification (or from a
+ * local `BioSPI_EVENT_HANDLER` call) and passed to clause 29 to
+ * notify local unit-event handlers and/or master endpoints.
+ * `hostingEndpointIRI` is the local endpoint IRI if the event
+ * originated in a local BSP, otherwise the slave endpoint IRI of
+ * the incoming notification. ITU-T Rec. X.1083 (11/2007)
+ * [§17.1.4](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,30 +69,57 @@ export class UnitEventInfo {
   constructor(
     /**
      * @summary `hostingEndpointIRI`.
+     * @description
+     *
+     * Endpoint whose BSP raised the event: local IRI after a
+     * BioSPI callback, or `slaveEndpointIRI` of the incoming
+     * `unitEvent` notification. X.1083 §17.1.5–17.1.6.
+     *
      * @public
      * @readonly
      */
     readonly hostingEndpointIRI: EndpointIRI,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Copied from the matching component of
+     * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Copied from the matching component of
+     * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `unitSchema`.
+     * @description
+     *
+     * Copied from the matching component of
+     * `UnitEvent-NotificationParams` (presence and value).
+     * X.1083 §17.1.5–17.1.6.
+     *
      * @public
      * @readonly
      */
     readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
     /**
      * @summary `unitEventType`.
+     * @description
+     *
+     * Copied from the matching component of
+     * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
+     *
      * @public
      * @readonly
      */

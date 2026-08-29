@@ -21,6 +21,15 @@ import {
  * @summary BFPRegistrationEvent_NotificationParams
  * @description
  *
+ * Parameter of a `bfpRegistrationEvent` notification BIP
+ * message (`BIPNotification`, slave → remaining masters). Sent
+ * after a BFP is registered (or updated) in the slave's
+ * component registry so each master can update
+ * `VisibleBFPRegistrations`. The receiver shall not send an
+ * acknowledgement (X.1083 §16.61.5). ITU-T Rec. X.1083
+ * (11/2007)
+ * [§16.61.2](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +44,23 @@ export class BFPRegistrationEvent_NotificationParams {
   constructor(
     /**
      * @summary `bfpSchema`.
+     * @description
+     *
+     * BFP schema as registered (or updated) in the slave
+     * registry. X.1083 §16.61.2.
+     *
      * @public
      * @readonly
      */
     readonly bfpSchema: BioAPI_BFP_SCHEMA,
     /**
      * @summary `update`.
+     * @description
+     *
+     * `TRUE` if this replaces an existing registration of the
+     * same BFP product UUID at that endpoint; `FALSE` if it is a
+     * new registration. X.1083 §16.61.3.1, §16.61.5.
+     *
      * @public
      * @readonly
      */

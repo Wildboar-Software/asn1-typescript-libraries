@@ -37,6 +37,11 @@ import {
  * @summary Import_RequestParams
  * @description
  *
+ * Parameters of an `import` request BIP message (master→slave)
+ * for `BioAPI_Import`. `BSPHandle` is rewritten via clause
+ * 26. `ConstructedBIR` has no request component (clause 22).
+ * X.1083 §16.39.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,30 +59,56 @@ export class Import_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle on the hosting (slave) endpoint.
+     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+     * X.1083 §16.39.5.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `inputData`.
+     * @description
+     *
+     * Raw biometric data to import. C `NULL` is unconvertible
+     * (clause 19). X.1083 §16.39.5.
+     *
      * @public
      * @readonly
      */
     readonly inputData: BioAPI_DATA,
     /**
      * @summary `inputFormat`.
+     * @description
+     *
+     * Format of `inputData`. C `NULL` is unconvertible
+     * (clause 19). X.1083 §16.39.5.
+     *
      * @public
      * @readonly
      */
     readonly inputFormat: BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
     /**
      * @summary `outputFormat`.
+     * @description
+     *
+     * Requested format of the constructed BIR. C `NULL` ↔
+     * absent (clause 19). X.1083 §16.39.5.
+     *
      * @public
      * @readonly
      */
     readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>,
     /**
      * @summary `purpose`.
+     * @description
+     *
+     * Intended purpose of the constructed BIR, from BioAPI
+     * `Purpose`. X.1083 §16.39.5.
+     *
      * @public
      * @readonly
      */

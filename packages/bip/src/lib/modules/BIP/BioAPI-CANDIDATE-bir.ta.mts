@@ -25,6 +25,17 @@ import {
  * @summary BioAPI_CANDIDATE_bir
  * @description
  *
+ * How a candidate BIR is identified. C `Type` 1
+ * (`BioAPI_DB_TYPE`) → `birInDatabase` (UUID key); 2
+ * (`ARRAY_TYPE`) → `birInArray` (index); 3
+ * (`PRESET_ARRAY_TYPE`) → `birInPresetArray` (index). Other C
+ * `Type` values are unconvertible. OPTIONAL C pointers follow
+ * clause 19.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.20](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §15.44.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

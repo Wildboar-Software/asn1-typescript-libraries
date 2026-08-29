@@ -15,6 +15,13 @@ import { type SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca.m
  * @summary SecurityProtocols
  * @description
  *
+ * Information object set of `SECURITY-PROTOCOL`. Specified as
+ * the empty set `{...}` and is to be populated with the
+ * protocols an implementation supports. Absence of
+ * `securityProtocols` in an `Announcement` means no security
+ * is used for BIP transfers. ITU-T Rec. X.1083 (11/2007)
+ * [Annex B.12](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

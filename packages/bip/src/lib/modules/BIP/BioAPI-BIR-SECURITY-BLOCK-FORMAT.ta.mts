@@ -20,6 +20,12 @@ import {
  * @summary BioAPI_BIR_SECURITY_BLOCK_FORMAT
  * @description
  *
+ * CBEFF security-block format owner/type pair. X.1083 maps the C
+ * `uint16_t` members 1:1 and adds no further PDU semantics.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.15](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

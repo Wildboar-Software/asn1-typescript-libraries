@@ -30,6 +30,16 @@ import {
  * @summary DbOpen_RequestParams
  * @description
  *
+ * Parameters of a `dbOpen` request BIP message (`BioAPI_DbOpen`).
+ * Master→slave. `originalBSPHandle` is the hosting-endpoint BSP
+ * handle (cl.26), not the master's local `BSPHandle`
+ * (`X.1083 §16.42`).
+ *
+ * C outputs `DbHandle` and `MarkerHandle` are omitted here (cl.22:
+ * caller pointers must be non-NULL) and returned in
+ * `DbOpen-ResponseParams`. Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +55,33 @@ export class DbOpen_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.42`, Table 97).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `dbUuid`.
+     * @description
+     *
+     * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
+     * unconvertible (cl.19, §15.58) (`X.1083 §16.42`, Table 97).
+     *
      * @public
      * @readonly
      */
     readonly dbUuid: BioAPI_UUID,
     /**
      * @summary `accessRequest`.
+     * @description
+     *
+     * Access requested by C `AccessRequest` (`read`/`write` bits)
+     * (`X.1083 §16.42`, Table 97, §15.24).
+     *
      * @public
      * @readonly
      */

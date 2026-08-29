@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_GUI_ENROLL_TYPE
  * @description
  *
+ * Enrolment GUI style flags. `SIZE(32)` matches the C
+ * `uint32_t`. Bit 0 = C `0x00000001` (testVerify); bit 1 =
+ * `0x00000002` (multipleCapture). Bits 2–31 are unnamed.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.38](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -30,6 +30,15 @@ import {
  * @summary BioAPI_INPUT_BIR_inputBIR
  * @description
  *
+ * C `Form` 1 (`DATABASE_ID_INPUT`) → `birInDB`; 2
+ * (`BIR_HANDLE_INPUT`) → `birInBSP`; 3 (`FULLBIR_INPUT`) →
+ * `bir`. Other C `Form` values are unconvertible. OPTIONAL C
+ * pointers follow clause 19.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.46](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §15.47.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

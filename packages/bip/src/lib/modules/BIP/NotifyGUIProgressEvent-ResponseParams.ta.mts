@@ -21,6 +21,12 @@ import {
  * @summary NotifyGUIProgressEvent_ResponseParams
  * @description
  *
+ * Parameters of a `notifyGUIProgressEvent` response BIP
+ * message (slave→master) for
+ * `BioAPI_NotifyGUIProgressEvent`. Copied from the GUI-
+ * progress acknowledgement produced by clause 32. Maps to
+ * BioAPI `Response` via clause 20. X.1083 §16.27.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +40,12 @@ export class NotifyGUIProgressEvent_ResponseParams {
   constructor(
     /**
      * @summary `response`.
+     * @description
+     *
+     * GUI handler's response to the progress event. With no
+     * subscriber, clause 32 defaults this to `default`. X.1083
+     * §16.27.6, clause 32.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,16 @@ import {
  * @summary RegisterBSP_RequestParams
  * @description
  *
+ * Parameters of a `registerBSP` request BIP message
+ * (`BioAPI_RegisterBSP`). Master→slave. C `HostingEndpointIRI` is
+ * not in this type: it only selects the hosting endpoint; conversion
+ * to C sets it to NULL (local endpoint) (`X.1083 §16.59.7`).
+ *
+ * On success the slave inserts or replaces a VisibleBSPRegistrations
+ * row (new `bspAccessUuid`) and sends `bspRegistrationEvent` to
+ * every master (`X.1083 §16.59.4`). Unknown endpoint:
+ * `BioAPIERR_UNABLE_TO_LOCATE_ENDPOINT`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +45,25 @@ export class RegisterBSP_RequestParams {
   constructor(
     /**
      * @summary `bspSchema`.
+     * @description
+     *
+     * Schema of the BSP to register, from C `BSPSchema`. Not OPTIONAL:
+     * a NULL pointer is unconvertible (cl.19, §15.19)
+     * (`X.1083 §16.59`, Table 118).
+     *
      * @public
      * @readonly
      */
     readonly bspSchema: BioAPI_BSP_SCHEMA,
     /**
      * @summary `update`.
+     * @description
+     *
+     * From C `Update` (§15.18). FALSE with an existing local
+     * `bspProductUuid` row:
+     * `BioAPIERR_COMPONENT_ALREADY_REGISTERED`. TRUE: delete that
+     * row then insert (`X.1083 §16.59.4`).
+     *
      * @public
      * @readonly
      */

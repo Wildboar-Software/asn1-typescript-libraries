@@ -20,6 +20,10 @@ import {
  * @summary ProcessWithAuxBIR_ResponseParams
  * @description
  *
+ * Parameters of a `processWithAuxBIR` response BIP message
+ * (slave→master) for `BioAPI_ProcessWithAuxBIR`. Maps to
+ * BioAPI `ProcessedBIR` via clause 20. X.1083 §16.33.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,12 @@ export class ProcessWithAuxBIR_ResponseParams {
   constructor(
     /**
      * @summary `processedBIR`.
+     * @description
+     *
+     * Handle of the processed BIR on the hosting endpoint.
+     * Maps to BioAPI `ProcessedBIR` (clause 20). X.1083
+     * §16.33.6.
+     *
      * @public
      * @readonly
      */

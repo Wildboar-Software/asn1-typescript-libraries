@@ -76,6 +76,16 @@ import {
  * @summary GUIStateEventInfo
  * @description
  *
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message exchanged between
+ * endpoints. Built from a `guiStateEvent` notification (or from
+ * a local BioSPI callback, possibly after consulting
+ * `GUIEventRedirectors`) and passed to clause 31 to notify one
+ * subscriber and obtain the acknowledgement. ITU-T Rec. X.1083
+ * (11/2007)
+ * [§17.3.4](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §17.3.5–17.3.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -102,84 +112,156 @@ export class GUIStateEventInfo {
   constructor(
     /**
      * @summary `subscriberEndpointIRI`.
+     * @description
+     *
+     * Endpoint that is to receive the event (local IRI, attach
+     * referrer, or redirector subscriber). X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly subscriberEndpointIRI: EndpointIRI,
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * Absent for a primary subscription. Present and taken from
+     * the redirector when redirected. X.1083 §8.3, §17.3.5.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `hostingEndpointIRI`.
+     * @description
+     *
+     * Endpoint whose BSP raised the event. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly hostingEndpointIRI: EndpointIRI,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Copied from the notification unless a matching
+     * `GUIEventRedirector` applies, in which case it is absent.
+     * X.1083 §17.3.5 d.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `operation`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly operation: BioAPI_GUI_OPERATION,
     /**
      * @summary `suboperation`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly suboperation: BioAPI_GUI_SUBOPERATION,
     /**
      * @summary `purpose`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly purpose: BioAPI_BIR_PURPOSE,
     /**
      * @summary `moment`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly moment: BioAPI_GUI_MOMENT,
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: BioAPI_RETURN,
     /**
      * @summary `enrollSampleIndex`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly enrollSampleIndex: SignedInt,
     /**
      * @summary `bitmaps`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */
     readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
     /**
      * @summary `text`.
+     * @description
+     *
+     * Copied from the matching notification component. X.1083
+     * §17.3.5–17.3.6.
+     *
      * @public
      * @readonly
      */

@@ -41,6 +41,11 @@ import {
  * @summary Verify_RequestParams
  * @description
  *
+ * Parameters of a `verify` request BIP message (master→slave)
+ * for `BioAPI_Verify`. `BSPHandle` is rewritten via clause
+ * 26. `Result` has no request component (clause 22). X.1083
+ * §16.37.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,54 +67,102 @@ export class Verify_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle on the hosting (slave) endpoint.
+     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+     * X.1083 §16.37.5.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `maxFMRRequested`.
+     * @description
+     *
+     * Maximum false-match rate requested, from BioAPI
+     * `MaxFMRRequested`. X.1083 §16.37.5.
+     *
      * @public
      * @readonly
      */
     readonly maxFMRRequested: BioAPI_FMR,
     /**
      * @summary `referenceTemplate`.
+     * @description
+     *
+     * Reference template to verify against. C `NULL` is
+     * unconvertible (clause 19). X.1083 §16.37.5.
+     *
      * @public
      * @readonly
      */
     readonly referenceTemplate: BioAPI_INPUT_BIR,
     /**
      * @summary `subtype`.
+     * @description
+     *
+     * Requested BIR subtype, from BioAPI `Subtype`. X.1083
+     * §16.37.5.
+     *
      * @public
      * @readonly
      */
     readonly subtype: BioAPI_BIR_SUBTYPE,
     /**
      * @summary `timeout`.
+     * @description
+     *
+     * Verify timeout from BioAPI `Timeout`. X.1083 §16.37.5.
+     *
      * @public
      * @readonly
      */
     readonly timeout: SignedInt,
     /**
      * @summary `no_adaptedBIR`.
+     * @description
+     *
+     * `TRUE` if the caller passed a NULL `AdaptedBIR` pointer
+     * (do not return an adapted BIR). X.1083 §16.37.5,
+     * clause 21.
+     *
      * @public
      * @readonly
      */
     readonly no_adaptedBIR: BOOLEAN,
     /**
      * @summary `no_fmrAchieved`.
+     * @description
+     *
+     * `TRUE` if the caller passed a NULL `FMRAchieved` pointer
+     * (do not return the achieved FMR). X.1083 §16.37.5,
+     * clause 21.
+     *
      * @public
      * @readonly
      */
     readonly no_fmrAchieved: BOOLEAN,
     /**
      * @summary `no_payload`.
+     * @description
+     *
+     * `TRUE` if the caller passed a NULL `Payload` pointer (do
+     * not return payload). X.1083 §16.37.5, clause 21.
+     *
      * @public
      * @readonly
      */
     readonly no_payload: BOOLEAN,
     /**
      * @summary `no_auditData`.
+     * @description
+     *
+     * `TRUE` if the caller passed a NULL `AuditData` pointer
+     * (do not return an audit BIR). X.1083 §16.37.5,
+     * clause 21.
+     *
      * @public
      * @readonly
      */

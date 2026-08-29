@@ -20,6 +20,10 @@ import {
  * @summary QueryBFPs_ResponseParams
  * @description
  *
+ * Parameters of a `queryBFPs` response (slave→master) for
+ * BioAPI_QueryBFPs. Required output: C `BFPList` must be non-NULL
+ * (clause 22); maps via clause 20. X.1083 §16.12, Table 46.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +37,12 @@ export class QueryBFPs_ResponseParams {
   constructor(
     /**
      * @summary `bfps`.
+     * @description
+     *
+     * BFPs used by the queried BSP. Maps to
+     * BFPList/NumberOfElements (clause 20). X.1083 §16.12.6–16.12.8,
+     * Table 46.
+     *
      * @public
      * @readonly
      */

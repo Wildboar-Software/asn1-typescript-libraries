@@ -31,6 +31,12 @@ import {
  * @summary BioAPI_GUI_BITMAP
  * @description
  *
+ * GUI sample bitmap. `bitmap` is OPTIONAL: absence means the C
+ * `Data` pointer was NULL (clause 19 / §15.22).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.34](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -65,6 +71,11 @@ export class BioAPI_GUI_BITMAP {
     readonly height: UnsignedInt,
     /**
      * @summary `bitmap`.
+     * @description
+     *
+     * Pixel octets. Absent if the C `Data` pointer is NULL.
+     * X.1083 §15.22, §15.34.
+     *
      * @public
      * @readonly
      */

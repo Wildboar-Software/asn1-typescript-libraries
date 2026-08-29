@@ -20,6 +20,11 @@ import {
  * @summary Transform_ResponseParams
  * @description
  *
+ * Parameters of a `transform` response BIP message
+ * (slave→master) for `BioAPI_Transform`. Maps to BioAPI
+ * `OutputBIRs`/`NumberOfOutputBIRs` via §16.41.8–16.41.10.
+ * X.1083 §16.41.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +38,12 @@ export class Transform_ResponseParams {
   constructor(
     /**
      * @summary `outputBIRs`.
+     * @description
+     *
+     * Handles of the transformed BIRs on the hosting endpoint,
+     * in order. Length is BioAPI `NumberOfOutputBIRs`. X.1083
+     * §16.41.8–16.41.10.
+     *
      * @public
      * @readonly
      */

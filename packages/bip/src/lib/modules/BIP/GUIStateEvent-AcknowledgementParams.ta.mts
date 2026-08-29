@@ -26,6 +26,14 @@ import {
  * @summary GUIStateEvent_AcknowledgementParams
  * @description
  *
+ * Parameter of a `guiStateEvent` acknowledgement BIP message
+ * (`BIPAcknowledgement`, master → slave). Carries the
+ * subscriber's `Response` and `EnrollSampleIndexToRecapture`
+ * back to the BSP (Tables 129 and 131). ITU-T Rec. X.1083
+ * (11/2007)
+ * [§17.3.3](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §17.3.9, §17.3.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,12 +48,22 @@ export class GUIStateEvent_AcknowledgementParams {
   constructor(
     /**
      * @summary `response`.
+     * @description
+     *
+     * Handler's GUI response; written to `Response`. X.1083
+     * §17.3.9, Table 129.
+     *
      * @public
      * @readonly
      */
     readonly response: BioAPI_GUI_RESPONSE,
     /**
      * @summary `enrollSampleIndexToRecapture`.
+     * @description
+     *
+     * Index of the enroll sample to recapture; written to
+     * `EnrollSampleIndexToRecapture`. X.1083 §17.3.9, Table 129.
+     *
      * @public
      * @readonly
      */

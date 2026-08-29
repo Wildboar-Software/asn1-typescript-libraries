@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FreeBIRHandle_ResponseParams
  * @description
  *
+ * Success payload of a `freeBIRHandle` response (slave→master) for
+ * BioAPI_FreeBIRHandle. Always `NULL`; outcome is
+ * `BIPResponse.returnValue`. X.1083 §16.19.2, §16.19.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

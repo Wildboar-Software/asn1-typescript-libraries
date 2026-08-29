@@ -60,6 +60,11 @@ import {
  * @summary BIPNotification_params
  * @description
  *
+ * Event CHOICE of a `BIPNotification`: master deletion, unit
+ * event, GUI select/state/progress, or BSP/BFP
+ * (un)registration. Only the three GUI alternatives have a
+ * matching acknowledgement. X.1083 §12.2, §12.4, §14.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

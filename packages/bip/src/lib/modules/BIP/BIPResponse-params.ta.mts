@@ -285,6 +285,11 @@ import {
  * @summary BIPResponse_params
  * @description
  *
+ * Result CHOICE of a `BIPResponse`. Shall use the same
+ * alternative name as the corresponding `BIPRequest`. BioAPI
+ * correspondence is X.1083 Table 3. X.1083 §12.2, §13.3,
+ * §13.6, §14.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

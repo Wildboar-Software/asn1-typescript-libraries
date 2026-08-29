@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RedirectGUIEvents_ResponseParams
  * @description
  *
+ * Parameters of a successful `redirectGUIEvents` response BIP
+ * message (slave→master) for `BioAPI_RedirectGUIEvents`.
+ * Always `NULL`; outcome is the BIP return value. X.1083
+ * §16.28.2, §16.28.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

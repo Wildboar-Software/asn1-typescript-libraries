@@ -42,6 +42,15 @@ import {
  * @summary UnitEventHandlerCallbackParams
  * @description
  *
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message exchanged between
+ * endpoints. Converted to the parameters of
+ * `BioAPI_EVENT_HANDLER` (Table 123) when the framework invokes
+ * a local application's unit-event handler. ITU-T Rec. X.1083
+ * (11/2007)
+ * [§17.1.4](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §17.1.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,36 +69,62 @@ export class UnitEventHandlerCallbackParams {
   constructor(
     /**
      * @summary `unitEventHandlerAddress`.
+     * @description
+     *
+     * Address of the `BioAPI_EVENT_HANDLER` to invoke; not a
+     * function parameter. Conversion applies X.1083 §15.1.7.
+     * X.1083 §17.1.9, Table 123.
+     *
      * @public
      * @readonly
      */
     readonly unitEventHandlerAddress: MemoryAddress,
     /**
      * @summary `unitEventHandlerContext`.
+     * @description
+     *
+     * Passed as `EventHandlerCtx`. X.1083 §17.1.8, Table 123.
+     *
      * @public
      * @readonly
      */
     readonly unitEventHandlerContext: MemoryAddress,
     /**
      * @summary `bspUuid`.
+     * @description
+     *
+     * Passed as `BSPUuid`. X.1083 §17.1.8, Table 123.
+     *
      * @public
      * @readonly
      */
     readonly bspUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Passed as `UnitID`. X.1083 §17.1.8, Table 123.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `unitSchema`.
+     * @description
+     *
+     * Passed as `UnitSchema`. X.1083 §17.1.8, Table 123.
+     *
      * @public
      * @readonly
      */
     readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
     /**
      * @summary `unitEventType`.
+     * @description
+     *
+     * Passed as `EventType`. X.1083 §17.1.8, Table 123.
+     *
      * @public
      * @readonly
      */

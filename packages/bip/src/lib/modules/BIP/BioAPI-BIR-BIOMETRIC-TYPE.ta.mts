@@ -17,6 +17,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_BIR_BIOMETRIC_TYPE
  * @description
  *
+ * Biometric-factor mask. `SIZE(32)` matches the C `uint32_t`.
+ * ASN.1 bit 0 is the LSB of the C word (`0x00000001` =
+ * `typeMultipleBiometricTypes`). All-zero is
+ * `BioAPI_NO_BIOTYPE_AVAILABLE`. Named bits skip 10–11 and
+ * 18–29; those positions are unnamed.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.10](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

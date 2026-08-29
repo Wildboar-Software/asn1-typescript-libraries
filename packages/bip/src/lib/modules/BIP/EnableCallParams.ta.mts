@@ -25,6 +25,12 @@ import {
  * @summary EnableCallParams
  * @description
  *
+ * Aids specification of `BioAPI_EnableEventNotifications`.
+ * Abstract values do not occur in any BIP message exchanged
+ * between BIP endpoints. When the BSP is local, the call
+ * updates `UnitEventNotificationDisablers` only and does not
+ * produce a BIP exchange. X.1083 §16.16.3, §16.16.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,24 @@ export class EnableCallParams {
   constructor(
     /**
      * @summary `bspUuid`.
+     * @description
+     *
+     * `BSPUuid` of `BioAPI_EnableEventNotifications`: BSP
+     * product or access UUID. X.1083 §16.16.6.
+     *
      * @public
      * @readonly
      */
     readonly bspUuid: BioAPI_UUID,
     /**
      * @summary `unitEventTypes`.
+     * @description
+     *
+     * `Events` of `BioAPI_EnableEventNotifications`. If this
+     * mask indicates that at least one event type is to be
+     * disabled, a `UnitEventNotificationDisablers` entry is
+     * recorded. X.1083 §16.16.4, §16.16.6.
+     *
      * @public
      * @readonly
      */

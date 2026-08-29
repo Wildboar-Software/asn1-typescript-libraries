@@ -20,6 +20,12 @@ import {
  * @summary BioAPI_FMR
  * @description
  *
+ * False-match rate. X.1083 maps the C `int32_t` 1:1 and does not
+ * state units or scale.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.32](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

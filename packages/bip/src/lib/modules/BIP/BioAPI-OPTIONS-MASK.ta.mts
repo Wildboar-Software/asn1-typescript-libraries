@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_OPTIONS_MASK
  * @description
  *
+ * BSP option flags. `SIZE(32)` matches the C `uint32_t`. ASN.1
+ * bit 0 is the LSB (`0x00000001` = `raw`). Named bits occupy
+ * 0–20; 21–31 are unnamed.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.49](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

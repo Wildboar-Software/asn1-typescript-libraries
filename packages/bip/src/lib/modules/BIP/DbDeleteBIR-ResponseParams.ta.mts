@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DbDeleteBIR_ResponseParams
  * @description
  *
+ * Payload of a `dbDeleteBIR` response BIP message
+ * (`BioAPI_DbDeleteBIR`). Slave→master. Always `NULL`; the BioAPI
+ * outcome is `BIPResponse.returnValue` (`X.1083 §16.51`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

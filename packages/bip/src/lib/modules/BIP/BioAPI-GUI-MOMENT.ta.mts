@@ -24,6 +24,13 @@ export enum _enum_for_BioAPI_GUI_MOMENT {
  * @summary BioAPI_GUI_MOMENT
  * @description
  *
+ * When a GUI event occurs relative to an operation. ASN.1
+ * enumerators are 0-based; C values are 1–3 (`beforeStart` = C
+ * 1). Other C values are unconvertible.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.37](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,12 @@ import {
  * @summary BioAPI_BFP_LIST_ELEMENT
  * @description
  *
+ * One BFP in a `QueryBFPs` list. No `hostingEndpointIRI`: all
+ * listed BFPs are in the BSP's hosting endpoint.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.4](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +52,11 @@ export class BioAPI_BFP_LIST_ELEMENT {
     readonly category: BioAPI_CATEGORY,
     /**
      * @summary `bfpProductUuid`.
+     * @description
+     *
+     * Persistent product UUID of the BFP. There is no BFP access
+     * UUID (BFPs are not called directly). X.1083 §15.4, §15.5.
+     *
      * @public
      * @readonly
      */

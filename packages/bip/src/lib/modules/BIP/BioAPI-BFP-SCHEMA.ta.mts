@@ -57,6 +57,14 @@ import {
  * @summary BioAPI_BFP_SCHEMA
  * @description
  *
+ * BFP registry entry as carried in BIP. BIP includes
+ * `hostingEndpointIRI` so an application can learn of a BFP on a
+ * remote endpoint and then load a BSP there. No BFP access UUID
+ * (BFPs are not called directly).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.5](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -83,6 +91,10 @@ export class BioAPI_BFP_SCHEMA {
   constructor(
     /**
      * @summary `bfpProductUuid`.
+     * @description
+     *
+     * Persistent product UUID of the BFP. X.1083 §15.5.
+     *
      * @public
      * @readonly
      */
@@ -101,6 +113,11 @@ export class BioAPI_BFP_SCHEMA {
     readonly description: BioAPI_STRING,
     /**
      * @summary `path`.
+     * @description
+     *
+     * Installation path as UTF-8. Absent C NULL is unconvertible
+     * (this component is not OPTIONAL). X.1083 §15.2, §15.5.
+     *
      * @public
      * @readonly
      */
@@ -125,6 +142,11 @@ export class BioAPI_BFP_SCHEMA {
     readonly vendor: BioAPI_STRING,
     /**
      * @summary `supportedFormats`.
+     * @description
+     *
+     * BDB formats the BFP supports. C count is the sequence
+     * length. X.1083 §15.5.4–15.5.5.
+     *
      * @public
      * @readonly
      */
@@ -149,6 +171,12 @@ export class BioAPI_BFP_SCHEMA {
     readonly property: BioAPI_DATA,
     /**
      * @summary `hostingEndpointIRI`.
+     * @description
+     *
+     * Endpoint where this BFP is hosted. The local endpoint IRI
+     * means local (C NULL). Present so an app can EnumBFPs, then
+     * remotely load a BSP on that endpoint. X.1083 §15.3, §15.5.
+     *
      * @public
      * @readonly
      */

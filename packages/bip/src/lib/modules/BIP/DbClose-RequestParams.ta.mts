@@ -25,6 +25,12 @@ import {
  * @summary DbClose_RequestParams
  * @description
  *
+ * Parameters of a `dbClose` request BIP message (`BioAPI_DbClose`).
+ * Master→slave. `originalBSPHandle` is the hosting-endpoint BSP
+ * handle (cl.26), not the master's local `BSPHandle`
+ * (`X.1083 §16.43`). Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class DbClose_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.43`, Table 99).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `dbHandle`.
+     * @description
+     *
+     * Database to close, from C `DbHandle` (`X.1083 §16.43`, Table 99,
+     * §15.26). No local/original rewrite is specified.
+     *
      * @public
      * @readonly
      */

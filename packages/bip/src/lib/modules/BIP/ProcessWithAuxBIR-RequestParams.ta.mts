@@ -31,6 +31,11 @@ import {
  * @summary ProcessWithAuxBIR_RequestParams
  * @description
  *
+ * Parameters of a `processWithAuxBIR` request BIP message
+ * (master→slave) for `BioAPI_ProcessWithAuxBIR`. `BSPHandle`
+ * is rewritten via clause 26. `ProcessedBIR` has no request
+ * component (clause 22). X.1083 §16.33.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,24 +52,45 @@ export class ProcessWithAuxBIR_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle on the hosting (slave) endpoint.
+     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+     * X.1083 §16.33.5.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `capturedBIR`.
+     * @description
+     *
+     * Intermediate BIR to process. C `NULL` is unconvertible
+     * (clause 19). X.1083 §16.33.5.
+     *
      * @public
      * @readonly
      */
     readonly capturedBIR: BioAPI_INPUT_BIR,
     /**
      * @summary `auxiliaryData`.
+     * @description
+     *
+     * Auxiliary BIR supplied with the captured BIR. C `NULL`
+     * is unconvertible (clause 19). X.1083 §16.33.5.
+     *
      * @public
      * @readonly
      */
     readonly auxiliaryData: BioAPI_INPUT_BIR,
     /**
      * @summary `outputFormat`.
+     * @description
+     *
+     * Requested biometric-data format of the processed BIR.
+     * C `NULL` ↔ absent (clause 19). X.1083 §16.33.5.
+     *
      * @public
      * @readonly
      */

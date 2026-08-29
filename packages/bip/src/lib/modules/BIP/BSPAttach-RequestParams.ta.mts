@@ -30,6 +30,11 @@ import {
  * @summary BSPAttach_RequestParams
  * @description
  *
+ * Parameters of a `bspAttach` request (master→slave) for
+ * BioAPI_BSPAttach. `BSPUuid` rewritten to product UUID
+ * (clause 25). `NewBSPHandle` is a required output with no request
+ * component (clause 22). X.1083 §16.13, Table 47.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +51,34 @@ export class BSPAttach_RequestParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP to attach. Application may have passed
+     * an access UUID; this component is always the product UUID.
+     * X.1083 Table 47, clause 25.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `version`.
+     * @description
+     *
+     * BioAPI version for the attach session, from Version.
+     * X.1083 Table 47, §15.59.
+     *
      * @public
      * @readonly
      */
     readonly version: BioAPI_VERSION,
     /**
      * @summary `units`.
+     * @description
+     *
+     * Units to include in the attach session, from UnitList/NumUnits.
+     * X.1083 §16.13.7, Table 47.
+     *
      * @public
      * @readonly
      */

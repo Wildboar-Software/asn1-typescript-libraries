@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_DATA
  * @description
  *
+ * Opaque octet payload. When the component is OPTIONAL, absence
+ * means the C `Data` pointer was NULL (length 0). Otherwise C
+ * NULL is unconvertible. Length is the octet-string length
+ * (C `Length`).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.22](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -64,6 +64,18 @@ import {
  * @summary GUISelectEvent_NotificationParams
  * @description
  *
+ * Parameter of a `guiSelectEvent` notification BIP message
+ * (`BIPNotification`, slave → master). Converted from
+ * `BioSPI_GUI_SELECT_EVENT_HANDLER` when a local BSP raises a
+ * GUI select event (Table 124). The master replies with
+ * `GUISelectEvent-AcknowledgementParams` in a
+ * `BIPAcknowledgement`. When converting from a BioSPI callback,
+ * `guiEventSubscriptionUuid` shall be absent (X.1083 §17.2.8);
+ * it is filled from a `GUIEventRedirector` when the event is
+ * redirected. Primary vs secondary GUI notifications: X.1083
+ * §8. ITU-T Rec. X.1083 (11/2007)
+ * [§17.2](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -88,72 +100,127 @@ export class GUISelectEvent_NotificationParams {
   constructor(
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * Secondary-subscription UUID. Absent when converting from
+     * `BioSPI_GUI_SELECT_EVENT_HANDLER` (local BSP). Present and
+     * taken from a matching `GUIEventRedirector` when the event
+     * is redirected. X.1083 §8.3, §17.2.5, §17.2.8, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP (`BSPUuid`). X.1083 §17.2.7,
+     * Table 124.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit associated with the GUI event. X.1083 §17.2.7,
+     * Table 124.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle (`BSPHandle`). Absent after
+     * redirection via a `GUIEventRedirector`. X.1083 §17.2.5 d,
+     * §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `enrollType`.
+     * @description
+     *
+     * Maps from `EnrollType`. X.1083 §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly enrollType: BioAPI_GUI_ENROLL_TYPE,
     /**
      * @summary `operation`.
+     * @description
+     *
+     * Maps from `Operation`. X.1083 §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly operation: BioAPI_GUI_OPERATION,
     /**
      * @summary `moment`.
+     * @description
+     *
+     * Maps from `Moment`. X.1083 §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly moment: BioAPI_GUI_MOMENT,
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Maps from `ResultCode`. X.1083 §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: BioAPI_RETURN,
     /**
      * @summary `maxNumEnrollSamples`.
+     * @description
+     *
+     * Maps from `MaxNumEnrollSamples`. X.1083 §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly maxNumEnrollSamples: UnsignedInt,
     /**
      * @summary `selectableInstances`.
+     * @description
+     *
+     * Maps from `SelectableInstances`. X.1083 §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK,
     /**
      * @summary `capturedInstances`.
+     * @description
+     *
+     * Maps from `CapturedInstances`. X.1083 §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */
     readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK,
     /**
      * @summary `text`.
+     * @description
+     *
+     * Maps from `Text`. X.1083 §17.2.7, Table 124.
+     *
      * @public
      * @readonly
      */

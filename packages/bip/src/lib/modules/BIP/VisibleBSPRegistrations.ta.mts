@@ -20,6 +20,15 @@ import {
  * @summary VisibleBSPRegistrations
  * @description
  *
+ * Conceptual table present in all BIP endpoints. Defined to aid
+ * specification of framework behaviour; abstract values do not
+ * occur in any BIP message and are never encoded. Rows are
+ * added on init/link, local or remote `RegisterBSP`, or
+ * `bspRegistrationEvent`; deleted on unregister, matching
+ * registration-with-update, or deletion of the hosting
+ * `VisibleEndpoints` row. ITU-T Rec. X.1083 (11/2007)
+ * [§18.3](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

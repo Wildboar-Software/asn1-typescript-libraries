@@ -20,6 +20,14 @@ import {
  * @summary BioAPI_IDENTIFY_POPULATION
  * @description
  *
+ * Gallery for an identify operation. C `Type` selects the
+ * CHOICE; BIP represents `PRESET_ARRAY_TYPE` as NULL (the C
+ * pointer must be NULL).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.43](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §15.44.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +44,11 @@ export class BioAPI_IDENTIFY_POPULATION {
   constructor(
     /**
      * @summary `birs`.
+     * @description
+     *
+     * Database handle, in-message BIR array, or preset array.
+     * X.1083 §15.43–15.44.
+     *
      * @public
      * @readonly
      */

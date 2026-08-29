@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SetPowerMode_ResponseParams
  * @description
  *
+ * Payload of a `setPowerMode` response BIP message
+ * (`BioAPI_SetPowerMode`). Slave→master. Always `NULL`; the BioAPI
+ * outcome is `BIPResponse.returnValue` (`X.1083 §16.53`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

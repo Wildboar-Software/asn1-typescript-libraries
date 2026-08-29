@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_UUID
  * @description
  *
+ * 16-octet UUID in the same order as the C `uint8_t[16]`.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.58](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

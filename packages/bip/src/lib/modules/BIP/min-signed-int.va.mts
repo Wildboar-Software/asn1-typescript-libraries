@@ -16,6 +16,9 @@ import {
  * @summary min_signed_int
  * @description
  *
+ * Inclusive lower bound of `SignedInt` (-2147483648). X.1083
+ * §15.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

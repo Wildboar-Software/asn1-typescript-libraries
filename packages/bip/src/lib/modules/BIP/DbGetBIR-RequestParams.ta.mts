@@ -30,6 +30,16 @@ import {
  * @summary DbGetBIR_RequestParams
  * @description
  *
+ * Parameters of a `dbGetBIR` request BIP message (`BioAPI_DbGetBIR`).
+ * Master→slave. `originalBSPHandle` is the hosting-endpoint BSP
+ * handle (cl.26), not the master's local `BSPHandle`
+ * (`X.1083 §16.49`).
+ *
+ * C outputs `RetrievedBIR` and `MarkerHandle` are omitted here
+ * (cl.22: caller pointers must be non-NULL) and returned in
+ * `DbGetBIR-ResponseParams`. Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +55,33 @@ export class DbGetBIR_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.49`, Table 107).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `dbHandle`.
+     * @description
+     *
+     * Database to read, from C `DbHandle` (`X.1083 §16.49`, Table 107,
+     * §15.26). No local/original rewrite is specified.
+     *
      * @public
      * @readonly
      */
     readonly dbHandle: BioAPI_DB_HANDLE,
     /**
      * @summary `keyValue`.
+     * @description
+     *
+     * From C `KeyValue`. Not OPTIONAL: a NULL pointer is unconvertible
+     * (cl.19, §15.58) (`X.1083 §16.49`, Table 107).
+     *
      * @public
      * @readonly
      */

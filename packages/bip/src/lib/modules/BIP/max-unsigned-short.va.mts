@@ -16,6 +16,9 @@ import {
  * @summary max_unsigned_short
  * @description
  *
+ * Inclusive upper bound of `UnsignedShort` (65535). X.1083
+ * §15.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

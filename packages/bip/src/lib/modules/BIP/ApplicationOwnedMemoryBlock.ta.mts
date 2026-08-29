@@ -20,6 +20,15 @@ import {
  * @summary ApplicationOwnedMemoryBlock
  * @description
  *
+ * Row of the `ApplicationOwnedMemoryBlocks` conceptual table.
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message and are never encoded.
+ * A memory block allocated by the framework but owned by the
+ * local application, tracked so it can be freed on
+ * `BioAPI_Free` or `BioAPI_Terminate`. Unique on `address`.
+ * Present in all BIP endpoints. ITU-T Rec. X.1083 (11/2007)
+ * [§18.13](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +41,11 @@ export class ApplicationOwnedMemoryBlock {
   constructor(
     /**
      * @summary `address`.
+     * @description
+     *
+     * Address of the application-owned block. Unique in the
+     * table. X.1083 §18.13.2.
+     *
      * @public
      * @readonly
      */

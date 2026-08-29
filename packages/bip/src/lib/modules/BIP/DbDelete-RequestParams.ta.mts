@@ -25,6 +25,12 @@ import {
  * @summary DbDelete_RequestParams
  * @description
  *
+ * Parameters of a `dbDelete` request BIP message (`BioAPI_DbDelete`).
+ * Master→slave. `originalBSPHandle` is the hosting-endpoint BSP
+ * handle (cl.26), not the master's local `BSPHandle`
+ * (`X.1083 §16.45`). Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class DbDelete_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.45`, Table 102).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `dbUuid`.
+     * @description
+     *
+     * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
+     * unconvertible (cl.19, §15.58) (`X.1083 §16.45`, Table 102).
+     *
      * @public
      * @readonly
      */

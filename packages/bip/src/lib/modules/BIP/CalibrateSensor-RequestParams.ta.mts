@@ -25,6 +25,12 @@ import {
  * @summary CalibrateSensor_RequestParams
  * @description
  *
+ * Parameters of a `calibrateSensor` request BIP message
+ * (`BioAPI_CalibrateSensor`). Master→slave. `originalBSPHandle` is
+ * the hosting-endpoint BSP handle (cl.26), not the master's local
+ * `BSPHandle` (`X.1083 §16.52`). Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,21 @@ export class CalibrateSensor_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.52`, Table 112).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `timeout`.
+     * @description
+     *
+     * From C `Timeout` (`X.1083 §16.52`, Table 112, §15.1.6).
+     *
      * @public
      * @readonly
      */

@@ -20,6 +20,11 @@ import {
  * @summary GetBIRFromHandle_ResponseParams
  * @description
  *
+ * Parameters of a `getBIRFromHandle` response (slave→master) for
+ * BioAPI_GetBIRFromHandle. Required output: C `BIR` must be
+ * non-NULL (clause 22); maps via clause 20. X.1083 §16.20,
+ * Table 59.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +37,11 @@ export class GetBIRFromHandle_ResponseParams {
   constructor(
     /**
      * @summary `bir`.
+     * @description
+     *
+     * BIR identified by the request handle. Maps to BIR (clause 20,
+     * §15.6). X.1083 Table 59.
+     *
      * @public
      * @readonly
      */

@@ -35,6 +35,15 @@ import {
  * @summary DbCreate_RequestParams
  * @description
  *
+ * Parameters of a `dbCreate` request BIP message
+ * (`BioAPI_DbCreate`). Master→slave. `originalBSPHandle` is the
+ * hosting-endpoint BSP handle (cl.26), not the master's local
+ * `BSPHandle` (`X.1083 §16.44`).
+ *
+ * C output `DbHandle` is omitted here (cl.22: caller pointer must be
+ * non-NULL) and returned in `DbCreate-ResponseParams`. Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,24 +60,43 @@ export class DbCreate_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.44`, Table 100).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `dbUuid`.
+     * @description
+     *
+     * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
+     * unconvertible (cl.19, §15.58) (`X.1083 §16.44`, Table 100).
+     *
      * @public
      * @readonly
      */
     readonly dbUuid: BioAPI_UUID,
     /**
      * @summary `numberOfRecords`.
+     * @description
+     *
+     * From C `NumberOfRecords` (`X.1083 §16.44`, Table 100, §15.1.5).
+     *
      * @public
      * @readonly
      */
     readonly numberOfRecords: UnsignedInt,
     /**
      * @summary `accessRequest`.
+     * @description
+     *
+     * Access requested by C `AccessRequest` (`read`/`write` bits)
+     * (`X.1083 §16.44`, Table 100, §15.24).
+     *
      * @public
      * @readonly
      */

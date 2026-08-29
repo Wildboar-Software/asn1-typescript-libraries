@@ -31,6 +31,11 @@ import {
  * @summary UnsubscribeFromGUIEventsCallParams
  * @description
  *
+ * Aids specification of `BioAPI_UnsubscribeFromGUIEvents`.
+ * Abstract values do not occur in any BIP message exchanged
+ * between BIP endpoints. Fields must match the corresponding
+ * subscribe call. X.1083 §16.23.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,54 +57,105 @@ export class UnsubscribeFromGUIEventsCallParams {
   constructor(
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * `GUIEventSubscriptionUuid`. Must match the subscribe call
+     * (presence and value). X.1083 §16.23.4.1, §16.23.6.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspUuid`.
+     * @description
+     *
+     * `BSPUuid`. Exactly one of this and `bspHandle` shall be
+     * absent (NULL in C). X.1083 §16.23.4.
+     *
      * @public
      * @readonly
      */
     readonly bspUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspHandle`.
+     * @description
+     *
+     * `BSPHandle`. Exactly one of this and `bspUuid` shall be
+     * absent (NULL in C). X.1083 §16.23.4.
+     *
      * @public
      * @readonly
      */
     readonly bspHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `guiSelectEventHandlerAddress`.
+     * @description
+     *
+     * `GUISelectEventHandler`. Must match the address stored at
+     * subscribe. Non-zero sets `guiSelectEventSubscribed` TRUE
+     * on the wire request. X.1083 §16.23.4.2, §16.23.6,
+     * §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventHandlerAddress: MemoryAddress,
     /**
      * @summary `guiSelectEventHandlerContext`.
+     * @description
+     *
+     * `GUISelectEventHandlerCtx`. Must match the context stored
+     * at subscribe. X.1083 §16.23.4.1, §16.23.6.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventHandlerContext: MemoryAddress,
     /**
      * @summary `guiStateEventHandlerAddress`.
+     * @description
+     *
+     * `GUIStateEventHandler`. Must match the address stored at
+     * subscribe. Non-zero sets `guiStateEventSubscribed` TRUE
+     * on the wire request. X.1083 §16.23.4.2, §16.23.6,
+     * §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventHandlerAddress: MemoryAddress,
     /**
      * @summary `guiStateEventHandlerContext`.
+     * @description
+     *
+     * `GUIStateEventHandlerCtx`. Must match the context stored
+     * at subscribe. X.1083 §16.23.4.1, §16.23.6.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventHandlerContext: MemoryAddress,
     /**
      * @summary `guiProgressEventHandlerAddress`.
+     * @description
+     *
+     * `GUIProgressEventHandler`. Must match the address stored
+     * at subscribe. Non-zero sets `guiProgressEventSubscribed`
+     * TRUE on the wire request. X.1083 §16.23.4.2, §16.23.6,
+     * §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly guiProgressEventHandlerAddress: MemoryAddress,
     /**
      * @summary `guiProgressEventHandlerContext`.
+     * @description
+     *
+     * `GUIProgressEventHandlerCtx`. Must match the context
+     * stored at subscribe. X.1083 §16.23.4.1, §16.23.6.
+     *
      * @public
      * @readonly
      */

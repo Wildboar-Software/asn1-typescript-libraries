@@ -25,6 +25,13 @@ import {
  * @summary BioAPI_DTG
  * @description
  *
+ * Date-time group. See `BioAPI-DATE` / `BioAPI-TIME` for the
+ * all-zero and all-99 unspecified values. X.1083 adds no further
+ * PDU semantics.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.28](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

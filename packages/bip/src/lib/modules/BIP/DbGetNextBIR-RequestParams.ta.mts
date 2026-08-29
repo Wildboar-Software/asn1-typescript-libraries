@@ -30,6 +30,16 @@ import {
  * @summary DbGetNextBIR_RequestParams
  * @description
  *
+ * Parameters of a `dbGetNextBIR` request BIP message
+ * (`BioAPI_DbGetNextBIR`). Master→slave. `originalBSPHandle` is the
+ * hosting-endpoint BSP handle (cl.26), not the master's local
+ * `BSPHandle` (`X.1083 §16.50`).
+ *
+ * C outputs `RetrievedBIR` and `BirUuid` are omitted here (cl.22:
+ * caller pointers must be non-NULL) and returned in
+ * `DbGetNextBIR-ResponseParams`. Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +55,33 @@ export class DbGetNextBIR_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.50`, Table 109).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `dbHandle`.
+     * @description
+     *
+     * Database to iterate, from C `DbHandle` (`X.1083 §16.50`,
+     * Table 109, §15.26). No local/original rewrite is specified.
+     *
      * @public
      * @readonly
      */
     readonly dbHandle: BioAPI_DB_HANDLE,
     /**
      * @summary `markerHandle`.
+     * @description
+     *
+     * Marker to advance, from C `MarkerHandle` (`X.1083 §16.50`,
+     * Table 109, §15.25).
+     *
      * @public
      * @readonly
      */

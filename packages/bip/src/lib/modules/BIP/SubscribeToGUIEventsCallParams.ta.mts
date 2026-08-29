@@ -31,6 +31,10 @@ import {
  * @summary SubscribeToGUIEventsCallParams
  * @description
  *
+ * Aids specification of `BioAPI_SubscribeToGUIEvents`.
+ * Abstract values do not occur in any BIP message exchanged
+ * between BIP endpoints. X.1083 §16.22.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,54 +56,104 @@ export class SubscribeToGUIEventsCallParams {
   constructor(
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * `GUIEventSubscriptionUuid`. Optional subscription
+     * identity; a subsequent unsubscribe shall supply the same
+     * UUID. X.1083 §16.22.6.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspUuid`.
+     * @description
+     *
+     * `BSPUuid`. Exactly one of this and `bspHandle` shall be
+     * absent (NULL in C). X.1083 §16.22.4.
+     *
      * @public
      * @readonly
      */
     readonly bspUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspHandle`.
+     * @description
+     *
+     * `BSPHandle`. Exactly one of this and `bspUuid` shall be
+     * absent (NULL in C). X.1083 §16.22.4.
+     *
      * @public
      * @readonly
      */
     readonly bspHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `guiSelectEventHandlerAddress`.
+     * @description
+     *
+     * `GUISelectEventHandler`. Non-zero means subscribe to GUI
+     * select events (`guiSelectEventSubscribed` TRUE on the
+     * wire request). X.1083 §16.22.4.2, §16.22.6, §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventHandlerAddress: MemoryAddress,
     /**
      * @summary `guiSelectEventHandlerContext`.
+     * @description
+     *
+     * `GUISelectEventHandlerCtx`. Opaque handler context.
+     * X.1083 §16.22.6, §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventHandlerContext: MemoryAddress,
     /**
      * @summary `guiStateEventHandlerAddress`.
+     * @description
+     *
+     * `GUIStateEventHandler`. Non-zero means subscribe to GUI
+     * state events (`guiStateEventSubscribed` TRUE on the wire
+     * request). X.1083 §16.22.4.2, §16.22.6, §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventHandlerAddress: MemoryAddress,
     /**
      * @summary `guiStateEventHandlerContext`.
+     * @description
+     *
+     * `GUIStateEventHandlerCtx`. Opaque handler context.
+     * X.1083 §16.22.6, §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventHandlerContext: MemoryAddress,
     /**
      * @summary `guiProgressEventHandlerAddress`.
+     * @description
+     *
+     * `GUIProgressEventHandler`. Non-zero means subscribe to
+     * GUI progress events (`guiProgressEventSubscribed` TRUE
+     * on the wire request). X.1083 §16.22.4.2, §16.22.6,
+     * §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly guiProgressEventHandlerAddress: MemoryAddress,
     /**
      * @summary `guiProgressEventHandlerContext`.
+     * @description
+     *
+     * `GUIProgressEventHandlerCtx`. Opaque handler context.
+     * X.1083 §16.22.6, §15.1.7.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UnsignedShort
  * @description
  *
+ * Maps the C type `uint16_t` (0..65535). Conversion is the
+ * corresponding 16-bit unsigned integer. X.1083 §15.1.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

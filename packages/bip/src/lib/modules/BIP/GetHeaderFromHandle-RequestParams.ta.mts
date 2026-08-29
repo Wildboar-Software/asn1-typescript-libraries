@@ -25,6 +25,12 @@ import {
  * @summary GetHeaderFromHandle_RequestParams
  * @description
  *
+ * Parameters of a `getHeaderFromHandle` request (master→slave) for
+ * BioAPI_GetHeaderFromHandle. `BSPHandle` rewritten to the
+ * hosting-endpoint handle (clause 26). `Header` is a required
+ * output with no request component (clause 22). X.1083 §16.21,
+ * Table 60.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,21 @@ export class GetHeaderFromHandle_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle at the hosting endpoint, not the
+     * application's local handle. X.1083 Table 60, clause 26.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `birHandle`.
+     * @description
+     *
+     * BIR handle whose header is requested. X.1083 Table 60, §15.12.
+     *
      * @public
      * @readonly
      */

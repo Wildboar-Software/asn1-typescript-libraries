@@ -21,6 +21,13 @@ import {
  * @summary BSPUnload_RequestParams
  * @description
  *
+ * Parameters of a `bspUnload` request (master→slave) for
+ * BioAPI_BSPUnload. Application `BSPUuid` may be a BSP access UUID
+ * or product UUID; hosting endpoint is looked up in
+ * VisibleBSPRegistrations (clause 23) and this PDU carries the
+ * product UUID. EventHandler addresses stay local.
+ * X.1083 §16.10, Table 42.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +42,24 @@ export class BSPUnload_RequestParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP to unload. Application may have passed
+     * an access UUID; this component is always the product UUID.
+     * X.1083 §16.10.4, clause 23.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitEventSubscription`.
+     * @description
+     *
+     * TRUE if the master's EventHandler address is non-zero. Paired
+     * with `bspProductUuid` to identify the remote reference to
+     * drop. X.1083 §16.10.4.2 a, §16.10.5 e.
+     *
      * @public
      * @readonly
      */

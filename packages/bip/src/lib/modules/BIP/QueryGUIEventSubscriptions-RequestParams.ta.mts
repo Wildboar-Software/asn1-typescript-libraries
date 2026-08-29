@@ -20,6 +20,13 @@ import {
  * @summary QueryGUIEventSubscriptions_RequestParams
  * @description
  *
+ * Parameters of a `queryGUIEventSubscriptions` request BIP
+ * message (master→slave) for
+ * `BioAPI_QueryGUIEventSubscriptions`. Names the BSP whose
+ * secondary GUI-event subscriptions are listed. BioAPI
+ * `BSPUuid` is rewritten to a product UUID (clause 25).
+ * X.1083 §16.24.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +40,13 @@ export class QueryGUIEventSubscriptions_RequestParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP whose secondary GUI-event
+     * subscriptions (those that have a GUI event subscription
+     * UUID) are returned. Converted from BioAPI `BSPUuid`
+     * via clause 25. X.1083 §16.24.5.
+     *
      * @public
      * @readonly
      */

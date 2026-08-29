@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DbSetMarker_ResponseParams
  * @description
  *
+ * Payload of a `dbSetMarker` response BIP message
+ * (`BioAPI_DbSetMarker`). Slave→master. Always `NULL`; the BioAPI
+ * outcome is `BIPResponse.returnValue` (`X.1083 §16.46`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

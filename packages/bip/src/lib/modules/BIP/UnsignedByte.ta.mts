@@ -17,6 +17,9 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UnsignedByte
  * @description
  *
+ * Maps the C type `uint8_t` (0..255). Conversion is the
+ * corresponding 8-bit unsigned integer. X.1083 §15.1.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,14 @@ import {
  * @summary BioAPI_BIR_DATA_TYPE
  * @description
  *
+ * Splits the C `uint8_t` data-type byte: `processedLevel` is the
+ * four LSBs (`0x01` raw, `0x02` intermediate, `0x04` processed;
+ * other combinations unconvertible); `flags` is the four MSBs
+ * (bit 0 of flags = C `0x10`).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.11](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +50,23 @@ export class BioAPI_BIR_DATA_TYPE {
   constructor(
     /**
      * @summary `processedLevel`.
+     * @description
+     *
+     * Exactly one of raw / intermediate / processed. Maps to C
+     * `0x01` / `0x02` / `0x04`. X.1083 §15.11.
+     *
      * @public
      * @readonly
      */
     readonly processedLevel: BioAPI_BIR_DATA_TYPE_processedLevel,
     /**
      * @summary `flags`.
+     * @description
+     *
+     * Four MSBs of the C byte. Bit 0 = encrypted (`0x10`), bit 1 =
+     * signed (`0x20`), bit 3 = index-present (`0x80`). X.1083
+     * §15.11.
+     *
      * @public
      * @readonly
      */

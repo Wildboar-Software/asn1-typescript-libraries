@@ -71,6 +71,14 @@ import {
  * @summary BioAPI_BSP_SCHEMA
  * @description
  *
+ * BSP registry entry as carried in BIP. BIP adds
+ * `hostingEndpointIRI` (which endpoint hosts the BSP) and
+ * `bspAccessUuid` (per-Init/link address, not the product UUID).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.19](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §3.6–3.7, §11.3–11.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -106,6 +114,12 @@ export class BioAPI_BSP_SCHEMA {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Persistent vendor UUID of the BSP product. Same across
+     * installations. Distinct from `bspAccessUuid`. X.1083 §3.7,
+     * §11.3, §15.19.
+     *
      * @public
      * @readonly
      */
@@ -118,6 +132,11 @@ export class BioAPI_BSP_SCHEMA {
     readonly description: BioAPI_STRING,
     /**
      * @summary `path`.
+     * @description
+     *
+     * Installation path as UTF-8. C NULL is unconvertible (not
+     * OPTIONAL). X.1083 §15.2, §15.19.
+     *
      * @public
      * @readonly
      */
@@ -142,6 +161,11 @@ export class BioAPI_BSP_SCHEMA {
     readonly vendor: BioAPI_STRING,
     /**
      * @summary `supportedFormats`.
+     * @description
+     *
+     * BDB formats the BSP supports. C count is the sequence
+     * length. X.1083 §15.19.4–15.19.5.
+     *
      * @public
      * @readonly
      */
@@ -220,12 +244,26 @@ export class BioAPI_BSP_SCHEMA {
     readonly maxIdentify: UnsignedInt,
     /**
      * @summary `hostingEndpointIRI`.
+     * @description
+     *
+     * Endpoint where this BSP is registered. The local endpoint
+     * IRI means local (C NULL). Needed because BIP lists BSPs on
+     * remote endpoints. X.1083 §11.6, §15.3, §15.19.
+     *
      * @public
      * @readonly
      */
     readonly hostingEndpointIRI: EndpointIRI,
     /**
      * @summary `bspAccessUuid`.
+     * @description
+     *
+     * Non-persistent UUID generated per BioAPI_Init / link so
+     * the application can address this BSP-plus-endpoint without
+     * colliding with the same product elsewhere. Meaningless
+     * outside the generating endpoint. X.1083 §3.6, §11.5–11.6,
+     * §15.19.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SubscribeToGUIEvents_ResponseParams
  * @description
  *
+ * Parameters of a successful `subscribeToGUIEvents` response
+ * BIP message (slave→master) for `BioAPI_SubscribeToGUIEvents`.
+ * Always `NULL`; outcome is the BIP return value. X.1083
+ * §16.22.2, §16.22.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UnsignedInt
  * @description
  *
+ * Maps the C type `uint32_t` (0..4294967295). Conversion is
+ * the corresponding 32-bit unsigned integer. Used for link
+ * numbers, request/notification identifiers, and
+ * `BioAPI-RETURN`. X.1083 §15.1.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

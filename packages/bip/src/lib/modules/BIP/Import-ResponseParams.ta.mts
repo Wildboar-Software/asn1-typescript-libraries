@@ -20,6 +20,10 @@ import {
  * @summary Import_ResponseParams
  * @description
  *
+ * Parameters of an `import` response BIP message
+ * (slave→master) for `BioAPI_Import`. Maps to BioAPI
+ * `ConstructedBIR` via clause 20. X.1083 §16.39.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,12 @@ export class Import_ResponseParams {
   constructor(
     /**
      * @summary `constructedBIR`.
+     * @description
+     *
+     * Handle of the constructed BIR on the hosting endpoint.
+     * Maps to BioAPI `ConstructedBIR` (clause 20). X.1083
+     * §16.39.6.
+     *
      * @public
      * @readonly
      */

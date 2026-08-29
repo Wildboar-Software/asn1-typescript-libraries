@@ -25,6 +25,13 @@ import {
  * @summary BioAPI_CANDIDATE
  * @description
  *
+ * Identify-match candidate. `bir` selects how the candidate is
+ * named: database UUID, in-array index, or preset-array index
+ * (C `Type` 3).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.20](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,6 +49,11 @@ export class BioAPI_CANDIDATE {
   constructor(
     /**
      * @summary `bir`.
+     * @description
+     *
+     * Which population the candidate belongs to. X.1083 §15.20,
+     * §15.44.
+     *
      * @public
      * @readonly
      */

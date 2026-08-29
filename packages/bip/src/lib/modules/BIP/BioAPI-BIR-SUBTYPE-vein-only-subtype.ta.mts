@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_BIR_SUBTYPE_vein_only_subtype
  * @description
  *
+ * Vein subtype bits. Use this CHOICE when C `0x80`
+ * (`VEIN_ONLY_MASK`) is set. C `0x04`/`0x08`/`0x10` then mean
+ * palm / back-of-hand / wrist, not fingers. Bit 0 = C `0x01`.
+ * Bits 5–6 are unnamed. `SIZE(7)`.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.16](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

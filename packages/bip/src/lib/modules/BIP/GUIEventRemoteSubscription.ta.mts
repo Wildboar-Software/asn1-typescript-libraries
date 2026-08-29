@@ -32,6 +32,16 @@ import {
  * @summary GUIEventRemoteSubscription
  * @description
  *
+ * Row of the `GUIEventRemoteSubscriptions` conceptual table.
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message and are never encoded.
+ * Obligation to send GUI-event notification BIP messages to a
+ * master for matching incoming GUI notifications and
+ * notify-GUI requests. Duplicate rows are allowed. At least
+ * one of the three subscribed flags shall be `TRUE`. Present in
+ * all slave endpoints. ITU-T Rec. X.1083 (11/2007)
+ * [§18.11](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,42 +61,79 @@ export class GUIEventRemoteSubscription {
   constructor(
     /**
      * @summary `subscriberEndpointIRI`.
+     * @description
+     *
+     * Master that subscribed to GUI events. X.1083 §18.11.2.1.
+     *
      * @public
      * @readonly
      */
     readonly subscriberEndpointIRI: EndpointIRI,
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * Secondary-subscription UUID. Absence means a primary GUI
+     * event subscription. X.1083 §8.3, §18.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Limits the subscription to GUI events of this BSP. X.1083
+     * §18.11.2.3.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * If present, limits the subscription to this attach
+     * session; absence means not limited to one session. Present
+     * only if `guiEventSubscriptionUuid` is absent. X.1083
+     * §18.11.2.4.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `guiSelectEventSubscribed`.
+     * @description
+     *
+     * Whether GUI select events are notified to the subscriber.
+     * X.1083 §18.11.2.5.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventSubscribed: BOOLEAN,
     /**
      * @summary `guiStateEventSubscribed`.
+     * @description
+     *
+     * Whether GUI state events are notified to the subscriber.
+     * X.1083 §18.11.2.6.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventSubscribed: BOOLEAN,
     /**
      * @summary `guiProgressEventSubscribed`.
+     * @description
+     *
+     * Whether GUI progress events are notified to the
+     * subscriber. At least one of the three subscribed flags
+     * shall be `TRUE`. X.1083 §18.11.2.7.
+     *
      * @public
      * @readonly
      */

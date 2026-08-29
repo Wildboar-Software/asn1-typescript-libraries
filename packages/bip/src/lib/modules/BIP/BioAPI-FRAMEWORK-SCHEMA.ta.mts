@@ -41,6 +41,13 @@ import {
  * @summary BioAPI_FRAMEWORK_SCHEMA
  * @description
  *
+ * Framework registry entry as carried in BIP. BIP includes
+ * `hostingEndpointIRI` because the framework may be listed on a
+ * remote endpoint.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.33](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +69,10 @@ export class BioAPI_FRAMEWORK_SCHEMA {
   constructor(
     /**
      * @summary `fwProductUuid`.
+     * @description
+     *
+     * Persistent product UUID of the framework. X.1083 §15.33.
+     *
      * @public
      * @readonly
      */
@@ -74,6 +85,11 @@ export class BioAPI_FRAMEWORK_SCHEMA {
     readonly description: BioAPI_STRING,
     /**
      * @summary `path`.
+     * @description
+     *
+     * Installation path as UTF-8. C NULL is unconvertible (not
+     * OPTIONAL). X.1083 §15.2, §15.33.
+     *
      * @public
      * @readonly
      */
@@ -110,6 +126,11 @@ export class BioAPI_FRAMEWORK_SCHEMA {
     readonly property: BioAPI_DATA,
     /**
      * @summary `hostingEndpointIRI`.
+     * @description
+     *
+     * Endpoint where this framework instance runs. The local
+     * endpoint IRI means local (C NULL). X.1083 §15.3, §15.33.
+     *
      * @public
      * @readonly
      */

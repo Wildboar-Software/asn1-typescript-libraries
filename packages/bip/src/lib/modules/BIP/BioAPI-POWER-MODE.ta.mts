@@ -24,6 +24,12 @@ export enum _enum_for_BioAPI_POWER_MODE {
  * @summary BioAPI_POWER_MODE
  * @description
  *
+ * Unit power mode. ASN.1 enumerators are 0-based; C values are
+ * 1–3 (`normal` = C 1). Other C values are unconvertible.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.50](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

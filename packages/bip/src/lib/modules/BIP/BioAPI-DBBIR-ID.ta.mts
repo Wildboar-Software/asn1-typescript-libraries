@@ -25,6 +25,12 @@ import {
  * @summary BioAPI_DBBIR_ID
  * @description
  *
+ * BIR stored in a BSP database, named by handle plus UUID key.
+ * X.1083 maps the C members 1:1.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.27](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

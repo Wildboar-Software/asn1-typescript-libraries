@@ -35,6 +35,11 @@ import {
  * @summary Control_RequestParams
  * @description
  *
+ * Parameters of a `control` request (master→slave) for
+ * BioAPI_Control. `BSPHandle` rewritten to the hosting-endpoint
+ * handle (clause 26). `OutputData` is a required output with no
+ * request component (clause 22). X.1083 §16.18, Table 55.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,24 +56,44 @@ export class Control_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle at the hosting endpoint, not the
+     * application's local handle. X.1083 Table 55, clause 26.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit to control. X.1083 Table 55, §15.55.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `controlCode`.
+     * @description
+     *
+     * Control-code UUID for the unit, from ControlCode.
+     * X.1083 Table 55.
+     *
      * @public
      * @readonly
      */
     readonly controlCode: BioAPI_UUID,
     /**
      * @summary `inputData`.
+     * @description
+     *
+     * Input payload of the control operation. Maps from InputData
+     * (clause 19, §15.22). Not OPTIONAL; a NULL C pointer is
+     * unconvertible. X.1083 Table 55.
+     *
      * @public
      * @readonly
      */

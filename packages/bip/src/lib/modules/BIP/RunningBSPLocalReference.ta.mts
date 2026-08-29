@@ -31,6 +31,17 @@ import {
  * @summary RunningBSPLocalReference
  * @description
  *
+ * Row of the `RunningBSPLocalReferences` conceptual table.
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message and are never encoded.
+ * A reference held by the local application (via
+ * `BioAPI_BSPLoad`) to a BSP running locally or in a slave,
+ * plus an optional duty to call a local unit-event handler.
+ * Duplicate rows are allowed; `BioAPI_BSPUnload` deletes one
+ * matching row. Present in all BIP endpoints. ITU-T Rec.
+ * X.1083 (11/2007)
+ * [§18.5](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,30 +59,56 @@ export class RunningBSPLocalReference {
   constructor(
     /**
      * @summary `hostingEndpointIRI`.
+     * @description
+     *
+     * Endpoint containing the referenced BSP (local or a slave).
+     * X.1083 §18.5.2.1.
+     *
      * @public
      * @readonly
      */
     readonly hostingEndpointIRI: EndpointIRI,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of that BSP. X.1083 §18.5.2.2.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `useBSPAccessUuid`.
+     * @description
+     *
+     * `TRUE` if `BioAPI_BSPLoad` identified the BSP by access
+     * UUID rather than product UUID. A later `BioAPI_BSPUnload`
+     * and unit-event callbacks using this row must use the same
+     * UUID. X.1083 §18.5.2.3.
+     *
      * @public
      * @readonly
      */
     readonly useBSPAccessUuid: BOOLEAN,
     /**
      * @summary `unitEventHandlerAddress`.
+     * @description
+     *
+     * Local unit-event handler. A value other than 0 obliges the
+     * framework to call that handler. X.1083 §18.5.2.4.
+     *
      * @public
      * @readonly
      */
     readonly unitEventHandlerAddress: MemoryAddress,
     /**
      * @summary `unitEventHandlerContext`.
+     * @description
+     *
+     * Context passed into the unit-event handler. X.1083
+     * §18.5.2.5.
+     *
      * @public
      * @readonly
      */

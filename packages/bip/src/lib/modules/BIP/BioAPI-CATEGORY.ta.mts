@@ -25,6 +25,15 @@ export enum _enum_for_BioAPI_CATEGORY {
  * @summary BioAPI_CATEGORY
  * @description
  *
+ * BFP/unit category. ASN.1 enumerators are 0–3; C values are
+ * bit-flag-like: `archive` = C `0x00000001`,
+ * `comparisonAlgorithm` = `0x00000002`,
+ * `processingAlgorithm` = `0x00000004`, `sensor` = `0x00000008`.
+ * Other C values are unconvertible.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.21](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

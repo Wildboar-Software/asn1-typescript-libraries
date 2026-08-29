@@ -35,6 +35,12 @@ import {
  * @summary DbSetMarker_RequestParams
  * @description
  *
+ * Parameters of a `dbSetMarker` request BIP message
+ * (`BioAPI_DbSetMarker`). Master→slave. `originalBSPHandle` is the
+ * hosting-endpoint BSP handle (cl.26), not the master's local
+ * `BSPHandle` (`X.1083 §16.46`). Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,24 +57,44 @@ export class DbSetMarker_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.46`, Table 103).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `dbHandle`.
+     * @description
+     *
+     * Database whose marker is set, from C `DbHandle` (`X.1083 §16.46`,
+     * Table 103, §15.26). No local/original rewrite is specified.
+     *
      * @public
      * @readonly
      */
     readonly dbHandle: BioAPI_DB_HANDLE,
     /**
      * @summary `keyValue`.
+     * @description
+     *
+     * From C `KeyValue`. Not OPTIONAL: a NULL pointer is unconvertible
+     * (cl.19, §15.58) (`X.1083 §16.46`, Table 103).
+     *
      * @public
      * @readonly
      */
     readonly keyValue: BioAPI_UUID,
     /**
      * @summary `markerHandle`.
+     * @description
+     *
+     * Marker to reposition, from C `MarkerHandle` (`X.1083 §16.46`,
+     * Table 103, §15.25).
+     *
      * @public
      * @readonly
      */

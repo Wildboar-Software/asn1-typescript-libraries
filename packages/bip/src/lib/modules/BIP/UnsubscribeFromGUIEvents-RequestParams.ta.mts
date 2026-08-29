@@ -27,6 +27,16 @@ import {
  * @summary UnsubscribeFromGUIEvents_RequestParams
  * @description
  *
+ * Parameters of an `unsubscribeFromGUIEvents` request BIP
+ * message (master→slave) for
+ * `BioAPI_UnsubscribeFromGUIEvents`. Identifies the same
+ * subscription that was created by `subscribeToGUIEvents`
+ * (UUID/handle pair and subscribed flags). Handler addresses
+ * stay local and are omitted; the slave reconstructs dummy
+ * non-zero addresses from the flags. Exactly one of
+ * `bspProductUuid` and `originalBSPHandle` shall be present.
+ * X.1083 §16.23.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,36 +55,72 @@ export class UnsubscribeFromGUIEvents_RequestParams {
   constructor(
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * UUID of the secondary subscription to cancel. Absent if
+     * the original subscription was primary. Must match the
+     * `GUIEventRemoteSubscriptions` entry (presence and
+     * value). C `NULL` ↔ absent (clause 19). X.1083 §16.23.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP of the subscription to cancel.
+     * Mutually exclusive with `originalBSPHandle`. C `NULL`
+     * ↔ absent (clause 19). X.1083 §16.23.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint attach handle of the subscription to
+     * cancel. Mutually exclusive with `bspProductUuid`. BioAPI
+     * `BSPHandle` is rewritten via clauses 24 and 26. C `NULL`
+     * ↔ absent (clause 19). X.1083 §16.23.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `guiSelectEventSubscribed`.
+     * @description
+     *
+     * `TRUE` if the original subscription included a GUI
+     * select-event handler. Used with the other flags to
+     * locate the remote-subscription row. X.1083 §16.23.5.
+     *
      * @public
      * @readonly
      */
     readonly guiSelectEventSubscribed: BOOLEAN,
     /**
      * @summary `guiStateEventSubscribed`.
+     * @description
+     *
+     * `TRUE` if the original subscription included a GUI
+     * state-event handler. X.1083 §16.23.5.
+     *
      * @public
      * @readonly
      */
     readonly guiStateEventSubscribed: BOOLEAN,
     /**
      * @summary `guiProgressEventSubscribed`.
+     * @description
+     *
+     * `TRUE` if the original subscription included a GUI
+     * progress-event handler. X.1083 §16.23.5.
+     *
      * @public
      * @readonly
      */

@@ -30,6 +30,12 @@ import {
  * @summary BIPRequest
  * @description
  *
+ * Master-to-slave invocation of a BioAPI function or BIP link
+ * operation. Each request is followed by one response on the
+ * same link. Unsolicited responses are not allowed.
+ * ITU-T Rec. X.1083 (11/2007) §7.2.4, §7.4.4, §13.2, §14.1.
+ * https://www.itu.int/rec/T-REC-X.1083-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -103,30 +109,61 @@ export class BIPRequest {
   constructor(
     /**
      * @summary `slaveEndpointIRI`.
+     * @description
+     *
+     * Target of the request. X.1083 §13.2.
+     *
      * @public
      * @readonly
      */
     readonly slaveEndpointIRI: EndpointIRI,
     /**
      * @summary `masterEndpointIRI`.
+     * @description
+     *
+     * Sender: the local (master) endpoint. Implicitly identifies
+     * the calling application. X.1083 §11.2, §13.2.
+     *
      * @public
      * @readonly
      */
     readonly masterEndpointIRI: EndpointIRI,
     /**
      * @summary `linkNumber`.
+     * @description
+     *
+     * BIP link this message traverses. Chosen at random when the
+     * master creates the link; not unique (small collision
+     * chance). For robustness and diagnostics, not as a true
+     * identifier. The matching response copies this value.
+     * X.1083 §7.2.4, §16.4.4.
+     *
      * @public
      * @readonly
      */
     readonly linkNumber: UnsignedInt,
     /**
      * @summary `requestId`.
+     * @description
+     *
+     * Pairs this request with its response. Numbered per link,
+     * independently of `notificationId`. Starts at a random value
+     * at link setup; incremented on each request; wraps from
+     * 4294967295 to 0. The response shall echo this value. Not
+     * a transmission-order indicator. X.1083 §7.2.4, §13.2.
+     *
      * @public
      * @readonly
      */
     readonly requestId: UnsignedInt,
     /**
      * @summary `params`.
+     * @description
+     *
+     * Operation and its parameters. The selected alternative
+     * names the BioAPI (or BIP) operation. The response shall
+     * use the same alternative name. X.1083 §13.2, §13.3.
+     *
      * @public
      * @readonly
      */

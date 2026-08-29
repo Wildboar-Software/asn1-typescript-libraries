@@ -20,6 +20,10 @@ import {
  * @summary AddMaster_RequestParams
  * @description
  *
+ * Parameters of an `addMaster` request (master→slave) for
+ * BioAPI_LinkToEndpoint. The slave endpoint IRI is on the BIP
+ * message, not in this type. X.1083 §16.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,12 @@ export class AddMaster_RequestParams {
   constructor(
     /**
      * @summary `bipVersion`.
+     * @description
+     *
+     * Version of this Recommendation: major 1, minor 0. Slave may
+     * return `BioAPIERR_INCOMPATIBLE_VERSION` if different.
+     * X.1083 §16.4.4 f, §16.4.5 c, §13.15.
+     *
      * @public
      * @readonly
      */

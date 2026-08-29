@@ -26,6 +26,12 @@ import {
  * @summary Enroll_ResponseParams
  * @description
  *
+ * Parameters of an `enroll` response BIP message
+ * (slave→master) for `BioAPI_Enroll`. Maps to BioAPI output
+ * pointers via clause 20. OPTIONAL outputs are present only
+ * when the matching `no-*` request flag was `FALSE`. X.1083
+ * §16.36.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +47,34 @@ export class Enroll_ResponseParams {
   constructor(
     /**
      * @summary `newTemplate`.
+     * @description
+     *
+     * Handle of the newly enrolled template BIR on the hosting
+     * endpoint. Maps to BioAPI `NewTemplate` (clause 20).
+     * X.1083 §16.36.6.
+     *
      * @public
      * @readonly
      */
     readonly newTemplate: BioAPI_BIR_HANDLE,
     /**
      * @summary `auditData`.
+     * @description
+     *
+     * Handle of the audit BIR, if requested. Absent when
+     * `no-auditData` was `TRUE`. X.1083 §16.36.6.
+     *
      * @public
      * @readonly
      */
     readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>,
     /**
      * @summary `templateUuid`.
+     * @description
+     *
+     * UUID assigned to the new template, if requested. Absent
+     * when `no-templateUuid` was `TRUE`. X.1083 §16.36.6.
+     *
      * @public
      * @readonly
      */

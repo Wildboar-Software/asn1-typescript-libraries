@@ -20,6 +20,11 @@ import {
  * @summary BIPMessage
  * @description
  *
+ * Top-level BIP PDU: request, response, notification, or
+ * acknowledgement. Encoding is a binding concern; this type is
+ * the abstract value. ITU-T Rec. X.1083 (11/2007) §7.2, §14.1.
+ * https://www.itu.int/rec/T-REC-X.1083-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +43,11 @@ export class BIPMessage {
   constructor(
     /**
      * @summary `nature`.
+     * @description
+     *
+     * Sole payload: the message kind and its contents. X.1083
+     * §7.2, §14.1.
+     *
      * @public
      * @readonly
      */

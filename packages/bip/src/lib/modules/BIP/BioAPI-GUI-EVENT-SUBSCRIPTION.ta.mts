@@ -26,6 +26,15 @@ import {
  * @summary BioAPI_GUI_EVENT_SUBSCRIPTION
  * @description
  *
+ * GUI-event subscription. `subscriberEndpointIRI` identifies
+ * which endpoint receives the events (local IRI means local /
+ * C NULL). BOOLEAN fields accept only TRUE/FALSE; other C
+ * `BioAPI_BOOL` values are unconvertible.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.36](https://www.itu.int/rec/T-REC-X.1083-200711-I),
+ * §15.3, §15.18.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,6 +52,11 @@ export class BioAPI_GUI_EVENT_SUBSCRIPTION {
   constructor(
     /**
      * @summary `subscriberEndpointIRI`.
+     * @description
+     *
+     * Endpoint that subscribed. Local endpoint IRI means the
+     * subscriber is local (C NULL). X.1083 §15.3, §15.36.
+     *
      * @public
      * @readonly
      */

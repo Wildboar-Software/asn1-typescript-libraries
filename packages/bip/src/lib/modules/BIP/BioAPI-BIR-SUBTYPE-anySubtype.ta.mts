@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_BIR_SUBTYPE_anySubtype
  * @description
  *
+ * Non-vein subtype bits. Use this CHOICE when C `0x80` is clear.
+ * Bit 0 = C `0x01` (left). `SIZE(7)`.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.16](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

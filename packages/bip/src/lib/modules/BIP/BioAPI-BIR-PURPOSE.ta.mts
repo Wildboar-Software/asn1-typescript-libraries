@@ -28,6 +28,13 @@ export enum _enum_for_BioAPI_BIR_PURPOSE {
  * @summary BioAPI_BIR_PURPOSE
  * @description
  *
+ * Intended use of a BIR. ASN.1 enumerators are 0-based; C values
+ * are 1–7 (`verify` = C 1, `any` = C 7). Other C values are
+ * unconvertible (clause 33).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.14](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -139,6 +146,10 @@ export const audit: BioAPI_BIR_PURPOSE = BioAPI_BIR_PURPOSE_audit; /* SHORT_NAME
 
 /**
  * @summary BioAPI_BIR_PURPOSE_any_
+ * @description
+ *
+ * C `BioAPI_PURPOSE_ANY` (7). ASN.1 enumerator 6, not C 0.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +158,10 @@ export const BioAPI_BIR_PURPOSE_any_: BioAPI_BIR_PURPOSE = 6; /* LONG_NAMED_ENUM
 
 /**
  * @summary any_
+ * @description
+ *
+ * C `BioAPI_PURPOSE_ANY` (7). ASN.1 enumerator 6, not C 0.
+ *
  * @constant
  * @type {number}
  */

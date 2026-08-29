@@ -66,6 +66,16 @@ import {
  * @summary GUIProgressEvent_NotificationParams
  * @description
  *
+ * Parameter of a `guiProgressEvent` notification BIP message
+ * (`BIPNotification`, slave → master). Converted from
+ * `BioSPI_GUI_PROGRESS_EVENT_HANDLER` (Table 132). The master
+ * replies with `GUIProgressEvent-AcknowledgementParams`. When
+ * converting from a BioSPI callback, `guiEventSubscriptionUuid`
+ * shall be absent (X.1083 §17.4.8). A large image in this
+ * notification may delay a remote display (X.1083 §17.4.5
+ * note). ITU-T Rec. X.1083 (11/2007)
+ * [§17.4](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -89,66 +99,117 @@ export class GUIProgressEvent_NotificationParams {
   constructor(
     /**
      * @summary `guiEventSubscriptionUuid`.
+     * @description
+     *
+     * Secondary-subscription UUID. Absent when converting from
+     * `BioSPI_GUI_PROGRESS_EVENT_HANDLER`. Present and taken from
+     * a matching `GUIEventRedirector` when redirected. X.1083
+     * §8.3, §17.4.5, §17.4.8, Table 132.
+     *
      * @public
      * @readonly
      */
     readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP (`BSPUuid`). X.1083 §17.4.7,
+     * Table 132.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit associated with the GUI event. X.1083 §17.4.7,
+     * Table 132.
+     *
      * @public
      * @readonly
      */
     readonly unitID: BioAPI_UNIT_ID,
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle (`BSPHandle`). Absent after
+     * redirection. X.1083 §17.4.5 d, §17.4.7, Table 132.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
     /**
      * @summary `operation`.
+     * @description
+     *
+     * Maps from `Operation`. X.1083 §17.4.7, Table 132.
+     *
      * @public
      * @readonly
      */
     readonly operation: BioAPI_GUI_OPERATION,
     /**
      * @summary `suboperation`.
+     * @description
+     *
+     * Maps from `Suboperation`. X.1083 §17.4.7, Table 132.
+     *
      * @public
      * @readonly
      */
     readonly suboperation: BioAPI_GUI_SUBOPERATION,
     /**
      * @summary `purpose`.
+     * @description
+     *
+     * Maps from `Purpose`. X.1083 §17.4.7, Table 132.
+     *
      * @public
      * @readonly
      */
     readonly purpose: BioAPI_BIR_PURPOSE,
     /**
      * @summary `moment`.
+     * @description
+     *
+     * Maps from `Moment`. X.1083 §17.4.7, Table 132.
+     *
      * @public
      * @readonly
      */
     readonly moment: BioAPI_GUI_MOMENT,
     /**
      * @summary `suboperationProgress`.
+     * @description
+     *
+     * Maps from `SuboperationProgress`. X.1083 §17.4.7,
+     * Table 132.
+     *
      * @public
      * @readonly
      */
     readonly suboperationProgress: UnsignedByte,
     /**
      * @summary `bitmaps`.
+     * @description
+     *
+     * Maps from `Bitmaps`. X.1083 §17.4.7, Table 132.
+     *
      * @public
      * @readonly
      */
     readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
     /**
      * @summary `text`.
+     * @description
+     *
+     * Maps from `Text`. X.1083 §17.4.7, Table 132.
+     *
      * @public
      * @readonly
      */

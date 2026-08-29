@@ -21,6 +21,16 @@ import {
  * @summary RegisterBFP_RequestParams
  * @description
  *
+ * Parameters of a `registerBFP` request BIP message
+ * (`BioAPI_RegisterBFP`). Master→slave. C `HostingEndpointIRI` is
+ * not in this type: it only selects the hosting endpoint; conversion
+ * to C sets it to NULL (local endpoint) (`X.1083 §16.61.7`).
+ *
+ * On success the slave inserts or replaces a VisibleBFPRegistrations
+ * row and sends `bfpRegistrationEvent` to every master
+ * (`X.1083 §16.61.4`). Unknown endpoint:
+ * `BioAPIERR_UNABLE_TO_LOCATE_ENDPOINT`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +45,25 @@ export class RegisterBFP_RequestParams {
   constructor(
     /**
      * @summary `bfpSchema`.
+     * @description
+     *
+     * Schema of the BFP to register, from C `BFPSchema`. Not OPTIONAL:
+     * a NULL pointer is unconvertible (cl.19, §15.5)
+     * (`X.1083 §16.61`, Table 120).
+     *
      * @public
      * @readonly
      */
     readonly bfpSchema: BioAPI_BFP_SCHEMA,
     /**
      * @summary `update`.
+     * @description
+     *
+     * From C `Update` (§15.18). FALSE with an existing local
+     * `bfpProductUuid` row:
+     * `BioAPIERR_COMPONENT_ALREADY_REGISTERED`. TRUE: delete that
+     * row then insert (`X.1083 §16.61.3.1`).
+     *
      * @public
      * @readonly
      */

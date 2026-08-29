@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_TIME
  * @description
  *
+ * Time of day. The triple hour=99, minute=99, second=99 is
+ * valid (unspecified). Otherwise hour 0–23, minute 0–59, second
+ * 0–59; other values are unconvertible (clause 33).
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.54](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,18 +39,33 @@ export class BioAPI_TIME {
   constructor(
     /**
      * @summary `hour`.
+     * @description
+     *
+     * 99 only as part of the all-99 time; else 0–23. X.1083
+     * §15.54.4.
+     *
      * @public
      * @readonly
      */
     readonly hour: INTEGER,
     /**
      * @summary `minute`.
+     * @description
+     *
+     * 99 only as part of the all-99 time; else 0–59. X.1083
+     * §15.54.4.
+     *
      * @public
      * @readonly
      */
     readonly minute: INTEGER,
     /**
      * @summary `second`.
+     * @description
+     *
+     * 99 only as part of the all-99 time; else 0–59. X.1083
+     * §15.54.4.
+     *
      * @public
      * @readonly
      */

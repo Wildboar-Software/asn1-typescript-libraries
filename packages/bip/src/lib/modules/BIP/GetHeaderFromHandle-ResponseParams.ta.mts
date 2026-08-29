@@ -20,6 +20,11 @@ import {
  * @summary GetHeaderFromHandle_ResponseParams
  * @description
  *
+ * Parameters of a `getHeaderFromHandle` response (slave→master) for
+ * BioAPI_GetHeaderFromHandle. Required output: C `Header` must be
+ * non-NULL (clause 22); maps via clause 20. X.1083 §16.21,
+ * Table 61.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +37,11 @@ export class GetHeaderFromHandle_ResponseParams {
   constructor(
     /**
      * @summary `header`.
+     * @description
+     *
+     * BIR header identified by the request handle. Maps to Header
+     * (clause 20, §15.13). X.1083 Table 61.
+     *
      * @public
      * @readonly
      */

@@ -25,6 +25,11 @@ import {
  * @summary PresetIdentifyPopulation_RequestParams
  * @description
  *
+ * Parameters of a `presetIdentifyPopulation` request BIP
+ * message (master→slave) for
+ * `BioAPI_PresetIdentifyPopulation`. `BSPHandle` is rewritten
+ * via clause 26. X.1083 §16.40.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,24 @@ export class PresetIdentifyPopulation_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle on the hosting (slave) endpoint.
+     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+     * X.1083 §16.40.5.
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `population`.
+     * @description
+     *
+     * Identification population to preset, from BioAPI
+     * `Population`. C `NULL` is unconvertible (clause 19).
+     * X.1083 §16.40.5.
+     *
      * @public
      * @readonly
      */

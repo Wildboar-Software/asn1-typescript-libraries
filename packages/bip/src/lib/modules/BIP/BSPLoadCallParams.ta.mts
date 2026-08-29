@@ -25,6 +25,10 @@ import {
  * @summary BSPLoadCallParams
  * @description
  *
+ * Aids specification of `BioAPI_BSPLoad`. Abstract values do
+ * not occur in any BIP message exchanged between BIP
+ * endpoints. X.1083 §16.9.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -40,18 +44,35 @@ export class BSPLoadCallParams {
   constructor(
     /**
      * @summary `bspUuid`.
+     * @description
+     *
+     * `BSPUuid` of `BioAPI_BSPLoad`: BSP product or access UUID.
+     * X.1083 §16.9.6.
+     *
      * @public
      * @readonly
      */
     readonly bspUuid: BioAPI_UUID,
     /**
      * @summary `unitEventHandlerAddress`.
+     * @description
+     *
+     * `EventHandler` of `BioAPI_BSPLoad`. A non-zero value means
+     * the caller subscribes to unit events
+     * (`unitEventSubscription` TRUE on the wire request).
+     * X.1083 §16.9.4.2, §16.9.6, §15.1.7.
+     *
      * @public
      * @readonly
      */
     readonly unitEventHandlerAddress: MemoryAddress,
     /**
      * @summary `unitEventHandlerContext`.
+     * @description
+     *
+     * `EventHandlerCtx` of `BioAPI_BSPLoad`. Opaque context for
+     * the handler. X.1083 §16.9.6, §15.1.7.
+     *
      * @public
      * @readonly
      */

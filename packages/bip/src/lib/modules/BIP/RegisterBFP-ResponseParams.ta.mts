@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RegisterBFP_ResponseParams
  * @description
  *
+ * Payload of a `registerBFP` response BIP message
+ * (`BioAPI_RegisterBFP`). Slave→master. Always `NULL`; the BioAPI
+ * outcome is `BIPResponse.returnValue` (`X.1083 §16.61`).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

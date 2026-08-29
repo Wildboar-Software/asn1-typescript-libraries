@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary BioAPI_OPERATIONS_MASK
  * @description
  *
+ * BSP-supported operations. `SIZE(32)` matches the C
+ * `uint32_t`. ASN.1 bit 0 is the LSB (`0x00000001` =
+ * `enableEvents`). Named bits skip 19 (C has no `0x00080000`
+ * operation); bits 19 and 23–31 are unnamed.
+ *
+ * ITU-T Rec. X.1083 (11/2007)
+ * [§15.48](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

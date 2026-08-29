@@ -25,6 +25,12 @@ import {
  * @summary DbFreeMarker_RequestParams
  * @description
  *
+ * Parameters of a `dbFreeMarker` request BIP message
+ * (`BioAPI_DbFreeMarker`). Master→slave. `originalBSPHandle` is the
+ * hosting-endpoint BSP handle (cl.26), not the master's local
+ * `BSPHandle` (`X.1083 §16.47`). Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class DbFreeMarker_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.47`, Table 104).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `markerHandle`.
+     * @description
+     *
+     * Marker to free, from C `MarkerHandle` (`X.1083 §16.47`, Table 104,
+     * §15.25).
+     *
      * @public
      * @readonly
      */

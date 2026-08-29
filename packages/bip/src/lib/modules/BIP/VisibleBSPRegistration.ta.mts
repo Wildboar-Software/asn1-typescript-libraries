@@ -20,6 +20,21 @@ import {
  * @summary VisibleBSPRegistration
  * @description
  *
+ * Row of the `VisibleBSPRegistrations` conceptual table.
+ * Defined to aid specification of framework behaviour; abstract
+ * values do not occur in any BIP message and are never encoded.
+ * One row per BSP registered in the local registry or in a
+ * slave's registry (a BSP registered in two endpoints yields
+ * two rows, differing at least in `hostingEndpointIRI`). Also
+ * carries the framework-generated `bspAccessUuid` used to
+ * disambiguate `BioAPI_BSPLoad` when the same product UUID
+ * appears more than once. Unique on
+ * (`hostingEndpointIRI`, `bspProductUuid`) and on
+ * `bspAccessUuid`; access UUID shall differ from every product
+ * UUID in the table. Present in all BIP endpoints. ITU-T Rec.
+ * X.1083 (11/2007)
+ * [§18.3](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

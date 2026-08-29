@@ -20,6 +20,10 @@ import {
  * @summary LinkCallParams
  * @description
  *
+ * Aids specification of `BioAPI_LinkToEndpoint`. Abstract
+ * values do not occur in any BIP message exchanged between
+ * BIP endpoints. X.1083 §16.4.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,12 @@ export class LinkCallParams {
   constructor(
     /**
      * @summary `slaveEndpointIRI`.
+     * @description
+     *
+     * `SlaveEndpointIRI` of `BioAPI_LinkToEndpoint`: endpoint
+     * that will be slave on the new link. A NULL C pointer maps
+     * to the local endpoint IRI. X.1083 §16.4.6, §15.3.
+     *
      * @public
      * @readonly
      */

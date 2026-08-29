@@ -20,6 +20,14 @@ import {
  * @summary AttachSessionRemoteReferences
  * @description
  *
+ * Conceptual table present in all slave endpoints. Defined to
+ * aid specification of framework behaviour; abstract values do
+ * not occur in any BIP message and are never encoded. Added on
+ * `bspAttach` from a master; deleted on `bspDetach` or deletion
+ * of the matching `RunningBSPRemoteReferences` row. ITU-T Rec.
+ * X.1083 (11/2007)
+ * [§18.9](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

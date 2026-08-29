@@ -20,6 +20,11 @@ import {
  * @summary DbStoreBIR_ResponseParams
  * @description
  *
+ * Parameters of a `dbStoreBIR` response BIP message
+ * (`BioAPI_DbStoreBIR`). Slave→master. Written into C `BirUuid`
+ * (cl.20) (`X.1083 §16.48`). BioAPI outcome is
+ * `BIPResponse.returnValue`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +37,11 @@ export class DbStoreBIR_ResponseParams {
   constructor(
     /**
      * @summary `birUuid`.
+     * @description
+     *
+     * Stored-BIR UUID written to C `BirUuid` (cl.20, §15.58). Required
+     * on a conforming response (`X.1083 §16.48`, Table 106).
+     *
      * @public
      * @readonly
      */

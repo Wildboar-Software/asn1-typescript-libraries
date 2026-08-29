@@ -25,6 +25,16 @@ import {
  * @summary GetIndicatorStatus_RequestParams
  * @description
  *
+ * Parameters of a `getIndicatorStatus` request BIP message
+ * (`BioAPI_GetIndicatorStatus`). Master→slave. `originalBSPHandle`
+ * is the hosting-endpoint BSP handle (cl.26), not the master's local
+ * `BSPHandle` (`X.1083 §16.55`).
+ *
+ * C output `IndicatorStatus` is omitted here (cl.22: caller pointer
+ * must be non-NULL) and returned in
+ * `GetIndicatorStatus-ResponseParams`. Unknown BSP:
+ * `BioAPIERR_UNABLE_TO_LOCATE_BSP`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +49,22 @@ export class GetIndicatorStatus_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Hosting-endpoint BSP handle. Rewritten from the master's local
+     * `BSPHandle` (cl.26) (`X.1083 §16.55`, Table 115).
+     *
      * @public
      * @readonly
      */
     readonly originalBSPHandle: BioAPI_HANDLE,
     /**
      * @summary `unitID`.
+     * @description
+     *
+     * Unit whose indicator is read, from C `UnitID` (`X.1083 §16.55`,
+     * Table 115, §15.55).
+     *
      * @public
      * @readonly
      */

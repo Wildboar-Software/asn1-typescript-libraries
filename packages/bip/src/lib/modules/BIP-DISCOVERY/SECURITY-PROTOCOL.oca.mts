@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SECURITY_PROTOCOL
  * @description
  *
+ * Information object class for a BIP security protocol: an
+ * object identifier (`&id`) and an open parameter type
+ * (`&Parameter`). Instances populate `SecurityProtocols`.
+ * ITU-T Rec. X.1083 (11/2007)
+ * [Annex B.12](https://www.itu.int/rec/T-REC-X.1083-200711-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,10 +64,17 @@ export interface SECURITY_PROTOCOL<
   >;
   /**
    * @summary &id
+   * @description
+   *
+   * Object identifier of the security protocol. X.1083 Annex
+   * B.12.
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
   /**
    * @summary &Parameter
+   * @description
+   *
+   * Type of the protocol-specific parameter. X.1083 Annex B.12.
    */
   readonly '&Parameter': Parameter;
 }

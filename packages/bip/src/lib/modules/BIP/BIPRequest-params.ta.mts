@@ -285,6 +285,12 @@ import {
  * @summary BIPRequest_params
  * @description
  *
+ * Operation CHOICE of a `BIPRequest`. The selected alternative
+ * names the BioAPI function (or BIP link operation). The
+ * matching `BIPResponse` shall select the same alternative
+ * name. BioAPI-function correspondence is X.1083 Table 3.
+ * X.1083 §12.2, §13.2, §14.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

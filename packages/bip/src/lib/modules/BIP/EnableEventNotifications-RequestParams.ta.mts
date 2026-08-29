@@ -25,6 +25,11 @@ import {
  * @summary EnableEventNotifications_RequestParams
  * @description
  *
+ * Parameters of an `enableEventNotifications` request
+ * (master→slave) for BioAPI_EnableEventNotifications. `BSPUuid`
+ * rewritten to product UUID (clause 23). No attach-session handle.
+ * X.1083 §16.16, Table 52.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,25 @@ export class EnableEventNotifications_RequestParams {
   constructor(
     /**
      * @summary `bspProductUuid`.
+     * @description
+     *
+     * Product UUID of the BSP. Application may have passed an access
+     * UUID; this component is always the product UUID.
+     * X.1083 §16.16.4, clause 23.
+     *
      * @public
      * @readonly
      */
     readonly bspProductUuid: BioAPI_UUID,
     /**
      * @summary `unitEventTypes`.
+     * @description
+     *
+     * Unit-event type mask from Events. If at least one type is to
+     * be disabled, stored in UnitEventNotificationDisablers for this
+     * master; otherwise any existing disabler entry is deleted.
+     * X.1083 §16.16.5, Table 52, §15.31.
+     *
      * @public
      * @readonly
      */

@@ -20,6 +20,10 @@ import {
  * @summary BSPDetach_RequestParams
  * @description
  *
+ * Parameters of a `bspDetach` request (master→slave) for
+ * BioAPI_BSPDetach. Application `BSPHandle` rewritten to the handle
+ * at the hosting endpoint (clause 26). X.1083 §16.14, Table 50.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +36,11 @@ export class BSPDetach_RequestParams {
   constructor(
     /**
      * @summary `originalBSPHandle`.
+     * @description
+     *
+     * Attach-session handle at the hosting endpoint, not the
+     * application's local handle. X.1083 Table 50, clause 26.
+     *
      * @public
      * @readonly
      */
