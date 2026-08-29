@@ -25,6 +25,12 @@ import {
  * @summary LeapSecondInfo
  * @description
  *
+ * Information syntax of the confirmed `leapSecond` action:
+ * distribute that a leap second is about to occur and set
+ * the corresponding protocol parameters (Table 2). GDMO
+ * behaviour of the action is otherwise undefined. ITU-T Rec. X.743 (06/98)
+ * [§8.4.2](https://www.itu.int/rec/T-REC-X.743-199806-I), §9.7, A.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,23 @@ export class LeapSecondInfo {
     constructor(
         /**
          * @summary `leapIndication`.
+         * @description
+         *
+         * Insert (61-second minute), delete (59-second minute), no
+         * warning, or alarm. Mandatory in the leap-second action.
+         * ITU-T Rec. X.743 (06/98)
+         * [§9.7](https://www.itu.int/rec/T-REC-X.743-199806-I), Table 2, A.5.
          * @public
          * @readonly
          */
         readonly leapIndication: LeapIndication,
         /**
          * @summary `dateOfLeap`.
+         * @description
+         *
+         * When the leap second occurs. Mandatory in the leap-second
+         * action (Table 2). ITU-T Rec. X.743 (06/98)
+         * [§9.7](https://www.itu.int/rec/T-REC-X.743-199806-I), A.5.
          * @public
          * @readonly
          */

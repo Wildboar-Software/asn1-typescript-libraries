@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary leapSecondIndicationOID
  * @description
  *
+ * Registers attribute `leapSecondIndication`: a leap second
+ * will occur at the end of the current day. In
+ * `leapSecondPkg` (`GET-REPLACE`, `SET-BY-CREATE`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.14](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.14.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

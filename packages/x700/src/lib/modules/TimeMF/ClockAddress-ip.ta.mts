@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ClockAddress_ip
  * @description
  *
+ * IP alternative of `ClockAddress`: four-octet host and
+ * port (0..65536). ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +32,20 @@ export class ClockAddress_ip {
     constructor(
         /**
          * @summary `host`.
+         * @description
+         *
+         * Four-octet IP host address. ITU-T Rec. X.743 (06/98)
+         * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly host: OCTET_STRING,
         /**
          * @summary `port`.
+         * @description
+         *
+         * Port number (0..65536). ITU-T Rec. X.743 (06/98)
+         * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */

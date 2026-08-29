@@ -16,6 +16,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Stratum
  * @description
  *
+ * Stratum of a local clock in the synchronization subnet
+ * (0..255). 0 = not specified; 1 = primary reference;
+ * 2..255 = secondary references of increasing distance from
+ * the root. Higher numbers mean more servers or a longer
+ * path to a reference source. Syntax of `clockStratum` and
+ * `maximumStratum`. ITU-T Rec. X.743 (06/98)
+ * [§8.3.11](https://www.itu.int/rec/T-REC-X.743-199806-I),
+ * A.5, A.2.11; Annex H.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

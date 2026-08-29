@@ -19,6 +19,11 @@ import {
  * @summary ClockEstimatedError
  * @description
  *
+ * Estimated error of the clock. Syntax of
+ * `clockEstimatedError` in `clockSourceDetailPkg`. Accuracy
+ * may be represented as estimated error (§6.2). ITU-T Rec. X.743 (06/98)
+ * [§8.3.3](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.3, §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

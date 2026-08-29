@@ -19,6 +19,13 @@ import {
  * @summary ProtocolResetInfo
  * @description
  *
+ * Information syntax of the confirmed `protocolReset`
+ * action: restart the time synchronization protocol (Table
+ * 3). A set of CMIP `Attribute` values; the rec does not
+ * list which attributes are carried. GDMO behaviour is
+ * undefined beyond that capability. ITU-T Rec. X.743 (06/98)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.743-199806-I), §9.8, A.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

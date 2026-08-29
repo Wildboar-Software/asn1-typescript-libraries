@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Epochs
  * @description
  *
+ * Which ~600-year period a timestamp occupies. Epoch 0 is the
+ * period beginning 0 h, 0 min, 0 s GMT on 1 January 1970. Each
+ * epoch is 4 294 967 296 seconds. The integer range −128..127
+ * extends the timeline to about 74 800 BCE through AD 79 400
+ * (~154 000 years). ITU-T Rec. X.743 (06/98)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

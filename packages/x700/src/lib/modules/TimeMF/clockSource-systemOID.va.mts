@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockSource_systemOID
  * @description
  *
+ * Registers name binding `clockSource-system`: a
+ * `clockSource` (and subclasses) is named by a `system`
+ * object with attribute `clockID`. Create with automatic
+ * instance naming; delete deletes contained objects. ITU-T Rec. X.743 (06/98)
+ * [§8.5.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.4.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockEventCodeOID
  * @description
  *
+ * Registers attribute `clockEventCode`: latest system
+ * exception event. Mandatory on `clockSource` (`GET`).
+ * ITU-T Rec. X.743 (06/98)
+ * [§8.3.4](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

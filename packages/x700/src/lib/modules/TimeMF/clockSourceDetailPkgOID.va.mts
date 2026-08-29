@@ -15,6 +15,13 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockSourceDetailPkgOID
  * @description
  *
+ * Registers conditional package `clockSourceDetailPkg` on
+ * `clockSource`: `clockPrecision`, `clockDrift`,
+ * `clockMaximumError`, `clockEstimatedError`. Present if the
+ * instance supports detailed clock-source information.
+ * ITU-T Rec. X.743 (06/98)
+ * [§8.2.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

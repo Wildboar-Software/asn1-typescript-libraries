@@ -19,6 +19,11 @@ import {
  * @summary SynchronizationProtocolID
  * @description
  *
+ * Identifies the synchronization protocol instance. Naming
+ * attribute of `synchronizationProtocol` (`GET`,
+ * `SET-BY-CREATE`, `NO-MODIFY`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.18](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.18, A.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

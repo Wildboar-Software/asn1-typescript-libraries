@@ -40,6 +40,12 @@ import {
  * @summary TimeDifference
  * @description
  *
+ * Signed difference between two times, with a maximum-error
+ * bound. Magnitude uses the same epoch/second/nanosecond
+ * units as a `TimeStamp`. Algebraic clock difference is
+ * defined as time offset in §3.7.18. ITU-T Rec. X.743 (06/98)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §3.7.18, §8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -57,30 +63,53 @@ export class TimeDifference {
     constructor(
         /**
          * @summary `sign`.
+         * @description
+         *
+         * `positive` (0) or `negative` (1). ITU-T Rec. X.743 (06/98)
+         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly sign: TimeDifference_sign,
         /**
          * @summary `epochs`.
+         * @description
+         *
+         * Whole epochs in the absolute difference. ITU-T Rec. X.743 (06/98)
+         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
          * @public
          * @readonly
          */
         readonly epochs: Epochs,
         /**
          * @summary `seconds`.
+         * @description
+         *
+         * Additional whole seconds of the absolute difference.
+         * ITU-T Rec. X.743 (06/98)
+         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly seconds: Seconds,
         /**
          * @summary `nanoseconds`.
+         * @description
+         *
+         * Additional nanoseconds of the absolute difference.
+         * ITU-T Rec. X.743 (06/98)
+         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly nanoseconds: Nanoseconds,
         /**
          * @summary `maximumError`.
+         * @description
+         *
+         * Maximum error bound of the difference, in nanoseconds.
+         * ITU-T Rec. X.743 (06/98)
+         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
          * @public
          * @readonly
          */

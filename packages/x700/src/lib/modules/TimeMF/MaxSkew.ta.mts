@@ -19,6 +19,11 @@ import {
  * @summary MaxSkew
  * @description
  *
+ * Maximum offset error caused by skew of a local clock over
+ * the interval `maximumClockAge`. Syntax of `maximumSkew`.
+ * ITU-T Rec. X.743 (06/98)
+ * [§B.3.8](https://www.itu.int/rec/T-REC-X.743-199806-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

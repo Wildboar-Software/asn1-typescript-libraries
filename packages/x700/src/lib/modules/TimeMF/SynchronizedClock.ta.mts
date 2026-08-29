@@ -19,6 +19,11 @@ import {
  * @summary SynchronizedClock
  * @description
  *
+ * Managed-object instance of the clock being synchronized by
+ * this time-synchronization protocol instance. Syntax of
+ * `synchronizedClock`. ITU-T Rec. X.743 (06/98)
+ * [§8.3.21](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.21.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

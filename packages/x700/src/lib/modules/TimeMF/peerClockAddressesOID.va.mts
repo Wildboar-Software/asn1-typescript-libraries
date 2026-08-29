@@ -15,6 +15,12 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary peerClockAddressesOID
  * @description
  *
+ * Registers attribute `peerClockAddresses`: network
+ * addresses of peers currently maintained by this node. On
+ * `localClock` (`GET-REPLACE`, `ADD-REMOVE`,
+ * `SET-BY-CREATE`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.16](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

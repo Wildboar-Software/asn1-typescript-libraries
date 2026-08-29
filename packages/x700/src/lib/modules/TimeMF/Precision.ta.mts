@@ -19,6 +19,11 @@ import {
  * @summary Precision
  * @description
  *
+ * Smallest value by which the clock changes (§3.7.14).
+ * Positive interval only (A.5). Syntax of `clockPrecision`
+ * in `clockSourceDetailPkg`. ITU-T Rec. X.743 (06/98)
+ * [§8.3.9](https://www.itu.int/rec/T-REC-X.743-199806-I), §3.7.14, A.2.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

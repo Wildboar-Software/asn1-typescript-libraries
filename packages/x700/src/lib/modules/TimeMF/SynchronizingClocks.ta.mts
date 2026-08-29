@@ -19,6 +19,11 @@ import {
  * @summary SynchronizingClocks
  * @description
  *
+ * Set of clocks exchanging time information with this clock
+ * for synchronization. Syntax of `synchronizingClocks`.
+ * ITU-T Rec. X.743 (06/98)
+ * [§8.3.22](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.22.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

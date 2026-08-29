@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SynchronizationProtocolType
  * @description
  *
+ * Identifies the type of time synchronization protocol
+ * modelled (for example the `ntp` value for NTP). Syntax of
+ * `synchronizationProtocolType`. ITU-T Rec. X.743 (06/98)
+ * [§8.3.19](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.19, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

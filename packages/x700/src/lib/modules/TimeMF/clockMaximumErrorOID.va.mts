@@ -15,6 +15,10 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockMaximumErrorOID
  * @description
  *
+ * Registers attribute `clockMaximumError`: maximum error of
+ * the clock. In `clockSourceDetailPkg` (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.8](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.8.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

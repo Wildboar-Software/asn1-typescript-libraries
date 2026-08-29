@@ -29,6 +29,11 @@ import {
  * @summary TimeInterval
  * @description
  *
+ * Duration as epochs, seconds, and nanoseconds (no error
+ * bound). Same units as the time representation in §8.1.
+ * ITU-T Rec. X.743 (06/98)
+ * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,18 +49,31 @@ export class TimeInterval {
     constructor(
         /**
          * @summary `epochs`.
+         * @description
+         *
+         * Whole epochs in the duration (each 4 294 967 296 s).
+         * ITU-T Rec. X.743 (06/98)
+         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
          * @public
          * @readonly
          */
         readonly epochs: Epochs,
         /**
          * @summary `seconds`.
+         * @description
+         *
+         * Additional whole seconds (0..4 294 967 295). ITU-T Rec. X.743 (06/98)
+         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */
         readonly seconds: Seconds,
         /**
          * @summary `nanoseconds`.
+         * @description
+         *
+         * Additional nanoseconds (0..999 999 999). ITU-T Rec. X.743 (06/98)
+         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
          * @public
          * @readonly
          */

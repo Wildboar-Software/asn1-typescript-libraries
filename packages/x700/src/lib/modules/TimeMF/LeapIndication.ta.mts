@@ -15,6 +15,18 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LeapIndication
  * @description
  *
+ * Whether a leap second is about to occur, and whether the
+ * last minute of the day is lengthened or shortened. Syntax
+ * of `leapSecondIndication` and of the `leapIndication`
+ * field of the `leapSecond` action. Named values: `noWarning`
+ * (0); `minuteHas61Seconds` (1) last minute has 61 seconds;
+ * `minuteHas59Seconds` (2) last minute has 59 seconds;
+ * `alarmCondition` (3). The next-leap-second procedure
+ * specifies time and insert-or-delete; how the clock applies
+ * the step is a local matter. ITU-T Rec. X.743 (06/98)
+ * [§8.3.14](https://www.itu.int/rec/T-REC-X.743-199806-I),
+ * §7.3.2.5, A.2.14, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +48,18 @@ export enum _enum_for_LeapIndication {
  * @summary LeapIndication
  * @description
  *
+ * Whether a leap second is about to occur, and whether the
+ * last minute of the day is lengthened or shortened. Syntax
+ * of `leapSecondIndication` and of the `leapIndication`
+ * field of the `leapSecond` action. Named values: `noWarning`
+ * (0); `minuteHas61Seconds` (1) last minute has 61 seconds;
+ * `minuteHas59Seconds` (2) last minute has 59 seconds;
+ * `alarmCondition` (3). The next-leap-second procedure
+ * specifies time and insert-or-delete; how the clock applies
+ * the step is a local matter. ITU-T Rec. X.743 (06/98)
+ * [§8.3.14](https://www.itu.int/rec/T-REC-X.743-199806-I),
+ * §7.3.2.5, A.2.14, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,6 +76,18 @@ export type LeapIndication = _enum_for_LeapIndication;
  * @summary LeapIndication
  * @description
  *
+ * Whether a leap second is about to occur, and whether the
+ * last minute of the day is lengthened or shortened. Syntax
+ * of `leapSecondIndication` and of the `leapIndication`
+ * field of the `leapSecond` action. Named values: `noWarning`
+ * (0); `minuteHas61Seconds` (1) last minute has 61 seconds;
+ * `minuteHas59Seconds` (2) last minute has 59 seconds;
+ * `alarmCondition` (3). The next-leap-second procedure
+ * specifies time and insert-or-delete; how the clock applies
+ * the step is a local matter. ITU-T Rec. X.743 (06/98)
+ * [§8.3.14](https://www.itu.int/rec/T-REC-X.743-199806-I),
+ * §7.3.2.5, A.2.14, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -66,6 +102,10 @@ export const LeapIndication = _enum_for_LeapIndication;
 
 /**
  * @summary LeapIndication_noWarning
+ * @description
+ *
+ * No leap-second warning. ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
  * @constant
  * @type {number}
  */
@@ -82,6 +122,11 @@ export const noWarning: LeapIndication =
 
 /**
  * @summary LeapIndication_minuteHas61Seconds
+ * @description
+ *
+ * Last minute of the day has 61 seconds (positive leap
+ * second). ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I), §7.3.2.5.
  * @constant
  * @type {number}
  */
@@ -98,6 +143,11 @@ export const minuteHas61Seconds: LeapIndication =
 
 /**
  * @summary LeapIndication_minuteHas59Seconds
+ * @description
+ *
+ * Last minute of the day has 59 seconds (negative leap
+ * second). ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I), §7.3.2.5.
  * @constant
  * @type {number}
  */
@@ -114,6 +164,11 @@ export const minuteHas59Seconds: LeapIndication =
 
 /**
  * @summary LeapIndication_alarmCondition
+ * @description
+ *
+ * Alarm condition. The rec does not further define this
+ * value. ITU-T Rec. X.743 (06/98)
+ * [§A.5](https://www.itu.int/rec/T-REC-X.743-199806-I).
  * @constant
  * @type {number}
  */

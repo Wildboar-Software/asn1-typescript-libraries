@@ -16,6 +16,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ClockEventCode
  * @description
  *
+ * Identifies the latest clock system exception event.
+ * Syntax of `clockEventCode`. Named values (A.5):
+ * `unspecified` (0), `restart` (1), `systemOrHardwareFault`
+ * (2), `newStatusWord` (3), `newSynchSourceOrStratum` (4),
+ * `systemClockReset` (5), `systemInvalidTimeOrDate` (6),
+ * `systemClockException` (7). `reserved8` (8) through
+ * `reserved15` (15) are reserved; the rec assigns them no
+ * meaning. ITU-T Rec. X.743 (06/98)
+ * [§8.3.4](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.4, A.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

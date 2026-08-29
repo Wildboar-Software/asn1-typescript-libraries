@@ -15,6 +15,10 @@ import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
  * @summary clockPrecisionOID
  * @description
  *
+ * Registers attribute `clockPrecision`: precision of the
+ * clock. In `clockSourceDetailPkg` (`GET`). ITU-T Rec. X.743 (06/98)
+ * [§8.3.9](https://www.itu.int/rec/T-REC-X.743-199806-I), A.2.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
