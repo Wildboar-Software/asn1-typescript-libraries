@@ -18,6 +18,12 @@ import {
  * @summary noEstimateOnResponseTimeError
  * @description
  *
+ * Default `maximumResponseTimeError`: precision of the measured
+ * response time is unknown (`seconds:-1`). ITU-T Rec. X.748
+ * (03/99)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.748-199903-I), §8.2.4,
+ * A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

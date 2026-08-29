@@ -15,6 +15,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ResponseTimeSummarizationMode
  * @description
  *
+ * Whether `responseTime` is raw elapsed time (INTEGER) or
+ * seconds-per-bit (REAL). ITU-T Rec. X.748 (03/99)
+ * [§8.4.15](https://www.itu.int/rec/T-REC-X.748-199903-I),
+ * §8.2.4, A.7.
+ *
+ * - `rawResponseTime` (0): INTEGER elapsed time.
+ * - `responseTimePerBit` (1): REAL `(RTraw × 2) / (Ls + Lr)`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +41,14 @@ export enum _enum_for_ResponseTimeSummarizationMode {
  * @summary ResponseTimeSummarizationMode
  * @description
  *
+ * Whether `responseTime` is raw elapsed time (INTEGER) or
+ * seconds-per-bit (REAL). ITU-T Rec. X.748 (03/99)
+ * [§8.4.15](https://www.itu.int/rec/T-REC-X.748-199903-I),
+ * §8.2.4, A.7.
+ *
+ * - `rawResponseTime` (0): INTEGER elapsed time.
+ * - `responseTimePerBit` (1): REAL `(RTraw × 2) / (Ls + Lr)`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,6 +64,14 @@ export type ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationM
  * @summary ResponseTimeSummarizationMode
  * @description
  *
+ * Whether `responseTime` is raw elapsed time (INTEGER) or
+ * seconds-per-bit (REAL). ITU-T Rec. X.748 (03/99)
+ * [§8.4.15](https://www.itu.int/rec/T-REC-X.748-199903-I),
+ * §8.2.4, A.7.
+ *
+ * - `rawResponseTime` (0): INTEGER elapsed time.
+ * - `responseTimePerBit` (1): REAL `(RTraw × 2) / (Ls + Lr)`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -61,6 +85,11 @@ export const ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarization
 
 /**
  * @summary ResponseTimeSummarizationMode_rawResponseTime
+ * @description
+ *
+ * `responseTime` is INTEGER elapsed time. ITU-T Rec. X.748
+ * (03/99)
+ * [§8.4.15](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */
@@ -69,6 +98,11 @@ export const ResponseTimeSummarizationMode_rawResponseTime: ResponseTimeSummariz
 
 /**
  * @summary rawResponseTime
+ * @description
+ *
+ * `responseTime` is INTEGER elapsed time. ITU-T Rec. X.748
+ * (03/99)
+ * [§8.4.15](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */
@@ -77,6 +111,11 @@ export const rawResponseTime: ResponseTimeSummarizationMode =
 
 /**
  * @summary ResponseTimeSummarizationMode_responseTimePerBit
+ * @description
+ *
+ * `responseTime` is REAL seconds per bit. ITU-T Rec. X.748
+ * (03/99)
+ * [§8.4.15](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */
@@ -85,6 +124,11 @@ export const ResponseTimeSummarizationMode_responseTimePerBit: ResponseTimeSumma
 
 /**
  * @summary responseTimePerBit
+ * @description
+ *
+ * `responseTime` is REAL seconds per bit. ITU-T Rec. X.748
+ * (03/99)
+ * [§8.4.15](https://www.itu.int/rec/T-REC-X.748-199903-I).
  * @constant
  * @type {number}
  */

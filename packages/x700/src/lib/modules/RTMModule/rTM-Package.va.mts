@@ -16,6 +16,12 @@ import {
  * @summary rTM_Package
  * @description
  *
+ * Arc for RTM packages: `responseConfirmationObjListPkg` (1),
+ * `responseConfirmationNotifPkg` (2), `responseRequesterListPkg`
+ * (3), `responseTimeoutPkg` (4), `reqResLengthPkg` (5). ITU-T
+ * Rec. X.748 (03/99)
+ * [A.3](https://www.itu.int/rec/T-REC-X.748-199903-I), A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

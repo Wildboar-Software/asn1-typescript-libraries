@@ -20,6 +20,10 @@ import {
  * @summary defaultResponseSync
  * @description
  *
+ * Default `responseSync` on a response monitor: `singleCast`.
+ * ITU-T Rec. X.748 (03/99)
+ * [§8.4.13](https://www.itu.int/rec/T-REC-X.748-199903-I), A.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
