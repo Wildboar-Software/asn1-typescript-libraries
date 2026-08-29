@@ -16,6 +16,12 @@ import {
  * @summary smi2Parameter
  * @description
  *
+ * Registration arc for DMI (X.721) parameter types:
+ * `{joint-iso-itu-t ms(9) smi(3) part2(2) parameter(5)}`.
+ * Assigned value: 1 `miscellaneousError`. ITU-T Rec. X.721
+ * (02/92) [§12](https://www.itu.int/rec/T-REC-X.721-199202-I),
+ * §14.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

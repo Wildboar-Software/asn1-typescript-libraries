@@ -16,6 +16,14 @@ import {
  * @summary smi2Package
  * @description
  *
+ * Registration arc for DMI (X.721) packages:
+ * `{joint-iso-itu-t ms(9) smi(3) part2(2) package(4)}`. Used
+ * by conditional packages on DMI classes (for example alarm
+ * record packages 1–8) and reusable packages in X.721 clause 8
+ * (18 `additionalInformation` through 29). ITU-T Rec. X.721
+ * (02/92) [§6](https://www.itu.int/rec/T-REC-X.721-199202-I),
+ * §8, §14.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

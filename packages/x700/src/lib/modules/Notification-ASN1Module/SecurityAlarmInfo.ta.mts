@@ -64,6 +64,22 @@ import {
  * @summary SecurityAlarmInfo
  * @description
  *
+ * Event information for the five DMI security-alarm
+ * notifications: `integrityViolation` (information may have
+ * been illegally modified, inserted, or deleted),
+ * `operationalViolation` (requested service not possible due
+ * to unavailability, malfunction, or incorrect invocation),
+ * `physicalViolation` (physical resource violated in a way
+ * that indicates a potential security attack),
+ * `securityServiceOrMechanismViolation` (attack detected by a
+ * security service or mechanism), and `timeDomainViolation`
+ * (event at an unexpected or prohibited time). ITU-T Rec.
+ * X.721 (02/92)
+ * [§13.5](https://www.itu.int/rec/T-REC-X.721-199202-I),
+ * §13.8–§13.9, §13.13, §13.15, §14.3. Semantics: ITU-T Rec.
+ * X.736 (01/92)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.736-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -85,54 +101,106 @@ export class SecurityAlarmInfo {
     constructor(
         /**
          * @summary `securityAlarmCause`.
+         * @description
+         *
+         * Further qualification of the security-alarm cause.
+         * Combined with event type, it determines remaining
+         * parameters and their values. Prefer the most specific
+         * registered cause. In the systems management context,
+         * causes are object identifiers registered in X.721.
+         * X.736 Table 1 maps event types to causes (for example
+         * authentication failure, cable tamper, delayed
+         * information). ITU-T Rec. X.736 (01/92) §8.1.2.1.
          * @public
          * @readonly
          */
         readonly securityAlarmCause: SecurityAlarmCause,
         /**
          * @summary `securityAlarmSeverity`.
+         * @description
+         *
+         * Significance as perceived by the managed object:
+         * `indeterminate` (attack detected, integrity unknown);
+         * `critical` (compromise; system may no longer support
+         * the security policy); `major` (significant
+         * information or mechanisms compromised); `minor` (less
+         * significant compromise); `warning` (attack detected,
+         * security not believed compromised). ITU-T Rec. X.736
+         * (01/92) §8.1.2.2.
          * @public
          * @readonly
          */
         readonly securityAlarmSeverity: SecurityAlarmSeverity,
         /**
          * @summary `securityAlarmDetector`.
+         * @description
+         *
+         * Detector of the security alarm. ITU-T Rec. X.736
+         * (01/92) §8.1.2.3.
          * @public
          * @readonly
          */
         readonly securityAlarmDetector: SecurityAlarmDetector,
         /**
          * @summary `serviceUser`.
+         * @description
+         *
+         * Service-user whose request for service led to this
+         * security alarm. ITU-T Rec. X.736 (01/92) §8.1.2.4.
          * @public
          * @readonly
          */
         readonly serviceUser: ServiceUser,
         /**
          * @summary `serviceProvider`.
+         * @description
+         *
+         * Intended service-provider of the service that led to
+         * this security alarm. ITU-T Rec. X.736 (01/92)
+         * §8.1.2.5.
          * @public
          * @readonly
          */
         readonly serviceProvider: ServiceProvider,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * Identifier that later notifications may cite in
+         * `correlatedNotifications`. ITU-T Rec. X.736 (01/92)
+         * §8.3; X.733 (02/92) §8.1.2.8.
          * @public
          * @readonly
          */
         readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * Notifications correlated with this one. ITU-T Rec.
+         * X.736 (01/92) §8.3; X.733 (02/92) §8.1.2.9.
          * @public
          * @readonly
          */
         readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Free-form text; not required to interpret the
+         * notification. ITU-T Rec. X.736 (01/92) §8.3; X.733
+         * (02/92) §8.1.2.13.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Extra identifier/significance/information structures.
+         * ITU-T Rec. X.736 (01/92) §8.3; X.733 (02/92)
+         * §8.1.2.14.
          * @public
          * @readonly
          */

@@ -46,6 +46,15 @@ import {
  * @summary ObjectInfo
  * @description
  *
+ * Event information for DMI `objectCreation`
+ * (`{smi2Notification 6}`) and `objectDeletion`
+ * (`{smi2Notification 7}`). Creation/deletion may result from
+ * PT-CREATE/PT-DELETE or a local operation. ITU-T Rec. X.721
+ * (02/92) [§13.6](https://www.itu.int/rec/T-REC-X.721-199202-I),
+ * §13.7, §14.3. Semantics: ITU-T Rec. X.730 (01/92)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.730-199201-I),
+ * §8.2.1–§8.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,36 +73,69 @@ export class ObjectInfo {
     constructor(
         /**
          * @summary `sourceIndicator`.
+         * @description
+         *
+         * Source of the creation or deletion: `resourceOperation`
+         * (internal to the resource), `managementOperation` (SMI
+         * operation across the object boundary), or `unknown`.
+         * ITU-T Rec. X.730 (01/92) §8.2.1.1, §8.2.2.1.
          * @public
          * @readonly
          */
         readonly sourceIndicator?: OPTIONAL<SourceIndicator>,
         /**
          * @summary `attributeList`.
+         * @description
+         *
+         * Attributes and values at creation, or just before
+         * deletion. The class may name which attributes to
+         * include; if it does not and this field is present,
+         * all attributes of the object are included. ITU-T Rec.
+         * X.730 (01/92) §8.2.1.2, §8.2.2.2.
          * @public
          * @readonly
          */
         readonly attributeList?: OPTIONAL<AttributeList>,
         /**
          * @summary `notificationIdentifier`.
+         * @description
+         *
+         * Identifier that later notifications may cite in
+         * `correlatedNotifications`. ITU-T Rec. X.730 (01/92)
+         * §8.2.1.3, §8.2.2.3; X.733 (02/92) §8.1.2.8.
          * @public
          * @readonly
          */
         readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
         /**
          * @summary `correlatedNotifications`.
+         * @description
+         *
+         * Notifications correlated with this one. ITU-T Rec.
+         * X.730 (01/92) §8.2.1.3, §8.2.2.3; X.733 (02/92)
+         * §8.1.2.9.
          * @public
          * @readonly
          */
         readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Free-form text; not required to interpret the
+         * notification. ITU-T Rec. X.730 (01/92) §8.2.1.3,
+         * §8.2.2.3; X.733 (02/92) §8.1.2.13.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Extra identifier/significance/information structures.
+         * ITU-T Rec. X.730 (01/92) §8.2.1.3, §8.2.2.3; X.733
+         * (02/92) §8.1.2.14.
          * @public
          * @readonly
          */
