@@ -15,6 +15,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DetermineViolationStatusReply
  * @description
  *
+ * Reply of `determineViolationStatus`. Adds `non-member` to the
+ * three `ViolationStatus` values when the named object is not in
+ * the domain. ITU-T Rec. X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2,
+ * A.10.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `no-violation` (2): member, no violation detected.
+ * - `violation-detected` (3): member, policy evaluated to false.
+ * - `non-member` (4): object is not a domain member.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +46,17 @@ export enum _enum_for_DetermineViolationStatusReply {
  * @summary DetermineViolationStatusReply
  * @description
  *
+ * Reply of `determineViolationStatus`. Adds `non-member` to the
+ * three `ViolationStatus` values when the named object is not in
+ * the domain. ITU-T Rec. X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2,
+ * A.10.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `no-violation` (2): member, no violation detected.
+ * - `violation-detected` (3): member, policy evaluated to false.
+ * - `non-member` (4): object is not a domain member.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +72,17 @@ export type DetermineViolationStatusReply = _enum_for_DetermineViolationStatusRe
  * @summary DetermineViolationStatusReply
  * @description
  *
+ * Reply of `determineViolationStatus`. Adds `non-member` to the
+ * three `ViolationStatus` values when the named object is not in
+ * the domain. ITU-T Rec. X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2,
+ * A.10.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `no-violation` (2): member, no violation detected.
+ * - `violation-detected` (3): member, policy evaluated to false.
+ * - `non-member` (4): object is not a domain member.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +96,10 @@ export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusR
 
 /**
  * @summary DetermineViolationStatusReply_unknown
+ * @description
+ *
+ * Status could not be determined. ITU-T Rec. X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2.
  * @constant
  * @type {number}
  */
@@ -71,6 +108,10 @@ export const DetermineViolationStatusReply_unknown: DetermineViolationStatusRepl
 
 /**
  * @summary unknown
+ * @description
+ *
+ * Status could not be determined. ITU-T Rec. X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2.
  * @constant
  * @type {number}
  */
@@ -79,6 +120,11 @@ export const unknown: DetermineViolationStatusReply =
 
 /**
  * @summary DetermineViolationStatusReply_no_violation
+ * @description
+ *
+ * Object is a member and no violation was detected. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2.
  * @constant
  * @type {number}
  */
@@ -87,6 +133,11 @@ export const DetermineViolationStatusReply_no_violation: DetermineViolationStatu
 
 /**
  * @summary no_violation
+ * @description
+ *
+ * Object is a member and no violation was detected. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2.
  * @constant
  * @type {number}
  */
@@ -95,6 +146,11 @@ export const no_violation: DetermineViolationStatusReply =
 
 /**
  * @summary DetermineViolationStatusReply_violation_detected
+ * @description
+ *
+ * Object is a member and the policy evaluated to false. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2.
  * @constant
  * @type {number}
  */
@@ -103,6 +159,11 @@ export const DetermineViolationStatusReply_violation_detected: DetermineViolatio
 
 /**
  * @summary violation_detected
+ * @description
+ *
+ * Object is a member and the policy evaluated to false. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2.
  * @constant
  * @type {number}
  */
@@ -111,6 +172,10 @@ export const violation_detected: DetermineViolationStatusReply =
 
 /**
  * @summary DetermineViolationStatusReply_non_member
+ * @description
+ *
+ * Named object is not a domain member. ITU-T Rec. X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2.
  * @constant
  * @type {number}
  */
@@ -119,6 +184,10 @@ export const DetermineViolationStatusReply_non_member: DetermineViolationStatusR
 
 /**
  * @summary non_member
+ * @description
+ *
+ * Named object is not a domain member. ITU-T Rec. X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.2.
  * @constant
  * @type {number}
  */

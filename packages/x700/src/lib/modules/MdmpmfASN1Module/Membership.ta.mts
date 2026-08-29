@@ -19,6 +19,12 @@ import {
  * @summary Membership
  * @description
  *
+ * Set of member object names in a `listMembership` or
+ * `listDirectMembership` reply. All named objects must satisfy the
+ * relevant membership criteria. ITU-T Rec. X.749 (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.4,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

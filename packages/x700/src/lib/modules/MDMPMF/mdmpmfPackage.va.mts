@@ -16,6 +16,11 @@ import {
  * @summary mdmpmfPackage
  * @description
  *
+ * Arc allocated for MDMPMF packages. Annex A defines packages inline
+ * on managed object classes and does not register separate package
+ * OIDs under this arc. ITU-T Rec. X.749 (08/97)
+ * [A.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

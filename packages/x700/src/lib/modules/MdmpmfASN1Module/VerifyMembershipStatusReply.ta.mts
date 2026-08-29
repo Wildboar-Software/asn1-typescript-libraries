@@ -25,6 +25,12 @@ import {
  * @summary VerifyMembershipStatusReply
  * @description
  *
+ * Reply of `verifyMembershipStatus`: the named object and whether
+ * it is a member, is not a member, or could not be determined.
+ * ITU-T Rec. X.749 (08/97)
+ * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,21 @@ export class VerifyMembershipStatusReply {
     constructor(
         /**
          * @summary `objectName`.
+         * @description
+         *
+         * Object whose membership was tested. ITU-T Rec. X.749
+         * (08/97)
+         * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
          * @public
          * @readonly
          */
         readonly objectName: ObjectInstance,
         /**
          * @summary `membershipStatus`.
+         * @description
+         *
+         * Result of the membership test. ITU-T Rec. X.749 (08/97)
+         * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
          * @public
          * @readonly
          */

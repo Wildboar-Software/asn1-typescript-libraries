@@ -15,6 +15,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ViolationStatus
  * @description
  *
+ * Result of evaluating a policy against an object. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.10](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7,
+ * §8.2.8.3.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `no-violation` (2): no violation detected.
+ * - `violation-detected` (3): policy evaluated to false.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +43,15 @@ export enum _enum_for_ViolationStatus {
  * @summary ViolationStatus
  * @description
  *
+ * Result of evaluating a policy against an object. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.10](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7,
+ * §8.2.8.3.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `no-violation` (2): no violation detected.
+ * - `violation-detected` (3): policy evaluated to false.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,6 +67,15 @@ export type ViolationStatus = _enum_for_ViolationStatus;
  * @summary ViolationStatus
  * @description
  *
+ * Result of evaluating a policy against an object. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.10](https://www.itu.int/rec/T-REC-X.749-199708-I), A.7,
+ * §8.2.8.3.
+ *
+ * - `unknown` (1): status could not be determined.
+ * - `no-violation` (2): no violation detected.
+ * - `violation-detected` (3): policy evaluated to false.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +89,11 @@ export const ViolationStatus = _enum_for_ViolationStatus;
 
 /**
  * @summary ViolationStatus_unknown
+ * @description
+ *
+ * Violation status could not be determined. ITU-T Rec. X.749
+ * (08/97)
+ * [A.10](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -70,6 +102,11 @@ export const ViolationStatus_unknown: ViolationStatus =
 
 /**
  * @summary unknown
+ * @description
+ *
+ * Violation status could not be determined. ITU-T Rec. X.749
+ * (08/97)
+ * [A.10](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -78,6 +115,10 @@ export const unknown: ViolationStatus =
 
 /**
  * @summary ViolationStatus_no_violation
+ * @description
+ *
+ * No policy violation detected. ITU-T Rec. X.749 (08/97)
+ * [A.10](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.2.8.3.
  * @constant
  * @type {number}
  */
@@ -86,6 +127,10 @@ export const ViolationStatus_no_violation: ViolationStatus =
 
 /**
  * @summary no_violation
+ * @description
+ *
+ * No policy violation detected. ITU-T Rec. X.749 (08/97)
+ * [A.10](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.2.8.3.
  * @constant
  * @type {number}
  */
@@ -94,6 +139,10 @@ export const no_violation: ViolationStatus =
 
 /**
  * @summary ViolationStatus_violation_detected
+ * @description
+ *
+ * Policy evaluated to false. ITU-T Rec. X.749 (08/97)
+ * [§8.2.8.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.10.
  * @constant
  * @type {number}
  */
@@ -102,6 +151,10 @@ export const ViolationStatus_violation_detected: ViolationStatus =
 
 /**
  * @summary violation_detected
+ * @description
+ *
+ * Policy evaluated to false. ITU-T Rec. X.749 (08/97)
+ * [§8.2.8.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.10.
  * @constant
  * @type {number}
  */

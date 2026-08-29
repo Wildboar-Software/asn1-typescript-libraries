@@ -16,6 +16,11 @@ import {
  * @summary mdmpmfNotification
  * @description
  *
+ * Arc for MDMPMF notifications: `policyViolation` (1), emitted when
+ * a domain member violates a jurisdiction’s policy. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.6](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.3.1, A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

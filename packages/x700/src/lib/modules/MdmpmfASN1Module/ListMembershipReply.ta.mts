@@ -25,6 +25,12 @@ import {
  * @summary ListMembershipReply
  * @description
  *
+ * Reply of `listMembership` (and of `listDirectMembership` for the
+ * membership list). Completeness plus the set of member names.
+ * ITU-T Rec. X.749 (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.4,
+ * A.7, A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class ListMembershipReply {
     constructor(
         /**
          * @summary `completeness`.
+         * @description
+         *
+         * Whether `membership` is known complete, known incomplete, or
+         * unknown. ITU-T Rec. X.749 (08/97)
+         * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
          * @public
          * @readonly
          */
         readonly completeness: Completeness,
         /**
          * @summary `membership`.
+         * @description
+         *
+         * Names of objects that satisfy the membership (or direct-
+         * membership) criteria. ITU-T Rec. X.749 (08/97)
+         * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
          * @public
          * @readonly
          */

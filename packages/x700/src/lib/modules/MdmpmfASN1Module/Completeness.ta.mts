@@ -15,6 +15,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Completeness
  * @description
  *
+ * Completeness of a membership list in `listMembership` (and
+ * direct-membership) replies: unknown, known complete, or known
+ * incomplete. ITU-T Rec. X.749 (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I), A.10.
+ *
+ * - `completenessUnknown` (0): completeness is not known.
+ * - `knownComplete` (1): list is known to be complete.
+ * - `knownNotComplete` (2): list is known to be incomplete.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +43,15 @@ export enum _enum_for_Completeness {
  * @summary Completeness
  * @description
  *
+ * Completeness of a membership list in `listMembership` (and
+ * direct-membership) replies: unknown, known complete, or known
+ * incomplete. ITU-T Rec. X.749 (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I), A.10.
+ *
+ * - `completenessUnknown` (0): completeness is not known.
+ * - `knownComplete` (1): list is known to be complete.
+ * - `knownNotComplete` (2): list is known to be incomplete.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,6 +67,15 @@ export type Completeness = _enum_for_Completeness;
  * @summary Completeness
  * @description
  *
+ * Completeness of a membership list in `listMembership` (and
+ * direct-membership) replies: unknown, known complete, or known
+ * incomplete. ITU-T Rec. X.749 (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I), A.10.
+ *
+ * - `completenessUnknown` (0): completeness is not known.
+ * - `knownComplete` (1): list is known to be complete.
+ * - `knownNotComplete` (2): list is known to be incomplete.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +89,11 @@ export const Completeness = _enum_for_Completeness;
 
 /**
  * @summary Completeness_completenessUnknown
+ * @description
+ *
+ * Completeness of the membership list is not known. ITU-T Rec.
+ * X.749 (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -70,6 +102,11 @@ export const Completeness_completenessUnknown: Completeness =
 
 /**
  * @summary completenessUnknown
+ * @description
+ *
+ * Completeness of the membership list is not known. ITU-T Rec.
+ * X.749 (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -78,6 +115,11 @@ export const completenessUnknown: Completeness =
 
 /**
  * @summary Completeness_knownComplete
+ * @description
+ *
+ * Membership list is known to be complete. ITU-T Rec. X.749
+ * (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -86,6 +128,11 @@ export const Completeness_knownComplete: Completeness =
 
 /**
  * @summary knownComplete
+ * @description
+ *
+ * Membership list is known to be complete. ITU-T Rec. X.749
+ * (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -94,6 +141,11 @@ export const knownComplete: Completeness =
 
 /**
  * @summary Completeness_knownNotComplete
+ * @description
+ *
+ * Membership list is known to be incomplete. ITU-T Rec. X.749
+ * (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */
@@ -102,6 +154,11 @@ export const Completeness_knownNotComplete: Completeness =
 
 /**
  * @summary knownNotComplete
+ * @description
+ *
+ * Membership list is known to be incomplete. ITU-T Rec. X.749
+ * (08/97)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
  * @constant
  * @type {number}
  */

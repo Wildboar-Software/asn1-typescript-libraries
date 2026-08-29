@@ -19,6 +19,12 @@ import {
  * @summary ApplyOperationToMembershipReply
  * @description
  *
+ * Per-member results of `applyOperationToMembership`. The action
+ * itself succeeds even if every applied operation failed; only
+ * failure to attempt is an action error. Multiple replies may be
+ * needed. ITU-T Rec. X.749 (08/97)
+ * [A.7](https://www.itu.int/rec/T-REC-X.749-199708-I), §8.4.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

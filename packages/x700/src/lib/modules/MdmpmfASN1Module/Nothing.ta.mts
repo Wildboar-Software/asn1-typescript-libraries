@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Nothing
  * @description
  *
+ * Syntax of the `timeoutError` parameter. Used only to register the
+ * parameter; shall not be transmitted in `CommonError`. ITU-T Rec.
+ * X.749 (08/97)
+ * [A.9](https://www.itu.int/rec/T-REC-X.749-199708-I), A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

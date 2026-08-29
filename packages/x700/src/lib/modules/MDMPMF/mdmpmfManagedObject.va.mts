@@ -16,6 +16,13 @@ import {
  * @summary mdmpmfManagedObject
  * @description
  *
+ * Arc for MDMPMF managed object classes: `policy` (1),
+ * `scheduledPolicy` (2), `jurisdiction` (3),
+ * `enhancedJurisdiction` (4), `domain` (5),
+ * `administrativeAspect` (6), `policyViolationLogRecord` (7),
+ * `valueAssertionPolicy` (8). ITU-T Rec. X.749 (08/97)
+ * [A.3](https://www.itu.int/rec/T-REC-X.749-199708-I), A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

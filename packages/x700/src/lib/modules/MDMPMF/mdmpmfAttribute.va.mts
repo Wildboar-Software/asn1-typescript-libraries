@@ -16,6 +16,18 @@ import {
  * @summary mdmpmfAttribute
  * @description
  *
+ * Arc for MDMPMF attributes: `administrativeAspectId` (1),
+ * `administrativeAspectPointer` (2), `administrativeAuthority`
+ * (3), `administrativeContactInformation` (4),
+ * `administrativeOwner` (5), `administrativeSpecifier` (6),
+ * `assertion` (7), `creationTime` (8), `domainId` (9),
+ * `domainPointer` (10), `indirectMembershipSpecifierList` (11),
+ * `jurisdictionId` (12), `lastUpdateTime` (13),
+ * `memberSelectionFilter` (14), `memberSelectionList` (15),
+ * `policyId` (16), `policyPointer` (17), `versionIdentifier` (18),
+ * `violatedPolicy` (19), `violatorName` (20). ITU-T Rec. X.749
+ * (08/97) [A.5](https://www.itu.int/rec/T-REC-X.749-199708-I), A.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
