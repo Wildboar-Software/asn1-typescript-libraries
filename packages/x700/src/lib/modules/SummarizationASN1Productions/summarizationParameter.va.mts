@@ -16,6 +16,18 @@ import {
  * @summary summarizationParameter
  * @description
  *
+ * OID arc for summarization specific-error parameters.
+ * Registered leaves (X.738 A.8): `scanActionError`(1)
+ * — `ScannerActionError` when a scan action is not
+ * performed (locked, shutting down, scan terminated,
+ * or unspecified); `conflictingPackagesRequestedError`
+ * (2) — `PackageConflict` when CREATE requests
+ * mutually exclusive conditional packages or omits
+ * packages that must be present together. ITU-T Rec.
+ * X.738 (11/93)
+ * [A.8](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

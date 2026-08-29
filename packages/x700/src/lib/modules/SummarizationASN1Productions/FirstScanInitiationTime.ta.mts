@@ -19,6 +19,14 @@ import {
  * @summary FirstScanInitiationTime
  * @description
  *
+ * Start time of the first scan retained in a buffered
+ * scanner’s report (`{summarizationAttribute 8}`).
+ * Required in `BufferedScanReportInformation` when
+ * `timeStampReportMode` is present and non-zero.
+ * ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.3.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4, A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

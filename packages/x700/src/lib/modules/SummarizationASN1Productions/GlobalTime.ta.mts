@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GlobalTime
  * @description
  *
+ * Date and time of a scan initiation (or first scan in
+ * a buffer). Used as `ScanInitiationTime` and
+ * `FirstScanInitiationTime`. ITU-T Rec. X.738 (11/93)
+ * [A.9](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.2.2.1.1, §8.2.2.3.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

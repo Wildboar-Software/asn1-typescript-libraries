@@ -16,6 +16,29 @@ import {
  * @summary summarizationPackage
  * @description
  *
+ * OID arc for summarization GDMO packages. Registered
+ * leaves (X.738 A.2–A.3): `meanCalculationPackage`(1);
+ * `algorithmParametersPackage`(2);
+ * `firstScanInitiationTimePackage`(3);
+ * `managedObjectInstanceSelectionPackage`(4) —
+ * explicit `objectList`;
+ * `observationReportListPackage`(5);
+ * `onceReportAttributeIdListPackage`(6);
+ * `onceReportAttributeListPackage`(7);
+ * `scanInitiationTimePackage`(9);
+ * `scopedSelectionPackage`(10) — CMIS-like scope and
+ * filter (`scanningFilter` defaults to
+ * `scanningFilterDefault`);
+ * `suspectIntervalsPackage`(11);
+ * `timeStampReportPackage`(12) —
+ * `timeStampReportMode` defaults to
+ * `timeStampingDefault`;
+ * `timingSelectionPackage`(13) — time-window
+ * selection; `incompleteScanPackage`(14). Number 8 is
+ * unused. ITU-T Rec. X.738 (11/93)
+ * [A.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.3, §8.1.12.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

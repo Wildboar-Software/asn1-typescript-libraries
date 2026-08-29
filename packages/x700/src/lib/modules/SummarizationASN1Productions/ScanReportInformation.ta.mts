@@ -41,6 +41,15 @@ import {
  * @summary ScanReportInformation
  * @description
  *
+ * Event information of `scanReport` and reply of
+ * `activateScanReport` /
+ * `activateDynamicSimpleScanReport`. Emitted at the end
+ * of a scan (or as the action reply) with observed
+ * attribute values. Multiple linked replies may carry
+ * one report. ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.1](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.2.1, A.5, A.6, Table 2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,36 +71,63 @@ export class ScanReportInformation {
     constructor(
         /**
          * @summary `scanInitiationTime`.
+         * @description
+         *
+         * Date and time the reported scan was initiated.
+         * Required if `timeStampReportMode` is present with a
+         * non-zero value. X.738 §8.2.2.1.1, A.9.
          * @public
          * @readonly
          */
         readonly scanInitiationTime: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `onceReportAttributeList`.
+         * @description
+         *
+         * Once-report attribute values that were the same
+         * across all observed objects. X.738 §8.2.2.1.2.
          * @public
          * @readonly
          */
         readonly onceReportAttributeList: OPTIONAL<OnceReportAttributeList>,
         /**
          * @summary `observationScanList`.
+         * @description
+         *
+         * One entry per observed object: instance name
+         * (unless suppressed), scan-attribute measures, and
+         * numeric-value array. Mandatory. X.738 §8.2.2.1.3,
+         * Table 2.
          * @public
          * @readonly
          */
         readonly observationScanList: ObservationScanList,
         /**
          * @summary `incompleteScan`.
+         * @description
+         *
+         * Present if the scan could not be completed; value
+         * is the reason. X.738 §8.2.2.1.4, Table 2 note 2.
          * @public
          * @readonly
          */
         readonly incompleteScan?: OPTIONAL<IncompleteScan>,
         /**
          * @summary `additionalText`.
+         * @description
+         *
+         * Optional textual extension as in X.733 | ISO/IEC
+         * 10164-4. X.738 §8.2.2.2.6, §8.11.
          * @public
          * @readonly
          */
         readonly additionalText?: OPTIONAL<AdditionalText>,
         /**
          * @summary `additionalInformation`.
+         * @description
+         *
+         * Optional structured extension as in X.733 | ISO/IEC
+         * 10164-4. X.738 §8.2.2.2.7, §8.11.
          * @public
          * @readonly
          */

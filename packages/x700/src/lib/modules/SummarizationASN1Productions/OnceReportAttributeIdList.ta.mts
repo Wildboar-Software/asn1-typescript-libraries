@@ -19,6 +19,15 @@ import {
  * @summary OnceReportAttributeIdList
  * @description
  *
+ * Identifiers of attributes of any type to report once
+ * when they have the same value across all observed
+ * objects (`{summarizationAttribute 16}`). If a value
+ * differs or is missing on any object, that attribute
+ * is reported per object with the scan-attribute list
+ * instead. ITU-T Rec. X.738 (11/93)
+ * [§8.1.12.2](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

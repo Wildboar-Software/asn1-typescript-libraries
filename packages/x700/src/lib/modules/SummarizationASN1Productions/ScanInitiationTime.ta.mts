@@ -19,6 +19,14 @@ import {
  * @summary ScanInitiationTime
  * @description
  *
+ * Date and time at which the reported scan was
+ * initiated (`{summarizationAttribute 22}`). Required
+ * in scan and statistical reports when
+ * `timeStampReportMode` is present and non-zero.
+ * ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.1.1](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.2.2.2.1, A.4, A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

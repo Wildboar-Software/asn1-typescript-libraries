@@ -19,6 +19,16 @@ import {
  * @summary AlgorithmParameters
  * @description
  *
+ * Configurable parameters of the statistical algorithm
+ * applied to scanned values (`{summarizationAttribute
+ * 2}`). Present only if the algorithm has configurable
+ * parameters; positions are defined by the managed
+ * object class. For `percentileScanner`, the first
+ * element is `j` (`configurablePCT`, 1..49). ITU-T Rec.
+ * X.738 (11/93)
+ * [§8.2.2.2.4](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.6.2, A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

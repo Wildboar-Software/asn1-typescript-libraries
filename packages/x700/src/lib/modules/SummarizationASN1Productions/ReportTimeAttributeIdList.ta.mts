@@ -19,6 +19,15 @@ import {
  * @summary ReportTimeAttributeIdList
  * @description
  *
+ * Identifiers of attributes of arbitrary type scanned
+ * once at the end of a buffered report period (not
+ * after each granularity period). An identifier may
+ * also appear in the other buffered-observation lists.
+ * Typical use: metric-object identity attributes while
+ * the numeric array holds algorithm outputs. ITU-T Rec.
+ * X.738 (11/93)
+ * [§8.1.9.2](https://www.itu.int/rec/T-REC-X.738-199311-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

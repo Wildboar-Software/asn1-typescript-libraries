@@ -46,6 +46,16 @@ import {
  * @summary DynamicSimpleScanArgument
  * @description
  *
+ * Action information of
+ * `activateDynamicSimpleScanReport`. Selects objects
+ * (scoped selection XOR `objectList`) and the same
+ * attributes on each. At least one of
+ * `scanAttributeIdList` and `numericAttributeIdArray`
+ * should be present. Cor.1 names the CHOICE
+ * `scopeOrListChoice`. ITU-T Rec. X.738 (11/93)
+ * [§8.3.1](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * §8.1.11.3, A.6; Cor.1 (06/98) A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,36 +80,65 @@ export class DynamicSimpleScanArgument {
     constructor(
         /**
          * @summary `scanAttributeIdList`.
+         * @description
+         *
+         * Attributes of any type reported with identifiers.
+         * If omitted, those values are not in the reply. If
+         * an object lacks an identified attribute, that
+         * value is absent. X.738 §8.3.1.1, §8.1.11.3.
          * @public
          * @readonly
          */
         readonly scanAttributeIdList: OPTIONAL<ScanAttributeIdList>,
         /**
          * @summary `numericAttributeIdArray`.
+         * @description
+         *
+         * Ordered INTEGER/REAL attributes reported without
+         * identifiers. If an attribute is absent, `NULL` is
+         * reported. X.738 §8.3.1.2, §8.1.11.3.
          * @public
          * @readonly
          */
         readonly numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>,
         /**
          * @summary `scopeOrListChoice`.
+         * @description
+         *
+         * Exactly one: CMIS-like scoped selection, or an
+         * explicit `objectList`. Named in Cor.1. X.738
+         * §8.1.11.3, §8.3.1.3–8.3.1.6; Cor.1 A.9.
          * @public
          * @readonly
          */
         readonly scopeOrListChoice: DynamicSimpleScanArgument_scopeOrListChoice,
         /**
          * @summary `suppressObjectInstance`.
+         * @description
+         *
+         * If true, observed object names are omitted from
+         * the reply. X.738 §8.3.1.7, §8.1.11.3.
          * @public
          * @readonly
          */
         readonly suppressObjectInstance?: OPTIONAL<SuppressObjectInstance>,
         /**
          * @summary `onceReportAttributeIdList`.
+         * @description
+         *
+         * Attributes reported once if they have the same
+         * value on every selected object. X.738 §8.3.1.8,
+         * §8.1.11.3, §8.1.12.2.
          * @public
          * @readonly
          */
         readonly onceReportAttributeIdList?: OPTIONAL<OnceReportAttributeIdList>,
         /**
          * @summary `timeStampReportMode`.
+         * @description
+         *
+         * If present and non-zero, the reply is time-stamped
+         * in that mode. X.738 §8.3.1.9, §8.1.11.3.
          * @public
          * @readonly
          */

@@ -30,6 +30,13 @@ import {
  * @summary ObservationScan
  * @description
  *
+ * One observed object in a scan report: optional
+ * instance name, scan-attribute measures with
+ * identifiers, and numeric values without identifiers.
+ * ITU-T Rec. X.738 (11/93)
+ * [§8.2.2.1.3](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * Table 2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +52,36 @@ export class ObservationScan {
     constructor(
         /**
          * @summary `observedObjectInstance`.
+         * @description
+         *
+         * Name of the observed object. Shall be present if
+         * `suppressObjectInstance` is false; omitted if
+         * true. X.738 §8.2.2.1.3, Table 2 note 1.
          * @public
          * @readonly
          */
         readonly observedObjectInstance?: OPTIONAL<ObjectInstance>,
         /**
          * @summary `attributeMeasureList`.
+         * @description
+         *
+         * Scanned values with identifiers, optional time
+         * stamp and suspect flag. Identifiers of missing
+         * values are indicated (value absent). Omitted if
+         * the scan-attribute list is empty. X.738
+         * §8.2.2.1.3, §8.1.2.3.
          * @public
          * @readonly
          */
         readonly attributeMeasureList?: OPTIONAL<AttributeMeasure[]>,
         /**
          * @summary `numericValueArray`.
+         * @description
+         *
+         * Numeric values in `numericAttributeIdArray` order,
+         * without identifiers. Missing attributes are
+         * `missingData`. Identifiers can be retrieved from
+         * the scanner. X.738 §8.2.2.1.3, Table 2 C1.
          * @public
          * @readonly
          */

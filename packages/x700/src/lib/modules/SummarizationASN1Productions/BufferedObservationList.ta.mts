@@ -19,6 +19,14 @@ import {
  * @summary BufferedObservationList
  * @description
  *
+ * One entry per observed object in a buffered scan
+ * report or `reportBuffer` reply
+ * (`{summarizationAttribute 6}`). Mandatory in
+ * `BufferedScanReportInformation`. ITU-T Rec. X.738
+ * (11/93)
+ * [§8.2.2.3.4](https://www.itu.int/rec/T-REC-X.738-199311-I),
+ * A.4, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
