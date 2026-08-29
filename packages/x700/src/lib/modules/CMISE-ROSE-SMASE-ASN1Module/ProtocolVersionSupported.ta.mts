@@ -19,6 +19,14 @@ import {
  * @summary ProtocolVersionSupported
  * @description
  *
+ * Syntax of the X.727 `protocolVersionSupported` attribute
+ * (`{crsAttribute 7}`) on `cmise`. CMIP protocol version from
+ * CMIP-A-ASSOCIATE (X.711): integer values equal the version
+ * number (1 = version 1, 2 = version 2). ITU-T Rec. X.727
+ * (03/99)
+ * [§7.7](https://www.itu.int/rec/T-REC-X.727-199903-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

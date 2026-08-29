@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InvokeIdsPerforming
  * @description
  *
+ * Syntax of the X.727 `invokeIdsPerforming` attribute
+ * (`{crsAttribute 6}`) on `cmiseInvocation`: invoke ids
+ * received in confirmed mode for which a confirmation has not
+ * yet been sent. ITU-T Rec. X.727 (03/99)
+ * [§6.4](https://www.itu.int/rec/T-REC-X.727-199903-I),
+ * §7.6, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CmipPduType
  * @description
  *
+ * Named bits identifying CMIP PDUs (and ROSE errors) that a
+ * CMISE implementation may send or receive. Used as the
+ * syntax of `cmipPduSendingSupport` and
+ * `cmipPduReceivingSupport`. Bits 1–21 are CMIP operation
+ * PDUs (m-Get/Set/Action/Delete/Create/Event-Report/
+ * CancelGet invoke, result, and linked-reply as applicable).
+ * Bits 22–45 are CMIP ROSE error PDUs (`*-roer`). Bit 46 is
+ * `rosReject`. ITU-T Rec. X.727 (03/99)
+ * [§6.2](https://www.itu.int/rec/T-REC-X.727-199903-I),
+ * §7.1–§7.2, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

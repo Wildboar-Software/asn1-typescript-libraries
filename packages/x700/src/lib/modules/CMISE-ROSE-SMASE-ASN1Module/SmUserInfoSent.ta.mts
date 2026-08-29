@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SmUserInfoSent
  * @description
  *
+ * Syntax of the X.727 `smUserInfoSent` attribute
+ * (`{crsAttribute 11}`) on `smaseInvocation`: systems
+ * management user information sent in SMASE-A-ASSOCIATE.
+ * `nothingSent` if nothing was sent; otherwise
+ * `informationSent`. ITU-T Rec. X.727 (03/99)
+ * [§6.3](https://www.itu.int/rec/T-REC-X.727-199903-I),
+ * §7.11, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

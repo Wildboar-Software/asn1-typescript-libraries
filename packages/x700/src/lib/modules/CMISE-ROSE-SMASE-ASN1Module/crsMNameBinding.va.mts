@@ -16,6 +16,12 @@ import {
  * @summary crsMNameBinding
  * @description
  *
+ * Registration arc for X.727 name bindings:
+ * `{joint-iso-ccitt ms(9) smi(3) part9(9) nameBinding(6)}`.
+ * Annex A does not assign a name-binding under this arc.
+ * ITU-T Rec. X.727 (03/99)
+ * [Annex A](https://www.itu.int/rec/T-REC-X.727-199903-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

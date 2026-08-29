@@ -19,6 +19,12 @@ import {
  * @summary CmipPduReceivingSupport
  * @description
  *
+ * Syntax of the X.727 `cmipPduReceivingSupport` attribute
+ * (`{crsAttribute 1}`) on `cmise`: CMIP PDU types supported
+ * for receiving. ITU-T Rec. X.727 (03/99)
+ * [§7.1](https://www.itu.int/rec/T-REC-X.727-199903-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

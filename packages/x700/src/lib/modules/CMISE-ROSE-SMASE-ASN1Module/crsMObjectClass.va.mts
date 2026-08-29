@@ -16,6 +16,17 @@ import {
  * @summary crsMObjectClass
  * @description
  *
+ * Registration arc for X.727 managed object classes:
+ * `{joint-iso-ccitt ms(9) smi(3) part9(9)
+ * managedObjectClass(3)}`. Assigned values (Annex A):
+ * 1 `cmise` (CMISE ASE capabilities, including ROSE),
+ * 2 `smaseInvocation` (SMASE invocation's view of the
+ * association), 3 `cmiseInvocation` (CMISE invocation's view
+ * of the association). The `smase` class is registered as
+ * `{crsMObjectClass x}` in the published text. ITU-T Rec.
+ * X.727 (03/99)
+ * [§6](https://www.itu.int/rec/T-REC-X.727-199903-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

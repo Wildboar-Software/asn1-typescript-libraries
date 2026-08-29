@@ -20,6 +20,14 @@ import {
  * @summary SmaseFunctionalUnits
  * @description
  *
+ * Syntax of X.727 attributes `smaseFunctionalUnitsSelected`
+ * (`{crsAttribute 8}`, on `smaseInvocation`) and
+ * `smaseFunctionalUnitsSupported` (`{crsAttribute 9}`, on
+ * `smase`). Set of SMASE functional-unit packages. ITU-T Rec.
+ * X.727 (03/99)
+ * [§7.8](https://www.itu.int/rec/T-REC-X.727-199903-I)–§7.9,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

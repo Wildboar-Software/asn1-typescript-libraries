@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SmUserInfoReceived
  * @description
  *
+ * Syntax of the X.727 `smUserInfoReceived` attribute
+ * (`{crsAttribute 10}`) on `smaseInvocation`: systems
+ * management user information received in SMASE-A-ASSOCIATE.
+ * `nothingReceived` if nothing was received; otherwise
+ * `informationReceived`. ITU-T Rec. X.727 (03/99)
+ * [§6.3](https://www.itu.int/rec/T-REC-X.727-199903-I),
+ * §7.10, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
