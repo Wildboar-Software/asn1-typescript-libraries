@@ -24,6 +24,13 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary supportsMKMglobalNames
  * @description
  *
+ * Whether the SMAE can handle global managed object names as defined
+ * in X.750 (construction from Directory distinguished names of the
+ * managed system). Optional on `sMASE`; single-valued. ITU-T Rec.
+ * X.750 (10/96)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * §7.2.1, B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

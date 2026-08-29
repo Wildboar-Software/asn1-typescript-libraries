@@ -15,6 +15,12 @@ import {
  * @summary mkmDirectoryNameForm
  * @description
  *
+ * Arc for MKM Directory name forms. Allocation 1 is
+ * `registeredInformationNameForm` (`commonName` = last OID arc of the
+ * registered information object). ITU-T Rec. X.750 (10/96)
+ * [A.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

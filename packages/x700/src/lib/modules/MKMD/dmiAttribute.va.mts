@@ -15,6 +15,11 @@ import {
  * @summary dmiAttribute
  * @description
  *
+ * X.721 DMI attribute OID arc, aliased by MKM for MOCS tables that
+ * cite `objectClass`, `nameBinding`, `packages`, and `allomorphs`.
+ * ITU-T Rec. X.750 (10/96)
+ * [A.1](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

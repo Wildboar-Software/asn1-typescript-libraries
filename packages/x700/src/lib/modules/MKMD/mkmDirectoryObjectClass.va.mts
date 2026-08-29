@@ -15,6 +15,14 @@ import {
  * @summary mkmDirectoryObjectClass
  * @description
  *
+ * Arc for MKM Directory object classes. Repertoire: 1 `cMISE`;
+ * 2 `sMASE`. Definition: 3 registeredInformation; 4 managementDocument;
+ * 5 managementTemplate; 6–15 GDMO/ASN.1 template auxiliaries. GRM
+ * (Amd.1): 16 managementRelationshipClass;
+ * 17 managementRelationshipMapping. ITU-T Rec. X.750 (10/96)
+ * [A.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.1–B.2; Amd.1 (10/97) B.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

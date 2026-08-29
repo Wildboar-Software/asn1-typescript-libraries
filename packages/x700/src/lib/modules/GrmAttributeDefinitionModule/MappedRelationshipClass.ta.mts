@@ -19,6 +19,13 @@ import {
  * @summary MappedRelationshipClass
  * @description
  *
+ * GRM `RELATIONSHIP CLASS` construct: label of the managed
+ * relationship class this mapping is related to. ITU-T Rec. X.750
+ * Amd.1 (10/97)
+ * [§8.1.2.13](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95)
+ * [A.2.3.1](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

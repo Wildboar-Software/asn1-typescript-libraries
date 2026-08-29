@@ -15,6 +15,12 @@ import {
  * @summary mkmAction
  * @description
  *
+ * Arc for MKM actions. Allocations: 1 `mITSearch` (instance
+ * knowledge); 2 `getTextualRepresentation` (definition knowledge).
+ * ITU-T Rec. X.750 (10/96)
+ * [A.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * §8.3, A.3.4, A.4.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

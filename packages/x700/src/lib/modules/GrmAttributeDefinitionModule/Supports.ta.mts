@@ -19,6 +19,13 @@ import {
  * @summary Supports
  * @description
  *
+ * GRM `SUPPORTS` construct: relationship management operations and
+ * notifications the managed relationship supports. ITU-T Rec. X.750
+ * Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95)
+ * [A.1.3.3](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -25,6 +25,11 @@ import {
  * @summary LabelAndParameters
  * @description
  *
+ * Template label (attribute, action, or notification) plus optional
+ * parameter labels associated with a systems management operation.
+ * ITU-T Rec. X.725 (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,21 @@ export class LabelAndParameters {
     constructor(
         /**
          * @summary `label`.
+         * @description
+         *
+         * Attribute, action, or notification label of the mapped
+         * operation. ITU-T Rec. X.725 (11/95) A.2.3.5.
          * @public
          * @readonly
          */
         readonly label: TemplateLabel,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Parameter labels associated with the systems management
+         * operation or notification. ITU-T Rec. X.725 (11/95)
+         * A.2.3.5.
          * @public
          * @readonly
          */

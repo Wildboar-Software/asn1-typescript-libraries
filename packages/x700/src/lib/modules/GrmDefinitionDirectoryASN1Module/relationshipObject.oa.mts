@@ -26,6 +26,12 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary relationshipObject
  * @description
  *
+ * Class of a relationship object that shall represent the managed
+ * relationship (GRM `RELATIONSHIP OBJECT`). Single-valued. ITU-T Rec.
+ * X.750 Amd.1 (10/97)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199710-I);
+ * X.725 (11/95) A.2.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

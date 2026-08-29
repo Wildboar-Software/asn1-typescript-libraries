@@ -25,6 +25,12 @@ import {
  * @summary RDNInfo
  * @description
  *
+ * Relative distinguished name of a discovered managed object, with
+ * optional class when the MIT-search request set `classRequest`.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.3.2.4](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * A.4.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,20 @@ export class RDNInfo {
     constructor(
         /**
          * @summary `rdn`.
+         * @description
+         *
+         * RDN that identifies this object relative to its superior in
+         * the discovered tree. ITU-T Rec. X.750 (10/96) §8.3.2.4.
          * @public
          * @readonly
          */
         readonly rdn: RelativeDistinguishedName,
         /**
          * @summary `moClass`.
+         * @description
+         *
+         * Class of this object. Present when `classRequest` was true.
+         * ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
          * @public
          * @readonly
          */

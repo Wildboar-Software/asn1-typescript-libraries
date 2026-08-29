@@ -26,6 +26,11 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary supportedSmaseFunctionalUnits
  * @description
  *
+ * SMASE functional units, and in which roles, the SMAE supports.
+ * Mandatory on `sMASE`. ITU-T Rec. X.750 (10/96)
+ * [§8.6.1](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * B.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

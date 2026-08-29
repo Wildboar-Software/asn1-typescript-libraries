@@ -24,6 +24,13 @@ import {
  * @summary RelationshipOperation
  * @description
  *
+ * GRM relationship management operation or notification in an
+ * `OPERATIONS MAPPING`: ESTABLISH, TERMINATE, QUERY, NOTIFY,
+ * USER DEFINED, BIND, or UNBIND. BIND/UNBIND/QUERY carry an optional
+ * role name. Names shall be those defined in the related relationship
+ * class template. ITU-T Rec. X.725 (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

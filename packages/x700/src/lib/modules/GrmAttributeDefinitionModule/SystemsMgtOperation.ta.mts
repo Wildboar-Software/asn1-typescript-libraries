@@ -29,6 +29,12 @@ import {
  * @summary SystemsMgtOperation
  * @description
  *
+ * Systems management operation or notification a relationship
+ * operation maps to: GET/REPLACE/ADD/REMOVE of an attribute, CREATE
+ * of a class, DELETE, ACTION, or NOTIFICATION, each with optional
+ * parameter labels. ITU-T Rec. X.725 (11/95)
+ * [A.2.3.5](https://www.itu.int/rec/T-REC-X.725-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
