@@ -44,6 +44,14 @@ import { noSuchAttribute } from '../CMIP-1/noSuchAttribute.oa.mjs';
  * @summary m_Create
  * @description
  *
+ * Confirmed M-CREATE (ROSE local:8). Single response
+ * (no linked replies). If the instance was omitted from
+ * the argument, `CreateResult.managedObjectInstance`
+ * shall be returned. Result is optional; conditions in
+ * ITU-T Rec. X.710 §8.3.4.1.3. ITU-T Rec. X.711 (10/97)
+ * [§6.7](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 4, §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -29,6 +29,17 @@ import {
  * @summary CMIPUserInfo
  * @description
  *
+ * CMIP user information in the ACSE A-ASSOCIATE
+ * `user information` parameter (`EXTERNAL`). The initiator
+ * sets a bit for each protocol version it supports; the
+ * responder does the same. The agreed version is the
+ * highest number both CMIPMs support. Agreed functional
+ * units are those both CMISE-service-users indicated.
+ * Unknown tagged values and unknown BIT STRING names
+ * shall be ignored. ITU-T Rec. X.711 (10/97)
+ * [§7.3.1](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.5.1.1, Annex A.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,24 +56,50 @@ export class CMIPUserInfo {
   constructor(
     /**
      * @summary `protocolVersion`.
+     * @description
+     *
+     * Versions this CMIPM supports. Default `{version1}`.
+     * X.711 §5.4 defines version 2, which replaces version
+     * 1; this Recommendation does not define interworking
+     * between them. X.711 §7.3.1, Annex A.2.
+     *
      * @public
      * @readonly
      */
     readonly protocolVersion?: OPTIONAL<ProtocolVersion>,
     /**
      * @summary `functionalUnits`.
+     * @description
+     *
+     * Functional units this CMISE-service-user supports.
+     * Default `{}` (kernel only). Bit `i` is one iff unit
+     * `i` is supported. X.711 §7.3.1.
+     *
      * @public
      * @readonly
      */
     readonly functionalUnits?: OPTIONAL<FunctionalUnits>,
     /**
      * @summary `accessControl`.
+     * @description
+     *
+     * Optional access-control value from the CMISE-service-
+     * user. The responder verifies it; failure rejects the
+     * association (`rejected by responder (permanent)`).
+     * Encoding of further user information is not defined
+     * here. X.711 §7.3.1, Annex A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly accessControl?: OPTIONAL<EXTERNAL>,
     /**
      * @summary `userInfo`.
+     * @description
+     *
+     * Additional CMISE-service-user information. Encoding
+     * is not defined by X.711. X.711 §7.3.1.
+     *
      * @public
      * @readonly
      */

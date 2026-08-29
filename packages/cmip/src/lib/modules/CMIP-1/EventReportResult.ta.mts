@@ -32,6 +32,11 @@ import {
  * @summary EventReportResult
  * @description
  *
+ * Confirmed M-EVENT-REPORT response. Result is optional.
+ * ITU-T Rec. X.711 (10/97)
+ * [§6.3.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,24 +54,40 @@ export class EventReportResult {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the object that emitted the event.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass?: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Instance that emitted the event.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
+     * @description
+     *
+     * Time associated with this result, if supplied.
+     *
      * @public
      * @readonly
      */
     readonly currentTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `eventReply`.
+     * @description
+     *
+     * Event type and optional reply information.
+     *
      * @public
      * @readonly
      */

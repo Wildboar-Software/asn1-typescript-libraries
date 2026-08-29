@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CMISSync
  * @description
  *
+ * Synchronization of a scoped operation over multiple
+ * objects. Default in Get/Set/Action/Delete arguments is
+ * `bestEffort`. Unsupported values yield
+ * `syncNotSupported`. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +68,10 @@ export const CMISSync = _enum_for_CMISSync;
 
 /**
  * @summary CMISSync_bestEffort
+ * @description
+ *
+ * Default synchronization. X.711 §7.4.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +90,11 @@ export const bestEffort: CMISSync =
 
 /**
  * @summary CMISSync_atomic
+ * @description
+ *
+ * Atomic synchronization. Unsupported values yield
+ * `syncNotSupported`. X.711 §7.4.
+ *
  * @constant
  * @type {number}
  */

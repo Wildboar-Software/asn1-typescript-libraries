@@ -26,6 +26,11 @@ import {
  * @summary noSuchEventType
  * @description
  *
+ * ROSE error local:13. Parameter names the class and
+ * unknown event type. Used by confirmed M-EVENT-REPORT.
+ * ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

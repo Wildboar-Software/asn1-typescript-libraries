@@ -26,6 +26,12 @@ import {
  * @summary m_Action
  * @description
  *
+ * Non-confirmed M-ACTION (ROSE local:6). No result and
+ * no linked replies. Confirmed mode uses
+ * `m-Action-Confirmed`. ITU-T Rec. X.711 (10/97)
+ * [§6.6](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 1, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

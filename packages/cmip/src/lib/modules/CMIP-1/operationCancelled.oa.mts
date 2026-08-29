@@ -21,6 +21,13 @@ import type { ERROR } from '@wildboar/rose';
  * @summary operationCancelled
  * @description
  *
+ * ROSE error local:23. No parameter. After a successful
+ * `m-CancelGet`, the performer issues an M-GET response
+ * with this error and stops linked replies. ITU-T Rec.
+ * X.711 (10/97)
+ * [§6.4.5.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

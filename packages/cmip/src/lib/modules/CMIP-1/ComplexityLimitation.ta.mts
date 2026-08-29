@@ -28,6 +28,12 @@ import {
  * @summary ComplexityLimitation
  * @description
  *
+ * Optional parameter of `complexityLimitation` (ROSE
+ * local:20). Names the scope, filter, and/or
+ * synchronization the performer cannot handle together.
+ * ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,18 +50,31 @@ export class ComplexityLimitation {
   constructor(
     /**
      * @summary `scope`.
+     * @description
+     *
+     * Scope that exceeded performer capability, if any.
+     *
      * @public
      * @readonly
      */
     readonly scope?: OPTIONAL<Scope>,
     /**
      * @summary `filter`.
+     * @description
+     *
+     * Filter that exceeded performer capability, if any.
+     *
      * @public
      * @readonly
      */
     readonly filter?: OPTIONAL<CMISFilter>,
     /**
      * @summary `sync`.
+     * @description
+     *
+     * Synchronization that exceeded performer capability,
+     * if any.
+     *
      * @public
      * @readonly
      */

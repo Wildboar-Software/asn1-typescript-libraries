@@ -23,6 +23,10 @@ export enum _enum_for_AttributeIdError_errorStatus {
  * @summary AttributeIdError_errorStatus
  * @description
  *
+ * Per-attribute get failure: `accessDenied` (2) or
+ * `noSuchAttribute` (5). ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

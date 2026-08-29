@@ -33,6 +33,12 @@ import {
  * @summary AttributeError
  * @description
  *
+ * Per-attribute failure in a set. `modifyOperator` is
+ * present for `invalidOperator` and `invalidOperation`.
+ * `attributeValue` is absent for `setToDefault`. ITU-T
+ * Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,24 +62,44 @@ export class AttributeError {
   constructor(
     /**
      * @summary `errorStatus`.
+     * @description
+     *
+     * Which attribute-level error occurred. Numeric values
+     * match the corresponding ROSE error codes where they
+     * exist (`accessDenied` 2, `noSuchAttribute` 5,
+     * `invalidAttributeValue` 6).
+     *
      * @public
      * @readonly
      */
     readonly errorStatus: AttributeError_errorStatus,
     /**
      * @summary `modifyOperator`.
+     * @description
+     *
+     * Present when `errorStatus` is `invalidOperator` or
+     * `invalidOperation`.
+     *
      * @public
      * @readonly
      */
     readonly modifyOperator: OPTIONAL<ModifyOperator>,
     /**
      * @summary `attributeId`.
+     * @description
+     *
+     * Attribute to which the error applies.
+     *
      * @public
      * @readonly
      */
     readonly attributeId: AttributeId,
     /**
      * @summary `attributeValue`.
+     * @description
+     *
+     * Offending value, if any. Absent for `setToDefault`.
+     *
      * @public
      * @readonly
      */

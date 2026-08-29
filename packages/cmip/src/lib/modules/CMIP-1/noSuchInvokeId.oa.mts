@@ -26,6 +26,12 @@ import {
  * @summary noSuchInvokeId
  * @description
  *
+ * ROSE error local:22. Parameter is the unknown invoke
+ * identifier. Used by M-CANCEL-GET. ITU-T Rec. X.711
+ * (10/97)
+ * [§6.4.5](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

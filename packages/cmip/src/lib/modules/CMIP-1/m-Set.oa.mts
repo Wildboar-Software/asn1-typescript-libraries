@@ -26,6 +26,12 @@ import {
  * @summary m_Set
  * @description
  *
+ * Non-confirmed M-SET (ROSE local:4). No result and no
+ * linked replies. Confirmed mode uses
+ * `m-Set-Confirmed`. ITU-T Rec. X.711 (10/97)
+ * [§6.5](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 1, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

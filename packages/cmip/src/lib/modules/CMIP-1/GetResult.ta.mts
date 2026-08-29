@@ -32,6 +32,13 @@ import {
  * @summary GetResult
  * @description
  *
+ * Successful get of one managed object. Also a
+ * `m-Linked-Reply` alternative. Parent `m-Get` result is
+ * optional; see ITU-T Rec. X.710 §8.3.1.2.8. ITU-T Rec.
+ * X.711 (10/97)
+ * [§6.4.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,24 +56,40 @@ export class GetResult {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the object whose attributes are returned.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass?: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Instance whose attributes are returned.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
+     * @description
+     *
+     * Time associated with this result, if supplied.
+     *
      * @public
      * @readonly
      */
     readonly currentTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `attributeList`.
+     * @description
+     *
+     * Retrieved attribute values.
+     *
      * @public
      * @readonly
      */

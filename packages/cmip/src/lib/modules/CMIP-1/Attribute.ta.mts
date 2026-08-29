@@ -21,6 +21,12 @@ import {
  * @summary Attribute
  * @description
  *
+ * Attribute identifier and value, typed via
+ * `CMIP-ATTRIBUTE` / `AttributeSet`. Used in get/set
+ * results, create, filters, and several error
+ * parameters. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +41,20 @@ export class Attribute {
   constructor(
     /**
      * @summary `id`.
+     * @description
+     *
+     * Attribute identifier (`CMIP-ATTRIBUTE.&id`).
+     *
      * @public
      * @readonly
      */
     readonly id: AttributeId,
     /**
      * @summary `value`.
+     * @description
+     *
+     * Value matching `id` (`CMIP-ATTRIBUTE.&Value`).
+     *
      * @public
      * @readonly
      */

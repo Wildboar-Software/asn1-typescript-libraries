@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CMIP_AVA
  * @description
  *
+ * Information object class for a distinguished-name AVA
+ * (OID plus value type). ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I);
+ * Cor.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,10 +57,12 @@ export interface CMIP_AVA<Value = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
   >;
   /**
    * @summary &id
+   * @description Unique AVA type (OBJECT IDENTIFIER).
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
   /**
    * @summary &Value
+   * @description AVA value ASN.1 type for `&id`.
    */
   readonly '&Value': Value;
 }

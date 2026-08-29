@@ -33,6 +33,12 @@ import {
  * @summary EventReportArgument
  * @description
  *
+ * Argument of `m-EventReport` and
+ * `m-EventReport-Confirmed`. Reports an event on a
+ * single managed object. ITU-T Rec. X.711 (10/97)
+ * [§6.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,30 +58,53 @@ export class EventReportArgument {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the object on which the event occurred.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass: ObjectClass,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Instance on which the event occurred.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance: ObjectInstance,
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time the event occurred, if supplied.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `eventType`.
+     * @description
+     *
+     * Event type (`CMIP-EVENT.&id`). Unknown yields
+     * `noSuchEventType`.
+     *
      * @public
      * @readonly
      */
     readonly eventType: EventTypeId,
     /**
      * @summary `eventInfo`.
+     * @description
+     *
+     * Event-specific information (`CMIP-EVENT.&Value`).
+     * Unknown argument yields `noSuchArgument`; bad value
+     * `invalidArgumentValue`.
+     *
      * @public
      * @readonly
      */

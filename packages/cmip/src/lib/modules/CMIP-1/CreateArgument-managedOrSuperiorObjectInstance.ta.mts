@@ -20,6 +20,12 @@ import {
  * @summary CreateArgument_managedOrSuperiorObjectInstance
  * @description
  *
+ * Either the new instance name or the superior under
+ * which the performer names it. If the instance is
+ * omitted from `CreateArgument`, `CreateResult` shall
+ * return it. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

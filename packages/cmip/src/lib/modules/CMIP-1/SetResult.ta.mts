@@ -32,6 +32,13 @@ import {
  * @summary SetResult
  * @description
  *
+ * Successful set of one managed object. Also a
+ * `m-Linked-Reply` alternative. Parent
+ * `m-Set-Confirmed` result is optional; see ITU-T Rec.
+ * X.710 §8.3.2.2.9. ITU-T Rec. X.711 (10/97)
+ * [§6.5.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,24 +56,40 @@ export class SetResult {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the object that was modified.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass?: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Instance that was modified.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
+     * @description
+     *
+     * Time associated with this result, if supplied.
+     *
      * @public
      * @readonly
      */
     readonly currentTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `attributeList`.
+     * @description
+     *
+     * Resulting attribute values, if returned.
+     *
      * @public
      * @readonly
      */

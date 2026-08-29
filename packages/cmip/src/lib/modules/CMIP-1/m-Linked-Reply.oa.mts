@@ -26,6 +26,14 @@ import {
  * @summary m_Linked_Reply
  * @description
  *
+ * Linked child of confirmed M-GET, M-SET, M-ACTION, and
+ * M-DELETE (ROSE local:2). Each response primitive that
+ * carries a `linkedId` is sent as RO-INVOKE of this
+ * operation; the parent finishes with a response that has
+ * no `linkedId`. ITU-T Rec. X.711 (10/97)
+ * [§6.4.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 4, §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

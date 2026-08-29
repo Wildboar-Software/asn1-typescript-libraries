@@ -26,6 +26,11 @@ import {
  * @summary noSuchArgument
  * @description
  *
+ * ROSE error local:14. Parameter identifies the unknown
+ * action or event argument. Used by confirmed M-ACTION
+ * and M-EVENT-REPORT. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

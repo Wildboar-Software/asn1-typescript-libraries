@@ -27,6 +27,13 @@ import {
  * @summary DeleteResult
  * @description
  *
+ * Successful delete of one managed object. Also a
+ * `m-Linked-Reply` alternative. Parent `m-Delete` result
+ * is optional; see ITU-T Rec. X.710 §8.3.5.2.8. ITU-T
+ * Rec. X.711 (10/97)
+ * [§6.8.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,18 +50,30 @@ export class DeleteResult {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the object that was deleted.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass?: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Instance that was deleted.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
+     * @description
+     *
+     * Time associated with this result, if supplied.
+     *
      * @public
      * @readonly
      */

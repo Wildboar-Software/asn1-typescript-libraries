@@ -27,6 +27,10 @@ import {
  * @summary NoSuchArgument_actionId
  * @description
  *
+ * Unknown action argument: optional class plus action
+ * type. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +42,20 @@ export class NoSuchArgument_actionId {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class on which the unknown argument was used.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass: OPTIONAL<ObjectClass>,
     /**
      * @summary `actionType`.
+     * @description
+     *
+     * Action whose argument is unknown.
+     *
      * @public
      * @readonly
      */

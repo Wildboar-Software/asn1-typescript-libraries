@@ -26,6 +26,10 @@ import {
  * @summary NoSuchAction
  * @description
  *
+ * Parameter of `noSuchAction` (ROSE local:9): class and
+ * unknown action type. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,12 +45,20 @@ export class NoSuchAction {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class on which the unknown action was requested.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass: ObjectClass,
     /**
      * @summary `actionType`.
+     * @description
+     *
+     * Action type that is not defined for the class.
+     *
      * @public
      * @readonly
      */

@@ -26,6 +26,12 @@ import {
  * @summary ActionErrorInfo
  * @description
  *
+ * Why an action failed. Numeric `errorStatus` values
+ * match the ROSE error codes (`accessDenied` 2,
+ * `noSuchAction` 9, `noSuchArgument` 14,
+ * `invalidArgumentValue` 15). ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,12 +53,21 @@ export class ActionErrorInfo {
   constructor(
     /**
      * @summary `errorStatus`.
+     * @description
+     *
+     * Which action-level error occurred.
+     *
      * @public
      * @readonly
      */
     readonly errorStatus: ActionErrorInfo_errorStatus,
     /**
      * @summary `errorInfo`.
+     * @description
+     *
+     * Identifying detail: action type, unknown argument,
+     * or invalid argument value.
+     *
      * @public
      * @readonly
      */

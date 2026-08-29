@@ -20,6 +20,11 @@ import {
  * @summary FilterItem_substrings_Item
  * @description
  *
+ * One substring of a `FilterItem.substrings` test:
+ * prefix (`initialString`), infix (`anyString`), or
+ * suffix (`finalString`). ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

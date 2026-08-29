@@ -20,6 +20,12 @@ import {
  * @summary CMIP_ACTION
  * @description
  *
+ * Information object class for an action type and its
+ * argument/reply ASN.1 type. GDMO templates (ITU-T Rec.
+ * X.722) remain an alternative. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I);
+ * Cor.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,10 +65,12 @@ export interface CMIP_ACTION<
   >;
   /**
    * @summary &id
+   * @description Unique action type (`ActionTypeId`).
    */
   readonly '&id'?: ActionTypeId;
   /**
    * @summary &Value
+   * @description Argument and reply ASN.1 type for `&id`.
    */
   readonly '&Value': Value;
 }

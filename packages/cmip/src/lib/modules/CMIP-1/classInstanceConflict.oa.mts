@@ -26,6 +26,12 @@ import {
  * @summary classInstanceConflict
  * @description
  *
+ * ROSE error local:19. Parameter is the base managed
+ * object (`BaseManagedObjectId`) whose class and instance
+ * conflict. Used by confirmed M-GET, M-SET, M-ACTION,
+ * M-CREATE, and M-DELETE. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

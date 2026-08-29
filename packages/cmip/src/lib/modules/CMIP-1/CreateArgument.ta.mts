@@ -41,6 +41,15 @@ import {
  * @summary CreateArgument
  * @description
  *
+ * Argument of `m-Create`. Names the class to instantiate.
+ * Either the new instance or its superior may be given.
+ * If the instance is omitted, `CreateResult` shall return
+ * it. `referenceObjectInstance` names an object whose
+ * attributes may be copied; unknown yields
+ * `noSuchReferenceObject`. ITU-T Rec. X.711 (10/97)
+ * [§6.7](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -61,30 +70,55 @@ export class CreateArgument {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the managed object to create.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass: ObjectClass,
     /**
      * @summary `managedOrSuperiorObjectInstance`.
+     * @description
+     *
+     * Either the new instance name or the superior under
+     * which the performer names it. If the instance is
+     * omitted here, it shall appear in `CreateResult`.
+     *
      * @public
      * @readonly
      */
     readonly managedOrSuperiorObjectInstance?: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>,
     /**
      * @summary `accessControl`.
+     * @description
+     *
+     * Optional CMIS access-control, carried as `EXTERNAL`.
+     *
      * @public
      * @readonly
      */
     readonly accessControl?: OPTIONAL<AccessControl>,
     /**
      * @summary `referenceObjectInstance`.
+     * @description
+     *
+     * Existing instance whose attribute values may be used
+     * as a template. Unknown yields
+     * `noSuchReferenceObject`.
+     *
      * @public
      * @readonly
      */
     readonly referenceObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `attributeList`.
+     * @description
+     *
+     * Attribute values for the new instance. Missing
+     * required values yield `missingAttributeValue`.
+     *
      * @public
      * @readonly
      */

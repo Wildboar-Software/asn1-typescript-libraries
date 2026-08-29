@@ -15,6 +15,12 @@ import { type CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.mjs';
  * @summary ActionSet
  * @description
  *
+ * Extensible set of `CMIP-ACTION` objects used to
+ * constrain action type and value fields. Empty here;
+ * populated by the application. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I);
+ * Cor.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

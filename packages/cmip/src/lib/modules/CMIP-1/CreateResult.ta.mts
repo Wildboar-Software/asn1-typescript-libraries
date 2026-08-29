@@ -32,6 +32,13 @@ import {
  * @summary CreateResult
  * @description
  *
+ * Successful M-CREATE. If the instance was omitted from
+ * `CreateArgument`, `managedObjectInstance` shall be
+ * present. Result is optional; see ITU-T Rec. X.710
+ * §8.3.4.1.3. ITU-T Rec. X.711 (10/97)
+ * [§6.7](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,24 +56,41 @@ export class CreateResult {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the created object.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass?: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Created instance. Required if omitted from
+     * `CreateArgument`.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
+     * @description
+     *
+     * Time associated with this result, if supplied.
+     *
      * @public
      * @readonly
      */
     readonly currentTime?: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `attributeList`.
+     * @description
+     *
+     * Attribute values of the created object, if returned.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ModifyOperator
  * @description
  *
+ * How to apply a set modification. Default in
+ * `modificationList` is `replace`. When
+ * `setToDefault`, `attributeValue` is absent. ITU-T Rec.
+ * X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,6 +35,10 @@ export type ModifyOperator = INTEGER;
 
 /**
  * @summary ModifyOperator_replace
+ * @description
+ *
+ * Replace the attribute with `attributeValue`.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +55,10 @@ export const replace: ModifyOperator = ModifyOperator_replace; /* SHORT_NAMED_IN
 
 /**
  * @summary ModifyOperator_addValues
+ * @description
+ *
+ * Add the given values to the attribute.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +75,10 @@ export const addValues: ModifyOperator = ModifyOperator_addValues; /* SHORT_NAME
 
 /**
  * @summary ModifyOperator_removeValues
+ * @description
+ *
+ * Remove the given values from the attribute.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +95,11 @@ export const removeValues: ModifyOperator = ModifyOperator_removeValues; /* SHOR
 
 /**
  * @summary ModifyOperator_setToDefault
+ * @description
+ *
+ * Restore the attribute's default. `attributeValue` is
+ * absent. X.711 §7.4.
+ *
  * @constant
  * @type {number}
  */

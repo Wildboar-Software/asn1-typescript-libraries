@@ -25,6 +25,11 @@ import {
  * @summary GetInfoStatus
  * @description
  *
+ * One element of `GetListError.getInfoList`: either a
+ * retrieved attribute or an `AttributeIdError`. ITU-T
+ * Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

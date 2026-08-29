@@ -61,6 +61,14 @@ import {
  * @summary GetArgument
  * @description
  *
+ * Argument of `m-Get`. Selects attributes of managed
+ * objects in the scoped, filtered set rooted at
+ * `baseManagedObjectInstance`. Default scope is the base
+ * object; default filter is `and:{}`. ITU-T Rec. X.711
+ * (10/97)
+ * [§6.4](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -80,42 +88,75 @@ export class GetArgument implements BaseManagedObjectId {
   constructor(
     /**
      * @summary `baseManagedObjectClass`.
+     * @description
+     *
+     * Class of the base managed object of the scoped set.
+     *
      * @public
      * @readonly
      */
     readonly baseManagedObjectClass: ObjectClass /* REPLICATED_COMPONENT */,
     /**
      * @summary `baseManagedObjectInstance`.
+     * @description
+     *
+     * Instance of the base managed object of the scoped set.
+     *
      * @public
      * @readonly
      */
     readonly baseManagedObjectInstance: ObjectInstance /* REPLICATED_COMPONENT */,
     /**
      * @summary `accessControl`.
+     * @description
+     *
+     * Optional CMIS access-control, carried as `EXTERNAL`.
+     *
      * @public
      * @readonly
      */
     readonly accessControl?: OPTIONAL<AccessControl>,
     /**
      * @summary `synchronization`.
+     * @description
+     *
+     * Default `bestEffort`. Performer may return
+     * `syncNotSupported`.
+     *
      * @public
      * @readonly
      */
     readonly synchronization?: OPTIONAL<CMISSync>,
     /**
      * @summary `scope`.
+     * @description
+     *
+     * Default `namedNumbers:baseObject`. Other values
+     * need the `multipleObjectSelection` functional unit.
+     *
      * @public
      * @readonly
      */
     readonly scope?: OPTIONAL<Scope>,
     /**
      * @summary `filter`.
+     * @description
+     *
+     * Default `and:{}`. Selects among objects in the
+     * scoped set.
+     *
      * @public
      * @readonly
      */
     readonly filter?: OPTIONAL<CMISFilter>,
     /**
      * @summary `attributeIdList`.
+     * @description
+     *
+     * Attribute identifiers to retrieve. X.711 does not
+     * state the meaning of absence; see ITU-T Rec. X.710
+     * for the corresponding CMIS parameter.
+     *
      * @public
      * @readonly
      */

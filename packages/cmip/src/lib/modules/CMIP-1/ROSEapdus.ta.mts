@@ -21,6 +21,16 @@ import {
  * @summary ROSEapdus
  * @description
  *
+ * ROSE APDUs constrained to CMIP operations. Abstract
+ * syntax name `{joint-iso-itu-t ms(9) cmip(1)
+ * cmip-pci(1) abstractSyntax(4)}`, descriptor
+ * `"CMIP-PCI"`. Confirmed operations may be synchronous
+ * or asynchronous (local matter); unconfirmed operations
+ * are asynchronous with outcome not reported. Either
+ * association party may invoke. ITU-T Rec. X.711 (10/97)
+ * [§5.2](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.5; Cor.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

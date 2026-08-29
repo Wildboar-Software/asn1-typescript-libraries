@@ -27,6 +27,11 @@ import {
  * @summary missingAttributeValue
  * @description
  *
+ * ROSE error local:18. Parameter is the set of missing
+ * attribute identifiers. Used by M-CREATE. ITU-T Rec.
+ * X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

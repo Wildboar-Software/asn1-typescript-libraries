@@ -28,6 +28,11 @@ import {
  * @summary SetArgument_modificationList_Item
  * @description
  *
+ * One set modification. Default operator is `replace`.
+ * Omit `attributeValue` when the operator is
+ * `setToDefault`. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +44,30 @@ export class SetArgument_modificationList_Item {
   constructor(
     /**
      * @summary `modifyOperator`.
+     * @description
+     *
+     * Default `replace`. See `ModifyOperator`.
+     *
      * @public
      * @readonly
      */
     readonly modifyOperator: OPTIONAL<ModifyOperator>,
     /**
      * @summary `attributeId`.
+     * @description
+     *
+     * Attribute to modify (`CMIP-ATTRIBUTE.&id`).
+     *
      * @public
      * @readonly
      */
     readonly attributeId: AttributeId,
     /**
      * @summary `attributeValue`.
+     * @description
+     *
+     * New value. Absent for `setToDefault`.
+     *
      * @public
      * @readonly
      */

@@ -31,6 +31,12 @@ import {
  * @summary ProcessingFailure
  * @description
  *
+ * Optional parameter of `processingFailure` (ROSE
+ * local:10) and a `m-Linked-Reply` alternative. Carries
+ * a `CMIP-SPECIFICERROR` identified by OID. ITU-T Rec.
+ * X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +53,30 @@ export class ProcessingFailure {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the object on which processing failed.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass: ObjectClass,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Instance on which processing failed, if known.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
     /**
      * @summary `specificErrorInfo`.
+     * @description
+     *
+     * Application-specific error (`CMIP-SPECIFICERROR`).
+     *
      * @public
      * @readonly
      */

@@ -22,6 +22,10 @@ import {
  * @summary ActionInfo
  * @description
  *
+ * Action type and optional argument, typed via
+ * `CMIP-ACTION` / `ActionSet`. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +41,21 @@ export class ActionInfo {
   constructor(
     /**
      * @summary `actionType`.
+     * @description
+     *
+     * Action type (`CMIP-ACTION.&id`).
+     *
      * @public
      * @readonly
      */
     readonly actionType: ActionTypeId,
     /**
      * @summary `actionInfoArg`.
+     * @description
+     *
+     * Argument matching `actionType`
+     * (`CMIP-ACTION.&Value`).
+     *
      * @public
      * @readonly
      */

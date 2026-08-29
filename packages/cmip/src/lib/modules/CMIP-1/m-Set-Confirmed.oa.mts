@@ -43,6 +43,14 @@ import { accessDenied } from '../CMIP-1/accessDenied.oa.mjs';
  * @summary m_Set_Confirmed
  * @description
  *
+ * Confirmed M-SET (ROSE local:5). Linked replies carry
+ * `setResult`, `setListError`, or `processingFailure`.
+ * Final response is RO-RESULT or RO-ERROR. Result is
+ * optional; conditions in ITU-T Rec. X.710 §8.3.2.2.9.
+ * ITU-T Rec. X.711 (10/97)
+ * [§6.5](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 4, §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

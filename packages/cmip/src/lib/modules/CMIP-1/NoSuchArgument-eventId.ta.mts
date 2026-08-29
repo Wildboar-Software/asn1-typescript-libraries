@@ -27,6 +27,10 @@ import {
  * @summary NoSuchArgument_eventId
  * @description
  *
+ * Unknown event information: optional class plus event
+ * type. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +42,20 @@ export class NoSuchArgument_eventId {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class on which the unknown event info was used.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass: OPTIONAL<ObjectClass>,
     /**
      * @summary `eventType`.
+     * @description
+     *
+     * Event whose information is unknown.
+     *
      * @public
      * @readonly
      */

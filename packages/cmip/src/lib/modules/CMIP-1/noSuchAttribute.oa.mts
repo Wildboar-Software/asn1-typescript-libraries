@@ -26,6 +26,11 @@ import {
  * @summary noSuchAttribute
  * @description
  *
+ * ROSE error local:5. Parameter is the unknown
+ * `AttributeId`. Used by M-CREATE. ITU-T Rec. X.711
+ * (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

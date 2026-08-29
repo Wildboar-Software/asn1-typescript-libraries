@@ -29,6 +29,15 @@ import { processingFailure } from '../CMIP-1/processingFailure.oa.mjs';
  * @summary m_CancelGet
  * @description
  *
+ * Confirmed M-CANCEL-GET (ROSE local:10). Argument is
+ * the invoke identifier of the outstanding `m-Get`. On
+ * success the performer stops linked replies and issues
+ * an M-GET response with `operationCancelled`. No result
+ * sequence. Requires the `cancelGet` functional unit and
+ * M-GET. ITU-T Rec. X.711 (10/97)
+ * [§6.4.5](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 4, §8.1 h).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

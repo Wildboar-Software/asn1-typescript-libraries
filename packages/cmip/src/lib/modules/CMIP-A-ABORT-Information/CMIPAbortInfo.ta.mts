@@ -23,6 +23,15 @@ import {
  * @summary CMIPAbortInfo
  * @description
  *
+ * CMIP user information in the ACSE A-ABORT
+ * `user information` parameter. Omitted if the underlying
+ * service cannot convey unlimited A-ABORT user data.
+ * On a protocol error the CMIPM sets `abortSource` to
+ * `cmiseServiceProvider` and aborts. ITU-T Rec. X.711
+ * (10/97)
+ * [§6.10](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.3.2, Annex A.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +46,23 @@ export class CMIPAbortInfo {
   constructor(
     /**
      * @summary `abortSource`.
+     * @description
+     *
+     * `cmiseServiceUser` on a user-initiated A-ABORT;
+     * `cmiseServiceProvider` when the CMIPM detects a
+     * protocol error. X.711 Annex A.4.1, A.4.4.
+     *
      * @public
      * @readonly
      */
     readonly abortSource: CMIPAbortSource,
     /**
      * @summary `userInfo`.
+     * @description
+     *
+     * Additional CMISE-service-user information. Encoding
+     * is not defined by X.711. X.711 §7.3.2.
+     *
      * @public
      * @readonly
      */

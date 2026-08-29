@@ -26,6 +26,13 @@ import {
  * @summary processingFailure
  * @description
  *
+ * ROSE error local:10. Parameter `ProcessingFailure` is
+ * optional in the ROSE APDU. Also a linked-reply
+ * alternative for M-GET, M-SET, M-ACTION, and M-DELETE.
+ * ITU-T Rec. X.711 (10/97)
+ * [§6.4.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

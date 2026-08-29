@@ -25,6 +25,11 @@ import {
  * @summary NoSuchArgument
  * @description
  *
+ * Parameter of `noSuchArgument` (ROSE local:14): unknown
+ * action argument (`actionId`) or unknown event
+ * information (`eventId`). ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

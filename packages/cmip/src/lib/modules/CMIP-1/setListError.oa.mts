@@ -26,6 +26,13 @@ import {
  * @summary setListError
  * @description
  *
+ * ROSE error local:8. Parameter `SetListError` reports
+ * per-attribute set failures (`SetInfoStatus`). Used by
+ * confirmed M-SET, including as a linked-reply
+ * alternative. ITU-T Rec. X.711 (10/97)
+ * [§6.5.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

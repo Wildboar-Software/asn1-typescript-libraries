@@ -20,6 +20,12 @@ import {
  * @summary CMIP_ATTRIBUTE
  * @description
  *
+ * Information object class for an attribute identifier
+ * and its value ASN.1 type. GDMO templates (ITU-T Rec.
+ * X.722) remain an alternative. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I);
+ * Cor.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,10 +69,12 @@ export interface CMIP_ATTRIBUTE<
   >;
   /**
    * @summary &id
+   * @description Unique attribute identifier (`AttributeId`).
    */
   readonly '&id'?: AttributeId;
   /**
    * @summary &Value
+   * @description Value ASN.1 type for `&id`.
    */
   readonly '&Value': Value;
 }

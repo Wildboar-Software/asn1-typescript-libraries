@@ -33,6 +33,12 @@ import {
  * @summary DeleteError
  * @description
  *
+ * Failed delete of one object. Also a `m-Linked-Reply`
+ * alternative. `deleteErrorInfo` is currently only
+ * `accessDenied` (2). ITU-T Rec. X.711 (10/97)
+ * [§6.8.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,24 +57,40 @@ export class DeleteError {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the object that could not be deleted.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Instance that could not be deleted.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
+     * @description
+     *
+     * Time associated with this error, if supplied.
+     *
      * @public
      * @readonly
      */
     readonly currentTime: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `deleteErrorInfo`.
+     * @description
+     *
+     * Currently only `accessDenied` (2); extensible.
+     *
      * @public
      * @readonly
      */

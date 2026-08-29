@@ -44,6 +44,16 @@ import { accessDenied } from '../CMIP-1/accessDenied.oa.mjs';
  * @summary m_Get
  * @description
  *
+ * Confirmed M-GET (ROSE local:3). Invoked from an M-GET
+ * request; the performer issues an M-GET indication.
+ * Zero or more linked replies (`m-Linked-Reply` with
+ * `getResult`, `getListError`, or `processingFailure`)
+ * may precede the final RO-RESULT or RO-ERROR. Result is
+ * optional; conditions in ITU-T Rec. X.710 §8.3.1.2.8.
+ * Cancel with `m-CancelGet`. ITU-T Rec. X.711 (10/97)
+ * [§6.4](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 4, §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

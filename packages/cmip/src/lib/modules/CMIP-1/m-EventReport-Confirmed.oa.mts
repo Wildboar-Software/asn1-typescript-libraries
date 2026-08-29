@@ -38,6 +38,12 @@ import { noSuchArgument } from '../CMIP-1/noSuchArgument.oa.mjs';
  * @summary m_EventReport_Confirmed
  * @description
  *
+ * Confirmed M-EVENT-REPORT (ROSE local:1). Single
+ * response (no linked replies). Result is optional.
+ * ITU-T Rec. X.711 (10/97)
+ * [§6.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 4, §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

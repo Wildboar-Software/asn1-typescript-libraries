@@ -25,6 +25,12 @@ export enum _enum_for_ActionErrorInfo_errorStatus {
  * @summary ActionErrorInfo_errorStatus
  * @description
  *
+ * Action-level error. Values match ROSE error codes:
+ * `accessDenied` 2, `noSuchAction` 9, `noSuchArgument`
+ * 14, `invalidArgumentValue` 15. ITU-T Rec. X.711
+ * (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

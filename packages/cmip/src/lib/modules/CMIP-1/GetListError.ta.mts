@@ -32,6 +32,13 @@ import {
  * @summary GetListError
  * @description
  *
+ * Partial or failed get of one object: a mix of
+ * attribute values and `AttributeIdError`s. ROSE error
+ * local:7; also a `m-Linked-Reply` alternative. ITU-T
+ * Rec. X.711 (10/97)
+ * [§6.4.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,24 +56,41 @@ export class GetListError {
   constructor(
     /**
      * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the object this list applies to.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectClass: OPTIONAL<ObjectClass>,
     /**
      * @summary `managedObjectInstance`.
+     * @description
+     *
+     * Instance this list applies to.
+     *
      * @public
      * @readonly
      */
     readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
     /**
      * @summary `currentTime`.
+     * @description
+     *
+     * Time associated with this error, if supplied.
+     *
      * @public
      * @readonly
      */
     readonly currentTime: OPTIONAL<GeneralizedTime>,
     /**
      * @summary `getInfoList`.
+     * @description
+     *
+     * Per-attribute success (`attribute`) or failure
+     * (`attributeIdError`).
+     *
      * @public
      * @readonly
      */

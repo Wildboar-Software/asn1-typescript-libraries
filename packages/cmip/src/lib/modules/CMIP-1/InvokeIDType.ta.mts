@@ -21,6 +21,13 @@ import {
  * @summary InvokeIDType
  * @description
  *
+ * ROSE invoke identifier excluding `absent`. Argument of
+ * `m-CancelGet` (the invoke id of the `m-Get` to cancel)
+ * and parameter of `noSuchInvokeId`. Maps to the CMIS
+ * invoke identifier. ITU-T Rec. X.711 (10/97)
+ * [§6.2.1](https://www.itu.int/rec/T-REC-X.711-199710-I)
+ * Table 2, §6.4.5, §7.4; Cor.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

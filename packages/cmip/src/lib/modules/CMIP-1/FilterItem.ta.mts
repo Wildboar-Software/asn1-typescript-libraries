@@ -30,6 +30,15 @@ import {
  * @summary FilterItem
  * @description
  *
+ * Atomic filter test. `greaterOrEqual` holds when the
+ * asserted value ≥ the attribute value; `lessOrEqual`
+ * when the asserted value ≤ the attribute value
+ * (X.711 Cor.1). `subsetOf`/`supersetOf` compare set
+ * membership; `nonNullSetIntersection` tests a non-empty
+ * intersection. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * [Cor.1](https://www.itu.int/rec/T-REC-X.711-199710-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

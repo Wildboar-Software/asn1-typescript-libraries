@@ -20,6 +20,12 @@ import {
  * @summary DistinguishedName
  * @description
  *
+ * Directory distinguished name. Cor.2 defines it as
+ * `RDNSequence`. The 1997 text imported it from CCITT
+ * Rec. X.501 (1988). ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Annex D; Cor.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

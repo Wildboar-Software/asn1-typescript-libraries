@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AccessControl
  * @description
  *
+ * CMIS access-control parameter, carried as `EXTERNAL`.
+ * On A-ASSOCIATE the responder verifies it if present.
+ * Encoding of the contained value is not defined by
+ * X.711. ITU-T Rec. X.711 (10/97)
+ * [§7.3.1](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §7.4, Annex A.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

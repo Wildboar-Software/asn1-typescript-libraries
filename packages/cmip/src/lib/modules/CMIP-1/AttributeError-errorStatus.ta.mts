@@ -26,6 +26,13 @@ export enum _enum_for_AttributeError_errorStatus {
  * @summary AttributeError_errorStatus
  * @description
  *
+ * Per-attribute set failure. Values match ROSE error
+ * codes where they exist (`accessDenied` 2,
+ * `noSuchAttribute` 5, `invalidAttributeValue` 6).
+ * `invalidOperation` is 24; `invalidOperator` is 25.
+ * ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -89,6 +96,11 @@ export const invalidAttributeValue: AttributeError_errorStatus = AttributeError_
 
 /**
  * @summary AttributeError_errorStatus_invalidOperation
+ * @description
+ *
+ * Invalid modify operation. `modifyOperator` is present.
+ * X.711 §7.4.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +117,11 @@ export const invalidOperation: AttributeError_errorStatus = AttributeError_error
 
 /**
  * @summary AttributeError_errorStatus_invalidOperator
+ * @description
+ *
+ * Invalid `ModifyOperator`. `modifyOperator` is present.
+ * X.711 §7.4.
+ *
  * @constant
  * @type {number}
  */

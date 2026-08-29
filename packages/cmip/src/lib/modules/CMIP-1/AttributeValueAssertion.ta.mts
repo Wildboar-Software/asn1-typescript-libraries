@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AttributeValueAssertion
  * @description
  *
+ * Attribute type and value used in
+ * `RelativeDistinguishedName`. Typed via `CMIP-AVA` /
+ * `AvaSet`. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +35,20 @@ export class AttributeValueAssertion {
   constructor(
     /**
      * @summary `id`.
+     * @description
+     *
+     * AVA type (`CMIP-AVA.&id`).
+     *
      * @public
      * @readonly
      */
     readonly id: OBJECT_IDENTIFIER,
     /**
      * @summary `value`.
+     * @description
+     *
+     * AVA value (`CMIP-AVA.&Value`).
+     *
      * @public
      * @readonly
      */

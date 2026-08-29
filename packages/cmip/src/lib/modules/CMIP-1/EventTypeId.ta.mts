@@ -18,6 +18,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EventTypeId
  * @description
  *
+ * Event type. `localForm` integers are not allocated by
+ * this Recommendation; their values and meanings are
+ * defined by the application context. ITU-T Rec. X.711
+ * (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

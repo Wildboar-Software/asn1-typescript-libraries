@@ -22,6 +22,10 @@ import {
  * @summary EventReply
  * @description
  *
+ * Event type and optional reply in
+ * `EventReportResult`. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +40,20 @@ export class EventReply {
   constructor(
     /**
      * @summary `eventType`.
+     * @description
+     *
+     * Event type (`CMIP-EVENT.&id`).
+     *
      * @public
      * @readonly
      */
     readonly eventType: EventTypeId,
     /**
      * @summary `eventReplyInfo`.
+     * @description
+     *
+     * Reply matching `eventType` (`CMIP-EVENT.&Value`).
+     *
      * @public
      * @readonly
      */

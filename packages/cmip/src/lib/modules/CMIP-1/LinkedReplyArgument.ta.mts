@@ -60,6 +60,17 @@ import {
  * @summary LinkedReplyArgument
  * @description
  *
+ * Argument of `m-Linked-Reply`. One result or error for
+ * a single object in a scoped operation. M-GET uses
+ * `getResult`/`getListError`/`processingFailure`; M-SET
+ * uses `setResult`/`setListError`/`processingFailure`;
+ * M-ACTION uses `actionResult`/`actionError`/
+ * `processingFailure`; M-DELETE uses `deleteResult`/
+ * `deleteError`/`processingFailure`. ITU-T Rec. X.711
+ * (10/97)
+ * [§6.4.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * §6.5.3, §6.6.3, §6.8.3, §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

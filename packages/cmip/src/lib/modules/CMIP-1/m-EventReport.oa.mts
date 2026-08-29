@@ -26,6 +26,12 @@ import {
  * @summary m_EventReport
  * @description
  *
+ * Non-confirmed M-EVENT-REPORT (ROSE local:0). No
+ * result. Confirmed mode uses
+ * `m-EventReport-Confirmed`. ITU-T Rec. X.711 (10/97)
+ * [§6.3](https://www.itu.int/rec/T-REC-X.711-199710-I),
+ * Table 1, Table 4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

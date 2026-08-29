@@ -26,6 +26,12 @@ import { m_Set_Confirmed } from '../CMIP-1/m-Set-Confirmed.oa.mjs';
  * @summary CMIP_Operations
  * @description
  *
+ * All CMIP ROSE operations, including unconfirmed and
+ * `m-Linked-Reply`. Constrains `ROSEapdus`. ITU-T Rec.
+ * X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I);
+ * Cor.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

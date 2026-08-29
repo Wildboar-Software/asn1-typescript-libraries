@@ -20,6 +20,11 @@ import {
  * @summary CMISFilter
  * @description
  *
+ * Boolean combination of `FilterItem`s over the scoped
+ * set. Default in Get/Set/Action/Delete arguments is
+ * `and:{}`. ITU-T Rec. X.711 (10/97)
+ * [§7.4](https://www.itu.int/rec/T-REC-X.711-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
