@@ -15,6 +15,10 @@ import { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va.mjs";
  * @summary mqvFull_sha1kdf
  * @description
  * 
+ * Full MQV: each party contributes two key pairs (typically static Q1 and
+ * ephemeral Q2) as in §6.2. Shared secret from the MQV primitive of §3.4. ANSI
+ * X9.63 KDF with SHA-1. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §6.2, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

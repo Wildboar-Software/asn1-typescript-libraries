@@ -17,6 +17,10 @@ import { ECCSupplements, _decode_ECCSupplements, _encode_ECCSupplements } from "
  * @summary ECPKSupplements
  * @description
  *
+ * Parameters of `id-ecPublicKeyTypeSupplemented`: domain parameters, allowed
+ * algorithms, and precomputed multiples of the public key to accelerate
+ * operations with that key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,18 +36,30 @@ class ECPKSupplements {
     constructor (
         /**
          * @summary `ecDomain`.
+         * @description
+         *
+         * Domain parameters associated with this public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+         *
          * @public
          * @readonly
          */
         readonly ecDomain: ECDomainParameters,
         /**
          * @summary `eccAlgorithms`.
+         * @description
+         *
+         * Algorithms this key may be used with. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+         *
          * @public
          * @readonly
          */
         readonly eccAlgorithms: ECCAlgorithms,
         /**
          * @summary `eccSupplements`.
+         * @description
+         *
+         * Precomputed multiples of the public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+         *
          * @public
          * @readonly
          */

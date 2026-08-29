@@ -16,6 +16,10 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  * @summary ECDSA_Full_R
  * @description
  *
+ * Alternate ECDSA encoding: ephemeral public point R as an `ECPoint` (not just
+ * `r = x_R mod n`) plus `s`. Aimed at simpler accelerated verification.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +35,20 @@ class ECDSA_Full_R {
     constructor (
         /**
          * @summary `r`.
+         * @description
+         *
+         * Ephemeral public point R itself, not `x_R mod n`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+         *
          * @public
          * @readonly
          */
         readonly r: ECPoint,
         /**
          * @summary `s`.
+         * @description
+         *
+         * The ECDSA `s` integer. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1.3.
+         *
          * @public
          * @readonly
          */

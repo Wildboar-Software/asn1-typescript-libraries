@@ -18,6 +18,10 @@ import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_M
  * @summary ECIESParameters
  * @description
  *
+ * ECIES setup choices of §5.1.1: KDF, symmetric encryption, and MAC. Omitted
+ * components are the recommended defaults for the associated domain parameters
+ * (SEC 1 does not enumerate those defaults). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,18 +38,30 @@ class ECIESParameters {
     constructor (
         /**
          * @summary `kdf`.
+         * @description
+         *
+         * KDF of §3.6 used to expand the ECDH shared secret. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
+         *
          * @public
          * @readonly
          */
         readonly kdf?: OPTIONAL<KeyDerivationFunction>,
         /**
          * @summary `sym`.
+         * @description
+         *
+         * Symmetric cipher of §3.8. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
+         *
          * @public
          * @readonly
          */
         readonly sym?: OPTIONAL<SymmetricEncryption>,
         /**
          * @summary `mac`.
+         * @description
+         *
+         * MAC of §3.7. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
+         *
          * @public
          * @readonly
          */

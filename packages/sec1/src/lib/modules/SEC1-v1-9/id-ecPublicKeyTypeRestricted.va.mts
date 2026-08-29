@@ -15,6 +15,9 @@ import { id_publicKeyType } from "../SEC1-v1-9/id-publicKeyType.va.mjs";
  * @summary id_ecPublicKeyTypeRestricted
  * @description
  * 
+ * EC public key usable only with the algorithms in `ECPKRestrictions`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+ * §C.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

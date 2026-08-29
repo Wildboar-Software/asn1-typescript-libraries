@@ -17,6 +17,10 @@ import { BasisTypes_Union2_Intersection0_Element } from "../SEC1-v1-9/BasisTypes
  * @summary BasisTypes
  * @description
  *
+ * Bases for F_2^m: Gaussian normal (`gnBasis`, NULL; not used in SEC 1
+ * schemes), trinomial (`tpBasis`), pentanomial (`ppBasis`). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §2.1.2,
+ * §C.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

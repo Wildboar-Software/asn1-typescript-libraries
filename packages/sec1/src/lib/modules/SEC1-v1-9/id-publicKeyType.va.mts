@@ -15,6 +15,8 @@ import { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va.mjs";
  * @summary id_publicKeyType
  * @description
  * 
+ * Root of EC public-key type OIDs: `{ ansi-X9-62 keyType(2) }`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

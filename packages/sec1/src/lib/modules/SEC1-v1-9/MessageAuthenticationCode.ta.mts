@@ -15,6 +15,10 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary MessageAuthenticationCode
  * @description
  * 
+ * MAC used inside ECIES (`MACSet`): HMAC with full or half-length tag, or
+ * CMAC-AES-128/192/256 (tag always 128 bits). Provides data-origin
+ * authentication of the ECIES ciphertext. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.7, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

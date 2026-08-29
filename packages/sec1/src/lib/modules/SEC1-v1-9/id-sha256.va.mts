@@ -15,6 +15,9 @@ import { id_sha } from "../SEC1-v1-9/id-sha.va.mjs";
  * @summary id_sha256
  * @description
  * 
+ * SHA-256, 32-octet digest. For ECDSA at a 128-bit security level. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+ * §3.5, §C.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

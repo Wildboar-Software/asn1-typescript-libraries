@@ -17,6 +17,11 @@ import {
  * @summary sha_1
  * @description
  * 
+ * SHA-1 (FIPS 180-2), 20-octet digest. For ECDSA message digests use only for
+ * backwards compatibility: collision attacks are below 80 bits. Collision
+ * resistance is not required for KDF, HMAC, RNG, or verifiable curve
+ * generation. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.5, §C.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

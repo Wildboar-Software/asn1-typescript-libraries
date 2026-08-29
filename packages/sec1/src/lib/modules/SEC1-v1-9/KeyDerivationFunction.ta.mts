@@ -15,6 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary KeyDerivationFunction
  * @description
  * 
+ * A KDF from `KDFSet`. Derives keying data from a shared-secret octet string Z
+ * and optional SharedInfo. Prefer NIST SP 800-56 Concatenation KDF except for
+ * backwards compatibility. TLS-KDF and IKEv2-KDF only with ECDH in those
+ * protocols. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.6, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

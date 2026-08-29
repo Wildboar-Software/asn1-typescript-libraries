@@ -16,6 +16,10 @@ import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
  * @summary ecPublicKeyType
  * @description
  * 
+ * Unrestricted EC public key. OID `id-ecPublicKey` applies to every EC public
+ * key regardless of use (signing, ECDH, MQV, ECIES). Parameters are
+ * `ECDomainParameters`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

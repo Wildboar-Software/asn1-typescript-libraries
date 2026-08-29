@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FieldElement
  * @description
  * 
+ * An element of F_q as an octet string of length `ceil(log2 q / 8)`. For F_p,
+ * the integer in `[0, p-1]` encoded per §2.3.7. For F_2^m, coefficients of the
+ * degree-`< m` polynomial, highest degree on the left. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §2.3.5, §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

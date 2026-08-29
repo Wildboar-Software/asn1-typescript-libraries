@@ -21,6 +21,11 @@ import { ECDSAAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECD
  * @summary ECDSAAlgorithmSet
  * @description
  *
+ * ECDSA algorithm identifiers: SHA-1, the hash recommended for the curve, a
+ * specified `HashAlgorithm`, or SHA-224/256/384/512. ECDSA is a signature
+ * scheme with appendix; it is designed to be existentially unforgeable against
+ * chosen-message attack. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

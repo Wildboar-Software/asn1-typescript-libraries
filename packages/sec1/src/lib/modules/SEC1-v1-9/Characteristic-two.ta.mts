@@ -16,6 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Characteristic_two
  * @description
  *
+ * Characteristic-two field F_2^m: degree `m`, a basis OID, and the defining
+ * polynomial (trinomial or pentanomial) or `NULL` for a normal basis. SEC 1
+ * uses polynomial bases with `m` in {163, 233, 239, 283, 409, 571}. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+ * §2.1.2, §C.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,18 +37,31 @@ class Characteristic_two {
     constructor (
         /**
          * @summary `m`.
+         * @description
+         *
+         * Field size 2^m. SEC 1 uses `m` in {163, 233, 239, 283, 409, 571}. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+         * §2.1.2.
+         *
          * @public
          * @readonly
          */
         readonly m: INTEGER,
         /**
          * @summary `basis`.
+         * @description
+         *
+         * `gnBasis`, `tpBasis`, or `ppBasis`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+         *
          * @public
          * @readonly
          */
         readonly basis: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * `NULL` (normal basis), `Trinomial`, or `Pentanomial`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+         *
          * @public
          * @readonly
          */

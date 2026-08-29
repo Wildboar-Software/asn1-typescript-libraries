@@ -29,6 +29,11 @@ import { ECMQVAlgorithmSet_Union14_Intersection0_Element } from "../SEC1-v1-9/EC
  * @summary ECMQVAlgorithmSet
  * @description
  *
+ * ECMQV variants. Full MQV uses two key pairs per party (static + ephemeral) as
+ * in §6.2. Single-pass is the 1-pass form used with WKT: U already has V's keys
+ * authentically. Generic `ecmqv` leaves details out of band. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.4,
+ * §6.2, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

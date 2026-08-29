@@ -15,6 +15,8 @@ import { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va.mjs";
  * @summary ecdsa_with_Specified
  * @description
  * 
+ * ECDSA with the hash given in the parameters (`HashAlgorithm`). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

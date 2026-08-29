@@ -15,6 +15,10 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary dhSinglePass_stdDH_sha256kdf_scheme
  * @description
  * 
+ * 1-pass ECDH: U already holds V's public key authentically and sends its own
+ * key in one pass. Uses the standard Diffie-Hellman primitive P = d_U Q_V
+ * (§3.3.1); Q_V shall be fully valid. SHA-256 KDF. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §6.1, §5.2, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

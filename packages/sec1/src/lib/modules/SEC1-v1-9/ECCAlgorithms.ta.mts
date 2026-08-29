@@ -15,6 +15,9 @@ import { ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC
  * @summary ECCAlgorithms
  * @description
  *
+ * One or more ECC algorithms (ECDSA, ECDH, ECMQV, ECIES, ECWKT), not
+ * necessarily ordered by preference. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

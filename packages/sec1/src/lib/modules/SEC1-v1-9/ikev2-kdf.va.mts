@@ -15,6 +15,9 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary ikev2_kdf
  * @description
  * 
+ * IKEv2 PRF/KDF (RFC 4306). Use only with ECDH in IKEv2. Parameters are the
+ * hash. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.6, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

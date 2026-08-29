@@ -19,6 +19,11 @@ import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParamet
  * @summary ECPrivateKey
  * @description
  *
+ * An EC private key `d` in `[1, n-1]`. Suitable as PKCS #8
+ * `PrivateKeyInfo.privateKey` with `privateKeyAlgorithm` `id-ecPublicKey`.
+ * Including the public key helps MQV, which computes with Q. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.2,
+ * §C.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,24 +41,43 @@ class ECPrivateKey {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Shall be `ecPrivkeyVer1` (1). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+         *
          * @public
          * @readonly
          */
         readonly version: ECPrivateKey_version,
         /**
          * @summary `privateKey`.
+         * @description
+         *
+         * Unsigned integer d encoded as `ceil(log2 n / 8)` octets per §2.3.7. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+         * §C.4.
+         *
          * @public
          * @readonly
          */
         readonly privateKey: OCTET_STRING,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Domain parameters for this key. Omit or use `implicitCA` if they are known by
+         * other means. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+         *
          * @public
          * @readonly
          */
         readonly parameters?: OPTIONAL<ECDomainParameters>,
         /**
          * @summary `publicKey`.
+         * @description
+         *
+         * Q = dG, encoded as in `SubjectPublicKeyInfo` (BIT STRING holding the
+         * `ECPoint`). Useful for MQV. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+         *
          * @public
          * @readonly
          */

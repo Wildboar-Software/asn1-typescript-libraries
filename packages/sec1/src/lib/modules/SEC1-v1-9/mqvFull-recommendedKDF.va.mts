@@ -15,6 +15,10 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary mqvFull_recommendedKDF
  * @description
  * 
+ * Full MQV: each party contributes two key pairs (typically static Q1 and
+ * ephemeral Q2) as in §6.2. Shared secret from the MQV primitive of §3.4. KDF
+ * is the default for the associated domain parameters. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §6.2, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

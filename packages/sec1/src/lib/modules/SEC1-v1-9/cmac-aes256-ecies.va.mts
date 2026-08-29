@@ -15,6 +15,8 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary cmac_aes256_ecies
  * @description
  * 
+ * CMAC-AES-256 in ECIES. Tag length is always 128 bits. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.7, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

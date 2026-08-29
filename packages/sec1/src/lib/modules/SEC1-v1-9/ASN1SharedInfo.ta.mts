@@ -17,6 +17,10 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary ASN1SharedInfo
  * @description
  *
+ * Optional ASN.1 encoding of KDF `SharedInfo` (§3.6). Use is optional but
+ * removes ambiguity in how SharedInfo fields are concatenated. Example usage is
+ * in RFC 3278. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.6, §C.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,30 +39,51 @@ class ASN1SharedInfo {
     constructor (
         /**
          * @summary `keyInfo`.
+         * @description
+         *
+         * Symmetric algorithm for which the derived key will be used. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+         *
          * @public
          * @readonly
          */
         readonly keyInfo: AlgorithmIdentifier,
         /**
          * @summary `entityUInfo`.
+         * @description
+         *
+         * Additional information about the initiator (e.g. X.501 name or public key).
+         * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+         *
          * @public
          * @readonly
          */
         readonly entityUInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `entityVInfo`.
+         * @description
+         *
+         * Additional information about the responder. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+         *
          * @public
          * @readonly
          */
         readonly entityVInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `suppPubInfo`.
+         * @description
+         *
+         * Additional public information known to both parties. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+         *
          * @public
          * @readonly
          */
         readonly suppPubInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `suppPrivInfo`.
+         * @description
+         *
+         * Additional private information known to both parties. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+         *
          * @public
          * @readonly
          */

@@ -15,6 +15,9 @@ import { id_characteristic_two_basis } from "../SEC1-v1-9/id-characteristic-two-
  * @summary gnBasis
  * @description
  * 
+ * Gaussian normal basis for F_2^m. Parameters `NULL`. SEC 1 lists this OID but
+ * does not use normal bases in its schemes. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

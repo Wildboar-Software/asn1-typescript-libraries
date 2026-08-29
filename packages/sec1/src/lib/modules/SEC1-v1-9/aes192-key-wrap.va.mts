@@ -15,6 +15,8 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary aes192_key_wrap
  * @description
  * 
+ * AES-192 key wrap (NIST / RFC 3394). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.9, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

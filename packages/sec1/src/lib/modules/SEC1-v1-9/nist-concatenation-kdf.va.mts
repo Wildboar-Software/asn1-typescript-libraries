@@ -15,6 +15,10 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary nist_concatenation_kdf
  * @description
  * 
+ * NIST SP 800-56 Concatenation KDF. Preferred KDF except for backwards
+ * compatibility with X9.63, TLS, or IKEv2. Parameters are the hash. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+ * §3.6, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

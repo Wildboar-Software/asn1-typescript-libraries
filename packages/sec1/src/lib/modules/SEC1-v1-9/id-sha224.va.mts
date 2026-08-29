@@ -15,6 +15,9 @@ import { id_sha } from "../SEC1-v1-9/id-sha.va.mjs";
  * @summary id_sha224
  * @description
  * 
+ * SHA-224, 28-octet digest. Collision resistance at most 112 bits; suitable for
+ * ECDSA at about that level. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.5, §C.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

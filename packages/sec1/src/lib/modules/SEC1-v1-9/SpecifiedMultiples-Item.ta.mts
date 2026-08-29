@@ -16,6 +16,9 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  * @summary SpecifiedMultiples_Item
  * @description
  *
+ * One precomputed multiple: the integer scalar and the point `scalar * Q`.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +31,20 @@ class SpecifiedMultiples_Item {
     constructor (
         /**
          * @summary `multiple`.
+         * @description
+         *
+         * Integer scalar k.
+         *
          * @public
          * @readonly
          */
         readonly multiple: INTEGER,
         /**
          * @summary `point`.
+         * @description
+         *
+         * The point kQ.
+         *
          * @public
          * @readonly
          */

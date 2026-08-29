@@ -15,6 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FieldID
  * @description
  *
+ * Identifies a finite field used in elliptic curve domain parameters: an OID
+ * for the field type plus type-specific parameters. Only prime fields and
+ * characteristic-two fields are permitted. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,20 @@ class FieldID {
     constructor (
         /**
          * @summary `fieldType`.
+         * @description
+         *
+         * `prime-field` or `characteristic-two-field`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+         *
          * @public
          * @readonly
          */
         readonly fieldType: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * `Prime-p` or `Characteristic-two`, selected by `fieldType`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+         *
          * @public
          * @readonly
          */

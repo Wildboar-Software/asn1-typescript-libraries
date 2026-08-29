@@ -15,6 +15,10 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary ecwkt_recommendedParameters
  * @description
  * 
+ * Wrapped Key Transport using the KDF and wrap algorithm recommended for the
+ * associated domain parameters. SEC 1 does not enumerate those defaults.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.2, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

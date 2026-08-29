@@ -17,6 +17,9 @@ import {
  * @summary x9_63_scheme
  * @description
  * 
+ * ANS X9.63 scheme arc `{iso(1) member-body(2) us(840) ansi-x9-63(63)
+ * schemes(0)}`. Holds the SHA-1 1-pass ECDH and MQV scheme OIDs. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

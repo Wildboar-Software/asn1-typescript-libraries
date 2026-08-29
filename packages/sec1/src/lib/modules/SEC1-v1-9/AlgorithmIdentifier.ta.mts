@@ -16,6 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AlgorithmIdentifier
  * @description
  *
+ * Algorithm OID plus optional parameters whose type is selected by the OID via
+ * class `ALGORITHM`. Used for public keys, hashes, KDFs, MACs, symmetric
+ * encryption, and scheme identifiers. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +35,21 @@ class AlgorithmIdentifier {
     constructor (
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * Algorithm OID drawn from the governing information object set. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: OBJECT_IDENTIFIER,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Type selected by `algorithm`. Omit when constrained to `NULL`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2,
+         * §C.3.
+         *
          * @public
          * @readonly
          */

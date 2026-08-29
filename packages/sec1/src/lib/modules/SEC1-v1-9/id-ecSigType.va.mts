@@ -15,6 +15,8 @@ import { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va.mjs";
  * @summary id_ecSigType
  * @description
  * 
+ * Root of ECDSA algorithm OIDs: `{ ansi-X9-62 signatures(4) }`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

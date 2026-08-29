@@ -22,6 +22,9 @@ import { SYMENCSet_Union7_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-U
  * @summary SYMENCSet
  * @description
  *
+ * Symmetric ciphers for ECIES only: XOR, 3-key TDES-CBC (24-octet key, IV 0),
+ * AES-128/192/256 in CBC or CTR (IV/ICB 0, not sent). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.8, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

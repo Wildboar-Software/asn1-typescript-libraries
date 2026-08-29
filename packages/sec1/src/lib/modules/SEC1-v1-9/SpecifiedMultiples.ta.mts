@@ -15,6 +15,9 @@ import { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_Speci
  * @summary SpecifiedMultiples
  * @description
  *
+ * Explicit list of `(scalar, point)` pairs, each a multiple of the subject
+ * public key for faster scalar multiplication. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

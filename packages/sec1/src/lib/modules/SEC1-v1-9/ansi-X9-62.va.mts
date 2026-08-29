@@ -17,6 +17,9 @@ import {
  * @summary ansi_X9_62
  * @description
  * 
+ * ANSI X9.62 arc `{iso(1) member-body(2) us(840) 10045}`. Root of
+ * `id-fieldType`, `id-publicKeyType`, and `id-ecSigType`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

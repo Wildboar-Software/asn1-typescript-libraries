@@ -15,6 +15,9 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary id_ecPublicKeyTypeSupplemented
  * @description
  * 
+ * EC public key with algorithm restrictions and supplemental point multiples
+ * (`ECPKSupplements`). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

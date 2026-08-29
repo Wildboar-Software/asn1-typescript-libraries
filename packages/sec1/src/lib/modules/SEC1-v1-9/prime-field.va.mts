@@ -15,6 +15,9 @@ import { id_fieldType } from "../SEC1-v1-9/id-fieldType.va.mjs";
  * @summary prime_field
  * @description
  * 
+ * Identifies a prime field. Parameters are `Prime-p` (the modulus). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+ * §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

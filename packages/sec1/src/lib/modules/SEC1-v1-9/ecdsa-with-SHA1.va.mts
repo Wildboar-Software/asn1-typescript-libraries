@@ -15,6 +15,9 @@ import { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va.mjs";
  * @summary ecdsa_with_SHA1
  * @description
  * 
+ * ECDSA with SHA-1. In X.509/CRLs the parameters shall be absent (or NULL). Use
+ * SHA-1 here only for backwards compatibility. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1, §3.5, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

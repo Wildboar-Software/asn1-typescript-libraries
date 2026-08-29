@@ -15,6 +15,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary KeyWrapFunction
  * @description
  * 
+ * AES key-wrap algorithm (NIST / RFC 3394) used by Wrapped Key Transport. AES
+ * wrap shall be used when wrapping with AES. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.9, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

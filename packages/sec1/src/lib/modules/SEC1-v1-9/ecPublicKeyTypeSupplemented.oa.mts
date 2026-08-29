@@ -16,6 +16,9 @@ import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
  * @summary ecPublicKeyTypeSupplemented
  * @description
  * 
+ * EC public key with algorithm restrictions and precomputed multiples
+ * (`ECPKSupplements`) for faster public-key ops. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

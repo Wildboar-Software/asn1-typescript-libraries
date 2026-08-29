@@ -16,6 +16,10 @@ import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../
  * @summary ECPKRestrictions
  * @description
  *
+ * Parameters of `id-ecPublicKeyTypeRestricted`: domain parameters plus the ECC
+ * algorithms this public key may be used with, optionally in preference order.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +35,21 @@ class ECPKRestrictions {
     constructor (
         /**
          * @summary `ecDomain`.
+         * @description
+         *
+         * Domain parameters associated with this public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+         *
          * @public
          * @readonly
          */
         readonly ecDomain: ECDomainParameters,
         /**
          * @summary `eccAlgorithms`.
+         * @description
+         *
+         * Algorithms this key may be used with, optionally in preference order.
+         * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+         *
          * @public
          * @readonly
          */

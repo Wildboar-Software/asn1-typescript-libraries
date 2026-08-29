@@ -17,6 +17,10 @@ import {
  * @summary id_sha
  * @description
  * 
+ * NIST hash-algorithm arc `{joint-iso-itu-t(2) country(16) us(840)
+ * organization(1) gov(101) csor(3) nistalgorithm(4) hashalgs(2)}`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+ * §C.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

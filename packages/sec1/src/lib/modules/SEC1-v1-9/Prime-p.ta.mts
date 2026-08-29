@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Prime_p
  * @description
  * 
+ * Prime modulus `p` of the field F_p. An odd prime; field elements are integers
+ * in `[0, p-1]`. SEC 1 prefers `ceil(log2 p)` in {192, 224, 256, 384, 521}.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §2.1.1, §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

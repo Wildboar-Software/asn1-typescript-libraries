@@ -17,6 +17,11 @@ import { SpecifiedECDomain, _decode_SpecifiedECDomain, _encode_SpecifiedECDomain
  * @summary ECDomainParameters
  * @description
  *
+ * How EC domain parameters are carried in certificates and keys: fully
+ * specified, a named-curve OID from `SECGCurveNames` (see SEC 2), or
+ * `implicitCA` meaning the same parameters as the certifying CA. Recommended
+ * for X.509 following RFC 3279 / RFC 5480. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary ECCAlgorithm
  * @description
  * 
+ * Identifies one ECC scheme from `ECCAlgorithmSet`. Omit parameters when they
+ * are `NULL`; otherwise they shall be present. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -27,6 +27,11 @@ import { ECDHAlgorithmSet_Union12_Intersection0_Element } from "../SEC1-v1-9/ECD
  * @summary ECDHAlgorithmSet
  * @description
  *
+ * 1-pass ECDH variants: standard primitive P = d_U Q_V versus cofactor P = h
+ * d_U Q_V (the latter resists small-subgroup attacks with only partial
+ * public-key validation), SHA-1/2 KDFs, recommended or specified KDF, and
+ * generic `ecdh`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.3, §6.1, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,8 @@ import { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va.mjs";
  * @summary id_fieldType
  * @description
  * 
+ * Root of field-type OIDs: `{ ansi-X9-62 fieldType(1) }`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

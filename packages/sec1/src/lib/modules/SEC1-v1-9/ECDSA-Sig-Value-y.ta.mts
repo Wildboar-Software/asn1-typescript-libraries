@@ -16,6 +16,10 @@ import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC
  * @summary ECDSA_Sig_Value_y
  * @description
  *
+ * Optional recovery hint for the y-coordinate of ephemeral point R in
+ * `ECDSA-Sig-Value`. SEC 1 adds this CHOICE but does not specify how `b` versus
+ * `f` is interpreted. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

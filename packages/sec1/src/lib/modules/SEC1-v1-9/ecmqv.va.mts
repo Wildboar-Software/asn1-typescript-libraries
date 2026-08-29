@@ -15,6 +15,9 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary ecmqv
  * @description
  * 
+ * Generic ECMQV; KDF and full vs single-pass are specified out of band.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §6.2, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

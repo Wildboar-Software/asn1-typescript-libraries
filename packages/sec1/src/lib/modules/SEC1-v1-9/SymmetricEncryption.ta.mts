@@ -15,6 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary SymmetricEncryption
  * @description
  * 
+ * Symmetric encryption used inside ECIES (`SYMENCSet`). A new key is derived
+ * for every message. CBC/CTR IVs are all-zero and not transmitted. XOR is a
+ * one-time pad of key and message (key length = message length). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.8,
+ * §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

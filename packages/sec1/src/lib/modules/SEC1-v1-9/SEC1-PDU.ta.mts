@@ -19,6 +19,10 @@ import { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "
  * @summary SEC1_PDU
  * @description
  *
+ * Tagged CHOICE of the module's top-level types so each alternative has a
+ * distinct tag. SEC 1 does not define a protocol that uses this PDU; import the
+ * inner types into other modules instead. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

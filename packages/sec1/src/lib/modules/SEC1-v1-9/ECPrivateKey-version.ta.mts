@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECPrivateKey_version
  * @description
  * 
+ * Only `ecPrivkeyVer1` (1) is defined. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +31,10 @@ type ECPrivateKey_version = INTEGER;
 
 /**
  * @summary ECPrivateKey_version_ecPrivkeyVer1
+ * @description
+ *
+ * Only defined version of `ECPrivateKey`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +43,10 @@ const ECPrivateKey_version_ecPrivkeyVer1: ECPrivateKey_version = 1; /* LONG_NAME
 
 /**
  * @summary ECPrivateKey_version_ecPrivkeyVer1
+ * @description
+ *
+ * Only defined version of `ECPrivateKey`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+ *
  * @constant
  * @type {number}
  */

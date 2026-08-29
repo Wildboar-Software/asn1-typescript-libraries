@@ -15,6 +15,9 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary aes128_ctr_in_ecies
  * @description
  * 
+ * AES-128-CTR inside ECIES. Initial counter block is 16 zero octets and is not
+ * transmitted. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.8, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

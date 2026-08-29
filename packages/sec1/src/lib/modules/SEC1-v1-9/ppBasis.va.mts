@@ -15,6 +15,9 @@ import { id_characteristic_two_basis } from "../SEC1-v1-9/id-characteristic-two-
  * @summary ppBasis
  * @description
  * 
+ * Pentanomial polynomial basis. Parameter is `Pentanomial` `(k1, k2, k3)`.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

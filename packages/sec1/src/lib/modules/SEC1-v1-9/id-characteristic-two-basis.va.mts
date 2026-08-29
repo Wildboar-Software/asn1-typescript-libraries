@@ -15,6 +15,9 @@ import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.
  * @summary id_characteristic_two_basis
  * @description
  * 
+ * Root of F_2^m basis OIDs: `{ characteristic-two-field basisType(3) }`.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

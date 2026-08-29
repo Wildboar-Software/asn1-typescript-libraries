@@ -16,6 +16,9 @@ import { FieldTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/FieldTypes
  * @summary FieldTypes
  * @description
  *
+ * The two field types allowed in `FieldID`: `prime-field` with parameter
+ * `Prime-p`, and `characteristic-two-field`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

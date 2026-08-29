@@ -15,6 +15,10 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary x9_63_kdf
  * @description
  * 
+ * ANSI X9.63 KDF. For i = 1..ceil(keydatalen/hashlen), each Ki is Hash(Z ||
+ * Counter || [SharedInfo]) with Counter a 4-octet big-endian integer starting
+ * at 1. Parameters are the hash. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.6.1, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

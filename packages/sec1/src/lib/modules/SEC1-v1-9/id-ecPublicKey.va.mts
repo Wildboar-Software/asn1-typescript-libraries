@@ -15,6 +15,10 @@ import { id_publicKeyType } from "../SEC1-v1-9/id-publicKeyType.va.mjs";
  * @summary id_ecPublicKey
  * @description
  * 
+ * Any elliptic-curve public key, regardless of designated use. ANSI X9.62
+ * `id-ecPublicKey`. In PKCS #8, also the `privateKeyAlgorithm` for
+ * `ECPrivateKey`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3, §C.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

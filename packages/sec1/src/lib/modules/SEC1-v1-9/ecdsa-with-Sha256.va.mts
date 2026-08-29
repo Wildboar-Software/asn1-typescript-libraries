@@ -15,6 +15,9 @@ import { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va.mjs";
  * @summary ecdsa_with_Sha256
  * @description
  * 
+ * ECDSA with SHA-256. Parameters `NULL` (omit). Matches a 128-bit security
+ * level. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1, §3.5, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

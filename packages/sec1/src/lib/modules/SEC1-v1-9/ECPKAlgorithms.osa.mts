@@ -19,6 +19,10 @@ import { ECPKAlgorithms_Union4_Intersection0_Element } from "../SEC1-v1-9/ECPKAl
  * @summary ECPKAlgorithms
  * @description
  *
+ * Public-key algorithms in `SubjectPublicKeyInfo`: unrestricted EC key,
+ * restricted, supplemented, plus `ecdh` and `ecmqv` each with
+ * `ECDomainParameters`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

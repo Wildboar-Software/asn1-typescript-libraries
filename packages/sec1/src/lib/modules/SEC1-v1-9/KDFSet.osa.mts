@@ -18,6 +18,10 @@ import { KDFSet_Union3_Intersection0_Element } from "../SEC1-v1-9/KDFSet-Union3-
  * @summary KDFSet
  * @description
  *
+ * KDFs: ANSI X9.63 (`Hash(Z || Counter || SharedInfo)`), NIST SP 800-56
+ * Concatenation (preferred), TLS-KDF (ECDH in TLS only), IKEv2-KDF (ECDH in
+ * IKEv2 only). Parameters are the hash. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.6, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary dhSinglePass_cofactorDH_sha224kdf_scheme
  * @description
  * 
+ * 1-pass ECDH: U already holds V's public key authentically and sends its own
+ * key in one pass. Uses the cofactor Diffie-Hellman primitive P = h d_U Q_V
+ * (§3.3.2); partial validation of Q_V suffices and resists small-subgroup
+ * attacks. SHA-224 KDF. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §6.1, §5.2, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

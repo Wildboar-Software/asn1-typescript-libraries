@@ -13,6 +13,16 @@ import {
 
 
 
+/**
+ * @summary CHARACTERISTIC_TWO
+ * @description
+ *
+ * ITU-T X.681 `TYPE-IDENTIFIER` for an F_2^m basis: `&id` is `gnBasis` /
+ * `tpBasis` / `ppBasis` and `&Type` is `NULL`, `Trinomial`, or `Pentanomial`.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
+ * @interface
+ */
 export
 type CHARACTERISTIC_TWO <Type> = TYPE_IDENTIFIER <Type>;
 

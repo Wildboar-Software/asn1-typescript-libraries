@@ -19,6 +19,11 @@ import { HashFunctions_Union4_Intersection0_Element } from "../SEC1-v1-9/HashFun
  * @summary HashFunctions
  * @description
  *
+ * Hashes allowed in `HashAlgorithm`: SHA-1, SHA-224, SHA-256, SHA-384, SHA-512
+ * (FIPS 180-2). Parameters `NULL` and should be omitted. Collision resistance
+ * is at most half the output length and is required for ECDSA message digests.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.5, §C.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

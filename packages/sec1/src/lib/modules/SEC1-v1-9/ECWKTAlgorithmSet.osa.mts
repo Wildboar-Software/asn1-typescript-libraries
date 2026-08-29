@@ -16,6 +16,10 @@ import { ECWKTAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECW
  * @summary ECWKTAlgorithmSet
  * @description
  *
+ * Wrapped Key Transport identified as one algorithm rather than KA + wrap.
+ * 1-pass ECDH or MQV agrees a wrapping key; AES key wrap protects a
+ * content-encryption key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.2, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

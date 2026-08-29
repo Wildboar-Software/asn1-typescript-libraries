@@ -21,6 +21,10 @@ import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../
  * @summary SpecifiedECDomain
  * @description
  *
+ * Explicit elliptic curve domain parameters T. Over F_p that is `(p, a, b, G,
+ * n, h)`; over F_2^m, `(m, f(x), a, b, G, n, h)`. Include the cofactor. Prefer
+ * a named curve from SEC 2 when interoperability matters. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.1, §C.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,42 +46,73 @@ class SpecifiedECDomain {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * 1, 2, or 3. Version 2: curve and G verifiably random. Version 3: only G
+         * verifiably random. Both require `curve.seed`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2.
+         *
          * @public
          * @readonly
          */
         readonly version: SpecifiedECDomainVersion,
         /**
          * @summary `fieldID`.
+         * @description
+         *
+         * The field F_q over which the curve is defined. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+         *
          * @public
          * @readonly
          */
         readonly fieldID: FieldID,
         /**
          * @summary `curve`.
+         * @description
+         *
+         * Coefficients (a, b) and optional generation seed. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2.
+         *
          * @public
          * @readonly
          */
         readonly curve: Curve,
         /**
          * @summary `base`.
+         * @description
+         *
+         * Base point G of prime order n, encoded as `ECPoint`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.1.
+         *
          * @public
          * @readonly
          */
         readonly base: ECPoint,
         /**
          * @summary `order`.
+         * @description
+         *
+         * Prime order n of G. The private key is in `[1, n-1]`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.1, §3.2.
+         *
          * @public
          * @readonly
          */
         readonly order: INTEGER,
         /**
          * @summary `cofactor`.
+         * @description
+         *
+         * h = #E(F_q) / n. Optional but strongly recommended for interoperability;
+         * required input to cofactor DH. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.1, §C.2.
+         *
          * @public
          * @readonly
          */
         readonly cofactor?: OPTIONAL<INTEGER>,
         /**
          * @summary `hash`.
+         * @description
+         *
+         * Hash used to generate the parameters verifiably at random (§3.1.3). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+         * §C.2.
+         *
          * @public
          * @readonly
          */

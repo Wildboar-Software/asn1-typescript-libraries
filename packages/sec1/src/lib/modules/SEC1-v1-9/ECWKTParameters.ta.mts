@@ -17,6 +17,11 @@ import { KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } fro
  * @summary ECWKTParameters
  * @description
  *
+ * Wrapped Key Transport as a single algorithm: KDF plus key-wrap. WKT is 1-pass
+ * ECDH or MQV to agree a wrapping key, then AES key wrap of a
+ * content-encryption key. Typically identified instead as a KA scheme plus a
+ * wrap scheme. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.2, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +37,21 @@ class ECWKTParameters {
     constructor (
         /**
          * @summary `kdf`.
+         * @description
+         *
+         * KDF applied to the 1-pass KA shared secret. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.2.
+         *
          * @public
          * @readonly
          */
         readonly kdf?: OPTIONAL<KeyDerivationFunction>,
         /**
          * @summary `wrap`.
+         * @description
+         *
+         * AES key-wrap algorithm applied to the content-encryption key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.9,
+         * §5.2.
+         *
          * @public
          * @readonly
          */

@@ -16,6 +16,11 @@ import { ECDSA_Full_R, _decode_ECDSA_Full_R, _encode_ECDSA_Full_R } from "../SEC
  * @summary ECDSA_Signature
  * @description
  *
+ * An ECDSA signature value. `two-ints-plus` is the untagged `ECDSA-Sig-Value`
+ * used by SEC 1 v1 (X.509 BIT STRING wraps the entire encoding). `point-int` is
+ * tagged `[0]` so both SEQUENCE alternatives remain distinguishable; it carries
+ * R as an `ECPoint` for faster verification. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

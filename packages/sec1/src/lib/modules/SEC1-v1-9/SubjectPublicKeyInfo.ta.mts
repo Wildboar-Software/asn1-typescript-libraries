@@ -16,6 +16,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary SubjectPublicKeyInfo
  * @description
  *
+ * X.509-style encoding of an EC public key. `algorithm` names the key type and
+ * domain parameters (`ECPKAlgorithms`); `subjectPublicKey` is the `ECPoint`
+ * octet string mapped bit-for-bit into a BIT STRING (MSB of the first octet
+ * becomes the first bit). Parameters shall be present. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +37,22 @@ class SubjectPublicKeyInfo {
     constructor (
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * Key type and domain parameters (`ECPKAlgorithms`). The `parameters` component
+         * shall be present. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: AlgorithmIdentifier,
         /**
          * @summary `subjectPublicKey`.
+         * @description
+         *
+         * The `ECPoint` octet string mapped bit-for-bit into a BIT STRING (first bit of
+         * the first octet becomes the first bit of the BIT STRING). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+         *
          * @public
          * @readonly
          */

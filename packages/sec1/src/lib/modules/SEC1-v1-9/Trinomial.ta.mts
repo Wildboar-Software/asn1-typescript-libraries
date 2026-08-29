@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Trinomial
  * @description
  * 
+ * Degree `k` of the middle term of the reduction polynomial `x^m + x^k + 1`,
+ * with m > k >= 1. Prefer a trinomial when one exists, with smallest `k`.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §2.1.2, §C.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

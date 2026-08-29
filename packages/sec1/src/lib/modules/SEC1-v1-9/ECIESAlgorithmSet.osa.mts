@@ -16,6 +16,10 @@ import { ECIESAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECI
  * @summary ECIESAlgorithmSet
  * @description
  *
+ * ECIES as a public-key encryption scheme: semantically secure against
+ * chosen-plaintext and chosen-ciphertext attacks. Combine ECDH, a KDF, a MAC,
+ * and a symmetric cipher. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

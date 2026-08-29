@@ -16,6 +16,9 @@ import { SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultip
  * @summary ECCSupplements
  * @description
  *
+ * Precomputed multiples of a public key: either a named set (OID plus points)
+ * or an explicit list of `(multiple, point)`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

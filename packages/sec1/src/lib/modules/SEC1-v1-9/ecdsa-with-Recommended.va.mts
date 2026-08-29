@@ -15,6 +15,9 @@ import { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va.mjs";
  * @summary ecdsa_with_Recommended
  * @description
  * 
+ * ECDSA using the hash recommended for the associated curve. Parameters `NULL`
+ * (omit). SEC 1 lists the OID but does not name that hash. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ALGORITHM
  * @description
  * 
+ * Information-object class pairing an algorithm OID with an optional parameter
+ * type. Syntax `{ OID &id [PARMS &Type] }`. Governs `AlgorithmIdentifier`.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,10 +56,18 @@ interface ALGORITHM<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique algorithm OID. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
      * @summary &Type
+     * @description
+     *
+     * ASN.1 type of the `parameters` field of
+     * `AlgorithmIdentifier` for this OID. Absent when the
+     * algorithm has no parameters. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
      */
     readonly "&Type": Type;
 };

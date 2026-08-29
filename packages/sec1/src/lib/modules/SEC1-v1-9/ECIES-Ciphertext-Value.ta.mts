@@ -16,6 +16,12 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  * @summary ECIES_Ciphertext_Value
  * @description
  *
+ * ECIES ciphertext C = (R, EM, D): sender's ephemeral public key, symmetric
+ * ciphertext of M under a KDF-derived key, and MAC tag on
+ * `EM || [SharedInfo_2]`. May also be concatenated as `R || EM || D`.
+ * IV/ICB for CBC/CTR is all-zero and is not sent.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,18 +38,33 @@ class ECIES_Ciphertext_Value {
     constructor (
         /**
          * @summary `ephemeralPublicKey`.
+         * @description
+         *
+         * Sender's ephemeral public key R, encoded as `ECPoint` (compressed or not per
+         * setup). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
+         *
          * @public
          * @readonly
          */
         readonly ephemeralPublicKey: ECPoint,
         /**
          * @summary `symmetricCiphertext`.
+         * @description
+         *
+         * EM = Enc_EK(M). EK is taken from the KDF output (leftmost `enckeylen` octets,
+         * unless XOR v2 split). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
+         *
          * @public
          * @readonly
          */
         readonly symmetricCiphertext: OCTET_STRING,
         /**
          * @summary `macTag`.
+         * @description
+         *
+         * D = MAC_MK(EM || [SharedInfo_2]). MK is the other half of the KDF output.
+         * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
+         *
          * @public
          * @readonly
          */

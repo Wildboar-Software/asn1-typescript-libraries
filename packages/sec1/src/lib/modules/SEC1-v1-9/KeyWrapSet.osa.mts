@@ -17,6 +17,9 @@ import { KeyWrapSet_Union2_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet
  * @summary KeyWrapSet
  * @description
  *
+ * AES-128/192/256 key wrap (NIST / RFC 3394) for Wrapped Key Transport.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.9, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

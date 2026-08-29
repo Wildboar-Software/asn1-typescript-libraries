@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Pentanomial
  * @description
  *
+ * Middle exponents of the reduction polynomial `x^m + x^k3 + x^k2 + x^k1 + 1`
+ * with `m > k3 > k2 > k1 >= 1`. Used when no irreducible trinomial of degree
+ * `m` exists. Prefer smallest `k3`, then `k2`, then `k1`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §2.1.2,
+ * §C.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,18 +39,30 @@ class Pentanomial {
     constructor (
         /**
          * @summary `k1`.
+         * @description
+         *
+         * `k1 > 0`. Lowest middle exponent.
+         *
          * @public
          * @readonly
          */
         readonly k1: INTEGER,
         /**
          * @summary `k2`.
+         * @description
+         *
+         * `k2 > k1`.
+         *
          * @public
          * @readonly
          */
         readonly k2: INTEGER,
         /**
          * @summary `k3`.
+         * @description
+         *
+         * `k3 > k2`. Highest middle exponent below m.
+         *
          * @public
          * @readonly
          */

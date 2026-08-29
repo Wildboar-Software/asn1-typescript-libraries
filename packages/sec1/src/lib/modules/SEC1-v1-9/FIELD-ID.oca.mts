@@ -13,6 +13,15 @@ import {
 
 
 
+/**
+ * @summary FIELD_ID
+ * @description
+ *
+ * ITU-T X.681 `TYPE-IDENTIFIER` used as the governor of `FieldID`: `&id` is the
+ * field-type OID and `&Type` is the parameter type. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+ *
+ * @interface
+ */
 export
 type FIELD_ID <Type> = TYPE_IDENTIFIER <Type>;
 

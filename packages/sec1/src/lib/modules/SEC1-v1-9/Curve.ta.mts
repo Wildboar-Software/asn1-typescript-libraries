@@ -17,6 +17,11 @@ import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC
  * @summary Curve
  * @description
  *
+ * Coefficients of the curve equation plus an optional seed used when the curve
+ * or base point was generated verifiably at random. Over F_p the equation is
+ * `y^2 = x^3 + a x + b` with `4a^3 + 27b^2 ≢ 0 (mod p)`. Over F_2^m it is `y^2
+ * + x y = x^3 + a x^2 + b`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §2.2, §C.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,18 +40,34 @@ class Curve {
     constructor (
         /**
          * @summary `a`.
+         * @description
+         *
+         * Coefficient a of the defining equation, encoded as a `FieldElement`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+         * §2.2.
+         *
          * @public
          * @readonly
          */
         readonly a: FieldElement,
         /**
          * @summary `b`.
+         * @description
+         *
+         * Coefficient b of the defining equation, encoded as a `FieldElement`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+         * §2.2.
+         *
          * @public
          * @readonly
          */
         readonly b: FieldElement,
         /**
          * @summary `seed`.
+         * @description
+         *
+         * Seed S from which the curve and/or base point were derived verifiably at
+         * random (§3.1.3). Shall be present when `SpecifiedECDomain.version` is
+         * `ecdpVer2` or `ecdpVer3`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2.
+         *
          * @public
          * @readonly
          */

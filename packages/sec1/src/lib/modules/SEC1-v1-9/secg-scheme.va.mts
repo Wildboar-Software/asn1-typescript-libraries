@@ -17,6 +17,10 @@ import {
  * @summary secg_scheme
  * @description
  * 
+ * SECG scheme arc `{iso(1) identified-organization(3) certicom(132)
+ * schemes(1)}`. Holds most scheme, KDF, ECIES, MAC, and wrap OIDs in this
+ * module. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

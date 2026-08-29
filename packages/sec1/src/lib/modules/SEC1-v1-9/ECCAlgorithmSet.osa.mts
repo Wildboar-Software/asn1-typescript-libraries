@@ -19,6 +19,9 @@ import { ECWKTAlgorithmSet } from "../SEC1-v1-9/ECWKTAlgorithmSet.osa.mjs";
  * @summary ECCAlgorithmSet
  * @description
  * 
+ * Union of ECDSA, ECDH, ECMQV, ECIES, and ECWKT algorithm identifiers. Used as
+ * `ECCAlgorithm`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

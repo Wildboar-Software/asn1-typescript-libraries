@@ -15,6 +15,10 @@ import { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va.mjs";
  * @summary mqvSinglePass_sha1kdf
  * @description
  * 
+ * Single-pass MQV: U already holds V's keys authentically (often Q2,V = Q1,V)
+ * and sends its own keys in one pass (§5.2). ANSI X9.63 KDF with SHA-1.
+ * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §6.2, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

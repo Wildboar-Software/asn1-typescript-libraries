@@ -19,6 +19,9 @@ import { MACSet_Union4_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union4-
  * @summary MACSet
  * @description
  *
+ * MACs for ECIES: HMAC with full- or half-length tag (hash in parameters) and
+ * CMAC-AES-128/192/256 (128-bit tag). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.7, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

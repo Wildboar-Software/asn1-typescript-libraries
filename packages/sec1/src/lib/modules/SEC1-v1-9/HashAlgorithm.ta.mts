@@ -15,6 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * @summary HashAlgorithm
  * @description
  * 
+ * A hash from `HashFunctions` (SHA-1 and SHA-2). When parameters are
+ * constrained to `NULL`, omit them. For ECDSA message digests use a hash whose
+ * output is twice the desired security level; SHA-1 only for ECDSA backwards
+ * compatibility. Hash lengths: 20, 28, 32, 48, 64 octets. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.5, §C.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,9 @@ import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
  * @summary ecdh
  * @description
  * 
+ * Generic ECDH; KDF, standard vs cofactor, and pass count are specified out of
+ * band. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §6.1, §C.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,12 @@ import { ECDSA_Sig_Value_y, _decode_ECDSA_Sig_Value_y, _encode_ECDSA_Sig_Value_y
  * @summary ECDSA_Sig_Value
  * @description
  *
+ * Classic ECDSA pair `(r, s)` from §4.1.3: `r = x_R mod n` for ephemeral point
+ * R = kG, and `s` from the usual formula. Optional `a` and `y` let a verifier
+ * recover R from `r` for accelerated verification; SEC 1 does not define the
+ * encoding of those two fields. In X.509 the whole `ECDSA-Signature` encoding
+ * is the signature BIT STRING. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1.3, §C.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,24 +40,44 @@ class ECDSA_Sig_Value {
     constructor (
         /**
          * @summary `r`.
+         * @description
+         *
+         * `r = x_R mod n` for ephemeral point R = kG. If r = 0, the signer retries with
+         * a new k. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1.3.
+         *
          * @public
          * @readonly
          */
         readonly r: INTEGER,
         /**
          * @summary `s`.
+         * @description
+         *
+         * Second signature integer from the ECDSA signing formula of §4.1.3. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+         * §4.1.3.
+         *
          * @public
          * @readonly
          */
         readonly s: INTEGER,
         /**
          * @summary `a`.
+         * @description
+         *
+         * Optional extra integer so the verifier can recover R from r. SEC 1 does not
+         * define this field's encoding. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+         *
          * @public
          * @readonly
          */
         readonly a?: OPTIONAL<INTEGER>,
         /**
          * @summary `y`.
+         * @description
+         *
+         * Optional y-recovery hint for R. SEC 1 does not define this CHOICE. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+         * §C.5.
+         *
          * @public
          * @readonly
          */

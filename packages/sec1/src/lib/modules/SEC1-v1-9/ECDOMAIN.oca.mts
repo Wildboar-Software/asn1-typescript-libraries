@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ECDOMAIN
  * @description
  * 
+ * Named elliptic curve: a unique OID. Syntax `{ ID &id }`. Curve names
+ * themselves live in SEC 2. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +52,10 @@ interface ECDOMAIN {
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of a named curve (assigned in SEC 2 or X9.62).
+     * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2.
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 };
