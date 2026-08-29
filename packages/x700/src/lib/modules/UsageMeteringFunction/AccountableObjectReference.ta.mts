@@ -19,6 +19,14 @@ import {
  * @summary AccountableObjectReference
  * @description
  *
+ * Read-only single-valued reference to the accountable object
+ * (not necessarily a managed object) for which a data object
+ * maintains usage. When data-object functionality is included
+ * in the accountable object, this is a pointer to itself.
+ * ITU-T Rec. X.742 (04/95)
+ * [§8.2.3.8](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §7.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

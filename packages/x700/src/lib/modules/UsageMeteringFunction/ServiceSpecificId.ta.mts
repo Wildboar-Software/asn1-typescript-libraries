@@ -15,6 +15,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ServiceSpecificId
  * @description
  *
+ * Provider identifier in a form defined by a particular
+ * service. `service` / `serviceSpecificId` are an open type
+ * (`UMF-SERVICE`) after Cor.2. ITU-T Rec. X.742 (04/95)
+ * [§8.2.3.8](https://www.itu.int/rec/T-REC-X.742-199504-I);
+ * Cor.2 (02/2000)
+ * [§4](https://www.itu.int/rec/T-REC-X.742-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +36,21 @@ export class ServiceSpecificId {
     constructor(
         /**
          * @summary `service`.
+         * @description
+         *
+         * OID identifying the provider-id syntax
+         * (`UMF-SERVICE.&id`). ITU-T Rec. X.742 (1995)/Cor.2
+         * (02/2000) §4.
          * @public
          * @readonly
          */
         readonly service: OBJECT_IDENTIFIER,
         /**
          * @summary `serviceSpecificId`.
+         * @description
+         *
+         * Identifier value for `service`. ITU-T Rec. X.742
+         * (1995)/Cor.2 (02/2000) §4.
          * @public
          * @readonly
          */

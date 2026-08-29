@@ -32,6 +32,14 @@ import {
  * @summary ReportingTriggers_Item
  * @description
  *
+ * One member of `ReportingTriggers`. `periodic` is a time
+ * interval (`TimePeriod` from X.739); `induced` a metering
+ * action or state change; `event` an accountable event of
+ * §8.2.3; `stimulus` a specialization-assigned OID. ITU-T Rec.
+ * X.742 (04/95)
+ * [§8.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I), A.6
+ * `triggerBehaviour`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

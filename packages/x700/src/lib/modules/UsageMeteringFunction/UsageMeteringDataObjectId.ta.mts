@@ -19,6 +19,12 @@ import {
  * @summary UsageMeteringDataObjectId
  * @description
  *
+ * Naming attribute of a usage metering data object
+ * (`dataObjectId`). This Recommendation does not define name
+ * bindings for data objects; specializations supply them.
+ * ITU-T Rec. X.742 (04/95)
+ * [§8.2.2](https://www.itu.int/rec/T-REC-X.742-199504-I), A.7.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

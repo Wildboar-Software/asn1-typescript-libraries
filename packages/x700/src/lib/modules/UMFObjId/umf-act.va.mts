@@ -16,6 +16,14 @@ import {
  * @summary umf_act
  * @description
  *
+ * Arc for usage metering action OIDs (Table 13). `{umf-act 1}`
+ * `resumeMetering`, `{umf-act 2}` `startMetering`, `{umf-act 3}`
+ * `suspendMetering`. Confirmed CMIS M-ACTION; information
+ * syntax `ActionArgument`, reply `ActionResponse`. ITU-T Rec.
+ * X.742 (04/95)
+ * [11.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I), A.5,
+ * A.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
