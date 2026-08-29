@@ -22,6 +22,17 @@ import {
  * @summary ApplicationProcessTitle
  * @description
  *
+ * Directory name form (`directory`), object-identifier name
+ * form (`oid`), or `notKnown` (`NULL`) when the title is
+ * not known — the rec requires `notKnown` in that case.
+ * MATCHES FOR EQUALITY. Registered as `{… attribute(7)
+ * applicationProcessTitle(17)}`. Cor.1 notes
+ * `RelativeDistinguishedName` is imported from X.501 (1988);
+ * the syntax is now in an informative annex of X.711 (1997).
+ * ITU-T Rec. X.723 (11/93)
+ * [§9.2](https://www.itu.int/rec/T-REC-X.723-199311-I), §13;
+ * Cor.1 (06/98) clause 13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Timer
  * @description
  *
+ * Generic interval-timer value: `mantissa * 10^exponent`.
+ * Readable/settable to this precision; protocol-event
+ * precision is implementation-defined (state in the MOCS).
+ * Non-instantiable; derived timers must state the time unit.
+ * MATCHES FOR EQUALITY, ORDERING. ITU-T Rec. X.723 (11/93)
+ * [§9.20](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +38,18 @@ export class Timer {
     constructor(
         /**
          * @summary `exponent`.
+         * @description
+         *
+         * Power of ten applied to `mantissa`, range `-62..63`.
          * @public
          * @readonly
          */
         readonly exponent: INTEGER,
         /**
          * @summary `mantissa`.
+         * @description
+         *
+         * Scale factor, range `0..65535`.
          * @public
          * @readonly
          */

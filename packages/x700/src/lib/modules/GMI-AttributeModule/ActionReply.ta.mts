@@ -20,6 +20,14 @@ import {
  * @summary ActionReply
  * @description
  *
+ * Confirmed-action reply syntax for `activate`,
+ * `deactivate`, and `deactivateWhenNoUsers`. A set of
+ * `ManagementExtension` values; unsuccessful cases return
+ * `processingFailure` rather than a typed failure here.
+ * ITU-T Rec. X.723 (11/93)
+ * [§11.1](https://www.itu.int/rec/T-REC-X.723-199311-I)–§11.3,
+ * §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

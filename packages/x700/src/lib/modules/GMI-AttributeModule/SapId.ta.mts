@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SapId
  * @description
  *
+ * Naming attribute of `sap1` and `sap2` managed objects.
+ * MATCHES FOR EQUALITY. Registered as `{… attribute(7)
+ * sapId(10)}`. ITU-T Rec. X.723 (11/93)
+ * [§9.16](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

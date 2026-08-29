@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Sap1Address
  * @description
  *
+ * Address of an (N) SAP represented as a single INTEGER
+ * (semantics in X.723 §7.6). MATCHES FOR EQUALITY.
+ * Registered as `{… attribute(7) sap1Address(8)}`. ITU-T Rec.
+ * X.723 (11/93)
+ * [§9.14](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

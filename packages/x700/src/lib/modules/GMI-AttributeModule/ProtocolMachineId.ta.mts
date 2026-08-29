@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ProtocolMachineId
  * @description
  *
+ * Naming syntax shared by connectionless-mode
+ * (`clProtocolMachineId`, `{… attribute(7) 2}`) and
+ * connection-mode (`coProtocolMachineId`, `{… attribute(7)
+ * 3}`) protocol-machine managed objects. MATCHES FOR
+ * EQUALITY. ITU-T Rec. X.723 (11/93)
+ * [§9.5](https://www.itu.int/rec/T-REC-X.723-199311-I)–§9.6,
+ * §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

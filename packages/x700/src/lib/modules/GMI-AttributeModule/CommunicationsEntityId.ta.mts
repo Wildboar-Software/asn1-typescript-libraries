@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CommunicationsEntityId
  * @description
  *
+ * Naming attribute of a `communicationsEntity` managed
+ * object. MATCHES FOR EQUALITY. Registered as
+ * `{… attribute(7) communicationsEntityId(0)}`. ITU-T Rec.
+ * X.723 (11/93)
+ * [§9.3](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

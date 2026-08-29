@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ApplicationProcessId
  * @description
  *
+ * Naming attribute of an `applicationProcess` managed
+ * object. MATCHES FOR EQUALITY. Registered as
+ * `{… smi(3) part5(5) attribute(7) applicationProcessId(16)}`.
+ * ITU-T Rec. X.723 (11/93)
+ * [§9.1](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

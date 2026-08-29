@@ -17,6 +17,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InformationType
  * @description
  *
+ * Type of information held in a
+ * `communicationsInformationRecord` (and the mandatory type
+ * of `communicationsInformation`). MATCHES FOR EQUALITY.
+ * Registered as `{… attribute(7) informationType(5)}`. The
+ * rec does not register specific type OIDs. ITU-T Rec. X.723
+ * (11/93)
+ * [§9.10](https://www.itu.int/rec/T-REC-X.723-199311-I), §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

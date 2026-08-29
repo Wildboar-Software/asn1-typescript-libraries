@@ -20,6 +20,13 @@ import {
  * @summary ActionInfo
  * @description
  *
+ * Confirmed-action information syntax for the generic
+ * `activate`, `deactivate`, and `deactivateWhenNoUsers`
+ * actions. A set of `ManagementExtension` values; the rec
+ * does not list required members. ITU-T Rec. X.723 (11/93)
+ * [§11.1](https://www.itu.int/rec/T-REC-X.723-199311-I)–§11.3,
+ * §13.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
