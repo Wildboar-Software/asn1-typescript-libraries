@@ -16,7 +16,16 @@ import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 /**
  * @summary securityLevelofPrivilege
  * @description
- * 
+ *
+ * AC extension asserting the security level so a BPC can enable
+ * privilege attributes with different strictness for biometric
+ * authentication of the AC holder. Added to the basic privilege
+ * management certificate extension (X.509 clause 15.1.2).
+ * Stores the `bioSecLevel` (e.g. `biometricSecurityLevelId`) of
+ * the BPC that has the same holder as the AC. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§11.5](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

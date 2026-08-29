@@ -15,7 +15,15 @@ import { URI, _decode_URI, _encode_URI } from "../TAI/URI.ta.mjs";
 /**
  * @summary BPUReportInformation
  * @description
- * 
+ *
+ * ACBio certified report of BPU processing and the security
+ * levels employed, carried inline (`bpuReport`) or referenced
+ * by URI (`bpuReportReferrer`). Defined for ACBio
+ * (ISO/IEC 24761); TAI uses it from a BPU. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§7](https://www.itu.int/rec/T-REC-X.1089-200805-I), §10.4,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

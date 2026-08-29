@@ -20,6 +20,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BiometricPara_Item
  * @description
  *
+ * Parameters for one biometric modality at a security level.
+ * ITU-T Rec. X.1089 (05/2008)
+ * [§9.12](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §9.13–9.16.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,24 +37,46 @@ class BiometricPara_Item {
     constructor (
         /**
          * @summary `biometricType`.
+         * @description
+         *
+         * CBEFF biometric type of the capture device
+         * (ISO/IEC 19785-3). X.1089 §9.10, §9.12.
+         *
          * @public
          * @readonly
          */
         readonly biometricType: BIT_STRING,
         /**
          * @summary `fMR_Value`.
+         * @description
+         *
+         * False match rate used to set BPU match thresholds and
+         * thus whether success or failure is reported to the
+         * identity verifier. FNMR is not defined here. X.1089
+         * §9.14.
+         *
          * @public
          * @readonly
          */
         readonly fMR_Value: INTEGER,
         /**
          * @summary `trialNumber`.
+         * @description
+         *
+         * Trials the BPU will allow on each biometric device at
+         * this security level. X.1089 §9.15.
+         *
          * @public
          * @readonly
          */
         readonly trialNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary `requestQuality`.
+         * @description
+         *
+         * Acceptable biometric data quality. See
+         * ISO/IEC 19784-1. X.1089 §9.16.
+         *
          * @public
          * @readonly
          */

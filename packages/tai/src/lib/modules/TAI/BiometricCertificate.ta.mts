@@ -15,7 +15,20 @@ import { BiometricCertificateInfo, _decode_BiometricCertificateInfo, _encode_Bio
 /**
  * @summary BiometricCertificate
  * @description
- * 
+ *
+ * Signed X.509 attribute certificate binding a user to one or
+ * more biometric information templates (BITs). Issued by a
+ * biometric certificate authority (BCA) after enrolment; carries
+ * the security level of that enrolment. A user may hold many
+ * BCs from the same or different BCAs. Privileges obtainable
+ * from a BC depend on the security levels of the BPUs used at
+ * enrolment and at verification, and on the AC the claimant
+ * presents. Revoked via a BCRL using X.509 clause 8; path
+ * processing follows X.509 clause 10. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§3.2.1](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §6.1, §8.1–8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,7 +15,16 @@ import {
 /**
  * @summary id_tai_at_BiometricInformationTemplate
  * @description
- * 
+ *
+ * Identifies `biometricInformationTemplate`. This is the CBEFF
+ * TLV-encoded patron format OID
+ * `{iso registration-authority cbeff(19785)
+ * biometric-organization(0) jtc1-sc37(257) patronformat(1)
+ * tlv-encoded(5)}`, not an `{id-tai-at n}` assignment. ITU-T
+ * Rec. X.1089 (05/2008)
+ * [§8.6](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

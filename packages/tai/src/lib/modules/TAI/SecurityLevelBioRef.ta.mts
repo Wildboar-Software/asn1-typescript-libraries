@@ -17,7 +17,12 @@ import { BiometricPara, _decode_BiometricPara, _encode_BiometricPara } from "../
 /**
  * @summary SecurityLevelBioRef
  * @description
- * 
+ *
+ * Mapping of a security-level identifier to modality policy and
+ * biometric parameters. Evaluation of those values for a stated
+ * level is out of scope. ITU-T Rec. X.1089 (05/2008)
+ * [§9.5](https://www.itu.int/rec/T-REC-X.1089-200805-I), §9.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,38 @@ class SecurityLevelBioRef {
     constructor (
         /**
          * @summary `biometricSecurityLevelId`.
+         * @description
+         *
+         * Unique identifier for the biometric security level.
+         * May be a hash of the modality policy and biometric
+         * parameters. May be placed in an AC biometric extension
+         * when the AC is created. X.1089 §9.7, Appendix I.
+         *
          * @public
          * @readonly
          */
         readonly biometricSecurityLevelId: BiometricSecurityLevelId,
         /**
          * @summary `modalityPolicy`.
+         * @description
+         *
+         * Policy on modality choice, capture actions (trials,
+         * liveness), fusion, and related behaviour needed to
+         * achieve this security level. X.1089 §9.8.
+         *
          * @public
          * @readonly
          */
         readonly modalityPolicy: ModalityPolicy,
         /**
          * @summary `biometricPara`.
+         * @description
+         *
+         * Adjustable parameters for one or more modalities. If
+         * more than one item is present, the fusion mechanism
+         * should be identified in `modalityPolicy`. X.1089
+         * §9.10, §9.13.
+         *
          * @public
          * @readonly
          */

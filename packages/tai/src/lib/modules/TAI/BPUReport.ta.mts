@@ -15,7 +15,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BPUReport
  * @description
- * 
+ *
+ * ACBio BPU report as a typed content blob: `contentType`
+ * selects from `ContentTypeBPUReport` and `content` is the
+ * corresponding type. The only defined content type in this
+ * module is `bpuReport` (`id-bpuReport` from ISO/IEC 24761).
+ * ITU-T Rec. X.1089 (05/2008)
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,22 @@ class BPUReport {
     constructor (
         /**
          * @summary `contentType`.
+         * @description
+         *
+         * OID of the report content type; must identify a member
+         * of `ContentTypeBPUReport`. X.1089 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly contentType: OBJECT_IDENTIFIER,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Report payload whose type is determined by
+         * `contentType`. X.1089 Annex A.
+         *
          * @public
          * @readonly
          */

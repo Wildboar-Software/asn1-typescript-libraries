@@ -20,7 +20,13 @@ import {
 /**
  * @summary BiometricDeviceCertificateInfo
  * @description
- * 
+ *
+ * To-be-signed content of a BDC. `attributes` shall contain at
+ * least one `bDCReportContentInformation`. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§10.2](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §10.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

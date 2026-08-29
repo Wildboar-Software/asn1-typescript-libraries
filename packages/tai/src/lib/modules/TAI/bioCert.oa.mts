@@ -16,7 +16,15 @@ import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 /**
  * @summary bioCert
  * @description
- * 
+ *
+ * Attribute-certificate extension indexing the associated BC so
+ * privilege authentication can first establish identity. The
+ * privilege verifier matches the presented BC against
+ * `baseCertificateID` (and the other components) before using
+ * that BC to authenticate the holder. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§11.4](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

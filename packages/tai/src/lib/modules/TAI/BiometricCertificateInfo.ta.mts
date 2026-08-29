@@ -20,7 +20,13 @@ import {
 /**
  * @summary BiometricCertificateInfo
  * @description
- * 
+ *
+ * To-be-signed content of a biometric certificate. `attributes`
+ * shall contain at least one BIT attribute. Multiple BIT
+ * attributes are allowed only when all associated BITs are
+ * enrolment data with the same BCA. ITU-T Rec. X.1089 (05/2008)
+ * [§8.1](https://www.itu.int/rec/T-REC-X.1089-200805-I), §8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

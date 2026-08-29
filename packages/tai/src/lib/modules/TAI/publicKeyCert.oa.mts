@@ -16,7 +16,12 @@ import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 /**
  * @summary publicKeyCert
  * @description
- * 
+ *
+ * BC extension placed in a PKC to index the associated
+ * public-key certificate of the BC holder (issuer, serial
+ * number, and key usage). ITU-T Rec. X.1089 (05/2008)
+ * [§11.1](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

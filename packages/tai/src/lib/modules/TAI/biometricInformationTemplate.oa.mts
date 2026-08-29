@@ -16,7 +16,17 @@ import { id_tai_at_BiometricInformationTemplate } from "../TAI/id-tai-at-Biometr
 /**
  * @summary biometricInformationTemplate
  * @description
- * 
+ *
+ * Recommended BIT attribute in a BC. Syntax is the CBEFF
+ * on-card-matching patron format of ISO/IEC 19785-3 clause 11,
+ * or a URI pointing at it. Other patron formats may be used by
+ * defining a different `ATTRIBUTE` with its own syntax and OID.
+ * IBIA registration of BITs is recommended, not required. The
+ * BIT is input to matching; integrity is required and
+ * confidentiality should be applied. ITU-T Rec. X.1089 (05/2008)
+ * [§8.3](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §8.4–8.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

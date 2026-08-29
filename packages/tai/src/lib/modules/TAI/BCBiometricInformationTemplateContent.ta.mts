@@ -20,6 +20,10 @@ import { BioTempIssuer, _decode_BioTempIssuer, _encode_BioTempIssuer } from "../
  * @summary BCBiometricInformationTemplateContent
  * @description
  *
+ * Unsigned BIT content signed into a BC. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§8.6](https://www.itu.int/rec/T-REC-X.1089-200805-I), §8.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,24 +42,45 @@ class BCBiometricInformationTemplateContent {
     constructor (
         /**
          * @summary `biometricTemplateVersion`.
+         * @description
+         *
+         * Version of the BIT in the BC. Only `v0(0)` is defined.
+         * X.1089 §8.6.
+         *
          * @public
          * @readonly
          */
         readonly biometricTemplateVersion: BiometricTemplateVersion,
         /**
          * @summary `biometricTemplateInfo`.
+         * @description
+         *
+         * BIT data in the BC (CBEFF patron format or a later
+         * alternative). X.1089 §8.7.
+         *
          * @public
          * @readonly
          */
         readonly biometricTemplateInfo: BiometricTemplateInfo,
         /**
          * @summary `issuerDigitalSignatureAlgorithm`.
+         * @description
+         *
+         * Algorithm used to sign this BIT. X.509
+         * `AlgorithmIdentifier` from `SupportedAlgorithms`.
+         * X.1089 §8.6.
+         *
          * @public
          * @readonly
          */
         readonly issuerDigitalSignatureAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `bioTempIssuer`.
+         * @description
+         *
+         * Issuer of this BIT, which may differ from the BC
+         * issuer. X.1089 §8.6.
+         *
          * @public
          * @readonly
          */

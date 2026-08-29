@@ -16,7 +16,11 @@ import { BPUReportInformation, _decode_BPUReportInformation, _encode_BPUReportIn
 /**
  * @summary BDCReportContentInformation
  * @description
- * 
+ *
+ * Device PKC (or URI) plus the ACBio BPU report (or URI) that
+ * a BDC must carry. ITU-T Rec. X.1089 (05/2008)
+ * [§10.4](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,23 @@ class BDCReportContentInformation {
     constructor (
         /**
          * @summary `bdcPKCInformation`.
+         * @description
+         *
+         * Device X.509 public-key certificate, or a URI pointing
+         * to it. X.1089 §10.3, §10.5.
+         *
          * @public
          * @readonly
          */
         readonly bdcPKCInformation: BdcPKCInformation,
         /**
          * @summary `bdcReportInformation`.
+         * @description
+         *
+         * ACBio certified report of BPU processing (and security
+         * levels used), or a URI referring to it. X.1089 §7,
+         * §10.4.
+         *
          * @public
          * @readonly
          */

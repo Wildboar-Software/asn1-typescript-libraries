@@ -15,7 +15,19 @@ import { BiometricPolicyCertificateInfo, _decode_BiometricPolicyCertificateInfo,
 /**
  * @summary BiometricPolicyCertificate
  * @description
- * 
+ *
+ * Signed X.509 attribute certificate issued by a telebiometrics
+ * authority (TBA) after verifying that a device or BPU can
+ * operate at the claimed security levels. Contains the biometric
+ * policy: security levels the BPU supports and the parameters
+ * used at each level. A privilege verifier uses the BPC to
+ * select the security level for authentication given the
+ * privileges requested. Signed by a TBA. Revoked via a BCRL;
+ * path processing follows X.509 clause 10. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§3.2.8](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §6.2.3, §9.1–9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

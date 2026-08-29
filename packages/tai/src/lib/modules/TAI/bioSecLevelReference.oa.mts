@@ -16,7 +16,16 @@ import { id_tai_at_bioSecLevelReference } from "../TAI/id-tai-at-bioSecLevelRefe
 /**
  * @summary bioSecLevelReference
  * @description
- * 
+ *
+ * BPC attribute relating biometric algorithm parameters to a
+ * security level (a biometric policy), authenticated by the TBA.
+ * The BPC supplies these parameters so the BPU's activity can
+ * be assured. If more than one of these attributes is present,
+ * they shall all have different `securityLevelNum` values.
+ * ITU-T Rec. X.1089 (05/2008)
+ * [§9.1](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §9.2–9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

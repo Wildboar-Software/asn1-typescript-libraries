@@ -15,7 +15,12 @@ import { type UniqueIdentifier, _decode_UniqueIdentifier, _encode_UniqueIdentifi
 /**
  * @summary UniqueIdentifierOfBioParaInfo
  * @description
- * 
+ *
+ * X.520 `UniqueIdentifier` used as `bioSecLevel` in the
+ * security-level-of-privilege extension. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§11.5.2](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

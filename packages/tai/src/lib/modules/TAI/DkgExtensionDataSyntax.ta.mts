@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DkgExtensionDataSyntax
  * @description
- * 
+ *
+ * Extra data when a BC is used to generate a cryptographic key.
+ * ITU-T Rec. X.1089 (05/2008)
+ * [§11.3](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +37,23 @@ class DkgExtensionDataSyntax {
     constructor (
         /**
          * @summary `alignmentHelpData`.
+         * @description
+         *
+         * Not standardized. Typically adjustment information to
+         * improve matching on fingerprint-based systems.
+         * X.1089 §11.3.1.
+         *
          * @public
          * @readonly
          */
         readonly alignmentHelpData: OCTET_STRING,
         /**
          * @summary `biometricKeyBindingData`.
+         * @description
+         *
+         * Not standardized. Key-generation reference between the
+         * BIT and a biometric digital key. X.1089 §11.3.1.
+         *
          * @public
          * @readonly
          */

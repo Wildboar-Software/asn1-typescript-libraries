@@ -14,7 +14,12 @@ import { id_tai_ce } from "../TAI/id-tai-ce.va.mjs";
 /**
  * @summary id_tai_ce_publicKeyCert
  * @description
- * 
+ *
+ * Identifies `publicKeyCert`: `{id-tai-ce 4}`. ITU-T Rec.
+ * X.1089 (05/2008)
+ * [§11.1](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

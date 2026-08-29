@@ -14,7 +14,12 @@ import { id_tai } from "../TAI/id-tai.va.mjs";
 /**
  * @summary id_tai_ce
  * @description
- * 
+ *
+ * Arc for TAI certificate extensions:
+ * `{id-tai certificate-extensions(2)}`. ITU-T Rec. X.1089
+ * (05/2008)
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

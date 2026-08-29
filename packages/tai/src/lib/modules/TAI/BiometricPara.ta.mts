@@ -14,7 +14,17 @@ import { BiometricPara_Item, _decode_BiometricPara_Item, _encode_BiometricPara_I
 /**
  * @summary BiometricPara
  * @description
- * 
+ *
+ * Set of usually adjustable biometric parameters: capture-device
+ * biometric type, comparison algorithms, FMR, and related
+ * values. Algorithm coverage should include sample processing,
+ * raw-data processing, and matching/decision. One item for a
+ * single modality; more than one for multiple modalities, in
+ * which case fusion should be identified in `ModalityPolicy`.
+ * ITU-T Rec. X.1089 (05/2008)
+ * [§9.10](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §9.11–9.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

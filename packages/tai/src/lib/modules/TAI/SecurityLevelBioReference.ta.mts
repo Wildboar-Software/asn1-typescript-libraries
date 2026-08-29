@@ -16,7 +16,15 @@ import { SecurityLevelBioRef, _decode_SecurityLevelBioRef, _encode_SecurityLevel
 /**
  * @summary SecurityLevelBioReference
  * @description
- * 
+ *
+ * Maps a security-level identifier to the modality policy and
+ * biometric parameters for that level. Semantics of levels are
+ * out of scope; a level indexes parameter information in the
+ * BPU's biometric policy. Recorded in certificates as an integer
+ * 1 (lowest) to 100 (highest). ITU-T Rec. X.1089 (05/2008)
+ * [§3.2.12](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §9.3–9.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,24 @@ class SecurityLevelBioReference {
     constructor (
         /**
          * @summary `securityLevelNum`.
+         * @description
+         *
+         * Identifier for this security level. Distinct among
+         * `bioSecLevelReference` attributes in one BPC. X.1089
+         * records a security level as 1 (lowest) to 100
+         * (highest). X.1089 §3.2.12, §9.3–9.4.
+         *
          * @public
          * @readonly
          */
         readonly securityLevelNum: INTEGER,
         /**
          * @summary `securityLevelBioRef`.
+         * @description
+         *
+         * Modality policy and biometric parameters for this
+         * level. X.1089 §9.4, §9.6.
+         *
          * @public
          * @readonly
          */

@@ -14,7 +14,11 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "@wildboar/x500/
 /**
  * @summary AttributesSyntax
  * @description
- * 
+ *
+ * One or more Directory attributes of the BC holder, for use
+ * with PMI. ITU-T Rec. X.1089 (05/2008)
+ * [§11.2](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

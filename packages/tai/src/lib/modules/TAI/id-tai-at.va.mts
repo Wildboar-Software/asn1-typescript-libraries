@@ -14,7 +14,11 @@ import { id_tai } from "../TAI/id-tai.va.mjs";
 /**
  * @summary id_tai_at
  * @description
- * 
+ *
+ * Arc for TAI attributes: `{id-tai attributes(1)}`. ITU-T Rec.
+ * X.1089 (05/2008)
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,7 +15,20 @@ import { BiometricDeviceCertificateInfo, _decode_BiometricDeviceCertificateInfo,
 /**
  * @summary BiometricDeviceCertificate
  * @description
- * 
+ *
+ * Signed X.509 attribute certificate for a tamper-resistant
+ * part of a biometric device (typically write-once memory that
+ * captures or processes biometrics and returns signed data).
+ * Produced by the vendor and authenticated by a TBA after
+ * testing that the device can be trusted at given security
+ * levels (liveness testing and resistance to tampering). The
+ * identity verifier uses the BDC to validate ACBio reports from
+ * the device. Also includes a device PKC or a URI to one, plus
+ * vendor, TBA, capability, and security-performance
+ * information. Signed by a TBA. ITU-T Rec. X.1089 (05/2008)
+ * [§3.2.5](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §6.2.2, §10.1–10.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

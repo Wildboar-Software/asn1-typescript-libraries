@@ -15,7 +15,14 @@ import { UniqueIdentifierOfBioParaInfo, _decode_UniqueIdentifierOfBioParaInfo, _
 /**
  * @summary SecurityLevelofPrivilege_bioSecLevel
  * @description
- * 
+ *
+ * Either `x520identifier` (`UniqueIdentifierOfBioParaInfo`,
+ * e.g. `biometricSecurityLevelId` from the BPC) or
+ * `simpleidentifier` (an integer assigned by the AC issuer).
+ * ITU-T Rec. X.1089 (05/2008)
+ * [§11.5.2](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §11.5.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

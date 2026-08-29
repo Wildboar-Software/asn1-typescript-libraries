@@ -6,6 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary URI
  * @description
  *
+ * RFC 3986 URI used to point at a stored BIT, PKC, or ACBio
+ * report rather than embedding it. Used in a BDC and a BPC.
+ * ITU-T Rec. X.1089 (05/2008)
+ * [§8.3](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §10.5, Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

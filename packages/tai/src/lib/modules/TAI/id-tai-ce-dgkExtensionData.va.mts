@@ -14,7 +14,13 @@ import { id_tai_ce } from "../TAI/id-tai-ce.va.mjs";
 /**
  * @summary id_tai_ce_dgkExtensionData
  * @description
- * 
+ *
+ * Identifies `dkgExtensionData`: `{id-tai-ce 6}`. The arc name
+ * is `dgk` in Annex A while the extension is `dkg`. ITU-T Rec.
+ * X.1089 (05/2008)
+ * [§11.3](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

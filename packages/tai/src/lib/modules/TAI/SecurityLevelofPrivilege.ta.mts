@@ -15,7 +15,11 @@ import { SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_
 /**
  * @summary SecurityLevelofPrivilege
  * @description
- * 
+ *
+ * Security level required for biometric authentication of the
+ * AC holder. ITU-T Rec. X.1089 (05/2008)
+ * [§11.5](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +36,13 @@ class SecurityLevelofPrivilege {
     constructor (
         /**
          * @summary `bioSecLevel`.
+         * @description
+         *
+         * Identifies the biometric-authentication result
+         * security level: an X.520 unique identifier of the
+         * biometric parameter info, or a simple integer assigned
+         * by the AC issuer. X.1089 §11.5.2–11.5.3.
+         *
          * @public
          * @readonly
          */

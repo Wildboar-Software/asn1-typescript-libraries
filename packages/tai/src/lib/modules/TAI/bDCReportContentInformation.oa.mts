@@ -16,7 +16,15 @@ import { id_tai_at_bDCReportContentInformation } from "../TAI/id-tai-at-bDCRepor
 /**
  * @summary bDCReportContentInformation
  * @description
- * 
+ *
+ * Required BDC attribute: the device public-key certificate (or
+ * a URI to it) and the ACBio BPU report (or a URI to it). The
+ * report is typically issued to the device by the TBA, or
+ * installed by a vendor trusted by the TBA. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§10.2](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §10.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

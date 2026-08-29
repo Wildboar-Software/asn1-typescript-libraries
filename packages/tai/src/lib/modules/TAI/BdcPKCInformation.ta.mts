@@ -15,7 +15,14 @@ import { URI, _decode_URI, _encode_URI } from "../TAI/URI.ta.mjs";
 /**
  * @summary BdcPKCInformation
  * @description
- * 
+ *
+ * X.509 public-key certificate providing a key pair for the
+ * biometric device (`bdcPublicKeyCertificate`), or a URI
+ * pointing to that certificate (`bpuCertificateReference`).
+ * ITU-T Rec. X.1089 (05/2008)
+ * [§10.3](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * §10.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

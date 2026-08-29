@@ -14,7 +14,12 @@ import { id_tai_ce } from "../TAI/id-tai-ce.va.mjs";
 /**
  * @summary id_tai_ce_biometricSecurityLevelOfPrivilege
  * @description
- * 
+ *
+ * Identifies `securityLevelofPrivilege`: `{id-tai-ce 3}`.
+ * ITU-T Rec. X.1089 (05/2008)
+ * [§11.5](https://www.itu.int/rec/T-REC-X.1089-200805-I),
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

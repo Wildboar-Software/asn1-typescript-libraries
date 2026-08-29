@@ -16,7 +16,12 @@ import {
 /**
  * @summary id_tai
  * @description
- * 
+ *
+ * Root OID for ITU-T X.1089 TAI:
+ * `{itu-t(0) recommendation(0) x(24) tai(1089)}`. ITU-T Rec.
+ * X.1089 (05/2008)
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,11 @@ import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/Cer
 /**
  * @summary PublicKeyCert
  * @description
- * 
+ *
+ * Index of the BC holder's public-key certificate: issuer,
+ * serial number, and key usage. ITU-T Rec. X.1089 (05/2008)
+ * [§11.1](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +38,30 @@ class PublicKeyCert {
     constructor (
         /**
          * @summary `pkcIssuer`.
+         * @description
+         *
+         * Issuer of the associated PKC. X.1089 §11.1.
+         *
          * @public
          * @readonly
          */
         readonly pkcIssuer: Name,
         /**
          * @summary `pkcSerialNumber`.
+         * @description
+         *
+         * Serial number of the associated PKC. X.1089 §11.1.
+         *
          * @public
          * @readonly
          */
         readonly pkcSerialNumber: CertificateSerialNumber,
         /**
          * @summary `pkcUsage`.
+         * @description
+         *
+         * Key usage of the associated PKC. X.1089 §11.1.
+         *
          * @public
          * @readonly
          */

@@ -15,7 +15,14 @@ import { URI, _decode_URI, _encode_URI } from "../TAI/URI.ta.mjs";
 /**
  * @summary BiometricInformationTemplateorPointer
  * @description
- * 
+ *
+ * BIT carried in a BC: either the signed patron format itself
+ * (`bcBiometricInformationTemplate`) or a URI referencing a
+ * stored BIT. The encoding should always be signed. Extensible
+ * without changing encodings of existing alternatives. ITU-T
+ * Rec. X.1089 (05/2008)
+ * [§8.3](https://www.itu.int/rec/T-REC-X.1089-200805-I), §8.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

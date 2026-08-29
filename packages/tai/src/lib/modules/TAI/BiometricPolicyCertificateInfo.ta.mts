@@ -20,7 +20,11 @@ import {
 /**
  * @summary BiometricPolicyCertificateInfo
  * @description
- * 
+ *
+ * To-be-signed content of a BPC. `attributes` shall contain at
+ * least one `bioSecLevelReference`. ITU-T Rec. X.1089 (05/2008)
+ * [§9.1](https://www.itu.int/rec/T-REC-X.1089-200805-I), §9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

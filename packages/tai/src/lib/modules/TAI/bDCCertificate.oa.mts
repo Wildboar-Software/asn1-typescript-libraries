@@ -16,7 +16,14 @@ import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 /**
  * @summary bDCCertificate
  * @description
- * 
+ *
+ * BPC extension indexing particular BDCs so the identity
+ * verifier can evaluate the underlying biometric processing and
+ * verify devices included with the BPC. Other indexed BDCs may
+ * be used by the TAI application itself. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§11.6](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

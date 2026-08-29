@@ -13,6 +13,14 @@ import {
 
 
 
+/**
+ * @summary CONTENT-TYPE
+ * @description
+ *
+ * `TYPE-IDENTIFIER` used to type ACBio BPU report content.
+ * ITU-T Rec. X.1089 (05/2008)
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ */
 export
 type CONTENT_TYPE<Type> = TYPE_IDENTIFIER<Type>;
 

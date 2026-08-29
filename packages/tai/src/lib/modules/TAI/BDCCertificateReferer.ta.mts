@@ -17,7 +17,12 @@ import { type KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x50
 /**
  * @summary BDCCertificateReferer
  * @description
- * 
+ *
+ * Index of a biometric device certificate associated with a
+ * BPC: issuer, serial number, and key usage. ITU-T Rec. X.1089
+ * (05/2008)
+ * [§11.6](https://www.itu.int/rec/T-REC-X.1089-200805-I).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,30 @@ class BDCCertificateReferer {
     constructor (
         /**
          * @summary `bdcIssuer`.
+         * @description
+         *
+         * Issuer of the referenced BDC. X.1089 §11.6.
+         *
          * @public
          * @readonly
          */
         readonly bdcIssuer: Name,
         /**
          * @summary `bdcSerialNumber`.
+         * @description
+         *
+         * Serial number of the referenced BDC. X.1089 §11.6.
+         *
          * @public
          * @readonly
          */
         readonly bdcSerialNumber: CertificateSerialNumber,
         /**
          * @summary `bdcUsage`.
+         * @description
+         *
+         * Key usage of the referenced BDC. X.1089 §11.6.
+         *
          * @public
          * @readonly
          */
