@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary FunctionalUnitPackageId
  * @description
  *
+ * Object identifier naming a functional unit package for SMFU
+ * negotiation on an association. Assigned by the standard that
+ * defines the package; typical form
+ * `{joint-iso-itu-t ms(9) function(2) partX(X)
+ * functionalUnitPackage(1)}`. ITU-T Rec. X.701 (08/97)
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.701-199708-I),
+ * A.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

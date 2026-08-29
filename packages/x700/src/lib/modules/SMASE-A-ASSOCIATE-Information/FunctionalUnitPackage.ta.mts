@@ -21,6 +21,16 @@ import {
  * @summary FunctionalUnitPackage
  * @description
  *
+ * Named non-empty set of Systems Management Functional Units
+ * (SMFUs), the unit of negotiation on an association. A
+ * function standard assigns an object identifier and one
+ * unique bit position per functional unit in the package.
+ * SMASE services may be grouped into FUs for this purpose;
+ * an FU may span more than one systems management function.
+ * ITU-T Rec. X.701 (08/97)
+ * [§3.6.32](https://www.itu.int/rec/T-REC-X.701-199708-I),
+ * §6.3, §7.4, A.3.2–A.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +48,48 @@ export class FunctionalUnitPackage {
     constructor(
         /**
          * @summary `functionalUnitPackageId`.
+         * @description
+         *
+         * OID of this package, used to identify it during
+         * association negotiation. Typical assignment:
+         * `{joint-iso-itu-t ms(9) function(2) partX(X)
+         * functionalUnitPackage(1)}`. X.701 A.3.3.
+         *
          * @public
          * @readonly
          */
         readonly functionalUnitPackageId: FunctionalUnitPackageId,
         /**
          * @summary `managerRoleFunctionalUnit`.
+         * @description
+         *
+         * SMFUs of this package offered or agreed in the
+         * manager role. Bit `n` is the functional unit at
+         * position `n` in the package definition. `DEFAULT {}`
+         * (empty); if not present, this role is not supported
+         * for the package. Missing trailing bits are zero.
+         * Together with `agentRoleFunctionalUnit`, used to
+         * negotiate down to a manager-only or agent-only
+         * system. Manager issues operations and receives
+         * notifications. X.701 §6.1, A.3.2–A.3.4.
+         *
          * @public
          * @readonly
          */
         readonly managerRoleFunctionalUnit?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `agentRoleFunctionalUnit`.
+         * @description
+         *
+         * SMFUs of this package offered or agreed in the agent
+         * role. Bit `n` is the functional unit at position `n`
+         * in the package definition. `DEFAULT {}` (empty); if
+         * not present, this role is not supported for the
+         * package. Missing trailing bits are zero. Agent
+         * performs operations on local managed objects and
+         * may forward their notifications. X.701 §6.1,
+         * A.3.2–A.3.4.
+         *
          * @public
          * @readonly
          */
@@ -80,6 +120,12 @@ export class FunctionalUnitPackage {
 
     /**
      * @summary Getter that returns the default value for `managerRoleFunctionalUnit`.
+     * @description
+     *
+     * Empty BIT STRING (`DEFAULT {}`). Absence means the
+     * manager role is not supported for this package.
+     * X.701 A.3.4.
+     *
      * @public
      * @static
      * @method
@@ -89,6 +135,12 @@ export class FunctionalUnitPackage {
     }
     /**
      * @summary Getter that returns the default value for `agentRoleFunctionalUnit`.
+     * @description
+     *
+     * Empty BIT STRING (`DEFAULT {}`). Absence means the
+     * agent role is not supported for this package.
+     * X.701 A.3.4.
+     *
      * @public
      * @static
      * @method

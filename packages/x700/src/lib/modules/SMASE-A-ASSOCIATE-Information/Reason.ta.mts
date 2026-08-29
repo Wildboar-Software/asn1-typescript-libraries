@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Reason
  * @description
  *
+ * Diagnostic on A-ASSOCIATE response/confirm when SMFU
+ * negotiation fails, the proposed set is reduced, or the
+ * association is rejected. ITU-T Rec. X.701 (08/97)
+ * [A.3.4](https://www.itu.int/rec/T-REC-X.701-199708-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,13 +42,23 @@ export type Reason = INTEGER;
 
 /**
  * @summary Reason_smfusNotSupported
+ * @description
+ *
+ * One or more of the requested SMFUs are not supported.
+ * X.701 A.3.4.
+ *
  * @constant
  * @type {number}
  */
 export const Reason_smfusNotSupported: Reason = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary Reason_smfusNotSupported
+ * @summary smfusNotSupported
+ * @description
+ *
+ * One or more of the requested SMFUs are not supported.
+ * X.701 A.3.4.
+ *
  * @constant
  * @type {number}
  */
@@ -51,13 +66,23 @@ export const smfusNotSupported: Reason = Reason_smfusNotSupported; /* SHORT_NAME
 
 /**
  * @summary Reason_smfuCombinationNotSupported
+ * @description
+ *
+ * Each requested SMFU is supported, but not in this
+ * combination on a single association. X.701 A.3.4.
+ *
  * @constant
  * @type {number}
  */
 export const Reason_smfuCombinationNotSupported: Reason = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary Reason_smfuCombinationNotSupported
+ * @summary smfuCombinationNotSupported
+ * @description
+ *
+ * Each requested SMFU is supported, but not in this
+ * combination on a single association. X.701 A.3.4.
+ *
  * @constant
  * @type {number}
  */
@@ -65,13 +90,25 @@ export const smfuCombinationNotSupported: Reason = Reason_smfuCombinationNotSupp
 
 /**
  * @summary Reason_smfusRequiredNotAvailable
+ * @description
+ *
+ * One or more required SMFUs were negotiated away (responder
+ * returned a proper subset that dropped a required unit).
+ * X.701 A.3.4.
+ *
  * @constant
  * @type {number}
  */
 export const Reason_smfusRequiredNotAvailable: Reason = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary Reason_smfusRequiredNotAvailable
+ * @summary smfusRequiredNotAvailable
+ * @description
+ *
+ * One or more required SMFUs were negotiated away (responder
+ * returned a proper subset that dropped a required unit).
+ * X.701 A.3.4.
+ *
  * @constant
  * @type {number}
  */
@@ -79,13 +116,23 @@ export const smfusRequiredNotAvailable: Reason = Reason_smfusRequiredNotAvailabl
 
 /**
  * @summary Reason_smfuNegotiationRefused
+ * @description
+ *
+ * Responder refuses to negotiate SMFUs without stating why.
+ * X.701 A.3.4.
+ *
  * @constant
  * @type {number}
  */
 export const Reason_smfuNegotiationRefused: Reason = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary Reason_smfuNegotiationRefused
+ * @summary smfuNegotiationRefused
+ * @description
+ *
+ * Responder refuses to negotiate SMFUs without stating why.
+ * X.701 A.3.4.
+ *
  * @constant
  * @type {number}
  */

@@ -26,6 +26,25 @@ import {
  * @summary SMASEUserData
  * @description
  *
+ * SMASE payload of ACSE A-ASSOCIATE `user information`: the
+ * CMISE EXTERNAL (X.711) may be followed by this type as a
+ * second EXTERNAL. Carries optional negotiation of Systems
+ * Management Functional Units (SMFUs) for the Systems
+ * management application context. Abstract syntax
+ * `{joint-iso-itu-t ms(9) smo(0) negotiationAbstractSyntax(1)
+ * version1(1)}` (BER required to interpret ACSE
+ * user-information; X.701 A.4.1). ACSE mode is `normal`.
+ * Both initiator and responder may take manager and agent
+ * roles; roles may switch per interaction (invoker decides).
+ * An unsupported operation is `unrecognizedOperation`; an
+ * unsupported notification is `noSuchEventType` (X.710).
+ * ITU-T Rec. X.701 (08/97)
+ * [A.2.2](https://www.itu.int/rec/T-REC-X.701-199708-I),
+ * A.2.4, A.3.2, A.3.4. SMAE/SMASE: X.701 §6.4.2–§6.4.3.
+ * Systems management communications via SMAE: X.700 (09/92)
+ * [§6.2](https://www.itu.int/rec/T-REC-X.700-199209-I),
+ * §7.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -54,18 +73,49 @@ export class SMASEUserData {
     constructor(
         /**
          * @summary `smfuPackages`.
+         * @description
+         *
+         * Proposed or agreed SMFUs. Present on
+         * request/indication if SMFU negotiation is proposed,
+         * and on response/confirm if accepted; otherwise
+         * omitted. Negotiation is optional. Initiator proposes
+         * a valid non-empty set; responder accepts with an
+         * identical set or a subset, or refuses by omitting
+         * this parameter. If the initiator omits it, the
+         * responder shall omit it or reject the association.
+         * An agreed set constrains operations and
+         * notifications until a new agreement (in-association
+         * change is not specified). Interactions outside the
+         * agreed SMFUs shall result in an error. If two
+         * proposed FUs overlap and only one is accepted,
+         * common capabilities remain agreed (X.701 A.3.2
+         * Note 2). If negotiation is refused but the
+         * association succeeds, only the application context
+         * rules of X.701 A.2.2 apply. X.701 A.3.2, A.3.4.
+         *
          * @public
          * @readonly
          */
         readonly smfuPackages?: OPTIONAL<FunctionalUnitPackage[]>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Why SMFU negotiation failed, the proposed set was
+         * reduced, or the association was rejected. Only on
+         * A-ASSOCIATE response/confirm. X.701 A.3.4.
+         *
          * @public
          * @readonly
          */
         readonly reason?: OPTIONAL<Reason>,
         /**
          * @summary `systemsManagementUserInformation`.
+         * @description
+         *
+         * Distinguishes implementation environments. Not
+         * subject to conformance testing. X.701 A.3.4.
+         *
          * @public
          * @readonly
          */
