@@ -16,6 +16,11 @@ import { id_obj_cat } from '../Telebiometrics/id-obj-cat.va.mjs';
  * @summary id_pharm_staff
  * @description
  *
+ * Pharmaceutical-staff category `{id-obj-cat pharm-staff(4)}`.
+ * Dispensing / lab-analysis staff. ITU-T X.1080.1 (05/2018) §8.2,
+ * §8.6.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

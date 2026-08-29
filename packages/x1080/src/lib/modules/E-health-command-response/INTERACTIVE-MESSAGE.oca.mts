@@ -18,6 +18,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary INTERACTIVE_MESSAGE
  * @description
  *
+ * 2011 class for one step of an interactive sequence: unique step
+ * `&id`, `command` or `response` direction, `&Type`, optional
+ * `&expected-response` (commands only), optional next step ids.
+ * Not the 2018 `INTERACTIVE-OPERATION` class. ITU-T Rec.
+ * X.1080.1 (10/2011) module E-health-command-response.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -71,24 +77,44 @@ export interface INTERACTIVE_MESSAGE<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique step identifier (`INTEGER (0..MAX)`). ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-command-response.
      */
     readonly '&id'?: INTEGER;
 
     /**
      * @summary &direction
+     * @description
+     *
+     * `command` or `response`. ITU-T Rec. X.1080.1 (10/2011)
+     * module E-health-command-response.
      */
     readonly '&direction'?: ENUMERATED;
 
     /**
      * @summary &Type
+     * @description
+     *
+     * Abstract syntax of this step's content. ITU-T Rec. X.1080.1
+     * (10/2011) module E-health-command-response.
      */
     readonly '&Type': Type;
     /**
      * @summary &expected-response
+     * @description
+     *
+     * Expected response step; only for a command. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-command-response.
      */
     readonly '&expected-response'?: INTERACTIVE_MESSAGE;
     /**
      * @summary &next
+     * @description
+     *
+     * Identifiers of steps that may follow. ITU-T Rec. X.1080.1
+     * (10/2011) module E-health-command-response.
      */
     readonly '&next'?: INTEGER[];
 }

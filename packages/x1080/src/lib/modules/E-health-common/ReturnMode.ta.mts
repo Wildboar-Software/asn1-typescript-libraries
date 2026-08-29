@@ -23,6 +23,10 @@ export enum _enum_for_ReturnMode {
  * @summary ReturnMode
  * @description
  *
+ * How the patient-local facility returns sensing results.
+ * ITU-T Rec. X.1080.1 (05/2018)
+ * [§11.1.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +43,11 @@ export type ReturnMode = _enum_for_ReturnMode | ENUMERATED;
 
 /**
  * @summary ReturnMode_continuous
+ * @description
+ *
+ * Return results as they are generated. ITU-T Rec. X.1080.1
+ * (05/2018) §11.1.1 c).
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +56,11 @@ export const ReturnMode_continuous: ReturnMode = 0; /* LONG_NAMED_ENUMERATED_VAL
 
 /**
  * @summary continuous
+ * @description
+ *
+ * Return results as they are generated. ITU-T Rec. X.1080.1
+ * (05/2018) §11.1.1 c).
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +69,11 @@ export const continuous: ReturnMode = ReturnMode_continuous; /* SHORT_NAMED_ENUM
 
 /**
  * @summary ReturnMode_batch
+ * @description
+ *
+ * Collect results and return them at the end of sensing or when
+ * requested. ITU-T Rec. X.1080.1 (05/2018) §11.1.1 c).
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +82,11 @@ export const ReturnMode_batch: ReturnMode = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary batch
+ * @description
+ *
+ * Collect results and return them at the end of sensing or when
+ * requested. ITU-T Rec. X.1080.1 (05/2018) §11.1.1 c).
+ *
  * @constant
  * @type {number}
  */

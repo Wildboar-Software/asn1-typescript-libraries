@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CmsErrorCode
  * @description
  *
+ * Subset of RFC 7191 CMS error codes relevant to telebiometrics.
+ * Per-code meaning is in IETF RFC 7191; when that RFC says
+ * "certificate" it means the PKC used with CMS content types.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.6.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -118,6 +124,12 @@ export enum _enum_for_CmsErrorCode {
  * @summary CmsErrorCode
  * @description
  *
+ * Subset of RFC 7191 CMS error codes relevant to telebiometrics.
+ * Per-code meaning is in IETF RFC 7191; when that RFC says
+ * "certificate" it means the PKC used with CMS content types.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.6.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -175,6 +187,12 @@ export type CmsErrorCode = _enum_for_CmsErrorCode;
 /**
  * @summary CmsErrorCode
  * @description
+ *
+ * Subset of RFC 7191 CMS error codes relevant to telebiometrics.
+ * Per-code meaning is in IETF RFC 7191; when that RFC says
+ * "certificate" it means the PKC used with CMS content types.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.6.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
  *
  * ### ASN.1 Definition:
  *

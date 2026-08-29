@@ -16,6 +16,11 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  * @summary id_audio
  * @description
  *
+ * AUDIO modality. Latin *audiō* “I hear”. AUDIO-IN: sound affecting
+ * the ear. AUDIO-OUT: vocal or assisted sound. X.1080.1 Annex A;
+ * X.1082 intro, §3.5.5–§3.5.6.
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

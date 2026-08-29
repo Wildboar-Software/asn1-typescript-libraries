@@ -21,6 +21,11 @@ import {
  * @summary PrivAssignResult_result
  * @description
  *
+ * `PrivAssignResult.result`: success (`NULL`) or failure
+ * (`PrivAssignErr`).
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

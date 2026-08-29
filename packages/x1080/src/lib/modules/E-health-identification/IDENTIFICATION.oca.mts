@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IDENTIFICATION
  * @description
  *
+ * Object-category class: unique `&category` OID plus the
+ * `&Identification` type for that category. Ten categories in
+ * clauses 8.2–8.12 (extensible `...`). ITU-T X.1080.1 (05/2018) §8.1.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -61,10 +66,16 @@ export interface IDENTIFICATION<
     >;
     /**
      * @summary &category
+     * @description
+     *
+     * Unique OID of the object category (under `id-obj-cat`).
      */
     readonly '&category'?: OBJECT_IDENTIFIER;
     /**
      * @summary &Identification
+     * @description
+     *
+     * Type used to identify an object of that category.
      */
     readonly '&Identification': Identification;
 }

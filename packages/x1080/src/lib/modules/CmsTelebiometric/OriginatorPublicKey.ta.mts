@@ -21,6 +21,12 @@ import {
  * @summary OriginatorPublicKey
  * @description
  *
+ * Ephemeral DH public key for ephemeral-static key agreement.
+ * Sender generates a new DH key pair for each use of this content
+ * type.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +41,25 @@ export class OriginatorPublicKey {
     constructor(
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * DH public-key algorithm used. From
+         * `SupportedDHPublicKeyAlgorithms` (extensible; none
+         * mandated).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: AlgorithmIdentifier,
         /**
          * @summary `publicKey`.
+         * @description
+         *
+         * Sender's DH public key. A new key pair per message for
+         * ephemeral-static.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */

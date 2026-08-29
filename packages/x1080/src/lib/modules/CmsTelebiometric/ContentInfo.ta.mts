@@ -17,6 +17,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ContentInfo
  * @description
  *
+ * Outer CMS wrapper for a telebiometrics content type. Encapsulate
+ * in `envelopedData` if confidentiality is required, else in
+ * `signedData`. Alternatively use `ct-authEnvelopedData`. When
+ * encryption is used, `envelopedData` is itself encapsulated in
+ * `signedData`. `ct-authEnvelopedData` is for multiple messages of
+ * one task (session).
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.1.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +41,24 @@ export class ContentInfo {
     constructor(
         /**
          * @summary `contentType`.
+         * @description
+         *
+         * OID from `TelebSupportedcontentTypes` (`signedData`,
+         * `envelopedData`, `ct-authEnvelopedData`, plus types from
+         * a referencing telebiometrics specification).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly contentType: OBJECT_IDENTIFIER,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Abstract syntax bound to `contentType` by `CONTENT-TYPE`.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.1.
+         *
          * @public
          * @readonly
          */

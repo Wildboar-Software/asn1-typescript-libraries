@@ -16,6 +16,11 @@ import { id_methods } from '../Telebiometrics/id-methods.va.mjs';
  * @summary id_methods_culturology
  * @description
  *
+ * Culturology methods `{id-methods culturology(4)}`. One of the five
+ * X.1080.x fields. Measurement/method OIDs used as
+ * `DataMessage.method`. X.1080.1 Annex A.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

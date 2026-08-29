@@ -21,6 +21,12 @@ import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
  * @summary health_term_rsp
  * @description
  *
+ * CMS `CONTENT-TYPE` for completing session termination.
+ * Identified by `id-health-term-rsp`. ITU-T Rec. X.1080.1
+ * (05/2018)
+ * [§11.2.2](https://www.itu.int/rec/T-REC-X.1080.1-201805-I),
+ * §7.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

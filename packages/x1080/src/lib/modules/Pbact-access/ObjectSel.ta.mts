@@ -21,6 +21,11 @@ import {
  * @summary ObjectSel
  * @description
  *
+ * Privileges for one object class. Unlisted classes confer no
+ * access.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,12 +49,25 @@ export class ObjectSel {
     constructor(
         /**
          * @summary `objecClass`.
+         * @description
+         *
+         * Object class for which privileges are assigned. ASN.1 spells
+         * this `objecClass` (not `objectClass`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly objecClass: OBJECT_IDENTIFIER,
         /**
          * @summary `objSelect`.
+         * @description
+         *
+         * All objects of the class, or selected objects only.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

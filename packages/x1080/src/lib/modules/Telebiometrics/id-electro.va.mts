@@ -16,6 +16,10 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  * @summary id_electro
  * @description
  *
+ * Electro modality arc `{id-modalities electro(7)}`. Allocated in
+ * X.1080.1 Annex A only; no definition is given beyond this arc.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

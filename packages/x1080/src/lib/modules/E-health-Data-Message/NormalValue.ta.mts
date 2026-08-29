@@ -26,6 +26,12 @@ import {
  * @summary NormalValue
  * @description
  *
+ * A normal/reference interval: range `{minimum,maximum}`,
+ * `low-limit`, or `high-limit`, with optional `CONDITION`s. 2011
+ * E-health-Data-Message example module. ITU-T X.1080.1 (05/2018)
+ * intro / §6.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,12 +50,20 @@ export class NormalValue {
     constructor(
         /**
          * @summary `value`.
+         * @description
+         *
+         * Range, low-limit, or high-limit of the normal interval.
+         *
          * @public
          * @readonly
          */
         readonly value: NormalValue_value,
         /**
          * @summary `conditions`.
+         * @description
+         *
+         * Optional conditions under which this interval applies.
+         *
          * @public
          * @readonly
          */

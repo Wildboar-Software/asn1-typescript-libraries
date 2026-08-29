@@ -21,6 +21,14 @@ import {
  * @summary INSURANCE_SCHEME
  * @description
  *
+ * Medical-insurance scheme: unique `&id`, optional `&name`,
+ * `&Company` (issuer: name, HQ, company number, contact),
+ * `&InsuranceType` relative to that company, and `&Certification`
+ * (reference number + person issued to; signed by the company,
+ * contains a PKC). Scheme establishment is out of scope. ITU-T
+ * X.1080.1 (05/2018) §8.11.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -78,22 +86,41 @@ export interface INSURANCE_SCHEME<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of the insurance identification scheme.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &name
+     * @description
+     *
+     * Optional `SchemeName`: ISO646String (not necessarily unique) or
+     * OID.
      */
     readonly '&name'?: SchemeName;
     /**
      * @summary &Company
+     * @description
+     *
+     * Company that issued the medical insurance. Typically name, HQ
+     * location, company number, and contact details.
      */
     readonly '&Company': Company;
     /**
      * @summary &InsuranceType
+     * @description
+     *
+     * Type of medical insurance relative to that company.
      */
     readonly '&InsuranceType': InsuranceType;
     /**
      * @summary &Certification
+     * @description
+     *
+     * Reference number of the insurance plus identification of the
+     * person it was issued to. Signed by the company, so this type
+     * contains a public-key certificate.
      */
     readonly '&Certification': Certification;
 }

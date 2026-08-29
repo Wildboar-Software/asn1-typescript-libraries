@@ -15,6 +15,11 @@ import { type ALGORITHM } from '@wildboar/x500/AuthenticationFramework';
  * @summary PBKDF2_PRFs
  * @description
  *
+ * Open set of PBKDF2 pseudorandom functions. Extensible `{...}`;
+ * filled by referencing specs or implementers' agreements.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,11 @@ import { id_x1080_1 } from '../E-health-identification/id-x1080-1.va.mjs';
  * @summary id_x1080_1_cms_content
  * @description
  *
+ * CMS content types defined by this Recommendation
+ * `{id-x1080-1 cms-content(1)}`. Child arcs (`health-setup-req`, …)
+ * are in E-health-common. ITU-T X.1080.1 (05/2018) §7.2–§7.3.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

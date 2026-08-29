@@ -21,6 +21,11 @@ import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.o
  * @summary medicalStaffIdentification
  * @description
  *
+ * `IDENTIFICATION` object for medical staff: category `id-med-staff`,
+ * identified with `MedicalStaffIdentification`. ITU-T X.1080.1
+ * (05/2018) §8.4.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

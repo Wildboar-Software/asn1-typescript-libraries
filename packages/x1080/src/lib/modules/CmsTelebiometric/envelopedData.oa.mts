@@ -21,6 +21,11 @@ import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
  * @summary envelopedData
  * @description
  *
+ * CMS content type for confidentiality. Key agreement (Diffie-
+ * Hellman) is required. Encapsulated in `signedData` when used.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.1, B.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

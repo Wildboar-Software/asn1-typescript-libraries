@@ -21,6 +21,11 @@ import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.o
  * @summary softwareIdentification
  * @description
  *
+ * `IDENTIFICATION` object for medical software: category
+ * `id-med-softw`, identified with `SoftwareIdentification`. ITU-T
+ * X.1080.1 (05/2018) §8.10.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

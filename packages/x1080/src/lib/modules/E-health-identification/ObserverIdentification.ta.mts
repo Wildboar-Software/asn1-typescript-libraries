@@ -23,6 +23,12 @@ import {
  * @summary ObserverIdentification
  * @description
  *
+ * Identifies an observer (law enforcement, medical students, etc.).
+ * Generally no health-professional qualification. `observerId` is
+ * `MEDICAL-STAFF-SCHEME.&Observer` — usually descriptive (role +
+ * name), unlikely unique. ITU-T X.1080.1 (05/2018) §8.5.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +44,32 @@ export class ObserverIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `MEDICAL-STAFF-SCHEME.&id` of the numbering scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `observerId`.
+         * @description
+         *
+         * `MEDICAL-STAFF-SCHEME.&Observer`. Normally role + name;
+         * unlikely to contain unique identification.
+         *
          * @public
          * @readonly
          */

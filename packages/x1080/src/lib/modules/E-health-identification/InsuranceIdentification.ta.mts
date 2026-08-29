@@ -23,6 +23,14 @@ import {
  * @summary InsuranceIdentification
  * @description
  *
+ * Identifies a medical insurance. `manufacturerId` is
+ * `INSURANCE-SCHEME.&Company` (issuer: name, HQ, company number,
+ * contact). `insurance` is the type relative to that company.
+ * `insuranceCert` is reference number + person issued to; signed by
+ * the company (contains a PKC). Scheme establishment is out of
+ * scope. ITU-T X.1080.1 (05/2018) §8.11.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,30 +47,53 @@ export class InsuranceIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `INSURANCE-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `INSURANCE-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `manufacturerId`.
+         * @description
+         *
+         * `INSURANCE-SCHEME.&Company`: issuer (name, HQ, company
+         * number, contact).
+         *
          * @public
          * @readonly
          */
         readonly manufacturerId: _Element,
         /**
          * @summary `insurance`.
+         * @description
+         *
+         * `INSURANCE-SCHEME.&InsuranceType` relative to that company.
+         *
          * @public
          * @readonly
          */
         readonly insurance: _Element,
         /**
          * @summary `insuranceCert`.
+         * @description
+         *
+         * `INSURANCE-SCHEME.&Certification`: reference number + person
+         * issued to. Signed by the company (contains a PKC).
+         *
          * @public
          * @readonly
          */

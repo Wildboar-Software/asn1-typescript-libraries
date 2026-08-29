@@ -21,6 +21,11 @@ import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.o
  * @summary medicalRecordIdentification
  * @description
  *
+ * `IDENTIFICATION` object for medical records: category `id-med-rec`,
+ * identified with `MedicalRecordIdentification`. ITU-T X.1080.1
+ * (05/2018) §8.12.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

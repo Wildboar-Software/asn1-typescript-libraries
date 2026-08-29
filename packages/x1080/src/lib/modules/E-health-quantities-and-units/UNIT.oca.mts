@@ -23,6 +23,13 @@ type RELATIVE_IRI = RELATIVE_OID_IRI;
  * @summary UNIT
  * @description
  *
+ * Named unit with symbols, unique id and IRI. Optional product
+ * (`&Units1`) / quotient (`&Units2`) of units, and optional SI-style
+ * multiple of a base unit (`mantissa` 1, `base` 10). 2011 module;
+ * semantics from X.1082 (SI / ISQ). ITU-T X.1080.1 (05/2018).
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -81,34 +88,59 @@ export interface UNIT {
     >;
     /**
      * @summary &name
+     * @description
+     *
+     * Name of the unit.
      */
     readonly '&name'?: PrintableString;
     /**
      * @summary &symbols
+     * @description
+     *
+     * Letter symbol(s) for the unit.
      */
     readonly '&symbols'?: SYMBOLS;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of this unit (typically under `id-units`).
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &relative-oid-iri
+     * @description
+     *
+     * Relative OID-IRI for this unit.
      */
     readonly '&relative-oid-iri'?: RELATIVE_IRI;
     /**
      * @summary &Units1
+     * @description
+     *
+     * Optional product-of-units factor (`DERIVED BY PRODUCT OF`).
      */
     readonly '&Units1'?: UNIT[];
     /**
      * @summary &Units2
+     * @description
+     *
+     * Optional quotient-of-units factor (`DERIVED BY … DIVIDED BY`).
      */
     readonly '&Units2'?: UNIT[];
     /**
      * @summary &multipleBaseUnit
+     * @description
+     *
+     * Optional SI-style base unit of which this is a multiple.
      */
     readonly '&multipleBaseUnit'?: UNIT;
     /**
      * @summary &multipleFactor
+     * @description
+     *
+     * Optional multiple factor: REAL constrained to mantissa 1 and
+     * base 10 (powers of ten).
      */
     readonly '&multipleFactor'?: REAL;
 }

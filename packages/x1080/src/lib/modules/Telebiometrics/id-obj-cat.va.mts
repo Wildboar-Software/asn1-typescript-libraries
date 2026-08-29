@@ -16,6 +16,11 @@ import { id_telebio } from '../Telebiometrics/id-telebio.va.mjs';
  * @summary id_obj_cat
  * @description
  *
+ * Object-category arc `{id-telebio obj-cat(3)}` for identification
+ * categories (patient, medical staff, observer, …). Child category
+ * OIDs are in E-health-identification. X.1080.1 §7.1, §8.2, Annex A.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

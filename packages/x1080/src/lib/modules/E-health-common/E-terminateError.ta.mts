@@ -31,6 +31,11 @@ import {
  * @summary E_terminateError
  * @description
  *
+ * Responder payload refusing to complete termination. Echoes the
+ * request ids and a `TerminateError`. Carried as CMS content type
+ * `health-term-err`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§11.2.3](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,18 +51,33 @@ export class E_terminateError {
     constructor(
         /**
          * @summary `sessionType`.
+         * @description
+         *
+         * Same value as in the corresponding request.
+         * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 a).
+         *
          * @public
          * @readonly
          */
         readonly sessionType: SessionType,
         /**
          * @summary `sessionId`.
+         * @description
+         *
+         * Same value as in the corresponding request.
+         * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 b).
+         *
          * @public
          * @readonly
          */
         readonly sessionId: SessionId,
         /**
          * @summary `error`.
+         * @description
+         *
+         * Reason termination was refused. ITU-T Rec. X.1080.1
+         * (05/2018) §11.2.3 c).
+         *
          * @public
          * @readonly
          */

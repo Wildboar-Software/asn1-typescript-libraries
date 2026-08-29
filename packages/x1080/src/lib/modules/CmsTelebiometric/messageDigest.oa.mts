@@ -25,6 +25,11 @@ import { id_messageDigest } from '../CmsTelebiometric/id-messageDigest.va.mjs';
  * @summary messageDigest
  * @description
  *
+ * RFC 5652 signed attribute: message digest of the content.
+ * Required in `signedAttrs`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

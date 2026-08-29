@@ -21,6 +21,10 @@ import {
  * @summary RequestContent
  * @description
  *
+ * Template for an operation request: content-type OID plus inner
+ * content. ITU-T Rec. X.1080.1 (05/2018)
+ * [§10.2](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -44,12 +48,22 @@ export class RequestContent {
     constructor(
         /**
          * @summary `contentType`.
+         * @description
+         *
+         * `INTERACTIVE-OPERATION.&content-req` for this request.
+         * ITU-T Rec. X.1080.1 (05/2018) §10.2.
+         *
          * @public
          * @readonly
          */
         readonly contentType: OBJECT_IDENTIFIER,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Inner request (invokId, session, options, request body).
+         * ITU-T Rec. X.1080.1 (05/2018) §10.2.
+         *
          * @public
          * @readonly
          */

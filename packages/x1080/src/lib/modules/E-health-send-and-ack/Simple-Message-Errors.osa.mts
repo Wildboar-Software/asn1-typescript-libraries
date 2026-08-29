@@ -16,6 +16,9 @@ import { Simple_Messages } from '../E-health-send-and-ack/Simple-Messages.osa.mj
  * @summary Simple_Message_Errors
  * @description
  *
+ * Union of `Simple-Messages.&Errors`. Constrains `Ack.error`.
+ * ITU-T Rec. X.1080.1 (10/2011) module E-health-send-and-ack.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

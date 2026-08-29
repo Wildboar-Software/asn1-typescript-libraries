@@ -15,6 +15,11 @@ import { type INSURANCE_SCHEME } from '../E-health-identification/INSURANCE-SCHE
  * @summary InsuranceSchemes
  * @description
  *
+ * Extensible object set `{...}` of `INSURANCE-SCHEME`s. Filled by
+ * referencing specs / implementers' agreements. Scheme establishment
+ * is out of scope of X.1080.1. ITU-T X.1080.1 (05/2018) §8.11.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

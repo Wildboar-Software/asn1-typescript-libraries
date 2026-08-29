@@ -16,6 +16,11 @@ import { id_measures } from '../Telebiometrics/id-measures.va.mjs';
  * @summary id_methods
  * @description
  *
+ * Measurement methods `{id-measures methods(5)}`. Split by the five
+ * X.1080.x fields (physics … psychology). `DataMessage.method` is an
+ * OID under these arcs. X.1080.1 Annex A.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

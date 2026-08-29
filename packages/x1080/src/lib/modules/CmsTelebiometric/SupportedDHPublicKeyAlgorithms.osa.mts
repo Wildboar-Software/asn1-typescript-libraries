@@ -15,6 +15,12 @@ import { type ALGORITHM } from '@wildboar/x500/AuthenticationFramework';
  * @summary SupportedDHPublicKeyAlgorithms
  * @description
  *
+ * Open set of DH public-key algorithms for
+ * `OriginatorPublicKey`. Extensible `{...}`; this profile does
+ * not mandate an algorithm.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,11 @@ import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.o
  * @summary laboratoryIdentification
  * @description
  *
+ * `IDENTIFICATION` object for laboratories: category `id-lab`,
+ * identified with `LaboratoryIdentification`. ITU-T X.1080.1
+ * (05/2018) §8.7.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

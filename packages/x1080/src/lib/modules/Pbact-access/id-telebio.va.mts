@@ -16,6 +16,10 @@ import {
  * @summary id_telebio
  * @description
  *
+ * Root OID for telebiometrics: `{joint-iso-itu-t(2) telebiometrics(42)}`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -27,6 +27,12 @@ import {
  * @summary PBKDF2_params
  * @description
  *
+ * PBKDF2 parameters for KEK derivation. Salt is `specified`
+ * (OCTET STRING); `otherSource` is not used in this profile's
+ * first definition. `keyLength` is optional.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,24 +52,45 @@ export class PBKDF2_params {
     constructor(
         /**
          * @summary `salt`.
+         * @description
+         *
+         * PBKDF2 salt. This profile uses the `specified` OCTET
+         * STRING alternative.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+         *
          * @public
          * @readonly
          */
         readonly salt: PBKDF2_params_salt,
         /**
          * @summary `iterationCount`.
+         * @description
+         *
+         * PBKDF2 iteration count (`1..MAX`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+         *
          * @public
          * @readonly
          */
         readonly iterationCount: INTEGER,
         /**
          * @summary `keyLength`.
+         * @description
+         *
+         * Optional derived-key length (`1..MAX`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+         *
          * @public
          * @readonly
          */
         readonly keyLength: OPTIONAL<INTEGER>,
         /**
          * @summary `prf`.
+         * @description
+         *
+         * PBKDF2 pseudorandom function (`PBKDF2-PRFs`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+         *
          * @public
          * @readonly
          */

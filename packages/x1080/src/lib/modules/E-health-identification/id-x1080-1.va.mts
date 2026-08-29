@@ -16,6 +16,12 @@ import { id_thprot } from '../Telebiometrics/id-thprot.va.mjs';
  * @summary id_x1080_1
  * @description
  *
+ * Top arc of this Recommendation `{id-thprot part1(1)}` as in §7.2
+ * (`{ id-telehealth part1(1) }`). Annex B also writes
+ * `{joint-iso-itu-t(2) telebiometrics(42) telehealth(0) part1(1)}`.
+ * ITU-T X.1080.1 (05/2018) §7.2.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

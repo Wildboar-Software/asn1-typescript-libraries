@@ -25,6 +25,10 @@ import {
  * @summary CompareResult
  * @description
  *
+ * Reply to a compare.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +46,24 @@ export class CompareResult {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Distinguished name of the object that was compared.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly object: DistinguishedName,
         /**
          * @summary `result`.
+         * @description
+         *
+         * Success (`CompareOK`) or failure (`AccessdErr`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

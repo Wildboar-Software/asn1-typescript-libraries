@@ -16,6 +16,11 @@ import { id_fields_of_study } from '../Telebiometrics/id-fields-of-study.va.mjs'
  * @summary id_culturology
  * @description
  *
+ * Culturology field of study `{id-fields-of-study culturology(4)}`.
+ * One of the five X.1080.x fields. X.1080.1 intro, Annex A; X.1082
+ * §3.2.12.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

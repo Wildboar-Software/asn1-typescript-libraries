@@ -25,6 +25,12 @@ import { medicalRecordIdentification } from '../E-health-identification/medicalR
  * @summary Categories
  * @description
  *
+ * Extensible set of the ten object-category identifications: patient,
+ * medical staff, observer, pharmaceutical staff, laboratory,
+ * manufacturer, device, software, insurance, medical record. ITU-T
+ * X.1080.1 (05/2018) §8.1.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

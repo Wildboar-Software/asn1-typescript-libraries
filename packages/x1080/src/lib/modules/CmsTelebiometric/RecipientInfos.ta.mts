@@ -20,6 +20,11 @@ import {
  * @summary RecipientInfos
  * @description
  *
+ * Set of exactly one `RecipientInfo`. For `envelopedData`, only
+ * `kari`. For `ct-authEnvelopedData`, `kari` or `kekri`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.2, B.4.1.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EncryptedContentInfo_contentEncryptionAlgorithm
  * @description
  *
+ * Symmetric content-encryption algorithm identifier and
+ * parameters. For session traffic after setup, this profile uses
+ * AES-GCM (RFC 5084) with CEK reuse (RFC 3185).
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5, B.4.1.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +33,23 @@ export class EncryptedContentInfo_contentEncryptionAlgorithm {
     constructor(
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * OID of the symmetric algorithm
+         * (`SymmetricEncryptionAlgorithms`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+         *
          * @public
          * @readonly
          */
         readonly algorithm: OBJECT_IDENTIFIER,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * Parameters of that algorithm.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+         *
          * @public
          * @readonly
          */

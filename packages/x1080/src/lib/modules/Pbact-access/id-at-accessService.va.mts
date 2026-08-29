@@ -16,6 +16,11 @@ import { id_x1080_0_attr } from '../Pbact-access/id-x1080-0-attr.va.mjs';
  * @summary id_at_accessService
  * @description
  *
+ * `{id-x1080-0-attr 1}` — OID of the `accessService` privilege
+ * attribute.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary E_health_SetUp_Message_Request
  * @description
  *
+ * Setup request from X.1080.1 (10/2011): `simple` is a
+ * `SIMPLE-MESSAGE.&id`; `interactive` is a `CR-SEQUENCE.&id`.
+ * The 2018 Rec still uses a setup / data / terminate session and
+ * CMS wrapping, but redesigned establishment as
+ * `INTERACTIVE-OPERATION` content types. ITU-T Rec. X.1080.1
+ * (10/2011) module E-health-setup; (05/2018)
+ * [§9](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

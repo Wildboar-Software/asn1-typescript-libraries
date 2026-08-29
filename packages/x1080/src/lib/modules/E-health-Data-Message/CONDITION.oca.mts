@@ -18,6 +18,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CONDITION
  * @description
  *
+ * Information object class for a named, identified condition type
+ * (`&name`, `&id`, `&Type`). The `Conditions` set is extensible
+ * (`{...}`). 2011 E-health-Data-Message example module. ITU-T
+ * X.1080.1 (05/2018) intro / §6.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,14 +64,23 @@ export interface CONDITION<Type = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
     >;
     /**
      * @summary &name
+     * @description
+     *
+     * Display name of the condition.
      */
     readonly '&name'?: UniversalString;
     /**
      * @summary &id
+     * @description
+     *
+     * OID of the condition (typically under `id-conditions`).
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &Type
+     * @description
+     *
+     * Type of the condition's value.
      */
     readonly '&Type': Type;
 }

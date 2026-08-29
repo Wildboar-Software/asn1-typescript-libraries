@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Ack_error
  * @description
  *
+ * Error alternative of `Ack`: `ERROR.&code` and matching
+ * `ERROR.&Parameter` from `Simple-Message-Errors`. ITU-T Rec.
+ * X.1080.1 (10/2011) module E-health-send-and-ack.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +31,22 @@ export class Ack_error {
     constructor(
         /**
          * @summary `code`.
+         * @description
+         *
+         * `ERROR.&code` from `Simple-Message-Errors`. ITU-T Rec.
+         * X.1080.1 (10/2011) module E-health-send-and-ack.
+         *
          * @public
          * @readonly
          */
         readonly code: INTEGER,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * `ERROR.&Parameter` for that `code`. ITU-T Rec. X.1080.1
+         * (10/2011) module E-health-send-and-ack.
+         *
          * @public
          * @readonly
          */

@@ -20,6 +20,11 @@ import {
  * @summary RecipientEncryptedKeys
  * @description
  *
+ * Sequence of exactly one `RecipientEncryptedKey` (one wrapped
+ * CEK).
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

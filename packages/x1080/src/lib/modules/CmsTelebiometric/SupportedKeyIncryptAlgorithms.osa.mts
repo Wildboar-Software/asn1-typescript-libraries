@@ -15,6 +15,12 @@ import { type ALGORITHM } from '@wildboar/x500/AuthenticationFramework';
  * @summary SupportedKeyIncryptAlgorithms
  * @description
  *
+ * Open set of key-wrapping (key-encryption) algorithms.
+ * Extensible `{...}`; AES Key Wrap (RFC 3394) is mentioned, not
+ * mandated.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

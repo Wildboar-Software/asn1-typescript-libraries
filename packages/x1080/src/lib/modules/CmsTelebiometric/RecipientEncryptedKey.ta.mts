@@ -25,6 +25,11 @@ import {
  * @summary RecipientEncryptedKey
  * @description
  *
+ * Wrapped CEK for one recipient. `rid` identifies the recipient's
+ * end-entity PKC; `encryptedKey` is the wrapped CEK.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +43,23 @@ export class RecipientEncryptedKey {
     constructor(
         /**
          * @summary `rid`.
+         * @description
+         *
+         * Identifies the recipient by its end-entity PKC.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */
         readonly rid: KeyAgreeRecipientIdentifier,
         /**
          * @summary `encryptedKey`.
+         * @description
+         *
+         * CEK wrapped under the KEK derived from DH (and UKM if
+         * static-static).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */

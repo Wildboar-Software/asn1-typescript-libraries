@@ -21,6 +21,12 @@ import {
  * @summary E_health_SetUp_Message_Response
  * @description
  *
+ * Setup response from X.1080.1 (10/2011). `simple`: `TRUE` is OK,
+ * `FALSE` is Reject (only for a simple request). `interactive`:
+ * `accept`, `conditional-accept`, or `reject`. ITU-T Rec.
+ * X.1080.1 (10/2011) module E-health-setup; (05/2018)
+ * [§9](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -23,6 +23,9 @@ import {
  * @summary ErrorContent_content
  * @description
  *
+ * Inner error of `ErrorContent`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§10.2](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,24 +37,46 @@ export class ErrorContent_content {
     constructor(
         /**
          * @summary `invokId`.
+         * @description
+         *
+         * Optional. The Rec does not specify its use. This field is
+         * `INTEGER (0..MAX)`; the named type `InvokeId` is
+         * `INTEGER (1..MAX)` for other modules. ITU-T Rec.
+         * X.1080.1 (05/2018) §10.2, Annex B.
+         *
          * @public
          * @readonly
          */
         readonly invokId: OPTIONAL<INTEGER>,
         /**
          * @summary `sessionType`.
+         * @description
+         *
+         * Session type this error belongs to.
+         * ITU-T Rec. X.1080.1 (05/2018) §10.2, §11.1.1.
+         *
          * @public
          * @readonly
          */
         readonly sessionType: SessionType,
         /**
          * @summary `sessionId`.
+         * @description
+         *
+         * Session among concurrent same-type sessions between the
+         * pair. ITU-T Rec. X.1080.1 (05/2018) §10.2, §11.1.1.
+         *
          * @public
          * @readonly
          */
         readonly sessionId: INTEGER,
         /**
          * @summary `error`.
+         * @description
+         *
+         * The operation's `&Error` value. ITU-T Rec. X.1080.1
+         * (05/2018) §10.1 h), §10.2.
+         *
          * @public
          * @readonly
          */

@@ -16,6 +16,11 @@ import { id_obj_cat } from '../Telebiometrics/id-obj-cat.va.mjs';
  * @summary id_observer
  * @description
  *
+ * Observer category `{id-obj-cat observer(3)}`. Law enforcement,
+ * medical students, etc.; generally no health-professional
+ * qualification. ITU-T X.1080.1 (05/2018) §8.2, §8.5.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

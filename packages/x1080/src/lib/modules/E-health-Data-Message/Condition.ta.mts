@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Condition
  * @description
  *
+ * A typed condition: `CONDITION.&id` plus a value of that object's
+ * `&Type`. 2011 E-health-Data-Message example module. ITU-T
+ * X.1080.1 (05/2018) intro / §6.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +35,20 @@ export class Condition {
     constructor(
         /**
          * @summary `id`.
+         * @description
+         *
+         * `CONDITION.&id` from the extensible `Conditions` set.
+         *
          * @public
          * @readonly
          */
         readonly id: OBJECT_IDENTIFIER,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Value of `CONDITION.&Type` for that id.
+         *
          * @public
          * @readonly
          */

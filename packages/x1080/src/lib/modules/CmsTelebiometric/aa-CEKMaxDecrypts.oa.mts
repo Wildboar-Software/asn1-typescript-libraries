@@ -28,6 +28,12 @@ import { id_aa_CEKReference } from '../CmsTelebiometric/id-aa-CEKReference.va.mj
  * @summary aa_CEKMaxDecrypts
  * @description
  *
+ * RFC 3185 unprotected/unauth attribute: maximum number of
+ * decrypts of this CEK. If high security is required, should be
+ * 1 or omitted.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.4, B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

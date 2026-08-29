@@ -25,6 +25,10 @@ import {
  * @summary KEKDerivationAlgorithm
  * @description
  *
+ * KEK wrapping algorithm plus PBKDF2 parameters (RFC 3185).
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +42,22 @@ export class KEKDerivationAlgorithm {
     constructor(
         /**
          * @summary `kekAlg`.
+         * @description
+         *
+         * Key-wrapping algorithm (`SupportedKeyIncryptAlgorithms`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+         *
          * @public
          * @readonly
          */
         readonly kekAlg: AlgorithmIdentifier,
         /**
          * @summary `pbkdf2Param`.
+         * @description
+         *
+         * PBKDF2 parameters used to derive the KEK.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+         *
          * @public
          * @readonly
          */

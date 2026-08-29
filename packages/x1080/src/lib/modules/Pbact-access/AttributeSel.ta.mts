@@ -20,6 +20,11 @@ import {
  * @summary AttributeSel
  * @description
  *
+ * Attribute-level privilege: all attributes, or only listed types.
+ * Unlisted types must not be disclosed.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,6 +46,12 @@ export class AttributeSel {
     constructor(
         /**
          * @summary `attSelect`.
+         * @description
+         *
+         * All attributes (`allAttr`) or only listed types (`attributes`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

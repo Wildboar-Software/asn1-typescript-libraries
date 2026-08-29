@@ -23,6 +23,10 @@ export enum _enum_for_ExchangeMode {
  * @summary ExchangeMode
  * @description
  *
+ * Whether the sender may start another operation before this
+ * one's response or error arrives. ITU-T Rec. X.1080.1 (05/2018)
+ * [§10.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,6 +43,12 @@ export type ExchangeMode = _enum_for_ExchangeMode | ENUMERATED;
 
 /**
  * @summary ExchangeMode_sync
+ * @description
+ *
+ * Sender shall not initiate another operation until a response or
+ * error for this operation is received. ITU-T Rec. X.1080.1
+ * (05/2018) §10.1 i).
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +57,12 @@ export const ExchangeMode_sync: ExchangeMode = 0; /* LONG_NAMED_ENUMERATED_VALUE
 
 /**
  * @summary sync
+ * @description
+ *
+ * Sender shall not initiate another operation until a response or
+ * error for this operation is received. ITU-T Rec. X.1080.1
+ * (05/2018) §10.1 i).
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +71,11 @@ export const sync: ExchangeMode = ExchangeMode_sync; /* SHORT_NAMED_ENUMERATED_V
 
 /**
  * @summary ExchangeMode_async
+ * @description
+ *
+ * No restriction on starting another operation before this one's
+ * response or error. ITU-T Rec. X.1080.1 (05/2018) §10.1 i).
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +84,11 @@ export const ExchangeMode_async: ExchangeMode = 1; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary async
+ * @description
+ *
+ * No restriction on starting another operation before this one's
+ * response or error. ITU-T Rec. X.1080.1 (05/2018) §10.1 i).
+ *
  * @constant
  * @type {number}
  */

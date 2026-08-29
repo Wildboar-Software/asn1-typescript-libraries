@@ -20,6 +20,12 @@ import {
  * @summary KeyEncryptionAlgorithmIdentifier
  * @description
  *
+ * Key-wrapping algorithm for the CEK. AES Key Wrap (RFC 3394)
+ * is mentioned; not mandated. Same wrapping algorithm is
+ * recommended for a whole `ct-authEnvelopedData` session.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3, B.4.2.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

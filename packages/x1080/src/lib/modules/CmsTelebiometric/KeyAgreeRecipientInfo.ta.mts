@@ -41,6 +41,14 @@ import {
  * @summary KeyAgreeRecipientInfo
  * @description
  *
+ * DH key-agreement recipient info. Version `v3`. Ephemeral-static
+ * SHALL be supported (fresh DH key pair per message,
+ * `originatorKey`). Static-static uses `issuerAndSerialNumber`
+ * for the sender's DH PKC and requires `ukm` (SIZE (64)), because
+ * the shared secret would otherwise be constant.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,30 +66,62 @@ export class KeyAgreeRecipientInfo {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Always `v3`.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `originator`.
+         * @description
+         *
+         * Sender identification or ephemeral public key.
+         * `issuerAndSerialNumber` for static-static (sender's DH
+         * PKC); `originatorKey` for ephemeral-static.
+         * `subjectKeyIdentifier` shall not be taken.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */
         readonly originator: OriginatorIdentifierOrKey,
         /**
          * @summary `ukm`.
+         * @description
+         *
+         * User keying material. Present for static-static. SIZE (64)
+         * OCTET STRING. Combined with the DH shared secret to form
+         * the KEK used to wrap the CEK.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */
         readonly ukm: OPTIONAL<UserKeyingMaterial>,
         /**
          * @summary `keyEncryptionAlgorithm`.
+         * @description
+         *
+         * Key-wrapping algorithm (AES Key Wrap, RFC 3394, is
+         * mentioned; not mandated). From
+         * `SupportedKeyIncryptAlgorithms`.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */
         readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
         /**
          * @summary `recipientEncryptedKeys`.
+         * @description
+         *
+         * Exactly one wrapped CEK for the recipient.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */

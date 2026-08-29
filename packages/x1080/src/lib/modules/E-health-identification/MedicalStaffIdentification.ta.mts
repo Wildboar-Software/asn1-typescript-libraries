@@ -23,6 +23,13 @@ import {
  * @summary MedicalStaffIdentification
  * @description
  *
+ * Identifies a member of the medical profession (doctors, surgeons,
+ * nurses, dentists, physiotherapists, psychologists, etc. — not
+ * pharmaceutical staff). Adds optional `qualifications` (typically
+ * signed by authorities, often with X.509 certs). Scheme
+ * establishment is out of scope. ITU-T X.1080.1 (05/2018) §8.4.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,24 +48,44 @@ export class MedicalStaffIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `MEDICAL-STAFF-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `medicalStaffId`.
+         * @description
+         *
+         * `MEDICAL-STAFF-SCHEME.&Identification`. Typically unique
+         * number, name, and category or role.
+         *
          * @public
          * @readonly
          */
         readonly medicalStaffId: _Element,
         /**
          * @summary `qualifications`.
+         * @description
+         *
+         * Optional `MEDICAL-STAFF-SCHEME.&Qualifications`. Typically
+         * signed by known authorities; type often includes X.509
+         * public-key certificates.
+         *
          * @public
          * @readonly
          */

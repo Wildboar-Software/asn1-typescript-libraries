@@ -23,6 +23,13 @@ import {
  * @summary DataMessage
  * @description
  *
+ * Example 2011 message parameterized by `QUANTITY:Quantities`: a
+ * measured quantity, optional unit/symbol, method OID, REAL value,
+ * and optional normal-value ranges. The 2018 Rec still says
+ * communication requires identification of physiological quantities,
+ * units and values (intro / §6). ITU-T X.1080.1 (05/2018).
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,36 +49,61 @@ export class DataMessage {
     constructor(
         /**
          * @summary `quantity`.
+         * @description
+         *
+         * `QUANTITY.&id` of the measured quantity, from the
+         * `Quantities` parameter set.
+         *
          * @public
          * @readonly
          */
         readonly quantity: OBJECT_IDENTIFIER,
         /**
          * @summary `unit`.
+         * @description
+         *
+         * Optional `UNIT.&id` from that quantity's `&Units`.
+         *
          * @public
          * @readonly
          */
         readonly unit: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `symbol_`.
+         * @description
+         *
+         * Optional `SYMBOLS.&id` from that unit's `&symbols`.
+         *
          * @public
          * @readonly
          */
         readonly symbol_: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `method`.
+         * @description
+         *
+         * Measurement/method OID (under `id-methods` arcs).
+         *
          * @public
          * @readonly
          */
         readonly method: OBJECT_IDENTIFIER,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Measured value.
+         *
          * @public
          * @readonly
          */
         readonly value: REAL,
         /**
          * @summary `normalValues`.
+         * @description
+         *
+         * Optional reference range(s) and conditions for this quantity.
+         *
          * @public
          * @readonly
          */

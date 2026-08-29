@@ -25,6 +25,12 @@ import {
  * @summary IssuerAndSerialNumber
  * @description
  *
+ * Identifies a PKC by issuing CA distinguished name and
+ * certificate serial number. Used for `SignerIdentifier` and for
+ * static-static DH originator/recipient identification.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2–B.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,12 +44,23 @@ export class IssuerAndSerialNumber {
     constructor(
         /**
          * @summary `issuer`.
+         * @description
+         *
+         * Distinguished name of the issuing CA; equals `issuer` of
+         * the PKC in question.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */
         readonly issuer: DistinguishedName,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Serial number of the PKC in question.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+         *
          * @public
          * @readonly
          */

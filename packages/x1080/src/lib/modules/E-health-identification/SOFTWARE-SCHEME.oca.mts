@@ -21,6 +21,12 @@ import {
  * @summary SOFTWARE_SCHEME
  * @description
  *
+ * Medical-software scheme: unique `&id`, optional `&name`,
+ * `&Manufacturer` (optional if the software is generic), and
+ * `&Software` (generic or product ref). Scheme establishment is out
+ * of scope. ITU-T X.1080.1 (05/2018) §8.10.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,18 +76,34 @@ export interface SOFTWARE_SCHEME<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of the software identification scheme.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &name
+     * @description
+     *
+     * Optional `SchemeName`: ISO646String (not necessarily unique) or
+     * OID.
      */
     readonly '&name'?: SchemeName;
     /**
      * @summary &Manufacturer
+     * @description
+     *
+     * Manufacturer identification. Optional if a generic term is used
+     * in `&Software`. Otherwise typically name, HQ location, and
+     * perhaps a company number.
      */
     readonly '&Manufacturer': Manufacturer;
     /**
      * @summary &Software
+     * @description
+     *
+     * Generic description of the software, or a complete product
+     * reference from the specified manufacturer.
      */
     readonly '&Software': Software;
 }

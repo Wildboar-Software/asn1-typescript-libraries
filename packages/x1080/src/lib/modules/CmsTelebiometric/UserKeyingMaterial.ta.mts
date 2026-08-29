@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UserKeyingMaterial
  * @description
  *
+ * Random UKM for static-static DH (SIZE (64)). Present when
+ * static-static is used so the derived KEK is not constant.
+ * Combined with the shared secret per RFC 2631.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

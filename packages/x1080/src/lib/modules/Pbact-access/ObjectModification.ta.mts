@@ -25,6 +25,21 @@ import {
  * @summary ObjectModification
  * @description
  *
+ * One modify operation. `addAttribute`: no add permission →
+ * `insufficientAccessRigth`; already exists: `discloseOnError` →
+ * `attributeAlreadyExists`, else `insufficientAccessRigth`.
+ * `deleteAttribute`: no delete permission →
+ * `insufficientAccessRigth`; missing → `noSuchAttribute`.
+ * `addValues`: missing attribute: `discloseOnError` →
+ * `noSuchAttribute`, else `insufficientAccessRigth`; no add
+ * permission → `insufficientAccessRigth`; value exists:
+ * `discloseOnError` → `attributeValueAlreadyExists`, else
+ * `insufficientAccessRigth`. `deleteValues`: similar; missing value
+ * → `noSuchAttributeValue`. `replaceAttribute` requires the
+ * `replaceAttribute` permission.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

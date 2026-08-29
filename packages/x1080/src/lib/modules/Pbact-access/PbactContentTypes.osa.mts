@@ -29,6 +29,12 @@ import { renameResult } from '../Pbact-access/renameResult.oa.mjs';
  * @summary PbactContentTypes
  * @description
  *
+ * Extensible set of all PBACT CONTENT-TYPE objects (privilege
+ * assignment and assertion operations). Spec also calls it
+ * `ActContentTypes`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

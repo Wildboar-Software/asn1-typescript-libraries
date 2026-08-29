@@ -18,6 +18,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary EncapsulatedContentInfo
  * @description
  *
+ * Content inside `SignedData`. `eContentType` is `id-envelopedData`
+ * if encryption is required, else a telebiometrics content type.
+ * `eContent` shall always be present (profile; ASN.1 OPTIONAL).
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +39,25 @@ export class EncapsulatedContentInfo {
     constructor(
         /**
          * @summary `eContentType`.
+         * @description
+         *
+         * OID of the encapsulated type (`IncludedContent`):
+         * `id-envelopedData` if encryption is required, else a
+         * telebiometrics content type.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+         *
          * @public
          * @readonly
          */
         readonly eContentType: OBJECT_IDENTIFIER,
         /**
          * @summary `eContent`.
+         * @description
+         *
+         * Encapsulated content in an OCTET STRING. Shall always be
+         * present in this profile (ASN.1 marks it OPTIONAL).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+         *
          * @public
          * @readonly
          */

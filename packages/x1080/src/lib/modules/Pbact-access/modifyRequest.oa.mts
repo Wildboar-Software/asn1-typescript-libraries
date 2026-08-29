@@ -21,6 +21,10 @@ import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
  * @summary modifyRequest
  * @description
  *
+ * CMS content type for a modify request.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

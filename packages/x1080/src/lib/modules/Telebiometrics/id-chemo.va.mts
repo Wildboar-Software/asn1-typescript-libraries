@@ -16,6 +16,11 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  * @summary id_chemo
  * @description
  *
+ * CHEMO modality. Medieval Latin *chemia*. CHEMO-IN: taste/smell
+ * (and lethality). CHEMO-OUT: chemical emissions (sniffer dogs,
+ * chips, etc.). X.1080.1 Annex A; X.1082 intro, §3.5.7–§3.5.8.
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

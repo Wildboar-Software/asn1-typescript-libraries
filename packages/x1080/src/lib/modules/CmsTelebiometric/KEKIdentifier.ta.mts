@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary KEKIdentifier
  * @description
  *
+ * Identifies a retained CEK. `keyIdentifier` is the CEK id from
+ * a prior exchange (B.3.4). `date` and `other` are not necessary
+ * in this profile.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,12 @@ export class KEKIdentifier {
     constructor(
         /**
          * @summary `keyIdentifier`.
+         * @description
+         *
+         * Identifier of the CEK retained from a previous exchange
+         * (B.3.4).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
+         *
          * @public
          * @readonly
          */

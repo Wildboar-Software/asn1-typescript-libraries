@@ -41,6 +41,13 @@ import {
  * @summary AuthEnvelopedData
  * @description
  *
+ * Session traffic after setup (RFC 5083). Version `v0`.
+ * `originatorInfo` shall be absent. `recipientInfos` may be
+ * `kari` or `kekri`. `unauthAttrs` may be absent if this is the
+ * last message of the session in this direction.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,36 +66,71 @@ export class AuthEnvelopedData {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Always `v0` (RFC 5083).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `recipientInfos`.
+         * @description
+         *
+         * Exactly one recipient. `kari` or `kekri` (`kekri` uses a
+         * CEK retained from a prior `envelopedData` exchange).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+         *
          * @public
          * @readonly
          */
         readonly recipientInfos: RecipientInfos,
         /**
          * @summary `authEncryptedContentInfo`.
+         * @description
+         *
+         * Encrypted content (`EncryptedContentInfo`, B.3.5).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+         *
          * @public
          * @readonly
          */
         readonly authEncryptedContentInfo: EncryptedContentInfo,
         /**
          * @summary `authAttrs`.
+         * @description
+         *
+         * Attributes under authentication, when present. Set is
+         * `AuthAttributes` (extensible `{...}`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+         *
          * @public
          * @readonly
          */
         readonly authAttrs: OPTIONAL<Attributes>,
         /**
          * @summary `mac`.
+         * @description
+         *
+         * Message authentication code value.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+         *
          * @public
          * @readonly
          */
         readonly mac: MessageAuthenticationCode,
         /**
          * @summary `unauthAttrs`.
+         * @description
+         *
+         * Same attribute types as `unprotectedAttrs`
+         * (`aa-CEKReference`, `aa-CEKMaxDecrypts`,
+         * `aa-KEKDerivationAlg`). May be absent if this is the last
+         * message of the session in this direction.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.1.
+         *
          * @public
          * @readonly
          */

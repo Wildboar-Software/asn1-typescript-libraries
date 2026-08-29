@@ -36,6 +36,9 @@ import {
  * @summary RequestContent_content
  * @description
  *
+ * Inner request of `RequestContent`. ITU-T Rec. X.1080.1
+ * (05/2018) [§10.2](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,48 +50,93 @@ export class RequestContent_content {
     constructor(
         /**
          * @summary `invokId`.
+         * @description
+         *
+         * Optional. The Rec does not specify its use. This field is
+         * `INTEGER (0..MAX)`; the named type `InvokeId` is
+         * `INTEGER (1..MAX)` for other modules. ITU-T Rec.
+         * X.1080.1 (05/2018) §10.2, Annex B.
+         *
          * @public
          * @readonly
          */
         readonly invokId: OPTIONAL<INTEGER>,
         /**
          * @summary `sessionType`.
+         * @description
+         *
+         * Session type this request belongs to.
+         * ITU-T Rec. X.1080.1 (05/2018) §10.2, §11.1.1.
+         *
          * @public
          * @readonly
          */
         readonly sessionType: SessionType,
         /**
          * @summary `sessionId`.
+         * @description
+         *
+         * Session among concurrent same-type sessions between the
+         * pair. ITU-T Rec. X.1080.1 (05/2018) §10.2, §11.1.1.
+         *
          * @public
          * @readonly
          */
         readonly sessionId: INTEGER,
         /**
          * @summary `requirement`.
+         * @description
+         *
+         * Voice and video requirements; default `none`.
+         * ITU-T Rec. X.1080.1 (05/2018) §10.1 c), §10.2.
+         *
          * @public
          * @readonly
          */
         readonly requirement: OPTIONAL<Requirements>,
         /**
          * @summary `voice_options`.
+         * @description
+         *
+         * Voice options; may be present only if `requirement` is not
+         * `none`. ITU-T Rec. X.1080.1 (05/2018) §10.1 d), §10.2.
+         *
          * @public
          * @readonly
          */
         readonly voice_options: OPTIONAL<_Element>,
         /**
          * @summary `video_options`.
+         * @description
+         *
+         * Video options; may be present only for
+         * `with-reverse-video-and-2-way-voice` or
+         * `with-2-way-video-and-voice`. ITU-T Rec. X.1080.1
+         * (05/2018) §10.1 e), §10.2.
+         *
          * @public
          * @readonly
          */
         readonly video_options: OPTIONAL<_Element>,
         /**
          * @summary `request`.
+         * @description
+         *
+         * The operation's `&Request` value. ITU-T Rec. X.1080.1
+         * (05/2018) §10.1 f), §10.2.
+         *
          * @public
          * @readonly
          */
         readonly request: _Element,
         /**
          * @summary `exchangeMode`.
+         * @description
+         *
+         * This field DEFAULT is `sync` (the class DEFAULT is
+         * `async`). `sync`: sender waits for response or error.
+         * ITU-T Rec. X.1080.1 (05/2018) §10.1 i), §10.2.
+         *
          * @public
          * @readonly
          */

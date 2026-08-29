@@ -22,6 +22,11 @@ import {
  * @summary AttributeSel_attSelect_attributes_Item
  * @description
  *
+ * One element of `AttributeSel.attSelect.attributes`. Unlisted
+ * attribute types must not be disclosed.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,12 +38,24 @@ export class AttributeSel_attSelect_attributes_Item {
     constructor(
         /**
          * @summary `select`.
+         * @description
+         *
+         * Attribute type OIDs (`ATTRIBUTE.&id`) this item covers.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly select: OBJECT_IDENTIFIER[],
         /**
          * @summary `attrOper2`.
+         * @description
+         *
+         * Allowed operations on those attribute types.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

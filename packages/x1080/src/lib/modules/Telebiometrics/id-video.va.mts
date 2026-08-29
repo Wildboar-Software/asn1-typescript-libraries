@@ -16,6 +16,11 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  * @summary id_video
  * @description
  *
+ * VIDEO modality. Latin *videō* “I see”. VIDEO-IN: stimuli that
+ * affect the eye. VIDEO-OUT: visible output, behaviour, or signs.
+ * X.1080.1 Annex A; X.1082 intro, §3.5.3–§3.5.4.
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

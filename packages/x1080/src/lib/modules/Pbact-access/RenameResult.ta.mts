@@ -20,6 +20,10 @@ import {
  * @summary RenameResult
  * @description
  *
+ * Reply to a rename.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +40,12 @@ export class RenameResult {
     constructor(
         /**
          * @summary `result`.
+         * @description
+         *
+         * Success (`NULL`) or failure (`AccessdErr`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

@@ -27,6 +27,12 @@ import { id_at_accessService } from '../Pbact-access/id-at-accessService.va.mjs'
  * @summary accessService
  * @description
  *
+ * Privilege attribute carried in an AC `attributes` field or a PKC
+ * `subjectDirectoryAttributes`. Multi-valued: one value per access
+ * service. The holder cannot use a service that is not listed.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

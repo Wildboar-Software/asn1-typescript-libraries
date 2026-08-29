@@ -26,6 +26,14 @@ import {
  * @summary DEVICE_SCHEME
  * @description
  *
+ * Medical-device scheme: unique `&id`, optional `&name`,
+ * `&Manufacturer` (optional if the device is a generic term such as
+ * "scalpel"), `&Device` (generic or full product ref), and
+ * `&supportedFormats` (typically OIDs of data formats). Sensor or
+ * intervention device. Scheme establishment is out of scope. ITU-T
+ * X.1080.1 (05/2018) §8.9.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -74,22 +82,43 @@ export interface DEVICE_SCHEME<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of the medical-device identification scheme.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &name
+     * @description
+     *
+     * Optional `SchemeName`: ISO646String (not necessarily unique) or
+     * OID.
      */
     readonly '&name'?: SchemeName;
     /**
      * @summary &Manufacturer
+     * @description
+     *
+     * Manufacturer identification. Optional if a generic term for the
+     * device (e.g. "scalpel") is used in `&Device`. Otherwise
+     * typically name, HQ location, and perhaps a company number.
      */
     readonly '&Manufacturer': Manufacturer;
     /**
      * @summary &Device
+     * @description
+     *
+     * Generic description of the device, or a complete product
+     * reference from the specified manufacturer.
      */
     readonly '&Device': Device;
     /**
      * @summary &supportedFormats
+     * @description
+     *
+     * Data formats for communication with the device. Typically OIDs
+     * of available formats. Device may be a sensor or an intervention
+     * device.
      */
     readonly '&supportedFormats'?: Supported_formats;
 }

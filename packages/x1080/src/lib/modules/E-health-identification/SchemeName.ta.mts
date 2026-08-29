@@ -18,6 +18,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SchemeName
  * @description
  *
+ * Scheme name: `ISO646String` (not necessarily unique) or an OID.
+ * ITU-T X.1080.1 (05/2018) §8.3.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

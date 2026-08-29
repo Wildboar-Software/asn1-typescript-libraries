@@ -16,6 +16,14 @@ import { id_tmm } from '../Telebiometrics/id-tmm.va.mjs';
  * @summary id_modalities
  * @description
  *
+ * TMM sensory layer `{id-tmm sensory(3)}`. Children: tango(1),
+ * video(2), audio(3), chemo(4), radio(5), calor(6), electro(7).
+ * X.1080.1 Annex A; X.1082 intro, §3.5. Amd.2 adds CALOR as the
+ * sixth (derived) modality.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I!Amd2
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

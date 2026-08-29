@@ -25,6 +25,12 @@ import {
  * @summary E_terminateResponse
  * @description
  *
+ * Responder payload completing termination. Echoes the request
+ * ids. On accept, the responder treats the session as ended and
+ * discards later messages on it. Carried as CMS content type
+ * `health-term-rsp`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§11.2.2](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class E_terminateResponse {
     constructor(
         /**
          * @summary `sessionType`.
+         * @description
+         *
+         * Same value as in the corresponding request.
+         * ITU-T Rec. X.1080.1 (05/2018) §11.2.2 a).
+         *
          * @public
          * @readonly
          */
         readonly sessionType: SessionType,
         /**
          * @summary `sessionId`.
+         * @description
+         *
+         * Same value as in the corresponding request.
+         * ITU-T Rec. X.1080.1 (05/2018) §11.2.2 b).
+         *
          * @public
          * @readonly
          */

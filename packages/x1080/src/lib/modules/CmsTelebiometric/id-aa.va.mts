@@ -16,6 +16,10 @@ import { id_pkcs_9 } from '../CmsTelebiometric/id-pkcs-9.va.mjs';
  * @summary id_aa
  * @description
  *
+ * S/MIME attributes arc: `{id-pkcs-9 smime(16) attributes(2)}`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

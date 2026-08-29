@@ -15,6 +15,10 @@ import { type SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca
  * @summary Simple_Messages
  * @description
  *
+ * Extensible set of `SIMPLE-MESSAGE` objects. Empty in this
+ * module (`{...}`). ITU-T Rec. X.1080.1 (10/2011) module
+ * E-health-send-and-ack.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

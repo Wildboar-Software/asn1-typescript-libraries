@@ -19,6 +19,12 @@ import { type ERROR } from '../E-health-send-and-ack/ERROR.oca.mjs';
  * @summary SIMPLE_MESSAGE
  * @description
  *
+ * 2011 class for a simple (non-interactive) message: unique
+ * `&id`, `&Type`, `&Errors`, and `&registration-info`. Predates
+ * the 2018 `INTERACTIVE-OPERATION` redesign. ITU-T Rec. X.1080.1
+ * (10/2011) module E-health-send-and-ack; (05/2018)
+ * [§9](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -73,18 +79,35 @@ export interface SIMPLE_MESSAGE<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique identifier of the simple message. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &Type
+     * @description
+     *
+     * Abstract syntax of the message content. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
      */
     readonly '&Type': Type;
     /**
      * @summary &Errors
+     * @description
+     *
+     * `ERROR` objects that may be reported for this message.
+     * ITU-T Rec. X.1080.1 (10/2011) module E-health-send-and-ack.
      */
     readonly '&Errors'?: ERROR[];
     /**
      * @summary &registration-info
+     * @description
+     *
+     * `implicit` UTF8String shall be a website reference;
+     * `explicit` is a UniversalString. ITU-T Rec. X.1080.1
+     * (10/2011) module E-health-send-and-ack.
      */
     readonly '&registration-info'?:
         | { implicit: UTF8String }

@@ -21,6 +21,11 @@ import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.o
  * @summary patientIdentification
  * @description
  *
+ * `IDENTIFICATION` object for patients: category `id-patient`,
+ * identified with `PatientIdentification`. ITU-T X.1080.1 (05/2018)
+ * §8.3.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

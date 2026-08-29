@@ -23,6 +23,12 @@ import {
  * @summary SoftwareIdentification
  * @description
  *
+ * Identifies medical software. `manufacturerId` is optional if the
+ * software is generic; `software` is generic or a product ref.
+ * Scheme establishment is out of scope. ITU-T X.1080.1 (05/2018)
+ * §8.10.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,24 +45,43 @@ export class SoftwareIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `SOFTWARE-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `SOFTWARE-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `manufacturerId`.
+         * @description
+         *
+         * Optional `SOFTWARE-SCHEME.&Manufacturer`. Absent if a
+         * generic term is used in `software`.
+         *
          * @public
          * @readonly
          */
         readonly manufacturerId: OPTIONAL<_Element>,
         /**
          * @summary `software`.
+         * @description
+         *
+         * `SOFTWARE-SCHEME.&Software`: generic description or complete
+         * product reference.
+         *
          * @public
          * @readonly
          */

@@ -25,6 +25,14 @@ import {
  * @summary RecipientInfo
  * @description
  *
+ * How the shared secret is established. For `envelopedData`,
+ * only `kari` (key agreement). For `ct-authEnvelopedData`,
+ * `kari` or `kekri`. `ktri`, `pwri`, and `ori` are defined by
+ * CMS but this profile does not use them for telebiometrics
+ * `envelopedData`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.2, B.4.1.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

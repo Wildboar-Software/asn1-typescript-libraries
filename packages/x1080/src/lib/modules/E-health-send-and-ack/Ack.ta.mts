@@ -21,6 +21,11 @@ import {
  * @summary Ack
  * @description
  *
+ * Acknowledgement of a simple message: `ok` (`NULL`) or `error`
+ * `{code, parameter}` from `Simple-Message-Errors`. Encoded into
+ * `Response.content`. ITU-T Rec. X.1080.1 (10/2011) module
+ * E-health-send-and-ack.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import { id_thprot } from '../Pbact-access/id-thprot.va.mjs';
  * @summary id_x1080_0
  * @description
  *
+ * `{id-thprot part0(0)}` — this Recommendation.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -26,6 +26,12 @@ import {
  * @summary Response
  * @description
  *
+ * Encryption/integrity flags plus OCTET STRING encoding of an
+ * `Ack`, optionally inside a CMS `ContentInfo` for encryption
+ * and/or integrity. ITU-T Rec. X.1080.1 (10/2011) module
+ * E-health-send-and-ack; (05/2018)
+ * [§9](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +51,35 @@ export class Response {
     constructor(
         /**
          * @summary `encryptionOptions`.
+         * @description
+         *
+         * Whether CMS encryption is applied to `content`. ITU-T Rec.
+         * X.1080.1 (10/2011) module E-health-send-and-ack.
+         *
          * @public
          * @readonly
          */
         readonly encryptionOptions: EncryptionOptions,
         /**
          * @summary `integrityOptions`.
+         * @description
+         *
+         * Whether CMS integrity is applied to `content`. ITU-T Rec.
+         * X.1080.1 (10/2011) module E-health-send-and-ack.
+         *
          * @public
          * @readonly
          */
         readonly integrityOptions: IntegrityOptions,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Encoding of an `Ack` under the current encoding rules, in
+         * a CMS `ContentInfo` for encryption and/or integrity if
+         * needed. ITU-T Rec. X.1080.1 (10/2011) module
+         * E-health-send-and-ack.
+         *
          * @public
          * @readonly
          */

@@ -16,6 +16,13 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  * @summary id_tango
  * @description
  *
+ * TANGO modality. Latin *tangō* “I touch”. TANGO-IN: stimuli on
+ * nerve endings other than sight/hearing/taste/smell (incl. pain,
+ * pressure, abrasion). TANGO-OUT: force or other non-sound effect
+ * from the body (incl. fitness/obesity measures). X.1080.1 Annex A;
+ * X.1082 intro, §3.5.1–§3.5.2.
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

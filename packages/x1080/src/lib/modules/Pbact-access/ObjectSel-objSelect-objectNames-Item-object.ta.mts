@@ -20,6 +20,11 @@ import {
  * @summary ObjectSel_objSelect_objectNames_Item_object
  * @description
  *
+ * How selected objects are identified: one or more DNs (`names`), or
+ * a DN prefix (`subtree`: object DN equals or starts with this DN).
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,14 @@ import { type INTERACTIVE_MESSAGE } from '../E-health-command-response/INTERACTI
  * @summary CR_SEQUENCE
  * @description
  *
+ * 2011 class for an interactive session: unique `&id`,
+ * voice/video `&requirements`, voice/video option OIDs,
+ * UniversalString specification, `INTERACTIVE-MESSAGE` set, and
+ * first message. Predates the 2018 `INTERACTIVE-OPERATION`
+ * redesign. ITU-T Rec. X.1080.1 (10/2011) module
+ * E-health-command-response; (05/2018)
+ * [§9](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,30 +78,61 @@ export interface CR_SEQUENCE {
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique identifier of the interactive session. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-command-response.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &requirements
+     * @description
+     *
+     * `none`, `with-2-way-voice`,
+     * `with-reverse-video-and-2-way-voice`, or
+     * `with-2-way-video-and-voice`. ITU-T Rec. X.1080.1 (10/2011)
+     * module E-health-command-response.
      */
     readonly '&requirements': number;
     /**
      * @summary &voice-options
+     * @description
+     *
+     * OID of the voice options. ITU-T Rec. X.1080.1 (10/2011)
+     * module E-health-command-response.
      */
     readonly '&voice-options'?: OBJECT_IDENTIFIER;
     /**
      * @summary &video-options
+     * @description
+     *
+     * OID of the video options. ITU-T Rec. X.1080.1 (10/2011)
+     * module E-health-command-response.
      */
     readonly '&video-options'?: OBJECT_IDENTIFIER;
     /**
      * @summary &message-sequence-specification
+     * @description
+     *
+     * UniversalString specifying the message sequence. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-command-response.
      */
     readonly '&message-sequence-specification'?: UniversalString;
     /**
      * @summary &Interactive-Messages
+     * @description
+     *
+     * `INTERACTIVE-MESSAGE` objects used in this session.
+     * ITU-T Rec. X.1080.1 (10/2011) module
+     * E-health-command-response.
      */
     readonly '&Interactive-Messages'?: INTERACTIVE_MESSAGE[];
     /**
      * @summary &first
+     * @description
+     *
+     * First `INTERACTIVE-MESSAGE` of the sequence. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-command-response.
      */
     readonly '&first'?: INTERACTIVE_MESSAGE;
 }

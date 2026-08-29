@@ -26,6 +26,12 @@ import {
  * @summary InformationSelection
  * @description
  *
+ * Requested attributes and whether types only or types and values.
+ * After privilege filtering, if no information remains, the request
+ * fails.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,12 +52,24 @@ export class InformationSelection {
     constructor(
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * All attributes, or a list of `ATTRIBUTE.&id`.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly attributes: InformationSelection_attributes,
         /**
          * @summary `infoTypes`.
+         * @description
+         *
+         * Attribute types only, or types and values.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

@@ -16,6 +16,10 @@ import { id_x1080_1_cms_content } from '../E-health-common/id-x1080-1-cms-conten
  * @summary id_health_setup_req
  * @description
  *
+ * `{id-x1080-1-cms-content health-setup-req(1)}`. Content type for
+ * establishing a session. ITU-T Rec. X.1080.1 (05/2018)
+ * [§7.3](https://www.itu.int/rec/T-REC-X.1080.1-201805-I), §11.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

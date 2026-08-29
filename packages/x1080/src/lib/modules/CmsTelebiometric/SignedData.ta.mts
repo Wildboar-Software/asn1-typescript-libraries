@@ -41,6 +41,12 @@ import {
  * @summary SignedData
  * @description
  *
+ * Signed CMS content. One hash, one signer. `crls` shall be
+ * absent (not used). When encryption is required, the encapsulated
+ * content is `envelopedData`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,30 +66,58 @@ export class SignedData {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Always `v3` (RFC 5652 clause 5.1).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `digestAlgorithms`.
+         * @description
+         *
+         * Exactly one hash (`SIZE (1)`). Multiple signatures are not
+         * used. Algorithms from `Teleb-Hash-Algorithms` (extensible;
+         * this profile does not mandate a hash).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+         *
          * @public
          * @readonly
          */
         readonly digestAlgorithms: AlgorithmIdentifier[],
         /**
          * @summary `encapContentInfo`.
+         * @description
+         *
+         * Encapsulated content. Type is `id-envelopedData` if
+         * encryption is required, else a telebiometrics content type.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+         *
          * @public
          * @readonly
          */
         readonly encapContentInfo: EncapsulatedContentInfo,
         /**
          * @summary `certificates`.
+         * @description
+         *
+         * PKCs sufficient to establish a single `PkiPath` (X.509).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+         *
          * @public
          * @readonly
          */
         readonly certificates: OPTIONAL<Certificate[]>,
         /**
          * @summary `signerInfos`.
+         * @description
+         *
+         * Exactly one signer (`SIZE (1)`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+         *
          * @public
          * @readonly
          */

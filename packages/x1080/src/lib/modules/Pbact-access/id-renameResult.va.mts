@@ -16,6 +16,11 @@ import { id_x1080_0_Cont } from '../Pbact-access/id-x1080-0-Cont.va.mjs';
  * @summary id_renameResult
  * @description
  *
+ * `{id-x1080-0-Cont renameResult(14)}` — CMS content type for a
+ * rename result.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

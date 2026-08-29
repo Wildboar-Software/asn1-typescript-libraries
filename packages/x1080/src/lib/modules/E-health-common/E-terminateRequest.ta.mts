@@ -25,6 +25,12 @@ import {
  * @summary E_terminateRequest
  * @description
  *
+ * Initiator payload to release a session. After sending this, the
+ * initiator shall stop other messages until a response or error.
+ * Carried as CMS content type `health-term-req`. ITU-T Rec.
+ * X.1080.1 (05/2018)
+ * [§11.2.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +45,22 @@ export class E_terminateRequest {
     constructor(
         /**
          * @summary `sessionType`.
+         * @description
+         *
+         * Session type of the session to terminate. ITU-T Rec.
+         * X.1080.1 (05/2018) §11.2.1 a).
+         *
          * @public
          * @readonly
          */
         readonly sessionType: SessionType,
         /**
          * @summary `sessionId`.
+         * @description
+         *
+         * Identifies the particular session to terminate.
+         * ITU-T Rec. X.1080.1 (05/2018) §11.2.1 b).
+         *
          * @public
          * @readonly
          */

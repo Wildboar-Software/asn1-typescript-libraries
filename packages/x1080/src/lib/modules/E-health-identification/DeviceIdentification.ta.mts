@@ -28,6 +28,13 @@ import {
  * @summary DeviceIdentification
  * @description
  *
+ * Identifies a medical sensor or intervention device. `manufacturerId`
+ * is optional if the device is a generic term (e.g. "scalpel").
+ * `device` is generic or a full product ref. `formats` are
+ * `Supported-formats` (typically OIDs of data formats). Scheme
+ * establishment is out of scope. ITU-T X.1080.1 (05/2018) §8.9.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,30 +52,54 @@ export class DeviceIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `DEVICE-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `DEVICE-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `manufacturerId`.
+         * @description
+         *
+         * Optional `DEVICE-SCHEME.&Manufacturer`. Absent if a generic
+         * term (e.g. "scalpel") is used in `device`.
+         *
          * @public
          * @readonly
          */
         readonly manufacturerId: OPTIONAL<_Element>,
         /**
          * @summary `device`.
+         * @description
+         *
+         * `DEVICE-SCHEME.&Device`: generic description or complete
+         * product reference.
+         *
          * @public
          * @readonly
          */
         readonly device: _Element,
         /**
          * @summary `formats`.
+         * @description
+         *
+         * `DEVICE-SCHEME.&supportedFormats`. Typically OIDs of data
+         * formats for a sensor or intervention device.
+         *
          * @public
          * @readonly
          */

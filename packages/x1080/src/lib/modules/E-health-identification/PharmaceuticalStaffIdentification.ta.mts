@@ -23,6 +23,13 @@ import {
  * @summary PharmaceuticalStaffIdentification
  * @description
  *
+ * Identifies a member of the pharmaceutical profession, including
+ * laboratory staff performing analyses. Same
+ * `MEDICAL-STAFF-SCHEME` fields as medical staff (`id`, optional
+ * name, identification, optional qualifications). Scheme
+ * establishment is out of scope. ITU-T X.1080.1 (05/2018) §8.6.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,24 +45,45 @@ export class PharmaceuticalStaffIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `MEDICAL-STAFF-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `medicalStaffId`.
+         * @description
+         *
+         * `MEDICAL-STAFF-SCHEME.&Identification` of the pharmaceutical
+         * professional. Typically unique number, name, and category
+         * or role.
+         *
          * @public
          * @readonly
          */
         readonly medicalStaffId: _Element,
         /**
          * @summary `qualifications`.
+         * @description
+         *
+         * Optional `MEDICAL-STAFF-SCHEME.&Qualifications`. Typically
+         * signed by known authorities; type often includes public-key
+         * certificates. Definition of qualifications is out of scope.
+         *
          * @public
          * @readonly
          */

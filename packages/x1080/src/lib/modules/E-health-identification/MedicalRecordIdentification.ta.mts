@@ -23,6 +23,14 @@ import {
  * @summary MedicalRecordIdentification
  * @description
  *
+ * Identifies and includes medical records (incl. dental and DNA).
+ * `definingOrg` is typically a government dept or SDO. `recordType`
+ * is relative to that org. `record` is an instance; typically extra
+ * encryption/integrity inside the record type even though ITUEHP
+ * already offers CMS. Scheme establishment is out of scope. ITU-T
+ * X.1080.1 (05/2018) §8.12.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,30 +47,55 @@ export class MedicalRecordIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `MEDICAL-RECORD-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `MEDICAL-RECORD-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `definingOrg`.
+         * @description
+         *
+         * `MEDICAL-RECORD-SCHEME.&Organisation` that defined the
+         * format. Typically a government department or SDO.
+         *
          * @public
          * @readonly
          */
         readonly definingOrg: _Element,
         /**
          * @summary `recordType`.
+         * @description
+         *
+         * `MEDICAL-RECORD-SCHEME.&RecordType` relative to that
+         * organization.
+         *
          * @public
          * @readonly
          */
         readonly recordType: _Element,
         /**
          * @summary `record`.
+         * @description
+         *
+         * `MEDICAL-RECORD-SCHEME.&Record`: an instance of that type.
+         * Typically extra encryption/integrity inside the record,
+         * beyond ITUEHP CMS.
+         *
          * @public
          * @readonly
          */

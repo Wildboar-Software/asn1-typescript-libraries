@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary NormalValue_value_range
  * @description
  *
+ * Closed interval `{minimum, maximum}` for a normal/reference
+ * value. 2011 E-health-Data-Message example module. ITU-T
+ * X.1080.1 (05/2018) intro / §6.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +33,20 @@ export class NormalValue_value_range {
     constructor(
         /**
          * @summary `minimum`.
+         * @description
+         *
+         * Lower bound of the closed interval.
+         *
          * @public
          * @readonly
          */
         readonly minimum: REAL,
         /**
          * @summary `maximum`.
+         * @description
+         *
+         * Upper bound of the closed interval.
+         *
          * @public
          * @readonly
          */

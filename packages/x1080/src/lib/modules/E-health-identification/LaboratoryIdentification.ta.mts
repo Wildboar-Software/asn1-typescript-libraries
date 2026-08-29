@@ -23,6 +23,12 @@ import {
  * @summary LaboratoryIdentification
  * @description
  *
+ * Identifies a laboratory performing analyses: scheme, optional
+ * name, optional qualifications (signed; often with certs). No
+ * person-id field. Scheme establishment is out of scope. ITU-T
+ * X.1080.1 (05/2018) §8.7.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,18 +45,33 @@ export class LaboratoryIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `LABORATORY-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `LABORATORY-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName?: OPTIONAL<SchemeName>,
         /**
          * @summary `qualifications`.
+         * @description
+         *
+         * Optional `LABORATORY-SCHEME.&Qualifications`. Typically
+         * signed by known authorities; type often includes public-key
+         * certificates.
+         *
          * @public
          * @readonly
          */

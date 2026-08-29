@@ -21,6 +21,11 @@ import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.o
  * @summary manufacturerIdentification
  * @description
  *
+ * `IDENTIFICATION` object for drug manufacturers: category
+ * `id-drug-manufac`, identified with `ManufacturerIdentification`.
+ * ITU-T X.1080.1 (05/2018) §8.8.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

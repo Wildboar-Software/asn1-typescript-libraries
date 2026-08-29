@@ -25,6 +25,11 @@ import {
  * @summary Identified_Command_Response
  * @description
  *
+ * Command or response of a 2011 interactive step. Command:
+ * `direction` shall be `command`. Response: `message-id` shall
+ * equal the command's `&expected-response`. ITU-T Rec. X.1080.1
+ * (10/2011) module E-health-command-response.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary CompareOK
  * @description
  *
+ * Successful compare.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +36,24 @@ export class CompareOK {
     constructor(
         /**
          * @summary `matched`.
+         * @description
+         *
+         * TRUE if the type or a subtype matches.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly matched: BOOLEAN,
         /**
          * @summary `matchedSubtype`.
+         * @description
+         *
+         * TRUE if the match was against a subtype. Default FALSE.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

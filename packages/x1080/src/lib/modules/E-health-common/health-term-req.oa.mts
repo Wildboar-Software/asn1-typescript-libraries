@@ -21,6 +21,11 @@ import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
  * @summary health_term_req
  * @description
  *
+ * CMS `CONTENT-TYPE` for requesting session release. Identified
+ * by `id-health-term-req`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§11.2.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I),
+ * §7.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

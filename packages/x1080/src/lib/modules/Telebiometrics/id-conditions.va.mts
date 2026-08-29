@@ -16,6 +16,11 @@ import { id_measures } from '../Telebiometrics/id-measures.va.mjs';
  * @summary id_conditions
  * @description
  *
+ * Measurement conditions `{id-measures conditions(4)}`. Used with
+ * `CONDITION` / `NormalValue.conditions` in E-health-Data-Message.
+ * X.1080.1 Annex A (2011 Data-Message module).
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

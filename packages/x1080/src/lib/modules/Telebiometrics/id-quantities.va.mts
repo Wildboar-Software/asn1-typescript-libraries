@@ -16,6 +16,12 @@ import { id_measures } from '../Telebiometrics/id-measures.va.mjs';
  * @summary id_quantities
  * @description
  *
+ * Quantities under the TMM metric layer
+ * `{id-measures quantities(1)}`. Split by the five X.1080.x fields
+ * (physics … psychology). Tables of named quantities are in X.1082
+ * clauses 6–11, not compiled here. X.1080.1 Annex A.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

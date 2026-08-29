@@ -21,6 +21,11 @@ import {
  * @summary PrivAssignRequest
  * @description
  *
+ * Privilege-assignment request. Assignment is SOA→AA, SOA→holder,
+ * AA→holder, or AA→AA; keep delegation short.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,12 @@ export class PrivAssignRequest {
     constructor(
         /**
          * @summary `attrCerts`.
+         * @description
+         *
+         * SOA sends one AC; each AA on the path adds its AC.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§9](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

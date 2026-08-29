@@ -21,6 +21,11 @@ import {
  * @summary E_health_SetUp_Message_Response_interactive
  * @description
  *
+ * Interactive alternative of the 2011 setup response: `accept`
+ * (`NULL`), `conditional-accept` (reduced requirements plus
+ * voice/video option OIDs), or `reject` (`NULL`). ITU-T Rec.
+ * X.1080.1 (10/2011) module E-health-setup.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

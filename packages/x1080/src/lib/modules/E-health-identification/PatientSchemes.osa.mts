@@ -15,6 +15,11 @@ import { type PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.o
  * @summary PatientSchemes
  * @description
  *
+ * Extensible object set `{...}` of `PATIENT-SCHEME`s. Filled by
+ * referencing specs / implementers' agreements. Scheme establishment
+ * is out of scope of X.1080.1. ITU-T X.1080.1 (05/2018) §8.3.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

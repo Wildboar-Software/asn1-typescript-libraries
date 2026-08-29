@@ -26,6 +26,12 @@ import {
  * @summary Command_Response
  * @description
  *
+ * Encryption/integrity flags plus OCTET STRING encoding of an
+ * `Identified-Command-Response`. Encrypted if
+ * `encryptionOptions` is `TRUE`. ITU-T Rec. X.1080.1 (10/2011)
+ * module E-health-command-response; (05/2018)
+ * [§9](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +51,37 @@ export class Command_Response {
     constructor(
         /**
          * @summary `encryptionOptions`.
+         * @description
+         *
+         * When `TRUE`, `content` is encrypted. ITU-T Rec. X.1080.1
+         * (10/2011) module E-health-command-response.
+         *
          * @public
          * @readonly
          */
         readonly encryptionOptions: EncryptionOptions,
         /**
          * @summary `integrityOptions`.
+         * @description
+         *
+         * BOOLEAN flag. The `content` constraint comment only
+         * mentions encryption when `encryptionOptions` is `TRUE`.
+         * ITU-T Rec. X.1080.1 (10/2011) module
+         * E-health-command-response.
+         *
          * @public
          * @readonly
          */
         readonly integrityOptions: IntegrityOptions,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Encoding of an `Identified-Command-Response` under the
+         * current encoding rules, then encrypted if
+         * `encryptionOptions` is `TRUE`. ITU-T Rec. X.1080.1
+         * (10/2011) module E-health-command-response.
+         *
          * @public
          * @readonly
          */

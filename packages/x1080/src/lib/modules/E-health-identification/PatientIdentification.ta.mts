@@ -23,6 +23,12 @@ import {
  * @summary PatientIdentification
  * @description
  *
+ * Identifies a patient: scheme OID, optional scheme name, and
+ * scheme-defined `patientId` (typically unique number + name).
+ * Schemes are defined elsewhere; establishment is out of scope.
+ * ITU-T X.1080.1 (05/2018) §8.3.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +43,32 @@ export class PatientIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `PATIENT-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `PATIENT-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `patientId`.
+         * @description
+         *
+         * `PATIENT-SCHEME.&Identification` of the patient within that
+         * scheme. Typically unique number + name.
+         *
          * @public
          * @readonly
          */

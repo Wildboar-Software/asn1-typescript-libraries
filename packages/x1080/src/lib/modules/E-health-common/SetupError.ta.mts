@@ -30,6 +30,9 @@ export enum _enum_for_SetupError {
  * @summary SetupError
  * @description
  *
+ * Why session establishment failed. ITU-T Rec. X.1080.1 (05/2018)
+ * [§11.1.3](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,6 +56,11 @@ export type SetupError = _enum_for_SetupError | ENUMERATED;
 
 /**
  * @summary SetupError_setupNotAllowed
+ * @description
+ *
+ * Initiator is not allowed to start a session. ITU-T Rec.
+ * X.1080.1 (05/2018) §11.1.3 a).
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +69,11 @@ export const SetupError_setupNotAllowed: SetupError = 0; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary setupNotAllowed
+ * @description
+ *
+ * Initiator is not allowed to start a session. ITU-T Rec.
+ * X.1080.1 (05/2018) §11.1.3 a).
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +82,11 @@ export const setupNotAllowed: SetupError = SetupError_setupNotAllowed; /* SHORT_
 
 /**
  * @summary SetupError_facilityTemporarilyUnavailable
+ * @description
+ *
+ * Responder is temporarily not in a position to establish a
+ * session. ITU-T Rec. X.1080.1 (05/2018) §11.1.3 b).
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +95,11 @@ export const SetupError_facilityTemporarilyUnavailable: SetupError = 1; /* LONG_
 
 /**
  * @summary facilityTemporarilyUnavailable
+ * @description
+ *
+ * Responder is temporarily not in a position to establish a
+ * session. ITU-T Rec. X.1080.1 (05/2018) §11.1.3 b).
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +108,12 @@ export const facilityTemporarilyUnavailable: SetupError = SetupError_facilityTem
 
 /**
  * @summary SetupError_facilityPermanentlyUnavailable
+ * @description
+ *
+ * Responder is permanently not in a position to establish a
+ * session; intervention may be required. ITU-T Rec. X.1080.1
+ * (05/2018) §11.1.3 c).
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +122,12 @@ export const SetupError_facilityPermanentlyUnavailable: SetupError = 2; /* LONG_
 
 /**
  * @summary facilityPermanentlyUnavailable
+ * @description
+ *
+ * Responder is permanently not in a position to establish a
+ * session; intervention may be required. ITU-T Rec. X.1080.1
+ * (05/2018) §11.1.3 c).
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +136,11 @@ export const facilityPermanentlyUnavailable: SetupError = SetupError_facilityPer
 
 /**
  * @summary SetupError_unknownSessionType
+ * @description
+ *
+ * Suggested session type is not known by the responder.
+ * ITU-T Rec. X.1080.1 (05/2018) §11.1.3 d).
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +149,11 @@ export const SetupError_unknownSessionType: SetupError = 3; /* LONG_NAMED_ENUMER
 
 /**
  * @summary unknownSessionType
+ * @description
+ *
+ * Suggested session type is not known by the responder.
+ * ITU-T Rec. X.1080.1 (05/2018) §11.1.3 d).
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +162,11 @@ export const unknownSessionType: SetupError = SetupError_unknownSessionType; /* 
 
 /**
  * @summary SetupError_sessionTypeNotSupported
+ * @description
+ *
+ * Suggested session type is not supported by the responder.
+ * ITU-T Rec. X.1080.1 (05/2018) §11.1.3 e).
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +175,11 @@ export const SetupError_sessionTypeNotSupported: SetupError = 4; /* LONG_NAMED_E
 
 /**
  * @summary sessionTypeNotSupported
+ * @description
+ *
+ * Suggested session type is not supported by the responder.
+ * ITU-T Rec. X.1080.1 (05/2018) §11.1.3 e).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +188,12 @@ export const sessionTypeNotSupported: SetupError = SetupError_sessionTypeNotSupp
 
 /**
  * @summary SetupError_batchModeNotSupported
+ * @description
+ *
+ * Batch return of results is not supported, or the session type
+ * is not suited to batch transmission. ITU-T Rec. X.1080.1
+ * (05/2018) §11.1.3 f).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +202,12 @@ export const SetupError_batchModeNotSupported: SetupError = 5; /* LONG_NAMED_ENU
 
 /**
  * @summary batchModeNotSupported
+ * @description
+ *
+ * Batch return of results is not supported, or the session type
+ * is not suited to batch transmission. ITU-T Rec. X.1080.1
+ * (05/2018) §11.1.3 f).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +216,12 @@ export const batchModeNotSupported: SetupError = SetupError_batchModeNotSupporte
 
 /**
  * @summary SetupError_continuousReturnNotSupported
+ * @description
+ *
+ * Continuous return of results is not supported, or the session
+ * type is not suited to continuous transmission. ITU-T Rec.
+ * X.1080.1 (05/2018) §11.1.3 g).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +230,12 @@ export const SetupError_continuousReturnNotSupported: SetupError = 6; /* LONG_NA
 
 /**
  * @summary continuousReturnNotSupported
+ * @description
+ *
+ * Continuous return of results is not supported, or the session
+ * type is not suited to continuous transmission. ITU-T Rec.
+ * X.1080.1 (05/2018) §11.1.3 g).
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +244,11 @@ export const continuousReturnNotSupported: SetupError = SetupError_continuousRet
 
 /**
  * @summary SetupError_sensorTemporarilyUnavailable
+ * @description
+ *
+ * Needed sensor is temporarily out of service; retry is a local
+ * decision. ITU-T Rec. X.1080.1 (05/2018) §11.1.3 h).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +257,11 @@ export const SetupError_sensorTemporarilyUnavailable: SetupError = 7; /* LONG_NA
 
 /**
  * @summary sensorTemporarilyUnavailable
+ * @description
+ *
+ * Needed sensor is temporarily out of service; retry is a local
+ * decision. ITU-T Rec. X.1080.1 (05/2018) §11.1.3 h).
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +270,11 @@ export const sensorTemporarilyUnavailable: SetupError = SetupError_sensorTempora
 
 /**
  * @summary SetupError_sensorPermanentlyUnavailable
+ * @description
+ *
+ * Needed sensor has a permanent error that needs attention.
+ * ITU-T Rec. X.1080.1 (05/2018) §11.1.3 i).
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +283,11 @@ export const SetupError_sensorPermanentlyUnavailable: SetupError = 8; /* LONG_NA
 
 /**
  * @summary sensorPermanentlyUnavailable
+ * @description
+ *
+ * Needed sensor has a permanent error that needs attention.
+ * ITU-T Rec. X.1080.1 (05/2018) §11.1.3 i).
+ *
  * @constant
  * @type {number}
  */

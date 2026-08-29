@@ -16,6 +16,10 @@ import { id_obj_cat } from '../Telebiometrics/id-obj-cat.va.mjs';
  * @summary id_drug_manufac
  * @description
  *
+ * Drug-manufacturer category `{id-obj-cat drug-manufac(6)}`. ITU-T
+ * X.1080.1 (05/2018) §8.2, §8.8.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

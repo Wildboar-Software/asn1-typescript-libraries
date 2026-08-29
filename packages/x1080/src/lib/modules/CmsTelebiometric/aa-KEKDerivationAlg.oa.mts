@@ -28,6 +28,11 @@ import { id_aa_KEKDerivationAlg } from '../CmsTelebiometric/id-aa-KEKDerivationA
  * @summary aa_KEKDerivationAlg
  * @description
  *
+ * RFC 3185 unprotected/unauth attribute: KEK wrapping algorithm
+ * plus PBKDF2 parameters.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

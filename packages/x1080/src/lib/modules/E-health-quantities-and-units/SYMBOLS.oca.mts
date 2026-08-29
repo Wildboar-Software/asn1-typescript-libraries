@@ -26,6 +26,12 @@ type RELATIVE_IRI = RELATIVE_OID_IRI;
  * @summary SYMBOLS
  * @description
  *
+ * Letter symbol as `UniversalString`, optional display attributes
+ * (italic, between parenthesis), unique id and relative-OID-IRI.
+ * 2011 module. Distinct from X.1082 Amd.1 Human_Physiology/Symbols
+ * arcs. ITU-T X.1080.1 (05/2018).
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,18 +76,30 @@ export interface SYMBOLS {
     >;
     /**
      * @summary &String
+     * @description
+     *
+     * The symbol characters.
      */
     readonly '&String'?: UniversalString;
     /**
      * @summary &attributes
+     * @description
+     *
+     * Optional italic / between-parenthesis rendering bits.
      */
     readonly '&attributes'?: StringAttributes;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of this symbol (typically under TMM `id-symbols`).
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &relative-oid-iri
+     * @description
+     *
+     * Relative OID-IRI for this symbol.
      */
     readonly '&relative-oid-iri'?: RELATIVE_IRI;
 }

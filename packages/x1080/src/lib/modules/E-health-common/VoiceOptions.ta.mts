@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary VoiceOptions
  * @description
  *
+ * OID naming the voice options. On `INTERACTIVE-OPERATION`, the
+ * `&Voice-options` type field may be present only if
+ * `&requirements` is not `none`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§10.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I),
+ * §11.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

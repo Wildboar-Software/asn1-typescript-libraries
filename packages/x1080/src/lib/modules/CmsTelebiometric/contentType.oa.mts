@@ -25,6 +25,11 @@ import { id_contentType } from '../CmsTelebiometric/id-contentType.va.mjs';
  * @summary contentType
  * @description
  *
+ * RFC 5652 signed attribute: OID of the encapsulated content
+ * type. Required in `signedAttrs`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,13 @@ import {
  * @summary AttributeCertificates
  * @description
  *
+ * Attribute certificate or AC path carrying privilege. On assertion
+ * requests, omitted when privilege is in the accessor's end-entity
+ * PKC. On privilege assignment, the SOA sends one AC and each AA
+ * adds its AC.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1), §9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

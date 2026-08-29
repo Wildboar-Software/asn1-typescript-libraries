@@ -16,6 +16,10 @@ import { id_x1080_1 } from '../E-health-common/id-x1080-1.va.mjs';
  * @summary id_x1080_1_cms_content
  * @description
  *
+ * `{id-x1080-1 cms-content(1)}`. Arc for CMS content types
+ * defined by this Rec. ITU-T Rec. X.1080.1 (05/2018)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.1080.1-201805-I), §7.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

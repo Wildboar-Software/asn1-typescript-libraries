@@ -16,6 +16,10 @@ import { id_aa } from '../CmsTelebiometric/id-aa.va.mjs';
  * @summary id_aa_CEKMaxDecrypts
  * @description
  *
+ * OID of `aa-CEKMaxDecrypts`: `{id-aa 31}`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

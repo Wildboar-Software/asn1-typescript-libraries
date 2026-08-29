@@ -21,6 +21,12 @@ import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
  * @summary health_setup_err
  * @description
  *
+ * CMS `CONTENT-TYPE` for reporting that establishment failed.
+ * Identified by `id-health-setup-err`. ITU-T Rec. X.1080.1
+ * (05/2018)
+ * [§11.1.3](https://www.itu.int/rec/T-REC-X.1080.1-201805-I),
+ * §7.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

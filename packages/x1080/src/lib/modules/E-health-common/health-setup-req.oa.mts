@@ -21,6 +21,12 @@ import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
  * @summary health_setup_req
  * @description
  *
+ * CMS `CONTENT-TYPE` for a session-establishment request.
+ * Identified by `id-health-setup-req`. ITU-T Rec. X.1080.1
+ * (05/2018)
+ * [§11.1.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I),
+ * §7.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Identified_Command_Response_response
  * @description
  *
+ * Response alternative: step id shall equal the command's
+ * `&expected-response`, plus `INTERACTIVE-MESSAGE.&Type` for that
+ * id. ITU-T Rec. X.1080.1 (10/2011) module
+ * E-health-command-response.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +32,23 @@ export class Identified_Command_Response_response {
     constructor(
         /**
          * @summary `message_id`.
+         * @description
+         *
+         * Shall equal `&expected-response` of the command.
+         * ITU-T Rec. X.1080.1 (10/2011) module
+         * E-health-command-response.
+         *
          * @public
          * @readonly
          */
         readonly message_id: INTEGER,
         /**
          * @summary `message_content`.
+         * @description
+         *
+         * `INTERACTIVE-MESSAGE.&Type` for `message-id`. ITU-T Rec.
+         * X.1080.1 (10/2011) module E-health-command-response.
+         *
          * @public
          * @readonly
          */

@@ -16,6 +16,12 @@ import { id_telebio } from '../Pbact-access/id-telebio.va.mjs';
  * @summary id_thprot
  * @description
  *
+ * `{id-telebio thprot(10)}` — X.1080-series protocol OIDs. The
+ * Telebiometrics module has a different `id-thprot` with arc 0; do
+ * not conflate.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

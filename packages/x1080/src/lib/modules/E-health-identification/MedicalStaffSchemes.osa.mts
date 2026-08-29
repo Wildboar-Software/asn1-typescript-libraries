@@ -15,6 +15,12 @@ import { type MEDICAL_STAFF_SCHEME } from '../E-health-identification/MEDICAL-ST
  * @summary MedicalStaffSchemes
  * @description
  *
+ * Extensible object set `{...}` of `MEDICAL-STAFF-SCHEME`s. Also
+ * used for observers and pharmaceutical staff. Filled by referencing
+ * specs / implementers' agreements. Scheme establishment is out of
+ * scope of X.1080.1. ITU-T X.1080.1 (05/2018) §8.4.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

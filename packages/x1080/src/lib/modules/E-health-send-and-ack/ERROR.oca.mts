@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ERROR
  * @description
  *
+ * 2011 error class: integer `&code` plus `&Parameter`. Used by
+ * `SIMPLE-MESSAGE.&Errors` and `Ack.error`. ITU-T Rec. X.1080.1
+ * (10/2011) module E-health-send-and-ack.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -56,10 +60,18 @@ export interface ERROR<
     >;
     /**
      * @summary &code
+     * @description
+     *
+     * Integer code of the error. ITU-T Rec. X.1080.1 (10/2011)
+     * module E-health-send-and-ack.
      */
     readonly '&code'?: INTEGER;
     /**
      * @summary &Parameter
+     * @description
+     *
+     * Parameter carried with the error. ITU-T Rec. X.1080.1
+     * (10/2011) module E-health-send-and-ack.
      */
     readonly '&Parameter': Parameter;
 }

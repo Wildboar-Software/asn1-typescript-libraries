@@ -20,6 +20,11 @@ import {
  * @summary NormalValues
  * @description
  *
+ * Sequence of `NormalValue` reference ranges for a `DataMessage`.
+ * 2011 E-health-Data-Message example module. ITU-T X.1080.1
+ * (05/2018) intro / §6.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

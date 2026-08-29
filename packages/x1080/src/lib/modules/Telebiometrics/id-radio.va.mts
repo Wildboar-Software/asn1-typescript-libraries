@@ -16,6 +16,12 @@ import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
  * @summary id_radio
  * @description
  *
+ * RADIO modality. Latin *radiō* “I radiate”. RADIO-IN: radiation
+ * except VIDEO-IN/AUDIO-IN (incl. effects on implants). RADIO-OUT:
+ * body/implant radiation except VIDEO-OUT/AUDIO-OUT. X.1080.1
+ * Annex A; X.1082 intro, §3.5.9–§3.5.10.
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

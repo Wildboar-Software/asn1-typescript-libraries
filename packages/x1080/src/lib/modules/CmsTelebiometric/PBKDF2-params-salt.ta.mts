@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PBKDF2_params_salt
  * @description
  *
+ * PBKDF2 salt CHOICE. This profile uses `specified` (OCTET
+ * STRING). `otherSource` is not used in this profile's first
+ * definition.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

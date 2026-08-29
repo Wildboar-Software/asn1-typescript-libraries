@@ -15,6 +15,10 @@ import { type CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.m
  * @summary CR_Sequences
  * @description
  *
+ * Extensible set of `CR-SEQUENCE` objects. Empty in this module
+ * (`{...}`). ITU-T Rec. X.1080.1 (10/2011) module
+ * E-health-command-response.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

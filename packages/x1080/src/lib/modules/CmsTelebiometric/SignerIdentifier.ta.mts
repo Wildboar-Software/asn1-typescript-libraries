@@ -20,6 +20,12 @@ import {
  * @summary SignerIdentifier
  * @description
  *
+ * Identifies the signer's end-entity PKC. Always take
+ * `issuerAndSerialNumber` (issuer DN and certificate serial).
+ * `subjectKeyIdentifier` shall not be taken.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

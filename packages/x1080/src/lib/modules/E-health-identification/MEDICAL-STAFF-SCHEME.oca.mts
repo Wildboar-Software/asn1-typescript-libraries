@@ -21,6 +21,14 @@ import {
  * @summary MEDICAL_STAFF_SCHEME
  * @description
  *
+ * Health-professional scheme covering medical staff (§8.4),
+ * observers (§8.5), and pharmaceutical staff (§8.6). Unique `&id`,
+ * optional `&name`, `&Identification`, `&Qualifications` (typically
+ * signed by authorities, often with X.509 certs), and `&Observer`.
+ * Scheme establishment is out of scope. ITU-T X.1080.1 (05/2018)
+ * §8.4.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -86,22 +94,43 @@ export interface MEDICAL_STAFF_SCHEME<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of the health-professional identification scheme.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &name
+     * @description
+     *
+     * Optional `SchemeName`: ISO646String (not necessarily unique) or
+     * OID.
      */
     readonly '&name'?: SchemeName;
     /**
      * @summary &Identification
+     * @description
+     *
+     * Identification of the health professional within the scheme.
+     * Typically unique number, name, and category or role.
      */
     readonly '&Identification': Identification;
     /**
      * @summary &Qualifications
+     * @description
+     *
+     * Professional qualifications recognized in the scheme. Typically
+     * qualifications issued and signed by known authorities, so the
+     * type often includes X.509 public-key certificates. Definition
+     * of qualifications is out of scope of X.1080.1.
      */
     readonly '&Qualifications': Qualifications;
     /**
      * @summary &Observer
+     * @description
+     *
+     * Identification of observers in remote ITUEHP interactions.
+     * Unlikely to be unique; normally role + name. X.1080.1 §8.5.
      */
     readonly '&Observer': Observer;
 }

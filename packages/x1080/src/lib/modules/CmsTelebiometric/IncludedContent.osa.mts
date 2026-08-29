@@ -16,6 +16,12 @@ import { envelopedData } from '../CmsTelebiometric/envelopedData.oa.mjs';
  * @summary IncludedContent
  * @description
  *
+ * Open set of types that may be encapsulated in `SignedData`.
+ * Starts with `envelopedData`; referencing specs or implementers'
+ * agreements fill further members (`{...}`).
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

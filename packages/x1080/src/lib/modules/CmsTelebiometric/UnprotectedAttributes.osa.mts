@@ -18,6 +18,14 @@ import { aa_KEKDerivationAlg } from '../CmsTelebiometric/aa-KEKDerivationAlg.oa.
  * @summary UnprotectedAttributes
  * @description
  *
+ * Unprotected attributes on `EnvelopedData`: `aa-CEKReference`,
+ * `aa-CEKMaxDecrypts`, `aa-KEKDerivationAlg`. Required if the
+ * next message in that direction is expected to be
+ * `ct-authEnvelopedData`; else may be absent. If high security,
+ * `aa-CEKMaxDecrypts` should be 1 or omitted.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1, B.3.4.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

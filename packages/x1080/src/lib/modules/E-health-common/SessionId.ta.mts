@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SessionId
  * @description
  *
+ * Unique among concurrent sessions of that type between two
+ * entities; reusable after the session is terminated. Range
+ * 1..32767. ITU-T Rec. X.1080.1 (05/2018)
+ * [§11.1.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

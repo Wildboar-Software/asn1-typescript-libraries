@@ -25,6 +25,11 @@ export enum _enum_for_Requirements {
  * @summary Requirements
  * @description
  *
+ * Voice and video needed for the operation or session. Omitted
+ * defaults to `none`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§10.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I),
+ * §11.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -43,6 +48,10 @@ export type Requirements = _enum_for_Requirements | ENUMERATED;
 
 /**
  * @summary Requirements_none
+ * @description
+ *
+ * No voice or video. ITU-T Rec. X.1080.1 (05/2018) §10.1 c).
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +60,10 @@ export const Requirements_none: Requirements = 0; /* LONG_NAMED_ENUMERATED_VALUE
 
 /**
  * @summary none
+ * @description
+ *
+ * No voice or video. ITU-T Rec. X.1080.1 (05/2018) §10.1 c).
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +72,11 @@ export const none: Requirements = Requirements_none; /* SHORT_NAMED_ENUMERATED_V
 
 /**
  * @summary Requirements_with_2_way_voice
+ * @description
+ *
+ * Two-way voice. Permits `&Voice-options`. ITU-T Rec. X.1080.1
+ * (05/2018) §10.1 d).
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +85,11 @@ export const Requirements_with_2_way_voice: Requirements = 1; /* LONG_NAMED_ENUM
 
 /**
  * @summary with_2_way_voice
+ * @description
+ *
+ * Two-way voice. Permits `&Voice-options`. ITU-T Rec. X.1080.1
+ * (05/2018) §10.1 d).
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +98,11 @@ export const with_2_way_voice: Requirements = Requirements_with_2_way_voice; /* 
 
 /**
  * @summary Requirements_with_reverse_video_and_2_way_voice
+ * @description
+ *
+ * Reverse video plus two-way voice. Permits `&Voice-options` and
+ * `&Video-options`. ITU-T Rec. X.1080.1 (05/2018) §10.1 d)–e).
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +111,11 @@ export const Requirements_with_reverse_video_and_2_way_voice: Requirements = 2; 
 
 /**
  * @summary with_reverse_video_and_2_way_voice
+ * @description
+ *
+ * Reverse video plus two-way voice. Permits `&Voice-options` and
+ * `&Video-options`. ITU-T Rec. X.1080.1 (05/2018) §10.1 d)–e).
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +124,11 @@ export const with_reverse_video_and_2_way_voice: Requirements = Requirements_wit
 
 /**
  * @summary Requirements_with_2_way_video_and_voice
+ * @description
+ *
+ * Two-way video and voice. Permits `&Voice-options` and
+ * `&Video-options`. ITU-T Rec. X.1080.1 (05/2018) §10.1 d)–e).
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +137,11 @@ export const Requirements_with_2_way_video_and_voice: Requirements = 3; /* LONG_
 
 /**
  * @summary with_2_way_video_and_voice
+ * @description
+ *
+ * Two-way video and voice. Permits `&Voice-options` and
+ * `&Video-options`. ITU-T Rec. X.1080.1 (05/2018) §10.1 d)–e).
+ *
  * @constant
  * @type {number}
  */

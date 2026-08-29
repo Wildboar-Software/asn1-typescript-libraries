@@ -27,6 +27,13 @@ import {
  * @summary EncryptedContentInfo
  * @description
  *
+ * Encrypted encapsulated content. `contentType` is from
+ * `EncryptedContentSet` (types for which encryption is optional).
+ * Remainder as RFC 5652. Also used as
+ * `AuthEnvelopedData.authEncryptedContentInfo`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5, B.4.1.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,18 +52,37 @@ export class EncryptedContentInfo {
     constructor(
         /**
          * @summary `contentType`.
+         * @description
+         *
+         * Content type of the encrypted payload. From
+         * `EncryptedContentSet` (types for which encryption is an
+         * option).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+         *
          * @public
          * @readonly
          */
         readonly contentType: OBJECT_IDENTIFIER,
         /**
          * @summary `contentEncryptionAlgorithm`.
+         * @description
+         *
+         * Symmetric content-encryption algorithm, as required by
+         * RFC 5652. From `SymmetricEncryptionAlgorithms`.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+         *
          * @public
          * @readonly
          */
         readonly contentEncryptionAlgorithm?: OPTIONAL<EncryptedContentInfo_contentEncryptionAlgorithm>,
         /**
          * @summary `encryptedContent`.
+         * @description
+         *
+         * Ciphertext of the encapsulated content, as required by
+         * RFC 5652.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.5.
+         *
          * @public
          * @readonly
          */

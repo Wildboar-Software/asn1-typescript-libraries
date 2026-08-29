@@ -23,6 +23,13 @@ import {
  * @summary ManufacturerIdentification
  * @description
  *
+ * Identifies a drug manufacturer (or laboratory producing drugs)
+ * and a drug of that manufacturer. `manufacturerId` typically name
+ * + HQ location + company number; `drugId` is scheme-defined (spec
+ * text for `&drug` repeats manufacturer wording). Scheme
+ * establishment is out of scope. ITU-T X.1080.1 (05/2018) §8.8.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,24 +45,43 @@ export class ManufacturerIdentification {
     constructor(
         /**
          * @summary `scheme`.
+         * @description
+         *
+         * `MANUFACTURER-SCHEME.&id` of the identification scheme.
+         *
          * @public
          * @readonly
          */
         readonly scheme: OBJECT_IDENTIFIER,
         /**
          * @summary `schemeName`.
+         * @description
+         *
+         * Optional `MANUFACTURER-SCHEME.&name`. ISO646String is not
+         * necessarily unique.
+         *
          * @public
          * @readonly
          */
         readonly schemeName: OPTIONAL<SchemeName>,
         /**
          * @summary `manufacturerId`.
+         * @description
+         *
+         * `MANUFACTURER-SCHEME.&Manufacturer`. Typically name, HQ
+         * location, and perhaps a company number.
+         *
          * @public
          * @readonly
          */
         readonly manufacturerId: _Element,
         /**
          * @summary `drugId`.
+         * @description
+         *
+         * `MANUFACTURER-SCHEME.&Drug` of that manufacturer. Spec text
+         * repeats manufacturer wording; the type is scheme-defined.
+         *
          * @public
          * @readonly
          */

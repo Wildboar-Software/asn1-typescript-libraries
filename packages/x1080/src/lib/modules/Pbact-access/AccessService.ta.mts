@@ -21,6 +21,11 @@ import {
  * @summary AccessService
  * @description
  *
+ * Syntax of one `accessService` privilege value. Need-to-know: only
+ * listed services, object classes, and attributes are granted.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +40,25 @@ export class AccessService {
     constructor(
         /**
          * @summary `serviceId`.
+         * @description
+         *
+         * Access service type the accessor may use.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly serviceId: OBJECT_IDENTIFIER,
         /**
          * @summary `objectDef`.
+         * @description
+         *
+         * One `ObjectSel` per object class with privilege. Unlisted
+         * classes confer no access.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

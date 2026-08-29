@@ -30,6 +30,17 @@ import {
  * @summary EnvelopedData
  * @description
  *
+ * Encrypted CMS content. DH key agreement is required;
+ * ephemeral-static SHALL be supported; static-static is also
+ * recognized (needs UKM). `originatorInfo` shall be absent. For
+ * this content type, `recipientInfos` uses only `kari`.
+ * `unprotectedAttrs` (extension) is required if the next message
+ * in that direction is expected to be `ct-authEnvelopedData`;
+ * else it may be absent. Types: `aa-CEKReference`,
+ * `aa-CEKMaxDecrypts`, `aa-KEKDerivationAlg`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,18 +59,33 @@ export class EnvelopedData {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * `v2` if `unprotectedAttrs` is present, else `v0`.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1.
+         *
          * @public
          * @readonly
          */
         readonly version: CMSVersion,
         /**
          * @summary `recipientInfos`.
+         * @description
+         *
+         * Exactly one recipient. For `envelopedData`, only `kari`.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1–B.3.2.
+         *
          * @public
          * @readonly
          */
         readonly recipientInfos: RecipientInfos,
         /**
          * @summary `encryptedContentInfo`.
+         * @description
+         *
+         * Encrypted encapsulated content (`EncryptedContentInfo`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1, B.3.5.
+         *
          * @public
          * @readonly
          */

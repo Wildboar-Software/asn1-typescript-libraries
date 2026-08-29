@@ -25,6 +25,11 @@ import {
  * @summary ReadResult
  * @description
  *
+ * Reply to a read. Success is the intersection of requested and
+ * allowed information; failure is `AccessdErr`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.4](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +47,24 @@ export class ReadResult {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Distinguished name of the object that was read.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.4](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly object: DistinguishedName,
         /**
          * @summary `result`.
+         * @description
+         *
+         * Success (`ObjectInformation`) or failure (`AccessdErr`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§8.4](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

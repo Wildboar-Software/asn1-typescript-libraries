@@ -16,6 +16,13 @@ import {
  * @summary id_x1080_1
  * @description
  *
+ * This module assigns
+ * `{joint-iso-itu-t(2) telebiometrics(42) telehealth(0) part1(1)}`.
+ * Clause 7.2 and the identification module use
+ * `{id-thprot part1(1)}` / `{id-telehealth part1(1)}`. ITU-T Rec.
+ * X.1080.1 (05/2018)
+ * [§7.2](https://www.itu.int/rec/T-REC-X.1080.1-201805-I), Annex B.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

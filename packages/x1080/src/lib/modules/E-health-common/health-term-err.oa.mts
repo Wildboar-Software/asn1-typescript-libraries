@@ -21,6 +21,11 @@ import { type CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
  * @summary health_term_err
  * @description
  *
+ * CMS `CONTENT-TYPE` for refusing session termination. Identified
+ * by `id-health-term-err`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§11.2.3](https://www.itu.int/rec/T-REC-X.1080.1-201805-I),
+ * §7.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

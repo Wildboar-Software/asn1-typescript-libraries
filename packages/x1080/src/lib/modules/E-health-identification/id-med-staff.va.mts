@@ -16,6 +16,11 @@ import { id_obj_cat } from '../Telebiometrics/id-obj-cat.va.mjs';
  * @summary id_med_staff
  * @description
  *
+ * Medical-staff category `{id-obj-cat med-staff(2)}`. Doctors,
+ * surgeons, nurses, dentists, physiotherapists, psychologists, etc.
+ * — not pharmaceutical staff. ITU-T X.1080.1 (05/2018) §8.2, §8.4.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

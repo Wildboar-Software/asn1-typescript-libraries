@@ -25,6 +25,13 @@ import {
  * @summary OriginatorIdentifierOrKey
  * @description
  *
+ * Originator of a DH key agreement. `issuerAndSerialNumber` for
+ * static-static (sender's DH PKC). `originatorKey` for
+ * ephemeral-static (fresh DH key pair per message).
+ * `subjectKeyIdentifier` shall not be taken.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

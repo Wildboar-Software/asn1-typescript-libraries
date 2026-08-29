@@ -16,6 +16,10 @@ import { id_x1080_0 } from '../Pbact-access/id-x1080-0.va.mjs';
  * @summary id_x1080_0_module
  * @description
  *
+ * `{id-x1080-0 module(0)}` — ASN.1 modules of this Recommendation.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [Annex A](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

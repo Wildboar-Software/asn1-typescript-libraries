@@ -16,6 +16,13 @@ import { id_measures } from '../Telebiometrics/id-measures.va.mjs';
  * @summary id_symbols
  * @description
  *
+ * TMM measure symbols `{id-measures symbols(3)}`. Distinct from
+ * X.1082 Amd.1 symbol arcs under `{2 42 2 1}` (tango-in … thresholds
+ * at `/Telebiometrics/Human_Physiology/Symbols`). Do not mix the
+ * two. X.1080.1 Annex A; X.1082 Amd.1 §12.5.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I!Amd1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

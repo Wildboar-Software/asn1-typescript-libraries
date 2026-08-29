@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Identified_Simple_Message
  * @description
  *
+ * Simple-message id plus content (`SIMPLE-MESSAGE.&Type` for that
+ * id). Encoded into `Command.content`. ITU-T Rec. X.1080.1
+ * (10/2011) module E-health-send-and-ack.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,22 @@ export class Identified_Simple_Message {
     constructor(
         /**
          * @summary `sm_Identifier`.
+         * @description
+         *
+         * `SIMPLE-MESSAGE.&id` from `Simple-Messages`. ITU-T Rec.
+         * X.1080.1 (10/2011) module E-health-send-and-ack.
+         *
          * @public
          * @readonly
          */
         readonly sm_Identifier: OBJECT_IDENTIFIER,
         /**
          * @summary `sm_Content`.
+         * @description
+         *
+         * `SIMPLE-MESSAGE.&Type` for `sm-Identifier`. ITU-T Rec.
+         * X.1080.1 (10/2011) module E-health-send-and-ack.
+         *
          * @public
          * @readonly
          */

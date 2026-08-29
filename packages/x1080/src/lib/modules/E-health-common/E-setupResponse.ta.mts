@@ -25,6 +25,11 @@ import {
  * @summary E_setupResponse
  * @description
  *
+ * Responder payload completing session establishment. Echoes
+ * `sessionType` and `sessionId` from the request. Carried as CMS
+ * content type `health-setup-rsp`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§11.1.2](https://www.itu.int/rec/T-REC-X.1080.1-201805-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +44,22 @@ export class E_setupResponse {
     constructor(
         /**
          * @summary `sessionType`.
+         * @description
+         *
+         * Same value as in the corresponding request.
+         * ITU-T Rec. X.1080.1 (05/2018) §11.1.2 a).
+         *
          * @public
          * @readonly
          */
         readonly sessionType: SessionType,
         /**
          * @summary `sessionId`.
+         * @description
+         *
+         * Same value as in the corresponding request.
+         * ITU-T Rec. X.1080.1 (05/2018) §11.1.2 b).
+         *
          * @public
          * @readonly
          */

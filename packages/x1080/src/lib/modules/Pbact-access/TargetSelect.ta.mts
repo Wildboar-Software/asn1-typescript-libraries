@@ -26,6 +26,11 @@ import {
  * @summary TargetSelect
  * @description
  *
+ * Allowed operations on matching objects and/or their attributes. At
+ * least one of `objOper` or `attrSel` shall be present.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,12 +47,24 @@ export class TargetSelect {
     constructor(
         /**
          * @summary `objOper`.
+         * @description
+         *
+         * Operations on objects as a whole. Absent → none.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly objOper?: OPTIONAL<ObjectOperations>,
         /**
          * @summary `attrSel`.
+         * @description
+         *
+         * Operations on attributes. Absent → none.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

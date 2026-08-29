@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Identification
  * @description
  *
+ * Category from `Categories`, then an identification typed by that
+ * category. ITU-T X.1080.1 (05/2018) §8.1.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +33,20 @@ export class Identification {
     constructor(
         /**
          * @summary `category`.
+         * @description
+         *
+         * `IDENTIFICATION.&category` from `Categories`.
+         *
          * @public
          * @readonly
          */
         readonly category: OBJECT_IDENTIFIER,
         /**
          * @summary `identification`.
+         * @description
+         *
+         * `IDENTIFICATION.&Identification` selected by `category`.
+         *
          * @public
          * @readonly
          */

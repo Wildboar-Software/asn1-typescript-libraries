@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary VideoOptions
  * @description
  *
+ * OID naming the video options. On `INTERACTIVE-OPERATION`, the
+ * `&Video-options` type field may be present only for
+ * `with-reverse-video-and-2-way-voice` or
+ * `with-2-way-video-and-voice`. ITU-T Rec. X.1080.1 (05/2018)
+ * [§10.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I),
+ * §11.1.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

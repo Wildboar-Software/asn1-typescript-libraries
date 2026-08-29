@@ -17,6 +17,12 @@ import { messageDigest } from '../CmsTelebiometric/messageDigest.oa.mjs';
  * @summary SignedAttributes
  * @description
  *
+ * Signed-attribute set: `contentType` and `messageDigest` (RFC
+ * 5652). Extensible `{...}`; this profile requires no extra
+ * attributes, but referencing specs may add them.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,6 +17,10 @@ import { type CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca.m
  * @summary E_health_SetUp_Message_Response_interactive_conditional_accept
  * @description
  *
+ * Conditional accept of a 2011 interactive setup: reduced
+ * `CR-SEQUENCE` requirements plus voice and video option OIDs.
+ * ITU-T Rec. X.1080.1 (10/2011) module E-health-setup.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,24 +33,46 @@ class E_health_SetUp_Message_Response_interactive_conditional_accept {
     constructor (
         /**
          * @summary `id`.
+         * @description
+         *
+         * `CR-SEQUENCE.&id` of the interactive session being
+         * conditionally accepted. ITU-T Rec. X.1080.1 (10/2011)
+         * module E-health-setup.
+         *
          * @public
          * @readonly
          */
         readonly id: OBJECT_IDENTIFIER,
         /**
          * @summary `reduced_requirements`.
+         * @description
+         *
+         * Reduced `CR-SEQUENCE.&requirements` relative to the
+         * request. ITU-T Rec. X.1080.1 (10/2011) module
+         * E-health-setup.
+         *
          * @public
          * @readonly
          */
         readonly reduced_requirements: CR_SEQUENCE["&requirements"],
         /**
          * @summary `voice_options`.
+         * @description
+         *
+         * Voice option OID accepted for the session. ITU-T Rec.
+         * X.1080.1 (10/2011) module E-health-setup.
+         *
          * @public
          * @readonly
          */
         readonly voice_options: OBJECT_IDENTIFIER,
         /**
          * @summary `video_options`.
+         * @description
+         *
+         * Video option OID accepted for the session. ITU-T Rec.
+         * X.1080.1 (10/2011) module E-health-setup.
+         *
          * @public
          * @readonly
          */

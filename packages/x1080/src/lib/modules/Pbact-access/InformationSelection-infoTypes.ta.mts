@@ -23,6 +23,10 @@ export enum _enum_for_InformationSelection_infoTypes {
  * @summary InformationSelection_infoTypes
  * @description
  *
+ * Whether to return attribute types only or types and values.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,6 +42,12 @@ export type InformationSelection_infoTypes =
 
 /**
  * @summary InformationSelection_infoTypes_attributeTypesOnly
+ * @description
+ *
+ * Return attribute types only.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * @constant
  * @type {number}
  */
@@ -46,6 +56,12 @@ export const InformationSelection_infoTypes_attributeTypesOnly: InformationSelec
 
 /**
  * @summary attributeTypesOnly
+ * @description
+ *
+ * Return attribute types only.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +70,12 @@ export const attributeTypesOnly: InformationSelection_infoTypes = InformationSel
 
 /**
  * @summary InformationSelection_infoTypes_attributeTypeAndValue
+ * @description
+ *
+ * Return attribute types and values.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +84,12 @@ export const InformationSelection_infoTypes_attributeTypeAndValue: InformationSe
 
 /**
  * @summary attributeTypeAndValue
+ * @description
+ *
+ * Return attribute types and values.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * @constant
  * @type {number}
  */

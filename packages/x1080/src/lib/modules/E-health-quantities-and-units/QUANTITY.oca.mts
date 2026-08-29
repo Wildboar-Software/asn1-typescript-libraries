@@ -25,6 +25,16 @@ type RELATIVE_IRI = RELATIVE_OID_IRI;
  * @summary QUANTITY
  * @description
  *
+ * Named physiological quantity with optional French name, symbols,
+ * units, a TMM modality OID, optional IN/OUT direction, unique id
+ * and relative-OID-IRI. Used with TMM IN/OUT modalities (X.1082).
+ * Quantity tables for TANGO/VIDEO/AUDIO/CHEMO/RADIO/CALOR are in
+ * X.1082 clauses 6–11, not compiled here. 2011 module; 2018 Rec
+ * still requires identification of quantities, units and values
+ * (intro / §6). ITU-T X.1080.1 (05/2018).
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ * https://www.itu.int/rec/T-REC-X.1082-200711-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -77,34 +87,60 @@ export interface QUANTITY {
     >;
     /**
      * @summary &name
+     * @description
+     *
+     * Name of the quantity (PrintableString).
      */
     readonly '&name'?: PrintableString;
     /**
      * @summary &frenchName
+     * @description
+     *
+     * Optional French name of the quantity.
      */
     readonly '&frenchName'?: UniversalString;
     /**
      * @summary &symbols
+     * @description
+     *
+     * Letter symbol(s) for the quantity (`SYMBOLS` object).
      */
     readonly '&symbols'?: SYMBOLS;
     /**
      * @summary &Units
+     * @description
+     *
+     * Unit(s) in which the quantity is measured.
      */
     readonly '&Units'?: UNIT[];
     /**
      * @summary &Modalities
+     * @description
+     *
+     * TMM modality OID (`id-tango` … `id-calor`, etc.) for which this
+     * quantity applies. X.1082 intro, §3.5.
      */
     readonly '&Modalities'?: OBJECT_IDENTIFIER;
     /**
      * @summary &direction
+     * @description
+     *
+     * Optional `in` (environment → body) or `out` (body → environment).
+     * X.1082 §3.2.3–§3.2.4.
      */
     readonly '&direction'?: ENUMERATED;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of this quantity (typically under `id-quantities-*`).
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &relative-oid-iri
+     * @description
+     *
+     * Relative OID-IRI for this quantity.
      */
     readonly '&relative-oid-iri'?: RELATIVE_IRI;
 }

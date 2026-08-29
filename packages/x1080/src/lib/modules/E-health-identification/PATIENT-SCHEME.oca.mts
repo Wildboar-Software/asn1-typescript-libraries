@@ -21,6 +21,12 @@ import {
  * @summary PATIENT_SCHEME
  * @description
  *
+ * Patient identification scheme: unique `&id`, optional `&name`, and
+ * `&Identification` type (typically unique number + name). Scheme
+ * establishment is out of scope of X.1080.1. ITU-T X.1080.1 (05/2018)
+ * §8.3.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -65,14 +71,26 @@ export interface PATIENT_SCHEME<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of the patient identification scheme.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &name
+     * @description
+     *
+     * Optional `SchemeName`: ISO646String (not necessarily unique) or
+     * OID.
      */
     readonly '&name'?: SchemeName;
     /**
      * @summary &Identification
+     * @description
+     *
+     * Identification of the patient within the scheme. Typically at
+     * least a unique number and the patient's name. Defined when a
+     * `PATIENT-SCHEME` object is established.
      */
     readonly '&Identification': Identification;
 }

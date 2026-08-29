@@ -16,6 +16,10 @@ import { id_pkcs } from '../CmsTelebiometric/id-pkcs.va.mjs';
  * @summary id_pkcs_9
  * @description
  *
+ * PKCS #9: `{id-pkcs pkcs-9(9)}`. Parent of `id-ct` and `id-aa`.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

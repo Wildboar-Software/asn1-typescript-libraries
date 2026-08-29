@@ -20,6 +20,11 @@ import {
  * @summary SignerInfos
  * @description
  *
+ * Set of exactly one `SignerInfo`. This profile does not use
+ * multiple signatures.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+ * https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

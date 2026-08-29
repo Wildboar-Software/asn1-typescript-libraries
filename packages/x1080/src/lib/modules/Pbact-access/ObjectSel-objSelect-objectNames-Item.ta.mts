@@ -25,6 +25,11 @@ import {
  * @summary ObjectSel_objSelect_objectNames_Item
  * @description
  *
+ * One element of `objSelect.objectNames`: privileges for selected
+ * objects only.
+ * ITU-T Rec. X.1080.0 (2017) Cor.1
+ * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +41,24 @@ export class ObjectSel_objSelect_objectNames_Item {
     constructor(
         /**
          * @summary `object`.
+         * @description
+         *
+         * Selected objects: one or more DNs, or a DN prefix (`subtree`).
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */
         readonly object: ObjectSel_objSelect_objectNames_Item_object,
         /**
          * @summary `select`.
+         * @description
+         *
+         * `TargetSelect` for those objects.
+         * ITU-T Rec. X.1080.0 (2017) Cor.1
+         * [§7.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+         *
          * @public
          * @readonly
          */

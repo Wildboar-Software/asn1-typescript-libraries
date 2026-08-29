@@ -21,6 +21,11 @@ import {
  * @summary NormalValue_value
  * @description
  *
+ * Choice of a closed range, a low-limit, or a high-limit for a
+ * normal/reference interval. 2011 E-health-Data-Message example
+ * module. ITU-T X.1080.1 (05/2018) intro / §6.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

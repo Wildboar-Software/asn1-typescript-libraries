@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Supported_formats
  * @description
  *
+ * Data formats for communication with a medical device. Typically a
+ * sequence of OIDs referencing format specifications. Extensible.
+ * ITU-T X.1080.1 (05/2018) §8.9.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,6 +21,13 @@ import {
  * @summary LABORATORY_SCHEME
  * @description
  *
+ * Laboratory identification scheme: unique `&id`, optional `&name`,
+ * and `&Qualifications` (no person-id field). Qualifications are
+ * typically signed by authorities and often include public-key
+ * certificates. Scheme establishment is out of scope. ITU-T
+ * X.1080.1 (05/2018) §8.7.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -65,14 +72,27 @@ export interface LABORATORY_SCHEME<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of the laboratory identification scheme.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &name
+     * @description
+     *
+     * Optional `SchemeName`: ISO646String (not necessarily unique) or
+     * OID.
      */
     readonly '&name'?: SchemeName;
     /**
      * @summary &Qualifications
+     * @description
+     *
+     * Qualifications of the laboratory. Typically issued and signed
+     * by known authorities; type often includes public-key
+     * certificates. Definition of laboratory qualifications is out of
+     * scope of X.1080.1.
      */
     readonly '&Qualifications': Qualifications;
 }

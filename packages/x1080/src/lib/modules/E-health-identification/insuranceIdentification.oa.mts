@@ -21,6 +21,11 @@ import { type IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.o
  * @summary insuranceIdentification
  * @description
  *
+ * `IDENTIFICATION` object for medical insurance: category
+ * `id-med-insur`, identified with `InsuranceIdentification`. ITU-T
+ * X.1080.1 (05/2018) §8.11.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

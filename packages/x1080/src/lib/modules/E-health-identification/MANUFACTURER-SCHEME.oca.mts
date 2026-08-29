@@ -21,6 +21,13 @@ import {
  * @summary MANUFACTURER_SCHEME
  * @description
  *
+ * Manufacturer/drug scheme: unique `&id`, optional `&name`,
+ * `&Manufacturer` (typically name + HQ location + company number),
+ * and `&Drug`. Spec text for `&drug` repeats the manufacturer
+ * wording; drug identification is scheme-defined. Scheme
+ * establishment is out of scope. ITU-T X.1080.1 (05/2018) §8.8.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -70,18 +77,34 @@ export interface MANUFACTURER_SCHEME<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of the manufacturer identification scheme.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &name
+     * @description
+     *
+     * Optional `SchemeName`: ISO646String (not necessarily unique) or
+     * OID.
      */
     readonly '&name'?: SchemeName;
     /**
      * @summary &Manufacturer
+     * @description
+     *
+     * Identification of the manufacturer or laboratory. Typically
+     * name, HQ location, and perhaps a company number.
      */
     readonly '&Manufacturer': Manufacturer;
     /**
      * @summary &Drug
+     * @description
+     *
+     * Identification of a drug produced by that manufacturer. The
+     * spec text repeats the manufacturer wording; the type is
+     * scheme-defined.
      */
     readonly '&Drug': Drug;
 }

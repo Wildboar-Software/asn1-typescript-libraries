@@ -21,6 +21,14 @@ import {
  * @summary MEDICAL_RECORD_SCHEME
  * @description
  *
+ * Medical-record scheme (incl. dental and DNA): unique `&id`,
+ * optional `&name`, `&Organisation` (typically a government dept or
+ * SDO), `&RecordType` relative to that org, and `&Record` (an
+ * instance). Typically extra encryption/integrity inside the record
+ * type even though ITUEHP already offers CMS. Scheme establishment
+ * is out of scope. ITU-T X.1080.1 (05/2018) §8.12.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -82,22 +90,41 @@ export interface MEDICAL_RECORD_SCHEME<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique OID of the medical-format identification scheme.
      */
     readonly '&id'?: OBJECT_IDENTIFIER;
     /**
      * @summary &name
+     * @description
+     *
+     * Optional `SchemeName`: ISO646String (not necessarily unique) or
+     * OID.
      */
     readonly '&name'?: SchemeName;
     /**
      * @summary &Organisation
+     * @description
+     *
+     * Organization that defined the record format. Typically a
+     * government department or an international SDO.
      */
     readonly '&Organisation': Organisation;
     /**
      * @summary &RecordType
+     * @description
+     *
+     * Type of medical record relative to the defining organization.
      */
     readonly '&RecordType': RecordType;
     /**
      * @summary &Record
+     * @description
+     *
+     * An instance of that record type. Typically encrypted, with
+     * certificates and a security block, as an extra layer beyond
+     * ITUEHP CMS.
      */
     readonly '&Record': Record;
 }

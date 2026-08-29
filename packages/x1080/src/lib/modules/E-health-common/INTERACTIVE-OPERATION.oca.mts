@@ -34,6 +34,13 @@ import {
  * @summary INTERACTIVE_OPERATION
  * @description
  *
+ * Defines an operation that may run inside a session. `&Request` is
+ * required; `&Response` and `&Error` absent means none defined.
+ * Session specs also say who may initiate and who may terminate.
+ * Messages are CMS-protected. ITU-T Rec. X.1080.1 (05/2018)
+ * [§10.1](https://www.itu.int/rec/T-REC-X.1080.1-201805-I), §9;
+ * CMS [X.1080.0 Annex B](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -126,50 +133,104 @@ export interface INTERACTIVE_OPERATION<
     >;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique within the session. 0 is the exit operation; do not use
+     * 0 for other operations. ITU-T Rec. X.1080.1 (05/2018) §10.1 a).
      */
     readonly '&id'?: INTEGER;
     /**
      * @summary &content-req
+     * @description
+     *
+     * `CONTENT-TYPE.&id` of the request. Optional in the class.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1, §10.2.
      */
     readonly '&content-req'?: OBJECT_IDENTIFIER;
     /**
      * @summary &content-rsp
+     * @description
+     *
+     * `CONTENT-TYPE.&id` of the response. Optional in the class.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1, §10.2.
      */
     readonly '&content-rsp'?: OBJECT_IDENTIFIER;
     /**
      * @summary &content-err
+     * @description
+     *
+     * `CONTENT-TYPE.&id` of the error. Optional in the class.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1, §10.2.
      */
     readonly '&content-err'?: OBJECT_IDENTIFIER;
     /**
      * @summary &sessionType
+     * @description
+     *
+     * OID of the session type this operation belongs to.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1 b).
      */
     readonly '&sessionType'?: SessionType;
     /**
      * @summary &requirements
+     * @description
+     *
+     * Voice and video requirements. Omitted defaults to `none`.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1 c).
      */
     readonly '&requirements'?: Requirements;
     /**
      * @summary &Voice-options
+     * @description
+     *
+     * Type used for voice options. May be present only if
+     * `&requirements` is not `none`; otherwise shall be absent.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1 d).
      */
     readonly '&Voice-options': Voice_options;
     /**
      * @summary &Video-options
+     * @description
+     *
+     * Type used for video options. May be present only if
+     * `&requirements` is `with-reverse-video-and-2-way-voice` or
+     * `with-2-way-video-and-voice`; otherwise shall be absent.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1 e).
      */
     readonly '&Video-options': Video_options;
     /**
      * @summary &Request
+     * @description
+     *
+     * Data type of the request value. Required.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1 f).
      */
     readonly '&Request': Request;
     /**
      * @summary &Response
+     * @description
+     *
+     * Data type of the response. Absent means no response is
+     * defined. ITU-T Rec. X.1080.1 (05/2018) §10.1 g).
      */
     readonly '&Response': Response;
     /**
      * @summary &Error
+     * @description
+     *
+     * Data type of an exception error. Absent means no error is
+     * defined. ITU-T Rec. X.1080.1 (05/2018) §10.1 h).
      */
     readonly '&Error': Error;
     /**
      * @summary &exchangeMode
+     * @description
+     *
+     * Restriction on message flow. Shall be absent if `&Response`
+     * is absent. `sync`: sender shall not start another operation
+     * until a response or error arrives. This class DEFAULT is
+     * `async` (clause 10.1 also lists DEFAULT `sync` in one place).
+     * ITU-T Rec. X.1080.1 (05/2018) §10.1 i).
      */
     readonly '&exchangeMode'?: ExchangeMode;
 }

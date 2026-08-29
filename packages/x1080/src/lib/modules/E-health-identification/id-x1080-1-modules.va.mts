@@ -16,6 +16,10 @@ import { id_x1080_1 } from '../E-health-identification/id-x1080-1.va.mjs';
  * @summary id_x1080_1_modules
  * @description
  *
+ * Modules defined by this Recommendation `{id-x1080-1 module(0)}`.
+ * ITU-T X.1080.1 (05/2018) §7.2.
+ * https://www.itu.int/rec/T-REC-X.1080.1-201805-I
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
