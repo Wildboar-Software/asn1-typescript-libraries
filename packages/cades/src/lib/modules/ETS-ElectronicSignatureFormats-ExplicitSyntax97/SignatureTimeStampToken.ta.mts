@@ -15,6 +15,12 @@ import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "
  * @summary SignatureTimeStampToken
  * @description
  *
+ * Value of the unsigned `signature-time-stamp` attribute
+ * (CAdES-T): a `TimeStampToken` whose `messageImprint` is a
+ * hash of `SignerInfo.signature`. Several instances from
+ * different TSAs may occur. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §6.1.1, §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_attrCertificateRefs
  * @description
- * 
+ *
+ * Identifies the unsigned `attribute-certificate-references`
+ * attribute. Value is `AttributeCertificateRefs`. Used only
+ * when a user attribute certificate is present; references the
+ * AA certificates used to validate it. Only a single instance.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §6.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,6 +19,14 @@ import {
  * @summary CertificateValues
  * @description
  *
+ * Value of the unsigned `certificate-values` attribute
+ * (CAdES-X Long). Holds the X.509 certificates referenced by
+ * `complete-certificate-references`. Attribute certificates
+ * are not included here; they travel in `signer-attributes`.
+ * Only a single instance. May also be added to a TST for TSU
+ * certificates. ETSI TS 101 733 V2.2.1 (2013-04) §6.3.3,
+ * §7.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

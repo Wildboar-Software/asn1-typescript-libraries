@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary OTHER_REVOCATION_REF
  * @description
- * 
+ *
+ * Information object class for a non-CRL/non-OCSP revocation
+ * reference. Syntax and semantics of `&Type` are outside the
+ * scope of this specification; identified by `&id`. ETSI TS
+ * 101 733 V2.2.1 (2013-04) §6.2.2, Annex A.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,10 +59,17 @@ interface OTHER_REVOCATION_REF<
     }>;
     /**
      * @summary &Type
+     * @description
+     *
+     * Syntax of the other revocation reference. Outside the
+     * scope of this specification.
      */
     readonly "&Type": Type;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique object identifier selecting `&Type`.
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 };

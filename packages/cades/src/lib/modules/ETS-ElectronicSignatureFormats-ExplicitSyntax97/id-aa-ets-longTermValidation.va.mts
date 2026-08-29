@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_longTermValidation
  * @description
- * 
+ *
+ * Identifies the unsigned `long-term-validation` attribute
+ * (CAdES-LT). Value is `LongTermValidation`. Deprecated unless
+ * an instance is already present; once added, only further
+ * `long-term-validation` attributes may be added. ETSI TS
+ * 101 733 V2.2.1 (2013-04) §6.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

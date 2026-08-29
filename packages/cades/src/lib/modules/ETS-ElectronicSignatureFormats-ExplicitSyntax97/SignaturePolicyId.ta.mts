@@ -18,6 +18,12 @@ import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPoli
  * @summary SignaturePolicyId
  * @description
  *
+ * Explicit signature-policy reference carried in the signed
+ * `signature-policy-identifier` attribute of CAdES-EPES.
+ * Binds the signature to a specific policy version and, when
+ * the hash is non-zero, to the policy document itself. ETSI
+ * TS 101 733 V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +39,37 @@ class SignaturePolicyId {
     constructor (
         /**
          * @summary `sigPolicyId`.
+         * @description
+         *
+         * Object identifier that uniquely identifies a specific
+         * version of the signature policy.
+         *
          * @public
          * @readonly
          */
         readonly sigPolicyId: SigPolicyId,
         /**
          * @summary `sigPolicyHash`.
+         * @description
+         *
+         * Hash algorithm and hash of the signature policy. The
+         * hash value may be all zeros to indicate that the policy
+         * hash is not known (backwards compatibility); in that
+         * case the hash should not be checked. If the policy is
+         * ASN.1, the hash is over the value without the outer
+         * type and length.
+         *
          * @public
          * @readonly
          */
         readonly sigPolicyHash: SigPolicyHash,
         /**
          * @summary `sigPolicyQualifiers`.
+         * @description
+         *
+         * Optional extra information about the policy, e.g. a URI
+         * (`spuri`) or a user notice (`sp-user-notice`).
+         *
          * @public
          * @readonly
          */

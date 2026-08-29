@@ -21,6 +21,9 @@ import {
  * @summary PostalAddress
  * @description
  *
+ * Postal address of 1 to 6 `DirectoryString` lines, used in
+ * `SignerLocation`. ETSI TS 101 733 V2.2.1 (2013-04) §5.11.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

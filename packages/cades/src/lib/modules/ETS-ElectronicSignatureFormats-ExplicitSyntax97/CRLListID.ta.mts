@@ -15,6 +15,9 @@ import { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "
  * @summary CRLListID
  * @description
  *
+ * List of CRL identifiers used for one certificate in
+ * `CrlOcspRef`. ETSI TS 101 733 V2.2.1 (2013-04) §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,12 @@ class CRLListID {
     constructor (
         /**
          * @summary `crls`.
+         * @description
+         *
+         * Identifiers of the CRLs used. If a Delta CRL is
+         * identified, include the set of CRLs needed for a
+         * complete revocation list.
+         *
          * @public
          * @readonly
          */

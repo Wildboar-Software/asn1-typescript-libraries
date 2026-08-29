@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_certificateRefs
  * @description
- * 
+ *
+ * Identifies the unsigned `complete-certificate-references`
+ * attribute (CAdES-C). Value is `CompleteCertificateRefs`.
+ * References the CA certificates used to validate the ES, up
+ * to but not including the signer's certificate. Only a single
+ * instance. ETSI TS 101 733 V2.2.1 (2013-04) §6.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

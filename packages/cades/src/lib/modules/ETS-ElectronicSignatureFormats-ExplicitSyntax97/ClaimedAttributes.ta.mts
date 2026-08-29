@@ -19,6 +19,11 @@ import {
  * @summary ClaimedAttributes
  * @description
  *
+ * Attributes asserted by the signer without a supporting
+ * attribute certificate (e.g. a claimed role). X.501
+ * `Attribute` values. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §5.11.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

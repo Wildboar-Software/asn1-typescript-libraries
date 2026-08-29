@@ -15,6 +15,14 @@ import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "
  * @summary ESCTimeStampToken
  * @description
  *
+ * Value of the unsigned `CAdES-C-time-stamp` attribute
+ * (CAdES-X Type 1). `messageImprint` is a hash of the
+ * concatenated (no type/length) `SignatureValue`,
+ * `signature-time-stamp` (or a time-mark),
+ * `complete-certificate-references`, and
+ * `complete-revocation-references`. Protects against later CA
+ * compromise. ETSI TS 101 733 V2.2.1 (2013-04) §6.3.5.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

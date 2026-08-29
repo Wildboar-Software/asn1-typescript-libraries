@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_certValues
  * @description
- * 
+ *
+ * Identifies the unsigned `certificate-values` attribute
+ * (CAdES-X Long). Value is `CertificateValues`. Holds the
+ * certificates referenced by `complete-certificate-references`.
+ * Only a single instance. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

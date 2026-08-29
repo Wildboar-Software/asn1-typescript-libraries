@@ -16,6 +16,14 @@ import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "
  * @summary TimestampedCertsCRLs
  * @description
  *
+ * Value of the unsigned `time-stamped-certs-crls-references`
+ * attribute (CAdES-X Type 2). `messageImprint` is a hash of
+ * the concatenated `complete-certificate-references` and
+ * `complete-revocation-references` (attrType and attrValues,
+ * without the outer SEQUENCE type/length). Protects against
+ * later CA compromise. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §6.3.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_escTimeStamp
  * @description
- * 
+ *
+ * Identifies the unsigned `CAdES-C-time-stamp` attribute
+ * (CAdES-X Type 1). Value is a `TimeStampToken` over the
+ * signature value plus CAdES-C references. Protects against
+ * later CA compromise. Several instances from different TSAs
+ * may occur. ETSI TS 101 733 V2.2.1 (2013-04) §6.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

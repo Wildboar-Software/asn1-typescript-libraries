@@ -16,7 +16,11 @@ import {
 /**
  * @summary id_spq_ets_uri
  * @description
- * 
+ *
+ * Signature-policy qualifier id for `spuri`: a web URI or URL
+ * pointing at the signature policy (`SPuri` / `IA5String`).
+ * ETSI TS 101 733 V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

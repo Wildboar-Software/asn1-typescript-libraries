@@ -16,7 +16,10 @@ import {
 /**
  * @summary id_aa_ets_signerLocation
  * @description
- * 
+ *
+ * Identifies the signed `signer-location` attribute. Value is
+ * `SignerLocation`. ETSI TS 101 733 V2.2.1 (2013-04) §5.11.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

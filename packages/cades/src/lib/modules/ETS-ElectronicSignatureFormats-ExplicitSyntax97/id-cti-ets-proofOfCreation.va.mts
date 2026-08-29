@@ -16,7 +16,11 @@ import {
 /**
  * @summary id_cti_ets_proofOfCreation
  * @description
- * 
+ *
+ * Generic commitment type: the signer has created the
+ * message (but not necessarily approved nor sent it). ETSI
+ * TS 101 733 V2.2.1 (2013-04) §5.11.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

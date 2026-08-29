@@ -18,6 +18,12 @@ import { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS
  * @summary CrlOcspRef
  * @description
  *
+ * References to the CRL(s), OCSP response(s), and/or other
+ * revocation data used for one certificate in the path. At
+ * least one of the three components should be present except
+ * for the trusted CA. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,18 +39,33 @@ class CrlOcspRef {
     constructor (
         /**
          * @summary `crlids`.
+         * @description
+         *
+         * CRL identifiers used for this certificate. If a Delta
+         * CRL is identified, references to the CRLs needed for a
+         * complete revocation list shall be included.
+         *
          * @public
          * @readonly
          */
         readonly crlids?: OPTIONAL<CRLListID>,
         /**
          * @summary `ocspids`.
+         * @description
+         *
+         * OCSP response identifiers used for this certificate.
+         *
          * @public
          * @readonly
          */
         readonly ocspids?: OPTIONAL<OcspListID>,
         /**
          * @summary `otherRev`.
+         * @description
+         *
+         * Other revocation-info references. Syntax is identified
+         * by `otherRevRefType` and is otherwise out of scope.
+         *
          * @public
          * @readonly
          */

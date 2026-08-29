@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_otherSigCert
  * @description
- * 
+ *
+ * Identifies the signed `other-signing-certificate` attribute.
+ * Value is `OtherSigningCertificate`. Deprecated in favour of
+ * ESS `signing-certificate-v2` (RFC 5035); kept for
+ * backwards compatibility. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §5.7.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

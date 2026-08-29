@@ -15,6 +15,12 @@ import { CrlOcspRef, _decode_CrlOcspRef, _encode_CrlOcspRef } from "../ETS-Elect
  * @summary AttributeRevocationRefs
  * @description
  *
+ * Value of the unsigned `attribute-revocation-references`
+ * attribute. Full set of ACRLs or OCSP responses used to
+ * validate a user attribute certificate. Used only when a
+ * revocable AC is present. Only a single instance. ETSI TS
+ * 101 733 V2.2.1 (2013-04) §6.2.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

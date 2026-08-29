@@ -16,6 +16,11 @@ import { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "
  * @summary LongTermValidation_poeValue
  * @description
  *
+ * Proof of existence in `LongTermValidation`: an RFC 3161
+ * `TimeStampToken` or an RFC 4998 `EvidenceRecord`. The
+ * proven date is inside this structure, not `poeDate`. ETSI
+ * TS 101 733 V2.2.1 (2013-04) §6.5.1, §7.4, §7.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

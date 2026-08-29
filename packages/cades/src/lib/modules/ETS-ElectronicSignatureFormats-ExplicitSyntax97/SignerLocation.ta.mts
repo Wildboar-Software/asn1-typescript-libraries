@@ -23,6 +23,12 @@ import {
  * @summary SignerLocation
  * @description
  *
+ * Value of the signed `signer-location` attribute. Mnemonic
+ * for an address associated with the signer at a geographical
+ * location, as used in the Public Telegram Service
+ * (ITU-T F.1). At least one component shall be present.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §5.11.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -41,18 +47,31 @@ class SignerLocation {
     constructor (
         /**
          * @summary `countryName`.
+         * @description
+         *
+         * Country name as used in X.500.
+         *
          * @public
          * @readonly
          */
         readonly countryName?: OPTIONAL<DirectoryString>,
         /**
          * @summary `localityName`.
+         * @description
+         *
+         * Locality name as used in X.500.
+         *
          * @public
          * @readonly
          */
         readonly localityName?: OPTIONAL<DirectoryString>,
         /**
          * @summary `postalAdddress`.
+         * @description
+         *
+         * Postal address (1 to 6 `DirectoryString` lines). The
+         * identifier is spelled `postalAdddress` in the ASN.1.
+         *
          * @public
          * @readonly
          */

@@ -16,7 +16,12 @@ import {
 /**
  * @summary id_etsi_es_IDUP_Mechanism_v1
  * @description
- * 
+ *
+ * Mechanism OID identifying CAdES tokens to IDUP-GSS-API
+ * (RFC 2479). Annex A.2 comments say "see Annex D"; the
+ * IDUP API itself is described in Annex H.2. ETSI TS 101 733
+ * V2.2.1 (2013-04) Annex H.1, H.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

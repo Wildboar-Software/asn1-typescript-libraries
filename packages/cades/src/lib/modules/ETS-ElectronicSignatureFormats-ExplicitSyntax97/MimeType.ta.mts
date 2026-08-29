@@ -17,7 +17,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MimeType
  * @description
- * 
+ *
+ * Value of the signed `mime-type` attribute: MIME type of the
+ * signed data per RFC 2045. Similar in spirit to
+ * `content-hints.contentDescription`, but usable without a
+ * multi-layer document. Only a single instance; must not
+ * appear in a countersignature. ETSI TS 101 733 V2.2.1
+ * (2013-04) §5.11.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

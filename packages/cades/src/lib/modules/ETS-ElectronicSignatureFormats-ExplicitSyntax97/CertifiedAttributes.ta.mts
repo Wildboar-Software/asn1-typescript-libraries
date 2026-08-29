@@ -20,6 +20,10 @@ import {
  * @summary CertifiedAttributes
  * @description
  *
+ * Certified attributes of the signer: an X.509 attribute
+ * certificate as defined in RFC 3281. ETSI TS 101 733 V2.2.1
+ * (2013-04) §5.11.3, §7.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

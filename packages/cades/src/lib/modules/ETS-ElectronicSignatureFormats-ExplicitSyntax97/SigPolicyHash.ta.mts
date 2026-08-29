@@ -14,7 +14,12 @@ import { OtherHashAlgAndValue, _decode_OtherHashAlgAndValue, _encode_OtherHashAl
 /**
  * @summary SigPolicyHash
  * @description
- * 
+ *
+ * Hash of a signature policy (`OtherHashAlgAndValue`). A
+ * zero `hashValue` means the policy hash is not known and
+ * should not be checked. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §5.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

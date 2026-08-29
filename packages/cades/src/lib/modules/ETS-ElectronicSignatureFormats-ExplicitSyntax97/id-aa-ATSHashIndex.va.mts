@@ -16,7 +16,14 @@ import {
 /**
  * @summary id_aa_ATSHashIndex
  * @description
- * 
+ *
+ * Identifies the unsigned `ats-hash-index` attribute carried
+ * in the signature of an `archive-time-stamp-v3`. Value is
+ * `ATSHashIndex`. Imprints `unsignedAttrs`,
+ * `SignedData.certificates`, and `SignedData.crls` so later
+ * additions remain distinguishable. Single attribute value.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §6.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

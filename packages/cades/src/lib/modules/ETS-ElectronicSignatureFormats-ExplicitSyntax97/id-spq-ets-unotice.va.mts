@@ -16,7 +16,12 @@ import {
 /**
  * @summary id_spq_ets_unotice
  * @description
- * 
+ *
+ * Signature-policy qualifier id for `sp-user-notice`: a
+ * notice that should be displayed whenever the signature is
+ * validated (`SPUserNotice`). ETSI TS 101 733 V2.2.1
+ * (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

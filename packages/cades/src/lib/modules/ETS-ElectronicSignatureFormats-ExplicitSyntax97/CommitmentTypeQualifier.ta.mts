@@ -16,6 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CommitmentTypeQualifier
  * @description
  *
+ * Qualifier of a commitment type. Use of any qualifier is
+ * outside the scope of TS 101 733. ETSI TS 101 733 V2.2.1
+ * (2013-04) §5.11.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,21 @@ class CommitmentTypeQualifier {
     constructor (
         /**
          * @summary `commitmentQualifierId`.
+         * @description
+         *
+         * Selects the syntax of `qualifier`.
+         *
          * @public
          * @readonly
          */
         readonly commitmentQualifierId: OBJECT_IDENTIFIER,
         /**
          * @summary `qualifier`.
+         * @description
+         *
+         * Qualifier value. Syntax and semantics are outside the
+         * scope of this specification.
+         *
          * @public
          * @readonly
          */

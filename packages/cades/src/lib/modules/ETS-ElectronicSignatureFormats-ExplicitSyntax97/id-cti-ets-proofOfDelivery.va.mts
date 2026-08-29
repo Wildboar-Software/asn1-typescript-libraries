@@ -16,7 +16,11 @@ import {
 /**
  * @summary id_cti_ets_proofOfDelivery
  * @description
- * 
+ *
+ * Generic commitment type: the TSP providing this indication
+ * has delivered a message in a local store accessible to the
+ * recipient. ETSI TS 101 733 V2.2.1 (2013-04) §5.11.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,6 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SigPolicyQualifierInfo
  * @description
  *
+ * Qualifier attached to a signature-policy identifier. Semantics
+ * follow `sigPolicyQualifierId`. This specification defines
+ * `id-spq-ets-uri` (`SPuri`) and `id-spq-ets-unotice`
+ * (`SPUserNotice`). ETSI TS 101 733 V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +36,22 @@ class SigPolicyQualifierInfo {
     constructor (
         /**
          * @summary `sigPolicyQualifierId`.
+         * @description
+         *
+         * Selects the syntax of `qualifier` (e.g.
+         * `id-spq-ets-uri` or `id-spq-ets-unotice`).
+         *
          * @public
          * @readonly
          */
         readonly sigPolicyQualifierId: OBJECT_IDENTIFIER,
         /**
          * @summary `qualifier`.
+         * @description
+         *
+         * Qualifier value whose syntax is associated with
+         * `sigPolicyQualifierId`.
+         *
          * @public
          * @readonly
          */

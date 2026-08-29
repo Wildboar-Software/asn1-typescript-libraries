@@ -26,10 +26,23 @@ import {
  * @summary LongTermValidation
  * @description
  *
- * **WARNING**: This ASN.1 `SEQUENCE` is not valid, because the tagging for
- * `poeValue`, `extraCertificates`, and `extraRevocation` conflict with each other.
- * There is no erratum for this, as far as I know, but this data structure is
- * deprecated anyway.
+ * Value of the unsigned `long-term-validation` attribute
+ * (CAdES-LT). Proof of existence at a past date over many
+ * `SignedData` elements (tree-hash of SET members; see
+ * §6.5.1). Deprecated unless an instance is already present.
+ * Once added, only further `long-term-validation` attributes
+ * may be added, and only the last instance may be altered.
+ *
+ * **WARNING**: This ASN.1 `SEQUENCE` is not valid, because
+ * the tagging for `poeValue`, `extraCertificates`, and
+ * `extraRevocation` conflict with each other. There is no
+ * erratum for this, as far as I know, but this data structure
+ * is deprecated anyway.
+ *
+ * ETSI TS 101 733 V2.2.1 (2013-04) §6.5.1.
+ *
+ * @deprecated Unless a `long-term-validation` attribute is
+ * already present. ETSI TS 101 733 V2.2.1 §6.5.1.
  *
  * ### ASN.1 Definition:
  *
@@ -43,32 +56,55 @@ import {
  *     extraCertificates   [0] IMPLICIT CertificateSet OPTIONAL,
  *     extraRevocation     [1] IMPLICIT RevocationInfoChoices OPTIONAL }
  * ```
- *
- * @deprecated in ETSI TS 101 733 - V2.2.1 (or earlier) in Section 6.5.1.
  */
 export
 class LongTermValidation {
     constructor (
         /**
          * @summary `poeDate`.
+         * @description
+         *
+         * Approximate date this attribute was added. Shall be
+         * later than all previous instances' `poeDate`. Used to
+         * order instances; the proven time is the date inside
+         * the PoE itself. Need not equal the PoE creation date
+         * (e.g. when the PoE comes from an external system).
+         *
          * @public
          * @readonly
          */
         readonly poeDate: GeneralizedTime,
         /**
          * @summary `poeValue`.
+         * @description
+         *
+         * Proof of existence: RFC 3161 time-stamp or RFC 4998
+         * evidence record. For a TST, `messageImprint` is a
+         * tree-hash over `SignedData` as specified in §6.5.1.
+         *
          * @public
          * @readonly
          */
         readonly poeValue?: OPTIONAL<LongTermValidation_poeValue>,
         /**
          * @summary `extraCertificates`.
+         * @description
+         *
+         * Extra certificates to help validate the document
+         * signature, time-stamps, or an older LTV instance.
+         * Included in the tree-hash `Hc`.
+         *
          * @public
          * @readonly
          */
         readonly extraCertificates?: OPTIONAL<CertificateSet>,
         /**
          * @summary `extraRevocation`.
+         * @description
+         *
+         * Extra revocation info (CRLs/OCSP) for the same
+         * purpose. Included in the tree-hash `Hr`.
+         *
          * @public
          * @readonly
          */

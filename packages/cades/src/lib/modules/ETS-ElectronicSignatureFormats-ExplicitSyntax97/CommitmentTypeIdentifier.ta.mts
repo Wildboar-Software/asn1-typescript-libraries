@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CommitmentTypeIdentifier
  * @description
- * 
+ *
+ * Object identifier naming a commitment type. This
+ * specification defines six generic types (`id-cti-ets-*`).
+ * ETSI TS 101 733 V2.2.1 (2013-04) §5.11.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

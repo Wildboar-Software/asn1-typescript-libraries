@@ -26,6 +26,15 @@ import {
  * @summary ATSHashIndex
  * @description
  *
+ * Value of the unsigned `ats-hash-index` attribute carried in
+ * an `archive-time-stamp-v3` signature. Hashes of every
+ * `CertificateChoices`, `RevocationInfoChoice`, and unsigned
+ * `Attribute` present when the ATS is requested. Lets later
+ * certificates, CRLs, or unsigned attributes (e.g. counter
+ * signatures) be added without breaking the archive
+ * time-stamp. Hash algorithm shall match the ATS message
+ * imprint. ETSI TS 101 733 V2.2.1 (2013-04) §6.4.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,24 +51,48 @@ class ATSHashIndex {
     constructor (
         /**
          * @summary `hashIndAlgorithm`.
+         * @description
+         *
+         * Hash algorithm used for the three index sequences.
+         * Defaults to SHA-256. Shall be the same algorithm as
+         * the archive time-stamp's message imprint.
+         *
          * @public
          * @readonly
          */
         readonly hashIndAlgorithm: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `certificatesHashIndex`.
+         * @description
+         *
+         * Hash of every `CertificateChoices` in root
+         * `SignedData.certificates` at ATS request time, each
+         * over the entire encoded component (tag, length,
+         * value). No other hashes.
+         *
          * @public
          * @readonly
          */
         readonly certificatesHashIndex: OCTET_STRING[],
         /**
          * @summary `crlsHashIndex`.
+         * @description
+         *
+         * Hash of every `RevocationInfoChoice` in root
+         * `SignedData.crls` at ATS request time (CRLs and/or
+         * OCSP).
+         *
          * @public
          * @readonly
          */
         readonly crlsHashIndex: OCTET_STRING[],
         /**
          * @summary `unsignedAttrsHashIndex`.
+         * @description
+         *
+         * Hash of every unsigned `Attribute` in this
+         * `SignerInfo` at ATS request time.
+         *
          * @public
          * @readonly
          */
@@ -84,6 +117,11 @@ class ATSHashIndex {
 
     /**
      * @summary Getter that returns the default value for `hashIndAlgorithm`.
+     * @description
+     *
+     * SHA-256, matching the ASN.1 DEFAULT. Shall be the same
+     * algorithm as the archive time-stamp's message imprint.
+     *
      * @public
      * @static
      * @method

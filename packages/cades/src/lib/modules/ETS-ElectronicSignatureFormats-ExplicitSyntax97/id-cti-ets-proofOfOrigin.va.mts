@@ -16,7 +16,12 @@ import {
 /**
  * @summary id_cti_ets_proofOfOrigin
  * @description
- * 
+ *
+ * Generic commitment type: the signer recognizes having
+ * created, approved, and sent the message. Used as
+ * `commitmentTypeId` in `CommitmentTypeIndication`. ETSI TS
+ * 101 733 V2.2.1 (2013-04) §5.11.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

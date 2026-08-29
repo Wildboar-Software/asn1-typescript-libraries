@@ -15,7 +15,11 @@ import { type SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-Exp
 /**
  * @summary pointerToSigPolSpec
  * @description
- * 
+ *
+ * `SIG-POLICY-QUALIFIER` for `id-spq-ets-uri`: qualifier
+ * type is `SPuri` (URI/URL of the signature policy). ETSI TS
+ * 101 733 V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

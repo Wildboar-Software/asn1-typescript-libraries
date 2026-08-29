@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_contentTimestamp
  * @description
- * 
+ *
+ * Identifies the signed `content-time-stamp` attribute. Value is
+ * a `TimeStampToken` whose `messageImprint` is a hash of the
+ * CMS message digest (clause 5.6.1). Proves the signed
+ * information existed before the TST date. ETSI TS 101 733
+ * V2.2.1 (2013-04) §5.11.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

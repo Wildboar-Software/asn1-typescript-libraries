@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_archiveTimestampV3
  * @description
- * 
+ *
+ * Identifies the unsigned `archive-time-stamp-v3` (ATSv3)
+ * attribute (CAdES-A). Value is a `TimeStampToken` that shall
+ * carry a single `ats-hash-index` unsigned attribute. Required
+ * for newly generated archive time-stamps. Several instances
+ * may occur. ETSI TS 101 733 V2.2.1 (2013-04) §6.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

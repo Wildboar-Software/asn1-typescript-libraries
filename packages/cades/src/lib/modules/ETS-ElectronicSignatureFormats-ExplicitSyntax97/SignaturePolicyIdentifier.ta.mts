@@ -16,6 +16,12 @@ import { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_Signatu
  * @summary SignaturePolicyIdentifier
  * @description
  *
+ * Value of the signed `signature-policy-identifier` attribute.
+ * CAdES-EPES uses `signaturePolicyId`. The
+ * `signaturePolicyImplied` alternative is defined but "not
+ * used in this version". ETSI TS 101 733 V2.2.1 (2013-04)
+ * §5.8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

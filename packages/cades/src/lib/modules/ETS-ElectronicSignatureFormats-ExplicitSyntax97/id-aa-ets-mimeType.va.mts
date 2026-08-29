@@ -16,7 +16,12 @@ import {
 /**
  * @summary id_aa_ets_mimeType
  * @description
- * 
+ *
+ * Identifies the signed `mime-type` attribute. Value is
+ * `UTF8String` (`MimeType`). Only a single instance; must not
+ * appear in a countersignature. ETSI TS 101 733 V2.2.1
+ * (2013-04) §5.11.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

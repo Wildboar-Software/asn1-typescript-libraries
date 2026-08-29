@@ -20,6 +20,13 @@ import { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS
  * @summary RevocationValues
  * @description
  *
+ * Value of the unsigned `revocation-values` attribute
+ * (CAdES-X Long). Holds CRLs and OCSP responses referenced
+ * by `complete-revocation-references`. Only a single
+ * instance. Preferred over CMS `OtherRevocationInfoFormat`
+ * for backwards compatibility. ETSI TS 101 733 V2.2.1
+ * (2013-04) §6.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,18 +42,31 @@ class RevocationValues {
     constructor (
         /**
          * @summary `crlVals`.
+         * @description
+         *
+         * X.509 CRLs (`CertificateList`) used in validation.
+         *
          * @public
          * @readonly
          */
         readonly crlVals?: OPTIONAL<CertificateList[]>,
         /**
          * @summary `ocspVals`.
+         * @description
+         *
+         * OCSP `BasicOCSPResponse` values used in validation.
+         *
          * @public
          * @readonly
          */
         readonly ocspVals?: OPTIONAL<BasicOCSPResponse[]>,
         /**
          * @summary `otherRevVals`.
+         * @description
+         *
+         * Other revocation values. Syntax is identified by
+         * `otherRevValType` and is otherwise out of scope.
+         *
          * @public
          * @readonly
          */

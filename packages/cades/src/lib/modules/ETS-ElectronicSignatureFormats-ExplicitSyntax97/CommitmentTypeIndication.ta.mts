@@ -17,6 +17,12 @@ import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_Commi
  * @summary CommitmentTypeIndication
  * @description
  *
+ * Value of the signed `commitment-type-indication` attribute.
+ * States the kind of commitment the signer makes by signing
+ * (policy-defined or a registered type such as proof of
+ * origin). Only types recognized by the signature policy may
+ * appear. ETSI TS 101 733 V2.2.1 (2013-04) §5.11.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +37,21 @@ class CommitmentTypeIndication {
     constructor (
         /**
          * @summary `commitmentTypeId`.
+         * @description
+         *
+         * Commitment type, e.g. `id-cti-ets-proofOfOrigin`.
+         *
          * @public
          * @readonly
          */
         readonly commitmentTypeId: CommitmentTypeIdentifier,
         /**
          * @summary `commitmentTypeQualifier`.
+         * @description
+         *
+         * Optional qualifiers of the commitment. Their use is
+         * outside the scope of TS 101 733.
+         *
          * @public
          * @readonly
          */

@@ -15,6 +15,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OtherRevRefs
  * @description
  *
+ * References to revocation information other than CRLs or
+ * OCSP. Syntax and semantics are identified by
+ * `otherRevRefType` and are otherwise outside the scope of
+ * this specification. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +35,22 @@ class OtherRevRefs {
     constructor (
         /**
          * @summary `otherRevRefType`.
+         * @description
+         *
+         * Object identifier selecting the syntax of
+         * `otherRevRefs`.
+         *
          * @public
          * @readonly
          */
         readonly otherRevRefType: OBJECT_IDENTIFIER,
         /**
          * @summary `otherRevRefs`.
+         * @description
+         *
+         * Revocation-reference values whose syntax is defined by
+         * `otherRevRefType`.
+         *
          * @public
          * @readonly
          */

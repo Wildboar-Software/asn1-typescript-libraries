@@ -16,7 +16,14 @@ import {
 /**
  * @summary id_etsi_es_attributes
  * @description
- * 
+ *
+ * ETSI arc `{ itu-t(0) identified-organization(4) etsi(0)
+ * electronic-signature-standard(1733) attributes(2) }` under
+ * which CAdES attributes such as `mime-type`,
+ * `archive-time-stamp-v3`, `ats-hash-index`, and
+ * `long-term-validation` are assigned. ETSI TS 101 733
+ * V2.2.1 (2013-04) Annex A.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

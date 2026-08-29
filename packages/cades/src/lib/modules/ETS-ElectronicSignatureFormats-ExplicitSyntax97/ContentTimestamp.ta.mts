@@ -15,6 +15,13 @@ import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "
  * @summary ContentTimestamp
  * @description
  *
+ * Value of the signed `content-time-stamp` attribute: a
+ * `TimeStampToken` of the signed data content before it is
+ * signed. `messageImprint` shall be a hash of the CMS message
+ * digest (clause 5.6.1). Shows the signed information was
+ * formed before the TST date. ETSI TS 101 733 V2.2.1
+ * (2013-04) §5.11.4, §7.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

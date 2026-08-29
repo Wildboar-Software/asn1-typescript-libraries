@@ -16,6 +16,10 @@ import { CertifiedAttributes, _decode_CertifiedAttributes, _encode_CertifiedAttr
  * @summary SignerAttribute_Item
  * @description
  *
+ * One element of `SignerAttribute`: either claimed attributes
+ * or certified attributes (an attribute certificate). ETSI TS
+ * 101 733 V2.2.1 (2013-04) §5.11.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

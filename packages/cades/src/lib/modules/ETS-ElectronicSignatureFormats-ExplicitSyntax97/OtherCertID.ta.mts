@@ -23,6 +23,13 @@ import {
  * @summary OtherCertID
  * @description
  *
+ * Compact identifier of a certificate: hash plus optional
+ * issuer and serial. Used in `OtherSigningCertificate` and in
+ * `CompleteCertificateRefs`. When used in CAdES-C,
+ * `issuerSerial` shall be present and `otherCertHash` shall
+ * match the referenced certificate. ETSI TS 101 733 V2.2.1
+ * (2013-04) §5.7.3.3, §6.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +44,22 @@ class OtherCertID {
     constructor (
         /**
          * @summary `otherCertHash`.
+         * @description
+         *
+         * Hash of the referenced certificate. Shall match that
+         * certificate.
+         *
          * @public
          * @readonly
          */
         readonly otherCertHash: OtherHash,
         /**
          * @summary `issuerSerial`.
+         * @description
+         *
+         * Issuer name and serial number. Required when this
+         * identifier is used in `complete-certificate-references`.
+         *
          * @public
          * @readonly
          */

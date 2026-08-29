@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_revocationRefs
  * @description
- * 
+ *
+ * Identifies the unsigned `complete-revocation-references`
+ * attribute (CAdES-C). Value is `CompleteRevocationRefs`.
+ * References CRLs, ACRLs, or OCSP responses used to validate
+ * the signer and CA certificates. Only a single instance.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §6.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

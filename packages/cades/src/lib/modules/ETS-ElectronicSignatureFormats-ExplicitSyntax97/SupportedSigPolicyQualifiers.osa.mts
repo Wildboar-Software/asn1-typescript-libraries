@@ -15,7 +15,12 @@ import { pointerToSigPolSpec } from "../ETS-ElectronicSignatureFormats-ExplicitS
 /**
  * @summary SupportedSigPolicyQualifiers
  * @description
- * 
+ *
+ * Information object set of signature-policy qualifiers
+ * defined by this specification: `noticeToUser` and
+ * `pointerToSigPolSpec`. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §5.8.1, Annex A.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

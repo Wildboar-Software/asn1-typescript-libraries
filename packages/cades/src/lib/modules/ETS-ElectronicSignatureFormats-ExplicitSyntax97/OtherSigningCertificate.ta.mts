@@ -21,6 +21,15 @@ import {
  * @summary OtherSigningCertificate
  * @description
  *
+ * Value of the signed `other-signing-certificate` attribute.
+ * Earlier alternative to ESS `signing-certificate-v2` when
+ * hashes other than SHA-1 were used. Deprecated; kept for
+ * backwards compatibility. The `policies` field is not used.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §5.7.3.3.
+ *
+ * @deprecated Use ESS `signing-certificate-v2` (RFC 5035)
+ * instead. Kept for backwards compatibility.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +46,21 @@ class OtherSigningCertificate {
     constructor (
         /**
          * @summary `certs`.
+         * @description
+         *
+         * Certificate identifiers. The first shall identify the
+         * signer's certificate used to verify the signature.
+         *
          * @public
          * @readonly
          */
         readonly certs: OtherCertID[],
         /**
          * @summary `policies`.
+         * @description
+         *
+         * Not used in TS 101 733.
+         *
          * @public
          * @readonly
          */

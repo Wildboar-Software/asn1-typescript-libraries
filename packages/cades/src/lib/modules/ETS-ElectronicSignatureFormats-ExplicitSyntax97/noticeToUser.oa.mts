@@ -15,7 +15,11 @@ import { type SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-Exp
 /**
  * @summary noticeToUser
  * @description
- * 
+ *
+ * `SIG-POLICY-QUALIFIER` for `id-spq-ets-unotice`: qualifier
+ * type is `SPUserNotice`, displayed when the signature is
+ * validated. ETSI TS 101 733 V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

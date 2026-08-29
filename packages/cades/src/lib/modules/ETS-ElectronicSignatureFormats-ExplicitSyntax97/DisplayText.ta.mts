@@ -20,6 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DisplayText
  * @description
  *
+ * Displayable string of 1 to 200 characters. Used in
+ * `SPUserNotice` and `NoticeReference`. ETSI TS 101 733
+ * V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SIG_POLICY_QUALIFIER
  * @description
- * 
+ *
+ * Information object class for a signature-policy qualifier.
+ * `&id` selects the qualifier syntax `&Qualifier`. Two
+ * instances are defined: URI pointer and user notice. ETSI TS
+ * 101 733 V2.2.1 (2013-04) §5.8.1, Annex A.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,10 +58,17 @@ interface SIG_POLICY_QUALIFIER<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique object identifier of this qualifier type.
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
      * @summary &Qualifier
+     * @description
+     *
+     * Syntax of the qualifier value (e.g. `SPuri` or
+     * `SPUserNotice`).
      */
     readonly "&Qualifier": Qualifier;
 };

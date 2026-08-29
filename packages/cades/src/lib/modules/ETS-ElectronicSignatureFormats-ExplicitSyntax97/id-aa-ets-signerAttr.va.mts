@@ -16,7 +16,11 @@ import {
 /**
  * @summary id_aa_ets_signerAttr
  * @description
- * 
+ *
+ * Identifies the signed `signer-attributes` attribute. Value is
+ * `SignerAttribute`. Only a single instance may appear.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §5.11.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,10 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
  * @summary SPUserNotice
  * @description
  *
+ * User notice that should be displayed whenever the signature
+ * is validated. Qualifier type for `id-spq-ets-unotice`.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +35,21 @@ class SPUserNotice {
     constructor (
         /**
          * @summary `noticeRef`.
+         * @description
+         *
+         * Reference to a notice stored elsewhere (organization
+         * plus notice numbers).
+         *
          * @public
          * @readonly
          */
         readonly noticeRef?: OPTIONAL<NoticeReference>,
         /**
          * @summary `explicitText`.
+         * @description
+         *
+         * Notice text to display, up to 200 characters.
+         *
          * @public
          * @readonly
          */

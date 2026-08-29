@@ -16,7 +16,14 @@ import {
 /**
  * @summary id_aa_ets_archiveTimestampV2
  * @description
- * 
+ *
+ * Identifies the unsigned `archive-time-stamp` (ATSv2)
+ * attribute (CAdES-A). Value is a `TimeStampToken` over
+ * `encapContentInfo`, any external content, `certificates`,
+ * `crls`, and the whole `SignerInfo`. New archive time-stamps
+ * shall use ATSv3 instead. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §6.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

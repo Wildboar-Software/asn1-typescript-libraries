@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_revocationValues
  * @description
- * 
+ *
+ * Identifies the unsigned `revocation-values` attribute
+ * (CAdES-X Long). Value is `RevocationValues`. Holds CRLs
+ * and OCSP responses referenced by
+ * `complete-revocation-references`. Only a single instance.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §6.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

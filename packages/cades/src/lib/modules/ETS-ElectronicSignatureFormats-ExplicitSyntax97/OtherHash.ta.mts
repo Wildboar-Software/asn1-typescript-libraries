@@ -16,6 +16,10 @@ import { OtherHashAlgAndValue, _decode_OtherHashAlgAndValue, _encode_OtherHashAl
  * @summary OtherHash
  * @description
  *
+ * Certificate or CRL hash: SHA-1 (`sha1Hash`) or another
+ * algorithm with its hash (`otherHash`). ETSI TS 101 733
+ * V2.2.1 (2013-04) §5.7.3.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,12 @@ import { SignerAttribute_Item, _decode_SignerAttribute_Item, _encode_SignerAttri
  * @summary SignerAttribute
  * @description
  *
+ * Value of the signed `signer-attributes` attribute.
+ * Additional attributes of the signer (e.g. role): claimed
+ * X.501 attributes and/or a certified RFC 3281 attribute
+ * certificate. Only a single `signer-attributes` attribute
+ * may be used. ETSI TS 101 733 V2.2.1 (2013-04) §5.11.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

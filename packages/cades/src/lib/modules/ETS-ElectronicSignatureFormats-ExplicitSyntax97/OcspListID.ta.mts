@@ -15,6 +15,9 @@ import { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } fro
  * @summary OcspListID
  * @description
  *
+ * List of OCSP response identifiers used for one certificate
+ * in `CrlOcspRef`. ETSI TS 101 733 V2.2.1 (2013-04) §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,6 +31,10 @@ class OcspListID {
     constructor (
         /**
          * @summary `ocspResponses`.
+         * @description
+         *
+         * Identifiers of the OCSP responses used.
+         *
          * @public
          * @readonly
          */

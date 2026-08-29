@@ -15,6 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OtherRevVals
  * @description
  *
+ * Revocation values other than CRLs or OCSP responses.
+ * Syntax and semantics are identified by `otherRevValType`
+ * and are otherwise outside the scope of this specification.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §6.3.4.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +34,22 @@ class OtherRevVals {
     constructor (
         /**
          * @summary `otherRevValType`.
+         * @description
+         *
+         * Object identifier selecting the syntax of
+         * `otherRevVals`.
+         *
          * @public
          * @readonly
          */
         readonly otherRevValType: OBJECT_IDENTIFIER,
         /**
          * @summary `otherRevVals`.
+         * @description
+         *
+         * Revocation values whose syntax is defined by
+         * `otherRevValType`.
+         *
          * @public
          * @readonly
          */

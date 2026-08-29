@@ -17,6 +17,12 @@ import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-Electron
  * @summary OcspResponsesID
  * @description
  *
+ * Identifies an OCSP response by responder id, producedAt,
+ * and optional hash. Including `ocspRepHash` is strongly
+ * recommended; its absence enables substitution attacks if
+ * an OCSP responder key is later compromised. ETSI TS 101
+ * 733 V2.2.1 (2013-04) §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +37,21 @@ class OcspResponsesID {
     constructor (
         /**
          * @summary `ocspIdentifier`.
+         * @description
+         *
+         * Responder id and `producedAt` from the OCSP response.
+         *
          * @public
          * @readonly
          */
         readonly ocspIdentifier: OcspIdentifier,
         /**
          * @summary `ocspRepHash`.
+         * @description
+         *
+         * Hash of the OCSP response. Optional in the ASN.1 for
+         * backwards compatibility; strongly recommended.
+         *
          * @public
          * @readonly
          */

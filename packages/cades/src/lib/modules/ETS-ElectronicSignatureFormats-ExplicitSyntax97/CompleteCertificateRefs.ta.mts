@@ -15,6 +15,15 @@ import { OtherCertID, _decode_OtherCertID, _encode_OtherCertID } from "../ETS-El
  * @summary CompleteCertificateRefs
  * @description
  *
+ * Value of the unsigned `complete-certificate-references`
+ * attribute (CAdES-C). Full set of CA certificates used to
+ * validate the ES, up to but not including the signer's
+ * certificate (that is in the signing-certificate attribute).
+ * `issuerSerial` shall be present in each `OtherCertID`. Only
+ * a single instance of the attribute. May also be added to a
+ * TST to reference the TSU chain. ETSI TS 101 733 V2.2.1
+ * (2013-04) §6.2.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

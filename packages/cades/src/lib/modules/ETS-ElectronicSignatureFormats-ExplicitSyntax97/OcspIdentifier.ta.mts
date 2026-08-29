@@ -16,6 +16,10 @@ import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar
  * @summary OcspIdentifier
  * @description
  *
+ * Identifies an OCSP response using `ResponderID` and
+ * `producedAt` as in the OCSP response data (RFC 2560).
+ * ETSI TS 101 733 V2.2.1 (2013-04) §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +35,21 @@ class OcspIdentifier {
     constructor (
         /**
          * @summary `ocspResponderID`.
+         * @description
+         *
+         * OCSP `ResponderID` as in the response data.
+         *
          * @public
          * @readonly
          */
         readonly ocspResponderID: ResponderID,
         /**
          * @summary `producedAt`.
+         * @description
+         *
+         * Time of issue; shall match `producedAt` in the OCSP
+         * response.
+         *
          * @public
          * @readonly
          */

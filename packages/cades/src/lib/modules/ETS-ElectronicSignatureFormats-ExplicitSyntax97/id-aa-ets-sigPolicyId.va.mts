@@ -16,7 +16,12 @@ import {
 /**
  * @summary id_aa_ets_sigPolicyId
  * @description
- * 
+ *
+ * Identifies the signed `signature-policy-identifier` attribute.
+ * Mandatory on CAdES-EPES. Value is
+ * `SignaturePolicyIdentifier`. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §5.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

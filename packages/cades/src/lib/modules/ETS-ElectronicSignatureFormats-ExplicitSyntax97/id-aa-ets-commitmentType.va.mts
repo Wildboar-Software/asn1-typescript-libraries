@@ -16,7 +16,12 @@ import {
 /**
  * @summary id_aa_ets_commitmentType
  * @description
- * 
+ *
+ * Identifies the signed `commitment-type-indication` attribute.
+ * Value is `CommitmentTypeIndication`. Only recognized
+ * commitment types (policy-defined or registered) may appear.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §5.11.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

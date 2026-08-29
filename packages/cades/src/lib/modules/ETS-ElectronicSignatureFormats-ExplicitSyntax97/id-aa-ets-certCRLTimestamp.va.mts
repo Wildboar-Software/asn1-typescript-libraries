@@ -16,7 +16,14 @@ import {
 /**
  * @summary id_aa_ets_certCRLTimestamp
  * @description
- * 
+ *
+ * Identifies the unsigned
+ * `time-stamped-certs-crls-references` attribute
+ * (CAdES-X Type 2). Value is a `TimeStampToken` over the
+ * complete certificate and revocation references. Protects
+ * against later CA compromise. ETSI TS 101 733 V2.2.1
+ * (2013-04) §6.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

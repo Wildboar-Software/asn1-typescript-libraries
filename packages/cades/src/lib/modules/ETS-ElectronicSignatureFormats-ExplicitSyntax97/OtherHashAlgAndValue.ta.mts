@@ -18,6 +18,11 @@ import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "
  * @summary OtherHashAlgAndValue
  * @description
  *
+ * Hash algorithm identifier plus the hash value. Used for
+ * non-SHA-1 hashes (`OtherHash.otherHash`) and as
+ * `SigPolicyHash`. ETSI TS 101 733 V2.2.1 (2013-04) §5.7.3.3,
+ * §5.8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +37,21 @@ class OtherHashAlgAndValue {
     constructor (
         /**
          * @summary `hashAlgorithm`.
+         * @description
+         *
+         * Algorithm used to compute `hashValue`.
+         *
          * @public
          * @readonly
          */
         readonly hashAlgorithm: AlgorithmIdentifier,
         /**
          * @summary `hashValue`.
+         * @description
+         *
+         * Hash octets. For a signature policy, may be all zeros
+         * if the policy hash is not known.
+         *
          * @public
          * @readonly
          */

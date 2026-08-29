@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SignaturePolicyImplied
  * @description
- * 
+ *
+ * Alternative of `SignaturePolicyIdentifier` meaning the
+ * policy is implied by the signed data (or other external
+ * context). Marked "not used in this version" of TS 101 733.
+ * ETSI TS 101 733 V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

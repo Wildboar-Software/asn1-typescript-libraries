@@ -15,6 +15,12 @@ import { OtherCertID, _decode_OtherCertID, _encode_OtherCertID } from "../ETS-El
  * @summary AttributeCertificateRefs
  * @description
  *
+ * Value of the unsigned `attribute-certificate-references`
+ * attribute. Full set of AA certificates used to validate a
+ * user attribute certificate. Used only when such an AC is
+ * present. Only a single instance. ETSI TS 101 733 V2.2.1
+ * (2013-04) §6.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

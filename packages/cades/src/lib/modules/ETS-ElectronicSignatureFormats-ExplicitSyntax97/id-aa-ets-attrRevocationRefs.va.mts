@@ -16,7 +16,13 @@ import {
 /**
  * @summary id_aa_ets_attrRevocationRefs
  * @description
- * 
+ *
+ * Identifies the unsigned `attribute-revocation-references`
+ * attribute. Value is `AttributeRevocationRefs`. Used only
+ * when a revocable user attribute certificate is present.
+ * Only a single instance. ETSI TS 101 733 V2.2.1 (2013-04)
+ * §6.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

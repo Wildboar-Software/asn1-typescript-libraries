@@ -16,6 +16,10 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
  * @summary NoticeReference
  * @description
  *
+ * Identifies a user notice by originating organization and
+ * notice numbers. Used in `SPUserNotice`. ETSI TS 101 733
+ * V2.2.1 (2013-04) §5.8.1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -30,12 +34,20 @@ class NoticeReference {
     constructor (
         /**
          * @summary `organization`.
+         * @description
+         *
+         * Organization that originated the referenced notice.
+         *
          * @public
          * @readonly
          */
         readonly organization: DisplayText,
         /**
          * @summary `noticeNumbers`.
+         * @description
+         *
+         * Notice numbers within that organization.
+         *
          * @public
          * @readonly
          */

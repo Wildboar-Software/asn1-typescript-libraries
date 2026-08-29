@@ -15,6 +15,16 @@ import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "
  * @summary ArchiveTimeStampToken
  * @description
  *
+ * Value of both `archive-time-stamp` (ATSv2, §6.4.1) and
+ * `archive-time-stamp-v3` (ATSv3, §6.4.3). ATSv2 hashes
+ * `encapContentInfo`, any external content, `certificates`,
+ * `crls`, and the whole `SignerInfo`. ATSv3 hashes
+ * eContentType, the signed-data hash, selected `SignerInfo`
+ * fields, and one `ATSHashIndex`, and shall carry a single
+ * `ats-hash-index` unsigned attribute. New archive
+ * time-stamps shall use ATSv3. ETSI TS 101 733 V2.2.1
+ * (2013-04) §6.4.1, §6.4.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

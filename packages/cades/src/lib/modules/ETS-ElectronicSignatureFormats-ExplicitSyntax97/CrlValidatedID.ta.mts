@@ -17,6 +17,11 @@ import { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../
  * @summary CrlValidatedID
  * @description
  *
+ * Identifies a CRL by hash of the entire DER encoding
+ * (including the signature) and an optional issuer/time/
+ * number. `crlIdentifier` is normally present unless the CRL
+ * can be inferred. ETSI TS 101 733 V2.2.1 (2013-04) §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,12 +36,22 @@ class CrlValidatedID {
     constructor (
         /**
          * @summary `crlHash`.
+         * @description
+         *
+         * Hash over the entire DER-encoded CRL, including the
+         * signature.
+         *
          * @public
          * @readonly
          */
         readonly crlHash: OtherHash,
         /**
          * @summary `crlIdentifier`.
+         * @description
+         *
+         * Issuer name, thisUpdate time, and optional CRL number.
+         * Normally present unless the CRL can be inferred.
+         *
          * @public
          * @readonly
          */

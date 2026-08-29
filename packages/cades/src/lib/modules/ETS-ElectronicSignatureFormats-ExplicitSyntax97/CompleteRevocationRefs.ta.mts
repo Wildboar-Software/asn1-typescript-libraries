@@ -15,6 +15,14 @@ import { CrlOcspRef, _decode_CrlOcspRef, _encode_CrlOcspRef } from "../ETS-Elect
  * @summary CompleteRevocationRefs
  * @description
  *
+ * Value of the unsigned `complete-revocation-references`
+ * attribute (CAdES-C). One `CrlOcspRef` for the signing
+ * certificate, then one per `OtherCertID` in
+ * `CompleteCertificateRefs`, in the same order. At least one
+ * of CRL, OCSP, or other refs should be present for all but
+ * the trusted CA. Only a single instance. ETSI TS 101 733
+ * V2.2.1 (2013-04) §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

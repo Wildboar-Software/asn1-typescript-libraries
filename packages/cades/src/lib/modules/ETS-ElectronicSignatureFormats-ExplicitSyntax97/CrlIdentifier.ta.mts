@@ -22,6 +22,10 @@ import {
  * @summary CrlIdentifier
  * @description
  *
+ * Identifies a CRL by issuer name, issued time
+ * (`thisUpdate`), and optional CRL number. ETSI TS 101 733
+ * V2.2.1 (2013-04) §6.2.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +41,31 @@ class CrlIdentifier {
     constructor (
         /**
          * @summary `crlissuer`.
+         * @description
+         *
+         * CRL issuer distinguished name.
+         *
          * @public
          * @readonly
          */
         readonly crlissuer: Name,
         /**
          * @summary `crlIssuedTime`.
+         * @description
+         *
+         * Time the CRL was issued; shall match `thisUpdate` in
+         * the CRL.
+         *
          * @public
          * @readonly
          */
         readonly crlIssuedTime: UTCTime,
         /**
          * @summary `crlNumber`.
+         * @description
+         *
+         * CRL number extension value, if present on the CRL.
+         *
          * @public
          * @readonly
          */
