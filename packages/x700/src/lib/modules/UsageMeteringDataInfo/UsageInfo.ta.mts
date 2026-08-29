@@ -15,6 +15,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary UsageInfo
  * @description
  *
+ * Service-specific usage metering data: a registered service
+ * type plus the corresponding usage-data value. Modelled as
+ * ordered information blocks of a requester's transaction
+ * (registration, request, accept, complete, interrupt, bulk,
+ * corresponding). Registration shall appear once, first;
+ * corresponding at most once. Syntax of each block is supplied
+ * by a specialization (A.9 prototype). ITU-T Rec. X.742 (04/95)
+ * [§8.2.3](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §8.2.3.8, A.9; Cor.2 (02/2000)
+ * [§5](https://www.itu.int/rec/T-REC-X.742-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +40,23 @@ export class UsageInfo {
     constructor(
         /**
          * @summary `serviceType`.
+         * @description
+         *
+         * Registered OID identifying the specialization (and thus
+         * the syntax of `usageData`). Cor.2 `&id` of `UMF-USAGE`.
+         * ITU-T Rec. X.742 (04/95) A.9; Cor.2 (02/2000) §5.
          * @public
          * @readonly
          */
         readonly serviceType: OBJECT_IDENTIFIER,
         /**
          * @summary `usageData`.
+         * @description
+         *
+         * Usage blocks for this service type. Specializations shall
+         * use only the block kinds in §8.2.3; registration is
+         * mandatory and first. ITU-T Rec. X.742 (04/95) §8.2.3,
+         * §8.2.3.8, A.9.
          * @public
          * @readonly
          */

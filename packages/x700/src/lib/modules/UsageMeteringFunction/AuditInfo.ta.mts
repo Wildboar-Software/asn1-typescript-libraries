@@ -15,6 +15,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AuditInfo
  * @description
  *
+ * Audit information from the source of the usage metering data
+ * (file or record numbers) so a processing system can check
+ * completeness of usage records. Present when the data object
+ * (and any resulting usage metering record) includes the audit
+ * information package. `service` / `auditDetails` are an open
+ * type (`UMF-AUDIT`) after Cor.2. ITU-T Rec. X.742 (04/95)
+ * [§8.2.4.2](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * A.6; Cor.2 (02/2000)
+ * [§4](https://www.itu.int/rec/T-REC-X.742-200002-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +39,21 @@ export class AuditInfo {
     constructor(
         /**
          * @summary `service`.
+         * @description
+         *
+         * OID identifying the audit-details syntax (`UMF-AUDIT.&id`).
+         * ITU-T Rec. X.742 (1995)/Cor.2 (02/2000) §4.
          * @public
          * @readonly
          */
         readonly service: OBJECT_IDENTIFIER,
         /**
          * @summary `auditDetails`.
+         * @description
+         *
+         * Audit payload for `service` (source file/record
+         * identifiers or equivalent). ITU-T Rec. X.742 (04/95)
+         * §8.2.4.2; Cor.2 (02/2000) §4.
          * @public
          * @readonly
          */

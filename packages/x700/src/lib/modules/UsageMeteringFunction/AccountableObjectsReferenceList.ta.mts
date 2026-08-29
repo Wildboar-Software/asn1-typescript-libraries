@@ -19,6 +19,13 @@ import {
  * @summary AccountableObjectsReferenceList
  * @description
  *
+ * Read-only set of accountable objects for which a control
+ * object provides usage control. Settable at creation. One
+ * control object may reference several accountable objects.
+ * ITU-T Rec. X.742 (04/95)
+ * [§8.1.3](https://www.itu.int/rec/T-REC-X.742-199504-I),
+ * §7.2.3.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

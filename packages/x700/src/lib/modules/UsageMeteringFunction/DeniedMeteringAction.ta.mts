@@ -16,6 +16,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DeniedMeteringAction
  * @description
  *
+ * Specific-error of start, suspend, or resume metering when
+ * collection is complete and the data object's procedural
+ * status is `terminating` (Table 1 STA3). ITU-T Rec. X.742
+ * (04/95)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.742-199504-I), A.8.
+ *
+ * - `canNotStart` (0): start metering refused.
+ * - `canNotSuspend` (1): suspend metering refused.
+ * - `canNotResume` (2): resume metering refused.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +46,16 @@ export enum _enum_for_DeniedMeteringAction {
  * @summary DeniedMeteringAction
  * @description
  *
+ * Specific-error of start, suspend, or resume metering when
+ * collection is complete and the data object's procedural
+ * status is `terminating` (Table 1 STA3). ITU-T Rec. X.742
+ * (04/95)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.742-199504-I), A.8.
+ *
+ * - `canNotStart` (0): start metering refused.
+ * - `canNotSuspend` (1): suspend metering refused.
+ * - `canNotResume` (2): resume metering refused.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -52,6 +72,16 @@ export type DeniedMeteringAction = _enum_for_DeniedMeteringAction;
  * @summary DeniedMeteringAction
  * @description
  *
+ * Specific-error of start, suspend, or resume metering when
+ * collection is complete and the data object's procedural
+ * status is `terminating` (Table 1 STA3). ITU-T Rec. X.742
+ * (04/95)
+ * [§8.4.1](https://www.itu.int/rec/T-REC-X.742-199504-I), A.8.
+ *
+ * - `canNotStart` (0): start metering refused.
+ * - `canNotSuspend` (1): suspend metering refused.
+ * - `canNotResume` (2): resume metering refused.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -66,6 +96,11 @@ export const DeniedMeteringAction = _enum_for_DeniedMeteringAction;
 
 /**
  * @summary DeniedMeteringAction_canNotStart
+ * @description
+ *
+ * Start metering refused while procedural status is
+ * `terminating`. ITU-T Rec. X.742 (04/95) §8.4.1, Table 1.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +110,11 @@ export const DeniedMeteringAction_canNotStart: DeniedMeteringAction =
 
 /**
  * @summary canNotStart
+ * @description
+ *
+ * Start metering refused while procedural status is
+ * `terminating`. ITU-T Rec. X.742 (04/95) §8.4.1, Table 1.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +124,11 @@ export const canNotStart: DeniedMeteringAction =
 
 /**
  * @summary DeniedMeteringAction_canNotSuspend
+ * @description
+ *
+ * Suspend metering refused while procedural status is
+ * `terminating`. ITU-T Rec. X.742 (04/95) §8.4.1, Table 1.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +138,11 @@ export const DeniedMeteringAction_canNotSuspend: DeniedMeteringAction =
 
 /**
  * @summary canNotSuspend
+ * @description
+ *
+ * Suspend metering refused while procedural status is
+ * `terminating`. ITU-T Rec. X.742 (04/95) §8.4.1, Table 1.
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +152,11 @@ export const canNotSuspend: DeniedMeteringAction =
 
 /**
  * @summary DeniedMeteringAction_canNotResume
+ * @description
+ *
+ * Resume metering refused while procedural status is
+ * `terminating`. ITU-T Rec. X.742 (04/95) §8.4.1, Table 1.
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +166,11 @@ export const DeniedMeteringAction_canNotResume: DeniedMeteringAction =
 
 /**
  * @summary canNotResume
+ * @description
+ *
+ * Resume metering refused while procedural status is
+ * `terminating`. ITU-T Rec. X.742 (04/95) §8.4.1, Table 1.
+ *
  * @constant
  * @type {number}
  */
