@@ -26,6 +26,11 @@ import {
  * @summary AttributeGroups_Item
  * @description
  *
+ * One package attribute-group reference, with optional attributes added
+ * to an extensible group. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722 (01/92)
+ * [§8.4.3.3](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +42,19 @@ export class AttributeGroups_Item {
     constructor(
         /**
          * @summary `group`.
+         * @description
+         *
+         * Attribute-group template referenced by the package.
          * @public
          * @readonly
          */
         readonly group: TemplateLabel,
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * Extra members added to an extensible group in this package. Omitted
+         * for a fixed group.
          * @public
          * @readonly
          */

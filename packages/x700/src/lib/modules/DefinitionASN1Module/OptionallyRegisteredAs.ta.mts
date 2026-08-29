@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary OptionallyRegisteredAs
  * @description
  *
+ * Registration OID of an element of management information, or `NULL`
+ * if none has been assigned. Syntax of `optionallyRegisteredAs`
+ * (packages, parameters, attributes, ASN.1 modules). ITU-T Rec. X.750
+ * (10/96) [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

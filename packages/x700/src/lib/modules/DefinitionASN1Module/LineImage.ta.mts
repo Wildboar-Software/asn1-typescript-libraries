@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LineImage
  * @description
  *
+ * One complete line of text in a textual representation. Linked replies
+ * of `getTextualRepresentation` concatenate sequences of line images.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.3.1.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.4](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

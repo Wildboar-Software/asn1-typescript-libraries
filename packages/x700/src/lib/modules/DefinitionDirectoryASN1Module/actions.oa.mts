@@ -26,6 +26,13 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary actions
  * @description
  *
+ * Actions (and associated parameters) of a package. Single-valued
+ * `Actions` syntax. ID `{mkmDirectoryAttributeType 6}`.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I), Table 17,
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

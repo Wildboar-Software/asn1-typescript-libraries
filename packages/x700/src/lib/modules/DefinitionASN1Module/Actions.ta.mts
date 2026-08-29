@@ -20,6 +20,16 @@ import {
  * @summary Actions
  * @description
  *
+ * GDMO package `ACTIONS` construct: the actions of a package and any
+ * parameter templates attached to each action. Syntax of the `actions`
+ * attribute of a package-template managed object (X.750 A.3.3) and of the
+ * Directory `actions` attribute. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.10](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ * GDMO: X.722 (01/92)
+ * [§8.4.3.4](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Identifier
  * @description
  *
+ * ASN.1 identifier (letters, digits, hyphen). Used for module names,
+ * type/value references, and field names in template encodings. Also
+ * the syntax of Directory/CMIP `moduleReference` (ASN.1 module name).
+ * ITU-T Rec. X.750 (10/96)
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

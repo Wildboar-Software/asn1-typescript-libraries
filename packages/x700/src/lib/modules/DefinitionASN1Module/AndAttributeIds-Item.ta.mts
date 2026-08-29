@@ -25,6 +25,15 @@ import {
  * @summary AndAttributeIds_Item
  * @description
  *
+ * One `AND ATTRIBUTE IDS` pairing: a field of the notification argument
+ * and the attribute whose values occupy that field. The attribute syntax
+ * shall be the same as the labelled field; labels inside `SET OF` /
+ * `SEQUENCE OF` (or a repeated CHOICE/SET/SEQUENCE component) cannot be
+ * used. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722
+ * (01/92)
+ * [§8.11.3.3](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +45,19 @@ export class AndAttributeIds_Item {
     constructor(
         /**
          * @summary `fieldName`.
+         * @description
+         *
+         * Label of the field in the notification information syntax that
+         * carries the attribute value.
          * @public
          * @readonly
          */
         readonly fieldName: Identifier,
         /**
          * @summary `attribute`.
+         * @description
+         *
+         * Attribute template whose values occupy `fieldName`.
          * @public
          * @readonly
          */

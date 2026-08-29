@@ -19,6 +19,15 @@ import {
  * @summary DerivedFrom
  * @description
  *
+ * GDMO `DERIVED FROM` construct: immediate superclasses of a managed
+ * object class. Syntax of `derivedFrom` on a managed-object-class
+ * template. (Amd.1 also uses this type for GRM relationship-class
+ * superclasses, in a different module.) ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.7](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ * Amd.1 (10/97) [item 11](https://www.itu.int/rec/T-REC-X.750-199710-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

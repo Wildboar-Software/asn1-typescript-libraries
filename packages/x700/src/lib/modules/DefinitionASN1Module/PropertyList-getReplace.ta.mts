@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PropertyList_getReplace
  * @description
  *
+ * GDMO `GET` / `REPLACE` / `GET-REPLACE`. `gET(0)` — Get attribute
+ * value; `rEPLACE(1)` — Replace attribute value and Create (if the
+ * name binding supports Create); `gET-REPLACE(2)` — both. ITU-T Rec. X.750 (10/96) [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). X.722
+ * Amd.1 (11/95)
+ * [item 6](https://www.itu.int/rec/T-REC-X.722-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +69,9 @@ export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
 
 /**
  * @summary PropertyList_getReplace_gET
+ * @description
+ *
+ * GET: attribute value may be read. X.722 Amd.1 item 6.
  * @constant
  * @type {number}
  */
@@ -72,6 +81,9 @@ export const PropertyList_getReplace_gET: PropertyList_getReplace =
 
 /**
  * @summary gET
+ * @description
+ *
+ * GET. Same as `PropertyList_getReplace_gET`.
  * @constant
  * @type {number}
  */
@@ -81,6 +93,9 @@ export const gET: PropertyList_getReplace =
 
 /**
  * @summary PropertyList_getReplace_rEPLACE
+ * @description
+ *
+ * REPLACE: attribute may be replaced and set by Create. X.722 Amd.1 item 6.
  * @constant
  * @type {number}
  */
@@ -90,6 +105,9 @@ export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
 
 /**
  * @summary rEPLACE
+ * @description
+ *
+ * REPLACE. Same as `PropertyList_getReplace_rEPLACE`.
  * @constant
  * @type {number}
  */
@@ -99,6 +117,9 @@ export const rEPLACE: PropertyList_getReplace =
 
 /**
  * @summary PropertyList_getReplace_gET_REPLACE
+ * @description
+ *
+ * GET-REPLACE: both GET and REPLACE. X.722 Amd.1 item 6.
  * @constant
  * @type {number}
  */
@@ -108,6 +129,9 @@ export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
 
 /**
  * @summary gET_REPLACE
+ * @description
+ *
+ * GET-REPLACE. Same as `PropertyList_getReplace_gET_REPLACE`.
  * @constant
  * @type {number}
  */

@@ -19,6 +19,15 @@ import {
  * @summary TextualRepresentation
  * @description
  *
+ * Sequence of line images. Used for module contents, behaviour text,
+ * descriptions, document/template text, and the
+ * `getTextualRepresentation` reply (which may be split across linked
+ * replies; concatenating them yields the same value as a Get of a
+ * `TextualRepresentation` attribute). ITU-T Rec. X.750 (10/96)
+ * [§8.3.1.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.4](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PropertyList_addRemove
  * @description
  *
+ * GDMO `ADD` / `REMOVE` / `ADD-REMOVE` for set-valued attributes.
+ * `aDD(0)` — Add member; `rEMOVE(1)` — Remove member;
+ * `aDD-REMOVE(2)` — both. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). X.722 Amd.1 (11/95)
+ * [item 6](https://www.itu.int/rec/T-REC-X.722-199511-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +69,9 @@ export const PropertyList_addRemove = _enum_for_PropertyList_addRemove;
 
 /**
  * @summary PropertyList_addRemove_aDD
+ * @description
+ *
+ * ADD: Add member. X.722 Amd.1 item 6.
  * @constant
  * @type {number}
  */
@@ -72,6 +81,9 @@ export const PropertyList_addRemove_aDD: PropertyList_addRemove =
 
 /**
  * @summary aDD
+ * @description
+ *
+ * ADD. Same as `PropertyList_addRemove_aDD`.
  * @constant
  * @type {number}
  */
@@ -81,6 +93,9 @@ export const aDD: PropertyList_addRemove =
 
 /**
  * @summary PropertyList_addRemove_rEMOVE
+ * @description
+ *
+ * REMOVE: Remove member. X.722 Amd.1 item 6.
  * @constant
  * @type {number}
  */
@@ -90,6 +105,9 @@ export const PropertyList_addRemove_rEMOVE: PropertyList_addRemove =
 
 /**
  * @summary rEMOVE
+ * @description
+ *
+ * REMOVE. Same as `PropertyList_addRemove_rEMOVE`.
  * @constant
  * @type {number}
  */
@@ -99,6 +117,9 @@ export const rEMOVE: PropertyList_addRemove =
 
 /**
  * @summary PropertyList_addRemove_aDD_REMOVE
+ * @description
+ *
+ * ADD-REMOVE: both ADD and REMOVE. X.722 Amd.1 item 6.
  * @constant
  * @type {number}
  */
@@ -108,6 +129,9 @@ export const PropertyList_addRemove_aDD_REMOVE: PropertyList_addRemove =
 
 /**
  * @summary aDD_REMOVE
+ * @description
+ *
+ * ADD-REMOVE. Same as `PropertyList_addRemove_aDD_REMOVE`.
  * @constant
  * @type {number}
  */

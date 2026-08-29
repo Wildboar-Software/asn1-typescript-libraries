@@ -22,6 +22,13 @@ import {
  * @summary NamingObjectClass
  * @description
  *
+ * A class referenced by a name binding, with optional `AND SUBCLASSES`.
+ * Used for `subordinateObjectClass` and
+ * `namedBySuperiorObjectClass`. ITU-T Rec. X.750 (10/96)
+ * [§8.1.2.8](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722 (01/92)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +43,20 @@ export class NamingObjectClass {
     constructor(
         /**
          * @summary `class_`.
+         * @description
+         *
+         * Managed object class (or other object class) referenced by the name
+         * binding.
          * @public
          * @readonly
          */
         readonly class_: TemplateLabel,
         /**
          * @summary `andSubclasses`.
+         * @description
+         *
+         * `TRUE` if the name binding also applies to subclasses (GDMO `AND
+         * SUBCLASSES`). Default `FALSE`.
          * @public
          * @readonly
          */

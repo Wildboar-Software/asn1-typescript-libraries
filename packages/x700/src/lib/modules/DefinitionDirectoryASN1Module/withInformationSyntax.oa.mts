@@ -26,6 +26,13 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary withInformationSyntax
  * @description
  *
+ * ASN.1 type of an action or notification argument, or null if
+ * `WITH INFORMATION SYNTAX` is omitted. ID
+ * `{mkmDirectoryAttributeType 41}`. ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

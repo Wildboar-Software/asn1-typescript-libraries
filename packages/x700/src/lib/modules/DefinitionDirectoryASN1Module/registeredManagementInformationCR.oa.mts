@@ -27,6 +27,14 @@ import { type CONTENT_RULE } from '@wildboar/x500/InformationFramework';
  * @summary registeredManagementInformationCR
  * @description
  *
+ * DIT content rule: structural class `registeredInformation` plus the
+ * MKM definition auxiliary classes. The ASN.1 comment requires that
+ * only one of those auxiliaries appear in a given entry. ITU-T Rec.
+ * X.750 (10/96)
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ * Amd.1 adds GRM auxiliaries in
+ * `GrmDefinitionDirectoryASN1Module`, not this rule.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

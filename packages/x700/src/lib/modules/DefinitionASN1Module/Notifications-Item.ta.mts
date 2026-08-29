@@ -26,6 +26,11 @@ import {
  * @summary Notifications_Item
  * @description
  *
+ * One package notification and optional parameters. ITU-T Rec. X.750
+ * (10/96) [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I). GDMO: X.722
+ * (01/92)
+ * [§8.4.3.5](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,12 +42,19 @@ export class Notifications_Item {
     constructor(
         /**
          * @summary `notification`.
+         * @description
+         *
+         * Notification template included in the package.
          * @public
          * @readonly
          */
         readonly notification: TemplateLabel,
         /**
          * @summary `parameter`.
+         * @description
+         *
+         * Optional parameter templates for event information, reply, or
+         * processing failures of this notification.
          * @public
          * @readonly
          */

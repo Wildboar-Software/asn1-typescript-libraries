@@ -26,6 +26,12 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary create
  * @description
  *
+ * CREATE element of a name binding; null if the construct is absent. ID
+ * `{mkmDirectoryAttributeType 16}`. ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

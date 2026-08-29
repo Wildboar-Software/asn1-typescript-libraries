@@ -20,6 +20,13 @@ import {
  * @summary DocumentObjectIdentifier
  * @description
  *
+ * Object identifier of the represented document, or `NULL` if none is
+ * assigned. Example: `{2 9 3 2}` is X.721 | ISO/IEC 10165-2 (GDMO
+ * registration tables in X.722). Naming attribute for name binding
+ * `document-system`. ITU-T Rec. X.750 (10/96)
+ * [§8.2.2.2](https://www.itu.int/rec/T-REC-X.750-199610-I),
+ * [A.3.3](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

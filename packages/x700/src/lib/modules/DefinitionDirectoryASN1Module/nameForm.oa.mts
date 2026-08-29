@@ -24,6 +24,12 @@ import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.
  * @summary nameForm
  * @description
  *
+ * Symbolic name of the numeric OID arc stored in `commonName` of a
+ * Registered information entry. ID `{mkmDirectoryAttributeType 30}`.
+ * ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I), Table 17,
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

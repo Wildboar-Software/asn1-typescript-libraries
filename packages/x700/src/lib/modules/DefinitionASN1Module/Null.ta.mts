@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Null
  * @description
  *
+ * Syntax of the `attributeNotAvailableViaThisAction` specific-error
+ * parameter: retrieval of the requested attribute via
+ * `getTextualRepresentation` is not supported. ITU-T Rec. X.750
+ * (10/96) [A.3.4](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

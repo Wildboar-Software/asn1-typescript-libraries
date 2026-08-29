@@ -20,6 +20,13 @@ import {
  * @summary DefinedValue
  * @description
  *
+ * Reference to an ASN.1 value: optional module identifier and value
+ * reference. Used as the `value-reference` form of a GDMO
+ * `value-specifier`. ITU-T Rec. X.750 (10/96)
+ * [A.3.5](https://www.itu.int/rec/T-REC-X.750-199610-I).
+ * GDMO: X.722 (01/92)
+ * [§8.4.2](https://www.itu.int/rec/T-REC-X.722-199201-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +41,18 @@ export class DefinedValue {
     constructor(
         /**
          * @summary `module_`.
+         * @description
+         *
+         * ASN.1 module of the value, if needed to disambiguate.
          * @public
          * @readonly
          */
         readonly module_: OPTIONAL<Identifier>,
         /**
          * @summary `reference`.
+         * @description
+         *
+         * ASN.1 value identifier.
          * @public
          * @readonly
          */

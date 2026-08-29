@@ -23,6 +23,16 @@ import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs'
  * @summary managementTemplate
  * @description
  *
+ * Directory auxiliary for a template. MUST CONTAIN `templateName`
+ * (GDMO/GRM template label); MAY CONTAIN `templateDefinition` (text).
+ * Superclass of the per-kind template auxiliaries. If only text is
+ * stored, this class is used without a subclass. ID
+ * `{mkmDirectoryObjectClass 5}`. ITU-T Rec. X.750 (10/96)
+ * [§8.6.2](https://www.itu.int/rec/T-REC-X.750-199610-I), Table 14,
+ * [B.2](https://www.itu.int/rec/T-REC-X.750-199610-I). Amd.1 [item
+ * 8](https://www.itu.int/rec/T-REC-X.750-199710-I) generalizes "GDMO template"
+ * to "template".
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
