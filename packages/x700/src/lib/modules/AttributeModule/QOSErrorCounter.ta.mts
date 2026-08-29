@@ -16,6 +16,15 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary QOSErrorCounter
  * @description
  *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Syntax of the example `qOS-Error-Counter` attribute: a
+ * wraparound counter incremented by one for every QOS error.
+ * Range is given by any package that references the
+ * definition (`QOSCounterRange` in the example package).
+ * Matches for equality and ordering. ITU-T Rec. X.722 (01/92)
+ * [A.5](https://www.itu.int/rec/T-REC-X.722-199201-I), A.9,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

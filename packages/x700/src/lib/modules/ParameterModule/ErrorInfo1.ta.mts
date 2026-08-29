@@ -16,6 +16,16 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ErrorInfo1
  * @description
  *
+ * GDMO example (X.722 Annex A). Syntax of the example
+ * `createErrorParameter` (CONTEXT SPECIFIC-ERROR). If the
+ * maximum number of `exampleObjectClass` instances exist in
+ * the containing object, a further create yields CMIP
+ * processingFailure whose `SpecificErrorInfo.errorinfo` is
+ * this type: the number of instances of that class that
+ * currently exist in the containing object. ITU-T Rec. X.722
+ * (01/92) [A.3](https://www.itu.int/rec/T-REC-X.722-199201-I),
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

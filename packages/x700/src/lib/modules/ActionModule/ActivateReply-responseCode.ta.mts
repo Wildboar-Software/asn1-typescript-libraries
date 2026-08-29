@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ActivateReply_responseCode
  * @description
  *
+ * GDMO example (X.722 Annex A). Named integers of
+ * `ActivateReply.responseCode`: `successResponse` (0) if the
+ * example `activate` action succeeded;
+ * `serviceProviderErrorResponse` (1) if it failed because of
+ * the underlying service provider. ITU-T Rec. X.722 (01/92)
+ * [A.7](https://www.itu.int/rec/T-REC-X.722-199201-I), A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +33,10 @@ export type ActivateReply_responseCode = INTEGER;
 
 /**
  * @summary ActivateReply_responseCode_successResponse
+ * @description
+ *
+ * Example `activate` action succeeded. ITU-T Rec. X.722
+ * (01/92) A.7.
  * @constant
  * @type {number}
  */
@@ -33,6 +44,10 @@ export const ActivateReply_responseCode_successResponse: ActivateReply_responseC
 
 /**
  * @summary ActivateReply_responseCode_successResponse
+ * @description
+ *
+ * Example `activate` action succeeded. ITU-T Rec. X.722
+ * (01/92) A.7.
  * @constant
  * @type {number}
  */
@@ -40,6 +55,10 @@ export const successResponse: ActivateReply_responseCode = ActivateReply_respons
 
 /**
  * @summary ActivateReply_responseCode_serviceProviderErrorResponse
+ * @description
+ *
+ * Example `activate` failed because of a problem with the
+ * underlying service provider. ITU-T Rec. X.722 (01/92) A.7.
  * @constant
  * @type {number}
  */
@@ -47,6 +66,10 @@ export const ActivateReply_responseCode_serviceProviderErrorResponse: ActivateRe
 
 /**
  * @summary ActivateReply_responseCode_serviceProviderErrorResponse
+ * @description
+ *
+ * Example `activate` failed because of a problem with the
+ * underlying service provider. ITU-T Rec. X.722 (01/92) A.7.
  * @constant
  * @type {number}
  */

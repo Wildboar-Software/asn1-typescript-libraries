@@ -16,6 +16,14 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary INFO_REPLY_IDENTIFIER
  * @description
  *
+ * GDMO example support from X.722 Amendment 2. Information
+ * object class pairing optional ACTION/NOTIFICATION
+ * information and reply types with a unique registered object
+ * identifier. Populated via `InfoReplyTable` from GDMO ACTION
+ * and NOTIFICATION templates. ITU-T Rec. X.722 (01/92)/Amd.2
+ * (08/97)
+ * [item 4](https://www.itu.int/rec/T-REC-X.722-199708-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,15 +70,27 @@ export interface INFO_REPLY_IDENTIFIER<
         }
     >;
     /**
-     * @summary &Info
+     * @summary `&Info`
+     * @description
+     *
+     * Optional information type of an ACTION or NOTIFICATION
+     * identified by `&registeredAs`.
      */
     readonly '&Info': Info;
     /**
-     * @summary &Reply
+     * @summary `&Reply`
+     * @description
+     *
+     * Optional reply type of an ACTION or NOTIFICATION
+     * identified by `&registeredAs`.
      */
     readonly '&Reply': Reply;
     /**
-     * @summary &registeredAs
+     * @summary `&registeredAs`
+     * @description
+     *
+     * Unique object identifier under which the ACTION or
+     * NOTIFICATION is registered.
      */
     readonly '&registeredAs'?: OBJECT_IDENTIFIER;
 }

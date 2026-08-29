@@ -31,6 +31,17 @@ import {
  * @summary ActivateReply
  * @description
  *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Reply syntax of the example `activate` action, which enables
+ * the managed object for operation (confirmed mode). On
+ * success, `responseCode` is `successResponse`. If the action
+ * fails because of a problem with the underlying service
+ * provider, `responseCode` is
+ * `serviceProviderErrorResponse` and
+ * `serviceProviderErrorResponseReason` is returned in
+ * `responseParams`. ITU-T Rec. X.722 (01/92)
+ * [A.7](https://www.itu.int/rec/T-REC-X.722-199201-I), A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,18 +58,34 @@ export class ActivateReply {
     constructor(
         /**
          * @summary `operationalStatus`.
+         * @description
+         *
+         * Operational state of the object after the example
+         * `activate` action. ITU-T Rec. X.722 (01/92) A.7, A.10.
          * @public
          * @readonly
          */
         readonly operationalStatus: OperationalState,
         /**
          * @summary `responseCode`.
+         * @description
+         *
+         * `successResponse` (0) if activate succeeded;
+         * `serviceProviderErrorResponse` (1) if it failed
+         * because of the underlying service provider. ITU-T Rec.
+         * X.722 (01/92) A.7.
          * @public
          * @readonly
          */
         readonly responseCode: ActivateReply_responseCode,
         /**
          * @summary `responseParams`.
+         * @description
+         *
+         * Optional management extensions. When
+         * `responseCode` is `serviceProviderErrorResponse`,
+         * carries `serviceProviderErrorResponseReason`. ITU-T
+         * Rec. X.722 (01/92) A.3, A.7.
          * @public
          * @readonly
          */

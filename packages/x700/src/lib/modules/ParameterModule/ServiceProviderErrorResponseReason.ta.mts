@@ -15,6 +15,17 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ServiceProviderErrorResponseReason
  * @description
  *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Syntax of the example `serviceProviderErrorResponseReason`
+ * parameter (CONTEXT ACTION-REPLY). Returned in
+ * `ActivateReply.responseParams` when `responseCode` is
+ * `serviceProviderErrorResponse`. Named values:
+ * `insufficientResources` (0), `providerDoesNotExist` (1),
+ * `providerNotAvailable` (2), `requiredServiceNotAvailable`
+ * (3). ITU-T Rec. X.722 (01/92)
+ * [A.3](https://www.itu.int/rec/T-REC-X.722-199201-I), A.7,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +47,17 @@ export enum _enum_for_ServiceProviderErrorResponseReason {
  * @summary ServiceProviderErrorResponseReason
  * @description
  *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Syntax of the example `serviceProviderErrorResponseReason`
+ * parameter (CONTEXT ACTION-REPLY). Returned in
+ * `ActivateReply.responseParams` when `responseCode` is
+ * `serviceProviderErrorResponse`. Named values:
+ * `insufficientResources` (0), `providerDoesNotExist` (1),
+ * `providerNotAvailable` (2), `requiredServiceNotAvailable`
+ * (3). ITU-T Rec. X.722 (01/92)
+ * [A.3](https://www.itu.int/rec/T-REC-X.722-199201-I), A.7,
+ * A.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +73,17 @@ export type ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorR
 /**
  * @summary ServiceProviderErrorResponseReason
  * @description
+ *
+ * GDMO example (X.722 Annex A, not a production SM function).
+ * Syntax of the example `serviceProviderErrorResponseReason`
+ * parameter (CONTEXT ACTION-REPLY). Returned in
+ * `ActivateReply.responseParams` when `responseCode` is
+ * `serviceProviderErrorResponse`. Named values:
+ * `insufficientResources` (0), `providerDoesNotExist` (1),
+ * `providerNotAvailable` (2), `requiredServiceNotAvailable`
+ * (3). ITU-T Rec. X.722 (01/92)
+ * [A.3](https://www.itu.int/rec/T-REC-X.722-199201-I), A.7,
+ * A.10.
  *
  * ### ASN.1 Definition:
  *
