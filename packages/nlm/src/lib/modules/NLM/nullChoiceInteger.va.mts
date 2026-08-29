@@ -19,6 +19,11 @@ import {
  * @summary nullChoiceInteger
  * @description
  *
+ * `dontCare`. Default of `maxActiveCircuits`: no numeric cap; limited only by
+ * resources.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

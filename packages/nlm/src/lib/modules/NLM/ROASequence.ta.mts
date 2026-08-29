@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ROASequence
  * @description
  *
+ * Sequence of ROA (registered operating agency) numeric strings, each at most 4
+ * decimal digits; empty sequence permitted. Defined in §6.2; `rOASelection`
+ * uses `Boolean`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,11 @@ import { nloi } from '../NLM/nloi.va.mjs';
  * @summary agoi
  * @description
  *
+ * Attribute-group arc. Annex A allocates `{nloi attributeGroup(8)}` but lists
+ * no NLM-defined groups (state/counters come from DMI/GMI).
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.1](https://www.itu.int/rec/T-REC-X.283-199712-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  * @summary sNPADTEAddress
  * @description
  *
+ * `SNPAAddress.type` for an X.25 DTE address.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

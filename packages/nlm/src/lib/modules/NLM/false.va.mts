@@ -16,6 +16,11 @@ import {
  * @summary false_
  * @description
  *
+ * GDMO `DEFAULT VALUE` for `enableChecksum` on `cLNSChecksum-P` and
+ * `linkage-ISO9542Checksum-P` (checksum generation off).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

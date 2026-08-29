@@ -16,6 +16,15 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  * @summary pDUDiscard
  * @description
  *
+ * Parent `specificProblems` value for a cLNS `communicationsAlarm` when a data
+ * NPDU is discarded for any X.233 | ISO/IEC 8473-1 Table 7 reason except
+ * congestion. Reported together with the matching `pDUDiscard*` reason OID.
+ * Header via `notificationPDUHeader`; probableCause
+ * `communicationsProtocolError`; severity Minor; no Cleared follow-up. Not used
+ * for unknown protocol IDs.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

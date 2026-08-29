@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Boolean
  * @description
  *
+ * GDMO attribute syntax for X.2 facility flags, `enableChecksum`, and similar
+ * predicates.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.10.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

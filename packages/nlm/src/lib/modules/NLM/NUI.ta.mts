@@ -20,6 +20,11 @@ import {
  * @summary NUI
  * @description
  *
+ * Network User Identification (0..255 octets; see §4). Defined in §6.2;
+ * `nUISelection` uses `Boolean`, not this type.
+ * ITU-T Rec. X.283 (12/97)
+ * [§4](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

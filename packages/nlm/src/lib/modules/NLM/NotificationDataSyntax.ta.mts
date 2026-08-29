@@ -22,6 +22,12 @@ import {
  * @summary NotificationDataSyntax
  * @description
  *
+ * EVENT-INFO of parameter `notificationData`: call-related data on X.25 PLE/VC
+ * `communicationsAlarm`s (optional LCN, packet header, diagnostic and cause
+ * codes as in 8208/X.25).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,24 +44,49 @@ export class NotificationDataSyntax {
     constructor(
         /**
          * @summary `channel`.
+         * @description
+         *
+         * Logical channel of the call that caused the notification, when
+         * applicable.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly channel: OPTIONAL<LogicalChannelId>,
         /**
          * @summary `packetHeader`.
+         * @description
+         *
+         * Header of the X.25 packet related to the event.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly packetHeader: OCTET_STRING,
         /**
          * @summary `diagnosticCode`.
+         * @description
+         *
+         * X.25 diagnostic code from the packet.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly diagnosticCode: OCTET_STRING,
         /**
          * @summary `causeCode`.
+         * @description
+         *
+         * X.25 cause code from the packet.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

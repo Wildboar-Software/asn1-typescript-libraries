@@ -17,6 +17,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary HoldingTimerMultiplierPermitted
  * @description
  *
+ * PERMITTED VALUES of `holdingTimerMultiplier` (2..63).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

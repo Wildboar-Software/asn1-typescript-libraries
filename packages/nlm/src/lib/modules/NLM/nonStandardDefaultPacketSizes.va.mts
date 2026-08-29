@@ -16,6 +16,11 @@ import { aoi } from '../NLM/aoi.va.mjs';
  * @summary nonStandardDefaultPacketSizes
  * @description
  *
+ * Non-standard default packet sizes facility (X.2). Syntax `NonStandardDPS`
+ * (`subscription` plus optional supported/selected sizes).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

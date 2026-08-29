@@ -23,6 +23,12 @@ import {
  * @summary nullBidirectionalValues
  * @description
  *
+ * Both directions `dontCare`. Default of `defaultPacketSizes`,
+ * `defaultWindowSizes`, and `defaultThroughputClasses` (use the
+ * protocol/facility default, not an explicit size).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

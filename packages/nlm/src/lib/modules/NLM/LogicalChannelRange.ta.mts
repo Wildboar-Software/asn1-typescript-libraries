@@ -20,6 +20,11 @@ import {
  * @summary LogicalChannelRange
  * @description
  *
+ * Inclusive LCN range (`low` <= `high`). Incoming, two-way, and outgoing ranges
+ * in `logicalChannelAssignments`; absent range means no channels of that type.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +39,24 @@ export class LogicalChannelRange {
     constructor(
         /**
          * @summary `low`.
+         * @description
+         *
+         * Lowest LCN in the range; shall be <= `high`.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly low: LogicalChannelId,
         /**
          * @summary `high`.
+         * @description
+         *
+         * Highest LCN in the range.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

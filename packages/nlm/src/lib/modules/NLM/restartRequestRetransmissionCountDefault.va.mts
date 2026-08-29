@@ -16,6 +16,10 @@ import {
  * @summary restartRequestRetransmissionCountDefault
  * @description
  *
+ * Default R20 (restart request retransmission count).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

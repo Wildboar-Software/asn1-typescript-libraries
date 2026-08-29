@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ChoiceInteger
  * @description
  *
+ * `dontCare` is the ASN.1 "I don't care" value (NULL); `integer` is an explicit
+ * number. Used in `BidirectionalValues` and as `MaxActiveCircuits`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

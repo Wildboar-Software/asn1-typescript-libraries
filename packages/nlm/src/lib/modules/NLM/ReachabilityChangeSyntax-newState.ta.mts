@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReachabilityChangeSyntax_newState
  * @description
  *
+ * Neighbour reachability after the change: `down(0)` or `up(1)`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +38,10 @@ export enum _enum_for_ReachabilityChangeSyntax_newState {
  * @summary ReachabilityChangeSyntax_newState
  * @description
  *
+ * Neighbour reachability after the change: `down(0)` or `up(1)`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,6 +57,10 @@ export type ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSynt
  * @summary ReachabilityChangeSyntax_newState
  * @description
  *
+ * Neighbour reachability after the change: `down(0)` or `up(1)`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +74,12 @@ export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyn
 
 /**
  * @summary ReachabilityChangeSyntax_newState_down
+ * @description
+ *
+ * Neighbour is no longer reachable. Reason may be present.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +89,12 @@ export const ReachabilityChangeSyntax_newState_down: ReachabilityChangeSyntax_ne
 
 /**
  * @summary down
+ * @description
+ *
+ * Neighbour is no longer reachable. Reason may be present.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +104,12 @@ export const down: ReachabilityChangeSyntax_newState =
 
 /**
  * @summary ReachabilityChangeSyntax_newState_up
+ * @description
+ *
+ * Neighbour is reachable.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +119,12 @@ export const ReachabilityChangeSyntax_newState_up: ReachabilityChangeSyntax_newS
 
 /**
  * @summary up
+ * @description
+ *
+ * Neighbour is reachable.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */

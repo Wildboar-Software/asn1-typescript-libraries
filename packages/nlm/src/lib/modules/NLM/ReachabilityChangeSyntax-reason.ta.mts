@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ReachabilityChangeSyntax_reason
  * @description
  *
+ * Why reachability went down: holding timer expired, or circuit disabled.
+ * Present for Down only.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,11 @@ export enum _enum_for_ReachabilityChangeSyntax_reason {
  * @summary ReachabilityChangeSyntax_reason
  * @description
  *
+ * Why reachability went down: holding timer expired, or circuit disabled.
+ * Present for Down only.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,6 +59,11 @@ export type ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax
  * @summary ReachabilityChangeSyntax_reason
  * @description
  *
+ * Why reachability went down: holding timer expired, or circuit disabled.
+ * Present for Down only.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +77,12 @@ export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSynta
 
 /**
  * @summary ReachabilityChangeSyntax_reason_holdingTimerExpired
+ * @description
+ *
+ * ISO 9542 holding timer expired. Down only.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +92,12 @@ export const ReachabilityChangeSyntax_reason_holdingTimerExpired: ReachabilityCh
 
 /**
  * @summary holdingTimerExpired
+ * @description
+ *
+ * ISO 9542 holding timer expired. Down only.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +107,12 @@ export const holdingTimerExpired: ReachabilityChangeSyntax_reason =
 
 /**
  * @summary ReachabilityChangeSyntax_reason_circuitDisabled
+ * @description
+ *
+ * Circuit disabled. Down only.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +122,12 @@ export const ReachabilityChangeSyntax_reason_circuitDisabled: ReachabilityChange
 
 /**
  * @summary circuitDisabled
+ * @description
+ *
+ * Circuit disabled. Down only.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */

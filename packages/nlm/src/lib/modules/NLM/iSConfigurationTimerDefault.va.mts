@@ -20,6 +20,12 @@ import {
  * @summary iSConfigurationTimerDefault
  * @description
  *
+ * Default ISO 9542 IS configuration timer: GMI `Timer`
+ * `{exponent 0, mantissa 10}` (10 seconds). How often an IS reports
+ * configuration to ESs.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

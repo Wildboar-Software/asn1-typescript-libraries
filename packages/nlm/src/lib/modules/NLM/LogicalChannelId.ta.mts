@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LogicalChannelId
  * @description
  *
+ * X.25 logical channel (1..4095; 12-bit). Syntax of `logicalChannel` and
+ * `remoteLogicalChannel`; also PVC members of `logicalChannelAssignments`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

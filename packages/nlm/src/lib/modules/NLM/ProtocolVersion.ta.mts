@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ProtocolVersion
  * @description
  *
+ * Protocol version on a PLE or in `SupportedProtocol.versions`. Syntax of
+ * `protocolVersionSupported`. Enumerators: ISO/IEC 8208 v1/v2 and
+ * `x2584`/`x2588`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,6 +42,12 @@ export enum _enum_for_ProtocolVersion {
  * @summary ProtocolVersion
  * @description
  *
+ * Protocol version on a PLE or in `SupportedProtocol.versions`. Syntax of
+ * `protocolVersionSupported`. Enumerators: ISO/IEC 8208 v1/v2 and
+ * `x2584`/`x2588`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -51,6 +63,12 @@ export type ProtocolVersion = _enum_for_ProtocolVersion;
  * @summary ProtocolVersion
  * @description
  *
+ * Protocol version on a PLE or in `SupportedProtocol.versions`. Syntax of
+ * `protocolVersionSupported`. Enumerators: ISO/IEC 8208 v1/v2 and
+ * `x2584`/`x2588`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -64,6 +82,12 @@ export const ProtocolVersion = _enum_for_ProtocolVersion;
 
 /**
  * @summary ProtocolVersion_iSO8208V1
+ * @description
+ *
+ * ISO/IEC 8208 version 1.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +97,12 @@ export const ProtocolVersion_iSO8208V1: ProtocolVersion =
 
 /**
  * @summary iSO8208V1
+ * @description
+ *
+ * ISO/IEC 8208 version 1.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +112,12 @@ export const iSO8208V1: ProtocolVersion =
 
 /**
  * @summary ProtocolVersion_iSO8208V2
+ * @description
+ *
+ * ISO/IEC 8208 version 2.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +127,12 @@ export const ProtocolVersion_iSO8208V2: ProtocolVersion =
 
 /**
  * @summary iSO8208V2
+ * @description
+ *
+ * ISO/IEC 8208 version 2.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +142,12 @@ export const iSO8208V2: ProtocolVersion =
 
 /**
  * @summary ProtocolVersion_x2584
+ * @description
+ *
+ * Enumerator `x2584` as assigned in §6.2 for `protocolVersionSupported`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +157,12 @@ export const ProtocolVersion_x2584: ProtocolVersion =
 
 /**
  * @summary x2584
+ * @description
+ *
+ * Enumerator `x2584` as assigned in §6.2 for `protocolVersionSupported`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +172,12 @@ export const x2584: ProtocolVersion =
 
 /**
  * @summary ProtocolVersion_x2588
+ * @description
+ *
+ * Enumerator `x2588` as assigned in §6.2 for `protocolVersionSupported`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +187,12 @@ export const ProtocolVersion_x2588: ProtocolVersion =
 
 /**
  * @summary x2588
+ * @description
+ *
+ * Enumerator `x2588` as assigned in §6.2 for `protocolVersionSupported`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * @constant
  * @type {number}
  */

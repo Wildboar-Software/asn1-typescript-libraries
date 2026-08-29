@@ -16,6 +16,11 @@ import { nloi } from '../NLM/nloi.va.mjs';
  * @summary nboi
  * @description
  *
+ * Name-binding registrations (containment of NLM MOs under `system`,
+ * `networkEntity`, `cLNS`/`cONS`, `x25PLE`, …).
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.1](https://www.itu.int/rec/T-REC-X.283-199712-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

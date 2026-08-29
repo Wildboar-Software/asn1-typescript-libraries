@@ -26,6 +26,12 @@ import {
  * @summary LogicalChannelAssignments
  * @description
  *
+ * PLE logical-channel map: PVC set (cardinality 0..(LIC-1), values 1..(LIC-1)),
+ * then optional incoming, two-way, and outgoing ranges. No value in a set/range
+ * may be >= a value in a later range. Subject to 8208/X.25 §3.7.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -42,24 +48,49 @@ export class LogicalChannelAssignments {
     constructor(
         /**
          * @summary `pVC`.
+         * @description
+         *
+         * PVC channel identifiers. Cardinality 0..(LIC-1); each value in
+         * 1..(LIC-1).
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly pVC: LogicalChannelId[],
         /**
          * @summary `incoming`.
+         * @description
+         *
+         * Incoming-only LCN range. Absent ⇒ none assigned.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly incoming?: OPTIONAL<LogicalChannelRange>,
         /**
          * @summary `twoWay`.
+         * @description
+         *
+         * Two-way LCN range. Absent ⇒ none assigned.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly twoWay?: OPTIONAL<LogicalChannelRange>,
         /**
          * @summary `outgoing`.
+         * @description
+         *
+         * Outgoing-only LCN range. Absent ⇒ none assigned.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

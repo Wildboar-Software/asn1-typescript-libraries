@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PDUHeader
  * @description
  *
+ * Encoded PDU header (1..255 octets). Base type of `PDUFormatErrorSyntax` and
+ * of `PDUOtherErrorSyntax.header`. cLNS alarms use `OctetString`
+ * (`notificationPDUHeader`), not this constrained type.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

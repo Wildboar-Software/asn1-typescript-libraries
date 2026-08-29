@@ -25,6 +25,11 @@ import {
  * @summary LocalDistinguishedName
  * @description
  *
+ * CMIP `ObjectInstance` restricted to `localDistinguishedName`. Syntax of
+ * relationship attributes `sN-SAP`, `sN-ServiceProvider`, and `localNSAPMO`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

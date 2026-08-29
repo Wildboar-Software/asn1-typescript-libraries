@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SystemType
  * @description
  *
+ * Role of a protocol machine: End System (`eS`) or Intermediate System (`iS`).
+ * Syntax of `operationalSystemType`. ES shall not forward non-local PDUs; IS
+ * may forward according to routing information. Must be one of the superior
+ * `networkEntity`'s `systemTypes`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.4](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +41,13 @@ export enum _enum_for_SystemType {
  * @summary SystemType
  * @description
  *
+ * Role of a protocol machine: End System (`eS`) or Intermediate System (`iS`).
+ * Syntax of `operationalSystemType`. ES shall not forward non-local PDUs; IS
+ * may forward according to routing information. Must be one of the superior
+ * `networkEntity`'s `systemTypes`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.4](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,6 +63,13 @@ export type SystemType = _enum_for_SystemType;
  * @summary SystemType
  * @description
  *
+ * Role of a protocol machine: End System (`eS`) or Intermediate System (`iS`).
+ * Syntax of `operationalSystemType`. ES shall not forward non-local PDUs; IS
+ * may forward according to routing information. Must be one of the superior
+ * `networkEntity`'s `systemTypes`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.4](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.6.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +83,12 @@ export const SystemType = _enum_for_SystemType;
 
 /**
  * @summary SystemType_eS
+ * @description
+ *
+ * End System: shall not forward non-local PDUs.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +98,12 @@ export const SystemType_eS: SystemType =
 
 /**
  * @summary eS
+ * @description
+ *
+ * End System: shall not forward non-local PDUs.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +112,12 @@ export const eS: SystemType = SystemType.eS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemType_iS
+ * @description
+ *
+ * Intermediate System: may forward according to routing information.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +127,12 @@ export const SystemType_iS: SystemType =
 
 /**
  * @summary iS
+ * @description
+ *
+ * Intermediate System: may forward according to routing information.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */

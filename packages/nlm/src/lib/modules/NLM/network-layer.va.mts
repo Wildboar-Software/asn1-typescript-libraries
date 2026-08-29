@@ -17,6 +17,11 @@ import {
  * @summary network_layer
  * @description
  *
+ * Root of Network-layer OIDs: `{joint-iso-itu-t network-layer(13)}` (written
+ * `joint-iso-ccitt` in the Recommendation).
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.1](https://www.itu.int/rec/T-REC-X.283-199712-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -22,6 +22,14 @@ import {
  * @summary DTEAddress
  * @description
  *
+ * Full DTE address (X.121, E.164, or unknown numbering plan) plus digits.
+ * Syntax of `localDTEAddress`, `remoteDTEAddress`, and
+ * `originallyCalledAddress`. For an outgoing call, remote is the called address
+ * of the transmitted call request; for incoming, the calling address of the
+ * received call request.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -36,12 +44,24 @@ export class DTEAddress {
     constructor(
         /**
          * @summary `numberingPlanId`.
+         * @description
+         *
+         * Numbering plan: unknown, X.121, or E.164.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly numberingPlanId: DTEAddress_numberingPlanId,
         /**
          * @summary `addressDigits`.
+         * @description
+         *
+         * Address digits in that numbering plan.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

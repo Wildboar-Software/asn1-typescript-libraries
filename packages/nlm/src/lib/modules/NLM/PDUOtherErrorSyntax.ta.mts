@@ -21,6 +21,11 @@ import {
  * @summary PDUOtherErrorSyntax
  * @description
  *
+ * PDU header plus an error code (0..255). Defined in §6.2; X.283 GDMO does not
+ * bind it to a published template.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +40,24 @@ export class PDUOtherErrorSyntax {
     constructor(
         /**
          * @summary `errorCode`.
+         * @description
+         *
+         * Error code (0..255). Meaning is not further specified in X.283.
+         * ITU-T Rec. X.283 (12/97)
+         * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly errorCode: INTEGER,
         /**
          * @summary `header`.
+         * @description
+         *
+         * Header of the PDU in error.
+         * ITU-T Rec. X.283 (12/97)
+         * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

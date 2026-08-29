@@ -16,6 +16,12 @@ import { aoi } from '../NLM/aoi.va.mjs';
  * @summary flowControlParameterNegotiation
  * @description
  *
+ * Flow-control parameter negotiation (X.2). When `true`, window and packet size
+ * may be specified in call request/accept packets. When `false`, those fields
+ * shall be omitted; IVMO or internal values are ignored. Syntax `Boolean`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,11 @@ import { nloi } from '../NLM/nloi.va.mjs';
  * @summary proi
  * @description
  *
+ * Notification parameter registrations: `notificationPDUHeader(1)`,
+ * `notificationData(7)`, `reachabilityChange(12)`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.1](https://www.itu.int/rec/T-REC-X.283-199712-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,11 @@ import { nloi } from '../NLM/nloi.va.mjs';
  * @summary sseoi
  * @description
  *
+ * Standard-specific extensions: `specificProblems`, `informationtype`, and
+ * `sNPAAddressType` values used in notifications.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.1](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

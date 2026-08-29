@@ -16,6 +16,10 @@ import { network_layer } from '../NLM/network-layer.va.mjs';
  * @summary nl
  * @description
  *
+ * Network-layer management arc `{network-layer management(0)}`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.1](https://www.itu.int/rec/T-REC-X.283-199712-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

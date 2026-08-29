@@ -17,6 +17,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Lifetime
  * @description
  *
+ * Maximum PDU lifetime in half-seconds (1..255) placed in the lifetime field of
+ * locally generated X.233 | ISO/IEC 8473-1 data or error-report PDUs. Does not
+ * constrain relayed PDUs. A PDU may use a smaller value, never a larger one.
+ * Syntax of `maximumLifetime`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

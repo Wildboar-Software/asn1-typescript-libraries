@@ -23,6 +23,12 @@ import {
  * @summary SupportedProtocol
  * @description
  *
+ * One Network-layer protocol: registered OID of the International Standard
+ * (unless several protocols share a Standard), versions in use, and optional
+ * defect-repair OIDs.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +44,37 @@ export class SupportedProtocol {
     constructor(
         /**
          * @summary `protocol`.
+         * @description
+         *
+         * Registered OID of the International Standard that specifies the
+         * protocol (unless several protocols share one Standard).
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
          * @summary `versions`.
+         * @description
+         *
+         * Protocol versions supported or in operation.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly versions: ProtocolVersion[],
         /**
          * @summary `defectsRepaired`.
+         * @description
+         *
+         * Optional OIDs identifying implemented defect repairs.
+         * ITU-T Rec. X.283 (12/97)
+         * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

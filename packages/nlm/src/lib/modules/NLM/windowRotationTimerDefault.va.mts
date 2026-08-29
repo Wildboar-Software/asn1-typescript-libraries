@@ -16,6 +16,11 @@ import {
  * @summary windowRotationTimerDefault
  * @description
  *
+ * Default T25 (window rotation) in seconds. On
+ * `transmittingWindowRotationRecoveryProcedures-P` (8208/X.25 §11.2.1).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

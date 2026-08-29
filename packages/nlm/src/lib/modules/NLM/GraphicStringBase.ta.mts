@@ -17,6 +17,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GraphicStringBase
  * @description
  *
+ * Naming-attribute syntax (`linkageId`, `x25PLEId`, `x25PLEIVMOId`,
+ * `virtualCircuitId`, `dSeriesId`, …).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.10, §5.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

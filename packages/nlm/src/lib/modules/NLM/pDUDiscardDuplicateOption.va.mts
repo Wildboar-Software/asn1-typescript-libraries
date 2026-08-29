@@ -16,6 +16,11 @@ import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
  * @summary pDUDiscardDuplicateOption
  * @description
  *
+ * X.233 | ISO/IEC 8473-1 Table 7 Reason for Discard code 7. Paired with
+ * `pDUDiscard` in `specificProblems`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.1.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,10 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  * @summary sNPAMACAddress
  * @description
  *
+ * `SNPAAddress.type` for a MAC address.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

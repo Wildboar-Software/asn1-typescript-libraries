@@ -20,6 +20,11 @@ import {
  * @summary LocalDistinguishedNames
  * @description
  *
+ * Set of local distinguished names. Defined in §6.2; X.283 GDMO uses the
+ * singular `LocalDistinguishedName` for relationship attributes.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,11 @@ import { nl } from '../NLM/nl.va.mjs';
  * @summary nloi
  * @description
  *
+ * NLM module root `{nl nLM(2)}`. All NLM GDMO registrations and this ASN.1
+ * module hang under this arc.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.1](https://www.itu.int/rec/T-REC-X.283-199712-I), Annex A.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

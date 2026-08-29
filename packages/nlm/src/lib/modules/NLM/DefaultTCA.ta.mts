@@ -23,6 +23,13 @@ import {
  * @summary DefaultTCA
  * @description
  *
+ * Default throughput classes assignment facility (X.2). Syntax of
+ * `defaultThroughputClassesAssignment`. `subscription` is the X.2 boolean;
+ * optional supported/selected classes. The ASN.1 field is
+ * `supportedThroughClasses` as published in §6.2.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -38,18 +45,38 @@ export class DefaultTCA {
     constructor(
         /**
          * @summary `subscription`.
+         * @description
+         *
+         * `true` if the X.2 default throughput classes assignment facility is
+         * subscribed.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly subscription: BOOLEAN,
         /**
          * @summary `supportedThroughClasses`.
+         * @description
+         *
+         * Throughput classes this PLE supports. Field name as in §6.2 (not
+         * `supportedThroughputClasses`).
+         * ITU-T Rec. X.283 (12/97)
+         * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly supportedThroughClasses?: OPTIONAL<INTEGER[]>,
         /**
          * @summary `selectedThroughputClasses`.
+         * @description
+         *
+         * Selected default throughput classes (incoming/outgoing).
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

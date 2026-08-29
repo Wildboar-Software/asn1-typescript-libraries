@@ -20,6 +20,14 @@ import {
  * @summary BidirectionalValues
  * @description
  *
+ * Incoming and outgoing numeric parameters (packet size, window size,
+ * throughput class). Each side is `ChoiceInteger`; `dontCare` means the
+ * protocol or facility default. Syntax of `defaultPacketSizes`,
+ * `defaultWindowSizes`, `defaultThroughputClasses`, `packetSizes`,
+ * `windowSizes`, and `throughputClasses`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.11.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,12 +42,27 @@ export class BidirectionalValues {
     constructor(
         /**
          * @summary `incoming`.
+         * @description
+         *
+         * Value applying to the incoming direction. `dontCare` means use the
+         * protocol/facility default (128-octet packets, window 2, or normal
+         * throughput class, depending on the attribute).
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly incoming: ChoiceInteger,
         /**
          * @summary `outgoing`.
+         * @description
+         *
+         * Value applying to the outgoing direction. Same `dontCare` convention
+         * as `incoming`.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

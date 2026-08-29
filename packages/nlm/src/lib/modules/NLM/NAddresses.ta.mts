@@ -20,6 +20,12 @@ import {
  * @summary NAddresses
  * @description
  *
+ * Set of `NAddress`. Syntax of `networkEntityTitles`: NETs that unambiguously
+ * identify the Network Entity; may be set by management or derived locally
+ * (e.g. autoconfiguration).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.4](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import { aoi } from '../NLM/aoi.va.mjs';
  * @summary packetRetransmission
  * @description
  *
+ * Packet retransmission facility (X.2). `true` = subscribed. If not subscribed,
+ * reject timer/count attributes have NULL values. Syntax `Boolean`. Conditional
+ * package `packetRetransmissionProcedures-P` (8208/X.25 §13.4).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,6 +16,12 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  * @summary iSReachabilityChange
  * @description
  *
+ * `informationType` of GMI `communicationsInformation` when an ES or IS detects
+ * a change in reachability of a neighbouring IS. `informationData` is
+ * `ReachabilityChangeSyntax` (new state, NET, optional SNPA, optional reason).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

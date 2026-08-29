@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Direction
  * @description
  *
+ * Call direction. Syntax of `direction` on a virtual call.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.11](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +38,10 @@ export enum _enum_for_Direction {
  * @summary Direction
  * @description
  *
+ * Call direction. Syntax of `direction` on a virtual call.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.11](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -49,6 +57,10 @@ export type Direction = _enum_for_Direction;
  * @summary Direction
  * @description
  *
+ * Call direction. Syntax of `direction` on a virtual call.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.11](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -62,6 +74,12 @@ export const Direction = _enum_for_Direction;
 
 /**
  * @summary Direction_incoming
+ * @description
+ *
+ * Incoming call.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.11](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +89,12 @@ export const Direction_incoming: Direction =
 
 /**
  * @summary incoming
+ * @description
+ *
+ * Incoming call.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.11](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +104,12 @@ export const incoming: Direction =
 
 /**
  * @summary Direction_outgoing
+ * @description
+ *
+ * Outgoing call.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.11](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +119,12 @@ export const Direction_outgoing: Direction =
 
 /**
  * @summary outgoing
+ * @description
+ *
+ * Outgoing call.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.11](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */

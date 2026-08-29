@@ -21,6 +21,11 @@ import {
  * @summary SystemTypes
  * @description
  *
+ * Set of roles supported by a Network Entity (ES, IS, or both). Syntax of
+ * `systemTypes`. The role in use is `operationalSystemType` on cLNS/cONS.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.4](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

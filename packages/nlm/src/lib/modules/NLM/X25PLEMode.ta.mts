@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary X25PLEMode
  * @description
  *
+ * DCE/DTE mode of an X.25 PLE: (0) DTE for both X.25 and 8208, (1) DCE for X.25
+ * only, (2) DTE acting as DCE for 8208 only. Syntax of `x25PLEMode`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +40,11 @@ export enum _enum_for_X25PLEMode {
  * @summary X25PLEMode
  * @description
  *
+ * DCE/DTE mode of an X.25 PLE: (0) DTE for both X.25 and 8208, (1) DCE for X.25
+ * only, (2) DTE acting as DCE for 8208 only. Syntax of `x25PLEMode`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +60,11 @@ export type X25PLEMode = _enum_for_X25PLEMode;
  * @summary X25PLEMode
  * @description
  *
+ * DCE/DTE mode of an X.25 PLE: (0) DTE for both X.25 and 8208, (1) DCE for X.25
+ * only, (2) DTE acting as DCE for 8208 only. Syntax of `x25PLEMode`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +78,12 @@ export const X25PLEMode = _enum_for_X25PLEMode;
 
 /**
  * @summary X25PLEMode_dTE
+ * @description
+ *
+ * DTE mode (X.25 and ISO/IEC 8208).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +93,12 @@ export const X25PLEMode_dTE: X25PLEMode =
 
 /**
  * @summary dTE
+ * @description
+ *
+ * DTE mode (X.25 and ISO/IEC 8208).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +108,12 @@ export const dTE: X25PLEMode =
 
 /**
  * @summary X25PLEMode_dCE
+ * @description
+ *
+ * DCE mode (ITU-T X.25 only).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +123,12 @@ export const X25PLEMode_dCE: X25PLEMode =
 
 /**
  * @summary dCE
+ * @description
+ *
+ * DCE mode (ITU-T X.25 only).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +138,12 @@ export const dCE: X25PLEMode =
 
 /**
  * @summary X25PLEMode_dTEasDCE
+ * @description
+ *
+ * DTE acting as DCE (ISO/IEC 8208 only).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +153,12 @@ export const X25PLEMode_dTEasDCE: X25PLEMode =
 
 /**
  * @summary dTEasDCE
+ * @description
+ *
+ * DTE acting as DCE (ISO/IEC 8208 only).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */

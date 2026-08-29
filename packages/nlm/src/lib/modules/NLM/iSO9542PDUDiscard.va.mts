@@ -16,6 +16,13 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  * @summary iSO9542PDUDiscard
  * @description
  *
+ * `specificProblems` of a linkage `communicationsAlarm` when an ISO 9542 PDU is
+ * discarded by header-error detection or protocol error processing.
+ * probableCause `communicationsProtocolError`; severity Minor; no Cleared
+ * follow-up. Counted by `invalid9542PDUs`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

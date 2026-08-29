@@ -16,6 +16,11 @@ import {
  * @summary cLNSId_Value
  * @description
  *
+ * Initial `clProtocolMachineId` of a `cLNS` MO: `"CLNS"`. At most one cLNS per
+ * network entity.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

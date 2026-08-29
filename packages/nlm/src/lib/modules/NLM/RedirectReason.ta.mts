@@ -17,6 +17,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary RedirectReason
  * @description
  *
+ * Why a call was offered or connected to an address other than the originally
+ * called address: first octet of the CRCDN or CLAMN facility parameter field. 0
+ * means the call was not redirected. Syntax of `redirectReason`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.11](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

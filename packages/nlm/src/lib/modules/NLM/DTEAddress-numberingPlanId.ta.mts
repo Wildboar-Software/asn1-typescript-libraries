@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DTEAddress_numberingPlanId
  * @description
  *
+ * Numbering plan of a `DTEAddress`: unknown, X.121, or E.164.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +39,10 @@ export enum _enum_for_DTEAddress_numberingPlanId {
  * @summary DTEAddress_numberingPlanId
  * @description
  *
+ * Numbering plan of a `DTEAddress`: unknown, X.121, or E.164.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +58,10 @@ export type DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
  * @summary DTEAddress_numberingPlanId
  * @description
  *
+ * Numbering plan of a `DTEAddress`: unknown, X.121, or E.164.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I), §6.2.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +75,12 @@ export const DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
 
 /**
  * @summary DTEAddress_numberingPlanId_unknown
+ * @description
+ *
+ * Numbering plan not identified.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +90,12 @@ export const DTEAddress_numberingPlanId_unknown: DTEAddress_numberingPlanId =
 
 /**
  * @summary unknown
+ * @description
+ *
+ * Numbering plan not identified.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +105,12 @@ export const unknown: DTEAddress_numberingPlanId =
 
 /**
  * @summary DTEAddress_numberingPlanId_x121
+ * @description
+ *
+ * ITU-T X.121 numbering plan.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +120,12 @@ export const DTEAddress_numberingPlanId_x121: DTEAddress_numberingPlanId =
 
 /**
  * @summary x121
+ * @description
+ *
+ * ITU-T X.121 numbering plan.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +135,12 @@ export const x121: DTEAddress_numberingPlanId =
 
 /**
  * @summary DTEAddress_numberingPlanId_e164
+ * @description
+ *
+ * ITU-T E.164 numbering plan.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +150,12 @@ export const DTEAddress_numberingPlanId_e164: DTEAddress_numberingPlanId =
 
 /**
  * @summary e164
+ * @description
+ *
+ * ITU-T E.164 numbering plan.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * @constant
  * @type {number}
  */

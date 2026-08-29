@@ -16,6 +16,12 @@ import {
  * @summary networkSubsystemId_Value
  * @description
  *
+ * Initial `subsystemId` of the single `networkSubsystem` MO:
+ * `"NetworkSubsystem"`. That class is the container for network entity, nSAP,
+ * and SNPA MOs; it is not created or deleted by management.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.3](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

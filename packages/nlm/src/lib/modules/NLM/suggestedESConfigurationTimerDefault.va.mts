@@ -20,6 +20,11 @@ import {
  * @summary suggestedESConfigurationTimerDefault
  * @description
  *
+ * Default suggested ES configuration timer advertised in IS hellos: GMI `Timer`
+ * `{exponent 0, mantissa 600}` (600 seconds).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

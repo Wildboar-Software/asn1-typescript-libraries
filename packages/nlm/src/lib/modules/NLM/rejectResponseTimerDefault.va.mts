@@ -16,6 +16,11 @@ import {
  * @summary rejectResponseTimerDefault
  * @description
  *
+ * Default T27 (reject response) in seconds. On
+ * `packetRetransmissionProcedures-P`.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

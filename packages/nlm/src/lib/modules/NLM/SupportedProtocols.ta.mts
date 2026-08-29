@@ -20,6 +20,12 @@ import {
  * @summary SupportedProtocols
  * @description
  *
+ * Set of `SupportedProtocol`. Syntax of `supportedProtocols` (cLNS capability,
+ * implementation-determined) and `operationalProtocols` (protocols actually
+ * used on a linkage).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

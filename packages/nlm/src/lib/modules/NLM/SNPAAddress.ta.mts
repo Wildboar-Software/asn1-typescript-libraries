@@ -18,6 +18,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SNPAAddress
  * @description
  *
+ * Subnetwork Point of Attachment: `type` is an NLM `sNPAAddressType` OID
+ * (`sNPADTEAddress` or `sNPAMACAddress`); `address` is the SNPA encoding.
+ * ITU-T Rec. X.283 (12/97)
+ * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.7.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,12 +37,24 @@ export class SNPAAddress {
     constructor(
         /**
          * @summary `type_`.
+         * @description
+         *
+         * SNPA encoding kind: `sNPADTEAddress` or `sNPAMACAddress`.
+         * ITU-T Rec. X.283 (12/97)
+         * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly type_: OBJECT_IDENTIFIER,
         /**
          * @summary `address`.
+         * @description
+         *
+         * SNPA value in the encoding identified by `type`.
+         * ITU-T Rec. X.283 (12/97)
+         * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

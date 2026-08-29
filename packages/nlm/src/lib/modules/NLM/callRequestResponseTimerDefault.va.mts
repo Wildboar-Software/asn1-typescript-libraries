@@ -16,6 +16,11 @@ import {
  * @summary callRequestResponseTimerDefault
  * @description
  *
+ * Default T21 (call request response) in seconds. Used as `DEFAULT VALUE` of
+ * `callRequestResponseTimer` on x25PLE-DTE / DCE.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

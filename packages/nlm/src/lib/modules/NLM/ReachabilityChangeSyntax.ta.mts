@@ -38,6 +38,12 @@ import {
  * @summary ReachabilityChangeSyntax
  * @description
  *
+ * EVENT-INFO of parameter `reachabilityChange` on ISO 9542
+ * `communicationsInformation`. Carries new state, addresses of the neighbour,
+ * optional SNPA, and optional reason (Down only).
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -55,24 +61,50 @@ export class ReachabilityChangeSyntax {
     constructor(
         /**
          * @summary `newState`.
+         * @description
+         *
+         * Reachability after the change (`down` or `up`).
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly newState: ReachabilityChangeSyntax_newState,
         /**
          * @summary `nAddresses`.
+         * @description
+         *
+         * For an IS change: NET of that IS. For an ES change: NSAP addresses of
+         * that ES.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly nAddresses: NAddress[],
         /**
          * @summary `sNPAAddress`.
+         * @description
+         *
+         * SNPA of the neighbour, when available.
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */
         readonly sNPAAddress?: OPTIONAL<SNPAAddress>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * `holdingTimerExpired` or `circuitDisabled`. Present only when
+         * `newState` is `down` (§6.2 "Down only").
+         * ITU-T Rec. X.283 (12/97)
+         * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+         *
          * @public
          * @readonly
          */

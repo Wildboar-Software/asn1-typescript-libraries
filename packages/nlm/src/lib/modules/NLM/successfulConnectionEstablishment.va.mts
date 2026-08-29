@@ -16,6 +16,12 @@ import { sseoi } from '../NLM/sseoi.va.mjs';
  * @summary successfulConnectionEstablishment
  * @description
  *
+ * `informationType` of GMI `communicationsInformation` when a connection is
+ * successfully established. Timing vs protocol/service interactions is not
+ * defined here. Used from `networkConnection` and virtual-call MOs.
+ * ITU-T Rec. X.283 (12/97)
+ * [§5.2](https://www.itu.int/rec/T-REC-X.283-199712-I), §5.9.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
