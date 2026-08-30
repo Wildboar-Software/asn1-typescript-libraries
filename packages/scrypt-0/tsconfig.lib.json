@@ -9,6 +9,12 @@
     ],
     "rootDir": "."
   },
-  "exclude": ["**/*.spec.mts"],
+  "exclude": [
+    "**/*.spec.mts",
+    "vite.config.ts",
+    "vite.config.mts",
+    "vitest.config.ts",
+    "vitest.config.mts"
+  ],
   "include": ["**/*.mts"]
 }
