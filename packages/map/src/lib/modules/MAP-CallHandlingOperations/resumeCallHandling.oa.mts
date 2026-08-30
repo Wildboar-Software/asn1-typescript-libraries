@@ -69,21 +69,13 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ResumeCallHandlingArg, _decode_ResumeCallHandlingArg, _encode_ResumeCallHandlingArg } from "../MAP-CH-DataTypes/ResumeCallHandlingArg.ta.mjs";
-// export { ResumeCallHandlingArg, _decode_ResumeCallHandlingArg, _encode_ResumeCallHandlingArg } from "../MAP-CH-DataTypes/ResumeCallHandlingArg.ta.mjs";
 import { ResumeCallHandlingRes, _decode_ResumeCallHandlingRes, _encode_ResumeCallHandlingRes } from "../MAP-CH-DataTypes/ResumeCallHandlingRes.ta.mjs";
-// export { ResumeCallHandlingRes, _decode_ResumeCallHandlingRes, _encode_ResumeCallHandlingRes } from "../MAP-CH-DataTypes/ResumeCallHandlingRes.ta.mjs";
 import { forwardingFailed } from "../MAP-Errors/forwardingFailed.oa.mjs";
-// export { forwardingFailed } from "../MAP-Errors/forwardingFailed.oa.mjs";
 import { or_NotAllowed } from "../MAP-Errors/or-NotAllowed.oa.mjs";
-// export { or_NotAllowed } from "../MAP-Errors/or-NotAllowed.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 
 
 /**

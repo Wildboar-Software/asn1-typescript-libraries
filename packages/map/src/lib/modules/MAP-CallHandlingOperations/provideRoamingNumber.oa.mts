@@ -69,27 +69,16 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ProvideRoamingNumberArg, _decode_ProvideRoamingNumberArg, _encode_ProvideRoamingNumberArg } from "../MAP-CH-DataTypes/ProvideRoamingNumberArg.ta.mjs";
-// export { ProvideRoamingNumberArg, _decode_ProvideRoamingNumberArg, _encode_ProvideRoamingNumberArg } from "../MAP-CH-DataTypes/ProvideRoamingNumberArg.ta.mjs";
 import { ProvideRoamingNumberRes, _decode_ProvideRoamingNumberRes, _encode_ProvideRoamingNumberRes } from "../MAP-CH-DataTypes/ProvideRoamingNumberRes.ta.mjs";
-// export { ProvideRoamingNumberRes, _decode_ProvideRoamingNumberRes, _encode_ProvideRoamingNumberRes } from "../MAP-CH-DataTypes/ProvideRoamingNumberRes.ta.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
-// export { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
 import { or_NotAllowed } from "../MAP-Errors/or-NotAllowed.oa.mjs";
-// export { or_NotAllowed } from "../MAP-Errors/or-NotAllowed.oa.mjs";
 import { absentSubscriber } from "../MAP-Errors/absentSubscriber.oa.mjs";
-// export { absentSubscriber } from "../MAP-Errors/absentSubscriber.oa.mjs";
 import { noRoamingNumberAvailable } from "../MAP-Errors/noRoamingNumberAvailable.oa.mjs";
-// export { noRoamingNumberAvailable } from "../MAP-Errors/noRoamingNumberAvailable.oa.mjs";
 
 
 /**
