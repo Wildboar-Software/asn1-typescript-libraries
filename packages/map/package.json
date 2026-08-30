@@ -2,6 +2,13 @@
     "name": "@wildboar/map",
     "type": "module",
     "version": "1.0.0",
+    "description": "MAP (Mobile Application Part) ASN.1 types and values in TypeScript",
+    "keywords": [
+        "gsm",
+        "ss7",
+        "map",
+        "mobile"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
