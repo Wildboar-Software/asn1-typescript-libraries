@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HLR_Id, _decode_HLR_Id, _encode_HLR_Id } from "../MAP-CommonDataTypes/HLR-Id.ta.mjs";
-// export { HLR_Id, _decode_HLR_Id, _encode_HLR_Id } from "../MAP-CommonDataTypes/HLR-Id.ta.mjs";
 
+
+import { maxNumOfHLR_Id } from "./maxNumOfHLR-Id.va.mjs";
 
 /**
  * @summary HLR_List
@@ -95,7 +97,11 @@ let _cached_decoder_for_HLR_List: $.ASN1Decoder<HLR_List> | null = null;
 export
 function _decode_HLR_List (el: _Element): HLR_List {
     if (!_cached_decoder_for_HLR_List) { _cached_decoder_for_HLR_List = $._decodeSequenceOf<HLR_Id>(() => _decode_HLR_Id); }
-    return _cached_decoder_for_HLR_List(el);
+    const value = _cached_decoder_for_HLR_List(el);
+    if (value.length < 1 || value.length > maxNumOfHLR_Id) {
+        throw new ASN1SizeError("HLR_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_HLR_List: $.ASN1Encoder<HLR_List> | null = null;

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class LCSClientExternalID {
  */
 export
 const _root_component_type_list_1_spec_for_LCSClientExternalID: $.ComponentSpec[] = [
-    new $.ComponentSpec("externalAddress", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("externalAddress", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_LCSClientExternalID: $.ASN1Decoder<LCSClientExternalID> 
 export
 function _decode_LCSClientExternalID (el: _Element): LCSClientExternalID {
     if (!_cached_decoder_for_LCSClientExternalID) { _cached_decoder_for_LCSClientExternalID = function (el: _Element): LCSClientExternalID {
-    let externalAddress: OPTIONAL<ISDN_AddressString>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let externalAddress: OPTIONAL<ISDN_AddressString> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "externalAddress": (_el: _Element): void => { externalAddress = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }

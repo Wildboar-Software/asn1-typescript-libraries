@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
-// export { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
 import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
-// export { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
-// export { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -182,13 +176,13 @@ class RemoteUserFreeArg {
  */
 export
 const _root_component_type_list_1_spec_for_RemoteUserFreeArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("callInfo", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ccbs-Feature", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("translatedB-Number", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("replaceB-Number", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callInfo", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ccbs-Feature", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("translatedB-Number", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("replaceB-Number", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6))
 ];
 
 /**
@@ -232,10 +226,10 @@ function _decode_RemoteUserFreeArg (el: _Element): RemoteUserFreeArg {
     let callInfo!: ExternalSignalInfo;
     let ccbs_Feature!: CCBS_Feature;
     let translatedB_Number!: ISDN_AddressString;
-    let replaceB_Number: OPTIONAL<NULL>;
-    let alertingPattern: OPTIONAL<AlertingPattern>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let replaceB_Number: OPTIONAL<NULL> = undefined;
+    let alertingPattern: OPTIONAL<AlertingPattern> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "callInfo": (_el: _Element): void => { callInfo = $._decode_implicit<ExternalSignalInfo>(() => _decode_ExternalSignalInfo)(_el); },

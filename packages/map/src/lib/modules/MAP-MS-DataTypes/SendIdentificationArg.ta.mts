@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TMSI, _decode_TMSI, _encode_TMSI } from "../MAP-CommonDataTypes/TMSI.ta.mjs";
-// export { TMSI, _decode_TMSI, _encode_TMSI } from "../MAP-CommonDataTypes/TMSI.ta.mjs";
 import { NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_NumberOfRequestedVectors } from "../MAP-MS-DataTypes/NumberOfRequestedVectors.ta.mjs";
-// export { NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_NumberOfRequestedVectors } from "../MAP-MS-DataTypes/NumberOfRequestedVectors.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
-// export { LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
 import { HopCounter, _decode_HopCounter, _encode_HopCounter } from "../MAP-MS-DataTypes/HopCounter.ta.mjs";
-// export { HopCounter, _decode_HopCounter, _encode_HopCounter } from "../MAP-MS-DataTypes/HopCounter.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 
 
 /**
@@ -208,10 +201,10 @@ class SendIdentificationArg {
  */
 export
 const _root_component_type_list_1_spec_for_SendIdentificationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("tmsi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("numberOfRequestedVectors", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("segmentationProhibited", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("tmsi", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("numberOfRequestedVectors", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("segmentationProhibited", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -237,12 +230,12 @@ const _root_component_type_list_2_spec_for_SendIdentificationArg: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_SendIdentificationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("msc-Number", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("previous-LAI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("hopCounter", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mtRoamingForwardingSupported", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("newVLR-Number", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("new-lmsi", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("msc-Number", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("previous-LAI", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("hopCounter", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mtRoamingForwardingSupported", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("newVLR-Number", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("new-lmsi", true, $.hasTag(_TagClass.context, 4))
 ];
 
 let _cached_decoder_for_SendIdentificationArg: $.ASN1Decoder<SendIdentificationArg> | null = null;
@@ -257,16 +250,16 @@ export
 function _decode_SendIdentificationArg (el: _Element): SendIdentificationArg {
     if (!_cached_decoder_for_SendIdentificationArg) { _cached_decoder_for_SendIdentificationArg = function (el: _Element): SendIdentificationArg {
     let tmsi!: TMSI;
-    let numberOfRequestedVectors: OPTIONAL<NumberOfRequestedVectors>;
-    let segmentationProhibited: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let msc_Number: OPTIONAL<ISDN_AddressString>;
-    let previous_LAI: OPTIONAL<LAIFixedLength>;
-    let hopCounter: OPTIONAL<HopCounter>;
-    let mtRoamingForwardingSupported: OPTIONAL<NULL>;
-    let newVLR_Number: OPTIONAL<ISDN_AddressString>;
-    let new_lmsi: OPTIONAL<LMSI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let numberOfRequestedVectors: OPTIONAL<NumberOfRequestedVectors> = undefined;
+    let segmentationProhibited: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let msc_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let previous_LAI: OPTIONAL<LAIFixedLength> = undefined;
+    let hopCounter: OPTIONAL<HopCounter> = undefined;
+    let mtRoamingForwardingSupported: OPTIONAL<NULL> = undefined;
+    let newVLR_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let new_lmsi: OPTIONAL<LMSI> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tmsi": (_el: _Element): void => { tmsi = _decode_TMSI(_el); },
         "numberOfRequestedVectors": (_el: _Element): void => { numberOfRequestedVectors = _decode_NumberOfRequestedVectors(_el); },

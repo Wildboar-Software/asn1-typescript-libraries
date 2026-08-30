@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction, PrivacyCheckRelatedAction_allowedWithoutNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedWithoutNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_allowedWithNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedWithNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_allowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_restrictedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_notAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PrivacyCheckRelatedAction, _encode_PrivacyCheckRelatedAction } from "../MAP-LCS-DataTypes/PrivacyCheckRelatedAction.ta.mjs";
-// export { PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction, PrivacyCheckRelatedAction_allowedWithoutNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedWithoutNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_allowedWithNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedWithNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_allowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_restrictedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_notAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PrivacyCheckRelatedAction, _encode_PrivacyCheckRelatedAction } from "../MAP-LCS-DataTypes/PrivacyCheckRelatedAction.ta.mjs";
 
 
 /**
@@ -149,8 +148,8 @@ class LCS_PrivacyCheck {
  */
 export
 const _root_component_type_list_1_spec_for_LCS_PrivacyCheck: $.ComponentSpec[] = [
-    new $.ComponentSpec("callSessionUnrelated", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("callSessionRelated", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("callSessionUnrelated", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callSessionRelated", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -191,8 +190,8 @@ export
 function _decode_LCS_PrivacyCheck (el: _Element): LCS_PrivacyCheck {
     if (!_cached_decoder_for_LCS_PrivacyCheck) { _cached_decoder_for_LCS_PrivacyCheck = function (el: _Element): LCS_PrivacyCheck {
     let callSessionUnrelated!: PrivacyCheckRelatedAction;
-    let callSessionRelated: OPTIONAL<PrivacyCheckRelatedAction>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let callSessionRelated: OPTIONAL<PrivacyCheckRelatedAction> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callSessionUnrelated": (_el: _Element): void => { callSessionUnrelated = $._decode_implicit<PrivacyCheckRelatedAction>(() => _decode_PrivacyCheckRelatedAction)(_el); },
         "callSessionRelated": (_el: _Element): void => { callSessionRelated = $._decode_implicit<PrivacyCheckRelatedAction>(() => _decode_PrivacyCheckRelatedAction)(_el); }

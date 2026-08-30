@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { ReportingPLMNList, _decode_ReportingPLMNList, _encode_ReportingPLMNList } from "../MAP-LCS-DataTypes/ReportingPLMNList.ta.mjs";
-// export { ReportingPLMNList, _decode_ReportingPLMNList, _encode_ReportingPLMNList } from "../MAP-LCS-DataTypes/ReportingPLMNList.ta.mjs";
 import { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
-// export { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
 
 
 /**
@@ -180,7 +175,7 @@ class SubscriberLocationReport_Res {
  */
 export
 const _root_component_type_list_1_spec_for_SubscriberLocationReport_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -206,12 +201,12 @@ const _root_component_type_list_2_spec_for_SubscriberLocationReport_Res: $.Compo
  */
 export
 const _extension_additions_list_spec_for_SubscriberLocationReport_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("na-ESRK", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("na-ESRD", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("h-gmlc-Address", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("mo-lrShortCircuitIndicator", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("reportingPLMNList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("lcs-ReferenceNumber", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("na-ESRK", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("na-ESRD", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("h-gmlc-Address", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("mo-lrShortCircuitIndicator", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("reportingPLMNList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("lcs-ReferenceNumber", true, $.hasTag(_TagClass.context, 5))
 ];
 
 let _cached_decoder_for_SubscriberLocationReport_Res: $.ASN1Decoder<SubscriberLocationReport_Res> | null = null;
@@ -225,14 +220,14 @@ let _cached_decoder_for_SubscriberLocationReport_Res: $.ASN1Decoder<SubscriberLo
 export
 function _decode_SubscriberLocationReport_Res (el: _Element): SubscriberLocationReport_Res {
     if (!_cached_decoder_for_SubscriberLocationReport_Res) { _cached_decoder_for_SubscriberLocationReport_Res = function (el: _Element): SubscriberLocationReport_Res {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let na_ESRK: OPTIONAL<ISDN_AddressString>;
-    let na_ESRD: OPTIONAL<ISDN_AddressString>;
-    let h_gmlc_Address: OPTIONAL<GSN_Address>;
-    let mo_lrShortCircuitIndicator: OPTIONAL<NULL>;
-    let reportingPLMNList: OPTIONAL<ReportingPLMNList>;
-    let lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let na_ESRK: OPTIONAL<ISDN_AddressString> = undefined;
+    let na_ESRD: OPTIONAL<ISDN_AddressString> = undefined;
+    let h_gmlc_Address: OPTIONAL<GSN_Address> = undefined;
+    let mo_lrShortCircuitIndicator: OPTIONAL<NULL> = undefined;
+    let reportingPLMNList: OPTIONAL<ReportingPLMNList> = undefined;
+    let lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },
         "na-ESRK": (_el: _Element): void => { na_ESRK = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

@@ -67,35 +67,20 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
-// export { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ModificationRequestFor_CF_Info, _decode_ModificationRequestFor_CF_Info, _encode_ModificationRequestFor_CF_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CF-Info.ta.mjs";
-// export { ModificationRequestFor_CF_Info, _decode_ModificationRequestFor_CF_Info, _encode_ModificationRequestFor_CF_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CF-Info.ta.mjs";
 import { ModificationRequestFor_CB_Info, _decode_ModificationRequestFor_CB_Info, _encode_ModificationRequestFor_CB_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CB-Info.ta.mjs";
-// export { ModificationRequestFor_CB_Info, _decode_ModificationRequestFor_CB_Info, _encode_ModificationRequestFor_CB_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CB-Info.ta.mjs";
 import { ModificationRequestFor_CSI, _decode_ModificationRequestFor_CSI, _encode_ModificationRequestFor_CSI } from "../MAP-MS-DataTypes/ModificationRequestFor-CSI.ta.mjs";
-// export { ModificationRequestFor_CSI, _decode_ModificationRequestFor_CSI, _encode_ModificationRequestFor_CSI } from "../MAP-MS-DataTypes/ModificationRequestFor-CSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ModificationRequestFor_ODB_data, _decode_ModificationRequestFor_ODB_data, _encode_ModificationRequestFor_ODB_data } from "../MAP-MS-DataTypes/ModificationRequestFor-ODB-data.ta.mjs";
-// export { ModificationRequestFor_ODB_data, _decode_ModificationRequestFor_ODB_data, _encode_ModificationRequestFor_ODB_data } from "../MAP-MS-DataTypes/ModificationRequestFor-ODB-data.ta.mjs";
 import { ModificationRequestFor_IP_SM_GW_Data, _decode_ModificationRequestFor_IP_SM_GW_Data, _encode_ModificationRequestFor_IP_SM_GW_Data } from "../MAP-MS-DataTypes/ModificationRequestFor-IP-SM-GW-Data.ta.mjs";
-// export { ModificationRequestFor_IP_SM_GW_Data, _decode_ModificationRequestFor_IP_SM_GW_Data, _encode_ModificationRequestFor_IP_SM_GW_Data } from "../MAP-MS-DataTypes/ModificationRequestFor-IP-SM-GW-Data.ta.mjs";
 import { RequestedServingNode, RequestedServingNode_mmeAndSgsn /* IMPORTED_LONG_NAMED_BIT */, mmeAndSgsn /* IMPORTED_SHORT_NAMED_BIT */, _decode_RequestedServingNode, _encode_RequestedServingNode } from "../MAP-MS-DataTypes/RequestedServingNode.ta.mjs";
-// export { RequestedServingNode, RequestedServingNode_mmeAndSgsn /* IMPORTED_LONG_NAMED_BIT */, mmeAndSgsn /* IMPORTED_SHORT_NAMED_BIT */, _decode_RequestedServingNode, _encode_RequestedServingNode } from "../MAP-MS-DataTypes/RequestedServingNode.ta.mjs";
 import { ModificationRequestFor_CSG, _decode_ModificationRequestFor_CSG, _encode_ModificationRequestFor_CSG } from "../MAP-MS-DataTypes/ModificationRequestFor-CSG.ta.mjs";
-// export { ModificationRequestFor_CSG, _decode_ModificationRequestFor_CSG, _encode_ModificationRequestFor_CSG } from "../MAP-MS-DataTypes/ModificationRequestFor-CSG.ta.mjs";
 import { ModificationRequestFor_CW_Info, _decode_ModificationRequestFor_CW_Info, _encode_ModificationRequestFor_CW_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CW-Info.ta.mjs";
-// export { ModificationRequestFor_CW_Info, _decode_ModificationRequestFor_CW_Info, _encode_ModificationRequestFor_CW_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CW-Info.ta.mjs";
 import { ModificationRequestFor_CLIP_Info, _decode_ModificationRequestFor_CLIP_Info, _encode_ModificationRequestFor_CLIP_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CLIP-Info.ta.mjs";
-// export { ModificationRequestFor_CLIP_Info, _decode_ModificationRequestFor_CLIP_Info, _encode_ModificationRequestFor_CLIP_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CLIP-Info.ta.mjs";
 import { ModificationRequestFor_CLIR_Info, _decode_ModificationRequestFor_CLIR_Info, _encode_ModificationRequestFor_CLIR_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CLIR-Info.ta.mjs";
-// export { ModificationRequestFor_CLIR_Info, _decode_ModificationRequestFor_CLIR_Info, _encode_ModificationRequestFor_CLIR_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CLIR-Info.ta.mjs";
 import { ModificationRequestFor_CH_Info, _decode_ModificationRequestFor_CH_Info, _encode_ModificationRequestFor_CH_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CH-Info.ta.mjs";
-// export { ModificationRequestFor_CH_Info, _decode_ModificationRequestFor_CH_Info, _encode_ModificationRequestFor_CH_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CH-Info.ta.mjs";
 import { ModificationRequestFor_ECT_Info, _decode_ModificationRequestFor_ECT_Info, _encode_ModificationRequestFor_ECT_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-ECT-Info.ta.mjs";
-// export { ModificationRequestFor_ECT_Info, _decode_ModificationRequestFor_ECT_Info, _encode_ModificationRequestFor_ECT_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-ECT-Info.ta.mjs";
 
 
 /**
@@ -263,13 +248,13 @@ class AnyTimeModificationArg {
  */
 export
 const _root_component_type_list_1_spec_for_AnyTimeModificationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("subscriberIdentity", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-CF-Info", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-CB-Info", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-CSI", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("subscriberIdentity", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("modificationRequestFor-CF-Info", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("modificationRequestFor-CB-Info", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("modificationRequestFor-CSI", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 6))
 ];
 
 /**
@@ -295,15 +280,15 @@ const _root_component_type_list_2_spec_for_AnyTimeModificationArg: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_AnyTimeModificationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("modificationRequestFor-ODB-data", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-IP-SM-GW-Data", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("activationRequestForUE-reachability", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-CSG", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-CW-Data", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-CLIP-Data", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-CLIR-Data", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-HOLD-Data", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("modificationRequestFor-ECT-Data", true, $.hasTag(_TagClass.context, 15), undefined, undefined)
+    new $.ComponentSpec("modificationRequestFor-ODB-data", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("modificationRequestFor-IP-SM-GW-Data", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("activationRequestForUE-reachability", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("modificationRequestFor-CSG", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("modificationRequestFor-CW-Data", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("modificationRequestFor-CLIP-Data", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("modificationRequestFor-CLIR-Data", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("modificationRequestFor-HOLD-Data", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("modificationRequestFor-ECT-Data", true, $.hasTag(_TagClass.context, 15))
 ];
 
 let _cached_decoder_for_AnyTimeModificationArg: $.ASN1Decoder<AnyTimeModificationArg> | null = null;
@@ -319,21 +304,21 @@ function _decode_AnyTimeModificationArg (el: _Element): AnyTimeModificationArg {
     if (!_cached_decoder_for_AnyTimeModificationArg) { _cached_decoder_for_AnyTimeModificationArg = function (el: _Element): AnyTimeModificationArg {
     let subscriberIdentity!: SubscriberIdentity;
     let gsmSCF_Address!: ISDN_AddressString;
-    let modificationRequestFor_CF_Info: OPTIONAL<ModificationRequestFor_CF_Info>;
-    let modificationRequestFor_CB_Info: OPTIONAL<ModificationRequestFor_CB_Info>;
-    let modificationRequestFor_CSI: OPTIONAL<ModificationRequestFor_CSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let longFTN_Supported: OPTIONAL<NULL>;
-    let modificationRequestFor_ODB_data: OPTIONAL<ModificationRequestFor_ODB_data>;
-    let modificationRequestFor_IP_SM_GW_Data: OPTIONAL<ModificationRequestFor_IP_SM_GW_Data>;
-    let activationRequestForUE_reachability: OPTIONAL<RequestedServingNode>;
-    let modificationRequestFor_CSG: OPTIONAL<ModificationRequestFor_CSG>;
-    let modificationRequestFor_CW_Data: OPTIONAL<ModificationRequestFor_CW_Info>;
-    let modificationRequestFor_CLIP_Data: OPTIONAL<ModificationRequestFor_CLIP_Info>;
-    let modificationRequestFor_CLIR_Data: OPTIONAL<ModificationRequestFor_CLIR_Info>;
-    let modificationRequestFor_HOLD_Data: OPTIONAL<ModificationRequestFor_CH_Info>;
-    let modificationRequestFor_ECT_Data: OPTIONAL<ModificationRequestFor_ECT_Info>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let modificationRequestFor_CF_Info: OPTIONAL<ModificationRequestFor_CF_Info> = undefined;
+    let modificationRequestFor_CB_Info: OPTIONAL<ModificationRequestFor_CB_Info> = undefined;
+    let modificationRequestFor_CSI: OPTIONAL<ModificationRequestFor_CSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let longFTN_Supported: OPTIONAL<NULL> = undefined;
+    let modificationRequestFor_ODB_data: OPTIONAL<ModificationRequestFor_ODB_data> = undefined;
+    let modificationRequestFor_IP_SM_GW_Data: OPTIONAL<ModificationRequestFor_IP_SM_GW_Data> = undefined;
+    let activationRequestForUE_reachability: OPTIONAL<RequestedServingNode> = undefined;
+    let modificationRequestFor_CSG: OPTIONAL<ModificationRequestFor_CSG> = undefined;
+    let modificationRequestFor_CW_Data: OPTIONAL<ModificationRequestFor_CW_Info> = undefined;
+    let modificationRequestFor_CLIP_Data: OPTIONAL<ModificationRequestFor_CLIP_Info> = undefined;
+    let modificationRequestFor_CLIR_Data: OPTIONAL<ModificationRequestFor_CLIR_Info> = undefined;
+    let modificationRequestFor_HOLD_Data: OPTIONAL<ModificationRequestFor_CH_Info> = undefined;
+    let modificationRequestFor_ECT_Data: OPTIONAL<ModificationRequestFor_ECT_Info> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "subscriberIdentity": (_el: _Element): void => { subscriberIdentity = $._decode_explicit<SubscriberIdentity>(() => _decode_SubscriberIdentity)(_el); },
         "gsmSCF-Address": (_el: _Element): void => { gsmSCF_Address = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
-// export { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class ModificationRequestFor_CSG {
  */
 export
 const _root_component_type_list_1_spec_for_ModificationRequestFor_CSG: $.ComponentSpec[] = [
-    new $.ComponentSpec("modifyNotificationToCSE", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("modifyNotificationToCSE", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -186,9 +184,9 @@ let _cached_decoder_for_ModificationRequestFor_CSG: $.ASN1Decoder<ModificationRe
 export
 function _decode_ModificationRequestFor_CSG (el: _Element): ModificationRequestFor_CSG {
     if (!_cached_decoder_for_ModificationRequestFor_CSG) { _cached_decoder_for_ModificationRequestFor_CSG = function (el: _Element): ModificationRequestFor_CSG {
-    let modifyNotificationToCSE: OPTIONAL<ModificationInstruction>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let modifyNotificationToCSE: OPTIONAL<ModificationInstruction> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "modifyNotificationToCSE": (_el: _Element): void => { modifyNotificationToCSE = $._decode_implicit<ModificationInstruction>(() => _decode_ModificationInstruction)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }

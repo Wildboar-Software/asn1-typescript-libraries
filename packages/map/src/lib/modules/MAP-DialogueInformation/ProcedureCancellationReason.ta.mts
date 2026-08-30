@@ -255,21 +255,13 @@ const ProcedureCancellationReason_remoteOperationsFailure: ProcedureCancellation
 export
 const remoteOperationsFailure: ProcedureCancellationReason = ProcedureCancellationReason.remoteOperationsFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ProcedureCancellationReason: $.ASN1Decoder<ProcedureCancellationReason> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ProcedureCancellationReason
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ProcedureCancellationReason (el: _Element): ProcedureCancellationReason {
-    if (!_cached_decoder_for_ProcedureCancellationReason) { _cached_decoder_for_ProcedureCancellationReason = $._decodeEnumerated; }
-    return _cached_decoder_for_ProcedureCancellationReason(el);
-}
-
-let _cached_encoder_for_ProcedureCancellationReason: $.ASN1Encoder<ProcedureCancellationReason> | null = null;
+export const _decode_ProcedureCancellationReason = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ProcedureCancellationReason into an ASN.1 Element.
@@ -278,11 +270,7 @@ let _cached_encoder_for_ProcedureCancellationReason: $.ASN1Encoder<ProcedureCanc
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProcedureCancellationReason, encoded as an ASN.1 Element.
  */
-export
-function _encode_ProcedureCancellationReason (value: ProcedureCancellationReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProcedureCancellationReason) { _cached_encoder_for_ProcedureCancellationReason = $._encodeEnumerated; }
-    return _cached_encoder_for_ProcedureCancellationReason(value, elGetter);
-}
+export const _encode_ProcedureCancellationReason = $._encodeEnumerated;
 
 
 /* eslint-enable */

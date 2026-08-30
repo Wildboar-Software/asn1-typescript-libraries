@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { LocationInfoWithLMSI, _decode_LocationInfoWithLMSI, _encode_LocationInfoWithLMSI } from "../MAP-SM-DataTypes/LocationInfoWithLMSI.ta.mjs";
-// export { LocationInfoWithLMSI, _decode_LocationInfoWithLMSI, _encode_LocationInfoWithLMSI } from "../MAP-SM-DataTypes/LocationInfoWithLMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { IP_SM_GW_Guidance, _decode_IP_SM_GW_Guidance, _encode_IP_SM_GW_Guidance } from "../MAP-SM-DataTypes/IP-SM-GW-Guidance.ta.mjs";
-// export { IP_SM_GW_Guidance, _decode_IP_SM_GW_Guidance, _encode_IP_SM_GW_Guidance } from "../MAP-SM-DataTypes/IP-SM-GW-Guidance.ta.mjs";
 
 
 /**
@@ -157,9 +153,9 @@ class RoutingInfoForSM_Res {
  */
 export
 const _root_component_type_list_1_spec_for_RoutingInfoForSM_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("locationInfoWithLMSI", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("locationInfoWithLMSI", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -185,7 +181,7 @@ const _root_component_type_list_2_spec_for_RoutingInfoForSM_Res: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_RoutingInfoForSM_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("ip-sm-gwGuidance", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("ip-sm-gwGuidance", true, $.hasTag(_TagClass.context, 5))
 ];
 
 let _cached_decoder_for_RoutingInfoForSM_Res: $.ASN1Decoder<RoutingInfoForSM_Res> | null = null;
@@ -201,9 +197,9 @@ function _decode_RoutingInfoForSM_Res (el: _Element): RoutingInfoForSM_Res {
     if (!_cached_decoder_for_RoutingInfoForSM_Res) { _cached_decoder_for_RoutingInfoForSM_Res = function (el: _Element): RoutingInfoForSM_Res {
     let imsi!: IMSI;
     let locationInfoWithLMSI!: LocationInfoWithLMSI;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let ip_sm_gwGuidance: OPTIONAL<IP_SM_GW_Guidance>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let ip_sm_gwGuidance: OPTIONAL<IP_SM_GW_Guidance> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = _decode_IMSI(_el); },
         "locationInfoWithLMSI": (_el: _Element): void => { locationInfoWithLMSI = $._decode_implicit<LocationInfoWithLMSI>(() => _decode_LocationInfoWithLMSI)(_el); },

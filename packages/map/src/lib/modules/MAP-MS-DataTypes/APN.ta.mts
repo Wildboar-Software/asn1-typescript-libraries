@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type APN = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_APN: $.ASN1Decoder<APN> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) APN
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_APN (el: _Element): APN {
-    if (!_cached_decoder_for_APN) { _cached_decoder_for_APN = $._decodeOctetString; }
-    return _cached_decoder_for_APN(el);
-}
-
-let _cached_encoder_for_APN: $.ASN1Encoder<APN> | null = null;
+export const _decode_APN = (el: _Element): APN => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 63) {
+        throw new ASN1SizeError("APN violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) APN into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_APN: $.ASN1Encoder<APN> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The APN, encoded as an ASN.1 Element.
  */
-export
-function _encode_APN (value: APN, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_APN) { _cached_encoder_for_APN = $._encodeOctetString; }
-    return _cached_encoder_for_APN(value, elGetter);
-}
+export const _encode_APN = $._encodeOctetString;
 
 
 /* eslint-enable */

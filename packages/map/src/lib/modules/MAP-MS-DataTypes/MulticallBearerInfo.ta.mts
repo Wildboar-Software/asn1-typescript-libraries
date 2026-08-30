@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxNumOfRelocationNumber } from "./maxNumOfRelocationNumber.va.mjs";
 
 /**
  * @summary MulticallBearerInfo
@@ -82,21 +85,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MulticallBearerInfo = INTEGER;
 
-let _cached_decoder_for_MulticallBearerInfo: $.ASN1Decoder<MulticallBearerInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MulticallBearerInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MulticallBearerInfo (el: _Element): MulticallBearerInfo {
-    if (!_cached_decoder_for_MulticallBearerInfo) { _cached_decoder_for_MulticallBearerInfo = $._decodeInteger; }
-    return _cached_decoder_for_MulticallBearerInfo(el);
-}
-
-let _cached_encoder_for_MulticallBearerInfo: $.ASN1Encoder<MulticallBearerInfo> | null = null;
+export const _decode_MulticallBearerInfo = (el: _Element): MulticallBearerInfo => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > maxNumOfRelocationNumber) {
+        throw new ASN1OverflowError("MulticallBearerInfo violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MulticallBearerInfo into an ASN.1 Element.
@@ -105,11 +107,7 @@ let _cached_encoder_for_MulticallBearerInfo: $.ASN1Encoder<MulticallBearerInfo> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MulticallBearerInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_MulticallBearerInfo (value: MulticallBearerInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MulticallBearerInfo) { _cached_encoder_for_MulticallBearerInfo = $._encodeInteger; }
-    return _cached_encoder_for_MulticallBearerInfo(value, elGetter);
-}
+export const _encode_MulticallBearerInfo = $._encodeInteger;
 
 
 /* eslint-enable */

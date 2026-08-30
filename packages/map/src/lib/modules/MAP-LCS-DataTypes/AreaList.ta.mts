@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Area, _decode_Area, _encode_Area } from "../MAP-LCS-DataTypes/Area.ta.mjs";
-// export { Area, _decode_Area, _encode_Area } from "../MAP-LCS-DataTypes/Area.ta.mjs";
 
+
+import { maxNumOfAreas } from "./maxNumOfAreas.va.mjs";
 
 /**
  * @summary AreaList
@@ -94,7 +96,11 @@ let _cached_decoder_for_AreaList: $.ASN1Decoder<AreaList> | null = null;
 export
 function _decode_AreaList (el: _Element): AreaList {
     if (!_cached_decoder_for_AreaList) { _cached_decoder_for_AreaList = $._decodeSequenceOf<Area>(() => _decode_Area); }
-    return _cached_decoder_for_AreaList(el);
+    const value = _cached_decoder_for_AreaList(el);
+    if (value.length < 1 || value.length > maxNumOfAreas) {
+        throw new ASN1SizeError("AreaList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_AreaList: $.ASN1Encoder<AreaList> | null = null;

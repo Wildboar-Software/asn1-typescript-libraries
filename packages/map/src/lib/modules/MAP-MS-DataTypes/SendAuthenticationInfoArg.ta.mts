@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_NumberOfRequestedVectors } from "../MAP-MS-DataTypes/NumberOfRequestedVectors.ta.mjs";
-// export { NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_NumberOfRequestedVectors } from "../MAP-MS-DataTypes/NumberOfRequestedVectors.ta.mjs";
 import { Re_synchronisationInfo, _decode_Re_synchronisationInfo, _encode_Re_synchronisationInfo } from "../MAP-MS-DataTypes/Re-synchronisationInfo.ta.mjs";
-// export { Re_synchronisationInfo, _decode_Re_synchronisationInfo, _encode_Re_synchronisationInfo } from "../MAP-MS-DataTypes/Re-synchronisationInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { RequestingNodeType, _enum_for_RequestingNodeType, RequestingNodeType_vlr /* IMPORTED_LONG_ENUMERATION_ITEM */, vlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_s_cscf /* IMPORTED_LONG_ENUMERATION_ITEM */, s_cscf /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_bsf /* IMPORTED_LONG_ENUMERATION_ITEM */, bsf /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_gan_aaa_server /* IMPORTED_LONG_ENUMERATION_ITEM */, gan_aaa_server /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_wlan_aaa_server /* IMPORTED_LONG_ENUMERATION_ITEM */, wlan_aaa_server /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_mme /* IMPORTED_LONG_ENUMERATION_ITEM */, mme /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_mme_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, mme_sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestingNodeType, _encode_RequestingNodeType } from "../MAP-MS-DataTypes/RequestingNodeType.ta.mjs";
-// export { RequestingNodeType, _enum_for_RequestingNodeType, RequestingNodeType_vlr /* IMPORTED_LONG_ENUMERATION_ITEM */, vlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_s_cscf /* IMPORTED_LONG_ENUMERATION_ITEM */, s_cscf /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_bsf /* IMPORTED_LONG_ENUMERATION_ITEM */, bsf /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_gan_aaa_server /* IMPORTED_LONG_ENUMERATION_ITEM */, gan_aaa_server /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_wlan_aaa_server /* IMPORTED_LONG_ENUMERATION_ITEM */, wlan_aaa_server /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_mme /* IMPORTED_LONG_ENUMERATION_ITEM */, mme /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_mme_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, mme_sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestingNodeType, _encode_RequestingNodeType } from "../MAP-MS-DataTypes/RequestingNodeType.ta.mjs";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-// export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 
 
 /**
@@ -216,12 +210,12 @@ class SendAuthenticationInfoArg {
  */
 export
 const _root_component_type_list_1_spec_for_SendAuthenticationInfoArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("numberOfRequestedVectors", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("segmentationProhibited", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("immediateResponsePreferred", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("re-synchronisationInfo", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("numberOfRequestedVectors", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("segmentationProhibited", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("immediateResponsePreferred", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("re-synchronisationInfo", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -247,11 +241,11 @@ const _root_component_type_list_2_spec_for_SendAuthenticationInfoArg: $.Componen
  */
 export
 const _extension_additions_list_spec_for_SendAuthenticationInfoArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("requestingNodeType", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("requestingPLMN-Id", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("numberOfRequestedAdditional-Vectors", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("additionalVectorsAreForEPS", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("ueUsageTypeRequestIndication", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("requestingNodeType", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("requestingPLMN-Id", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("numberOfRequestedAdditional-Vectors", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("additionalVectorsAreForEPS", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("ueUsageTypeRequestIndication", true, $.hasTag(_TagClass.context, 7))
 ];
 
 let _cached_decoder_for_SendAuthenticationInfoArg: $.ASN1Decoder<SendAuthenticationInfoArg> | null = null;
@@ -267,16 +261,16 @@ function _decode_SendAuthenticationInfoArg (el: _Element): SendAuthenticationInf
     if (!_cached_decoder_for_SendAuthenticationInfoArg) { _cached_decoder_for_SendAuthenticationInfoArg = function (el: _Element): SendAuthenticationInfoArg {
     let imsi!: IMSI;
     let numberOfRequestedVectors!: NumberOfRequestedVectors;
-    let segmentationProhibited: OPTIONAL<NULL>;
-    let immediateResponsePreferred: OPTIONAL<NULL>;
-    let re_synchronisationInfo: OPTIONAL<Re_synchronisationInfo>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let requestingNodeType: OPTIONAL<RequestingNodeType>;
-    let requestingPLMN_Id: OPTIONAL<PLMN_Id>;
-    let numberOfRequestedAdditional_Vectors: OPTIONAL<NumberOfRequestedVectors>;
-    let additionalVectorsAreForEPS: OPTIONAL<NULL>;
-    let ueUsageTypeRequestIndication: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let segmentationProhibited: OPTIONAL<NULL> = undefined;
+    let immediateResponsePreferred: OPTIONAL<NULL> = undefined;
+    let re_synchronisationInfo: OPTIONAL<Re_synchronisationInfo> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let requestingNodeType: OPTIONAL<RequestingNodeType> = undefined;
+    let requestingPLMN_Id: OPTIONAL<PLMN_Id> = undefined;
+    let numberOfRequestedAdditional_Vectors: OPTIONAL<NumberOfRequestedVectors> = undefined;
+    let additionalVectorsAreForEPS: OPTIONAL<NULL> = undefined;
+    let ueUsageTypeRequestIndication: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "numberOfRequestedVectors": (_el: _Element): void => { numberOfRequestedVectors = _decode_NumberOfRequestedVectors(_el); },

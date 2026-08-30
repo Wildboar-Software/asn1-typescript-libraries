@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
-// export { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.ta.mjs";
-// export { RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.ta.mjs";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-// export { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
 import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
-// export { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { GERAN_Classmark, _decode_GERAN_Classmark, _encode_GERAN_Classmark } from "../MAP-MS-DataTypes/GERAN-Classmark.ta.mjs";
-// export { GERAN_Classmark, _decode_GERAN_Classmark, _encode_GERAN_Classmark } from "../MAP-MS-DataTypes/GERAN-Classmark.ta.mjs";
 
 
 /**
@@ -191,12 +184,12 @@ class PrepareSubsequentHO_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_PrepareSubsequentHO_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("targetCellId", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("targetMSC-Number", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("targetRNCId", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("an-APDU", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("selectedRab-Id", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("targetCellId", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("targetMSC-Number", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("targetRNCId", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("an-APDU", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("selectedRab-Id", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -222,8 +215,8 @@ const _root_component_type_list_2_spec_for_PrepareSubsequentHO_Arg: $.ComponentS
  */
 export
 const _extension_additions_list_spec_for_PrepareSubsequentHO_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("geran-classmark", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("rab-ConfigurationIndicator", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("geran-classmark", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("rab-ConfigurationIndicator", true, $.hasTag(_TagClass.context, 7))
 ];
 
 let _cached_decoder_for_PrepareSubsequentHO_Arg: $.ASN1Decoder<PrepareSubsequentHO_Arg> | null = null;
@@ -237,15 +230,15 @@ let _cached_decoder_for_PrepareSubsequentHO_Arg: $.ASN1Decoder<PrepareSubsequent
 export
 function _decode_PrepareSubsequentHO_Arg (el: _Element): PrepareSubsequentHO_Arg {
     if (!_cached_decoder_for_PrepareSubsequentHO_Arg) { _cached_decoder_for_PrepareSubsequentHO_Arg = $._decode_implicit<PrepareSubsequentHO_Arg>(() => function (el: _Element): PrepareSubsequentHO_Arg {
-    let targetCellId: OPTIONAL<GlobalCellId>;
+    let targetCellId: OPTIONAL<GlobalCellId> = undefined;
     let targetMSC_Number!: ISDN_AddressString;
-    let targetRNCId: OPTIONAL<RNCId>;
-    let an_APDU: OPTIONAL<AccessNetworkSignalInfo>;
-    let selectedRab_Id: OPTIONAL<RAB_Id>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let geran_classmark: OPTIONAL<GERAN_Classmark>;
-    let rab_ConfigurationIndicator: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let targetRNCId: OPTIONAL<RNCId> = undefined;
+    let an_APDU: OPTIONAL<AccessNetworkSignalInfo> = undefined;
+    let selectedRab_Id: OPTIONAL<RAB_Id> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let geran_classmark: OPTIONAL<GERAN_Classmark> = undefined;
+    let rab_ConfigurationIndicator: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "targetCellId": (_el: _Element): void => { targetCellId = $._decode_implicit<GlobalCellId>(() => _decode_GlobalCellId)(_el); },
         "targetMSC-Number": (_el: _Element): void => { targetMSC_Number = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

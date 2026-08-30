@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatureList } from "../MAP-MS-DataTypes/Ext-ForwFeatureList.ta.mjs";
-// export { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatureList } from "../MAP-MS-DataTypes/Ext-ForwFeatureList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class Ext_ForwInfo {
  */
 export
 const _root_component_type_list_1_spec_for_Ext_ForwInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("forwardingFeatureList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("forwardingFeatureList", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -192,8 +189,8 @@ function _decode_Ext_ForwInfo (el: _Element): Ext_ForwInfo {
     if (!_cached_decoder_for_Ext_ForwInfo) { _cached_decoder_for_Ext_ForwInfo = function (el: _Element): Ext_ForwInfo {
     let ss_Code!: SS_Code;
     let forwardingFeatureList!: Ext_ForwFeatureList;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = _decode_SS_Code(_el); },
         "forwardingFeatureList": (_el: _Element): void => { forwardingFeatureList = _decode_Ext_ForwFeatureList(_el); },

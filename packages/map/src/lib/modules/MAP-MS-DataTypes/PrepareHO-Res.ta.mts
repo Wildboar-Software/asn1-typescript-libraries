@@ -67,27 +67,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { RelocationNumberList, _decode_RelocationNumberList, _encode_RelocationNumberList } from "../MAP-MS-DataTypes/RelocationNumberList.ta.mjs";
-// export { RelocationNumberList, _decode_RelocationNumberList, _encode_RelocationNumberList } from "../MAP-MS-DataTypes/RelocationNumberList.ta.mjs";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-// export { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
 import { MulticallBearerInfo, _decode_MulticallBearerInfo, _encode_MulticallBearerInfo } from "../MAP-MS-DataTypes/MulticallBearerInfo.ta.mjs";
-// export { MulticallBearerInfo, _decode_MulticallBearerInfo, _encode_MulticallBearerInfo } from "../MAP-MS-DataTypes/MulticallBearerInfo.ta.mjs";
 import { SelectedUMTS_Algorithms, _decode_SelectedUMTS_Algorithms, _encode_SelectedUMTS_Algorithms } from "../MAP-MS-DataTypes/SelectedUMTS-Algorithms.ta.mjs";
-// export { SelectedUMTS_Algorithms, _decode_SelectedUMTS_Algorithms, _encode_SelectedUMTS_Algorithms } from "../MAP-MS-DataTypes/SelectedUMTS-Algorithms.ta.mjs";
 import { ChosenRadioResourceInformation, _decode_ChosenRadioResourceInformation, _encode_ChosenRadioResourceInformation } from "../MAP-MS-DataTypes/ChosenRadioResourceInformation.ta.mjs";
-// export { ChosenRadioResourceInformation, _decode_ChosenRadioResourceInformation, _encode_ChosenRadioResourceInformation } from "../MAP-MS-DataTypes/ChosenRadioResourceInformation.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
-// export { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
 import { CodecList, _decode_CodecList, _encode_CodecList } from "../MAP-MS-DataTypes/CodecList.ta.mjs";
-// export { CodecList, _decode_CodecList, _encode_CodecList } from "../MAP-MS-DataTypes/CodecList.ta.mjs";
 import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
-// export { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
 import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
-// export { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
 
 
 /**
@@ -227,14 +216,14 @@ class PrepareHO_Res {
  */
 export
 const _root_component_type_list_1_spec_for_PrepareHO_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("handoverNumber", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("relocationNumberList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("an-APDU", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("multicallBearerInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("multipleBearerNotSupported", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("selectedUMTS-Algorithms", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("chosenRadioResourceInformation", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("handoverNumber", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("relocationNumberList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("an-APDU", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("multicallBearerInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("multipleBearerNotSupported", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("selectedUMTS-Algorithms", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("chosenRadioResourceInformation", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -260,10 +249,10 @@ const _root_component_type_list_2_spec_for_PrepareHO_Res: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_PrepareHO_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("iuSelectedCodec", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("iuAvailableCodecsList", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("aoipSelectedCodecTarget", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("aoipAvailableCodecsListMap", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("iuSelectedCodec", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("iuAvailableCodecsList", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("aoipSelectedCodecTarget", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("aoipAvailableCodecsListMap", true, $.hasTag(_TagClass.context, 10))
 ];
 
 let _cached_decoder_for_PrepareHO_Res: $.ASN1Decoder<PrepareHO_Res> | null = null;
@@ -277,19 +266,19 @@ let _cached_decoder_for_PrepareHO_Res: $.ASN1Decoder<PrepareHO_Res> | null = nul
 export
 function _decode_PrepareHO_Res (el: _Element): PrepareHO_Res {
     if (!_cached_decoder_for_PrepareHO_Res) { _cached_decoder_for_PrepareHO_Res = $._decode_implicit<PrepareHO_Res>(() => function (el: _Element): PrepareHO_Res {
-    let handoverNumber: OPTIONAL<ISDN_AddressString>;
-    let relocationNumberList: OPTIONAL<RelocationNumberList>;
-    let an_APDU: OPTIONAL<AccessNetworkSignalInfo>;
-    let multicallBearerInfo: OPTIONAL<MulticallBearerInfo>;
-    let multipleBearerNotSupported: OPTIONAL<NULL>;
-    let selectedUMTS_Algorithms: OPTIONAL<SelectedUMTS_Algorithms>;
-    let chosenRadioResourceInformation: OPTIONAL<ChosenRadioResourceInformation>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let iuSelectedCodec: OPTIONAL<Codec>;
-    let iuAvailableCodecsList: OPTIONAL<CodecList>;
-    let aoipSelectedCodecTarget: OPTIONAL<AoIPCodec>;
-    let aoipAvailableCodecsListMap: OPTIONAL<AoIPCodecsList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let handoverNumber: OPTIONAL<ISDN_AddressString> = undefined;
+    let relocationNumberList: OPTIONAL<RelocationNumberList> = undefined;
+    let an_APDU: OPTIONAL<AccessNetworkSignalInfo> = undefined;
+    let multicallBearerInfo: OPTIONAL<MulticallBearerInfo> = undefined;
+    let multipleBearerNotSupported: OPTIONAL<NULL> = undefined;
+    let selectedUMTS_Algorithms: OPTIONAL<SelectedUMTS_Algorithms> = undefined;
+    let chosenRadioResourceInformation: OPTIONAL<ChosenRadioResourceInformation> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let iuSelectedCodec: OPTIONAL<Codec> = undefined;
+    let iuAvailableCodecsList: OPTIONAL<CodecList> = undefined;
+    let aoipSelectedCodecTarget: OPTIONAL<AoIPCodec> = undefined;
+    let aoipAvailableCodecsListMap: OPTIONAL<AoIPCodecsList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "handoverNumber": (_el: _Element): void => { handoverNumber = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "relocationNumberList": (_el: _Element): void => { relocationNumberList = $._decode_implicit<RelocationNumberList>(() => _decode_RelocationNumberList)(_el); },

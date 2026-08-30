@@ -178,21 +178,13 @@ const LIPA_Permission_lipaConditional: LIPA_Permission = LIPA_Permission.lipaCon
 export
 const lipaConditional: LIPA_Permission = LIPA_Permission.lipaConditional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LIPA_Permission: $.ASN1Decoder<LIPA_Permission> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LIPA_Permission
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LIPA_Permission (el: _Element): LIPA_Permission {
-    if (!_cached_decoder_for_LIPA_Permission) { _cached_decoder_for_LIPA_Permission = $._decodeEnumerated; }
-    return _cached_decoder_for_LIPA_Permission(el);
-}
-
-let _cached_encoder_for_LIPA_Permission: $.ASN1Encoder<LIPA_Permission> | null = null;
+export const _decode_LIPA_Permission = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LIPA_Permission into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_LIPA_Permission: $.ASN1Encoder<LIPA_Permission> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LIPA_Permission, encoded as an ASN.1 Element.
  */
-export
-function _encode_LIPA_Permission (value: LIPA_Permission, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LIPA_Permission) { _cached_encoder_for_LIPA_Permission = $._encodeEnumerated; }
-    return _cached_encoder_for_LIPA_Permission(value, elGetter);
-}
+export const _encode_LIPA_Permission = $._encodeEnumerated;
 
 
 /* eslint-enable */

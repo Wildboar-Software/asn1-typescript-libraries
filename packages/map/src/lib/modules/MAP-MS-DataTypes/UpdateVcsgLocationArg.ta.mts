@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -162,11 +159,11 @@ class UpdateVcsgLocationArg {
  */
 export
 const _root_component_type_list_1_spec_for_UpdateVcsgLocationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("vlr-Number", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("vlr-Number", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -207,11 +204,11 @@ export
 function _decode_UpdateVcsgLocationArg (el: _Element): UpdateVcsgLocationArg {
     if (!_cached_decoder_for_UpdateVcsgLocationArg) { _cached_decoder_for_UpdateVcsgLocationArg = function (el: _Element): UpdateVcsgLocationArg {
     let imsi!: IMSI;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let vlr_Number: OPTIONAL<ISDN_AddressString>;
-    let sgsn_Number: OPTIONAL<ISDN_AddressString>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let vlr_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let sgsn_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = _decode_IMSI(_el); },
         "msisdn": (_el: _Element): void => { msisdn = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

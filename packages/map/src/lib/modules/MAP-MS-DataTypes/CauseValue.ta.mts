@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CauseValue = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_CauseValue: $.ASN1Decoder<CauseValue> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CauseValue
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CauseValue (el: _Element): CauseValue {
-    if (!_cached_decoder_for_CauseValue) { _cached_decoder_for_CauseValue = $._decodeOctetString; }
-    return _cached_decoder_for_CauseValue(el);
-}
-
-let _cached_encoder_for_CauseValue: $.ASN1Encoder<CauseValue> | null = null;
+export const _decode_CauseValue = (el: _Element): CauseValue => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("CauseValue violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) CauseValue into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_CauseValue: $.ASN1Encoder<CauseValue> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CauseValue, encoded as an ASN.1 Element.
  */
-export
-function _encode_CauseValue (value: CauseValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CauseValue) { _cached_encoder_for_CauseValue = $._encodeOctetString; }
-    return _cached_encoder_for_CauseValue(value, elGetter);
-}
+export const _encode_CauseValue = $._encodeOctetString;
 
 
 /* eslint-enable */

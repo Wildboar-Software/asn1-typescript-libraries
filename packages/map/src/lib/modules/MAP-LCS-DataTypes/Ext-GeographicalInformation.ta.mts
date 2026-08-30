@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxExt_GeographicalInformation } from "./maxExt-GeographicalInformation.va.mjs";
 
 /**
  * @summary Ext_GeographicalInformation
@@ -82,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Ext_GeographicalInformation = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Ext_GeographicalInformation: $.ASN1Decoder<Ext_GeographicalInformation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext_GeographicalInformation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Ext_GeographicalInformation (el: _Element): Ext_GeographicalInformation {
-    if (!_cached_decoder_for_Ext_GeographicalInformation) { _cached_decoder_for_Ext_GeographicalInformation = $._decodeOctetString; }
-    return _cached_decoder_for_Ext_GeographicalInformation(el);
-}
-
-let _cached_encoder_for_Ext_GeographicalInformation: $.ASN1Encoder<Ext_GeographicalInformation> | null = null;
+export const _decode_Ext_GeographicalInformation = (el: _Element): Ext_GeographicalInformation => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxExt_GeographicalInformation) {
+        throw new ASN1SizeError("Ext_GeographicalInformation violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Ext_GeographicalInformation into an ASN.1 Element.
@@ -105,11 +106,7 @@ let _cached_encoder_for_Ext_GeographicalInformation: $.ASN1Encoder<Ext_Geographi
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_GeographicalInformation, encoded as an ASN.1 Element.
  */
-export
-function _encode_Ext_GeographicalInformation (value: Ext_GeographicalInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Ext_GeographicalInformation) { _cached_encoder_for_Ext_GeographicalInformation = $._encodeOctetString; }
-    return _cached_encoder_for_Ext_GeographicalInformation(value, elGetter);
-}
+export const _encode_Ext_GeographicalInformation = $._encodeOctetString;
 
 
 /* eslint-enable */

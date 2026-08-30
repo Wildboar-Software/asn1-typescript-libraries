@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type GeographicalInformation = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_GeographicalInformation: $.ASN1Decoder<GeographicalInformation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GeographicalInformation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GeographicalInformation (el: _Element): GeographicalInformation {
-    if (!_cached_decoder_for_GeographicalInformation) { _cached_decoder_for_GeographicalInformation = $._decodeOctetString; }
-    return _cached_decoder_for_GeographicalInformation(el);
-}
-
-let _cached_encoder_for_GeographicalInformation: $.ASN1Encoder<GeographicalInformation> | null = null;
+export const _decode_GeographicalInformation = (el: _Element): GeographicalInformation => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 8 || value.length > 8) {
+        throw new ASN1SizeError("GeographicalInformation violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) GeographicalInformation into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_GeographicalInformation: $.ASN1Encoder<GeographicalInfor
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GeographicalInformation, encoded as an ASN.1 Element.
  */
-export
-function _encode_GeographicalInformation (value: GeographicalInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GeographicalInformation) { _cached_encoder_for_GeographicalInformation = $._encodeOctetString; }
-    return _cached_encoder_for_GeographicalInformation(value, elGetter);
-}
+export const _encode_GeographicalInformation = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -415,21 +415,13 @@ const PeriodUMTS_d64000ms: PeriodUMTS = PeriodUMTS.d64000ms; /* LONG_NAMED_ENUME
 export
 const d64000ms: PeriodUMTS = PeriodUMTS.d64000ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PeriodUMTS: $.ASN1Decoder<PeriodUMTS> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PeriodUMTS
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PeriodUMTS (el: _Element): PeriodUMTS {
-    if (!_cached_decoder_for_PeriodUMTS) { _cached_decoder_for_PeriodUMTS = $._decodeEnumerated; }
-    return _cached_decoder_for_PeriodUMTS(el);
-}
-
-let _cached_encoder_for_PeriodUMTS: $.ASN1Encoder<PeriodUMTS> | null = null;
+export const _decode_PeriodUMTS = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PeriodUMTS into an ASN.1 Element.
@@ -438,11 +430,7 @@ let _cached_encoder_for_PeriodUMTS: $.ASN1Encoder<PeriodUMTS> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PeriodUMTS, encoded as an ASN.1 Element.
  */
-export
-function _encode_PeriodUMTS (value: PeriodUMTS, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PeriodUMTS) { _cached_encoder_for_PeriodUMTS = $._encodeEnumerated; }
-    return _cached_encoder_for_PeriodUMTS(value, elGetter);
-}
+export const _encode_PeriodUMTS = $._encodeEnumerated;
 
 
 /* eslint-enable */

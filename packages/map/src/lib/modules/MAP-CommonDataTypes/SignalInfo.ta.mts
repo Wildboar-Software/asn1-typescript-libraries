@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxSignalInfoLength } from "./maxSignalInfoLength.va.mjs";
 
 /**
  * @summary SignalInfo
@@ -82,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SignalInfo = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_SignalInfo: $.ASN1Decoder<SignalInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SignalInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SignalInfo (el: _Element): SignalInfo {
-    if (!_cached_decoder_for_SignalInfo) { _cached_decoder_for_SignalInfo = $._decodeOctetString; }
-    return _cached_decoder_for_SignalInfo(el);
-}
-
-let _cached_encoder_for_SignalInfo: $.ASN1Encoder<SignalInfo> | null = null;
+export const _decode_SignalInfo = (el: _Element): SignalInfo => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxSignalInfoLength) {
+        throw new ASN1SizeError("SignalInfo violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SignalInfo into an ASN.1 Element.
@@ -105,11 +106,7 @@ let _cached_encoder_for_SignalInfo: $.ASN1Encoder<SignalInfo> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SignalInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_SignalInfo (value: SignalInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SignalInfo) { _cached_encoder_for_SignalInfo = $._encodeOctetString; }
-    return _cached_encoder_for_SignalInfo(value, elGetter);
-}
+export const _encode_SignalInfo = $._encodeOctetString;
 
 
 /* eslint-enable */

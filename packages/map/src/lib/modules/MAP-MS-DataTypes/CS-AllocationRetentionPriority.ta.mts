@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CS_AllocationRetentionPriority = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_CS_AllocationRetentionPriority: $.ASN1Decoder<CS_AllocationRetentionPriority> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CS_AllocationRetentionPriority
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CS_AllocationRetentionPriority (el: _Element): CS_AllocationRetentionPriority {
-    if (!_cached_decoder_for_CS_AllocationRetentionPriority) { _cached_decoder_for_CS_AllocationRetentionPriority = $._decodeOctetString; }
-    return _cached_decoder_for_CS_AllocationRetentionPriority(el);
-}
-
-let _cached_encoder_for_CS_AllocationRetentionPriority: $.ASN1Encoder<CS_AllocationRetentionPriority> | null = null;
+export const _decode_CS_AllocationRetentionPriority = (el: _Element): CS_AllocationRetentionPriority => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("CS_AllocationRetentionPriority violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) CS_AllocationRetentionPriority into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_CS_AllocationRetentionPriority: $.ASN1Encoder<CS_Allocat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CS_AllocationRetentionPriority, encoded as an ASN.1 Element.
  */
-export
-function _encode_CS_AllocationRetentionPriority (value: CS_AllocationRetentionPriority, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CS_AllocationRetentionPriority) { _cached_encoder_for_CS_AllocationRetentionPriority = $._encodeOctetString; }
-    return _cached_encoder_for_CS_AllocationRetentionPriority(value, elGetter);
-}
+export const _encode_CS_AllocationRetentionPriority = $._encodeOctetString;
 
 
 /* eslint-enable */

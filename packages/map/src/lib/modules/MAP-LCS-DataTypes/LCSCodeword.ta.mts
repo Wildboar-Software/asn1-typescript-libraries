@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
-// export { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 import { LCSCodewordString, _decode_LCSCodewordString, _encode_LCSCodewordString } from "../MAP-LCS-DataTypes/LCSCodewordString.ta.mjs";
-// export { LCSCodewordString, _decode_LCSCodewordString, _encode_LCSCodewordString } from "../MAP-LCS-DataTypes/LCSCodewordString.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class LCSCodeword {
  */
 export
 const _root_component_type_list_1_spec_for_LCSCodeword: $.ComponentSpec[] = [
-    new $.ComponentSpec("dataCodingScheme", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("lcsCodewordString", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("dataCodingScheme", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("lcsCodewordString", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

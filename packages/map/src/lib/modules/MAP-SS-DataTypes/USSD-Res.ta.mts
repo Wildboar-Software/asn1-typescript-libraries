@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
-// export { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 import { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
-// export { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class USSD_Res {
  */
 export
 const _root_component_type_list_1_spec_for_USSD_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("ussd-DataCodingScheme", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("ussd-String", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("ussd-DataCodingScheme", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("ussd-String", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**

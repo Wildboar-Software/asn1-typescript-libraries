@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_SS_Info, _decode_Ext_SS_Info, _encode_Ext_SS_Info } from "../MAP-MS-DataTypes/Ext-SS-Info.ta.mjs";
-// export { Ext_SS_Info, _decode_Ext_SS_Info, _encode_Ext_SS_Info } from "../MAP-MS-DataTypes/Ext-SS-Info.ta.mjs";
 
+
+import { maxNumOfSS } from "../MAP-SS-DataTypes/maxNumOfSS.va.mjs";
 
 /**
  * @summary Ext_SS_InfoList
@@ -95,7 +97,11 @@ let _cached_decoder_for_Ext_SS_InfoList: $.ASN1Decoder<Ext_SS_InfoList> | null =
 export
 function _decode_Ext_SS_InfoList (el: _Element): Ext_SS_InfoList {
     if (!_cached_decoder_for_Ext_SS_InfoList) { _cached_decoder_for_Ext_SS_InfoList = $._decodeSequenceOf<Ext_SS_Info>(() => _decode_Ext_SS_Info); }
-    return _cached_decoder_for_Ext_SS_InfoList(el);
+    const value = _cached_decoder_for_Ext_SS_InfoList(el);
+    if (value.length < 1 || value.length > maxNumOfSS) {
+        throw new ASN1SizeError("Ext_SS_InfoList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_Ext_SS_InfoList: $.ASN1Encoder<Ext_SS_InfoList> | null = null;

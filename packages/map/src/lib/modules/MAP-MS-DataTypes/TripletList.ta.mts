@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticationTriplet, _decode_AuthenticationTriplet, _encode_AuthenticationTriplet } from "../MAP-MS-DataTypes/AuthenticationTriplet.ta.mjs";
-// export { AuthenticationTriplet, _decode_AuthenticationTriplet, _encode_AuthenticationTriplet } from "../MAP-MS-DataTypes/AuthenticationTriplet.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_TripletList: $.ASN1Decoder<TripletList> | null = null;
 export
 function _decode_TripletList (el: _Element): TripletList {
     if (!_cached_decoder_for_TripletList) { _cached_decoder_for_TripletList = $._decodeSequenceOf<AuthenticationTriplet>(() => _decode_AuthenticationTriplet); }
-    return _cached_decoder_for_TripletList(el);
+    const value = _cached_decoder_for_TripletList(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("TripletList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_TripletList: $.ASN1Encoder<TripletList> | null = null;

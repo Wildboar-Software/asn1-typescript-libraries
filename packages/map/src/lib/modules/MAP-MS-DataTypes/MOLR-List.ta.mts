@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MOLR_Class, _decode_MOLR_Class, _encode_MOLR_Class } from "../MAP-MS-DataTypes/MOLR-Class.ta.mjs";
-// export { MOLR_Class, _decode_MOLR_Class, _encode_MOLR_Class } from "../MAP-MS-DataTypes/MOLR-Class.ta.mjs";
 
+
+import { maxNumOfMOLR_Class } from "./maxNumOfMOLR-Class.va.mjs";
 
 /**
  * @summary MOLR_List
@@ -95,7 +97,11 @@ let _cached_decoder_for_MOLR_List: $.ASN1Decoder<MOLR_List> | null = null;
 export
 function _decode_MOLR_List (el: _Element): MOLR_List {
     if (!_cached_decoder_for_MOLR_List) { _cached_decoder_for_MOLR_List = $._decodeSequenceOf<MOLR_Class>(() => _decode_MOLR_Class); }
-    return _cached_decoder_for_MOLR_List(el);
+    const value = _cached_decoder_for_MOLR_List(el);
+    if (value.length < 1 || value.length > maxNumOfMOLR_Class) {
+        throw new ASN1SizeError("MOLR_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_MOLR_List: $.ASN1Encoder<MOLR_List> | null = null;

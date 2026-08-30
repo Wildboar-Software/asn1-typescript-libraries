@@ -67,21 +67,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { SM_DeliveryOutcome, _enum_for_SM_DeliveryOutcome, SM_DeliveryOutcome_memoryCapacityExceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryCapacityExceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryOutcome_absentSubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, absentSubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryOutcome_successfulTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, successfulTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SM_DeliveryOutcome, _encode_SM_DeliveryOutcome } from "../MAP-SM-DataTypes/SM-DeliveryOutcome.ta.mjs";
-// export { SM_DeliveryOutcome, _enum_for_SM_DeliveryOutcome, SM_DeliveryOutcome_memoryCapacityExceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryCapacityExceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryOutcome_absentSubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, absentSubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryOutcome_successfulTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, successfulTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SM_DeliveryOutcome, _encode_SM_DeliveryOutcome } from "../MAP-SM-DataTypes/SM-DeliveryOutcome.ta.mjs";
 import { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
-// export { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
-// export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
 import { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMServingNodeAddressList } from "../MAP-SM-DataTypes/SMServingNodeAddressList.ta.mjs";
-// export { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMServingNodeAddressList } from "../MAP-SM-DataTypes/SMServingNodeAddressList.ta.mjs";
 
 
 /**
@@ -353,11 +345,11 @@ class ReportSM_DeliveryStatusArg {
  */
 export
 const _root_component_type_list_1_spec_for_ReportSM_DeliveryStatusArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("serviceCentreAddress", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("sm-DeliveryOutcome", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("absentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("serviceCentreAddress", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("sm-DeliveryOutcome", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("absentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -383,23 +375,23 @@ const _root_component_type_list_2_spec_for_ReportSM_DeliveryStatusArg: $.Compone
  */
 export
 const _extension_additions_list_spec_for_ReportSM_DeliveryStatusArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("gprsSupportIndicator", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("deliveryOutcomeIndicator", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("additionalSM-DeliveryOutcome", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("additionalAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("ip-sm-gw-Indicator", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("ip-sm-gw-sm-deliveryOutcome", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("ip-sm-gw-absentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("singleAttemptDelivery", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("smsf-3gpp-deliveryOutcomeIndicator", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("smsf-3gpp-deliveryOutcome", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("smsf-3gpp-absentSubscriberDiagSM", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("smsf-non-3gpp-deliveryOutcomeIndicator", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("smsf-non-3gpp-deliveryOutcome", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("smsf-non-3gpp-absentSubscriberDiagSM", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("failedSMServingNodes", true, $.hasTag(_TagClass.context, 18), undefined, undefined)
+    new $.ComponentSpec("gprsSupportIndicator", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("deliveryOutcomeIndicator", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("additionalSM-DeliveryOutcome", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("additionalAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("ip-sm-gw-Indicator", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("ip-sm-gw-sm-deliveryOutcome", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("ip-sm-gw-absentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("singleAttemptDelivery", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("smsf-3gpp-deliveryOutcomeIndicator", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("smsf-3gpp-deliveryOutcome", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("smsf-3gpp-absentSubscriberDiagSM", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("smsf-non-3gpp-deliveryOutcomeIndicator", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("smsf-non-3gpp-deliveryOutcome", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("smsf-non-3gpp-absentSubscriberDiagSM", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("failedSMServingNodes", true, $.hasTag(_TagClass.context, 18))
 ];
 
 let _cached_decoder_for_ReportSM_DeliveryStatusArg: $.ASN1Decoder<ReportSM_DeliveryStatusArg> | null = null;
@@ -416,26 +408,26 @@ function _decode_ReportSM_DeliveryStatusArg (el: _Element): ReportSM_DeliverySta
     let msisdn!: ISDN_AddressString;
     let serviceCentreAddress!: AddressString;
     let sm_DeliveryOutcome!: SM_DeliveryOutcome;
-    let absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let gprsSupportIndicator: OPTIONAL<NULL>;
-    let deliveryOutcomeIndicator: OPTIONAL<NULL>;
-    let additionalSM_DeliveryOutcome: OPTIONAL<SM_DeliveryOutcome>;
-    let additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let ip_sm_gw_Indicator: OPTIONAL<NULL>;
-    let ip_sm_gw_sm_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome>;
-    let ip_sm_gw_absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let imsi: OPTIONAL<IMSI>;
-    let singleAttemptDelivery: OPTIONAL<NULL>;
-    let correlationID: OPTIONAL<CorrelationID>;
-    let smsf_3gpp_deliveryOutcomeIndicator: OPTIONAL<NULL>;
-    let smsf_3gpp_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome>;
-    let smsf_3gpp_absentSubscriberDiagSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let smsf_non_3gpp_deliveryOutcomeIndicator: OPTIONAL<NULL>;
-    let smsf_non_3gpp_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome>;
-    let smsf_non_3gpp_absentSubscriberDiagSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let failedSMServingNodes: OPTIONAL<SMServingNodeAddressList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let gprsSupportIndicator: OPTIONAL<NULL> = undefined;
+    let deliveryOutcomeIndicator: OPTIONAL<NULL> = undefined;
+    let additionalSM_DeliveryOutcome: OPTIONAL<SM_DeliveryOutcome> = undefined;
+    let additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let ip_sm_gw_Indicator: OPTIONAL<NULL> = undefined;
+    let ip_sm_gw_sm_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome> = undefined;
+    let ip_sm_gw_absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let singleAttemptDelivery: OPTIONAL<NULL> = undefined;
+    let correlationID: OPTIONAL<CorrelationID> = undefined;
+    let smsf_3gpp_deliveryOutcomeIndicator: OPTIONAL<NULL> = undefined;
+    let smsf_3gpp_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome> = undefined;
+    let smsf_3gpp_absentSubscriberDiagSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let smsf_non_3gpp_deliveryOutcomeIndicator: OPTIONAL<NULL> = undefined;
+    let smsf_non_3gpp_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome> = undefined;
+    let smsf_non_3gpp_absentSubscriberDiagSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let failedSMServingNodes: OPTIONAL<SMServingNodeAddressList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "msisdn": (_el: _Element): void => { msisdn = _decode_ISDN_AddressString(_el); },
         "serviceCentreAddress": (_el: _Element): void => { serviceCentreAddress = _decode_AddressString(_el); },

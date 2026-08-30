@@ -255,21 +255,13 @@ const SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber: SM_Enumerate
 export
 const subscriberNotSC_Subscriber: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.subscriberNotSC_Subscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SM_EnumeratedDeliveryFailureCause: $.ASN1Decoder<SM_EnumeratedDeliveryFailureCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_EnumeratedDeliveryFailureCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SM_EnumeratedDeliveryFailureCause (el: _Element): SM_EnumeratedDeliveryFailureCause {
-    if (!_cached_decoder_for_SM_EnumeratedDeliveryFailureCause) { _cached_decoder_for_SM_EnumeratedDeliveryFailureCause = $._decodeEnumerated; }
-    return _cached_decoder_for_SM_EnumeratedDeliveryFailureCause(el);
-}
-
-let _cached_encoder_for_SM_EnumeratedDeliveryFailureCause: $.ASN1Encoder<SM_EnumeratedDeliveryFailureCause> | null = null;
+export const _decode_SM_EnumeratedDeliveryFailureCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SM_EnumeratedDeliveryFailureCause into an ASN.1 Element.
@@ -278,11 +270,7 @@ let _cached_encoder_for_SM_EnumeratedDeliveryFailureCause: $.ASN1Encoder<SM_Enum
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_EnumeratedDeliveryFailureCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_SM_EnumeratedDeliveryFailureCause (value: SM_EnumeratedDeliveryFailureCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SM_EnumeratedDeliveryFailureCause) { _cached_encoder_for_SM_EnumeratedDeliveryFailureCause = $._encodeEnumerated; }
-    return _cached_encoder_for_SM_EnumeratedDeliveryFailureCause(value, elGetter);
-}
+export const _encode_SM_EnumeratedDeliveryFailureCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

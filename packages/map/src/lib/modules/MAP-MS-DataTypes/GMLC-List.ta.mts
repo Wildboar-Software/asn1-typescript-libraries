@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 
+
+import { maxNumOfGMLC } from "./maxNumOfGMLC.va.mjs";
 
 /**
  * @summary GMLC_List
@@ -95,7 +97,11 @@ let _cached_decoder_for_GMLC_List: $.ASN1Decoder<GMLC_List> | null = null;
 export
 function _decode_GMLC_List (el: _Element): GMLC_List {
     if (!_cached_decoder_for_GMLC_List) { _cached_decoder_for_GMLC_List = $._decodeSequenceOf<ISDN_AddressString>(() => _decode_ISDN_AddressString); }
-    return _cached_decoder_for_GMLC_List(el);
+    const value = _cached_decoder_for_GMLC_List(el);
+    if (value.length < 1 || value.length > maxNumOfGMLC) {
+        throw new ASN1SizeError("GMLC_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_GMLC_List: $.ASN1Encoder<GMLC_List> | null = null;

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NR_TA_Id = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_NR_TA_Id: $.ASN1Decoder<NR_TA_Id> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NR_TA_Id
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NR_TA_Id (el: _Element): NR_TA_Id {
-    if (!_cached_decoder_for_NR_TA_Id) { _cached_decoder_for_NR_TA_Id = $._decodeOctetString; }
-    return _cached_decoder_for_NR_TA_Id(el);
-}
-
-let _cached_encoder_for_NR_TA_Id: $.ASN1Encoder<NR_TA_Id> | null = null;
+export const _decode_NR_TA_Id = (el: _Element): NR_TA_Id => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 6 || value.length > 6) {
+        throw new ASN1SizeError("NR_TA_Id violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) NR_TA_Id into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_NR_TA_Id: $.ASN1Encoder<NR_TA_Id> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NR_TA_Id, encoded as an ASN.1 Element.
  */
-export
-function _encode_NR_TA_Id (value: NR_TA_Id, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NR_TA_Id) { _cached_encoder_for_NR_TA_Id = $._encodeOctetString; }
-    return _cached_encoder_for_NR_TA_Id(value, elGetter);
-}
+export const _encode_NR_TA_Id = $._encodeOctetString;
 
 
 /* eslint-enable */

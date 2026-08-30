@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MAP_UserAbortChoice, _decode_MAP_UserAbortChoice, _encode_MAP_UserAbortChoice } from "../MAP-DialogueInformation/MAP-UserAbortChoice.ta.mjs";
-// export { MAP_UserAbortChoice, _decode_MAP_UserAbortChoice, _encode_MAP_UserAbortChoice } from "../MAP-DialogueInformation/MAP-UserAbortChoice.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -141,7 +139,7 @@ class MAP_UserAbortInfo {
  */
 export
 const _root_component_type_list_1_spec_for_MAP_UserAbortInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("map-UserAbortChoice", false, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("map-UserAbortChoice", false, $.hasAnyTag)
 ];
 
 /**
@@ -167,7 +165,7 @@ const _root_component_type_list_2_spec_for_MAP_UserAbortInfo: $.ComponentSpec[] 
  */
 export
 const _extension_additions_list_spec_for_MAP_UserAbortInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 let _cached_decoder_for_MAP_UserAbortInfo: $.ASN1Decoder<MAP_UserAbortInfo> | null = null;
@@ -182,8 +180,8 @@ export
 function _decode_MAP_UserAbortInfo (el: _Element): MAP_UserAbortInfo {
     if (!_cached_decoder_for_MAP_UserAbortInfo) { _cached_decoder_for_MAP_UserAbortInfo = function (el: _Element): MAP_UserAbortInfo {
     let map_UserAbortChoice!: MAP_UserAbortChoice;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "map-UserAbortChoice": (_el: _Element): void => { map_UserAbortChoice = _decode_MAP_UserAbortChoice(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

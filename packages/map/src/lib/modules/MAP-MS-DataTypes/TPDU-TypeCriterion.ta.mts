@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MT_SMS_TPDU_Type, _enum_for_MT_SMS_TPDU_Type, MT_SMS_TPDU_Type_sms_DELIVER /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_DELIVER /* IMPORTED_SHORT_ENUMERATION_ITEM */, MT_SMS_TPDU_Type_sms_SUBMIT_REPORT /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_SUBMIT_REPORT /* IMPORTED_SHORT_ENUMERATION_ITEM */, MT_SMS_TPDU_Type_sms_STATUS_REPORT /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_STATUS_REPORT /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MT_SMS_TPDU_Type, _encode_MT_SMS_TPDU_Type } from "../MAP-MS-DataTypes/MT-SMS-TPDU-Type.ta.mjs";
-// export { MT_SMS_TPDU_Type, _enum_for_MT_SMS_TPDU_Type, MT_SMS_TPDU_Type_sms_DELIVER /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_DELIVER /* IMPORTED_SHORT_ENUMERATION_ITEM */, MT_SMS_TPDU_Type_sms_SUBMIT_REPORT /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_SUBMIT_REPORT /* IMPORTED_SHORT_ENUMERATION_ITEM */, MT_SMS_TPDU_Type_sms_STATUS_REPORT /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_STATUS_REPORT /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MT_SMS_TPDU_Type, _encode_MT_SMS_TPDU_Type } from "../MAP-MS-DataTypes/MT-SMS-TPDU-Type.ta.mjs";
 
+
+import { maxNumOfTPDUTypes } from "./maxNumOfTPDUTypes.va.mjs";
 
 /**
  * @summary TPDU_TypeCriterion
@@ -95,7 +97,11 @@ let _cached_decoder_for_TPDU_TypeCriterion: $.ASN1Decoder<TPDU_TypeCriterion> | 
 export
 function _decode_TPDU_TypeCriterion (el: _Element): TPDU_TypeCriterion {
     if (!_cached_decoder_for_TPDU_TypeCriterion) { _cached_decoder_for_TPDU_TypeCriterion = $._decodeSequenceOf<MT_SMS_TPDU_Type>(() => _decode_MT_SMS_TPDU_Type); }
-    return _cached_decoder_for_TPDU_TypeCriterion(el);
+    const value = _cached_decoder_for_TPDU_TypeCriterion(el);
+    if (value.length < 1 || value.length > maxNumOfTPDUTypes) {
+        throw new ASN1SizeError("TPDU_TypeCriterion violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_TPDU_TypeCriterion: $.ASN1Encoder<TPDU_TypeCriterion> | null = null;

@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -155,10 +152,10 @@ class NoteMsPresentForGprsArg {
  */
 export
 const _root_component_type_list_1_spec_for_NoteMsPresentForGprsArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sgsn-Address", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ggsn-Address", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sgsn-Address", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ggsn-Address", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -200,9 +197,9 @@ function _decode_NoteMsPresentForGprsArg (el: _Element): NoteMsPresentForGprsArg
     if (!_cached_decoder_for_NoteMsPresentForGprsArg) { _cached_decoder_for_NoteMsPresentForGprsArg = function (el: _Element): NoteMsPresentForGprsArg {
     let imsi!: IMSI;
     let sgsn_Address!: GSN_Address;
-    let ggsn_Address: OPTIONAL<GSN_Address>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ggsn_Address: OPTIONAL<GSN_Address> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "sgsn-Address": (_el: _Element): void => { sgsn_Address = $._decode_implicit<GSN_Address>(() => _decode_GSN_Address)(_el); },

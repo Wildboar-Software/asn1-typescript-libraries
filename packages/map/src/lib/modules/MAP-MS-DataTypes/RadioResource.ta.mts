@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
-// export { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
 import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
-// export { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
 
 
 /**
@@ -140,8 +138,8 @@ class RadioResource {
  */
 export
 const _root_component_type_list_1_spec_for_RadioResource: $.ComponentSpec[] = [
-    new $.ComponentSpec("radioResourceInformation", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("rab-Id", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("radioResourceInformation", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("rab-Id", false, $.hasTag(_TagClass.universal, 2))
 ];
 
 /**

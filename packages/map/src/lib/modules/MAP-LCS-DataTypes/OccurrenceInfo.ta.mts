@@ -125,21 +125,13 @@ const OccurrenceInfo_multipleTimeEvent: OccurrenceInfo = 1; /* LONG_NAMED_ENUMER
 export
 const multipleTimeEvent: OccurrenceInfo = OccurrenceInfo_multipleTimeEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_OccurrenceInfo: $.ASN1Decoder<OccurrenceInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OccurrenceInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_OccurrenceInfo (el: _Element): OccurrenceInfo {
-    if (!_cached_decoder_for_OccurrenceInfo) { _cached_decoder_for_OccurrenceInfo = $._decodeEnumerated; }
-    return _cached_decoder_for_OccurrenceInfo(el);
-}
-
-let _cached_encoder_for_OccurrenceInfo: $.ASN1Encoder<OccurrenceInfo> | null = null;
+export const _decode_OccurrenceInfo = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) OccurrenceInfo into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_OccurrenceInfo: $.ASN1Encoder<OccurrenceInfo> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OccurrenceInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_OccurrenceInfo (value: OccurrenceInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OccurrenceInfo) { _cached_encoder_for_OccurrenceInfo = $._encodeEnumerated; }
-    return _cached_encoder_for_OccurrenceInfo(value, elGetter);
-}
+export const _encode_OccurrenceInfo = $._encodeEnumerated;
 
 
 /* eslint-enable */

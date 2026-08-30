@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { O_BcsmTriggerDetectionPoint, _enum_for_O_BcsmTriggerDetectionPoint, O_BcsmTriggerDetectionPoint_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, O_BcsmTriggerDetectionPoint_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_O_BcsmTriggerDetectionPoint, _encode_O_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/O-BcsmTriggerDetectionPoint.ta.mjs";
-// export { O_BcsmTriggerDetectionPoint, _enum_for_O_BcsmTriggerDetectionPoint, O_BcsmTriggerDetectionPoint_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, O_BcsmTriggerDetectionPoint_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_O_BcsmTriggerDetectionPoint, _encode_O_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/O-BcsmTriggerDetectionPoint.ta.mjs";
 import { DestinationNumberCriteria, _decode_DestinationNumberCriteria, _encode_DestinationNumberCriteria } from "../MAP-MS-DataTypes/DestinationNumberCriteria.ta.mjs";
-// export { DestinationNumberCriteria, _decode_DestinationNumberCriteria, _encode_DestinationNumberCriteria } from "../MAP-MS-DataTypes/DestinationNumberCriteria.ta.mjs";
 import { BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
-// export { BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
 import { CallTypeCriteria, _enum_for_CallTypeCriteria, CallTypeCriteria_forwarded /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallTypeCriteria_notForwarded /* IMPORTED_LONG_ENUMERATION_ITEM */, notForwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallTypeCriteria, _encode_CallTypeCriteria } from "../MAP-MS-DataTypes/CallTypeCriteria.ta.mjs";
-// export { CallTypeCriteria, _enum_for_CallTypeCriteria, CallTypeCriteria_forwarded /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallTypeCriteria_notForwarded /* IMPORTED_LONG_ENUMERATION_ITEM */, notForwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallTypeCriteria, _encode_CallTypeCriteria } from "../MAP-MS-DataTypes/CallTypeCriteria.ta.mjs";
 import { O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValueCriteria } from "../MAP-MS-DataTypes/O-CauseValueCriteria.ta.mjs";
-// export { O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValueCriteria } from "../MAP-MS-DataTypes/O-CauseValueCriteria.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -187,10 +181,10 @@ class O_BcsmCamelTDP_Criteria {
  */
 export
 const _root_component_type_list_1_spec_for_O_BcsmCamelTDP_Criteria: $.ComponentSpec[] = [
-    new $.ComponentSpec("o-BcsmTriggerDetectionPoint", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("destinationNumberCriteria", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("basicServiceCriteria", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("callTypeCriteria", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("o-BcsmTriggerDetectionPoint", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("destinationNumberCriteria", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("basicServiceCriteria", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("callTypeCriteria", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -216,8 +210,8 @@ const _root_component_type_list_2_spec_for_O_BcsmCamelTDP_Criteria: $.ComponentS
  */
 export
 const _extension_additions_list_spec_for_O_BcsmCamelTDP_Criteria: $.ComponentSpec[] = [
-    new $.ComponentSpec("o-CauseValueCriteria", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("o-CauseValueCriteria", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 let _cached_decoder_for_O_BcsmCamelTDP_Criteria: $.ASN1Decoder<O_BcsmCamelTDP_Criteria> | null = null;
@@ -232,12 +226,12 @@ export
 function _decode_O_BcsmCamelTDP_Criteria (el: _Element): O_BcsmCamelTDP_Criteria {
     if (!_cached_decoder_for_O_BcsmCamelTDP_Criteria) { _cached_decoder_for_O_BcsmCamelTDP_Criteria = function (el: _Element): O_BcsmCamelTDP_Criteria {
     let o_BcsmTriggerDetectionPoint!: O_BcsmTriggerDetectionPoint;
-    let destinationNumberCriteria: OPTIONAL<DestinationNumberCriteria>;
-    let basicServiceCriteria: OPTIONAL<BasicServiceCriteria>;
-    let callTypeCriteria: OPTIONAL<CallTypeCriteria>;
-    let o_CauseValueCriteria: OPTIONAL<O_CauseValueCriteria>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let destinationNumberCriteria: OPTIONAL<DestinationNumberCriteria> = undefined;
+    let basicServiceCriteria: OPTIONAL<BasicServiceCriteria> = undefined;
+    let callTypeCriteria: OPTIONAL<CallTypeCriteria> = undefined;
+    let o_CauseValueCriteria: OPTIONAL<O_CauseValueCriteria> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "o-BcsmTriggerDetectionPoint": (_el: _Element): void => { o_BcsmTriggerDetectionPoint = _decode_O_BcsmTriggerDetectionPoint(_el); },
         "destinationNumberCriteria": (_el: _Element): void => { destinationNumberCriteria = $._decode_implicit<DestinationNumberCriteria>(() => _decode_DestinationNumberCriteria)(_el); },

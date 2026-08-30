@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AreaDefinition, _decode_AreaDefinition, _encode_AreaDefinition } from "../MAP-LCS-DataTypes/AreaDefinition.ta.mjs";
-// export { AreaDefinition, _decode_AreaDefinition, _encode_AreaDefinition } from "../MAP-LCS-DataTypes/AreaDefinition.ta.mjs";
 import { OccurrenceInfo, _enum_for_OccurrenceInfo, OccurrenceInfo_oneTimeEvent /* IMPORTED_LONG_ENUMERATION_ITEM */, oneTimeEvent /* IMPORTED_SHORT_ENUMERATION_ITEM */, OccurrenceInfo_multipleTimeEvent /* IMPORTED_LONG_ENUMERATION_ITEM */, multipleTimeEvent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_OccurrenceInfo, _encode_OccurrenceInfo } from "../MAP-LCS-DataTypes/OccurrenceInfo.ta.mjs";
-// export { OccurrenceInfo, _enum_for_OccurrenceInfo, OccurrenceInfo_oneTimeEvent /* IMPORTED_LONG_ENUMERATION_ITEM */, oneTimeEvent /* IMPORTED_SHORT_ENUMERATION_ITEM */, OccurrenceInfo_multipleTimeEvent /* IMPORTED_LONG_ENUMERATION_ITEM */, multipleTimeEvent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_OccurrenceInfo, _encode_OccurrenceInfo } from "../MAP-LCS-DataTypes/OccurrenceInfo.ta.mjs";
 import { IntervalTime, _decode_IntervalTime, _encode_IntervalTime } from "../MAP-LCS-DataTypes/IntervalTime.ta.mjs";
-// export { IntervalTime, _decode_IntervalTime, _encode_IntervalTime } from "../MAP-LCS-DataTypes/IntervalTime.ta.mjs";
 
 
 /**
@@ -154,9 +151,9 @@ class AreaEventInfo {
  */
 export
 const _root_component_type_list_1_spec_for_AreaEventInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("areaDefinition", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("occurrenceInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("intervalTime", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("areaDefinition", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("occurrenceInfo", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("intervalTime", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -197,9 +194,9 @@ export
 function _decode_AreaEventInfo (el: _Element): AreaEventInfo {
     if (!_cached_decoder_for_AreaEventInfo) { _cached_decoder_for_AreaEventInfo = function (el: _Element): AreaEventInfo {
     let areaDefinition!: AreaDefinition;
-    let occurrenceInfo: OPTIONAL<OccurrenceInfo>;
-    let intervalTime: OPTIONAL<IntervalTime>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let occurrenceInfo: OPTIONAL<OccurrenceInfo> = undefined;
+    let intervalTime: OPTIONAL<IntervalTime> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "areaDefinition": (_el: _Element): void => { areaDefinition = $._decode_implicit<AreaDefinition>(() => _decode_AreaDefinition)(_el); },
         "occurrenceInfo": (_el: _Element): void => { occurrenceInfo = $._decode_implicit<OccurrenceInfo>(() => _decode_OccurrenceInfo)(_el); },

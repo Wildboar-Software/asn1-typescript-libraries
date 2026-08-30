@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_CallBarFeatureList, _decode_Ext_CallBarFeatureList, _encode_Ext_CallBarFeatureList } from "../MAP-MS-DataTypes/Ext-CallBarFeatureList.ta.mjs";
-// export { Ext_CallBarFeatureList, _decode_Ext_CallBarFeatureList, _encode_Ext_CallBarFeatureList } from "../MAP-MS-DataTypes/Ext-CallBarFeatureList.ta.mjs";
 import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
-// export { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
 import { WrongPasswordAttemptsCounter, _decode_WrongPasswordAttemptsCounter, _encode_WrongPasswordAttemptsCounter } from "../MAP-MS-DataTypes/WrongPasswordAttemptsCounter.ta.mjs";
-// export { WrongPasswordAttemptsCounter, _decode_WrongPasswordAttemptsCounter, _encode_WrongPasswordAttemptsCounter } from "../MAP-MS-DataTypes/WrongPasswordAttemptsCounter.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -164,11 +160,11 @@ class CallBarringData {
  */
 export
 const _root_component_type_list_1_spec_for_CallBarringData: $.ComponentSpec[] = [
-    new $.ComponentSpec("callBarringFeatureList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("password", true, $.hasTag(_TagClass.universal, 18), undefined, undefined),
-    new $.ComponentSpec("wrongPasswordAttemptsCounter", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("callBarringFeatureList", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("password", true, $.hasTag(_TagClass.universal, 18)),
+    new $.ComponentSpec("wrongPasswordAttemptsCounter", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -209,11 +205,11 @@ export
 function _decode_CallBarringData (el: _Element): CallBarringData {
     if (!_cached_decoder_for_CallBarringData) { _cached_decoder_for_CallBarringData = function (el: _Element): CallBarringData {
     let callBarringFeatureList!: Ext_CallBarFeatureList;
-    let password: OPTIONAL<Password>;
-    let wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter>;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let password: OPTIONAL<Password> = undefined;
+    let wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter> = undefined;
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callBarringFeatureList": (_el: _Element): void => { callBarringFeatureList = _decode_Ext_CallBarFeatureList(_el); },
         "password": (_el: _Element): void => { password = _decode_Password(_el); },

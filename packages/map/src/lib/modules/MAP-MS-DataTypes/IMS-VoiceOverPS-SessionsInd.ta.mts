@@ -178,21 +178,13 @@ const IMS_VoiceOverPS_SessionsInd_unknown: IMS_VoiceOverPS_SessionsInd = IMS_Voi
 export
 const unknown: IMS_VoiceOverPS_SessionsInd = IMS_VoiceOverPS_SessionsInd.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_IMS_VoiceOverPS_SessionsInd: $.ASN1Decoder<IMS_VoiceOverPS_SessionsInd> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IMS_VoiceOverPS_SessionsInd
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IMS_VoiceOverPS_SessionsInd (el: _Element): IMS_VoiceOverPS_SessionsInd {
-    if (!_cached_decoder_for_IMS_VoiceOverPS_SessionsInd) { _cached_decoder_for_IMS_VoiceOverPS_SessionsInd = $._decodeEnumerated; }
-    return _cached_decoder_for_IMS_VoiceOverPS_SessionsInd(el);
-}
-
-let _cached_encoder_for_IMS_VoiceOverPS_SessionsInd: $.ASN1Encoder<IMS_VoiceOverPS_SessionsInd> | null = null;
+export const _decode_IMS_VoiceOverPS_SessionsInd = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IMS_VoiceOverPS_SessionsInd into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_IMS_VoiceOverPS_SessionsInd: $.ASN1Encoder<IMS_VoiceOver
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IMS_VoiceOverPS_SessionsInd, encoded as an ASN.1 Element.
  */
-export
-function _encode_IMS_VoiceOverPS_SessionsInd (value: IMS_VoiceOverPS_SessionsInd, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMS_VoiceOverPS_SessionsInd) { _cached_encoder_for_IMS_VoiceOverPS_SessionsInd = $._encodeEnumerated; }
-    return _cached_encoder_for_IMS_VoiceOverPS_SessionsInd(value, elGetter);
-}
+export const _encode_IMS_VoiceOverPS_SessionsInd = $._encodeEnumerated;
 
 
 /* eslint-enable */

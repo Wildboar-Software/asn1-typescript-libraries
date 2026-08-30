@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -383,21 +384,19 @@ const OfferedCamel4Functionalities_collectInformation: number = 19; /* LONG_NAME
 export
 const collectInformation: number = OfferedCamel4Functionalities_collectInformation; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_OfferedCamel4Functionalities: $.ASN1Decoder<OfferedCamel4Functionalities> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OfferedCamel4Functionalities
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_OfferedCamel4Functionalities (el: _Element): OfferedCamel4Functionalities {
-    if (!_cached_decoder_for_OfferedCamel4Functionalities) { _cached_decoder_for_OfferedCamel4Functionalities = $._decodeBitString; }
-    return _cached_decoder_for_OfferedCamel4Functionalities(el);
-}
-
-let _cached_encoder_for_OfferedCamel4Functionalities: $.ASN1Encoder<OfferedCamel4Functionalities> | null = null;
+export const _decode_OfferedCamel4Functionalities = (el: _Element): OfferedCamel4Functionalities => {
+    const value = $._decodeBitString(el);
+    if (value.length < 15 || value.length > 64) {
+        throw new ASN1SizeError("OfferedCamel4Functionalities violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) OfferedCamel4Functionalities into an ASN.1 Element.
@@ -406,11 +405,7 @@ let _cached_encoder_for_OfferedCamel4Functionalities: $.ASN1Encoder<OfferedCamel
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OfferedCamel4Functionalities, encoded as an ASN.1 Element.
  */
-export
-function _encode_OfferedCamel4Functionalities (value: OfferedCamel4Functionalities, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OfferedCamel4Functionalities) { _cached_encoder_for_OfferedCamel4Functionalities = $._encodeBitString; }
-    return _cached_encoder_for_OfferedCamel4Functionalities(value, elGetter);
-}
+export const _encode_OfferedCamel4Functionalities = $._encodeBitString;
 
 
 /* eslint-enable */

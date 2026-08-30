@@ -67,25 +67,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "../MAP-MS-DataTypes/VLR-Capability.ta.mjs";
-// export { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "../MAP-MS-DataTypes/VLR-Capability.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { ADD_Info, _decode_ADD_Info, _encode_ADD_Info } from "../MAP-MS-DataTypes/ADD-Info.ta.mjs";
-// export { ADD_Info, _decode_ADD_Info, _encode_ADD_Info } from "../MAP-MS-DataTypes/ADD-Info.ta.mjs";
 import { PagingArea, _decode_PagingArea, _encode_PagingArea } from "../MAP-MS-DataTypes/PagingArea.ta.mjs";
-// export { PagingArea, _decode_PagingArea, _encode_PagingArea } from "../MAP-MS-DataTypes/PagingArea.ta.mjs";
 import { EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
-// export { EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
 import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
-// export { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
 
 
 /**
@@ -249,11 +239,11 @@ class UpdateLocationArg {
  */
 export
 const _root_component_type_list_1_spec_for_UpdateLocationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("msc-Number", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("vlr-Number", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("msc-Number", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("vlr-Number", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -279,16 +269,16 @@ const _root_component_type_list_2_spec_for_UpdateLocationArg: $.ComponentSpec[] 
  */
 export
 const _extension_additions_list_spec_for_UpdateLocationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("vlr-Capability", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("informPreviousNetworkEntity", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("cs-LCS-NotSupportedByUE", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("v-gmlc-Address", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("add-info", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("pagingArea", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("skipSubscriberDataUpdate", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("restorationIndicator", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("eplmn-List", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("mme-DiameterAddress", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("vlr-Capability", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("informPreviousNetworkEntity", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("cs-LCS-NotSupportedByUE", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("v-gmlc-Address", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("add-info", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("pagingArea", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("skipSubscriberDataUpdate", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("restorationIndicator", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("eplmn-List", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("mme-DiameterAddress", true, $.hasTag(_TagClass.context, 4))
 ];
 
 let _cached_decoder_for_UpdateLocationArg: $.ASN1Decoder<UpdateLocationArg> | null = null;
@@ -305,19 +295,19 @@ function _decode_UpdateLocationArg (el: _Element): UpdateLocationArg {
     let imsi!: IMSI;
     let msc_Number!: ISDN_AddressString;
     let vlr_Number!: ISDN_AddressString;
-    let lmsi: OPTIONAL<LMSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let vlr_Capability: OPTIONAL<VLR_Capability>;
-    let informPreviousNetworkEntity: OPTIONAL<NULL>;
-    let cs_LCS_NotSupportedByUE: OPTIONAL<NULL>;
-    let v_gmlc_Address: OPTIONAL<GSN_Address>;
-    let add_info: OPTIONAL<ADD_Info>;
-    let pagingArea: OPTIONAL<PagingArea>;
-    let skipSubscriberDataUpdate: OPTIONAL<NULL>;
-    let restorationIndicator: OPTIONAL<NULL>;
-    let eplmn_List: OPTIONAL<EPLMN_List>;
-    let mme_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lmsi: OPTIONAL<LMSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let vlr_Capability: OPTIONAL<VLR_Capability> = undefined;
+    let informPreviousNetworkEntity: OPTIONAL<NULL> = undefined;
+    let cs_LCS_NotSupportedByUE: OPTIONAL<NULL> = undefined;
+    let v_gmlc_Address: OPTIONAL<GSN_Address> = undefined;
+    let add_info: OPTIONAL<ADD_Info> = undefined;
+    let pagingArea: OPTIONAL<PagingArea> = undefined;
+    let skipSubscriberDataUpdate: OPTIONAL<NULL> = undefined;
+    let restorationIndicator: OPTIONAL<NULL> = undefined;
+    let eplmn_List: OPTIONAL<EPLMN_List> = undefined;
+    let mme_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = _decode_IMSI(_el); },
         "msc-Number": (_el: _Element): void => { msc_Number = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

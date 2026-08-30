@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReportingAmountMilliseconds, _decode_ReportingAmountMilliseconds, _encode_ReportingAmountMilliseconds } from "../MAP-LCS-DataTypes/ReportingAmountMilliseconds.ta.mjs";
-// export { ReportingAmountMilliseconds, _decode_ReportingAmountMilliseconds, _encode_ReportingAmountMilliseconds } from "../MAP-LCS-DataTypes/ReportingAmountMilliseconds.ta.mjs";
 import { ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _encode_ReportingIntervalMilliseconds } from "../MAP-LCS-DataTypes/ReportingIntervalMilliseconds.ta.mjs";
-// export { ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _encode_ReportingIntervalMilliseconds } from "../MAP-LCS-DataTypes/ReportingIntervalMilliseconds.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class ReportingOptionMilliseconds {
  */
 export
 const _root_component_type_list_1_spec_for_ReportingOptionMilliseconds: $.ComponentSpec[] = [
-    new $.ComponentSpec("reportingAmountMilliseconds", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("reportingIntervalMilliseconds", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("reportingAmountMilliseconds", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("reportingIntervalMilliseconds", false, $.hasTag(_TagClass.universal, 2))
 ];
 
 /**

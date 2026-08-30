@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-// export { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class PrepareSubsequentHO_Res {
  */
 export
 const _root_component_type_list_1_spec_for_PrepareSubsequentHO_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("an-APDU", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("an-APDU", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -181,8 +179,8 @@ export
 function _decode_PrepareSubsequentHO_Res (el: _Element): PrepareSubsequentHO_Res {
     if (!_cached_decoder_for_PrepareSubsequentHO_Res) { _cached_decoder_for_PrepareSubsequentHO_Res = $._decode_implicit<PrepareSubsequentHO_Res>(() => function (el: _Element): PrepareSubsequentHO_Res {
     let an_APDU!: AccessNetworkSignalInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "an-APDU": (_el: _Element): void => { an_APDU = _decode_AccessNetworkSignalInfo(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }

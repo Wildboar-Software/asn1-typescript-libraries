@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CUG_Index = INTEGER;
 
-let _cached_decoder_for_CUG_Index: $.ASN1Decoder<CUG_Index> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CUG_Index
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CUG_Index (el: _Element): CUG_Index {
-    if (!_cached_decoder_for_CUG_Index) { _cached_decoder_for_CUG_Index = $._decodeInteger; }
-    return _cached_decoder_for_CUG_Index(el);
-}
-
-let _cached_encoder_for_CUG_Index: $.ASN1Encoder<CUG_Index> | null = null;
+export const _decode_CUG_Index = (el: _Element): CUG_Index => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 32767) {
+        throw new ASN1OverflowError("CUG_Index violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) CUG_Index into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_CUG_Index: $.ASN1Encoder<CUG_Index> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CUG_Index, encoded as an ASN.1 Element.
  */
-export
-function _encode_CUG_Index (value: CUG_Index, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CUG_Index) { _cached_encoder_for_CUG_Index = $._encodeInteger; }
-    return _cached_encoder_for_CUG_Index(value, elGetter);
-}
+export const _encode_CUG_Index = $._encodeInteger;
 
 
 /* eslint-enable */

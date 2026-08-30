@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type LSAIdentity = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_LSAIdentity: $.ASN1Decoder<LSAIdentity> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LSAIdentity
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LSAIdentity (el: _Element): LSAIdentity {
-    if (!_cached_decoder_for_LSAIdentity) { _cached_decoder_for_LSAIdentity = $._decodeOctetString; }
-    return _cached_decoder_for_LSAIdentity(el);
-}
-
-let _cached_encoder_for_LSAIdentity: $.ASN1Encoder<LSAIdentity> | null = null;
+export const _decode_LSAIdentity = (el: _Element): LSAIdentity => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 3 || value.length > 3) {
+        throw new ASN1SizeError("LSAIdentity violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) LSAIdentity into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_LSAIdentity: $.ASN1Encoder<LSAIdentity> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LSAIdentity, encoded as an ASN.1 Element.
  */
-export
-function _encode_LSAIdentity (value: LSAIdentity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LSAIdentity) { _cached_encoder_for_LSAIdentity = $._encodeOctetString; }
-    return _cached_encoder_for_LSAIdentity(value, elGetter);
-}
+export const _encode_LSAIdentity = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -155,21 +155,13 @@ const OverrideCategory_overrideDisabled: OverrideCategory = OverrideCategory.ove
 export
 const overrideDisabled: OverrideCategory = OverrideCategory.overrideDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_OverrideCategory: $.ASN1Decoder<OverrideCategory> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OverrideCategory
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_OverrideCategory (el: _Element): OverrideCategory {
-    if (!_cached_decoder_for_OverrideCategory) { _cached_decoder_for_OverrideCategory = $._decodeEnumerated; }
-    return _cached_decoder_for_OverrideCategory(el);
-}
-
-let _cached_encoder_for_OverrideCategory: $.ASN1Encoder<OverrideCategory> | null = null;
+export const _decode_OverrideCategory = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) OverrideCategory into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_OverrideCategory: $.ASN1Encoder<OverrideCategory> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OverrideCategory, encoded as an ASN.1 Element.
  */
-export
-function _encode_OverrideCategory (value: OverrideCategory, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OverrideCategory) { _cached_encoder_for_OverrideCategory = $._encodeEnumerated; }
-    return _cached_encoder_for_OverrideCategory(value, elGetter);
-}
+export const _encode_OverrideCategory = $._encodeEnumerated;
 
 
 /* eslint-enable */

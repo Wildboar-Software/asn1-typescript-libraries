@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -160,8 +158,8 @@ class UpdateGprsLocationRes {
  */
 export
 const _root_component_type_list_1_spec_for_UpdateGprsLocationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("hlr-Number", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("hlr-Number", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -187,9 +185,9 @@ const _root_component_type_list_2_spec_for_UpdateGprsLocationRes: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_UpdateGprsLocationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("add-Capability", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("sgsn-mmeSeparationSupported", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mmeRegisteredforSMS", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("add-Capability", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("sgsn-mmeSeparationSupported", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mmeRegisteredforSMS", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_UpdateGprsLocationRes: $.ASN1Decoder<UpdateGprsLocationRes> | null = null;
@@ -204,11 +202,11 @@ export
 function _decode_UpdateGprsLocationRes (el: _Element): UpdateGprsLocationRes {
     if (!_cached_decoder_for_UpdateGprsLocationRes) { _cached_decoder_for_UpdateGprsLocationRes = function (el: _Element): UpdateGprsLocationRes {
     let hlr_Number!: ISDN_AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let add_Capability: OPTIONAL<NULL>;
-    let sgsn_mmeSeparationSupported: OPTIONAL<NULL>;
-    let mmeRegisteredforSMS: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let add_Capability: OPTIONAL<NULL> = undefined;
+    let sgsn_mmeSeparationSupported: OPTIONAL<NULL> = undefined;
+    let mmeRegisteredforSMS: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hlr-Number": (_el: _Element): void => { hlr_Number = _decode_ISDN_AddressString(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

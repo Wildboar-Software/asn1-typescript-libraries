@@ -125,21 +125,13 @@ const ReportingState_startMonitoring: ReportingState = 1; /* LONG_NAMED_ENUMERAT
 export
 const startMonitoring: ReportingState = ReportingState_startMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ReportingState: $.ASN1Decoder<ReportingState> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingState
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReportingState (el: _Element): ReportingState {
-    if (!_cached_decoder_for_ReportingState) { _cached_decoder_for_ReportingState = $._decodeEnumerated; }
-    return _cached_decoder_for_ReportingState(el);
-}
-
-let _cached_encoder_for_ReportingState: $.ASN1Encoder<ReportingState> | null = null;
+export const _decode_ReportingState = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ReportingState into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_ReportingState: $.ASN1Encoder<ReportingState> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportingState, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReportingState (value: ReportingState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportingState) { _cached_encoder_for_ReportingState = $._encodeEnumerated; }
-    return _cached_encoder_for_ReportingState(value, elGetter);
-}
+export const _encode_ReportingState = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -155,21 +155,13 @@ const PDN_GW_AllocationType_dynamic: PDN_GW_AllocationType = PDN_GW_AllocationTy
 export
 const dynamic: PDN_GW_AllocationType = PDN_GW_AllocationType.dynamic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PDN_GW_AllocationType: $.ASN1Decoder<PDN_GW_AllocationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PDN_GW_AllocationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PDN_GW_AllocationType (el: _Element): PDN_GW_AllocationType {
-    if (!_cached_decoder_for_PDN_GW_AllocationType) { _cached_decoder_for_PDN_GW_AllocationType = $._decodeEnumerated; }
-    return _cached_decoder_for_PDN_GW_AllocationType(el);
-}
-
-let _cached_encoder_for_PDN_GW_AllocationType: $.ASN1Encoder<PDN_GW_AllocationType> | null = null;
+export const _decode_PDN_GW_AllocationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PDN_GW_AllocationType into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_PDN_GW_AllocationType: $.ASN1Encoder<PDN_GW_AllocationTy
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDN_GW_AllocationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_PDN_GW_AllocationType (value: PDN_GW_AllocationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDN_GW_AllocationType) { _cached_encoder_for_PDN_GW_AllocationType = $._encodeEnumerated; }
-    return _cached_encoder_for_PDN_GW_AllocationType(value, elGetter);
-}
+export const _encode_PDN_GW_AllocationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -155,21 +155,13 @@ const MatchType_enabling: MatchType = MatchType.enabling; /* LONG_NAMED_ENUMERAT
 export
 const enabling: MatchType = MatchType.enabling; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MatchType: $.ASN1Decoder<MatchType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MatchType (el: _Element): MatchType {
-    if (!_cached_decoder_for_MatchType) { _cached_decoder_for_MatchType = $._decodeEnumerated; }
-    return _cached_decoder_for_MatchType(el);
-}
-
-let _cached_encoder_for_MatchType: $.ASN1Encoder<MatchType> | null = null;
+export const _decode_MatchType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MatchType into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_MatchType: $.ASN1Encoder<MatchType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MatchType, encoded as an ASN.1 Element.
  */
-export
-function _encode_MatchType (value: MatchType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MatchType) { _cached_encoder_for_MatchType = $._encodeEnumerated; }
-    return _cached_encoder_for_MatchType(value, elGetter);
-}
+export const _encode_MatchType = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MT_smsCAMELTDP_Criteria, _decode_MT_smsCAMELTDP_Criteria, _encode_MT_smsCAMELTDP_Criteria } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-Criteria.ta.mjs";
-// export { MT_smsCAMELTDP_Criteria, _decode_MT_smsCAMELTDP_Criteria, _encode_MT_smsCAMELTDP_Criteria } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-Criteria.ta.mjs";
 
+
+import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 
 /**
  * @summary MT_smsCAMELTDP_CriteriaList
@@ -95,7 +97,11 @@ let _cached_decoder_for_MT_smsCAMELTDP_CriteriaList: $.ASN1Decoder<MT_smsCAMELTD
 export
 function _decode_MT_smsCAMELTDP_CriteriaList (el: _Element): MT_smsCAMELTDP_CriteriaList {
     if (!_cached_decoder_for_MT_smsCAMELTDP_CriteriaList) { _cached_decoder_for_MT_smsCAMELTDP_CriteriaList = $._decodeSequenceOf<MT_smsCAMELTDP_Criteria>(() => _decode_MT_smsCAMELTDP_Criteria); }
-    return _cached_decoder_for_MT_smsCAMELTDP_CriteriaList(el);
+    const value = _cached_decoder_for_MT_smsCAMELTDP_CriteriaList(el);
+    if (value.length < 1 || value.length > maxNumOfCamelTDPData) {
+        throw new ASN1SizeError("MT_smsCAMELTDP_CriteriaList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_MT_smsCAMELTDP_CriteriaList: $.ASN1Encoder<MT_smsCAMELTDP_CriteriaList> | null = null;

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PDP_ContextInfoList, _decode_PDP_ContextInfoList, _encode_PDP_ContextInfoList } from "../MAP-MS-DataTypes/PDP-ContextInfoList.ta.mjs";
-// export { PDP_ContextInfoList, _decode_PDP_ContextInfoList, _encode_PDP_ContextInfoList } from "../MAP-MS-DataTypes/PDP-ContextInfoList.ta.mjs";
 import { NotReachableReason, _enum_for_NotReachableReason, NotReachableReason_msPurged /* IMPORTED_LONG_ENUMERATION_ITEM */, msPurged /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotReachableReason_imsiDetached /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiDetached /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotReachableReason_restrictedArea /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotReachableReason_notRegistered /* IMPORTED_LONG_ENUMERATION_ITEM */, notRegistered /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NotReachableReason, _encode_NotReachableReason } from "../MAP-MS-DataTypes/NotReachableReason.ta.mjs";
-// export { NotReachableReason, _enum_for_NotReachableReason, NotReachableReason_msPurged /* IMPORTED_LONG_ENUMERATION_ITEM */, msPurged /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotReachableReason_imsiDetached /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiDetached /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotReachableReason_restrictedArea /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotReachableReason_notRegistered /* IMPORTED_LONG_ENUMERATION_ITEM */, notRegistered /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NotReachableReason, _encode_NotReachableReason } from "../MAP-MS-DataTypes/NotReachableReason.ta.mjs";
 
 
 /**

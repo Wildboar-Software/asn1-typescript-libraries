@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LSAData, _decode_LSAData, _encode_LSAData } from "../MAP-MS-DataTypes/LSAData.ta.mjs";
-// export { LSAData, _decode_LSAData, _encode_LSAData } from "../MAP-MS-DataTypes/LSAData.ta.mjs";
 
+
+import { maxNumOfLSAs } from "./maxNumOfLSAs.va.mjs";
 
 /**
  * @summary LSADataList
@@ -95,7 +97,11 @@ let _cached_decoder_for_LSADataList: $.ASN1Decoder<LSADataList> | null = null;
 export
 function _decode_LSADataList (el: _Element): LSADataList {
     if (!_cached_decoder_for_LSADataList) { _cached_decoder_for_LSADataList = $._decodeSequenceOf<LSAData>(() => _decode_LSAData); }
-    return _cached_decoder_for_LSADataList(el);
+    const value = _cached_decoder_for_LSADataList(el);
+    if (value.length < 1 || value.length > maxNumOfLSAs) {
+        throw new ASN1SizeError("LSADataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_LSADataList: $.ASN1Encoder<LSADataList> | null = null;

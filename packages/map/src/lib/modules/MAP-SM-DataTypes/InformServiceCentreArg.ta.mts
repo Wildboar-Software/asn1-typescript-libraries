@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { MW_Status, MW_Status_sc_AddressNotIncluded /* IMPORTED_LONG_NAMED_BIT */, sc_AddressNotIncluded /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnrf_Set /* IMPORTED_LONG_NAMED_BIT */, mnrf_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mcef_Set /* IMPORTED_LONG_NAMED_BIT */, mcef_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnrg_Set /* IMPORTED_LONG_NAMED_BIT */, mnrg_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnr5g_Set /* IMPORTED_LONG_NAMED_BIT */, mnr5g_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnr5gn3g_Set /* IMPORTED_LONG_NAMED_BIT */, mnr5gn3g_Set /* IMPORTED_SHORT_NAMED_BIT */, _decode_MW_Status, _encode_MW_Status } from "../MAP-SM-DataTypes/MW-Status.ta.mjs";
-// export { MW_Status, MW_Status_sc_AddressNotIncluded /* IMPORTED_LONG_NAMED_BIT */, sc_AddressNotIncluded /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnrf_Set /* IMPORTED_LONG_NAMED_BIT */, mnrf_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mcef_Set /* IMPORTED_LONG_NAMED_BIT */, mcef_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnrg_Set /* IMPORTED_LONG_NAMED_BIT */, mnrg_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnr5g_Set /* IMPORTED_LONG_NAMED_BIT */, mnr5g_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnr5gn3g_Set /* IMPORTED_LONG_NAMED_BIT */, mnr5gn3g_Set /* IMPORTED_SHORT_NAMED_BIT */, _decode_MW_Status, _encode_MW_Status } from "../MAP-SM-DataTypes/MW-Status.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
-// export { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
 
 
 /**
@@ -182,9 +178,9 @@ class InformServiceCentreArg {
  */
 export
 const _root_component_type_list_1_spec_for_InformServiceCentreArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("storedMSISDN", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("mw-Status", true, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("storedMSISDN", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("mw-Status", true, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -210,10 +206,10 @@ const _root_component_type_list_2_spec_for_InformServiceCentreArg: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_InformServiceCentreArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("absentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("additionalAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("smsf3gppAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("smsfNon3gppAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("absentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("additionalAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("smsf3gppAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("smsfNon3gppAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 2))
 ];
 
 let _cached_decoder_for_InformServiceCentreArg: $.ASN1Decoder<InformServiceCentreArg> | null = null;
@@ -227,14 +223,14 @@ let _cached_decoder_for_InformServiceCentreArg: $.ASN1Decoder<InformServiceCentr
 export
 function _decode_InformServiceCentreArg (el: _Element): InformServiceCentreArg {
     if (!_cached_decoder_for_InformServiceCentreArg) { _cached_decoder_for_InformServiceCentreArg = function (el: _Element): InformServiceCentreArg {
-    let storedMSISDN: OPTIONAL<ISDN_AddressString>;
-    let mw_Status: OPTIONAL<MW_Status>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let smsf3gppAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let smsfNon3gppAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let storedMSISDN: OPTIONAL<ISDN_AddressString> = undefined;
+    let mw_Status: OPTIONAL<MW_Status> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let smsf3gppAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let smsfNon3gppAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "storedMSISDN": (_el: _Element): void => { storedMSISDN = _decode_ISDN_AddressString(_el); },
         "mw-Status": (_el: _Element): void => { mw_Status = _decode_MW_Status(_el); },

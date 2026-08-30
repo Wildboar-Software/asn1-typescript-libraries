@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-DataTypes/CCBS-Index.ta.mjs";
-// export { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-DataTypes/CCBS-Index.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
-// export { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
 import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-// export { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
 
 
 /**
@@ -157,10 +153,10 @@ class CCBS_Feature {
  */
 export
 const _root_component_type_list_1_spec_for_CCBS_Feature: $.ComponentSpec[] = [
-    new $.ComponentSpec("ccbs-Index", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("b-subscriberNumber", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("b-subscriberSubaddress", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("basicServiceGroup", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("ccbs-Index", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("b-subscriberNumber", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("b-subscriberSubaddress", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("basicServiceGroup", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -200,11 +196,11 @@ let _cached_decoder_for_CCBS_Feature: $.ASN1Decoder<CCBS_Feature> | null = null;
 export
 function _decode_CCBS_Feature (el: _Element): CCBS_Feature {
     if (!_cached_decoder_for_CCBS_Feature) { _cached_decoder_for_CCBS_Feature = function (el: _Element): CCBS_Feature {
-    let ccbs_Index: OPTIONAL<CCBS_Index>;
-    let b_subscriberNumber: OPTIONAL<ISDN_AddressString>;
-    let b_subscriberSubaddress: OPTIONAL<ISDN_SubaddressString>;
-    let basicServiceGroup: OPTIONAL<BasicServiceCode>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ccbs_Index: OPTIONAL<CCBS_Index> = undefined;
+    let b_subscriberNumber: OPTIONAL<ISDN_AddressString> = undefined;
+    let b_subscriberSubaddress: OPTIONAL<ISDN_SubaddressString> = undefined;
+    let basicServiceGroup: OPTIONAL<BasicServiceCode> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ccbs-Index": (_el: _Element): void => { ccbs_Index = $._decode_implicit<CCBS_Index>(() => _decode_CCBS_Index)(_el); },
         "b-subscriberNumber": (_el: _Element): void => { b_subscriberNumber = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

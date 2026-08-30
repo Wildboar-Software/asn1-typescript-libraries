@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type EMLPP_Priority = INTEGER;
 
-let _cached_decoder_for_EMLPP_Priority: $.ASN1Decoder<EMLPP_Priority> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EMLPP_Priority
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EMLPP_Priority (el: _Element): EMLPP_Priority {
-    if (!_cached_decoder_for_EMLPP_Priority) { _cached_decoder_for_EMLPP_Priority = $._decodeInteger; }
-    return _cached_decoder_for_EMLPP_Priority(el);
-}
-
-let _cached_encoder_for_EMLPP_Priority: $.ASN1Encoder<EMLPP_Priority> | null = null;
+export const _decode_EMLPP_Priority = (el: _Element): EMLPP_Priority => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 15) {
+        throw new ASN1OverflowError("EMLPP_Priority violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) EMLPP_Priority into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_EMLPP_Priority: $.ASN1Encoder<EMLPP_Priority> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EMLPP_Priority, encoded as an ASN.1 Element.
  */
-export
-function _encode_EMLPP_Priority (value: EMLPP_Priority, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EMLPP_Priority) { _cached_encoder_for_EMLPP_Priority = $._encodeInteger; }
-    return _cached_encoder_for_EMLPP_Priority(value, elGetter);
-}
+export const _encode_EMLPP_Priority = $._encodeInteger;
 
 
 /* eslint-enable */

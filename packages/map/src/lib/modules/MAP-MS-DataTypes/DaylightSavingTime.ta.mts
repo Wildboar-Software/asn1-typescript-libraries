@@ -178,21 +178,13 @@ const DaylightSavingTime_plusTwoHoursAdjustment: DaylightSavingTime = DaylightSa
 export
 const plusTwoHoursAdjustment: DaylightSavingTime = DaylightSavingTime.plusTwoHoursAdjustment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_DaylightSavingTime: $.ASN1Decoder<DaylightSavingTime> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DaylightSavingTime
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DaylightSavingTime (el: _Element): DaylightSavingTime {
-    if (!_cached_decoder_for_DaylightSavingTime) { _cached_decoder_for_DaylightSavingTime = $._decodeEnumerated; }
-    return _cached_decoder_for_DaylightSavingTime(el);
-}
-
-let _cached_encoder_for_DaylightSavingTime: $.ASN1Encoder<DaylightSavingTime> | null = null;
+export const _decode_DaylightSavingTime = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) DaylightSavingTime into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_DaylightSavingTime: $.ASN1Encoder<DaylightSavingTime> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DaylightSavingTime, encoded as an ASN.1 Element.
  */
-export
-function _encode_DaylightSavingTime (value: DaylightSavingTime, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DaylightSavingTime) { _cached_encoder_for_DaylightSavingTime = $._encodeEnumerated; }
-    return _cached_encoder_for_DaylightSavingTime(value, elGetter);
-}
+export const _encode_DaylightSavingTime = $._encodeEnumerated;
 
 
 /* eslint-enable */

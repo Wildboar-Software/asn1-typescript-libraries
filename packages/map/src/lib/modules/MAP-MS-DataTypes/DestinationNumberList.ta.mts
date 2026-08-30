@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 
+
+import { maxNumOfCamelDestinationNumbers } from "./maxNumOfCamelDestinationNumbers.va.mjs";
 
 /**
  * @summary DestinationNumberList
@@ -95,7 +97,11 @@ let _cached_decoder_for_DestinationNumberList: $.ASN1Decoder<DestinationNumberLi
 export
 function _decode_DestinationNumberList (el: _Element): DestinationNumberList {
     if (!_cached_decoder_for_DestinationNumberList) { _cached_decoder_for_DestinationNumberList = $._decodeSequenceOf<ISDN_AddressString>(() => _decode_ISDN_AddressString); }
-    return _cached_decoder_for_DestinationNumberList(el);
+    const value = _cached_decoder_for_DestinationNumberList(el);
+    if (value.length < 1 || value.length > maxNumOfCamelDestinationNumbers) {
+        throw new ASN1SizeError("DestinationNumberList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_DestinationNumberList: $.ASN1Encoder<DestinationNumberList> | null = null;

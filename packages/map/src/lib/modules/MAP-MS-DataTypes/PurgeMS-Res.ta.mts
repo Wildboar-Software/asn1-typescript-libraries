@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -151,9 +150,9 @@ class PurgeMS_Res {
  */
 export
 const _root_component_type_list_1_spec_for_PurgeMS_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("freezeTMSI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("freezeP-TMSI", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("freezeTMSI", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("freezeP-TMSI", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -179,7 +178,7 @@ const _root_component_type_list_2_spec_for_PurgeMS_Res: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_PurgeMS_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("freezeM-TMSI", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("freezeM-TMSI", true, $.hasTag(_TagClass.context, 2))
 ];
 
 let _cached_decoder_for_PurgeMS_Res: $.ASN1Decoder<PurgeMS_Res> | null = null;
@@ -193,11 +192,11 @@ let _cached_decoder_for_PurgeMS_Res: $.ASN1Decoder<PurgeMS_Res> | null = null;
 export
 function _decode_PurgeMS_Res (el: _Element): PurgeMS_Res {
     if (!_cached_decoder_for_PurgeMS_Res) { _cached_decoder_for_PurgeMS_Res = function (el: _Element): PurgeMS_Res {
-    let freezeTMSI: OPTIONAL<NULL>;
-    let freezeP_TMSI: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let freezeM_TMSI: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let freezeTMSI: OPTIONAL<NULL> = undefined;
+    let freezeP_TMSI: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let freezeM_TMSI: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "freezeTMSI": (_el: _Element): void => { freezeTMSI = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "freezeP-TMSI": (_el: _Element): void => { freezeP_TMSI = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

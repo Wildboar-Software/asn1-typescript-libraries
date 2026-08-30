@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxUtranGANSSpositioningData } from "./maxUtranGANSSpositioningData.va.mjs";
 
 /**
  * @summary UtranGANSSpositioningData
@@ -82,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UtranGANSSpositioningData = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_UtranGANSSpositioningData: $.ASN1Decoder<UtranGANSSpositioningData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UtranGANSSpositioningData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UtranGANSSpositioningData (el: _Element): UtranGANSSpositioningData {
-    if (!_cached_decoder_for_UtranGANSSpositioningData) { _cached_decoder_for_UtranGANSSpositioningData = $._decodeOctetString; }
-    return _cached_decoder_for_UtranGANSSpositioningData(el);
-}
-
-let _cached_encoder_for_UtranGANSSpositioningData: $.ASN1Encoder<UtranGANSSpositioningData> | null = null;
+export const _decode_UtranGANSSpositioningData = (el: _Element): UtranGANSSpositioningData => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxUtranGANSSpositioningData) {
+        throw new ASN1SizeError("UtranGANSSpositioningData violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) UtranGANSSpositioningData into an ASN.1 Element.
@@ -105,11 +106,7 @@ let _cached_encoder_for_UtranGANSSpositioningData: $.ASN1Encoder<UtranGANSSposit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UtranGANSSpositioningData, encoded as an ASN.1 Element.
  */
-export
-function _encode_UtranGANSSpositioningData (value: UtranGANSSpositioningData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UtranGANSSpositioningData) { _cached_encoder_for_UtranGANSSpositioningData = $._encodeOctetString; }
-    return _cached_encoder_for_UtranGANSSpositioningData(value, elGetter);
-}
+export const _encode_UtranGANSSpositioningData = $._encodeOctetString;
 
 
 /* eslint-enable */

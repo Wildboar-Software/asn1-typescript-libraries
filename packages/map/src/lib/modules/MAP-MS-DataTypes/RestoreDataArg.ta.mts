@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "../MAP-MS-DataTypes/VLR-Capability.ta.mjs";
-// export { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "../MAP-MS-DataTypes/VLR-Capability.ta.mjs";
 
 
 /**
@@ -165,9 +161,9 @@ class RestoreDataArg {
  */
 export
 const _root_component_type_list_1_spec_for_RestoreDataArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -193,8 +189,8 @@ const _root_component_type_list_2_spec_for_RestoreDataArg: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_RestoreDataArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("vlr-Capability", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("restorationIndicator", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("vlr-Capability", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("restorationIndicator", true, $.hasTag(_TagClass.context, 7))
 ];
 
 let _cached_decoder_for_RestoreDataArg: $.ASN1Decoder<RestoreDataArg> | null = null;
@@ -209,11 +205,11 @@ export
 function _decode_RestoreDataArg (el: _Element): RestoreDataArg {
     if (!_cached_decoder_for_RestoreDataArg) { _cached_decoder_for_RestoreDataArg = function (el: _Element): RestoreDataArg {
     let imsi!: IMSI;
-    let lmsi: OPTIONAL<LMSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let vlr_Capability: OPTIONAL<VLR_Capability>;
-    let restorationIndicator: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lmsi: OPTIONAL<LMSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let vlr_Capability: OPTIONAL<VLR_Capability> = undefined;
+    let restorationIndicator: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = _decode_IMSI(_el); },
         "lmsi": (_el: _Element): void => { lmsi = _decode_LMSI(_el); },

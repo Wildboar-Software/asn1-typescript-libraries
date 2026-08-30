@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class Ext_CallBarringFeature {
  */
 export
 const _root_component_type_list_1_spec_for_Ext_CallBarringFeature: $.ComponentSpec[] = [
-    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)), undefined, undefined),
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3))),
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -190,10 +187,10 @@ let _cached_decoder_for_Ext_CallBarringFeature: $.ASN1Decoder<Ext_CallBarringFea
 export
 function _decode_Ext_CallBarringFeature (el: _Element): Ext_CallBarringFeature {
     if (!_cached_decoder_for_Ext_CallBarringFeature) { _cached_decoder_for_Ext_CallBarringFeature = function (el: _Element): Ext_CallBarringFeature {
-    let basicService: OPTIONAL<Ext_BasicServiceCode>;
+    let basicService: OPTIONAL<Ext_BasicServiceCode> = undefined;
     let ss_Status!: Ext_SS_Status;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "basicService": (_el: _Element): void => { basicService = _decode_Ext_BasicServiceCode(_el); },
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<Ext_SS_Status>(() => _decode_Ext_SS_Status)(_el); },

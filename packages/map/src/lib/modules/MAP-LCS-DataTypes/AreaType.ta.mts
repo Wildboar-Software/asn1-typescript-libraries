@@ -197,21 +197,13 @@ const AreaType_utranCellId: AreaType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const utranCellId: AreaType = AreaType_utranCellId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AreaType: $.ASN1Decoder<AreaType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AreaType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AreaType (el: _Element): AreaType {
-    if (!_cached_decoder_for_AreaType) { _cached_decoder_for_AreaType = $._decodeEnumerated; }
-    return _cached_decoder_for_AreaType(el);
-}
-
-let _cached_encoder_for_AreaType: $.ASN1Encoder<AreaType> | null = null;
+export const _decode_AreaType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AreaType into an ASN.1 Element.
@@ -220,11 +212,7 @@ let _cached_encoder_for_AreaType: $.ASN1Encoder<AreaType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AreaType, encoded as an ASN.1 Element.
  */
-export
-function _encode_AreaType (value: AreaType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AreaType) { _cached_encoder_for_AreaType = $._encodeEnumerated; }
-    return _cached_encoder_for_AreaType(value, elGetter);
-}
+export const _encode_AreaType = $._encodeEnumerated;
 
 
 /* eslint-enable */

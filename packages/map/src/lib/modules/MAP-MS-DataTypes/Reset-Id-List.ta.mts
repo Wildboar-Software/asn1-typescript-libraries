@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Reset_Id, _decode_Reset_Id, _encode_Reset_Id } from "../MAP-MS-DataTypes/Reset-Id.ta.mjs";
-// export { Reset_Id, _decode_Reset_Id, _encode_Reset_Id } from "../MAP-MS-DataTypes/Reset-Id.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_Reset_Id_List: $.ASN1Decoder<Reset_Id_List> | null = nul
 export
 function _decode_Reset_Id_List (el: _Element): Reset_Id_List {
     if (!_cached_decoder_for_Reset_Id_List) { _cached_decoder_for_Reset_Id_List = $._decodeSequenceOf<Reset_Id>(() => _decode_Reset_Id); }
-    return _cached_decoder_for_Reset_Id_List(el);
+    const value = _cached_decoder_for_Reset_Id_List(el);
+    if (value.length < 1 || value.length > 50) {
+        throw new ASN1SizeError("Reset_Id_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_Reset_Id_List: $.ASN1Encoder<Reset_Id_List> | null = null;

@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessNetworkProtocolId, _enum_for_AccessNetworkProtocolId, AccessNetworkProtocolId_ts3G_48006 /* IMPORTED_LONG_ENUMERATION_ITEM */, ts3G_48006 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessNetworkProtocolId_ts3G_25413 /* IMPORTED_LONG_ENUMERATION_ITEM */, ts3G_25413 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessNetworkProtocolId, _encode_AccessNetworkProtocolId } from "../MAP-CommonDataTypes/AccessNetworkProtocolId.ta.mjs";
-// export { AccessNetworkProtocolId, _enum_for_AccessNetworkProtocolId, AccessNetworkProtocolId_ts3G_48006 /* IMPORTED_LONG_ENUMERATION_ITEM */, ts3G_48006 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessNetworkProtocolId_ts3G_25413 /* IMPORTED_LONG_ENUMERATION_ITEM */, ts3G_25413 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessNetworkProtocolId, _encode_AccessNetworkProtocolId } from "../MAP-CommonDataTypes/AccessNetworkProtocolId.ta.mjs";
 import { LongSignalInfo, _decode_LongSignalInfo, _encode_LongSignalInfo } from "../MAP-CommonDataTypes/LongSignalInfo.ta.mjs";
-// export { LongSignalInfo, _decode_LongSignalInfo, _encode_LongSignalInfo } from "../MAP-CommonDataTypes/LongSignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -156,9 +153,9 @@ class AccessNetworkSignalInfo {
  */
 export
 const _root_component_type_list_1_spec_for_AccessNetworkSignalInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("accessNetworkProtocolId", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("signalInfo", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("accessNetworkProtocolId", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("signalInfo", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -200,8 +197,8 @@ function _decode_AccessNetworkSignalInfo (el: _Element): AccessNetworkSignalInfo
     if (!_cached_decoder_for_AccessNetworkSignalInfo) { _cached_decoder_for_AccessNetworkSignalInfo = function (el: _Element): AccessNetworkSignalInfo {
     let accessNetworkProtocolId!: AccessNetworkProtocolId;
     let signalInfo!: LongSignalInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessNetworkProtocolId": (_el: _Element): void => { accessNetworkProtocolId = _decode_AccessNetworkProtocolId(_el); },
         "signalInfo": (_el: _Element): void => { signalInfo = _decode_LongSignalInfo(_el); },

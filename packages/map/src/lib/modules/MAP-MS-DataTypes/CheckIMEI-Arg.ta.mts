@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { RequestedEquipmentInfo, RequestedEquipmentInfo_equipmentStatus /* IMPORTED_LONG_NAMED_BIT */, equipmentStatus /* IMPORTED_SHORT_NAMED_BIT */, RequestedEquipmentInfo_bmuef /* IMPORTED_LONG_NAMED_BIT */, bmuef /* IMPORTED_SHORT_NAMED_BIT */, _decode_RequestedEquipmentInfo, _encode_RequestedEquipmentInfo } from "../MAP-MS-DataTypes/RequestedEquipmentInfo.ta.mjs";
-// export { RequestedEquipmentInfo, RequestedEquipmentInfo_equipmentStatus /* IMPORTED_LONG_NAMED_BIT */, equipmentStatus /* IMPORTED_SHORT_NAMED_BIT */, RequestedEquipmentInfo_bmuef /* IMPORTED_LONG_NAMED_BIT */, bmuef /* IMPORTED_SHORT_NAMED_BIT */, _decode_RequestedEquipmentInfo, _encode_RequestedEquipmentInfo } from "../MAP-MS-DataTypes/RequestedEquipmentInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class CheckIMEI_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_CheckIMEI_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imei", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("requestedEquipmentInfo", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imei", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("requestedEquipmentInfo", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -192,8 +189,8 @@ function _decode_CheckIMEI_Arg (el: _Element): CheckIMEI_Arg {
     if (!_cached_decoder_for_CheckIMEI_Arg) { _cached_decoder_for_CheckIMEI_Arg = function (el: _Element): CheckIMEI_Arg {
     let imei!: IMEI;
     let requestedEquipmentInfo!: RequestedEquipmentInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imei": (_el: _Element): void => { imei = _decode_IMEI(_el); },
         "requestedEquipmentInfo": (_el: _Element): void => { requestedEquipmentInfo = _decode_RequestedEquipmentInfo(_el); },

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocationEstimateType, _enum_for_LocationEstimateType, LocationEstimateType_currentLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, currentLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_currentOrLastKnownLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, currentOrLastKnownLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_initialLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, initialLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_activateDeferredLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, activateDeferredLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_cancelDeferredLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, cancelDeferredLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_notificationVerificationOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, notificationVerificationOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LocationEstimateType, _encode_LocationEstimateType } from "../MAP-LCS-DataTypes/LocationEstimateType.ta.mjs";
-// export { LocationEstimateType, _enum_for_LocationEstimateType, LocationEstimateType_currentLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, currentLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_currentOrLastKnownLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, currentOrLastKnownLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_initialLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, initialLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_activateDeferredLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, activateDeferredLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_cancelDeferredLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, cancelDeferredLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEstimateType_notificationVerificationOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, notificationVerificationOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LocationEstimateType, _encode_LocationEstimateType } from "../MAP-LCS-DataTypes/LocationEstimateType.ta.mjs";
 import { DeferredLocationEventType, DeferredLocationEventType_msAvailable /* IMPORTED_LONG_NAMED_BIT */, msAvailable /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_enteringIntoArea /* IMPORTED_LONG_NAMED_BIT */, enteringIntoArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_leavingFromArea /* IMPORTED_LONG_NAMED_BIT */, leavingFromArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_beingInsideArea /* IMPORTED_LONG_NAMED_BIT */, beingInsideArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_periodicLDR /* IMPORTED_LONG_NAMED_BIT */, periodicLDR /* IMPORTED_SHORT_NAMED_BIT */, _decode_DeferredLocationEventType, _encode_DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
-// export { DeferredLocationEventType, DeferredLocationEventType_msAvailable /* IMPORTED_LONG_NAMED_BIT */, msAvailable /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_enteringIntoArea /* IMPORTED_LONG_NAMED_BIT */, enteringIntoArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_leavingFromArea /* IMPORTED_LONG_NAMED_BIT */, leavingFromArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_beingInsideArea /* IMPORTED_LONG_NAMED_BIT */, beingInsideArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_periodicLDR /* IMPORTED_LONG_NAMED_BIT */, periodicLDR /* IMPORTED_SHORT_NAMED_BIT */, _decode_DeferredLocationEventType, _encode_DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
 
 
 /**
@@ -145,7 +143,7 @@ class LocationType {
  */
 export
 const _root_component_type_list_1_spec_for_LocationType: $.ComponentSpec[] = [
-    new $.ComponentSpec("locationEstimateType", false, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("locationEstimateType", false, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -171,7 +169,7 @@ const _root_component_type_list_2_spec_for_LocationType: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_LocationType: $.ComponentSpec[] = [
-    new $.ComponentSpec("deferredLocationEventType", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("deferredLocationEventType", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_LocationType: $.ASN1Decoder<LocationType> | null = null;
@@ -186,8 +184,8 @@ export
 function _decode_LocationType (el: _Element): LocationType {
     if (!_cached_decoder_for_LocationType) { _cached_decoder_for_LocationType = function (el: _Element): LocationType {
     let locationEstimateType!: LocationEstimateType;
-    let deferredLocationEventType: OPTIONAL<DeferredLocationEventType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let deferredLocationEventType: OPTIONAL<DeferredLocationEventType> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationEstimateType": (_el: _Element): void => { locationEstimateType = $._decode_implicit<LocationEstimateType>(() => _decode_LocationEstimateType)(_el); },
         "deferredLocationEventType": (_el: _Element): void => { deferredLocationEventType = $._decode_implicit<DeferredLocationEventType>(() => _decode_DeferredLocationEventType)(_el); }

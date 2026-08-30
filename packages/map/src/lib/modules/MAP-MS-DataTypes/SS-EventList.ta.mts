@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 
+
+import { maxNumOfCamelSSEvents } from "./maxNumOfCamelSSEvents.va.mjs";
 
 /**
  * @summary SS_EventList
@@ -94,7 +96,11 @@ let _cached_decoder_for_SS_EventList: $.ASN1Decoder<SS_EventList> | null = null;
 export
 function _decode_SS_EventList (el: _Element): SS_EventList {
     if (!_cached_decoder_for_SS_EventList) { _cached_decoder_for_SS_EventList = $._decodeSequenceOf<SS_Code>(() => _decode_SS_Code); }
-    return _cached_decoder_for_SS_EventList(el);
+    const value = _cached_decoder_for_SS_EventList(el);
+    if (value.length < 1 || value.length > maxNumOfCamelSSEvents) {
+        throw new ASN1SizeError("SS_EventList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_SS_EventList: $.ASN1Encoder<SS_EventList> | null = null;

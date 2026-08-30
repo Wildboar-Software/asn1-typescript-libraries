@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
-// export { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
 
 
 /**
@@ -130,7 +129,7 @@ class RegisterCC_EntryRes {
  */
 export
 const _root_component_type_list_1_spec_for_RegisterCC_EntryRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("ccbs-Feature", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("ccbs-Feature", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -170,8 +169,8 @@ let _cached_decoder_for_RegisterCC_EntryRes: $.ASN1Decoder<RegisterCC_EntryRes> 
 export
 function _decode_RegisterCC_EntryRes (el: _Element): RegisterCC_EntryRes {
     if (!_cached_decoder_for_RegisterCC_EntryRes) { _cached_decoder_for_RegisterCC_EntryRes = function (el: _Element): RegisterCC_EntryRes {
-    let ccbs_Feature: OPTIONAL<CCBS_Feature>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ccbs_Feature: OPTIONAL<CCBS_Feature> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ccbs-Feature": (_el: _Element): void => { ccbs_Feature = $._decode_implicit<CCBS_Feature>(() => _decode_CCBS_Feature)(_el); }
     };

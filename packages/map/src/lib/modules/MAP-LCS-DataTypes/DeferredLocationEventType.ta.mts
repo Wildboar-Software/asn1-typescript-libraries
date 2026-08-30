@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -157,21 +158,19 @@ const DeferredLocationEventType_periodicLDR: number = 4; /* LONG_NAMED_BIT */
 export
 const periodicLDR: number = DeferredLocationEventType_periodicLDR; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_DeferredLocationEventType: $.ASN1Decoder<DeferredLocationEventType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DeferredLocationEventType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DeferredLocationEventType (el: _Element): DeferredLocationEventType {
-    if (!_cached_decoder_for_DeferredLocationEventType) { _cached_decoder_for_DeferredLocationEventType = $._decodeBitString; }
-    return _cached_decoder_for_DeferredLocationEventType(el);
-}
-
-let _cached_encoder_for_DeferredLocationEventType: $.ASN1Encoder<DeferredLocationEventType> | null = null;
+export const _decode_DeferredLocationEventType = (el: _Element): DeferredLocationEventType => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 16) {
+        throw new ASN1SizeError("DeferredLocationEventType violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) DeferredLocationEventType into an ASN.1 Element.
@@ -180,11 +179,7 @@ let _cached_encoder_for_DeferredLocationEventType: $.ASN1Encoder<DeferredLocatio
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeferredLocationEventType, encoded as an ASN.1 Element.
  */
-export
-function _encode_DeferredLocationEventType (value: DeferredLocationEventType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeferredLocationEventType) { _cached_encoder_for_DeferredLocationEventType = $._encodeBitString; }
-    return _cached_encoder_for_DeferredLocationEventType(value, elGetter);
-}
+export const _encode_DeferredLocationEventType = $._encodeBitString;
 
 
 /* eslint-enable */

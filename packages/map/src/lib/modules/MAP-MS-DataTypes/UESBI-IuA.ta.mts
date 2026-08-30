@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UESBI_IuA = BIT_STRING;
 
-let _cached_decoder_for_UESBI_IuA: $.ASN1Decoder<UESBI_IuA> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UESBI_IuA
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UESBI_IuA (el: _Element): UESBI_IuA {
-    if (!_cached_decoder_for_UESBI_IuA) { _cached_decoder_for_UESBI_IuA = $._decodeBitString; }
-    return _cached_decoder_for_UESBI_IuA(el);
-}
-
-let _cached_encoder_for_UESBI_IuA: $.ASN1Encoder<UESBI_IuA> | null = null;
+export const _decode_UESBI_IuA = (el: _Element): UESBI_IuA => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 128) {
+        throw new ASN1SizeError("UESBI_IuA violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) UESBI_IuA into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_UESBI_IuA: $.ASN1Encoder<UESBI_IuA> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UESBI_IuA, encoded as an ASN.1 Element.
  */
-export
-function _encode_UESBI_IuA (value: UESBI_IuA, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UESBI_IuA) { _cached_encoder_for_UESBI_IuA = $._encodeBitString; }
-    return _cached_encoder_for_UESBI_IuA(value, elGetter);
-}
+export const _encode_UESBI_IuA = $._encodeBitString;
 
 
 /* eslint-enable */

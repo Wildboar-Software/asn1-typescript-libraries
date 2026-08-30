@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type HopCounter = INTEGER;
 
-let _cached_decoder_for_HopCounter: $.ASN1Decoder<HopCounter> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) HopCounter
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_HopCounter (el: _Element): HopCounter {
-    if (!_cached_decoder_for_HopCounter) { _cached_decoder_for_HopCounter = $._decodeInteger; }
-    return _cached_decoder_for_HopCounter(el);
-}
-
-let _cached_encoder_for_HopCounter: $.ASN1Encoder<HopCounter> | null = null;
+export const _decode_HopCounter = (el: _Element): HopCounter => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 3) {
+        throw new ASN1OverflowError("HopCounter violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) HopCounter into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_HopCounter: $.ASN1Encoder<HopCounter> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HopCounter, encoded as an ASN.1 Element.
  */
-export
-function _encode_HopCounter (value: HopCounter, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HopCounter) { _cached_encoder_for_HopCounter = $._encodeInteger; }
-    return _cached_encoder_for_HopCounter(value, elGetter);
-}
+export const _encode_HopCounter = $._encodeInteger;
 
 
 /* eslint-enable */

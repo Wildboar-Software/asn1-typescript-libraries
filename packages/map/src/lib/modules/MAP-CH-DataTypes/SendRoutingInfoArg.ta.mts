@@ -67,43 +67,24 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
-// export { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
 import { NumberOfForwarding, _decode_NumberOfForwarding, _encode_NumberOfForwarding } from "../MAP-CH-DataTypes/NumberOfForwarding.ta.mjs";
-// export { NumberOfForwarding, _decode_NumberOfForwarding, _encode_NumberOfForwarding } from "../MAP-CH-DataTypes/NumberOfForwarding.ta.mjs";
 import { InterrogationType, _enum_for_InterrogationType, InterrogationType_basicCall /* IMPORTED_LONG_ENUMERATION_ITEM */, basicCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterrogationType_forwarding /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarding /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InterrogationType, _encode_InterrogationType } from "../MAP-CH-DataTypes/InterrogationType.ta.mjs";
-// export { InterrogationType, _enum_for_InterrogationType, InterrogationType_basicCall /* IMPORTED_LONG_ENUMERATION_ITEM */, basicCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterrogationType_forwarding /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarding /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InterrogationType, _encode_InterrogationType } from "../MAP-CH-DataTypes/InterrogationType.ta.mjs";
 import { OR_Phase, _decode_OR_Phase, _encode_OR_Phase } from "../MAP-CH-DataTypes/OR-Phase.ta.mjs";
-// export { OR_Phase, _decode_OR_Phase, _encode_OR_Phase } from "../MAP-CH-DataTypes/OR-Phase.ta.mjs";
 import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
-// export { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
 import { ForwardingReason, _enum_for_ForwardingReason, ForwardingReason_notReachable /* IMPORTED_LONG_ENUMERATION_ITEM */, notReachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingReason_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingReason_noReply /* IMPORTED_LONG_ENUMERATION_ITEM */, noReply /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ForwardingReason, _encode_ForwardingReason } from "../MAP-CH-DataTypes/ForwardingReason.ta.mjs";
-// export { ForwardingReason, _enum_for_ForwardingReason, ForwardingReason_notReachable /* IMPORTED_LONG_ENUMERATION_ITEM */, notReachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingReason_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingReason_noReply /* IMPORTED_LONG_ENUMERATION_ITEM */, noReply /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ForwardingReason, _encode_ForwardingReason } from "../MAP-CH-DataTypes/ForwardingReason.ta.mjs";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
-// export { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
 import { CamelInfo, _decode_CamelInfo, _encode_CamelInfo } from "../MAP-CH-DataTypes/CamelInfo.ta.mjs";
-// export { CamelInfo, _decode_CamelInfo, _encode_CamelInfo } from "../MAP-CH-DataTypes/CamelInfo.ta.mjs";
 import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
-// export { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
-// export { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
 import { SupportedCCBS_Phase, _decode_SupportedCCBS_Phase, _encode_SupportedCCBS_Phase } from "../MAP-CH-DataTypes/SupportedCCBS-Phase.ta.mjs";
-// export { SupportedCCBS_Phase, _decode_SupportedCCBS_Phase, _encode_SupportedCCBS_Phase } from "../MAP-CH-DataTypes/SupportedCCBS-Phase.ta.mjs";
 import { Ext_ExternalSignalInfo, _decode_Ext_ExternalSignalInfo, _encode_Ext_ExternalSignalInfo } from "../MAP-CommonDataTypes/Ext-ExternalSignalInfo.ta.mjs";
-// export { Ext_ExternalSignalInfo, _decode_Ext_ExternalSignalInfo, _encode_Ext_ExternalSignalInfo } from "../MAP-CommonDataTypes/Ext-ExternalSignalInfo.ta.mjs";
 import { IST_SupportIndicator, _enum_for_IST_SupportIndicator, IST_SupportIndicator_basicISTSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, basicISTSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IST_SupportIndicator_istCommandSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, istCommandSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
-// export { IST_SupportIndicator, _enum_for_IST_SupportIndicator, IST_SupportIndicator_basicISTSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, basicISTSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IST_SupportIndicator_istCommandSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, istCommandSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
 import { CallDiversionTreatmentIndicator, _decode_CallDiversionTreatmentIndicator, _encode_CallDiversionTreatmentIndicator } from "../MAP-CH-DataTypes/CallDiversionTreatmentIndicator.ta.mjs";
-// export { CallDiversionTreatmentIndicator, _decode_CallDiversionTreatmentIndicator, _encode_CallDiversionTreatmentIndicator } from "../MAP-CH-DataTypes/CallDiversionTreatmentIndicator.ta.mjs";
 import { SuppressMTSS, SuppressMTSS_suppressCUG /* IMPORTED_LONG_NAMED_BIT */, suppressCUG /* IMPORTED_SHORT_NAMED_BIT */, SuppressMTSS_suppressCCBS /* IMPORTED_LONG_NAMED_BIT */, suppressCCBS /* IMPORTED_SHORT_NAMED_BIT */, _decode_SuppressMTSS, _encode_SuppressMTSS } from "../MAP-CH-DataTypes/SuppressMTSS.ta.mjs";
-// export { SuppressMTSS, SuppressMTSS_suppressCUG /* IMPORTED_LONG_NAMED_BIT */, suppressCUG /* IMPORTED_SHORT_NAMED_BIT */, SuppressMTSS_suppressCCBS /* IMPORTED_LONG_NAMED_BIT */, suppressCCBS /* IMPORTED_SHORT_NAMED_BIT */, _decode_SuppressMTSS, _encode_SuppressMTSS } from "../MAP-CH-DataTypes/SuppressMTSS.ta.mjs";
 import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-// export { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 
 
 /**
@@ -388,20 +369,20 @@ class SendRoutingInfoArg {
  */
 export
 const _root_component_type_list_1_spec_for_SendRoutingInfoArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("cug-CheckInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("numberOfForwarding", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("interrogationType", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("or-Interrogation", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("or-Capability", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("gmsc-OrGsmSCF-Address", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("forwardingReason", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("basicServiceGroup", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("networkSignalInfo", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("camelInfo", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("suppressionOfAnnouncement", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 13), undefined, undefined)
+    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("cug-CheckInfo", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("numberOfForwarding", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("interrogationType", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("or-Interrogation", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("or-Capability", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("gmsc-OrGsmSCF-Address", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("forwardingReason", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("basicServiceGroup", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("networkSignalInfo", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("camelInfo", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("suppressionOfAnnouncement", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 13))
 ];
 
 /**
@@ -427,22 +408,22 @@ const _root_component_type_list_2_spec_for_SendRoutingInfoArg: $.ComponentSpec[]
  */
 export
 const _extension_additions_list_spec_for_SendRoutingInfoArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("ccbs-Call", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("supportedCCBS-Phase", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("additionalSignalInfo", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("istSupportIndicator", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("pre-pagingSupported", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("callDiversionTreatmentIndicator", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("suppress-VT-CSI", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("suppressIncomingCallBarring", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-InitiatedCall", true, $.hasTag(_TagClass.context, 24), undefined, undefined),
-    new $.ComponentSpec("basicServiceGroup2", true, $.hasTag(_TagClass.context, 25), undefined, undefined),
-    new $.ComponentSpec("networkSignalInfo2", true, $.hasTag(_TagClass.context, 26), undefined, undefined),
-    new $.ComponentSpec("suppressMTSS", true, $.hasTag(_TagClass.context, 27), undefined, undefined),
-    new $.ComponentSpec("mtRoamingRetrySupported", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    new $.ComponentSpec("callPriority", true, $.hasTag(_TagClass.context, 29), undefined, undefined)
+    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("ccbs-Call", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("supportedCCBS-Phase", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("additionalSignalInfo", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("istSupportIndicator", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("pre-pagingSupported", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("callDiversionTreatmentIndicator", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("suppress-VT-CSI", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("suppressIncomingCallBarring", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("gsmSCF-InitiatedCall", true, $.hasTag(_TagClass.context, 24)),
+    new $.ComponentSpec("basicServiceGroup2", true, $.hasTag(_TagClass.context, 25)),
+    new $.ComponentSpec("networkSignalInfo2", true, $.hasTag(_TagClass.context, 26)),
+    new $.ComponentSpec("suppressMTSS", true, $.hasTag(_TagClass.context, 27)),
+    new $.ComponentSpec("mtRoamingRetrySupported", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("callPriority", true, $.hasTag(_TagClass.context, 29))
 ];
 
 let _cached_decoder_for_SendRoutingInfoArg: $.ASN1Decoder<SendRoutingInfoArg> | null = null;
@@ -457,36 +438,36 @@ export
 function _decode_SendRoutingInfoArg (el: _Element): SendRoutingInfoArg {
     if (!_cached_decoder_for_SendRoutingInfoArg) { _cached_decoder_for_SendRoutingInfoArg = function (el: _Element): SendRoutingInfoArg {
     let msisdn!: ISDN_AddressString;
-    let cug_CheckInfo: OPTIONAL<CUG_CheckInfo>;
-    let numberOfForwarding: OPTIONAL<NumberOfForwarding>;
+    let cug_CheckInfo: OPTIONAL<CUG_CheckInfo> = undefined;
+    let numberOfForwarding: OPTIONAL<NumberOfForwarding> = undefined;
     let interrogationType!: InterrogationType;
-    let or_Interrogation: OPTIONAL<NULL>;
-    let or_Capability: OPTIONAL<OR_Phase>;
+    let or_Interrogation: OPTIONAL<NULL> = undefined;
+    let or_Capability: OPTIONAL<OR_Phase> = undefined;
     let gmsc_OrGsmSCF_Address!: ISDN_AddressString;
-    let callReferenceNumber: OPTIONAL<CallReferenceNumber>;
-    let forwardingReason: OPTIONAL<ForwardingReason>;
-    let basicServiceGroup: OPTIONAL<Ext_BasicServiceCode>;
-    let networkSignalInfo: OPTIONAL<ExternalSignalInfo>;
-    let camelInfo: OPTIONAL<CamelInfo>;
-    let suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let alertingPattern: OPTIONAL<AlertingPattern>;
-    let ccbs_Call: OPTIONAL<NULL>;
-    let supportedCCBS_Phase: OPTIONAL<SupportedCCBS_Phase>;
-    let additionalSignalInfo: OPTIONAL<Ext_ExternalSignalInfo>;
-    let istSupportIndicator: OPTIONAL<IST_SupportIndicator>;
-    let pre_pagingSupported: OPTIONAL<NULL>;
-    let callDiversionTreatmentIndicator: OPTIONAL<CallDiversionTreatmentIndicator>;
-    let longFTN_Supported: OPTIONAL<NULL>;
-    let suppress_VT_CSI: OPTIONAL<NULL>;
-    let suppressIncomingCallBarring: OPTIONAL<NULL>;
-    let gsmSCF_InitiatedCall: OPTIONAL<NULL>;
-    let basicServiceGroup2: OPTIONAL<Ext_BasicServiceCode>;
-    let networkSignalInfo2: OPTIONAL<ExternalSignalInfo>;
-    let suppressMTSS: OPTIONAL<SuppressMTSS>;
-    let mtRoamingRetrySupported: OPTIONAL<NULL>;
-    let callPriority: OPTIONAL<EMLPP_Priority>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let callReferenceNumber: OPTIONAL<CallReferenceNumber> = undefined;
+    let forwardingReason: OPTIONAL<ForwardingReason> = undefined;
+    let basicServiceGroup: OPTIONAL<Ext_BasicServiceCode> = undefined;
+    let networkSignalInfo: OPTIONAL<ExternalSignalInfo> = undefined;
+    let camelInfo: OPTIONAL<CamelInfo> = undefined;
+    let suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let alertingPattern: OPTIONAL<AlertingPattern> = undefined;
+    let ccbs_Call: OPTIONAL<NULL> = undefined;
+    let supportedCCBS_Phase: OPTIONAL<SupportedCCBS_Phase> = undefined;
+    let additionalSignalInfo: OPTIONAL<Ext_ExternalSignalInfo> = undefined;
+    let istSupportIndicator: OPTIONAL<IST_SupportIndicator> = undefined;
+    let pre_pagingSupported: OPTIONAL<NULL> = undefined;
+    let callDiversionTreatmentIndicator: OPTIONAL<CallDiversionTreatmentIndicator> = undefined;
+    let longFTN_Supported: OPTIONAL<NULL> = undefined;
+    let suppress_VT_CSI: OPTIONAL<NULL> = undefined;
+    let suppressIncomingCallBarring: OPTIONAL<NULL> = undefined;
+    let gsmSCF_InitiatedCall: OPTIONAL<NULL> = undefined;
+    let basicServiceGroup2: OPTIONAL<Ext_BasicServiceCode> = undefined;
+    let networkSignalInfo2: OPTIONAL<ExternalSignalInfo> = undefined;
+    let suppressMTSS: OPTIONAL<SuppressMTSS> = undefined;
+    let mtRoamingRetrySupported: OPTIONAL<NULL> = undefined;
+    let callPriority: OPTIONAL<EMLPP_Priority> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "msisdn": (_el: _Element): void => { msisdn = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "cug-CheckInfo": (_el: _Element): void => { cug_CheckInfo = $._decode_implicit<CUG_CheckInfo>(() => _decode_CUG_CheckInfo)(_el); },

@@ -67,41 +67,23 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocationType, _decode_LocationType, _encode_LocationType } from "../MAP-LCS-DataTypes/LocationType.ta.mjs";
-// export { LocationType, _decode_LocationType, _encode_LocationType } from "../MAP-LCS-DataTypes/LocationType.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LCS_ClientID, _decode_LCS_ClientID, _encode_LCS_ClientID } from "../MAP-LCS-DataTypes/LCS-ClientID.ta.mjs";
-// export { LCS_ClientID, _decode_LCS_ClientID, _encode_LCS_ClientID } from "../MAP-LCS-DataTypes/LCS-ClientID.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { LCS_Priority, _decode_LCS_Priority, _encode_LCS_Priority } from "../MAP-LCS-DataTypes/LCS-Priority.ta.mjs";
-// export { LCS_Priority, _decode_LCS_Priority, _encode_LCS_Priority } from "../MAP-LCS-DataTypes/LCS-Priority.ta.mjs";
 import { LCS_QoS, _decode_LCS_QoS, _encode_LCS_QoS } from "../MAP-LCS-DataTypes/LCS-QoS.ta.mjs";
-// export { LCS_QoS, _decode_LCS_QoS, _encode_LCS_QoS } from "../MAP-LCS-DataTypes/LCS-QoS.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { SupportedGADShapes, SupportedGADShapes_ellipsoidPoint /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPoint /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidPointWithUncertaintyCircle /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPointWithUncertaintyCircle /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidPointWithUncertaintyEllipse /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPointWithUncertaintyEllipse /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_polygon /* IMPORTED_LONG_NAMED_BIT */, polygon /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidPointWithAltitude /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPointWithAltitude /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidPointWithAltitudeAndUncertaintyElipsoid /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPointWithAltitudeAndUncertaintyElipsoid /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidArc /* IMPORTED_LONG_NAMED_BIT */, ellipsoidArc /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedGADShapes, _encode_SupportedGADShapes } from "../MAP-LCS-DataTypes/SupportedGADShapes.ta.mjs";
-// export { SupportedGADShapes, SupportedGADShapes_ellipsoidPoint /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPoint /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidPointWithUncertaintyCircle /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPointWithUncertaintyCircle /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidPointWithUncertaintyEllipse /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPointWithUncertaintyEllipse /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_polygon /* IMPORTED_LONG_NAMED_BIT */, polygon /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidPointWithAltitude /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPointWithAltitude /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidPointWithAltitudeAndUncertaintyElipsoid /* IMPORTED_LONG_NAMED_BIT */, ellipsoidPointWithAltitudeAndUncertaintyElipsoid /* IMPORTED_SHORT_NAMED_BIT */, SupportedGADShapes_ellipsoidArc /* IMPORTED_LONG_NAMED_BIT */, ellipsoidArc /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedGADShapes, _encode_SupportedGADShapes } from "../MAP-LCS-DataTypes/SupportedGADShapes.ta.mjs";
 import { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
-// export { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
 import { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
-// export { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
 import { LCSCodeword, _decode_LCSCodeword, _encode_LCSCodeword } from "../MAP-LCS-DataTypes/LCSCodeword.ta.mjs";
-// export { LCSCodeword, _decode_LCSCodeword, _encode_LCSCodeword } from "../MAP-LCS-DataTypes/LCSCodeword.ta.mjs";
 import { LCS_PrivacyCheck, _decode_LCS_PrivacyCheck, _encode_LCS_PrivacyCheck } from "../MAP-LCS-DataTypes/LCS-PrivacyCheck.ta.mjs";
-// export { LCS_PrivacyCheck, _decode_LCS_PrivacyCheck, _encode_LCS_PrivacyCheck } from "../MAP-LCS-DataTypes/LCS-PrivacyCheck.ta.mjs";
 import { AreaEventInfo, _decode_AreaEventInfo, _encode_AreaEventInfo } from "../MAP-LCS-DataTypes/AreaEventInfo.ta.mjs";
-// export { AreaEventInfo, _decode_AreaEventInfo, _encode_AreaEventInfo } from "../MAP-LCS-DataTypes/AreaEventInfo.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { PeriodicLDRInfo, _decode_PeriodicLDRInfo, _encode_PeriodicLDRInfo } from "../MAP-LCS-DataTypes/PeriodicLDRInfo.ta.mjs";
-// export { PeriodicLDRInfo, _decode_PeriodicLDRInfo, _encode_PeriodicLDRInfo } from "../MAP-LCS-DataTypes/PeriodicLDRInfo.ta.mjs";
 import { ReportingPLMNList, _decode_ReportingPLMNList, _encode_ReportingPLMNList } from "../MAP-LCS-DataTypes/ReportingPLMNList.ta.mjs";
-// export { ReportingPLMNList, _decode_ReportingPLMNList, _encode_ReportingPLMNList } from "../MAP-LCS-DataTypes/ReportingPLMNList.ta.mjs";
 
 
 /**
@@ -304,17 +286,17 @@ class ProvideSubscriberLocation_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_ProvideSubscriberLocation_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("locationType", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("mlc-Number", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("lcs-ClientID", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("privacyOverride", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("imei", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("lcs-Priority", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("lcs-QoS", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 8), undefined, undefined)
+    new $.ComponentSpec("locationType", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("mlc-Number", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("lcs-ClientID", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("privacyOverride", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("imei", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("lcs-Priority", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("lcs-QoS", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 8))
 ];
 
 /**
@@ -340,16 +322,16 @@ const _root_component_type_list_2_spec_for_ProvideSubscriberLocation_Arg: $.Comp
  */
 export
 const _extension_additions_list_spec_for_ProvideSubscriberLocation_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("supportedGADShapes", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("lcs-ReferenceNumber", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("lcsServiceTypeID", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("lcsCodeword", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("lcs-PrivacyCheck", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("areaEventInfo", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("h-gmlc-Address", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("mo-lrShortCircuitIndicator", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("periodicLDRInfo", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("reportingPLMNList", true, $.hasTag(_TagClass.context, 18), undefined, undefined)
+    new $.ComponentSpec("supportedGADShapes", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("lcs-ReferenceNumber", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("lcsServiceTypeID", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("lcsCodeword", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("lcs-PrivacyCheck", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("areaEventInfo", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("h-gmlc-Address", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("mo-lrShortCircuitIndicator", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("periodicLDRInfo", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("reportingPLMNList", true, $.hasTag(_TagClass.context, 18))
 ];
 
 let _cached_decoder_for_ProvideSubscriberLocation_Arg: $.ASN1Decoder<ProvideSubscriberLocation_Arg> | null = null;
@@ -365,26 +347,26 @@ function _decode_ProvideSubscriberLocation_Arg (el: _Element): ProvideSubscriber
     if (!_cached_decoder_for_ProvideSubscriberLocation_Arg) { _cached_decoder_for_ProvideSubscriberLocation_Arg = function (el: _Element): ProvideSubscriberLocation_Arg {
     let locationType!: LocationType;
     let mlc_Number!: ISDN_AddressString;
-    let lcs_ClientID: OPTIONAL<LCS_ClientID>;
-    let privacyOverride: OPTIONAL<NULL>;
-    let imsi: OPTIONAL<IMSI>;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let lmsi: OPTIONAL<LMSI>;
-    let imei: OPTIONAL<IMEI>;
-    let lcs_Priority: OPTIONAL<LCS_Priority>;
-    let lcs_QoS: OPTIONAL<LCS_QoS>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let supportedGADShapes: OPTIONAL<SupportedGADShapes>;
-    let lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber>;
-    let lcsServiceTypeID: OPTIONAL<LCSServiceTypeID>;
-    let lcsCodeword: OPTIONAL<LCSCodeword>;
-    let lcs_PrivacyCheck: OPTIONAL<LCS_PrivacyCheck>;
-    let areaEventInfo: OPTIONAL<AreaEventInfo>;
-    let h_gmlc_Address: OPTIONAL<GSN_Address>;
-    let mo_lrShortCircuitIndicator: OPTIONAL<NULL>;
-    let periodicLDRInfo: OPTIONAL<PeriodicLDRInfo>;
-    let reportingPLMNList: OPTIONAL<ReportingPLMNList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lcs_ClientID: OPTIONAL<LCS_ClientID> = undefined;
+    let privacyOverride: OPTIONAL<NULL> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let lmsi: OPTIONAL<LMSI> = undefined;
+    let imei: OPTIONAL<IMEI> = undefined;
+    let lcs_Priority: OPTIONAL<LCS_Priority> = undefined;
+    let lcs_QoS: OPTIONAL<LCS_QoS> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let supportedGADShapes: OPTIONAL<SupportedGADShapes> = undefined;
+    let lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber> = undefined;
+    let lcsServiceTypeID: OPTIONAL<LCSServiceTypeID> = undefined;
+    let lcsCodeword: OPTIONAL<LCSCodeword> = undefined;
+    let lcs_PrivacyCheck: OPTIONAL<LCS_PrivacyCheck> = undefined;
+    let areaEventInfo: OPTIONAL<AreaEventInfo> = undefined;
+    let h_gmlc_Address: OPTIONAL<GSN_Address> = undefined;
+    let mo_lrShortCircuitIndicator: OPTIONAL<NULL> = undefined;
+    let periodicLDRInfo: OPTIONAL<PeriodicLDRInfo> = undefined;
+    let reportingPLMNList: OPTIONAL<ReportingPLMNList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationType": (_el: _Element): void => { locationType = _decode_LocationType(_el); },
         "mlc-Number": (_el: _Element): void => { mlc_Number = _decode_ISDN_AddressString(_el); },

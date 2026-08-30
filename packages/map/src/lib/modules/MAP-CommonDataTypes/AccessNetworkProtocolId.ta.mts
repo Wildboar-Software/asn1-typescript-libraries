@@ -125,21 +125,13 @@ const AccessNetworkProtocolId_ts3G_25413: AccessNetworkProtocolId = 2; /* LONG_N
 export
 const ts3G_25413: AccessNetworkProtocolId = AccessNetworkProtocolId_ts3G_25413; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AccessNetworkProtocolId: $.ASN1Decoder<AccessNetworkProtocolId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessNetworkProtocolId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AccessNetworkProtocolId (el: _Element): AccessNetworkProtocolId {
-    if (!_cached_decoder_for_AccessNetworkProtocolId) { _cached_decoder_for_AccessNetworkProtocolId = $._decodeEnumerated; }
-    return _cached_decoder_for_AccessNetworkProtocolId(el);
-}
-
-let _cached_encoder_for_AccessNetworkProtocolId: $.ASN1Encoder<AccessNetworkProtocolId> | null = null;
+export const _decode_AccessNetworkProtocolId = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AccessNetworkProtocolId into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_AccessNetworkProtocolId: $.ASN1Encoder<AccessNetworkProt
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AccessNetworkProtocolId, encoded as an ASN.1 Element.
  */
-export
-function _encode_AccessNetworkProtocolId (value: AccessNetworkProtocolId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessNetworkProtocolId) { _cached_encoder_for_AccessNetworkProtocolId = $._encodeEnumerated; }
-    return _cached_encoder_for_AccessNetworkProtocolId(value, elGetter);
-}
+export const _encode_AccessNetworkProtocolId = $._encodeEnumerated;
 
 
 /* eslint-enable */

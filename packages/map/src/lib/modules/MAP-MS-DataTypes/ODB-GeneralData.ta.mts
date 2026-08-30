@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -517,21 +518,19 @@ const ODB_GeneralData_registrationInternationalCF_Barred: number = 28; /* LONG_N
 export
 const registrationInternationalCF_Barred: number = ODB_GeneralData_registrationInternationalCF_Barred; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_ODB_GeneralData: $.ASN1Decoder<ODB_GeneralData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ODB_GeneralData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ODB_GeneralData (el: _Element): ODB_GeneralData {
-    if (!_cached_decoder_for_ODB_GeneralData) { _cached_decoder_for_ODB_GeneralData = $._decodeBitString; }
-    return _cached_decoder_for_ODB_GeneralData(el);
-}
-
-let _cached_encoder_for_ODB_GeneralData: $.ASN1Encoder<ODB_GeneralData> | null = null;
+export const _decode_ODB_GeneralData = (el: _Element): ODB_GeneralData => {
+    const value = $._decodeBitString(el);
+    if (value.length < 15 || value.length > 32) {
+        throw new ASN1SizeError("ODB_GeneralData violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ODB_GeneralData into an ASN.1 Element.
@@ -540,11 +539,7 @@ let _cached_encoder_for_ODB_GeneralData: $.ASN1Encoder<ODB_GeneralData> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ODB_GeneralData, encoded as an ASN.1 Element.
  */
-export
-function _encode_ODB_GeneralData (value: ODB_GeneralData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ODB_GeneralData) { _cached_encoder_for_ODB_GeneralData = $._encodeBitString; }
-    return _cached_encoder_for_ODB_GeneralData(value, elGetter);
-}
+export const _encode_ODB_GeneralData = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { T_BcsmCamelTDPDataList, _decode_T_BcsmCamelTDPDataList, _encode_T_BcsmCamelTDPDataList } from "../MAP-MS-DataTypes/T-BcsmCamelTDPDataList.ta.mjs";
-// export { T_BcsmCamelTDPDataList, _decode_T_BcsmCamelTDPDataList, _encode_T_BcsmCamelTDPDataList } from "../MAP-MS-DataTypes/T-BcsmCamelTDPDataList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
-// export { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
 
 
 /**
@@ -162,8 +159,8 @@ class T_CSI {
  */
 export
 const _root_component_type_list_1_spec_for_T_CSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("t-BcsmCamelTDPDataList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("t-BcsmCamelTDPDataList", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -189,9 +186,9 @@ const _root_component_type_list_2_spec_for_T_CSI: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_T_CSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("camelCapabilityHandling", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("csi-Active", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("camelCapabilityHandling", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("csi-Active", true, $.hasTag(_TagClass.context, 2))
 ];
 
 let _cached_decoder_for_T_CSI: $.ASN1Decoder<T_CSI> | null = null;
@@ -206,11 +203,11 @@ export
 function _decode_T_CSI (el: _Element): T_CSI {
     if (!_cached_decoder_for_T_CSI) { _cached_decoder_for_T_CSI = function (el: _Element): T_CSI {
     let t_BcsmCamelTDPDataList!: T_BcsmCamelTDPDataList;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling>;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let csi_Active: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling> = undefined;
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let csi_Active: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "t-BcsmCamelTDPDataList": (_el: _Element): void => { t_BcsmCamelTDPDataList = _decode_T_BcsmCamelTDPDataList(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

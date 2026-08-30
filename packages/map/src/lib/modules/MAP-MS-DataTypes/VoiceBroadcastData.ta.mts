@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GroupId, _decode_GroupId, _encode_GroupId } from "../MAP-MS-DataTypes/GroupId.ta.mjs";
-// export { GroupId, _decode_GroupId, _encode_GroupId } from "../MAP-MS-DataTypes/GroupId.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
-// export { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
 
 
 /**
@@ -156,9 +153,9 @@ class VoiceBroadcastData {
  */
 export
 const _root_component_type_list_1_spec_for_VoiceBroadcastData: $.ComponentSpec[] = [
-    new $.ComponentSpec("groupid", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("broadcastInitEntitlement", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("groupid", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("broadcastInitEntitlement", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -184,7 +181,7 @@ const _root_component_type_list_2_spec_for_VoiceBroadcastData: $.ComponentSpec[]
  */
 export
 const _extension_additions_list_spec_for_VoiceBroadcastData: $.ComponentSpec[] = [
-    new $.ComponentSpec("longGroupId", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("longGroupId", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_VoiceBroadcastData: $.ASN1Decoder<VoiceBroadcastData> | null = null;
@@ -199,10 +196,10 @@ export
 function _decode_VoiceBroadcastData (el: _Element): VoiceBroadcastData {
     if (!_cached_decoder_for_VoiceBroadcastData) { _cached_decoder_for_VoiceBroadcastData = function (el: _Element): VoiceBroadcastData {
     let groupid!: GroupId;
-    let broadcastInitEntitlement: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let longGroupId: OPTIONAL<Long_GroupId>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let broadcastInitEntitlement: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let longGroupId: OPTIONAL<Long_GroupId> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "groupid": (_el: _Element): void => { groupid = _decode_GroupId(_el); },
         "broadcastInitEntitlement": (_el: _Element): void => { broadcastInitEntitlement = $._decodeNull(_el); },

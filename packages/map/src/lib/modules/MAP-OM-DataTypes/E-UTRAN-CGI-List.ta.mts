@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
-// export { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_E_UTRAN_CGI_List: $.ASN1Decoder<E_UTRAN_CGI_List> | null
 export
 function _decode_E_UTRAN_CGI_List (el: _Element): E_UTRAN_CGI_List {
     if (!_cached_decoder_for_E_UTRAN_CGI_List) { _cached_decoder_for_E_UTRAN_CGI_List = $._decodeSequenceOf<E_UTRAN_CGI>(() => _decode_E_UTRAN_CGI); }
-    return _cached_decoder_for_E_UTRAN_CGI_List(el);
+    const value = _cached_decoder_for_E_UTRAN_CGI_List(el);
+    if (value.length < 1 || value.length > 32) {
+        throw new ASN1SizeError("E_UTRAN_CGI_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_E_UTRAN_CGI_List: $.ASN1Encoder<E_UTRAN_CGI_List> | null = null;

@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VoiceBroadcastData, _decode_VoiceBroadcastData, _encode_VoiceBroadcastData } from "../MAP-MS-DataTypes/VoiceBroadcastData.ta.mjs";
-// export { VoiceBroadcastData, _decode_VoiceBroadcastData, _encode_VoiceBroadcastData } from "../MAP-MS-DataTypes/VoiceBroadcastData.ta.mjs";
 
+
+import { maxNumOfVBSGroupIds } from "./maxNumOfVBSGroupIds.va.mjs";
 
 /**
  * @summary VBSDataList
@@ -95,7 +97,11 @@ let _cached_decoder_for_VBSDataList: $.ASN1Decoder<VBSDataList> | null = null;
 export
 function _decode_VBSDataList (el: _Element): VBSDataList {
     if (!_cached_decoder_for_VBSDataList) { _cached_decoder_for_VBSDataList = $._decodeSequenceOf<VoiceBroadcastData>(() => _decode_VoiceBroadcastData); }
-    return _cached_decoder_for_VBSDataList(el);
+    const value = _cached_decoder_for_VBSDataList(el);
+    if (value.length < 1 || value.length > maxNumOfVBSGroupIds) {
+        throw new ASN1SizeError("VBSDataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_VBSDataList: $.ASN1Encoder<VBSDataList> | null = null;

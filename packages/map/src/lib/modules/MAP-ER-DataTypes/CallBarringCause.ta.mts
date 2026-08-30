@@ -155,21 +155,13 @@ const CallBarringCause_operatorBarring: CallBarringCause = CallBarringCause.oper
 export
 const operatorBarring: CallBarringCause = CallBarringCause.operatorBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CallBarringCause: $.ASN1Decoder<CallBarringCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CallBarringCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CallBarringCause (el: _Element): CallBarringCause {
-    if (!_cached_decoder_for_CallBarringCause) { _cached_decoder_for_CallBarringCause = $._decodeEnumerated; }
-    return _cached_decoder_for_CallBarringCause(el);
-}
-
-let _cached_encoder_for_CallBarringCause: $.ASN1Encoder<CallBarringCause> | null = null;
+export const _decode_CallBarringCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CallBarringCause into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_CallBarringCause: $.ASN1Encoder<CallBarringCause> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallBarringCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_CallBarringCause (value: CallBarringCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallBarringCause) { _cached_encoder_for_CallBarringCause = $._encodeEnumerated; }
-    return _cached_encoder_for_CallBarringCause(value, elGetter);
-}
+export const _encode_CallBarringCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

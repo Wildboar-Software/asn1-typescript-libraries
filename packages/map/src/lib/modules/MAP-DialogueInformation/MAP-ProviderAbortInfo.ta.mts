@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MAP_ProviderAbortReason, _enum_for_MAP_ProviderAbortReason, MAP_ProviderAbortReason_abnormalDialogue /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalDialogue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MAP_ProviderAbortReason_invalidPDU /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidPDU /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MAP_ProviderAbortReason, _encode_MAP_ProviderAbortReason } from "../MAP-DialogueInformation/MAP-ProviderAbortReason.ta.mjs";
-// export { MAP_ProviderAbortReason, _enum_for_MAP_ProviderAbortReason, MAP_ProviderAbortReason_abnormalDialogue /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalDialogue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MAP_ProviderAbortReason_invalidPDU /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidPDU /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MAP_ProviderAbortReason, _encode_MAP_ProviderAbortReason } from "../MAP-DialogueInformation/MAP-ProviderAbortReason.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -147,7 +145,7 @@ class MAP_ProviderAbortInfo {
  */
 export
 const _root_component_type_list_1_spec_for_MAP_ProviderAbortInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("map-ProviderAbortReason", false, $.hasTag(_TagClass.universal, 10), undefined, undefined)
+    new $.ComponentSpec("map-ProviderAbortReason", false, $.hasTag(_TagClass.universal, 10))
 ];
 
 /**
@@ -173,7 +171,7 @@ const _root_component_type_list_2_spec_for_MAP_ProviderAbortInfo: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_MAP_ProviderAbortInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 let _cached_decoder_for_MAP_ProviderAbortInfo: $.ASN1Decoder<MAP_ProviderAbortInfo> | null = null;
@@ -188,8 +186,8 @@ export
 function _decode_MAP_ProviderAbortInfo (el: _Element): MAP_ProviderAbortInfo {
     if (!_cached_decoder_for_MAP_ProviderAbortInfo) { _cached_decoder_for_MAP_ProviderAbortInfo = function (el: _Element): MAP_ProviderAbortInfo {
     let map_ProviderAbortReason!: MAP_ProviderAbortReason;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "map-ProviderAbortReason": (_el: _Element): void => { map_ProviderAbortReason = _decode_MAP_ProviderAbortReason(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

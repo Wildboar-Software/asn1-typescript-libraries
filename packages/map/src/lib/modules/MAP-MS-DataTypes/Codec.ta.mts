@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Codec = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Codec: $.ASN1Decoder<Codec> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Codec
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Codec (el: _Element): Codec {
-    if (!_cached_decoder_for_Codec) { _cached_decoder_for_Codec = $._decodeOctetString; }
-    return _cached_decoder_for_Codec(el);
-}
-
-let _cached_encoder_for_Codec: $.ASN1Encoder<Codec> | null = null;
+export const _decode_Codec = (el: _Element): Codec => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 4) {
+        throw new ASN1SizeError("Codec violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Codec into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Codec: $.ASN1Encoder<Codec> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Codec, encoded as an ASN.1 Element.
  */
-export
-function _encode_Codec (value: Codec, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Codec) { _cached_encoder_for_Codec = $._encodeOctetString; }
-    return _cached_encoder_for_Codec(value, elGetter);
-}
+export const _encode_Codec = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxNumOfCamelDestinationNumberLengths } from "./maxNumOfCamelDestinationNumberLengths.va.mjs";
 
 /**
  * @summary DestinationNumberLengthList
@@ -94,7 +97,11 @@ let _cached_decoder_for_DestinationNumberLengthList: $.ASN1Decoder<DestinationNu
 export
 function _decode_DestinationNumberLengthList (el: _Element): DestinationNumberLengthList {
     if (!_cached_decoder_for_DestinationNumberLengthList) { _cached_decoder_for_DestinationNumberLengthList = $._decodeSequenceOf<INTEGER>(() => $._decodeInteger); }
-    return _cached_decoder_for_DestinationNumberLengthList(el);
+    const value = _cached_decoder_for_DestinationNumberLengthList(el);
+    if (value.length < 1 || value.length > maxNumOfCamelDestinationNumberLengths) {
+        throw new ASN1SizeError("DestinationNumberLengthList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_DestinationNumberLengthList: $.ASN1Encoder<DestinationNumberLengthList> | null = null;

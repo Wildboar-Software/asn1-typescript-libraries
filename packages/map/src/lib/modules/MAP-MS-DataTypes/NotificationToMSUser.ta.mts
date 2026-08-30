@@ -161,21 +161,13 @@ const NotificationToMSUser_locationNotAllowed: NotificationToMSUser = 3; /* LONG
 export
 const locationNotAllowed: NotificationToMSUser = NotificationToMSUser_locationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NotificationToMSUser: $.ASN1Decoder<NotificationToMSUser> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NotificationToMSUser
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NotificationToMSUser (el: _Element): NotificationToMSUser {
-    if (!_cached_decoder_for_NotificationToMSUser) { _cached_decoder_for_NotificationToMSUser = $._decodeEnumerated; }
-    return _cached_decoder_for_NotificationToMSUser(el);
-}
-
-let _cached_encoder_for_NotificationToMSUser: $.ASN1Encoder<NotificationToMSUser> | null = null;
+export const _decode_NotificationToMSUser = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NotificationToMSUser into an ASN.1 Element.
@@ -184,11 +176,7 @@ let _cached_encoder_for_NotificationToMSUser: $.ASN1Encoder<NotificationToMSUser
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NotificationToMSUser, encoded as an ASN.1 Element.
  */
-export
-function _encode_NotificationToMSUser (value: NotificationToMSUser, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationToMSUser) { _cached_encoder_for_NotificationToMSUser = $._encodeEnumerated; }
-    return _cached_encoder_for_NotificationToMSUser(value, elGetter);
-}
+export const _encode_NotificationToMSUser = $._encodeEnumerated;
 
 
 /* eslint-enable */

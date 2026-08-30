@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AreaType, _enum_for_AreaType, AreaType_countryCode /* IMPORTED_LONG_ENUMERATION_ITEM */, countryCode /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_plmnId /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_locationAreaId /* IMPORTED_LONG_ENUMERATION_ITEM */, locationAreaId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_routingAreaId /* IMPORTED_LONG_ENUMERATION_ITEM */, routingAreaId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_cellGlobalId /* IMPORTED_LONG_ENUMERATION_ITEM */, cellGlobalId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_utranCellId /* IMPORTED_LONG_ENUMERATION_ITEM */, utranCellId /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AreaType, _encode_AreaType } from "../MAP-LCS-DataTypes/AreaType.ta.mjs";
-// export { AreaType, _enum_for_AreaType, AreaType_countryCode /* IMPORTED_LONG_ENUMERATION_ITEM */, countryCode /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_plmnId /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_locationAreaId /* IMPORTED_LONG_ENUMERATION_ITEM */, locationAreaId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_routingAreaId /* IMPORTED_LONG_ENUMERATION_ITEM */, routingAreaId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_cellGlobalId /* IMPORTED_LONG_ENUMERATION_ITEM */, cellGlobalId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_utranCellId /* IMPORTED_LONG_ENUMERATION_ITEM */, utranCellId /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AreaType, _encode_AreaType } from "../MAP-LCS-DataTypes/AreaType.ta.mjs";
 import { AreaIdentification, _decode_AreaIdentification, _encode_AreaIdentification } from "../MAP-LCS-DataTypes/AreaIdentification.ta.mjs";
-// export { AreaIdentification, _decode_AreaIdentification, _encode_AreaIdentification } from "../MAP-LCS-DataTypes/AreaIdentification.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class Area {
  */
 export
 const _root_component_type_list_1_spec_for_Area: $.ComponentSpec[] = [
-    new $.ComponentSpec("areaType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("areaIdentification", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("areaType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("areaIdentification", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

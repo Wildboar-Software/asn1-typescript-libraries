@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CSG_SubscriptionData, _decode_CSG_SubscriptionData, _encode_CSG_SubscriptionData } from "../MAP-MS-DataTypes/CSG-SubscriptionData.ta.mjs";
-// export { CSG_SubscriptionData, _decode_CSG_SubscriptionData, _encode_CSG_SubscriptionData } from "../MAP-MS-DataTypes/CSG-SubscriptionData.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_VPLMN_CSG_SubscriptionDataList: $.ASN1Decoder<VPLMN_CSG_
 export
 function _decode_VPLMN_CSG_SubscriptionDataList (el: _Element): VPLMN_CSG_SubscriptionDataList {
     if (!_cached_decoder_for_VPLMN_CSG_SubscriptionDataList) { _cached_decoder_for_VPLMN_CSG_SubscriptionDataList = $._decodeSequenceOf<CSG_SubscriptionData>(() => _decode_CSG_SubscriptionData); }
-    return _cached_decoder_for_VPLMN_CSG_SubscriptionDataList(el);
+    const value = _cached_decoder_for_VPLMN_CSG_SubscriptionDataList(el);
+    if (value.length < 1 || value.length > 50) {
+        throw new ASN1SizeError("VPLMN_CSG_SubscriptionDataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_VPLMN_CSG_SubscriptionDataList: $.ASN1Encoder<VPLMN_CSG_SubscriptionDataList> | null = null;

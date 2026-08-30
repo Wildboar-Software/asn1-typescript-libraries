@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UUIndicator = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_UUIndicator: $.ASN1Decoder<UUIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UUIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UUIndicator (el: _Element): UUIndicator {
-    if (!_cached_decoder_for_UUIndicator) { _cached_decoder_for_UUIndicator = $._decodeOctetString; }
-    return _cached_decoder_for_UUIndicator(el);
-}
-
-let _cached_encoder_for_UUIndicator: $.ASN1Encoder<UUIndicator> | null = null;
+export const _decode_UUIndicator = (el: _Element): UUIndicator => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("UUIndicator violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) UUIndicator into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_UUIndicator: $.ASN1Encoder<UUIndicator> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UUIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_UUIndicator (value: UUIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UUIndicator) { _cached_encoder_for_UUIndicator = $._encodeOctetString; }
-    return _cached_encoder_for_UUIndicator(value, elGetter);
-}
+export const _encode_UUIndicator = $._encodeOctetString;
 
 
 /* eslint-enable */

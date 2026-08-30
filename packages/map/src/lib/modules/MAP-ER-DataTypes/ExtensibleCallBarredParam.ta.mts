@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallBarringCause, _enum_for_CallBarringCause, CallBarringCause_barringServiceActive /* IMPORTED_LONG_ENUMERATION_ITEM */, barringServiceActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallBarringCause_operatorBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallBarringCause, _encode_CallBarringCause } from "../MAP-ER-DataTypes/CallBarringCause.ta.mjs";
-// export { CallBarringCause, _enum_for_CallBarringCause, CallBarringCause_barringServiceActive /* IMPORTED_LONG_ENUMERATION_ITEM */, barringServiceActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallBarringCause_operatorBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallBarringCause, _encode_CallBarringCause } from "../MAP-ER-DataTypes/CallBarringCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -159,8 +157,8 @@ class ExtensibleCallBarredParam {
  */
 export
 const _root_component_type_list_1_spec_for_ExtensibleCallBarredParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("callBarringCause", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("callBarringCause", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -186,8 +184,8 @@ const _root_component_type_list_2_spec_for_ExtensibleCallBarredParam: $.Componen
  */
 export
 const _extension_additions_list_spec_for_ExtensibleCallBarredParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("unauthorisedMessageOriginator", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("anonymousCallRejection", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("unauthorisedMessageOriginator", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("anonymousCallRejection", true, $.hasTag(_TagClass.context, 2))
 ];
 
 let _cached_decoder_for_ExtensibleCallBarredParam: $.ASN1Decoder<ExtensibleCallBarredParam> | null = null;
@@ -201,11 +199,11 @@ let _cached_decoder_for_ExtensibleCallBarredParam: $.ASN1Decoder<ExtensibleCallB
 export
 function _decode_ExtensibleCallBarredParam (el: _Element): ExtensibleCallBarredParam {
     if (!_cached_decoder_for_ExtensibleCallBarredParam) { _cached_decoder_for_ExtensibleCallBarredParam = function (el: _Element): ExtensibleCallBarredParam {
-    let callBarringCause: OPTIONAL<CallBarringCause>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let unauthorisedMessageOriginator: OPTIONAL<NULL>;
-    let anonymousCallRejection: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let callBarringCause: OPTIONAL<CallBarringCause> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let unauthorisedMessageOriginator: OPTIONAL<NULL> = undefined;
+    let anonymousCallRejection: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callBarringCause": (_el: _Element): void => { callBarringCause = _decode_CallBarringCause(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

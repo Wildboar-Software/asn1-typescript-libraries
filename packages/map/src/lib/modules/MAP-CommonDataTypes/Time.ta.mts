@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Time = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Time: $.ASN1Decoder<Time> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Time
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Time (el: _Element): Time {
-    if (!_cached_decoder_for_Time) { _cached_decoder_for_Time = $._decodeOctetString; }
-    return _cached_decoder_for_Time(el);
-}
-
-let _cached_encoder_for_Time: $.ASN1Encoder<Time> | null = null;
+export const _decode_Time = (el: _Element): Time => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 4 || value.length > 4) {
+        throw new ASN1SizeError("Time violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Time into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Time: $.ASN1Encoder<Time> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Time, encoded as an ASN.1 Element.
  */
-export
-function _encode_Time (value: Time, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Time) { _cached_encoder_for_Time = $._encodeOctetString; }
-    return _cached_encoder_for_Time(value, elGetter);
-}
+export const _encode_Time = $._encodeOctetString;
 
 
 /* eslint-enable */

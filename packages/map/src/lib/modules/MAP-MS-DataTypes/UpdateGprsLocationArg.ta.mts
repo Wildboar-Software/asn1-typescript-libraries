@@ -67,31 +67,18 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { SGSN_Capability, _decode_SGSN_Capability, _encode_SGSN_Capability } from "../MAP-MS-DataTypes/SGSN-Capability.ta.mjs";
-// export { SGSN_Capability, _decode_SGSN_Capability, _encode_SGSN_Capability } from "../MAP-MS-DataTypes/SGSN-Capability.ta.mjs";
 import { ADD_Info, _decode_ADD_Info, _encode_ADD_Info } from "../MAP-MS-DataTypes/ADD-Info.ta.mjs";
-// export { ADD_Info, _decode_ADD_Info, _encode_ADD_Info } from "../MAP-MS-DataTypes/ADD-Info.ta.mjs";
 import { EPS_Info, _decode_EPS_Info, _encode_EPS_Info } from "../MAP-MS-DataTypes/EPS-Info.ta.mjs";
-// export { EPS_Info, _decode_EPS_Info, _encode_EPS_Info } from "../MAP-MS-DataTypes/EPS-Info.ta.mjs";
 import { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
-// export { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 import { UE_SRVCC_Capability, _enum_for_UE_SRVCC_Capability, UE_SRVCC_Capability_ue_srvcc_not_supported /* IMPORTED_LONG_ENUMERATION_ITEM */, ue_srvcc_not_supported /* IMPORTED_SHORT_ENUMERATION_ITEM */, UE_SRVCC_Capability_ue_srvcc_supported /* IMPORTED_LONG_ENUMERATION_ITEM */, ue_srvcc_supported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UE_SRVCC_Capability, _encode_UE_SRVCC_Capability } from "../MAP-MS-DataTypes/UE-SRVCC-Capability.ta.mjs";
-// export { UE_SRVCC_Capability, _enum_for_UE_SRVCC_Capability, UE_SRVCC_Capability_ue_srvcc_not_supported /* IMPORTED_LONG_ENUMERATION_ITEM */, ue_srvcc_not_supported /* IMPORTED_SHORT_ENUMERATION_ITEM */, UE_SRVCC_Capability_ue_srvcc_supported /* IMPORTED_LONG_ENUMERATION_ITEM */, ue_srvcc_supported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UE_SRVCC_Capability, _encode_UE_SRVCC_Capability } from "../MAP-MS-DataTypes/UE-SRVCC-Capability.ta.mjs";
 import { EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
-// export { EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
 import { SMSRegisterRequest, _enum_for_SMSRegisterRequest, SMSRegisterRequest_sms_registration_required /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_registration_required /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSRegisterRequest_sms_registration_not_preferred /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_registration_not_preferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSRegisterRequest_no_preference /* IMPORTED_LONG_ENUMERATION_ITEM */, no_preference /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMSRegisterRequest, _encode_SMSRegisterRequest } from "../MAP-MS-DataTypes/SMSRegisterRequest.ta.mjs";
-// export { SMSRegisterRequest, _enum_for_SMSRegisterRequest, SMSRegisterRequest_sms_registration_required /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_registration_required /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSRegisterRequest_sms_registration_not_preferred /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_registration_not_preferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSRegisterRequest_no_preference /* IMPORTED_LONG_ENUMERATION_ITEM */, no_preference /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMSRegisterRequest, _encode_SMSRegisterRequest } from "../MAP-MS-DataTypes/SMSRegisterRequest.ta.mjs";
 import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
-// export { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
 import { AdjacentPLMN_List, _decode_AdjacentPLMN_List, _encode_AdjacentPLMN_List } from "../MAP-MS-DataTypes/AdjacentPLMN-List.ta.mjs";
-// export { AdjacentPLMN_List, _decode_AdjacentPLMN_List, _encode_AdjacentPLMN_List } from "../MAP-MS-DataTypes/AdjacentPLMN-List.ta.mjs";
 
 
 /**
@@ -361,10 +348,10 @@ class UpdateGprsLocationArg {
  */
 export
 const _root_component_type_list_1_spec_for_UpdateGprsLocationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("sgsn-Number", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("sgsn-Address", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("sgsn-Number", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("sgsn-Address", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -390,30 +377,30 @@ const _root_component_type_list_2_spec_for_UpdateGprsLocationArg: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_UpdateGprsLocationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("sgsn-Capability", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("informPreviousNetworkEntity", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ps-LCS-NotSupportedByUE", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("v-gmlc-Address", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("add-info", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("eps-info", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("servingNodeTypeIndicator", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("skipSubscriberDataUpdate", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("usedRAT-Type", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("gprsSubscriptionDataNotNeeded", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("nodeTypeIndicator", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("areaRestricted", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("ue-reachableIndicator", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("epsSubscriptionDataNotNeeded", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("ue-srvcc-Capability", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("eplmn-List", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("mmeNumberforMTSMS", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("smsRegisterRequest", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("sms-Only", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("removalofMMERegistrationforSMS", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("sgsn-Name", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("sgsn-Realm", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("lgd-supportIndicator", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("adjacentPLMN-List", true, $.hasTag(_TagClass.context, 23), undefined, undefined)
+    new $.ComponentSpec("sgsn-Capability", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("informPreviousNetworkEntity", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ps-LCS-NotSupportedByUE", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("v-gmlc-Address", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("add-info", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("eps-info", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("servingNodeTypeIndicator", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("skipSubscriberDataUpdate", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("usedRAT-Type", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("gprsSubscriptionDataNotNeeded", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("nodeTypeIndicator", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("areaRestricted", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("ue-reachableIndicator", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("epsSubscriptionDataNotNeeded", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("ue-srvcc-Capability", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("eplmn-List", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("mmeNumberforMTSMS", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("smsRegisterRequest", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("sms-Only", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("removalofMMERegistrationforSMS", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("sgsn-Name", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("sgsn-Realm", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("lgd-supportIndicator", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("adjacentPLMN-List", true, $.hasTag(_TagClass.context, 23))
 ];
 
 let _cached_decoder_for_UpdateGprsLocationArg: $.ASN1Decoder<UpdateGprsLocationArg> | null = null;
@@ -430,32 +417,32 @@ function _decode_UpdateGprsLocationArg (el: _Element): UpdateGprsLocationArg {
     let imsi!: IMSI;
     let sgsn_Number!: ISDN_AddressString;
     let sgsn_Address!: GSN_Address;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let sgsn_Capability: OPTIONAL<SGSN_Capability>;
-    let informPreviousNetworkEntity: OPTIONAL<NULL>;
-    let ps_LCS_NotSupportedByUE: OPTIONAL<NULL>;
-    let v_gmlc_Address: OPTIONAL<GSN_Address>;
-    let add_info: OPTIONAL<ADD_Info>;
-    let eps_info: OPTIONAL<EPS_Info>;
-    let servingNodeTypeIndicator: OPTIONAL<NULL>;
-    let skipSubscriberDataUpdate: OPTIONAL<NULL>;
-    let usedRAT_Type: OPTIONAL<Used_RAT_Type>;
-    let gprsSubscriptionDataNotNeeded: OPTIONAL<NULL>;
-    let nodeTypeIndicator: OPTIONAL<NULL>;
-    let areaRestricted: OPTIONAL<NULL>;
-    let ue_reachableIndicator: OPTIONAL<NULL>;
-    let epsSubscriptionDataNotNeeded: OPTIONAL<NULL>;
-    let ue_srvcc_Capability: OPTIONAL<UE_SRVCC_Capability>;
-    let eplmn_List: OPTIONAL<EPLMN_List>;
-    let mmeNumberforMTSMS: OPTIONAL<ISDN_AddressString>;
-    let smsRegisterRequest: OPTIONAL<SMSRegisterRequest>;
-    let sms_Only: OPTIONAL<NULL>;
-    let removalofMMERegistrationforSMS: OPTIONAL<NULL>;
-    let sgsn_Name: OPTIONAL<DiameterIdentity>;
-    let sgsn_Realm: OPTIONAL<DiameterIdentity>;
-    let lgd_supportIndicator: OPTIONAL<NULL>;
-    let adjacentPLMN_List: OPTIONAL<AdjacentPLMN_List>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let sgsn_Capability: OPTIONAL<SGSN_Capability> = undefined;
+    let informPreviousNetworkEntity: OPTIONAL<NULL> = undefined;
+    let ps_LCS_NotSupportedByUE: OPTIONAL<NULL> = undefined;
+    let v_gmlc_Address: OPTIONAL<GSN_Address> = undefined;
+    let add_info: OPTIONAL<ADD_Info> = undefined;
+    let eps_info: OPTIONAL<EPS_Info> = undefined;
+    let servingNodeTypeIndicator: OPTIONAL<NULL> = undefined;
+    let skipSubscriberDataUpdate: OPTIONAL<NULL> = undefined;
+    let usedRAT_Type: OPTIONAL<Used_RAT_Type> = undefined;
+    let gprsSubscriptionDataNotNeeded: OPTIONAL<NULL> = undefined;
+    let nodeTypeIndicator: OPTIONAL<NULL> = undefined;
+    let areaRestricted: OPTIONAL<NULL> = undefined;
+    let ue_reachableIndicator: OPTIONAL<NULL> = undefined;
+    let epsSubscriptionDataNotNeeded: OPTIONAL<NULL> = undefined;
+    let ue_srvcc_Capability: OPTIONAL<UE_SRVCC_Capability> = undefined;
+    let eplmn_List: OPTIONAL<EPLMN_List> = undefined;
+    let mmeNumberforMTSMS: OPTIONAL<ISDN_AddressString> = undefined;
+    let smsRegisterRequest: OPTIONAL<SMSRegisterRequest> = undefined;
+    let sms_Only: OPTIONAL<NULL> = undefined;
+    let removalofMMERegistrationforSMS: OPTIONAL<NULL> = undefined;
+    let sgsn_Name: OPTIONAL<DiameterIdentity> = undefined;
+    let sgsn_Realm: OPTIONAL<DiameterIdentity> = undefined;
+    let lgd_supportIndicator: OPTIONAL<NULL> = undefined;
+    let adjacentPLMN_List: OPTIONAL<AdjacentPLMN_List> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = _decode_IMSI(_el); },
         "sgsn-Number": (_el: _Element): void => { sgsn_Number = _decode_ISDN_AddressString(_el); },

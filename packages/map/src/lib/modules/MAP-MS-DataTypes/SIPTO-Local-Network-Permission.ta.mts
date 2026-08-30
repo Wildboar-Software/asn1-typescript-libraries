@@ -158,21 +158,13 @@ const SIPTO_Local_Network_Permission_siptoAtLocalNetworkNotAllowed: SIPTO_Local_
 export
 const siptoAtLocalNetworkNotAllowed: SIPTO_Local_Network_Permission = SIPTO_Local_Network_Permission.siptoAtLocalNetworkNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SIPTO_Local_Network_Permission: $.ASN1Decoder<SIPTO_Local_Network_Permission> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SIPTO_Local_Network_Permission
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SIPTO_Local_Network_Permission (el: _Element): SIPTO_Local_Network_Permission {
-    if (!_cached_decoder_for_SIPTO_Local_Network_Permission) { _cached_decoder_for_SIPTO_Local_Network_Permission = $._decodeEnumerated; }
-    return _cached_decoder_for_SIPTO_Local_Network_Permission(el);
-}
-
-let _cached_encoder_for_SIPTO_Local_Network_Permission: $.ASN1Encoder<SIPTO_Local_Network_Permission> | null = null;
+export const _decode_SIPTO_Local_Network_Permission = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SIPTO_Local_Network_Permission into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_SIPTO_Local_Network_Permission: $.ASN1Encoder<SIPTO_Loca
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SIPTO_Local_Network_Permission, encoded as an ASN.1 Element.
  */
-export
-function _encode_SIPTO_Local_Network_Permission (value: SIPTO_Local_Network_Permission, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SIPTO_Local_Network_Permission) { _cached_encoder_for_SIPTO_Local_Network_Permission = $._encodeEnumerated; }
-    return _cached_encoder_for_SIPTO_Local_Network_Permission(value, elGetter);
-}
+export const _encode_SIPTO_Local_Network_Permission = $._encodeEnumerated;
 
 
 /* eslint-enable */

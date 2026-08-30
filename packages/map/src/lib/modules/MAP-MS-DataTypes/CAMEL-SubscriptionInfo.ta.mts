@@ -67,31 +67,18 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
-// export { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
 import { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
-// export { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
 import { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.ta.mjs";
-// export { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.ta.mjs";
 import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.ta.mjs";
-// export { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.ta.mjs";
 import { T_BCSM_CAMEL_TDP_CriteriaList, _decode_T_BCSM_CAMEL_TDP_CriteriaList, _encode_T_BCSM_CAMEL_TDP_CriteriaList } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-CriteriaList.ta.mjs";
-// export { T_BCSM_CAMEL_TDP_CriteriaList, _decode_T_BCSM_CAMEL_TDP_CriteriaList, _encode_T_BCSM_CAMEL_TDP_CriteriaList } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-CriteriaList.ta.mjs";
 import { GPRS_CSI, _decode_GPRS_CSI, _encode_GPRS_CSI } from "../MAP-MS-DataTypes/GPRS-CSI.ta.mjs";
-// export { GPRS_CSI, _decode_GPRS_CSI, _encode_GPRS_CSI } from "../MAP-MS-DataTypes/GPRS-CSI.ta.mjs";
 import { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/SMS-CSI.ta.mjs";
-// export { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/SMS-CSI.ta.mjs";
 import { SS_CSI, _decode_SS_CSI, _encode_SS_CSI } from "../MAP-MS-DataTypes/SS-CSI.ta.mjs";
-// export { SS_CSI, _decode_SS_CSI, _encode_SS_CSI } from "../MAP-MS-DataTypes/SS-CSI.ta.mjs";
 import { M_CSI, _decode_M_CSI, _encode_M_CSI } from "../MAP-MS-DataTypes/M-CSI.ta.mjs";
-// export { M_CSI, _decode_M_CSI, _encode_M_CSI } from "../MAP-MS-DataTypes/M-CSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { SpecificCSI_Withdraw, SpecificCSI_Withdraw_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_ss_csi /* IMPORTED_LONG_NAMED_BIT */, ss_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_tif_csi /* IMPORTED_LONG_NAMED_BIT */, tif_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mo_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mo_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_m_csi /* IMPORTED_LONG_NAMED_BIT */, m_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_gprs_csi /* IMPORTED_LONG_NAMED_BIT */, gprs_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_o_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, o_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_d_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, d_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_vt_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, vt_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
-// export { SpecificCSI_Withdraw, SpecificCSI_Withdraw_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_ss_csi /* IMPORTED_LONG_NAMED_BIT */, ss_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_tif_csi /* IMPORTED_LONG_NAMED_BIT */, tif_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mo_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mo_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_m_csi /* IMPORTED_LONG_NAMED_BIT */, m_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_gprs_csi /* IMPORTED_LONG_NAMED_BIT */, gprs_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_o_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, o_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_d_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, d_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_vt_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, vt_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
 import { MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
-// export { MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
 import { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-CSI.ta.mjs";
-// export { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-CSI.ta.mjs";
 
 
 /**
@@ -309,20 +296,20 @@ class CAMEL_SubscriptionInfo {
  */
 export
 const _root_component_type_list_1_spec_for_CAMEL_SubscriptionInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("o-CSI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("o-BcsmCamelTDP-CriteriaList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("d-CSI", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("t-CSI", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("t-BCSM-CAMEL-TDP-CriteriaList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("vt-CSI", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("vt-BCSM-CAMEL-TDP-CriteriaList", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("tif-CSI", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("tif-CSI-NotificationToCSE", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("gprs-CSI", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("mo-sms-CSI", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("ss-CSI", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("m-CSI", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 13), undefined, undefined)
+    new $.ComponentSpec("o-CSI", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("o-BcsmCamelTDP-CriteriaList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("d-CSI", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("t-CSI", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("t-BCSM-CAMEL-TDP-CriteriaList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("vt-CSI", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("vt-BCSM-CAMEL-TDP-CriteriaList", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("tif-CSI", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("tif-CSI-NotificationToCSE", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("gprs-CSI", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("mo-sms-CSI", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("ss-CSI", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("m-CSI", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 13))
 ];
 
 /**
@@ -348,15 +335,15 @@ const _root_component_type_list_2_spec_for_CAMEL_SubscriptionInfo: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_CAMEL_SubscriptionInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("specificCSIDeletedList", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("mt-sms-CSI", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("mt-smsCAMELTDP-CriteriaList", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("mg-csi", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("o-IM-CSI", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("o-IM-BcsmCamelTDP-CriteriaList", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("d-IM-CSI", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("vt-IM-CSI", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("vt-IM-BCSM-CAMEL-TDP-CriteriaList", true, $.hasTag(_TagClass.context, 22), undefined, undefined)
+    new $.ComponentSpec("specificCSIDeletedList", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("mt-sms-CSI", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("mt-smsCAMELTDP-CriteriaList", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("mg-csi", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("o-IM-CSI", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("o-IM-BcsmCamelTDP-CriteriaList", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("d-IM-CSI", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("vt-IM-CSI", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("vt-IM-BCSM-CAMEL-TDP-CriteriaList", true, $.hasTag(_TagClass.context, 22))
 ];
 
 let _cached_decoder_for_CAMEL_SubscriptionInfo: $.ASN1Decoder<CAMEL_SubscriptionInfo> | null = null;
@@ -370,30 +357,30 @@ let _cached_decoder_for_CAMEL_SubscriptionInfo: $.ASN1Decoder<CAMEL_Subscription
 export
 function _decode_CAMEL_SubscriptionInfo (el: _Element): CAMEL_SubscriptionInfo {
     if (!_cached_decoder_for_CAMEL_SubscriptionInfo) { _cached_decoder_for_CAMEL_SubscriptionInfo = function (el: _Element): CAMEL_SubscriptionInfo {
-    let o_CSI: OPTIONAL<O_CSI>;
-    let o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>;
-    let d_CSI: OPTIONAL<D_CSI>;
-    let t_CSI: OPTIONAL<T_CSI>;
-    let t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>;
-    let vt_CSI: OPTIONAL<T_CSI>;
-    let vt_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>;
-    let tif_CSI: OPTIONAL<NULL>;
-    let tif_CSI_NotificationToCSE: OPTIONAL<NULL>;
-    let gprs_CSI: OPTIONAL<GPRS_CSI>;
-    let mo_sms_CSI: OPTIONAL<SMS_CSI>;
-    let ss_CSI: OPTIONAL<SS_CSI>;
-    let m_CSI: OPTIONAL<M_CSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let specificCSIDeletedList: OPTIONAL<SpecificCSI_Withdraw>;
-    let mt_sms_CSI: OPTIONAL<SMS_CSI>;
-    let mt_smsCAMELTDP_CriteriaList: OPTIONAL<MT_smsCAMELTDP_CriteriaList>;
-    let mg_csi: OPTIONAL<MG_CSI>;
-    let o_IM_CSI: OPTIONAL<O_CSI>;
-    let o_IM_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>;
-    let d_IM_CSI: OPTIONAL<D_CSI>;
-    let vt_IM_CSI: OPTIONAL<T_CSI>;
-    let vt_IM_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let o_CSI: OPTIONAL<O_CSI> = undefined;
+    let o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList> = undefined;
+    let d_CSI: OPTIONAL<D_CSI> = undefined;
+    let t_CSI: OPTIONAL<T_CSI> = undefined;
+    let t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList> = undefined;
+    let vt_CSI: OPTIONAL<T_CSI> = undefined;
+    let vt_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList> = undefined;
+    let tif_CSI: OPTIONAL<NULL> = undefined;
+    let tif_CSI_NotificationToCSE: OPTIONAL<NULL> = undefined;
+    let gprs_CSI: OPTIONAL<GPRS_CSI> = undefined;
+    let mo_sms_CSI: OPTIONAL<SMS_CSI> = undefined;
+    let ss_CSI: OPTIONAL<SS_CSI> = undefined;
+    let m_CSI: OPTIONAL<M_CSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let specificCSIDeletedList: OPTIONAL<SpecificCSI_Withdraw> = undefined;
+    let mt_sms_CSI: OPTIONAL<SMS_CSI> = undefined;
+    let mt_smsCAMELTDP_CriteriaList: OPTIONAL<MT_smsCAMELTDP_CriteriaList> = undefined;
+    let mg_csi: OPTIONAL<MG_CSI> = undefined;
+    let o_IM_CSI: OPTIONAL<O_CSI> = undefined;
+    let o_IM_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList> = undefined;
+    let d_IM_CSI: OPTIONAL<D_CSI> = undefined;
+    let vt_IM_CSI: OPTIONAL<T_CSI> = undefined;
+    let vt_IM_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "o-CSI": (_el: _Element): void => { o_CSI = $._decode_implicit<O_CSI>(() => _decode_O_CSI)(_el); },
         "o-BcsmCamelTDP-CriteriaList": (_el: _Element): void => { o_BcsmCamelTDP_CriteriaList = $._decode_implicit<O_BcsmCamelTDPCriteriaList>(() => _decode_O_BcsmCamelTDPCriteriaList)(_el); },

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NoReplyConditionTime = INTEGER;
 
-let _cached_decoder_for_NoReplyConditionTime: $.ASN1Decoder<NoReplyConditionTime> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NoReplyConditionTime
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NoReplyConditionTime (el: _Element): NoReplyConditionTime {
-    if (!_cached_decoder_for_NoReplyConditionTime) { _cached_decoder_for_NoReplyConditionTime = $._decodeInteger; }
-    return _cached_decoder_for_NoReplyConditionTime(el);
-}
-
-let _cached_encoder_for_NoReplyConditionTime: $.ASN1Encoder<NoReplyConditionTime> | null = null;
+export const _decode_NoReplyConditionTime = (el: _Element): NoReplyConditionTime => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 5 || n > 30) {
+        throw new ASN1OverflowError("NoReplyConditionTime violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) NoReplyConditionTime into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_NoReplyConditionTime: $.ASN1Encoder<NoReplyConditionTime
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NoReplyConditionTime, encoded as an ASN.1 Element.
  */
-export
-function _encode_NoReplyConditionTime (value: NoReplyConditionTime, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NoReplyConditionTime) { _cached_encoder_for_NoReplyConditionTime = $._encodeInteger; }
-    return _cached_encoder_for_NoReplyConditionTime(value, elGetter);
-}
+export const _encode_NoReplyConditionTime = $._encodeInteger;
 
 
 /* eslint-enable */

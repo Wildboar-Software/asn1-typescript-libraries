@@ -143,21 +143,13 @@ const SMSRegisterRequest_no_preference: SMSRegisterRequest = 2; /* LONG_NAMED_EN
 export
 const no_preference: SMSRegisterRequest = SMSRegisterRequest_no_preference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SMSRegisterRequest: $.ASN1Decoder<SMSRegisterRequest> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SMSRegisterRequest
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SMSRegisterRequest (el: _Element): SMSRegisterRequest {
-    if (!_cached_decoder_for_SMSRegisterRequest) { _cached_decoder_for_SMSRegisterRequest = $._decodeEnumerated; }
-    return _cached_decoder_for_SMSRegisterRequest(el);
-}
-
-let _cached_encoder_for_SMSRegisterRequest: $.ASN1Encoder<SMSRegisterRequest> | null = null;
+export const _decode_SMSRegisterRequest = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SMSRegisterRequest into an ASN.1 Element.
@@ -166,11 +158,7 @@ let _cached_encoder_for_SMSRegisterRequest: $.ASN1Encoder<SMSRegisterRequest> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SMSRegisterRequest, encoded as an ASN.1 Element.
  */
-export
-function _encode_SMSRegisterRequest (value: SMSRegisterRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMSRegisterRequest) { _cached_encoder_for_SMSRegisterRequest = $._encodeEnumerated; }
-    return _cached_encoder_for_SMSRegisterRequest(value, elGetter);
-}
+export const _encode_SMSRegisterRequest = $._encodeEnumerated;
 
 
 /* eslint-enable */

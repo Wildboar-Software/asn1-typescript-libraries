@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
-// export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 import { SmsGmsc_Alert_Event, _enum_for_SmsGmsc_Alert_Event, SmsGmsc_Alert_Event_msAvailableForMtSms /* IMPORTED_LONG_ENUMERATION_ITEM */, msAvailableForMtSms /* IMPORTED_SHORT_ENUMERATION_ITEM */, SmsGmsc_Alert_Event_msUnderNewServingNode /* IMPORTED_LONG_ENUMERATION_ITEM */, msUnderNewServingNode /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SmsGmsc_Alert_Event, _encode_SmsGmsc_Alert_Event } from "../MAP-SM-DataTypes/SmsGmsc-Alert-Event.ta.mjs";
-// export { SmsGmsc_Alert_Event, _enum_for_SmsGmsc_Alert_Event, SmsGmsc_Alert_Event_msAvailableForMtSms /* IMPORTED_LONG_ENUMERATION_ITEM */, msAvailableForMtSms /* IMPORTED_SHORT_ENUMERATION_ITEM */, SmsGmsc_Alert_Event_msUnderNewServingNode /* IMPORTED_LONG_ENUMERATION_ITEM */, msUnderNewServingNode /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SmsGmsc_Alert_Event, _encode_SmsGmsc_Alert_Event } from "../MAP-SM-DataTypes/SmsGmsc-Alert-Event.ta.mjs";
 import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
-// export { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
 
 
 /**
@@ -225,8 +218,8 @@ class AlertServiceCentreArg {
  */
 export
 const _root_component_type_list_1_spec_for_AlertServiceCentreArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("serviceCentreAddress", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("serviceCentreAddress", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**
@@ -252,16 +245,16 @@ const _root_component_type_list_2_spec_for_AlertServiceCentreArg: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_AlertServiceCentreArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("maximumUeAvailabilityTime", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("smsGmscAlertEvent", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("smsGmscDiameterAddress", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("newSGSNNumber", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("newSGSNDiameterAddress", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("newMMENumber", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("newMMEDiameterAddress", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("newMSCNumber", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("maximumUeAvailabilityTime", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("smsGmscAlertEvent", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("smsGmscDiameterAddress", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("newSGSNNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("newSGSNDiameterAddress", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("newMMENumber", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("newMMEDiameterAddress", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("newMSCNumber", true, $.hasTag(_TagClass.context, 7))
 ];
 
 let _cached_decoder_for_AlertServiceCentreArg: $.ASN1Decoder<AlertServiceCentreArg> | null = null;
@@ -277,17 +270,17 @@ function _decode_AlertServiceCentreArg (el: _Element): AlertServiceCentreArg {
     if (!_cached_decoder_for_AlertServiceCentreArg) { _cached_decoder_for_AlertServiceCentreArg = function (el: _Element): AlertServiceCentreArg {
     let msisdn!: ISDN_AddressString;
     let serviceCentreAddress!: AddressString;
-    let imsi: OPTIONAL<IMSI>;
-    let correlationID: OPTIONAL<CorrelationID>;
-    let maximumUeAvailabilityTime: OPTIONAL<Time>;
-    let smsGmscAlertEvent: OPTIONAL<SmsGmsc_Alert_Event>;
-    let smsGmscDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let newSGSNNumber: OPTIONAL<ISDN_AddressString>;
-    let newSGSNDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let newMMENumber: OPTIONAL<ISDN_AddressString>;
-    let newMMEDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let newMSCNumber: OPTIONAL<ISDN_AddressString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let correlationID: OPTIONAL<CorrelationID> = undefined;
+    let maximumUeAvailabilityTime: OPTIONAL<Time> = undefined;
+    let smsGmscAlertEvent: OPTIONAL<SmsGmsc_Alert_Event> = undefined;
+    let smsGmscDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    let newSGSNNumber: OPTIONAL<ISDN_AddressString> = undefined;
+    let newSGSNDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    let newMMENumber: OPTIONAL<ISDN_AddressString> = undefined;
+    let newMMEDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    let newMSCNumber: OPTIONAL<ISDN_AddressString> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "msisdn": (_el: _Element): void => { msisdn = _decode_ISDN_AddressString(_el); },
         "serviceCentreAddress": (_el: _Element): void => { serviceCentreAddress = _decode_AddressString(_el); },

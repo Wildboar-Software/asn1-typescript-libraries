@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
-// export { LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_LocationAreaId_List: $.ASN1Decoder<LocationAreaId_List> 
 export
 function _decode_LocationAreaId_List (el: _Element): LocationAreaId_List {
     if (!_cached_decoder_for_LocationAreaId_List) { _cached_decoder_for_LocationAreaId_List = $._decodeSequenceOf<LAIFixedLength>(() => _decode_LAIFixedLength); }
-    return _cached_decoder_for_LocationAreaId_List(el);
+    const value = _cached_decoder_for_LocationAreaId_List(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("LocationAreaId_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_LocationAreaId_List: $.ASN1Encoder<LocationAreaId_List> | null = null;

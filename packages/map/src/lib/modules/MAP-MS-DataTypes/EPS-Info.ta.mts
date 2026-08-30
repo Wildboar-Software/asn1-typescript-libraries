@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PDN_GW_Update, _decode_PDN_GW_Update, _encode_PDN_GW_Update } from "../MAP-MS-DataTypes/PDN-GW-Update.ta.mjs";
-// export { PDN_GW_Update, _decode_PDN_GW_Update, _encode_PDN_GW_Update } from "../MAP-MS-DataTypes/PDN-GW-Update.ta.mjs";
 import { ISR_Information, ISR_Information_updateLocation /* IMPORTED_LONG_NAMED_BIT */, updateLocation /* IMPORTED_SHORT_NAMED_BIT */, ISR_Information_cancelSGSN /* IMPORTED_LONG_NAMED_BIT */, cancelSGSN /* IMPORTED_SHORT_NAMED_BIT */, ISR_Information_initialAttachIndicator /* IMPORTED_LONG_NAMED_BIT */, initialAttachIndicator /* IMPORTED_SHORT_NAMED_BIT */, _decode_ISR_Information, _encode_ISR_Information } from "../MAP-MS-DataTypes/ISR-Information.ta.mjs";
-// export { ISR_Information, ISR_Information_updateLocation /* IMPORTED_LONG_NAMED_BIT */, updateLocation /* IMPORTED_SHORT_NAMED_BIT */, ISR_Information_cancelSGSN /* IMPORTED_LONG_NAMED_BIT */, cancelSGSN /* IMPORTED_SHORT_NAMED_BIT */, ISR_Information_initialAttachIndicator /* IMPORTED_LONG_NAMED_BIT */, initialAttachIndicator /* IMPORTED_SHORT_NAMED_BIT */, _decode_ISR_Information, _encode_ISR_Information } from "../MAP-MS-DataTypes/ISR-Information.ta.mjs";
 
 
 /**

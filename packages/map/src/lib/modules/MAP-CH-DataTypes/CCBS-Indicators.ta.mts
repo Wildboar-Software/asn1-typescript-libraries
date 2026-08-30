@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -144,9 +143,9 @@ class CCBS_Indicators {
  */
 export
 const _root_component_type_list_1_spec_for_CCBS_Indicators: $.ComponentSpec[] = [
-    new $.ComponentSpec("ccbs-Possible", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("keepCCBS-CallIndicator", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("ccbs-Possible", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("keepCCBS-CallIndicator", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -186,10 +185,10 @@ let _cached_decoder_for_CCBS_Indicators: $.ASN1Decoder<CCBS_Indicators> | null =
 export
 function _decode_CCBS_Indicators (el: _Element): CCBS_Indicators {
     if (!_cached_decoder_for_CCBS_Indicators) { _cached_decoder_for_CCBS_Indicators = function (el: _Element): CCBS_Indicators {
-    let ccbs_Possible: OPTIONAL<NULL>;
-    let keepCCBS_CallIndicator: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ccbs_Possible: OPTIONAL<NULL> = undefined;
+    let keepCCBS_CallIndicator: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ccbs-Possible": (_el: _Element): void => { ccbs_Possible = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "keepCCBS-CallIndicator": (_el: _Element): void => { keepCCBS_CallIndicator = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

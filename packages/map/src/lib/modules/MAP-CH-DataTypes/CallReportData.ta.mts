@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MonitoringMode, _enum_for_MonitoringMode, MonitoringMode_a_side /* IMPORTED_LONG_ENUMERATION_ITEM */, a_side /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringMode_b_side /* IMPORTED_LONG_ENUMERATION_ITEM */, b_side /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitoringMode, _encode_MonitoringMode } from "../MAP-CH-DataTypes/MonitoringMode.ta.mjs";
-// export { MonitoringMode, _enum_for_MonitoringMode, MonitoringMode_a_side /* IMPORTED_LONG_ENUMERATION_ITEM */, a_side /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringMode_b_side /* IMPORTED_LONG_ENUMERATION_ITEM */, b_side /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitoringMode, _encode_MonitoringMode } from "../MAP-CH-DataTypes/MonitoringMode.ta.mjs";
 import { CallOutcome, _enum_for_CallOutcome, CallOutcome_success /* IMPORTED_LONG_ENUMERATION_ITEM */, success /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallOutcome_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallOutcome_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallOutcome, _encode_CallOutcome } from "../MAP-CH-DataTypes/CallOutcome.ta.mjs";
-// export { CallOutcome, _enum_for_CallOutcome, CallOutcome_success /* IMPORTED_LONG_ENUMERATION_ITEM */, success /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallOutcome_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallOutcome_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallOutcome, _encode_CallOutcome } from "../MAP-CH-DataTypes/CallOutcome.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -160,9 +157,9 @@ class CallReportData {
  */
 export
 const _root_component_type_list_1_spec_for_CallReportData: $.ComponentSpec[] = [
-    new $.ComponentSpec("monitoringMode", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("callOutcome", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("monitoringMode", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callOutcome", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -202,10 +199,10 @@ let _cached_decoder_for_CallReportData: $.ASN1Decoder<CallReportData> | null = n
 export
 function _decode_CallReportData (el: _Element): CallReportData {
     if (!_cached_decoder_for_CallReportData) { _cached_decoder_for_CallReportData = function (el: _Element): CallReportData {
-    let monitoringMode: OPTIONAL<MonitoringMode>;
-    let callOutcome: OPTIONAL<CallOutcome>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let monitoringMode: OPTIONAL<MonitoringMode> = undefined;
+    let callOutcome: OPTIONAL<CallOutcome> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "monitoringMode": (_el: _Element): void => { monitoringMode = $._decode_implicit<MonitoringMode>(() => _decode_MonitoringMode)(_el); },
         "callOutcome": (_el: _Element): void => { callOutcome = $._decode_implicit<CallOutcome>(() => _decode_CallOutcome)(_el); },

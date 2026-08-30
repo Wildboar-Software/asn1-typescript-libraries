@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MSISDN_BS, _decode_MSISDN_BS, _encode_MSISDN_BS } from "../MAP-MS-DataTypes/MSISDN-BS.ta.mjs";
-// export { MSISDN_BS, _decode_MSISDN_BS, _encode_MSISDN_BS } from "../MAP-MS-DataTypes/MSISDN-BS.ta.mjs";
 
+
+import { maxNumOfMSISDN } from "./maxNumOfMSISDN.va.mjs";
 
 /**
  * @summary MSISDN_BS_List
@@ -95,7 +97,11 @@ let _cached_decoder_for_MSISDN_BS_List: $.ASN1Decoder<MSISDN_BS_List> | null = n
 export
 function _decode_MSISDN_BS_List (el: _Element): MSISDN_BS_List {
     if (!_cached_decoder_for_MSISDN_BS_List) { _cached_decoder_for_MSISDN_BS_List = $._decodeSequenceOf<MSISDN_BS>(() => _decode_MSISDN_BS); }
-    return _cached_decoder_for_MSISDN_BS_List(el);
+    const value = _cached_decoder_for_MSISDN_BS_List(el);
+    if (value.length < 1 || value.length > maxNumOfMSISDN) {
+        throw new ASN1SizeError("MSISDN_BS_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_MSISDN_BS_List: $.ASN1Encoder<MSISDN_BS_List> | null = null;

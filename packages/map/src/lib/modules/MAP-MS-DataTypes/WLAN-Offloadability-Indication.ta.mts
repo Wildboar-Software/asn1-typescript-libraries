@@ -155,21 +155,13 @@ const WLAN_Offloadability_Indication_allowed: WLAN_Offloadability_Indication = W
 export
 const allowed: WLAN_Offloadability_Indication = WLAN_Offloadability_Indication.allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_WLAN_Offloadability_Indication: $.ASN1Decoder<WLAN_Offloadability_Indication> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) WLAN_Offloadability_Indication
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_WLAN_Offloadability_Indication (el: _Element): WLAN_Offloadability_Indication {
-    if (!_cached_decoder_for_WLAN_Offloadability_Indication) { _cached_decoder_for_WLAN_Offloadability_Indication = $._decodeEnumerated; }
-    return _cached_decoder_for_WLAN_Offloadability_Indication(el);
-}
-
-let _cached_encoder_for_WLAN_Offloadability_Indication: $.ASN1Encoder<WLAN_Offloadability_Indication> | null = null;
+export const _decode_WLAN_Offloadability_Indication = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) WLAN_Offloadability_Indication into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_WLAN_Offloadability_Indication: $.ASN1Encoder<WLAN_Offlo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The WLAN_Offloadability_Indication, encoded as an ASN.1 Element.
  */
-export
-function _encode_WLAN_Offloadability_Indication (value: WLAN_Offloadability_Indication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WLAN_Offloadability_Indication) { _cached_encoder_for_WLAN_Offloadability_Indication = $._encodeEnumerated; }
-    return _cached_encoder_for_WLAN_Offloadability_Indication(value, elGetter);
-}
+export const _encode_WLAN_Offloadability_Indication = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxGeranGANSSpositioningData } from "./maxGeranGANSSpositioningData.va.mjs";
 
 /**
  * @summary GeranGANSSpositioningData
@@ -82,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type GeranGANSSpositioningData = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_GeranGANSSpositioningData: $.ASN1Decoder<GeranGANSSpositioningData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GeranGANSSpositioningData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GeranGANSSpositioningData (el: _Element): GeranGANSSpositioningData {
-    if (!_cached_decoder_for_GeranGANSSpositioningData) { _cached_decoder_for_GeranGANSSpositioningData = $._decodeOctetString; }
-    return _cached_decoder_for_GeranGANSSpositioningData(el);
-}
-
-let _cached_encoder_for_GeranGANSSpositioningData: $.ASN1Encoder<GeranGANSSpositioningData> | null = null;
+export const _decode_GeranGANSSpositioningData = (el: _Element): GeranGANSSpositioningData => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > maxGeranGANSSpositioningData) {
+        throw new ASN1SizeError("GeranGANSSpositioningData violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) GeranGANSSpositioningData into an ASN.1 Element.
@@ -105,11 +106,7 @@ let _cached_encoder_for_GeranGANSSpositioningData: $.ASN1Encoder<GeranGANSSposit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GeranGANSSpositioningData, encoded as an ASN.1 Element.
  */
-export
-function _encode_GeranGANSSpositioningData (value: GeranGANSSpositioningData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GeranGANSSpositioningData) { _cached_encoder_for_GeranGANSSpositioningData = $._encodeOctetString; }
-    return _cached_encoder_for_GeranGANSSpositioningData(value, elGetter);
-}
+export const _encode_GeranGANSSpositioningData = $._encodeOctetString;
 
 
 /* eslint-enable */

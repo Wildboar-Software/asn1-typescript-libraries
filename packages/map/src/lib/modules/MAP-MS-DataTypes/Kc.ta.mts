@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Kc = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Kc: $.ASN1Decoder<Kc> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Kc
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Kc (el: _Element): Kc {
-    if (!_cached_decoder_for_Kc) { _cached_decoder_for_Kc = $._decodeOctetString; }
-    return _cached_decoder_for_Kc(el);
-}
-
-let _cached_encoder_for_Kc: $.ASN1Encoder<Kc> | null = null;
+export const _decode_Kc = (el: _Element): Kc => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 8 || value.length > 8) {
+        throw new ASN1SizeError("Kc violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Kc into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Kc: $.ASN1Encoder<Kc> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Kc, encoded as an ASN.1 Element.
  */
-export
-function _encode_Kc (value: Kc, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Kc) { _cached_encoder_for_Kc = $._encodeOctetString; }
-    return _cached_encoder_for_Kc(value, elGetter);
-}
+export const _encode_Kc = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ReportingState, _enum_for_ReportingState, ReportingState_stopMonitoring /* IMPORTED_LONG_ENUMERATION_ITEM */, stopMonitoring /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportingState_startMonitoring /* IMPORTED_LONG_ENUMERATION_ITEM */, startMonitoring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReportingState, _encode_ReportingState } from "../MAP-CH-DataTypes/ReportingState.ta.mjs";
-// export { ReportingState, _enum_for_ReportingState, ReportingState_stopMonitoring /* IMPORTED_LONG_ENUMERATION_ITEM */, stopMonitoring /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportingState_startMonitoring /* IMPORTED_LONG_ENUMERATION_ITEM */, startMonitoring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReportingState, _encode_ReportingState } from "../MAP-CH-DataTypes/ReportingState.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -163,10 +159,10 @@ class SetReportingStateArg {
  */
 export
 const _root_component_type_list_1_spec_for_SetReportingStateArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ccbs-Monitoring", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ccbs-Monitoring", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -206,11 +202,11 @@ let _cached_decoder_for_SetReportingStateArg: $.ASN1Decoder<SetReportingStateArg
 export
 function _decode_SetReportingStateArg (el: _Element): SetReportingStateArg {
     if (!_cached_decoder_for_SetReportingStateArg) { _cached_decoder_for_SetReportingStateArg = function (el: _Element): SetReportingStateArg {
-    let imsi: OPTIONAL<IMSI>;
-    let lmsi: OPTIONAL<LMSI>;
-    let ccbs_Monitoring: OPTIONAL<ReportingState>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let lmsi: OPTIONAL<LMSI> = undefined;
+    let ccbs_Monitoring: OPTIONAL<ReportingState> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "lmsi": (_el: _Element): void => { lmsi = $._decode_implicit<LMSI>(() => _decode_LMSI)(_el); },

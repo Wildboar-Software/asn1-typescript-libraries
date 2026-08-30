@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_SubscriptionList } from "../MAP-MS-DataTypes/CUG-SubscriptionList.ta.mjs";
-// export { CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_SubscriptionList } from "../MAP-MS-DataTypes/CUG-SubscriptionList.ta.mjs";
 import { CUG_FeatureList, _decode_CUG_FeatureList, _encode_CUG_FeatureList } from "../MAP-MS-DataTypes/CUG-FeatureList.ta.mjs";
-// export { CUG_FeatureList, _decode_CUG_FeatureList, _encode_CUG_FeatureList } from "../MAP-MS-DataTypes/CUG-FeatureList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class CUG_Info {
  */
 export
 const _root_component_type_list_1_spec_for_CUG_Info: $.ComponentSpec[] = [
-    new $.ComponentSpec("cug-SubscriptionList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("cug-FeatureList", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("cug-SubscriptionList", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("cug-FeatureList", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -191,9 +188,9 @@ export
 function _decode_CUG_Info (el: _Element): CUG_Info {
     if (!_cached_decoder_for_CUG_Info) { _cached_decoder_for_CUG_Info = function (el: _Element): CUG_Info {
     let cug_SubscriptionList!: CUG_SubscriptionList;
-    let cug_FeatureList: OPTIONAL<CUG_FeatureList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cug_FeatureList: OPTIONAL<CUG_FeatureList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cug-SubscriptionList": (_el: _Element): void => { cug_SubscriptionList = _decode_CUG_SubscriptionList(_el); },
         "cug-FeatureList": (_el: _Element): void => { cug_FeatureList = _decode_CUG_FeatureList(_el); },

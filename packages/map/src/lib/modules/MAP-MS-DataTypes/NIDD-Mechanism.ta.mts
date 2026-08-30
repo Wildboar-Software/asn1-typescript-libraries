@@ -164,21 +164,13 @@ const NIDD_Mechanism_sCEF_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.s
 export
 const sCEF_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sCEF_based_data_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NIDD_Mechanism: $.ASN1Decoder<NIDD_Mechanism> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NIDD_Mechanism
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NIDD_Mechanism (el: _Element): NIDD_Mechanism {
-    if (!_cached_decoder_for_NIDD_Mechanism) { _cached_decoder_for_NIDD_Mechanism = $._decodeEnumerated; }
-    return _cached_decoder_for_NIDD_Mechanism(el);
-}
-
-let _cached_encoder_for_NIDD_Mechanism: $.ASN1Encoder<NIDD_Mechanism> | null = null;
+export const _decode_NIDD_Mechanism = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NIDD_Mechanism into an ASN.1 Element.
@@ -187,11 +179,7 @@ let _cached_encoder_for_NIDD_Mechanism: $.ASN1Encoder<NIDD_Mechanism> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NIDD_Mechanism, encoded as an ASN.1 Element.
  */
-export
-function _encode_NIDD_Mechanism (value: NIDD_Mechanism, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NIDD_Mechanism) { _cached_encoder_for_NIDD_Mechanism = $._encodeEnumerated; }
-    return _cached_encoder_for_NIDD_Mechanism(value, elGetter);
-}
+export const _encode_NIDD_Mechanism = $._encodeEnumerated;
 
 
 /* eslint-enable */

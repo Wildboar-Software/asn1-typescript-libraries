@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SubscribedPeriodicRAUTAUtimer = INTEGER;
 
-let _cached_decoder_for_SubscribedPeriodicRAUTAUtimer: $.ASN1Decoder<SubscribedPeriodicRAUTAUtimer> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SubscribedPeriodicRAUTAUtimer
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SubscribedPeriodicRAUTAUtimer (el: _Element): SubscribedPeriodicRAUTAUtimer {
-    if (!_cached_decoder_for_SubscribedPeriodicRAUTAUtimer) { _cached_decoder_for_SubscribedPeriodicRAUTAUtimer = $._decodeInteger; }
-    return _cached_decoder_for_SubscribedPeriodicRAUTAUtimer(el);
-}
-
-let _cached_encoder_for_SubscribedPeriodicRAUTAUtimer: $.ASN1Encoder<SubscribedPeriodicRAUTAUtimer> | null = null;
+export const _decode_SubscribedPeriodicRAUTAUtimer = (el: _Element): SubscribedPeriodicRAUTAUtimer => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 4294967295) {
+        throw new ASN1OverflowError("SubscribedPeriodicRAUTAUtimer violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SubscribedPeriodicRAUTAUtimer into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_SubscribedPeriodicRAUTAUtimer: $.ASN1Encoder<SubscribedP
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubscribedPeriodicRAUTAUtimer, encoded as an ASN.1 Element.
  */
-export
-function _encode_SubscribedPeriodicRAUTAUtimer (value: SubscribedPeriodicRAUTAUtimer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubscribedPeriodicRAUTAUtimer) { _cached_encoder_for_SubscribedPeriodicRAUTAUtimer = $._encodeInteger; }
-    return _cached_encoder_for_SubscribedPeriodicRAUTAUtimer(value, elGetter);
-}
+export const _encode_SubscribedPeriodicRAUTAUtimer = $._encodeInteger;
 
 
 /* eslint-enable */

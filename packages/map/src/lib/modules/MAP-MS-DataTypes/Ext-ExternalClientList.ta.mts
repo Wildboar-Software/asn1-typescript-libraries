@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExternalClient, _decode_ExternalClient, _encode_ExternalClient } from "../MAP-MS-DataTypes/ExternalClient.ta.mjs";
-// export { ExternalClient, _decode_ExternalClient, _encode_ExternalClient } from "../MAP-MS-DataTypes/ExternalClient.ta.mjs";
 
+
+import { maxNumOfExt_ExternalClient } from "./maxNumOfExt-ExternalClient.va.mjs";
 
 /**
  * @summary Ext_ExternalClientList
@@ -95,7 +97,11 @@ let _cached_decoder_for_Ext_ExternalClientList: $.ASN1Decoder<Ext_ExternalClient
 export
 function _decode_Ext_ExternalClientList (el: _Element): Ext_ExternalClientList {
     if (!_cached_decoder_for_Ext_ExternalClientList) { _cached_decoder_for_Ext_ExternalClientList = $._decodeSequenceOf<ExternalClient>(() => _decode_ExternalClient); }
-    return _cached_decoder_for_Ext_ExternalClientList(el);
+    const value = _cached_decoder_for_Ext_ExternalClientList(el);
+    if (value.length < 1 || value.length > maxNumOfExt_ExternalClient) {
+        throw new ASN1SizeError("Ext_ExternalClientList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_Ext_ExternalClientList: $.ASN1Encoder<Ext_ExternalClientList> | null = null;

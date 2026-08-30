@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { CliRestrictionOption, _enum_for_CliRestrictionOption, CliRestrictionOption_permanent /* IMPORTED_LONG_ENUMERATION_ITEM */, permanent /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CliRestrictionOption, _encode_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
-// export { CliRestrictionOption, _enum_for_CliRestrictionOption, CliRestrictionOption_permanent /* IMPORTED_LONG_ENUMERATION_ITEM */, permanent /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CliRestrictionOption, _encode_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
 
 
 /**
@@ -152,9 +150,9 @@ class ClirData {
  */
 export
 const _root_component_type_list_1_spec_for_ClirData: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("cliRestrictionOption", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("cliRestrictionOption", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -195,9 +193,9 @@ export
 function _decode_ClirData (el: _Element): ClirData {
     if (!_cached_decoder_for_ClirData) { _cached_decoder_for_ClirData = function (el: _Element): ClirData {
     let ss_Status!: Ext_SS_Status;
-    let cliRestrictionOption: OPTIONAL<CliRestrictionOption>;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cliRestrictionOption: OPTIONAL<CliRestrictionOption> = undefined;
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<Ext_SS_Status>(() => _decode_Ext_SS_Status)(_el); },
         "cliRestrictionOption": (_el: _Element): void => { cliRestrictionOption = $._decode_implicit<CliRestrictionOption>(() => _decode_CliRestrictionOption)(_el); },

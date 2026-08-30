@@ -67,21 +67,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { NotificationToMSUser, _enum_for_NotificationToMSUser, NotificationToMSUser_notifyLocationAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyLocationAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndVerify_LocationAllowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndVerify_LocationNotAllowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_locationNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, locationNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NotificationToMSUser, _encode_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
-// export { NotificationToMSUser, _enum_for_NotificationToMSUser, NotificationToMSUser_notifyLocationAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyLocationAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndVerify_LocationAllowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndVerify_LocationNotAllowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_locationNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, locationNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NotificationToMSUser, _encode_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
 import { ExternalClientList, _decode_ExternalClientList, _encode_ExternalClientList } from "../MAP-MS-DataTypes/ExternalClientList.ta.mjs";
-// export { ExternalClientList, _decode_ExternalClientList, _encode_ExternalClientList } from "../MAP-MS-DataTypes/ExternalClientList.ta.mjs";
 import { PLMNClientList, _decode_PLMNClientList, _encode_PLMNClientList } from "../MAP-MS-DataTypes/PLMNClientList.ta.mjs";
-// export { PLMNClientList, _decode_PLMNClientList, _encode_PLMNClientList } from "../MAP-MS-DataTypes/PLMNClientList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Ext_ExternalClientList, _decode_Ext_ExternalClientList, _encode_Ext_ExternalClientList } from "../MAP-MS-DataTypes/Ext-ExternalClientList.ta.mjs";
-// export { Ext_ExternalClientList, _decode_Ext_ExternalClientList, _encode_Ext_ExternalClientList } from "../MAP-MS-DataTypes/Ext-ExternalClientList.ta.mjs";
 import { ServiceTypeList, _decode_ServiceTypeList, _encode_ServiceTypeList } from "../MAP-MS-DataTypes/ServiceTypeList.ta.mjs";
-// export { ServiceTypeList, _decode_ServiceTypeList, _encode_ServiceTypeList } from "../MAP-MS-DataTypes/ServiceTypeList.ta.mjs";
 
 
 /**
@@ -215,12 +207,12 @@ class LCS_PrivacyClass {
  */
 export
 const _root_component_type_list_1_spec_for_LCS_PrivacyClass: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("notificationToMSUser", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("externalClientList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("plmnClientList", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("notificationToMSUser", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("externalClientList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("plmnClientList", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -246,8 +238,8 @@ const _root_component_type_list_2_spec_for_LCS_PrivacyClass: $.ComponentSpec[] =
  */
 export
 const _extension_additions_list_spec_for_LCS_PrivacyClass: $.ComponentSpec[] = [
-    new $.ComponentSpec("ext-externalClientList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("serviceTypeList", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("ext-externalClientList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("serviceTypeList", true, $.hasTag(_TagClass.context, 5))
 ];
 
 let _cached_decoder_for_LCS_PrivacyClass: $.ASN1Decoder<LCS_PrivacyClass> | null = null;
@@ -263,13 +255,13 @@ function _decode_LCS_PrivacyClass (el: _Element): LCS_PrivacyClass {
     if (!_cached_decoder_for_LCS_PrivacyClass) { _cached_decoder_for_LCS_PrivacyClass = function (el: _Element): LCS_PrivacyClass {
     let ss_Code!: SS_Code;
     let ss_Status!: Ext_SS_Status;
-    let notificationToMSUser: OPTIONAL<NotificationToMSUser>;
-    let externalClientList: OPTIONAL<ExternalClientList>;
-    let plmnClientList: OPTIONAL<PLMNClientList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let ext_externalClientList: OPTIONAL<Ext_ExternalClientList>;
-    let serviceTypeList: OPTIONAL<ServiceTypeList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let notificationToMSUser: OPTIONAL<NotificationToMSUser> = undefined;
+    let externalClientList: OPTIONAL<ExternalClientList> = undefined;
+    let plmnClientList: OPTIONAL<PLMNClientList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let ext_externalClientList: OPTIONAL<Ext_ExternalClientList> = undefined;
+    let serviceTypeList: OPTIONAL<ServiceTypeList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = _decode_SS_Code(_el); },
         "ss-Status": (_el: _Element): void => { ss_Status = _decode_Ext_SS_Status(_el); },

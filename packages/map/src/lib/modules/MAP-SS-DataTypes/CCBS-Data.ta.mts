@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
-// export { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ServiceIndicator, ServiceIndicator_clir_invoked /* IMPORTED_LONG_NAMED_BIT */, clir_invoked /* IMPORTED_SHORT_NAMED_BIT */, ServiceIndicator_camel_invoked /* IMPORTED_LONG_NAMED_BIT */, camel_invoked /* IMPORTED_SHORT_NAMED_BIT */, _decode_ServiceIndicator, _encode_ServiceIndicator } from "../MAP-SS-DataTypes/ServiceIndicator.ta.mjs";
-// export { ServiceIndicator, ServiceIndicator_clir_invoked /* IMPORTED_LONG_NAMED_BIT */, clir_invoked /* IMPORTED_SHORT_NAMED_BIT */, ServiceIndicator_camel_invoked /* IMPORTED_LONG_NAMED_BIT */, camel_invoked /* IMPORTED_SHORT_NAMED_BIT */, _decode_ServiceIndicator, _encode_ServiceIndicator } from "../MAP-SS-DataTypes/ServiceIndicator.ta.mjs";
 import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
-// export { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
 
 
 /**
@@ -164,11 +160,11 @@ class CCBS_Data {
  */
 export
 const _root_component_type_list_1_spec_for_CCBS_Data: $.ComponentSpec[] = [
-    new $.ComponentSpec("ccbs-Feature", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("translatedB-Number", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("serviceIndicator", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("callInfo", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("networkSignalInfo", false, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("ccbs-Feature", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("translatedB-Number", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("serviceIndicator", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("callInfo", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("networkSignalInfo", false, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -210,10 +206,10 @@ function _decode_CCBS_Data (el: _Element): CCBS_Data {
     if (!_cached_decoder_for_CCBS_Data) { _cached_decoder_for_CCBS_Data = function (el: _Element): CCBS_Data {
     let ccbs_Feature!: CCBS_Feature;
     let translatedB_Number!: ISDN_AddressString;
-    let serviceIndicator: OPTIONAL<ServiceIndicator>;
+    let serviceIndicator: OPTIONAL<ServiceIndicator> = undefined;
     let callInfo!: ExternalSignalInfo;
     let networkSignalInfo!: ExternalSignalInfo;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ccbs-Feature": (_el: _Element): void => { ccbs_Feature = $._decode_implicit<CCBS_Feature>(() => _decode_CCBS_Feature)(_el); },
         "translatedB-Number": (_el: _Element): void => { translatedB_Number = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

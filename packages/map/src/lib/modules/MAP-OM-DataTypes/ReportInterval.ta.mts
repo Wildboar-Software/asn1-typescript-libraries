@@ -675,21 +675,13 @@ const ReportInterval_lte60min: ReportInterval = ReportInterval.lte60min; /* LONG
 export
 const lte60min: ReportInterval = ReportInterval.lte60min; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ReportInterval: $.ASN1Decoder<ReportInterval> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportInterval
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReportInterval (el: _Element): ReportInterval {
-    if (!_cached_decoder_for_ReportInterval) { _cached_decoder_for_ReportInterval = $._decodeEnumerated; }
-    return _cached_decoder_for_ReportInterval(el);
-}
-
-let _cached_encoder_for_ReportInterval: $.ASN1Encoder<ReportInterval> | null = null;
+export const _decode_ReportInterval = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ReportInterval into an ASN.1 Element.
@@ -698,11 +690,7 @@ let _cached_encoder_for_ReportInterval: $.ASN1Encoder<ReportInterval> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportInterval, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReportInterval (value: ReportInterval, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportInterval) { _cached_encoder_for_ReportInterval = $._encodeEnumerated; }
-    return _cached_encoder_for_ReportInterval(value, elGetter);
-}
+export const _encode_ReportInterval = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.ta.mjs";
-// export { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.ta.mjs";
 import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
-// export { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
-// export { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
 import { T_BCSM_CAMEL_TDP_CriteriaList, _decode_T_BCSM_CAMEL_TDP_CriteriaList, _encode_T_BCSM_CAMEL_TDP_CriteriaList } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-CriteriaList.ta.mjs";
-// export { T_BCSM_CAMEL_TDP_CriteriaList, _decode_T_BCSM_CAMEL_TDP_CriteriaList, _encode_T_BCSM_CAMEL_TDP_CriteriaList } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-CriteriaList.ta.mjs";
 import { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.ta.mjs";
-// export { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.ta.mjs";
 
 
 /**
@@ -175,9 +169,9 @@ class GmscCamelSubscriptionInfo {
  */
 export
 const _root_component_type_list_1_spec_for_GmscCamelSubscriptionInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("t-CSI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("o-CSI", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("t-CSI", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("o-CSI", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -203,9 +197,9 @@ const _root_component_type_list_2_spec_for_GmscCamelSubscriptionInfo: $.Componen
  */
 export
 const _extension_additions_list_spec_for_GmscCamelSubscriptionInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("o-BcsmCamelTDP-CriteriaList", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("t-BCSM-CAMEL-TDP-CriteriaList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("d-csi", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("o-BcsmCamelTDP-CriteriaList", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("t-BCSM-CAMEL-TDP-CriteriaList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("d-csi", true, $.hasTag(_TagClass.context, 5))
 ];
 
 let _cached_decoder_for_GmscCamelSubscriptionInfo: $.ASN1Decoder<GmscCamelSubscriptionInfo> | null = null;
@@ -219,13 +213,13 @@ let _cached_decoder_for_GmscCamelSubscriptionInfo: $.ASN1Decoder<GmscCamelSubscr
 export
 function _decode_GmscCamelSubscriptionInfo (el: _Element): GmscCamelSubscriptionInfo {
     if (!_cached_decoder_for_GmscCamelSubscriptionInfo) { _cached_decoder_for_GmscCamelSubscriptionInfo = function (el: _Element): GmscCamelSubscriptionInfo {
-    let t_CSI: OPTIONAL<T_CSI>;
-    let o_CSI: OPTIONAL<O_CSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>;
-    let t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>;
-    let d_csi: OPTIONAL<D_CSI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let t_CSI: OPTIONAL<T_CSI> = undefined;
+    let o_CSI: OPTIONAL<O_CSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList> = undefined;
+    let t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList> = undefined;
+    let d_csi: OPTIONAL<D_CSI> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "t-CSI": (_el: _Element): void => { t_CSI = $._decode_implicit<T_CSI>(() => _decode_T_CSI)(_el); },
         "o-CSI": (_el: _Element): void => { o_CSI = $._decode_implicit<O_CSI>(() => _decode_O_CSI)(_el); },

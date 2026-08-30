@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProtocolId, _enum_for_ProtocolId, ProtocolId_gsm_0408 /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_0408 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_gsm_0806 /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_0806 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_gsm_BSSMAP /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_BSSMAP /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_ets_300102_1 /* IMPORTED_LONG_ENUMERATION_ITEM */, ets_300102_1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProtocolId, _encode_ProtocolId } from "../MAP-CommonDataTypes/ProtocolId.ta.mjs";
-// export { ProtocolId, _enum_for_ProtocolId, ProtocolId_gsm_0408 /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_0408 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_gsm_0806 /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_0806 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_gsm_BSSMAP /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_BSSMAP /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_ets_300102_1 /* IMPORTED_LONG_ENUMERATION_ITEM */, ets_300102_1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProtocolId, _encode_ProtocolId } from "../MAP-CommonDataTypes/ProtocolId.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -157,9 +154,9 @@ class ExternalSignalInfo {
  */
 export
 const _root_component_type_list_1_spec_for_ExternalSignalInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("protocolId", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("signalInfo", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("protocolId", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("signalInfo", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -201,8 +198,8 @@ function _decode_ExternalSignalInfo (el: _Element): ExternalSignalInfo {
     if (!_cached_decoder_for_ExternalSignalInfo) { _cached_decoder_for_ExternalSignalInfo = function (el: _Element): ExternalSignalInfo {
     let protocolId!: ProtocolId;
     let signalInfo!: SignalInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "protocolId": (_el: _Element): void => { protocolId = _decode_ProtocolId(_el); },
         "signalInfo": (_el: _Element): void => { signalInfo = _decode_SignalInfo(_el); },

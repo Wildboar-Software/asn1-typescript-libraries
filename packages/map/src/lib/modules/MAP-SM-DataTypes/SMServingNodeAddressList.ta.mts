@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMServingNodeAddress, _decode_SMServingNodeAddress, _encode_SMServingNodeAddress } from "../MAP-SM-DataTypes/SMServingNodeAddress.ta.mjs";
-// export { SMServingNodeAddress, _decode_SMServingNodeAddress, _encode_SMServingNodeAddress } from "../MAP-SM-DataTypes/SMServingNodeAddress.ta.mjs";
 
+
+import { maxNumOfSMServingNodeAddresses } from "./maxNumOfSMServingNodeAddresses.va.mjs";
 
 /**
  * @summary SMServingNodeAddressList
@@ -96,7 +98,11 @@ let _cached_decoder_for_SMServingNodeAddressList: $.ASN1Decoder<SMServingNodeAdd
 export
 function _decode_SMServingNodeAddressList (el: _Element): SMServingNodeAddressList {
     if (!_cached_decoder_for_SMServingNodeAddressList) { _cached_decoder_for_SMServingNodeAddressList = $._decodeSequenceOf<SMServingNodeAddress>(() => _decode_SMServingNodeAddress); }
-    return _cached_decoder_for_SMServingNodeAddressList(el);
+    const value = _cached_decoder_for_SMServingNodeAddressList(el);
+    if (value.length < 1 || value.length > maxNumOfSMServingNodeAddresses) {
+        throw new ASN1SizeError("SMServingNodeAddressList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_SMServingNodeAddressList: $.ASN1Encoder<SMServingNodeAddressList> | null = null;

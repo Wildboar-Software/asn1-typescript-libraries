@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_ProtocolId, _enum_for_Ext_ProtocolId, Ext_ProtocolId_ets_300356 /* IMPORTED_LONG_ENUMERATION_ITEM */, ets_300356 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Ext_ProtocolId, _encode_Ext_ProtocolId } from "../MAP-CommonDataTypes/Ext-ProtocolId.ta.mjs";
-// export { Ext_ProtocolId, _enum_for_Ext_ProtocolId, Ext_ProtocolId_ets_300356 /* IMPORTED_LONG_ENUMERATION_ITEM */, ets_300356 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Ext_ProtocolId, _encode_Ext_ProtocolId } from "../MAP-CommonDataTypes/Ext-ProtocolId.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -156,9 +153,9 @@ class Ext_ExternalSignalInfo {
  */
 export
 const _root_component_type_list_1_spec_for_Ext_ExternalSignalInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("ext-ProtocolId", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("signalInfo", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("ext-ProtocolId", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("signalInfo", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -200,8 +197,8 @@ function _decode_Ext_ExternalSignalInfo (el: _Element): Ext_ExternalSignalInfo {
     if (!_cached_decoder_for_Ext_ExternalSignalInfo) { _cached_decoder_for_Ext_ExternalSignalInfo = function (el: _Element): Ext_ExternalSignalInfo {
     let ext_ProtocolId!: Ext_ProtocolId;
     let signalInfo!: SignalInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ext-ProtocolId": (_el: _Element): void => { ext_ProtocolId = _decode_Ext_ProtocolId(_el); },
         "signalInfo": (_el: _Element): void => { signalInfo = _decode_SignalInfo(_el); },

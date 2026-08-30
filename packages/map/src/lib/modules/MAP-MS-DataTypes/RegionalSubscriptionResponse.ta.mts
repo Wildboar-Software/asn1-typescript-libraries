@@ -195,21 +195,13 @@ const RegionalSubscriptionResponse_regionalSubscNotSupported: RegionalSubscripti
 export
 const regionalSubscNotSupported: RegionalSubscriptionResponse = RegionalSubscriptionResponse.regionalSubscNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RegionalSubscriptionResponse: $.ASN1Decoder<RegionalSubscriptionResponse> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RegionalSubscriptionResponse
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RegionalSubscriptionResponse (el: _Element): RegionalSubscriptionResponse {
-    if (!_cached_decoder_for_RegionalSubscriptionResponse) { _cached_decoder_for_RegionalSubscriptionResponse = $._decodeEnumerated; }
-    return _cached_decoder_for_RegionalSubscriptionResponse(el);
-}
-
-let _cached_encoder_for_RegionalSubscriptionResponse: $.ASN1Encoder<RegionalSubscriptionResponse> | null = null;
+export const _decode_RegionalSubscriptionResponse = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RegionalSubscriptionResponse into an ASN.1 Element.
@@ -218,11 +210,7 @@ let _cached_encoder_for_RegionalSubscriptionResponse: $.ASN1Encoder<RegionalSubs
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RegionalSubscriptionResponse, encoded as an ASN.1 Element.
  */
-export
-function _encode_RegionalSubscriptionResponse (value: RegionalSubscriptionResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RegionalSubscriptionResponse) { _cached_encoder_for_RegionalSubscriptionResponse = $._encodeEnumerated; }
-    return _cached_encoder_for_RegionalSubscriptionResponse(value, elGetter);
-}
+export const _encode_RegionalSubscriptionResponse = $._encodeEnumerated;
 
 
 /* eslint-enable */

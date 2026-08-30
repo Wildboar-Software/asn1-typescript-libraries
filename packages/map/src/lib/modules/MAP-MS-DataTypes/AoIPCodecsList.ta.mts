@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
-// export { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -188,15 +186,15 @@ class AoIPCodecsList {
  */
 export
 const _root_component_type_list_1_spec_for_AoIPCodecsList: $.ComponentSpec[] = [
-    new $.ComponentSpec("codec1", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("codec2", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("codec3", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("codec4", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("codec5", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("codec6", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("codec7", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("codec8", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 9), undefined, undefined)
+    new $.ComponentSpec("codec1", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("codec2", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("codec3", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("codec4", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("codec5", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("codec6", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("codec7", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("codec8", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 9))
 ];
 
 /**
@@ -237,15 +235,15 @@ export
 function _decode_AoIPCodecsList (el: _Element): AoIPCodecsList {
     if (!_cached_decoder_for_AoIPCodecsList) { _cached_decoder_for_AoIPCodecsList = function (el: _Element): AoIPCodecsList {
     let codec1!: AoIPCodec;
-    let codec2: OPTIONAL<AoIPCodec>;
-    let codec3: OPTIONAL<AoIPCodec>;
-    let codec4: OPTIONAL<AoIPCodec>;
-    let codec5: OPTIONAL<AoIPCodec>;
-    let codec6: OPTIONAL<AoIPCodec>;
-    let codec7: OPTIONAL<AoIPCodec>;
-    let codec8: OPTIONAL<AoIPCodec>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let codec2: OPTIONAL<AoIPCodec> = undefined;
+    let codec3: OPTIONAL<AoIPCodec> = undefined;
+    let codec4: OPTIONAL<AoIPCodec> = undefined;
+    let codec5: OPTIONAL<AoIPCodec> = undefined;
+    let codec6: OPTIONAL<AoIPCodec> = undefined;
+    let codec7: OPTIONAL<AoIPCodec> = undefined;
+    let codec8: OPTIONAL<AoIPCodec> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "codec1": (_el: _Element): void => { codec1 = $._decode_implicit<AoIPCodec>(() => _decode_AoIPCodec)(_el); },
         "codec2": (_el: _Element): void => { codec2 = $._decode_implicit<AoIPCodec>(() => _decode_AoIPCodec)(_el); },

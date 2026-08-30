@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MSNetworkCapability = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_MSNetworkCapability: $.ASN1Decoder<MSNetworkCapability> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MSNetworkCapability
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MSNetworkCapability (el: _Element): MSNetworkCapability {
-    if (!_cached_decoder_for_MSNetworkCapability) { _cached_decoder_for_MSNetworkCapability = $._decodeOctetString; }
-    return _cached_decoder_for_MSNetworkCapability(el);
-}
-
-let _cached_encoder_for_MSNetworkCapability: $.ASN1Encoder<MSNetworkCapability> | null = null;
+export const _decode_MSNetworkCapability = (el: _Element): MSNetworkCapability => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("MSNetworkCapability violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MSNetworkCapability into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_MSNetworkCapability: $.ASN1Encoder<MSNetworkCapability> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MSNetworkCapability, encoded as an ASN.1 Element.
  */
-export
-function _encode_MSNetworkCapability (value: MSNetworkCapability, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MSNetworkCapability) { _cached_encoder_for_MSNetworkCapability = $._encodeOctetString; }
-    return _cached_encoder_for_MSNetworkCapability(value, elGetter);
-}
+export const _encode_MSNetworkCapability = $._encodeOctetString;
 
 
 /* eslint-enable */

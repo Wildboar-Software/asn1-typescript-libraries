@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -292,21 +293,19 @@ const SpecificCSI_Withdraw_vt_IM_CSI: number = 13; /* LONG_NAMED_BIT */
 export
 const vt_IM_CSI: number = SpecificCSI_Withdraw_vt_IM_CSI; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SpecificCSI_Withdraw: $.ASN1Decoder<SpecificCSI_Withdraw> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SpecificCSI_Withdraw
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SpecificCSI_Withdraw (el: _Element): SpecificCSI_Withdraw {
-    if (!_cached_decoder_for_SpecificCSI_Withdraw) { _cached_decoder_for_SpecificCSI_Withdraw = $._decodeBitString; }
-    return _cached_decoder_for_SpecificCSI_Withdraw(el);
-}
-
-let _cached_encoder_for_SpecificCSI_Withdraw: $.ASN1Encoder<SpecificCSI_Withdraw> | null = null;
+export const _decode_SpecificCSI_Withdraw = (el: _Element): SpecificCSI_Withdraw => {
+    const value = $._decodeBitString(el);
+    if (value.length < 8 || value.length > 32) {
+        throw new ASN1SizeError("SpecificCSI_Withdraw violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SpecificCSI_Withdraw into an ASN.1 Element.
@@ -315,11 +314,7 @@ let _cached_encoder_for_SpecificCSI_Withdraw: $.ASN1Encoder<SpecificCSI_Withdraw
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SpecificCSI_Withdraw, encoded as an ASN.1 Element.
  */
-export
-function _encode_SpecificCSI_Withdraw (value: SpecificCSI_Withdraw, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SpecificCSI_Withdraw) { _cached_encoder_for_SpecificCSI_Withdraw = $._encodeBitString; }
-    return _cached_encoder_for_SpecificCSI_Withdraw(value, elGetter);
-}
+export const _encode_SpecificCSI_Withdraw = $._encodeBitString;
 
 
 /* eslint-enable */

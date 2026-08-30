@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint, T_BcsmTriggerDetectionPoint_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, T_BcsmTriggerDetectionPoint_tBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, tBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, T_BcsmTriggerDetectionPoint_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
-// export { T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint, T_BcsmTriggerDetectionPoint_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, T_BcsmTriggerDetectionPoint_tBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, tBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, T_BcsmTriggerDetectionPoint_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
-// export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { DefaultCallHandling, _enum_for_DefaultCallHandling, DefaultCallHandling_continueCall /* IMPORTED_LONG_ENUMERATION_ITEM */, continueCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultCallHandling_releaseCall /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultCallHandling, _encode_DefaultCallHandling } from "../MAP-MS-DataTypes/DefaultCallHandling.ta.mjs";
-// export { DefaultCallHandling, _enum_for_DefaultCallHandling, DefaultCallHandling_continueCall /* IMPORTED_LONG_ENUMERATION_ITEM */, continueCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultCallHandling_releaseCall /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultCallHandling, _encode_DefaultCallHandling } from "../MAP-MS-DataTypes/DefaultCallHandling.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -178,11 +173,11 @@ class T_BcsmCamelTDPData {
  */
 export
 const _root_component_type_list_1_spec_for_T_BcsmCamelTDPData: $.ComponentSpec[] = [
-    new $.ComponentSpec("t-BcsmTriggerDetectionPoint", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("defaultCallHandling", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("t-BcsmTriggerDetectionPoint", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("defaultCallHandling", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -226,8 +221,8 @@ function _decode_T_BcsmCamelTDPData (el: _Element): T_BcsmCamelTDPData {
     let serviceKey!: ServiceKey;
     let gsmSCF_Address!: ISDN_AddressString;
     let defaultCallHandling!: DefaultCallHandling;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "t-BcsmTriggerDetectionPoint": (_el: _Element): void => { t_BcsmTriggerDetectionPoint = _decode_T_BcsmTriggerDetectionPoint(_el); },
         "serviceKey": (_el: _Element): void => { serviceKey = _decode_ServiceKey(_el); },

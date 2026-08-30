@@ -155,21 +155,13 @@ const AlertReason_memoryAvailable: AlertReason = AlertReason.memoryAvailable; /*
 export
 const memoryAvailable: AlertReason = AlertReason.memoryAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AlertReason: $.ASN1Decoder<AlertReason> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AlertReason
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AlertReason (el: _Element): AlertReason {
-    if (!_cached_decoder_for_AlertReason) { _cached_decoder_for_AlertReason = $._decodeEnumerated; }
-    return _cached_decoder_for_AlertReason(el);
-}
-
-let _cached_encoder_for_AlertReason: $.ASN1Encoder<AlertReason> | null = null;
+export const _decode_AlertReason = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AlertReason into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_AlertReason: $.ASN1Encoder<AlertReason> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AlertReason, encoded as an ASN.1 Element.
  */
-export
-function _encode_AlertReason (value: AlertReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AlertReason) { _cached_encoder_for_AlertReason = $._encodeEnumerated; }
-    return _cached_encoder_for_AlertReason(value, elGetter);
-}
+export const _encode_AlertReason = $._encodeEnumerated;
 
 
 /* eslint-enable */

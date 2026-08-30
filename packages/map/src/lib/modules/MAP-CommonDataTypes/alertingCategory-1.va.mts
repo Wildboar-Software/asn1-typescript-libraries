@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
-// export { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
 
 
 /**
@@ -83,6 +82,6 @@ import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } fro
  * @constant
  */
 export
-const alertingCategory_1: AlertingPattern = new Uint8Array([ 0b, 0b ]);
+const alertingCategory_1: AlertingPattern = new Uint8Array([ 0x04 ]);
 
 /* eslint-enable */

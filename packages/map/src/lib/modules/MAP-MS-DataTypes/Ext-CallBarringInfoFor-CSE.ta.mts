@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { Ext_CallBarFeatureList, _decode_Ext_CallBarFeatureList, _encode_Ext_CallBarFeatureList } from "../MAP-MS-DataTypes/Ext-CallBarFeatureList.ta.mjs";
-// export { Ext_CallBarFeatureList, _decode_Ext_CallBarFeatureList, _encode_Ext_CallBarFeatureList } from "../MAP-MS-DataTypes/Ext-CallBarFeatureList.ta.mjs";
 import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
-// export { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
 import { WrongPasswordAttemptsCounter, _decode_WrongPasswordAttemptsCounter, _encode_WrongPasswordAttemptsCounter } from "../MAP-MS-DataTypes/WrongPasswordAttemptsCounter.ta.mjs";
-// export { WrongPasswordAttemptsCounter, _decode_WrongPasswordAttemptsCounter, _encode_WrongPasswordAttemptsCounter } from "../MAP-MS-DataTypes/WrongPasswordAttemptsCounter.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -173,12 +168,12 @@ class Ext_CallBarringInfoFor_CSE {
  */
 export
 const _root_component_type_list_1_spec_for_Ext_CallBarringInfoFor_CSE: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("callBarringFeatureList", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("password", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("wrongPasswordAttemptsCounter", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callBarringFeatureList", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("password", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("wrongPasswordAttemptsCounter", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -220,11 +215,11 @@ function _decode_Ext_CallBarringInfoFor_CSE (el: _Element): Ext_CallBarringInfoF
     if (!_cached_decoder_for_Ext_CallBarringInfoFor_CSE) { _cached_decoder_for_Ext_CallBarringInfoFor_CSE = function (el: _Element): Ext_CallBarringInfoFor_CSE {
     let ss_Code!: SS_Code;
     let callBarringFeatureList!: Ext_CallBarFeatureList;
-    let password: OPTIONAL<Password>;
-    let wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter>;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let password: OPTIONAL<Password> = undefined;
+    let wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter> = undefined;
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = $._decode_implicit<SS_Code>(() => _decode_SS_Code)(_el); },
         "callBarringFeatureList": (_el: _Element): void => { callBarringFeatureList = $._decode_implicit<Ext_CallBarFeatureList>(() => _decode_Ext_CallBarFeatureList)(_el); },

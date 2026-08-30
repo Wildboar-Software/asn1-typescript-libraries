@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxUSSD_StringLength } from "./maxUSSD-StringLength.va.mjs";
 
 /**
  * @summary USSD_String
@@ -82,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type USSD_String = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_USSD_String: $.ASN1Decoder<USSD_String> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) USSD_String
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_USSD_String (el: _Element): USSD_String {
-    if (!_cached_decoder_for_USSD_String) { _cached_decoder_for_USSD_String = $._decodeOctetString; }
-    return _cached_decoder_for_USSD_String(el);
-}
-
-let _cached_encoder_for_USSD_String: $.ASN1Encoder<USSD_String> | null = null;
+export const _decode_USSD_String = (el: _Element): USSD_String => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxUSSD_StringLength) {
+        throw new ASN1SizeError("USSD_String violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) USSD_String into an ASN.1 Element.
@@ -105,11 +106,7 @@ let _cached_encoder_for_USSD_String: $.ASN1Encoder<USSD_String> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The USSD_String, encoded as an ASN.1 Element.
  */
-export
-function _encode_USSD_String (value: USSD_String, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_USSD_String) { _cached_encoder_for_USSD_String = $._encodeOctetString; }
-    return _cached_encoder_for_USSD_String(value, elGetter);
-}
+export const _encode_USSD_String = $._encodeOctetString;
 
 
 /* eslint-enable */

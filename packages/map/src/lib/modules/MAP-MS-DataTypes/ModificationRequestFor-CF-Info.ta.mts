@@ -67,21 +67,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
-// export { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
 import { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime } from "../MAP-MS-DataTypes/Ext-NoRepCondTime.ta.mjs";
-// export { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime } from "../MAP-MS-DataTypes/Ext-NoRepCondTime.ta.mjs";
 import { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
-// export { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -199,14 +191,14 @@ class ModificationRequestFor_CF_Info {
  */
 export
 const _root_component_type_list_1_spec_for_ModificationRequestFor_CF_Info: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("basicService", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ss-Status", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("forwardedToNumber", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("forwardedToSubaddress", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("noReplyConditionTime", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("modifyNotificationToCSE", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("basicService", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ss-Status", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("forwardedToNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("forwardedToSubaddress", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("noReplyConditionTime", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("modifyNotificationToCSE", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 7))
 ];
 
 /**
@@ -247,14 +239,14 @@ export
 function _decode_ModificationRequestFor_CF_Info (el: _Element): ModificationRequestFor_CF_Info {
     if (!_cached_decoder_for_ModificationRequestFor_CF_Info) { _cached_decoder_for_ModificationRequestFor_CF_Info = function (el: _Element): ModificationRequestFor_CF_Info {
     let ss_Code!: SS_Code;
-    let basicService: OPTIONAL<Ext_BasicServiceCode>;
-    let ss_Status: OPTIONAL<Ext_SS_Status>;
-    let forwardedToNumber: OPTIONAL<AddressString>;
-    let forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>;
-    let noReplyConditionTime: OPTIONAL<Ext_NoRepCondTime>;
-    let modifyNotificationToCSE: OPTIONAL<ModificationInstruction>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let basicService: OPTIONAL<Ext_BasicServiceCode> = undefined;
+    let ss_Status: OPTIONAL<Ext_SS_Status> = undefined;
+    let forwardedToNumber: OPTIONAL<AddressString> = undefined;
+    let forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString> = undefined;
+    let noReplyConditionTime: OPTIONAL<Ext_NoRepCondTime> = undefined;
+    let modifyNotificationToCSE: OPTIONAL<ModificationInstruction> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = $._decode_implicit<SS_Code>(() => _decode_SS_Code)(_el); },
         "basicService": (_el: _Element): void => { basicService = $._decode_explicit<Ext_BasicServiceCode>(() => _decode_Ext_BasicServiceCode)(_el); },

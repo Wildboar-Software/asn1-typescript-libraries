@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-// export { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 import { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } from "../MAP-MS-DataTypes/PDN-GW-Identity.ta.mjs";
-// export { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } from "../MAP-MS-DataTypes/PDN-GW-Identity.ta.mjs";
 import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-// export { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -157,10 +153,10 @@ class PDN_GW_Update {
  */
 export
 const _root_component_type_list_1_spec_for_PDN_GW_Update: $.ComponentSpec[] = [
-    new $.ComponentSpec("apn", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("pdn-gw-Identity", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("contextId", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("apn", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("pdn-gw-Identity", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("contextId", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -200,11 +196,11 @@ let _cached_decoder_for_PDN_GW_Update: $.ASN1Decoder<PDN_GW_Update> | null = nul
 export
 function _decode_PDN_GW_Update (el: _Element): PDN_GW_Update {
     if (!_cached_decoder_for_PDN_GW_Update) { _cached_decoder_for_PDN_GW_Update = function (el: _Element): PDN_GW_Update {
-    let apn: OPTIONAL<APN>;
-    let pdn_gw_Identity: OPTIONAL<PDN_GW_Identity>;
-    let contextId: OPTIONAL<ContextId>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let apn: OPTIONAL<APN> = undefined;
+    let pdn_gw_Identity: OPTIONAL<PDN_GW_Identity> = undefined;
+    let contextId: OPTIONAL<ContextId> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "apn": (_el: _Element): void => { apn = $._decode_implicit<APN>(() => _decode_APN)(_el); },
         "pdn-gw-Identity": (_el: _Element): void => { pdn_gw_Identity = $._decode_implicit<PDN_GW_Identity>(() => _decode_PDN_GW_Identity)(_el); },

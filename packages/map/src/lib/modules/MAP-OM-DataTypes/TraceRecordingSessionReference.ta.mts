@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TraceRecordingSessionReference = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_TraceRecordingSessionReference: $.ASN1Decoder<TraceRecordingSessionReference> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceRecordingSessionReference
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceRecordingSessionReference (el: _Element): TraceRecordingSessionReference {
-    if (!_cached_decoder_for_TraceRecordingSessionReference) { _cached_decoder_for_TraceRecordingSessionReference = $._decodeOctetString; }
-    return _cached_decoder_for_TraceRecordingSessionReference(el);
-}
-
-let _cached_encoder_for_TraceRecordingSessionReference: $.ASN1Encoder<TraceRecordingSessionReference> | null = null;
+export const _decode_TraceRecordingSessionReference = (el: _Element): TraceRecordingSessionReference => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 2) {
+        throw new ASN1SizeError("TraceRecordingSessionReference violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) TraceRecordingSessionReference into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_TraceRecordingSessionReference: $.ASN1Encoder<TraceRecor
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceRecordingSessionReference, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceRecordingSessionReference (value: TraceRecordingSessionReference, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceRecordingSessionReference) { _cached_encoder_for_TraceRecordingSessionReference = $._encodeOctetString; }
-    return _cached_encoder_for_TraceRecordingSessionReference(value, elGetter);
-}
+export const _encode_TraceRecordingSessionReference = $._encodeOctetString;
 
 
 /* eslint-enable */

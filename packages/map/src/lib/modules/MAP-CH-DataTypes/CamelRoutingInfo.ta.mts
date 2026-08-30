@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ForwardingData, _decode_ForwardingData, _encode_ForwardingData } from "../MAP-CH-DataTypes/ForwardingData.ta.mjs";
-// export { ForwardingData, _decode_ForwardingData, _encode_ForwardingData } from "../MAP-CH-DataTypes/ForwardingData.ta.mjs";
 import { GmscCamelSubscriptionInfo, _decode_GmscCamelSubscriptionInfo, _encode_GmscCamelSubscriptionInfo } from "../MAP-CH-DataTypes/GmscCamelSubscriptionInfo.ta.mjs";
-// export { GmscCamelSubscriptionInfo, _decode_GmscCamelSubscriptionInfo, _encode_GmscCamelSubscriptionInfo } from "../MAP-CH-DataTypes/GmscCamelSubscriptionInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class CamelRoutingInfo {
  */
 export
 const _root_component_type_list_1_spec_for_CamelRoutingInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("forwardingData", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("gmscCamelSubscriptionInfo", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("forwardingData", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("gmscCamelSubscriptionInfo", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -190,10 +187,10 @@ let _cached_decoder_for_CamelRoutingInfo: $.ASN1Decoder<CamelRoutingInfo> | null
 export
 function _decode_CamelRoutingInfo (el: _Element): CamelRoutingInfo {
     if (!_cached_decoder_for_CamelRoutingInfo) { _cached_decoder_for_CamelRoutingInfo = function (el: _Element): CamelRoutingInfo {
-    let forwardingData: OPTIONAL<ForwardingData>;
+    let forwardingData: OPTIONAL<ForwardingData> = undefined;
     let gmscCamelSubscriptionInfo!: GmscCamelSubscriptionInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "forwardingData": (_el: _Element): void => { forwardingData = _decode_ForwardingData(_el); },
         "gmscCamelSubscriptionInfo": (_el: _Element): void => { gmscCamelSubscriptionInfo = $._decode_implicit<GmscCamelSubscriptionInfo>(() => _decode_GmscCamelSubscriptionInfo)(_el); },

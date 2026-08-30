@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint, T_BcsmTriggerDetectionPoint_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, T_BcsmTriggerDetectionPoint_tBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, tBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, T_BcsmTriggerDetectionPoint_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
-// export { T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint, T_BcsmTriggerDetectionPoint_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, T_BcsmTriggerDetectionPoint_tBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, tBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, T_BcsmTriggerDetectionPoint_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
 import { BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
-// export { BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
 import { T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValueCriteria } from "../MAP-MS-DataTypes/T-CauseValueCriteria.ta.mjs";
-// export { T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValueCriteria } from "../MAP-MS-DataTypes/T-CauseValueCriteria.ta.mjs";
 
 
 /**
@@ -154,9 +151,9 @@ class T_BCSM_CAMEL_TDP_Criteria {
  */
 export
 const _root_component_type_list_1_spec_for_T_BCSM_CAMEL_TDP_Criteria: $.ComponentSpec[] = [
-    new $.ComponentSpec("t-BCSM-TriggerDetectionPoint", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("basicServiceCriteria", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("t-CauseValueCriteria", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("t-BCSM-TriggerDetectionPoint", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("basicServiceCriteria", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("t-CauseValueCriteria", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -197,9 +194,9 @@ export
 function _decode_T_BCSM_CAMEL_TDP_Criteria (el: _Element): T_BCSM_CAMEL_TDP_Criteria {
     if (!_cached_decoder_for_T_BCSM_CAMEL_TDP_Criteria) { _cached_decoder_for_T_BCSM_CAMEL_TDP_Criteria = function (el: _Element): T_BCSM_CAMEL_TDP_Criteria {
     let t_BCSM_TriggerDetectionPoint!: T_BcsmTriggerDetectionPoint;
-    let basicServiceCriteria: OPTIONAL<BasicServiceCriteria>;
-    let t_CauseValueCriteria: OPTIONAL<T_CauseValueCriteria>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let basicServiceCriteria: OPTIONAL<BasicServiceCriteria> = undefined;
+    let t_CauseValueCriteria: OPTIONAL<T_CauseValueCriteria> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "t-BCSM-TriggerDetectionPoint": (_el: _Element): void => { t_BCSM_TriggerDetectionPoint = _decode_T_BcsmTriggerDetectionPoint(_el); },
         "basicServiceCriteria": (_el: _Element): void => { basicServiceCriteria = $._decode_implicit<BasicServiceCriteria>(() => _decode_BasicServiceCriteria)(_el); },

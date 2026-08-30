@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
-// export { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -146,9 +144,9 @@ class CUG_CheckInfo {
  */
 export
 const _root_component_type_list_1_spec_for_CUG_CheckInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("cug-Interlock", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("cug-OutgoingAccess", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("cug-Interlock", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("cug-OutgoingAccess", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -189,9 +187,9 @@ export
 function _decode_CUG_CheckInfo (el: _Element): CUG_CheckInfo {
     if (!_cached_decoder_for_CUG_CheckInfo) { _cached_decoder_for_CUG_CheckInfo = function (el: _Element): CUG_CheckInfo {
     let cug_Interlock!: CUG_Interlock;
-    let cug_OutgoingAccess: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cug_OutgoingAccess: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cug-Interlock": (_el: _Element): void => { cug_Interlock = _decode_CUG_Interlock(_el); },
         "cug-OutgoingAccess": (_el: _Element): void => { cug_OutgoingAccess = $._decodeNull(_el); },

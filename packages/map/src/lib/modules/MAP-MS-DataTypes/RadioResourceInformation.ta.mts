@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RadioResourceInformation = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_RadioResourceInformation: $.ASN1Decoder<RadioResourceInformation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RadioResourceInformation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RadioResourceInformation (el: _Element): RadioResourceInformation {
-    if (!_cached_decoder_for_RadioResourceInformation) { _cached_decoder_for_RadioResourceInformation = $._decodeOctetString; }
-    return _cached_decoder_for_RadioResourceInformation(el);
-}
-
-let _cached_encoder_for_RadioResourceInformation: $.ASN1Encoder<RadioResourceInformation> | null = null;
+export const _decode_RadioResourceInformation = (el: _Element): RadioResourceInformation => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 3 || value.length > 13) {
+        throw new ASN1SizeError("RadioResourceInformation violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) RadioResourceInformation into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_RadioResourceInformation: $.ASN1Encoder<RadioResourceInf
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RadioResourceInformation, encoded as an ASN.1 Element.
  */
-export
-function _encode_RadioResourceInformation (value: RadioResourceInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RadioResourceInformation) { _cached_encoder_for_RadioResourceInformation = $._encodeOctetString; }
-    return _cached_encoder_for_RadioResourceInformation(value, elGetter);
-}
+export const _encode_RadioResourceInformation = $._encodeOctetString;
 
 
 /* eslint-enable */

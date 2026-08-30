@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-MS-DataTypes/RequestedInfo.ta.mjs";
-// export { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-MS-DataTypes/RequestedInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-// export { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 
 
 /**
@@ -167,10 +162,10 @@ class ProvideSubscriberInfoArg {
  */
 export
 const _root_component_type_list_1_spec_for_ProvideSubscriberInfoArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("requestedInfo", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("requestedInfo", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -196,7 +191,7 @@ const _root_component_type_list_2_spec_for_ProvideSubscriberInfoArg: $.Component
  */
 export
 const _extension_additions_list_spec_for_ProvideSubscriberInfoArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("callPriority", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("callPriority", true, $.hasTag(_TagClass.context, 4))
 ];
 
 let _cached_decoder_for_ProvideSubscriberInfoArg: $.ASN1Decoder<ProvideSubscriberInfoArg> | null = null;
@@ -211,11 +206,11 @@ export
 function _decode_ProvideSubscriberInfoArg (el: _Element): ProvideSubscriberInfoArg {
     if (!_cached_decoder_for_ProvideSubscriberInfoArg) { _cached_decoder_for_ProvideSubscriberInfoArg = function (el: _Element): ProvideSubscriberInfoArg {
     let imsi!: IMSI;
-    let lmsi: OPTIONAL<LMSI>;
+    let lmsi: OPTIONAL<LMSI> = undefined;
     let requestedInfo!: RequestedInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let callPriority: OPTIONAL<EMLPP_Priority>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let callPriority: OPTIONAL<EMLPP_Priority> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "lmsi": (_el: _Element): void => { lmsi = $._decode_implicit<LMSI>(() => _decode_LMSI)(_el); },

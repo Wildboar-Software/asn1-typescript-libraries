@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -137,7 +136,7 @@ class SubBusyForMT_SMS_Param {
  */
 export
 const _root_component_type_list_1_spec_for_SubBusyForMT_SMS_Param: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -163,7 +162,7 @@ const _root_component_type_list_2_spec_for_SubBusyForMT_SMS_Param: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_SubBusyForMT_SMS_Param: $.ComponentSpec[] = [
-    new $.ComponentSpec("gprsConnectionSuspended", true, $.hasTag(_TagClass.universal, 5), undefined, undefined)
+    new $.ComponentSpec("gprsConnectionSuspended", true, $.hasTag(_TagClass.universal, 5))
 ];
 
 let _cached_decoder_for_SubBusyForMT_SMS_Param: $.ASN1Decoder<SubBusyForMT_SMS_Param> | null = null;
@@ -177,9 +176,9 @@ let _cached_decoder_for_SubBusyForMT_SMS_Param: $.ASN1Decoder<SubBusyForMT_SMS_P
 export
 function _decode_SubBusyForMT_SMS_Param (el: _Element): SubBusyForMT_SMS_Param {
     if (!_cached_decoder_for_SubBusyForMT_SMS_Param) { _cached_decoder_for_SubBusyForMT_SMS_Param = function (el: _Element): SubBusyForMT_SMS_Param {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let gprsConnectionSuspended: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let gprsConnectionSuspended: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },
         "gprsConnectionSuspended": (_el: _Element): void => { gprsConnectionSuspended = $._decodeNull(_el); }

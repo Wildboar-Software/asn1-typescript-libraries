@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { AlertReason, _enum_for_AlertReason, AlertReason_ms_Present /* IMPORTED_LONG_ENUMERATION_ITEM */, ms_Present /* IMPORTED_SHORT_ENUMERATION_ITEM */, AlertReason_memoryAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AlertReason, _encode_AlertReason } from "../MAP-SM-DataTypes/AlertReason.ta.mjs";
-// export { AlertReason, _enum_for_AlertReason, AlertReason_ms_Present /* IMPORTED_LONG_ENUMERATION_ITEM */, ms_Present /* IMPORTED_SHORT_ENUMERATION_ITEM */, AlertReason_memoryAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AlertReason, _encode_AlertReason } from "../MAP-SM-DataTypes/AlertReason.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 
 
 /**
@@ -181,10 +177,10 @@ class ReadyForSM_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_ReadyForSM_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("alertReason", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("alertReasonIndicator", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("alertReason", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("alertReasonIndicator", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -210,8 +206,8 @@ const _root_component_type_list_2_spec_for_ReadyForSM_Arg: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_ReadyForSM_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("additionalAlertReasonIndicator", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("maximumUeAvailabilityTime", true, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("additionalAlertReasonIndicator", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("maximumUeAvailabilityTime", true, $.hasTag(_TagClass.universal, 4))
 ];
 
 let _cached_decoder_for_ReadyForSM_Arg: $.ASN1Decoder<ReadyForSM_Arg> | null = null;
@@ -227,11 +223,11 @@ function _decode_ReadyForSM_Arg (el: _Element): ReadyForSM_Arg {
     if (!_cached_decoder_for_ReadyForSM_Arg) { _cached_decoder_for_ReadyForSM_Arg = function (el: _Element): ReadyForSM_Arg {
     let imsi!: IMSI;
     let alertReason!: AlertReason;
-    let alertReasonIndicator: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let additionalAlertReasonIndicator: OPTIONAL<NULL>;
-    let maximumUeAvailabilityTime: OPTIONAL<Time>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let alertReasonIndicator: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let additionalAlertReasonIndicator: OPTIONAL<NULL> = undefined;
+    let maximumUeAvailabilityTime: OPTIONAL<Time> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "alertReason": (_el: _Element): void => { alertReason = _decode_AlertReason(_el); },

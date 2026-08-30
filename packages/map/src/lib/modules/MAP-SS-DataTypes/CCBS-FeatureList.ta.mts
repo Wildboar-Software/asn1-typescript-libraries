@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
-// export { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
 
+
+import { maxNumOfCCBS_Requests } from "./maxNumOfCCBS-Requests.va.mjs";
 
 /**
  * @summary CCBS_FeatureList
@@ -95,7 +97,11 @@ let _cached_decoder_for_CCBS_FeatureList: $.ASN1Decoder<CCBS_FeatureList> | null
 export
 function _decode_CCBS_FeatureList (el: _Element): CCBS_FeatureList {
     if (!_cached_decoder_for_CCBS_FeatureList) { _cached_decoder_for_CCBS_FeatureList = $._decodeSequenceOf<CCBS_Feature>(() => _decode_CCBS_Feature); }
-    return _cached_decoder_for_CCBS_FeatureList(el);
+    const value = _cached_decoder_for_CCBS_FeatureList(el);
+    if (value.length < 1 || value.length > maxNumOfCCBS_Requests) {
+        throw new ASN1SizeError("CCBS_FeatureList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CCBS_FeatureList: $.ASN1Encoder<CCBS_FeatureList> | null = null;

@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LSAOnlyAccessIndicator, _enum_for_LSAOnlyAccessIndicator, LSAOnlyAccessIndicator_accessOutsideLSAsAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, accessOutsideLSAsAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, LSAOnlyAccessIndicator_accessOutsideLSAsRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, accessOutsideLSAsRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LSAOnlyAccessIndicator, _encode_LSAOnlyAccessIndicator } from "../MAP-MS-DataTypes/LSAOnlyAccessIndicator.ta.mjs";
-// export { LSAOnlyAccessIndicator, _enum_for_LSAOnlyAccessIndicator, LSAOnlyAccessIndicator_accessOutsideLSAsAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, accessOutsideLSAsAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, LSAOnlyAccessIndicator_accessOutsideLSAsRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, accessOutsideLSAsRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LSAOnlyAccessIndicator, _encode_LSAOnlyAccessIndicator } from "../MAP-MS-DataTypes/LSAOnlyAccessIndicator.ta.mjs";
 import { LSADataList, _decode_LSADataList, _encode_LSADataList } from "../MAP-MS-DataTypes/LSADataList.ta.mjs";
-// export { LSADataList, _decode_LSADataList, _encode_LSADataList } from "../MAP-MS-DataTypes/LSADataList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -164,10 +161,10 @@ class LSAInformation {
  */
 export
 const _root_component_type_list_1_spec_for_LSAInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("completeDataListIncluded", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("lsaOnlyAccessIndicator", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("lsaDataList", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("completeDataListIncluded", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("lsaOnlyAccessIndicator", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("lsaDataList", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -207,11 +204,11 @@ let _cached_decoder_for_LSAInformation: $.ASN1Decoder<LSAInformation> | null = n
 export
 function _decode_LSAInformation (el: _Element): LSAInformation {
     if (!_cached_decoder_for_LSAInformation) { _cached_decoder_for_LSAInformation = function (el: _Element): LSAInformation {
-    let completeDataListIncluded: OPTIONAL<NULL>;
-    let lsaOnlyAccessIndicator: OPTIONAL<LSAOnlyAccessIndicator>;
-    let lsaDataList: OPTIONAL<LSADataList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let completeDataListIncluded: OPTIONAL<NULL> = undefined;
+    let lsaOnlyAccessIndicator: OPTIONAL<LSAOnlyAccessIndicator> = undefined;
+    let lsaDataList: OPTIONAL<LSADataList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "completeDataListIncluded": (_el: _Element): void => { completeDataListIncluded = $._decodeNull(_el); },
         "lsaOnlyAccessIndicator": (_el: _Element): void => { lsaOnlyAccessIndicator = $._decode_implicit<LSAOnlyAccessIndicator>(() => _decode_LSAOnlyAccessIndicator)(_el); },

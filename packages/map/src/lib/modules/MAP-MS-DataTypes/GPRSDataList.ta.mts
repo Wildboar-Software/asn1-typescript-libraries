@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PDP_Context, _decode_PDP_Context, _encode_PDP_Context } from "../MAP-MS-DataTypes/PDP-Context.ta.mjs";
-// export { PDP_Context, _decode_PDP_Context, _encode_PDP_Context } from "../MAP-MS-DataTypes/PDP-Context.ta.mjs";
 
+
+import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";
 
 /**
  * @summary GPRSDataList
@@ -95,7 +97,11 @@ let _cached_decoder_for_GPRSDataList: $.ASN1Decoder<GPRSDataList> | null = null;
 export
 function _decode_GPRSDataList (el: _Element): GPRSDataList {
     if (!_cached_decoder_for_GPRSDataList) { _cached_decoder_for_GPRSDataList = $._decodeSequenceOf<PDP_Context>(() => _decode_PDP_Context); }
-    return _cached_decoder_for_GPRSDataList(el);
+    const value = _cached_decoder_for_GPRSDataList(el);
+    if (value.length < 1 || value.length > maxNumOfPDP_Contexts) {
+        throw new ASN1SizeError("GPRSDataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_GPRSDataList: $.ASN1Encoder<GPRSDataList> | null = null;

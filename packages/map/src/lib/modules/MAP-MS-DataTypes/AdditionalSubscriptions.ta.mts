@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -127,21 +128,19 @@ const AdditionalSubscriptions_emergencyReset: number = 2; /* LONG_NAMED_BIT */
 export
 const emergencyReset: number = AdditionalSubscriptions_emergencyReset; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_AdditionalSubscriptions: $.ASN1Decoder<AdditionalSubscriptions> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalSubscriptions
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AdditionalSubscriptions (el: _Element): AdditionalSubscriptions {
-    if (!_cached_decoder_for_AdditionalSubscriptions) { _cached_decoder_for_AdditionalSubscriptions = $._decodeBitString; }
-    return _cached_decoder_for_AdditionalSubscriptions(el);
-}
-
-let _cached_encoder_for_AdditionalSubscriptions: $.ASN1Encoder<AdditionalSubscriptions> | null = null;
+export const _decode_AdditionalSubscriptions = (el: _Element): AdditionalSubscriptions => {
+    const value = $._decodeBitString(el);
+    if (value.length < 3 || value.length > 8) {
+        throw new ASN1SizeError("AdditionalSubscriptions violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) AdditionalSubscriptions into an ASN.1 Element.
@@ -150,11 +149,7 @@ let _cached_encoder_for_AdditionalSubscriptions: $.ASN1Encoder<AdditionalSubscri
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdditionalSubscriptions, encoded as an ASN.1 Element.
  */
-export
-function _encode_AdditionalSubscriptions (value: AdditionalSubscriptions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalSubscriptions) { _cached_encoder_for_AdditionalSubscriptions = $._encodeBitString; }
-    return _cached_encoder_for_AdditionalSubscriptions(value, elGetter);
-}
+export const _encode_AdditionalSubscriptions = $._encodeBitString;
 
 
 /* eslint-enable */

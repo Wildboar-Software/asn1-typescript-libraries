@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PDN_Type = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_PDN_Type: $.ASN1Decoder<PDN_Type> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PDN_Type
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PDN_Type (el: _Element): PDN_Type {
-    if (!_cached_decoder_for_PDN_Type) { _cached_decoder_for_PDN_Type = $._decodeOctetString; }
-    return _cached_decoder_for_PDN_Type(el);
-}
-
-let _cached_encoder_for_PDN_Type: $.ASN1Encoder<PDN_Type> | null = null;
+export const _decode_PDN_Type = (el: _Element): PDN_Type => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("PDN_Type violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) PDN_Type into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_PDN_Type: $.ASN1Encoder<PDN_Type> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDN_Type, encoded as an ASN.1 Element.
  */
-export
-function _encode_PDN_Type (value: PDN_Type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDN_Type) { _cached_encoder_for_PDN_Type = $._encodeOctetString; }
-    return _cached_encoder_for_PDN_Type(value, elGetter);
-}
+export const _encode_PDN_Type = $._encodeOctetString;
 
 
 /* eslint-enable */

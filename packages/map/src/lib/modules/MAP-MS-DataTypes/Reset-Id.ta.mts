@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Reset_Id = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Reset_Id: $.ASN1Decoder<Reset_Id> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Reset_Id
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Reset_Id (el: _Element): Reset_Id {
-    if (!_cached_decoder_for_Reset_Id) { _cached_decoder_for_Reset_Id = $._decodeOctetString; }
-    return _cached_decoder_for_Reset_Id(el);
-}
-
-let _cached_encoder_for_Reset_Id: $.ASN1Encoder<Reset_Id> | null = null;
+export const _decode_Reset_Id = (el: _Element): Reset_Id => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 4) {
+        throw new ASN1SizeError("Reset_Id violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Reset_Id into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Reset_Id: $.ASN1Encoder<Reset_Id> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Reset_Id, encoded as an ASN.1 Element.
  */
-export
-function _encode_Reset_Id (value: Reset_Id, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Reset_Id) { _cached_encoder_for_Reset_Id = $._encodeOctetString; }
-    return _cached_encoder_for_Reset_Id(value, elGetter);
-}
+export const _encode_Reset_Id = $._encodeOctetString;
 
 
 /* eslint-enable */

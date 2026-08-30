@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-// export { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
 
+
+import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";
 
 /**
  * @summary ContextIdList
@@ -95,7 +97,11 @@ let _cached_decoder_for_ContextIdList: $.ASN1Decoder<ContextIdList> | null = nul
 export
 function _decode_ContextIdList (el: _Element): ContextIdList {
     if (!_cached_decoder_for_ContextIdList) { _cached_decoder_for_ContextIdList = $._decodeSequenceOf<ContextId>(() => _decode_ContextId); }
-    return _cached_decoder_for_ContextIdList(el);
+    const value = _cached_decoder_for_ContextIdList(el);
+    if (value.length < 1 || value.length > maxNumOfPDP_Contexts) {
+        throw new ASN1SizeError("ContextIdList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ContextIdList: $.ASN1Encoder<ContextIdList> | null = null;

@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MatchType, _enum_for_MatchType, MatchType_inhibiting /* IMPORTED_LONG_ENUMERATION_ITEM */, inhibiting /* IMPORTED_SHORT_ENUMERATION_ITEM */, MatchType_enabling /* IMPORTED_LONG_ENUMERATION_ITEM */, enabling /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MatchType, _encode_MatchType } from "../MAP-MS-DataTypes/MatchType.ta.mjs";
-// export { MatchType, _enum_for_MatchType, MatchType_inhibiting /* IMPORTED_LONG_ENUMERATION_ITEM */, inhibiting /* IMPORTED_SHORT_ENUMERATION_ITEM */, MatchType_enabling /* IMPORTED_LONG_ENUMERATION_ITEM */, enabling /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MatchType, _encode_MatchType } from "../MAP-MS-DataTypes/MatchType.ta.mjs";
 import { DestinationNumberList, _decode_DestinationNumberList, _encode_DestinationNumberList } from "../MAP-MS-DataTypes/DestinationNumberList.ta.mjs";
-// export { DestinationNumberList, _decode_DestinationNumberList, _encode_DestinationNumberList } from "../MAP-MS-DataTypes/DestinationNumberList.ta.mjs";
 import { DestinationNumberLengthList, _decode_DestinationNumberLengthList, _encode_DestinationNumberLengthList } from "../MAP-MS-DataTypes/DestinationNumberLengthList.ta.mjs";
-// export { DestinationNumberLengthList, _decode_DestinationNumberLengthList, _encode_DestinationNumberLengthList } from "../MAP-MS-DataTypes/DestinationNumberLengthList.ta.mjs";
 
 
 /**
@@ -156,9 +153,9 @@ class DestinationNumberCriteria {
  */
 export
 const _root_component_type_list_1_spec_for_DestinationNumberCriteria: $.ComponentSpec[] = [
-    new $.ComponentSpec("matchType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("destinationNumberList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("destinationNumberLengthList", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("matchType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("destinationNumberList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("destinationNumberLengthList", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -199,9 +196,9 @@ export
 function _decode_DestinationNumberCriteria (el: _Element): DestinationNumberCriteria {
     if (!_cached_decoder_for_DestinationNumberCriteria) { _cached_decoder_for_DestinationNumberCriteria = function (el: _Element): DestinationNumberCriteria {
     let matchType!: MatchType;
-    let destinationNumberList: OPTIONAL<DestinationNumberList>;
-    let destinationNumberLengthList: OPTIONAL<DestinationNumberLengthList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let destinationNumberList: OPTIONAL<DestinationNumberList> = undefined;
+    let destinationNumberLengthList: OPTIONAL<DestinationNumberLengthList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "matchType": (_el: _Element): void => { matchType = $._decode_implicit<MatchType>(() => _decode_MatchType)(_el); },
         "destinationNumberList": (_el: _Element): void => { destinationNumberList = $._decode_implicit<DestinationNumberList>(() => _decode_DestinationNumberList)(_el); },

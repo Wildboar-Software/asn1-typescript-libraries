@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type GlobalCellId = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_GlobalCellId: $.ASN1Decoder<GlobalCellId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GlobalCellId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GlobalCellId (el: _Element): GlobalCellId {
-    if (!_cached_decoder_for_GlobalCellId) { _cached_decoder_for_GlobalCellId = $._decodeOctetString; }
-    return _cached_decoder_for_GlobalCellId(el);
-}
-
-let _cached_encoder_for_GlobalCellId: $.ASN1Encoder<GlobalCellId> | null = null;
+export const _decode_GlobalCellId = (el: _Element): GlobalCellId => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 5 || value.length > 7) {
+        throw new ASN1SizeError("GlobalCellId violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) GlobalCellId into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_GlobalCellId: $.ASN1Encoder<GlobalCellId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GlobalCellId, encoded as an ASN.1 Element.
  */
-export
-function _encode_GlobalCellId (value: GlobalCellId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GlobalCellId) { _cached_encoder_for_GlobalCellId = $._encodeOctetString; }
-    return _cached_encoder_for_GlobalCellId(value, elGetter);
-}
+export const _encode_GlobalCellId = $._encodeOctetString;
 
 
 /* eslint-enable */

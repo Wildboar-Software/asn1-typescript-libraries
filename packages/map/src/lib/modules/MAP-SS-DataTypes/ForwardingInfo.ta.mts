@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_ForwardingFeatureList } from "../MAP-SS-DataTypes/ForwardingFeatureList.ta.mjs";
-// export { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_ForwardingFeatureList } from "../MAP-SS-DataTypes/ForwardingFeatureList.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class ForwardingInfo {
  */
 export
 const _root_component_type_list_1_spec_for_ForwardingInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("forwardingFeatureList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("ss-Code", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("forwardingFeatureList", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_ForwardingInfo: $.ASN1Decoder<ForwardingInfo> | null = n
 export
 function _decode_ForwardingInfo (el: _Element): ForwardingInfo {
     if (!_cached_decoder_for_ForwardingInfo) { _cached_decoder_for_ForwardingInfo = function (el: _Element): ForwardingInfo {
-    let ss_Code: OPTIONAL<SS_Code>;
+    let ss_Code: OPTIONAL<SS_Code> = undefined;
     let forwardingFeatureList!: ForwardingFeatureList;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = _decode_SS_Code(_el); },
         "forwardingFeatureList": (_el: _Element): void => { forwardingFeatureList = _decode_ForwardingFeatureList(_el); }

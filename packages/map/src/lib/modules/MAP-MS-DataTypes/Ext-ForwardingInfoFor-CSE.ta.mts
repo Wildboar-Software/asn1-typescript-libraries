@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatureList } from "../MAP-MS-DataTypes/Ext-ForwFeatureList.ta.mjs";
-// export { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatureList } from "../MAP-MS-DataTypes/Ext-ForwFeatureList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -155,10 +152,10 @@ class Ext_ForwardingInfoFor_CSE {
  */
 export
 const _root_component_type_list_1_spec_for_Ext_ForwardingInfoFor_CSE: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("forwardingFeatureList", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("forwardingFeatureList", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -200,9 +197,9 @@ function _decode_Ext_ForwardingInfoFor_CSE (el: _Element): Ext_ForwardingInfoFor
     if (!_cached_decoder_for_Ext_ForwardingInfoFor_CSE) { _cached_decoder_for_Ext_ForwardingInfoFor_CSE = function (el: _Element): Ext_ForwardingInfoFor_CSE {
     let ss_Code!: SS_Code;
     let forwardingFeatureList!: Ext_ForwFeatureList;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = $._decode_implicit<SS_Code>(() => _decode_SS_Code)(_el); },
         "forwardingFeatureList": (_el: _Element): void => { forwardingFeatureList = $._decode_implicit<Ext_ForwFeatureList>(() => _decode_Ext_ForwFeatureList)(_el); },

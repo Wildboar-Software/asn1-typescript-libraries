@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -682,21 +683,19 @@ const SupportedFeatures_nrAsSecondaryRAT: number = 39; /* LONG_NAMED_BIT */
 export
 const nrAsSecondaryRAT: number = SupportedFeatures_nrAsSecondaryRAT; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SupportedFeatures: $.ASN1Decoder<SupportedFeatures> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedFeatures
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SupportedFeatures (el: _Element): SupportedFeatures {
-    if (!_cached_decoder_for_SupportedFeatures) { _cached_decoder_for_SupportedFeatures = $._decodeBitString; }
-    return _cached_decoder_for_SupportedFeatures(el);
-}
-
-let _cached_encoder_for_SupportedFeatures: $.ASN1Encoder<SupportedFeatures> | null = null;
+export const _decode_SupportedFeatures = (el: _Element): SupportedFeatures => {
+    const value = $._decodeBitString(el);
+    if (value.length < 26 || value.length > 40) {
+        throw new ASN1SizeError("SupportedFeatures violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SupportedFeatures into an ASN.1 Element.
@@ -705,11 +704,7 @@ let _cached_encoder_for_SupportedFeatures: $.ASN1Encoder<SupportedFeatures> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SupportedFeatures, encoded as an ASN.1 Element.
  */
-export
-function _encode_SupportedFeatures (value: SupportedFeatures, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupportedFeatures) { _cached_encoder_for_SupportedFeatures = $._encodeBitString; }
-    return _cached_encoder_for_SupportedFeatures(value, elGetter);
-}
+export const _encode_SupportedFeatures = $._encodeBitString;
 
 
 /* eslint-enable */

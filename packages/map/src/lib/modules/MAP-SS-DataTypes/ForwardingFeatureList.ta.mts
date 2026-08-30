@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ForwardingFeature, _decode_ForwardingFeature, _encode_ForwardingFeature } from "../MAP-SS-DataTypes/ForwardingFeature.ta.mjs";
-// export { ForwardingFeature, _decode_ForwardingFeature, _encode_ForwardingFeature } from "../MAP-SS-DataTypes/ForwardingFeature.ta.mjs";
 
+
+import { maxNumOfBasicServiceGroups } from "./maxNumOfBasicServiceGroups.va.mjs";
 
 /**
  * @summary ForwardingFeatureList
@@ -96,7 +98,11 @@ let _cached_decoder_for_ForwardingFeatureList: $.ASN1Decoder<ForwardingFeatureLi
 export
 function _decode_ForwardingFeatureList (el: _Element): ForwardingFeatureList {
     if (!_cached_decoder_for_ForwardingFeatureList) { _cached_decoder_for_ForwardingFeatureList = $._decodeSequenceOf<ForwardingFeature>(() => _decode_ForwardingFeature); }
-    return _cached_decoder_for_ForwardingFeatureList(el);
+    const value = _cached_decoder_for_ForwardingFeatureList(el);
+    if (value.length < 1 || value.length > maxNumOfBasicServiceGroups) {
+        throw new ASN1SizeError("ForwardingFeatureList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ForwardingFeatureList: $.ASN1Encoder<ForwardingFeatureList> | null = null;

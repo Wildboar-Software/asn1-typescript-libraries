@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -153,8 +151,8 @@ class UpdateLocationRes {
  */
 export
 const _root_component_type_list_1_spec_for_UpdateLocationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("hlr-Number", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("hlr-Number", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -180,8 +178,8 @@ const _root_component_type_list_2_spec_for_UpdateLocationRes: $.ComponentSpec[] 
  */
 export
 const _extension_additions_list_spec_for_UpdateLocationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("add-Capability", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("pagingArea-Capability", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("add-Capability", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("pagingArea-Capability", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_UpdateLocationRes: $.ASN1Decoder<UpdateLocationRes> | null = null;
@@ -196,10 +194,10 @@ export
 function _decode_UpdateLocationRes (el: _Element): UpdateLocationRes {
     if (!_cached_decoder_for_UpdateLocationRes) { _cached_decoder_for_UpdateLocationRes = function (el: _Element): UpdateLocationRes {
     let hlr_Number!: ISDN_AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let add_Capability: OPTIONAL<NULL>;
-    let pagingArea_Capability: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let add_Capability: OPTIONAL<NULL> = undefined;
+    let pagingArea_Capability: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hlr-Number": (_el: _Element): void => { hlr_Number = _decode_ISDN_AddressString(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

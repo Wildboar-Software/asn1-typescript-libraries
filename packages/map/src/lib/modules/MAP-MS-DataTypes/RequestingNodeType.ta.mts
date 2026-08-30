@@ -234,21 +234,13 @@ const RequestingNodeType_mme_sgsn: RequestingNodeType = 17; /* LONG_NAMED_ENUMER
 export
 const mme_sgsn: RequestingNodeType = RequestingNodeType_mme_sgsn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RequestingNodeType: $.ASN1Decoder<RequestingNodeType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestingNodeType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RequestingNodeType (el: _Element): RequestingNodeType {
-    if (!_cached_decoder_for_RequestingNodeType) { _cached_decoder_for_RequestingNodeType = $._decodeEnumerated; }
-    return _cached_decoder_for_RequestingNodeType(el);
-}
-
-let _cached_encoder_for_RequestingNodeType: $.ASN1Encoder<RequestingNodeType> | null = null;
+export const _decode_RequestingNodeType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RequestingNodeType into an ASN.1 Element.
@@ -257,11 +249,7 @@ let _cached_encoder_for_RequestingNodeType: $.ASN1Encoder<RequestingNodeType> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RequestingNodeType, encoded as an ASN.1 Element.
  */
-export
-function _encode_RequestingNodeType (value: RequestingNodeType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestingNodeType) { _cached_encoder_for_RequestingNodeType = $._encodeEnumerated; }
-    return _cached_encoder_for_RequestingNodeType(value, elGetter);
-}
+export const _encode_RequestingNodeType = $._encodeEnumerated;
 
 
 /* eslint-enable */

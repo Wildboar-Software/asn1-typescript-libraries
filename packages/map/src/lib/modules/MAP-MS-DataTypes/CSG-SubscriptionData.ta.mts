@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
-// export { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { LIPA_AllowedAPNList, _decode_LIPA_AllowedAPNList, _encode_LIPA_AllowedAPNList } from "../MAP-MS-DataTypes/LIPA-AllowedAPNList.ta.mjs";
-// export { LIPA_AllowedAPNList, _decode_LIPA_AllowedAPNList, _encode_LIPA_AllowedAPNList } from "../MAP-MS-DataTypes/LIPA-AllowedAPNList.ta.mjs";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-// export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 
 
 /**
@@ -167,9 +162,9 @@ class CSG_SubscriptionData {
  */
 export
 const _root_component_type_list_1_spec_for_CSG_SubscriptionData: $.ComponentSpec[] = [
-    new $.ComponentSpec("csg-Id", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("expirationDate", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("csg-Id", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("expirationDate", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -195,8 +190,8 @@ const _root_component_type_list_2_spec_for_CSG_SubscriptionData: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_CSG_SubscriptionData: $.ComponentSpec[] = [
-    new $.ComponentSpec("lipa-AllowedAPNList", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("plmn-Id", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("lipa-AllowedAPNList", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("plmn-Id", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_CSG_SubscriptionData: $.ASN1Decoder<CSG_SubscriptionData> | null = null;
@@ -211,11 +206,11 @@ export
 function _decode_CSG_SubscriptionData (el: _Element): CSG_SubscriptionData {
     if (!_cached_decoder_for_CSG_SubscriptionData) { _cached_decoder_for_CSG_SubscriptionData = function (el: _Element): CSG_SubscriptionData {
     let csg_Id!: CSG_Id;
-    let expirationDate: OPTIONAL<Time>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let lipa_AllowedAPNList: OPTIONAL<LIPA_AllowedAPNList>;
-    let plmn_Id: OPTIONAL<PLMN_Id>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let expirationDate: OPTIONAL<Time> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let lipa_AllowedAPNList: OPTIONAL<LIPA_AllowedAPNList> = undefined;
+    let plmn_Id: OPTIONAL<PLMN_Id> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "csg-Id": (_el: _Element): void => { csg_Id = _decode_CSG_Id(_el); },
         "expirationDate": (_el: _Element): void => { expirationDate = _decode_Time(_el); },

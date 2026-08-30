@@ -275,21 +275,13 @@ const LoggingInterval_d61dot44: LoggingInterval = LoggingInterval.d61dot44; /* L
 export
 const d61dot44: LoggingInterval = LoggingInterval.d61dot44; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LoggingInterval: $.ASN1Decoder<LoggingInterval> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LoggingInterval
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LoggingInterval (el: _Element): LoggingInterval {
-    if (!_cached_decoder_for_LoggingInterval) { _cached_decoder_for_LoggingInterval = $._decodeEnumerated; }
-    return _cached_decoder_for_LoggingInterval(el);
-}
-
-let _cached_encoder_for_LoggingInterval: $.ASN1Encoder<LoggingInterval> | null = null;
+export const _decode_LoggingInterval = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LoggingInterval into an ASN.1 Element.
@@ -298,11 +290,7 @@ let _cached_encoder_for_LoggingInterval: $.ASN1Encoder<LoggingInterval> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LoggingInterval, encoded as an ASN.1 Element.
  */
-export
-function _encode_LoggingInterval (value: LoggingInterval, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LoggingInterval) { _cached_encoder_for_LoggingInterval = $._encodeEnumerated; }
-    return _cached_encoder_for_LoggingInterval(value, elGetter);
-}
+export const _encode_LoggingInterval = $._encodeEnumerated;
 
 
 /* eslint-enable */

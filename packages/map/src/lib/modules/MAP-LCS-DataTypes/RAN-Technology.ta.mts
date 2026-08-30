@@ -125,21 +125,13 @@ const RAN_Technology_umts: RAN_Technology = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const umts: RAN_Technology = RAN_Technology_umts; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RAN_Technology: $.ASN1Decoder<RAN_Technology> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RAN_Technology
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RAN_Technology (el: _Element): RAN_Technology {
-    if (!_cached_decoder_for_RAN_Technology) { _cached_decoder_for_RAN_Technology = $._decodeEnumerated; }
-    return _cached_decoder_for_RAN_Technology(el);
-}
-
-let _cached_encoder_for_RAN_Technology: $.ASN1Encoder<RAN_Technology> | null = null;
+export const _decode_RAN_Technology = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RAN_Technology into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_RAN_Technology: $.ASN1Encoder<RAN_Technology> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RAN_Technology, encoded as an ASN.1 Element.
  */
-export
-function _encode_RAN_Technology (value: RAN_Technology, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RAN_Technology) { _cached_encoder_for_RAN_Technology = $._encodeEnumerated; }
-    return _cached_encoder_for_RAN_Technology(value, elGetter);
-}
+export const _encode_RAN_Technology = $._encodeEnumerated;
 
 
 /* eslint-enable */

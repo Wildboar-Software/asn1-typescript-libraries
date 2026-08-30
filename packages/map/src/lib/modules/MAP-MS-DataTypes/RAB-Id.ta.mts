@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxNrOfRABs } from "./maxNrOfRABs.va.mjs";
 
 /**
  * @summary RAB_Id
@@ -82,21 +85,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RAB_Id = INTEGER;
 
-let _cached_decoder_for_RAB_Id: $.ASN1Decoder<RAB_Id> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RAB_Id
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RAB_Id (el: _Element): RAB_Id {
-    if (!_cached_decoder_for_RAB_Id) { _cached_decoder_for_RAB_Id = $._decodeInteger; }
-    return _cached_decoder_for_RAB_Id(el);
-}
-
-let _cached_encoder_for_RAB_Id: $.ASN1Encoder<RAB_Id> | null = null;
+export const _decode_RAB_Id = (el: _Element): RAB_Id => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > maxNrOfRABs) {
+        throw new ASN1OverflowError("RAB_Id violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) RAB_Id into an ASN.1 Element.
@@ -105,11 +107,7 @@ let _cached_encoder_for_RAB_Id: $.ASN1Encoder<RAB_Id> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RAB_Id, encoded as an ASN.1 Element.
  */
-export
-function _encode_RAB_Id (value: RAB_Id, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RAB_Id) { _cached_encoder_for_RAB_Id = $._encodeInteger; }
-    return _cached_encoder_for_RAB_Id(value, elGetter);
-}
+export const _encode_RAB_Id = $._encodeInteger;
 
 
 /* eslint-enable */

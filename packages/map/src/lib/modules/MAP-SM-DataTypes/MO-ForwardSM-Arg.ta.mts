@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
-// export { SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
 import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
-// export { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
-// export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
 import { SM_DeliveryOutcome, _enum_for_SM_DeliveryOutcome, SM_DeliveryOutcome_memoryCapacityExceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryCapacityExceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryOutcome_absentSubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, absentSubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryOutcome_successfulTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, successfulTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SM_DeliveryOutcome, _encode_SM_DeliveryOutcome } from "../MAP-SM-DataTypes/SM-DeliveryOutcome.ta.mjs";
-// export { SM_DeliveryOutcome, _enum_for_SM_DeliveryOutcome, SM_DeliveryOutcome_memoryCapacityExceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryCapacityExceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryOutcome_absentSubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, absentSubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryOutcome_successfulTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, successfulTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SM_DeliveryOutcome, _encode_SM_DeliveryOutcome } from "../MAP-SM-DataTypes/SM-DeliveryOutcome.ta.mjs";
 
 
 /**
@@ -191,10 +184,10 @@ class MO_ForwardSM_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_MO_ForwardSM_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("sm-RP-DA", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("sm-RP-OA", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("sm-RP-UI", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("sm-RP-DA", false, $.hasAnyTag),
+    new $.ComponentSpec("sm-RP-OA", false, $.hasAnyTag),
+    new $.ComponentSpec("sm-RP-UI", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -220,9 +213,9 @@ const _root_component_type_list_2_spec_for_MO_ForwardSM_Arg: $.ComponentSpec[] =
  */
 export
 const _extension_additions_list_spec_for_MO_ForwardSM_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sm-DeliveryOutcome", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sm-DeliveryOutcome", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_MO_ForwardSM_Arg: $.ASN1Decoder<MO_ForwardSM_Arg> | null = null;
@@ -239,11 +232,11 @@ function _decode_MO_ForwardSM_Arg (el: _Element): MO_ForwardSM_Arg {
     let sm_RP_DA!: SM_RP_DA;
     let sm_RP_OA!: SM_RP_OA;
     let sm_RP_UI!: SignalInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let imsi: OPTIONAL<IMSI>;
-    let correlationID: OPTIONAL<CorrelationID>;
-    let sm_DeliveryOutcome: OPTIONAL<SM_DeliveryOutcome>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let correlationID: OPTIONAL<CorrelationID> = undefined;
+    let sm_DeliveryOutcome: OPTIONAL<SM_DeliveryOutcome> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sm-RP-DA": (_el: _Element): void => { sm_RP_DA = _decode_SM_RP_DA(_el); },
         "sm-RP-OA": (_el: _Element): void => { sm_RP_OA = _decode_SM_RP_OA(_el); },

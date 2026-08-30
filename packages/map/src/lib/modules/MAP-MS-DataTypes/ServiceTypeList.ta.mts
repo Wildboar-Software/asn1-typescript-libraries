@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceType, _decode_ServiceType, _encode_ServiceType } from "../MAP-MS-DataTypes/ServiceType.ta.mjs";
-// export { ServiceType, _decode_ServiceType, _encode_ServiceType } from "../MAP-MS-DataTypes/ServiceType.ta.mjs";
 
+
+import { maxNumOfServiceType } from "./maxNumOfServiceType.va.mjs";
 
 /**
  * @summary ServiceTypeList
@@ -95,7 +97,11 @@ let _cached_decoder_for_ServiceTypeList: $.ASN1Decoder<ServiceTypeList> | null =
 export
 function _decode_ServiceTypeList (el: _Element): ServiceTypeList {
     if (!_cached_decoder_for_ServiceTypeList) { _cached_decoder_for_ServiceTypeList = $._decodeSequenceOf<ServiceType>(() => _decode_ServiceType); }
-    return _cached_decoder_for_ServiceTypeList(el);
+    const value = _cached_decoder_for_ServiceTypeList(el);
+    if (value.length < 1 || value.length > maxNumOfServiceType) {
+        throw new ASN1SizeError("ServiceTypeList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ServiceTypeList: $.ASN1Encoder<ServiceTypeList> | null = null;

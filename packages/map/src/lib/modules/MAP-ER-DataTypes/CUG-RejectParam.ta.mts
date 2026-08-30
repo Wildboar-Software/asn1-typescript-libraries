@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CUG_RejectCause, _enum_for_CUG_RejectCause, CUG_RejectCause_incomingCallsBarredWithinCUG /* IMPORTED_LONG_ENUMERATION_ITEM */, incomingCallsBarredWithinCUG /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_subscriberNotMemberOfCUG /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberNotMemberOfCUG /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedBasicServiceViolatesCUG_Constraints /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_calledPartySS_InteractionViolation /* IMPORTED_LONG_ENUMERATION_ITEM */, calledPartySS_InteractionViolation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CUG_RejectCause, _encode_CUG_RejectCause } from "../MAP-ER-DataTypes/CUG-RejectCause.ta.mjs";
-// export { CUG_RejectCause, _enum_for_CUG_RejectCause, CUG_RejectCause_incomingCallsBarredWithinCUG /* IMPORTED_LONG_ENUMERATION_ITEM */, incomingCallsBarredWithinCUG /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_subscriberNotMemberOfCUG /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberNotMemberOfCUG /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedBasicServiceViolatesCUG_Constraints /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_calledPartySS_InteractionViolation /* IMPORTED_LONG_ENUMERATION_ITEM */, calledPartySS_InteractionViolation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CUG_RejectCause, _encode_CUG_RejectCause } from "../MAP-ER-DataTypes/CUG-RejectCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class CUG_RejectParam {
  */
 export
 const _root_component_type_list_1_spec_for_CUG_RejectParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("cug-RejectCause", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("cug-RejectCause", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -186,9 +184,9 @@ let _cached_decoder_for_CUG_RejectParam: $.ASN1Decoder<CUG_RejectParam> | null =
 export
 function _decode_CUG_RejectParam (el: _Element): CUG_RejectParam {
     if (!_cached_decoder_for_CUG_RejectParam) { _cached_decoder_for_CUG_RejectParam = function (el: _Element): CUG_RejectParam {
-    let cug_RejectCause: OPTIONAL<CUG_RejectCause>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cug_RejectCause: OPTIONAL<CUG_RejectCause> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cug-RejectCause": (_el: _Element): void => { cug_RejectCause = _decode_CUG_RejectCause(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

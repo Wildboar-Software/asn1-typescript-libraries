@@ -67,33 +67,19 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
-// export { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
 import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
-// export { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
 import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
-// export { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
-// export { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
 import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-// export { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 import { Ext_ExternalSignalInfo, _decode_Ext_ExternalSignalInfo, _encode_Ext_ExternalSignalInfo } from "../MAP-CommonDataTypes/Ext-ExternalSignalInfo.ta.mjs";
-// export { Ext_ExternalSignalInfo, _decode_Ext_ExternalSignalInfo, _encode_Ext_ExternalSignalInfo } from "../MAP-CommonDataTypes/Ext-ExternalSignalInfo.ta.mjs";
 import { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-// export { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
 import { PagingArea, _decode_PagingArea, _encode_PagingArea } from "../MAP-MS-DataTypes/PagingArea.ta.mjs";
-// export { PagingArea, _decode_PagingArea, _encode_PagingArea } from "../MAP-MS-DataTypes/PagingArea.ta.mjs";
 import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-// export { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-// export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 
 
 /**
@@ -332,17 +318,17 @@ class ProvideRoamingNumberArg {
  */
 export
 const _root_component_type_list_1_spec_for_ProvideRoamingNumberArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("msc-Number", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("gsm-BearerCapability", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("networkSignalInfo", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("suppressionOfAnnouncement", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("gmsc-Address", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("or-Interrogation", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("msc-Number", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("gsm-BearerCapability", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("networkSignalInfo", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("suppressionOfAnnouncement", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("gmsc-Address", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("or-Interrogation", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 11))
 ];
 
 /**
@@ -368,21 +354,21 @@ const _root_component_type_list_2_spec_for_ProvideRoamingNumberArg: $.ComponentS
  */
 export
 const _extension_additions_list_spec_for_ProvideRoamingNumberArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("ccbs-Call", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("supportedCamelPhasesInInterrogatingNode", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("additionalSignalInfo", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("orNotSupportedInGMSC", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("pre-pagingSupported", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("suppress-VT-CSI", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("offeredCamel4CSIsInInterrogatingNode", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("mtRoamingRetrySupported", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("pagingArea", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("callPriority", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("mtrf-Indicator", true, $.hasTag(_TagClass.context, 24), undefined, undefined),
-    new $.ComponentSpec("oldMSC-Number", true, $.hasTag(_TagClass.context, 25), undefined, undefined),
-    new $.ComponentSpec("lastUsedLtePLMN-Id", true, $.hasTag(_TagClass.context, 26), undefined, undefined)
+    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("ccbs-Call", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("supportedCamelPhasesInInterrogatingNode", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("additionalSignalInfo", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("orNotSupportedInGMSC", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("pre-pagingSupported", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("suppress-VT-CSI", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("offeredCamel4CSIsInInterrogatingNode", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("mtRoamingRetrySupported", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("pagingArea", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("callPriority", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("mtrf-Indicator", true, $.hasTag(_TagClass.context, 24)),
+    new $.ComponentSpec("oldMSC-Number", true, $.hasTag(_TagClass.context, 25)),
+    new $.ComponentSpec("lastUsedLtePLMN-Id", true, $.hasTag(_TagClass.context, 26))
 ];
 
 let _cached_decoder_for_ProvideRoamingNumberArg: $.ASN1Decoder<ProvideRoamingNumberArg> | null = null;
@@ -398,31 +384,31 @@ function _decode_ProvideRoamingNumberArg (el: _Element): ProvideRoamingNumberArg
     if (!_cached_decoder_for_ProvideRoamingNumberArg) { _cached_decoder_for_ProvideRoamingNumberArg = function (el: _Element): ProvideRoamingNumberArg {
     let imsi!: IMSI;
     let msc_Number!: ISDN_AddressString;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let lmsi: OPTIONAL<LMSI>;
-    let gsm_BearerCapability: OPTIONAL<ExternalSignalInfo>;
-    let networkSignalInfo: OPTIONAL<ExternalSignalInfo>;
-    let suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement>;
-    let gmsc_Address: OPTIONAL<ISDN_AddressString>;
-    let callReferenceNumber: OPTIONAL<CallReferenceNumber>;
-    let or_Interrogation: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let alertingPattern: OPTIONAL<AlertingPattern>;
-    let ccbs_Call: OPTIONAL<NULL>;
-    let supportedCamelPhasesInInterrogatingNode: OPTIONAL<SupportedCamelPhases>;
-    let additionalSignalInfo: OPTIONAL<Ext_ExternalSignalInfo>;
-    let orNotSupportedInGMSC: OPTIONAL<NULL>;
-    let pre_pagingSupported: OPTIONAL<NULL>;
-    let longFTN_Supported: OPTIONAL<NULL>;
-    let suppress_VT_CSI: OPTIONAL<NULL>;
-    let offeredCamel4CSIsInInterrogatingNode: OPTIONAL<OfferedCamel4CSIs>;
-    let mtRoamingRetrySupported: OPTIONAL<NULL>;
-    let pagingArea: OPTIONAL<PagingArea>;
-    let callPriority: OPTIONAL<EMLPP_Priority>;
-    let mtrf_Indicator: OPTIONAL<NULL>;
-    let oldMSC_Number: OPTIONAL<ISDN_AddressString>;
-    let lastUsedLtePLMN_Id: OPTIONAL<PLMN_Id>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let lmsi: OPTIONAL<LMSI> = undefined;
+    let gsm_BearerCapability: OPTIONAL<ExternalSignalInfo> = undefined;
+    let networkSignalInfo: OPTIONAL<ExternalSignalInfo> = undefined;
+    let suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement> = undefined;
+    let gmsc_Address: OPTIONAL<ISDN_AddressString> = undefined;
+    let callReferenceNumber: OPTIONAL<CallReferenceNumber> = undefined;
+    let or_Interrogation: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let alertingPattern: OPTIONAL<AlertingPattern> = undefined;
+    let ccbs_Call: OPTIONAL<NULL> = undefined;
+    let supportedCamelPhasesInInterrogatingNode: OPTIONAL<SupportedCamelPhases> = undefined;
+    let additionalSignalInfo: OPTIONAL<Ext_ExternalSignalInfo> = undefined;
+    let orNotSupportedInGMSC: OPTIONAL<NULL> = undefined;
+    let pre_pagingSupported: OPTIONAL<NULL> = undefined;
+    let longFTN_Supported: OPTIONAL<NULL> = undefined;
+    let suppress_VT_CSI: OPTIONAL<NULL> = undefined;
+    let offeredCamel4CSIsInInterrogatingNode: OPTIONAL<OfferedCamel4CSIs> = undefined;
+    let mtRoamingRetrySupported: OPTIONAL<NULL> = undefined;
+    let pagingArea: OPTIONAL<PagingArea> = undefined;
+    let callPriority: OPTIONAL<EMLPP_Priority> = undefined;
+    let mtrf_Indicator: OPTIONAL<NULL> = undefined;
+    let oldMSC_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let lastUsedLtePLMN_Id: OPTIONAL<PLMN_Id> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "msc-Number": (_el: _Element): void => { msc_Number = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

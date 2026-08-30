@@ -195,21 +195,13 @@ const NotReachableReason_notRegistered: NotReachableReason = NotReachableReason.
 export
 const notRegistered: NotReachableReason = NotReachableReason.notRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NotReachableReason: $.ASN1Decoder<NotReachableReason> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NotReachableReason
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NotReachableReason (el: _Element): NotReachableReason {
-    if (!_cached_decoder_for_NotReachableReason) { _cached_decoder_for_NotReachableReason = $._decodeEnumerated; }
-    return _cached_decoder_for_NotReachableReason(el);
-}
-
-let _cached_encoder_for_NotReachableReason: $.ASN1Encoder<NotReachableReason> | null = null;
+export const _decode_NotReachableReason = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NotReachableReason into an ASN.1 Element.
@@ -218,11 +210,7 @@ let _cached_encoder_for_NotReachableReason: $.ASN1Encoder<NotReachableReason> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NotReachableReason, encoded as an ASN.1 Element.
  */
-export
-function _encode_NotReachableReason (value: NotReachableReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotReachableReason) { _cached_encoder_for_NotReachableReason = $._encodeEnumerated; }
-    return _cached_encoder_for_NotReachableReason(value, elGetter);
-}
+export const _encode_NotReachableReason = $._encodeEnumerated;
 
 
 /* eslint-enable */

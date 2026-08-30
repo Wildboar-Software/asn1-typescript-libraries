@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocationArea, _decode_LocationArea, _encode_LocationArea } from "../MAP-MS-DataTypes/LocationArea.ta.mjs";
-// export { LocationArea, _decode_LocationArea, _encode_LocationArea } from "../MAP-MS-DataTypes/LocationArea.ta.mjs";
 
 
 /**
@@ -94,7 +94,11 @@ let _cached_decoder_for_PagingArea: $.ASN1Decoder<PagingArea> | null = null;
 export
 function _decode_PagingArea (el: _Element): PagingArea {
     if (!_cached_decoder_for_PagingArea) { _cached_decoder_for_PagingArea = $._decodeSequenceOf<LocationArea>(() => _decode_LocationArea); }
-    return _cached_decoder_for_PagingArea(el);
+    const value = _cached_decoder_for_PagingArea(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("PagingArea violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PagingArea: $.ASN1Encoder<PagingArea> | null = null;

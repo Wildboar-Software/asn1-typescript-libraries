@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RUF_Outcome, _enum_for_RUF_Outcome, RUF_Outcome_accepted /* IMPORTED_LONG_ENUMERATION_ITEM */, accepted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_rejected /* IMPORTED_LONG_ENUMERATION_ITEM */, rejected /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_noResponseFromFreeMS /* IMPORTED_LONG_ENUMERATION_ITEM */, noResponseFromFreeMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_noResponseFromBusyMS /* IMPORTED_LONG_ENUMERATION_ITEM */, noResponseFromBusyMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_udubFromFreeMS /* IMPORTED_LONG_ENUMERATION_ITEM */, udubFromFreeMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_udubFromBusyMS /* IMPORTED_LONG_ENUMERATION_ITEM */, udubFromBusyMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RUF_Outcome, _encode_RUF_Outcome } from "../MAP-CH-DataTypes/RUF-Outcome.ta.mjs";
-// export { RUF_Outcome, _enum_for_RUF_Outcome, RUF_Outcome_accepted /* IMPORTED_LONG_ENUMERATION_ITEM */, accepted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_rejected /* IMPORTED_LONG_ENUMERATION_ITEM */, rejected /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_noResponseFromFreeMS /* IMPORTED_LONG_ENUMERATION_ITEM */, noResponseFromFreeMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_noResponseFromBusyMS /* IMPORTED_LONG_ENUMERATION_ITEM */, noResponseFromBusyMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_udubFromFreeMS /* IMPORTED_LONG_ENUMERATION_ITEM */, udubFromFreeMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_udubFromBusyMS /* IMPORTED_LONG_ENUMERATION_ITEM */, udubFromBusyMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RUF_Outcome, _encode_RUF_Outcome } from "../MAP-CH-DataTypes/RUF-Outcome.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class RemoteUserFreeRes {
  */
 export
 const _root_component_type_list_1_spec_for_RemoteUserFreeRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("ruf-Outcome", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("ruf-Outcome", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -187,8 +185,8 @@ export
 function _decode_RemoteUserFreeRes (el: _Element): RemoteUserFreeRes {
     if (!_cached_decoder_for_RemoteUserFreeRes) { _cached_decoder_for_RemoteUserFreeRes = function (el: _Element): RemoteUserFreeRes {
     let ruf_Outcome!: RUF_Outcome;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ruf-Outcome": (_el: _Element): void => { ruf_Outcome = $._decode_implicit<RUF_Outcome>(() => _decode_RUF_Outcome)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }

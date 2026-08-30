@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-// export { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -146,9 +144,9 @@ class EMLPP_Info {
  */
 export
 const _root_component_type_list_1_spec_for_EMLPP_Info: $.ComponentSpec[] = [
-    new $.ComponentSpec("maximumentitledPriority", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("defaultPriority", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("maximumentitledPriority", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("defaultPriority", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -190,8 +188,8 @@ function _decode_EMLPP_Info (el: _Element): EMLPP_Info {
     if (!_cached_decoder_for_EMLPP_Info) { _cached_decoder_for_EMLPP_Info = function (el: _Element): EMLPP_Info {
     let maximumentitledPriority!: EMLPP_Priority;
     let defaultPriority!: EMLPP_Priority;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "maximumentitledPriority": (_el: _Element): void => { maximumentitledPriority = _decode_EMLPP_Priority(_el); },
         "defaultPriority": (_el: _Element): void => { defaultPriority = _decode_EMLPP_Priority(_el); },

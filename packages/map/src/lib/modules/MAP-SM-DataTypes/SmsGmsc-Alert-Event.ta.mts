@@ -155,21 +155,13 @@ const SmsGmsc_Alert_Event_msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_A
 export
 const msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msUnderNewServingNode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SmsGmsc_Alert_Event: $.ASN1Decoder<SmsGmsc_Alert_Event> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SmsGmsc_Alert_Event
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SmsGmsc_Alert_Event (el: _Element): SmsGmsc_Alert_Event {
-    if (!_cached_decoder_for_SmsGmsc_Alert_Event) { _cached_decoder_for_SmsGmsc_Alert_Event = $._decodeEnumerated; }
-    return _cached_decoder_for_SmsGmsc_Alert_Event(el);
-}
-
-let _cached_encoder_for_SmsGmsc_Alert_Event: $.ASN1Encoder<SmsGmsc_Alert_Event> | null = null;
+export const _decode_SmsGmsc_Alert_Event = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SmsGmsc_Alert_Event into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_SmsGmsc_Alert_Event: $.ASN1Encoder<SmsGmsc_Alert_Event> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SmsGmsc_Alert_Event, encoded as an ASN.1 Element.
  */
-export
-function _encode_SmsGmsc_Alert_Event (value: SmsGmsc_Alert_Event, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsGmsc_Alert_Event) { _cached_encoder_for_SmsGmsc_Alert_Event = $._encodeEnumerated; }
-    return _cached_encoder_for_SmsGmsc_Alert_Event(value, elGetter);
-}
+export const _encode_SmsGmsc_Alert_Event = $._encodeEnumerated;
 
 
 /* eslint-enable */

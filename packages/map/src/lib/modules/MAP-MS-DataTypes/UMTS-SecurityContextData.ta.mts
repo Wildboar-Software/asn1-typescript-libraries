@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
-// export { CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
 import { IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
-// export { IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
 import { KSI, _decode_KSI, _encode_KSI } from "../MAP-MS-DataTypes/KSI.ta.mjs";
-// export { KSI, _decode_KSI, _encode_KSI } from "../MAP-MS-DataTypes/KSI.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class UMTS_SecurityContextData {
  */
 export
 const _root_component_type_list_1_spec_for_UMTS_SecurityContextData: $.ComponentSpec[] = [
-    new $.ComponentSpec("ck", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("ik", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("ksi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("ck", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("ik", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("ksi", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UE_UsageType = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_UE_UsageType: $.ASN1Decoder<UE_UsageType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UE_UsageType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UE_UsageType (el: _Element): UE_UsageType {
-    if (!_cached_decoder_for_UE_UsageType) { _cached_decoder_for_UE_UsageType = $._decodeOctetString; }
-    return _cached_decoder_for_UE_UsageType(el);
-}
-
-let _cached_encoder_for_UE_UsageType: $.ASN1Encoder<UE_UsageType> | null = null;
+export const _decode_UE_UsageType = (el: _Element): UE_UsageType => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 4 || value.length > 4) {
+        throw new ASN1SizeError("UE_UsageType violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) UE_UsageType into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_UE_UsageType: $.ASN1Encoder<UE_UsageType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UE_UsageType, encoded as an ASN.1 Element.
  */
-export
-function _encode_UE_UsageType (value: UE_UsageType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UE_UsageType) { _cached_encoder_for_UE_UsageType = $._encodeOctetString; }
-    return _cached_encoder_for_UE_UsageType(value, elGetter);
-}
+export const _encode_UE_UsageType = $._encodeOctetString;
 
 
 /* eslint-enable */

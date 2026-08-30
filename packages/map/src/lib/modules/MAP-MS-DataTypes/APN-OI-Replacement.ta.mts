@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type APN_OI_Replacement = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_APN_OI_Replacement: $.ASN1Decoder<APN_OI_Replacement> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) APN_OI_Replacement
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_APN_OI_Replacement (el: _Element): APN_OI_Replacement {
-    if (!_cached_decoder_for_APN_OI_Replacement) { _cached_decoder_for_APN_OI_Replacement = $._decodeOctetString; }
-    return _cached_decoder_for_APN_OI_Replacement(el);
-}
-
-let _cached_encoder_for_APN_OI_Replacement: $.ASN1Encoder<APN_OI_Replacement> | null = null;
+export const _decode_APN_OI_Replacement = (el: _Element): APN_OI_Replacement => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 9 || value.length > 100) {
+        throw new ASN1SizeError("APN_OI_Replacement violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) APN_OI_Replacement into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_APN_OI_Replacement: $.ASN1Encoder<APN_OI_Replacement> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The APN_OI_Replacement, encoded as an ASN.1 Element.
  */
-export
-function _encode_APN_OI_Replacement (value: APN_OI_Replacement, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_APN_OI_Replacement) { _cached_encoder_for_APN_OI_Replacement = $._encodeOctetString; }
-    return _cached_encoder_for_APN_OI_Replacement(value, elGetter);
-}
+export const _encode_APN_OI_Replacement = $._encodeOctetString;
 
 
 /* eslint-enable */

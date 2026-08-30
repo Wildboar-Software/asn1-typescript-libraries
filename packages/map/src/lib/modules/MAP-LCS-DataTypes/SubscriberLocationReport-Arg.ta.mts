@@ -67,59 +67,32 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCS_Event, _enum_for_LCS_Event, LCS_Event_emergencyCallOrigination /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallOrigination /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_emergencyCallRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_mo_lr /* IMPORTED_LONG_ENUMERATION_ITEM */, mo_lr /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_deferredmt_lrResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, deferredmt_lrResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_deferredmo_lrTTTPInitiation /* IMPORTED_LONG_ENUMERATION_ITEM */, deferredmo_lrTTTPInitiation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_emergencyCallHandover /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallHandover /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_Event, _encode_LCS_Event } from "../MAP-LCS-DataTypes/LCS-Event.ta.mjs";
-// export { LCS_Event, _enum_for_LCS_Event, LCS_Event_emergencyCallOrigination /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallOrigination /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_emergencyCallRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_mo_lr /* IMPORTED_LONG_ENUMERATION_ITEM */, mo_lr /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_deferredmt_lrResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, deferredmt_lrResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_deferredmo_lrTTTPInitiation /* IMPORTED_LONG_ENUMERATION_ITEM */, deferredmo_lrTTTPInitiation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_emergencyCallHandover /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallHandover /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_Event, _encode_LCS_Event } from "../MAP-LCS-DataTypes/LCS-Event.ta.mjs";
 import { LCS_ClientID, _decode_LCS_ClientID, _encode_LCS_ClientID } from "../MAP-LCS-DataTypes/LCS-ClientID.ta.mjs";
-// export { LCS_ClientID, _decode_LCS_ClientID, _encode_LCS_ClientID } from "../MAP-LCS-DataTypes/LCS-ClientID.ta.mjs";
 import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
-// export { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
-// export { Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
 import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-// export { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
 import { SLR_ArgExtensionContainer, _decode_SLR_ArgExtensionContainer, _encode_SLR_ArgExtensionContainer } from "../MAP-ExtensionDataTypes/SLR-ArgExtensionContainer.ta.mjs";
-// export { SLR_ArgExtensionContainer, _decode_SLR_ArgExtensionContainer, _encode_SLR_ArgExtensionContainer } from "../MAP-ExtensionDataTypes/SLR-ArgExtensionContainer.ta.mjs";
 import { Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
-// export { Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
 import { Deferredmt_lrData, _decode_Deferredmt_lrData, _encode_Deferredmt_lrData } from "../MAP-LCS-DataTypes/Deferredmt-lrData.ta.mjs";
-// export { Deferredmt_lrData, _decode_Deferredmt_lrData, _encode_Deferredmt_lrData } from "../MAP-LCS-DataTypes/Deferredmt-lrData.ta.mjs";
 import { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
-// export { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
 import { PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
-// export { PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
 import { UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
-// export { UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
 import { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
-// export { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
-// export { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
 import { AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator, AccuracyFulfilmentIndicator_requestedAccuracyFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyNotFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
-// export { AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator, AccuracyFulfilmentIndicator_requestedAccuracyFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyNotFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
 import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
-// export { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
 import { SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "../MAP-LCS-DataTypes/SequenceNumber.ta.mjs";
-// export { SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "../MAP-LCS-DataTypes/SequenceNumber.ta.mjs";
 import { PeriodicLDRInfo, _decode_PeriodicLDRInfo, _encode_PeriodicLDRInfo } from "../MAP-LCS-DataTypes/PeriodicLDRInfo.ta.mjs";
-// export { PeriodicLDRInfo, _decode_PeriodicLDRInfo, _encode_PeriodicLDRInfo } from "../MAP-LCS-DataTypes/PeriodicLDRInfo.ta.mjs";
 import { GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
-// export { GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
 import { UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
-// export { UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
 import { ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
-// export { ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
 import { UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
-// export { UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
 import { UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
-// export { UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
 import { UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
-// export { UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
 
 
 /**
@@ -411,17 +384,17 @@ class SubscriberLocationReport_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_SubscriberLocationReport_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("lcs-Event", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("lcs-ClientID", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("lcsLocationInfo", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("imei", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("na-ESRD", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("na-ESRK", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("locationEstimate", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("ageOfLocationEstimate", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("slr-ArgExtensionContainer", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("lcs-Event", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("lcs-ClientID", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("lcsLocationInfo", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("imei", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("na-ESRD", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("na-ESRK", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("locationEstimate", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("ageOfLocationEstimate", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("slr-ArgExtensionContainer", true, $.hasTag(_TagClass.context, 7))
 ];
 
 /**
@@ -447,27 +420,27 @@ const _root_component_type_list_2_spec_for_SubscriberLocationReport_Arg: $.Compo
  */
 export
 const _extension_additions_list_spec_for_SubscriberLocationReport_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("add-LocationEstimate", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("deferredmt-lrData", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("lcs-ReferenceNumber", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("geranPositioningData", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("utranPositioningData", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("cellIdOrSai", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("h-gmlc-Address", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("lcsServiceTypeID", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("sai-Present", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("pseudonymIndicator", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("accuracyFulfilmentIndicator", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("velocityEstimate", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("sequenceNumber", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("periodicLDRInfo", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("mo-lrShortCircuitIndicator", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("geranGANSSpositioningData", true, $.hasTag(_TagClass.context, 24), undefined, undefined),
-    new $.ComponentSpec("utranGANSSpositioningData", true, $.hasTag(_TagClass.context, 25), undefined, undefined),
-    new $.ComponentSpec("targetServingNodeForHandover", true, $.hasTag(_TagClass.context, 26), undefined, undefined),
-    new $.ComponentSpec("utranAdditionalPositioningData", true, $.hasTag(_TagClass.context, 27), undefined, undefined),
-    new $.ComponentSpec("utranBaroPressureMeas", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    new $.ComponentSpec("utranCivicAddress", true, $.hasTag(_TagClass.context, 29), undefined, undefined)
+    new $.ComponentSpec("add-LocationEstimate", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("deferredmt-lrData", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("lcs-ReferenceNumber", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("geranPositioningData", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("utranPositioningData", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("cellIdOrSai", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("h-gmlc-Address", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("lcsServiceTypeID", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("sai-Present", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("pseudonymIndicator", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("accuracyFulfilmentIndicator", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("velocityEstimate", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("sequenceNumber", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("periodicLDRInfo", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("mo-lrShortCircuitIndicator", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("geranGANSSpositioningData", true, $.hasTag(_TagClass.context, 24)),
+    new $.ComponentSpec("utranGANSSpositioningData", true, $.hasTag(_TagClass.context, 25)),
+    new $.ComponentSpec("targetServingNodeForHandover", true, $.hasTag(_TagClass.context, 26)),
+    new $.ComponentSpec("utranAdditionalPositioningData", true, $.hasTag(_TagClass.context, 27)),
+    new $.ComponentSpec("utranBaroPressureMeas", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("utranCivicAddress", true, $.hasTag(_TagClass.context, 29))
 ];
 
 let _cached_decoder_for_SubscriberLocationReport_Arg: $.ASN1Decoder<SubscriberLocationReport_Arg> | null = null;
@@ -484,36 +457,36 @@ function _decode_SubscriberLocationReport_Arg (el: _Element): SubscriberLocation
     let lcs_Event!: LCS_Event;
     let lcs_ClientID!: LCS_ClientID;
     let lcsLocationInfo!: LCSLocationInfo;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let imsi: OPTIONAL<IMSI>;
-    let imei: OPTIONAL<IMEI>;
-    let na_ESRD: OPTIONAL<ISDN_AddressString>;
-    let na_ESRK: OPTIONAL<ISDN_AddressString>;
-    let locationEstimate: OPTIONAL<Ext_GeographicalInformation>;
-    let ageOfLocationEstimate: OPTIONAL<AgeOfLocationInformation>;
-    let slr_ArgExtensionContainer: OPTIONAL<SLR_ArgExtensionContainer>;
-    let add_LocationEstimate: OPTIONAL<Add_GeographicalInformation>;
-    let deferredmt_lrData: OPTIONAL<Deferredmt_lrData>;
-    let lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber>;
-    let geranPositioningData: OPTIONAL<PositioningDataInformation>;
-    let utranPositioningData: OPTIONAL<UtranPositioningDataInfo>;
-    let cellIdOrSai: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>;
-    let h_gmlc_Address: OPTIONAL<GSN_Address>;
-    let lcsServiceTypeID: OPTIONAL<LCSServiceTypeID>;
-    let sai_Present: OPTIONAL<NULL>;
-    let pseudonymIndicator: OPTIONAL<NULL>;
-    let accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator>;
-    let velocityEstimate: OPTIONAL<VelocityEstimate>;
-    let sequenceNumber: OPTIONAL<SequenceNumber>;
-    let periodicLDRInfo: OPTIONAL<PeriodicLDRInfo>;
-    let mo_lrShortCircuitIndicator: OPTIONAL<NULL>;
-    let geranGANSSpositioningData: OPTIONAL<GeranGANSSpositioningData>;
-    let utranGANSSpositioningData: OPTIONAL<UtranGANSSpositioningData>;
-    let targetServingNodeForHandover: OPTIONAL<ServingNodeAddress>;
-    let utranAdditionalPositioningData: OPTIONAL<UtranAdditionalPositioningData>;
-    let utranBaroPressureMeas: OPTIONAL<UtranBaroPressureMeas>;
-    let utranCivicAddress: OPTIONAL<UtranCivicAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let imei: OPTIONAL<IMEI> = undefined;
+    let na_ESRD: OPTIONAL<ISDN_AddressString> = undefined;
+    let na_ESRK: OPTIONAL<ISDN_AddressString> = undefined;
+    let locationEstimate: OPTIONAL<Ext_GeographicalInformation> = undefined;
+    let ageOfLocationEstimate: OPTIONAL<AgeOfLocationInformation> = undefined;
+    let slr_ArgExtensionContainer: OPTIONAL<SLR_ArgExtensionContainer> = undefined;
+    let add_LocationEstimate: OPTIONAL<Add_GeographicalInformation> = undefined;
+    let deferredmt_lrData: OPTIONAL<Deferredmt_lrData> = undefined;
+    let lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber> = undefined;
+    let geranPositioningData: OPTIONAL<PositioningDataInformation> = undefined;
+    let utranPositioningData: OPTIONAL<UtranPositioningDataInfo> = undefined;
+    let cellIdOrSai: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI> = undefined;
+    let h_gmlc_Address: OPTIONAL<GSN_Address> = undefined;
+    let lcsServiceTypeID: OPTIONAL<LCSServiceTypeID> = undefined;
+    let sai_Present: OPTIONAL<NULL> = undefined;
+    let pseudonymIndicator: OPTIONAL<NULL> = undefined;
+    let accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator> = undefined;
+    let velocityEstimate: OPTIONAL<VelocityEstimate> = undefined;
+    let sequenceNumber: OPTIONAL<SequenceNumber> = undefined;
+    let periodicLDRInfo: OPTIONAL<PeriodicLDRInfo> = undefined;
+    let mo_lrShortCircuitIndicator: OPTIONAL<NULL> = undefined;
+    let geranGANSSpositioningData: OPTIONAL<GeranGANSSpositioningData> = undefined;
+    let utranGANSSpositioningData: OPTIONAL<UtranGANSSpositioningData> = undefined;
+    let targetServingNodeForHandover: OPTIONAL<ServingNodeAddress> = undefined;
+    let utranAdditionalPositioningData: OPTIONAL<UtranAdditionalPositioningData> = undefined;
+    let utranBaroPressureMeas: OPTIONAL<UtranBaroPressureMeas> = undefined;
+    let utranCivicAddress: OPTIONAL<UtranCivicAddress> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "lcs-Event": (_el: _Element): void => { lcs_Event = _decode_LCS_Event(_el); },
         "lcs-ClientID": (_el: _Element): void => { lcs_ClientID = _decode_LCS_ClientID(_el); },

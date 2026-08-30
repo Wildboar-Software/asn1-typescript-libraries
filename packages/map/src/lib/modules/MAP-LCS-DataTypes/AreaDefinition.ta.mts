@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AreaList, _decode_AreaList, _encode_AreaList } from "../MAP-LCS-DataTypes/AreaList.ta.mjs";
-// export { AreaList, _decode_AreaList, _encode_AreaList } from "../MAP-LCS-DataTypes/AreaList.ta.mjs";
 
 
 /**
@@ -130,7 +129,7 @@ class AreaDefinition {
  */
 export
 const _root_component_type_list_1_spec_for_AreaDefinition: $.ComponentSpec[] = [
-    new $.ComponentSpec("areaList", false, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("areaList", false, $.hasTag(_TagClass.context, 0))
 ];
 
 /**

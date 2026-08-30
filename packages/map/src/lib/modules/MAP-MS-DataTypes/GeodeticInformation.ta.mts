@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type GeodeticInformation = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_GeodeticInformation: $.ASN1Decoder<GeodeticInformation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GeodeticInformation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GeodeticInformation (el: _Element): GeodeticInformation {
-    if (!_cached_decoder_for_GeodeticInformation) { _cached_decoder_for_GeodeticInformation = $._decodeOctetString; }
-    return _cached_decoder_for_GeodeticInformation(el);
-}
-
-let _cached_encoder_for_GeodeticInformation: $.ASN1Encoder<GeodeticInformation> | null = null;
+export const _decode_GeodeticInformation = (el: _Element): GeodeticInformation => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 10 || value.length > 10) {
+        throw new ASN1SizeError("GeodeticInformation violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) GeodeticInformation into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_GeodeticInformation: $.ASN1Encoder<GeodeticInformation> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GeodeticInformation, encoded as an ASN.1 Element.
  */
-export
-function _encode_GeodeticInformation (value: GeodeticInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GeodeticInformation) { _cached_encoder_for_GeodeticInformation = $._encodeOctetString; }
-    return _cached_encoder_for_GeodeticInformation(value, elGetter);
-}
+export const _encode_GeodeticInformation = $._encodeOctetString;
 
 
 /* eslint-enable */

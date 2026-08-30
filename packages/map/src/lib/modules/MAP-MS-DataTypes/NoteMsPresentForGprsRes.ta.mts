@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -130,7 +129,7 @@ class NoteMsPresentForGprsRes {
  */
 export
 const _root_component_type_list_1_spec_for_NoteMsPresentForGprsRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -170,8 +169,8 @@ let _cached_decoder_for_NoteMsPresentForGprsRes: $.ASN1Decoder<NoteMsPresentForG
 export
 function _decode_NoteMsPresentForGprsRes (el: _Element): NoteMsPresentForGprsRes {
     if (!_cached_decoder_for_NoteMsPresentForGprsRes) { _cached_decoder_for_NoteMsPresentForGprsRes = function (el: _Element): NoteMsPresentForGprsRes {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }
     };

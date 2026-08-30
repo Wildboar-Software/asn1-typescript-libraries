@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChosenChannelInfo, _decode_ChosenChannelInfo, _encode_ChosenChannelInfo } from "../MAP-MS-DataTypes/ChosenChannelInfo.ta.mjs";
-// export { ChosenChannelInfo, _decode_ChosenChannelInfo, _encode_ChosenChannelInfo } from "../MAP-MS-DataTypes/ChosenChannelInfo.ta.mjs";
 import { ChosenSpeechVersion, _decode_ChosenSpeechVersion, _encode_ChosenSpeechVersion } from "../MAP-MS-DataTypes/ChosenSpeechVersion.ta.mjs";
-// export { ChosenSpeechVersion, _decode_ChosenSpeechVersion, _encode_ChosenSpeechVersion } from "../MAP-MS-DataTypes/ChosenSpeechVersion.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class ChosenRadioResourceInformation {
  */
 export
 const _root_component_type_list_1_spec_for_ChosenRadioResourceInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("chosenChannelInfo", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("chosenSpeechVersion", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("chosenChannelInfo", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("chosenSpeechVersion", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_ChosenRadioResourceInformation: $.ASN1Decoder<ChosenRadi
 export
 function _decode_ChosenRadioResourceInformation (el: _Element): ChosenRadioResourceInformation {
     if (!_cached_decoder_for_ChosenRadioResourceInformation) { _cached_decoder_for_ChosenRadioResourceInformation = function (el: _Element): ChosenRadioResourceInformation {
-    let chosenChannelInfo: OPTIONAL<ChosenChannelInfo>;
-    let chosenSpeechVersion: OPTIONAL<ChosenSpeechVersion>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let chosenChannelInfo: OPTIONAL<ChosenChannelInfo> = undefined;
+    let chosenSpeechVersion: OPTIONAL<ChosenSpeechVersion> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "chosenChannelInfo": (_el: _Element): void => { chosenChannelInfo = $._decode_implicit<ChosenChannelInfo>(() => _decode_ChosenChannelInfo)(_el); },
         "chosenSpeechVersion": (_el: _Element): void => { chosenSpeechVersion = $._decode_implicit<ChosenSpeechVersion>(() => _decode_ChosenSpeechVersion)(_el); }

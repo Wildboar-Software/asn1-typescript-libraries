@@ -197,21 +197,13 @@ const AbsentSubscriberReason_busySubscriber: AbsentSubscriberReason = 5; /* LONG
 export
 const busySubscriber: AbsentSubscriberReason = AbsentSubscriberReason_busySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AbsentSubscriberReason: $.ASN1Decoder<AbsentSubscriberReason> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AbsentSubscriberReason
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AbsentSubscriberReason (el: _Element): AbsentSubscriberReason {
-    if (!_cached_decoder_for_AbsentSubscriberReason) { _cached_decoder_for_AbsentSubscriberReason = $._decodeEnumerated; }
-    return _cached_decoder_for_AbsentSubscriberReason(el);
-}
-
-let _cached_encoder_for_AbsentSubscriberReason: $.ASN1Encoder<AbsentSubscriberReason> | null = null;
+export const _decode_AbsentSubscriberReason = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AbsentSubscriberReason into an ASN.1 Element.
@@ -220,11 +212,7 @@ let _cached_encoder_for_AbsentSubscriberReason: $.ASN1Encoder<AbsentSubscriberRe
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AbsentSubscriberReason, encoded as an ASN.1 Element.
  */
-export
-function _encode_AbsentSubscriberReason (value: AbsentSubscriberReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AbsentSubscriberReason) { _cached_encoder_for_AbsentSubscriberReason = $._encodeEnumerated; }
-    return _cached_encoder_for_AbsentSubscriberReason(value, elGetter);
-}
+export const _encode_AbsentSubscriberReason = $._encodeEnumerated;
 
 
 /* eslint-enable */

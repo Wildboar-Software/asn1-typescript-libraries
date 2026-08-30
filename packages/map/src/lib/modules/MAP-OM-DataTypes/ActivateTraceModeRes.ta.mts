@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -138,7 +137,7 @@ class ActivateTraceModeRes {
  */
 export
 const _root_component_type_list_1_spec_for_ActivateTraceModeRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -164,7 +163,7 @@ const _root_component_type_list_2_spec_for_ActivateTraceModeRes: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_ActivateTraceModeRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("traceSupportIndicator", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("traceSupportIndicator", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_ActivateTraceModeRes: $.ASN1Decoder<ActivateTraceModeRes> | null = null;
@@ -178,9 +177,9 @@ let _cached_decoder_for_ActivateTraceModeRes: $.ASN1Decoder<ActivateTraceModeRes
 export
 function _decode_ActivateTraceModeRes (el: _Element): ActivateTraceModeRes {
     if (!_cached_decoder_for_ActivateTraceModeRes) { _cached_decoder_for_ActivateTraceModeRes = function (el: _Element): ActivateTraceModeRes {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let traceSupportIndicator: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let traceSupportIndicator: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); },
         "traceSupportIndicator": (_el: _Element): void => { traceSupportIndicator = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MS_Classmark2 = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_MS_Classmark2: $.ASN1Decoder<MS_Classmark2> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MS_Classmark2
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MS_Classmark2 (el: _Element): MS_Classmark2 {
-    if (!_cached_decoder_for_MS_Classmark2) { _cached_decoder_for_MS_Classmark2 = $._decodeOctetString; }
-    return _cached_decoder_for_MS_Classmark2(el);
-}
-
-let _cached_encoder_for_MS_Classmark2: $.ASN1Encoder<MS_Classmark2> | null = null;
+export const _decode_MS_Classmark2 = (el: _Element): MS_Classmark2 => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 3 || value.length > 3) {
+        throw new ASN1SizeError("MS_Classmark2 violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MS_Classmark2 into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_MS_Classmark2: $.ASN1Encoder<MS_Classmark2> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MS_Classmark2, encoded as an ASN.1 Element.
  */
-export
-function _encode_MS_Classmark2 (value: MS_Classmark2, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MS_Classmark2) { _cached_encoder_for_MS_Classmark2 = $._encodeOctetString; }
-    return _cached_encoder_for_MS_Classmark2(value, elGetter);
-}
+export const _encode_MS_Classmark2 = $._encodeOctetString;
 
 
 /* eslint-enable */

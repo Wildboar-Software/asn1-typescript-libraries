@@ -275,21 +275,13 @@ const NetworkResource_rss: NetworkResource = NetworkResource.rss; /* LONG_NAMED_
 export
 const rss: NetworkResource = NetworkResource.rss; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NetworkResource: $.ASN1Decoder<NetworkResource> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NetworkResource
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NetworkResource (el: _Element): NetworkResource {
-    if (!_cached_decoder_for_NetworkResource) { _cached_decoder_for_NetworkResource = $._decodeEnumerated; }
-    return _cached_decoder_for_NetworkResource(el);
-}
-
-let _cached_encoder_for_NetworkResource: $.ASN1Encoder<NetworkResource> | null = null;
+export const _decode_NetworkResource = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NetworkResource into an ASN.1 Element.
@@ -298,11 +290,7 @@ let _cached_encoder_for_NetworkResource: $.ASN1Encoder<NetworkResource> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NetworkResource, encoded as an ASN.1 Element.
  */
-export
-function _encode_NetworkResource (value: NetworkResource, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NetworkResource) { _cached_encoder_for_NetworkResource = $._encodeEnumerated; }
-    return _cached_encoder_for_NetworkResource(value, elGetter);
-}
+export const _encode_NetworkResource = $._encodeEnumerated;
 
 
 /* eslint-enable */

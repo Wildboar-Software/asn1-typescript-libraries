@@ -67,27 +67,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
-// export { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { ForwardingData, _decode_ForwardingData, _encode_ForwardingData } from "../MAP-CH-DataTypes/ForwardingData.ta.mjs";
-// export { ForwardingData, _decode_ForwardingData, _encode_ForwardingData } from "../MAP-CH-DataTypes/ForwardingData.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
-// export { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
 import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
-// export { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/UU-Data.ta.mjs";
-// export { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/UU-Data.ta.mjs";
 import { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.ta.mjs";
-// export { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.ta.mjs";
 import { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
-// export { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
 
 
 /**
@@ -249,17 +238,17 @@ class ResumeCallHandlingArg {
  */
 export
 const _root_component_type_list_1_spec_for_ResumeCallHandlingArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("basicServiceGroup", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("forwardingData", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("cug-CheckInfo", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("o-CSI", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("ccbs-Possible", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("uu-Data", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("allInformationSent", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("basicServiceGroup", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("forwardingData", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("cug-CheckInfo", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("o-CSI", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("ccbs-Possible", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("uu-Data", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("allInformationSent", true, $.hasTag(_TagClass.context, 11))
 ];
 
 /**
@@ -285,10 +274,10 @@ const _root_component_type_list_2_spec_for_ResumeCallHandlingArg: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_ResumeCallHandlingArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("d-csi", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("o-BcsmCamelTDPCriteriaList", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("basicServiceGroup2", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("mtRoamingRetry", true, $.hasTag(_TagClass.context, 15), undefined, undefined)
+    new $.ComponentSpec("d-csi", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("o-BcsmCamelTDPCriteriaList", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("basicServiceGroup2", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("mtRoamingRetry", true, $.hasTag(_TagClass.context, 15))
 ];
 
 let _cached_decoder_for_ResumeCallHandlingArg: $.ASN1Decoder<ResumeCallHandlingArg> | null = null;
@@ -302,22 +291,22 @@ let _cached_decoder_for_ResumeCallHandlingArg: $.ASN1Decoder<ResumeCallHandlingA
 export
 function _decode_ResumeCallHandlingArg (el: _Element): ResumeCallHandlingArg {
     if (!_cached_decoder_for_ResumeCallHandlingArg) { _cached_decoder_for_ResumeCallHandlingArg = function (el: _Element): ResumeCallHandlingArg {
-    let callReferenceNumber: OPTIONAL<CallReferenceNumber>;
-    let basicServiceGroup: OPTIONAL<Ext_BasicServiceCode>;
-    let forwardingData: OPTIONAL<ForwardingData>;
-    let imsi: OPTIONAL<IMSI>;
-    let cug_CheckInfo: OPTIONAL<CUG_CheckInfo>;
-    let o_CSI: OPTIONAL<O_CSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let ccbs_Possible: OPTIONAL<NULL>;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let uu_Data: OPTIONAL<UU_Data>;
-    let allInformationSent: OPTIONAL<NULL>;
-    let d_csi: OPTIONAL<D_CSI>;
-    let o_BcsmCamelTDPCriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>;
-    let basicServiceGroup2: OPTIONAL<Ext_BasicServiceCode>;
-    let mtRoamingRetry: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let callReferenceNumber: OPTIONAL<CallReferenceNumber> = undefined;
+    let basicServiceGroup: OPTIONAL<Ext_BasicServiceCode> = undefined;
+    let forwardingData: OPTIONAL<ForwardingData> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let cug_CheckInfo: OPTIONAL<CUG_CheckInfo> = undefined;
+    let o_CSI: OPTIONAL<O_CSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let ccbs_Possible: OPTIONAL<NULL> = undefined;
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let uu_Data: OPTIONAL<UU_Data> = undefined;
+    let allInformationSent: OPTIONAL<NULL> = undefined;
+    let d_csi: OPTIONAL<D_CSI> = undefined;
+    let o_BcsmCamelTDPCriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList> = undefined;
+    let basicServiceGroup2: OPTIONAL<Ext_BasicServiceCode> = undefined;
+    let mtRoamingRetry: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callReferenceNumber": (_el: _Element): void => { callReferenceNumber = $._decode_implicit<CallReferenceNumber>(() => _decode_CallReferenceNumber)(_el); },
         "basicServiceGroup": (_el: _Element): void => { basicServiceGroup = $._decode_explicit<Ext_BasicServiceCode>(() => _decode_Ext_BasicServiceCode)(_el); },

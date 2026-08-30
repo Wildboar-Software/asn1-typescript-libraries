@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
-// export { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
-// export { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
 
 
 /**
@@ -156,8 +153,8 @@ class ModificationRequestFor_IP_SM_GW_Data {
  */
 export
 const _root_component_type_list_1_spec_for_ModificationRequestFor_IP_SM_GW_Data: $.ComponentSpec[] = [
-    new $.ComponentSpec("modifyRegistrationStatus", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("modifyRegistrationStatus", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -183,7 +180,7 @@ const _root_component_type_list_2_spec_for_ModificationRequestFor_IP_SM_GW_Data:
  */
 export
 const _extension_additions_list_spec_for_ModificationRequestFor_IP_SM_GW_Data: $.ComponentSpec[] = [
-    new $.ComponentSpec("ip-sm-gw-DiameterAddress", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("ip-sm-gw-DiameterAddress", true, $.hasTag(_TagClass.context, 2))
 ];
 
 let _cached_decoder_for_ModificationRequestFor_IP_SM_GW_Data: $.ASN1Decoder<ModificationRequestFor_IP_SM_GW_Data> | null = null;
@@ -197,10 +194,10 @@ let _cached_decoder_for_ModificationRequestFor_IP_SM_GW_Data: $.ASN1Decoder<Modi
 export
 function _decode_ModificationRequestFor_IP_SM_GW_Data (el: _Element): ModificationRequestFor_IP_SM_GW_Data {
     if (!_cached_decoder_for_ModificationRequestFor_IP_SM_GW_Data) { _cached_decoder_for_ModificationRequestFor_IP_SM_GW_Data = function (el: _Element): ModificationRequestFor_IP_SM_GW_Data {
-    let modifyRegistrationStatus: OPTIONAL<ModificationInstruction>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let ip_sm_gw_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let modifyRegistrationStatus: OPTIONAL<ModificationInstruction> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let ip_sm_gw_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "modifyRegistrationStatus": (_el: _Element): void => { modifyRegistrationStatus = $._decode_implicit<ModificationInstruction>(() => _decode_ModificationInstruction)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); },

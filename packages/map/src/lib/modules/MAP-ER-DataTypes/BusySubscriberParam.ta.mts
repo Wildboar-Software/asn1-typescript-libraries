@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -144,7 +143,7 @@ class BusySubscriberParam {
  */
 export
 const _root_component_type_list_1_spec_for_BusySubscriberParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -170,8 +169,8 @@ const _root_component_type_list_2_spec_for_BusySubscriberParam: $.ComponentSpec[
  */
 export
 const _extension_additions_list_spec_for_BusySubscriberParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("ccbs-Possible", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ccbs-Busy", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("ccbs-Possible", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ccbs-Busy", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_BusySubscriberParam: $.ASN1Decoder<BusySubscriberParam> | null = null;
@@ -185,10 +184,10 @@ let _cached_decoder_for_BusySubscriberParam: $.ASN1Decoder<BusySubscriberParam> 
 export
 function _decode_BusySubscriberParam (el: _Element): BusySubscriberParam {
     if (!_cached_decoder_for_BusySubscriberParam) { _cached_decoder_for_BusySubscriberParam = function (el: _Element): BusySubscriberParam {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let ccbs_Possible: OPTIONAL<NULL>;
-    let ccbs_Busy: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let ccbs_Possible: OPTIONAL<NULL> = undefined;
+    let ccbs_Busy: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },
         "ccbs-Possible": (_el: _Element): void => { ccbs_Possible = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

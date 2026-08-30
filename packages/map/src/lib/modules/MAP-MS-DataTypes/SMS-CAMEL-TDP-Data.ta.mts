@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint, SMS_TriggerDetectionPoint_sms_CollectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_CollectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_TriggerDetectionPoint_sms_DeliveryRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_DeliveryRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
-// export { SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint, SMS_TriggerDetectionPoint_sms_CollectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_CollectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_TriggerDetectionPoint_sms_DeliveryRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_DeliveryRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
-// export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { DefaultSMS_Handling, _enum_for_DefaultSMS_Handling, DefaultSMS_Handling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultSMS_Handling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultSMS_Handling, _encode_DefaultSMS_Handling } from "../MAP-MS-DataTypes/DefaultSMS-Handling.ta.mjs";
-// export { DefaultSMS_Handling, _enum_for_DefaultSMS_Handling, DefaultSMS_Handling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultSMS_Handling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultSMS_Handling, _encode_DefaultSMS_Handling } from "../MAP-MS-DataTypes/DefaultSMS-Handling.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -179,11 +174,11 @@ class SMS_CAMEL_TDP_Data {
  */
 export
 const _root_component_type_list_1_spec_for_SMS_CAMEL_TDP_Data: $.ComponentSpec[] = [
-    new $.ComponentSpec("sms-TriggerDetectionPoint", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("defaultSMS-Handling", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("sms-TriggerDetectionPoint", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("defaultSMS-Handling", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -227,8 +222,8 @@ function _decode_SMS_CAMEL_TDP_Data (el: _Element): SMS_CAMEL_TDP_Data {
     let serviceKey!: ServiceKey;
     let gsmSCF_Address!: ISDN_AddressString;
     let defaultSMS_Handling!: DefaultSMS_Handling;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sms-TriggerDetectionPoint": (_el: _Element): void => { sms_TriggerDetectionPoint = $._decode_implicit<SMS_TriggerDetectionPoint>(() => _decode_SMS_TriggerDetectionPoint)(_el); },
         "serviceKey": (_el: _Element): void => { serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(_el); },

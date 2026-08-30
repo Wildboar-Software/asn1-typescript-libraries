@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -142,21 +143,19 @@ const ODB_HPLMN_Data_plmn_SpecificBarringType4: number = 3; /* LONG_NAMED_BIT */
 export
 const plmn_SpecificBarringType4: number = ODB_HPLMN_Data_plmn_SpecificBarringType4; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_ODB_HPLMN_Data: $.ASN1Decoder<ODB_HPLMN_Data> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ODB_HPLMN_Data
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ODB_HPLMN_Data (el: _Element): ODB_HPLMN_Data {
-    if (!_cached_decoder_for_ODB_HPLMN_Data) { _cached_decoder_for_ODB_HPLMN_Data = $._decodeBitString; }
-    return _cached_decoder_for_ODB_HPLMN_Data(el);
-}
-
-let _cached_encoder_for_ODB_HPLMN_Data: $.ASN1Encoder<ODB_HPLMN_Data> | null = null;
+export const _decode_ODB_HPLMN_Data = (el: _Element): ODB_HPLMN_Data => {
+    const value = $._decodeBitString(el);
+    if (value.length < 4 || value.length > 32) {
+        throw new ASN1SizeError("ODB_HPLMN_Data violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ODB_HPLMN_Data into an ASN.1 Element.
@@ -165,11 +164,7 @@ let _cached_encoder_for_ODB_HPLMN_Data: $.ASN1Encoder<ODB_HPLMN_Data> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ODB_HPLMN_Data, encoded as an ASN.1 Element.
  */
-export
-function _encode_ODB_HPLMN_Data (value: ODB_HPLMN_Data, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ODB_HPLMN_Data) { _cached_encoder_for_ODB_HPLMN_Data = $._encodeBitString; }
-    return _cached_encoder_for_ODB_HPLMN_Data(value, elGetter);
-}
+export const _encode_ODB_HPLMN_Data = $._encodeBitString;
 
 
 /* eslint-enable */

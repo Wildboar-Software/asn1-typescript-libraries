@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_CwFeatureList, _decode_Ext_CwFeatureList, _encode_Ext_CwFeatureList } from "../MAP-MS-DataTypes/Ext-CwFeatureList.ta.mjs";
-// export { Ext_CwFeatureList, _decode_Ext_CwFeatureList, _encode_Ext_CwFeatureList } from "../MAP-MS-DataTypes/Ext-CwFeatureList.ta.mjs";
 
 
 /**
@@ -137,8 +136,8 @@ class CallWaitingData {
  */
 export
 const _root_component_type_list_1_spec_for_CallWaitingData: $.ComponentSpec[] = [
-    new $.ComponentSpec("cwFeatureList", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("cwFeatureList", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -179,8 +178,8 @@ export
 function _decode_CallWaitingData (el: _Element): CallWaitingData {
     if (!_cached_decoder_for_CallWaitingData) { _cached_decoder_for_CallWaitingData = function (el: _Element): CallWaitingData {
     let cwFeatureList!: Ext_CwFeatureList;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cwFeatureList": (_el: _Element): void => { cwFeatureList = $._decode_implicit<Ext_CwFeatureList>(() => _decode_Ext_CwFeatureList)(_el); },
         "notificationToCSE": (_el: _Element): void => { notificationToCSE = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }

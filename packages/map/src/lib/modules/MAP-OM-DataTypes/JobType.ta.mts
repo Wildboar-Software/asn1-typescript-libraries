@@ -195,21 +195,13 @@ const JobType_immediate_MDT_and_trace: JobType = JobType.immediate_MDT_and_trace
 export
 const immediate_MDT_and_trace: JobType = JobType.immediate_MDT_and_trace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_JobType: $.ASN1Decoder<JobType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) JobType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_JobType (el: _Element): JobType {
-    if (!_cached_decoder_for_JobType) { _cached_decoder_for_JobType = $._decodeEnumerated; }
-    return _cached_decoder_for_JobType(el);
-}
-
-let _cached_encoder_for_JobType: $.ASN1Encoder<JobType> | null = null;
+export const _decode_JobType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) JobType into an ASN.1 Element.
@@ -218,11 +210,7 @@ let _cached_encoder_for_JobType: $.ASN1Encoder<JobType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The JobType, encoded as an ASN.1 Element.
  */
-export
-function _encode_JobType (value: JobType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_JobType) { _cached_encoder_for_JobType = $._encodeEnumerated; }
-    return _cached_encoder_for_JobType(value, elGetter);
-}
+export const _encode_JobType = $._encodeEnumerated;
 
 
 /* eslint-enable */

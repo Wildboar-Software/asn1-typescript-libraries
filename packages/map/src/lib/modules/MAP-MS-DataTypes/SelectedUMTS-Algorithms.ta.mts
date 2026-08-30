@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAlgorithm, _encode_ChosenIntegrityProtectionAlgorithm } from "../MAP-MS-DataTypes/ChosenIntegrityProtectionAlgorithm.ta.mjs";
-// export { ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAlgorithm, _encode_ChosenIntegrityProtectionAlgorithm } from "../MAP-MS-DataTypes/ChosenIntegrityProtectionAlgorithm.ta.mjs";
 import { ChosenEncryptionAlgorithm, _decode_ChosenEncryptionAlgorithm, _encode_ChosenEncryptionAlgorithm } from "../MAP-MS-DataTypes/ChosenEncryptionAlgorithm.ta.mjs";
-// export { ChosenEncryptionAlgorithm, _decode_ChosenEncryptionAlgorithm, _encode_ChosenEncryptionAlgorithm } from "../MAP-MS-DataTypes/ChosenEncryptionAlgorithm.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class SelectedUMTS_Algorithms {
  */
 export
 const _root_component_type_list_1_spec_for_SelectedUMTS_Algorithms: $.ComponentSpec[] = [
-    new $.ComponentSpec("integrityProtectionAlgorithm", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("encryptionAlgorithm", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("integrityProtectionAlgorithm", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("encryptionAlgorithm", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -190,10 +187,10 @@ let _cached_decoder_for_SelectedUMTS_Algorithms: $.ASN1Decoder<SelectedUMTS_Algo
 export
 function _decode_SelectedUMTS_Algorithms (el: _Element): SelectedUMTS_Algorithms {
     if (!_cached_decoder_for_SelectedUMTS_Algorithms) { _cached_decoder_for_SelectedUMTS_Algorithms = function (el: _Element): SelectedUMTS_Algorithms {
-    let integrityProtectionAlgorithm: OPTIONAL<ChosenIntegrityProtectionAlgorithm>;
-    let encryptionAlgorithm: OPTIONAL<ChosenEncryptionAlgorithm>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let integrityProtectionAlgorithm: OPTIONAL<ChosenIntegrityProtectionAlgorithm> = undefined;
+    let encryptionAlgorithm: OPTIONAL<ChosenEncryptionAlgorithm> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "integrityProtectionAlgorithm": (_el: _Element): void => { integrityProtectionAlgorithm = $._decode_implicit<ChosenIntegrityProtectionAlgorithm>(() => _decode_ChosenIntegrityProtectionAlgorithm)(_el); },
         "encryptionAlgorithm": (_el: _Element): void => { encryptionAlgorithm = $._decode_implicit<ChosenEncryptionAlgorithm>(() => _decode_ChosenEncryptionAlgorithm)(_el); },

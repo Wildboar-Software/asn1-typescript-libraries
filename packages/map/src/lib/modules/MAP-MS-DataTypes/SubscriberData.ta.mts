@@ -67,27 +67,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
-// export { Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
 import { SubscriberStatus, _enum_for_SubscriberStatus, SubscriberStatus_serviceGranted /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceGranted /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberStatus_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriberStatus, _encode_SubscriberStatus } from "../MAP-MS-DataTypes/SubscriberStatus.ta.mjs";
-// export { SubscriberStatus, _enum_for_SubscriberStatus, SubscriberStatus_serviceGranted /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceGranted /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberStatus_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriberStatus, _encode_SubscriberStatus } from "../MAP-MS-DataTypes/SubscriberStatus.ta.mjs";
 import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
-// export { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
 import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
-// export { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
 import { Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
-// export { Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
 import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
-// export { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
 import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
-// export { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
 import { VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
-// export { VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
 import { VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
-// export { VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
 import { VlrCamelSubscriptionInfo, _decode_VlrCamelSubscriptionInfo, _encode_VlrCamelSubscriptionInfo } from "../MAP-MS-DataTypes/VlrCamelSubscriptionInfo.ta.mjs";
-// export { VlrCamelSubscriptionInfo, _decode_VlrCamelSubscriptionInfo, _encode_VlrCamelSubscriptionInfo } from "../MAP-MS-DataTypes/VlrCamelSubscriptionInfo.ta.mjs";
 
 
 /**
@@ -231,18 +220,18 @@ class SubscriberData {
  */
 export
 const _root_component_type_list_1_spec_for_SubscriberData: $.ComponentSpec[] = [
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("category", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("subscriberStatus", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("bearerServiceList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("teleserviceList", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("provisionedSS", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("odb-Data", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("roamingRestrictionDueToUnsupportedFeature", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("regionalSubscriptionData", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("vbsSubscriptionData", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("vgcsSubscriptionData", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("vlrCamelSubscriptionInfo", true, $.hasTag(_TagClass.context, 13), undefined, undefined)
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("category", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("subscriberStatus", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("bearerServiceList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("teleserviceList", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("provisionedSS", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("odb-Data", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("roamingRestrictionDueToUnsupportedFeature", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("regionalSubscriptionData", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("vbsSubscriptionData", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("vgcsSubscriptionData", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("vlrCamelSubscriptionInfo", true, $.hasTag(_TagClass.context, 13))
 ];
 
 /**
@@ -282,18 +271,18 @@ let _cached_decoder_for_SubscriberData: $.ASN1Decoder<SubscriberData> | null = n
 export
 function _decode_SubscriberData (el: _Element): SubscriberData {
     if (!_cached_decoder_for_SubscriberData) { _cached_decoder_for_SubscriberData = function (el: _Element): SubscriberData {
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let category: OPTIONAL<Category>;
-    let subscriberStatus: OPTIONAL<SubscriberStatus>;
-    let bearerServiceList: OPTIONAL<BearerServiceList>;
-    let teleserviceList: OPTIONAL<TeleserviceList>;
-    let provisionedSS: OPTIONAL<Ext_SS_InfoList>;
-    let odb_Data: OPTIONAL<ODB_Data>;
-    let roamingRestrictionDueToUnsupportedFeature: OPTIONAL<NULL>;
-    let regionalSubscriptionData: OPTIONAL<ZoneCodeList>;
-    let vbsSubscriptionData: OPTIONAL<VBSDataList>;
-    let vgcsSubscriptionData: OPTIONAL<VGCSDataList>;
-    let vlrCamelSubscriptionInfo: OPTIONAL<VlrCamelSubscriptionInfo>;
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let category: OPTIONAL<Category> = undefined;
+    let subscriberStatus: OPTIONAL<SubscriberStatus> = undefined;
+    let bearerServiceList: OPTIONAL<BearerServiceList> = undefined;
+    let teleserviceList: OPTIONAL<TeleserviceList> = undefined;
+    let provisionedSS: OPTIONAL<Ext_SS_InfoList> = undefined;
+    let odb_Data: OPTIONAL<ODB_Data> = undefined;
+    let roamingRestrictionDueToUnsupportedFeature: OPTIONAL<NULL> = undefined;
+    let regionalSubscriptionData: OPTIONAL<ZoneCodeList> = undefined;
+    let vbsSubscriptionData: OPTIONAL<VBSDataList> = undefined;
+    let vgcsSubscriptionData: OPTIONAL<VGCSDataList> = undefined;
+    let vlrCamelSubscriptionInfo: OPTIONAL<VlrCamelSubscriptionInfo> = undefined;
     const callbacks: $.DecodingMap = {
         "msisdn": (_el: _Element): void => { msisdn = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "category": (_el: _Element): void => { category = $._decode_implicit<Category>(() => _decode_Category)(_el); },

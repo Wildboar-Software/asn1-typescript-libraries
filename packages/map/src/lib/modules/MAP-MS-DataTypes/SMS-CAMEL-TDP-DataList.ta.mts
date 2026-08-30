@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_CAMEL_TDP_Data, _decode_SMS_CAMEL_TDP_Data, _encode_SMS_CAMEL_TDP_Data } from "../MAP-MS-DataTypes/SMS-CAMEL-TDP-Data.ta.mjs";
-// export { SMS_CAMEL_TDP_Data, _decode_SMS_CAMEL_TDP_Data, _encode_SMS_CAMEL_TDP_Data } from "../MAP-MS-DataTypes/SMS-CAMEL-TDP-Data.ta.mjs";
 
+
+import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 
 /**
  * @summary SMS_CAMEL_TDP_DataList
@@ -95,7 +97,11 @@ let _cached_decoder_for_SMS_CAMEL_TDP_DataList: $.ASN1Decoder<SMS_CAMEL_TDP_Data
 export
 function _decode_SMS_CAMEL_TDP_DataList (el: _Element): SMS_CAMEL_TDP_DataList {
     if (!_cached_decoder_for_SMS_CAMEL_TDP_DataList) { _cached_decoder_for_SMS_CAMEL_TDP_DataList = $._decodeSequenceOf<SMS_CAMEL_TDP_Data>(() => _decode_SMS_CAMEL_TDP_Data); }
-    return _cached_decoder_for_SMS_CAMEL_TDP_DataList(el);
+    const value = _cached_decoder_for_SMS_CAMEL_TDP_DataList(el);
+    if (value.length < 1 || value.length > maxNumOfCamelTDPData) {
+        throw new ASN1SizeError("SMS_CAMEL_TDP_DataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_SMS_CAMEL_TDP_DataList: $.ASN1Encoder<SMS_CAMEL_TDP_DataList> | null = null;

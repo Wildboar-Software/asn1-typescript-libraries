@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AbsentSubscriberReason, _enum_for_AbsentSubscriberReason, AbsentSubscriberReason_imsiDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_restrictedArea /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_noPageResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, noPageResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_purgedMS /* IMPORTED_LONG_ENUMERATION_ITEM */, purgedMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_mtRoamingRetry /* IMPORTED_LONG_ENUMERATION_ITEM */, mtRoamingRetry /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_busySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, busySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AbsentSubscriberReason, _encode_AbsentSubscriberReason } from "../MAP-ER-DataTypes/AbsentSubscriberReason.ta.mjs";
-// export { AbsentSubscriberReason, _enum_for_AbsentSubscriberReason, AbsentSubscriberReason_imsiDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_restrictedArea /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_noPageResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, noPageResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_purgedMS /* IMPORTED_LONG_ENUMERATION_ITEM */, purgedMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_mtRoamingRetry /* IMPORTED_LONG_ENUMERATION_ITEM */, mtRoamingRetry /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_busySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, busySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AbsentSubscriberReason, _encode_AbsentSubscriberReason } from "../MAP-ER-DataTypes/AbsentSubscriberReason.ta.mjs";
 
 
 /**
@@ -145,7 +143,7 @@ class AbsentSubscriberParam {
  */
 export
 const _root_component_type_list_1_spec_for_AbsentSubscriberParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -171,7 +169,7 @@ const _root_component_type_list_2_spec_for_AbsentSubscriberParam: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_AbsentSubscriberParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("absentSubscriberReason", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("absentSubscriberReason", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_AbsentSubscriberParam: $.ASN1Decoder<AbsentSubscriberParam> | null = null;
@@ -185,9 +183,9 @@ let _cached_decoder_for_AbsentSubscriberParam: $.ASN1Decoder<AbsentSubscriberPar
 export
 function _decode_AbsentSubscriberParam (el: _Element): AbsentSubscriberParam {
     if (!_cached_decoder_for_AbsentSubscriberParam) { _cached_decoder_for_AbsentSubscriberParam = function (el: _Element): AbsentSubscriberParam {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let absentSubscriberReason: OPTIONAL<AbsentSubscriberReason>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let absentSubscriberReason: OPTIONAL<AbsentSubscriberReason> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },
         "absentSubscriberReason": (_el: _Element): void => { absentSubscriberReason = $._decode_implicit<AbsentSubscriberReason>(() => _decode_AbsentSubscriberReason)(_el); }

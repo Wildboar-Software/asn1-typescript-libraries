@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WLAN_Offloadability_Indication, _enum_for_WLAN_Offloadability_Indication, WLAN_Offloadability_Indication_notAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, WLAN_Offloadability_Indication_allowed /* IMPORTED_LONG_ENUMERATION_ITEM */, allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_WLAN_Offloadability_Indication, _encode_WLAN_Offloadability_Indication } from "../MAP-MS-DataTypes/WLAN-Offloadability-Indication.ta.mjs";
-// export { WLAN_Offloadability_Indication, _enum_for_WLAN_Offloadability_Indication, WLAN_Offloadability_Indication_notAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, WLAN_Offloadability_Indication_allowed /* IMPORTED_LONG_ENUMERATION_ITEM */, allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_WLAN_Offloadability_Indication, _encode_WLAN_Offloadability_Indication } from "../MAP-MS-DataTypes/WLAN-Offloadability-Indication.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -158,9 +156,9 @@ class WLAN_Offloadability {
  */
 export
 const _root_component_type_list_1_spec_for_WLAN_Offloadability: $.ComponentSpec[] = [
-    new $.ComponentSpec("wlan-offloadability-EUTRAN", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("wlan-offloadability-UTRAN", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("wlan-offloadability-EUTRAN", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("wlan-offloadability-UTRAN", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -200,10 +198,10 @@ let _cached_decoder_for_WLAN_Offloadability: $.ASN1Decoder<WLAN_Offloadability> 
 export
 function _decode_WLAN_Offloadability (el: _Element): WLAN_Offloadability {
     if (!_cached_decoder_for_WLAN_Offloadability) { _cached_decoder_for_WLAN_Offloadability = function (el: _Element): WLAN_Offloadability {
-    let wlan_offloadability_EUTRAN: OPTIONAL<WLAN_Offloadability_Indication>;
-    let wlan_offloadability_UTRAN: OPTIONAL<WLAN_Offloadability_Indication>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let wlan_offloadability_EUTRAN: OPTIONAL<WLAN_Offloadability_Indication> = undefined;
+    let wlan_offloadability_UTRAN: OPTIONAL<WLAN_Offloadability_Indication> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "wlan-offloadability-EUTRAN": (_el: _Element): void => { wlan_offloadability_EUTRAN = $._decode_implicit<WLAN_Offloadability_Indication>(() => _decode_WLAN_Offloadability_Indication)(_el); },
         "wlan-offloadability-UTRAN": (_el: _Element): void => { wlan_offloadability_UTRAN = $._decode_implicit<WLAN_Offloadability_Indication>(() => _decode_WLAN_Offloadability_Indication)(_el); },

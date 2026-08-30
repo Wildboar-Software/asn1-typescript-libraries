@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -157,21 +158,19 @@ const SupportedLCS_CapabilitySets_lcsCapabilitySet5: number = 4; /* LONG_NAMED_B
 export
 const lcsCapabilitySet5: number = SupportedLCS_CapabilitySets_lcsCapabilitySet5; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SupportedLCS_CapabilitySets: $.ASN1Decoder<SupportedLCS_CapabilitySets> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedLCS_CapabilitySets
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SupportedLCS_CapabilitySets (el: _Element): SupportedLCS_CapabilitySets {
-    if (!_cached_decoder_for_SupportedLCS_CapabilitySets) { _cached_decoder_for_SupportedLCS_CapabilitySets = $._decodeBitString; }
-    return _cached_decoder_for_SupportedLCS_CapabilitySets(el);
-}
-
-let _cached_encoder_for_SupportedLCS_CapabilitySets: $.ASN1Encoder<SupportedLCS_CapabilitySets> | null = null;
+export const _decode_SupportedLCS_CapabilitySets = (el: _Element): SupportedLCS_CapabilitySets => {
+    const value = $._decodeBitString(el);
+    if (value.length < 2 || value.length > 16) {
+        throw new ASN1SizeError("SupportedLCS_CapabilitySets violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SupportedLCS_CapabilitySets into an ASN.1 Element.
@@ -180,11 +179,7 @@ let _cached_encoder_for_SupportedLCS_CapabilitySets: $.ASN1Encoder<SupportedLCS_
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SupportedLCS_CapabilitySets, encoded as an ASN.1 Element.
  */
-export
-function _encode_SupportedLCS_CapabilitySets (value: SupportedLCS_CapabilitySets, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupportedLCS_CapabilitySets) { _cached_encoder_for_SupportedLCS_CapabilitySets = $._encodeBitString; }
-    return _cached_encoder_for_SupportedLCS_CapabilitySets(value, elGetter);
-}
+export const _encode_SupportedLCS_CapabilitySets = $._encodeBitString;
 
 
 /* eslint-enable */

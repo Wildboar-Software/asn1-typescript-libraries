@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } from "../MAP-MS-DataTypes/BasicServiceList.ta.mjs";
-// export { BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } from "../MAP-MS-DataTypes/BasicServiceList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class MSISDN_BS {
  */
 export
 const _root_component_type_list_1_spec_for_MSISDN_BS: $.ComponentSpec[] = [
-    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("basicServiceList", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("basicServiceList", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -191,9 +188,9 @@ export
 function _decode_MSISDN_BS (el: _Element): MSISDN_BS {
     if (!_cached_decoder_for_MSISDN_BS) { _cached_decoder_for_MSISDN_BS = function (el: _Element): MSISDN_BS {
     let msisdn!: ISDN_AddressString;
-    let basicServiceList: OPTIONAL<BasicServiceList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let basicServiceList: OPTIONAL<BasicServiceList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "msisdn": (_el: _Element): void => { msisdn = _decode_ISDN_AddressString(_el); },
         "basicServiceList": (_el: _Element): void => { basicServiceList = $._decode_implicit<BasicServiceList>(() => _decode_BasicServiceList)(_el); },

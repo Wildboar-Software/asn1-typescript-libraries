@@ -67,7 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { gsm_NetworkId } from "../MobileDomainDefinitions/gsm-NetworkId.va.mjs";
-// export { gsm_NetworkId } from "../MobileDomainDefinitions/gsm-NetworkId.va.mjs";
+import { as_Id } from "../MobileDomainDefinitions/as-Id.va.mjs";
 
 
 /**
@@ -83,8 +83,8 @@ import { gsm_NetworkId } from "../MobileDomainDefinitions/gsm-NetworkId.va.mjs";
  * @constant
  */
 export
-const map_DialogueAS: OBJECT_IDENTIFIER = new _OID([
-    as_Id,
+const map_DialogueAS: OBJECT_IDENTIFIER = _OID.fromParts([
+    Number(as_Id),
     /* map-DialoguePDU */ 1,
     /* version1 */ 1,
 ], gsm_NetworkId);

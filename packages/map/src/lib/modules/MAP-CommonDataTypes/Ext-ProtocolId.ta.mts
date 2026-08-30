@@ -108,21 +108,13 @@ const Ext_ProtocolId_ets_300356: Ext_ProtocolId = 1; /* LONG_NAMED_ENUMERATED_VA
 export
 const ets_300356: Ext_ProtocolId = Ext_ProtocolId_ets_300356; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Ext_ProtocolId: $.ASN1Decoder<Ext_ProtocolId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext_ProtocolId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Ext_ProtocolId (el: _Element): Ext_ProtocolId {
-    if (!_cached_decoder_for_Ext_ProtocolId) { _cached_decoder_for_Ext_ProtocolId = $._decodeEnumerated; }
-    return _cached_decoder_for_Ext_ProtocolId(el);
-}
-
-let _cached_encoder_for_Ext_ProtocolId: $.ASN1Encoder<Ext_ProtocolId> | null = null;
+export const _decode_Ext_ProtocolId = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) Ext_ProtocolId into an ASN.1 Element.
@@ -131,11 +123,7 @@ let _cached_encoder_for_Ext_ProtocolId: $.ASN1Encoder<Ext_ProtocolId> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_ProtocolId, encoded as an ASN.1 Element.
  */
-export
-function _encode_Ext_ProtocolId (value: Ext_ProtocolId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Ext_ProtocolId) { _cached_encoder_for_Ext_ProtocolId = $._encodeEnumerated; }
-    return _cached_encoder_for_Ext_ProtocolId(value, elGetter);
-}
+export const _encode_Ext_ProtocolId = $._encodeEnumerated;
 
 
 /* eslint-enable */

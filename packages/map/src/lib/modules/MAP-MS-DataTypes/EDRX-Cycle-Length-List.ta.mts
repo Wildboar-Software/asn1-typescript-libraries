@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EDRX_Cycle_Length, _decode_EDRX_Cycle_Length, _encode_EDRX_Cycle_Length } from "../MAP-MS-DataTypes/EDRX-Cycle-Length.ta.mjs";
-// export { EDRX_Cycle_Length, _decode_EDRX_Cycle_Length, _encode_EDRX_Cycle_Length } from "../MAP-MS-DataTypes/EDRX-Cycle-Length.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_EDRX_Cycle_Length_List: $.ASN1Decoder<EDRX_Cycle_Length_
 export
 function _decode_EDRX_Cycle_Length_List (el: _Element): EDRX_Cycle_Length_List {
     if (!_cached_decoder_for_EDRX_Cycle_Length_List) { _cached_decoder_for_EDRX_Cycle_Length_List = $._decodeSequenceOf<EDRX_Cycle_Length>(() => _decode_EDRX_Cycle_Length); }
-    return _cached_decoder_for_EDRX_Cycle_Length_List(el);
+    const value = _cached_decoder_for_EDRX_Cycle_Length_List(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("EDRX_Cycle_Length_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_EDRX_Cycle_Length_List: $.ASN1Encoder<EDRX_Cycle_Length_List> | null = null;

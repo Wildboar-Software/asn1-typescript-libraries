@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -187,21 +188,19 @@ const SupportedGADShapes_ellipsoidArc: number = 6; /* LONG_NAMED_BIT */
 export
 const ellipsoidArc: number = SupportedGADShapes_ellipsoidArc; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SupportedGADShapes: $.ASN1Decoder<SupportedGADShapes> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedGADShapes
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SupportedGADShapes (el: _Element): SupportedGADShapes {
-    if (!_cached_decoder_for_SupportedGADShapes) { _cached_decoder_for_SupportedGADShapes = $._decodeBitString; }
-    return _cached_decoder_for_SupportedGADShapes(el);
-}
-
-let _cached_encoder_for_SupportedGADShapes: $.ASN1Encoder<SupportedGADShapes> | null = null;
+export const _decode_SupportedGADShapes = (el: _Element): SupportedGADShapes => {
+    const value = $._decodeBitString(el);
+    if (value.length < 7 || value.length > 16) {
+        throw new ASN1SizeError("SupportedGADShapes violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SupportedGADShapes into an ASN.1 Element.
@@ -210,11 +209,7 @@ let _cached_encoder_for_SupportedGADShapes: $.ASN1Encoder<SupportedGADShapes> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SupportedGADShapes, encoded as an ASN.1 Element.
  */
-export
-function _encode_SupportedGADShapes (value: SupportedGADShapes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupportedGADShapes) { _cached_encoder_for_SupportedGADShapes = $._encodeBitString; }
-    return _cached_encoder_for_SupportedGADShapes(value, elGetter);
-}
+export const _encode_SupportedGADShapes = $._encodeBitString;
 
 
 /* eslint-enable */

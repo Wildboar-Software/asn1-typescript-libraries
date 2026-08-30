@@ -155,21 +155,13 @@ const InterrogationType_forwarding: InterrogationType = InterrogationType.forwar
 export
 const forwarding: InterrogationType = InterrogationType.forwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_InterrogationType: $.ASN1Decoder<InterrogationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) InterrogationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_InterrogationType (el: _Element): InterrogationType {
-    if (!_cached_decoder_for_InterrogationType) { _cached_decoder_for_InterrogationType = $._decodeEnumerated; }
-    return _cached_decoder_for_InterrogationType(el);
-}
-
-let _cached_encoder_for_InterrogationType: $.ASN1Encoder<InterrogationType> | null = null;
+export const _decode_InterrogationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) InterrogationType into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_InterrogationType: $.ASN1Encoder<InterrogationType> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InterrogationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_InterrogationType (value: InterrogationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InterrogationType) { _cached_encoder_for_InterrogationType = $._encodeEnumerated; }
-    return _cached_encoder_for_InterrogationType(value, elGetter);
-}
+export const _encode_InterrogationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

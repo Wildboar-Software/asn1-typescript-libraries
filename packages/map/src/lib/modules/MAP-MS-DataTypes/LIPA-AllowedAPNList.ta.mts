@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-// export { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 
+
+import { maxNumOfLIPAAllowedAPN } from "./maxNumOfLIPAAllowedAPN.va.mjs";
 
 /**
  * @summary LIPA_AllowedAPNList
@@ -95,7 +97,11 @@ let _cached_decoder_for_LIPA_AllowedAPNList: $.ASN1Decoder<LIPA_AllowedAPNList> 
 export
 function _decode_LIPA_AllowedAPNList (el: _Element): LIPA_AllowedAPNList {
     if (!_cached_decoder_for_LIPA_AllowedAPNList) { _cached_decoder_for_LIPA_AllowedAPNList = $._decodeSequenceOf<APN>(() => _decode_APN); }
-    return _cached_decoder_for_LIPA_AllowedAPNList(el);
+    const value = _cached_decoder_for_LIPA_AllowedAPNList(el);
+    if (value.length < 1 || value.length > maxNumOfLIPAAllowedAPN) {
+        throw new ASN1SizeError("LIPA_AllowedAPNList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_LIPA_AllowedAPNList: $.ASN1Encoder<LIPA_AllowedAPNList> | null = null;

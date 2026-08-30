@@ -233,21 +233,13 @@ const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalCli
 export
 const unauthorizedCallSessionRelatedExternalClient: UnauthorizedLCSClient_Diagnostic = UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UnauthorizedLCSClient_Diagnostic: $.ASN1Decoder<UnauthorizedLCSClient_Diagnostic> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UnauthorizedLCSClient_Diagnostic
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UnauthorizedLCSClient_Diagnostic (el: _Element): UnauthorizedLCSClient_Diagnostic {
-    if (!_cached_decoder_for_UnauthorizedLCSClient_Diagnostic) { _cached_decoder_for_UnauthorizedLCSClient_Diagnostic = $._decodeEnumerated; }
-    return _cached_decoder_for_UnauthorizedLCSClient_Diagnostic(el);
-}
-
-let _cached_encoder_for_UnauthorizedLCSClient_Diagnostic: $.ASN1Encoder<UnauthorizedLCSClient_Diagnostic> | null = null;
+export const _decode_UnauthorizedLCSClient_Diagnostic = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UnauthorizedLCSClient_Diagnostic into an ASN.1 Element.
@@ -256,11 +248,7 @@ let _cached_encoder_for_UnauthorizedLCSClient_Diagnostic: $.ASN1Encoder<Unauthor
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnauthorizedLCSClient_Diagnostic, encoded as an ASN.1 Element.
  */
-export
-function _encode_UnauthorizedLCSClient_Diagnostic (value: UnauthorizedLCSClient_Diagnostic, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UnauthorizedLCSClient_Diagnostic) { _cached_encoder_for_UnauthorizedLCSClient_Diagnostic = $._encodeEnumerated; }
-    return _cached_encoder_for_UnauthorizedLCSClient_Diagnostic(value, elGetter);
-}
+export const _encode_UnauthorizedLCSClient_Diagnostic = $._encodeEnumerated;
 
 
 /* eslint-enable */

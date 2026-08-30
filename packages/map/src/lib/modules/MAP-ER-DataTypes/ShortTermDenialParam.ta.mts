@@ -162,7 +162,7 @@ let _cached_decoder_for_ShortTermDenialParam: $.ASN1Decoder<ShortTermDenialParam
 export
 function _decode_ShortTermDenialParam (el: _Element): ShortTermDenialParam {
     if (!_cached_decoder_for_ShortTermDenialParam) { _cached_decoder_for_ShortTermDenialParam = function (el: _Element): ShortTermDenialParam {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

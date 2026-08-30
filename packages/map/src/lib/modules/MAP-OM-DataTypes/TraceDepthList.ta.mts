@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TraceDepth, _enum_for_TraceDepth, TraceDepth_minimum /* IMPORTED_LONG_ENUMERATION_ITEM */, minimum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximum /* IMPORTED_LONG_ENUMERATION_ITEM */, maximum /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepth, _encode_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
-// export { TraceDepth, _enum_for_TraceDepth, TraceDepth_minimum /* IMPORTED_LONG_ENUMERATION_ITEM */, minimum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximum /* IMPORTED_LONG_ENUMERATION_ITEM */, maximum /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepth, _encode_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
 import { TraceDepthExtension, _enum_for_TraceDepthExtension, TraceDepthExtension_minimumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, minimumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_mediumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_maximumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, maximumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepthExtension, _encode_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
-// export { TraceDepthExtension, _enum_for_TraceDepthExtension, TraceDepthExtension_minimumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, minimumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_mediumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_maximumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, maximumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepthExtension, _encode_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
 
 
 /**
@@ -385,12 +383,12 @@ class TraceDepthList {
  */
 export
 const _root_component_type_list_1_spec_for_TraceDepthList: $.ComponentSpec[] = [
-    new $.ComponentSpec("msc-s-TraceDepth", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mgw-TraceDepth", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("sgsn-TraceDepth", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("ggsn-TraceDepth", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("rnc-TraceDepth", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("bmsc-TraceDepth", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("msc-s-TraceDepth", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mgw-TraceDepth", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("sgsn-TraceDepth", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("ggsn-TraceDepth", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("rnc-TraceDepth", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("bmsc-TraceDepth", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -416,20 +414,20 @@ const _root_component_type_list_2_spec_for_TraceDepthList: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_TraceDepthList: $.ComponentSpec[] = [
-    new $.ComponentSpec("mme-TraceDepth", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("sgw-TraceDepth", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("pgw-TraceDepth", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("eNB-TraceDepth", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("msc-s-TraceDepthExtension", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("mgw-TraceDepthExtension", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("sgsn-TraceDepthExtension", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("ggsn-TraceDepthExtension", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("rnc-TraceDepthExtension", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("bmsc-TraceDepthExtension", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("mme-TraceDepthExtension", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("sgw-TraceDepthExtension", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("pgw-TraceDepthExtension", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("eNB-TraceDepthExtension", true, $.hasTag(_TagClass.context, 19), undefined, undefined)
+    new $.ComponentSpec("mme-TraceDepth", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("sgw-TraceDepth", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("pgw-TraceDepth", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("eNB-TraceDepth", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("msc-s-TraceDepthExtension", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("mgw-TraceDepthExtension", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("sgsn-TraceDepthExtension", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("ggsn-TraceDepthExtension", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("rnc-TraceDepthExtension", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("bmsc-TraceDepthExtension", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("mme-TraceDepthExtension", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("sgw-TraceDepthExtension", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("pgw-TraceDepthExtension", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("eNB-TraceDepthExtension", true, $.hasTag(_TagClass.context, 19))
 ];
 
 let _cached_decoder_for_TraceDepthList: $.ASN1Decoder<TraceDepthList> | null = null;
@@ -443,27 +441,27 @@ let _cached_decoder_for_TraceDepthList: $.ASN1Decoder<TraceDepthList> | null = n
 export
 function _decode_TraceDepthList (el: _Element): TraceDepthList {
     if (!_cached_decoder_for_TraceDepthList) { _cached_decoder_for_TraceDepthList = function (el: _Element): TraceDepthList {
-    let msc_s_TraceDepth: OPTIONAL<TraceDepth>;
-    let mgw_TraceDepth: OPTIONAL<TraceDepth>;
-    let sgsn_TraceDepth: OPTIONAL<TraceDepth>;
-    let ggsn_TraceDepth: OPTIONAL<TraceDepth>;
-    let rnc_TraceDepth: OPTIONAL<TraceDepth>;
-    let bmsc_TraceDepth: OPTIONAL<TraceDepth>;
-    let mme_TraceDepth: OPTIONAL<TraceDepth>;
-    let sgw_TraceDepth: OPTIONAL<TraceDepth>;
-    let pgw_TraceDepth: OPTIONAL<TraceDepth>;
-    let eNB_TraceDepth: OPTIONAL<TraceDepth>;
-    let msc_s_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let mgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let sgsn_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let ggsn_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let rnc_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let bmsc_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let mme_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let sgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let pgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let eNB_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let msc_s_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let mgw_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let sgsn_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let ggsn_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let rnc_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let bmsc_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let mme_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let sgw_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let pgw_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let eNB_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let msc_s_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let mgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let sgsn_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let ggsn_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let rnc_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let bmsc_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let mme_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let sgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let pgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let eNB_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "msc-s-TraceDepth": (_el: _Element): void => { msc_s_TraceDepth = $._decode_implicit<TraceDepth>(() => _decode_TraceDepth)(_el); },
         "mgw-TraceDepth": (_el: _Element): void => { mgw_TraceDepth = $._decode_implicit<TraceDepth>(() => _decode_TraceDepth)(_el); },

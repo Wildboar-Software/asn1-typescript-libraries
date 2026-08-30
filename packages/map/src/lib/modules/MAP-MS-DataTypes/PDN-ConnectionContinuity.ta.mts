@@ -178,21 +178,13 @@ const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationReques
 export
 const disconnectPDN_ConnectionWithoutReactivationRequest: PDN_ConnectionContinuity = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PDN_ConnectionContinuity: $.ASN1Decoder<PDN_ConnectionContinuity> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PDN_ConnectionContinuity
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PDN_ConnectionContinuity (el: _Element): PDN_ConnectionContinuity {
-    if (!_cached_decoder_for_PDN_ConnectionContinuity) { _cached_decoder_for_PDN_ConnectionContinuity = $._decodeEnumerated; }
-    return _cached_decoder_for_PDN_ConnectionContinuity(el);
-}
-
-let _cached_encoder_for_PDN_ConnectionContinuity: $.ASN1Encoder<PDN_ConnectionContinuity> | null = null;
+export const _decode_PDN_ConnectionContinuity = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PDN_ConnectionContinuity into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_PDN_ConnectionContinuity: $.ASN1Encoder<PDN_ConnectionCo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDN_ConnectionContinuity, encoded as an ASN.1 Element.
  */
-export
-function _encode_PDN_ConnectionContinuity (value: PDN_ConnectionContinuity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDN_ConnectionContinuity) { _cached_encoder_for_PDN_ConnectionContinuity = $._encodeEnumerated; }
-    return _cached_encoder_for_PDN_ConnectionContinuity(value, elGetter);
-}
+export const _encode_PDN_ConnectionContinuity = $._encodeEnumerated;
 
 
 /* eslint-enable */

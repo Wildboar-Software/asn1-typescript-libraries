@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CallReferenceNumber = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_CallReferenceNumber: $.ASN1Decoder<CallReferenceNumber> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CallReferenceNumber
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CallReferenceNumber (el: _Element): CallReferenceNumber {
-    if (!_cached_decoder_for_CallReferenceNumber) { _cached_decoder_for_CallReferenceNumber = $._decodeOctetString; }
-    return _cached_decoder_for_CallReferenceNumber(el);
-}
-
-let _cached_encoder_for_CallReferenceNumber: $.ASN1Encoder<CallReferenceNumber> | null = null;
+export const _decode_CallReferenceNumber = (el: _Element): CallReferenceNumber => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("CallReferenceNumber violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) CallReferenceNumber into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_CallReferenceNumber: $.ASN1Encoder<CallReferenceNumber> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallReferenceNumber, encoded as an ASN.1 Element.
  */
-export
-function _encode_CallReferenceNumber (value: CallReferenceNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallReferenceNumber) { _cached_encoder_for_CallReferenceNumber = $._encodeOctetString; }
-    return _cached_encoder_for_CallReferenceNumber(value, elGetter);
-}
+export const _encode_CallReferenceNumber = $._encodeOctetString;
 
 
 /* eslint-enable */

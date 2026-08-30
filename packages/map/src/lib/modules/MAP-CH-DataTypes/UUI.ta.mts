@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UUI = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_UUI: $.ASN1Decoder<UUI> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UUI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UUI (el: _Element): UUI {
-    if (!_cached_decoder_for_UUI) { _cached_decoder_for_UUI = $._decodeOctetString; }
-    return _cached_decoder_for_UUI(el);
-}
-
-let _cached_encoder_for_UUI: $.ASN1Encoder<UUI> | null = null;
+export const _decode_UUI = (el: _Element): UUI => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 131) {
+        throw new ASN1SizeError("UUI violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) UUI into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_UUI: $.ASN1Encoder<UUI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UUI, encoded as an ASN.1 Element.
  */
-export
-function _encode_UUI (value: UUI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UUI) { _cached_encoder_for_UUI = $._encodeOctetString; }
-    return _cached_encoder_for_UUI(value, elGetter);
-}
+export const _encode_UUI = $._encodeOctetString;
 
 
 /* eslint-enable */

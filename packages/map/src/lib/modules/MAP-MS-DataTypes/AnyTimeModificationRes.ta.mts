@@ -67,25 +67,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_SS_InfoFor_CSE, _decode_Ext_SS_InfoFor_CSE, _encode_Ext_SS_InfoFor_CSE } from "../MAP-MS-DataTypes/Ext-SS-InfoFor-CSE.ta.mjs";
-// export { Ext_SS_InfoFor_CSE, _decode_Ext_SS_InfoFor_CSE, _encode_Ext_SS_InfoFor_CSE } from "../MAP-MS-DataTypes/Ext-SS-InfoFor-CSE.ta.mjs";
 import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
-// export { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
-// export { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
 import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
-// export { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
 import { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
-// export { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
 import { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
-// export { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
 import { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
-// export { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
 import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
-// export { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 
 
 /**
@@ -212,9 +202,9 @@ class AnyTimeModificationRes {
  */
 export
 const _root_component_type_list_1_spec_for_AnyTimeModificationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-InfoFor-CSE", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("camel-SubscriptionInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("ss-InfoFor-CSE", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("camel-SubscriptionInfo", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -240,13 +230,13 @@ const _root_component_type_list_2_spec_for_AnyTimeModificationRes: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_AnyTimeModificationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("odb-Info", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("cw-Data", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("ch-Data", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("clip-Data", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("clir-Data", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("ect-data", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("serviceCentreAddress", true, $.hasTag(_TagClass.context, 9), undefined, undefined)
+    new $.ComponentSpec("odb-Info", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("cw-Data", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("ch-Data", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("clip-Data", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("clir-Data", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("ect-data", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("serviceCentreAddress", true, $.hasTag(_TagClass.context, 9))
 ];
 
 let _cached_decoder_for_AnyTimeModificationRes: $.ASN1Decoder<AnyTimeModificationRes> | null = null;
@@ -260,17 +250,17 @@ let _cached_decoder_for_AnyTimeModificationRes: $.ASN1Decoder<AnyTimeModificatio
 export
 function _decode_AnyTimeModificationRes (el: _Element): AnyTimeModificationRes {
     if (!_cached_decoder_for_AnyTimeModificationRes) { _cached_decoder_for_AnyTimeModificationRes = function (el: _Element): AnyTimeModificationRes {
-    let ss_InfoFor_CSE: OPTIONAL<Ext_SS_InfoFor_CSE>;
-    let camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let odb_Info: OPTIONAL<ODB_Info>;
-    let cw_Data: OPTIONAL<CallWaitingData>;
-    let ch_Data: OPTIONAL<CallHoldData>;
-    let clip_Data: OPTIONAL<ClipData>;
-    let clir_Data: OPTIONAL<ClirData>;
-    let ect_data: OPTIONAL<EctData>;
-    let serviceCentreAddress: OPTIONAL<AddressString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ss_InfoFor_CSE: OPTIONAL<Ext_SS_InfoFor_CSE> = undefined;
+    let camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let odb_Info: OPTIONAL<ODB_Info> = undefined;
+    let cw_Data: OPTIONAL<CallWaitingData> = undefined;
+    let ch_Data: OPTIONAL<CallHoldData> = undefined;
+    let clip_Data: OPTIONAL<ClipData> = undefined;
+    let clir_Data: OPTIONAL<ClirData> = undefined;
+    let ect_data: OPTIONAL<EctData> = undefined;
+    let serviceCentreAddress: OPTIONAL<AddressString> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-InfoFor-CSE": (_el: _Element): void => { ss_InfoFor_CSE = $._decode_explicit<Ext_SS_InfoFor_CSE>(() => _decode_Ext_SS_InfoFor_CSE)(_el); },
         "camel-SubscriptionInfo": (_el: _Element): void => { camel_SubscriptionInfo = $._decode_implicit<CAMEL_SubscriptionInfo>(() => _decode_CAMEL_SubscriptionInfo)(_el); },

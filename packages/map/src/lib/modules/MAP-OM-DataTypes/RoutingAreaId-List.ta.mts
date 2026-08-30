@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
-// export { RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_RoutingAreaId_List: $.ASN1Decoder<RoutingAreaId_List> | 
 export
 function _decode_RoutingAreaId_List (el: _Element): RoutingAreaId_List {
     if (!_cached_decoder_for_RoutingAreaId_List) { _cached_decoder_for_RoutingAreaId_List = $._decodeSequenceOf<RAIdentity>(() => _decode_RAIdentity); }
-    return _cached_decoder_for_RoutingAreaId_List(el);
+    const value = _cached_decoder_for_RoutingAreaId_List(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("RoutingAreaId_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RoutingAreaId_List: $.ASN1Encoder<RoutingAreaId_List> | null = null;

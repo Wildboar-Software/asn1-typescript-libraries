@@ -197,21 +197,13 @@ const LocationEstimateType_notificationVerificationOnly: LocationEstimateType = 
 export
 const notificationVerificationOnly: LocationEstimateType = LocationEstimateType_notificationVerificationOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LocationEstimateType: $.ASN1Decoder<LocationEstimateType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LocationEstimateType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LocationEstimateType (el: _Element): LocationEstimateType {
-    if (!_cached_decoder_for_LocationEstimateType) { _cached_decoder_for_LocationEstimateType = $._decodeEnumerated; }
-    return _cached_decoder_for_LocationEstimateType(el);
-}
-
-let _cached_encoder_for_LocationEstimateType: $.ASN1Encoder<LocationEstimateType> | null = null;
+export const _decode_LocationEstimateType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LocationEstimateType into an ASN.1 Element.
@@ -220,11 +212,7 @@ let _cached_encoder_for_LocationEstimateType: $.ASN1Encoder<LocationEstimateType
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LocationEstimateType, encoded as an ASN.1 Element.
  */
-export
-function _encode_LocationEstimateType (value: LocationEstimateType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocationEstimateType) { _cached_encoder_for_LocationEstimateType = $._encodeEnumerated; }
-    return _cached_encoder_for_LocationEstimateType(value, elGetter);
-}
+export const _encode_LocationEstimateType = $._encodeEnumerated;
 
 
 /* eslint-enable */

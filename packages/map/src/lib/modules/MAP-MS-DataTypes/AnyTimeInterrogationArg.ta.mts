@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
-// export { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-MS-DataTypes/RequestedInfo.ta.mjs";
-// export { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-MS-DataTypes/RequestedInfo.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -157,10 +153,10 @@ class AnyTimeInterrogationArg {
  */
 export
 const _root_component_type_list_1_spec_for_AnyTimeInterrogationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("subscriberIdentity", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("requestedInfo", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("subscriberIdentity", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestedInfo", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -203,8 +199,8 @@ function _decode_AnyTimeInterrogationArg (el: _Element): AnyTimeInterrogationArg
     let subscriberIdentity!: SubscriberIdentity;
     let requestedInfo!: RequestedInfo;
     let gsmSCF_Address!: ISDN_AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "subscriberIdentity": (_el: _Element): void => { subscriberIdentity = $._decode_explicit<SubscriberIdentity>(() => _decode_SubscriberIdentity)(_el); },
         "requestedInfo": (_el: _Element): void => { requestedInfo = $._decode_implicit<RequestedInfo>(() => _decode_RequestedInfo)(_el); },

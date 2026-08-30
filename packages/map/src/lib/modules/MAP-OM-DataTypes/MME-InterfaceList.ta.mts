@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -157,21 +158,19 @@ const MME_InterfaceList_s11: number = 4; /* LONG_NAMED_BIT */
 export
 const s11: number = MME_InterfaceList_s11; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_MME_InterfaceList: $.ASN1Decoder<MME_InterfaceList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MME_InterfaceList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MME_InterfaceList (el: _Element): MME_InterfaceList {
-    if (!_cached_decoder_for_MME_InterfaceList) { _cached_decoder_for_MME_InterfaceList = $._decodeBitString; }
-    return _cached_decoder_for_MME_InterfaceList(el);
-}
-
-let _cached_encoder_for_MME_InterfaceList: $.ASN1Encoder<MME_InterfaceList> | null = null;
+export const _decode_MME_InterfaceList = (el: _Element): MME_InterfaceList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 5 || value.length > 8) {
+        throw new ASN1SizeError("MME_InterfaceList violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MME_InterfaceList into an ASN.1 Element.
@@ -180,11 +179,7 @@ let _cached_encoder_for_MME_InterfaceList: $.ASN1Encoder<MME_InterfaceList> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MME_InterfaceList, encoded as an ASN.1 Element.
  */
-export
-function _encode_MME_InterfaceList (value: MME_InterfaceList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MME_InterfaceList) { _cached_encoder_for_MME_InterfaceList = $._encodeBitString; }
-    return _cached_encoder_for_MME_InterfaceList(value, elGetter);
-}
+export const _encode_MME_InterfaceList = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_Identifier } from "../MAP-MS-DataTypes/QoS-Class-Identifier.ta.mjs";
-// export { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_Identifier } from "../MAP-MS-DataTypes/QoS-Class-Identifier.ta.mjs";
 import { Allocation_Retention_Priority, _decode_Allocation_Retention_Priority, _encode_Allocation_Retention_Priority } from "../MAP-MS-DataTypes/Allocation-Retention-Priority.ta.mjs";
-// export { Allocation_Retention_Priority, _decode_Allocation_Retention_Priority, _encode_Allocation_Retention_Priority } from "../MAP-MS-DataTypes/Allocation-Retention-Priority.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class EPS_QoS_Subscribed {
  */
 export
 const _root_component_type_list_1_spec_for_EPS_QoS_Subscribed: $.ComponentSpec[] = [
-    new $.ComponentSpec("qos-Class-Identifier", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("allocation-Retention-Priority", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("qos-Class-Identifier", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("allocation-Retention-Priority", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -192,8 +189,8 @@ function _decode_EPS_QoS_Subscribed (el: _Element): EPS_QoS_Subscribed {
     if (!_cached_decoder_for_EPS_QoS_Subscribed) { _cached_decoder_for_EPS_QoS_Subscribed = function (el: _Element): EPS_QoS_Subscribed {
     let qos_Class_Identifier!: QoS_Class_Identifier;
     let allocation_Retention_Priority!: Allocation_Retention_Priority;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "qos-Class-Identifier": (_el: _Element): void => { qos_Class_Identifier = $._decode_implicit<QoS_Class_Identifier>(() => _decode_QoS_Class_Identifier)(_el); },
         "allocation-Retention-Priority": (_el: _Element): void => { allocation_Retention_Priority = $._decode_implicit<Allocation_Retention_Priority>(() => _decode_Allocation_Retention_Priority)(_el); },

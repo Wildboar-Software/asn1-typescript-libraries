@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -130,7 +129,7 @@ class ATM_NotAllowedParam {
  */
 export
 const _root_component_type_list_1_spec_for_ATM_NotAllowedParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -170,8 +169,8 @@ let _cached_decoder_for_ATM_NotAllowedParam: $.ASN1Decoder<ATM_NotAllowedParam> 
 export
 function _decode_ATM_NotAllowedParam (el: _Element): ATM_NotAllowedParam {
     if (!_cached_decoder_for_ATM_NotAllowedParam) { _cached_decoder_for_ATM_NotAllowedParam = function (el: _Element): ATM_NotAllowedParam {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }
     };

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "../MAP-MS-DataTypes/SubscriberInfo.ta.mjs";
-// export { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "../MAP-MS-DataTypes/SubscriberInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class ProvideSubscriberInfoRes {
  */
 export
 const _root_component_type_list_1_spec_for_ProvideSubscriberInfoRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("subscriberInfo", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("subscriberInfo", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -181,8 +179,8 @@ export
 function _decode_ProvideSubscriberInfoRes (el: _Element): ProvideSubscriberInfoRes {
     if (!_cached_decoder_for_ProvideSubscriberInfoRes) { _cached_decoder_for_ProvideSubscriberInfoRes = function (el: _Element): ProvideSubscriberInfoRes {
     let subscriberInfo!: SubscriberInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "subscriberInfo": (_el: _Element): void => { subscriberInfo = _decode_SubscriberInfo(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

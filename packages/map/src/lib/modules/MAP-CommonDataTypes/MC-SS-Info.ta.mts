@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { MaxMC_Bearers, _decode_MaxMC_Bearers, _encode_MaxMC_Bearers } from "../MAP-CommonDataTypes/MaxMC-Bearers.ta.mjs";
-// export { MaxMC_Bearers, _decode_MaxMC_Bearers, _encode_MaxMC_Bearers } from "../MAP-CommonDataTypes/MaxMC-Bearers.ta.mjs";
 import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
-// export { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -166,11 +161,11 @@ class MC_SS_Info {
  */
 export
 const _root_component_type_list_1_spec_for_MC_SS_Info: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("nbrSB", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("nbrUser", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("nbrSB", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("nbrUser", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -214,8 +209,8 @@ function _decode_MC_SS_Info (el: _Element): MC_SS_Info {
     let ss_Status!: Ext_SS_Status;
     let nbrSB!: MaxMC_Bearers;
     let nbrUser!: MC_Bearers;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = $._decode_implicit<SS_Code>(() => _decode_SS_Code)(_el); },
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<Ext_SS_Status>(() => _decode_Ext_SS_Status)(_el); },

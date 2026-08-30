@@ -67,43 +67,24 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-// export { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
 import { IntegrityProtectionInformation, _decode_IntegrityProtectionInformation, _encode_IntegrityProtectionInformation } from "../MAP-MS-DataTypes/IntegrityProtectionInformation.ta.mjs";
-// export { IntegrityProtectionInformation, _decode_IntegrityProtectionInformation, _encode_IntegrityProtectionInformation } from "../MAP-MS-DataTypes/IntegrityProtectionInformation.ta.mjs";
 import { EncryptionInformation, _decode_EncryptionInformation, _encode_EncryptionInformation } from "../MAP-MS-DataTypes/EncryptionInformation.ta.mjs";
-// export { EncryptionInformation, _decode_EncryptionInformation, _encode_EncryptionInformation } from "../MAP-MS-DataTypes/EncryptionInformation.ta.mjs";
-import { KeyStatus, _enum_for_KeyStatus, KeyStatus_old /* IMPORTED_LONG_ENUMERATION_ITEM */, old /* IMPORTED_SHORT_ENUMERATION_ITEM */, KeyStatus_new /* IMPORTED_LONG_ENUMERATION_ITEM */, new_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_KeyStatus, _encode_KeyStatus } from "../MAP-MS-DataTypes/KeyStatus.ta.mjs";
-// export { KeyStatus, _enum_for_KeyStatus, KeyStatus_old /* IMPORTED_LONG_ENUMERATION_ITEM */, old /* IMPORTED_SHORT_ENUMERATION_ITEM */, KeyStatus_new /* IMPORTED_LONG_ENUMERATION_ITEM */, new_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_KeyStatus, _encode_KeyStatus } from "../MAP-MS-DataTypes/KeyStatus.ta.mjs";
+import { KeyStatus, _enum_for_KeyStatus, KeyStatus_old /* IMPORTED_LONG_ENUMERATION_ITEM */, old /* IMPORTED_SHORT_ENUMERATION_ITEM */, KeyStatus_new_ /* IMPORTED_LONG_ENUMERATION_ITEM */, new_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_KeyStatus, _encode_KeyStatus } from "../MAP-MS-DataTypes/KeyStatus.ta.mjs";
 import { AllowedGSM_Algorithms, _decode_AllowedGSM_Algorithms, _encode_AllowedGSM_Algorithms } from "../MAP-MS-DataTypes/AllowedGSM-Algorithms.ta.mjs";
-// export { AllowedGSM_Algorithms, _decode_AllowedGSM_Algorithms, _encode_AllowedGSM_Algorithms } from "../MAP-MS-DataTypes/AllowedGSM-Algorithms.ta.mjs";
 import { AllowedUMTS_Algorithms, _decode_AllowedUMTS_Algorithms, _encode_AllowedUMTS_Algorithms } from "../MAP-MS-DataTypes/AllowedUMTS-Algorithms.ta.mjs";
-// export { AllowedUMTS_Algorithms, _decode_AllowedUMTS_Algorithms, _encode_AllowedUMTS_Algorithms } from "../MAP-MS-DataTypes/AllowedUMTS-Algorithms.ta.mjs";
 import { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
-// export { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { RadioResourceList, _decode_RadioResourceList, _encode_RadioResourceList } from "../MAP-MS-DataTypes/RadioResourceList.ta.mjs";
-// export { RadioResourceList, _decode_RadioResourceList, _encode_RadioResourceList } from "../MAP-MS-DataTypes/RadioResourceList.ta.mjs";
 import { BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
-// export { BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
 import { RANAP_ServiceHandover, _decode_RANAP_ServiceHandover, _encode_RANAP_ServiceHandover } from "../MAP-MS-DataTypes/RANAP-ServiceHandover.ta.mjs";
-// export { RANAP_ServiceHandover, _decode_RANAP_ServiceHandover, _encode_RANAP_ServiceHandover } from "../MAP-MS-DataTypes/RANAP-ServiceHandover.ta.mjs";
 import { BSSMAP_ServiceHandoverList, _decode_BSSMAP_ServiceHandoverList, _encode_BSSMAP_ServiceHandoverList } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverList.ta.mjs";
-// export { BSSMAP_ServiceHandoverList, _decode_BSSMAP_ServiceHandoverList, _encode_BSSMAP_ServiceHandoverList } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverList.ta.mjs";
 import { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
-// export { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
 import { SupportedCodecsList, _decode_SupportedCodecsList, _encode_SupportedCodecsList } from "../MAP-MS-DataTypes/SupportedCodecsList.ta.mjs";
-// export { SupportedCodecsList, _decode_SupportedCodecsList, _encode_SupportedCodecsList } from "../MAP-MS-DataTypes/SupportedCodecsList.ta.mjs";
 import { TracePropagationList, _decode_TracePropagationList, _encode_TracePropagationList } from "../MAP-OM-DataTypes/TracePropagationList.ta.mjs";
-// export { TracePropagationList, _decode_TracePropagationList, _encode_TracePropagationList } from "../MAP-OM-DataTypes/TracePropagationList.ta.mjs";
 import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
-// export { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
 import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
-// export { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
 import { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataTypes/UESBI-Iu.ta.mjs";
-// export { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataTypes/UESBI-Iu.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 
 
 /**
@@ -319,14 +300,14 @@ class ForwardAccessSignalling_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_ForwardAccessSignalling_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("an-APDU", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("integrityProtectionInfo", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("encryptionInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("keyStatus", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("allowedGSM-Algorithms", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("allowedUMTS-Algorithms", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("radioResourceInformation", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("an-APDU", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("integrityProtectionInfo", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("encryptionInfo", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("keyStatus", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("allowedGSM-Algorithms", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("allowedUMTS-Algorithms", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("radioResourceInformation", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -352,20 +333,20 @@ const _root_component_type_list_2_spec_for_ForwardAccessSignalling_Arg: $.Compon
  */
 export
 const _extension_additions_list_spec_for_ForwardAccessSignalling_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("radioResourceList", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("bssmap-ServiceHandover", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("ranap-ServiceHandover", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("bssmap-ServiceHandoverList", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("currentlyUsedCodec", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("iuSupportedCodecsList", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("rab-ConfigurationIndicator", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("iuSelectedCodec", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("alternativeChannelType", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("tracePropagationList", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("aoipSupportedCodecsListAnchor", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("aoipSelectedCodecTarget", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("uesbi-Iu", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("imeisv", true, $.hasTag(_TagClass.context, 21), undefined, undefined)
+    new $.ComponentSpec("radioResourceList", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("bssmap-ServiceHandover", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("ranap-ServiceHandover", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("bssmap-ServiceHandoverList", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("currentlyUsedCodec", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("iuSupportedCodecsList", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("rab-ConfigurationIndicator", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("iuSelectedCodec", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("alternativeChannelType", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("tracePropagationList", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("aoipSupportedCodecsListAnchor", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("aoipSelectedCodecTarget", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("uesbi-Iu", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("imeisv", true, $.hasTag(_TagClass.context, 21))
 ];
 
 let _cached_decoder_for_ForwardAccessSignalling_Arg: $.ASN1Decoder<ForwardAccessSignalling_Arg> | null = null;
@@ -380,28 +361,28 @@ export
 function _decode_ForwardAccessSignalling_Arg (el: _Element): ForwardAccessSignalling_Arg {
     if (!_cached_decoder_for_ForwardAccessSignalling_Arg) { _cached_decoder_for_ForwardAccessSignalling_Arg = $._decode_implicit<ForwardAccessSignalling_Arg>(() => function (el: _Element): ForwardAccessSignalling_Arg {
     let an_APDU!: AccessNetworkSignalInfo;
-    let integrityProtectionInfo: OPTIONAL<IntegrityProtectionInformation>;
-    let encryptionInfo: OPTIONAL<EncryptionInformation>;
-    let keyStatus: OPTIONAL<KeyStatus>;
-    let allowedGSM_Algorithms: OPTIONAL<AllowedGSM_Algorithms>;
-    let allowedUMTS_Algorithms: OPTIONAL<AllowedUMTS_Algorithms>;
-    let radioResourceInformation: OPTIONAL<RadioResourceInformation>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let radioResourceList: OPTIONAL<RadioResourceList>;
-    let bssmap_ServiceHandover: OPTIONAL<BSSMAP_ServiceHandover>;
-    let ranap_ServiceHandover: OPTIONAL<RANAP_ServiceHandover>;
-    let bssmap_ServiceHandoverList: OPTIONAL<BSSMAP_ServiceHandoverList>;
-    let currentlyUsedCodec: OPTIONAL<Codec>;
-    let iuSupportedCodecsList: OPTIONAL<SupportedCodecsList>;
-    let rab_ConfigurationIndicator: OPTIONAL<NULL>;
-    let iuSelectedCodec: OPTIONAL<Codec>;
-    let alternativeChannelType: OPTIONAL<RadioResourceInformation>;
-    let tracePropagationList: OPTIONAL<TracePropagationList>;
-    let aoipSupportedCodecsListAnchor: OPTIONAL<AoIPCodecsList>;
-    let aoipSelectedCodecTarget: OPTIONAL<AoIPCodec>;
-    let uesbi_Iu: OPTIONAL<UESBI_Iu>;
-    let imeisv: OPTIONAL<IMEI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let integrityProtectionInfo: OPTIONAL<IntegrityProtectionInformation> = undefined;
+    let encryptionInfo: OPTIONAL<EncryptionInformation> = undefined;
+    let keyStatus: OPTIONAL<KeyStatus> = undefined;
+    let allowedGSM_Algorithms: OPTIONAL<AllowedGSM_Algorithms> = undefined;
+    let allowedUMTS_Algorithms: OPTIONAL<AllowedUMTS_Algorithms> = undefined;
+    let radioResourceInformation: OPTIONAL<RadioResourceInformation> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let radioResourceList: OPTIONAL<RadioResourceList> = undefined;
+    let bssmap_ServiceHandover: OPTIONAL<BSSMAP_ServiceHandover> = undefined;
+    let ranap_ServiceHandover: OPTIONAL<RANAP_ServiceHandover> = undefined;
+    let bssmap_ServiceHandoverList: OPTIONAL<BSSMAP_ServiceHandoverList> = undefined;
+    let currentlyUsedCodec: OPTIONAL<Codec> = undefined;
+    let iuSupportedCodecsList: OPTIONAL<SupportedCodecsList> = undefined;
+    let rab_ConfigurationIndicator: OPTIONAL<NULL> = undefined;
+    let iuSelectedCodec: OPTIONAL<Codec> = undefined;
+    let alternativeChannelType: OPTIONAL<RadioResourceInformation> = undefined;
+    let tracePropagationList: OPTIONAL<TracePropagationList> = undefined;
+    let aoipSupportedCodecsListAnchor: OPTIONAL<AoIPCodecsList> = undefined;
+    let aoipSelectedCodecTarget: OPTIONAL<AoIPCodec> = undefined;
+    let uesbi_Iu: OPTIONAL<UESBI_Iu> = undefined;
+    let imeisv: OPTIONAL<IMEI> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "an-APDU": (_el: _Element): void => { an_APDU = _decode_AccessNetworkSignalInfo(_el); },
         "integrityProtectionInfo": (_el: _Element): void => { integrityProtectionInfo = $._decode_implicit<IntegrityProtectionInformation>(() => _decode_IntegrityProtectionInformation)(_el); },

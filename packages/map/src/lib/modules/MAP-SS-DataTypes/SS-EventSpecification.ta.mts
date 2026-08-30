@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 
+
+import { maxEventSpecification } from "./maxEventSpecification.va.mjs";
 
 /**
  * @summary SS_EventSpecification
@@ -95,7 +97,11 @@ let _cached_decoder_for_SS_EventSpecification: $.ASN1Decoder<SS_EventSpecificati
 export
 function _decode_SS_EventSpecification (el: _Element): SS_EventSpecification {
     if (!_cached_decoder_for_SS_EventSpecification) { _cached_decoder_for_SS_EventSpecification = $._decodeSequenceOf<AddressString>(() => _decode_AddressString); }
-    return _cached_decoder_for_SS_EventSpecification(el);
+    const value = _cached_decoder_for_SS_EventSpecification(el);
+    if (value.length < 1 || value.length > maxEventSpecification) {
+        throw new ASN1SizeError("SS_EventSpecification violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_SS_EventSpecification: $.ASN1Encoder<SS_EventSpecification> | null = null;

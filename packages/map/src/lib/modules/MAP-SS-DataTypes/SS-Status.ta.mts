@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SS_Status = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_SS_Status: $.ASN1Decoder<SS_Status> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SS_Status
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SS_Status (el: _Element): SS_Status {
-    if (!_cached_decoder_for_SS_Status) { _cached_decoder_for_SS_Status = $._decodeOctetString; }
-    return _cached_decoder_for_SS_Status(el);
-}
-
-let _cached_encoder_for_SS_Status: $.ASN1Encoder<SS_Status> | null = null;
+export const _decode_SS_Status = (el: _Element): SS_Status => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("SS_Status violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SS_Status into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_SS_Status: $.ASN1Encoder<SS_Status> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SS_Status, encoded as an ASN.1 Element.
  */
-export
-function _encode_SS_Status (value: SS_Status, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SS_Status) { _cached_encoder_for_SS_Status = $._encodeOctetString; }
-    return _cached_encoder_for_SS_Status(value, elGetter);
-}
+export const _encode_SS_Status = $._encodeOctetString;
 
 
 /* eslint-enable */

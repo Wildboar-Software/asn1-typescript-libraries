@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-// export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 import { AccessRestrictionData, AccessRestrictionData_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_geranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, geranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ganNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ganNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_i_hspa_evolutionNotAllowed /* IMPORTED_LONG_NAMED_BIT */, i_hspa_evolutionNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_wb_e_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, wb_e_utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ho_toNon3GPP_AccessNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ho_toNon3GPP_AccessNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_nb_iotNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nb_iotNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_enhancedCoverageNotAllowed /* IMPORTED_LONG_NAMED_BIT */, enhancedCoverageNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
-// export { AccessRestrictionData, AccessRestrictionData_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_geranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, geranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ganNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ganNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_i_hspa_evolutionNotAllowed /* IMPORTED_LONG_NAMED_BIT */, i_hspa_evolutionNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_wb_e_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, wb_e_utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ho_toNon3GPP_AccessNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ho_toNon3GPP_AccessNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_nb_iotNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nb_iotNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_enhancedCoverageNotAllowed /* IMPORTED_LONG_NAMED_BIT */, enhancedCoverageNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
 import { Ext_AccessRestrictionData, Ext_AccessRestrictionData_nrAsSecondaryRATNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nrAsSecondaryRATNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, Ext_AccessRestrictionData_unlicensedSpectrumAsSecondaryRATNotAllowed /* IMPORTED_LONG_NAMED_BIT */, unlicensedSpectrumAsSecondaryRATNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
-// export { Ext_AccessRestrictionData, Ext_AccessRestrictionData_nrAsSecondaryRATNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nrAsSecondaryRATNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, Ext_AccessRestrictionData_unlicensedSpectrumAsSecondaryRATNotAllowed /* IMPORTED_LONG_NAMED_BIT */, unlicensedSpectrumAsSecondaryRATNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
 
 
 /**
@@ -148,8 +145,8 @@ class AdjacentAccessRestrictionData {
  */
 export
 const _root_component_type_list_1_spec_for_AdjacentAccessRestrictionData: $.ComponentSpec[] = [
-    new $.ComponentSpec("plmnId", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("accessRestrictionData", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("plmnId", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("accessRestrictionData", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -175,7 +172,7 @@ const _root_component_type_list_2_spec_for_AdjacentAccessRestrictionData: $.Comp
  */
 export
 const _extension_additions_list_spec_for_AdjacentAccessRestrictionData: $.ComponentSpec[] = [
-    new $.ComponentSpec("ext-AccessRestrictionData", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("ext-AccessRestrictionData", true, $.hasTag(_TagClass.context, 2))
 ];
 
 let _cached_decoder_for_AdjacentAccessRestrictionData: $.ASN1Decoder<AdjacentAccessRestrictionData> | null = null;
@@ -191,8 +188,8 @@ function _decode_AdjacentAccessRestrictionData (el: _Element): AdjacentAccessRes
     if (!_cached_decoder_for_AdjacentAccessRestrictionData) { _cached_decoder_for_AdjacentAccessRestrictionData = function (el: _Element): AdjacentAccessRestrictionData {
     let plmnId!: PLMN_Id;
     let accessRestrictionData!: AccessRestrictionData;
-    let ext_AccessRestrictionData: OPTIONAL<Ext_AccessRestrictionData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ext_AccessRestrictionData: OPTIONAL<Ext_AccessRestrictionData> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "plmnId": (_el: _Element): void => { plmnId = $._decode_implicit<PLMN_Id>(() => _decode_PLMN_Id)(_el); },
         "accessRestrictionData": (_el: _Element): void => { accessRestrictionData = $._decode_implicit<AccessRestrictionData>(() => _decode_AccessRestrictionData)(_el); },

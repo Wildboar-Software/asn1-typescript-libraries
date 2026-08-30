@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_CamelData, _decode_SS_CamelData, _encode_SS_CamelData } from "../MAP-MS-DataTypes/SS-CamelData.ta.mjs";
-// export { SS_CamelData, _decode_SS_CamelData, _encode_SS_CamelData } from "../MAP-MS-DataTypes/SS-CamelData.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -156,8 +154,8 @@ class SS_CSI {
  */
 export
 const _root_component_type_list_1_spec_for_SS_CSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-CamelData", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("ss-CamelData", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -183,8 +181,8 @@ const _root_component_type_list_2_spec_for_SS_CSI: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_SS_CSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("csi-Active", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("csi-Active", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_SS_CSI: $.ASN1Decoder<SS_CSI> | null = null;
@@ -199,10 +197,10 @@ export
 function _decode_SS_CSI (el: _Element): SS_CSI {
     if (!_cached_decoder_for_SS_CSI) { _cached_decoder_for_SS_CSI = function (el: _Element): SS_CSI {
     let ss_CamelData!: SS_CamelData;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let csi_Active: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let csi_Active: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-CamelData": (_el: _Element): void => { ss_CamelData = _decode_SS_CamelData(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

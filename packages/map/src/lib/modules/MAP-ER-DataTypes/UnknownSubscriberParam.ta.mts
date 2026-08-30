@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { UnknownSubscriberDiagnostic, _enum_for_UnknownSubscriberDiagnostic, UnknownSubscriberDiagnostic_imsiUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, gprs_eps_SubscriptionUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnknownSubscriberDiagnostic_npdbMismatch /* IMPORTED_LONG_ENUMERATION_ITEM */, npdbMismatch /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnknownSubscriberDiagnostic, _encode_UnknownSubscriberDiagnostic } from "../MAP-ER-DataTypes/UnknownSubscriberDiagnostic.ta.mjs";
-// export { UnknownSubscriberDiagnostic, _enum_for_UnknownSubscriberDiagnostic, UnknownSubscriberDiagnostic_imsiUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, gprs_eps_SubscriptionUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnknownSubscriberDiagnostic_npdbMismatch /* IMPORTED_LONG_ENUMERATION_ITEM */, npdbMismatch /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnknownSubscriberDiagnostic, _encode_UnknownSubscriberDiagnostic } from "../MAP-ER-DataTypes/UnknownSubscriberDiagnostic.ta.mjs";
 
 
 /**
@@ -145,7 +143,7 @@ class UnknownSubscriberParam {
  */
 export
 const _root_component_type_list_1_spec_for_UnknownSubscriberParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -171,7 +169,7 @@ const _root_component_type_list_2_spec_for_UnknownSubscriberParam: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_UnknownSubscriberParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("unknownSubscriberDiagnostic", true, $.hasTag(_TagClass.universal, 10), undefined, undefined)
+    new $.ComponentSpec("unknownSubscriberDiagnostic", true, $.hasTag(_TagClass.universal, 10))
 ];
 
 let _cached_decoder_for_UnknownSubscriberParam: $.ASN1Decoder<UnknownSubscriberParam> | null = null;
@@ -185,9 +183,9 @@ let _cached_decoder_for_UnknownSubscriberParam: $.ASN1Decoder<UnknownSubscriberP
 export
 function _decode_UnknownSubscriberParam (el: _Element): UnknownSubscriberParam {
     if (!_cached_decoder_for_UnknownSubscriberParam) { _cached_decoder_for_UnknownSubscriberParam = function (el: _Element): UnknownSubscriberParam {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let unknownSubscriberDiagnostic: OPTIONAL<UnknownSubscriberDiagnostic>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let unknownSubscriberDiagnostic: OPTIONAL<UnknownSubscriberDiagnostic> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },
         "unknownSubscriberDiagnostic": (_el: _Element): void => { unknownSubscriberDiagnostic = _decode_UnknownSubscriberDiagnostic(_el); }

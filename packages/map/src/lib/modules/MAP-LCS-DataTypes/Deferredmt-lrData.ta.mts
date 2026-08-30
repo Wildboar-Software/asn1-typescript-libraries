@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DeferredLocationEventType, DeferredLocationEventType_msAvailable /* IMPORTED_LONG_NAMED_BIT */, msAvailable /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_enteringIntoArea /* IMPORTED_LONG_NAMED_BIT */, enteringIntoArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_leavingFromArea /* IMPORTED_LONG_NAMED_BIT */, leavingFromArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_beingInsideArea /* IMPORTED_LONG_NAMED_BIT */, beingInsideArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_periodicLDR /* IMPORTED_LONG_NAMED_BIT */, periodicLDR /* IMPORTED_SHORT_NAMED_BIT */, _decode_DeferredLocationEventType, _encode_DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
-// export { DeferredLocationEventType, DeferredLocationEventType_msAvailable /* IMPORTED_LONG_NAMED_BIT */, msAvailable /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_enteringIntoArea /* IMPORTED_LONG_NAMED_BIT */, enteringIntoArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_leavingFromArea /* IMPORTED_LONG_NAMED_BIT */, leavingFromArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_beingInsideArea /* IMPORTED_LONG_NAMED_BIT */, beingInsideArea /* IMPORTED_SHORT_NAMED_BIT */, DeferredLocationEventType_periodicLDR /* IMPORTED_LONG_NAMED_BIT */, periodicLDR /* IMPORTED_SHORT_NAMED_BIT */, _decode_DeferredLocationEventType, _encode_DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
 import { TerminationCause, _enum_for_TerminationCause, TerminationCause_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_errorundefined /* IMPORTED_LONG_ENUMERATION_ITEM */, errorundefined /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_internalTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, internalTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_congestion /* IMPORTED_LONG_ENUMERATION_ITEM */, congestion /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_mt_lrRestart /* IMPORTED_LONG_ENUMERATION_ITEM */, mt_lrRestart /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_privacyViolation /* IMPORTED_LONG_ENUMERATION_ITEM */, privacyViolation /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_shapeOfLocationEstimateNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, shapeOfLocationEstimateNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_subscriberTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_uETermination /* IMPORTED_LONG_ENUMERATION_ITEM */, uETermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_networkTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, networkTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TerminationCause, _encode_TerminationCause } from "../MAP-LCS-DataTypes/TerminationCause.ta.mjs";
-// export { TerminationCause, _enum_for_TerminationCause, TerminationCause_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_errorundefined /* IMPORTED_LONG_ENUMERATION_ITEM */, errorundefined /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_internalTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, internalTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_congestion /* IMPORTED_LONG_ENUMERATION_ITEM */, congestion /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_mt_lrRestart /* IMPORTED_LONG_ENUMERATION_ITEM */, mt_lrRestart /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_privacyViolation /* IMPORTED_LONG_ENUMERATION_ITEM */, privacyViolation /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_shapeOfLocationEstimateNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, shapeOfLocationEstimateNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_subscriberTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_uETermination /* IMPORTED_LONG_ENUMERATION_ITEM */, uETermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminationCause_networkTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, networkTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TerminationCause, _encode_TerminationCause } from "../MAP-LCS-DataTypes/TerminationCause.ta.mjs";
 import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
-// export { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
 
 
 /**
@@ -154,9 +151,9 @@ class Deferredmt_lrData {
  */
 export
 const _root_component_type_list_1_spec_for_Deferredmt_lrData: $.ComponentSpec[] = [
-    new $.ComponentSpec("deferredLocationEventType", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("terminationCause", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("lcsLocationInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("deferredLocationEventType", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("terminationCause", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("lcsLocationInfo", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -197,9 +194,9 @@ export
 function _decode_Deferredmt_lrData (el: _Element): Deferredmt_lrData {
     if (!_cached_decoder_for_Deferredmt_lrData) { _cached_decoder_for_Deferredmt_lrData = function (el: _Element): Deferredmt_lrData {
     let deferredLocationEventType!: DeferredLocationEventType;
-    let terminationCause: OPTIONAL<TerminationCause>;
-    let lcsLocationInfo: OPTIONAL<LCSLocationInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let terminationCause: OPTIONAL<TerminationCause> = undefined;
+    let lcsLocationInfo: OPTIONAL<LCSLocationInfo> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "deferredLocationEventType": (_el: _Element): void => { deferredLocationEventType = _decode_DeferredLocationEventType(_el); },
         "terminationCause": (_el: _Element): void => { terminationCause = $._decode_implicit<TerminationCause>(() => _decode_TerminationCause)(_el); },

@@ -179,21 +179,13 @@ const LCSClientInternalID_targetMSsubscribedService: LCSClientInternalID = 4; /*
 export
 const targetMSsubscribedService: LCSClientInternalID = LCSClientInternalID_targetMSsubscribedService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LCSClientInternalID: $.ASN1Decoder<LCSClientInternalID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCSClientInternalID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCSClientInternalID (el: _Element): LCSClientInternalID {
-    if (!_cached_decoder_for_LCSClientInternalID) { _cached_decoder_for_LCSClientInternalID = $._decodeEnumerated; }
-    return _cached_decoder_for_LCSClientInternalID(el);
-}
-
-let _cached_encoder_for_LCSClientInternalID: $.ASN1Encoder<LCSClientInternalID> | null = null;
+export const _decode_LCSClientInternalID = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCSClientInternalID into an ASN.1 Element.
@@ -202,11 +194,7 @@ let _cached_encoder_for_LCSClientInternalID: $.ASN1Encoder<LCSClientInternalID> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCSClientInternalID, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCSClientInternalID (value: LCSClientInternalID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientInternalID) { _cached_encoder_for_LCSClientInternalID = $._encodeEnumerated; }
-    return _cached_encoder_for_LCSClientInternalID(value, elGetter);
-}
+export const _encode_LCSClientInternalID = $._encodeEnumerated;
 
 
 /* eslint-enable */

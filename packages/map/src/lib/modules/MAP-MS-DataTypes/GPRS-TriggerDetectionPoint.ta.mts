@@ -179,21 +179,13 @@ const GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition: GPRS_TriggerDetect
 export
 const pdp_ContextChangeOfPosition: GPRS_TriggerDetectionPoint = GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_GPRS_TriggerDetectionPoint: $.ASN1Decoder<GPRS_TriggerDetectionPoint> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GPRS_TriggerDetectionPoint
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GPRS_TriggerDetectionPoint (el: _Element): GPRS_TriggerDetectionPoint {
-    if (!_cached_decoder_for_GPRS_TriggerDetectionPoint) { _cached_decoder_for_GPRS_TriggerDetectionPoint = $._decodeEnumerated; }
-    return _cached_decoder_for_GPRS_TriggerDetectionPoint(el);
-}
-
-let _cached_encoder_for_GPRS_TriggerDetectionPoint: $.ASN1Encoder<GPRS_TriggerDetectionPoint> | null = null;
+export const _decode_GPRS_TriggerDetectionPoint = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) GPRS_TriggerDetectionPoint into an ASN.1 Element.
@@ -202,11 +194,7 @@ let _cached_encoder_for_GPRS_TriggerDetectionPoint: $.ASN1Encoder<GPRS_TriggerDe
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GPRS_TriggerDetectionPoint, encoded as an ASN.1 Element.
  */
-export
-function _encode_GPRS_TriggerDetectionPoint (value: GPRS_TriggerDetectionPoint, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GPRS_TriggerDetectionPoint) { _cached_encoder_for_GPRS_TriggerDetectionPoint = $._encodeEnumerated; }
-    return _cached_encoder_for_GPRS_TriggerDetectionPoint(value, elGetter);
-}
+export const _encode_GPRS_TriggerDetectionPoint = $._encodeEnumerated;
 
 
 /* eslint-enable */

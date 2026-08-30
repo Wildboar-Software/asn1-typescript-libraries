@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 
+
+import { maxNumOfCamelBasicServiceCriteria } from "./maxNumOfCamelBasicServiceCriteria.va.mjs";
 
 /**
  * @summary BasicServiceCriteria
@@ -95,7 +97,11 @@ let _cached_decoder_for_BasicServiceCriteria: $.ASN1Decoder<BasicServiceCriteria
 export
 function _decode_BasicServiceCriteria (el: _Element): BasicServiceCriteria {
     if (!_cached_decoder_for_BasicServiceCriteria) { _cached_decoder_for_BasicServiceCriteria = $._decodeSequenceOf<Ext_BasicServiceCode>(() => _decode_Ext_BasicServiceCode); }
-    return _cached_decoder_for_BasicServiceCriteria(el);
+    const value = _cached_decoder_for_BasicServiceCriteria(el);
+    if (value.length < 1 || value.length > maxNumOfCamelBasicServiceCriteria) {
+        throw new ASN1SizeError("BasicServiceCriteria violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_BasicServiceCriteria: $.ASN1Encoder<BasicServiceCriteria> | null = null;

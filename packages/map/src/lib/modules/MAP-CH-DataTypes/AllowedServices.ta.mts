@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -112,21 +113,19 @@ const AllowedServices_secondServiceAllowed: number = 1; /* LONG_NAMED_BIT */
 export
 const secondServiceAllowed: number = AllowedServices_secondServiceAllowed; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_AllowedServices: $.ASN1Decoder<AllowedServices> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AllowedServices
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AllowedServices (el: _Element): AllowedServices {
-    if (!_cached_decoder_for_AllowedServices) { _cached_decoder_for_AllowedServices = $._decodeBitString; }
-    return _cached_decoder_for_AllowedServices(el);
-}
-
-let _cached_encoder_for_AllowedServices: $.ASN1Encoder<AllowedServices> | null = null;
+export const _decode_AllowedServices = (el: _Element): AllowedServices => {
+    const value = $._decodeBitString(el);
+    if (value.length < 2 || value.length > 8) {
+        throw new ASN1SizeError("AllowedServices violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) AllowedServices into an ASN.1 Element.
@@ -135,11 +134,7 @@ let _cached_encoder_for_AllowedServices: $.ASN1Encoder<AllowedServices> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AllowedServices, encoded as an ASN.1 Element.
  */
-export
-function _encode_AllowedServices (value: AllowedServices, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AllowedServices) { _cached_encoder_for_AllowedServices = $._encodeBitString; }
-    return _cached_encoder_for_AllowedServices(value, elGetter);
-}
+export const _encode_AllowedServices = $._encodeBitString;
 
 
 /* eslint-enable */

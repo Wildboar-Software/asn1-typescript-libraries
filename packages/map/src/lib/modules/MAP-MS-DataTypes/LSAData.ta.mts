@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
-// export { LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
 import { LSAAttributes, _decode_LSAAttributes, _encode_LSAAttributes } from "../MAP-MS-DataTypes/LSAAttributes.ta.mjs";
-// export { LSAAttributes, _decode_LSAAttributes, _encode_LSAAttributes } from "../MAP-MS-DataTypes/LSAAttributes.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -155,10 +152,10 @@ class LSAData {
  */
 export
 const _root_component_type_list_1_spec_for_LSAData: $.ComponentSpec[] = [
-    new $.ComponentSpec("lsaIdentity", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("lsaAttributes", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("lsaActiveModeIndicator", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("lsaIdentity", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("lsaAttributes", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("lsaActiveModeIndicator", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -200,9 +197,9 @@ function _decode_LSAData (el: _Element): LSAData {
     if (!_cached_decoder_for_LSAData) { _cached_decoder_for_LSAData = function (el: _Element): LSAData {
     let lsaIdentity!: LSAIdentity;
     let lsaAttributes!: LSAAttributes;
-    let lsaActiveModeIndicator: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lsaActiveModeIndicator: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "lsaIdentity": (_el: _Element): void => { lsaIdentity = $._decode_implicit<LSAIdentity>(() => _decode_LSAIdentity)(_el); },
         "lsaAttributes": (_el: _Element): void => { lsaAttributes = $._decode_implicit<LSAAttributes>(() => _decode_LSAAttributes)(_el); },

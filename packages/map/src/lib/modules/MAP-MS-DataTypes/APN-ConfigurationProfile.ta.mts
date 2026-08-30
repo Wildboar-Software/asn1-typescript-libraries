@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-// export { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
 import { EPS_DataList, _decode_EPS_DataList, _encode_EPS_DataList } from "../MAP-MS-DataTypes/EPS-DataList.ta.mjs";
-// export { EPS_DataList, _decode_EPS_DataList, _encode_EPS_DataList } from "../MAP-MS-DataTypes/EPS-DataList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -166,10 +163,10 @@ class APN_ConfigurationProfile {
  */
 export
 const _root_component_type_list_1_spec_for_APN_ConfigurationProfile: $.ComponentSpec[] = [
-    new $.ComponentSpec("defaultContext", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("completeDataListIncluded", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("epsDataList", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("defaultContext", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("completeDataListIncluded", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("epsDataList", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -195,7 +192,7 @@ const _root_component_type_list_2_spec_for_APN_ConfigurationProfile: $.Component
  */
 export
 const _extension_additions_list_spec_for_APN_ConfigurationProfile: $.ComponentSpec[] = [
-    new $.ComponentSpec("additionalDefaultContext", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("additionalDefaultContext", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_APN_ConfigurationProfile: $.ASN1Decoder<APN_ConfigurationProfile> | null = null;
@@ -210,11 +207,11 @@ export
 function _decode_APN_ConfigurationProfile (el: _Element): APN_ConfigurationProfile {
     if (!_cached_decoder_for_APN_ConfigurationProfile) { _cached_decoder_for_APN_ConfigurationProfile = function (el: _Element): APN_ConfigurationProfile {
     let defaultContext!: ContextId;
-    let completeDataListIncluded: OPTIONAL<NULL>;
+    let completeDataListIncluded: OPTIONAL<NULL> = undefined;
     let epsDataList!: EPS_DataList;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let additionalDefaultContext: OPTIONAL<ContextId>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let additionalDefaultContext: OPTIONAL<ContextId> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "defaultContext": (_el: _Element): void => { defaultContext = _decode_ContextId(_el); },
         "completeDataListIncluded": (_el: _Element): void => { completeDataListIncluded = $._decodeNull(_el); },

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UtranBaroPressureMeas = INTEGER;
 
-let _cached_decoder_for_UtranBaroPressureMeas: $.ASN1Decoder<UtranBaroPressureMeas> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UtranBaroPressureMeas
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UtranBaroPressureMeas (el: _Element): UtranBaroPressureMeas {
-    if (!_cached_decoder_for_UtranBaroPressureMeas) { _cached_decoder_for_UtranBaroPressureMeas = $._decodeInteger; }
-    return _cached_decoder_for_UtranBaroPressureMeas(el);
-}
-
-let _cached_encoder_for_UtranBaroPressureMeas: $.ASN1Encoder<UtranBaroPressureMeas> | null = null;
+export const _decode_UtranBaroPressureMeas = (el: _Element): UtranBaroPressureMeas => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 30000 || n > 115000) {
+        throw new ASN1OverflowError("UtranBaroPressureMeas violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) UtranBaroPressureMeas into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_UtranBaroPressureMeas: $.ASN1Encoder<UtranBaroPressureMe
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UtranBaroPressureMeas, encoded as an ASN.1 Element.
  */
-export
-function _encode_UtranBaroPressureMeas (value: UtranBaroPressureMeas, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UtranBaroPressureMeas) { _cached_encoder_for_UtranBaroPressureMeas = $._encodeInteger; }
-    return _cached_encoder_for_UtranBaroPressureMeas(value, elGetter);
-}
+export const _encode_UtranBaroPressureMeas = $._encodeInteger;
 
 
 /* eslint-enable */

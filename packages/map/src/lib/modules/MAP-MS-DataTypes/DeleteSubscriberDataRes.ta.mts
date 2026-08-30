@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RegionalSubscriptionResponse, _enum_for_RegionalSubscriptionResponse, RegionalSubscriptionResponse_networkNode_AreaRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, networkNode_AreaRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_tooManyZoneCodes /* IMPORTED_LONG_ENUMERATION_ITEM */, tooManyZoneCodes /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_zoneCodesConflict /* IMPORTED_LONG_ENUMERATION_ITEM */, zoneCodesConflict /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_regionalSubscNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, regionalSubscNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RegionalSubscriptionResponse, _encode_RegionalSubscriptionResponse } from "../MAP-MS-DataTypes/RegionalSubscriptionResponse.ta.mjs";
-// export { RegionalSubscriptionResponse, _enum_for_RegionalSubscriptionResponse, RegionalSubscriptionResponse_networkNode_AreaRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, networkNode_AreaRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_tooManyZoneCodes /* IMPORTED_LONG_ENUMERATION_ITEM */, tooManyZoneCodes /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_zoneCodesConflict /* IMPORTED_LONG_ENUMERATION_ITEM */, zoneCodesConflict /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_regionalSubscNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, regionalSubscNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RegionalSubscriptionResponse, _encode_RegionalSubscriptionResponse } from "../MAP-MS-DataTypes/RegionalSubscriptionResponse.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class DeleteSubscriberDataRes {
  */
 export
 const _root_component_type_list_1_spec_for_DeleteSubscriberDataRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("regionalSubscriptionResponse", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("regionalSubscriptionResponse", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -186,9 +184,9 @@ let _cached_decoder_for_DeleteSubscriberDataRes: $.ASN1Decoder<DeleteSubscriberD
 export
 function _decode_DeleteSubscriberDataRes (el: _Element): DeleteSubscriberDataRes {
     if (!_cached_decoder_for_DeleteSubscriberDataRes) { _cached_decoder_for_DeleteSubscriberDataRes = function (el: _Element): DeleteSubscriberDataRes {
-    let regionalSubscriptionResponse: OPTIONAL<RegionalSubscriptionResponse>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let regionalSubscriptionResponse: OPTIONAL<RegionalSubscriptionResponse> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "regionalSubscriptionResponse": (_el: _Element): void => { regionalSubscriptionResponse = $._decode_implicit<RegionalSubscriptionResponse>(() => _decode_RegionalSubscriptionResponse)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

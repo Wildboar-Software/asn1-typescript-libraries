@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ServiceKey = INTEGER;
 
-let _cached_decoder_for_ServiceKey: $.ASN1Decoder<ServiceKey> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceKey
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ServiceKey (el: _Element): ServiceKey {
-    if (!_cached_decoder_for_ServiceKey) { _cached_decoder_for_ServiceKey = $._decodeInteger; }
-    return _cached_decoder_for_ServiceKey(el);
-}
-
-let _cached_encoder_for_ServiceKey: $.ASN1Encoder<ServiceKey> | null = null;
+export const _decode_ServiceKey = (el: _Element): ServiceKey => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 2147483647) {
+        throw new ASN1OverflowError("ServiceKey violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ServiceKey into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_ServiceKey: $.ASN1Encoder<ServiceKey> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServiceKey, encoded as an ASN.1 Element.
  */
-export
-function _encode_ServiceKey (value: ServiceKey, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceKey) { _cached_encoder_for_ServiceKey = $._encodeInteger; }
-    return _cached_encoder_for_ServiceKey(value, elGetter);
-}
+export const _encode_ServiceKey = $._encodeInteger;
 
 
 /* eslint-enable */

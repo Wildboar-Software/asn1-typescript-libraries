@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SM_RP_SMEA = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_SM_RP_SMEA: $.ASN1Decoder<SM_RP_SMEA> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_RP_SMEA
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SM_RP_SMEA (el: _Element): SM_RP_SMEA {
-    if (!_cached_decoder_for_SM_RP_SMEA) { _cached_decoder_for_SM_RP_SMEA = $._decodeOctetString; }
-    return _cached_decoder_for_SM_RP_SMEA(el);
-}
-
-let _cached_encoder_for_SM_RP_SMEA: $.ASN1Encoder<SM_RP_SMEA> | null = null;
+export const _decode_SM_RP_SMEA = (el: _Element): SM_RP_SMEA => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 12) {
+        throw new ASN1SizeError("SM_RP_SMEA violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SM_RP_SMEA into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_SM_RP_SMEA: $.ASN1Encoder<SM_RP_SMEA> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_RP_SMEA, encoded as an ASN.1 Element.
  */
-export
-function _encode_SM_RP_SMEA (value: SM_RP_SMEA, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SM_RP_SMEA) { _cached_encoder_for_SM_RP_SMEA = $._encodeOctetString; }
-    return _cached_encoder_for_SM_RP_SMEA(value, elGetter);
-}
+export const _encode_SM_RP_SMEA = $._encodeOctetString;
 
 
 /* eslint-enable */

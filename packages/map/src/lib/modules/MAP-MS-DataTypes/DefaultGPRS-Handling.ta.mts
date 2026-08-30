@@ -125,21 +125,13 @@ const DefaultGPRS_Handling_releaseTransaction: DefaultGPRS_Handling = 1; /* LONG
 export
 const releaseTransaction: DefaultGPRS_Handling = DefaultGPRS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_DefaultGPRS_Handling: $.ASN1Decoder<DefaultGPRS_Handling> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultGPRS_Handling
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DefaultGPRS_Handling (el: _Element): DefaultGPRS_Handling {
-    if (!_cached_decoder_for_DefaultGPRS_Handling) { _cached_decoder_for_DefaultGPRS_Handling = $._decodeEnumerated; }
-    return _cached_decoder_for_DefaultGPRS_Handling(el);
-}
-
-let _cached_encoder_for_DefaultGPRS_Handling: $.ASN1Encoder<DefaultGPRS_Handling> | null = null;
+export const _decode_DefaultGPRS_Handling = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) DefaultGPRS_Handling into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_DefaultGPRS_Handling: $.ASN1Encoder<DefaultGPRS_Handling
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DefaultGPRS_Handling, encoded as an ASN.1 Element.
  */
-export
-function _encode_DefaultGPRS_Handling (value: DefaultGPRS_Handling, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DefaultGPRS_Handling) { _cached_encoder_for_DefaultGPRS_Handling = $._encodeEnumerated; }
-    return _cached_encoder_for_DefaultGPRS_Handling(value, elGetter);
-}
+export const _encode_DefaultGPRS_Handling = $._encodeEnumerated;
 
 
 /* eslint-enable */

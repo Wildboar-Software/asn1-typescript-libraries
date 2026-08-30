@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { FailureCause, _enum_for_FailureCause, FailureCause_wrongUserResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, wrongUserResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureCause_wrongNetworkSignature /* IMPORTED_LONG_ENUMERATION_ITEM */, wrongNetworkSignature /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FailureCause, _encode_FailureCause } from "../MAP-MS-DataTypes/FailureCause.ta.mjs";
-// export { FailureCause, _enum_for_FailureCause, FailureCause_wrongUserResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, wrongUserResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureCause_wrongNetworkSignature /* IMPORTED_LONG_ENUMERATION_ITEM */, wrongNetworkSignature /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FailureCause, _encode_FailureCause } from "../MAP-MS-DataTypes/FailureCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AccessType, _enum_for_AccessType, AccessType_call /* IMPORTED_LONG_ENUMERATION_ITEM */, call /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_emergencyCall /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_locationUpdating /* IMPORTED_LONG_ENUMERATION_ITEM */, locationUpdating /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_supplementaryService /* IMPORTED_LONG_ENUMERATION_ITEM */, supplementaryService /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_shortMessage /* IMPORTED_LONG_ENUMERATION_ITEM */, shortMessage /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_gprsAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, gprsAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_routingAreaUpdating /* IMPORTED_LONG_ENUMERATION_ITEM */, routingAreaUpdating /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_serviceRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_pdpContextActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pdpContextActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_pdpContextDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pdpContextDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_gprsDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, gprsDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../MAP-MS-DataTypes/AccessType.ta.mjs";
-// export { AccessType, _enum_for_AccessType, AccessType_call /* IMPORTED_LONG_ENUMERATION_ITEM */, call /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_emergencyCall /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_locationUpdating /* IMPORTED_LONG_ENUMERATION_ITEM */, locationUpdating /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_supplementaryService /* IMPORTED_LONG_ENUMERATION_ITEM */, supplementaryService /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_shortMessage /* IMPORTED_LONG_ENUMERATION_ITEM */, shortMessage /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_gprsAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, gprsAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_routingAreaUpdating /* IMPORTED_LONG_ENUMERATION_ITEM */, routingAreaUpdating /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_serviceRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_pdpContextActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pdpContextActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_pdpContextDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pdpContextDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_gprsDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, gprsDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../MAP-MS-DataTypes/AccessType.ta.mjs";
 import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
-// export { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 
 
 /**
@@ -201,9 +195,9 @@ class AuthenticationFailureReportArg {
  */
 export
 const _root_component_type_list_1_spec_for_AuthenticationFailureReportArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("failureCause", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("failureCause", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -229,11 +223,11 @@ const _root_component_type_list_2_spec_for_AuthenticationFailureReportArg: $.Com
  */
 export
 const _extension_additions_list_spec_for_AuthenticationFailureReportArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("re-attempt", true, $.hasTag(_TagClass.universal, 1), undefined, undefined),
-    new $.ComponentSpec("accessType", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("rand", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("vlr-Number", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("re-attempt", true, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("accessType", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("rand", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("vlr-Number", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_AuthenticationFailureReportArg: $.ASN1Decoder<AuthenticationFailureReportArg> | null = null;
@@ -249,13 +243,13 @@ function _decode_AuthenticationFailureReportArg (el: _Element): AuthenticationFa
     if (!_cached_decoder_for_AuthenticationFailureReportArg) { _cached_decoder_for_AuthenticationFailureReportArg = function (el: _Element): AuthenticationFailureReportArg {
     let imsi!: IMSI;
     let failureCause!: FailureCause;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let re_attempt: OPTIONAL<BOOLEAN>;
-    let accessType: OPTIONAL<AccessType>;
-    let rand: OPTIONAL<RAND>;
-    let vlr_Number: OPTIONAL<ISDN_AddressString>;
-    let sgsn_Number: OPTIONAL<ISDN_AddressString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let re_attempt: OPTIONAL<BOOLEAN> = undefined;
+    let accessType: OPTIONAL<AccessType> = undefined;
+    let rand: OPTIONAL<RAND> = undefined;
+    let vlr_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let sgsn_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = _decode_IMSI(_el); },
         "failureCause": (_el: _Element): void => { failureCause = _decode_FailureCause(_el); },

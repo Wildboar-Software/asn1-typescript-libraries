@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 
 
 /**
@@ -139,8 +138,8 @@ class ADD_Info {
  */
 export
 const _root_component_type_list_1_spec_for_ADD_Info: $.ComponentSpec[] = [
-    new $.ComponentSpec("imeisv", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("skipSubscriberDataUpdate", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("imeisv", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("skipSubscriberDataUpdate", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -181,8 +180,8 @@ export
 function _decode_ADD_Info (el: _Element): ADD_Info {
     if (!_cached_decoder_for_ADD_Info) { _cached_decoder_for_ADD_Info = function (el: _Element): ADD_Info {
     let imeisv!: IMEI;
-    let skipSubscriberDataUpdate: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let skipSubscriberDataUpdate: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imeisv": (_el: _Element): void => { imeisv = $._decode_implicit<IMEI>(() => _decode_IMEI)(_el); },
         "skipSubscriberDataUpdate": (_el: _Element): void => { skipSubscriberDataUpdate = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }

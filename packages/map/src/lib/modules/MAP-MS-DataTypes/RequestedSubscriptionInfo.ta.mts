@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_ForBS_Code, _decode_SS_ForBS_Code, _encode_SS_ForBS_Code } from "../MAP-SS-DataTypes/SS-ForBS-Code.ta.mjs";
-// export { SS_ForBS_Code, _decode_SS_ForBS_Code, _encode_SS_ForBS_Code } from "../MAP-SS-DataTypes/SS-ForBS-Code.ta.mjs";
 import { RequestedCAMEL_SubscriptionInfo, _enum_for_RequestedCAMEL_SubscriptionInfo, RequestedCAMEL_SubscriptionInfo_o_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, o_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_t_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, t_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_vt_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, vt_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_tif_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, tif_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_gprs_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, gprs_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_mo_sms_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, mo_sms_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_ss_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, ss_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_m_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, m_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_d_csi /* IMPORTED_LONG_ENUMERATION_ITEM */, d_csi /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedCAMEL_SubscriptionInfo, _encode_RequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/RequestedCAMEL-SubscriptionInfo.ta.mjs";
-// export { RequestedCAMEL_SubscriptionInfo, _enum_for_RequestedCAMEL_SubscriptionInfo, RequestedCAMEL_SubscriptionInfo_o_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, o_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_t_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, t_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_vt_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, vt_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_tif_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, tif_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_gprs_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, gprs_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_mo_sms_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, mo_sms_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_ss_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, ss_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_m_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, m_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_d_csi /* IMPORTED_LONG_ENUMERATION_ITEM */, d_csi /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedCAMEL_SubscriptionInfo, _encode_RequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/RequestedCAMEL-SubscriptionInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo, AdditionalRequestedCAMEL_SubscriptionInfo_mt_sms_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, mt_sms_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_mg_csi /* IMPORTED_LONG_ENUMERATION_ITEM */, mg_csi /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_o_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, o_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_d_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, d_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_vt_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, vt_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdditionalRequestedCAMEL_SubscriptionInfo, _encode_AdditionalRequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/AdditionalRequestedCAMEL-SubscriptionInfo.ta.mjs";
-// export { AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo, AdditionalRequestedCAMEL_SubscriptionInfo_mt_sms_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, mt_sms_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_mg_csi /* IMPORTED_LONG_ENUMERATION_ITEM */, mg_csi /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_o_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, o_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_d_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, d_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_vt_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, vt_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdditionalRequestedCAMEL_SubscriptionInfo, _encode_AdditionalRequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/AdditionalRequestedCAMEL-SubscriptionInfo.ta.mjs";
 
 
 /**
@@ -241,12 +237,12 @@ class RequestedSubscriptionInfo {
  */
 export
 const _root_component_type_list_1_spec_for_RequestedSubscriptionInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("requestedSS-Info", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("odb", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("requestedCAMEL-SubscriptionInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("supportedVLR-CAMEL-Phases", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("supportedSGSN-CAMEL-Phases", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("requestedSS-Info", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("odb", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("requestedCAMEL-SubscriptionInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("supportedVLR-CAMEL-Phases", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("supportedSGSN-CAMEL-Phases", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6))
 ];
 
 /**
@@ -272,14 +268,14 @@ const _root_component_type_list_2_spec_for_RequestedSubscriptionInfo: $.Componen
  */
 export
 const _extension_additions_list_spec_for_RequestedSubscriptionInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("additionalRequestedCAMEL-SubscriptionInfo", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("msisdn-BS-List", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("csg-SubscriptionDataRequested", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("cw-Info", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("clip-Info", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("clir-Info", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("hold-Info", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("ect-Info", true, $.hasTag(_TagClass.context, 14), undefined, undefined)
+    new $.ComponentSpec("additionalRequestedCAMEL-SubscriptionInfo", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("msisdn-BS-List", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("csg-SubscriptionDataRequested", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("cw-Info", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("clip-Info", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("clir-Info", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("hold-Info", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("ect-Info", true, $.hasTag(_TagClass.context, 14))
 ];
 
 let _cached_decoder_for_RequestedSubscriptionInfo: $.ASN1Decoder<RequestedSubscriptionInfo> | null = null;
@@ -293,21 +289,21 @@ let _cached_decoder_for_RequestedSubscriptionInfo: $.ASN1Decoder<RequestedSubscr
 export
 function _decode_RequestedSubscriptionInfo (el: _Element): RequestedSubscriptionInfo {
     if (!_cached_decoder_for_RequestedSubscriptionInfo) { _cached_decoder_for_RequestedSubscriptionInfo = function (el: _Element): RequestedSubscriptionInfo {
-    let requestedSS_Info: OPTIONAL<SS_ForBS_Code>;
-    let odb: OPTIONAL<NULL>;
-    let requestedCAMEL_SubscriptionInfo: OPTIONAL<RequestedCAMEL_SubscriptionInfo>;
-    let supportedVLR_CAMEL_Phases: OPTIONAL<NULL>;
-    let supportedSGSN_CAMEL_Phases: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let additionalRequestedCAMEL_SubscriptionInfo: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>;
-    let msisdn_BS_List: OPTIONAL<NULL>;
-    let csg_SubscriptionDataRequested: OPTIONAL<NULL>;
-    let cw_Info: OPTIONAL<NULL>;
-    let clip_Info: OPTIONAL<NULL>;
-    let clir_Info: OPTIONAL<NULL>;
-    let hold_Info: OPTIONAL<NULL>;
-    let ect_Info: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let requestedSS_Info: OPTIONAL<SS_ForBS_Code> = undefined;
+    let odb: OPTIONAL<NULL> = undefined;
+    let requestedCAMEL_SubscriptionInfo: OPTIONAL<RequestedCAMEL_SubscriptionInfo> = undefined;
+    let supportedVLR_CAMEL_Phases: OPTIONAL<NULL> = undefined;
+    let supportedSGSN_CAMEL_Phases: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let additionalRequestedCAMEL_SubscriptionInfo: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo> = undefined;
+    let msisdn_BS_List: OPTIONAL<NULL> = undefined;
+    let csg_SubscriptionDataRequested: OPTIONAL<NULL> = undefined;
+    let cw_Info: OPTIONAL<NULL> = undefined;
+    let clip_Info: OPTIONAL<NULL> = undefined;
+    let clir_Info: OPTIONAL<NULL> = undefined;
+    let hold_Info: OPTIONAL<NULL> = undefined;
+    let ect_Info: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestedSS-Info": (_el: _Element): void => { requestedSS_Info = $._decode_implicit<SS_ForBS_Code>(() => _decode_SS_ForBS_Code)(_el); },
         "odb": (_el: _Element): void => { odb = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

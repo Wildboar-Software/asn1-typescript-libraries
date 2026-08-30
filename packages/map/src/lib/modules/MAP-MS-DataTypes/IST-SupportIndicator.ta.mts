@@ -125,21 +125,13 @@ const IST_SupportIndicator_istCommandSupported: IST_SupportIndicator = 1; /* LON
 export
 const istCommandSupported: IST_SupportIndicator = IST_SupportIndicator_istCommandSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_IST_SupportIndicator: $.ASN1Decoder<IST_SupportIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IST_SupportIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IST_SupportIndicator (el: _Element): IST_SupportIndicator {
-    if (!_cached_decoder_for_IST_SupportIndicator) { _cached_decoder_for_IST_SupportIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_IST_SupportIndicator(el);
-}
-
-let _cached_encoder_for_IST_SupportIndicator: $.ASN1Encoder<IST_SupportIndicator> | null = null;
+export const _decode_IST_SupportIndicator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IST_SupportIndicator into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_IST_SupportIndicator: $.ASN1Encoder<IST_SupportIndicator
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IST_SupportIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_IST_SupportIndicator (value: IST_SupportIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IST_SupportIndicator) { _cached_encoder_for_IST_SupportIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_IST_SupportIndicator(value, elGetter);
-}
+export const _encode_IST_SupportIndicator = $._encodeEnumerated;
 
 
 /* eslint-enable */

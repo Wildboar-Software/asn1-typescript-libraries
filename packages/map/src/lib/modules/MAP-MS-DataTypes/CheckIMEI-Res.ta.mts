@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EquipmentStatus, _enum_for_EquipmentStatus, EquipmentStatus_permittedListed /* IMPORTED_LONG_ENUMERATION_ITEM */, permittedListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, EquipmentStatus_prohibitedListed /* IMPORTED_LONG_ENUMERATION_ITEM */, prohibitedListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, EquipmentStatus_trackingListed /* IMPORTED_LONG_ENUMERATION_ITEM */, trackingListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EquipmentStatus, _encode_EquipmentStatus } from "../MAP-MS-DataTypes/EquipmentStatus.ta.mjs";
-// export { EquipmentStatus, _enum_for_EquipmentStatus, EquipmentStatus_permittedListed /* IMPORTED_LONG_ENUMERATION_ITEM */, permittedListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, EquipmentStatus_prohibitedListed /* IMPORTED_LONG_ENUMERATION_ITEM */, prohibitedListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, EquipmentStatus_trackingListed /* IMPORTED_LONG_ENUMERATION_ITEM */, trackingListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EquipmentStatus, _encode_EquipmentStatus } from "../MAP-MS-DataTypes/EquipmentStatus.ta.mjs";
 import { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataTypes/UESBI-Iu.ta.mjs";
-// export { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataTypes/UESBI-Iu.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -154,9 +151,9 @@ class CheckIMEI_Res {
  */
 export
 const _root_component_type_list_1_spec_for_CheckIMEI_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("equipmentStatus", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("bmuef", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("equipmentStatus", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("bmuef", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -196,10 +193,10 @@ let _cached_decoder_for_CheckIMEI_Res: $.ASN1Decoder<CheckIMEI_Res> | null = nul
 export
 function _decode_CheckIMEI_Res (el: _Element): CheckIMEI_Res {
     if (!_cached_decoder_for_CheckIMEI_Res) { _cached_decoder_for_CheckIMEI_Res = function (el: _Element): CheckIMEI_Res {
-    let equipmentStatus: OPTIONAL<EquipmentStatus>;
-    let bmuef: OPTIONAL<UESBI_Iu>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let equipmentStatus: OPTIONAL<EquipmentStatus> = undefined;
+    let bmuef: OPTIONAL<UESBI_Iu> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "equipmentStatus": (_el: _Element): void => { equipmentStatus = _decode_EquipmentStatus(_el); },
         "bmuef": (_el: _Element): void => { bmuef = _decode_UESBI_Iu(_el); },

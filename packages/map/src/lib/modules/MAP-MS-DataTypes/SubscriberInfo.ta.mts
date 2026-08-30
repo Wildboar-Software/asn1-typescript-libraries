@@ -67,37 +67,21 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
-// export { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
 import { SubscriberState, _decode_SubscriberState, _encode_SubscriberState } from "../MAP-MS-DataTypes/SubscriberState.ta.mjs";
-// export { SubscriberState, _decode_SubscriberState, _encode_SubscriberState } from "../MAP-MS-DataTypes/SubscriberState.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_LocationInformationGPRS } from "../MAP-MS-DataTypes/LocationInformationGPRS.ta.mjs";
-// export { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_LocationInformationGPRS } from "../MAP-MS-DataTypes/LocationInformationGPRS.ta.mjs";
 import { PS_SubscriberState, _decode_PS_SubscriberState, _encode_PS_SubscriberState } from "../MAP-MS-DataTypes/PS-SubscriberState.ta.mjs";
-// export { PS_SubscriberState, _decode_PS_SubscriberState, _encode_PS_SubscriberState } from "../MAP-MS-DataTypes/PS-SubscriberState.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
-// export { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
 import { GPRSMSClass, _decode_GPRSMSClass, _encode_GPRSMSClass } from "../MAP-MS-DataTypes/GPRSMSClass.ta.mjs";
-// export { GPRSMSClass, _decode_GPRSMSClass, _encode_GPRSMSClass } from "../MAP-MS-DataTypes/GPRSMSClass.ta.mjs";
 import { MNPInfoRes, _decode_MNPInfoRes, _encode_MNPInfoRes } from "../MAP-MS-DataTypes/MNPInfoRes.ta.mjs";
-// export { MNPInfoRes, _decode_MNPInfoRes, _encode_MNPInfoRes } from "../MAP-MS-DataTypes/MNPInfoRes.ta.mjs";
 import { IMS_VoiceOverPS_SessionsInd, _enum_for_IMS_VoiceOverPS_SessionsInd, IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, imsVoiceOverPS_SessionsNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, imsVoiceOverPS_SessionsSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMS_VoiceOverPS_SessionsInd_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IMS_VoiceOverPS_SessionsInd, _encode_IMS_VoiceOverPS_SessionsInd } from "../MAP-MS-DataTypes/IMS-VoiceOverPS-SessionsInd.ta.mjs";
-// export { IMS_VoiceOverPS_SessionsInd, _enum_for_IMS_VoiceOverPS_SessionsInd, IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, imsVoiceOverPS_SessionsNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, imsVoiceOverPS_SessionsSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMS_VoiceOverPS_SessionsInd_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IMS_VoiceOverPS_SessionsInd, _encode_IMS_VoiceOverPS_SessionsInd } from "../MAP-MS-DataTypes/IMS-VoiceOverPS-SessionsInd.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 import { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
-// export { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 import { LocationInformationEPS, _decode_LocationInformationEPS, _encode_LocationInformationEPS } from "../MAP-MS-DataTypes/LocationInformationEPS.ta.mjs";
-// export { LocationInformationEPS, _decode_LocationInformationEPS, _encode_LocationInformationEPS } from "../MAP-MS-DataTypes/LocationInformationEPS.ta.mjs";
 import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../MAP-MS-DataTypes/TimeZone.ta.mjs";
-// export { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../MAP-MS-DataTypes/TimeZone.ta.mjs";
 import { DaylightSavingTime, _enum_for_DaylightSavingTime, DaylightSavingTime_noAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, noAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, DaylightSavingTime_plusOneHourAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, plusOneHourAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, DaylightSavingTime_plusTwoHoursAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, plusTwoHoursAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DaylightSavingTime, _encode_DaylightSavingTime } from "../MAP-MS-DataTypes/DaylightSavingTime.ta.mjs";
-// export { DaylightSavingTime, _enum_for_DaylightSavingTime, DaylightSavingTime_noAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, noAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, DaylightSavingTime_plusOneHourAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, plusOneHourAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, DaylightSavingTime_plusTwoHoursAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, plusTwoHoursAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DaylightSavingTime, _encode_DaylightSavingTime } from "../MAP-MS-DataTypes/DaylightSavingTime.ta.mjs";
 import { LocationInformation5GS, _decode_LocationInformation5GS, _encode_LocationInformation5GS } from "../MAP-MS-DataTypes/LocationInformation5GS.ta.mjs";
-// export { LocationInformation5GS, _decode_LocationInformation5GS, _encode_LocationInformation5GS } from "../MAP-MS-DataTypes/LocationInformation5GS.ta.mjs";
 
 
 /**
@@ -290,9 +274,9 @@ class SubscriberInfo {
  */
 export
 const _root_component_type_list_1_spec_for_SubscriberInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("locationInformation", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("subscriberState", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("locationInformation", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("subscriberState", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -318,20 +302,20 @@ const _root_component_type_list_2_spec_for_SubscriberInfo: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_SubscriberInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("locationInformationGPRS", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("ps-SubscriberState", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("imei", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("ms-Classmark2", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("gprs-MS-Class", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("mnpInfoRes", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("imsVoiceOverPS-SessionsIndication", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("lastUE-ActivityTime", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("lastRAT-Type", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("eps-SubscriberState", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("locationInformationEPS", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("timeZone", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("daylightSavingTime", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("locationInformation5GS", true, $.hasTag(_TagClass.context, 16), undefined, undefined)
+    new $.ComponentSpec("locationInformationGPRS", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("ps-SubscriberState", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("imei", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("ms-Classmark2", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("gprs-MS-Class", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("mnpInfoRes", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("imsVoiceOverPS-SessionsIndication", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("lastUE-ActivityTime", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("lastRAT-Type", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("eps-SubscriberState", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("locationInformationEPS", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("timeZone", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("daylightSavingTime", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("locationInformation5GS", true, $.hasTag(_TagClass.context, 16))
 ];
 
 let _cached_decoder_for_SubscriberInfo: $.ASN1Decoder<SubscriberInfo> | null = null;
@@ -345,24 +329,24 @@ let _cached_decoder_for_SubscriberInfo: $.ASN1Decoder<SubscriberInfo> | null = n
 export
 function _decode_SubscriberInfo (el: _Element): SubscriberInfo {
     if (!_cached_decoder_for_SubscriberInfo) { _cached_decoder_for_SubscriberInfo = function (el: _Element): SubscriberInfo {
-    let locationInformation: OPTIONAL<LocationInformation>;
-    let subscriberState: OPTIONAL<SubscriberState>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let locationInformationGPRS: OPTIONAL<LocationInformationGPRS>;
-    let ps_SubscriberState: OPTIONAL<PS_SubscriberState>;
-    let imei: OPTIONAL<IMEI>;
-    let ms_Classmark2: OPTIONAL<MS_Classmark2>;
-    let gprs_MS_Class: OPTIONAL<GPRSMSClass>;
-    let mnpInfoRes: OPTIONAL<MNPInfoRes>;
-    let imsVoiceOverPS_SessionsIndication: OPTIONAL<IMS_VoiceOverPS_SessionsInd>;
-    let lastUE_ActivityTime: OPTIONAL<Time>;
-    let lastRAT_Type: OPTIONAL<Used_RAT_Type>;
-    let eps_SubscriberState: OPTIONAL<PS_SubscriberState>;
-    let locationInformationEPS: OPTIONAL<LocationInformationEPS>;
-    let timeZone: OPTIONAL<TimeZone>;
-    let daylightSavingTime: OPTIONAL<DaylightSavingTime>;
-    let locationInformation5GS: OPTIONAL<LocationInformation5GS>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let locationInformation: OPTIONAL<LocationInformation> = undefined;
+    let subscriberState: OPTIONAL<SubscriberState> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let locationInformationGPRS: OPTIONAL<LocationInformationGPRS> = undefined;
+    let ps_SubscriberState: OPTIONAL<PS_SubscriberState> = undefined;
+    let imei: OPTIONAL<IMEI> = undefined;
+    let ms_Classmark2: OPTIONAL<MS_Classmark2> = undefined;
+    let gprs_MS_Class: OPTIONAL<GPRSMSClass> = undefined;
+    let mnpInfoRes: OPTIONAL<MNPInfoRes> = undefined;
+    let imsVoiceOverPS_SessionsIndication: OPTIONAL<IMS_VoiceOverPS_SessionsInd> = undefined;
+    let lastUE_ActivityTime: OPTIONAL<Time> = undefined;
+    let lastRAT_Type: OPTIONAL<Used_RAT_Type> = undefined;
+    let eps_SubscriberState: OPTIONAL<PS_SubscriberState> = undefined;
+    let locationInformationEPS: OPTIONAL<LocationInformationEPS> = undefined;
+    let timeZone: OPTIONAL<TimeZone> = undefined;
+    let daylightSavingTime: OPTIONAL<DaylightSavingTime> = undefined;
+    let locationInformation5GS: OPTIONAL<LocationInformation5GS> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationInformation": (_el: _Element): void => { locationInformation = $._decode_implicit<LocationInformation>(() => _decode_LocationInformation)(_el); },
         "subscriberState": (_el: _Element): void => { subscriberState = $._decode_explicit<SubscriberState>(() => _decode_SubscriberState)(_el); },

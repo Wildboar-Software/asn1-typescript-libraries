@@ -258,21 +258,13 @@ const CCBS_RequestState_deleted: CCBS_RequestState = CCBS_RequestState.deleted; 
 export
 const deleted: CCBS_RequestState = CCBS_RequestState.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CCBS_RequestState: $.ASN1Decoder<CCBS_RequestState> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CCBS_RequestState
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CCBS_RequestState (el: _Element): CCBS_RequestState {
-    if (!_cached_decoder_for_CCBS_RequestState) { _cached_decoder_for_CCBS_RequestState = $._decodeEnumerated; }
-    return _cached_decoder_for_CCBS_RequestState(el);
-}
-
-let _cached_encoder_for_CCBS_RequestState: $.ASN1Encoder<CCBS_RequestState> | null = null;
+export const _decode_CCBS_RequestState = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CCBS_RequestState into an ASN.1 Element.
@@ -281,11 +273,7 @@ let _cached_encoder_for_CCBS_RequestState: $.ASN1Encoder<CCBS_RequestState> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CCBS_RequestState, encoded as an ASN.1 Element.
  */
-export
-function _encode_CCBS_RequestState (value: CCBS_RequestState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CCBS_RequestState) { _cached_encoder_for_CCBS_RequestState = $._encodeEnumerated; }
-    return _cached_encoder_for_CCBS_RequestState(value, elGetter);
-}
+export const _encode_CCBS_RequestState = $._encodeEnumerated;
 
 
 /* eslint-enable */

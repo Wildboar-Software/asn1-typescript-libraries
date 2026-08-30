@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TBCD_STRING, _decode_TBCD_STRING, _encode_TBCD_STRING } from "../MAP-CommonDataTypes/TBCD-STRING.ta.mjs";
-// export { TBCD_STRING, _decode_TBCD_STRING, _encode_TBCD_STRING } from "../MAP-CommonDataTypes/TBCD-STRING.ta.mjs";
 
 
 /**

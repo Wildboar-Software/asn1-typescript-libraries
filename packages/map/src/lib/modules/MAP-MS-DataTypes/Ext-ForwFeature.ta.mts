@@ -67,21 +67,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
-// export { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
 import { Ext_ForwOptions, _decode_Ext_ForwOptions, _encode_Ext_ForwOptions } from "../MAP-MS-DataTypes/Ext-ForwOptions.ta.mjs";
-// export { Ext_ForwOptions, _decode_Ext_ForwOptions, _encode_Ext_ForwOptions } from "../MAP-MS-DataTypes/Ext-ForwOptions.ta.mjs";
 import { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime } from "../MAP-MS-DataTypes/Ext-NoRepCondTime.ta.mjs";
-// export { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime } from "../MAP-MS-DataTypes/Ext-NoRepCondTime.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
-// export { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
 
 
 /**
@@ -196,13 +188,13 @@ class Ext_ForwFeature {
  */
 export
 const _root_component_type_list_1_spec_for_Ext_ForwFeature: $.ComponentSpec[] = [
-    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)), undefined, undefined),
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("forwardedToNumber", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("forwardedToSubaddress", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("forwardingOptions", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("noReplyConditionTime", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 9), undefined, undefined)
+    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3))),
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("forwardedToNumber", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("forwardedToSubaddress", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("forwardingOptions", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("noReplyConditionTime", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 9))
 ];
 
 /**
@@ -228,7 +220,7 @@ const _root_component_type_list_2_spec_for_Ext_ForwFeature: $.ComponentSpec[] = 
  */
 export
 const _extension_additions_list_spec_for_Ext_ForwFeature: $.ComponentSpec[] = [
-    new $.ComponentSpec("longForwardedToNumber", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("longForwardedToNumber", true, $.hasTag(_TagClass.context, 10))
 ];
 
 let _cached_decoder_for_Ext_ForwFeature: $.ASN1Decoder<Ext_ForwFeature> | null = null;
@@ -242,15 +234,15 @@ let _cached_decoder_for_Ext_ForwFeature: $.ASN1Decoder<Ext_ForwFeature> | null =
 export
 function _decode_Ext_ForwFeature (el: _Element): Ext_ForwFeature {
     if (!_cached_decoder_for_Ext_ForwFeature) { _cached_decoder_for_Ext_ForwFeature = function (el: _Element): Ext_ForwFeature {
-    let basicService: OPTIONAL<Ext_BasicServiceCode>;
+    let basicService: OPTIONAL<Ext_BasicServiceCode> = undefined;
     let ss_Status!: Ext_SS_Status;
-    let forwardedToNumber: OPTIONAL<ISDN_AddressString>;
-    let forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>;
-    let forwardingOptions: OPTIONAL<Ext_ForwOptions>;
-    let noReplyConditionTime: OPTIONAL<Ext_NoRepCondTime>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let longForwardedToNumber: OPTIONAL<FTN_AddressString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let forwardedToNumber: OPTIONAL<ISDN_AddressString> = undefined;
+    let forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString> = undefined;
+    let forwardingOptions: OPTIONAL<Ext_ForwOptions> = undefined;
+    let noReplyConditionTime: OPTIONAL<Ext_NoRepCondTime> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let longForwardedToNumber: OPTIONAL<FTN_AddressString> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "basicService": (_el: _Element): void => { basicService = _decode_Ext_BasicServiceCode(_el); },
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<Ext_SS_Status>(() => _decode_Ext_SS_Status)(_el); },

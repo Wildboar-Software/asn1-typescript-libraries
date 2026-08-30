@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
-// export { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
 import { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
-// export { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -154,9 +151,9 @@ class ModificationRequestFor_ODB_data {
  */
 export
 const _root_component_type_list_1_spec_for_ModificationRequestFor_ODB_data: $.ComponentSpec[] = [
-    new $.ComponentSpec("odb-data", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("modifyNotificationToCSE", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("odb-data", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("modifyNotificationToCSE", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -196,10 +193,10 @@ let _cached_decoder_for_ModificationRequestFor_ODB_data: $.ASN1Decoder<Modificat
 export
 function _decode_ModificationRequestFor_ODB_data (el: _Element): ModificationRequestFor_ODB_data {
     if (!_cached_decoder_for_ModificationRequestFor_ODB_data) { _cached_decoder_for_ModificationRequestFor_ODB_data = function (el: _Element): ModificationRequestFor_ODB_data {
-    let odb_data: OPTIONAL<ODB_Data>;
-    let modifyNotificationToCSE: OPTIONAL<ModificationInstruction>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let odb_data: OPTIONAL<ODB_Data> = undefined;
+    let modifyNotificationToCSE: OPTIONAL<ModificationInstruction> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "odb-data": (_el: _Element): void => { odb_data = $._decode_implicit<ODB_Data>(() => _decode_ODB_Data)(_el); },
         "modifyNotificationToCSE": (_el: _Element): void => { modifyNotificationToCSE = $._decode_implicit<ModificationInstruction>(() => _decode_ModificationInstruction)(_el); },

@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
-// export { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
 import { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-Id.ta.mjs";
-// export { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-Id.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
-// export { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
 import { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
-// export { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
 import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-// export { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
 import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
-// export { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
 
 
 /**
@@ -191,13 +184,13 @@ class LocationInformationEPS {
  */
 export
 const _root_component_type_list_1_spec_for_LocationInformationEPS: $.ComponentSpec[] = [
-    new $.ComponentSpec("e-utranCellGlobalIdentity", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("trackingAreaIdentity", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("geographicalInformation", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("geodeticInformation", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("currentLocationRetrieved", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("ageOfLocationInformation", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("e-utranCellGlobalIdentity", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("trackingAreaIdentity", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("geographicalInformation", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("geodeticInformation", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("currentLocationRetrieved", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("ageOfLocationInformation", true, $.hasTag(_TagClass.context, 6))
 ];
 
 /**
@@ -223,7 +216,7 @@ const _root_component_type_list_2_spec_for_LocationInformationEPS: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_LocationInformationEPS: $.ComponentSpec[] = [
-    new $.ComponentSpec("mme-Name", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("mme-Name", true, $.hasTag(_TagClass.context, 7))
 ];
 
 let _cached_decoder_for_LocationInformationEPS: $.ASN1Decoder<LocationInformationEPS> | null = null;
@@ -237,15 +230,15 @@ let _cached_decoder_for_LocationInformationEPS: $.ASN1Decoder<LocationInformatio
 export
 function _decode_LocationInformationEPS (el: _Element): LocationInformationEPS {
     if (!_cached_decoder_for_LocationInformationEPS) { _cached_decoder_for_LocationInformationEPS = function (el: _Element): LocationInformationEPS {
-    let e_utranCellGlobalIdentity: OPTIONAL<E_UTRAN_CGI>;
-    let trackingAreaIdentity: OPTIONAL<TA_Id>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let geographicalInformation: OPTIONAL<GeographicalInformation>;
-    let geodeticInformation: OPTIONAL<GeodeticInformation>;
-    let currentLocationRetrieved: OPTIONAL<NULL>;
-    let ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>;
-    let mme_Name: OPTIONAL<DiameterIdentity>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let e_utranCellGlobalIdentity: OPTIONAL<E_UTRAN_CGI> = undefined;
+    let trackingAreaIdentity: OPTIONAL<TA_Id> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let geographicalInformation: OPTIONAL<GeographicalInformation> = undefined;
+    let geodeticInformation: OPTIONAL<GeodeticInformation> = undefined;
+    let currentLocationRetrieved: OPTIONAL<NULL> = undefined;
+    let ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation> = undefined;
+    let mme_Name: OPTIONAL<DiameterIdentity> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "e-utranCellGlobalIdentity": (_el: _Element): void => { e_utranCellGlobalIdentity = $._decode_implicit<E_UTRAN_CGI>(() => _decode_E_UTRAN_CGI)(_el); },
         "trackingAreaIdentity": (_el: _Element): void => { trackingAreaIdentity = $._decode_implicit<TA_Id>(() => _decode_TA_Id)(_el); },

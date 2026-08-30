@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
-// export { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class RoutingInfoForLCS_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_RoutingInfoForLCS_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("mlcNumber", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("targetMS", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("mlcNumber", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("targetMS", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -192,8 +189,8 @@ function _decode_RoutingInfoForLCS_Arg (el: _Element): RoutingInfoForLCS_Arg {
     if (!_cached_decoder_for_RoutingInfoForLCS_Arg) { _cached_decoder_for_RoutingInfoForLCS_Arg = function (el: _Element): RoutingInfoForLCS_Arg {
     let mlcNumber!: ISDN_AddressString;
     let targetMS!: SubscriberIdentity;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mlcNumber": (_el: _Element): void => { mlcNumber = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "targetMS": (_el: _Element): void => { targetMS = $._decode_explicit<SubscriberIdentity>(() => _decode_SubscriberIdentity)(_el); },

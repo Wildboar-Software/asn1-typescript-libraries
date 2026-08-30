@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -142,21 +143,19 @@ const LCLS_ConfigurationPreference_backward_data_reception_indicator: number = 3
 export
 const backward_data_reception_indicator: number = LCLS_ConfigurationPreference_backward_data_reception_indicator; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_LCLS_ConfigurationPreference: $.ASN1Decoder<LCLS_ConfigurationPreference> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCLS_ConfigurationPreference
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCLS_ConfigurationPreference (el: _Element): LCLS_ConfigurationPreference {
-    if (!_cached_decoder_for_LCLS_ConfigurationPreference) { _cached_decoder_for_LCLS_ConfigurationPreference = $._decodeBitString; }
-    return _cached_decoder_for_LCLS_ConfigurationPreference(el);
-}
-
-let _cached_encoder_for_LCLS_ConfigurationPreference: $.ASN1Encoder<LCLS_ConfigurationPreference> | null = null;
+export const _decode_LCLS_ConfigurationPreference = (el: _Element): LCLS_ConfigurationPreference => {
+    const value = $._decodeBitString(el);
+    if (value.length < 4 || value.length > 8) {
+        throw new ASN1SizeError("LCLS_ConfigurationPreference violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) LCLS_ConfigurationPreference into an ASN.1 Element.
@@ -165,11 +164,7 @@ let _cached_encoder_for_LCLS_ConfigurationPreference: $.ASN1Encoder<LCLS_Configu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCLS_ConfigurationPreference, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCLS_ConfigurationPreference (value: LCLS_ConfigurationPreference, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCLS_ConfigurationPreference) { _cached_encoder_for_LCLS_ConfigurationPreference = $._encodeBitString; }
-    return _cached_encoder_for_LCLS_ConfigurationPreference(value, elGetter);
-}
+export const _encode_LCLS_ConfigurationPreference = $._encodeBitString;
 
 
 /* eslint-enable */

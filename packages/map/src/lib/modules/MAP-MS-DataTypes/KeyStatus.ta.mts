@@ -125,21 +125,13 @@ const KeyStatus_new_: KeyStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const new_: KeyStatus = KeyStatus_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_KeyStatus: $.ASN1Decoder<KeyStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_KeyStatus (el: _Element): KeyStatus {
-    if (!_cached_decoder_for_KeyStatus) { _cached_decoder_for_KeyStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_KeyStatus(el);
-}
-
-let _cached_encoder_for_KeyStatus: $.ASN1Encoder<KeyStatus> | null = null;
+export const _decode_KeyStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) KeyStatus into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_KeyStatus: $.ASN1Encoder<KeyStatus> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_KeyStatus (value: KeyStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KeyStatus) { _cached_encoder_for_KeyStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_KeyStatus(value, elGetter);
-}
+export const _encode_KeyStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

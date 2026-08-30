@@ -295,21 +295,13 @@ const RequestedCAMEL_SubscriptionInfo_d_csi: RequestedCAMEL_SubscriptionInfo = R
 export
 const d_csi: RequestedCAMEL_SubscriptionInfo = RequestedCAMEL_SubscriptionInfo.d_csi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RequestedCAMEL_SubscriptionInfo: $.ASN1Decoder<RequestedCAMEL_SubscriptionInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestedCAMEL_SubscriptionInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RequestedCAMEL_SubscriptionInfo (el: _Element): RequestedCAMEL_SubscriptionInfo {
-    if (!_cached_decoder_for_RequestedCAMEL_SubscriptionInfo) { _cached_decoder_for_RequestedCAMEL_SubscriptionInfo = $._decodeEnumerated; }
-    return _cached_decoder_for_RequestedCAMEL_SubscriptionInfo(el);
-}
-
-let _cached_encoder_for_RequestedCAMEL_SubscriptionInfo: $.ASN1Encoder<RequestedCAMEL_SubscriptionInfo> | null = null;
+export const _decode_RequestedCAMEL_SubscriptionInfo = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RequestedCAMEL_SubscriptionInfo into an ASN.1 Element.
@@ -318,11 +310,7 @@ let _cached_encoder_for_RequestedCAMEL_SubscriptionInfo: $.ASN1Encoder<Requested
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RequestedCAMEL_SubscriptionInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_RequestedCAMEL_SubscriptionInfo (value: RequestedCAMEL_SubscriptionInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestedCAMEL_SubscriptionInfo) { _cached_encoder_for_RequestedCAMEL_SubscriptionInfo = $._encodeEnumerated; }
-    return _cached_encoder_for_RequestedCAMEL_SubscriptionInfo(value, elGetter);
-}
+export const _encode_RequestedCAMEL_SubscriptionInfo = $._encodeEnumerated;
 
 
 /* eslint-enable */

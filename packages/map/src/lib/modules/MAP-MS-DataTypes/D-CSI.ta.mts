@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _encode_DP_AnalysedInfoCriteriaList } from "../MAP-MS-DataTypes/DP-AnalysedInfoCriteriaList.ta.mjs";
-// export { DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _encode_DP_AnalysedInfoCriteriaList } from "../MAP-MS-DataTypes/DP-AnalysedInfoCriteriaList.ta.mjs";
 import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
-// export { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -162,11 +159,11 @@ class D_CSI {
  */
 export
 const _root_component_type_list_1_spec_for_D_CSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("dp-AnalysedInfoCriteriaList", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("camelCapabilityHandling", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("csi-Active", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("dp-AnalysedInfoCriteriaList", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("camelCapabilityHandling", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("csi-Active", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -206,12 +203,12 @@ let _cached_decoder_for_D_CSI: $.ASN1Decoder<D_CSI> | null = null;
 export
 function _decode_D_CSI (el: _Element): D_CSI {
     if (!_cached_decoder_for_D_CSI) { _cached_decoder_for_D_CSI = function (el: _Element): D_CSI {
-    let dp_AnalysedInfoCriteriaList: OPTIONAL<DP_AnalysedInfoCriteriaList>;
-    let camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let csi_Active: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let dp_AnalysedInfoCriteriaList: OPTIONAL<DP_AnalysedInfoCriteriaList> = undefined;
+    let camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let csi_Active: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "dp-AnalysedInfoCriteriaList": (_el: _Element): void => { dp_AnalysedInfoCriteriaList = $._decode_implicit<DP_AnalysedInfoCriteriaList>(() => _decode_DP_AnalysedInfoCriteriaList)(_el); },
         "camelCapabilityHandling": (_el: _Element): void => { camelCapabilityHandling = $._decode_implicit<CamelCapabilityHandling>(() => _decode_CamelCapabilityHandling)(_el); },

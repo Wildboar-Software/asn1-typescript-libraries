@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSClientType, _enum_for_LCSClientType, LCSClientType_emergencyServices /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_valueAddedServices /* IMPORTED_LONG_ENUMERATION_ITEM */, valueAddedServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_plmnOperatorServices /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnOperatorServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_lawfulInterceptServices /* IMPORTED_LONG_ENUMERATION_ITEM */, lawfulInterceptServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCSClientType, _encode_LCSClientType } from "../MAP-LCS-DataTypes/LCSClientType.ta.mjs";
-// export { LCSClientType, _enum_for_LCSClientType, LCSClientType_emergencyServices /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_valueAddedServices /* IMPORTED_LONG_ENUMERATION_ITEM */, valueAddedServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_plmnOperatorServices /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnOperatorServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_lawfulInterceptServices /* IMPORTED_LONG_ENUMERATION_ITEM */, lawfulInterceptServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCSClientType, _encode_LCSClientType } from "../MAP-LCS-DataTypes/LCSClientType.ta.mjs";
 import { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "../MAP-CommonDataTypes/LCSClientExternalID.ta.mjs";
-// export { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "../MAP-CommonDataTypes/LCSClientExternalID.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { LCSClientInternalID, _enum_for_LCSClientInternalID, LCSClientInternalID_broadcastService /* IMPORTED_LONG_ENUMERATION_ITEM */, broadcastService /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_HPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_HPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_VPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_VPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_anonymousLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, anonymousLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_targetMSsubscribedService /* IMPORTED_LONG_ENUMERATION_ITEM */, targetMSsubscribedService /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCSClientInternalID, _encode_LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
-// export { LCSClientInternalID, _enum_for_LCSClientInternalID, LCSClientInternalID_broadcastService /* IMPORTED_LONG_ENUMERATION_ITEM */, broadcastService /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_HPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_HPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_VPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_VPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_anonymousLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, anonymousLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_targetMSsubscribedService /* IMPORTED_LONG_ENUMERATION_ITEM */, targetMSsubscribedService /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCSClientInternalID, _encode_LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
 import { LCSClientName, _decode_LCSClientName, _encode_LCSClientName } from "../MAP-LCS-DataTypes/LCSClientName.ta.mjs";
-// export { LCSClientName, _decode_LCSClientName, _encode_LCSClientName } from "../MAP-LCS-DataTypes/LCSClientName.ta.mjs";
 import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-// export { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 import { LCSRequestorID, _decode_LCSRequestorID, _encode_LCSRequestorID } from "../MAP-LCS-DataTypes/LCSRequestorID.ta.mjs";
-// export { LCSRequestorID, _decode_LCSRequestorID, _encode_LCSRequestorID } from "../MAP-LCS-DataTypes/LCSRequestorID.ta.mjs";
 
 
 /**
@@ -196,11 +189,11 @@ class LCS_ClientID {
  */
 export
 const _root_component_type_list_1_spec_for_LCS_ClientID: $.ComponentSpec[] = [
-    new $.ComponentSpec("lcsClientType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("lcsClientExternalID", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("lcsClientDialedByMS", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("lcsClientInternalID", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("lcsClientName", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("lcsClientType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("lcsClientExternalID", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("lcsClientDialedByMS", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("lcsClientInternalID", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("lcsClientName", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -226,8 +219,8 @@ const _root_component_type_list_2_spec_for_LCS_ClientID: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_LCS_ClientID: $.ComponentSpec[] = [
-    new $.ComponentSpec("lcsAPN", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("lcsRequestorID", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("lcsAPN", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("lcsRequestorID", true, $.hasTag(_TagClass.context, 6))
 ];
 
 let _cached_decoder_for_LCS_ClientID: $.ASN1Decoder<LCS_ClientID> | null = null;
@@ -242,13 +235,13 @@ export
 function _decode_LCS_ClientID (el: _Element): LCS_ClientID {
     if (!_cached_decoder_for_LCS_ClientID) { _cached_decoder_for_LCS_ClientID = function (el: _Element): LCS_ClientID {
     let lcsClientType!: LCSClientType;
-    let lcsClientExternalID: OPTIONAL<LCSClientExternalID>;
-    let lcsClientDialedByMS: OPTIONAL<AddressString>;
-    let lcsClientInternalID: OPTIONAL<LCSClientInternalID>;
-    let lcsClientName: OPTIONAL<LCSClientName>;
-    let lcsAPN: OPTIONAL<APN>;
-    let lcsRequestorID: OPTIONAL<LCSRequestorID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lcsClientExternalID: OPTIONAL<LCSClientExternalID> = undefined;
+    let lcsClientDialedByMS: OPTIONAL<AddressString> = undefined;
+    let lcsClientInternalID: OPTIONAL<LCSClientInternalID> = undefined;
+    let lcsClientName: OPTIONAL<LCSClientName> = undefined;
+    let lcsAPN: OPTIONAL<APN> = undefined;
+    let lcsRequestorID: OPTIONAL<LCSRequestorID> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "lcsClientType": (_el: _Element): void => { lcsClientType = $._decode_implicit<LCSClientType>(() => _decode_LCSClientType)(_el); },
         "lcsClientExternalID": (_el: _Element): void => { lcsClientExternalID = $._decode_implicit<LCSClientExternalID>(() => _decode_LCSClientExternalID)(_el); },

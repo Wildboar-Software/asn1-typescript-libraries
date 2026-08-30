@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CodecList, _decode_CodecList, _encode_CodecList } from "../MAP-MS-DataTypes/CodecList.ta.mjs";
-// export { CodecList, _decode_CodecList, _encode_CodecList } from "../MAP-MS-DataTypes/CodecList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -146,9 +144,9 @@ class SupportedCodecsList {
  */
 export
 const _root_component_type_list_1_spec_for_SupportedCodecsList: $.ComponentSpec[] = [
-    new $.ComponentSpec("utranCodecList", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("geranCodecList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("utranCodecList", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("geranCodecList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -188,10 +186,10 @@ let _cached_decoder_for_SupportedCodecsList: $.ASN1Decoder<SupportedCodecsList> 
 export
 function _decode_SupportedCodecsList (el: _Element): SupportedCodecsList {
     if (!_cached_decoder_for_SupportedCodecsList) { _cached_decoder_for_SupportedCodecsList = function (el: _Element): SupportedCodecsList {
-    let utranCodecList: OPTIONAL<CodecList>;
-    let geranCodecList: OPTIONAL<CodecList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let utranCodecList: OPTIONAL<CodecList> = undefined;
+    let geranCodecList: OPTIONAL<CodecList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "utranCodecList": (_el: _Element): void => { utranCodecList = $._decode_implicit<CodecList>(() => _decode_CodecList)(_el); },
         "geranCodecList": (_el: _Element): void => { geranCodecList = $._decode_implicit<CodecList>(() => _decode_CodecList)(_el); },

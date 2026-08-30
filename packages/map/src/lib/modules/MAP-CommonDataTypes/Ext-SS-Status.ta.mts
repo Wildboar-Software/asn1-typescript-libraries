@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Ext_SS_Status = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Ext_SS_Status: $.ASN1Decoder<Ext_SS_Status> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext_SS_Status
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Ext_SS_Status (el: _Element): Ext_SS_Status {
-    if (!_cached_decoder_for_Ext_SS_Status) { _cached_decoder_for_Ext_SS_Status = $._decodeOctetString; }
-    return _cached_decoder_for_Ext_SS_Status(el);
-}
-
-let _cached_encoder_for_Ext_SS_Status: $.ASN1Encoder<Ext_SS_Status> | null = null;
+export const _decode_Ext_SS_Status = (el: _Element): Ext_SS_Status => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("Ext_SS_Status violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Ext_SS_Status into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Ext_SS_Status: $.ASN1Encoder<Ext_SS_Status> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_SS_Status, encoded as an ASN.1 Element.
  */
-export
-function _encode_Ext_SS_Status (value: Ext_SS_Status, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Ext_SS_Status) { _cached_encoder_for_Ext_SS_Status = $._encodeOctetString; }
-    return _cached_encoder_for_Ext_SS_Status(value, elGetter);
-}
+export const _encode_Ext_SS_Status = $._encodeOctetString;
 
 
 /* eslint-enable */

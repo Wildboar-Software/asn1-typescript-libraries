@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
-// export { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
 import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
-// export { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -155,10 +152,10 @@ class PDN_GW_Identity {
  */
 export
 const _root_component_type_list_1_spec_for_PDN_GW_Identity: $.ComponentSpec[] = [
-    new $.ComponentSpec("pdn-gw-ipv4-Address", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("pdn-gw-ipv6-Address", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("pdn-gw-name", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("pdn-gw-ipv4-Address", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("pdn-gw-ipv6-Address", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("pdn-gw-name", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -198,11 +195,11 @@ let _cached_decoder_for_PDN_GW_Identity: $.ASN1Decoder<PDN_GW_Identity> | null =
 export
 function _decode_PDN_GW_Identity (el: _Element): PDN_GW_Identity {
     if (!_cached_decoder_for_PDN_GW_Identity) { _cached_decoder_for_PDN_GW_Identity = function (el: _Element): PDN_GW_Identity {
-    let pdn_gw_ipv4_Address: OPTIONAL<PDP_Address>;
-    let pdn_gw_ipv6_Address: OPTIONAL<PDP_Address>;
-    let pdn_gw_name: OPTIONAL<FQDN>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let pdn_gw_ipv4_Address: OPTIONAL<PDP_Address> = undefined;
+    let pdn_gw_ipv6_Address: OPTIONAL<PDP_Address> = undefined;
+    let pdn_gw_name: OPTIONAL<FQDN> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pdn-gw-ipv4-Address": (_el: _Element): void => { pdn_gw_ipv4_Address = $._decode_implicit<PDP_Address>(() => _decode_PDP_Address)(_el); },
         "pdn-gw-ipv6-Address": (_el: _Element): void => { pdn_gw_ipv6_Address = $._decode_implicit<PDP_Address>(() => _decode_PDP_Address)(_el); },

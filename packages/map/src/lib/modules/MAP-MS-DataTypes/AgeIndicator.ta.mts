@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AgeIndicator = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_AgeIndicator: $.ASN1Decoder<AgeIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AgeIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AgeIndicator (el: _Element): AgeIndicator {
-    if (!_cached_decoder_for_AgeIndicator) { _cached_decoder_for_AgeIndicator = $._decodeOctetString; }
-    return _cached_decoder_for_AgeIndicator(el);
-}
-
-let _cached_encoder_for_AgeIndicator: $.ASN1Encoder<AgeIndicator> | null = null;
+export const _decode_AgeIndicator = (el: _Element): AgeIndicator => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 6) {
+        throw new ASN1SizeError("AgeIndicator violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) AgeIndicator into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_AgeIndicator: $.ASN1Encoder<AgeIndicator> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AgeIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_AgeIndicator (value: AgeIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AgeIndicator) { _cached_encoder_for_AgeIndicator = $._encodeOctetString; }
-    return _cached_encoder_for_AgeIndicator(value, elGetter);
-}
+export const _encode_AgeIndicator = $._encodeOctetString;
 
 
 /* eslint-enable */

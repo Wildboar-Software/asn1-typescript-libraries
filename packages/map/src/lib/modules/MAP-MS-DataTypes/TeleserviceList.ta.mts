@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
-// export { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 
+
+import { maxNumOfTeleservices } from "./maxNumOfTeleservices.va.mjs";
 
 /**
  * @summary TeleserviceList
@@ -95,7 +97,11 @@ let _cached_decoder_for_TeleserviceList: $.ASN1Decoder<TeleserviceList> | null =
 export
 function _decode_TeleserviceList (el: _Element): TeleserviceList {
     if (!_cached_decoder_for_TeleserviceList) { _cached_decoder_for_TeleserviceList = $._decodeSequenceOf<Ext_TeleserviceCode>(() => _decode_Ext_TeleserviceCode); }
-    return _cached_decoder_for_TeleserviceList(el);
+    const value = _cached_decoder_for_TeleserviceList(el);
+    if (value.length < 1 || value.length > maxNumOfTeleservices) {
+        throw new ASN1SizeError("TeleserviceList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_TeleserviceList: $.ASN1Encoder<TeleserviceList> | null = null;

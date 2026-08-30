@@ -125,21 +125,13 @@ const LCS_QoS_Class_assured: LCS_QoS_Class = 1; /* LONG_NAMED_ENUMERATED_VALUE *
 export
 const assured: LCS_QoS_Class = LCS_QoS_Class_assured; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LCS_QoS_Class: $.ASN1Decoder<LCS_QoS_Class> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_QoS_Class
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCS_QoS_Class (el: _Element): LCS_QoS_Class {
-    if (!_cached_decoder_for_LCS_QoS_Class) { _cached_decoder_for_LCS_QoS_Class = $._decodeEnumerated; }
-    return _cached_decoder_for_LCS_QoS_Class(el);
-}
-
-let _cached_encoder_for_LCS_QoS_Class: $.ASN1Encoder<LCS_QoS_Class> | null = null;
+export const _decode_LCS_QoS_Class = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCS_QoS_Class into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_LCS_QoS_Class: $.ASN1Encoder<LCS_QoS_Class> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCS_QoS_Class, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCS_QoS_Class (value: LCS_QoS_Class, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCS_QoS_Class) { _cached_encoder_for_LCS_QoS_Class = $._encodeEnumerated; }
-    return _cached_encoder_for_LCS_QoS_Class(value, elGetter);
-}
+export const _encode_LCS_QoS_Class = $._encodeEnumerated;
 
 
 /* eslint-enable */

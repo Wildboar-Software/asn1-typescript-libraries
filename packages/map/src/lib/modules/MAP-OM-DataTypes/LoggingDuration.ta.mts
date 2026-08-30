@@ -235,21 +235,13 @@ const LoggingDuration_d7200sec: LoggingDuration = LoggingDuration.d7200sec; /* L
 export
 const d7200sec: LoggingDuration = LoggingDuration.d7200sec; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LoggingDuration: $.ASN1Decoder<LoggingDuration> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LoggingDuration
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LoggingDuration (el: _Element): LoggingDuration {
-    if (!_cached_decoder_for_LoggingDuration) { _cached_decoder_for_LoggingDuration = $._decodeEnumerated; }
-    return _cached_decoder_for_LoggingDuration(el);
-}
-
-let _cached_encoder_for_LoggingDuration: $.ASN1Encoder<LoggingDuration> | null = null;
+export const _decode_LoggingDuration = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LoggingDuration into an ASN.1 Element.
@@ -258,11 +250,7 @@ let _cached_encoder_for_LoggingDuration: $.ASN1Encoder<LoggingDuration> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LoggingDuration, encoded as an ASN.1 Element.
  */
-export
-function _encode_LoggingDuration (value: LoggingDuration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LoggingDuration) { _cached_encoder_for_LoggingDuration = $._encodeEnumerated; }
-    return _cached_encoder_for_LoggingDuration(value, elGetter);
-}
+export const _encode_LoggingDuration = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -125,21 +125,13 @@ const DomainType_ps_Domain: DomainType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const ps_Domain: DomainType = DomainType_ps_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_DomainType: $.ASN1Decoder<DomainType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DomainType (el: _Element): DomainType {
-    if (!_cached_decoder_for_DomainType) { _cached_decoder_for_DomainType = $._decodeEnumerated; }
-    return _cached_decoder_for_DomainType(el);
-}
-
-let _cached_encoder_for_DomainType: $.ASN1Encoder<DomainType> | null = null;
+export const _decode_DomainType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) DomainType into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_DomainType: $.ASN1Encoder<DomainType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DomainType, encoded as an ASN.1 Element.
  */
-export
-function _encode_DomainType (value: DomainType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DomainType) { _cached_encoder_for_DomainType = $._encodeEnumerated; }
-    return _cached_encoder_for_DomainType(value, elGetter);
-}
+export const _encode_DomainType = $._encodeEnumerated;
 
 
 /* eslint-enable */

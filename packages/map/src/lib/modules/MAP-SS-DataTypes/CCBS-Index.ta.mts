@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxNumOfCCBS_Requests } from "./maxNumOfCCBS-Requests.va.mjs";
 
 /**
  * @summary CCBS_Index
@@ -82,21 +85,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CCBS_Index = INTEGER;
 
-let _cached_decoder_for_CCBS_Index: $.ASN1Decoder<CCBS_Index> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CCBS_Index
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CCBS_Index (el: _Element): CCBS_Index {
-    if (!_cached_decoder_for_CCBS_Index) { _cached_decoder_for_CCBS_Index = $._decodeInteger; }
-    return _cached_decoder_for_CCBS_Index(el);
-}
-
-let _cached_encoder_for_CCBS_Index: $.ASN1Encoder<CCBS_Index> | null = null;
+export const _decode_CCBS_Index = (el: _Element): CCBS_Index => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > maxNumOfCCBS_Requests) {
+        throw new ASN1OverflowError("CCBS_Index violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) CCBS_Index into an ASN.1 Element.
@@ -105,11 +107,7 @@ let _cached_encoder_for_CCBS_Index: $.ASN1Encoder<CCBS_Index> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CCBS_Index, encoded as an ASN.1 Element.
  */
-export
-function _encode_CCBS_Index (value: CCBS_Index, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CCBS_Index) { _cached_encoder_for_CCBS_Index = $._encodeInteger; }
-    return _cached_encoder_for_CCBS_Index(value, elGetter);
-}
+export const _encode_CCBS_Index = $._encodeInteger;
 
 
 /* eslint-enable */

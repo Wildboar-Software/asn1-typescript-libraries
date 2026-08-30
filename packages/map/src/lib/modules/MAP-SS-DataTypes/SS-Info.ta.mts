@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ForwardingInfo, _decode_ForwardingInfo, _encode_ForwardingInfo } from "../MAP-SS-DataTypes/ForwardingInfo.ta.mjs";
-// export { ForwardingInfo, _decode_ForwardingInfo, _encode_ForwardingInfo } from "../MAP-SS-DataTypes/ForwardingInfo.ta.mjs";
 import { CallBarringInfo, _decode_CallBarringInfo, _encode_CallBarringInfo } from "../MAP-SS-DataTypes/CallBarringInfo.ta.mjs";
-// export { CallBarringInfo, _decode_CallBarringInfo, _encode_CallBarringInfo } from "../MAP-SS-DataTypes/CallBarringInfo.ta.mjs";
 import { SS_Data, _decode_SS_Data, _encode_SS_Data } from "../MAP-SS-DataTypes/SS-Data.ta.mjs";
-// export { SS_Data, _decode_SS_Data, _encode_SS_Data } from "../MAP-SS-DataTypes/SS-Data.ta.mjs";
 
 
 /**

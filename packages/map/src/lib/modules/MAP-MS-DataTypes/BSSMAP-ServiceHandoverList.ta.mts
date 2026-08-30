@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BSSMAP_ServiceHandoverInfo, _decode_BSSMAP_ServiceHandoverInfo, _encode_BSSMAP_ServiceHandoverInfo } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverInfo.ta.mjs";
-// export { BSSMAP_ServiceHandoverInfo, _decode_BSSMAP_ServiceHandoverInfo, _encode_BSSMAP_ServiceHandoverInfo } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverInfo.ta.mjs";
 
+
+import { maxNumOfServiceHandovers } from "./maxNumOfServiceHandovers.va.mjs";
 
 /**
  * @summary BSSMAP_ServiceHandoverList
@@ -95,7 +97,11 @@ let _cached_decoder_for_BSSMAP_ServiceHandoverList: $.ASN1Decoder<BSSMAP_Service
 export
 function _decode_BSSMAP_ServiceHandoverList (el: _Element): BSSMAP_ServiceHandoverList {
     if (!_cached_decoder_for_BSSMAP_ServiceHandoverList) { _cached_decoder_for_BSSMAP_ServiceHandoverList = $._decodeSequenceOf<BSSMAP_ServiceHandoverInfo>(() => _decode_BSSMAP_ServiceHandoverInfo); }
-    return _cached_decoder_for_BSSMAP_ServiceHandoverList(el);
+    const value = _cached_decoder_for_BSSMAP_ServiceHandoverList(el);
+    if (value.length < 1 || value.length > maxNumOfServiceHandovers) {
+        throw new ASN1SizeError("BSSMAP_ServiceHandoverList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_BSSMAP_ServiceHandoverList: $.ASN1Encoder<BSSMAP_ServiceHandoverList> | null = null;

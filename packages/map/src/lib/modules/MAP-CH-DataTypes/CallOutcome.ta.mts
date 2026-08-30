@@ -143,21 +143,13 @@ const CallOutcome_busy: CallOutcome = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const busy: CallOutcome = CallOutcome_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CallOutcome: $.ASN1Decoder<CallOutcome> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CallOutcome
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CallOutcome (el: _Element): CallOutcome {
-    if (!_cached_decoder_for_CallOutcome) { _cached_decoder_for_CallOutcome = $._decodeEnumerated; }
-    return _cached_decoder_for_CallOutcome(el);
-}
-
-let _cached_encoder_for_CallOutcome: $.ASN1Encoder<CallOutcome> | null = null;
+export const _decode_CallOutcome = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CallOutcome into an ASN.1 Element.
@@ -166,11 +158,7 @@ let _cached_encoder_for_CallOutcome: $.ASN1Encoder<CallOutcome> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallOutcome, encoded as an ASN.1 Element.
  */
-export
-function _encode_CallOutcome (value: CallOutcome, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallOutcome) { _cached_encoder_for_CallOutcome = $._encodeEnumerated; }
-    return _cached_encoder_for_CallOutcome(value, elGetter);
-}
+export const _encode_CallOutcome = $._encodeEnumerated;
 
 
 /* eslint-enable */

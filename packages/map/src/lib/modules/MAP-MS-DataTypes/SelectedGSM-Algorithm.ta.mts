@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SelectedGSM_Algorithm = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_SelectedGSM_Algorithm: $.ASN1Decoder<SelectedGSM_Algorithm> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SelectedGSM_Algorithm
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SelectedGSM_Algorithm (el: _Element): SelectedGSM_Algorithm {
-    if (!_cached_decoder_for_SelectedGSM_Algorithm) { _cached_decoder_for_SelectedGSM_Algorithm = $._decodeOctetString; }
-    return _cached_decoder_for_SelectedGSM_Algorithm(el);
-}
-
-let _cached_encoder_for_SelectedGSM_Algorithm: $.ASN1Encoder<SelectedGSM_Algorithm> | null = null;
+export const _decode_SelectedGSM_Algorithm = (el: _Element): SelectedGSM_Algorithm => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("SelectedGSM_Algorithm violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SelectedGSM_Algorithm into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_SelectedGSM_Algorithm: $.ASN1Encoder<SelectedGSM_Algorit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SelectedGSM_Algorithm, encoded as an ASN.1 Element.
  */
-export
-function _encode_SelectedGSM_Algorithm (value: SelectedGSM_Algorithm, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SelectedGSM_Algorithm) { _cached_encoder_for_SelectedGSM_Algorithm = $._encodeOctetString; }
-    return _cached_encoder_for_SelectedGSM_Algorithm(value, elGetter);
-}
+export const _encode_SelectedGSM_Algorithm = $._encodeOctetString;
 
 
 /* eslint-enable */

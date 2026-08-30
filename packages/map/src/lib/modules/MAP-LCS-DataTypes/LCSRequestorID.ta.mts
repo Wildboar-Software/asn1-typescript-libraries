@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
-// export { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 import { RequestorIDString, _decode_RequestorIDString, _encode_RequestorIDString } from "../MAP-LCS-DataTypes/RequestorIDString.ta.mjs";
-// export { RequestorIDString, _decode_RequestorIDString, _encode_RequestorIDString } from "../MAP-LCS-DataTypes/RequestorIDString.ta.mjs";
 import { LCS_FormatIndicator, _enum_for_LCS_FormatIndicator, LCS_FormatIndicator_logicalName /* IMPORTED_LONG_ENUMERATION_ITEM */, logicalName /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_e_mailAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mailAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_msisdn /* IMPORTED_LONG_ENUMERATION_ITEM */, msisdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_url /* IMPORTED_LONG_ENUMERATION_ITEM */, url /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_sipUrl /* IMPORTED_LONG_ENUMERATION_ITEM */, sipUrl /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
-// export { LCS_FormatIndicator, _enum_for_LCS_FormatIndicator, LCS_FormatIndicator_logicalName /* IMPORTED_LONG_ENUMERATION_ITEM */, logicalName /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_e_mailAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mailAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_msisdn /* IMPORTED_LONG_ENUMERATION_ITEM */, msisdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_url /* IMPORTED_LONG_ENUMERATION_ITEM */, url /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_sipUrl /* IMPORTED_LONG_ENUMERATION_ITEM */, sipUrl /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
 
 
 /**
@@ -154,8 +151,8 @@ class LCSRequestorID {
  */
 export
 const _root_component_type_list_1_spec_for_LCSRequestorID: $.ComponentSpec[] = [
-    new $.ComponentSpec("dataCodingScheme", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("requestorIDString", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("dataCodingScheme", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestorIDString", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -181,7 +178,7 @@ const _root_component_type_list_2_spec_for_LCSRequestorID: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_LCSRequestorID: $.ComponentSpec[] = [
-    new $.ComponentSpec("lcs-FormatIndicator", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("lcs-FormatIndicator", true, $.hasTag(_TagClass.context, 2))
 ];
 
 let _cached_decoder_for_LCSRequestorID: $.ASN1Decoder<LCSRequestorID> | null = null;
@@ -197,8 +194,8 @@ function _decode_LCSRequestorID (el: _Element): LCSRequestorID {
     if (!_cached_decoder_for_LCSRequestorID) { _cached_decoder_for_LCSRequestorID = function (el: _Element): LCSRequestorID {
     let dataCodingScheme!: USSD_DataCodingScheme;
     let requestorIDString!: RequestorIDString;
-    let lcs_FormatIndicator: OPTIONAL<LCS_FormatIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lcs_FormatIndicator: OPTIONAL<LCS_FormatIndicator> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "dataCodingScheme": (_el: _Element): void => { dataCodingScheme = $._decode_implicit<USSD_DataCodingScheme>(() => _decode_USSD_DataCodingScheme)(_el); },
         "requestorIDString": (_el: _Element): void => { requestorIDString = $._decode_implicit<RequestorIDString>(() => _decode_RequestorIDString)(_el); },

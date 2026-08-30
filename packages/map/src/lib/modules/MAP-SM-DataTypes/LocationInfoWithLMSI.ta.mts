@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Additional_Number, _decode_Additional_Number, _encode_Additional_Number } from "../MAP-SM-DataTypes/Additional-Number.ta.mjs";
-// export { Additional_Number, _decode_Additional_Number, _encode_Additional_Number } from "../MAP-SM-DataTypes/Additional-Number.ta.mjs";
 import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
-// export { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
 
 
 /**
@@ -270,9 +265,9 @@ class LocationInfoWithLMSI {
  */
 export
 const _root_component_type_list_1_spec_for_LocationInfoWithLMSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("networkNode-Number", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("networkNode-Number", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -298,19 +293,19 @@ const _root_component_type_list_2_spec_for_LocationInfoWithLMSI: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_LocationInfoWithLMSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("gprsNodeIndicator", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("additional-Number", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("networkNodeDiameterAddress", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("additionalNetworkNodeDiameterAddress", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("thirdNumber", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("thirdNetworkNodeDiameterAddress", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("imsNodeIndicator", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("smsf-3gpp-Number", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("smsf-3gpp-DiameterAddress", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("smsf-non-3gpp-Number", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("smsf-non-3gpp-DiameterAddress", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("smsf-3gpp-address-indicator", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("smsf-non-3gpp-address-indicator", true, $.hasTag(_TagClass.context, 17), undefined, undefined)
+    new $.ComponentSpec("gprsNodeIndicator", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("additional-Number", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("networkNodeDiameterAddress", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("additionalNetworkNodeDiameterAddress", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("thirdNumber", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("thirdNetworkNodeDiameterAddress", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("imsNodeIndicator", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("smsf-3gpp-Number", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("smsf-3gpp-DiameterAddress", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("smsf-non-3gpp-Number", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("smsf-non-3gpp-DiameterAddress", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("smsf-3gpp-address-indicator", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("smsf-non-3gpp-address-indicator", true, $.hasTag(_TagClass.context, 17))
 ];
 
 let _cached_decoder_for_LocationInfoWithLMSI: $.ASN1Decoder<LocationInfoWithLMSI> | null = null;
@@ -325,22 +320,22 @@ export
 function _decode_LocationInfoWithLMSI (el: _Element): LocationInfoWithLMSI {
     if (!_cached_decoder_for_LocationInfoWithLMSI) { _cached_decoder_for_LocationInfoWithLMSI = function (el: _Element): LocationInfoWithLMSI {
     let networkNode_Number!: ISDN_AddressString;
-    let lmsi: OPTIONAL<LMSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let gprsNodeIndicator: OPTIONAL<NULL>;
-    let additional_Number: OPTIONAL<Additional_Number>;
-    let networkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let additionalNetworkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let thirdNumber: OPTIONAL<Additional_Number>;
-    let thirdNetworkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let imsNodeIndicator: OPTIONAL<NULL>;
-    let smsf_3gpp_Number: OPTIONAL<ISDN_AddressString>;
-    let smsf_3gpp_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let smsf_non_3gpp_Number: OPTIONAL<ISDN_AddressString>;
-    let smsf_non_3gpp_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let smsf_3gpp_address_indicator: OPTIONAL<NULL>;
-    let smsf_non_3gpp_address_indicator: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lmsi: OPTIONAL<LMSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let gprsNodeIndicator: OPTIONAL<NULL> = undefined;
+    let additional_Number: OPTIONAL<Additional_Number> = undefined;
+    let networkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    let additionalNetworkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    let thirdNumber: OPTIONAL<Additional_Number> = undefined;
+    let thirdNetworkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    let imsNodeIndicator: OPTIONAL<NULL> = undefined;
+    let smsf_3gpp_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let smsf_3gpp_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    let smsf_non_3gpp_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let smsf_non_3gpp_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    let smsf_3gpp_address_indicator: OPTIONAL<NULL> = undefined;
+    let smsf_non_3gpp_address_indicator: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "networkNode-Number": (_el: _Element): void => { networkNode_Number = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "lmsi": (_el: _Element): void => { lmsi = _decode_LMSI(_el); },

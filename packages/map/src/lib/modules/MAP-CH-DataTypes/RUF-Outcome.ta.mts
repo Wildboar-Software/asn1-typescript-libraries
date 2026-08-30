@@ -197,21 +197,13 @@ const RUF_Outcome_udubFromBusyMS: RUF_Outcome = 5; /* LONG_NAMED_ENUMERATED_VALU
 export
 const udubFromBusyMS: RUF_Outcome = RUF_Outcome_udubFromBusyMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RUF_Outcome: $.ASN1Decoder<RUF_Outcome> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RUF_Outcome
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RUF_Outcome (el: _Element): RUF_Outcome {
-    if (!_cached_decoder_for_RUF_Outcome) { _cached_decoder_for_RUF_Outcome = $._decodeEnumerated; }
-    return _cached_decoder_for_RUF_Outcome(el);
-}
-
-let _cached_encoder_for_RUF_Outcome: $.ASN1Encoder<RUF_Outcome> | null = null;
+export const _decode_RUF_Outcome = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RUF_Outcome into an ASN.1 Element.
@@ -220,11 +212,7 @@ let _cached_encoder_for_RUF_Outcome: $.ASN1Encoder<RUF_Outcome> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RUF_Outcome, encoded as an ASN.1 Element.
  */
-export
-function _encode_RUF_Outcome (value: RUF_Outcome, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RUF_Outcome) { _cached_encoder_for_RUF_Outcome = $._encodeEnumerated; }
-    return _cached_encoder_for_RUF_Outcome(value, elGetter);
-}
+export const _encode_RUF_Outcome = $._encodeEnumerated;
 
 
 /* eslint-enable */

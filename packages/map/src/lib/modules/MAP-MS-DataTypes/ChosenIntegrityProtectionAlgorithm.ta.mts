@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ChosenIntegrityProtectionAlgorithm = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_ChosenIntegrityProtectionAlgorithm: $.ASN1Decoder<ChosenIntegrityProtectionAlgorithm> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ChosenIntegrityProtectionAlgorithm
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ChosenIntegrityProtectionAlgorithm (el: _Element): ChosenIntegrityProtectionAlgorithm {
-    if (!_cached_decoder_for_ChosenIntegrityProtectionAlgorithm) { _cached_decoder_for_ChosenIntegrityProtectionAlgorithm = $._decodeOctetString; }
-    return _cached_decoder_for_ChosenIntegrityProtectionAlgorithm(el);
-}
-
-let _cached_encoder_for_ChosenIntegrityProtectionAlgorithm: $.ASN1Encoder<ChosenIntegrityProtectionAlgorithm> | null = null;
+export const _decode_ChosenIntegrityProtectionAlgorithm = (el: _Element): ChosenIntegrityProtectionAlgorithm => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("ChosenIntegrityProtectionAlgorithm violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ChosenIntegrityProtectionAlgorithm into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_ChosenIntegrityProtectionAlgorithm: $.ASN1Encoder<Chosen
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ChosenIntegrityProtectionAlgorithm, encoded as an ASN.1 Element.
  */
-export
-function _encode_ChosenIntegrityProtectionAlgorithm (value: ChosenIntegrityProtectionAlgorithm, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChosenIntegrityProtectionAlgorithm) { _cached_encoder_for_ChosenIntegrityProtectionAlgorithm = $._encodeOctetString; }
-    return _cached_encoder_for_ChosenIntegrityProtectionAlgorithm(value, elGetter);
-}
+export const _encode_ChosenIntegrityProtectionAlgorithm = $._encodeOctetString;
 
 
 /* eslint-enable */

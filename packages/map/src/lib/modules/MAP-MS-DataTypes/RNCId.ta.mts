@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RNCId = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_RNCId: $.ASN1Decoder<RNCId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RNCId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RNCId (el: _Element): RNCId {
-    if (!_cached_decoder_for_RNCId) { _cached_decoder_for_RNCId = $._decodeOctetString; }
-    return _cached_decoder_for_RNCId(el);
-}
-
-let _cached_encoder_for_RNCId: $.ASN1Encoder<RNCId> | null = null;
+export const _decode_RNCId = (el: _Element): RNCId => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 7 || value.length > 7) {
+        throw new ASN1SizeError("RNCId violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) RNCId into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_RNCId: $.ASN1Encoder<RNCId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RNCId, encoded as an ASN.1 Element.
  */
-export
-function _encode_RNCId (value: RNCId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RNCId) { _cached_encoder_for_RNCId = $._encodeOctetString; }
-    return _cached_encoder_for_RNCId(value, elGetter);
-}
+export const _encode_RNCId = $._encodeOctetString;
 
 
 /* eslint-enable */

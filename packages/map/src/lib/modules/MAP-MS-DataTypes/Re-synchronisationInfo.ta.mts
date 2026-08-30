@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
-// export { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
 import { AUTS, _decode_AUTS, _encode_AUTS } from "../MAP-MS-DataTypes/AUTS.ta.mjs";
-// export { AUTS, _decode_AUTS, _encode_AUTS } from "../MAP-MS-DataTypes/AUTS.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class Re_synchronisationInfo {
  */
 export
 const _root_component_type_list_1_spec_for_Re_synchronisationInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("rand", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("auts", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("rand", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("auts", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**

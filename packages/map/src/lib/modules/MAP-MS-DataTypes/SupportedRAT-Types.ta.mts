@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -172,21 +173,19 @@ const SupportedRAT_Types_nb_iot: number = 5; /* LONG_NAMED_BIT */
 export
 const nb_iot: number = SupportedRAT_Types_nb_iot; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SupportedRAT_Types: $.ASN1Decoder<SupportedRAT_Types> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedRAT_Types
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SupportedRAT_Types (el: _Element): SupportedRAT_Types {
-    if (!_cached_decoder_for_SupportedRAT_Types) { _cached_decoder_for_SupportedRAT_Types = $._decodeBitString; }
-    return _cached_decoder_for_SupportedRAT_Types(el);
-}
-
-let _cached_encoder_for_SupportedRAT_Types: $.ASN1Encoder<SupportedRAT_Types> | null = null;
+export const _decode_SupportedRAT_Types = (el: _Element): SupportedRAT_Types => {
+    const value = $._decodeBitString(el);
+    if (value.length < 2 || value.length > 8) {
+        throw new ASN1SizeError("SupportedRAT_Types violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SupportedRAT_Types into an ASN.1 Element.
@@ -195,11 +194,7 @@ let _cached_encoder_for_SupportedRAT_Types: $.ASN1Encoder<SupportedRAT_Types> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SupportedRAT_Types, encoded as an ASN.1 Element.
  */
-export
-function _encode_SupportedRAT_Types (value: SupportedRAT_Types, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupportedRAT_Types) { _cached_encoder_for_SupportedRAT_Types = $._encodeBitString; }
-    return _cached_encoder_for_SupportedRAT_Types(value, elGetter);
-}
+export const _encode_SupportedRAT_Types = $._encodeBitString;
 
 
 /* eslint-enable */

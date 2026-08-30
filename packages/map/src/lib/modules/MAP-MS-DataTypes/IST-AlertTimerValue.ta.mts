@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type IST_AlertTimerValue = INTEGER;
 
-let _cached_decoder_for_IST_AlertTimerValue: $.ASN1Decoder<IST_AlertTimerValue> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IST_AlertTimerValue
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IST_AlertTimerValue (el: _Element): IST_AlertTimerValue {
-    if (!_cached_decoder_for_IST_AlertTimerValue) { _cached_decoder_for_IST_AlertTimerValue = $._decodeInteger; }
-    return _cached_decoder_for_IST_AlertTimerValue(el);
-}
-
-let _cached_encoder_for_IST_AlertTimerValue: $.ASN1Encoder<IST_AlertTimerValue> | null = null;
+export const _decode_IST_AlertTimerValue = (el: _Element): IST_AlertTimerValue => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 15 || n > 255) {
+        throw new ASN1OverflowError("IST_AlertTimerValue violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) IST_AlertTimerValue into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_IST_AlertTimerValue: $.ASN1Encoder<IST_AlertTimerValue> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IST_AlertTimerValue, encoded as an ASN.1 Element.
  */
-export
-function _encode_IST_AlertTimerValue (value: IST_AlertTimerValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IST_AlertTimerValue) { _cached_encoder_for_IST_AlertTimerValue = $._encodeInteger; }
-    return _cached_encoder_for_IST_AlertTimerValue(value, elGetter);
-}
+export const _encode_IST_AlertTimerValue = $._encodeInteger;
 
 
 /* eslint-enable */

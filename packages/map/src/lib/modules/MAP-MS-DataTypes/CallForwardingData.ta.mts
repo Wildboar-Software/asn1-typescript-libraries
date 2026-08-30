@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatureList } from "../MAP-MS-DataTypes/Ext-ForwFeatureList.ta.mjs";
-// export { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatureList } from "../MAP-MS-DataTypes/Ext-ForwFeatureList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -146,9 +144,9 @@ class CallForwardingData {
  */
 export
 const _root_component_type_list_1_spec_for_CallForwardingData: $.ComponentSpec[] = [
-    new $.ComponentSpec("forwardingFeatureList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("forwardingFeatureList", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -189,9 +187,9 @@ export
 function _decode_CallForwardingData (el: _Element): CallForwardingData {
     if (!_cached_decoder_for_CallForwardingData) { _cached_decoder_for_CallForwardingData = function (el: _Element): CallForwardingData {
     let forwardingFeatureList!: Ext_ForwFeatureList;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "forwardingFeatureList": (_el: _Element): void => { forwardingFeatureList = _decode_Ext_ForwFeatureList(_el); },
         "notificationToCSE": (_el: _Element): void => { notificationToCSE = $._decodeNull(_el); },

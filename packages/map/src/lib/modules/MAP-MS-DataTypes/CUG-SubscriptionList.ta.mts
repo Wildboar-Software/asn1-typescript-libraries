@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CUG_Subscription, _decode_CUG_Subscription, _encode_CUG_Subscription } from "../MAP-MS-DataTypes/CUG-Subscription.ta.mjs";
-// export { CUG_Subscription, _decode_CUG_Subscription, _encode_CUG_Subscription } from "../MAP-MS-DataTypes/CUG-Subscription.ta.mjs";
 
+
+import { maxNumOfCUG } from "./maxNumOfCUG.va.mjs";
 
 /**
  * @summary CUG_SubscriptionList
@@ -95,7 +97,11 @@ let _cached_decoder_for_CUG_SubscriptionList: $.ASN1Decoder<CUG_SubscriptionList
 export
 function _decode_CUG_SubscriptionList (el: _Element): CUG_SubscriptionList {
     if (!_cached_decoder_for_CUG_SubscriptionList) { _cached_decoder_for_CUG_SubscriptionList = $._decodeSequenceOf<CUG_Subscription>(() => _decode_CUG_Subscription); }
-    return _cached_decoder_for_CUG_SubscriptionList(el);
+    const value = _cached_decoder_for_CUG_SubscriptionList(el);
+    if (value.length < 0 || value.length > maxNumOfCUG) {
+        throw new ASN1SizeError("CUG_SubscriptionList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CUG_SubscriptionList: $.ASN1Encoder<CUG_SubscriptionList> | null = null;

@@ -125,21 +125,13 @@ const ResponseTimeCategory_delaytolerant: ResponseTimeCategory = 1; /* LONG_NAME
 export
 const delaytolerant: ResponseTimeCategory = ResponseTimeCategory_delaytolerant; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ResponseTimeCategory: $.ASN1Decoder<ResponseTimeCategory> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseTimeCategory
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ResponseTimeCategory (el: _Element): ResponseTimeCategory {
-    if (!_cached_decoder_for_ResponseTimeCategory) { _cached_decoder_for_ResponseTimeCategory = $._decodeEnumerated; }
-    return _cached_decoder_for_ResponseTimeCategory(el);
-}
-
-let _cached_encoder_for_ResponseTimeCategory: $.ASN1Encoder<ResponseTimeCategory> | null = null;
+export const _decode_ResponseTimeCategory = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ResponseTimeCategory into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_ResponseTimeCategory: $.ASN1Encoder<ResponseTimeCategory
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ResponseTimeCategory, encoded as an ASN.1 Element.
  */
-export
-function _encode_ResponseTimeCategory (value: ResponseTimeCategory, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResponseTimeCategory) { _cached_encoder_for_ResponseTimeCategory = $._encodeEnumerated; }
-    return _cached_encoder_for_ResponseTimeCategory(value, elGetter);
-}
+export const _encode_ResponseTimeCategory = $._encodeEnumerated;
 
 
 /* eslint-enable */

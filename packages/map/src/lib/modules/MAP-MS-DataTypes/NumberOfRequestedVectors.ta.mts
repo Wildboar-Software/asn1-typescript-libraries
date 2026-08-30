@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NumberOfRequestedVectors = INTEGER;
 
-let _cached_decoder_for_NumberOfRequestedVectors: $.ASN1Decoder<NumberOfRequestedVectors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NumberOfRequestedVectors
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NumberOfRequestedVectors (el: _Element): NumberOfRequestedVectors {
-    if (!_cached_decoder_for_NumberOfRequestedVectors) { _cached_decoder_for_NumberOfRequestedVectors = $._decodeInteger; }
-    return _cached_decoder_for_NumberOfRequestedVectors(el);
-}
-
-let _cached_encoder_for_NumberOfRequestedVectors: $.ASN1Encoder<NumberOfRequestedVectors> | null = null;
+export const _decode_NumberOfRequestedVectors = (el: _Element): NumberOfRequestedVectors => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > 5) {
+        throw new ASN1OverflowError("NumberOfRequestedVectors violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) NumberOfRequestedVectors into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_NumberOfRequestedVectors: $.ASN1Encoder<NumberOfRequeste
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NumberOfRequestedVectors, encoded as an ASN.1 Element.
  */
-export
-function _encode_NumberOfRequestedVectors (value: NumberOfRequestedVectors, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NumberOfRequestedVectors) { _cached_encoder_for_NumberOfRequestedVectors = $._encodeInteger; }
-    return _cached_encoder_for_NumberOfRequestedVectors(value, elGetter);
-}
+export const _encode_NumberOfRequestedVectors = $._encodeInteger;
 
 
 /* eslint-enable */

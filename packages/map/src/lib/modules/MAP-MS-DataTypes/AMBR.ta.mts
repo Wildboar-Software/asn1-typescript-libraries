@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Bandwidth, _decode_Bandwidth, _encode_Bandwidth } from "../MAP-MS-DataTypes/Bandwidth.ta.mjs";
-// export { Bandwidth, _decode_Bandwidth, _encode_Bandwidth } from "../MAP-MS-DataTypes/Bandwidth.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { BandwidthExt, _decode_BandwidthExt, _encode_BandwidthExt } from "../MAP-MS-DataTypes/BandwidthExt.ta.mjs";
-// export { BandwidthExt, _decode_BandwidthExt, _encode_BandwidthExt } from "../MAP-MS-DataTypes/BandwidthExt.ta.mjs";
 
 
 /**
@@ -165,9 +162,9 @@ class AMBR {
  */
 export
 const _root_component_type_list_1_spec_for_AMBR: $.ComponentSpec[] = [
-    new $.ComponentSpec("max-RequestedBandwidth-UL", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("max-RequestedBandwidth-DL", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("max-RequestedBandwidth-UL", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("max-RequestedBandwidth-DL", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -193,8 +190,8 @@ const _root_component_type_list_2_spec_for_AMBR: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_AMBR: $.ComponentSpec[] = [
-    new $.ComponentSpec("extended-Max-RequestedBandwidth-UL", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extended-Max-RequestedBandwidth-DL", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("extended-Max-RequestedBandwidth-UL", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extended-Max-RequestedBandwidth-DL", true, $.hasTag(_TagClass.context, 4))
 ];
 
 let _cached_decoder_for_AMBR: $.ASN1Decoder<AMBR> | null = null;
@@ -210,10 +207,10 @@ function _decode_AMBR (el: _Element): AMBR {
     if (!_cached_decoder_for_AMBR) { _cached_decoder_for_AMBR = function (el: _Element): AMBR {
     let max_RequestedBandwidth_UL!: Bandwidth;
     let max_RequestedBandwidth_DL!: Bandwidth;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let extended_Max_RequestedBandwidth_UL: OPTIONAL<BandwidthExt>;
-    let extended_Max_RequestedBandwidth_DL: OPTIONAL<BandwidthExt>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let extended_Max_RequestedBandwidth_UL: OPTIONAL<BandwidthExt> = undefined;
+    let extended_Max_RequestedBandwidth_DL: OPTIONAL<BandwidthExt> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "max-RequestedBandwidth-UL": (_el: _Element): void => { max_RequestedBandwidth_UL = $._decode_implicit<Bandwidth>(() => _decode_Bandwidth)(_el); },
         "max-RequestedBandwidth-DL": (_el: _Element): void => { max_RequestedBandwidth_DL = $._decode_implicit<Bandwidth>(() => _decode_Bandwidth)(_el); },

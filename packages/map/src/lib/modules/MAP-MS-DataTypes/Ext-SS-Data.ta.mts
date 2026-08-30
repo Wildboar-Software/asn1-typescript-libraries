@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_SubscriptionOption } from "../MAP-SS-DataTypes/SS-SubscriptionOption.ta.mjs";
-// export { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_SubscriptionOption } from "../MAP-SS-DataTypes/SS-SubscriptionOption.ta.mjs";
 import { Ext_BasicServiceGroupList, _decode_Ext_BasicServiceGroupList, _encode_Ext_BasicServiceGroupList } from "../MAP-MS-DataTypes/Ext-BasicServiceGroupList.ta.mjs";
-// export { Ext_BasicServiceGroupList, _decode_Ext_BasicServiceGroupList, _encode_Ext_BasicServiceGroupList } from "../MAP-MS-DataTypes/Ext-BasicServiceGroupList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -166,11 +161,11 @@ class Ext_SS_Data {
  */
 export
 const _root_component_type_list_1_spec_for_Ext_SS_Data: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("ss-SubscriptionOption", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 1)), undefined, undefined),
-    new $.ComponentSpec("basicServiceGroupList", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("ss-SubscriptionOption", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 1))),
+    new $.ComponentSpec("basicServiceGroupList", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -212,10 +207,10 @@ function _decode_Ext_SS_Data (el: _Element): Ext_SS_Data {
     if (!_cached_decoder_for_Ext_SS_Data) { _cached_decoder_for_Ext_SS_Data = function (el: _Element): Ext_SS_Data {
     let ss_Code!: SS_Code;
     let ss_Status!: Ext_SS_Status;
-    let ss_SubscriptionOption: OPTIONAL<SS_SubscriptionOption>;
-    let basicServiceGroupList: OPTIONAL<Ext_BasicServiceGroupList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ss_SubscriptionOption: OPTIONAL<SS_SubscriptionOption> = undefined;
+    let basicServiceGroupList: OPTIONAL<Ext_BasicServiceGroupList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = _decode_SS_Code(_el); },
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<Ext_SS_Status>(() => _decode_Ext_SS_Status)(_el); },

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -84,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Password = NumericString; // NumericString
 
-let _cached_decoder_for_Password: $.ASN1Decoder<Password> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Password
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Password (el: _Element): Password {
-    if (!_cached_decoder_for_Password) { _cached_decoder_for_Password = $._decodeNumericString; }
-    return _cached_decoder_for_Password(el);
-}
-
-let _cached_encoder_for_Password: $.ASN1Encoder<Password> | null = null;
+export const _decode_Password = (el: _Element): Password => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 4 || value.length > 4) {
+        throw new ASN1SizeError("Password violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Password into an ASN.1 Element.
@@ -107,11 +106,7 @@ let _cached_encoder_for_Password: $.ASN1Encoder<Password> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Password, encoded as an ASN.1 Element.
  */
-export
-function _encode_Password (value: Password, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Password) { _cached_encoder_for_Password = $._encodeNumericString; }
-    return _cached_encoder_for_Password(value, elGetter);
-}
+export const _encode_Password = $._encodeNumericString;
 
 
 /* eslint-enable */

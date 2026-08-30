@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CCBS_SubscriberStatus, _enum_for_CCBS_SubscriberStatus, CCBS_SubscriberStatus_ccbsNotIdle /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsNotIdle /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_SubscriberStatus_ccbsIdle /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsIdle /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_SubscriberStatus_ccbsNotReachable /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsNotReachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CCBS_SubscriberStatus, _encode_CCBS_SubscriberStatus } from "../MAP-CH-DataTypes/CCBS-SubscriberStatus.ta.mjs";
-// export { CCBS_SubscriberStatus, _enum_for_CCBS_SubscriberStatus, CCBS_SubscriberStatus_ccbsNotIdle /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsNotIdle /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_SubscriberStatus_ccbsIdle /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsIdle /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_SubscriberStatus_ccbsNotReachable /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsNotReachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CCBS_SubscriberStatus, _encode_CCBS_SubscriberStatus } from "../MAP-CH-DataTypes/CCBS-SubscriberStatus.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class SetReportingStateRes {
  */
 export
 const _root_component_type_list_1_spec_for_SetReportingStateRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("ccbs-SubscriberStatus", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("ccbs-SubscriberStatus", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -186,9 +184,9 @@ let _cached_decoder_for_SetReportingStateRes: $.ASN1Decoder<SetReportingStateRes
 export
 function _decode_SetReportingStateRes (el: _Element): SetReportingStateRes {
     if (!_cached_decoder_for_SetReportingStateRes) { _cached_decoder_for_SetReportingStateRes = function (el: _Element): SetReportingStateRes {
-    let ccbs_SubscriberStatus: OPTIONAL<CCBS_SubscriberStatus>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ccbs_SubscriberStatus: OPTIONAL<CCBS_SubscriberStatus> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ccbs-SubscriberStatus": (_el: _Element): void => { ccbs_SubscriberStatus = $._decode_implicit<CCBS_SubscriberStatus>(() => _decode_CCBS_SubscriberStatus)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }

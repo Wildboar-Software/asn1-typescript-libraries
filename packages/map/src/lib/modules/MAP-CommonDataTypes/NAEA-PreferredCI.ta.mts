@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NAEA_CIC, _decode_NAEA_CIC, _encode_NAEA_CIC } from "../MAP-CommonDataTypes/NAEA-CIC.ta.mjs";
-// export { NAEA_CIC, _decode_NAEA_CIC, _encode_NAEA_CIC } from "../MAP-CommonDataTypes/NAEA-CIC.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class NAEA_PreferredCI {
  */
 export
 const _root_component_type_list_1_spec_for_NAEA_PreferredCI: $.ComponentSpec[] = [
-    new $.ComponentSpec("naea-PreferredCIC", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("naea-PreferredCIC", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -181,8 +179,8 @@ export
 function _decode_NAEA_PreferredCI (el: _Element): NAEA_PreferredCI {
     if (!_cached_decoder_for_NAEA_PreferredCI) { _cached_decoder_for_NAEA_PreferredCI = function (el: _Element): NAEA_PreferredCI {
     let naea_PreferredCIC!: NAEA_CIC;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "naea-PreferredCIC": (_el: _Element): void => { naea_PreferredCIC = $._decode_implicit<NAEA_CIC>(() => _decode_NAEA_CIC)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }

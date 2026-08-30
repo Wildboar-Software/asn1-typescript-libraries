@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NR_CGI = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_NR_CGI: $.ASN1Decoder<NR_CGI> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NR_CGI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NR_CGI (el: _Element): NR_CGI {
-    if (!_cached_decoder_for_NR_CGI) { _cached_decoder_for_NR_CGI = $._decodeOctetString; }
-    return _cached_decoder_for_NR_CGI(el);
-}
-
-let _cached_encoder_for_NR_CGI: $.ASN1Encoder<NR_CGI> | null = null;
+export const _decode_NR_CGI = (el: _Element): NR_CGI => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 8 || value.length > 8) {
+        throw new ASN1SizeError("NR_CGI violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) NR_CGI into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_NR_CGI: $.ASN1Encoder<NR_CGI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NR_CGI, encoded as an ASN.1 Element.
  */
-export
-function _encode_NR_CGI (value: NR_CGI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NR_CGI) { _cached_encoder_for_NR_CGI = $._encodeOctetString; }
-    return _cached_encoder_for_NR_CGI(value, elGetter);
-}
+export const _encode_NR_CGI = $._encodeOctetString;
 
 
 /* eslint-enable */

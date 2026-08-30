@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
-// export { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
 import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
-// export { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -157,10 +153,10 @@ class MT_ForwardSM_VGCS_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_MT_ForwardSM_VGCS_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("asciCallReference", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("sm-RP-OA", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("sm-RP-UI", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("asciCallReference", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("sm-RP-OA", false, $.hasAnyTag),
+    new $.ComponentSpec("sm-RP-UI", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -203,8 +199,8 @@ function _decode_MT_ForwardSM_VGCS_Arg (el: _Element): MT_ForwardSM_VGCS_Arg {
     let asciCallReference!: ASCI_CallReference;
     let sm_RP_OA!: SM_RP_OA;
     let sm_RP_UI!: SignalInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "asciCallReference": (_el: _Element): void => { asciCallReference = _decode_ASCI_CallReference(_el); },
         "sm-RP-OA": (_el: _Element): void => { sm_RP_OA = _decode_SM_RP_OA(_el); },

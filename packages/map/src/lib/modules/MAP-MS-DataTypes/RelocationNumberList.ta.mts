@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RelocationNumber, _decode_RelocationNumber, _encode_RelocationNumber } from "../MAP-MS-DataTypes/RelocationNumber.ta.mjs";
-// export { RelocationNumber, _decode_RelocationNumber, _encode_RelocationNumber } from "../MAP-MS-DataTypes/RelocationNumber.ta.mjs";
 
+
+import { maxNumOfRelocationNumber } from "./maxNumOfRelocationNumber.va.mjs";
 
 /**
  * @summary RelocationNumberList
@@ -95,7 +97,11 @@ let _cached_decoder_for_RelocationNumberList: $.ASN1Decoder<RelocationNumberList
 export
 function _decode_RelocationNumberList (el: _Element): RelocationNumberList {
     if (!_cached_decoder_for_RelocationNumberList) { _cached_decoder_for_RelocationNumberList = $._decodeSequenceOf<RelocationNumber>(() => _decode_RelocationNumber); }
-    return _cached_decoder_for_RelocationNumberList(el);
+    const value = _cached_decoder_for_RelocationNumberList(el);
+    if (value.length < 1 || value.length > maxNumOfRelocationNumber) {
+        throw new ASN1SizeError("RelocationNumberList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RelocationNumberList: $.ASN1Encoder<RelocationNumberList> | null = null;

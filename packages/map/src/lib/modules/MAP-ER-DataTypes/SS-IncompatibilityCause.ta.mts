@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-// export { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
 import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
-// export { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class SS_IncompatibilityCause {
  */
 export
 const _root_component_type_list_1_spec_for_SS_IncompatibilityCause: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)), undefined, undefined),
-    new $.ComponentSpec("ss-Status", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("ss-Code", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3))),
+    new $.ComponentSpec("ss-Status", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -190,10 +187,10 @@ let _cached_decoder_for_SS_IncompatibilityCause: $.ASN1Decoder<SS_Incompatibilit
 export
 function _decode_SS_IncompatibilityCause (el: _Element): SS_IncompatibilityCause {
     if (!_cached_decoder_for_SS_IncompatibilityCause) { _cached_decoder_for_SS_IncompatibilityCause = function (el: _Element): SS_IncompatibilityCause {
-    let ss_Code: OPTIONAL<SS_Code>;
-    let basicService: OPTIONAL<BasicServiceCode>;
-    let ss_Status: OPTIONAL<SS_Status>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ss_Code: OPTIONAL<SS_Code> = undefined;
+    let basicService: OPTIONAL<BasicServiceCode> = undefined;
+    let ss_Status: OPTIONAL<SS_Status> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = $._decode_implicit<SS_Code>(() => _decode_SS_Code)(_el); },
         "basicService": (_el: _Element): void => { basicService = _decode_BasicServiceCode(_el); },

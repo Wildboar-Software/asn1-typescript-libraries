@@ -175,21 +175,13 @@ const IntraCUG_Options_cugOG_CallBarred: IntraCUG_Options = IntraCUG_Options.cug
 export
 const cugOG_CallBarred: IntraCUG_Options = IntraCUG_Options.cugOG_CallBarred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_IntraCUG_Options: $.ASN1Decoder<IntraCUG_Options> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IntraCUG_Options
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IntraCUG_Options (el: _Element): IntraCUG_Options {
-    if (!_cached_decoder_for_IntraCUG_Options) { _cached_decoder_for_IntraCUG_Options = $._decodeEnumerated; }
-    return _cached_decoder_for_IntraCUG_Options(el);
-}
-
-let _cached_encoder_for_IntraCUG_Options: $.ASN1Encoder<IntraCUG_Options> | null = null;
+export const _decode_IntraCUG_Options = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IntraCUG_Options into an ASN.1 Element.
@@ -198,11 +190,7 @@ let _cached_encoder_for_IntraCUG_Options: $.ASN1Encoder<IntraCUG_Options> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IntraCUG_Options, encoded as an ASN.1 Element.
  */
-export
-function _encode_IntraCUG_Options (value: IntraCUG_Options, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IntraCUG_Options) { _cached_encoder_for_IntraCUG_Options = $._encodeEnumerated; }
-    return _cached_encoder_for_IntraCUG_Options(value, elGetter);
-}
+export const _encode_IntraCUG_Options = $._encodeEnumerated;
 
 
 /* eslint-enable */

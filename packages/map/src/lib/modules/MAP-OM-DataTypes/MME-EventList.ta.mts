@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -172,21 +173,19 @@ const MME_EventList_handover: number = 5; /* LONG_NAMED_BIT */
 export
 const handover: number = MME_EventList_handover; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_MME_EventList: $.ASN1Decoder<MME_EventList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MME_EventList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MME_EventList (el: _Element): MME_EventList {
-    if (!_cached_decoder_for_MME_EventList) { _cached_decoder_for_MME_EventList = $._decodeBitString; }
-    return _cached_decoder_for_MME_EventList(el);
-}
-
-let _cached_encoder_for_MME_EventList: $.ASN1Encoder<MME_EventList> | null = null;
+export const _decode_MME_EventList = (el: _Element): MME_EventList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 6 || value.length > 8) {
+        throw new ASN1SizeError("MME_EventList violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MME_EventList into an ASN.1 Element.
@@ -195,11 +194,7 @@ let _cached_encoder_for_MME_EventList: $.ASN1Encoder<MME_EventList> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MME_EventList, encoded as an ASN.1 Element.
  */
-export
-function _encode_MME_EventList (value: MME_EventList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MME_EventList) { _cached_encoder_for_MME_EventList = $._encodeBitString; }
-    return _cached_encoder_for_MME_EventList(value, elGetter);
-}
+export const _encode_MME_EventList = $._encodeBitString;
 
 
 /* eslint-enable */

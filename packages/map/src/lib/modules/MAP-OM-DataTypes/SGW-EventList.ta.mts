@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -127,21 +128,19 @@ const SGW_EventList_bearerActivationModificationDeletion: number = 2; /* LONG_NA
 export
 const bearerActivationModificationDeletion: number = SGW_EventList_bearerActivationModificationDeletion; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SGW_EventList: $.ASN1Decoder<SGW_EventList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SGW_EventList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SGW_EventList (el: _Element): SGW_EventList {
-    if (!_cached_decoder_for_SGW_EventList) { _cached_decoder_for_SGW_EventList = $._decodeBitString; }
-    return _cached_decoder_for_SGW_EventList(el);
-}
-
-let _cached_encoder_for_SGW_EventList: $.ASN1Encoder<SGW_EventList> | null = null;
+export const _decode_SGW_EventList = (el: _Element): SGW_EventList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 3 || value.length > 8) {
+        throw new ASN1SizeError("SGW_EventList violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SGW_EventList into an ASN.1 Element.
@@ -150,11 +149,7 @@ let _cached_encoder_for_SGW_EventList: $.ASN1Encoder<SGW_EventList> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SGW_EventList, encoded as an ASN.1 Element.
  */
-export
-function _encode_SGW_EventList (value: SGW_EventList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGW_EventList) { _cached_encoder_for_SGW_EventList = $._encodeBitString; }
-    return _cached_encoder_for_SGW_EventList(value, elGetter);
-}
+export const _encode_SGW_EventList = $._encodeBitString;
 
 
 /* eslint-enable */

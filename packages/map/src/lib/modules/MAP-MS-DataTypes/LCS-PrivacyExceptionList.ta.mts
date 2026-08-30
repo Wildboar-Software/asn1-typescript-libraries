@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCS_PrivacyClass, _decode_LCS_PrivacyClass, _encode_LCS_PrivacyClass } from "../MAP-MS-DataTypes/LCS-PrivacyClass.ta.mjs";
-// export { LCS_PrivacyClass, _decode_LCS_PrivacyClass, _encode_LCS_PrivacyClass } from "../MAP-MS-DataTypes/LCS-PrivacyClass.ta.mjs";
 
+
+import { maxNumOfPrivacyClass } from "./maxNumOfPrivacyClass.va.mjs";
 
 /**
  * @summary LCS_PrivacyExceptionList
@@ -95,7 +97,11 @@ let _cached_decoder_for_LCS_PrivacyExceptionList: $.ASN1Decoder<LCS_PrivacyExcep
 export
 function _decode_LCS_PrivacyExceptionList (el: _Element): LCS_PrivacyExceptionList {
     if (!_cached_decoder_for_LCS_PrivacyExceptionList) { _cached_decoder_for_LCS_PrivacyExceptionList = $._decodeSequenceOf<LCS_PrivacyClass>(() => _decode_LCS_PrivacyClass); }
-    return _cached_decoder_for_LCS_PrivacyExceptionList(el);
+    const value = _cached_decoder_for_LCS_PrivacyExceptionList(el);
+    if (value.length < 1 || value.length > maxNumOfPrivacyClass) {
+        throw new ASN1SizeError("LCS_PrivacyExceptionList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_LCS_PrivacyExceptionList: $.ASN1Encoder<LCS_PrivacyExceptionList> | null = null;

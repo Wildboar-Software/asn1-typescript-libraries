@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
-// export { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
 import { GMLC_Restriction, _enum_for_GMLC_Restriction, GMLC_Restriction_gmlc_List /* IMPORTED_LONG_ENUMERATION_ITEM */, gmlc_List /* IMPORTED_SHORT_ENUMERATION_ITEM */, GMLC_Restriction_home_Country /* IMPORTED_LONG_ENUMERATION_ITEM */, home_Country /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GMLC_Restriction, _encode_GMLC_Restriction } from "../MAP-MS-DataTypes/GMLC-Restriction.ta.mjs";
-// export { GMLC_Restriction, _enum_for_GMLC_Restriction, GMLC_Restriction_gmlc_List /* IMPORTED_LONG_ENUMERATION_ITEM */, gmlc_List /* IMPORTED_SHORT_ENUMERATION_ITEM */, GMLC_Restriction_home_Country /* IMPORTED_LONG_ENUMERATION_ITEM */, home_Country /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GMLC_Restriction, _encode_GMLC_Restriction } from "../MAP-MS-DataTypes/GMLC-Restriction.ta.mjs";
 import { NotificationToMSUser, _enum_for_NotificationToMSUser, NotificationToMSUser_notifyLocationAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyLocationAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndVerify_LocationAllowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndVerify_LocationNotAllowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_locationNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, locationNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NotificationToMSUser, _encode_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
-// export { NotificationToMSUser, _enum_for_NotificationToMSUser, NotificationToMSUser_notifyLocationAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyLocationAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndVerify_LocationAllowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndVerify_LocationNotAllowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, NotificationToMSUser_locationNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, locationNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NotificationToMSUser, _encode_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -171,10 +167,10 @@ class ServiceType {
  */
 export
 const _root_component_type_list_1_spec_for_ServiceType: $.ComponentSpec[] = [
-    new $.ComponentSpec("serviceTypeIdentity", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("gmlc-Restriction", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("notificationToMSUser", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("serviceTypeIdentity", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("gmlc-Restriction", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("notificationToMSUser", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -215,10 +211,10 @@ export
 function _decode_ServiceType (el: _Element): ServiceType {
     if (!_cached_decoder_for_ServiceType) { _cached_decoder_for_ServiceType = function (el: _Element): ServiceType {
     let serviceTypeIdentity!: LCSServiceTypeID;
-    let gmlc_Restriction: OPTIONAL<GMLC_Restriction>;
-    let notificationToMSUser: OPTIONAL<NotificationToMSUser>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let gmlc_Restriction: OPTIONAL<GMLC_Restriction> = undefined;
+    let notificationToMSUser: OPTIONAL<NotificationToMSUser> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceTypeIdentity": (_el: _Element): void => { serviceTypeIdentity = _decode_LCSServiceTypeID(_el); },
         "gmlc-Restriction": (_el: _Element): void => { gmlc_Restriction = $._decode_implicit<GMLC_Restriction>(() => _decode_GMLC_Restriction)(_el); },

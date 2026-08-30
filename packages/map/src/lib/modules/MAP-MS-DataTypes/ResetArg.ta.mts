@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
-// export { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
 import { HLR_List, _decode_HLR_List, _encode_HLR_List } from "../MAP-CommonDataTypes/HLR-List.ta.mjs";
-// export { HLR_List, _decode_HLR_List, _encode_HLR_List } from "../MAP-CommonDataTypes/HLR-List.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
-// export { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
 import { InsertSubscriberDataArg, _decode_InsertSubscriberDataArg, _encode_InsertSubscriberDataArg } from "../MAP-MS-DataTypes/InsertSubscriberDataArg.ta.mjs";
-// export { InsertSubscriberDataArg, _decode_InsertSubscriberDataArg, _encode_InsertSubscriberDataArg } from "../MAP-MS-DataTypes/InsertSubscriberDataArg.ta.mjs";
 import { DeleteSubscriberDataArg, _decode_DeleteSubscriberDataArg, _encode_DeleteSubscriberDataArg } from "../MAP-MS-DataTypes/DeleteSubscriberDataArg.ta.mjs";
-// export { DeleteSubscriberDataArg, _decode_DeleteSubscriberDataArg, _encode_DeleteSubscriberDataArg } from "../MAP-MS-DataTypes/DeleteSubscriberDataArg.ta.mjs";
 
 
 /**
@@ -176,9 +170,9 @@ class ResetArg {
  */
 export
 const _root_component_type_list_1_spec_for_ResetArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("sendingNodenumber", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("hlr-List", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("sendingNodenumber", false, $.hasAnyTag),
+    new $.ComponentSpec("hlr-List", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -204,9 +198,9 @@ const _root_component_type_list_2_spec_for_ResetArg: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_ResetArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("reset-Id-List", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("subscriptionData", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("subscriptionDataDeletion", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("reset-Id-List", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("subscriptionData", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("subscriptionDataDeletion", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_ResetArg: $.ASN1Decoder<ResetArg> | null = null;
@@ -221,12 +215,12 @@ export
 function _decode_ResetArg (el: _Element): ResetArg {
     if (!_cached_decoder_for_ResetArg) { _cached_decoder_for_ResetArg = function (el: _Element): ResetArg {
     let sendingNodenumber!: SendingNode_Number;
-    let hlr_List: OPTIONAL<HLR_List>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let reset_Id_List: OPTIONAL<Reset_Id_List>;
-    let subscriptionData: OPTIONAL<InsertSubscriberDataArg>;
-    let subscriptionDataDeletion: OPTIONAL<DeleteSubscriberDataArg>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let hlr_List: OPTIONAL<HLR_List> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let reset_Id_List: OPTIONAL<Reset_Id_List> = undefined;
+    let subscriptionData: OPTIONAL<InsertSubscriberDataArg> = undefined;
+    let subscriptionDataDeletion: OPTIONAL<DeleteSubscriberDataArg> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sendingNodenumber": (_el: _Element): void => { sendingNodenumber = _decode_SendingNode_Number(_el); },
         "hlr-List": (_el: _Element): void => { hlr_List = _decode_HLR_List(_el); },

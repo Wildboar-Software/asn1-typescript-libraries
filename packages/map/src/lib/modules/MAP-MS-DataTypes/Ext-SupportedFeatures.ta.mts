@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -97,21 +98,19 @@ const Ext_SupportedFeatures_unlicensedSpectrumAsSecondaryRAT: number = 0; /* LON
 export
 const unlicensedSpectrumAsSecondaryRAT: number = Ext_SupportedFeatures_unlicensedSpectrumAsSecondaryRAT; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_Ext_SupportedFeatures: $.ASN1Decoder<Ext_SupportedFeatures> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext_SupportedFeatures
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Ext_SupportedFeatures (el: _Element): Ext_SupportedFeatures {
-    if (!_cached_decoder_for_Ext_SupportedFeatures) { _cached_decoder_for_Ext_SupportedFeatures = $._decodeBitString; }
-    return _cached_decoder_for_Ext_SupportedFeatures(el);
-}
-
-let _cached_encoder_for_Ext_SupportedFeatures: $.ASN1Encoder<Ext_SupportedFeatures> | null = null;
+export const _decode_Ext_SupportedFeatures = (el: _Element): Ext_SupportedFeatures => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 40) {
+        throw new ASN1SizeError("Ext_SupportedFeatures violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Ext_SupportedFeatures into an ASN.1 Element.
@@ -120,11 +119,7 @@ let _cached_encoder_for_Ext_SupportedFeatures: $.ASN1Encoder<Ext_SupportedFeatur
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_SupportedFeatures, encoded as an ASN.1 Element.
  */
-export
-function _encode_Ext_SupportedFeatures (value: Ext_SupportedFeatures, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Ext_SupportedFeatures) { _cached_encoder_for_Ext_SupportedFeatures = $._encodeBitString; }
-    return _cached_encoder_for_Ext_SupportedFeatures(value, elGetter);
-}
+export const _encode_Ext_SupportedFeatures = $._encodeBitString;
 
 
 /* eslint-enable */

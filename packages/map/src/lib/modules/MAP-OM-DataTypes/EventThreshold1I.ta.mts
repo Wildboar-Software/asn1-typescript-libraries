@@ -83,21 +83,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type EventThreshold1I = INTEGER;
 
-let _cached_decoder_for_EventThreshold1I: $.ASN1Decoder<EventThreshold1I> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EventThreshold1I
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EventThreshold1I (el: _Element): EventThreshold1I {
-    if (!_cached_decoder_for_EventThreshold1I) { _cached_decoder_for_EventThreshold1I = $._decodeInteger; }
-    return _cached_decoder_for_EventThreshold1I(el);
-}
-
-let _cached_encoder_for_EventThreshold1I: $.ASN1Encoder<EventThreshold1I> | null = null;
+export const _decode_EventThreshold1I = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) EventThreshold1I into an ASN.1 Element.
@@ -106,11 +98,7 @@ let _cached_encoder_for_EventThreshold1I: $.ASN1Encoder<EventThreshold1I> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EventThreshold1I, encoded as an ASN.1 Element.
  */
-export
-function _encode_EventThreshold1I (value: EventThreshold1I, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EventThreshold1I) { _cached_encoder_for_EventThreshold1I = $._encodeInteger; }
-    return _cached_encoder_for_EventThreshold1I(value, elGetter);
-}
+export const _encode_EventThreshold1I = $._encodeInteger;
 
 
 /* eslint-enable */

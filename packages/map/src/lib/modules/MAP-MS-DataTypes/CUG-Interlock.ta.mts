@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CUG_Interlock = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_CUG_Interlock: $.ASN1Decoder<CUG_Interlock> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CUG_Interlock
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CUG_Interlock (el: _Element): CUG_Interlock {
-    if (!_cached_decoder_for_CUG_Interlock) { _cached_decoder_for_CUG_Interlock = $._decodeOctetString; }
-    return _cached_decoder_for_CUG_Interlock(el);
-}
-
-let _cached_encoder_for_CUG_Interlock: $.ASN1Encoder<CUG_Interlock> | null = null;
+export const _decode_CUG_Interlock = (el: _Element): CUG_Interlock => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 4 || value.length > 4) {
+        throw new ASN1SizeError("CUG_Interlock violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) CUG_Interlock into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_CUG_Interlock: $.ASN1Encoder<CUG_Interlock> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CUG_Interlock, encoded as an ASN.1 Element.
  */
-export
-function _encode_CUG_Interlock (value: CUG_Interlock, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CUG_Interlock) { _cached_encoder_for_CUG_Interlock = $._encodeOctetString; }
-    return _cached_encoder_for_CUG_Interlock(value, elGetter);
-}
+export const _encode_CUG_Interlock = $._encodeOctetString;
 
 
 /* eslint-enable */

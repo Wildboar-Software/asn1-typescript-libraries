@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -142,21 +143,19 @@ const SupportedCamelPhases_phase4: number = 3; /* LONG_NAMED_BIT */
 export
 const phase4: number = SupportedCamelPhases_phase4; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SupportedCamelPhases: $.ASN1Decoder<SupportedCamelPhases> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedCamelPhases
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SupportedCamelPhases (el: _Element): SupportedCamelPhases {
-    if (!_cached_decoder_for_SupportedCamelPhases) { _cached_decoder_for_SupportedCamelPhases = $._decodeBitString; }
-    return _cached_decoder_for_SupportedCamelPhases(el);
-}
-
-let _cached_encoder_for_SupportedCamelPhases: $.ASN1Encoder<SupportedCamelPhases> | null = null;
+export const _decode_SupportedCamelPhases = (el: _Element): SupportedCamelPhases => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 16) {
+        throw new ASN1SizeError("SupportedCamelPhases violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SupportedCamelPhases into an ASN.1 Element.
@@ -165,11 +164,7 @@ let _cached_encoder_for_SupportedCamelPhases: $.ASN1Encoder<SupportedCamelPhases
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SupportedCamelPhases, encoded as an ASN.1 Element.
  */
-export
-function _encode_SupportedCamelPhases (value: SupportedCamelPhases, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupportedCamelPhases) { _cached_encoder_for_SupportedCamelPhases = $._encodeBitString; }
-    return _cached_encoder_for_SupportedCamelPhases(value, elGetter);
-}
+export const _encode_SupportedCamelPhases = $._encodeBitString;
 
 
 /* eslint-enable */

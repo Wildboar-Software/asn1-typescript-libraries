@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Ext4_QoS_Subscribed = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Ext4_QoS_Subscribed: $.ASN1Decoder<Ext4_QoS_Subscribed> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext4_QoS_Subscribed
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Ext4_QoS_Subscribed (el: _Element): Ext4_QoS_Subscribed {
-    if (!_cached_decoder_for_Ext4_QoS_Subscribed) { _cached_decoder_for_Ext4_QoS_Subscribed = $._decodeOctetString; }
-    return _cached_decoder_for_Ext4_QoS_Subscribed(el);
-}
-
-let _cached_encoder_for_Ext4_QoS_Subscribed: $.ASN1Encoder<Ext4_QoS_Subscribed> | null = null;
+export const _decode_Ext4_QoS_Subscribed = (el: _Element): Ext4_QoS_Subscribed => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("Ext4_QoS_Subscribed violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Ext4_QoS_Subscribed into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Ext4_QoS_Subscribed: $.ASN1Encoder<Ext4_QoS_Subscribed> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext4_QoS_Subscribed, encoded as an ASN.1 Element.
  */
-export
-function _encode_Ext4_QoS_Subscribed (value: Ext4_QoS_Subscribed, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Ext4_QoS_Subscribed) { _cached_encoder_for_Ext4_QoS_Subscribed = $._encodeOctetString; }
-    return _cached_encoder_for_Ext4_QoS_Subscribed(value, elGetter);
-}
+export const _encode_Ext4_QoS_Subscribed = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -67,83 +67,44 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { SubscriberData, _decode_SubscriberData, _encode_SubscriberData } from "../MAP-MS-DataTypes/SubscriberData.ta.mjs";
-// export { SubscriberData, _decode_SubscriberData, _encode_SubscriberData } from "../MAP-MS-DataTypes/SubscriberData.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { NAEA_PreferredCI, _decode_NAEA_PreferredCI, _encode_NAEA_PreferredCI } from "../MAP-CommonDataTypes/NAEA-PreferredCI.ta.mjs";
-// export { NAEA_PreferredCI, _decode_NAEA_PreferredCI, _encode_NAEA_PreferredCI } from "../MAP-CommonDataTypes/NAEA-PreferredCI.ta.mjs";
 import { GPRSSubscriptionData, _decode_GPRSSubscriptionData, _encode_GPRSSubscriptionData } from "../MAP-MS-DataTypes/GPRSSubscriptionData.ta.mjs";
-// export { GPRSSubscriptionData, _decode_GPRSSubscriptionData, _encode_GPRSSubscriptionData } from "../MAP-MS-DataTypes/GPRSSubscriptionData.ta.mjs";
 import { NetworkAccessMode, _enum_for_NetworkAccessMode, NetworkAccessMode_packetAndCircuit /* IMPORTED_LONG_ENUMERATION_ITEM */, packetAndCircuit /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAccessMode_onlyCircuit /* IMPORTED_LONG_ENUMERATION_ITEM */, onlyCircuit /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAccessMode_onlyPacket /* IMPORTED_LONG_ENUMERATION_ITEM */, onlyPacket /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkAccessMode, _encode_NetworkAccessMode } from "../MAP-MS-DataTypes/NetworkAccessMode.ta.mjs";
-// export { NetworkAccessMode, _enum_for_NetworkAccessMode, NetworkAccessMode_packetAndCircuit /* IMPORTED_LONG_ENUMERATION_ITEM */, packetAndCircuit /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAccessMode_onlyCircuit /* IMPORTED_LONG_ENUMERATION_ITEM */, onlyCircuit /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAccessMode_onlyPacket /* IMPORTED_LONG_ENUMERATION_ITEM */, onlyPacket /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkAccessMode, _encode_NetworkAccessMode } from "../MAP-MS-DataTypes/NetworkAccessMode.ta.mjs";
 import { LSAInformation, _decode_LSAInformation, _encode_LSAInformation } from "../MAP-MS-DataTypes/LSAInformation.ta.mjs";
-// export { LSAInformation, _decode_LSAInformation, _encode_LSAInformation } from "../MAP-MS-DataTypes/LSAInformation.ta.mjs";
 import { LCSInformation, _decode_LCSInformation, _encode_LCSInformation } from "../MAP-MS-DataTypes/LCSInformation.ta.mjs";
-// export { LCSInformation, _decode_LCSInformation, _encode_LCSInformation } from "../MAP-MS-DataTypes/LCSInformation.ta.mjs";
 import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
-// export { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
 import { AgeIndicator, _decode_AgeIndicator, _encode_AgeIndicator } from "../MAP-MS-DataTypes/AgeIndicator.ta.mjs";
-// export { AgeIndicator, _decode_AgeIndicator, _encode_AgeIndicator } from "../MAP-MS-DataTypes/AgeIndicator.ta.mjs";
 import { MC_SS_Info, _decode_MC_SS_Info, _encode_MC_SS_Info } from "../MAP-CommonDataTypes/MC-SS-Info.ta.mjs";
-// export { MC_SS_Info, _decode_MC_SS_Info, _encode_MC_SS_Info } from "../MAP-CommonDataTypes/MC-SS-Info.ta.mjs";
 import { CS_AllocationRetentionPriority, _decode_CS_AllocationRetentionPriority, _encode_CS_AllocationRetentionPriority } from "../MAP-MS-DataTypes/CS-AllocationRetentionPriority.ta.mjs";
-// export { CS_AllocationRetentionPriority, _decode_CS_AllocationRetentionPriority, _encode_CS_AllocationRetentionPriority } from "../MAP-MS-DataTypes/CS-AllocationRetentionPriority.ta.mjs";
 import { SGSN_CAMEL_SubscriptionInfo, _decode_SGSN_CAMEL_SubscriptionInfo, _encode_SGSN_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/SGSN-CAMEL-SubscriptionInfo.ta.mjs";
-// export { SGSN_CAMEL_SubscriptionInfo, _decode_SGSN_CAMEL_SubscriptionInfo, _encode_SGSN_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/SGSN-CAMEL-SubscriptionInfo.ta.mjs";
 import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
-// export { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
 import { AccessRestrictionData, AccessRestrictionData_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_geranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, geranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ganNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ganNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_i_hspa_evolutionNotAllowed /* IMPORTED_LONG_NAMED_BIT */, i_hspa_evolutionNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_wb_e_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, wb_e_utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ho_toNon3GPP_AccessNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ho_toNon3GPP_AccessNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_nb_iotNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nb_iotNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_enhancedCoverageNotAllowed /* IMPORTED_LONG_NAMED_BIT */, enhancedCoverageNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
-// export { AccessRestrictionData, AccessRestrictionData_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_geranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, geranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ganNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ganNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_i_hspa_evolutionNotAllowed /* IMPORTED_LONG_NAMED_BIT */, i_hspa_evolutionNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_wb_e_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, wb_e_utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ho_toNon3GPP_AccessNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ho_toNon3GPP_AccessNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_nb_iotNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nb_iotNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_enhancedCoverageNotAllowed /* IMPORTED_LONG_NAMED_BIT */, enhancedCoverageNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
 import { EPS_SubscriptionData, _decode_EPS_SubscriptionData, _encode_EPS_SubscriptionData } from "../MAP-MS-DataTypes/EPS-SubscriptionData.ta.mjs";
-// export { EPS_SubscriptionData, _decode_EPS_SubscriptionData, _encode_EPS_SubscriptionData } from "../MAP-MS-DataTypes/EPS-SubscriptionData.ta.mjs";
 import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
-// export { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
-// export { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
 import { SubscribedPeriodicRAUTAUtimer, _decode_SubscribedPeriodicRAUTAUtimer, _encode_SubscribedPeriodicRAUTAUtimer } from "../MAP-MS-DataTypes/SubscribedPeriodicRAUTAUtimer.ta.mjs";
-// export { SubscribedPeriodicRAUTAUtimer, _decode_SubscribedPeriodicRAUTAUtimer, _encode_SubscribedPeriodicRAUTAUtimer } from "../MAP-MS-DataTypes/SubscribedPeriodicRAUTAUtimer.ta.mjs";
 import { SubscribedPeriodicLAUtimer, _decode_SubscribedPeriodicLAUtimer, _encode_SubscribedPeriodicLAUtimer } from "../MAP-MS-DataTypes/SubscribedPeriodicLAUtimer.ta.mjs";
-// export { SubscribedPeriodicLAUtimer, _decode_SubscribedPeriodicLAUtimer, _encode_SubscribedPeriodicLAUtimer } from "../MAP-MS-DataTypes/SubscribedPeriodicLAUtimer.ta.mjs";
 import { VPLMN_CSG_SubscriptionDataList, _decode_VPLMN_CSG_SubscriptionDataList, _encode_VPLMN_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/VPLMN-CSG-SubscriptionDataList.ta.mjs";
-// export { VPLMN_CSG_SubscriptionDataList, _decode_VPLMN_CSG_SubscriptionDataList, _encode_VPLMN_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/VPLMN-CSG-SubscriptionDataList.ta.mjs";
 import { AdjacentAccessRestrictionDataList, _decode_AdjacentAccessRestrictionDataList, _encode_AdjacentAccessRestrictionDataList } from "../MAP-MS-DataTypes/AdjacentAccessRestrictionDataList.ta.mjs";
-// export { AdjacentAccessRestrictionDataList, _decode_AdjacentAccessRestrictionDataList, _encode_AdjacentAccessRestrictionDataList } from "../MAP-MS-DataTypes/AdjacentAccessRestrictionDataList.ta.mjs";
 import { IMSI_GroupIdList, _decode_IMSI_GroupIdList, _encode_IMSI_GroupIdList } from "../MAP-MS-DataTypes/IMSI-GroupIdList.ta.mjs";
-// export { IMSI_GroupIdList, _decode_IMSI_GroupIdList, _encode_IMSI_GroupIdList } from "../MAP-MS-DataTypes/IMSI-GroupIdList.ta.mjs";
 import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
-// export { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
 import { DL_Buffering_Suggested_Packet_Count, _decode_DL_Buffering_Suggested_Packet_Count, _encode_DL_Buffering_Suggested_Packet_Count } from "../MAP-MS-DataTypes/DL-Buffering-Suggested-Packet-Count.ta.mjs";
-// export { DL_Buffering_Suggested_Packet_Count, _decode_DL_Buffering_Suggested_Packet_Count, _encode_DL_Buffering_Suggested_Packet_Count } from "../MAP-MS-DataTypes/DL-Buffering-Suggested-Packet-Count.ta.mjs";
 import { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
-// export { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
 import { EDRX_Cycle_Length_List, _decode_EDRX_Cycle_Length_List, _encode_EDRX_Cycle_Length_List } from "../MAP-MS-DataTypes/EDRX-Cycle-Length-List.ta.mjs";
-// export { EDRX_Cycle_Length_List, _decode_EDRX_Cycle_Length_List, _encode_EDRX_Cycle_Length_List } from "../MAP-MS-DataTypes/EDRX-Cycle-Length-List.ta.mjs";
 import { Ext_AccessRestrictionData, Ext_AccessRestrictionData_nrAsSecondaryRATNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nrAsSecondaryRATNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, Ext_AccessRestrictionData_unlicensedSpectrumAsSecondaryRATNotAllowed /* IMPORTED_LONG_NAMED_BIT */, unlicensedSpectrumAsSecondaryRATNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
-// export { Ext_AccessRestrictionData, Ext_AccessRestrictionData_nrAsSecondaryRATNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nrAsSecondaryRATNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, Ext_AccessRestrictionData_unlicensedSpectrumAsSecondaryRATNotAllowed /* IMPORTED_LONG_NAMED_BIT */, unlicensedSpectrumAsSecondaryRATNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
 import { Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
-// export { Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
 import { SubscriberStatus, _enum_for_SubscriberStatus, SubscriberStatus_serviceGranted /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceGranted /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberStatus_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriberStatus, _encode_SubscriberStatus } from "../MAP-MS-DataTypes/SubscriberStatus.ta.mjs";
-// export { SubscriberStatus, _enum_for_SubscriberStatus, SubscriberStatus_serviceGranted /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceGranted /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberStatus_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriberStatus, _encode_SubscriberStatus } from "../MAP-MS-DataTypes/SubscriberStatus.ta.mjs";
 import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
-// export { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
 import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
-// export { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
 import { Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
-// export { Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
 import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
-// export { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
 import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
-// export { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
 import { VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
-// export { VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
 import { VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
-// export { VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
 import { VlrCamelSubscriptionInfo, _decode_VlrCamelSubscriptionInfo, _encode_VlrCamelSubscriptionInfo } from "../MAP-MS-DataTypes/VlrCamelSubscriptionInfo.ta.mjs";
-// export { VlrCamelSubscriptionInfo, _decode_VlrCamelSubscriptionInfo, _encode_VlrCamelSubscriptionInfo } from "../MAP-MS-DataTypes/VlrCamelSubscriptionInfo.ta.mjs";
 
 
 /**
@@ -573,20 +534,20 @@ class InsertSubscriberDataArg {
  */
 export
 const _root_component_type_list_1_spec_for_InsertSubscriberDataArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("category", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("subscriberStatus", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("bearerServiceList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("teleserviceList", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("provisionedSS", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("odb-Data", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("roamingRestrictionDueToUnsupportedFeature", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("regionalSubscriptionData", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("vbsSubscriptionData", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("vgcsSubscriptionData", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("vlrCamelSubscriptionInfo", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 14), undefined, undefined)
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("category", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("subscriberStatus", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("bearerServiceList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("teleserviceList", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("provisionedSS", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("odb-Data", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("roamingRestrictionDueToUnsupportedFeature", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("regionalSubscriptionData", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("vbsSubscriptionData", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("vgcsSubscriptionData", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("vlrCamelSubscriptionInfo", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 14))
 ];
 
 /**
@@ -612,45 +573,45 @@ const _root_component_type_list_2_spec_for_InsertSubscriberDataArg: $.ComponentS
  */
 export
 const _extension_additions_list_spec_for_InsertSubscriberDataArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("naea-PreferredCI", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("gprsSubscriptionData", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("roamingRestrictedInSgsnDueToUnsupportedFeature", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("networkAccessMode", true, $.hasTag(_TagClass.context, 24), undefined, undefined),
-    new $.ComponentSpec("lsaInformation", true, $.hasTag(_TagClass.context, 25), undefined, undefined),
-    new $.ComponentSpec("lmu-Indicator", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("lcsInformation", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("istAlertTimer", true, $.hasTag(_TagClass.context, 26), undefined, undefined),
-    new $.ComponentSpec("superChargerSupportedInHLR", true, $.hasTag(_TagClass.context, 27), undefined, undefined),
-    new $.ComponentSpec("mc-SS-Info", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    new $.ComponentSpec("cs-AllocationRetentionPriority", true, $.hasTag(_TagClass.context, 29), undefined, undefined),
-    new $.ComponentSpec("sgsn-CAMEL-SubscriptionInfo", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("chargingCharacteristics", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("accessRestrictionData", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("ics-Indicator", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("eps-SubscriptionData", true, $.hasTag(_TagClass.context, 31), undefined, undefined),
-    new $.ComponentSpec("csg-SubscriptionDataList", true, $.hasTag(_TagClass.context, 32), undefined, undefined),
-    new $.ComponentSpec("ue-ReachabilityRequestIndicator", true, $.hasTag(_TagClass.context, 33), undefined, undefined),
-    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 34), undefined, undefined),
-    new $.ComponentSpec("mme-Name", true, $.hasTag(_TagClass.context, 35), undefined, undefined),
-    new $.ComponentSpec("subscribedPeriodicRAUTAUtimer", true, $.hasTag(_TagClass.context, 36), undefined, undefined),
-    new $.ComponentSpec("vplmnLIPAAllowed", true, $.hasTag(_TagClass.context, 37), undefined, undefined),
-    new $.ComponentSpec("mdtUserConsent", true, $.hasTag(_TagClass.context, 38), undefined, undefined),
-    new $.ComponentSpec("subscribedPeriodicLAUtimer", true, $.hasTag(_TagClass.context, 39), undefined, undefined),
-    new $.ComponentSpec("vplmn-Csg-SubscriptionDataList", true, $.hasTag(_TagClass.context, 40), undefined, undefined),
-    new $.ComponentSpec("additionalMSISDN", true, $.hasTag(_TagClass.context, 41), undefined, undefined),
-    new $.ComponentSpec("psAndSMS-OnlyServiceProvision", true, $.hasTag(_TagClass.context, 42), undefined, undefined),
-    new $.ComponentSpec("smsInSGSNAllowed", true, $.hasTag(_TagClass.context, 43), undefined, undefined),
-    new $.ComponentSpec("cs-to-ps-SRVCC-Allowed-Indicator", true, $.hasTag(_TagClass.context, 44), undefined, undefined),
-    new $.ComponentSpec("pcscf-Restoration-Request", true, $.hasTag(_TagClass.context, 45), undefined, undefined),
-    new $.ComponentSpec("adjacentAccessRestrictionDataList", true, $.hasTag(_TagClass.context, 46), undefined, undefined),
-    new $.ComponentSpec("imsi-Group-Id-List", true, $.hasTag(_TagClass.context, 47), undefined, undefined),
-    new $.ComponentSpec("ueUsageType", true, $.hasTag(_TagClass.context, 48), undefined, undefined),
-    new $.ComponentSpec("userPlaneIntegrityProtectionIndicator", true, $.hasTag(_TagClass.context, 49), undefined, undefined),
-    new $.ComponentSpec("dl-Buffering-Suggested-Packet-Count", true, $.hasTag(_TagClass.context, 50), undefined, undefined),
-    new $.ComponentSpec("reset-Id-List", true, $.hasTag(_TagClass.context, 51), undefined, undefined),
-    new $.ComponentSpec("eDRX-Cycle-Length-List", true, $.hasTag(_TagClass.context, 52), undefined, undefined),
-    new $.ComponentSpec("ext-AccessRestrictionData", true, $.hasTag(_TagClass.context, 53), undefined, undefined),
-    new $.ComponentSpec("iab-Operation-Allowed-Indicator", true, $.hasTag(_TagClass.context, 54), undefined, undefined)
+    new $.ComponentSpec("naea-PreferredCI", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("gprsSubscriptionData", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("roamingRestrictedInSgsnDueToUnsupportedFeature", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("networkAccessMode", true, $.hasTag(_TagClass.context, 24)),
+    new $.ComponentSpec("lsaInformation", true, $.hasTag(_TagClass.context, 25)),
+    new $.ComponentSpec("lmu-Indicator", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("lcsInformation", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("istAlertTimer", true, $.hasTag(_TagClass.context, 26)),
+    new $.ComponentSpec("superChargerSupportedInHLR", true, $.hasTag(_TagClass.context, 27)),
+    new $.ComponentSpec("mc-SS-Info", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("cs-AllocationRetentionPriority", true, $.hasTag(_TagClass.context, 29)),
+    new $.ComponentSpec("sgsn-CAMEL-SubscriptionInfo", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("chargingCharacteristics", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("accessRestrictionData", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("ics-Indicator", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("eps-SubscriptionData", true, $.hasTag(_TagClass.context, 31)),
+    new $.ComponentSpec("csg-SubscriptionDataList", true, $.hasTag(_TagClass.context, 32)),
+    new $.ComponentSpec("ue-ReachabilityRequestIndicator", true, $.hasTag(_TagClass.context, 33)),
+    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 34)),
+    new $.ComponentSpec("mme-Name", true, $.hasTag(_TagClass.context, 35)),
+    new $.ComponentSpec("subscribedPeriodicRAUTAUtimer", true, $.hasTag(_TagClass.context, 36)),
+    new $.ComponentSpec("vplmnLIPAAllowed", true, $.hasTag(_TagClass.context, 37)),
+    new $.ComponentSpec("mdtUserConsent", true, $.hasTag(_TagClass.context, 38)),
+    new $.ComponentSpec("subscribedPeriodicLAUtimer", true, $.hasTag(_TagClass.context, 39)),
+    new $.ComponentSpec("vplmn-Csg-SubscriptionDataList", true, $.hasTag(_TagClass.context, 40)),
+    new $.ComponentSpec("additionalMSISDN", true, $.hasTag(_TagClass.context, 41)),
+    new $.ComponentSpec("psAndSMS-OnlyServiceProvision", true, $.hasTag(_TagClass.context, 42)),
+    new $.ComponentSpec("smsInSGSNAllowed", true, $.hasTag(_TagClass.context, 43)),
+    new $.ComponentSpec("cs-to-ps-SRVCC-Allowed-Indicator", true, $.hasTag(_TagClass.context, 44)),
+    new $.ComponentSpec("pcscf-Restoration-Request", true, $.hasTag(_TagClass.context, 45)),
+    new $.ComponentSpec("adjacentAccessRestrictionDataList", true, $.hasTag(_TagClass.context, 46)),
+    new $.ComponentSpec("imsi-Group-Id-List", true, $.hasTag(_TagClass.context, 47)),
+    new $.ComponentSpec("ueUsageType", true, $.hasTag(_TagClass.context, 48)),
+    new $.ComponentSpec("userPlaneIntegrityProtectionIndicator", true, $.hasTag(_TagClass.context, 49)),
+    new $.ComponentSpec("dl-Buffering-Suggested-Packet-Count", true, $.hasTag(_TagClass.context, 50)),
+    new $.ComponentSpec("reset-Id-List", true, $.hasTag(_TagClass.context, 51)),
+    new $.ComponentSpec("eDRX-Cycle-Length-List", true, $.hasTag(_TagClass.context, 52)),
+    new $.ComponentSpec("ext-AccessRestrictionData", true, $.hasTag(_TagClass.context, 53)),
+    new $.ComponentSpec("iab-Operation-Allowed-Indicator", true, $.hasTag(_TagClass.context, 54))
 ];
 
 let _cached_decoder_for_InsertSubscriberDataArg: $.ASN1Decoder<InsertSubscriberDataArg> | null = null;
@@ -664,60 +625,60 @@ let _cached_decoder_for_InsertSubscriberDataArg: $.ASN1Decoder<InsertSubscriberD
 export
 function _decode_InsertSubscriberDataArg (el: _Element): InsertSubscriberDataArg {
     if (!_cached_decoder_for_InsertSubscriberDataArg) { _cached_decoder_for_InsertSubscriberDataArg = function (el: _Element): InsertSubscriberDataArg {
-    let imsi: OPTIONAL<IMSI>;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let category: OPTIONAL<Category>;
-    let subscriberStatus: OPTIONAL<SubscriberStatus>;
-    let bearerServiceList: OPTIONAL<BearerServiceList>;
-    let teleserviceList: OPTIONAL<TeleserviceList>;
-    let provisionedSS: OPTIONAL<Ext_SS_InfoList>;
-    let odb_Data: OPTIONAL<ODB_Data>;
-    let roamingRestrictionDueToUnsupportedFeature: OPTIONAL<NULL>;
-    let regionalSubscriptionData: OPTIONAL<ZoneCodeList>;
-    let vbsSubscriptionData: OPTIONAL<VBSDataList>;
-    let vgcsSubscriptionData: OPTIONAL<VGCSDataList>;
-    let vlrCamelSubscriptionInfo: OPTIONAL<VlrCamelSubscriptionInfo>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let naea_PreferredCI: OPTIONAL<NAEA_PreferredCI>;
-    let gprsSubscriptionData: OPTIONAL<GPRSSubscriptionData>;
-    let roamingRestrictedInSgsnDueToUnsupportedFeature: OPTIONAL<NULL>;
-    let networkAccessMode: OPTIONAL<NetworkAccessMode>;
-    let lsaInformation: OPTIONAL<LSAInformation>;
-    let lmu_Indicator: OPTIONAL<NULL>;
-    let lcsInformation: OPTIONAL<LCSInformation>;
-    let istAlertTimer: OPTIONAL<IST_AlertTimerValue>;
-    let superChargerSupportedInHLR: OPTIONAL<AgeIndicator>;
-    let mc_SS_Info: OPTIONAL<MC_SS_Info>;
-    let cs_AllocationRetentionPriority: OPTIONAL<CS_AllocationRetentionPriority>;
-    let sgsn_CAMEL_SubscriptionInfo: OPTIONAL<SGSN_CAMEL_SubscriptionInfo>;
-    let chargingCharacteristics: OPTIONAL<ChargingCharacteristics>;
-    let accessRestrictionData: OPTIONAL<AccessRestrictionData>;
-    let ics_Indicator: OPTIONAL<BOOLEAN>;
-    let eps_SubscriptionData: OPTIONAL<EPS_SubscriptionData>;
-    let csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>;
-    let ue_ReachabilityRequestIndicator: OPTIONAL<NULL>;
-    let sgsn_Number: OPTIONAL<ISDN_AddressString>;
-    let mme_Name: OPTIONAL<DiameterIdentity>;
-    let subscribedPeriodicRAUTAUtimer: OPTIONAL<SubscribedPeriodicRAUTAUtimer>;
-    let vplmnLIPAAllowed: OPTIONAL<NULL>;
-    let mdtUserConsent: OPTIONAL<BOOLEAN>;
-    let subscribedPeriodicLAUtimer: OPTIONAL<SubscribedPeriodicLAUtimer>;
-    let vplmn_Csg_SubscriptionDataList: OPTIONAL<VPLMN_CSG_SubscriptionDataList>;
-    let additionalMSISDN: OPTIONAL<ISDN_AddressString>;
-    let psAndSMS_OnlyServiceProvision: OPTIONAL<NULL>;
-    let smsInSGSNAllowed: OPTIONAL<NULL>;
-    let cs_to_ps_SRVCC_Allowed_Indicator: OPTIONAL<NULL>;
-    let pcscf_Restoration_Request: OPTIONAL<NULL>;
-    let adjacentAccessRestrictionDataList: OPTIONAL<AdjacentAccessRestrictionDataList>;
-    let imsi_Group_Id_List: OPTIONAL<IMSI_GroupIdList>;
-    let ueUsageType: OPTIONAL<UE_UsageType>;
-    let userPlaneIntegrityProtectionIndicator: OPTIONAL<NULL>;
-    let dl_Buffering_Suggested_Packet_Count: OPTIONAL<DL_Buffering_Suggested_Packet_Count>;
-    let reset_Id_List: OPTIONAL<Reset_Id_List>;
-    let eDRX_Cycle_Length_List: OPTIONAL<EDRX_Cycle_Length_List>;
-    let ext_AccessRestrictionData: OPTIONAL<Ext_AccessRestrictionData>;
-    let iab_Operation_Allowed_Indicator: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let category: OPTIONAL<Category> = undefined;
+    let subscriberStatus: OPTIONAL<SubscriberStatus> = undefined;
+    let bearerServiceList: OPTIONAL<BearerServiceList> = undefined;
+    let teleserviceList: OPTIONAL<TeleserviceList> = undefined;
+    let provisionedSS: OPTIONAL<Ext_SS_InfoList> = undefined;
+    let odb_Data: OPTIONAL<ODB_Data> = undefined;
+    let roamingRestrictionDueToUnsupportedFeature: OPTIONAL<NULL> = undefined;
+    let regionalSubscriptionData: OPTIONAL<ZoneCodeList> = undefined;
+    let vbsSubscriptionData: OPTIONAL<VBSDataList> = undefined;
+    let vgcsSubscriptionData: OPTIONAL<VGCSDataList> = undefined;
+    let vlrCamelSubscriptionInfo: OPTIONAL<VlrCamelSubscriptionInfo> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let naea_PreferredCI: OPTIONAL<NAEA_PreferredCI> = undefined;
+    let gprsSubscriptionData: OPTIONAL<GPRSSubscriptionData> = undefined;
+    let roamingRestrictedInSgsnDueToUnsupportedFeature: OPTIONAL<NULL> = undefined;
+    let networkAccessMode: OPTIONAL<NetworkAccessMode> = undefined;
+    let lsaInformation: OPTIONAL<LSAInformation> = undefined;
+    let lmu_Indicator: OPTIONAL<NULL> = undefined;
+    let lcsInformation: OPTIONAL<LCSInformation> = undefined;
+    let istAlertTimer: OPTIONAL<IST_AlertTimerValue> = undefined;
+    let superChargerSupportedInHLR: OPTIONAL<AgeIndicator> = undefined;
+    let mc_SS_Info: OPTIONAL<MC_SS_Info> = undefined;
+    let cs_AllocationRetentionPriority: OPTIONAL<CS_AllocationRetentionPriority> = undefined;
+    let sgsn_CAMEL_SubscriptionInfo: OPTIONAL<SGSN_CAMEL_SubscriptionInfo> = undefined;
+    let chargingCharacteristics: OPTIONAL<ChargingCharacteristics> = undefined;
+    let accessRestrictionData: OPTIONAL<AccessRestrictionData> = undefined;
+    let ics_Indicator: OPTIONAL<BOOLEAN> = undefined;
+    let eps_SubscriptionData: OPTIONAL<EPS_SubscriptionData> = undefined;
+    let csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList> = undefined;
+    let ue_ReachabilityRequestIndicator: OPTIONAL<NULL> = undefined;
+    let sgsn_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let mme_Name: OPTIONAL<DiameterIdentity> = undefined;
+    let subscribedPeriodicRAUTAUtimer: OPTIONAL<SubscribedPeriodicRAUTAUtimer> = undefined;
+    let vplmnLIPAAllowed: OPTIONAL<NULL> = undefined;
+    let mdtUserConsent: OPTIONAL<BOOLEAN> = undefined;
+    let subscribedPeriodicLAUtimer: OPTIONAL<SubscribedPeriodicLAUtimer> = undefined;
+    let vplmn_Csg_SubscriptionDataList: OPTIONAL<VPLMN_CSG_SubscriptionDataList> = undefined;
+    let additionalMSISDN: OPTIONAL<ISDN_AddressString> = undefined;
+    let psAndSMS_OnlyServiceProvision: OPTIONAL<NULL> = undefined;
+    let smsInSGSNAllowed: OPTIONAL<NULL> = undefined;
+    let cs_to_ps_SRVCC_Allowed_Indicator: OPTIONAL<NULL> = undefined;
+    let pcscf_Restoration_Request: OPTIONAL<NULL> = undefined;
+    let adjacentAccessRestrictionDataList: OPTIONAL<AdjacentAccessRestrictionDataList> = undefined;
+    let imsi_Group_Id_List: OPTIONAL<IMSI_GroupIdList> = undefined;
+    let ueUsageType: OPTIONAL<UE_UsageType> = undefined;
+    let userPlaneIntegrityProtectionIndicator: OPTIONAL<NULL> = undefined;
+    let dl_Buffering_Suggested_Packet_Count: OPTIONAL<DL_Buffering_Suggested_Packet_Count> = undefined;
+    let reset_Id_List: OPTIONAL<Reset_Id_List> = undefined;
+    let eDRX_Cycle_Length_List: OPTIONAL<EDRX_Cycle_Length_List> = undefined;
+    let ext_AccessRestrictionData: OPTIONAL<Ext_AccessRestrictionData> = undefined;
+    let iab_Operation_Allowed_Indicator: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "msisdn": (_el: _Element): void => { msisdn = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

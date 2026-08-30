@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { DomainType, _enum_for_DomainType, DomainType_cs_Domain /* IMPORTED_LONG_ENUMERATION_ITEM */, cs_Domain /* IMPORTED_SHORT_ENUMERATION_ITEM */, DomainType_ps_Domain /* IMPORTED_LONG_ENUMERATION_ITEM */, ps_Domain /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DomainType, _encode_DomainType } from "../MAP-MS-DataTypes/DomainType.ta.mjs";
-// export { DomainType, _enum_for_DomainType, DomainType_cs_Domain /* IMPORTED_LONG_ENUMERATION_ITEM */, cs_Domain /* IMPORTED_SHORT_ENUMERATION_ITEM */, DomainType_ps_Domain /* IMPORTED_LONG_ENUMERATION_ITEM */, ps_Domain /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DomainType, _encode_DomainType } from "../MAP-MS-DataTypes/DomainType.ta.mjs";
 import { RequestedNodes, RequestedNodes_mme /* IMPORTED_LONG_NAMED_BIT */, mme /* IMPORTED_SHORT_NAMED_BIT */, RequestedNodes_sgsn /* IMPORTED_LONG_NAMED_BIT */, sgsn /* IMPORTED_SHORT_NAMED_BIT */, _decode_RequestedNodes, _encode_RequestedNodes } from "../MAP-MS-DataTypes/RequestedNodes.ta.mjs";
-// export { RequestedNodes, RequestedNodes_mme /* IMPORTED_LONG_NAMED_BIT */, mme /* IMPORTED_SHORT_NAMED_BIT */, RequestedNodes_sgsn /* IMPORTED_LONG_NAMED_BIT */, sgsn /* IMPORTED_SHORT_NAMED_BIT */, _decode_RequestedNodes, _encode_RequestedNodes } from "../MAP-MS-DataTypes/RequestedNodes.ta.mjs";
 
 
 /**
@@ -225,9 +222,9 @@ class RequestedInfo {
  */
 export
 const _root_component_type_list_1_spec_for_RequestedInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("locationInformation", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("subscriberState", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("locationInformation", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("subscriberState", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -253,16 +250,16 @@ const _root_component_type_list_2_spec_for_RequestedInfo: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_RequestedInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("currentLocation", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("requestedDomain", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("imei", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("ms-classmark", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("mnpRequestedInfo", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("locationInformationEPS-Supported", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("t-adsData", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("requestedNodes", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("servingNodeIndication", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("localTimeZoneRequest", true, $.hasTag(_TagClass.context, 12), undefined, undefined)
+    new $.ComponentSpec("currentLocation", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("requestedDomain", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("imei", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("ms-classmark", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("mnpRequestedInfo", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("locationInformationEPS-Supported", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("t-adsData", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("requestedNodes", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("servingNodeIndication", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("localTimeZoneRequest", true, $.hasTag(_TagClass.context, 12))
 ];
 
 let _cached_decoder_for_RequestedInfo: $.ASN1Decoder<RequestedInfo> | null = null;
@@ -276,20 +273,20 @@ let _cached_decoder_for_RequestedInfo: $.ASN1Decoder<RequestedInfo> | null = nul
 export
 function _decode_RequestedInfo (el: _Element): RequestedInfo {
     if (!_cached_decoder_for_RequestedInfo) { _cached_decoder_for_RequestedInfo = function (el: _Element): RequestedInfo {
-    let locationInformation: OPTIONAL<NULL>;
-    let subscriberState: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let currentLocation: OPTIONAL<NULL>;
-    let requestedDomain: OPTIONAL<DomainType>;
-    let imei: OPTIONAL<NULL>;
-    let ms_classmark: OPTIONAL<NULL>;
-    let mnpRequestedInfo: OPTIONAL<NULL>;
-    let locationInformationEPS_Supported: OPTIONAL<NULL>;
-    let t_adsData: OPTIONAL<NULL>;
-    let requestedNodes: OPTIONAL<RequestedNodes>;
-    let servingNodeIndication: OPTIONAL<NULL>;
-    let localTimeZoneRequest: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let locationInformation: OPTIONAL<NULL> = undefined;
+    let subscriberState: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let currentLocation: OPTIONAL<NULL> = undefined;
+    let requestedDomain: OPTIONAL<DomainType> = undefined;
+    let imei: OPTIONAL<NULL> = undefined;
+    let ms_classmark: OPTIONAL<NULL> = undefined;
+    let mnpRequestedInfo: OPTIONAL<NULL> = undefined;
+    let locationInformationEPS_Supported: OPTIONAL<NULL> = undefined;
+    let t_adsData: OPTIONAL<NULL> = undefined;
+    let requestedNodes: OPTIONAL<RequestedNodes> = undefined;
+    let servingNodeIndication: OPTIONAL<NULL> = undefined;
+    let localTimeZoneRequest: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationInformation": (_el: _Element): void => { locationInformation = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "subscriberState": (_el: _Element): void => { subscriberState = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

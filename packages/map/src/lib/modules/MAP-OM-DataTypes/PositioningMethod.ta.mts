@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PositioningMethod = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_PositioningMethod: $.ASN1Decoder<PositioningMethod> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PositioningMethod
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PositioningMethod (el: _Element): PositioningMethod {
-    if (!_cached_decoder_for_PositioningMethod) { _cached_decoder_for_PositioningMethod = $._decodeOctetString; }
-    return _cached_decoder_for_PositioningMethod(el);
-}
-
-let _cached_encoder_for_PositioningMethod: $.ASN1Encoder<PositioningMethod> | null = null;
+export const _decode_PositioningMethod = (el: _Element): PositioningMethod => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("PositioningMethod violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) PositioningMethod into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_PositioningMethod: $.ASN1Encoder<PositioningMethod> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PositioningMethod, encoded as an ASN.1 Element.
  */
-export
-function _encode_PositioningMethod (value: PositioningMethod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PositioningMethod) { _cached_encoder_for_PositioningMethod = $._encodeOctetString; }
-    return _cached_encoder_for_PositioningMethod(value, elGetter);
-}
+export const _encode_PositioningMethod = $._encodeOctetString;
 
 
 /* eslint-enable */

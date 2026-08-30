@@ -125,21 +125,13 @@ const O_BcsmTriggerDetectionPoint_routeSelectFailure: O_BcsmTriggerDetectionPoin
 export
 const routeSelectFailure: O_BcsmTriggerDetectionPoint = O_BcsmTriggerDetectionPoint_routeSelectFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_O_BcsmTriggerDetectionPoint: $.ASN1Decoder<O_BcsmTriggerDetectionPoint> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) O_BcsmTriggerDetectionPoint
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_O_BcsmTriggerDetectionPoint (el: _Element): O_BcsmTriggerDetectionPoint {
-    if (!_cached_decoder_for_O_BcsmTriggerDetectionPoint) { _cached_decoder_for_O_BcsmTriggerDetectionPoint = $._decodeEnumerated; }
-    return _cached_decoder_for_O_BcsmTriggerDetectionPoint(el);
-}
-
-let _cached_encoder_for_O_BcsmTriggerDetectionPoint: $.ASN1Encoder<O_BcsmTriggerDetectionPoint> | null = null;
+export const _decode_O_BcsmTriggerDetectionPoint = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) O_BcsmTriggerDetectionPoint into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_O_BcsmTriggerDetectionPoint: $.ASN1Encoder<O_BcsmTrigger
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The O_BcsmTriggerDetectionPoint, encoded as an ASN.1 Element.
  */
-export
-function _encode_O_BcsmTriggerDetectionPoint (value: O_BcsmTriggerDetectionPoint, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_O_BcsmTriggerDetectionPoint) { _cached_encoder_for_O_BcsmTriggerDetectionPoint = $._encodeEnumerated; }
-    return _cached_encoder_for_O_BcsmTriggerDetectionPoint(value, elGetter);
-}
+export const _encode_O_BcsmTriggerDetectionPoint = $._encodeEnumerated;
 
 
 /* eslint-enable */

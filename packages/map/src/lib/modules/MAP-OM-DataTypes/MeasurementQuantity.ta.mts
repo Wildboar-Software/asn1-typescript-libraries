@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MeasurementQuantity = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_MeasurementQuantity: $.ASN1Decoder<MeasurementQuantity> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MeasurementQuantity
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MeasurementQuantity (el: _Element): MeasurementQuantity {
-    if (!_cached_decoder_for_MeasurementQuantity) { _cached_decoder_for_MeasurementQuantity = $._decodeOctetString; }
-    return _cached_decoder_for_MeasurementQuantity(el);
-}
-
-let _cached_encoder_for_MeasurementQuantity: $.ASN1Encoder<MeasurementQuantity> | null = null;
+export const _decode_MeasurementQuantity = (el: _Element): MeasurementQuantity => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("MeasurementQuantity violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MeasurementQuantity into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_MeasurementQuantity: $.ASN1Encoder<MeasurementQuantity> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MeasurementQuantity, encoded as an ASN.1 Element.
  */
-export
-function _encode_MeasurementQuantity (value: MeasurementQuantity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MeasurementQuantity) { _cached_encoder_for_MeasurementQuantity = $._encodeOctetString; }
-    return _cached_encoder_for_MeasurementQuantity(value, elGetter);
-}
+export const _encode_MeasurementQuantity = $._encodeOctetString;
 
 
 /* eslint-enable */

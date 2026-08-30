@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GPRS_TriggerDetectionPoint, _enum_for_GPRS_TriggerDetectionPoint, GPRS_TriggerDetectionPoint_attach /* IMPORTED_LONG_ENUMERATION_ITEM */, attach /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRS_TriggerDetectionPoint_attachChangeOfPosition /* IMPORTED_LONG_ENUMERATION_ITEM */, attachChangeOfPosition /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRS_TriggerDetectionPoint_pdp_ContextEstablishment /* IMPORTED_LONG_ENUMERATION_ITEM */, pdp_ContextEstablishment /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRS_TriggerDetectionPoint_pdp_ContextEstablishmentAcknowledgement /* IMPORTED_LONG_ENUMERATION_ITEM */, pdp_ContextEstablishmentAcknowledgement /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition /* IMPORTED_LONG_ENUMERATION_ITEM */, pdp_ContextChangeOfPosition /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GPRS_TriggerDetectionPoint, _encode_GPRS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/GPRS-TriggerDetectionPoint.ta.mjs";
-// export { GPRS_TriggerDetectionPoint, _enum_for_GPRS_TriggerDetectionPoint, GPRS_TriggerDetectionPoint_attach /* IMPORTED_LONG_ENUMERATION_ITEM */, attach /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRS_TriggerDetectionPoint_attachChangeOfPosition /* IMPORTED_LONG_ENUMERATION_ITEM */, attachChangeOfPosition /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRS_TriggerDetectionPoint_pdp_ContextEstablishment /* IMPORTED_LONG_ENUMERATION_ITEM */, pdp_ContextEstablishment /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRS_TriggerDetectionPoint_pdp_ContextEstablishmentAcknowledgement /* IMPORTED_LONG_ENUMERATION_ITEM */, pdp_ContextEstablishmentAcknowledgement /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition /* IMPORTED_LONG_ENUMERATION_ITEM */, pdp_ContextChangeOfPosition /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GPRS_TriggerDetectionPoint, _encode_GPRS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/GPRS-TriggerDetectionPoint.ta.mjs";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
-// export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { DefaultGPRS_Handling, _enum_for_DefaultGPRS_Handling, DefaultGPRS_Handling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultGPRS_Handling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultGPRS_Handling, _encode_DefaultGPRS_Handling } from "../MAP-MS-DataTypes/DefaultGPRS-Handling.ta.mjs";
-// export { DefaultGPRS_Handling, _enum_for_DefaultGPRS_Handling, DefaultGPRS_Handling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultGPRS_Handling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultGPRS_Handling, _encode_DefaultGPRS_Handling } from "../MAP-MS-DataTypes/DefaultGPRS-Handling.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -179,11 +174,11 @@ class GPRS_CamelTDPData {
  */
 export
 const _root_component_type_list_1_spec_for_GPRS_CamelTDPData: $.ComponentSpec[] = [
-    new $.ComponentSpec("gprs-TriggerDetectionPoint", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("defaultSessionHandling", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("gprs-TriggerDetectionPoint", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("defaultSessionHandling", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -227,8 +222,8 @@ function _decode_GPRS_CamelTDPData (el: _Element): GPRS_CamelTDPData {
     let serviceKey!: ServiceKey;
     let gsmSCF_Address!: ISDN_AddressString;
     let defaultSessionHandling!: DefaultGPRS_Handling;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gprs-TriggerDetectionPoint": (_el: _Element): void => { gprs_TriggerDetectionPoint = $._decode_implicit<GPRS_TriggerDetectionPoint>(() => _decode_GPRS_TriggerDetectionPoint)(_el); },
         "serviceKey": (_el: _Element): void => { serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(_el); },

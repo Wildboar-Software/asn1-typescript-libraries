@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-// export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_MDT_Allowed_PLMNId_List: $.ASN1Decoder<MDT_Allowed_PLMNI
 export
 function _decode_MDT_Allowed_PLMNId_List (el: _Element): MDT_Allowed_PLMNId_List {
     if (!_cached_decoder_for_MDT_Allowed_PLMNId_List) { _cached_decoder_for_MDT_Allowed_PLMNId_List = $._decodeSequenceOf<PLMN_Id>(() => _decode_PLMN_Id); }
-    return _cached_decoder_for_MDT_Allowed_PLMNId_List(el);
+    const value = _cached_decoder_for_MDT_Allowed_PLMNId_List(el);
+    if (value.length < 1 || value.length > 16) {
+        throw new ASN1SizeError("MDT_Allowed_PLMNId_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_MDT_Allowed_PLMNId_List: $.ASN1Encoder<MDT_Allowed_PLMNId_List> | null = null;

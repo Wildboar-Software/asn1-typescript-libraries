@@ -67,33 +67,19 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallForwardingData, _decode_CallForwardingData, _encode_CallForwardingData } from "../MAP-MS-DataTypes/CallForwardingData.ta.mjs";
-// export { CallForwardingData, _decode_CallForwardingData, _encode_CallForwardingData } from "../MAP-MS-DataTypes/CallForwardingData.ta.mjs";
 import { CallBarringData, _decode_CallBarringData, _encode_CallBarringData } from "../MAP-MS-DataTypes/CallBarringData.ta.mjs";
-// export { CallBarringData, _decode_CallBarringData, _encode_CallBarringData } from "../MAP-MS-DataTypes/CallBarringData.ta.mjs";
 import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
-// export { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
 import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
-// export { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
 import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-// export { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-// export { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
 import { MSISDN_BS_List, _decode_MSISDN_BS_List, _encode_MSISDN_BS_List } from "../MAP-MS-DataTypes/MSISDN-BS-List.ta.mjs";
-// export { MSISDN_BS_List, _decode_MSISDN_BS_List, _encode_MSISDN_BS_List } from "../MAP-MS-DataTypes/MSISDN-BS-List.ta.mjs";
 import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
-// export { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
 import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
-// export { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
 import { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
-// export { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
 import { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
-// export { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
 import { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
-// export { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
 import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
-// export { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
 
 
 /**
@@ -261,13 +247,13 @@ class AnyTimeSubscriptionInterrogationRes {
  */
 export
 const _root_component_type_list_1_spec_for_AnyTimeSubscriptionInterrogationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("callForwardingData", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("callBarringData", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("odb-Info", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("camel-SubscriptionInfo", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("supportedVLR-CAMEL-Phases", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("supportedSGSN-CAMEL-Phases", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("callForwardingData", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("callBarringData", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("odb-Info", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("camel-SubscriptionInfo", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("supportedVLR-CAMEL-Phases", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("supportedSGSN-CAMEL-Phases", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 7))
 ];
 
 /**
@@ -293,15 +279,15 @@ const _root_component_type_list_2_spec_for_AnyTimeSubscriptionInterrogationRes: 
  */
 export
 const _extension_additions_list_spec_for_AnyTimeSubscriptionInterrogationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("offeredCamel4CSIsInVLR", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("offeredCamel4CSIsInSGSN", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("msisdn-BS-List", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("csg-SubscriptionDataList", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("cw-Data", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("ch-Data", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("clip-Data", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("clir-Data", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("ect-data", true, $.hasTag(_TagClass.context, 16), undefined, undefined)
+    new $.ComponentSpec("offeredCamel4CSIsInVLR", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("offeredCamel4CSIsInSGSN", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("msisdn-BS-List", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("csg-SubscriptionDataList", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("cw-Data", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("ch-Data", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("clip-Data", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("clir-Data", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("ect-data", true, $.hasTag(_TagClass.context, 16))
 ];
 
 let _cached_decoder_for_AnyTimeSubscriptionInterrogationRes: $.ASN1Decoder<AnyTimeSubscriptionInterrogationRes> | null = null;
@@ -315,23 +301,23 @@ let _cached_decoder_for_AnyTimeSubscriptionInterrogationRes: $.ASN1Decoder<AnyTi
 export
 function _decode_AnyTimeSubscriptionInterrogationRes (el: _Element): AnyTimeSubscriptionInterrogationRes {
     if (!_cached_decoder_for_AnyTimeSubscriptionInterrogationRes) { _cached_decoder_for_AnyTimeSubscriptionInterrogationRes = function (el: _Element): AnyTimeSubscriptionInterrogationRes {
-    let callForwardingData: OPTIONAL<CallForwardingData>;
-    let callBarringData: OPTIONAL<CallBarringData>;
-    let odb_Info: OPTIONAL<ODB_Info>;
-    let camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo>;
-    let supportedVLR_CAMEL_Phases: OPTIONAL<SupportedCamelPhases>;
-    let supportedSGSN_CAMEL_Phases: OPTIONAL<SupportedCamelPhases>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let offeredCamel4CSIsInVLR: OPTIONAL<OfferedCamel4CSIs>;
-    let offeredCamel4CSIsInSGSN: OPTIONAL<OfferedCamel4CSIs>;
-    let msisdn_BS_List: OPTIONAL<MSISDN_BS_List>;
-    let csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>;
-    let cw_Data: OPTIONAL<CallWaitingData>;
-    let ch_Data: OPTIONAL<CallHoldData>;
-    let clip_Data: OPTIONAL<ClipData>;
-    let clir_Data: OPTIONAL<ClirData>;
-    let ect_data: OPTIONAL<EctData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let callForwardingData: OPTIONAL<CallForwardingData> = undefined;
+    let callBarringData: OPTIONAL<CallBarringData> = undefined;
+    let odb_Info: OPTIONAL<ODB_Info> = undefined;
+    let camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo> = undefined;
+    let supportedVLR_CAMEL_Phases: OPTIONAL<SupportedCamelPhases> = undefined;
+    let supportedSGSN_CAMEL_Phases: OPTIONAL<SupportedCamelPhases> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let offeredCamel4CSIsInVLR: OPTIONAL<OfferedCamel4CSIs> = undefined;
+    let offeredCamel4CSIsInSGSN: OPTIONAL<OfferedCamel4CSIs> = undefined;
+    let msisdn_BS_List: OPTIONAL<MSISDN_BS_List> = undefined;
+    let csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList> = undefined;
+    let cw_Data: OPTIONAL<CallWaitingData> = undefined;
+    let ch_Data: OPTIONAL<CallHoldData> = undefined;
+    let clip_Data: OPTIONAL<ClipData> = undefined;
+    let clir_Data: OPTIONAL<ClirData> = undefined;
+    let ect_data: OPTIONAL<EctData> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callForwardingData": (_el: _Element): void => { callForwardingData = $._decode_implicit<CallForwardingData>(() => _decode_CallForwardingData)(_el); },
         "callBarringData": (_el: _Element): void => { callBarringData = $._decode_implicit<CallBarringData>(() => _decode_CallBarringData)(_el); },

@@ -67,21 +67,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { SM_RP_MTI, _decode_SM_RP_MTI, _encode_SM_RP_MTI } from "../MAP-SM-DataTypes/SM-RP-MTI.ta.mjs";
-// export { SM_RP_MTI, _decode_SM_RP_MTI, _encode_SM_RP_MTI } from "../MAP-SM-DataTypes/SM-RP-MTI.ta.mjs";
 import { SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-DataTypes/SM-RP-SMEA.ta.mjs";
-// export { SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-DataTypes/SM-RP-SMEA.ta.mjs";
 import { SM_DeliveryNotIntended, _enum_for_SM_DeliveryNotIntended, SM_DeliveryNotIntended_onlyIMSI_requested /* IMPORTED_LONG_ENUMERATION_ITEM */, onlyIMSI_requested /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryNotIntended_onlyMCC_MNC_requested /* IMPORTED_LONG_ENUMERATION_ITEM */, onlyMCC_MNC_requested /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SM_DeliveryNotIntended, _encode_SM_DeliveryNotIntended } from "../MAP-SM-DataTypes/SM-DeliveryNotIntended.ta.mjs";
-// export { SM_DeliveryNotIntended, _enum_for_SM_DeliveryNotIntended, SM_DeliveryNotIntended_onlyIMSI_requested /* IMPORTED_LONG_ENUMERATION_ITEM */, onlyIMSI_requested /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_DeliveryNotIntended_onlyMCC_MNC_requested /* IMPORTED_LONG_ENUMERATION_ITEM */, onlyMCC_MNC_requested /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SM_DeliveryNotIntended, _encode_SM_DeliveryNotIntended } from "../MAP-SM-DataTypes/SM-DeliveryNotIntended.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
-// export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
 
 
 /**
@@ -243,10 +235,10 @@ class RoutingInfoForSM_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_RoutingInfoForSM_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sm-RP-PRI", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("serviceCentreAddress", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sm-RP-PRI", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("serviceCentreAddress", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6))
 ];
 
 /**
@@ -272,16 +264,16 @@ const _root_component_type_list_2_spec_for_RoutingInfoForSM_Arg: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_RoutingInfoForSM_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("gprsSupportIndicator", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("sm-RP-MTI", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("sm-RP-SMEA", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("sm-deliveryNotIntended", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("ip-sm-gwGuidanceIndicator", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("t4-Trigger-Indicator", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("singleAttemptDelivery", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("smsf-supportIndicator", true, $.hasTag(_TagClass.context, 16), undefined, undefined)
+    new $.ComponentSpec("gprsSupportIndicator", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("sm-RP-MTI", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("sm-RP-SMEA", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("sm-deliveryNotIntended", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("ip-sm-gwGuidanceIndicator", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("t4-Trigger-Indicator", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("singleAttemptDelivery", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("smsf-supportIndicator", true, $.hasTag(_TagClass.context, 16))
 ];
 
 let _cached_decoder_for_RoutingInfoForSM_Arg: $.ASN1Decoder<RoutingInfoForSM_Arg> | null = null;
@@ -298,18 +290,18 @@ function _decode_RoutingInfoForSM_Arg (el: _Element): RoutingInfoForSM_Arg {
     let msisdn!: ISDN_AddressString;
     let sm_RP_PRI!: BOOLEAN;
     let serviceCentreAddress!: AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let gprsSupportIndicator: OPTIONAL<NULL>;
-    let sm_RP_MTI: OPTIONAL<SM_RP_MTI>;
-    let sm_RP_SMEA: OPTIONAL<SM_RP_SMEA>;
-    let sm_deliveryNotIntended: OPTIONAL<SM_DeliveryNotIntended>;
-    let ip_sm_gwGuidanceIndicator: OPTIONAL<NULL>;
-    let imsi: OPTIONAL<IMSI>;
-    let t4_Trigger_Indicator: OPTIONAL<NULL>;
-    let singleAttemptDelivery: OPTIONAL<NULL>;
-    let correlationID: OPTIONAL<CorrelationID>;
-    let smsf_supportIndicator: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let gprsSupportIndicator: OPTIONAL<NULL> = undefined;
+    let sm_RP_MTI: OPTIONAL<SM_RP_MTI> = undefined;
+    let sm_RP_SMEA: OPTIONAL<SM_RP_SMEA> = undefined;
+    let sm_deliveryNotIntended: OPTIONAL<SM_DeliveryNotIntended> = undefined;
+    let ip_sm_gwGuidanceIndicator: OPTIONAL<NULL> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let t4_Trigger_Indicator: OPTIONAL<NULL> = undefined;
+    let singleAttemptDelivery: OPTIONAL<NULL> = undefined;
+    let correlationID: OPTIONAL<CorrelationID> = undefined;
+    let smsf_supportIndicator: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "msisdn": (_el: _Element): void => { msisdn = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "sm-RP-PRI": (_el: _Element): void => { sm_RP_PRI = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

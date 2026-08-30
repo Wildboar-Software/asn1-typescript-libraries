@@ -67,45 +67,25 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-// export { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
 import { PDN_Type, _decode_PDN_Type, _encode_PDN_Type } from "../MAP-MS-DataTypes/PDN-Type.ta.mjs";
-// export { PDN_Type, _decode_PDN_Type, _encode_PDN_Type } from "../MAP-MS-DataTypes/PDN-Type.ta.mjs";
 import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
-// export { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
 import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-// export { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 import { EPS_QoS_Subscribed, _decode_EPS_QoS_Subscribed, _encode_EPS_QoS_Subscribed } from "../MAP-MS-DataTypes/EPS-QoS-Subscribed.ta.mjs";
-// export { EPS_QoS_Subscribed, _decode_EPS_QoS_Subscribed, _encode_EPS_QoS_Subscribed } from "../MAP-MS-DataTypes/EPS-QoS-Subscribed.ta.mjs";
 import { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } from "../MAP-MS-DataTypes/PDN-GW-Identity.ta.mjs";
-// export { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } from "../MAP-MS-DataTypes/PDN-GW-Identity.ta.mjs";
-import { PDN_GW_AllocationType, _enum_for_PDN_GW_AllocationType, PDN_GW_AllocationType_static /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDN_GW_AllocationType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDN_GW_AllocationType, _encode_PDN_GW_AllocationType } from "../MAP-MS-DataTypes/PDN-GW-AllocationType.ta.mjs";
-// export { PDN_GW_AllocationType, _enum_for_PDN_GW_AllocationType, PDN_GW_AllocationType_static /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDN_GW_AllocationType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDN_GW_AllocationType, _encode_PDN_GW_AllocationType } from "../MAP-MS-DataTypes/PDN-GW-AllocationType.ta.mjs";
+import { PDN_GW_AllocationType, _enum_for_PDN_GW_AllocationType, PDN_GW_AllocationType_static_ /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDN_GW_AllocationType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDN_GW_AllocationType, _encode_PDN_GW_AllocationType } from "../MAP-MS-DataTypes/PDN-GW-AllocationType.ta.mjs";
 import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
-// export { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
 import { AMBR, _decode_AMBR, _encode_AMBR } from "../MAP-MS-DataTypes/AMBR.ta.mjs";
-// export { AMBR, _decode_AMBR, _encode_AMBR } from "../MAP-MS-DataTypes/AMBR.ta.mjs";
 import { SpecificAPNInfoList, _decode_SpecificAPNInfoList, _encode_SpecificAPNInfoList } from "../MAP-MS-DataTypes/SpecificAPNInfoList.ta.mjs";
-// export { SpecificAPNInfoList, _decode_SpecificAPNInfoList, _encode_SpecificAPNInfoList } from "../MAP-MS-DataTypes/SpecificAPNInfoList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
-// export { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
 import { SIPTO_Permission, _enum_for_SIPTO_Permission, SIPTO_Permission_siptoAboveRanAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAboveRanAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SIPTO_Permission_siptoAboveRanNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAboveRanNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SIPTO_Permission, _encode_SIPTO_Permission } from "../MAP-MS-DataTypes/SIPTO-Permission.ta.mjs";
-// export { SIPTO_Permission, _enum_for_SIPTO_Permission, SIPTO_Permission_siptoAboveRanAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAboveRanAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SIPTO_Permission_siptoAboveRanNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAboveRanNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SIPTO_Permission, _encode_SIPTO_Permission } from "../MAP-MS-DataTypes/SIPTO-Permission.ta.mjs";
 import { LIPA_Permission, _enum_for_LIPA_Permission, LIPA_Permission_lipaProhibited /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaProhibited /* IMPORTED_SHORT_ENUMERATION_ITEM */, LIPA_Permission_lipaOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, LIPA_Permission_lipaConditional /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaConditional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LIPA_Permission, _encode_LIPA_Permission } from "../MAP-MS-DataTypes/LIPA-Permission.ta.mjs";
-// export { LIPA_Permission, _enum_for_LIPA_Permission, LIPA_Permission_lipaProhibited /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaProhibited /* IMPORTED_SHORT_ENUMERATION_ITEM */, LIPA_Permission_lipaOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, LIPA_Permission_lipaConditional /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaConditional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LIPA_Permission, _encode_LIPA_Permission } from "../MAP-MS-DataTypes/LIPA-Permission.ta.mjs";
 import { Restoration_Priority, _decode_Restoration_Priority, _encode_Restoration_Priority } from "../MAP-MS-DataTypes/Restoration-Priority.ta.mjs";
-// export { Restoration_Priority, _decode_Restoration_Priority, _encode_Restoration_Priority } from "../MAP-MS-DataTypes/Restoration-Priority.ta.mjs";
 import { SIPTO_Local_Network_Permission, _enum_for_SIPTO_Local_Network_Permission, SIPTO_Local_Network_Permission_siptoAtLocalNetworkAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAtLocalNetworkAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SIPTO_Local_Network_Permission_siptoAtLocalNetworkNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAtLocalNetworkNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SIPTO_Local_Network_Permission, _encode_SIPTO_Local_Network_Permission } from "../MAP-MS-DataTypes/SIPTO-Local-Network-Permission.ta.mjs";
-// export { SIPTO_Local_Network_Permission, _enum_for_SIPTO_Local_Network_Permission, SIPTO_Local_Network_Permission_siptoAtLocalNetworkAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAtLocalNetworkAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SIPTO_Local_Network_Permission_siptoAtLocalNetworkNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAtLocalNetworkNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SIPTO_Local_Network_Permission, _encode_SIPTO_Local_Network_Permission } from "../MAP-MS-DataTypes/SIPTO-Local-Network-Permission.ta.mjs";
 import { WLAN_Offloadability, _decode_WLAN_Offloadability, _encode_WLAN_Offloadability } from "../MAP-MS-DataTypes/WLAN-Offloadability.ta.mjs";
-// export { WLAN_Offloadability, _decode_WLAN_Offloadability, _encode_WLAN_Offloadability } from "../MAP-MS-DataTypes/WLAN-Offloadability.ta.mjs";
 import { NIDD_Mechanism, _enum_for_NIDD_Mechanism, NIDD_Mechanism_sGi_based_data_delivery /* IMPORTED_LONG_ENUMERATION_ITEM */, sGi_based_data_delivery /* IMPORTED_SHORT_ENUMERATION_ITEM */, NIDD_Mechanism_sCEF_based_data_delivery /* IMPORTED_LONG_ENUMERATION_ITEM */, sCEF_based_data_delivery /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NIDD_Mechanism, _encode_NIDD_Mechanism } from "../MAP-MS-DataTypes/NIDD-Mechanism.ta.mjs";
-// export { NIDD_Mechanism, _enum_for_NIDD_Mechanism, NIDD_Mechanism_sGi_based_data_delivery /* IMPORTED_LONG_ENUMERATION_ITEM */, sGi_based_data_delivery /* IMPORTED_SHORT_ENUMERATION_ITEM */, NIDD_Mechanism_sCEF_based_data_delivery /* IMPORTED_LONG_ENUMERATION_ITEM */, sCEF_based_data_delivery /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NIDD_Mechanism, _encode_NIDD_Mechanism } from "../MAP-MS-DataTypes/NIDD-Mechanism.ta.mjs";
 import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
-// export { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
 import { PDN_ConnectionContinuity, _enum_for_PDN_ConnectionContinuity, PDN_ConnectionContinuity_maintainPDN_Connection /* IMPORTED_LONG_ENUMERATION_ITEM */, maintainPDN_Connection /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, disconnectPDN_ConnectionWithReactivationRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, disconnectPDN_ConnectionWithoutReactivationRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDN_ConnectionContinuity, _encode_PDN_ConnectionContinuity } from "../MAP-MS-DataTypes/PDN-ConnectionContinuity.ta.mjs";
-// export { PDN_ConnectionContinuity, _enum_for_PDN_ConnectionContinuity, PDN_ConnectionContinuity_maintainPDN_Connection /* IMPORTED_LONG_ENUMERATION_ITEM */, maintainPDN_Connection /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, disconnectPDN_ConnectionWithReactivationRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, disconnectPDN_ConnectionWithoutReactivationRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDN_ConnectionContinuity, _encode_PDN_ConnectionContinuity } from "../MAP-MS-DataTypes/PDN-ConnectionContinuity.ta.mjs";
 
 
 /**
@@ -361,19 +341,19 @@ class APN_Configuration {
  */
 export
 const _root_component_type_list_1_spec_for_APN_Configuration: $.ComponentSpec[] = [
-    new $.ComponentSpec("contextId", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("pdn-Type", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("servedPartyIP-IPv4-Address", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("apn", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("eps-qos-Subscribed", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("pdn-gw-Identity", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("pdn-gw-AllocationType", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("vplmnAddressAllowed", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("chargingCharacteristics", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("ambr", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("specificAPNInfoList", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("servedPartyIP-IPv6-Address", true, $.hasTag(_TagClass.context, 12), undefined, undefined)
+    new $.ComponentSpec("contextId", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("pdn-Type", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("servedPartyIP-IPv4-Address", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("apn", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("eps-qos-Subscribed", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("pdn-gw-Identity", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("pdn-gw-AllocationType", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("vplmnAddressAllowed", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("chargingCharacteristics", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("ambr", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("specificAPNInfoList", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("servedPartyIP-IPv6-Address", true, $.hasTag(_TagClass.context, 12))
 ];
 
 /**
@@ -399,16 +379,16 @@ const _root_component_type_list_2_spec_for_APN_Configuration: $.ComponentSpec[] 
  */
 export
 const _extension_additions_list_spec_for_APN_Configuration: $.ComponentSpec[] = [
-    new $.ComponentSpec("apn-oi-Replacement", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("sipto-Permission", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("lipa-Permission", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("restoration-Priority", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("sipto-local-network-Permission", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("wlan-offloadability", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("non-IP-PDN-Type-Indicator", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("nIDD-Mechanism", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("sCEF-ID", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("pdn-ConnectionContinuity", true, $.hasTag(_TagClass.context, 22), undefined, undefined)
+    new $.ComponentSpec("apn-oi-Replacement", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("sipto-Permission", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("lipa-Permission", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("restoration-Priority", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("sipto-local-network-Permission", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("wlan-offloadability", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("non-IP-PDN-Type-Indicator", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("nIDD-Mechanism", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("sCEF-ID", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("pdn-ConnectionContinuity", true, $.hasTag(_TagClass.context, 22))
 ];
 
 let _cached_decoder_for_APN_Configuration: $.ASN1Decoder<APN_Configuration> | null = null;
@@ -424,28 +404,28 @@ function _decode_APN_Configuration (el: _Element): APN_Configuration {
     if (!_cached_decoder_for_APN_Configuration) { _cached_decoder_for_APN_Configuration = function (el: _Element): APN_Configuration {
     let contextId!: ContextId;
     let pdn_Type!: PDN_Type;
-    let servedPartyIP_IPv4_Address: OPTIONAL<PDP_Address>;
+    let servedPartyIP_IPv4_Address: OPTIONAL<PDP_Address> = undefined;
     let apn!: APN;
     let eps_qos_Subscribed!: EPS_QoS_Subscribed;
-    let pdn_gw_Identity: OPTIONAL<PDN_GW_Identity>;
-    let pdn_gw_AllocationType: OPTIONAL<PDN_GW_AllocationType>;
-    let vplmnAddressAllowed: OPTIONAL<NULL>;
-    let chargingCharacteristics: OPTIONAL<ChargingCharacteristics>;
-    let ambr: OPTIONAL<AMBR>;
-    let specificAPNInfoList: OPTIONAL<SpecificAPNInfoList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let servedPartyIP_IPv6_Address: OPTIONAL<PDP_Address>;
-    let apn_oi_Replacement: OPTIONAL<APN_OI_Replacement>;
-    let sipto_Permission: OPTIONAL<SIPTO_Permission>;
-    let lipa_Permission: OPTIONAL<LIPA_Permission>;
-    let restoration_Priority: OPTIONAL<Restoration_Priority>;
-    let sipto_local_network_Permission: OPTIONAL<SIPTO_Local_Network_Permission>;
-    let wlan_offloadability: OPTIONAL<WLAN_Offloadability>;
-    let non_IP_PDN_Type_Indicator: OPTIONAL<NULL>;
-    let nIDD_Mechanism: OPTIONAL<NIDD_Mechanism>;
-    let sCEF_ID: OPTIONAL<FQDN>;
-    let pdn_ConnectionContinuity: OPTIONAL<PDN_ConnectionContinuity>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let pdn_gw_Identity: OPTIONAL<PDN_GW_Identity> = undefined;
+    let pdn_gw_AllocationType: OPTIONAL<PDN_GW_AllocationType> = undefined;
+    let vplmnAddressAllowed: OPTIONAL<NULL> = undefined;
+    let chargingCharacteristics: OPTIONAL<ChargingCharacteristics> = undefined;
+    let ambr: OPTIONAL<AMBR> = undefined;
+    let specificAPNInfoList: OPTIONAL<SpecificAPNInfoList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let servedPartyIP_IPv6_Address: OPTIONAL<PDP_Address> = undefined;
+    let apn_oi_Replacement: OPTIONAL<APN_OI_Replacement> = undefined;
+    let sipto_Permission: OPTIONAL<SIPTO_Permission> = undefined;
+    let lipa_Permission: OPTIONAL<LIPA_Permission> = undefined;
+    let restoration_Priority: OPTIONAL<Restoration_Priority> = undefined;
+    let sipto_local_network_Permission: OPTIONAL<SIPTO_Local_Network_Permission> = undefined;
+    let wlan_offloadability: OPTIONAL<WLAN_Offloadability> = undefined;
+    let non_IP_PDN_Type_Indicator: OPTIONAL<NULL> = undefined;
+    let nIDD_Mechanism: OPTIONAL<NIDD_Mechanism> = undefined;
+    let sCEF_ID: OPTIONAL<FQDN> = undefined;
+    let pdn_ConnectionContinuity: OPTIONAL<PDN_ConnectionContinuity> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "contextId": (_el: _Element): void => { contextId = $._decode_implicit<ContextId>(() => _decode_ContextId)(_el); },
         "pdn-Type": (_el: _Element): void => { pdn_Type = $._decode_implicit<PDN_Type>(() => _decode_PDN_Type)(_el); },

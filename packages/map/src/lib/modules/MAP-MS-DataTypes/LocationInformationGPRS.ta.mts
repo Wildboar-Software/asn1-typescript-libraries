@@ -67,23 +67,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
-// export { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
 import { RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
-// export { RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
 import { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
-// export { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
-// export { LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
-// export { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
 import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-// export { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
 import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../MAP-MS-DataTypes/UserCSGInformation.ta.mjs";
-// export { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../MAP-MS-DataTypes/UserCSGInformation.ta.mjs";
 
 
 /**
@@ -216,12 +207,12 @@ class LocationInformationGPRS {
  */
 export
 const _root_component_type_list_1_spec_for_LocationInformationGPRS: $.ComponentSpec[] = [
-    new $.ComponentSpec("cellGlobalIdOrServiceAreaIdOrLAI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("routeingAreaIdentity", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("geographicalInformation", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("selectedLSAIdentity", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("cellGlobalIdOrServiceAreaIdOrLAI", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("routeingAreaIdentity", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("geographicalInformation", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("selectedLSAIdentity", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -247,11 +238,11 @@ const _root_component_type_list_2_spec_for_LocationInformationGPRS: $.ComponentS
  */
 export
 const _extension_additions_list_spec_for_LocationInformationGPRS: $.ComponentSpec[] = [
-    new $.ComponentSpec("sai-Present", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("geodeticInformation", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("currentLocationRetrieved", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("ageOfLocationInformation", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("userCSGInformation", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("sai-Present", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("geodeticInformation", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("currentLocationRetrieved", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("ageOfLocationInformation", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("userCSGInformation", true, $.hasTag(_TagClass.context, 10))
 ];
 
 let _cached_decoder_for_LocationInformationGPRS: $.ASN1Decoder<LocationInformationGPRS> | null = null;
@@ -265,18 +256,18 @@ let _cached_decoder_for_LocationInformationGPRS: $.ASN1Decoder<LocationInformati
 export
 function _decode_LocationInformationGPRS (el: _Element): LocationInformationGPRS {
     if (!_cached_decoder_for_LocationInformationGPRS) { _cached_decoder_for_LocationInformationGPRS = function (el: _Element): LocationInformationGPRS {
-    let cellGlobalIdOrServiceAreaIdOrLAI: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>;
-    let routeingAreaIdentity: OPTIONAL<RAIdentity>;
-    let geographicalInformation: OPTIONAL<GeographicalInformation>;
-    let sgsn_Number: OPTIONAL<ISDN_AddressString>;
-    let selectedLSAIdentity: OPTIONAL<LSAIdentity>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let sai_Present: OPTIONAL<NULL>;
-    let geodeticInformation: OPTIONAL<GeodeticInformation>;
-    let currentLocationRetrieved: OPTIONAL<NULL>;
-    let ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>;
-    let userCSGInformation: OPTIONAL<UserCSGInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cellGlobalIdOrServiceAreaIdOrLAI: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI> = undefined;
+    let routeingAreaIdentity: OPTIONAL<RAIdentity> = undefined;
+    let geographicalInformation: OPTIONAL<GeographicalInformation> = undefined;
+    let sgsn_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let selectedLSAIdentity: OPTIONAL<LSAIdentity> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let sai_Present: OPTIONAL<NULL> = undefined;
+    let geodeticInformation: OPTIONAL<GeodeticInformation> = undefined;
+    let currentLocationRetrieved: OPTIONAL<NULL> = undefined;
+    let ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation> = undefined;
+    let userCSGInformation: OPTIONAL<UserCSGInformation> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cellGlobalIdOrServiceAreaIdOrLAI": (_el: _Element): void => { cellGlobalIdOrServiceAreaIdOrLAI = $._decode_explicit<CellGlobalIdOrServiceAreaIdOrLAI>(() => _decode_CellGlobalIdOrServiceAreaIdOrLAI)(_el); },
         "routeingAreaIdentity": (_el: _Element): void => { routeingAreaIdentity = $._decode_implicit<RAIdentity>(() => _decode_RAIdentity)(_el); },

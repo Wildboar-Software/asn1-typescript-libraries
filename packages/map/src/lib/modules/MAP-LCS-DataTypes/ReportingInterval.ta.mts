@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxReportingInterval } from "./maxReportingInterval.va.mjs";
 
 /**
  * @summary ReportingInterval
@@ -82,21 +85,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ReportingInterval = INTEGER;
 
-let _cached_decoder_for_ReportingInterval: $.ASN1Decoder<ReportingInterval> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingInterval
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReportingInterval (el: _Element): ReportingInterval {
-    if (!_cached_decoder_for_ReportingInterval) { _cached_decoder_for_ReportingInterval = $._decodeInteger; }
-    return _cached_decoder_for_ReportingInterval(el);
-}
-
-let _cached_encoder_for_ReportingInterval: $.ASN1Encoder<ReportingInterval> | null = null;
+export const _decode_ReportingInterval = (el: _Element): ReportingInterval => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > maxReportingInterval) {
+        throw new ASN1OverflowError("ReportingInterval violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ReportingInterval into an ASN.1 Element.
@@ -105,11 +107,7 @@ let _cached_encoder_for_ReportingInterval: $.ASN1Encoder<ReportingInterval> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportingInterval, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReportingInterval (value: ReportingInterval, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportingInterval) { _cached_encoder_for_ReportingInterval = $._encodeInteger; }
-    return _cached_encoder_for_ReportingInterval(value, elGetter);
-}
+export const _encode_ReportingInterval = $._encodeInteger;
 
 
 /* eslint-enable */

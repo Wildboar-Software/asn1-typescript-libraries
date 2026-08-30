@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HLR_Id, _decode_HLR_Id, _encode_HLR_Id } from "../MAP-CommonDataTypes/HLR-Id.ta.mjs";
-// export { HLR_Id, _decode_HLR_Id, _encode_HLR_Id } from "../MAP-CommonDataTypes/HLR-Id.ta.mjs";
 import { SIP_URI, _decode_SIP_URI, _encode_SIP_URI } from "../MAP-SM-DataTypes/SIP-URI.ta.mjs";
-// export { SIP_URI, _decode_SIP_URI, _encode_SIP_URI } from "../MAP-SM-DataTypes/SIP-URI.ta.mjs";
 
 
 /**
@@ -139,9 +137,9 @@ class CorrelationID {
  */
 export
 const _root_component_type_list_1_spec_for_CorrelationID: $.ComponentSpec[] = [
-    new $.ComponentSpec("hlr-id", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sip-uri-A", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("sip-uri-B", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("hlr-id", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sip-uri-A", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("sip-uri-B", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -181,8 +179,8 @@ let _cached_decoder_for_CorrelationID: $.ASN1Decoder<CorrelationID> | null = nul
 export
 function _decode_CorrelationID (el: _Element): CorrelationID {
     if (!_cached_decoder_for_CorrelationID) { _cached_decoder_for_CorrelationID = function (el: _Element): CorrelationID {
-    let hlr_id: OPTIONAL<HLR_Id>;
-    let sip_uri_A: OPTIONAL<SIP_URI>;
+    let hlr_id: OPTIONAL<HLR_Id> = undefined;
+    let sip_uri_A: OPTIONAL<SIP_URI> = undefined;
     let sip_uri_B!: SIP_URI;
     const callbacks: $.DecodingMap = {
         "hlr-id": (_el: _Element): void => { hlr_id = $._decode_implicit<HLR_Id>(() => _decode_HLR_Id)(_el); },

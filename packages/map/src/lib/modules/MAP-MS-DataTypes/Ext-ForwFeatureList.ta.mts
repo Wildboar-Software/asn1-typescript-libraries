@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_ForwFeature, _decode_Ext_ForwFeature, _encode_Ext_ForwFeature } from "../MAP-MS-DataTypes/Ext-ForwFeature.ta.mjs";
-// export { Ext_ForwFeature, _decode_Ext_ForwFeature, _encode_Ext_ForwFeature } from "../MAP-MS-DataTypes/Ext-ForwFeature.ta.mjs";
 
+
+import { maxNumOfExt_BasicServiceGroups } from "./maxNumOfExt-BasicServiceGroups.va.mjs";
 
 /**
  * @summary Ext_ForwFeatureList
@@ -95,7 +97,11 @@ let _cached_decoder_for_Ext_ForwFeatureList: $.ASN1Decoder<Ext_ForwFeatureList> 
 export
 function _decode_Ext_ForwFeatureList (el: _Element): Ext_ForwFeatureList {
     if (!_cached_decoder_for_Ext_ForwFeatureList) { _cached_decoder_for_Ext_ForwFeatureList = $._decodeSequenceOf<Ext_ForwFeature>(() => _decode_Ext_ForwFeature); }
-    return _cached_decoder_for_Ext_ForwFeatureList(el);
+    const value = _cached_decoder_for_Ext_ForwFeatureList(el);
+    if (value.length < 1 || value.length > maxNumOfExt_BasicServiceGroups) {
+        throw new ASN1SizeError("Ext_ForwFeatureList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_Ext_ForwFeatureList: $.ASN1Encoder<Ext_ForwFeatureList> | null = null;

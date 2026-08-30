@@ -125,21 +125,13 @@ const DefaultSMS_Handling_releaseTransaction: DefaultSMS_Handling = 1; /* LONG_N
 export
 const releaseTransaction: DefaultSMS_Handling = DefaultSMS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_DefaultSMS_Handling: $.ASN1Decoder<DefaultSMS_Handling> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultSMS_Handling
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DefaultSMS_Handling (el: _Element): DefaultSMS_Handling {
-    if (!_cached_decoder_for_DefaultSMS_Handling) { _cached_decoder_for_DefaultSMS_Handling = $._decodeEnumerated; }
-    return _cached_decoder_for_DefaultSMS_Handling(el);
-}
-
-let _cached_encoder_for_DefaultSMS_Handling: $.ASN1Encoder<DefaultSMS_Handling> | null = null;
+export const _decode_DefaultSMS_Handling = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) DefaultSMS_Handling into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_DefaultSMS_Handling: $.ASN1Encoder<DefaultSMS_Handling> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DefaultSMS_Handling, encoded as an ASN.1 Element.
  */
-export
-function _encode_DefaultSMS_Handling (value: DefaultSMS_Handling, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DefaultSMS_Handling) { _cached_encoder_for_DefaultSMS_Handling = $._encodeEnumerated; }
-    return _cached_encoder_for_DefaultSMS_Handling(value, elGetter);
-}
+export const _encode_DefaultSMS_Handling = $._encodeEnumerated;
 
 
 /* eslint-enable */

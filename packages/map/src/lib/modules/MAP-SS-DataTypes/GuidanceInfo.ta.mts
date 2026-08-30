@@ -175,21 +175,13 @@ const GuidanceInfo_enterNewPW_Again: GuidanceInfo = GuidanceInfo.enterNewPW_Agai
 export
 const enterNewPW_Again: GuidanceInfo = GuidanceInfo.enterNewPW_Again; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_GuidanceInfo: $.ASN1Decoder<GuidanceInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GuidanceInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GuidanceInfo (el: _Element): GuidanceInfo {
-    if (!_cached_decoder_for_GuidanceInfo) { _cached_decoder_for_GuidanceInfo = $._decodeEnumerated; }
-    return _cached_decoder_for_GuidanceInfo(el);
-}
-
-let _cached_encoder_for_GuidanceInfo: $.ASN1Encoder<GuidanceInfo> | null = null;
+export const _decode_GuidanceInfo = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) GuidanceInfo into an ASN.1 Element.
@@ -198,11 +190,7 @@ let _cached_encoder_for_GuidanceInfo: $.ASN1Encoder<GuidanceInfo> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GuidanceInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_GuidanceInfo (value: GuidanceInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GuidanceInfo) { _cached_encoder_for_GuidanceInfo = $._encodeEnumerated; }
-    return _cached_encoder_for_GuidanceInfo(value, elGetter);
-}
+export const _encode_GuidanceInfo = $._encodeEnumerated;
 
 
 /* eslint-enable */

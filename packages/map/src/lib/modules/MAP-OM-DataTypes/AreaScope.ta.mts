@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CGI_List, _decode_CGI_List, _encode_CGI_List } from "../MAP-OM-DataTypes/CGI-List.ta.mjs";
-// export { CGI_List, _decode_CGI_List, _encode_CGI_List } from "../MAP-OM-DataTypes/CGI-List.ta.mjs";
 import { E_UTRAN_CGI_List, _decode_E_UTRAN_CGI_List, _encode_E_UTRAN_CGI_List } from "../MAP-OM-DataTypes/E-UTRAN-CGI-List.ta.mjs";
-// export { E_UTRAN_CGI_List, _decode_E_UTRAN_CGI_List, _encode_E_UTRAN_CGI_List } from "../MAP-OM-DataTypes/E-UTRAN-CGI-List.ta.mjs";
 import { RoutingAreaId_List, _decode_RoutingAreaId_List, _encode_RoutingAreaId_List } from "../MAP-OM-DataTypes/RoutingAreaId-List.ta.mjs";
-// export { RoutingAreaId_List, _decode_RoutingAreaId_List, _encode_RoutingAreaId_List } from "../MAP-OM-DataTypes/RoutingAreaId-List.ta.mjs";
 import { LocationAreaId_List, _decode_LocationAreaId_List, _encode_LocationAreaId_List } from "../MAP-OM-DataTypes/LocationAreaId-List.ta.mjs";
-// export { LocationAreaId_List, _decode_LocationAreaId_List, _encode_LocationAreaId_List } from "../MAP-OM-DataTypes/LocationAreaId-List.ta.mjs";
 import { TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaId_List } from "../MAP-OM-DataTypes/TrackingAreaId-List.ta.mjs";
-// export { TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaId_List } from "../MAP-OM-DataTypes/TrackingAreaId-List.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -175,12 +169,12 @@ class AreaScope {
  */
 export
 const _root_component_type_list_1_spec_for_AreaScope: $.ComponentSpec[] = [
-    new $.ComponentSpec("cgi-List", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("e-utran-cgi-List", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("routingAreaId-List", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("locationAreaId-List", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("trackingAreaId-List", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("cgi-List", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("e-utran-cgi-List", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("routingAreaId-List", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("locationAreaId-List", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("trackingAreaId-List", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -220,13 +214,13 @@ let _cached_decoder_for_AreaScope: $.ASN1Decoder<AreaScope> | null = null;
 export
 function _decode_AreaScope (el: _Element): AreaScope {
     if (!_cached_decoder_for_AreaScope) { _cached_decoder_for_AreaScope = function (el: _Element): AreaScope {
-    let cgi_List: OPTIONAL<CGI_List>;
-    let e_utran_cgi_List: OPTIONAL<E_UTRAN_CGI_List>;
-    let routingAreaId_List: OPTIONAL<RoutingAreaId_List>;
-    let locationAreaId_List: OPTIONAL<LocationAreaId_List>;
-    let trackingAreaId_List: OPTIONAL<TrackingAreaId_List>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cgi_List: OPTIONAL<CGI_List> = undefined;
+    let e_utran_cgi_List: OPTIONAL<E_UTRAN_CGI_List> = undefined;
+    let routingAreaId_List: OPTIONAL<RoutingAreaId_List> = undefined;
+    let locationAreaId_List: OPTIONAL<LocationAreaId_List> = undefined;
+    let trackingAreaId_List: OPTIONAL<TrackingAreaId_List> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cgi-List": (_el: _Element): void => { cgi_List = $._decode_implicit<CGI_List>(() => _decode_CGI_List)(_el); },
         "e-utran-cgi-List": (_el: _Element): void => { e_utran_cgi_List = $._decode_implicit<E_UTRAN_CGI_List>(() => _decode_E_UTRAN_CGI_List)(_el); },

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SRES = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_SRES: $.ASN1Decoder<SRES> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SRES
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SRES (el: _Element): SRES {
-    if (!_cached_decoder_for_SRES) { _cached_decoder_for_SRES = $._decodeOctetString; }
-    return _cached_decoder_for_SRES(el);
-}
-
-let _cached_encoder_for_SRES: $.ASN1Encoder<SRES> | null = null;
+export const _decode_SRES = (el: _Element): SRES => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 4 || value.length > 4) {
+        throw new ASN1SizeError("SRES violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SRES into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_SRES: $.ASN1Encoder<SRES> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SRES, encoded as an ASN.1 Element.
  */
-export
-function _encode_SRES (value: SRES, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SRES) { _cached_encoder_for_SRES = $._encodeOctetString; }
-    return _cached_encoder_for_SRES(value, elGetter);
-}
+export const _encode_SRES = $._encodeOctetString;
 
 
 /* eslint-enable */

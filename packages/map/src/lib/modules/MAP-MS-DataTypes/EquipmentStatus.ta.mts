@@ -175,21 +175,13 @@ const EquipmentStatus_trackingListed: EquipmentStatus = EquipmentStatus.tracking
 export
 const trackingListed: EquipmentStatus = EquipmentStatus.trackingListed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EquipmentStatus: $.ASN1Decoder<EquipmentStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EquipmentStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EquipmentStatus (el: _Element): EquipmentStatus {
-    if (!_cached_decoder_for_EquipmentStatus) { _cached_decoder_for_EquipmentStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_EquipmentStatus(el);
-}
-
-let _cached_encoder_for_EquipmentStatus: $.ASN1Encoder<EquipmentStatus> | null = null;
+export const _decode_EquipmentStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EquipmentStatus into an ASN.1 Element.
@@ -198,11 +190,7 @@ let _cached_encoder_for_EquipmentStatus: $.ASN1Encoder<EquipmentStatus> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EquipmentStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_EquipmentStatus (value: EquipmentStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EquipmentStatus) { _cached_encoder_for_EquipmentStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_EquipmentStatus(value, elGetter);
-}
+export const _encode_EquipmentStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

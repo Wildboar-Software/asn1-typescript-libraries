@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
-// export { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
 import { CallTerminationIndicator, _enum_for_CallTerminationIndicator, CallTerminationIndicator_terminateCallActivityReferred /* IMPORTED_LONG_ENUMERATION_ITEM */, terminateCallActivityReferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallTerminationIndicator_terminateAllCallActivities /* IMPORTED_LONG_ENUMERATION_ITEM */, terminateAllCallActivities /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallTerminationIndicator, _encode_CallTerminationIndicator } from "../MAP-CH-DataTypes/CallTerminationIndicator.ta.mjs";
-// export { CallTerminationIndicator, _enum_for_CallTerminationIndicator, CallTerminationIndicator_terminateCallActivityReferred /* IMPORTED_LONG_ENUMERATION_ITEM */, terminateCallActivityReferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallTerminationIndicator_terminateAllCallActivities /* IMPORTED_LONG_ENUMERATION_ITEM */, terminateAllCallActivities /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallTerminationIndicator, _encode_CallTerminationIndicator } from "../MAP-CH-DataTypes/CallTerminationIndicator.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -161,10 +158,10 @@ class IST_AlertRes {
  */
 export
 const _root_component_type_list_1_spec_for_IST_AlertRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("istAlertTimer", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("istInformationWithdraw", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("callTerminationIndicator", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("istAlertTimer", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("istInformationWithdraw", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("callTerminationIndicator", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -204,11 +201,11 @@ let _cached_decoder_for_IST_AlertRes: $.ASN1Decoder<IST_AlertRes> | null = null;
 export
 function _decode_IST_AlertRes (el: _Element): IST_AlertRes {
     if (!_cached_decoder_for_IST_AlertRes) { _cached_decoder_for_IST_AlertRes = function (el: _Element): IST_AlertRes {
-    let istAlertTimer: OPTIONAL<IST_AlertTimerValue>;
-    let istInformationWithdraw: OPTIONAL<NULL>;
-    let callTerminationIndicator: OPTIONAL<CallTerminationIndicator>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let istAlertTimer: OPTIONAL<IST_AlertTimerValue> = undefined;
+    let istInformationWithdraw: OPTIONAL<NULL> = undefined;
+    let callTerminationIndicator: OPTIONAL<CallTerminationIndicator> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "istAlertTimer": (_el: _Element): void => { istAlertTimer = $._decode_implicit<IST_AlertTimerValue>(() => _decode_IST_AlertTimerValue)(_el); },
         "istInformationWithdraw": (_el: _Element): void => { istInformationWithdraw = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

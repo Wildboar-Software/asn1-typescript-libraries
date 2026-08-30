@@ -83,21 +83,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TraceType = INTEGER;
 
-let _cached_decoder_for_TraceType: $.ASN1Decoder<TraceType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceType (el: _Element): TraceType {
-    if (!_cached_decoder_for_TraceType) { _cached_decoder_for_TraceType = $._decodeInteger; }
-    return _cached_decoder_for_TraceType(el);
-}
-
-let _cached_encoder_for_TraceType: $.ASN1Encoder<TraceType> | null = null;
+export const _decode_TraceType = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) TraceType into an ASN.1 Element.
@@ -106,11 +98,7 @@ let _cached_encoder_for_TraceType: $.ASN1Encoder<TraceType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceType, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceType (value: TraceType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceType) { _cached_encoder_for_TraceType = $._encodeInteger; }
-    return _cached_encoder_for_TraceType(value, elGetter);
-}
+export const _encode_TraceType = $._encodeInteger;
 
 
 /* eslint-enable */

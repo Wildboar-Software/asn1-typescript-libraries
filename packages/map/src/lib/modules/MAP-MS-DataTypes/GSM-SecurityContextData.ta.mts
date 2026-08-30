@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
-// export { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
 import { Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mjs";
-// export { Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class GSM_SecurityContextData {
  */
 export
 const _root_component_type_list_1_spec_for_GSM_SecurityContextData: $.ComponentSpec[] = [
-    new $.ComponentSpec("kc", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("cksn", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("kc", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("cksn", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**

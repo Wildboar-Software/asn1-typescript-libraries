@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
-// export { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
 import { RFSP_ID, _decode_RFSP_ID, _encode_RFSP_ID } from "../MAP-MS-DataTypes/RFSP-ID.ta.mjs";
-// export { RFSP_ID, _decode_RFSP_ID, _encode_RFSP_ID } from "../MAP-MS-DataTypes/RFSP-ID.ta.mjs";
 import { AMBR, _decode_AMBR, _encode_AMBR } from "../MAP-MS-DataTypes/AMBR.ta.mjs";
-// export { AMBR, _decode_AMBR, _encode_AMBR } from "../MAP-MS-DataTypes/AMBR.ta.mjs";
 import { APN_ConfigurationProfile, _decode_APN_ConfigurationProfile, _encode_APN_ConfigurationProfile } from "../MAP-MS-DataTypes/APN-ConfigurationProfile.ta.mjs";
-// export { APN_ConfigurationProfile, _decode_APN_ConfigurationProfile, _encode_APN_ConfigurationProfile } from "../MAP-MS-DataTypes/APN-ConfigurationProfile.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -197,12 +191,12 @@ class EPS_SubscriptionData {
  */
 export
 const _root_component_type_list_1_spec_for_EPS_SubscriptionData: $.ComponentSpec[] = [
-    new $.ComponentSpec("apn-oi-Replacement", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("rfsp-id", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("ambr", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("apn-ConfigurationProfile", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("stn-sr", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("apn-oi-Replacement", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("rfsp-id", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("ambr", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("apn-ConfigurationProfile", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("stn-sr", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -228,9 +222,9 @@ const _root_component_type_list_2_spec_for_EPS_SubscriptionData: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_EPS_SubscriptionData: $.ComponentSpec[] = [
-    new $.ComponentSpec("mps-CSPriority", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("mps-EPSPriority", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("subscribed-vsrvcc", true, $.hasTag(_TagClass.context, 9), undefined, undefined)
+    new $.ComponentSpec("mps-CSPriority", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("mps-EPSPriority", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("subscribed-vsrvcc", true, $.hasTag(_TagClass.context, 9))
 ];
 
 let _cached_decoder_for_EPS_SubscriptionData: $.ASN1Decoder<EPS_SubscriptionData> | null = null;
@@ -244,16 +238,16 @@ let _cached_decoder_for_EPS_SubscriptionData: $.ASN1Decoder<EPS_SubscriptionData
 export
 function _decode_EPS_SubscriptionData (el: _Element): EPS_SubscriptionData {
     if (!_cached_decoder_for_EPS_SubscriptionData) { _cached_decoder_for_EPS_SubscriptionData = function (el: _Element): EPS_SubscriptionData {
-    let apn_oi_Replacement: OPTIONAL<APN_OI_Replacement>;
-    let rfsp_id: OPTIONAL<RFSP_ID>;
-    let ambr: OPTIONAL<AMBR>;
-    let apn_ConfigurationProfile: OPTIONAL<APN_ConfigurationProfile>;
-    let stn_sr: OPTIONAL<ISDN_AddressString>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let mps_CSPriority: OPTIONAL<NULL>;
-    let mps_EPSPriority: OPTIONAL<NULL>;
-    let subscribed_vsrvcc: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let apn_oi_Replacement: OPTIONAL<APN_OI_Replacement> = undefined;
+    let rfsp_id: OPTIONAL<RFSP_ID> = undefined;
+    let ambr: OPTIONAL<AMBR> = undefined;
+    let apn_ConfigurationProfile: OPTIONAL<APN_ConfigurationProfile> = undefined;
+    let stn_sr: OPTIONAL<ISDN_AddressString> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let mps_CSPriority: OPTIONAL<NULL> = undefined;
+    let mps_EPSPriority: OPTIONAL<NULL> = undefined;
+    let subscribed_vsrvcc: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "apn-oi-Replacement": (_el: _Element): void => { apn_oi_Replacement = $._decode_implicit<APN_OI_Replacement>(() => _decode_APN_OI_Replacement)(_el); },
         "rfsp-id": (_el: _Element): void => { rfsp_id = $._decode_implicit<RFSP_ID>(() => _decode_RFSP_ID)(_el); },

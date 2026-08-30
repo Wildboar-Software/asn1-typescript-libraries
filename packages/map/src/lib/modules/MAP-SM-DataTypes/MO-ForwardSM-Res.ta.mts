@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class MO_ForwardSM_Res {
  */
 export
 const _root_component_type_list_1_spec_for_MO_ForwardSM_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("sm-RP-UI", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("sm-RP-UI", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_MO_ForwardSM_Res: $.ASN1Decoder<MO_ForwardSM_Res> | null
 export
 function _decode_MO_ForwardSM_Res (el: _Element): MO_ForwardSM_Res {
     if (!_cached_decoder_for_MO_ForwardSM_Res) { _cached_decoder_for_MO_ForwardSM_Res = function (el: _Element): MO_ForwardSM_Res {
-    let sm_RP_UI: OPTIONAL<SignalInfo>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let sm_RP_UI: OPTIONAL<SignalInfo> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sm-RP-UI": (_el: _Element): void => { sm_RP_UI = _decode_SignalInfo(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

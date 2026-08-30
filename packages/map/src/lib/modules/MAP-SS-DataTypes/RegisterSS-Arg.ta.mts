@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-// export { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
-// export { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
 import { NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyConditionTime } from "../MAP-SS-DataTypes/NoReplyConditionTime.ta.mjs";
-// export { NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyConditionTime } from "../MAP-SS-DataTypes/NoReplyConditionTime.ta.mjs";
 import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-// export { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
-// export { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
 
 
 /**
@@ -191,11 +184,11 @@ class RegisterSS_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_RegisterSS_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)), undefined, undefined),
-    new $.ComponentSpec("forwardedToNumber", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("forwardedToSubaddress", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("noReplyConditionTime", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3))),
+    new $.ComponentSpec("forwardedToNumber", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("forwardedToSubaddress", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("noReplyConditionTime", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -221,9 +214,9 @@ const _root_component_type_list_2_spec_for_RegisterSS_Arg: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_RegisterSS_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("defaultPriority", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("nbrUser", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 9), undefined, undefined)
+    new $.ComponentSpec("defaultPriority", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("nbrUser", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 9))
 ];
 
 let _cached_decoder_for_RegisterSS_Arg: $.ASN1Decoder<RegisterSS_Arg> | null = null;
@@ -238,14 +231,14 @@ export
 function _decode_RegisterSS_Arg (el: _Element): RegisterSS_Arg {
     if (!_cached_decoder_for_RegisterSS_Arg) { _cached_decoder_for_RegisterSS_Arg = function (el: _Element): RegisterSS_Arg {
     let ss_Code!: SS_Code;
-    let basicService: OPTIONAL<BasicServiceCode>;
-    let forwardedToNumber: OPTIONAL<AddressString>;
-    let forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>;
-    let noReplyConditionTime: OPTIONAL<NoReplyConditionTime>;
-    let defaultPriority: OPTIONAL<EMLPP_Priority>;
-    let nbrUser: OPTIONAL<MC_Bearers>;
-    let longFTN_Supported: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let basicService: OPTIONAL<BasicServiceCode> = undefined;
+    let forwardedToNumber: OPTIONAL<AddressString> = undefined;
+    let forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString> = undefined;
+    let noReplyConditionTime: OPTIONAL<NoReplyConditionTime> = undefined;
+    let defaultPriority: OPTIONAL<EMLPP_Priority> = undefined;
+    let nbrUser: OPTIONAL<MC_Bearers> = undefined;
+    let longFTN_Supported: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = _decode_SS_Code(_el); },
         "basicService": (_el: _Element): void => { basicService = _decode_BasicServiceCode(_el); },

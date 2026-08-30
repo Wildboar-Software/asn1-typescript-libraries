@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -130,7 +129,7 @@ class ResourceLimitationParam {
  */
 export
 const _root_component_type_list_1_spec_for_ResourceLimitationParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -170,8 +169,8 @@ let _cached_decoder_for_ResourceLimitationParam: $.ASN1Decoder<ResourceLimitatio
 export
 function _decode_ResourceLimitationParam (el: _Element): ResourceLimitationParam {
     if (!_cached_decoder_for_ResourceLimitationParam) { _cached_decoder_for_ResourceLimitationParam = function (el: _Element): ResourceLimitationParam {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }
     };

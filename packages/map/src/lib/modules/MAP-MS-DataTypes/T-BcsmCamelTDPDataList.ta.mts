@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { T_BcsmCamelTDPData, _decode_T_BcsmCamelTDPData, _encode_T_BcsmCamelTDPData } from "../MAP-MS-DataTypes/T-BcsmCamelTDPData.ta.mjs";
-// export { T_BcsmCamelTDPData, _decode_T_BcsmCamelTDPData, _encode_T_BcsmCamelTDPData } from "../MAP-MS-DataTypes/T-BcsmCamelTDPData.ta.mjs";
 
+
+import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 
 /**
  * @summary T_BcsmCamelTDPDataList
@@ -95,7 +97,11 @@ let _cached_decoder_for_T_BcsmCamelTDPDataList: $.ASN1Decoder<T_BcsmCamelTDPData
 export
 function _decode_T_BcsmCamelTDPDataList (el: _Element): T_BcsmCamelTDPDataList {
     if (!_cached_decoder_for_T_BcsmCamelTDPDataList) { _cached_decoder_for_T_BcsmCamelTDPDataList = $._decodeSequenceOf<T_BcsmCamelTDPData>(() => _decode_T_BcsmCamelTDPData); }
-    return _cached_decoder_for_T_BcsmCamelTDPDataList(el);
+    const value = _cached_decoder_for_T_BcsmCamelTDPDataList(el);
+    if (value.length < 1 || value.length > maxNumOfCamelTDPData) {
+        throw new ASN1SizeError("T_BcsmCamelTDPDataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_T_BcsmCamelTDPDataList: $.ASN1Encoder<T_BcsmCamelTDPDataList> | null = null;

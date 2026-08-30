@@ -143,21 +143,13 @@ const CCBS_SubscriberStatus_ccbsNotReachable: CCBS_SubscriberStatus = 2; /* LONG
 export
 const ccbsNotReachable: CCBS_SubscriberStatus = CCBS_SubscriberStatus_ccbsNotReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CCBS_SubscriberStatus: $.ASN1Decoder<CCBS_SubscriberStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CCBS_SubscriberStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CCBS_SubscriberStatus (el: _Element): CCBS_SubscriberStatus {
-    if (!_cached_decoder_for_CCBS_SubscriberStatus) { _cached_decoder_for_CCBS_SubscriberStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_CCBS_SubscriberStatus(el);
-}
-
-let _cached_encoder_for_CCBS_SubscriberStatus: $.ASN1Encoder<CCBS_SubscriberStatus> | null = null;
+export const _decode_CCBS_SubscriberStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CCBS_SubscriberStatus into an ASN.1 Element.
@@ -166,11 +158,7 @@ let _cached_encoder_for_CCBS_SubscriberStatus: $.ASN1Encoder<CCBS_SubscriberStat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CCBS_SubscriberStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_CCBS_SubscriberStatus (value: CCBS_SubscriberStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CCBS_SubscriberStatus) { _cached_encoder_for_CCBS_SubscriberStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_CCBS_SubscriberStatus(value, elGetter);
-}
+export const _encode_CCBS_SubscriberStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -197,21 +197,13 @@ const UnavailabilityCause_cug_Reject: UnavailabilityCause = 6; /* LONG_NAMED_ENU
 export
 const cug_Reject: UnavailabilityCause = UnavailabilityCause_cug_Reject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UnavailabilityCause: $.ASN1Decoder<UnavailabilityCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UnavailabilityCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UnavailabilityCause (el: _Element): UnavailabilityCause {
-    if (!_cached_decoder_for_UnavailabilityCause) { _cached_decoder_for_UnavailabilityCause = $._decodeEnumerated; }
-    return _cached_decoder_for_UnavailabilityCause(el);
-}
-
-let _cached_encoder_for_UnavailabilityCause: $.ASN1Encoder<UnavailabilityCause> | null = null;
+export const _decode_UnavailabilityCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UnavailabilityCause into an ASN.1 Element.
@@ -220,11 +212,7 @@ let _cached_encoder_for_UnavailabilityCause: $.ASN1Encoder<UnavailabilityCause> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnavailabilityCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_UnavailabilityCause (value: UnavailabilityCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UnavailabilityCause) { _cached_encoder_for_UnavailabilityCause = $._encodeEnumerated; }
-    return _cached_encoder_for_UnavailabilityCause(value, elGetter);
-}
+export const _encode_UnavailabilityCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

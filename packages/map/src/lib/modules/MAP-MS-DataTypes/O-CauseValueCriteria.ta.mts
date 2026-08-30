@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CauseValue, _decode_CauseValue, _encode_CauseValue } from "../MAP-MS-DataTypes/CauseValue.ta.mjs";
-// export { CauseValue, _decode_CauseValue, _encode_CauseValue } from "../MAP-MS-DataTypes/CauseValue.ta.mjs";
 
+
+import { maxNumOfCAMEL_O_CauseValueCriteria } from "./maxNumOfCAMEL-O-CauseValueCriteria.va.mjs";
 
 /**
  * @summary O_CauseValueCriteria
@@ -95,7 +97,11 @@ let _cached_decoder_for_O_CauseValueCriteria: $.ASN1Decoder<O_CauseValueCriteria
 export
 function _decode_O_CauseValueCriteria (el: _Element): O_CauseValueCriteria {
     if (!_cached_decoder_for_O_CauseValueCriteria) { _cached_decoder_for_O_CauseValueCriteria = $._decodeSequenceOf<CauseValue>(() => _decode_CauseValue); }
-    return _cached_decoder_for_O_CauseValueCriteria(el);
+    const value = _cached_decoder_for_O_CauseValueCriteria(el);
+    if (value.length < 1 || value.length > maxNumOfCAMEL_O_CauseValueCriteria) {
+        throw new ASN1SizeError("O_CauseValueCriteria violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_O_CauseValueCriteria: $.ASN1Encoder<O_CauseValueCriteria> | null = null;

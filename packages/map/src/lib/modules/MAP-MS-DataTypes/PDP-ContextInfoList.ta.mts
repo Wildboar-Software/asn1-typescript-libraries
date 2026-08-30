@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PDP_ContextInfo, _decode_PDP_ContextInfo, _encode_PDP_ContextInfo } from "../MAP-MS-DataTypes/PDP-ContextInfo.ta.mjs";
-// export { PDP_ContextInfo, _decode_PDP_ContextInfo, _encode_PDP_ContextInfo } from "../MAP-MS-DataTypes/PDP-ContextInfo.ta.mjs";
 
+
+import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";
 
 /**
  * @summary PDP_ContextInfoList
@@ -95,7 +97,11 @@ let _cached_decoder_for_PDP_ContextInfoList: $.ASN1Decoder<PDP_ContextInfoList> 
 export
 function _decode_PDP_ContextInfoList (el: _Element): PDP_ContextInfoList {
     if (!_cached_decoder_for_PDP_ContextInfoList) { _cached_decoder_for_PDP_ContextInfoList = $._decodeSequenceOf<PDP_ContextInfo>(() => _decode_PDP_ContextInfo); }
-    return _cached_decoder_for_PDP_ContextInfoList(el);
+    const value = _cached_decoder_for_PDP_ContextInfoList(el);
+    if (value.length < 1 || value.length > maxNumOfPDP_Contexts) {
+        throw new ASN1SizeError("PDP_ContextInfoList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PDP_ContextInfoList: $.ASN1Encoder<PDP_ContextInfoList> | null = null;

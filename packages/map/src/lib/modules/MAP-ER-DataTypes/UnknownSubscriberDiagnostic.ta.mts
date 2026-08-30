@@ -143,21 +143,13 @@ const UnknownSubscriberDiagnostic_npdbMismatch: UnknownSubscriberDiagnostic = 2;
 export
 const npdbMismatch: UnknownSubscriberDiagnostic = UnknownSubscriberDiagnostic_npdbMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UnknownSubscriberDiagnostic: $.ASN1Decoder<UnknownSubscriberDiagnostic> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UnknownSubscriberDiagnostic
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UnknownSubscriberDiagnostic (el: _Element): UnknownSubscriberDiagnostic {
-    if (!_cached_decoder_for_UnknownSubscriberDiagnostic) { _cached_decoder_for_UnknownSubscriberDiagnostic = $._decodeEnumerated; }
-    return _cached_decoder_for_UnknownSubscriberDiagnostic(el);
-}
-
-let _cached_encoder_for_UnknownSubscriberDiagnostic: $.ASN1Encoder<UnknownSubscriberDiagnostic> | null = null;
+export const _decode_UnknownSubscriberDiagnostic = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UnknownSubscriberDiagnostic into an ASN.1 Element.
@@ -166,11 +158,7 @@ let _cached_encoder_for_UnknownSubscriberDiagnostic: $.ASN1Encoder<UnknownSubscr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnknownSubscriberDiagnostic, encoded as an ASN.1 Element.
  */
-export
-function _encode_UnknownSubscriberDiagnostic (value: UnknownSubscriberDiagnostic, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UnknownSubscriberDiagnostic) { _cached_encoder_for_UnknownSubscriberDiagnostic = $._encodeEnumerated; }
-    return _cached_encoder_for_UnknownSubscriberDiagnostic(value, elGetter);
-}
+export const _encode_UnknownSubscriberDiagnostic = $._encodeEnumerated;
 
 
 /* eslint-enable */

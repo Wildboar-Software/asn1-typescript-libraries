@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -97,21 +98,19 @@ const MGW_EventList_context: number = 0; /* LONG_NAMED_BIT */
 export
 const context: number = MGW_EventList_context; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_MGW_EventList: $.ASN1Decoder<MGW_EventList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MGW_EventList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MGW_EventList (el: _Element): MGW_EventList {
-    if (!_cached_decoder_for_MGW_EventList) { _cached_decoder_for_MGW_EventList = $._decodeBitString; }
-    return _cached_decoder_for_MGW_EventList(el);
-}
-
-let _cached_encoder_for_MGW_EventList: $.ASN1Encoder<MGW_EventList> | null = null;
+export const _decode_MGW_EventList = (el: _Element): MGW_EventList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("MGW_EventList violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MGW_EventList into an ASN.1 Element.
@@ -120,11 +119,7 @@ let _cached_encoder_for_MGW_EventList: $.ASN1Encoder<MGW_EventList> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MGW_EventList, encoded as an ASN.1 Element.
  */
-export
-function _encode_MGW_EventList (value: MGW_EventList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MGW_EventList) { _cached_encoder_for_MGW_EventList = $._encodeBitString; }
-    return _cached_encoder_for_MGW_EventList(value, elGetter);
-}
+export const _encode_MGW_EventList = $._encodeBitString;
 
 
 /* eslint-enable */

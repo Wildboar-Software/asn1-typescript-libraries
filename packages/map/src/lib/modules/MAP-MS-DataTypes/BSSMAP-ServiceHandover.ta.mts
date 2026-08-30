@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type BSSMAP_ServiceHandover = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_BSSMAP_ServiceHandover: $.ASN1Decoder<BSSMAP_ServiceHandover> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) BSSMAP_ServiceHandover
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_BSSMAP_ServiceHandover (el: _Element): BSSMAP_ServiceHandover {
-    if (!_cached_decoder_for_BSSMAP_ServiceHandover) { _cached_decoder_for_BSSMAP_ServiceHandover = $._decodeOctetString; }
-    return _cached_decoder_for_BSSMAP_ServiceHandover(el);
-}
-
-let _cached_encoder_for_BSSMAP_ServiceHandover: $.ASN1Encoder<BSSMAP_ServiceHandover> | null = null;
+export const _decode_BSSMAP_ServiceHandover = (el: _Element): BSSMAP_ServiceHandover => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("BSSMAP_ServiceHandover violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) BSSMAP_ServiceHandover into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_BSSMAP_ServiceHandover: $.ASN1Encoder<BSSMAP_ServiceHand
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BSSMAP_ServiceHandover, encoded as an ASN.1 Element.
  */
-export
-function _encode_BSSMAP_ServiceHandover (value: BSSMAP_ServiceHandover, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BSSMAP_ServiceHandover) { _cached_encoder_for_BSSMAP_ServiceHandover = $._encodeOctetString; }
-    return _cached_encoder_for_BSSMAP_ServiceHandover(value, elGetter);
-}
+export const _encode_BSSMAP_ServiceHandover = $._encodeOctetString;
 
 
 /* eslint-enable */

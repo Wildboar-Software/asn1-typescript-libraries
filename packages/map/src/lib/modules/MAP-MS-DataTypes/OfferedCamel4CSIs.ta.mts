@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -188,21 +189,19 @@ const OfferedCamel4CSIs_psi_enhancements: number = 6; /* LONG_NAMED_BIT */
 export
 const psi_enhancements: number = OfferedCamel4CSIs_psi_enhancements; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_OfferedCamel4CSIs: $.ASN1Decoder<OfferedCamel4CSIs> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OfferedCamel4CSIs
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_OfferedCamel4CSIs (el: _Element): OfferedCamel4CSIs {
-    if (!_cached_decoder_for_OfferedCamel4CSIs) { _cached_decoder_for_OfferedCamel4CSIs = $._decodeBitString; }
-    return _cached_decoder_for_OfferedCamel4CSIs(el);
-}
-
-let _cached_encoder_for_OfferedCamel4CSIs: $.ASN1Encoder<OfferedCamel4CSIs> | null = null;
+export const _decode_OfferedCamel4CSIs = (el: _Element): OfferedCamel4CSIs => {
+    const value = $._decodeBitString(el);
+    if (value.length < 7 || value.length > 16) {
+        throw new ASN1SizeError("OfferedCamel4CSIs violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) OfferedCamel4CSIs into an ASN.1 Element.
@@ -211,11 +210,7 @@ let _cached_encoder_for_OfferedCamel4CSIs: $.ASN1Encoder<OfferedCamel4CSIs> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OfferedCamel4CSIs, encoded as an ASN.1 Element.
  */
-export
-function _encode_OfferedCamel4CSIs (value: OfferedCamel4CSIs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OfferedCamel4CSIs) { _cached_encoder_for_OfferedCamel4CSIs = $._encodeBitString; }
-    return _cached_encoder_for_OfferedCamel4CSIs(value, elGetter);
-}
+export const _encode_OfferedCamel4CSIs = $._encodeBitString;
 
 
 /* eslint-enable */

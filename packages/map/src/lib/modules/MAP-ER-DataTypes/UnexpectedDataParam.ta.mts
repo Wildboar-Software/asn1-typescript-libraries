@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -137,7 +136,7 @@ class UnexpectedDataParam {
  */
 export
 const _root_component_type_list_1_spec_for_UnexpectedDataParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -163,7 +162,7 @@ const _root_component_type_list_2_spec_for_UnexpectedDataParam: $.ComponentSpec[
  */
 export
 const _extension_additions_list_spec_for_UnexpectedDataParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("unexpectedSubscriber", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("unexpectedSubscriber", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_UnexpectedDataParam: $.ASN1Decoder<UnexpectedDataParam> | null = null;
@@ -177,9 +176,9 @@ let _cached_decoder_for_UnexpectedDataParam: $.ASN1Decoder<UnexpectedDataParam> 
 export
 function _decode_UnexpectedDataParam (el: _Element): UnexpectedDataParam {
     if (!_cached_decoder_for_UnexpectedDataParam) { _cached_decoder_for_UnexpectedDataParam = function (el: _Element): UnexpectedDataParam {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let unexpectedSubscriber: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let unexpectedSubscriber: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },
         "unexpectedSubscriber": (_el: _Element): void => { unexpectedSubscriber = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -127,21 +128,19 @@ const ISR_Information_initialAttachIndicator: number = 2; /* LONG_NAMED_BIT */
 export
 const initialAttachIndicator: number = ISR_Information_initialAttachIndicator; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_ISR_Information: $.ASN1Decoder<ISR_Information> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ISR_Information
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ISR_Information (el: _Element): ISR_Information {
-    if (!_cached_decoder_for_ISR_Information) { _cached_decoder_for_ISR_Information = $._decodeBitString; }
-    return _cached_decoder_for_ISR_Information(el);
-}
-
-let _cached_encoder_for_ISR_Information: $.ASN1Encoder<ISR_Information> | null = null;
+export const _decode_ISR_Information = (el: _Element): ISR_Information => {
+    const value = $._decodeBitString(el);
+    if (value.length < 3 || value.length > 8) {
+        throw new ASN1SizeError("ISR_Information violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ISR_Information into an ASN.1 Element.
@@ -150,11 +149,7 @@ let _cached_encoder_for_ISR_Information: $.ASN1Encoder<ISR_Information> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ISR_Information, encoded as an ASN.1 Element.
  */
-export
-function _encode_ISR_Information (value: ISR_Information, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISR_Information) { _cached_encoder_for_ISR_Information = $._encodeBitString; }
-    return _cached_encoder_for_ISR_Information(value, elGetter);
-}
+export const _encode_ISR_Information = $._encodeBitString;
 
 
 /* eslint-enable */

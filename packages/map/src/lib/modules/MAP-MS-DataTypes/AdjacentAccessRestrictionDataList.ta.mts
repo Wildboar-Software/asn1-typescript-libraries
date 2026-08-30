@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdjacentAccessRestrictionData, _decode_AdjacentAccessRestrictionData, _encode_AdjacentAccessRestrictionData } from "../MAP-MS-DataTypes/AdjacentAccessRestrictionData.ta.mjs";
-// export { AdjacentAccessRestrictionData, _decode_AdjacentAccessRestrictionData, _encode_AdjacentAccessRestrictionData } from "../MAP-MS-DataTypes/AdjacentAccessRestrictionData.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_AdjacentAccessRestrictionDataList: $.ASN1Decoder<Adjacen
 export
 function _decode_AdjacentAccessRestrictionDataList (el: _Element): AdjacentAccessRestrictionDataList {
     if (!_cached_decoder_for_AdjacentAccessRestrictionDataList) { _cached_decoder_for_AdjacentAccessRestrictionDataList = $._decodeSequenceOf<AdjacentAccessRestrictionData>(() => _decode_AdjacentAccessRestrictionData); }
-    return _cached_decoder_for_AdjacentAccessRestrictionDataList(el);
+    const value = _cached_decoder_for_AdjacentAccessRestrictionDataList(el);
+    if (value.length < 1 || value.length > 50) {
+        throw new ASN1SizeError("AdjacentAccessRestrictionDataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_AdjacentAccessRestrictionDataList: $.ASN1Encoder<AdjacentAccessRestrictionDataList> | null = null;

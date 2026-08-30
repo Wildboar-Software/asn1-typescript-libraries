@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventSpecification } from "../MAP-SS-DataTypes/SS-EventSpecification.ta.mjs";
-// export { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventSpecification } from "../MAP-SS-DataTypes/SS-EventSpecification.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CCBS_RequestState, _enum_for_CCBS_RequestState, CCBS_RequestState_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_recall /* IMPORTED_LONG_ENUMERATION_ITEM */, recall /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_active /* IMPORTED_LONG_ENUMERATION_ITEM */, active /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_completed /* IMPORTED_LONG_ENUMERATION_ITEM */, completed /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_suspended /* IMPORTED_LONG_ENUMERATION_ITEM */, suspended /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_frozen /* IMPORTED_LONG_ENUMERATION_ITEM */, frozen /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_deleted /* IMPORTED_LONG_ENUMERATION_ITEM */, deleted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CCBS_RequestState, _encode_CCBS_RequestState } from "../MAP-SS-DataTypes/CCBS-RequestState.ta.mjs";
-// export { CCBS_RequestState, _enum_for_CCBS_RequestState, CCBS_RequestState_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_recall /* IMPORTED_LONG_ENUMERATION_ITEM */, recall /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_active /* IMPORTED_LONG_ENUMERATION_ITEM */, active /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_completed /* IMPORTED_LONG_ENUMERATION_ITEM */, completed /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_suspended /* IMPORTED_LONG_ENUMERATION_ITEM */, suspended /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_frozen /* IMPORTED_LONG_ENUMERATION_ITEM */, frozen /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_deleted /* IMPORTED_LONG_ENUMERATION_ITEM */, deleted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CCBS_RequestState, _encode_CCBS_RequestState } from "../MAP-SS-DataTypes/CCBS-RequestState.ta.mjs";
 
 
 /**
@@ -194,11 +188,11 @@ class SS_InvocationNotificationArg {
  */
 export
 const _root_component_type_list_1_spec_for_SS_InvocationNotificationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ss-Event", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("ss-EventSpecification", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ss-Event", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("ss-EventSpecification", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -224,8 +218,8 @@ const _root_component_type_list_2_spec_for_SS_InvocationNotificationArg: $.Compo
  */
 export
 const _extension_additions_list_spec_for_SS_InvocationNotificationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("b-subscriberNumber", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("ccbs-RequestState", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("b-subscriberNumber", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("ccbs-RequestState", true, $.hasTag(_TagClass.context, 6))
 ];
 
 let _cached_decoder_for_SS_InvocationNotificationArg: $.ASN1Decoder<SS_InvocationNotificationArg> | null = null;
@@ -242,11 +236,11 @@ function _decode_SS_InvocationNotificationArg (el: _Element): SS_InvocationNotif
     let imsi!: IMSI;
     let msisdn!: ISDN_AddressString;
     let ss_Event!: SS_Code;
-    let ss_EventSpecification: OPTIONAL<SS_EventSpecification>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let b_subscriberNumber: OPTIONAL<ISDN_AddressString>;
-    let ccbs_RequestState: OPTIONAL<CCBS_RequestState>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ss_EventSpecification: OPTIONAL<SS_EventSpecification> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let b_subscriberNumber: OPTIONAL<ISDN_AddressString> = undefined;
+    let ccbs_RequestState: OPTIONAL<CCBS_RequestState> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "msisdn": (_el: _Element): void => { msisdn = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },

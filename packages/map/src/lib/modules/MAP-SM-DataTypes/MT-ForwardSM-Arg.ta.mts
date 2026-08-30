@@ -67,23 +67,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
-// export { SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
 import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
-// export { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
-// export { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
-// export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
-// export { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
 
 
 /**
@@ -223,11 +214,11 @@ class MT_ForwardSM_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_MT_ForwardSM_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("sm-RP-DA", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("sm-RP-OA", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("sm-RP-UI", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("moreMessagesToSend", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("sm-RP-DA", false, $.hasAnyTag),
+    new $.ComponentSpec("sm-RP-OA", false, $.hasAnyTag),
+    new $.ComponentSpec("sm-RP-UI", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("moreMessagesToSend", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -253,13 +244,13 @@ const _root_component_type_list_2_spec_for_MT_ForwardSM_Arg: $.ComponentSpec[] =
  */
 export
 const _extension_additions_list_spec_for_MT_ForwardSM_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("smDeliveryTimer", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("smDeliveryStartTime", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("smsOverIP-OnlyIndicator", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("maximumRetransmissionTime", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("smsGmscAddress", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("smsGmscDiameterAddress", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("smDeliveryTimer", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("smDeliveryStartTime", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("smsOverIP-OnlyIndicator", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("maximumRetransmissionTime", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("smsGmscAddress", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("smsGmscDiameterAddress", true, $.hasTag(_TagClass.context, 4))
 ];
 
 let _cached_decoder_for_MT_ForwardSM_Arg: $.ASN1Decoder<MT_ForwardSM_Arg> | null = null;
@@ -276,16 +267,16 @@ function _decode_MT_ForwardSM_Arg (el: _Element): MT_ForwardSM_Arg {
     let sm_RP_DA!: SM_RP_DA;
     let sm_RP_OA!: SM_RP_OA;
     let sm_RP_UI!: SignalInfo;
-    let moreMessagesToSend: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let smDeliveryTimer: OPTIONAL<SM_DeliveryTimerValue>;
-    let smDeliveryStartTime: OPTIONAL<Time>;
-    let smsOverIP_OnlyIndicator: OPTIONAL<NULL>;
-    let correlationID: OPTIONAL<CorrelationID>;
-    let maximumRetransmissionTime: OPTIONAL<Time>;
-    let smsGmscAddress: OPTIONAL<ISDN_AddressString>;
-    let smsGmscDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let moreMessagesToSend: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let smDeliveryTimer: OPTIONAL<SM_DeliveryTimerValue> = undefined;
+    let smDeliveryStartTime: OPTIONAL<Time> = undefined;
+    let smsOverIP_OnlyIndicator: OPTIONAL<NULL> = undefined;
+    let correlationID: OPTIONAL<CorrelationID> = undefined;
+    let maximumRetransmissionTime: OPTIONAL<Time> = undefined;
+    let smsGmscAddress: OPTIONAL<ISDN_AddressString> = undefined;
+    let smsGmscDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sm-RP-DA": (_el: _Element): void => { sm_RP_DA = _decode_SM_RP_DA(_el); },
         "sm-RP-OA": (_el: _Element): void => { sm_RP_OA = _decode_SM_RP_OA(_el); },

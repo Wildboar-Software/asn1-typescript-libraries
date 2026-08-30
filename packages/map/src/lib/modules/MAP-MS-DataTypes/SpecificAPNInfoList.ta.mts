@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SpecificAPNInfo, _decode_SpecificAPNInfo, _encode_SpecificAPNInfo } from "../MAP-MS-DataTypes/SpecificAPNInfo.ta.mjs";
-// export { SpecificAPNInfo, _decode_SpecificAPNInfo, _encode_SpecificAPNInfo } from "../MAP-MS-DataTypes/SpecificAPNInfo.ta.mjs";
 
+
+import { maxNumOfSpecificAPNInfos } from "./maxNumOfSpecificAPNInfos.va.mjs";
 
 /**
  * @summary SpecificAPNInfoList
@@ -95,7 +97,11 @@ let _cached_decoder_for_SpecificAPNInfoList: $.ASN1Decoder<SpecificAPNInfoList> 
 export
 function _decode_SpecificAPNInfoList (el: _Element): SpecificAPNInfoList {
     if (!_cached_decoder_for_SpecificAPNInfoList) { _cached_decoder_for_SpecificAPNInfoList = $._decodeSequenceOf<SpecificAPNInfo>(() => _decode_SpecificAPNInfo); }
-    return _cached_decoder_for_SpecificAPNInfoList(el);
+    const value = _cached_decoder_for_SpecificAPNInfoList(el);
+    if (value.length < 1 || value.length > maxNumOfSpecificAPNInfos) {
+        throw new ASN1SizeError("SpecificAPNInfoList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_SpecificAPNInfoList: $.ASN1Encoder<SpecificAPNInfoList> | null = null;

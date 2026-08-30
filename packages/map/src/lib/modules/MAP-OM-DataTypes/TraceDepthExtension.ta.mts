@@ -143,21 +143,13 @@ const TraceDepthExtension_maximumWithoutVendorSpecificExtension: TraceDepthExten
 export
 const maximumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExtension_maximumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TraceDepthExtension: $.ASN1Decoder<TraceDepthExtension> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceDepthExtension
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceDepthExtension (el: _Element): TraceDepthExtension {
-    if (!_cached_decoder_for_TraceDepthExtension) { _cached_decoder_for_TraceDepthExtension = $._decodeEnumerated; }
-    return _cached_decoder_for_TraceDepthExtension(el);
-}
-
-let _cached_encoder_for_TraceDepthExtension: $.ASN1Encoder<TraceDepthExtension> | null = null;
+export const _decode_TraceDepthExtension = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TraceDepthExtension into an ASN.1 Element.
@@ -166,11 +158,7 @@ let _cached_encoder_for_TraceDepthExtension: $.ASN1Encoder<TraceDepthExtension> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceDepthExtension, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceDepthExtension (value: TraceDepthExtension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceDepthExtension) { _cached_encoder_for_TraceDepthExtension = $._encodeEnumerated; }
-    return _cached_encoder_for_TraceDepthExtension(value, elGetter);
-}
+export const _encode_TraceDepthExtension = $._encodeEnumerated;
 
 
 /* eslint-enable */

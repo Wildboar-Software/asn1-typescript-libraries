@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
-// export { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
 import { CancellationType, _enum_for_CancellationType, CancellationType_updateProcedure /* IMPORTED_LONG_ENUMERATION_ITEM */, updateProcedure /* IMPORTED_SHORT_ENUMERATION_ITEM */, CancellationType_subscriptionWithdraw /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionWithdraw /* IMPORTED_SHORT_ENUMERATION_ITEM */, CancellationType_initialAttachProcedure /* IMPORTED_LONG_ENUMERATION_ITEM */, initialAttachProcedure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CancellationType, _encode_CancellationType } from "../MAP-MS-DataTypes/CancellationType.ta.mjs";
-// export { CancellationType, _enum_for_CancellationType, CancellationType_updateProcedure /* IMPORTED_LONG_ENUMERATION_ITEM */, updateProcedure /* IMPORTED_SHORT_ENUMERATION_ITEM */, CancellationType_subscriptionWithdraw /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionWithdraw /* IMPORTED_SHORT_ENUMERATION_ITEM */, CancellationType_initialAttachProcedure /* IMPORTED_LONG_ENUMERATION_ITEM */, initialAttachProcedure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CancellationType, _encode_CancellationType } from "../MAP-MS-DataTypes/CancellationType.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { TypeOfUpdate, _enum_for_TypeOfUpdate, TypeOfUpdate_sgsn_change /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn_change /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeOfUpdate_mme_change /* IMPORTED_LONG_ENUMERATION_ITEM */, mme_change /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TypeOfUpdate, _encode_TypeOfUpdate } from "../MAP-MS-DataTypes/TypeOfUpdate.ta.mjs";
-// export { TypeOfUpdate, _enum_for_TypeOfUpdate, TypeOfUpdate_sgsn_change /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn_change /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeOfUpdate_mme_change /* IMPORTED_LONG_ENUMERATION_ITEM */, mme_change /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TypeOfUpdate, _encode_TypeOfUpdate } from "../MAP-MS-DataTypes/TypeOfUpdate.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 
 
 /**
@@ -216,9 +210,9 @@ class CancelLocationArg {
  */
 export
 const _root_component_type_list_1_spec_for_CancelLocationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("identity", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("cancellationType", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("identity", false, $.hasAnyTag),
+    new $.ComponentSpec("cancellationType", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -244,13 +238,13 @@ const _root_component_type_list_2_spec_for_CancelLocationArg: $.ComponentSpec[] 
  */
 export
 const _extension_additions_list_spec_for_CancelLocationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("typeOfUpdate", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mtrf-SupportedAndAuthorized", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mtrf-SupportedAndNotAuthorized", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("newMSC-Number", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("newVLR-Number", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("new-lmsi", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("reattach-Required", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("typeOfUpdate", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mtrf-SupportedAndAuthorized", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mtrf-SupportedAndNotAuthorized", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("newMSC-Number", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("newVLR-Number", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("new-lmsi", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("reattach-Required", true, $.hasTag(_TagClass.context, 6))
 ];
 
 let _cached_decoder_for_CancelLocationArg: $.ASN1Decoder<CancelLocationArg> | null = null;
@@ -265,16 +259,16 @@ export
 function _decode_CancelLocationArg (el: _Element): CancelLocationArg {
     if (!_cached_decoder_for_CancelLocationArg) { _cached_decoder_for_CancelLocationArg = $._decode_implicit<CancelLocationArg>(() => function (el: _Element): CancelLocationArg {
     let identity!: Identity;
-    let cancellationType: OPTIONAL<CancellationType>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let typeOfUpdate: OPTIONAL<TypeOfUpdate>;
-    let mtrf_SupportedAndAuthorized: OPTIONAL<NULL>;
-    let mtrf_SupportedAndNotAuthorized: OPTIONAL<NULL>;
-    let newMSC_Number: OPTIONAL<ISDN_AddressString>;
-    let newVLR_Number: OPTIONAL<ISDN_AddressString>;
-    let new_lmsi: OPTIONAL<LMSI>;
-    let reattach_Required: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cancellationType: OPTIONAL<CancellationType> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let typeOfUpdate: OPTIONAL<TypeOfUpdate> = undefined;
+    let mtrf_SupportedAndAuthorized: OPTIONAL<NULL> = undefined;
+    let mtrf_SupportedAndNotAuthorized: OPTIONAL<NULL> = undefined;
+    let newMSC_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let newVLR_Number: OPTIONAL<ISDN_AddressString> = undefined;
+    let new_lmsi: OPTIONAL<LMSI> = undefined;
+    let reattach_Required: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "identity": (_el: _Element): void => { identity = _decode_Identity(_el); },
         "cancellationType": (_el: _Element): void => { cancellationType = _decode_CancellationType(_el); },

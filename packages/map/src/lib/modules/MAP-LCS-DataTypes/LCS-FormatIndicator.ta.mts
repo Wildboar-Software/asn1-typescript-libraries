@@ -179,21 +179,13 @@ const LCS_FormatIndicator_sipUrl: LCS_FormatIndicator = 4; /* LONG_NAMED_ENUMERA
 export
 const sipUrl: LCS_FormatIndicator = LCS_FormatIndicator_sipUrl; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LCS_FormatIndicator: $.ASN1Decoder<LCS_FormatIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_FormatIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCS_FormatIndicator (el: _Element): LCS_FormatIndicator {
-    if (!_cached_decoder_for_LCS_FormatIndicator) { _cached_decoder_for_LCS_FormatIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_LCS_FormatIndicator(el);
-}
-
-let _cached_encoder_for_LCS_FormatIndicator: $.ASN1Encoder<LCS_FormatIndicator> | null = null;
+export const _decode_LCS_FormatIndicator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCS_FormatIndicator into an ASN.1 Element.
@@ -202,11 +194,7 @@ let _cached_encoder_for_LCS_FormatIndicator: $.ASN1Encoder<LCS_FormatIndicator> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCS_FormatIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCS_FormatIndicator (value: LCS_FormatIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCS_FormatIndicator) { _cached_encoder_for_LCS_FormatIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_LCS_FormatIndicator(value, elGetter);
-}
+export const _encode_LCS_FormatIndicator = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
-// export { BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
 import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
-// export { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
 
 
 /**
@@ -140,8 +138,8 @@ class BSSMAP_ServiceHandoverInfo {
  */
 export
 const _root_component_type_list_1_spec_for_BSSMAP_ServiceHandoverInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("bssmap-ServiceHandover", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("rab-Id", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("bssmap-ServiceHandover", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("rab-Id", false, $.hasTag(_TagClass.universal, 2))
 ];
 
 /**

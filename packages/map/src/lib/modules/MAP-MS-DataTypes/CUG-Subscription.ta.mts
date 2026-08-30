@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
-// export { CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
 import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
-// export { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
 import { IntraCUG_Options, _enum_for_IntraCUG_Options, IntraCUG_Options_noCUG_Restrictions /* IMPORTED_LONG_ENUMERATION_ITEM */, noCUG_Restrictions /* IMPORTED_SHORT_ENUMERATION_ITEM */, IntraCUG_Options_cugIC_CallBarred /* IMPORTED_LONG_ENUMERATION_ITEM */, cugIC_CallBarred /* IMPORTED_SHORT_ENUMERATION_ITEM */, IntraCUG_Options_cugOG_CallBarred /* IMPORTED_LONG_ENUMERATION_ITEM */, cugOG_CallBarred /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IntraCUG_Options, _encode_IntraCUG_Options } from "../MAP-MS-DataTypes/IntraCUG-Options.ta.mjs";
-// export { IntraCUG_Options, _enum_for_IntraCUG_Options, IntraCUG_Options_noCUG_Restrictions /* IMPORTED_LONG_ENUMERATION_ITEM */, noCUG_Restrictions /* IMPORTED_SHORT_ENUMERATION_ITEM */, IntraCUG_Options_cugIC_CallBarred /* IMPORTED_LONG_ENUMERATION_ITEM */, cugIC_CallBarred /* IMPORTED_SHORT_ENUMERATION_ITEM */, IntraCUG_Options_cugOG_CallBarred /* IMPORTED_LONG_ENUMERATION_ITEM */, cugOG_CallBarred /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IntraCUG_Options, _encode_IntraCUG_Options } from "../MAP-MS-DataTypes/IntraCUG-Options.ta.mjs";
 import { Ext_BasicServiceGroupList, _decode_Ext_BasicServiceGroupList, _encode_Ext_BasicServiceGroupList } from "../MAP-MS-DataTypes/Ext-BasicServiceGroupList.ta.mjs";
-// export { Ext_BasicServiceGroupList, _decode_Ext_BasicServiceGroupList, _encode_Ext_BasicServiceGroupList } from "../MAP-MS-DataTypes/Ext-BasicServiceGroupList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -172,11 +167,11 @@ class CUG_Subscription {
  */
 export
 const _root_component_type_list_1_spec_for_CUG_Subscription: $.ComponentSpec[] = [
-    new $.ComponentSpec("cug-Index", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("cug-Interlock", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("intraCUG-Options", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("basicServiceGroupList", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("cug-Index", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("cug-Interlock", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("intraCUG-Options", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("basicServiceGroupList", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -219,9 +214,9 @@ function _decode_CUG_Subscription (el: _Element): CUG_Subscription {
     let cug_Index!: CUG_Index;
     let cug_Interlock!: CUG_Interlock;
     let intraCUG_Options!: IntraCUG_Options;
-    let basicServiceGroupList: OPTIONAL<Ext_BasicServiceGroupList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let basicServiceGroupList: OPTIONAL<Ext_BasicServiceGroupList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cug-Index": (_el: _Element): void => { cug_Index = _decode_CUG_Index(_el); },
         "cug-Interlock": (_el: _Element): void => { cug_Interlock = _decode_CUG_Interlock(_el); },

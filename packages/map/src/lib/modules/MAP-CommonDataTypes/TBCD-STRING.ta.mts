@@ -82,21 +82,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TBCD_STRING = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_TBCD_STRING: $.ASN1Decoder<TBCD_STRING> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TBCD_STRING
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TBCD_STRING (el: _Element): TBCD_STRING {
-    if (!_cached_decoder_for_TBCD_STRING) { _cached_decoder_for_TBCD_STRING = $._decodeOctetString; }
-    return _cached_decoder_for_TBCD_STRING(el);
-}
-
-let _cached_encoder_for_TBCD_STRING: $.ASN1Encoder<TBCD_STRING> | null = null;
+export const _decode_TBCD_STRING = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) TBCD_STRING into an ASN.1 Element.
@@ -105,11 +97,7 @@ let _cached_encoder_for_TBCD_STRING: $.ASN1Encoder<TBCD_STRING> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBCD_STRING, encoded as an ASN.1 Element.
  */
-export
-function _encode_TBCD_STRING (value: TBCD_STRING, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TBCD_STRING) { _cached_encoder_for_TBCD_STRING = $._encodeOctetString; }
-    return _cached_encoder_for_TBCD_STRING(value, elGetter);
-}
+export const _encode_TBCD_STRING = $._encodeOctetString;
 
 
 /* eslint-enable */

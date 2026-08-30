@@ -67,35 +67,20 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
-// export { Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
 import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-// export { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
-// export { Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
 import { PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
-// export { PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
 import { UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
-// export { UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
 import { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
-// export { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
 import { AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator, AccuracyFulfilmentIndicator_requestedAccuracyFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyNotFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
-// export { AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator, AccuracyFulfilmentIndicator_requestedAccuracyFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyNotFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
 import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
-// export { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
 import { GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
-// export { GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
 import { UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
-// export { UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
 import { ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
-// export { ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
 import { UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
-// export { UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
 import { UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
-// export { UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
 import { UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
-// export { UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
 
 
 /**
@@ -282,9 +267,9 @@ class ProvideSubscriberLocation_Res {
  */
 export
 const _root_component_type_list_1_spec_for_ProvideSubscriberLocation_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("locationEstimate", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("ageOfLocationEstimate", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("locationEstimate", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("ageOfLocationEstimate", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -310,21 +295,21 @@ const _root_component_type_list_2_spec_for_ProvideSubscriberLocation_Res: $.Comp
  */
 export
 const _extension_additions_list_spec_for_ProvideSubscriberLocation_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("add-LocationEstimate", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("deferredmt-lrResponseIndicator", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("geranPositioningData", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("utranPositioningData", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("cellIdOrSai", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("sai-Present", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("accuracyFulfilmentIndicator", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("velocityEstimate", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("mo-lrShortCircuitIndicator", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("geranGANSSpositioningData", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("utranGANSSpositioningData", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("targetServingNodeForHandover", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("utranAdditionalPositioningData", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("utranBaroPressureMeas", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("utranCivicAddress", true, $.hasTag(_TagClass.context, 16), undefined, undefined)
+    new $.ComponentSpec("add-LocationEstimate", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("deferredmt-lrResponseIndicator", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("geranPositioningData", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("utranPositioningData", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("cellIdOrSai", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("sai-Present", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("accuracyFulfilmentIndicator", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("velocityEstimate", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("mo-lrShortCircuitIndicator", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("geranGANSSpositioningData", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("utranGANSSpositioningData", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("targetServingNodeForHandover", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("utranAdditionalPositioningData", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("utranBaroPressureMeas", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("utranCivicAddress", true, $.hasTag(_TagClass.context, 16))
 ];
 
 let _cached_decoder_for_ProvideSubscriberLocation_Res: $.ASN1Decoder<ProvideSubscriberLocation_Res> | null = null;
@@ -339,24 +324,24 @@ export
 function _decode_ProvideSubscriberLocation_Res (el: _Element): ProvideSubscriberLocation_Res {
     if (!_cached_decoder_for_ProvideSubscriberLocation_Res) { _cached_decoder_for_ProvideSubscriberLocation_Res = function (el: _Element): ProvideSubscriberLocation_Res {
     let locationEstimate!: Ext_GeographicalInformation;
-    let ageOfLocationEstimate: OPTIONAL<AgeOfLocationInformation>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let add_LocationEstimate: OPTIONAL<Add_GeographicalInformation>;
-    let deferredmt_lrResponseIndicator: OPTIONAL<NULL>;
-    let geranPositioningData: OPTIONAL<PositioningDataInformation>;
-    let utranPositioningData: OPTIONAL<UtranPositioningDataInfo>;
-    let cellIdOrSai: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>;
-    let sai_Present: OPTIONAL<NULL>;
-    let accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator>;
-    let velocityEstimate: OPTIONAL<VelocityEstimate>;
-    let mo_lrShortCircuitIndicator: OPTIONAL<NULL>;
-    let geranGANSSpositioningData: OPTIONAL<GeranGANSSpositioningData>;
-    let utranGANSSpositioningData: OPTIONAL<UtranGANSSpositioningData>;
-    let targetServingNodeForHandover: OPTIONAL<ServingNodeAddress>;
-    let utranAdditionalPositioningData: OPTIONAL<UtranAdditionalPositioningData>;
-    let utranBaroPressureMeas: OPTIONAL<UtranBaroPressureMeas>;
-    let utranCivicAddress: OPTIONAL<UtranCivicAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ageOfLocationEstimate: OPTIONAL<AgeOfLocationInformation> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let add_LocationEstimate: OPTIONAL<Add_GeographicalInformation> = undefined;
+    let deferredmt_lrResponseIndicator: OPTIONAL<NULL> = undefined;
+    let geranPositioningData: OPTIONAL<PositioningDataInformation> = undefined;
+    let utranPositioningData: OPTIONAL<UtranPositioningDataInfo> = undefined;
+    let cellIdOrSai: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI> = undefined;
+    let sai_Present: OPTIONAL<NULL> = undefined;
+    let accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator> = undefined;
+    let velocityEstimate: OPTIONAL<VelocityEstimate> = undefined;
+    let mo_lrShortCircuitIndicator: OPTIONAL<NULL> = undefined;
+    let geranGANSSpositioningData: OPTIONAL<GeranGANSSpositioningData> = undefined;
+    let utranGANSSpositioningData: OPTIONAL<UtranGANSSpositioningData> = undefined;
+    let targetServingNodeForHandover: OPTIONAL<ServingNodeAddress> = undefined;
+    let utranAdditionalPositioningData: OPTIONAL<UtranAdditionalPositioningData> = undefined;
+    let utranBaroPressureMeas: OPTIONAL<UtranBaroPressureMeas> = undefined;
+    let utranCivicAddress: OPTIONAL<UtranCivicAddress> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationEstimate": (_el: _Element): void => { locationEstimate = _decode_Ext_GeographicalInformation(_el); },
         "ageOfLocationEstimate": (_el: _Element): void => { ageOfLocationEstimate = $._decode_implicit<AgeOfLocationInformation>(() => _decode_AgeOfLocationInformation)(_el); },

@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -151,10 +150,10 @@ class Allocation_Retention_Priority {
  */
 export
 const _root_component_type_list_1_spec_for_Allocation_Retention_Priority: $.ComponentSpec[] = [
-    new $.ComponentSpec("priority-level", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("pre-emption-capability", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("pre-emption-vulnerability", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("priority-level", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("pre-emption-capability", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("pre-emption-vulnerability", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -195,10 +194,10 @@ export
 function _decode_Allocation_Retention_Priority (el: _Element): Allocation_Retention_Priority {
     if (!_cached_decoder_for_Allocation_Retention_Priority) { _cached_decoder_for_Allocation_Retention_Priority = function (el: _Element): Allocation_Retention_Priority {
     let priority_level!: INTEGER;
-    let pre_emption_capability: OPTIONAL<BOOLEAN>;
-    let pre_emption_vulnerability: OPTIONAL<BOOLEAN>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let pre_emption_capability: OPTIONAL<BOOLEAN> = undefined;
+    let pre_emption_vulnerability: OPTIONAL<BOOLEAN> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "priority-level": (_el: _Element): void => { priority_level = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "pre-emption-capability": (_el: _Element): void => { pre_emption_capability = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

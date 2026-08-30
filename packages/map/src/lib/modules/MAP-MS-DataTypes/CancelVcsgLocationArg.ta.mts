@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
-// export { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -140,8 +138,8 @@ class CancelVcsgLocationArg {
  */
 export
 const _root_component_type_list_1_spec_for_CancelVcsgLocationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("identity", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("identity", false, $.hasAnyTag),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -182,8 +180,8 @@ export
 function _decode_CancelVcsgLocationArg (el: _Element): CancelVcsgLocationArg {
     if (!_cached_decoder_for_CancelVcsgLocationArg) { _cached_decoder_for_CancelVcsgLocationArg = function (el: _Element): CancelVcsgLocationArg {
     let identity!: Identity;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "identity": (_el: _Element): void => { identity = _decode_Identity(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

@@ -155,21 +155,13 @@ const MAP_ProviderAbortReason_invalidPDU: MAP_ProviderAbortReason = MAP_Provider
 export
 const invalidPDU: MAP_ProviderAbortReason = MAP_ProviderAbortReason.invalidPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MAP_ProviderAbortReason: $.ASN1Decoder<MAP_ProviderAbortReason> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MAP_ProviderAbortReason
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MAP_ProviderAbortReason (el: _Element): MAP_ProviderAbortReason {
-    if (!_cached_decoder_for_MAP_ProviderAbortReason) { _cached_decoder_for_MAP_ProviderAbortReason = $._decodeEnumerated; }
-    return _cached_decoder_for_MAP_ProviderAbortReason(el);
-}
-
-let _cached_encoder_for_MAP_ProviderAbortReason: $.ASN1Encoder<MAP_ProviderAbortReason> | null = null;
+export const _decode_MAP_ProviderAbortReason = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MAP_ProviderAbortReason into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_MAP_ProviderAbortReason: $.ASN1Encoder<MAP_ProviderAbort
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MAP_ProviderAbortReason, encoded as an ASN.1 Element.
  */
-export
-function _encode_MAP_ProviderAbortReason (value: MAP_ProviderAbortReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MAP_ProviderAbortReason) { _cached_encoder_for_MAP_ProviderAbortReason = $._encodeEnumerated; }
-    return _cached_encoder_for_MAP_ProviderAbortReason(value, elGetter);
-}
+export const _encode_MAP_ProviderAbortReason = $._encodeEnumerated;
 
 
 /* eslint-enable */

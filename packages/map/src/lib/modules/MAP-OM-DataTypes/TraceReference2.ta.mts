@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TraceReference2 = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_TraceReference2: $.ASN1Decoder<TraceReference2> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceReference2
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceReference2 (el: _Element): TraceReference2 {
-    if (!_cached_decoder_for_TraceReference2) { _cached_decoder_for_TraceReference2 = $._decodeOctetString; }
-    return _cached_decoder_for_TraceReference2(el);
-}
-
-let _cached_encoder_for_TraceReference2: $.ASN1Encoder<TraceReference2> | null = null;
+export const _decode_TraceReference2 = (el: _Element): TraceReference2 => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 3 || value.length > 3) {
+        throw new ASN1SizeError("TraceReference2 violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) TraceReference2 into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_TraceReference2: $.ASN1Encoder<TraceReference2> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceReference2, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceReference2 (value: TraceReference2, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceReference2) { _cached_encoder_for_TraceReference2 = $._encodeOctetString; }
-    return _cached_encoder_for_TraceReference2(value, elGetter);
-}
+export const _encode_TraceReference2 = $._encodeOctetString;
 
 
 /* eslint-enable */

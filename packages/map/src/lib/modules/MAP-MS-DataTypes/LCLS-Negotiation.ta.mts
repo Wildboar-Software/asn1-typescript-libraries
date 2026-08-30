@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -112,21 +113,19 @@ const LCLS_Negotiation_permission_indicator_spare_bit: number = 1; /* LONG_NAMED
 export
 const permission_indicator_spare_bit: number = LCLS_Negotiation_permission_indicator_spare_bit; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_LCLS_Negotiation: $.ASN1Decoder<LCLS_Negotiation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCLS_Negotiation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCLS_Negotiation (el: _Element): LCLS_Negotiation {
-    if (!_cached_decoder_for_LCLS_Negotiation) { _cached_decoder_for_LCLS_Negotiation = $._decodeBitString; }
-    return _cached_decoder_for_LCLS_Negotiation(el);
-}
-
-let _cached_encoder_for_LCLS_Negotiation: $.ASN1Encoder<LCLS_Negotiation> | null = null;
+export const _decode_LCLS_Negotiation = (el: _Element): LCLS_Negotiation => {
+    const value = $._decodeBitString(el);
+    if (value.length < 2 || value.length > 8) {
+        throw new ASN1SizeError("LCLS_Negotiation violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) LCLS_Negotiation into an ASN.1 Element.
@@ -135,11 +134,7 @@ let _cached_encoder_for_LCLS_Negotiation: $.ASN1Encoder<LCLS_Negotiation> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCLS_Negotiation, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCLS_Negotiation (value: LCLS_Negotiation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCLS_Negotiation) { _cached_encoder_for_LCLS_Negotiation = $._encodeBitString; }
-    return _cached_encoder_for_LCLS_Negotiation(value, elGetter);
-}
+export const _encode_LCLS_Negotiation = $._encodeBitString;
 
 
 /* eslint-enable */

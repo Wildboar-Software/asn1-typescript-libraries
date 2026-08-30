@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PositionMethodFailure_Diagnostic, _enum_for_PositionMethodFailure_Diagnostic, PositionMethodFailure_Diagnostic_congestion /* IMPORTED_LONG_ENUMERATION_ITEM */, congestion /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_insufficientResources /* IMPORTED_LONG_ENUMERATION_ITEM */, insufficientResources /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_insufficientMeasurementData /* IMPORTED_LONG_ENUMERATION_ITEM */, insufficientMeasurementData /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_inconsistentMeasurementData /* IMPORTED_LONG_ENUMERATION_ITEM */, inconsistentMeasurementData /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_locationProcedureNotCompleted /* IMPORTED_LONG_ENUMERATION_ITEM */, locationProcedureNotCompleted /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS /* IMPORTED_LONG_ENUMERATION_ITEM */, locationProcedureNotSupportedByTargetMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_qoSNotAttainable /* IMPORTED_LONG_ENUMERATION_ITEM */, qoSNotAttainable /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, positionMethodNotAvailableInNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea /* IMPORTED_LONG_ENUMERATION_ITEM */, positionMethodNotAvailableInLocationArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PositionMethodFailure_Diagnostic, _encode_PositionMethodFailure_Diagnostic } from "../MAP-ER-DataTypes/PositionMethodFailure-Diagnostic.ta.mjs";
-// export { PositionMethodFailure_Diagnostic, _enum_for_PositionMethodFailure_Diagnostic, PositionMethodFailure_Diagnostic_congestion /* IMPORTED_LONG_ENUMERATION_ITEM */, congestion /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_insufficientResources /* IMPORTED_LONG_ENUMERATION_ITEM */, insufficientResources /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_insufficientMeasurementData /* IMPORTED_LONG_ENUMERATION_ITEM */, insufficientMeasurementData /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_inconsistentMeasurementData /* IMPORTED_LONG_ENUMERATION_ITEM */, inconsistentMeasurementData /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_locationProcedureNotCompleted /* IMPORTED_LONG_ENUMERATION_ITEM */, locationProcedureNotCompleted /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS /* IMPORTED_LONG_ENUMERATION_ITEM */, locationProcedureNotSupportedByTargetMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_qoSNotAttainable /* IMPORTED_LONG_ENUMERATION_ITEM */, qoSNotAttainable /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, positionMethodNotAvailableInNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea /* IMPORTED_LONG_ENUMERATION_ITEM */, positionMethodNotAvailableInLocationArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PositionMethodFailure_Diagnostic, _encode_PositionMethodFailure_Diagnostic } from "../MAP-ER-DataTypes/PositionMethodFailure-Diagnostic.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class PositionMethodFailure_Param {
  */
 export
 const _root_component_type_list_1_spec_for_PositionMethodFailure_Param: $.ComponentSpec[] = [
-    new $.ComponentSpec("positionMethodFailure-Diagnostic", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("positionMethodFailure-Diagnostic", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -186,9 +184,9 @@ let _cached_decoder_for_PositionMethodFailure_Param: $.ASN1Decoder<PositionMetho
 export
 function _decode_PositionMethodFailure_Param (el: _Element): PositionMethodFailure_Param {
     if (!_cached_decoder_for_PositionMethodFailure_Param) { _cached_decoder_for_PositionMethodFailure_Param = function (el: _Element): PositionMethodFailure_Param {
-    let positionMethodFailure_Diagnostic: OPTIONAL<PositionMethodFailure_Diagnostic>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let positionMethodFailure_Diagnostic: OPTIONAL<PositionMethodFailure_Diagnostic> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "positionMethodFailure-Diagnostic": (_el: _Element): void => { positionMethodFailure_Diagnostic = $._decode_implicit<PositionMethodFailure_Diagnostic>(() => _decode_PositionMethodFailure_Diagnostic)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Local_GroupID = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Local_GroupID: $.ASN1Decoder<Local_GroupID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Local_GroupID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Local_GroupID (el: _Element): Local_GroupID {
-    if (!_cached_decoder_for_Local_GroupID) { _cached_decoder_for_Local_GroupID = $._decodeOctetString; }
-    return _cached_decoder_for_Local_GroupID(el);
-}
-
-let _cached_encoder_for_Local_GroupID: $.ASN1Encoder<Local_GroupID> | null = null;
+export const _decode_Local_GroupID = (el: _Element): Local_GroupID => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 10) {
+        throw new ASN1SizeError("Local_GroupID violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Local_GroupID into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Local_GroupID: $.ASN1Encoder<Local_GroupID> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Local_GroupID, encoded as an ASN.1 Element.
  */
-export
-function _encode_Local_GroupID (value: Local_GroupID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Local_GroupID) { _cached_encoder_for_Local_GroupID = $._encodeOctetString; }
-    return _cached_encoder_for_Local_GroupID(value, elGetter);
-}
+export const _encode_Local_GroupID = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CUG_Feature, _decode_CUG_Feature, _encode_CUG_Feature } from "../MAP-MS-DataTypes/CUG-Feature.ta.mjs";
-// export { CUG_Feature, _decode_CUG_Feature, _encode_CUG_Feature } from "../MAP-MS-DataTypes/CUG-Feature.ta.mjs";
 
+
+import { maxNumOfExt_BasicServiceGroups } from "./maxNumOfExt-BasicServiceGroups.va.mjs";
 
 /**
  * @summary CUG_FeatureList
@@ -95,7 +97,11 @@ let _cached_decoder_for_CUG_FeatureList: $.ASN1Decoder<CUG_FeatureList> | null =
 export
 function _decode_CUG_FeatureList (el: _Element): CUG_FeatureList {
     if (!_cached_decoder_for_CUG_FeatureList) { _cached_decoder_for_CUG_FeatureList = $._decodeSequenceOf<CUG_Feature>(() => _decode_CUG_Feature); }
-    return _cached_decoder_for_CUG_FeatureList(el);
+    const value = _cached_decoder_for_CUG_FeatureList(el);
+    if (value.length < 1 || value.length > maxNumOfExt_BasicServiceGroups) {
+        throw new ASN1SizeError("CUG_FeatureList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CUG_FeatureList: $.ASN1Encoder<CUG_FeatureList> | null = null;

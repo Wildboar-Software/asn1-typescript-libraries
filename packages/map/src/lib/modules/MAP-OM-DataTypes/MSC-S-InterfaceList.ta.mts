@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -232,21 +233,19 @@ const MSC_S_InterfaceList_map_c: number = 9; /* LONG_NAMED_BIT */
 export
 const map_c: number = MSC_S_InterfaceList_map_c; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_MSC_S_InterfaceList: $.ASN1Decoder<MSC_S_InterfaceList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MSC_S_InterfaceList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MSC_S_InterfaceList (el: _Element): MSC_S_InterfaceList {
-    if (!_cached_decoder_for_MSC_S_InterfaceList) { _cached_decoder_for_MSC_S_InterfaceList = $._decodeBitString; }
-    return _cached_decoder_for_MSC_S_InterfaceList(el);
-}
-
-let _cached_encoder_for_MSC_S_InterfaceList: $.ASN1Encoder<MSC_S_InterfaceList> | null = null;
+export const _decode_MSC_S_InterfaceList = (el: _Element): MSC_S_InterfaceList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 10 || value.length > 16) {
+        throw new ASN1SizeError("MSC_S_InterfaceList violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MSC_S_InterfaceList into an ASN.1 Element.
@@ -255,11 +254,7 @@ let _cached_encoder_for_MSC_S_InterfaceList: $.ASN1Encoder<MSC_S_InterfaceList> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MSC_S_InterfaceList, encoded as an ASN.1 Element.
  */
-export
-function _encode_MSC_S_InterfaceList (value: MSC_S_InterfaceList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MSC_S_InterfaceList) { _cached_encoder_for_MSC_S_InterfaceList = $._encodeBitString; }
-    return _cached_encoder_for_MSC_S_InterfaceList(value, elGetter);
-}
+export const _encode_MSC_S_InterfaceList = $._encodeBitString;
 
 
 /* eslint-enable */

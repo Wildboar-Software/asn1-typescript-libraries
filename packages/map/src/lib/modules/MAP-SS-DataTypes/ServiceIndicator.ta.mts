@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -112,21 +113,19 @@ const ServiceIndicator_camel_invoked: number = 1; /* LONG_NAMED_BIT */
 export
 const camel_invoked: number = ServiceIndicator_camel_invoked; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_ServiceIndicator: $.ASN1Decoder<ServiceIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ServiceIndicator (el: _Element): ServiceIndicator {
-    if (!_cached_decoder_for_ServiceIndicator) { _cached_decoder_for_ServiceIndicator = $._decodeBitString; }
-    return _cached_decoder_for_ServiceIndicator(el);
-}
-
-let _cached_encoder_for_ServiceIndicator: $.ASN1Encoder<ServiceIndicator> | null = null;
+export const _decode_ServiceIndicator = (el: _Element): ServiceIndicator => {
+    const value = $._decodeBitString(el);
+    if (value.length < 2 || value.length > 32) {
+        throw new ASN1SizeError("ServiceIndicator violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ServiceIndicator into an ASN.1 Element.
@@ -135,11 +134,7 @@ let _cached_encoder_for_ServiceIndicator: $.ASN1Encoder<ServiceIndicator> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServiceIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_ServiceIndicator (value: ServiceIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceIndicator) { _cached_encoder_for_ServiceIndicator = $._encodeBitString; }
-    return _cached_encoder_for_ServiceIndicator(value, elGetter);
-}
+export const _encode_ServiceIndicator = $._encodeBitString;
 
 
 /* eslint-enable */

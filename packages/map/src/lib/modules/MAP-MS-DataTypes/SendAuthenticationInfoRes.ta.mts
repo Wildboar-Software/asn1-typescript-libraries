@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticationSetList, _decode_AuthenticationSetList, _encode_AuthenticationSetList } from "../MAP-MS-DataTypes/AuthenticationSetList.ta.mjs";
-// export { AuthenticationSetList, _decode_AuthenticationSetList, _encode_AuthenticationSetList } from "../MAP-MS-DataTypes/AuthenticationSetList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { EPS_AuthenticationSetList, _decode_EPS_AuthenticationSetList, _encode_EPS_AuthenticationSetList } from "../MAP-MS-DataTypes/EPS-AuthenticationSetList.ta.mjs";
-// export { EPS_AuthenticationSetList, _decode_EPS_AuthenticationSetList, _encode_EPS_AuthenticationSetList } from "../MAP-MS-DataTypes/EPS-AuthenticationSetList.ta.mjs";
 import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
-// export { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
 
 
 /**
@@ -157,8 +153,8 @@ class SendAuthenticationInfoRes {
  */
 export
 const _root_component_type_list_1_spec_for_SendAuthenticationInfoRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("authenticationSetList", true, $.or($.hasTag(_TagClass.context, 0), $.hasTag(_TagClass.context, 1)), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("authenticationSetList", true, $.or($.hasTag(_TagClass.context, 0), $.hasTag(_TagClass.context, 1))),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -184,8 +180,8 @@ const _root_component_type_list_2_spec_for_SendAuthenticationInfoRes: $.Componen
  */
 export
 const _extension_additions_list_spec_for_SendAuthenticationInfoRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("eps-AuthenticationSetList", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("ueUsageType", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("eps-AuthenticationSetList", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("ueUsageType", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_SendAuthenticationInfoRes: $.ASN1Decoder<SendAuthenticationInfoRes> | null = null;
@@ -199,11 +195,11 @@ let _cached_decoder_for_SendAuthenticationInfoRes: $.ASN1Decoder<SendAuthenticat
 export
 function _decode_SendAuthenticationInfoRes (el: _Element): SendAuthenticationInfoRes {
     if (!_cached_decoder_for_SendAuthenticationInfoRes) { _cached_decoder_for_SendAuthenticationInfoRes = $._decode_implicit<SendAuthenticationInfoRes>(() => function (el: _Element): SendAuthenticationInfoRes {
-    let authenticationSetList: OPTIONAL<AuthenticationSetList>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let eps_AuthenticationSetList: OPTIONAL<EPS_AuthenticationSetList>;
-    let ueUsageType: OPTIONAL<UE_UsageType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let authenticationSetList: OPTIONAL<AuthenticationSetList> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let eps_AuthenticationSetList: OPTIONAL<EPS_AuthenticationSetList> = undefined;
+    let ueUsageType: OPTIONAL<UE_UsageType> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "authenticationSetList": (_el: _Element): void => { authenticationSetList = _decode_AuthenticationSetList(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

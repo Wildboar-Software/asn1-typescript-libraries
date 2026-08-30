@@ -155,21 +155,13 @@ const SubscriberStatus_operatorDeterminedBarring: SubscriberStatus = SubscriberS
 export
 const operatorDeterminedBarring: SubscriberStatus = SubscriberStatus.operatorDeterminedBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SubscriberStatus: $.ASN1Decoder<SubscriberStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SubscriberStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SubscriberStatus (el: _Element): SubscriberStatus {
-    if (!_cached_decoder_for_SubscriberStatus) { _cached_decoder_for_SubscriberStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_SubscriberStatus(el);
-}
-
-let _cached_encoder_for_SubscriberStatus: $.ASN1Encoder<SubscriberStatus> | null = null;
+export const _decode_SubscriberStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SubscriberStatus into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_SubscriberStatus: $.ASN1Encoder<SubscriberStatus> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubscriberStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_SubscriberStatus (value: SubscriberStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubscriberStatus) { _cached_encoder_for_SubscriberStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_SubscriberStatus(value, elGetter);
-}
+export const _encode_SubscriberStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

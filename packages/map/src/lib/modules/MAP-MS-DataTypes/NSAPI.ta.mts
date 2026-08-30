@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NSAPI = INTEGER;
 
-let _cached_decoder_for_NSAPI: $.ASN1Decoder<NSAPI> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NSAPI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NSAPI (el: _Element): NSAPI {
-    if (!_cached_decoder_for_NSAPI) { _cached_decoder_for_NSAPI = $._decodeInteger; }
-    return _cached_decoder_for_NSAPI(el);
-}
-
-let _cached_encoder_for_NSAPI: $.ASN1Encoder<NSAPI> | null = null;
+export const _decode_NSAPI = (el: _Element): NSAPI => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 15) {
+        throw new ASN1OverflowError("NSAPI violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) NSAPI into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_NSAPI: $.ASN1Encoder<NSAPI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NSAPI, encoded as an ASN.1 Element.
  */
-export
-function _encode_NSAPI (value: NSAPI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NSAPI) { _cached_encoder_for_NSAPI = $._encodeInteger; }
-    return _cached_encoder_for_NSAPI(value, elGetter);
-}
+export const _encode_NSAPI = $._encodeInteger;
 
 
 /* eslint-enable */

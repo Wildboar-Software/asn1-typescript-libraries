@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResponseTimeCategory, _enum_for_ResponseTimeCategory, ResponseTimeCategory_lowdelay /* IMPORTED_LONG_ENUMERATION_ITEM */, lowdelay /* IMPORTED_SHORT_ENUMERATION_ITEM */, ResponseTimeCategory_delaytolerant /* IMPORTED_LONG_ENUMERATION_ITEM */, delaytolerant /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ResponseTimeCategory, _encode_ResponseTimeCategory } from "../MAP-LCS-DataTypes/ResponseTimeCategory.ta.mjs";
-// export { ResponseTimeCategory, _enum_for_ResponseTimeCategory, ResponseTimeCategory_lowdelay /* IMPORTED_LONG_ENUMERATION_ITEM */, lowdelay /* IMPORTED_SHORT_ENUMERATION_ITEM */, ResponseTimeCategory_delaytolerant /* IMPORTED_LONG_ENUMERATION_ITEM */, delaytolerant /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ResponseTimeCategory, _encode_ResponseTimeCategory } from "../MAP-LCS-DataTypes/ResponseTimeCategory.ta.mjs";
 
 
 /**
@@ -136,7 +135,7 @@ class ResponseTime {
  */
 export
 const _root_component_type_list_1_spec_for_ResponseTime: $.ComponentSpec[] = [
-    new $.ComponentSpec("responseTimeCategory", false, $.hasTag(_TagClass.universal, 10), undefined, undefined)
+    new $.ComponentSpec("responseTimeCategory", false, $.hasTag(_TagClass.universal, 10))
 ];
 
 /**

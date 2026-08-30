@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Horizontal_Accuracy, _decode_Horizontal_Accuracy, _encode_Horizontal_Accuracy } from "../MAP-LCS-DataTypes/Horizontal-Accuracy.ta.mjs";
-// export { Horizontal_Accuracy, _decode_Horizontal_Accuracy, _encode_Horizontal_Accuracy } from "../MAP-LCS-DataTypes/Horizontal-Accuracy.ta.mjs";
 import { Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy } from "../MAP-LCS-DataTypes/Vertical-Accuracy.ta.mjs";
-// export { Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy } from "../MAP-LCS-DataTypes/Vertical-Accuracy.ta.mjs";
 import { ResponseTime, _decode_ResponseTime, _encode_ResponseTime } from "../MAP-LCS-DataTypes/ResponseTime.ta.mjs";
-// export { ResponseTime, _decode_ResponseTime, _encode_ResponseTime } from "../MAP-LCS-DataTypes/ResponseTime.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { LCS_QoS_Class, _enum_for_LCS_QoS_Class, LCS_QoS_Class_bestEffort /* IMPORTED_LONG_ENUMERATION_ITEM */, bestEffort /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_QoS_Class_assured /* IMPORTED_LONG_ENUMERATION_ITEM */, assured /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_QoS_Class, _encode_LCS_QoS_Class } from "../MAP-LCS-DataTypes/LCS-QoS-Class.ta.mjs";
-// export { LCS_QoS_Class, _enum_for_LCS_QoS_Class, LCS_QoS_Class_bestEffort /* IMPORTED_LONG_ENUMERATION_ITEM */, bestEffort /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_QoS_Class_assured /* IMPORTED_LONG_ENUMERATION_ITEM */, assured /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_QoS_Class, _encode_LCS_QoS_Class } from "../MAP-LCS-DataTypes/LCS-QoS-Class.ta.mjs";
 
 
 /**
@@ -186,11 +181,11 @@ class LCS_QoS {
  */
 export
 const _root_component_type_list_1_spec_for_LCS_QoS: $.ComponentSpec[] = [
-    new $.ComponentSpec("horizontal-accuracy", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("verticalCoordinateRequest", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("vertical-accuracy", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("responseTime", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("horizontal-accuracy", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("verticalCoordinateRequest", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("vertical-accuracy", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("responseTime", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -216,8 +211,8 @@ const _root_component_type_list_2_spec_for_LCS_QoS: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_LCS_QoS: $.ComponentSpec[] = [
-    new $.ComponentSpec("velocityRequest", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("lcs-qos-class", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("velocityRequest", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("lcs-qos-class", true, $.hasTag(_TagClass.context, 6))
 ];
 
 let _cached_decoder_for_LCS_QoS: $.ASN1Decoder<LCS_QoS> | null = null;
@@ -231,14 +226,14 @@ let _cached_decoder_for_LCS_QoS: $.ASN1Decoder<LCS_QoS> | null = null;
 export
 function _decode_LCS_QoS (el: _Element): LCS_QoS {
     if (!_cached_decoder_for_LCS_QoS) { _cached_decoder_for_LCS_QoS = function (el: _Element): LCS_QoS {
-    let horizontal_accuracy: OPTIONAL<Horizontal_Accuracy>;
-    let verticalCoordinateRequest: OPTIONAL<NULL>;
-    let vertical_accuracy: OPTIONAL<Vertical_Accuracy>;
-    let responseTime: OPTIONAL<ResponseTime>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let velocityRequest: OPTIONAL<NULL>;
-    let lcs_qos_class: OPTIONAL<LCS_QoS_Class>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let horizontal_accuracy: OPTIONAL<Horizontal_Accuracy> = undefined;
+    let verticalCoordinateRequest: OPTIONAL<NULL> = undefined;
+    let vertical_accuracy: OPTIONAL<Vertical_Accuracy> = undefined;
+    let responseTime: OPTIONAL<ResponseTime> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let velocityRequest: OPTIONAL<NULL> = undefined;
+    let lcs_qos_class: OPTIONAL<LCS_QoS_Class> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "horizontal-accuracy": (_el: _Element): void => { horizontal_accuracy = $._decode_implicit<Horizontal_Accuracy>(() => _decode_Horizontal_Accuracy)(_el); },
         "verticalCoordinateRequest": (_el: _Element): void => { verticalCoordinateRequest = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

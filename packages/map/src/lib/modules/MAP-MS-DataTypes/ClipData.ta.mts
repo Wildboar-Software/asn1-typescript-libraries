@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { OverrideCategory, _enum_for_OverrideCategory, OverrideCategory_overrideEnabled /* IMPORTED_LONG_ENUMERATION_ITEM */, overrideEnabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, OverrideCategory_overrideDisabled /* IMPORTED_LONG_ENUMERATION_ITEM */, overrideDisabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_OverrideCategory, _encode_OverrideCategory } from "../MAP-SS-DataTypes/OverrideCategory.ta.mjs";
-// export { OverrideCategory, _enum_for_OverrideCategory, OverrideCategory_overrideEnabled /* IMPORTED_LONG_ENUMERATION_ITEM */, overrideEnabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, OverrideCategory_overrideDisabled /* IMPORTED_LONG_ENUMERATION_ITEM */, overrideDisabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_OverrideCategory, _encode_OverrideCategory } from "../MAP-SS-DataTypes/OverrideCategory.ta.mjs";
 
 
 /**
@@ -152,9 +150,9 @@ class ClipData {
  */
 export
 const _root_component_type_list_1_spec_for_ClipData: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("overrideCategory", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("overrideCategory", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -196,8 +194,8 @@ function _decode_ClipData (el: _Element): ClipData {
     if (!_cached_decoder_for_ClipData) { _cached_decoder_for_ClipData = function (el: _Element): ClipData {
     let ss_Status!: Ext_SS_Status;
     let overrideCategory!: OverrideCategory;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<Ext_SS_Status>(() => _decode_Ext_SS_Status)(_el); },
         "overrideCategory": (_el: _Element): void => { overrideCategory = $._decode_implicit<OverrideCategory>(() => _decode_OverrideCategory)(_el); },

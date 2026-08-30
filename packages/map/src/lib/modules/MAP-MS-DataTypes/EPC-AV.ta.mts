@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
-// export { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
 import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
-// export { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
 import { AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
-// export { AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
 import { KASME, _decode_KASME, _encode_KASME } from "../MAP-MS-DataTypes/KASME.ta.mjs";
-// export { KASME, _decode_KASME, _encode_KASME } from "../MAP-MS-DataTypes/KASME.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -166,11 +161,11 @@ class EPC_AV {
  */
 export
 const _root_component_type_list_1_spec_for_EPC_AV: $.ComponentSpec[] = [
-    new $.ComponentSpec("rand", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("xres", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("autn", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("kasme", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("rand", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("xres", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("autn", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("kasme", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -214,8 +209,8 @@ function _decode_EPC_AV (el: _Element): EPC_AV {
     let xres!: XRES;
     let autn!: AUTN;
     let kasme!: KASME;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rand": (_el: _Element): void => { rand = _decode_RAND(_el); },
         "xres": (_el: _Element): void => { xres = _decode_XRES(_el); },

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-// export { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
 
 
 /**
@@ -146,8 +144,8 @@ class SS_ForBS_Code {
  */
 export
 const _root_component_type_list_1_spec_for_SS_ForBS_Code: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)))
 ];
 
 /**
@@ -173,7 +171,7 @@ const _root_component_type_list_2_spec_for_SS_ForBS_Code: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_SS_ForBS_Code: $.ComponentSpec[] = [
-    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 4))
 ];
 
 let _cached_decoder_for_SS_ForBS_Code: $.ASN1Decoder<SS_ForBS_Code> | null = null;
@@ -188,9 +186,9 @@ export
 function _decode_SS_ForBS_Code (el: _Element): SS_ForBS_Code {
     if (!_cached_decoder_for_SS_ForBS_Code) { _cached_decoder_for_SS_ForBS_Code = function (el: _Element): SS_ForBS_Code {
     let ss_Code!: SS_Code;
-    let basicService: OPTIONAL<BasicServiceCode>;
-    let longFTN_Supported: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let basicService: OPTIONAL<BasicServiceCode> = undefined;
+    let longFTN_Supported: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = _decode_SS_Code(_el); },
         "basicService": (_el: _Element): void => { basicService = _decode_BasicServiceCode(_el); },

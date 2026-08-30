@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -112,21 +113,19 @@ const ServingNode_sgsn: number = 1; /* LONG_NAMED_BIT */
 export
 const sgsn: number = ServingNode_sgsn; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_ServingNode: $.ASN1Decoder<ServingNode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ServingNode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ServingNode (el: _Element): ServingNode {
-    if (!_cached_decoder_for_ServingNode) { _cached_decoder_for_ServingNode = $._decodeBitString; }
-    return _cached_decoder_for_ServingNode(el);
-}
-
-let _cached_encoder_for_ServingNode: $.ASN1Encoder<ServingNode> | null = null;
+export const _decode_ServingNode = (el: _Element): ServingNode => {
+    const value = $._decodeBitString(el);
+    if (value.length < 2 || value.length > 8) {
+        throw new ASN1SizeError("ServingNode violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ServingNode into an ASN.1 Element.
@@ -135,11 +134,7 @@ let _cached_encoder_for_ServingNode: $.ASN1Encoder<ServingNode> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServingNode, encoded as an ASN.1 Element.
  */
-export
-function _encode_ServingNode (value: ServingNode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServingNode) { _cached_encoder_for_ServingNode = $._encodeBitString; }
-    return _cached_encoder_for_ServingNode(value, elGetter);
-}
+export const _encode_ServingNode = $._encodeBitString;
 
 
 /* eslint-enable */

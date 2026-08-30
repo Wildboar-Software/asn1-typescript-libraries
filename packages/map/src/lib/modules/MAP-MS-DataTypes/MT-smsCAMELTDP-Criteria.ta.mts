@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint, SMS_TriggerDetectionPoint_sms_CollectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_CollectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_TriggerDetectionPoint_sms_DeliveryRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_DeliveryRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
-// export { SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint, SMS_TriggerDetectionPoint_sms_CollectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_CollectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_TriggerDetectionPoint_sms_DeliveryRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_DeliveryRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
 import { TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriterion } from "../MAP-MS-DataTypes/TPDU-TypeCriterion.ta.mjs";
-// export { TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriterion } from "../MAP-MS-DataTypes/TPDU-TypeCriterion.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class MT_smsCAMELTDP_Criteria {
  */
 export
 const _root_component_type_list_1_spec_for_MT_smsCAMELTDP_Criteria: $.ComponentSpec[] = [
-    new $.ComponentSpec("sms-TriggerDetectionPoint", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("tpdu-TypeCriterion", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("sms-TriggerDetectionPoint", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("tpdu-TypeCriterion", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -187,8 +185,8 @@ export
 function _decode_MT_smsCAMELTDP_Criteria (el: _Element): MT_smsCAMELTDP_Criteria {
     if (!_cached_decoder_for_MT_smsCAMELTDP_Criteria) { _cached_decoder_for_MT_smsCAMELTDP_Criteria = function (el: _Element): MT_smsCAMELTDP_Criteria {
     let sms_TriggerDetectionPoint!: SMS_TriggerDetectionPoint;
-    let tpdu_TypeCriterion: OPTIONAL<TPDU_TypeCriterion>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let tpdu_TypeCriterion: OPTIONAL<TPDU_TypeCriterion> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sms-TriggerDetectionPoint": (_el: _Element): void => { sms_TriggerDetectionPoint = _decode_SMS_TriggerDetectionPoint(_el); },
         "tpdu-TypeCriterion": (_el: _Element): void => { tpdu_TypeCriterion = $._decode_implicit<TPDU_TypeCriterion>(() => _decode_TPDU_TypeCriterion)(_el); }

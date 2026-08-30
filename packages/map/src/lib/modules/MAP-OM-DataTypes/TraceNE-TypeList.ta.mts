@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -232,21 +233,19 @@ const TraceNE_TypeList_eNB: number = 9; /* LONG_NAMED_BIT */
 export
 const eNB: number = TraceNE_TypeList_eNB; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_TraceNE_TypeList: $.ASN1Decoder<TraceNE_TypeList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceNE_TypeList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceNE_TypeList (el: _Element): TraceNE_TypeList {
-    if (!_cached_decoder_for_TraceNE_TypeList) { _cached_decoder_for_TraceNE_TypeList = $._decodeBitString; }
-    return _cached_decoder_for_TraceNE_TypeList(el);
-}
-
-let _cached_encoder_for_TraceNE_TypeList: $.ASN1Encoder<TraceNE_TypeList> | null = null;
+export const _decode_TraceNE_TypeList = (el: _Element): TraceNE_TypeList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 6 || value.length > 16) {
+        throw new ASN1SizeError("TraceNE_TypeList violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) TraceNE_TypeList into an ASN.1 Element.
@@ -255,11 +254,7 @@ let _cached_encoder_for_TraceNE_TypeList: $.ASN1Encoder<TraceNE_TypeList> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceNE_TypeList, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceNE_TypeList (value: TraceNE_TypeList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceNE_TypeList) { _cached_encoder_for_TraceNE_TypeList = $._encodeBitString; }
-    return _cached_encoder_for_TraceNE_TypeList(value, elGetter);
-}
+export const _encode_TraceNE_TypeList = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UESBI_IuA, _decode_UESBI_IuA, _encode_UESBI_IuA } from "../MAP-MS-DataTypes/UESBI-IuA.ta.mjs";
-// export { UESBI_IuA, _decode_UESBI_IuA, _encode_UESBI_IuA } from "../MAP-MS-DataTypes/UESBI-IuA.ta.mjs";
 import { UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataTypes/UESBI-IuB.ta.mjs";
-// export { UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataTypes/UESBI-IuB.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class UESBI_Iu {
  */
 export
 const _root_component_type_list_1_spec_for_UESBI_Iu: $.ComponentSpec[] = [
-    new $.ComponentSpec("uesbi-IuA", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("uesbi-IuB", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("uesbi-IuA", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("uesbi-IuB", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_UESBI_Iu: $.ASN1Decoder<UESBI_Iu> | null = null;
 export
 function _decode_UESBI_Iu (el: _Element): UESBI_Iu {
     if (!_cached_decoder_for_UESBI_Iu) { _cached_decoder_for_UESBI_Iu = function (el: _Element): UESBI_Iu {
-    let uesbi_IuA: OPTIONAL<UESBI_IuA>;
-    let uesbi_IuB: OPTIONAL<UESBI_IuB>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let uesbi_IuA: OPTIONAL<UESBI_IuA> = undefined;
+    let uesbi_IuB: OPTIONAL<UESBI_IuB> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uesbi-IuA": (_el: _Element): void => { uesbi_IuA = $._decode_implicit<UESBI_IuA>(() => _decode_UESBI_IuA)(_el); },
         "uesbi-IuB": (_el: _Element): void => { uesbi_IuB = $._decode_implicit<UESBI_IuB>(() => _decode_UESBI_IuB)(_el); }

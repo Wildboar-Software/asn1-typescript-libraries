@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
-// export { CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
 import { InterCUG_Restrictions, _decode_InterCUG_Restrictions, _encode_InterCUG_Restrictions } from "../MAP-MS-DataTypes/InterCUG-Restrictions.ta.mjs";
-// export { InterCUG_Restrictions, _decode_InterCUG_Restrictions, _encode_InterCUG_Restrictions } from "../MAP-MS-DataTypes/InterCUG-Restrictions.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -157,10 +153,10 @@ class CUG_Feature {
  */
 export
 const _root_component_type_list_1_spec_for_CUG_Feature: $.ComponentSpec[] = [
-    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)), undefined, undefined),
-    new $.ComponentSpec("preferentialCUG-Indicator", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("interCUG-Restrictions", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3))),
+    new $.ComponentSpec("preferentialCUG-Indicator", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("interCUG-Restrictions", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -200,11 +196,11 @@ let _cached_decoder_for_CUG_Feature: $.ASN1Decoder<CUG_Feature> | null = null;
 export
 function _decode_CUG_Feature (el: _Element): CUG_Feature {
     if (!_cached_decoder_for_CUG_Feature) { _cached_decoder_for_CUG_Feature = function (el: _Element): CUG_Feature {
-    let basicService: OPTIONAL<Ext_BasicServiceCode>;
-    let preferentialCUG_Indicator: OPTIONAL<CUG_Index>;
+    let basicService: OPTIONAL<Ext_BasicServiceCode> = undefined;
+    let preferentialCUG_Indicator: OPTIONAL<CUG_Index> = undefined;
     let interCUG_Restrictions!: InterCUG_Restrictions;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "basicService": (_el: _Element): void => { basicService = _decode_Ext_BasicServiceCode(_el); },
         "preferentialCUG-Indicator": (_el: _Element): void => { preferentialCUG_Indicator = _decode_CUG_Index(_el); },

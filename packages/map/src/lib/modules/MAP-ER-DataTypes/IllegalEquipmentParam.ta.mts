@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -130,7 +129,7 @@ class IllegalEquipmentParam {
  */
 export
 const _root_component_type_list_1_spec_for_IllegalEquipmentParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -170,8 +169,8 @@ let _cached_decoder_for_IllegalEquipmentParam: $.ASN1Decoder<IllegalEquipmentPar
 export
 function _decode_IllegalEquipmentParam (el: _Element): IllegalEquipmentParam {
     if (!_cached_decoder_for_IllegalEquipmentParam) { _cached_decoder_for_IllegalEquipmentParam = function (el: _Element): IllegalEquipmentParam {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }
     };

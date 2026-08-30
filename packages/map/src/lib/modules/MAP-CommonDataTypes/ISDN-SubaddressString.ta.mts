@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxISDN_SubaddressLength } from "./maxISDN-SubaddressLength.va.mjs";
 
 /**
  * @summary ISDN_SubaddressString
@@ -83,21 +86,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ISDN_SubaddressString = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_ISDN_SubaddressString: $.ASN1Decoder<ISDN_SubaddressString> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ISDN_SubaddressString
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ISDN_SubaddressString (el: _Element): ISDN_SubaddressString {
-    if (!_cached_decoder_for_ISDN_SubaddressString) { _cached_decoder_for_ISDN_SubaddressString = $._decodeOctetString; }
-    return _cached_decoder_for_ISDN_SubaddressString(el);
-}
-
-let _cached_encoder_for_ISDN_SubaddressString: $.ASN1Encoder<ISDN_SubaddressString> | null = null;
+export const _decode_ISDN_SubaddressString = (el: _Element): ISDN_SubaddressString => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxISDN_SubaddressLength) {
+        throw new ASN1SizeError("ISDN_SubaddressString violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ISDN_SubaddressString into an ASN.1 Element.
@@ -106,11 +107,7 @@ let _cached_encoder_for_ISDN_SubaddressString: $.ASN1Encoder<ISDN_SubaddressStri
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ISDN_SubaddressString, encoded as an ASN.1 Element.
  */
-export
-function _encode_ISDN_SubaddressString (value: ISDN_SubaddressString, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISDN_SubaddressString) { _cached_encoder_for_ISDN_SubaddressString = $._encodeOctetString; }
-    return _cached_encoder_for_ISDN_SubaddressString(value, elGetter);
-}
+export const _encode_ISDN_SubaddressString = $._encodeOctetString;
 
 
 /* eslint-enable */

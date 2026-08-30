@@ -82,21 +82,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UtranCivicAddress = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_UtranCivicAddress: $.ASN1Decoder<UtranCivicAddress> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UtranCivicAddress
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UtranCivicAddress (el: _Element): UtranCivicAddress {
-    if (!_cached_decoder_for_UtranCivicAddress) { _cached_decoder_for_UtranCivicAddress = $._decodeOctetString; }
-    return _cached_decoder_for_UtranCivicAddress(el);
-}
-
-let _cached_encoder_for_UtranCivicAddress: $.ASN1Encoder<UtranCivicAddress> | null = null;
+export const _decode_UtranCivicAddress = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) UtranCivicAddress into an ASN.1 Element.
@@ -105,11 +97,7 @@ let _cached_encoder_for_UtranCivicAddress: $.ASN1Encoder<UtranCivicAddress> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UtranCivicAddress, encoded as an ASN.1 Element.
  */
-export
-function _encode_UtranCivicAddress (value: UtranCivicAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UtranCivicAddress) { _cached_encoder_for_UtranCivicAddress = $._encodeOctetString; }
-    return _cached_encoder_for_UtranCivicAddress(value, elGetter);
-}
+export const _encode_UtranCivicAddress = $._encodeOctetString;
 
 
 /* eslint-enable */

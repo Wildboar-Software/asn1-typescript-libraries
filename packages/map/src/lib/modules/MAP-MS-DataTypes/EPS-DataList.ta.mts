@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { APN_Configuration, _decode_APN_Configuration, _encode_APN_Configuration } from "../MAP-MS-DataTypes/APN-Configuration.ta.mjs";
-// export { APN_Configuration, _decode_APN_Configuration, _encode_APN_Configuration } from "../MAP-MS-DataTypes/APN-Configuration.ta.mjs";
 
+
+import { maxNumOfAPN_Configurations } from "./maxNumOfAPN-Configurations.va.mjs";
 
 /**
  * @summary EPS_DataList
@@ -95,7 +97,11 @@ let _cached_decoder_for_EPS_DataList: $.ASN1Decoder<EPS_DataList> | null = null;
 export
 function _decode_EPS_DataList (el: _Element): EPS_DataList {
     if (!_cached_decoder_for_EPS_DataList) { _cached_decoder_for_EPS_DataList = $._decodeSequenceOf<APN_Configuration>(() => _decode_APN_Configuration); }
-    return _cached_decoder_for_EPS_DataList(el);
+    const value = _cached_decoder_for_EPS_DataList(el);
+    if (value.length < 1 || value.length > maxNumOfAPN_Configurations) {
+        throw new ASN1SizeError("EPS_DataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_EPS_DataList: $.ASN1Encoder<EPS_DataList> | null = null;

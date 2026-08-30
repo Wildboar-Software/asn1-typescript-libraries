@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RAIdentity = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_RAIdentity: $.ASN1Decoder<RAIdentity> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RAIdentity
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RAIdentity (el: _Element): RAIdentity {
-    if (!_cached_decoder_for_RAIdentity) { _cached_decoder_for_RAIdentity = $._decodeOctetString; }
-    return _cached_decoder_for_RAIdentity(el);
-}
-
-let _cached_encoder_for_RAIdentity: $.ASN1Encoder<RAIdentity> | null = null;
+export const _decode_RAIdentity = (el: _Element): RAIdentity => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 6 || value.length > 6) {
+        throw new ASN1SizeError("RAIdentity violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) RAIdentity into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_RAIdentity: $.ASN1Encoder<RAIdentity> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RAIdentity, encoded as an ASN.1 Element.
  */
-export
-function _encode_RAIdentity (value: RAIdentity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RAIdentity) { _cached_encoder_for_RAIdentity = $._encodeOctetString; }
-    return _cached_encoder_for_RAIdentity(value, elGetter);
-}
+export const _encode_RAIdentity = $._encodeOctetString;
 
 
 /* eslint-enable */

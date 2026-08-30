@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type IntervalTime = INTEGER;
 
-let _cached_decoder_for_IntervalTime: $.ASN1Decoder<IntervalTime> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IntervalTime
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IntervalTime (el: _Element): IntervalTime {
-    if (!_cached_decoder_for_IntervalTime) { _cached_decoder_for_IntervalTime = $._decodeInteger; }
-    return _cached_decoder_for_IntervalTime(el);
-}
-
-let _cached_encoder_for_IntervalTime: $.ASN1Encoder<IntervalTime> | null = null;
+export const _decode_IntervalTime = (el: _Element): IntervalTime => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > 32767) {
+        throw new ASN1OverflowError("IntervalTime violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) IntervalTime into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_IntervalTime: $.ASN1Encoder<IntervalTime> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IntervalTime, encoded as an ASN.1 Element.
  */
-export
-function _encode_IntervalTime (value: IntervalTime, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IntervalTime) { _cached_encoder_for_IntervalTime = $._encodeInteger; }
-    return _cached_encoder_for_IntervalTime(value, elGetter);
-}
+export const _encode_IntervalTime = $._encodeInteger;
 
 
 /* eslint-enable */

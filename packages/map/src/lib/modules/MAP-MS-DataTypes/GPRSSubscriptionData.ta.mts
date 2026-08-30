@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GPRSDataList, _decode_GPRSDataList, _encode_GPRSDataList } from "../MAP-MS-DataTypes/GPRSDataList.ta.mjs";
-// export { GPRSDataList, _decode_GPRSDataList, _encode_GPRSDataList } from "../MAP-MS-DataTypes/GPRSDataList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
-// export { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
 
 
 /**
@@ -159,9 +156,9 @@ class GPRSSubscriptionData {
  */
 export
 const _root_component_type_list_1_spec_for_GPRSSubscriptionData: $.ComponentSpec[] = [
-    new $.ComponentSpec("completeDataListIncluded", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("gprsDataList", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("completeDataListIncluded", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("gprsDataList", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -187,7 +184,7 @@ const _root_component_type_list_2_spec_for_GPRSSubscriptionData: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_GPRSSubscriptionData: $.ComponentSpec[] = [
-    new $.ComponentSpec("apn-oi-Replacement", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("apn-oi-Replacement", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_GPRSSubscriptionData: $.ASN1Decoder<GPRSSubscriptionData> | null = null;
@@ -201,11 +198,11 @@ let _cached_decoder_for_GPRSSubscriptionData: $.ASN1Decoder<GPRSSubscriptionData
 export
 function _decode_GPRSSubscriptionData (el: _Element): GPRSSubscriptionData {
     if (!_cached_decoder_for_GPRSSubscriptionData) { _cached_decoder_for_GPRSSubscriptionData = function (el: _Element): GPRSSubscriptionData {
-    let completeDataListIncluded: OPTIONAL<NULL>;
+    let completeDataListIncluded: OPTIONAL<NULL> = undefined;
     let gprsDataList!: GPRSDataList;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let apn_oi_Replacement: OPTIONAL<APN_OI_Replacement>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let apn_oi_Replacement: OPTIONAL<APN_OI_Replacement> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "completeDataListIncluded": (_el: _Element): void => { completeDataListIncluded = $._decodeNull(_el); },
         "gprsDataList": (_el: _Element): void => { gprsDataList = $._decode_implicit<GPRSDataList>(() => _decode_GPRSDataList)(_el); },

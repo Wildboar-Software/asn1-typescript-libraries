@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -142,21 +143,19 @@ const SGSN_EventList_mbmsContext: number = 3; /* LONG_NAMED_BIT */
 export
 const mbmsContext: number = SGSN_EventList_mbmsContext; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SGSN_EventList: $.ASN1Decoder<SGSN_EventList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SGSN_EventList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SGSN_EventList (el: _Element): SGSN_EventList {
-    if (!_cached_decoder_for_SGSN_EventList) { _cached_decoder_for_SGSN_EventList = $._decodeBitString; }
-    return _cached_decoder_for_SGSN_EventList(el);
-}
-
-let _cached_encoder_for_SGSN_EventList: $.ASN1Encoder<SGSN_EventList> | null = null;
+export const _decode_SGSN_EventList = (el: _Element): SGSN_EventList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 4 || value.length > 16) {
+        throw new ASN1SizeError("SGSN_EventList violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SGSN_EventList into an ASN.1 Element.
@@ -165,11 +164,7 @@ let _cached_encoder_for_SGSN_EventList: $.ASN1Encoder<SGSN_EventList> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SGSN_EventList, encoded as an ASN.1 Element.
  */
-export
-function _encode_SGSN_EventList (value: SGSN_EventList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGSN_EventList) { _cached_encoder_for_SGSN_EventList = $._encodeBitString; }
-    return _cached_encoder_for_SGSN_EventList(value, elGetter);
-}
+export const _encode_SGSN_EventList = $._encodeBitString;
 
 
 /* eslint-enable */

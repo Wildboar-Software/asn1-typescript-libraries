@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 
 
 /**
@@ -137,8 +136,8 @@ class CallHoldData {
  */
 export
 const _root_component_type_list_1_spec_for_CallHoldData: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -179,8 +178,8 @@ export
 function _decode_CallHoldData (el: _Element): CallHoldData {
     if (!_cached_decoder_for_CallHoldData) { _cached_decoder_for_CallHoldData = function (el: _Element): CallHoldData {
     let ss_Status!: Ext_SS_Status;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<Ext_SS_Status>(() => _decode_Ext_SS_Status)(_el); },
         "notificationToCSE": (_el: _Element): void => { notificationToCSE = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }

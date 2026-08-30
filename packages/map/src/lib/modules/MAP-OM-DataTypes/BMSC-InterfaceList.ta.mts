@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -97,21 +98,19 @@ const BMSC_InterfaceList_gmb: number = 0; /* LONG_NAMED_BIT */
 export
 const gmb: number = BMSC_InterfaceList_gmb; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_BMSC_InterfaceList: $.ASN1Decoder<BMSC_InterfaceList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) BMSC_InterfaceList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_BMSC_InterfaceList (el: _Element): BMSC_InterfaceList {
-    if (!_cached_decoder_for_BMSC_InterfaceList) { _cached_decoder_for_BMSC_InterfaceList = $._decodeBitString; }
-    return _cached_decoder_for_BMSC_InterfaceList(el);
-}
-
-let _cached_encoder_for_BMSC_InterfaceList: $.ASN1Encoder<BMSC_InterfaceList> | null = null;
+export const _decode_BMSC_InterfaceList = (el: _Element): BMSC_InterfaceList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("BMSC_InterfaceList violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) BMSC_InterfaceList into an ASN.1 Element.
@@ -120,11 +119,7 @@ let _cached_encoder_for_BMSC_InterfaceList: $.ASN1Encoder<BMSC_InterfaceList> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BMSC_InterfaceList, encoded as an ASN.1 Element.
  */
-export
-function _encode_BMSC_InterfaceList (value: BMSC_InterfaceList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BMSC_InterfaceList) { _cached_encoder_for_BMSC_InterfaceList = $._encodeBitString; }
-    return _cached_encoder_for_BMSC_InterfaceList(value, elGetter);
-}
+export const _encode_BMSC_InterfaceList = $._encodeBitString;
 
 
 /* eslint-enable */

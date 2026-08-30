@@ -158,21 +158,13 @@ const SIPTO_Permission_siptoAboveRanNotAllowed: SIPTO_Permission = SIPTO_Permiss
 export
 const siptoAboveRanNotAllowed: SIPTO_Permission = SIPTO_Permission.siptoAboveRanNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SIPTO_Permission: $.ASN1Decoder<SIPTO_Permission> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SIPTO_Permission
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SIPTO_Permission (el: _Element): SIPTO_Permission {
-    if (!_cached_decoder_for_SIPTO_Permission) { _cached_decoder_for_SIPTO_Permission = $._decodeEnumerated; }
-    return _cached_decoder_for_SIPTO_Permission(el);
-}
-
-let _cached_encoder_for_SIPTO_Permission: $.ASN1Encoder<SIPTO_Permission> | null = null;
+export const _decode_SIPTO_Permission = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SIPTO_Permission into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_SIPTO_Permission: $.ASN1Encoder<SIPTO_Permission> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SIPTO_Permission, encoded as an ASN.1 Element.
  */
-export
-function _encode_SIPTO_Permission (value: SIPTO_Permission, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SIPTO_Permission) { _cached_encoder_for_SIPTO_Permission = $._encodeEnumerated; }
-    return _cached_encoder_for_SIPTO_Permission(value, elGetter);
-}
+export const _encode_SIPTO_Permission = $._encodeEnumerated;
 
 
 /* eslint-enable */

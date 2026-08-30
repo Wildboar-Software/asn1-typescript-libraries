@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxReportingAmountMilliseconds } from "./maxReportingAmountMilliseconds.va.mjs";
 
 /**
  * @summary ReportingAmountMilliseconds
@@ -82,21 +85,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ReportingAmountMilliseconds = INTEGER;
 
-let _cached_decoder_for_ReportingAmountMilliseconds: $.ASN1Decoder<ReportingAmountMilliseconds> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingAmountMilliseconds
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReportingAmountMilliseconds (el: _Element): ReportingAmountMilliseconds {
-    if (!_cached_decoder_for_ReportingAmountMilliseconds) { _cached_decoder_for_ReportingAmountMilliseconds = $._decodeInteger; }
-    return _cached_decoder_for_ReportingAmountMilliseconds(el);
-}
-
-let _cached_encoder_for_ReportingAmountMilliseconds: $.ASN1Encoder<ReportingAmountMilliseconds> | null = null;
+export const _decode_ReportingAmountMilliseconds = (el: _Element): ReportingAmountMilliseconds => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > maxReportingAmountMilliseconds) {
+        throw new ASN1OverflowError("ReportingAmountMilliseconds violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ReportingAmountMilliseconds into an ASN.1 Element.
@@ -105,11 +107,7 @@ let _cached_encoder_for_ReportingAmountMilliseconds: $.ASN1Encoder<ReportingAmou
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportingAmountMilliseconds, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReportingAmountMilliseconds (value: ReportingAmountMilliseconds, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportingAmountMilliseconds) { _cached_encoder_for_ReportingAmountMilliseconds = $._encodeInteger; }
-    return _cached_encoder_for_ReportingAmountMilliseconds(value, elGetter);
-}
+export const _encode_ReportingAmountMilliseconds = $._encodeInteger;
 
 
 /* eslint-enable */

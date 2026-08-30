@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DP_AnalysedInfoCriterium, _decode_DP_AnalysedInfoCriterium, _encode_DP_AnalysedInfoCriterium } from "../MAP-MS-DataTypes/DP-AnalysedInfoCriterium.ta.mjs";
-// export { DP_AnalysedInfoCriterium, _decode_DP_AnalysedInfoCriterium, _encode_DP_AnalysedInfoCriterium } from "../MAP-MS-DataTypes/DP-AnalysedInfoCriterium.ta.mjs";
 
+
+import { maxNumOfDP_AnalysedInfoCriteria } from "./maxNumOfDP-AnalysedInfoCriteria.va.mjs";
 
 /**
  * @summary DP_AnalysedInfoCriteriaList
@@ -95,7 +97,11 @@ let _cached_decoder_for_DP_AnalysedInfoCriteriaList: $.ASN1Decoder<DP_AnalysedIn
 export
 function _decode_DP_AnalysedInfoCriteriaList (el: _Element): DP_AnalysedInfoCriteriaList {
     if (!_cached_decoder_for_DP_AnalysedInfoCriteriaList) { _cached_decoder_for_DP_AnalysedInfoCriteriaList = $._decodeSequenceOf<DP_AnalysedInfoCriterium>(() => _decode_DP_AnalysedInfoCriterium); }
-    return _cached_decoder_for_DP_AnalysedInfoCriteriaList(el);
+    const value = _cached_decoder_for_DP_AnalysedInfoCriteriaList(el);
+    if (value.length < 1 || value.length > maxNumOfDP_AnalysedInfoCriteria) {
+        throw new ASN1SizeError("DP_AnalysedInfoCriteriaList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_DP_AnalysedInfoCriteriaList: $.ASN1Encoder<DP_AnalysedInfoCriteriaList> | null = null;

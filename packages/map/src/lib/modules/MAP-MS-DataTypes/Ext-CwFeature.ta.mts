@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-// export { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class Ext_CwFeature {
  */
 export
 const _root_component_type_list_1_spec_for_Ext_CwFeature: $.ComponentSpec[] = [
-    new $.ComponentSpec("basicService", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("basicService", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

@@ -162,7 +162,7 @@ let _cached_decoder_for_LongTermDenialParam: $.ASN1Decoder<LongTermDenialParam> 
 export
 function _decode_LongTermDenialParam (el: _Element): LongTermDenialParam {
     if (!_cached_decoder_for_LongTermDenialParam) { _cached_decoder_for_LongTermDenialParam = function (el: _Element): LongTermDenialParam {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GroupId, _decode_GroupId, _encode_GroupId } from "../MAP-MS-DataTypes/GroupId.ta.mjs";
-// export { GroupId, _decode_GroupId, _encode_GroupId } from "../MAP-MS-DataTypes/GroupId.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AdditionalSubscriptions, AdditionalSubscriptions_privilegedUplinkRequest /* IMPORTED_LONG_NAMED_BIT */, privilegedUplinkRequest /* IMPORTED_SHORT_NAMED_BIT */, AdditionalSubscriptions_emergencyUplinkRequest /* IMPORTED_LONG_NAMED_BIT */, emergencyUplinkRequest /* IMPORTED_SHORT_NAMED_BIT */, AdditionalSubscriptions_emergencyReset /* IMPORTED_LONG_NAMED_BIT */, emergencyReset /* IMPORTED_SHORT_NAMED_BIT */, _decode_AdditionalSubscriptions, _encode_AdditionalSubscriptions } from "../MAP-MS-DataTypes/AdditionalSubscriptions.ta.mjs";
-// export { AdditionalSubscriptions, AdditionalSubscriptions_privilegedUplinkRequest /* IMPORTED_LONG_NAMED_BIT */, privilegedUplinkRequest /* IMPORTED_SHORT_NAMED_BIT */, AdditionalSubscriptions_emergencyUplinkRequest /* IMPORTED_LONG_NAMED_BIT */, emergencyUplinkRequest /* IMPORTED_SHORT_NAMED_BIT */, AdditionalSubscriptions_emergencyReset /* IMPORTED_LONG_NAMED_BIT */, emergencyReset /* IMPORTED_SHORT_NAMED_BIT */, _decode_AdditionalSubscriptions, _encode_AdditionalSubscriptions } from "../MAP-MS-DataTypes/AdditionalSubscriptions.ta.mjs";
 import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
-// export { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
 import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
-// export { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
 
 
 /**
@@ -167,8 +162,8 @@ class VoiceGroupCallData {
  */
 export
 const _root_component_type_list_1_spec_for_VoiceGroupCallData: $.ComponentSpec[] = [
-    new $.ComponentSpec("groupId", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("groupId", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -194,9 +189,9 @@ const _root_component_type_list_2_spec_for_VoiceGroupCallData: $.ComponentSpec[]
  */
 export
 const _extension_additions_list_spec_for_VoiceGroupCallData: $.ComponentSpec[] = [
-    new $.ComponentSpec("additionalSubscriptions", true, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("longGroupId", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("additionalSubscriptions", true, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("longGroupId", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_VoiceGroupCallData: $.ASN1Decoder<VoiceGroupCallData> | null = null;
@@ -211,11 +206,11 @@ export
 function _decode_VoiceGroupCallData (el: _Element): VoiceGroupCallData {
     if (!_cached_decoder_for_VoiceGroupCallData) { _cached_decoder_for_VoiceGroupCallData = function (el: _Element): VoiceGroupCallData {
     let groupId!: GroupId;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let additionalSubscriptions: OPTIONAL<AdditionalSubscriptions>;
-    let additionalInfo: OPTIONAL<AdditionalInfo>;
-    let longGroupId: OPTIONAL<Long_GroupId>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let additionalSubscriptions: OPTIONAL<AdditionalSubscriptions> = undefined;
+    let additionalInfo: OPTIONAL<AdditionalInfo> = undefined;
+    let longGroupId: OPTIONAL<Long_GroupId> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "groupId": (_el: _Element): void => { groupId = _decode_GroupId(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

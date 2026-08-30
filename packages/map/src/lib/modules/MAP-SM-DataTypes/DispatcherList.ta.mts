@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 
+
+import { maxNumOfDispatchers } from "./maxNumOfDispatchers.va.mjs";
 
 /**
  * @summary DispatcherList
@@ -96,7 +98,11 @@ let _cached_decoder_for_DispatcherList: $.ASN1Decoder<DispatcherList> | null = n
 export
 function _decode_DispatcherList (el: _Element): DispatcherList {
     if (!_cached_decoder_for_DispatcherList) { _cached_decoder_for_DispatcherList = $._decodeSequenceOf<ISDN_AddressString>(() => _decode_ISDN_AddressString); }
-    return _cached_decoder_for_DispatcherList(el);
+    const value = _cached_decoder_for_DispatcherList(el);
+    if (value.length < 1 || value.length > maxNumOfDispatchers) {
+        throw new ASN1SizeError("DispatcherList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_DispatcherList: $.ASN1Encoder<DispatcherList> | null = null;

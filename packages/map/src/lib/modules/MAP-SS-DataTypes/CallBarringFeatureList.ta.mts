@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallBarringFeature, _decode_CallBarringFeature, _encode_CallBarringFeature } from "../MAP-SS-DataTypes/CallBarringFeature.ta.mjs";
-// export { CallBarringFeature, _decode_CallBarringFeature, _encode_CallBarringFeature } from "../MAP-SS-DataTypes/CallBarringFeature.ta.mjs";
 
+
+import { maxNumOfBasicServiceGroups } from "./maxNumOfBasicServiceGroups.va.mjs";
 
 /**
  * @summary CallBarringFeatureList
@@ -95,7 +97,11 @@ let _cached_decoder_for_CallBarringFeatureList: $.ASN1Decoder<CallBarringFeature
 export
 function _decode_CallBarringFeatureList (el: _Element): CallBarringFeatureList {
     if (!_cached_decoder_for_CallBarringFeatureList) { _cached_decoder_for_CallBarringFeatureList = $._decodeSequenceOf<CallBarringFeature>(() => _decode_CallBarringFeature); }
-    return _cached_decoder_for_CallBarringFeatureList(el);
+    const value = _cached_decoder_for_CallBarringFeatureList(el);
+    if (value.length < 1 || value.length > maxNumOfBasicServiceGroups) {
+        throw new ASN1SizeError("CallBarringFeatureList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CallBarringFeatureList: $.ASN1Encoder<CallBarringFeatureList> | null = null;

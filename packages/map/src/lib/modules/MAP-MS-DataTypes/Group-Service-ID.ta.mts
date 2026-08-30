@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Group_Service_ID = INTEGER;
 
-let _cached_decoder_for_Group_Service_ID: $.ASN1Decoder<Group_Service_ID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Group_Service_ID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Group_Service_ID (el: _Element): Group_Service_ID {
-    if (!_cached_decoder_for_Group_Service_ID) { _cached_decoder_for_Group_Service_ID = $._decodeInteger; }
-    return _cached_decoder_for_Group_Service_ID(el);
-}
-
-let _cached_encoder_for_Group_Service_ID: $.ASN1Encoder<Group_Service_ID> | null = null;
+export const _decode_Group_Service_ID = (el: _Element): Group_Service_ID => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 4294967295) {
+        throw new ASN1OverflowError("Group_Service_ID violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Group_Service_ID into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_Group_Service_ID: $.ASN1Encoder<Group_Service_ID> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Group_Service_ID, encoded as an ASN.1 Element.
  */
-export
-function _encode_Group_Service_ID (value: Group_Service_ID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Group_Service_ID) { _cached_encoder_for_Group_Service_ID = $._encodeInteger; }
-    return _cached_encoder_for_Group_Service_ID(value, elGetter);
-}
+export const _encode_Group_Service_ID = $._encodeInteger;
 
 
 /* eslint-enable */

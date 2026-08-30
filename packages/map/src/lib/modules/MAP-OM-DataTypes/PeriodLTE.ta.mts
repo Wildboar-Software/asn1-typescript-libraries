@@ -255,21 +255,13 @@ const PeriodLTE_d1min: PeriodLTE = PeriodLTE.d1min; /* LONG_NAMED_ENUMERATED_VAL
 export
 const d1min: PeriodLTE = PeriodLTE.d1min; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PeriodLTE: $.ASN1Decoder<PeriodLTE> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PeriodLTE
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PeriodLTE (el: _Element): PeriodLTE {
-    if (!_cached_decoder_for_PeriodLTE) { _cached_decoder_for_PeriodLTE = $._decodeEnumerated; }
-    return _cached_decoder_for_PeriodLTE(el);
-}
-
-let _cached_encoder_for_PeriodLTE: $.ASN1Encoder<PeriodLTE> | null = null;
+export const _decode_PeriodLTE = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PeriodLTE into an ASN.1 Element.
@@ -278,11 +270,7 @@ let _cached_encoder_for_PeriodLTE: $.ASN1Encoder<PeriodLTE> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PeriodLTE, encoded as an ASN.1 Element.
  */
-export
-function _encode_PeriodLTE (value: PeriodLTE, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PeriodLTE) { _cached_encoder_for_PeriodLTE = $._encodeEnumerated; }
-    return _cached_encoder_for_PeriodLTE(value, elGetter);
-}
+export const _encode_PeriodLTE = $._encodeEnumerated;
 
 
 /* eslint-enable */

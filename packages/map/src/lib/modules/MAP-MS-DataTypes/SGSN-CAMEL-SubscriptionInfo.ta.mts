@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GPRS_CSI, _decode_GPRS_CSI, _encode_GPRS_CSI } from "../MAP-MS-DataTypes/GPRS-CSI.ta.mjs";
-// export { GPRS_CSI, _decode_GPRS_CSI, _encode_GPRS_CSI } from "../MAP-MS-DataTypes/GPRS-CSI.ta.mjs";
 import { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/SMS-CSI.ta.mjs";
-// export { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/SMS-CSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
-// export { MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
 import { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-CSI.ta.mjs";
-// export { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-CSI.ta.mjs";
 
 
 /**
@@ -174,9 +169,9 @@ class SGSN_CAMEL_SubscriptionInfo {
  */
 export
 const _root_component_type_list_1_spec_for_SGSN_CAMEL_SubscriptionInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("gprs-CSI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mo-sms-CSI", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("gprs-CSI", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mo-sms-CSI", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -202,9 +197,9 @@ const _root_component_type_list_2_spec_for_SGSN_CAMEL_SubscriptionInfo: $.Compon
  */
 export
 const _extension_additions_list_spec_for_SGSN_CAMEL_SubscriptionInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("mt-sms-CSI", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("mt-smsCAMELTDP-CriteriaList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("mg-csi", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("mt-sms-CSI", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("mt-smsCAMELTDP-CriteriaList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("mg-csi", true, $.hasTag(_TagClass.context, 5))
 ];
 
 let _cached_decoder_for_SGSN_CAMEL_SubscriptionInfo: $.ASN1Decoder<SGSN_CAMEL_SubscriptionInfo> | null = null;
@@ -218,13 +213,13 @@ let _cached_decoder_for_SGSN_CAMEL_SubscriptionInfo: $.ASN1Decoder<SGSN_CAMEL_Su
 export
 function _decode_SGSN_CAMEL_SubscriptionInfo (el: _Element): SGSN_CAMEL_SubscriptionInfo {
     if (!_cached_decoder_for_SGSN_CAMEL_SubscriptionInfo) { _cached_decoder_for_SGSN_CAMEL_SubscriptionInfo = function (el: _Element): SGSN_CAMEL_SubscriptionInfo {
-    let gprs_CSI: OPTIONAL<GPRS_CSI>;
-    let mo_sms_CSI: OPTIONAL<SMS_CSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let mt_sms_CSI: OPTIONAL<SMS_CSI>;
-    let mt_smsCAMELTDP_CriteriaList: OPTIONAL<MT_smsCAMELTDP_CriteriaList>;
-    let mg_csi: OPTIONAL<MG_CSI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let gprs_CSI: OPTIONAL<GPRS_CSI> = undefined;
+    let mo_sms_CSI: OPTIONAL<SMS_CSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let mt_sms_CSI: OPTIONAL<SMS_CSI> = undefined;
+    let mt_smsCAMELTDP_CriteriaList: OPTIONAL<MT_smsCAMELTDP_CriteriaList> = undefined;
+    let mg_csi: OPTIONAL<MG_CSI> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gprs-CSI": (_el: _Element): void => { gprs_CSI = $._decode_implicit<GPRS_CSI>(() => _decode_GPRS_CSI)(_el); },
         "mo-sms-CSI": (_el: _Element): void => { mo_sms_CSI = $._decode_implicit<SMS_CSI>(() => _decode_SMS_CSI)(_el); },

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ZoneCode = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_ZoneCode: $.ASN1Decoder<ZoneCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ZoneCode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ZoneCode (el: _Element): ZoneCode {
-    if (!_cached_decoder_for_ZoneCode) { _cached_decoder_for_ZoneCode = $._decodeOctetString; }
-    return _cached_decoder_for_ZoneCode(el);
-}
-
-let _cached_encoder_for_ZoneCode: $.ASN1Encoder<ZoneCode> | null = null;
+export const _decode_ZoneCode = (el: _Element): ZoneCode => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 2) {
+        throw new ASN1SizeError("ZoneCode violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ZoneCode into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_ZoneCode: $.ASN1Encoder<ZoneCode> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ZoneCode, encoded as an ASN.1 Element.
  */
-export
-function _encode_ZoneCode (value: ZoneCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ZoneCode) { _cached_encoder_for_ZoneCode = $._encodeOctetString; }
-    return _cached_encoder_for_ZoneCode(value, elGetter);
-}
+export const _encode_ZoneCode = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
-// export { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { RequestedSubscriptionInfo, _decode_RequestedSubscriptionInfo, _encode_RequestedSubscriptionInfo } from "../MAP-MS-DataTypes/RequestedSubscriptionInfo.ta.mjs";
-// export { RequestedSubscriptionInfo, _decode_RequestedSubscriptionInfo, _encode_RequestedSubscriptionInfo } from "../MAP-MS-DataTypes/RequestedSubscriptionInfo.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -164,11 +160,11 @@ class AnyTimeSubscriptionInterrogationArg {
  */
 export
 const _root_component_type_list_1_spec_for_AnyTimeSubscriptionInterrogationArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("subscriberIdentity", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("requestedSubscriptionInfo", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("subscriberIdentity", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestedSubscriptionInfo", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -211,9 +207,9 @@ function _decode_AnyTimeSubscriptionInterrogationArg (el: _Element): AnyTimeSubs
     let subscriberIdentity!: SubscriberIdentity;
     let requestedSubscriptionInfo!: RequestedSubscriptionInfo;
     let gsmSCF_Address!: ISDN_AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let longFTN_Supported: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let longFTN_Supported: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "subscriberIdentity": (_el: _Element): void => { subscriberIdentity = $._decode_explicit<SubscriberIdentity>(() => _decode_SubscriberIdentity)(_el); },
         "requestedSubscriptionInfo": (_el: _Element): void => { requestedSubscriptionInfo = $._decode_implicit<RequestedSubscriptionInfo>(() => _decode_RequestedSubscriptionInfo)(_el); },

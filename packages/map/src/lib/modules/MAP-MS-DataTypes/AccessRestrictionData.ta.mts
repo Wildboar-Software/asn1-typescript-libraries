@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -202,21 +203,19 @@ const AccessRestrictionData_enhancedCoverageNotAllowed: number = 7; /* LONG_NAME
 export
 const enhancedCoverageNotAllowed: number = AccessRestrictionData_enhancedCoverageNotAllowed; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_AccessRestrictionData: $.ASN1Decoder<AccessRestrictionData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessRestrictionData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AccessRestrictionData (el: _Element): AccessRestrictionData {
-    if (!_cached_decoder_for_AccessRestrictionData) { _cached_decoder_for_AccessRestrictionData = $._decodeBitString; }
-    return _cached_decoder_for_AccessRestrictionData(el);
-}
-
-let _cached_encoder_for_AccessRestrictionData: $.ASN1Encoder<AccessRestrictionData> | null = null;
+export const _decode_AccessRestrictionData = (el: _Element): AccessRestrictionData => {
+    const value = $._decodeBitString(el);
+    if (value.length < 2 || value.length > 8) {
+        throw new ASN1SizeError("AccessRestrictionData violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) AccessRestrictionData into an ASN.1 Element.
@@ -225,11 +224,7 @@ let _cached_encoder_for_AccessRestrictionData: $.ASN1Encoder<AccessRestrictionDa
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AccessRestrictionData, encoded as an ASN.1 Element.
  */
-export
-function _encode_AccessRestrictionData (value: AccessRestrictionData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessRestrictionData) { _cached_encoder_for_AccessRestrictionData = $._encodeBitString; }
-    return _cached_encoder_for_AccessRestrictionData(value, elGetter);
-}
+export const _encode_AccessRestrictionData = $._encodeBitString;
 
 
 /* eslint-enable */

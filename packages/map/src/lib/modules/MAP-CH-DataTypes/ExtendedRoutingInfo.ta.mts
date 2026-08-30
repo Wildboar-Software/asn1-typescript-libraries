@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
-// export { RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
 import { CamelRoutingInfo, _decode_CamelRoutingInfo, _encode_CamelRoutingInfo } from "../MAP-CH-DataTypes/CamelRoutingInfo.ta.mjs";
-// export { CamelRoutingInfo, _decode_CamelRoutingInfo, _encode_CamelRoutingInfo } from "../MAP-CH-DataTypes/CamelRoutingInfo.ta.mjs";
 
 
 /**

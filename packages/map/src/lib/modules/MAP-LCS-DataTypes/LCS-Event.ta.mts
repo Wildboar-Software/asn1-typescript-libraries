@@ -197,21 +197,13 @@ const LCS_Event_emergencyCallHandover: LCS_Event = 5; /* LONG_NAMED_ENUMERATED_V
 export
 const emergencyCallHandover: LCS_Event = LCS_Event_emergencyCallHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LCS_Event: $.ASN1Decoder<LCS_Event> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_Event
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCS_Event (el: _Element): LCS_Event {
-    if (!_cached_decoder_for_LCS_Event) { _cached_decoder_for_LCS_Event = $._decodeEnumerated; }
-    return _cached_decoder_for_LCS_Event(el);
-}
-
-let _cached_encoder_for_LCS_Event: $.ASN1Encoder<LCS_Event> | null = null;
+export const _decode_LCS_Event = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCS_Event into an ASN.1 Element.
@@ -220,11 +212,7 @@ let _cached_encoder_for_LCS_Event: $.ASN1Encoder<LCS_Event> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCS_Event, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCS_Event (value: LCS_Event, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCS_Event) { _cached_encoder_for_LCS_Event = $._encodeEnumerated; }
-    return _cached_encoder_for_LCS_Event(value, elGetter);
-}
+export const _encode_LCS_Event = $._encodeEnumerated;
 
 
 /* eslint-enable */

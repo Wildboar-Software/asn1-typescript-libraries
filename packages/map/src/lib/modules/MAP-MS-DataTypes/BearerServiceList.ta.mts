@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_BearerServiceCode, _decode_Ext_BearerServiceCode, _encode_Ext_BearerServiceCode } from "../MAP-BS-Code/Ext-BearerServiceCode.ta.mjs";
-// export { Ext_BearerServiceCode, _decode_Ext_BearerServiceCode, _encode_Ext_BearerServiceCode } from "../MAP-BS-Code/Ext-BearerServiceCode.ta.mjs";
 
+
+import { maxNumOfBearerServices } from "./maxNumOfBearerServices.va.mjs";
 
 /**
  * @summary BearerServiceList
@@ -95,7 +97,11 @@ let _cached_decoder_for_BearerServiceList: $.ASN1Decoder<BearerServiceList> | nu
 export
 function _decode_BearerServiceList (el: _Element): BearerServiceList {
     if (!_cached_decoder_for_BearerServiceList) { _cached_decoder_for_BearerServiceList = $._decodeSequenceOf<Ext_BearerServiceCode>(() => _decode_Ext_BearerServiceCode); }
-    return _cached_decoder_for_BearerServiceList(el);
+    const value = _cached_decoder_for_BearerServiceList(el);
+    if (value.length < 1 || value.length > maxNumOfBearerServices) {
+        throw new ASN1SizeError("BearerServiceList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_BearerServiceList: $.ASN1Encoder<BearerServiceList> | null = null;

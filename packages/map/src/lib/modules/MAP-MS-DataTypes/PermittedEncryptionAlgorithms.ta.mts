@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxPermittedEncryptionAlgorithmsLength } from "./maxPermittedEncryptionAlgorithmsLength.va.mjs";
 
 /**
  * @summary PermittedEncryptionAlgorithms
@@ -83,21 +86,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PermittedEncryptionAlgorithms = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_PermittedEncryptionAlgorithms: $.ASN1Decoder<PermittedEncryptionAlgorithms> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PermittedEncryptionAlgorithms
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PermittedEncryptionAlgorithms (el: _Element): PermittedEncryptionAlgorithms {
-    if (!_cached_decoder_for_PermittedEncryptionAlgorithms) { _cached_decoder_for_PermittedEncryptionAlgorithms = $._decodeOctetString; }
-    return _cached_decoder_for_PermittedEncryptionAlgorithms(el);
-}
-
-let _cached_encoder_for_PermittedEncryptionAlgorithms: $.ASN1Encoder<PermittedEncryptionAlgorithms> | null = null;
+export const _decode_PermittedEncryptionAlgorithms = (el: _Element): PermittedEncryptionAlgorithms => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxPermittedEncryptionAlgorithmsLength) {
+        throw new ASN1SizeError("PermittedEncryptionAlgorithms violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) PermittedEncryptionAlgorithms into an ASN.1 Element.
@@ -106,11 +107,7 @@ let _cached_encoder_for_PermittedEncryptionAlgorithms: $.ASN1Encoder<PermittedEn
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PermittedEncryptionAlgorithms, encoded as an ASN.1 Element.
  */
-export
-function _encode_PermittedEncryptionAlgorithms (value: PermittedEncryptionAlgorithms, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PermittedEncryptionAlgorithms) { _cached_encoder_for_PermittedEncryptionAlgorithms = $._encodeOctetString; }
-    return _cached_encoder_for_PermittedEncryptionAlgorithms(value, elGetter);
-}
+export const _encode_PermittedEncryptionAlgorithms = $._encodeOctetString;
 
 
 /* eslint-enable */

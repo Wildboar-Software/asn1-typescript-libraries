@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkResource, _enum_for_NetworkResource, NetworkResource_plmn /* IMPORTED_LONG_ENUMERATION_ITEM */, plmn /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_hlr /* IMPORTED_LONG_ENUMERATION_ITEM */, hlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_vlr /* IMPORTED_LONG_ENUMERATION_ITEM */, vlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_pvlr /* IMPORTED_LONG_ENUMERATION_ITEM */, pvlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_controllingMSC /* IMPORTED_LONG_ENUMERATION_ITEM */, controllingMSC /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_vmsc /* IMPORTED_LONG_ENUMERATION_ITEM */, vmsc /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_eir /* IMPORTED_LONG_ENUMERATION_ITEM */, eir /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_rss /* IMPORTED_LONG_ENUMERATION_ITEM */, rss /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkResource, _encode_NetworkResource } from "../MAP-CommonDataTypes/NetworkResource.ta.mjs";
-// export { NetworkResource, _enum_for_NetworkResource, NetworkResource_plmn /* IMPORTED_LONG_ENUMERATION_ITEM */, plmn /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_hlr /* IMPORTED_LONG_ENUMERATION_ITEM */, hlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_vlr /* IMPORTED_LONG_ENUMERATION_ITEM */, vlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_pvlr /* IMPORTED_LONG_ENUMERATION_ITEM */, pvlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_controllingMSC /* IMPORTED_LONG_ENUMERATION_ITEM */, controllingMSC /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_vmsc /* IMPORTED_LONG_ENUMERATION_ITEM */, vmsc /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_eir /* IMPORTED_LONG_ENUMERATION_ITEM */, eir /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_rss /* IMPORTED_LONG_ENUMERATION_ITEM */, rss /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkResource, _encode_NetworkResource } from "../MAP-CommonDataTypes/NetworkResource.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AdditionalNetworkResource, _enum_for_AdditionalNetworkResource, AdditionalNetworkResource_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_ggsn /* IMPORTED_LONG_ENUMERATION_ITEM */, ggsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_gmlc /* IMPORTED_LONG_ENUMERATION_ITEM */, gmlc /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_gsmSCF /* IMPORTED_LONG_ENUMERATION_ITEM */, gsmSCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_nplr /* IMPORTED_LONG_ENUMERATION_ITEM */, nplr /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_auc /* IMPORTED_LONG_ENUMERATION_ITEM */, auc /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_ue /* IMPORTED_LONG_ENUMERATION_ITEM */, ue /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_mme /* IMPORTED_LONG_ENUMERATION_ITEM */, mme /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdditionalNetworkResource, _encode_AdditionalNetworkResource } from "../MAP-CommonDataTypes/AdditionalNetworkResource.ta.mjs";
-// export { AdditionalNetworkResource, _enum_for_AdditionalNetworkResource, AdditionalNetworkResource_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_ggsn /* IMPORTED_LONG_ENUMERATION_ITEM */, ggsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_gmlc /* IMPORTED_LONG_ENUMERATION_ITEM */, gmlc /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_gsmSCF /* IMPORTED_LONG_ENUMERATION_ITEM */, gsmSCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_nplr /* IMPORTED_LONG_ENUMERATION_ITEM */, nplr /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_auc /* IMPORTED_LONG_ENUMERATION_ITEM */, auc /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_ue /* IMPORTED_LONG_ENUMERATION_ITEM */, ue /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_mme /* IMPORTED_LONG_ENUMERATION_ITEM */, mme /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdditionalNetworkResource, _encode_AdditionalNetworkResource } from "../MAP-CommonDataTypes/AdditionalNetworkResource.ta.mjs";
 import { FailureCauseParam, _enum_for_FailureCauseParam, FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests /* IMPORTED_LONG_ENUMERATION_ITEM */, limitReachedOnNumberOfConcurrentLocationRequests /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FailureCauseParam, _encode_FailureCauseParam } from "../MAP-ER-DataTypes/FailureCauseParam.ta.mjs";
-// export { FailureCauseParam, _enum_for_FailureCauseParam, FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests /* IMPORTED_LONG_ENUMERATION_ITEM */, limitReachedOnNumberOfConcurrentLocationRequests /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FailureCauseParam, _encode_FailureCauseParam } from "../MAP-ER-DataTypes/FailureCauseParam.ta.mjs";
 
 
 /**
@@ -175,8 +171,8 @@ class ExtensibleSystemFailureParam {
  */
 export
 const _root_component_type_list_1_spec_for_ExtensibleSystemFailureParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("networkResource", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("networkResource", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -202,8 +198,8 @@ const _root_component_type_list_2_spec_for_ExtensibleSystemFailureParam: $.Compo
  */
 export
 const _extension_additions_list_spec_for_ExtensibleSystemFailureParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("additionalNetworkResource", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("failureCauseParam", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("additionalNetworkResource", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("failureCauseParam", true, $.hasTag(_TagClass.context, 1))
 ];
 
 let _cached_decoder_for_ExtensibleSystemFailureParam: $.ASN1Decoder<ExtensibleSystemFailureParam> | null = null;
@@ -217,11 +213,11 @@ let _cached_decoder_for_ExtensibleSystemFailureParam: $.ASN1Decoder<ExtensibleSy
 export
 function _decode_ExtensibleSystemFailureParam (el: _Element): ExtensibleSystemFailureParam {
     if (!_cached_decoder_for_ExtensibleSystemFailureParam) { _cached_decoder_for_ExtensibleSystemFailureParam = function (el: _Element): ExtensibleSystemFailureParam {
-    let networkResource: OPTIONAL<NetworkResource>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let additionalNetworkResource: OPTIONAL<AdditionalNetworkResource>;
-    let failureCauseParam: OPTIONAL<FailureCauseParam>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let networkResource: OPTIONAL<NetworkResource> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let additionalNetworkResource: OPTIONAL<AdditionalNetworkResource> = undefined;
+    let failureCauseParam: OPTIONAL<FailureCauseParam> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "networkResource": (_el: _Element): void => { networkResource = _decode_NetworkResource(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

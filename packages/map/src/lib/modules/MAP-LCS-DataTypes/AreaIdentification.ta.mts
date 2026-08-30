@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AreaIdentification = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_AreaIdentification: $.ASN1Decoder<AreaIdentification> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AreaIdentification
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AreaIdentification (el: _Element): AreaIdentification {
-    if (!_cached_decoder_for_AreaIdentification) { _cached_decoder_for_AreaIdentification = $._decodeOctetString; }
-    return _cached_decoder_for_AreaIdentification(el);
-}
-
-let _cached_encoder_for_AreaIdentification: $.ASN1Encoder<AreaIdentification> | null = null;
+export const _decode_AreaIdentification = (el: _Element): AreaIdentification => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 7) {
+        throw new ASN1SizeError("AreaIdentification violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) AreaIdentification into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_AreaIdentification: $.ASN1Encoder<AreaIdentification> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AreaIdentification, encoded as an ASN.1 Element.
  */
-export
-function _encode_AreaIdentification (value: AreaIdentification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AreaIdentification) { _cached_encoder_for_AreaIdentification = $._encodeOctetString; }
-    return _cached_encoder_for_AreaIdentification(value, elGetter);
-}
+export const _encode_AreaIdentification = $._encodeOctetString;
 
 
 /* eslint-enable */

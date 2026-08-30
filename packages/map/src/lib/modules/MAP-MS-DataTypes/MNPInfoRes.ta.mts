@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RouteingNumber, _decode_RouteingNumber, _encode_RouteingNumber } from "../MAP-MS-DataTypes/RouteingNumber.ta.mjs";
-// export { RouteingNumber, _decode_RouteingNumber, _encode_RouteingNumber } from "../MAP-MS-DataTypes/RouteingNumber.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { NumberPortabilityStatus, _enum_for_NumberPortabilityStatus, NumberPortabilityStatus_notKnownToBePorted /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnownToBePorted /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedToForeignNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedToForeignNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberNotPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberNotPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedIn /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedIn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NumberPortabilityStatus, _encode_NumberPortabilityStatus } from "../MAP-MS-DataTypes/NumberPortabilityStatus.ta.mjs";
-// export { NumberPortabilityStatus, _enum_for_NumberPortabilityStatus, NumberPortabilityStatus_notKnownToBePorted /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnownToBePorted /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedToForeignNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedToForeignNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberNotPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberNotPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedIn /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedIn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NumberPortabilityStatus, _encode_NumberPortabilityStatus } from "../MAP-MS-DataTypes/NumberPortabilityStatus.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -172,11 +167,11 @@ class MNPInfoRes {
  */
 export
 const _root_component_type_list_1_spec_for_MNPInfoRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("routeingNumber", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("numberPortabilityStatus", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("routeingNumber", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("numberPortabilityStatus", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -216,12 +211,12 @@ let _cached_decoder_for_MNPInfoRes: $.ASN1Decoder<MNPInfoRes> | null = null;
 export
 function _decode_MNPInfoRes (el: _Element): MNPInfoRes {
     if (!_cached_decoder_for_MNPInfoRes) { _cached_decoder_for_MNPInfoRes = function (el: _Element): MNPInfoRes {
-    let routeingNumber: OPTIONAL<RouteingNumber>;
-    let imsi: OPTIONAL<IMSI>;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let numberPortabilityStatus: OPTIONAL<NumberPortabilityStatus>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let routeingNumber: OPTIONAL<RouteingNumber> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let numberPortabilityStatus: OPTIONAL<NumberPortabilityStatus> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "routeingNumber": (_el: _Element): void => { routeingNumber = $._decode_implicit<RouteingNumber>(() => _decode_RouteingNumber)(_el); },
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },

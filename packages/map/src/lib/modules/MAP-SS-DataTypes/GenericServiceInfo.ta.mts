@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
-// export { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 import { CliRestrictionOption, _enum_for_CliRestrictionOption, CliRestrictionOption_permanent /* IMPORTED_LONG_ENUMERATION_ITEM */, permanent /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CliRestrictionOption, _encode_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
-// export { CliRestrictionOption, _enum_for_CliRestrictionOption, CliRestrictionOption_permanent /* IMPORTED_LONG_ENUMERATION_ITEM */, permanent /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CliRestrictionOption, _encode_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
 import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-// export { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 import { CCBS_FeatureList, _decode_CCBS_FeatureList, _encode_CCBS_FeatureList } from "../MAP-SS-DataTypes/CCBS-FeatureList.ta.mjs";
-// export { CCBS_FeatureList, _decode_CCBS_FeatureList, _encode_CCBS_FeatureList } from "../MAP-SS-DataTypes/CCBS-FeatureList.ta.mjs";
 import { MaxMC_Bearers, _decode_MaxMC_Bearers, _encode_MaxMC_Bearers } from "../MAP-CommonDataTypes/MaxMC-Bearers.ta.mjs";
-// export { MaxMC_Bearers, _decode_MaxMC_Bearers, _encode_MaxMC_Bearers } from "../MAP-CommonDataTypes/MaxMC-Bearers.ta.mjs";
 import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
-// export { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
 
 
 /**
@@ -195,8 +189,8 @@ class GenericServiceInfo {
  */
 export
 const _root_component_type_list_1_spec_for_GenericServiceInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("cliRestrictionOption", true, $.hasTag(_TagClass.universal, 10), undefined, undefined)
+    new $.ComponentSpec("ss-Status", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("cliRestrictionOption", true, $.hasTag(_TagClass.universal, 10))
 ];
 
 /**
@@ -222,12 +216,12 @@ const _root_component_type_list_2_spec_for_GenericServiceInfo: $.ComponentSpec[]
  */
 export
 const _extension_additions_list_spec_for_GenericServiceInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("maximumEntitledPriority", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("defaultPriority", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ccbs-FeatureList", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("nbrSB", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("nbrUser", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("nbrSN", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("maximumEntitledPriority", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("defaultPriority", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ccbs-FeatureList", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("nbrSB", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("nbrUser", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("nbrSN", true, $.hasTag(_TagClass.context, 5))
 ];
 
 let _cached_decoder_for_GenericServiceInfo: $.ASN1Decoder<GenericServiceInfo> | null = null;
@@ -242,14 +236,14 @@ export
 function _decode_GenericServiceInfo (el: _Element): GenericServiceInfo {
     if (!_cached_decoder_for_GenericServiceInfo) { _cached_decoder_for_GenericServiceInfo = function (el: _Element): GenericServiceInfo {
     let ss_Status!: SS_Status;
-    let cliRestrictionOption: OPTIONAL<CliRestrictionOption>;
-    let maximumEntitledPriority: OPTIONAL<EMLPP_Priority>;
-    let defaultPriority: OPTIONAL<EMLPP_Priority>;
-    let ccbs_FeatureList: OPTIONAL<CCBS_FeatureList>;
-    let nbrSB: OPTIONAL<MaxMC_Bearers>;
-    let nbrUser: OPTIONAL<MC_Bearers>;
-    let nbrSN: OPTIONAL<MC_Bearers>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cliRestrictionOption: OPTIONAL<CliRestrictionOption> = undefined;
+    let maximumEntitledPriority: OPTIONAL<EMLPP_Priority> = undefined;
+    let defaultPriority: OPTIONAL<EMLPP_Priority> = undefined;
+    let ccbs_FeatureList: OPTIONAL<CCBS_FeatureList> = undefined;
+    let nbrSB: OPTIONAL<MaxMC_Bearers> = undefined;
+    let nbrUser: OPTIONAL<MC_Bearers> = undefined;
+    let nbrSN: OPTIONAL<MC_Bearers> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Status": (_el: _Element): void => { ss_Status = _decode_SS_Status(_el); },
         "cliRestrictionOption": (_el: _Element): void => { cliRestrictionOption = _decode_CliRestrictionOption(_el); },

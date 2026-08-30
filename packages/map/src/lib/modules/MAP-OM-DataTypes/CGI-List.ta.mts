@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
-// export { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_CGI_List: $.ASN1Decoder<CGI_List> | null = null;
 export
 function _decode_CGI_List (el: _Element): CGI_List {
     if (!_cached_decoder_for_CGI_List) { _cached_decoder_for_CGI_List = $._decodeSequenceOf<GlobalCellId>(() => _decode_GlobalCellId); }
-    return _cached_decoder_for_CGI_List(el);
+    const value = _cached_decoder_for_CGI_List(el);
+    if (value.length < 1 || value.length > 32) {
+        throw new ASN1SizeError("CGI_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CGI_List: $.ASN1Encoder<CGI_List> | null = null;

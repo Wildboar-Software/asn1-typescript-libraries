@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-DataTypes/CCBS-Index.ta.mjs";
-// export { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-DataTypes/CCBS-Index.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class EraseCC_EntryArg {
  */
 export
 const _root_component_type_list_1_spec_for_EraseCC_EntryArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ccbs-Index", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ccbs-Index", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -181,8 +179,8 @@ export
 function _decode_EraseCC_EntryArg (el: _Element): EraseCC_EntryArg {
     if (!_cached_decoder_for_EraseCC_EntryArg) { _cached_decoder_for_EraseCC_EntryArg = function (el: _Element): EraseCC_EntryArg {
     let ss_Code!: SS_Code;
-    let ccbs_Index: OPTIONAL<CCBS_Index>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ccbs_Index: OPTIONAL<CCBS_Index> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = $._decode_implicit<SS_Code>(() => _decode_SS_Code)(_el); },
         "ccbs-Index": (_el: _Element): void => { ccbs_Index = $._decode_implicit<CCBS_Index>(() => _decode_CCBS_Index)(_el); }

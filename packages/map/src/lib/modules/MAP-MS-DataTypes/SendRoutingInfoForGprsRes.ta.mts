@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
-// export { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -155,10 +152,10 @@ class SendRoutingInfoForGprsRes {
  */
 export
 const _root_component_type_list_1_spec_for_SendRoutingInfoForGprsRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("sgsn-Address", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ggsn-Address", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mobileNotReachableReason", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("sgsn-Address", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ggsn-Address", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mobileNotReachableReason", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -199,10 +196,10 @@ export
 function _decode_SendRoutingInfoForGprsRes (el: _Element): SendRoutingInfoForGprsRes {
     if (!_cached_decoder_for_SendRoutingInfoForGprsRes) { _cached_decoder_for_SendRoutingInfoForGprsRes = function (el: _Element): SendRoutingInfoForGprsRes {
     let sgsn_Address!: GSN_Address;
-    let ggsn_Address: OPTIONAL<GSN_Address>;
-    let mobileNotReachableReason: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ggsn_Address: OPTIONAL<GSN_Address> = undefined;
+    let mobileNotReachableReason: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sgsn-Address": (_el: _Element): void => { sgsn_Address = $._decode_implicit<GSN_Address>(() => _decode_GSN_Address)(_el); },
         "ggsn-Address": (_el: _Element): void => { ggsn_Address = $._decode_implicit<GSN_Address>(() => _decode_GSN_Address)(_el); },

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TA_Id = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_TA_Id: $.ASN1Decoder<TA_Id> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TA_Id
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TA_Id (el: _Element): TA_Id {
-    if (!_cached_decoder_for_TA_Id) { _cached_decoder_for_TA_Id = $._decodeOctetString; }
-    return _cached_decoder_for_TA_Id(el);
-}
-
-let _cached_encoder_for_TA_Id: $.ASN1Encoder<TA_Id> | null = null;
+export const _decode_TA_Id = (el: _Element): TA_Id => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 5 || value.length > 5) {
+        throw new ASN1SizeError("TA_Id violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) TA_Id into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_TA_Id: $.ASN1Encoder<TA_Id> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TA_Id, encoded as an ASN.1 Element.
  */
-export
-function _encode_TA_Id (value: TA_Id, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TA_Id) { _cached_encoder_for_TA_Id = $._encodeOctetString; }
-    return _cached_encoder_for_TA_Id(value, elGetter);
-}
+export const _encode_TA_Id = $._encodeOctetString;
 
 
 /* eslint-enable */

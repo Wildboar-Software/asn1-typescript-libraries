@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-// export { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 import { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } from "../MAP-MS-DataTypes/PDN-GW-Identity.ta.mjs";
-// export { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } from "../MAP-MS-DataTypes/PDN-GW-Identity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class SpecificAPNInfo {
  */
 export
 const _root_component_type_list_1_spec_for_SpecificAPNInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("apn", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("pdn-gw-Identity", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("apn", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("pdn-gw-Identity", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -192,8 +189,8 @@ function _decode_SpecificAPNInfo (el: _Element): SpecificAPNInfo {
     if (!_cached_decoder_for_SpecificAPNInfo) { _cached_decoder_for_SpecificAPNInfo = function (el: _Element): SpecificAPNInfo {
     let apn!: APN;
     let pdn_gw_Identity!: PDN_GW_Identity;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "apn": (_el: _Element): void => { apn = $._decode_implicit<APN>(() => _decode_APN)(_el); },
         "pdn-gw-Identity": (_el: _Element): void => { pdn_gw_Identity = $._decode_implicit<PDN_GW_Identity>(() => _decode_PDN_GW_Identity)(_el); },

@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP-MS-DataTypes/SS-EventList.ta.mjs";
-// export { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP-MS-DataTypes/SS-EventList.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class SS_CamelData {
  */
 export
 const _root_component_type_list_1_spec_for_SS_CamelData: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-EventList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("ss-EventList", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -192,8 +189,8 @@ function _decode_SS_CamelData (el: _Element): SS_CamelData {
     if (!_cached_decoder_for_SS_CamelData) { _cached_decoder_for_SS_CamelData = function (el: _Element): SS_CamelData {
     let ss_EventList!: SS_EventList;
     let gsmSCF_Address!: ISDN_AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-EventList": (_el: _Element): void => { ss_EventList = _decode_SS_EventList(_el); },
         "gsmSCF-Address": (_el: _Element): void => { gsmSCF_Address = _decode_ISDN_AddressString(_el); },

@@ -67,27 +67,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
-// export { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
 import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
-// export { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
 import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
-// export { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
 import { TraceRecordingSessionReference, _decode_TraceRecordingSessionReference, _encode_TraceRecordingSessionReference } from "../MAP-OM-DataTypes/TraceRecordingSessionReference.ta.mjs";
-// export { TraceRecordingSessionReference, _decode_TraceRecordingSessionReference, _encode_TraceRecordingSessionReference } from "../MAP-OM-DataTypes/TraceRecordingSessionReference.ta.mjs";
 import { TraceDepth, _enum_for_TraceDepth, TraceDepth_minimum /* IMPORTED_LONG_ENUMERATION_ITEM */, minimum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximum /* IMPORTED_LONG_ENUMERATION_ITEM */, maximum /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepth, _encode_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
-// export { TraceDepth, _enum_for_TraceDepth, TraceDepth_minimum /* IMPORTED_LONG_ENUMERATION_ITEM */, minimum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximum /* IMPORTED_LONG_ENUMERATION_ITEM */, maximum /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepth, _encode_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
 import { RNC_InterfaceList, RNC_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, RNC_InterfaceList_iur /* IMPORTED_LONG_NAMED_BIT */, iur /* IMPORTED_SHORT_NAMED_BIT */, RNC_InterfaceList_iub /* IMPORTED_LONG_NAMED_BIT */, iub /* IMPORTED_SHORT_NAMED_BIT */, RNC_InterfaceList_uu /* IMPORTED_LONG_NAMED_BIT */, uu /* IMPORTED_SHORT_NAMED_BIT */, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
-// export { RNC_InterfaceList, RNC_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, RNC_InterfaceList_iur /* IMPORTED_LONG_NAMED_BIT */, iur /* IMPORTED_SHORT_NAMED_BIT */, RNC_InterfaceList_iub /* IMPORTED_LONG_NAMED_BIT */, iub /* IMPORTED_SHORT_NAMED_BIT */, RNC_InterfaceList_uu /* IMPORTED_LONG_NAMED_BIT */, uu /* IMPORTED_SHORT_NAMED_BIT */, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
 import { MSC_S_InterfaceList, MSC_S_InterfaceList_a /* IMPORTED_LONG_NAMED_BIT */, a /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, MSC_S_InterfaceList_mc /* IMPORTED_LONG_NAMED_BIT */, MSC_S_InterfaceList_map_g /* IMPORTED_LONG_NAMED_BIT */, map_g /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_b /* IMPORTED_LONG_NAMED_BIT */, map_b /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_e /* IMPORTED_LONG_NAMED_BIT */, map_e /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_f /* IMPORTED_LONG_NAMED_BIT */, map_f /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_cap /* IMPORTED_LONG_NAMED_BIT */, cap /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_d /* IMPORTED_LONG_NAMED_BIT */, map_d /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_c /* IMPORTED_LONG_NAMED_BIT */, map_c /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
-// export { MSC_S_InterfaceList, MSC_S_InterfaceList_a /* IMPORTED_LONG_NAMED_BIT */, a /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, MSC_S_InterfaceList_mc /* IMPORTED_LONG_NAMED_BIT */, MSC_S_InterfaceList_map_g /* IMPORTED_LONG_NAMED_BIT */, map_g /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_b /* IMPORTED_LONG_NAMED_BIT */, map_b /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_e /* IMPORTED_LONG_NAMED_BIT */, map_e /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_f /* IMPORTED_LONG_NAMED_BIT */, map_f /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_cap /* IMPORTED_LONG_NAMED_BIT */, cap /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_d /* IMPORTED_LONG_NAMED_BIT */, map_d /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_c /* IMPORTED_LONG_NAMED_BIT */, map_c /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
 import { MSC_S_EventList, MSC_S_EventList_mo_mtCall /* IMPORTED_LONG_NAMED_BIT */, mo_mtCall /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, mo_mt_sms /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_lu_imsiAttach_imsiDetach /* IMPORTED_LONG_NAMED_BIT */, lu_imsiAttach_imsiDetach /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_handovers /* IMPORTED_LONG_NAMED_BIT */, handovers /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_ss /* IMPORTED_LONG_NAMED_BIT */, ss /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
-// export { MSC_S_EventList, MSC_S_EventList_mo_mtCall /* IMPORTED_LONG_NAMED_BIT */, mo_mtCall /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, mo_mt_sms /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_lu_imsiAttach_imsiDetach /* IMPORTED_LONG_NAMED_BIT */, lu_imsiAttach_imsiDetach /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_handovers /* IMPORTED_LONG_NAMED_BIT */, handovers /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_ss /* IMPORTED_LONG_NAMED_BIT */, ss /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
 import { MGW_InterfaceList, MGW_InterfaceList_mc /* IMPORTED_LONG_NAMED_BIT */, MGW_InterfaceList_nb_up /* IMPORTED_LONG_NAMED_BIT */, nb_up /* IMPORTED_SHORT_NAMED_BIT */, MGW_InterfaceList_iu_up /* IMPORTED_LONG_NAMED_BIT */, iu_up /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
-// export { MGW_InterfaceList, MGW_InterfaceList_mc /* IMPORTED_LONG_NAMED_BIT */, MGW_InterfaceList_nb_up /* IMPORTED_LONG_NAMED_BIT */, nb_up /* IMPORTED_SHORT_NAMED_BIT */, MGW_InterfaceList_iu_up /* IMPORTED_LONG_NAMED_BIT */, iu_up /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
 import { MGW_EventList, MGW_EventList_context /* IMPORTED_LONG_NAMED_BIT */, context /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
-// export { MGW_EventList, MGW_EventList_context /* IMPORTED_LONG_NAMED_BIT */, context /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
 import { TraceDepthExtension, _enum_for_TraceDepthExtension, TraceDepthExtension_minimumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, minimumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_mediumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_maximumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, maximumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepthExtension, _encode_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
-// export { TraceDepthExtension, _enum_for_TraceDepthExtension, TraceDepthExtension_minimumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, minimumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_mediumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_maximumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, maximumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepthExtension, _encode_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
 
 
 /**
@@ -285,18 +274,18 @@ class TracePropagationList {
  */
 export
 const _root_component_type_list_1_spec_for_TracePropagationList: $.ComponentSpec[] = [
-    new $.ComponentSpec("traceReference", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("traceType", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("traceReference2", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("traceRecordingSessionReference", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("rnc-TraceDepth", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("rnc-InterfaceList", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("msc-s-TraceDepth", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("msc-s-InterfaceList", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("msc-s-EventList", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("mgw-TraceDepth", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("mgw-InterfaceList", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("mgw-EventList", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("traceReference", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("traceType", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("traceReference2", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("traceRecordingSessionReference", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("rnc-TraceDepth", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("rnc-InterfaceList", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("msc-s-TraceDepth", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("msc-s-InterfaceList", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("msc-s-EventList", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("mgw-TraceDepth", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("mgw-InterfaceList", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("mgw-EventList", true, $.hasTag(_TagClass.context, 11))
 ];
 
 /**
@@ -322,9 +311,9 @@ const _root_component_type_list_2_spec_for_TracePropagationList: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_TracePropagationList: $.ComponentSpec[] = [
-    new $.ComponentSpec("rnc-TraceDepthExtension", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("msc-s-TraceDepthExtension", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("mgw-TraceDepthExtension", true, $.hasTag(_TagClass.context, 14), undefined, undefined)
+    new $.ComponentSpec("rnc-TraceDepthExtension", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("msc-s-TraceDepthExtension", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("mgw-TraceDepthExtension", true, $.hasTag(_TagClass.context, 14))
 ];
 
 let _cached_decoder_for_TracePropagationList: $.ASN1Decoder<TracePropagationList> | null = null;
@@ -338,22 +327,22 @@ let _cached_decoder_for_TracePropagationList: $.ASN1Decoder<TracePropagationList
 export
 function _decode_TracePropagationList (el: _Element): TracePropagationList {
     if (!_cached_decoder_for_TracePropagationList) { _cached_decoder_for_TracePropagationList = function (el: _Element): TracePropagationList {
-    let traceReference: OPTIONAL<TraceReference>;
-    let traceType: OPTIONAL<TraceType>;
-    let traceReference2: OPTIONAL<TraceReference2>;
-    let traceRecordingSessionReference: OPTIONAL<TraceRecordingSessionReference>;
-    let rnc_TraceDepth: OPTIONAL<TraceDepth>;
-    let rnc_InterfaceList: OPTIONAL<RNC_InterfaceList>;
-    let msc_s_TraceDepth: OPTIONAL<TraceDepth>;
-    let msc_s_InterfaceList: OPTIONAL<MSC_S_InterfaceList>;
-    let msc_s_EventList: OPTIONAL<MSC_S_EventList>;
-    let mgw_TraceDepth: OPTIONAL<TraceDepth>;
-    let mgw_InterfaceList: OPTIONAL<MGW_InterfaceList>;
-    let mgw_EventList: OPTIONAL<MGW_EventList>;
-    let rnc_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let msc_s_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let mgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let traceReference: OPTIONAL<TraceReference> = undefined;
+    let traceType: OPTIONAL<TraceType> = undefined;
+    let traceReference2: OPTIONAL<TraceReference2> = undefined;
+    let traceRecordingSessionReference: OPTIONAL<TraceRecordingSessionReference> = undefined;
+    let rnc_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let rnc_InterfaceList: OPTIONAL<RNC_InterfaceList> = undefined;
+    let msc_s_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let msc_s_InterfaceList: OPTIONAL<MSC_S_InterfaceList> = undefined;
+    let msc_s_EventList: OPTIONAL<MSC_S_EventList> = undefined;
+    let mgw_TraceDepth: OPTIONAL<TraceDepth> = undefined;
+    let mgw_InterfaceList: OPTIONAL<MGW_InterfaceList> = undefined;
+    let mgw_EventList: OPTIONAL<MGW_EventList> = undefined;
+    let rnc_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let msc_s_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    let mgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "traceReference": (_el: _Element): void => { traceReference = $._decode_implicit<TraceReference>(() => _decode_TraceReference)(_el); },
         "traceType": (_el: _Element): void => { traceType = $._decode_implicit<TraceType>(() => _decode_TraceType)(_el); },

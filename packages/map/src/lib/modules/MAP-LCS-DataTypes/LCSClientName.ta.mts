@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
-// export { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 import { NameString, _decode_NameString, _encode_NameString } from "../MAP-LCS-DataTypes/NameString.ta.mjs";
-// export { NameString, _decode_NameString, _encode_NameString } from "../MAP-LCS-DataTypes/NameString.ta.mjs";
 import { LCS_FormatIndicator, _enum_for_LCS_FormatIndicator, LCS_FormatIndicator_logicalName /* IMPORTED_LONG_ENUMERATION_ITEM */, logicalName /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_e_mailAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mailAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_msisdn /* IMPORTED_LONG_ENUMERATION_ITEM */, msisdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_url /* IMPORTED_LONG_ENUMERATION_ITEM */, url /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_sipUrl /* IMPORTED_LONG_ENUMERATION_ITEM */, sipUrl /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
-// export { LCS_FormatIndicator, _enum_for_LCS_FormatIndicator, LCS_FormatIndicator_logicalName /* IMPORTED_LONG_ENUMERATION_ITEM */, logicalName /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_e_mailAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mailAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_msisdn /* IMPORTED_LONG_ENUMERATION_ITEM */, msisdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_url /* IMPORTED_LONG_ENUMERATION_ITEM */, url /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_FormatIndicator_sipUrl /* IMPORTED_LONG_ENUMERATION_ITEM */, sipUrl /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
 
 
 /**
@@ -154,8 +151,8 @@ class LCSClientName {
  */
 export
 const _root_component_type_list_1_spec_for_LCSClientName: $.ComponentSpec[] = [
-    new $.ComponentSpec("dataCodingScheme", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("nameString", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("dataCodingScheme", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("nameString", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -181,7 +178,7 @@ const _root_component_type_list_2_spec_for_LCSClientName: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_LCSClientName: $.ComponentSpec[] = [
-    new $.ComponentSpec("lcs-FormatIndicator", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("lcs-FormatIndicator", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_LCSClientName: $.ASN1Decoder<LCSClientName> | null = null;
@@ -197,8 +194,8 @@ function _decode_LCSClientName (el: _Element): LCSClientName {
     if (!_cached_decoder_for_LCSClientName) { _cached_decoder_for_LCSClientName = function (el: _Element): LCSClientName {
     let dataCodingScheme!: USSD_DataCodingScheme;
     let nameString!: NameString;
-    let lcs_FormatIndicator: OPTIONAL<LCS_FormatIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lcs_FormatIndicator: OPTIONAL<LCS_FormatIndicator> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "dataCodingScheme": (_el: _Element): void => { dataCodingScheme = $._decode_implicit<USSD_DataCodingScheme>(() => _decode_USSD_DataCodingScheme)(_el); },
         "nameString": (_el: _Element): void => { nameString = $._decode_implicit<NameString>(() => _decode_NameString)(_el); },

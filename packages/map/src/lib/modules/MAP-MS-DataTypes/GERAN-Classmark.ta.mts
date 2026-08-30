@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type GERAN_Classmark = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_GERAN_Classmark: $.ASN1Decoder<GERAN_Classmark> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GERAN_Classmark
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GERAN_Classmark (el: _Element): GERAN_Classmark {
-    if (!_cached_decoder_for_GERAN_Classmark) { _cached_decoder_for_GERAN_Classmark = $._decodeOctetString; }
-    return _cached_decoder_for_GERAN_Classmark(el);
-}
-
-let _cached_encoder_for_GERAN_Classmark: $.ASN1Encoder<GERAN_Classmark> | null = null;
+export const _decode_GERAN_Classmark = (el: _Element): GERAN_Classmark => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 87) {
+        throw new ASN1SizeError("GERAN_Classmark violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) GERAN_Classmark into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_GERAN_Classmark: $.ASN1Encoder<GERAN_Classmark> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GERAN_Classmark, encoded as an ASN.1 Element.
  */
-export
-function _encode_GERAN_Classmark (value: GERAN_Classmark, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GERAN_Classmark) { _cached_encoder_for_GERAN_Classmark = $._encodeOctetString; }
-    return _cached_encoder_for_GERAN_Classmark(value, elGetter);
-}
+export const _encode_GERAN_Classmark = $._encodeOctetString;
 
 
 /* eslint-enable */

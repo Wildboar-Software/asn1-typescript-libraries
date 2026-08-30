@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UnauthorizedLCSClient_Diagnostic, _enum_for_UnauthorizedLCSClient_Diagnostic, UnauthorizedLCSClient_Diagnostic_noAdditionalInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, noAdditionalInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList /* IMPORTED_LONG_ENUMERATION_ITEM */, clientNotInMSPrivacyExceptionList /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_callToClientNotSetup /* IMPORTED_LONG_ENUMERATION_ITEM */, callToClientNotSetup /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable /* IMPORTED_LONG_ENUMERATION_ITEM */, privacyOverrideNotApplicable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements /* IMPORTED_LONG_ENUMERATION_ITEM */, disallowedByLocalRegulatoryRequirements /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass /* IMPORTED_LONG_ENUMERATION_ITEM */, unauthorizedPrivacyClass /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalClient /* IMPORTED_LONG_ENUMERATION_ITEM */, unauthorizedCallSessionUnrelatedExternalClient /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient /* IMPORTED_LONG_ENUMERATION_ITEM */, unauthorizedCallSessionRelatedExternalClient /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnauthorizedLCSClient_Diagnostic, _encode_UnauthorizedLCSClient_Diagnostic } from "../MAP-ER-DataTypes/UnauthorizedLCSClient-Diagnostic.ta.mjs";
-// export { UnauthorizedLCSClient_Diagnostic, _enum_for_UnauthorizedLCSClient_Diagnostic, UnauthorizedLCSClient_Diagnostic_noAdditionalInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, noAdditionalInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList /* IMPORTED_LONG_ENUMERATION_ITEM */, clientNotInMSPrivacyExceptionList /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_callToClientNotSetup /* IMPORTED_LONG_ENUMERATION_ITEM */, callToClientNotSetup /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable /* IMPORTED_LONG_ENUMERATION_ITEM */, privacyOverrideNotApplicable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements /* IMPORTED_LONG_ENUMERATION_ITEM */, disallowedByLocalRegulatoryRequirements /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass /* IMPORTED_LONG_ENUMERATION_ITEM */, unauthorizedPrivacyClass /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalClient /* IMPORTED_LONG_ENUMERATION_ITEM */, unauthorizedCallSessionUnrelatedExternalClient /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient /* IMPORTED_LONG_ENUMERATION_ITEM */, unauthorizedCallSessionRelatedExternalClient /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnauthorizedLCSClient_Diagnostic, _encode_UnauthorizedLCSClient_Diagnostic } from "../MAP-ER-DataTypes/UnauthorizedLCSClient-Diagnostic.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -145,8 +143,8 @@ class UnauthorizedLCSClient_Param {
  */
 export
 const _root_component_type_list_1_spec_for_UnauthorizedLCSClient_Param: $.ComponentSpec[] = [
-    new $.ComponentSpec("unauthorizedLCSClient-Diagnostic", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("unauthorizedLCSClient-Diagnostic", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -186,9 +184,9 @@ let _cached_decoder_for_UnauthorizedLCSClient_Param: $.ASN1Decoder<UnauthorizedL
 export
 function _decode_UnauthorizedLCSClient_Param (el: _Element): UnauthorizedLCSClient_Param {
     if (!_cached_decoder_for_UnauthorizedLCSClient_Param) { _cached_decoder_for_UnauthorizedLCSClient_Param = function (el: _Element): UnauthorizedLCSClient_Param {
-    let unauthorizedLCSClient_Diagnostic: OPTIONAL<UnauthorizedLCSClient_Diagnostic>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let unauthorizedLCSClient_Diagnostic: OPTIONAL<UnauthorizedLCSClient_Diagnostic> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "unauthorizedLCSClient-Diagnostic": (_el: _Element): void => { unauthorizedLCSClient_Diagnostic = $._decode_implicit<UnauthorizedLCSClient_Diagnostic>(() => _decode_UnauthorizedLCSClient_Diagnostic)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); }

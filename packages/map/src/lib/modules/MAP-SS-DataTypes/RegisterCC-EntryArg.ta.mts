@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { CCBS_Data, _decode_CCBS_Data, _encode_CCBS_Data } from "../MAP-SS-DataTypes/CCBS-Data.ta.mjs";
-// export { CCBS_Data, _decode_CCBS_Data, _encode_CCBS_Data } from "../MAP-SS-DataTypes/CCBS-Data.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class RegisterCC_EntryArg {
  */
 export
 const _root_component_type_list_1_spec_for_RegisterCC_EntryArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ccbs-Data", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("ss-Code", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ccbs-Data", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -181,8 +179,8 @@ export
 function _decode_RegisterCC_EntryArg (el: _Element): RegisterCC_EntryArg {
     if (!_cached_decoder_for_RegisterCC_EntryArg) { _cached_decoder_for_RegisterCC_EntryArg = function (el: _Element): RegisterCC_EntryArg {
     let ss_Code!: SS_Code;
-    let ccbs_Data: OPTIONAL<CCBS_Data>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ccbs_Data: OPTIONAL<CCBS_Data> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = $._decode_implicit<SS_Code>(() => _decode_SS_Code)(_el); },
         "ccbs-Data": (_el: _Element): void => { ccbs_Data = $._decode_implicit<CCBS_Data>(() => _decode_CCBS_Data)(_el); }

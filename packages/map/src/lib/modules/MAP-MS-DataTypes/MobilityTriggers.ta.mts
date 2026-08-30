@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MM_Code, _decode_MM_Code, _encode_MM_Code } from "../MAP-MS-DataTypes/MM-Code.ta.mjs";
-// export { MM_Code, _decode_MM_Code, _encode_MM_Code } from "../MAP-MS-DataTypes/MM-Code.ta.mjs";
 
+
+import { maxNumOfMobilityTriggers } from "./maxNumOfMobilityTriggers.va.mjs";
 
 /**
  * @summary MobilityTriggers
@@ -95,7 +97,11 @@ let _cached_decoder_for_MobilityTriggers: $.ASN1Decoder<MobilityTriggers> | null
 export
 function _decode_MobilityTriggers (el: _Element): MobilityTriggers {
     if (!_cached_decoder_for_MobilityTriggers) { _cached_decoder_for_MobilityTriggers = $._decodeSequenceOf<MM_Code>(() => _decode_MM_Code); }
-    return _cached_decoder_for_MobilityTriggers(el);
+    const value = _cached_decoder_for_MobilityTriggers(el);
+    if (value.length < 1 || value.length > maxNumOfMobilityTriggers) {
+        throw new ASN1SizeError("MobilityTriggers violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_MobilityTriggers: $.ASN1Encoder<MobilityTriggers> | null = null;

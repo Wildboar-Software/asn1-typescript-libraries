@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxUtranAdditionalPositioningData } from "./maxUtranAdditionalPositioningData.va.mjs";
 
 /**
  * @summary UtranAdditionalPositioningData
@@ -82,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UtranAdditionalPositioningData = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_UtranAdditionalPositioningData: $.ASN1Decoder<UtranAdditionalPositioningData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UtranAdditionalPositioningData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UtranAdditionalPositioningData (el: _Element): UtranAdditionalPositioningData {
-    if (!_cached_decoder_for_UtranAdditionalPositioningData) { _cached_decoder_for_UtranAdditionalPositioningData = $._decodeOctetString; }
-    return _cached_decoder_for_UtranAdditionalPositioningData(el);
-}
-
-let _cached_encoder_for_UtranAdditionalPositioningData: $.ASN1Encoder<UtranAdditionalPositioningData> | null = null;
+export const _decode_UtranAdditionalPositioningData = (el: _Element): UtranAdditionalPositioningData => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxUtranAdditionalPositioningData) {
+        throw new ASN1SizeError("UtranAdditionalPositioningData violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) UtranAdditionalPositioningData into an ASN.1 Element.
@@ -105,11 +106,7 @@ let _cached_encoder_for_UtranAdditionalPositioningData: $.ASN1Encoder<UtranAddit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UtranAdditionalPositioningData, encoded as an ASN.1 Element.
  */
-export
-function _encode_UtranAdditionalPositioningData (value: UtranAdditionalPositioningData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UtranAdditionalPositioningData) { _cached_encoder_for_UtranAdditionalPositioningData = $._encodeOctetString; }
-    return _cached_encoder_for_UtranAdditionalPositioningData(value, elGetter);
-}
+export const _encode_UtranAdditionalPositioningData = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../MAP-LCS-DataTypes/PLMNList.ta.mjs";
-// export { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../MAP-LCS-DataTypes/PLMNList.ta.mjs";
 
 
 /**
@@ -137,8 +136,8 @@ class ReportingPLMNList {
  */
 export
 const _root_component_type_list_1_spec_for_ReportingPLMNList: $.ComponentSpec[] = [
-    new $.ComponentSpec("plmn-ListPrioritized", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("plmn-List", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("plmn-ListPrioritized", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("plmn-List", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -178,9 +177,9 @@ let _cached_decoder_for_ReportingPLMNList: $.ASN1Decoder<ReportingPLMNList> | nu
 export
 function _decode_ReportingPLMNList (el: _Element): ReportingPLMNList {
     if (!_cached_decoder_for_ReportingPLMNList) { _cached_decoder_for_ReportingPLMNList = function (el: _Element): ReportingPLMNList {
-    let plmn_ListPrioritized: OPTIONAL<NULL>;
+    let plmn_ListPrioritized: OPTIONAL<NULL> = undefined;
     let plmn_List!: PLMNList;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "plmn-ListPrioritized": (_el: _Element): void => { plmn_ListPrioritized = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "plmn-List": (_el: _Element): void => { plmn_List = $._decode_implicit<PLMNList>(() => _decode_PLMNList)(_el); }

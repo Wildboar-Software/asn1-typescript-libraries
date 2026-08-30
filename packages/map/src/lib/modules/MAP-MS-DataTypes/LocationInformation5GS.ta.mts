@@ -67,29 +67,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NR_CGI, _decode_NR_CGI, _encode_NR_CGI } from "../MAP-CommonDataTypes/NR-CGI.ta.mjs";
-// export { NR_CGI, _decode_NR_CGI, _encode_NR_CGI } from "../MAP-CommonDataTypes/NR-CGI.ta.mjs";
 import { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
-// export { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
 import { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
-// export { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
 import { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
-// export { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
 import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
-// export { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
 import { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-Id.ta.mjs";
-// export { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-Id.ta.mjs";
 import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-// export { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-// export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../MAP-MS-DataTypes/TimeZone.ta.mjs";
-// export { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../MAP-MS-DataTypes/TimeZone.ta.mjs";
 import { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
-// export { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { NR_TA_Id, _decode_NR_TA_Id, _encode_NR_TA_Id } from "../MAP-CommonDataTypes/NR-TA-Id.ta.mjs";
-// export { NR_TA_Id, _decode_NR_TA_Id, _encode_NR_TA_Id } from "../MAP-CommonDataTypes/NR-TA-Id.ta.mjs";
 
 
 /**
@@ -243,18 +231,18 @@ class LocationInformation5GS {
  */
 export
 const _root_component_type_list_1_spec_for_LocationInformation5GS: $.ComponentSpec[] = [
-    new $.ComponentSpec("nrCellGlobalIdentity", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("e-utranCellGlobalIdentity", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("geographicalInformation", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("geodeticInformation", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("amf-address", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("trackingAreaIdentity", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("currentLocationRetrieved", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("ageOfLocationInformation", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("vplmnId", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("localtimeZone", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("rat-Type", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("nrCellGlobalIdentity", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("e-utranCellGlobalIdentity", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("geographicalInformation", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("geodeticInformation", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("amf-address", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("trackingAreaIdentity", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("currentLocationRetrieved", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("ageOfLocationInformation", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("vplmnId", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("localtimeZone", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("rat-Type", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 11))
 ];
 
 /**
@@ -280,7 +268,7 @@ const _root_component_type_list_2_spec_for_LocationInformation5GS: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_LocationInformation5GS: $.ComponentSpec[] = [
-    new $.ComponentSpec("nrTrackingAreaIdentity", true, $.hasTag(_TagClass.context, 12), undefined, undefined)
+    new $.ComponentSpec("nrTrackingAreaIdentity", true, $.hasTag(_TagClass.context, 12))
 ];
 
 let _cached_decoder_for_LocationInformation5GS: $.ASN1Decoder<LocationInformation5GS> | null = null;
@@ -294,20 +282,20 @@ let _cached_decoder_for_LocationInformation5GS: $.ASN1Decoder<LocationInformatio
 export
 function _decode_LocationInformation5GS (el: _Element): LocationInformation5GS {
     if (!_cached_decoder_for_LocationInformation5GS) { _cached_decoder_for_LocationInformation5GS = function (el: _Element): LocationInformation5GS {
-    let nrCellGlobalIdentity: OPTIONAL<NR_CGI>;
-    let e_utranCellGlobalIdentity: OPTIONAL<E_UTRAN_CGI>;
-    let geographicalInformation: OPTIONAL<GeographicalInformation>;
-    let geodeticInformation: OPTIONAL<GeodeticInformation>;
-    let amf_address: OPTIONAL<FQDN>;
-    let trackingAreaIdentity: OPTIONAL<TA_Id>;
-    let currentLocationRetrieved: OPTIONAL<NULL>;
-    let ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>;
-    let vplmnId: OPTIONAL<PLMN_Id>;
-    let localtimeZone: OPTIONAL<TimeZone>;
-    let rat_Type: OPTIONAL<Used_RAT_Type>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let nrTrackingAreaIdentity: OPTIONAL<NR_TA_Id>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let nrCellGlobalIdentity: OPTIONAL<NR_CGI> = undefined;
+    let e_utranCellGlobalIdentity: OPTIONAL<E_UTRAN_CGI> = undefined;
+    let geographicalInformation: OPTIONAL<GeographicalInformation> = undefined;
+    let geodeticInformation: OPTIONAL<GeodeticInformation> = undefined;
+    let amf_address: OPTIONAL<FQDN> = undefined;
+    let trackingAreaIdentity: OPTIONAL<TA_Id> = undefined;
+    let currentLocationRetrieved: OPTIONAL<NULL> = undefined;
+    let ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation> = undefined;
+    let vplmnId: OPTIONAL<PLMN_Id> = undefined;
+    let localtimeZone: OPTIONAL<TimeZone> = undefined;
+    let rat_Type: OPTIONAL<Used_RAT_Type> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let nrTrackingAreaIdentity: OPTIONAL<NR_TA_Id> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "nrCellGlobalIdentity": (_el: _Element): void => { nrCellGlobalIdentity = $._decode_implicit<NR_CGI>(() => _decode_NR_CGI)(_el); },
         "e-utranCellGlobalIdentity": (_el: _Element): void => { e_utranCellGlobalIdentity = $._decode_implicit<E_UTRAN_CGI>(() => _decode_E_UTRAN_CGI)(_el); },

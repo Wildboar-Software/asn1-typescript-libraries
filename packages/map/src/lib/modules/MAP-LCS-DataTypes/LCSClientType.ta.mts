@@ -161,21 +161,13 @@ const LCSClientType_lawfulInterceptServices: LCSClientType = 3; /* LONG_NAMED_EN
 export
 const lawfulInterceptServices: LCSClientType = LCSClientType_lawfulInterceptServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LCSClientType: $.ASN1Decoder<LCSClientType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCSClientType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCSClientType (el: _Element): LCSClientType {
-    if (!_cached_decoder_for_LCSClientType) { _cached_decoder_for_LCSClientType = $._decodeEnumerated; }
-    return _cached_decoder_for_LCSClientType(el);
-}
-
-let _cached_encoder_for_LCSClientType: $.ASN1Encoder<LCSClientType> | null = null;
+export const _decode_LCSClientType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCSClientType into an ASN.1 Element.
@@ -184,11 +176,7 @@ let _cached_encoder_for_LCSClientType: $.ASN1Encoder<LCSClientType> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCSClientType, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCSClientType (value: LCSClientType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientType) { _cached_encoder_for_LCSClientType = $._encodeEnumerated; }
-    return _cached_encoder_for_LCSClientType(value, elGetter);
-}
+export const _encode_LCSClientType = $._encodeEnumerated;
 
 
 /* eslint-enable */

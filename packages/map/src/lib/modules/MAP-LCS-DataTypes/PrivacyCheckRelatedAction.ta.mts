@@ -179,21 +179,13 @@ const PrivacyCheckRelatedAction_notAllowed: PrivacyCheckRelatedAction = 4; /* LO
 export
 const notAllowed: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction_notAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PrivacyCheckRelatedAction: $.ASN1Decoder<PrivacyCheckRelatedAction> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivacyCheckRelatedAction
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PrivacyCheckRelatedAction (el: _Element): PrivacyCheckRelatedAction {
-    if (!_cached_decoder_for_PrivacyCheckRelatedAction) { _cached_decoder_for_PrivacyCheckRelatedAction = $._decodeEnumerated; }
-    return _cached_decoder_for_PrivacyCheckRelatedAction(el);
-}
-
-let _cached_encoder_for_PrivacyCheckRelatedAction: $.ASN1Encoder<PrivacyCheckRelatedAction> | null = null;
+export const _decode_PrivacyCheckRelatedAction = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PrivacyCheckRelatedAction into an ASN.1 Element.
@@ -202,11 +194,7 @@ let _cached_encoder_for_PrivacyCheckRelatedAction: $.ASN1Encoder<PrivacyCheckRel
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrivacyCheckRelatedAction, encoded as an ASN.1 Element.
  */
-export
-function _encode_PrivacyCheckRelatedAction (value: PrivacyCheckRelatedAction, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrivacyCheckRelatedAction) { _cached_encoder_for_PrivacyCheckRelatedAction = $._encodeEnumerated; }
-    return _cached_encoder_for_PrivacyCheckRelatedAction(value, elGetter);
-}
+export const _encode_PrivacyCheckRelatedAction = $._encodeEnumerated;
 
 
 /* eslint-enable */

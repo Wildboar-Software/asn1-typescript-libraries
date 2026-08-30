@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SM_DeliveryTimerValue = INTEGER;
 
-let _cached_decoder_for_SM_DeliveryTimerValue: $.ASN1Decoder<SM_DeliveryTimerValue> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_DeliveryTimerValue
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SM_DeliveryTimerValue (el: _Element): SM_DeliveryTimerValue {
-    if (!_cached_decoder_for_SM_DeliveryTimerValue) { _cached_decoder_for_SM_DeliveryTimerValue = $._decodeInteger; }
-    return _cached_decoder_for_SM_DeliveryTimerValue(el);
-}
-
-let _cached_encoder_for_SM_DeliveryTimerValue: $.ASN1Encoder<SM_DeliveryTimerValue> | null = null;
+export const _decode_SM_DeliveryTimerValue = (el: _Element): SM_DeliveryTimerValue => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 30 || n > 600) {
+        throw new ASN1OverflowError("SM_DeliveryTimerValue violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SM_DeliveryTimerValue into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_SM_DeliveryTimerValue: $.ASN1Encoder<SM_DeliveryTimerVal
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_DeliveryTimerValue, encoded as an ASN.1 Element.
  */
-export
-function _encode_SM_DeliveryTimerValue (value: SM_DeliveryTimerValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SM_DeliveryTimerValue) { _cached_encoder_for_SM_DeliveryTimerValue = $._encodeInteger; }
-    return _cached_encoder_for_SM_DeliveryTimerValue(value, elGetter);
-}
+export const _encode_SM_DeliveryTimerValue = $._encodeInteger;
 
 
 /* eslint-enable */

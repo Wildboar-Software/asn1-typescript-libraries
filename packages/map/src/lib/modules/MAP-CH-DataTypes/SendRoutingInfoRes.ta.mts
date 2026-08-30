@@ -67,41 +67,23 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtendedRoutingInfo, _decode_ExtendedRoutingInfo, _encode_ExtendedRoutingInfo } from "../MAP-CH-DataTypes/ExtendedRoutingInfo.ta.mjs";
-// export { ExtendedRoutingInfo, _decode_ExtendedRoutingInfo, _encode_ExtendedRoutingInfo } from "../MAP-CH-DataTypes/ExtendedRoutingInfo.ta.mjs";
 import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
-// export { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
 import { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "../MAP-MS-DataTypes/SubscriberInfo.ta.mjs";
-// export { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "../MAP-MS-DataTypes/SubscriberInfo.ta.mjs";
 import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
-// export { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-// export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { NAEA_PreferredCI, _decode_NAEA_PreferredCI, _encode_NAEA_PreferredCI } from "../MAP-CommonDataTypes/NAEA-PreferredCI.ta.mjs";
-// export { NAEA_PreferredCI, _decode_NAEA_PreferredCI, _encode_NAEA_PreferredCI } from "../MAP-CommonDataTypes/NAEA-PreferredCI.ta.mjs";
 import { CCBS_Indicators, _decode_CCBS_Indicators, _encode_CCBS_Indicators } from "../MAP-CH-DataTypes/CCBS-Indicators.ta.mjs";
-// export { CCBS_Indicators, _decode_CCBS_Indicators, _encode_CCBS_Indicators } from "../MAP-CH-DataTypes/CCBS-Indicators.ta.mjs";
 import { NumberPortabilityStatus, _enum_for_NumberPortabilityStatus, NumberPortabilityStatus_notKnownToBePorted /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnownToBePorted /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedToForeignNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedToForeignNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberNotPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberNotPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedIn /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedIn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NumberPortabilityStatus, _encode_NumberPortabilityStatus } from "../MAP-MS-DataTypes/NumberPortabilityStatus.ta.mjs";
-// export { NumberPortabilityStatus, _enum_for_NumberPortabilityStatus, NumberPortabilityStatus_notKnownToBePorted /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnownToBePorted /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedToForeignNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedToForeignNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberNotPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberNotPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedIn /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedIn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NumberPortabilityStatus, _encode_NumberPortabilityStatus } from "../MAP-MS-DataTypes/NumberPortabilityStatus.ta.mjs";
 import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
-// export { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
 import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-// export { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 import { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-// export { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
 import { RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
-// export { RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
 import { AllowedServices, AllowedServices_firstServiceAllowed /* IMPORTED_LONG_NAMED_BIT */, firstServiceAllowed /* IMPORTED_SHORT_NAMED_BIT */, AllowedServices_secondServiceAllowed /* IMPORTED_LONG_NAMED_BIT */, secondServiceAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_AllowedServices, _encode_AllowedServices } from "../MAP-CH-DataTypes/AllowedServices.ta.mjs";
-// export { AllowedServices, AllowedServices_firstServiceAllowed /* IMPORTED_LONG_NAMED_BIT */, firstServiceAllowed /* IMPORTED_SHORT_NAMED_BIT */, AllowedServices_secondServiceAllowed /* IMPORTED_LONG_NAMED_BIT */, secondServiceAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_AllowedServices, _encode_AllowedServices } from "../MAP-CH-DataTypes/AllowedServices.ta.mjs";
 import { UnavailabilityCause, _enum_for_UnavailabilityCause, UnavailabilityCause_bearerServiceNotProvisioned /* IMPORTED_LONG_ENUMERATION_ITEM */, bearerServiceNotProvisioned /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_teleserviceNotProvisioned /* IMPORTED_LONG_ENUMERATION_ITEM */, teleserviceNotProvisioned /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_absentSubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, absentSubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_busySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, busySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_callBarred /* IMPORTED_LONG_ENUMERATION_ITEM */, callBarred /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_cug_Reject /* IMPORTED_LONG_ENUMERATION_ITEM */, cug_Reject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnavailabilityCause, _encode_UnavailabilityCause } from "../MAP-CH-DataTypes/UnavailabilityCause.ta.mjs";
-// export { UnavailabilityCause, _enum_for_UnavailabilityCause, UnavailabilityCause_bearerServiceNotProvisioned /* IMPORTED_LONG_ENUMERATION_ITEM */, bearerServiceNotProvisioned /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_teleserviceNotProvisioned /* IMPORTED_LONG_ENUMERATION_ITEM */, teleserviceNotProvisioned /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_absentSubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, absentSubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_busySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, busySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_callBarred /* IMPORTED_LONG_ENUMERATION_ITEM */, callBarred /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_cug_Reject /* IMPORTED_LONG_ENUMERATION_ITEM */, cug_Reject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnavailabilityCause, _encode_UnavailabilityCause } from "../MAP-CH-DataTypes/UnavailabilityCause.ta.mjs";
 import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
-// export { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
 
 
 /**
@@ -342,16 +324,16 @@ class SendRoutingInfoRes {
  */
 export
 const _root_component_type_list_1_spec_for_SendRoutingInfoRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("extendedRoutingInfo", true, $.or($.hasAnyTag, $.hasTag(_TagClass.context, 8)), undefined, undefined),
-    new $.ComponentSpec("cug-CheckInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("cugSubscriptionFlag", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("subscriberInfo", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("ss-List", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("basicService", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("forwardingInterrogationRequired", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("vmsc-Address", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("extendedRoutingInfo", true, $.or($.hasAnyTag, $.hasTag(_TagClass.context, 8))),
+    new $.ComponentSpec("cug-CheckInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("cugSubscriptionFlag", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("subscriberInfo", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("ss-List", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("basicService", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("forwardingInterrogationRequired", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("vmsc-Address", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -377,20 +359,20 @@ const _root_component_type_list_2_spec_for_SendRoutingInfoRes: $.ComponentSpec[]
  */
 export
 const _extension_additions_list_spec_for_SendRoutingInfoRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("naea-PreferredCI", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("ccbs-Indicators", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("numberPortabilityStatus", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("istAlertTimer", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("supportedCamelPhasesInVMSC", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("offeredCamel4CSIsInVMSC", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("routingInfo2", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("ss-List2", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("basicService2", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("allowedServices", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("unavailabilityCause", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("releaseResourcesSupported", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("gsm-BearerCapability", true, $.hasTag(_TagClass.context, 23), undefined, undefined)
+    new $.ComponentSpec("naea-PreferredCI", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("ccbs-Indicators", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("numberPortabilityStatus", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("istAlertTimer", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("supportedCamelPhasesInVMSC", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("offeredCamel4CSIsInVMSC", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("routingInfo2", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("ss-List2", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("basicService2", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("allowedServices", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("unavailabilityCause", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("releaseResourcesSupported", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("gsm-BearerCapability", true, $.hasTag(_TagClass.context, 23))
 ];
 
 let _cached_decoder_for_SendRoutingInfoRes: $.ASN1Decoder<SendRoutingInfoRes> | null = null;
@@ -404,31 +386,31 @@ let _cached_decoder_for_SendRoutingInfoRes: $.ASN1Decoder<SendRoutingInfoRes> | 
 export
 function _decode_SendRoutingInfoRes (el: _Element): SendRoutingInfoRes {
     if (!_cached_decoder_for_SendRoutingInfoRes) { _cached_decoder_for_SendRoutingInfoRes = $._decode_implicit<SendRoutingInfoRes>(() => function (el: _Element): SendRoutingInfoRes {
-    let imsi: OPTIONAL<IMSI>;
-    let extendedRoutingInfo: OPTIONAL<ExtendedRoutingInfo>;
-    let cug_CheckInfo: OPTIONAL<CUG_CheckInfo>;
-    let cugSubscriptionFlag: OPTIONAL<NULL>;
-    let subscriberInfo: OPTIONAL<SubscriberInfo>;
-    let ss_List: OPTIONAL<SS_List>;
-    let basicService: OPTIONAL<Ext_BasicServiceCode>;
-    let forwardingInterrogationRequired: OPTIONAL<NULL>;
-    let vmsc_Address: OPTIONAL<ISDN_AddressString>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let naea_PreferredCI: OPTIONAL<NAEA_PreferredCI>;
-    let ccbs_Indicators: OPTIONAL<CCBS_Indicators>;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let numberPortabilityStatus: OPTIONAL<NumberPortabilityStatus>;
-    let istAlertTimer: OPTIONAL<IST_AlertTimerValue>;
-    let supportedCamelPhasesInVMSC: OPTIONAL<SupportedCamelPhases>;
-    let offeredCamel4CSIsInVMSC: OPTIONAL<OfferedCamel4CSIs>;
-    let routingInfo2: OPTIONAL<RoutingInfo>;
-    let ss_List2: OPTIONAL<SS_List>;
-    let basicService2: OPTIONAL<Ext_BasicServiceCode>;
-    let allowedServices: OPTIONAL<AllowedServices>;
-    let unavailabilityCause: OPTIONAL<UnavailabilityCause>;
-    let releaseResourcesSupported: OPTIONAL<NULL>;
-    let gsm_BearerCapability: OPTIONAL<ExternalSignalInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let extendedRoutingInfo: OPTIONAL<ExtendedRoutingInfo> = undefined;
+    let cug_CheckInfo: OPTIONAL<CUG_CheckInfo> = undefined;
+    let cugSubscriptionFlag: OPTIONAL<NULL> = undefined;
+    let subscriberInfo: OPTIONAL<SubscriberInfo> = undefined;
+    let ss_List: OPTIONAL<SS_List> = undefined;
+    let basicService: OPTIONAL<Ext_BasicServiceCode> = undefined;
+    let forwardingInterrogationRequired: OPTIONAL<NULL> = undefined;
+    let vmsc_Address: OPTIONAL<ISDN_AddressString> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let naea_PreferredCI: OPTIONAL<NAEA_PreferredCI> = undefined;
+    let ccbs_Indicators: OPTIONAL<CCBS_Indicators> = undefined;
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    let numberPortabilityStatus: OPTIONAL<NumberPortabilityStatus> = undefined;
+    let istAlertTimer: OPTIONAL<IST_AlertTimerValue> = undefined;
+    let supportedCamelPhasesInVMSC: OPTIONAL<SupportedCamelPhases> = undefined;
+    let offeredCamel4CSIsInVMSC: OPTIONAL<OfferedCamel4CSIs> = undefined;
+    let routingInfo2: OPTIONAL<RoutingInfo> = undefined;
+    let ss_List2: OPTIONAL<SS_List> = undefined;
+    let basicService2: OPTIONAL<Ext_BasicServiceCode> = undefined;
+    let allowedServices: OPTIONAL<AllowedServices> = undefined;
+    let unavailabilityCause: OPTIONAL<UnavailabilityCause> = undefined;
+    let releaseResourcesSupported: OPTIONAL<NULL> = undefined;
+    let gsm_BearerCapability: OPTIONAL<ExternalSignalInfo> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "extendedRoutingInfo": (_el: _Element): void => { extendedRoutingInfo = _decode_ExtendedRoutingInfo(_el); },

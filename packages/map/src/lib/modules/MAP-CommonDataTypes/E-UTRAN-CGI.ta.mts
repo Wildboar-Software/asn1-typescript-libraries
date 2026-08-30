@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type E_UTRAN_CGI = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_E_UTRAN_CGI: $.ASN1Decoder<E_UTRAN_CGI> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) E_UTRAN_CGI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_E_UTRAN_CGI (el: _Element): E_UTRAN_CGI {
-    if (!_cached_decoder_for_E_UTRAN_CGI) { _cached_decoder_for_E_UTRAN_CGI = $._decodeOctetString; }
-    return _cached_decoder_for_E_UTRAN_CGI(el);
-}
-
-let _cached_encoder_for_E_UTRAN_CGI: $.ASN1Encoder<E_UTRAN_CGI> | null = null;
+export const _decode_E_UTRAN_CGI = (el: _Element): E_UTRAN_CGI => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 7 || value.length > 7) {
+        throw new ASN1SizeError("E_UTRAN_CGI violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) E_UTRAN_CGI into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_E_UTRAN_CGI: $.ASN1Encoder<E_UTRAN_CGI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The E_UTRAN_CGI, encoded as an ASN.1 Element.
  */
-export
-function _encode_E_UTRAN_CGI (value: E_UTRAN_CGI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_E_UTRAN_CGI) { _cached_encoder_for_E_UTRAN_CGI = $._encodeOctetString; }
-    return _cached_encoder_for_E_UTRAN_CGI(value, elGetter);
-}
+export const _encode_E_UTRAN_CGI = $._encodeOctetString;
 
 
 /* eslint-enable */

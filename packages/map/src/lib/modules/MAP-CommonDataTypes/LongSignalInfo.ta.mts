@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxLongSignalInfoLength } from "./maxLongSignalInfoLength.va.mjs";
 
 /**
  * @summary LongSignalInfo
@@ -82,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type LongSignalInfo = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_LongSignalInfo: $.ASN1Decoder<LongSignalInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LongSignalInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LongSignalInfo (el: _Element): LongSignalInfo {
-    if (!_cached_decoder_for_LongSignalInfo) { _cached_decoder_for_LongSignalInfo = $._decodeOctetString; }
-    return _cached_decoder_for_LongSignalInfo(el);
-}
-
-let _cached_encoder_for_LongSignalInfo: $.ASN1Encoder<LongSignalInfo> | null = null;
+export const _decode_LongSignalInfo = (el: _Element): LongSignalInfo => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxLongSignalInfoLength) {
+        throw new ASN1SizeError("LongSignalInfo violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) LongSignalInfo into an ASN.1 Element.
@@ -105,11 +106,7 @@ let _cached_encoder_for_LongSignalInfo: $.ASN1Encoder<LongSignalInfo> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LongSignalInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_LongSignalInfo (value: LongSignalInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LongSignalInfo) { _cached_encoder_for_LongSignalInfo = $._encodeOctetString; }
-    return _cached_encoder_for_LongSignalInfo(value, elGetter);
-}
+export const _encode_LongSignalInfo = $._encodeOctetString;
 
 
 /* eslint-enable */

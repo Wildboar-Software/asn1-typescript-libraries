@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AbsentSubscriberDiagnosticSM = INTEGER;
 
-let _cached_decoder_for_AbsentSubscriberDiagnosticSM: $.ASN1Decoder<AbsentSubscriberDiagnosticSM> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AbsentSubscriberDiagnosticSM
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AbsentSubscriberDiagnosticSM (el: _Element): AbsentSubscriberDiagnosticSM {
-    if (!_cached_decoder_for_AbsentSubscriberDiagnosticSM) { _cached_decoder_for_AbsentSubscriberDiagnosticSM = $._decodeInteger; }
-    return _cached_decoder_for_AbsentSubscriberDiagnosticSM(el);
-}
-
-let _cached_encoder_for_AbsentSubscriberDiagnosticSM: $.ASN1Encoder<AbsentSubscriberDiagnosticSM> | null = null;
+export const _decode_AbsentSubscriberDiagnosticSM = (el: _Element): AbsentSubscriberDiagnosticSM => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 255) {
+        throw new ASN1OverflowError("AbsentSubscriberDiagnosticSM violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) AbsentSubscriberDiagnosticSM into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_AbsentSubscriberDiagnosticSM: $.ASN1Encoder<AbsentSubscr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AbsentSubscriberDiagnosticSM, encoded as an ASN.1 Element.
  */
-export
-function _encode_AbsentSubscriberDiagnosticSM (value: AbsentSubscriberDiagnosticSM, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AbsentSubscriberDiagnosticSM) { _cached_encoder_for_AbsentSubscriberDiagnosticSM = $._encodeInteger; }
-    return _cached_encoder_for_AbsentSubscriberDiagnosticSM(value, elGetter);
-}
+export const _encode_AbsentSubscriberDiagnosticSM = $._encodeInteger;
 
 
 /* eslint-enable */

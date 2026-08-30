@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMServingNodeAddressList } from "../MAP-SM-DataTypes/SMServingNodeAddressList.ta.mjs";
-// export { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMServingNodeAddressList } from "../MAP-SM-DataTypes/SMServingNodeAddressList.ta.mjs";
 
 
 /**
@@ -149,8 +146,8 @@ class ReportSM_DeliveryStatusRes {
  */
 export
 const _root_component_type_list_1_spec_for_ReportSM_DeliveryStatusRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("storedMSISDN", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("storedMSISDN", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -176,7 +173,7 @@ const _root_component_type_list_2_spec_for_ReportSM_DeliveryStatusRes: $.Compone
  */
 export
 const _extension_additions_list_spec_for_ReportSM_DeliveryStatusRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("registeredSMServingNodes", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("registeredSMServingNodes", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_ReportSM_DeliveryStatusRes: $.ASN1Decoder<ReportSM_DeliveryStatusRes> | null = null;
@@ -190,10 +187,10 @@ let _cached_decoder_for_ReportSM_DeliveryStatusRes: $.ASN1Decoder<ReportSM_Deliv
 export
 function _decode_ReportSM_DeliveryStatusRes (el: _Element): ReportSM_DeliveryStatusRes {
     if (!_cached_decoder_for_ReportSM_DeliveryStatusRes) { _cached_decoder_for_ReportSM_DeliveryStatusRes = function (el: _Element): ReportSM_DeliveryStatusRes {
-    let storedMSISDN: OPTIONAL<ISDN_AddressString>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let registeredSMServingNodes: OPTIONAL<SMServingNodeAddressList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let storedMSISDN: OPTIONAL<ISDN_AddressString> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let registeredSMServingNodes: OPTIONAL<SMServingNodeAddressList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "storedMSISDN": (_el: _Element): void => { storedMSISDN = _decode_ISDN_AddressString(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

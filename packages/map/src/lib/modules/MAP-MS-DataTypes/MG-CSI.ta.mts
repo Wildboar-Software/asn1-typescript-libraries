@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MobilityTriggers, _decode_MobilityTriggers, _encode_MobilityTriggers } from "../MAP-MS-DataTypes/MobilityTriggers.ta.mjs";
-// export { MobilityTriggers, _decode_MobilityTriggers, _encode_MobilityTriggers } from "../MAP-MS-DataTypes/MobilityTriggers.ta.mjs";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
-// export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -171,12 +167,12 @@ class MG_CSI {
  */
 export
 const _root_component_type_list_1_spec_for_MG_CSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("mobilityTriggers", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("csi-Active", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("mobilityTriggers", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("gsmSCF-Address", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("csi-Active", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -219,10 +215,10 @@ function _decode_MG_CSI (el: _Element): MG_CSI {
     let mobilityTriggers!: MobilityTriggers;
     let serviceKey!: ServiceKey;
     let gsmSCF_Address!: ISDN_AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let csi_Active: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let csi_Active: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mobilityTriggers": (_el: _Element): void => { mobilityTriggers = _decode_MobilityTriggers(_el); },
         "serviceKey": (_el: _Element): void => { serviceKey = _decode_ServiceKey(_el); },

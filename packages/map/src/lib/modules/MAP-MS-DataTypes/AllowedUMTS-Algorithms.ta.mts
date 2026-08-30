@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProtectionAlgorithms, _encode_PermittedIntegrityProtectionAlgorithms } from "../MAP-MS-DataTypes/PermittedIntegrityProtectionAlgorithms.ta.mjs";
-// export { PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProtectionAlgorithms, _encode_PermittedIntegrityProtectionAlgorithms } from "../MAP-MS-DataTypes/PermittedIntegrityProtectionAlgorithms.ta.mjs";
 import { PermittedEncryptionAlgorithms, _decode_PermittedEncryptionAlgorithms, _encode_PermittedEncryptionAlgorithms } from "../MAP-MS-DataTypes/PermittedEncryptionAlgorithms.ta.mjs";
-// export { PermittedEncryptionAlgorithms, _decode_PermittedEncryptionAlgorithms, _encode_PermittedEncryptionAlgorithms } from "../MAP-MS-DataTypes/PermittedEncryptionAlgorithms.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class AllowedUMTS_Algorithms {
  */
 export
 const _root_component_type_list_1_spec_for_AllowedUMTS_Algorithms: $.ComponentSpec[] = [
-    new $.ComponentSpec("integrityProtectionAlgorithms", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("encryptionAlgorithms", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("integrityProtectionAlgorithms", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("encryptionAlgorithms", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -190,10 +187,10 @@ let _cached_decoder_for_AllowedUMTS_Algorithms: $.ASN1Decoder<AllowedUMTS_Algori
 export
 function _decode_AllowedUMTS_Algorithms (el: _Element): AllowedUMTS_Algorithms {
     if (!_cached_decoder_for_AllowedUMTS_Algorithms) { _cached_decoder_for_AllowedUMTS_Algorithms = function (el: _Element): AllowedUMTS_Algorithms {
-    let integrityProtectionAlgorithms: OPTIONAL<PermittedIntegrityProtectionAlgorithms>;
-    let encryptionAlgorithms: OPTIONAL<PermittedEncryptionAlgorithms>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let integrityProtectionAlgorithms: OPTIONAL<PermittedIntegrityProtectionAlgorithms> = undefined;
+    let encryptionAlgorithms: OPTIONAL<PermittedEncryptionAlgorithms> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "integrityProtectionAlgorithms": (_el: _Element): void => { integrityProtectionAlgorithms = $._decode_implicit<PermittedIntegrityProtectionAlgorithms>(() => _decode_PermittedIntegrityProtectionAlgorithms)(_el); },
         "encryptionAlgorithms": (_el: _Element): void => { encryptionAlgorithms = $._decode_implicit<PermittedEncryptionAlgorithms>(() => _decode_PermittedEncryptionAlgorithms)(_el); },

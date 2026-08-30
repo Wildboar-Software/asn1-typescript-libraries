@@ -67,17 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
-// export { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Additional_Number, _decode_Additional_Number, _encode_Additional_Number } from "../MAP-SM-DataTypes/Additional-Number.ta.mjs";
-// export { Additional_Number, _decode_Additional_Number, _encode_Additional_Number } from "../MAP-SM-DataTypes/Additional-Number.ta.mjs";
 import { SupportedLCS_CapabilitySets, SupportedLCS_CapabilitySets_lcsCapabilitySet1 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet2 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet3 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet4 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet4 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet5 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet5 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
-// export { SupportedLCS_CapabilitySets, SupportedLCS_CapabilitySets_lcsCapabilitySet1 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet2 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet3 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet4 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet4 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet5 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet5 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
 import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
-// export { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
 
 
 /**
@@ -213,9 +207,9 @@ class LCSLocationInfo {
  */
 export
 const _root_component_type_list_1_spec_for_LCSLocationInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("networkNode-Number", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("networkNode-Number", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("lmsi", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -241,14 +235,14 @@ const _root_component_type_list_2_spec_for_LCSLocationInfo: $.ComponentSpec[] = 
  */
 export
 const _extension_additions_list_spec_for_LCSLocationInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("gprsNodeIndicator", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("additional-Number", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("supportedLCS-CapabilitySets", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("additional-LCS-CapabilitySets", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("mme-Name", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("aaa-Server-Name", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("sgsn-Name", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("sgsn-Realm", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("gprsNodeIndicator", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("additional-Number", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("supportedLCS-CapabilitySets", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("additional-LCS-CapabilitySets", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("mme-Name", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("aaa-Server-Name", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("sgsn-Name", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("sgsn-Realm", true, $.hasTag(_TagClass.context, 10))
 ];
 
 let _cached_decoder_for_LCSLocationInfo: $.ASN1Decoder<LCSLocationInfo> | null = null;
@@ -263,17 +257,17 @@ export
 function _decode_LCSLocationInfo (el: _Element): LCSLocationInfo {
     if (!_cached_decoder_for_LCSLocationInfo) { _cached_decoder_for_LCSLocationInfo = function (el: _Element): LCSLocationInfo {
     let networkNode_Number!: ISDN_AddressString;
-    let lmsi: OPTIONAL<LMSI>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let gprsNodeIndicator: OPTIONAL<NULL>;
-    let additional_Number: OPTIONAL<Additional_Number>;
-    let supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>;
-    let additional_LCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>;
-    let mme_Name: OPTIONAL<DiameterIdentity>;
-    let aaa_Server_Name: OPTIONAL<DiameterIdentity>;
-    let sgsn_Name: OPTIONAL<DiameterIdentity>;
-    let sgsn_Realm: OPTIONAL<DiameterIdentity>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let lmsi: OPTIONAL<LMSI> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let gprsNodeIndicator: OPTIONAL<NULL> = undefined;
+    let additional_Number: OPTIONAL<Additional_Number> = undefined;
+    let supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets> = undefined;
+    let additional_LCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets> = undefined;
+    let mme_Name: OPTIONAL<DiameterIdentity> = undefined;
+    let aaa_Server_Name: OPTIONAL<DiameterIdentity> = undefined;
+    let sgsn_Name: OPTIONAL<DiameterIdentity> = undefined;
+    let sgsn_Realm: OPTIONAL<DiameterIdentity> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "networkNode-Number": (_el: _Element): void => { networkNode_Number = _decode_ISDN_AddressString(_el); },
         "lmsi": (_el: _Element): void => { lmsi = $._decode_implicit<LMSI>(() => _decode_LMSI)(_el); },

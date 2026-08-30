@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Ext_ForwOptions = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Ext_ForwOptions: $.ASN1Decoder<Ext_ForwOptions> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext_ForwOptions
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Ext_ForwOptions (el: _Element): Ext_ForwOptions {
-    if (!_cached_decoder_for_Ext_ForwOptions) { _cached_decoder_for_Ext_ForwOptions = $._decodeOctetString; }
-    return _cached_decoder_for_Ext_ForwOptions(el);
-}
-
-let _cached_encoder_for_Ext_ForwOptions: $.ASN1Encoder<Ext_ForwOptions> | null = null;
+export const _decode_Ext_ForwOptions = (el: _Element): Ext_ForwOptions => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("Ext_ForwOptions violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Ext_ForwOptions into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Ext_ForwOptions: $.ASN1Encoder<Ext_ForwOptions> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_ForwOptions, encoded as an ASN.1 Element.
  */
-export
-function _encode_Ext_ForwOptions (value: Ext_ForwOptions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Ext_ForwOptions) { _cached_encoder_for_Ext_ForwOptions = $._encodeOctetString; }
-    return _cached_encoder_for_Ext_ForwOptions(value, elGetter);
-}
+export const _encode_Ext_ForwOptions = $._encodeOctetString;
 
 
 /* eslint-enable */

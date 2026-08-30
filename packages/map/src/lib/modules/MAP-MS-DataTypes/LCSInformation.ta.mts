@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GMLC_List, _decode_GMLC_List, _encode_GMLC_List } from "../MAP-MS-DataTypes/GMLC-List.ta.mjs";
-// export { GMLC_List, _decode_GMLC_List, _encode_GMLC_List } from "../MAP-MS-DataTypes/GMLC-List.ta.mjs";
 import { LCS_PrivacyExceptionList, _decode_LCS_PrivacyExceptionList, _encode_LCS_PrivacyExceptionList } from "../MAP-MS-DataTypes/LCS-PrivacyExceptionList.ta.mjs";
-// export { LCS_PrivacyExceptionList, _decode_LCS_PrivacyExceptionList, _encode_LCS_PrivacyExceptionList } from "../MAP-MS-DataTypes/LCS-PrivacyExceptionList.ta.mjs";
 import { MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataTypes/MOLR-List.ta.mjs";
-// export { MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataTypes/MOLR-List.ta.mjs";
 
 
 /**
@@ -155,9 +152,9 @@ class LCSInformation {
  */
 export
 const _root_component_type_list_1_spec_for_LCSInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("gmlc-List", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("lcs-PrivacyExceptionList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("molr-List", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("gmlc-List", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("lcs-PrivacyExceptionList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("molr-List", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -183,7 +180,7 @@ const _root_component_type_list_2_spec_for_LCSInformation: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_LCSInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("add-lcs-PrivacyExceptionList", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("add-lcs-PrivacyExceptionList", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_LCSInformation: $.ASN1Decoder<LCSInformation> | null = null;
@@ -197,11 +194,11 @@ let _cached_decoder_for_LCSInformation: $.ASN1Decoder<LCSInformation> | null = n
 export
 function _decode_LCSInformation (el: _Element): LCSInformation {
     if (!_cached_decoder_for_LCSInformation) { _cached_decoder_for_LCSInformation = function (el: _Element): LCSInformation {
-    let gmlc_List: OPTIONAL<GMLC_List>;
-    let lcs_PrivacyExceptionList: OPTIONAL<LCS_PrivacyExceptionList>;
-    let molr_List: OPTIONAL<MOLR_List>;
-    let add_lcs_PrivacyExceptionList: OPTIONAL<LCS_PrivacyExceptionList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let gmlc_List: OPTIONAL<GMLC_List> = undefined;
+    let lcs_PrivacyExceptionList: OPTIONAL<LCS_PrivacyExceptionList> = undefined;
+    let molr_List: OPTIONAL<MOLR_List> = undefined;
+    let add_lcs_PrivacyExceptionList: OPTIONAL<LCS_PrivacyExceptionList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gmlc-List": (_el: _Element): void => { gmlc_List = $._decode_implicit<GMLC_List>(() => _decode_GMLC_List)(_el); },
         "lcs-PrivacyExceptionList": (_el: _Element): void => { lcs_PrivacyExceptionList = $._decode_implicit<LCS_PrivacyExceptionList>(() => _decode_LCS_PrivacyExceptionList)(_el); },

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-// export { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
 import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
-// export { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class CallBarringFeature {
  */
 export
 const _root_component_type_list_1_spec_for_CallBarringFeature: $.ComponentSpec[] = [
-    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)), undefined, undefined),
-    new $.ComponentSpec("ss-Status", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3))),
+    new $.ComponentSpec("ss-Status", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_CallBarringFeature: $.ASN1Decoder<CallBarringFeature> | 
 export
 function _decode_CallBarringFeature (el: _Element): CallBarringFeature {
     if (!_cached_decoder_for_CallBarringFeature) { _cached_decoder_for_CallBarringFeature = function (el: _Element): CallBarringFeature {
-    let basicService: OPTIONAL<BasicServiceCode>;
-    let ss_Status: OPTIONAL<SS_Status>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let basicService: OPTIONAL<BasicServiceCode> = undefined;
+    let ss_Status: OPTIONAL<SS_Status> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "basicService": (_el: _Element): void => { basicService = _decode_BasicServiceCode(_el); },
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<SS_Status>(() => _decode_SS_Status)(_el); }

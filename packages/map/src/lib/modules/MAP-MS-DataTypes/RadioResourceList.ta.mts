@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RadioResource, _decode_RadioResource, _encode_RadioResource } from "../MAP-MS-DataTypes/RadioResource.ta.mjs";
-// export { RadioResource, _decode_RadioResource, _encode_RadioResource } from "../MAP-MS-DataTypes/RadioResource.ta.mjs";
 
+
+import { maxNumOfRadioResources } from "./maxNumOfRadioResources.va.mjs";
 
 /**
  * @summary RadioResourceList
@@ -95,7 +97,11 @@ let _cached_decoder_for_RadioResourceList: $.ASN1Decoder<RadioResourceList> | nu
 export
 function _decode_RadioResourceList (el: _Element): RadioResourceList {
     if (!_cached_decoder_for_RadioResourceList) { _cached_decoder_for_RadioResourceList = $._decodeSequenceOf<RadioResource>(() => _decode_RadioResource); }
-    return _cached_decoder_for_RadioResourceList(el);
+    const value = _cached_decoder_for_RadioResourceList(el);
+    if (value.length < 1 || value.length > maxNumOfRadioResources) {
+        throw new ASN1SizeError("RadioResourceList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RadioResourceList: $.ASN1Encoder<RadioResourceList> | null = null;

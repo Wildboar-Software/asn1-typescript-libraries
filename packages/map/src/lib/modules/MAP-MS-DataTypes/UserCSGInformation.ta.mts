@@ -64,12 +64,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
-// export { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -153,8 +152,8 @@ class UserCSGInformation {
  */
 export
 const _root_component_type_list_1_spec_for_UserCSGInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("csg-Id", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("csg-Id", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -180,8 +179,8 @@ const _root_component_type_list_2_spec_for_UserCSGInformation: $.ComponentSpec[]
  */
 export
 const _extension_additions_list_spec_for_UserCSGInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("accessMode", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("cmi", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("accessMode", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("cmi", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_UserCSGInformation: $.ASN1Decoder<UserCSGInformation> | null = null;
@@ -196,10 +195,10 @@ export
 function _decode_UserCSGInformation (el: _Element): UserCSGInformation {
     if (!_cached_decoder_for_UserCSGInformation) { _cached_decoder_for_UserCSGInformation = function (el: _Element): UserCSGInformation {
     let csg_Id!: CSG_Id;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let accessMode: OPTIONAL<OCTET_STRING>;
-    let cmi: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let accessMode: OPTIONAL<OCTET_STRING> = undefined;
+    let cmi: OPTIONAL<OCTET_STRING> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "csg-Id": (_el: _Element): void => { csg_Id = $._decode_implicit<CSG_Id>(() => _decode_CSG_Id)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = $._decode_implicit<ExtensionContainer>(() => _decode_ExtensionContainer)(_el); },

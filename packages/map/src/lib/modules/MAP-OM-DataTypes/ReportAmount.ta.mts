@@ -275,21 +275,13 @@ const ReportAmount_infinity: ReportAmount = ReportAmount.infinity; /* LONG_NAMED
 export
 const infinity: ReportAmount = ReportAmount.infinity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ReportAmount: $.ASN1Decoder<ReportAmount> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportAmount
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReportAmount (el: _Element): ReportAmount {
-    if (!_cached_decoder_for_ReportAmount) { _cached_decoder_for_ReportAmount = $._decodeEnumerated; }
-    return _cached_decoder_for_ReportAmount(el);
-}
-
-let _cached_encoder_for_ReportAmount: $.ASN1Encoder<ReportAmount> | null = null;
+export const _decode_ReportAmount = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ReportAmount into an ASN.1 Element.
@@ -298,11 +290,7 @@ let _cached_encoder_for_ReportAmount: $.ASN1Encoder<ReportAmount> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportAmount, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReportAmount (value: ReportAmount, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportAmount) { _cached_encoder_for_ReportAmount = $._encodeEnumerated; }
-    return _cached_encoder_for_ReportAmount(value, elGetter);
-}
+export const _encode_ReportAmount = $._encodeEnumerated;
 
 
 /* eslint-enable */

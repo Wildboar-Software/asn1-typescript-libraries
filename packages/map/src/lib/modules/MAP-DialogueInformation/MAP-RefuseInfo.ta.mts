@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Reason, _enum_for_Reason, Reason_noReasonGiven /* IMPORTED_LONG_ENUMERATION_ITEM */, noReasonGiven /* IMPORTED_SHORT_ENUMERATION_ITEM */, Reason_invalidDestinationReference /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidDestinationReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, Reason_invalidOriginatingReference /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidOriginatingReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Reason, _encode_Reason } from "../MAP-DialogueInformation/Reason.ta.mjs";
-// export { Reason, _enum_for_Reason, Reason_noReasonGiven /* IMPORTED_LONG_ENUMERATION_ITEM */, noReasonGiven /* IMPORTED_SHORT_ENUMERATION_ITEM */, Reason_invalidDestinationReference /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidDestinationReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, Reason_invalidOriginatingReference /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidOriginatingReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Reason, _encode_Reason } from "../MAP-DialogueInformation/Reason.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -155,7 +153,7 @@ class MAP_RefuseInfo {
  */
 export
 const _root_component_type_list_1_spec_for_MAP_RefuseInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("reason", false, $.hasTag(_TagClass.universal, 10), undefined, undefined)
+    new $.ComponentSpec("reason", false, $.hasTag(_TagClass.universal, 10))
 ];
 
 /**
@@ -181,8 +179,8 @@ const _root_component_type_list_2_spec_for_MAP_RefuseInfo: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_MAP_RefuseInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("alternativeApplicationContext", true, $.hasTag(_TagClass.universal, 6), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("alternativeApplicationContext", true, $.hasTag(_TagClass.universal, 6))
 ];
 
 let _cached_decoder_for_MAP_RefuseInfo: $.ASN1Decoder<MAP_RefuseInfo> | null = null;
@@ -197,9 +195,9 @@ export
 function _decode_MAP_RefuseInfo (el: _Element): MAP_RefuseInfo {
     if (!_cached_decoder_for_MAP_RefuseInfo) { _cached_decoder_for_MAP_RefuseInfo = function (el: _Element): MAP_RefuseInfo {
     let reason!: Reason;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let alternativeApplicationContext: OPTIONAL<OBJECT_IDENTIFIER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let alternativeApplicationContext: OPTIONAL<OBJECT_IDENTIFIER> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "reason": (_el: _Element): void => { reason = _decode_Reason(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

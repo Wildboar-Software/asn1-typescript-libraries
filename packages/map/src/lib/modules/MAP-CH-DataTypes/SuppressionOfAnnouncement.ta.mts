@@ -82,21 +82,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SuppressionOfAnnouncement = NULL; // NullType
 
-let _cached_decoder_for_SuppressionOfAnnouncement: $.ASN1Decoder<SuppressionOfAnnouncement> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SuppressionOfAnnouncement
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SuppressionOfAnnouncement (el: _Element): SuppressionOfAnnouncement {
-    if (!_cached_decoder_for_SuppressionOfAnnouncement) { _cached_decoder_for_SuppressionOfAnnouncement = $._decodeNull; }
-    return _cached_decoder_for_SuppressionOfAnnouncement(el);
-}
-
-let _cached_encoder_for_SuppressionOfAnnouncement: $.ASN1Encoder<SuppressionOfAnnouncement> | null = null;
+export const _decode_SuppressionOfAnnouncement = $._decodeNull;
 
 /**
  * @summary Encodes a(n) SuppressionOfAnnouncement into an ASN.1 Element.
@@ -105,11 +97,7 @@ let _cached_encoder_for_SuppressionOfAnnouncement: $.ASN1Encoder<SuppressionOfAn
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SuppressionOfAnnouncement, encoded as an ASN.1 Element.
  */
-export
-function _encode_SuppressionOfAnnouncement (value: SuppressionOfAnnouncement, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SuppressionOfAnnouncement) { _cached_encoder_for_SuppressionOfAnnouncement = $._encodeNull; }
-    return _cached_encoder_for_SuppressionOfAnnouncement(value, elGetter);
-}
+export const _encode_SuppressionOfAnnouncement = $._encodeNull;
 
 
 /* eslint-enable */

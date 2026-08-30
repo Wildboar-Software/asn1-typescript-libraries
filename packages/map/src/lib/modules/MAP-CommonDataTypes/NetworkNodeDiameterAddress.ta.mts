@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
-// export { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
 
 
 /**
@@ -130,8 +129,8 @@ class NetworkNodeDiameterAddress {
  */
 export
 const _root_component_type_list_1_spec_for_NetworkNodeDiameterAddress: $.ComponentSpec[] = [
-    new $.ComponentSpec("diameter-Name", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("diameter-Realm", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("diameter-Name", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("diameter-Realm", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

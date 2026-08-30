@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type DL_Buffering_Suggested_Packet_Count = INTEGER;
 
-let _cached_decoder_for_DL_Buffering_Suggested_Packet_Count: $.ASN1Decoder<DL_Buffering_Suggested_Packet_Count> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DL_Buffering_Suggested_Packet_Count
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DL_Buffering_Suggested_Packet_Count (el: _Element): DL_Buffering_Suggested_Packet_Count {
-    if (!_cached_decoder_for_DL_Buffering_Suggested_Packet_Count) { _cached_decoder_for_DL_Buffering_Suggested_Packet_Count = $._decodeInteger; }
-    return _cached_decoder_for_DL_Buffering_Suggested_Packet_Count(el);
-}
-
-let _cached_encoder_for_DL_Buffering_Suggested_Packet_Count: $.ASN1Encoder<DL_Buffering_Suggested_Packet_Count> | null = null;
+export const _decode_DL_Buffering_Suggested_Packet_Count = (el: _Element): DL_Buffering_Suggested_Packet_Count => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < -1 || n > 2147483647) {
+        throw new ASN1OverflowError("DL_Buffering_Suggested_Packet_Count violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) DL_Buffering_Suggested_Packet_Count into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_DL_Buffering_Suggested_Packet_Count: $.ASN1Encoder<DL_Bu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DL_Buffering_Suggested_Packet_Count, encoded as an ASN.1 Element.
  */
-export
-function _encode_DL_Buffering_Suggested_Packet_Count (value: DL_Buffering_Suggested_Packet_Count, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DL_Buffering_Suggested_Packet_Count) { _cached_encoder_for_DL_Buffering_Suggested_Packet_Count = $._encodeInteger; }
-    return _cached_encoder_for_DL_Buffering_Suggested_Packet_Count(value, elGetter);
-}
+export const _encode_DL_Buffering_Suggested_Packet_Count = $._encodeInteger;
 
 
 /* eslint-enable */

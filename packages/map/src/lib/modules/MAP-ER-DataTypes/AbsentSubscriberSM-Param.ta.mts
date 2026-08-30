@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
-// export { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 
 
 /**
@@ -178,8 +174,8 @@ class AbsentSubscriberSM_Param {
  */
 export
 const _root_component_type_list_1_spec_for_AbsentSubscriberSM_Param: $.ComponentSpec[] = [
-    new $.ComponentSpec("absentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("absentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -205,10 +201,10 @@ const _root_component_type_list_2_spec_for_AbsentSubscriberSM_Param: $.Component
  */
 export
 const _extension_additions_list_spec_for_AbsentSubscriberSM_Param: $.ComponentSpec[] = [
-    new $.ComponentSpec("additionalAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("requestedRetransmissionTime", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("userIdentifierAlert", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("additionalAbsentSubscriberDiagnosticSM", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("requestedRetransmissionTime", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("userIdentifierAlert", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_AbsentSubscriberSM_Param: $.ASN1Decoder<AbsentSubscriberSM_Param> | null = null;
@@ -222,13 +218,13 @@ let _cached_decoder_for_AbsentSubscriberSM_Param: $.ASN1Decoder<AbsentSubscriber
 export
 function _decode_AbsentSubscriberSM_Param (el: _Element): AbsentSubscriberSM_Param {
     if (!_cached_decoder_for_AbsentSubscriberSM_Param) { _cached_decoder_for_AbsentSubscriberSM_Param = function (el: _Element): AbsentSubscriberSM_Param {
-    let absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>;
-    let imsi: OPTIONAL<IMSI>;
-    let requestedRetransmissionTime: OPTIONAL<Time>;
-    let userIdentifierAlert: OPTIONAL<IMSI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let requestedRetransmissionTime: OPTIONAL<Time> = undefined;
+    let userIdentifierAlert: OPTIONAL<IMSI> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "absentSubscriberDiagnosticSM": (_el: _Element): void => { absentSubscriberDiagnosticSM = _decode_AbsentSubscriberDiagnosticSM(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

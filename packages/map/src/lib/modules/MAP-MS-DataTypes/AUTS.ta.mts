@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AUTS = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_AUTS: $.ASN1Decoder<AUTS> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AUTS
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AUTS (el: _Element): AUTS {
-    if (!_cached_decoder_for_AUTS) { _cached_decoder_for_AUTS = $._decodeOctetString; }
-    return _cached_decoder_for_AUTS(el);
-}
-
-let _cached_encoder_for_AUTS: $.ASN1Encoder<AUTS> | null = null;
+export const _decode_AUTS = (el: _Element): AUTS => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 14 || value.length > 14) {
+        throw new ASN1SizeError("AUTS violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) AUTS into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_AUTS: $.ASN1Encoder<AUTS> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AUTS, encoded as an ASN.1 Element.
  */
-export
-function _encode_AUTS (value: AUTS, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AUTS) { _cached_encoder_for_AUTS = $._encodeOctetString; }
-    return _cached_encoder_for_AUTS(value, elGetter);
-}
+export const _encode_AUTS = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPC_AV, _decode_EPC_AV, _encode_EPC_AV } from "../MAP-MS-DataTypes/EPC-AV.ta.mjs";
-// export { EPC_AV, _decode_EPC_AV, _encode_EPC_AV } from "../MAP-MS-DataTypes/EPC-AV.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_EPS_AuthenticationSetList: $.ASN1Decoder<EPS_Authenticat
 export
 function _decode_EPS_AuthenticationSetList (el: _Element): EPS_AuthenticationSetList {
     if (!_cached_decoder_for_EPS_AuthenticationSetList) { _cached_decoder_for_EPS_AuthenticationSetList = $._decodeSequenceOf<EPC_AV>(() => _decode_EPC_AV); }
-    return _cached_decoder_for_EPS_AuthenticationSetList(el);
+    const value = _cached_decoder_for_EPS_AuthenticationSetList(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("EPS_AuthenticationSetList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_EPS_AuthenticationSetList: $.ASN1Encoder<EPS_AuthenticationSetList> | null = null;

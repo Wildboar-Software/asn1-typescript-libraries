@@ -67,37 +67,21 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-// export { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
 import { PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
-// export { PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
 import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
-// export { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
 import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-// export { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 import { NSAPI, _decode_NSAPI, _encode_NSAPI } from "../MAP-MS-DataTypes/NSAPI.ta.mjs";
-// export { NSAPI, _decode_NSAPI, _encode_NSAPI } from "../MAP-MS-DataTypes/NSAPI.ta.mjs";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MAP-MS-DataTypes/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MAP-MS-DataTypes/TransactionId.ta.mjs";
 import { TEID, _decode_TEID, _encode_TEID } from "../MAP-MS-DataTypes/TEID.ta.mjs";
-// export { TEID, _decode_TEID, _encode_TEID } from "../MAP-MS-DataTypes/TEID.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
-// export { Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
 import { GPRSChargingID, _decode_GPRSChargingID, _encode_GPRSChargingID } from "../MAP-MS-DataTypes/GPRSChargingID.ta.mjs";
-// export { GPRSChargingID, _decode_GPRSChargingID, _encode_GPRSChargingID } from "../MAP-MS-DataTypes/GPRSChargingID.ta.mjs";
 import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
-// export { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Ext2_QoS_Subscribed, _decode_Ext2_QoS_Subscribed, _encode_Ext2_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext2-QoS-Subscribed.ta.mjs";
-// export { Ext2_QoS_Subscribed, _decode_Ext2_QoS_Subscribed, _encode_Ext2_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext2-QoS-Subscribed.ta.mjs";
 import { Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext3-QoS-Subscribed.ta.mjs";
-// export { Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext3-QoS-Subscribed.ta.mjs";
 import { Ext4_QoS_Subscribed, _decode_Ext4_QoS_Subscribed, _encode_Ext4_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext4-QoS-Subscribed.ta.mjs";
-// export { Ext4_QoS_Subscribed, _decode_Ext4_QoS_Subscribed, _encode_Ext4_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext4-QoS-Subscribed.ta.mjs";
 import { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
-// export { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
 
 
 /**
@@ -374,24 +358,24 @@ class PDP_ContextInfo {
  */
 export
 const _root_component_type_list_1_spec_for_PDP_ContextInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("pdp-ContextIdentifier", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("pdp-ContextActive", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("pdp-Type", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("pdp-Address", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("apn-Subscribed", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("apn-InUse", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("nsapi", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("transactionId", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("teid-ForGnAndGp", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("teid-ForIu", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("ggsn-Address", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("qos-Subscribed", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("qos-Requested", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("qos-Negotiated", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("chargingId", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("chargingCharacteristics", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("rnc-Address", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 17), undefined, undefined)
+    new $.ComponentSpec("pdp-ContextIdentifier", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("pdp-ContextActive", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("pdp-Type", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("pdp-Address", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("apn-Subscribed", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("apn-InUse", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("nsapi", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("transactionId", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("teid-ForGnAndGp", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("teid-ForIu", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("ggsn-Address", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("qos-Subscribed", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("qos-Requested", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("qos-Negotiated", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("chargingId", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("chargingCharacteristics", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("rnc-Address", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 17))
 ];
 
 /**
@@ -417,17 +401,17 @@ const _root_component_type_list_2_spec_for_PDP_ContextInfo: $.ComponentSpec[] = 
  */
 export
 const _extension_additions_list_spec_for_PDP_ContextInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("qos2-Subscribed", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("qos2-Requested", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("qos2-Negotiated", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("qos3-Subscribed", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("qos3-Requested", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("qos3-Negotiated", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("qos4-Subscribed", true, $.hasTag(_TagClass.context, 25), undefined, undefined),
-    new $.ComponentSpec("qos4-Requested", true, $.hasTag(_TagClass.context, 26), undefined, undefined),
-    new $.ComponentSpec("qos4-Negotiated", true, $.hasTag(_TagClass.context, 27), undefined, undefined),
-    new $.ComponentSpec("ext-pdp-Type", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    new $.ComponentSpec("ext-pdp-Address", true, $.hasTag(_TagClass.context, 29), undefined, undefined)
+    new $.ComponentSpec("qos2-Subscribed", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("qos2-Requested", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("qos2-Negotiated", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("qos3-Subscribed", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("qos3-Requested", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("qos3-Negotiated", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("qos4-Subscribed", true, $.hasTag(_TagClass.context, 25)),
+    new $.ComponentSpec("qos4-Requested", true, $.hasTag(_TagClass.context, 26)),
+    new $.ComponentSpec("qos4-Negotiated", true, $.hasTag(_TagClass.context, 27)),
+    new $.ComponentSpec("ext-pdp-Type", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("ext-pdp-Address", true, $.hasTag(_TagClass.context, 29))
 ];
 
 let _cached_decoder_for_PDP_ContextInfo: $.ASN1Decoder<PDP_ContextInfo> | null = null;
@@ -442,35 +426,35 @@ export
 function _decode_PDP_ContextInfo (el: _Element): PDP_ContextInfo {
     if (!_cached_decoder_for_PDP_ContextInfo) { _cached_decoder_for_PDP_ContextInfo = function (el: _Element): PDP_ContextInfo {
     let pdp_ContextIdentifier!: ContextId;
-    let pdp_ContextActive: OPTIONAL<NULL>;
+    let pdp_ContextActive: OPTIONAL<NULL> = undefined;
     let pdp_Type!: PDP_Type;
-    let pdp_Address: OPTIONAL<PDP_Address>;
-    let apn_Subscribed: OPTIONAL<APN>;
-    let apn_InUse: OPTIONAL<APN>;
-    let nsapi: OPTIONAL<NSAPI>;
-    let transactionId: OPTIONAL<TransactionId>;
-    let teid_ForGnAndGp: OPTIONAL<TEID>;
-    let teid_ForIu: OPTIONAL<TEID>;
-    let ggsn_Address: OPTIONAL<GSN_Address>;
-    let qos_Subscribed: OPTIONAL<Ext_QoS_Subscribed>;
-    let qos_Requested: OPTIONAL<Ext_QoS_Subscribed>;
-    let qos_Negotiated: OPTIONAL<Ext_QoS_Subscribed>;
-    let chargingId: OPTIONAL<GPRSChargingID>;
-    let chargingCharacteristics: OPTIONAL<ChargingCharacteristics>;
-    let rnc_Address: OPTIONAL<GSN_Address>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let qos2_Subscribed: OPTIONAL<Ext2_QoS_Subscribed>;
-    let qos2_Requested: OPTIONAL<Ext2_QoS_Subscribed>;
-    let qos2_Negotiated: OPTIONAL<Ext2_QoS_Subscribed>;
-    let qos3_Subscribed: OPTIONAL<Ext3_QoS_Subscribed>;
-    let qos3_Requested: OPTIONAL<Ext3_QoS_Subscribed>;
-    let qos3_Negotiated: OPTIONAL<Ext3_QoS_Subscribed>;
-    let qos4_Subscribed: OPTIONAL<Ext4_QoS_Subscribed>;
-    let qos4_Requested: OPTIONAL<Ext4_QoS_Subscribed>;
-    let qos4_Negotiated: OPTIONAL<Ext4_QoS_Subscribed>;
-    let ext_pdp_Type: OPTIONAL<Ext_PDP_Type>;
-    let ext_pdp_Address: OPTIONAL<PDP_Address>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let pdp_Address: OPTIONAL<PDP_Address> = undefined;
+    let apn_Subscribed: OPTIONAL<APN> = undefined;
+    let apn_InUse: OPTIONAL<APN> = undefined;
+    let nsapi: OPTIONAL<NSAPI> = undefined;
+    let transactionId: OPTIONAL<TransactionId> = undefined;
+    let teid_ForGnAndGp: OPTIONAL<TEID> = undefined;
+    let teid_ForIu: OPTIONAL<TEID> = undefined;
+    let ggsn_Address: OPTIONAL<GSN_Address> = undefined;
+    let qos_Subscribed: OPTIONAL<Ext_QoS_Subscribed> = undefined;
+    let qos_Requested: OPTIONAL<Ext_QoS_Subscribed> = undefined;
+    let qos_Negotiated: OPTIONAL<Ext_QoS_Subscribed> = undefined;
+    let chargingId: OPTIONAL<GPRSChargingID> = undefined;
+    let chargingCharacteristics: OPTIONAL<ChargingCharacteristics> = undefined;
+    let rnc_Address: OPTIONAL<GSN_Address> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let qos2_Subscribed: OPTIONAL<Ext2_QoS_Subscribed> = undefined;
+    let qos2_Requested: OPTIONAL<Ext2_QoS_Subscribed> = undefined;
+    let qos2_Negotiated: OPTIONAL<Ext2_QoS_Subscribed> = undefined;
+    let qos3_Subscribed: OPTIONAL<Ext3_QoS_Subscribed> = undefined;
+    let qos3_Requested: OPTIONAL<Ext3_QoS_Subscribed> = undefined;
+    let qos3_Negotiated: OPTIONAL<Ext3_QoS_Subscribed> = undefined;
+    let qos4_Subscribed: OPTIONAL<Ext4_QoS_Subscribed> = undefined;
+    let qos4_Requested: OPTIONAL<Ext4_QoS_Subscribed> = undefined;
+    let qos4_Negotiated: OPTIONAL<Ext4_QoS_Subscribed> = undefined;
+    let ext_pdp_Type: OPTIONAL<Ext_PDP_Type> = undefined;
+    let ext_pdp_Address: OPTIONAL<PDP_Address> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pdp-ContextIdentifier": (_el: _Element): void => { pdp_ContextIdentifier = $._decode_implicit<ContextId>(() => _decode_ContextId)(_el); },
         "pdp-ContextActive": (_el: _Element): void => { pdp_ContextActive = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

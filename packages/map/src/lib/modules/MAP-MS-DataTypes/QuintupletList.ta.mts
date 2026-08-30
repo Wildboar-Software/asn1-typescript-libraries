@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticationQuintuplet, _decode_AuthenticationQuintuplet, _encode_AuthenticationQuintuplet } from "../MAP-MS-DataTypes/AuthenticationQuintuplet.ta.mjs";
-// export { AuthenticationQuintuplet, _decode_AuthenticationQuintuplet, _encode_AuthenticationQuintuplet } from "../MAP-MS-DataTypes/AuthenticationQuintuplet.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_QuintupletList: $.ASN1Decoder<QuintupletList> | null = n
 export
 function _decode_QuintupletList (el: _Element): QuintupletList {
     if (!_cached_decoder_for_QuintupletList) { _cached_decoder_for_QuintupletList = $._decodeSequenceOf<AuthenticationQuintuplet>(() => _decode_AuthenticationQuintuplet); }
-    return _cached_decoder_for_QuintupletList(el);
+    const value = _cached_decoder_for_QuintupletList(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("QuintupletList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_QuintupletList: $.ASN1Encoder<QuintupletList> | null = null;

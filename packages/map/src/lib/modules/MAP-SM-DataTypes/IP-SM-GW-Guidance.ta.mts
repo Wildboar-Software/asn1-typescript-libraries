@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
-// export { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -146,9 +144,9 @@ class IP_SM_GW_Guidance {
  */
 export
 const _root_component_type_list_1_spec_for_IP_SM_GW_Guidance: $.ComponentSpec[] = [
-    new $.ComponentSpec("minimumDeliveryTimeValue", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("recommendedDeliveryTimeValue", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("minimumDeliveryTimeValue", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("recommendedDeliveryTimeValue", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -190,8 +188,8 @@ function _decode_IP_SM_GW_Guidance (el: _Element): IP_SM_GW_Guidance {
     if (!_cached_decoder_for_IP_SM_GW_Guidance) { _cached_decoder_for_IP_SM_GW_Guidance = function (el: _Element): IP_SM_GW_Guidance {
     let minimumDeliveryTimeValue!: SM_DeliveryTimerValue;
     let recommendedDeliveryTimeValue!: SM_DeliveryTimerValue;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "minimumDeliveryTimeValue": (_el: _Element): void => { minimumDeliveryTimeValue = _decode_SM_DeliveryTimerValue(_el); },
         "recommendedDeliveryTimeValue": (_el: _Element): void => { recommendedDeliveryTimeValue = _decode_SM_DeliveryTimerValue(_el); },

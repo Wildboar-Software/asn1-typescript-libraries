@@ -82,21 +82,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Bandwidth = INTEGER;
 
-let _cached_decoder_for_Bandwidth: $.ASN1Decoder<Bandwidth> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Bandwidth
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Bandwidth (el: _Element): Bandwidth {
-    if (!_cached_decoder_for_Bandwidth) { _cached_decoder_for_Bandwidth = $._decodeInteger; }
-    return _cached_decoder_for_Bandwidth(el);
-}
-
-let _cached_encoder_for_Bandwidth: $.ASN1Encoder<Bandwidth> | null = null;
+export const _decode_Bandwidth = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) Bandwidth into an ASN.1 Element.
@@ -105,11 +97,7 @@ let _cached_encoder_for_Bandwidth: $.ASN1Encoder<Bandwidth> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Bandwidth, encoded as an ASN.1 Element.
  */
-export
-function _encode_Bandwidth (value: Bandwidth, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Bandwidth) { _cached_encoder_for_Bandwidth = $._encodeInteger; }
-    return _cached_encoder_for_Bandwidth(value, elGetter);
-}
+export const _encode_Bandwidth = $._encodeInteger;
 
 
 /* eslint-enable */

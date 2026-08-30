@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
-// export { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
 import { SRES, _decode_SRES, _encode_SRES } from "../MAP-MS-DataTypes/SRES.ta.mjs";
-// export { SRES, _decode_SRES, _encode_SRES } from "../MAP-MS-DataTypes/SRES.ta.mjs";
 import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
-// export { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class AuthenticationTriplet {
  */
 export
 const _root_component_type_list_1_spec_for_AuthenticationTriplet: $.ComponentSpec[] = [
-    new $.ComponentSpec("rand", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("sres", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("kc", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("rand", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("sres", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("kc", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**

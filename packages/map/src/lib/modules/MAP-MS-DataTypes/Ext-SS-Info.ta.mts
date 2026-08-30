@@ -67,15 +67,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_ForwInfo, _decode_Ext_ForwInfo, _encode_Ext_ForwInfo } from "../MAP-MS-DataTypes/Ext-ForwInfo.ta.mjs";
-// export { Ext_ForwInfo, _decode_Ext_ForwInfo, _encode_Ext_ForwInfo } from "../MAP-MS-DataTypes/Ext-ForwInfo.ta.mjs";
 import { Ext_CallBarInfo, _decode_Ext_CallBarInfo, _encode_Ext_CallBarInfo } from "../MAP-MS-DataTypes/Ext-CallBarInfo.ta.mjs";
-// export { Ext_CallBarInfo, _decode_Ext_CallBarInfo, _encode_Ext_CallBarInfo } from "../MAP-MS-DataTypes/Ext-CallBarInfo.ta.mjs";
 import { CUG_Info, _decode_CUG_Info, _encode_CUG_Info } from "../MAP-MS-DataTypes/CUG-Info.ta.mjs";
-// export { CUG_Info, _decode_CUG_Info, _encode_CUG_Info } from "../MAP-MS-DataTypes/CUG-Info.ta.mjs";
 import { Ext_SS_Data, _decode_Ext_SS_Data, _encode_Ext_SS_Data } from "../MAP-MS-DataTypes/Ext-SS-Data.ta.mjs";
-// export { Ext_SS_Data, _decode_Ext_SS_Data, _encode_Ext_SS_Data } from "../MAP-MS-DataTypes/Ext-SS-Data.ta.mjs";
 import { EMLPP_Info, _decode_EMLPP_Info, _encode_EMLPP_Info } from "../MAP-CommonDataTypes/EMLPP-Info.ta.mjs";
-// export { EMLPP_Info, _decode_EMLPP_Info, _encode_EMLPP_Info } from "../MAP-CommonDataTypes/EMLPP-Info.ta.mjs";
 
 
 /**

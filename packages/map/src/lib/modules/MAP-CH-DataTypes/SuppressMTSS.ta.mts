@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -112,21 +113,19 @@ const SuppressMTSS_suppressCCBS: number = 1; /* LONG_NAMED_BIT */
 export
 const suppressCCBS: number = SuppressMTSS_suppressCCBS; /* SHORT_NAMED_BIT */
 
-let _cached_decoder_for_SuppressMTSS: $.ASN1Decoder<SuppressMTSS> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SuppressMTSS
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SuppressMTSS (el: _Element): SuppressMTSS {
-    if (!_cached_decoder_for_SuppressMTSS) { _cached_decoder_for_SuppressMTSS = $._decodeBitString; }
-    return _cached_decoder_for_SuppressMTSS(el);
-}
-
-let _cached_encoder_for_SuppressMTSS: $.ASN1Encoder<SuppressMTSS> | null = null;
+export const _decode_SuppressMTSS = (el: _Element): SuppressMTSS => {
+    const value = $._decodeBitString(el);
+    if (value.length < 2 || value.length > 16) {
+        throw new ASN1SizeError("SuppressMTSS violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SuppressMTSS into an ASN.1 Element.
@@ -135,11 +134,7 @@ let _cached_encoder_for_SuppressMTSS: $.ASN1Encoder<SuppressMTSS> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SuppressMTSS, encoded as an ASN.1 Element.
  */
-export
-function _encode_SuppressMTSS (value: SuppressMTSS, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SuppressMTSS) { _cached_encoder_for_SuppressMTSS = $._encodeBitString; }
-    return _cached_encoder_for_SuppressMTSS(value, elGetter);
-}
+export const _encode_SuppressMTSS = $._encodeBitString;
 
 
 /* eslint-enable */

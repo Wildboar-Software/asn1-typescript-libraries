@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallBarringCause, _enum_for_CallBarringCause, CallBarringCause_barringServiceActive /* IMPORTED_LONG_ENUMERATION_ITEM */, barringServiceActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallBarringCause_operatorBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallBarringCause, _encode_CallBarringCause } from "../MAP-ER-DataTypes/CallBarringCause.ta.mjs";
-// export { CallBarringCause, _enum_for_CallBarringCause, CallBarringCause_barringServiceActive /* IMPORTED_LONG_ENUMERATION_ITEM */, barringServiceActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallBarringCause_operatorBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallBarringCause, _encode_CallBarringCause } from "../MAP-ER-DataTypes/CallBarringCause.ta.mjs";
 import { ExtensibleCallBarredParam, _decode_ExtensibleCallBarredParam, _encode_ExtensibleCallBarredParam } from "../MAP-ER-DataTypes/ExtensibleCallBarredParam.ta.mjs";
-// export { ExtensibleCallBarredParam, _decode_ExtensibleCallBarredParam, _encode_ExtensibleCallBarredParam } from "../MAP-ER-DataTypes/ExtensibleCallBarredParam.ta.mjs";
 
 
 /**

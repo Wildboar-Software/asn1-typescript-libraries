@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxPermittedIntegrityProtectionAlgorithmsLength } from "./maxPermittedIntegrityProtectionAlgorithmsLength.va.mjs";
 
 /**
  * @summary PermittedIntegrityProtectionAlgorithms
@@ -83,21 +86,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PermittedIntegrityProtectionAlgorithms = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_PermittedIntegrityProtectionAlgorithms: $.ASN1Decoder<PermittedIntegrityProtectionAlgorithms> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PermittedIntegrityProtectionAlgorithms
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PermittedIntegrityProtectionAlgorithms (el: _Element): PermittedIntegrityProtectionAlgorithms {
-    if (!_cached_decoder_for_PermittedIntegrityProtectionAlgorithms) { _cached_decoder_for_PermittedIntegrityProtectionAlgorithms = $._decodeOctetString; }
-    return _cached_decoder_for_PermittedIntegrityProtectionAlgorithms(el);
-}
-
-let _cached_encoder_for_PermittedIntegrityProtectionAlgorithms: $.ASN1Encoder<PermittedIntegrityProtectionAlgorithms> | null = null;
+export const _decode_PermittedIntegrityProtectionAlgorithms = (el: _Element): PermittedIntegrityProtectionAlgorithms => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > maxPermittedIntegrityProtectionAlgorithmsLength) {
+        throw new ASN1SizeError("PermittedIntegrityProtectionAlgorithms violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) PermittedIntegrityProtectionAlgorithms into an ASN.1 Element.
@@ -106,11 +107,7 @@ let _cached_encoder_for_PermittedIntegrityProtectionAlgorithms: $.ASN1Encoder<Pe
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PermittedIntegrityProtectionAlgorithms, encoded as an ASN.1 Element.
  */
-export
-function _encode_PermittedIntegrityProtectionAlgorithms (value: PermittedIntegrityProtectionAlgorithms, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PermittedIntegrityProtectionAlgorithms) { _cached_encoder_for_PermittedIntegrityProtectionAlgorithms = $._encodeOctetString; }
-    return _cached_encoder_for_PermittedIntegrityProtectionAlgorithms(value, elGetter);
-}
+export const _encode_PermittedIntegrityProtectionAlgorithms = $._encodeOctetString;
 
 
 /* eslint-enable */

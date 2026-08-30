@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UUIndicator, _decode_UUIndicator, _encode_UUIndicator } from "../MAP-CH-DataTypes/UUIndicator.ta.mjs";
-// export { UUIndicator, _decode_UUIndicator, _encode_UUIndicator } from "../MAP-CH-DataTypes/UUIndicator.ta.mjs";
 import { UUI, _decode_UUI, _encode_UUI } from "../MAP-CH-DataTypes/UUI.ta.mjs";
-// export { UUI, _decode_UUI, _encode_UUI } from "../MAP-CH-DataTypes/UUI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -155,10 +152,10 @@ class UU_Data {
  */
 export
 const _root_component_type_list_1_spec_for_UU_Data: $.ComponentSpec[] = [
-    new $.ComponentSpec("uuIndicator", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("uui", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("uusCFInteraction", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("uuIndicator", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("uui", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("uusCFInteraction", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -198,11 +195,11 @@ let _cached_decoder_for_UU_Data: $.ASN1Decoder<UU_Data> | null = null;
 export
 function _decode_UU_Data (el: _Element): UU_Data {
     if (!_cached_decoder_for_UU_Data) { _cached_decoder_for_UU_Data = function (el: _Element): UU_Data {
-    let uuIndicator: OPTIONAL<UUIndicator>;
-    let uui: OPTIONAL<UUI>;
-    let uusCFInteraction: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let uuIndicator: OPTIONAL<UUIndicator> = undefined;
+    let uui: OPTIONAL<UUI> = undefined;
+    let uusCFInteraction: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uuIndicator": (_el: _Element): void => { uuIndicator = $._decode_implicit<UUIndicator>(() => _decode_UUIndicator)(_el); },
         "uui": (_el: _Element): void => { uui = $._decode_implicit<UUI>(() => _decode_UUI)(_el); },

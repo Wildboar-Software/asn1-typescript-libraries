@@ -179,21 +179,13 @@ const AdditionalRequestedCAMEL_SubscriptionInfo_vt_IM_CSI: AdditionalRequestedCA
 export
 const vt_IM_CSI: AdditionalRequestedCAMEL_SubscriptionInfo = AdditionalRequestedCAMEL_SubscriptionInfo_vt_IM_CSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AdditionalRequestedCAMEL_SubscriptionInfo: $.ASN1Decoder<AdditionalRequestedCAMEL_SubscriptionInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalRequestedCAMEL_SubscriptionInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AdditionalRequestedCAMEL_SubscriptionInfo (el: _Element): AdditionalRequestedCAMEL_SubscriptionInfo {
-    if (!_cached_decoder_for_AdditionalRequestedCAMEL_SubscriptionInfo) { _cached_decoder_for_AdditionalRequestedCAMEL_SubscriptionInfo = $._decodeEnumerated; }
-    return _cached_decoder_for_AdditionalRequestedCAMEL_SubscriptionInfo(el);
-}
-
-let _cached_encoder_for_AdditionalRequestedCAMEL_SubscriptionInfo: $.ASN1Encoder<AdditionalRequestedCAMEL_SubscriptionInfo> | null = null;
+export const _decode_AdditionalRequestedCAMEL_SubscriptionInfo = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AdditionalRequestedCAMEL_SubscriptionInfo into an ASN.1 Element.
@@ -202,11 +194,7 @@ let _cached_encoder_for_AdditionalRequestedCAMEL_SubscriptionInfo: $.ASN1Encoder
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdditionalRequestedCAMEL_SubscriptionInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_AdditionalRequestedCAMEL_SubscriptionInfo (value: AdditionalRequestedCAMEL_SubscriptionInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalRequestedCAMEL_SubscriptionInfo) { _cached_encoder_for_AdditionalRequestedCAMEL_SubscriptionInfo = $._encodeEnumerated; }
-    return _cached_encoder_for_AdditionalRequestedCAMEL_SubscriptionInfo(value, elGetter);
-}
+export const _encode_AdditionalRequestedCAMEL_SubscriptionInfo = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-Id.ta.mjs";
-// export { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-Id.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_TrackingAreaId_List: $.ASN1Decoder<TrackingAreaId_List> 
 export
 function _decode_TrackingAreaId_List (el: _Element): TrackingAreaId_List {
     if (!_cached_decoder_for_TrackingAreaId_List) { _cached_decoder_for_TrackingAreaId_List = $._decodeSequenceOf<TA_Id>(() => _decode_TA_Id); }
-    return _cached_decoder_for_TrackingAreaId_List(el);
+    const value = _cached_decoder_for_TrackingAreaId_List(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("TrackingAreaId_List violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_TrackingAreaId_List: $.ASN1Encoder<TrackingAreaId_List> | null = null;

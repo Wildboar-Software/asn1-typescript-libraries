@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxNumOfMC_Bearers } from "./maxNumOfMC-Bearers.va.mjs";
 
 /**
  * @summary MC_Bearers
@@ -82,21 +85,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MC_Bearers = INTEGER;
 
-let _cached_decoder_for_MC_Bearers: $.ASN1Decoder<MC_Bearers> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MC_Bearers
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MC_Bearers (el: _Element): MC_Bearers {
-    if (!_cached_decoder_for_MC_Bearers) { _cached_decoder_for_MC_Bearers = $._decodeInteger; }
-    return _cached_decoder_for_MC_Bearers(el);
-}
-
-let _cached_encoder_for_MC_Bearers: $.ASN1Encoder<MC_Bearers> | null = null;
+export const _decode_MC_Bearers = (el: _Element): MC_Bearers => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > maxNumOfMC_Bearers) {
+        throw new ASN1OverflowError("MC_Bearers violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MC_Bearers into an ASN.1 Element.
@@ -105,11 +107,7 @@ let _cached_encoder_for_MC_Bearers: $.ASN1Encoder<MC_Bearers> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MC_Bearers, encoded as an ASN.1 Element.
  */
-export
-function _encode_MC_Bearers (value: MC_Bearers, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MC_Bearers) { _cached_encoder_for_MC_Bearers = $._encodeInteger; }
-    return _cached_encoder_for_MC_Bearers(value, elGetter);
-}
+export const _encode_MC_Bearers = $._encodeInteger;
 
 
 /* eslint-enable */

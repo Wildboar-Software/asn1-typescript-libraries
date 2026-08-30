@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -158,7 +157,7 @@ const _root_component_type_list_2_spec_for_MAP_CloseInfo: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_MAP_CloseInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 let _cached_decoder_for_MAP_CloseInfo: $.ASN1Decoder<MAP_CloseInfo> | null = null;
@@ -172,8 +171,8 @@ let _cached_decoder_for_MAP_CloseInfo: $.ASN1Decoder<MAP_CloseInfo> | null = nul
 export
 function _decode_MAP_CloseInfo (el: _Element): MAP_CloseInfo {
     if (!_cached_decoder_for_MAP_CloseInfo) { _cached_decoder_for_MAP_CloseInfo = function (el: _Element): MAP_CloseInfo {
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }
     };

@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TripletList, _decode_TripletList, _encode_TripletList } from "../MAP-MS-DataTypes/TripletList.ta.mjs";
-// export { TripletList, _decode_TripletList, _encode_TripletList } from "../MAP-MS-DataTypes/TripletList.ta.mjs";
 import { QuintupletList, _decode_QuintupletList, _encode_QuintupletList } from "../MAP-MS-DataTypes/QuintupletList.ta.mjs";
-// export { QuintupletList, _decode_QuintupletList, _encode_QuintupletList } from "../MAP-MS-DataTypes/QuintupletList.ta.mjs";
 
 
 /**

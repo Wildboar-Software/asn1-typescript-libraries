@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
-// export { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
-// export { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 
 
 /**
@@ -178,9 +174,9 @@ class RoutingInfoForLCS_Res {
  */
 export
 const _root_component_type_list_1_spec_for_RoutingInfoForLCS_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("targetMS", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("lcsLocationInfo", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("targetMS", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("lcsLocationInfo", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -206,10 +202,10 @@ const _root_component_type_list_2_spec_for_RoutingInfoForLCS_Res: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_RoutingInfoForLCS_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("v-gmlc-Address", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("h-gmlc-Address", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("ppr-Address", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("additional-v-gmlc-Address", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("v-gmlc-Address", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("h-gmlc-Address", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("ppr-Address", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("additional-v-gmlc-Address", true, $.hasTag(_TagClass.context, 6))
 ];
 
 let _cached_decoder_for_RoutingInfoForLCS_Res: $.ASN1Decoder<RoutingInfoForLCS_Res> | null = null;
@@ -225,12 +221,12 @@ function _decode_RoutingInfoForLCS_Res (el: _Element): RoutingInfoForLCS_Res {
     if (!_cached_decoder_for_RoutingInfoForLCS_Res) { _cached_decoder_for_RoutingInfoForLCS_Res = function (el: _Element): RoutingInfoForLCS_Res {
     let targetMS!: SubscriberIdentity;
     let lcsLocationInfo!: LCSLocationInfo;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let v_gmlc_Address: OPTIONAL<GSN_Address>;
-    let h_gmlc_Address: OPTIONAL<GSN_Address>;
-    let ppr_Address: OPTIONAL<GSN_Address>;
-    let additional_v_gmlc_Address: OPTIONAL<GSN_Address>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let v_gmlc_Address: OPTIONAL<GSN_Address> = undefined;
+    let h_gmlc_Address: OPTIONAL<GSN_Address> = undefined;
+    let ppr_Address: OPTIONAL<GSN_Address> = undefined;
+    let additional_v_gmlc_Address: OPTIONAL<GSN_Address> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "targetMS": (_el: _Element): void => { targetMS = $._decode_explicit<SubscriberIdentity>(() => _decode_SubscriberIdentity)(_el); },
         "lcsLocationInfo": (_el: _Element): void => { lcsLocationInfo = $._decode_implicit<LCSLocationInfo>(() => _decode_LCSLocationInfo)(_el); },

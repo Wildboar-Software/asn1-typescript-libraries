@@ -175,21 +175,13 @@ const CliRestrictionOption_temporaryDefaultAllowed: CliRestrictionOption = CliRe
 export
 const temporaryDefaultAllowed: CliRestrictionOption = CliRestrictionOption.temporaryDefaultAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CliRestrictionOption: $.ASN1Decoder<CliRestrictionOption> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CliRestrictionOption
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CliRestrictionOption (el: _Element): CliRestrictionOption {
-    if (!_cached_decoder_for_CliRestrictionOption) { _cached_decoder_for_CliRestrictionOption = $._decodeEnumerated; }
-    return _cached_decoder_for_CliRestrictionOption(el);
-}
-
-let _cached_encoder_for_CliRestrictionOption: $.ASN1Encoder<CliRestrictionOption> | null = null;
+export const _decode_CliRestrictionOption = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CliRestrictionOption into an ASN.1 Element.
@@ -198,11 +190,7 @@ let _cached_encoder_for_CliRestrictionOption: $.ASN1Encoder<CliRestrictionOption
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CliRestrictionOption, encoded as an ASN.1 Element.
  */
-export
-function _encode_CliRestrictionOption (value: CliRestrictionOption, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CliRestrictionOption) { _cached_encoder_for_CliRestrictionOption = $._encodeEnumerated; }
-    return _cached_encoder_for_CliRestrictionOption(value, elGetter);
-}
+export const _encode_CliRestrictionOption = $._encodeEnumerated;
 
 
 /* eslint-enable */

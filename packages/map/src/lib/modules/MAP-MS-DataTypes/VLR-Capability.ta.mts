@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-// export { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { IST_SupportIndicator, _enum_for_IST_SupportIndicator, IST_SupportIndicator_basicISTSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, basicISTSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IST_SupportIndicator_istCommandSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, istCommandSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
-// export { IST_SupportIndicator, _enum_for_IST_SupportIndicator, IST_SupportIndicator_basicISTSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, basicISTSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IST_SupportIndicator_istCommandSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, istCommandSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
 import { SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
-// export { SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
 import { SupportedLCS_CapabilitySets, SupportedLCS_CapabilitySets_lcsCapabilitySet1 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet2 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet3 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet4 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet4 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet5 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet5 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
-// export { SupportedLCS_CapabilitySets, SupportedLCS_CapabilitySets_lcsCapabilitySet1 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet2 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet3 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet4 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet4 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet5 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet5 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
 import { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-// export { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
 import { SupportedRAT_Types, SupportedRAT_Types_utran /* IMPORTED_LONG_NAMED_BIT */, utran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_geran /* IMPORTED_LONG_NAMED_BIT */, geran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_gan /* IMPORTED_LONG_NAMED_BIT */, gan /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_i_hspa_evolution /* IMPORTED_LONG_NAMED_BIT */, i_hspa_evolution /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_e_utran /* IMPORTED_LONG_NAMED_BIT */, e_utran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_nb_iot /* IMPORTED_LONG_NAMED_BIT */, nb_iot /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
-// export { SupportedRAT_Types, SupportedRAT_Types_utran /* IMPORTED_LONG_NAMED_BIT */, utran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_geran /* IMPORTED_LONG_NAMED_BIT */, geran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_gan /* IMPORTED_LONG_NAMED_BIT */, gan /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_i_hspa_evolution /* IMPORTED_LONG_NAMED_BIT */, i_hspa_evolution /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_e_utran /* IMPORTED_LONG_NAMED_BIT */, e_utran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_nb_iot /* IMPORTED_LONG_NAMED_BIT */, nb_iot /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
 
 
 /**
@@ -232,8 +225,8 @@ class VLR_Capability {
  */
 export
 const _root_component_type_list_1_spec_for_VLR_Capability: $.ComponentSpec[] = [
-    new $.ComponentSpec("supportedCamelPhases", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("supportedCamelPhases", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -259,17 +252,17 @@ const _root_component_type_list_2_spec_for_VLR_Capability: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_VLR_Capability: $.ComponentSpec[] = [
-    new $.ComponentSpec("solsaSupportIndicator", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("istSupportIndicator", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("superChargerSupportedInServingNetworkEntity", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("supportedLCS-CapabilitySets", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("offeredCamel4CSIs", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("supportedRAT-TypesIndicator", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("longGroupID-Supported", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("mtRoamingForwardingSupported", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("msisdn-lessOperation-Supported", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("reset-ids-Supported", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("solsaSupportIndicator", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("istSupportIndicator", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("superChargerSupportedInServingNetworkEntity", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("longFTN-Supported", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("supportedLCS-CapabilitySets", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("offeredCamel4CSIs", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("supportedRAT-TypesIndicator", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("longGroupID-Supported", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("mtRoamingForwardingSupported", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("msisdn-lessOperation-Supported", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("reset-ids-Supported", true, $.hasTag(_TagClass.context, 11))
 ];
 
 let _cached_decoder_for_VLR_Capability: $.ASN1Decoder<VLR_Capability> | null = null;
@@ -283,20 +276,20 @@ let _cached_decoder_for_VLR_Capability: $.ASN1Decoder<VLR_Capability> | null = n
 export
 function _decode_VLR_Capability (el: _Element): VLR_Capability {
     if (!_cached_decoder_for_VLR_Capability) { _cached_decoder_for_VLR_Capability = function (el: _Element): VLR_Capability {
-    let supportedCamelPhases: OPTIONAL<SupportedCamelPhases>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let solsaSupportIndicator: OPTIONAL<NULL>;
-    let istSupportIndicator: OPTIONAL<IST_SupportIndicator>;
-    let superChargerSupportedInServingNetworkEntity: OPTIONAL<SuperChargerInfo>;
-    let longFTN_Supported: OPTIONAL<NULL>;
-    let supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>;
-    let offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs>;
-    let supportedRAT_TypesIndicator: OPTIONAL<SupportedRAT_Types>;
-    let longGroupID_Supported: OPTIONAL<NULL>;
-    let mtRoamingForwardingSupported: OPTIONAL<NULL>;
-    let msisdn_lessOperation_Supported: OPTIONAL<NULL>;
-    let reset_ids_Supported: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let supportedCamelPhases: OPTIONAL<SupportedCamelPhases> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let solsaSupportIndicator: OPTIONAL<NULL> = undefined;
+    let istSupportIndicator: OPTIONAL<IST_SupportIndicator> = undefined;
+    let superChargerSupportedInServingNetworkEntity: OPTIONAL<SuperChargerInfo> = undefined;
+    let longFTN_Supported: OPTIONAL<NULL> = undefined;
+    let supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets> = undefined;
+    let offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs> = undefined;
+    let supportedRAT_TypesIndicator: OPTIONAL<SupportedRAT_Types> = undefined;
+    let longGroupID_Supported: OPTIONAL<NULL> = undefined;
+    let mtRoamingForwardingSupported: OPTIONAL<NULL> = undefined;
+    let msisdn_lessOperation_Supported: OPTIONAL<NULL> = undefined;
+    let reset_ids_Supported: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "supportedCamelPhases": (_el: _Element): void => { supportedCamelPhases = $._decode_implicit<SupportedCamelPhases>(() => _decode_SupportedCamelPhases)(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

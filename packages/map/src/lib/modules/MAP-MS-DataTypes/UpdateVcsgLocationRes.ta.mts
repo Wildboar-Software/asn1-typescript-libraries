@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -137,8 +136,8 @@ class UpdateVcsgLocationRes {
  */
 export
 const _root_component_type_list_1_spec_for_UpdateVcsgLocationRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("temporaryEmptySubscriptiondataIndicator", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("temporaryEmptySubscriptiondataIndicator", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -178,9 +177,9 @@ let _cached_decoder_for_UpdateVcsgLocationRes: $.ASN1Decoder<UpdateVcsgLocationR
 export
 function _decode_UpdateVcsgLocationRes (el: _Element): UpdateVcsgLocationRes {
     if (!_cached_decoder_for_UpdateVcsgLocationRes) { _cached_decoder_for_UpdateVcsgLocationRes = function (el: _Element): UpdateVcsgLocationRes {
-    let temporaryEmptySubscriptiondataIndicator: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let temporaryEmptySubscriptiondataIndicator: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "temporaryEmptySubscriptiondataIndicator": (_el: _Element): void => { temporaryEmptySubscriptiondataIndicator = $._decodeNull(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

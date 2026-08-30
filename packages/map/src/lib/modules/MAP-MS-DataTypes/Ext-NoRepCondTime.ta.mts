@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Ext_NoRepCondTime = INTEGER;
 
-let _cached_decoder_for_Ext_NoRepCondTime: $.ASN1Decoder<Ext_NoRepCondTime> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext_NoRepCondTime
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Ext_NoRepCondTime (el: _Element): Ext_NoRepCondTime {
-    if (!_cached_decoder_for_Ext_NoRepCondTime) { _cached_decoder_for_Ext_NoRepCondTime = $._decodeInteger; }
-    return _cached_decoder_for_Ext_NoRepCondTime(el);
-}
-
-let _cached_encoder_for_Ext_NoRepCondTime: $.ASN1Encoder<Ext_NoRepCondTime> | null = null;
+export const _decode_Ext_NoRepCondTime = (el: _Element): Ext_NoRepCondTime => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > 100) {
+        throw new ASN1OverflowError("Ext_NoRepCondTime violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Ext_NoRepCondTime into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_Ext_NoRepCondTime: $.ASN1Encoder<Ext_NoRepCondTime> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_NoRepCondTime, encoded as an ASN.1 Element.
  */
-export
-function _encode_Ext_NoRepCondTime (value: Ext_NoRepCondTime, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Ext_NoRepCondTime) { _cached_encoder_for_Ext_NoRepCondTime = $._encodeInteger; }
-    return _cached_encoder_for_Ext_NoRepCondTime(value, elGetter);
-}
+export const _encode_Ext_NoRepCondTime = $._encodeInteger;
 
 
 /* eslint-enable */

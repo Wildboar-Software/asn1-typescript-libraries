@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SupportedCCBS_Phase = INTEGER;
 
-let _cached_decoder_for_SupportedCCBS_Phase: $.ASN1Decoder<SupportedCCBS_Phase> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedCCBS_Phase
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SupportedCCBS_Phase (el: _Element): SupportedCCBS_Phase {
-    if (!_cached_decoder_for_SupportedCCBS_Phase) { _cached_decoder_for_SupportedCCBS_Phase = $._decodeInteger; }
-    return _cached_decoder_for_SupportedCCBS_Phase(el);
-}
-
-let _cached_encoder_for_SupportedCCBS_Phase: $.ASN1Encoder<SupportedCCBS_Phase> | null = null;
+export const _decode_SupportedCCBS_Phase = (el: _Element): SupportedCCBS_Phase => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > 127) {
+        throw new ASN1OverflowError("SupportedCCBS_Phase violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SupportedCCBS_Phase into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_SupportedCCBS_Phase: $.ASN1Encoder<SupportedCCBS_Phase> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SupportedCCBS_Phase, encoded as an ASN.1 Element.
  */
-export
-function _encode_SupportedCCBS_Phase (value: SupportedCCBS_Phase, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupportedCCBS_Phase) { _cached_encoder_for_SupportedCCBS_Phase = $._encodeInteger; }
-    return _cached_encoder_for_SupportedCCBS_Phase(value, elGetter);
-}
+export const _encode_SupportedCCBS_Phase = $._encodeInteger;
 
 
 /* eslint-enable */

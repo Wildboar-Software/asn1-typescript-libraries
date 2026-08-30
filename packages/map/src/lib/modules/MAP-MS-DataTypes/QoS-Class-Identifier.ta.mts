@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type QoS_Class_Identifier = INTEGER;
 
-let _cached_decoder_for_QoS_Class_Identifier: $.ASN1Decoder<QoS_Class_Identifier> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) QoS_Class_Identifier
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_QoS_Class_Identifier (el: _Element): QoS_Class_Identifier {
-    if (!_cached_decoder_for_QoS_Class_Identifier) { _cached_decoder_for_QoS_Class_Identifier = $._decodeInteger; }
-    return _cached_decoder_for_QoS_Class_Identifier(el);
-}
-
-let _cached_encoder_for_QoS_Class_Identifier: $.ASN1Encoder<QoS_Class_Identifier> | null = null;
+export const _decode_QoS_Class_Identifier = (el: _Element): QoS_Class_Identifier => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > 9) {
+        throw new ASN1OverflowError("QoS_Class_Identifier violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) QoS_Class_Identifier into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_QoS_Class_Identifier: $.ASN1Encoder<QoS_Class_Identifier
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The QoS_Class_Identifier, encoded as an ASN.1 Element.
  */
-export
-function _encode_QoS_Class_Identifier (value: QoS_Class_Identifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_QoS_Class_Identifier) { _cached_encoder_for_QoS_Class_Identifier = $._encodeInteger; }
-    return _cached_encoder_for_QoS_Class_Identifier(value, elGetter);
-}
+export const _encode_QoS_Class_Identifier = $._encodeInteger;
 
 
 /* eslint-enable */

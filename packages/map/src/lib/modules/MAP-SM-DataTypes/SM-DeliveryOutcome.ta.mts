@@ -175,21 +175,13 @@ const SM_DeliveryOutcome_successfulTransfer: SM_DeliveryOutcome = SM_DeliveryOut
 export
 const successfulTransfer: SM_DeliveryOutcome = SM_DeliveryOutcome.successfulTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SM_DeliveryOutcome: $.ASN1Decoder<SM_DeliveryOutcome> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_DeliveryOutcome
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SM_DeliveryOutcome (el: _Element): SM_DeliveryOutcome {
-    if (!_cached_decoder_for_SM_DeliveryOutcome) { _cached_decoder_for_SM_DeliveryOutcome = $._decodeEnumerated; }
-    return _cached_decoder_for_SM_DeliveryOutcome(el);
-}
-
-let _cached_encoder_for_SM_DeliveryOutcome: $.ASN1Encoder<SM_DeliveryOutcome> | null = null;
+export const _decode_SM_DeliveryOutcome = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SM_DeliveryOutcome into an ASN.1 Element.
@@ -198,11 +190,7 @@ let _cached_encoder_for_SM_DeliveryOutcome: $.ASN1Encoder<SM_DeliveryOutcome> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_DeliveryOutcome, encoded as an ASN.1 Element.
  */
-export
-function _encode_SM_DeliveryOutcome (value: SM_DeliveryOutcome, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SM_DeliveryOutcome) { _cached_encoder_for_SM_DeliveryOutcome = $._encodeEnumerated; }
-    return _cached_encoder_for_SM_DeliveryOutcome(value, elGetter);
-}
+export const _encode_SM_DeliveryOutcome = $._encodeEnumerated;
 
 
 /* eslint-enable */

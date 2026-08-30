@@ -125,21 +125,13 @@ const UE_SRVCC_Capability_ue_srvcc_supported: UE_SRVCC_Capability = 1; /* LONG_N
 export
 const ue_srvcc_supported: UE_SRVCC_Capability = UE_SRVCC_Capability_ue_srvcc_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UE_SRVCC_Capability: $.ASN1Decoder<UE_SRVCC_Capability> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UE_SRVCC_Capability
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UE_SRVCC_Capability (el: _Element): UE_SRVCC_Capability {
-    if (!_cached_decoder_for_UE_SRVCC_Capability) { _cached_decoder_for_UE_SRVCC_Capability = $._decodeEnumerated; }
-    return _cached_decoder_for_UE_SRVCC_Capability(el);
-}
-
-let _cached_encoder_for_UE_SRVCC_Capability: $.ASN1Encoder<UE_SRVCC_Capability> | null = null;
+export const _decode_UE_SRVCC_Capability = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UE_SRVCC_Capability into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_UE_SRVCC_Capability: $.ASN1Encoder<UE_SRVCC_Capability> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UE_SRVCC_Capability, encoded as an ASN.1 Element.
  */
-export
-function _encode_UE_SRVCC_Capability (value: UE_SRVCC_Capability, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UE_SRVCC_Capability) { _cached_encoder_for_UE_SRVCC_Capability = $._encodeEnumerated; }
-    return _cached_encoder_for_UE_SRVCC_Capability(value, elGetter);
-}
+export const _encode_UE_SRVCC_Capability = $._encodeEnumerated;
 
 
 /* eslint-enable */

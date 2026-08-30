@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type LCS_Priority = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_LCS_Priority: $.ASN1Decoder<LCS_Priority> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_Priority
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCS_Priority (el: _Element): LCS_Priority {
-    if (!_cached_decoder_for_LCS_Priority) { _cached_decoder_for_LCS_Priority = $._decodeOctetString; }
-    return _cached_decoder_for_LCS_Priority(el);
-}
-
-let _cached_encoder_for_LCS_Priority: $.ASN1Encoder<LCS_Priority> | null = null;
+export const _decode_LCS_Priority = (el: _Element): LCS_Priority => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("LCS_Priority violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) LCS_Priority into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_LCS_Priority: $.ASN1Encoder<LCS_Priority> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCS_Priority, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCS_Priority (value: LCS_Priority, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCS_Priority) { _cached_encoder_for_LCS_Priority = $._encodeOctetString; }
-    return _cached_encoder_for_LCS_Priority(value, elGetter);
-}
+export const _encode_LCS_Priority = $._encodeOctetString;
 
 
 /* eslint-enable */

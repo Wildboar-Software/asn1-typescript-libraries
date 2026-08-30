@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MSNetworkCapability, _decode_MSNetworkCapability, _encode_MSNetworkCapability } from "../MAP-MS-DataTypes/MSNetworkCapability.ta.mjs";
-// export { MSNetworkCapability, _decode_MSNetworkCapability, _encode_MSNetworkCapability } from "../MAP-MS-DataTypes/MSNetworkCapability.ta.mjs";
 import { MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRadioAccessCapability } from "../MAP-MS-DataTypes/MSRadioAccessCapability.ta.mjs";
-// export { MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRadioAccessCapability } from "../MAP-MS-DataTypes/MSRadioAccessCapability.ta.mjs";
 
 
 /**
@@ -133,8 +131,8 @@ class GPRSMSClass {
  */
 export
 const _root_component_type_list_1_spec_for_GPRSMSClass: $.ComponentSpec[] = [
-    new $.ComponentSpec("mSNetworkCapability", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mSRadioAccessCapability", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("mSNetworkCapability", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mSRadioAccessCapability", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -175,7 +173,7 @@ export
 function _decode_GPRSMSClass (el: _Element): GPRSMSClass {
     if (!_cached_decoder_for_GPRSMSClass) { _cached_decoder_for_GPRSMSClass = function (el: _Element): GPRSMSClass {
     let mSNetworkCapability!: MSNetworkCapability;
-    let mSRadioAccessCapability: OPTIONAL<MSRadioAccessCapability>;
+    let mSRadioAccessCapability: OPTIONAL<MSRadioAccessCapability> = undefined;
     const callbacks: $.DecodingMap = {
         "mSNetworkCapability": (_el: _Element): void => { mSNetworkCapability = $._decode_implicit<MSNetworkCapability>(() => _decode_MSNetworkCapability)(_el); },
         "mSRadioAccessCapability": (_el: _Element): void => { mSRadioAccessCapability = $._decode_implicit<MSRadioAccessCapability>(() => _decode_MSRadioAccessCapability)(_el); }

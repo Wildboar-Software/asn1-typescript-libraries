@@ -143,21 +143,13 @@ const NetworkAccessMode_onlyPacket: NetworkAccessMode = 2; /* LONG_NAMED_ENUMERA
 export
 const onlyPacket: NetworkAccessMode = NetworkAccessMode_onlyPacket; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NetworkAccessMode: $.ASN1Decoder<NetworkAccessMode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NetworkAccessMode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NetworkAccessMode (el: _Element): NetworkAccessMode {
-    if (!_cached_decoder_for_NetworkAccessMode) { _cached_decoder_for_NetworkAccessMode = $._decodeEnumerated; }
-    return _cached_decoder_for_NetworkAccessMode(el);
-}
-
-let _cached_encoder_for_NetworkAccessMode: $.ASN1Encoder<NetworkAccessMode> | null = null;
+export const _decode_NetworkAccessMode = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NetworkAccessMode into an ASN.1 Element.
@@ -166,11 +158,7 @@ let _cached_encoder_for_NetworkAccessMode: $.ASN1Encoder<NetworkAccessMode> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NetworkAccessMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_NetworkAccessMode (value: NetworkAccessMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NetworkAccessMode) { _cached_encoder_for_NetworkAccessMode = $._encodeEnumerated; }
-    return _cached_encoder_for_NetworkAccessMode(value, elGetter);
-}
+export const _encode_NetworkAccessMode = $._encodeEnumerated;
 
 
 /* eslint-enable */

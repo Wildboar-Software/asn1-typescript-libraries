@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-// export { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
 
+
+import { maxNumOfBasicServiceGroups } from "./maxNumOfBasicServiceGroups.va.mjs";
 
 /**
  * @summary BasicServiceGroupList
@@ -95,7 +97,11 @@ let _cached_decoder_for_BasicServiceGroupList: $.ASN1Decoder<BasicServiceGroupLi
 export
 function _decode_BasicServiceGroupList (el: _Element): BasicServiceGroupList {
     if (!_cached_decoder_for_BasicServiceGroupList) { _cached_decoder_for_BasicServiceGroupList = $._decodeSequenceOf<BasicServiceCode>(() => _decode_BasicServiceCode); }
-    return _cached_decoder_for_BasicServiceGroupList(el);
+    const value = _cached_decoder_for_BasicServiceGroupList(el);
+    if (value.length < 1 || value.length > maxNumOfBasicServiceGroups) {
+        throw new ASN1SizeError("BasicServiceGroupList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_BasicServiceGroupList: $.ASN1Encoder<BasicServiceGroupList> | null = null;

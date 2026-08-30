@@ -180,21 +180,13 @@ const NumberPortabilityStatus_foreignNumberPortedIn: NumberPortabilityStatus = 5
 export
 const foreignNumberPortedIn: NumberPortabilityStatus = NumberPortabilityStatus_foreignNumberPortedIn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NumberPortabilityStatus: $.ASN1Decoder<NumberPortabilityStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NumberPortabilityStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NumberPortabilityStatus (el: _Element): NumberPortabilityStatus {
-    if (!_cached_decoder_for_NumberPortabilityStatus) { _cached_decoder_for_NumberPortabilityStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_NumberPortabilityStatus(el);
-}
-
-let _cached_encoder_for_NumberPortabilityStatus: $.ASN1Encoder<NumberPortabilityStatus> | null = null;
+export const _decode_NumberPortabilityStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NumberPortabilityStatus into an ASN.1 Element.
@@ -203,11 +195,7 @@ let _cached_encoder_for_NumberPortabilityStatus: $.ASN1Encoder<NumberPortability
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NumberPortabilityStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_NumberPortabilityStatus (value: NumberPortabilityStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NumberPortabilityStatus) { _cached_encoder_for_NumberPortabilityStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_NumberPortabilityStatus(value, elGetter);
-}
+export const _encode_NumberPortabilityStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

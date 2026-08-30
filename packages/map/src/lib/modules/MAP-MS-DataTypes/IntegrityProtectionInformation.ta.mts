@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxNumOfIntegrityInfo } from "./maxNumOfIntegrityInfo.va.mjs";
 
 /**
  * @summary IntegrityProtectionInformation
@@ -82,21 +85,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type IntegrityProtectionInformation = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_IntegrityProtectionInformation: $.ASN1Decoder<IntegrityProtectionInformation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IntegrityProtectionInformation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IntegrityProtectionInformation (el: _Element): IntegrityProtectionInformation {
-    if (!_cached_decoder_for_IntegrityProtectionInformation) { _cached_decoder_for_IntegrityProtectionInformation = $._decodeOctetString; }
-    return _cached_decoder_for_IntegrityProtectionInformation(el);
-}
-
-let _cached_encoder_for_IntegrityProtectionInformation: $.ASN1Encoder<IntegrityProtectionInformation> | null = null;
+export const _decode_IntegrityProtectionInformation = (el: _Element): IntegrityProtectionInformation => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 18 || value.length > maxNumOfIntegrityInfo) {
+        throw new ASN1SizeError("IntegrityProtectionInformation violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) IntegrityProtectionInformation into an ASN.1 Element.
@@ -105,11 +106,7 @@ let _cached_encoder_for_IntegrityProtectionInformation: $.ASN1Encoder<IntegrityP
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IntegrityProtectionInformation, encoded as an ASN.1 Element.
  */
-export
-function _encode_IntegrityProtectionInformation (value: IntegrityProtectionInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IntegrityProtectionInformation) { _cached_encoder_for_IntegrityProtectionInformation = $._encodeOctetString; }
-    return _cached_encoder_for_IntegrityProtectionInformation(value, elGetter);
-}
+export const _encode_IntegrityProtectionInformation = $._encodeOctetString;
 
 
 /* eslint-enable */

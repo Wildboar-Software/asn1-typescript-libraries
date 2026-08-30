@@ -64,10 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";
 
 /**
  * @summary ContextId
@@ -82,21 +85,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ContextId = INTEGER;
 
-let _cached_decoder_for_ContextId: $.ASN1Decoder<ContextId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ContextId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ContextId (el: _Element): ContextId {
-    if (!_cached_decoder_for_ContextId) { _cached_decoder_for_ContextId = $._decodeInteger; }
-    return _cached_decoder_for_ContextId(el);
-}
-
-let _cached_encoder_for_ContextId: $.ASN1Encoder<ContextId> | null = null;
+export const _decode_ContextId = (el: _Element): ContextId => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > maxNumOfPDP_Contexts) {
+        throw new ASN1OverflowError("ContextId violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) ContextId into an ASN.1 Element.
@@ -105,11 +107,7 @@ let _cached_encoder_for_ContextId: $.ASN1Encoder<ContextId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ContextId, encoded as an ASN.1 Element.
  */
-export
-function _encode_ContextId (value: ContextId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ContextId) { _cached_encoder_for_ContextId = $._encodeInteger; }
-    return _cached_encoder_for_ContextId(value, elGetter);
-}
+export const _encode_ContextId = $._encodeInteger;
 
 
 /* eslint-enable */

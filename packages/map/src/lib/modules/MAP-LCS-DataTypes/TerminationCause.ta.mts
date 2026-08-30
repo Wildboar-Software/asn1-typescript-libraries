@@ -269,21 +269,13 @@ const TerminationCause_networkTermination: TerminationCause = 9; /* LONG_NAMED_E
 export
 const networkTermination: TerminationCause = TerminationCause_networkTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TerminationCause: $.ASN1Decoder<TerminationCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminationCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TerminationCause (el: _Element): TerminationCause {
-    if (!_cached_decoder_for_TerminationCause) { _cached_decoder_for_TerminationCause = $._decodeEnumerated; }
-    return _cached_decoder_for_TerminationCause(el);
-}
-
-let _cached_encoder_for_TerminationCause: $.ASN1Encoder<TerminationCause> | null = null;
+export const _decode_TerminationCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TerminationCause into an ASN.1 Element.
@@ -292,11 +284,7 @@ let _cached_encoder_for_TerminationCause: $.ASN1Encoder<TerminationCause> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TerminationCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_TerminationCause (value: TerminationCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TerminationCause) { _cached_encoder_for_TerminationCause = $._encodeEnumerated; }
-    return _cached_encoder_for_TerminationCause(value, elGetter);
-}
+export const _encode_TerminationCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

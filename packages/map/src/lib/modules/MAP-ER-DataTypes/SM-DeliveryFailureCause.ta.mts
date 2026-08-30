@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SM_EnumeratedDeliveryFailureCause, _enum_for_SM_EnumeratedDeliveryFailureCause, SM_EnumeratedDeliveryFailureCause_memoryCapacityExceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryCapacityExceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_equipmentProtocolError /* IMPORTED_LONG_ENUMERATION_ITEM */, equipmentProtocolError /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_equipmentNotSM_Equipped /* IMPORTED_LONG_ENUMERATION_ITEM */, equipmentNotSM_Equipped /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_unknownServiceCentre /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownServiceCentre /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_sc_Congestion /* IMPORTED_LONG_ENUMERATION_ITEM */, sc_Congestion /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_invalidSME_Address /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidSME_Address /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberNotSC_Subscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SM_EnumeratedDeliveryFailureCause, _encode_SM_EnumeratedDeliveryFailureCause } from "../MAP-ER-DataTypes/SM-EnumeratedDeliveryFailureCause.ta.mjs";
-// export { SM_EnumeratedDeliveryFailureCause, _enum_for_SM_EnumeratedDeliveryFailureCause, SM_EnumeratedDeliveryFailureCause_memoryCapacityExceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryCapacityExceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_equipmentProtocolError /* IMPORTED_LONG_ENUMERATION_ITEM */, equipmentProtocolError /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_equipmentNotSM_Equipped /* IMPORTED_LONG_ENUMERATION_ITEM */, equipmentNotSM_Equipped /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_unknownServiceCentre /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownServiceCentre /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_sc_Congestion /* IMPORTED_LONG_ENUMERATION_ITEM */, sc_Congestion /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_invalidSME_Address /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidSME_Address /* IMPORTED_SHORT_ENUMERATION_ITEM */, SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberNotSC_Subscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SM_EnumeratedDeliveryFailureCause, _encode_SM_EnumeratedDeliveryFailureCause } from "../MAP-ER-DataTypes/SM-EnumeratedDeliveryFailureCause.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -154,9 +151,9 @@ class SM_DeliveryFailureCause {
  */
 export
 const _root_component_type_list_1_spec_for_SM_DeliveryFailureCause: $.ComponentSpec[] = [
-    new $.ComponentSpec("sm-EnumeratedDeliveryFailureCause", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("diagnosticInfo", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("sm-EnumeratedDeliveryFailureCause", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("diagnosticInfo", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -197,9 +194,9 @@ export
 function _decode_SM_DeliveryFailureCause (el: _Element): SM_DeliveryFailureCause {
     if (!_cached_decoder_for_SM_DeliveryFailureCause) { _cached_decoder_for_SM_DeliveryFailureCause = function (el: _Element): SM_DeliveryFailureCause {
     let sm_EnumeratedDeliveryFailureCause!: SM_EnumeratedDeliveryFailureCause;
-    let diagnosticInfo: OPTIONAL<SignalInfo>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let diagnosticInfo: OPTIONAL<SignalInfo> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sm-EnumeratedDeliveryFailureCause": (_el: _Element): void => { sm_EnumeratedDeliveryFailureCause = _decode_SM_EnumeratedDeliveryFailureCause(_el); },
         "diagnosticInfo": (_el: _Element): void => { diagnosticInfo = _decode_SignalInfo(_el); },

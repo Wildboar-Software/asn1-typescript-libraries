@@ -107,21 +107,13 @@ const AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed: AdditionalR
 export
 const supportedRAT_TypesNotAllowed: AdditionalRoamingNotAllowedCause = AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AdditionalRoamingNotAllowedCause: $.ASN1Decoder<AdditionalRoamingNotAllowedCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalRoamingNotAllowedCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AdditionalRoamingNotAllowedCause (el: _Element): AdditionalRoamingNotAllowedCause {
-    if (!_cached_decoder_for_AdditionalRoamingNotAllowedCause) { _cached_decoder_for_AdditionalRoamingNotAllowedCause = $._decodeEnumerated; }
-    return _cached_decoder_for_AdditionalRoamingNotAllowedCause(el);
-}
-
-let _cached_encoder_for_AdditionalRoamingNotAllowedCause: $.ASN1Encoder<AdditionalRoamingNotAllowedCause> | null = null;
+export const _decode_AdditionalRoamingNotAllowedCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AdditionalRoamingNotAllowedCause into an ASN.1 Element.
@@ -130,11 +122,7 @@ let _cached_encoder_for_AdditionalRoamingNotAllowedCause: $.ASN1Encoder<Addition
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdditionalRoamingNotAllowedCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_AdditionalRoamingNotAllowedCause (value: AdditionalRoamingNotAllowedCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalRoamingNotAllowedCause) { _cached_encoder_for_AdditionalRoamingNotAllowedCause = $._encodeEnumerated; }
-    return _cached_encoder_for_AdditionalRoamingNotAllowedCause(value, elGetter);
-}
+export const _encode_AdditionalRoamingNotAllowedCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

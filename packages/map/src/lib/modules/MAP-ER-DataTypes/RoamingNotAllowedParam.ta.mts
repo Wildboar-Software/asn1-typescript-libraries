@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RoamingNotAllowedCause, _enum_for_RoamingNotAllowedCause, RoamingNotAllowedCause_plmnRoamingNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnRoamingNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, RoamingNotAllowedCause_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RoamingNotAllowedCause, _encode_RoamingNotAllowedCause } from "../MAP-ER-DataTypes/RoamingNotAllowedCause.ta.mjs";
-// export { RoamingNotAllowedCause, _enum_for_RoamingNotAllowedCause, RoamingNotAllowedCause_plmnRoamingNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnRoamingNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, RoamingNotAllowedCause_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RoamingNotAllowedCause, _encode_RoamingNotAllowedCause } from "../MAP-ER-DataTypes/RoamingNotAllowedCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AdditionalRoamingNotAllowedCause, _enum_for_AdditionalRoamingNotAllowedCause, AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, supportedRAT_TypesNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdditionalRoamingNotAllowedCause, _encode_AdditionalRoamingNotAllowedCause } from "../MAP-ER-DataTypes/AdditionalRoamingNotAllowedCause.ta.mjs";
-// export { AdditionalRoamingNotAllowedCause, _enum_for_AdditionalRoamingNotAllowedCause, AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, supportedRAT_TypesNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdditionalRoamingNotAllowedCause, _encode_AdditionalRoamingNotAllowedCause } from "../MAP-ER-DataTypes/AdditionalRoamingNotAllowedCause.ta.mjs";
 
 
 /**
@@ -160,8 +157,8 @@ class RoamingNotAllowedParam {
  */
 export
 const _root_component_type_list_1_spec_for_RoamingNotAllowedParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("roamingNotAllowedCause", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("roamingNotAllowedCause", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -187,7 +184,7 @@ const _root_component_type_list_2_spec_for_RoamingNotAllowedParam: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_RoamingNotAllowedParam: $.ComponentSpec[] = [
-    new $.ComponentSpec("additionalRoamingNotAllowedCause", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("additionalRoamingNotAllowedCause", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_RoamingNotAllowedParam: $.ASN1Decoder<RoamingNotAllowedParam> | null = null;
@@ -202,9 +199,9 @@ export
 function _decode_RoamingNotAllowedParam (el: _Element): RoamingNotAllowedParam {
     if (!_cached_decoder_for_RoamingNotAllowedParam) { _cached_decoder_for_RoamingNotAllowedParam = function (el: _Element): RoamingNotAllowedParam {
     let roamingNotAllowedCause!: RoamingNotAllowedCause;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let additionalRoamingNotAllowedCause: OPTIONAL<AdditionalRoamingNotAllowedCause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let additionalRoamingNotAllowedCause: OPTIONAL<AdditionalRoamingNotAllowedCause> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "roamingNotAllowedCause": (_el: _Element): void => { roamingNotAllowedCause = _decode_RoamingNotAllowedCause(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

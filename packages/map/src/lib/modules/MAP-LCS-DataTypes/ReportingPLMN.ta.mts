@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-// export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 import { RAN_Technology, _enum_for_RAN_Technology, RAN_Technology_gsm /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm /* IMPORTED_SHORT_ENUMERATION_ITEM */, RAN_Technology_umts /* IMPORTED_LONG_ENUMERATION_ITEM */, umts /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RAN_Technology, _encode_RAN_Technology } from "../MAP-LCS-DataTypes/RAN-Technology.ta.mjs";
-// export { RAN_Technology, _enum_for_RAN_Technology, RAN_Technology_gsm /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm /* IMPORTED_SHORT_ENUMERATION_ITEM */, RAN_Technology_umts /* IMPORTED_LONG_ENUMERATION_ITEM */, umts /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RAN_Technology, _encode_RAN_Technology } from "../MAP-LCS-DataTypes/RAN-Technology.ta.mjs";
 
 
 /**
@@ -152,9 +150,9 @@ class ReportingPLMN {
  */
 export
 const _root_component_type_list_1_spec_for_ReportingPLMN: $.ComponentSpec[] = [
-    new $.ComponentSpec("plmn-Id", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ran-Technology", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ran-PeriodicLocationSupport", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("plmn-Id", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ran-Technology", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ran-PeriodicLocationSupport", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -195,9 +193,9 @@ export
 function _decode_ReportingPLMN (el: _Element): ReportingPLMN {
     if (!_cached_decoder_for_ReportingPLMN) { _cached_decoder_for_ReportingPLMN = function (el: _Element): ReportingPLMN {
     let plmn_Id!: PLMN_Id;
-    let ran_Technology: OPTIONAL<RAN_Technology>;
-    let ran_PeriodicLocationSupport: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let ran_Technology: OPTIONAL<RAN_Technology> = undefined;
+    let ran_PeriodicLocationSupport: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "plmn-Id": (_el: _Element): void => { plmn_Id = $._decode_implicit<PLMN_Id>(() => _decode_PLMN_Id)(_el); },
         "ran-Technology": (_el: _Element): void => { ran_Technology = $._decode_implicit<RAN_Technology>(() => _decode_RAN_Technology)(_el); },

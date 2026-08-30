@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { DispatcherList, _decode_DispatcherList, _encode_DispatcherList } from "../MAP-SM-DataTypes/DispatcherList.ta.mjs";
-// export { DispatcherList, _decode_DispatcherList, _encode_DispatcherList } from "../MAP-SM-DataTypes/DispatcherList.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AdditionalDispatcherList, _decode_AdditionalDispatcherList, _encode_AdditionalDispatcherList } from "../MAP-SM-DataTypes/AdditionalDispatcherList.ta.mjs";
-// export { AdditionalDispatcherList, _decode_AdditionalDispatcherList, _encode_AdditionalDispatcherList } from "../MAP-SM-DataTypes/AdditionalDispatcherList.ta.mjs";
 
 
 /**
@@ -164,10 +160,10 @@ class MT_ForwardSM_VGCS_Res {
  */
 export
 const _root_component_type_list_1_spec_for_MT_ForwardSM_VGCS_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("sm-RP-UI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("dispatcherList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ongoingCall", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("sm-RP-UI", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("dispatcherList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ongoingCall", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -193,7 +189,7 @@ const _root_component_type_list_2_spec_for_MT_ForwardSM_VGCS_Res: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_MT_ForwardSM_VGCS_Res: $.ComponentSpec[] = [
-    new $.ComponentSpec("additionalDispatcherList", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("additionalDispatcherList", true, $.hasTag(_TagClass.context, 3))
 ];
 
 let _cached_decoder_for_MT_ForwardSM_VGCS_Res: $.ASN1Decoder<MT_ForwardSM_VGCS_Res> | null = null;
@@ -207,12 +203,12 @@ let _cached_decoder_for_MT_ForwardSM_VGCS_Res: $.ASN1Decoder<MT_ForwardSM_VGCS_R
 export
 function _decode_MT_ForwardSM_VGCS_Res (el: _Element): MT_ForwardSM_VGCS_Res {
     if (!_cached_decoder_for_MT_ForwardSM_VGCS_Res) { _cached_decoder_for_MT_ForwardSM_VGCS_Res = function (el: _Element): MT_ForwardSM_VGCS_Res {
-    let sm_RP_UI: OPTIONAL<SignalInfo>;
-    let dispatcherList: OPTIONAL<DispatcherList>;
-    let ongoingCall: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let additionalDispatcherList: OPTIONAL<AdditionalDispatcherList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let sm_RP_UI: OPTIONAL<SignalInfo> = undefined;
+    let dispatcherList: OPTIONAL<DispatcherList> = undefined;
+    let ongoingCall: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let additionalDispatcherList: OPTIONAL<AdditionalDispatcherList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sm-RP-UI": (_el: _Element): void => { sm_RP_UI = $._decode_implicit<SignalInfo>(() => _decode_SignalInfo)(_el); },
         "dispatcherList": (_el: _Element): void => { dispatcherList = $._decode_implicit<DispatcherList>(() => _decode_DispatcherList)(_el); },

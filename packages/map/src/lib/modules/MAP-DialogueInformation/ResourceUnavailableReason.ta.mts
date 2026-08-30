@@ -155,21 +155,13 @@ const ResourceUnavailableReason_longTermResourceLimitation: ResourceUnavailableR
 export
 const longTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.longTermResourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ResourceUnavailableReason: $.ASN1Decoder<ResourceUnavailableReason> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ResourceUnavailableReason
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ResourceUnavailableReason (el: _Element): ResourceUnavailableReason {
-    if (!_cached_decoder_for_ResourceUnavailableReason) { _cached_decoder_for_ResourceUnavailableReason = $._decodeEnumerated; }
-    return _cached_decoder_for_ResourceUnavailableReason(el);
-}
-
-let _cached_encoder_for_ResourceUnavailableReason: $.ASN1Encoder<ResourceUnavailableReason> | null = null;
+export const _decode_ResourceUnavailableReason = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ResourceUnavailableReason into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_ResourceUnavailableReason: $.ASN1Encoder<ResourceUnavail
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ResourceUnavailableReason, encoded as an ASN.1 Element.
  */
-export
-function _encode_ResourceUnavailableReason (value: ResourceUnavailableReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResourceUnavailableReason) { _cached_encoder_for_ResourceUnavailableReason = $._encodeEnumerated; }
-    return _cached_encoder_for_ResourceUnavailableReason(value, elGetter);
-}
+export const _encode_ResourceUnavailableReason = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-// export { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
 import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
-// export { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
-// export { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
 import { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions } from "../MAP-SS-DataTypes/ForwardingOptions.ta.mjs";
-// export { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions } from "../MAP-SS-DataTypes/ForwardingOptions.ta.mjs";
 import { NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyConditionTime } from "../MAP-SS-DataTypes/NoReplyConditionTime.ta.mjs";
-// export { NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyConditionTime } from "../MAP-SS-DataTypes/NoReplyConditionTime.ta.mjs";
 import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
-// export { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
 
 
 /**
@@ -184,12 +177,12 @@ class ForwardingFeature {
  */
 export
 const _root_component_type_list_1_spec_for_ForwardingFeature: $.ComponentSpec[] = [
-    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3)), undefined, undefined),
-    new $.ComponentSpec("ss-Status", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("forwardedToNumber", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("forwardedToSubaddress", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("forwardingOptions", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("noReplyConditionTime", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("basicService", true, $.or($.hasTag(_TagClass.context, 2), $.hasTag(_TagClass.context, 3))),
+    new $.ComponentSpec("ss-Status", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("forwardedToNumber", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("forwardedToSubaddress", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("forwardingOptions", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("noReplyConditionTime", true, $.hasTag(_TagClass.context, 7))
 ];
 
 /**
@@ -215,7 +208,7 @@ const _root_component_type_list_2_spec_for_ForwardingFeature: $.ComponentSpec[] 
  */
 export
 const _extension_additions_list_spec_for_ForwardingFeature: $.ComponentSpec[] = [
-    new $.ComponentSpec("longForwardedToNumber", true, $.hasTag(_TagClass.context, 9), undefined, undefined)
+    new $.ComponentSpec("longForwardedToNumber", true, $.hasTag(_TagClass.context, 9))
 ];
 
 let _cached_decoder_for_ForwardingFeature: $.ASN1Decoder<ForwardingFeature> | null = null;
@@ -229,14 +222,14 @@ let _cached_decoder_for_ForwardingFeature: $.ASN1Decoder<ForwardingFeature> | nu
 export
 function _decode_ForwardingFeature (el: _Element): ForwardingFeature {
     if (!_cached_decoder_for_ForwardingFeature) { _cached_decoder_for_ForwardingFeature = function (el: _Element): ForwardingFeature {
-    let basicService: OPTIONAL<BasicServiceCode>;
-    let ss_Status: OPTIONAL<SS_Status>;
-    let forwardedToNumber: OPTIONAL<ISDN_AddressString>;
-    let forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>;
-    let forwardingOptions: OPTIONAL<ForwardingOptions>;
-    let noReplyConditionTime: OPTIONAL<NoReplyConditionTime>;
-    let longForwardedToNumber: OPTIONAL<FTN_AddressString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let basicService: OPTIONAL<BasicServiceCode> = undefined;
+    let ss_Status: OPTIONAL<SS_Status> = undefined;
+    let forwardedToNumber: OPTIONAL<ISDN_AddressString> = undefined;
+    let forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString> = undefined;
+    let forwardingOptions: OPTIONAL<ForwardingOptions> = undefined;
+    let noReplyConditionTime: OPTIONAL<NoReplyConditionTime> = undefined;
+    let longForwardedToNumber: OPTIONAL<FTN_AddressString> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "basicService": (_el: _Element): void => { basicService = _decode_BasicServiceCode(_el); },
         "ss-Status": (_el: _Element): void => { ss_Status = $._decode_implicit<SS_Status>(() => _decode_SS_Status)(_el); },

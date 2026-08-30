@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
-// export { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 import { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
-// export { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
 import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
-// export { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 
 
 /**
@@ -157,8 +153,8 @@ class USSD_Arg {
  */
 export
 const _root_component_type_list_1_spec_for_USSD_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("ussd-DataCodingScheme", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("ussd-String", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("ussd-DataCodingScheme", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("ussd-String", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**
@@ -184,8 +180,8 @@ const _root_component_type_list_2_spec_for_USSD_Arg: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_USSD_Arg: $.ComponentSpec[] = [
-    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("msisdn", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_USSD_Arg: $.ASN1Decoder<USSD_Arg> | null = null;
@@ -201,9 +197,9 @@ function _decode_USSD_Arg (el: _Element): USSD_Arg {
     if (!_cached_decoder_for_USSD_Arg) { _cached_decoder_for_USSD_Arg = function (el: _Element): USSD_Arg {
     let ussd_DataCodingScheme!: USSD_DataCodingScheme;
     let ussd_String!: USSD_String;
-    let alertingPattern: OPTIONAL<AlertingPattern>;
-    let msisdn: OPTIONAL<ISDN_AddressString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let alertingPattern: OPTIONAL<AlertingPattern> = undefined;
+    let msisdn: OPTIONAL<ISDN_AddressString> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ussd-DataCodingScheme": (_el: _Element): void => { ussd_DataCodingScheme = _decode_USSD_DataCodingScheme(_el); },
         "ussd-String": (_el: _Element): void => { ussd_String = _decode_USSD_String(_el); },

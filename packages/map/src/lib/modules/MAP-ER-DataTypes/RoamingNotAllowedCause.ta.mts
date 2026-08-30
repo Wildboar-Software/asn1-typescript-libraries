@@ -155,21 +155,13 @@ const RoamingNotAllowedCause_operatorDeterminedBarring: RoamingNotAllowedCause =
 export
 const operatorDeterminedBarring: RoamingNotAllowedCause = RoamingNotAllowedCause.operatorDeterminedBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RoamingNotAllowedCause: $.ASN1Decoder<RoamingNotAllowedCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RoamingNotAllowedCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RoamingNotAllowedCause (el: _Element): RoamingNotAllowedCause {
-    if (!_cached_decoder_for_RoamingNotAllowedCause) { _cached_decoder_for_RoamingNotAllowedCause = $._decodeEnumerated; }
-    return _cached_decoder_for_RoamingNotAllowedCause(el);
-}
-
-let _cached_encoder_for_RoamingNotAllowedCause: $.ASN1Encoder<RoamingNotAllowedCause> | null = null;
+export const _decode_RoamingNotAllowedCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RoamingNotAllowedCause into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_RoamingNotAllowedCause: $.ASN1Encoder<RoamingNotAllowedC
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RoamingNotAllowedCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_RoamingNotAllowedCause (value: RoamingNotAllowedCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RoamingNotAllowedCause) { _cached_encoder_for_RoamingNotAllowedCause = $._encodeEnumerated; }
-    return _cached_encoder_for_RoamingNotAllowedCause(value, elGetter);
-}
+export const _encode_RoamingNotAllowedCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

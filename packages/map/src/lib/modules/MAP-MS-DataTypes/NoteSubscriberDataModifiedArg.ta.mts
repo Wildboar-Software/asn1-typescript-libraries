@@ -67,33 +67,19 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { Ext_ForwardingInfoFor_CSE, _decode_Ext_ForwardingInfoFor_CSE, _encode_Ext_ForwardingInfoFor_CSE } from "../MAP-MS-DataTypes/Ext-ForwardingInfoFor-CSE.ta.mjs";
-// export { Ext_ForwardingInfoFor_CSE, _decode_Ext_ForwardingInfoFor_CSE, _encode_Ext_ForwardingInfoFor_CSE } from "../MAP-MS-DataTypes/Ext-ForwardingInfoFor-CSE.ta.mjs";
 import { Ext_CallBarringInfoFor_CSE, _decode_Ext_CallBarringInfoFor_CSE, _encode_Ext_CallBarringInfoFor_CSE } from "../MAP-MS-DataTypes/Ext-CallBarringInfoFor-CSE.ta.mjs";
-// export { Ext_CallBarringInfoFor_CSE, _decode_Ext_CallBarringInfoFor_CSE, _encode_Ext_CallBarringInfoFor_CSE } from "../MAP-MS-DataTypes/Ext-CallBarringInfoFor-CSE.ta.mjs";
 import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
-// export { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
 import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
-// export { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ServingNode, ServingNode_mme /* IMPORTED_LONG_NAMED_BIT */, mme /* IMPORTED_SHORT_NAMED_BIT */, ServingNode_sgsn /* IMPORTED_LONG_NAMED_BIT */, sgsn /* IMPORTED_SHORT_NAMED_BIT */, _decode_ServingNode, _encode_ServingNode } from "../MAP-MS-DataTypes/ServingNode.ta.mjs";
-// export { ServingNode, ServingNode_mme /* IMPORTED_LONG_NAMED_BIT */, mme /* IMPORTED_SHORT_NAMED_BIT */, ServingNode_sgsn /* IMPORTED_LONG_NAMED_BIT */, sgsn /* IMPORTED_SHORT_NAMED_BIT */, _decode_ServingNode, _encode_ServingNode } from "../MAP-MS-DataTypes/ServingNode.ta.mjs";
 import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
-// export { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
 import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
-// export { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
 import { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
-// export { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
 import { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
-// export { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
 import { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
-// export { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
 import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
-// export { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
 
 
 /**
@@ -254,14 +240,14 @@ class NoteSubscriberDataModifiedArg {
  */
 export
 const _root_component_type_list_1_spec_for_NoteSubscriberDataModifiedArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("forwardingInfoFor-CSE", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("callBarringInfoFor-CSE", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("odb-Info", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("camel-SubscriptionInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("allInformationSent", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imsi", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("msisdn", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("forwardingInfoFor-CSE", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callBarringInfoFor-CSE", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("odb-Info", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("camel-SubscriptionInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("allInformationSent", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -287,13 +273,13 @@ const _root_component_type_list_2_spec_for_NoteSubscriberDataModifiedArg: $.Comp
  */
 export
 const _extension_additions_list_spec_for_NoteSubscriberDataModifiedArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("ue-reachable", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("csg-SubscriptionDataList", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("cw-Data", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("ch-Data", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("clip-Data", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("clir-Data", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("ect-data", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("ue-reachable", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("csg-SubscriptionDataList", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("cw-Data", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("ch-Data", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("clip-Data", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("clir-Data", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("ect-data", true, $.hasTag(_TagClass.context, 11))
 ];
 
 let _cached_decoder_for_NoteSubscriberDataModifiedArg: $.ASN1Decoder<NoteSubscriberDataModifiedArg> | null = null;
@@ -309,20 +295,20 @@ function _decode_NoteSubscriberDataModifiedArg (el: _Element): NoteSubscriberDat
     if (!_cached_decoder_for_NoteSubscriberDataModifiedArg) { _cached_decoder_for_NoteSubscriberDataModifiedArg = function (el: _Element): NoteSubscriberDataModifiedArg {
     let imsi!: IMSI;
     let msisdn!: ISDN_AddressString;
-    let forwardingInfoFor_CSE: OPTIONAL<Ext_ForwardingInfoFor_CSE>;
-    let callBarringInfoFor_CSE: OPTIONAL<Ext_CallBarringInfoFor_CSE>;
-    let odb_Info: OPTIONAL<ODB_Info>;
-    let camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo>;
-    let allInformationSent: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let ue_reachable: OPTIONAL<ServingNode>;
-    let csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>;
-    let cw_Data: OPTIONAL<CallWaitingData>;
-    let ch_Data: OPTIONAL<CallHoldData>;
-    let clip_Data: OPTIONAL<ClipData>;
-    let clir_Data: OPTIONAL<ClirData>;
-    let ect_data: OPTIONAL<EctData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let forwardingInfoFor_CSE: OPTIONAL<Ext_ForwardingInfoFor_CSE> = undefined;
+    let callBarringInfoFor_CSE: OPTIONAL<Ext_CallBarringInfoFor_CSE> = undefined;
+    let odb_Info: OPTIONAL<ODB_Info> = undefined;
+    let camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo> = undefined;
+    let allInformationSent: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let ue_reachable: OPTIONAL<ServingNode> = undefined;
+    let csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList> = undefined;
+    let cw_Data: OPTIONAL<CallWaitingData> = undefined;
+    let ch_Data: OPTIONAL<CallHoldData> = undefined;
+    let clip_Data: OPTIONAL<ClipData> = undefined;
+    let clir_Data: OPTIONAL<ClirData> = undefined;
+    let ect_data: OPTIONAL<EctData> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = _decode_IMSI(_el); },
         "msisdn": (_el: _Element): void => { msisdn = _decode_ISDN_AddressString(_el); },

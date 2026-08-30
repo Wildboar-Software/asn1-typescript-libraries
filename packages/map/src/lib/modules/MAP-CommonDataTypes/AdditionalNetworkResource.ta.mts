@@ -233,21 +233,13 @@ const AdditionalNetworkResource_mme: AdditionalNetworkResource = 7; /* LONG_NAME
 export
 const mme: AdditionalNetworkResource = AdditionalNetworkResource_mme; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AdditionalNetworkResource: $.ASN1Decoder<AdditionalNetworkResource> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalNetworkResource
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AdditionalNetworkResource (el: _Element): AdditionalNetworkResource {
-    if (!_cached_decoder_for_AdditionalNetworkResource) { _cached_decoder_for_AdditionalNetworkResource = $._decodeEnumerated; }
-    return _cached_decoder_for_AdditionalNetworkResource(el);
-}
-
-let _cached_encoder_for_AdditionalNetworkResource: $.ASN1Encoder<AdditionalNetworkResource> | null = null;
+export const _decode_AdditionalNetworkResource = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AdditionalNetworkResource into an ASN.1 Element.
@@ -256,11 +248,7 @@ let _cached_encoder_for_AdditionalNetworkResource: $.ASN1Encoder<AdditionalNetwo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdditionalNetworkResource, encoded as an ASN.1 Element.
  */
-export
-function _encode_AdditionalNetworkResource (value: AdditionalNetworkResource, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalNetworkResource) { _cached_encoder_for_AdditionalNetworkResource = $._encodeEnumerated; }
-    return _cached_encoder_for_AdditionalNetworkResource(value, elGetter);
-}
+export const _encode_AdditionalNetworkResource = $._encodeEnumerated;
 
 
 /* eslint-enable */

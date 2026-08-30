@@ -67,29 +67,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
-// export { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
 import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
-// export { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
-// export { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
 import { TraceDepthList, _decode_TraceDepthList, _encode_TraceDepthList } from "../MAP-OM-DataTypes/TraceDepthList.ta.mjs";
-// export { TraceDepthList, _decode_TraceDepthList, _encode_TraceDepthList } from "../MAP-OM-DataTypes/TraceDepthList.ta.mjs";
 import { TraceNE_TypeList, TraceNE_TypeList_msc_s /* IMPORTED_LONG_NAMED_BIT */, msc_s /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_mgw /* IMPORTED_LONG_NAMED_BIT */, mgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_sgsn /* IMPORTED_LONG_NAMED_BIT */, sgsn /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_ggsn /* IMPORTED_LONG_NAMED_BIT */, ggsn /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_rnc /* IMPORTED_LONG_NAMED_BIT */, rnc /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_bm_sc /* IMPORTED_LONG_NAMED_BIT */, bm_sc /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_mme /* IMPORTED_LONG_NAMED_BIT */, mme /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_sgw /* IMPORTED_LONG_NAMED_BIT */, sgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_pgw /* IMPORTED_LONG_NAMED_BIT */, pgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_eNB /* IMPORTED_LONG_NAMED_BIT */, eNB /* IMPORTED_SHORT_NAMED_BIT */, _decode_TraceNE_TypeList, _encode_TraceNE_TypeList } from "../MAP-OM-DataTypes/TraceNE-TypeList.ta.mjs";
-// export { TraceNE_TypeList, TraceNE_TypeList_msc_s /* IMPORTED_LONG_NAMED_BIT */, msc_s /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_mgw /* IMPORTED_LONG_NAMED_BIT */, mgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_sgsn /* IMPORTED_LONG_NAMED_BIT */, sgsn /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_ggsn /* IMPORTED_LONG_NAMED_BIT */, ggsn /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_rnc /* IMPORTED_LONG_NAMED_BIT */, rnc /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_bm_sc /* IMPORTED_LONG_NAMED_BIT */, bm_sc /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_mme /* IMPORTED_LONG_NAMED_BIT */, mme /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_sgw /* IMPORTED_LONG_NAMED_BIT */, sgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_pgw /* IMPORTED_LONG_NAMED_BIT */, pgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_eNB /* IMPORTED_LONG_NAMED_BIT */, eNB /* IMPORTED_SHORT_NAMED_BIT */, _decode_TraceNE_TypeList, _encode_TraceNE_TypeList } from "../MAP-OM-DataTypes/TraceNE-TypeList.ta.mjs";
 import { TraceInterfaceList, _decode_TraceInterfaceList, _encode_TraceInterfaceList } from "../MAP-OM-DataTypes/TraceInterfaceList.ta.mjs";
-// export { TraceInterfaceList, _decode_TraceInterfaceList, _encode_TraceInterfaceList } from "../MAP-OM-DataTypes/TraceInterfaceList.ta.mjs";
 import { TraceEventList, _decode_TraceEventList, _encode_TraceEventList } from "../MAP-OM-DataTypes/TraceEventList.ta.mjs";
-// export { TraceEventList, _decode_TraceEventList, _encode_TraceEventList } from "../MAP-OM-DataTypes/TraceEventList.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { MDT_Configuration, _decode_MDT_Configuration, _encode_MDT_Configuration } from "../MAP-OM-DataTypes/MDT-Configuration.ta.mjs";
-// export { MDT_Configuration, _decode_MDT_Configuration, _encode_MDT_Configuration } from "../MAP-OM-DataTypes/MDT-Configuration.ta.mjs";
 
 
 /**
@@ -230,11 +218,11 @@ class ActivateTraceModeArg {
  */
 export
 const _root_component_type_list_1_spec_for_ActivateTraceModeArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("traceReference", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("traceType", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("omc-Id", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("traceReference", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("traceType", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("omc-Id", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -260,13 +248,13 @@ const _root_component_type_list_2_spec_for_ActivateTraceModeArg: $.ComponentSpec
  */
 export
 const _extension_additions_list_spec_for_ActivateTraceModeArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("traceReference2", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("traceDepthList", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("traceNE-TypeList", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("traceInterfaceList", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("traceEventList", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("traceCollectionEntity", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("mdt-Configuration", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("traceReference2", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("traceDepthList", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("traceNE-TypeList", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("traceInterfaceList", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("traceEventList", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("traceCollectionEntity", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("mdt-Configuration", true, $.hasTag(_TagClass.context, 11))
 ];
 
 let _cached_decoder_for_ActivateTraceModeArg: $.ASN1Decoder<ActivateTraceModeArg> | null = null;
@@ -280,19 +268,19 @@ let _cached_decoder_for_ActivateTraceModeArg: $.ASN1Decoder<ActivateTraceModeArg
 export
 function _decode_ActivateTraceModeArg (el: _Element): ActivateTraceModeArg {
     if (!_cached_decoder_for_ActivateTraceModeArg) { _cached_decoder_for_ActivateTraceModeArg = function (el: _Element): ActivateTraceModeArg {
-    let imsi: OPTIONAL<IMSI>;
+    let imsi: OPTIONAL<IMSI> = undefined;
     let traceReference!: TraceReference;
     let traceType!: TraceType;
-    let omc_Id: OPTIONAL<AddressString>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let traceReference2: OPTIONAL<TraceReference2>;
-    let traceDepthList: OPTIONAL<TraceDepthList>;
-    let traceNE_TypeList: OPTIONAL<TraceNE_TypeList>;
-    let traceInterfaceList: OPTIONAL<TraceInterfaceList>;
-    let traceEventList: OPTIONAL<TraceEventList>;
-    let traceCollectionEntity: OPTIONAL<GSN_Address>;
-    let mdt_Configuration: OPTIONAL<MDT_Configuration>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let omc_Id: OPTIONAL<AddressString> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let traceReference2: OPTIONAL<TraceReference2> = undefined;
+    let traceDepthList: OPTIONAL<TraceDepthList> = undefined;
+    let traceNE_TypeList: OPTIONAL<TraceNE_TypeList> = undefined;
+    let traceInterfaceList: OPTIONAL<TraceInterfaceList> = undefined;
+    let traceEventList: OPTIONAL<TraceEventList> = undefined;
+    let traceCollectionEntity: OPTIONAL<GSN_Address> = undefined;
+    let mdt_Configuration: OPTIONAL<MDT_Configuration> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "traceReference": (_el: _Element): void => { traceReference = $._decode_implicit<TraceReference>(() => _decode_TraceReference)(_el); },

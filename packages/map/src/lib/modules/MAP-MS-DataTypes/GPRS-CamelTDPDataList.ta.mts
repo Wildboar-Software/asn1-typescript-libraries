@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GPRS_CamelTDPData, _decode_GPRS_CamelTDPData, _encode_GPRS_CamelTDPData } from "../MAP-MS-DataTypes/GPRS-CamelTDPData.ta.mjs";
-// export { GPRS_CamelTDPData, _decode_GPRS_CamelTDPData, _encode_GPRS_CamelTDPData } from "../MAP-MS-DataTypes/GPRS-CamelTDPData.ta.mjs";
 
+
+import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 
 /**
  * @summary GPRS_CamelTDPDataList
@@ -95,7 +97,11 @@ let _cached_decoder_for_GPRS_CamelTDPDataList: $.ASN1Decoder<GPRS_CamelTDPDataLi
 export
 function _decode_GPRS_CamelTDPDataList (el: _Element): GPRS_CamelTDPDataList {
     if (!_cached_decoder_for_GPRS_CamelTDPDataList) { _cached_decoder_for_GPRS_CamelTDPDataList = $._decodeSequenceOf<GPRS_CamelTDPData>(() => _decode_GPRS_CamelTDPData); }
-    return _cached_decoder_for_GPRS_CamelTDPDataList(el);
+    const value = _cached_decoder_for_GPRS_CamelTDPDataList(el);
+    if (value.length < 1 || value.length > maxNumOfCamelTDPData) {
+        throw new ASN1SizeError("GPRS_CamelTDPDataList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_GPRS_CamelTDPDataList: $.ASN1Encoder<GPRS_CamelTDPDataList> | null = null;

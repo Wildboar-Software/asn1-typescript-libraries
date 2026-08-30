@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReportingAmount, _decode_ReportingAmount, _encode_ReportingAmount } from "../MAP-LCS-DataTypes/ReportingAmount.ta.mjs";
-// export { ReportingAmount, _decode_ReportingAmount, _encode_ReportingAmount } from "../MAP-LCS-DataTypes/ReportingAmount.ta.mjs";
 import { ReportingInterval, _decode_ReportingInterval, _encode_ReportingInterval } from "../MAP-LCS-DataTypes/ReportingInterval.ta.mjs";
-// export { ReportingInterval, _decode_ReportingInterval, _encode_ReportingInterval } from "../MAP-LCS-DataTypes/ReportingInterval.ta.mjs";
 import { ReportingOptionMilliseconds, _decode_ReportingOptionMilliseconds, _encode_ReportingOptionMilliseconds } from "../MAP-LCS-DataTypes/ReportingOptionMilliseconds.ta.mjs";
-// export { ReportingOptionMilliseconds, _decode_ReportingOptionMilliseconds, _encode_ReportingOptionMilliseconds } from "../MAP-LCS-DataTypes/ReportingOptionMilliseconds.ta.mjs";
 
 
 /**
@@ -149,8 +146,8 @@ class PeriodicLDRInfo {
  */
 export
 const _root_component_type_list_1_spec_for_PeriodicLDRInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("reportingAmount", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("reportingInterval", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("reportingAmount", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("reportingInterval", false, $.hasTag(_TagClass.universal, 2))
 ];
 
 /**
@@ -176,7 +173,7 @@ const _root_component_type_list_2_spec_for_PeriodicLDRInfo: $.ComponentSpec[] = 
  */
 export
 const _extension_additions_list_spec_for_PeriodicLDRInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("reportingOptionMilliseconds", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("reportingOptionMilliseconds", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_PeriodicLDRInfo: $.ASN1Decoder<PeriodicLDRInfo> | null = null;
@@ -192,8 +189,8 @@ function _decode_PeriodicLDRInfo (el: _Element): PeriodicLDRInfo {
     if (!_cached_decoder_for_PeriodicLDRInfo) { _cached_decoder_for_PeriodicLDRInfo = function (el: _Element): PeriodicLDRInfo {
     let reportingAmount!: ReportingAmount;
     let reportingInterval!: ReportingInterval;
-    let reportingOptionMilliseconds: OPTIONAL<ReportingOptionMilliseconds>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let reportingOptionMilliseconds: OPTIONAL<ReportingOptionMilliseconds> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "reportingAmount": (_el: _Element): void => { reportingAmount = _decode_ReportingAmount(_el); },
         "reportingInterval": (_el: _Element): void => { reportingInterval = _decode_ReportingInterval(_el); },

@@ -125,21 +125,13 @@ const CallTerminationIndicator_terminateAllCallActivities: CallTerminationIndica
 export
 const terminateAllCallActivities: CallTerminationIndicator = CallTerminationIndicator_terminateAllCallActivities; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CallTerminationIndicator: $.ASN1Decoder<CallTerminationIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CallTerminationIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CallTerminationIndicator (el: _Element): CallTerminationIndicator {
-    if (!_cached_decoder_for_CallTerminationIndicator) { _cached_decoder_for_CallTerminationIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_CallTerminationIndicator(el);
-}
-
-let _cached_encoder_for_CallTerminationIndicator: $.ASN1Encoder<CallTerminationIndicator> | null = null;
+export const _decode_CallTerminationIndicator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CallTerminationIndicator into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_CallTerminationIndicator: $.ASN1Encoder<CallTerminationI
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallTerminationIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_CallTerminationIndicator (value: CallTerminationIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallTerminationIndicator) { _cached_encoder_for_CallTerminationIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_CallTerminationIndicator(value, elGetter);
-}
+export const _encode_CallTerminationIndicator = $._encodeEnumerated;
 
 
 /* eslint-enable */

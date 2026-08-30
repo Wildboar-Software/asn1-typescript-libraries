@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GSM_SecurityContextData, _decode_GSM_SecurityContextData, _encode_GSM_SecurityContextData } from "../MAP-MS-DataTypes/GSM-SecurityContextData.ta.mjs";
-// export { GSM_SecurityContextData, _decode_GSM_SecurityContextData, _encode_GSM_SecurityContextData } from "../MAP-MS-DataTypes/GSM-SecurityContextData.ta.mjs";
 import { UMTS_SecurityContextData, _decode_UMTS_SecurityContextData, _encode_UMTS_SecurityContextData } from "../MAP-MS-DataTypes/UMTS-SecurityContextData.ta.mjs";
-// export { UMTS_SecurityContextData, _decode_UMTS_SecurityContextData, _encode_UMTS_SecurityContextData } from "../MAP-MS-DataTypes/UMTS-SecurityContextData.ta.mjs";
 
 
 /**

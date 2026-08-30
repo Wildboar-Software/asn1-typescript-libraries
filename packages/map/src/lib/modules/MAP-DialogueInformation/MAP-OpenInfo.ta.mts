@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-// export { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -148,8 +146,8 @@ class MAP_OpenInfo {
  */
 export
 const _root_component_type_list_1_spec_for_MAP_OpenInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("destinationReference", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("originationReference", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("destinationReference", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("originationReference", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -175,7 +173,7 @@ const _root_component_type_list_2_spec_for_MAP_OpenInfo: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_MAP_OpenInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 let _cached_decoder_for_MAP_OpenInfo: $.ASN1Decoder<MAP_OpenInfo> | null = null;
@@ -189,10 +187,10 @@ let _cached_decoder_for_MAP_OpenInfo: $.ASN1Decoder<MAP_OpenInfo> | null = null;
 export
 function _decode_MAP_OpenInfo (el: _Element): MAP_OpenInfo {
     if (!_cached_decoder_for_MAP_OpenInfo) { _cached_decoder_for_MAP_OpenInfo = function (el: _Element): MAP_OpenInfo {
-    let destinationReference: OPTIONAL<AddressString>;
-    let originationReference: OPTIONAL<AddressString>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let destinationReference: OPTIONAL<AddressString> = undefined;
+    let originationReference: OPTIONAL<AddressString> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "destinationReference": (_el: _Element): void => { destinationReference = $._decode_implicit<AddressString>(() => _decode_AddressString)(_el); },
         "originationReference": (_el: _Element): void => { originationReference = $._decode_implicit<AddressString>(() => _decode_AddressString)(_el); },

@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Group_Service_ID, _decode_Group_Service_ID, _encode_Group_Service_ID } from "../MAP-MS-DataTypes/Group-Service-ID.ta.mjs";
-// export { Group_Service_ID, _decode_Group_Service_ID, _encode_Group_Service_ID } from "../MAP-MS-DataTypes/Group-Service-ID.ta.mjs";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-// export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 import { Local_GroupID, _decode_Local_GroupID, _encode_Local_GroupID } from "../MAP-MS-DataTypes/Local-GroupID.ta.mjs";
-// export { Local_GroupID, _decode_Local_GroupID, _encode_Local_GroupID } from "../MAP-MS-DataTypes/Local-GroupID.ta.mjs";
 
 
 /**
@@ -148,9 +145,9 @@ class IMSI_GroupId {
  */
 export
 const _root_component_type_list_1_spec_for_IMSI_GroupId: $.ComponentSpec[] = [
-    new $.ComponentSpec("group-Service-Id", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("plmnId", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("local-Group-ID", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("group-Service-Id", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("plmnId", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("local-Group-ID", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

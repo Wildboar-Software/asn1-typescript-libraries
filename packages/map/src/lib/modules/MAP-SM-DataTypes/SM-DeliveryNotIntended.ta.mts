@@ -125,21 +125,13 @@ const SM_DeliveryNotIntended_onlyMCC_MNC_requested: SM_DeliveryNotIntended = 1; 
 export
 const onlyMCC_MNC_requested: SM_DeliveryNotIntended = SM_DeliveryNotIntended_onlyMCC_MNC_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SM_DeliveryNotIntended: $.ASN1Decoder<SM_DeliveryNotIntended> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_DeliveryNotIntended
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SM_DeliveryNotIntended (el: _Element): SM_DeliveryNotIntended {
-    if (!_cached_decoder_for_SM_DeliveryNotIntended) { _cached_decoder_for_SM_DeliveryNotIntended = $._decodeEnumerated; }
-    return _cached_decoder_for_SM_DeliveryNotIntended(el);
-}
-
-let _cached_encoder_for_SM_DeliveryNotIntended: $.ASN1Encoder<SM_DeliveryNotIntended> | null = null;
+export const _decode_SM_DeliveryNotIntended = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SM_DeliveryNotIntended into an ASN.1 Element.
@@ -148,11 +140,7 @@ let _cached_encoder_for_SM_DeliveryNotIntended: $.ASN1Encoder<SM_DeliveryNotInte
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_DeliveryNotIntended, encoded as an ASN.1 Element.
  */
-export
-function _encode_SM_DeliveryNotIntended (value: SM_DeliveryNotIntended, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SM_DeliveryNotIntended) { _cached_encoder_for_SM_DeliveryNotIntended = $._encodeEnumerated; }
-    return _cached_encoder_for_SM_DeliveryNotIntended(value, elGetter);
-}
+export const _encode_SM_DeliveryNotIntended = $._encodeEnumerated;
 
 
 /* eslint-enable */

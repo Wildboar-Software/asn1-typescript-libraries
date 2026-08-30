@@ -67,21 +67,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MSC_S_EventList, MSC_S_EventList_mo_mtCall /* IMPORTED_LONG_NAMED_BIT */, mo_mtCall /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, MSC_S_EventList_lu_imsiAttach_imsiDetach /* IMPORTED_LONG_NAMED_BIT */, lu_imsiAttach_imsiDetach /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_handovers /* IMPORTED_LONG_NAMED_BIT */, handovers /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_ss /* IMPORTED_LONG_NAMED_BIT */, ss /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
-// export { MSC_S_EventList, MSC_S_EventList_mo_mtCall /* IMPORTED_LONG_NAMED_BIT */, mo_mtCall /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, MSC_S_EventList_lu_imsiAttach_imsiDetach /* IMPORTED_LONG_NAMED_BIT */, lu_imsiAttach_imsiDetach /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_handovers /* IMPORTED_LONG_NAMED_BIT */, handovers /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_ss /* IMPORTED_LONG_NAMED_BIT */, ss /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
 import { MGW_EventList, MGW_EventList_context /* IMPORTED_LONG_NAMED_BIT */, context /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
-// export { MGW_EventList, MGW_EventList_context /* IMPORTED_LONG_NAMED_BIT */, context /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
 import { SGSN_EventList, SGSN_EventList_pdpContext /* IMPORTED_LONG_NAMED_BIT */, SGSN_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, SGSN_EventList_rau_gprsAttach_gprsDetach /* IMPORTED_LONG_NAMED_BIT */, rau_gprsAttach_gprsDetach /* IMPORTED_SHORT_NAMED_BIT */, SGSN_EventList_mbmsContext /* IMPORTED_LONG_NAMED_BIT */, _decode_SGSN_EventList, _encode_SGSN_EventList } from "../MAP-OM-DataTypes/SGSN-EventList.ta.mjs";
-// export { SGSN_EventList, SGSN_EventList_pdpContext /* IMPORTED_LONG_NAMED_BIT */, SGSN_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, SGSN_EventList_rau_gprsAttach_gprsDetach /* IMPORTED_LONG_NAMED_BIT */, rau_gprsAttach_gprsDetach /* IMPORTED_SHORT_NAMED_BIT */, SGSN_EventList_mbmsContext /* IMPORTED_LONG_NAMED_BIT */, _decode_SGSN_EventList, _encode_SGSN_EventList } from "../MAP-OM-DataTypes/SGSN-EventList.ta.mjs";
 import { GGSN_EventList, GGSN_EventList_pdpContext /* IMPORTED_LONG_NAMED_BIT */, GGSN_EventList_mbmsContext /* IMPORTED_LONG_NAMED_BIT */, _decode_GGSN_EventList, _encode_GGSN_EventList } from "../MAP-OM-DataTypes/GGSN-EventList.ta.mjs";
-// export { GGSN_EventList, GGSN_EventList_pdpContext /* IMPORTED_LONG_NAMED_BIT */, GGSN_EventList_mbmsContext /* IMPORTED_LONG_NAMED_BIT */, _decode_GGSN_EventList, _encode_GGSN_EventList } from "../MAP-OM-DataTypes/GGSN-EventList.ta.mjs";
 import { BMSC_EventList, BMSC_EventList_mbmsMulticastServiceActivation /* IMPORTED_LONG_NAMED_BIT */, mbmsMulticastServiceActivation /* IMPORTED_SHORT_NAMED_BIT */, _decode_BMSC_EventList, _encode_BMSC_EventList } from "../MAP-OM-DataTypes/BMSC-EventList.ta.mjs";
-// export { BMSC_EventList, BMSC_EventList_mbmsMulticastServiceActivation /* IMPORTED_LONG_NAMED_BIT */, mbmsMulticastServiceActivation /* IMPORTED_SHORT_NAMED_BIT */, _decode_BMSC_EventList, _encode_BMSC_EventList } from "../MAP-OM-DataTypes/BMSC-EventList.ta.mjs";
 import { MME_EventList, MME_EventList_ue_initiatedPDNconectivityRequest /* IMPORTED_LONG_NAMED_BIT */, ue_initiatedPDNconectivityRequest /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_serviceRequestts /* IMPORTED_LONG_NAMED_BIT */, serviceRequestts /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_initialAttachTrackingAreaUpdateDetach /* IMPORTED_LONG_NAMED_BIT */, initialAttachTrackingAreaUpdateDetach /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_ue_initiatedPDNdisconnection /* IMPORTED_LONG_NAMED_BIT */, ue_initiatedPDNdisconnection /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, MME_EventList_handover /* IMPORTED_LONG_NAMED_BIT */, handover /* IMPORTED_SHORT_NAMED_BIT */, _decode_MME_EventList, _encode_MME_EventList } from "../MAP-OM-DataTypes/MME-EventList.ta.mjs";
-// export { MME_EventList, MME_EventList_ue_initiatedPDNconectivityRequest /* IMPORTED_LONG_NAMED_BIT */, ue_initiatedPDNconectivityRequest /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_serviceRequestts /* IMPORTED_LONG_NAMED_BIT */, serviceRequestts /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_initialAttachTrackingAreaUpdateDetach /* IMPORTED_LONG_NAMED_BIT */, initialAttachTrackingAreaUpdateDetach /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_ue_initiatedPDNdisconnection /* IMPORTED_LONG_NAMED_BIT */, ue_initiatedPDNdisconnection /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, MME_EventList_handover /* IMPORTED_LONG_NAMED_BIT */, handover /* IMPORTED_SHORT_NAMED_BIT */, _decode_MME_EventList, _encode_MME_EventList } from "../MAP-OM-DataTypes/MME-EventList.ta.mjs";
 import { SGW_EventList, SGW_EventList_pdn_connectionCreation /* IMPORTED_LONG_NAMED_BIT */, SGW_EventList_pdn_connectionTermination /* IMPORTED_LONG_NAMED_BIT */, SGW_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, _decode_SGW_EventList, _encode_SGW_EventList } from "../MAP-OM-DataTypes/SGW-EventList.ta.mjs";
-// export { SGW_EventList, SGW_EventList_pdn_connectionCreation /* IMPORTED_LONG_NAMED_BIT */, SGW_EventList_pdn_connectionTermination /* IMPORTED_LONG_NAMED_BIT */, SGW_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, _decode_SGW_EventList, _encode_SGW_EventList } from "../MAP-OM-DataTypes/SGW-EventList.ta.mjs";
 import { PGW_EventList, PGW_EventList_pdn_connectionCreation /* IMPORTED_LONG_NAMED_BIT */, PGW_EventList_pdn_connectionTermination /* IMPORTED_LONG_NAMED_BIT */, PGW_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, _decode_PGW_EventList, _encode_PGW_EventList } from "../MAP-OM-DataTypes/PGW-EventList.ta.mjs";
-// export { PGW_EventList, PGW_EventList_pdn_connectionCreation /* IMPORTED_LONG_NAMED_BIT */, PGW_EventList_pdn_connectionTermination /* IMPORTED_LONG_NAMED_BIT */, PGW_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, _decode_PGW_EventList, _encode_PGW_EventList } from "../MAP-OM-DataTypes/PGW-EventList.ta.mjs";
 
 
 /**
@@ -193,11 +185,11 @@ class TraceEventList {
  */
 export
 const _root_component_type_list_1_spec_for_TraceEventList: $.ComponentSpec[] = [
-    new $.ComponentSpec("msc-s-List", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mgw-List", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("sgsn-List", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("ggsn-List", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("bmsc-List", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("msc-s-List", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mgw-List", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("sgsn-List", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("ggsn-List", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("bmsc-List", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -223,9 +215,9 @@ const _root_component_type_list_2_spec_for_TraceEventList: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_TraceEventList: $.ComponentSpec[] = [
-    new $.ComponentSpec("mme-List", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("sgw-List", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("pgw-List", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("mme-List", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("sgw-List", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("pgw-List", true, $.hasTag(_TagClass.context, 7))
 ];
 
 let _cached_decoder_for_TraceEventList: $.ASN1Decoder<TraceEventList> | null = null;
@@ -239,15 +231,15 @@ let _cached_decoder_for_TraceEventList: $.ASN1Decoder<TraceEventList> | null = n
 export
 function _decode_TraceEventList (el: _Element): TraceEventList {
     if (!_cached_decoder_for_TraceEventList) { _cached_decoder_for_TraceEventList = function (el: _Element): TraceEventList {
-    let msc_s_List: OPTIONAL<MSC_S_EventList>;
-    let mgw_List: OPTIONAL<MGW_EventList>;
-    let sgsn_List: OPTIONAL<SGSN_EventList>;
-    let ggsn_List: OPTIONAL<GGSN_EventList>;
-    let bmsc_List: OPTIONAL<BMSC_EventList>;
-    let mme_List: OPTIONAL<MME_EventList>;
-    let sgw_List: OPTIONAL<SGW_EventList>;
-    let pgw_List: OPTIONAL<PGW_EventList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let msc_s_List: OPTIONAL<MSC_S_EventList> = undefined;
+    let mgw_List: OPTIONAL<MGW_EventList> = undefined;
+    let sgsn_List: OPTIONAL<SGSN_EventList> = undefined;
+    let ggsn_List: OPTIONAL<GGSN_EventList> = undefined;
+    let bmsc_List: OPTIONAL<BMSC_EventList> = undefined;
+    let mme_List: OPTIONAL<MME_EventList> = undefined;
+    let sgw_List: OPTIONAL<SGW_EventList> = undefined;
+    let pgw_List: OPTIONAL<PGW_EventList> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "msc-s-List": (_el: _Element): void => { msc_s_List = $._decode_implicit<MSC_S_EventList>(() => _decode_MSC_S_EventList)(_el); },
         "mgw-List": (_el: _Element): void => { mgw_List = $._decode_implicit<MGW_EventList>(() => _decode_MGW_EventList)(_el); },

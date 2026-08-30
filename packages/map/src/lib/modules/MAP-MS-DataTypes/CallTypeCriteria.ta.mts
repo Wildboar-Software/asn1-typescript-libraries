@@ -155,21 +155,13 @@ const CallTypeCriteria_notForwarded: CallTypeCriteria = CallTypeCriteria.notForw
 export
 const notForwarded: CallTypeCriteria = CallTypeCriteria.notForwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CallTypeCriteria: $.ASN1Decoder<CallTypeCriteria> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CallTypeCriteria
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CallTypeCriteria (el: _Element): CallTypeCriteria {
-    if (!_cached_decoder_for_CallTypeCriteria) { _cached_decoder_for_CallTypeCriteria = $._decodeEnumerated; }
-    return _cached_decoder_for_CallTypeCriteria(el);
-}
-
-let _cached_encoder_for_CallTypeCriteria: $.ASN1Encoder<CallTypeCriteria> | null = null;
+export const _decode_CallTypeCriteria = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CallTypeCriteria into an ASN.1 Element.
@@ -178,11 +170,7 @@ let _cached_encoder_for_CallTypeCriteria: $.ASN1Encoder<CallTypeCriteria> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallTypeCriteria, encoded as an ASN.1 Element.
  */
-export
-function _encode_CallTypeCriteria (value: CallTypeCriteria, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallTypeCriteria) { _cached_encoder_for_CallTypeCriteria = $._encodeEnumerated; }
-    return _cached_encoder_for_CallTypeCriteria(value, elGetter);
-}
+export const _encode_CallTypeCriteria = $._encodeEnumerated;
 
 
 /* eslint-enable */

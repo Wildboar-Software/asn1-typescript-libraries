@@ -197,21 +197,13 @@ const Used_RAT_Type_nb_iot: Used_RAT_Type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const nb_iot: Used_RAT_Type = Used_RAT_Type_nb_iot; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Used_RAT_Type: $.ASN1Decoder<Used_RAT_Type> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Used_RAT_Type
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Used_RAT_Type (el: _Element): Used_RAT_Type {
-    if (!_cached_decoder_for_Used_RAT_Type) { _cached_decoder_for_Used_RAT_Type = $._decodeEnumerated; }
-    return _cached_decoder_for_Used_RAT_Type(el);
-}
-
-let _cached_encoder_for_Used_RAT_Type: $.ASN1Encoder<Used_RAT_Type> | null = null;
+export const _decode_Used_RAT_Type = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) Used_RAT_Type into an ASN.1 Element.
@@ -220,11 +212,7 @@ let _cached_encoder_for_Used_RAT_Type: $.ASN1Encoder<Used_RAT_Type> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Used_RAT_Type, encoded as an ASN.1 Element.
  */
-export
-function _encode_Used_RAT_Type (value: Used_RAT_Type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Used_RAT_Type) { _cached_encoder_for_Used_RAT_Type = $._encodeEnumerated; }
-    return _cached_encoder_for_Used_RAT_Type(value, elGetter);
-}
+export const _encode_Used_RAT_Type = $._encodeEnumerated;
 
 
 /* eslint-enable */

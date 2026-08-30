@@ -64,10 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI_GroupId, _decode_IMSI_GroupId, _encode_IMSI_GroupId } from "../MAP-MS-DataTypes/IMSI-GroupId.ta.mjs";
-// export { IMSI_GroupId, _decode_IMSI_GroupId, _encode_IMSI_GroupId } from "../MAP-MS-DataTypes/IMSI-GroupId.ta.mjs";
 
 
 /**
@@ -95,7 +95,11 @@ let _cached_decoder_for_IMSI_GroupIdList: $.ASN1Decoder<IMSI_GroupIdList> | null
 export
 function _decode_IMSI_GroupIdList (el: _Element): IMSI_GroupIdList {
     if (!_cached_decoder_for_IMSI_GroupIdList) { _cached_decoder_for_IMSI_GroupIdList = $._decodeSequenceOf<IMSI_GroupId>(() => _decode_IMSI_GroupId); }
-    return _cached_decoder_for_IMSI_GroupIdList(el);
+    const value = _cached_decoder_for_IMSI_GroupIdList(el);
+    if (value.length < 1 || value.length > 50) {
+        throw new ASN1SizeError("IMSI_GroupIdList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_IMSI_GroupIdList: $.ASN1Encoder<IMSI_GroupIdList> | null = null;

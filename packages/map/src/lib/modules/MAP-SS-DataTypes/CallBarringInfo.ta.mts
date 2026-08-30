@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { CallBarringFeatureList, _decode_CallBarringFeatureList, _encode_CallBarringFeatureList } from "../MAP-SS-DataTypes/CallBarringFeatureList.ta.mjs";
-// export { CallBarringFeatureList, _decode_CallBarringFeatureList, _encode_CallBarringFeatureList } from "../MAP-SS-DataTypes/CallBarringFeatureList.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class CallBarringInfo {
  */
 export
 const _root_component_type_list_1_spec_for_CallBarringInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("ss-Code", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("callBarringFeatureList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("ss-Code", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("callBarringFeatureList", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_CallBarringInfo: $.ASN1Decoder<CallBarringInfo> | null =
 export
 function _decode_CallBarringInfo (el: _Element): CallBarringInfo {
     if (!_cached_decoder_for_CallBarringInfo) { _cached_decoder_for_CallBarringInfo = function (el: _Element): CallBarringInfo {
-    let ss_Code: OPTIONAL<SS_Code>;
+    let ss_Code: OPTIONAL<SS_Code> = undefined;
     let callBarringFeatureList!: CallBarringFeatureList;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ss-Code": (_el: _Element): void => { ss_Code = _decode_SS_Code(_el); },
         "callBarringFeatureList": (_el: _Element): void => { callBarringFeatureList = _decode_CallBarringFeatureList(_el); }

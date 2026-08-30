@@ -126,21 +126,13 @@ const SMS_TriggerDetectionPoint_sms_DeliveryRequest: SMS_TriggerDetectionPoint =
 export
 const sms_DeliveryRequest: SMS_TriggerDetectionPoint = SMS_TriggerDetectionPoint_sms_DeliveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SMS_TriggerDetectionPoint: $.ASN1Decoder<SMS_TriggerDetectionPoint> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SMS_TriggerDetectionPoint
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SMS_TriggerDetectionPoint (el: _Element): SMS_TriggerDetectionPoint {
-    if (!_cached_decoder_for_SMS_TriggerDetectionPoint) { _cached_decoder_for_SMS_TriggerDetectionPoint = $._decodeEnumerated; }
-    return _cached_decoder_for_SMS_TriggerDetectionPoint(el);
-}
-
-let _cached_encoder_for_SMS_TriggerDetectionPoint: $.ASN1Encoder<SMS_TriggerDetectionPoint> | null = null;
+export const _decode_SMS_TriggerDetectionPoint = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SMS_TriggerDetectionPoint into an ASN.1 Element.
@@ -149,11 +141,7 @@ let _cached_encoder_for_SMS_TriggerDetectionPoint: $.ASN1Encoder<SMS_TriggerDete
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SMS_TriggerDetectionPoint, encoded as an ASN.1 Element.
  */
-export
-function _encode_SMS_TriggerDetectionPoint (value: SMS_TriggerDetectionPoint, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMS_TriggerDetectionPoint) { _cached_encoder_for_SMS_TriggerDetectionPoint = $._encodeEnumerated; }
-    return _cached_encoder_for_SMS_TriggerDetectionPoint(value, elGetter);
-}
+export const _encode_SMS_TriggerDetectionPoint = $._encodeEnumerated;
 
 
 /* eslint-enable */

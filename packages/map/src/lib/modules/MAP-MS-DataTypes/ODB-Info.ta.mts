@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
-// export { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -146,9 +144,9 @@ class ODB_Info {
  */
 export
 const _root_component_type_list_1_spec_for_ODB_Info: $.ComponentSpec[] = [
-    new $.ComponentSpec("odb-Data", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("odb-Data", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("notificationToCSE", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -189,9 +187,9 @@ export
 function _decode_ODB_Info (el: _Element): ODB_Info {
     if (!_cached_decoder_for_ODB_Info) { _cached_decoder_for_ODB_Info = function (el: _Element): ODB_Info {
     let odb_Data!: ODB_Data;
-    let notificationToCSE: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let notificationToCSE: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "odb-Data": (_el: _Element): void => { odb_Data = _decode_ODB_Data(_el); },
         "notificationToCSE": (_el: _Element): void => { notificationToCSE = $._decodeNull(_el); },

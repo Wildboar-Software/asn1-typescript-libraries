@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -153,8 +151,8 @@ class ProvideRoamingNumberRes {
  */
 export
 const _root_component_type_list_1_spec_for_ProvideRoamingNumberRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("roamingNumber", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("roamingNumber", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -180,8 +178,8 @@ const _root_component_type_list_2_spec_for_ProvideRoamingNumberRes: $.ComponentS
  */
 export
 const _extension_additions_list_spec_for_ProvideRoamingNumberRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("releaseResourcesSupported", true, $.hasTag(_TagClass.universal, 5), undefined, undefined),
-    new $.ComponentSpec("vmsc-Address", true, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("releaseResourcesSupported", true, $.hasTag(_TagClass.universal, 5)),
+    new $.ComponentSpec("vmsc-Address", true, $.hasTag(_TagClass.universal, 4))
 ];
 
 let _cached_decoder_for_ProvideRoamingNumberRes: $.ASN1Decoder<ProvideRoamingNumberRes> | null = null;
@@ -196,10 +194,10 @@ export
 function _decode_ProvideRoamingNumberRes (el: _Element): ProvideRoamingNumberRes {
     if (!_cached_decoder_for_ProvideRoamingNumberRes) { _cached_decoder_for_ProvideRoamingNumberRes = function (el: _Element): ProvideRoamingNumberRes {
     let roamingNumber!: ISDN_AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let releaseResourcesSupported: OPTIONAL<NULL>;
-    let vmsc_Address: OPTIONAL<ISDN_AddressString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let releaseResourcesSupported: OPTIONAL<NULL> = undefined;
+    let vmsc_Address: OPTIONAL<ISDN_AddressString> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "roamingNumber": (_el: _Element): void => { roamingNumber = _decode_ISDN_AddressString(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); },

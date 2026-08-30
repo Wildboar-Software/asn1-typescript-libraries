@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReportingPLMN, _decode_ReportingPLMN, _encode_ReportingPLMN } from "../MAP-LCS-DataTypes/ReportingPLMN.ta.mjs";
-// export { ReportingPLMN, _decode_ReportingPLMN, _encode_ReportingPLMN } from "../MAP-LCS-DataTypes/ReportingPLMN.ta.mjs";
 
+
+import { maxNumOfReportingPLMN } from "./maxNumOfReportingPLMN.va.mjs";
 
 /**
  * @summary PLMNList
@@ -95,7 +97,11 @@ let _cached_decoder_for_PLMNList: $.ASN1Decoder<PLMNList> | null = null;
 export
 function _decode_PLMNList (el: _Element): PLMNList {
     if (!_cached_decoder_for_PLMNList) { _cached_decoder_for_PLMNList = $._decodeSequenceOf<ReportingPLMN>(() => _decode_ReportingPLMN); }
-    return _cached_decoder_for_PLMNList(el);
+    const value = _cached_decoder_for_PLMNList(el);
+    if (value.length < 1 || value.length > maxNumOfReportingPLMN) {
+        throw new ASN1SizeError("PLMNList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PLMNList: $.ASN1Encoder<PLMNList> | null = null;
