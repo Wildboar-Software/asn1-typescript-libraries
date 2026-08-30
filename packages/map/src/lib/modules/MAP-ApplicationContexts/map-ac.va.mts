@@ -67,7 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { gsm_NetworkId } from "../MobileDomainDefinitions/gsm-NetworkId.va.mjs";
-// export { gsm_NetworkId } from "../MobileDomainDefinitions/gsm-NetworkId.va.mjs";
+import { ac_Id } from "../MobileDomainDefinitions/ac-Id.va.mjs";
 
 
 /**
@@ -83,8 +83,8 @@ import { gsm_NetworkId } from "../MobileDomainDefinitions/gsm-NetworkId.va.mjs";
  * @constant
  */
 export
-const map_ac: OBJECT_IDENTIFIER = new _OID([
-    ac_Id,
+const map_ac: OBJECT_IDENTIFIER = _OID.fromParts([
+    Number(ac_Id),
 ], gsm_NetworkId);
 
 /* eslint-enable */

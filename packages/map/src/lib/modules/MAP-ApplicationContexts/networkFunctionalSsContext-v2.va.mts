@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
-// export { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 
 
 /**
@@ -83,7 +82,7 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
  * @constant
  */
 export
-const networkFunctionalSsContext_v2: OBJECT_IDENTIFIER = new _OID([
+const networkFunctionalSsContext_v2: OBJECT_IDENTIFIER = _OID.fromParts([
     /* networkFunctionalSs */ 18,
     /* version2 */ 2,
 ], map_ac);
