@@ -259,7 +259,19 @@ produces no build outputs. This might be faster, and you MAY use it instead of
 
 ## Workflow
 
-Do these steps in order:
+Do these steps below in order.
+
+If working as a "cloud agent" or on some isolated or ephemeral machine, create a
+commit for each of the following steps, if said step results in any non-ignored
+file changes. This makes the changes more reviewable.
+
+If performing these tasks on somebody's workstation, personal computer, or
+mobile device, prompt them for permission to create commits. If permission is
+not granted, do all of the steps below and do not commit anything; let the user
+do the committing.
+
+These commits should followed the [scoped commits](https://scopedcommits.com/)
+convention and the scope MUST be the project name (what Nx calls it).
 
 1. Identify when an ASN.1 module is part of the compiled output only as a
    dependency rather than a module of primary interest: in this case, check if
@@ -307,7 +319,7 @@ Do these steps in order:
    for the whole package and instead create one for each ASN.1 module and
    expose all of these modules as their own separate entrypoints. See
    `packages/x500/package.json` and `packages/x500/jsr.json` for an example of
-   this.
+   this. Create the per-ASN.1 module entrypoints unconditionally.
 6. Find all `-- REMOVED_FROM_UNNESTING --` in the ASN.1-based Typescript and
    replace it with the ASN.1 that belongs there. Apply formatting to the ASN.1
    so that it looks "natural."
@@ -325,15 +337,22 @@ Do these steps in order:
    Throw `ASN1OverflowError` if an `INTEGER` or `REAL` exceeds its range
    constraints. Throw `ASN1Error` for anything else. You MUST NOT add validation
    code to encoders.
-8. Add a `LICENSE.txt` file in the project, if it does not exist already.
-   Copy an existing license from another package and set the year to the
-   current year. I do not want you to attempt to recall the MIT license
-   from memory.
-9. Add a `jsr.json` file if there isn't one already. It should include the
-   `LICENSE.txt`, `README.md`, any source files, and exclude any test files.
-   The package name should fall within the `@wildboar/` scope. Version
-   should be `1.0.0`. License should be `MIT`.
-10. Add a `package.json` file if there isn't one already. Do NOT add a
+8. `ComponentSpec` can now supports optional trailing arguments. If you see it
+   ending with one or more `undefined` arguments, please remove these to make
+   the code size smaller.
+9. Clean up any unused imports from each file.
+10. Remove any re-exports from each file, unless they are part of the thing
+    actually defined in the file. For example, do not re-export
+    `CertificateSerialNumber` from `TBSCertificate.ta.mts`. There is a script
+    in `tools/rm-reexports.mjs` that might help with this.
+11. Add a `LICENSE.txt` file in the project, if it does not exist already. Copy
+    an existing license from another package and set the year to the current
+    year. I do not want you to attempt to recall the MIT license from memory.
+12. Add a `jsr.json` file if there isn't one already. It should include the
+    `LICENSE.txt`, `README.md`, any source files, and exclude any test files.
+    The package name should fall within the `@wildboar/` scope. Version should
+    be `1.0.0`. License should be `MIT`.
+13. Add a `package.json` file if there isn't one already. Do NOT add a
     `description`. Do NOT add `keywords`. For dependencies, use the same version
     spec of `@wildboar/asn1` that all other packages use. Any dependencies that
     you introduced in step 1 MUST be added here using a version spec that
@@ -342,25 +361,26 @@ Do these steps in order:
     Export `types`, `module`, and `main`. Version MUST be `1.0.0`. License
     MUST be `MIT`. Type MUST be `module`. All other fields in the `package.json`
     can be taken from a sibling project.
-11. Add a `README.md` stub by copying the generic parts from
+14. Add a `README.md` stub by copying the generic parts from
     `packages/cmp/README.md` and leaving out the parts that are specific to CMP.
     Instead of mentioning the transition to ESM, just say that this module is
     ESM-only; packages produced from this skill will never have been CommonJS
     before. Add an "AI Usage Statement" section clarifying that this package
     was onboarded from the raw compiler outputs using AI, and name the model
     name and date.
-12. Try to tighten up the Typescript in `tsconfig.json` for the project.
+15. Try to tighten up the Typescript in `tsconfig.json` for the project.
     Enforce `strictNullChecks` and try to fix any obvious errors. If you
     encounter an error that does not have an obvious resolution, just
     leave `strictNullChecks` off. Add other stricter configs and see if you
     can fix those without enormous code changes.
-13. Check for slow types using `deno lint --rules-include=no-slow-types`.
+16. Check for slow types using `deno lint --rules-include=no-slow-types`.
     Generally, these can be fixed by simply adding a return type to a function.
     Sometimes constants need a typing that is easy and obvious to add.
     If you cannot do this, carry on with slow types; it is not worth stopping
     your work to fix this. If you see `prefer-const` lint errors, you may
-    change these to `const`. Do NOT fix `no-explicit-any`.
-14. If the module has any compiled ASN.1 type assignments, sample a few of them
+    change these to `const`. Do NOT fix `no-explicit-any`. There is a script
+    in `tools/explicit-return-types.mjs` that might help with this.
+17. If the module has any compiled ASN.1 type assignments, sample a few of them
     an pick the most complicated one you find. Add a unit test file called
     `roundtrip.test.mts` in `src/`. This unit test file is intended to check
     that a value of this type can be encoded and decoded back to the same
@@ -375,13 +395,21 @@ Do these steps in order:
     source tree, and fix it if they do. Any generated files belong in `dist`,
     `tmp`, or similar "output" directories. See what other projects do for
     reference.
-15. If you are working on the `master` branch, you may run
+18. If you are working on the `master` branch, you may run
     `npx cloc@2.6.0-cloc packages/` to count the lines of code and update the
     readme with only the Typescript statistics. Do NOT do this if you are on any
     other branch, because it might introduce merge conflicts that make the
     statistics wrong.
-16. In `.github/workflows/publish.yml`, add the new Nx project name to the
+19. In `.github/workflows/publish.yml`, add the new Nx project name to the
     matrix for the `publish` job.
+
+## Restrictions
+
+In the past, I have seen AI agents add `= undefined` to values that are
+of a type `OPTIONAL<T>`. This is unnecessary and it only makes the code
+to review and the actual compiled code much larger. Please do not do this
+unless it is in response to an error, such as Typescript requiring it for
+some reason.
 
 ## Output to the User
 
