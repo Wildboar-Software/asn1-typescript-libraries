@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { PW_RegistrationFailureCause, _enum_for_PW_RegistrationFailureCause, PW_RegistrationFailureCause_undetermined /* IMPORTED_LONG_ENUMERATION_ITEM */, undetermined /* IMPORTED_SHORT_ENUMERATION_ITEM */, PW_RegistrationFailureCause_invalidFormat /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidFormat /* IMPORTED_SHORT_ENUMERATION_ITEM */, PW_RegistrationFailureCause_newPasswordsMismatch /* IMPORTED_LONG_ENUMERATION_ITEM */, newPasswordsMismatch /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PW_RegistrationFailureCause, _encode_PW_RegistrationFailureCause } from "../MAP-ER-DataTypes/PW-RegistrationFailureCause.ta.mjs";
-// export { PW_RegistrationFailureCause, _enum_for_PW_RegistrationFailureCause, PW_RegistrationFailureCause_undetermined /* IMPORTED_LONG_ENUMERATION_ITEM */, undetermined /* IMPORTED_SHORT_ENUMERATION_ITEM */, PW_RegistrationFailureCause_invalidFormat /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidFormat /* IMPORTED_SHORT_ENUMERATION_ITEM */, PW_RegistrationFailureCause_newPasswordsMismatch /* IMPORTED_LONG_ENUMERATION_ITEM */, newPasswordsMismatch /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PW_RegistrationFailureCause, _encode_PW_RegistrationFailureCause } from "../MAP-ER-DataTypes/PW-RegistrationFailureCause.ta.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

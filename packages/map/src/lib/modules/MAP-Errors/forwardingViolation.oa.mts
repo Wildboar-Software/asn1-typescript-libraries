@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ForwardingViolationParam, _decode_ForwardingViolationParam, _encode_ForwardingViolationParam } from "../MAP-ER-DataTypes/ForwardingViolationParam.ta.mjs";
-// export { ForwardingViolationParam, _decode_ForwardingViolationParam, _encode_ForwardingViolationParam } from "../MAP-ER-DataTypes/ForwardingViolationParam.ta.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

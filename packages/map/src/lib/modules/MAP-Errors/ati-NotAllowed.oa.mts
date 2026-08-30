@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ATI_NotAllowedParam, _decode_ATI_NotAllowedParam, _encode_ATI_NotAllowedParam } from "../MAP-ER-DataTypes/ATI-NotAllowedParam.ta.mjs";
-// export { ATI_NotAllowedParam, _decode_ATI_NotAllowedParam, _encode_ATI_NotAllowedParam } from "../MAP-ER-DataTypes/ATI-NotAllowedParam.ta.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

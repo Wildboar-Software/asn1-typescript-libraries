@@ -67,11 +67,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { SS_SubscriptionViolationParam, _decode_SS_SubscriptionViolationParam, _encode_SS_SubscriptionViolationParam } from "../MAP-ER-DataTypes/SS-SubscriptionViolationParam.ta.mjs";
-// export { SS_SubscriptionViolationParam, _decode_SS_SubscriptionViolationParam, _encode_SS_SubscriptionViolationParam } from "../MAP-ER-DataTypes/SS-SubscriptionViolationParam.ta.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 
