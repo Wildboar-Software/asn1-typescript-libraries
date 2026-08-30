@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BearerServiceCode, _decode_BearerServiceCode, _encode_BearerServiceCode } from "../MAP-BS-Code/BearerServiceCode.ta.mjs";
-// export { BearerServiceCode, _decode_BearerServiceCode, _encode_BearerServiceCode } from "../MAP-BS-Code/BearerServiceCode.ta.mjs";
 
 
 /**
@@ -83,6 +82,6 @@ import { BearerServiceCode, _decode_BearerServiceCode, _encode_BearerServiceCode
  * @constant
  */
 export
-const plmn_specificBS_1: BearerServiceCode = new Uint8Array([ 0b, 0b ]);
+const plmn_specificBS_1: BearerServiceCode = new Uint8Array([ 0xD1 ]);
 
 /* eslint-enable */
