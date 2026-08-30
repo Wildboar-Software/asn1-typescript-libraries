@@ -155,7 +155,7 @@ const _root_component_type_list_2_spec_for_SLR_Arg_PCS_Extensions: $.ComponentSp
  */
 export
 const _extension_additions_list_spec_for_SLR_Arg_PCS_Extensions: $.ComponentSpec[] = [
-    new $.ComponentSpec("na-ESRK-Request", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("na-ESRK-Request", true, $.hasTag(_TagClass.context, 0))
 ];
 
 let _cached_decoder_for_SLR_Arg_PCS_Extensions: $.ASN1Decoder<SLR_Arg_PCS_Extensions> | null = null;
@@ -169,8 +169,8 @@ let _cached_decoder_for_SLR_Arg_PCS_Extensions: $.ASN1Decoder<SLR_Arg_PCS_Extens
 export
 function _decode_SLR_Arg_PCS_Extensions (el: _Element): SLR_Arg_PCS_Extensions {
     if (!_cached_decoder_for_SLR_Arg_PCS_Extensions) { _cached_decoder_for_SLR_Arg_PCS_Extensions = function (el: _Element): SLR_Arg_PCS_Extensions {
-    let na_ESRK_Request: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let na_ESRK_Request: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "na-ESRK-Request": (_el: _Element): void => { na_ESRK_Request = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }
     };

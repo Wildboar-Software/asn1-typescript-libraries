@@ -69,21 +69,13 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ReportSM_DeliveryStatusArg, _decode_ReportSM_DeliveryStatusArg, _encode_ReportSM_DeliveryStatusArg } from "../MAP-SM-DataTypes/ReportSM-DeliveryStatusArg.ta.mjs";
-// export { ReportSM_DeliveryStatusArg, _decode_ReportSM_DeliveryStatusArg, _encode_ReportSM_DeliveryStatusArg } from "../MAP-SM-DataTypes/ReportSM-DeliveryStatusArg.ta.mjs";
 import { ReportSM_DeliveryStatusRes, _decode_ReportSM_DeliveryStatusRes, _encode_ReportSM_DeliveryStatusRes } from "../MAP-SM-DataTypes/ReportSM-DeliveryStatusRes.ta.mjs";
-// export { ReportSM_DeliveryStatusRes, _decode_ReportSM_DeliveryStatusRes, _encode_ReportSM_DeliveryStatusRes } from "../MAP-SM-DataTypes/ReportSM-DeliveryStatusRes.ta.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
-// export { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 import { messageWaitingListFull } from "../MAP-Errors/messageWaitingListFull.oa.mjs";
-// export { messageWaitingListFull } from "../MAP-Errors/messageWaitingListFull.oa.mjs";
 
 
 /**

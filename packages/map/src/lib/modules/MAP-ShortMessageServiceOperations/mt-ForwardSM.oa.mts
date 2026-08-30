@@ -69,33 +69,19 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { MT_ForwardSM_Arg, _decode_MT_ForwardSM_Arg, _encode_MT_ForwardSM_Arg } from "../MAP-SM-DataTypes/MT-ForwardSM-Arg.ta.mjs";
-// export { MT_ForwardSM_Arg, _decode_MT_ForwardSM_Arg, _encode_MT_ForwardSM_Arg } from "../MAP-SM-DataTypes/MT-ForwardSM-Arg.ta.mjs";
 import { MT_ForwardSM_Res, _decode_MT_ForwardSM_Res, _encode_MT_ForwardSM_Res } from "../MAP-SM-DataTypes/MT-ForwardSM-Res.ta.mjs";
-// export { MT_ForwardSM_Res, _decode_MT_ForwardSM_Res, _encode_MT_ForwardSM_Res } from "../MAP-SM-DataTypes/MT-ForwardSM-Res.ta.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
-// export { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
 import { unidentifiedSubscriber } from "../MAP-Errors/unidentifiedSubscriber.oa.mjs";
-// export { unidentifiedSubscriber } from "../MAP-Errors/unidentifiedSubscriber.oa.mjs";
 import { illegalSubscriber } from "../MAP-Errors/illegalSubscriber.oa.mjs";
-// export { illegalSubscriber } from "../MAP-Errors/illegalSubscriber.oa.mjs";
 import { illegalEquipment } from "../MAP-Errors/illegalEquipment.oa.mjs";
-// export { illegalEquipment } from "../MAP-Errors/illegalEquipment.oa.mjs";
 import { subscriberBusyForMT_SMS } from "../MAP-Errors/subscriberBusyForMT-SMS.oa.mjs";
-// export { subscriberBusyForMT_SMS } from "../MAP-Errors/subscriberBusyForMT-SMS.oa.mjs";
 import { sm_DeliveryFailure } from "../MAP-Errors/sm-DeliveryFailure.oa.mjs";
-// export { sm_DeliveryFailure } from "../MAP-Errors/sm-DeliveryFailure.oa.mjs";
 import { absentSubscriberSM } from "../MAP-Errors/absentSubscriberSM.oa.mjs";
-// export { absentSubscriberSM } from "../MAP-Errors/absentSubscriberSM.oa.mjs";
 
 
 /**

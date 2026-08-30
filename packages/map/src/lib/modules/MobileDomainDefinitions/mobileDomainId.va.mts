@@ -82,7 +82,7 @@ import * as $ from "@wildboar/asn1/functional";
  * @constant
  */
 export
-const mobileDomainId: OBJECT_IDENTIFIER = new _OID([
+const mobileDomainId: OBJECT_IDENTIFIER = _OID.fromParts([
     /* ccitt */ 0,
     /* identified-organization */ 4,
     /* etsi */ 0,

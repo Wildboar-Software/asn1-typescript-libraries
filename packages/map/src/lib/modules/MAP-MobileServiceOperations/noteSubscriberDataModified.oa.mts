@@ -69,19 +69,12 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { NoteSubscriberDataModifiedArg, _decode_NoteSubscriberDataModifiedArg, _encode_NoteSubscriberDataModifiedArg } from "../MAP-MS-DataTypes/NoteSubscriberDataModifiedArg.ta.mjs";
-// export { NoteSubscriberDataModifiedArg, _decode_NoteSubscriberDataModifiedArg, _encode_NoteSubscriberDataModifiedArg } from "../MAP-MS-DataTypes/NoteSubscriberDataModifiedArg.ta.mjs";
 import { NoteSubscriberDataModifiedRes, _decode_NoteSubscriberDataModifiedRes, _encode_NoteSubscriberDataModifiedRes } from "../MAP-MS-DataTypes/NoteSubscriberDataModifiedRes.ta.mjs";
-// export { NoteSubscriberDataModifiedRes, _decode_NoteSubscriberDataModifiedRes, _encode_NoteSubscriberDataModifiedRes } from "../MAP-MS-DataTypes/NoteSubscriberDataModifiedRes.ta.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
-// export { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 
 
 /**

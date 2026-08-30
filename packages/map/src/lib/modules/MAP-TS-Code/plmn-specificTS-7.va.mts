@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TeleserviceCode, _decode_TeleserviceCode, _encode_TeleserviceCode } from "../MAP-TS-Code/TeleserviceCode.ta.mjs";
-// export { TeleserviceCode, _decode_TeleserviceCode, _encode_TeleserviceCode } from "../MAP-TS-Code/TeleserviceCode.ta.mjs";
 
 
 /**
@@ -83,6 +82,6 @@ import { TeleserviceCode, _decode_TeleserviceCode, _encode_TeleserviceCode } fro
  * @constant
  */
 export
-const plmn_specificTS_7: TeleserviceCode = new Uint8Array([ 0b, 0b ]);
+const plmn_specificTS_7: TeleserviceCode = new Uint8Array([ 0xD7 ]);
 
 /* eslint-enable */

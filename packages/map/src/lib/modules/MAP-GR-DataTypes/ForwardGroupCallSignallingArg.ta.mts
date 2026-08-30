@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { StateAttributes, _decode_StateAttributes, _encode_StateAttributes } from "../MAP-GR-DataTypes/StateAttributes.ta.mjs";
-// export { StateAttributes, _decode_StateAttributes, _encode_StateAttributes } from "../MAP-GR-DataTypes/StateAttributes.ta.mjs";
 import { TalkerPriority, _enum_for_TalkerPriority, TalkerPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_privileged /* IMPORTED_LONG_ENUMERATION_ITEM */, privileged /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_emergency /* IMPORTED_LONG_ENUMERATION_ITEM */, emergency /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TalkerPriority, _encode_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
-// export { TalkerPriority, _enum_for_TalkerPriority, TalkerPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_privileged /* IMPORTED_LONG_ENUMERATION_ITEM */, privileged /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_emergency /* IMPORTED_LONG_ENUMERATION_ITEM */, emergency /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TalkerPriority, _encode_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
 import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
-// export { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-// export { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-// export { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
 
 
 /**
@@ -233,13 +226,13 @@ class ForwardGroupCallSignallingArg {
  */
 export
 const _root_component_type_list_1_spec_for_ForwardGroupCallSignallingArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("uplinkRequestAck", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("uplinkReleaseIndication", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("uplinkRejectCommand", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("uplinkSeizedCommand", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("uplinkReleaseCommand", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("uplinkRequestAck", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("uplinkReleaseIndication", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("uplinkRejectCommand", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("uplinkSeizedCommand", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("uplinkReleaseCommand", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -265,12 +258,12 @@ const _root_component_type_list_2_spec_for_ForwardGroupCallSignallingArg: $.Comp
  */
 export
 const _extension_additions_list_spec_for_ForwardGroupCallSignallingArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("stateAttributes", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("talkerPriority", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("emergencyModeResetCommandFlag", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("sm-RP-UI", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("an-APDU", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("stateAttributes", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("talkerPriority", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("emergencyModeResetCommandFlag", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("sm-RP-UI", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("an-APDU", true, $.hasTag(_TagClass.context, 10))
 ];
 
 let _cached_decoder_for_ForwardGroupCallSignallingArg: $.ASN1Decoder<ForwardGroupCallSignallingArg> | null = null;
@@ -284,20 +277,20 @@ let _cached_decoder_for_ForwardGroupCallSignallingArg: $.ASN1Decoder<ForwardGrou
 export
 function _decode_ForwardGroupCallSignallingArg (el: _Element): ForwardGroupCallSignallingArg {
     if (!_cached_decoder_for_ForwardGroupCallSignallingArg) { _cached_decoder_for_ForwardGroupCallSignallingArg = function (el: _Element): ForwardGroupCallSignallingArg {
-    let imsi: OPTIONAL<IMSI>;
-    let uplinkRequestAck: OPTIONAL<NULL>;
-    let uplinkReleaseIndication: OPTIONAL<NULL>;
-    let uplinkRejectCommand: OPTIONAL<NULL>;
-    let uplinkSeizedCommand: OPTIONAL<NULL>;
-    let uplinkReleaseCommand: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let stateAttributes: OPTIONAL<StateAttributes>;
-    let talkerPriority: OPTIONAL<TalkerPriority>;
-    let additionalInfo: OPTIONAL<AdditionalInfo>;
-    let emergencyModeResetCommandFlag: OPTIONAL<NULL>;
-    let sm_RP_UI: OPTIONAL<SignalInfo>;
-    let an_APDU: OPTIONAL<AccessNetworkSignalInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let uplinkRequestAck: OPTIONAL<NULL> = undefined;
+    let uplinkReleaseIndication: OPTIONAL<NULL> = undefined;
+    let uplinkRejectCommand: OPTIONAL<NULL> = undefined;
+    let uplinkSeizedCommand: OPTIONAL<NULL> = undefined;
+    let uplinkReleaseCommand: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let stateAttributes: OPTIONAL<StateAttributes> = undefined;
+    let talkerPriority: OPTIONAL<TalkerPriority> = undefined;
+    let additionalInfo: OPTIONAL<AdditionalInfo> = undefined;
+    let emergencyModeResetCommandFlag: OPTIONAL<NULL> = undefined;
+    let sm_RP_UI: OPTIONAL<SignalInfo> = undefined;
+    let an_APDU: OPTIONAL<AccessNetworkSignalInfo> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => { imsi = _decode_IMSI(_el); },
         "uplinkRequestAck": (_el: _Element): void => { uplinkRequestAck = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

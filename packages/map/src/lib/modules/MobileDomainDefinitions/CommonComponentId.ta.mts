@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CommonComponentId = INTEGER;
 
-let _cached_decoder_for_CommonComponentId: $.ASN1Decoder<CommonComponentId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonComponentId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CommonComponentId (el: _Element): CommonComponentId {
-    if (!_cached_decoder_for_CommonComponentId) { _cached_decoder_for_CommonComponentId = $._decodeInteger; }
-    return _cached_decoder_for_CommonComponentId(el);
-}
-
-let _cached_encoder_for_CommonComponentId: $.ASN1Encoder<CommonComponentId> | null = null;
+export const _decode_CommonComponentId = (el: _Element): CommonComponentId => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 9) {
+        throw new ASN1OverflowError("CommonComponentId violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) CommonComponentId into an ASN.1 Element.
@@ -105,11 +105,7 @@ let _cached_encoder_for_CommonComponentId: $.ASN1Encoder<CommonComponentId> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CommonComponentId, encoded as an ASN.1 Element.
  */
-export
-function _encode_CommonComponentId (value: CommonComponentId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommonComponentId) { _cached_encoder_for_CommonComponentId = $._encodeInteger; }
-    return _cached_encoder_for_CommonComponentId(value, elGetter);
-}
+export const _encode_CommonComponentId = $._encodeInteger;
 
 
 /* eslint-enable */

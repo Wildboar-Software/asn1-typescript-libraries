@@ -67,13 +67,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { TalkerPriority, _enum_for_TalkerPriority, TalkerPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_privileged /* IMPORTED_LONG_ENUMERATION_ITEM */, privileged /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_emergency /* IMPORTED_LONG_ENUMERATION_ITEM */, emergency /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TalkerPriority, _encode_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
-// export { TalkerPriority, _enum_for_TalkerPriority, TalkerPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_privileged /* IMPORTED_LONG_ENUMERATION_ITEM */, privileged /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_emergency /* IMPORTED_LONG_ENUMERATION_ITEM */, emergency /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TalkerPriority, _encode_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
 import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
-// export { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-// export { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
 
 
 /**
@@ -191,10 +187,10 @@ class ProcessGroupCallSignallingArg {
  */
 export
 const _root_component_type_list_1_spec_for_ProcessGroupCallSignallingArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("uplinkRequest", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("uplinkReleaseIndication", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("releaseGroupCall", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("uplinkRequest", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("uplinkReleaseIndication", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("releaseGroupCall", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -220,10 +216,10 @@ const _root_component_type_list_2_spec_for_ProcessGroupCallSignallingArg: $.Comp
  */
 export
 const _extension_additions_list_spec_for_ProcessGroupCallSignallingArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("talkerPriority", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("emergencyModeResetCommandFlag", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("an-APDU", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("talkerPriority", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("emergencyModeResetCommandFlag", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("an-APDU", true, $.hasTag(_TagClass.context, 6))
 ];
 
 let _cached_decoder_for_ProcessGroupCallSignallingArg: $.ASN1Decoder<ProcessGroupCallSignallingArg> | null = null;
@@ -237,15 +233,15 @@ let _cached_decoder_for_ProcessGroupCallSignallingArg: $.ASN1Decoder<ProcessGrou
 export
 function _decode_ProcessGroupCallSignallingArg (el: _Element): ProcessGroupCallSignallingArg {
     if (!_cached_decoder_for_ProcessGroupCallSignallingArg) { _cached_decoder_for_ProcessGroupCallSignallingArg = function (el: _Element): ProcessGroupCallSignallingArg {
-    let uplinkRequest: OPTIONAL<NULL>;
-    let uplinkReleaseIndication: OPTIONAL<NULL>;
-    let releaseGroupCall: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let talkerPriority: OPTIONAL<TalkerPriority>;
-    let additionalInfo: OPTIONAL<AdditionalInfo>;
-    let emergencyModeResetCommandFlag: OPTIONAL<NULL>;
-    let an_APDU: OPTIONAL<AccessNetworkSignalInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let uplinkRequest: OPTIONAL<NULL> = undefined;
+    let uplinkReleaseIndication: OPTIONAL<NULL> = undefined;
+    let releaseGroupCall: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let talkerPriority: OPTIONAL<TalkerPriority> = undefined;
+    let additionalInfo: OPTIONAL<AdditionalInfo> = undefined;
+    let emergencyModeResetCommandFlag: OPTIONAL<NULL> = undefined;
+    let an_APDU: OPTIONAL<AccessNetworkSignalInfo> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uplinkRequest": (_el: _Element): void => { uplinkRequest = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "uplinkReleaseIndication": (_el: _Element): void => { uplinkReleaseIndication = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

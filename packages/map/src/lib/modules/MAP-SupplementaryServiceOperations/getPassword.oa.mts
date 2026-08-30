@@ -69,13 +69,9 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { GuidanceInfo, _enum_for_GuidanceInfo, GuidanceInfo_enterPW /* IMPORTED_LONG_ENUMERATION_ITEM */, enterPW /* IMPORTED_SHORT_ENUMERATION_ITEM */, GuidanceInfo_enterNewPW /* IMPORTED_LONG_ENUMERATION_ITEM */, enterNewPW /* IMPORTED_SHORT_ENUMERATION_ITEM */, GuidanceInfo_enterNewPW_Again /* IMPORTED_LONG_ENUMERATION_ITEM */, enterNewPW_Again /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GuidanceInfo, _encode_GuidanceInfo } from "../MAP-SS-DataTypes/GuidanceInfo.ta.mjs";
-// export { GuidanceInfo, _enum_for_GuidanceInfo, GuidanceInfo_enterPW /* IMPORTED_LONG_ENUMERATION_ITEM */, enterPW /* IMPORTED_SHORT_ENUMERATION_ITEM */, GuidanceInfo_enterNewPW /* IMPORTED_LONG_ENUMERATION_ITEM */, enterNewPW /* IMPORTED_SHORT_ENUMERATION_ITEM */, GuidanceInfo_enterNewPW_Again /* IMPORTED_LONG_ENUMERATION_ITEM */, enterNewPW_Again /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GuidanceInfo, _encode_GuidanceInfo } from "../MAP-SS-DataTypes/GuidanceInfo.ta.mjs";
 import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
-// export { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
 
 
 /**

@@ -64,11 +64,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateExtension, _decode_PrivateExtension, _encode_PrivateExtension } from "../MAP-ExtensionDataTypes/PrivateExtension.ta.mjs";
-// export { PrivateExtension, _decode_PrivateExtension, _encode_PrivateExtension } from "../MAP-ExtensionDataTypes/PrivateExtension.ta.mjs";
 
+
+import { maxNumOfPrivateExtensions } from "./maxNumOfPrivateExtensions.va.mjs";
 
 /**
  * @summary PrivateExtensionList
@@ -95,7 +97,11 @@ let _cached_decoder_for_PrivateExtensionList: $.ASN1Decoder<PrivateExtensionList
 export
 function _decode_PrivateExtensionList (el: _Element): PrivateExtensionList {
     if (!_cached_decoder_for_PrivateExtensionList) { _cached_decoder_for_PrivateExtensionList = $._decodeSequenceOf<PrivateExtension>(() => _decode_PrivateExtension); }
-    return _cached_decoder_for_PrivateExtensionList(el);
+    const value = _cached_decoder_for_PrivateExtensionList(el);
+    if (value.length < 1 || value.length > maxNumOfPrivateExtensions) {
+        throw new ASN1SizeError("PrivateExtensionList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PrivateExtensionList: $.ASN1Encoder<PrivateExtensionList> | null = null;

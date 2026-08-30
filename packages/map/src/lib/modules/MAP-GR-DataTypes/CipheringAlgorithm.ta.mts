@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CipheringAlgorithm = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_CipheringAlgorithm: $.ASN1Decoder<CipheringAlgorithm> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CipheringAlgorithm
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CipheringAlgorithm (el: _Element): CipheringAlgorithm {
-    if (!_cached_decoder_for_CipheringAlgorithm) { _cached_decoder_for_CipheringAlgorithm = $._decodeOctetString; }
-    return _cached_decoder_for_CipheringAlgorithm(el);
-}
-
-let _cached_encoder_for_CipheringAlgorithm: $.ASN1Encoder<CipheringAlgorithm> | null = null;
+export const _decode_CipheringAlgorithm = (el: _Element): CipheringAlgorithm => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("CipheringAlgorithm violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) CipheringAlgorithm into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_CipheringAlgorithm: $.ASN1Encoder<CipheringAlgorithm> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CipheringAlgorithm, encoded as an ASN.1 Element.
  */
-export
-function _encode_CipheringAlgorithm (value: CipheringAlgorithm, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CipheringAlgorithm) { _cached_encoder_for_CipheringAlgorithm = $._encodeOctetString; }
-    return _cached_encoder_for_CipheringAlgorithm(value, elGetter);
-}
+export const _encode_CipheringAlgorithm = $._encodeOctetString;
 
 
 /* eslint-enable */

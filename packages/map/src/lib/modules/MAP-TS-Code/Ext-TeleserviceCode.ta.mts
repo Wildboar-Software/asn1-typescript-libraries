@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,21 +83,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Ext_TeleserviceCode = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_Ext_TeleserviceCode: $.ASN1Decoder<Ext_TeleserviceCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext_TeleserviceCode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Ext_TeleserviceCode (el: _Element): Ext_TeleserviceCode {
-    if (!_cached_decoder_for_Ext_TeleserviceCode) { _cached_decoder_for_Ext_TeleserviceCode = $._decodeOctetString; }
-    return _cached_decoder_for_Ext_TeleserviceCode(el);
-}
-
-let _cached_encoder_for_Ext_TeleserviceCode: $.ASN1Encoder<Ext_TeleserviceCode> | null = null;
+export const _decode_Ext_TeleserviceCode = (el: _Element): Ext_TeleserviceCode => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("Ext_TeleserviceCode violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Ext_TeleserviceCode into an ASN.1 Element.
@@ -105,11 +104,7 @@ let _cached_encoder_for_Ext_TeleserviceCode: $.ASN1Encoder<Ext_TeleserviceCode> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_TeleserviceCode, encoded as an ASN.1 Element.
  */
-export
-function _encode_Ext_TeleserviceCode (value: Ext_TeleserviceCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Ext_TeleserviceCode) { _cached_encoder_for_Ext_TeleserviceCode = $._encodeOctetString; }
-    return _cached_encoder_for_Ext_TeleserviceCode(value, elGetter);
-}
+export const _encode_Ext_TeleserviceCode = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -69,19 +69,12 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { CheckIMEI_Arg, _decode_CheckIMEI_Arg, _encode_CheckIMEI_Arg } from "../MAP-MS-DataTypes/CheckIMEI-Arg.ta.mjs";
-// export { CheckIMEI_Arg, _decode_CheckIMEI_Arg, _encode_CheckIMEI_Arg } from "../MAP-MS-DataTypes/CheckIMEI-Arg.ta.mjs";
 import { CheckIMEI_Res, _decode_CheckIMEI_Res, _encode_CheckIMEI_Res } from "../MAP-MS-DataTypes/CheckIMEI-Res.ta.mjs";
-// export { CheckIMEI_Res, _decode_CheckIMEI_Res, _encode_CheckIMEI_Res } from "../MAP-MS-DataTypes/CheckIMEI-Res.ta.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unknownEquipment } from "../MAP-Errors/unknownEquipment.oa.mjs";
-// export { unknownEquipment } from "../MAP-Errors/unknownEquipment.oa.mjs";
 
 
 /**

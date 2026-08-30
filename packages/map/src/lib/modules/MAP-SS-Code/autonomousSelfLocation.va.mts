@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-// export { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 
 
 /**
@@ -83,6 +82,6 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  * @constant
  */
 export
-const autonomousSelfLocation: SS_Code = new Uint8Array([ 0b, 0b ]);
+const autonomousSelfLocation: SS_Code = new Uint8Array([ 0xC2 ]);
 
 /* eslint-enable */

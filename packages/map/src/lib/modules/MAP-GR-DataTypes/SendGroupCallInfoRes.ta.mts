@@ -67,19 +67,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
-// export { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
-// export { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
 import { AdditionalSubscriptions, AdditionalSubscriptions_privilegedUplinkRequest /* IMPORTED_LONG_NAMED_BIT */, privilegedUplinkRequest /* IMPORTED_SHORT_NAMED_BIT */, AdditionalSubscriptions_emergencyUplinkRequest /* IMPORTED_LONG_NAMED_BIT */, emergencyUplinkRequest /* IMPORTED_SHORT_NAMED_BIT */, AdditionalSubscriptions_emergencyReset /* IMPORTED_LONG_NAMED_BIT */, emergencyReset /* IMPORTED_SHORT_NAMED_BIT */, _decode_AdditionalSubscriptions, _encode_AdditionalSubscriptions } from "../MAP-MS-DataTypes/AdditionalSubscriptions.ta.mjs";
-// export { AdditionalSubscriptions, AdditionalSubscriptions_privilegedUplinkRequest /* IMPORTED_LONG_NAMED_BIT */, privilegedUplinkRequest /* IMPORTED_SHORT_NAMED_BIT */, AdditionalSubscriptions_emergencyUplinkRequest /* IMPORTED_LONG_NAMED_BIT */, emergencyUplinkRequest /* IMPORTED_SHORT_NAMED_BIT */, AdditionalSubscriptions_emergencyReset /* IMPORTED_LONG_NAMED_BIT */, emergencyReset /* IMPORTED_SHORT_NAMED_BIT */, _decode_AdditionalSubscriptions, _encode_AdditionalSubscriptions } from "../MAP-MS-DataTypes/AdditionalSubscriptions.ta.mjs";
 import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
-// export { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -184,13 +177,13 @@ class SendGroupCallInfoRes {
  */
 export
 const _root_component_type_list_1_spec_for_SendGroupCallInfoRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("anchorMSC-Address", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("asciCallReference", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("additionalSubscriptions", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("kc", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("anchorMSC-Address", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("asciCallReference", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("additionalSubscriptions", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("kc", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6))
 ];
 
 /**
@@ -230,14 +223,14 @@ let _cached_decoder_for_SendGroupCallInfoRes: $.ASN1Decoder<SendGroupCallInfoRes
 export
 function _decode_SendGroupCallInfoRes (el: _Element): SendGroupCallInfoRes {
     if (!_cached_decoder_for_SendGroupCallInfoRes) { _cached_decoder_for_SendGroupCallInfoRes = function (el: _Element): SendGroupCallInfoRes {
-    let anchorMSC_Address: OPTIONAL<ISDN_AddressString>;
-    let asciCallReference: OPTIONAL<ASCI_CallReference>;
-    let imsi: OPTIONAL<IMSI>;
-    let additionalInfo: OPTIONAL<AdditionalInfo>;
-    let additionalSubscriptions: OPTIONAL<AdditionalSubscriptions>;
-    let kc: OPTIONAL<Kc>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let anchorMSC_Address: OPTIONAL<ISDN_AddressString> = undefined;
+    let asciCallReference: OPTIONAL<ASCI_CallReference> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let additionalInfo: OPTIONAL<AdditionalInfo> = undefined;
+    let additionalSubscriptions: OPTIONAL<AdditionalSubscriptions> = undefined;
+    let kc: OPTIONAL<Kc> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "anchorMSC-Address": (_el: _Element): void => { anchorMSC_Address = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "asciCallReference": (_el: _Element): void => { asciCallReference = $._decode_implicit<ASCI_CallReference>(() => _decode_ASCI_CallReference)(_el); },

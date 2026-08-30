@@ -69,19 +69,12 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { UpdateVcsgLocationArg, _decode_UpdateVcsgLocationArg, _encode_UpdateVcsgLocationArg } from "../MAP-MS-DataTypes/UpdateVcsgLocationArg.ta.mjs";
-// export { UpdateVcsgLocationArg, _decode_UpdateVcsgLocationArg, _encode_UpdateVcsgLocationArg } from "../MAP-MS-DataTypes/UpdateVcsgLocationArg.ta.mjs";
 import { UpdateVcsgLocationRes, _decode_UpdateVcsgLocationRes, _encode_UpdateVcsgLocationRes } from "../MAP-MS-DataTypes/UpdateVcsgLocationRes.ta.mjs";
-// export { UpdateVcsgLocationRes, _decode_UpdateVcsgLocationRes, _encode_UpdateVcsgLocationRes } from "../MAP-MS-DataTypes/UpdateVcsgLocationRes.ta.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
-// export { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 
 
 /**

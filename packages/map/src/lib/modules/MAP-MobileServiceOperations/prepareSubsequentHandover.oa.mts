@@ -69,21 +69,13 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { PrepareSubsequentHO_Arg, _decode_PrepareSubsequentHO_Arg, _encode_PrepareSubsequentHO_Arg } from "../MAP-MS-DataTypes/PrepareSubsequentHO-Arg.ta.mjs";
-// export { PrepareSubsequentHO_Arg, _decode_PrepareSubsequentHO_Arg, _encode_PrepareSubsequentHO_Arg } from "../MAP-MS-DataTypes/PrepareSubsequentHO-Arg.ta.mjs";
 import { PrepareSubsequentHO_Res, _decode_PrepareSubsequentHO_Res, _encode_PrepareSubsequentHO_Res } from "../MAP-MS-DataTypes/PrepareSubsequentHO-Res.ta.mjs";
-// export { PrepareSubsequentHO_Res, _decode_PrepareSubsequentHO_Res, _encode_PrepareSubsequentHO_Res } from "../MAP-MS-DataTypes/PrepareSubsequentHO-Res.ta.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unknownMSC } from "../MAP-Errors/unknownMSC.oa.mjs";
-// export { unknownMSC } from "../MAP-Errors/unknownMSC.oa.mjs";
 import { subsequentHandoverFailure } from "../MAP-Errors/subsequentHandoverFailure.oa.mjs";
-// export { subsequentHandoverFailure } from "../MAP-Errors/subsequentHandoverFailure.oa.mjs";
 
 
 /**

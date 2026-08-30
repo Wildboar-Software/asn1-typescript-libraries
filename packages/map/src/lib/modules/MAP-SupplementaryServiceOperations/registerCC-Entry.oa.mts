@@ -69,33 +69,19 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { RegisterCC_EntryArg, _decode_RegisterCC_EntryArg, _encode_RegisterCC_EntryArg } from "../MAP-SS-DataTypes/RegisterCC-EntryArg.ta.mjs";
-// export { RegisterCC_EntryArg, _decode_RegisterCC_EntryArg, _encode_RegisterCC_EntryArg } from "../MAP-SS-DataTypes/RegisterCC-EntryArg.ta.mjs";
 import { RegisterCC_EntryRes, _decode_RegisterCC_EntryRes, _encode_RegisterCC_EntryRes } from "../MAP-SS-DataTypes/RegisterCC-EntryRes.ta.mjs";
-// export { RegisterCC_EntryRes, _decode_RegisterCC_EntryRes, _encode_RegisterCC_EntryRes } from "../MAP-SS-DataTypes/RegisterCC-EntryRes.ta.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { callBarred } from "../MAP-Errors/callBarred.oa.mjs";
-// export { callBarred } from "../MAP-Errors/callBarred.oa.mjs";
 import { illegalSS_Operation } from "../MAP-Errors/illegalSS-Operation.oa.mjs";
-// export { illegalSS_Operation } from "../MAP-Errors/illegalSS-Operation.oa.mjs";
 import { ss_ErrorStatus } from "../MAP-Errors/ss-ErrorStatus.oa.mjs";
-// export { ss_ErrorStatus } from "../MAP-Errors/ss-ErrorStatus.oa.mjs";
 import { ss_Incompatibility } from "../MAP-Errors/ss-Incompatibility.oa.mjs";
-// export { ss_Incompatibility } from "../MAP-Errors/ss-Incompatibility.oa.mjs";
 import { shortTermDenial } from "../MAP-Errors/shortTermDenial.oa.mjs";
-// export { shortTermDenial } from "../MAP-Errors/shortTermDenial.oa.mjs";
 import { longTermDenial } from "../MAP-Errors/longTermDenial.oa.mjs";
-// export { longTermDenial } from "../MAP-Errors/longTermDenial.oa.mjs";
 import { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
-// export { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
 
 
 /**

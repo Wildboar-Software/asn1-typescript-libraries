@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MAP_EXTENSION } from "../MAP-ExtensionDataTypes/MAP-EXTENSION.oca.mjs";
-// export { MAP_EXTENSION } from "../MAP-ExtensionDataTypes/MAP-EXTENSION.oca.mjs";
 import { ExtensionSet } from "../MAP-ExtensionDataTypes/ExtensionSet.osa.mjs";
-// export { ExtensionSet } from "../MAP-ExtensionDataTypes/ExtensionSet.osa.mjs";
 
 
 /**
@@ -134,8 +132,8 @@ class PrivateExtension {
  */
 export
 const _root_component_type_list_1_spec_for_PrivateExtension: $.ComponentSpec[] = [
-    new $.ComponentSpec("extId", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
-    new $.ComponentSpec("extType", true, $.hasAnyTag, undefined, undefined)
+    new $.ComponentSpec("extId", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("extType", true, $.hasAnyTag)
 ];
 
 /**
@@ -176,7 +174,7 @@ export
 function _decode_PrivateExtension (el: _Element): PrivateExtension {
     if (!_cached_decoder_for_PrivateExtension) { _cached_decoder_for_PrivateExtension = function (el: _Element): PrivateExtension {
     let extId!: OBJECT_IDENTIFIER;
-    let extType: OPTIONAL<_Element>;
+    let extType: OPTIONAL<_Element> = undefined;
     const callbacks: $.DecodingMap = {
         "extId": (_el: _Element): void => { extId = $._decodeObjectIdentifier(_el); },
         "extType": (_el: _Element): void => { extType = $._decodeAny(_el); }

@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { mobileDomainId } from "../MobileDomainDefinitions/mobileDomainId.va.mjs";
-// export { mobileDomainId } from "../MobileDomainDefinitions/mobileDomainId.va.mjs";
 
 
 /**
@@ -83,7 +82,7 @@ import { mobileDomainId } from "../MobileDomainDefinitions/mobileDomainId.va.mjs
  * @constant
  */
 export
-const gsm_NetworkId: OBJECT_IDENTIFIER = new _OID([
+const gsm_NetworkId: OBJECT_IDENTIFIER = _OID.fromParts([
     /* gsm-Network */ 1,
 ], mobileDomainId);
 

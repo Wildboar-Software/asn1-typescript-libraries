@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonComponentId, _decode_CommonComponentId, _encode_CommonComponentId } from "../MobileDomainDefinitions/CommonComponentId.ta.mjs";
-// export { CommonComponentId, _decode_CommonComponentId, _encode_CommonComponentId } from "../MobileDomainDefinitions/CommonComponentId.ta.mjs";
 
 
 /**

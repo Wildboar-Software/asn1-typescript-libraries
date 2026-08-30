@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
-// export { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
 import { PCS_Extensions, _decode_PCS_Extensions, _encode_PCS_Extensions } from "../MAP-ExtensionDataTypes/PCS-Extensions.ta.mjs";
-// export { PCS_Extensions, _decode_PCS_Extensions, _encode_PCS_Extensions } from "../MAP-ExtensionDataTypes/PCS-Extensions.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class ExtensionContainer {
  */
 export
 const _root_component_type_list_1_spec_for_ExtensionContainer: $.ComponentSpec[] = [
-    new $.ComponentSpec("privateExtensionList", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("pcs-Extensions", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("privateExtensionList", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("pcs-Extensions", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_ExtensionContainer: $.ASN1Decoder<ExtensionContainer> | 
 export
 function _decode_ExtensionContainer (el: _Element): ExtensionContainer {
     if (!_cached_decoder_for_ExtensionContainer) { _cached_decoder_for_ExtensionContainer = function (el: _Element): ExtensionContainer {
-    let privateExtensionList: OPTIONAL<PrivateExtensionList>;
-    let pcs_Extensions: OPTIONAL<PCS_Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let privateExtensionList: OPTIONAL<PrivateExtensionList> = undefined;
+    let pcs_Extensions: OPTIONAL<PCS_Extensions> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "privateExtensionList": (_el: _Element): void => { privateExtensionList = $._decode_implicit<PrivateExtensionList>(() => _decode_PrivateExtensionList)(_el); },
         "pcs-Extensions": (_el: _Element): void => { pcs_Extensions = $._decode_implicit<PCS_Extensions>(() => _decode_PCS_Extensions)(_el); }

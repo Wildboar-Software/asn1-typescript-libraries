@@ -67,25 +67,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
-// export { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 import { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
-// export { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
 import { CODEC_Info, _decode_CODEC_Info, _encode_CODEC_Info } from "../MAP-GR-DataTypes/CODEC-Info.ta.mjs";
-// export { CODEC_Info, _decode_CODEC_Info, _encode_CODEC_Info } from "../MAP-GR-DataTypes/CODEC-Info.ta.mjs";
 import { CipheringAlgorithm, _decode_CipheringAlgorithm, _encode_CipheringAlgorithm } from "../MAP-GR-DataTypes/CipheringAlgorithm.ta.mjs";
-// export { CipheringAlgorithm, _decode_CipheringAlgorithm, _encode_CipheringAlgorithm } from "../MAP-GR-DataTypes/CipheringAlgorithm.ta.mjs";
 import { GroupKeyNumber, _decode_GroupKeyNumber, _encode_GroupKeyNumber } from "../MAP-GR-DataTypes/GroupKeyNumber.ta.mjs";
-// export { GroupKeyNumber, _decode_GroupKeyNumber, _encode_GroupKeyNumber } from "../MAP-GR-DataTypes/GroupKeyNumber.ta.mjs";
 import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
-// export { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
 import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-// export { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { VSTK, _decode_VSTK, _encode_VSTK } from "../MAP-GR-DataTypes/VSTK.ta.mjs";
-// export { VSTK, _decode_VSTK, _encode_VSTK } from "../MAP-GR-DataTypes/VSTK.ta.mjs";
 import { VSTK_RAND, _decode_VSTK_RAND, _encode_VSTK_RAND } from "../MAP-GR-DataTypes/VSTK-RAND.ta.mjs";
-// export { VSTK_RAND, _decode_VSTK_RAND, _encode_VSTK_RAND } from "../MAP-GR-DataTypes/VSTK-RAND.ta.mjs";
 
 
 /**
@@ -233,15 +223,15 @@ class PrepareGroupCallArg {
  */
 export
 const _root_component_type_list_1_spec_for_PrepareGroupCallArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("teleservice", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("asciCallReference", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("codec-Info", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("cipheringAlgorithm", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("groupKeyNumber-Vk-Id", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("groupKey", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("priority", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("uplinkFree", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("teleservice", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("asciCallReference", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("codec-Info", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("cipheringAlgorithm", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("groupKeyNumber-Vk-Id", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("groupKey", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("priority", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("uplinkFree", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -267,10 +257,10 @@ const _root_component_type_list_2_spec_for_PrepareGroupCallArg: $.ComponentSpec[
  */
 export
 const _extension_additions_list_spec_for_PrepareGroupCallArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("vstk", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("vstk-rand", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("talkerChannelParameter", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("uplinkReplyIndicator", true, $.hasTag(_TagClass.context, 8), undefined, undefined)
+    new $.ComponentSpec("vstk", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("vstk-rand", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("talkerChannelParameter", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("uplinkReplyIndicator", true, $.hasTag(_TagClass.context, 8))
 ];
 
 let _cached_decoder_for_PrepareGroupCallArg: $.ASN1Decoder<PrepareGroupCallArg> | null = null;
@@ -288,16 +278,16 @@ function _decode_PrepareGroupCallArg (el: _Element): PrepareGroupCallArg {
     let asciCallReference!: ASCI_CallReference;
     let codec_Info!: CODEC_Info;
     let cipheringAlgorithm!: CipheringAlgorithm;
-    let groupKeyNumber_Vk_Id: OPTIONAL<GroupKeyNumber>;
-    let groupKey: OPTIONAL<Kc>;
-    let priority: OPTIONAL<EMLPP_Priority>;
-    let uplinkFree: OPTIONAL<NULL>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let vstk: OPTIONAL<VSTK>;
-    let vstk_rand: OPTIONAL<VSTK_RAND>;
-    let talkerChannelParameter: OPTIONAL<NULL>;
-    let uplinkReplyIndicator: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let groupKeyNumber_Vk_Id: OPTIONAL<GroupKeyNumber> = undefined;
+    let groupKey: OPTIONAL<Kc> = undefined;
+    let priority: OPTIONAL<EMLPP_Priority> = undefined;
+    let uplinkFree: OPTIONAL<NULL> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    let vstk: OPTIONAL<VSTK> = undefined;
+    let vstk_rand: OPTIONAL<VSTK_RAND> = undefined;
+    let talkerChannelParameter: OPTIONAL<NULL> = undefined;
+    let uplinkReplyIndicator: OPTIONAL<NULL> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "teleservice": (_el: _Element): void => { teleservice = _decode_Ext_TeleserviceCode(_el); },
         "asciCallReference": (_el: _Element): void => { asciCallReference = _decode_ASCI_CallReference(_el); },

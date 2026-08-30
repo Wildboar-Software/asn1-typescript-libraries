@@ -69,25 +69,15 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { EraseCC_EntryArg, _decode_EraseCC_EntryArg, _encode_EraseCC_EntryArg } from "../MAP-SS-DataTypes/EraseCC-EntryArg.ta.mjs";
-// export { EraseCC_EntryArg, _decode_EraseCC_EntryArg, _encode_EraseCC_EntryArg } from "../MAP-SS-DataTypes/EraseCC-EntryArg.ta.mjs";
 import { EraseCC_EntryRes, _decode_EraseCC_EntryRes, _encode_EraseCC_EntryRes } from "../MAP-SS-DataTypes/EraseCC-EntryRes.ta.mjs";
-// export { EraseCC_EntryRes, _decode_EraseCC_EntryRes, _encode_EraseCC_EntryRes } from "../MAP-SS-DataTypes/EraseCC-EntryRes.ta.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { callBarred } from "../MAP-Errors/callBarred.oa.mjs";
-// export { callBarred } from "../MAP-Errors/callBarred.oa.mjs";
 import { illegalSS_Operation } from "../MAP-Errors/illegalSS-Operation.oa.mjs";
-// export { illegalSS_Operation } from "../MAP-Errors/illegalSS-Operation.oa.mjs";
 import { ss_ErrorStatus } from "../MAP-Errors/ss-ErrorStatus.oa.mjs";
-// export { ss_ErrorStatus } from "../MAP-Errors/ss-ErrorStatus.oa.mjs";
 
 
 /**

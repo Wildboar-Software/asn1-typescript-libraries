@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class PrepareGroupCallRes {
  */
 export
 const _root_component_type_list_1_spec_for_PrepareGroupCallRes: $.ComponentSpec[] = [
-    new $.ComponentSpec("groupCallNumber", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("groupCallNumber", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -181,8 +179,8 @@ export
 function _decode_PrepareGroupCallRes (el: _Element): PrepareGroupCallRes {
     if (!_cached_decoder_for_PrepareGroupCallRes) { _cached_decoder_for_PrepareGroupCallRes = function (el: _Element): PrepareGroupCallRes {
     let groupCallNumber!: ISDN_AddressString;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "groupCallNumber": (_el: _Element): void => { groupCallNumber = _decode_ISDN_AddressString(_el); },
         "extensionContainer": (_el: _Element): void => { extensionContainer = _decode_ExtensionContainer(_el); }

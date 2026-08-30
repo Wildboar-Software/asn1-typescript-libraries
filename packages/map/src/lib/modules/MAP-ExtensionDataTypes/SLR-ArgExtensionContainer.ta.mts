@@ -67,9 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
-// export { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
 import { SLR_Arg_PCS_Extensions, _decode_SLR_Arg_PCS_Extensions, _encode_SLR_Arg_PCS_Extensions } from "../MAP-ExtensionDataTypes/SLR-Arg-PCS-Extensions.ta.mjs";
-// export { SLR_Arg_PCS_Extensions, _decode_SLR_Arg_PCS_Extensions, _encode_SLR_Arg_PCS_Extensions } from "../MAP-ExtensionDataTypes/SLR-Arg-PCS-Extensions.ta.mjs";
 
 
 /**
@@ -139,8 +137,8 @@ class SLR_ArgExtensionContainer {
  */
 export
 const _root_component_type_list_1_spec_for_SLR_ArgExtensionContainer: $.ComponentSpec[] = [
-    new $.ComponentSpec("privateExtensionList", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("slr-Arg-PCS-Extensions", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("privateExtensionList", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("slr-Arg-PCS-Extensions", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -180,9 +178,9 @@ let _cached_decoder_for_SLR_ArgExtensionContainer: $.ASN1Decoder<SLR_ArgExtensio
 export
 function _decode_SLR_ArgExtensionContainer (el: _Element): SLR_ArgExtensionContainer {
     if (!_cached_decoder_for_SLR_ArgExtensionContainer) { _cached_decoder_for_SLR_ArgExtensionContainer = function (el: _Element): SLR_ArgExtensionContainer {
-    let privateExtensionList: OPTIONAL<PrivateExtensionList>;
-    let slr_Arg_PCS_Extensions: OPTIONAL<SLR_Arg_PCS_Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let privateExtensionList: OPTIONAL<PrivateExtensionList> = undefined;
+    let slr_Arg_PCS_Extensions: OPTIONAL<SLR_Arg_PCS_Extensions> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "privateExtensionList": (_el: _Element): void => { privateExtensionList = $._decode_implicit<PrivateExtensionList>(() => _decode_PrivateExtensionList)(_el); },
         "slr-Arg-PCS-Extensions": (_el: _Element): void => { slr_Arg_PCS_Extensions = $._decode_implicit<SLR_Arg_PCS_Extensions>(() => _decode_SLR_Arg_PCS_Extensions)(_el); }

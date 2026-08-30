@@ -69,25 +69,15 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { SendRoutingInfoForGprsArg, _decode_SendRoutingInfoForGprsArg, _encode_SendRoutingInfoForGprsArg } from "../MAP-MS-DataTypes/SendRoutingInfoForGprsArg.ta.mjs";
-// export { SendRoutingInfoForGprsArg, _decode_SendRoutingInfoForGprsArg, _encode_SendRoutingInfoForGprsArg } from "../MAP-MS-DataTypes/SendRoutingInfoForGprsArg.ta.mjs";
 import { SendRoutingInfoForGprsRes, _decode_SendRoutingInfoForGprsRes, _encode_SendRoutingInfoForGprsRes } from "../MAP-MS-DataTypes/SendRoutingInfoForGprsRes.ta.mjs";
-// export { SendRoutingInfoForGprsRes, _decode_SendRoutingInfoForGprsRes, _encode_SendRoutingInfoForGprsRes } from "../MAP-MS-DataTypes/SendRoutingInfoForGprsRes.ta.mjs";
 import { absentSubscriber } from "../MAP-Errors/absentSubscriber.oa.mjs";
-// export { absentSubscriber } from "../MAP-Errors/absentSubscriber.oa.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
-// export { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 import { callBarred } from "../MAP-Errors/callBarred.oa.mjs";
-// export { callBarred } from "../MAP-Errors/callBarred.oa.mjs";
 
 
 /**

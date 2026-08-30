@@ -69,21 +69,13 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ReadyForSM_Arg, _decode_ReadyForSM_Arg, _encode_ReadyForSM_Arg } from "../MAP-SM-DataTypes/ReadyForSM-Arg.ta.mjs";
-// export { ReadyForSM_Arg, _decode_ReadyForSM_Arg, _encode_ReadyForSM_Arg } from "../MAP-SM-DataTypes/ReadyForSM-Arg.ta.mjs";
 import { ReadyForSM_Res, _decode_ReadyForSM_Res, _encode_ReadyForSM_Res } from "../MAP-SM-DataTypes/ReadyForSM-Res.ta.mjs";
-// export { ReadyForSM_Res, _decode_ReadyForSM_Res, _encode_ReadyForSM_Res } from "../MAP-SM-DataTypes/ReadyForSM-Res.ta.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
-// export { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
 import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
-// export { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 
 
 /**

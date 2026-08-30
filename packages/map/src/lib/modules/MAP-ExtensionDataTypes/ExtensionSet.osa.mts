@@ -67,7 +67,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MAP_EXTENSION } from "../MAP-ExtensionDataTypes/MAP-EXTENSION.oca.mjs";
-// export { MAP_EXTENSION } from "../MAP-ExtensionDataTypes/MAP-EXTENSION.oca.mjs";
 
 
 /**

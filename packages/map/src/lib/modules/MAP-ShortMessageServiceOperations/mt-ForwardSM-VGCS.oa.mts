@@ -69,17 +69,11 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { MT_ForwardSM_VGCS_Arg, _decode_MT_ForwardSM_VGCS_Arg, _encode_MT_ForwardSM_VGCS_Arg } from "../MAP-SM-DataTypes/MT-ForwardSM-VGCS-Arg.ta.mjs";
-// export { MT_ForwardSM_VGCS_Arg, _decode_MT_ForwardSM_VGCS_Arg, _encode_MT_ForwardSM_VGCS_Arg } from "../MAP-SM-DataTypes/MT-ForwardSM-VGCS-Arg.ta.mjs";
 import { MT_ForwardSM_VGCS_Res, _decode_MT_ForwardSM_VGCS_Res, _encode_MT_ForwardSM_VGCS_Res } from "../MAP-SM-DataTypes/MT-ForwardSM-VGCS-Res.ta.mjs";
-// export { MT_ForwardSM_VGCS_Res, _decode_MT_ForwardSM_VGCS_Res, _encode_MT_ForwardSM_VGCS_Res } from "../MAP-SM-DataTypes/MT-ForwardSM-VGCS-Res.ta.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 
 
 /**

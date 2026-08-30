@@ -143,10 +143,10 @@ class StateAttributes {
  */
 export
 const _root_component_type_list_1_spec_for_StateAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec("downlinkAttached", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("uplinkAttached", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("dualCommunication", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("callOriginator", true, $.hasTag(_TagClass.context, 8), undefined, undefined)
+    new $.ComponentSpec("downlinkAttached", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("uplinkAttached", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("dualCommunication", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("callOriginator", true, $.hasTag(_TagClass.context, 8))
 ];
 
 /**
@@ -186,10 +186,10 @@ let _cached_decoder_for_StateAttributes: $.ASN1Decoder<StateAttributes> | null =
 export
 function _decode_StateAttributes (el: _Element): StateAttributes {
     if (!_cached_decoder_for_StateAttributes) { _cached_decoder_for_StateAttributes = function (el: _Element): StateAttributes {
-    let downlinkAttached: OPTIONAL<NULL>;
-    let uplinkAttached: OPTIONAL<NULL>;
-    let dualCommunication: OPTIONAL<NULL>;
-    let callOriginator: OPTIONAL<NULL>;
+    let downlinkAttached: OPTIONAL<NULL> = undefined;
+    let uplinkAttached: OPTIONAL<NULL> = undefined;
+    let dualCommunication: OPTIONAL<NULL> = undefined;
+    let callOriginator: OPTIONAL<NULL> = undefined;
     const callbacks: $.DecodingMap = {
         "downlinkAttached": (_el: _Element): void => { downlinkAttached = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "uplinkAttached": (_el: _Element): void => { uplinkAttached = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

@@ -162,7 +162,7 @@ let _cached_decoder_for_PCS_Extensions: $.ASN1Decoder<PCS_Extensions> | null = n
 export
 function _decode_PCS_Extensions (el: _Element): PCS_Extensions {
     if (!_cached_decoder_for_PCS_Extensions) { _cached_decoder_for_PCS_Extensions = function (el: _Element): PCS_Extensions {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

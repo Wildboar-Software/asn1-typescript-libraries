@@ -67,25 +67,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInfo, _enum_for_RequestedInfo, RequestedInfo_anchorMSC_AddressAndASCI_CallReference /* IMPORTED_LONG_ENUMERATION_ITEM */, anchorMSC_AddressAndASCI_CallReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-GR-DataTypes/RequestedInfo.ta.mjs";
-// export { RequestedInfo, _enum_for_RequestedInfo, RequestedInfo_anchorMSC_AddressAndASCI_CallReference /* IMPORTED_LONG_ENUMERATION_ITEM */, anchorMSC_AddressAndASCI_CallReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-GR-DataTypes/RequestedInfo.ta.mjs";
 import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
-// export { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
 import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
-// export { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
-// export { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { TMSI, _decode_TMSI, _encode_TMSI } from "../MAP-CommonDataTypes/TMSI.ta.mjs";
-// export { TMSI, _decode_TMSI, _encode_TMSI } from "../MAP-CommonDataTypes/TMSI.ta.mjs";
 import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
-// export { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
 import { TalkerPriority, _enum_for_TalkerPriority, TalkerPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_privileged /* IMPORTED_LONG_ENUMERATION_ITEM */, privileged /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_emergency /* IMPORTED_LONG_ENUMERATION_ITEM */, emergency /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TalkerPriority, _encode_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
-// export { TalkerPriority, _enum_for_TalkerPriority, TalkerPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_privileged /* IMPORTED_LONG_ENUMERATION_ITEM */, privileged /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_emergency /* IMPORTED_LONG_ENUMERATION_ITEM */, emergency /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TalkerPriority, _encode_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
 import { Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mjs";
-// export { Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-// export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**
@@ -223,16 +213,16 @@ class SendGroupCallInfoArg {
  */
 export
 const _root_component_type_list_1_spec_for_SendGroupCallInfoArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("requestedInfo", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("groupId", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("teleservice", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("cellId", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("tmsi", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("talkerPriority", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("cksn", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("requestedInfo", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("groupId", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("teleservice", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("cellId", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("imsi", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("tmsi", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("additionalInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("talkerPriority", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("cksn", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("extensionContainer", true, $.hasTag(_TagClass.context, 6))
 ];
 
 /**
@@ -275,14 +265,14 @@ function _decode_SendGroupCallInfoArg (el: _Element): SendGroupCallInfoArg {
     let requestedInfo!: RequestedInfo;
     let groupId!: Long_GroupId;
     let teleservice!: Ext_TeleserviceCode;
-    let cellId: OPTIONAL<GlobalCellId>;
-    let imsi: OPTIONAL<IMSI>;
-    let tmsi: OPTIONAL<TMSI>;
-    let additionalInfo: OPTIONAL<AdditionalInfo>;
-    let talkerPriority: OPTIONAL<TalkerPriority>;
-    let cksn: OPTIONAL<Cksn>;
-    let extensionContainer: OPTIONAL<ExtensionContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    let cellId: OPTIONAL<GlobalCellId> = undefined;
+    let imsi: OPTIONAL<IMSI> = undefined;
+    let tmsi: OPTIONAL<TMSI> = undefined;
+    let additionalInfo: OPTIONAL<AdditionalInfo> = undefined;
+    let talkerPriority: OPTIONAL<TalkerPriority> = undefined;
+    let cksn: OPTIONAL<Cksn> = undefined;
+    let extensionContainer: OPTIONAL<ExtensionContainer> = undefined;
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestedInfo": (_el: _Element): void => { requestedInfo = _decode_RequestedInfo(_el); },
         "groupId": (_el: _Element): void => { groupId = _decode_Long_GroupId(_el); },

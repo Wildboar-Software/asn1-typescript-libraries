@@ -69,21 +69,13 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { MO_ForwardSM_Arg, _decode_MO_ForwardSM_Arg, _encode_MO_ForwardSM_Arg } from "../MAP-SM-DataTypes/MO-ForwardSM-Arg.ta.mjs";
-// export { MO_ForwardSM_Arg, _decode_MO_ForwardSM_Arg, _encode_MO_ForwardSM_Arg } from "../MAP-SM-DataTypes/MO-ForwardSM-Arg.ta.mjs";
 import { MO_ForwardSM_Res, _decode_MO_ForwardSM_Res, _encode_MO_ForwardSM_Res } from "../MAP-SM-DataTypes/MO-ForwardSM-Res.ta.mjs";
-// export { MO_ForwardSM_Res, _decode_MO_ForwardSM_Res, _encode_MO_ForwardSM_Res } from "../MAP-SM-DataTypes/MO-ForwardSM-Res.ta.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
-// export { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
-// export { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs";
 import { sm_DeliveryFailure } from "../MAP-Errors/sm-DeliveryFailure.oa.mjs";
-// export { sm_DeliveryFailure } from "../MAP-Errors/sm-DeliveryFailure.oa.mjs";
 
 
 /**

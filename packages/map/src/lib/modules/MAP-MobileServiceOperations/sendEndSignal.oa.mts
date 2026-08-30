@@ -69,13 +69,9 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { SendEndSignal_Arg, _decode_SendEndSignal_Arg, _encode_SendEndSignal_Arg } from "../MAP-MS-DataTypes/SendEndSignal-Arg.ta.mjs";
-// export { SendEndSignal_Arg, _decode_SendEndSignal_Arg, _encode_SendEndSignal_Arg } from "../MAP-MS-DataTypes/SendEndSignal-Arg.ta.mjs";
 import { SendEndSignal_Res, _decode_SendEndSignal_Res, _encode_SendEndSignal_Res } from "../MAP-MS-DataTypes/SendEndSignal-Res.ta.mjs";
-// export { SendEndSignal_Res, _decode_SendEndSignal_Res, _encode_SendEndSignal_Res } from "../MAP-MS-DataTypes/SendEndSignal-Res.ta.mjs";
 
 
 /**

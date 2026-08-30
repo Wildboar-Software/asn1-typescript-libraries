@@ -69,17 +69,11 @@ import * as $ from "@wildboar/asn1/functional";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { CancelLocationArg, _decode_CancelLocationArg, _encode_CancelLocationArg } from "../MAP-MS-DataTypes/CancelLocationArg.ta.mjs";
-// export { CancelLocationArg, _decode_CancelLocationArg, _encode_CancelLocationArg } from "../MAP-MS-DataTypes/CancelLocationArg.ta.mjs";
 import { CancelLocationRes, _decode_CancelLocationRes, _encode_CancelLocationRes } from "../MAP-MS-DataTypes/CancelLocationRes.ta.mjs";
-// export { CancelLocationRes, _decode_CancelLocationRes, _encode_CancelLocationRes } from "../MAP-MS-DataTypes/CancelLocationRes.ta.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
-// export { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 
 
 /**
