@@ -44,6 +44,7 @@ jobs:
           - "kerberos5"
           - "ldap"
           # - "m3100"
+          - "map"
           - "nlm"
           - "ocsp"
           - "or-address"

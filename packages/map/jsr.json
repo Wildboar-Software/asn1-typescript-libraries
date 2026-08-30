@@ -1,0 +1,44 @@
+{
+  "name": "@wildboar/map",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./MAP-ApplicationContexts": "./src/lib/modules/MAP-ApplicationContexts/index.mts",
+    "./MAP-BS-Code": "./src/lib/modules/MAP-BS-Code/index.mts",
+    "./MAP-CH-DataTypes": "./src/lib/modules/MAP-CH-DataTypes/index.mts",
+    "./MAP-CallHandlingOperations": "./src/lib/modules/MAP-CallHandlingOperations/index.mts",
+    "./MAP-CommonDataTypes": "./src/lib/modules/MAP-CommonDataTypes/index.mts",
+    "./MAP-DialogueInformation": "./src/lib/modules/MAP-DialogueInformation/index.mts",
+    "./MAP-ER-DataTypes": "./src/lib/modules/MAP-ER-DataTypes/index.mts",
+    "./MAP-Errors": "./src/lib/modules/MAP-Errors/index.mts",
+    "./MAP-ExtensionDataTypes": "./src/lib/modules/MAP-ExtensionDataTypes/index.mts",
+    "./MAP-GR-DataTypes": "./src/lib/modules/MAP-GR-DataTypes/index.mts",
+    "./MAP-Group-Call-Operations": "./src/lib/modules/MAP-Group-Call-Operations/index.mts",
+    "./MAP-LCS-DataTypes": "./src/lib/modules/MAP-LCS-DataTypes/index.mts",
+    "./MAP-LocationServiceOperations": "./src/lib/modules/MAP-LocationServiceOperations/index.mts",
+    "./MAP-MS-DataTypes": "./src/lib/modules/MAP-MS-DataTypes/index.mts",
+    "./MAP-MobileServiceOperations": "./src/lib/modules/MAP-MobileServiceOperations/index.mts",
+    "./MAP-OM-DataTypes": "./src/lib/modules/MAP-OM-DataTypes/index.mts",
+    "./MAP-OperationAndMaintenanceOperations": "./src/lib/modules/MAP-OperationAndMaintenanceOperations/index.mts",
+    "./MAP-Protocol": "./src/lib/modules/MAP-Protocol/index.mts",
+    "./MAP-SM-DataTypes": "./src/lib/modules/MAP-SM-DataTypes/index.mts",
+    "./MAP-SS-Code": "./src/lib/modules/MAP-SS-Code/index.mts",
+    "./MAP-SS-DataTypes": "./src/lib/modules/MAP-SS-DataTypes/index.mts",
+    "./MAP-ShortMessageServiceOperations": "./src/lib/modules/MAP-ShortMessageServiceOperations/index.mts",
+    "./MAP-SupplementaryServiceOperations": "./src/lib/modules/MAP-SupplementaryServiceOperations/index.mts",
+    "./MAP-TS-Code": "./src/lib/modules/MAP-TS-Code/index.mts",
+    "./MobileDomainDefinitions": "./src/lib/modules/MobileDomainDefinitions/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}

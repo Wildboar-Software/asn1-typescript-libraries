@@ -1,0 +1,25 @@
+{
+  "name": "map",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/map/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/map",
+        "tsConfig": "packages/map/tsconfig.lib.json",
+        "packageJson": "packages/map/package.json",
+        "main": "packages/map/src/index.mts",
+        "assets": [
+          "packages/map/*.md",
+          "packages/map/LICENSE.txt",
+          "packages/map/package.json"
+        ]
+      }
+    }
+  }
+}
