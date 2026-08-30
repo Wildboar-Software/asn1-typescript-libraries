@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { RequestedInfo, _enum_for_RequestedInfo, RequestedInfo_anchorMSC_AddressAndASCI_CallReference /* IMPORTED_LONG_ENUMERATION_ITEM */, anchorMSC_AddressAndASCI_CallReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-GR-DataTypes/RequestedInfo.ta.mjs";
 // export { RequestedInfo, _enum_for_RequestedInfo, RequestedInfo_anchorMSC_AddressAndASCI_CallReference /* IMPORTED_LONG_ENUMERATION_ITEM */, anchorMSC_AddressAndASCI_CallReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-GR-DataTypes/RequestedInfo.ta.mjs";
 import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";

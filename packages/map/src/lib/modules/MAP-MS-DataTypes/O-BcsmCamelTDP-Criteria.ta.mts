@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { O_BcsmTriggerDetectionPoint, _enum_for_O_BcsmTriggerDetectionPoint, O_BcsmTriggerDetectionPoint_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, O_BcsmTriggerDetectionPoint_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_O_BcsmTriggerDetectionPoint, _encode_O_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/O-BcsmTriggerDetectionPoint.ta.mjs";
 // export { O_BcsmTriggerDetectionPoint, _enum_for_O_BcsmTriggerDetectionPoint, O_BcsmTriggerDetectionPoint_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, O_BcsmTriggerDetectionPoint_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_O_BcsmTriggerDetectionPoint, _encode_O_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/O-BcsmTriggerDetectionPoint.ta.mjs";
 import { DestinationNumberCriteria, _decode_DestinationNumberCriteria, _encode_DestinationNumberCriteria } from "../MAP-MS-DataTypes/DestinationNumberCriteria.ta.mjs";

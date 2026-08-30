@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_Identifier } from "../MAP-MS-DataTypes/QoS-Class-Identifier.ta.mjs";
 // export { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_Identifier } from "../MAP-MS-DataTypes/QoS-Class-Identifier.ta.mjs";
 import { Allocation_Retention_Priority, _decode_Allocation_Retention_Priority, _encode_Allocation_Retention_Priority } from "../MAP-MS-DataTypes/Allocation-Retention-Priority.ta.mjs";

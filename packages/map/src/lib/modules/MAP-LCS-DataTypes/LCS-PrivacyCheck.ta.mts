@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction, PrivacyCheckRelatedAction_allowedWithoutNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedWithoutNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_allowedWithNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedWithNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_allowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_restrictedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_notAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PrivacyCheckRelatedAction, _encode_PrivacyCheckRelatedAction } from "../MAP-LCS-DataTypes/PrivacyCheckRelatedAction.ta.mjs";
 // export { PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction, PrivacyCheckRelatedAction_allowedWithoutNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedWithoutNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_allowedWithNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedWithNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_allowedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, allowedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_restrictedIfNoResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedIfNoResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivacyCheckRelatedAction_notAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PrivacyCheckRelatedAction, _encode_PrivacyCheckRelatedAction } from "../MAP-LCS-DataTypes/PrivacyCheckRelatedAction.ta.mjs";
 

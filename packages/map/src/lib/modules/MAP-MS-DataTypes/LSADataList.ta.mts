@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { LSAData, _decode_LSAData, _encode_LSAData } from "../MAP-MS-DataTypes/LSAData.ta.mjs";
 // export { LSAData, _decode_LSAData, _encode_LSAData } from "../MAP-MS-DataTypes/LSAData.ta.mjs";
 

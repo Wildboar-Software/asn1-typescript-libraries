@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MonitoringMode, _enum_for_MonitoringMode, MonitoringMode_a_side /* IMPORTED_LONG_ENUMERATION_ITEM */, a_side /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringMode_b_side /* IMPORTED_LONG_ENUMERATION_ITEM */, b_side /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitoringMode, _encode_MonitoringMode } from "../MAP-CH-DataTypes/MonitoringMode.ta.mjs";
 // export { MonitoringMode, _enum_for_MonitoringMode, MonitoringMode_a_side /* IMPORTED_LONG_ENUMERATION_ITEM */, a_side /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringMode_b_side /* IMPORTED_LONG_ENUMERATION_ITEM */, b_side /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitoringMode, _encode_MonitoringMode } from "../MAP-CH-DataTypes/MonitoringMode.ta.mjs";
 import { CallOutcome, _enum_for_CallOutcome, CallOutcome_success /* IMPORTED_LONG_ENUMERATION_ITEM */, success /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallOutcome_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallOutcome_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallOutcome, _encode_CallOutcome } from "../MAP-CH-DataTypes/CallOutcome.ta.mjs";

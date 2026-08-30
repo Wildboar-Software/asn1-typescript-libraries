@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
 // export { RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
 import { CamelRoutingInfo, _decode_CamelRoutingInfo, _encode_CamelRoutingInfo } from "../MAP-CH-DataTypes/CamelRoutingInfo.ta.mjs";

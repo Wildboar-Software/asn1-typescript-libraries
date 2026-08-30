@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MSNetworkCapability, _decode_MSNetworkCapability, _encode_MSNetworkCapability } from "../MAP-MS-DataTypes/MSNetworkCapability.ta.mjs";
 // export { MSNetworkCapability, _decode_MSNetworkCapability, _encode_MSNetworkCapability } from "../MAP-MS-DataTypes/MSNetworkCapability.ta.mjs";
 import { MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRadioAccessCapability } from "../MAP-MS-DataTypes/MSRadioAccessCapability.ta.mjs";

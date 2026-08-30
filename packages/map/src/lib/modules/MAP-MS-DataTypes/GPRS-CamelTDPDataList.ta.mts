@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { GPRS_CamelTDPData, _decode_GPRS_CamelTDPData, _encode_GPRS_CamelTDPData } from "../MAP-MS-DataTypes/GPRS-CamelTDPData.ta.mjs";
 // export { GPRS_CamelTDPData, _decode_GPRS_CamelTDPData, _encode_GPRS_CamelTDPData } from "../MAP-MS-DataTypes/GPRS-CamelTDPData.ta.mjs";
 

@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { LCS_PrivacyClass, _decode_LCS_PrivacyClass, _encode_LCS_PrivacyClass } from "../MAP-MS-DataTypes/LCS-PrivacyClass.ta.mjs";
 // export { LCS_PrivacyClass, _decode_LCS_PrivacyClass, _encode_LCS_PrivacyClass } from "../MAP-MS-DataTypes/LCS-PrivacyClass.ta.mjs";
 

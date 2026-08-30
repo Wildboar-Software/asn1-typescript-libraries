@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 // export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 import { AccessRestrictionData, AccessRestrictionData_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_geranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, geranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ganNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ganNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_i_hspa_evolutionNotAllowed /* IMPORTED_LONG_NAMED_BIT */, i_hspa_evolutionNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_wb_e_utranNotAllowed /* IMPORTED_LONG_NAMED_BIT */, wb_e_utranNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_ho_toNon3GPP_AccessNotAllowed /* IMPORTED_LONG_NAMED_BIT */, ho_toNon3GPP_AccessNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_nb_iotNotAllowed /* IMPORTED_LONG_NAMED_BIT */, nb_iotNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, AccessRestrictionData_enhancedCoverageNotAllowed /* IMPORTED_LONG_NAMED_BIT */, enhancedCoverageNotAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";

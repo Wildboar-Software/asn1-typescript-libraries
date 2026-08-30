@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { AreaType, _enum_for_AreaType, AreaType_countryCode /* IMPORTED_LONG_ENUMERATION_ITEM */, countryCode /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_plmnId /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_locationAreaId /* IMPORTED_LONG_ENUMERATION_ITEM */, locationAreaId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_routingAreaId /* IMPORTED_LONG_ENUMERATION_ITEM */, routingAreaId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_cellGlobalId /* IMPORTED_LONG_ENUMERATION_ITEM */, cellGlobalId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_utranCellId /* IMPORTED_LONG_ENUMERATION_ITEM */, utranCellId /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AreaType, _encode_AreaType } from "../MAP-LCS-DataTypes/AreaType.ta.mjs";
 // export { AreaType, _enum_for_AreaType, AreaType_countryCode /* IMPORTED_LONG_ENUMERATION_ITEM */, countryCode /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_plmnId /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_locationAreaId /* IMPORTED_LONG_ENUMERATION_ITEM */, locationAreaId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_routingAreaId /* IMPORTED_LONG_ENUMERATION_ITEM */, routingAreaId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_cellGlobalId /* IMPORTED_LONG_ENUMERATION_ITEM */, cellGlobalId /* IMPORTED_SHORT_ENUMERATION_ITEM */, AreaType_utranCellId /* IMPORTED_LONG_ENUMERATION_ITEM */, utranCellId /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AreaType, _encode_AreaType } from "../MAP-LCS-DataTypes/AreaType.ta.mjs";
 import { AreaIdentification, _decode_AreaIdentification, _encode_AreaIdentification } from "../MAP-LCS-DataTypes/AreaIdentification.ta.mjs";

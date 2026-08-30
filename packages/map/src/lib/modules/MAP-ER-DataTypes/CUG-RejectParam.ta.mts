@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CUG_RejectCause, _enum_for_CUG_RejectCause, CUG_RejectCause_incomingCallsBarredWithinCUG /* IMPORTED_LONG_ENUMERATION_ITEM */, incomingCallsBarredWithinCUG /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_subscriberNotMemberOfCUG /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberNotMemberOfCUG /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedBasicServiceViolatesCUG_Constraints /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_calledPartySS_InteractionViolation /* IMPORTED_LONG_ENUMERATION_ITEM */, calledPartySS_InteractionViolation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CUG_RejectCause, _encode_CUG_RejectCause } from "../MAP-ER-DataTypes/CUG-RejectCause.ta.mjs";
 // export { CUG_RejectCause, _enum_for_CUG_RejectCause, CUG_RejectCause_incomingCallsBarredWithinCUG /* IMPORTED_LONG_ENUMERATION_ITEM */, incomingCallsBarredWithinCUG /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_subscriberNotMemberOfCUG /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberNotMemberOfCUG /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedBasicServiceViolatesCUG_Constraints /* IMPORTED_SHORT_ENUMERATION_ITEM */, CUG_RejectCause_calledPartySS_InteractionViolation /* IMPORTED_LONG_ENUMERATION_ITEM */, calledPartySS_InteractionViolation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CUG_RejectCause, _encode_CUG_RejectCause } from "../MAP-ER-DataTypes/CUG-RejectCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 // export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { MW_Status, MW_Status_sc_AddressNotIncluded /* IMPORTED_LONG_NAMED_BIT */, sc_AddressNotIncluded /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnrf_Set /* IMPORTED_LONG_NAMED_BIT */, mnrf_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mcef_Set /* IMPORTED_LONG_NAMED_BIT */, mcef_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnrg_Set /* IMPORTED_LONG_NAMED_BIT */, mnrg_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnr5g_Set /* IMPORTED_LONG_NAMED_BIT */, mnr5g_Set /* IMPORTED_SHORT_NAMED_BIT */, MW_Status_mnr5gn3g_Set /* IMPORTED_LONG_NAMED_BIT */, mnr5gn3g_Set /* IMPORTED_SHORT_NAMED_BIT */, _decode_MW_Status, _encode_MW_Status } from "../MAP-SM-DataTypes/MW-Status.ta.mjs";

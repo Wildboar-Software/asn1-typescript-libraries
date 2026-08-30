@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { LCS_Event, _enum_for_LCS_Event, LCS_Event_emergencyCallOrigination /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallOrigination /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_emergencyCallRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_mo_lr /* IMPORTED_LONG_ENUMERATION_ITEM */, mo_lr /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_deferredmt_lrResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, deferredmt_lrResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_deferredmo_lrTTTPInitiation /* IMPORTED_LONG_ENUMERATION_ITEM */, deferredmo_lrTTTPInitiation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_emergencyCallHandover /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallHandover /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_Event, _encode_LCS_Event } from "../MAP-LCS-DataTypes/LCS-Event.ta.mjs";
 // export { LCS_Event, _enum_for_LCS_Event, LCS_Event_emergencyCallOrigination /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallOrigination /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_emergencyCallRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_mo_lr /* IMPORTED_LONG_ENUMERATION_ITEM */, mo_lr /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_deferredmt_lrResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, deferredmt_lrResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_deferredmo_lrTTTPInitiation /* IMPORTED_LONG_ENUMERATION_ITEM */, deferredmo_lrTTTPInitiation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCS_Event_emergencyCallHandover /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCallHandover /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCS_Event, _encode_LCS_Event } from "../MAP-LCS-DataTypes/LCS-Event.ta.mjs";
 import { LCS_ClientID, _decode_LCS_ClientID, _encode_LCS_ClientID } from "../MAP-LCS-DataTypes/LCS-ClientID.ta.mjs";

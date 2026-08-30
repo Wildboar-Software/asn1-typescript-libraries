@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { UUIndicator, _decode_UUIndicator, _encode_UUIndicator } from "../MAP-CH-DataTypes/UUIndicator.ta.mjs";
 // export { UUIndicator, _decode_UUIndicator, _encode_UUIndicator } from "../MAP-CH-DataTypes/UUIndicator.ta.mjs";
 import { UUI, _decode_UUI, _encode_UUI } from "../MAP-CH-DataTypes/UUI.ta.mjs";

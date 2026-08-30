@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 // export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { RequestedEquipmentInfo, RequestedEquipmentInfo_equipmentStatus /* IMPORTED_LONG_NAMED_BIT */, equipmentStatus /* IMPORTED_SHORT_NAMED_BIT */, RequestedEquipmentInfo_bmuef /* IMPORTED_LONG_NAMED_BIT */, bmuef /* IMPORTED_SHORT_NAMED_BIT */, _decode_RequestedEquipmentInfo, _encode_RequestedEquipmentInfo } from "../MAP-MS-DataTypes/RequestedEquipmentInfo.ta.mjs";

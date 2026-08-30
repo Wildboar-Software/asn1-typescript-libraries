@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MT_SMS_TPDU_Type, _enum_for_MT_SMS_TPDU_Type, MT_SMS_TPDU_Type_sms_DELIVER /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_DELIVER /* IMPORTED_SHORT_ENUMERATION_ITEM */, MT_SMS_TPDU_Type_sms_SUBMIT_REPORT /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_SUBMIT_REPORT /* IMPORTED_SHORT_ENUMERATION_ITEM */, MT_SMS_TPDU_Type_sms_STATUS_REPORT /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_STATUS_REPORT /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MT_SMS_TPDU_Type, _encode_MT_SMS_TPDU_Type } from "../MAP-MS-DataTypes/MT-SMS-TPDU-Type.ta.mjs";
 // export { MT_SMS_TPDU_Type, _enum_for_MT_SMS_TPDU_Type, MT_SMS_TPDU_Type_sms_DELIVER /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_DELIVER /* IMPORTED_SHORT_ENUMERATION_ITEM */, MT_SMS_TPDU_Type_sms_SUBMIT_REPORT /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_SUBMIT_REPORT /* IMPORTED_SHORT_ENUMERATION_ITEM */, MT_SMS_TPDU_Type_sms_STATUS_REPORT /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_STATUS_REPORT /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MT_SMS_TPDU_Type, _encode_MT_SMS_TPDU_Type } from "../MAP-MS-DataTypes/MT-SMS-TPDU-Type.ta.mjs";
 

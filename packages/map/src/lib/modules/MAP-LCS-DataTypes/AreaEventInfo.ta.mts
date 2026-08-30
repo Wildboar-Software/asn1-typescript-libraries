@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { AreaDefinition, _decode_AreaDefinition, _encode_AreaDefinition } from "../MAP-LCS-DataTypes/AreaDefinition.ta.mjs";
 // export { AreaDefinition, _decode_AreaDefinition, _encode_AreaDefinition } from "../MAP-LCS-DataTypes/AreaDefinition.ta.mjs";
 import { OccurrenceInfo, _enum_for_OccurrenceInfo, OccurrenceInfo_oneTimeEvent /* IMPORTED_LONG_ENUMERATION_ITEM */, oneTimeEvent /* IMPORTED_SHORT_ENUMERATION_ITEM */, OccurrenceInfo_multipleTimeEvent /* IMPORTED_LONG_ENUMERATION_ITEM */, multipleTimeEvent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_OccurrenceInfo, _encode_OccurrenceInfo } from "../MAP-LCS-DataTypes/OccurrenceInfo.ta.mjs";

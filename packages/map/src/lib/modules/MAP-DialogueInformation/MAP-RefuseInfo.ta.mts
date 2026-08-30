@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Reason, _enum_for_Reason, Reason_noReasonGiven /* IMPORTED_LONG_ENUMERATION_ITEM */, noReasonGiven /* IMPORTED_SHORT_ENUMERATION_ITEM */, Reason_invalidDestinationReference /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidDestinationReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, Reason_invalidOriginatingReference /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidOriginatingReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Reason, _encode_Reason } from "../MAP-DialogueInformation/Reason.ta.mjs";
 // export { Reason, _enum_for_Reason, Reason_noReasonGiven /* IMPORTED_LONG_ENUMERATION_ITEM */, noReasonGiven /* IMPORTED_SHORT_ENUMERATION_ITEM */, Reason_invalidDestinationReference /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidDestinationReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, Reason_invalidOriginatingReference /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidOriginatingReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Reason, _encode_Reason } from "../MAP-DialogueInformation/Reason.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

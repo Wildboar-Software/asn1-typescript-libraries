@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { RegionalSubscriptionResponse, _enum_for_RegionalSubscriptionResponse, RegionalSubscriptionResponse_networkNode_AreaRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, networkNode_AreaRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_tooManyZoneCodes /* IMPORTED_LONG_ENUMERATION_ITEM */, tooManyZoneCodes /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_zoneCodesConflict /* IMPORTED_LONG_ENUMERATION_ITEM */, zoneCodesConflict /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_regionalSubscNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, regionalSubscNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RegionalSubscriptionResponse, _encode_RegionalSubscriptionResponse } from "../MAP-MS-DataTypes/RegionalSubscriptionResponse.ta.mjs";
 // export { RegionalSubscriptionResponse, _enum_for_RegionalSubscriptionResponse, RegionalSubscriptionResponse_networkNode_AreaRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, networkNode_AreaRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_tooManyZoneCodes /* IMPORTED_LONG_ENUMERATION_ITEM */, tooManyZoneCodes /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_zoneCodesConflict /* IMPORTED_LONG_ENUMERATION_ITEM */, zoneCodesConflict /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_regionalSubscNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, regionalSubscNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RegionalSubscriptionResponse, _encode_RegionalSubscriptionResponse } from "../MAP-MS-DataTypes/RegionalSubscriptionResponse.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

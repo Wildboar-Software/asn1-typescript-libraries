@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Group_Service_ID, _decode_Group_Service_ID, _encode_Group_Service_ID } from "../MAP-MS-DataTypes/Group-Service-ID.ta.mjs";
 // export { Group_Service_ID, _decode_Group_Service_ID, _encode_Group_Service_ID } from "../MAP-MS-DataTypes/Group-Service-ID.ta.mjs";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";

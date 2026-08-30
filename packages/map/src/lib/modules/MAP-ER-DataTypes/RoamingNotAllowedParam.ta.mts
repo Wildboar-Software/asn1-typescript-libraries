@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { RoamingNotAllowedCause, _enum_for_RoamingNotAllowedCause, RoamingNotAllowedCause_plmnRoamingNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnRoamingNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, RoamingNotAllowedCause_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RoamingNotAllowedCause, _encode_RoamingNotAllowedCause } from "../MAP-ER-DataTypes/RoamingNotAllowedCause.ta.mjs";
 // export { RoamingNotAllowedCause, _enum_for_RoamingNotAllowedCause, RoamingNotAllowedCause_plmnRoamingNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnRoamingNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, RoamingNotAllowedCause_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RoamingNotAllowedCause, _encode_RoamingNotAllowedCause } from "../MAP-ER-DataTypes/RoamingNotAllowedCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

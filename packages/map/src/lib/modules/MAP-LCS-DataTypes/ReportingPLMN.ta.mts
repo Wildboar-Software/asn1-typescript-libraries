@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 // export { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 import { RAN_Technology, _enum_for_RAN_Technology, RAN_Technology_gsm /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm /* IMPORTED_SHORT_ENUMERATION_ITEM */, RAN_Technology_umts /* IMPORTED_LONG_ENUMERATION_ITEM */, umts /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RAN_Technology, _encode_RAN_Technology } from "../MAP-LCS-DataTypes/RAN-Technology.ta.mjs";

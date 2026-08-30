@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ReportingAmountMilliseconds, _decode_ReportingAmountMilliseconds, _encode_ReportingAmountMilliseconds } from "../MAP-LCS-DataTypes/ReportingAmountMilliseconds.ta.mjs";
 // export { ReportingAmountMilliseconds, _decode_ReportingAmountMilliseconds, _encode_ReportingAmountMilliseconds } from "../MAP-LCS-DataTypes/ReportingAmountMilliseconds.ta.mjs";
 import { ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _encode_ReportingIntervalMilliseconds } from "../MAP-LCS-DataTypes/ReportingIntervalMilliseconds.ta.mjs";

@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { T_BCSM_CAMEL_TDP_Criteria, _decode_T_BCSM_CAMEL_TDP_Criteria, _encode_T_BCSM_CAMEL_TDP_Criteria } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-Criteria.ta.mjs";
 // export { T_BCSM_CAMEL_TDP_Criteria, _decode_T_BCSM_CAMEL_TDP_Criteria, _encode_T_BCSM_CAMEL_TDP_Criteria } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-Criteria.ta.mjs";
 

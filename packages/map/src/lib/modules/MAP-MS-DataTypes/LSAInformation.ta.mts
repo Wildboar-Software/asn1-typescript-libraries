@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { LSAOnlyAccessIndicator, _enum_for_LSAOnlyAccessIndicator, LSAOnlyAccessIndicator_accessOutsideLSAsAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, accessOutsideLSAsAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, LSAOnlyAccessIndicator_accessOutsideLSAsRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, accessOutsideLSAsRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LSAOnlyAccessIndicator, _encode_LSAOnlyAccessIndicator } from "../MAP-MS-DataTypes/LSAOnlyAccessIndicator.ta.mjs";
 // export { LSAOnlyAccessIndicator, _enum_for_LSAOnlyAccessIndicator, LSAOnlyAccessIndicator_accessOutsideLSAsAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, accessOutsideLSAsAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, LSAOnlyAccessIndicator_accessOutsideLSAsRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, accessOutsideLSAsRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LSAOnlyAccessIndicator, _encode_LSAOnlyAccessIndicator } from "../MAP-MS-DataTypes/LSAOnlyAccessIndicator.ta.mjs";
 import { LSADataList, _decode_LSADataList, _encode_LSADataList } from "../MAP-MS-DataTypes/LSADataList.ta.mjs";

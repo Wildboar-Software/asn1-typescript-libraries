@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { EquipmentStatus, _enum_for_EquipmentStatus, EquipmentStatus_permittedListed /* IMPORTED_LONG_ENUMERATION_ITEM */, permittedListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, EquipmentStatus_prohibitedListed /* IMPORTED_LONG_ENUMERATION_ITEM */, prohibitedListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, EquipmentStatus_trackingListed /* IMPORTED_LONG_ENUMERATION_ITEM */, trackingListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EquipmentStatus, _encode_EquipmentStatus } from "../MAP-MS-DataTypes/EquipmentStatus.ta.mjs";
 // export { EquipmentStatus, _enum_for_EquipmentStatus, EquipmentStatus_permittedListed /* IMPORTED_LONG_ENUMERATION_ITEM */, permittedListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, EquipmentStatus_prohibitedListed /* IMPORTED_LONG_ENUMERATION_ITEM */, prohibitedListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, EquipmentStatus_trackingListed /* IMPORTED_LONG_ENUMERATION_ITEM */, trackingListed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EquipmentStatus, _encode_EquipmentStatus } from "../MAP-MS-DataTypes/EquipmentStatus.ta.mjs";
 import { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataTypes/UESBI-Iu.ta.mjs";

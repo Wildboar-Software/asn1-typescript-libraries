@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 // export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { AlertReason, _enum_for_AlertReason, AlertReason_ms_Present /* IMPORTED_LONG_ENUMERATION_ITEM */, ms_Present /* IMPORTED_SHORT_ENUMERATION_ITEM */, AlertReason_memoryAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, memoryAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AlertReason, _encode_AlertReason } from "../MAP-SM-DataTypes/AlertReason.ta.mjs";

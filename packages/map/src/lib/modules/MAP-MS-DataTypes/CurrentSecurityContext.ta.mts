@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { GSM_SecurityContextData, _decode_GSM_SecurityContextData, _encode_GSM_SecurityContextData } from "../MAP-MS-DataTypes/GSM-SecurityContextData.ta.mjs";
 // export { GSM_SecurityContextData, _decode_GSM_SecurityContextData, _encode_GSM_SecurityContextData } from "../MAP-MS-DataTypes/GSM-SecurityContextData.ta.mjs";
 import { UMTS_SecurityContextData, _decode_UMTS_SecurityContextData, _encode_UMTS_SecurityContextData } from "../MAP-MS-DataTypes/UMTS-SecurityContextData.ta.mjs";

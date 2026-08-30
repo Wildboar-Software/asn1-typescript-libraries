@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
 // export { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";

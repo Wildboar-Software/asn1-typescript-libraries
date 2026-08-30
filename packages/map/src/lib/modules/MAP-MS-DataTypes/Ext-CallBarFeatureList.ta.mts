@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Ext_CallBarringFeature, _decode_Ext_CallBarringFeature, _encode_Ext_CallBarringFeature } from "../MAP-MS-DataTypes/Ext-CallBarringFeature.ta.mjs";
 // export { Ext_CallBarringFeature, _decode_Ext_CallBarringFeature, _encode_Ext_CallBarringFeature } from "../MAP-MS-DataTypes/Ext-CallBarringFeature.ta.mjs";
 

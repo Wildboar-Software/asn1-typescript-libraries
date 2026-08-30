@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ResponseTimeCategory, _enum_for_ResponseTimeCategory, ResponseTimeCategory_lowdelay /* IMPORTED_LONG_ENUMERATION_ITEM */, lowdelay /* IMPORTED_SHORT_ENUMERATION_ITEM */, ResponseTimeCategory_delaytolerant /* IMPORTED_LONG_ENUMERATION_ITEM */, delaytolerant /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ResponseTimeCategory, _encode_ResponseTimeCategory } from "../MAP-LCS-DataTypes/ResponseTimeCategory.ta.mjs";
 // export { ResponseTimeCategory, _enum_for_ResponseTimeCategory, ResponseTimeCategory_lowdelay /* IMPORTED_LONG_ENUMERATION_ITEM */, lowdelay /* IMPORTED_SHORT_ENUMERATION_ITEM */, ResponseTimeCategory_delaytolerant /* IMPORTED_LONG_ENUMERATION_ITEM */, delaytolerant /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ResponseTimeCategory, _encode_ResponseTimeCategory } from "../MAP-LCS-DataTypes/ResponseTimeCategory.ta.mjs";
 

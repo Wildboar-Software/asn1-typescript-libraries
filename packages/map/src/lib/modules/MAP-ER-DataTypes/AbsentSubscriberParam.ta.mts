@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 // export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AbsentSubscriberReason, _enum_for_AbsentSubscriberReason, AbsentSubscriberReason_imsiDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_restrictedArea /* IMPORTED_LONG_ENUMERATION_ITEM */, restrictedArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_noPageResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, noPageResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_purgedMS /* IMPORTED_LONG_ENUMERATION_ITEM */, purgedMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_mtRoamingRetry /* IMPORTED_LONG_ENUMERATION_ITEM */, mtRoamingRetry /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbsentSubscriberReason_busySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, busySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AbsentSubscriberReason, _encode_AbsentSubscriberReason } from "../MAP-ER-DataTypes/AbsentSubscriberReason.ta.mjs";

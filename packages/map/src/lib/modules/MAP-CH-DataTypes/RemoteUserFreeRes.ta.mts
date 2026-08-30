@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { RUF_Outcome, _enum_for_RUF_Outcome, RUF_Outcome_accepted /* IMPORTED_LONG_ENUMERATION_ITEM */, accepted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_rejected /* IMPORTED_LONG_ENUMERATION_ITEM */, rejected /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_noResponseFromFreeMS /* IMPORTED_LONG_ENUMERATION_ITEM */, noResponseFromFreeMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_noResponseFromBusyMS /* IMPORTED_LONG_ENUMERATION_ITEM */, noResponseFromBusyMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_udubFromFreeMS /* IMPORTED_LONG_ENUMERATION_ITEM */, udubFromFreeMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_udubFromBusyMS /* IMPORTED_LONG_ENUMERATION_ITEM */, udubFromBusyMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RUF_Outcome, _encode_RUF_Outcome } from "../MAP-CH-DataTypes/RUF-Outcome.ta.mjs";
 // export { RUF_Outcome, _enum_for_RUF_Outcome, RUF_Outcome_accepted /* IMPORTED_LONG_ENUMERATION_ITEM */, accepted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_rejected /* IMPORTED_LONG_ENUMERATION_ITEM */, rejected /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_noResponseFromFreeMS /* IMPORTED_LONG_ENUMERATION_ITEM */, noResponseFromFreeMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_noResponseFromBusyMS /* IMPORTED_LONG_ENUMERATION_ITEM */, noResponseFromBusyMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_udubFromFreeMS /* IMPORTED_LONG_ENUMERATION_ITEM */, udubFromFreeMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, RUF_Outcome_udubFromBusyMS /* IMPORTED_LONG_ENUMERATION_ITEM */, udubFromBusyMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RUF_Outcome, _encode_RUF_Outcome } from "../MAP-CH-DataTypes/RUF-Outcome.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

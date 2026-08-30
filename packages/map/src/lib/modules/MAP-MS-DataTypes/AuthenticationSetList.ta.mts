@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { TripletList, _decode_TripletList, _encode_TripletList } from "../MAP-MS-DataTypes/TripletList.ta.mjs";
 // export { TripletList, _decode_TripletList, _encode_TripletList } from "../MAP-MS-DataTypes/TripletList.ta.mjs";
 import { QuintupletList, _decode_QuintupletList, _encode_QuintupletList } from "../MAP-MS-DataTypes/QuintupletList.ta.mjs";

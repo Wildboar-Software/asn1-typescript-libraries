@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP-MS-DataTypes/SS-EventList.ta.mjs";
 // export { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP-MS-DataTypes/SS-EventList.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";

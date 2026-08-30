@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 // export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { UnknownSubscriberDiagnostic, _enum_for_UnknownSubscriberDiagnostic, UnknownSubscriberDiagnostic_imsiUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, gprs_eps_SubscriptionUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnknownSubscriberDiagnostic_npdbMismatch /* IMPORTED_LONG_ENUMERATION_ITEM */, npdbMismatch /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnknownSubscriberDiagnostic, _encode_UnknownSubscriberDiagnostic } from "../MAP-ER-DataTypes/UnknownSubscriberDiagnostic.ta.mjs";

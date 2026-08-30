@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MSISDN_BS, _decode_MSISDN_BS, _encode_MSISDN_BS } from "../MAP-MS-DataTypes/MSISDN-BS.ta.mjs";
 // export { MSISDN_BS, _decode_MSISDN_BS, _encode_MSISDN_BS } from "../MAP-MS-DataTypes/MSISDN-BS.ta.mjs";
 

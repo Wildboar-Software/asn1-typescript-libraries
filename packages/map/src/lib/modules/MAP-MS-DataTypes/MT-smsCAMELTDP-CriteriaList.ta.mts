@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MT_smsCAMELTDP_Criteria, _decode_MT_smsCAMELTDP_Criteria, _encode_MT_smsCAMELTDP_Criteria } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-Criteria.ta.mjs";
 // export { MT_smsCAMELTDP_Criteria, _decode_MT_smsCAMELTDP_Criteria, _encode_MT_smsCAMELTDP_Criteria } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-Criteria.ta.mjs";
 

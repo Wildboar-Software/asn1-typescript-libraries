@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ProtocolId, _enum_for_ProtocolId, ProtocolId_gsm_0408 /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_0408 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_gsm_0806 /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_0806 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_gsm_BSSMAP /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_BSSMAP /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_ets_300102_1 /* IMPORTED_LONG_ENUMERATION_ITEM */, ets_300102_1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProtocolId, _encode_ProtocolId } from "../MAP-CommonDataTypes/ProtocolId.ta.mjs";
 // export { ProtocolId, _enum_for_ProtocolId, ProtocolId_gsm_0408 /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_0408 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_gsm_0806 /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_0806 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_gsm_BSSMAP /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_BSSMAP /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolId_ets_300102_1 /* IMPORTED_LONG_ENUMERATION_ITEM */, ets_300102_1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProtocolId, _encode_ProtocolId } from "../MAP-CommonDataTypes/ProtocolId.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";

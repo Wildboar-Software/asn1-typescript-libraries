@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
 // export { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
 import { CancellationType, _enum_for_CancellationType, CancellationType_updateProcedure /* IMPORTED_LONG_ENUMERATION_ITEM */, updateProcedure /* IMPORTED_SHORT_ENUMERATION_ITEM */, CancellationType_subscriptionWithdraw /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionWithdraw /* IMPORTED_SHORT_ENUMERATION_ITEM */, CancellationType_initialAttachProcedure /* IMPORTED_LONG_ENUMERATION_ITEM */, initialAttachProcedure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CancellationType, _encode_CancellationType } from "../MAP-MS-DataTypes/CancellationType.ta.mjs";

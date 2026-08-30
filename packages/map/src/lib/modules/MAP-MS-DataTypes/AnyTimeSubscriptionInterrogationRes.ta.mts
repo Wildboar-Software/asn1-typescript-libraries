@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CallForwardingData, _decode_CallForwardingData, _encode_CallForwardingData } from "../MAP-MS-DataTypes/CallForwardingData.ta.mjs";
 // export { CallForwardingData, _decode_CallForwardingData, _encode_CallForwardingData } from "../MAP-MS-DataTypes/CallForwardingData.ta.mjs";
 import { CallBarringData, _decode_CallBarringData, _encode_CallBarringData } from "../MAP-MS-DataTypes/CallBarringData.ta.mjs";

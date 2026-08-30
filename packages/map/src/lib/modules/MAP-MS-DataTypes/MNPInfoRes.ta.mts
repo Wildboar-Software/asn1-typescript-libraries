@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { RouteingNumber, _decode_RouteingNumber, _encode_RouteingNumber } from "../MAP-MS-DataTypes/RouteingNumber.ta.mjs";
 // export { RouteingNumber, _decode_RouteingNumber, _encode_RouteingNumber } from "../MAP-MS-DataTypes/RouteingNumber.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";

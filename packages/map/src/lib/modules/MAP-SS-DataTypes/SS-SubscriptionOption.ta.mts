@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CliRestrictionOption, _enum_for_CliRestrictionOption, CliRestrictionOption_permanent /* IMPORTED_LONG_ENUMERATION_ITEM */, permanent /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CliRestrictionOption, _encode_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
 // export { CliRestrictionOption, _enum_for_CliRestrictionOption, CliRestrictionOption_permanent /* IMPORTED_LONG_ENUMERATION_ITEM */, permanent /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, CliRestrictionOption_temporaryDefaultAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryDefaultAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CliRestrictionOption, _encode_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
 import { OverrideCategory, _enum_for_OverrideCategory, OverrideCategory_overrideEnabled /* IMPORTED_LONG_ENUMERATION_ITEM */, overrideEnabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, OverrideCategory_overrideDisabled /* IMPORTED_LONG_ENUMERATION_ITEM */, overrideDisabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_OverrideCategory, _encode_OverrideCategory } from "../MAP-SS-DataTypes/OverrideCategory.ta.mjs";

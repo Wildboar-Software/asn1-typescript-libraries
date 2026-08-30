@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MAP_OpenInfo, _decode_MAP_OpenInfo, _encode_MAP_OpenInfo } from "../MAP-DialogueInformation/MAP-OpenInfo.ta.mjs";
 // export { MAP_OpenInfo, _decode_MAP_OpenInfo, _encode_MAP_OpenInfo } from "../MAP-DialogueInformation/MAP-OpenInfo.ta.mjs";
 import { MAP_AcceptInfo, _decode_MAP_AcceptInfo, _encode_MAP_AcceptInfo } from "../MAP-DialogueInformation/MAP-AcceptInfo.ta.mjs";

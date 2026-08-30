@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ChosenChannelInfo, _decode_ChosenChannelInfo, _encode_ChosenChannelInfo } from "../MAP-MS-DataTypes/ChosenChannelInfo.ta.mjs";
 // export { ChosenChannelInfo, _decode_ChosenChannelInfo, _encode_ChosenChannelInfo } from "../MAP-MS-DataTypes/ChosenChannelInfo.ta.mjs";
 import { ChosenSpeechVersion, _decode_ChosenSpeechVersion, _encode_ChosenSpeechVersion } from "../MAP-MS-DataTypes/ChosenSpeechVersion.ta.mjs";

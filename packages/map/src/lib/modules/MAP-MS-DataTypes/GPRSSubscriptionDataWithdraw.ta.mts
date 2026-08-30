@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ContextIdList, _decode_ContextIdList, _encode_ContextIdList } from "../MAP-MS-DataTypes/ContextIdList.ta.mjs";
 // export { ContextIdList, _decode_ContextIdList, _encode_ContextIdList } from "../MAP-MS-DataTypes/ContextIdList.ta.mjs";
 

@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { JobType, _enum_for_JobType, JobType_immediate_MDT_only /* IMPORTED_LONG_ENUMERATION_ITEM */, immediate_MDT_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_logged_MDT_only /* IMPORTED_LONG_ENUMERATION_ITEM */, logged_MDT_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_trace_only /* IMPORTED_LONG_ENUMERATION_ITEM */, trace_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_immediate_MDT_and_trace /* IMPORTED_LONG_ENUMERATION_ITEM */, immediate_MDT_and_trace /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_JobType, _encode_JobType } from "../MAP-OM-DataTypes/JobType.ta.mjs";
 // export { JobType, _enum_for_JobType, JobType_immediate_MDT_only /* IMPORTED_LONG_ENUMERATION_ITEM */, immediate_MDT_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_logged_MDT_only /* IMPORTED_LONG_ENUMERATION_ITEM */, logged_MDT_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_trace_only /* IMPORTED_LONG_ENUMERATION_ITEM */, trace_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_immediate_MDT_and_trace /* IMPORTED_LONG_ENUMERATION_ITEM */, immediate_MDT_and_trace /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_JobType, _encode_JobType } from "../MAP-OM-DataTypes/JobType.ta.mjs";
 import { AreaScope, _decode_AreaScope, _encode_AreaScope } from "../MAP-OM-DataTypes/AreaScope.ta.mjs";

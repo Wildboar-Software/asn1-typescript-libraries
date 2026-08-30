@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MOLR_Class, _decode_MOLR_Class, _encode_MOLR_Class } from "../MAP-MS-DataTypes/MOLR-Class.ta.mjs";
 // export { MOLR_Class, _decode_MOLR_Class, _encode_MOLR_Class } from "../MAP-MS-DataTypes/MOLR-Class.ta.mjs";
 

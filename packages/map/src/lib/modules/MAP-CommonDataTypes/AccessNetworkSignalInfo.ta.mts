@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { AccessNetworkProtocolId, _enum_for_AccessNetworkProtocolId, AccessNetworkProtocolId_ts3G_48006 /* IMPORTED_LONG_ENUMERATION_ITEM */, ts3G_48006 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessNetworkProtocolId_ts3G_25413 /* IMPORTED_LONG_ENUMERATION_ITEM */, ts3G_25413 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessNetworkProtocolId, _encode_AccessNetworkProtocolId } from "../MAP-CommonDataTypes/AccessNetworkProtocolId.ta.mjs";
 // export { AccessNetworkProtocolId, _enum_for_AccessNetworkProtocolId, AccessNetworkProtocolId_ts3G_48006 /* IMPORTED_LONG_ENUMERATION_ITEM */, ts3G_48006 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessNetworkProtocolId_ts3G_25413 /* IMPORTED_LONG_ENUMERATION_ITEM */, ts3G_25413 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessNetworkProtocolId, _encode_AccessNetworkProtocolId } from "../MAP-CommonDataTypes/AccessNetworkProtocolId.ta.mjs";
 import { LongSignalInfo, _decode_LongSignalInfo, _encode_LongSignalInfo } from "../MAP-CommonDataTypes/LongSignalInfo.ta.mjs";

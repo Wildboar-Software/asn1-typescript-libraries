@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { LCSClientInternalID, _enum_for_LCSClientInternalID, LCSClientInternalID_broadcastService /* IMPORTED_LONG_ENUMERATION_ITEM */, broadcastService /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_HPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_HPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_VPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_VPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_anonymousLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, anonymousLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_targetMSsubscribedService /* IMPORTED_LONG_ENUMERATION_ITEM */, targetMSsubscribedService /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCSClientInternalID, _encode_LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
 // export { LCSClientInternalID, _enum_for_LCSClientInternalID, LCSClientInternalID_broadcastService /* IMPORTED_LONG_ENUMERATION_ITEM */, broadcastService /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_HPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_HPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_VPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_VPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_anonymousLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, anonymousLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_targetMSsubscribedService /* IMPORTED_LONG_ENUMERATION_ITEM */, targetMSsubscribedService /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCSClientInternalID, _encode_LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
 

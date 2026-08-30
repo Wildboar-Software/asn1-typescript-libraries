@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 // export { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { DomainType, _enum_for_DomainType, DomainType_cs_Domain /* IMPORTED_LONG_ENUMERATION_ITEM */, cs_Domain /* IMPORTED_SHORT_ENUMERATION_ITEM */, DomainType_ps_Domain /* IMPORTED_LONG_ENUMERATION_ITEM */, ps_Domain /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DomainType, _encode_DomainType } from "../MAP-MS-DataTypes/DomainType.ta.mjs";

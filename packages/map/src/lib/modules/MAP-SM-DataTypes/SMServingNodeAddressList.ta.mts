@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { SMServingNodeAddress, _decode_SMServingNodeAddress, _encode_SMServingNodeAddress } from "../MAP-SM-DataTypes/SMServingNodeAddress.ta.mjs";
 // export { SMServingNodeAddress, _decode_SMServingNodeAddress, _encode_SMServingNodeAddress } from "../MAP-SM-DataTypes/SMServingNodeAddress.ta.mjs";
 

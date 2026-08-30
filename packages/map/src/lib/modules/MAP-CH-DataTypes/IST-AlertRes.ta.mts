@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
 // export { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
 import { CallTerminationIndicator, _enum_for_CallTerminationIndicator, CallTerminationIndicator_terminateCallActivityReferred /* IMPORTED_LONG_ENUMERATION_ITEM */, terminateCallActivityReferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallTerminationIndicator_terminateAllCallActivities /* IMPORTED_LONG_ENUMERATION_ITEM */, terminateAllCallActivities /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallTerminationIndicator, _encode_CallTerminationIndicator } from "../MAP-CH-DataTypes/CallTerminationIndicator.ta.mjs";

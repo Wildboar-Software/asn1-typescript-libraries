@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAlgorithm, _encode_ChosenIntegrityProtectionAlgorithm } from "../MAP-MS-DataTypes/ChosenIntegrityProtectionAlgorithm.ta.mjs";
 // export { ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAlgorithm, _encode_ChosenIntegrityProtectionAlgorithm } from "../MAP-MS-DataTypes/ChosenIntegrityProtectionAlgorithm.ta.mjs";
 import { ChosenEncryptionAlgorithm, _decode_ChosenEncryptionAlgorithm, _encode_ChosenEncryptionAlgorithm } from "../MAP-MS-DataTypes/ChosenEncryptionAlgorithm.ta.mjs";

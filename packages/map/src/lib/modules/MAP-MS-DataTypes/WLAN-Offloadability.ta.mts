@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { WLAN_Offloadability_Indication, _enum_for_WLAN_Offloadability_Indication, WLAN_Offloadability_Indication_notAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, WLAN_Offloadability_Indication_allowed /* IMPORTED_LONG_ENUMERATION_ITEM */, allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_WLAN_Offloadability_Indication, _encode_WLAN_Offloadability_Indication } from "../MAP-MS-DataTypes/WLAN-Offloadability-Indication.ta.mjs";
 // export { WLAN_Offloadability_Indication, _enum_for_WLAN_Offloadability_Indication, WLAN_Offloadability_Indication_notAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, notAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, WLAN_Offloadability_Indication_allowed /* IMPORTED_LONG_ENUMERATION_ITEM */, allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_WLAN_Offloadability_Indication, _encode_WLAN_Offloadability_Indication } from "../MAP-MS-DataTypes/WLAN-Offloadability-Indication.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

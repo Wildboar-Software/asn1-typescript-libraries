@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MSC_S_EventList, MSC_S_EventList_mo_mtCall /* IMPORTED_LONG_NAMED_BIT */, mo_mtCall /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, MSC_S_EventList_lu_imsiAttach_imsiDetach /* IMPORTED_LONG_NAMED_BIT */, lu_imsiAttach_imsiDetach /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_handovers /* IMPORTED_LONG_NAMED_BIT */, handovers /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_ss /* IMPORTED_LONG_NAMED_BIT */, ss /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
 // export { MSC_S_EventList, MSC_S_EventList_mo_mtCall /* IMPORTED_LONG_NAMED_BIT */, mo_mtCall /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, MSC_S_EventList_lu_imsiAttach_imsiDetach /* IMPORTED_LONG_NAMED_BIT */, lu_imsiAttach_imsiDetach /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_handovers /* IMPORTED_LONG_NAMED_BIT */, handovers /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_ss /* IMPORTED_LONG_NAMED_BIT */, ss /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
 import { MGW_EventList, MGW_EventList_context /* IMPORTED_LONG_NAMED_BIT */, context /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";

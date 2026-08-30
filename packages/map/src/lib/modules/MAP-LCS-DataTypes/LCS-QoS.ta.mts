@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Horizontal_Accuracy, _decode_Horizontal_Accuracy, _encode_Horizontal_Accuracy } from "../MAP-LCS-DataTypes/Horizontal-Accuracy.ta.mjs";
 // export { Horizontal_Accuracy, _decode_Horizontal_Accuracy, _encode_Horizontal_Accuracy } from "../MAP-LCS-DataTypes/Horizontal-Accuracy.ta.mjs";
 import { Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy } from "../MAP-LCS-DataTypes/Vertical-Accuracy.ta.mjs";

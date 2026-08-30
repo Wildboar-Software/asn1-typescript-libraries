@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { NR_CGI, _decode_NR_CGI, _encode_NR_CGI } from "../MAP-CommonDataTypes/NR-CGI.ta.mjs";
 // export { NR_CGI, _decode_NR_CGI, _encode_NR_CGI } from "../MAP-CommonDataTypes/NR-CGI.ta.mjs";
 import { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";

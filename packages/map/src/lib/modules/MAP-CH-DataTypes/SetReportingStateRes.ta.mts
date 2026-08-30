@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CCBS_SubscriberStatus, _enum_for_CCBS_SubscriberStatus, CCBS_SubscriberStatus_ccbsNotIdle /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsNotIdle /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_SubscriberStatus_ccbsIdle /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsIdle /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_SubscriberStatus_ccbsNotReachable /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsNotReachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CCBS_SubscriberStatus, _encode_CCBS_SubscriberStatus } from "../MAP-CH-DataTypes/CCBS-SubscriberStatus.ta.mjs";
 // export { CCBS_SubscriberStatus, _enum_for_CCBS_SubscriberStatus, CCBS_SubscriberStatus_ccbsNotIdle /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsNotIdle /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_SubscriberStatus_ccbsIdle /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsIdle /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_SubscriberStatus_ccbsNotReachable /* IMPORTED_LONG_ENUMERATION_ITEM */, ccbsNotReachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CCBS_SubscriberStatus, _encode_CCBS_SubscriberStatus } from "../MAP-CH-DataTypes/CCBS-SubscriberStatus.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

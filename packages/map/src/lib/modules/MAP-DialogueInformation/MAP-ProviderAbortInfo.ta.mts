@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MAP_ProviderAbortReason, _enum_for_MAP_ProviderAbortReason, MAP_ProviderAbortReason_abnormalDialogue /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalDialogue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MAP_ProviderAbortReason_invalidPDU /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidPDU /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MAP_ProviderAbortReason, _encode_MAP_ProviderAbortReason } from "../MAP-DialogueInformation/MAP-ProviderAbortReason.ta.mjs";
 // export { MAP_ProviderAbortReason, _enum_for_MAP_ProviderAbortReason, MAP_ProviderAbortReason_abnormalDialogue /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalDialogue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MAP_ProviderAbortReason_invalidPDU /* IMPORTED_LONG_ENUMERATION_ITEM */, invalidPDU /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MAP_ProviderAbortReason, _encode_MAP_ProviderAbortReason } from "../MAP-DialogueInformation/MAP-ProviderAbortReason.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

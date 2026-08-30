@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CSG_SubscriptionData, _decode_CSG_SubscriptionData, _encode_CSG_SubscriptionData } from "../MAP-MS-DataTypes/CSG-SubscriptionData.ta.mjs";
 // export { CSG_SubscriptionData, _decode_CSG_SubscriptionData, _encode_CSG_SubscriptionData } from "../MAP-MS-DataTypes/CSG-SubscriptionData.ta.mjs";
 

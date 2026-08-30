@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
 // export { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
 import { HLR_List, _decode_HLR_List, _encode_HLR_List } from "../MAP-CommonDataTypes/HLR-List.ta.mjs";

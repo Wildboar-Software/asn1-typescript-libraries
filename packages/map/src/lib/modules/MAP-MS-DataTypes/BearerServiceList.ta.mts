@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Ext_BearerServiceCode, _decode_Ext_BearerServiceCode, _encode_Ext_BearerServiceCode } from "../MAP-BS-Code/Ext-BearerServiceCode.ta.mjs";
 // export { Ext_BearerServiceCode, _decode_Ext_BearerServiceCode, _encode_Ext_BearerServiceCode } from "../MAP-BS-Code/Ext-BearerServiceCode.ta.mjs";
 

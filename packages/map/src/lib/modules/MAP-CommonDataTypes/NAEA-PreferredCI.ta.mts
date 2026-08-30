@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { NAEA_CIC, _decode_NAEA_CIC, _encode_NAEA_CIC } from "../MAP-CommonDataTypes/NAEA-CIC.ta.mjs";
 // export { NAEA_CIC, _decode_NAEA_CIC, _encode_NAEA_CIC } from "../MAP-CommonDataTypes/NAEA-CIC.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";

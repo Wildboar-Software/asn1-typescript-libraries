@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Ext_ProtocolId, _enum_for_Ext_ProtocolId, Ext_ProtocolId_ets_300356 /* IMPORTED_LONG_ENUMERATION_ITEM */, ets_300356 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Ext_ProtocolId, _encode_Ext_ProtocolId } from "../MAP-CommonDataTypes/Ext-ProtocolId.ta.mjs";
 // export { Ext_ProtocolId, _enum_for_Ext_ProtocolId, Ext_ProtocolId_ets_300356 /* IMPORTED_LONG_ENUMERATION_ITEM */, ets_300356 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Ext_ProtocolId, _encode_Ext_ProtocolId } from "../MAP-CommonDataTypes/Ext-ProtocolId.ta.mjs";
 import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";

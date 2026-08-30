@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { BSSMAP_ServiceHandoverInfo, _decode_BSSMAP_ServiceHandoverInfo, _encode_BSSMAP_ServiceHandoverInfo } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverInfo.ta.mjs";
 // export { BSSMAP_ServiceHandoverInfo, _decode_BSSMAP_ServiceHandoverInfo, _encode_BSSMAP_ServiceHandoverInfo } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverInfo.ta.mjs";
 

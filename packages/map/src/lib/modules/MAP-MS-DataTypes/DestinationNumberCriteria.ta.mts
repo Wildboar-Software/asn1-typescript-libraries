@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MatchType, _enum_for_MatchType, MatchType_inhibiting /* IMPORTED_LONG_ENUMERATION_ITEM */, inhibiting /* IMPORTED_SHORT_ENUMERATION_ITEM */, MatchType_enabling /* IMPORTED_LONG_ENUMERATION_ITEM */, enabling /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MatchType, _encode_MatchType } from "../MAP-MS-DataTypes/MatchType.ta.mjs";
 // export { MatchType, _enum_for_MatchType, MatchType_inhibiting /* IMPORTED_LONG_ENUMERATION_ITEM */, inhibiting /* IMPORTED_SHORT_ENUMERATION_ITEM */, MatchType_enabling /* IMPORTED_LONG_ENUMERATION_ITEM */, enabling /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MatchType, _encode_MatchType } from "../MAP-MS-DataTypes/MatchType.ta.mjs";
 import { DestinationNumberList, _decode_DestinationNumberList, _encode_DestinationNumberList } from "../MAP-MS-DataTypes/DestinationNumberList.ta.mjs";

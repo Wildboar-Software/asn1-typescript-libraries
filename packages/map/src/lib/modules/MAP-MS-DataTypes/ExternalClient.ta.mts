@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "../MAP-CommonDataTypes/LCSClientExternalID.ta.mjs";
 // export { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "../MAP-CommonDataTypes/LCSClientExternalID.ta.mjs";
 import { GMLC_Restriction, _enum_for_GMLC_Restriction, GMLC_Restriction_gmlc_List /* IMPORTED_LONG_ENUMERATION_ITEM */, gmlc_List /* IMPORTED_SHORT_ENUMERATION_ITEM */, GMLC_Restriction_home_Country /* IMPORTED_LONG_ENUMERATION_ITEM */, home_Country /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GMLC_Restriction, _encode_GMLC_Restriction } from "../MAP-MS-DataTypes/GMLC-Restriction.ta.mjs";

@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _encode_DP_AnalysedInfoCriteriaList } from "../MAP-MS-DataTypes/DP-AnalysedInfoCriteriaList.ta.mjs";
 // export { DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _encode_DP_AnalysedInfoCriteriaList } from "../MAP-MS-DataTypes/DP-AnalysedInfoCriteriaList.ta.mjs";
 import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
