@@ -33,9 +33,9 @@ function escapedValue (value: Uint8Array): string {
 export
 function stringifyFilter (filter: Filter): string {
     if ("and" in filter) {
-        return `(&${filter.and.map(stringifyFilter)})`;
+        return `(&${filter.and.map(stringifyFilter).join("")})`;
     } else if ("or" in filter) {
-        return `(|${filter.or.map(stringifyFilter)})`;
+        return `(|${filter.or.map(stringifyFilter).join("")})`;
     } else if ("not" in filter) {
         return `(!${stringifyFilter(filter.not)})`;
     } else if ("equalityMatch" in filter) {

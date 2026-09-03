@@ -1,6 +1,7 @@
 import type LDAPSyntaxDecoder from "./types/LDAPSyntaxDecoder.mjs";
 import { ASN1Element, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import decodeLDAPOID from "./decodeLDAPOID.mjs";
+import bytesToBuffer from "./utils/bytesToBuffer.mjs";
 import { Buffer } from "node:buffer";
 
 export
@@ -41,7 +42,7 @@ const countryString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
         ASN1UniversalType.printableString,
         (value instanceof Buffer)
             ? value.toString("latin1")
-            : Buffer.from(value.buffer).toString("latin1"),
+            : bytesToBuffer(value).toString("latin1"),
     );
 };
 
@@ -65,7 +66,7 @@ export
 const deliveryMethod: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     const v = (value instanceof Buffer)
         ? value.toString("latin1")
-        : Buffer.from(value.buffer).toString("latin1");
+        : bytesToBuffer(value).toString("latin1");
     return BERElement.fromSequence(
         v
             .split("$")
@@ -90,7 +91,7 @@ const directoryString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
         ASN1UniversalType.utf8String,
         (value instanceof Buffer)
             ? value.toString("utf-8")
-            : Buffer.from(value.buffer).toString("utf-8"),
+            : bytesToBuffer(value).toString("utf-8"),
     );
 };
 
@@ -123,7 +124,7 @@ const ia5String: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     );
     el.ia5String = (value instanceof Buffer)
         ? value.toString("latin1")
-        : Buffer.from(value.buffer).toString("latin1");
+        : bytesToBuffer(value).toString("latin1");
     return el;
 };
 
@@ -131,7 +132,7 @@ export
 const integer: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     const str = (value instanceof Buffer)
         ? value.toString("latin1")
-        : Buffer.from(value.buffer).toString("latin1");
+        : bytesToBuffer(value).toString("latin1");
     const v = Number.parseInt(str, 10);
     if (Number.isNaN(v) || !Number.isSafeInteger(v)) {
         throw new Error();
@@ -165,7 +166,7 @@ export
 const numericString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     const str = (value instanceof Buffer)
         ? value.toString("latin1")
-        : Buffer.from(value.buffer).toString("latin1");
+        : bytesToBuffer(value).toString("latin1");
     const el = new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,
@@ -205,7 +206,7 @@ export
 const otherMailbox: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     const str = (value instanceof Buffer)
         ? value.toString("latin1")
-        : Buffer.from(value.buffer).toString("latin1");
+        : bytesToBuffer(value).toString("latin1");
     const [ mailboxType, mailbox ] = str.split("$");
     return BERElement.fromSequence([
         new BERElement(
@@ -227,7 +228,7 @@ export
 const postalAddress: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     const str = (value instanceof Buffer)
         ? value.toString("utf-8")
-        : Buffer.from(value.buffer).toString("utf-8");
+        : bytesToBuffer(value).toString("utf-8");
     return BERElement.fromSequence(str.split("$").map((line) => new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,
@@ -240,7 +241,7 @@ export
 const printableString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     const str = (value instanceof Buffer)
         ? value.toString("latin1")
-        : Buffer.from(value.buffer).toString("latin1");
+        : bytesToBuffer(value).toString("latin1");
     const el = new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,
@@ -256,7 +257,7 @@ export
 const telephoneNumber: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     const str = (value instanceof Buffer)
         ? value.toString("latin1")
-        : Buffer.from(value.buffer).toString("latin1");
+        : bytesToBuffer(value).toString("latin1");
     const el = new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,

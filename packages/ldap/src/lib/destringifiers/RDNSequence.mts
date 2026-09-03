@@ -1,5 +1,6 @@
 import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndValue.mjs";
 import type { StringDecoderGetter } from "../types/StringDecoderGetter.mjs";
+import isCharEscaped from "../utils/isCharEscaped.mjs";
 import rdnFromString from "./RelativeDistinguishedName.mjs";
 
 type RDN = ATAV[];
@@ -32,8 +33,7 @@ export default function* rdnSequenceFromString(
     let start: number = 0;
     for (let i: number = 0; i < str.length; i++) {
         const char: number = str.charCodeAt(i);
-        const prevChar: number = str.charCodeAt(i - 1);
-        if (char === rdnDelimiter && prevChar !== escape) {
+        if (char === rdnDelimiter && !isCharEscaped(str, i, escape)) {
             const unescapedRDN = str.slice(start, i);
             yield Array.from(
                 rdnFromString(unescapedRDN, getStringDecoder, escape, atavDelimiter)

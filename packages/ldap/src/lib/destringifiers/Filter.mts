@@ -8,7 +8,10 @@ interface ParserState {
     readonly input: string;
     index: number;
     filter: Filter;
+    recursionTTL?: number;
 }
+
+const DEFAULT_RECURSION_TTL: number = 20;
 
 /**
  * @summary Parse an LDAP Filter from a string according to RFC 4515.
@@ -23,16 +26,23 @@ interface ParserState {
  */
 export
 function parseFilter (state: ParserState): ParserState {
+    const recursionTTL: number = state.recursionTTL ?? DEFAULT_RECURSION_TTL;
     state.index++;
     let char = state.input[state.index];
     switch (char) {
         case ("&"): {
+            if (recursionTTL <= 0) {
+                throw new Error("Filter string nesting too deep.");
+            }
             state.index++;
             char = state.input[state.index];
             const subs: Filter[] = [];
             let s = state;
             while (char === "(") {
-                s = parseFilter(s);
+                s = parseFilter({
+                    ...s,
+                    recursionTTL: recursionTTL - 1,
+                });
                 subs.push(s.filter);
                 char = s.input[s.index];
             }
@@ -45,12 +55,18 @@ function parseFilter (state: ParserState): ParserState {
             };
         }
         case ("|"): {
+            if (recursionTTL <= 0) {
+                throw new Error("Filter string nesting too deep.");
+            }
             state.index++;
             char = state.input[state.index];
             const subs: Filter[] = [];
             let s = state;
             while (char === "(") {
-                s = parseFilter(s);
+                s = parseFilter({
+                    ...s,
+                    recursionTTL: recursionTTL - 1,
+                });
                 subs.push(s.filter);
                 char = s.input[s.index];
             }
@@ -63,8 +79,14 @@ function parseFilter (state: ParserState): ParserState {
             };
         }
         case ("!"): {
+            if (recursionTTL <= 0) {
+                throw new Error("Filter string nesting too deep.");
+            }
             state.index++;
-            const result = parseFilter(state);
+            const result = parseFilter({
+                ...state,
+                recursionTTL: recursionTTL - 1,
+            });
             result.index++;
             return {
                 ...result,
@@ -119,13 +141,13 @@ function parseFilter (state: ParserState): ParserState {
                                         : undefined,
                                     final
                                         ? {
-                                            initial: Buffer.from(final, "utf-8"),
+                                            final: Buffer.from(final, "utf-8"),
                                         }
                                         : undefined,
                                     ...anys.map((a) => ({
                                         any_: Buffer.from(a, "utf-8"),
                                     })),
-                                ].filter((s): s is any => !!s),
+                                ].filter((s): s is NonNullable<typeof s> => !!s),
                             ),
                         },
                     };
@@ -204,4 +226,3 @@ function parseFilter (state: ParserState): ParserState {
 }
 
 export default parseFilter;
-
