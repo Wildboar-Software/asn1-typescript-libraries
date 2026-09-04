@@ -66,10 +66,12 @@ function rfc822NameWithinSubtree(name: string, base: string): boolean {
     const baseTrim = base.trim();
     const nameAt = nameTrim.lastIndexOf("@");
     const baseAt = baseTrim.lastIndexOf("@");
+    // RFC 5280 rfc822Name constraints apply to mailboxes (local@host).
+    if (nameAt < 0) {
+        return false;
+    }
     if (baseAt >= 0) {
-        if (nameAt < 0) {
-            return false;
-        }
+        // Local name included in the base: particular mailbox (exact match).
         const nameLocal = nameTrim.slice(0, nameAt);
         const baseLocal = baseTrim.slice(0, baseAt);
         if (nameLocal !== baseLocal) {
@@ -78,9 +80,6 @@ function rfc822NameWithinSubtree(name: string, base: string): boolean {
         const nameHost = normalizeDNSName(nameTrim.slice(nameAt + 1));
         const baseHost = normalizeDNSName(baseTrim.slice(baseAt + 1));
         return Boolean(nameHost && baseHost && (nameHost === baseHost));
-    }
-    if (nameAt < 0) {
-        return false;
     }
     const nameHost = normalizeDNSName(nameTrim.slice(nameAt + 1));
     if (!nameHost) {
@@ -106,10 +105,12 @@ function ipAddressWithinSubtree(name: Uint8Array, base: Uint8Array): boolean {
     let mask: Uint8Array;
     let subject: Uint8Array;
     if ((base.length === 8) && (name.length === 4)) {
+        // IPv4 prefix: 4-octet address + 4-octet network mask.
         address = base.subarray(0, 4);
         mask = base.subarray(4, 8);
         subject = name;
     } else if ((base.length === 32) && (name.length === 16)) {
+        // IPv6 prefix: 16-octet address + 16-octet network mask.
         address = base.subarray(0, 16);
         mask = base.subarray(16, 32);
         subject = name;
@@ -117,6 +118,7 @@ function ipAddressWithinSubtree(name: Uint8Array, base: Uint8Array): boolean {
         (base.length === name.length)
         && ((name.length === 4) || (name.length === 16))
     ) {
+        // Exact IPv4 (4) or IPv6 (16) address; base is not a prefix.
         for (let i = 0; i < name.length; i++) {
             if (base[i] !== name[i]) {
                 return false;
@@ -124,6 +126,7 @@ function ipAddressWithinSubtree(name: Uint8Array, base: Uint8Array): boolean {
         }
         return true;
     } else {
+        // Unrecognized combination of address / constraint lengths.
         return false;
     }
     for (let i = 0; i < subject.length; i++) {
