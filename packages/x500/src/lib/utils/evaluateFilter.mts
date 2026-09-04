@@ -271,7 +271,7 @@ function contextMatchFlags (
         return undefined;
     }
     const siblingContexts: Context[][] = [
-        ...attr.values.map(() => []),
+        ...attr.values.map((): Context[] => []),
         ...(attr.valuesWithContext ?? []).map((vwc) => vwc.contextList),
     ];
     return evaluateContextAssertionsAmongValues(
