@@ -10,8 +10,132 @@ import type {
 import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
 import { domainToASCII } from "node:url";
 import { compareElements } from "../comparators/compareElements.mjs";
+import { compareGeneralName } from "../comparators/compareGeneralName.mjs";
 
 const ID_SRV_NAME = ObjectIdentifier.fromString("1.3.6.1.5.5.7.8.7");
+
+/**
+ * IDNA-normalize a DNS name, strip one trailing dot, and reject empty/invalid.
+ * `domainToASCII` returns `""` for non-IDNA input, which would otherwise match
+ * any name that ends with `"."`.
+ *
+ * @internal
+ */
+export
+function normalizeDNSName(s: string): string | undefined {
+    let ascii: string;
+    try {
+        ascii = domainToASCII(s.trim()).toLowerCase();
+    } catch {
+        return undefined;
+    }
+    if (ascii.endsWith(".")) {
+        ascii = ascii.slice(0, -1);
+    }
+    if (ascii.length === 0) {
+        return undefined;
+    }
+    return ascii;
+}
+
+/** @internal */
+export
+function dnsNameEqualsOrSubdomain(name: string, base: string): boolean {
+    if (name.length < base.length) {
+        return false;
+    }
+    if (name.length === base.length) {
+        return name === base;
+    }
+    return (
+        name.endsWith(base)
+        && (name[name.length - (1 + base.length)] === ".")
+    );
+}
+
+/**
+ * RFC 5280 §4.2.1.10 rfc822Name constraints: a particular mailbox, all
+ * mailboxes on a host, or all mailboxes in a domain (constraint starts with
+ * `"."`).
+ *
+ * @internal
+ */
+export
+function rfc822NameWithinSubtree(name: string, base: string): boolean {
+    const nameTrim = name.trim();
+    const baseTrim = base.trim();
+    const nameAt = nameTrim.lastIndexOf("@");
+    const baseAt = baseTrim.lastIndexOf("@");
+    // RFC 5280 rfc822Name constraints apply to mailboxes (local@host).
+    if (nameAt < 0) {
+        return false;
+    }
+    if (baseAt >= 0) {
+        // Local name included in the base: particular mailbox (exact match).
+        const nameLocal = nameTrim.slice(0, nameAt);
+        const baseLocal = baseTrim.slice(0, baseAt);
+        if (nameLocal !== baseLocal) {
+            return false;
+        }
+        const nameHost = normalizeDNSName(nameTrim.slice(nameAt + 1));
+        const baseHost = normalizeDNSName(baseTrim.slice(baseAt + 1));
+        return Boolean(nameHost && baseHost && (nameHost === baseHost));
+    }
+    const nameHost = normalizeDNSName(nameTrim.slice(nameAt + 1));
+    if (!nameHost) {
+        return false;
+    }
+    if (baseTrim.startsWith(".")) {
+        const domain = normalizeDNSName(baseTrim.slice(1));
+        return Boolean(domain && dnsNameEqualsOrSubdomain(nameHost, domain));
+    }
+    const host = normalizeDNSName(baseTrim);
+    return Boolean(host && (nameHost === host));
+}
+
+/**
+ * RFC 5280 §4.2.1.10 iPAddress constraints: 8 octets (IPv4 address + mask) or
+ * 32 octets (IPv6 address + mask). A 4- or 16-octet base is an exact address.
+ *
+ * @internal
+ */
+export
+function ipAddressWithinSubtree(name: Uint8Array, base: Uint8Array): boolean {
+    let address: Uint8Array;
+    let mask: Uint8Array;
+    let subject: Uint8Array;
+    if ((base.length === 8) && (name.length === 4)) {
+        // IPv4 prefix: 4-octet address + 4-octet network mask.
+        address = base.subarray(0, 4);
+        mask = base.subarray(4, 8);
+        subject = name;
+    } else if ((base.length === 32) && (name.length === 16)) {
+        // IPv6 prefix: 16-octet address + 16-octet network mask.
+        address = base.subarray(0, 16);
+        mask = base.subarray(16, 32);
+        subject = name;
+    } else if (
+        (base.length === name.length)
+        && ((name.length === 4) || (name.length === 16))
+    ) {
+        // Exact IPv4 (4) or IPv6 (16) address; base is not a prefix.
+        for (let i = 0; i < name.length; i++) {
+            if (base[i] !== name[i]) {
+                return false;
+            }
+        }
+        return true;
+    } else {
+        // Unrecognized combination of address / constraint lengths.
+        return false;
+    }
+    for (let i = 0; i < subject.length; i++) {
+        if ((subject[i] & mask[i]) !== (address[i] & mask[i])) {
+            return false;
+        }
+    }
+    return true;
+}
 
 /**
  * @summary Determine whether an SRVName matches a base SRVName.
@@ -47,25 +171,22 @@ function evaluateSRVNameConstraints(base: string, name: string): boolean {
             if (nameService.toLowerCase() !== baseService.toLowerCase()) {
                 return false;
             }
-            const baseNorm = domainToASCII(baseDomain).toLowerCase();
-            const nameNorm = domainToASCII(nameDomain).toLowerCase();
-            if (baseNorm.length === nameNorm.length) {
-                return baseNorm === nameNorm;
+            const baseNorm = normalizeDNSName(baseDomain);
+            const nameNorm = normalizeDNSName(nameDomain);
+            if (!baseNorm || !nameNorm) {
+                return false;
             }
-            return (
-                nameNorm.endsWith(baseNorm)
-                && (nameNorm[nameNorm.length - (1 + baseNorm.length)] === '.')
-            );
+            return dnsNameEqualsOrSubdomain(nameNorm, baseNorm);
         } else { // There is no "." in the base (base is just a plain service name)
             return (nameService.toLowerCase() === base.toLowerCase());
         }
     } else { // base does not start with "_" (base is just a plain domain name)
-        const a = domainToASCII(name.slice(nameFirstDot + 1)).toLowerCase();
-        const b = domainToASCII(base).toLowerCase();
-        if (a.length === b.length) {
-            return a === b;
+        const a = normalizeDNSName(name.slice(nameFirstDot + 1));
+        const b = normalizeDNSName(base);
+        if (!a || !b) {
+            return false;
         }
-        return a.endsWith(b) && (a[a.length - (1 + b.length)] === '.');
+        return dnsNameEqualsOrSubdomain(a, b);
     }
 }
 
@@ -109,10 +230,14 @@ function externalEncodingToElement(enc: External["encoding"]): ASN1Element | nul
  * differ by variant, this returns `false`.
  *
  * If the `GeneralName` variant used does not have a well-defined hierarchical
- * structure to it, this returns `false`. The variants that _do_ have a
- * well-defined hierarchical structure are:
+ * structure to it, this still returns `true` when the name is an exact match
+ * for the subtree base and `minimum` is 0. Treating an unsupported form as
+ * "not in the subtree" would fail-open for excluded subtrees. The variants
+ * that _do_ have a well-defined hierarchical structure are:
  *
  * - `dNSName`
+ * - `rfc822Name`
+ * - `iPAddress`
  * - `directoryName`
  * - `registeredID`
  * - `otherName`, if the `SRVName` `OTHER-NAME` type is used
@@ -187,8 +312,11 @@ function gnWithinGeneralSubtree (
     }
     else if (("dNSName" in gn) && ("dNSName" in subtree.base)) {
         // Minimal-allocation approach.
-        const base = domainToASCII(subtree.base.dNSName.trim()).toLowerCase();
-        const name = domainToASCII(gn.dNSName.trim()).toLowerCase();
+        const base = normalizeDNSName(subtree.base.dNSName);
+        const name = normalizeDNSName(gn.dNSName);
+        if (!base || !name) {
+            return false;
+        }
         if (name.length < base.length) {
             return false; // It cannot possibly be equal or a subdomain.
         }
@@ -200,13 +328,17 @@ function gnWithinGeneralSubtree (
         if (nameDCs > (baseDCs + maximum)) {
             return false;
         }
-        if (name.length === base.length) {
-            return name === base;
+        return dnsNameEqualsOrSubdomain(name, base);
+    } else if (("rfc822Name" in gn) && ("rfc822Name" in subtree.base)) {
+        if (minimum > 0) {
+            return false;
         }
-        return (
-            name.endsWith(base)
-            && (name[name.length - (1 + base.length)] === '.')
-        );
+        return rfc822NameWithinSubtree(gn.rfc822Name, subtree.base.rfc822Name);
+    } else if (("iPAddress" in gn) && ("iPAddress" in subtree.base)) {
+        if (minimum > 0) {
+            return false;
+        }
+        return ipAddressWithinSubtree(gn.iPAddress, subtree.base.iPAddress);
     } else if (("directoryName" in gn) && ("directoryName" in subtree.base)) {
         const base = subtree.base.directoryName.rdnSequence;
         const entry = gn.directoryName.rdnSequence;
@@ -234,7 +366,19 @@ function gnWithinGeneralSubtree (
         const remaining_arcs = gn_arcs.length - i;
         return ((remaining_arcs >= minimum) && (remaining_arcs <= maximum));
     } else {
-        return false;
+        /**
+         * Unsupported hierarchical forms still match when the names are equal
+         * and `minimum` is 0. Returning `false` here used to fail-open for
+         * excluded subtrees of those name forms.
+         */
+        if (minimum > 0) {
+            return false;
+        }
+        return compareGeneralName(
+            gn,
+            subtree.base,
+            getEqualityMatcher ?? (() => compareElements),
+        );
     }
 }
 
