@@ -8,7 +8,6 @@ interface ParserState {
     readonly input: string;
     index: number;
     filter: Filter;
-    recursionTTL?: number;
 }
 
 const DEFAULT_RECURSION_TTL: number = 20;
@@ -21,12 +20,12 @@ const DEFAULT_RECURSION_TTL: number = 20;
  * [IETF RFC 4515](https://www.rfc-editor.org/rfc/rfc4515).
  *
  * @param state The parser state.
+ * @param recursionTTL Maximum nesting depth for composite filters. Defaults to 20.
  * @returns The parser state.
  * @function
  */
 export
-function parseFilter (state: ParserState): ParserState {
-    const recursionTTL: number = state.recursionTTL ?? DEFAULT_RECURSION_TTL;
+function parseFilter (state: ParserState, recursionTTL: number = DEFAULT_RECURSION_TTL): ParserState {
     state.index++;
     let char = state.input[state.index];
     switch (char) {
@@ -39,10 +38,7 @@ function parseFilter (state: ParserState): ParserState {
             const subs: Filter[] = [];
             let s = state;
             while (char === "(") {
-                s = parseFilter({
-                    ...s,
-                    recursionTTL: recursionTTL - 1,
-                });
+                s = parseFilter(s, recursionTTL - 1);
                 subs.push(s.filter);
                 char = s.input[s.index];
             }
@@ -63,10 +59,7 @@ function parseFilter (state: ParserState): ParserState {
             const subs: Filter[] = [];
             let s = state;
             while (char === "(") {
-                s = parseFilter({
-                    ...s,
-                    recursionTTL: recursionTTL - 1,
-                });
+                s = parseFilter(s, recursionTTL - 1);
                 subs.push(s.filter);
                 char = s.input[s.index];
             }
@@ -83,10 +76,7 @@ function parseFilter (state: ParserState): ParserState {
                 throw new Error("Filter string nesting too deep.");
             }
             state.index++;
-            const result = parseFilter({
-                ...state,
-                recursionTTL: recursionTTL - 1,
-            });
+            const result = parseFilter(state, recursionTTL - 1);
             result.index++;
             return {
                 ...result,
