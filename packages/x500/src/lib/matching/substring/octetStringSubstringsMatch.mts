@@ -17,11 +17,20 @@ const octetStringSubstringsMatch: SubstringsMatcher = (
     const osa: OctetSubstringAssertion = _decode_OctetSubstringAssertion(assertion);
     return osa.every((o) => {
         if ("initial" in o) {
+            if (o.initial.length > v.length) {
+                return false;
+            }
             return !Buffer.compare(v.subarray(0, o.initial.length), o.initial);
         } else if ("any_" in o) {
-            return (Buffer.from(v.buffer).indexOf(o.any_) > -1);
+            return (Buffer.from(v).indexOf(o.any_) > -1);
         } else if ("final" in o) {
-            return Buffer.from(v.buffer).compare(o.final, 0, 0, (v.length - o.final.length), v.length);
+            if (o.final.length > v.length) {
+                return false;
+            }
+            return !Buffer.compare(
+                v.subarray(v.length - o.final.length),
+                o.final,
+            );
         } else {
             return false;
         }
