@@ -288,4 +288,78 @@ describe("gnWithinGeneralSubtree", () => {
         expect(gnWithinGeneralSubtree(asserted1d, subtree1)).toBe(false); // Maximum exceeded
         expect(gnWithinGeneralSubtree(asserted1e, subtree1)).toBe(false); // Totally outside subtree
     });
+
+    it("treats a trailing-dot dNSName as equivalent after IDNA", () => {
+        const subtree = new GeneralSubtree({ dNSName: "example.com" });
+        expect(gnWithinGeneralSubtree({ dNSName: "www.example.com." }, subtree)).toBe(true);
+        expect(gnWithinGeneralSubtree({ dNSName: "example.com." }, subtree)).toBe(true);
+        const dottedSubtree = new GeneralSubtree({ dNSName: "example.com." });
+        expect(gnWithinGeneralSubtree({ dNSName: "www.example.com" }, dottedSubtree)).toBe(true);
+    });
+
+    it("rejects empty or non-IDNA dNSName subtree bases", () => {
+        const empty = new GeneralSubtree({ dNSName: "" });
+        const garbage = new GeneralSubtree({ dNSName: "not a domain!!!" });
+        expect(gnWithinGeneralSubtree({ dNSName: "www.example.com" }, empty)).toBe(false);
+        expect(gnWithinGeneralSubtree({ dNSName: "www.example.com." }, empty)).toBe(false);
+        expect(gnWithinGeneralSubtree({ dNSName: "www.example.com" }, garbage)).toBe(false);
+        expect(gnWithinGeneralSubtree({ dNSName: "foo." }, garbage)).toBe(false);
+    });
+
+    it("evaluates rfc822Name mailbox, host, and domain constraints per RFC 5280", () => {
+        const mailbox = new GeneralSubtree({ rfc822Name: "alice@example.com" });
+        expect(gnWithinGeneralSubtree({ rfc822Name: "alice@example.com" }, mailbox)).toBe(true);
+        expect(gnWithinGeneralSubtree({ rfc822Name: "bob@example.com" }, mailbox)).toBe(false);
+        expect(gnWithinGeneralSubtree({ rfc822Name: "alice@mail.example.com" }, mailbox)).toBe(false);
+
+        const host = new GeneralSubtree({ rfc822Name: "example.com" });
+        expect(gnWithinGeneralSubtree({ rfc822Name: "alice@example.com" }, host)).toBe(true);
+        expect(gnWithinGeneralSubtree({ rfc822Name: "alice@mail.example.com" }, host)).toBe(false);
+
+        const domain = new GeneralSubtree({ rfc822Name: ".example.com" });
+        expect(gnWithinGeneralSubtree({ rfc822Name: "alice@example.com" }, domain)).toBe(true);
+        expect(gnWithinGeneralSubtree({ rfc822Name: "alice@mail.example.com" }, domain)).toBe(true);
+        expect(gnWithinGeneralSubtree({ rfc822Name: "alice@example.net" }, domain)).toBe(false);
+    });
+
+    it("evaluates iPAddress prefix constraints per RFC 5280", () => {
+        const v4Prefix = new GeneralSubtree({
+            iPAddress: new Uint8Array([192, 0, 2, 0, 255, 255, 255, 0]),
+        });
+        expect(gnWithinGeneralSubtree({ iPAddress: new Uint8Array([192, 0, 2, 1]) }, v4Prefix)).toBe(true);
+        expect(gnWithinGeneralSubtree({ iPAddress: new Uint8Array([198, 51, 100, 1]) }, v4Prefix)).toBe(false);
+
+        const v4Exact = new GeneralSubtree({
+            iPAddress: new Uint8Array([192, 0, 2, 1]),
+        });
+        expect(gnWithinGeneralSubtree({ iPAddress: new Uint8Array([192, 0, 2, 1]) }, v4Exact)).toBe(true);
+        expect(gnWithinGeneralSubtree({ iPAddress: new Uint8Array([192, 0, 2, 2]) }, v4Exact)).toBe(false);
+
+        const v6Prefix = new GeneralSubtree({
+            iPAddress: new Uint8Array([
+                0x20, 0x01, 0x0d, 0xb8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                0xff, 0xff, 0xff, 0xff, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            ]),
+        });
+        expect(gnWithinGeneralSubtree({
+            iPAddress: new Uint8Array([
+                0x20, 0x01, 0x0d, 0xb8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+            ]),
+        }, v6Prefix)).toBe(true);
+        expect(gnWithinGeneralSubtree({
+            iPAddress: new Uint8Array([
+                0x20, 0x01, 0x0d, 0xb9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+            ]),
+        }, v6Prefix)).toBe(false);
+    });
+
+    it("matches unsupported name forms by exact equality so exclusions are not fail-open", () => {
+        const uri = "https://example.com/path";
+        const subtree = new GeneralSubtree({ uniformResourceIdentifier: uri });
+        expect(gnWithinGeneralSubtree({ uniformResourceIdentifier: uri }, subtree)).toBe(true);
+        expect(gnWithinGeneralSubtree({
+            uniformResourceIdentifier: "https://example.net/path",
+        }, subtree)).toBe(false);
+        expect(gnWithinGeneralSubtree({ dNSName: "example.com" }, subtree)).toBe(false);
+    });
 });
