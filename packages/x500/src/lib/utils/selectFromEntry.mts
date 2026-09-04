@@ -26,7 +26,9 @@ import {
 } from "../modules/InformationFramework/id-oa-allAttributeTypes.va.mjs";
 import groupByOID from "./groupByOID.mjs";
 import { strict as assert } from "node:assert";
-import evaluateContextAssertion from "./evaluateContextAssertion.mjs";
+import evaluateContextAssertion, {
+    evaluateContextAssertionsAmongValues,
+} from "./evaluateContextAssertion.mjs";
 import {
     family_information,
 } from "../modules/DirectoryAbstractService/family-information.oa.mjs";
@@ -249,12 +251,18 @@ function selectFromEntry (
                 }
                 return typeAndContextAssertions.every((taca): boolean => {
                     if ("all" in taca.contextAssertions) {
-                        return taca.contextAssertions.all.every((ca): boolean => evaluateContextAssertion(
-                            ca,
-                            contexts,
+                        const siblings = selectedAttributes.filter((other) => (
+                            other[0].isEqualTo(type_)
+                            && other[1]
+                        ));
+                        const flags = evaluateContextAssertionsAmongValues(
+                            taca.contextAssertions.all,
+                            siblings.map((other) => other[2]),
                             getContextMatcher,
                             determineAbsentMatch,
-                        ));
+                        );
+                        const index = siblings.indexOf(atvac);
+                        return (index >= 0) && flags[index];
                     } else if ("preference" in taca.contextAssertions) { // This first pass only establishes the preference, but does not filter by it.
                         const existingPreference = preferences.get(taca.contextAssertions.preference) ?? -1;
                         const preferred: number = taca.contextAssertions.preference
@@ -306,7 +314,12 @@ function selectFromEntry (
                     }
                     const prefIndex = preferences.get(taca.contextAssertions.preference);
                     if (prefIndex === undefined) {
-                        return false; // There was never a match.
+                        // No value matched any preference assertion via (a)/(b).
+                        // Keep this value only if it is a fallback for one of them.
+                        return taca.contextAssertions.preference.some((pref) => contexts.some((c) => (
+                            c.contextType.isEqualTo(pref.contextType)
+                            && c.fallback
+                        )));
                     }
                     assert(prefIndex > -1);
                     const pref = taca.contextAssertions.preference[prefIndex];

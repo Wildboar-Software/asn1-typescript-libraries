@@ -8,9 +8,13 @@ import type ContextMatcher from "../types/ContextMatcher.mjs";
 /**
  * @summary Evaluate a Context Assertion
  * @description
- * 
+ *
  * Evaluate an X.500 directory context assertion according to the procedures
- * specified in ITU-T Recommendation X.501 (2019), Section 8.9.2.4.
+ * specified in ITU-T Recommendation X.501 (2019), Section 8.9.2.4, bullets
+ * (a) and (b). Fallback (bullet (c)) is **not** applied here: that rule is
+ * defined in terms of the other values of the same attribute, so it must be
+ * evaluated at attribute level via
+ * {@link evaluateContextAssertionAmongValues}.
  *
  * @param {ContextAssertion} ca The context assertion to be evaluated
  * @param {Context[]} contexts The contexts to be evaluated
@@ -51,18 +55,77 @@ function evaluateContextAssertion (
     }
     // a) the attribute value has a context of the same contextType of the ContextAssertion and any of the
     // stored contextValues of that context matches with any of the asserted contextValues according to
-    // the definition of how a match is determined for that contextType; or
-    const matches = ca.contextValues
+    // the definition of how a match is determined for that contextType.
+    return ca.contextValues
         .some((assertedValue) => relevantContexts
             .some((rc) => rc.contextValues
                 .some((cv) => matcher(assertedValue, cv))));
-    return (
-        matches
-        // c) none of the other attribute values for the attribute satisfies the ContextAssertion according to 1) or 2)
-        // in 8.9.2.2 above, but the attribute value does contain a context of the asserted contextType with the
-        // fallback set to TRUE.
-        || relevantContexts.some((context) => (context.fallback && isAbsentMatch))
-    );
+}
+
+/**
+ * @summary Evaluate a context assertion across all values of an attribute
+ * @description
+ *
+ * Applies X.501 (2019) §8.9.2.4 (a) and (b) to each value, then (c) fallback
+ * only if **no** value of the attribute satisfied the assertion. A fallback
+ * value then matches if it has a context of the asserted type with
+ * `fallback` TRUE.
+ *
+ * @param {ContextAssertion} ca The context assertion
+ * @param {Context[][]} valuesContexts Contexts of each value of the attribute
+ * @param {Function} getContextMatcher A function that returns a matcher for a context type
+ * @param {Function} determineAbsentMatch A function that returns `&absentMatch`
+ * @returns {boolean[]} Whether each value satisfies the assertion
+ * @function
+ */
+export
+function evaluateContextAssertionAmongValues (
+    ca: ContextAssertion,
+    valuesContexts: readonly (readonly Context[])[],
+    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
+    determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
+): boolean[] {
+    const direct = valuesContexts.map((contexts) => evaluateContextAssertion(
+        ca,
+        contexts as Context[],
+        getContextMatcher,
+        determineAbsentMatch,
+    ));
+    if (direct.some(Boolean)) {
+        return direct;
+    }
+    return valuesContexts.map((contexts) => contexts.some((context) => (
+        context.contextType.isEqualTo(ca.contextType)
+        && context.fallback
+    )));
+}
+
+/**
+ * @summary Evaluate several context assertions across all values of an attribute
+ * @description
+ *
+ * A value matches only if it satisfies every assertion, with fallback applied
+ * independently per assertion after scanning sibling values.
+ *
+ * @function
+ */
+export
+function evaluateContextAssertionsAmongValues (
+    assertions: readonly ContextAssertion[],
+    valuesContexts: readonly (readonly Context[])[],
+    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
+    determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
+): boolean[] {
+    if (assertions.length === 0) {
+        return valuesContexts.map(() => true);
+    }
+    const perAssertion = assertions.map((ca) => evaluateContextAssertionAmongValues(
+        ca,
+        valuesContexts,
+        getContextMatcher,
+        determineAbsentMatch,
+    ));
+    return valuesContexts.map((_, i) => perAssertion.every((row) => row[i]));
 }
 
 export default evaluateContextAssertion;
