@@ -79,6 +79,9 @@ export type Filter =
 
 let _cached_decoder_for_Filter: $.ASN1Decoder<Filter> | null = null;
 
+const MAX_FILTER_DECODE_DEPTH: number = 20;
+let _filterDecodeDepth: number = 0;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Filter
  * @function
@@ -86,6 +89,11 @@ let _cached_decoder_for_Filter: $.ASN1Decoder<Filter> | null = null;
  * @returns {Filter} The decoded data structure.
  */
 export function _decode_Filter(el: _Element): Filter {
+  _filterDecodeDepth++;
+  try {
+    if (_filterDecodeDepth > MAX_FILTER_DECODE_DEPTH) {
+      throw new _ConstructionError('Filter nesting too deep.');
+    }
   if (!_cached_decoder_for_Filter) {
     _cached_decoder_for_Filter = $._decode_extensible_choice<Filter>({
       'CONTEXT 0': [
@@ -144,6 +152,9 @@ export function _decode_Filter(el: _Element): Filter {
     });
   }
   return _cached_decoder_for_Filter(el);
+  } finally {
+    _filterDecodeDepth--;
+  }
 }
 
 let _cached_encoder_for_Filter: $.ASN1Encoder<Filter> | null = null;
