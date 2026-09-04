@@ -66,4 +66,23 @@ describe("octetStringSubstringsMatch", () => {
             value,
         )).toBe(false);
     });
+
+    it("matches multiple any_ substrings against the same value", () => {
+        const value = octetString([1, 2, 3, 4, 5]);
+        expect(octetStringSubstringsMatch(
+            assertion([
+                { any_: new Uint8Array([1, 2]) },
+                { any_: new Uint8Array([3, 4]) },
+                { any_: new Uint8Array([5]) },
+            ]),
+            value,
+        )).toBe(true);
+        expect(octetStringSubstringsMatch(
+            assertion([
+                { any_: new Uint8Array([1, 2]) },
+                { any_: new Uint8Array([9]) },
+            ]),
+            value,
+        )).toBe(false);
+    });
 });
