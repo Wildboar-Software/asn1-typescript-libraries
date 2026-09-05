@@ -38,7 +38,7 @@ import type SubstringsMatcher from "../types/SubstringsMatcher.mjs";
 import type ApproxMatcher from "../types/ApproxMatcher.mjs";
 import type ContextMatcher from "../types/ContextMatcher.mjs";
 import SubstringSelection from "../types/SubstringSelection.mjs";
-import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
+import evaluateContextAssertion from "./evaluateContextAssertion.mjs";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va.mjs";
 import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/id-mr-approximateStringMatch.va.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
@@ -260,6 +260,76 @@ function getAttributesFromEntry (entry: EntryInformation, dnAttributes: boolean 
     ];
 }
 
+const NO_CONTEXTS: readonly Context[] = [];
+
+/**
+ * Whether any value of `attr` satisfies `ca` via X.501 §8.9.2.4 (a) or (b).
+ * Stops at the first such value.
+ */
+function anyValueMatchesContextAssertion (
+    attr: Attribute,
+    ca: ContextAssertion,
+    options: EvaluateFilterSettings,
+): boolean {
+    if (attr.values.length > 0
+        && evaluateContextAssertion(
+            ca,
+            NO_CONTEXTS,
+            options.getContextMatcher,
+            options.determineAbsentMatch,
+        )) {
+        return true;
+    }
+    const valuesWithContext = attr.valuesWithContext;
+    if (!valuesWithContext) {
+        return false;
+    }
+    return valuesWithContext.some((vwc) => evaluateContextAssertion(
+        ca,
+        vwc.contextList,
+        options.getContextMatcher,
+        options.determineAbsentMatch,
+    ));
+}
+
+/**
+ * Whether this value's contexts satisfy every selected assertion.
+ *
+ * Tries (a)/(b) first. Fallback (c) is considered only for an assertion that
+ * this value failed, and only after confirming that no value of the attribute
+ * already matched that assertion via (a) or (b).
+ */
+function selectedContextsMatchValue (
+    selectedContexts: ContextAssertion[] | undefined,
+    thisContexts: readonly Context[],
+    attr: Attribute,
+    options: EvaluateFilterSettings,
+): boolean {
+    if (!selectedContexts) {
+        return true;
+    }
+    for (const ca of selectedContexts) {
+        if (evaluateContextAssertion(
+            ca,
+            thisContexts,
+            options.getContextMatcher,
+            options.determineAbsentMatch,
+        )) {
+            continue;
+        }
+        if (anyValueMatchesContextAssertion(attr, ca, options)) {
+            return false;
+        }
+        if (!thisContexts.some((c) => (
+            c.contextType.isEqualTo(ca.contextType)
+            && c.fallback
+        ))) {
+            return false;
+        }
+    }
+    return true;
+}
+
 export
 function evaluateEquality (
     ava: AttributeValueAssertion,
@@ -328,6 +398,9 @@ function evaluateEquality (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
+            if (!selectedContextsMatchValue(selectedContexts, NO_CONTEXTS, attr, options)) {
+                continue;
+            }
             matchedValues.push({
                 type: attr.type_,
                 value,
@@ -343,12 +416,7 @@ function evaluateEquality (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
-                sc,
-                vwc.contextList,
-                options.getContextMatcher,
-                options.determineAbsentMatch,
-            ))) {
+            if (!selectedContextsMatchValue(selectedContexts, vwc.contextList, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -471,6 +539,9 @@ function evaluateApprox (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
+            if (!selectedContextsMatchValue(selectedContexts, NO_CONTEXTS, attr, options)) {
+                continue;
+            }
             matchedValues.push({
                 type: attr.type_,
                 value,
@@ -486,12 +557,7 @@ function evaluateApprox (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
-                sc,
-                vwc.contextList,
-                options.getContextMatcher,
-                options.determineAbsentMatch,
-            ))) {
+            if (!selectedContextsMatchValue(selectedContexts, vwc.contextList, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -579,6 +645,9 @@ function evaluateOrdering (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
+            if (!selectedContextsMatchValue(selectedContexts, NO_CONTEXTS, attr, options)) {
+                continue;
+            }
             matchedValues.push({
                 type: attr.type_,
                 value,
@@ -594,12 +663,7 @@ function evaluateOrdering (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
-                sc,
-                vwc.contextList,
-                options.getContextMatcher,
-                options.determineAbsentMatch,
-            ))) {
+            if (!selectedContextsMatchValue(selectedContexts, vwc.contextList, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -957,20 +1021,14 @@ function evaluateAttributeTypeAssertion (
         return true;
     }
     for (const attr of relevantAttributes) {
-    next_value:
+        if (attr.values.length > 0
+            && selectedContextsMatchValue(ata.assertedContexts, NO_CONTEXTS, attr, options)) {
+            return true;
+        }
         for (const vwc of attr.valuesWithContext ?? []) {
-            for (const ac of ata.assertedContexts ?? []) {
-                const matched = evaluateContextAssertion(
-                    ac,
-                    vwc.contextList,
-                    options.getContextMatcher,
-                    options.determineAbsentMatch,
-                );
-                if (!matched) {
-                    continue next_value;
-                }
+            if (selectedContextsMatchValue(ata.assertedContexts, vwc.contextList, attr, options)) {
+                return true;
             }
-            return true; // Every context assertion matched this value `vwc`.
         }
     }
     return false; // No values matched.
