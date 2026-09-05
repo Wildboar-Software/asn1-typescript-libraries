@@ -26,9 +26,7 @@ import {
 } from "../modules/InformationFramework/id-oa-allAttributeTypes.va.mjs";
 import groupByOID from "./groupByOID.mjs";
 import { strict as assert } from "node:assert";
-import evaluateContextAssertion, {
-    evaluateContextAssertionsAmongValues,
-} from "./evaluateContextAssertion.mjs";
+import evaluateContextAssertion from "./evaluateContextAssertion.mjs";
 import {
     family_information,
 } from "../modules/DirectoryAbstractService/family-information.oa.mjs";
@@ -251,18 +249,36 @@ function selectFromEntry (
                 }
                 return typeAndContextAssertions.every((taca): boolean => {
                     if ("all" in taca.contextAssertions) {
-                        const siblings = selectedAttributes.filter((other) => (
-                            other[0].isEqualTo(type_)
-                            && other[1]
-                        ));
-                        const flags = evaluateContextAssertionsAmongValues(
-                            taca.contextAssertions.all,
-                            siblings.map((other) => other[2]),
-                            getContextMatcher,
-                            determineAbsentMatch,
-                        );
-                        const index = siblings.indexOf(atvac);
-                        return (index >= 0) && flags[index];
+                        for (const ca of taca.contextAssertions.all) {
+                            if (evaluateContextAssertion(
+                                ca,
+                                contexts,
+                                getContextMatcher,
+                                determineAbsentMatch,
+                            )) {
+                                continue;
+                            }
+                            const siblingMatched = selectedAttributes.some((other) => (
+                                other[0].isEqualTo(type_)
+                                && other[1]
+                                && evaluateContextAssertion(
+                                    ca,
+                                    other[2],
+                                    getContextMatcher,
+                                    determineAbsentMatch,
+                                )
+                            ));
+                            if (siblingMatched) {
+                                return false;
+                            }
+                            if (!contexts.some((c) => (
+                                c.contextType.isEqualTo(ca.contextType)
+                                && c.fallback
+                            ))) {
+                                return false;
+                            }
+                        }
+                        return true;
                     } else if ("preference" in taca.contextAssertions) { // This first pass only establishes the preference, but does not filter by it.
                         const existingPreference = preferences.get(taca.contextAssertions.preference) ?? -1;
                         const preferred: number = taca.contextAssertions.preference

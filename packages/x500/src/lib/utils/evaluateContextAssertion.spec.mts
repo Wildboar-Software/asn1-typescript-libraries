@@ -1,7 +1,6 @@
 import { ObjectIdentifier, DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import {
     evaluateContextAssertion,
-    evaluateContextAssertionAmongValues,
 } from "./evaluateContextAssertion.mjs";
 import { Context } from "../modules/InformationFramework/Context.ta.mjs";
 import { ContextAssertion } from "../modules/InformationFramework/ContextAssertion.ta.mjs";
@@ -36,6 +35,12 @@ const HELLO = new DERElement(
     ASN1Construction.primitive,
     ASN1UniversalType.utf8String,
     "hello",
+);
+const WORLD = new DERElement(
+    ASN1TagClass.universal,
+    ASN1Construction.primitive,
+    ASN1UniversalType.utf8String,
+    "world",
 );
 
 const stringMatch = (a: DERElement, b: DERElement) => a.utf8String === b.utf8String;
@@ -84,29 +89,6 @@ describe("evaluateContextAssertion", () => {
             () => stringMatch,
             () => false,
         )).toBe(false);
-    });
-});
-
-describe("evaluateContextAssertionAmongValues", () => {
-    it("applies fallback only when no sibling value satisfies the assertion", () => {
-        const matching = [ new Context(CONTEXT_TYPE, [ EN ], false) ];
-        const fallback = [ new Context(CONTEXT_TYPE, [ FR ], true) ];
-        const whenSiblingMatches = evaluateContextAssertionAmongValues(
-            assertion(EN),
-            [ matching, fallback ],
-            () => stringMatch,
-            () => true,
-        );
-        expect(whenSiblingMatches).toEqual([ true, false ]);
-
-        const other = [ new Context(CONTEXT_TYPE, [ FR ], false) ];
-        const whenNoneMatch = evaluateContextAssertionAmongValues(
-            assertion(EN),
-            [ other, fallback ],
-            () => stringMatch,
-            () => true,
-        );
-        expect(whenNoneMatch).toEqual([ false, true ]);
     });
 });
 
@@ -189,5 +171,33 @@ describe("evaluateFilter context fallback", () => {
         expect(result.matched).toBe(true);
         expect(result.matchedValues).toHaveLength(1);
         expect(result.matchedValues![0].contexts![0].fallback).toBe(true);
+    });
+
+    it("does not apply fallback when a sibling matches the context even if that sibling fails equality", () => {
+        const entry = new EntryInformation(
+            name,
+            true,
+            [
+                {
+                    attribute: new Attribute(
+                        ATTR_TYPE,
+                        [],
+                        [
+                            new Attribute_valuesWithContext_Item(
+                                WORLD,
+                                [ new Context(CONTEXT_TYPE, [ EN ], false) ],
+                            ),
+                            new Attribute_valuesWithContext_Item(
+                                HELLO,
+                                [ new Context(CONTEXT_TYPE, [ FR ], true) ],
+                            ),
+                        ],
+                    ),
+                },
+            ],
+        );
+        const result = evaluateFilter(filter, [ entry ], options);
+        expect(result.matched).toBe(false);
+        expect(result.matchedValues ?? []).toHaveLength(0);
     });
 });

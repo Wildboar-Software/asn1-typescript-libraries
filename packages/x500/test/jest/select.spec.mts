@@ -420,6 +420,141 @@ describe("selectFromEntry()", () => {
         expect(entryAfter.information!.length).toBe(0);
     });
 
+    it("does not select a fallback value when another value matches the contextSelection", () => {
+        const entryBefore: EntryInformation = createTestEntry([
+            {
+                attribute: new Attribute(
+                    ID_COMMON_NAME,
+                    [],
+                    [
+                        new Attribute_valuesWithContext_Item(
+                            new DERElement(
+                                ASN1TagClass.universal,
+                                ASN1Construction.primitive,
+                                ASN1UniversalType.utf8String,
+                                "jwilbur",
+                            ),
+                            [
+                                ENGLISH_CONTEXT,
+                            ],
+                        ),
+                        new Attribute_valuesWithContext_Item(
+                            new DERElement(
+                                ASN1TagClass.universal,
+                                ASN1Construction.primitive,
+                                ASN1UniversalType.utf8String,
+                                "le jwilbur",
+                            ),
+                            [
+                                new Context(ID_LANGUAGE, [FRENCH], true),
+                            ],
+                        ),
+                    ],
+                ),
+            },
+        ]);
+        const selection: EntryInformationSelection = new EntryInformationSelection(
+            undefined,
+            EntryInformationSelection_infoTypes_attributeTypesAndValues,
+            undefined,
+            {
+                selectedContexts: [
+                    new TypeAndContextAssertion(
+                        ID_COMMON_NAME,
+                        {
+                            all: [
+                                new ContextAssertion(
+                                    ID_LANGUAGE,
+                                    [ENGLISH],
+                                ),
+                            ],
+                        },
+                    ),
+                ],
+            },
+            undefined,
+            undefined,
+        );
+        const entryAfter = selectFromEntry(
+            selection,
+            entryBefore,
+            NEVER_OPERATIONAL,
+            NO_SUPERTYPES,
+            STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
+        );
+        expect(entryAfter.information!.length).toBe(1);
+        if (!("attribute" in entryAfter.information![0])) {
+            expect(false).toBeTruthy();
+            return;
+        }
+        const attr = entryAfter.information![0].attribute;
+        expect(attr.valuesWithContext).toHaveLength(1);
+        expect(attr.valuesWithContext![0].contextList[0].fallback).toBeFalsy();
+    });
+
+    it("selects a fallback value when no other value matches the contextSelection", () => {
+        const entryBefore: EntryInformation = createTestEntry([
+            {
+                attribute: new Attribute(
+                    ID_COMMON_NAME,
+                    [],
+                    [
+                        new Attribute_valuesWithContext_Item(
+                            new DERElement(
+                                ASN1TagClass.universal,
+                                ASN1Construction.primitive,
+                                ASN1UniversalType.utf8String,
+                                "le jwilbur",
+                            ),
+                            [
+                                new Context(ID_LANGUAGE, [FRENCH], true),
+                            ],
+                        ),
+                    ],
+                ),
+            },
+        ]);
+        const selection: EntryInformationSelection = new EntryInformationSelection(
+            undefined,
+            EntryInformationSelection_infoTypes_attributeTypesAndValues,
+            undefined,
+            {
+                selectedContexts: [
+                    new TypeAndContextAssertion(
+                        ID_COMMON_NAME,
+                        {
+                            all: [
+                                new ContextAssertion(
+                                    ID_LANGUAGE,
+                                    [ENGLISH],
+                                ),
+                            ],
+                        },
+                    ),
+                ],
+            },
+            undefined,
+            undefined,
+        );
+        const entryAfter = selectFromEntry(
+            selection,
+            entryBefore,
+            NEVER_OPERATIONAL,
+            NO_SUPERTYPES,
+            STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
+        );
+        expect(entryAfter.information!.length).toBe(1);
+        if (!("attribute" in entryAfter.information![0])) {
+            expect(false).toBeTruthy();
+            return;
+        }
+        const attr = entryAfter.information![0].attribute;
+        expect(attr.valuesWithContext).toHaveLength(1);
+        expect(attr.valuesWithContext![0].contextList[0].fallback).toBe(true);
+    });
+
     it("select attributes according to the preferences in contextSelection when returning contexts", () => {
         const entryBefore: EntryInformation = createTestEntry([
             {
