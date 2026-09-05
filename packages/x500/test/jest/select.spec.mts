@@ -472,7 +472,7 @@ describe("selectFromEntry()", () => {
                     ),
                 ],
             },
-            undefined,
+            true, // Return contexts so we can see which value was kept
             undefined,
         );
         const entryAfter = selectFromEntry(
@@ -534,7 +534,7 @@ describe("selectFromEntry()", () => {
                     ),
                 ],
             },
-            undefined,
+            true, // Return contexts so we can see which value was kept
             undefined,
         );
         const entryAfter = selectFromEntry(
