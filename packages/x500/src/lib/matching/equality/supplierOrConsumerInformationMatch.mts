@@ -26,7 +26,7 @@ const supplierOrConsumerInformationMatch: EqualityMatcher = (
     if (a.agreement_identifier !== v.agreementID.identifier) {
         return false;
     }
-    return compareName(a.ae_title, v.ae_title, getEqualityMatcher ?? (() => undefined));
+    return compareName(a.ae_title, v.ae_title, getEqualityMatcher);
 }
 
 export default supplierOrConsumerInformationMatch;

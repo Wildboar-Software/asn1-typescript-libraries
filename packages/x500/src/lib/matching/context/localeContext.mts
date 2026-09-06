@@ -4,7 +4,8 @@ import {
     LocaleContextSyntax,
     _decode_LocaleContextSyntax,
 } from "../../modules/SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import compareElements from "../../comparators/compareElements.mjs";
 
 export
 const evaluateLocaleContext: EqualityMatcher = (
@@ -18,7 +19,7 @@ const evaluateLocaleContext: EqualityMatcher = (
     } else if (("localeID2" in a) && ("localeID2" in v)) {
         return (directoryStringToString(a.localeID2) === directoryStringToString(v.localeID2));
     } else {
-        return false;
+        return compareElements(assertion, value);
     }
 }
 

@@ -982,7 +982,7 @@ describe("bacACDF()", () => {
         expect(authorized).toBe(false);
     });
 
-    it("ProtectedItems.attributeValue rejects access when the equality matcher is not understood", () => {
+    it("ProtectedItems.attributeValue matches by encoding when the equality matcher is not understood", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -1016,16 +1016,90 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const request: ProtectedItem = {
-            value: COMMON_NAME,
-        };
         const operations: number[] = [
             PERMISSION_CATEGORY_ADD,
         ];
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_UNRECOGNIZED;
+        {
+            const {
+                authorized,
+            } = bacACDF(tuples, requester, { value: COMMON_NAME }, operations, getSettings(getEqualityMatcher));
+            expect(authorized).toBe(true);
+        }
+        {
+            const {
+                authorized,
+            } = bacACDF(tuples, requester, { value: COMMON_NAME_2 }, operations, getSettings(getEqualityMatcher));
+            expect(authorized).toBe(false);
+        }
+    });
+
+    it("ProtectedItems.attributeValue denials still apply when the equality matcher is not understood", () => {
+        const grantAll = new ACIItem(
+            WHATEVER_LABEL,
+            1,
+            AUTH_LEVEL_NONE,
+            {
+                itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                    new ProtectedItems(
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        null, // allUserAttributeTypesAndValues
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                    ),
+                    [ALL_GRANT_ALL_USERS],
+                    [],
+                ),
+            },
+        );
+        const denyValue = new ACIItem(
+            WHATEVER_LABEL,
+            255,
+            AUTH_LEVEL_NONE,
+            {
+                itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                    new ProtectedItems(
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        [COMMON_NAME],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                    ),
+                    [ALL_DENY_ALL_USERS],
+                    [],
+                ),
+            },
+        );
+        const tuples: ACDFTupleExtended[] = [grantAll, denyValue]
+            .flatMap((aci) => getACDFTuplesFromACIItem(aci))
+            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
+            .filter((tuple): boolean => (tuple[5] > 0));
         const {
             authorized,
-        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
+        } = bacACDF(
+            tuples,
+            requester,
+            { value: COMMON_NAME },
+            [ PERMISSION_CATEGORY_ADD ],
+            getSettings(ALWAYS_UNRECOGNIZED),
+        );
         expect(authorized).toBe(false);
     });
 

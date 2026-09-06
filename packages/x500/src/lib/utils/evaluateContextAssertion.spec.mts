@@ -76,6 +76,22 @@ describe("evaluateContextAssertion", () => {
         )).toBe(false);
     });
 
+    it("matches unrecognized context types by comparing encodings", () => {
+        const contexts = [ new Context(CONTEXT_TYPE, [ EN ], false) ];
+        expect(evaluateContextAssertion(
+            assertion(EN),
+            contexts,
+            () => undefined,
+            () => true,
+        )).toBe(true);
+        expect(evaluateContextAssertion(
+            assertion(FR),
+            contexts,
+            () => undefined,
+            () => true,
+        )).toBe(false);
+    });
+
     it("matches via absentMatch when the value has no context of that type", () => {
         expect(evaluateContextAssertion(
             assertion(EN),

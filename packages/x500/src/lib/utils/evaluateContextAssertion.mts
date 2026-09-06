@@ -4,6 +4,7 @@ import type {
     ContextAssertion,
 } from "../modules/InformationFramework/ContextAssertion.ta.mjs";
 import type ContextMatcher from "../types/ContextMatcher.mjs";
+import compareElements from "../comparators/compareElements.mjs";
 
 /**
  * @summary Evaluate a Context Assertion
@@ -19,7 +20,8 @@ import type ContextMatcher from "../types/ContextMatcher.mjs";
  * @param {ContextAssertion} ca The context assertion to be evaluated
  * @param {Context[]} contexts The contexts to be evaluated
  * @param {Function} getContextMatcher A function that returns a matcher function when given
- *  the OID of the context type.
+ *  the OID of the context type. If the context type is unrecognized, asserted
+ *  and stored values are compared by encoding via `compareElements`.
  * @param {Function} determineAbsentMatch A function that returns whether the context
  *  assertion is `ABSENT-MATCH`
  * @returns {Boolean} `true` if the context assertion matches
@@ -32,12 +34,7 @@ function evaluateContextAssertion (
     getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
     determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
 ): boolean {
-    const matcher = getContextMatcher(ca.contextType);
-    if (!matcher) {
-        // The specification does not say what to do if a context type is unrecognized.
-        // For security's sake, we reject.
-        return false;
-    }
+    const matcher = getContextMatcher(ca.contextType) ?? compareElements;
     const isAbsentMatch: boolean = determineAbsentMatch(ca.contextType);
     const relevantContexts = contexts
         .filter((c) => c.contextType.isEqualTo(ca.contextType));

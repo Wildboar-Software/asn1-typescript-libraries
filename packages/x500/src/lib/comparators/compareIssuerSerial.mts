@@ -19,7 +19,7 @@ export
 function compareIssuerSerial (
     a: IssuerSerial,
     b: IssuerSerial,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (Boolean(a.issuerUID) !== Boolean(b.issuerUID)) {
         return false;

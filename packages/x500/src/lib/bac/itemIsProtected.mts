@@ -24,6 +24,7 @@ import {
     Attribute,
 } from "../modules/InformationFramework/Attribute.ta.mjs";
 import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
+import compareElements from "../comparators/compareElements.mjs";
 
 /**
  * @summary Whether the requested item is protected by the `ProtectedItems`.
@@ -84,10 +85,7 @@ function itemIsProtected (
                     if (!request.value.type_.isEqualTo(av.type_)) {
                         return false;
                     }
-                    const matcher = settings.getEqualityMatcher(av.type_);
-                    if (!matcher) {
-                        return false;
-                    }
+                    const matcher = settings.getEqualityMatcher(av.type_) ?? compareElements;
                     return matcher(av.value, request.value.value);
                 })
             || (

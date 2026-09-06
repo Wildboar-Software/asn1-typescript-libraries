@@ -1,7 +1,7 @@
 import { evaluateSRVNameConstraints, gnWithinGeneralSubtree } from "./gnWithinGeneralSubtree.mjs";
 import type { GeneralName } from "../modules/CertificateExtensions/GeneralName.ta.mjs";
 import { GeneralSubtree } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
-import { ObjectIdentifier } from "@wildboar/asn1";
+import { ObjectIdentifier, External, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import { commonName } from "../modules/SelectedAttributeTypes/commonName.oa.mjs";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { DER } from "@wildboar/asn1/functional";
@@ -361,5 +361,33 @@ describe("gnWithinGeneralSubtree", () => {
             uniformResourceIdentifier: "https://example.net/path",
         }, subtree)).toBe(false);
         expect(gnWithinGeneralSubtree({ dNSName: "example.com" }, subtree)).toBe(false);
+    });
+
+    it("matches unrecognized otherName types by encoding so exclusions are not fail-open", () => {
+        const type_ = ObjectIdentifier.fromParts([ 1, 2, 3, 4, 5 ]);
+        const encoding = new BERElement(
+            ASN1TagClass.universal,
+            ASN1Construction.primitive,
+            ASN1UniversalType.utf8String,
+            "widget",
+        );
+        const otherName: GeneralName = {
+            otherName: new External(type_, undefined, undefined, encoding),
+        };
+        const subtree = new GeneralSubtree(otherName);
+        expect(gnWithinGeneralSubtree(otherName, subtree)).toBe(true);
+        expect(gnWithinGeneralSubtree({
+            otherName: new External(
+                type_,
+                undefined,
+                undefined,
+                new BERElement(
+                    ASN1TagClass.universal,
+                    ASN1Construction.primitive,
+                    ASN1UniversalType.utf8String,
+                    "gadget",
+                ),
+            ),
+        }, subtree)).toBe(false);
     });
 });
