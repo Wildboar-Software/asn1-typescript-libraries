@@ -263,15 +263,16 @@ function getAttributesFromEntry (entry: EntryInformation, dnAttributes: boolean 
 const NO_CONTEXTS: readonly Context[] = [];
 
 /**
- * Whether any value of `attr` satisfies `ca` via X.501 §8.9.2.4 (a) or (b).
- * Stops at the first such value.
+ * Whether **any** value of `attribute` already satisfies `ca` via
+ * X.501 §8.9.2.4 (a) or (b). Used only to decide whether fallback (c) is
+ * still available. Stops at the first such value.
  */
-function anyValueMatchesContextAssertion (
-    attr: Attribute,
+function attributeHasDirectContextMatch (
+    attribute: Attribute,
     ca: ContextAssertion,
     options: EvaluateFilterSettings,
 ): boolean {
-    if (attr.values.length > 0
+    if (attribute.values.length > 0
         && evaluateContextAssertion(
             ca,
             NO_CONTEXTS,
@@ -280,50 +281,67 @@ function anyValueMatchesContextAssertion (
         )) {
         return true;
     }
-    const valuesWithContext = attr.valuesWithContext;
+    const valuesWithContext = attribute.valuesWithContext;
     if (!valuesWithContext) {
         return false;
     }
-    return valuesWithContext.some((vwc) => evaluateContextAssertion(
-        ca,
-        vwc.contextList,
-        options.getContextMatcher,
-        options.determineAbsentMatch,
-    ));
+    for (let i = 0; i < valuesWithContext.length; i++) {
+        if (evaluateContextAssertion(
+            ca,
+            valuesWithContext[i].contextList,
+            options.getContextMatcher,
+            options.determineAbsentMatch,
+        )) {
+            return true;
+        }
+    }
+    return false;
 }
 
 /**
- * Whether this value's contexts satisfy every selected assertion.
+ * Whether **one** attribute value, whose contexts are `valueContexts`,
+ * satisfies every selected context assertion.
  *
- * Tries (a)/(b) first. Fallback (c) is considered only for an assertion that
- * this value failed, and only after confirming that no value of the attribute
- * already matched that assertion via (a) or (b).
+ * `attribute` is the containing Attribute. It is not the subject of the
+ * match; fallback (c) is defined in terms of the *other* values of that
+ * same attribute, so the sibling scan needs the whole Attribute.
  */
-function selectedContextsMatchValue (
+function valueSatisfiesSelectedContexts (
     selectedContexts: ContextAssertion[] | undefined,
-    thisContexts: readonly Context[],
-    attr: Attribute,
+    valueContexts: readonly Context[],
+    attribute: Attribute,
     options: EvaluateFilterSettings,
 ): boolean {
     if (!selectedContexts) {
         return true;
     }
-    for (const ca of selectedContexts) {
+    for (let i = 0; i < selectedContexts.length; i++) {
+        const ca = selectedContexts[i];
+        // (a) stored context of this type matches, or (b) no context of this type.
         if (evaluateContextAssertion(
             ca,
-            thisContexts,
+            valueContexts,
             options.getContextMatcher,
             options.determineAbsentMatch,
         )) {
             continue;
         }
-        if (anyValueMatchesContextAssertion(attr, ca, options)) {
+        // This value failed (a) and (b). X.501 §8.9.2.4 (c) lets it match via
+        // fallback only if **none** of the attribute's values already satisfied
+        // the assertion via (a) or (b). A sibling that *did* match means
+        // fallback must not apply, so this value is not a match.
+        if (attributeHasDirectContextMatch(attribute, ca, options)) {
             return false;
         }
-        if (!thisContexts.some((c) => (
-            c.contextType.isEqualTo(ca.contextType)
-            && c.fallback
-        ))) {
+        let hasFallback = false;
+        for (let j = 0; j < valueContexts.length; j++) {
+            const c = valueContexts[j];
+            if (c.contextType.isEqualTo(ca.contextType) && c.fallback) {
+                hasFallback = true;
+                break;
+            }
+        }
+        if (!hasFallback) {
             return false;
         }
     }
@@ -398,7 +416,7 @@ function evaluateEquality (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
-            if (!selectedContextsMatchValue(selectedContexts, NO_CONTEXTS, attr, options)) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -416,7 +434,7 @@ function evaluateEquality (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (!selectedContextsMatchValue(selectedContexts, vwc.contextList, attr, options)) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -539,7 +557,7 @@ function evaluateApprox (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
-            if (!selectedContextsMatchValue(selectedContexts, NO_CONTEXTS, attr, options)) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -557,7 +575,7 @@ function evaluateApprox (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (!selectedContextsMatchValue(selectedContexts, vwc.contextList, attr, options)) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -645,7 +663,7 @@ function evaluateOrdering (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
-            if (!selectedContextsMatchValue(selectedContexts, NO_CONTEXTS, attr, options)) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -663,7 +681,7 @@ function evaluateOrdering (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (!selectedContextsMatchValue(selectedContexts, vwc.contextList, attr, options)) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options)) {
                 continue;
             }
             matchedValues.push({
@@ -1022,11 +1040,11 @@ function evaluateAttributeTypeAssertion (
     }
     for (const attr of relevantAttributes) {
         if (attr.values.length > 0
-            && selectedContextsMatchValue(ata.assertedContexts, NO_CONTEXTS, attr, options)) {
+            && valueSatisfiesSelectedContexts(ata.assertedContexts, NO_CONTEXTS, attr, options)) {
             return true;
         }
         for (const vwc of attr.valuesWithContext ?? []) {
-            if (selectedContextsMatchValue(ata.assertedContexts, vwc.contextList, attr, options)) {
+            if (valueSatisfiesSelectedContexts(ata.assertedContexts, vwc.contextList, attr, options)) {
                 return true;
             }
         }
