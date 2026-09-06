@@ -130,7 +130,7 @@ function comparePreparedStrings (a: ASN1Element, b: ASN1Element): boolean {
  * are treated as strings: `toJSON()`, then X.520 stringprep and lowercasing.
  *
  * Non-UNIVERSAL tags of the same class and number are compared by contents
- * octets. Decode failures are treated as unequal.
+ * octets.
  *
  * @author Cursor Grok 4.6
  * @param a One value
@@ -140,62 +140,58 @@ function comparePreparedStrings (a: ASN1Element, b: ASN1Element): boolean {
  */
 export
 function compareElements (a: ASN1Element, b: ASN1Element): boolean {
-    try {
-        if (
-            (a.tagClass !== ASN1TagClass.universal)
-            || (b.tagClass !== ASN1TagClass.universal)
-        ) {
-            return (
-                (a.tagClass === b.tagClass)
-                && (a.tagNumber === b.tagNumber)
-                && compareUint8Arrays(a.value, b.value)
-            );
-        }
-        const ta: number = a.tagNumber;
-        const tb: number = b.tagNumber;
-        if (byteComparedTypes.has(ta) && (ta === tb)) {
-            return compareUint8Arrays(a.value, b.value);
-        }
-        if (
-            (ta === ASN1UniversalType.bitString)
-            && (tb === ASN1UniversalType.bitString)
-        ) {
-            return compareBits(a.bitString, b.bitString);
-        }
-        if (
-            (ta === ASN1UniversalType.octetString)
-            && (tb === ASN1UniversalType.octetString)
-        ) {
-            return compareUint8Arrays(a.octetString, b.octetString);
-        }
-        if (isTimeType(ta) && isTimeType(tb)) {
-            return timesEqualToTheSecond(readTime(a), readTime(b));
-        }
-        if (isIriType(ta) && (ta === tb)) {
-            return (
-                readIri(a).trim().toLowerCase()
-                === readIri(b).trim().toLowerCase()
-            );
-        }
-        if (byteComparedTypes.has(ta) || byteComparedTypes.has(tb)) {
-            return false;
-        }
-        if (
-            (ta === ASN1UniversalType.bitString)
-            || (tb === ASN1UniversalType.bitString)
-            || (ta === ASN1UniversalType.octetString)
-            || (tb === ASN1UniversalType.octetString)
-            || isTimeType(ta)
-            || isTimeType(tb)
-            || isIriType(ta)
-            || isIriType(tb)
-        ) {
-            return false;
-        }
-        return comparePreparedStrings(a, b);
-    } catch {
+    if (
+        (a.tagClass !== ASN1TagClass.universal)
+        || (b.tagClass !== ASN1TagClass.universal)
+    ) {
+        return (
+            (a.tagClass === b.tagClass)
+            && (a.tagNumber === b.tagNumber)
+            && compareUint8Arrays(a.value, b.value)
+        );
+    }
+    const ta: number = a.tagNumber;
+    const tb: number = b.tagNumber;
+    if (byteComparedTypes.has(ta) && (ta === tb)) {
+        return compareUint8Arrays(a.value, b.value);
+    }
+    if (
+        (ta === ASN1UniversalType.bitString)
+        && (tb === ASN1UniversalType.bitString)
+    ) {
+        return compareBits(a.bitString, b.bitString);
+    }
+    if (
+        (ta === ASN1UniversalType.octetString)
+        && (tb === ASN1UniversalType.octetString)
+    ) {
+        return compareUint8Arrays(a.octetString, b.octetString);
+    }
+    if (isTimeType(ta) && isTimeType(tb)) {
+        return timesEqualToTheSecond(readTime(a), readTime(b));
+    }
+    if (isIriType(ta) && (ta === tb)) {
+        return (
+            readIri(a).trim().toLowerCase()
+            === readIri(b).trim().toLowerCase()
+        );
+    }
+    if (byteComparedTypes.has(ta) || byteComparedTypes.has(tb)) {
         return false;
     }
+    if (
+        (ta === ASN1UniversalType.bitString)
+        || (tb === ASN1UniversalType.bitString)
+        || (ta === ASN1UniversalType.octetString)
+        || (tb === ASN1UniversalType.octetString)
+        || isTimeType(ta)
+        || isTimeType(tb)
+        || isIriType(ta)
+        || isIriType(tb)
+    ) {
+        return false;
+    }
+    return comparePreparedStrings(a, b);
 }
 
 export default compareElements;
