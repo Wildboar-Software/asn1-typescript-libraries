@@ -20,7 +20,13 @@ function constructedUtf8 (parts: string[]): BERElement {
     const el = new BERElement();
     el.tagClass = ASN1TagClass.universal;
     el.tagNumber = ASN1UniversalType.utf8String;
-    el.sequence = parts.map((part) => primitiveUtf8(part));
+    // X.690 constructed character strings concatenate OCTET STRING fragments.
+    el.sequence = parts.map((part) => new BERElement(
+        ASN1TagClass.universal,
+        ASN1Construction.primitive,
+        ASN1UniversalType.octetString,
+        Buffer.from(part),
+    ));
     return el;
 }
 
