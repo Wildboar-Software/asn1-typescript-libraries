@@ -38,7 +38,7 @@ import type SubstringsMatcher from "../types/SubstringsMatcher.mjs";
 import type ApproxMatcher from "../types/ApproxMatcher.mjs";
 import type ContextMatcher from "../types/ContextMatcher.mjs";
 import SubstringSelection from "../types/SubstringSelection.mjs";
-import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
+import evaluateContextAssertion from "./evaluateContextAssertion.mjs";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va.mjs";
 import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/id-mr-approximateStringMatch.va.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
@@ -260,6 +260,119 @@ function getAttributesFromEntry (entry: EntryInformation, dnAttributes: boolean 
     ];
 }
 
+const NO_CONTEXTS: readonly Context[] = [];
+
+/**
+ * Cache of whether any value of an Attribute already satisfied a
+ * ContextAssertion via X.501 §8.9.2.4 (a) or (b). Keyed by object identity
+ * of the Attribute and the ContextAssertion so each pair is scanned once.
+ */
+type DirectContextMatchCache = WeakMap<Attribute, Map<ContextAssertion, boolean>>;
+
+/**
+ * Whether **any** value of `attribute` already satisfies `ca` via
+ * X.501 §8.9.2.4 (a) or (b). Used only to decide whether fallback (c) is
+ * still available. Stops at the first such value. Results are cached on
+ * `(attribute, ca)` so a later value of the same attribute does not repeat
+ * the sibling scan.
+ */
+function attributeHasDirectContextMatch (
+    attribute: Attribute,
+    ca: ContextAssertion,
+    options: EvaluateFilterSettings,
+    cache: DirectContextMatchCache,
+): boolean {
+    let byAssertion = cache.get(attribute);
+    if (!byAssertion) {
+        byAssertion = new Map();
+        cache.set(attribute, byAssertion);
+    } else {
+        const cached = byAssertion.get(ca);
+        if (cached !== undefined) {
+            return cached;
+        }
+    }
+    let matched = false;
+    if (attribute.values.length > 0
+        && evaluateContextAssertion(
+            ca,
+            NO_CONTEXTS,
+            options.getContextMatcher,
+            options.determineAbsentMatch,
+        )) {
+        matched = true;
+    } else {
+        const valuesWithContext = attribute.valuesWithContext;
+        if (valuesWithContext) {
+            for (let i = 0; i < valuesWithContext.length; i++) {
+                if (evaluateContextAssertion(
+                    ca,
+                    valuesWithContext[i].contextList,
+                    options.getContextMatcher,
+                    options.determineAbsentMatch,
+                )) {
+                    matched = true;
+                    break;
+                }
+            }
+        }
+    }
+    byAssertion.set(ca, matched);
+    return matched;
+}
+
+/**
+ * Whether **one** attribute value, whose contexts are `valueContexts`,
+ * satisfies every selected context assertion.
+ *
+ * `attribute` is the containing Attribute. It is not the subject of the
+ * match; fallback (c) is defined in terms of the *other* values of that
+ * same attribute, so the sibling scan needs the whole Attribute.
+ * `directMatchCache` memoizes that sibling scan per `(attribute, assertion)`.
+ */
+function valueSatisfiesSelectedContexts (
+    selectedContexts: ContextAssertion[] | undefined,
+    valueContexts: readonly Context[],
+    attribute: Attribute,
+    options: EvaluateFilterSettings,
+    directMatchCache: DirectContextMatchCache,
+): boolean {
+    if (!selectedContexts) {
+        return true;
+    }
+    for (let i = 0; i < selectedContexts.length; i++) {
+        const ca = selectedContexts[i];
+        // (a) stored context of this type matches, or (b) no context of this type.
+        if (evaluateContextAssertion(
+            ca,
+            valueContexts,
+            options.getContextMatcher,
+            options.determineAbsentMatch,
+        )) {
+            continue;
+        }
+        // This value failed (a) and (b). If it has no fallback of this type,
+        // it cannot match via (c), so do not consult siblings.
+        let hasFallback = false;
+        for (let j = 0; j < valueContexts.length; j++) {
+            const c = valueContexts[j];
+            if (c.contextType.isEqualTo(ca.contextType) && c.fallback) {
+                hasFallback = true;
+                break;
+            }
+        }
+        if (!hasFallback) {
+            return false;
+        }
+        // X.501 §8.9.2.4 (c): fallback applies only if **none** of the
+        // attribute's values already satisfied the assertion via (a) or (b).
+        if (attributeHasDirectContextMatch(attribute, ca, options, directMatchCache)) {
+            return false;
+        }
+    }
+    return true;
+}
+
 export
 function evaluateEquality (
     ava: AttributeValueAssertion,
@@ -317,6 +430,7 @@ function evaluateEquality (
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
         : undefined;
+    const directMatchCache: DirectContextMatchCache = new WeakMap();
     for (const attr of relevantAttributes) {
         if (!options.permittedToMatch(attr.type_)) {
             continue;
@@ -326,6 +440,9 @@ function evaluateEquality (
                 continue;
             }
             if (!matcher!(ava.assertion, value)) {
+                continue;
+            }
+            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -343,12 +460,7 @@ function evaluateEquality (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
-                sc,
-                vwc.contextList,
-                options.getContextMatcher,
-                options.determineAbsentMatch,
-            ))) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -424,6 +536,7 @@ function evaluateApprox (
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
         : undefined;
+    const directMatchCache: DirectContextMatchCache = new WeakMap();
     if ((relevantAttributes.length === 0) && options?.requestAttributes?.size) {
         const req_attrs = options.requestAttributes;
         // NOTE: This does NOT check parent types of the asserted value.
@@ -471,6 +584,9 @@ function evaluateApprox (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
+            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
+                continue;
+            }
             matchedValues.push({
                 type: attr.type_,
                 value,
@@ -486,12 +602,7 @@ function evaluateApprox (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
-                sc,
-                vwc.contextList,
-                options.getContextMatcher,
-                options.determineAbsentMatch,
-            ))) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -529,6 +640,7 @@ function evaluateOrdering (
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
         : undefined;
+    const directMatchCache: DirectContextMatchCache = new WeakMap();
     const matcher = gte
         ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
         : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0);
@@ -579,6 +691,9 @@ function evaluateOrdering (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
+            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
+                continue;
+            }
             matchedValues.push({
                 type: attr.type_,
                 value,
@@ -594,12 +709,7 @@ function evaluateOrdering (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
-                sc,
-                vwc.contextList,
-                options.getContextMatcher,
-                options.determineAbsentMatch,
-            ))) {
+            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -956,21 +1066,16 @@ function evaluateAttributeTypeAssertion (
     if (!ata.assertedContexts || (ata.assertedContexts.length === 0)) {
         return true;
     }
+    const directMatchCache: DirectContextMatchCache = new WeakMap();
     for (const attr of relevantAttributes) {
-    next_value:
+        if (attr.values.length > 0
+            && valueSatisfiesSelectedContexts(ata.assertedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
+            return true;
+        }
         for (const vwc of attr.valuesWithContext ?? []) {
-            for (const ac of ata.assertedContexts ?? []) {
-                const matched = evaluateContextAssertion(
-                    ac,
-                    vwc.contextList,
-                    options.getContextMatcher,
-                    options.determineAbsentMatch,
-                );
-                if (!matched) {
-                    continue next_value;
-                }
+            if (valueSatisfiesSelectedContexts(ata.assertedContexts, vwc.contextList, attr, options, directMatchCache)) {
+                return true;
             }
-            return true; // Every context assertion matched this value `vwc`.
         }
     }
     return false; // No values matched.
