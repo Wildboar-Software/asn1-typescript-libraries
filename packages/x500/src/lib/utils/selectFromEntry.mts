@@ -305,18 +305,8 @@ function selectFromEntry (
                             )) {
                                 continue;
                             }
-                            // This value failed (a) and (b). Fallback is denied if
-                            // any sibling of the same type already matched via (a)/(b).
-                            if (typeHasDirectContextMatch(
-                                selectedAttributes,
-                                type_,
-                                ca,
-                                getContextMatcher,
-                                determineAbsentMatch,
-                                directMatchCache,
-                            )) {
-                                return false;
-                            }
+                            // This value failed (a) and (b). If it has no fallback
+                            // of this type, it cannot match via (c).
                             let hasFallback = false;
                             for (let j = 0; j < contexts.length; j++) {
                                 const c = contexts[j];
@@ -326,6 +316,18 @@ function selectFromEntry (
                                 }
                             }
                             if (!hasFallback) {
+                                return false;
+                            }
+                            // Fallback is denied if any sibling of the same type
+                            // already matched via (a)/(b).
+                            if (typeHasDirectContextMatch(
+                                selectedAttributes,
+                                type_,
+                                ca,
+                                getContextMatcher,
+                                determineAbsentMatch,
+                                directMatchCache,
+                            )) {
                                 return false;
                             }
                         }

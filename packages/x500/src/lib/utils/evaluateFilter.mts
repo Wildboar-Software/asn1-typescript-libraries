@@ -351,13 +351,8 @@ function valueSatisfiesSelectedContexts (
         )) {
             continue;
         }
-        // This value failed (a) and (b). X.501 §8.9.2.4 (c) lets it match via
-        // fallback only if **none** of the attribute's values already satisfied
-        // the assertion via (a) or (b). A sibling that *did* match means
-        // fallback must not apply, so this value is not a match.
-        if (attributeHasDirectContextMatch(attribute, ca, options, directMatchCache)) {
-            return false;
-        }
+        // This value failed (a) and (b). If it has no fallback of this type,
+        // it cannot match via (c), so do not consult siblings.
         let hasFallback = false;
         for (let j = 0; j < valueContexts.length; j++) {
             const c = valueContexts[j];
@@ -367,6 +362,11 @@ function valueSatisfiesSelectedContexts (
             }
         }
         if (!hasFallback) {
+            return false;
+        }
+        // X.501 §8.9.2.4 (c): fallback applies only if **none** of the
+        // attribute's values already satisfied the assertion via (a) or (b).
+        if (attributeHasDirectContextMatch(attribute, ca, options, directMatchCache)) {
             return false;
         }
     }
