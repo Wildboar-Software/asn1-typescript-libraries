@@ -20,7 +20,39 @@ const deconstructableTypes: Set<ASN1UniversalType> = new Set([
 ]);
 
 /**
+ * Concatenate the primitive contents of a constructed string-like type.
+ * Inner encodings must be of the same type as the outer element, as in
+ * X.690 constructed encoding of octet strings and restricted character
+ * strings. Recurses so nested partitions are flattened.
+ */
+function primitiveContents (el: ASN1Element): Uint8Array | undefined {
+    if (el.construction === ASN1Construction.primitive) {
+        return el.value;
+    }
+    try {
+        const parts: Uint8Array[] = [];
+        for (const part of el.sequence) {
+            if (
+                (part.tagClass !== el.tagClass)
+                || (part.tagNumber !== el.tagNumber)
+            ) {
+                return undefined;
+            }
+            const inner = primitiveContents(part);
+            if (!inner) {
+                return undefined;
+            }
+            parts.push(inner);
+        }
+        return Buffer.concat(parts);
+    } catch {
+        return undefined;
+    }
+}
+
+/**
  * @summary Compare two ASN.1 elements
+ * @author Cursor Grok 4.6
  * @param a One value
  * @param b The other
  * @returns {boolean} `true` if they match; `false` otherwise
@@ -31,7 +63,6 @@ function compareElements (a: ASN1Element, b: ASN1Element): boolean {
     if (
         (a.tagClass !== b.tagClass)
         || (a.tagNumber !== b.tagNumber)
-        || (a.value.length !== b.value.length)
     ) {
         return false;
     }
@@ -39,29 +70,32 @@ function compareElements (a: ASN1Element, b: ASN1Element): boolean {
         (a.construction === ASN1Construction.primitive)
         && (b.construction === ASN1Construction.primitive)
     ) {
-        return (Buffer.compare(a.value, b.value) === 0);
+        return (
+            (a.value.length === b.value.length)
+            && (Buffer.compare(a.value, b.value) === 0)
+        );
     }
-    else if (
-        (a.construction === ASN1Construction.constructed)
-        && (b.construction === ASN1Construction.constructed)
+    if (
+        (a.tagClass !== ASN1TagClass.universal)
+        || !deconstructableTypes.has(a.tagNumber)
     ) {
-        return (Buffer.compare(a.value, b.value) === 0);
-    }
-    else {
-        if (a.tagClass !== ASN1TagClass.universal) {
+        if (a.construction !== b.construction) {
             return false;
         }
-        if (!deconstructableTypes.has(a.tagNumber)) {
-            return false;
-        }
-        const primitiveAValue = (a.construction === ASN1Construction.constructed)
-            ? a.deconstruct("?")
-            : a.value;
-        const primitiveBValue = (b.construction === ASN1Construction.constructed)
-            ? b.deconstruct("?")
-            : b.value;
-        return !Buffer.compare(primitiveAValue, primitiveBValue);
+        return (
+            (a.value.length === b.value.length)
+            && (Buffer.compare(a.value, b.value) === 0)
+        );
     }
+    const primitiveAValue = primitiveContents(a);
+    const primitiveBValue = primitiveContents(b);
+    if (!primitiveAValue || !primitiveBValue) {
+        return false;
+    }
+    return (
+        (primitiveAValue.length === primitiveBValue.length)
+        && (Buffer.compare(primitiveAValue, primitiveBValue) === 0)
+    );
 }
 
 export default compareElements;
