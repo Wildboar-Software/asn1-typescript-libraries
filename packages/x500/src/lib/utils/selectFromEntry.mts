@@ -42,6 +42,52 @@ import type ATVAC from "../types/AttributeTypeValueAndContextsTuple.mjs";
 
 const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
 
+type DirectContextMatchCache = Map<string, Map<ContextAssertion, boolean>>;
+
+/**
+ * Whether any selected value of `type_` already satisfies `ca` via
+ * X.501 §8.9.2.4 (a) or (b). Cached on `(type OID, ca)` so the sibling
+ * walk runs once per pair.
+ */
+function typeHasDirectContextMatch (
+    selectedAttributes: ATVAC[],
+    type_: OBJECT_IDENTIFIER,
+    ca: ContextAssertion,
+    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
+    determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
+    cache: DirectContextMatchCache,
+): boolean {
+    const typeKey = type_.toString();
+    let byAssertion = cache.get(typeKey);
+    if (!byAssertion) {
+        byAssertion = new Map();
+        cache.set(typeKey, byAssertion);
+    } else {
+        const cached = byAssertion.get(ca);
+        if (cached !== undefined) {
+            return cached;
+        }
+    }
+    let matched = false;
+    for (let i = 0; i < selectedAttributes.length; i++) {
+        const other = selectedAttributes[i];
+        if (!other[0].isEqualTo(type_) || !other[1]) {
+            continue;
+        }
+        if (evaluateContextAssertion(
+            ca,
+            other[2],
+            getContextMatcher,
+            determineAbsentMatch,
+        )) {
+            matched = true;
+            break;
+        }
+    }
+    byAssertion.set(ca, matched);
+    return matched;
+}
+
 function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntries {
     return new FamilyEntries(
         entries.family_class,
@@ -226,6 +272,7 @@ function selectFromEntry (
         });
 
     const preferences: Map<ContextAssertion[], number> = new Map();
+    const directMatchCache: DirectContextMatchCache = new Map();
 
     const attributesSelectedByContext = selectedContexts
         ? selectedAttributes
@@ -258,23 +305,27 @@ function selectFromEntry (
                             )) {
                                 continue;
                             }
-                            const siblingMatched = selectedAttributes.some((other) => (
-                                other[0].isEqualTo(type_)
-                                && other[1]
-                                && evaluateContextAssertion(
-                                    ca,
-                                    other[2],
-                                    getContextMatcher,
-                                    determineAbsentMatch,
-                                )
-                            ));
-                            if (siblingMatched) {
+                            // This value failed (a) and (b). Fallback is denied if
+                            // any sibling of the same type already matched via (a)/(b).
+                            if (typeHasDirectContextMatch(
+                                selectedAttributes,
+                                type_,
+                                ca,
+                                getContextMatcher,
+                                determineAbsentMatch,
+                                directMatchCache,
+                            )) {
                                 return false;
                             }
-                            if (!contexts.some((c) => (
-                                c.contextType.isEqualTo(ca.contextType)
-                                && c.fallback
-                            ))) {
+                            let hasFallback = false;
+                            for (let j = 0; j < contexts.length; j++) {
+                                const c = contexts[j];
+                                if (c.contextType.isEqualTo(ca.contextType) && c.fallback) {
+                                    hasFallback = true;
+                                    break;
+                                }
+                            }
+                            if (!hasFallback) {
                                 return false;
                             }
                         }
