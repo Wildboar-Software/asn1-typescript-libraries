@@ -28,7 +28,7 @@ export
 function compareGeneralName (
     a: GeneralName,
     b: GeneralName,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if ("otherName" in a) {
         if (!("otherName" in b)) {
@@ -87,7 +87,7 @@ function compareGeneralName (
         if (!("directoryName" in b)) {
             return false;
         }
-        return compareName(a.directoryName, b.directoryName, getEqualityMatcher ?? (() => undefined));
+        return compareName(a.directoryName, b.directoryName, getEqualityMatcher);
     }
     else if ("ediPartyName" in a) {
         if (!("ediPartyName" in b)) {

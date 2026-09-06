@@ -21,7 +21,7 @@ export
 function compareHolder (
     a: Holder,
     b: Holder,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (Boolean(a.baseCertificateID) !== Boolean(b.baseCertificateID)) {
         return false;

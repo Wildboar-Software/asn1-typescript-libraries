@@ -15,7 +15,7 @@ import compareRDNSequence from "./compareRDNSequence.mjs";
 export function compareDistinguishedName(
     a: DistinguishedName,
     b: DistinguishedName,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     return compareRDNSequence(a, b, getEqualityMatcher);
 }

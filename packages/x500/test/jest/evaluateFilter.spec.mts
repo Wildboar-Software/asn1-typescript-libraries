@@ -614,4 +614,55 @@ describe("evaluateFilter", () => {
 
         expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
+
+    it("matches unrecognized attribute types by comparing encodings", () => {
+        const filter: Filter = {
+            item: BASIC_BOOLEAN_FILTER_ITEM,
+        };
+        const matchingEntry = new EntryInformation(
+            FILLER_NAME,
+            true,
+            [
+                {
+                    attribute: new Attribute(
+                        FILLER_ATTRIBUTE_TYPE_1,
+                        [ TRUE_ELEMENT ],
+                        undefined,
+                    ),
+                },
+            ],
+            false,
+            false,
+            false,
+        );
+        const nonMatchingEntry = new EntryInformation(
+            FILLER_NAME,
+            true,
+            [
+                {
+                    attribute: new Attribute(
+                        FILLER_ATTRIBUTE_TYPE_1,
+                        [ FALSE_ELEMENT ],
+                        undefined,
+                    ),
+                },
+            ],
+            false,
+            false,
+            false,
+        );
+        const options: EvaluateFilterSettings = {
+            getEqualityMatcher: () => undefined,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true,
+            getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
+        };
+        expect(evaluateFilter(filter, [matchingEntry], options).matched).toBe(true);
+        expect(evaluateFilter(filter, [nonMatchingEntry], options).matched).toBe(false);
+    });
 });

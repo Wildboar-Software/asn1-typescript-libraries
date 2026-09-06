@@ -16,7 +16,7 @@ const uniqueMemberMatch: EqualityMatcher = (
 ): boolean => {
     const a: NameAndOptionalUID = _decode_NameAndOptionalUID(assertion);
     const v: NameAndOptionalUID = _decode_NameAndOptionalUID(value);
-    const distinguishedNamesAreTheSame: boolean = compareDistinguishedName(a.dn, v.dn, getEqualityMatcher ?? (() => undefined));
+    const distinguishedNamesAreTheSame: boolean = compareDistinguishedName(a.dn, v.dn, getEqualityMatcher);
     if (!distinguishedNamesAreTheSame) {
         return false;
     }

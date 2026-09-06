@@ -284,4 +284,38 @@ describe("LDAP security regressions", () => {
             expect(evaluateFilter(filter, [], entry, options)).toBeTruthy();
         });
     });
+
+    describe("evaluateFilter unrecognized attribute types", () => {
+        it("matches equality by encoding when no matcher is registered", () => {
+            const entry: PartialAttributeList = [
+                new PartialAttribute(
+                    encodeLDAPOID(serialNumber),
+                    [ Buffer.from("ASDF1234") ],
+                ),
+            ];
+            const matching: Filter = {
+                equalityMatch: new AttributeValueAssertion(
+                    encodeLDAPOID(serialNumber),
+                    Buffer.from("ASDF1234"),
+                ),
+            };
+            const nonMatching: Filter = {
+                equalityMatch: new AttributeValueAssertion(
+                    encodeLDAPOID(serialNumber),
+                    Buffer.from("XXXX"),
+                ),
+            };
+            const options: EvaluateFilterOptions = {
+                getLDAPSyntaxDecoder: () => (value: Uint8Array): ASN1Element => utf8Element(Buffer.from(value).toString("utf-8")),
+                getEqualityMatcher: () => undefined,
+                getSubstringsMatcher: () => undefined,
+                getOrderingMatcher: () => undefined,
+                getApproxMatcher: () => undefined,
+                isSubtype: (ad, parent) => ad.toString() === parent.toString(),
+                permittedToMatch: () => true,
+            };
+            expect(evaluateFilter(matching, [], entry, options)).toBe(true);
+            expect(evaluateFilter(nonMatching, [], entry, options)).toBe(false);
+        });
+    });
 });

@@ -22,7 +22,7 @@ const holderIssuerMatch: EqualityMatcher = (
     if (a.holder && !compareHolder(a.holder, v.toBeSigned.holder, getEqualityMatcher)) {
         return false;
     }
-    if (a.issuer && !compareAttCertIssuer(a.issuer, v.toBeSigned.issuer)) {
+    if (a.issuer && !compareAttCertIssuer(a.issuer, v.toBeSigned.issuer, getEqualityMatcher)) {
         return false;
     }
     return true;

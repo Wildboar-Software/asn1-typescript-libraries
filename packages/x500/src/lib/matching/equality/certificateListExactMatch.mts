@@ -33,7 +33,7 @@ const certificateListExactMatch: EqualityMatcher = (
 ): boolean => {
     const a: CertificateListExactAssertion = _decode_CertificateListExactAssertion(assertion);
     const v: CertificateList = _decode_CertificateList(value);
-    if (!compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher ?? (() => undefined))) {
+    if (!compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher)) {
         return false;
     }
     const time = ((): Date => {
@@ -57,7 +57,7 @@ const certificateListExactMatch: EqualityMatcher = (
             if (!("fullName" in a.distributionPoint)) {
                 return false;
             }
-            if (!compareGeneralNames(stored.fullName, stored.fullName, getEqualityMatcher ?? (() => undefined))) {
+            if (!compareGeneralNames(stored.fullName, stored.fullName, getEqualityMatcher)) {
                 return false;
             }
         } else if ("nameRelativeToCRLIssuer" in stored) {
@@ -67,7 +67,7 @@ const certificateListExactMatch: EqualityMatcher = (
             if (!compareRelativeDistinguishedName(
                 stored.nameRelativeToCRLIssuer,
                 a.distributionPoint.nameRelativeToCRLIssuer,
-                getEqualityMatcher ?? (() => undefined),
+                getEqualityMatcher,
             )) {
                 return false;
             }
