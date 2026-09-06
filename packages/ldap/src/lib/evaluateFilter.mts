@@ -86,6 +86,8 @@ interface EvaluateFilterOptions {
     readonly permittedToMatch: (ad: LDAPString, value?: AttributeValue) => boolean;
 }
 
+const DEFAULT_RECURSION_TTL: number = 20;
+
 /**
  * @summary Implementation of LDAP filtering, as specified in IETF RFC 4511.
  * @description
@@ -131,6 +133,7 @@ interface EvaluateFilterOptions {
  * @param dn The distinguished name of the entry. The order of RDNs does not matter.
  * @param entry The attributes of the entry.
  * @param options Despite the name, all fields of this object are not optional.
+ * @param recursionTTL Maximum filter nesting depth. Defaults to 20.
  * @returns `true` if the entry matched, `false` if it does not, or `undefined`
  *  if it could not be determined whether the entry matches or not.
  * @function
@@ -141,11 +144,16 @@ function evaluateFilter (
     dn: AttributeTypeAndValue[][],
     entry: PartialAttributeList,
     options: EvaluateFilterOptions,
+    recursionTTL: number = DEFAULT_RECURSION_TTL,
 ): boolean | undefined {
+    if (recursionTTL <= 0) {
+        return undefined;
+    }
+    const nextRecursionTTL: number = recursionTTL - 1;
     let subresult_undefined: boolean = false;
     if ("and" in filter) {
         for (const subfilter of filter.and) {
-            const result = evaluateFilter(subfilter, dn, entry, options);
+            const result = evaluateFilter(subfilter, dn, entry, options, nextRecursionTTL);
             if (result === false) {
                 return false;
             }
@@ -156,7 +164,7 @@ function evaluateFilter (
         return subresult_undefined ? undefined : true;
     } else if ("or" in filter) {
         for (const subfilter of filter.or) {
-            const result = evaluateFilter(subfilter, dn, entry, options);
+            const result = evaluateFilter(subfilter, dn, entry, options, nextRecursionTTL);
             if (result === true) {
                 return true;
             }
@@ -166,7 +174,7 @@ function evaluateFilter (
         }
         return subresult_undefined ? undefined : false;
     } else if ("not" in filter) {
-        const result = evaluateFilter(filter.not, dn, entry, options);
+        const result = evaluateFilter(filter.not, dn, entry, options, nextRecursionTTL);
         if (result === undefined) {
             return undefined;
         }
@@ -183,7 +191,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
+                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
                 .some((attr) => attr.vals
                     .some((val): boolean => {
                         if (!options.permittedToMatch(attr.type_, val)) {
@@ -217,7 +225,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(sf.type_, attr.type_))
+                .filter((attr) => options.isSubtype(attr.type_, sf.type_))
                 .some((attr) => attr.vals
                     .some((val) => sf.substrings
                         .every((ss) => {
@@ -259,7 +267,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
+                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
                 .some((attr) => attr.vals
                     .some((val) => {
                         if (!options.permittedToMatch(attr.type_, val)) {
@@ -290,7 +298,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
+                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
                 .some((attr) => attr.vals
                 .some((val) => {
                     if (!options.permittedToMatch(attr.type_, val)) {
@@ -314,7 +322,7 @@ function evaluateFilter (
             return undefined;
         }
         try {
-            return entry.some((attr) => options.isSubtype(filter.present, attr.type_));
+            return entry.some((attr) => options.isSubtype(attr.type_, filter.present));
         } catch {
             return undefined;
         }
@@ -330,7 +338,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
+                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
                 .some((attr) => attr.vals
                     .some((val) => {
                         if (!options.permittedToMatch(attr.type_, val)) {
@@ -371,30 +379,39 @@ function evaluateFilter (
             if (mra.type_ && !options.permittedToMatch(mra.type_)) {
                 return undefined;
             }
-            return (
-                entry
-                    .filter((attr) => mra.type_
-                        ? options.isSubtype(mra.type_, attr.type_)
-                        : true
-                    )
-                    .some((attr) => attr.vals
-                        .some((val) => {
-                            if (!options.permittedToMatch(attr.type_, val)) {
-                                return false;
-                            }
-                            const valueDecoder = options.getLDAPSyntaxDecoder(attr.type_);
-                            if (!valueDecoder) {
-                                return undefined;
-                            }
-                            const decodedValue = valueDecoder(val);
-                            return matcher(decodedAssertion, decodedValue);
-                        }))
-                || (mra.dnAttributes && dn
-                    .some((rdn) => rdn
-                        .some((atav) => mra.type_
-                            ? options.isSubtype(mra.type_, encodeLDAPOID(atav[0]))
-                            : true)))
-            );
+            const entryMatched = entry
+                .filter((attr) => mra.type_
+                    ? options.isSubtype(attr.type_, mra.type_)
+                    : true
+                )
+                .some((attr) => attr.vals
+                    .some((val) => {
+                        if (!options.permittedToMatch(attr.type_, val)) {
+                            return false;
+                        }
+                        const valueDecoder = options.getLDAPSyntaxDecoder(attr.type_);
+                        if (!valueDecoder) {
+                            return undefined;
+                        }
+                        const decodedValue = valueDecoder(val);
+                        return matcher(decodedAssertion, decodedValue);
+                    }));
+            if (entryMatched) {
+                return true;
+            }
+            if (!mra.dnAttributes) {
+                return false;
+            }
+            return dn.some((rdn) => rdn.some((atav) => {
+                const atavType = encodeLDAPOID(atav[0]);
+                if (mra.type_ && !options.isSubtype(atavType, mra.type_)) {
+                    return false;
+                }
+                if (!options.permittedToMatch(atavType)) {
+                    return false;
+                }
+                return matcher(decodedAssertion, atav[1]);
+            }));
         } catch {
             return undefined;
         }

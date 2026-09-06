@@ -1,5 +1,6 @@
 import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndValue.mjs";
 import type { StringDecoderGetter } from "../types/StringDecoderGetter.mjs";
+import isCharEscaped from "../utils/isCharEscaped.mjs";
 import atavFromString from "./AttributeTypeAndValue.mjs";
 
 /**
@@ -25,8 +26,7 @@ export function* rdnFromString(
     let start: number = 0;
     for (let i: number = 0; i < str.length; i++) {
         const char: number = str.charCodeAt(i);
-        const prevChar: number = str.charCodeAt(i - 1);
-        if (char === atavDelimiter && prevChar !== escape) {
+        if (char === atavDelimiter && !isCharEscaped(str, i, escape)) {
             yield atavFromString(str.slice(start, i), getStringDecoder);
             i++;
             start = i;

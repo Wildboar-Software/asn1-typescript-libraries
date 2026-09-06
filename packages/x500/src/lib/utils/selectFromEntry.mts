@@ -42,6 +42,52 @@ import type ATVAC from "../types/AttributeTypeValueAndContextsTuple.mjs";
 
 const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
 
+type DirectContextMatchCache = Map<string, Map<ContextAssertion, boolean>>;
+
+/**
+ * Whether any selected value of `type_` already satisfies `ca` via
+ * X.501 §8.9.2.4 (a) or (b). Cached on `(type OID, ca)` so the sibling
+ * walk runs once per pair.
+ */
+function typeHasDirectContextMatch (
+    selectedAttributes: ATVAC[],
+    type_: OBJECT_IDENTIFIER,
+    ca: ContextAssertion,
+    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
+    determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
+    cache: DirectContextMatchCache,
+): boolean {
+    const typeKey = type_.toString();
+    let byAssertion = cache.get(typeKey);
+    if (!byAssertion) {
+        byAssertion = new Map();
+        cache.set(typeKey, byAssertion);
+    } else {
+        const cached = byAssertion.get(ca);
+        if (cached !== undefined) {
+            return cached;
+        }
+    }
+    let matched = false;
+    for (let i = 0; i < selectedAttributes.length; i++) {
+        const other = selectedAttributes[i];
+        if (!other[0].isEqualTo(type_) || !other[1]) {
+            continue;
+        }
+        if (evaluateContextAssertion(
+            ca,
+            other[2],
+            getContextMatcher,
+            determineAbsentMatch,
+        )) {
+            matched = true;
+            break;
+        }
+    }
+    byAssertion.set(ca, matched);
+    return matched;
+}
+
 function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntries {
     return new FamilyEntries(
         entries.family_class,
@@ -226,6 +272,7 @@ function selectFromEntry (
         });
 
     const preferences: Map<ContextAssertion[], number> = new Map();
+    const directMatchCache: DirectContextMatchCache = new Map();
 
     const attributesSelectedByContext = selectedContexts
         ? selectedAttributes
@@ -249,12 +296,42 @@ function selectFromEntry (
                 }
                 return typeAndContextAssertions.every((taca): boolean => {
                     if ("all" in taca.contextAssertions) {
-                        return taca.contextAssertions.all.every((ca): boolean => evaluateContextAssertion(
-                            ca,
-                            contexts,
-                            getContextMatcher,
-                            determineAbsentMatch,
-                        ));
+                        for (const ca of taca.contextAssertions.all) {
+                            if (evaluateContextAssertion(
+                                ca,
+                                contexts,
+                                getContextMatcher,
+                                determineAbsentMatch,
+                            )) {
+                                continue;
+                            }
+                            // This value failed (a) and (b). If it has no fallback
+                            // of this type, it cannot match via (c).
+                            let hasFallback = false;
+                            for (let j = 0; j < contexts.length; j++) {
+                                const c = contexts[j];
+                                if (c.contextType.isEqualTo(ca.contextType) && c.fallback) {
+                                    hasFallback = true;
+                                    break;
+                                }
+                            }
+                            if (!hasFallback) {
+                                return false;
+                            }
+                            // Fallback is denied if any sibling of the same type
+                            // already matched via (a)/(b).
+                            if (typeHasDirectContextMatch(
+                                selectedAttributes,
+                                type_,
+                                ca,
+                                getContextMatcher,
+                                determineAbsentMatch,
+                                directMatchCache,
+                            )) {
+                                return false;
+                            }
+                        }
+                        return true;
                     } else if ("preference" in taca.contextAssertions) { // This first pass only establishes the preference, but does not filter by it.
                         const existingPreference = preferences.get(taca.contextAssertions.preference) ?? -1;
                         const preferred: number = taca.contextAssertions.preference
@@ -306,7 +383,12 @@ function selectFromEntry (
                     }
                     const prefIndex = preferences.get(taca.contextAssertions.preference);
                     if (prefIndex === undefined) {
-                        return false; // There was never a match.
+                        // No value matched any preference assertion via (a)/(b).
+                        // Keep this value only if it is a fallback for one of them.
+                        return taca.contextAssertions.preference.some((pref) => contexts.some((c) => (
+                            c.contextType.isEqualTo(pref.contextType)
+                            && c.fallback
+                        )));
                     }
                     assert(prefIndex > -1);
                     const pref = taca.contextAssertions.preference[prefIndex];

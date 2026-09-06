@@ -8,9 +8,13 @@ import type ContextMatcher from "../types/ContextMatcher.mjs";
 /**
  * @summary Evaluate a Context Assertion
  * @description
- * 
+ *
  * Evaluate an X.500 directory context assertion according to the procedures
- * specified in ITU-T Recommendation X.501 (2019), Section 8.9.2.4.
+ * specified in ITU-T Recommendation X.501 (2019), Section 8.9.2.4, bullets
+ * (a) and (b). Fallback (bullet (c)) is **not** applied here: that rule is
+ * defined in terms of the other values of the same attribute, so callers that
+ * have those siblings must apply it themselves after this function returns
+ * `false`.
  *
  * @param {ContextAssertion} ca The context assertion to be evaluated
  * @param {Context[]} contexts The contexts to be evaluated
@@ -24,7 +28,7 @@ import type ContextMatcher from "../types/ContextMatcher.mjs";
 export
 function evaluateContextAssertion (
     ca: ContextAssertion,
-    contexts: Context[],
+    contexts: readonly Context[],
     getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
     determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
 ): boolean {
@@ -51,18 +55,11 @@ function evaluateContextAssertion (
     }
     // a) the attribute value has a context of the same contextType of the ContextAssertion and any of the
     // stored contextValues of that context matches with any of the asserted contextValues according to
-    // the definition of how a match is determined for that contextType; or
-    const matches = ca.contextValues
+    // the definition of how a match is determined for that contextType.
+    return ca.contextValues
         .some((assertedValue) => relevantContexts
             .some((rc) => rc.contextValues
                 .some((cv) => matcher(assertedValue, cv))));
-    return (
-        matches
-        // c) none of the other attribute values for the attribute satisfies the ContextAssertion according to 1) or 2)
-        // in 8.9.2.2 above, but the attribute value does contain a context of the asserted contextType with the
-        // fallback set to TRUE.
-        || relevantContexts.some((context) => (context.fallback && isAbsentMatch))
-    );
 }
 
 export default evaluateContextAssertion;

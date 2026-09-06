@@ -80,9 +80,6 @@ async function userWithinACIUserClass (
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,
 ): Promise<number> {
     const userClass: UserClasses = tuple[0];
-    if (!user) {
-        return (userClass.allUsers === null) ? 1 : 0;
-    }
     const requiredAuthLevel: AuthenticationLevel = tuple[1];
     const denies = deniesAccess(tuple[3]);
     if (
@@ -97,6 +94,11 @@ async function userWithinACIUserClass (
          * and the tuple denies access, we need to include this tuple. To
          * include this tuple, we must return a non-negative integer.
          *
+         * This applies even when the requestor has no bound name. A missing
+         * name is not proof of non-membership in `name` / `userGroup` /
+         * `subtree`, so those denials must still be retained when the ACI
+         * demands stronger authentication than the requestor presented.
+         *
          * However, it is unclear in the specification how this should "count"
          * when comparing the specificity of user classes. Since we presumably
          * want this to _always_ count, we should return the highest value
@@ -104,6 +106,9 @@ async function userWithinACIUserClass (
          * least in terms of user-class specificity.
          */
         return 5;
+    }
+    if (!user) {
+        return (userClass.allUsers === null) ? 1 : 0;
     }
     let couldNotDetermineGroupMembership: boolean = false;
     if (

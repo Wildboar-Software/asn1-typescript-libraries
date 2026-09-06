@@ -270,13 +270,13 @@ function evaluateCertificateAssertion (
         const policiesHad: Set<string> = new Set<string>(
             cp.map((policy) => policy.policyIdentifier.toString()),
         );
-        if ( // We only need to check if either the stored or presented policies do not have anyPolicy.
+        const assertionHasAnyPolicy = assertion.policy.some((policy) => policy.isEqualTo(anyPolicy));
+        if (
             !policiesHad.has(ANY_POLICY_OID)
-            && assertion.policy.some((policy) => (policy.isEqualTo(anyPolicy)))
+            && !assertionHasAnyPolicy
+            && !assertion.policy.some((policy): boolean => policiesHad.has(policy.toString()))
         ) {
-            if (!assertion.policy.some((policy): boolean => (policiesHad.has(policy.toString())))) {
-                return false;
-            }
+            return false;
         }
     }
 
@@ -287,26 +287,26 @@ function evaluateCertificateAssertion (
             const el: DERElement = new DERElement();
             el.fromBytes(ncExt.extnValue);
             const nc: NameConstraintsSyntax = _decode_NameConstraintsSyntax(el);
-            if (nc.excludedSubtrees.some((sub): boolean => {
+            if (nc.excludedSubtrees?.some((sub): boolean => {
                 if (!("directoryName" in sub.base)) {
                     return false;
                 }
                 return dnWithinSubtree(
-                    sub.base.directoryName.rdnSequence,
                     assertion.pathToName.rdnSequence,
+                    sub.base.directoryName.rdnSequence,
                     (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
                     (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
                 );
             })) {
                 return false;
             }
-            if (!nc.permittedSubtrees.every((sub): boolean => {
+            if (nc.permittedSubtrees && !nc.permittedSubtrees.every((sub): boolean => {
                 if (!("directoryName" in sub.base)) {
                     return true;
                 }
                 return dnWithinSubtree(
-                    sub.base.directoryName.rdnSequence,
                     assertion.pathToName.rdnSequence,
+                    sub.base.directoryName.rdnSequence,
                     (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
                     (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
                 );
@@ -324,26 +324,26 @@ function evaluateCertificateAssertion (
 
     if (assertion.nameConstraints) {
         const nc = assertion.nameConstraints;
-        if (nc.excludedSubtrees.some((sub): boolean => {
+        if (nc.excludedSubtrees?.some((sub): boolean => {
             if (!("directoryName" in sub.base)) {
                 return false;
             }
             return dnWithinSubtree(
-                sub.base.directoryName.rdnSequence,
                 tbs.subject.rdnSequence,
+                sub.base.directoryName.rdnSequence,
                 (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
                 (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
             );
         })) {
             return false;
         }
-        if (!nc.permittedSubtrees.every((sub): boolean => {
+        if (nc.permittedSubtrees && !nc.permittedSubtrees.every((sub): boolean => {
             if (!("directoryName" in sub.base)) {
                 return true;
             }
             return dnWithinSubtree(
-                sub.base.directoryName.rdnSequence,
                 tbs.subject.rdnSequence,
+                sub.base.directoryName.rdnSequence,
                 (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
                 (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
             );
@@ -358,7 +358,7 @@ function evaluateCertificateAssertion (
             el.fromBytes(sanExt.extnValue);
             const sans: GeneralNames = _decode_GeneralNames(el);
             if (!sans.every((san): boolean => {
-                if (nc.excludedSubtrees.some((sub): boolean => {
+                if (nc.excludedSubtrees?.some((sub): boolean => {
                     if (!("directoryName" in sub.base)) {
                         return false;
                     }
@@ -366,15 +366,15 @@ function evaluateCertificateAssertion (
                         return false;
                     }
                     return dnWithinSubtree(
-                        sub.base.directoryName.rdnSequence,
                         san.directoryName.rdnSequence,
+                        sub.base.directoryName.rdnSequence,
                         (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
                         (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
                     );
                 })) {
                     return false;
                 }
-                if (!nc.permittedSubtrees.every((sub): boolean => {
+                if (nc.permittedSubtrees && !nc.permittedSubtrees.every((sub): boolean => {
                     if (!("directoryName" in sub.base)) {
                         return true;
                     }
@@ -382,8 +382,8 @@ function evaluateCertificateAssertion (
                         return true;
                     }
                     return dnWithinSubtree(
-                        sub.base.directoryName.rdnSequence,
                         san.directoryName.rdnSequence,
+                        sub.base.directoryName.rdnSequence,
                         (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
                         (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
                     );
