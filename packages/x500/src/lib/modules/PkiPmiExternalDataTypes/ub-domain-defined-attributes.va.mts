@@ -1,18 +1,8 @@
-/* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
-
 /**
- * @summary ub_domain_defined_attributes
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ub-domain-defined-attributes              INTEGER ::= 4
- * ```
- *
- * @constant
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const ub_domain_defined_attributes: INTEGER = 4;
 
-/* eslint-enable */
+export {
+    ub_domain_defined_attributes,
+} from "@wildboar/or-address";

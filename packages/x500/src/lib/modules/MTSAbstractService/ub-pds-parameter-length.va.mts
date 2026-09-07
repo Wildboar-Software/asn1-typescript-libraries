@@ -1,18 +1,8 @@
-/* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
-
 /**
- * @summary ub_pds_parameter_length
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ub-pds-parameter-length INTEGER ::= 30
- * ```
- *
- * @constant
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const ub_pds_parameter_length: INTEGER = 30;
 
-/* eslint-enable */
+export {
+    ub_pds_parameter_length,
+} from "@wildboar/or-address";

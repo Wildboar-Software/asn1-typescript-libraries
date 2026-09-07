@@ -1,18 +1,8 @@
-/* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
-
 /**
- * @summary ub_universal_initials_length
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ub-universal-initials-length INTEGER ::= 16
- * ```
- *
- * @constant
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const ub_universal_initials_length: INTEGER = 16;
 
-/* eslint-enable */
+export {
+    ub_universal_initials_length,
+} from "@wildboar/or-address";

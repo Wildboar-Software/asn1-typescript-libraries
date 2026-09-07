@@ -1,18 +1,8 @@
-/* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
-
 /**
- * @summary ub_generation_qualifier_length
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ub-generation-qualifier-length            INTEGER ::= 3
- * ```
- *
- * @constant
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const ub_generation_qualifier_length: INTEGER = 3;
 
-/* eslint-enable */
+export {
+    ub_generation_qualifier_length,
+} from "@wildboar/or-address";

@@ -1,24 +1,13 @@
-/* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
-
 /**
- * @summary TerminalIdentifier
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * TerminalIdentifier  ::=  PrintableString(SIZE (1..ub-terminal-id-length))
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type TerminalIdentifier = PrintableString; // PrintableString
 
+export type {
+    TerminalIdentifier,
+} from "@wildboar/or-address";
 
-export const _decode_TerminalIdentifier = $._decodePrintableString;
-
-
-export const _encode_TerminalIdentifier = $._encodePrintableString;
-
-
-/* eslint-enable */
+export {
+    _decode_TerminalIdentifier,
+    _encode_TerminalIdentifier,
+} from "@wildboar/or-address";

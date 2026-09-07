@@ -1,24 +1,13 @@
-/* eslint-disable */
-import { ASN1Element as _Element, NumericString } from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
-
 /**
- * @summary NumericUserIdentifier
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * NumericUserIdentifier  ::=  NumericString(SIZE (1..ub-numeric-user-id-length))
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type NumericUserIdentifier = NumericString; // NumericString
 
+export type {
+    NumericUserIdentifier,
+} from "@wildboar/or-address";
 
-export const _decode_NumericUserIdentifier = $._decodeNumericString;
-
-
-export const _encode_NumericUserIdentifier = $._encodeNumericString;
-
-
-/* eslint-enable */
+export {
+    _decode_NumericUserIdentifier,
+    _encode_NumericUserIdentifier,
+} from "@wildboar/or-address";
