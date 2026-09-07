@@ -1,36 +1,8 @@
-/* eslint-disable */
-import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-import {
-    UniversalPhysicalDeliveryOfficeName,
-    _decode_UniversalPhysicalDeliveryOfficeName,
-    _encode_UniversalPhysicalDeliveryOfficeName,
-} from "../PkiPmiExternalDataTypes/UniversalPhysicalDeliveryOfficeName.ta.mjs";
 /**
- * @summary universal_physical_delivery_office_name
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * universal-physical-delivery-office-name EXTENSION-ATTRIBUTE ::= {
- *                  UniversalPhysicalDeliveryOfficeName
- *   IDENTIFIED BY  29 }
- * ```
- *
- * @constant
- * @type {EXTENSION_ATTRIBUTE<UniversalPhysicalDeliveryOfficeName>}
- * @implements {EXTENSION_ATTRIBUTE<UniversalPhysicalDeliveryOfficeName>}
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const universal_physical_delivery_office_name: EXTENSION_ATTRIBUTE<UniversalPhysicalDeliveryOfficeName> = {
-    class: "EXTENSION-ATTRIBUTE",
-    decoderFor: {
-        "&Type": _decode_UniversalPhysicalDeliveryOfficeName,
-    },
-    encoderFor: {
-        "&Type": _encode_UniversalPhysicalDeliveryOfficeName,
-    },
-    "&id": 29 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-};
 
-/* eslint-enable */
+export {
+    universal_physical_delivery_office_name,
+} from "@wildboar/or-address";

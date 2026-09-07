@@ -1,24 +1,13 @@
-/* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
-
 /**
- * @summary CommonName
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * CommonName  ::=  PrintableString(SIZE (1..ub-common-name-length))
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type CommonName = PrintableString; // PrintableString
 
+export type {
+    CommonName,
+} from "@wildboar/or-address";
 
-export const _decode_CommonName = $._decodePrintableString;
-
-
-export const _encode_CommonName = $._encodePrintableString;
-
-
-/* eslint-enable */
+export {
+    _decode_CommonName,
+    _encode_CommonName,
+} from "@wildboar/or-address";

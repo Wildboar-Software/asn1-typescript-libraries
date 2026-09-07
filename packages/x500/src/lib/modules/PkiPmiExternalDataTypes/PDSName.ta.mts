@@ -1,24 +1,13 @@
-/* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
-
 /**
- * @summary PDSName
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * PDSName  ::=  PrintableString(SIZE (1..ub-pds-name-length))
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type PDSName = PrintableString; // PrintableString
 
+export type {
+    PDSName,
+} from "@wildboar/or-address";
 
-export const _decode_PDSName = $._decodePrintableString;
-
-
-export const _encode_PDSName = $._encodePrintableString;
-
-
-/* eslint-enable */
+export {
+    _decode_PDSName,
+    _encode_PDSName,
+} from "@wildboar/or-address";

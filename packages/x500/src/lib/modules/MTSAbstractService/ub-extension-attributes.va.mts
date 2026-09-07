@@ -1,18 +1,8 @@
-/* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
-
 /**
- * @summary ub_extension_attributes
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ub-extension-attributes INTEGER ::= 256
- * ```
- *
- * @constant
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const ub_extension_attributes: INTEGER = 256;
 
-/* eslint-enable */
+export {
+    ub_extension_attributes,
+} from "@wildboar/or-address";

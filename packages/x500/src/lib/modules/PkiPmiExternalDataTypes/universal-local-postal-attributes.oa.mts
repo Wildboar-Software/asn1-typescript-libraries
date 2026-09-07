@@ -1,36 +1,8 @@
-/* eslint-disable */
-import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-import {
-    UniversalLocalPostalAttributes,
-    _decode_UniversalLocalPostalAttributes,
-    _encode_UniversalLocalPostalAttributes,
-} from "../PkiPmiExternalDataTypes/UniversalLocalPostalAttributes.ta.mjs";
 /**
- * @summary universal_local_postal_attributes
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * universal-local-postal-attributes EXTENSION-ATTRIBUTE ::= {
- *                  UniversalLocalPostalAttributes
- *   IDENTIFIED BY  40 }
- * ```
- *
- * @constant
- * @type {EXTENSION_ATTRIBUTE<UniversalLocalPostalAttributes>}
- * @implements {EXTENSION_ATTRIBUTE<UniversalLocalPostalAttributes>}
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const universal_local_postal_attributes: EXTENSION_ATTRIBUTE<UniversalLocalPostalAttributes> = {
-    class: "EXTENSION-ATTRIBUTE",
-    decoderFor: {
-        "&Type": _decode_UniversalLocalPostalAttributes,
-    },
-    encoderFor: {
-        "&Type": _encode_UniversalLocalPostalAttributes,
-    },
-    "&id": 40 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-};
 
-/* eslint-enable */
+export {
+    universal_local_postal_attributes,
+} from "@wildboar/or-address";
