@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,17 +10,15 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-// export { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
-// export { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
-import { V23Drate, _decode_V23Drate, _encode_V23Drate } from "../V59/V23Drate.ta.mjs";
-// export { V23Drate, _decode_V23Drate, _encode_V23Drate } from "../V59/V23Drate.ta.mjs";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
+import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+
+import { V23Drate, _decode_V23Drate, _encode_V23Drate } from "../V59/V23Drate.ta.mjs";
+
+import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary V23Diag_Item
@@ -83,7 +27,13 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * V23Diag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * V23Diag-Item ::= SEQUENCE {modeV23           Capabilities,
+ *               v23TxLevel        TxPowerLevel,
+ *               duplex            BOOLEAN,
+ *               transmitDataRate  V23Drate,
+ *               receiveDataRate   V23Drate,
+ *               rxLevelEstimate   V59String OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -151,7 +101,6 @@ class V23Diag_Item {
         return new V23Diag_Item(_o.modeV23, _o.v23TxLevel, _o.duplex, _o.transmitDataRate, _o.receiveDataRate, _o.rxLevelEstimate, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -164,12 +113,12 @@ class V23Diag_Item {
  */
 export
 const _root_component_type_list_1_spec_for_V23Diag_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("modeV23", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("v23TxLevel", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("duplex", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("transmitDataRate", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("receiveDataRate", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("rxLevelEstimate", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("modeV23", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("v23TxLevel", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("duplex", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("transmitDataRate", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("receiveDataRate", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("rxLevelEstimate", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -215,7 +164,7 @@ function _decode_V23Diag_Item (el: _Element): V23Diag_Item {
     let transmitDataRate!: V23Drate;
     let receiveDataRate!: V23Drate;
     let rxLevelEstimate: OPTIONAL<V59String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "modeV23": (_el: _Element): void => { modeV23 = _decode_Capabilities(_el); },
         "v23TxLevel": (_el: _Element): void => { v23TxLevel = _decode_TxPowerLevel(_el); },
@@ -254,7 +203,7 @@ let _cached_encoder_for_V23Diag_Item: $.ASN1Encoder<V23Diag_Item> | null = null;
  */
 export
 function _encode_V23Diag_Item (value: V23Diag_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_V23Diag_Item) { _cached_encoder_for_V23Diag_Item = function (value: V23Diag_Item, elGetter: $.ASN1Encoder<V23Diag_Item>): _Element {
+    if (!_cached_encoder_for_V23Diag_Item) { _cached_encoder_for_V23Diag_Item = function (value: V23Diag_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Capabilities(value.modeV23, $.BER),
@@ -269,6 +218,5 @@ function _encode_V23Diag_Item (value: V23Diag_Item, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_V23Diag_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

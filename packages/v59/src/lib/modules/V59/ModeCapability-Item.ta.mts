@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,13 +8,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ModeCapability_Item_modulationMode, _decode_ModeCapability_Item_modulationMode, _encode_ModeCapability_Item_modulationMode } from "../V59/ModeCapability-Item-modulationMode.ta.mjs";
-// export { ModeCapability_Item_modulationMode, _decode_ModeCapability_Item_modulationMode, _encode_ModeCapability_Item_modulationMode } from "../V59/ModeCapability-Item-modulationMode.ta.mjs";
-import { ModeCapability_Item_protocolmode, _decode_ModeCapability_Item_protocolmode, _encode_ModeCapability_Item_protocolmode } from "../V59/ModeCapability-Item-protocolmode.ta.mjs";
-// export { ModeCapability_Item_protocolmode, _decode_ModeCapability_Item_protocolmode, _encode_ModeCapability_Item_protocolmode } from "../V59/ModeCapability-Item-protocolmode.ta.mjs";
 
+import { ModeCapability_Item_protocolmode, _decode_ModeCapability_Item_protocolmode, _encode_ModeCapability_Item_protocolmode } from "../V59/ModeCapability-Item-protocolmode.ta.mjs";
 
 /**
  * @summary ModeCapability_Item
@@ -79,7 +21,29 @@ import { ModeCapability_Item_protocolmode, _decode_ModeCapability_Item_protocolm
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ModeCapability-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ModeCapability-Item ::= SEQUENCE {modulationMode
+ *                 SEQUENCE {modeV90       Capabilities,
+ *                           modeV91       Capabilities,
+ *                           modeV92       Capabilities,
+ *                           modeV34       Capabilities,
+ *                           modeV32B      Capabilities,
+ *                           modeV22B      Capabilities,
+ *                           modeV23       Capabilities,
+ *                           modeV21       Capabilities,
+ *                           modeV34H      Capabilities,
+ *                           modeV17       Capabilities,
+ *                           modeV29       Capabilities,
+ *                           modeV27T      Capabilities,
+ *                           modeV18       Capabilities,
+ *                           otherModMode  V59String OPTIONAL,
+ *                           ...},
+ *               protocolmode
+ *                 SEQUENCE {modeV42        Capabilities,
+ *                           modeV42B       Capabilities,
+ *                           modeV44        Capabilities,
+ *                           otherProtMode  V59String OPTIONAL,
+ *                           ...},
+ *               ...}
  * ```
  * 
  * @class
@@ -123,7 +87,6 @@ class ModeCapability_Item {
         return new ModeCapability_Item(_o.modulationMode, _o.protocolmode, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -136,8 +99,8 @@ class ModeCapability_Item {
  */
 export
 const _root_component_type_list_1_spec_for_ModeCapability_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("modulationMode", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("protocolmode", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("modulationMode", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("protocolmode", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -207,7 +170,7 @@ let _cached_encoder_for_ModeCapability_Item: $.ASN1Encoder<ModeCapability_Item> 
  */
 export
 function _encode_ModeCapability_Item (value: ModeCapability_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ModeCapability_Item) { _cached_encoder_for_ModeCapability_Item = function (value: ModeCapability_Item, elGetter: $.ASN1Encoder<ModeCapability_Item>): _Element {
+    if (!_cached_encoder_for_ModeCapability_Item) { _cached_encoder_for_ModeCapability_Item = function (value: ModeCapability_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ModeCapability_Item_modulationMode(value.modulationMode, $.BER),
@@ -218,6 +181,5 @@ function _encode_ModeCapability_Item (value: ModeCapability_Item, elGetter: $.AS
 }; }
     return _cached_encoder_for_ModeCapability_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

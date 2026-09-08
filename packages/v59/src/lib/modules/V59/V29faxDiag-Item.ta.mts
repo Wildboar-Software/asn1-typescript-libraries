@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,15 +9,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-// export { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
-// export { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
+import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+
+import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary V29faxDiag_Item
@@ -81,7 +24,10 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * V29faxDiag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * V29faxDiag-Item ::= SEQUENCE {modeV29          Capabilities,
+ *               v29TxLevel       TxPowerLevel,
+ *               rxLevelEstimate  V59String OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -131,7 +77,6 @@ class V29faxDiag_Item {
         return new V29faxDiag_Item(_o.modeV29, _o.v29TxLevel, _o.rxLevelEstimate, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -144,9 +89,9 @@ class V29faxDiag_Item {
  */
 export
 const _root_component_type_list_1_spec_for_V29faxDiag_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("modeV29", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("v29TxLevel", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("rxLevelEstimate", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("modeV29", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("v29TxLevel", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("rxLevelEstimate", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -189,7 +134,7 @@ function _decode_V29faxDiag_Item (el: _Element): V29faxDiag_Item {
     let modeV29!: Capabilities;
     let v29TxLevel!: TxPowerLevel;
     let rxLevelEstimate: OPTIONAL<V59String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "modeV29": (_el: _Element): void => { modeV29 = _decode_Capabilities(_el); },
         "v29TxLevel": (_el: _Element): void => { v29TxLevel = _decode_TxPowerLevel(_el); },
@@ -222,7 +167,7 @@ let _cached_encoder_for_V29faxDiag_Item: $.ASN1Encoder<V29faxDiag_Item> | null =
  */
 export
 function _encode_V29faxDiag_Item (value: V29faxDiag_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_V29faxDiag_Item) { _cached_encoder_for_V29faxDiag_Item = function (value: V29faxDiag_Item, elGetter: $.ASN1Encoder<V29faxDiag_Item>): _Element {
+    if (!_cached_encoder_for_V29faxDiag_Item) { _cached_encoder_for_V29faxDiag_Item = function (value: V29faxDiag_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Capabilities(value.modeV29, $.BER),
@@ -234,6 +179,5 @@ function _encode_V29faxDiag_Item (value: V29faxDiag_Item, elGetter: $.ASN1Encode
 }; }
     return _cached_encoder_for_V29faxDiag_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

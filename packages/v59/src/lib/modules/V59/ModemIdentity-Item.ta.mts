@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,13 +9,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-import { ModemIdentity_Item_multimediaMode, ModemIdentity_Item_multimediaMode_dataMode /* IMPORTED_LONG_NAMED_BIT */, dataMode /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_faxT30 /* IMPORTED_LONG_NAMED_BIT */, faxT30 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_faxT30C /* IMPORTED_LONG_NAMED_BIT */, faxT30C /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_fAXT30F /* IMPORTED_LONG_NAMED_BIT */, fAXT30F /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_voiceV253 /* IMPORTED_LONG_NAMED_BIT */, voiceV253 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_sVDV70 /* IMPORTED_LONG_NAMED_BIT */, sVDV70 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_sVDV61 /* IMPORTED_LONG_NAMED_BIT */, sVDV61 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_vidTelH324 /* IMPORTED_LONG_NAMED_BIT */, vidTelH324 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_v80other /* IMPORTED_LONG_NAMED_BIT */, v80other /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_v18Text /* IMPORTED_LONG_NAMED_BIT */, v18Text /* IMPORTED_SHORT_NAMED_BIT */, _decode_ModemIdentity_Item_multimediaMode, _encode_ModemIdentity_Item_multimediaMode } from "../V59/ModemIdentity-Item-multimediaMode.ta.mjs";
-// export { ModemIdentity_Item_multimediaMode, ModemIdentity_Item_multimediaMode_dataMode /* IMPORTED_LONG_NAMED_BIT */, dataMode /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_faxT30 /* IMPORTED_LONG_NAMED_BIT */, faxT30 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_faxT30C /* IMPORTED_LONG_NAMED_BIT */, faxT30C /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_fAXT30F /* IMPORTED_LONG_NAMED_BIT */, fAXT30F /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_voiceV253 /* IMPORTED_LONG_NAMED_BIT */, voiceV253 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_sVDV70 /* IMPORTED_LONG_NAMED_BIT */, sVDV70 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_sVDV61 /* IMPORTED_LONG_NAMED_BIT */, sVDV61 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_vidTelH324 /* IMPORTED_LONG_NAMED_BIT */, vidTelH324 /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_v80other /* IMPORTED_LONG_NAMED_BIT */, v80other /* IMPORTED_SHORT_NAMED_BIT */, ModemIdentity_Item_multimediaMode_v18Text /* IMPORTED_LONG_NAMED_BIT */, v18Text /* IMPORTED_SHORT_NAMED_BIT */, _decode_ModemIdentity_Item_multimediaMode, _encode_ModemIdentity_Item_multimediaMode } from "../V59/ModemIdentity-Item-multimediaMode.ta.mjs";
 
+import { ModemIdentity_Item_multimediaMode, _decode_ModemIdentity_Item_multimediaMode, _encode_ModemIdentity_Item_multimediaMode } from "../V59/ModemIdentity-Item-multimediaMode.ta.mjs";
 
 /**
  * @summary ModemIdentity_Item
@@ -79,7 +22,15 @@ import { ModemIdentity_Item_multimediaMode, ModemIdentity_Item_multimediaMode_da
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ModemIdentity-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ModemIdentity-Item ::= SEQUENCE {manufacturer       V59String,
+ *               model              V59String,
+ *               firmwareVersion    V59String,
+ *               diagnosticVersion  V59String,
+ *               multimediaMode
+ *                 BIT STRING {dataMode(0), faxT30(1), faxT30C(2), fAXT30F(3),
+ *                             voiceV253(4), sVDV70(5), sVDV61(6), vidTelH324(7),
+ *                             v80other(8), v18Text(9)} OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -141,7 +92,6 @@ class ModemIdentity_Item {
         return new ModemIdentity_Item(_o.manufacturer, _o.model, _o.firmwareVersion, _o.diagnosticVersion, _o.multimediaMode, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -154,11 +104,11 @@ class ModemIdentity_Item {
  */
 export
 const _root_component_type_list_1_spec_for_ModemIdentity_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("manufacturer", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("model", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("firmwareVersion", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("diagnosticVersion", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("multimediaMode", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("manufacturer", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("model", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("firmwareVersion", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("diagnosticVersion", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("multimediaMode", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -203,7 +153,7 @@ function _decode_ModemIdentity_Item (el: _Element): ModemIdentity_Item {
     let firmwareVersion!: V59String;
     let diagnosticVersion!: V59String;
     let multimediaMode: OPTIONAL<ModemIdentity_Item_multimediaMode>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "manufacturer": (_el: _Element): void => { manufacturer = _decode_V59String(_el); },
         "model": (_el: _Element): void => { model = _decode_V59String(_el); },
@@ -240,7 +190,7 @@ let _cached_encoder_for_ModemIdentity_Item: $.ASN1Encoder<ModemIdentity_Item> | 
  */
 export
 function _encode_ModemIdentity_Item (value: ModemIdentity_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ModemIdentity_Item) { _cached_encoder_for_ModemIdentity_Item = function (value: ModemIdentity_Item, elGetter: $.ASN1Encoder<ModemIdentity_Item>): _Element {
+    if (!_cached_encoder_for_ModemIdentity_Item) { _cached_encoder_for_ModemIdentity_Item = function (value: ModemIdentity_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_V59String(value.manufacturer, $.BER),
@@ -254,6 +204,5 @@ function _encode_ModemIdentity_Item (value: ModemIdentity_Item, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_ModemIdentity_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

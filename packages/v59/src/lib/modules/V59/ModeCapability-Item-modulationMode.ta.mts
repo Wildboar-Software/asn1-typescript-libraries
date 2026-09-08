@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,13 +9,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-// export { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
+import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary ModeCapability_Item_modulationMode
@@ -79,7 +22,21 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ModeCapability-Item-modulationMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ModeCapability-Item-modulationMode ::= SEQUENCE {modeV90       Capabilities,
+ *                           modeV91       Capabilities,
+ *                           modeV92       Capabilities,
+ *                           modeV34       Capabilities,
+ *                           modeV32B      Capabilities,
+ *                           modeV22B      Capabilities,
+ *                           modeV23       Capabilities,
+ *                           modeV21       Capabilities,
+ *                           modeV34H      Capabilities,
+ *                           modeV17       Capabilities,
+ *                           modeV29       Capabilities,
+ *                           modeV27T      Capabilities,
+ *                           modeV18       Capabilities,
+ *                           otherModMode  V59String OPTIONAL,
+ *                           ...}
  * ```
  * 
  * @class
@@ -195,7 +152,6 @@ class ModeCapability_Item_modulationMode {
         return new ModeCapability_Item_modulationMode(_o.modeV90, _o.modeV91, _o.modeV92, _o.modeV34, _o.modeV32B, _o.modeV22B, _o.modeV23, _o.modeV21, _o.modeV34H, _o.modeV17, _o.modeV29, _o.modeV27T, _o.modeV18, _o.otherModMode, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -208,20 +164,20 @@ class ModeCapability_Item_modulationMode {
  */
 export
 const _root_component_type_list_1_spec_for_ModeCapability_Item_modulationMode: $.ComponentSpec[] = [
-    new $.ComponentSpec("modeV90", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("modeV91", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("modeV92", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("modeV34", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("modeV32B", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("modeV22B", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("modeV23", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("modeV21", false, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("modeV34H", false, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("modeV17", false, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("modeV29", false, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("modeV27T", false, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("modeV18", false, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("otherModMode", true, $.hasTag(_TagClass.context, 13), undefined, undefined)
+    new $.ComponentSpec("modeV90", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("modeV91", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("modeV92", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("modeV34", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("modeV32B", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("modeV22B", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("modeV23", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("modeV21", false, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("modeV34H", false, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("modeV17", false, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("modeV29", false, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("modeV27T", false, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("modeV18", false, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("otherModMode", true, $.hasTag(_TagClass.context, 13))
 ];
 
 /**
@@ -275,7 +231,7 @@ function _decode_ModeCapability_Item_modulationMode (el: _Element): ModeCapabili
     let modeV27T!: Capabilities;
     let modeV18!: Capabilities;
     let otherModMode: OPTIONAL<V59String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "modeV90": (_el: _Element): void => { modeV90 = _decode_Capabilities(_el); },
         "modeV91": (_el: _Element): void => { modeV91 = _decode_Capabilities(_el); },
@@ -330,7 +286,7 @@ let _cached_encoder_for_ModeCapability_Item_modulationMode: $.ASN1Encoder<ModeCa
  */
 export
 function _encode_ModeCapability_Item_modulationMode (value: ModeCapability_Item_modulationMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ModeCapability_Item_modulationMode) { _cached_encoder_for_ModeCapability_Item_modulationMode = function (value: ModeCapability_Item_modulationMode, elGetter: $.ASN1Encoder<ModeCapability_Item_modulationMode>): _Element {
+    if (!_cached_encoder_for_ModeCapability_Item_modulationMode) { _cached_encoder_for_ModeCapability_Item_modulationMode = function (value: ModeCapability_Item_modulationMode): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Capabilities(value.modeV90, $.BER),
@@ -353,6 +309,5 @@ function _encode_ModeCapability_Item_modulationMode (value: ModeCapability_Item_
 }; }
     return _cached_encoder_for_ModeCapability_Item_modulationMode(value, elGetter);
 }
-
 
 /* eslint-enable */

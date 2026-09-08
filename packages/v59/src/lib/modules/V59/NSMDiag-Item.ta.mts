@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,12 +9,9 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1ConstructionError as _ConstructionError, ASN1SizeError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-
 
 /**
  * @summary NSMDiag_Item
@@ -77,7 +20,9 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NSMDiag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NSMDiag-Item ::= SEQUENCE {proprietaryMode  V59String OPTIONAL,
+ *               fieldData        IA5String(SIZE (1..256)) OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -103,7 +48,10 @@ class NSMDiag_Item {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (this.fieldData !== undefined) { if (this.fieldData.length < 1 || this.fieldData.length > 256) {
+                throw new ASN1SizeError("NSMDiag_Item.fieldData violates SIZE constraint");
+            } }}
 
     /**
      * @summary Restructures an object into a NSMDiag_Item
@@ -121,7 +69,6 @@ class NSMDiag_Item {
         return new NSMDiag_Item(_o.proprietaryMode, _o.fieldData, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -134,8 +81,8 @@ class NSMDiag_Item {
  */
 export
 const _root_component_type_list_1_spec_for_NSMDiag_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("proprietaryMode", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("fieldData", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("proprietaryMode", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("fieldData", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -177,7 +124,7 @@ function _decode_NSMDiag_Item (el: _Element): NSMDiag_Item {
     if (!_cached_decoder_for_NSMDiag_Item) { _cached_decoder_for_NSMDiag_Item = function (el: _Element): NSMDiag_Item {
     let proprietaryMode: OPTIONAL<V59String>;
     let fieldData: OPTIONAL<IA5String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "proprietaryMode": (_el: _Element): void => { proprietaryMode = _decode_V59String(_el); },
         "fieldData": (_el: _Element): void => { fieldData = $._decodeIA5String(_el); }
@@ -208,7 +155,7 @@ let _cached_encoder_for_NSMDiag_Item: $.ASN1Encoder<NSMDiag_Item> | null = null;
  */
 export
 function _encode_NSMDiag_Item (value: NSMDiag_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NSMDiag_Item) { _cached_encoder_for_NSMDiag_Item = function (value: NSMDiag_Item, elGetter: $.ASN1Encoder<NSMDiag_Item>): _Element {
+    if (!_cached_encoder_for_NSMDiag_Item) { _cached_encoder_for_NSMDiag_Item = function (value: NSMDiag_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.proprietaryMode === undefined) ? undefined : _encode_V59String(value.proprietaryMode, $.BER)),
@@ -219,6 +166,5 @@ function _encode_NSMDiag_Item (value: NSMDiag_Item, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_NSMDiag_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

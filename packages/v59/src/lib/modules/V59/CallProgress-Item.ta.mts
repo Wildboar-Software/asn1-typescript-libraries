@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,13 +8,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CallProgressRes, _decode_CallProgressRes, _encode_CallProgressRes } from "../V59/CallProgressRes.ta.mjs";
-// export { CallProgressRes, _decode_CallProgressRes, _encode_CallProgressRes } from "../V59/CallProgressRes.ta.mjs";
-import { CallTerminateCode, _decode_CallTerminateCode, _encode_CallTerminateCode } from "../V59/CallTerminateCode.ta.mjs";
-// export { CallTerminateCode, _decode_CallTerminateCode, _encode_CallTerminateCode } from "../V59/CallTerminateCode.ta.mjs";
 
+import { CallTerminateCode, _decode_CallTerminateCode, _encode_CallTerminateCode } from "../V59/CallTerminateCode.ta.mjs";
 
 /**
  * @summary CallProgress_Item
@@ -79,7 +21,9 @@ import { CallTerminateCode, _decode_CallTerminateCode, _encode_CallTerminateCode
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CallProgress-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CallProgress-Item ::= SEQUENCE {callProgressResult  CallProgressRes,
+ *               callTerminate       CallTerminateCode,
+ *               ...}
  * ```
  * 
  * @class
@@ -123,7 +67,6 @@ class CallProgress_Item {
         return new CallProgress_Item(_o.callProgressResult, _o.callTerminate, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -136,8 +79,8 @@ class CallProgress_Item {
  */
 export
 const _root_component_type_list_1_spec_for_CallProgress_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("callProgressResult", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("callTerminate", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("callProgressResult", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callTerminate", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -207,7 +150,7 @@ let _cached_encoder_for_CallProgress_Item: $.ASN1Encoder<CallProgress_Item> | nu
  */
 export
 function _encode_CallProgress_Item (value: CallProgress_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallProgress_Item) { _cached_encoder_for_CallProgress_Item = function (value: CallProgress_Item, elGetter: $.ASN1Encoder<CallProgress_Item>): _Element {
+    if (!_cached_encoder_for_CallProgress_Item) { _cached_encoder_for_CallProgress_Item = function (value: CallProgress_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CallProgressRes(value.callProgressResult, $.BER),
@@ -218,6 +161,5 @@ function _encode_CallProgress_Item (value: CallProgress_Item, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_CallProgress_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

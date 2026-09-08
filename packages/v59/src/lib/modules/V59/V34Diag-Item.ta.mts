@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,19 +9,17 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-// export { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
-// export { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
-import { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
-// export { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
-import { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
-// export { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
 
+import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+
+import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+
+import { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
+
+import { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
 
 /**
  * @summary V34Diag_Item
@@ -85,7 +28,29 @@ import { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/Ca
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * V34Diag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * V34Diag-Item ::= SEQUENCE {modeV34           Capabilities,
+ *               iNFO0Tx           V59String,
+ *               iNFO0Rx           V59String,
+ *               iNFO1c            V59String,
+ *               iNFO1a            V59String,
+ *               mPTx              V59String,
+ *               mPRx              V59String,
+ *               precodeCoeffTx    V59String OPTIONAL,
+ *               precodeCoeffRx    V59String OPTIONAL,
+ *               v34TxLevel        TxPowerLevel,
+ *               txSymbolRate      SymbolRate OPTIONAL,
+ *               rxSymbolRate      SymbolRate OPTIONAL,
+ *               txCarrierFreq     CarrierFreq OPTIONAL,
+ *               rxCarrierFreq     CarrierFreq OPTIONAL,
+ *               txDataHistory     V59String,
+ *               rxDataHistory     V59String,
+ *               rxLevelEstimate   V59String OPTIONAL,
+ *               noiseEstimate     V59String OPTIONAL,
+ *               rxSignalQuality   V59String OPTIONAL,
+ *               nearEchoEstimate  V59String OPTIONAL,
+ *               farEchoEstimate   V59String OPTIONAL,
+ *               roundTripDelay    V59String OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -249,7 +214,6 @@ class V34Diag_Item {
         return new V34Diag_Item(_o.modeV34, _o.iNFO0Tx, _o.iNFO0Rx, _o.iNFO1c, _o.iNFO1a, _o.mPTx, _o.mPRx, _o.precodeCoeffTx, _o.precodeCoeffRx, _o.v34TxLevel, _o.txSymbolRate, _o.rxSymbolRate, _o.txCarrierFreq, _o.rxCarrierFreq, _o.txDataHistory, _o.rxDataHistory, _o.rxLevelEstimate, _o.noiseEstimate, _o.rxSignalQuality, _o.nearEchoEstimate, _o.farEchoEstimate, _o.roundTripDelay, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -262,28 +226,28 @@ class V34Diag_Item {
  */
 export
 const _root_component_type_list_1_spec_for_V34Diag_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("modeV34", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("iNFO0Tx", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("iNFO0Rx", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("iNFO1c", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("iNFO1a", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("mPTx", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("mPRx", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("precodeCoeffTx", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("precodeCoeffRx", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("v34TxLevel", false, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("txSymbolRate", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("rxSymbolRate", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("txCarrierFreq", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("rxCarrierFreq", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("txDataHistory", false, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("rxDataHistory", false, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("rxLevelEstimate", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("noiseEstimate", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("rxSignalQuality", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("nearEchoEstimate", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("farEchoEstimate", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("roundTripDelay", true, $.hasTag(_TagClass.context, 21), undefined, undefined)
+    new $.ComponentSpec("modeV34", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("iNFO0Tx", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("iNFO0Rx", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("iNFO1c", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("iNFO1a", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("mPTx", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("mPRx", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("precodeCoeffTx", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("precodeCoeffRx", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("v34TxLevel", false, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("txSymbolRate", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("rxSymbolRate", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("txCarrierFreq", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("rxCarrierFreq", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("txDataHistory", false, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("rxDataHistory", false, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("rxLevelEstimate", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("noiseEstimate", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("rxSignalQuality", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("nearEchoEstimate", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("farEchoEstimate", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("roundTripDelay", true, $.hasTag(_TagClass.context, 21))
 ];
 
 /**
@@ -345,7 +309,7 @@ function _decode_V34Diag_Item (el: _Element): V34Diag_Item {
     let nearEchoEstimate: OPTIONAL<V59String>;
     let farEchoEstimate: OPTIONAL<V59String>;
     let roundTripDelay: OPTIONAL<V59String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "modeV34": (_el: _Element): void => { modeV34 = _decode_Capabilities(_el); },
         "iNFO0Tx": (_el: _Element): void => { iNFO0Tx = _decode_V59String(_el); },
@@ -416,7 +380,7 @@ let _cached_encoder_for_V34Diag_Item: $.ASN1Encoder<V34Diag_Item> | null = null;
  */
 export
 function _encode_V34Diag_Item (value: V34Diag_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_V34Diag_Item) { _cached_encoder_for_V34Diag_Item = function (value: V34Diag_Item, elGetter: $.ASN1Encoder<V34Diag_Item>): _Element {
+    if (!_cached_encoder_for_V34Diag_Item) { _cached_encoder_for_V34Diag_Item = function (value: V34Diag_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Capabilities(value.modeV34, $.BER),
@@ -447,6 +411,5 @@ function _encode_V34Diag_Item (value: V34Diag_Item, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_V34Diag_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

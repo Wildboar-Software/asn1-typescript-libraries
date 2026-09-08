@@ -1,0 +1,25 @@
+{
+  "name": "v59",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/v59/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/v59",
+        "tsConfig": "packages/v59/tsconfig.lib.json",
+        "packageJson": "packages/v59/package.json",
+        "main": "packages/v59/src/index.mts",
+        "assets": [
+          "packages/v59/*.md",
+          "packages/v59/LICENSE.txt",
+          "packages/v59/package.json"
+        ]
+      }
+    }
+  }
+}

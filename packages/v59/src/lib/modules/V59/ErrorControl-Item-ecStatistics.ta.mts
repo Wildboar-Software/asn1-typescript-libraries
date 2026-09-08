@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,11 +9,8 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-
-
+    ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 /**
  * @summary ErrorControl_Item_ecStatistics
@@ -76,7 +19,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ErrorControl-Item-ecStatistics ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ErrorControl-Item-ecStatistics ::= SEQUENCE {framesSentAck          INTEGER(0..65535) OPTIONAL,
+ *                           framesRetransmitted    INTEGER(0..65535) OPTIONAL,
+ *                           framesReceivedAck      INTEGER(0..65535) OPTIONAL,
+ *                           framesReceivedDiscard  INTEGER(0..65535) OPTIONAL
+ *               }
  * ```
  * 
  * @class
@@ -108,7 +55,34 @@ class ErrorControl_Item_ecStatistics {
          * @readonly
          */
         readonly framesReceivedDiscard: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if (this.framesSentAck !== undefined) {
+                const _n = typeof this.framesSentAck === "bigint" ? Number(this.framesSentAck) : this.framesSentAck;
+                if (_n < 0 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item_ecStatistics.framesSentAck violates INTEGER range");
+                }
+            }
+
+        if (this.framesRetransmitted !== undefined) {
+                const _n = typeof this.framesRetransmitted === "bigint" ? Number(this.framesRetransmitted) : this.framesRetransmitted;
+                if (_n < 0 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item_ecStatistics.framesRetransmitted violates INTEGER range");
+                }
+            }
+
+        if (this.framesReceivedAck !== undefined) {
+                const _n = typeof this.framesReceivedAck === "bigint" ? Number(this.framesReceivedAck) : this.framesReceivedAck;
+                if (_n < 0 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item_ecStatistics.framesReceivedAck violates INTEGER range");
+                }
+            }
+
+        if (this.framesReceivedDiscard !== undefined) {
+                const _n = typeof this.framesReceivedDiscard === "bigint" ? Number(this.framesReceivedDiscard) : this.framesReceivedDiscard;
+                if (_n < 0 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item_ecStatistics.framesReceivedDiscard violates INTEGER range");
+                }
+            }}
 
     /**
      * @summary Restructures an object into a ErrorControl_Item_ecStatistics
@@ -126,7 +100,6 @@ class ErrorControl_Item_ecStatistics {
         return new ErrorControl_Item_ecStatistics(_o.framesSentAck, _o.framesRetransmitted, _o.framesReceivedAck, _o.framesReceivedDiscard);
     }
 
-
 }
 
 /**
@@ -139,10 +112,10 @@ class ErrorControl_Item_ecStatistics {
  */
 export
 const _root_component_type_list_1_spec_for_ErrorControl_Item_ecStatistics: $.ComponentSpec[] = [
-    new $.ComponentSpec("framesSentAck", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("framesRetransmitted", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("framesReceivedAck", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("framesReceivedDiscard", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("framesSentAck", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("framesRetransmitted", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("framesReceivedAck", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("framesReceivedDiscard", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -219,7 +192,7 @@ let _cached_encoder_for_ErrorControl_Item_ecStatistics: $.ASN1Encoder<ErrorContr
  */
 export
 function _encode_ErrorControl_Item_ecStatistics (value: ErrorControl_Item_ecStatistics, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ErrorControl_Item_ecStatistics) { _cached_encoder_for_ErrorControl_Item_ecStatistics = function (value: ErrorControl_Item_ecStatistics, elGetter: $.ASN1Encoder<ErrorControl_Item_ecStatistics>): _Element {
+    if (!_cached_encoder_for_ErrorControl_Item_ecStatistics) { _cached_encoder_for_ErrorControl_Item_ecStatistics = function (value: ErrorControl_Item_ecStatistics): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.framesSentAck === undefined) ? undefined : $._encodeInteger(value.framesSentAck, $.BER)),
@@ -231,6 +204,5 @@ function _encode_ErrorControl_Item_ecStatistics (value: ErrorControl_Item_ecStat
 }; }
     return _cached_encoder_for_ErrorControl_Item_ecStatistics(value, elGetter);
 }
-
 
 /* eslint-enable */

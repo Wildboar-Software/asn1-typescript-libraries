@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,21 +10,19 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-// export { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
-// export { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
-import { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
-// export { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
-import { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
-// export { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
-import { RobBitPatt, RobBitPatt_robBit0 /* IMPORTED_LONG_NAMED_BIT */, robBit0 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit1 /* IMPORTED_LONG_NAMED_BIT */, robBit1 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit2 /* IMPORTED_LONG_NAMED_BIT */, robBit2 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit3 /* IMPORTED_LONG_NAMED_BIT */, robBit3 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit4 /* IMPORTED_LONG_NAMED_BIT */, robBit4 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit5 /* IMPORTED_LONG_NAMED_BIT */, robBit5 /* IMPORTED_SHORT_NAMED_BIT */, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
-// export { RobBitPatt, RobBitPatt_robBit0 /* IMPORTED_LONG_NAMED_BIT */, robBit0 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit1 /* IMPORTED_LONG_NAMED_BIT */, robBit1 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit2 /* IMPORTED_LONG_NAMED_BIT */, robBit2 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit3 /* IMPORTED_LONG_NAMED_BIT */, robBit3 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit4 /* IMPORTED_LONG_NAMED_BIT */, robBit4 /* IMPORTED_SHORT_NAMED_BIT */, RobBitPatt_robBit5 /* IMPORTED_LONG_NAMED_BIT */, robBit5 /* IMPORTED_SHORT_NAMED_BIT */, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
 
+import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+
+import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+
+import { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
+
+import { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
+
+import { RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
 
 /**
  * @summary V90Diag_Item
@@ -87,7 +31,33 @@ import { RobBitPatt, RobBitPatt_robBit0 /* IMPORTED_LONG_NAMED_BIT */, robBit0 /
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * V90Diag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * V90Diag-Item ::= SEQUENCE {modeV90           Capabilities,
+ *               iNFO0Tx           V59String,
+ *               iNFO0Rx           V59String,
+ *               iNFO1A            V59String,
+ *               iNFO1d            V59String,
+ *               mP                V59String,
+ *               cP                V59String,
+ *               cPt               V59String,
+ *               jAsequence        V59String,
+ *               jDsequence        V59String,
+ *               v90TxLevel        TxPowerLevel,
+ *               txSymbolRate      SymbolRate OPTIONAL,
+ *               rxSymbolRate      SymbolRate OPTIONAL,
+ *               txCarrierFreq     CarrierFreq OPTIONAL,
+ *               rxCarrierFreq     CarrierFreq OPTIONAL,
+ *               txDataHistory     V59String,
+ *               rxDataHistory     V59String,
+ *               rxLevelEstimate   V59String OPTIONAL,
+ *               noiseEstimate     V59String OPTIONAL,
+ *               rxSignalQuality   V59String OPTIONAL,
+ *               nearEchoEstimate  V59String OPTIONAL,
+ *               farEchoEstimate   V59String OPTIONAL,
+ *               roundTripDelay    V59String OPTIONAL,
+ *               rBSpattern        RobBitPatt OPTIONAL,
+ *               digitalPadLoss    V59String OPTIONAL,
+ *               codecLaw          BOOLEAN OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -275,7 +245,6 @@ class V90Diag_Item {
         return new V90Diag_Item(_o.modeV90, _o.iNFO0Tx, _o.iNFO0Rx, _o.iNFO1A, _o.iNFO1d, _o.mP, _o.cP, _o.cPt, _o.jAsequence, _o.jDsequence, _o.v90TxLevel, _o.txSymbolRate, _o.rxSymbolRate, _o.txCarrierFreq, _o.rxCarrierFreq, _o.txDataHistory, _o.rxDataHistory, _o.rxLevelEstimate, _o.noiseEstimate, _o.rxSignalQuality, _o.nearEchoEstimate, _o.farEchoEstimate, _o.roundTripDelay, _o.rBSpattern, _o.digitalPadLoss, _o.codecLaw, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -288,32 +257,32 @@ class V90Diag_Item {
  */
 export
 const _root_component_type_list_1_spec_for_V90Diag_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("modeV90", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("iNFO0Tx", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("iNFO0Rx", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("iNFO1A", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("iNFO1d", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("mP", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("cP", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("cPt", false, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("jAsequence", false, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("jDsequence", false, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("v90TxLevel", false, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("txSymbolRate", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("rxSymbolRate", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("txCarrierFreq", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("rxCarrierFreq", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("txDataHistory", false, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("rxDataHistory", false, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("rxLevelEstimate", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("noiseEstimate", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("rxSignalQuality", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("nearEchoEstimate", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("farEchoEstimate", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("roundTripDelay", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("rBSpattern", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("digitalPadLoss", true, $.hasTag(_TagClass.context, 24), undefined, undefined),
-    new $.ComponentSpec("codecLaw", true, $.hasTag(_TagClass.context, 25), undefined, undefined)
+    new $.ComponentSpec("modeV90", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("iNFO0Tx", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("iNFO0Rx", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("iNFO1A", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("iNFO1d", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("mP", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("cP", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("cPt", false, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("jAsequence", false, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("jDsequence", false, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("v90TxLevel", false, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("txSymbolRate", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("rxSymbolRate", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("txCarrierFreq", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("rxCarrierFreq", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("txDataHistory", false, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("rxDataHistory", false, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("rxLevelEstimate", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("noiseEstimate", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("rxSignalQuality", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("nearEchoEstimate", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("farEchoEstimate", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("roundTripDelay", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("rBSpattern", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("digitalPadLoss", true, $.hasTag(_TagClass.context, 24)),
+    new $.ComponentSpec("codecLaw", true, $.hasTag(_TagClass.context, 25))
 ];
 
 /**
@@ -379,7 +348,7 @@ function _decode_V90Diag_Item (el: _Element): V90Diag_Item {
     let rBSpattern: OPTIONAL<RobBitPatt>;
     let digitalPadLoss: OPTIONAL<V59String>;
     let codecLaw: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "modeV90": (_el: _Element): void => { modeV90 = _decode_Capabilities(_el); },
         "iNFO0Tx": (_el: _Element): void => { iNFO0Tx = _decode_V59String(_el); },
@@ -458,7 +427,7 @@ let _cached_encoder_for_V90Diag_Item: $.ASN1Encoder<V90Diag_Item> | null = null;
  */
 export
 function _encode_V90Diag_Item (value: V90Diag_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_V90Diag_Item) { _cached_encoder_for_V90Diag_Item = function (value: V90Diag_Item, elGetter: $.ASN1Encoder<V90Diag_Item>): _Element {
+    if (!_cached_encoder_for_V90Diag_Item) { _cached_encoder_for_V90Diag_Item = function (value: V90Diag_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Capabilities(value.modeV90, $.BER),
@@ -493,6 +462,5 @@ function _encode_V90Diag_Item (value: V90Diag_Item, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_V90Diag_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

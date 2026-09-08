@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,16 +9,13 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { ErrorControl_Item_protocolNegotiation, _enum_for_ErrorControl_Item_protocolNegotiation, ErrorControl_Item_protocolNegotiation_disabled /* IMPORTED_LONG_ENUMERATION_ITEM */, disabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorControl_Item_protocolNegotiation_lapm /* IMPORTED_LONG_ENUMERATION_ITEM */, lapm /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorControl_Item_protocolNegotiation_v42annexA /* IMPORTED_LONG_ENUMERATION_ITEM */, v42annexA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ErrorControl_Item_protocolNegotiation, _encode_ErrorControl_Item_protocolNegotiation } from "../V59/ErrorControl-Item-protocolNegotiation.ta.mjs";
-// export { ErrorControl_Item_protocolNegotiation, _enum_for_ErrorControl_Item_protocolNegotiation, ErrorControl_Item_protocolNegotiation_disabled /* IMPORTED_LONG_ENUMERATION_ITEM */, disabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorControl_Item_protocolNegotiation_lapm /* IMPORTED_LONG_ENUMERATION_ITEM */, lapm /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorControl_Item_protocolNegotiation_v42annexA /* IMPORTED_LONG_ENUMERATION_ITEM */, v42annexA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ErrorControl_Item_protocolNegotiation, _encode_ErrorControl_Item_protocolNegotiation } from "../V59/ErrorControl-Item-protocolNegotiation.ta.mjs";
-import { ErrorControl_Item_v42featureNegotiation, ErrorControl_Item_v42featureNegotiation_singleSREJ /* IMPORTED_LONG_NAMED_BIT */, singleSREJ /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_multipleSREJ /* IMPORTED_LONG_NAMED_BIT */, multipleSREJ /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_hDLCBalMode /* IMPORTED_LONG_NAMED_BIT */, hDLCBalMode /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_testFrameSup /* IMPORTED_LONG_NAMED_BIT */, testFrameSup /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_fcs16 /* IMPORTED_LONG_NAMED_BIT */, fcs16 /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_fcs32 /* IMPORTED_LONG_NAMED_BIT */, fcs32 /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_v42phaseDetused /* IMPORTED_LONG_NAMED_BIT */, v42phaseDetused /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_odpAdpbypassed /* IMPORTED_LONG_NAMED_BIT */, odpAdpbypassed /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_v42fallbackDisc /* IMPORTED_LONG_NAMED_BIT */, v42fallbackDisc /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_v42fallbackBuf /* IMPORTED_LONG_NAMED_BIT */, v42fallbackBuf /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_v42fallbackUnBuf /* IMPORTED_LONG_NAMED_BIT */, v42fallbackUnBuf /* IMPORTED_SHORT_NAMED_BIT */, _decode_ErrorControl_Item_v42featureNegotiation, _encode_ErrorControl_Item_v42featureNegotiation } from "../V59/ErrorControl-Item-v42featureNegotiation.ta.mjs";
-// export { ErrorControl_Item_v42featureNegotiation, ErrorControl_Item_v42featureNegotiation_singleSREJ /* IMPORTED_LONG_NAMED_BIT */, singleSREJ /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_multipleSREJ /* IMPORTED_LONG_NAMED_BIT */, multipleSREJ /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_hDLCBalMode /* IMPORTED_LONG_NAMED_BIT */, hDLCBalMode /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_testFrameSup /* IMPORTED_LONG_NAMED_BIT */, testFrameSup /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_fcs16 /* IMPORTED_LONG_NAMED_BIT */, fcs16 /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_fcs32 /* IMPORTED_LONG_NAMED_BIT */, fcs32 /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_v42phaseDetused /* IMPORTED_LONG_NAMED_BIT */, v42phaseDetused /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_odpAdpbypassed /* IMPORTED_LONG_NAMED_BIT */, odpAdpbypassed /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_v42fallbackDisc /* IMPORTED_LONG_NAMED_BIT */, v42fallbackDisc /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_v42fallbackBuf /* IMPORTED_LONG_NAMED_BIT */, v42fallbackBuf /* IMPORTED_SHORT_NAMED_BIT */, ErrorControl_Item_v42featureNegotiation_v42fallbackUnBuf /* IMPORTED_LONG_NAMED_BIT */, v42fallbackUnBuf /* IMPORTED_SHORT_NAMED_BIT */, _decode_ErrorControl_Item_v42featureNegotiation, _encode_ErrorControl_Item_v42featureNegotiation } from "../V59/ErrorControl-Item-v42featureNegotiation.ta.mjs";
-import { ErrorControl_Item_ecStatistics, _decode_ErrorControl_Item_ecStatistics, _encode_ErrorControl_Item_ecStatistics } from "../V59/ErrorControl-Item-ecStatistics.ta.mjs";
-// export { ErrorControl_Item_ecStatistics, _decode_ErrorControl_Item_ecStatistics, _encode_ErrorControl_Item_ecStatistics } from "../V59/ErrorControl-Item-ecStatistics.ta.mjs";
+    ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { ErrorControl_Item_protocolNegotiation, _enum_for_ErrorControl_Item_protocolNegotiation, _decode_ErrorControl_Item_protocolNegotiation, _encode_ErrorControl_Item_protocolNegotiation } from "../V59/ErrorControl-Item-protocolNegotiation.ta.mjs";
 
+import { ErrorControl_Item_v42featureNegotiation, _decode_ErrorControl_Item_v42featureNegotiation, _encode_ErrorControl_Item_v42featureNegotiation } from "../V59/ErrorControl-Item-v42featureNegotiation.ta.mjs";
+
+import { ErrorControl_Item_ecStatistics, _decode_ErrorControl_Item_ecStatistics, _encode_ErrorControl_Item_ecStatistics } from "../V59/ErrorControl-Item-ecStatistics.ta.mjs";
 
 /**
  * @summary ErrorControl_Item
@@ -81,7 +24,31 @@ import { ErrorControl_Item_ecStatistics, _decode_ErrorControl_Item_ecStatistics,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ErrorControl-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ErrorControl-Item ::= SEQUENCE {protocolNegotiation
+ *                 ENUMERATED {disabled(0), lapm(1), v42annexA(2), ...
+ *                             },
+ *               v42featureNegotiation
+ *                 BIT STRING {singleSREJ(0), multipleSREJ(1), hDLCBalMode(2),
+ *                             testFrameSup(3), fcs16(4), fcs32(5),
+ *                             v42phaseDetused(6), odpAdpbypassed(7),
+ *                             v42fallbackDisc(8), v42fallbackBuf(9),
+ *                             v42fallbackUnBuf(10)},
+ *               txFrameSize            INTEGER(1..65535),
+ *               rxFrameSize            INTEGER(1..65535),
+ *               txWindow               INTEGER(1..65535),
+ *               rxWindow               INTEGER(1..65535),
+ *               linkTimeout            INTEGER(0..511) OPTIONAL,
+ *               ecStatistics
+ *                 SEQUENCE {framesSentAck          INTEGER(0..65535) OPTIONAL,
+ *                           framesRetransmitted    INTEGER(0..65535) OPTIONAL,
+ *                           framesReceivedAck      INTEGER(0..65535) OPTIONAL,
+ *                           framesReceivedDiscard  INTEGER(0..65535) OPTIONAL
+ *               },
+ *               txErrors               INTEGER(0..65535) OPTIONAL,
+ *               rxErrors               INTEGER(0..65535) OPTIONAL,
+ *               txThroughput           INTEGER(0..32767) OPTIONAL,
+ *               rxThroughput           INTEGER(0..32767) OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -167,7 +134,68 @@ class ErrorControl_Item {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        {
+                const _n = typeof this.txFrameSize === "bigint" ? Number(this.txFrameSize) : this.txFrameSize;
+                if (_n < 1 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item.txFrameSize violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.rxFrameSize === "bigint" ? Number(this.rxFrameSize) : this.rxFrameSize;
+                if (_n < 1 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item.rxFrameSize violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.txWindow === "bigint" ? Number(this.txWindow) : this.txWindow;
+                if (_n < 1 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item.txWindow violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.rxWindow === "bigint" ? Number(this.rxWindow) : this.rxWindow;
+                if (_n < 1 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item.rxWindow violates INTEGER range");
+                }
+            }
+
+        if (this.linkTimeout !== undefined) {
+                const _n = typeof this.linkTimeout === "bigint" ? Number(this.linkTimeout) : this.linkTimeout;
+                if (_n < 0 || _n > 511) {
+                    throw new ASN1OverflowError("ErrorControl_Item.linkTimeout violates INTEGER range");
+                }
+            }
+        if (this.txErrors !== undefined) {
+                const _n = typeof this.txErrors === "bigint" ? Number(this.txErrors) : this.txErrors;
+                if (_n < 0 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item.txErrors violates INTEGER range");
+                }
+            }
+
+        if (this.rxErrors !== undefined) {
+                const _n = typeof this.rxErrors === "bigint" ? Number(this.rxErrors) : this.rxErrors;
+                if (_n < 0 || _n > 65535) {
+                    throw new ASN1OverflowError("ErrorControl_Item.rxErrors violates INTEGER range");
+                }
+            }
+
+        if (this.txThroughput !== undefined) {
+                const _n = typeof this.txThroughput === "bigint" ? Number(this.txThroughput) : this.txThroughput;
+                if (_n < 0 || _n > 32767) {
+                    throw new ASN1OverflowError("ErrorControl_Item.txThroughput violates INTEGER range");
+                }
+            }
+
+        if (this.rxThroughput !== undefined) {
+                const _n = typeof this.rxThroughput === "bigint" ? Number(this.rxThroughput) : this.rxThroughput;
+                if (_n < 0 || _n > 32767) {
+                    throw new ASN1OverflowError("ErrorControl_Item.rxThroughput violates INTEGER range");
+                }
+            }}
 
     /**
      * @summary Restructures an object into a ErrorControl_Item
@@ -204,18 +232,18 @@ class ErrorControl_Item {
  */
 export
 const _root_component_type_list_1_spec_for_ErrorControl_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("protocolNegotiation", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("v42featureNegotiation", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("txFrameSize", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("rxFrameSize", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("txWindow", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("rxWindow", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("linkTimeout", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("ecStatistics", false, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("txErrors", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("rxErrors", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("txThroughput", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("rxThroughput", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("protocolNegotiation", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("v42featureNegotiation", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("txFrameSize", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("rxFrameSize", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("txWindow", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("rxWindow", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("linkTimeout", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("ecStatistics", false, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("txErrors", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("rxErrors", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("txThroughput", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("rxThroughput", true, $.hasTag(_TagClass.context, 11))
 ];
 
 /**
@@ -267,7 +295,7 @@ function _decode_ErrorControl_Item (el: _Element): ErrorControl_Item {
     let rxErrors: OPTIONAL<INTEGER>;
     let txThroughput: OPTIONAL<INTEGER>;
     let rxThroughput: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "protocolNegotiation": (_el: _Element): void => { protocolNegotiation = _decode_ErrorControl_Item_protocolNegotiation(_el); },
         "v42featureNegotiation": (_el: _Element): void => { v42featureNegotiation = _decode_ErrorControl_Item_v42featureNegotiation(_el); },
@@ -318,7 +346,7 @@ let _cached_encoder_for_ErrorControl_Item: $.ASN1Encoder<ErrorControl_Item> | nu
  */
 export
 function _encode_ErrorControl_Item (value: ErrorControl_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ErrorControl_Item) { _cached_encoder_for_ErrorControl_Item = function (value: ErrorControl_Item, elGetter: $.ASN1Encoder<ErrorControl_Item>): _Element {
+    if (!_cached_encoder_for_ErrorControl_Item) { _cached_encoder_for_ErrorControl_Item = function (value: ErrorControl_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ErrorControl_Item_protocolNegotiation(value.protocolNegotiation, $.BER),
@@ -339,6 +367,5 @@ function _encode_ErrorControl_Item (value: ErrorControl_Item, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_ErrorControl_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,12 +8,9 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-
 
 /**
  * @summary DTEDCE_Item
@@ -77,7 +19,16 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DTEDCE-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DTEDCE-Item ::= SEQUENCE {txFlowControl  V59String,
+ *               rxFlowControl  V59String,
+ *               protocol       V59String,
+ *               txSpeed        INTEGER(50..1677215),
+ *               rxSpeed        INTEGER(50..1677215),
+ *               txThroughput   INTEGER(50..1677215),
+ *               rxThroughput   INTEGER(50..1677215),
+ *               txErrors       INTEGER(0..65535),
+ *               rxErrors       INTEGER(0..65535),
+ *               ...}
  * ```
  * 
  * @class
@@ -145,7 +96,48 @@ class DTEDCE_Item {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        {
+                const _n = typeof this.txSpeed === "bigint" ? Number(this.txSpeed) : this.txSpeed;
+                if (_n < 50 || _n > 1677215) {
+                    throw new ASN1OverflowError("DTEDCE_Item.txSpeed violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.rxSpeed === "bigint" ? Number(this.rxSpeed) : this.rxSpeed;
+                if (_n < 50 || _n > 1677215) {
+                    throw new ASN1OverflowError("DTEDCE_Item.rxSpeed violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.txThroughput === "bigint" ? Number(this.txThroughput) : this.txThroughput;
+                if (_n < 50 || _n > 1677215) {
+                    throw new ASN1OverflowError("DTEDCE_Item.txThroughput violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.rxThroughput === "bigint" ? Number(this.rxThroughput) : this.rxThroughput;
+                if (_n < 50 || _n > 1677215) {
+                    throw new ASN1OverflowError("DTEDCE_Item.rxThroughput violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.txErrors === "bigint" ? Number(this.txErrors) : this.txErrors;
+                if (_n < 0 || _n > 65535) {
+                    throw new ASN1OverflowError("DTEDCE_Item.txErrors violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.rxErrors === "bigint" ? Number(this.rxErrors) : this.rxErrors;
+                if (_n < 0 || _n > 65535) {
+                    throw new ASN1OverflowError("DTEDCE_Item.rxErrors violates INTEGER range");
+                }
+            }}
 
     /**
      * @summary Restructures an object into a DTEDCE_Item
@@ -163,7 +155,6 @@ class DTEDCE_Item {
         return new DTEDCE_Item(_o.txFlowControl, _o.rxFlowControl, _o.protocol, _o.txSpeed, _o.rxSpeed, _o.txThroughput, _o.rxThroughput, _o.txErrors, _o.rxErrors, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -176,15 +167,15 @@ class DTEDCE_Item {
  */
 export
 const _root_component_type_list_1_spec_for_DTEDCE_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("txFlowControl", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("rxFlowControl", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("protocol", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("txSpeed", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("rxSpeed", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("txThroughput", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("rxThroughput", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("txErrors", false, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("rxErrors", false, $.hasTag(_TagClass.context, 8), undefined, undefined)
+    new $.ComponentSpec("txFlowControl", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("rxFlowControl", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("protocol", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("txSpeed", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("rxSpeed", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("txThroughput", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("rxThroughput", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("txErrors", false, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("rxErrors", false, $.hasTag(_TagClass.context, 8))
 ];
 
 /**
@@ -282,7 +273,7 @@ let _cached_encoder_for_DTEDCE_Item: $.ASN1Encoder<DTEDCE_Item> | null = null;
  */
 export
 function _encode_DTEDCE_Item (value: DTEDCE_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DTEDCE_Item) { _cached_encoder_for_DTEDCE_Item = function (value: DTEDCE_Item, elGetter: $.ASN1Encoder<DTEDCE_Item>): _Element {
+    if (!_cached_encoder_for_DTEDCE_Item) { _cached_encoder_for_DTEDCE_Item = function (value: DTEDCE_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_V59String(value.txFlowControl, $.BER),
@@ -300,6 +291,5 @@ function _encode_DTEDCE_Item (value: DTEDCE_Item, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_DTEDCE_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

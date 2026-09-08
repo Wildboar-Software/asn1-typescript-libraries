@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,11 +8,8 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-
-
+    ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 /**
  * @summary CallProgressRes
@@ -120,20 +62,30 @@ let _cached_decoder_for_CallProgressRes: $.ASN1Decoder<CallProgressRes> | null =
 export
 function _decode_CallProgressRes (el: _Element): CallProgressRes {
     if (!_cached_decoder_for_CallProgressRes) { _cached_decoder_for_CallProgressRes = $._decode_extensible_choice<CallProgressRes>({
-    "CONTEXT 0": [ "noPrevCall", $._decodeInteger ],
-    "CONTEXT 1": [ "noDialTone", $._decodeInteger ],
-    "CONTEXT 2": [ "noRingBack", $._decodeInteger ],
-    "CONTEXT 3": [ "reOrderTone", $._decodeInteger ],
-    "CONTEXT 4": [ "busyTone", $._decodeInteger ],
-    "CONTEXT 5": [ "voiceDetected", $._decodeInteger ],
-    "CONTEXT 6": [ "aNSdetected", $._decodeInteger ],
-    "CONTEXT 7": [ "aNSamDetected", $._decodeInteger ],
-    "CONTEXT 8": [ "v8bisDetected", $._decodeInteger ],
-    "CONTEXT 9": [ "txpDetected", $._decodeInteger ],
-    "CONTEXT 10": [ "unKnownSig", $._decodeInteger ],
-    "CONTEXT 11": [ "connected", $._decodeInteger ]
-}); }
-    return _cached_decoder_for_CallProgressRes(el);
+        "CONTEXT 0": [ "noPrevCall", $._decodeInteger ],
+        "CONTEXT 1": [ "noDialTone", $._decodeInteger ],
+        "CONTEXT 2": [ "noRingBack", $._decodeInteger ],
+        "CONTEXT 3": [ "reOrderTone", $._decodeInteger ],
+        "CONTEXT 4": [ "busyTone", $._decodeInteger ],
+        "CONTEXT 5": [ "voiceDetected", $._decodeInteger ],
+        "CONTEXT 6": [ "aNSdetected", $._decodeInteger ],
+        "CONTEXT 7": [ "aNSamDetected", $._decodeInteger ],
+        "CONTEXT 8": [ "v8bisDetected", $._decodeInteger ],
+        "CONTEXT 9": [ "txpDetected", $._decodeInteger ],
+        "CONTEXT 10": [ "unKnownSig", $._decodeInteger ],
+        "CONTEXT 11": [ "connected", $._decodeInteger ]
+    }); }
+        const value = _cached_decoder_for_CallProgressRes(el);
+        const _key = Object.keys(value)[0];
+        const _expected: Record<string, number> = { "noPrevCall": 0, "noDialTone": 1, "noRingBack": 2, "reOrderTone": 3, "busyTone": 4, "voiceDetected": 5, "aNSdetected": 6, "aNSamDetected": 7, "v8bisDetected": 8, "txpDetected": 9, "unKnownSig": 20, "connected": 40 }
+        if (_key !== undefined && Object.prototype.hasOwnProperty.call(_expected, _key)) {
+            const _raw = (value as Record<string, unknown>)[_key];
+            const _n = typeof _raw === "bigint" ? Number(_raw) : Number(_raw);
+            if (_n !== _expected[_key]) {
+                throw new ASN1OverflowError("CallProgressRes violates INTEGER range");
+            }
+        }
+        return value;
 }
 
 let _cached_encoder_for_CallProgressRes: $.ASN1Encoder<CallProgressRes> | null = null;
@@ -148,21 +100,20 @@ let _cached_encoder_for_CallProgressRes: $.ASN1Encoder<CallProgressRes> | null =
 export
 function _encode_CallProgressRes (value: CallProgressRes, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_CallProgressRes) { _cached_encoder_for_CallProgressRes = $._encode_choice<CallProgressRes>({
-    "noPrevCall": $._encodeInteger,
-    "noDialTone": $._encodeInteger,
-    "noRingBack": $._encodeInteger,
-    "reOrderTone": $._encodeInteger,
-    "busyTone": $._encodeInteger,
-    "voiceDetected": $._encodeInteger,
-    "aNSdetected": $._encodeInteger,
-    "aNSamDetected": $._encodeInteger,
-    "v8bisDetected": $._encodeInteger,
-    "txpDetected": $._encodeInteger,
-    "unKnownSig": $._encodeInteger,
-    "connected": $._encodeInteger,
+    "noPrevCall": $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER),
+    "noDialTone": $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER),
+    "noRingBack": $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER),
+    "reOrderTone": $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER),
+    "busyTone": $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.BER),
+    "voiceDetected": $._encode_implicit(_TagClass.context, 5, () => $._encodeInteger, $.BER),
+    "aNSdetected": $._encode_implicit(_TagClass.context, 6, () => $._encodeInteger, $.BER),
+    "aNSamDetected": $._encode_implicit(_TagClass.context, 7, () => $._encodeInteger, $.BER),
+    "v8bisDetected": $._encode_implicit(_TagClass.context, 8, () => $._encodeInteger, $.BER),
+    "txpDetected": $._encode_implicit(_TagClass.context, 9, () => $._encodeInteger, $.BER),
+    "unKnownSig": $._encode_implicit(_TagClass.context, 10, () => $._encodeInteger, $.BER),
+    "connected": $._encode_implicit(_TagClass.context, 11, () => $._encodeInteger, $.BER),
 }, $.BER); }
     return _cached_encoder_for_CallProgressRes(value, elGetter);
 }
-
 
 /* eslint-enable */

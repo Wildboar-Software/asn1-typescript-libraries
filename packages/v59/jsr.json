@@ -1,0 +1,20 @@
+{
+  "name": "@wildboar/v59",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./V59": "./src/lib/modules/V59/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}

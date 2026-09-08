@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,11 +8,8 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-
-
+    ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 /**
  * @summary V8bisDiag_Item_ackNak_nAK
@@ -76,7 +18,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * V8bisDiag-Item-ackNak-nAK ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * V8bisDiag-Item-ackNak-nAK ::= CHOICE {none  INTEGER(0),
+ *                                     nAK1  INTEGER(1),
+ *                                     nAK2  INTEGER(2),
+ *                                     nAK3  INTEGER(3),
+ *                                     nAK4  INTEGER(4)}
  * ```
  */
 export
@@ -98,13 +44,23 @@ let _cached_decoder_for_V8bisDiag_Item_ackNak_nAK: $.ASN1Decoder<V8bisDiag_Item_
 export
 function _decode_V8bisDiag_Item_ackNak_nAK (el: _Element): V8bisDiag_Item_ackNak_nAK {
     if (!_cached_decoder_for_V8bisDiag_Item_ackNak_nAK) { _cached_decoder_for_V8bisDiag_Item_ackNak_nAK = $._decode_inextensible_choice<V8bisDiag_Item_ackNak_nAK>({
-    "CONTEXT 0": [ "none", $._decodeInteger ],
-    "CONTEXT 1": [ "nAK1", $._decodeInteger ],
-    "CONTEXT 2": [ "nAK2", $._decodeInteger ],
-    "CONTEXT 3": [ "nAK3", $._decodeInteger ],
-    "CONTEXT 4": [ "nAK4", $._decodeInteger ]
-}); }
-    return _cached_decoder_for_V8bisDiag_Item_ackNak_nAK(el);
+        "CONTEXT 0": [ "none", $._decodeInteger ],
+        "CONTEXT 1": [ "nAK1", $._decodeInteger ],
+        "CONTEXT 2": [ "nAK2", $._decodeInteger ],
+        "CONTEXT 3": [ "nAK3", $._decodeInteger ],
+        "CONTEXT 4": [ "nAK4", $._decodeInteger ]
+    }); }
+        const value = _cached_decoder_for_V8bisDiag_Item_ackNak_nAK(el);
+        const _key = Object.keys(value)[0];
+        const _expected: Record<string, number> = { "none": 0, "nAK1": 1, "nAK2": 2, "nAK3": 3, "nAK4": 4 }
+        if (_key !== undefined && Object.prototype.hasOwnProperty.call(_expected, _key)) {
+            const _raw = (value as Record<string, unknown>)[_key];
+            const _n = typeof _raw === "bigint" ? Number(_raw) : Number(_raw);
+            if (_n !== _expected[_key]) {
+                throw new ASN1OverflowError("V8bisDiag_Item_ackNak_nAK violates INTEGER range");
+            }
+        }
+        return value;
 }
 
 let _cached_encoder_for_V8bisDiag_Item_ackNak_nAK: $.ASN1Encoder<V8bisDiag_Item_ackNak_nAK> | null = null;
@@ -119,14 +75,13 @@ let _cached_encoder_for_V8bisDiag_Item_ackNak_nAK: $.ASN1Encoder<V8bisDiag_Item_
 export
 function _encode_V8bisDiag_Item_ackNak_nAK (value: V8bisDiag_Item_ackNak_nAK, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_V8bisDiag_Item_ackNak_nAK) { _cached_encoder_for_V8bisDiag_Item_ackNak_nAK = $._encode_choice<V8bisDiag_Item_ackNak_nAK>({
-    "none": $._encodeInteger,
-    "nAK1": $._encodeInteger,
-    "nAK2": $._encodeInteger,
-    "nAK3": $._encodeInteger,
-    "nAK4": $._encodeInteger,
+    "none": $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER),
+    "nAK1": $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER),
+    "nAK2": $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER),
+    "nAK3": $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER),
+    "nAK4": $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.BER),
 }, $.BER); }
     return _cached_encoder_for_V8bisDiag_Item_ackNak_nAK(value, elGetter);
 }
-
 
 /* eslint-enable */

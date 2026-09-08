@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,11 +8,9 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-
 
 /**
  * @summary V8bisDiag_Item_cL
@@ -77,7 +19,7 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * V8bisDiag-Item-cL ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * V8bisDiag-Item-cL ::= SEQUENCE {cLSequence  V59String}
  * ```
  * 
  * @class
@@ -109,7 +51,6 @@ class V8bisDiag_Item_cL {
         return new V8bisDiag_Item_cL(_o.cLSequence);
     }
 
-
 }
 
 /**
@@ -122,7 +63,7 @@ class V8bisDiag_Item_cL {
  */
 export
 const _root_component_type_list_1_spec_for_V8bisDiag_Item_cL: $.ComponentSpec[] = [
-    new $.ComponentSpec("cLSequence", false, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("cLSequence", false, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -188,7 +129,7 @@ let _cached_encoder_for_V8bisDiag_Item_cL: $.ASN1Encoder<V8bisDiag_Item_cL> | nu
  */
 export
 function _encode_V8bisDiag_Item_cL (value: V8bisDiag_Item_cL, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_V8bisDiag_Item_cL) { _cached_encoder_for_V8bisDiag_Item_cL = function (value: V8bisDiag_Item_cL, elGetter: $.ASN1Encoder<V8bisDiag_Item_cL>): _Element {
+    if (!_cached_encoder_for_V8bisDiag_Item_cL) { _cached_encoder_for_V8bisDiag_Item_cL = function (value: V8bisDiag_Item_cL): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_V59String(value.cLSequence, $.BER)
@@ -197,6 +138,5 @@ function _encode_V8bisDiag_Item_cL (value: V8bisDiag_Item_cL, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_V8bisDiag_Item_cL(value, elGetter);
 }
-
 
 /* eslint-enable */

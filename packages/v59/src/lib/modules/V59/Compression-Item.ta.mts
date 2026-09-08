@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,18 +9,15 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { Compression_Item_compressionNegotiationResult, _enum_for_Compression_Item_compressionNegotiationResult, Compression_Item_compressionNegotiationResult_none /* IMPORTED_LONG_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_v42bisOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, v42bisOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_v42bisBoth /* IMPORTED_LONG_ENUMERATION_ITEM */, v42bisBoth /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_v44Both /* IMPORTED_LONG_ENUMERATION_ITEM */, v44Both /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_v44Only /* IMPORTED_LONG_ENUMERATION_ITEM */, v44Only /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Compression_Item_compressionNegotiationResult, _encode_Compression_Item_compressionNegotiationResult } from "../V59/Compression-Item-compressionNegotiationResult.ta.mjs";
-// export { Compression_Item_compressionNegotiationResult, _enum_for_Compression_Item_compressionNegotiationResult, Compression_Item_compressionNegotiationResult_none /* IMPORTED_LONG_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_v42bisOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, v42bisOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_v42bisBoth /* IMPORTED_LONG_ENUMERATION_ITEM */, v42bisBoth /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_v44Both /* IMPORTED_LONG_ENUMERATION_ITEM */, v44Both /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_v44Only /* IMPORTED_LONG_ENUMERATION_ITEM */, v44Only /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_compressionNegotiationResult_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Compression_Item_compressionNegotiationResult, _encode_Compression_Item_compressionNegotiationResult } from "../V59/Compression-Item-compressionNegotiationResult.ta.mjs";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-// export { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-import { Compression_Item_v42bisCompressionActive, _enum_for_Compression_Item_v42bisCompressionActive, Compression_Item_v42bisCompressionActive_none /* IMPORTED_LONG_ENUMERATION_ITEM */, Compression_Item_v42bisCompressionActive_initOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, initOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_v42bisCompressionActive_respOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, respOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_v42bisCompressionActive_both /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Compression_Item_v42bisCompressionActive, _encode_Compression_Item_v42bisCompressionActive } from "../V59/Compression-Item-v42bisCompressionActive.ta.mjs";
-// export { Compression_Item_v42bisCompressionActive, _enum_for_Compression_Item_v42bisCompressionActive, Compression_Item_v42bisCompressionActive_none /* IMPORTED_LONG_ENUMERATION_ITEM */, Compression_Item_v42bisCompressionActive_initOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, initOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_v42bisCompressionActive_respOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, respOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_v42bisCompressionActive_both /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Compression_Item_v42bisCompressionActive, _encode_Compression_Item_v42bisCompressionActive } from "../V59/Compression-Item-v42bisCompressionActive.ta.mjs";
-import { Compression_Item_v44CompressionActive, _enum_for_Compression_Item_v44CompressionActive, Compression_Item_v44CompressionActive_none /* IMPORTED_LONG_ENUMERATION_ITEM */, Compression_Item_v44CompressionActive_txOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, txOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_v44CompressionActive_rxOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, rxOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_v44CompressionActive_both /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Compression_Item_v44CompressionActive, _encode_Compression_Item_v44CompressionActive } from "../V59/Compression-Item-v44CompressionActive.ta.mjs";
-// export { Compression_Item_v44CompressionActive, _enum_for_Compression_Item_v44CompressionActive, Compression_Item_v44CompressionActive_none /* IMPORTED_LONG_ENUMERATION_ITEM */, Compression_Item_v44CompressionActive_txOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, txOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_v44CompressionActive_rxOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, rxOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, Compression_Item_v44CompressionActive_both /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Compression_Item_v44CompressionActive, _encode_Compression_Item_v44CompressionActive } from "../V59/Compression-Item-v44CompressionActive.ta.mjs";
+    ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Compression_Item_compressionNegotiationResult, _enum_for_Compression_Item_compressionNegotiationResult, _decode_Compression_Item_compressionNegotiationResult, _encode_Compression_Item_compressionNegotiationResult } from "../V59/Compression-Item-compressionNegotiationResult.ta.mjs";
 
+import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+
+import { Compression_Item_v42bisCompressionActive, _enum_for_Compression_Item_v42bisCompressionActive, _decode_Compression_Item_v42bisCompressionActive, _encode_Compression_Item_v42bisCompressionActive } from "../V59/Compression-Item-v42bisCompressionActive.ta.mjs";
+
+import { Compression_Item_v44CompressionActive, _enum_for_Compression_Item_v44CompressionActive, _decode_Compression_Item_v44CompressionActive, _encode_Compression_Item_v44CompressionActive } from "../V59/Compression-Item-v44CompressionActive.ta.mjs";
 
 /**
  * @summary Compression_Item
@@ -83,7 +26,24 @@ import { Compression_Item_v44CompressionActive, _enum_for_Compression_Item_v44Co
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Compression-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Compression-Item ::= SEQUENCE {compressionNegotiationResult
+ *                 ENUMERATED {none(0), v42bisOnly(1), v42bisBoth(2), v44Both(3),
+ *                             v44Only(4), other(5)},
+ *               modeV42B                      Capabilities,
+ *               v42bisCompressionActive
+ *                 ENUMERATED {none(0), initOnly(1), respOnly(2), both(3)},
+ *               v42bisDictionarySize          INTEGER(512..65535) OPTIONAL,
+ *               v42bisStringLength            INTEGER(6..250) OPTIONAL,
+ *               modeV44                       Capabilities,
+ *               v44CompressionActive
+ *                 ENUMERATED {none(0), txOnly(1), rxOnly(2), both(3)},
+ *               v44EncoderDictionarySize      INTEGER(256..65535) OPTIONAL,
+ *               v44EncoderHistorySize         INTEGER(512..1677215) OPTIONAL,
+ *               v44EncoderStringLength        INTEGER(32..255) OPTIONAL,
+ *               v44DecoderDictionarySize      INTEGER(256..65535) OPTIONAL,
+ *               v44DecoderHistorySize         INTEGER(512..1677215) OPTIONAL,
+ *               v44DecoderStringLength        INTEGER(32..255) OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -175,7 +135,62 @@ class Compression_Item {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (this.v42bisDictionarySize !== undefined) {
+                const _n = typeof this.v42bisDictionarySize === "bigint" ? Number(this.v42bisDictionarySize) : this.v42bisDictionarySize;
+                if (_n < 512 || _n > 65535) {
+                    throw new ASN1OverflowError("Compression_Item.v42bisDictionarySize violates INTEGER range");
+                }
+            }
+
+        if (this.v42bisStringLength !== undefined) {
+                const _n = typeof this.v42bisStringLength === "bigint" ? Number(this.v42bisStringLength) : this.v42bisStringLength;
+                if (_n < 6 || _n > 250) {
+                    throw new ASN1OverflowError("Compression_Item.v42bisStringLength violates INTEGER range");
+                }
+            }
+
+        if (this.v44EncoderDictionarySize !== undefined) {
+                const _n = typeof this.v44EncoderDictionarySize === "bigint" ? Number(this.v44EncoderDictionarySize) : this.v44EncoderDictionarySize;
+                if (_n < 256 || _n > 65535) {
+                    throw new ASN1OverflowError("Compression_Item.v44EncoderDictionarySize violates INTEGER range");
+                }
+            }
+
+        if (this.v44EncoderHistorySize !== undefined) {
+                const _n = typeof this.v44EncoderHistorySize === "bigint" ? Number(this.v44EncoderHistorySize) : this.v44EncoderHistorySize;
+                if (_n < 512 || _n > 1677215) {
+                    throw new ASN1OverflowError("Compression_Item.v44EncoderHistorySize violates INTEGER range");
+                }
+            }
+
+        if (this.v44EncoderStringLength !== undefined) {
+                const _n = typeof this.v44EncoderStringLength === "bigint" ? Number(this.v44EncoderStringLength) : this.v44EncoderStringLength;
+                if (_n < 32 || _n > 255) {
+                    throw new ASN1OverflowError("Compression_Item.v44EncoderStringLength violates INTEGER range");
+                }
+            }
+
+        if (this.v44DecoderDictionarySize !== undefined) {
+                const _n = typeof this.v44DecoderDictionarySize === "bigint" ? Number(this.v44DecoderDictionarySize) : this.v44DecoderDictionarySize;
+                if (_n < 256 || _n > 65535) {
+                    throw new ASN1OverflowError("Compression_Item.v44DecoderDictionarySize violates INTEGER range");
+                }
+            }
+
+        if (this.v44DecoderHistorySize !== undefined) {
+                const _n = typeof this.v44DecoderHistorySize === "bigint" ? Number(this.v44DecoderHistorySize) : this.v44DecoderHistorySize;
+                if (_n < 512 || _n > 1677215) {
+                    throw new ASN1OverflowError("Compression_Item.v44DecoderHistorySize violates INTEGER range");
+                }
+            }
+
+        if (this.v44DecoderStringLength !== undefined) {
+                const _n = typeof this.v44DecoderStringLength === "bigint" ? Number(this.v44DecoderStringLength) : this.v44DecoderStringLength;
+                if (_n < 32 || _n > 255) {
+                    throw new ASN1OverflowError("Compression_Item.v44DecoderStringLength violates INTEGER range");
+                }
+            }}
 
     /**
      * @summary Restructures an object into a Compression_Item
@@ -224,19 +239,19 @@ class Compression_Item {
  */
 export
 const _root_component_type_list_1_spec_for_Compression_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("compressionNegotiationResult", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("modeV42B", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("v42bisCompressionActive", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("v42bisDictionarySize", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("v42bisStringLength", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("modeV44", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("v44CompressionActive", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("v44EncoderDictionarySize", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("v44EncoderHistorySize", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("v44EncoderStringLength", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("v44DecoderDictionarySize", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("v44DecoderHistorySize", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("v44DecoderStringLength", true, $.hasTag(_TagClass.context, 12), undefined, undefined)
+    new $.ComponentSpec("compressionNegotiationResult", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("modeV42B", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("v42bisCompressionActive", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("v42bisDictionarySize", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("v42bisStringLength", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("modeV44", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("v44CompressionActive", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("v44EncoderDictionarySize", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("v44EncoderHistorySize", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("v44EncoderStringLength", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("v44DecoderDictionarySize", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("v44DecoderHistorySize", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("v44DecoderStringLength", true, $.hasTag(_TagClass.context, 12))
 ];
 
 /**
@@ -289,7 +304,7 @@ function _decode_Compression_Item (el: _Element): Compression_Item {
     let v44DecoderDictionarySize: OPTIONAL<INTEGER>;
     let v44DecoderHistorySize: OPTIONAL<INTEGER>;
     let v44DecoderStringLength: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "compressionNegotiationResult": (_el: _Element): void => { compressionNegotiationResult = _decode_Compression_Item_compressionNegotiationResult(_el); },
         "modeV42B": (_el: _Element): void => { modeV42B = _decode_Capabilities(_el); },
@@ -342,7 +357,7 @@ let _cached_encoder_for_Compression_Item: $.ASN1Encoder<Compression_Item> | null
  */
 export
 function _encode_Compression_Item (value: Compression_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Compression_Item) { _cached_encoder_for_Compression_Item = function (value: Compression_Item, elGetter: $.ASN1Encoder<Compression_Item>): _Element {
+    if (!_cached_encoder_for_Compression_Item) { _cached_encoder_for_Compression_Item = function (value: Compression_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Compression_Item_compressionNegotiationResult(value.compressionNegotiationResult, $.BER),
@@ -364,6 +379,5 @@ function _encode_Compression_Item (value: Compression_Item, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_Compression_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

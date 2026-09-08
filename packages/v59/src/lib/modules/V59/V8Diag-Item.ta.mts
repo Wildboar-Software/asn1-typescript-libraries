@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,13 +8,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-import { V8Diag_Item_v8Result, _enum_for_V8Diag_Item_v8Result, V8Diag_Item_v8Result_v8ComNeg /* IMPORTED_LONG_ENUMERATION_ITEM */, v8ComNeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, V8Diag_Item_v8Result_v8NoComNeg /* IMPORTED_LONG_ENUMERATION_ITEM */, v8NoComNeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, V8Diag_Item_v8Result_v8NoNegAuto /* IMPORTED_LONG_ENUMERATION_ITEM */, v8NoNegAuto /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_V8Diag_Item_v8Result, _encode_V8Diag_Item_v8Result } from "../V59/V8Diag-Item-v8Result.ta.mjs";
-// export { V8Diag_Item_v8Result, _enum_for_V8Diag_Item_v8Result, V8Diag_Item_v8Result_v8ComNeg /* IMPORTED_LONG_ENUMERATION_ITEM */, v8ComNeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, V8Diag_Item_v8Result_v8NoComNeg /* IMPORTED_LONG_ENUMERATION_ITEM */, v8NoComNeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, V8Diag_Item_v8Result_v8NoNegAuto /* IMPORTED_LONG_ENUMERATION_ITEM */, v8NoNegAuto /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_V8Diag_Item_v8Result, _encode_V8Diag_Item_v8Result } from "../V59/V8Diag-Item-v8Result.ta.mjs";
 
+import { V8Diag_Item_v8Result, _enum_for_V8Diag_Item_v8Result, _decode_V8Diag_Item_v8Result, _encode_V8Diag_Item_v8Result } from "../V59/V8Diag-Item-v8Result.ta.mjs";
 
 /**
  * @summary V8Diag_Item
@@ -79,7 +21,11 @@ import { V8Diag_Item_v8Result, _enum_for_V8Diag_Item_v8Result, V8Diag_Item_v8Res
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * V8Diag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * V8Diag-Item ::= SEQUENCE {ci        V59String,
+ *               cm        V59String,
+ *               jm        V59String,
+ *               v8Result  ENUMERATED {v8ComNeg(0), v8NoComNeg(1), v8NoNegAuto(2)}
+ *     }
  * ```
  * 
  * @class
@@ -148,10 +94,10 @@ class V8Diag_Item {
  */
 export
 const _root_component_type_list_1_spec_for_V8Diag_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("ci", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("cm", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("jm", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("v8Result", false, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("ci", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("cm", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("jm", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("v8Result", false, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -229,7 +175,7 @@ let _cached_encoder_for_V8Diag_Item: $.ASN1Encoder<V8Diag_Item> | null = null;
  */
 export
 function _encode_V8Diag_Item (value: V8Diag_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_V8Diag_Item) { _cached_encoder_for_V8Diag_Item = function (value: V8Diag_Item, elGetter: $.ASN1Encoder<V8Diag_Item>): _Element {
+    if (!_cached_encoder_for_V8Diag_Item) { _cached_encoder_for_V8Diag_Item = function (value: V8Diag_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_V59String(value.ci, $.BER),
@@ -241,6 +187,5 @@ function _encode_V8Diag_Item (value: V8Diag_Item, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_V8Diag_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,22 +8,19 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { V8bisDiag_Item_mR, _decode_V8bisDiag_Item_mR, _encode_V8bisDiag_Item_mR } from "../V59/V8bisDiag-Item-mR.ta.mjs";
-// export { V8bisDiag_Item_mR, _decode_V8bisDiag_Item_mR, _encode_V8bisDiag_Item_mR } from "../V59/V8bisDiag-Item-mR.ta.mjs";
-import { V8bisDiag_Item_cR, _decode_V8bisDiag_Item_cR, _encode_V8bisDiag_Item_cR } from "../V59/V8bisDiag-Item-cR.ta.mjs";
-// export { V8bisDiag_Item_cR, _decode_V8bisDiag_Item_cR, _encode_V8bisDiag_Item_cR } from "../V59/V8bisDiag-Item-cR.ta.mjs";
-import { V8bisDiag_Item_cL, _decode_V8bisDiag_Item_cL, _encode_V8bisDiag_Item_cL } from "../V59/V8bisDiag-Item-cL.ta.mjs";
-// export { V8bisDiag_Item_cL, _decode_V8bisDiag_Item_cL, _encode_V8bisDiag_Item_cL } from "../V59/V8bisDiag-Item-cL.ta.mjs";
-import { V8bisDiag_Item_cLR, _decode_V8bisDiag_Item_cLR, _encode_V8bisDiag_Item_cLR } from "../V59/V8bisDiag-Item-cLR.ta.mjs";
-// export { V8bisDiag_Item_cLR, _decode_V8bisDiag_Item_cLR, _encode_V8bisDiag_Item_cLR } from "../V59/V8bisDiag-Item-cLR.ta.mjs";
-import { V8bisDiag_Item_eS, _decode_V8bisDiag_Item_eS, _encode_V8bisDiag_Item_eS } from "../V59/V8bisDiag-Item-eS.ta.mjs";
-// export { V8bisDiag_Item_eS, _decode_V8bisDiag_Item_eS, _encode_V8bisDiag_Item_eS } from "../V59/V8bisDiag-Item-eS.ta.mjs";
-import { V8bisDiag_Item_ackNak, _decode_V8bisDiag_Item_ackNak, _encode_V8bisDiag_Item_ackNak } from "../V59/V8bisDiag-Item-ackNak.ta.mjs";
-// export { V8bisDiag_Item_ackNak, _decode_V8bisDiag_Item_ackNak, _encode_V8bisDiag_Item_ackNak } from "../V59/V8bisDiag-Item-ackNak.ta.mjs";
 
+import { V8bisDiag_Item_cR, _decode_V8bisDiag_Item_cR, _encode_V8bisDiag_Item_cR } from "../V59/V8bisDiag-Item-cR.ta.mjs";
+
+import { V8bisDiag_Item_cL, _decode_V8bisDiag_Item_cL, _encode_V8bisDiag_Item_cL } from "../V59/V8bisDiag-Item-cL.ta.mjs";
+
+import { V8bisDiag_Item_cLR, _decode_V8bisDiag_Item_cLR, _encode_V8bisDiag_Item_cLR } from "../V59/V8bisDiag-Item-cLR.ta.mjs";
+
+import { V8bisDiag_Item_eS, _decode_V8bisDiag_Item_eS, _encode_V8bisDiag_Item_eS } from "../V59/V8bisDiag-Item-eS.ta.mjs";
+
+import { V8bisDiag_Item_ackNak, _decode_V8bisDiag_Item_ackNak, _encode_V8bisDiag_Item_ackNak } from "../V59/V8bisDiag-Item-ackNak.ta.mjs";
 
 /**
  * @summary V8bisDiag_Item
@@ -87,7 +29,32 @@ import { V8bisDiag_Item_ackNak, _decode_V8bisDiag_Item_ackNak, _encode_V8bisDiag
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * V8bisDiag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * V8bisDiag-Item ::= SEQUENCE {v8bisTransaction  INTEGER(1..13),
+ *               mR
+ *                 SEQUENCE {mRtype      V8bisSignalType,
+ *                           mRSequence  V59String},
+ *               cR
+ *                 SEQUENCE {cRtype      V8bisSignalType,
+ *                           cRSequence  V59String},
+ *               cL                SEQUENCE {cLSequence  V59String},
+ *               cLR               SEQUENCE {cLRSequence  V59String},
+ *               eS
+ *                 SEQUENCE {eSType
+ *                             CHOICE {nONE  INTEGER(0),
+ *                                     i     INTEGER(1),
+ *                                     r     INTEGER(2)},
+ *                           eSSequence  V59String},
+ *               ackNak
+ *                 SEQUENCE {aCK
+ *                             CHOICE {nONE  INTEGER(0),
+ *                                     aCK1  INTEGER(1),
+ *                                     aCK2  INTEGER(2)},
+ *                           nAK
+ *                             CHOICE {none  INTEGER(0),
+ *                                     nAK1  INTEGER(1),
+ *                                     nAK2  INTEGER(2),
+ *                                     nAK3  INTEGER(3),
+ *                                     nAK4  INTEGER(4)}}}
  * ```
  * 
  * @class
@@ -137,7 +104,13 @@ class V8bisDiag_Item {
          * @readonly
          */
         readonly ackNak: V8bisDiag_Item_ackNak
-    ) {}
+    ) {
+        {
+                const _n = typeof this.v8bisTransaction === "bigint" ? Number(this.v8bisTransaction) : this.v8bisTransaction;
+                if (_n < 1 || _n > 13) {
+                    throw new ASN1OverflowError("V8bisDiag_Item.v8bisTransaction violates INTEGER range");
+                }
+            }}
 
     /**
      * @summary Restructures an object into a V8bisDiag_Item
@@ -155,7 +128,6 @@ class V8bisDiag_Item {
         return new V8bisDiag_Item(_o.v8bisTransaction, _o.mR, _o.cR, _o.cL, _o.cLR, _o.eS, _o.ackNak);
     }
 
-
 }
 
 /**
@@ -168,13 +140,13 @@ class V8bisDiag_Item {
  */
 export
 const _root_component_type_list_1_spec_for_V8bisDiag_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("v8bisTransaction", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mR", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("cR", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("cL", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("cLR", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("eS", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("ackNak", false, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("v8bisTransaction", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mR", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("cR", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("cL", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("cLR", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("eS", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("ackNak", false, $.hasTag(_TagClass.context, 6))
 ];
 
 /**
@@ -264,7 +236,7 @@ let _cached_encoder_for_V8bisDiag_Item: $.ASN1Encoder<V8bisDiag_Item> | null = n
  */
 export
 function _encode_V8bisDiag_Item (value: V8bisDiag_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_V8bisDiag_Item) { _cached_encoder_for_V8bisDiag_Item = function (value: V8bisDiag_Item, elGetter: $.ASN1Encoder<V8bisDiag_Item>): _Element {
+    if (!_cached_encoder_for_V8bisDiag_Item) { _cached_encoder_for_V8bisDiag_Item = function (value: V8bisDiag_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.v8bisTransaction, $.BER),
@@ -279,6 +251,5 @@ function _encode_V8bisDiag_Item (value: V8bisDiag_Item, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_V8bisDiag_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

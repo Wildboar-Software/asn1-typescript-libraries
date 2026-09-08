@@ -4,7 +4,7 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/v59',
   test: {
-    name: '@wildboar/v59',
+    name: 'v59',
     watch: false,
     globals: true,
     environment: 'node',

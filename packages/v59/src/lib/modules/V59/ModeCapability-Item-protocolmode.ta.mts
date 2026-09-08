@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,13 +9,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-// export { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
+import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary ModeCapability_Item_protocolmode
@@ -79,7 +22,11 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ModeCapability-Item-protocolmode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ModeCapability-Item-protocolmode ::= SEQUENCE {modeV42        Capabilities,
+ *                           modeV42B       Capabilities,
+ *                           modeV44        Capabilities,
+ *                           otherProtMode  V59String OPTIONAL,
+ *                           ...}
  * ```
  * 
  * @class
@@ -135,7 +82,6 @@ class ModeCapability_Item_protocolmode {
         return new ModeCapability_Item_protocolmode(_o.modeV42, _o.modeV42B, _o.modeV44, _o.otherProtMode, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -148,10 +94,10 @@ class ModeCapability_Item_protocolmode {
  */
 export
 const _root_component_type_list_1_spec_for_ModeCapability_Item_protocolmode: $.ComponentSpec[] = [
-    new $.ComponentSpec("modeV42", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("modeV42B", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("modeV44", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("otherProtMode", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("modeV42", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("modeV42B", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("modeV44", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("otherProtMode", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -195,7 +141,7 @@ function _decode_ModeCapability_Item_protocolmode (el: _Element): ModeCapability
     let modeV42B!: Capabilities;
     let modeV44!: Capabilities;
     let otherProtMode: OPTIONAL<V59String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "modeV42": (_el: _Element): void => { modeV42 = _decode_Capabilities(_el); },
         "modeV42B": (_el: _Element): void => { modeV42B = _decode_Capabilities(_el); },
@@ -230,7 +176,7 @@ let _cached_encoder_for_ModeCapability_Item_protocolmode: $.ASN1Encoder<ModeCapa
  */
 export
 function _encode_ModeCapability_Item_protocolmode (value: ModeCapability_Item_protocolmode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ModeCapability_Item_protocolmode) { _cached_encoder_for_ModeCapability_Item_protocolmode = function (value: ModeCapability_Item_protocolmode, elGetter: $.ASN1Encoder<ModeCapability_Item_protocolmode>): _Element {
+    if (!_cached_encoder_for_ModeCapability_Item_protocolmode) { _cached_encoder_for_ModeCapability_Item_protocolmode = function (value: ModeCapability_Item_protocolmode): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Capabilities(value.modeV42, $.BER),
@@ -243,6 +189,5 @@ function _encode_ModeCapability_Item_protocolmode (value: ModeCapability_Item_pr
 }; }
     return _cached_encoder_for_ModeCapability_Item_protocolmode(value, elGetter);
 }
-
 
 /* eslint-enable */

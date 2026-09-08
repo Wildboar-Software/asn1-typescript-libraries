@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -63,12 +10,9 @@ import {
     ObjectIdentifier as _OID,
     External as _External,
     EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-// export { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
-
 
 /**
  * @summary CnxDiag_Item
@@ -77,7 +21,18 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CnxDiag-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CnxDiag-Item ::= SEQUENCE {txCarrier         V59String,
+ *               rxCarrier         V59String,
+ *               carrierLosses     INTEGER(0..256),
+ *               renegRequests     INTEGER(0..256),
+ *               renegSuccesses    INTEGER(0..256),
+ *               retrainRequests   INTEGER(0..256),
+ *               retrainSuccesses  INTEGER(0..256),
+ *               callWaiting       INTEGER(0..256) OPTIONAL,
+ *               duration          V59String OPTIONAL,
+ *               caller            BOOLEAN,
+ *               reverseRoles      BOOLEAN OPTIONAL,
+ *               ...}
  * ```
  * 
  * @class
@@ -157,7 +112,48 @@ class CnxDiag_Item {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        {
+                const _n = typeof this.carrierLosses === "bigint" ? Number(this.carrierLosses) : this.carrierLosses;
+                if (_n < 0 || _n > 256) {
+                    throw new ASN1OverflowError("CnxDiag_Item.carrierLosses violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.renegRequests === "bigint" ? Number(this.renegRequests) : this.renegRequests;
+                if (_n < 0 || _n > 256) {
+                    throw new ASN1OverflowError("CnxDiag_Item.renegRequests violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.renegSuccesses === "bigint" ? Number(this.renegSuccesses) : this.renegSuccesses;
+                if (_n < 0 || _n > 256) {
+                    throw new ASN1OverflowError("CnxDiag_Item.renegSuccesses violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.retrainRequests === "bigint" ? Number(this.retrainRequests) : this.retrainRequests;
+                if (_n < 0 || _n > 256) {
+                    throw new ASN1OverflowError("CnxDiag_Item.retrainRequests violates INTEGER range");
+                }
+            }
+
+        {
+                const _n = typeof this.retrainSuccesses === "bigint" ? Number(this.retrainSuccesses) : this.retrainSuccesses;
+                if (_n < 0 || _n > 256) {
+                    throw new ASN1OverflowError("CnxDiag_Item.retrainSuccesses violates INTEGER range");
+                }
+            }
+
+        if (this.callWaiting !== undefined) {
+                const _n = typeof this.callWaiting === "bigint" ? Number(this.callWaiting) : this.callWaiting;
+                if (_n < 0 || _n > 256) {
+                    throw new ASN1OverflowError("CnxDiag_Item.callWaiting violates INTEGER range");
+                }
+            }}
 
     /**
      * @summary Restructures an object into a CnxDiag_Item
@@ -175,7 +171,6 @@ class CnxDiag_Item {
         return new CnxDiag_Item(_o.txCarrier, _o.rxCarrier, _o.carrierLosses, _o.renegRequests, _o.renegSuccesses, _o.retrainRequests, _o.retrainSuccesses, _o.callWaiting, _o.duration, _o.caller, _o.reverseRoles, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -188,17 +183,17 @@ class CnxDiag_Item {
  */
 export
 const _root_component_type_list_1_spec_for_CnxDiag_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("txCarrier", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("rxCarrier", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("carrierLosses", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("renegRequests", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("renegSuccesses", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("retrainRequests", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("retrainSuccesses", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("callWaiting", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("duration", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("caller", false, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("reverseRoles", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("txCarrier", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("rxCarrier", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("carrierLosses", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("renegRequests", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("renegSuccesses", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("retrainRequests", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("retrainSuccesses", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("callWaiting", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("duration", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("caller", false, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("reverseRoles", true, $.hasTag(_TagClass.context, 10))
 ];
 
 /**
@@ -249,7 +244,7 @@ function _decode_CnxDiag_Item (el: _Element): CnxDiag_Item {
     let duration: OPTIONAL<V59String>;
     let caller!: BOOLEAN;
     let reverseRoles: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "txCarrier": (_el: _Element): void => { txCarrier = _decode_V59String(_el); },
         "rxCarrier": (_el: _Element): void => { rxCarrier = _decode_V59String(_el); },
@@ -298,7 +293,7 @@ let _cached_encoder_for_CnxDiag_Item: $.ASN1Encoder<CnxDiag_Item> | null = null;
  */
 export
 function _encode_CnxDiag_Item (value: CnxDiag_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CnxDiag_Item) { _cached_encoder_for_CnxDiag_Item = function (value: CnxDiag_Item, elGetter: $.ASN1Encoder<CnxDiag_Item>): _Element {
+    if (!_cached_encoder_for_CnxDiag_Item) { _cached_encoder_for_CnxDiag_Item = function (value: CnxDiag_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_V59String(value.txCarrier, $.BER),
@@ -318,6 +313,5 @@ function _encode_CnxDiag_Item (value: CnxDiag_Item, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CnxDiag_Item(value, elGetter);
 }
-
 
 /* eslint-enable */
