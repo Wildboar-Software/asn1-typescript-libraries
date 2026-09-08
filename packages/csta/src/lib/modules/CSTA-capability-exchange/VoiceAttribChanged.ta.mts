@@ -1,0 +1,445 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+
+
+
+/**
+ * @summary VoiceAttribChanged
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * VoiceAttribChanged  ::=  BIT STRING
+ * {     message                    ( 7),     -- optional parameters
+ *     resource                ( 8),     -- optional parameters
+ *     playVolumeAbs                 ( 0),     -- optional parameters
+ *     playVolumeInc                 ( 1),     -- optional parameters
+ *     recordGain                 ( 2),     -- optional parameters
+ *     speed                     ( 3),     -- optional parameters
+ *     currentPosition             ( 4),     -- optional parameters
+ *     grammars                ( 9),     -- optional parameters
+ *     language                (10),     -- optional parameters
+ *     mode                    (11),     -- optional parameters
+ *     retainAudio                (12),     -- optional parameters
+ *     silenceTimeout                (13),     -- optional parameters
+ *     maxTimeout                (14),     -- optional parameters
+ *     babbleTimeout                (15),     -- optional parameters
+ *     endSilence                (16),     -- optional parameters
+ *     rejectionThreshold            (17),     -- optional parameters
+ *     autoInterruptable            (18),     -- optional parameters
+ *     innerXML                (19),     -- optional parameters
+ *     interdigitTimeout            (20),     -- optional parameters
+ *     preflush                (21),     -- optional parameters
+ *     cause                     ( 5),     -- optional parameters
+ *     privateData                 ( 6) }
+ * ```
+ */
+export
+type VoiceAttribChanged = BIT_STRING;
+
+/**
+ * @summary VoiceAttribChanged_message
+ * @constant
+ */
+export
+const VoiceAttribChanged_message: number = 7; /* LONG_NAMED_BIT */
+
+/**
+ * @summary message
+ * @constant
+ */
+export
+const message: number = VoiceAttribChanged_message; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_resource
+ * @constant
+ */
+export
+const VoiceAttribChanged_resource: number = 8; /* LONG_NAMED_BIT */
+
+/**
+ * @summary resource
+ * @constant
+ */
+export
+const resource: number = VoiceAttribChanged_resource; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_playVolumeAbs
+ * @constant
+ */
+export
+const VoiceAttribChanged_playVolumeAbs: number = 0; /* LONG_NAMED_BIT */
+
+/**
+ * @summary playVolumeAbs
+ * @constant
+ */
+export
+const playVolumeAbs: number = VoiceAttribChanged_playVolumeAbs; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_playVolumeInc
+ * @constant
+ */
+export
+const VoiceAttribChanged_playVolumeInc: number = 1; /* LONG_NAMED_BIT */
+
+/**
+ * @summary playVolumeInc
+ * @constant
+ */
+export
+const playVolumeInc: number = VoiceAttribChanged_playVolumeInc; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_recordGain
+ * @constant
+ */
+export
+const VoiceAttribChanged_recordGain: number = 2; /* LONG_NAMED_BIT */
+
+/**
+ * @summary recordGain
+ * @constant
+ */
+export
+const recordGain: number = VoiceAttribChanged_recordGain; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_speed
+ * @constant
+ */
+export
+const VoiceAttribChanged_speed: number = 3; /* LONG_NAMED_BIT */
+
+/**
+ * @summary speed
+ * @constant
+ */
+export
+const speed: number = VoiceAttribChanged_speed; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_currentPosition
+ * @constant
+ */
+export
+const VoiceAttribChanged_currentPosition: number = 4; /* LONG_NAMED_BIT */
+
+/**
+ * @summary currentPosition
+ * @constant
+ */
+export
+const currentPosition: number = VoiceAttribChanged_currentPosition; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_grammars
+ * @constant
+ */
+export
+const VoiceAttribChanged_grammars: number = 9; /* LONG_NAMED_BIT */
+
+/**
+ * @summary grammars
+ * @constant
+ */
+export
+const grammars: number = VoiceAttribChanged_grammars; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_language
+ * @constant
+ */
+export
+const VoiceAttribChanged_language: number = 10; /* LONG_NAMED_BIT */
+
+/**
+ * @summary language
+ * @constant
+ */
+export
+const language: number = VoiceAttribChanged_language; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_mode
+ * @constant
+ */
+export
+const VoiceAttribChanged_mode: number = 11; /* LONG_NAMED_BIT */
+
+/**
+ * @summary mode
+ * @constant
+ */
+export
+const mode: number = VoiceAttribChanged_mode; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_retainAudio
+ * @constant
+ */
+export
+const VoiceAttribChanged_retainAudio: number = 12; /* LONG_NAMED_BIT */
+
+/**
+ * @summary retainAudio
+ * @constant
+ */
+export
+const retainAudio: number = VoiceAttribChanged_retainAudio; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_silenceTimeout
+ * @constant
+ */
+export
+const VoiceAttribChanged_silenceTimeout: number = 13; /* LONG_NAMED_BIT */
+
+/**
+ * @summary silenceTimeout
+ * @constant
+ */
+export
+const silenceTimeout: number = VoiceAttribChanged_silenceTimeout; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_maxTimeout
+ * @constant
+ */
+export
+const VoiceAttribChanged_maxTimeout: number = 14; /* LONG_NAMED_BIT */
+
+/**
+ * @summary maxTimeout
+ * @constant
+ */
+export
+const maxTimeout: number = VoiceAttribChanged_maxTimeout; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_babbleTimeout
+ * @constant
+ */
+export
+const VoiceAttribChanged_babbleTimeout: number = 15; /* LONG_NAMED_BIT */
+
+/**
+ * @summary babbleTimeout
+ * @constant
+ */
+export
+const babbleTimeout: number = VoiceAttribChanged_babbleTimeout; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_endSilence
+ * @constant
+ */
+export
+const VoiceAttribChanged_endSilence: number = 16; /* LONG_NAMED_BIT */
+
+/**
+ * @summary endSilence
+ * @constant
+ */
+export
+const endSilence: number = VoiceAttribChanged_endSilence; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_rejectionThreshold
+ * @constant
+ */
+export
+const VoiceAttribChanged_rejectionThreshold: number = 17; /* LONG_NAMED_BIT */
+
+/**
+ * @summary rejectionThreshold
+ * @constant
+ */
+export
+const rejectionThreshold: number = VoiceAttribChanged_rejectionThreshold; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_autoInterruptable
+ * @constant
+ */
+export
+const VoiceAttribChanged_autoInterruptable: number = 18; /* LONG_NAMED_BIT */
+
+/**
+ * @summary autoInterruptable
+ * @constant
+ */
+export
+const autoInterruptable: number = VoiceAttribChanged_autoInterruptable; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_innerXML
+ * @constant
+ */
+export
+const VoiceAttribChanged_innerXML: number = 19; /* LONG_NAMED_BIT */
+
+/**
+ * @summary innerXML
+ * @constant
+ */
+export
+const innerXML: number = VoiceAttribChanged_innerXML; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_interdigitTimeout
+ * @constant
+ */
+export
+const VoiceAttribChanged_interdigitTimeout: number = 20; /* LONG_NAMED_BIT */
+
+/**
+ * @summary interdigitTimeout
+ * @constant
+ */
+export
+const interdigitTimeout: number = VoiceAttribChanged_interdigitTimeout; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_preflush
+ * @constant
+ */
+export
+const VoiceAttribChanged_preflush: number = 21; /* LONG_NAMED_BIT */
+
+/**
+ * @summary preflush
+ * @constant
+ */
+export
+const preflush: number = VoiceAttribChanged_preflush; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_cause
+ * @constant
+ */
+export
+const VoiceAttribChanged_cause: number = 5; /* LONG_NAMED_BIT */
+
+/**
+ * @summary cause
+ * @constant
+ */
+export
+const cause: number = VoiceAttribChanged_cause; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary VoiceAttribChanged_privateData
+ * @constant
+ */
+export
+const VoiceAttribChanged_privateData: number = 6; /* LONG_NAMED_BIT */
+
+/**
+ * @summary privateData
+ * @constant
+ */
+export
+const privateData: number = VoiceAttribChanged_privateData; /* SHORT_NAMED_BIT */
+
+let _cached_decoder_for_VoiceAttribChanged: $.ASN1Decoder<VoiceAttribChanged> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) VoiceAttribChanged
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_VoiceAttribChanged (el: _Element): VoiceAttribChanged {
+    if (!_cached_decoder_for_VoiceAttribChanged) { _cached_decoder_for_VoiceAttribChanged = $._decodeBitString; }
+    return _cached_decoder_for_VoiceAttribChanged(el);
+}
+
+let _cached_encoder_for_VoiceAttribChanged: $.ASN1Encoder<VoiceAttribChanged> | null = null;
+
+/**
+ * @summary Encodes a(n) VoiceAttribChanged into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The VoiceAttribChanged, encoded as an ASN.1 Element.
+ */
+export
+function _encode_VoiceAttribChanged (value: VoiceAttribChanged, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_VoiceAttribChanged) { _cached_encoder_for_VoiceAttribChanged = $._encodeBitString; }
+    return _cached_encoder_for_VoiceAttribChanged(value, elGetter);
+}
+
+
+/* eslint-enable */

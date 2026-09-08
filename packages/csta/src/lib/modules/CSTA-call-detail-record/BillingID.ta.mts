@@ -1,0 +1,288 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+
+
+
+/**
+ * @summary BillingID
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * BillingID  ::=  ENUMERATED
+ * {     normalCharging                 (0),
+ *     reverseCharging             (1),
+ *     creditCardCharging             (2),
+ *     callForwarding                 (3),
+ *     callDeflection                 (4),
+ *     callTransfer                 (5),
+ *     other                     (6) }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_BillingID {
+    normalCharging = 0,
+    reverseCharging = 1,
+    creditCardCharging = 2,
+    callForwarding = 3,
+    callDeflection = 4,
+    callTransfer = 5,
+    other = 6,
+}
+
+/**
+ * @summary BillingID
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * BillingID  ::=  ENUMERATED
+ * {     normalCharging                 (0),
+ *     reverseCharging             (1),
+ *     creditCardCharging             (2),
+ *     callForwarding                 (3),
+ *     callDeflection                 (4),
+ *     callTransfer                 (5),
+ *     other                     (6) }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type BillingID = _enum_for_BillingID;
+
+/**
+ * @summary BillingID
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * BillingID  ::=  ENUMERATED
+ * {     normalCharging                 (0),
+ *     reverseCharging             (1),
+ *     creditCardCharging             (2),
+ *     callForwarding                 (3),
+ *     callDeflection                 (4),
+ *     callTransfer                 (5),
+ *     other                     (6) }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const BillingID = _enum_for_BillingID;
+
+/**
+ * @summary BillingID_normalCharging
+ * @constant
+ * @type {number}
+ */
+export
+const BillingID_normalCharging: BillingID = BillingID.normalCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary normalCharging
+ * @constant
+ * @type {number}
+ */
+export
+const normalCharging: BillingID = BillingID.normalCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary BillingID_reverseCharging
+ * @constant
+ * @type {number}
+ */
+export
+const BillingID_reverseCharging: BillingID = BillingID.reverseCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary reverseCharging
+ * @constant
+ * @type {number}
+ */
+export
+const reverseCharging: BillingID = BillingID.reverseCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary BillingID_creditCardCharging
+ * @constant
+ * @type {number}
+ */
+export
+const BillingID_creditCardCharging: BillingID = BillingID.creditCardCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary creditCardCharging
+ * @constant
+ * @type {number}
+ */
+export
+const creditCardCharging: BillingID = BillingID.creditCardCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary BillingID_callForwarding
+ * @constant
+ * @type {number}
+ */
+export
+const BillingID_callForwarding: BillingID = BillingID.callForwarding; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary callForwarding
+ * @constant
+ * @type {number}
+ */
+export
+const callForwarding: BillingID = BillingID.callForwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary BillingID_callDeflection
+ * @constant
+ * @type {number}
+ */
+export
+const BillingID_callDeflection: BillingID = BillingID.callDeflection; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary callDeflection
+ * @constant
+ * @type {number}
+ */
+export
+const callDeflection: BillingID = BillingID.callDeflection; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary BillingID_callTransfer
+ * @constant
+ * @type {number}
+ */
+export
+const BillingID_callTransfer: BillingID = BillingID.callTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary callTransfer
+ * @constant
+ * @type {number}
+ */
+export
+const callTransfer: BillingID = BillingID.callTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary BillingID_other
+ * @constant
+ * @type {number}
+ */
+export
+const BillingID_other: BillingID = BillingID.other; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary other
+ * @constant
+ * @type {number}
+ */
+export
+const other: BillingID = BillingID.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+let _cached_decoder_for_BillingID: $.ASN1Decoder<BillingID> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) BillingID
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_BillingID (el: _Element): BillingID {
+    if (!_cached_decoder_for_BillingID) { _cached_decoder_for_BillingID = $._decodeEnumerated; }
+    return _cached_decoder_for_BillingID(el);
+}
+
+let _cached_encoder_for_BillingID: $.ASN1Encoder<BillingID> | null = null;
+
+/**
+ * @summary Encodes a(n) BillingID into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The BillingID, encoded as an ASN.1 Element.
+ */
+export
+function _encode_BillingID (value: BillingID, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_BillingID) { _cached_encoder_for_BillingID = $._encodeEnumerated; }
+    return _cached_encoder_for_BillingID(value, elGetter);
+}
+
+
+/* eslint-enable */

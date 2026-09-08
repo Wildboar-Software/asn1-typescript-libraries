@@ -1,0 +1,429 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { DeviceCategory, _enum_for_DeviceCategory, DeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_group /* IMPORTED_LONG_ENUMERATION_ITEM */, group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_genericInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, genericInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_listenerInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_dtmfInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptQueueInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueueInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_messageInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_DeviceCategory, _encode_DeviceCategory } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
+// export { DeviceCategory, _enum_for_DeviceCategory, DeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_group /* IMPORTED_LONG_ENUMERATION_ITEM */, group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_genericInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, genericInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_listenerInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_dtmfInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptQueueInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueueInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_messageInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_DeviceCategory, _encode_DeviceCategory } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
+import { GroupDeviceAttributes, GroupDeviceAttributes_acd /* IMPORTED_LONG_NAMED_BIT */, GroupDeviceAttributes_hunt /* IMPORTED_LONG_NAMED_BIT */, hunt /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_pick /* IMPORTED_LONG_NAMED_BIT */, pick /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_user /* IMPORTED_LONG_NAMED_BIT */, user /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_agent /* IMPORTED_LONG_NAMED_BIT */, agent /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_other /* IMPORTED_LONG_NAMED_BIT */, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
+// export { GroupDeviceAttributes, GroupDeviceAttributes_acd /* IMPORTED_LONG_NAMED_BIT */, GroupDeviceAttributes_hunt /* IMPORTED_LONG_NAMED_BIT */, hunt /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_pick /* IMPORTED_LONG_NAMED_BIT */, pick /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_user /* IMPORTED_LONG_NAMED_BIT */, user /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_agent /* IMPORTED_LONG_NAMED_BIT */, agent /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_other /* IMPORTED_LONG_NAMED_BIT */, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
+import { NamedDeviceTypes, _enum_for_NamedDeviceTypes, NamedDeviceTypes_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_acdGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, acdGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_button /* IMPORTED_LONG_ENUMERATION_ITEM */, button /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_buttonGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, buttonGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_conferenceBridge /* IMPORTED_LONG_ENUMERATION_ITEM */, conferenceBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_line /* IMPORTED_LONG_ENUMERATION_ITEM */, line /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_lineGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, lineGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operatorGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_parkingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, parkingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_station /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_stationGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, stationGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunk /* IMPORTED_LONG_ENUMERATION_ITEM */, trunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunkGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, trunkGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_other /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_otherGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, otherGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NamedDeviceTypes, _encode_NamedDeviceTypes } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
+// export { NamedDeviceTypes, _enum_for_NamedDeviceTypes, NamedDeviceTypes_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_acdGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, acdGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_button /* IMPORTED_LONG_ENUMERATION_ITEM */, button /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_buttonGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, buttonGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_conferenceBridge /* IMPORTED_LONG_ENUMERATION_ITEM */, conferenceBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_line /* IMPORTED_LONG_ENUMERATION_ITEM */, line /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_lineGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, lineGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operatorGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_parkingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, parkingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_station /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_stationGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, stationGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunk /* IMPORTED_LONG_ENUMERATION_ITEM */, trunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunkGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, trunkGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_other /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_otherGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, otherGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NamedDeviceTypes, _encode_NamedDeviceTypes } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
+import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
+// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
+import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
+// export { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
+import { PhysDevServList, _decode_PhysDevServList, _encode_PhysDevServList } from "../CSTA-capability-exchange/PhysDevServList.ta.mjs";
+// export { PhysDevServList, _decode_PhysDevServList, _encode_PhysDevServList } from "../CSTA-capability-exchange/PhysDevServList.ta.mjs";
+import { PhysDevEvtsList, _decode_PhysDevEvtsList, _encode_PhysDevEvtsList } from "../CSTA-capability-exchange/PhysDevEvtsList.ta.mjs";
+// export { PhysDevEvtsList, _decode_PhysDevEvtsList, _encode_PhysDevEvtsList } from "../CSTA-capability-exchange/PhysDevEvtsList.ta.mjs";
+import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
+
+/**
+ * @summary GetPhysicalDeviceInformationResult
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * GetPhysicalDeviceInformationResult ::= SEQUENCE
+ * {     deviceCategory                 [ 0] IMPLICIT DeviceCategory         DEFAULT station,
+ *     groupDeviceAttributes             [ 1] IMPLICIT GroupDeviceAttributes     OPTIONAL,
+ *     namedDeviceTypes             [ 2] IMPLICIT NamedDeviceTypes         OPTIONAL,
+ *     hasLogicalElement             BOOLEAN,
+ *     otherLogicalDeviceList             [ 3] IMPLICIT SEQUENCE OF DeviceID     OPTIONAL,
+ *     deviceModelName             [ 4] IMPLICIT IA5String (SIZE(0..64))    OPTIONAL,
+ *     deviceOnDeviceMonitorFilter         [ 5] IMPLICIT MonitorFilter         OPTIONAL,
+ *     deviceOnConnectionMonitorFilter     [ 6] IMPLICIT MonitorFilter         OPTIONAL,
+ *     callOnDeviceMonitorFilter         [ 7] IMPLICIT MonitorFilter         OPTIONAL,
+ *     callOnConnectionMonitorFilter         [ 8] IMPLICIT MonitorFilter         OPTIONAL,
+ *     maxDisplays                 [ 9] IMPLICIT INTEGER             OPTIONAL,
+ *     maxButtons                 [10] IMPLICIT INTEGER             OPTIONAL,
+ *     maxLamps                 [11] IMPLICIT INTEGER             OPTIONAL,
+ *     maxRingPatterns             [12] IMPLICIT INTEGER             OPTIONAL,
+ *     physDevServList             [13] IMPLICIT PhysDevServList         OPTIONAL,
+ *     physDevEvtsList             [14] IMPLICIT PhysDevEvtsList         OPTIONAL,
+ *     extensions                 CSTACommonArguments             OPTIONAL }
+ * ```
+ * 
+ * @class
+ */
+export
+class GetPhysicalDeviceInformationResult {
+    constructor (
+        /**
+         * @summary `deviceCategory`.
+         * @public
+         * @readonly
+         */
+        readonly deviceCategory: OPTIONAL<DeviceCategory>,
+        /**
+         * @summary `groupDeviceAttributes`.
+         * @public
+         * @readonly
+         */
+        readonly groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>,
+        /**
+         * @summary `namedDeviceTypes`.
+         * @public
+         * @readonly
+         */
+        readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
+        /**
+         * @summary `hasLogicalElement`.
+         * @public
+         * @readonly
+         */
+        readonly hasLogicalElement: BOOLEAN,
+        /**
+         * @summary `otherLogicalDeviceList`.
+         * @public
+         * @readonly
+         */
+        readonly otherLogicalDeviceList: OPTIONAL<DeviceID[]>,
+        /**
+         * @summary `deviceModelName`.
+         * @public
+         * @readonly
+         */
+        readonly deviceModelName: OPTIONAL<IA5String>,
+        /**
+         * @summary `deviceOnDeviceMonitorFilter`.
+         * @public
+         * @readonly
+         */
+        readonly deviceOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
+        /**
+         * @summary `deviceOnConnectionMonitorFilter`.
+         * @public
+         * @readonly
+         */
+        readonly deviceOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
+        /**
+         * @summary `callOnDeviceMonitorFilter`.
+         * @public
+         * @readonly
+         */
+        readonly callOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
+        /**
+         * @summary `callOnConnectionMonitorFilter`.
+         * @public
+         * @readonly
+         */
+        readonly callOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
+        /**
+         * @summary `maxDisplays`.
+         * @public
+         * @readonly
+         */
+        readonly maxDisplays: OPTIONAL<INTEGER>,
+        /**
+         * @summary `maxButtons`.
+         * @public
+         * @readonly
+         */
+        readonly maxButtons: OPTIONAL<INTEGER>,
+        /**
+         * @summary `maxLamps`.
+         * @public
+         * @readonly
+         */
+        readonly maxLamps: OPTIONAL<INTEGER>,
+        /**
+         * @summary `maxRingPatterns`.
+         * @public
+         * @readonly
+         */
+        readonly maxRingPatterns: OPTIONAL<INTEGER>,
+        /**
+         * @summary `physDevServList`.
+         * @public
+         * @readonly
+         */
+        readonly physDevServList: OPTIONAL<PhysDevServList>,
+        /**
+         * @summary `physDevEvtsList`.
+         * @public
+         * @readonly
+         */
+        readonly physDevEvtsList: OPTIONAL<PhysDevEvtsList>,
+        /**
+         * @summary `extensions`.
+         * @public
+         * @readonly
+         */
+        readonly extensions: OPTIONAL<CSTACommonArguments>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a GetPhysicalDeviceInformationResult
+     * @description
+     * 
+     * This takes an `object` and converts it to a `GetPhysicalDeviceInformationResult`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `GetPhysicalDeviceInformationResult`.
+     * @returns {GetPhysicalDeviceInformationResult}
+     */
+    public static _from_object (_o: { [_K in keyof (GetPhysicalDeviceInformationResult)]: (GetPhysicalDeviceInformationResult)[_K] }): GetPhysicalDeviceInformationResult {
+        return new GetPhysicalDeviceInformationResult(_o.deviceCategory, _o.groupDeviceAttributes, _o.namedDeviceTypes, _o.hasLogicalElement, _o.otherLogicalDeviceList, _o.deviceModelName, _o.deviceOnDeviceMonitorFilter, _o.deviceOnConnectionMonitorFilter, _o.callOnDeviceMonitorFilter, _o.callOnConnectionMonitorFilter, _o.maxDisplays, _o.maxButtons, _o.maxLamps, _o.maxRingPatterns, _o.physDevServList, _o.physDevEvtsList, _o.extensions);
+    }
+
+    /**
+     * @summary Getter that returns the default value for `deviceCategory`.
+     * @public
+     * @static
+     * @method
+     */
+    public static get _default_value_for_deviceCategory () { return DeviceCategory_station; }        /**
+         * @summary The enum used as the type of the component `deviceCategory`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_deviceCategory = _enum_for_DeviceCategory;        /**
+         * @summary The enum used as the type of the component `namedDeviceTypes`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_namedDeviceTypes = _enum_for_NamedDeviceTypes;
+}
+
+/**
+ * @summary The Leading Root Component Types of GetPhysicalDeviceInformationResult
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_GetPhysicalDeviceInformationResult: $.ComponentSpec[] = [
+    new $.ComponentSpec("deviceCategory", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("groupDeviceAttributes", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
+    new $.ComponentSpec("namedDeviceTypes", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
+    new $.ComponentSpec("hasLogicalElement", false, $.hasTag(_TagClass.universal, 1), undefined, undefined),
+    new $.ComponentSpec("otherLogicalDeviceList", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
+    new $.ComponentSpec("deviceModelName", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
+    new $.ComponentSpec("deviceOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
+    new $.ComponentSpec("deviceOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
+    new $.ComponentSpec("callOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
+    new $.ComponentSpec("callOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
+    new $.ComponentSpec("maxDisplays", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
+    new $.ComponentSpec("maxButtons", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
+    new $.ComponentSpec("maxLamps", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
+    new $.ComponentSpec("maxRingPatterns", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
+    new $.ComponentSpec("physDevServList", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
+    new $.ComponentSpec("physDevEvtsList", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+];
+
+/**
+ * @summary The Trailing Root Component Types of GetPhysicalDeviceInformationResult
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_GetPhysicalDeviceInformationResult: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of GetPhysicalDeviceInformationResult
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_GetPhysicalDeviceInformationResult: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_GetPhysicalDeviceInformationResult: $.ASN1Decoder<GetPhysicalDeviceInformationResult> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) GetPhysicalDeviceInformationResult
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_GetPhysicalDeviceInformationResult (el: _Element): GetPhysicalDeviceInformationResult {
+    if (!_cached_decoder_for_GetPhysicalDeviceInformationResult) { _cached_decoder_for_GetPhysicalDeviceInformationResult = function (el: _Element): GetPhysicalDeviceInformationResult {
+    let deviceCategory: OPTIONAL<DeviceCategory> = GetPhysicalDeviceInformationResult._default_value_for_deviceCategory;
+    let groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>;
+    let namedDeviceTypes: OPTIONAL<NamedDeviceTypes>;
+    let hasLogicalElement!: BOOLEAN;
+    let otherLogicalDeviceList: OPTIONAL<DeviceID[]>;
+    let deviceModelName: OPTIONAL<IA5String>;
+    let deviceOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>;
+    let deviceOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>;
+    let callOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>;
+    let callOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>;
+    let maxDisplays: OPTIONAL<INTEGER>;
+    let maxButtons: OPTIONAL<INTEGER>;
+    let maxLamps: OPTIONAL<INTEGER>;
+    let maxRingPatterns: OPTIONAL<INTEGER>;
+    let physDevServList: OPTIONAL<PhysDevServList>;
+    let physDevEvtsList: OPTIONAL<PhysDevEvtsList>;
+    let extensions: OPTIONAL<CSTACommonArguments>;
+    const callbacks: $.DecodingMap = {
+        "deviceCategory": (_el: _Element): void => { deviceCategory = $._decode_implicit<DeviceCategory>(() => _decode_DeviceCategory)(_el); },
+        "groupDeviceAttributes": (_el: _Element): void => { groupDeviceAttributes = $._decode_implicit<GroupDeviceAttributes>(() => _decode_GroupDeviceAttributes)(_el); },
+        "namedDeviceTypes": (_el: _Element): void => { namedDeviceTypes = $._decode_implicit<NamedDeviceTypes>(() => _decode_NamedDeviceTypes)(_el); },
+        "hasLogicalElement": (_el: _Element): void => { hasLogicalElement = $._decodeBoolean(_el); },
+        "otherLogicalDeviceList": (_el: _Element): void => { otherLogicalDeviceList = $._decode_implicit<DeviceID[]>(() => $._decodeSequenceOf<DeviceID>(() => _decode_DeviceID))(_el); },
+        "deviceModelName": (_el: _Element): void => { deviceModelName = $._decode_implicit<IA5String>(() => $._decodeIA5String)(_el); },
+        "deviceOnDeviceMonitorFilter": (_el: _Element): void => { deviceOnDeviceMonitorFilter = $._decode_implicit<MonitorFilter>(() => _decode_MonitorFilter)(_el); },
+        "deviceOnConnectionMonitorFilter": (_el: _Element): void => { deviceOnConnectionMonitorFilter = $._decode_implicit<MonitorFilter>(() => _decode_MonitorFilter)(_el); },
+        "callOnDeviceMonitorFilter": (_el: _Element): void => { callOnDeviceMonitorFilter = $._decode_implicit<MonitorFilter>(() => _decode_MonitorFilter)(_el); },
+        "callOnConnectionMonitorFilter": (_el: _Element): void => { callOnConnectionMonitorFilter = $._decode_implicit<MonitorFilter>(() => _decode_MonitorFilter)(_el); },
+        "maxDisplays": (_el: _Element): void => { maxDisplays = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "maxButtons": (_el: _Element): void => { maxButtons = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "maxLamps": (_el: _Element): void => { maxLamps = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "maxRingPatterns": (_el: _Element): void => { maxRingPatterns = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "physDevServList": (_el: _Element): void => { physDevServList = $._decode_implicit<PhysDevServList>(() => _decode_PhysDevServList)(_el); },
+        "physDevEvtsList": (_el: _Element): void => { physDevEvtsList = $._decode_implicit<PhysDevEvtsList>(() => _decode_PhysDevEvtsList)(_el); },
+        "extensions": (_el: _Element): void => { extensions = _decode_CSTACommonArguments(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_GetPhysicalDeviceInformationResult,
+        _extension_additions_list_spec_for_GetPhysicalDeviceInformationResult,
+        _root_component_type_list_2_spec_for_GetPhysicalDeviceInformationResult,
+        undefined,
+    );
+    return new GetPhysicalDeviceInformationResult(
+        deviceCategory,
+        groupDeviceAttributes,
+        namedDeviceTypes,
+        hasLogicalElement,
+        otherLogicalDeviceList,
+        deviceModelName,
+        deviceOnDeviceMonitorFilter,
+        deviceOnConnectionMonitorFilter,
+        callOnDeviceMonitorFilter,
+        callOnConnectionMonitorFilter,
+        maxDisplays,
+        maxButtons,
+        maxLamps,
+        maxRingPatterns,
+        physDevServList,
+        physDevEvtsList,
+        extensions
+    );
+}; }
+    return _cached_decoder_for_GetPhysicalDeviceInformationResult(el);
+}
+
+let _cached_encoder_for_GetPhysicalDeviceInformationResult: $.ASN1Encoder<GetPhysicalDeviceInformationResult> | null = null;
+
+/**
+ * @summary Encodes a(n) GetPhysicalDeviceInformationResult into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The GetPhysicalDeviceInformationResult, encoded as an ASN.1 Element.
+ */
+export
+function _encode_GetPhysicalDeviceInformationResult (value: GetPhysicalDeviceInformationResult, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_GetPhysicalDeviceInformationResult) { _cached_encoder_for_GetPhysicalDeviceInformationResult = function (value: GetPhysicalDeviceInformationResult, elGetter: $.ASN1Encoder<GetPhysicalDeviceInformationResult>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_DEFAULT */ (value.deviceCategory === undefined || $.deepEq(value.deviceCategory, GetPhysicalDeviceInformationResult._default_value_for_deviceCategory) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_DeviceCategory, $.BER)(value.deviceCategory, $.BER)),
+            /* IF_ABSENT  */ ((value.groupDeviceAttributes === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_GroupDeviceAttributes, $.BER)(value.groupDeviceAttributes, $.BER)),
+            /* IF_ABSENT  */ ((value.namedDeviceTypes === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_NamedDeviceTypes, $.BER)(value.namedDeviceTypes, $.BER)),
+            /* REQUIRED   */ $._encodeBoolean(value.hasLogicalElement, $.BER),
+            /* IF_ABSENT  */ ((value.otherLogicalDeviceList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeSequenceOf<DeviceID>(() => _encode_DeviceID, $.BER), $.BER)(value.otherLogicalDeviceList, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceModelName === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeIA5String, $.BER)(value.deviceModelName, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceOnDeviceMonitorFilter === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_MonitorFilter, $.BER)(value.deviceOnDeviceMonitorFilter, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceOnConnectionMonitorFilter === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_MonitorFilter, $.BER)(value.deviceOnConnectionMonitorFilter, $.BER)),
+            /* IF_ABSENT  */ ((value.callOnDeviceMonitorFilter === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => _encode_MonitorFilter, $.BER)(value.callOnDeviceMonitorFilter, $.BER)),
+            /* IF_ABSENT  */ ((value.callOnConnectionMonitorFilter === undefined) ? undefined : $._encode_implicit(_TagClass.context, 8, () => _encode_MonitorFilter, $.BER)(value.callOnConnectionMonitorFilter, $.BER)),
+            /* IF_ABSENT  */ ((value.maxDisplays === undefined) ? undefined : $._encode_implicit(_TagClass.context, 9, () => $._encodeInteger, $.BER)(value.maxDisplays, $.BER)),
+            /* IF_ABSENT  */ ((value.maxButtons === undefined) ? undefined : $._encode_implicit(_TagClass.context, 10, () => $._encodeInteger, $.BER)(value.maxButtons, $.BER)),
+            /* IF_ABSENT  */ ((value.maxLamps === undefined) ? undefined : $._encode_implicit(_TagClass.context, 11, () => $._encodeInteger, $.BER)(value.maxLamps, $.BER)),
+            /* IF_ABSENT  */ ((value.maxRingPatterns === undefined) ? undefined : $._encode_implicit(_TagClass.context, 12, () => $._encodeInteger, $.BER)(value.maxRingPatterns, $.BER)),
+            /* IF_ABSENT  */ ((value.physDevServList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 13, () => _encode_PhysDevServList, $.BER)(value.physDevServList, $.BER)),
+            /* IF_ABSENT  */ ((value.physDevEvtsList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 14, () => _encode_PhysDevEvtsList, $.BER)(value.physDevEvtsList, $.BER)),
+            /* IF_ABSENT  */ ((value.extensions === undefined) ? undefined : _encode_CSTACommonArguments(value.extensions, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_GetPhysicalDeviceInformationResult(value, elGetter);
+}
+
+
+/* eslint-enable */

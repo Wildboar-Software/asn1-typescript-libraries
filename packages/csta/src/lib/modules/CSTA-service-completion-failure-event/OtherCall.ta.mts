@@ -1,0 +1,247 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
+// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
+import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+// export { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
+// export { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
+import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
+// export { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
+
+
+/**
+ * @summary OtherCall
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * OtherCall ::= SEQUENCE
+ * {    deviceID             DeviceID,
+ *     connectionID            ConnectionID,
+ *     localConnectionState        LocalConnectionState            OPTIONAL,
+ *     connectionInfo            ConnectionInformation            OPTIONAL }
+ * ```
+ * 
+ * @class
+ */
+export
+class OtherCall {
+    constructor (
+        /**
+         * @summary `deviceID`.
+         * @public
+         * @readonly
+         */
+        readonly deviceID: DeviceID,
+        /**
+         * @summary `connectionID`.
+         * @public
+         * @readonly
+         */
+        readonly connectionID: ConnectionID,
+        /**
+         * @summary `localConnectionState`.
+         * @public
+         * @readonly
+         */
+        readonly localConnectionState: OPTIONAL<LocalConnectionState>,
+        /**
+         * @summary `connectionInfo`.
+         * @public
+         * @readonly
+         */
+        readonly connectionInfo: OPTIONAL<ConnectionInformation>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a OtherCall
+     * @description
+     * 
+     * This takes an `object` and converts it to a `OtherCall`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `OtherCall`.
+     * @returns {OtherCall}
+     */
+    public static _from_object (_o: { [_K in keyof (OtherCall)]: (OtherCall)[_K] }): OtherCall {
+        return new OtherCall(_o.deviceID, _o.connectionID, _o.localConnectionState, _o.connectionInfo);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of OtherCall
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_OtherCall: $.ComponentSpec[] = [
+    new $.ComponentSpec("deviceID", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
+    new $.ComponentSpec("connectionID", false, $.hasTag(_TagClass.application, 11), undefined, undefined),
+    new $.ComponentSpec("localConnectionState", true, $.hasTag(_TagClass.application, 14), undefined, undefined),
+    new $.ComponentSpec("connectionInfo", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+];
+
+/**
+ * @summary The Trailing Root Component Types of OtherCall
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_OtherCall: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of OtherCall
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_OtherCall: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_OtherCall: $.ASN1Decoder<OtherCall> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) OtherCall
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_OtherCall (el: _Element): OtherCall {
+    if (!_cached_decoder_for_OtherCall) { _cached_decoder_for_OtherCall = function (el: _Element): OtherCall {
+    let deviceID!: DeviceID;
+    let connectionID!: ConnectionID;
+    let localConnectionState: OPTIONAL<LocalConnectionState>;
+    let connectionInfo: OPTIONAL<ConnectionInformation>;
+    const callbacks: $.DecodingMap = {
+        "deviceID": (_el: _Element): void => { deviceID = _decode_DeviceID(_el); },
+        "connectionID": (_el: _Element): void => { connectionID = _decode_ConnectionID(_el); },
+        "localConnectionState": (_el: _Element): void => { localConnectionState = _decode_LocalConnectionState(_el); },
+        "connectionInfo": (_el: _Element): void => { connectionInfo = _decode_ConnectionInformation(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_OtherCall,
+        _extension_additions_list_spec_for_OtherCall,
+        _root_component_type_list_2_spec_for_OtherCall,
+        undefined,
+    );
+    return new OtherCall(
+        deviceID,
+        connectionID,
+        localConnectionState,
+        connectionInfo
+    );
+}; }
+    return _cached_decoder_for_OtherCall(el);
+}
+
+let _cached_encoder_for_OtherCall: $.ASN1Encoder<OtherCall> | null = null;
+
+/**
+ * @summary Encodes a(n) OtherCall into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The OtherCall, encoded as an ASN.1 Element.
+ */
+export
+function _encode_OtherCall (value: OtherCall, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_OtherCall) { _cached_encoder_for_OtherCall = function (value: OtherCall, elGetter: $.ASN1Encoder<OtherCall>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ _encode_DeviceID(value.deviceID, $.BER),
+            /* REQUIRED   */ _encode_ConnectionID(value.connectionID, $.BER),
+            /* IF_ABSENT  */ ((value.localConnectionState === undefined) ? undefined : _encode_LocalConnectionState(value.localConnectionState, $.BER)),
+            /* IF_ABSENT  */ ((value.connectionInfo === undefined) ? undefined : _encode_ConnectionInformation(value.connectionInfo, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_OtherCall(value, elGetter);
+}
+
+
+/* eslint-enable */

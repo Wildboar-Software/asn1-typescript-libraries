@@ -1,0 +1,228 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+
+
+
+/**
+ * @summary RegistrationType
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RegistrationType  ::=  ENUMERATED
+ * {    escapeRegister            (1),
+ *     ioRegister            (2),
+ *     routeRegister            (3),
+ *     sysStatRegister            (4) }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_RegistrationType {
+    escapeRegister = 1,
+    ioRegister = 2,
+    routeRegister = 3,
+    sysStatRegister = 4,
+}
+
+/**
+ * @summary RegistrationType
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RegistrationType  ::=  ENUMERATED
+ * {    escapeRegister            (1),
+ *     ioRegister            (2),
+ *     routeRegister            (3),
+ *     sysStatRegister            (4) }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type RegistrationType = _enum_for_RegistrationType;
+
+/**
+ * @summary RegistrationType
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RegistrationType  ::=  ENUMERATED
+ * {    escapeRegister            (1),
+ *     ioRegister            (2),
+ *     routeRegister            (3),
+ *     sysStatRegister            (4) }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const RegistrationType = _enum_for_RegistrationType;
+
+/**
+ * @summary RegistrationType_escapeRegister
+ * @constant
+ * @type {number}
+ */
+export
+const RegistrationType_escapeRegister: RegistrationType = RegistrationType.escapeRegister; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary escapeRegister
+ * @constant
+ * @type {number}
+ */
+export
+const escapeRegister: RegistrationType = RegistrationType.escapeRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary RegistrationType_ioRegister
+ * @constant
+ * @type {number}
+ */
+export
+const RegistrationType_ioRegister: RegistrationType = RegistrationType.ioRegister; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ioRegister
+ * @constant
+ * @type {number}
+ */
+export
+const ioRegister: RegistrationType = RegistrationType.ioRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary RegistrationType_routeRegister
+ * @constant
+ * @type {number}
+ */
+export
+const RegistrationType_routeRegister: RegistrationType = RegistrationType.routeRegister; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary routeRegister
+ * @constant
+ * @type {number}
+ */
+export
+const routeRegister: RegistrationType = RegistrationType.routeRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary RegistrationType_sysStatRegister
+ * @constant
+ * @type {number}
+ */
+export
+const RegistrationType_sysStatRegister: RegistrationType = RegistrationType.sysStatRegister; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary sysStatRegister
+ * @constant
+ * @type {number}
+ */
+export
+const sysStatRegister: RegistrationType = RegistrationType.sysStatRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+let _cached_decoder_for_RegistrationType: $.ASN1Decoder<RegistrationType> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) RegistrationType
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_RegistrationType (el: _Element): RegistrationType {
+    if (!_cached_decoder_for_RegistrationType) { _cached_decoder_for_RegistrationType = $._decodeEnumerated; }
+    return _cached_decoder_for_RegistrationType(el);
+}
+
+let _cached_encoder_for_RegistrationType: $.ASN1Encoder<RegistrationType> | null = null;
+
+/**
+ * @summary Encodes a(n) RegistrationType into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The RegistrationType, encoded as an ASN.1 Element.
+ */
+export
+function _encode_RegistrationType (value: RegistrationType, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RegistrationType) { _cached_encoder_for_RegistrationType = $._encodeEnumerated; }
+    return _cached_encoder_for_RegistrationType(value, elGetter);
+}
+
+
+/* eslint-enable */
