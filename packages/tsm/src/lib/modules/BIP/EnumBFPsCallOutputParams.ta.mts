@@ -1,0 +1,116 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { BioAPI_BFP_SCHEMA, _decode_BioAPI_BFP_SCHEMA, _encode_BioAPI_BFP_SCHEMA } from "../BIP/BioAPI-BFP-SCHEMA.ta.mjs";
+// export { BioAPI_BFP_SCHEMA, _decode_BioAPI_BFP_SCHEMA, _encode_BioAPI_BFP_SCHEMA } from "../BIP/BioAPI-BFP-SCHEMA.ta.mjs";
+
+
+/**
+ * @summary EnumBFPsCallOutputParams
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EnumBFPsCallOutputParams  ::=  SEQUENCE OF BioAPI-BFP-SCHEMA
+ * ```
+ */
+export
+type EnumBFPsCallOutputParams = BioAPI_BFP_SCHEMA[]; // SequenceOfType
+
+let _cached_decoder_for_EnumBFPsCallOutputParams: $.ASN1Decoder<EnumBFPsCallOutputParams> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) EnumBFPsCallOutputParams
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_EnumBFPsCallOutputParams (el: _Element): EnumBFPsCallOutputParams {
+    if (!_cached_decoder_for_EnumBFPsCallOutputParams) { _cached_decoder_for_EnumBFPsCallOutputParams = $._decodeSequenceOf<BioAPI_BFP_SCHEMA>(() => _decode_BioAPI_BFP_SCHEMA); }
+    return _cached_decoder_for_EnumBFPsCallOutputParams(el);
+}
+
+let _cached_encoder_for_EnumBFPsCallOutputParams: $.ASN1Encoder<EnumBFPsCallOutputParams> | null = null;
+
+/**
+ * @summary Encodes a(n) EnumBFPsCallOutputParams into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The EnumBFPsCallOutputParams, encoded as an ASN.1 Element.
+ */
+export
+function _encode_EnumBFPsCallOutputParams (value: EnumBFPsCallOutputParams, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_EnumBFPsCallOutputParams) { _cached_encoder_for_EnumBFPsCallOutputParams = $._encodeSequenceOf<BioAPI_BFP_SCHEMA>(() => _encode_BioAPI_BFP_SCHEMA, $.BER); }
+    return _cached_encoder_for_EnumBFPsCallOutputParams(value, elGetter);
+}
+
+
+/* eslint-enable */
