@@ -1,0 +1,24 @@
+{
+  "name": "@wildboar/x790",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./X790ASN1Module": "./src/lib/modules/X790ASN1Module/index.mts",
+    "./Q821-ASN1Module": "./src/lib/modules/Q821-ASN1Module/index.mts",
+    "./CMIP-1": "./src/lib/modules/CMIP-1/index.mts",
+    "./Attribute-ASN1Module": "./src/lib/modules/Attribute-ASN1Module/index.mts",
+    "./ASN1DefinedTypesModule": "./src/lib/modules/ASN1DefinedTypesModule/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}

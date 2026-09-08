@@ -1,0 +1,66 @@
+/* eslint-disable */
+import {
+    NULL,
+    GeneralizedTime,
+    ASN1Element as _Element,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary StopTime
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * StopTime  ::=  CHOICE {specific   GeneralizedTime,
+ *                      continual  NULL,
+ *                      ...
+ * }
+ * ```
+ */
+export
+type StopTime =
+    { specific: GeneralizedTime } /* CHOICE_ALT_ROOT */
+    | { continual: NULL } /* CHOICE_ALT_ROOT */
+    | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
+
+let _cached_decoder_for_StopTime: $.ASN1Decoder<StopTime> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) StopTime
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_StopTime (el: _Element): StopTime {
+    if (!_cached_decoder_for_StopTime) { _cached_decoder_for_StopTime = $._decode_extensible_choice<StopTime>({
+    "UNIVERSAL 24": [ "specific", $._decodeGeneralizedTime ],
+    "UNIVERSAL 5": [ "continual", $._decodeNull ]
+}); }
+    return _cached_decoder_for_StopTime(el);
+}
+
+let _cached_encoder_for_StopTime: $.ASN1Encoder<StopTime> | null = null;
+
+/**
+ * @summary Encodes a(n) StopTime into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The StopTime, encoded as an ASN.1 Element.
+ */
+export
+function _encode_StopTime (value: StopTime, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_StopTime) { _cached_encoder_for_StopTime = $._encode_choice<StopTime>({
+    "specific": $._encodeGeneralizedTime,
+    "continual": $._encodeNull,
+}, $.BER); }
+    return _cached_encoder_for_StopTime(value, elGetter);
+}
+
+
+/* eslint-enable */

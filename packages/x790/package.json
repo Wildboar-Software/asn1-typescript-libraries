@@ -1,0 +1,43 @@
+{
+    "name": "@wildboar/x790",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/acse": "^2.0.2",
+        "@wildboar/attribute-asn1module": "^2.0.3",
+        "@wildboar/cmip": "^2.0.3"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./X790ASN1Module": "./src/lib/modules/X790ASN1Module/index.mts",
+        "./Q821-ASN1Module": "./src/lib/modules/Q821-ASN1Module/index.mts",
+        "./CMIP-1": "./src/lib/modules/CMIP-1/index.mts",
+        "./Attribute-ASN1Module": "./src/lib/modules/Attribute-ASN1Module/index.mts",
+        "./ASN1DefinedTypesModule": "./src/lib/modules/ASN1DefinedTypesModule/index.mts"
+    }
+}

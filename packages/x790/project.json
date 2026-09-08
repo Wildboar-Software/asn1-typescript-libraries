@@ -1,0 +1,25 @@
+{
+  "name": "x790",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/x790/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/x790",
+        "tsConfig": "packages/x790/tsconfig.lib.json",
+        "packageJson": "packages/x790/package.json",
+        "main": "packages/x790/src/index.mts",
+        "assets": [
+          "packages/x790/*.md",
+          "packages/x790/LICENSE.txt",
+          "packages/x790/package.json"
+        ]
+      }
+    }
+  }
+}
