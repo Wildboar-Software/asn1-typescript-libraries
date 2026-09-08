@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,8 +9,9 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1OverflowError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 
 
@@ -137,9 +83,9 @@ class ServerDHParams {
  */
 export
 const _root_component_type_list_1_spec_for_ServerDHParams: $.ComponentSpec[] = [
-    new $.ComponentSpec("dh-p", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("dh-g", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("dh-Ys", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("dh-p", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("dh-g", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("dh-Ys", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -192,6 +138,15 @@ function _decode_ServerDHParams (el: _Element): ServerDHParams {
     dh_p = $._decodeInteger(sequence[0]);
     dh_g = $._decodeInteger(sequence[1]);
     dh_Ys = $._decodeInteger(sequence[2]);
+    const _inRange = (v: INTEGER, name: string): void => {
+        const n = typeof v === "bigint" ? v : BigInt(v);
+        if (n < 1n || n > 65535n) {
+            throw new ASN1OverflowError(name + " violates INTEGER range");
+        }
+    };
+    _inRange(dh_p, "ServerDHParams.dh-p");
+    _inRange(dh_g, "ServerDHParams.dh-g");
+    _inRange(dh_Ys, "ServerDHParams.dh-Ys");
     return new ServerDHParams(
         dh_p,
         dh_g,
@@ -213,7 +168,7 @@ let _cached_encoder_for_ServerDHParams: $.ASN1Encoder<ServerDHParams> | null = n
  */
 export
 function _encode_ServerDHParams (value: ServerDHParams, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServerDHParams) { _cached_encoder_for_ServerDHParams = function (value: ServerDHParams, elGetter: $.ASN1Encoder<ServerDHParams>): _Element {
+    if (!_cached_encoder_for_ServerDHParams) { _cached_encoder_for_ServerDHParams = function (value: ServerDHParams): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.dh_p, $.BER),

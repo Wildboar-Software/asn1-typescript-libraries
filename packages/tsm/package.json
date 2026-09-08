@@ -1,21 +1,46 @@
 {
-  "name": "@wildboar/tsm",
-  "version": "0.0.1",
-  "private": true,
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "development": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
+    "name": "@wildboar/tsm",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/acbio": "npm:@jsr/wildboar__acbio@>=2.0.2",
+        "@wildboar/bip": "npm:@jsr/wildboar__bip@>=2.0.3",
+        "@wildboar/tai": "npm:@jsr/wildboar__tai@>=1.0.2",
+        "@wildboar/x500": "npm:@jsr/wildboar__x500@>=2.0.9"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./TSM": "./src/lib/modules/TSM/index.mts",
+        "./X9-84-CMS": "./src/lib/modules/X9-84-CMS/index.mts",
+        "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
+        "./InformationFramework": "./src/lib/modules/InformationFramework/index.mts",
+        "./TAI": "./src/lib/modules/TAI/index.mts",
+        "./BIP": "./src/lib/modules/BIP/index.mts",
+        "./AuthenticationContextForBiometrics": "./src/lib/modules/AuthenticationContextForBiometrics/index.mts"
     }
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  }
 }

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,12 +8,12 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ServerDHParams, _decode_ServerDHParams, _encode_ServerDHParams } from "../TSM/ServerDHParams.ta.mjs";
-// export { ServerDHParams, _decode_ServerDHParams, _encode_ServerDHParams } from "../TSM/ServerDHParams.ta.mjs";
+
 import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signature.ta.mjs";
-// export { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signature.ta.mjs";
+
 
 
 /**
@@ -79,7 +23,10 @@ import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signatur
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServerKeyExchange-diffie-hellman ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ServerKeyExchange-diffie-hellman ::= SEQUENCE {
+ *     params         ServerDHParams,
+ *     signed-params  Signature
+ * }
  * ```
  * 
  * @class
@@ -130,8 +77,8 @@ class ServerKeyExchange_diffie_hellman {
  */
 export
 const _root_component_type_list_1_spec_for_ServerKeyExchange_diffie_hellman: $.ComponentSpec[] = [
-    new $.ComponentSpec("params", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("signed-params", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("params", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("signed-params", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -201,7 +148,7 @@ let _cached_encoder_for_ServerKeyExchange_diffie_hellman: $.ASN1Encoder<ServerKe
  */
 export
 function _encode_ServerKeyExchange_diffie_hellman (value: ServerKeyExchange_diffie_hellman, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServerKeyExchange_diffie_hellman) { _cached_encoder_for_ServerKeyExchange_diffie_hellman = function (value: ServerKeyExchange_diffie_hellman, elGetter: $.ASN1Encoder<ServerKeyExchange_diffie_hellman>): _Element {
+    if (!_cached_encoder_for_ServerKeyExchange_diffie_hellman) { _cached_encoder_for_ServerKeyExchange_diffie_hellman = function (value: ServerKeyExchange_diffie_hellman): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ServerDHParams(value.params, $.BER),

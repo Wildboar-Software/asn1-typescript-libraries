@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,20 +9,20 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { BSP_BFP_Schemas, _decode_BSP_BFP_Schemas, _encode_BSP_BFP_Schemas } from "../TSM/BSP-BFP-Schemas.ta.mjs";
-// export { BSP_BFP_Schemas, _decode_BSP_BFP_Schemas, _encode_BSP_BFP_Schemas } from "../TSM/BSP-BFP-Schemas.ta.mjs";
+
 import { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/TemplateID.ta.mjs";
-// export { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/TemplateID.ta.mjs";
+
 import { Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
-// export { Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
+
 import { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
-// export { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
+
 import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
-// export { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
+
 import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
-// export { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
+
 
 
 /**
@@ -170,12 +115,12 @@ class TTPResponsebyServer {
  */
 export
 const _root_component_type_list_1_spec_for_TTPResponsebyServer: $.ComponentSpec[] = [
-    new $.ComponentSpec("bFPSchema", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("templateID", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("sampleQuality", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("score", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("digitalSignature", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("aCforBioOnTTP", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("bFPSchema", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("templateID", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("sampleQuality", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("score", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("digitalSignature", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("aCforBioOnTTP", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -258,7 +203,7 @@ let _cached_encoder_for_TTPResponsebyServer: $.ASN1Encoder<TTPResponsebyServer> 
  */
 export
 function _encode_TTPResponsebyServer (value: TTPResponsebyServer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TTPResponsebyServer) { _cached_encoder_for_TTPResponsebyServer = function (value: TTPResponsebyServer, elGetter: $.ASN1Encoder<TTPResponsebyServer>): _Element {
+    if (!_cached_encoder_for_TTPResponsebyServer) { _cached_encoder_for_TTPResponsebyServer = function (value: TTPResponsebyServer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_BSP_BFP_Schemas(value.bFPSchema, $.BER),

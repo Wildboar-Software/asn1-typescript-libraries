@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,20 +9,20 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { CMSVersion, CMSVersion_v84 /* IMPORTED_LONG_NAMED_INTEGER */, v84 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
-// export { CMSVersion, CMSVersion_v84 /* IMPORTED_LONG_NAMED_INTEGER */, v84 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+
 import { DigestAlgorithmIdentifiers, _decode_DigestAlgorithmIdentifiers, _encode_DigestAlgorithmIdentifiers } from "../X9-84-CMS/DigestAlgorithmIdentifiers.ta.mjs";
-// export { DigestAlgorithmIdentifiers, _decode_DigestAlgorithmIdentifiers, _encode_DigestAlgorithmIdentifiers } from "../X9-84-CMS/DigestAlgorithmIdentifiers.ta.mjs";
+
 import { EncapsulatedContentInfo, _decode_EncapsulatedContentInfo, _encode_EncapsulatedContentInfo } from "../X9-84-CMS/EncapsulatedContentInfo.ta.mjs";
-// export { EncapsulatedContentInfo, _decode_EncapsulatedContentInfo, _encode_EncapsulatedContentInfo } from "../X9-84-CMS/EncapsulatedContentInfo.ta.mjs";
+
 import { CertificateSet, _decode_CertificateSet, _encode_CertificateSet } from "../X9-84-CMS/CertificateSet.ta.mjs";
-// export { CertificateSet, _decode_CertificateSet, _encode_CertificateSet } from "../X9-84-CMS/CertificateSet.ta.mjs";
+
 import { CertificateRevocationLists, _decode_CertificateRevocationLists, _encode_CertificateRevocationLists } from "../X9-84-CMS/CertificateRevocationLists.ta.mjs";
-// export { CertificateRevocationLists, _decode_CertificateRevocationLists, _encode_CertificateRevocationLists } from "../X9-84-CMS/CertificateRevocationLists.ta.mjs";
+
 import { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../X9-84-CMS/SignerInfos.ta.mjs";
-// export { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../X9-84-CMS/SignerInfos.ta.mjs";
+
 
 
 /**
@@ -169,12 +114,12 @@ class SignedData {
  */
 export
 const _root_component_type_list_1_spec_for_SignedData: $.ComponentSpec[] = [
-    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("digestAlgorithms", false, $.hasTag(_TagClass.universal, 17), undefined, undefined),
-    new $.ComponentSpec("encapContentInfo", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("certificates", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("crls", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("signerInfos", false, $.hasTag(_TagClass.universal, 17), undefined, undefined)
+    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("digestAlgorithms", false, $.hasTag(_TagClass.universal, 17)),
+    new $.ComponentSpec("encapContentInfo", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("certificates", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("crls", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("signerInfos", false, $.hasTag(_TagClass.universal, 17))
 ];
 
 /**
@@ -257,7 +202,7 @@ let _cached_encoder_for_SignedData: $.ASN1Encoder<SignedData> | null = null;
  */
 export
 function _encode_SignedData (value: SignedData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SignedData) { _cached_encoder_for_SignedData = function (value: SignedData, elGetter: $.ASN1Encoder<SignedData>): _Element {
+    if (!_cached_encoder_for_SignedData) { _cached_encoder_for_SignedData = function (value: SignedData): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CMSVersion(value.version, $.BER),

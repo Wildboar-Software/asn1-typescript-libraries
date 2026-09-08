@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,10 +8,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { BiometricMethod, _decode_BiometricMethod, _encode_BiometricMethod } from "../TSM/BiometricMethod.ta.mjs";
-// export { BiometricMethod, _decode_BiometricMethod, _encode_BiometricMethod } from "../TSM/BiometricMethod.ta.mjs";
+
 
 
 /**
@@ -94,7 +39,11 @@ let _cached_decoder_for_BiometricClientHello: $.ASN1Decoder<BiometricClientHello
 export
 function _decode_BiometricClientHello (el: _Element): BiometricClientHello {
     if (!_cached_decoder_for_BiometricClientHello) { _cached_decoder_for_BiometricClientHello = $._decodeSequenceOf<BiometricMethod>(() => _decode_BiometricMethod); }
-    return _cached_decoder_for_BiometricClientHello(el);
+    const value = _cached_decoder_for_BiometricClientHello(el);
+    if (value.length < 1 ) {
+        throw new ASN1SizeError("BiometricClientHello violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_BiometricClientHello: $.ASN1Encoder<BiometricClientHello> | null = null;

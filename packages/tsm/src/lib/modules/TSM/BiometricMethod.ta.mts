@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,14 +9,14 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../TSM/BiometricType.ta.mjs";
-// export { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../TSM/BiometricType.ta.mjs";
+
 import { BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "../TSM/BSP-BFP-Schema.ta.mjs";
-// export { BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "../TSM/BSP-BFP-Schema.ta.mjs";
-import { NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, NetworkAuthenticationModel_no_value /* IMPORTED_LONG_ENUMERATION_ITEM */, no_value /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_local_model /* IMPORTED_LONG_ENUMERATION_ITEM */, local_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_download_model /* IMPORTED_LONG_ENUMERATION_ITEM */, download_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_attached_model /* IMPORTED_LONG_ENUMERATION_ITEM */, attached_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_center_model /* IMPORTED_LONG_ENUMERATION_ITEM */, center_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_ref_onttp_for_local_model /* IMPORTED_LONG_ENUMERATION_ITEM */, ref_onttp_for_local_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_ref_onttp_for_center_model /* IMPORTED_LONG_ENUMERATION_ITEM */, ref_onttp_for_center_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_comparison_outsourcing_by_client_model /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_outsourcing_by_client_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_comparison_outsourcing_by_server_model /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_outsourcing_by_server_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model /* IMPORTED_LONG_ENUMERATION_ITEM */, storage_comparison_outsourcing_by_client_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model /* IMPORTED_LONG_ENUMERATION_ITEM */, storage_comparison_outsourcing_by_server_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkAuthenticationModel, _encode_NetworkAuthenticationModel } from "../TSM/NetworkAuthenticationModel.ta.mjs";
-// export { NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, NetworkAuthenticationModel_no_value /* IMPORTED_LONG_ENUMERATION_ITEM */, no_value /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_local_model /* IMPORTED_LONG_ENUMERATION_ITEM */, local_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_download_model /* IMPORTED_LONG_ENUMERATION_ITEM */, download_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_attached_model /* IMPORTED_LONG_ENUMERATION_ITEM */, attached_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_center_model /* IMPORTED_LONG_ENUMERATION_ITEM */, center_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_ref_onttp_for_local_model /* IMPORTED_LONG_ENUMERATION_ITEM */, ref_onttp_for_local_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_ref_onttp_for_center_model /* IMPORTED_LONG_ENUMERATION_ITEM */, ref_onttp_for_center_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_comparison_outsourcing_by_client_model /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_outsourcing_by_client_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_comparison_outsourcing_by_server_model /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_outsourcing_by_server_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model /* IMPORTED_LONG_ENUMERATION_ITEM */, storage_comparison_outsourcing_by_client_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model /* IMPORTED_LONG_ENUMERATION_ITEM */, storage_comparison_outsourcing_by_server_model /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkAuthenticationModel, _encode_NetworkAuthenticationModel } from "../TSM/NetworkAuthenticationModel.ta.mjs";
+
+import { NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, _decode_NetworkAuthenticationModel, _encode_NetworkAuthenticationModel } from "../TSM/NetworkAuthenticationModel.ta.mjs";
+
 
 
 /**
@@ -155,10 +100,10 @@ class BiometricMethod {
  */
 export
 const _root_component_type_list_1_spec_for_BiometricMethod: $.ComponentSpec[] = [
-    new $.ComponentSpec("biometricType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("biometricFunctionProvider", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("networkAuthenticationModel", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("thirdPartyInfo", false, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("biometricType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("biometricFunctionProvider", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("networkAuthenticationModel", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("thirdPartyInfo", false, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -236,7 +181,7 @@ let _cached_encoder_for_BiometricMethod: $.ASN1Encoder<BiometricMethod> | null =
  */
 export
 function _encode_BiometricMethod (value: BiometricMethod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BiometricMethod) { _cached_encoder_for_BiometricMethod = function (value: BiometricMethod, elGetter: $.ASN1Encoder<BiometricMethod>): _Element {
+    if (!_cached_encoder_for_BiometricMethod) { _cached_encoder_for_BiometricMethod = function (value: BiometricMethod): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_BiometricType(value.biometricType, $.BER),

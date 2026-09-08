@@ -4,7 +4,7 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/tsm',
   test: {
-    name: '@wildboar/tsm',
+    name: 'tsm',
     watch: false,
     globals: true,
     environment: 'node',

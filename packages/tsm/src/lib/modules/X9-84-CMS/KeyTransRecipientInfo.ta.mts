@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,16 +8,16 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { CMSVersion, CMSVersion_v84 /* IMPORTED_LONG_NAMED_INTEGER */, v84 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
-// export { CMSVersion, CMSVersion_v84 /* IMPORTED_LONG_NAMED_INTEGER */, v84 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+
 import { RecipientIdentifier, _decode_RecipientIdentifier, _encode_RecipientIdentifier } from "../X9-84-CMS/RecipientIdentifier.ta.mjs";
-// export { RecipientIdentifier, _decode_RecipientIdentifier, _encode_RecipientIdentifier } from "../X9-84-CMS/RecipientIdentifier.ta.mjs";
+
 import { KeyEncryptionAlgorithmIdentifier, _decode_KeyEncryptionAlgorithmIdentifier, _encode_KeyEncryptionAlgorithmIdentifier } from "../X9-84-CMS/KeyEncryptionAlgorithmIdentifier.ta.mjs";
-// export { KeyEncryptionAlgorithmIdentifier, _decode_KeyEncryptionAlgorithmIdentifier, _encode_KeyEncryptionAlgorithmIdentifier } from "../X9-84-CMS/KeyEncryptionAlgorithmIdentifier.ta.mjs";
+
 import { EncryptedKey, _decode_EncryptedKey, _encode_EncryptedKey } from "../X9-84-CMS/EncryptedKey.ta.mjs";
-// export { EncryptedKey, _decode_EncryptedKey, _encode_EncryptedKey } from "../X9-84-CMS/EncryptedKey.ta.mjs";
+
 
 
 /**
@@ -151,10 +95,10 @@ class KeyTransRecipientInfo {
  */
 export
 const _root_component_type_list_1_spec_for_KeyTransRecipientInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("rid", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("keyEncryptionAlgorithm", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("encryptedKey", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("rid", false, $.hasAnyTag),
+    new $.ComponentSpec("keyEncryptionAlgorithm", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("encryptedKey", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**
@@ -232,7 +176,7 @@ let _cached_encoder_for_KeyTransRecipientInfo: $.ASN1Encoder<KeyTransRecipientIn
  */
 export
 function _encode_KeyTransRecipientInfo (value: KeyTransRecipientInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KeyTransRecipientInfo) { _cached_encoder_for_KeyTransRecipientInfo = function (value: KeyTransRecipientInfo, elGetter: $.ASN1Encoder<KeyTransRecipientInfo>): _Element {
+    if (!_cached_encoder_for_KeyTransRecipientInfo) { _cached_encoder_for_KeyTransRecipientInfo = function (value: KeyTransRecipientInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CMSVersion(value.version, $.BER),

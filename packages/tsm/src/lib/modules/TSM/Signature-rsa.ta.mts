@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,10 +8,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
-// export { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
+
 
 
 /**
@@ -77,7 +22,10 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Signature-rsa ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Signature-rsa ::= SEQUENCE {
+ *     md5-hash  Opaque(SIZE(16)),
+ *     sha-hash  Opaque(SIZE(20))
+ * }
  * ```
  * 
  * @class
@@ -128,8 +76,8 @@ class Signature_rsa {
  */
 export
 const _root_component_type_list_1_spec_for_Signature_rsa: $.ComponentSpec[] = [
-    new $.ComponentSpec("md5-hash", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sha-hash", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("md5-hash", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sha-hash", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -179,6 +127,12 @@ function _decode_Signature_rsa (el: _Element): Signature_rsa {
     let sha_hash!: Opaque;
     md5_hash = _decode_Opaque(sequence[0]);
     sha_hash = _decode_Opaque(sequence[1]);
+    if (md5_hash.length !== 16) {
+        throw new ASN1SizeError("Signature-rsa.md5-hash violates SIZE constraint");
+    }
+    if (sha_hash.length !== 20) {
+        throw new ASN1SizeError("Signature-rsa.sha-hash violates SIZE constraint");
+    }
     return new Signature_rsa(
         md5_hash,
         sha_hash,
@@ -199,7 +153,7 @@ let _cached_encoder_for_Signature_rsa: $.ASN1Encoder<Signature_rsa> | null = nul
  */
 export
 function _encode_Signature_rsa (value: Signature_rsa, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Signature_rsa) { _cached_encoder_for_Signature_rsa = function (value: Signature_rsa, elGetter: $.ASN1Encoder<Signature_rsa>): _Element {
+    if (!_cached_encoder_for_Signature_rsa) { _cached_encoder_for_Signature_rsa = function (value: Signature_rsa): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Opaque(value.md5_hash, $.BER),

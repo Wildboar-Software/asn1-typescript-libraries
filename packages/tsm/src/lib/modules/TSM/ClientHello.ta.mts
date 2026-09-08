@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,20 +8,20 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
-// export { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
+
 import { ClientRandom, _decode_ClientRandom, _encode_ClientRandom } from "../TSM/ClientRandom.ta.mjs";
-// export { ClientRandom, _decode_ClientRandom, _encode_ClientRandom } from "../TSM/ClientRandom.ta.mjs";
+
 import { SessionID, _decode_SessionID, _encode_SessionID } from "../TSM/SessionID.ta.mjs";
-// export { SessionID, _decode_SessionID, _encode_SessionID } from "../TSM/SessionID.ta.mjs";
+
 import { CipherSuites, _decode_CipherSuites, _encode_CipherSuites } from "../TSM/CipherSuites.ta.mjs";
-// export { CipherSuites, _decode_CipherSuites, _encode_CipherSuites } from "../TSM/CipherSuites.ta.mjs";
+
 import { CompressionMethods, _decode_CompressionMethods, _encode_CompressionMethods } from "../TSM/CompressionMethods.ta.mjs";
-// export { CompressionMethods, _decode_CompressionMethods, _encode_CompressionMethods } from "../TSM/CompressionMethods.ta.mjs";
+
 import { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } from "../TSM/ExtensionValues.ta.mjs";
-// export { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } from "../TSM/ExtensionValues.ta.mjs";
+
 
 
 /**
@@ -177,11 +121,11 @@ class ClientHello {
  */
 export
 const _root_component_type_list_1_spec_for_ClientHello: $.ComponentSpec[] = [
-    new $.ComponentSpec("client-version", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("random", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("session-id", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("cipher-suites", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("compression-methods", false, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("client-version", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("random", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("session-id", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("cipher-suites", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("compression-methods", false, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -194,7 +138,7 @@ const _root_component_type_list_1_spec_for_ClientHello: $.ComponentSpec[] = [
  */
 export
 const _root_component_type_list_2_spec_for_ClientHello: $.ComponentSpec[] = [
-    new $.ComponentSpec("client-hello-extension-list", false, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("client-hello-extension-list", false, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -266,7 +210,7 @@ let _cached_encoder_for_ClientHello: $.ASN1Encoder<ClientHello> | null = null;
  */
 export
 function _encode_ClientHello (value: ClientHello, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ClientHello) { _cached_encoder_for_ClientHello = function (value: ClientHello, elGetter: $.ASN1Encoder<ClientHello>): _Element {
+    if (!_cached_encoder_for_ClientHello) { _cached_encoder_for_ClientHello = function (value: ClientHello): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ProtocolVersion(value.client_version, $.BER),

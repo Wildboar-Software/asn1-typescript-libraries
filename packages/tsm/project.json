@@ -1,0 +1,25 @@
+{
+  "name": "tsm",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/tsm/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/tsm",
+        "tsConfig": "packages/tsm/tsconfig.lib.json",
+        "packageJson": "packages/tsm/package.json",
+        "main": "packages/tsm/src/index.mts",
+        "assets": [
+          "packages/tsm/*.md",
+          "packages/tsm/LICENSE.txt",
+          "packages/tsm/package.json"
+        ]
+      }
+    }
+  }
+}

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,12 +8,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
-// export { UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
+
 import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
-// export { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
+
 
 
 /**
@@ -133,8 +78,8 @@ class ClientRandom {
  */
 export
 const _root_component_type_list_1_spec_for_ClientRandom: $.ComponentSpec[] = [
-    new $.ComponentSpec("gmt-unix-time", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("random-bytes", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("gmt-unix-time", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("random-bytes", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -184,6 +129,9 @@ function _decode_ClientRandom (el: _Element): ClientRandom {
     let random_bytes!: Opaque;
     gmt_unix_time = _decode_UINT32(sequence[0]);
     random_bytes = _decode_Opaque(sequence[1]);
+    if (random_bytes.length !== 28) {
+        throw new ASN1SizeError("ClientRandom.random-bytes violates SIZE constraint");
+    }
     return new ClientRandom(
         gmt_unix_time,
         random_bytes,
@@ -204,7 +152,7 @@ let _cached_encoder_for_ClientRandom: $.ASN1Encoder<ClientRandom> | null = null;
  */
 export
 function _encode_ClientRandom (value: ClientRandom, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ClientRandom) { _cached_encoder_for_ClientRandom = function (value: ClientRandom, elGetter: $.ASN1Encoder<ClientRandom>): _Element {
+    if (!_cached_encoder_for_ClientRandom) { _cached_encoder_for_ClientRandom = function (value: ClientRandom): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_UINT32(value.gmt_unix_time, $.BER),

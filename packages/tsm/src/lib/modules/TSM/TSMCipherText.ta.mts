@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,16 +8,16 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../TSM/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../TSM/ProtocolIdentifier.ta.mjs";
-import { ContentType, _enum_for_ContentType, ContentType_change_cipher_spec /* IMPORTED_LONG_ENUMERATION_ITEM */, change_cipher_spec /* IMPORTED_SHORT_ENUMERATION_ITEM */, ContentType_alert /* IMPORTED_LONG_ENUMERATION_ITEM */, alert /* IMPORTED_SHORT_ENUMERATION_ITEM */, ContentType_handshake /* IMPORTED_LONG_ENUMERATION_ITEM */, handshake /* IMPORTED_SHORT_ENUMERATION_ITEM */, ContentType_application_data /* IMPORTED_LONG_ENUMERATION_ITEM */, application_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ContentType, _encode_ContentType } from "../TSM/ContentType.ta.mjs";
-// export { ContentType, _enum_for_ContentType, ContentType_change_cipher_spec /* IMPORTED_LONG_ENUMERATION_ITEM */, change_cipher_spec /* IMPORTED_SHORT_ENUMERATION_ITEM */, ContentType_alert /* IMPORTED_LONG_ENUMERATION_ITEM */, alert /* IMPORTED_SHORT_ENUMERATION_ITEM */, ContentType_handshake /* IMPORTED_LONG_ENUMERATION_ITEM */, handshake /* IMPORTED_SHORT_ENUMERATION_ITEM */, ContentType_application_data /* IMPORTED_LONG_ENUMERATION_ITEM */, application_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ContentType, _encode_ContentType } from "../TSM/ContentType.ta.mjs";
+
+import { ContentType, _enum_for_ContentType, _decode_ContentType, _encode_ContentType } from "../TSM/ContentType.ta.mjs";
+
 import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
-// export { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
+
 import { TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCipherText_fragment } from "../TSM/TSMCipherText-fragment.ta.mjs";
-// export { TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCipherText_fragment } from "../TSM/TSMCipherText-fragment.ta.mjs";
+
 
 
 /**
@@ -160,10 +104,10 @@ class TSMCipherText {
  */
 export
 const _root_component_type_list_1_spec_for_TSMCipherText: $.ComponentSpec[] = [
-    new $.ComponentSpec("protocolID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("version", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("fragment", false, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("protocolID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("version", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("fragment", false, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -241,7 +185,7 @@ let _cached_encoder_for_TSMCipherText: $.ASN1Encoder<TSMCipherText> | null = nul
  */
 export
 function _encode_TSMCipherText (value: TSMCipherText, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSMCipherText) { _cached_encoder_for_TSMCipherText = function (value: TSMCipherText, elGetter: $.ASN1Encoder<TSMCipherText>): _Element {
+    if (!_cached_encoder_for_TSMCipherText) { _cached_encoder_for_TSMCipherText = function (value: TSMCipherText): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ProtocolIdentifier(value.protocolID, $.BER),

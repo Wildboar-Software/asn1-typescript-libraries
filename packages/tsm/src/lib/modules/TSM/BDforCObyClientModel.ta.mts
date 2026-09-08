@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,20 +10,20 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { BSP_BFP_Schemas, _decode_BSP_BFP_Schemas, _encode_BSP_BFP_Schemas } from "../TSM/BSP-BFP-Schemas.ta.mjs";
-// export { BSP_BFP_Schemas, _decode_BSP_BFP_Schemas, _encode_BSP_BFP_Schemas } from "../TSM/BSP-BFP-Schemas.ta.mjs";
+
 import { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/TemplateID.ta.mjs";
-// export { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/TemplateID.ta.mjs";
+
 import { Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
-// export { Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
+
 import { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
-// export { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
+
 import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
-// export { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
+
 import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
-// export { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
+
 
 
 /**
@@ -198,16 +144,16 @@ class BDforCObyClientModel {
  */
 export
 const _root_component_type_list_1_spec_for_BDforCObyClientModel: $.ComponentSpec[] = [
-    new $.ComponentSpec("bFPSchemaforClientProcess", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("thirdPartyInfo", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("bFPSchemaforTTPProcess", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("templateID", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("sampleQuality", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("score", false, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("digitalSignaturebyClient", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("digitalSignaturebyTTP", false, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("aCforBioOnClient", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("aCforBioOnTTP", true, $.hasTag(_TagClass.context, 9), undefined, undefined)
+    new $.ComponentSpec("bFPSchemaforClientProcess", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("thirdPartyInfo", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("bFPSchemaforTTPProcess", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("templateID", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("sampleQuality", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("score", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("digitalSignaturebyClient", false, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("digitalSignaturebyTTP", false, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("aCforBioOnClient", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("aCforBioOnTTP", true, $.hasTag(_TagClass.context, 9))
 ];
 
 /**
@@ -302,7 +248,7 @@ let _cached_encoder_for_BDforCObyClientModel: $.ASN1Encoder<BDforCObyClientModel
  */
 export
 function _encode_BDforCObyClientModel (value: BDforCObyClientModel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BDforCObyClientModel) { _cached_encoder_for_BDforCObyClientModel = function (value: BDforCObyClientModel, elGetter: $.ASN1Encoder<BDforCObyClientModel>): _Element {
+    if (!_cached_encoder_for_BDforCObyClientModel) { _cached_encoder_for_BDforCObyClientModel = function (value: BDforCObyClientModel): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_BSP_BFP_Schemas(value.bFPSchemaforClientProcess, $.BER),

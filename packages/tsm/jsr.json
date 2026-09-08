@@ -1,0 +1,26 @@
+{
+  "name": "@wildboar/tsm",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./TSM": "./src/lib/modules/TSM/index.mts",
+    "./X9-84-CMS": "./src/lib/modules/X9-84-CMS/index.mts",
+    "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
+    "./InformationFramework": "./src/lib/modules/InformationFramework/index.mts",
+    "./TAI": "./src/lib/modules/TAI/index.mts",
+    "./BIP": "./src/lib/modules/BIP/index.mts",
+    "./AuthenticationContextForBiometrics": "./src/lib/modules/AuthenticationContextForBiometrics/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}

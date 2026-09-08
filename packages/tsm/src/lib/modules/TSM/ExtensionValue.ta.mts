@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,12 +8,9 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { EXTENSION } from "../TSM/EXTENSION.oca.mjs";
-// export { EXTENSION } from "../TSM/EXTENSION.oca.mjs";
-import { Extensions } from "../TSM/Extensions.osa.mjs";
-// export { Extensions } from "../TSM/Extensions.osa.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../TSM/ExtensionType.ta.mjs";
 
 
 /**
@@ -133,8 +74,8 @@ class ExtensionValue {
  */
 export
 const _root_component_type_list_1_spec_for_ExtensionValue: $.ComponentSpec[] = [
-    new $.ComponentSpec("extension-type", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extension-data", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("extension-type", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extension-data", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -204,7 +145,7 @@ let _cached_encoder_for_ExtensionValue: $.ASN1Encoder<ExtensionValue> | null = n
  */
 export
 function _encode_ExtensionValue (value: ExtensionValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtensionValue) { _cached_encoder_for_ExtensionValue = function (value: ExtensionValue, elGetter: $.ASN1Encoder<ExtensionValue>): _Element {
+    if (!_cached_encoder_for_ExtensionValue) { _cached_encoder_for_ExtensionValue = function (value: ExtensionValue): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ExtensionType(value.extension_type, $.BER),

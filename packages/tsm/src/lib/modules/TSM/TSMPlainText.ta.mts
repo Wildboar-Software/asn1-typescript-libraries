@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,14 +8,14 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../TSM/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../TSM/ProtocolIdentifier.ta.mjs";
+
 import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
-// export { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
+
 import { TSMPlainText_fragment, _decode_TSMPlainText_fragment, _encode_TSMPlainText_fragment } from "../TSM/TSMPlainText-fragment.ta.mjs";
-// export { TSMPlainText_fragment, _decode_TSMPlainText_fragment, _encode_TSMPlainText_fragment } from "../TSM/TSMPlainText-fragment.ta.mjs";
+
 
 
 /**
@@ -147,9 +91,9 @@ class TSMPlainText {
  */
 export
 const _root_component_type_list_1_spec_for_TSMPlainText: $.ComponentSpec[] = [
-    new $.ComponentSpec("protocolID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("version", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("fragment", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("protocolID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("version", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("fragment", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -223,7 +167,7 @@ let _cached_encoder_for_TSMPlainText: $.ASN1Encoder<TSMPlainText> | null = null;
  */
 export
 function _encode_TSMPlainText (value: TSMPlainText, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSMPlainText) { _cached_encoder_for_TSMPlainText = function (value: TSMPlainText, elGetter: $.ASN1Encoder<TSMPlainText>): _Element {
+    if (!_cached_encoder_for_TSMPlainText) { _cached_encoder_for_TSMPlainText = function (value: TSMPlainText): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ProtocolIdentifier(value.protocolID, $.BER),
