@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,12 +10,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { IGCS_Address, _decode_IGCS_Address, _encode_IGCS_Address } from "../SCPP-MESSAGES/IGCS-Address.ta.mjs";
-// export { IGCS_Address, _decode_IGCS_Address, _encode_IGCS_Address } from "../SCPP-MESSAGES/IGCS-Address.ta.mjs";
 import { SCPP_PDU_igcs_message_body, _decode_SCPP_PDU_igcs_message_body, _encode_SCPP_PDU_igcs_message_body } from "../SCPP-MESSAGES/SCPP-PDU-igcs-message-body.ta.mjs";
-// export { SCPP_PDU_igcs_message_body, _decode_SCPP_PDU_igcs_message_body, _encode_SCPP_PDU_igcs_message_body } from "../SCPP-MESSAGES/SCPP-PDU-igcs-message-body.ta.mjs";
 
 
 /**
@@ -159,10 +103,10 @@ class SCPP_PDU {
  */
 export
 const _root_component_type_list_1_spec_for_SCPP_PDU: $.ComponentSpec[] = [
-    new $.ComponentSpec("sourceAddress", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("destAddress", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("igcs-message-body", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("nonStandardData", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("sourceAddress", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("destAddress", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("igcs-message-body", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("nonStandardData", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -206,11 +150,11 @@ function _decode_SCPP_PDU (el: _Element): SCPP_PDU {
     let destAddress!: IGCS_Address;
     let igcs_message_body!: SCPP_PDU_igcs_message_body;
     let nonStandardData: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "sourceAddress": (_el: _Element): void => { sourceAddress = _decode_IGCS_Address(_el); },
-        "destAddress": (_el: _Element): void => { destAddress = _decode_IGCS_Address(_el); },
-        "igcs-message-body": (_el: _Element): void => { igcs_message_body = _decode_SCPP_PDU_igcs_message_body(_el); },
+        "sourceAddress": (_el: _Element): void => { sourceAddress = $._decode_explicit<IGCS_Address>(() => _decode_IGCS_Address)(_el); },
+        "destAddress": (_el: _Element): void => { destAddress = $._decode_explicit<IGCS_Address>(() => _decode_IGCS_Address)(_el); },
+        "igcs-message-body": (_el: _Element): void => { igcs_message_body = $._decode_explicit<SCPP_PDU_igcs_message_body>(() => _decode_SCPP_PDU_igcs_message_body)(_el); },
         "nonStandardData": (_el: _Element): void => { nonStandardData = $._decodeOctetString(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -241,13 +185,13 @@ let _cached_encoder_for_SCPP_PDU: $.ASN1Encoder<SCPP_PDU> | null = null;
  */
 export
 function _encode_SCPP_PDU (value: SCPP_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCPP_PDU) { _cached_encoder_for_SCPP_PDU = function (value: SCPP_PDU, elGetter: $.ASN1Encoder<SCPP_PDU>): _Element {
+    if (!_cached_encoder_for_SCPP_PDU) { _cached_encoder_for_SCPP_PDU = function (value: SCPP_PDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_IGCS_Address(value.sourceAddress, $.BER),
-            /* REQUIRED   */ _encode_IGCS_Address(value.destAddress, $.BER),
-            /* REQUIRED   */ _encode_SCPP_PDU_igcs_message_body(value.igcs_message_body, $.BER),
-            /* IF_ABSENT  */ ((value.nonStandardData === undefined) ? undefined : $._encodeOctetString(value.nonStandardData, $.BER))
+            /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_IGCS_Address, $.BER)(value.sourceAddress, $.BER),
+            /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_IGCS_Address, $.BER)(value.destAddress, $.BER),
+            /* REQUIRED   */ $._encode_explicit(_TagClass.context, 2, () => _encode_SCPP_PDU_igcs_message_body, $.BER)(value.igcs_message_body, $.BER),
+            /* IF_ABSENT  */ ((value.nonStandardData === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeOctetString, $.BER)(value.nonStandardData, $.BER))
         ],
         (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

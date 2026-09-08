@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,18 +8,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { PeerDiscoveryDEF, _decode_PeerDiscoveryDEF, _encode_PeerDiscoveryDEF } from "../SCPP-MESSAGES/PeerDiscoveryDEF.ta.mjs";
-// export { PeerDiscoveryDEF, _decode_PeerDiscoveryDEF, _encode_PeerDiscoveryDEF } from "../SCPP-MESSAGES/PeerDiscoveryDEF.ta.mjs";
 import { PeerSetupDEF, _decode_PeerSetupDEF, _encode_PeerSetupDEF } from "../SCPP-MESSAGES/PeerSetupDEF.ta.mjs";
-// export { PeerSetupDEF, _decode_PeerSetupDEF, _encode_PeerSetupDEF } from "../SCPP-MESSAGES/PeerSetupDEF.ta.mjs";
 import { DataExchangeDEF, _decode_DataExchangeDEF, _encode_DataExchangeDEF } from "../SCPP-MESSAGES/DataExchangeDEF.ta.mjs";
-// export { DataExchangeDEF, _decode_DataExchangeDEF, _encode_DataExchangeDEF } from "../SCPP-MESSAGES/DataExchangeDEF.ta.mjs";
 import { PeerKeepAliveDEF, _decode_PeerKeepAliveDEF, _encode_PeerKeepAliveDEF } from "../SCPP-MESSAGES/PeerKeepAliveDEF.ta.mjs";
-// export { PeerKeepAliveDEF, _decode_PeerKeepAliveDEF, _encode_PeerKeepAliveDEF } from "../SCPP-MESSAGES/PeerKeepAliveDEF.ta.mjs";
 import { PeerReleaseDEF, _decode_PeerReleaseDEF, _encode_PeerReleaseDEF } from "../SCPP-MESSAGES/PeerReleaseDEF.ta.mjs";
-// export { PeerReleaseDEF, _decode_PeerReleaseDEF, _encode_PeerReleaseDEF } from "../SCPP-MESSAGES/PeerReleaseDEF.ta.mjs";
 
 
 /**
@@ -85,7 +24,13 @@ import { PeerReleaseDEF, _decode_PeerReleaseDEF, _encode_PeerReleaseDEF } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SCPP-PDU-igcs-message-body ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SCPP-PDU-igcs-message-body ::= CHOICE {
+ *     peerDiscovery  PeerDiscoveryDEF,
+ *     peerSetup      PeerSetupDEF,
+ *     dataExchange   DataExchangeDEF,
+ *     peerKeepAlive  PeerKeepAliveDEF,
+ *     peerRelease    PeerReleaseDEF
+ * }
  * ```
  */
 export
@@ -128,11 +73,11 @@ let _cached_encoder_for_SCPP_PDU_igcs_message_body: $.ASN1Encoder<SCPP_PDU_igcs_
 export
 function _encode_SCPP_PDU_igcs_message_body (value: SCPP_PDU_igcs_message_body, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_SCPP_PDU_igcs_message_body) { _cached_encoder_for_SCPP_PDU_igcs_message_body = $._encode_choice<SCPP_PDU_igcs_message_body>({
-    "peerDiscovery": _encode_PeerDiscoveryDEF,
-    "peerSetup": _encode_PeerSetupDEF,
-    "dataExchange": _encode_DataExchangeDEF,
-    "peerKeepAlive": _encode_PeerKeepAliveDEF,
-    "peerRelease": _encode_PeerReleaseDEF,
+    "peerDiscovery": $._encode_implicit(_TagClass.context, 0, () => _encode_PeerDiscoveryDEF, $.BER),
+    "peerSetup": $._encode_implicit(_TagClass.context, 1, () => _encode_PeerSetupDEF, $.BER),
+    "dataExchange": $._encode_implicit(_TagClass.context, 2, () => _encode_DataExchangeDEF, $.BER),
+    "peerKeepAlive": $._encode_implicit(_TagClass.context, 3, () => _encode_PeerKeepAliveDEF, $.BER),
+    "peerRelease": $._encode_implicit(_TagClass.context, 4, () => _encode_PeerReleaseDEF, $.BER),
 }, $.BER); }
     return _cached_encoder_for_SCPP_PDU_igcs_message_body(value, elGetter);
 }

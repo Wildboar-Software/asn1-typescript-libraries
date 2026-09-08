@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,12 +8,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { GF_Updates, _decode_GF_Updates, _encode_GF_Updates } from "../SCPP-MESSAGES/GF-Updates.ta.mjs";
-// export { GF_Updates, _decode_GF_Updates, _encode_GF_Updates } from "../SCPP-MESSAGES/GF-Updates.ta.mjs";
 import { SupportedSpamFilters, _decode_SupportedSpamFilters, _encode_SupportedSpamFilters } from "../SCPP-MESSAGES/SupportedSpamFilters.ta.mjs";
-// export { SupportedSpamFilters, _decode_SupportedSpamFilters, _encode_SupportedSpamFilters } from "../SCPP-MESSAGES/SupportedSpamFilters.ta.mjs";
 
 
 /**
@@ -140,9 +82,9 @@ class PeerKeepAliveDEF {
  */
 export
 const _root_component_type_list_1_spec_for_PeerKeepAliveDEF: $.ComponentSpec[] = [
-    new $.ComponentSpec("sgfUpdates", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("rgfUpdates", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("filtersUpdates", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("sgfUpdates", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("rgfUpdates", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("filtersUpdates", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -189,12 +131,9 @@ function _decode_PeerKeepAliveDEF (el: _Element): PeerKeepAliveDEF {
     sequence[0].name = "sgfUpdates";
     sequence[1].name = "rgfUpdates";
     sequence[2].name = "filtersUpdates";
-    let sgfUpdates!: GF_Updates;
-    let rgfUpdates!: GF_Updates;
-    let filtersUpdates!: SupportedSpamFilters;
-    sgfUpdates = _decode_GF_Updates(sequence[0]);
-    rgfUpdates = _decode_GF_Updates(sequence[1]);
-    filtersUpdates = _decode_SupportedSpamFilters(sequence[2]);
+    const sgfUpdates = _decode_GF_Updates(sequence[0]);
+    const rgfUpdates = _decode_GF_Updates(sequence[1]);
+    const filtersUpdates = _decode_SupportedSpamFilters(sequence[2]);
     return new PeerKeepAliveDEF(
         sgfUpdates,
         rgfUpdates,
@@ -216,7 +155,7 @@ let _cached_encoder_for_PeerKeepAliveDEF: $.ASN1Encoder<PeerKeepAliveDEF> | null
  */
 export
 function _encode_PeerKeepAliveDEF (value: PeerKeepAliveDEF, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PeerKeepAliveDEF) { _cached_encoder_for_PeerKeepAliveDEF = function (value: PeerKeepAliveDEF, elGetter: $.ASN1Encoder<PeerKeepAliveDEF>): _Element {
+    if (!_cached_encoder_for_PeerKeepAliveDEF) { _cached_encoder_for_PeerKeepAliveDEF = function (value: PeerKeepAliveDEF): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_GF_Updates(value.sgfUpdates, $.BER),

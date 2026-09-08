@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,10 +10,9 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { PeerReleaseDEF_peerRelease, _enum_for_PeerReleaseDEF_peerRelease, PeerReleaseDEF_peerRelease_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeerReleaseDEF_peerRelease_confirm /* IMPORTED_LONG_ENUMERATION_ITEM */, confirm /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PeerReleaseDEF_peerRelease, _encode_PeerReleaseDEF_peerRelease } from "../SCPP-MESSAGES/PeerReleaseDEF-peerRelease.ta.mjs";
-// export { PeerReleaseDEF_peerRelease, _enum_for_PeerReleaseDEF_peerRelease, PeerReleaseDEF_peerRelease_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeerReleaseDEF_peerRelease_confirm /* IMPORTED_LONG_ENUMERATION_ITEM */, confirm /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PeerReleaseDEF_peerRelease, _encode_PeerReleaseDEF_peerRelease } from "../SCPP-MESSAGES/PeerReleaseDEF-peerRelease.ta.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { PeerReleaseDEF_peerRelease, _enum_for_PeerReleaseDEF_peerRelease, _decode_PeerReleaseDEF_peerRelease, _encode_PeerReleaseDEF_peerRelease } from "../SCPP-MESSAGES/PeerReleaseDEF-peerRelease.ta.mjs";
 
 
 /**
@@ -144,8 +89,8 @@ class PeerReleaseDEF {
  */
 export
 const _root_component_type_list_1_spec_for_PeerReleaseDEF: $.ComponentSpec[] = [
-    new $.ComponentSpec("peerRelease", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("nonStandardData", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("peerRelease", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("nonStandardData", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -187,7 +132,7 @@ function _decode_PeerReleaseDEF (el: _Element): PeerReleaseDEF {
     if (!_cached_decoder_for_PeerReleaseDEF) { _cached_decoder_for_PeerReleaseDEF = function (el: _Element): PeerReleaseDEF {
     let peerRelease!: PeerReleaseDEF_peerRelease;
     let nonStandardData: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "peerRelease": (_el: _Element): void => { peerRelease = _decode_PeerReleaseDEF_peerRelease(_el); },
         "nonStandardData": (_el: _Element): void => { nonStandardData = $._decodeOctetString(_el); }
@@ -218,11 +163,11 @@ let _cached_encoder_for_PeerReleaseDEF: $.ASN1Encoder<PeerReleaseDEF> | null = n
  */
 export
 function _encode_PeerReleaseDEF (value: PeerReleaseDEF, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PeerReleaseDEF) { _cached_encoder_for_PeerReleaseDEF = function (value: PeerReleaseDEF, elGetter: $.ASN1Encoder<PeerReleaseDEF>): _Element {
+    if (!_cached_encoder_for_PeerReleaseDEF) { _cached_encoder_for_PeerReleaseDEF = function (value: PeerReleaseDEF): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_PeerReleaseDEF_peerRelease(value.peerRelease, $.BER),
-            /* IF_ABSENT  */ ((value.nonStandardData === undefined) ? undefined : $._encodeOctetString(value.nonStandardData, $.BER))
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_PeerReleaseDEF_peerRelease, $.BER)(value.peerRelease, $.BER),
+            /* IF_ABSENT  */ ((value.nonStandardData === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.nonStandardData, $.BER))
         ],
         (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

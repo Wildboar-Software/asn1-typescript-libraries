@@ -1,0 +1,25 @@
+{
+  "name": "scpp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/scpp/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/scpp",
+        "tsConfig": "packages/scpp/tsconfig.lib.json",
+        "packageJson": "packages/scpp/package.json",
+        "main": "packages/scpp/src/index.mts",
+        "assets": [
+          "packages/scpp/*.md",
+          "packages/scpp/LICENSE.txt",
+          "packages/scpp/package.json"
+        ]
+      }
+    }
+  }
+}

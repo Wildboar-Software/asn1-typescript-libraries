@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,8 +10,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1OverflowError,
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 
 
@@ -76,7 +24,10 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IGCS-Address-ip6Address ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * IGCS-Address-ip6Address ::= SEQUENCE {
+ *     ip    OCTET STRING(SIZE (16)),
+ *     port  INTEGER(0..65535)
+ * }
  * ```
  * 
  * @class
@@ -96,7 +47,15 @@ class IGCS_Address_ip6Address {
          * @readonly
          */
         readonly port: INTEGER
-    ) {}
+    ) {
+        if (this.ip.length !== 16) {
+            throw new ASN1SizeError("IGCS_Address_ip6Address.ip violates SIZE constraint");
+        }
+        const _n = typeof this.port === "bigint" ? Number(this.port) : this.port;
+        if (_n < 0 || _n > 65535) {
+            throw new ASN1OverflowError("IGCS_Address_ip6Address.port violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IGCS_Address_ip6Address
@@ -127,8 +86,8 @@ class IGCS_Address_ip6Address {
  */
 export
 const _root_component_type_list_1_spec_for_IGCS_Address_ip6Address: $.ComponentSpec[] = [
-    new $.ComponentSpec("ip", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("port", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("ip", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("port", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -174,10 +133,8 @@ function _decode_IGCS_Address_ip6Address (el: _Element): IGCS_Address_ip6Address
     }
     sequence[0].name = "ip";
     sequence[1].name = "port";
-    let ip!: OCTET_STRING;
-    let port!: INTEGER;
-    ip = $._decodeOctetString(sequence[0]);
-    port = $._decodeInteger(sequence[1]);
+    const ip = $._decodeOctetString(sequence[0]);
+    const port = $._decodeInteger(sequence[1]);
     return new IGCS_Address_ip6Address(
         ip,
         port,
@@ -198,7 +155,7 @@ let _cached_encoder_for_IGCS_Address_ip6Address: $.ASN1Encoder<IGCS_Address_ip6A
  */
 export
 function _encode_IGCS_Address_ip6Address (value: IGCS_Address_ip6Address, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IGCS_Address_ip6Address) { _cached_encoder_for_IGCS_Address_ip6Address = function (value: IGCS_Address_ip6Address, elGetter: $.ASN1Encoder<IGCS_Address_ip6Address>): _Element {
+    if (!_cached_encoder_for_IGCS_Address_ip6Address) { _cached_encoder_for_IGCS_Address_ip6Address = function (value: IGCS_Address_ip6Address): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.ip, $.BER),

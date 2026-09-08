@@ -4,7 +4,7 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/scpp',
   test: {
-    name: '@wildboar/scpp',
+    name: 'scpp',
     watch: false,
     globals: true,
     environment: 'node',

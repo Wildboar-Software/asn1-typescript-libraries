@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,8 +10,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1OverflowError,
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 
 
@@ -99,7 +47,15 @@ class SpamFilters {
          * @readonly
          */
         readonly filterName: IA5String
-    ) {}
+    ) {
+        const _n = typeof this.filterID === "bigint" ? Number(this.filterID) : this.filterID;
+        if (_n < 0 || _n > 128) {
+            throw new ASN1OverflowError("SpamFilters.filterID violates INTEGER range");
+        }
+        if (this.filterName.length < 1 || this.filterName.length > 512) {
+            throw new ASN1SizeError("SpamFilters.filterName violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SpamFilters
@@ -130,8 +86,8 @@ class SpamFilters {
  */
 export
 const _root_component_type_list_1_spec_for_SpamFilters: $.ComponentSpec[] = [
-    new $.ComponentSpec("filterID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("filterName", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("filterID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("filterName", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -177,10 +133,8 @@ function _decode_SpamFilters (el: _Element): SpamFilters {
     }
     sequence[0].name = "filterID";
     sequence[1].name = "filterName";
-    let filterID!: INTEGER;
-    let filterName!: IA5String;
-    filterID = $._decodeInteger(sequence[0]);
-    filterName = $._decodeIA5String(sequence[1]);
+    const filterID = $._decodeInteger(sequence[0]);
+    const filterName = $._decodeIA5String(sequence[1]);
     return new SpamFilters(
         filterID,
         filterName,
@@ -201,7 +155,7 @@ let _cached_encoder_for_SpamFilters: $.ASN1Encoder<SpamFilters> | null = null;
  */
 export
 function _encode_SpamFilters (value: SpamFilters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SpamFilters) { _cached_encoder_for_SpamFilters = function (value: SpamFilters, elGetter: $.ASN1Encoder<SpamFilters>): _Element {
+    if (!_cached_encoder_for_SpamFilters) { _cached_encoder_for_SpamFilters = function (value: SpamFilters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.filterID, $.BER),

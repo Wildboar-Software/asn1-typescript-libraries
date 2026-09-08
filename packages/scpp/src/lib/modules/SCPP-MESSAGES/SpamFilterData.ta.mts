@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,8 +10,9 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1OverflowError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 
 
 
@@ -106,7 +53,12 @@ class SpamFilterData {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        const _n = typeof this.filterID === "bigint" ? Number(this.filterID) : this.filterID;
+        if (_n < 0 || _n > 128) {
+            throw new ASN1OverflowError("SpamFilterData.filterID violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SpamFilterData
@@ -137,8 +89,8 @@ class SpamFilterData {
  */
 export
 const _root_component_type_list_1_spec_for_SpamFilterData: $.ComponentSpec[] = [
-    new $.ComponentSpec("filterID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("filterData", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("filterID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("filterData", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -184,10 +136,8 @@ function _decode_SpamFilterData (el: _Element): SpamFilterData {
     }
     sequence[0].name = "filterID";
     sequence[1].name = "filterData";
-    let filterID!: INTEGER;
-    let filterData!: OCTET_STRING;
-    filterID = $._decodeInteger(sequence[0]);
-    filterData = $._decodeOctetString(sequence[1]);
+    const filterID = $._decodeInteger(sequence[0]);
+    const filterData = $._decodeOctetString(sequence[1]);
     return new SpamFilterData(
         filterID,
         filterData,
@@ -208,7 +158,7 @@ let _cached_encoder_for_SpamFilterData: $.ASN1Encoder<SpamFilterData> | null = n
  */
 export
 function _encode_SpamFilterData (value: SpamFilterData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SpamFilterData) { _cached_encoder_for_SpamFilterData = function (value: SpamFilterData, elGetter: $.ASN1Encoder<SpamFilterData>): _Element {
+    if (!_cached_encoder_for_SpamFilterData) { _cached_encoder_for_SpamFilterData = function (value: SpamFilterData): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.filterID, $.BER),

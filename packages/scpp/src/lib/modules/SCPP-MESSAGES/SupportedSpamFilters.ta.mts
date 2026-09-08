@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,10 +8,9 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { SpamFilters, _decode_SpamFilters, _encode_SpamFilters } from "../SCPP-MESSAGES/SpamFilters.ta.mjs";
-// export { SpamFilters, _decode_SpamFilters, _encode_SpamFilters } from "../SCPP-MESSAGES/SpamFilters.ta.mjs";
 
 
 /**
@@ -123,7 +66,7 @@ class SupportedSpamFilters {
  */
 export
 const _root_component_type_list_1_spec_for_SupportedSpamFilters: $.ComponentSpec[] = [
-    new $.ComponentSpec("supportedFilter", false, $.hasTag(_TagClass.context, 0), undefined, undefined)
+    new $.ComponentSpec("supportedFilter", false, $.hasTag(_TagClass.context, 0))
 ];
 
 /**
@@ -168,8 +111,7 @@ function _decode_SupportedSpamFilters (el: _Element): SupportedSpamFilters {
         throw new _ConstructionError("SupportedSpamFilters contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "supportedFilter";
-    let supportedFilter!: SpamFilters[];
-    supportedFilter = $._decodeSequenceOf<SpamFilters>(() => _decode_SpamFilters)(sequence[0]);
+    const supportedFilter = $._decodeSequenceOf<SpamFilters>(() => _decode_SpamFilters)(sequence[0]);
     return new SupportedSpamFilters(
         supportedFilter,
 
@@ -189,7 +131,7 @@ let _cached_encoder_for_SupportedSpamFilters: $.ASN1Encoder<SupportedSpamFilters
  */
 export
 function _encode_SupportedSpamFilters (value: SupportedSpamFilters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupportedSpamFilters) { _cached_encoder_for_SupportedSpamFilters = function (value: SupportedSpamFilters, elGetter: $.ASN1Encoder<SupportedSpamFilters>): _Element {
+    if (!_cached_encoder_for_SupportedSpamFilters) { _cached_encoder_for_SupportedSpamFilters = function (value: SupportedSpamFilters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeSequenceOf<SpamFilters>(() => _encode_SpamFilters, $.BER)(value.supportedFilter, $.BER)

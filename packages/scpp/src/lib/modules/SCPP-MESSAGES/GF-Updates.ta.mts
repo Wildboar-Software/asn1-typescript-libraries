@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,12 +8,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { GF_Updates_gateType, _enum_for_GF_Updates_gateType, GF_Updates_gateType_sgf /* IMPORTED_LONG_ENUMERATION_ITEM */, sgf /* IMPORTED_SHORT_ENUMERATION_ITEM */, GF_Updates_gateType_rgf /* IMPORTED_LONG_ENUMERATION_ITEM */, rgf /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GF_Updates_gateType, _encode_GF_Updates_gateType } from "../SCPP-MESSAGES/GF-Updates-gateType.ta.mjs";
-// export { GF_Updates_gateType, _enum_for_GF_Updates_gateType, GF_Updates_gateType_sgf /* IMPORTED_LONG_ENUMERATION_ITEM */, sgf /* IMPORTED_SHORT_ENUMERATION_ITEM */, GF_Updates_gateType_rgf /* IMPORTED_LONG_ENUMERATION_ITEM */, rgf /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GF_Updates_gateType, _encode_GF_Updates_gateType } from "../SCPP-MESSAGES/GF-Updates-gateType.ta.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { GF_Updates_gateType, _enum_for_GF_Updates_gateType, _decode_GF_Updates_gateType, _encode_GF_Updates_gateType } from "../SCPP-MESSAGES/GF-Updates-gateType.ta.mjs";
 import { IGCS_Address, _decode_IGCS_Address, _encode_IGCS_Address } from "../SCPP-MESSAGES/IGCS-Address.ta.mjs";
-// export { IGCS_Address, _decode_IGCS_Address, _encode_IGCS_Address } from "../SCPP-MESSAGES/IGCS-Address.ta.mjs";
 
 
 /**
@@ -146,9 +88,9 @@ class GF_Updates {
  */
 export
 const _root_component_type_list_1_spec_for_GF_Updates: $.ComponentSpec[] = [
-    new $.ComponentSpec("gateType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("gateAdd", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("gateRemove", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("gateType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("gateAdd", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("gateRemove", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -195,12 +137,9 @@ function _decode_GF_Updates (el: _Element): GF_Updates {
     sequence[0].name = "gateType";
     sequence[1].name = "gateAdd";
     sequence[2].name = "gateRemove";
-    let gateType!: GF_Updates_gateType;
-    let gateAdd!: IGCS_Address;
-    let gateRemove!: IGCS_Address;
-    gateType = _decode_GF_Updates_gateType(sequence[0]);
-    gateAdd = _decode_IGCS_Address(sequence[1]);
-    gateRemove = _decode_IGCS_Address(sequence[2]);
+    const gateType = _decode_GF_Updates_gateType(sequence[0]);
+    const gateAdd = _decode_IGCS_Address(sequence[1]);
+    const gateRemove = _decode_IGCS_Address(sequence[2]);
     return new GF_Updates(
         gateType,
         gateAdd,
@@ -222,7 +161,7 @@ let _cached_encoder_for_GF_Updates: $.ASN1Encoder<GF_Updates> | null = null;
  */
 export
 function _encode_GF_Updates (value: GF_Updates, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GF_Updates) { _cached_encoder_for_GF_Updates = function (value: GF_Updates, elGetter: $.ASN1Encoder<GF_Updates>): _Element {
+    if (!_cached_encoder_for_GF_Updates) { _cached_encoder_for_GF_Updates = function (value: GF_Updates): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_GF_Updates_gateType(value.gateType, $.BER),

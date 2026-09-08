@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,14 +9,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { IGCS_Address, _decode_IGCS_Address, _encode_IGCS_Address } from "../SCPP-MESSAGES/IGCS-Address.ta.mjs";
-// export { IGCS_Address, _decode_IGCS_Address, _encode_IGCS_Address } from "../SCPP-MESSAGES/IGCS-Address.ta.mjs";
 import { SupportedSpamFilters, _decode_SupportedSpamFilters, _encode_SupportedSpamFilters } from "../SCPP-MESSAGES/SupportedSpamFilters.ta.mjs";
-// export { SupportedSpamFilters, _decode_SupportedSpamFilters, _encode_SupportedSpamFilters } from "../SCPP-MESSAGES/SupportedSpamFilters.ta.mjs";
 import { IGCS_Signature, _decode_IGCS_Signature, _encode_IGCS_Signature } from "../SCPP-MESSAGES/IGCS-Signature.ta.mjs";
-// export { IGCS_Signature, _decode_IGCS_Signature, _encode_IGCS_Signature } from "../SCPP-MESSAGES/IGCS-Signature.ta.mjs";
 
 
 /**
@@ -156,11 +98,11 @@ class PeerSetupDEF {
  */
 export
 const _root_component_type_list_1_spec_for_PeerSetupDEF: $.ComponentSpec[] = [
-    new $.ComponentSpec("setupResponse", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("sgfList", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("rgfList", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("supportedFilters", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("igcsSignature", false, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("setupResponse", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sgfList", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("rgfList", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("supportedFilters", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("igcsSignature", false, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -209,16 +151,11 @@ function _decode_PeerSetupDEF (el: _Element): PeerSetupDEF {
     sequence[2].name = "rgfList";
     sequence[3].name = "supportedFilters";
     sequence[4].name = "igcsSignature";
-    let setupResponse!: BOOLEAN;
-    let sgfList!: IGCS_Address[];
-    let rgfList!: IGCS_Address[];
-    let supportedFilters!: SupportedSpamFilters;
-    let igcsSignature!: IGCS_Signature;
-    setupResponse = $._decodeBoolean(sequence[0]);
-    sgfList = $._decodeSequenceOf<IGCS_Address>(() => _decode_IGCS_Address)(sequence[1]);
-    rgfList = $._decodeSequenceOf<IGCS_Address>(() => _decode_IGCS_Address)(sequence[2]);
-    supportedFilters = _decode_SupportedSpamFilters(sequence[3]);
-    igcsSignature = _decode_IGCS_Signature(sequence[4]);
+    const setupResponse = $._decodeBoolean(sequence[0]);
+    const sgfList = $._decodeSequenceOf<IGCS_Address>(() => _decode_IGCS_Address)(sequence[1]);
+    const rgfList = $._decodeSequenceOf<IGCS_Address>(() => _decode_IGCS_Address)(sequence[2]);
+    const supportedFilters = _decode_SupportedSpamFilters(sequence[3]);
+    const igcsSignature = _decode_IGCS_Signature(sequence[4]);
     return new PeerSetupDEF(
         setupResponse,
         sgfList,
@@ -242,7 +179,7 @@ let _cached_encoder_for_PeerSetupDEF: $.ASN1Encoder<PeerSetupDEF> | null = null;
  */
 export
 function _encode_PeerSetupDEF (value: PeerSetupDEF, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PeerSetupDEF) { _cached_encoder_for_PeerSetupDEF = function (value: PeerSetupDEF, elGetter: $.ASN1Encoder<PeerSetupDEF>): _Element {
+    if (!_cached_encoder_for_PeerSetupDEF) { _cached_encoder_for_PeerSetupDEF = function (value: PeerSetupDEF): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeBoolean(value.setupResponse, $.BER),
