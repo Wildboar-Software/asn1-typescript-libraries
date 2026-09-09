@@ -158,10 +158,10 @@ class EventReportSMSArg {
  */
 export
 const _root_component_type_list_1_spec_for_EventReportSMSArg: $.ComponentSpec[] = [
-    /* FIXME: eventTypeSMS COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: eventSpecificInformationSMS COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("eventTypeSMS", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("eventSpecificInformationSMS", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("miscCallInfo", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
 ];
 
 /**

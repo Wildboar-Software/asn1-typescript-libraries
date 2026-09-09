@@ -265,20 +265,20 @@ class InitialDPGPRSArg {
 export
 const _root_component_type_list_1_spec_for_InitialDPGPRSArg: $.ComponentSpec[] = [
     new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    /* FIXME: gPRSEventType COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("gPRSEventType", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("mSISDN", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
     new $.ComponentSpec("iMSI", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    /* FIXME: timeAndTimeZone COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("timeAndTimeZone", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
     new $.ComponentSpec("gPRSMSClass", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    /* FIXME: endUserAddress COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: qualityOfService COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: accessPointName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("endUserAddress", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
+    new $.ComponentSpec("qualityOfService", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
+    new $.ComponentSpec("accessPointName", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
     new $.ComponentSpec("routeingAreaIdentity", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
     new $.ComponentSpec("chargingID", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    /* FIXME: sGSNCapabilities COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: locationInformationGPRS COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: pDPInitiationType COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("sGSNCapabilities", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
+    new $.ComponentSpec("locationInformationGPRS", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
+    new $.ComponentSpec("pDPInitiationType", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 14), undefined, undefined)
 ];
 
 /**

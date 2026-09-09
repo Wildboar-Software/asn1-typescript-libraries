@@ -286,19 +286,19 @@ class InitialDPSMSArg {
 export
 const _root_component_type_list_1_spec_for_InitialDPSMSArg: $.ComponentSpec[] = [
     new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    /* FIXME: destinationSubscriberNumber COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: callingPartyNumber COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: eventTypeSMS COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("destinationSubscriberNumber", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
+    new $.ComponentSpec("eventTypeSMS", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
     new $.ComponentSpec("iMSI", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
     new $.ComponentSpec("locationInformationMSC", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    /* FIXME: locationInformationGPRS COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("locationInformationGPRS", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
     new $.ComponentSpec("sMSCAddress", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    /* FIXME: timeAndTimezone COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: tPShortMessageSpecificInfo COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: tPProtocolIdentifier COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: tPDataCodingScheme COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: tPValidityPeriod COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("timeAndTimezone", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
+    new $.ComponentSpec("tPShortMessageSpecificInfo", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
+    new $.ComponentSpec("tPProtocolIdentifier", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
+    new $.ComponentSpec("tPDataCodingScheme", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
+    new $.ComponentSpec("tPValidityPeriod", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 13), undefined, undefined)
 ];
 
 /**

@@ -137,8 +137,8 @@ class ConnectGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_ConnectGPRSArg: $.ComponentSpec[] = [
-    /* FIXME: accessPointName COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: pdpID COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("accessPointName", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("pdpID", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
 
 /**

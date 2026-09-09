@@ -141,7 +141,7 @@ class cancelFailed_ParameterType {
 export
 const _root_component_type_list_1_spec_for_cancelFailed_ParameterType: $.ComponentSpec[] = [
     new $.ComponentSpec("problem", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    /* FIXME: operation COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("operation", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
 
 /**

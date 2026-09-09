@@ -184,11 +184,11 @@ class InitiateCallAttemptArg {
  */
 export
 const _root_component_type_list_1_spec_for_InitiateCallAttemptArg: $.ComponentSpec[] = [
-    /* FIXME: destinationRoutingAddress COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("destinationRoutingAddress", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
     new $.ComponentSpec("legToBeCreated", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    /* FIXME: newCallSegment COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: callingPartyNumber COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("newCallSegment", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 30), undefined, undefined),
     new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 51), undefined, undefined),
     new $.ComponentSpec("gsmSCFAddress", true, $.hasTag(_TagClass.context, 52), undefined, undefined),
     new $.ComponentSpec("suppress-T-CSI", true, $.hasTag(_TagClass.context, 53), undefined, undefined)

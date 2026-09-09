@@ -130,7 +130,7 @@ class ContinueGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_ContinueGPRSArg: $.ComponentSpec[] = [
-    /* FIXME: pDPID COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("pDPID", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
 ];
 
 /**

@@ -265,23 +265,23 @@ class ConnectArg {
  */
 export
 const _root_component_type_list_1_spec_for_ConnectArg: $.ComponentSpec[] = [
-    /* FIXME: destinationRoutingAddress COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: alertingPattern COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: originalCalledPartyID COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: carrier COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("destinationRoutingAddress", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
+    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
+    new $.ComponentSpec("carrier", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
     new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    /* FIXME: redirectingPartyID COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 29), undefined, undefined),
     new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 30), undefined, undefined),
-    /* FIXME: genericNumbers COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: serviceInteractionIndicatorsTwo COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: chargeNumber COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("genericNumbers", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
+    new $.ComponentSpec("serviceInteractionIndicatorsTwo", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
+    new $.ComponentSpec("chargeNumber", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
     new $.ComponentSpec("legToBeConnected", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
     new $.ComponentSpec("cug-Interlock", true, $.hasTag(_TagClass.context, 31), undefined, undefined),
     new $.ComponentSpec("cug-OutgoingAccess", true, $.hasTag(_TagClass.context, 32), undefined, undefined),
     new $.ComponentSpec("suppressionOfAnnouncement", true, $.hasTag(_TagClass.context, 55), undefined, undefined),
-    /* FIXME: oCSIApplicable COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: naOliInfo COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("oCSIApplicable", true, $.hasTag(_TagClass.context, 56), undefined, undefined),
+    new $.ComponentSpec("naOliInfo", true, $.hasTag(_TagClass.context, 57), undefined, undefined),
     new $.ComponentSpec("bor-InterrogationRequested", true, $.hasTag(_TagClass.context, 58), undefined, undefined)
 ];
 

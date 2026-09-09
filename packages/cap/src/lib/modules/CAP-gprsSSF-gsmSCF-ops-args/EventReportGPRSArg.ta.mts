@@ -158,10 +158,10 @@ class EventReportGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_EventReportGPRSArg: $.ComponentSpec[] = [
-    /* FIXME: gPRSEventType COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("gPRSEventType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("miscGPRSInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    /* FIXME: gPRSEventSpecificInformation COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: pDPID COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("gPRSEventSpecificInformation", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
+    new $.ComponentSpec("pDPID", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
 ];
 
 /**

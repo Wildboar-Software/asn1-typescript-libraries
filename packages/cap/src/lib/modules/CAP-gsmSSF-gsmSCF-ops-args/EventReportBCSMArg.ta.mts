@@ -165,11 +165,11 @@ class EventReportBCSMArg {
  */
 export
 const _root_component_type_list_1_spec_for_EventReportBCSMArg: $.ComponentSpec[] = [
-    /* FIXME: eventTypeBCSM COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: eventSpecificInformationBCSM COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: legID COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("eventTypeBCSM", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("eventSpecificInformationBCSM", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
+    new $.ComponentSpec("legID", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
     new $.ComponentSpec("miscCallInfo", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
 ];
 
 /**

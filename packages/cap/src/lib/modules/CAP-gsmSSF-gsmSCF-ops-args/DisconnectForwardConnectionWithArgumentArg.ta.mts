@@ -137,8 +137,8 @@ class DisconnectForwardConnectionWithArgumentArg {
  */
 export
 const _root_component_type_list_1_spec_for_DisconnectForwardConnectionWithArgumentArg: $.ComponentSpec[] = [
-    /* FIXME: callSegmentID COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("callSegmentID", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
 
 /**

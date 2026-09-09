@@ -130,7 +130,7 @@ class SendChargingInformationGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_SendChargingInformationGPRSArg: $.ComponentSpec[] = [
-    /* FIXME: sCIGPRSBillingChargingCharacteristics COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("sCIGPRSBillingChargingCharacteristics", false, $.hasTag(_TagClass.context, 0), undefined, undefined)
 ];
 
 /**

@@ -150,9 +150,9 @@ class CallInformationRequestArg {
  */
 export
 const _root_component_type_list_1_spec_for_CallInformationRequestArg: $.ComponentSpec[] = [
-    /* FIXME: requestedInformationTypeList COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: legID COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("requestedInformationTypeList", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
+    new $.ComponentSpec("legID", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
 ];
 
 /**

@@ -154,7 +154,7 @@ const _root_component_type_list_1_spec_for_ContinueWithArgumentArgExtension: $.C
     new $.ComponentSpec("suppress-D-CSI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("suppress-N-CSI", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("suppressOutgoingCallBarring", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    /* FIXME: legOrCallSegment COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("legOrCallSegment", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
 ];
 
 /**

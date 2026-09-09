@@ -244,16 +244,16 @@ class InitialDPArgExtension {
 export
 const _root_component_type_list_1_spec_for_InitialDPArgExtension: $.ComponentSpec[] = [
     new $.ComponentSpec("gmscAddress", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    /* FIXME: forwardingDestinationNumber COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("forwardingDestinationNumber", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("ms-Classmark2", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
     new $.ComponentSpec("iMEI", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
     new $.ComponentSpec("supportedCamelPhases", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
     new $.ComponentSpec("offeredCamel4Functionalities", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    /* FIXME: bearerCapability2 COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("bearerCapability2", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
     new $.ComponentSpec("ext-basicServiceCode2", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
     new $.ComponentSpec("highLayerCompatibility2", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    /* FIXME: lowLayerCompatibility COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: lowLayerCompatibility2 COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("lowLayerCompatibility", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
+    new $.ComponentSpec("lowLayerCompatibility2", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
 ];
 
 /**

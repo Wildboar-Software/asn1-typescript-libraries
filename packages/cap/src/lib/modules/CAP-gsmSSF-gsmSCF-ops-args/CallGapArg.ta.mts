@@ -158,11 +158,11 @@ class CallGapArg {
  */
 export
 const _root_component_type_list_1_spec_for_CallGapArg: $.ComponentSpec[] = [
-    /* FIXME: gapCriteria COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: gapIndicators COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: controlType COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: gapTreatment COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("gapCriteria", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("gapIndicators", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
+    new $.ComponentSpec("controlType", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
+    new $.ComponentSpec("gapTreatment", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
 ];
 
 /**

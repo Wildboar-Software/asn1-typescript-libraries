@@ -178,11 +178,11 @@ class PromptAndCollectUserInformationArg {
  */
 export
 const _root_component_type_list_1_spec_for_PromptAndCollectUserInformationArg: $.ComponentSpec[] = [
-    /* FIXME: collectedInfo COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("collectedInfo", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("disconnectFromIPForbidden", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    /* FIXME: informationToSend COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: callSegmentID COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("informationToSend", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
+    new $.ComponentSpec("callSegmentID", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
     new $.ComponentSpec("requestAnnouncementStartedNotification", true, $.hasTag(_TagClass.context, 51), undefined, undefined)
 ];
 

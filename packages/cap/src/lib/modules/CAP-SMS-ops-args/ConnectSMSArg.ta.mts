@@ -152,10 +152,10 @@ class ConnectSMSArg {
  */
 export
 const _root_component_type_list_1_spec_for_ConnectSMSArg: $.ComponentSpec[] = [
-    /* FIXME: callingPartysNumber COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: destinationSubscriberNumber COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("callingPartysNumber", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("destinationSubscriberNumber", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("sMSCAddress", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
 ];
 
 /**

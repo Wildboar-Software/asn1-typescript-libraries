@@ -200,15 +200,15 @@ class EstablishTemporaryConnectionArg {
  */
 export
 const _root_component_type_list_1_spec_for_EstablishTemporaryConnectionArg: $.ComponentSpec[] = [
-    /* FIXME: assistingSSPIPRoutingAddress COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: correlationID COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: scfID COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: carrier COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: serviceInteractionIndicatorsTwo COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: callSegmentID COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: naOliInfo COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: chargeNumber COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("assistingSSPIPRoutingAddress", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
+    new $.ComponentSpec("scfID", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
+    new $.ComponentSpec("carrier", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
+    new $.ComponentSpec("serviceInteractionIndicatorsTwo", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
+    new $.ComponentSpec("callSegmentID", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
+    new $.ComponentSpec("naOliInfo", true, $.hasTag(_TagClass.context, 50), undefined, undefined),
+    new $.ComponentSpec("chargeNumber", true, $.hasTag(_TagClass.context, 51), undefined, undefined)
 ];
 
 /**
@@ -234,8 +234,8 @@ const _root_component_type_list_2_spec_for_EstablishTemporaryConnectionArg: $.Co
  */
 export
 const _extension_additions_list_spec_for_EstablishTemporaryConnectionArg: $.ComponentSpec[] = [
-    /* FIXME: originalCalledPartyID COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: callingPartyNumber COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 52), undefined, undefined),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 53), undefined, undefined)
 ];
 
 let _cached_decoder_for_EstablishTemporaryConnectionArg: $.ASN1Decoder<EstablishTemporaryConnectionArg> | null = null;

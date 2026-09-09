@@ -164,10 +164,10 @@ class ApplyChargingReportGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_ApplyChargingReportGPRSArg: $.ComponentSpec[] = [
-    /* FIXME: chargingResult COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: qualityOfService COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("chargingResult", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("qualityOfService", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("active", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    /* FIXME: pDPID COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("pDPID", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
 ];
 
 /**
@@ -193,7 +193,7 @@ const _root_component_type_list_2_spec_for_ApplyChargingReportGPRSArg: $.Compone
  */
 export
 const _extension_additions_list_spec_for_ApplyChargingReportGPRSArg: $.ComponentSpec[] = [
-    /* FIXME: chargingRollOver COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("chargingRollOver", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
 ];
 
 let _cached_decoder_for_ApplyChargingReportGPRSArg: $.ASN1Decoder<ApplyChargingReportGPRSArg> | null = null;

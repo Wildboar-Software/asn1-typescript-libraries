@@ -228,17 +228,17 @@ class ContinueWithArgumentArg {
  */
 export
 const _root_component_type_list_1_spec_for_ContinueWithArgumentArg: $.ComponentSpec[] = [
-    /* FIXME: alertingPattern COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: serviceInteractionIndicatorsTwo COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
+    new $.ComponentSpec("serviceInteractionIndicatorsTwo", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
     new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    /* FIXME: genericNumbers COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("genericNumbers", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
     new $.ComponentSpec("cug-Interlock", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
     new $.ComponentSpec("cug-OutgoingAccess", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    /* FIXME: chargeNumber COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: carrier COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("chargeNumber", true, $.hasTag(_TagClass.context, 50), undefined, undefined),
+    new $.ComponentSpec("carrier", true, $.hasTag(_TagClass.context, 52), undefined, undefined),
     new $.ComponentSpec("suppressionOfAnnouncement", true, $.hasTag(_TagClass.context, 55), undefined, undefined),
-    /* FIXME: naOliInfo COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("naOliInfo", true, $.hasTag(_TagClass.context, 56), undefined, undefined),
     new $.ComponentSpec("bor-InterrogationRequested", true, $.hasTag(_TagClass.context, 57), undefined, undefined),
     new $.ComponentSpec("suppress-O-CSI", true, $.hasTag(_TagClass.context, 58), undefined, undefined),
     new $.ComponentSpec("continueWithArgumentArgExtension", true, $.hasTag(_TagClass.context, 59), undefined, undefined)

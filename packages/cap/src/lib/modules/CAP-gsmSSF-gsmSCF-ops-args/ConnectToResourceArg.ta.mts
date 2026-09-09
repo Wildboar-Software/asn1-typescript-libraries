@@ -156,9 +156,9 @@ class ConnectToResourceArg {
 export
 const _root_component_type_list_1_spec_for_ConnectToResourceArg: $.ComponentSpec[] = [
     new $.ComponentSpec("resourceAddress", false, $.hasAnyTag, undefined, undefined),
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: serviceInteractionIndicatorsTwo COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: callSegmentID COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
+    new $.ComponentSpec("serviceInteractionIndicatorsTwo", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
+    new $.ComponentSpec("callSegmentID", true, $.hasTag(_TagClass.context, 50), undefined, undefined)
 ];
 
 /**

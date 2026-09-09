@@ -131,8 +131,8 @@ class AllCallSegmentsWithExtension {
  */
 export
 const _root_component_type_list_1_spec_for_AllCallSegmentsWithExtension: $.ComponentSpec[] = [
-    /* FIXME: allCallSegments COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("allCallSegments", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
 
 /**

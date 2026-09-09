@@ -185,11 +185,11 @@ class PlayAnnouncementArg {
  */
 export
 const _root_component_type_list_1_spec_for_PlayAnnouncementArg: $.ComponentSpec[] = [
-    /* FIXME: informationToSend COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("informationToSend", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("disconnectFromIPForbidden", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("requestAnnouncementCompleteNotification", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    /* FIXME: extensions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: callSegmentID COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
+    new $.ComponentSpec("callSegmentID", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
     new $.ComponentSpec("requestAnnouncementStartedNotification", true, $.hasTag(_TagClass.context, 51), undefined, undefined)
 ];
 

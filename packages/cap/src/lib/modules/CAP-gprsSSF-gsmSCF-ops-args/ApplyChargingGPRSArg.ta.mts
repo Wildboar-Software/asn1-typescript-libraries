@@ -144,9 +144,9 @@ class ApplyChargingGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_ApplyChargingGPRSArg: $.ComponentSpec[] = [
-    /* FIXME: chargingCharacteristics COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("chargingCharacteristics", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("tariffSwitchInterval", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    /* FIXME: pDPID COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("pDPID", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
 
 /**
