@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { cancelFailed_ParameterType_problem, _enum_for_cancelFailed_ParameterType_problem, cancelFailed_ParameterType_problem_unknownOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, cancelFailed_ParameterType_problem_tooLate /* IMPORTED_LONG_ENUMERATION_ITEM */, tooLate /* IMPORTED_SHORT_ENUMERATION_ITEM */, cancelFailed_ParameterType_problem_operationNotCancellable /* IMPORTED_LONG_ENUMERATION_ITEM */, operationNotCancellable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_cancelFailed_ParameterType_problem, _encode_cancelFailed_ParameterType_problem } from "../CAP-errortypes/cancelFailed-ParameterType-problem.ta.mjs";
 // export { cancelFailed_ParameterType_problem, _enum_for_cancelFailed_ParameterType_problem, cancelFailed_ParameterType_problem_unknownOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, cancelFailed_ParameterType_problem_tooLate /* IMPORTED_LONG_ENUMERATION_ITEM */, tooLate /* IMPORTED_SHORT_ENUMERATION_ITEM */, cancelFailed_ParameterType_problem_operationNotCancellable /* IMPORTED_LONG_ENUMERATION_ITEM */, operationNotCancellable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_cancelFailed_ParameterType_problem, _encode_cancelFailed_ParameterType_problem } from "../CAP-errortypes/cancelFailed-ParameterType-problem.ta.mjs";
 

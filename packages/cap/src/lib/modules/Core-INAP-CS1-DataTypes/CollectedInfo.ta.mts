@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CollectedDigits, _decode_CollectedDigits, _encode_CollectedDigits } from "../Core-INAP-CS1-DataTypes/CollectedDigits.ta.mjs";
 // export { CollectedDigits, _decode_CollectedDigits, _encode_CollectedDigits } from "../Core-INAP-CS1-DataTypes/CollectedDigits.ta.mjs";
 

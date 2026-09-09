@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-CS2-datatypes/CurrencyID.ta.mjs";
 // export { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-CS2-datatypes/CurrencyID.ta.mjs";
 

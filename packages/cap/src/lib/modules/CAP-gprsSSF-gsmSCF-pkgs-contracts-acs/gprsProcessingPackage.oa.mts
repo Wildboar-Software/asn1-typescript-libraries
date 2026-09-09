@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { continueGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/continueGPRS.oa.mjs";
 // export { continueGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/continueGPRS.oa.mjs";

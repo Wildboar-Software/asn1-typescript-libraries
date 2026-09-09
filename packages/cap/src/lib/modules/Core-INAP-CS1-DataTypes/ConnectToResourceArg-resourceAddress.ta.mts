@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../Core-INAP-CS1-DataTypes/IPRoutingAddress.ta.mjs";
 // export { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../Core-INAP-CS1-DataTypes/IPRoutingAddress.ta.mjs";
 

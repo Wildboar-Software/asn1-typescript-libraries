@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { AssistHandoffsSF_gsmSCF_PDUs, _decode_AssistHandoffsSF_gsmSCF_PDUs, _encode_AssistHandoffsSF_gsmSCF_PDUs } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/AssistHandoffsSF-gsmSCF-PDUs.ta.mjs";
 // export { AssistHandoffsSF_gsmSCF_PDUs, _decode_AssistHandoffsSF_gsmSCF_PDUs, _encode_AssistHandoffsSF_gsmSCF_PDUs } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/AssistHandoffsSF-gsmSCF-PDUs.ta.mjs";
 import { id_as_assistHandoff_gsmSSF_scfAS } from "../CAP-object-identifiers/id-as-assistHandoff-gsmSSF-scfAS.va.mjs";

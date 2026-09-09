@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { releaseSMS } from "../CAP-SMS-ops-args/releaseSMS.oa.mjs";
 // export { releaseSMS } from "../CAP-SMS-ops-args/releaseSMS.oa.mjs";

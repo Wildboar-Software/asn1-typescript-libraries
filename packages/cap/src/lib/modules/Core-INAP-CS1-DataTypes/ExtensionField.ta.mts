@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { ExtensionField_criticality, _enum_for_ExtensionField_criticality, ExtensionField_criticality_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, ExtensionField_criticality_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ExtensionField_criticality, _encode_ExtensionField_criticality } from "../Core-INAP-CS1-DataTypes/ExtensionField-criticality.ta.mjs";
 // export { ExtensionField_criticality, _enum_for_ExtensionField_criticality, ExtensionField_criticality_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, ExtensionField_criticality_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ExtensionField_criticality, _encode_ExtensionField_criticality } from "../Core-INAP-CS1-DataTypes/ExtensionField-criticality.ta.mjs";
 
@@ -104,7 +104,12 @@ class ExtensionField {
          * @readonly
          */
         readonly criticality: OPTIONAL<ExtensionField_criticality>,
-// FIXME: readonly value: PrefixedType
+        /**
+         * @summary `value`.
+         * @public
+         * @readonly
+         */
+        readonly value: _Element,
     ) {}
 
     /**
@@ -120,7 +125,7 @@ class ExtensionField {
      * @returns {ExtensionField}
      */
     public static _from_object (_o: { [_K in keyof (ExtensionField)]: (ExtensionField)[_K] }): ExtensionField {
-        return new ExtensionField(_o.type_, _o.criticality, _o.);
+        return new ExtensionField(_o.type_, _o.criticality, _o.value);
     }
 
     /**
@@ -192,11 +197,11 @@ function _decode_ExtensionField (el: _Element): ExtensionField {
     if (!_cached_decoder_for_ExtensionField) { _cached_decoder_for_ExtensionField = function (el: _Element): ExtensionField {
     let type_!: INTEGER;
     let criticality: OPTIONAL<ExtensionField_criticality> = ExtensionField._default_value_for_criticality;
-    let value!: /* FIXME: value COULD_NOT_COMPILE_TYPE */;
+    let value!: _Element;
     const callbacks: $.DecodingMap = {
         "type": (_el: _Element): void => { type_ = $._decodeInteger(_el); },
         "criticality": (_el: _Element): void => { criticality = _decode_ExtensionField_criticality(_el); },
-        "value": (_el: _Element): void => { value = /* FIXME: COULD_NOT_COMPILE_TYPE_DECODER */ }
+        "value": (_el: _Element): void => { value = $._decode_implicit<_Element>(() => $._decodeAny)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ExtensionField,

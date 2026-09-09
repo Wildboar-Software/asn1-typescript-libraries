@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { BASIC_gsmSRF_gsmSCF_PDUs, _decode_BASIC_gsmSRF_gsmSCF_PDUs, _encode_BASIC_gsmSRF_gsmSCF_PDUs } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/BASIC-gsmSRF-gsmSCF-PDUs.ta.mjs";
 // export { BASIC_gsmSRF_gsmSCF_PDUs, _decode_BASIC_gsmSRF_gsmSCF_PDUs, _encode_BASIC_gsmSRF_gsmSCF_PDUs } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/BASIC-gsmSRF-gsmSCF-PDUs.ta.mjs";
 import { id_as_basic_gsmSRF_gsmSCF } from "../CAP-object-identifiers/id-as-basic-gsmSRF-gsmSCF.va.mjs";

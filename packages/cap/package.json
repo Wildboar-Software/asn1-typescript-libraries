@@ -16,6 +16,7 @@
     }
   },
   "dependencies": {
+    "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
     "@wildboar/map": "npm:@jsr/wildboar__map@1.x.x",
     "@wildboar/rose": "npm:@jsr/wildboar__rose@2.x.x",
     "@wildboar/tcap": "npm:@jsr/wildboar__tcap@2.x.x",

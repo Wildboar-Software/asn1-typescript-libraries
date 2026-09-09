@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformationType, _enum_for_RequestedInformationType, RequestedInformationType_callAttemptElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttemptElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callStopTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callStopTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callConnectedElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callConnectedElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_calledAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, calledAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_releaseCause /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../Core-INAP-CS1-DataTypes/RequestedInformationType.ta.mjs";
 // export { RequestedInformationType, _enum_for_RequestedInformationType, RequestedInformationType_callAttemptElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttemptElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callStopTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callStopTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callConnectedElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callConnectedElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_calledAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, calledAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_releaseCause /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../Core-INAP-CS1-DataTypes/RequestedInformationType.ta.mjs";
 

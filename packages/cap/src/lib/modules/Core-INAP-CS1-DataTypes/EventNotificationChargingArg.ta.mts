@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../Core-INAP-CS1-DataTypes/EventTypeCharging.ta.mjs";
 // export { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../Core-INAP-CS1-DataTypes/EventTypeCharging.ta.mjs";
 import { EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../Core-INAP-CS1-DataTypes/EventSpecificInformationCharging.ta.mjs";

@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { AssistingSSPIPRoutingAddress, _decode_AssistingSSPIPRoutingAddress, _encode_AssistingSSPIPRoutingAddress } from "../Core-INAP-CS1-DataTypes/AssistingSSPIPRoutingAddress.ta.mjs";
 // export { AssistingSSPIPRoutingAddress, _decode_AssistingSSPIPRoutingAddress, _encode_AssistingSSPIPRoutingAddress } from "../Core-INAP-CS1-DataTypes/AssistingSSPIPRoutingAddress.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";

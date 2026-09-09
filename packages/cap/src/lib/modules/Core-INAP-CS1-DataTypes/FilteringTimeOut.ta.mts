@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { Duration, _decode_Duration, _encode_Duration } from "../Core-INAP-CS1-DataTypes/Duration.ta.mjs";
 // export { Duration, _decode_Duration, _encode_Duration } from "../Core-INAP-CS1-DataTypes/Duration.ta.mjs";
 import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../Core-INAP-CS1-DataTypes/DateAndTime.ta.mjs";

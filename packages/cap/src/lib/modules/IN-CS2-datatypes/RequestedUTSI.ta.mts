@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
 // export { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
 import { USIMonitorMode, _enum_for_USIMonitorMode, USIMonitorMode_monitoringActive /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, USIMonitorMode_monitoringInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_USIMonitorMode, _encode_USIMonitorMode } from "../IN-CS2-datatypes/USIMonitorMode.ta.mjs";

@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../Core-INAP-CS1-DataTypes/EventTypeCharging.ta.mjs";
 // export { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../Core-INAP-CS1-DataTypes/EventTypeCharging.ta.mjs";
 import { MonitorMode, _enum_for_MonitorMode, MonitorMode_interrupted /* IMPORTED_LONG_ENUMERATION_ITEM */, interrupted /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndContinue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_transparent /* IMPORTED_LONG_ENUMERATION_ITEM */, transparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../Core-INAP-CS1-DataTypes/MonitorMode.ta.mjs";

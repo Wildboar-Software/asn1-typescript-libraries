@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { EventSpecificInformationBCSM_collectedInfoSpecificInfo, _decode_EventSpecificInformationBCSM_collectedInfoSpecificInfo, _encode_EventSpecificInformationBCSM_collectedInfoSpecificInfo } from "../Core-INAP-CS1-DataTypes/EventSpecificInformationBCSM-collectedInfoSpecificInfo.ta.mjs";
 // export { EventSpecificInformationBCSM_collectedInfoSpecificInfo, _decode_EventSpecificInformationBCSM_collectedInfoSpecificInfo, _encode_EventSpecificInformationBCSM_collectedInfoSpecificInfo } from "../Core-INAP-CS1-DataTypes/EventSpecificInformationBCSM-collectedInfoSpecificInfo.ta.mjs";
 import { EventSpecificInformationBCSM_analyzedInfoSpecificInfo, _decode_EventSpecificInformationBCSM_analyzedInfoSpecificInfo, _encode_EventSpecificInformationBCSM_analyzedInfoSpecificInfo } from "../Core-INAP-CS1-DataTypes/EventSpecificInformationBCSM-analyzedInfoSpecificInfo.ta.mjs";

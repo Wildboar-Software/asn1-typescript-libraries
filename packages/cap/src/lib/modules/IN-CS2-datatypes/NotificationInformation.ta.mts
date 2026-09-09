@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { NotificationInformation_userAbandonSpecificInfo, _decode_NotificationInformation_userAbandonSpecificInfo, _encode_NotificationInformation_userAbandonSpecificInfo } from "../IN-CS2-datatypes/NotificationInformation-userAbandonSpecificInfo.ta.mjs";
 // export { NotificationInformation_userAbandonSpecificInfo, _decode_NotificationInformation_userAbandonSpecificInfo, _encode_NotificationInformation_userAbandonSpecificInfo } from "../IN-CS2-datatypes/NotificationInformation-userAbandonSpecificInfo.ta.mjs";
 import { NotificationInformation_callFailureSpecificInfo, _decode_NotificationInformation_callFailureSpecificInfo, _encode_NotificationInformation_callFailureSpecificInfo } from "../IN-CS2-datatypes/NotificationInformation-callFailureSpecificInfo.ta.mjs";

@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { LegType, _decode_LegType, _encode_LegType } from "../Core-INAP-CS1-DataTypes/LegType.ta.mjs";
 // export { LegType, _decode_LegType, _encode_LegType } from "../Core-INAP-CS1-DataTypes/LegType.ta.mjs";
 
@@ -83,6 +83,6 @@ import { LegType, _decode_LegType, _encode_LegType } from "../Core-INAP-CS1-Data
  * @constant
  */
 export
-const leg2: LegType = new Uint8Array([ 0x, 0x ]);
+const leg2: LegType = new Uint8Array([ 0x02 ]);
 
 /* eslint-enable */

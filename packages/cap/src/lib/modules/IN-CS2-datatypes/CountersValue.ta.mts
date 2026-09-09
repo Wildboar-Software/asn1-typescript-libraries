@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { CounterAndValue, _decode_CounterAndValue, _encode_CounterAndValue } from "../IN-CS2-datatypes/CounterAndValue.ta.mjs";
 // export { CounterAndValue, _decode_CounterAndValue, _encode_CounterAndValue } from "../IN-CS2-datatypes/CounterAndValue.ta.mjs";
 

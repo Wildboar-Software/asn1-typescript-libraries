@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-CS2-datatypes/SFBillingChargingCharacteristics.ta.mjs";
 // export { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-CS2-datatypes/SFBillingChargingCharacteristics.ta.mjs";
 import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";

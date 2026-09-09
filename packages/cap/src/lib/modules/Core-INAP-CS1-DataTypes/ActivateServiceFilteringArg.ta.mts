@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { FilteredCallTreatment, _decode_FilteredCallTreatment, _encode_FilteredCallTreatment } from "../Core-INAP-CS1-DataTypes/FilteredCallTreatment.ta.mjs";
 // export { FilteredCallTreatment, _decode_FilteredCallTreatment, _encode_FilteredCallTreatment } from "../Core-INAP-CS1-DataTypes/FilteredCallTreatment.ta.mjs";
 import { FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../Core-INAP-CS1-DataTypes/FilteringCharacteristics.ta.mjs";

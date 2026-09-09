@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { AllCallSegments, _decode_AllCallSegments, _encode_AllCallSegments } from "../CAP-gsmSSF-gsmSCF-ops-args/AllCallSegments.ta.mjs";
 // export { AllCallSegments, _decode_AllCallSegments, _encode_AllCallSegments } from "../CAP-gsmSSF-gsmSCF-ops-args/AllCallSegments.ta.mjs";
 

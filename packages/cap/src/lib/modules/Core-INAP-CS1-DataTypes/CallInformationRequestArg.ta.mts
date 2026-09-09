@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformationTypeList, _decode_RequestedInformationTypeList, _encode_RequestedInformationTypeList } from "../Core-INAP-CS1-DataTypes/RequestedInformationTypeList.ta.mjs";
 // export { RequestedInformationTypeList, _decode_RequestedInformationTypeList, _encode_RequestedInformationTypeList } from "../Core-INAP-CS1-DataTypes/RequestedInformationTypeList.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";

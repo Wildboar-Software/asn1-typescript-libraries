@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MidCallControlInfo_Item, _decode_MidCallControlInfo_Item, _encode_MidCallControlInfo_Item } from "../IN-CS2-datatypes/MidCallControlInfo-Item.ta.mjs";
 // export { MidCallControlInfo_Item, _decode_MidCallControlInfo_Item, _encode_MidCallControlInfo_Item } from "../IN-CS2-datatypes/MidCallControlInfo-Item.ta.mjs";
 

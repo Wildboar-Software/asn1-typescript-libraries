@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, MiscCallInfo_messageType_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, MiscCallInfo_messageType_notification /* IMPORTED_LONG_ENUMERATION_ITEM */, notification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MiscCallInfo_messageType, _encode_MiscCallInfo_messageType } from "../Core-INAP-CS1-DataTypes/MiscCallInfo-messageType.ta.mjs";
 // export { MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, MiscCallInfo_messageType_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, MiscCallInfo_messageType_notification /* IMPORTED_LONG_ENUMERATION_ITEM */, notification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MiscCallInfo_messageType, _encode_MiscCallInfo_messageType } from "../Core-INAP-CS1-DataTypes/MiscCallInfo-messageType.ta.mjs";
 

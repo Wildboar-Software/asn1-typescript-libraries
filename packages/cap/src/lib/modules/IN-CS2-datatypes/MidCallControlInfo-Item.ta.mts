@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { MidCallInfoType, _decode_MidCallInfoType, _encode_MidCallInfoType } from "../IN-CS2-datatypes/MidCallInfoType.ta.mjs";
 // export { MidCallInfoType, _decode_MidCallInfoType, _encode_MidCallInfoType } from "../IN-CS2-datatypes/MidCallInfoType.ta.mjs";
 import { MidCallControlInfo_Item_midCallReportType, _enum_for_MidCallControlInfo_Item_midCallReportType, MidCallControlInfo_Item_midCallReportType_inMonitoringState /* IMPORTED_LONG_ENUMERATION_ITEM */, inMonitoringState /* IMPORTED_SHORT_ENUMERATION_ITEM */, MidCallControlInfo_Item_midCallReportType_inAnyState /* IMPORTED_LONG_ENUMERATION_ITEM */, inAnyState /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MidCallControlInfo_Item_midCallReportType, _encode_MidCallControlInfo_Item_midCallReportType } from "../IN-CS2-datatypes/MidCallControlInfo-Item-midCallReportType.ta.mjs";

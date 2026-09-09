@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { id_CAP3OE } from "../CAP-object-identifiers/id-CAP3OE.va.mjs";
 // export { id_CAP3OE } from "../CAP-object-identifiers/id-CAP3OE.va.mjs";
 

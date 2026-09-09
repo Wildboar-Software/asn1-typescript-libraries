@@ -64,8 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { GapCriteria, _decode_GapCriteria, _encode_GapCriteria } from "../Core-INAP-CS1-DataTypes/GapCriteria.ta.mjs";
 // export { GapCriteria, _decode_GapCriteria, _encode_GapCriteria } from "../Core-INAP-CS1-DataTypes/GapCriteria.ta.mjs";
 import { GapIndicators, _decode_GapIndicators, _encode_GapIndicators } from "../Core-INAP-CS1-DataTypes/GapIndicators.ta.mjs";
