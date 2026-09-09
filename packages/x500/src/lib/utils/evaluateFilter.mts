@@ -45,6 +45,7 @@ import { CannotPerformExactly } from "../errors.mjs";
 import type { Context } from "../modules/InformationFramework/Context.ta.mjs";
 import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.mjs";
 import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta.mjs";
+import compareElements from "../comparators/compareElements.mjs";
 
 interface MatchedValue {
     type: AttributeType;
@@ -379,10 +380,7 @@ function evaluateEquality (
     entry: EntryInformation,
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
-    const matcher: EqualityMatcher | undefined = handleErrors(options.getEqualityMatcher(ava.type_));
-    if (!matcher) {
-        return undefined;
-    }
+    const matcher: EqualityMatcher = handleErrors(options.getEqualityMatcher(ava.type_)) ?? compareElements;
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const friendTypes: OBJECT_IDENTIFIER[] = [
         ava.type_,
@@ -521,10 +519,7 @@ function evaluateApprox (
     entry: EntryInformation,
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
-    const matcher: EqualityMatcher | undefined = handleErrors(options.getApproximateMatcher(ava.type_));
-    if (!matcher) {
-        return undefined;
-    }
+    const matcher: EqualityMatcher = handleErrors(options.getApproximateMatcher(ava.type_)) ?? compareElements;
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const friendTypes: OBJECT_IDENTIFIER[] = [
         ava.type_,
@@ -873,7 +868,7 @@ function evaluateMatchingRuleAssertion (
         }
         return undefined; // DSA does not know how to combine rules.
     }
-    const matcher = (
+    let matcher = (
         options.getEqualityMatcher(mra.matchingRule[0])
         // REVIEW: How do you know if you are ordering GTE or LTE?
         // ?? options.orderingMatchingRuleMatchers[mroid]
@@ -886,7 +881,7 @@ function evaluateMatchingRuleAssertion (
                 + mra.matchingRule[0].toString()
             );
         }
-        return undefined;
+        matcher = compareElements;
     }
     /**
      * From ITU Recommendation X.511, Section 11.2.2:

@@ -11,6 +11,7 @@ import type ApproxMatcher from "../lib/types/ApproxMatcher.mjs";
 import type LDAPSyntaxDecoder from "../lib/types/LDAPSyntaxDecoder.mjs";
 import encodeLDAPOID from "./encodeLDAPOID.mjs";
 import compareUint8Arrays from "./utils/compareUint8Arrays.mjs";
+import compareElements from "./utils/compareElements.mjs";
 
 export
 interface EvaluateFilterOptions {
@@ -183,10 +184,7 @@ function evaluateFilter (
         try {
             const ava = filter.equalityMatch;
             const assertionDecoder = options.getLDAPSyntaxDecoder(ava.attributeDesc);
-            const matcher = options.getEqualityMatcher(ava.attributeDesc);
-            if (!matcher) {
-                return undefined;
-            }
+            const matcher = options.getEqualityMatcher(ava.attributeDesc) ?? compareElements;
             if (!options.permittedToMatch(ava.attributeDesc)) {
                 return undefined;
             }
@@ -330,10 +328,7 @@ function evaluateFilter (
         try {
             const ava = filter.approxMatch;
             const assertionDecoder = options.getLDAPSyntaxDecoder(ava.attributeDesc);
-            const matcher = options.getApproxMatcher(ava.attributeDesc);
-            if (!matcher) {
-                return undefined;
-            }
+            const matcher = options.getApproxMatcher(ava.attributeDesc) ?? compareElements;
             if (!options.permittedToMatch(ava.attributeDesc)) {
                 return undefined;
             }
@@ -372,10 +367,7 @@ function evaluateFilter (
                 return undefined;
             }
             const decodedAssertion = assertionDecoder(mra.matchValue);
-            const matcher = options.getEqualityMatcher(mr);
-            if (!matcher) {
-                return undefined;
-            }
+            const matcher = options.getEqualityMatcher(mr) ?? compareElements;
             if (mra.type_ && !options.permittedToMatch(mra.type_)) {
                 return undefined;
             }

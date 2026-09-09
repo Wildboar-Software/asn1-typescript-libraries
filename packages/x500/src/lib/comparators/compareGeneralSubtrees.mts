@@ -18,7 +18,7 @@ export
 function compareGeneralSubtrees (
     a: GeneralSubtrees,
     b: GeneralSubtrees,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     // TODO: At least group them by type as with GeneralNames
     if (a.length !== b.length) {

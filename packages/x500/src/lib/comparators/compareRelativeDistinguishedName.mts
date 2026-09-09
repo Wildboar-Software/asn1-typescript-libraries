@@ -16,7 +16,7 @@ import compareAttributeTypeAndValue from "./compareAttributeTypeAndValue.mjs";
 export function compareRelativeDistinguishedName(
     a: RelativeDistinguishedName,
     b: RelativeDistinguishedName,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (a.length !== b.length) {
         return false;

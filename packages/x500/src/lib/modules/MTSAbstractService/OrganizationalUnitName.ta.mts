@@ -1,25 +1,13 @@
-/* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
-
 /**
- * @summary OrganizationalUnitName
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * OrganizationalUnitName  ::=
- *   PrintableString(SIZE (1..ub-organizational-unit-name-length))
- * ```
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export type OrganizationalUnitName = PrintableString; // PrintableString
 
+export type {
+    OrganizationalUnitName,
+} from "@wildboar/or-address";
 
-export const _decode_OrganizationalUnitName = $._decodePrintableString;
-
-
-export const _encode_OrganizationalUnitName = $._encodePrintableString;
-
-
-/* eslint-enable */
+export {
+    _decode_OrganizationalUnitName,
+    _encode_OrganizationalUnitName,
+} from "@wildboar/or-address";

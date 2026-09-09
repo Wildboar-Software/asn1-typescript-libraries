@@ -21,7 +21,7 @@ import { gnWithinGeneralSubtree } from "../utils/gnWithinGeneralSubtree.mjs";
 export function compareTarget(
     a: Target,
     b: Target,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     const aname: GeneralName | false | undefined =
         (("targetName" in a) && a.targetName)

@@ -26,5 +26,10 @@
   ],
   "include": [
     "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../or-address/tsconfig.lib.json"
+    }
   ]
 }

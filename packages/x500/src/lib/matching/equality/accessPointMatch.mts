@@ -18,7 +18,7 @@ const accessPointMatch: EqualityMatcher = (
 ): boolean => {
     const a: Name = _decode_Name(assertion);
     const v: AccessPoint = _decode_AccessPoint(value);
-    return compareName(a, v.ae_title, getEqualityMatcher ?? (() => undefined));
+    return compareName(a, v.ae_title, getEqualityMatcher);
 }
 
 export default accessPointMatch;

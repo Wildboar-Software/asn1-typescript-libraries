@@ -63,7 +63,7 @@ const certificateListMatch : EqualityMatcher = (
         })()
         : undefined;
 
-    if (a.issuer && !compareName(a.issuer, v.toBeSigned.issuer, getEqualityMatcher ?? (() => undefined))) {
+    if (a.issuer && !compareName(a.issuer, v.toBeSigned.issuer, getEqualityMatcher)) {
         return false;
     }
 
@@ -121,7 +121,7 @@ const certificateListMatch : EqualityMatcher = (
                 !a.distributionPoint.fullName.some((dpn1) => (
                     ("fullName" in idp.distributionPoint)
                     && (idp.distributionPoint.fullName
-                        .some((dpn2): boolean => compareGeneralName(dpn1, dpn2, getEqualityMatcher ?? (() => undefined))))
+                        .some((dpn2): boolean => compareGeneralName(dpn1, dpn2, getEqualityMatcher)))
             ))) {
                 return false;
             }
@@ -131,7 +131,7 @@ const certificateListMatch : EqualityMatcher = (
             && !compareRelativeDistinguishedName(
                 a.distributionPoint.nameRelativeToCRLIssuer,
                 idp.distributionPoint.nameRelativeToCRLIssuer,
-                getEqualityMatcher ?? (() => undefined),
+                getEqualityMatcher,
             )
         ) {
             return false;

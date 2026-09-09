@@ -1,36 +1,8 @@
-/* eslint-disable */
-import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-import {
-    LocalPostalAttributes,
-    _decode_LocalPostalAttributes,
-    _encode_LocalPostalAttributes,
-} from "../PkiPmiExternalDataTypes/LocalPostalAttributes.ta.mjs";
 /**
- * @summary local_postal_attributes
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * local-postal-attributes EXTENSION-ATTRIBUTE ::= {
- *                  LocalPostalAttributes
- *   IDENTIFIED BY  21 }
- * ```
- *
- * @constant
- * @type {EXTENSION_ATTRIBUTE<LocalPostalAttributes>}
- * @implements {EXTENSION_ATTRIBUTE<LocalPostalAttributes>}
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const local_postal_attributes: EXTENSION_ATTRIBUTE<LocalPostalAttributes> = {
-    class: "EXTENSION-ATTRIBUTE",
-    decoderFor: {
-        "&Type": _decode_LocalPostalAttributes,
-    },
-    encoderFor: {
-        "&Type": _encode_LocalPostalAttributes,
-    },
-    "&id": 21 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
-    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-};
 
-/* eslint-enable */
+export {
+    local_postal_attributes,
+} from "@wildboar/or-address";

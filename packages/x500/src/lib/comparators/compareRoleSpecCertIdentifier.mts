@@ -20,7 +20,7 @@ export
 function compareRoleSpecCertIdentifier (
     a: RoleSpecCertIdentifier,
     b: RoleSpecCertIdentifier,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (!compareGeneralName(a.roleName, b.roleName, getEqualityMatcher)) {
         return false;

@@ -15,7 +15,7 @@ import compareRelativeDistinguishedName from "./compareRelativeDistinguishedName
 export function compareRDNSequence(
     a: RDNSequence,
     b: RDNSequence,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (a.length !== b.length) {
         return false;

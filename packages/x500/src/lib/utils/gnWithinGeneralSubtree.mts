@@ -308,7 +308,13 @@ function gnWithinGeneralSubtree (
                 return false;
             }
         }
-        return false;
+        // Unrecognized OTHER-NAME types still match when encodings are equal.
+        // Returning false here would fail-open for excluded subtrees.
+        return compareGeneralName(
+            gn,
+            subtree.base,
+            getEqualityMatcher ?? (() => compareElements),
+        );
     }
     else if (("dNSName" in gn) && ("dNSName" in subtree.base)) {
         // Minimal-allocation approach.

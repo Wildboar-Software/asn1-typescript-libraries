@@ -1,18 +1,8 @@
-/* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
-
 /**
- * @summary ub_universal_surname_length
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ub-universal-surname-length INTEGER ::= 64
- * ```
- *
- * @constant
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const ub_universal_surname_length: INTEGER = 64;
 
-/* eslint-enable */
+export {
+    ub_universal_surname_length,
+} from "@wildboar/or-address";

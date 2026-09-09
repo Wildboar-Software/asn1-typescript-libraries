@@ -18,7 +18,7 @@ export
 function compareGeneralNames (
     a: GeneralNames,
     b: GeneralNames,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     // TODO: At least group by types first.
     if (a.length !== b.length) {

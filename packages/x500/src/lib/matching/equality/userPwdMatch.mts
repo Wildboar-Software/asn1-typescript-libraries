@@ -3,6 +3,7 @@ import type { ASN1Element } from "@wildboar/asn1";
 import type { AlgorithmIdentifier } from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.ta.mjs";
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";
+import compareElements from "../../comparators/compareElements.mjs";
 import { Buffer } from "node:buffer";
 
 // userPwdMatch MATCHING-RULE ::= {
@@ -51,7 +52,7 @@ function createUserPwdMatch (
             }
             return !Buffer.compare(result, v.encrypted.encryptedString);
         } else {
-            return false;
+            return compareElements(assertion, value);
         }
     }
 }

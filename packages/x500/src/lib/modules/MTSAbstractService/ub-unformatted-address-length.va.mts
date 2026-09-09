@@ -1,18 +1,8 @@
-/* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
-
 /**
- * @summary ub_unformatted_address_length
- * @description
- *
- * ### ASN.1 Definition:
- *
- * ```asn1
- * ub-unformatted-address-length INTEGER ::= 180
- * ```
- *
- * @constant
+ * Re-exported from `@wildboar/or-address`.
+ * ITU-T X.411 (1999) Annex A / ITU-T X.402 (1999) §18.
  */
-export const ub_unformatted_address_length: INTEGER = 180;
 
-/* eslint-enable */
+export {
+    ub_unformatted_address_length,
+} from "@wildboar/or-address";

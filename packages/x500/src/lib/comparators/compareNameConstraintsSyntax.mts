@@ -18,7 +18,7 @@ export
 function compareNameConstraintsSyntax (
     a: NameConstraintsSyntax,
     b: NameConstraintsSyntax,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (Boolean(a.permittedSubtrees) !== Boolean(b.permittedSubtrees)) {
         return false;

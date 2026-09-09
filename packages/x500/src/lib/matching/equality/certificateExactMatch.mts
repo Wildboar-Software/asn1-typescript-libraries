@@ -22,7 +22,7 @@ const certificateExactMatch: EqualityMatcher = (
     if (Buffer.compare(v.toBeSigned.serialNumber, a.serialNumber)) {
         return false;
     }
-    return compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher ?? (() => undefined));
+    return compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher);
 }
 
 export default certificateExactMatch;
