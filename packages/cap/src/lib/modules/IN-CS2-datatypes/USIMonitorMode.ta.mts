@@ -1,0 +1,182 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+
+
+
+/**
+ * @summary USIMonitorMode
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * USIMonitorMode  ::=  ENUMERATED {monitoringActive(0), monitoringInactive(1)}
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_USIMonitorMode {
+    monitoringActive = 0,
+    monitoringInactive = 1,
+}
+
+/**
+ * @summary USIMonitorMode
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * USIMonitorMode  ::=  ENUMERATED {monitoringActive(0), monitoringInactive(1)}
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type USIMonitorMode = _enum_for_USIMonitorMode;
+
+/**
+ * @summary USIMonitorMode
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * USIMonitorMode  ::=  ENUMERATED {monitoringActive(0), monitoringInactive(1)}
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const USIMonitorMode = _enum_for_USIMonitorMode;
+
+/**
+ * @summary USIMonitorMode_monitoringActive
+ * @constant
+ * @type {number}
+ */
+export
+const USIMonitorMode_monitoringActive: USIMonitorMode = USIMonitorMode.monitoringActive; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary monitoringActive
+ * @constant
+ * @type {number}
+ */
+export
+const monitoringActive: USIMonitorMode = USIMonitorMode.monitoringActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary USIMonitorMode_monitoringInactive
+ * @constant
+ * @type {number}
+ */
+export
+const USIMonitorMode_monitoringInactive: USIMonitorMode = USIMonitorMode.monitoringInactive; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary monitoringInactive
+ * @constant
+ * @type {number}
+ */
+export
+const monitoringInactive: USIMonitorMode = USIMonitorMode.monitoringInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+let _cached_decoder_for_USIMonitorMode: $.ASN1Decoder<USIMonitorMode> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) USIMonitorMode
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_USIMonitorMode (el: _Element): USIMonitorMode {
+    if (!_cached_decoder_for_USIMonitorMode) { _cached_decoder_for_USIMonitorMode = $._decodeEnumerated; }
+    return _cached_decoder_for_USIMonitorMode(el);
+}
+
+let _cached_encoder_for_USIMonitorMode: $.ASN1Encoder<USIMonitorMode> | null = null;
+
+/**
+ * @summary Encodes a(n) USIMonitorMode into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The USIMonitorMode, encoded as an ASN.1 Element.
+ */
+export
+function _encode_USIMonitorMode (value: USIMonitorMode, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_USIMonitorMode) { _cached_encoder_for_USIMonitorMode = $._encodeEnumerated; }
+    return _cached_encoder_for_USIMonitorMode(value, elGetter);
+}
+
+
+/* eslint-enable */

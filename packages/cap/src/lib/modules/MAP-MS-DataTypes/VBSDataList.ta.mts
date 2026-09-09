@@ -1,0 +1,117 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { VoiceBroadcastData, _decode_VoiceBroadcastData, _encode_VoiceBroadcastData } from "../MAP-MS-DataTypes/VoiceBroadcastData.ta.mjs";
+// export { VoiceBroadcastData, _decode_VoiceBroadcastData, _encode_VoiceBroadcastData } from "../MAP-MS-DataTypes/VoiceBroadcastData.ta.mjs";
+
+
+/**
+ * @summary VBSDataList
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * VBSDataList  ::=  SEQUENCE SIZE (1..maxNumOfVBSGroupIds) OF
+ *     VoiceBroadcastData
+ * ```
+ */
+export
+type VBSDataList = VoiceBroadcastData[]; // SequenceOfType
+
+let _cached_decoder_for_VBSDataList: $.ASN1Decoder<VBSDataList> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) VBSDataList
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_VBSDataList (el: _Element): VBSDataList {
+    if (!_cached_decoder_for_VBSDataList) { _cached_decoder_for_VBSDataList = $._decodeSequenceOf<VoiceBroadcastData>(() => _decode_VoiceBroadcastData); }
+    return _cached_decoder_for_VBSDataList(el);
+}
+
+let _cached_encoder_for_VBSDataList: $.ASN1Encoder<VBSDataList> | null = null;
+
+/**
+ * @summary Encodes a(n) VBSDataList into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The VBSDataList, encoded as an ASN.1 Element.
+ */
+export
+function _encode_VBSDataList (value: VBSDataList, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_VBSDataList) { _cached_encoder_for_VBSDataList = $._encodeSequenceOf<VoiceBroadcastData>(() => _encode_VoiceBroadcastData, $.BER); }
+    return _cached_encoder_for_VBSDataList(value, elGetter);
+}
+
+
+/* eslint-enable */

@@ -1,0 +1,158 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+
+
+
+export
+enum _enum_for_KeyStatus {
+    old = 0,
+    new_ = 1,
+}
+
+/**
+ * @summary KeyStatus
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * KeyStatus  ::=  ENUMERATED {
+ *     old  (0),
+ *     new  (1),
+ *     ...}
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type KeyStatus = _enum_for_KeyStatus | ENUMERATED;
+
+/**
+ * @summary KeyStatus_old
+ * @constant
+ * @type {number}
+ */
+export
+const KeyStatus_old: KeyStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary old
+ * @constant
+ * @type {number}
+ */
+export
+const old: KeyStatus = KeyStatus_old; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary KeyStatus_new_
+ * @constant
+ * @type {number}
+ */
+export
+const KeyStatus_new_: KeyStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary new_
+ * @constant
+ * @type {number}
+ */
+export
+const new_: KeyStatus = KeyStatus_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+let _cached_decoder_for_KeyStatus: $.ASN1Decoder<KeyStatus> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) KeyStatus
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_KeyStatus (el: _Element): KeyStatus {
+    if (!_cached_decoder_for_KeyStatus) { _cached_decoder_for_KeyStatus = $._decodeEnumerated; }
+    return _cached_decoder_for_KeyStatus(el);
+}
+
+let _cached_encoder_for_KeyStatus: $.ASN1Encoder<KeyStatus> | null = null;
+
+/**
+ * @summary Encodes a(n) KeyStatus into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The KeyStatus, encoded as an ASN.1 Element.
+ */
+export
+function _encode_KeyStatus (value: KeyStatus, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_KeyStatus) { _cached_encoder_for_KeyStatus = $._encodeEnumerated; }
+    return _cached_encoder_for_KeyStatus(value, elGetter);
+}
+
+
+/* eslint-enable */
