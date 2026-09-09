@@ -77,7 +77,10 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-calledNumberSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-calledNumberSpecificInfo ::= SEQUENCE {
+ *     calledNumber  [0]  CalledPartyNumber{bound} OPTIONAL,
+ *     ...
+ * }
  * ```
  * 
  * @class

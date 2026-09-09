@@ -76,7 +76,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MiscCallInfo-dpAssignment ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MiscCallInfo-dpAssignment ::= ENUMERATED {
+ *     individualLine(0), groupBased(1), officeBased(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -95,7 +97,9 @@ enum _enum_for_MiscCallInfo_dpAssignment {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MiscCallInfo-dpAssignment ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MiscCallInfo-dpAssignment ::= ENUMERATED {
+ *     individualLine(0), groupBased(1), officeBased(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -110,7 +114,9 @@ type MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MiscCallInfo-dpAssignment ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MiscCallInfo-dpAssignment ::= ENUMERATED {
+ *     individualLine(0), groupBased(1), officeBased(2)
+ * }
  * ```
  * 
  * @enum {number}

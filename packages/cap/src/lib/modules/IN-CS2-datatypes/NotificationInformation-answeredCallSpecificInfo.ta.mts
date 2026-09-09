@@ -77,7 +77,10 @@ import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS2
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-answeredCallSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-answeredCallSpecificInfo ::= SEQUENCE {
+ *     timeStamp  [0]  DateAndTime OPTIONAL,
+ *     ...
+ * }
  * ```
  * 
  * @class

@@ -79,7 +79,10 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GapCriteria-calledAddressAndService ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GapCriteria-calledAddressAndService ::= SEQUENCE {
+ *     calledAddressValue     [0] Digits,
+ *     serviceKey     [1] ServiceKey
+ * }
  * ```
  * 
  * @class

@@ -77,7 +77,10 @@ import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-oDisconnectSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-oDisconnectSpecificInfo ::= SEQUENCE {
+ *     releaseCause     [0] Cause     OPTIONAL
+ *     --...--
+ * }
  * ```
  * 
  * @class

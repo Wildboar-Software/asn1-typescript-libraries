@@ -76,7 +76,18 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * InformationToRecord-controlDigits ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * InformationToRecord-controlDigits ::= SEQUENCE {
+ *     endOfRecordingDigit
+ *     [0]  OCTET STRING(SIZE (1..2)) OPTIONAL,
+ *     cancelDigit
+ *     [1]  OCTET STRING(SIZE (1..2)) OPTIONAL,
+ *     replayDigit
+ *     [2]  OCTET STRING(SIZE (1..2)) OPTIONAL,
+ *     restartRecordingDigit
+ *     [3]  OCTET STRING(SIZE (1..2)) OPTIONAL,
+ *     restartAllowed         [4]  BOOLEAN DEFAULT FALSE,
+ *     replayAllowed          [5]  BOOLEAN DEFAULT FALSE
+ * }
  * ```
  * 
  * @class

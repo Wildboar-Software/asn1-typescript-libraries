@@ -76,7 +76,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-userAbandonSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-userAbandonSpecificInfo ::= SEQUENCE {
+ *     ...
+ * }
  * ```
  * 
  * @class

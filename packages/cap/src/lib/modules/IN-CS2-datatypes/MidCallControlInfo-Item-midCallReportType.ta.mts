@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MidCallControlInfo-Item-midCallReportType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MidCallControlInfo-Item-midCallReportType ::= ENUMERATED {
+ *     inMonitoringState(0),
+ *     inAnyState(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -94,7 +97,10 @@ enum _enum_for_MidCallControlInfo_Item_midCallReportType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MidCallControlInfo-Item-midCallReportType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MidCallControlInfo-Item-midCallReportType ::= ENUMERATED {
+ *     inMonitoringState(0),
+ *     inAnyState(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -109,7 +115,10 @@ type MidCallControlInfo_Item_midCallReportType = _enum_for_MidCallControlInfo_It
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MidCallControlInfo-Item-midCallReportType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MidCallControlInfo-Item-midCallReportType ::= ENUMERATED {
+ *     inMonitoringState(0),
+ *     inAnyState(1)
+ * }
  * ```
  * 
  * @enum {number}

@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * taskRefused-ParameterType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * taskRefused-ParameterType ::= SEQUENCE {
+ *     generic			(0),
+ *     unobtainable		(1),
+ *     congestion			(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -95,7 +99,11 @@ enum _enum_for_taskRefused_ParameterType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * taskRefused-ParameterType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * taskRefused-ParameterType ::= SEQUENCE {
+ *     generic			(0),
+ *     unobtainable		(1),
+ *     congestion			(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -110,7 +118,11 @@ type taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * taskRefused-ParameterType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * taskRefused-ParameterType ::= SEQUENCE {
+ *     generic			(0),
+ *     unobtainable		(1),
+ *     congestion			(2)
+ * }
  * ```
  * 
  * @enum {number}

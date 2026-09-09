@@ -81,7 +81,11 @@ import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GapCriteria-callingAddressAndService ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GapCriteria-callingAddressAndService ::= SEQUENCE {
+ *     callingAddressValue     [0] Digits,
+ *     serviceKey     [1] ServiceKey,
+ *     locationNumber     [2] LocationNumber     OPTIONAL
+ * }
  * ```
  * 
  * @class

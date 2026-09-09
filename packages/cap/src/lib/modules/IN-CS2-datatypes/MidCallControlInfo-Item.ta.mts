@@ -79,7 +79,11 @@ import { MidCallControlInfo_Item_midCallReportType, _enum_for_MidCallControlInfo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MidCallControlInfo-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MidCallControlInfo-Item ::= SEQUENCE {
+ *     midCallInfoType    [0]  MidCallInfoType{bound},
+ *     midCallReportType  [1]  ENUMERATED {inMonitoringState(0), inAnyState(1)}
+ *         DEFAULT inMonitoringState
+ * }
  * ```
  * 
  * @class

@@ -77,7 +77,10 @@ import { InvokableService, _enum_for_InvokableService, InvokableService_callingL
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-ssInvocationSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-ssInvocationSpecificInfo ::= SEQUENCE {
+ *     invokedService  [0]  InvokableService,
+ *     ...
+ * }
  * ```
  * 
  * @class

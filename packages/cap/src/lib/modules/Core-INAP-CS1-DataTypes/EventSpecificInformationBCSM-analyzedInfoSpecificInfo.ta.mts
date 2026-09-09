@@ -77,7 +77,10 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-analyzedInfoSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-analyzedInfoSpecificInfo ::= SEQUENCE {
+ *     calledPartyNumber     [0] CalledPartyNumber
+ *     --...--
+ * }
  * ```
  * 
  * @class

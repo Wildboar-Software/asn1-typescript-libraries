@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MessageID-text ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MessageID-text ::= SEQUENCE {
+ *     messageContent     [0] IA5String (SIZE(minMessageContentLength .. maxMessageContentLength)),
+ *     attributes     [1] OCTET STRING (SIZE (minAttributesLength .. maxAttributesLength)) OPTIONAL
+ * }
  * ```
  * 
  * @class

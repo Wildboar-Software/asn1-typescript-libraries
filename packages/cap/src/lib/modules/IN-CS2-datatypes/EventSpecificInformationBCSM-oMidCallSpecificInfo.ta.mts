@@ -79,7 +79,11 @@ import { MidCallInfo, _decode_MidCallInfo, _encode_MidCallInfo } from "../IN-CS2
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-oMidCallSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-oMidCallSpecificInfo ::= SEQUENCE {
+ *     connectTime   [0]  Integer4 OPTIONAL,
+ *     oMidCallInfo  [1]  MidCallInfo{bound} OPTIONAL,
+ *     ...
+ * }
  * ```
  * 
  * @class

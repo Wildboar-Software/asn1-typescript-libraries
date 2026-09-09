@@ -79,7 +79,10 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS2-da
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GapCriteria-calledAddressAndService ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GapCriteria-calledAddressAndService ::= SEQUENCE {
+ *     calledAddressValue  [0]  Digits{bound},
+ *     serviceKey          [1]  ServiceKey
+ * }
  * ```
  * 
  * @class

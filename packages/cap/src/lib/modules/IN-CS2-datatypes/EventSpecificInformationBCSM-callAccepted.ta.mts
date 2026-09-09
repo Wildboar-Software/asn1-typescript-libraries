@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-callAccepted ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-callAccepted ::= SEQUENCE {
+ *     -- no specific info defined
+ *     ...
+ * }
  * ```
  * 
  * @class

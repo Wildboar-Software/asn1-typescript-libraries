@@ -76,7 +76,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MiscCallInfo-messageType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MiscCallInfo-messageType ::= ENUMERATED {
+ *     request(0), notification(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -94,7 +96,9 @@ enum _enum_for_MiscCallInfo_messageType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MiscCallInfo-messageType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MiscCallInfo-messageType ::= ENUMERATED {
+ *     request(0), notification(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -109,7 +113,9 @@ type MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MiscCallInfo-messageType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MiscCallInfo-messageType ::= ENUMERATED {
+ *     request(0), notification(1)
+ * }
  * ```
  * 
  * @enum {number}

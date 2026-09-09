@@ -81,7 +81,12 @@ import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FilteringCriteria-addressAndService ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FilteringCriteria-addressAndService ::= SEQUENCE {
+ *     calledAddressValue   [0]  Digits{bound},
+ *     serviceKey           [1]  ServiceKey,
+ *     callingAddressValue  [2]  Digits{bound} OPTIONAL,
+ *     locationNumber       [3]  LocationNumber{bound} OPTIONAL
+ * }
  * ```
  * 
  * @class

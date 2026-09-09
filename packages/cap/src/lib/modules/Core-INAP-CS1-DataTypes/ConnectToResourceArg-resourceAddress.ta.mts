@@ -77,7 +77,10 @@ import { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectToResourceArg-resourceAddress ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ConnectToResourceArg-resourceAddress ::= CHOICE {
+ *     ipRoutingAddress     [0] IPRoutingAddress,
+ *     none     [3] NULL
+ * }
  * ```
  */
 export

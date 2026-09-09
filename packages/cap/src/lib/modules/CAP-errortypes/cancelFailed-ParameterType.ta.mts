@@ -78,7 +78,15 @@ import { cancelFailed_ParameterType_problem, _enum_for_cancelFailed_ParameterTyp
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * cancelFailed-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * cancelFailed-ParameterType ::= SEQUENCE {
+ *     problem            [0] ENUMERATED {
+ *         unknownOperation    (0),
+ *         tooLate             (1),
+ *         operationNotCancellable    (2)
+ *         },
+ *     operation        [1] InvokeID,
+ *     ...
+ * }
  * ```
  * 
  * @class
