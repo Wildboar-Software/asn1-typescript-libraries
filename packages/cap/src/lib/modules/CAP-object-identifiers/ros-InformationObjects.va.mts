@@ -82,7 +82,7 @@ import * as $ from "@wildboar/asn1/functional";
  * @constant
  */
 export
-const ros_InformationObjects: OBJECT_IDENTIFIER = new _OID([
+const ros_InformationObjects: OBJECT_IDENTIFIER = _OID.fromParts([
     /* remote-operations */ 4,
     /* informationObjects */ 5,
     /* version1 */ 0,

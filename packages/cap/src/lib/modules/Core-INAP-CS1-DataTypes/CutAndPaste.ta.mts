@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CutAndPaste = INTEGER;
-
-let _cached_decoder_for_CutAndPaste: $.ASN1Decoder<CutAndPaste> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CutAndPaste
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CutAndPaste (el: _Element): CutAndPaste {
-    if (!_cached_decoder_for_CutAndPaste) { _cached_decoder_for_CutAndPaste = $._decodeInteger; }
-    return _cached_decoder_for_CutAndPaste(el);
-}
-
-let _cached_encoder_for_CutAndPaste: $.ASN1Encoder<CutAndPaste> | null = null;
-
-/**
- * @summary Encodes a(n) CutAndPaste into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CutAndPaste, encoded as an ASN.1 Element.
- */
-export
-function _encode_CutAndPaste (value: CutAndPaste, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CutAndPaste) { _cached_encoder_for_CutAndPaste = $._encodeInteger; }
-    return _cached_encoder_for_CutAndPaste(value, elGetter);
-}
+export const _decode_CutAndPaste = $._decodeInteger;
+export const _encode_CutAndPaste = $._encodeInteger;
 
 
 /* eslint-enable */

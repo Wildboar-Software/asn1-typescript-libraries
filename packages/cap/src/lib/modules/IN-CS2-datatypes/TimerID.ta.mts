@@ -137,35 +137,8 @@ const TimerID_tssf: TimerID = TimerID.tssf; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const tssf: TimerID = TimerID.tssf; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_TimerID: $.ASN1Decoder<TimerID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TimerID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TimerID (el: _Element): TimerID {
-    if (!_cached_decoder_for_TimerID) { _cached_decoder_for_TimerID = $._decodeEnumerated; }
-    return _cached_decoder_for_TimerID(el);
-}
-
-let _cached_encoder_for_TimerID: $.ASN1Encoder<TimerID> | null = null;
-
-/**
- * @summary Encodes a(n) TimerID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TimerID, encoded as an ASN.1 Element.
- */
-export
-function _encode_TimerID (value: TimerID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TimerID) { _cached_encoder_for_TimerID = $._encodeEnumerated; }
-    return _cached_encoder_for_TimerID(value, elGetter);
-}
+export const _decode_TimerID = $._decodeEnumerated;
+export const _encode_TimerID = $._encodeEnumerated;
 
 
 /* eslint-enable */

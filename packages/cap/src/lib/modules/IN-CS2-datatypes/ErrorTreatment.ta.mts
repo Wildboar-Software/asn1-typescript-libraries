@@ -165,35 +165,8 @@ const ErrorTreatment_repeatPrompt: ErrorTreatment = ErrorTreatment.repeatPrompt;
  */
 export
 const repeatPrompt: ErrorTreatment = ErrorTreatment.repeatPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ErrorTreatment: $.ASN1Decoder<ErrorTreatment> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ErrorTreatment
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ErrorTreatment (el: _Element): ErrorTreatment {
-    if (!_cached_decoder_for_ErrorTreatment) { _cached_decoder_for_ErrorTreatment = $._decodeEnumerated; }
-    return _cached_decoder_for_ErrorTreatment(el);
-}
-
-let _cached_encoder_for_ErrorTreatment: $.ASN1Encoder<ErrorTreatment> | null = null;
-
-/**
- * @summary Encodes a(n) ErrorTreatment into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ErrorTreatment, encoded as an ASN.1 Element.
- */
-export
-function _encode_ErrorTreatment (value: ErrorTreatment, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ErrorTreatment) { _cached_encoder_for_ErrorTreatment = $._encodeEnumerated; }
-    return _cached_encoder_for_ErrorTreatment(value, elGetter);
-}
+export const _decode_ErrorTreatment = $._decodeEnumerated;
+export const _encode_ErrorTreatment = $._encodeEnumerated;
 
 
 /* eslint-enable */

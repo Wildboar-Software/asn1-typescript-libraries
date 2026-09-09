@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AccountNumber = NumericString; // NumericString
-
-let _cached_decoder_for_AccountNumber: $.ASN1Decoder<AccountNumber> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AccountNumber
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AccountNumber (el: _Element): AccountNumber {
-    if (!_cached_decoder_for_AccountNumber) { _cached_decoder_for_AccountNumber = $._decodeNumericString; }
-    return _cached_decoder_for_AccountNumber(el);
-}
-
-let _cached_encoder_for_AccountNumber: $.ASN1Encoder<AccountNumber> | null = null;
-
-/**
- * @summary Encodes a(n) AccountNumber into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccountNumber, encoded as an ASN.1 Element.
- */
-export
-function _encode_AccountNumber (value: AccountNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccountNumber) { _cached_encoder_for_AccountNumber = $._encodeNumericString; }
-    return _cached_encoder_for_AccountNumber(value, elGetter);
-}
+export const _decode_AccountNumber = $._decodeNumericString;
+export const _encode_AccountNumber = $._encodeNumericString;
 
 
 /* eslint-enable */

@@ -277,35 +277,8 @@ const CAP_U_ABORT_REASON_overlapping_dialogue: CAP_U_ABORT_REASON = CAP_U_ABORT_
  */
 export
 const overlapping_dialogue: CAP_U_ABORT_REASON = CAP_U_ABORT_REASON.overlapping_dialogue; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_CAP_U_ABORT_REASON: $.ASN1Decoder<CAP_U_ABORT_REASON> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CAP_U_ABORT_REASON
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CAP_U_ABORT_REASON (el: _Element): CAP_U_ABORT_REASON {
-    if (!_cached_decoder_for_CAP_U_ABORT_REASON) { _cached_decoder_for_CAP_U_ABORT_REASON = $._decodeEnumerated; }
-    return _cached_decoder_for_CAP_U_ABORT_REASON(el);
-}
-
-let _cached_encoder_for_CAP_U_ABORT_REASON: $.ASN1Encoder<CAP_U_ABORT_REASON> | null = null;
-
-/**
- * @summary Encodes a(n) CAP_U_ABORT_REASON into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CAP_U_ABORT_REASON, encoded as an ASN.1 Element.
- */
-export
-function _encode_CAP_U_ABORT_REASON (value: CAP_U_ABORT_REASON, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAP_U_ABORT_REASON) { _cached_encoder_for_CAP_U_ABORT_REASON = $._encodeEnumerated; }
-    return _cached_encoder_for_CAP_U_ABORT_REASON(value, elGetter);
-}
+export const _decode_CAP_U_ABORT_REASON = $._decodeEnumerated;
+export const _encode_CAP_U_ABORT_REASON = $._encodeEnumerated;
 
 
 /* eslint-enable */

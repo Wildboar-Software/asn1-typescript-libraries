@@ -66,6 +66,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type RPCause, _decode_RPCause, _encode_RPCause } from "../CAP-datatypes/RPCause.ta.mjs";
 
 
 

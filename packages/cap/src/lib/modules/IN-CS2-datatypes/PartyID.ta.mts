@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type PartyID = INTEGER;
-
-let _cached_decoder_for_PartyID: $.ASN1Decoder<PartyID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PartyID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PartyID (el: _Element): PartyID {
-    if (!_cached_decoder_for_PartyID) { _cached_decoder_for_PartyID = $._decodeInteger; }
-    return _cached_decoder_for_PartyID(el);
-}
-
-let _cached_encoder_for_PartyID: $.ASN1Encoder<PartyID> | null = null;
-
-/**
- * @summary Encodes a(n) PartyID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PartyID, encoded as an ASN.1 Element.
- */
-export
-function _encode_PartyID (value: PartyID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PartyID) { _cached_encoder_for_PartyID = $._encodeInteger; }
-    return _cached_encoder_for_PartyID(value, elGetter);
-}
+export const _decode_PartyID = $._decodeInteger;
+export const _encode_PartyID = $._encodeInteger;
 
 
 /* eslint-enable */

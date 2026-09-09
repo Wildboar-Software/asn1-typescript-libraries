@@ -66,6 +66,14 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { connectGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/connectGPRS.oa.mjs";
+import { entityReleasedGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/entityReleasedGPRS.oa.mjs";
+import { eventReportGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/eventReportGPRS.oa.mjs";
+import { furnishChargingInformationGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/furnishChargingInformationGPRS.oa.mjs";
+import { initialDPGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/initialDPGPRS.oa.mjs";
+import { releaseGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/releaseGPRS.oa.mjs";
+import { requestReportGPRSEvent } from "../CAP-gprsSSF-gsmSCF-ops-args/requestReportGPRSEvent.oa.mjs";
+import { sendChargingInformationGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/sendChargingInformationGPRS.oa.mjs";
 import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { activityTestGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/activityTestGPRS.oa.mjs";

@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type NumberingPlan = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_NumberingPlan: $.ASN1Decoder<NumberingPlan> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NumberingPlan
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NumberingPlan (el: _Element): NumberingPlan {
-    if (!_cached_decoder_for_NumberingPlan) { _cached_decoder_for_NumberingPlan = $._decodeOctetString; }
-    return _cached_decoder_for_NumberingPlan(el);
-}
-
-let _cached_encoder_for_NumberingPlan: $.ASN1Encoder<NumberingPlan> | null = null;
-
-/**
- * @summary Encodes a(n) NumberingPlan into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NumberingPlan, encoded as an ASN.1 Element.
- */
-export
-function _encode_NumberingPlan (value: NumberingPlan, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NumberingPlan) { _cached_encoder_for_NumberingPlan = $._encodeOctetString; }
-    return _cached_encoder_for_NumberingPlan(value, elGetter);
-}
+export const _decode_NumberingPlan = $._decodeOctetString;
+export const _encode_NumberingPlan = $._encodeOctetString;
 
 
 /* eslint-enable */

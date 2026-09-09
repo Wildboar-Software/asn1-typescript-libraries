@@ -177,35 +177,8 @@ const ControlType_destinationOverload: ControlType = ControlType.destinationOver
  */
 export
 const destinationOverload: ControlType = ControlType.destinationOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ControlType: $.ASN1Decoder<ControlType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ControlType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ControlType (el: _Element): ControlType {
-    if (!_cached_decoder_for_ControlType) { _cached_decoder_for_ControlType = $._decodeEnumerated; }
-    return _cached_decoder_for_ControlType(el);
-}
-
-let _cached_encoder_for_ControlType: $.ASN1Encoder<ControlType> | null = null;
-
-/**
- * @summary Encodes a(n) ControlType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ControlType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ControlType (value: ControlType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ControlType) { _cached_encoder_for_ControlType = $._encodeEnumerated; }
-    return _cached_encoder_for_ControlType(value, elGetter);
-}
+export const _decode_ControlType = $._decodeEnumerated;
+export const _encode_ControlType = $._encodeEnumerated;
 
 
 /* eslint-enable */

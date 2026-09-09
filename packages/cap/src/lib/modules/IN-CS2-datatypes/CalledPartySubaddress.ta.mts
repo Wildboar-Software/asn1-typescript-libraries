@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CalledPartySubaddress = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_CalledPartySubaddress: $.ASN1Decoder<CalledPartySubaddress> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CalledPartySubaddress
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CalledPartySubaddress (el: _Element): CalledPartySubaddress {
-    if (!_cached_decoder_for_CalledPartySubaddress) { _cached_decoder_for_CalledPartySubaddress = $._decodeOctetString; }
-    return _cached_decoder_for_CalledPartySubaddress(el);
-}
-
-let _cached_encoder_for_CalledPartySubaddress: $.ASN1Encoder<CalledPartySubaddress> | null = null;
-
-/**
- * @summary Encodes a(n) CalledPartySubaddress into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CalledPartySubaddress, encoded as an ASN.1 Element.
- */
-export
-function _encode_CalledPartySubaddress (value: CalledPartySubaddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalledPartySubaddress) { _cached_encoder_for_CalledPartySubaddress = $._encodeOctetString; }
-    return _cached_encoder_for_CalledPartySubaddress(value, elGetter);
-}
+export const _decode_CalledPartySubaddress = $._decodeOctetString;
+export const _encode_CalledPartySubaddress = $._encodeOctetString;
 
 
 /* eslint-enable */

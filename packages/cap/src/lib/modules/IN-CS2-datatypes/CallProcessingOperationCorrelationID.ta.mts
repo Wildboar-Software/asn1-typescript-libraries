@@ -239,35 +239,8 @@ const CallProcessingOperationCorrelationID_fACility: CallProcessingOperationCorr
  */
 export
 const fACility: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_CallProcessingOperationCorrelationID: $.ASN1Decoder<CallProcessingOperationCorrelationID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CallProcessingOperationCorrelationID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CallProcessingOperationCorrelationID (el: _Element): CallProcessingOperationCorrelationID {
-    if (!_cached_decoder_for_CallProcessingOperationCorrelationID) { _cached_decoder_for_CallProcessingOperationCorrelationID = $._decodeEnumerated; }
-    return _cached_decoder_for_CallProcessingOperationCorrelationID(el);
-}
-
-let _cached_encoder_for_CallProcessingOperationCorrelationID: $.ASN1Encoder<CallProcessingOperationCorrelationID> | null = null;
-
-/**
- * @summary Encodes a(n) CallProcessingOperationCorrelationID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CallProcessingOperationCorrelationID, encoded as an ASN.1 Element.
- */
-export
-function _encode_CallProcessingOperationCorrelationID (value: CallProcessingOperationCorrelationID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallProcessingOperationCorrelationID) { _cached_encoder_for_CallProcessingOperationCorrelationID = $._encodeEnumerated; }
-    return _cached_encoder_for_CallProcessingOperationCorrelationID(value, elGetter);
-}
+export const _decode_CallProcessingOperationCorrelationID = $._decodeEnumerated;
+export const _encode_CallProcessingOperationCorrelationID = $._encodeEnumerated;
 
 
 /* eslint-enable */

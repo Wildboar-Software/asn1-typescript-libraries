@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type IPAvailable = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_IPAvailable: $.ASN1Decoder<IPAvailable> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IPAvailable
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IPAvailable (el: _Element): IPAvailable {
-    if (!_cached_decoder_for_IPAvailable) { _cached_decoder_for_IPAvailable = $._decodeOctetString; }
-    return _cached_decoder_for_IPAvailable(el);
-}
-
-let _cached_encoder_for_IPAvailable: $.ASN1Encoder<IPAvailable> | null = null;
-
-/**
- * @summary Encodes a(n) IPAvailable into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IPAvailable, encoded as an ASN.1 Element.
- */
-export
-function _encode_IPAvailable (value: IPAvailable, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPAvailable) { _cached_encoder_for_IPAvailable = $._encodeOctetString; }
-    return _cached_encoder_for_IPAvailable(value, elGetter);
-}
+export const _decode_IPAvailable = $._decodeOctetString;
+export const _encode_IPAvailable = $._encodeOctetString;
 
 
 /* eslint-enable */

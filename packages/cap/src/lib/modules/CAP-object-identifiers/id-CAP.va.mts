@@ -83,7 +83,7 @@ import * as $ from "@wildboar/asn1/functional";
  * @constant
  */
 export
-const id_CAP: OBJECT_IDENTIFIER = new _OID([
+const id_CAP: OBJECT_IDENTIFIER = _OID.fromParts([
     /* itu-t */ 0,
     /* identified-organization */ 4,
     /* etsi */ 0,

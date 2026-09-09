@@ -84,35 +84,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type USIInformation = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_USIInformation: $.ASN1Decoder<USIInformation> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) USIInformation
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_USIInformation (el: _Element): USIInformation {
-    if (!_cached_decoder_for_USIInformation) { _cached_decoder_for_USIInformation = $._decodeOctetString; }
-    return _cached_decoder_for_USIInformation(el);
-}
-
-let _cached_encoder_for_USIInformation: $.ASN1Encoder<USIInformation> | null = null;
-
-/**
- * @summary Encodes a(n) USIInformation into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The USIInformation, encoded as an ASN.1 Element.
- */
-export
-function _encode_USIInformation (value: USIInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_USIInformation) { _cached_encoder_for_USIInformation = $._encodeOctetString; }
-    return _cached_encoder_for_USIInformation(value, elGetter);
-}
+export const _decode_USIInformation = $._decodeOctetString;
+export const _encode_USIInformation = $._encodeOctetString;
 
 
 /* eslint-enable */

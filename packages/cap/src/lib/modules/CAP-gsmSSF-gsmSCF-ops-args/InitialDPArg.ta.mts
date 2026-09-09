@@ -66,6 +66,22 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type AdditionalCallingPartyNumber, _decode_AdditionalCallingPartyNumber, _encode_AdditionalCallingPartyNumber } from "../CAP-datatypes/AdditionalCallingPartyNumber.ta.mjs";
+import { type BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../CAP-datatypes/BearerCapability.ta.mjs";
+import { CGEncountered, _decode_CGEncountered, _encode_CGEncountered } from "../CAP-datatypes/CGEncountered.ta.mjs";
+import { type CalledPartyBCDNumber, _decode_CalledPartyBCDNumber, _encode_CalledPartyBCDNumber } from "../CAP-datatypes/CalledPartyBCDNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../CAP-datatypes/CalledPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../CAP-datatypes/CallingPartyNumber.ta.mjs";
+import { type Carrier, _decode_Carrier, _encode_Carrier } from "../CAP-datatypes/Carrier.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../CAP-datatypes/Cause.ta.mjs";
+import { EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../CAP-datatypes/EventTypeBCSM.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../CAP-datatypes/IPSSPCapabilities.ta.mjs";
+import { type LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../CAP-datatypes/LocationNumber.ta.mjs";
+import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../CAP-datatypes/OriginalCalledPartyID.ta.mjs";
+import { type RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../CAP-datatypes/RedirectingPartyID.ta.mjs";
+import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
+import { type TimeAndTimezone, _decode_TimeAndTimezone, _encode_TimeAndTimezone } from "../CAP-datatypes/TimeAndTimezone.ta.mjs";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 // export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";

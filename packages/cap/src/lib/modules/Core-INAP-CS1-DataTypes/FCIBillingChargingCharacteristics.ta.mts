@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type FCIBillingChargingCharacteristics = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_FCIBillingChargingCharacteristics: $.ASN1Decoder<FCIBillingChargingCharacteristics> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FCIBillingChargingCharacteristics
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FCIBillingChargingCharacteristics (el: _Element): FCIBillingChargingCharacteristics {
-    if (!_cached_decoder_for_FCIBillingChargingCharacteristics) { _cached_decoder_for_FCIBillingChargingCharacteristics = $._decodeOctetString; }
-    return _cached_decoder_for_FCIBillingChargingCharacteristics(el);
-}
-
-let _cached_encoder_for_FCIBillingChargingCharacteristics: $.ASN1Encoder<FCIBillingChargingCharacteristics> | null = null;
-
-/**
- * @summary Encodes a(n) FCIBillingChargingCharacteristics into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FCIBillingChargingCharacteristics, encoded as an ASN.1 Element.
- */
-export
-function _encode_FCIBillingChargingCharacteristics (value: FCIBillingChargingCharacteristics, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FCIBillingChargingCharacteristics) { _cached_encoder_for_FCIBillingChargingCharacteristics = $._encodeOctetString; }
-    return _cached_encoder_for_FCIBillingChargingCharacteristics(value, elGetter);
-}
+export const _decode_FCIBillingChargingCharacteristics = $._decodeOctetString;
+export const _encode_FCIBillingChargingCharacteristics = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -66,6 +66,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type AssistingSSPIPRoutingAddress, _decode_AssistingSSPIPRoutingAddress, _encode_AssistingSSPIPRoutingAddress } from "../CAP-datatypes/AssistingSSPIPRoutingAddress.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../CAP-datatypes/CallSegmentID.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../CAP-datatypes/CallingPartyNumber.ta.mjs";
+import { type Carrier, _decode_Carrier, _encode_Carrier } from "../CAP-datatypes/Carrier.ta.mjs";
+import { type ChargeNumber, _decode_ChargeNumber, _encode_ChargeNumber } from "../CAP-datatypes/ChargeNumber.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../CAP-datatypes/CorrelationID.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { type NAOliInfo, _decode_NAOliInfo, _encode_NAOliInfo } from "../CAP-datatypes/NAOliInfo.ta.mjs";
+import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../CAP-datatypes/OriginalCalledPartyID.ta.mjs";
+import { type ScfID, _decode_ScfID, _encode_ScfID } from "../CAP-datatypes/ScfID.ta.mjs";
+import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 
 
 

@@ -276,35 +276,8 @@ const Notification_answeredCall: Notification = Notification.answeredCall; /* LO
  */
 export
 const answeredCall: Notification = Notification.answeredCall; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Notification: $.ASN1Decoder<Notification> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Notification
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Notification (el: _Element): Notification {
-    if (!_cached_decoder_for_Notification) { _cached_decoder_for_Notification = $._decodeEnumerated; }
-    return _cached_decoder_for_Notification(el);
-}
-
-let _cached_encoder_for_Notification: $.ASN1Encoder<Notification> | null = null;
-
-/**
- * @summary Encodes a(n) Notification into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Notification, encoded as an ASN.1 Element.
- */
-export
-function _encode_Notification (value: Notification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Notification) { _cached_encoder_for_Notification = $._encodeEnumerated; }
-    return _cached_encoder_for_Notification(value, elGetter);
-}
+export const _decode_Notification = $._decodeEnumerated;
+export const _encode_Notification = $._encodeEnumerated;
 
 
 /* eslint-enable */

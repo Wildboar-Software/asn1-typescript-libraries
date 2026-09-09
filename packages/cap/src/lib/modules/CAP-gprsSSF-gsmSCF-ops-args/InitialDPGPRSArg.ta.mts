@@ -66,6 +66,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type AccessPointName, _decode_AccessPointName, _encode_AccessPointName } from "../CAP-datatypes/AccessPointName.ta.mjs";
+import { EndUserAddress, _decode_EndUserAddress, _encode_EndUserAddress } from "../CAP-datatypes/EndUserAddress.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { GPRSEventType, _decode_GPRSEventType, _encode_GPRSEventType } from "../CAP-datatypes/GPRSEventType.ta.mjs";
+import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_LocationInformationGPRS } from "../CAP-datatypes/LocationInformationGPRS.ta.mjs";
+import { PDPInitiationType, _decode_PDPInitiationType, _encode_PDPInitiationType } from "../CAP-datatypes/PDPInitiationType.ta.mjs";
+import { QualityOfService, _decode_QualityOfService, _encode_QualityOfService } from "../CAP-datatypes/QualityOfService.ta.mjs";
+import { type SGSNCapabilities, _decode_SGSNCapabilities, _encode_SGSNCapabilities } from "../CAP-datatypes/SGSNCapabilities.ta.mjs";
+import { type TimeAndTimezone, _decode_TimeAndTimezone, _encode_TimeAndTimezone } from "../CAP-datatypes/TimeAndTimezone.ta.mjs";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 // export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";

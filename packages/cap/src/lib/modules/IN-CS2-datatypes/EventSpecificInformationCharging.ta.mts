@@ -84,35 +84,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EventSpecificInformationCharging = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_EventSpecificInformationCharging: $.ASN1Decoder<EventSpecificInformationCharging> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EventSpecificInformationCharging
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EventSpecificInformationCharging (el: _Element): EventSpecificInformationCharging {
-    if (!_cached_decoder_for_EventSpecificInformationCharging) { _cached_decoder_for_EventSpecificInformationCharging = $._decodeOctetString; }
-    return _cached_decoder_for_EventSpecificInformationCharging(el);
-}
-
-let _cached_encoder_for_EventSpecificInformationCharging: $.ASN1Encoder<EventSpecificInformationCharging> | null = null;
-
-/**
- * @summary Encodes a(n) EventSpecificInformationCharging into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EventSpecificInformationCharging, encoded as an ASN.1 Element.
- */
-export
-function _encode_EventSpecificInformationCharging (value: EventSpecificInformationCharging, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EventSpecificInformationCharging) { _cached_encoder_for_EventSpecificInformationCharging = $._encodeOctetString; }
-    return _cached_encoder_for_EventSpecificInformationCharging(value, elGetter);
-}
+export const _decode_EventSpecificInformationCharging = $._decodeOctetString;
+export const _encode_EventSpecificInformationCharging = $._encodeOctetString;
 
 
 /* eslint-enable */

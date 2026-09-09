@@ -83,7 +83,7 @@ import { id_rosObject } from "../CAP-object-identifiers/id-rosObject.va.mjs";
  * @constant
  */
 export
-const id_rosObject_gsmSRF: OBJECT_IDENTIFIER = new _OID([
+const id_rosObject_gsmSRF: OBJECT_IDENTIFIER = _OID.fromParts([
     6,
 ], id_rosObject);
 

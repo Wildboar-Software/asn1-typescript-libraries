@@ -82,6 +82,7 @@ import { nonAssistedConnectionEstablishmentPackage } from "../CAP-gsmSSF-gsmSCF-
 // export { nonAssistedConnectionEstablishmentPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/nonAssistedConnectionEstablishmentPackage.oa.mjs";
 import { timerPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/timerPackage.oa.mjs";
 // export { timerPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/timerPackage.oa.mjs";
+import { specializedResourceControlPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/specializedResourceControlPackage.oa.mjs";
 import { id_CAPAssistHandoffssfToScf } from "../CAP-object-identifiers/id-CAPAssistHandoffssfToScf.va.mjs";
 // export { id_CAPAssistHandoffssfToScf } from "../CAP-object-identifiers/id-CAPAssistHandoffssfToScf.va.mjs";
 import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT.oca.mjs";

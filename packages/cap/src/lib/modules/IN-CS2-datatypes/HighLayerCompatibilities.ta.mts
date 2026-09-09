@@ -253,35 +253,8 @@ const HighLayerCompatibilities_audioVisual: number = 11; /* LONG_NAMED_BIT */
  */
 export
 const audioVisual: number = HighLayerCompatibilities_audioVisual; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_HighLayerCompatibilities: $.ASN1Decoder<HighLayerCompatibilities> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) HighLayerCompatibilities
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_HighLayerCompatibilities (el: _Element): HighLayerCompatibilities {
-    if (!_cached_decoder_for_HighLayerCompatibilities) { _cached_decoder_for_HighLayerCompatibilities = $._decodeBitString; }
-    return _cached_decoder_for_HighLayerCompatibilities(el);
-}
-
-let _cached_encoder_for_HighLayerCompatibilities: $.ASN1Encoder<HighLayerCompatibilities> | null = null;
-
-/**
- * @summary Encodes a(n) HighLayerCompatibilities into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HighLayerCompatibilities, encoded as an ASN.1 Element.
- */
-export
-function _encode_HighLayerCompatibilities (value: HighLayerCompatibilities, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HighLayerCompatibilities) { _cached_encoder_for_HighLayerCompatibilities = $._encodeBitString; }
-    return _cached_encoder_for_HighLayerCompatibilities(value, elGetter);
-}
+export const _decode_HighLayerCompatibilities = $._decodeBitString;
+export const _encode_HighLayerCompatibilities = $._encodeBitString;
 
 
 /* eslint-enable */

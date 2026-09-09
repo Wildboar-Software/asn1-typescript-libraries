@@ -315,35 +315,8 @@ const ActivableServices_incomingCallBarring: number = 16; /* LONG_NAMED_BIT */
  */
 export
 const incomingCallBarring: number = ActivableServices_incomingCallBarring; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ActivableServices: $.ASN1Decoder<ActivableServices> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ActivableServices
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ActivableServices (el: _Element): ActivableServices {
-    if (!_cached_decoder_for_ActivableServices) { _cached_decoder_for_ActivableServices = $._decodeBitString; }
-    return _cached_decoder_for_ActivableServices(el);
-}
-
-let _cached_encoder_for_ActivableServices: $.ASN1Encoder<ActivableServices> | null = null;
-
-/**
- * @summary Encodes a(n) ActivableServices into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActivableServices, encoded as an ASN.1 Element.
- */
-export
-function _encode_ActivableServices (value: ActivableServices, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ActivableServices) { _cached_encoder_for_ActivableServices = $._encodeBitString; }
-    return _cached_encoder_for_ActivableServices(value, elGetter);
-}
+export const _decode_ActivableServices = $._decodeBitString;
+export const _encode_ActivableServices = $._encodeBitString;
 
 
 /* eslint-enable */

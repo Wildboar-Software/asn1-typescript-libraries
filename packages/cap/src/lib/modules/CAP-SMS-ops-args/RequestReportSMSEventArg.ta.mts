@@ -66,6 +66,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { SMSEvent, _decode_SMSEvent, _encode_SMSEvent } from "../CAP-datatypes/SMSEvent.ta.mjs";
 
 
 

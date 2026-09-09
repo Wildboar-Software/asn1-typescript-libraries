@@ -148,35 +148,8 @@ const InteractionStrategy_bestEffort: InteractionStrategy = InteractionStrategy.
  */
 export
 const bestEffort: InteractionStrategy = InteractionStrategy.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_InteractionStrategy: $.ASN1Decoder<InteractionStrategy> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) InteractionStrategy
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InteractionStrategy (el: _Element): InteractionStrategy {
-    if (!_cached_decoder_for_InteractionStrategy) { _cached_decoder_for_InteractionStrategy = $._decodeEnumerated; }
-    return _cached_decoder_for_InteractionStrategy(el);
-}
-
-let _cached_encoder_for_InteractionStrategy: $.ASN1Encoder<InteractionStrategy> | null = null;
-
-/**
- * @summary Encodes a(n) InteractionStrategy into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InteractionStrategy, encoded as an ASN.1 Element.
- */
-export
-function _encode_InteractionStrategy (value: InteractionStrategy, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InteractionStrategy) { _cached_encoder_for_InteractionStrategy = $._encodeEnumerated; }
-    return _cached_encoder_for_InteractionStrategy(value, elGetter);
-}
+export const _decode_InteractionStrategy = $._decodeEnumerated;
+export const _encode_InteractionStrategy = $._encodeEnumerated;
 
 
 /* eslint-enable */

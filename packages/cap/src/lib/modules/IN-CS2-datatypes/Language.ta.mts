@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Language = PrintableString; // PrintableString
-
-let _cached_decoder_for_Language: $.ASN1Decoder<Language> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Language
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Language (el: _Element): Language {
-    if (!_cached_decoder_for_Language) { _cached_decoder_for_Language = $._decodePrintableString; }
-    return _cached_decoder_for_Language(el);
-}
-
-let _cached_encoder_for_Language: $.ASN1Encoder<Language> | null = null;
-
-/**
- * @summary Encodes a(n) Language into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Language, encoded as an ASN.1 Element.
- */
-export
-function _encode_Language (value: Language, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Language) { _cached_encoder_for_Language = $._encodePrintableString; }
-    return _cached_encoder_for_Language(value, elGetter);
-}
+export const _decode_Language = $._decodePrintableString;
+export const _encode_Language = $._encodePrintableString;
 
 
 /* eslint-enable */

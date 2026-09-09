@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ForwardCallIndicators = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_ForwardCallIndicators: $.ASN1Decoder<ForwardCallIndicators> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ForwardCallIndicators
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ForwardCallIndicators (el: _Element): ForwardCallIndicators {
-    if (!_cached_decoder_for_ForwardCallIndicators) { _cached_decoder_for_ForwardCallIndicators = $._decodeOctetString; }
-    return _cached_decoder_for_ForwardCallIndicators(el);
-}
-
-let _cached_encoder_for_ForwardCallIndicators: $.ASN1Encoder<ForwardCallIndicators> | null = null;
-
-/**
- * @summary Encodes a(n) ForwardCallIndicators into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ForwardCallIndicators, encoded as an ASN.1 Element.
- */
-export
-function _encode_ForwardCallIndicators (value: ForwardCallIndicators, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ForwardCallIndicators) { _cached_encoder_for_ForwardCallIndicators = $._encodeOctetString; }
-    return _cached_encoder_for_ForwardCallIndicators(value, elGetter);
-}
+export const _decode_ForwardCallIndicators = $._decodeOctetString;
+export const _encode_ForwardCallIndicators = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -66,6 +66,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ControlType, _decode_ControlType, _encode_ControlType } from "../CAP-datatypes/ControlType.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { type GapCriteria, _decode_GapCriteria, _encode_GapCriteria } from "../CAP-datatypes/GapCriteria.ta.mjs";
+import { GapIndicators, _decode_GapIndicators, _encode_GapIndicators } from "../CAP-datatypes/GapIndicators.ta.mjs";
+import { type GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from "../CAP-datatypes/GapTreatment.ta.mjs";
 
 
 

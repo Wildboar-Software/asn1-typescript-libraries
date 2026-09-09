@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type RedirectingPartyID = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_RedirectingPartyID: $.ASN1Decoder<RedirectingPartyID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RedirectingPartyID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RedirectingPartyID (el: _Element): RedirectingPartyID {
-    if (!_cached_decoder_for_RedirectingPartyID) { _cached_decoder_for_RedirectingPartyID = $._decodeOctetString; }
-    return _cached_decoder_for_RedirectingPartyID(el);
-}
-
-let _cached_encoder_for_RedirectingPartyID: $.ASN1Encoder<RedirectingPartyID> | null = null;
-
-/**
- * @summary Encodes a(n) RedirectingPartyID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RedirectingPartyID, encoded as an ASN.1 Element.
- */
-export
-function _encode_RedirectingPartyID (value: RedirectingPartyID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RedirectingPartyID) { _cached_encoder_for_RedirectingPartyID = $._encodeOctetString; }
-    return _cached_encoder_for_RedirectingPartyID(value, elGetter);
-}
+export const _decode_RedirectingPartyID = $._decodeOctetString;
+export const _encode_RedirectingPartyID = $._encodeOctetString;
 
 
 /* eslint-enable */

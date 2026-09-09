@@ -165,35 +165,8 @@ const ForwardingCondition_any_: ForwardingCondition = ForwardingCondition.any_; 
  */
 export
 const any_: ForwardingCondition = ForwardingCondition.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ForwardingCondition: $.ASN1Decoder<ForwardingCondition> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ForwardingCondition
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ForwardingCondition (el: _Element): ForwardingCondition {
-    if (!_cached_decoder_for_ForwardingCondition) { _cached_decoder_for_ForwardingCondition = $._decodeEnumerated; }
-    return _cached_decoder_for_ForwardingCondition(el);
-}
-
-let _cached_encoder_for_ForwardingCondition: $.ASN1Encoder<ForwardingCondition> | null = null;
-
-/**
- * @summary Encodes a(n) ForwardingCondition into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ForwardingCondition, encoded as an ASN.1 Element.
- */
-export
-function _encode_ForwardingCondition (value: ForwardingCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ForwardingCondition) { _cached_encoder_for_ForwardingCondition = $._encodeEnumerated; }
-    return _cached_encoder_for_ForwardingCondition(value, elGetter);
-}
+export const _decode_ForwardingCondition = $._decodeEnumerated;
+export const _encode_ForwardingCondition = $._encodeEnumerated;
 
 
 /* eslint-enable */

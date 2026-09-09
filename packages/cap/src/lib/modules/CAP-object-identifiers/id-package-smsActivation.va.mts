@@ -83,7 +83,7 @@ import { id_package } from "../CAP-object-identifiers/id-package.va.mjs";
  * @constant
  */
 export
-const id_package_smsActivation: OBJECT_IDENTIFIER = new _OID([
+const id_package_smsActivation: OBJECT_IDENTIFIER = _OID.fromParts([
     61,
 ], id_package);
 

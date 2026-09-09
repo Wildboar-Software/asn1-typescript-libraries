@@ -165,35 +165,8 @@ const Message_fACility: Message = Message.fACility; /* LONG_NAMED_ENUMERATED_VAL
  */
 export
 const fACility: Message = Message.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Message: $.ASN1Decoder<Message> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Message
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Message (el: _Element): Message {
-    if (!_cached_decoder_for_Message) { _cached_decoder_for_Message = $._decodeEnumerated; }
-    return _cached_decoder_for_Message(el);
-}
-
-let _cached_encoder_for_Message: $.ASN1Encoder<Message> | null = null;
-
-/**
- * @summary Encodes a(n) Message into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Message, encoded as an ASN.1 Element.
- */
-export
-function _encode_Message (value: Message, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Message) { _cached_encoder_for_Message = $._encodeEnumerated; }
-    return _cached_encoder_for_Message(value, elGetter);
-}
+export const _decode_Message = $._decodeEnumerated;
+export const _encode_Message = $._encodeEnumerated;
 
 
 /* eslint-enable */

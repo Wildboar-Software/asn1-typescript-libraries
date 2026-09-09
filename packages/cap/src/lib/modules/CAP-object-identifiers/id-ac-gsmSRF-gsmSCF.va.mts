@@ -83,7 +83,7 @@ import { id_ac } from "../CAP-object-identifiers/id-ac.va.mjs";
  * @constant
  */
 export
-const id_ac_gsmSRF_gsmSCF: OBJECT_IDENTIFIER = new _OID([
+const id_ac_gsmSRF_gsmSCF: OBJECT_IDENTIFIER = _OID.fromParts([
     14,
 ], id_ac);
 

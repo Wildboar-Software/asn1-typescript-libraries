@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CSAID = INTEGER;
-
-let _cached_decoder_for_CSAID: $.ASN1Decoder<CSAID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CSAID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CSAID (el: _Element): CSAID {
-    if (!_cached_decoder_for_CSAID) { _cached_decoder_for_CSAID = $._decodeInteger; }
-    return _cached_decoder_for_CSAID(el);
-}
-
-let _cached_encoder_for_CSAID: $.ASN1Encoder<CSAID> | null = null;
-
-/**
- * @summary Encodes a(n) CSAID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CSAID, encoded as an ASN.1 Element.
- */
-export
-function _encode_CSAID (value: CSAID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CSAID) { _cached_encoder_for_CSAID = $._encodeInteger; }
-    return _cached_encoder_for_CSAID(value, elGetter);
-}
+export const _decode_CSAID = $._decodeInteger;
+export const _encode_CSAID = $._encodeInteger;
 
 
 /* eslint-enable */

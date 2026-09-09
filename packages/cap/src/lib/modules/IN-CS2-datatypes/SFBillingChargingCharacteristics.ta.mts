@@ -84,35 +84,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type SFBillingChargingCharacteristics = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_SFBillingChargingCharacteristics: $.ASN1Decoder<SFBillingChargingCharacteristics> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SFBillingChargingCharacteristics
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SFBillingChargingCharacteristics (el: _Element): SFBillingChargingCharacteristics {
-    if (!_cached_decoder_for_SFBillingChargingCharacteristics) { _cached_decoder_for_SFBillingChargingCharacteristics = $._decodeOctetString; }
-    return _cached_decoder_for_SFBillingChargingCharacteristics(el);
-}
-
-let _cached_encoder_for_SFBillingChargingCharacteristics: $.ASN1Encoder<SFBillingChargingCharacteristics> | null = null;
-
-/**
- * @summary Encodes a(n) SFBillingChargingCharacteristics into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SFBillingChargingCharacteristics, encoded as an ASN.1 Element.
- */
-export
-function _encode_SFBillingChargingCharacteristics (value: SFBillingChargingCharacteristics, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SFBillingChargingCharacteristics) { _cached_encoder_for_SFBillingChargingCharacteristics = $._encodeOctetString; }
-    return _cached_encoder_for_SFBillingChargingCharacteristics(value, elGetter);
-}
+export const _decode_SFBillingChargingCharacteristics = $._decodeOctetString;
+export const _encode_SFBillingChargingCharacteristics = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -168,35 +168,8 @@ const CGEncountered_scpOverload: CGEncountered = CGEncountered.scpOverload; /* L
  */
 export
 const scpOverload: CGEncountered = CGEncountered.scpOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_CGEncountered: $.ASN1Decoder<CGEncountered> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CGEncountered
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CGEncountered (el: _Element): CGEncountered {
-    if (!_cached_decoder_for_CGEncountered) { _cached_decoder_for_CGEncountered = $._decodeEnumerated; }
-    return _cached_decoder_for_CGEncountered(el);
-}
-
-let _cached_encoder_for_CGEncountered: $.ASN1Encoder<CGEncountered> | null = null;
-
-/**
- * @summary Encodes a(n) CGEncountered into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CGEncountered, encoded as an ASN.1 Element.
- */
-export
-function _encode_CGEncountered (value: CGEncountered, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CGEncountered) { _cached_encoder_for_CGEncountered = $._encodeEnumerated; }
-    return _cached_encoder_for_CGEncountered(value, elGetter);
-}
+export const _decode_CGEncountered = $._decodeEnumerated;
+export const _encode_CGEncountered = $._encodeEnumerated;
 
 
 /* eslint-enable */

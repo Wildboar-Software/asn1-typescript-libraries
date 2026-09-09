@@ -83,35 +83,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type GenericNumber = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_GenericNumber: $.ASN1Decoder<GenericNumber> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) GenericNumber
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_GenericNumber (el: _Element): GenericNumber {
-    if (!_cached_decoder_for_GenericNumber) { _cached_decoder_for_GenericNumber = $._decodeOctetString; }
-    return _cached_decoder_for_GenericNumber(el);
-}
-
-let _cached_encoder_for_GenericNumber: $.ASN1Encoder<GenericNumber> | null = null;
-
-/**
- * @summary Encodes a(n) GenericNumber into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GenericNumber, encoded as an ASN.1 Element.
- */
-export
-function _encode_GenericNumber (value: GenericNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GenericNumber) { _cached_encoder_for_GenericNumber = $._encodeOctetString; }
-    return _cached_encoder_for_GenericNumber(value, elGetter);
-}
+export const _decode_GenericNumber = $._decodeOctetString;
+export const _encode_GenericNumber = $._encodeOctetString;
 
 
 /* eslint-enable */

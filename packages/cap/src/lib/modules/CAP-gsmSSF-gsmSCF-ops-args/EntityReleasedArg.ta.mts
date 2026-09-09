@@ -66,6 +66,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { BCSM_Failure, _decode_BCSM_Failure, _encode_BCSM_Failure } from "../CAP-datatypes/BCSM-Failure.ta.mjs";
+import { CallSegmentFailure, _decode_CallSegmentFailure, _encode_CallSegmentFailure } from "../CAP-datatypes/CallSegmentFailure.ta.mjs";
 
 
 

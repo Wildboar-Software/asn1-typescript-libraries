@@ -148,35 +148,8 @@ const MidCallControlInfo_Item_midCallReportType_inAnyState: MidCallControlInfo_I
  */
 export
 const inAnyState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inAnyState; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MidCallControlInfo_Item_midCallReportType: $.ASN1Decoder<MidCallControlInfo_Item_midCallReportType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MidCallControlInfo_Item_midCallReportType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MidCallControlInfo_Item_midCallReportType (el: _Element): MidCallControlInfo_Item_midCallReportType {
-    if (!_cached_decoder_for_MidCallControlInfo_Item_midCallReportType) { _cached_decoder_for_MidCallControlInfo_Item_midCallReportType = $._decodeEnumerated; }
-    return _cached_decoder_for_MidCallControlInfo_Item_midCallReportType(el);
-}
-
-let _cached_encoder_for_MidCallControlInfo_Item_midCallReportType: $.ASN1Encoder<MidCallControlInfo_Item_midCallReportType> | null = null;
-
-/**
- * @summary Encodes a(n) MidCallControlInfo_Item_midCallReportType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MidCallControlInfo_Item_midCallReportType, encoded as an ASN.1 Element.
- */
-export
-function _encode_MidCallControlInfo_Item_midCallReportType (value: MidCallControlInfo_Item_midCallReportType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MidCallControlInfo_Item_midCallReportType) { _cached_encoder_for_MidCallControlInfo_Item_midCallReportType = $._encodeEnumerated; }
-    return _cached_encoder_for_MidCallControlInfo_Item_midCallReportType(value, elGetter);
-}
+export const _decode_MidCallControlInfo_Item_midCallReportType = $._decodeEnumerated;
+export const _encode_MidCallControlInfo_Item_midCallReportType = $._encodeEnumerated;
 
 
 /* eslint-enable */

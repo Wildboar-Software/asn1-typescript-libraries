@@ -83,7 +83,7 @@ import { id_as } from "../CAP-object-identifiers/id-as.va.mjs";
  * @constant
  */
 export
-const id_as_smsSSF_gsmSCF_AS: OBJECT_IDENTIFIER = new _OID([
+const id_as_smsSSF_gsmSCF_AS: OBJECT_IDENTIFIER = _OID.fromParts([
     61,
 ], id_as);
 

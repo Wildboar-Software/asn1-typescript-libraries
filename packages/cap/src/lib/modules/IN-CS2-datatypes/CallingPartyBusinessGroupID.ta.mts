@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CallingPartyBusinessGroupID = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_CallingPartyBusinessGroupID: $.ASN1Decoder<CallingPartyBusinessGroupID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CallingPartyBusinessGroupID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CallingPartyBusinessGroupID (el: _Element): CallingPartyBusinessGroupID {
-    if (!_cached_decoder_for_CallingPartyBusinessGroupID) { _cached_decoder_for_CallingPartyBusinessGroupID = $._decodeOctetString; }
-    return _cached_decoder_for_CallingPartyBusinessGroupID(el);
-}
-
-let _cached_encoder_for_CallingPartyBusinessGroupID: $.ASN1Encoder<CallingPartyBusinessGroupID> | null = null;
-
-/**
- * @summary Encodes a(n) CallingPartyBusinessGroupID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CallingPartyBusinessGroupID, encoded as an ASN.1 Element.
- */
-export
-function _encode_CallingPartyBusinessGroupID (value: CallingPartyBusinessGroupID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallingPartyBusinessGroupID) { _cached_encoder_for_CallingPartyBusinessGroupID = $._encodeOctetString; }
-    return _cached_encoder_for_CallingPartyBusinessGroupID(value, elGetter);
-}
+export const _decode_CallingPartyBusinessGroupID = $._decodeOctetString;
+export const _encode_CallingPartyBusinessGroupID = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -66,6 +66,16 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type CalledPartyBCDNumber, _decode_CalledPartyBCDNumber, _encode_CalledPartyBCDNumber } from "../CAP-datatypes/CalledPartyBCDNumber.ta.mjs";
+import { EventTypeSMS, _decode_EventTypeSMS, _encode_EventTypeSMS } from "../CAP-datatypes/EventTypeSMS.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_LocationInformationGPRS } from "../CAP-datatypes/LocationInformationGPRS.ta.mjs";
+import { type SMS_AddressString, _decode_SMS_AddressString, _encode_SMS_AddressString } from "../CAP-datatypes/SMS-AddressString.ta.mjs";
+import { type TPDataCodingScheme, _decode_TPDataCodingScheme, _encode_TPDataCodingScheme } from "../CAP-datatypes/TPDataCodingScheme.ta.mjs";
+import { type TPProtocolIdentifier, _decode_TPProtocolIdentifier, _encode_TPProtocolIdentifier } from "../CAP-datatypes/TPProtocolIdentifier.ta.mjs";
+import { type TPShortMessageSpecificInfo, _decode_TPShortMessageSpecificInfo, _encode_TPShortMessageSpecificInfo } from "../CAP-datatypes/TPShortMessageSpecificInfo.ta.mjs";
+import { type TPValidityPeriod, _decode_TPValidityPeriod, _encode_TPValidityPeriod } from "../CAP-datatypes/TPValidityPeriod.ta.mjs";
+import { type TimeAndTimezone, _decode_TimeAndTimezone, _encode_TimeAndTimezone } from "../CAP-datatypes/TimeAndTimezone.ta.mjs";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 // export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";

@@ -83,35 +83,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CallResult = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_CallResult: $.ASN1Decoder<CallResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CallResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CallResult (el: _Element): CallResult {
-    if (!_cached_decoder_for_CallResult) { _cached_decoder_for_CallResult = $._decodeOctetString; }
-    return _cached_decoder_for_CallResult(el);
-}
-
-let _cached_encoder_for_CallResult: $.ASN1Encoder<CallResult> | null = null;
-
-/**
- * @summary Encodes a(n) CallResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CallResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_CallResult (value: CallResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallResult) { _cached_encoder_for_CallResult = $._encodeOctetString; }
-    return _cached_encoder_for_CallResult(value, elGetter);
-}
+export const _decode_CallResult = $._decodeOctetString;
+export const _encode_CallResult = $._encodeOctetString;
 
 
 /* eslint-enable */

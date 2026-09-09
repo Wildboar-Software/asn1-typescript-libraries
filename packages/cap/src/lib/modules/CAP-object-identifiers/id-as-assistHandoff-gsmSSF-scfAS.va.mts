@@ -83,7 +83,7 @@ import { id_asE } from "../CAP-object-identifiers/id-asE.va.mjs";
  * @constant
  */
 export
-const id_as_assistHandoff_gsmSSF_scfAS: OBJECT_IDENTIFIER = new _OID([
+const id_as_assistHandoff_gsmSSF_scfAS: OBJECT_IDENTIFIER = _OID.fromParts([
     6,
 ], id_asE);
 

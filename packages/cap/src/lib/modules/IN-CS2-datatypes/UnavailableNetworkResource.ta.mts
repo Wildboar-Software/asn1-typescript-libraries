@@ -208,35 +208,8 @@ const UnavailableNetworkResource_endUserFailure: UnavailableNetworkResource = Un
  */
 export
 const endUserFailure: UnavailableNetworkResource = UnavailableNetworkResource.endUserFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_UnavailableNetworkResource: $.ASN1Decoder<UnavailableNetworkResource> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UnavailableNetworkResource
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UnavailableNetworkResource (el: _Element): UnavailableNetworkResource {
-    if (!_cached_decoder_for_UnavailableNetworkResource) { _cached_decoder_for_UnavailableNetworkResource = $._decodeEnumerated; }
-    return _cached_decoder_for_UnavailableNetworkResource(el);
-}
-
-let _cached_encoder_for_UnavailableNetworkResource: $.ASN1Encoder<UnavailableNetworkResource> | null = null;
-
-/**
- * @summary Encodes a(n) UnavailableNetworkResource into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UnavailableNetworkResource, encoded as an ASN.1 Element.
- */
-export
-function _encode_UnavailableNetworkResource (value: UnavailableNetworkResource, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UnavailableNetworkResource) { _cached_encoder_for_UnavailableNetworkResource = $._encodeEnumerated; }
-    return _cached_encoder_for_UnavailableNetworkResource(value, elGetter);
-}
+export const _decode_UnavailableNetworkResource = $._decodeEnumerated;
+export const _encode_UnavailableNetworkResource = $._encodeEnumerated;
 
 
 /* eslint-enable */

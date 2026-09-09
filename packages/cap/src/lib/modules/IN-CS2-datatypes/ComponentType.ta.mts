@@ -202,35 +202,8 @@ const ComponentType_rReject: ComponentType = ComponentType.rReject; /* LONG_NAME
  */
 export
 const rReject: ComponentType = ComponentType.rReject; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ComponentType: $.ASN1Decoder<ComponentType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ComponentType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ComponentType (el: _Element): ComponentType {
-    if (!_cached_decoder_for_ComponentType) { _cached_decoder_for_ComponentType = $._decodeEnumerated; }
-    return _cached_decoder_for_ComponentType(el);
-}
-
-let _cached_encoder_for_ComponentType: $.ASN1Encoder<ComponentType> | null = null;
-
-/**
- * @summary Encodes a(n) ComponentType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ComponentType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ComponentType (value: ComponentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ComponentType) { _cached_encoder_for_ComponentType = $._encodeEnumerated; }
-    return _cached_encoder_for_ComponentType(value, elGetter);
-}
+export const _decode_ComponentType = $._decodeEnumerated;
+export const _encode_ComponentType = $._encodeEnumerated;
 
 
 /* eslint-enable */

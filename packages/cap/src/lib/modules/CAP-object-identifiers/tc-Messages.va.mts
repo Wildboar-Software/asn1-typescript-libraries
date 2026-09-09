@@ -82,9 +82,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @constant
  */
 export
-const tc_Messages: OBJECT_IDENTIFIER = new _OID([
-    recommendation,
-    q,
+const tc_Messages: OBJECT_IDENTIFIER = _OID.fromParts([
+    0 /* recommendation */,
+    17 /* q */,
     773,
     /* modules */ 2,
     /* messages */ 1,

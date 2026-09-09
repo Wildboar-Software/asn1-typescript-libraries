@@ -66,6 +66,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type GPRSCause, _decode_GPRSCause, _encode_GPRSCause } from "../CAP-datatypes/GPRSCause.ta.mjs";
+import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID.ta.mjs";
 
 
 

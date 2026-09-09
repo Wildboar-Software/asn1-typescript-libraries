@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type NumberOfDigits = INTEGER;
-
-let _cached_decoder_for_NumberOfDigits: $.ASN1Decoder<NumberOfDigits> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NumberOfDigits
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NumberOfDigits (el: _Element): NumberOfDigits {
-    if (!_cached_decoder_for_NumberOfDigits) { _cached_decoder_for_NumberOfDigits = $._decodeInteger; }
-    return _cached_decoder_for_NumberOfDigits(el);
-}
-
-let _cached_encoder_for_NumberOfDigits: $.ASN1Encoder<NumberOfDigits> | null = null;
-
-/**
- * @summary Encodes a(n) NumberOfDigits into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NumberOfDigits, encoded as an ASN.1 Element.
- */
-export
-function _encode_NumberOfDigits (value: NumberOfDigits, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NumberOfDigits) { _cached_encoder_for_NumberOfDigits = $._encodeInteger; }
-    return _cached_encoder_for_NumberOfDigits(value, elGetter);
-}
+export const _decode_NumberOfDigits = $._decodeInteger;
+export const _encode_NumberOfDigits = $._encodeInteger;
 
 
 /* eslint-enable */

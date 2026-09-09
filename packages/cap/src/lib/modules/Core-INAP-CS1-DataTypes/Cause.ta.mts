@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Cause = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_Cause: $.ASN1Decoder<Cause> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Cause
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Cause (el: _Element): Cause {
-    if (!_cached_decoder_for_Cause) { _cached_decoder_for_Cause = $._decodeOctetString; }
-    return _cached_decoder_for_Cause(el);
-}
-
-let _cached_encoder_for_Cause: $.ASN1Encoder<Cause> | null = null;
-
-/**
- * @summary Encodes a(n) Cause into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Cause, encoded as an ASN.1 Element.
- */
-export
-function _encode_Cause (value: Cause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Cause) { _cached_encoder_for_Cause = $._encodeOctetString; }
-    return _cached_encoder_for_Cause(value, elGetter);
-}
+export const _decode_Cause = $._decodeOctetString;
+export const _encode_Cause = $._encodeOctetString;
 
 
 /* eslint-enable */

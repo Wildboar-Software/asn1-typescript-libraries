@@ -66,6 +66,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type LegOrCallSegment, _decode_LegOrCallSegment, _encode_LegOrCallSegment } from "../CAP-datatypes/LegOrCallSegment.ta.mjs";
 
 
 

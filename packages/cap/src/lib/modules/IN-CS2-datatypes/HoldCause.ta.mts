@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type HoldCause = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_HoldCause: $.ASN1Decoder<HoldCause> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) HoldCause
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_HoldCause (el: _Element): HoldCause {
-    if (!_cached_decoder_for_HoldCause) { _cached_decoder_for_HoldCause = $._decodeOctetString; }
-    return _cached_decoder_for_HoldCause(el);
-}
-
-let _cached_encoder_for_HoldCause: $.ASN1Encoder<HoldCause> | null = null;
-
-/**
- * @summary Encodes a(n) HoldCause into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HoldCause, encoded as an ASN.1 Element.
- */
-export
-function _encode_HoldCause (value: HoldCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HoldCause) { _cached_encoder_for_HoldCause = $._encodeOctetString; }
-    return _cached_encoder_for_HoldCause(value, elGetter);
-}
+export const _decode_HoldCause = $._decodeOctetString;
+export const _encode_HoldCause = $._encodeOctetString;
 
 
 /* eslint-enable */

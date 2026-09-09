@@ -66,6 +66,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type ChargingResult, _decode_ChargingResult, _encode_ChargingResult } from "../CAP-datatypes/ChargingResult.ta.mjs";
+import { type ChargingRollOver, _decode_ChargingRollOver, _encode_ChargingRollOver } from "../CAP-datatypes/ChargingRollOver.ta.mjs";
+import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID.ta.mjs";
+import { QualityOfService, _decode_QualityOfService, _encode_QualityOfService } from "../CAP-datatypes/QualityOfService.ta.mjs";
 
 
 

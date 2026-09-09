@@ -83,7 +83,7 @@ import { id_CAP } from "../CAP-object-identifiers/id-CAP.va.mjs";
  * @constant
  */
 export
-const id_contract: OBJECT_IDENTIFIER = new _OID([
+const id_contract: OBJECT_IDENTIFIER = _OID.fromParts([
     /* contract */ 26,
 ], id_CAP);
 

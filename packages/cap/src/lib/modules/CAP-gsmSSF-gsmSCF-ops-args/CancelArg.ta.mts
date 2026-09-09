@@ -66,6 +66,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { CallSegmentToCancel, _decode_CallSegmentToCancel, _encode_CallSegmentToCancel } from "../CAP-datatypes/CallSegmentToCancel.ta.mjs";
+import { type InvokeID, _decode_InvokeID, _encode_InvokeID } from "../CAP-datatypes/InvokeID.ta.mjs";
 
 
 

@@ -168,35 +168,8 @@ const ReceivedStatus_messageTimeOut: ReceivedStatus = ReceivedStatus.messageTime
  */
 export
 const messageTimeOut: ReceivedStatus = ReceivedStatus.messageTimeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ReceivedStatus: $.ASN1Decoder<ReceivedStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReceivedStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReceivedStatus (el: _Element): ReceivedStatus {
-    if (!_cached_decoder_for_ReceivedStatus) { _cached_decoder_for_ReceivedStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_ReceivedStatus(el);
-}
-
-let _cached_encoder_for_ReceivedStatus: $.ASN1Encoder<ReceivedStatus> | null = null;
-
-/**
- * @summary Encodes a(n) ReceivedStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReceivedStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReceivedStatus (value: ReceivedStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReceivedStatus) { _cached_encoder_for_ReceivedStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_ReceivedStatus(value, elGetter);
-}
+export const _decode_ReceivedStatus = $._decodeEnumerated;
+export const _encode_ReceivedStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

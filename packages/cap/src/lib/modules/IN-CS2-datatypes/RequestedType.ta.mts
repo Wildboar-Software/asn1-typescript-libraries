@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type RequestedType = INTEGER;
-
-let _cached_decoder_for_RequestedType: $.ASN1Decoder<RequestedType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RequestedType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RequestedType (el: _Element): RequestedType {
-    if (!_cached_decoder_for_RequestedType) { _cached_decoder_for_RequestedType = $._decodeInteger; }
-    return _cached_decoder_for_RequestedType(el);
-}
-
-let _cached_encoder_for_RequestedType: $.ASN1Encoder<RequestedType> | null = null;
-
-/**
- * @summary Encodes a(n) RequestedType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RequestedType, encoded as an ASN.1 Element.
- */
-export
-function _encode_RequestedType (value: RequestedType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestedType) { _cached_encoder_for_RequestedType = $._encodeInteger; }
-    return _cached_encoder_for_RequestedType(value, elGetter);
-}
+export const _decode_RequestedType = $._decodeInteger;
+export const _encode_RequestedType = $._encodeInteger;
 
 
 /* eslint-enable */

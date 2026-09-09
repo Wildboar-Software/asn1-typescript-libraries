@@ -66,6 +66,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { type SCIBillingChargingCharacteristics, _decode_SCIBillingChargingCharacteristics, _encode_SCIBillingChargingCharacteristics } from "../CAP-datatypes/SCIBillingChargingCharacteristics.ta.mjs";
+import { type SendingSideID, _decode_SendingSideID, _encode_SendingSideID } from "../CAP-datatypes/SendingSideID.ta.mjs";
 
 
 

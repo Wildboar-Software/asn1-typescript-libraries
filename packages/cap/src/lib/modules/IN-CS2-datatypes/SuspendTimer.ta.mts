@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type SuspendTimer = INTEGER;
-
-let _cached_decoder_for_SuspendTimer: $.ASN1Decoder<SuspendTimer> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SuspendTimer
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SuspendTimer (el: _Element): SuspendTimer {
-    if (!_cached_decoder_for_SuspendTimer) { _cached_decoder_for_SuspendTimer = $._decodeInteger; }
-    return _cached_decoder_for_SuspendTimer(el);
-}
-
-let _cached_encoder_for_SuspendTimer: $.ASN1Encoder<SuspendTimer> | null = null;
-
-/**
- * @summary Encodes a(n) SuspendTimer into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SuspendTimer, encoded as an ASN.1 Element.
- */
-export
-function _encode_SuspendTimer (value: SuspendTimer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SuspendTimer) { _cached_encoder_for_SuspendTimer = $._encodeInteger; }
-    return _cached_encoder_for_SuspendTimer(value, elGetter);
-}
+export const _decode_SuspendTimer = $._decodeInteger;
+export const _encode_SuspendTimer = $._encodeInteger;
 
 
 /* eslint-enable */

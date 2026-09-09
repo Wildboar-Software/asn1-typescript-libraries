@@ -66,6 +66,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../CAP-datatypes/CorrelationID.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../CAP-datatypes/IPSSPCapabilities.ta.mjs";
 
 
 

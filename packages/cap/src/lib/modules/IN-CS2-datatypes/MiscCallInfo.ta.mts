@@ -102,7 +102,7 @@ class MiscCallInfo {
          * @public
          * @readonly
          */
-        readonly dpAssignment: OPTIONAL<MiscCallInfo_dpAssignment>
+        readonly dpAssignment?: OPTIONAL<MiscCallInfo_dpAssignment>
     ) {}
 
     /**

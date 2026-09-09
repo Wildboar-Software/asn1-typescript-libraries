@@ -104,6 +104,7 @@ import { timerPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/timerPacka
 // export { timerPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/timerPackage.oa.mjs";
 import { exceptionInformPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/exceptionInformPackage.oa.mjs";
 // export { exceptionInformPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/exceptionInformPackage.oa.mjs";
+import { specializedResourceControlPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/specializedResourceControlPackage.oa.mjs";
 import { id_CAPScfToSsfGeneric } from "../CAP-object-identifiers/id-CAPScfToSsfGeneric.va.mjs";
 // export { id_CAPScfToSsfGeneric } from "../CAP-object-identifiers/id-CAPScfToSsfGeneric.va.mjs";
 import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT.oca.mjs";

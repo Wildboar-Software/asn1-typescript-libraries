@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Duration = INTEGER;
-
-let _cached_decoder_for_Duration: $.ASN1Decoder<Duration> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Duration
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Duration (el: _Element): Duration {
-    if (!_cached_decoder_for_Duration) { _cached_decoder_for_Duration = $._decodeInteger; }
-    return _cached_decoder_for_Duration(el);
-}
-
-let _cached_encoder_for_Duration: $.ASN1Encoder<Duration> | null = null;
-
-/**
- * @summary Encodes a(n) Duration into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Duration, encoded as an ASN.1 Element.
- */
-export
-function _encode_Duration (value: Duration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Duration) { _cached_encoder_for_Duration = $._encodeInteger; }
-    return _cached_encoder_for_Duration(value, elGetter);
-}
+export const _decode_Duration = $._decodeInteger;
+export const _encode_Duration = $._encodeInteger;
 
 
 /* eslint-enable */

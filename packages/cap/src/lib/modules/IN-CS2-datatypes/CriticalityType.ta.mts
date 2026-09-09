@@ -148,35 +148,8 @@ const CriticalityType_abort: CriticalityType = CriticalityType.abort; /* LONG_NA
  */
 export
 const abort: CriticalityType = CriticalityType.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_CriticalityType: $.ASN1Decoder<CriticalityType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CriticalityType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CriticalityType (el: _Element): CriticalityType {
-    if (!_cached_decoder_for_CriticalityType) { _cached_decoder_for_CriticalityType = $._decodeEnumerated; }
-    return _cached_decoder_for_CriticalityType(el);
-}
-
-let _cached_encoder_for_CriticalityType: $.ASN1Encoder<CriticalityType> | null = null;
-
-/**
- * @summary Encodes a(n) CriticalityType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CriticalityType, encoded as an ASN.1 Element.
- */
-export
-function _encode_CriticalityType (value: CriticalityType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CriticalityType) { _cached_encoder_for_CriticalityType = $._encodeEnumerated; }
-    return _cached_encoder_for_CriticalityType(value, elGetter);
-}
+export const _decode_CriticalityType = $._decodeEnumerated;
+export const _encode_CriticalityType = $._encodeEnumerated;
 
 
 /* eslint-enable */

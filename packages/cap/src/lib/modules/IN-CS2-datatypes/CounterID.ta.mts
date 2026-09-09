@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CounterID = INTEGER;
-
-let _cached_decoder_for_CounterID: $.ASN1Decoder<CounterID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CounterID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CounterID (el: _Element): CounterID {
-    if (!_cached_decoder_for_CounterID) { _cached_decoder_for_CounterID = $._decodeInteger; }
-    return _cached_decoder_for_CounterID(el);
-}
-
-let _cached_encoder_for_CounterID: $.ASN1Encoder<CounterID> | null = null;
-
-/**
- * @summary Encodes a(n) CounterID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CounterID, encoded as an ASN.1 Element.
- */
-export
-function _encode_CounterID (value: CounterID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CounterID) { _cached_encoder_for_CounterID = $._encodeInteger; }
-    return _cached_encoder_for_CounterID(value, elGetter);
-}
+export const _decode_CounterID = $._decodeInteger;
+export const _encode_CounterID = $._encodeInteger;
 
 
 /* eslint-enable */

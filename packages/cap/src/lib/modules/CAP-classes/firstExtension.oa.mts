@@ -102,7 +102,7 @@ const firstExtension: EXTENSION<NULL> = {
         "&ExtensionType": $._encodeNull,
     },
     "&criticality": ignore /* OBJECT_FIELD_SETTING */,
-    "&id": { global: new _OID([/* itu-t */ 0, /* identified-organization */ 4, /* organisation */ 0, /* gsm */ 1, /* capextension */ 2,]) } /* OBJECT_FIELD_SETTING */,
+    "&id": { global: _OID.fromParts([/* itu-t */ 0, /* identified-organization */ 4, /* organisation */ 0, /* gsm */ 1, /* capextension */ 2,]) } /* OBJECT_FIELD_SETTING */,
     "&ExtensionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
 

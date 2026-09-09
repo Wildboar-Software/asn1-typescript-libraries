@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CurrencyID = PrintableString; // PrintableString
-
-let _cached_decoder_for_CurrencyID: $.ASN1Decoder<CurrencyID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CurrencyID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CurrencyID (el: _Element): CurrencyID {
-    if (!_cached_decoder_for_CurrencyID) { _cached_decoder_for_CurrencyID = $._decodePrintableString; }
-    return _cached_decoder_for_CurrencyID(el);
-}
-
-let _cached_encoder_for_CurrencyID: $.ASN1Encoder<CurrencyID> | null = null;
-
-/**
- * @summary Encodes a(n) CurrencyID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CurrencyID, encoded as an ASN.1 Element.
- */
-export
-function _encode_CurrencyID (value: CurrencyID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CurrencyID) { _cached_encoder_for_CurrencyID = $._encodePrintableString; }
-    return _cached_encoder_for_CurrencyID(value, elGetter);
-}
+export const _decode_CurrencyID = $._decodePrintableString;
+export const _encode_CurrencyID = $._encodePrintableString;
 
 
 /* eslint-enable */

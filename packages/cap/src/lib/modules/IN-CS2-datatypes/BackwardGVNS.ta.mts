@@ -83,35 +83,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type BackwardGVNS = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_BackwardGVNS: $.ASN1Decoder<BackwardGVNS> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) BackwardGVNS
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_BackwardGVNS (el: _Element): BackwardGVNS {
-    if (!_cached_decoder_for_BackwardGVNS) { _cached_decoder_for_BackwardGVNS = $._decodeOctetString; }
-    return _cached_decoder_for_BackwardGVNS(el);
-}
-
-let _cached_encoder_for_BackwardGVNS: $.ASN1Encoder<BackwardGVNS> | null = null;
-
-/**
- * @summary Encodes a(n) BackwardGVNS into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BackwardGVNS, encoded as an ASN.1 Element.
- */
-export
-function _encode_BackwardGVNS (value: BackwardGVNS, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BackwardGVNS) { _cached_encoder_for_BackwardGVNS = $._encodeOctetString; }
-    return _cached_encoder_for_BackwardGVNS(value, elGetter);
-}
+export const _decode_BackwardGVNS = $._decodeOctetString;
+export const _encode_BackwardGVNS = $._encodeOctetString;
 
 
 /* eslint-enable */

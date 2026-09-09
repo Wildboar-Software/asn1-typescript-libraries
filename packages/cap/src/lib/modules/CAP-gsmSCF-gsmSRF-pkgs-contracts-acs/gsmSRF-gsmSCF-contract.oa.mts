@@ -72,6 +72,7 @@ import { cAPSpecificBoundSet } from "../CAP-classes/cAPSpecificBoundSet.oa.mjs";
 // export { cAPSpecificBoundSet } from "../CAP-classes/cAPSpecificBoundSet.oa.mjs";
 import { specializedResourceControlPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/specializedResourceControlPackage.oa.mjs";
 // export { specializedResourceControlPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/specializedResourceControlPackage.oa.mjs";
+import { gsmSRF_scfActivationOfAssistPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/gsmSRF-scfActivationOfAssistPackage.oa.mjs";
 import { activityTestPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/activityTestPackage.oa.mjs";
 // export { activityTestPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/activityTestPackage.oa.mjs";
 import { gsmSRF_scfCancelPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/gsmSRF-scfCancelPackage.oa.mjs";

@@ -217,35 +217,8 @@ const RequestedInformationType_releaseCause: RequestedInformationType = Requeste
  */
 export
 const releaseCause: RequestedInformationType = RequestedInformationType.releaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_RequestedInformationType: $.ASN1Decoder<RequestedInformationType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RequestedInformationType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RequestedInformationType (el: _Element): RequestedInformationType {
-    if (!_cached_decoder_for_RequestedInformationType) { _cached_decoder_for_RequestedInformationType = $._decodeEnumerated; }
-    return _cached_decoder_for_RequestedInformationType(el);
-}
-
-let _cached_encoder_for_RequestedInformationType: $.ASN1Encoder<RequestedInformationType> | null = null;
-
-/**
- * @summary Encodes a(n) RequestedInformationType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RequestedInformationType, encoded as an ASN.1 Element.
- */
-export
-function _encode_RequestedInformationType (value: RequestedInformationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestedInformationType) { _cached_encoder_for_RequestedInformationType = $._encodeEnumerated; }
-    return _cached_encoder_for_RequestedInformationType(value, elGetter);
-}
+export const _decode_RequestedInformationType = $._decodeEnumerated;
+export const _encode_RequestedInformationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

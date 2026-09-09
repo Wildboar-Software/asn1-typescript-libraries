@@ -83,7 +83,7 @@ import { id_package } from "../CAP-object-identifiers/id-package.va.mjs";
  * @constant
  */
 export
-const id_package_playTone: OBJECT_IDENTIFIER = new _OID([
+const id_package_playTone: OBJECT_IDENTIFIER = _OID.fromParts([
     39,
 ], id_package);
 

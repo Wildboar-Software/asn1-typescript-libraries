@@ -123,35 +123,8 @@ const UserInteractionModes_display: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const display: number = UserInteractionModes_display; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_UserInteractionModes: $.ASN1Decoder<UserInteractionModes> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UserInteractionModes
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UserInteractionModes (el: _Element): UserInteractionModes {
-    if (!_cached_decoder_for_UserInteractionModes) { _cached_decoder_for_UserInteractionModes = $._decodeBitString; }
-    return _cached_decoder_for_UserInteractionModes(el);
-}
-
-let _cached_encoder_for_UserInteractionModes: $.ASN1Encoder<UserInteractionModes> | null = null;
-
-/**
- * @summary Encodes a(n) UserInteractionModes into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UserInteractionModes, encoded as an ASN.1 Element.
- */
-export
-function _encode_UserInteractionModes (value: UserInteractionModes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserInteractionModes) { _cached_encoder_for_UserInteractionModes = $._encodeBitString; }
-    return _cached_encoder_for_UserInteractionModes(value, elGetter);
-}
+export const _decode_UserInteractionModes = $._decodeBitString;
+export const _encode_UserInteractionModes = $._encodeBitString;
 
 
 /* eslint-enable */

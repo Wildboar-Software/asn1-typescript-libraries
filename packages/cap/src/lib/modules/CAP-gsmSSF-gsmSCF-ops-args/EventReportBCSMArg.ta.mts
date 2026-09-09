@@ -66,6 +66,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type EventSpecificInformationBCSM, _decode_EventSpecificInformationBCSM, _encode_EventSpecificInformationBCSM } from "../CAP-datatypes/EventSpecificInformationBCSM.ta.mjs";
+import { EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../CAP-datatypes/EventTypeBCSM.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { type ReceivingSideID, _decode_ReceivingSideID, _encode_ReceivingSideID } from "../CAP-datatypes/ReceivingSideID.ta.mjs";
 import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-CS2-datatypes/MiscCallInfo.ta.mjs";
 // export { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-CS2-datatypes/MiscCallInfo.ta.mjs";
 

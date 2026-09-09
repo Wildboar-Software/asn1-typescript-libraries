@@ -151,35 +151,8 @@ const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUS
  */
 export
 const associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EventTypeBCUSM: $.ASN1Decoder<EventTypeBCUSM> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EventTypeBCUSM
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EventTypeBCUSM (el: _Element): EventTypeBCUSM {
-    if (!_cached_decoder_for_EventTypeBCUSM) { _cached_decoder_for_EventTypeBCUSM = $._decodeEnumerated; }
-    return _cached_decoder_for_EventTypeBCUSM(el);
-}
-
-let _cached_encoder_for_EventTypeBCUSM: $.ASN1Encoder<EventTypeBCUSM> | null = null;
-
-/**
- * @summary Encodes a(n) EventTypeBCUSM into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EventTypeBCUSM, encoded as an ASN.1 Element.
- */
-export
-function _encode_EventTypeBCUSM (value: EventTypeBCUSM, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EventTypeBCUSM) { _cached_encoder_for_EventTypeBCUSM = $._encodeEnumerated; }
-    return _cached_encoder_for_EventTypeBCUSM(value, elGetter);
-}
+export const _decode_EventTypeBCUSM = $._decodeEnumerated;
+export const _encode_EventTypeBCUSM = $._encodeEnumerated;
 
 
 /* eslint-enable */

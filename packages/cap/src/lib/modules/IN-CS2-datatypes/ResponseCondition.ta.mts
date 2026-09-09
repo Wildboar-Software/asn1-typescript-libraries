@@ -157,35 +157,8 @@ const ResponseCondition_lastResponse: ResponseCondition = ResponseCondition.last
  */
 export
 const lastResponse: ResponseCondition = ResponseCondition.lastResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ResponseCondition: $.ASN1Decoder<ResponseCondition> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ResponseCondition
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ResponseCondition (el: _Element): ResponseCondition {
-    if (!_cached_decoder_for_ResponseCondition) { _cached_decoder_for_ResponseCondition = $._decodeEnumerated; }
-    return _cached_decoder_for_ResponseCondition(el);
-}
-
-let _cached_encoder_for_ResponseCondition: $.ASN1Encoder<ResponseCondition> | null = null;
-
-/**
- * @summary Encodes a(n) ResponseCondition into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResponseCondition, encoded as an ASN.1 Element.
- */
-export
-function _encode_ResponseCondition (value: ResponseCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResponseCondition) { _cached_encoder_for_ResponseCondition = $._encodeEnumerated; }
-    return _cached_encoder_for_ResponseCondition(value, elGetter);
-}
+export const _decode_ResponseCondition = $._decodeEnumerated;
+export const _encode_ResponseCondition = $._encodeEnumerated;
 
 
 /* eslint-enable */

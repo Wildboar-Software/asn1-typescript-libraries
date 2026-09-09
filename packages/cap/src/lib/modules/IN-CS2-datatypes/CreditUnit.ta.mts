@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CreditUnit = INTEGER;
-
-let _cached_decoder_for_CreditUnit: $.ASN1Decoder<CreditUnit> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CreditUnit
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CreditUnit (el: _Element): CreditUnit {
-    if (!_cached_decoder_for_CreditUnit) { _cached_decoder_for_CreditUnit = $._decodeInteger; }
-    return _cached_decoder_for_CreditUnit(el);
-}
-
-let _cached_encoder_for_CreditUnit: $.ASN1Encoder<CreditUnit> | null = null;
-
-/**
- * @summary Encodes a(n) CreditUnit into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CreditUnit, encoded as an ASN.1 Element.
- */
-export
-function _encode_CreditUnit (value: CreditUnit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CreditUnit) { _cached_encoder_for_CreditUnit = $._encodeInteger; }
-    return _cached_encoder_for_CreditUnit(value, elGetter);
-}
+export const _decode_CreditUnit = $._decodeInteger;
+export const _encode_CreditUnit = $._encodeInteger;
 
 
 /* eslint-enable */

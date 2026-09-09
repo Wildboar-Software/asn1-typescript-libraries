@@ -83,6 +83,6 @@ import * as $ from "@wildboar/asn1/functional";
  * @constant
  */
 export
-const minAChBillingChargingLength: INTEGER = maxAChBillingChargingLength;
+const minAChBillingChargingLength: INTEGER = 5;
 
 /* eslint-enable */

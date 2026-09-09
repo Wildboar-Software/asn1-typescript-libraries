@@ -245,35 +245,8 @@ const InvokableService_callCompletionOnBusySubscriber: InvokableService = Invoka
  */
 export
 const callCompletionOnBusySubscriber: InvokableService = InvokableService.callCompletionOnBusySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_InvokableService: $.ASN1Decoder<InvokableService> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) InvokableService
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InvokableService (el: _Element): InvokableService {
-    if (!_cached_decoder_for_InvokableService) { _cached_decoder_for_InvokableService = $._decodeEnumerated; }
-    return _cached_decoder_for_InvokableService(el);
-}
-
-let _cached_encoder_for_InvokableService: $.ASN1Encoder<InvokableService> | null = null;
-
-/**
- * @summary Encodes a(n) InvokableService into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InvokableService, encoded as an ASN.1 Element.
- */
-export
-function _encode_InvokableService (value: InvokableService, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InvokableService) { _cached_encoder_for_InvokableService = $._encodeEnumerated; }
-    return _cached_encoder_for_InvokableService(value, elGetter);
-}
+export const _decode_InvokableService = $._decodeEnumerated;
+export const _encode_InvokableService = $._encodeEnumerated;
 
 
 /* eslint-enable */

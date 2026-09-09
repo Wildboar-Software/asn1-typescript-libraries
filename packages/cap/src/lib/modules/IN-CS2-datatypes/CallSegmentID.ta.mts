@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CallSegmentID = INTEGER;
-
-let _cached_decoder_for_CallSegmentID: $.ASN1Decoder<CallSegmentID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CallSegmentID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CallSegmentID (el: _Element): CallSegmentID {
-    if (!_cached_decoder_for_CallSegmentID) { _cached_decoder_for_CallSegmentID = $._decodeInteger; }
-    return _cached_decoder_for_CallSegmentID(el);
-}
-
-let _cached_encoder_for_CallSegmentID: $.ASN1Encoder<CallSegmentID> | null = null;
-
-/**
- * @summary Encodes a(n) CallSegmentID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CallSegmentID, encoded as an ASN.1 Element.
- */
-export
-function _encode_CallSegmentID (value: CallSegmentID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallSegmentID) { _cached_encoder_for_CallSegmentID = $._encodeInteger; }
-    return _cached_encoder_for_CallSegmentID(value, elGetter);
-}
+export const _decode_CallSegmentID = $._decodeInteger;
+export const _encode_CallSegmentID = $._encodeInteger;
 
 
 /* eslint-enable */

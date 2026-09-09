@@ -148,35 +148,8 @@ const requestedInfoError_ParameterType_requestedInfoNotAvailable: requestedInfoE
  */
 export
 const requestedInfoNotAvailable: requestedInfoError_ParameterType = requestedInfoError_ParameterType.requestedInfoNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_requestedInfoError_ParameterType: $.ASN1Decoder<requestedInfoError_ParameterType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) requestedInfoError_ParameterType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_requestedInfoError_ParameterType (el: _Element): requestedInfoError_ParameterType {
-    if (!_cached_decoder_for_requestedInfoError_ParameterType) { _cached_decoder_for_requestedInfoError_ParameterType = $._decodeEnumerated; }
-    return _cached_decoder_for_requestedInfoError_ParameterType(el);
-}
-
-let _cached_encoder_for_requestedInfoError_ParameterType: $.ASN1Encoder<requestedInfoError_ParameterType> | null = null;
-
-/**
- * @summary Encodes a(n) requestedInfoError_ParameterType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The requestedInfoError_ParameterType, encoded as an ASN.1 Element.
- */
-export
-function _encode_requestedInfoError_ParameterType (value: requestedInfoError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_requestedInfoError_ParameterType) { _cached_encoder_for_requestedInfoError_ParameterType = $._encodeEnumerated; }
-    return _cached_encoder_for_requestedInfoError_ParameterType(value, elGetter);
-}
+export const _decode_requestedInfoError_ParameterType = $._decodeEnumerated;
+export const _encode_requestedInfoError_ParameterType = $._encodeEnumerated;
 
 
 /* eslint-enable */

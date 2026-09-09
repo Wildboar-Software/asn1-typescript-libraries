@@ -84,35 +84,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AChBillingChargingCharacteristics = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_AChBillingChargingCharacteristics: $.ASN1Decoder<AChBillingChargingCharacteristics> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AChBillingChargingCharacteristics
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AChBillingChargingCharacteristics (el: _Element): AChBillingChargingCharacteristics {
-    if (!_cached_decoder_for_AChBillingChargingCharacteristics) { _cached_decoder_for_AChBillingChargingCharacteristics = $._decodeOctetString; }
-    return _cached_decoder_for_AChBillingChargingCharacteristics(el);
-}
-
-let _cached_encoder_for_AChBillingChargingCharacteristics: $.ASN1Encoder<AChBillingChargingCharacteristics> | null = null;
-
-/**
- * @summary Encodes a(n) AChBillingChargingCharacteristics into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AChBillingChargingCharacteristics, encoded as an ASN.1 Element.
- */
-export
-function _encode_AChBillingChargingCharacteristics (value: AChBillingChargingCharacteristics, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AChBillingChargingCharacteristics) { _cached_encoder_for_AChBillingChargingCharacteristics = $._encodeOctetString; }
-    return _cached_encoder_for_AChBillingChargingCharacteristics(value, elGetter);
-}
+export const _decode_AChBillingChargingCharacteristics = $._decodeOctetString;
+export const _encode_AChBillingChargingCharacteristics = $._encodeOctetString;
 
 
 /* eslint-enable */

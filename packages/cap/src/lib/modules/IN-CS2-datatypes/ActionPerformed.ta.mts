@@ -222,35 +222,8 @@ const ActionPerformed_isInactive: ActionPerformed = ActionPerformed.isInactive; 
  */
 export
 const isInactive: ActionPerformed = ActionPerformed.isInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ActionPerformed: $.ASN1Decoder<ActionPerformed> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ActionPerformed
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ActionPerformed (el: _Element): ActionPerformed {
-    if (!_cached_decoder_for_ActionPerformed) { _cached_decoder_for_ActionPerformed = $._decodeEnumerated; }
-    return _cached_decoder_for_ActionPerformed(el);
-}
-
-let _cached_encoder_for_ActionPerformed: $.ASN1Encoder<ActionPerformed> | null = null;
-
-/**
- * @summary Encodes a(n) ActionPerformed into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActionPerformed, encoded as an ASN.1 Element.
- */
-export
-function _encode_ActionPerformed (value: ActionPerformed, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ActionPerformed) { _cached_encoder_for_ActionPerformed = $._encodeEnumerated; }
-    return _cached_encoder_for_ActionPerformed(value, elGetter);
-}
+export const _decode_ActionPerformed = $._decodeEnumerated;
+export const _encode_ActionPerformed = $._encodeEnumerated;
 
 
 /* eslint-enable */

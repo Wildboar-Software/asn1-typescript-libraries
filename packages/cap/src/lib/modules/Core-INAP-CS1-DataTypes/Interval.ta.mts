@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Interval = INTEGER;
-
-let _cached_decoder_for_Interval: $.ASN1Decoder<Interval> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Interval
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Interval (el: _Element): Interval {
-    if (!_cached_decoder_for_Interval) { _cached_decoder_for_Interval = $._decodeInteger; }
-    return _cached_decoder_for_Interval(el);
-}
-
-let _cached_encoder_for_Interval: $.ASN1Encoder<Interval> | null = null;
-
-/**
- * @summary Encodes a(n) Interval into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Interval, encoded as an ASN.1 Element.
- */
-export
-function _encode_Interval (value: Interval, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Interval) { _cached_encoder_for_Interval = $._encodeInteger; }
-    return _cached_encoder_for_Interval(value, elGetter);
-}
+export const _decode_Interval = $._decodeInteger;
+export const _encode_Interval = $._encodeInteger;
 
 
 /* eslint-enable */

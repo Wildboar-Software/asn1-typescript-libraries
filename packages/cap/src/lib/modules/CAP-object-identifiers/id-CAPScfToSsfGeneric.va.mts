@@ -83,7 +83,7 @@ import { id_contractE } from "../CAP-object-identifiers/id-contractE.va.mjs";
  * @constant
  */
 export
-const id_CAPScfToSsfGeneric: OBJECT_IDENTIFIER = new _OID([
+const id_CAPScfToSsfGeneric: OBJECT_IDENTIFIER = _OID.fromParts([
     6,
 ], id_contractE);
 

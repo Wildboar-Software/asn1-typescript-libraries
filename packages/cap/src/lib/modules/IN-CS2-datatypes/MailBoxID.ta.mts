@@ -83,35 +83,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type MailBoxID = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_MailBoxID: $.ASN1Decoder<MailBoxID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MailBoxID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MailBoxID (el: _Element): MailBoxID {
-    if (!_cached_decoder_for_MailBoxID) { _cached_decoder_for_MailBoxID = $._decodeOctetString; }
-    return _cached_decoder_for_MailBoxID(el);
-}
-
-let _cached_encoder_for_MailBoxID: $.ASN1Encoder<MailBoxID> | null = null;
-
-/**
- * @summary Encodes a(n) MailBoxID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MailBoxID, encoded as an ASN.1 Element.
- */
-export
-function _encode_MailBoxID (value: MailBoxID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MailBoxID) { _cached_encoder_for_MailBoxID = $._encodeOctetString; }
-    return _cached_encoder_for_MailBoxID(value, elGetter);
-}
+export const _decode_MailBoxID = $._decodeOctetString;
+export const _encode_MailBoxID = $._encodeOctetString;
 
 
 /* eslint-enable */

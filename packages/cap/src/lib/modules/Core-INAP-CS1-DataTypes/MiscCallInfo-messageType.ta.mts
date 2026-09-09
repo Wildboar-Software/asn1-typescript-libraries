@@ -148,35 +148,8 @@ const MiscCallInfo_messageType_notification: MiscCallInfo_messageType = MiscCall
  */
 export
 const notification: MiscCallInfo_messageType = MiscCallInfo_messageType.notification; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MiscCallInfo_messageType: $.ASN1Decoder<MiscCallInfo_messageType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MiscCallInfo_messageType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MiscCallInfo_messageType (el: _Element): MiscCallInfo_messageType {
-    if (!_cached_decoder_for_MiscCallInfo_messageType) { _cached_decoder_for_MiscCallInfo_messageType = $._decodeEnumerated; }
-    return _cached_decoder_for_MiscCallInfo_messageType(el);
-}
-
-let _cached_encoder_for_MiscCallInfo_messageType: $.ASN1Encoder<MiscCallInfo_messageType> | null = null;
-
-/**
- * @summary Encodes a(n) MiscCallInfo_messageType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MiscCallInfo_messageType, encoded as an ASN.1 Element.
- */
-export
-function _encode_MiscCallInfo_messageType (value: MiscCallInfo_messageType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MiscCallInfo_messageType) { _cached_encoder_for_MiscCallInfo_messageType = $._encodeEnumerated; }
-    return _cached_encoder_for_MiscCallInfo_messageType(value, elGetter);
-}
+export const _decode_MiscCallInfo_messageType = $._decodeEnumerated;
+export const _encode_MiscCallInfo_messageType = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -110,6 +110,7 @@ import { trafficManagementPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-ac
 // export { trafficManagementPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/trafficManagementPackage.oa.mjs";
 import { scfCallInitiationPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/scfCallInitiationPackage.oa.mjs";
 // export { scfCallInitiationPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/scfCallInitiationPackage.oa.mjs";
+import { specializedResourceControlPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/specializedResourceControlPackage.oa.mjs";
 import { id_CAPSsfToScfGeneric } from "../CAP-object-identifiers/id-CAPSsfToScfGeneric.va.mjs";
 // export { id_CAPSsfToScfGeneric } from "../CAP-object-identifiers/id-CAPSsfToScfGeneric.va.mjs";
 import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT.oca.mjs";

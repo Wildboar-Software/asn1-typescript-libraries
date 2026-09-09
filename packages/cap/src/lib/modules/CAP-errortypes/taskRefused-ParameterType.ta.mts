@@ -165,35 +165,8 @@ const taskRefused_ParameterType_congestion: taskRefused_ParameterType = taskRefu
  */
 export
 const congestion: taskRefused_ParameterType = taskRefused_ParameterType.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_taskRefused_ParameterType: $.ASN1Decoder<taskRefused_ParameterType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) taskRefused_ParameterType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_taskRefused_ParameterType (el: _Element): taskRefused_ParameterType {
-    if (!_cached_decoder_for_taskRefused_ParameterType) { _cached_decoder_for_taskRefused_ParameterType = $._decodeEnumerated; }
-    return _cached_decoder_for_taskRefused_ParameterType(el);
-}
-
-let _cached_encoder_for_taskRefused_ParameterType: $.ASN1Encoder<taskRefused_ParameterType> | null = null;
-
-/**
- * @summary Encodes a(n) taskRefused_ParameterType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The taskRefused_ParameterType, encoded as an ASN.1 Element.
- */
-export
-function _encode_taskRefused_ParameterType (value: taskRefused_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_taskRefused_ParameterType) { _cached_encoder_for_taskRefused_ParameterType = $._encodeEnumerated; }
-    return _cached_encoder_for_taskRefused_ParameterType(value, elGetter);
-}
+export const _decode_taskRefused_ParameterType = $._decodeEnumerated;
+export const _encode_taskRefused_ParameterType = $._encodeEnumerated;
 
 
 /* eslint-enable */

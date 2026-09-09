@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type FacilityGroupMember = INTEGER;
-
-let _cached_decoder_for_FacilityGroupMember: $.ASN1Decoder<FacilityGroupMember> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FacilityGroupMember
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FacilityGroupMember (el: _Element): FacilityGroupMember {
-    if (!_cached_decoder_for_FacilityGroupMember) { _cached_decoder_for_FacilityGroupMember = $._decodeInteger; }
-    return _cached_decoder_for_FacilityGroupMember(el);
-}
-
-let _cached_encoder_for_FacilityGroupMember: $.ASN1Encoder<FacilityGroupMember> | null = null;
-
-/**
- * @summary Encodes a(n) FacilityGroupMember into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FacilityGroupMember, encoded as an ASN.1 Element.
- */
-export
-function _encode_FacilityGroupMember (value: FacilityGroupMember, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FacilityGroupMember) { _cached_encoder_for_FacilityGroupMember = $._encodeInteger; }
-    return _cached_encoder_for_FacilityGroupMember(value, elGetter);
-}
+export const _decode_FacilityGroupMember = $._decodeInteger;
+export const _encode_FacilityGroupMember = $._encodeInteger;
 
 
 /* eslint-enable */

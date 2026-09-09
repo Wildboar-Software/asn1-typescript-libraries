@@ -66,6 +66,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../CAP-datatypes/BearerCapability.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../CAP-datatypes/CalledPartyNumber.ta.mjs";
+import { type LowLayerCompatibility, _decode_LowLayerCompatibility, _encode_LowLayerCompatibility } from "../CAP-datatypes/LowLayerCompatibility.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 // export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";

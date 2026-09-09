@@ -165,35 +165,8 @@ const MiscCallInfo_dpAssignment_officeBased: MiscCallInfo_dpAssignment = MiscCal
  */
 export
 const officeBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.officeBased; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MiscCallInfo_dpAssignment: $.ASN1Decoder<MiscCallInfo_dpAssignment> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MiscCallInfo_dpAssignment
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MiscCallInfo_dpAssignment (el: _Element): MiscCallInfo_dpAssignment {
-    if (!_cached_decoder_for_MiscCallInfo_dpAssignment) { _cached_decoder_for_MiscCallInfo_dpAssignment = $._decodeEnumerated; }
-    return _cached_decoder_for_MiscCallInfo_dpAssignment(el);
-}
-
-let _cached_encoder_for_MiscCallInfo_dpAssignment: $.ASN1Encoder<MiscCallInfo_dpAssignment> | null = null;
-
-/**
- * @summary Encodes a(n) MiscCallInfo_dpAssignment into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MiscCallInfo_dpAssignment, encoded as an ASN.1 Element.
- */
-export
-function _encode_MiscCallInfo_dpAssignment (value: MiscCallInfo_dpAssignment, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MiscCallInfo_dpAssignment) { _cached_encoder_for_MiscCallInfo_dpAssignment = $._encodeEnumerated; }
-    return _cached_encoder_for_MiscCallInfo_dpAssignment(value, elGetter);
-}
+export const _decode_MiscCallInfo_dpAssignment = $._decodeEnumerated;
+export const _encode_MiscCallInfo_dpAssignment = $._encodeEnumerated;
 
 
 /* eslint-enable */

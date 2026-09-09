@@ -66,6 +66,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type FCIBillingChargingCharacteristics, _decode_FCIBillingChargingCharacteristics, _encode_FCIBillingChargingCharacteristics } from "../CAP-datatypes/FCIBillingChargingCharacteristics.ta.mjs";
 
 
 

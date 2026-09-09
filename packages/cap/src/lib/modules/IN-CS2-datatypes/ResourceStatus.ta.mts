@@ -148,35 +148,8 @@ const ResourceStatus_idle: ResourceStatus = ResourceStatus.idle; /* LONG_NAMED_E
  */
 export
 const idle: ResourceStatus = ResourceStatus.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ResourceStatus: $.ASN1Decoder<ResourceStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ResourceStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ResourceStatus (el: _Element): ResourceStatus {
-    if (!_cached_decoder_for_ResourceStatus) { _cached_decoder_for_ResourceStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_ResourceStatus(el);
-}
-
-let _cached_encoder_for_ResourceStatus: $.ASN1Encoder<ResourceStatus> | null = null;
-
-/**
- * @summary Encodes a(n) ResourceStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResourceStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_ResourceStatus (value: ResourceStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResourceStatus) { _cached_encoder_for_ResourceStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_ResourceStatus(value, elGetter);
-}
+export const _decode_ResourceStatus = $._decodeEnumerated;
+export const _encode_ResourceStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

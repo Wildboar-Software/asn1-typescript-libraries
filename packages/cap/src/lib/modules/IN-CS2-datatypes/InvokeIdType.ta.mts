@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type InvokeIdType = INTEGER;
-
-let _cached_decoder_for_InvokeIdType: $.ASN1Decoder<InvokeIdType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) InvokeIdType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InvokeIdType (el: _Element): InvokeIdType {
-    if (!_cached_decoder_for_InvokeIdType) { _cached_decoder_for_InvokeIdType = $._decodeInteger; }
-    return _cached_decoder_for_InvokeIdType(el);
-}
-
-let _cached_encoder_for_InvokeIdType: $.ASN1Encoder<InvokeIdType> | null = null;
-
-/**
- * @summary Encodes a(n) InvokeIdType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InvokeIdType, encoded as an ASN.1 Element.
- */
-export
-function _encode_InvokeIdType (value: InvokeIdType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InvokeIdType) { _cached_encoder_for_InvokeIdType = $._encodeInteger; }
-    return _cached_encoder_for_InvokeIdType(value, elGetter);
-}
+export const _decode_InvokeIdType = $._decodeInteger;
+export const _encode_InvokeIdType = $._encodeInteger;
 
 
 /* eslint-enable */

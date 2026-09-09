@@ -238,35 +238,8 @@ const BearerCapabilities_video: number = 10; /* LONG_NAMED_BIT */
  */
 export
 const video: number = BearerCapabilities_video; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_BearerCapabilities: $.ASN1Decoder<BearerCapabilities> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) BearerCapabilities
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_BearerCapabilities (el: _Element): BearerCapabilities {
-    if (!_cached_decoder_for_BearerCapabilities) { _cached_decoder_for_BearerCapabilities = $._decodeBitString; }
-    return _cached_decoder_for_BearerCapabilities(el);
-}
-
-let _cached_encoder_for_BearerCapabilities: $.ASN1Encoder<BearerCapabilities> | null = null;
-
-/**
- * @summary Encodes a(n) BearerCapabilities into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BearerCapabilities, encoded as an ASN.1 Element.
- */
-export
-function _encode_BearerCapabilities (value: BearerCapabilities, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BearerCapabilities) { _cached_encoder_for_BearerCapabilities = $._encodeBitString; }
-    return _cached_encoder_for_BearerCapabilities(value, elGetter);
-}
+export const _decode_BearerCapabilities = $._decodeBitString;
+export const _encode_BearerCapabilities = $._encodeBitString;
 
 
 /* eslint-enable */

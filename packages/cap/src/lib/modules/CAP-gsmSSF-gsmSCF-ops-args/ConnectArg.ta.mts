@@ -66,6 +66,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../CAP-datatypes/AlertingPattern.ta.mjs";
+import { type Carrier, _decode_Carrier, _encode_Carrier } from "../CAP-datatypes/Carrier.ta.mjs";
+import { type ChargeNumber, _decode_ChargeNumber, _encode_ChargeNumber } from "../CAP-datatypes/ChargeNumber.ta.mjs";
+import { type DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../CAP-datatypes/DestinationRoutingAddress.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { type GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } from "../CAP-datatypes/GenericNumbers.ta.mjs";
+import { type NAOliInfo, _decode_NAOliInfo, _encode_NAOliInfo } from "../CAP-datatypes/NAOliInfo.ta.mjs";
+import { type OCSIApplicable, _decode_OCSIApplicable, _encode_OCSIApplicable } from "../CAP-datatypes/OCSIApplicable.ta.mjs";
+import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../CAP-datatypes/OriginalCalledPartyID.ta.mjs";
+import { type RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../CAP-datatypes/RedirectingPartyID.ta.mjs";
+import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
 // export { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
 import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";

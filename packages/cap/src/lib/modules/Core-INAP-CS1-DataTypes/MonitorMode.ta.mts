@@ -177,35 +177,8 @@ const MonitorMode_transparent: MonitorMode = MonitorMode.transparent; /* LONG_NA
  */
 export
 const transparent: MonitorMode = MonitorMode.transparent; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MonitorMode: $.ASN1Decoder<MonitorMode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MonitorMode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MonitorMode (el: _Element): MonitorMode {
-    if (!_cached_decoder_for_MonitorMode) { _cached_decoder_for_MonitorMode = $._decodeEnumerated; }
-    return _cached_decoder_for_MonitorMode(el);
-}
-
-let _cached_encoder_for_MonitorMode: $.ASN1Encoder<MonitorMode> | null = null;
-
-/**
- * @summary Encodes a(n) MonitorMode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MonitorMode, encoded as an ASN.1 Element.
- */
-export
-function _encode_MonitorMode (value: MonitorMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MonitorMode) { _cached_encoder_for_MonitorMode = $._encodeEnumerated; }
-    return _cached_encoder_for_MonitorMode(value, elGetter);
-}
+export const _decode_MonitorMode = $._decodeEnumerated;
+export const _encode_MonitorMode = $._encodeEnumerated;
 
 
 /* eslint-enable */

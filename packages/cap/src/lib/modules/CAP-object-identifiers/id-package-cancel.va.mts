@@ -83,7 +83,7 @@ import { id_packageE } from "../CAP-object-identifiers/id-packageE.va.mjs";
  * @constant
  */
 export
-const id_package_cancel: OBJECT_IDENTIFIER = new _OID([
+const id_package_cancel: OBJECT_IDENTIFIER = _OID.fromParts([
     36,
 ], id_packageE);
 

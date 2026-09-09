@@ -461,35 +461,8 @@ const TriggerType_tDisconnect: TriggerType = TriggerType.tDisconnect; /* LONG_NA
  */
 export
 const tDisconnect: TriggerType = TriggerType.tDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_TriggerType: $.ASN1Decoder<TriggerType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TriggerType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TriggerType (el: _Element): TriggerType {
-    if (!_cached_decoder_for_TriggerType) { _cached_decoder_for_TriggerType = $._decodeEnumerated; }
-    return _cached_decoder_for_TriggerType(el);
-}
-
-let _cached_encoder_for_TriggerType: $.ASN1Encoder<TriggerType> | null = null;
-
-/**
- * @summary Encodes a(n) TriggerType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TriggerType, encoded as an ASN.1 Element.
- */
-export
-function _encode_TriggerType (value: TriggerType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TriggerType) { _cached_encoder_for_TriggerType = $._encodeEnumerated; }
-    return _cached_encoder_for_TriggerType(value, elGetter);
-}
+export const _decode_TriggerType = $._decodeEnumerated;
+export const _encode_TriggerType = $._encodeEnumerated;
 
 
 /* eslint-enable */

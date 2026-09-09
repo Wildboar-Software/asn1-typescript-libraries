@@ -372,35 +372,8 @@ const SupplementaryServices_incomingCallBarring: number = 20; /* LONG_NAMED_BIT 
  */
 export
 const incomingCallBarring: number = SupplementaryServices_incomingCallBarring; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_SupplementaryServices: $.ASN1Decoder<SupplementaryServices> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SupplementaryServices
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SupplementaryServices (el: _Element): SupplementaryServices {
-    if (!_cached_decoder_for_SupplementaryServices) { _cached_decoder_for_SupplementaryServices = $._decodeBitString; }
-    return _cached_decoder_for_SupplementaryServices(el);
-}
-
-let _cached_encoder_for_SupplementaryServices: $.ASN1Encoder<SupplementaryServices> | null = null;
-
-/**
- * @summary Encodes a(n) SupplementaryServices into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SupplementaryServices, encoded as an ASN.1 Element.
- */
-export
-function _encode_SupplementaryServices (value: SupplementaryServices, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupplementaryServices) { _cached_encoder_for_SupplementaryServices = $._encodeBitString; }
-    return _cached_encoder_for_SupplementaryServices(value, elGetter);
-}
+export const _decode_SupplementaryServices = $._decodeBitString;
+export const _encode_SupplementaryServices = $._encodeBitString;
 
 
 /* eslint-enable */

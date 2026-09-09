@@ -66,6 +66,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../CAP-datatypes/IPRoutingAddress.ta.mjs";
 
 
 

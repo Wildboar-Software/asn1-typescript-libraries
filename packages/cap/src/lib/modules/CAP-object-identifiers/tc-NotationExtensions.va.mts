@@ -82,9 +82,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @constant
  */
 export
-const tc_NotationExtensions: OBJECT_IDENTIFIER = new _OID([
-    recommendation,
-    q,
+const tc_NotationExtensions: OBJECT_IDENTIFIER = _OID.fromParts([
+    0 /* recommendation */,
+    17 /* q */,
     775,
     /* modules */ 2,
     /* notation-extension */ 4,

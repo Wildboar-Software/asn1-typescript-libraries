@@ -83,7 +83,7 @@ import { id_acE } from "../CAP-object-identifiers/id-acE.va.mjs";
  * @constant
  */
 export
-const id_ac_cap4_sms_AC: OBJECT_IDENTIFIER = new _OID([
+const id_ac_cap4_sms_AC: OBJECT_IDENTIFIER = _OID.fromParts([
     61,
 ], id_acE);
 

@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type LegType = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_LegType: $.ASN1Decoder<LegType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) LegType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_LegType (el: _Element): LegType {
-    if (!_cached_decoder_for_LegType) { _cached_decoder_for_LegType = $._decodeOctetString; }
-    return _cached_decoder_for_LegType(el);
-}
-
-let _cached_encoder_for_LegType: $.ASN1Encoder<LegType> | null = null;
-
-/**
- * @summary Encodes a(n) LegType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LegType, encoded as an ASN.1 Element.
- */
-export
-function _encode_LegType (value: LegType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LegType) { _cached_encoder_for_LegType = $._encodeOctetString; }
-    return _cached_encoder_for_LegType(value, elGetter);
-}
+export const _decode_LegType = $._decodeOctetString;
+export const _encode_LegType = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type HighLayerCompatibility = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_HighLayerCompatibility: $.ASN1Decoder<HighLayerCompatibility> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) HighLayerCompatibility
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_HighLayerCompatibility (el: _Element): HighLayerCompatibility {
-    if (!_cached_decoder_for_HighLayerCompatibility) { _cached_decoder_for_HighLayerCompatibility = $._decodeOctetString; }
-    return _cached_decoder_for_HighLayerCompatibility(el);
-}
-
-let _cached_encoder_for_HighLayerCompatibility: $.ASN1Encoder<HighLayerCompatibility> | null = null;
-
-/**
- * @summary Encodes a(n) HighLayerCompatibility into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HighLayerCompatibility, encoded as an ASN.1 Element.
- */
-export
-function _encode_HighLayerCompatibility (value: HighLayerCompatibility, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HighLayerCompatibility) { _cached_encoder_for_HighLayerCompatibility = $._encodeOctetString; }
-    return _cached_encoder_for_HighLayerCompatibility(value, elGetter);
-}
+export const _decode_HighLayerCompatibility = $._decodeOctetString;
+export const _encode_HighLayerCompatibility = $._encodeOctetString;
 
 
 /* eslint-enable */

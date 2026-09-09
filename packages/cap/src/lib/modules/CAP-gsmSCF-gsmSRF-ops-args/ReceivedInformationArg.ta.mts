@@ -66,6 +66,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type Digits, _decode_Digits, _encode_Digits } from "../CAP-datatypes/Digits.ta.mjs";
 
 
 

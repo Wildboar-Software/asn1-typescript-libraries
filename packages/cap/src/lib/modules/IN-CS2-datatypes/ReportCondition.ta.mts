@@ -165,35 +165,8 @@ const ReportCondition_cancelled: ReportCondition = ReportCondition.cancelled; /*
  */
 export
 const cancelled: ReportCondition = ReportCondition.cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ReportCondition: $.ASN1Decoder<ReportCondition> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReportCondition
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReportCondition (el: _Element): ReportCondition {
-    if (!_cached_decoder_for_ReportCondition) { _cached_decoder_for_ReportCondition = $._decodeEnumerated; }
-    return _cached_decoder_for_ReportCondition(el);
-}
-
-let _cached_encoder_for_ReportCondition: $.ASN1Encoder<ReportCondition> | null = null;
-
-/**
- * @summary Encodes a(n) ReportCondition into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReportCondition, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReportCondition (value: ReportCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportCondition) { _cached_encoder_for_ReportCondition = $._encodeEnumerated; }
-    return _cached_encoder_for_ReportCondition(value, elGetter);
-}
+export const _decode_ReportCondition = $._decodeEnumerated;
+export const _encode_ReportCondition = $._encodeEnumerated;
 
 
 /* eslint-enable */
