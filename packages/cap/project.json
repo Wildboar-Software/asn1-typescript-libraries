@@ -1,0 +1,25 @@
+{
+  "name": "cap",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cap/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/cap",
+        "tsConfig": "packages/cap/tsconfig.lib.json",
+        "packageJson": "packages/cap/package.json",
+        "main": "packages/cap/src/index.mts",
+        "assets": [
+          "packages/cap/*.md",
+          "packages/cap/LICENSE.txt",
+          "packages/cap/package.json"
+        ]
+      }
+    }
+  }
+}
