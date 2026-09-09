@@ -365,7 +365,7 @@ function _decode_DpSpecificCommonParameters (el: _Element): DpSpecificCommonPara
     let uSIInformation: OPTIONAL<USIInformation>;
     let forwardGVNS: OPTIONAL<ForwardGVNS>;
     let createdCallSegmentAssociation: OPTIONAL<CSAID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceAddressInformation": (_el: _Element): void => { serviceAddressInformation = $._decode_implicit<ServiceAddressInformation>(() => _decode_ServiceAddressInformation)(_el); },
         "bearerCapability": (_el: _Element): void => { bearerCapability = $._decode_explicit<BearerCapability>(() => _decode_BearerCapability)(_el); },

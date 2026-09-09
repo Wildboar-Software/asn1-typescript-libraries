@@ -128,7 +128,7 @@ function _decode_EventSpecificInformationBCSM_tDisconnectSpecificInfo (el: _Elem
     if (!_cached_decoder_for_EventSpecificInformationBCSM_tDisconnectSpecificInfo) { _cached_decoder_for_EventSpecificInformationBCSM_tDisconnectSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_tDisconnectSpecificInfo {
     let releaseCause: OPTIONAL<Cause>;
     let connectTime: OPTIONAL<Integer4>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "releaseCause": (_el: _Element): void => { releaseCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); },
         "connectTime": (_el: _Element): void => { connectTime = $._decode_implicit<Integer4>(() => _decode_Integer4)(_el); }

@@ -145,7 +145,7 @@ function _decode_ContinueWithArgumentArgExtension (el: _Element): ContinueWithAr
     let suppress_N_CSI: OPTIONAL<NULL>;
     let suppressOutgoingCallBarring: OPTIONAL<NULL>;
     let legOrCallSegment: OPTIONAL<LegOrCallSegment>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "suppress-D-CSI": (_el: _Element): void => { suppress_D_CSI = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "suppress-N-CSI": (_el: _Element): void => { suppress_N_CSI = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

@@ -127,7 +127,7 @@ function _decode_EntityReleasedGPRSArg (el: _Element): EntityReleasedGPRSArg {
     if (!_cached_decoder_for_EntityReleasedGPRSArg) { _cached_decoder_for_EntityReleasedGPRSArg = function (el: _Element): EntityReleasedGPRSArg {
     let gPRSCause!: GPRSCause;
     let pDPID: OPTIONAL<PDPID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gPRSCause": (_el: _Element): void => { gPRSCause = $._decode_implicit<GPRSCause>(() => _decode_GPRSCause)(_el); },
         "pDPID": (_el: _Element): void => { pDPID = $._decode_implicit<PDPID>(() => _decode_PDPID)(_el); }

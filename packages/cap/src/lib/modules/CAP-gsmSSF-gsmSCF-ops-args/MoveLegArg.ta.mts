@@ -127,7 +127,7 @@ function _decode_MoveLegArg (el: _Element): MoveLegArg {
     if (!_cached_decoder_for_MoveLegArg) { _cached_decoder_for_MoveLegArg = function (el: _Element): MoveLegArg {
     let legIDToMove!: LegID;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "legIDToMove": (_el: _Element): void => { legIDToMove = $._decode_explicit<LegID>(() => _decode_LegID)(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); }

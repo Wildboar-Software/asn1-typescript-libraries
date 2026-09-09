@@ -117,7 +117,7 @@ export
 function _decode_NotificationInformation_creditLimitReachedSpecificInfo (el: _Element): NotificationInformation_creditLimitReachedSpecificInfo {
     if (!_cached_decoder_for_NotificationInformation_creditLimitReachedSpecificInfo) { _cached_decoder_for_NotificationInformation_creditLimitReachedSpecificInfo = function (el: _Element): NotificationInformation_creditLimitReachedSpecificInfo {
     let timeStamp: OPTIONAL<DateAndTime>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_implicit<DateAndTime>(() => _decode_DateAndTime)(_el); }
     };

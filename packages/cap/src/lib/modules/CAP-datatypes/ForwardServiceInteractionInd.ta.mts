@@ -65,7 +65,7 @@ export function _decode_ForwardServiceInteractionInd (el: _Element): ForwardServ
     let conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>;
     let callDiversionTreatmentIndicator: OPTIONAL<OCTET_STRING>;
     let callingPartyRestrictionIndicator: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "conferenceTreatmentIndicator": (_el: _Element): void => { conferenceTreatmentIndicator = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "callDiversionTreatmentIndicator": (_el: _Element): void => { callDiversionTreatmentIndicator = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

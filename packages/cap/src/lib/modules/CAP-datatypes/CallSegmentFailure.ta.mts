@@ -49,7 +49,7 @@ export function _decode_CallSegmentFailure (el: _Element): CallSegmentFailure {
         _cached_decoder_for_CallSegmentFailure = function (el: _Element): CallSegmentFailure {
     let callSegmentID: OPTIONAL<CallSegmentID>;
     let cause: OPTIONAL<Cause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callSegmentID": (_el: _Element): void => { callSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(_el); },
         "cause": (_el: _Element): void => { cause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); }

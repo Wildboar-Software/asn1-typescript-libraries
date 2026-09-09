@@ -51,7 +51,7 @@ export function _decode_BurstList (el: _Element): BurstList {
         _cached_decoder_for_BurstList = function (el: _Element): BurstList {
     let warningPeriod: OPTIONAL<INTEGER> = BurstList._default_value_for_warningPeriod;
     let bursts!: Burst;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "warningPeriod": (_el: _Element): void => { warningPeriod = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "bursts": (_el: _Element): void => { bursts = $._decode_implicit<Burst>(() => _decode_Burst)(_el); }

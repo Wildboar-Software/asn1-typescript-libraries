@@ -117,7 +117,7 @@ export
 function _decode_EventSpecificInformationBCSM_routeSelectFailureSpecificInfo (el: _Element): EventSpecificInformationBCSM_routeSelectFailureSpecificInfo {
     if (!_cached_decoder_for_EventSpecificInformationBCSM_routeSelectFailureSpecificInfo) { _cached_decoder_for_EventSpecificInformationBCSM_routeSelectFailureSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_routeSelectFailureSpecificInfo {
     let failureCause: OPTIONAL<Cause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failureCause": (_el: _Element): void => { failureCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); }
     };

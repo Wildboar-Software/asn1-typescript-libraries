@@ -52,7 +52,7 @@ export function _decode_GPRSEventSpecificInformation_detachSpecificInformation (
         _cached_decoder_for_GPRSEventSpecificInformation_detachSpecificInformation = function (el: _Element): GPRSEventSpecificInformation_detachSpecificInformation {
     let initiatingEntity: OPTIONAL<InitiatingEntity>;
     let routeingAreaUpdate: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "initiatingEntity": (_el: _Element): void => { initiatingEntity = $._decode_implicit<InitiatingEntity>(() => _decode_InitiatingEntity)(_el); },
         "routeingAreaUpdate": (_el: _Element): void => { routeingAreaUpdate = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }

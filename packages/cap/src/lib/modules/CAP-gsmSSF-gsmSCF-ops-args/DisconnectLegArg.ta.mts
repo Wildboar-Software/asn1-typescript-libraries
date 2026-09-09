@@ -137,7 +137,7 @@ function _decode_DisconnectLegArg (el: _Element): DisconnectLegArg {
     let legToBeReleased!: LegID;
     let releaseCause: OPTIONAL<Cause>;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "legToBeReleased": (_el: _Element): void => { legToBeReleased = $._decode_explicit<LegID>(() => _decode_LegID)(_el); },
         "releaseCause": (_el: _Element): void => { releaseCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); },

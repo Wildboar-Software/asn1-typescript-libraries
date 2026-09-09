@@ -50,7 +50,7 @@ export function _decode_EventSpecificInformationBCSM_oChangeOfPositionSpecificIn
         _cached_decoder_for_EventSpecificInformationBCSM_oChangeOfPositionSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_oChangeOfPositionSpecificInfo {
     let locationInformation: OPTIONAL<LocationInformation>;
     let metDPCriteriaList: OPTIONAL<MetDPCriteriaList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationInformation": (_el: _Element): void => { locationInformation = $._decode_implicit<LocationInformation>(() => _decode_LocationInformation)(_el); },
         "metDPCriteriaList": (_el: _Element): void => { metDPCriteriaList = $._decode_implicit<MetDPCriteriaList>(() => _decode_MetDPCriteriaList)(_el); }

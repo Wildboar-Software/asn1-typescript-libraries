@@ -59,7 +59,7 @@ export function _decode_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELs
     let freeFormatData!: OCTET_STRING;
     let pDPID: OPTIONAL<PDPID>;
     let appendFreeFormatData: OPTIONAL<AppendFreeFormatData> = CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1._default_value_for_appendFreeFormatData;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "freeFormatData": (_el: _Element): void => { freeFormatData = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "pDPID": (_el: _Element): void => { pDPID = $._decode_implicit<PDPID>(() => _decode_PDPID)(_el); },

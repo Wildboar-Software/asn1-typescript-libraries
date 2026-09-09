@@ -128,7 +128,7 @@ function _decode_RequestReportBCSMEventArg (el: _Element): RequestReportBCSMEven
     if (!_cached_decoder_for_RequestReportBCSMEventArg) { _cached_decoder_for_RequestReportBCSMEventArg = function (el: _Element): RequestReportBCSMEventArg {
     let bcsmEvents!: BCSMEvent[];
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "bcsmEvents": (_el: _Element): void => { bcsmEvents = $._decode_implicit<BCSMEvent[]>(() => $._decodeSequenceOf<BCSMEvent>(() => _decode_BCSMEvent))(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); }

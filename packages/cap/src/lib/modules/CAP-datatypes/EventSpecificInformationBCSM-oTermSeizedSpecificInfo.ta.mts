@@ -44,7 +44,7 @@ export function _decode_EventSpecificInformationBCSM_oTermSeizedSpecificInfo (el
     if (!_cached_decoder_for_EventSpecificInformationBCSM_oTermSeizedSpecificInfo) {
         _cached_decoder_for_EventSpecificInformationBCSM_oTermSeizedSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_oTermSeizedSpecificInfo {
     let locationInformation: OPTIONAL<LocationInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationInformation": (_el: _Element): void => { locationInformation = $._decode_implicit<LocationInformation>(() => _decode_LocationInformation)(_el); }
     };

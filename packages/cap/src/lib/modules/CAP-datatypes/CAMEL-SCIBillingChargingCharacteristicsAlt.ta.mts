@@ -38,7 +38,7 @@ let _cached_decoder_for_CAMEL_SCIBillingChargingCharacteristicsAlt: $.ASN1Decode
 export function _decode_CAMEL_SCIBillingChargingCharacteristicsAlt (el: _Element): CAMEL_SCIBillingChargingCharacteristicsAlt {
     if (!_cached_decoder_for_CAMEL_SCIBillingChargingCharacteristicsAlt) {
         _cached_decoder_for_CAMEL_SCIBillingChargingCharacteristicsAlt = function (el: _Element): CAMEL_SCIBillingChargingCharacteristicsAlt {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
 
     };

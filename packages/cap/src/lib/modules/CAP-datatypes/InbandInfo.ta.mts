@@ -57,7 +57,7 @@ export function _decode_InbandInfo (el: _Element): InbandInfo {
     let numberOfRepetitions: OPTIONAL<INTEGER>;
     let duration: OPTIONAL<INTEGER>;
     let interval: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "messageID": (_el: _Element): void => { messageID = $._decode_explicit<MessageID>(() => _decode_MessageID)(_el); },
         "numberOfRepetitions": (_el: _Element): void => { numberOfRepetitions = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

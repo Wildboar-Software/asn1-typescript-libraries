@@ -428,7 +428,7 @@ function _decode_InitialDPArg (el: _Element): InitialDPArg {
     let timeAndTimezone: OPTIONAL<TimeAndTimezone>;
     let callForwardingSS_Pending: OPTIONAL<NULL>;
     let initialDPArgExtension: OPTIONAL<InitialDPArgExtension>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceKey": (_el: _Element): void => { serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(_el); },
         "calledPartyNumber": (_el: _Element): void => { calledPartyNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); },

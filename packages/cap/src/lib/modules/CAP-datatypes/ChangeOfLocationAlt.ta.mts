@@ -38,7 +38,7 @@ let _cached_decoder_for_ChangeOfLocationAlt: $.ASN1Decoder<ChangeOfLocationAlt> 
 export function _decode_ChangeOfLocationAlt (el: _Element): ChangeOfLocationAlt {
     if (!_cached_decoder_for_ChangeOfLocationAlt) {
         _cached_decoder_for_ChangeOfLocationAlt = function (el: _Element): ChangeOfLocationAlt {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
 
     };

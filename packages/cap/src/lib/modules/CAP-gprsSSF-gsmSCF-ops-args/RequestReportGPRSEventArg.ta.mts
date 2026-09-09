@@ -127,7 +127,7 @@ function _decode_RequestReportGPRSEventArg (el: _Element): RequestReportGPRSEven
     if (!_cached_decoder_for_RequestReportGPRSEventArg) { _cached_decoder_for_RequestReportGPRSEventArg = function (el: _Element): RequestReportGPRSEventArg {
     let gPRSEvent!: GPRSEvent[];
     let pDPID: OPTIONAL<PDPID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gPRSEvent": (_el: _Element): void => { gPRSEvent = $._decode_implicit<GPRSEvent[]>(() => $._decodeSequenceOf<GPRSEvent>(() => _decode_GPRSEvent))(_el); },
         "pDPID": (_el: _Element): void => { pDPID = $._decode_implicit<PDPID>(() => _decode_PDPID)(_el); }

@@ -117,7 +117,7 @@ export
 function _decode_NotificationInformation_callFailureSpecificInfo (el: _Element): NotificationInformation_callFailureSpecificInfo {
     if (!_cached_decoder_for_NotificationInformation_callFailureSpecificInfo) { _cached_decoder_for_NotificationInformation_callFailureSpecificInfo = function (el: _Element): NotificationInformation_callFailureSpecificInfo {
     let failureCause: OPTIONAL<Cause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failureCause": (_el: _Element): void => { failureCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); }
     };

@@ -127,7 +127,7 @@ function _decode_DisconnectForwardConnectionWithArgumentArg (el: _Element): Disc
     if (!_cached_decoder_for_DisconnectForwardConnectionWithArgumentArg) { _cached_decoder_for_DisconnectForwardConnectionWithArgumentArg = function (el: _Element): DisconnectForwardConnectionWithArgumentArg {
     let callSegmentID: OPTIONAL<CallSegmentID>;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callSegmentID": (_el: _Element): void => { callSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); }

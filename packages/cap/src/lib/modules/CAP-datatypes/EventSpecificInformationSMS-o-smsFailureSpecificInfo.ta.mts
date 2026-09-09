@@ -46,7 +46,7 @@ export function _decode_EventSpecificInformationSMS_o_smsFailureSpecificInfo (el
     if (!_cached_decoder_for_EventSpecificInformationSMS_o_smsFailureSpecificInfo) {
         _cached_decoder_for_EventSpecificInformationSMS_o_smsFailureSpecificInfo = function (el: _Element): EventSpecificInformationSMS_o_smsFailureSpecificInfo {
     let failureCause: OPTIONAL<MO_SMSCause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failureCause": (_el: _Element): void => { failureCause = $._decode_implicit<MO_SMSCause>(() => _decode_MO_SMSCause)(_el); }
     };

@@ -117,7 +117,7 @@ export
 function _decode_NotificationInformation_calledNumberSpecificInfo (el: _Element): NotificationInformation_calledNumberSpecificInfo {
     if (!_cached_decoder_for_NotificationInformation_calledNumberSpecificInfo) { _cached_decoder_for_NotificationInformation_calledNumberSpecificInfo = function (el: _Element): NotificationInformation_calledNumberSpecificInfo {
     let calledNumber: OPTIONAL<CalledPartyNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "calledNumber": (_el: _Element): void => { calledNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); }
     };

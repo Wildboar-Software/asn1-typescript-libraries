@@ -68,7 +68,7 @@ export function _decode_DpSpecificInfoAlt (el: _Element): DpSpecificInfoAlt {
     let oServiceChangeSpecificInfo!: DpSpecificInfoAlt_oServiceChangeSpecificInfo;
     let tServiceChangeSpecificInfo!: DpSpecificInfoAlt_tServiceChangeSpecificInfo;
     let collectedInfoSpecificInfo!: DpSpecificInfoAlt_collectedInfoSpecificInfo;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "oServiceChangeSpecificInfo": (_el: _Element): void => { oServiceChangeSpecificInfo = $._decode_implicit<DpSpecificInfoAlt_oServiceChangeSpecificInfo>(() => _decode_DpSpecificInfoAlt_oServiceChangeSpecificInfo)(_el); },
         "tServiceChangeSpecificInfo": (_el: _Element): void => { tServiceChangeSpecificInfo = $._decode_implicit<DpSpecificInfoAlt_tServiceChangeSpecificInfo>(() => _decode_DpSpecificInfoAlt_tServiceChangeSpecificInfo)(_el); },

@@ -162,7 +162,7 @@ function _decode_ApplyChargingArg (el: _Element): ApplyChargingArg {
     let partyToCharge: OPTIONAL<SendingSideID> = ApplyChargingArg._default_value_for_partyToCharge;
     let extensions: OPTIONAL<Extensions>;
     let aChChargingAddress: OPTIONAL<AChChargingAddress> = ApplyChargingArg._default_value_for_aChChargingAddress;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aChBillingChargingCharacteristics": (_el: _Element): void => { aChBillingChargingCharacteristics = $._decode_implicit<AChBillingChargingCharacteristics>(() => _decode_AChBillingChargingCharacteristics)(_el); },
         "partyToCharge": (_el: _Element): void => { partyToCharge = $._decode_implicit<SendingSideID>(() => _decode_SendingSideID)(_el); },

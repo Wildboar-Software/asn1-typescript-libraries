@@ -137,7 +137,7 @@ function _decode_SendChargingInformationArg (el: _Element): SendChargingInformat
     let sCIBillingChargingCharacteristics!: SCIBillingChargingCharacteristics;
     let partyToCharge!: SendingSideID;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sCIBillingChargingCharacteristics": (_el: _Element): void => { sCIBillingChargingCharacteristics = $._decode_implicit<SCIBillingChargingCharacteristics>(() => _decode_SCIBillingChargingCharacteristics)(_el); },
         "partyToCharge": (_el: _Element): void => { partyToCharge = $._decode_implicit<SendingSideID>(() => _decode_SendingSideID)(_el); },

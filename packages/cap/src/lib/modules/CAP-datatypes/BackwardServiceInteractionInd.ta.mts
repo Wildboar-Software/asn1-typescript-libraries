@@ -57,7 +57,7 @@ export function _decode_BackwardServiceInteractionInd (el: _Element): BackwardSe
         _cached_decoder_for_BackwardServiceInteractionInd = function (el: _Element): BackwardServiceInteractionInd {
     let conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>;
     let callCompletionTreatmentIndicator: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "conferenceTreatmentIndicator": (_el: _Element): void => { conferenceTreatmentIndicator = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "callCompletionTreatmentIndicator": (_el: _Element): void => { callCompletionTreatmentIndicator = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

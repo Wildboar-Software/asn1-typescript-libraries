@@ -117,7 +117,7 @@ export
 function _decode_EventSpecificInformationBCSM_tBusySpecificInfo (el: _Element): EventSpecificInformationBCSM_tBusySpecificInfo {
     if (!_cached_decoder_for_EventSpecificInformationBCSM_tBusySpecificInfo) { _cached_decoder_for_EventSpecificInformationBCSM_tBusySpecificInfo = function (el: _Element): EventSpecificInformationBCSM_tBusySpecificInfo {
     let busyCause: OPTIONAL<Cause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "busyCause": (_el: _Element): void => { busyCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); }
     };

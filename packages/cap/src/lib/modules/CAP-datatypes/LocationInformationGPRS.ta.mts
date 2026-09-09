@@ -80,7 +80,7 @@ export function _decode_LocationInformationGPRS (el: _Element): LocationInformat
     let extensionContainer: OPTIONAL<ExtensionContainer>;
     let sai_Present: OPTIONAL<NULL>;
     let userCSGInformation: OPTIONAL<UserCSGInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cellGlobalIdOrServiceAreaIdOrLAI": (_el: _Element): void => { cellGlobalIdOrServiceAreaIdOrLAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "routeingAreaIdentity": (_el: _Element): void => { routeingAreaIdentity = $._decode_implicit<RAIdentity>(() => _decode_RAIdentity)(_el); },

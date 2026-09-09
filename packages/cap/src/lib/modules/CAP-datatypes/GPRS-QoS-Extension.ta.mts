@@ -50,7 +50,7 @@ export function _decode_GPRS_QoS_Extension (el: _Element): GPRS_QoS_Extension {
         _cached_decoder_for_GPRS_QoS_Extension = function (el: _Element): GPRS_QoS_Extension {
     let supplement_to_long_QoS_format!: Ext2_QoS_Subscribed;
     let additionalSupplement: OPTIONAL<Ext3_QoS_Subscribed>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "supplement-to-long-QoS-format": (_el: _Element): void => { supplement_to_long_QoS_format = $._decode_implicit<Ext2_QoS_Subscribed>(() => _decode_Ext2_QoS_Subscribed)(_el); },
         "additionalSupplement": (_el: _Element): void => { additionalSupplement = $._decode_implicit<Ext3_QoS_Subscribed>(() => _decode_Ext3_QoS_Subscribed)(_el); }

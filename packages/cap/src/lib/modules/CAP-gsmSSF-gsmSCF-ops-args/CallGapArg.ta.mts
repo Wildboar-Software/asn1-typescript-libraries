@@ -157,7 +157,7 @@ function _decode_CallGapArg (el: _Element): CallGapArg {
     let controlType: OPTIONAL<ControlType>;
     let gapTreatment: OPTIONAL<GapTreatment>;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gapCriteria": (_el: _Element): void => { gapCriteria = $._decode_implicit<GapCriteria>(() => _decode_GapCriteria)(_el); },
         "gapIndicators": (_el: _Element): void => { gapIndicators = $._decode_implicit<GapIndicators>(() => _decode_GapIndicators)(_el); },

@@ -58,7 +58,7 @@ export function _decode_EventSpecificInformationBCSM_tBusySpecificInfo (el: _Ele
     let callForwarded: OPTIONAL<NULL>;
     let routeNotPermitted: OPTIONAL<NULL>;
     let forwardingDestinationNumber: OPTIONAL<CalledPartyNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "busyCause": (_el: _Element): void => { busyCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); },
         "callForwarded": (_el: _Element): void => { callForwarded = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

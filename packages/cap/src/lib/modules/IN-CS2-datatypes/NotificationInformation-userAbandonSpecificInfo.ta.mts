@@ -107,7 +107,7 @@ let _cached_decoder_for_NotificationInformation_userAbandonSpecificInfo: $.ASN1D
 export
 function _decode_NotificationInformation_userAbandonSpecificInfo (el: _Element): NotificationInformation_userAbandonSpecificInfo {
     if (!_cached_decoder_for_NotificationInformation_userAbandonSpecificInfo) { _cached_decoder_for_NotificationInformation_userAbandonSpecificInfo = function (el: _Element): NotificationInformation_userAbandonSpecificInfo {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

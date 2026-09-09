@@ -66,7 +66,7 @@ export function _decode_QualityOfService (el: _Element): QualityOfService {
     let requested_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>;
     let subscribed_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>;
     let negotiated_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requested-QoS": (_el: _Element): void => { requested_QoS = $._decode_explicit<GPRS_QoS>(() => _decode_GPRS_QoS)(_el); },
         "subscribed-QoS": (_el: _Element): void => { subscribed_QoS = $._decode_explicit<GPRS_QoS>(() => _decode_GPRS_QoS)(_el); },

@@ -117,7 +117,7 @@ export
 function _decode_CancelGPRSArg (el: _Element): CancelGPRSArg {
     if (!_cached_decoder_for_CancelGPRSArg) { _cached_decoder_for_CancelGPRSArg = function (el: _Element): CancelGPRSArg {
     let pDPID: OPTIONAL<PDPID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pDPID": (_el: _Element): void => { pDPID = $._decode_implicit<PDPID>(() => _decode_PDPID)(_el); }
     };

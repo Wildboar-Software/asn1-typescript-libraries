@@ -49,7 +49,7 @@ export function _decode_CAMEL_SCIGPRSBillingChargingCharacteristics (el: _Elemen
         _cached_decoder_for_CAMEL_SCIGPRSBillingChargingCharacteristics = function (el: _Element): CAMEL_SCIGPRSBillingChargingCharacteristics {
     let aOCGPRS!: AOCGPRS;
     let pDPID: OPTIONAL<PDPID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aOCGPRS": (_el: _Element): void => { aOCGPRS = $._decode_implicit<AOCGPRS>(() => _decode_AOCGPRS)(_el); },
         "pDPID": (_el: _Element): void => { pDPID = $._decode_implicit<PDPID>(() => _decode_PDPID)(_el); }

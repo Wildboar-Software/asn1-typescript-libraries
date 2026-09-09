@@ -179,7 +179,7 @@ function _decode_PromptAndCollectUserInformationArg (el: _Element): PromptAndCol
     let extensions: OPTIONAL<Extensions>;
     let callSegmentID: OPTIONAL<CallSegmentID>;
     let requestAnnouncementStartedNotification: OPTIONAL<BOOLEAN> = PromptAndCollectUserInformationArg._default_value_for_requestAnnouncementStartedNotification;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "collectedInfo": (_el: _Element): void => { collectedInfo = $._decode_implicit<CollectedInfo>(() => _decode_CollectedInfo)(_el); },
         "disconnectFromIPForbidden": (_el: _Element): void => { disconnectFromIPForbidden = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

@@ -116,7 +116,7 @@ function _decode_TraceItem (el: _Element): TraceItem {
     if (!_cached_decoder_for_TraceItem) { _cached_decoder_for_TraceItem = function (el: _Element): TraceItem {
     /* START_OF_SET_COMPONENT_DECLARATIONS */
     let scf!: ScfID;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     /* END_OF_SET_COMPONENT_DECLARATIONS */
     /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {

@@ -67,7 +67,7 @@ export function _decode_BCSMEvent (el: _Element): BCSMEvent {
     let legID: OPTIONAL<LegID>;
     let dpSpecificCriteria: OPTIONAL<DpSpecificCriteria>;
     let automaticRearm: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eventTypeBCSM": (_el: _Element): void => { eventTypeBCSM = $._decode_implicit<EventTypeBCSM>(() => _decode_EventTypeBCSM)(_el); },
         "monitorMode": (_el: _Element): void => { monitorMode = $._decode_implicit<MonitorMode>(() => _decode_MonitorMode)(_el); },

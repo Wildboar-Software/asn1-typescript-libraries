@@ -49,7 +49,7 @@ export function _decode_BCSM_Failure (el: _Element): BCSM_Failure {
         _cached_decoder_for_BCSM_Failure = function (el: _Element): BCSM_Failure {
     let legID: OPTIONAL<LegID>;
     let cause: OPTIONAL<Cause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "legID": (_el: _Element): void => { legID = $._decode_explicit<LegID>(() => _decode_LegID)(_el); },
         "cause": (_el: _Element): void => { cause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); }

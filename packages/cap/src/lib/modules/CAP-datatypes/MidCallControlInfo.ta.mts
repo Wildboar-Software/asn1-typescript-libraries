@@ -70,7 +70,7 @@ export function _decode_MidCallControlInfo (el: _Element): MidCallControlInfo {
     let cancelDigit: OPTIONAL<OCTET_STRING>;
     let startDigit: OPTIONAL<OCTET_STRING>;
     let interDigitTimeout: OPTIONAL<INTEGER> = MidCallControlInfo._default_value_for_interDigitTimeout;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "minimumNumberOfDigits": (_el: _Element): void => { minimumNumberOfDigits = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "maximumNumberOfDigits": (_el: _Element): void => { maximumNumberOfDigits = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

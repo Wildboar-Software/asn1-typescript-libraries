@@ -137,7 +137,7 @@ function _decode_ApplyChargingGPRSArg (el: _Element): ApplyChargingGPRSArg {
     let chargingCharacteristics!: ChargingCharacteristics;
     let tariffSwitchInterval: OPTIONAL<INTEGER>;
     let pDPID: OPTIONAL<PDPID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "chargingCharacteristics": (_el: _Element): void => { chargingCharacteristics = $._decode_implicit<ChargingCharacteristics>(() => _decode_ChargingCharacteristics)(_el); },
         "tariffSwitchInterval": (_el: _Element): void => { tariffSwitchInterval = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

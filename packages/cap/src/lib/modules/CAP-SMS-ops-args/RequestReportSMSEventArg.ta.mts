@@ -127,7 +127,7 @@ function _decode_RequestReportSMSEventArg (el: _Element): RequestReportSMSEventA
     if (!_cached_decoder_for_RequestReportSMSEventArg) { _cached_decoder_for_RequestReportSMSEventArg = function (el: _Element): RequestReportSMSEventArg {
     let sMSEvents!: SMSEvent[];
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sMSEvents": (_el: _Element): void => { sMSEvents = $._decode_implicit<SMSEvent[]>(() => $._decodeSequenceOf<SMSEvent>(() => _decode_SMSEvent))(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); }

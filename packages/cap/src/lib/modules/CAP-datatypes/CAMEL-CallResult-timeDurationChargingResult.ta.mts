@@ -74,7 +74,7 @@ export function _decode_CAMEL_CallResult_timeDurationChargingResult (el: _Elemen
     let callLegReleasedAtTcpExpiry: OPTIONAL<NULL>;
     let extensions: OPTIONAL<Extensions>;
     let aChChargingAddress: OPTIONAL<AChChargingAddress> = CAMEL_CallResult_timeDurationChargingResult._default_value_for_aChChargingAddress;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "partyToCharge": (_el: _Element): void => { partyToCharge = $._decode_explicit<ReceivingSideID>(() => _decode_ReceivingSideID)(_el); },
         "timeInformation": (_el: _Element): void => { timeInformation = $._decode_explicit<TimeInformation>(() => _decode_TimeInformation)(_el); },

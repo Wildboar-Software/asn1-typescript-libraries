@@ -46,7 +46,7 @@ export function _decode_EventSpecificInformationBCSM_oMidCallSpecificInfo (el: _
     if (!_cached_decoder_for_EventSpecificInformationBCSM_oMidCallSpecificInfo) {
         _cached_decoder_for_EventSpecificInformationBCSM_oMidCallSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_oMidCallSpecificInfo {
     let midCallEvents!: EventSpecificInformationBCSM_oMidCallSpecificInfo_midCallEvents;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "midCallEvents": (_el: _Element): void => { midCallEvents = $._decode_explicit<EventSpecificInformationBCSM_oMidCallSpecificInfo_midCallEvents>(() => _decode_EventSpecificInformationBCSM_oMidCallSpecificInfo_midCallEvents)(_el); }
     };

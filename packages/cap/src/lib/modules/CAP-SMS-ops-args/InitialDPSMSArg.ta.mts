@@ -320,7 +320,7 @@ function _decode_InitialDPSMSArg (el: _Element): InitialDPSMSArg {
     let gPRSMSClass: OPTIONAL<GPRSMSClass>;
     let iMEI: OPTIONAL<IMEI>;
     let calledPartyNumber: OPTIONAL<ISDN_AddressString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceKey": (_el: _Element): void => { serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(_el); },
         "destinationSubscriberNumber": (_el: _Element): void => { destinationSubscriberNumber = $._decode_implicit<CalledPartyBCDNumber>(() => _decode_CalledPartyBCDNumber)(_el); },

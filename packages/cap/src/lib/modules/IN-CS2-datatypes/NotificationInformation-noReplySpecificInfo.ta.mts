@@ -107,7 +107,7 @@ let _cached_decoder_for_NotificationInformation_noReplySpecificInfo: $.ASN1Decod
 export
 function _decode_NotificationInformation_noReplySpecificInfo (el: _Element): NotificationInformation_noReplySpecificInfo {
     if (!_cached_decoder_for_NotificationInformation_noReplySpecificInfo) { _cached_decoder_for_NotificationInformation_noReplySpecificInfo = function (el: _Element): NotificationInformation_noReplySpecificInfo {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

@@ -128,7 +128,7 @@ function _decode_EventSpecificInformationBCSM_tMidCallSpecificInfo (el: _Element
     if (!_cached_decoder_for_EventSpecificInformationBCSM_tMidCallSpecificInfo) { _cached_decoder_for_EventSpecificInformationBCSM_tMidCallSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_tMidCallSpecificInfo {
     let connectTime: OPTIONAL<Integer4>;
     let tMidCallInfo: OPTIONAL<MidCallInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "connectTime": (_el: _Element): void => { connectTime = $._decode_implicit<Integer4>(() => _decode_Integer4)(_el); },
         "tMidCallInfo": (_el: _Element): void => { tMidCallInfo = $._decode_implicit<MidCallInfo>(() => _decode_MidCallInfo)(_el); }

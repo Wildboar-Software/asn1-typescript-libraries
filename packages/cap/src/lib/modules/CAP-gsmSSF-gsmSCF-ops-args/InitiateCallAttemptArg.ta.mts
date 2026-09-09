@@ -189,7 +189,7 @@ function _decode_InitiateCallAttemptArg (el: _Element): InitiateCallAttemptArg {
     let callReferenceNumber: OPTIONAL<CallReferenceNumber>;
     let gsmSCFAddress: OPTIONAL<ISDN_AddressString>;
     let suppress_T_CSI: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "destinationRoutingAddress": (_el: _Element): void => { destinationRoutingAddress = $._decode_implicit<DestinationRoutingAddress>(() => _decode_DestinationRoutingAddress)(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); },

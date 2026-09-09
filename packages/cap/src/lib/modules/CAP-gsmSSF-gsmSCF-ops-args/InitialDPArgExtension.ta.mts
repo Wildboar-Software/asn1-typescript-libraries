@@ -260,7 +260,7 @@ function _decode_InitialDPArgExtension (el: _Element): InitialDPArgExtension {
     let uu_Data: OPTIONAL<UU_Data>;
     let collectInformationAllowed: OPTIONAL<NULL>;
     let releaseCallArgExtensionAllowed: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gmscAddress": (_el: _Element): void => { gmscAddress = $._decode_implicit<ISDN_AddressString>(() => _decode_ISDN_AddressString)(_el); },
         "forwardingDestinationNumber": (_el: _Element): void => { forwardingDestinationNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); },

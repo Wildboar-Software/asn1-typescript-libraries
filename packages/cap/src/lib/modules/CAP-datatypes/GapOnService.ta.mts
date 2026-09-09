@@ -43,7 +43,7 @@ export function _decode_GapOnService (el: _Element): GapOnService {
     if (!_cached_decoder_for_GapOnService) {
         _cached_decoder_for_GapOnService = function (el: _Element): GapOnService {
     let serviceKey!: ServiceKey;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceKey": (_el: _Element): void => { serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(_el); }
     };

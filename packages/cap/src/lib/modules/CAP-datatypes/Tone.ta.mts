@@ -49,7 +49,7 @@ export function _decode_Tone (el: _Element): Tone {
         _cached_decoder_for_Tone = function (el: _Element): Tone {
     let toneID!: INTEGER;
     let duration: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "toneID": (_el: _Element): void => { toneID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "duration": (_el: _Element): void => { duration = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }

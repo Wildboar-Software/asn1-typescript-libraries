@@ -150,7 +150,7 @@ function _decode_ConnectToResourceArg (el: _Element): ConnectToResourceArg {
     let extensions: OPTIONAL<Extensions>;
     let serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>;
     let callSegmentID: OPTIONAL<CallSegmentID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "resourceAddress": (_el: _Element): void => { resourceAddress = _decode_ConnectToResourceArg_resourceAddress(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); },

@@ -44,7 +44,7 @@ export function _decode_DpSpecificInfoAlt_collectedInfoSpecificInfo (el: _Elemen
     if (!_cached_decoder_for_DpSpecificInfoAlt_collectedInfoSpecificInfo) {
         _cached_decoder_for_DpSpecificInfoAlt_collectedInfoSpecificInfo = function (el: _Element): DpSpecificInfoAlt_collectedInfoSpecificInfo {
     let calledPartyNumber: OPTIONAL<CalledPartyNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "calledPartyNumber": (_el: _Element): void => { calledPartyNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); }
     };

@@ -147,7 +147,7 @@ function _decode_ConnectSMSArg (el: _Element): ConnectSMSArg {
     let destinationSubscriberNumber: OPTIONAL<CalledPartyBCDNumber>;
     let sMSCAddress: OPTIONAL<ISDN_AddressString>;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callingPartysNumber": (_el: _Element): void => { callingPartysNumber = $._decode_implicit<SMS_AddressString>(() => _decode_SMS_AddressString)(_el); },
         "destinationSubscriberNumber": (_el: _Element): void => { destinationSubscriberNumber = $._decode_implicit<CalledPartyBCDNumber>(() => _decode_CalledPartyBCDNumber)(_el); },

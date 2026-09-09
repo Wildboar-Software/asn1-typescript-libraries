@@ -38,7 +38,7 @@ let _cached_decoder_for_MetDPCriterionAlt: $.ASN1Decoder<MetDPCriterionAlt> | nu
 export function _decode_MetDPCriterionAlt (el: _Element): MetDPCriterionAlt {
     if (!_cached_decoder_for_MetDPCriterionAlt) {
         _cached_decoder_for_MetDPCriterionAlt = function (el: _Element): MetDPCriterionAlt {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
 
     };

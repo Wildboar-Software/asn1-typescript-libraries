@@ -298,7 +298,7 @@ function _decode_ConnectArg (el: _Element): ConnectArg {
     let naOliInfo: OPTIONAL<NAOliInfo>;
     let bor_InterrogationRequested: OPTIONAL<NULL>;
     let suppress_N_CSI: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "destinationRoutingAddress": (_el: _Element): void => { destinationRoutingAddress = $._decode_implicit<DestinationRoutingAddress>(() => _decode_DestinationRoutingAddress)(_el); },
         "alertingPattern": (_el: _Element): void => { alertingPattern = $._decode_implicit<AlertingPattern>(() => _decode_AlertingPattern)(_el); },

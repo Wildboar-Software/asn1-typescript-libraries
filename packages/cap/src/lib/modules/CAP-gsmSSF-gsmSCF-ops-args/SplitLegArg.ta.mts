@@ -137,7 +137,7 @@ function _decode_SplitLegArg (el: _Element): SplitLegArg {
     let legToBeSplit!: LegID;
     let newCallSegment: OPTIONAL<CallSegmentID>;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "legToBeSplit": (_el: _Element): void => { legToBeSplit = $._decode_explicit<LegID>(() => _decode_LegID)(_el); },
         "newCallSegment": (_el: _Element): void => { newCallSegment = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(_el); },

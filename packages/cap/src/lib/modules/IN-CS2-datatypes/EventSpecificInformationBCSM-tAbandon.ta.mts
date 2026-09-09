@@ -117,7 +117,7 @@ export
 function _decode_EventSpecificInformationBCSM_tAbandon (el: _Element): EventSpecificInformationBCSM_tAbandon {
     if (!_cached_decoder_for_EventSpecificInformationBCSM_tAbandon) { _cached_decoder_for_EventSpecificInformationBCSM_tAbandon = function (el: _Element): EventSpecificInformationBCSM_tAbandon {
     let abandonCause: OPTIONAL<Cause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "abandonCause": (_el: _Element): void => { abandonCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); }
     };

@@ -117,7 +117,7 @@ export
 function _decode_EventSpecificInformationBCSM_oAnswerSpecificInfo (el: _Element): EventSpecificInformationBCSM_oAnswerSpecificInfo {
     if (!_cached_decoder_for_EventSpecificInformationBCSM_oAnswerSpecificInfo) { _cached_decoder_for_EventSpecificInformationBCSM_oAnswerSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_oAnswerSpecificInfo {
     let backwardGVNS: OPTIONAL<BackwardGVNS>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "backwardGVNS": (_el: _Element): void => { backwardGVNS = $._decode_implicit<BackwardGVNS>(() => _decode_BackwardGVNS)(_el); }
     };

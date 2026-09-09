@@ -44,7 +44,7 @@ export function _decode_GPRSEventSpecificInformation_attachChangeOfPositionSpeci
     if (!_cached_decoder_for_GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation) {
         _cached_decoder_for_GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation = function (el: _Element): GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation {
     let locationInformationGPRS: OPTIONAL<LocationInformationGPRS>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationInformationGPRS": (_el: _Element): void => { locationInformationGPRS = $._decode_implicit<LocationInformationGPRS>(() => _decode_LocationInformationGPRS)(_el); }
     };

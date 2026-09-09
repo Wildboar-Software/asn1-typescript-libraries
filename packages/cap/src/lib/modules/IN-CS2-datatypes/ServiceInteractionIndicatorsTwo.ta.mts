@@ -231,7 +231,7 @@ function _decode_ServiceInteractionIndicatorsTwo (el: _Element): ServiceInteract
     let suppressCallTransferNotification: OPTIONAL<BOOLEAN>;
     let allowCdINNoPresentationInd: OPTIONAL<BOOLEAN>;
     let userDialogueDurationInd: OPTIONAL<BOOLEAN> = ServiceInteractionIndicatorsTwo._default_value_for_userDialogueDurationInd;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "forwardServiceInteractionInd": (_el: _Element): void => { forwardServiceInteractionInd = $._decode_implicit<ForwardServiceInteractionInd>(() => _decode_ForwardServiceInteractionInd)(_el); },
         "backwardServiceInteractionInd": (_el: _Element): void => { backwardServiceInteractionInd = $._decode_implicit<BackwardServiceInteractionInd>(() => _decode_BackwardServiceInteractionInd)(_el); },

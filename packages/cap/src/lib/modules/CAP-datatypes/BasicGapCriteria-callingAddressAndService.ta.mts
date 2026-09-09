@@ -48,7 +48,7 @@ export function _decode_BasicGapCriteria_callingAddressAndService (el: _Element)
         _cached_decoder_for_BasicGapCriteria_callingAddressAndService = function (el: _Element): BasicGapCriteria_callingAddressAndService {
     let callingAddressValue!: Digits;
     let serviceKey!: ServiceKey;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callingAddressValue": (_el: _Element): void => { callingAddressValue = $._decode_implicit<Digits>(() => _decode_Digits)(_el); },
         "serviceKey": (_el: _Element): void => { serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(_el); }

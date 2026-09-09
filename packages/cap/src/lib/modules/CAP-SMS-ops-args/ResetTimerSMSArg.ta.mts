@@ -143,7 +143,7 @@ function _decode_ResetTimerSMSArg (el: _Element): ResetTimerSMSArg {
     let timerID: OPTIONAL<TimerID> = ResetTimerSMSArg._default_value_for_timerID;
     let timervalue!: TimerValue;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "timerID": (_el: _Element): void => { timerID = $._decode_implicit<TimerID>(() => _decode_TimerID)(_el); },
         "timervalue": (_el: _Element): void => { timervalue = $._decode_implicit<TimerValue>(() => _decode_TimerValue)(_el); },

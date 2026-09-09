@@ -50,7 +50,7 @@ export function _decode_DpSpecificCriteriaAlt (el: _Element): DpSpecificCriteria
         _cached_decoder_for_DpSpecificCriteriaAlt = function (el: _Element): DpSpecificCriteriaAlt {
     let changeOfPositionControlInfo: OPTIONAL<ChangeOfPositionControlInfo>;
     let interDigitTimeout: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "changeOfPositionControlInfo": (_el: _Element): void => { changeOfPositionControlInfo = $._decode_implicit<ChangeOfPositionControlInfo>(() => _decode_ChangeOfPositionControlInfo)(_el); },
         "interDigitTimeout": (_el: _Element): void => { interDigitTimeout = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }

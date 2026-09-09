@@ -185,7 +185,7 @@ function _decode_PlayAnnouncementArg (el: _Element): PlayAnnouncementArg {
     let extensions: OPTIONAL<Extensions>;
     let callSegmentID: OPTIONAL<CallSegmentID>;
     let requestAnnouncementStartedNotification: OPTIONAL<BOOLEAN> = PlayAnnouncementArg._default_value_for_requestAnnouncementStartedNotification;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "informationToSend": (_el: _Element): void => { informationToSend = $._decode_implicit<InformationToSend>(() => _decode_InformationToSend)(_el); },
         "disconnectFromIPForbidden": (_el: _Element): void => { disconnectFromIPForbidden = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

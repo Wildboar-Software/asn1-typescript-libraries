@@ -162,7 +162,7 @@ function _decode_ApplyChargingReportGPRSArg (el: _Element): ApplyChargingReportG
     let active: OPTIONAL<BOOLEAN> = ApplyChargingReportGPRSArg._default_value_for_active;
     let pDPID: OPTIONAL<PDPID>;
     let chargingRollOver: OPTIONAL<ChargingRollOver>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "chargingResult": (_el: _Element): void => { chargingResult = $._decode_implicit<ChargingResult>(() => _decode_ChargingResult)(_el); },
         "qualityOfService": (_el: _Element): void => { qualityOfService = $._decode_implicit<QualityOfService>(() => _decode_QualityOfService)(_el); },

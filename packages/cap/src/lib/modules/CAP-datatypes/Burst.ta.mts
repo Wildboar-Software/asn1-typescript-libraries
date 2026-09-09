@@ -67,7 +67,7 @@ export function _decode_Burst (el: _Element): Burst {
     let numberOfTonesInBurst: OPTIONAL<INTEGER> = Burst._default_value_for_numberOfTonesInBurst;
     let toneDuration: OPTIONAL<INTEGER> = Burst._default_value_for_toneDuration;
     let toneInterval: OPTIONAL<INTEGER> = Burst._default_value_for_toneInterval;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "numberOfBursts": (_el: _Element): void => { numberOfBursts = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "burstInterval": (_el: _Element): void => { burstInterval = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

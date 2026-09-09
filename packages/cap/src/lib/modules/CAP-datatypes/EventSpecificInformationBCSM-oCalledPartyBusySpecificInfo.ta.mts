@@ -44,7 +44,7 @@ export function _decode_EventSpecificInformationBCSM_oCalledPartyBusySpecificInf
     if (!_cached_decoder_for_EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo) {
         _cached_decoder_for_EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo = function (el: _Element): EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo {
     let busyCause: OPTIONAL<Cause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "busyCause": (_el: _Element): void => { busyCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); }
     };

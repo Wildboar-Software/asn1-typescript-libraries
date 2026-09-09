@@ -293,7 +293,7 @@ function _decode_InitialDPGPRSArg (el: _Element): InitialDPGPRSArg {
     let gGSNAddress: OPTIONAL<GSN_Address>;
     let secondaryPDP_context: OPTIONAL<NULL>;
     let iMEI: OPTIONAL<IMEI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceKey": (_el: _Element): void => { serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(_el); },
         "gPRSEventType": (_el: _Element): void => { gPRSEventType = $._decode_implicit<GPRSEventType>(() => _decode_GPRSEventType)(_el); },

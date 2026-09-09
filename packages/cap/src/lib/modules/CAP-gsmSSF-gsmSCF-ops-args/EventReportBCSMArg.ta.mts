@@ -163,7 +163,7 @@ function _decode_EventReportBCSMArg (el: _Element): EventReportBCSMArg {
     let legID: OPTIONAL<ReceivingSideID>;
     let miscCallInfo: OPTIONAL<MiscCallInfo> = EventReportBCSMArg._default_value_for_miscCallInfo;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eventTypeBCSM": (_el: _Element): void => { eventTypeBCSM = $._decode_implicit<EventTypeBCSM>(() => _decode_EventTypeBCSM)(_el); },
         "eventSpecificInformationBCSM": (_el: _Element): void => { eventSpecificInformationBCSM = $._decode_implicit<EventSpecificInformationBCSM>(() => _decode_EventSpecificInformationBCSM)(_el); },

@@ -127,7 +127,7 @@ function _decode_ConnectGPRSArg (el: _Element): ConnectGPRSArg {
     if (!_cached_decoder_for_ConnectGPRSArg) { _cached_decoder_for_ConnectGPRSArg = function (el: _Element): ConnectGPRSArg {
     let accessPointName!: AccessPointName;
     let pdpID: OPTIONAL<PDPID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessPointName": (_el: _Element): void => { accessPointName = $._decode_implicit<AccessPointName>(() => _decode_AccessPointName)(_el); },
         "pdpID": (_el: _Element): void => { pdpID = $._decode_implicit<PDPID>(() => _decode_PDPID)(_el); }

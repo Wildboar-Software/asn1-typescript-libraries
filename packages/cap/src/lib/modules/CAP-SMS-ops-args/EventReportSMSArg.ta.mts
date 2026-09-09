@@ -153,7 +153,7 @@ function _decode_EventReportSMSArg (el: _Element): EventReportSMSArg {
     let eventSpecificInformationSMS: OPTIONAL<EventSpecificInformationSMS>;
     let miscCallInfo: OPTIONAL<MiscCallInfo> = EventReportSMSArg._default_value_for_miscCallInfo;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eventTypeSMS": (_el: _Element): void => { eventTypeSMS = $._decode_implicit<EventTypeSMS>(() => _decode_EventTypeSMS)(_el); },
         "eventSpecificInformationSMS": (_el: _Element): void => { eventSpecificInformationSMS = $._decode_implicit<EventSpecificInformationSMS>(() => _decode_EventSpecificInformationSMS)(_el); },

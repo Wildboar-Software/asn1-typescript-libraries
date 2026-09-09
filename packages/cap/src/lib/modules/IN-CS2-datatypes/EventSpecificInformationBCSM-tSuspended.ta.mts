@@ -108,7 +108,7 @@ let _cached_decoder_for_EventSpecificInformationBCSM_tSuspended: $.ASN1Decoder<E
 export
 function _decode_EventSpecificInformationBCSM_tSuspended (el: _Element): EventSpecificInformationBCSM_tSuspended {
     if (!_cached_decoder_for_EventSpecificInformationBCSM_tSuspended) { _cached_decoder_for_EventSpecificInformationBCSM_tSuspended = function (el: _Element): EventSpecificInformationBCSM_tSuspended {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

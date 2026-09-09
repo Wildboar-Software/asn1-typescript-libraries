@@ -108,7 +108,7 @@ let _cached_decoder_for_EventSpecificInformationBCSM_facilitySelectedAndAvailabl
 export
 function _decode_EventSpecificInformationBCSM_facilitySelectedAndAvailable (el: _Element): EventSpecificInformationBCSM_facilitySelectedAndAvailable {
     if (!_cached_decoder_for_EventSpecificInformationBCSM_facilitySelectedAndAvailable) { _cached_decoder_for_EventSpecificInformationBCSM_facilitySelectedAndAvailable = function (el: _Element): EventSpecificInformationBCSM_facilitySelectedAndAvailable {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

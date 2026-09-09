@@ -216,7 +216,7 @@ function _decode_EstablishTemporaryConnectionArg (el: _Element): EstablishTempor
     let chargeNumber: OPTIONAL<ChargeNumber>;
     let originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>;
     let callingPartyNumber: OPTIONAL<CallingPartyNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "assistingSSPIPRoutingAddress": (_el: _Element): void => { assistingSSPIPRoutingAddress = $._decode_implicit<AssistingSSPIPRoutingAddress>(() => _decode_AssistingSSPIPRoutingAddress)(_el); },
         "correlationID": (_el: _Element): void => { correlationID = $._decode_implicit<CorrelationID>(() => _decode_CorrelationID)(_el); },

@@ -137,7 +137,7 @@ function _decode_PlayToneArg (el: _Element): PlayToneArg {
     let legOrCallSegment!: LegOrCallSegment;
     let bursts!: Burst;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "legOrCallSegment": (_el: _Element): void => { legOrCallSegment = $._decode_implicit<LegOrCallSegment>(() => _decode_LegOrCallSegment)(_el); },
         "bursts": (_el: _Element): void => { bursts = $._decode_implicit<Burst>(() => _decode_Burst)(_el); },

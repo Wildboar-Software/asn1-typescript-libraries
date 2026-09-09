@@ -128,7 +128,7 @@ function _decode_NotificationInformation_callReleaseSpecificInfo (el: _Element):
     if (!_cached_decoder_for_NotificationInformation_callReleaseSpecificInfo) { _cached_decoder_for_NotificationInformation_callReleaseSpecificInfo = function (el: _Element): NotificationInformation_callReleaseSpecificInfo {
     let releaseCause: OPTIONAL<Cause>;
     let timeStamp: OPTIONAL<DateAndTime>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "releaseCause": (_el: _Element): void => { releaseCause = $._decode_implicit<Cause>(() => _decode_Cause)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_implicit<DateAndTime>(() => _decode_DateAndTime)(_el); }

@@ -108,7 +108,7 @@ export function _decode_ServiceInteractionIndicatorsTwo (el: _Element): ServiceI
     let holdTreatmentIndicator: OPTIONAL<OCTET_STRING>;
     let cwTreatmentIndicator: OPTIONAL<OCTET_STRING>;
     let ectTreatmentIndicator: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "forwardServiceInteractionInd": (_el: _Element): void => { forwardServiceInteractionInd = $._decode_implicit<ForwardServiceInteractionInd>(() => _decode_ForwardServiceInteractionInd)(_el); },
         "backwardServiceInteractionInd": (_el: _Element): void => { backwardServiceInteractionInd = $._decode_implicit<BackwardServiceInteractionInd>(() => _decode_BackwardServiceInteractionInd)(_el); },

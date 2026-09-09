@@ -153,7 +153,7 @@ function _decode_EventReportGPRSArg (el: _Element): EventReportGPRSArg {
     let miscGPRSInfo: OPTIONAL<MiscCallInfo> = EventReportGPRSArg._default_value_for_miscGPRSInfo;
     let gPRSEventSpecificInformation: OPTIONAL<GPRSEventSpecificInformation>;
     let pDPID: OPTIONAL<PDPID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gPRSEventType": (_el: _Element): void => { gPRSEventType = $._decode_implicit<GPRSEventType>(() => _decode_GPRSEventType)(_el); },
         "miscGPRSInfo": (_el: _Element): void => { miscGPRSInfo = $._decode_implicit<MiscCallInfo>(() => _decode_MiscCallInfo)(_el); },

@@ -147,7 +147,7 @@ function _decode_InitiateCallAttemptRes (el: _Element): InitiateCallAttemptRes {
     let offeredCamel4Functionalities: OPTIONAL<OfferedCamel4Functionalities>;
     let extensions: OPTIONAL<Extensions>;
     let releaseCallArgExtensionAllowed: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "supportedCamelPhases": (_el: _Element): void => { supportedCamelPhases = $._decode_implicit<SupportedCamelPhases>(() => _decode_SupportedCamelPhases)(_el); },
         "offeredCamel4Functionalities": (_el: _Element): void => { offeredCamel4Functionalities = $._decode_implicit<OfferedCamel4Functionalities>(() => _decode_OfferedCamel4Functionalities)(_el); },

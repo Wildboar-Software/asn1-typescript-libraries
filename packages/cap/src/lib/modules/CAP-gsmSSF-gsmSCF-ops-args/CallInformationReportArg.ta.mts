@@ -144,7 +144,7 @@ function _decode_CallInformationReportArg (el: _Element): CallInformationReportA
     let requestedInformationList!: RequestedInformationList;
     let extensions: OPTIONAL<Extensions>;
     let legID: OPTIONAL<ReceivingSideID> = CallInformationReportArg._default_value_for_legID;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestedInformationList": (_el: _Element): void => { requestedInformationList = $._decode_implicit<RequestedInformationList>(() => _decode_RequestedInformationList)(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); },

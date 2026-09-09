@@ -108,7 +108,7 @@ let _cached_decoder_for_EventSpecificInformationBCSM_origAttemptAuthorized: $.AS
 export
 function _decode_EventSpecificInformationBCSM_origAttemptAuthorized (el: _Element): EventSpecificInformationBCSM_origAttemptAuthorized {
     if (!_cached_decoder_for_EventSpecificInformationBCSM_origAttemptAuthorized) { _cached_decoder_for_EventSpecificInformationBCSM_origAttemptAuthorized = function (el: _Element): EventSpecificInformationBCSM_origAttemptAuthorized {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

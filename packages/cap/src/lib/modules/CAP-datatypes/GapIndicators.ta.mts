@@ -48,7 +48,7 @@ export function _decode_GapIndicators (el: _Element): GapIndicators {
         _cached_decoder_for_GapIndicators = function (el: _Element): GapIndicators {
     let duration!: Duration;
     let gapInterval!: Interval;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "duration": (_el: _Element): void => { duration = $._decode_implicit<Duration>(() => _decode_Duration)(_el); },
         "gapInterval": (_el: _Element): void => { gapInterval = $._decode_implicit<Interval>(() => _decode_Interval)(_el); }

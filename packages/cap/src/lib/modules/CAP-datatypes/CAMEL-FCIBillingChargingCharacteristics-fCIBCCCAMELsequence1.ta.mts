@@ -61,7 +61,7 @@ export function _decode_CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELseque
     let freeFormatData!: OCTET_STRING;
     let partyToCharge: OPTIONAL<SendingSideID> = CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1._default_value_for_partyToCharge;
     let appendFreeFormatData: OPTIONAL<AppendFreeFormatData> = CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1._default_value_for_appendFreeFormatData;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "freeFormatData": (_el: _Element): void => { freeFormatData = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "partyToCharge": (_el: _Element): void => { partyToCharge = $._decode_explicit<SendingSideID>(() => _decode_SendingSideID)(_el); },

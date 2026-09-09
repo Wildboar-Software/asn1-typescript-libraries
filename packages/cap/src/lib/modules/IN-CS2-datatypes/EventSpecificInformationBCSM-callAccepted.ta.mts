@@ -108,7 +108,7 @@ let _cached_decoder_for_EventSpecificInformationBCSM_callAccepted: $.ASN1Decoder
 export
 function _decode_EventSpecificInformationBCSM_callAccepted (el: _Element): EventSpecificInformationBCSM_callAccepted {
     if (!_cached_decoder_for_EventSpecificInformationBCSM_callAccepted) { _cached_decoder_for_EventSpecificInformationBCSM_callAccepted = function (el: _Element): EventSpecificInformationBCSM_callAccepted {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

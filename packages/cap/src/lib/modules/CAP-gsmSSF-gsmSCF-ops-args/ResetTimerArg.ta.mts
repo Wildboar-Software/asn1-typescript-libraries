@@ -153,7 +153,7 @@ function _decode_ResetTimerArg (el: _Element): ResetTimerArg {
     let timervalue!: TimerValue;
     let extensions: OPTIONAL<Extensions>;
     let callSegmentID: OPTIONAL<CallSegmentID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "timerID": (_el: _Element): void => { timerID = $._decode_implicit<TimerID>(() => _decode_TimerID)(_el); },
         "timervalue": (_el: _Element): void => { timervalue = $._decode_implicit<TimerValue>(() => _decode_TimerValue)(_el); },

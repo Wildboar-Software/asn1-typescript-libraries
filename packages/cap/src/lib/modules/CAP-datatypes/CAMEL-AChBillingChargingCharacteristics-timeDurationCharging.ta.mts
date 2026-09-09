@@ -66,7 +66,7 @@ export function _decode_CAMEL_AChBillingChargingCharacteristics_timeDurationChar
     let tariffSwitchInterval: OPTIONAL<INTEGER>;
     let audibleIndicator: OPTIONAL<AudibleIndicator> = CAMEL_AChBillingChargingCharacteristics_timeDurationCharging._default_value_for_audibleIndicator;
     let extensions: OPTIONAL<Extensions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "maxCallPeriodDuration": (_el: _Element): void => { maxCallPeriodDuration = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "releaseIfdurationExceeded": (_el: _Element): void => { releaseIfdurationExceeded = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

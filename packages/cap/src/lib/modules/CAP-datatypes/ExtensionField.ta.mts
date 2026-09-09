@@ -58,7 +58,7 @@ export function _decode_ExtensionField (el: _Element): ExtensionField {
     let type_!: Code;
     let criticality: OPTIONAL<CriticalityType> = ExtensionField._default_value_for_criticality;
     let value!: _Element;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "type": (_el: _Element): void => { type_ = _decode_Code(_el); },
         "criticality": (_el: _Element): void => { criticality = _decode_CriticalityType(_el); },

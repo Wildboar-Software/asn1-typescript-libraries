@@ -67,7 +67,7 @@ export function _decode_EventSpecificInformationBCSM_tAnswerSpecificInfo (el: _E
     let chargeIndicator: OPTIONAL<ChargeIndicator>;
     let ext_basicServiceCode: OPTIONAL<Ext_BasicServiceCode>;
     let ext_basicServiceCode2: OPTIONAL<Ext_BasicServiceCode>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "destinationAddress": (_el: _Element): void => { destinationAddress = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); },
         "or-Call": (_el: _Element): void => { or_Call = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

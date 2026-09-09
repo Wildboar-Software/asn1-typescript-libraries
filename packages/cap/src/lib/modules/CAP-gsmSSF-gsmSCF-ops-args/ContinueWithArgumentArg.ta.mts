@@ -248,7 +248,7 @@ function _decode_ContinueWithArgumentArg (el: _Element): ContinueWithArgumentArg
     let bor_InterrogationRequested: OPTIONAL<NULL>;
     let suppress_O_CSI: OPTIONAL<NULL>;
     let continueWithArgumentArgExtension: OPTIONAL<ContinueWithArgumentArgExtension>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "alertingPattern": (_el: _Element): void => { alertingPattern = $._decode_implicit<AlertingPattern>(() => _decode_AlertingPattern)(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); },

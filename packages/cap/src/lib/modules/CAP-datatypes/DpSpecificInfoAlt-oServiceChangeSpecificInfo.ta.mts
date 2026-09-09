@@ -59,7 +59,7 @@ export function _decode_DpSpecificInfoAlt_oServiceChangeSpecificInfo (el: _Eleme
     let ext_basicServiceCode: OPTIONAL<Ext_BasicServiceCode>;
     let initiatorOfServiceChange: OPTIONAL<InitiatorOfServiceChange>;
     let natureOfServiceChange: OPTIONAL<NatureOfServiceChange>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ext-basicServiceCode": (_el: _Element): void => { ext_basicServiceCode = $._decode_explicit<Ext_BasicServiceCode>(() => _decode_Ext_BasicServiceCode)(_el); },
         "initiatorOfServiceChange": (_el: _Element): void => { initiatorOfServiceChange = $._decode_implicit<InitiatorOfServiceChange>(() => _decode_InitiatorOfServiceChange)(_el); },

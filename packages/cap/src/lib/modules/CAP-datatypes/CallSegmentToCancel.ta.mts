@@ -49,7 +49,7 @@ export function _decode_CallSegmentToCancel (el: _Element): CallSegmentToCancel 
         _cached_decoder_for_CallSegmentToCancel = function (el: _Element): CallSegmentToCancel {
     let invokeID: OPTIONAL<InvokeID>;
     let callSegmentID: OPTIONAL<CallSegmentID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "invokeID": (_el: _Element): void => { invokeID = $._decode_implicit<InvokeID>(() => _decode_InvokeID)(_el); },
         "callSegmentID": (_el: _Element): void => { callSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(_el); }

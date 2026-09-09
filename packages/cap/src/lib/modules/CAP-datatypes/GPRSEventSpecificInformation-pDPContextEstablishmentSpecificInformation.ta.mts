@@ -77,7 +77,7 @@ export function _decode_GPRSEventSpecificInformation_pDPContextEstablishmentSpec
     let timeAndTimeZone: OPTIONAL<TimeAndTimezone>;
     let pDPInitiationType: OPTIONAL<PDPInitiationType>;
     let secondaryPDP_context: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessPointName": (_el: _Element): void => { accessPointName = $._decode_implicit<AccessPointName>(() => _decode_AccessPointName)(_el); },
         "endUserAddress": (_el: _Element): void => { endUserAddress = $._decode_implicit<EndUserAddress>(() => _decode_EndUserAddress)(_el); },

@@ -75,7 +75,7 @@ export function _decode_GPRSEventSpecificInformation_pdp_ContextchangeOfPosition
     let qualityOfService: OPTIONAL<QualityOfService>;
     let timeAndTimeZone: OPTIONAL<TimeAndTimezone>;
     let gGSNAddress: OPTIONAL<GSN_Address>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessPointName": (_el: _Element): void => { accessPointName = $._decode_implicit<AccessPointName>(() => _decode_AccessPointName)(_el); },
         "chargingID": (_el: _Element): void => { chargingID = $._decode_implicit<GPRSChargingID>(() => _decode_GPRSChargingID)(_el); },

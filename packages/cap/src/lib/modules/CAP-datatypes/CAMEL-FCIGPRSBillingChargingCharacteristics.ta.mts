@@ -48,7 +48,7 @@ export function _decode_CAMEL_FCIGPRSBillingChargingCharacteristics (el: _Elemen
     if (!_cached_decoder_for_CAMEL_FCIGPRSBillingChargingCharacteristics) {
         _cached_decoder_for_CAMEL_FCIGPRSBillingChargingCharacteristics = function (el: _Element): CAMEL_FCIGPRSBillingChargingCharacteristics {
     let fCIBCCCAMELsequence1!: CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "fCIBCCCAMELsequence1": (_el: _Element): void => { fCIBCCCAMELsequence1 = $._decode_implicit<CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1>(() => _decode_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1)(_el); }
     };

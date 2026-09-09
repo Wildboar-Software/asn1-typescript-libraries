@@ -50,7 +50,7 @@ export function _decode_RequestedInformation (el: _Element): RequestedInformatio
         _cached_decoder_for_RequestedInformation = function (el: _Element): RequestedInformation {
     let requestedInformationType!: RequestedInformationType;
     let requestedInformationValue!: RequestedInformationValue;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestedInformationType": (_el: _Element): void => { requestedInformationType = $._decode_implicit<RequestedInformationType>(() => _decode_RequestedInformationType)(_el); },
         "requestedInformationValue": (_el: _Element): void => { requestedInformationValue = $._decode_explicit<RequestedInformationValue>(() => _decode_RequestedInformationValue)(_el); }

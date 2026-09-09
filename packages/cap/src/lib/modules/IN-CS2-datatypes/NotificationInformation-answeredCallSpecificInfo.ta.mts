@@ -117,7 +117,7 @@ export
 function _decode_NotificationInformation_answeredCallSpecificInfo (el: _Element): NotificationInformation_answeredCallSpecificInfo {
     if (!_cached_decoder_for_NotificationInformation_answeredCallSpecificInfo) { _cached_decoder_for_NotificationInformation_answeredCallSpecificInfo = function (el: _Element): NotificationInformation_answeredCallSpecificInfo {
     let timeStamp: OPTIONAL<DateAndTime>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_implicit<DateAndTime>(() => _decode_DateAndTime)(_el); }
     };

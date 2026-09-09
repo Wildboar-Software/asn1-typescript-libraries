@@ -45,7 +45,7 @@ export function _decode_EventSpecificInformationBCSM_oAbandonSpecificInfo (el: _
     if (!_cached_decoder_for_EventSpecificInformationBCSM_oAbandonSpecificInfo) {
         _cached_decoder_for_EventSpecificInformationBCSM_oAbandonSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_oAbandonSpecificInfo {
     let routeNotPermitted: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "routeNotPermitted": (_el: _Element): void => { routeNotPermitted = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }
     };

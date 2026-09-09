@@ -39,7 +39,7 @@ let _cached_decoder_for_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo:
 export function _decode_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo (el: _Element): EventSpecificInformationSMS_o_smsSubmissionSpecificInfo {
     if (!_cached_decoder_for_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo) {
         _cached_decoder_for_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo = function (el: _Element): EventSpecificInformationSMS_o_smsSubmissionSpecificInfo {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
 
     };

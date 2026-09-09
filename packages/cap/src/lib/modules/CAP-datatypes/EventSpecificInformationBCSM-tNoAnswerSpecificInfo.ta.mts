@@ -49,7 +49,7 @@ export function _decode_EventSpecificInformationBCSM_tNoAnswerSpecificInfo (el: 
         _cached_decoder_for_EventSpecificInformationBCSM_tNoAnswerSpecificInfo = function (el: _Element): EventSpecificInformationBCSM_tNoAnswerSpecificInfo {
     let callForwarded: OPTIONAL<NULL>;
     let forwardingDestinationNumber: OPTIONAL<CalledPartyNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "callForwarded": (_el: _Element): void => { callForwarded = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "forwardingDestinationNumber": (_el: _Element): void => { forwardingDestinationNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); }
