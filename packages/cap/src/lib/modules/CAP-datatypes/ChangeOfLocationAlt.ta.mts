@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -64,7 +58,7 @@ export function _decode_ChangeOfLocationAlt (el: _Element): ChangeOfLocationAlt 
 let _cached_encoder_for_ChangeOfLocationAlt: $.ASN1Encoder<ChangeOfLocationAlt> | null = null;
 export function _encode_ChangeOfLocationAlt (value: ChangeOfLocationAlt, elGetter: $.ASN1Encoder<ChangeOfLocationAlt>): _Element {
     if (!_cached_encoder_for_ChangeOfLocationAlt) {
-        _cached_encoder_for_ChangeOfLocationAlt = function (value: ChangeOfLocationAlt, elGetter: $.ASN1Encoder<ChangeOfLocationAlt>): _Element {
+        _cached_encoder_for_ChangeOfLocationAlt = function (value: ChangeOfLocationAlt): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
 

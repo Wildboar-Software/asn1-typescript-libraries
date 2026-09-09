@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -73,7 +69,7 @@ export function _decode_ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch (el: _Elem
 let _cached_encoder_for_ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch: $.ASN1Encoder<ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch> | null = null;
 export function _encode_ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch (value: ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch, elGetter: $.ASN1Encoder<ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch>): _Element {
     if (!_cached_encoder_for_ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch) {
-        _cached_encoder_for_ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch = function (value: ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch, elGetter: $.ASN1Encoder<ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch>): _Element {
+        _cached_encoder_for_ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch = function (value: ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.rO_TimeGPRSSinceLastTariffSwitch === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.rO_TimeGPRSSinceLastTariffSwitch, $.BER)),

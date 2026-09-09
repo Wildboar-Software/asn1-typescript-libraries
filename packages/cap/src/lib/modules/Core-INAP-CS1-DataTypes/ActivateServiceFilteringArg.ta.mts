@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -170,12 +115,12 @@ class ActivateServiceFilteringArg {
  */
 export
 const _root_component_type_list_1_spec_for_ActivateServiceFilteringArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("filteredCallTreatment", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("filteringCharacteristics", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("filteringTimeOut", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("filteringCriteria", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("startTime", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 5), undefined, undefined)
+    new $.ComponentSpec("filteredCallTreatment", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("filteringCharacteristics", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("filteringTimeOut", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("filteringCriteria", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("startTime", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 5))
 ];
 
 /**
@@ -258,7 +203,7 @@ let _cached_encoder_for_ActivateServiceFilteringArg: $.ASN1Encoder<ActivateServi
  */
 export
 function _encode_ActivateServiceFilteringArg (value: ActivateServiceFilteringArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ActivateServiceFilteringArg) { _cached_encoder_for_ActivateServiceFilteringArg = function (value: ActivateServiceFilteringArg, elGetter: $.ASN1Encoder<ActivateServiceFilteringArg>): _Element {
+    if (!_cached_encoder_for_ActivateServiceFilteringArg) { _cached_encoder_for_ActivateServiceFilteringArg = function (value: ActivateServiceFilteringArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_FilteredCallTreatment, $.BER)(value.filteredCallTreatment, $.BER),

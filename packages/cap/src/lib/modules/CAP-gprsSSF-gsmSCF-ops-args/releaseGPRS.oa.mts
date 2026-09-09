@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { ReleaseGPRSArg, _decode_ReleaseGPRSArg, _encode_ReleaseGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/ReleaseGPRSArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";

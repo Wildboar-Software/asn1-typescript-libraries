@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { CallInformationRequestArg, _decode_CallInformationRequestArg, _encode_CallInformationRequestArg } from "../CAP-gsmSSF-gsmSCF-ops-args/CallInformationRequestArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { parameterOutOfRange } from "../CAP-errortypes/parameterOutOfRange.oa.mjs";

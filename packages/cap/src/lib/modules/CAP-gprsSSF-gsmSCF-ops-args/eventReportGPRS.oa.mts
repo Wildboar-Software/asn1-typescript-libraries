@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { EventReportGPRSArg, _decode_EventReportGPRSArg, _encode_EventReportGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/EventReportGPRSArg.ta.mjs";
 import { unknownPDPID } from "../CAP-errortypes/unknownPDPID.oa.mjs";
 import { opcode_eventReportGPRS } from "../CAP-operationcodes/opcode-eventReportGPRS.va.mjs";

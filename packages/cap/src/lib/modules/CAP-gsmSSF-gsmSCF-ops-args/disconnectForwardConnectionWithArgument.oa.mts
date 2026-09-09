@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { DisconnectForwardConnectionWithArgumentArg, _decode_DisconnectForwardConnectionWithArgumentArg, _encode_DisconnectForwardConnectionWithArgumentArg } from "../CAP-gsmSSF-gsmSCF-ops-args/DisconnectForwardConnectionWithArgumentArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { systemFailure } from "../CAP-errortypes/systemFailure.oa.mjs";

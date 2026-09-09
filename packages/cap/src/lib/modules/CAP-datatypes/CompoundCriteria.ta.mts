@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -74,7 +69,7 @@ export function _decode_CompoundCriteria (el: _Element): CompoundCriteria {
 let _cached_encoder_for_CompoundCriteria: $.ASN1Encoder<CompoundCriteria> | null = null;
 export function _encode_CompoundCriteria (value: CompoundCriteria, elGetter: $.ASN1Encoder<CompoundCriteria>): _Element {
     if (!_cached_encoder_for_CompoundCriteria) {
-        _cached_encoder_for_CompoundCriteria = function (value: CompoundCriteria, elGetter: $.ASN1Encoder<CompoundCriteria>): _Element {
+        _cached_encoder_for_CompoundCriteria = function (value: CompoundCriteria): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_BasicGapCriteria, $.BER)(value.basicGapCriteria, $.BER),

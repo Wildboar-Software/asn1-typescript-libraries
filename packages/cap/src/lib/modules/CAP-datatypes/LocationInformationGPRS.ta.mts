@@ -1,8 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
     NULL,
     ASN1Element as _Element,
@@ -119,7 +116,7 @@ export function _decode_LocationInformationGPRS (el: _Element): LocationInformat
 let _cached_encoder_for_LocationInformationGPRS: $.ASN1Encoder<LocationInformationGPRS> | null = null;
 export function _encode_LocationInformationGPRS (value: LocationInformationGPRS, elGetter: $.ASN1Encoder<LocationInformationGPRS>): _Element {
     if (!_cached_encoder_for_LocationInformationGPRS) {
-        _cached_encoder_for_LocationInformationGPRS = function (value: LocationInformationGPRS, elGetter: $.ASN1Encoder<LocationInformationGPRS>): _Element {
+        _cached_encoder_for_LocationInformationGPRS = function (value: LocationInformationGPRS): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.cellGlobalIdOrServiceAreaIdOrLAI === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.cellGlobalIdOrServiceAreaIdOrLAI, $.BER)),

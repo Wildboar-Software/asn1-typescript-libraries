@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { InitiateCallAttemptArg, _decode_InitiateCallAttemptArg, _encode_InitiateCallAttemptArg } from "../CAP-gsmSSF-gsmSCF-ops-args/InitiateCallAttemptArg.ta.mjs";
 import { InitiateCallAttemptRes, _decode_InitiateCallAttemptRes, _encode_InitiateCallAttemptRes } from "../CAP-gsmSSF-gsmSCF-ops-args/InitiateCallAttemptRes.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";

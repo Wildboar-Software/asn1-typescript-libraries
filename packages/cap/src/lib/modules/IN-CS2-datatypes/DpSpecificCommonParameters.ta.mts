@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -82,13 +27,13 @@ import { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS2
 // export { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS2-datatypes/IPAvailable.ta.mjs";
 import { ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-CS2-datatypes/ISDNAccessRelatedInformation.ta.mjs";
 // export { ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-CS2-datatypes/ISDNAccessRelatedInformation.ta.mjs";
-import { CGEncountered, _enum_for_CGEncountered, CGEncountered_noCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, noCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_manualCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, manualCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_scpOverload /* IMPORTED_LONG_ENUMERATION_ITEM */, scpOverload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CGEncountered, _encode_CGEncountered } from "../IN-CS2-datatypes/CGEncountered.ta.mjs";
+import { CGEncountered, _enum_for_CGEncountered, _decode_CGEncountered, _encode_CGEncountered } from "../IN-CS2-datatypes/CGEncountered.ta.mjs";
 // export { CGEncountered, _enum_for_CGEncountered, CGEncountered_noCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, noCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_manualCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, manualCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_scpOverload /* IMPORTED_LONG_ENUMERATION_ITEM */, scpOverload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CGEncountered, _encode_CGEncountered } from "../IN-CS2-datatypes/CGEncountered.ta.mjs";
 import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
 // export { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
 import { ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS2-datatypes/ServiceProfileIdentifier.ta.mjs";
 // export { ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS2-datatypes/ServiceProfileIdentifier.ta.mjs";
-import { TerminalType, _enum_for_TerminalType, TerminalType_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_dialPulse /* IMPORTED_LONG_ENUMERATION_ITEM */, dialPulse /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_dtmf /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmf /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_isdn /* IMPORTED_LONG_ENUMERATION_ITEM */, isdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_isdnNoDtmf /* IMPORTED_LONG_ENUMERATION_ITEM */, isdnNoDtmf /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_spare /* IMPORTED_LONG_ENUMERATION_ITEM */, spare /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TerminalType, _encode_TerminalType } from "../IN-CS2-datatypes/TerminalType.ta.mjs";
+import { TerminalType, _enum_for_TerminalType, _decode_TerminalType, _encode_TerminalType } from "../IN-CS2-datatypes/TerminalType.ta.mjs";
 // export { TerminalType, _enum_for_TerminalType, TerminalType_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_dialPulse /* IMPORTED_LONG_ENUMERATION_ITEM */, dialPulse /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_dtmf /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmf /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_isdn /* IMPORTED_LONG_ENUMERATION_ITEM */, isdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_isdnNoDtmf /* IMPORTED_LONG_ENUMERATION_ITEM */, isdnNoDtmf /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_spare /* IMPORTED_LONG_ENUMERATION_ITEM */, spare /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TerminalType, _encode_TerminalType } from "../IN-CS2-datatypes/TerminalType.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
@@ -337,28 +282,28 @@ class DpSpecificCommonParameters {
  */
 export
 const _root_component_type_list_1_spec_for_DpSpecificCommonParameters: $.ComponentSpec[] = [
-    new $.ComponentSpec("serviceAddressInformation", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("bearerCapability", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("calledPartyNumber", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("iPSSPCapabilities", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("iPAvailable", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("iSDNAccessRelatedInformation", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("cGEncountered", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("locationNumber", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("serviceProfileIdentifier", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("terminalType", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("chargeNumber", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("servingAreaID", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("serviceInteractionIndicators", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("iNServiceCompatibilityIndication", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("serviceInteractionIndicatorsTwo", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("uSIServiceIndicator", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("uSIInformation", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("forwardGVNS", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("createdCallSegmentAssociation", true, $.hasTag(_TagClass.context, 21), undefined, undefined)
+    new $.ComponentSpec("serviceAddressInformation", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("bearerCapability", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("calledPartyNumber", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("iPSSPCapabilities", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("iPAvailable", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("iSDNAccessRelatedInformation", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("cGEncountered", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("locationNumber", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("serviceProfileIdentifier", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("terminalType", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("chargeNumber", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("servingAreaID", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("serviceInteractionIndicators", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("iNServiceCompatibilityIndication", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("serviceInteractionIndicatorsTwo", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("uSIServiceIndicator", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("uSIInformation", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("forwardGVNS", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("createdCallSegmentAssociation", true, $.hasTag(_TagClass.context, 21))
 ];
 
 /**
@@ -491,7 +436,7 @@ let _cached_encoder_for_DpSpecificCommonParameters: $.ASN1Encoder<DpSpecificComm
  */
 export
 function _encode_DpSpecificCommonParameters (value: DpSpecificCommonParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DpSpecificCommonParameters) { _cached_encoder_for_DpSpecificCommonParameters = function (value: DpSpecificCommonParameters, elGetter: $.ASN1Encoder<DpSpecificCommonParameters>): _Element {
+    if (!_cached_encoder_for_DpSpecificCommonParameters) { _cached_encoder_for_DpSpecificCommonParameters = function (value: DpSpecificCommonParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ServiceAddressInformation, $.BER)(value.serviceAddressInformation, $.BER),

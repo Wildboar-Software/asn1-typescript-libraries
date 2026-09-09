@@ -1,14 +1,7 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
 import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
 
 /**

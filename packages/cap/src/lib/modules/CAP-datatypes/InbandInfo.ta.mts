@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -89,7 +85,7 @@ export function _decode_InbandInfo (el: _Element): InbandInfo {
 let _cached_encoder_for_InbandInfo: $.ASN1Encoder<InbandInfo> | null = null;
 export function _encode_InbandInfo (value: InbandInfo, elGetter: $.ASN1Encoder<InbandInfo>): _Element {
     if (!_cached_encoder_for_InbandInfo) {
-        _cached_encoder_for_InbandInfo = function (value: InbandInfo, elGetter: $.ASN1Encoder<InbandInfo>): _Element {
+        _cached_encoder_for_InbandInfo = function (value: InbandInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_MessageID, $.BER)(value.messageID, $.BER),

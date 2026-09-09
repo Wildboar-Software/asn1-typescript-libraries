@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimerID, _enum_for_TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, tssf /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID } from "../Core-INAP-CS1-DataTypes/TimerID.ta.mjs";
+import { TimerID, _enum_for_TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID } from "../Core-INAP-CS1-DataTypes/TimerID.ta.mjs";
 // export { TimerID, _enum_for_TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, tssf /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID } from "../Core-INAP-CS1-DataTypes/TimerID.ta.mjs";
 import { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../Core-INAP-CS1-DataTypes/TimerValue.ta.mjs";
 // export { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../Core-INAP-CS1-DataTypes/TimerValue.ta.mjs";
@@ -155,9 +100,9 @@ class ResetTimerArg {
  */
 export
 const _root_component_type_list_1_spec_for_ResetTimerArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("timerID", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("timervalue", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("timerID", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("timervalue", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -231,7 +176,7 @@ let _cached_encoder_for_ResetTimerArg: $.ASN1Encoder<ResetTimerArg> | null = nul
  */
 export
 function _encode_ResetTimerArg (value: ResetTimerArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResetTimerArg) { _cached_encoder_for_ResetTimerArg = function (value: ResetTimerArg, elGetter: $.ASN1Encoder<ResetTimerArg>): _Element {
+    if (!_cached_encoder_for_ResetTimerArg) { _cached_encoder_for_ResetTimerArg = function (value: ResetTimerArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.timerID === undefined || $.deepEq(value.timerID, ResetTimerArg._default_value_for_timerID) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_TimerID, $.BER)(value.timerID, $.BER)),

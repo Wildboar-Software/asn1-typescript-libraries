@@ -1,9 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -115,7 +111,7 @@ export function _decode_GPRSEventSpecificInformation_pDPContextEstablishmentSpec
 let _cached_encoder_for_GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation: $.ASN1Encoder<GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation> | null = null;
 export function _encode_GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation (value: GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation, elGetter: $.ASN1Encoder<GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation>): _Element {
     if (!_cached_encoder_for_GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation) {
-        _cached_encoder_for_GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation = function (value: GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation, elGetter: $.ASN1Encoder<GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation>): _Element {
+        _cached_encoder_for_GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation = function (value: GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.accessPointName === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AccessPointName, $.BER)(value.accessPointName, $.BER)),

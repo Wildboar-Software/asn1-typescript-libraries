@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -77,7 +73,7 @@ export function _decode_Tone (el: _Element): Tone {
 let _cached_encoder_for_Tone: $.ASN1Encoder<Tone> | null = null;
 export function _encode_Tone (value: Tone, elGetter: $.ASN1Encoder<Tone>): _Element {
     if (!_cached_encoder_for_Tone) {
-        _cached_encoder_for_Tone = function (value: Tone, elGetter: $.ASN1Encoder<Tone>): _Element {
+        _cached_encoder_for_Tone = function (value: Tone): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.toneID, $.BER),

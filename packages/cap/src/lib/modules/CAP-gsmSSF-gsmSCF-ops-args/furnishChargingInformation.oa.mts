@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { FurnishChargingInformationArg, _decode_FurnishChargingInformationArg, _encode_FurnishChargingInformationArg } from "../CAP-gsmSSF-gsmSCF-ops-args/FurnishChargingInformationArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";

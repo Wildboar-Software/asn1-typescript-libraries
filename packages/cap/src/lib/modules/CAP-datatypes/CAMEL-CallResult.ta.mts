@@ -1,15 +1,8 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { leg1 } from "../Core-INAP-CS1-DataTypes/leg1.va.mjs";
 import { CAMEL_CallResult_timeDurationChargingResult, _decode_CAMEL_CallResult_timeDurationChargingResult, _encode_CAMEL_CallResult_timeDurationChargingResult } from "./CAMEL-CallResult-timeDurationChargingResult.ta.mjs";
 
 /**

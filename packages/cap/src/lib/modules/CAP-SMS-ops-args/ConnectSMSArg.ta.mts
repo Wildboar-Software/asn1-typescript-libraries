@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -155,10 +100,10 @@ class ConnectSMSArg {
  */
 export
 const _root_component_type_list_1_spec_for_ConnectSMSArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("callingPartysNumber", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("destinationSubscriberNumber", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("sMSCAddress", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("callingPartysNumber", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("destinationSubscriberNumber", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("sMSCAddress", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10))
 ];
 
 /**
@@ -237,7 +182,7 @@ let _cached_encoder_for_ConnectSMSArg: $.ASN1Encoder<ConnectSMSArg> | null = nul
  */
 export
 function _encode_ConnectSMSArg (value: ConnectSMSArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConnectSMSArg) { _cached_encoder_for_ConnectSMSArg = function (value: ConnectSMSArg, elGetter: $.ASN1Encoder<ConnectSMSArg>): _Element {
+    if (!_cached_encoder_for_ConnectSMSArg) { _cached_encoder_for_ConnectSMSArg = function (value: ConnectSMSArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.callingPartysNumber === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_SMS_AddressString, $.BER)(value.callingPartysNumber, $.BER)),

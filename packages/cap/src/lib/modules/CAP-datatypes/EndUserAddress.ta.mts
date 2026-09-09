@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -80,7 +76,7 @@ export function _decode_EndUserAddress (el: _Element): EndUserAddress {
 let _cached_encoder_for_EndUserAddress: $.ASN1Encoder<EndUserAddress> | null = null;
 export function _encode_EndUserAddress (value: EndUserAddress, elGetter: $.ASN1Encoder<EndUserAddress>): _Element {
     if (!_cached_encoder_for_EndUserAddress) {
-        _cached_encoder_for_EndUserAddress = function (value: EndUserAddress, elGetter: $.ASN1Encoder<EndUserAddress>): _Element {
+        _cached_encoder_for_EndUserAddress = function (value: EndUserAddress): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.pDPTypeOrganization, $.BER),

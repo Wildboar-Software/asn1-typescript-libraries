@@ -1,9 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -101,7 +97,7 @@ export function _decode_BCSMEvent (el: _Element): BCSMEvent {
 let _cached_encoder_for_BCSMEvent: $.ASN1Encoder<BCSMEvent> | null = null;
 export function _encode_BCSMEvent (value: BCSMEvent, elGetter: $.ASN1Encoder<BCSMEvent>): _Element {
     if (!_cached_encoder_for_BCSMEvent) {
-        _cached_encoder_for_BCSMEvent = function (value: BCSMEvent, elGetter: $.ASN1Encoder<BCSMEvent>): _Element {
+        _cached_encoder_for_BCSMEvent = function (value: BCSMEvent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_EventTypeBCSM, $.BER)(value.eventTypeBCSM, $.BER),

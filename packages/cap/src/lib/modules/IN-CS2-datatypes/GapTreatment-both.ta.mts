@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -133,8 +77,8 @@ class GapTreatment_both {
  */
 export
 const _root_component_type_list_1_spec_for_GapTreatment_both: $.ComponentSpec[] = [
-    new $.ComponentSpec("informationToSend", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("releaseCause", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("informationToSend", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("releaseCause", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -204,7 +148,7 @@ let _cached_encoder_for_GapTreatment_both: $.ASN1Encoder<GapTreatment_both> | nu
  */
 export
 function _encode_GapTreatment_both (value: GapTreatment_both, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GapTreatment_both) { _cached_encoder_for_GapTreatment_both = function (value: GapTreatment_both, elGetter: $.ASN1Encoder<GapTreatment_both>): _Element {
+    if (!_cached_encoder_for_GapTreatment_both) { _cached_encoder_for_GapTreatment_both = function (value: GapTreatment_both): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_InformationToSend, $.BER)(value.informationToSend, $.BER),

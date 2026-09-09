@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -80,7 +74,7 @@ export function _decode_RequestedInformation (el: _Element): RequestedInformatio
 let _cached_encoder_for_RequestedInformation: $.ASN1Encoder<RequestedInformation> | null = null;
 export function _encode_RequestedInformation (value: RequestedInformation, elGetter: $.ASN1Encoder<RequestedInformation>): _Element {
     if (!_cached_encoder_for_RequestedInformation) {
-        _cached_encoder_for_RequestedInformation = function (value: RequestedInformation, elGetter: $.ASN1Encoder<RequestedInformation>): _Element {
+        _cached_encoder_for_RequestedInformation = function (value: RequestedInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RequestedInformationType, $.BER)(value.requestedInformationType, $.BER),

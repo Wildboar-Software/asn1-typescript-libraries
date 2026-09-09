@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -95,7 +91,7 @@ export function _decode_ForwardServiceInteractionInd (el: _Element): ForwardServ
 let _cached_encoder_for_ForwardServiceInteractionInd: $.ASN1Encoder<ForwardServiceInteractionInd> | null = null;
 export function _encode_ForwardServiceInteractionInd (value: ForwardServiceInteractionInd, elGetter: $.ASN1Encoder<ForwardServiceInteractionInd>): _Element {
     if (!_cached_encoder_for_ForwardServiceInteractionInd) {
-        _cached_encoder_for_ForwardServiceInteractionInd = function (value: ForwardServiceInteractionInd, elGetter: $.ASN1Encoder<ForwardServiceInteractionInd>): _Element {
+        _cached_encoder_for_ForwardServiceInteractionInd = function (value: ForwardServiceInteractionInd): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.conferenceTreatmentIndicator === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.conferenceTreatmentIndicator, $.BER)),

@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -89,7 +85,7 @@ export function _decode_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELs
 let _cached_encoder_for_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1: $.ASN1Encoder<CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1> | null = null;
 export function _encode_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1 (value: CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1, elGetter: $.ASN1Encoder<CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1>): _Element {
     if (!_cached_encoder_for_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1) {
-        _cached_encoder_for_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1 = function (value: CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1, elGetter: $.ASN1Encoder<CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1>): _Element {
+        _cached_encoder_for_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1 = function (value: CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.freeFormatData, $.BER),

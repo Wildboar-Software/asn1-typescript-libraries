@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -161,11 +106,11 @@ class EstablishTemporaryConnectionArg {
  */
 export
 const _root_component_type_list_1_spec_for_EstablishTemporaryConnectionArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("assistingSSPIPRoutingAddress", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("scfID", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("serviceInteractionIndicators", true, $.hasTag(_TagClass.context, 30), undefined, undefined)
+    new $.ComponentSpec("assistingSSPIPRoutingAddress", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("scfID", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("serviceInteractionIndicators", true, $.hasTag(_TagClass.context, 30))
 ];
 
 /**
@@ -245,7 +190,7 @@ let _cached_encoder_for_EstablishTemporaryConnectionArg: $.ASN1Encoder<Establish
  */
 export
 function _encode_EstablishTemporaryConnectionArg (value: EstablishTemporaryConnectionArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EstablishTemporaryConnectionArg) { _cached_encoder_for_EstablishTemporaryConnectionArg = function (value: EstablishTemporaryConnectionArg, elGetter: $.ASN1Encoder<EstablishTemporaryConnectionArg>): _Element {
+    if (!_cached_encoder_for_EstablishTemporaryConnectionArg) { _cached_encoder_for_EstablishTemporaryConnectionArg = function (value: EstablishTemporaryConnectionArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_AssistingSSPIPRoutingAddress, $.BER)(value.assistingSSPIPRoutingAddress, $.BER),

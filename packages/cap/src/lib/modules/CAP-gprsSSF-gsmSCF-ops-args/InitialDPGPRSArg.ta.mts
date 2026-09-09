@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -273,21 +219,21 @@ class InitialDPGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_InitialDPGPRSArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("gPRSEventType", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mSISDN", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("iMSI", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("timeAndTimeZone", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("gPRSMSClass", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("endUserAddress", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("qualityOfService", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("accessPointName", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("routeingAreaIdentity", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("chargingID", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("sGSNCapabilities", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("locationInformationGPRS", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("pDPInitiationType", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 14), undefined, undefined)
+    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("gPRSEventType", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mSISDN", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("iMSI", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("timeAndTimeZone", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("gPRSMSClass", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("endUserAddress", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("qualityOfService", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("accessPointName", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("routeingAreaIdentity", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("chargingID", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("sGSNCapabilities", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("locationInformationGPRS", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("pDPInitiationType", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 14))
 ];
 
 /**
@@ -313,9 +259,9 @@ const _root_component_type_list_2_spec_for_InitialDPGPRSArg: $.ComponentSpec[] =
  */
 export
 const _extension_additions_list_spec_for_InitialDPGPRSArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("gGSNAddress", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("secondaryPDP-context", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("iMEI", true, $.hasTag(_TagClass.context, 17), undefined, undefined)
+    new $.ComponentSpec("gGSNAddress", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("secondaryPDP-context", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("iMEI", true, $.hasTag(_TagClass.context, 17))
 ];
 
 let _cached_decoder_for_InitialDPGPRSArg: $.ASN1Decoder<InitialDPGPRSArg> | null = null;
@@ -410,7 +356,7 @@ let _cached_encoder_for_InitialDPGPRSArg: $.ASN1Encoder<InitialDPGPRSArg> | null
  */
 export
 function _encode_InitialDPGPRSArg (value: InitialDPGPRSArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitialDPGPRSArg) { _cached_encoder_for_InitialDPGPRSArg = function (value: InitialDPGPRSArg, elGetter: $.ASN1Encoder<InitialDPGPRSArg>): _Element {
+    if (!_cached_encoder_for_InitialDPGPRSArg) { _cached_encoder_for_InitialDPGPRSArg = function (value: InitialDPGPRSArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ServiceKey, $.BER)(value.serviceKey, $.BER),

@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -89,7 +84,7 @@ export function _decode_DpSpecificInfoAlt_tServiceChangeSpecificInfo (el: _Eleme
 let _cached_encoder_for_DpSpecificInfoAlt_tServiceChangeSpecificInfo: $.ASN1Encoder<DpSpecificInfoAlt_tServiceChangeSpecificInfo> | null = null;
 export function _encode_DpSpecificInfoAlt_tServiceChangeSpecificInfo (value: DpSpecificInfoAlt_tServiceChangeSpecificInfo, elGetter: $.ASN1Encoder<DpSpecificInfoAlt_tServiceChangeSpecificInfo>): _Element {
     if (!_cached_encoder_for_DpSpecificInfoAlt_tServiceChangeSpecificInfo) {
-        _cached_encoder_for_DpSpecificInfoAlt_tServiceChangeSpecificInfo = function (value: DpSpecificInfoAlt_tServiceChangeSpecificInfo, elGetter: $.ASN1Encoder<DpSpecificInfoAlt_tServiceChangeSpecificInfo>): _Element {
+        _cached_encoder_for_DpSpecificInfoAlt_tServiceChangeSpecificInfo = function (value: DpSpecificInfoAlt_tServiceChangeSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.ext_basicServiceCode === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_Ext_BasicServiceCode, $.BER)(value.ext_basicServiceCode, $.BER)),

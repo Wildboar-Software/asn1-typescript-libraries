@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,7 +19,7 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
 // export { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-import { MonitorMode, _enum_for_MonitorMode, MonitorMode_interrupted /* IMPORTED_LONG_ENUMERATION_ITEM */, interrupted /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndContinue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_transparent /* IMPORTED_LONG_ENUMERATION_ITEM */, transparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../Core-INAP-CS1-DataTypes/MonitorMode.ta.mjs";
+import { MonitorMode, _enum_for_MonitorMode, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../Core-INAP-CS1-DataTypes/MonitorMode.ta.mjs";
 // export { MonitorMode, _enum_for_MonitorMode, MonitorMode_interrupted /* IMPORTED_LONG_ENUMERATION_ITEM */, interrupted /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndContinue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_transparent /* IMPORTED_LONG_ENUMERATION_ITEM */, transparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../Core-INAP-CS1-DataTypes/MonitorMode.ta.mjs";
 
 
@@ -173,11 +118,11 @@ class EventNotificationChargingArg {
  */
 export
 const _root_component_type_list_1_spec_for_EventNotificationChargingArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("eventTypeCharging", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("eventSpecificInformationCharging", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("legID", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("monitorMode", true, $.hasTag(_TagClass.context, 30), undefined, undefined)
+    new $.ComponentSpec("eventTypeCharging", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("eventSpecificInformationCharging", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("legID", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("monitorMode", true, $.hasTag(_TagClass.context, 30))
 ];
 
 /**
@@ -257,7 +202,7 @@ let _cached_encoder_for_EventNotificationChargingArg: $.ASN1Encoder<EventNotific
  */
 export
 function _encode_EventNotificationChargingArg (value: EventNotificationChargingArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EventNotificationChargingArg) { _cached_encoder_for_EventNotificationChargingArg = function (value: EventNotificationChargingArg, elGetter: $.ASN1Encoder<EventNotificationChargingArg>): _Element {
+    if (!_cached_encoder_for_EventNotificationChargingArg) { _cached_encoder_for_EventNotificationChargingArg = function (value: EventNotificationChargingArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_EventTypeCharging, $.BER)(value.eventTypeCharging, $.BER),

@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -65,7 +59,7 @@ export function _decode_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo 
 let _cached_encoder_for_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo: $.ASN1Encoder<EventSpecificInformationSMS_o_smsSubmissionSpecificInfo> | null = null;
 export function _encode_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo (value: EventSpecificInformationSMS_o_smsSubmissionSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationSMS_o_smsSubmissionSpecificInfo>): _Element {
     if (!_cached_encoder_for_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo) {
-        _cached_encoder_for_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo = function (value: EventSpecificInformationSMS_o_smsSubmissionSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationSMS_o_smsSubmissionSpecificInfo>): _Element {
+        _cached_encoder_for_EventSpecificInformationSMS_o_smsSubmissionSpecificInfo = function (value: EventSpecificInformationSMS_o_smsSubmissionSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
 

@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -73,7 +69,7 @@ export function _decode_TransferredVolume_volumeIfTariffSwitch (el: _Element): T
 let _cached_encoder_for_TransferredVolume_volumeIfTariffSwitch: $.ASN1Encoder<TransferredVolume_volumeIfTariffSwitch> | null = null;
 export function _encode_TransferredVolume_volumeIfTariffSwitch (value: TransferredVolume_volumeIfTariffSwitch, elGetter: $.ASN1Encoder<TransferredVolume_volumeIfTariffSwitch>): _Element {
     if (!_cached_encoder_for_TransferredVolume_volumeIfTariffSwitch) {
-        _cached_encoder_for_TransferredVolume_volumeIfTariffSwitch = function (value: TransferredVolume_volumeIfTariffSwitch, elGetter: $.ASN1Encoder<TransferredVolume_volumeIfTariffSwitch>): _Element {
+        _cached_encoder_for_TransferredVolume_volumeIfTariffSwitch = function (value: TransferredVolume_volumeIfTariffSwitch): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.volumeSinceLastTariffSwitch, $.BER),

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -188,14 +134,14 @@ class InitiateCallAttemptArg {
  */
 export
 const _root_component_type_list_1_spec_for_InitiateCallAttemptArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("destinationRoutingAddress", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("legToBeCreated", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("newCallSegment", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 30), undefined, undefined),
-    new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 51), undefined, undefined),
-    new $.ComponentSpec("gsmSCFAddress", true, $.hasTag(_TagClass.context, 52), undefined, undefined),
-    new $.ComponentSpec("suppress-T-CSI", true, $.hasTag(_TagClass.context, 53), undefined, undefined)
+    new $.ComponentSpec("destinationRoutingAddress", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("legToBeCreated", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("newCallSegment", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 30)),
+    new $.ComponentSpec("callReferenceNumber", true, $.hasTag(_TagClass.context, 51)),
+    new $.ComponentSpec("gsmSCFAddress", true, $.hasTag(_TagClass.context, 52)),
+    new $.ComponentSpec("suppress-T-CSI", true, $.hasTag(_TagClass.context, 53))
 ];
 
 /**
@@ -286,7 +232,7 @@ let _cached_encoder_for_InitiateCallAttemptArg: $.ASN1Encoder<InitiateCallAttemp
  */
 export
 function _encode_InitiateCallAttemptArg (value: InitiateCallAttemptArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiateCallAttemptArg) { _cached_encoder_for_InitiateCallAttemptArg = function (value: InitiateCallAttemptArg, elGetter: $.ASN1Encoder<InitiateCallAttemptArg>): _Element {
+    if (!_cached_encoder_for_InitiateCallAttemptArg) { _cached_encoder_for_InitiateCallAttemptArg = function (value: InitiateCallAttemptArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_DestinationRoutingAddress, $.BER)(value.destinationRoutingAddress, $.BER),

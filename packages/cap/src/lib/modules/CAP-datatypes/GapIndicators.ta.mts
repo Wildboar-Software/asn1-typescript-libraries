@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -78,7 +72,7 @@ export function _decode_GapIndicators (el: _Element): GapIndicators {
 let _cached_encoder_for_GapIndicators: $.ASN1Encoder<GapIndicators> | null = null;
 export function _encode_GapIndicators (value: GapIndicators, elGetter: $.ASN1Encoder<GapIndicators>): _Element {
     if (!_cached_encoder_for_GapIndicators) {
-        _cached_encoder_for_GapIndicators = function (value: GapIndicators, elGetter: $.ASN1Encoder<GapIndicators>): _Element {
+        _cached_encoder_for_GapIndicators = function (value: GapIndicators): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Duration, $.BER)(value.duration, $.BER),

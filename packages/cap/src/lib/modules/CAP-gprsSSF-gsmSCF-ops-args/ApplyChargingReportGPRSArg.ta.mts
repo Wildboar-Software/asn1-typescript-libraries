@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -168,10 +114,10 @@ class ApplyChargingReportGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_ApplyChargingReportGPRSArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("chargingResult", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("qualityOfService", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("active", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("pDPID", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("chargingResult", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("qualityOfService", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("active", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("pDPID", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -197,7 +143,7 @@ const _root_component_type_list_2_spec_for_ApplyChargingReportGPRSArg: $.Compone
  */
 export
 const _extension_additions_list_spec_for_ApplyChargingReportGPRSArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("chargingRollOver", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("chargingRollOver", true, $.hasTag(_TagClass.context, 4))
 ];
 
 let _cached_decoder_for_ApplyChargingReportGPRSArg: $.ASN1Decoder<ApplyChargingReportGPRSArg> | null = null;
@@ -253,7 +199,7 @@ let _cached_encoder_for_ApplyChargingReportGPRSArg: $.ASN1Encoder<ApplyChargingR
  */
 export
 function _encode_ApplyChargingReportGPRSArg (value: ApplyChargingReportGPRSArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ApplyChargingReportGPRSArg) { _cached_encoder_for_ApplyChargingReportGPRSArg = function (value: ApplyChargingReportGPRSArg, elGetter: $.ASN1Encoder<ApplyChargingReportGPRSArg>): _Element {
+    if (!_cached_encoder_for_ApplyChargingReportGPRSArg) { _cached_encoder_for_ApplyChargingReportGPRSArg = function (value: ApplyChargingReportGPRSArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ChargingResult, $.BER)(value.chargingResult, $.BER),

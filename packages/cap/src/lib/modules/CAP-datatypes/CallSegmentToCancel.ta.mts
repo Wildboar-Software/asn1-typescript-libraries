@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -78,7 +73,7 @@ export function _decode_CallSegmentToCancel (el: _Element): CallSegmentToCancel 
 let _cached_encoder_for_CallSegmentToCancel: $.ASN1Encoder<CallSegmentToCancel> | null = null;
 export function _encode_CallSegmentToCancel (value: CallSegmentToCancel, elGetter: $.ASN1Encoder<CallSegmentToCancel>): _Element {
     if (!_cached_encoder_for_CallSegmentToCancel) {
-        _cached_encoder_for_CallSegmentToCancel = function (value: CallSegmentToCancel, elGetter: $.ASN1Encoder<CallSegmentToCancel>): _Element {
+        _cached_encoder_for_CallSegmentToCancel = function (value: CallSegmentToCancel): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.invokeID === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_InvokeID, $.BER)(value.invokeID, $.BER)),

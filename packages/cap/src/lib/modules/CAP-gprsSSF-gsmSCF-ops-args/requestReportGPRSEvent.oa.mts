@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { RequestReportGPRSEventArg, _decode_RequestReportGPRSEventArg, _encode_RequestReportGPRSEventArg } from "../CAP-gprsSSF-gsmSCF-ops-args/RequestReportGPRSEventArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { parameterOutOfRange } from "../CAP-errortypes/parameterOutOfRange.oa.mjs";

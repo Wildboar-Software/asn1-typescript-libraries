@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -131,8 +76,8 @@ class CAP_GPRS_ReferenceNumber {
  */
 export
 const _root_component_type_list_1_spec_for_CAP_GPRS_ReferenceNumber: $.ComponentSpec[] = [
-    new $.ComponentSpec("destinationReference", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("originationReference", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("destinationReference", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("originationReference", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -203,7 +148,7 @@ let _cached_encoder_for_CAP_GPRS_ReferenceNumber: $.ASN1Encoder<CAP_GPRS_Referen
  */
 export
 function _encode_CAP_GPRS_ReferenceNumber (value: CAP_GPRS_ReferenceNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAP_GPRS_ReferenceNumber) { _cached_encoder_for_CAP_GPRS_ReferenceNumber = function (value: CAP_GPRS_ReferenceNumber, elGetter: $.ASN1Encoder<CAP_GPRS_ReferenceNumber>): _Element {
+    if (!_cached_encoder_for_CAP_GPRS_ReferenceNumber) { _cached_encoder_for_CAP_GPRS_ReferenceNumber = function (value: CAP_GPRS_ReferenceNumber): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.destinationReference === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_Integer4, $.BER)(value.destinationReference, $.BER)),

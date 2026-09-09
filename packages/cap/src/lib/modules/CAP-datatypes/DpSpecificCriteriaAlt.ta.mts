@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -78,7 +74,7 @@ export function _decode_DpSpecificCriteriaAlt (el: _Element): DpSpecificCriteria
 let _cached_encoder_for_DpSpecificCriteriaAlt: $.ASN1Encoder<DpSpecificCriteriaAlt> | null = null;
 export function _encode_DpSpecificCriteriaAlt (value: DpSpecificCriteriaAlt, elGetter: $.ASN1Encoder<DpSpecificCriteriaAlt>): _Element {
     if (!_cached_encoder_for_DpSpecificCriteriaAlt) {
-        _cached_encoder_for_DpSpecificCriteriaAlt = function (value: DpSpecificCriteriaAlt, elGetter: $.ASN1Encoder<DpSpecificCriteriaAlt>): _Element {
+        _cached_encoder_for_DpSpecificCriteriaAlt = function (value: DpSpecificCriteriaAlt): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.changeOfPositionControlInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_ChangeOfPositionControlInfo, $.BER)(value.changeOfPositionControlInfo, $.BER)),

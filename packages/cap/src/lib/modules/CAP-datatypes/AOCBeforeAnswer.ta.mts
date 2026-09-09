@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -74,7 +69,7 @@ export function _decode_AOCBeforeAnswer (el: _Element): AOCBeforeAnswer {
 let _cached_encoder_for_AOCBeforeAnswer: $.ASN1Encoder<AOCBeforeAnswer> | null = null;
 export function _encode_AOCBeforeAnswer (value: AOCBeforeAnswer, elGetter: $.ASN1Encoder<AOCBeforeAnswer>): _Element {
     if (!_cached_encoder_for_AOCBeforeAnswer) {
-        _cached_encoder_for_AOCBeforeAnswer = function (value: AOCBeforeAnswer, elGetter: $.ASN1Encoder<AOCBeforeAnswer>): _Element {
+        _cached_encoder_for_AOCBeforeAnswer = function (value: AOCBeforeAnswer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_CAI_GSM0224, $.BER)(value.aOCInitial, $.BER),

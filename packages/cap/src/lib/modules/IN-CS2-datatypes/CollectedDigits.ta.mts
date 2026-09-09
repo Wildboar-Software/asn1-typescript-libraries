@@ -1,61 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +14,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment_reportErrorToScf /* IMPORTED_LONG_ENUMERATION_ITEM */, reportErrorToScf /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorTreatment_help /* IMPORTED_LONG_ENUMERATION_ITEM */, help /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorTreatment_repeatPrompt /* IMPORTED_LONG_ENUMERATION_ITEM */, repeatPrompt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ErrorTreatment, _encode_ErrorTreatment } from "../IN-CS2-datatypes/ErrorTreatment.ta.mjs";
+import { ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment_reportErrorToScf /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ErrorTreatment, _encode_ErrorTreatment } from "../IN-CS2-datatypes/ErrorTreatment.ta.mjs";
 // export { ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment_reportErrorToScf /* IMPORTED_LONG_ENUMERATION_ITEM */, reportErrorToScf /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorTreatment_help /* IMPORTED_LONG_ENUMERATION_ITEM */, help /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorTreatment_repeatPrompt /* IMPORTED_LONG_ENUMERATION_ITEM */, repeatPrompt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ErrorTreatment, _encode_ErrorTreatment } from "../IN-CS2-datatypes/ErrorTreatment.ta.mjs";
 
 
@@ -234,17 +182,17 @@ class CollectedDigits {
  */
 export
 const _root_component_type_list_1_spec_for_CollectedDigits: $.ComponentSpec[] = [
-    new $.ComponentSpec("minimumNbOfDigits", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("maximumNbOfDigits", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("endOfReplyDigit", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("cancelDigit", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("startDigit", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("firstDigitTimeOut", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("interDigitTimeOut", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("errorTreatment", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("interruptableAnnInd", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("voiceInformation", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("voiceBack", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("minimumNbOfDigits", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("maximumNbOfDigits", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("endOfReplyDigit", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("cancelDigit", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("startDigit", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("firstDigitTimeOut", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("interDigitTimeOut", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("errorTreatment", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("interruptableAnnInd", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("voiceInformation", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("voiceBack", true, $.hasTag(_TagClass.context, 10))
 ];
 
 /**
@@ -342,7 +290,7 @@ let _cached_encoder_for_CollectedDigits: $.ASN1Encoder<CollectedDigits> | null =
  */
 export
 function _encode_CollectedDigits (value: CollectedDigits, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CollectedDigits) { _cached_encoder_for_CollectedDigits = function (value: CollectedDigits, elGetter: $.ASN1Encoder<CollectedDigits>): _Element {
+    if (!_cached_encoder_for_CollectedDigits) { _cached_encoder_for_CollectedDigits = function (value: CollectedDigits): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.minimumNbOfDigits === undefined || $.deepEq(value.minimumNbOfDigits, CollectedDigits._default_value_for_minimumNbOfDigits) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.minimumNbOfDigits, $.BER)),

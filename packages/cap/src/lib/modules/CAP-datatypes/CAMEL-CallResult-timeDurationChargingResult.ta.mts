@@ -1,9 +1,6 @@
 import {
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -109,7 +106,7 @@ export function _decode_CAMEL_CallResult_timeDurationChargingResult (el: _Elemen
 let _cached_encoder_for_CAMEL_CallResult_timeDurationChargingResult: $.ASN1Encoder<CAMEL_CallResult_timeDurationChargingResult> | null = null;
 export function _encode_CAMEL_CallResult_timeDurationChargingResult (value: CAMEL_CallResult_timeDurationChargingResult, elGetter: $.ASN1Encoder<CAMEL_CallResult_timeDurationChargingResult>): _Element {
     if (!_cached_encoder_for_CAMEL_CallResult_timeDurationChargingResult) {
-        _cached_encoder_for_CAMEL_CallResult_timeDurationChargingResult = function (value: CAMEL_CallResult_timeDurationChargingResult, elGetter: $.ASN1Encoder<CAMEL_CallResult_timeDurationChargingResult>): _Element {
+        _cached_encoder_for_CAMEL_CallResult_timeDurationChargingResult = function (value: CAMEL_CallResult_timeDurationChargingResult): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ReceivingSideID, $.BER)(value.partyToCharge, $.BER),

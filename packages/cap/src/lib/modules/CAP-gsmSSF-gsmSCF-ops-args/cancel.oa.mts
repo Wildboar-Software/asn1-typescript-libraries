@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { CancelArg, _decode_CancelArg, _encode_CancelArg } from "../CAP-gsmSSF-gsmSCF-ops-args/CancelArg.ta.mjs";
 import { cancelFailed } from "../CAP-errortypes/cancelFailed.oa.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";

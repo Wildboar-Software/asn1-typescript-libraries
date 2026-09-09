@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { ConnectToResourceArg, _decode_ConnectToResourceArg, _encode_ConnectToResourceArg } from "../CAP-gsmSSF-gsmSCF-ops-args/ConnectToResourceArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { systemFailure } from "../CAP-errortypes/systemFailure.oa.mjs";

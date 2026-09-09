@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { InitialDPGPRSArg, _decode_InitialDPGPRSArg, _encode_InitialDPGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/InitialDPGPRSArg.ta.mjs";
 import { missingCustomerRecord } from "../CAP-errortypes/missingCustomerRecord.oa.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";

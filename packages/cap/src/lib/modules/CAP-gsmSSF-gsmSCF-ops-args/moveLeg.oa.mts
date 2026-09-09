@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { MoveLegArg, _decode_MoveLegArg, _encode_MoveLegArg } from "../CAP-gsmSSF-gsmSCF-ops-args/MoveLegArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { systemFailure } from "../CAP-errortypes/systemFailure.oa.mjs";

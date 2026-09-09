@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { AssistRequestInstructionsArg, _decode_AssistRequestInstructionsArg, _encode_AssistRequestInstructionsArg } from "../CAP-gsmSSF-gsmSCF-ops-args/AssistRequestInstructionsArg.ta.mjs";
 import { missingCustomerRecord } from "../CAP-errortypes/missingCustomerRecord.oa.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";

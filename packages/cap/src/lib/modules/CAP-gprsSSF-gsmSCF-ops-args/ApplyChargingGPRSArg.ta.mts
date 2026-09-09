@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -146,9 +92,9 @@ class ApplyChargingGPRSArg {
  */
 export
 const _root_component_type_list_1_spec_for_ApplyChargingGPRSArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("chargingCharacteristics", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("tariffSwitchInterval", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("pDPID", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("chargingCharacteristics", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("tariffSwitchInterval", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("pDPID", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -224,7 +170,7 @@ let _cached_encoder_for_ApplyChargingGPRSArg: $.ASN1Encoder<ApplyChargingGPRSArg
  */
 export
 function _encode_ApplyChargingGPRSArg (value: ApplyChargingGPRSArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ApplyChargingGPRSArg) { _cached_encoder_for_ApplyChargingGPRSArg = function (value: ApplyChargingGPRSArg, elGetter: $.ASN1Encoder<ApplyChargingGPRSArg>): _Element {
+    if (!_cached_encoder_for_ApplyChargingGPRSArg) { _cached_encoder_for_ApplyChargingGPRSArg = function (value: ApplyChargingGPRSArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ChargingCharacteristics, $.BER)(value.chargingCharacteristics, $.BER),

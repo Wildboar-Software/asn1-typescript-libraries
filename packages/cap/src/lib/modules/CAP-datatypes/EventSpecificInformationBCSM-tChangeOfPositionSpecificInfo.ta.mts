@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -79,7 +74,7 @@ export function _decode_EventSpecificInformationBCSM_tChangeOfPositionSpecificIn
 let _cached_encoder_for_EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo: $.ASN1Encoder<EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo> | null = null;
 export function _encode_EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo (value: EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo>): _Element {
     if (!_cached_encoder_for_EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo) {
-        _cached_encoder_for_EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo = function (value: EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo>): _Element {
+        _cached_encoder_for_EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo = function (value: EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.locationInformation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 50, () => _encode_LocationInformation, $.BER)(value.locationInformation, $.BER)),

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExtensionField_criticality, _enum_for_ExtensionField_criticality, ExtensionField_criticality_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, ExtensionField_criticality_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ExtensionField_criticality, _encode_ExtensionField_criticality } from "../Core-INAP-CS1-DataTypes/ExtensionField-criticality.ta.mjs";
+import { ExtensionField_criticality, _enum_for_ExtensionField_criticality, ExtensionField_criticality_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ExtensionField_criticality, _encode_ExtensionField_criticality } from "../Core-INAP-CS1-DataTypes/ExtensionField-criticality.ta.mjs";
 // export { ExtensionField_criticality, _enum_for_ExtensionField_criticality, ExtensionField_criticality_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, ExtensionField_criticality_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ExtensionField_criticality, _encode_ExtensionField_criticality } from "../Core-INAP-CS1-DataTypes/ExtensionField-criticality.ta.mjs";
 
 
@@ -153,9 +99,9 @@ class ExtensionField {
  */
 export
 const _root_component_type_list_1_spec_for_ExtensionField: $.ComponentSpec[] = [
-    new $.ComponentSpec("type", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("criticality", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("value", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("type", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("criticality", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("value", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -229,7 +175,7 @@ let _cached_encoder_for_ExtensionField: $.ASN1Encoder<ExtensionField> | null = n
  */
 export
 function _encode_ExtensionField (value: ExtensionField, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtensionField) { _cached_encoder_for_ExtensionField = function (value: ExtensionField, elGetter: $.ASN1Encoder<ExtensionField>): _Element {
+    if (!_cached_encoder_for_ExtensionField) { _cached_encoder_for_ExtensionField = function (value: ExtensionField): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.type_, $.BER),

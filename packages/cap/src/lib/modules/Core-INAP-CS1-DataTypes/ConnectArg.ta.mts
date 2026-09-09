@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -233,19 +178,19 @@ class ConnectArg {
  */
 export
 const _root_component_type_list_1_spec_for_ConnectArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("destinationRoutingAddress", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("cutAndPaste", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("routeList", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("scfID", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("serviceInteractionIndicators", true, $.hasTag(_TagClass.context, 26), undefined, undefined),
-    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 27), undefined, undefined),
-    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 29), undefined, undefined),
-    new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 30), undefined, undefined)
+    new $.ComponentSpec("destinationRoutingAddress", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("correlationID", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("cutAndPaste", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("routeList", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("scfID", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("serviceInteractionIndicators", true, $.hasTag(_TagClass.context, 26)),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 27)),
+    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 29)),
+    new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 30))
 ];
 
 /**
@@ -349,7 +294,7 @@ let _cached_encoder_for_ConnectArg: $.ASN1Encoder<ConnectArg> | null = null;
  */
 export
 function _encode_ConnectArg (value: ConnectArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConnectArg) { _cached_encoder_for_ConnectArg = function (value: ConnectArg, elGetter: $.ASN1Encoder<ConnectArg>): _Element {
+    if (!_cached_encoder_for_ConnectArg) { _cached_encoder_for_ConnectArg = function (value: ConnectArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_DestinationRoutingAddress, $.BER)(value.destinationRoutingAddress, $.BER),

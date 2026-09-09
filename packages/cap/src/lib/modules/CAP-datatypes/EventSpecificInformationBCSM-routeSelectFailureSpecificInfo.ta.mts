@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -71,7 +66,7 @@ export function _decode_EventSpecificInformationBCSM_routeSelectFailureSpecificI
 let _cached_encoder_for_EventSpecificInformationBCSM_routeSelectFailureSpecificInfo: $.ASN1Encoder<EventSpecificInformationBCSM_routeSelectFailureSpecificInfo> | null = null;
 export function _encode_EventSpecificInformationBCSM_routeSelectFailureSpecificInfo (value: EventSpecificInformationBCSM_routeSelectFailureSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_routeSelectFailureSpecificInfo>): _Element {
     if (!_cached_encoder_for_EventSpecificInformationBCSM_routeSelectFailureSpecificInfo) {
-        _cached_encoder_for_EventSpecificInformationBCSM_routeSelectFailureSpecificInfo = function (value: EventSpecificInformationBCSM_routeSelectFailureSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_routeSelectFailureSpecificInfo>): _Element {
+        _cached_encoder_for_EventSpecificInformationBCSM_routeSelectFailureSpecificInfo = function (value: EventSpecificInformationBCSM_routeSelectFailureSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.failureCause === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_Cause, $.BER)(value.failureCause, $.BER))

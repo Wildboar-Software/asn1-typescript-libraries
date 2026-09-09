@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InfoType, _enum_for_InfoType, InfoType_numericString /* IMPORTED_LONG_ENUMERATION_ITEM */, numericString /* IMPORTED_SHORT_ENUMERATION_ITEM */, InfoType_characterString /* IMPORTED_LONG_ENUMERATION_ITEM */, characterString /* IMPORTED_SHORT_ENUMERATION_ITEM */, InfoType_iA5String /* IMPORTED_LONG_ENUMERATION_ITEM */, iA5String /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InfoType, _encode_InfoType } from "../IN-CS2-datatypes/InfoType.ta.mjs";
+import { InfoType, _enum_for_InfoType, InfoType_numericString /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_InfoType, _encode_InfoType } from "../IN-CS2-datatypes/InfoType.ta.mjs";
 // export { InfoType, _enum_for_InfoType, InfoType_numericString /* IMPORTED_LONG_ENUMERATION_ITEM */, numericString /* IMPORTED_SHORT_ENUMERATION_ITEM */, InfoType_characterString /* IMPORTED_LONG_ENUMERATION_ITEM */, characterString /* IMPORTED_SHORT_ENUMERATION_ITEM */, InfoType_iA5String /* IMPORTED_LONG_ENUMERATION_ITEM */, iA5String /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InfoType, _encode_InfoType } from "../IN-CS2-datatypes/InfoType.ta.mjs";
 
 
@@ -164,10 +110,10 @@ class Constraints {
  */
 export
 const _root_component_type_list_1_spec_for_Constraints: $.ComponentSpec[] = [
-    new $.ComponentSpec("maximumNumberOfDigits", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("minimumNumberOfDigits", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("typeOfRequestedInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("numberOfAllowedRetries", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("maximumNumberOfDigits", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("minimumNumberOfDigits", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("typeOfRequestedInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("numberOfAllowedRetries", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**
@@ -244,7 +190,7 @@ let _cached_encoder_for_Constraints: $.ASN1Encoder<Constraints> | null = null;
  */
 export
 function _encode_Constraints (value: Constraints, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Constraints) { _cached_encoder_for_Constraints = function (value: Constraints, elGetter: $.ASN1Encoder<Constraints>): _Element {
+    if (!_cached_encoder_for_Constraints) { _cached_encoder_for_Constraints = function (value: Constraints): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.maximumNumberOfDigits, $.BER),

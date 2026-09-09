@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -73,7 +69,7 @@ export function _decode_AOCSubsequent (el: _Element): AOCSubsequent {
 let _cached_encoder_for_AOCSubsequent: $.ASN1Encoder<AOCSubsequent> | null = null;
 export function _encode_AOCSubsequent (value: AOCSubsequent, elGetter: $.ASN1Encoder<AOCSubsequent>): _Element {
     if (!_cached_encoder_for_AOCSubsequent) {
-        _cached_encoder_for_AOCSubsequent = function (value: AOCSubsequent, elGetter: $.ASN1Encoder<AOCSubsequent>): _Element {
+        _cached_encoder_for_AOCSubsequent = function (value: AOCSubsequent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_CAI_GSM0224, $.BER)(value.cAI_GSM0224, $.BER),

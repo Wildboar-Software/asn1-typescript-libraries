@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { SendChargingInformationGPRSArg, _decode_SendChargingInformationGPRSArg, _encode_SendChargingInformationGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/SendChargingInformationGPRSArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { unexpectedComponentSequence } from "../CAP-errortypes/unexpectedComponentSequence.oa.mjs";

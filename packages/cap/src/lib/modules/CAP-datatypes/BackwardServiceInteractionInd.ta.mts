@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -85,7 +81,7 @@ export function _decode_BackwardServiceInteractionInd (el: _Element): BackwardSe
 let _cached_encoder_for_BackwardServiceInteractionInd: $.ASN1Encoder<BackwardServiceInteractionInd> | null = null;
 export function _encode_BackwardServiceInteractionInd (value: BackwardServiceInteractionInd, elGetter: $.ASN1Encoder<BackwardServiceInteractionInd>): _Element {
     if (!_cached_encoder_for_BackwardServiceInteractionInd) {
-        _cached_encoder_for_BackwardServiceInteractionInd = function (value: BackwardServiceInteractionInd, elGetter: $.ASN1Encoder<BackwardServiceInteractionInd>): _Element {
+        _cached_encoder_for_BackwardServiceInteractionInd = function (value: BackwardServiceInteractionInd): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.conferenceTreatmentIndicator === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.conferenceTreatmentIndicator, $.BER)),

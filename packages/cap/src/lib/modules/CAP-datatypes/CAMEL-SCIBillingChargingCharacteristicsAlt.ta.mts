@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -64,7 +58,7 @@ export function _decode_CAMEL_SCIBillingChargingCharacteristicsAlt (el: _Element
 let _cached_encoder_for_CAMEL_SCIBillingChargingCharacteristicsAlt: $.ASN1Encoder<CAMEL_SCIBillingChargingCharacteristicsAlt> | null = null;
 export function _encode_CAMEL_SCIBillingChargingCharacteristicsAlt (value: CAMEL_SCIBillingChargingCharacteristicsAlt, elGetter: $.ASN1Encoder<CAMEL_SCIBillingChargingCharacteristicsAlt>): _Element {
     if (!_cached_encoder_for_CAMEL_SCIBillingChargingCharacteristicsAlt) {
-        _cached_encoder_for_CAMEL_SCIBillingChargingCharacteristicsAlt = function (value: CAMEL_SCIBillingChargingCharacteristicsAlt, elGetter: $.ASN1Encoder<CAMEL_SCIBillingChargingCharacteristicsAlt>): _Element {
+        _cached_encoder_for_CAMEL_SCIBillingChargingCharacteristicsAlt = function (value: CAMEL_SCIBillingChargingCharacteristicsAlt): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
 

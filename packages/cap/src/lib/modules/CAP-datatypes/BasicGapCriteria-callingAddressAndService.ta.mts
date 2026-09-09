@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -78,7 +72,7 @@ export function _decode_BasicGapCriteria_callingAddressAndService (el: _Element)
 let _cached_encoder_for_BasicGapCriteria_callingAddressAndService: $.ASN1Encoder<BasicGapCriteria_callingAddressAndService> | null = null;
 export function _encode_BasicGapCriteria_callingAddressAndService (value: BasicGapCriteria_callingAddressAndService, elGetter: $.ASN1Encoder<BasicGapCriteria_callingAddressAndService>): _Element {
     if (!_cached_encoder_for_BasicGapCriteria_callingAddressAndService) {
-        _cached_encoder_for_BasicGapCriteria_callingAddressAndService = function (value: BasicGapCriteria_callingAddressAndService, elGetter: $.ASN1Encoder<BasicGapCriteria_callingAddressAndService>): _Element {
+        _cached_encoder_for_BasicGapCriteria_callingAddressAndService = function (value: BasicGapCriteria_callingAddressAndService): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Digits, $.BER)(value.callingAddressValue, $.BER),

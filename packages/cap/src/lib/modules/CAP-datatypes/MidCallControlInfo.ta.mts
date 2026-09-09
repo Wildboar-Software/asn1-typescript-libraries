@@ -1,10 +1,7 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -105,7 +102,7 @@ export function _decode_MidCallControlInfo (el: _Element): MidCallControlInfo {
 let _cached_encoder_for_MidCallControlInfo: $.ASN1Encoder<MidCallControlInfo> | null = null;
 export function _encode_MidCallControlInfo (value: MidCallControlInfo, elGetter: $.ASN1Encoder<MidCallControlInfo>): _Element {
     if (!_cached_encoder_for_MidCallControlInfo) {
-        _cached_encoder_for_MidCallControlInfo = function (value: MidCallControlInfo, elGetter: $.ASN1Encoder<MidCallControlInfo>): _Element {
+        _cached_encoder_for_MidCallControlInfo = function (value: MidCallControlInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.minimumNumberOfDigits === undefined || $.deepEq(value.minimumNumberOfDigits, MidCallControlInfo._default_value_for_minimumNumberOfDigits) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.minimumNumberOfDigits, $.BER)),

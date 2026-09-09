@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { MidCallInfoType, _decode_MidCallInfoType, _encode_MidCallInfoType } from "../IN-CS2-datatypes/MidCallInfoType.ta.mjs";
 // export { MidCallInfoType, _decode_MidCallInfoType, _encode_MidCallInfoType } from "../IN-CS2-datatypes/MidCallInfoType.ta.mjs";
-import { MidCallControlInfo_Item_midCallReportType, _enum_for_MidCallControlInfo_Item_midCallReportType, MidCallControlInfo_Item_midCallReportType_inMonitoringState /* IMPORTED_LONG_ENUMERATION_ITEM */, inMonitoringState /* IMPORTED_SHORT_ENUMERATION_ITEM */, MidCallControlInfo_Item_midCallReportType_inAnyState /* IMPORTED_LONG_ENUMERATION_ITEM */, inAnyState /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MidCallControlInfo_Item_midCallReportType, _encode_MidCallControlInfo_Item_midCallReportType } from "../IN-CS2-datatypes/MidCallControlInfo-Item-midCallReportType.ta.mjs";
+import { MidCallControlInfo_Item_midCallReportType, _enum_for_MidCallControlInfo_Item_midCallReportType, MidCallControlInfo_Item_midCallReportType_inMonitoringState /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_MidCallControlInfo_Item_midCallReportType, _encode_MidCallControlInfo_Item_midCallReportType } from "../IN-CS2-datatypes/MidCallControlInfo-Item-midCallReportType.ta.mjs";
 // export { MidCallControlInfo_Item_midCallReportType, _enum_for_MidCallControlInfo_Item_midCallReportType, MidCallControlInfo_Item_midCallReportType_inMonitoringState /* IMPORTED_LONG_ENUMERATION_ITEM */, inMonitoringState /* IMPORTED_SHORT_ENUMERATION_ITEM */, MidCallControlInfo_Item_midCallReportType_inAnyState /* IMPORTED_LONG_ENUMERATION_ITEM */, inAnyState /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MidCallControlInfo_Item_midCallReportType, _encode_MidCallControlInfo_Item_midCallReportType } from "../IN-CS2-datatypes/MidCallControlInfo-Item-midCallReportType.ta.mjs";
 
 
@@ -146,8 +91,8 @@ class MidCallControlInfo_Item {
  */
 export
 const _root_component_type_list_1_spec_for_MidCallControlInfo_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("midCallInfoType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("midCallReportType", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("midCallInfoType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("midCallReportType", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -218,7 +163,7 @@ let _cached_encoder_for_MidCallControlInfo_Item: $.ASN1Encoder<MidCallControlInf
  */
 export
 function _encode_MidCallControlInfo_Item (value: MidCallControlInfo_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MidCallControlInfo_Item) { _cached_encoder_for_MidCallControlInfo_Item = function (value: MidCallControlInfo_Item, elGetter: $.ASN1Encoder<MidCallControlInfo_Item>): _Element {
+    if (!_cached_encoder_for_MidCallControlInfo_Item) { _cached_encoder_for_MidCallControlInfo_Item = function (value: MidCallControlInfo_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MidCallInfoType, $.BER)(value.midCallInfoType, $.BER),

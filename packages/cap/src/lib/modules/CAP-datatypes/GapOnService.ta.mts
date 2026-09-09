@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -71,7 +65,7 @@ export function _decode_GapOnService (el: _Element): GapOnService {
 let _cached_encoder_for_GapOnService: $.ASN1Encoder<GapOnService> | null = null;
 export function _encode_GapOnService (value: GapOnService, elGetter: $.ASN1Encoder<GapOnService>): _Element {
     if (!_cached_encoder_for_GapOnService) {
-        _cached_encoder_for_GapOnService = function (value: GapOnService, elGetter: $.ASN1Encoder<GapOnService>): _Element {
+        _cached_encoder_for_GapOnService = function (value: GapOnService): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ServiceKey, $.BER)(value.serviceKey, $.BER)

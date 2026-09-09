@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -78,7 +73,7 @@ export function _decode_CAMEL_SCIGPRSBillingChargingCharacteristics (el: _Elemen
 let _cached_encoder_for_CAMEL_SCIGPRSBillingChargingCharacteristics: $.ASN1Encoder<CAMEL_SCIGPRSBillingChargingCharacteristics> | null = null;
 export function _encode_CAMEL_SCIGPRSBillingChargingCharacteristics (value: CAMEL_SCIGPRSBillingChargingCharacteristics, elGetter: $.ASN1Encoder<CAMEL_SCIGPRSBillingChargingCharacteristics>): _Element {
     if (!_cached_encoder_for_CAMEL_SCIGPRSBillingChargingCharacteristics) {
-        _cached_encoder_for_CAMEL_SCIGPRSBillingChargingCharacteristics = function (value: CAMEL_SCIGPRSBillingChargingCharacteristics, elGetter: $.ASN1Encoder<CAMEL_SCIGPRSBillingChargingCharacteristics>): _Element {
+        _cached_encoder_for_CAMEL_SCIGPRSBillingChargingCharacteristics = function (value: CAMEL_SCIGPRSBillingChargingCharacteristics): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_AOCGPRS, $.BER)(value.aOCGPRS, $.BER),

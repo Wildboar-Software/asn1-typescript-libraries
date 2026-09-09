@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -77,7 +71,7 @@ export function _decode_GPRSEvent (el: _Element): GPRSEvent {
 let _cached_encoder_for_GPRSEvent: $.ASN1Encoder<GPRSEvent> | null = null;
 export function _encode_GPRSEvent (value: GPRSEvent, elGetter: $.ASN1Encoder<GPRSEvent>): _Element {
     if (!_cached_encoder_for_GPRSEvent) {
-        _cached_encoder_for_GPRSEvent = function (value: GPRSEvent, elGetter: $.ASN1Encoder<GPRSEvent>): _Element {
+        _cached_encoder_for_GPRSEvent = function (value: GPRSEvent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_GPRSEventType, $.BER)(value.gPRSEventType, $.BER),

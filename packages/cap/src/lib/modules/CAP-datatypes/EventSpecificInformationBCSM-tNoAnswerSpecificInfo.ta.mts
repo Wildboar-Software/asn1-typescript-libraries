@@ -1,9 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -77,7 +73,7 @@ export function _decode_EventSpecificInformationBCSM_tNoAnswerSpecificInfo (el: 
 let _cached_encoder_for_EventSpecificInformationBCSM_tNoAnswerSpecificInfo: $.ASN1Encoder<EventSpecificInformationBCSM_tNoAnswerSpecificInfo> | null = null;
 export function _encode_EventSpecificInformationBCSM_tNoAnswerSpecificInfo (value: EventSpecificInformationBCSM_tNoAnswerSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_tNoAnswerSpecificInfo>): _Element {
     if (!_cached_encoder_for_EventSpecificInformationBCSM_tNoAnswerSpecificInfo) {
-        _cached_encoder_for_EventSpecificInformationBCSM_tNoAnswerSpecificInfo = function (value: EventSpecificInformationBCSM_tNoAnswerSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_tNoAnswerSpecificInfo>): _Element {
+        _cached_encoder_for_EventSpecificInformationBCSM_tNoAnswerSpecificInfo = function (value: EventSpecificInformationBCSM_tNoAnswerSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.callForwarded === undefined) ? undefined : $._encode_implicit(_TagClass.context, 50, () => $._encodeNull, $.BER)(value.callForwarded, $.BER)),

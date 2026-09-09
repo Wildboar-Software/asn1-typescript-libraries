@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -71,7 +66,7 @@ export function _decode_DpSpecificInfoAlt_collectedInfoSpecificInfo (el: _Elemen
 let _cached_encoder_for_DpSpecificInfoAlt_collectedInfoSpecificInfo: $.ASN1Encoder<DpSpecificInfoAlt_collectedInfoSpecificInfo> | null = null;
 export function _encode_DpSpecificInfoAlt_collectedInfoSpecificInfo (value: DpSpecificInfoAlt_collectedInfoSpecificInfo, elGetter: $.ASN1Encoder<DpSpecificInfoAlt_collectedInfoSpecificInfo>): _Element {
     if (!_cached_encoder_for_DpSpecificInfoAlt_collectedInfoSpecificInfo) {
-        _cached_encoder_for_DpSpecificInfoAlt_collectedInfoSpecificInfo = function (value: DpSpecificInfoAlt_collectedInfoSpecificInfo, elGetter: $.ASN1Encoder<DpSpecificInfoAlt_collectedInfoSpecificInfo>): _Element {
+        _cached_encoder_for_DpSpecificInfoAlt_collectedInfoSpecificInfo = function (value: DpSpecificInfoAlt_collectedInfoSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.calledPartyNumber === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_CalledPartyNumber, $.BER)(value.calledPartyNumber, $.BER))

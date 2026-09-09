@@ -1,10 +1,4 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -64,7 +58,7 @@ export function _decode_MetDPCriterionAlt (el: _Element): MetDPCriterionAlt {
 let _cached_encoder_for_MetDPCriterionAlt: $.ASN1Encoder<MetDPCriterionAlt> | null = null;
 export function _encode_MetDPCriterionAlt (value: MetDPCriterionAlt, elGetter: $.ASN1Encoder<MetDPCriterionAlt>): _Element {
     if (!_cached_encoder_for_MetDPCriterionAlt) {
-        _cached_encoder_for_MetDPCriterionAlt = function (value: MetDPCriterionAlt, elGetter: $.ASN1Encoder<MetDPCriterionAlt>): _Element {
+        _cached_encoder_for_MetDPCriterionAlt = function (value: MetDPCriterionAlt): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
 

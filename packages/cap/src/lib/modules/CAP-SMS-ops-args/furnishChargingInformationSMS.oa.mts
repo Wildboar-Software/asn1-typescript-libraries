@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { FurnishChargingInformationSMSArg, _decode_FurnishChargingInformationSMSArg, _encode_FurnishChargingInformationSMSArg } from "../CAP-SMS-ops-args/FurnishChargingInformationSMSArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -75,9 +21,9 @@ import { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../
 // export { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 // export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 // export { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-import { OfferedCamel4Functionalities, OfferedCamel4Functionalities_initiateCallAttempt /* IMPORTED_LONG_NAMED_BIT */, initiateCallAttempt /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_splitLeg /* IMPORTED_LONG_NAMED_BIT */, splitLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_moveLeg /* IMPORTED_LONG_NAMED_BIT */, moveLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_disconnectLeg /* IMPORTED_LONG_NAMED_BIT */, disconnectLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_entityReleased /* IMPORTED_LONG_NAMED_BIT */, entityReleased /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_dfc_WithArgument /* IMPORTED_LONG_NAMED_BIT */, dfc_WithArgument /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_playTone /* IMPORTED_LONG_NAMED_BIT */, playTone /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_dtmf_MidCall /* IMPORTED_LONG_NAMED_BIT */, dtmf_MidCall /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_chargingIndicator /* IMPORTED_LONG_NAMED_BIT */, chargingIndicator /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_alertingDP /* IMPORTED_LONG_NAMED_BIT */, alertingDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_locationAtAlerting /* IMPORTED_LONG_NAMED_BIT */, locationAtAlerting /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_changeOfPositionDP /* IMPORTED_LONG_NAMED_BIT */, changeOfPositionDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_or_Interactions /* IMPORTED_LONG_NAMED_BIT */, or_Interactions /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_warningToneEnhancements /* IMPORTED_LONG_NAMED_BIT */, warningToneEnhancements /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_cf_Enhancements /* IMPORTED_LONG_NAMED_BIT */, cf_Enhancements /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_subscribedEnhancedDialledServices /* IMPORTED_LONG_NAMED_BIT */, subscribedEnhancedDialledServices /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_servingNetworkEnhancedDialledServices /* IMPORTED_LONG_NAMED_BIT */, servingNetworkEnhancedDialledServices /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_criteriaForChangeOfPositionDP /* IMPORTED_LONG_NAMED_BIT */, criteriaForChangeOfPositionDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_serviceChangeDP /* IMPORTED_LONG_NAMED_BIT */, serviceChangeDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_collectInformation /* IMPORTED_LONG_NAMED_BIT */, collectInformation /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
+import { OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
 // export { OfferedCamel4Functionalities, OfferedCamel4Functionalities_initiateCallAttempt /* IMPORTED_LONG_NAMED_BIT */, initiateCallAttempt /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_splitLeg /* IMPORTED_LONG_NAMED_BIT */, splitLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_moveLeg /* IMPORTED_LONG_NAMED_BIT */, moveLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_disconnectLeg /* IMPORTED_LONG_NAMED_BIT */, disconnectLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_entityReleased /* IMPORTED_LONG_NAMED_BIT */, entityReleased /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_dfc_WithArgument /* IMPORTED_LONG_NAMED_BIT */, dfc_WithArgument /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_playTone /* IMPORTED_LONG_NAMED_BIT */, playTone /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_dtmf_MidCall /* IMPORTED_LONG_NAMED_BIT */, dtmf_MidCall /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_chargingIndicator /* IMPORTED_LONG_NAMED_BIT */, chargingIndicator /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_alertingDP /* IMPORTED_LONG_NAMED_BIT */, alertingDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_locationAtAlerting /* IMPORTED_LONG_NAMED_BIT */, locationAtAlerting /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_changeOfPositionDP /* IMPORTED_LONG_NAMED_BIT */, changeOfPositionDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_or_Interactions /* IMPORTED_LONG_NAMED_BIT */, or_Interactions /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_warningToneEnhancements /* IMPORTED_LONG_NAMED_BIT */, warningToneEnhancements /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_cf_Enhancements /* IMPORTED_LONG_NAMED_BIT */, cf_Enhancements /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_subscribedEnhancedDialledServices /* IMPORTED_LONG_NAMED_BIT */, subscribedEnhancedDialledServices /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_servingNetworkEnhancedDialledServices /* IMPORTED_LONG_NAMED_BIT */, servingNetworkEnhancedDialledServices /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_criteriaForChangeOfPositionDP /* IMPORTED_LONG_NAMED_BIT */, criteriaForChangeOfPositionDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_serviceChangeDP /* IMPORTED_LONG_NAMED_BIT */, serviceChangeDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_collectInformation /* IMPORTED_LONG_NAMED_BIT */, collectInformation /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
 import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 // export { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
@@ -246,17 +192,17 @@ class InitialDPArgExtension {
  */
 export
 const _root_component_type_list_1_spec_for_InitialDPArgExtension: $.ComponentSpec[] = [
-    new $.ComponentSpec("gmscAddress", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("forwardingDestinationNumber", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ms-Classmark2", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("iMEI", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("supportedCamelPhases", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("offeredCamel4Functionalities", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("bearerCapability2", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("ext-basicServiceCode2", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("highLayerCompatibility2", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("lowLayerCompatibility", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("lowLayerCompatibility2", true, $.hasTag(_TagClass.context, 10), undefined, undefined)
+    new $.ComponentSpec("gmscAddress", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("forwardingDestinationNumber", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ms-Classmark2", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("iMEI", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("supportedCamelPhases", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("offeredCamel4Functionalities", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("bearerCapability2", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("ext-basicServiceCode2", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("highLayerCompatibility2", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("lowLayerCompatibility", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("lowLayerCompatibility2", true, $.hasTag(_TagClass.context, 10))
 ];
 
 /**
@@ -282,10 +228,10 @@ const _root_component_type_list_2_spec_for_InitialDPArgExtension: $.ComponentSpe
  */
 export
 const _extension_additions_list_spec_for_InitialDPArgExtension: $.ComponentSpec[] = [
-    new $.ComponentSpec("enhancedDialledServicesAllowed", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("uu-Data", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("collectInformationAllowed", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("releaseCallArgExtensionAllowed", true, $.hasTag(_TagClass.context, 14), undefined, undefined)
+    new $.ComponentSpec("enhancedDialledServicesAllowed", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("uu-Data", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("collectInformationAllowed", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("releaseCallArgExtensionAllowed", true, $.hasTag(_TagClass.context, 14))
 ];
 
 let _cached_decoder_for_InitialDPArgExtension: $.ASN1Decoder<InitialDPArgExtension> | null = null;
@@ -371,7 +317,7 @@ let _cached_encoder_for_InitialDPArgExtension: $.ASN1Encoder<InitialDPArgExtensi
  */
 export
 function _encode_InitialDPArgExtension (value: InitialDPArgExtension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitialDPArgExtension) { _cached_encoder_for_InitialDPArgExtension = function (value: InitialDPArgExtension, elGetter: $.ASN1Encoder<InitialDPArgExtension>): _Element {
+    if (!_cached_encoder_for_InitialDPArgExtension) { _cached_encoder_for_InitialDPArgExtension = function (value: InitialDPArgExtension): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.gmscAddress === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_ISDN_AddressString, $.BER)(value.gmscAddress, $.BER)),

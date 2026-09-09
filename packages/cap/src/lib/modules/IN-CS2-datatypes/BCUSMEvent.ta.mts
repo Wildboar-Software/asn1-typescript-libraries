@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventTypeBCUSM, _enum_for_EventTypeBCUSM, EventTypeBCUSM_componentReceived /* IMPORTED_LONG_ENUMERATION_ITEM */, componentReceived /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCUSM_associationReleaseRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, associationReleaseRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCUSM, _encode_EventTypeBCUSM } from "../IN-CS2-datatypes/EventTypeBCUSM.ta.mjs";
+import { EventTypeBCUSM, _enum_for_EventTypeBCUSM, _decode_EventTypeBCUSM, _encode_EventTypeBCUSM } from "../IN-CS2-datatypes/EventTypeBCUSM.ta.mjs";
 // export { EventTypeBCUSM, _enum_for_EventTypeBCUSM, EventTypeBCUSM_componentReceived /* IMPORTED_LONG_ENUMERATION_ITEM */, componentReceived /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCUSM_associationReleaseRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, associationReleaseRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCUSM, _encode_EventTypeBCUSM } from "../IN-CS2-datatypes/EventTypeBCUSM.ta.mjs";
-import { MonitorMode, _enum_for_MonitorMode, MonitorMode_interrupted /* IMPORTED_LONG_ENUMERATION_ITEM */, interrupted /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndContinue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_transparent /* IMPORTED_LONG_ENUMERATION_ITEM */, transparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../IN-CS2-datatypes/MonitorMode.ta.mjs";
+import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_MonitorMode } from "../IN-CS2-datatypes/MonitorMode.ta.mjs";
 // export { MonitorMode, _enum_for_MonitorMode, MonitorMode_interrupted /* IMPORTED_LONG_ENUMERATION_ITEM */, interrupted /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndContinue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_transparent /* IMPORTED_LONG_ENUMERATION_ITEM */, transparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../IN-CS2-datatypes/MonitorMode.ta.mjs";
 
 
@@ -145,8 +89,8 @@ class BCUSMEvent {
  */
 export
 const _root_component_type_list_1_spec_for_BCUSMEvent: $.ComponentSpec[] = [
-    new $.ComponentSpec("eventType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("monitorMode", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("eventType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("monitorMode", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -216,7 +160,7 @@ let _cached_encoder_for_BCUSMEvent: $.ASN1Encoder<BCUSMEvent> | null = null;
  */
 export
 function _encode_BCUSMEvent (value: BCUSMEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BCUSMEvent) { _cached_encoder_for_BCUSMEvent = function (value: BCUSMEvent, elGetter: $.ASN1Encoder<BCUSMEvent>): _Element {
+    if (!_cached_encoder_for_BCUSMEvent) { _cached_encoder_for_BCUSMEvent = function (value: BCUSMEvent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_EventTypeBCUSM, $.BER)(value.eventType, $.BER),

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -276,24 +222,24 @@ class ConnectArg {
  */
 export
 const _root_component_type_list_1_spec_for_ConnectArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("destinationRoutingAddress", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("carrier", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 29), undefined, undefined),
-    new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 30), undefined, undefined),
-    new $.ComponentSpec("genericNumbers", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("serviceInteractionIndicatorsTwo", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("chargeNumber", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("legToBeConnected", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("cug-Interlock", true, $.hasTag(_TagClass.context, 31), undefined, undefined),
-    new $.ComponentSpec("cug-OutgoingAccess", true, $.hasTag(_TagClass.context, 32), undefined, undefined),
-    new $.ComponentSpec("suppressionOfAnnouncement", true, $.hasTag(_TagClass.context, 55), undefined, undefined),
-    new $.ComponentSpec("oCSIApplicable", true, $.hasTag(_TagClass.context, 56), undefined, undefined),
-    new $.ComponentSpec("naOliInfo", true, $.hasTag(_TagClass.context, 57), undefined, undefined),
-    new $.ComponentSpec("bor-InterrogationRequested", true, $.hasTag(_TagClass.context, 58), undefined, undefined)
+    new $.ComponentSpec("destinationRoutingAddress", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("alertingPattern", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("carrier", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 29)),
+    new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 30)),
+    new $.ComponentSpec("genericNumbers", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("serviceInteractionIndicatorsTwo", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("chargeNumber", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("legToBeConnected", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("cug-Interlock", true, $.hasTag(_TagClass.context, 31)),
+    new $.ComponentSpec("cug-OutgoingAccess", true, $.hasTag(_TagClass.context, 32)),
+    new $.ComponentSpec("suppressionOfAnnouncement", true, $.hasTag(_TagClass.context, 55)),
+    new $.ComponentSpec("oCSIApplicable", true, $.hasTag(_TagClass.context, 56)),
+    new $.ComponentSpec("naOliInfo", true, $.hasTag(_TagClass.context, 57)),
+    new $.ComponentSpec("bor-InterrogationRequested", true, $.hasTag(_TagClass.context, 58))
 ];
 
 /**
@@ -319,7 +265,7 @@ const _root_component_type_list_2_spec_for_ConnectArg: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_ConnectArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("suppress-N-CSI", true, $.hasTag(_TagClass.context, 59), undefined, undefined)
+    new $.ComponentSpec("suppress-N-CSI", true, $.hasTag(_TagClass.context, 59))
 ];
 
 let _cached_decoder_for_ConnectArg: $.ASN1Decoder<ConnectArg> | null = null;
@@ -417,7 +363,7 @@ let _cached_encoder_for_ConnectArg: $.ASN1Encoder<ConnectArg> | null = null;
  */
 export
 function _encode_ConnectArg (value: ConnectArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConnectArg) { _cached_encoder_for_ConnectArg = function (value: ConnectArg, elGetter: $.ASN1Encoder<ConnectArg>): _Element {
+    if (!_cached_encoder_for_ConnectArg) { _cached_encoder_for_ConnectArg = function (value: ConnectArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_DestinationRoutingAddress, $.BER)(value.destinationRoutingAddress, $.BER),

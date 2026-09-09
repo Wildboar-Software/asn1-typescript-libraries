@@ -1,9 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -71,7 +67,7 @@ export function _decode_EventSpecificInformationBCSM_oAbandonSpecificInfo (el: _
 let _cached_encoder_for_EventSpecificInformationBCSM_oAbandonSpecificInfo: $.ASN1Encoder<EventSpecificInformationBCSM_oAbandonSpecificInfo> | null = null;
 export function _encode_EventSpecificInformationBCSM_oAbandonSpecificInfo (value: EventSpecificInformationBCSM_oAbandonSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_oAbandonSpecificInfo>): _Element {
     if (!_cached_encoder_for_EventSpecificInformationBCSM_oAbandonSpecificInfo) {
-        _cached_encoder_for_EventSpecificInformationBCSM_oAbandonSpecificInfo = function (value: EventSpecificInformationBCSM_oAbandonSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_oAbandonSpecificInfo>): _Element {
+        _cached_encoder_for_EventSpecificInformationBCSM_oAbandonSpecificInfo = function (value: EventSpecificInformationBCSM_oAbandonSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.routeNotPermitted === undefined) ? undefined : $._encode_implicit(_TagClass.context, 50, () => $._encodeNull, $.BER)(value.routeNotPermitted, $.BER))

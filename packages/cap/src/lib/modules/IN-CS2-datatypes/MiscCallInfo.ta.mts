@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, MiscCallInfo_messageType_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, MiscCallInfo_messageType_notification /* IMPORTED_LONG_ENUMERATION_ITEM */, notification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MiscCallInfo_messageType, _encode_MiscCallInfo_messageType } from "../IN-CS2-datatypes/MiscCallInfo-messageType.ta.mjs";
+import { MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, _decode_MiscCallInfo_messageType, _encode_MiscCallInfo_messageType } from "../IN-CS2-datatypes/MiscCallInfo-messageType.ta.mjs";
 // export { MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, MiscCallInfo_messageType_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, MiscCallInfo_messageType_notification /* IMPORTED_LONG_ENUMERATION_ITEM */, notification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MiscCallInfo_messageType, _encode_MiscCallInfo_messageType } from "../IN-CS2-datatypes/MiscCallInfo-messageType.ta.mjs";
-import { MiscCallInfo_dpAssignment, _enum_for_MiscCallInfo_dpAssignment, MiscCallInfo_dpAssignment_individualLine /* IMPORTED_LONG_ENUMERATION_ITEM */, individualLine /* IMPORTED_SHORT_ENUMERATION_ITEM */, MiscCallInfo_dpAssignment_groupBased /* IMPORTED_LONG_ENUMERATION_ITEM */, groupBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, MiscCallInfo_dpAssignment_officeBased /* IMPORTED_LONG_ENUMERATION_ITEM */, officeBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MiscCallInfo_dpAssignment, _encode_MiscCallInfo_dpAssignment } from "../IN-CS2-datatypes/MiscCallInfo-dpAssignment.ta.mjs";
+import { MiscCallInfo_dpAssignment, _enum_for_MiscCallInfo_dpAssignment, _decode_MiscCallInfo_dpAssignment, _encode_MiscCallInfo_dpAssignment } from "../IN-CS2-datatypes/MiscCallInfo-dpAssignment.ta.mjs";
 // export { MiscCallInfo_dpAssignment, _enum_for_MiscCallInfo_dpAssignment, MiscCallInfo_dpAssignment_individualLine /* IMPORTED_LONG_ENUMERATION_ITEM */, individualLine /* IMPORTED_SHORT_ENUMERATION_ITEM */, MiscCallInfo_dpAssignment_groupBased /* IMPORTED_LONG_ENUMERATION_ITEM */, groupBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, MiscCallInfo_dpAssignment_officeBased /* IMPORTED_LONG_ENUMERATION_ITEM */, officeBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MiscCallInfo_dpAssignment, _encode_MiscCallInfo_dpAssignment } from "../IN-CS2-datatypes/MiscCallInfo-dpAssignment.ta.mjs";
 
 
@@ -146,8 +91,8 @@ class MiscCallInfo {
  */
 export
 const _root_component_type_list_1_spec_for_MiscCallInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("messageType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("dpAssignment", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("messageType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("dpAssignment", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -218,7 +163,7 @@ let _cached_encoder_for_MiscCallInfo: $.ASN1Encoder<MiscCallInfo> | null = null;
  */
 export
 function _encode_MiscCallInfo (value: MiscCallInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MiscCallInfo) { _cached_encoder_for_MiscCallInfo = function (value: MiscCallInfo, elGetter: $.ASN1Encoder<MiscCallInfo>): _Element {
+    if (!_cached_encoder_for_MiscCallInfo) { _cached_encoder_for_MiscCallInfo = function (value: MiscCallInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MiscCallInfo_messageType, $.BER)(value.messageType, $.BER),

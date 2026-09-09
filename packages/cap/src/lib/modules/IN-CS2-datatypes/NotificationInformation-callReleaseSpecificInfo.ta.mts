@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -140,8 +85,8 @@ class NotificationInformation_callReleaseSpecificInfo {
  */
 export
 const _root_component_type_list_1_spec_for_NotificationInformation_callReleaseSpecificInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("releaseCause", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("timeStamp", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("releaseCause", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("timeStamp", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -214,7 +159,7 @@ let _cached_encoder_for_NotificationInformation_callReleaseSpecificInfo: $.ASN1E
  */
 export
 function _encode_NotificationInformation_callReleaseSpecificInfo (value: NotificationInformation_callReleaseSpecificInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationInformation_callReleaseSpecificInfo) { _cached_encoder_for_NotificationInformation_callReleaseSpecificInfo = function (value: NotificationInformation_callReleaseSpecificInfo, elGetter: $.ASN1Encoder<NotificationInformation_callReleaseSpecificInfo>): _Element {
+    if (!_cached_encoder_for_NotificationInformation_callReleaseSpecificInfo) { _cached_encoder_for_NotificationInformation_callReleaseSpecificInfo = function (value: NotificationInformation_callReleaseSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.releaseCause === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_Cause, $.BER)(value.releaseCause, $.BER)),

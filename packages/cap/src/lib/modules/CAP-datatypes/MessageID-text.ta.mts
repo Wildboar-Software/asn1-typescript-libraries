@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
     IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -75,7 +71,7 @@ export function _decode_MessageID_text (el: _Element): MessageID_text {
 let _cached_encoder_for_MessageID_text: $.ASN1Encoder<MessageID_text> | null = null;
 export function _encode_MessageID_text (value: MessageID_text, elGetter: $.ASN1Encoder<MessageID_text>): _Element {
     if (!_cached_encoder_for_MessageID_text) {
-        _cached_encoder_for_MessageID_text = function (value: MessageID_text, elGetter: $.ASN1Encoder<MessageID_text>): _Element {
+        _cached_encoder_for_MessageID_text = function (value: MessageID_text): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeIA5String, $.BER)(value.messageContent, $.BER),

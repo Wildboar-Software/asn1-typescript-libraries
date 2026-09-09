@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -71,7 +66,7 @@ export function _decode_GPRSEventSpecificInformation_attachChangeOfPositionSpeci
 let _cached_encoder_for_GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation: $.ASN1Encoder<GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation> | null = null;
 export function _encode_GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation (value: GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation, elGetter: $.ASN1Encoder<GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation>): _Element {
     if (!_cached_encoder_for_GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation) {
-        _cached_encoder_for_GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation = function (value: GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation, elGetter: $.ASN1Encoder<GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation>): _Element {
+        _cached_encoder_for_GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation = function (value: GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.locationInformationGPRS === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_LocationInformationGPRS, $.BER)(value.locationInformationGPRS, $.BER))

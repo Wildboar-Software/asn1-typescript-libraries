@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
 // export { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
-import { USIMonitorMode, _enum_for_USIMonitorMode, USIMonitorMode_monitoringActive /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, USIMonitorMode_monitoringInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_USIMonitorMode, _encode_USIMonitorMode } from "../IN-CS2-datatypes/USIMonitorMode.ta.mjs";
+import { USIMonitorMode, _enum_for_USIMonitorMode, _decode_USIMonitorMode, _encode_USIMonitorMode } from "../IN-CS2-datatypes/USIMonitorMode.ta.mjs";
 // export { USIMonitorMode, _enum_for_USIMonitorMode, USIMonitorMode_monitoringActive /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, USIMonitorMode_monitoringInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_USIMonitorMode, _encode_USIMonitorMode } from "../IN-CS2-datatypes/USIMonitorMode.ta.mjs";
 import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
@@ -156,9 +101,9 @@ class RequestedUTSI {
  */
 export
 const _root_component_type_list_1_spec_for_RequestedUTSI: $.ComponentSpec[] = [
-    new $.ComponentSpec("uSIServiceIndicator", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("uSImonitorMode", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("legID", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("uSIServiceIndicator", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("uSImonitorMode", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("legID", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -232,7 +177,7 @@ let _cached_encoder_for_RequestedUTSI: $.ASN1Encoder<RequestedUTSI> | null = nul
  */
 export
 function _encode_RequestedUTSI (value: RequestedUTSI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestedUTSI) { _cached_encoder_for_RequestedUTSI = function (value: RequestedUTSI, elGetter: $.ASN1Encoder<RequestedUTSI>): _Element {
+    if (!_cached_encoder_for_RequestedUTSI) { _cached_encoder_for_RequestedUTSI = function (value: RequestedUTSI): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_USIServiceIndicator, $.BER)(value.uSIServiceIndicator, $.BER),

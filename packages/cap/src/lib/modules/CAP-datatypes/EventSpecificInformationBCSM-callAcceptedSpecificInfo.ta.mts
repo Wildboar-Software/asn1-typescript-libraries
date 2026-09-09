@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -71,7 +66,7 @@ export function _decode_EventSpecificInformationBCSM_callAcceptedSpecificInfo (e
 let _cached_encoder_for_EventSpecificInformationBCSM_callAcceptedSpecificInfo: $.ASN1Encoder<EventSpecificInformationBCSM_callAcceptedSpecificInfo> | null = null;
 export function _encode_EventSpecificInformationBCSM_callAcceptedSpecificInfo (value: EventSpecificInformationBCSM_callAcceptedSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_callAcceptedSpecificInfo>): _Element {
     if (!_cached_encoder_for_EventSpecificInformationBCSM_callAcceptedSpecificInfo) {
-        _cached_encoder_for_EventSpecificInformationBCSM_callAcceptedSpecificInfo = function (value: EventSpecificInformationBCSM_callAcceptedSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationBCSM_callAcceptedSpecificInfo>): _Element {
+        _cached_encoder_for_EventSpecificInformationBCSM_callAcceptedSpecificInfo = function (value: EventSpecificInformationBCSM_callAcceptedSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.locationInformation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 50, () => _encode_LocationInformation, $.BER)(value.locationInformation, $.BER))

@@ -1,8 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
     NULL,
     ASN1Element as _Element,
@@ -147,7 +144,7 @@ export function _decode_ServiceInteractionIndicatorsTwo (el: _Element): ServiceI
 let _cached_encoder_for_ServiceInteractionIndicatorsTwo: $.ASN1Encoder<ServiceInteractionIndicatorsTwo> | null = null;
 export function _encode_ServiceInteractionIndicatorsTwo (value: ServiceInteractionIndicatorsTwo, elGetter: $.ASN1Encoder<ServiceInteractionIndicatorsTwo>): _Element {
     if (!_cached_encoder_for_ServiceInteractionIndicatorsTwo) {
-        _cached_encoder_for_ServiceInteractionIndicatorsTwo = function (value: ServiceInteractionIndicatorsTwo, elGetter: $.ASN1Encoder<ServiceInteractionIndicatorsTwo>): _Element {
+        _cached_encoder_for_ServiceInteractionIndicatorsTwo = function (value: ServiceInteractionIndicatorsTwo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.forwardServiceInteractionInd === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_ForwardServiceInteractionInd, $.BER)(value.forwardServiceInteractionInd, $.BER)),

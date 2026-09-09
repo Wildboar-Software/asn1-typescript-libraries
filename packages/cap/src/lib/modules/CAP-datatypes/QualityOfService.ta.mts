@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -103,7 +98,7 @@ export function _decode_QualityOfService (el: _Element): QualityOfService {
 let _cached_encoder_for_QualityOfService: $.ASN1Encoder<QualityOfService> | null = null;
 export function _encode_QualityOfService (value: QualityOfService, elGetter: $.ASN1Encoder<QualityOfService>): _Element {
     if (!_cached_encoder_for_QualityOfService) {
-        _cached_encoder_for_QualityOfService = function (value: QualityOfService, elGetter: $.ASN1Encoder<QualityOfService>): _Element {
+        _cached_encoder_for_QualityOfService = function (value: QualityOfService): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.requested_QoS === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_GPRS_QoS, $.BER)(value.requested_QoS, $.BER)),

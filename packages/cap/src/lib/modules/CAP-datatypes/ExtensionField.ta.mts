@@ -1,16 +1,11 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { CriticalityType, _enum_for_CriticalityType, CriticalityType_ignore, ignore, _decode_CriticalityType, _encode_CriticalityType } from "../IN-CS2-datatypes/CriticalityType.ta.mjs";
+import { CriticalityType, _enum_for_CriticalityType, ignore, _decode_CriticalityType, _encode_CriticalityType } from "../IN-CS2-datatypes/CriticalityType.ta.mjs";
 
 /**
  * @summary ExtensionField
@@ -89,7 +84,7 @@ export function _decode_ExtensionField (el: _Element): ExtensionField {
 let _cached_encoder_for_ExtensionField: $.ASN1Encoder<ExtensionField> | null = null;
 export function _encode_ExtensionField (value: ExtensionField, elGetter: $.ASN1Encoder<ExtensionField>): _Element {
     if (!_cached_encoder_for_ExtensionField) {
-        _cached_encoder_for_ExtensionField = function (value: ExtensionField, elGetter: $.ASN1Encoder<ExtensionField>): _Element {
+        _cached_encoder_for_ExtensionField = function (value: ExtensionField): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Code(value.type_, $.BER),

@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -78,7 +73,7 @@ export function _decode_BCSM_Failure (el: _Element): BCSM_Failure {
 let _cached_encoder_for_BCSM_Failure: $.ASN1Encoder<BCSM_Failure> | null = null;
 export function _encode_BCSM_Failure (value: BCSM_Failure, elGetter: $.ASN1Encoder<BCSM_Failure>): _Element {
     if (!_cached_encoder_for_BCSM_Failure) {
-        _cached_encoder_for_BCSM_Failure = function (value: BCSM_Failure, elGetter: $.ASN1Encoder<BCSM_Failure>): _Element {
+        _cached_encoder_for_BCSM_Failure = function (value: BCSM_Failure): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.legID === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_LegID, $.BER)(value.legID, $.BER)),

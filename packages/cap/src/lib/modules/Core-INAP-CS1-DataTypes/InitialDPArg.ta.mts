@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,7 +19,7 @@ import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNum
 // export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../Core-INAP-CS1-DataTypes/CallingPartyNumber.ta.mjs";
 import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
 // export { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
-import { CGEncountered, _enum_for_CGEncountered, CGEncountered_manualCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, manualCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_scpOverload /* IMPORTED_LONG_ENUMERATION_ITEM */, scpOverload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CGEncountered, _encode_CGEncountered } from "../Core-INAP-CS1-DataTypes/CGEncountered.ta.mjs";
+import { CGEncountered, _enum_for_CGEncountered, _decode_CGEncountered, _encode_CGEncountered } from "../Core-INAP-CS1-DataTypes/CGEncountered.ta.mjs";
 // export { CGEncountered, _enum_for_CGEncountered, CGEncountered_manualCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, manualCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_scpOverload /* IMPORTED_LONG_ENUMERATION_ITEM */, scpOverload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CGEncountered, _encode_CGEncountered } from "../Core-INAP-CS1-DataTypes/CGEncountered.ta.mjs";
 import { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../Core-INAP-CS1-DataTypes/IPSSPCapabilities.ta.mjs";
 // export { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../Core-INAP-CS1-DataTypes/IPSSPCapabilities.ta.mjs";
@@ -96,7 +41,7 @@ import { ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCa
 // export { ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../Core-INAP-CS1-DataTypes/ForwardCallIndicators.ta.mjs";
 import { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../Core-INAP-CS1-DataTypes/BearerCapability.ta.mjs";
 // export { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../Core-INAP-CS1-DataTypes/BearerCapability.ta.mjs";
-import { EventTypeBCSM, _enum_for_EventTypeBCSM, EventTypeBCSM_origAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, origAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_analyzedInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, analyzedInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, oCalledPartyBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, oMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, oDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, oAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, tCalledPartyBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, tMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, tDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, tAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../Core-INAP-CS1-DataTypes/EventTypeBCSM.ta.mjs";
+import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../Core-INAP-CS1-DataTypes/EventTypeBCSM.ta.mjs";
 // export { EventTypeBCSM, _enum_for_EventTypeBCSM, EventTypeBCSM_origAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, origAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_analyzedInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, analyzedInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, oCalledPartyBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, oMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, oDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, oAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, tCalledPartyBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, tMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, tDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, tAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../Core-INAP-CS1-DataTypes/EventTypeBCSM.ta.mjs";
 import { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../Core-INAP-CS1-DataTypes/RedirectingPartyID.ta.mjs";
 // export { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../Core-INAP-CS1-DataTypes/RedirectingPartyID.ta.mjs";
@@ -290,24 +235,24 @@ class InitialDPArg {
  */
 export
 const _root_component_type_list_1_spec_for_InitialDPArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("calledPartyNumber", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("cGEncountered", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("iPSSPCapabilities", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("iPAvailable", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("locationNumber", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("highLayerCompatibility", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("serviceInteractionIndicators", true, $.hasTag(_TagClass.context, 24), undefined, undefined),
-    new $.ComponentSpec("additionalCallingPartyNumber", true, $.hasTag(_TagClass.context, 25), undefined, undefined),
-    new $.ComponentSpec("forwardCallIndicators", true, $.hasTag(_TagClass.context, 26), undefined, undefined),
-    new $.ComponentSpec("bearerCapability", true, $.hasTag(_TagClass.context, 27), undefined, undefined),
-    new $.ComponentSpec("eventTypeBCSM", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 29), undefined, undefined),
-    new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 30), undefined, undefined)
+    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("calledPartyNumber", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("cGEncountered", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("iPSSPCapabilities", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("iPAvailable", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("locationNumber", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("highLayerCompatibility", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("serviceInteractionIndicators", true, $.hasTag(_TagClass.context, 24)),
+    new $.ComponentSpec("additionalCallingPartyNumber", true, $.hasTag(_TagClass.context, 25)),
+    new $.ComponentSpec("forwardCallIndicators", true, $.hasTag(_TagClass.context, 26)),
+    new $.ComponentSpec("bearerCapability", true, $.hasTag(_TagClass.context, 27)),
+    new $.ComponentSpec("eventTypeBCSM", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 29)),
+    new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 30))
 ];
 
 /**
@@ -426,7 +371,7 @@ let _cached_encoder_for_InitialDPArg: $.ASN1Encoder<InitialDPArg> | null = null;
  */
 export
 function _encode_InitialDPArg (value: InitialDPArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitialDPArg) { _cached_encoder_for_InitialDPArg = function (value: InitialDPArg, elGetter: $.ASN1Encoder<InitialDPArg>): _Element {
+    if (!_cached_encoder_for_InitialDPArg) { _cached_encoder_for_InitialDPArg = function (value: InitialDPArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ServiceKey, $.BER)(value.serviceKey, $.BER),

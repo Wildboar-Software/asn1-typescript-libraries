@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -152,10 +98,10 @@ class ContinueWithArgumentArgExtension {
  */
 export
 const _root_component_type_list_1_spec_for_ContinueWithArgumentArgExtension: $.ComponentSpec[] = [
-    new $.ComponentSpec("suppress-D-CSI", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("suppress-N-CSI", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("suppressOutgoingCallBarring", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("legOrCallSegment", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("suppress-D-CSI", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("suppress-N-CSI", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("suppressOutgoingCallBarring", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("legOrCallSegment", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -234,7 +180,7 @@ let _cached_encoder_for_ContinueWithArgumentArgExtension: $.ASN1Encoder<Continue
  */
 export
 function _encode_ContinueWithArgumentArgExtension (value: ContinueWithArgumentArgExtension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ContinueWithArgumentArgExtension) { _cached_encoder_for_ContinueWithArgumentArgExtension = function (value: ContinueWithArgumentArgExtension, elGetter: $.ASN1Encoder<ContinueWithArgumentArgExtension>): _Element {
+    if (!_cached_encoder_for_ContinueWithArgumentArgExtension) { _cached_encoder_for_ContinueWithArgumentArgExtension = function (value: ContinueWithArgumentArgExtension): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.suppress_D_CSI === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER)(value.suppress_D_CSI, $.BER)),

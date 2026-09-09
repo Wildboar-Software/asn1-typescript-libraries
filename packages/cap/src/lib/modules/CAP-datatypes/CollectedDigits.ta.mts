@@ -2,9 +2,7 @@ import {
     OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -135,7 +133,7 @@ export function _decode_CollectedDigits (el: _Element): CollectedDigits {
 let _cached_encoder_for_CollectedDigits: $.ASN1Encoder<CollectedDigits> | null = null;
 export function _encode_CollectedDigits (value: CollectedDigits, elGetter: $.ASN1Encoder<CollectedDigits>): _Element {
     if (!_cached_encoder_for_CollectedDigits) {
-        _cached_encoder_for_CollectedDigits = function (value: CollectedDigits, elGetter: $.ASN1Encoder<CollectedDigits>): _Element {
+        _cached_encoder_for_CollectedDigits = function (value: CollectedDigits): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.minimumNbOfDigits === undefined || $.deepEq(value.minimumNbOfDigits, CollectedDigits._default_value_for_minimumNbOfDigits) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.minimumNbOfDigits, $.BER)),

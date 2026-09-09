@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../IN-CS2-datatypes/EventTypeCharging.ta.mjs";
 // export { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../IN-CS2-datatypes/EventTypeCharging.ta.mjs";
-import { MonitorMode, _enum_for_MonitorMode, MonitorMode_interrupted /* IMPORTED_LONG_ENUMERATION_ITEM */, interrupted /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndContinue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_transparent /* IMPORTED_LONG_ENUMERATION_ITEM */, transparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../IN-CS2-datatypes/MonitorMode.ta.mjs";
+import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_MonitorMode } from "../IN-CS2-datatypes/MonitorMode.ta.mjs";
 // export { MonitorMode, _enum_for_MonitorMode, MonitorMode_interrupted /* IMPORTED_LONG_ENUMERATION_ITEM */, interrupted /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, notifyAndContinue /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitorMode_transparent /* IMPORTED_LONG_ENUMERATION_ITEM */, transparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../IN-CS2-datatypes/MonitorMode.ta.mjs";
 import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
@@ -148,9 +93,9 @@ class ChargingEvent {
  */
 export
 const _root_component_type_list_1_spec_for_ChargingEvent: $.ComponentSpec[] = [
-    new $.ComponentSpec("eventTypeCharging", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("monitorMode", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("legID", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("eventTypeCharging", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("monitorMode", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("legID", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
@@ -224,7 +169,7 @@ let _cached_encoder_for_ChargingEvent: $.ASN1Encoder<ChargingEvent> | null = nul
  */
 export
 function _encode_ChargingEvent (value: ChargingEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargingEvent) { _cached_encoder_for_ChargingEvent = function (value: ChargingEvent, elGetter: $.ASN1Encoder<ChargingEvent>): _Element {
+    if (!_cached_encoder_for_ChargingEvent) { _cached_encoder_for_ChargingEvent = function (value: ChargingEvent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_EventTypeCharging, $.BER)(value.eventTypeCharging, $.BER),

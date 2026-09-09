@@ -1,5 +1,4 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { EstablishTemporaryConnectionArg, _decode_EstablishTemporaryConnectionArg, _encode_EstablishTemporaryConnectionArg } from "../CAP-gsmSSF-gsmSCF-ops-args/EstablishTemporaryConnectionArg.ta.mjs";
 import { eTCFailed } from "../CAP-errortypes/eTCFailed.oa.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";

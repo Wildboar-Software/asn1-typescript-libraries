@@ -1,9 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -80,7 +76,7 @@ export function _decode_GPRSEventSpecificInformation_disconnectSpecificInformati
 let _cached_encoder_for_GPRSEventSpecificInformation_disconnectSpecificInformation: $.ASN1Encoder<GPRSEventSpecificInformation_disconnectSpecificInformation> | null = null;
 export function _encode_GPRSEventSpecificInformation_disconnectSpecificInformation (value: GPRSEventSpecificInformation_disconnectSpecificInformation, elGetter: $.ASN1Encoder<GPRSEventSpecificInformation_disconnectSpecificInformation>): _Element {
     if (!_cached_encoder_for_GPRSEventSpecificInformation_disconnectSpecificInformation) {
-        _cached_encoder_for_GPRSEventSpecificInformation_disconnectSpecificInformation = function (value: GPRSEventSpecificInformation_disconnectSpecificInformation, elGetter: $.ASN1Encoder<GPRSEventSpecificInformation_disconnectSpecificInformation>): _Element {
+        _cached_encoder_for_GPRSEventSpecificInformation_disconnectSpecificInformation = function (value: GPRSEventSpecificInformation_disconnectSpecificInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.initiatingEntity === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_InitiatingEntity, $.BER)(value.initiatingEntity, $.BER)),

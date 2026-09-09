@@ -1,10 +1,5 @@
 import {
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -73,7 +68,7 @@ export function _decode_EventSpecificInformationSMS_o_smsFailureSpecificInfo (el
 let _cached_encoder_for_EventSpecificInformationSMS_o_smsFailureSpecificInfo: $.ASN1Encoder<EventSpecificInformationSMS_o_smsFailureSpecificInfo> | null = null;
 export function _encode_EventSpecificInformationSMS_o_smsFailureSpecificInfo (value: EventSpecificInformationSMS_o_smsFailureSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationSMS_o_smsFailureSpecificInfo>): _Element {
     if (!_cached_encoder_for_EventSpecificInformationSMS_o_smsFailureSpecificInfo) {
-        _cached_encoder_for_EventSpecificInformationSMS_o_smsFailureSpecificInfo = function (value: EventSpecificInformationSMS_o_smsFailureSpecificInfo, elGetter: $.ASN1Encoder<EventSpecificInformationSMS_o_smsFailureSpecificInfo>): _Element {
+        _cached_encoder_for_EventSpecificInformationSMS_o_smsFailureSpecificInfo = function (value: EventSpecificInformationSMS_o_smsFailureSpecificInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.failureCause === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_MO_SMSCause, $.BER)(value.failureCause, $.BER))

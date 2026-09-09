@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedInformationType, _enum_for_RequestedInformationType, RequestedInformationType_callAttemptElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttemptElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callStopTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callStopTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callConnectedElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callConnectedElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_calledAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, calledAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_releaseCause /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-CS2-datatypes/RequestedInformationType.ta.mjs";
+import { RequestedInformationType, _enum_for_RequestedInformationType, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-CS2-datatypes/RequestedInformationType.ta.mjs";
 // export { RequestedInformationType, _enum_for_RequestedInformationType, RequestedInformationType_callAttemptElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttemptElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callStopTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callStopTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callConnectedElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callConnectedElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_calledAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, calledAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_releaseCause /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-CS2-datatypes/RequestedInformationType.ta.mjs";
 import { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS2-datatypes/RequestedInformationValue.ta.mjs";
 // export { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS2-datatypes/RequestedInformationValue.ta.mjs";
@@ -139,8 +83,8 @@ class RequestedInformation {
  */
 export
 const _root_component_type_list_1_spec_for_RequestedInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec("requestedInformationType", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("requestedInformationValue", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("requestedInformationType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestedInformationValue", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -210,7 +154,7 @@ let _cached_encoder_for_RequestedInformation: $.ASN1Encoder<RequestedInformation
  */
 export
 function _encode_RequestedInformation (value: RequestedInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestedInformation) { _cached_encoder_for_RequestedInformation = function (value: RequestedInformation, elGetter: $.ASN1Encoder<RequestedInformation>): _Element {
+    if (!_cached_encoder_for_RequestedInformation) { _cached_encoder_for_RequestedInformation = function (value: RequestedInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RequestedInformationType, $.BER)(value.requestedInformationType, $.BER),

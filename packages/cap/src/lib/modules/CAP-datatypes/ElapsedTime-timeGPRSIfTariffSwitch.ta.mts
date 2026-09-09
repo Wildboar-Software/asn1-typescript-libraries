@@ -1,10 +1,6 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -73,7 +69,7 @@ export function _decode_ElapsedTime_timeGPRSIfTariffSwitch (el: _Element): Elaps
 let _cached_encoder_for_ElapsedTime_timeGPRSIfTariffSwitch: $.ASN1Encoder<ElapsedTime_timeGPRSIfTariffSwitch> | null = null;
 export function _encode_ElapsedTime_timeGPRSIfTariffSwitch (value: ElapsedTime_timeGPRSIfTariffSwitch, elGetter: $.ASN1Encoder<ElapsedTime_timeGPRSIfTariffSwitch>): _Element {
     if (!_cached_encoder_for_ElapsedTime_timeGPRSIfTariffSwitch) {
-        _cached_encoder_for_ElapsedTime_timeGPRSIfTariffSwitch = function (value: ElapsedTime_timeGPRSIfTariffSwitch, elGetter: $.ASN1Encoder<ElapsedTime_timeGPRSIfTariffSwitch>): _Element {
+        _cached_encoder_for_ElapsedTime_timeGPRSIfTariffSwitch = function (value: ElapsedTime_timeGPRSIfTariffSwitch): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.timeGPRSSinceLastTariffSwitch, $.BER),

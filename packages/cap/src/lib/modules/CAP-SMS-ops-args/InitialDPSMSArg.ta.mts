@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -295,20 +240,20 @@ class InitialDPSMSArg {
  */
 export
 const _root_component_type_list_1_spec_for_InitialDPSMSArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("destinationSubscriberNumber", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("eventTypeSMS", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("iMSI", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("locationInformationMSC", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("locationInformationGPRS", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("sMSCAddress", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("timeAndTimezone", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("tPShortMessageSpecificInfo", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("tPProtocolIdentifier", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("tPDataCodingScheme", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("tPValidityPeriod", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 13), undefined, undefined)
+    new $.ComponentSpec("serviceKey", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("destinationSubscriberNumber", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("eventTypeSMS", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("iMSI", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("locationInformationMSC", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("locationInformationGPRS", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("sMSCAddress", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("timeAndTimezone", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("tPShortMessageSpecificInfo", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("tPProtocolIdentifier", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("tPDataCodingScheme", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("tPValidityPeriod", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 13))
 ];
 
 /**
@@ -334,13 +279,13 @@ const _root_component_type_list_2_spec_for_InitialDPSMSArg: $.ComponentSpec[] = 
  */
 export
 const _extension_additions_list_spec_for_InitialDPSMSArg: $.ComponentSpec[] = [
-    new $.ComponentSpec("smsReferenceNumber", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("mscAddress", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("ms-Classmark2", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("gPRSMSClass", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("iMEI", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("calledPartyNumber", true, $.hasTag(_TagClass.context, 20), undefined, undefined)
+    new $.ComponentSpec("smsReferenceNumber", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("mscAddress", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("sgsn-Number", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("ms-Classmark2", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("gPRSMSClass", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("iMEI", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("calledPartyNumber", true, $.hasTag(_TagClass.context, 20))
 ];
 
 let _cached_decoder_for_InitialDPSMSArg: $.ASN1Decoder<InitialDPSMSArg> | null = null;
@@ -444,7 +389,7 @@ let _cached_encoder_for_InitialDPSMSArg: $.ASN1Encoder<InitialDPSMSArg> | null =
  */
 export
 function _encode_InitialDPSMSArg (value: InitialDPSMSArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitialDPSMSArg) { _cached_encoder_for_InitialDPSMSArg = function (value: InitialDPSMSArg, elGetter: $.ASN1Encoder<InitialDPSMSArg>): _Element {
+    if (!_cached_encoder_for_InitialDPSMSArg) { _cached_encoder_for_InitialDPSMSArg = function (value: InitialDPSMSArg): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ServiceKey, $.BER)(value.serviceKey, $.BER),
