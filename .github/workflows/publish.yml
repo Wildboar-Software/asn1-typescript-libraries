@@ -19,6 +19,7 @@ jobs:
           - "attribute-asn1module"
           - "bip"
           - "cades"
+          - "cap"
           - "casscam"
           - "cbeff"
           - "ccr"
