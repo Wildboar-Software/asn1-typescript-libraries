@@ -322,7 +322,10 @@ convention and the scope MUST be the project name (what Nx calls it).
    this. Create the per-ASN.1 module entrypoints unconditionally.
 6. Find all `-- REMOVED_FROM_UNNESTING --` in the ASN.1-based Typescript and
    replace it with the ASN.1 that belongs there. Apply formatting to the ASN.1
-   so that it looks "natural."
+   so that it looks "natural." Do **NOT** speculate on the ASN.1 if you cannot
+   find it. Do **NOT** apply tags (e.g. `[0]`) that are not present in the
+   original ASN.1. It is far worse to be wrong than to leave this unfixed; just
+   leave it alone if you are not confident that you can do it correctly.
 7. Identify any types that have associated constraints in the ASN.1 and generate
    code to validate those constraints. If it is a `SET` or `SEQUENCE`, a `class`
    will have been generated, and you MAY add constraint-validation code to the
@@ -339,7 +342,8 @@ convention and the scope MUST be the project name (what Nx calls it).
    code to encoders.
 8. `ComponentSpec` can now supports optional trailing arguments. If you see it
    ending with one or more `undefined` arguments, please remove these to make
-   the code size smaller.
+   the code size smaller. Do **NOT** alter any other arguments to the
+   `ComponentSpec` constructor.
 9. Clean up any unused imports from each file.
 10. Remove any re-exports from each file, unless they are part of the thing
     actually defined in the file. For example, do not re-export
@@ -410,6 +414,15 @@ of a type `OPTIONAL<T>`. This is unnecessary and it only makes the code
 to review and the actual compiled code much larger. Please do not do this
 unless it is in response to an error, such as Typescript requiring it for
 some reason.
+
+Do **NOT** assume any tagging defaults for any ASN.1 module. Tagging defaults
+to `EXPLICIT TAGS`, but `IMPLICIT TAGS` or `AUTOMATIC TAGS` must be explicitly
+declared in an ASN.1 module.
+
+Remember that a given ASN.1 productions tagging is determined by the ASN.1
+module in which it is defined, not the module in which it is used. For example,
+a `TBSCertificate` will always be encoded the same way (explicit tagging), even
+if imported into an ASN.1 module that uses `IMPLICIT TAGS`.
 
 ## Output to the User
 
