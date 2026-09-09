@@ -84,8 +84,8 @@ class EscapeArgument {
 export
 const _root_component_type_list_1_spec_for_EscapeArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("escapeRegisterID", true, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("security", true, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("privateData", false, $.hasTag(_TagClass.universal, 4))
+    new $.ComponentSpec("security", true, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("privateData", false, $.hasAnyTag)
 ];
 
 /**

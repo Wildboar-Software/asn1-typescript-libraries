@@ -102,7 +102,7 @@ class DirectedPickupCallArgument {
 export
 const _root_component_type_list_1_spec_for_DirectedPickupCallArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("callToBePickedUp", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("requestingDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestingDevice", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("userData", true, $.hasTag(_TagClass.application, 29)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

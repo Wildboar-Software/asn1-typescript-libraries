@@ -133,7 +133,7 @@ export
 const _root_component_type_list_1_spec_for_ForwardList_Item: $.ComponentSpec[] = [
     new $.ComponentSpec("forwardingType", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("forwardStatus", false, $.hasTag(_TagClass.universal, 1)),
-    new $.ComponentSpec("forwardDN", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("forwardDN", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("forwardDefault", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("ringDuration", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("ringCount", true, $.hasTag(_TagClass.universal, 2))

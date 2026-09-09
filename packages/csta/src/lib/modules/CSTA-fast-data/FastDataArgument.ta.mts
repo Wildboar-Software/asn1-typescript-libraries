@@ -123,7 +123,7 @@ const _root_component_type_list_1_spec_for_FastDataArgument: $.ComponentSpec[] =
     new $.ComponentSpec("ioRegisterReqID", true, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("object", false, $.hasAnyTag),
     new $.ComponentSpec("dataPathType", true, $.hasTag(_TagClass.universal, 10)),
-    new $.ComponentSpec("displayAttributes", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("displayAttributes", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("ioData", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];

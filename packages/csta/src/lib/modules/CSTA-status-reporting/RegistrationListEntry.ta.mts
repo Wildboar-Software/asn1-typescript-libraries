@@ -95,7 +95,7 @@ export
 const _root_component_type_list_1_spec_for_RegistrationListEntry: $.ComponentSpec[] = [
     new $.ComponentSpec("registrationType", false, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("registrationID", false, $.hasTag(_TagClass.universal, 22)),
-    new $.ComponentSpec("registrationObject", true, $.hasTag(_TagClass.context, 0))
+    new $.ComponentSpec("registrationObject", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

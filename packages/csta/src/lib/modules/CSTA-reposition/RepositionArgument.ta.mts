@@ -102,7 +102,7 @@ class RepositionArgument {
 export
 const _root_component_type_list_1_spec_for_RepositionArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("connection", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("periodOfReposition", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("periodOfReposition", false, $.hasAnyTag),
     new $.ComponentSpec("messageToReposition", true, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("resource", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

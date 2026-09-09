@@ -94,7 +94,7 @@ class GetSwitchingFunctionDevicesArgument {
  */
 export
 const _root_component_type_list_1_spec_for_GetSwitchingFunctionDevicesArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("requestedDeviceID", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestedDeviceID", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("requestedDeviceCategory", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];

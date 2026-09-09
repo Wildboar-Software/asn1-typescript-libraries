@@ -97,7 +97,7 @@ class StartDataPathResult {
  */
 export
 const _root_component_type_list_1_spec_for_StartDataPathResult: $.ComponentSpec[] = [
-    new $.ComponentSpec("ioCrossRefID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ioCrossRefID", false, $.hasAnyTag),
     new $.ComponentSpec("numberOfCharactersToCollect", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("terminationCharacter", true, $.hasTag(_TagClass.universal, 22)),
     new $.ComponentSpec("timeout", true, $.hasTag(_TagClass.context, 1)),

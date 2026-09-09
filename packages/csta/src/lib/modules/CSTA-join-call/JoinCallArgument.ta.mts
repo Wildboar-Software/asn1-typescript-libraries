@@ -177,7 +177,7 @@ class JoinCallArgument {
 export
 const _root_component_type_list_1_spec_for_JoinCallArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("activeCall", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("joiningDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("joiningDevice", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("autoOriginate", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("participationType", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("accountCode", true, $.hasTag(_TagClass.context, 2)),

@@ -189,7 +189,7 @@ class SnapshotCallResult {
 export
 const _root_component_type_list_1_spec_for_SnapshotCallResult: $.ComponentSpec[] = [
     new $.ComponentSpec("crossRefIDorSnapshotData", false, $.hasAnyTag),
-    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("callCharacteristics", true, $.hasTag(_TagClass.universal, 3)),
     new $.ComponentSpec("callingDevice", true, $.hasTag(_TagClass.application, 1)),
     new $.ComponentSpec("calledDevice", true, $.hasTag(_TagClass.application, 2)),

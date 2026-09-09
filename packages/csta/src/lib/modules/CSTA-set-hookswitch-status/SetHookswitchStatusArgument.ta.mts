@@ -91,7 +91,7 @@ class SetHookswitchStatusArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SetHookswitchStatusArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("hookswitch", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("hookswitchOnHook", false, $.hasTag(_TagClass.universal, 1)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

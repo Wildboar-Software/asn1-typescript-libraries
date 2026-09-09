@@ -93,7 +93,7 @@ export
 const _root_component_type_list_1_spec_for_SendMulticastDataArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("ioCrossRefIDList", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("ioData", true, $.hasTag(_TagClass.universal, 4)),
-    new $.ComponentSpec("displayAttributes", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("displayAttributes", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

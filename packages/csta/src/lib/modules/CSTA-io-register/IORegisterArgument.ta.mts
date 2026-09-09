@@ -74,7 +74,7 @@ class IORegisterArgument {
  */
 export
 const _root_component_type_list_1_spec_for_IORegisterArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("ioDevice", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ioDevice", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

@@ -102,7 +102,7 @@ class SetVoiceAttributeArgument {
 export
 const _root_component_type_list_1_spec_for_SetVoiceAttributeArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("connection", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("attributeToSet", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("attributeToSet", false, $.hasAnyTag),
     new $.ComponentSpec("message", true, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("resource", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

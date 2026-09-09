@@ -137,12 +137,12 @@ class DeviceList_Item {
  */
 export
 const _root_component_type_list_1_spec_for_DeviceList_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("deviceID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("deviceID", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("deviceCategory", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("namedDeviceTypes", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("deviceAttributes", true, $.hasTag(_TagClass.universal, 3)),
     new $.ComponentSpec("deviceModelName", true, $.hasTag(_TagClass.universal, 22)),
-    new $.ComponentSpec("nidGroup", true, $.hasTag(_TagClass.context, 0))
+    new $.ComponentSpec("nidGroup", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

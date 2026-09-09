@@ -121,9 +121,9 @@ class SetLampModeArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SetLampModeArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("lamp", false, $.hasTag(_TagClass.universal, 4)),
-    new $.ComponentSpec("lampMode", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("lampMode", false, $.hasTag(_TagClass.universal, 2)),
     new $.ComponentSpec("lampBrightness", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("lampColor", true, $.hasTag(_TagClass.universal, 2)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

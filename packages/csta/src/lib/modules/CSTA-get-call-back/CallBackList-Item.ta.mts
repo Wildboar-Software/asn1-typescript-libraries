@@ -81,8 +81,8 @@ class CallBackList_Item {
  */
 export
 const _root_component_type_list_1_spec_for_CallBackList_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("originatingDevice", false, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("targetDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("originatingDevice", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("targetDevice", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("callBackMessageIndicator", true, $.hasTag(_TagClass.universal, 1))
 ];
 

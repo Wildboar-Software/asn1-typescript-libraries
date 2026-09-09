@@ -93,7 +93,7 @@ class DialDigitsArgument {
 export
 const _root_component_type_list_1_spec_for_DialDigitsArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("diallingConnection", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("diallingSequence", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("diallingSequence", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];

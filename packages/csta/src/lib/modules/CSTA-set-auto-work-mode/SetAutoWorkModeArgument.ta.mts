@@ -90,7 +90,7 @@ class SetAutoWorkModeArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SetAutoWorkModeArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("autoWorkOn", false, $.hasTag(_TagClass.universal, 1)),
     new $.ComponentSpec("autoWorkInterval", true, $.hasTag(_TagClass.universal, 2)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

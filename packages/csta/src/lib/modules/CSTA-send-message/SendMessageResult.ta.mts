@@ -93,7 +93,7 @@ class SendMessageResult {
 export
 const _root_component_type_list_1_spec_for_SendMessageResult: $.ComponentSpec[] = [
     new $.ComponentSpec("connectionList", false, $.hasTag(_TagClass.universal, 16)),
-    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("listOfCallLinkageData", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];

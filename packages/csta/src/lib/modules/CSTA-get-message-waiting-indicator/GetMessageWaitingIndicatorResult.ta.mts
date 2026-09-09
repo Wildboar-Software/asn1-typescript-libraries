@@ -90,7 +90,7 @@ class GetMessageWaitingIndicatorResult {
 export
 const _root_component_type_list_1_spec_for_GetMessageWaitingIndicatorResult: $.ComponentSpec[] = [
     new $.ComponentSpec("messageWaitingOn", false, $.hasTag(_TagClass.universal, 1)),
-    new $.ComponentSpec("deviceForMessage", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("deviceForMessage", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("lampIsPresent", true, $.hasTag(_TagClass.universal, 1)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];

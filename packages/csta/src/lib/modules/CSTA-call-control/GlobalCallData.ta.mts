@@ -83,7 +83,7 @@ class GlobalCallData {
 export
 const _root_component_type_list_1_spec_for_GlobalCallData: $.ComponentSpec[] = [
     new $.ComponentSpec("globalCallSwitchingSubDomainName", true, $.hasTag(_TagClass.universal, 22)),
-    new $.ComponentSpec("globalCallLinkageID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("globalCallLinkageID", false, $.hasAnyTag),
     new $.ComponentSpec("callLinkageIDTimestamp", true, $.hasTag(_TagClass.universal, 24))
 ];
 

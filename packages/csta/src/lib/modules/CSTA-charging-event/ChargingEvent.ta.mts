@@ -113,7 +113,7 @@ class ChargingEvent {
 export
 const _root_component_type_list_1_spec_for_ChargingEvent: $.ComponentSpec[] = [
     new $.ComponentSpec("connection", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("chargedDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("chargedDevice", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("chargingInfo", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("cause", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

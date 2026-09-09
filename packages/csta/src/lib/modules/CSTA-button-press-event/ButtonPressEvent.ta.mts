@@ -103,7 +103,7 @@ const _root_component_type_list_1_spec_for_ButtonPressEvent: $.ComponentSpec[] =
     new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3)),
     new $.ComponentSpec("button", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("buttonLabel", true, $.hasTag(_TagClass.universal, 22)),
-    new $.ComponentSpec("buttonAssociatedNumber", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("buttonAssociatedNumber", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

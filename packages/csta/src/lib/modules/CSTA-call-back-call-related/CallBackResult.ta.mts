@@ -74,7 +74,7 @@ class CallBackResult {
  */
 export
 const _root_component_type_list_1_spec_for_CallBackResult: $.ComponentSpec[] = [
-    new $.ComponentSpec("targetDevice", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("targetDevice", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

@@ -218,7 +218,7 @@ class MakeConnectionArgument {
  */
 export
 const _root_component_type_list_1_spec_for_MakeConnectionArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("initiatingDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("initiatingDevice", false, $.hasTag(_TagClass.universal, 16)),
         new $.ComponentSpec("accountCode", true, $.hasTag(_TagClass.context, 0)),
         new $.ComponentSpec("authCode", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("autoOriginate", true, $.hasTag(_TagClass.context, 2)),

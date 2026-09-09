@@ -75,7 +75,7 @@ class MonitorListEntry {
 export
 const _root_component_type_list_1_spec_for_MonitorListEntry: $.ComponentSpec[] = [
     new $.ComponentSpec("monitorCrossRefID", false, $.hasTag(_TagClass.application, 21)),
-    new $.ComponentSpec("monitorObject", false, $.hasTag(_TagClass.context, 0))
+    new $.ComponentSpec("monitorObject", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

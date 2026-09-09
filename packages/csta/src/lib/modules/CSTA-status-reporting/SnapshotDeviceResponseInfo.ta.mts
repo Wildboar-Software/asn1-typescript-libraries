@@ -121,7 +121,7 @@ export
 const _root_component_type_list_1_spec_for_SnapshotDeviceResponseInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("connectionIdentifier", false, $.hasTag(_TagClass.application, 11)),
     new $.ComponentSpec("endpointDevice", true, $.hasTag(_TagClass.context, 3)),
-    new $.ComponentSpec("localCallState", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("localCallState", false, $.hasAnyTag),
     new $.ComponentSpec("servicesPermitted", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("mediaServiceInfoList", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 2)),

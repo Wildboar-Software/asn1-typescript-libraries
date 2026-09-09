@@ -92,7 +92,7 @@ class MessageWaitingEvent {
 export
 const _root_component_type_list_1_spec_for_MessageWaitingEvent: $.ComponentSpec[] = [
     new $.ComponentSpec("targetDevice", false, $.hasTag(_TagClass.application, 3)),
-    new $.ComponentSpec("deviceForMessage", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("deviceForMessage", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("messageWaitingOn", false, $.hasTag(_TagClass.universal, 1)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];

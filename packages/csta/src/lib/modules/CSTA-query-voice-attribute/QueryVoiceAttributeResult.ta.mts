@@ -74,7 +74,7 @@ class QueryVoiceAttributeResult {
  */
 export
 const _root_component_type_list_1_spec_for_QueryVoiceAttributeResult: $.ComponentSpec[] = [
-    new $.ComponentSpec("attribute", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("attribute", false, $.hasAnyTag),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

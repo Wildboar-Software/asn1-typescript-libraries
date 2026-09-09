@@ -222,7 +222,7 @@ export
 const _root_component_type_list_1_spec_for_DigitsDialedEvent: $.ComponentSpec[] = [
     new $.ComponentSpec("dialingConnection", false, $.hasTag(_TagClass.application, 11)),
     new $.ComponentSpec("dialingDevice", false, $.hasTag(_TagClass.application, 3)),
-    new $.ComponentSpec("dialingSequence", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("dialingSequence", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("localConnectionInfo", true, $.hasTag(_TagClass.application, 14)),
         new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("cause", false, $.hasTag(_TagClass.universal, 10)),

@@ -124,10 +124,10 @@ class SetForwardingArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SetForwardingArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("forwardingType", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("activateForward", false, $.hasTag(_TagClass.universal, 1)),
-    new $.ComponentSpec("forwardDN", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("forwardDN", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("ringCount", true, $.hasTag(_TagClass.universal, 2)),
     new $.ComponentSpec("ringDuration", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

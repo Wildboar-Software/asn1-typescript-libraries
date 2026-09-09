@@ -83,7 +83,7 @@ class ThreadData {
 export
 const _root_component_type_list_1_spec_for_ThreadData: $.ComponentSpec[] = [
     new $.ComponentSpec("threadSwitchingSubDomainName", true, $.hasTag(_TagClass.universal, 22)),
-    new $.ComponentSpec("threadLinkageID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("threadLinkageID", false, $.hasAnyTag),
     new $.ComponentSpec("threadIDTimeStamp", true, $.hasTag(_TagClass.universal, 24))
 ];
 

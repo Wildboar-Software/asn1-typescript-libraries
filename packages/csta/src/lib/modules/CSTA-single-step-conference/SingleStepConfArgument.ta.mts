@@ -153,7 +153,7 @@ class SingleStepConfArgument {
 export
 const _root_component_type_list_1_spec_for_SingleStepConfArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("activeCall", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("deviceToJoin", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("deviceToJoin", false, $.hasTag(_TagClass.universal, 16)),
         new $.ComponentSpec("participationType", true, $.hasTag(_TagClass.universal, 10)),
         new $.ComponentSpec("accountCode", true, $.hasTag(_TagClass.context, 0)),
         new $.ComponentSpec("authCode", true, $.hasTag(_TagClass.context, 1)),

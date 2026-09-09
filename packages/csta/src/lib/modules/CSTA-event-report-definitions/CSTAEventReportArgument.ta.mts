@@ -75,7 +75,7 @@ class CSTAEventReportArgument {
 export
 const _root_component_type_list_1_spec_for_CSTAEventReportArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("crossRefIdentifier", false, $.hasTag(_TagClass.application, 21)),
-    new $.ComponentSpec("eventSpecificInfo", false, $.hasTag(_TagClass.context, 0))
+    new $.ComponentSpec("eventSpecificInfo", false, $.hasAnyTag)
 ];
 
 /**

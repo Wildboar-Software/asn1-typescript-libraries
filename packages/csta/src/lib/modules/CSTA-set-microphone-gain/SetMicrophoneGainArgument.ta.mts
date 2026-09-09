@@ -92,9 +92,9 @@ class SetMicrophoneGainArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SetMicrophoneGainArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("auditoryApparatus", false, $.hasTag(_TagClass.universal, 4)),
-    new $.ComponentSpec("microphoneGain", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("microphoneGain", false, $.hasAnyTag),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

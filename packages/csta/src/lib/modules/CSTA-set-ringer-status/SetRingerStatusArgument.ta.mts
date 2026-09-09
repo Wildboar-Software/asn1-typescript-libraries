@@ -120,7 +120,7 @@ class SetRingerStatusArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SetRingerStatusArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("ringer", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("ringMode", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("ringPattern", true, $.hasTag(_TagClass.context, 1)),

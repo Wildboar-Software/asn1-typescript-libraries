@@ -101,7 +101,7 @@ const _root_component_type_list_1_spec_for_DeviceID: $.ComponentSpec[] = [
     new $.ComponentSpec("deviceIdentifier", false, $.hasAnyTag),
     new $.ComponentSpec("privateNumber", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("privateName", true, $.hasTag(_TagClass.context, 1)),
-    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 0))
+    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

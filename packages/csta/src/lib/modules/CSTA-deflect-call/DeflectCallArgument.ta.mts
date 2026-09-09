@@ -159,7 +159,7 @@ class DeflectCallArgument {
 export
 const _root_component_type_list_1_spec_for_DeflectCallArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("callToBeDiverted", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("newDestination", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("newDestination", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("addNewDestinationsList", true, $.hasTag(_TagClass.universal, 16)),
         new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.universal, 4)),
         new $.ComponentSpec("userData", true, $.hasTag(_TagClass.application, 29)),

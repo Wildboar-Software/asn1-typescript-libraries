@@ -75,7 +75,7 @@ class LocationSessionListEntry {
 export
 const _root_component_type_list_1_spec_for_LocationSessionListEntry: $.ComponentSpec[] = [
     new $.ComponentSpec("locCrossRefID", false, $.hasTag(_TagClass.universal, 22)),
-    new $.ComponentSpec("locDevice", false, $.hasTag(_TagClass.context, 0))
+    new $.ComponentSpec("locDevice", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

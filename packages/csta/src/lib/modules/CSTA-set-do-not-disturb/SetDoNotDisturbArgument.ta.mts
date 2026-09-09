@@ -98,7 +98,7 @@ class SetDoNotDisturbArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SetDoNotDisturbArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("doNotDisturbOn", false, $.hasTag(_TagClass.universal, 1)),
     new $.ComponentSpec("callOrigination", true, $.hasTag(_TagClass.universal, 3)),
     new $.ComponentSpec("callingDeviceList", true, $.hasTag(_TagClass.universal, 16)),

@@ -167,7 +167,7 @@ class SingleStepTransArgument {
 export
 const _root_component_type_list_1_spec_for_SingleStepTransArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("activeCall", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("transferredTo", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("transferredTo", false, $.hasTag(_TagClass.universal, 16)),
         new $.ComponentSpec("accountCode", true, $.hasTag(_TagClass.context, 0)),
         new $.ComponentSpec("authCode", true, $.hasTag(_TagClass.context, 1)),
         new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.context, 2)),

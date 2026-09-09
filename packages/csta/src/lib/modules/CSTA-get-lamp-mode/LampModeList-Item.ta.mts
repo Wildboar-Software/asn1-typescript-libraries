@@ -114,7 +114,7 @@ class LampModeList_Item {
 export
 const _root_component_type_list_1_spec_for_LampModeList_Item: $.ComponentSpec[] = [
     new $.ComponentSpec("lamp", false, $.hasTag(_TagClass.universal, 4)),
-    new $.ComponentSpec("lampMode", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("lampMode", false, $.hasTag(_TagClass.universal, 2)),
     new $.ComponentSpec("lampBrightness", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("lampColor", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("button", true, $.hasTag(_TagClass.context, 2))

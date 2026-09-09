@@ -120,9 +120,9 @@ class SendDataArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SendDataArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("ioCrossRefID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ioCrossRefID", false, $.hasAnyTag),
     new $.ComponentSpec("ioRegisterReqID", true, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("displayAttributes", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("displayAttributes", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("ioData", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("ioCause", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))

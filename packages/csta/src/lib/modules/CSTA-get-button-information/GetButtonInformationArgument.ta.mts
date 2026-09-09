@@ -83,7 +83,7 @@ class GetButtonInformationArgument {
  */
 export
 const _root_component_type_list_1_spec_for_GetButtonInformationArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("button", true, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];

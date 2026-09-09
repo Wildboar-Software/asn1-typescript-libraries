@@ -259,7 +259,7 @@ const _root_component_type_list_1_spec_for_OriginatedEvent: $.ComponentSpec[] = 
     new $.ComponentSpec("originatedConnection", false, $.hasTag(_TagClass.application, 11)),
     new $.ComponentSpec("callingDevice", false, $.hasTag(_TagClass.application, 3)),
     new $.ComponentSpec("calledDevice", false, $.hasTag(_TagClass.application, 2)),
-    new $.ComponentSpec("originatingDevice", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("originatingDevice", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("localConnectionInfo", true, $.hasTag(_TagClass.application, 14)),
         new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("cause", false, $.hasTag(_TagClass.universal, 10)),

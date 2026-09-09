@@ -92,7 +92,7 @@ class PrimaryOrSecondaryCall {
  */
 export
 const _root_component_type_list_1_spec_for_PrimaryOrSecondaryCall: $.ComponentSpec[] = [
-    new $.ComponentSpec("deviceID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("deviceID", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("connectionID", false, $.hasTag(_TagClass.application, 11)),
     new $.ComponentSpec("localConnectionState", false, $.hasTag(_TagClass.application, 14)),
     new $.ComponentSpec("connectionInfo", true, $.hasTag(_TagClass.universal, 16))

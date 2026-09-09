@@ -94,7 +94,7 @@ class DeviceHistory {
  */
 export
 const _root_component_type_list_1_spec_for_DeviceHistory: $.ComponentSpec[] = [
-    new $.ComponentSpec("oldDeviceID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("oldDeviceID", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("eventCause", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("oldConnectionID", true, $.hasTag(_TagClass.context, 2))
 ];

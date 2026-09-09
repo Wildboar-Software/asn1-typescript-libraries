@@ -105,7 +105,7 @@ export
 const _root_component_type_list_1_spec_for_StartDataCollectionArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("object", false, $.hasAnyTag),
     new $.ComponentSpec("dataCollType", true, $.hasTag(_TagClass.universal, 10)),
-    new $.ComponentSpec("digitsReportingCriteria", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("digitsReportingCriteria", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

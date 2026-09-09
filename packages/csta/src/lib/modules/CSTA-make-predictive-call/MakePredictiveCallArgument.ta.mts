@@ -214,8 +214,8 @@ class MakePredictiveCallArgument {
  */
 export
 const _root_component_type_list_1_spec_for_MakePredictiveCallArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("callingDevice", false, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("calledDirectoryNumber", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callingDevice", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("calledDirectoryNumber", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("signallingDetection", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("destinationDetection", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("defaultAction", true, $.hasTag(_TagClass.context, 2)),

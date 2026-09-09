@@ -81,8 +81,8 @@ class CallBackMessageNonCallRelatedArgument {
  */
 export
 const _root_component_type_list_1_spec_for_CallBackMessageNonCallRelatedArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("originatingDevice", false, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("targetDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("originatingDevice", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("targetDevice", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

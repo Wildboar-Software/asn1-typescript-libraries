@@ -102,7 +102,7 @@ const _root_component_type_list_1_spec_for_SnapshotCallDataArgument: $.Component
     new $.ComponentSpec("serviceCrossRefID", false, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("segmentID", true, $.hasTag(_TagClass.universal, 2)),
     new $.ComponentSpec("lastSegment", false, $.hasTag(_TagClass.universal, 1)),
-    new $.ComponentSpec("snapshotData", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("snapshotData", false, $.hasTag(_TagClass.application, 23)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

@@ -111,7 +111,7 @@ class ParkCallArgument {
 export
 const _root_component_type_list_1_spec_for_ParkCallArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("parking", false, $.hasTag(_TagClass.application, 11)),
-    new $.ComponentSpec("parkTo", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("parkTo", false, $.hasTag(_TagClass.universal, 16)),
         new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.universal, 4)),
     new $.ComponentSpec("subjectOfCall", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("languagePreferences", true, $.hasTag(_TagClass.context, 1)),

@@ -94,7 +94,7 @@ export
 const _root_component_type_list_1_spec_for_MicrophoneGainEvent: $.ComponentSpec[] = [
     new $.ComponentSpec("invokingDevice", false, $.hasTag(_TagClass.application, 3)),
     new $.ComponentSpec("auditoryApparatus", false, $.hasTag(_TagClass.universal, 4)),
-    new $.ComponentSpec("microphoneGain", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("microphoneGain", false, $.hasAnyTag),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 

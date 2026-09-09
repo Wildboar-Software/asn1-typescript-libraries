@@ -155,7 +155,7 @@ class SendMessageArgument {
  */
 export
 const _root_component_type_list_1_spec_for_SendMessageArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("callingDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callingDevice", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("destinationDevices", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("messageInfo", false, $.hasTag(_TagClass.universal, 16)),
         new $.ComponentSpec("accountCode", true, $.hasTag(_TagClass.context, 0)),

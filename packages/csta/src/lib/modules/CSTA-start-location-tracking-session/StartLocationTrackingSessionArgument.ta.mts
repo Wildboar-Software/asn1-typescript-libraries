@@ -152,7 +152,7 @@ class StartLocationTrackingSessionArgument {
  */
 export
 const _root_component_type_list_1_spec_for_StartLocationTrackingSessionArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("locDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("locDevice", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("collectionType", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("collectionInterval", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("maxCollections", true, $.hasTag(_TagClass.context, 2)),

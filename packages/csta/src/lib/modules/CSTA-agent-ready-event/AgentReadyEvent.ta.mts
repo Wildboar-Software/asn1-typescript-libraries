@@ -114,7 +114,7 @@ export
 const _root_component_type_list_1_spec_for_AgentReadyEvent: $.ComponentSpec[] = [
     new $.ComponentSpec("agentDevice", false, $.hasTag(_TagClass.application, 3)),
     new $.ComponentSpec("agentID", true, $.hasTag(_TagClass.universal, 4)),
-    new $.ComponentSpec("acdGroup", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("acdGroup", true, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("cause", true, $.hasTag(_TagClass.universal, 10)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];

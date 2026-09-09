@@ -84,7 +84,7 @@ class ChangeMonitorFilterArgument {
 export
 const _root_component_type_list_1_spec_for_ChangeMonitorFilterArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("crossRefIdentifier", false, $.hasTag(_TagClass.application, 21)),
-    new $.ComponentSpec("requestedFilterList", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestedFilterList", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
