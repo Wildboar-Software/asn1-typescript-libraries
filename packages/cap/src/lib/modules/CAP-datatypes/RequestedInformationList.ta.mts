@@ -1,12 +1,6 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformation, _decode_RequestedInformation, _encode_RequestedInformation } from "./RequestedInformation.ta.mjs";
@@ -23,5 +17,11 @@ import { RequestedInformation, _decode_RequestedInformation, _encode_RequestedIn
  *
  */
 export type RequestedInformationList = RequestedInformation[];
-export const _decode_RequestedInformationList = $._decodeSequenceOf<RequestedInformation>(() => _decode_RequestedInformation);
+export const _decode_RequestedInformationList = (el: _Element): RequestedInformationList => {
+    const value = $._decodeSequenceOf<RequestedInformation>(() => _decode_RequestedInformation)(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("RequestedInformationList violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_RequestedInformationList = $._encodeSequenceOf<RequestedInformation>(() => _encode_RequestedInformation, $.BER);

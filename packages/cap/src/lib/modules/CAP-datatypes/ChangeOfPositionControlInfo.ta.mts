@@ -1,12 +1,6 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ChangeOfLocation, _decode_ChangeOfLocation, _encode_ChangeOfLocation } from "./ChangeOfLocation.ta.mjs";
@@ -23,5 +17,11 @@ import { type ChangeOfLocation, _decode_ChangeOfLocation, _encode_ChangeOfLocati
  *
  */
 export type ChangeOfPositionControlInfo = ChangeOfLocation[];
-export const _decode_ChangeOfPositionControlInfo = $._decodeSequenceOf<ChangeOfLocation>(() => _decode_ChangeOfLocation);
+export const _decode_ChangeOfPositionControlInfo = (el: _Element): ChangeOfPositionControlInfo => {
+    const value = $._decodeSequenceOf<ChangeOfLocation>(() => _decode_ChangeOfLocation)(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("ChangeOfPositionControlInfo violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_ChangeOfPositionControlInfo = $._encodeSequenceOf<ChangeOfLocation>(() => _encode_ChangeOfLocation, $.BER);

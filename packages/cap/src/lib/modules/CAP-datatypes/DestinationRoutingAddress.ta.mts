@@ -1,12 +1,6 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "./CalledPartyNumber.ta.mjs";
@@ -24,5 +18,11 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  *
  */
 export type DestinationRoutingAddress = CalledPartyNumber[];
-export const _decode_DestinationRoutingAddress = $._decodeSequenceOf<CalledPartyNumber>(() => _decode_CalledPartyNumber);
+export const _decode_DestinationRoutingAddress = (el: _Element): DestinationRoutingAddress => {
+    const value = $._decodeSequenceOf<CalledPartyNumber>(() => _decode_CalledPartyNumber)(el);
+    if (value.length !== 1) {
+        throw new ASN1SizeError("DestinationRoutingAddress violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_DestinationRoutingAddress = $._encodeSequenceOf<CalledPartyNumber>(() => _encode_CalledPartyNumber, $.BER);

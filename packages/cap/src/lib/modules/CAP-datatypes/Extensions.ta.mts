@@ -1,12 +1,6 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "./ExtensionField.ta.mjs";
@@ -23,5 +17,11 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  *
  */
 export type Extensions = ExtensionField[];
-export const _decode_Extensions = $._decodeSequenceOf<ExtensionField>(() => _decode_ExtensionField);
+export const _decode_Extensions = (el: _Element): Extensions => {
+    const value = $._decodeSequenceOf<ExtensionField>(() => _decode_ExtensionField)(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("Extensions violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_Extensions = $._encodeSequenceOf<ExtensionField>(() => _encode_ExtensionField, $.BER);

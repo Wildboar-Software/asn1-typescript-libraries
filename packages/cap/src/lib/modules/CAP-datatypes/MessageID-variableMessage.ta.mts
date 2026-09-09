@@ -1,12 +1,8 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type VariablePart, _decode_VariablePart, _encode_VariablePart } from "./VariablePart.ta.mjs";
@@ -29,7 +25,11 @@ export class MessageID_variableMessage {
     constructor (
         readonly elementaryMessageID: INTEGER,
         readonly variableParts: VariablePart[],
-    ) {}
+    ) {
+        if (variableParts.length < 1 || variableParts.length > 5) {
+            throw new ASN1SizeError("MessageID_variableMessage.variableParts violates SIZE constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (MessageID_variableMessage)]: (MessageID_variableMessage)[_K] }): MessageID_variableMessage {
         return new MessageID_variableMessage(_o.elementaryMessageID, _o.variableParts);
@@ -73,7 +73,7 @@ export function _decode_MessageID_variableMessage (el: _Element): MessageID_vari
 let _cached_encoder_for_MessageID_variableMessage: $.ASN1Encoder<MessageID_variableMessage> | null = null;
 export function _encode_MessageID_variableMessage (value: MessageID_variableMessage, elGetter: $.ASN1Encoder<MessageID_variableMessage>): _Element {
     if (!_cached_encoder_for_MessageID_variableMessage) {
-        _cached_encoder_for_MessageID_variableMessage = function (value: MessageID_variableMessage, elGetter: $.ASN1Encoder<MessageID_variableMessage>): _Element {
+        _cached_encoder_for_MessageID_variableMessage = function (value: MessageID_variableMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.elementaryMessageID, $.BER),

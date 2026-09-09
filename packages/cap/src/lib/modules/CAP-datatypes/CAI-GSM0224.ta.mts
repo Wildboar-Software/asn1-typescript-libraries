@@ -1,12 +1,9 @@
 import {
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +36,13 @@ export class CAI_GSM0224 {
         readonly e5: OPTIONAL<INTEGER>,
         readonly e6: OPTIONAL<INTEGER>,
         readonly e7: OPTIONAL<INTEGER>,
-    ) {}
+    ) {
+        for (const [name, n] of [["e1", e1], ["e2", e2], ["e3", e3], ["e4", e4], ["e5", e5], ["e6", e6], ["e7", e7]] as const) {
+            if (n !== undefined && (typeof n === "bigint" ? (n < 0n || n > 8191n) : (n < 0 || n > 8191))) {
+                throw new ASN1OverflowError(`CAI_GSM0224.${name} violates INTEGER constraint`);
+            }
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (CAI_GSM0224)]: (CAI_GSM0224)[_K] }): CAI_GSM0224 {
         return new CAI_GSM0224(_o.e1, _o.e2, _o.e3, _o.e4, _o.e5, _o.e6, _o.e7);
@@ -103,7 +106,7 @@ export function _decode_CAI_GSM0224 (el: _Element): CAI_GSM0224 {
 let _cached_encoder_for_CAI_GSM0224: $.ASN1Encoder<CAI_GSM0224> | null = null;
 export function _encode_CAI_GSM0224 (value: CAI_GSM0224, elGetter: $.ASN1Encoder<CAI_GSM0224>): _Element {
     if (!_cached_encoder_for_CAI_GSM0224) {
-        _cached_encoder_for_CAI_GSM0224 = function (value: CAI_GSM0224, elGetter: $.ASN1Encoder<CAI_GSM0224>): _Element {
+        _cached_encoder_for_CAI_GSM0224 = function (value: CAI_GSM0224): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.e1 === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.e1, $.BER)),
