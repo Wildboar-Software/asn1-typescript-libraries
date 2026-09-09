@@ -1,101 +1,43 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { AgentBusy, AgentBusy_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_pendingAgentStateWorkingAfterCall /* IMPORTED_LONG_NAMED_BIT */, pendingAgentStateWorkingAfterCall /* IMPORTED_SHORT_NAMED_BIT */, AgentBusy_pendingAgentStateNotReady /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_pendingAgentStateReady /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_pendingAgentStateNull /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_cause /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentBusy, _encode_AgentBusy } from "../CSTA-capability-exchange/AgentBusy.ta.mjs";
-// export { AgentBusy, AgentBusy_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_pendingAgentStateWorkingAfterCall /* IMPORTED_LONG_NAMED_BIT */, pendingAgentStateWorkingAfterCall /* IMPORTED_SHORT_NAMED_BIT */, AgentBusy_pendingAgentStateNotReady /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_pendingAgentStateReady /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_pendingAgentStateNull /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_cause /* IMPORTED_LONG_NAMED_BIT */, AgentBusy_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentBusy, _encode_AgentBusy } from "../CSTA-capability-exchange/AgentBusy.ta.mjs";
-import { AgentLoggedOff, AgentLoggedOff_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOff_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOff_agentPassword /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOff_cause /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOff_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentLoggedOff, _encode_AgentLoggedOff } from "../CSTA-capability-exchange/AgentLoggedOff.ta.mjs";
-// export { AgentLoggedOff, AgentLoggedOff_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOff_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOff_agentPassword /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOff_cause /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOff_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentLoggedOff, _encode_AgentLoggedOff } from "../CSTA-capability-exchange/AgentLoggedOff.ta.mjs";
-import { AgentLoggedOn, AgentLoggedOn_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOn_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOn_agentPassword /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOn_cause /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOn_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentLoggedOn, _encode_AgentLoggedOn } from "../CSTA-capability-exchange/AgentLoggedOn.ta.mjs";
-// export { AgentLoggedOn, AgentLoggedOn_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOn_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOn_agentPassword /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOn_cause /* IMPORTED_LONG_NAMED_BIT */, AgentLoggedOn_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentLoggedOn, _encode_AgentLoggedOn } from "../CSTA-capability-exchange/AgentLoggedOn.ta.mjs";
-import { AgentNotReady, AgentNotReady_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentNotReady_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentNotReady_cause /* IMPORTED_LONG_NAMED_BIT */, AgentNotReady_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentNotReady, _encode_AgentNotReady } from "../CSTA-capability-exchange/AgentNotReady.ta.mjs";
-// export { AgentNotReady, AgentNotReady_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentNotReady_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentNotReady_cause /* IMPORTED_LONG_NAMED_BIT */, AgentNotReady_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentNotReady, _encode_AgentNotReady } from "../CSTA-capability-exchange/AgentNotReady.ta.mjs";
-import { AgentReady, AgentReady_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentReady_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentReady_cause /* IMPORTED_LONG_NAMED_BIT */, AgentReady_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentReady, _encode_AgentReady } from "../CSTA-capability-exchange/AgentReady.ta.mjs";
-// export { AgentReady, AgentReady_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentReady_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentReady_cause /* IMPORTED_LONG_NAMED_BIT */, AgentReady_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentReady, _encode_AgentReady } from "../CSTA-capability-exchange/AgentReady.ta.mjs";
-import { AgentWorkingAfterCall, AgentWorkingAfterCall_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_pendingAgentStateNotReady /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_pendingAgentStateReady /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_pendingAgentStateNull /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_cause /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentWorkingAfterCall, _encode_AgentWorkingAfterCall } from "../CSTA-capability-exchange/AgentWorkingAfterCall.ta.mjs";
-// export { AgentWorkingAfterCall, AgentWorkingAfterCall_agentID /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_acdGroup /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_pendingAgentStateNotReady /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_pendingAgentStateReady /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_pendingAgentStateNull /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_cause /* IMPORTED_LONG_NAMED_BIT */, AgentWorkingAfterCall_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AgentWorkingAfterCall, _encode_AgentWorkingAfterCall } from "../CSTA-capability-exchange/AgentWorkingAfterCall.ta.mjs";
-import { AutoAnswer, AutoAnswer_numberOfRings /* IMPORTED_LONG_NAMED_BIT */, numberOfRings /* IMPORTED_SHORT_NAMED_BIT */, AutoAnswer_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AutoAnswer, _encode_AutoAnswer } from "../CSTA-capability-exchange/AutoAnswer.ta.mjs";
-// export { AutoAnswer, AutoAnswer_numberOfRings /* IMPORTED_LONG_NAMED_BIT */, numberOfRings /* IMPORTED_SHORT_NAMED_BIT */, AutoAnswer_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AutoAnswer, _encode_AutoAnswer } from "../CSTA-capability-exchange/AutoAnswer.ta.mjs";
-import { AutoWorkMode, AutoWorkMode_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AutoWorkMode, _encode_AutoWorkMode } from "../CSTA-capability-exchange/AutoWorkMode.ta.mjs";
-// export { AutoWorkMode, AutoWorkMode_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_AutoWorkMode, _encode_AutoWorkMode } from "../CSTA-capability-exchange/AutoWorkMode.ta.mjs";
-import { CallBackEvent, CallBackEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_CallBackEvent, _encode_CallBackEvent } from "../CSTA-capability-exchange/CallBackEvent.ta.mjs";
-// export { CallBackEvent, CallBackEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_CallBackEvent, _encode_CallBackEvent } from "../CSTA-capability-exchange/CallBackEvent.ta.mjs";
-import { CallBackMessageEvent, CallBackMessageEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_CallBackMessageEvent, _encode_CallBackMessageEvent } from "../CSTA-capability-exchange/CallBackMessageEvent.ta.mjs";
-// export { CallBackMessageEvent, CallBackMessageEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_CallBackMessageEvent, _encode_CallBackMessageEvent } from "../CSTA-capability-exchange/CallBackMessageEvent.ta.mjs";
-import { CallerIDStatus, CallerIDStatus_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_CallerIDStatus, _encode_CallerIDStatus } from "../CSTA-capability-exchange/CallerIDStatus.ta.mjs";
-// export { CallerIDStatus, CallerIDStatus_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_CallerIDStatus, _encode_CallerIDStatus } from "../CSTA-capability-exchange/CallerIDStatus.ta.mjs";
-import { DoNotDisturb, DoNotDisturb_callOriginationParameter /* IMPORTED_LONG_NAMED_BIT */, callOriginationParameter /* IMPORTED_SHORT_NAMED_BIT */, DoNotDisturb_callOriginationInternal /* IMPORTED_LONG_NAMED_BIT */, callOriginationInternal /* IMPORTED_SHORT_NAMED_BIT */, DoNotDisturb_callOriginationExternal /* IMPORTED_LONG_NAMED_BIT */, callOriginationExternal /* IMPORTED_SHORT_NAMED_BIT */, DoNotDisturb_callingDeviceList /* IMPORTED_LONG_NAMED_BIT */, callingDeviceList /* IMPORTED_SHORT_NAMED_BIT */, DoNotDisturb_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_DoNotDisturb, _encode_DoNotDisturb } from "../CSTA-capability-exchange/DoNotDisturb.ta.mjs";
-// export { DoNotDisturb, DoNotDisturb_callOriginationParameter /* IMPORTED_LONG_NAMED_BIT */, callOriginationParameter /* IMPORTED_SHORT_NAMED_BIT */, DoNotDisturb_callOriginationInternal /* IMPORTED_LONG_NAMED_BIT */, callOriginationInternal /* IMPORTED_SHORT_NAMED_BIT */, DoNotDisturb_callOriginationExternal /* IMPORTED_LONG_NAMED_BIT */, callOriginationExternal /* IMPORTED_SHORT_NAMED_BIT */, DoNotDisturb_callingDeviceList /* IMPORTED_LONG_NAMED_BIT */, callingDeviceList /* IMPORTED_SHORT_NAMED_BIT */, DoNotDisturb_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_DoNotDisturb, _encode_DoNotDisturb } from "../CSTA-capability-exchange/DoNotDisturb.ta.mjs";
-import { Forwarding, Forwarding_forwardingTypeBusy /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeBusy /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeBusyInt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeBusyInt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeBusyExt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeBusyExt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeDND /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeDND /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeDNDInt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeDNDInt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeDNDExt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeDNDExt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeNoAns /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeNoAns /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeNoAnsInt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeNoAnsInt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeNoAnsExt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeNoAnsExt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeImmediate /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeImmediate /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeImmInt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeImmInt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeImmExt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeImmExt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardTo /* IMPORTED_LONG_NAMED_BIT */, forwardTo /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardDefaultTypeAndDN /* IMPORTED_LONG_NAMED_BIT */, forwardDefaultTypeAndDN /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardDefaultType /* IMPORTED_LONG_NAMED_BIT */, forwardDefaultType /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardDefaultDN /* IMPORTED_LONG_NAMED_BIT */, forwardDefaultDN /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_ringCount /* IMPORTED_LONG_NAMED_BIT */, ringCount /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_privateData /* IMPORTED_LONG_NAMED_BIT */, Forwarding_ringDuration /* IMPORTED_LONG_NAMED_BIT */, ringDuration /* IMPORTED_SHORT_NAMED_BIT */, _decode_Forwarding, _encode_Forwarding } from "../CSTA-capability-exchange/Forwarding.ta.mjs";
-// export { Forwarding, Forwarding_forwardingTypeBusy /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeBusy /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeBusyInt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeBusyInt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeBusyExt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeBusyExt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeDND /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeDND /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeDNDInt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeDNDInt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeDNDExt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeDNDExt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeNoAns /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeNoAns /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeNoAnsInt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeNoAnsInt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeNoAnsExt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeNoAnsExt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeImmediate /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeImmediate /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeImmInt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeImmInt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardingTypeImmExt /* IMPORTED_LONG_NAMED_BIT */, forwardingTypeImmExt /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardTo /* IMPORTED_LONG_NAMED_BIT */, forwardTo /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardDefaultTypeAndDN /* IMPORTED_LONG_NAMED_BIT */, forwardDefaultTypeAndDN /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardDefaultType /* IMPORTED_LONG_NAMED_BIT */, forwardDefaultType /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_forwardDefaultDN /* IMPORTED_LONG_NAMED_BIT */, forwardDefaultDN /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_ringCount /* IMPORTED_LONG_NAMED_BIT */, ringCount /* IMPORTED_SHORT_NAMED_BIT */, Forwarding_privateData /* IMPORTED_LONG_NAMED_BIT */, Forwarding_ringDuration /* IMPORTED_LONG_NAMED_BIT */, ringDuration /* IMPORTED_SHORT_NAMED_BIT */, _decode_Forwarding, _encode_Forwarding } from "../CSTA-capability-exchange/Forwarding.ta.mjs";
-import { PresenceStateEvent, PresenceStateEvent_fromTime /* IMPORTED_LONG_NAMED_BIT */, fromTime /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_untilTime /* IMPORTED_LONG_NAMED_BIT */, untilTime /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_place /* IMPORTED_LONG_NAMED_BIT */, place /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_mood /* IMPORTED_LONG_NAMED_BIT */, mood /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_namedPresenceState /* IMPORTED_LONG_NAMED_BIT */, namedPresenceState /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_PresenceStateEvent, _encode_PresenceStateEvent } from "../CSTA-capability-exchange/PresenceStateEvent.ta.mjs";
-// export { PresenceStateEvent, PresenceStateEvent_fromTime /* IMPORTED_LONG_NAMED_BIT */, fromTime /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_untilTime /* IMPORTED_LONG_NAMED_BIT */, untilTime /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_place /* IMPORTED_LONG_NAMED_BIT */, place /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_mood /* IMPORTED_LONG_NAMED_BIT */, mood /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_namedPresenceState /* IMPORTED_LONG_NAMED_BIT */, namedPresenceState /* IMPORTED_SHORT_NAMED_BIT */, PresenceStateEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_PresenceStateEvent, _encode_PresenceStateEvent } from "../CSTA-capability-exchange/PresenceStateEvent.ta.mjs";
-import { RouteingMode, RouteingMode_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteingMode, _encode_RouteingMode } from "../CSTA-capability-exchange/RouteingMode.ta.mjs";
-// export { RouteingMode, RouteingMode_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteingMode, _encode_RouteingMode } from "../CSTA-capability-exchange/RouteingMode.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { AgentBusy, _decode_AgentBusy, _encode_AgentBusy } from "../CSTA-capability-exchange/AgentBusy.ta.mjs";
+
+import { AgentLoggedOff, _decode_AgentLoggedOff, _encode_AgentLoggedOff } from "../CSTA-capability-exchange/AgentLoggedOff.ta.mjs";
+
+import { AgentLoggedOn, _decode_AgentLoggedOn, _encode_AgentLoggedOn } from "../CSTA-capability-exchange/AgentLoggedOn.ta.mjs";
+
+import { AgentNotReady, _decode_AgentNotReady, _encode_AgentNotReady } from "../CSTA-capability-exchange/AgentNotReady.ta.mjs";
+
+import { AgentReady, _decode_AgentReady, _encode_AgentReady } from "../CSTA-capability-exchange/AgentReady.ta.mjs";
+
+import { AgentWorkingAfterCall, _decode_AgentWorkingAfterCall, _encode_AgentWorkingAfterCall } from "../CSTA-capability-exchange/AgentWorkingAfterCall.ta.mjs";
+
+import { AutoAnswer, _decode_AutoAnswer, _encode_AutoAnswer } from "../CSTA-capability-exchange/AutoAnswer.ta.mjs";
+
+import { AutoWorkMode, _decode_AutoWorkMode, _encode_AutoWorkMode } from "../CSTA-capability-exchange/AutoWorkMode.ta.mjs";
+
+import { CallBackEvent, _decode_CallBackEvent, _encode_CallBackEvent } from "../CSTA-capability-exchange/CallBackEvent.ta.mjs";
+
+import { CallBackMessageEvent, _decode_CallBackMessageEvent, _encode_CallBackMessageEvent } from "../CSTA-capability-exchange/CallBackMessageEvent.ta.mjs";
+
+import { CallerIDStatus, _decode_CallerIDStatus, _encode_CallerIDStatus } from "../CSTA-capability-exchange/CallerIDStatus.ta.mjs";
+
+import { DoNotDisturb, _decode_DoNotDisturb, _encode_DoNotDisturb } from "../CSTA-capability-exchange/DoNotDisturb.ta.mjs";
+
+import { Forwarding, _decode_Forwarding, _encode_Forwarding } from "../CSTA-capability-exchange/Forwarding.ta.mjs";
+
+import { PresenceStateEvent, _decode_PresenceStateEvent, _encode_PresenceStateEvent } from "../CSTA-capability-exchange/PresenceStateEvent.ta.mjs";
+
+import { RouteingMode, _decode_RouteingMode, _encode_RouteingMode } from "../CSTA-capability-exchange/RouteingMode.ta.mjs";
+
 
 
 /**
@@ -249,21 +191,21 @@ class LogicalEvtsList {
  */
 export
 const _root_component_type_list_1_spec_for_LogicalEvtsList: $.ComponentSpec[] = [
-    new $.ComponentSpec("agentBusy", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("agentLoggedOff", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("agentLoggedOn", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("agentNotReady", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("agentReady", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("agentWorkingAfterCall", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("autoAnswer", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("autoWorkMode", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("callBack", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("callBackMessage", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("callerIDStatus", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("doNotDisturb", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("forwarding", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("presenceState", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("routeingMode", true, $.hasTag(_TagClass.context, 13), undefined, undefined)
+    new $.ComponentSpec("agentBusy", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("agentLoggedOff", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("agentLoggedOn", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("agentNotReady", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("agentReady", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("agentWorkingAfterCall", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("autoAnswer", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("autoWorkMode", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("callBack", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("callBackMessage", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("callerIDStatus", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("doNotDisturb", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("forwarding", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("presenceState", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("routeingMode", true, $.hasTag(_TagClass.context, 13))
 ];
 
 /**

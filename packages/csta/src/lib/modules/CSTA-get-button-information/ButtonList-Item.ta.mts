@@ -1,77 +1,21 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
-// export { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
+
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
+
 import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
-// export { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
+
 
 
 /**
@@ -81,7 +25,16 @@ import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ButtonList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ButtonList-Item ::= SEQUENCE {
+ *     button [UNIVERSAL 4] ButtonID,
+ *     buttonLabel [0] IA5String OPTIONAL,
+ *     buttonLabelSettable [1] BOOLEAN OPTIONAL,
+ *     buttonFunction [2] IA5String OPTIONAL,
+ *     buttonAssociatedNumber [3] DeviceID OPTIONAL,
+ *     buttonAssociatedNumberSettable [4] BOOLEAN OPTIONAL,
+ *     buttonPressIndicator [5] BOOLEAN OPTIONAL,
+ *     lampList [UNIVERSAL 16] LampID OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -168,14 +121,14 @@ class ButtonList_Item {
  */
 export
 const _root_component_type_list_1_spec_for_ButtonList_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("button", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("buttonLabel", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("buttonLabelSettable", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("buttonFunction", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("buttonAssociatedNumber", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("buttonAssociatedNumberSettable", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("buttonPressIndicator", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("lampList", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("button", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("buttonLabel", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("buttonLabelSettable", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("buttonFunction", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("buttonAssociatedNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("buttonAssociatedNumberSettable", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("buttonPressIndicator", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("lampList", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

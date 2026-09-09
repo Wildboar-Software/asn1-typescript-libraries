@@ -1,73 +1,21 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { ToneDetected, _enum_for_ToneDetected, ToneDetected_beep /* IMPORTED_LONG_ENUMERATION_ITEM */, beep /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_billing /* IMPORTED_LONG_ENUMERATION_ITEM */, billing /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_carrier /* IMPORTED_LONG_ENUMERATION_ITEM */, carrier /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_confirmation /* IMPORTED_LONG_ENUMERATION_ITEM */, confirmation /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_dial /* IMPORTED_LONG_ENUMERATION_ITEM */, dial /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_faxCNG /* IMPORTED_LONG_ENUMERATION_ITEM */, faxCNG /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_hold /* IMPORTED_LONG_ENUMERATION_ITEM */, hold /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_howler /* IMPORTED_LONG_ENUMERATION_ITEM */, howler /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_intrusion /* IMPORTED_LONG_ENUMERATION_ITEM */, intrusion /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_modemCNG /* IMPORTED_LONG_ENUMERATION_ITEM */, modemCNG /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_recordWarning /* IMPORTED_LONG_ENUMERATION_ITEM */, recordWarning /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_reorder /* IMPORTED_LONG_ENUMERATION_ITEM */, reorder /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_ringback /* IMPORTED_LONG_ENUMERATION_ITEM */, ringback /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_silence /* IMPORTED_LONG_ENUMERATION_ITEM */, silence /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_sitVC /* IMPORTED_LONG_ENUMERATION_ITEM */, sitVC /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_sitIC /* IMPORTED_LONG_ENUMERATION_ITEM */, sitIC /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_sitRO /* IMPORTED_LONG_ENUMERATION_ITEM */, sitRO /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_sitNC /* IMPORTED_LONG_ENUMERATION_ITEM */, sitNC /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ToneDetected, _encode_ToneDetected } from "../CSTA-data-collected/ToneDetected.ta.mjs";
-// export { ToneDetected, _enum_for_ToneDetected, ToneDetected_beep /* IMPORTED_LONG_ENUMERATION_ITEM */, beep /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_billing /* IMPORTED_LONG_ENUMERATION_ITEM */, billing /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_carrier /* IMPORTED_LONG_ENUMERATION_ITEM */, carrier /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_confirmation /* IMPORTED_LONG_ENUMERATION_ITEM */, confirmation /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_dial /* IMPORTED_LONG_ENUMERATION_ITEM */, dial /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_faxCNG /* IMPORTED_LONG_ENUMERATION_ITEM */, faxCNG /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_hold /* IMPORTED_LONG_ENUMERATION_ITEM */, hold /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_howler /* IMPORTED_LONG_ENUMERATION_ITEM */, howler /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_intrusion /* IMPORTED_LONG_ENUMERATION_ITEM */, intrusion /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_modemCNG /* IMPORTED_LONG_ENUMERATION_ITEM */, modemCNG /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_recordWarning /* IMPORTED_LONG_ENUMERATION_ITEM */, recordWarning /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_reorder /* IMPORTED_LONG_ENUMERATION_ITEM */, reorder /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_ringback /* IMPORTED_LONG_ENUMERATION_ITEM */, ringback /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_silence /* IMPORTED_LONG_ENUMERATION_ITEM */, silence /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_sitVC /* IMPORTED_LONG_ENUMERATION_ITEM */, sitVC /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_sitIC /* IMPORTED_LONG_ENUMERATION_ITEM */, sitIC /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_sitRO /* IMPORTED_LONG_ENUMERATION_ITEM */, sitRO /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_sitNC /* IMPORTED_LONG_ENUMERATION_ITEM */, sitNC /* IMPORTED_SHORT_ENUMERATION_ITEM */, ToneDetected_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ToneDetected, _encode_ToneDetected } from "../CSTA-data-collected/ToneDetected.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import {
+    ToneDetected,
+    _enum_for_ToneDetected,
+    _decode_ToneDetected,
+    _encode_ToneDetected
+} from "../CSTA-data-collected/ToneDetected.ta.mjs";
+
 
 
 /**
@@ -150,10 +98,10 @@ class TelTonesData {
  */
 export
 const _root_component_type_list_1_spec_for_TelTonesData: $.ComponentSpec[] = [
-    new $.ComponentSpec("toneDetected", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("toneFrequency", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("toneDuration", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("tonePauseDuration", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
+    new $.ComponentSpec("toneDetected", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("toneFrequency", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("toneDuration", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("tonePauseDuration", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

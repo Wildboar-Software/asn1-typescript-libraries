@@ -1,87 +1,29 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { CallControlEvtsList, _decode_CallControlEvtsList, _encode_CallControlEvtsList } from "../CSTA-capability-exchange/CallControlEvtsList.ta.mjs";
-// export { CallControlEvtsList, _decode_CallControlEvtsList, _encode_CallControlEvtsList } from "../CSTA-capability-exchange/CallControlEvtsList.ta.mjs";
+
 import { CallAssociatedEvtsList, _decode_CallAssociatedEvtsList, _encode_CallAssociatedEvtsList } from "../CSTA-capability-exchange/CallAssociatedEvtsList.ta.mjs";
-// export { CallAssociatedEvtsList, _decode_CallAssociatedEvtsList, _encode_CallAssociatedEvtsList } from "../CSTA-capability-exchange/CallAssociatedEvtsList.ta.mjs";
+
 import { MediaEvtsList, _decode_MediaEvtsList, _encode_MediaEvtsList } from "../CSTA-capability-exchange/MediaEvtsList.ta.mjs";
-// export { MediaEvtsList, _decode_MediaEvtsList, _encode_MediaEvtsList } from "../CSTA-capability-exchange/MediaEvtsList.ta.mjs";
+
 import { PhysDevEvtsList, _decode_PhysDevEvtsList, _encode_PhysDevEvtsList } from "../CSTA-capability-exchange/PhysDevEvtsList.ta.mjs";
-// export { PhysDevEvtsList, _decode_PhysDevEvtsList, _encode_PhysDevEvtsList } from "../CSTA-capability-exchange/PhysDevEvtsList.ta.mjs";
+
 import { LogicalEvtsList, _decode_LogicalEvtsList, _encode_LogicalEvtsList } from "../CSTA-capability-exchange/LogicalEvtsList.ta.mjs";
-// export { LogicalEvtsList, _decode_LogicalEvtsList, _encode_LogicalEvtsList } from "../CSTA-capability-exchange/LogicalEvtsList.ta.mjs";
+
 import { DeviceMaintEvtsList, _decode_DeviceMaintEvtsList, _encode_DeviceMaintEvtsList } from "../CSTA-capability-exchange/DeviceMaintEvtsList.ta.mjs";
-// export { DeviceMaintEvtsList, _decode_DeviceMaintEvtsList, _encode_DeviceMaintEvtsList } from "../CSTA-capability-exchange/DeviceMaintEvtsList.ta.mjs";
+
 import { VoiceUnitEvtsList, _decode_VoiceUnitEvtsList, _encode_VoiceUnitEvtsList } from "../CSTA-capability-exchange/VoiceUnitEvtsList.ta.mjs";
-// export { VoiceUnitEvtsList, _decode_VoiceUnitEvtsList, _encode_VoiceUnitEvtsList } from "../CSTA-capability-exchange/VoiceUnitEvtsList.ta.mjs";
+
 import { VendorSpecificEvtsList, _decode_VendorSpecificEvtsList, _encode_VendorSpecificEvtsList } from "../CSTA-capability-exchange/VendorSpecificEvtsList.ta.mjs";
-// export { VendorSpecificEvtsList, _decode_VendorSpecificEvtsList, _encode_VendorSpecificEvtsList } from "../CSTA-capability-exchange/VendorSpecificEvtsList.ta.mjs";
+
 
 
 /**
@@ -91,7 +33,16 @@ import { VendorSpecificEvtsList, _decode_VendorSpecificEvtsList, _encode_VendorS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetCSTAFeatureResult-supportedEvents ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GetCSTAFeatureResult-supportedEvents ::= SEQUENCE {
+ *     callControlEvtsList [0] CallControlEvtsList OPTIONAL,
+ *     callAssociatedEvtsList [1] CallAssociatedEvtsList OPTIONAL,
+ *     mediaEvtsList [2] MediaEvtsList OPTIONAL,
+ *     physDevEvtsList [3] PhysDevEvtsList OPTIONAL,
+ *     logicalEvtsList [4] LogicalEvtsList OPTIONAL,
+ *     deviceMaintEvtsList [5] DeviceMaintEvtsList OPTIONAL,
+ *     voiceEvtsList [6] VoiceUnitEvtsList OPTIONAL,
+ *     vendorSpecificEvtsList [7] VendorSpecificEvtsList OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -178,14 +129,14 @@ class GetCSTAFeatureResult_supportedEvents {
  */
 export
 const _root_component_type_list_1_spec_for_GetCSTAFeatureResult_supportedEvents: $.ComponentSpec[] = [
-    new $.ComponentSpec("callControlEvtsList", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("callAssociatedEvtsList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mediaEvtsList", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("physDevEvtsList", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("logicalEvtsList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("deviceMaintEvtsList", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("voiceEvtsList", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("vendorSpecificEvtsList", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
+    new $.ComponentSpec("callControlEvtsList", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callAssociatedEvtsList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mediaEvtsList", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("physDevEvtsList", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("logicalEvtsList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("deviceMaintEvtsList", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("voiceEvtsList", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("vendorSpecificEvtsList", true, $.hasTag(_TagClass.context, 7))
 ];
 
 /**

@@ -1,75 +1,17 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { MediaAttached, MediaAttached_mediaServiceVersion /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_mediaServiceInstanceID /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_mediaCallCharacteristics /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_callCharacteristics /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_mediaConnectionInfo /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_MediaAttached, _encode_MediaAttached } from "../CSTA-capability-exchange/MediaAttached.ta.mjs";
-// export { MediaAttached, MediaAttached_mediaServiceVersion /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_mediaServiceInstanceID /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_mediaCallCharacteristics /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_callCharacteristics /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_mediaConnectionInfo /* IMPORTED_LONG_NAMED_BIT */, MediaAttached_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_MediaAttached, _encode_MediaAttached } from "../CSTA-capability-exchange/MediaAttached.ta.mjs";
-import { MediaDetached, MediaDetached_mediaServiceVersion /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_mediaServiceInstanceID /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_mediaCallCharacteristics /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_callCharacteristics /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_mediaConnectionInfo /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_MediaDetached, _encode_MediaDetached } from "../CSTA-capability-exchange/MediaDetached.ta.mjs";
-// export { MediaDetached, MediaDetached_mediaServiceVersion /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_mediaServiceInstanceID /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_mediaCallCharacteristics /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_callCharacteristics /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_mediaConnectionInfo /* IMPORTED_LONG_NAMED_BIT */, MediaDetached_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_MediaDetached, _encode_MediaDetached } from "../CSTA-capability-exchange/MediaDetached.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { MediaAttached, _decode_MediaAttached, _encode_MediaAttached } from "../CSTA-capability-exchange/MediaAttached.ta.mjs";
+
+import { MediaDetached, _decode_MediaDetached, _encode_MediaDetached } from "../CSTA-capability-exchange/MediaDetached.ta.mjs";
+
 
 
 /**
@@ -132,8 +74,8 @@ class MediaEvtsList {
  */
 export
 const _root_component_type_list_1_spec_for_MediaEvtsList: $.ComponentSpec[] = [
-    new $.ComponentSpec("mediaAttached", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mediaDetached", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
+    new $.ComponentSpec("mediaAttached", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mediaDetached", true, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

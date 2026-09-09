@@ -1,95 +1,41 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { GetLocationInformation, GetLocationInformation_privateData /* IMPORTED_LONG_NAMED_BIT */, GetLocationInformation_locationInfoInAck /* IMPORTED_LONG_NAMED_BIT */, locationInfoInAck /* IMPORTED_SHORT_NAMED_BIT */, GetLocationInformation_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_GetLocationInformation, _encode_GetLocationInformation } from "../CSTA-capability-exchange/GetLocationInformation.ta.mjs";
-// export { GetLocationInformation, GetLocationInformation_privateData /* IMPORTED_LONG_NAMED_BIT */, GetLocationInformation_locationInfoInAck /* IMPORTED_LONG_NAMED_BIT */, locationInfoInAck /* IMPORTED_SHORT_NAMED_BIT */, GetLocationInformation_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_GetLocationInformation, _encode_GetLocationInformation } from "../CSTA-capability-exchange/GetLocationInformation.ta.mjs";
-import { SetLocationInformation, SetLocationInformation_locationInfo /* IMPORTED_LONG_NAMED_BIT */, locationInfo /* IMPORTED_SHORT_NAMED_BIT */, SetLocationInformation_replaceMode /* IMPORTED_LONG_NAMED_BIT */, replaceMode /* IMPORTED_SHORT_NAMED_BIT */, SetLocationInformation_privateData /* IMPORTED_LONG_NAMED_BIT */, SetLocationInformation_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SetLocationInformation, _encode_SetLocationInformation } from "../CSTA-capability-exchange/SetLocationInformation.ta.mjs";
-// export { SetLocationInformation, SetLocationInformation_locationInfo /* IMPORTED_LONG_NAMED_BIT */, locationInfo /* IMPORTED_SHORT_NAMED_BIT */, SetLocationInformation_replaceMode /* IMPORTED_LONG_NAMED_BIT */, replaceMode /* IMPORTED_SHORT_NAMED_BIT */, SetLocationInformation_privateData /* IMPORTED_LONG_NAMED_BIT */, SetLocationInformation_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SetLocationInformation, _encode_SetLocationInformation } from "../CSTA-capability-exchange/SetLocationInformation.ta.mjs";
-import { LocationTrackingSessionResumed, LocationTrackingSessionResumed_locReason /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionResumed_privateData /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionResumed_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_LocationTrackingSessionResumed, _encode_LocationTrackingSessionResumed } from "../CSTA-capability-exchange/LocationTrackingSessionResumed.ta.mjs";
-// export { LocationTrackingSessionResumed, LocationTrackingSessionResumed_locReason /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionResumed_privateData /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionResumed_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_LocationTrackingSessionResumed, _encode_LocationTrackingSessionResumed } from "../CSTA-capability-exchange/LocationTrackingSessionResumed.ta.mjs";
-import { LocationTrackingSessionSuspended, LocationTrackingSessionSuspended_locReason /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionSuspended_locationInfoList /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionSuspended_privateData /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionSuspended_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_LocationTrackingSessionSuspended, _encode_LocationTrackingSessionSuspended } from "../CSTA-capability-exchange/LocationTrackingSessionSuspended.ta.mjs";
-// export { LocationTrackingSessionSuspended, LocationTrackingSessionSuspended_locReason /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionSuspended_locationInfoList /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionSuspended_privateData /* IMPORTED_LONG_NAMED_BIT */, LocationTrackingSessionSuspended_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_LocationTrackingSessionSuspended, _encode_LocationTrackingSessionSuspended } from "../CSTA-capability-exchange/LocationTrackingSessionSuspended.ta.mjs";
-import { ResumeLocationTrackingSession, ResumeLocationTrackingSession_privateData /* IMPORTED_LONG_NAMED_BIT */, ResumeLocationTrackingSession_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_ResumeLocationTrackingSession, _encode_ResumeLocationTrackingSession } from "../CSTA-capability-exchange/ResumeLocationTrackingSession.ta.mjs";
-// export { ResumeLocationTrackingSession, ResumeLocationTrackingSession_privateData /* IMPORTED_LONG_NAMED_BIT */, ResumeLocationTrackingSession_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_ResumeLocationTrackingSession, _encode_ResumeLocationTrackingSession } from "../CSTA-capability-exchange/ResumeLocationTrackingSession.ta.mjs";
-import { LocationInformationReport, LocationInformationReport_locationInfoList /* IMPORTED_LONG_NAMED_BIT */, LocationInformationReport_privateData /* IMPORTED_LONG_NAMED_BIT */, LocationInformationReport_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_LocationInformationReport, _encode_LocationInformationReport } from "../CSTA-capability-exchange/LocationInformationReport.ta.mjs";
-// export { LocationInformationReport, LocationInformationReport_locationInfoList /* IMPORTED_LONG_NAMED_BIT */, LocationInformationReport_privateData /* IMPORTED_LONG_NAMED_BIT */, LocationInformationReport_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_LocationInformationReport, _encode_LocationInformationReport } from "../CSTA-capability-exchange/LocationInformationReport.ta.mjs";
-import { StartLocationTrackingSession, StartLocationTrackingSession_collectionType /* IMPORTED_LONG_NAMED_BIT */, collectionType /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_collectionInterval /* IMPORTED_LONG_NAMED_BIT */, collectionInterval /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_maxCollections /* IMPORTED_LONG_NAMED_BIT */, maxCollections /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_collectionFilter /* IMPORTED_LONG_NAMED_BIT */, collectionFilter /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_reportingType /* IMPORTED_LONG_NAMED_BIT */, reportingType /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_reportingCount /* IMPORTED_LONG_NAMED_BIT */, reportingCount /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_privateData /* IMPORTED_LONG_NAMED_BIT */, StartLocationTrackingSession_piDFProfileOption1inAck /* IMPORTED_LONG_NAMED_BIT */, piDFProfileOption1inAck /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_piDFProfileOption2inAck /* IMPORTED_LONG_NAMED_BIT */, piDFProfileOption2inAck /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StartLocationTrackingSession, _encode_StartLocationTrackingSession } from "../CSTA-capability-exchange/StartLocationTrackingSession.ta.mjs";
-// export { StartLocationTrackingSession, StartLocationTrackingSession_collectionType /* IMPORTED_LONG_NAMED_BIT */, collectionType /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_collectionInterval /* IMPORTED_LONG_NAMED_BIT */, collectionInterval /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_maxCollections /* IMPORTED_LONG_NAMED_BIT */, maxCollections /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_collectionFilter /* IMPORTED_LONG_NAMED_BIT */, collectionFilter /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_reportingType /* IMPORTED_LONG_NAMED_BIT */, reportingType /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_reportingCount /* IMPORTED_LONG_NAMED_BIT */, reportingCount /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_privateData /* IMPORTED_LONG_NAMED_BIT */, StartLocationTrackingSession_piDFProfileOption1inAck /* IMPORTED_LONG_NAMED_BIT */, piDFProfileOption1inAck /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_piDFProfileOption2inAck /* IMPORTED_LONG_NAMED_BIT */, piDFProfileOption2inAck /* IMPORTED_SHORT_NAMED_BIT */, StartLocationTrackingSession_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StartLocationTrackingSession, _encode_StartLocationTrackingSession } from "../CSTA-capability-exchange/StartLocationTrackingSession.ta.mjs";
-import { StopLocationTrackingSession, StopLocationTrackingSession_reason /* IMPORTED_LONG_NAMED_BIT */, StopLocationTrackingSession_privateData /* IMPORTED_LONG_NAMED_BIT */, StopLocationTrackingSession_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StopLocationTrackingSession, _encode_StopLocationTrackingSession } from "../CSTA-capability-exchange/StopLocationTrackingSession.ta.mjs";
-// export { StopLocationTrackingSession, StopLocationTrackingSession_reason /* IMPORTED_LONG_NAMED_BIT */, StopLocationTrackingSession_privateData /* IMPORTED_LONG_NAMED_BIT */, StopLocationTrackingSession_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StopLocationTrackingSession, _encode_StopLocationTrackingSession } from "../CSTA-capability-exchange/StopLocationTrackingSession.ta.mjs";
-import { SuspendLocationTrackingSession, SuspendLocationTrackingSession_reason /* IMPORTED_LONG_NAMED_BIT */, SuspendLocationTrackingSession_privateData /* IMPORTED_LONG_NAMED_BIT */, SuspendLocationTrackingSession_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendLocationTrackingSession, _encode_SuspendLocationTrackingSession } from "../CSTA-capability-exchange/SuspendLocationTrackingSession.ta.mjs";
-// export { SuspendLocationTrackingSession, SuspendLocationTrackingSession_reason /* IMPORTED_LONG_NAMED_BIT */, SuspendLocationTrackingSession_privateData /* IMPORTED_LONG_NAMED_BIT */, SuspendLocationTrackingSession_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendLocationTrackingSession, _encode_SuspendLocationTrackingSession } from "../CSTA-capability-exchange/SuspendLocationTrackingSession.ta.mjs";
-import { GetLocationTrackingCapabilities, GetLocationTrackingCapabilities_privateData /* IMPORTED_LONG_NAMED_BIT */, GetLocationTrackingCapabilities_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_GetLocationTrackingCapabilities, _encode_GetLocationTrackingCapabilities } from "../CSTA-capability-exchange/GetLocationTrackingCapabilities.ta.mjs";
-// export { GetLocationTrackingCapabilities, GetLocationTrackingCapabilities_privateData /* IMPORTED_LONG_NAMED_BIT */, GetLocationTrackingCapabilities_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_GetLocationTrackingCapabilities, _encode_GetLocationTrackingCapabilities } from "../CSTA-capability-exchange/GetLocationTrackingCapabilities.ta.mjs";
-import { GetLocationTrackingSessions, GetLocationTrackingSessions_privateData /* IMPORTED_LONG_NAMED_BIT */, GetLocationTrackingSessions_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_GetLocationTrackingSessions, _encode_GetLocationTrackingSessions } from "../CSTA-capability-exchange/GetLocationTrackingSessions.ta.mjs";
-// export { GetLocationTrackingSessions, GetLocationTrackingSessions_privateData /* IMPORTED_LONG_NAMED_BIT */, GetLocationTrackingSessions_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_GetLocationTrackingSessions, _encode_GetLocationTrackingSessions } from "../CSTA-capability-exchange/GetLocationTrackingSessions.ta.mjs";
-import { LocationSessionInfo, LocationSessionInfo_segmentID /* IMPORTED_LONG_NAMED_BIT */, segmentID /* IMPORTED_SHORT_NAMED_BIT */, LocationSessionInfo_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_LocationSessionInfo, _encode_LocationSessionInfo } from "../CSTA-capability-exchange/LocationSessionInfo.ta.mjs";
-// export { LocationSessionInfo, LocationSessionInfo_segmentID /* IMPORTED_LONG_NAMED_BIT */, segmentID /* IMPORTED_SHORT_NAMED_BIT */, LocationSessionInfo_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_LocationSessionInfo, _encode_LocationSessionInfo } from "../CSTA-capability-exchange/LocationSessionInfo.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { GetLocationInformation, _decode_GetLocationInformation, _encode_GetLocationInformation } from "../CSTA-capability-exchange/GetLocationInformation.ta.mjs";
+
+import { SetLocationInformation, _decode_SetLocationInformation, _encode_SetLocationInformation } from "../CSTA-capability-exchange/SetLocationInformation.ta.mjs";
+
+import { LocationTrackingSessionResumed, _decode_LocationTrackingSessionResumed, _encode_LocationTrackingSessionResumed } from "../CSTA-capability-exchange/LocationTrackingSessionResumed.ta.mjs";
+
+import {
+    LocationTrackingSessionSuspended,
+    _decode_LocationTrackingSessionSuspended,
+    _encode_LocationTrackingSessionSuspended
+} from "../CSTA-capability-exchange/LocationTrackingSessionSuspended.ta.mjs";
+
+import { ResumeLocationTrackingSession, _decode_ResumeLocationTrackingSession, _encode_ResumeLocationTrackingSession } from "../CSTA-capability-exchange/ResumeLocationTrackingSession.ta.mjs";
+
+import { LocationInformationReport, _decode_LocationInformationReport, _encode_LocationInformationReport } from "../CSTA-capability-exchange/LocationInformationReport.ta.mjs";
+
+import { StartLocationTrackingSession, _decode_StartLocationTrackingSession, _encode_StartLocationTrackingSession } from "../CSTA-capability-exchange/StartLocationTrackingSession.ta.mjs";
+
+import { StopLocationTrackingSession, _decode_StopLocationTrackingSession, _encode_StopLocationTrackingSession } from "../CSTA-capability-exchange/StopLocationTrackingSession.ta.mjs";
+
+import { SuspendLocationTrackingSession, _decode_SuspendLocationTrackingSession, _encode_SuspendLocationTrackingSession } from "../CSTA-capability-exchange/SuspendLocationTrackingSession.ta.mjs";
+
+import { GetLocationTrackingCapabilities, _decode_GetLocationTrackingCapabilities, _encode_GetLocationTrackingCapabilities } from "../CSTA-capability-exchange/GetLocationTrackingCapabilities.ta.mjs";
+
+import { GetLocationTrackingSessions, _decode_GetLocationTrackingSessions, _encode_GetLocationTrackingSessions } from "../CSTA-capability-exchange/GetLocationTrackingSessions.ta.mjs";
+
+import { LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessionInfo } from "../CSTA-capability-exchange/LocationSessionInfo.ta.mjs";
+
 
 
 /**
@@ -222,18 +168,18 @@ class LocationServicesServList {
  */
 export
 const _root_component_type_list_1_spec_for_LocationServicesServList: $.ComponentSpec[] = [
-    new $.ComponentSpec("getLocationInformation", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("setLocationInformation", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("locationTrackingSessionResumed", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("locationTrackingSessionSuspended", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("resumeLocationTrackingSession", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("locationInformationReport", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("startLocationTrackingSession", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("stopLocationTrackingSession", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("suspendLocationTrackingSession", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("getLocationTrackingCapabilities", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("getLocationTrackingSessions", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("locationSessionInfo", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("getLocationInformation", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("setLocationInformation", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("locationTrackingSessionResumed", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("locationTrackingSessionSuspended", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("resumeLocationTrackingSession", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("locationInformationReport", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("startLocationTrackingSession", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("stopLocationTrackingSession", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("suspendLocationTrackingSession", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("getLocationTrackingCapabilities", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("getLocationTrackingSessions", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("locationSessionInfo", true, $.hasTag(_TagClass.context, 11))
 ];
 
 /**

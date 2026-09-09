@@ -1,75 +1,27 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { DestinationCondition, _enum_for_DestinationCondition, DestinationCondition_humanVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, humanVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DestinationCondition_answeringMachine /* IMPORTED_LONG_ENUMERATION_ITEM */, answeringMachine /* IMPORTED_SHORT_ENUMERATION_ITEM */, DestinationCondition_facsimileMachine /* IMPORTED_LONG_ENUMERATION_ITEM */, facsimileMachine /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DestinationCondition, _encode_DestinationCondition } from "../CSTA-make-predictive-call/DestinationCondition.ta.mjs";
-// export { DestinationCondition, _enum_for_DestinationCondition, DestinationCondition_humanVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, humanVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DestinationCondition_answeringMachine /* IMPORTED_LONG_ENUMERATION_ITEM */, answeringMachine /* IMPORTED_SHORT_ENUMERATION_ITEM */, DestinationCondition_facsimileMachine /* IMPORTED_LONG_ENUMERATION_ITEM */, facsimileMachine /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DestinationCondition, _encode_DestinationCondition } from "../CSTA-make-predictive-call/DestinationCondition.ta.mjs";
-import { DetectionAction, _enum_for_DetectionAction, DetectionAction_clearCalledConnection /* IMPORTED_LONG_ENUMERATION_ITEM */, clearCalledConnection /* IMPORTED_SHORT_ENUMERATION_ITEM */, DetectionAction_remainConnected /* IMPORTED_LONG_ENUMERATION_ITEM */, remainConnected /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DetectionAction, _encode_DetectionAction } from "../CSTA-make-predictive-call/DetectionAction.ta.mjs";
-// export { DetectionAction, _enum_for_DetectionAction, DetectionAction_clearCalledConnection /* IMPORTED_LONG_ENUMERATION_ITEM */, clearCalledConnection /* IMPORTED_SHORT_ENUMERATION_ITEM */, DetectionAction_remainConnected /* IMPORTED_LONG_ENUMERATION_ITEM */, remainConnected /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DetectionAction, _encode_DetectionAction } from "../CSTA-make-predictive-call/DetectionAction.ta.mjs";
+    ASN1ConstructionError as _ConstructionError
+} from "@wildboar/asn1";
+import {
+    DestinationCondition,
+    _enum_for_DestinationCondition,
+    _decode_DestinationCondition,
+    _encode_DestinationCondition
+} from "../CSTA-make-predictive-call/DestinationCondition.ta.mjs";
+
+import {
+    DetectionAction,
+    _enum_for_DetectionAction,
+    _decode_DetectionAction,
+    _encode_DetectionAction
+} from "../CSTA-make-predictive-call/DetectionAction.ta.mjs";
+
 
 
 /**
@@ -79,7 +31,10 @@ import { DetectionAction, _enum_for_DetectionAction, DetectionAction_clearCalled
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DestinationDetection-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DestinationDetection-Item ::= SEQUENCE {
+ *     destinationCondition [UNIVERSAL 10] DestinationCondition,
+ *     detectionAction [UNIVERSAL 10] DetectionAction
+ * }
  * ```
  * 
  * @class
@@ -142,8 +97,8 @@ class DestinationDetection_Item {
  */
 export
 const _root_component_type_list_1_spec_for_DestinationDetection_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("destinationCondition", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("detectionAction", false, $.hasTag(_TagClass.universal, 10), undefined, undefined)
+    new $.ComponentSpec("destinationCondition", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("detectionAction", false, $.hasTag(_TagClass.universal, 10))
 ];
 
 /**

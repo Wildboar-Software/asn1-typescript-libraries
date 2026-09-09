@@ -1,79 +1,21 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { ConnectionListItems, _decode_ConnectionListItems, _encode_ConnectionListItems } from "../CSTA-send-message/ConnectionListItems.ta.mjs";
-// export { ConnectionListItems, _decode_ConnectionListItems, _encode_ConnectionListItems } from "../CSTA-send-message/ConnectionListItems.ta.mjs";
+
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
-// export { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
+
 import { CallLinkageDataListItems, _decode_CallLinkageDataListItems, _encode_CallLinkageDataListItems } from "../CSTA-send-message/CallLinkageDataListItems.ta.mjs";
-// export { CallLinkageDataListItems, _decode_CallLinkageDataListItems, _encode_CallLinkageDataListItems } from "../CSTA-send-message/CallLinkageDataListItems.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -150,10 +92,10 @@ class SendMessageResult {
  */
 export
 const _root_component_type_list_1_spec_for_SendMessageResult: $.ComponentSpec[] = [
-    new $.ComponentSpec("connectionList", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("listOfCallLinkageData", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("connectionList", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("listOfCallLinkageData", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

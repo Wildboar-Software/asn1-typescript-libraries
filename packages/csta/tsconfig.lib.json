@@ -1,33 +1,28 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
-    "emitDeclarationOnly": false,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "importHelpers": true,
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
     "types": [
       "node"
-    ]
+    ],
+    "strictNullChecks": false,
+    "rootDir": "."
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "references": [],
   "exclude": [
+    "**/*.spec.mts",
+    "**/*.test.mts",
     "vite.config.ts",
     "vite.config.mts",
     "vitest.config.ts",
-    "vitest.config.mts",
-    "src/**/*.test.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.test.tsx",
-    "src/**/*.spec.tsx",
-    "src/**/*.test.js",
-    "src/**/*.spec.js",
-    "src/**/*.test.jsx",
-    "src/**/*.spec.jsx"
+    "vitest.config.mts"
+  ],
+  "include": [
+    "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../rose/tsconfig.lib.json"
+    }
   ]
 }

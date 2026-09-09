@@ -1,87 +1,43 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { DeviceCategory, _enum_for_DeviceCategory, DeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_group /* IMPORTED_LONG_ENUMERATION_ITEM */, group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_genericInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, genericInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_listenerInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_dtmfInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptQueueInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueueInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_messageInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_DeviceCategory, _encode_DeviceCategory } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
-// export { DeviceCategory, _enum_for_DeviceCategory, DeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_group /* IMPORTED_LONG_ENUMERATION_ITEM */, group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_genericInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, genericInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_listenerInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_dtmfInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptQueueInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueueInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_messageInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_DeviceCategory, _encode_DeviceCategory } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
-import { GroupDeviceAttributes, GroupDeviceAttributes_acd /* IMPORTED_LONG_NAMED_BIT */, GroupDeviceAttributes_hunt /* IMPORTED_LONG_NAMED_BIT */, hunt /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_pick /* IMPORTED_LONG_NAMED_BIT */, pick /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_user /* IMPORTED_LONG_NAMED_BIT */, user /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_agent /* IMPORTED_LONG_NAMED_BIT */, agent /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_other /* IMPORTED_LONG_NAMED_BIT */, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
-// export { GroupDeviceAttributes, GroupDeviceAttributes_acd /* IMPORTED_LONG_NAMED_BIT */, GroupDeviceAttributes_hunt /* IMPORTED_LONG_NAMED_BIT */, hunt /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_pick /* IMPORTED_LONG_NAMED_BIT */, pick /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_user /* IMPORTED_LONG_NAMED_BIT */, user /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_agent /* IMPORTED_LONG_NAMED_BIT */, agent /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_other /* IMPORTED_LONG_NAMED_BIT */, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
-import { NamedDeviceTypes, _enum_for_NamedDeviceTypes, NamedDeviceTypes_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_acdGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, acdGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_button /* IMPORTED_LONG_ENUMERATION_ITEM */, button /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_buttonGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, buttonGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_conferenceBridge /* IMPORTED_LONG_ENUMERATION_ITEM */, conferenceBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_line /* IMPORTED_LONG_ENUMERATION_ITEM */, line /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_lineGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, lineGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operatorGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_parkingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, parkingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_station /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_stationGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, stationGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunk /* IMPORTED_LONG_ENUMERATION_ITEM */, trunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunkGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, trunkGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_other /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_otherGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, otherGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NamedDeviceTypes, _encode_NamedDeviceTypes } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
-// export { NamedDeviceTypes, _enum_for_NamedDeviceTypes, NamedDeviceTypes_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_acdGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, acdGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_button /* IMPORTED_LONG_ENUMERATION_ITEM */, button /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_buttonGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, buttonGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_conferenceBridge /* IMPORTED_LONG_ENUMERATION_ITEM */, conferenceBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_line /* IMPORTED_LONG_ENUMERATION_ITEM */, line /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_lineGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, lineGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operatorGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_parkingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, parkingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_station /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_stationGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, stationGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunk /* IMPORTED_LONG_ENUMERATION_ITEM */, trunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunkGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, trunkGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_other /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_otherGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, otherGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NamedDeviceTypes, _encode_NamedDeviceTypes } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import {
+    DeviceCategory,
+    _enum_for_DeviceCategory,
+    DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    _decode_DeviceCategory,
+    _encode_DeviceCategory
+} from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
+
+import { GroupDeviceAttributes, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
+
+import {
+    NamedDeviceTypes,
+    _enum_for_NamedDeviceTypes,
+    _decode_NamedDeviceTypes,
+    _encode_NamedDeviceTypes
+} from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
+
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
+
 import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
-// export { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
+
 import { PhysDevServList, _decode_PhysDevServList, _encode_PhysDevServList } from "../CSTA-capability-exchange/PhysDevServList.ta.mjs";
-// export { PhysDevServList, _decode_PhysDevServList, _encode_PhysDevServList } from "../CSTA-capability-exchange/PhysDevServList.ta.mjs";
+
 import { PhysDevEvtsList, _decode_PhysDevEvtsList, _encode_PhysDevEvtsList } from "../CSTA-capability-exchange/PhysDevEvtsList.ta.mjs";
-// export { PhysDevEvtsList, _decode_PhysDevEvtsList, _encode_PhysDevEvtsList } from "../CSTA-capability-exchange/PhysDevEvtsList.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -267,23 +223,23 @@ class GetPhysicalDeviceInformationResult {
  */
 export
 const _root_component_type_list_1_spec_for_GetPhysicalDeviceInformationResult: $.ComponentSpec[] = [
-    new $.ComponentSpec("deviceCategory", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("groupDeviceAttributes", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("namedDeviceTypes", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("hasLogicalElement", false, $.hasTag(_TagClass.universal, 1), undefined, undefined),
-    new $.ComponentSpec("otherLogicalDeviceList", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("deviceModelName", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("deviceOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("deviceOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("callOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("callOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("maxDisplays", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("maxButtons", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("maxLamps", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("maxRingPatterns", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("physDevServList", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("physDevEvtsList", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("deviceCategory", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("groupDeviceAttributes", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("namedDeviceTypes", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("hasLogicalElement", false, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("otherLogicalDeviceList", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("deviceModelName", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("deviceOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("deviceOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("callOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("callOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("maxDisplays", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("maxButtons", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("maxLamps", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("maxRingPatterns", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("physDevServList", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("physDevEvtsList", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

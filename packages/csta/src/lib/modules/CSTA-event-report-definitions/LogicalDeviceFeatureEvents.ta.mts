@@ -1,101 +1,37 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+
+import * as $ from "@wildboar/asn1/functional";
+import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import { AgentBusyEvent, _decode_AgentBusyEvent, _encode_AgentBusyEvent } from "../CSTA-agent-busy-event/AgentBusyEvent.ta.mjs";
-// export { AgentBusyEvent, _decode_AgentBusyEvent, _encode_AgentBusyEvent } from "../CSTA-agent-busy-event/AgentBusyEvent.ta.mjs";
+
 import { AgentLoggedOnEvent, _decode_AgentLoggedOnEvent, _encode_AgentLoggedOnEvent } from "../CSTA-agent-logged-on-event/AgentLoggedOnEvent.ta.mjs";
-// export { AgentLoggedOnEvent, _decode_AgentLoggedOnEvent, _encode_AgentLoggedOnEvent } from "../CSTA-agent-logged-on-event/AgentLoggedOnEvent.ta.mjs";
+
 import { AgentLoggedOffEvent, _decode_AgentLoggedOffEvent, _encode_AgentLoggedOffEvent } from "../CSTA-agent-logged-off-event/AgentLoggedOffEvent.ta.mjs";
-// export { AgentLoggedOffEvent, _decode_AgentLoggedOffEvent, _encode_AgentLoggedOffEvent } from "../CSTA-agent-logged-off-event/AgentLoggedOffEvent.ta.mjs";
+
 import { AgentNotReadyEvent, _decode_AgentNotReadyEvent, _encode_AgentNotReadyEvent } from "../CSTA-agent-not-ready-event/AgentNotReadyEvent.ta.mjs";
-// export { AgentNotReadyEvent, _decode_AgentNotReadyEvent, _encode_AgentNotReadyEvent } from "../CSTA-agent-not-ready-event/AgentNotReadyEvent.ta.mjs";
+
 import { AgentReadyEvent, _decode_AgentReadyEvent, _encode_AgentReadyEvent } from "../CSTA-agent-ready-event/AgentReadyEvent.ta.mjs";
-// export { AgentReadyEvent, _decode_AgentReadyEvent, _encode_AgentReadyEvent } from "../CSTA-agent-ready-event/AgentReadyEvent.ta.mjs";
+
 import { AgentWorkingAfterCallEvent, _decode_AgentWorkingAfterCallEvent, _encode_AgentWorkingAfterCallEvent } from "../CSTA-agent-working-after-call-event/AgentWorkingAfterCallEvent.ta.mjs";
-// export { AgentWorkingAfterCallEvent, _decode_AgentWorkingAfterCallEvent, _encode_AgentWorkingAfterCallEvent } from "../CSTA-agent-working-after-call-event/AgentWorkingAfterCallEvent.ta.mjs";
+
 import { AutoAnswerEvent, _decode_AutoAnswerEvent, _encode_AutoAnswerEvent } from "../CSTA-auto-answer-event/AutoAnswerEvent.ta.mjs";
-// export { AutoAnswerEvent, _decode_AutoAnswerEvent, _encode_AutoAnswerEvent } from "../CSTA-auto-answer-event/AutoAnswerEvent.ta.mjs";
+
 import { AutoWorkModeEvent, _decode_AutoWorkModeEvent, _encode_AutoWorkModeEvent } from "../CSTA-auto-work-mode-event/AutoWorkModeEvent.ta.mjs";
-// export { AutoWorkModeEvent, _decode_AutoWorkModeEvent, _encode_AutoWorkModeEvent } from "../CSTA-auto-work-mode-event/AutoWorkModeEvent.ta.mjs";
+
 import { CallBackEvent, _decode_CallBackEvent, _encode_CallBackEvent } from "../CSTA-call-back-event/CallBackEvent.ta.mjs";
-// export { CallBackEvent, _decode_CallBackEvent, _encode_CallBackEvent } from "../CSTA-call-back-event/CallBackEvent.ta.mjs";
+
 import { CallBackMessageEvent, _decode_CallBackMessageEvent, _encode_CallBackMessageEvent } from "../CSTA-call-back-message-event/CallBackMessageEvent.ta.mjs";
-// export { CallBackMessageEvent, _decode_CallBackMessageEvent, _encode_CallBackMessageEvent } from "../CSTA-call-back-message-event/CallBackMessageEvent.ta.mjs";
+
 import { CallerIDStatusEvent, _decode_CallerIDStatusEvent, _encode_CallerIDStatusEvent } from "../CSTA-caller-id-status-event/CallerIDStatusEvent.ta.mjs";
-// export { CallerIDStatusEvent, _decode_CallerIDStatusEvent, _encode_CallerIDStatusEvent } from "../CSTA-caller-id-status-event/CallerIDStatusEvent.ta.mjs";
+
 import { DoNotDisturbEvent, _decode_DoNotDisturbEvent, _encode_DoNotDisturbEvent } from "../CSTA-do-not-disturb-event/DoNotDisturbEvent.ta.mjs";
-// export { DoNotDisturbEvent, _decode_DoNotDisturbEvent, _encode_DoNotDisturbEvent } from "../CSTA-do-not-disturb-event/DoNotDisturbEvent.ta.mjs";
+
 import { ForwardingEvent, _decode_ForwardingEvent, _encode_ForwardingEvent } from "../CSTA-forwarding-event/ForwardingEvent.ta.mjs";
-// export { ForwardingEvent, _decode_ForwardingEvent, _encode_ForwardingEvent } from "../CSTA-forwarding-event/ForwardingEvent.ta.mjs";
+
 import { PresenceStateEvent, _decode_PresenceStateEvent, _encode_PresenceStateEvent } from "../CSTA-presence-state-event/PresenceStateEvent.ta.mjs";
-// export { PresenceStateEvent, _decode_PresenceStateEvent, _encode_PresenceStateEvent } from "../CSTA-presence-state-event/PresenceStateEvent.ta.mjs";
+
 import { RouteingModeEvent, _decode_RouteingModeEvent, _encode_RouteingModeEvent } from "../CSTA-routeing-mode-event/RouteingModeEvent.ta.mjs";
-// export { RouteingModeEvent, _decode_RouteingModeEvent, _encode_RouteingModeEvent } from "../CSTA-routeing-mode-event/RouteingModeEvent.ta.mjs";
+
 
 
 /**

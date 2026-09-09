@@ -1,87 +1,23 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+
+import * as $ from "@wildboar/asn1/functional";
+import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import { CallControlEvents, _decode_CallControlEvents, _encode_CallControlEvents } from "../CSTA-event-report-definitions/CallControlEvents.ta.mjs";
-// export { CallControlEvents, _decode_CallControlEvents, _encode_CallControlEvents } from "../CSTA-event-report-definitions/CallControlEvents.ta.mjs";
+
 import { CallAssociatedEvents, _decode_CallAssociatedEvents, _encode_CallAssociatedEvents } from "../CSTA-event-report-definitions/CallAssociatedEvents.ta.mjs";
-// export { CallAssociatedEvents, _decode_CallAssociatedEvents, _encode_CallAssociatedEvents } from "../CSTA-event-report-definitions/CallAssociatedEvents.ta.mjs";
+
 import { MediaAttachmentEvents, _decode_MediaAttachmentEvents, _encode_MediaAttachmentEvents } from "../CSTA-event-report-definitions/MediaAttachmentEvents.ta.mjs";
-// export { MediaAttachmentEvents, _decode_MediaAttachmentEvents, _encode_MediaAttachmentEvents } from "../CSTA-event-report-definitions/MediaAttachmentEvents.ta.mjs";
+
 import { PhysicalDeviceFeatureEvents, _decode_PhysicalDeviceFeatureEvents, _encode_PhysicalDeviceFeatureEvents } from "../CSTA-event-report-definitions/PhysicalDeviceFeatureEvents.ta.mjs";
-// export { PhysicalDeviceFeatureEvents, _decode_PhysicalDeviceFeatureEvents, _encode_PhysicalDeviceFeatureEvents } from "../CSTA-event-report-definitions/PhysicalDeviceFeatureEvents.ta.mjs";
+
 import { LogicalDeviceFeatureEvents, _decode_LogicalDeviceFeatureEvents, _encode_LogicalDeviceFeatureEvents } from "../CSTA-event-report-definitions/LogicalDeviceFeatureEvents.ta.mjs";
-// export { LogicalDeviceFeatureEvents, _decode_LogicalDeviceFeatureEvents, _encode_LogicalDeviceFeatureEvents } from "../CSTA-event-report-definitions/LogicalDeviceFeatureEvents.ta.mjs";
+
 import { DeviceMaintenanceEvents, _decode_DeviceMaintenanceEvents, _encode_DeviceMaintenanceEvents } from "../CSTA-event-report-definitions/DeviceMaintenanceEvents.ta.mjs";
-// export { DeviceMaintenanceEvents, _decode_DeviceMaintenanceEvents, _encode_DeviceMaintenanceEvents } from "../CSTA-event-report-definitions/DeviceMaintenanceEvents.ta.mjs";
+
 import { VoiceUnitEvents, _decode_VoiceUnitEvents, _encode_VoiceUnitEvents } from "../CSTA-event-report-definitions/VoiceUnitEvents.ta.mjs";
-// export { VoiceUnitEvents, _decode_VoiceUnitEvents, _encode_VoiceUnitEvents } from "../CSTA-event-report-definitions/VoiceUnitEvents.ta.mjs";
+
 import { VendorSpecEvents, _decode_VendorSpecEvents, _encode_VendorSpecEvents } from "../CSTA-event-report-definitions/VendorSpecEvents.ta.mjs";
-// export { VendorSpecEvents, _decode_VendorSpecEvents, _encode_VendorSpecEvents } from "../CSTA-event-report-definitions/VendorSpecEvents.ta.mjs";
+
 
 
 /**

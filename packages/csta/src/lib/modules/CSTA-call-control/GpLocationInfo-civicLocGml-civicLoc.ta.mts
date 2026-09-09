@@ -1,71 +1,14 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 
 
 
@@ -76,7 +19,25 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GpLocationInfo-civicLocGml-civicLoc ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GpLocationInfo-civicLocGml-civicLoc ::= SEQUENCE {
+ *     country [UNIVERSAL 22] IA5String,
+ *     a1 [0] IA5String OPTIONAL,
+ *     a2 [1] IA5String OPTIONAL,
+ *     a3 [2] IA5String OPTIONAL,
+ *     a4 [3] IA5String OPTIONAL,
+ *     a5 [4] IA5String OPTIONAL,
+ *     a6 [5] IA5String OPTIONAL,
+ *     prd [6] IA5String OPTIONAL,
+ *     pod [7] IA5String OPTIONAL,
+ *     sts [8] IA5String OPTIONAL,
+ *     hno [9] IA5String OPTIONAL,
+ *     hns [10] IA5String OPTIONAL,
+ *     lmk [11] IA5String OPTIONAL,
+ *     loc [12] IA5String OPTIONAL,
+ *     flr [13] IA5String OPTIONAL,
+ *     nam [14] IA5String OPTIONAL,
+ *     pc [15] IA5String OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -217,23 +178,23 @@ class GpLocationInfo_civicLocGml_civicLoc {
  */
 export
 const _root_component_type_list_1_spec_for_GpLocationInfo_civicLocGml_civicLoc: $.ComponentSpec[] = [
-    new $.ComponentSpec("country", false, $.hasTag(_TagClass.universal, 22), undefined, undefined),
-    new $.ComponentSpec("a1", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("a2", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("a3", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("a4", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("a5", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("a6", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("prd", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("pod", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("sts", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("hno", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("hns", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("lmk", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("loc", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("flr", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("nam", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("pc", true, $.hasTag(_TagClass.context, 15), undefined, undefined)
+    new $.ComponentSpec("country", false, $.hasTag(_TagClass.universal, 22)),
+    new $.ComponentSpec("a1", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("a2", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("a3", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("a4", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("a5", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("a6", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("prd", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("pod", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("sts", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("hno", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("hns", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("lmk", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("loc", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("flr", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("nam", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("pc", true, $.hasTag(_TagClass.context, 15))
 ];
 
 /**

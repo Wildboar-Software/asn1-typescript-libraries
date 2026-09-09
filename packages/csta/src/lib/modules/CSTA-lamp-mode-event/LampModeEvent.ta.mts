@@ -1,83 +1,31 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
-// export { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+
 import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
-// export { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
-import { LampMode, LampMode_brokenFlutter /* IMPORTED_LONG_NAMED_INTEGER */, brokenFlutter /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_flutter /* IMPORTED_LONG_NAMED_INTEGER */, flutter /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_off /* IMPORTED_LONG_NAMED_INTEGER */, off /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_steady /* IMPORTED_LONG_NAMED_INTEGER */, steady /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_wink /* IMPORTED_LONG_NAMED_INTEGER */, wink /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_unknown /* IMPORTED_LONG_NAMED_INTEGER */, _decode_LampMode, _encode_LampMode } from "../CSTA-physical-device-feature/LampMode.ta.mjs";
-// export { LampMode, LampMode_brokenFlutter /* IMPORTED_LONG_NAMED_INTEGER */, brokenFlutter /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_flutter /* IMPORTED_LONG_NAMED_INTEGER */, flutter /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_off /* IMPORTED_LONG_NAMED_INTEGER */, off /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_steady /* IMPORTED_LONG_NAMED_INTEGER */, steady /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_wink /* IMPORTED_LONG_NAMED_INTEGER */, wink /* IMPORTED_SHORT_NAMED_INTEGER */, LampMode_unknown /* IMPORTED_LONG_NAMED_INTEGER */, _decode_LampMode, _encode_LampMode } from "../CSTA-physical-device-feature/LampMode.ta.mjs";
-import { LampBrightness, _enum_for_LampBrightness, LampBrightness_unspecified /* IMPORTED_LONG_ENUMERATION_ITEM */, unspecified /* IMPORTED_SHORT_ENUMERATION_ITEM */, LampBrightness_dim /* IMPORTED_LONG_ENUMERATION_ITEM */, dim /* IMPORTED_SHORT_ENUMERATION_ITEM */, LampBrightness_bright /* IMPORTED_LONG_ENUMERATION_ITEM */, bright /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LampBrightness, _encode_LampBrightness } from "../CSTA-physical-device-feature/LampBrightness.ta.mjs";
-// export { LampBrightness, _enum_for_LampBrightness, LampBrightness_unspecified /* IMPORTED_LONG_ENUMERATION_ITEM */, unspecified /* IMPORTED_SHORT_ENUMERATION_ITEM */, LampBrightness_dim /* IMPORTED_LONG_ENUMERATION_ITEM */, dim /* IMPORTED_SHORT_ENUMERATION_ITEM */, LampBrightness_bright /* IMPORTED_LONG_ENUMERATION_ITEM */, bright /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LampBrightness, _encode_LampBrightness } from "../CSTA-physical-device-feature/LampBrightness.ta.mjs";
-import { LampColor, LampColor_noColor /* IMPORTED_LONG_NAMED_INTEGER */, noColor /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_red /* IMPORTED_LONG_NAMED_INTEGER */, red /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_yellow /* IMPORTED_LONG_NAMED_INTEGER */, yellow /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_green /* IMPORTED_LONG_NAMED_INTEGER */, green /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_blue /* IMPORTED_LONG_NAMED_INTEGER */, blue /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_unknown /* IMPORTED_LONG_NAMED_INTEGER */, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
-// export { LampColor, LampColor_noColor /* IMPORTED_LONG_NAMED_INTEGER */, noColor /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_red /* IMPORTED_LONG_NAMED_INTEGER */, red /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_yellow /* IMPORTED_LONG_NAMED_INTEGER */, yellow /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_green /* IMPORTED_LONG_NAMED_INTEGER */, green /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_blue /* IMPORTED_LONG_NAMED_INTEGER */, blue /* IMPORTED_SHORT_NAMED_INTEGER */, LampColor_unknown /* IMPORTED_LONG_NAMED_INTEGER */, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
+
+import { LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-physical-device-feature/LampMode.ta.mjs";
+
+import {
+    LampBrightness,
+    _enum_for_LampBrightness,
+    _decode_LampBrightness,
+    _encode_LampBrightness
+} from "../CSTA-physical-device-feature/LampBrightness.ta.mjs";
+
+import { LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -181,13 +129,13 @@ class LampModeEvent {
  */
 export
 const _root_component_type_list_1_spec_for_LampModeEvent: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3), undefined, undefined),
-    new $.ComponentSpec("lamp", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("lampLabel", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("lampMode", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("lampBrightness", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("lampColor", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3)),
+    new $.ComponentSpec("lamp", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("lampLabel", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("lampMode", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("lampBrightness", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("lampColor", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

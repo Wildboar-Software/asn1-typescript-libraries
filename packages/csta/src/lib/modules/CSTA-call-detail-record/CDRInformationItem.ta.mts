@@ -1,113 +1,77 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
-// export { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+
 import { CallingDeviceID, _decode_CallingDeviceID, _encode_CallingDeviceID } from "../CSTA-device-identifiers/CallingDeviceID.ta.mjs";
-// export { CallingDeviceID, _decode_CallingDeviceID, _encode_CallingDeviceID } from "../CSTA-device-identifiers/CallingDeviceID.ta.mjs";
+
 import { CalledDeviceID, _decode_CalledDeviceID, _encode_CalledDeviceID } from "../CSTA-device-identifiers/CalledDeviceID.ta.mjs";
-// export { CalledDeviceID, _decode_CalledDeviceID, _encode_CalledDeviceID } from "../CSTA-device-identifiers/CalledDeviceID.ta.mjs";
+
 import { AssociatedCallingDeviceID, _decode_AssociatedCallingDeviceID, _encode_AssociatedCallingDeviceID } from "../CSTA-device-identifiers/AssociatedCallingDeviceID.ta.mjs";
-// export { AssociatedCallingDeviceID, _decode_AssociatedCallingDeviceID, _encode_AssociatedCallingDeviceID } from "../CSTA-device-identifiers/AssociatedCallingDeviceID.ta.mjs";
+
 import { AssociatedCalledDeviceID, _decode_AssociatedCalledDeviceID, _encode_AssociatedCalledDeviceID } from "../CSTA-device-identifiers/AssociatedCalledDeviceID.ta.mjs";
-// export { AssociatedCalledDeviceID, _decode_AssociatedCalledDeviceID, _encode_AssociatedCalledDeviceID } from "../CSTA-device-identifiers/AssociatedCalledDeviceID.ta.mjs";
+
 import { NetworkCallingDeviceID, _decode_NetworkCallingDeviceID, _encode_NetworkCallingDeviceID } from "../CSTA-device-identifiers/NetworkCallingDeviceID.ta.mjs";
-// export { NetworkCallingDeviceID, _decode_NetworkCallingDeviceID, _encode_NetworkCallingDeviceID } from "../CSTA-device-identifiers/NetworkCallingDeviceID.ta.mjs";
+
 import { NetworkCalledDeviceID, _decode_NetworkCalledDeviceID, _encode_NetworkCalledDeviceID } from "../CSTA-device-identifiers/NetworkCalledDeviceID.ta.mjs";
-// export { NetworkCalledDeviceID, _decode_NetworkCalledDeviceID, _encode_NetworkCalledDeviceID } from "../CSTA-device-identifiers/NetworkCalledDeviceID.ta.mjs";
-import { CallCharacteristics, CallCharacteristics_acdCall /* IMPORTED_LONG_NAMED_BIT */, acdCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_lowPriorityCall /* IMPORTED_LONG_NAMED_BIT */, lowPriorityCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_priorityCall /* IMPORTED_LONG_NAMED_BIT */, priorityCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_highPriorityCall /* IMPORTED_LONG_NAMED_BIT */, highPriorityCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_maintainanceCall /* IMPORTED_LONG_NAMED_BIT */, maintainanceCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_directAgent /* IMPORTED_LONG_NAMED_BIT */, directAgent /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_assistCall /* IMPORTED_LONG_NAMED_BIT */, assistCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_voiceUnitCall /* IMPORTED_LONG_NAMED_BIT */, voiceUnitCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_privateCall /* IMPORTED_LONG_NAMED_BIT */, privateCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_personalCall /* IMPORTED_LONG_NAMED_BIT */, personalCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_sensitiveCall /* IMPORTED_LONG_NAMED_BIT */, sensitiveCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_confidentialCall /* IMPORTED_LONG_NAMED_BIT */, confidentialCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_encryptedCall /* IMPORTED_LONG_NAMED_BIT */, encryptedCall /* IMPORTED_SHORT_NAMED_BIT */, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
-// export { CallCharacteristics, CallCharacteristics_acdCall /* IMPORTED_LONG_NAMED_BIT */, acdCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_lowPriorityCall /* IMPORTED_LONG_NAMED_BIT */, lowPriorityCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_priorityCall /* IMPORTED_LONG_NAMED_BIT */, priorityCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_highPriorityCall /* IMPORTED_LONG_NAMED_BIT */, highPriorityCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_maintainanceCall /* IMPORTED_LONG_NAMED_BIT */, maintainanceCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_directAgent /* IMPORTED_LONG_NAMED_BIT */, directAgent /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_assistCall /* IMPORTED_LONG_NAMED_BIT */, assistCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_voiceUnitCall /* IMPORTED_LONG_NAMED_BIT */, voiceUnitCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_privateCall /* IMPORTED_LONG_NAMED_BIT */, privateCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_personalCall /* IMPORTED_LONG_NAMED_BIT */, personalCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_sensitiveCall /* IMPORTED_LONG_NAMED_BIT */, sensitiveCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_confidentialCall /* IMPORTED_LONG_NAMED_BIT */, confidentialCall /* IMPORTED_SHORT_NAMED_BIT */, CallCharacteristics_encryptedCall /* IMPORTED_LONG_NAMED_BIT */, encryptedCall /* IMPORTED_SHORT_NAMED_BIT */, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+
+import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
-// export { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
+
 import { ChargedDevice, _decode_ChargedDevice, _encode_ChargedDevice } from "../CSTA-call-detail-record/ChargedDevice.ta.mjs";
-// export { ChargedDevice, _decode_ChargedDevice, _encode_ChargedDevice } from "../CSTA-call-detail-record/ChargedDevice.ta.mjs";
+
 import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
-// export { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+
 import { NodeNumber, _decode_NodeNumber, _encode_NodeNumber } from "../CSTA-call-detail-record/NodeNumber.ta.mjs";
-// export { NodeNumber, _decode_NodeNumber, _encode_NodeNumber } from "../CSTA-call-detail-record/NodeNumber.ta.mjs";
-import { BillingID, _enum_for_BillingID, BillingID_normalCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, normalCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_reverseCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, reverseCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_creditCardCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, creditCardCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_callForwarding /* IMPORTED_LONG_ENUMERATION_ITEM */, BillingID_callDeflection /* IMPORTED_LONG_ENUMERATION_ITEM */, callDeflection /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_callTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, callTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_BillingID, _encode_BillingID } from "../CSTA-call-detail-record/BillingID.ta.mjs";
-// export { BillingID, _enum_for_BillingID, BillingID_normalCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, normalCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_reverseCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, reverseCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_creditCardCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, creditCardCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_callForwarding /* IMPORTED_LONG_ENUMERATION_ITEM */, BillingID_callDeflection /* IMPORTED_LONG_ENUMERATION_ITEM */, callDeflection /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_callTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, callTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, BillingID_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_BillingID, _encode_BillingID } from "../CSTA-call-detail-record/BillingID.ta.mjs";
+
+import {
+    BillingID,
+    _enum_for_BillingID,
+    _decode_BillingID,
+    _encode_BillingID
+} from "../CSTA-call-detail-record/BillingID.ta.mjs";
+
 import { ChargingInfo, _decode_ChargingInfo, _encode_ChargingInfo } from "../CSTA-charge-info/ChargingInfo.ta.mjs";
-// export { ChargingInfo, _decode_ChargingInfo, _encode_ChargingInfo } from "../CSTA-charge-info/ChargingInfo.ta.mjs";
-import { SupplServiceInfo, SupplServiceInfo_normalCall /* IMPORTED_LONG_NAMED_BIT */, normalCall /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_consultationCall /* IMPORTED_LONG_NAMED_BIT */, consultationCall /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_transferCall /* IMPORTED_LONG_NAMED_BIT */, transferCall /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_callCompletion /* IMPORTED_LONG_NAMED_BIT */, callCompletion /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_callForwarding /* IMPORTED_LONG_NAMED_BIT */, SupplServiceInfo_callDiversion /* IMPORTED_LONG_NAMED_BIT */, callDiversion /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_conferencing /* IMPORTED_LONG_NAMED_BIT */, conferencing /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_intrusion /* IMPORTED_LONG_NAMED_BIT */, intrusion /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_userUserInfo /* IMPORTED_LONG_NAMED_BIT */, userUserInfo /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_other /* IMPORTED_LONG_NAMED_BIT */, _decode_SupplServiceInfo, _encode_SupplServiceInfo } from "../CSTA-call-detail-record/SupplServiceInfo.ta.mjs";
-// export { SupplServiceInfo, SupplServiceInfo_normalCall /* IMPORTED_LONG_NAMED_BIT */, normalCall /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_consultationCall /* IMPORTED_LONG_NAMED_BIT */, consultationCall /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_transferCall /* IMPORTED_LONG_NAMED_BIT */, transferCall /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_callCompletion /* IMPORTED_LONG_NAMED_BIT */, callCompletion /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_callForwarding /* IMPORTED_LONG_NAMED_BIT */, SupplServiceInfo_callDiversion /* IMPORTED_LONG_NAMED_BIT */, callDiversion /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_conferencing /* IMPORTED_LONG_NAMED_BIT */, conferencing /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_intrusion /* IMPORTED_LONG_NAMED_BIT */, intrusion /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_userUserInfo /* IMPORTED_LONG_NAMED_BIT */, userUserInfo /* IMPORTED_SHORT_NAMED_BIT */, SupplServiceInfo_other /* IMPORTED_LONG_NAMED_BIT */, _decode_SupplServiceInfo, _encode_SupplServiceInfo } from "../CSTA-call-detail-record/SupplServiceInfo.ta.mjs";
-import { ReasonForTerm, _enum_for_ReasonForTerm, ReasonForTerm_normalClearing /* IMPORTED_LONG_ENUMERATION_ITEM */, normalClearing /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReasonForTerm_unsuccessfulCallAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, unsuccessfulCallAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReasonForTerm_abnormalTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReasonForTerm_callTransferred /* IMPORTED_LONG_ENUMERATION_ITEM */, callTransferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReasonForTerm_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ReasonForTerm, _encode_ReasonForTerm } from "../CSTA-call-detail-record/ReasonForTerm.ta.mjs";
-// export { ReasonForTerm, _enum_for_ReasonForTerm, ReasonForTerm_normalClearing /* IMPORTED_LONG_ENUMERATION_ITEM */, normalClearing /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReasonForTerm_unsuccessfulCallAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, unsuccessfulCallAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReasonForTerm_abnormalTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReasonForTerm_callTransferred /* IMPORTED_LONG_ENUMERATION_ITEM */, callTransferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReasonForTerm_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ReasonForTerm, _encode_ReasonForTerm } from "../CSTA-call-detail-record/ReasonForTerm.ta.mjs";
+
+import { SupplServiceInfo, _decode_SupplServiceInfo, _encode_SupplServiceInfo } from "../CSTA-call-detail-record/SupplServiceInfo.ta.mjs";
+
+import {
+    ReasonForTerm,
+    _enum_for_ReasonForTerm,
+    _decode_ReasonForTerm,
+    _encode_ReasonForTerm
+} from "../CSTA-call-detail-record/ReasonForTerm.ta.mjs";
+
 import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
-// export { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+
 import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
-// export { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
-import { DeviceCategory, _enum_for_DeviceCategory, DeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_group /* IMPORTED_LONG_ENUMERATION_ITEM */, group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_genericInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, genericInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_listenerInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_dtmfInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptQueueInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueueInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_messageInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_DeviceCategory, _encode_DeviceCategory } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
-// export { DeviceCategory, _enum_for_DeviceCategory, DeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_group /* IMPORTED_LONG_ENUMERATION_ITEM */, group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_genericInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, genericInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_listenerInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_dtmfInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptQueueInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueueInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_messageInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_DeviceCategory, _encode_DeviceCategory } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
-import { NamedDeviceTypes, _enum_for_NamedDeviceTypes, NamedDeviceTypes_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_acdGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, acdGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_button /* IMPORTED_LONG_ENUMERATION_ITEM */, button /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_buttonGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, buttonGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_conferenceBridge /* IMPORTED_LONG_ENUMERATION_ITEM */, conferenceBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_line /* IMPORTED_LONG_ENUMERATION_ITEM */, line /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_lineGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, lineGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operatorGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_parkingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, parkingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_station /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_stationGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, stationGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunk /* IMPORTED_LONG_ENUMERATION_ITEM */, trunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunkGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, trunkGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_other /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_otherGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, otherGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NamedDeviceTypes, _encode_NamedDeviceTypes } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
-// export { NamedDeviceTypes, _enum_for_NamedDeviceTypes, NamedDeviceTypes_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_acdGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, acdGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_button /* IMPORTED_LONG_ENUMERATION_ITEM */, button /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_buttonGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, buttonGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_conferenceBridge /* IMPORTED_LONG_ENUMERATION_ITEM */, conferenceBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_line /* IMPORTED_LONG_ENUMERATION_ITEM */, line /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_lineGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, lineGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operatorGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_parkingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, parkingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_station /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_stationGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, stationGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunk /* IMPORTED_LONG_ENUMERATION_ITEM */, trunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunkGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, trunkGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_other /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_otherGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, otherGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NamedDeviceTypes, _encode_NamedDeviceTypes } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
+
+import {
+    DeviceCategory,
+    _enum_for_DeviceCategory,
+    _decode_DeviceCategory,
+    _encode_DeviceCategory
+} from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
+
+import {
+    NamedDeviceTypes,
+    _enum_for_NamedDeviceTypes,
+    _decode_NamedDeviceTypes,
+    _encode_NamedDeviceTypes
+} from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
+
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
+
 
 
 /**
@@ -383,35 +347,35 @@ class CDRInformationItem {
  */
 export
 const _root_component_type_list_1_spec_for_CDRInformationItem: $.ComponentSpec[] = [
-    new $.ComponentSpec("recordNumber", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("recordCreationTime", false, $.hasTag(_TagClass.universal, 24), undefined, undefined),
-    new $.ComponentSpec("callingDevice", true, $.hasTag(_TagClass.application, 1), undefined, undefined),
-    new $.ComponentSpec("calledDevice", true, $.hasTag(_TagClass.application, 2), undefined, undefined),
-    new $.ComponentSpec("associatedCallingDevice", true, $.hasTag(_TagClass.application, 5), undefined, undefined),
-    new $.ComponentSpec("associatedCalledDevice", true, $.hasTag(_TagClass.application, 6), undefined, undefined),
-    new $.ComponentSpec("networkCallingDevice", true, $.hasTag(_TagClass.application, 7), undefined, undefined),
-    new $.ComponentSpec("networkCalledDevice", true, $.hasTag(_TagClass.application, 8), undefined, undefined),
-    new $.ComponentSpec("callCharacteristics", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("chargedDevice", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("recordedCall", true, $.hasTag(_TagClass.application, 11), undefined, undefined),
-    new $.ComponentSpec("nodeNumber", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("tariffTable", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("connectionStart", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("connectionEnd", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("connectionDuration", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("accessCode", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("carrier", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("selectedRoute", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("billingID", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("chargingInfo", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("supplServiceInfo", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("reasonForTerm", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("authCode", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("accountInfo", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("deviceCategory", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("namedDeviceTypes", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("operatorDevice", true, $.hasTag(_TagClass.context, 19), undefined, undefined)
+    new $.ComponentSpec("recordNumber", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("recordCreationTime", false, $.hasTag(_TagClass.universal, 24)),
+    new $.ComponentSpec("callingDevice", true, $.hasTag(_TagClass.application, 1)),
+    new $.ComponentSpec("calledDevice", true, $.hasTag(_TagClass.application, 2)),
+    new $.ComponentSpec("associatedCallingDevice", true, $.hasTag(_TagClass.application, 5)),
+    new $.ComponentSpec("associatedCalledDevice", true, $.hasTag(_TagClass.application, 6)),
+    new $.ComponentSpec("networkCallingDevice", true, $.hasTag(_TagClass.application, 7)),
+    new $.ComponentSpec("networkCalledDevice", true, $.hasTag(_TagClass.application, 8)),
+    new $.ComponentSpec("callCharacteristics", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("chargedDevice", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("recordedCall", true, $.hasTag(_TagClass.application, 11)),
+    new $.ComponentSpec("nodeNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("tariffTable", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("connectionStart", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("connectionEnd", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("connectionDuration", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("accessCode", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("carrier", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("selectedRoute", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("billingID", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("chargingInfo", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("supplServiceInfo", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("reasonForTerm", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("authCode", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("accountInfo", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("deviceCategory", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("namedDeviceTypes", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("operatorDevice", true, $.hasTag(_TagClass.context, 19))
 ];
 
 /**

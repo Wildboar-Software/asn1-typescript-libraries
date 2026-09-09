@@ -1,83 +1,42 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1ConstructionError as _ConstructionError
+} from "@wildboar/asn1";
 import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
-// export { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
-import { AuditoryApparatusList_Item_auditoryApparatusType, _enum_for_AuditoryApparatusList_Item_auditoryApparatusType, AuditoryApparatusList_Item_auditoryApparatusType_speakerphone /* IMPORTED_LONG_ENUMERATION_ITEM */, speakerphone /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuditoryApparatusList_Item_auditoryApparatusType_handset /* IMPORTED_LONG_ENUMERATION_ITEM */, handset /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuditoryApparatusList_Item_auditoryApparatusType_headset /* IMPORTED_LONG_ENUMERATION_ITEM */, headset /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuditoryApparatusList_Item_auditoryApparatusType_speakerOnlyPhone /* IMPORTED_LONG_ENUMERATION_ITEM */, speakerOnlyPhone /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuditoryApparatusList_Item_auditoryApparatusType_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AuditoryApparatusList_Item_auditoryApparatusType, _encode_AuditoryApparatusList_Item_auditoryApparatusType } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-auditoryApparatusType.ta.mjs";
-// export { AuditoryApparatusList_Item_auditoryApparatusType, _enum_for_AuditoryApparatusList_Item_auditoryApparatusType, AuditoryApparatusList_Item_auditoryApparatusType_speakerphone /* IMPORTED_LONG_ENUMERATION_ITEM */, speakerphone /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuditoryApparatusList_Item_auditoryApparatusType_handset /* IMPORTED_LONG_ENUMERATION_ITEM */, handset /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuditoryApparatusList_Item_auditoryApparatusType_headset /* IMPORTED_LONG_ENUMERATION_ITEM */, headset /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuditoryApparatusList_Item_auditoryApparatusType_speakerOnlyPhone /* IMPORTED_LONG_ENUMERATION_ITEM */, speakerOnlyPhone /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuditoryApparatusList_Item_auditoryApparatusType_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AuditoryApparatusList_Item_auditoryApparatusType, _encode_AuditoryApparatusList_Item_auditoryApparatusType } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-auditoryApparatusType.ta.mjs";
-import { AuditoryApparatusList_Item_speaker, AuditoryApparatusList_Item_speaker_present /* IMPORTED_LONG_NAMED_BIT */, AuditoryApparatusList_Item_speaker_volumeSettable /* IMPORTED_LONG_NAMED_BIT */, volumeSettable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_speaker_volumeReadable /* IMPORTED_LONG_NAMED_BIT */, volumeReadable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_speaker_muteSettable /* IMPORTED_LONG_NAMED_BIT */, AuditoryApparatusList_Item_speaker_muteReadable /* IMPORTED_LONG_NAMED_BIT */, _decode_AuditoryApparatusList_Item_speaker, _encode_AuditoryApparatusList_Item_speaker } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-speaker.ta.mjs";
-// export { AuditoryApparatusList_Item_speaker, AuditoryApparatusList_Item_speaker_present /* IMPORTED_LONG_NAMED_BIT */, AuditoryApparatusList_Item_speaker_volumeSettable /* IMPORTED_LONG_NAMED_BIT */, volumeSettable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_speaker_volumeReadable /* IMPORTED_LONG_NAMED_BIT */, volumeReadable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_speaker_muteSettable /* IMPORTED_LONG_NAMED_BIT */, AuditoryApparatusList_Item_speaker_muteReadable /* IMPORTED_LONG_NAMED_BIT */, _decode_AuditoryApparatusList_Item_speaker, _encode_AuditoryApparatusList_Item_speaker } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-speaker.ta.mjs";
-import { AuditoryApparatusList_Item_microphone, AuditoryApparatusList_Item_microphone_present /* IMPORTED_LONG_NAMED_BIT */, AuditoryApparatusList_Item_microphone_gainSettable /* IMPORTED_LONG_NAMED_BIT */, gainSettable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_microphone_gainReadable /* IMPORTED_LONG_NAMED_BIT */, gainReadable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_microphone_muteSettable /* IMPORTED_LONG_NAMED_BIT */, AuditoryApparatusList_Item_microphone_muteReadable /* IMPORTED_LONG_NAMED_BIT */, _decode_AuditoryApparatusList_Item_microphone, _encode_AuditoryApparatusList_Item_microphone } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-microphone.ta.mjs";
-// export { AuditoryApparatusList_Item_microphone, AuditoryApparatusList_Item_microphone_present /* IMPORTED_LONG_NAMED_BIT */, AuditoryApparatusList_Item_microphone_gainSettable /* IMPORTED_LONG_NAMED_BIT */, gainSettable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_microphone_gainReadable /* IMPORTED_LONG_NAMED_BIT */, gainReadable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_microphone_muteSettable /* IMPORTED_LONG_NAMED_BIT */, AuditoryApparatusList_Item_microphone_muteReadable /* IMPORTED_LONG_NAMED_BIT */, _decode_AuditoryApparatusList_Item_microphone, _encode_AuditoryApparatusList_Item_microphone } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-microphone.ta.mjs";
-import { AuditoryApparatusList_Item_hookswitch, AuditoryApparatusList_Item_hookswitch_hookswitchSettable /* IMPORTED_LONG_NAMED_BIT */, hookswitchSettable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_hookswitch_hookswitchOnHook /* IMPORTED_LONG_NAMED_BIT */, hookswitchOnHook /* IMPORTED_SHORT_NAMED_BIT */, _decode_AuditoryApparatusList_Item_hookswitch, _encode_AuditoryApparatusList_Item_hookswitch } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-hookswitch.ta.mjs";
-// export { AuditoryApparatusList_Item_hookswitch, AuditoryApparatusList_Item_hookswitch_hookswitchSettable /* IMPORTED_LONG_NAMED_BIT */, hookswitchSettable /* IMPORTED_SHORT_NAMED_BIT */, AuditoryApparatusList_Item_hookswitch_hookswitchOnHook /* IMPORTED_LONG_NAMED_BIT */, hookswitchOnHook /* IMPORTED_SHORT_NAMED_BIT */, _decode_AuditoryApparatusList_Item_hookswitch, _encode_AuditoryApparatusList_Item_hookswitch } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-hookswitch.ta.mjs";
+
+import {
+    AuditoryApparatusList_Item_auditoryApparatusType,
+    _enum_for_AuditoryApparatusList_Item_auditoryApparatusType,
+    _decode_AuditoryApparatusList_Item_auditoryApparatusType,
+    _encode_AuditoryApparatusList_Item_auditoryApparatusType
+} from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-auditoryApparatusType.ta.mjs";
+
+import {
+    AuditoryApparatusList_Item_speaker,
+    _decode_AuditoryApparatusList_Item_speaker,
+    _encode_AuditoryApparatusList_Item_speaker
+} from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-speaker.ta.mjs";
+
+import {
+    AuditoryApparatusList_Item_microphone,
+    _decode_AuditoryApparatusList_Item_microphone,
+    _encode_AuditoryApparatusList_Item_microphone
+} from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-microphone.ta.mjs";
+
+import {
+    AuditoryApparatusList_Item_hookswitch,
+    _decode_AuditoryApparatusList_Item_hookswitch,
+    _encode_AuditoryApparatusList_Item_hookswitch
+} from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-hookswitch.ta.mjs";
+
 import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CSTA-physical-device-feature/HookswitchID.ta.mjs";
-// export { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CSTA-physical-device-feature/HookswitchID.ta.mjs";
+
 
 
 /**
@@ -87,7 +46,14 @@ import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CST
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AuditoryApparatusList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AuditoryApparatusList-Item ::= SEQUENCE {
+ *     auditoryApparatus [UNIVERSAL 4] AuditoryApparatusID,
+ *     auditoryApparatusType [UNIVERSAL 10] AuditoryApparatusList_Item_auditoryApparatusType,
+ *     speaker [UNIVERSAL 3] AuditoryApparatusList_Item_speaker,
+ *     microphone [UNIVERSAL 3] AuditoryApparatusList_Item_microphone,
+ *     hookswitch [UNIVERSAL 3] AuditoryApparatusList_Item_hookswitch,
+ *     hookswitchID [UNIVERSAL 4] HookswitchID
+ * }
  * ```
  * 
  * @class
@@ -168,12 +134,12 @@ class AuditoryApparatusList_Item {
  */
 export
 const _root_component_type_list_1_spec_for_AuditoryApparatusList_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("auditoryApparatus", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("auditoryApparatusType", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("speaker", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("microphone", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("hookswitch", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("hookswitchID", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("auditoryApparatus", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("auditoryApparatusType", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("speaker", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("microphone", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("hookswitch", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("hookswitchID", false, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**

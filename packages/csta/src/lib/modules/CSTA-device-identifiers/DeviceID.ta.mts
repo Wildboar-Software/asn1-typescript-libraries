@@ -1,77 +1,20 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { DeviceID_deviceIdentifier, _decode_DeviceID_deviceIdentifier, _encode_DeviceID_deviceIdentifier } from "../CSTA-device-identifiers/DeviceID-deviceIdentifier.ta.mjs";
-// export { DeviceID_deviceIdentifier, _decode_DeviceID_deviceIdentifier, _encode_DeviceID_deviceIdentifier } from "../CSTA-device-identifiers/DeviceID-deviceIdentifier.ta.mjs";
+
 import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../CSTA-device-identifiers/NumberDigits.ta.mjs";
-// export { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../CSTA-device-identifiers/NumberDigits.ta.mjs";
+
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
-// export { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
+
 
 
 /**
@@ -155,10 +98,10 @@ class DeviceID {
  */
 export
 const _root_component_type_list_1_spec_for_DeviceID: $.ComponentSpec[] = [
-    new $.ComponentSpec("deviceIdentifier", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("privateNumber", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("privateName", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("deviceIdentifier", false, $.hasAnyTag),
+    new $.ComponentSpec("privateNumber", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("privateName", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 0))
 ];
 
 /**

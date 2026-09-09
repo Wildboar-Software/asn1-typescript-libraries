@@ -1,79 +1,21 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { SnapshotCall, SnapshotCall_privateData /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_locaConnectionStateInAck /* IMPORTED_LONG_NAMED_BIT */, locaConnectionStateInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_mediaServiceInfoListInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_mediaServiceVersionInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_mediaServiceInstanceInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_connectionInformation /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_mediaCallCharacteristicsInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_callCharacteristicsInAck /* IMPORTED_LONG_NAMED_BIT */, callCharacteristicsInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_callingDeviceInAck /* IMPORTED_LONG_NAMED_BIT */, callingDeviceInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_calledDeviceInAck /* IMPORTED_LONG_NAMED_BIT */, calledDeviceInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_subjectOfCallInAck /* IMPORTED_LONG_NAMED_BIT */, subjectOfCallInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_messageInfoInAck /* IMPORTED_LONG_NAMED_BIT */, messageInfoInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_languagePreferencesInAck /* IMPORTED_LONG_NAMED_BIT */, languagePreferencesInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_deviceHistoryInAck /* IMPORTED_LONG_NAMED_BIT */, deviceHistoryInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_callIDOnly /* IMPORTED_LONG_NAMED_BIT */, callIDOnly /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_reportsWithSnapsCallData /* IMPORTED_LONG_NAMED_BIT */, reportsWithSnapsCallData /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_locationInfoList /* IMPORTED_LONG_NAMED_BIT */, _decode_SnapshotCall, _encode_SnapshotCall } from "../CSTA-capability-exchange/SnapshotCall.ta.mjs";
-// export { SnapshotCall, SnapshotCall_privateData /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_locaConnectionStateInAck /* IMPORTED_LONG_NAMED_BIT */, locaConnectionStateInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_mediaServiceInfoListInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_mediaServiceVersionInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_mediaServiceInstanceInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_connectionInformation /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_mediaCallCharacteristicsInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_callCharacteristicsInAck /* IMPORTED_LONG_NAMED_BIT */, callCharacteristicsInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_callingDeviceInAck /* IMPORTED_LONG_NAMED_BIT */, callingDeviceInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_calledDeviceInAck /* IMPORTED_LONG_NAMED_BIT */, calledDeviceInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_subjectOfCallInAck /* IMPORTED_LONG_NAMED_BIT */, subjectOfCallInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_messageInfoInAck /* IMPORTED_LONG_NAMED_BIT */, messageInfoInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_languagePreferencesInAck /* IMPORTED_LONG_NAMED_BIT */, languagePreferencesInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_deviceHistoryInAck /* IMPORTED_LONG_NAMED_BIT */, deviceHistoryInAck /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotCall_callIDOnly /* IMPORTED_LONG_NAMED_BIT */, callIDOnly /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_reportsWithSnapsCallData /* IMPORTED_LONG_NAMED_BIT */, reportsWithSnapsCallData /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCall_locationInfoList /* IMPORTED_LONG_NAMED_BIT */, _decode_SnapshotCall, _encode_SnapshotCall } from "../CSTA-capability-exchange/SnapshotCall.ta.mjs";
-import { SnapshotDevice, SnapshotDevice_privateData /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_localCallStateCompoundCallState /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_localCallStateSimpleCallState /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_localCallStateUnknown /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaServiceInfoListInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaServiceVersionInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaServiceInstanceInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_connectionInformation /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaCallCharacteristicsInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_reportsWithSnapsDeviceData /* IMPORTED_LONG_NAMED_BIT */, reportsWithSnapsDeviceData /* IMPORTED_SHORT_NAMED_BIT */, _decode_SnapshotDevice, _encode_SnapshotDevice } from "../CSTA-capability-exchange/SnapshotDevice.ta.mjs";
-// export { SnapshotDevice, SnapshotDevice_privateData /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_localCallStateCompoundCallState /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_localCallStateSimpleCallState /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_localCallStateUnknown /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaServiceInfoListInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaServiceVersionInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaServiceInstanceInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_connectionInformation /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_mediaCallCharacteristicsInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SnapshotDevice_reportsWithSnapsDeviceData /* IMPORTED_LONG_NAMED_BIT */, reportsWithSnapsDeviceData /* IMPORTED_SHORT_NAMED_BIT */, _decode_SnapshotDevice, _encode_SnapshotDevice } from "../CSTA-capability-exchange/SnapshotDevice.ta.mjs";
-import { SnapshotCallData, SnapshotCallData_segmentID /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_localConnectionState /* IMPORTED_LONG_NAMED_BIT */, localConnectionState /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCallData_mediaServiceInformationList /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_mediaServiceVersion /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_mediaServiceInstance /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_connectionInformation /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_privateData /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_locationInfoList /* IMPORTED_LONG_NAMED_BIT */, _decode_SnapshotCallData, _encode_SnapshotCallData } from "../CSTA-capability-exchange/SnapshotCallData.ta.mjs";
-// export { SnapshotCallData, SnapshotCallData_segmentID /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_localConnectionState /* IMPORTED_LONG_NAMED_BIT */, localConnectionState /* IMPORTED_SHORT_NAMED_BIT */, SnapshotCallData_mediaServiceInformationList /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_mediaServiceVersion /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_mediaServiceInstance /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_connectionInformation /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_privateData /* IMPORTED_LONG_NAMED_BIT */, SnapshotCallData_locationInfoList /* IMPORTED_LONG_NAMED_BIT */, _decode_SnapshotCallData, _encode_SnapshotCallData } from "../CSTA-capability-exchange/SnapshotCallData.ta.mjs";
-import { SnapshotDeviceData, SnapshotDeviceData_segmentID /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_localCallStateCompoundCallState /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_localCallStateSimpleCallState /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_localCallStateUnknown /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaServiceInformationList /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaServiceVersion /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaServiceInstance /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_connectionInformation /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaCallCharacteristics /* IMPORTED_LONG_NAMED_BIT */, mediaCallCharacteristics /* IMPORTED_SHORT_NAMED_BIT */, SnapshotDeviceData_endpointDeviceID /* IMPORTED_LONG_NAMED_BIT */, endpointDeviceID /* IMPORTED_SHORT_NAMED_BIT */, SnapshotDeviceData_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SnapshotDeviceData, _encode_SnapshotDeviceData } from "../CSTA-capability-exchange/SnapshotDeviceData.ta.mjs";
-// export { SnapshotDeviceData, SnapshotDeviceData_segmentID /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_localCallStateCompoundCallState /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_localCallStateSimpleCallState /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_localCallStateUnknown /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaServiceInformationList /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaServiceVersion /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaServiceInstance /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaStreamID /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_connectionInformation /* IMPORTED_LONG_NAMED_BIT */, SnapshotDeviceData_mediaCallCharacteristics /* IMPORTED_LONG_NAMED_BIT */, mediaCallCharacteristics /* IMPORTED_SHORT_NAMED_BIT */, SnapshotDeviceData_endpointDeviceID /* IMPORTED_LONG_NAMED_BIT */, endpointDeviceID /* IMPORTED_SHORT_NAMED_BIT */, SnapshotDeviceData_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SnapshotDeviceData, _encode_SnapshotDeviceData } from "../CSTA-capability-exchange/SnapshotDeviceData.ta.mjs";
+    ASN1ConstructionError as _ConstructionError
+} from "@wildboar/asn1";
+import { SnapshotCall, _decode_SnapshotCall, _encode_SnapshotCall } from "../CSTA-capability-exchange/SnapshotCall.ta.mjs";
+
+import { SnapshotDevice, _decode_SnapshotDevice, _encode_SnapshotDevice } from "../CSTA-capability-exchange/SnapshotDevice.ta.mjs";
+
+import { SnapshotCallData, _decode_SnapshotCallData, _encode_SnapshotCallData } from "../CSTA-capability-exchange/SnapshotCallData.ta.mjs";
+
+import { SnapshotDeviceData, _decode_SnapshotDeviceData, _encode_SnapshotDeviceData } from "../CSTA-capability-exchange/SnapshotDeviceData.ta.mjs";
+
 
 
 /**
@@ -150,10 +92,10 @@ class SnapshotServList {
  */
 export
 const _root_component_type_list_1_spec_for_SnapshotServList: $.ComponentSpec[] = [
-    new $.ComponentSpec("snapshotCall", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("snapshotDevice", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("snapshotCallData", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("snapshotDeviceData", false, $.hasTag(_TagClass.context, 3), undefined, undefined)
+    new $.ComponentSpec("snapshotCall", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("snapshotDevice", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("snapshotCallData", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("snapshotDeviceData", false, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

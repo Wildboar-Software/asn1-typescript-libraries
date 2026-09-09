@@ -1,81 +1,36 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
-// export { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
-import { ForwardingType, _enum_for_ForwardingType, ForwardingType_forwardImmediate /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardImmediate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardNoAns /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardNoAns /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardDND /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardDND /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardBusyInt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardBusyInt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardBusyExt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardBusyExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardNoAnsInt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardNoAnsInt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardNoAnsExt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardNoAnsExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardImmInt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardImmInt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardImmExt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardImmExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardDNDInt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardDNDInt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardDNDExt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardDNDExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ForwardingType, _encode_ForwardingType } from "../CSTA-device-feature-types/ForwardingType.ta.mjs";
-// export { ForwardingType, _enum_for_ForwardingType, ForwardingType_forwardImmediate /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardImmediate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardNoAns /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardNoAns /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardDND /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardDND /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardBusyInt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardBusyInt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardBusyExt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardBusyExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardNoAnsInt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardNoAnsInt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardNoAnsExt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardNoAnsExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardImmInt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardImmInt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardImmExt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardImmExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardDNDInt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardDNDInt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingType_forwardDNDExt /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardDNDExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ForwardingType, _encode_ForwardingType } from "../CSTA-device-feature-types/ForwardingType.ta.mjs";
+
+import {
+    ForwardingType,
+    _enum_for_ForwardingType,
+    _decode_ForwardingType,
+    _encode_ForwardingType
+} from "../CSTA-device-feature-types/ForwardingType.ta.mjs";
+
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-import { ForwardDefault, _enum_for_ForwardDefault, ForwardDefault_forwardingTypeAndForwardDN /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardingTypeAndForwardDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardDefault_forwardingType /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardingType /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardDefault_forwardDN /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ForwardDefault, _encode_ForwardDefault } from "../CSTA-device-feature-types/ForwardDefault.ta.mjs";
-// export { ForwardDefault, _enum_for_ForwardDefault, ForwardDefault_forwardingTypeAndForwardDN /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardingTypeAndForwardDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardDefault_forwardingType /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardingType /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardDefault_forwardDN /* IMPORTED_LONG_ENUMERATION_ITEM */, forwardDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ForwardDefault, _encode_ForwardDefault } from "../CSTA-device-feature-types/ForwardDefault.ta.mjs";
+
+import {
+    ForwardDefault,
+    _enum_for_ForwardDefault,
+    forwardingType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_ForwardDefault,
+    _encode_ForwardDefault
+} from "../CSTA-device-feature-types/ForwardDefault.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -192,14 +147,14 @@ class ForwardingEvent {
  */
 export
 const _root_component_type_list_1_spec_for_ForwardingEvent: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3), undefined, undefined),
-    new $.ComponentSpec("forwardingType", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("forwardStatus", false, $.hasTag(_TagClass.universal, 1), undefined, undefined),
-    new $.ComponentSpec("forwardTo", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("forwardDefault", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("ringCount", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("ringDuration", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3)),
+    new $.ComponentSpec("forwardingType", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("forwardStatus", false, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("forwardTo", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("forwardDefault", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("ringCount", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("ringDuration", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

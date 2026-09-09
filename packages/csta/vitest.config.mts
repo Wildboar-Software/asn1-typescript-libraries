@@ -4,7 +4,7 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/csta',
   test: {
-    name: '@wildboar/csta',
+    name: 'csta',
     watch: false,
     globals: true,
     environment: 'node',
@@ -13,6 +13,6 @@ export default defineConfig(() => ({
     coverage: {
       reportsDirectory: './test-output/vitest/coverage',
       provider: 'v8' as const,
-    }
+    },
   },
 }));

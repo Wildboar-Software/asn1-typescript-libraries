@@ -1,107 +1,49 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { BookmarkReached, BookmarkReached_resource /* IMPORTED_LONG_NAMED_BIT */, BookmarkReached_currentPosition /* IMPORTED_LONG_NAMED_BIT */, BookmarkReached_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, BookmarkReached_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_BookmarkReached, _encode_BookmarkReached } from "../CSTA-capability-exchange/BookmarkReached.ta.mjs";
-// export { BookmarkReached, BookmarkReached_resource /* IMPORTED_LONG_NAMED_BIT */, BookmarkReached_currentPosition /* IMPORTED_LONG_NAMED_BIT */, BookmarkReached_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, BookmarkReached_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_BookmarkReached, _encode_BookmarkReached } from "../CSTA-capability-exchange/BookmarkReached.ta.mjs";
-import { Completed, Completed_resource /* IMPORTED_LONG_NAMED_BIT */, Completed_cause /* IMPORTED_LONG_NAMED_BIT */, Completed_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Completed_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Completed, _encode_Completed } from "../CSTA-capability-exchange/Completed.ta.mjs";
-// export { Completed, Completed_resource /* IMPORTED_LONG_NAMED_BIT */, Completed_cause /* IMPORTED_LONG_NAMED_BIT */, Completed_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Completed_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Completed, _encode_Completed } from "../CSTA-capability-exchange/Completed.ta.mjs";
-import { DtmfDetected, DtmfDetected_resource /* IMPORTED_LONG_NAMED_BIT */, DtmfDetected_cause /* IMPORTED_LONG_NAMED_BIT */, DtmfDetected_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, DtmfDetected_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_DtmfDetected, _encode_DtmfDetected } from "../CSTA-capability-exchange/DtmfDetected.ta.mjs";
-// export { DtmfDetected, DtmfDetected_resource /* IMPORTED_LONG_NAMED_BIT */, DtmfDetected_cause /* IMPORTED_LONG_NAMED_BIT */, DtmfDetected_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, DtmfDetected_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_DtmfDetected, _encode_DtmfDetected } from "../CSTA-capability-exchange/DtmfDetected.ta.mjs";
-import { Emptied, Emptied_resource /* IMPORTED_LONG_NAMED_BIT */, Emptied_cause /* IMPORTED_LONG_NAMED_BIT */, Emptied_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Emptied_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Emptied, _encode_Emptied } from "../CSTA-capability-exchange/Emptied.ta.mjs";
-// export { Emptied, Emptied_resource /* IMPORTED_LONG_NAMED_BIT */, Emptied_cause /* IMPORTED_LONG_NAMED_BIT */, Emptied_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Emptied_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Emptied, _encode_Emptied } from "../CSTA-capability-exchange/Emptied.ta.mjs";
-import { InterruptionDetected, InterruptionDetected_resource /* IMPORTED_LONG_NAMED_BIT */, InterruptionDetected_cause /* IMPORTED_LONG_NAMED_BIT */, InterruptionDetected_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, InterruptionDetected_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_InterruptionDetected, _encode_InterruptionDetected } from "../CSTA-capability-exchange/InterruptionDetected.ta.mjs";
-// export { InterruptionDetected, InterruptionDetected_resource /* IMPORTED_LONG_NAMED_BIT */, InterruptionDetected_cause /* IMPORTED_LONG_NAMED_BIT */, InterruptionDetected_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, InterruptionDetected_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_InterruptionDetected, _encode_InterruptionDetected } from "../CSTA-capability-exchange/InterruptionDetected.ta.mjs";
-import { NotRecognized, NotRecognized_resource /* IMPORTED_LONG_NAMED_BIT */, NotRecognized_result /* IMPORTED_LONG_NAMED_BIT */, result /* IMPORTED_SHORT_NAMED_BIT */, NotRecognized_cause /* IMPORTED_LONG_NAMED_BIT */, NotRecognized_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, NotRecognized_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_NotRecognized, _encode_NotRecognized } from "../CSTA-capability-exchange/NotRecognized.ta.mjs";
-// export { NotRecognized, NotRecognized_resource /* IMPORTED_LONG_NAMED_BIT */, NotRecognized_result /* IMPORTED_LONG_NAMED_BIT */, result /* IMPORTED_SHORT_NAMED_BIT */, NotRecognized_cause /* IMPORTED_LONG_NAMED_BIT */, NotRecognized_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, NotRecognized_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_NotRecognized, _encode_NotRecognized } from "../CSTA-capability-exchange/NotRecognized.ta.mjs";
-import { Play, Play_length /* IMPORTED_LONG_NAMED_BIT */, Play_currentPosition /* IMPORTED_LONG_NAMED_BIT */, Play_speed /* IMPORTED_LONG_NAMED_BIT */, Play_cause /* IMPORTED_LONG_NAMED_BIT */, Play_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Play_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Play, _encode_Play } from "../CSTA-capability-exchange/Play.ta.mjs";
-// export { Play, Play_length /* IMPORTED_LONG_NAMED_BIT */, Play_currentPosition /* IMPORTED_LONG_NAMED_BIT */, Play_speed /* IMPORTED_LONG_NAMED_BIT */, Play_cause /* IMPORTED_LONG_NAMED_BIT */, Play_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Play_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Play, _encode_Play } from "../CSTA-capability-exchange/Play.ta.mjs";
-import { Record, Record_length /* IMPORTED_LONG_NAMED_BIT */, Record_currentPosition /* IMPORTED_LONG_NAMED_BIT */, Record_speed /* IMPORTED_LONG_NAMED_BIT */, Record_cause /* IMPORTED_LONG_NAMED_BIT */, Record_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Record_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Record, _encode_Record } from "../CSTA-capability-exchange/Record.ta.mjs";
-// export { Record, Record_length /* IMPORTED_LONG_NAMED_BIT */, Record_currentPosition /* IMPORTED_LONG_NAMED_BIT */, Record_speed /* IMPORTED_LONG_NAMED_BIT */, Record_cause /* IMPORTED_LONG_NAMED_BIT */, Record_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Record_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Record, _encode_Record } from "../CSTA-capability-exchange/Record.ta.mjs";
-import { Recognized, Recognized_resource /* IMPORTED_LONG_NAMED_BIT */, Recognized_cause /* IMPORTED_LONG_NAMED_BIT */, Recognized_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Recognized_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Recognized, _encode_Recognized } from "../CSTA-capability-exchange/Recognized.ta.mjs";
-// export { Recognized, Recognized_resource /* IMPORTED_LONG_NAMED_BIT */, Recognized_cause /* IMPORTED_LONG_NAMED_BIT */, Recognized_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Recognized_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Recognized, _encode_Recognized } from "../CSTA-capability-exchange/Recognized.ta.mjs";
-import { ReviewEvent, ReviewEvent_message /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_resource /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_length /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_currentPosition /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_cause /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-capability-exchange/ReviewEvent.ta.mjs";
-// export { ReviewEvent, ReviewEvent_message /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_resource /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_length /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_currentPosition /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_cause /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, ReviewEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-capability-exchange/ReviewEvent.ta.mjs";
-import { Started, Started_resource /* IMPORTED_LONG_NAMED_BIT */, Started_cause /* IMPORTED_LONG_NAMED_BIT */, Started_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Started_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Started, _encode_Started } from "../CSTA-capability-exchange/Started.ta.mjs";
-// export { Started, Started_resource /* IMPORTED_LONG_NAMED_BIT */, Started_cause /* IMPORTED_LONG_NAMED_BIT */, Started_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, Started_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_Started, _encode_Started } from "../CSTA-capability-exchange/Started.ta.mjs";
-import { SilenceTimeoutExpired, SilenceTimeoutExpired_resource /* IMPORTED_LONG_NAMED_BIT */, SilenceTimeoutExpired_cause /* IMPORTED_LONG_NAMED_BIT */, SilenceTimeoutExpired_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, SilenceTimeoutExpired_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SilenceTimeoutExpired, _encode_SilenceTimeoutExpired } from "../CSTA-capability-exchange/SilenceTimeoutExpired.ta.mjs";
-// export { SilenceTimeoutExpired, SilenceTimeoutExpired_resource /* IMPORTED_LONG_NAMED_BIT */, SilenceTimeoutExpired_cause /* IMPORTED_LONG_NAMED_BIT */, SilenceTimeoutExpired_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, SilenceTimeoutExpired_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SilenceTimeoutExpired, _encode_SilenceTimeoutExpired } from "../CSTA-capability-exchange/SilenceTimeoutExpired.ta.mjs";
-import { SpeechDetected, SpeechDetected_resource /* IMPORTED_LONG_NAMED_BIT */, SpeechDetected_cause /* IMPORTED_LONG_NAMED_BIT */, SpeechDetected_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, SpeechDetected_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SpeechDetected, _encode_SpeechDetected } from "../CSTA-capability-exchange/SpeechDetected.ta.mjs";
-// export { SpeechDetected, SpeechDetected_resource /* IMPORTED_LONG_NAMED_BIT */, SpeechDetected_cause /* IMPORTED_LONG_NAMED_BIT */, SpeechDetected_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, SpeechDetected_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SpeechDetected, _encode_SpeechDetected } from "../CSTA-capability-exchange/SpeechDetected.ta.mjs";
-import { StopEvent, StopEvent_message /* IMPORTED_LONG_NAMED_BIT */, StopEvent_resource /* IMPORTED_LONG_NAMED_BIT */, StopEvent_length /* IMPORTED_LONG_NAMED_BIT */, StopEvent_currentPosition /* IMPORTED_LONG_NAMED_BIT */, StopEvent_speed /* IMPORTED_LONG_NAMED_BIT */, StopEvent_cause /* IMPORTED_LONG_NAMED_BIT */, StopEvent_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, StopEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_StopEvent, _encode_StopEvent } from "../CSTA-capability-exchange/StopEvent.ta.mjs";
-// export { StopEvent, StopEvent_message /* IMPORTED_LONG_NAMED_BIT */, StopEvent_resource /* IMPORTED_LONG_NAMED_BIT */, StopEvent_length /* IMPORTED_LONG_NAMED_BIT */, StopEvent_currentPosition /* IMPORTED_LONG_NAMED_BIT */, StopEvent_speed /* IMPORTED_LONG_NAMED_BIT */, StopEvent_cause /* IMPORTED_LONG_NAMED_BIT */, StopEvent_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, StopEvent_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_StopEvent, _encode_StopEvent } from "../CSTA-capability-exchange/StopEvent.ta.mjs";
-import { SuspendPlay, SuspendPlay_message /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_resource /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_length /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_currentPosition /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_cause /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendPlay, _encode_SuspendPlay } from "../CSTA-capability-exchange/SuspendPlay.ta.mjs";
-// export { SuspendPlay, SuspendPlay_message /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_resource /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_length /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_currentPosition /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_cause /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, SuspendPlay_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendPlay, _encode_SuspendPlay } from "../CSTA-capability-exchange/SuspendPlay.ta.mjs";
-import { SuspendRecord, SuspendRecord_message /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_resource /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_length /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_currentPosition /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_cause /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendRecord, _encode_SuspendRecord } from "../CSTA-capability-exchange/SuspendRecord.ta.mjs";
-// export { SuspendRecord, SuspendRecord_message /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_resource /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_length /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_currentPosition /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_cause /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, SuspendRecord_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendRecord, _encode_SuspendRecord } from "../CSTA-capability-exchange/SuspendRecord.ta.mjs";
-import { VoiceAttribChanged, VoiceAttribChanged_message /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_resource /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_playVolumeAbs /* IMPORTED_LONG_NAMED_BIT */, playVolumeAbs /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_playVolumeInc /* IMPORTED_LONG_NAMED_BIT */, playVolumeInc /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_recordGain /* IMPORTED_LONG_NAMED_BIT */, recordGain /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_speed /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_currentPosition /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_grammars /* IMPORTED_LONG_NAMED_BIT */, grammars /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_language /* IMPORTED_LONG_NAMED_BIT */, language /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_mode /* IMPORTED_LONG_NAMED_BIT */, mode /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_retainAudio /* IMPORTED_LONG_NAMED_BIT */, retainAudio /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_silenceTimeout /* IMPORTED_LONG_NAMED_BIT */, silenceTimeout /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_maxTimeout /* IMPORTED_LONG_NAMED_BIT */, maxTimeout /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_babbleTimeout /* IMPORTED_LONG_NAMED_BIT */, babbleTimeout /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_endSilence /* IMPORTED_LONG_NAMED_BIT */, endSilence /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_rejectionThreshold /* IMPORTED_LONG_NAMED_BIT */, rejectionThreshold /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_autoInterruptable /* IMPORTED_LONG_NAMED_BIT */, autoInterruptable /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_innerXML /* IMPORTED_LONG_NAMED_BIT */, innerXML /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_interdigitTimeout /* IMPORTED_LONG_NAMED_BIT */, interdigitTimeout /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_preflush /* IMPORTED_LONG_NAMED_BIT */, preflush /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_cause /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_VoiceAttribChanged, _encode_VoiceAttribChanged } from "../CSTA-capability-exchange/VoiceAttribChanged.ta.mjs";
-// export { VoiceAttribChanged, VoiceAttribChanged_message /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_resource /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_playVolumeAbs /* IMPORTED_LONG_NAMED_BIT */, playVolumeAbs /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_playVolumeInc /* IMPORTED_LONG_NAMED_BIT */, playVolumeInc /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_recordGain /* IMPORTED_LONG_NAMED_BIT */, recordGain /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_speed /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_currentPosition /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_grammars /* IMPORTED_LONG_NAMED_BIT */, grammars /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_language /* IMPORTED_LONG_NAMED_BIT */, language /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_mode /* IMPORTED_LONG_NAMED_BIT */, mode /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_retainAudio /* IMPORTED_LONG_NAMED_BIT */, retainAudio /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_silenceTimeout /* IMPORTED_LONG_NAMED_BIT */, silenceTimeout /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_maxTimeout /* IMPORTED_LONG_NAMED_BIT */, maxTimeout /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_babbleTimeout /* IMPORTED_LONG_NAMED_BIT */, babbleTimeout /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_endSilence /* IMPORTED_LONG_NAMED_BIT */, endSilence /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_rejectionThreshold /* IMPORTED_LONG_NAMED_BIT */, rejectionThreshold /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_autoInterruptable /* IMPORTED_LONG_NAMED_BIT */, autoInterruptable /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_innerXML /* IMPORTED_LONG_NAMED_BIT */, innerXML /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_interdigitTimeout /* IMPORTED_LONG_NAMED_BIT */, interdigitTimeout /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_preflush /* IMPORTED_LONG_NAMED_BIT */, preflush /* IMPORTED_SHORT_NAMED_BIT */, VoiceAttribChanged_cause /* IMPORTED_LONG_NAMED_BIT */, VoiceAttribChanged_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_VoiceAttribChanged, _encode_VoiceAttribChanged } from "../CSTA-capability-exchange/VoiceAttribChanged.ta.mjs";
-import { VoiceErrorOccured, VoiceErrorOccured_resource /* IMPORTED_LONG_NAMED_BIT */, VoiceErrorOccured_cause /* IMPORTED_LONG_NAMED_BIT */, VoiceErrorOccured_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, VoiceErrorOccured_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured } from "../CSTA-capability-exchange/VoiceErrorOccured.ta.mjs";
-// export { VoiceErrorOccured, VoiceErrorOccured_resource /* IMPORTED_LONG_NAMED_BIT */, VoiceErrorOccured_cause /* IMPORTED_LONG_NAMED_BIT */, VoiceErrorOccured_servicesPermitted /* IMPORTED_LONG_NAMED_BIT */, VoiceErrorOccured_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured } from "../CSTA-capability-exchange/VoiceErrorOccured.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { BookmarkReached, _decode_BookmarkReached, _encode_BookmarkReached } from "../CSTA-capability-exchange/BookmarkReached.ta.mjs";
+
+import { Completed, _decode_Completed, _encode_Completed } from "../CSTA-capability-exchange/Completed.ta.mjs";
+
+import { DtmfDetected, _decode_DtmfDetected, _encode_DtmfDetected } from "../CSTA-capability-exchange/DtmfDetected.ta.mjs";
+
+import { Emptied, _decode_Emptied, _encode_Emptied } from "../CSTA-capability-exchange/Emptied.ta.mjs";
+
+import { InterruptionDetected, _decode_InterruptionDetected, _encode_InterruptionDetected } from "../CSTA-capability-exchange/InterruptionDetected.ta.mjs";
+
+import { NotRecognized, _decode_NotRecognized, _encode_NotRecognized } from "../CSTA-capability-exchange/NotRecognized.ta.mjs";
+
+import { Play, _decode_Play, _encode_Play } from "../CSTA-capability-exchange/Play.ta.mjs";
+
+import { Record, _decode_Record, _encode_Record } from "../CSTA-capability-exchange/Record.ta.mjs";
+
+import { Recognized, _decode_Recognized, _encode_Recognized } from "../CSTA-capability-exchange/Recognized.ta.mjs";
+
+import { ReviewEvent, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-capability-exchange/ReviewEvent.ta.mjs";
+
+import { Started, _decode_Started, _encode_Started } from "../CSTA-capability-exchange/Started.ta.mjs";
+
+import { SilenceTimeoutExpired, _decode_SilenceTimeoutExpired, _encode_SilenceTimeoutExpired } from "../CSTA-capability-exchange/SilenceTimeoutExpired.ta.mjs";
+
+import { SpeechDetected, _decode_SpeechDetected, _encode_SpeechDetected } from "../CSTA-capability-exchange/SpeechDetected.ta.mjs";
+
+import { StopEvent, _decode_StopEvent, _encode_StopEvent } from "../CSTA-capability-exchange/StopEvent.ta.mjs";
+
+import { SuspendPlay, _decode_SuspendPlay, _encode_SuspendPlay } from "../CSTA-capability-exchange/SuspendPlay.ta.mjs";
+
+import { SuspendRecord, _decode_SuspendRecord, _encode_SuspendRecord } from "../CSTA-capability-exchange/SuspendRecord.ta.mjs";
+
+import { VoiceAttribChanged, _decode_VoiceAttribChanged, _encode_VoiceAttribChanged } from "../CSTA-capability-exchange/VoiceAttribChanged.ta.mjs";
+
+import { VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured } from "../CSTA-capability-exchange/VoiceErrorOccured.ta.mjs";
+
 
 
 /**
@@ -276,24 +218,24 @@ class VoiceUnitEvtsList {
  */
 export
 const _root_component_type_list_1_spec_for_VoiceUnitEvtsList: $.ComponentSpec[] = [
-    new $.ComponentSpec("bookmarkReached", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("completed", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("dtmfDetected", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("emptied", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("interruptionDetected", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("notRecognized", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("play", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("record", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("recognized", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("review", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("started", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("silenceTimeoutExpired", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("speechDetected", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("stop", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("suspendPlay", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("suspendRecord", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("voiceAttribChanged", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("voiceErrorOccured", true, $.hasTag(_TagClass.context, 17), undefined, undefined)
+    new $.ComponentSpec("bookmarkReached", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("completed", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("dtmfDetected", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("emptied", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("interruptionDetected", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("notRecognized", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("play", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("record", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("recognized", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("review", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("started", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("silenceTimeoutExpired", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("speechDetected", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("stop", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("suspendPlay", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("suspendRecord", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("voiceAttribChanged", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("voiceErrorOccured", true, $.hasTag(_TagClass.context, 17))
 ];
 
 /**

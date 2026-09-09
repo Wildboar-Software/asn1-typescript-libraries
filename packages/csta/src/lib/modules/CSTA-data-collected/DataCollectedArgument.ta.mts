@@ -1,83 +1,30 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { DcollCrossRefID, _decode_DcollCrossRefID, _encode_DcollCrossRefID } from "../CSTA-data-collection/DcollCrossRefID.ta.mjs";
-// export { DcollCrossRefID, _decode_DcollCrossRefID, _encode_DcollCrossRefID } from "../CSTA-data-collection/DcollCrossRefID.ta.mjs";
+
 import { DigitsData, _decode_DigitsData, _encode_DigitsData } from "../CSTA-data-collected/DigitsData.ta.mjs";
-// export { DigitsData, _decode_DigitsData, _encode_DigitsData } from "../CSTA-data-collected/DigitsData.ta.mjs";
+
 import { TelTonesData, _decode_TelTonesData, _encode_TelTonesData } from "../CSTA-data-collected/TelTonesData.ta.mjs";
-// export { TelTonesData, _decode_TelTonesData, _encode_TelTonesData } from "../CSTA-data-collected/TelTonesData.ta.mjs";
+
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
-// export { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
-import { DcollCause, _enum_for_DcollCause, DcollCause_flushCharReceived /* IMPORTED_LONG_ENUMERATION_ITEM */, flushCharReceived /* IMPORTED_SHORT_ENUMERATION_ITEM */, DcollCause_charCountReached /* IMPORTED_LONG_ENUMERATION_ITEM */, charCountReached /* IMPORTED_SHORT_ENUMERATION_ITEM */, DcollCause_timeout /* IMPORTED_LONG_ENUMERATION_ITEM */, timeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, DcollCause_sfTerminated /* IMPORTED_LONG_ENUMERATION_ITEM */, sfTerminated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DcollCause, _encode_DcollCause } from "../CSTA-data-collected/DcollCause.ta.mjs";
-// export { DcollCause, _enum_for_DcollCause, DcollCause_flushCharReceived /* IMPORTED_LONG_ENUMERATION_ITEM */, flushCharReceived /* IMPORTED_SHORT_ENUMERATION_ITEM */, DcollCause_charCountReached /* IMPORTED_LONG_ENUMERATION_ITEM */, charCountReached /* IMPORTED_SHORT_ENUMERATION_ITEM */, DcollCause_timeout /* IMPORTED_LONG_ENUMERATION_ITEM */, timeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, DcollCause_sfTerminated /* IMPORTED_LONG_ENUMERATION_ITEM */, sfTerminated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DcollCause, _encode_DcollCause } from "../CSTA-data-collected/DcollCause.ta.mjs";
+
+import {
+    DcollCause,
+    _enum_for_DcollCause,
+    _decode_DcollCause,
+    _encode_DcollCause
+} from "../CSTA-data-collected/DcollCause.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -174,12 +121,12 @@ class DataCollectedArgument {
  */
 export
 const _root_component_type_list_1_spec_for_DataCollectedArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("dcollCrossRefID", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("digitsData", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("telTonesData", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("connectionInformation", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("dcollCause", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("dcollCrossRefID", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("digitsData", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("telTonesData", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("connectionInformation", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("dcollCause", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

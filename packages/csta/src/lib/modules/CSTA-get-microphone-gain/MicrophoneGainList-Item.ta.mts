@@ -1,75 +1,17 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
-// export { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+
 import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-physical-device-feature/MicGainAbs.ta.mjs";
-// export { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-physical-device-feature/MicGainAbs.ta.mjs";
+
 
 
 /**
@@ -79,7 +21,10 @@ import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-phys
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MicrophoneGainList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MicrophoneGainList-Item ::= SEQUENCE {
+ *     auditoryApparatus [UNIVERSAL 4] AuditoryApparatusID,
+ *     micGainAbs [UNIVERSAL 2] MicGainAbs OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -130,8 +75,8 @@ class MicrophoneGainList_Item {
  */
 export
 const _root_component_type_list_1_spec_for_MicrophoneGainList_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("auditoryApparatus", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("micGainAbs", true, $.hasTag(_TagClass.universal, 2), undefined, undefined)
+    new $.ComponentSpec("auditoryApparatus", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("micGainAbs", true, $.hasTag(_TagClass.universal, 2))
 ];
 
 /**

@@ -1,81 +1,29 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
-// export { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+
 import { RingerID, _decode_RingerID, _encode_RingerID } from "../CSTA-physical-device-feature/RingerID.ta.mjs";
-// export { RingerID, _decode_RingerID, _encode_RingerID } from "../CSTA-physical-device-feature/RingerID.ta.mjs";
-import { RingMode, _enum_for_RingMode, RingMode_ringing /* IMPORTED_LONG_ENUMERATION_ITEM */, ringing /* IMPORTED_SHORT_ENUMERATION_ITEM */, RingMode_notRinging /* IMPORTED_LONG_ENUMERATION_ITEM */, notRinging /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RingMode, _encode_RingMode } from "../CSTA-physical-device-feature/RingMode.ta.mjs";
-// export { RingMode, _enum_for_RingMode, RingMode_ringing /* IMPORTED_LONG_ENUMERATION_ITEM */, ringing /* IMPORTED_SHORT_ENUMERATION_ITEM */, RingMode_notRinging /* IMPORTED_LONG_ENUMERATION_ITEM */, notRinging /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RingMode, _encode_RingMode } from "../CSTA-physical-device-feature/RingMode.ta.mjs";
+
+import {
+    RingMode,
+    _enum_for_RingMode,
+    _decode_RingMode,
+    _encode_RingMode
+} from "../CSTA-physical-device-feature/RingMode.ta.mjs";
+
 import { Volume, _decode_Volume, _encode_Volume } from "../CSTA-physical-device-feature/Volume.ta.mjs";
-// export { Volume, _decode_Volume, _encode_Volume } from "../CSTA-physical-device-feature/Volume.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -186,14 +134,14 @@ class RingerStatusEvent {
  */
 export
 const _root_component_type_list_1_spec_for_RingerStatusEvent: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3), undefined, undefined),
-    new $.ComponentSpec("ringer", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("ringMode", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("ringCount", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ringDuration", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("ringPattern", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ringVolume", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3)),
+    new $.ComponentSpec("ringer", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("ringMode", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("ringCount", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ringDuration", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("ringPattern", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ringVolume", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

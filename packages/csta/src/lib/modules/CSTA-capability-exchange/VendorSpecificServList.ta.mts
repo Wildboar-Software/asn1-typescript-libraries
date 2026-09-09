@@ -1,81 +1,23 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { EscapeRegister, EscapeRegister_privateData /* IMPORTED_LONG_NAMED_BIT */, EscapeRegister_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_EscapeRegister, _encode_EscapeRegister } from "../CSTA-capability-exchange/EscapeRegister.ta.mjs";
-// export { EscapeRegister, EscapeRegister_privateData /* IMPORTED_LONG_NAMED_BIT */, EscapeRegister_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_EscapeRegister, _encode_EscapeRegister } from "../CSTA-capability-exchange/EscapeRegister.ta.mjs";
-import { EscapeRegisterCancel, EscapeRegisterCancel_privateData /* IMPORTED_LONG_NAMED_BIT */, EscapeRegisterCancel_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_EscapeRegisterCancel, _encode_EscapeRegisterCancel } from "../CSTA-capability-exchange/EscapeRegisterCancel.ta.mjs";
-// export { EscapeRegisterCancel, EscapeRegisterCancel_privateData /* IMPORTED_LONG_NAMED_BIT */, EscapeRegisterCancel_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_EscapeRegisterCancel, _encode_EscapeRegisterCancel } from "../CSTA-capability-exchange/EscapeRegisterCancel.ta.mjs";
-import { EscapeRegisterAbort, EscapeRegisterAbort_privateData /* IMPORTED_LONG_NAMED_BIT */, EscapeRegisterAbort_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_EscapeRegisterAbort, _encode_EscapeRegisterAbort } from "../CSTA-capability-exchange/EscapeRegisterAbort.ta.mjs";
-// export { EscapeRegisterAbort, EscapeRegisterAbort_privateData /* IMPORTED_LONG_NAMED_BIT */, EscapeRegisterAbort_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_EscapeRegisterAbort, _encode_EscapeRegisterAbort } from "../CSTA-capability-exchange/EscapeRegisterAbort.ta.mjs";
-import { Escape, Escape_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, Escape_swFunctionSupportsSending /* IMPORTED_LONG_NAMED_BIT */, swFunctionSupportsSending /* IMPORTED_SHORT_NAMED_BIT */, Escape_swFunctionSupportsReceiving /* IMPORTED_LONG_NAMED_BIT */, swFunctionSupportsReceiving /* IMPORTED_SHORT_NAMED_BIT */, _decode_Escape, _encode_Escape } from "../CSTA-capability-exchange/Escape.ta.mjs";
-// export { Escape, Escape_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, Escape_swFunctionSupportsSending /* IMPORTED_LONG_NAMED_BIT */, swFunctionSupportsSending /* IMPORTED_SHORT_NAMED_BIT */, Escape_swFunctionSupportsReceiving /* IMPORTED_LONG_NAMED_BIT */, swFunctionSupportsReceiving /* IMPORTED_SHORT_NAMED_BIT */, _decode_Escape, _encode_Escape } from "../CSTA-capability-exchange/Escape.ta.mjs";
-import { PrivateDataVersionSelection, PrivateDataVersionSelection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_PrivateDataVersionSelection, _encode_PrivateDataVersionSelection } from "../CSTA-capability-exchange/PrivateDataVersionSelection.ta.mjs";
-// export { PrivateDataVersionSelection, PrivateDataVersionSelection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_PrivateDataVersionSelection, _encode_PrivateDataVersionSelection } from "../CSTA-capability-exchange/PrivateDataVersionSelection.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { EscapeRegister, _decode_EscapeRegister, _encode_EscapeRegister } from "../CSTA-capability-exchange/EscapeRegister.ta.mjs";
+
+import { EscapeRegisterCancel, _decode_EscapeRegisterCancel, _encode_EscapeRegisterCancel } from "../CSTA-capability-exchange/EscapeRegisterCancel.ta.mjs";
+
+import { EscapeRegisterAbort, _decode_EscapeRegisterAbort, _encode_EscapeRegisterAbort } from "../CSTA-capability-exchange/EscapeRegisterAbort.ta.mjs";
+
+import { Escape, _decode_Escape, _encode_Escape } from "../CSTA-capability-exchange/Escape.ta.mjs";
+
+import { PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _encode_PrivateDataVersionSelection } from "../CSTA-capability-exchange/PrivateDataVersionSelection.ta.mjs";
+
 
 
 /**
@@ -159,11 +101,11 @@ class VendorSpecificServList {
  */
 export
 const _root_component_type_list_1_spec_for_VendorSpecificServList: $.ComponentSpec[] = [
-    new $.ComponentSpec("escapeRegister", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("escapeRegisterCancel", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("escapeRegisterAbort", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("escape", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("privateDataVersionSelection", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("escapeRegister", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("escapeRegisterCancel", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("escapeRegisterAbort", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("escape", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("privateDataVersionSelection", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**

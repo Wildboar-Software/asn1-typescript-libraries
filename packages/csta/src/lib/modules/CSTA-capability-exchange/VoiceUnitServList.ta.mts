@@ -1,105 +1,47 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { Activate, Activate_resource /* IMPORTED_LONG_NAMED_BIT */, Activate_grammarName /* IMPORTED_LONG_NAMED_BIT */, Activate_privateData /* IMPORTED_LONG_NAMED_BIT */, Activate_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Activate, _encode_Activate } from "../CSTA-capability-exchange/Activate.ta.mjs";
-// export { Activate, Activate_resource /* IMPORTED_LONG_NAMED_BIT */, Activate_grammarName /* IMPORTED_LONG_NAMED_BIT */, Activate_privateData /* IMPORTED_LONG_NAMED_BIT */, Activate_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Activate, _encode_Activate } from "../CSTA-capability-exchange/Activate.ta.mjs";
-import { Clear, Clear_resource /* IMPORTED_LONG_NAMED_BIT */, Clear_privateData /* IMPORTED_LONG_NAMED_BIT */, Clear_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Clear, _encode_Clear } from "../CSTA-capability-exchange/Clear.ta.mjs";
-// export { Clear, Clear_resource /* IMPORTED_LONG_NAMED_BIT */, Clear_privateData /* IMPORTED_LONG_NAMED_BIT */, Clear_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Clear, _encode_Clear } from "../CSTA-capability-exchange/Clear.ta.mjs";
-import { Deactivate, Deactivate_resource /* IMPORTED_LONG_NAMED_BIT */, Deactivate_grammarName /* IMPORTED_LONG_NAMED_BIT */, Deactivate_privateData /* IMPORTED_LONG_NAMED_BIT */, Deactivate_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Deactivate, _encode_Deactivate } from "../CSTA-capability-exchange/Deactivate.ta.mjs";
-// export { Deactivate, Deactivate_resource /* IMPORTED_LONG_NAMED_BIT */, Deactivate_grammarName /* IMPORTED_LONG_NAMED_BIT */, Deactivate_privateData /* IMPORTED_LONG_NAMED_BIT */, Deactivate_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Deactivate, _encode_Deactivate } from "../CSTA-capability-exchange/Deactivate.ta.mjs";
-import { ConcatenateMsg, ConcatenateMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, ConcatenateMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_ConcatenateMsg, _encode_ConcatenateMsg } from "../CSTA-capability-exchange/ConcatenateMsg.ta.mjs";
-// export { ConcatenateMsg, ConcatenateMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, ConcatenateMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_ConcatenateMsg, _encode_ConcatenateMsg } from "../CSTA-capability-exchange/ConcatenateMsg.ta.mjs";
-import { DeleteMsg, DeleteMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, DeleteMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DeleteMsg, _encode_DeleteMsg } from "../CSTA-capability-exchange/DeleteMsg.ta.mjs";
-// export { DeleteMsg, DeleteMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, DeleteMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DeleteMsg, _encode_DeleteMsg } from "../CSTA-capability-exchange/DeleteMsg.ta.mjs";
-import { Queue, Queue_message /* IMPORTED_LONG_NAMED_BIT */, Queue_resource /* IMPORTED_LONG_NAMED_BIT */, Queue_text /* IMPORTED_LONG_NAMED_BIT */, Queue_privateData /* IMPORTED_LONG_NAMED_BIT */, Queue_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Queue, _encode_Queue } from "../CSTA-capability-exchange/Queue.ta.mjs";
-// export { Queue, Queue_message /* IMPORTED_LONG_NAMED_BIT */, Queue_resource /* IMPORTED_LONG_NAMED_BIT */, Queue_text /* IMPORTED_LONG_NAMED_BIT */, Queue_privateData /* IMPORTED_LONG_NAMED_BIT */, Queue_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Queue, _encode_Queue } from "../CSTA-capability-exchange/Queue.ta.mjs";
-import { PlayMsg, PlayMsg_duration /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationParameter /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationDurationExceeded /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationDTMFDigitDetected /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationEndOfSpeechDetected /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationSpeech /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_multipleMsgsSimultaneously /* IMPORTED_LONG_NAMED_BIT */, multipleMsgsSimultaneously /* IMPORTED_SHORT_NAMED_BIT */, _decode_PlayMsg, _encode_PlayMsg } from "../CSTA-capability-exchange/PlayMsg.ta.mjs";
-// export { PlayMsg, PlayMsg_duration /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationParameter /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationDurationExceeded /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationDTMFDigitDetected /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationEndOfSpeechDetected /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_terminationSpeech /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, PlayMsg_multipleMsgsSimultaneously /* IMPORTED_LONG_NAMED_BIT */, multipleMsgsSimultaneously /* IMPORTED_SHORT_NAMED_BIT */, _decode_PlayMsg, _encode_PlayMsg } from "../CSTA-capability-exchange/PlayMsg.ta.mjs";
-import { QueryVoiceAttrib, QueryVoiceAttrib_messageToQuery /* IMPORTED_LONG_NAMED_BIT */, messageToQuery /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_resource /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_attribToQueryEncodingAlgorithm /* IMPORTED_LONG_NAMED_BIT */, attribToQueryEncodingAlgorithm /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQuerySamplingRate /* IMPORTED_LONG_NAMED_BIT */, attribToQuerySamplingRate /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryDuration /* IMPORTED_LONG_NAMED_BIT */, attribToQueryDuration /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryFilename /* IMPORTED_LONG_NAMED_BIT */, attribToQueryFilename /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentPosition /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentPosition /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentSpeed /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentSpeed /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentVolume /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentVolume /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentLevel /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentLevel /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentState /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentState /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryGrammars /* IMPORTED_LONG_NAMED_BIT */, attribToQueryGrammars /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryLanguage /* IMPORTED_LONG_NAMED_BIT */, attribToQueryLanguage /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryMode /* IMPORTED_LONG_NAMED_BIT */, attribToQueryMode /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryRetainAudio /* IMPORTED_LONG_NAMED_BIT */, attribToQueryRetainAudio /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQuerySilenceTimeout /* IMPORTED_LONG_NAMED_BIT */, attribToQuerySilenceTimeout /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryMaxTimeout /* IMPORTED_LONG_NAMED_BIT */, attribToQueryMaxTimeout /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryBabbleTimeout /* IMPORTED_LONG_NAMED_BIT */, attribToQueryBabbleTimeout /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryEndSilence /* IMPORTED_LONG_NAMED_BIT */, attribToQueryEndSilence /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryRejectionThreshold /* IMPORTED_LONG_NAMED_BIT */, attribToQueryRejectionThreshold /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryAutoInterruptable /* IMPORTED_LONG_NAMED_BIT */, attribToQueryAutoInterruptable /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryInnerXML /* IMPORTED_LONG_NAMED_BIT */, attribToQueryInnerXML /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryInterdigitTimeout /* IMPORTED_LONG_NAMED_BIT */, attribToQueryInterdigitTimeout /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryPreflush /* IMPORTED_LONG_NAMED_BIT */, attribToQueryPreflush /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_connection /* IMPORTED_LONG_NAMED_BIT */, connection /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_duration /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationParameter /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationDurationExceeded /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationDTMFDigitDetected /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationEndOfSpeechDetected /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationSpeech /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_privateData /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_attribInAckEncodingAlgorithmADPCM6K /* IMPORTED_LONG_NAMED_BIT */, attribInAckEncodingAlgorithmADPCM6K /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckEncodingAlgorithmADPCM8K /* IMPORTED_LONG_NAMED_BIT */, attribInAckEncodingAlgorithmADPCM8K /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckEncodingAlgorithmMuLawPCM6K /* IMPORTED_LONG_NAMED_BIT */, attribInAckEncodingAlgorithmMuLawPCM6K /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckEncodingAlgorithmALawPCM6K /* IMPORTED_LONG_NAMED_BIT */, attribInAckEncodingAlgorithmALawPCM6K /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckSamplingRate /* IMPORTED_LONG_NAMED_BIT */, attribInAckSamplingRate /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckDuration /* IMPORTED_LONG_NAMED_BIT */, attribInAckDuration /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckFilename /* IMPORTED_LONG_NAMED_BIT */, attribInAckFilename /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentPosition /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentPosition /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentSpeed /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentSpeed /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentVolumeAbs /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentVolumeAbs /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentGain /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentGain /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentState /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentState /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_QueryVoiceAttrib, _encode_QueryVoiceAttrib } from "../CSTA-capability-exchange/QueryVoiceAttrib.ta.mjs";
-// export { QueryVoiceAttrib, QueryVoiceAttrib_messageToQuery /* IMPORTED_LONG_NAMED_BIT */, messageToQuery /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_resource /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_attribToQueryEncodingAlgorithm /* IMPORTED_LONG_NAMED_BIT */, attribToQueryEncodingAlgorithm /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQuerySamplingRate /* IMPORTED_LONG_NAMED_BIT */, attribToQuerySamplingRate /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryDuration /* IMPORTED_LONG_NAMED_BIT */, attribToQueryDuration /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryFilename /* IMPORTED_LONG_NAMED_BIT */, attribToQueryFilename /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentPosition /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentPosition /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentSpeed /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentSpeed /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentVolume /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentVolume /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentLevel /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentLevel /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryCurrentState /* IMPORTED_LONG_NAMED_BIT */, attribToQueryCurrentState /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryGrammars /* IMPORTED_LONG_NAMED_BIT */, attribToQueryGrammars /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryLanguage /* IMPORTED_LONG_NAMED_BIT */, attribToQueryLanguage /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryMode /* IMPORTED_LONG_NAMED_BIT */, attribToQueryMode /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryRetainAudio /* IMPORTED_LONG_NAMED_BIT */, attribToQueryRetainAudio /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQuerySilenceTimeout /* IMPORTED_LONG_NAMED_BIT */, attribToQuerySilenceTimeout /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryMaxTimeout /* IMPORTED_LONG_NAMED_BIT */, attribToQueryMaxTimeout /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryBabbleTimeout /* IMPORTED_LONG_NAMED_BIT */, attribToQueryBabbleTimeout /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryEndSilence /* IMPORTED_LONG_NAMED_BIT */, attribToQueryEndSilence /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryRejectionThreshold /* IMPORTED_LONG_NAMED_BIT */, attribToQueryRejectionThreshold /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryAutoInterruptable /* IMPORTED_LONG_NAMED_BIT */, attribToQueryAutoInterruptable /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryInnerXML /* IMPORTED_LONG_NAMED_BIT */, attribToQueryInnerXML /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryInterdigitTimeout /* IMPORTED_LONG_NAMED_BIT */, attribToQueryInterdigitTimeout /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribToQueryPreflush /* IMPORTED_LONG_NAMED_BIT */, attribToQueryPreflush /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_connection /* IMPORTED_LONG_NAMED_BIT */, connection /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_duration /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationParameter /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationDurationExceeded /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationDTMFDigitDetected /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationEndOfSpeechDetected /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_terminationSpeech /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_privateData /* IMPORTED_LONG_NAMED_BIT */, QueryVoiceAttrib_attribInAckEncodingAlgorithmADPCM6K /* IMPORTED_LONG_NAMED_BIT */, attribInAckEncodingAlgorithmADPCM6K /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckEncodingAlgorithmADPCM8K /* IMPORTED_LONG_NAMED_BIT */, attribInAckEncodingAlgorithmADPCM8K /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckEncodingAlgorithmMuLawPCM6K /* IMPORTED_LONG_NAMED_BIT */, attribInAckEncodingAlgorithmMuLawPCM6K /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckEncodingAlgorithmALawPCM6K /* IMPORTED_LONG_NAMED_BIT */, attribInAckEncodingAlgorithmALawPCM6K /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckSamplingRate /* IMPORTED_LONG_NAMED_BIT */, attribInAckSamplingRate /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckDuration /* IMPORTED_LONG_NAMED_BIT */, attribInAckDuration /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckFilename /* IMPORTED_LONG_NAMED_BIT */, attribInAckFilename /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentPosition /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentPosition /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentSpeed /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentSpeed /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentVolumeAbs /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentVolumeAbs /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentGain /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentGain /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_attribInAckCurrentState /* IMPORTED_LONG_NAMED_BIT */, attribInAckCurrentState /* IMPORTED_SHORT_NAMED_BIT */, QueryVoiceAttrib_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_QueryVoiceAttrib, _encode_QueryVoiceAttrib } from "../CSTA-capability-exchange/QueryVoiceAttrib.ta.mjs";
-import { RecordMsg, RecordMsg_resource /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_samplingRate /* IMPORTED_LONG_NAMED_BIT */, samplingRate /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_encodingAlgorithmADPCM6K /* IMPORTED_LONG_NAMED_BIT */, encodingAlgorithmADPCM6K /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_encodingAlgorithmADPCM8K /* IMPORTED_LONG_NAMED_BIT */, encodingAlgorithmADPCM8K /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_encodingAlgorithmMuLawPCM6K /* IMPORTED_LONG_NAMED_BIT */, encodingAlgorithmMuLawPCM6K /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_encodingAlgorithmALawPCM6K /* IMPORTED_LONG_NAMED_BIT */, encodingAlgorithmALawPCM6K /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_maxDuration /* IMPORTED_LONG_NAMED_BIT */, maxDuration /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_terminationParameter /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_terminationDurationExceeded /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_terminationDTMFDigitDetected /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_terminationEndOfDataDetected /* IMPORTED_LONG_NAMED_BIT */, terminationEndOfDataDetected /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_terminationSpeechDetected /* IMPORTED_LONG_NAMED_BIT */, terminationSpeechDetected /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_RecordMsg, _encode_RecordMsg } from "../CSTA-capability-exchange/RecordMsg.ta.mjs";
-// export { RecordMsg, RecordMsg_resource /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_samplingRate /* IMPORTED_LONG_NAMED_BIT */, samplingRate /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_encodingAlgorithmADPCM6K /* IMPORTED_LONG_NAMED_BIT */, encodingAlgorithmADPCM6K /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_encodingAlgorithmADPCM8K /* IMPORTED_LONG_NAMED_BIT */, encodingAlgorithmADPCM8K /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_encodingAlgorithmMuLawPCM6K /* IMPORTED_LONG_NAMED_BIT */, encodingAlgorithmMuLawPCM6K /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_encodingAlgorithmALawPCM6K /* IMPORTED_LONG_NAMED_BIT */, encodingAlgorithmALawPCM6K /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_maxDuration /* IMPORTED_LONG_NAMED_BIT */, maxDuration /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_terminationParameter /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_terminationDurationExceeded /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_terminationDTMFDigitDetected /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_terminationEndOfDataDetected /* IMPORTED_LONG_NAMED_BIT */, terminationEndOfDataDetected /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_terminationSpeechDetected /* IMPORTED_LONG_NAMED_BIT */, terminationSpeechDetected /* IMPORTED_SHORT_NAMED_BIT */, RecordMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, RecordMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_RecordMsg, _encode_RecordMsg } from "../CSTA-capability-exchange/RecordMsg.ta.mjs";
-import { Reposition, Reposition_periodOfRepositionStartOfMsg /* IMPORTED_LONG_NAMED_BIT */, periodOfRepositionStartOfMsg /* IMPORTED_SHORT_NAMED_BIT */, Reposition_periodOfRepositionEndOfMsg /* IMPORTED_LONG_NAMED_BIT */, periodOfRepositionEndOfMsg /* IMPORTED_SHORT_NAMED_BIT */, Reposition_periodOfRepositionRelativePointer /* IMPORTED_LONG_NAMED_BIT */, periodOfRepositionRelativePointer /* IMPORTED_SHORT_NAMED_BIT */, Reposition_msgToReposition /* IMPORTED_LONG_NAMED_BIT */, msgToReposition /* IMPORTED_SHORT_NAMED_BIT */, Reposition_privateData /* IMPORTED_LONG_NAMED_BIT */, Reposition_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Reposition, _encode_Reposition } from "../CSTA-capability-exchange/Reposition.ta.mjs";
-// export { Reposition, Reposition_periodOfRepositionStartOfMsg /* IMPORTED_LONG_NAMED_BIT */, periodOfRepositionStartOfMsg /* IMPORTED_SHORT_NAMED_BIT */, Reposition_periodOfRepositionEndOfMsg /* IMPORTED_LONG_NAMED_BIT */, periodOfRepositionEndOfMsg /* IMPORTED_SHORT_NAMED_BIT */, Reposition_periodOfRepositionRelativePointer /* IMPORTED_LONG_NAMED_BIT */, periodOfRepositionRelativePointer /* IMPORTED_SHORT_NAMED_BIT */, Reposition_msgToReposition /* IMPORTED_LONG_NAMED_BIT */, msgToReposition /* IMPORTED_SHORT_NAMED_BIT */, Reposition_privateData /* IMPORTED_LONG_NAMED_BIT */, Reposition_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Reposition, _encode_Reposition } from "../CSTA-capability-exchange/Reposition.ta.mjs";
-import { Resume, Resume_msgToResume /* IMPORTED_LONG_NAMED_BIT */, msgToResume /* IMPORTED_SHORT_NAMED_BIT */, Resume_resource /* IMPORTED_LONG_NAMED_BIT */, Resume_duration /* IMPORTED_LONG_NAMED_BIT */, Resume_privateData /* IMPORTED_LONG_NAMED_BIT */, Resume_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Resume, _encode_Resume } from "../CSTA-capability-exchange/Resume.ta.mjs";
-// export { Resume, Resume_msgToResume /* IMPORTED_LONG_NAMED_BIT */, msgToResume /* IMPORTED_SHORT_NAMED_BIT */, Resume_resource /* IMPORTED_LONG_NAMED_BIT */, Resume_duration /* IMPORTED_LONG_NAMED_BIT */, Resume_privateData /* IMPORTED_LONG_NAMED_BIT */, Resume_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Resume, _encode_Resume } from "../CSTA-capability-exchange/Resume.ta.mjs";
-import { Review, Review_msgToReview /* IMPORTED_LONG_NAMED_BIT */, msgToReview /* IMPORTED_SHORT_NAMED_BIT */, Review_resource /* IMPORTED_LONG_NAMED_BIT */, Review_periodToResumeStartOfMsg /* IMPORTED_LONG_NAMED_BIT */, Review_periodToResumeLengthOfReview /* IMPORTED_LONG_NAMED_BIT */, Review_privateData /* IMPORTED_LONG_NAMED_BIT */, Review_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Review, _encode_Review } from "../CSTA-capability-exchange/Review.ta.mjs";
-// export { Review, Review_msgToReview /* IMPORTED_LONG_NAMED_BIT */, msgToReview /* IMPORTED_SHORT_NAMED_BIT */, Review_resource /* IMPORTED_LONG_NAMED_BIT */, Review_periodToResumeStartOfMsg /* IMPORTED_LONG_NAMED_BIT */, Review_periodToResumeLengthOfReview /* IMPORTED_LONG_NAMED_BIT */, Review_privateData /* IMPORTED_LONG_NAMED_BIT */, Review_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Review, _encode_Review } from "../CSTA-capability-exchange/Review.ta.mjs";
-import { Start, Start_resource /* IMPORTED_LONG_NAMED_BIT */, Start_text /* IMPORTED_LONG_NAMED_BIT */, Start_privateData /* IMPORTED_LONG_NAMED_BIT */, Start_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Start, _encode_Start } from "../CSTA-capability-exchange/Start.ta.mjs";
-// export { Start, Start_resource /* IMPORTED_LONG_NAMED_BIT */, Start_text /* IMPORTED_LONG_NAMED_BIT */, Start_privateData /* IMPORTED_LONG_NAMED_BIT */, Start_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Start, _encode_Start } from "../CSTA-capability-exchange/Start.ta.mjs";
-import { SetVoiceAttrib, SetVoiceAttrib_resource /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_currentSpeed /* IMPORTED_LONG_NAMED_BIT */, currentSpeed /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_currentVolumeAbs /* IMPORTED_LONG_NAMED_BIT */, currentVolumeAbs /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_currentVolumeInc /* IMPORTED_LONG_NAMED_BIT */, currentVolumeInc /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_grammars /* IMPORTED_LONG_NAMED_BIT */, grammars /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_language /* IMPORTED_LONG_NAMED_BIT */, language /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_mode /* IMPORTED_LONG_NAMED_BIT */, mode /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_retainAudio /* IMPORTED_LONG_NAMED_BIT */, retainAudio /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_silenceTimeout /* IMPORTED_LONG_NAMED_BIT */, silenceTimeout /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_maxTimeout /* IMPORTED_LONG_NAMED_BIT */, maxTimeout /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_babbleTimeout /* IMPORTED_LONG_NAMED_BIT */, babbleTimeout /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_endSilence /* IMPORTED_LONG_NAMED_BIT */, endSilence /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_rejectionThreshold /* IMPORTED_LONG_NAMED_BIT */, rejectionThreshold /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_autoInterruptable /* IMPORTED_LONG_NAMED_BIT */, autoInterruptable /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_innerXML /* IMPORTED_LONG_NAMED_BIT */, innerXML /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_interdigitTimeout /* IMPORTED_LONG_NAMED_BIT */, interdigitTimeout /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_preflush /* IMPORTED_LONG_NAMED_BIT */, preflush /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_periodToResumeStartOfMsg /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_periodToResumeLengthOfReview /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_currentGain /* IMPORTED_LONG_NAMED_BIT */, currentGain /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_message /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_privateData /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SetVoiceAttrib, _encode_SetVoiceAttrib } from "../CSTA-capability-exchange/SetVoiceAttrib.ta.mjs";
-// export { SetVoiceAttrib, SetVoiceAttrib_resource /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_currentSpeed /* IMPORTED_LONG_NAMED_BIT */, currentSpeed /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_currentVolumeAbs /* IMPORTED_LONG_NAMED_BIT */, currentVolumeAbs /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_currentVolumeInc /* IMPORTED_LONG_NAMED_BIT */, currentVolumeInc /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_grammars /* IMPORTED_LONG_NAMED_BIT */, grammars /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_language /* IMPORTED_LONG_NAMED_BIT */, language /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_mode /* IMPORTED_LONG_NAMED_BIT */, mode /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_retainAudio /* IMPORTED_LONG_NAMED_BIT */, retainAudio /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_silenceTimeout /* IMPORTED_LONG_NAMED_BIT */, silenceTimeout /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_maxTimeout /* IMPORTED_LONG_NAMED_BIT */, maxTimeout /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_babbleTimeout /* IMPORTED_LONG_NAMED_BIT */, babbleTimeout /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_endSilence /* IMPORTED_LONG_NAMED_BIT */, endSilence /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_rejectionThreshold /* IMPORTED_LONG_NAMED_BIT */, rejectionThreshold /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_autoInterruptable /* IMPORTED_LONG_NAMED_BIT */, autoInterruptable /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_innerXML /* IMPORTED_LONG_NAMED_BIT */, innerXML /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_interdigitTimeout /* IMPORTED_LONG_NAMED_BIT */, interdigitTimeout /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_preflush /* IMPORTED_LONG_NAMED_BIT */, preflush /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_periodToResumeStartOfMsg /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_periodToResumeLengthOfReview /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_currentGain /* IMPORTED_LONG_NAMED_BIT */, currentGain /* IMPORTED_SHORT_NAMED_BIT */, SetVoiceAttrib_message /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_privateData /* IMPORTED_LONG_NAMED_BIT */, SetVoiceAttrib_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SetVoiceAttrib, _encode_SetVoiceAttrib } from "../CSTA-capability-exchange/SetVoiceAttrib.ta.mjs";
-import { Stop, Stop_msgToBeStopped /* IMPORTED_LONG_NAMED_BIT */, msgToBeStopped /* IMPORTED_SHORT_NAMED_BIT */, Stop_resource /* IMPORTED_LONG_NAMED_BIT */, Stop_privateData /* IMPORTED_LONG_NAMED_BIT */, Stop_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Stop, _encode_Stop } from "../CSTA-capability-exchange/Stop.ta.mjs";
-// export { Stop, Stop_msgToBeStopped /* IMPORTED_LONG_NAMED_BIT */, msgToBeStopped /* IMPORTED_SHORT_NAMED_BIT */, Stop_resource /* IMPORTED_LONG_NAMED_BIT */, Stop_privateData /* IMPORTED_LONG_NAMED_BIT */, Stop_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Stop, _encode_Stop } from "../CSTA-capability-exchange/Stop.ta.mjs";
-import { Suspend, Suspend_message /* IMPORTED_LONG_NAMED_BIT */, Suspend_resource /* IMPORTED_LONG_NAMED_BIT */, Suspend_privateData /* IMPORTED_LONG_NAMED_BIT */, Suspend_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Suspend, _encode_Suspend } from "../CSTA-capability-exchange/Suspend.ta.mjs";
-// export { Suspend, Suspend_message /* IMPORTED_LONG_NAMED_BIT */, Suspend_resource /* IMPORTED_LONG_NAMED_BIT */, Suspend_privateData /* IMPORTED_LONG_NAMED_BIT */, Suspend_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_Suspend, _encode_Suspend } from "../CSTA-capability-exchange/Suspend.ta.mjs";
-import { SynthesizeMsg, SynthesizeMsg_genderMale /* IMPORTED_LONG_NAMED_BIT */, genderMale /* IMPORTED_SHORT_NAMED_BIT */, SynthesizeMsg_genderFemale /* IMPORTED_LONG_NAMED_BIT */, genderFemale /* IMPORTED_SHORT_NAMED_BIT */, SynthesizeMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, SynthesizeMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SynthesizeMsg, _encode_SynthesizeMsg } from "../CSTA-capability-exchange/SynthesizeMsg.ta.mjs";
-// export { SynthesizeMsg, SynthesizeMsg_genderMale /* IMPORTED_LONG_NAMED_BIT */, genderMale /* IMPORTED_SHORT_NAMED_BIT */, SynthesizeMsg_genderFemale /* IMPORTED_LONG_NAMED_BIT */, genderFemale /* IMPORTED_SHORT_NAMED_BIT */, SynthesizeMsg_privateData /* IMPORTED_LONG_NAMED_BIT */, SynthesizeMsg_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SynthesizeMsg, _encode_SynthesizeMsg } from "../CSTA-capability-exchange/SynthesizeMsg.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { Activate, _decode_Activate, _encode_Activate } from "../CSTA-capability-exchange/Activate.ta.mjs";
+
+import { Clear, _decode_Clear, _encode_Clear } from "../CSTA-capability-exchange/Clear.ta.mjs";
+
+import { Deactivate, _decode_Deactivate, _encode_Deactivate } from "../CSTA-capability-exchange/Deactivate.ta.mjs";
+
+import { ConcatenateMsg, _decode_ConcatenateMsg, _encode_ConcatenateMsg } from "../CSTA-capability-exchange/ConcatenateMsg.ta.mjs";
+
+import { DeleteMsg, _decode_DeleteMsg, _encode_DeleteMsg } from "../CSTA-capability-exchange/DeleteMsg.ta.mjs";
+
+import { Queue, _decode_Queue, _encode_Queue } from "../CSTA-capability-exchange/Queue.ta.mjs";
+
+import { PlayMsg, _decode_PlayMsg, _encode_PlayMsg } from "../CSTA-capability-exchange/PlayMsg.ta.mjs";
+
+import { QueryVoiceAttrib, _decode_QueryVoiceAttrib, _encode_QueryVoiceAttrib } from "../CSTA-capability-exchange/QueryVoiceAttrib.ta.mjs";
+
+import { RecordMsg, _decode_RecordMsg, _encode_RecordMsg } from "../CSTA-capability-exchange/RecordMsg.ta.mjs";
+
+import { Reposition, _decode_Reposition, _encode_Reposition } from "../CSTA-capability-exchange/Reposition.ta.mjs";
+
+import { Resume, _decode_Resume, _encode_Resume } from "../CSTA-capability-exchange/Resume.ta.mjs";
+
+import { Review, _decode_Review, _encode_Review } from "../CSTA-capability-exchange/Review.ta.mjs";
+
+import { Start, _decode_Start, _encode_Start } from "../CSTA-capability-exchange/Start.ta.mjs";
+
+import { SetVoiceAttrib, _decode_SetVoiceAttrib, _encode_SetVoiceAttrib } from "../CSTA-capability-exchange/SetVoiceAttrib.ta.mjs";
+
+import { Stop, _decode_Stop, _encode_Stop } from "../CSTA-capability-exchange/Stop.ta.mjs";
+
+import { Suspend, _decode_Suspend, _encode_Suspend } from "../CSTA-capability-exchange/Suspend.ta.mjs";
+
+import { SynthesizeMsg, _decode_SynthesizeMsg, _encode_SynthesizeMsg } from "../CSTA-capability-exchange/SynthesizeMsg.ta.mjs";
+
 
 
 /**
@@ -267,23 +209,23 @@ class VoiceUnitServList {
  */
 export
 const _root_component_type_list_1_spec_for_VoiceUnitServList: $.ComponentSpec[] = [
-    new $.ComponentSpec("activate", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("clear", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("deactivate", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("concatenateMsg", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("deleteMsg", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("queue", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("playMsg", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("queryVoiceAttrib", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("recordMsg", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("reposition", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("resume", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("review", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("start", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("setVoiceAttrib", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("stop", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("suspend", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("synthesizeMsg", true, $.hasTag(_TagClass.context, 11), undefined, undefined)
+    new $.ComponentSpec("activate", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("clear", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("deactivate", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("concatenateMsg", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("deleteMsg", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("queue", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("playMsg", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("queryVoiceAttrib", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("recordMsg", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("reposition", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("resume", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("review", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("start", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("setVoiceAttrib", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("stop", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("suspend", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("synthesizeMsg", true, $.hasTag(_TagClass.context, 11))
 ];
 
 /**

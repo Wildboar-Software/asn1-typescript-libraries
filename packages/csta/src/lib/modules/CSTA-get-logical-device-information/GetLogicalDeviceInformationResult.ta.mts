@@ -1,113 +1,79 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { DeviceCategory, _enum_for_DeviceCategory, DeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_group /* IMPORTED_LONG_ENUMERATION_ITEM */, group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_genericInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, genericInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_listenerInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_dtmfInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptQueueInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueueInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_messageInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_DeviceCategory, _encode_DeviceCategory } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
-// export { DeviceCategory, _enum_for_DeviceCategory, DeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_group /* IMPORTED_LONG_ENUMERATION_ITEM */, group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, DeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_genericInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, genericInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_listenerInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_dtmfInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_promptQueueInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueueInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_messageInteractiveVoice /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInteractiveVoice /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_DeviceCategory, _encode_DeviceCategory } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
-import { GroupDeviceAttributes, GroupDeviceAttributes_acd /* IMPORTED_LONG_NAMED_BIT */, GroupDeviceAttributes_hunt /* IMPORTED_LONG_NAMED_BIT */, hunt /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_pick /* IMPORTED_LONG_NAMED_BIT */, pick /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_user /* IMPORTED_LONG_NAMED_BIT */, user /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_agent /* IMPORTED_LONG_NAMED_BIT */, agent /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_other /* IMPORTED_LONG_NAMED_BIT */, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
-// export { GroupDeviceAttributes, GroupDeviceAttributes_acd /* IMPORTED_LONG_NAMED_BIT */, GroupDeviceAttributes_hunt /* IMPORTED_LONG_NAMED_BIT */, hunt /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_pick /* IMPORTED_LONG_NAMED_BIT */, pick /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_user /* IMPORTED_LONG_NAMED_BIT */, user /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_agent /* IMPORTED_LONG_NAMED_BIT */, agent /* IMPORTED_SHORT_NAMED_BIT */, GroupDeviceAttributes_other /* IMPORTED_LONG_NAMED_BIT */, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
-import { NamedDeviceTypes, _enum_for_NamedDeviceTypes, NamedDeviceTypes_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_acdGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, acdGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_button /* IMPORTED_LONG_ENUMERATION_ITEM */, button /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_buttonGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, buttonGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_conferenceBridge /* IMPORTED_LONG_ENUMERATION_ITEM */, conferenceBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_line /* IMPORTED_LONG_ENUMERATION_ITEM */, line /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_lineGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, lineGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operatorGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_parkingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, parkingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_station /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_stationGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, stationGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunk /* IMPORTED_LONG_ENUMERATION_ITEM */, trunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunkGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, trunkGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_other /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_otherGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, otherGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NamedDeviceTypes, _encode_NamedDeviceTypes } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
-// export { NamedDeviceTypes, _enum_for_NamedDeviceTypes, NamedDeviceTypes_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_acdGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, acdGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_button /* IMPORTED_LONG_ENUMERATION_ITEM */, button /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_buttonGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, buttonGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_conferenceBridge /* IMPORTED_LONG_ENUMERATION_ITEM */, conferenceBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_line /* IMPORTED_LONG_ENUMERATION_ITEM */, line /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_lineGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, lineGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_operatorGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_parkingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, parkingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_station /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_stationGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, stationGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunk /* IMPORTED_LONG_ENUMERATION_ITEM */, trunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_trunkGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, trunkGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, NamedDeviceTypes_other /* IMPORTED_LONG_ENUMERATION_ITEM */, NamedDeviceTypes_otherGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, otherGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NamedDeviceTypes, _encode_NamedDeviceTypes } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import {
+    DeviceCategory,
+    _enum_for_DeviceCategory,
+    DeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    _decode_DeviceCategory,
+    _encode_DeviceCategory
+} from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
+
+import { GroupDeviceAttributes, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
+
+import {
+    NamedDeviceTypes,
+    _enum_for_NamedDeviceTypes,
+    _decode_NamedDeviceTypes,
+    _encode_NamedDeviceTypes
+} from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
+
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-import { ACDModels, ACDModels_visibleACDRelatedDevices /* IMPORTED_LONG_NAMED_BIT */, visibleACDRelatedDevices /* IMPORTED_SHORT_NAMED_BIT */, ACDModels_nonVisibleACDRelatedDevices /* IMPORTED_LONG_NAMED_BIT */, nonVisibleACDRelatedDevices /* IMPORTED_SHORT_NAMED_BIT */, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
-// export { ACDModels, ACDModels_visibleACDRelatedDevices /* IMPORTED_LONG_NAMED_BIT */, visibleACDRelatedDevices /* IMPORTED_SHORT_NAMED_BIT */, ACDModels_nonVisibleACDRelatedDevices /* IMPORTED_LONG_NAMED_BIT */, nonVisibleACDRelatedDevices /* IMPORTED_SHORT_NAMED_BIT */, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
-import { AgentLogOnModels, AgentLogOnModels_logOnToACDDevice /* IMPORTED_LONG_NAMED_BIT */, logOnToACDDevice /* IMPORTED_SHORT_NAMED_BIT */, AgentLogOnModels_logOnToACDGroupExplOneStep /* IMPORTED_LONG_NAMED_BIT */, logOnToACDGroupExplOneStep /* IMPORTED_SHORT_NAMED_BIT */, AgentLogOnModels_logOnToACDGroupExplTwoSteps /* IMPORTED_LONG_NAMED_BIT */, logOnToACDGroupExplTwoSteps /* IMPORTED_SHORT_NAMED_BIT */, AgentLogOnModels_logOnToACDImplOneStep /* IMPORTED_LONG_NAMED_BIT */, logOnToACDImplOneStep /* IMPORTED_SHORT_NAMED_BIT */, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-capability-exchange/AgentLogOnModels.ta.mjs";
-// export { AgentLogOnModels, AgentLogOnModels_logOnToACDDevice /* IMPORTED_LONG_NAMED_BIT */, logOnToACDDevice /* IMPORTED_SHORT_NAMED_BIT */, AgentLogOnModels_logOnToACDGroupExplOneStep /* IMPORTED_LONG_NAMED_BIT */, logOnToACDGroupExplOneStep /* IMPORTED_SHORT_NAMED_BIT */, AgentLogOnModels_logOnToACDGroupExplTwoSteps /* IMPORTED_LONG_NAMED_BIT */, logOnToACDGroupExplTwoSteps /* IMPORTED_SHORT_NAMED_BIT */, AgentLogOnModels_logOnToACDImplOneStep /* IMPORTED_LONG_NAMED_BIT */, logOnToACDImplOneStep /* IMPORTED_SHORT_NAMED_BIT */, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-capability-exchange/AgentLogOnModels.ta.mjs";
-import { AppearanceType, _enum_for_AppearanceType, AppearanceType_selectedStandard /* IMPORTED_LONG_ENUMERATION_ITEM */, selectedStandard /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_basicStandard /* IMPORTED_LONG_ENUMERATION_ITEM */, basicStandard /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_basicBridged /* IMPORTED_LONG_ENUMERATION_ITEM */, basicBridged /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_exclusiveBridged /* IMPORTED_LONG_ENUMERATION_ITEM */, exclusiveBridged /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_independentSharedBridged /* IMPORTED_LONG_ENUMERATION_ITEM */, independentSharedBridged /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_interdependentSharedBridged /* IMPORTED_LONG_ENUMERATION_ITEM */, interdependentSharedBridged /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AppearanceType, _encode_AppearanceType } from "../CSTA-capability-exchange/AppearanceType.ta.mjs";
-// export { AppearanceType, _enum_for_AppearanceType, AppearanceType_selectedStandard /* IMPORTED_LONG_ENUMERATION_ITEM */, selectedStandard /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_basicStandard /* IMPORTED_LONG_ENUMERATION_ITEM */, basicStandard /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_basicBridged /* IMPORTED_LONG_ENUMERATION_ITEM */, basicBridged /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_exclusiveBridged /* IMPORTED_LONG_ENUMERATION_ITEM */, exclusiveBridged /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_independentSharedBridged /* IMPORTED_LONG_ENUMERATION_ITEM */, independentSharedBridged /* IMPORTED_SHORT_ENUMERATION_ITEM */, AppearanceType_interdependentSharedBridged /* IMPORTED_LONG_ENUMERATION_ITEM */, interdependentSharedBridged /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AppearanceType, _encode_AppearanceType } from "../CSTA-capability-exchange/AppearanceType.ta.mjs";
-import { MiscMonitorCaps, MiscMonitorCaps_groupInclusivModel /* IMPORTED_LONG_NAMED_BIT */, groupInclusivModel /* IMPORTED_SHORT_NAMED_BIT */, MiscMonitorCaps_groupExclusiveModel /* IMPORTED_LONG_NAMED_BIT */, groupExclusiveModel /* IMPORTED_SHORT_NAMED_BIT */, MiscMonitorCaps_monitorPhysicalElement /* IMPORTED_LONG_NAMED_BIT */, monitorPhysicalElement /* IMPORTED_SHORT_NAMED_BIT */, MiscMonitorCaps_acdDeviceInclusiv /* IMPORTED_LONG_NAMED_BIT */, acdDeviceInclusiv /* IMPORTED_SHORT_NAMED_BIT */, MiscMonitorCaps_acdDeviceExclusiv /* IMPORTED_LONG_NAMED_BIT */, acdDeviceExclusiv /* IMPORTED_SHORT_NAMED_BIT */, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
-// export { MiscMonitorCaps, MiscMonitorCaps_groupInclusivModel /* IMPORTED_LONG_NAMED_BIT */, groupInclusivModel /* IMPORTED_SHORT_NAMED_BIT */, MiscMonitorCaps_groupExclusiveModel /* IMPORTED_LONG_NAMED_BIT */, groupExclusiveModel /* IMPORTED_SHORT_NAMED_BIT */, MiscMonitorCaps_monitorPhysicalElement /* IMPORTED_LONG_NAMED_BIT */, monitorPhysicalElement /* IMPORTED_SHORT_NAMED_BIT */, MiscMonitorCaps_acdDeviceInclusiv /* IMPORTED_LONG_NAMED_BIT */, acdDeviceInclusiv /* IMPORTED_SHORT_NAMED_BIT */, MiscMonitorCaps_acdDeviceExclusiv /* IMPORTED_LONG_NAMED_BIT */, acdDeviceExclusiv /* IMPORTED_SHORT_NAMED_BIT */, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
-import { TransAndConfSetup, TransAndConfSetup_consultationCall /* IMPORTED_LONG_NAMED_BIT */, consultationCall /* IMPORTED_SHORT_NAMED_BIT */, TransAndConfSetup_holdCallMakeCall /* IMPORTED_LONG_NAMED_BIT */, holdCallMakeCall /* IMPORTED_SHORT_NAMED_BIT */, TransAndConfSetup_alternateCall /* IMPORTED_LONG_NAMED_BIT */, alternateCall /* IMPORTED_SHORT_NAMED_BIT */, TransAndConfSetup_twoCallsInHold /* IMPORTED_LONG_NAMED_BIT */, twoCallsInHold /* IMPORTED_SHORT_NAMED_BIT */, TransAndConfSetup_twoCallsInConnected /* IMPORTED_LONG_NAMED_BIT */, twoCallsInConnected /* IMPORTED_SHORT_NAMED_BIT */, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
-// export { TransAndConfSetup, TransAndConfSetup_consultationCall /* IMPORTED_LONG_NAMED_BIT */, consultationCall /* IMPORTED_SHORT_NAMED_BIT */, TransAndConfSetup_holdCallMakeCall /* IMPORTED_LONG_NAMED_BIT */, holdCallMakeCall /* IMPORTED_SHORT_NAMED_BIT */, TransAndConfSetup_alternateCall /* IMPORTED_LONG_NAMED_BIT */, alternateCall /* IMPORTED_SHORT_NAMED_BIT */, TransAndConfSetup_twoCallsInHold /* IMPORTED_LONG_NAMED_BIT */, twoCallsInHold /* IMPORTED_SHORT_NAMED_BIT */, TransAndConfSetup_twoCallsInConnected /* IMPORTED_LONG_NAMED_BIT */, twoCallsInConnected /* IMPORTED_SHORT_NAMED_BIT */, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
+
+import { ACDModels, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
+
+import { AgentLogOnModels, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-capability-exchange/AgentLogOnModels.ta.mjs";
+
+import {
+    AppearanceType,
+    _enum_for_AppearanceType,
+    _decode_AppearanceType,
+    _encode_AppearanceType
+} from "../CSTA-capability-exchange/AppearanceType.ta.mjs";
+
+import { MiscMonitorCaps, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
+
+import { TransAndConfSetup, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
+
 import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
-// export { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
-import { MonitorMediaClass, MonitorMediaClass_voice /* IMPORTED_LONG_NAMED_BIT */, voice /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_data /* IMPORTED_LONG_NAMED_BIT */, data /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_image /* IMPORTED_LONG_NAMED_BIT */, image /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_audio /* IMPORTED_LONG_NAMED_BIT */, audio /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_other /* IMPORTED_LONG_NAMED_BIT */, MonitorMediaClass_notKnown /* IMPORTED_LONG_NAMED_BIT */, notKnown /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_chat /* IMPORTED_LONG_NAMED_BIT */, chat /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_email /* IMPORTED_LONG_NAMED_BIT */, email /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_message /* IMPORTED_LONG_NAMED_BIT */, message /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_im /* IMPORTED_LONG_NAMED_BIT */, im /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_sms /* IMPORTED_LONG_NAMED_BIT */, sms /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_mms /* IMPORTED_LONG_NAMED_BIT */, mms /* IMPORTED_SHORT_NAMED_BIT */, _decode_MonitorMediaClass, _encode_MonitorMediaClass } from "../CSTA-status-reporting/MonitorMediaClass.ta.mjs";
-// export { MonitorMediaClass, MonitorMediaClass_voice /* IMPORTED_LONG_NAMED_BIT */, voice /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_data /* IMPORTED_LONG_NAMED_BIT */, data /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_image /* IMPORTED_LONG_NAMED_BIT */, image /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_audio /* IMPORTED_LONG_NAMED_BIT */, audio /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_other /* IMPORTED_LONG_NAMED_BIT */, MonitorMediaClass_notKnown /* IMPORTED_LONG_NAMED_BIT */, notKnown /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_chat /* IMPORTED_LONG_NAMED_BIT */, chat /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_email /* IMPORTED_LONG_NAMED_BIT */, email /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_message /* IMPORTED_LONG_NAMED_BIT */, message /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_im /* IMPORTED_LONG_NAMED_BIT */, im /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_sms /* IMPORTED_LONG_NAMED_BIT */, sms /* IMPORTED_SHORT_NAMED_BIT */, MonitorMediaClass_mms /* IMPORTED_LONG_NAMED_BIT */, mms /* IMPORTED_SHORT_NAMED_BIT */, _decode_MonitorMediaClass, _encode_MonitorMediaClass } from "../CSTA-status-reporting/MonitorMediaClass.ta.mjs";
+
+import {
+    MonitorMediaClass,
+    data /* IMPORTED_SHORT_NAMED_BIT */,
+    _decode_MonitorMediaClass,
+    _encode_MonitorMediaClass
+} from "../CSTA-status-reporting/MonitorMediaClass.ta.mjs";
+
 import { MediaServiceCapsList, _decode_MediaServiceCapsList, _encode_MediaServiceCapsList } from "../CSTA-capability-exchange/MediaServiceCapsList.ta.mjs";
-// export { MediaServiceCapsList, _decode_MediaServiceCapsList, _encode_MediaServiceCapsList } from "../CSTA-capability-exchange/MediaServiceCapsList.ta.mjs";
+
 import { ConnectionRateList, _decode_ConnectionRateList, _encode_ConnectionRateList } from "../CSTA-data-call-types/ConnectionRateList.ta.mjs";
-// export { ConnectionRateList, _decode_ConnectionRateList, _encode_ConnectionRateList } from "../CSTA-data-call-types/ConnectionRateList.ta.mjs";
+
 import { DelayToleranceList, _decode_DelayToleranceList, _encode_DelayToleranceList } from "../CSTA-data-call-types/DelayToleranceList.ta.mjs";
-// export { DelayToleranceList, _decode_DelayToleranceList, _encode_DelayToleranceList } from "../CSTA-data-call-types/DelayToleranceList.ta.mjs";
+
 import { NumberOfChannels, _decode_NumberOfChannels, _encode_NumberOfChannels } from "../CSTA-data-call-types/NumberOfChannels.ta.mjs";
-// export { NumberOfChannels, _decode_NumberOfChannels, _encode_NumberOfChannels } from "../CSTA-data-call-types/NumberOfChannels.ta.mjs";
+
 import { MaxChannelBind, _decode_MaxChannelBind, _encode_MaxChannelBind } from "../CSTA-data-call-types/MaxChannelBind.ta.mjs";
-// export { MaxChannelBind, _decode_MaxChannelBind, _encode_MaxChannelBind } from "../CSTA-data-call-types/MaxChannelBind.ta.mjs";
+
 import { RouteingServList, _decode_RouteingServList, _encode_RouteingServList } from "../CSTA-capability-exchange/RouteingServList.ta.mjs";
-// export { RouteingServList, _decode_RouteingServList, _encode_RouteingServList } from "../CSTA-capability-exchange/RouteingServList.ta.mjs";
+
 import { LogDevServList, _decode_LogDevServList, _encode_LogDevServList } from "../CSTA-capability-exchange/LogDevServList.ta.mjs";
-// export { LogDevServList, _decode_LogDevServList, _encode_LogDevServList } from "../CSTA-capability-exchange/LogDevServList.ta.mjs";
+
 import { LogDevEvtsList, _decode_LogDevEvtsList, _encode_LogDevEvtsList } from "../CSTA-capability-exchange/LogDevEvtsList.ta.mjs";
-// export { LogDevEvtsList, _decode_LogDevEvtsList, _encode_LogDevEvtsList } from "../CSTA-capability-exchange/LogDevEvtsList.ta.mjs";
+
 import { DeviceMaintEvtsList, _decode_DeviceMaintEvtsList, _encode_DeviceMaintEvtsList } from "../CSTA-capability-exchange/DeviceMaintEvtsList.ta.mjs";
-// export { DeviceMaintEvtsList, _decode_DeviceMaintEvtsList, _encode_DeviceMaintEvtsList } from "../CSTA-capability-exchange/DeviceMaintEvtsList.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -425,41 +391,41 @@ class GetLogicalDeviceInformationResult {
  */
 export
 const _root_component_type_list_1_spec_for_GetLogicalDeviceInformationResult: $.ComponentSpec[] = [
-    new $.ComponentSpec("deviceCategory", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("groupDeviceAttributes", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("namedDeviceTypes", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("shortFormDeviceID", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("hasPhysicalElement", false, $.hasTag(_TagClass.universal, 1), undefined, undefined),
-    new $.ComponentSpec("acdModels", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("agentLogOnModels", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("appearanceAddressable", false, $.hasTag(_TagClass.universal, 1), undefined, undefined),
-    new $.ComponentSpec("appearanceType", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("appearanceList", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("otherPhysicalDeviceList", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("miscMonitorCaps", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("associatedGroupList", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("maxCallbacks", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("maxAutoAnswerRings", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("maxActiveCalls", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("maxHeldCalls", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("maxFwdSettings", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("maxDevicesInConf", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("transAndConfSetup", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("deviceOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("deviceOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("callOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("callOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("mediaClassSupport", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("mediaServiceCapsList", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("connectionRateList", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("delayToleranceList", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("numberOfChannels", true, $.hasTag(_TagClass.context, 24), undefined, undefined),
-    new $.ComponentSpec("maxChannelBind", true, $.hasTag(_TagClass.context, 25), undefined, undefined),
-    new $.ComponentSpec("routeingServList", true, $.hasTag(_TagClass.context, 26), undefined, undefined),
-    new $.ComponentSpec("logDevServList", true, $.hasTag(_TagClass.context, 27), undefined, undefined),
-    new $.ComponentSpec("logDevEvtsList", true, $.hasTag(_TagClass.context, 28), undefined, undefined),
-    new $.ComponentSpec("deviceMaintEvtsList", true, $.hasTag(_TagClass.context, 29), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("deviceCategory", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("groupDeviceAttributes", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("namedDeviceTypes", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("shortFormDeviceID", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("hasPhysicalElement", false, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("acdModels", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("agentLogOnModels", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("appearanceAddressable", false, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("appearanceType", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("appearanceList", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("otherPhysicalDeviceList", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("miscMonitorCaps", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("associatedGroupList", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("maxCallbacks", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("maxAutoAnswerRings", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("maxActiveCalls", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("maxHeldCalls", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("maxFwdSettings", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("maxDevicesInConf", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("transAndConfSetup", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("deviceOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("deviceOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("callOnDeviceMonitorFilter", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("callOnConnectionMonitorFilter", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("mediaClassSupport", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("mediaServiceCapsList", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("connectionRateList", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("delayToleranceList", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("numberOfChannels", true, $.hasTag(_TagClass.context, 24)),
+    new $.ComponentSpec("maxChannelBind", true, $.hasTag(_TagClass.context, 25)),
+    new $.ComponentSpec("routeingServList", true, $.hasTag(_TagClass.context, 26)),
+    new $.ComponentSpec("logDevServList", true, $.hasTag(_TagClass.context, 27)),
+    new $.ComponentSpec("logDevEvtsList", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("deviceMaintEvtsList", true, $.hasTag(_TagClass.context, 29)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

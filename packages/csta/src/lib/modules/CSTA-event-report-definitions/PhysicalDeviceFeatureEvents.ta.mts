@@ -1,93 +1,29 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+
+import * as $ from "@wildboar/asn1/functional";
+import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import { ButtonInformationEvent, _decode_ButtonInformationEvent, _encode_ButtonInformationEvent } from "../CSTA-button-information-event/ButtonInformationEvent.ta.mjs";
-// export { ButtonInformationEvent, _decode_ButtonInformationEvent, _encode_ButtonInformationEvent } from "../CSTA-button-information-event/ButtonInformationEvent.ta.mjs";
+
 import { ButtonPressEvent, _decode_ButtonPressEvent, _encode_ButtonPressEvent } from "../CSTA-button-press-event/ButtonPressEvent.ta.mjs";
-// export { ButtonPressEvent, _decode_ButtonPressEvent, _encode_ButtonPressEvent } from "../CSTA-button-press-event/ButtonPressEvent.ta.mjs";
+
 import { DisplayUpdatedEvent, _decode_DisplayUpdatedEvent, _encode_DisplayUpdatedEvent } from "../CSTA-display-updated-event/DisplayUpdatedEvent.ta.mjs";
-// export { DisplayUpdatedEvent, _decode_DisplayUpdatedEvent, _encode_DisplayUpdatedEvent } from "../CSTA-display-updated-event/DisplayUpdatedEvent.ta.mjs";
+
 import { HookswitchEvent, _decode_HookswitchEvent, _encode_HookswitchEvent } from "../CSTA-hookswitch-event/HookswitchEvent.ta.mjs";
-// export { HookswitchEvent, _decode_HookswitchEvent, _encode_HookswitchEvent } from "../CSTA-hookswitch-event/HookswitchEvent.ta.mjs";
+
 import { LampModeEvent, _decode_LampModeEvent, _encode_LampModeEvent } from "../CSTA-lamp-mode-event/LampModeEvent.ta.mjs";
-// export { LampModeEvent, _decode_LampModeEvent, _encode_LampModeEvent } from "../CSTA-lamp-mode-event/LampModeEvent.ta.mjs";
+
 import { MessageWaitingEvent, _decode_MessageWaitingEvent, _encode_MessageWaitingEvent } from "../CSTA-message-waiting-event/MessageWaitingEvent.ta.mjs";
-// export { MessageWaitingEvent, _decode_MessageWaitingEvent, _encode_MessageWaitingEvent } from "../CSTA-message-waiting-event/MessageWaitingEvent.ta.mjs";
+
 import { MicrophoneGainEvent, _decode_MicrophoneGainEvent, _encode_MicrophoneGainEvent } from "../CSTA-microphone-gain-event/MicrophoneGainEvent.ta.mjs";
-// export { MicrophoneGainEvent, _decode_MicrophoneGainEvent, _encode_MicrophoneGainEvent } from "../CSTA-microphone-gain-event/MicrophoneGainEvent.ta.mjs";
+
 import { MicrophoneMuteEvent, _decode_MicrophoneMuteEvent, _encode_MicrophoneMuteEvent } from "../CSTA-microphone-mute-event/MicrophoneMuteEvent.ta.mjs";
-// export { MicrophoneMuteEvent, _decode_MicrophoneMuteEvent, _encode_MicrophoneMuteEvent } from "../CSTA-microphone-mute-event/MicrophoneMuteEvent.ta.mjs";
+
 import { RingerStatusEvent, _decode_RingerStatusEvent, _encode_RingerStatusEvent } from "../CSTA-ringer-status-event/RingerStatusEvent.ta.mjs";
-// export { RingerStatusEvent, _decode_RingerStatusEvent, _encode_RingerStatusEvent } from "../CSTA-ringer-status-event/RingerStatusEvent.ta.mjs";
+
 import { SpeakerMuteEvent, _decode_SpeakerMuteEvent, _encode_SpeakerMuteEvent } from "../CSTA-speaker-mute-event/SpeakerMuteEvent.ta.mjs";
-// export { SpeakerMuteEvent, _decode_SpeakerMuteEvent, _encode_SpeakerMuteEvent } from "../CSTA-speaker-mute-event/SpeakerMuteEvent.ta.mjs";
+
 import { SpeakerVolumeEvent, _decode_SpeakerVolumeEvent, _encode_SpeakerVolumeEvent } from "../CSTA-speaker-volume-event/SpeakerVolumeEvent.ta.mjs";
-// export { SpeakerVolumeEvent, _decode_SpeakerVolumeEvent, _encode_SpeakerVolumeEvent } from "../CSTA-speaker-volume-event/SpeakerVolumeEvent.ta.mjs";
+
 
 
 /**

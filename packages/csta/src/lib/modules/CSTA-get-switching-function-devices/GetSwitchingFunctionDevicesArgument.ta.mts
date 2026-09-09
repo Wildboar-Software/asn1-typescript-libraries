@@ -1,77 +1,24 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-import { ReqDeviceCategory, _enum_for_ReqDeviceCategory, ReqDeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, acd /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_dtmfIV /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_genericIV /* IMPORTED_LONG_ENUMERATION_ITEM */, genericIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupACD /* IMPORTED_LONG_ENUMERATION_ITEM */, groupACD /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupHunt /* IMPORTED_LONG_ENUMERATION_ITEM */, groupHunt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupPick /* IMPORTED_LONG_ENUMERATION_ITEM */, groupPick /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupOther /* IMPORTED_LONG_ENUMERATION_ITEM */, groupOther /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupUser /* IMPORTED_LONG_ENUMERATION_ITEM */, groupUser /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_listenerIV /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_messageIV /* IMPORTED_LONG_ENUMERATION_ITEM */, messageIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_promptIV /* IMPORTED_LONG_ENUMERATION_ITEM */, promptIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_promptQueue /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueue /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, station /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReqDeviceCategory, _encode_ReqDeviceCategory } from "../CSTA-get-switching-function-devices/ReqDeviceCategory.ta.mjs";
-// export { ReqDeviceCategory, _enum_for_ReqDeviceCategory, ReqDeviceCategory_acd /* IMPORTED_LONG_ENUMERATION_ITEM */, acd /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_conference /* IMPORTED_LONG_ENUMERATION_ITEM */, conference /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_dtmfIV /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmfIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_genericIV /* IMPORTED_LONG_ENUMERATION_ITEM */, genericIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupACD /* IMPORTED_LONG_ENUMERATION_ITEM */, groupACD /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupHunt /* IMPORTED_LONG_ENUMERATION_ITEM */, groupHunt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupPick /* IMPORTED_LONG_ENUMERATION_ITEM */, groupPick /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupOther /* IMPORTED_LONG_ENUMERATION_ITEM */, groupOther /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_groupUser /* IMPORTED_LONG_ENUMERATION_ITEM */, groupUser /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_listenerIV /* IMPORTED_LONG_ENUMERATION_ITEM */, listenerIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_messageIV /* IMPORTED_LONG_ENUMERATION_ITEM */, messageIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_networkInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_park /* IMPORTED_LONG_ENUMERATION_ITEM */, park /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_promptIV /* IMPORTED_LONG_ENUMERATION_ITEM */, promptIV /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_promptQueue /* IMPORTED_LONG_ENUMERATION_ITEM */, promptQueue /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_routeingDevice /* IMPORTED_LONG_ENUMERATION_ITEM */, routeingDevice /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_station /* IMPORTED_LONG_ENUMERATION_ITEM */, station /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_voiceUnit /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceUnit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReqDeviceCategory_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReqDeviceCategory, _encode_ReqDeviceCategory } from "../CSTA-get-switching-function-devices/ReqDeviceCategory.ta.mjs";
+
+import {
+    ReqDeviceCategory,
+    _enum_for_ReqDeviceCategory,
+    _decode_ReqDeviceCategory,
+    _encode_ReqDeviceCategory
+} from "../CSTA-get-switching-function-devices/ReqDeviceCategory.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -147,9 +94,9 @@ class GetSwitchingFunctionDevicesArgument {
  */
 export
 const _root_component_type_list_1_spec_for_GetSwitchingFunctionDevicesArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("requestedDeviceID", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("requestedDeviceCategory", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("requestedDeviceID", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestedDeviceCategory", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

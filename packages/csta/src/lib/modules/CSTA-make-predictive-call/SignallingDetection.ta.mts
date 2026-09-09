@@ -1,75 +1,27 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { SignallingCondition, _enum_for_SignallingCondition, SignallingCondition_callDelivered /* IMPORTED_LONG_ENUMERATION_ITEM */, callDelivered /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignallingCondition_callEstablished /* IMPORTED_LONG_ENUMERATION_ITEM */, callEstablished /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignallingCondition, _encode_SignallingCondition } from "../CSTA-make-predictive-call/SignallingCondition.ta.mjs";
-// export { SignallingCondition, _enum_for_SignallingCondition, SignallingCondition_callDelivered /* IMPORTED_LONG_ENUMERATION_ITEM */, callDelivered /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignallingCondition_callEstablished /* IMPORTED_LONG_ENUMERATION_ITEM */, callEstablished /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignallingCondition, _encode_SignallingCondition } from "../CSTA-make-predictive-call/SignallingCondition.ta.mjs";
-import { SignallingConditionsAction, _enum_for_SignallingConditionsAction, SignallingConditionsAction_destinationDetection /* IMPORTED_LONG_ENUMERATION_ITEM */, destinationDetection /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignallingConditionsAction_remainConnected /* IMPORTED_LONG_ENUMERATION_ITEM */, remainConnected /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignallingConditionsAction, _encode_SignallingConditionsAction } from "../CSTA-make-predictive-call/SignallingConditionsAction.ta.mjs";
-// export { SignallingConditionsAction, _enum_for_SignallingConditionsAction, SignallingConditionsAction_destinationDetection /* IMPORTED_LONG_ENUMERATION_ITEM */, destinationDetection /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignallingConditionsAction_remainConnected /* IMPORTED_LONG_ENUMERATION_ITEM */, remainConnected /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignallingConditionsAction, _encode_SignallingConditionsAction } from "../CSTA-make-predictive-call/SignallingConditionsAction.ta.mjs";
+    ASN1ConstructionError as _ConstructionError
+} from "@wildboar/asn1";
+import {
+    SignallingCondition,
+    _enum_for_SignallingCondition,
+    _decode_SignallingCondition,
+    _encode_SignallingCondition
+} from "../CSTA-make-predictive-call/SignallingCondition.ta.mjs";
+
+import {
+    SignallingConditionsAction,
+    _enum_for_SignallingConditionsAction,
+    _decode_SignallingConditionsAction,
+    _encode_SignallingConditionsAction
+} from "../CSTA-make-predictive-call/SignallingConditionsAction.ta.mjs";
+
 
 
 /**
@@ -144,8 +96,8 @@ class SignallingDetection {
  */
 export
 const _root_component_type_list_1_spec_for_SignallingDetection: $.ComponentSpec[] = [
-    new $.ComponentSpec("signallingCondition", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("signallingConditionsAction", false, $.hasTag(_TagClass.universal, 10), undefined, undefined)
+    new $.ComponentSpec("signallingCondition", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("signallingConditionsAction", false, $.hasTag(_TagClass.universal, 10))
 ];
 
 /**

@@ -1,89 +1,36 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { RouteRegister, RouteRegister_routeingDevice /* IMPORTED_LONG_NAMED_BIT */, RouteRegister_requestedMonitorMediaClass /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClass /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassAudio /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassAudio /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassData /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassData /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassImage /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassImage /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassVoice /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassVoice /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassChat /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassChat /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassEmail /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassEmail /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassMessage /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassMessage /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassIM /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassIM /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassSMS /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassSMS /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassMMS /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassMMS /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_privateData /* IMPORTED_LONG_NAMED_BIT */, RouteRegister_actualRouteingMediaClassInAck /* IMPORTED_LONG_NAMED_BIT */, actualRouteingMediaClassInAck /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, RouteRegister_allRouteingDevices /* IMPORTED_LONG_NAMED_BIT */, allRouteingDevices /* IMPORTED_SHORT_NAMED_BIT */, _decode_RouteRegister, _encode_RouteRegister } from "../CSTA-capability-exchange/RouteRegister.ta.mjs";
-// export { RouteRegister, RouteRegister_routeingDevice /* IMPORTED_LONG_NAMED_BIT */, RouteRegister_requestedMonitorMediaClass /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClass /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassAudio /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassAudio /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassData /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassData /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassImage /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassImage /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassVoice /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassVoice /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassChat /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassChat /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassEmail /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassEmail /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassMessage /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassMessage /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassIM /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassIM /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassSMS /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassSMS /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_requestedMonitorMediaClassMMS /* IMPORTED_LONG_NAMED_BIT */, requestedMonitorMediaClassMMS /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_privateData /* IMPORTED_LONG_NAMED_BIT */, RouteRegister_actualRouteingMediaClassInAck /* IMPORTED_LONG_NAMED_BIT */, actualRouteingMediaClassInAck /* IMPORTED_SHORT_NAMED_BIT */, RouteRegister_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, RouteRegister_allRouteingDevices /* IMPORTED_LONG_NAMED_BIT */, allRouteingDevices /* IMPORTED_SHORT_NAMED_BIT */, _decode_RouteRegister, _encode_RouteRegister } from "../CSTA-capability-exchange/RouteRegister.ta.mjs";
-import { RouteRegisterCancel, RouteRegisterCancel_privateData /* IMPORTED_LONG_NAMED_BIT */, RouteRegisterCancel_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteRegisterCancel, _encode_RouteRegisterCancel } from "../CSTA-capability-exchange/RouteRegisterCancel.ta.mjs";
-// export { RouteRegisterCancel, RouteRegisterCancel_privateData /* IMPORTED_LONG_NAMED_BIT */, RouteRegisterCancel_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteRegisterCancel, _encode_RouteRegisterCancel } from "../CSTA-capability-exchange/RouteRegisterCancel.ta.mjs";
-import { RouteRegisterAbort, RouteRegisterAbort_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteRegisterAbort, _encode_RouteRegisterAbort } from "../CSTA-capability-exchange/RouteRegisterAbort.ta.mjs";
-// export { RouteRegisterAbort, RouteRegisterAbort_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteRegisterAbort, _encode_RouteRegisterAbort } from "../CSTA-capability-exchange/RouteRegisterAbort.ta.mjs";
-import { ReRoute, ReRoute_replyTimeout /* IMPORTED_LONG_NAMED_BIT */, ReRoute_correlatorData /* IMPORTED_LONG_NAMED_BIT */, ReRoute_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_ReRoute, _encode_ReRoute } from "../CSTA-capability-exchange/ReRoute.ta.mjs";
-// export { ReRoute, ReRoute_replyTimeout /* IMPORTED_LONG_NAMED_BIT */, ReRoute_correlatorData /* IMPORTED_LONG_NAMED_BIT */, ReRoute_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_ReRoute, _encode_ReRoute } from "../CSTA-capability-exchange/ReRoute.ta.mjs";
-import { RouteEnd, RouteEnd_errorValue /* IMPORTED_LONG_NAMED_BIT */, errorValue /* IMPORTED_SHORT_NAMED_BIT */, RouteEnd_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteEnd_privateData /* IMPORTED_LONG_NAMED_BIT */, RouteEnd_supportsSending /* IMPORTED_LONG_NAMED_BIT */, supportsSending /* IMPORTED_SHORT_NAMED_BIT */, RouteEnd_supportsReceiving /* IMPORTED_LONG_NAMED_BIT */, supportsReceiving /* IMPORTED_SHORT_NAMED_BIT */, _decode_RouteEnd, _encode_RouteEnd } from "../CSTA-capability-exchange/RouteEnd.ta.mjs";
-// export { RouteEnd, RouteEnd_errorValue /* IMPORTED_LONG_NAMED_BIT */, errorValue /* IMPORTED_SHORT_NAMED_BIT */, RouteEnd_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteEnd_privateData /* IMPORTED_LONG_NAMED_BIT */, RouteEnd_supportsSending /* IMPORTED_LONG_NAMED_BIT */, supportsSending /* IMPORTED_SHORT_NAMED_BIT */, RouteEnd_supportsReceiving /* IMPORTED_LONG_NAMED_BIT */, supportsReceiving /* IMPORTED_SHORT_NAMED_BIT */, _decode_RouteEnd, _encode_RouteEnd } from "../CSTA-capability-exchange/RouteEnd.ta.mjs";
-import { RouteReject, RouteReject_rejectCauseBusyOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseBusyOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_rejectCauseQueueTimeOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseQueueTimeOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_rejectCauseCapacityOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseCapacityOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_rejectCauseCalendarOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseCalendarOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_rejectCauseUnknownOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseUnknownOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteReject_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteReject, _encode_RouteReject } from "../CSTA-capability-exchange/RouteReject.ta.mjs";
-// export { RouteReject, RouteReject_rejectCauseBusyOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseBusyOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_rejectCauseQueueTimeOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseQueueTimeOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_rejectCauseCapacityOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseCapacityOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_rejectCauseCalendarOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseCalendarOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_rejectCauseUnknownOverflow /* IMPORTED_LONG_NAMED_BIT */, rejectCauseUnknownOverflow /* IMPORTED_SHORT_NAMED_BIT */, RouteReject_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteReject_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteReject, _encode_RouteReject } from "../CSTA-capability-exchange/RouteReject.ta.mjs";
-import { RouteRequest, RouteRequest_callingDevice /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_routeingDevice /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_routeSelAlgorithmACD /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmACD /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routeSelAlgorithmEmergency /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmEmergency /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routeSelAlgorithmLeastCost /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmLeastCost /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routeSelAlgorithmNormal /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmNormal /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routeSelAlgorithmUserDefined /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmUserDefined /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_priority /* IMPORTED_LONG_NAMED_BIT */, priority /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_replyTimeout /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_mediaCallCharacteristics /* IMPORTED_LONG_NAMED_BIT */, mediaCallCharacteristics /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_callCharacteristics /* IMPORTED_LONG_NAMED_BIT */, callCharacteristics /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routedCallInfo /* IMPORTED_LONG_NAMED_BIT */, routedCallInfo /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_subjectOfCall /* IMPORTED_LONG_NAMED_BIT */, subjectOfCall /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_messageInformation /* IMPORTED_LONG_NAMED_BIT */, messageInformation /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_languagePreferences /* IMPORTED_LONG_NAMED_BIT */, languagePreferences /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_deviceHistory /* IMPORTED_LONG_NAMED_BIT */, deviceHistory /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_privateData /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_nonCallRelatedRouteing /* IMPORTED_LONG_NAMED_BIT */, nonCallRelatedRouteing /* IMPORTED_SHORT_NAMED_BIT */, _decode_RouteRequest, _encode_RouteRequest } from "../CSTA-capability-exchange/RouteRequest.ta.mjs";
-// export { RouteRequest, RouteRequest_callingDevice /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_routeingDevice /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_routeSelAlgorithmACD /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmACD /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routeSelAlgorithmEmergency /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmEmergency /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routeSelAlgorithmLeastCost /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmLeastCost /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routeSelAlgorithmNormal /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmNormal /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routeSelAlgorithmUserDefined /* IMPORTED_LONG_NAMED_BIT */, routeSelAlgorithmUserDefined /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_priority /* IMPORTED_LONG_NAMED_BIT */, priority /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_replyTimeout /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_mediaCallCharacteristics /* IMPORTED_LONG_NAMED_BIT */, mediaCallCharacteristics /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_callCharacteristics /* IMPORTED_LONG_NAMED_BIT */, callCharacteristics /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_routedCallInfo /* IMPORTED_LONG_NAMED_BIT */, routedCallInfo /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_subjectOfCall /* IMPORTED_LONG_NAMED_BIT */, subjectOfCall /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_messageInformation /* IMPORTED_LONG_NAMED_BIT */, messageInformation /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_languagePreferences /* IMPORTED_LONG_NAMED_BIT */, languagePreferences /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_deviceHistory /* IMPORTED_LONG_NAMED_BIT */, deviceHistory /* IMPORTED_SHORT_NAMED_BIT */, RouteRequest_privateData /* IMPORTED_LONG_NAMED_BIT */, RouteRequest_nonCallRelatedRouteing /* IMPORTED_LONG_NAMED_BIT */, nonCallRelatedRouteing /* IMPORTED_SHORT_NAMED_BIT */, _decode_RouteRequest, _encode_RouteRequest } from "../CSTA-capability-exchange/RouteRequest.ta.mjs";
-import { RouteSelect, RouteSelect_alternateRoutes /* IMPORTED_LONG_NAMED_BIT */, alternateRoutes /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_remainRetriesNoListAvailable /* IMPORTED_LONG_NAMED_BIT */, remainRetriesNoListAvailable /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_remainRetriesNoCountAvailable /* IMPORTED_LONG_NAMED_BIT */, remainRetriesNoCountAvailable /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_remainRetriesRetryCount /* IMPORTED_LONG_NAMED_BIT */, remainRetriesRetryCount /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_routeUsed /* IMPORTED_LONG_NAMED_BIT */, routeUsed /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteSelect_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteSelect, _encode_RouteSelect } from "../CSTA-capability-exchange/RouteSelect.ta.mjs";
-// export { RouteSelect, RouteSelect_alternateRoutes /* IMPORTED_LONG_NAMED_BIT */, alternateRoutes /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_remainRetriesNoListAvailable /* IMPORTED_LONG_NAMED_BIT */, remainRetriesNoListAvailable /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_remainRetriesNoCountAvailable /* IMPORTED_LONG_NAMED_BIT */, remainRetriesNoCountAvailable /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_remainRetriesRetryCount /* IMPORTED_LONG_NAMED_BIT */, remainRetriesRetryCount /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_routeUsed /* IMPORTED_LONG_NAMED_BIT */, routeUsed /* IMPORTED_SHORT_NAMED_BIT */, RouteSelect_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteSelect_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteSelect, _encode_RouteSelect } from "../CSTA-capability-exchange/RouteSelect.ta.mjs";
-import { RouteUsed, RouteUsed_callingDevice /* IMPORTED_LONG_NAMED_BIT */, RouteUsed_domain /* IMPORTED_LONG_NAMED_BIT */, domain /* IMPORTED_SHORT_NAMED_BIT */, RouteUsed_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteUsed_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteUsed, _encode_RouteUsed } from "../CSTA-capability-exchange/RouteUsed.ta.mjs";
-// export { RouteUsed, RouteUsed_callingDevice /* IMPORTED_LONG_NAMED_BIT */, RouteUsed_domain /* IMPORTED_LONG_NAMED_BIT */, domain /* IMPORTED_SHORT_NAMED_BIT */, RouteUsed_correlatorData /* IMPORTED_LONG_NAMED_BIT */, RouteUsed_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_RouteUsed, _encode_RouteUsed } from "../CSTA-capability-exchange/RouteUsed.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { RouteRegister, _decode_RouteRegister, _encode_RouteRegister } from "../CSTA-capability-exchange/RouteRegister.ta.mjs";
+
+import { RouteRegisterCancel, _decode_RouteRegisterCancel, _encode_RouteRegisterCancel } from "../CSTA-capability-exchange/RouteRegisterCancel.ta.mjs";
+
+import { RouteRegisterAbort, _decode_RouteRegisterAbort, _encode_RouteRegisterAbort } from "../CSTA-capability-exchange/RouteRegisterAbort.ta.mjs";
+
+import { ReRoute, _decode_ReRoute, _encode_ReRoute } from "../CSTA-capability-exchange/ReRoute.ta.mjs";
+
+import { RouteEnd, _decode_RouteEnd, _encode_RouteEnd } from "../CSTA-capability-exchange/RouteEnd.ta.mjs";
+
+import { RouteReject, _decode_RouteReject, _encode_RouteReject } from "../CSTA-capability-exchange/RouteReject.ta.mjs";
+
+import { RouteRequest, _decode_RouteRequest, _encode_RouteRequest } from "../CSTA-capability-exchange/RouteRequest.ta.mjs";
+
+import {
+    RouteSelect,
+    routeUsed /* IMPORTED_SHORT_NAMED_BIT */,
+    _decode_RouteSelect,
+    _encode_RouteSelect
+} from "../CSTA-capability-exchange/RouteSelect.ta.mjs";
+
+import { RouteUsed, _decode_RouteUsed, _encode_RouteUsed } from "../CSTA-capability-exchange/RouteUsed.ta.mjs";
+
 
 
 /**
@@ -195,15 +142,15 @@ class RouteingServList {
  */
 export
 const _root_component_type_list_1_spec_for_RouteingServList: $.ComponentSpec[] = [
-    new $.ComponentSpec("routeRegister", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("routeRegisterCancel", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("routeRegisterAbort", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("reRoute", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("routeEnd", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("routeReject", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("routeRequest", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("routeSelect", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("routeUsed", true, $.hasTag(_TagClass.context, 8), undefined, undefined)
+    new $.ComponentSpec("routeRegister", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("routeRegisterCancel", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("routeRegisterAbort", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("reRoute", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("routeEnd", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("routeReject", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("routeRequest", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("routeSelect", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("routeUsed", true, $.hasTag(_TagClass.context, 8))
 ];
 
 /**

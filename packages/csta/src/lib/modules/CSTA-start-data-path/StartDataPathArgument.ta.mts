@@ -1,83 +1,37 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { IORegisterReqID, _decode_IORegisterReqID, _encode_IORegisterReqID } from "../CSTA-device-feature-types/IORegisterReqID.ta.mjs";
-// export { IORegisterReqID, _decode_IORegisterReqID, _encode_IORegisterReqID } from "../CSTA-device-feature-types/IORegisterReqID.ta.mjs";
+
 import { CSTAObject, _decode_CSTAObject, _encode_CSTAObject } from "../CSTA-switching-function-objects/CSTAObject.ta.mjs";
-// export { CSTAObject, _decode_CSTAObject, _encode_CSTAObject } from "../CSTA-switching-function-objects/CSTAObject.ta.mjs";
-import { DataPathDirection, _enum_for_DataPathDirection, DataPathDirection_computeFunctionToObject /* IMPORTED_LONG_ENUMERATION_ITEM */, computeFunctionToObject /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataPathDirection_objectToComputeFunction /* IMPORTED_LONG_ENUMERATION_ITEM */, objectToComputeFunction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataPathDirection_bidirectional /* IMPORTED_LONG_ENUMERATION_ITEM */, bidirectional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DataPathDirection, _encode_DataPathDirection } from "../CSTA-start-data-path/DataPathDirection.ta.mjs";
-// export { DataPathDirection, _enum_for_DataPathDirection, DataPathDirection_computeFunctionToObject /* IMPORTED_LONG_ENUMERATION_ITEM */, computeFunctionToObject /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataPathDirection_objectToComputeFunction /* IMPORTED_LONG_ENUMERATION_ITEM */, objectToComputeFunction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataPathDirection_bidirectional /* IMPORTED_LONG_ENUMERATION_ITEM */, bidirectional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DataPathDirection, _encode_DataPathDirection } from "../CSTA-start-data-path/DataPathDirection.ta.mjs";
-import { DataPathType, _enum_for_DataPathType, DataPathType_text /* IMPORTED_LONG_ENUMERATION_ITEM */, text /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataPathType_voice /* IMPORTED_LONG_ENUMERATION_ITEM */, voice /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DataPathType, _encode_DataPathType } from "../CSTA-device-feature-types/DataPathType.ta.mjs";
-// export { DataPathType, _enum_for_DataPathType, DataPathType_text /* IMPORTED_LONG_ENUMERATION_ITEM */, text /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataPathType_voice /* IMPORTED_LONG_ENUMERATION_ITEM */, voice /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DataPathType, _encode_DataPathType } from "../CSTA-device-feature-types/DataPathType.ta.mjs";
+
+import {
+    DataPathDirection,
+    _enum_for_DataPathDirection,
+    _decode_DataPathDirection,
+    _encode_DataPathDirection
+} from "../CSTA-start-data-path/DataPathDirection.ta.mjs";
+
+import {
+    DataPathType,
+    _enum_for_DataPathType,
+    _decode_DataPathType,
+    _encode_DataPathType
+} from "../CSTA-device-feature-types/DataPathType.ta.mjs";
+
 import { DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physical-device-feature/DisplayID.ta.mjs";
-// export { DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physical-device-feature/DisplayID.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -201,15 +155,15 @@ class StartDataPathArgument {
  */
 export
 const _root_component_type_list_1_spec_for_StartDataPathArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("ioRegisterReqID", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("object", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("dataPathDirection", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("dataPathType", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("displayID", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("numberOfCharactersToCollect", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("terminationCharacter", true, $.hasTag(_TagClass.universal, 22), undefined, undefined),
-    new $.ComponentSpec("timeout", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("ioRegisterReqID", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("object", false, $.hasAnyTag),
+    new $.ComponentSpec("dataPathDirection", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("dataPathType", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("displayID", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("numberOfCharactersToCollect", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("terminationCharacter", true, $.hasTag(_TagClass.universal, 22)),
+    new $.ComponentSpec("timeout", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

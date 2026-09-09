@@ -1,107 +1,43 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+
+import * as $ from "@wildboar/asn1/functional";
+import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import { BridgedEvent, _decode_BridgedEvent, _encode_BridgedEvent } from "../CSTA-bridged-event/BridgedEvent.ta.mjs";
-// export { BridgedEvent, _decode_BridgedEvent, _encode_BridgedEvent } from "../CSTA-bridged-event/BridgedEvent.ta.mjs";
+
 import { CallClearedEvent, _decode_CallClearedEvent, _encode_CallClearedEvent } from "../CSTA-call-cleared-event/CallClearedEvent.ta.mjs";
-// export { CallClearedEvent, _decode_CallClearedEvent, _encode_CallClearedEvent } from "../CSTA-call-cleared-event/CallClearedEvent.ta.mjs";
+
 import { ConferencedEvent, _decode_ConferencedEvent, _encode_ConferencedEvent } from "../CSTA-conferenced-event/ConferencedEvent.ta.mjs";
-// export { ConferencedEvent, _decode_ConferencedEvent, _encode_ConferencedEvent } from "../CSTA-conferenced-event/ConferencedEvent.ta.mjs";
+
 import { ConnectionClearedEvent, _decode_ConnectionClearedEvent, _encode_ConnectionClearedEvent } from "../CSTA-connection-cleared-event/ConnectionClearedEvent.ta.mjs";
-// export { ConnectionClearedEvent, _decode_ConnectionClearedEvent, _encode_ConnectionClearedEvent } from "../CSTA-connection-cleared-event/ConnectionClearedEvent.ta.mjs";
+
 import { DeliveredEvent, _decode_DeliveredEvent, _encode_DeliveredEvent } from "../CSTA-delivered-event/DeliveredEvent.ta.mjs";
-// export { DeliveredEvent, _decode_DeliveredEvent, _encode_DeliveredEvent } from "../CSTA-delivered-event/DeliveredEvent.ta.mjs";
+
 import { DigitsDialedEvent, _decode_DigitsDialedEvent, _encode_DigitsDialedEvent } from "../CSTA-digits-dialed-event/DigitsDialedEvent.ta.mjs";
-// export { DigitsDialedEvent, _decode_DigitsDialedEvent, _encode_DigitsDialedEvent } from "../CSTA-digits-dialed-event/DigitsDialedEvent.ta.mjs";
+
 import { DivertedEvent, _decode_DivertedEvent, _encode_DivertedEvent } from "../CSTA-diverted-event/DivertedEvent.ta.mjs";
-// export { DivertedEvent, _decode_DivertedEvent, _encode_DivertedEvent } from "../CSTA-diverted-event/DivertedEvent.ta.mjs";
+
 import { EstablishedEvent, _decode_EstablishedEvent, _encode_EstablishedEvent } from "../CSTA-established-event/EstablishedEvent.ta.mjs";
-// export { EstablishedEvent, _decode_EstablishedEvent, _encode_EstablishedEvent } from "../CSTA-established-event/EstablishedEvent.ta.mjs";
+
 import { FailedEvent, _decode_FailedEvent, _encode_FailedEvent } from "../CSTA-failed-event/FailedEvent.ta.mjs";
-// export { FailedEvent, _decode_FailedEvent, _encode_FailedEvent } from "../CSTA-failed-event/FailedEvent.ta.mjs";
+
 import { HeldEvent, _decode_HeldEvent, _encode_HeldEvent } from "../CSTA-held-event/HeldEvent.ta.mjs";
-// export { HeldEvent, _decode_HeldEvent, _encode_HeldEvent } from "../CSTA-held-event/HeldEvent.ta.mjs";
+
 import { NetworkCapabilitiesChangedEvent, _decode_NetworkCapabilitiesChangedEvent, _encode_NetworkCapabilitiesChangedEvent } from "../CSTA-network-capabilities-changed-event/NetworkCapabilitiesChangedEvent.ta.mjs";
-// export { NetworkCapabilitiesChangedEvent, _decode_NetworkCapabilitiesChangedEvent, _encode_NetworkCapabilitiesChangedEvent } from "../CSTA-network-capabilities-changed-event/NetworkCapabilitiesChangedEvent.ta.mjs";
+
 import { NetworkReachedEvent, _decode_NetworkReachedEvent, _encode_NetworkReachedEvent } from "../CSTA-network-reached-event/NetworkReachedEvent.ta.mjs";
-// export { NetworkReachedEvent, _decode_NetworkReachedEvent, _encode_NetworkReachedEvent } from "../CSTA-network-reached-event/NetworkReachedEvent.ta.mjs";
+
 import { OfferedEvent, _decode_OfferedEvent, _encode_OfferedEvent } from "../CSTA-offered-event/OfferedEvent.ta.mjs";
-// export { OfferedEvent, _decode_OfferedEvent, _encode_OfferedEvent } from "../CSTA-offered-event/OfferedEvent.ta.mjs";
+
 import { OriginatedEvent, _decode_OriginatedEvent, _encode_OriginatedEvent } from "../CSTA-originated-event/OriginatedEvent.ta.mjs";
-// export { OriginatedEvent, _decode_OriginatedEvent, _encode_OriginatedEvent } from "../CSTA-originated-event/OriginatedEvent.ta.mjs";
+
 import { QueuedEvent, _decode_QueuedEvent, _encode_QueuedEvent } from "../CSTA-queued-event/QueuedEvent.ta.mjs";
-// export { QueuedEvent, _decode_QueuedEvent, _encode_QueuedEvent } from "../CSTA-queued-event/QueuedEvent.ta.mjs";
+
 import { RetrievedEvent, _decode_RetrievedEvent, _encode_RetrievedEvent } from "../CSTA-retrieved-event/RetrievedEvent.ta.mjs";
-// export { RetrievedEvent, _decode_RetrievedEvent, _encode_RetrievedEvent } from "../CSTA-retrieved-event/RetrievedEvent.ta.mjs";
+
 import { ServiceInitiatedEvent, _decode_ServiceInitiatedEvent, _encode_ServiceInitiatedEvent } from "../CSTA-service-initiated-event/ServiceInitiatedEvent.ta.mjs";
-// export { ServiceInitiatedEvent, _decode_ServiceInitiatedEvent, _encode_ServiceInitiatedEvent } from "../CSTA-service-initiated-event/ServiceInitiatedEvent.ta.mjs";
+
 import { TransferredEvent, _decode_TransferredEvent, _encode_TransferredEvent } from "../CSTA-transferred-event/TransferredEvent.ta.mjs";
-// export { TransferredEvent, _decode_TransferredEvent, _encode_TransferredEvent } from "../CSTA-transferred-event/TransferredEvent.ta.mjs";
+
 
 
 /**

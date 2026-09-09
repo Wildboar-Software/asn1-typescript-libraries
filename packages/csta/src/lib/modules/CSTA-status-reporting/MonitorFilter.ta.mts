@@ -1,87 +1,29 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { CallControlEvents, CallControlEvents_bridged /* IMPORTED_LONG_NAMED_BIT */, bridged /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_callCleared /* IMPORTED_LONG_NAMED_BIT */, callCleared /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_conferenced /* IMPORTED_LONG_NAMED_BIT */, conferenced /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_connectionCleared /* IMPORTED_LONG_NAMED_BIT */, connectionCleared /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_delivered /* IMPORTED_LONG_NAMED_BIT */, delivered /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_digitsDialed /* IMPORTED_LONG_NAMED_BIT */, digitsDialed /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_diverted /* IMPORTED_LONG_NAMED_BIT */, diverted /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_established /* IMPORTED_LONG_NAMED_BIT */, established /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_failed /* IMPORTED_LONG_NAMED_BIT */, failed /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_held /* IMPORTED_LONG_NAMED_BIT */, held /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_networkCapabilitiesChanged /* IMPORTED_LONG_NAMED_BIT */, networkCapabilitiesChanged /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_networkReached /* IMPORTED_LONG_NAMED_BIT */, networkReached /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_offered /* IMPORTED_LONG_NAMED_BIT */, offered /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_originated /* IMPORTED_LONG_NAMED_BIT */, originated /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_queued /* IMPORTED_LONG_NAMED_BIT */, queued /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_retrieved /* IMPORTED_LONG_NAMED_BIT */, retrieved /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_serviceInitiated /* IMPORTED_LONG_NAMED_BIT */, serviceInitiated /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_transferred /* IMPORTED_LONG_NAMED_BIT */, transferred /* IMPORTED_SHORT_NAMED_BIT */, _decode_CallControlEvents, _encode_CallControlEvents } from "../CSTA-application-context-information-csta3/CallControlEvents.ta.mjs";
-// export { CallControlEvents, CallControlEvents_bridged /* IMPORTED_LONG_NAMED_BIT */, bridged /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_callCleared /* IMPORTED_LONG_NAMED_BIT */, callCleared /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_conferenced /* IMPORTED_LONG_NAMED_BIT */, conferenced /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_connectionCleared /* IMPORTED_LONG_NAMED_BIT */, connectionCleared /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_delivered /* IMPORTED_LONG_NAMED_BIT */, delivered /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_digitsDialed /* IMPORTED_LONG_NAMED_BIT */, digitsDialed /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_diverted /* IMPORTED_LONG_NAMED_BIT */, diverted /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_established /* IMPORTED_LONG_NAMED_BIT */, established /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_failed /* IMPORTED_LONG_NAMED_BIT */, failed /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_held /* IMPORTED_LONG_NAMED_BIT */, held /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_networkCapabilitiesChanged /* IMPORTED_LONG_NAMED_BIT */, networkCapabilitiesChanged /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_networkReached /* IMPORTED_LONG_NAMED_BIT */, networkReached /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_offered /* IMPORTED_LONG_NAMED_BIT */, offered /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_originated /* IMPORTED_LONG_NAMED_BIT */, originated /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_queued /* IMPORTED_LONG_NAMED_BIT */, queued /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_retrieved /* IMPORTED_LONG_NAMED_BIT */, retrieved /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_serviceInitiated /* IMPORTED_LONG_NAMED_BIT */, serviceInitiated /* IMPORTED_SHORT_NAMED_BIT */, CallControlEvents_transferred /* IMPORTED_LONG_NAMED_BIT */, transferred /* IMPORTED_SHORT_NAMED_BIT */, _decode_CallControlEvents, _encode_CallControlEvents } from "../CSTA-application-context-information-csta3/CallControlEvents.ta.mjs";
-import { CallAssociatedEvents, CallAssociatedEvents_callInformation /* IMPORTED_LONG_NAMED_BIT */, callInformation /* IMPORTED_SHORT_NAMED_BIT */, CallAssociatedEvents_charging /* IMPORTED_LONG_NAMED_BIT */, charging /* IMPORTED_SHORT_NAMED_BIT */, CallAssociatedEvents_dTMFDigitsDetected /* IMPORTED_LONG_NAMED_BIT */, dTMFDigitsDetected /* IMPORTED_SHORT_NAMED_BIT */, CallAssociatedEvents_telephonyTonesDetected /* IMPORTED_LONG_NAMED_BIT */, telephonyTonesDetected /* IMPORTED_SHORT_NAMED_BIT */, CallAssociatedEvents_serviceCompletionFailure /* IMPORTED_LONG_NAMED_BIT */, serviceCompletionFailure /* IMPORTED_SHORT_NAMED_BIT */, _decode_CallAssociatedEvents, _encode_CallAssociatedEvents } from "../CSTA-application-context-information-csta3/CallAssociatedEvents.ta.mjs";
-// export { CallAssociatedEvents, CallAssociatedEvents_callInformation /* IMPORTED_LONG_NAMED_BIT */, callInformation /* IMPORTED_SHORT_NAMED_BIT */, CallAssociatedEvents_charging /* IMPORTED_LONG_NAMED_BIT */, charging /* IMPORTED_SHORT_NAMED_BIT */, CallAssociatedEvents_dTMFDigitsDetected /* IMPORTED_LONG_NAMED_BIT */, dTMFDigitsDetected /* IMPORTED_SHORT_NAMED_BIT */, CallAssociatedEvents_telephonyTonesDetected /* IMPORTED_LONG_NAMED_BIT */, telephonyTonesDetected /* IMPORTED_SHORT_NAMED_BIT */, CallAssociatedEvents_serviceCompletionFailure /* IMPORTED_LONG_NAMED_BIT */, serviceCompletionFailure /* IMPORTED_SHORT_NAMED_BIT */, _decode_CallAssociatedEvents, _encode_CallAssociatedEvents } from "../CSTA-application-context-information-csta3/CallAssociatedEvents.ta.mjs";
-import { MediaAttachmentEvents, MediaAttachmentEvents_mediaAttached /* IMPORTED_LONG_NAMED_BIT */, mediaAttached /* IMPORTED_SHORT_NAMED_BIT */, MediaAttachmentEvents_mediaDetached /* IMPORTED_LONG_NAMED_BIT */, mediaDetached /* IMPORTED_SHORT_NAMED_BIT */, _decode_MediaAttachmentEvents, _encode_MediaAttachmentEvents } from "../CSTA-application-context-information-csta3/MediaAttachmentEvents.ta.mjs";
-// export { MediaAttachmentEvents, MediaAttachmentEvents_mediaAttached /* IMPORTED_LONG_NAMED_BIT */, mediaAttached /* IMPORTED_SHORT_NAMED_BIT */, MediaAttachmentEvents_mediaDetached /* IMPORTED_LONG_NAMED_BIT */, mediaDetached /* IMPORTED_SHORT_NAMED_BIT */, _decode_MediaAttachmentEvents, _encode_MediaAttachmentEvents } from "../CSTA-application-context-information-csta3/MediaAttachmentEvents.ta.mjs";
-import { PhysicalDeviceFeatureEvents, PhysicalDeviceFeatureEvents_buttonInformation /* IMPORTED_LONG_NAMED_BIT */, buttonInformation /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_buttonPress /* IMPORTED_LONG_NAMED_BIT */, buttonPress /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_displayUpdated /* IMPORTED_LONG_NAMED_BIT */, displayUpdated /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_hookswitch /* IMPORTED_LONG_NAMED_BIT */, hookswitch /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_lampMode /* IMPORTED_LONG_NAMED_BIT */, lampMode /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_messageWaiting /* IMPORTED_LONG_NAMED_BIT */, messageWaiting /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_microphoneGain /* IMPORTED_LONG_NAMED_BIT */, microphoneGain /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_microphoneMute /* IMPORTED_LONG_NAMED_BIT */, microphoneMute /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_ringerStatus /* IMPORTED_LONG_NAMED_BIT */, ringerStatus /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_speakerMute /* IMPORTED_LONG_NAMED_BIT */, speakerMute /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_speakerVolume /* IMPORTED_LONG_NAMED_BIT */, speakerVolume /* IMPORTED_SHORT_NAMED_BIT */, _decode_PhysicalDeviceFeatureEvents, _encode_PhysicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/PhysicalDeviceFeatureEvents.ta.mjs";
-// export { PhysicalDeviceFeatureEvents, PhysicalDeviceFeatureEvents_buttonInformation /* IMPORTED_LONG_NAMED_BIT */, buttonInformation /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_buttonPress /* IMPORTED_LONG_NAMED_BIT */, buttonPress /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_displayUpdated /* IMPORTED_LONG_NAMED_BIT */, displayUpdated /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_hookswitch /* IMPORTED_LONG_NAMED_BIT */, hookswitch /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_lampMode /* IMPORTED_LONG_NAMED_BIT */, lampMode /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_messageWaiting /* IMPORTED_LONG_NAMED_BIT */, messageWaiting /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_microphoneGain /* IMPORTED_LONG_NAMED_BIT */, microphoneGain /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_microphoneMute /* IMPORTED_LONG_NAMED_BIT */, microphoneMute /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_ringerStatus /* IMPORTED_LONG_NAMED_BIT */, ringerStatus /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_speakerMute /* IMPORTED_LONG_NAMED_BIT */, speakerMute /* IMPORTED_SHORT_NAMED_BIT */, PhysicalDeviceFeatureEvents_speakerVolume /* IMPORTED_LONG_NAMED_BIT */, speakerVolume /* IMPORTED_SHORT_NAMED_BIT */, _decode_PhysicalDeviceFeatureEvents, _encode_PhysicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/PhysicalDeviceFeatureEvents.ta.mjs";
-import { LogicalDeviceFeatureEvents, LogicalDeviceFeatureEvents_agentBusy /* IMPORTED_LONG_NAMED_BIT */, agentBusy /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentLoggedOn /* IMPORTED_LONG_NAMED_BIT */, agentLoggedOn /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentLoggedOff /* IMPORTED_LONG_NAMED_BIT */, agentLoggedOff /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentNotReady /* IMPORTED_LONG_NAMED_BIT */, agentNotReady /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentReady /* IMPORTED_LONG_NAMED_BIT */, agentReady /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentWorkingAfterCall /* IMPORTED_LONG_NAMED_BIT */, agentWorkingAfterCall /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_autoAnswer /* IMPORTED_LONG_NAMED_BIT */, autoAnswer /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_autoWorkMode /* IMPORTED_LONG_NAMED_BIT */, autoWorkMode /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_callBack /* IMPORTED_LONG_NAMED_BIT */, callBack /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_callBackMessage /* IMPORTED_LONG_NAMED_BIT */, callBackMessage /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_callerIDStatus /* IMPORTED_LONG_NAMED_BIT */, callerIDStatus /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_doNotDisturb /* IMPORTED_LONG_NAMED_BIT */, doNotDisturb /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_forwarding /* IMPORTED_LONG_NAMED_BIT */, forwarding /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_presenceState /* IMPORTED_LONG_NAMED_BIT */, presenceState /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_routeingMode /* IMPORTED_LONG_NAMED_BIT */, routeingMode /* IMPORTED_SHORT_NAMED_BIT */, _decode_LogicalDeviceFeatureEvents, _encode_LogicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/LogicalDeviceFeatureEvents.ta.mjs";
-// export { LogicalDeviceFeatureEvents, LogicalDeviceFeatureEvents_agentBusy /* IMPORTED_LONG_NAMED_BIT */, agentBusy /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentLoggedOn /* IMPORTED_LONG_NAMED_BIT */, agentLoggedOn /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentLoggedOff /* IMPORTED_LONG_NAMED_BIT */, agentLoggedOff /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentNotReady /* IMPORTED_LONG_NAMED_BIT */, agentNotReady /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentReady /* IMPORTED_LONG_NAMED_BIT */, agentReady /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_agentWorkingAfterCall /* IMPORTED_LONG_NAMED_BIT */, agentWorkingAfterCall /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_autoAnswer /* IMPORTED_LONG_NAMED_BIT */, autoAnswer /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_autoWorkMode /* IMPORTED_LONG_NAMED_BIT */, autoWorkMode /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_callBack /* IMPORTED_LONG_NAMED_BIT */, callBack /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_callBackMessage /* IMPORTED_LONG_NAMED_BIT */, callBackMessage /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_callerIDStatus /* IMPORTED_LONG_NAMED_BIT */, callerIDStatus /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_doNotDisturb /* IMPORTED_LONG_NAMED_BIT */, doNotDisturb /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_forwarding /* IMPORTED_LONG_NAMED_BIT */, forwarding /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_presenceState /* IMPORTED_LONG_NAMED_BIT */, presenceState /* IMPORTED_SHORT_NAMED_BIT */, LogicalDeviceFeatureEvents_routeingMode /* IMPORTED_LONG_NAMED_BIT */, routeingMode /* IMPORTED_SHORT_NAMED_BIT */, _decode_LogicalDeviceFeatureEvents, _encode_LogicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/LogicalDeviceFeatureEvents.ta.mjs";
-import { DeviceMaintenanceEvents, DeviceMaintenanceEvents_backInService /* IMPORTED_LONG_NAMED_BIT */, backInService /* IMPORTED_SHORT_NAMED_BIT */, DeviceMaintenanceEvents_deviceCapabilityChanged /* IMPORTED_LONG_NAMED_BIT */, deviceCapabilityChanged /* IMPORTED_SHORT_NAMED_BIT */, DeviceMaintenanceEvents_outOfService /* IMPORTED_LONG_NAMED_BIT */, outOfService /* IMPORTED_SHORT_NAMED_BIT */, DeviceMaintenanceEvents_partiallyInService /* IMPORTED_LONG_NAMED_BIT */, partiallyInService /* IMPORTED_SHORT_NAMED_BIT */, _decode_DeviceMaintenanceEvents, _encode_DeviceMaintenanceEvents } from "../CSTA-application-context-information-csta3/DeviceMaintenanceEvents.ta.mjs";
-// export { DeviceMaintenanceEvents, DeviceMaintenanceEvents_backInService /* IMPORTED_LONG_NAMED_BIT */, backInService /* IMPORTED_SHORT_NAMED_BIT */, DeviceMaintenanceEvents_deviceCapabilityChanged /* IMPORTED_LONG_NAMED_BIT */, deviceCapabilityChanged /* IMPORTED_SHORT_NAMED_BIT */, DeviceMaintenanceEvents_outOfService /* IMPORTED_LONG_NAMED_BIT */, outOfService /* IMPORTED_SHORT_NAMED_BIT */, DeviceMaintenanceEvents_partiallyInService /* IMPORTED_LONG_NAMED_BIT */, partiallyInService /* IMPORTED_SHORT_NAMED_BIT */, _decode_DeviceMaintenanceEvents, _encode_DeviceMaintenanceEvents } from "../CSTA-application-context-information-csta3/DeviceMaintenanceEvents.ta.mjs";
-import { VoiceUnitEvents, VoiceUnitEvents_bookmarkReached /* IMPORTED_LONG_NAMED_BIT */, bookmarkReached /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_completed /* IMPORTED_LONG_NAMED_BIT */, completed /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_dtmfDetected /* IMPORTED_LONG_NAMED_BIT */, dtmfDetected /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_emptied /* IMPORTED_LONG_NAMED_BIT */, emptied /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_interruptionDetected /* IMPORTED_LONG_NAMED_BIT */, interruptionDetected /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_notRecognized /* IMPORTED_LONG_NAMED_BIT */, notRecognized /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_play /* IMPORTED_LONG_NAMED_BIT */, play /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_recognized /* IMPORTED_LONG_NAMED_BIT */, recognized /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_record /* IMPORTED_LONG_NAMED_BIT */, record /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_review /* IMPORTED_LONG_NAMED_BIT */, review /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_started /* IMPORTED_LONG_NAMED_BIT */, started /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_silenceTimeoutExpired /* IMPORTED_LONG_NAMED_BIT */, silenceTimeoutExpired /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_speechDetected /* IMPORTED_LONG_NAMED_BIT */, speechDetected /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_stop /* IMPORTED_LONG_NAMED_BIT */, stop /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_suspendPlay /* IMPORTED_LONG_NAMED_BIT */, suspendPlay /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_suspendRecord /* IMPORTED_LONG_NAMED_BIT */, suspendRecord /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_voiceAttributesChange /* IMPORTED_LONG_NAMED_BIT */, voiceAttributesChange /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_voiceErrorOccured /* IMPORTED_LONG_NAMED_BIT */, voiceErrorOccured /* IMPORTED_SHORT_NAMED_BIT */, _decode_VoiceUnitEvents, _encode_VoiceUnitEvents } from "../CSTA-application-context-information-csta3/VoiceUnitEvents.ta.mjs";
-// export { VoiceUnitEvents, VoiceUnitEvents_bookmarkReached /* IMPORTED_LONG_NAMED_BIT */, bookmarkReached /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_completed /* IMPORTED_LONG_NAMED_BIT */, completed /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_dtmfDetected /* IMPORTED_LONG_NAMED_BIT */, dtmfDetected /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_emptied /* IMPORTED_LONG_NAMED_BIT */, emptied /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_interruptionDetected /* IMPORTED_LONG_NAMED_BIT */, interruptionDetected /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_notRecognized /* IMPORTED_LONG_NAMED_BIT */, notRecognized /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_play /* IMPORTED_LONG_NAMED_BIT */, play /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_recognized /* IMPORTED_LONG_NAMED_BIT */, recognized /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_record /* IMPORTED_LONG_NAMED_BIT */, record /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_review /* IMPORTED_LONG_NAMED_BIT */, review /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_started /* IMPORTED_LONG_NAMED_BIT */, started /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_silenceTimeoutExpired /* IMPORTED_LONG_NAMED_BIT */, silenceTimeoutExpired /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_speechDetected /* IMPORTED_LONG_NAMED_BIT */, speechDetected /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_stop /* IMPORTED_LONG_NAMED_BIT */, stop /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_suspendPlay /* IMPORTED_LONG_NAMED_BIT */, suspendPlay /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_suspendRecord /* IMPORTED_LONG_NAMED_BIT */, suspendRecord /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_voiceAttributesChange /* IMPORTED_LONG_NAMED_BIT */, voiceAttributesChange /* IMPORTED_SHORT_NAMED_BIT */, VoiceUnitEvents_voiceErrorOccured /* IMPORTED_LONG_NAMED_BIT */, voiceErrorOccured /* IMPORTED_SHORT_NAMED_BIT */, _decode_VoiceUnitEvents, _encode_VoiceUnitEvents } from "../CSTA-application-context-information-csta3/VoiceUnitEvents.ta.mjs";
-import { VendorSpecEvents, VendorSpecEvents_privateEvent /* IMPORTED_LONG_NAMED_BIT */, privateEvent /* IMPORTED_SHORT_NAMED_BIT */, _decode_VendorSpecEvents, _encode_VendorSpecEvents } from "../CSTA-application-context-information-csta3/VendorSpecEvents.ta.mjs";
-// export { VendorSpecEvents, VendorSpecEvents_privateEvent /* IMPORTED_LONG_NAMED_BIT */, privateEvent /* IMPORTED_SHORT_NAMED_BIT */, _decode_VendorSpecEvents, _encode_VendorSpecEvents } from "../CSTA-application-context-information-csta3/VendorSpecEvents.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { CallControlEvents, _decode_CallControlEvents, _encode_CallControlEvents } from "../CSTA-application-context-information-csta3/CallControlEvents.ta.mjs";
+
+import { CallAssociatedEvents, _decode_CallAssociatedEvents, _encode_CallAssociatedEvents } from "../CSTA-application-context-information-csta3/CallAssociatedEvents.ta.mjs";
+
+import { MediaAttachmentEvents, _decode_MediaAttachmentEvents, _encode_MediaAttachmentEvents } from "../CSTA-application-context-information-csta3/MediaAttachmentEvents.ta.mjs";
+
+import { PhysicalDeviceFeatureEvents, _decode_PhysicalDeviceFeatureEvents, _encode_PhysicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/PhysicalDeviceFeatureEvents.ta.mjs";
+
+import { LogicalDeviceFeatureEvents, _decode_LogicalDeviceFeatureEvents, _encode_LogicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/LogicalDeviceFeatureEvents.ta.mjs";
+
+import { DeviceMaintenanceEvents, _decode_DeviceMaintenanceEvents, _encode_DeviceMaintenanceEvents } from "../CSTA-application-context-information-csta3/DeviceMaintenanceEvents.ta.mjs";
+
+import { VoiceUnitEvents, _decode_VoiceUnitEvents, _encode_VoiceUnitEvents } from "../CSTA-application-context-information-csta3/VoiceUnitEvents.ta.mjs";
+
+import { VendorSpecEvents, _decode_VendorSpecEvents, _encode_VendorSpecEvents } from "../CSTA-application-context-information-csta3/VendorSpecEvents.ta.mjs";
+
 
 
 /**
@@ -241,14 +183,14 @@ class MonitorFilter {
  */
 export
 const _root_component_type_list_1_spec_for_MonitorFilter: $.ComponentSpec[] = [
-    new $.ComponentSpec("callControl", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("callAssociated", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("mediaAttachment", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("physicalDeviceFeature", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("logicalDeviceFeature", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("maintenance", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("voiceUnit", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("private", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("callControl", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callAssociated", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("mediaAttachment", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("physicalDeviceFeature", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("logicalDeviceFeature", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("maintenance", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("voiceUnit", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("private", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**

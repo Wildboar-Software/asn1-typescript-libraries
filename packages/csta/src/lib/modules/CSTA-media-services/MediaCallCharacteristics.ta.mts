@@ -1,77 +1,45 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
     ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { MediaClass, MediaClass_voice /* IMPORTED_LONG_NAMED_BIT */, voice /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_data /* IMPORTED_LONG_NAMED_BIT */, data /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_image /* IMPORTED_LONG_NAMED_BIT */, image /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_audio /* IMPORTED_LONG_NAMED_BIT */, audio /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_other /* IMPORTED_LONG_NAMED_BIT */, MediaClass_notKnown /* IMPORTED_LONG_NAMED_BIT */, notKnown /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_chat /* IMPORTED_LONG_NAMED_BIT */, chat /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_email /* IMPORTED_LONG_NAMED_BIT */, email /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_message /* IMPORTED_LONG_NAMED_BIT */, message /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_im /* IMPORTED_LONG_NAMED_BIT */, im /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_sms /* IMPORTED_LONG_NAMED_BIT */, sms /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_mms /* IMPORTED_LONG_NAMED_BIT */, mms /* IMPORTED_SHORT_NAMED_BIT */, _decode_MediaClass, _encode_MediaClass } from "../CSTA-media-services/MediaClass.ta.mjs";
-// export { MediaClass, MediaClass_voice /* IMPORTED_LONG_NAMED_BIT */, voice /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_data /* IMPORTED_LONG_NAMED_BIT */, data /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_image /* IMPORTED_LONG_NAMED_BIT */, image /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_audio /* IMPORTED_LONG_NAMED_BIT */, audio /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_other /* IMPORTED_LONG_NAMED_BIT */, MediaClass_notKnown /* IMPORTED_LONG_NAMED_BIT */, notKnown /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_chat /* IMPORTED_LONG_NAMED_BIT */, chat /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_email /* IMPORTED_LONG_NAMED_BIT */, email /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_message /* IMPORTED_LONG_NAMED_BIT */, message /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_im /* IMPORTED_LONG_NAMED_BIT */, im /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_sms /* IMPORTED_LONG_NAMED_BIT */, sms /* IMPORTED_SHORT_NAMED_BIT */, MediaClass_mms /* IMPORTED_LONG_NAMED_BIT */, mms /* IMPORTED_SHORT_NAMED_BIT */, _decode_MediaClass, _encode_MediaClass } from "../CSTA-media-services/MediaClass.ta.mjs";
-import { MediaCallCharacteristics_bitRate, _enum_for_MediaCallCharacteristics_bitRate, MediaCallCharacteristics_bitRate_constant /* IMPORTED_LONG_ENUMERATION_ITEM */, constant /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_bitRate_variable /* IMPORTED_LONG_ENUMERATION_ITEM */, variable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MediaCallCharacteristics_bitRate, _encode_MediaCallCharacteristics_bitRate } from "../CSTA-media-services/MediaCallCharacteristics-bitRate.ta.mjs";
-// export { MediaCallCharacteristics_bitRate, _enum_for_MediaCallCharacteristics_bitRate, MediaCallCharacteristics_bitRate_constant /* IMPORTED_LONG_ENUMERATION_ITEM */, constant /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_bitRate_variable /* IMPORTED_LONG_ENUMERATION_ITEM */, variable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MediaCallCharacteristics_bitRate, _encode_MediaCallCharacteristics_bitRate } from "../CSTA-media-services/MediaCallCharacteristics-bitRate.ta.mjs";
-import { MediaCallCharacteristics_switchingSubDomainCCIEType, _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType, MediaCallCharacteristics_switchingSubDomainCCIEType_isdn /* IMPORTED_LONG_ENUMERATION_ITEM */, isdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_atm /* IMPORTED_LONG_ENUMERATION_ITEM */, atm /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_isoEthernet /* IMPORTED_LONG_ENUMERATION_ITEM */, isoEthernet /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_rsvp /* IMPORTED_LONG_ENUMERATION_ITEM */, rsvp /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_other /* IMPORTED_LONG_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_sip /* IMPORTED_LONG_ENUMERATION_ITEM */, sip /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MediaCallCharacteristics_switchingSubDomainCCIEType, _encode_MediaCallCharacteristics_switchingSubDomainCCIEType } from "../CSTA-media-services/MediaCallCharacteristics-switchingSubDomainCCIEType.ta.mjs";
-// export { MediaCallCharacteristics_switchingSubDomainCCIEType, _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType, MediaCallCharacteristics_switchingSubDomainCCIEType_isdn /* IMPORTED_LONG_ENUMERATION_ITEM */, isdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_atm /* IMPORTED_LONG_ENUMERATION_ITEM */, atm /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_isoEthernet /* IMPORTED_LONG_ENUMERATION_ITEM */, isoEthernet /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_rsvp /* IMPORTED_LONG_ENUMERATION_ITEM */, rsvp /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_other /* IMPORTED_LONG_ENUMERATION_ITEM */, MediaCallCharacteristics_switchingSubDomainCCIEType_sip /* IMPORTED_LONG_ENUMERATION_ITEM */, sip /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MediaCallCharacteristics_switchingSubDomainCCIEType, _encode_MediaCallCharacteristics_switchingSubDomainCCIEType } from "../CSTA-media-services/MediaCallCharacteristics-switchingSubDomainCCIEType.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import {
+    MediaClass,
+    data /* IMPORTED_SHORT_NAMED_BIT */,
+    _decode_MediaClass,
+    _encode_MediaClass
+} from "../CSTA-media-services/MediaClass.ta.mjs";
+
+import {
+    MediaCallCharacteristics_bitRate,
+    _enum_for_MediaCallCharacteristics_bitRate,
+    MediaCallCharacteristics_bitRate_constant /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    constant /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    variable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_MediaCallCharacteristics_bitRate,
+    _encode_MediaCallCharacteristics_bitRate
+} from "../CSTA-media-services/MediaCallCharacteristics-bitRate.ta.mjs";
+
+import {
+    MediaCallCharacteristics_switchingSubDomainCCIEType,
+    _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType,
+    isdn /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    atm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    isoEthernet /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    rsvp /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    sip /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_MediaCallCharacteristics_switchingSubDomainCCIEType,
+    _encode_MediaCallCharacteristics_switchingSubDomainCCIEType
+} from "../CSTA-media-services/MediaCallCharacteristics-switchingSubDomainCCIEType.ta.mjs";
+
 
 
 /**
@@ -191,12 +159,12 @@ class MediaCallCharacteristics {
  */
 export
 const _root_component_type_list_1_spec_for_MediaCallCharacteristics: $.ComponentSpec[] = [
-    new $.ComponentSpec("mediaClass", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("connectionRate", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("bitRate", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("delayTolerance", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("switchingSubDomainCCIEType", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("switchingSubDomainInformationElements", true, $.hasTag(_TagClass.universal, 4), undefined, undefined)
+    new $.ComponentSpec("mediaClass", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("connectionRate", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("bitRate", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("delayTolerance", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("switchingSubDomainCCIEType", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("switchingSubDomainInformationElements", true, $.hasTag(_TagClass.universal, 4))
 ];
 
 /**

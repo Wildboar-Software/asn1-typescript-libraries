@@ -1,85 +1,27 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { DataCollected, DataCollected_digitsDuration /* IMPORTED_LONG_NAMED_BIT */, digitsDuration /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_digitsPauseDuration /* IMPORTED_LONG_NAMED_BIT */, digitsPauseDuration /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedBeep /* IMPORTED_LONG_NAMED_BIT */, toneDetectedBeep /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedBilling /* IMPORTED_LONG_NAMED_BIT */, toneDetectedBilling /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedBusy /* IMPORTED_LONG_NAMED_BIT */, toneDetectedBusy /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedCarrier /* IMPORTED_LONG_NAMED_BIT */, toneDetectedCarrier /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedConfirmation /* IMPORTED_LONG_NAMED_BIT */, toneDetectedConfirmation /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedDial /* IMPORTED_LONG_NAMED_BIT */, toneDetectedDial /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedFaxCNG /* IMPORTED_LONG_NAMED_BIT */, toneDetectedFaxCNG /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedHold /* IMPORTED_LONG_NAMED_BIT */, toneDetectedHold /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedHowler /* IMPORTED_LONG_NAMED_BIT */, toneDetectedHowler /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedIntrusion /* IMPORTED_LONG_NAMED_BIT */, toneDetectedIntrusion /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedModemCNG /* IMPORTED_LONG_NAMED_BIT */, toneDetectedModemCNG /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedPark /* IMPORTED_LONG_NAMED_BIT */, toneDetectedPark /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedRecordWarning /* IMPORTED_LONG_NAMED_BIT */, toneDetectedRecordWarning /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedReorder /* IMPORTED_LONG_NAMED_BIT */, toneDetectedReorder /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedRingback /* IMPORTED_LONG_NAMED_BIT */, toneDetectedRingback /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSilence /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSilence /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSitVC /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSitVC /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSitIC /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSitIC /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSitRO /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSitRO /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSitNC /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSitNC /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf0 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf0 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf1 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf1 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf2 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf2 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf3 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf3 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf4 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf4 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf5 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf5 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf6 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf6 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf7 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf7 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf8 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf8 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf9 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf9 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf10 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf10 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedOther /* IMPORTED_LONG_NAMED_BIT */, toneDetectedOther /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneFrequency /* IMPORTED_LONG_NAMED_BIT */, toneFrequency /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDuration /* IMPORTED_LONG_NAMED_BIT */, toneDuration /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_tonePauseDuration /* IMPORTED_LONG_NAMED_BIT */, tonePauseDuration /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_connectionInfo /* IMPORTED_LONG_NAMED_BIT */, connectionInfo /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_dcollCauseFushCharReceived /* IMPORTED_LONG_NAMED_BIT */, dcollCauseFushCharReceived /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_dcollCauseCharCountReached /* IMPORTED_LONG_NAMED_BIT */, dcollCauseCharCountReached /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_dcollCauseTimeout /* IMPORTED_LONG_NAMED_BIT */, dcollCauseTimeout /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_dcollCauseSFTerminated /* IMPORTED_LONG_NAMED_BIT */, dcollCauseSFTerminated /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_privateData /* IMPORTED_LONG_NAMED_BIT */, DataCollected_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataCollected, _encode_DataCollected } from "../CSTA-capability-exchange/DataCollected.ta.mjs";
-// export { DataCollected, DataCollected_digitsDuration /* IMPORTED_LONG_NAMED_BIT */, digitsDuration /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_digitsPauseDuration /* IMPORTED_LONG_NAMED_BIT */, digitsPauseDuration /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedBeep /* IMPORTED_LONG_NAMED_BIT */, toneDetectedBeep /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedBilling /* IMPORTED_LONG_NAMED_BIT */, toneDetectedBilling /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedBusy /* IMPORTED_LONG_NAMED_BIT */, toneDetectedBusy /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedCarrier /* IMPORTED_LONG_NAMED_BIT */, toneDetectedCarrier /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedConfirmation /* IMPORTED_LONG_NAMED_BIT */, toneDetectedConfirmation /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedDial /* IMPORTED_LONG_NAMED_BIT */, toneDetectedDial /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedFaxCNG /* IMPORTED_LONG_NAMED_BIT */, toneDetectedFaxCNG /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedHold /* IMPORTED_LONG_NAMED_BIT */, toneDetectedHold /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedHowler /* IMPORTED_LONG_NAMED_BIT */, toneDetectedHowler /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedIntrusion /* IMPORTED_LONG_NAMED_BIT */, toneDetectedIntrusion /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedModemCNG /* IMPORTED_LONG_NAMED_BIT */, toneDetectedModemCNG /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedPark /* IMPORTED_LONG_NAMED_BIT */, toneDetectedPark /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedRecordWarning /* IMPORTED_LONG_NAMED_BIT */, toneDetectedRecordWarning /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedReorder /* IMPORTED_LONG_NAMED_BIT */, toneDetectedReorder /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedRingback /* IMPORTED_LONG_NAMED_BIT */, toneDetectedRingback /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSilence /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSilence /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSitVC /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSitVC /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSitIC /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSitIC /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSitRO /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSitRO /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSitNC /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSitNC /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf0 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf0 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf1 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf1 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf2 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf2 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf3 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf3 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf4 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf4 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf5 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf5 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf6 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf6 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf7 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf7 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf8 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf8 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf9 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf9 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedSf10 /* IMPORTED_LONG_NAMED_BIT */, toneDetectedSf10 /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDetectedOther /* IMPORTED_LONG_NAMED_BIT */, toneDetectedOther /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneFrequency /* IMPORTED_LONG_NAMED_BIT */, toneFrequency /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_toneDuration /* IMPORTED_LONG_NAMED_BIT */, toneDuration /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_tonePauseDuration /* IMPORTED_LONG_NAMED_BIT */, tonePauseDuration /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_connectionInfo /* IMPORTED_LONG_NAMED_BIT */, connectionInfo /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_dcollCauseFushCharReceived /* IMPORTED_LONG_NAMED_BIT */, dcollCauseFushCharReceived /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_dcollCauseCharCountReached /* IMPORTED_LONG_NAMED_BIT */, dcollCauseCharCountReached /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_dcollCauseTimeout /* IMPORTED_LONG_NAMED_BIT */, dcollCauseTimeout /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_dcollCauseSFTerminated /* IMPORTED_LONG_NAMED_BIT */, dcollCauseSFTerminated /* IMPORTED_SHORT_NAMED_BIT */, DataCollected_privateData /* IMPORTED_LONG_NAMED_BIT */, DataCollected_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataCollected, _encode_DataCollected } from "../CSTA-capability-exchange/DataCollected.ta.mjs";
-import { DataCollectionResumed, DataCollectionResumed_privateData /* IMPORTED_LONG_NAMED_BIT */, DataCollectionResumed_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataCollectionResumed, _encode_DataCollectionResumed } from "../CSTA-capability-exchange/DataCollectionResumed.ta.mjs";
-// export { DataCollectionResumed, DataCollectionResumed_privateData /* IMPORTED_LONG_NAMED_BIT */, DataCollectionResumed_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataCollectionResumed, _encode_DataCollectionResumed } from "../CSTA-capability-exchange/DataCollectionResumed.ta.mjs";
-import { DataCollectionSuspended, DataCollectionSuspended_privateData /* IMPORTED_LONG_NAMED_BIT */, DataCollectionSuspended_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataCollectionSuspended, _encode_DataCollectionSuspended } from "../CSTA-capability-exchange/DataCollectionSuspended.ta.mjs";
-// export { DataCollectionSuspended, DataCollectionSuspended_privateData /* IMPORTED_LONG_NAMED_BIT */, DataCollectionSuspended_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataCollectionSuspended, _encode_DataCollectionSuspended } from "../CSTA-capability-exchange/DataCollectionSuspended.ta.mjs";
-import { ResumeDataCollection, ResumeDataCollection_privateData /* IMPORTED_LONG_NAMED_BIT */, ResumeDataCollection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_ResumeDataCollection, _encode_ResumeDataCollection } from "../CSTA-capability-exchange/ResumeDataCollection.ta.mjs";
-// export { ResumeDataCollection, ResumeDataCollection_privateData /* IMPORTED_LONG_NAMED_BIT */, ResumeDataCollection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_ResumeDataCollection, _encode_ResumeDataCollection } from "../CSTA-capability-exchange/ResumeDataCollection.ta.mjs";
-import { StartDataCollection, StartDataCollection_objectDevice /* IMPORTED_LONG_NAMED_BIT */, objectDevice /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_objectCall /* IMPORTED_LONG_NAMED_BIT */, objectCall /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_dataCollectionTypeDigits /* IMPORTED_LONG_NAMED_BIT */, dataCollectionTypeDigits /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_dataCollectionTypeTones /* IMPORTED_LONG_NAMED_BIT */, dataCollectionTypeTones /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_digitsReportingCriteriaNumChars /* IMPORTED_LONG_NAMED_BIT */, digitsReportingCriteriaNumChars /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_digitsReportingCriteriaFlushChar /* IMPORTED_LONG_NAMED_BIT */, digitsReportingCriteriaFlushChar /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_digitsReportingCriteriaTimeout /* IMPORTED_LONG_NAMED_BIT */, digitsReportingCriteriaTimeout /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_privateData /* IMPORTED_LONG_NAMED_BIT */, StartDataCollection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StartDataCollection, _encode_StartDataCollection } from "../CSTA-capability-exchange/StartDataCollection.ta.mjs";
-// export { StartDataCollection, StartDataCollection_objectDevice /* IMPORTED_LONG_NAMED_BIT */, objectDevice /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_objectCall /* IMPORTED_LONG_NAMED_BIT */, objectCall /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_dataCollectionTypeDigits /* IMPORTED_LONG_NAMED_BIT */, dataCollectionTypeDigits /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_dataCollectionTypeTones /* IMPORTED_LONG_NAMED_BIT */, dataCollectionTypeTones /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_digitsReportingCriteriaNumChars /* IMPORTED_LONG_NAMED_BIT */, digitsReportingCriteriaNumChars /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_digitsReportingCriteriaFlushChar /* IMPORTED_LONG_NAMED_BIT */, digitsReportingCriteriaFlushChar /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_digitsReportingCriteriaTimeout /* IMPORTED_LONG_NAMED_BIT */, digitsReportingCriteriaTimeout /* IMPORTED_SHORT_NAMED_BIT */, StartDataCollection_privateData /* IMPORTED_LONG_NAMED_BIT */, StartDataCollection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StartDataCollection, _encode_StartDataCollection } from "../CSTA-capability-exchange/StartDataCollection.ta.mjs";
-import { StopDataCollection, StopDataCollection_privateData /* IMPORTED_LONG_NAMED_BIT */, StopDataCollection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StopDataCollection, _encode_StopDataCollection } from "../CSTA-capability-exchange/StopDataCollection.ta.mjs";
-// export { StopDataCollection, StopDataCollection_privateData /* IMPORTED_LONG_NAMED_BIT */, StopDataCollection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StopDataCollection, _encode_StopDataCollection } from "../CSTA-capability-exchange/StopDataCollection.ta.mjs";
-import { SuspendDataCollection, SuspendDataCollection_privateData /* IMPORTED_LONG_NAMED_BIT */, SuspendDataCollection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendDataCollection, _encode_SuspendDataCollection } from "../CSTA-capability-exchange/SuspendDataCollection.ta.mjs";
-// export { SuspendDataCollection, SuspendDataCollection_privateData /* IMPORTED_LONG_NAMED_BIT */, SuspendDataCollection_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendDataCollection, _encode_SuspendDataCollection } from "../CSTA-capability-exchange/SuspendDataCollection.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { DataCollected, _decode_DataCollected, _encode_DataCollected } from "../CSTA-capability-exchange/DataCollected.ta.mjs";
+
+import { DataCollectionResumed, _decode_DataCollectionResumed, _encode_DataCollectionResumed } from "../CSTA-capability-exchange/DataCollectionResumed.ta.mjs";
+
+import { DataCollectionSuspended, _decode_DataCollectionSuspended, _encode_DataCollectionSuspended } from "../CSTA-capability-exchange/DataCollectionSuspended.ta.mjs";
+
+import { ResumeDataCollection, _decode_ResumeDataCollection, _encode_ResumeDataCollection } from "../CSTA-capability-exchange/ResumeDataCollection.ta.mjs";
+
+import { StartDataCollection, _decode_StartDataCollection, _encode_StartDataCollection } from "../CSTA-capability-exchange/StartDataCollection.ta.mjs";
+
+import { StopDataCollection, _decode_StopDataCollection, _encode_StopDataCollection } from "../CSTA-capability-exchange/StopDataCollection.ta.mjs";
+
+import { SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDataCollection } from "../CSTA-capability-exchange/SuspendDataCollection.ta.mjs";
+
 
 
 /**
@@ -177,13 +119,13 @@ class DataCollectionServList {
  */
 export
 const _root_component_type_list_1_spec_for_DataCollectionServList: $.ComponentSpec[] = [
-    new $.ComponentSpec("dataCollected", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("dataCollectionResumed", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("dataCollectionSuspended", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("resumeDataCollection", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("startDataCollection", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("stopDataCollection", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("suspendDataCollection", true, $.hasTag(_TagClass.context, 6), undefined, undefined)
+    new $.ComponentSpec("dataCollected", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("dataCollectionResumed", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("dataCollectionSuspended", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("resumeDataCollection", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("startDataCollection", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("stopDataCollection", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("suspendDataCollection", true, $.hasTag(_TagClass.context, 6))
 ];
 
 /**

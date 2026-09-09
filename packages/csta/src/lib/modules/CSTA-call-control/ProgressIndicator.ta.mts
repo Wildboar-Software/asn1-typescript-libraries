@@ -1,75 +1,39 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
     ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { ProgressIndicator_progressLocation, _enum_for_ProgressIndicator_progressLocation, ProgressIndicator_progressLocation_user /* IMPORTED_LONG_ENUMERATION_ITEM */, user /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_privateNetServingLocal /* IMPORTED_LONG_ENUMERATION_ITEM */, privateNetServingLocal /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_publicNetServingLocal /* IMPORTED_LONG_ENUMERATION_ITEM */, publicNetServingLocal /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_transitNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, transitNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_publicNetServingRemote /* IMPORTED_LONG_ENUMERATION_ITEM */, publicNetServingRemote /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_privateNetServingRemote /* IMPORTED_LONG_ENUMERATION_ITEM */, privateNetServingRemote /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_localInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, localInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_internationalNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, internationalNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_networkBeyondInterwk /* IMPORTED_LONG_ENUMERATION_ITEM */, networkBeyondInterwk /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ProgressIndicator_progressLocation, _encode_ProgressIndicator_progressLocation } from "../CSTA-call-control/ProgressIndicator-progressLocation.ta.mjs";
-// export { ProgressIndicator_progressLocation, _enum_for_ProgressIndicator_progressLocation, ProgressIndicator_progressLocation_user /* IMPORTED_LONG_ENUMERATION_ITEM */, user /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_privateNetServingLocal /* IMPORTED_LONG_ENUMERATION_ITEM */, privateNetServingLocal /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_publicNetServingLocal /* IMPORTED_LONG_ENUMERATION_ITEM */, publicNetServingLocal /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_transitNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, transitNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_publicNetServingRemote /* IMPORTED_LONG_ENUMERATION_ITEM */, publicNetServingRemote /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_privateNetServingRemote /* IMPORTED_LONG_ENUMERATION_ITEM */, privateNetServingRemote /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_localInterface /* IMPORTED_LONG_ENUMERATION_ITEM */, localInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_internationalNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, internationalNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_networkBeyondInterwk /* IMPORTED_LONG_ENUMERATION_ITEM */, networkBeyondInterwk /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressLocation_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ProgressIndicator_progressLocation, _encode_ProgressIndicator_progressLocation } from "../CSTA-call-control/ProgressIndicator-progressLocation.ta.mjs";
-import { ProgressIndicator_progressDescription, _enum_for_ProgressIndicator_progressDescription, ProgressIndicator_progressDescription_iSDNProgressDesc /* IMPORTED_LONG_ENUMERATION_ITEM */, iSDNProgressDesc /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressDescription_qSIGProgressDesc /* IMPORTED_LONG_ENUMERATION_ITEM */, qSIGProgressDesc /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressDescription_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ProgressIndicator_progressDescription, _encode_ProgressIndicator_progressDescription } from "../CSTA-call-control/ProgressIndicator-progressDescription.ta.mjs";
-// export { ProgressIndicator_progressDescription, _enum_for_ProgressIndicator_progressDescription, ProgressIndicator_progressDescription_iSDNProgressDesc /* IMPORTED_LONG_ENUMERATION_ITEM */, iSDNProgressDesc /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressDescription_qSIGProgressDesc /* IMPORTED_LONG_ENUMERATION_ITEM */, qSIGProgressDesc /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProgressIndicator_progressDescription_other /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ProgressIndicator_progressDescription, _encode_ProgressIndicator_progressDescription } from "../CSTA-call-control/ProgressIndicator-progressDescription.ta.mjs";
+    ASN1ConstructionError as _ConstructionError
+} from "@wildboar/asn1";
+import {
+    ProgressIndicator_progressLocation,
+    _enum_for_ProgressIndicator_progressLocation,
+    user /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    privateNetServingLocal /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    publicNetServingLocal /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    transitNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    publicNetServingRemote /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    privateNetServingRemote /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    localInterface /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    internationalNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    networkBeyondInterwk /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_ProgressIndicator_progressLocation,
+    _encode_ProgressIndicator_progressLocation
+} from "../CSTA-call-control/ProgressIndicator-progressLocation.ta.mjs";
+
+import {
+    ProgressIndicator_progressDescription,
+    _enum_for_ProgressIndicator_progressDescription,
+    iSDNProgressDesc /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    qSIGProgressDesc /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_ProgressIndicator_progressDescription,
+    _encode_ProgressIndicator_progressDescription
+} from "../CSTA-call-control/ProgressIndicator-progressDescription.ta.mjs";
+
 
 
 /**
@@ -157,8 +121,8 @@ class ProgressIndicator {
  */
 export
 const _root_component_type_list_1_spec_for_ProgressIndicator: $.ComponentSpec[] = [
-    new $.ComponentSpec("progressLocation", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("progressDescription", false, $.hasTag(_TagClass.universal, 10), undefined, undefined)
+    new $.ComponentSpec("progressLocation", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("progressDescription", false, $.hasTag(_TagClass.universal, 10))
 ];
 
 /**

@@ -1,121 +1,63 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { CapExchangeServList, _decode_CapExchangeServList, _encode_CapExchangeServList } from "../CSTA-capability-exchange/CapExchangeServList.ta.mjs";
-// export { CapExchangeServList, _decode_CapExchangeServList, _encode_CapExchangeServList } from "../CSTA-capability-exchange/CapExchangeServList.ta.mjs";
+
 import { SystemStatusServList, _decode_SystemStatusServList, _encode_SystemStatusServList } from "../CSTA-capability-exchange/SystemStatusServList.ta.mjs";
-// export { SystemStatusServList, _decode_SystemStatusServList, _encode_SystemStatusServList } from "../CSTA-capability-exchange/SystemStatusServList.ta.mjs";
+
 import { MonitoringServList, _decode_MonitoringServList, _encode_MonitoringServList } from "../CSTA-capability-exchange/MonitoringServList.ta.mjs";
-// export { MonitoringServList, _decode_MonitoringServList, _encode_MonitoringServList } from "../CSTA-capability-exchange/MonitoringServList.ta.mjs";
+
 import { SnapshotServList, _decode_SnapshotServList, _encode_SnapshotServList } from "../CSTA-capability-exchange/SnapshotServList.ta.mjs";
-// export { SnapshotServList, _decode_SnapshotServList, _encode_SnapshotServList } from "../CSTA-capability-exchange/SnapshotServList.ta.mjs";
+
 import { CallControlServList, _decode_CallControlServList, _encode_CallControlServList } from "../CSTA-capability-exchange/CallControlServList.ta.mjs";
-// export { CallControlServList, _decode_CallControlServList, _encode_CallControlServList } from "../CSTA-capability-exchange/CallControlServList.ta.mjs";
+
 import { CallControlEvtsList, _decode_CallControlEvtsList, _encode_CallControlEvtsList } from "../CSTA-capability-exchange/CallControlEvtsList.ta.mjs";
-// export { CallControlEvtsList, _decode_CallControlEvtsList, _encode_CallControlEvtsList } from "../CSTA-capability-exchange/CallControlEvtsList.ta.mjs";
+
 import { CallAssociatedServList, _decode_CallAssociatedServList, _encode_CallAssociatedServList } from "../CSTA-capability-exchange/CallAssociatedServList.ta.mjs";
-// export { CallAssociatedServList, _decode_CallAssociatedServList, _encode_CallAssociatedServList } from "../CSTA-capability-exchange/CallAssociatedServList.ta.mjs";
+
 import { CallAssociatedEvtsList, _decode_CallAssociatedEvtsList, _encode_CallAssociatedEvtsList } from "../CSTA-capability-exchange/CallAssociatedEvtsList.ta.mjs";
-// export { CallAssociatedEvtsList, _decode_CallAssociatedEvtsList, _encode_CallAssociatedEvtsList } from "../CSTA-capability-exchange/CallAssociatedEvtsList.ta.mjs";
+
 import { MediaServList, _decode_MediaServList, _encode_MediaServList } from "../CSTA-capability-exchange/MediaServList.ta.mjs";
-// export { MediaServList, _decode_MediaServList, _encode_MediaServList } from "../CSTA-capability-exchange/MediaServList.ta.mjs";
+
 import { MediaEvtsList, _decode_MediaEvtsList, _encode_MediaEvtsList } from "../CSTA-capability-exchange/MediaEvtsList.ta.mjs";
-// export { MediaEvtsList, _decode_MediaEvtsList, _encode_MediaEvtsList } from "../CSTA-capability-exchange/MediaEvtsList.ta.mjs";
+
 import { RouteingServList, _decode_RouteingServList, _encode_RouteingServList } from "../CSTA-capability-exchange/RouteingServList.ta.mjs";
-// export { RouteingServList, _decode_RouteingServList, _encode_RouteingServList } from "../CSTA-capability-exchange/RouteingServList.ta.mjs";
+
 import { PhysDevServList, _decode_PhysDevServList, _encode_PhysDevServList } from "../CSTA-capability-exchange/PhysDevServList.ta.mjs";
-// export { PhysDevServList, _decode_PhysDevServList, _encode_PhysDevServList } from "../CSTA-capability-exchange/PhysDevServList.ta.mjs";
+
 import { PhysDevEvtsList, _decode_PhysDevEvtsList, _encode_PhysDevEvtsList } from "../CSTA-capability-exchange/PhysDevEvtsList.ta.mjs";
-// export { PhysDevEvtsList, _decode_PhysDevEvtsList, _encode_PhysDevEvtsList } from "../CSTA-capability-exchange/PhysDevEvtsList.ta.mjs";
+
 import { LogicalServList, _decode_LogicalServList, _encode_LogicalServList } from "../CSTA-capability-exchange/LogicalServList.ta.mjs";
-// export { LogicalServList, _decode_LogicalServList, _encode_LogicalServList } from "../CSTA-capability-exchange/LogicalServList.ta.mjs";
+
 import { LogicalEvtsList, _decode_LogicalEvtsList, _encode_LogicalEvtsList } from "../CSTA-capability-exchange/LogicalEvtsList.ta.mjs";
-// export { LogicalEvtsList, _decode_LogicalEvtsList, _encode_LogicalEvtsList } from "../CSTA-capability-exchange/LogicalEvtsList.ta.mjs";
+
 import { DeviceMaintEvtsList, _decode_DeviceMaintEvtsList, _encode_DeviceMaintEvtsList } from "../CSTA-capability-exchange/DeviceMaintEvtsList.ta.mjs";
-// export { DeviceMaintEvtsList, _decode_DeviceMaintEvtsList, _encode_DeviceMaintEvtsList } from "../CSTA-capability-exchange/DeviceMaintEvtsList.ta.mjs";
+
 import { IOServicesServList, _decode_IOServicesServList, _encode_IOServicesServList } from "../CSTA-capability-exchange/IOServicesServList.ta.mjs";
-// export { IOServicesServList, _decode_IOServicesServList, _encode_IOServicesServList } from "../CSTA-capability-exchange/IOServicesServList.ta.mjs";
+
 import { DataCollectionServList, _decode_DataCollectionServList, _encode_DataCollectionServList } from "../CSTA-capability-exchange/DataCollectionServList.ta.mjs";
-// export { DataCollectionServList, _decode_DataCollectionServList, _encode_DataCollectionServList } from "../CSTA-capability-exchange/DataCollectionServList.ta.mjs";
+
 import { VoiceUnitServList, _decode_VoiceUnitServList, _encode_VoiceUnitServList } from "../CSTA-capability-exchange/VoiceUnitServList.ta.mjs";
-// export { VoiceUnitServList, _decode_VoiceUnitServList, _encode_VoiceUnitServList } from "../CSTA-capability-exchange/VoiceUnitServList.ta.mjs";
+
 import { VoiceUnitEvtsList, _decode_VoiceUnitEvtsList, _encode_VoiceUnitEvtsList } from "../CSTA-capability-exchange/VoiceUnitEvtsList.ta.mjs";
-// export { VoiceUnitEvtsList, _decode_VoiceUnitEvtsList, _encode_VoiceUnitEvtsList } from "../CSTA-capability-exchange/VoiceUnitEvtsList.ta.mjs";
+
 import { CDRServList, _decode_CDRServList, _encode_CDRServList } from "../CSTA-capability-exchange/CDRServList.ta.mjs";
-// export { CDRServList, _decode_CDRServList, _encode_CDRServList } from "../CSTA-capability-exchange/CDRServList.ta.mjs";
+
 import { VendorSpecificServList, _decode_VendorSpecificServList, _encode_VendorSpecificServList } from "../CSTA-capability-exchange/VendorSpecificServList.ta.mjs";
-// export { VendorSpecificServList, _decode_VendorSpecificServList, _encode_VendorSpecificServList } from "../CSTA-capability-exchange/VendorSpecificServList.ta.mjs";
+
 import { VendorSpecificEvtsList, _decode_VendorSpecificEvtsList, _encode_VendorSpecificEvtsList } from "../CSTA-capability-exchange/VendorSpecificEvtsList.ta.mjs";
-// export { VendorSpecificEvtsList, _decode_VendorSpecificEvtsList, _encode_VendorSpecificEvtsList } from "../CSTA-capability-exchange/VendorSpecificEvtsList.ta.mjs";
+
 import { StatusReportingServList, _decode_StatusReportingServList, _encode_StatusReportingServList } from "../CSTA-get-switching-function-capabilities/StatusReportingServList.ta.mjs";
-// export { StatusReportingServList, _decode_StatusReportingServList, _encode_StatusReportingServList } from "../CSTA-get-switching-function-capabilities/StatusReportingServList.ta.mjs";
+
 import { LocationServicesServList, _decode_LocationServicesServList, _encode_LocationServicesServList } from "../CSTA-capability-exchange/LocationServicesServList.ta.mjs";
-// export { LocationServicesServList, _decode_LocationServicesServList, _encode_LocationServicesServList } from "../CSTA-capability-exchange/LocationServicesServList.ta.mjs";
+
 
 
 /**
@@ -339,31 +281,31 @@ class ServEvtsList {
  */
 export
 const _root_component_type_list_1_spec_for_ServEvtsList: $.ComponentSpec[] = [
-    new $.ComponentSpec("capExchangeServList", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("systemServList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("monitoringServList", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("snapshotServList", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("callControlServList", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("callControlEvtsList", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("callAssociatedServList", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("callAssociatedEvtsList", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("mediaServList", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("mediaEvtsList", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("routeingServList", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("physDevServList", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("physDevEvtsList", true, $.hasTag(_TagClass.context, 12), undefined, undefined),
-    new $.ComponentSpec("logicalServList", true, $.hasTag(_TagClass.context, 13), undefined, undefined),
-    new $.ComponentSpec("logicalEvtsList", true, $.hasTag(_TagClass.context, 14), undefined, undefined),
-    new $.ComponentSpec("deviceMaintEvtsList", true, $.hasTag(_TagClass.context, 15), undefined, undefined),
-    new $.ComponentSpec("iOServicesServList", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
-    new $.ComponentSpec("dataCollectionServList", true, $.hasTag(_TagClass.context, 17), undefined, undefined),
-    new $.ComponentSpec("voiceUnitServList", true, $.hasTag(_TagClass.context, 18), undefined, undefined),
-    new $.ComponentSpec("voiceUnitEvtsList", true, $.hasTag(_TagClass.context, 19), undefined, undefined),
-    new $.ComponentSpec("cdrServList", true, $.hasTag(_TagClass.context, 20), undefined, undefined),
-    new $.ComponentSpec("vendorSpecificServList", true, $.hasTag(_TagClass.context, 21), undefined, undefined),
-    new $.ComponentSpec("vendorSpecificEvtsList", true, $.hasTag(_TagClass.context, 22), undefined, undefined),
-    new $.ComponentSpec("statusReportingServList", true, $.hasTag(_TagClass.context, 23), undefined, undefined),
-    new $.ComponentSpec("locationServList", true, $.hasTag(_TagClass.context, 24), undefined, undefined)
+    new $.ComponentSpec("capExchangeServList", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("systemServList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("monitoringServList", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("snapshotServList", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("callControlServList", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("callControlEvtsList", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("callAssociatedServList", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("callAssociatedEvtsList", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("mediaServList", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("mediaEvtsList", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("routeingServList", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("physDevServList", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("physDevEvtsList", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("logicalServList", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("logicalEvtsList", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("deviceMaintEvtsList", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("iOServicesServList", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("dataCollectionServList", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("voiceUnitServList", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("voiceUnitEvtsList", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("cdrServList", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("vendorSpecificServList", true, $.hasTag(_TagClass.context, 21)),
+    new $.ComponentSpec("vendorSpecificEvtsList", true, $.hasTag(_TagClass.context, 22)),
+    new $.ComponentSpec("statusReportingServList", true, $.hasTag(_TagClass.context, 23)),
+    new $.ComponentSpec("locationServList", true, $.hasTag(_TagClass.context, 24))
 ];
 
 /**

@@ -1,0 +1,25 @@
+{
+  "name": "csta",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/csta/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/csta",
+        "tsConfig": "packages/csta/tsconfig.lib.json",
+        "packageJson": "packages/csta/package.json",
+        "main": "packages/csta/src/index.mts",
+        "assets": [
+          "packages/csta/*.md",
+          "packages/csta/LICENSE.txt",
+          "packages/csta/package.json"
+        ]
+      }
+    }
+  }
+}

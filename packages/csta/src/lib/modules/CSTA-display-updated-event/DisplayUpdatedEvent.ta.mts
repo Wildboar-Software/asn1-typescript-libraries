@@ -1,79 +1,28 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
-// export { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+
 import { DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physical-device-feature/DisplayID.ta.mjs";
-// export { DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physical-device-feature/DisplayID.ta.mjs";
-import { CharacterSet, _enum_for_CharacterSet, CharacterSet_ascii /* IMPORTED_LONG_ENUMERATION_ITEM */, ascii /* IMPORTED_SHORT_ENUMERATION_ITEM */, CharacterSet_unicode /* IMPORTED_LONG_ENUMERATION_ITEM */, unicode /* IMPORTED_SHORT_ENUMERATION_ITEM */, CharacterSet_proprietary /* IMPORTED_LONG_ENUMERATION_ITEM */, proprietary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CharacterSet, _encode_CharacterSet } from "../CSTA-physical-device-feature/CharacterSet.ta.mjs";
-// export { CharacterSet, _enum_for_CharacterSet, CharacterSet_ascii /* IMPORTED_LONG_ENUMERATION_ITEM */, ascii /* IMPORTED_SHORT_ENUMERATION_ITEM */, CharacterSet_unicode /* IMPORTED_LONG_ENUMERATION_ITEM */, unicode /* IMPORTED_SHORT_ENUMERATION_ITEM */, CharacterSet_proprietary /* IMPORTED_LONG_ENUMERATION_ITEM */, proprietary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CharacterSet, _encode_CharacterSet } from "../CSTA-physical-device-feature/CharacterSet.ta.mjs";
+
+import {
+    CharacterSet,
+    _enum_for_CharacterSet,
+    _decode_CharacterSet,
+    _encode_CharacterSet
+} from "../CSTA-physical-device-feature/CharacterSet.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -205,17 +154,17 @@ class DisplayUpdatedEvent {
  */
 export
 const _root_component_type_list_1_spec_for_DisplayUpdatedEvent: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3), undefined, undefined),
-    new $.ComponentSpec("displayID", true, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("logicalRows", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("logicalColumns", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
-    new $.ComponentSpec("physicalRows", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("physicalColumns", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("physicalBaseRowNumber", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("physicalBaseColumnNumber", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("characterSet", true, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("contentsOfDisplay", false, $.hasTag(_TagClass.universal, 22), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3)),
+    new $.ComponentSpec("displayID", true, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("logicalRows", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("logicalColumns", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("physicalRows", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("physicalColumns", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("physicalBaseRowNumber", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("physicalBaseColumnNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("characterSet", true, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("contentsOfDisplay", false, $.hasTag(_TagClass.universal, 22)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

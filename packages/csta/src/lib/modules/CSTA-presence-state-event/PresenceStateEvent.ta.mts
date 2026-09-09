@@ -1,79 +1,22 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
-// export { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
-import { PresenceState, PresenceState_available /* IMPORTED_LONG_NAMED_BIT */, available /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_away /* IMPORTED_LONG_NAMED_BIT */, away /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_busy /* IMPORTED_LONG_NAMED_BIT */, busy /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_calling /* IMPORTED_LONG_NAMED_BIT */, calling /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_dnd /* IMPORTED_LONG_NAMED_BIT */, dnd /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_meeting /* IMPORTED_LONG_NAMED_BIT */, meeting /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_offline /* IMPORTED_LONG_NAMED_BIT */, offline /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_unknown /* IMPORTED_LONG_NAMED_BIT */, unknown /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_vacation /* IMPORTED_LONG_NAMED_BIT */, vacation /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec0 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec0 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec1 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec1 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec2 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec2 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec3 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec3 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec4 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec4 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec5 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec5 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec6 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec6 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec7 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec7 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec8 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec8 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec9 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec9 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec10 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec10 /* IMPORTED_SHORT_NAMED_BIT */, _decode_PresenceState, _encode_PresenceState } from "../CSTA-device-feature-types/PresenceState.ta.mjs";
-// export { PresenceState, PresenceState_available /* IMPORTED_LONG_NAMED_BIT */, available /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_away /* IMPORTED_LONG_NAMED_BIT */, away /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_busy /* IMPORTED_LONG_NAMED_BIT */, busy /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_calling /* IMPORTED_LONG_NAMED_BIT */, calling /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_dnd /* IMPORTED_LONG_NAMED_BIT */, dnd /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_meeting /* IMPORTED_LONG_NAMED_BIT */, meeting /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_offline /* IMPORTED_LONG_NAMED_BIT */, offline /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_unknown /* IMPORTED_LONG_NAMED_BIT */, unknown /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_vacation /* IMPORTED_LONG_NAMED_BIT */, vacation /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec0 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec0 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec1 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec1 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec2 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec2 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec3 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec3 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec4 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec4 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec5 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec5 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec6 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec6 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec7 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec7 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec8 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec8 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec9 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec9 /* IMPORTED_SHORT_NAMED_BIT */, PresenceState_applicationSpec10 /* IMPORTED_LONG_NAMED_BIT */, applicationSpec10 /* IMPORTED_SHORT_NAMED_BIT */, _decode_PresenceState, _encode_PresenceState } from "../CSTA-device-feature-types/PresenceState.ta.mjs";
+
+import { PresenceState, _decode_PresenceState, _encode_PresenceState } from "../CSTA-device-feature-types/PresenceState.ta.mjs";
+
 import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
-// export { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -178,14 +121,14 @@ class PresenceStateEvent {
  */
 export
 const _root_component_type_list_1_spec_for_PresenceStateEvent: $.ComponentSpec[] = [
-    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3), undefined, undefined),
-    new $.ComponentSpec("presenceState", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
-    new $.ComponentSpec("fromTime", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("untilTime", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("place", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("mood", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("namedPresenceState", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("device", false, $.hasTag(_TagClass.application, 3)),
+    new $.ComponentSpec("presenceState", false, $.hasTag(_TagClass.universal, 3)),
+    new $.ComponentSpec("fromTime", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("untilTime", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("place", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("mood", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("namedPresenceState", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

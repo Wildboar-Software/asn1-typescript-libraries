@@ -1,97 +1,39 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { IoRegister, IoRegister_ioDevice /* IMPORTED_LONG_NAMED_BIT */, ioDevice /* IMPORTED_SHORT_NAMED_BIT */, IoRegister_privateData /* IMPORTED_LONG_NAMED_BIT */, IoRegister_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, IoRegister_allIODevices /* IMPORTED_LONG_NAMED_BIT */, allIODevices /* IMPORTED_SHORT_NAMED_BIT */, _decode_IoRegister, _encode_IoRegister } from "../CSTA-capability-exchange/IoRegister.ta.mjs";
-// export { IoRegister, IoRegister_ioDevice /* IMPORTED_LONG_NAMED_BIT */, ioDevice /* IMPORTED_SHORT_NAMED_BIT */, IoRegister_privateData /* IMPORTED_LONG_NAMED_BIT */, IoRegister_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, IoRegister_allIODevices /* IMPORTED_LONG_NAMED_BIT */, allIODevices /* IMPORTED_SHORT_NAMED_BIT */, _decode_IoRegister, _encode_IoRegister } from "../CSTA-capability-exchange/IoRegister.ta.mjs";
-import { IoRegisterAbort, IoRegisterAbort_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_IoRegisterAbort, _encode_IoRegisterAbort } from "../CSTA-capability-exchange/IoRegisterAbort.ta.mjs";
-// export { IoRegisterAbort, IoRegisterAbort_privateData /* IMPORTED_LONG_NAMED_BIT */, _decode_IoRegisterAbort, _encode_IoRegisterAbort } from "../CSTA-capability-exchange/IoRegisterAbort.ta.mjs";
-import { IoRegisterCancel, IoRegisterCancel_privateData /* IMPORTED_LONG_NAMED_BIT */, IoRegisterCancel_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_IoRegisterCancel, _encode_IoRegisterCancel } from "../CSTA-capability-exchange/IoRegisterCancel.ta.mjs";
-// export { IoRegisterCancel, IoRegisterCancel_privateData /* IMPORTED_LONG_NAMED_BIT */, IoRegisterCancel_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_IoRegisterCancel, _encode_IoRegisterCancel } from "../CSTA-capability-exchange/IoRegisterCancel.ta.mjs";
-import { DataPathResumed, DataPathResumed_privateData /* IMPORTED_LONG_NAMED_BIT */, DataPathResumed_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataPathResumed, _encode_DataPathResumed } from "../CSTA-capability-exchange/DataPathResumed.ta.mjs";
-// export { DataPathResumed, DataPathResumed_privateData /* IMPORTED_LONG_NAMED_BIT */, DataPathResumed_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataPathResumed, _encode_DataPathResumed } from "../CSTA-capability-exchange/DataPathResumed.ta.mjs";
-import { DataPathSuspended, DataPathSuspended_privateData /* IMPORTED_LONG_NAMED_BIT */, DataPathSuspended_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataPathSuspended, _encode_DataPathSuspended } from "../CSTA-capability-exchange/DataPathSuspended.ta.mjs";
-// export { DataPathSuspended, DataPathSuspended_privateData /* IMPORTED_LONG_NAMED_BIT */, DataPathSuspended_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_DataPathSuspended, _encode_DataPathSuspended } from "../CSTA-capability-exchange/DataPathSuspended.ta.mjs";
-import { FastData, FastData_objectDevice /* IMPORTED_LONG_NAMED_BIT */, FastData_objectCall /* IMPORTED_LONG_NAMED_BIT */, FastData_dataPathTypeText /* IMPORTED_LONG_NAMED_BIT */, FastData_dataPathTypeVoice /* IMPORTED_LONG_NAMED_BIT */, FastData_displayAttribPhyBaseRowNumber /* IMPORTED_LONG_NAMED_BIT */, FastData_displayAttribPhyBaseColumnNumber /* IMPORTED_LONG_NAMED_BIT */, FastData_displayAttribOffset /* IMPORTED_LONG_NAMED_BIT */, FastData_privateData /* IMPORTED_LONG_NAMED_BIT */, FastData_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, FastData_supportsModifyingPosition /* IMPORTED_LONG_NAMED_BIT */, _decode_FastData, _encode_FastData } from "../CSTA-capability-exchange/FastData.ta.mjs";
-// export { FastData, FastData_objectDevice /* IMPORTED_LONG_NAMED_BIT */, FastData_objectCall /* IMPORTED_LONG_NAMED_BIT */, FastData_dataPathTypeText /* IMPORTED_LONG_NAMED_BIT */, FastData_dataPathTypeVoice /* IMPORTED_LONG_NAMED_BIT */, FastData_displayAttribPhyBaseRowNumber /* IMPORTED_LONG_NAMED_BIT */, FastData_displayAttribPhyBaseColumnNumber /* IMPORTED_LONG_NAMED_BIT */, FastData_displayAttribOffset /* IMPORTED_LONG_NAMED_BIT */, FastData_privateData /* IMPORTED_LONG_NAMED_BIT */, FastData_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, FastData_supportsModifyingPosition /* IMPORTED_LONG_NAMED_BIT */, _decode_FastData, _encode_FastData } from "../CSTA-capability-exchange/FastData.ta.mjs";
-import { ResumeDataPath, ResumeDataPath_privateData /* IMPORTED_LONG_NAMED_BIT */, ResumeDataPath_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, ResumeDataPath_sendsDataPathResumed /* IMPORTED_LONG_NAMED_BIT */, sendsDataPathResumed /* IMPORTED_SHORT_NAMED_BIT */, _decode_ResumeDataPath, _encode_ResumeDataPath } from "../CSTA-capability-exchange/ResumeDataPath.ta.mjs";
-// export { ResumeDataPath, ResumeDataPath_privateData /* IMPORTED_LONG_NAMED_BIT */, ResumeDataPath_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, ResumeDataPath_sendsDataPathResumed /* IMPORTED_LONG_NAMED_BIT */, sendsDataPathResumed /* IMPORTED_SHORT_NAMED_BIT */, _decode_ResumeDataPath, _encode_ResumeDataPath } from "../CSTA-capability-exchange/ResumeDataPath.ta.mjs";
-import { SendBroadcastData, SendBroadcastData_privateData /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_dataPathTypeText /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_dataPathTypeVoice /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_displayAttribPhyBaseRowNumber /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_displayAttribPhyBaseColumnNumber /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_displayAttribOffset /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_supportsModifyingPosition /* IMPORTED_LONG_NAMED_BIT */, _decode_SendBroadcastData, _encode_SendBroadcastData } from "../CSTA-capability-exchange/SendBroadcastData.ta.mjs";
-// export { SendBroadcastData, SendBroadcastData_privateData /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_dataPathTypeText /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_dataPathTypeVoice /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_displayAttribPhyBaseRowNumber /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_displayAttribPhyBaseColumnNumber /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_displayAttribOffset /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SendBroadcastData_supportsModifyingPosition /* IMPORTED_LONG_NAMED_BIT */, _decode_SendBroadcastData, _encode_SendBroadcastData } from "../CSTA-capability-exchange/SendBroadcastData.ta.mjs";
-import { SendData, SendData_displayAttribPhyBaseRowNumber /* IMPORTED_LONG_NAMED_BIT */, SendData_displayAttribPhyBaseColumnNumber /* IMPORTED_LONG_NAMED_BIT */, SendData_displayAttribOffset /* IMPORTED_LONG_NAMED_BIT */, SendData_ioCauseTerminationCharReceived /* IMPORTED_LONG_NAMED_BIT */, ioCauseTerminationCharReceived /* IMPORTED_SHORT_NAMED_BIT */, SendData_ioCauseCharCountReached /* IMPORTED_LONG_NAMED_BIT */, ioCauseCharCountReached /* IMPORTED_SHORT_NAMED_BIT */, SendData_ioCauseTimeout /* IMPORTED_LONG_NAMED_BIT */, ioCauseTimeout /* IMPORTED_SHORT_NAMED_BIT */, SendData_ioCauseSfTerminated /* IMPORTED_LONG_NAMED_BIT */, ioCauseSfTerminated /* IMPORTED_SHORT_NAMED_BIT */, SendData_privateData /* IMPORTED_LONG_NAMED_BIT */, SendData_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SendData_supportsModifyingPosition /* IMPORTED_LONG_NAMED_BIT */, _decode_SendData, _encode_SendData } from "../CSTA-capability-exchange/SendData.ta.mjs";
-// export { SendData, SendData_displayAttribPhyBaseRowNumber /* IMPORTED_LONG_NAMED_BIT */, SendData_displayAttribPhyBaseColumnNumber /* IMPORTED_LONG_NAMED_BIT */, SendData_displayAttribOffset /* IMPORTED_LONG_NAMED_BIT */, SendData_ioCauseTerminationCharReceived /* IMPORTED_LONG_NAMED_BIT */, ioCauseTerminationCharReceived /* IMPORTED_SHORT_NAMED_BIT */, SendData_ioCauseCharCountReached /* IMPORTED_LONG_NAMED_BIT */, ioCauseCharCountReached /* IMPORTED_SHORT_NAMED_BIT */, SendData_ioCauseTimeout /* IMPORTED_LONG_NAMED_BIT */, ioCauseTimeout /* IMPORTED_SHORT_NAMED_BIT */, SendData_ioCauseSfTerminated /* IMPORTED_LONG_NAMED_BIT */, ioCauseSfTerminated /* IMPORTED_SHORT_NAMED_BIT */, SendData_privateData /* IMPORTED_LONG_NAMED_BIT */, SendData_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SendData_supportsModifyingPosition /* IMPORTED_LONG_NAMED_BIT */, _decode_SendData, _encode_SendData } from "../CSTA-capability-exchange/SendData.ta.mjs";
-import { SendMulticastData, SendMulticastData_ioData /* IMPORTED_LONG_NAMED_BIT */, ioData /* IMPORTED_SHORT_NAMED_BIT */, SendMulticastData_displayAttribPhyBaseRowNumber /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_displayAttribPhyBaseColumnNumber /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_displayAttribOffset /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_privateData /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_supportsModifyingPosition /* IMPORTED_LONG_NAMED_BIT */, _decode_SendMulticastData, _encode_SendMulticastData } from "../CSTA-capability-exchange/SendMulticastData.ta.mjs";
-// export { SendMulticastData, SendMulticastData_ioData /* IMPORTED_LONG_NAMED_BIT */, ioData /* IMPORTED_SHORT_NAMED_BIT */, SendMulticastData_displayAttribPhyBaseRowNumber /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_displayAttribPhyBaseColumnNumber /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_displayAttribOffset /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_privateData /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, SendMulticastData_supportsModifyingPosition /* IMPORTED_LONG_NAMED_BIT */, _decode_SendMulticastData, _encode_SendMulticastData } from "../CSTA-capability-exchange/SendMulticastData.ta.mjs";
-import { StartDataPath, StartDataPath_objectDevice /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_objectCall /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_dataPathDirectionCfToObject /* IMPORTED_LONG_NAMED_BIT */, dataPathDirectionCfToObject /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_dataPathDirectionObjectToCf /* IMPORTED_LONG_NAMED_BIT */, dataPathDirectionObjectToCf /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_dataPathDirectionBidirectional /* IMPORTED_LONG_NAMED_BIT */, dataPathDirectionBidirectional /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_dataPathTypeText /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_dataPathTypeVoice /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_numberOfCharsToCollect /* IMPORTED_LONG_NAMED_BIT */, numberOfCharsToCollect /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_terminationChar /* IMPORTED_LONG_NAMED_BIT */, terminationChar /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_timeout /* IMPORTED_LONG_NAMED_BIT */, timeout /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_privateData /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_numberOfCharsToCollectInAck /* IMPORTED_LONG_NAMED_BIT */, numberOfCharsToCollectInAck /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_terminationCharInAck /* IMPORTED_LONG_NAMED_BIT */, terminationCharInAck /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_timeoutInAck /* IMPORTED_LONG_NAMED_BIT */, timeoutInAck /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StartDataPath, _encode_StartDataPath } from "../CSTA-capability-exchange/StartDataPath.ta.mjs";
-// export { StartDataPath, StartDataPath_objectDevice /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_objectCall /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_dataPathDirectionCfToObject /* IMPORTED_LONG_NAMED_BIT */, dataPathDirectionCfToObject /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_dataPathDirectionObjectToCf /* IMPORTED_LONG_NAMED_BIT */, dataPathDirectionObjectToCf /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_dataPathDirectionBidirectional /* IMPORTED_LONG_NAMED_BIT */, dataPathDirectionBidirectional /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_dataPathTypeText /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_dataPathTypeVoice /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_numberOfCharsToCollect /* IMPORTED_LONG_NAMED_BIT */, numberOfCharsToCollect /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_terminationChar /* IMPORTED_LONG_NAMED_BIT */, terminationChar /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_timeout /* IMPORTED_LONG_NAMED_BIT */, timeout /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_privateData /* IMPORTED_LONG_NAMED_BIT */, StartDataPath_numberOfCharsToCollectInAck /* IMPORTED_LONG_NAMED_BIT */, numberOfCharsToCollectInAck /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_terminationCharInAck /* IMPORTED_LONG_NAMED_BIT */, terminationCharInAck /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_timeoutInAck /* IMPORTED_LONG_NAMED_BIT */, timeoutInAck /* IMPORTED_SHORT_NAMED_BIT */, StartDataPath_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StartDataPath, _encode_StartDataPath } from "../CSTA-capability-exchange/StartDataPath.ta.mjs";
-import { StopDataPath, StopDataPath_privateData /* IMPORTED_LONG_NAMED_BIT */, StopDataPath_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StopDataPath, _encode_StopDataPath } from "../CSTA-capability-exchange/StopDataPath.ta.mjs";
-// export { StopDataPath, StopDataPath_privateData /* IMPORTED_LONG_NAMED_BIT */, StopDataPath_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_StopDataPath, _encode_StopDataPath } from "../CSTA-capability-exchange/StopDataPath.ta.mjs";
-import { SuspendDataPath, SuspendDataPath_privateData /* IMPORTED_LONG_NAMED_BIT */, SuspendDataPath_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendDataPath, _encode_SuspendDataPath } from "../CSTA-capability-exchange/SuspendDataPath.ta.mjs";
-// export { SuspendDataPath, SuspendDataPath_privateData /* IMPORTED_LONG_NAMED_BIT */, SuspendDataPath_privateDataInAck /* IMPORTED_LONG_NAMED_BIT */, _decode_SuspendDataPath, _encode_SuspendDataPath } from "../CSTA-capability-exchange/SuspendDataPath.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { IoRegister, _decode_IoRegister, _encode_IoRegister } from "../CSTA-capability-exchange/IoRegister.ta.mjs";
+
+import { IoRegisterAbort, _decode_IoRegisterAbort, _encode_IoRegisterAbort } from "../CSTA-capability-exchange/IoRegisterAbort.ta.mjs";
+
+import { IoRegisterCancel, _decode_IoRegisterCancel, _encode_IoRegisterCancel } from "../CSTA-capability-exchange/IoRegisterCancel.ta.mjs";
+
+import { DataPathResumed, _decode_DataPathResumed, _encode_DataPathResumed } from "../CSTA-capability-exchange/DataPathResumed.ta.mjs";
+
+import { DataPathSuspended, _decode_DataPathSuspended, _encode_DataPathSuspended } from "../CSTA-capability-exchange/DataPathSuspended.ta.mjs";
+
+import { FastData, _decode_FastData, _encode_FastData } from "../CSTA-capability-exchange/FastData.ta.mjs";
+
+import { ResumeDataPath, _decode_ResumeDataPath, _encode_ResumeDataPath } from "../CSTA-capability-exchange/ResumeDataPath.ta.mjs";
+
+import { SendBroadcastData, _decode_SendBroadcastData, _encode_SendBroadcastData } from "../CSTA-capability-exchange/SendBroadcastData.ta.mjs";
+
+import { SendData, _decode_SendData, _encode_SendData } from "../CSTA-capability-exchange/SendData.ta.mjs";
+
+import { SendMulticastData, _decode_SendMulticastData, _encode_SendMulticastData } from "../CSTA-capability-exchange/SendMulticastData.ta.mjs";
+
+import { StartDataPath, _decode_StartDataPath, _encode_StartDataPath } from "../CSTA-capability-exchange/StartDataPath.ta.mjs";
+
+import { StopDataPath, _decode_StopDataPath, _encode_StopDataPath } from "../CSTA-capability-exchange/StopDataPath.ta.mjs";
+
+import { SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } from "../CSTA-capability-exchange/SuspendDataPath.ta.mjs";
+
 
 
 /**
@@ -231,19 +173,19 @@ class IOServicesServList {
  */
 export
 const _root_component_type_list_1_spec_for_IOServicesServList: $.ComponentSpec[] = [
-    new $.ComponentSpec("ioRegister", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("ioRegisterAbort", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("ioRegisterCancel", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("dataPathResumed", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("dataPathSuspended", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("fastData", true, $.hasTag(_TagClass.context, 5), undefined, undefined),
-    new $.ComponentSpec("resumeDataPath", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
-    new $.ComponentSpec("sendBroadcastData", true, $.hasTag(_TagClass.context, 7), undefined, undefined),
-    new $.ComponentSpec("sendData", true, $.hasTag(_TagClass.context, 8), undefined, undefined),
-    new $.ComponentSpec("sendMulticastData", true, $.hasTag(_TagClass.context, 9), undefined, undefined),
-    new $.ComponentSpec("startDataPath", true, $.hasTag(_TagClass.context, 10), undefined, undefined),
-    new $.ComponentSpec("stopDataPath", true, $.hasTag(_TagClass.context, 11), undefined, undefined),
-    new $.ComponentSpec("suspendDataPath", true, $.hasTag(_TagClass.context, 12), undefined, undefined)
+    new $.ComponentSpec("ioRegister", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("ioRegisterAbort", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("ioRegisterCancel", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("dataPathResumed", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("dataPathSuspended", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("fastData", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("resumeDataPath", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("sendBroadcastData", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("sendData", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("sendMulticastData", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("startDataPath", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("stopDataPath", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("suspendDataPath", true, $.hasTag(_TagClass.context, 12))
 ];
 
 /**

@@ -1,75 +1,50 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
     ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
-import { NetworkCapability_networkType, _enum_for_NetworkCapability_networkType, NetworkCapability_networkType_iSDNPublic /* IMPORTED_LONG_ENUMERATION_ITEM */, iSDNPublic /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkCapability_networkType_nonISDNPublic /* IMPORTED_LONG_ENUMERATION_ITEM */, nonISDNPublic /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkCapability_networkType_iSDNPrivate /* IMPORTED_LONG_ENUMERATION_ITEM */, iSDNPrivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkCapability_networkType_nonISDNPrivate /* IMPORTED_LONG_ENUMERATION_ITEM */, nonISDNPrivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkCapability_networkType_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkCapability_networkType, _encode_NetworkCapability_networkType } from "../CSTA-call-control/NetworkCapability-networkType.ta.mjs";
-// export { NetworkCapability_networkType, _enum_for_NetworkCapability_networkType, NetworkCapability_networkType_iSDNPublic /* IMPORTED_LONG_ENUMERATION_ITEM */, iSDNPublic /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkCapability_networkType_nonISDNPublic /* IMPORTED_LONG_ENUMERATION_ITEM */, nonISDNPublic /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkCapability_networkType_iSDNPrivate /* IMPORTED_LONG_ENUMERATION_ITEM */, iSDNPrivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkCapability_networkType_nonISDNPrivate /* IMPORTED_LONG_ENUMERATION_ITEM */, nonISDNPrivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkCapability_networkType_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkCapability_networkType, _encode_NetworkCapability_networkType } from "../CSTA-call-control/NetworkCapability-networkType.ta.mjs";
-import { NetworkCapability_eventsProvided, NetworkCapability_eventsProvided_bridged /* IMPORTED_LONG_NAMED_BIT */, bridged /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_allCleared /* IMPORTED_LONG_NAMED_BIT */, allCleared /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_conferenced /* IMPORTED_LONG_NAMED_BIT */, conferenced /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_connectionCleared /* IMPORTED_LONG_NAMED_BIT */, connectionCleared /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_delivered /* IMPORTED_LONG_NAMED_BIT */, delivered /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_digitsDialed /* IMPORTED_LONG_NAMED_BIT */, digitsDialed /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_diverted /* IMPORTED_LONG_NAMED_BIT */, diverted /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_established /* IMPORTED_LONG_NAMED_BIT */, established /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_failed /* IMPORTED_LONG_NAMED_BIT */, failed /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_held /* IMPORTED_LONG_NAMED_BIT */, held /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_networkCapabilitiesChange /* IMPORTED_LONG_NAMED_BIT */, networkCapabilitiesChange /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_networkReached /* IMPORTED_LONG_NAMED_BIT */, networkReached /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_offered /* IMPORTED_LONG_NAMED_BIT */, offered /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_originated /* IMPORTED_LONG_NAMED_BIT */, originated /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_queued /* IMPORTED_LONG_NAMED_BIT */, queued /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_retrieved /* IMPORTED_LONG_NAMED_BIT */, retrieved /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_serviceInitiated /* IMPORTED_LONG_NAMED_BIT */, serviceInitiated /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_transferred /* IMPORTED_LONG_NAMED_BIT */, transferred /* IMPORTED_SHORT_NAMED_BIT */, _decode_NetworkCapability_eventsProvided, _encode_NetworkCapability_eventsProvided } from "../CSTA-call-control/NetworkCapability-eventsProvided.ta.mjs";
-// export { NetworkCapability_eventsProvided, NetworkCapability_eventsProvided_bridged /* IMPORTED_LONG_NAMED_BIT */, bridged /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_allCleared /* IMPORTED_LONG_NAMED_BIT */, allCleared /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_conferenced /* IMPORTED_LONG_NAMED_BIT */, conferenced /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_connectionCleared /* IMPORTED_LONG_NAMED_BIT */, connectionCleared /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_delivered /* IMPORTED_LONG_NAMED_BIT */, delivered /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_digitsDialed /* IMPORTED_LONG_NAMED_BIT */, digitsDialed /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_diverted /* IMPORTED_LONG_NAMED_BIT */, diverted /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_established /* IMPORTED_LONG_NAMED_BIT */, established /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_failed /* IMPORTED_LONG_NAMED_BIT */, failed /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_held /* IMPORTED_LONG_NAMED_BIT */, held /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_networkCapabilitiesChange /* IMPORTED_LONG_NAMED_BIT */, networkCapabilitiesChange /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_networkReached /* IMPORTED_LONG_NAMED_BIT */, networkReached /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_offered /* IMPORTED_LONG_NAMED_BIT */, offered /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_originated /* IMPORTED_LONG_NAMED_BIT */, originated /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_queued /* IMPORTED_LONG_NAMED_BIT */, queued /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_retrieved /* IMPORTED_LONG_NAMED_BIT */, retrieved /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_serviceInitiated /* IMPORTED_LONG_NAMED_BIT */, serviceInitiated /* IMPORTED_SHORT_NAMED_BIT */, NetworkCapability_eventsProvided_transferred /* IMPORTED_LONG_NAMED_BIT */, transferred /* IMPORTED_SHORT_NAMED_BIT */, _decode_NetworkCapability_eventsProvided, _encode_NetworkCapability_eventsProvided } from "../CSTA-call-control/NetworkCapability-eventsProvided.ta.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import {
+    NetworkCapability_networkType,
+    _enum_for_NetworkCapability_networkType,
+    iSDNPublic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    nonISDNPublic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    iSDNPrivate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    nonISDNPrivate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    other /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_NetworkCapability_networkType,
+    _encode_NetworkCapability_networkType
+} from "../CSTA-call-control/NetworkCapability-networkType.ta.mjs";
+
+import {
+    NetworkCapability_eventsProvided,
+    bridged /* IMPORTED_SHORT_NAMED_BIT */,
+    allCleared /* IMPORTED_SHORT_NAMED_BIT */,
+    conferenced /* IMPORTED_SHORT_NAMED_BIT */,
+    connectionCleared /* IMPORTED_SHORT_NAMED_BIT */,
+    delivered /* IMPORTED_SHORT_NAMED_BIT */,
+    digitsDialed /* IMPORTED_SHORT_NAMED_BIT */,
+    diverted /* IMPORTED_SHORT_NAMED_BIT */,
+    established /* IMPORTED_SHORT_NAMED_BIT */,
+    failed /* IMPORTED_SHORT_NAMED_BIT */,
+    held /* IMPORTED_SHORT_NAMED_BIT */,
+    networkCapabilitiesChange /* IMPORTED_SHORT_NAMED_BIT */,
+    networkReached /* IMPORTED_SHORT_NAMED_BIT */,
+    offered /* IMPORTED_SHORT_NAMED_BIT */,
+    originated /* IMPORTED_SHORT_NAMED_BIT */,
+    queued /* IMPORTED_SHORT_NAMED_BIT */,
+    retrieved /* IMPORTED_SHORT_NAMED_BIT */,
+    serviceInitiated /* IMPORTED_SHORT_NAMED_BIT */,
+    transferred /* IMPORTED_SHORT_NAMED_BIT */,
+    _decode_NetworkCapability_eventsProvided,
+    _encode_NetworkCapability_eventsProvided
+} from "../CSTA-call-control/NetworkCapability-eventsProvided.ta.mjs";
+
 
 
 /**
@@ -161,8 +136,8 @@ class NetworkCapability {
  */
 export
 const _root_component_type_list_1_spec_for_NetworkCapability: $.ComponentSpec[] = [
-    new $.ComponentSpec("networkType", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("eventsProvided", true, $.hasTag(_TagClass.universal, 3), undefined, undefined)
+    new $.ComponentSpec("networkType", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("eventsProvided", true, $.hasTag(_TagClass.universal, 3))
 ];
 
 /**

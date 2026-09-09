@@ -1,79 +1,25 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
-// export { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+
 import { ConnectionList_Item_endpoint, _decode_ConnectionList_Item_endpoint, _encode_ConnectionList_Item_endpoint } from "../CSTA-connection-states/ConnectionList-Item-endpoint.ta.mjs";
-// export { ConnectionList_Item_endpoint, _decode_ConnectionList_Item_endpoint, _encode_ConnectionList_Item_endpoint } from "../CSTA-connection-states/ConnectionList-Item-endpoint.ta.mjs";
-import { ConnectionList_Item_associatedNID, _decode_ConnectionList_Item_associatedNID, _encode_ConnectionList_Item_associatedNID } from "../CSTA-connection-states/ConnectionList-Item-associatedNID.ta.mjs";
-// export { ConnectionList_Item_associatedNID, _decode_ConnectionList_Item_associatedNID, _encode_ConnectionList_Item_associatedNID } from "../CSTA-connection-states/ConnectionList-Item-associatedNID.ta.mjs";
+
+import {
+    ConnectionList_Item_associatedNID,
+    _decode_ConnectionList_Item_associatedNID,
+    _encode_ConnectionList_Item_associatedNID
+} from "../CSTA-connection-states/ConnectionList-Item-associatedNID.ta.mjs";
+
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
-// export { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
+
 
 
 /**
@@ -83,7 +29,13 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectionList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ConnectionList-Item ::= SEQUENCE {
+ *     newConnection [0] ConnectionID OPTIONAL,
+ *     oldConnection [1] ConnectionID OPTIONAL,
+ *     endpoint [2] ConnectionList_Item_endpoint OPTIONAL,
+ *     associatedNID [3] ConnectionList_Item_associatedNID OPTIONAL,
+ *     resultingConnectionInfo [UNIVERSAL 16] ConnectionInformation OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -152,11 +104,11 @@ class ConnectionList_Item {
  */
 export
 const _root_component_type_list_1_spec_for_ConnectionList_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("newConnection", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("oldConnection", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("endpoint", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("associatedNID", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("resultingConnectionInfo", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
+    new $.ComponentSpec("newConnection", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("oldConnection", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("endpoint", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("associatedNID", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("resultingConnectionInfo", true, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**

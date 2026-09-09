@@ -1,89 +1,45 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
-// export { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-// export { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
-import { AutoOriginate, _enum_for_AutoOriginate, AutoOriginate_prompt /* IMPORTED_LONG_ENUMERATION_ITEM */, prompt /* IMPORTED_SHORT_ENUMERATION_ITEM */, AutoOriginate_doNotPrompt /* IMPORTED_LONG_ENUMERATION_ITEM */, doNotPrompt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AutoOriginate, _encode_AutoOriginate } from "../CSTA-call-control/AutoOriginate.ta.mjs";
-// export { AutoOriginate, _enum_for_AutoOriginate, AutoOriginate_prompt /* IMPORTED_LONG_ENUMERATION_ITEM */, prompt /* IMPORTED_SHORT_ENUMERATION_ITEM */, AutoOriginate_doNotPrompt /* IMPORTED_LONG_ENUMERATION_ITEM */, doNotPrompt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AutoOriginate, _encode_AutoOriginate } from "../CSTA-call-control/AutoOriginate.ta.mjs";
-import { ParticipationType, _enum_for_ParticipationType, ParticipationType_silent /* IMPORTED_LONG_ENUMERATION_ITEM */, silent /* IMPORTED_SHORT_ENUMERATION_ITEM */, ParticipationType_active /* IMPORTED_LONG_ENUMERATION_ITEM */, active /* IMPORTED_SHORT_ENUMERATION_ITEM */, ParticipationType_none /* IMPORTED_LONG_ENUMERATION_ITEM */, none /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ParticipationType, _encode_ParticipationType } from "../CSTA-device-feature-types/ParticipationType.ta.mjs";
-// export { ParticipationType, _enum_for_ParticipationType, ParticipationType_silent /* IMPORTED_LONG_ENUMERATION_ITEM */, silent /* IMPORTED_SHORT_ENUMERATION_ITEM */, ParticipationType_active /* IMPORTED_LONG_ENUMERATION_ITEM */, active /* IMPORTED_SHORT_ENUMERATION_ITEM */, ParticipationType_none /* IMPORTED_LONG_ENUMERATION_ITEM */, none /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ParticipationType, _encode_ParticipationType } from "../CSTA-device-feature-types/ParticipationType.ta.mjs";
+
+import {
+    AutoOriginate,
+    _enum_for_AutoOriginate,
+    AutoOriginate_prompt /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    prompt /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_AutoOriginate,
+    _encode_AutoOriginate
+} from "../CSTA-call-control/AutoOriginate.ta.mjs";
+
+import {
+    ParticipationType,
+    _enum_for_ParticipationType,
+    ParticipationType_active /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    active /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_ParticipationType,
+    _encode_ParticipationType
+} from "../CSTA-device-feature-types/ParticipationType.ta.mjs";
+
 import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
-// export { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+
 import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
-// export { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+
 import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
-// export { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+
 import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
-// export { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -220,15 +176,15 @@ class JoinCallArgument {
  */
 export
 const _root_component_type_list_1_spec_for_JoinCallArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("activeCall", false, $.hasTag(_TagClass.application, 11), undefined, undefined),
-    new $.ComponentSpec("joiningDevice", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
-    new $.ComponentSpec("autoOriginate", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("participationType", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("accountCode", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("authCode", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.context, 4), undefined, undefined),
-    new $.ComponentSpec("userData", true, $.hasTag(_TagClass.application, 29), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("activeCall", false, $.hasTag(_TagClass.application, 11)),
+    new $.ComponentSpec("joiningDevice", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("autoOriginate", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("participationType", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("accountCode", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("authCode", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("correlatorData", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("userData", true, $.hasTag(_TagClass.application, 29)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**

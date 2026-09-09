@@ -1,85 +1,27 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
-// export { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+
 import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
-// export { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+
 import { CallState, _decode_CallState, _encode_CallState } from "../CSTA-status-reporting/CallState.ta.mjs";
-// export { CallState, _decode_CallState, _encode_CallState } from "../CSTA-status-reporting/CallState.ta.mjs";
+
 import { ServicesPermitted, _decode_ServicesPermitted, _encode_ServicesPermitted } from "../CSTA-call-control/ServicesPermitted.ta.mjs";
-// export { ServicesPermitted, _decode_ServicesPermitted, _encode_ServicesPermitted } from "../CSTA-call-control/ServicesPermitted.ta.mjs";
+
 import { DeviceMediaInfoList, _decode_DeviceMediaInfoList, _encode_DeviceMediaInfoList } from "../CSTA-status-reporting/DeviceMediaInfoList.ta.mjs";
-// export { DeviceMediaInfoList, _decode_DeviceMediaInfoList, _encode_DeviceMediaInfoList } from "../CSTA-status-reporting/DeviceMediaInfoList.ta.mjs";
+
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
-// export { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
+
 import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } from "../CSTA-call-control/CallLinkageData.ta.mjs";
-// export { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } from "../CSTA-call-control/CallLinkageData.ta.mjs";
+
 
 
 /**
@@ -177,13 +119,13 @@ class SnapshotDeviceResponseInfo {
  */
 export
 const _root_component_type_list_1_spec_for_SnapshotDeviceResponseInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("connectionIdentifier", false, $.hasTag(_TagClass.application, 11), undefined, undefined),
-    new $.ComponentSpec("endpointDevice", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
-    new $.ComponentSpec("localCallState", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("servicesPermitted", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("mediaServiceInfoList", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
-    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
-    new $.ComponentSpec("callLinkageData", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
+    new $.ComponentSpec("connectionIdentifier", false, $.hasTag(_TagClass.application, 11)),
+    new $.ComponentSpec("endpointDevice", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("localCallState", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("servicesPermitted", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("mediaServiceInfoList", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mediaCallCharacteristics", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("callLinkageData", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**

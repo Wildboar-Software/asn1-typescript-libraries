@@ -1,107 +1,43 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+
+import * as $ from "@wildboar/asn1/functional";
+import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import { BookmarkReachedEvent, _decode_BookmarkReachedEvent, _encode_BookmarkReachedEvent } from "../CSTA-bookmark-reached-event/BookmarkReachedEvent.ta.mjs";
-// export { BookmarkReachedEvent, _decode_BookmarkReachedEvent, _encode_BookmarkReachedEvent } from "../CSTA-bookmark-reached-event/BookmarkReachedEvent.ta.mjs";
+
 import { CompletedEvent, _decode_CompletedEvent, _encode_CompletedEvent } from "../CSTA-completed-event/CompletedEvent.ta.mjs";
-// export { CompletedEvent, _decode_CompletedEvent, _encode_CompletedEvent } from "../CSTA-completed-event/CompletedEvent.ta.mjs";
+
 import { DtmfDetectedEvent, _decode_DtmfDetectedEvent, _encode_DtmfDetectedEvent } from "../CSTA-dtmf-detected-event/DtmfDetectedEvent.ta.mjs";
-// export { DtmfDetectedEvent, _decode_DtmfDetectedEvent, _encode_DtmfDetectedEvent } from "../CSTA-dtmf-detected-event/DtmfDetectedEvent.ta.mjs";
+
 import { EmptiedEvent, _decode_EmptiedEvent, _encode_EmptiedEvent } from "../CSTA-emptied-event/EmptiedEvent.ta.mjs";
-// export { EmptiedEvent, _decode_EmptiedEvent, _encode_EmptiedEvent } from "../CSTA-emptied-event/EmptiedEvent.ta.mjs";
+
 import { InterruptionDetectedEvent, _decode_InterruptionDetectedEvent, _encode_InterruptionDetectedEvent } from "../CSTA-interruption-detected-event/InterruptionDetectedEvent.ta.mjs";
-// export { InterruptionDetectedEvent, _decode_InterruptionDetectedEvent, _encode_InterruptionDetectedEvent } from "../CSTA-interruption-detected-event/InterruptionDetectedEvent.ta.mjs";
+
 import { NotRecognizedEvent, _decode_NotRecognizedEvent, _encode_NotRecognizedEvent } from "../CSTA-not-recognized-event/NotRecognizedEvent.ta.mjs";
-// export { NotRecognizedEvent, _decode_NotRecognizedEvent, _encode_NotRecognizedEvent } from "../CSTA-not-recognized-event/NotRecognizedEvent.ta.mjs";
+
 import { PlayEvent, _decode_PlayEvent, _encode_PlayEvent } from "../CSTA-play-event/PlayEvent.ta.mjs";
-// export { PlayEvent, _decode_PlayEvent, _encode_PlayEvent } from "../CSTA-play-event/PlayEvent.ta.mjs";
+
 import { RecognizedEvent, _decode_RecognizedEvent, _encode_RecognizedEvent } from "../CSTA-recognized-event/RecognizedEvent.ta.mjs";
-// export { RecognizedEvent, _decode_RecognizedEvent, _encode_RecognizedEvent } from "../CSTA-recognized-event/RecognizedEvent.ta.mjs";
+
 import { RecordEvent, _decode_RecordEvent, _encode_RecordEvent } from "../CSTA-record-event/RecordEvent.ta.mjs";
-// export { RecordEvent, _decode_RecordEvent, _encode_RecordEvent } from "../CSTA-record-event/RecordEvent.ta.mjs";
+
 import { ReviewEvent, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-review-event/ReviewEvent.ta.mjs";
-// export { ReviewEvent, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-review-event/ReviewEvent.ta.mjs";
+
 import { SilenceTimeoutExpiredEvent, _decode_SilenceTimeoutExpiredEvent, _encode_SilenceTimeoutExpiredEvent } from "../CSTA-silence-timeout-expired-event/SilenceTimeoutExpiredEvent.ta.mjs";
-// export { SilenceTimeoutExpiredEvent, _decode_SilenceTimeoutExpiredEvent, _encode_SilenceTimeoutExpiredEvent } from "../CSTA-silence-timeout-expired-event/SilenceTimeoutExpiredEvent.ta.mjs";
+
 import { SpeechDetectedEvent, _decode_SpeechDetectedEvent, _encode_SpeechDetectedEvent } from "../CSTA-speech-detected-event/SpeechDetectedEvent.ta.mjs";
-// export { SpeechDetectedEvent, _decode_SpeechDetectedEvent, _encode_SpeechDetectedEvent } from "../CSTA-speech-detected-event/SpeechDetectedEvent.ta.mjs";
+
 import { StartedEvent, _decode_StartedEvent, _encode_StartedEvent } from "../CSTA-started-event/StartedEvent.ta.mjs";
-// export { StartedEvent, _decode_StartedEvent, _encode_StartedEvent } from "../CSTA-started-event/StartedEvent.ta.mjs";
+
 import { StopEvent, _decode_StopEvent, _encode_StopEvent } from "../CSTA-stop-event/StopEvent.ta.mjs";
-// export { StopEvent, _decode_StopEvent, _encode_StopEvent } from "../CSTA-stop-event/StopEvent.ta.mjs";
+
 import { SuspendPlayEvent, _decode_SuspendPlayEvent, _encode_SuspendPlayEvent } from "../CSTA-suspend-play-event/SuspendPlayEvent.ta.mjs";
-// export { SuspendPlayEvent, _decode_SuspendPlayEvent, _encode_SuspendPlayEvent } from "../CSTA-suspend-play-event/SuspendPlayEvent.ta.mjs";
+
 import { SuspendRecordEvent, _decode_SuspendRecordEvent, _encode_SuspendRecordEvent } from "../CSTA-suspend-record-event/SuspendRecordEvent.ta.mjs";
-// export { SuspendRecordEvent, _decode_SuspendRecordEvent, _encode_SuspendRecordEvent } from "../CSTA-suspend-record-event/SuspendRecordEvent.ta.mjs";
+
 import { VoiceAttributesChangeEvent, _decode_VoiceAttributesChangeEvent, _encode_VoiceAttributesChangeEvent } from "../CSTA-voice-attributes-change-event/VoiceAttributesChangeEvent.ta.mjs";
-// export { VoiceAttributesChangeEvent, _decode_VoiceAttributesChangeEvent, _encode_VoiceAttributesChangeEvent } from "../CSTA-voice-attributes-change-event/VoiceAttributesChangeEvent.ta.mjs";
+
 import { VoiceErrorOccuredEvent, _decode_VoiceErrorOccuredEvent, _encode_VoiceErrorOccuredEvent } from "../CSTA-voice-error-occured-event/VoiceErrorOccuredEvent.ta.mjs";
-// export { VoiceErrorOccuredEvent, _decode_VoiceErrorOccuredEvent, _encode_VoiceErrorOccuredEvent } from "../CSTA-voice-error-occured-event/VoiceErrorOccuredEvent.ta.mjs";
+
 
 
 /**

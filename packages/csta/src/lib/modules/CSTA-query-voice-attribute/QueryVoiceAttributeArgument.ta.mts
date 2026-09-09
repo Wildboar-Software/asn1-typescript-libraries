@@ -1,81 +1,28 @@
 /* eslint-disable */
+
+import * as $ from "@wildboar/asn1/functional";
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
     SEQUENCE,
-    SEQUENCE_OF,
     SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "asn1-ts";
-import * as $ from "asn1-ts/dist/functional.mjs";
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
 import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
-// export { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
-import { AttributeToQuery, _enum_for_AttributeToQuery, AttributeToQuery_encodingAlgorithm /* IMPORTED_LONG_ENUMERATION_ITEM */, encodingAlgorithm /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_samplingRate /* IMPORTED_LONG_ENUMERATION_ITEM */, samplingRate /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_duration /* IMPORTED_LONG_ENUMERATION_ITEM */, duration /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_fileName /* IMPORTED_LONG_ENUMERATION_ITEM */, fileName /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentPosition /* IMPORTED_LONG_ENUMERATION_ITEM */, currentPosition /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentSpeed /* IMPORTED_LONG_ENUMERATION_ITEM */, currentSpeed /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentVolume /* IMPORTED_LONG_ENUMERATION_ITEM */, currentVolume /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentLevel /* IMPORTED_LONG_ENUMERATION_ITEM */, currentLevel /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentState /* IMPORTED_LONG_ENUMERATION_ITEM */, currentState /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_grammars /* IMPORTED_LONG_ENUMERATION_ITEM */, grammars /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_language /* IMPORTED_LONG_ENUMERATION_ITEM */, language /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_mode /* IMPORTED_LONG_ENUMERATION_ITEM */, mode /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_retainAudio /* IMPORTED_LONG_ENUMERATION_ITEM */, retainAudio /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_silenceTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, silenceTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_maxTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, maxTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_babbleTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, babbleTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_endSilence /* IMPORTED_LONG_ENUMERATION_ITEM */, endSilence /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_rejectionThreshold /* IMPORTED_LONG_ENUMERATION_ITEM */, rejectionThreshold /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_autoInterruptible /* IMPORTED_LONG_ENUMERATION_ITEM */, autoInterruptible /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_innerXml /* IMPORTED_LONG_ENUMERATION_ITEM */, innerXml /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_interDigitTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, interDigitTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_preflush /* IMPORTED_LONG_ENUMERATION_ITEM */, preflush /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeToQuery, _encode_AttributeToQuery } from "../CSTA-query-voice-attribute/AttributeToQuery.ta.mjs";
-// export { AttributeToQuery, _enum_for_AttributeToQuery, AttributeToQuery_encodingAlgorithm /* IMPORTED_LONG_ENUMERATION_ITEM */, encodingAlgorithm /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_samplingRate /* IMPORTED_LONG_ENUMERATION_ITEM */, samplingRate /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_duration /* IMPORTED_LONG_ENUMERATION_ITEM */, duration /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_fileName /* IMPORTED_LONG_ENUMERATION_ITEM */, fileName /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentPosition /* IMPORTED_LONG_ENUMERATION_ITEM */, currentPosition /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentSpeed /* IMPORTED_LONG_ENUMERATION_ITEM */, currentSpeed /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentVolume /* IMPORTED_LONG_ENUMERATION_ITEM */, currentVolume /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentLevel /* IMPORTED_LONG_ENUMERATION_ITEM */, currentLevel /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_currentState /* IMPORTED_LONG_ENUMERATION_ITEM */, currentState /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_grammars /* IMPORTED_LONG_ENUMERATION_ITEM */, grammars /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_language /* IMPORTED_LONG_ENUMERATION_ITEM */, language /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_mode /* IMPORTED_LONG_ENUMERATION_ITEM */, mode /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_retainAudio /* IMPORTED_LONG_ENUMERATION_ITEM */, retainAudio /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_silenceTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, silenceTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_maxTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, maxTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_babbleTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, babbleTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_endSilence /* IMPORTED_LONG_ENUMERATION_ITEM */, endSilence /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_rejectionThreshold /* IMPORTED_LONG_ENUMERATION_ITEM */, rejectionThreshold /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_autoInterruptible /* IMPORTED_LONG_ENUMERATION_ITEM */, autoInterruptible /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_innerXml /* IMPORTED_LONG_ENUMERATION_ITEM */, innerXml /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_interDigitTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, interDigitTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeToQuery_preflush /* IMPORTED_LONG_ENUMERATION_ITEM */, preflush /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeToQuery, _encode_AttributeToQuery } from "../CSTA-query-voice-attribute/AttributeToQuery.ta.mjs";
+
+import {
+    AttributeToQuery,
+    _enum_for_AttributeToQuery,
+    _decode_AttributeToQuery,
+    _encode_AttributeToQuery
+} from "../CSTA-query-voice-attribute/AttributeToQuery.ta.mjs";
+
 import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
-// export { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
+
 import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
-// export { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
-// export { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
+
 
 
 /**
@@ -165,11 +112,11 @@ class QueryVoiceAttributeArgument {
  */
 export
 const _root_component_type_list_1_spec_for_QueryVoiceAttributeArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec("messageToQuery", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
-    new $.ComponentSpec("attributeToQuery", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
-    new $.ComponentSpec("resource", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
-    new $.ComponentSpec("connection", true, $.hasTag(_TagClass.application, 11), undefined, undefined),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30), undefined, undefined)
+    new $.ComponentSpec("messageToQuery", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("attributeToQuery", false, $.hasTag(_TagClass.universal, 10)),
+    new $.ComponentSpec("resource", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("connection", true, $.hasTag(_TagClass.application, 11)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.application, 30))
 ];
 
 /**
