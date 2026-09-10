@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * Cause {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minCauseLength .. bound.&maxCauseLength))
+ *  bound.&minCauseLength .. bound.&maxCauseLength))
  * ```
  *
  */

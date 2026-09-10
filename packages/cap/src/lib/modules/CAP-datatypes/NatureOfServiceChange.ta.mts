@@ -11,9 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * NatureOfServiceChange ::= ENUMERATED {
- userInitiated			(0),
- networkInitiated			(1)
- }
+ *  userInitiated			(0),
+ *  networkInitiated			(1)
+ *  }
  * ```
  *
  */

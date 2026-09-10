@@ -16,12 +16,12 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  *
  * ```asn1
  * SEQUENCE {
- freeFormatData			[0] OCTET STRING (SIZE(
- bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
- pDPID				[1] PDPID OPTIONAL,
- appendFreeFormatData		[2] AppendFreeFormatData DEFAULT overwrite,
- ...
- }
+ *  freeFormatData			[0] OCTET STRING (SIZE(
+ *  bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
+ *  pDPID				[1] PDPID OPTIONAL,
+ *  appendFreeFormatData		[2] AppendFreeFormatData DEFAULT overwrite,
+ *  ...
+ *  }
  * ```
  *
  */

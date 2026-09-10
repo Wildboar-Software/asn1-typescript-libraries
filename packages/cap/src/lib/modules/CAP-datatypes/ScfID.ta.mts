@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * ScfID {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minScfIDLength .. bound.&maxScfIDLength))
+ *  bound.&minScfIDLength .. bound.&maxScfIDLength))
  * ```
  *
  */

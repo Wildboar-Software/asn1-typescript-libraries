@@ -11,14 +11,14 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * GPRSEventType ::= ENUMERATED {
- attach				(1),
- attachChangeOfPosition		(2),
- detached				(3),
- pdp-ContextEstablishment		(11),
- pdp-ContextEstablishmentAcknowledgement (12),
- disonnect				(13),
- pdp-ContextChangeOfPosition		(14)
- }
+ *  attach				(1),
+ *  attachChangeOfPosition		(2),
+ *  detached				(3),
+ *  pdp-ContextEstablishment		(11),
+ *  pdp-ContextEstablishmentAcknowledgement (12),
+ *  disonnect				(13),
+ *  pdp-ContextChangeOfPosition		(14)
+ *  }
  * ```
  *
  */

@@ -15,10 +15,10 @@ import { DpSpecificCriteriaAlt, _decode_DpSpecificCriteriaAlt, _encode_DpSpecifi
  *
  * ```asn1
  * DpSpecificCriteria {PARAMETERS-BOUND : bound}::= CHOICE {
- applicationTimer			[1] ApplicationTimer,
- midCallControlInfo			[2]	MidCallControlInfo, 
- dpSpecificCriteriaAlt		[3] DpSpecificCriteriaAlt {bound}
- }
+ *  applicationTimer			[1] ApplicationTimer,
+ *  midCallControlInfo			[2]	MidCallControlInfo, 
+ *  dpSpecificCriteriaAlt		[3] DpSpecificCriteriaAlt {bound}
+ *  }
  * ```
  *
  */

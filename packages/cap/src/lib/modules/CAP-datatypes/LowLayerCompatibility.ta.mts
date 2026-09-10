@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * LowLayerCompatibility {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE (
- bound.&minLowLayerCompatibilityLength .. bound.&maxLowLayerCompatibilityLength))
+ *  bound.&minLowLayerCompatibilityLength .. bound.&maxLowLayerCompatibilityLength))
  * ```
  *
  */

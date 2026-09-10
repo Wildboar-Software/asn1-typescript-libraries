@@ -11,9 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * PDPInitiationType ::= ENUMERATED {
- mSInitiated				(0),
- networkInitiated			(1)
- }
+ *  mSInitiated				(0),
+ *  networkInitiated			(1)
+ *  }
  * ```
  *
  */

@@ -11,9 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * ControlType ::= ENUMERATED {
- sCPOverloaded			(0),
- manuallyInitiated			(1)
- }
+ *  sCPOverloaded			(0),
+ *  manuallyInitiated			(1)
+ *  }
  * ```
  *
  */

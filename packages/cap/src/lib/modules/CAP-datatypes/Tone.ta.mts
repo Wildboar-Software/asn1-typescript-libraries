@@ -15,10 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * Tone ::= SEQUENCE {
- toneID				[0] Integer4,
- duration				[1] Integer4				OPTIONAL,
-...
- }
+ *  toneID				[0] Integer4,
+ *  duration				[1] Integer4				OPTIONAL,
+ * ...
+ *  }
  * ```
  *
  */

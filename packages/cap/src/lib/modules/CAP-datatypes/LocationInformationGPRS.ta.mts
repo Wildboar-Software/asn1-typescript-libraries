@@ -21,16 +21,16 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  *
  * ```asn1
  * LocationInformationGPRS	::= SEQUENCE {
- cellGlobalIdOrServiceAreaIdOrLAI	[0] OCTET STRING (SIZE(5..7))		OPTIONAL,
- routeingAreaIdentity		[1] RAIdentity				OPTIONAL,
- geographicalInformation		[2] GeographicalInformation			OPTIONAL,
- sgsn-Number				[3] ISDN-AddressString			OPTIONAL,
- selectedLSAIdentity			[4] LSAIdentity				OPTIONAL,
- extensionContainer			[5] ExtensionContainer			OPTIONAL,
- ...,
- sai-Present				[6] NULL					OPTIONAL,
- userCSGInformation                  [7] UserCSGInformation                      OPTIONAL
-}
+ *  cellGlobalIdOrServiceAreaIdOrLAI	[0] OCTET STRING (SIZE(5..7))		OPTIONAL,
+ *  routeingAreaIdentity		[1] RAIdentity				OPTIONAL,
+ *  geographicalInformation		[2] GeographicalInformation			OPTIONAL,
+ *  sgsn-Number				[3] ISDN-AddressString			OPTIONAL,
+ *  selectedLSAIdentity			[4] LSAIdentity				OPTIONAL,
+ *  extensionContainer			[5] ExtensionContainer			OPTIONAL,
+ *  ...,
+ *  sai-Present				[6] NULL					OPTIONAL,
+ *  userCSGInformation                  [7] UserCSGInformation                      OPTIONAL
+ * }
  * ```
  *
  */

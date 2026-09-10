@@ -11,12 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * UnavailableNetworkResource ::= ENUMERATED {
- unavailableResources		(0),
- componentFailure			(1),
- basicCallProcessingException	(2),
- resourceStatusFailure		(3),
- endUserFailure			(4)
- }
+ *  unavailableResources		(0),
+ *  componentFailure			(1),
+ *  basicCallProcessingException	(2),
+ *  resourceStatusFailure		(3),
+ *  endUserFailure			(4)
+ *  }
  * ```
  *
  */

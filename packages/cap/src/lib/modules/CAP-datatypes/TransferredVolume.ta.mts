@@ -14,12 +14,12 @@ import { TransferredVolume_volumeIfTariffSwitch, _decode_TransferredVolume_volum
  *
  * ```asn1
  * TransferredVolume ::= CHOICE {
- volumeIfNoTariffSwitch		[0] INTEGER (0..4294967295),
- volumeIfTariffSwitch		[1] SEQUENCE {
- volumeSinceLastTariffSwitch		[0]	INTEGER (0..4294967295),
- volumeTariffSwitchInterval		[1]	INTEGER (0..4294967295)		OPTIONAL
- }
- }
+ *  volumeIfNoTariffSwitch		[0] INTEGER (0..4294967295),
+ *  volumeIfTariffSwitch		[1] SEQUENCE {
+ *  volumeSinceLastTariffSwitch		[0]	INTEGER (0..4294967295),
+ *  volumeTariffSwitchInterval		[1]	INTEGER (0..4294967295)		OPTIONAL
+ *  }
+ *  }
  * ```
  *
  */

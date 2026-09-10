@@ -11,9 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * InitiatorOfServiceChange ::= ENUMERATED {
- a-side			(0),
- b-side			(1)
- }
+ *  a-side			(0),
+ *  b-side			(1)
+ *  }
  * ```
  *
  */

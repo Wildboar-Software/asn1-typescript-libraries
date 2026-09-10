@@ -15,9 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * TimeIfTariffSwitch ::= SEQUENCE {
- timeSinceTariffSwitch		[0] INTEGER(0..864000),
- tariffSwitchInterval		[1] INTEGER(1..864000)			OPTIONAL
- }
+ *  timeSinceTariffSwitch		[0] INTEGER(0..864000),
+ *  tariffSwitchInterval		[1] INTEGER(1..864000)			OPTIONAL
+ *  }
  * ```
  *
  */

@@ -14,9 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * SCIBillingChargingCharacteristics {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE (
- bound.&minSCIBillingChargingLength .. bound.&maxSCIBillingChargingLength))
- (CONSTRAINED BY {
- CAMEL-SCIBillingChargingCharacteristics})
+ *  bound.&minSCIBillingChargingLength .. bound.&maxSCIBillingChargingLength))
+ *  (CONSTRAINED BY {
+ *  CAMEL-SCIBillingChargingCharacteristics})
  * ```
  *
  */

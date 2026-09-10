@@ -15,9 +15,9 @@ import { AOCSubsequent, _decode_AOCSubsequent, _encode_AOCSubsequent } from "./A
  *
  * ```asn1
  * AOCGPRS ::= SEQUENCE {
- aOCInitial				[0] CAI-GSM0224,
- aOCSubsequent			[1] AOCSubsequent				OPTIONAL
- }
+ *  aOCInitial				[0] CAI-GSM0224,
+ *  aOCSubsequent			[1] AOCSubsequent				OPTIONAL
+ *  }
  * ```
  *
  */

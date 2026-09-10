@@ -15,13 +15,13 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * Burst ::= SEQUENCE {
- numberOfBursts			[0]	INTEGER (1..3)	DEFAULT 1,
- burstInterval			[1]	INTEGER	(1..1200)	DEFAULT 2,			
- numberOfTonesInBurst		[2] INTEGER (1..3)	DEFAULT 3,
- toneDuration			[3]	INTEGER	(1..20)	DEFAULT 2,
- toneInterval			[4]	INTEGER	(1..20)	DEFAULT 2,
- ...
- }
+ *  numberOfBursts			[0]	INTEGER (1..3)	DEFAULT 1,
+ *  burstInterval			[1]	INTEGER	(1..1200)	DEFAULT 2,			
+ *  numberOfTonesInBurst		[2] INTEGER (1..3)	DEFAULT 3,
+ *  toneDuration			[3]	INTEGER	(1..20)	DEFAULT 2,
+ *  toneInterval			[4]	INTEGER	(1..20)	DEFAULT 2,
+ *  ...
+ *  }
  * ```
  *
  */

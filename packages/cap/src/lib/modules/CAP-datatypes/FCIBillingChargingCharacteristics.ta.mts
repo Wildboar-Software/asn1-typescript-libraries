@@ -14,9 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * FCIBillingChargingCharacteristics {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minFCIBillingChargingLength .. bound.&maxFCIBillingChargingLength))
- (CONSTRAINED BY {
- CAMEL-FCIBillingChargingCharacteristics {bound}})
+ *  bound.&minFCIBillingChargingLength .. bound.&maxFCIBillingChargingLength))
+ *  (CONSTRAINED BY {
+ *  CAMEL-FCIBillingChargingCharacteristics {bound}})
  * ```
  *
  */

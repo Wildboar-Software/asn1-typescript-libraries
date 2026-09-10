@@ -14,9 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * CallResult {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minCallResultLength .. bound.&maxCallResultLength))
- (CONSTRAINED BY {
- CAMEL-CallResult {bound}})
+ *  bound.&minCallResultLength .. bound.&maxCallResultLength))
+ *  (CONSTRAINED BY {
+ *  CAMEL-CallResult {bound}})
  * ```
  *
  */

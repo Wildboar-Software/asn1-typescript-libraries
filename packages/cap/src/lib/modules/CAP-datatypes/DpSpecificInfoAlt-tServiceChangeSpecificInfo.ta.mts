@@ -16,11 +16,11 @@ import { NatureOfServiceChange, _enum_for_NatureOfServiceChange, _decode_NatureO
  *
  * ```asn1
  * SEQUENCE {
- ext-basicServiceCode		[0] Ext-BasicServiceCode		OPTIONAL,
- ...,
- initiatorOfServiceChange		[1] InitiatorOfServiceChange		OPTIONAL,
- natureOfServiceChange		[2] NatureOfServiceChange		OPTIONAL
- }
+ *  ext-basicServiceCode		[0] Ext-BasicServiceCode		OPTIONAL,
+ *  ...,
+ *  initiatorOfServiceChange		[1] InitiatorOfServiceChange		OPTIONAL,
+ *  natureOfServiceChange		[2] NatureOfServiceChange		OPTIONAL
+ *  }
  * ```
  *
  */

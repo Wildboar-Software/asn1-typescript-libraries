@@ -15,11 +15,11 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  * ```asn1
  * RequestedInformationValue {PARAMETERS-BOUND : bound} ::= CHOICE {
- callAttemptElapsedTimeValue		[0] INTEGER (0..255),
- callStopTimeValue			[1] DateAndTime,
- callConnectedElapsedTimeValue	[2] Integer4,
- releaseCauseValue			[30] Cause {bound}
- }
+ *  callAttemptElapsedTimeValue		[0] INTEGER (0..255),
+ *  callStopTimeValue			[1] DateAndTime,
+ *  callConnectedElapsedTimeValue	[2] Integer4,
+ *  releaseCauseValue			[30] Cause {bound}
+ *  }
  * ```
  *
  */

@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * TimeAndTimezone {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minTimeAndTimezoneLength .. bound.&maxTimeAndTimezoneLength))
+ *  bound.&minTimeAndTimezoneLength .. bound.&maxTimeAndTimezoneLength))
  * ```
  *
  */

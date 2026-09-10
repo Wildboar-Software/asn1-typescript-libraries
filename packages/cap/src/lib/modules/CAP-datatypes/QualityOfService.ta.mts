@@ -15,14 +15,14 @@ import { GPRS_QoS_Extension, _decode_GPRS_QoS_Extension, _encode_GPRS_QoS_Extens
  *
  * ```asn1
  * QualityOfService ::= SEQUENCE {
- requested-QoS			[0]	GPRS-QoS				OPTIONAL,
- subscribed-QoS			[1]	GPRS-QoS				OPTIONAL,
- negotiated-QoS			[2]	GPRS-QoS				OPTIONAL,
- ...,
- requested-QoS-Extension		[3]	GPRS-QoS-Extension			OPTIONAL,
- subscribed-QoS-Extension		[4]	GPRS-QoS-Extension			OPTIONAL,
- negotiated-QoS-Extension		[5]	GPRS-QoS-Extension			OPTIONAL
- }
+ *  requested-QoS			[0]	GPRS-QoS				OPTIONAL,
+ *  subscribed-QoS			[1]	GPRS-QoS				OPTIONAL,
+ *  negotiated-QoS			[2]	GPRS-QoS				OPTIONAL,
+ *  ...,
+ *  requested-QoS-Extension		[3]	GPRS-QoS-Extension			OPTIONAL,
+ *  subscribed-QoS-Extension		[4]	GPRS-QoS-Extension			OPTIONAL,
+ *  negotiated-QoS-Extension		[5]	GPRS-QoS-Extension			OPTIONAL
+ *  }
  * ```
  *
  */

@@ -14,9 +14,9 @@ import { BurstList, _decode_BurstList, _encode_BurstList } from "./BurstList.ta.
  *
  * ```asn1
  * AudibleIndicator ::= CHOICE {
- tone				BOOLEAN,
- burstList				[1] BurstList
- }
+ *  tone				BOOLEAN,
+ *  burstList				[1] BurstList
+ *  }
  * ```
  *
  */

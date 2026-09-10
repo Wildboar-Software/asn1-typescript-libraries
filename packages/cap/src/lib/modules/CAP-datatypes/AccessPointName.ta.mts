@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * AccessPointName {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minAccessPointNameLength .. bound.&maxAccessPointNameLength))
+ *  bound.&minAccessPointNameLength .. bound.&maxAccessPointNameLength))
  * ```
  *
  */

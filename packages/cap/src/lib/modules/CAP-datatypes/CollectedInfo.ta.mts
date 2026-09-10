@@ -13,8 +13,8 @@ import { CollectedDigits, _decode_CollectedDigits, _encode_CollectedDigits } fro
  *
  * ```asn1
  * CollectedInfo ::= CHOICE {
- collectedDigits			[0] CollectedDigits
- }
+ *  collectedDigits			[0] CollectedDigits
+ *  }
  * ```
  *
  */

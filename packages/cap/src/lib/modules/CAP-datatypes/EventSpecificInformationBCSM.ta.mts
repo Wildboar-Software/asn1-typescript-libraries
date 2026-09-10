@@ -29,94 +29,94 @@ import { DpSpecificInfoAlt, _decode_DpSpecificInfoAlt, _encode_DpSpecificInfoAlt
  *
  * ```asn1
  * EventSpecificInformationBCSM {PARAMETERS-BOUND : bound} ::= CHOICE {
- routeSelectFailureSpecificInfo	[2] SEQUENCE {
- failureCause			[0] Cause {bound}			OPTIONAL,
- ...
- },
- oCalledPartyBusySpecificInfo	[3] SEQUENCE {
- busyCause				[0] Cause {bound}			OPTIONAL,
- ...
- },
- oNoAnswerSpecificInfo		[4] SEQUENCE {
- 
- ...
- },
- oAnswerSpecificInfo			[5] SEQUENCE {
- destinationAddress			[50] CalledPartyNumber {bound}		OPTIONAL,
- or-Call				[51] NULL				OPTIONAL,
- forwardedCall			[52] NULL				OPTIONAL,
- chargeIndicator			[53] ChargeIndicator			OPTIONAL,
- ext-basicServiceCode		[54] Ext-BasicServiceCode		OPTIONAL,
- ext-basicServiceCode2		[55] Ext-BasicServiceCode		OPTIONAL,
- ...
- },
- oMidCallSpecificInfo		[6] SEQUENCE {
- midCallEvents			[1] CHOICE {
- dTMFDigitsCompleted			[3] Digits {bound},
- dTMFDigitsTimeOut			[4] Digits {bound}
- }									OPTIONAL,
- ...
- },
- oDisconnectSpecificInfo		[7] SEQUENCE {
- releaseCause			[0] Cause {bound}			OPTIONAL,
- ...
- },
- tBusySpecificInfo			[8] SEQUENCE {
- busyCause				[0] Cause {bound}			OPTIONAL,
- callForwarded			[50] NULL				OPTIONAL,
- routeNotPermitted			[51] NULL				OPTIONAL,
- forwardingDestinationNumber		[52] CalledPartyNumber {bound}		OPTIONAL,
- ...
- },
- tNoAnswerSpecificInfo		[9] SEQUENCE {
- callForwarded			[50] NULL				OPTIONAL,
- forwardingDestinationNumber		[52] CalledPartyNumber {bound}		OPTIONAL,
- ...
- },
- tAnswerSpecificInfo			[10] SEQUENCE {
- destinationAddress			[50] CalledPartyNumber {bound}		OPTIONAL,
- or-Call				[51] NULL				OPTIONAL,
- forwardedCall			[52] NULL				OPTIONAL,
- chargeIndicator			[53] ChargeIndicator			OPTIONAL,
- ext-basicServiceCode		[54] Ext-BasicServiceCode		OPTIONAL,
- ext-basicServiceCode2		[55] Ext-BasicServiceCode		OPTIONAL,
- ...
- },
- tMidCallSpecificInfo		[11] SEQUENCE {
- midCallEvents			[1] CHOICE {
- dTMFDigitsCompleted			[3] Digits {bound},
- dTMFDigitsTimeOut			[4] Digits {bound}
- }									OPTIONAL,
- ...
- },
- tDisconnectSpecificInfo		[12] SEQUENCE {
- releaseCause			[0] Cause {bound}			OPTIONAL,
- ...
- },
- oTermSeizedSpecificInfo		[13] SEQUENCE {
- locationInformation			[50] LocationInformation		OPTIONAL,
- ...
- },
- callAcceptedSpecificInfo		[20] SEQUENCE {
- locationInformation			[50] LocationInformation		OPTIONAL,
- ...
- },
- oAbandonSpecificInfo		[21] SEQUENCE {
- routeNotPermitted			[50] NULL				OPTIONAL,
- ...
- },
- oChangeOfPositionSpecificInfo	[50] SEQUENCE {
- locationInformation			[50] LocationInformation		OPTIONAL,
- ...,
- metDPCriteriaList                   [51] MetDPCriteriaList {bound}		OPTIONAL
- },
- tChangeOfPositionSpecificInfo	[51] SEQUENCE {
- locationInformation			[50] LocationInformation		OPTIONAL,
- ...,
- metDPCriteriaList                   [51] MetDPCriteriaList {bound}		OPTIONAL
- },
- dpSpecificInfoAlt		   [52] DpSpecificInfoAlt {bound}
- }
+ *  routeSelectFailureSpecificInfo	[2] SEQUENCE {
+ *  failureCause			[0] Cause {bound}			OPTIONAL,
+ *  ...
+ *  },
+ *  oCalledPartyBusySpecificInfo	[3] SEQUENCE {
+ *  busyCause				[0] Cause {bound}			OPTIONAL,
+ *  ...
+ *  },
+ *  oNoAnswerSpecificInfo		[4] SEQUENCE {
+ *  
+ *  ...
+ *  },
+ *  oAnswerSpecificInfo			[5] SEQUENCE {
+ *  destinationAddress			[50] CalledPartyNumber {bound}		OPTIONAL,
+ *  or-Call				[51] NULL				OPTIONAL,
+ *  forwardedCall			[52] NULL				OPTIONAL,
+ *  chargeIndicator			[53] ChargeIndicator			OPTIONAL,
+ *  ext-basicServiceCode		[54] Ext-BasicServiceCode		OPTIONAL,
+ *  ext-basicServiceCode2		[55] Ext-BasicServiceCode		OPTIONAL,
+ *  ...
+ *  },
+ *  oMidCallSpecificInfo		[6] SEQUENCE {
+ *  midCallEvents			[1] CHOICE {
+ *  dTMFDigitsCompleted			[3] Digits {bound},
+ *  dTMFDigitsTimeOut			[4] Digits {bound}
+ *  }									OPTIONAL,
+ *  ...
+ *  },
+ *  oDisconnectSpecificInfo		[7] SEQUENCE {
+ *  releaseCause			[0] Cause {bound}			OPTIONAL,
+ *  ...
+ *  },
+ *  tBusySpecificInfo			[8] SEQUENCE {
+ *  busyCause				[0] Cause {bound}			OPTIONAL,
+ *  callForwarded			[50] NULL				OPTIONAL,
+ *  routeNotPermitted			[51] NULL				OPTIONAL,
+ *  forwardingDestinationNumber		[52] CalledPartyNumber {bound}		OPTIONAL,
+ *  ...
+ *  },
+ *  tNoAnswerSpecificInfo		[9] SEQUENCE {
+ *  callForwarded			[50] NULL				OPTIONAL,
+ *  forwardingDestinationNumber		[52] CalledPartyNumber {bound}		OPTIONAL,
+ *  ...
+ *  },
+ *  tAnswerSpecificInfo			[10] SEQUENCE {
+ *  destinationAddress			[50] CalledPartyNumber {bound}		OPTIONAL,
+ *  or-Call				[51] NULL				OPTIONAL,
+ *  forwardedCall			[52] NULL				OPTIONAL,
+ *  chargeIndicator			[53] ChargeIndicator			OPTIONAL,
+ *  ext-basicServiceCode		[54] Ext-BasicServiceCode		OPTIONAL,
+ *  ext-basicServiceCode2		[55] Ext-BasicServiceCode		OPTIONAL,
+ *  ...
+ *  },
+ *  tMidCallSpecificInfo		[11] SEQUENCE {
+ *  midCallEvents			[1] CHOICE {
+ *  dTMFDigitsCompleted			[3] Digits {bound},
+ *  dTMFDigitsTimeOut			[4] Digits {bound}
+ *  }									OPTIONAL,
+ *  ...
+ *  },
+ *  tDisconnectSpecificInfo		[12] SEQUENCE {
+ *  releaseCause			[0] Cause {bound}			OPTIONAL,
+ *  ...
+ *  },
+ *  oTermSeizedSpecificInfo		[13] SEQUENCE {
+ *  locationInformation			[50] LocationInformation		OPTIONAL,
+ *  ...
+ *  },
+ *  callAcceptedSpecificInfo		[20] SEQUENCE {
+ *  locationInformation			[50] LocationInformation		OPTIONAL,
+ *  ...
+ *  },
+ *  oAbandonSpecificInfo		[21] SEQUENCE {
+ *  routeNotPermitted			[50] NULL				OPTIONAL,
+ *  ...
+ *  },
+ *  oChangeOfPositionSpecificInfo	[50] SEQUENCE {
+ *  locationInformation			[50] LocationInformation		OPTIONAL,
+ *  ...,
+ *  metDPCriteriaList                   [51] MetDPCriteriaList {bound}		OPTIONAL
+ *  },
+ *  tChangeOfPositionSpecificInfo	[51] SEQUENCE {
+ *  locationInformation			[50] LocationInformation		OPTIONAL,
+ *  ...,
+ *  metDPCriteriaList                   [51] MetDPCriteriaList {bound}		OPTIONAL
+ *  },
+ *  dpSpecificInfoAlt		   [52] DpSpecificInfoAlt {bound}
+ *  }
  * ```
  *
  */

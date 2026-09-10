@@ -14,10 +14,10 @@ import { type Interval, _decode_Interval, _encode_Interval } from "../Core-INAP-
  *
  * ```asn1
  * GapIndicators ::= SEQUENCE {
- duration				[0] Duration,
- gapInterval				[1] Interval,
- ...
- }
+ *  duration				[0] Duration,
+ *  gapInterval				[1] Interval,
+ *  ...
+ *  }
  * ```
  *
  */

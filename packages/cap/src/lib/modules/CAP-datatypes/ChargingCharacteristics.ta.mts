@@ -14,9 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * ChargingCharacteristics ::= CHOICE {
- maxTransferredVolume		[0]	INTEGER (1..4294967295),
- maxElapsedTime			[1] INTEGER (1..86400)
- }
+ *  maxTransferredVolume		[0]	INTEGER (1..4294967295),
+ *  maxElapsedTime			[1] INTEGER (1..86400)
+ *  }
  * ```
  *
  */

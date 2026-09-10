@@ -15,10 +15,10 @@ import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from
  *
  * ```asn1
  * CallSegmentToCancel {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- invokeID				[0]	InvokeID				OPTIONAL,
- callSegmentID			[1]	CallSegmentID {bound}			OPTIONAL,
- ...
- }
+ *  invokeID				[0]	InvokeID				OPTIONAL,
+ *  callSegmentID			[1]	CallSegmentID {bound}			OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

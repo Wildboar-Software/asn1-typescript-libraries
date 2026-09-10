@@ -15,9 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * SEQUENCE {
- volumeSinceLastTariffSwitch		[0]	INTEGER (0..4294967295),
- volumeTariffSwitchInterval		[1]	INTEGER (0..4294967295)		OPTIONAL
- }
+ *  volumeSinceLastTariffSwitch		[0]	INTEGER (0..4294967295),
+ *  volumeTariffSwitchInterval		[1]	INTEGER (0..4294967295)		OPTIONAL
+ *  }
  * ```
  *
  */

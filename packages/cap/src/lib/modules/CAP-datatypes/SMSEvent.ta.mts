@@ -14,9 +14,9 @@ import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_Monito
  *
  * ```asn1
  * SMSEvent ::= SEQUENCE {
- eventTypeSMS			[0] EventTypeSMS,
- monitorMode				[1] MonitorMode
- }
+ *  eventTypeSMS			[0] EventTypeSMS,
+ *  monitorMode				[1] MonitorMode
+ *  }
  * ```
  *
  */

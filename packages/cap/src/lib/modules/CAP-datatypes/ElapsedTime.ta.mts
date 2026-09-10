@@ -14,12 +14,12 @@ import { ElapsedTime_timeGPRSIfTariffSwitch, _decode_ElapsedTime_timeGPRSIfTarif
  *
  * ```asn1
  * ElapsedTime ::= CHOICE {
- timeGPRSIfNoTariffSwitch		[0] INTEGER (0..86400),
- timeGPRSIfTariffSwitch		[1] SEQUENCE {
- timeGPRSSinceLastTariffSwitch	[0] INTEGER (0..86400),
- timeGPRSTariffSwitchInterval	[1] INTEGER (0..86400)			OPTIONAL
- }
- }
+ *  timeGPRSIfNoTariffSwitch		[0] INTEGER (0..86400),
+ *  timeGPRSIfTariffSwitch		[1] SEQUENCE {
+ *  timeGPRSSinceLastTariffSwitch	[0] INTEGER (0..86400),
+ *  timeGPRSTariffSwitchInterval	[1] INTEGER (0..86400)			OPTIONAL
+ *  }
+ *  }
  * ```
  *
  */

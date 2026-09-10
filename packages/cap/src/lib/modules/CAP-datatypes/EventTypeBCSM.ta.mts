@@ -11,30 +11,30 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * EventTypeBCSM ::= ENUMERATED {
- collectedInfo			(2),
- analyzedInformation			(3),
- routeSelectFailure			(4),
- oCalledPartyBusy			(5),
- oNoAnswer				(6),
- oAnswer				(7),
- oMidCall				(8),
- oDisconnect				(9),
- oAbandon				(10),
- termAttemptAuthorized		(12),
- tBusy				(13),
- tNoAnswer				(14),
- tAnswer				(15),
- tMidCall				(16),
- tDisconnect				(17),
- tAbandon				(18),
- oTermSeized				(19),
- callAccepted			(27),
- oChangeOfPosition			(50),
- tChangeOfPosition			(51),
- ...,
- oServiceChange			(52),
- tServiceChange			(53)
- }
+ *  collectedInfo			(2),
+ *  analyzedInformation			(3),
+ *  routeSelectFailure			(4),
+ *  oCalledPartyBusy			(5),
+ *  oNoAnswer				(6),
+ *  oAnswer				(7),
+ *  oMidCall				(8),
+ *  oDisconnect				(9),
+ *  oAbandon				(10),
+ *  termAttemptAuthorized		(12),
+ *  tBusy				(13),
+ *  tNoAnswer				(14),
+ *  tAnswer				(15),
+ *  tMidCall				(16),
+ *  tDisconnect				(17),
+ *  tAbandon				(18),
+ *  oTermSeized				(19),
+ *  callAccepted			(27),
+ *  oChangeOfPosition			(50),
+ *  tChangeOfPosition			(51),
+ *  ...,
+ *  oServiceChange			(52),
+ *  tServiceChange			(53)
+ *  }
  * ```
  *
  */

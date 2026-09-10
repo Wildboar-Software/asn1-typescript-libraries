@@ -17,14 +17,14 @@ import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_Ba
  *
  * ```asn1
  * SEQUENCE {
- destinationAddress			[50] CalledPartyNumber {bound}		OPTIONAL,
- or-Call				[51] NULL				OPTIONAL,
- forwardedCall			[52] NULL				OPTIONAL,
- chargeIndicator			[53] ChargeIndicator			OPTIONAL,
- ext-basicServiceCode		[54] Ext-BasicServiceCode		OPTIONAL,
- ext-basicServiceCode2		[55] Ext-BasicServiceCode		OPTIONAL,
- ...
- }
+ *  destinationAddress			[50] CalledPartyNumber {bound}		OPTIONAL,
+ *  or-Call				[51] NULL				OPTIONAL,
+ *  forwardedCall			[52] NULL				OPTIONAL,
+ *  chargeIndicator			[53] ChargeIndicator			OPTIONAL,
+ *  ext-basicServiceCode		[54] Ext-BasicServiceCode		OPTIONAL,
+ *  ext-basicServiceCode2		[55] Ext-BasicServiceCode		OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

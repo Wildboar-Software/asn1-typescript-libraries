@@ -15,11 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * EndUserAddress {PARAMETERS-BOUND: bound} ::= SEQUENCE {
- pDPTypeOrganization			[0] OCTET STRING (SIZE(1)),
- pDPTypeNumber			[1] OCTET STRING (SIZE(1)),
- pDPAddress				[2] OCTET STRING (SIZE(
- bound.&minPDPAddressLength .. bound.&maxPDPAddressLength))			OPTIONAL
- }
+ *  pDPTypeOrganization			[0] OCTET STRING (SIZE(1)),
+ *  pDPTypeNumber			[1] OCTET STRING (SIZE(1)),
+ *  pDPAddress				[2] OCTET STRING (SIZE(
+ *  bound.&minPDPAddressLength .. bound.&maxPDPAddressLength))			OPTIONAL
+ *  }
  * ```
  *
  */

@@ -16,14 +16,14 @@ import { ChangeOfLocationAlt, _decode_ChangeOfLocationAlt, _encode_ChangeOfLocat
  *
  * ```asn1
  * ChangeOfLocation {PARAMETERS-BOUND : bound} ::= CHOICE {
- cellGlobalId			[0] CellGlobalIdOrServiceAreaIdFixedLength,
- serviceAreaId			[1] CellGlobalIdOrServiceAreaIdFixedLength,
- locationAreaId			[2] LAIFixedLength,
- inter-SystemHandOver		[3] NULL,
- inter-PLMNHandOver			[4] NULL,
- inter-MSCHandOver			[5] NULL,
- changeOfLocationAlt			[6] ChangeOfLocationAlt {bound}
-}
+ *  cellGlobalId			[0] CellGlobalIdOrServiceAreaIdFixedLength,
+ *  serviceAreaId			[1] CellGlobalIdOrServiceAreaIdFixedLength,
+ *  locationAreaId			[2] LAIFixedLength,
+ *  inter-SystemHandOver		[3] NULL,
+ *  inter-PLMNHandOver			[4] NULL,
+ *  inter-MSCHandOver			[5] NULL,
+ *  changeOfLocationAlt			[6] ChangeOfLocationAlt {bound}
+ * }
  * ```
  *
  */

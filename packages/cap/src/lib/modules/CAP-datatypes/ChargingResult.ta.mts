@@ -14,9 +14,9 @@ import { type ElapsedTime, _decode_ElapsedTime, _encode_ElapsedTime } from "./El
  *
  * ```asn1
  * ChargingResult ::= CHOICE {
- transferredVolume			[0] TransferredVolume,
- elapsedTime				[1]	ElapsedTime
- }
+ *  transferredVolume			[0] TransferredVolume,
+ *  elapsedTime				[1]	ElapsedTime
+ *  }
  * ```
  *
  */

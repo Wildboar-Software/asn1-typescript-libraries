@@ -15,10 +15,10 @@ import { type MetDPCriteriaList, _decode_MetDPCriteriaList, _encode_MetDPCriteri
  *
  * ```asn1
  * SEQUENCE {
- locationInformation			[50] LocationInformation		OPTIONAL,
- ...,
- metDPCriteriaList                   [51] MetDPCriteriaList {bound}		OPTIONAL
- }
+ *  locationInformation			[50] LocationInformation		OPTIONAL,
+ *  ...,
+ *  metDPCriteriaList                   [51] MetDPCriteriaList {bound}		OPTIONAL
+ *  }
  * ```
  *
  */

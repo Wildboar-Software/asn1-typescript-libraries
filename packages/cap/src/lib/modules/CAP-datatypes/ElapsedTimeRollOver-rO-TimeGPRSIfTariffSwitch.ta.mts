@@ -15,9 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * SEQUENCE {
- rO-TimeGPRSSinceLastTariffSwitch	[0] INTEGER (0..255)			OPTIONAL,
- rO-TimeGPRSTariffSwitchInterval	[1] INTEGER (0..255)			OPTIONAL
- }
+ *  rO-TimeGPRSSinceLastTariffSwitch	[0] INTEGER (0..255)			OPTIONAL,
+ *  rO-TimeGPRSTariffSwitchInterval	[1] INTEGER (0..255)			OPTIONAL
+ *  }
  * ```
  *
  */

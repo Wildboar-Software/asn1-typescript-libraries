@@ -14,9 +14,9 @@ import { type Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Su
  *
  * ```asn1
  * GPRS-QoS ::= CHOICE {
- short-QoS-format			[0]	QoS-Subscribed,
- long-QoS-format			[1]	Ext-QoS-Subscribed
- }
+ *  short-QoS-format			[0]	QoS-Subscribed,
+ *  long-QoS-format			[1]	Ext-QoS-Subscribed
+ *  }
  * ```
  *
  */

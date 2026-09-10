@@ -15,10 +15,10 @@ import { InitiatingEntity, _enum_for_InitiatingEntity, _decode_InitiatingEntity,
  *
  * ```asn1
  * SEQUENCE {
- initiatingEntity		[0] InitiatingEntity			OPTIONAL,
- ...,
- routeingAreaUpdate		[1]	NULL				OPTIONAL
- }
+ *  initiatingEntity		[0] InitiatingEntity			OPTIONAL,
+ *  ...,
+ *  routeingAreaUpdate		[1]	NULL				OPTIONAL
+ *  }
  * ```
  *
  */

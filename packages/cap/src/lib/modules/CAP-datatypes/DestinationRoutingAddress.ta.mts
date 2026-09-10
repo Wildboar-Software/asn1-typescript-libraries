@@ -13,7 +13,7 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  *
  * ```asn1
  * DestinationRoutingAddress {PARAMETERS-BOUND : bound} ::= SEQUENCE SIZE(1) OF
- CalledPartyNumber {bound}
+ *  CalledPartyNumber {bound}
  * ```
  *
  */

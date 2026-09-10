@@ -14,9 +14,9 @@ import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_Monito
  *
  * ```asn1
  * GPRSEvent ::= SEQUENCE {
- gPRSEventType			[0] GPRSEventType,
- monitorMode				[1] MonitorMode
- }
+ *  gPRSEventType			[0] GPRSEventType,
+ *  monitorMode				[1] MonitorMode
+ *  }
  * ```
  *
  */

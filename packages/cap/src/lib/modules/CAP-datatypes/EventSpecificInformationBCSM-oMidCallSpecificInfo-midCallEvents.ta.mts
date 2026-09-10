@@ -13,9 +13,9 @@ import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
  *
  * ```asn1
  * CHOICE {
- dTMFDigitsCompleted			[3] Digits {bound},
- dTMFDigitsTimeOut			[4] Digits {bound}
- }
+ *  dTMFDigitsCompleted			[3] Digits {bound},
+ *  dTMFDigitsTimeOut			[4] Digits {bound}
+ *  }
  * ```
  *
  */

@@ -17,12 +17,12 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  *
  * ```asn1
  * SEQUENCE {
- freeFormatData			[0] OCTET STRING (SIZE(
- bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
- partyToCharge			[1] SendingSideID DEFAULT sendingSideID: leg1,
- appendFreeFormatData		[2] AppendFreeFormatData DEFAULT overwrite,
- ...
- }
+ *  freeFormatData			[0] OCTET STRING (SIZE(
+ *  bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
+ *  partyToCharge			[1] SendingSideID DEFAULT sendingSideID: leg1,
+ *  appendFreeFormatData		[2] AppendFreeFormatData DEFAULT overwrite,
+ *  ...
+ *  }
  * ```
  *
  */

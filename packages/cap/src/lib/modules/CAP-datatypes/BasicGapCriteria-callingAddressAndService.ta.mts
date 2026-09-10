@@ -14,10 +14,10 @@ import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core
  *
  * ```asn1
  * SEQUENCE {
- callingAddressValue			[0] Digits {bound},
- serviceKey				[1] ServiceKey,
- ...
- }
+ *  callingAddressValue			[0] Digits {bound},
+ *  serviceKey				[1] ServiceKey,
+ *  ...
+ *  }
  * ```
  *
  */

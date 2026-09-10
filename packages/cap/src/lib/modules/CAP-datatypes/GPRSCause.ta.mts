@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * GPRSCause {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE
- (bound.&minGPRSCauseLength .. bound.&maxGPRSCauseLength))
+ *  (bound.&minGPRSCauseLength .. bound.&maxGPRSCauseLength))
  * ```
  *
  */

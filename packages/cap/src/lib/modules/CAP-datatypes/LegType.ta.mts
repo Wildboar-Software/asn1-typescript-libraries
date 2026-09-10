@@ -14,8 +14,8 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * LegType ::= OCTET STRING (SIZE(1))
-leg1 LegType	::= '01'H
-leg2 LegType	::= '02'H
+ * leg1 LegType	::= '01'H
+ * leg2 LegType	::= '02'H
  * ```
  *
  */

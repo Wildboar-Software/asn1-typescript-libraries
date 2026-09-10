@@ -14,9 +14,9 @@ import { LocationInformation, _decode_LocationInformation, _encode_LocationInfor
  *
  * ```asn1
  * SEQUENCE {
- locationInformation			[50] LocationInformation		OPTIONAL,
- ...
- }
+ *  locationInformation			[50] LocationInformation		OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

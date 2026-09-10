@@ -14,9 +14,9 @@ import { CompoundCriteria, _decode_CompoundCriteria, _encode_CompoundCriteria } 
  *
  * ```asn1
  * GapCriteria {PARAMETERS-BOUND : bound}::= CHOICE {
- basicGapCriteria			BasicGapCriteria {bound},
- compoundGapCriteria			CompoundCriteria {bound}
- }
+ *  basicGapCriteria			BasicGapCriteria {bound},
+ *  compoundGapCriteria			CompoundCriteria {bound}
+ *  }
  * ```
  *
  */

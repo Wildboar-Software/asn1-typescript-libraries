@@ -14,9 +14,9 @@ import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from
  *
  * ```asn1
  * AChChargingAddress {PARAMETERS-BOUND : bound} ::= CHOICE {
- legID		[2] LegID,
- srfConnection	[50] CallSegmentID {bound}
- }
+ * legID		[2] LegID,
+ * srfConnection	[50] CallSegmentID {bound}
+ * }
  * ```
  *
  */

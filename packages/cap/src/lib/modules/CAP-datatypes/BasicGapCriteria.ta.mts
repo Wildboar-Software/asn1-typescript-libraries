@@ -16,19 +16,19 @@ import { BasicGapCriteria_callingAddressAndService, _decode_BasicGapCriteria_cal
  *
  * ```asn1
  * BasicGapCriteria {PARAMETERS-BOUND : bound} ::= CHOICE {
- calledAddressValue			[0] Digits {bound},
- gapOnService			[2] GapOnService,
- calledAddressAndService		[29] SEQUENCE {
- calledAddressValue			[0] Digits {bound},
- serviceKey				[1] ServiceKey,
- ...
- },
- callingAddressAndService		[30] SEQUENCE {
- callingAddressValue			[0] Digits {bound},
- serviceKey				[1] ServiceKey,
- ...
- }
- }
+ *  calledAddressValue			[0] Digits {bound},
+ *  gapOnService			[2] GapOnService,
+ *  calledAddressAndService		[29] SEQUENCE {
+ *  calledAddressValue			[0] Digits {bound},
+ *  serviceKey				[1] ServiceKey,
+ *  ...
+ *  },
+ *  callingAddressAndService		[30] SEQUENCE {
+ *  callingAddressValue			[0] Digits {bound},
+ *  serviceKey				[1] ServiceKey,
+ *  ...
+ *  }
+ *  }
  * ```
  *
  */

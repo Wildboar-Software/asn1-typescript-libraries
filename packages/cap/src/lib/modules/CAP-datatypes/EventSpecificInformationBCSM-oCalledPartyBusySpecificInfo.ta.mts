@@ -14,9 +14,9 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  * ```asn1
  * SEQUENCE {
- busyCause				[0] Cause {bound}			OPTIONAL,
- ...
- }
+ *  busyCause				[0] Cause {bound}			OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

@@ -17,18 +17,18 @@ import { ErrorTreatment, _enum_for_ErrorTreatment, stdErrorAndInfo, _decode_Erro
  *
  * ```asn1
  * CollectedDigits ::= SEQUENCE {
- minimumNbOfDigits			[0] INTEGER (1..30)	DEFAULT 1,
- maximumNbOfDigits			[1] INTEGER (1..30),
- endOfReplyDigit			[2] OCTET STRING (SIZE (1..2))		OPTIONAL,
- cancelDigit				[3] OCTET STRING (SIZE (1..2))		OPTIONAL,
- startDigit				[4] OCTET STRING (SIZE (1..2))		OPTIONAL,
- firstDigitTimeOut			[5] INTEGER (1..127)			OPTIONAL,
- interDigitTimeOut			[6] INTEGER (1..127)			OPTIONAL,
- errorTreatment			[7] ErrorTreatment DEFAULT stdErrorAndInfo,
- interruptableAnnInd			[8] BOOLEAN DEFAULT TRUE,
- voiceInformation			[9] BOOLEAN DEFAULT FALSE,
- voiceBack				[10] BOOLEAN DEFAULT FALSE
- }
+ *  minimumNbOfDigits			[0] INTEGER (1..30)	DEFAULT 1,
+ *  maximumNbOfDigits			[1] INTEGER (1..30),
+ *  endOfReplyDigit			[2] OCTET STRING (SIZE (1..2))		OPTIONAL,
+ *  cancelDigit				[3] OCTET STRING (SIZE (1..2))		OPTIONAL,
+ *  startDigit				[4] OCTET STRING (SIZE (1..2))		OPTIONAL,
+ *  firstDigitTimeOut			[5] INTEGER (1..127)			OPTIONAL,
+ *  interDigitTimeOut			[6] INTEGER (1..127)			OPTIONAL,
+ *  errorTreatment			[7] ErrorTreatment DEFAULT stdErrorAndInfo,
+ *  interruptableAnnInd			[8] BOOLEAN DEFAULT TRUE,
+ *  voiceInformation			[9] BOOLEAN DEFAULT FALSE,
+ *  voiceBack				[10] BOOLEAN DEFAULT FALSE
+ *  }
  * ```
  *
  */

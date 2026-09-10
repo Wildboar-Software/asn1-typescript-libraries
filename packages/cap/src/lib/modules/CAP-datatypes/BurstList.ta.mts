@@ -15,10 +15,10 @@ import { Burst, _decode_Burst, _encode_Burst } from "./Burst.ta.mjs";
  *
  * ```asn1
  * BurstList ::= SEQUENCE {
- warningPeriod			[0] INTEGER	(1..1200) DEFAULT 30,
- bursts				[1] Burst,
- ...
- }
+ *  warningPeriod			[0] INTEGER	(1..1200) DEFAULT 30,
+ *  bursts				[1] Burst,
+ *  ...
+ *  }
  * ```
  *
  */

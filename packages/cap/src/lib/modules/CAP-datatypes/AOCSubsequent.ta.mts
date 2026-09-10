@@ -15,9 +15,9 @@ import { CAI_GSM0224, _decode_CAI_GSM0224, _encode_CAI_GSM0224 } from "./CAI-GSM
  *
  * ```asn1
  * AOCSubsequent ::= SEQUENCE {
- cAI-GSM0224				[0] CAI-GSM0224	,
- tariffSwitchInterval		[1] INTEGER (1..86400)			OPTIONAL
- }
+ *  cAI-GSM0224				[0] CAI-GSM0224	,
+ *  tariffSwitchInterval		[1] INTEGER (1..86400)			OPTIONAL
+ *  }
  * ```
  *
  */

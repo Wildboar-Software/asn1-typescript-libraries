@@ -14,10 +14,10 @@ import { type RequestedInformationValue, _decode_RequestedInformationValue, _enc
  *
  * ```asn1
  * RequestedInformation {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- requestedInformationType		[0] RequestedInformationType,
- requestedInformationValue		[1] RequestedInformationValue {bound},
-...
- }
+ *  requestedInformationType		[0] RequestedInformationType,
+ *  requestedInformationValue		[1] RequestedInformationValue {bound},
+ * ...
+ *  }
  * ```
  *
  */

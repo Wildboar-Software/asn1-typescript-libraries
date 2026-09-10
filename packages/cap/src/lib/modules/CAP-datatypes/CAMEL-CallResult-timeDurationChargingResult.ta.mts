@@ -20,15 +20,15 @@ import { type AChChargingAddress, _decode_AChChargingAddress, _encode_AChChargin
  *
  * ```asn1
  * SEQUENCE {
- partyToCharge			[0] ReceivingSideID,
- timeInformation			[1] TimeInformation,
- legActive				[2] BOOLEAN DEFAULT TRUE,
- callLegReleasedAtTcpExpiry		[3] NULL				OPTIONAL,
- extensions				[4] Extensions {bound}			OPTIONAL,
- aChChargingAddress			[5] AChChargingAddress {bound}
- DEFAULT legID:receivingSideID:leg1,
- ...
- }
+ *  partyToCharge			[0] ReceivingSideID,
+ *  timeInformation			[1] TimeInformation,
+ *  legActive				[2] BOOLEAN DEFAULT TRUE,
+ *  callLegReleasedAtTcpExpiry		[3] NULL				OPTIONAL,
+ *  extensions				[4] Extensions {bound}			OPTIONAL,
+ *  aChChargingAddress			[5] AChChargingAddress {bound}
+ *  DEFAULT legID:receivingSideID:leg1,
+ *  ...
+ *  }
  * ```
  *
  */

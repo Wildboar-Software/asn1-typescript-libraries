@@ -13,12 +13,12 @@ import { type EventSpecificInformationBCSM_tMidCallSpecificInfo_midCallEvents, _
  *
  * ```asn1
  * SEQUENCE {
- midCallEvents			[1] CHOICE {
- dTMFDigitsCompleted			[3] Digits {bound},
- dTMFDigitsTimeOut			[4] Digits {bound}
- }									OPTIONAL,
- ...
- }
+ *  midCallEvents			[1] CHOICE {
+ *  dTMFDigitsCompleted			[3] Digits {bound},
+ *  dTMFDigitsTimeOut			[4] Digits {bound}
+ *  }									OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * Digits {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minDigitsLength .. bound.&maxDigitsLength))
+ *  bound.&minDigitsLength .. bound.&maxDigitsLength))
  * ```
  *
  */

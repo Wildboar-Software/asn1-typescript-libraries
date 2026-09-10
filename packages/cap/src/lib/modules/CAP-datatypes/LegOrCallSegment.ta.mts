@@ -14,9 +14,9 @@ import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataT
  *
  * ```asn1
  * LegOrCallSegment {PARAMETERS-BOUND : bound} ::= CHOICE {
- callSegmentID			[0] CallSegmentID {bound},
- legID				[1] LegID
- }
+ *  callSegmentID			[0] CallSegmentID {bound},
+ *  legID				[1] LegID
+ *  }
  * ```
  *
  */

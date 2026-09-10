@@ -16,14 +16,14 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * CAI-GSM0224 ::= SEQUENCE {
- e1					[0] INTEGER (0..8191)			OPTIONAL,
- e2					[1] INTEGER (0..8191)			OPTIONAL,
- e3					[2] INTEGER (0..8191)			OPTIONAL,
- e4					[3] INTEGER (0..8191)			OPTIONAL,
- e5					[4] INTEGER (0..8191)			OPTIONAL,
- e6					[5] INTEGER (0..8191)			OPTIONAL,
- e7					[6] INTEGER (0..8191)			OPTIONAL
- }
+ *  e1					[0] INTEGER (0..8191)			OPTIONAL,
+ *  e2					[1] INTEGER (0..8191)			OPTIONAL,
+ *  e3					[2] INTEGER (0..8191)			OPTIONAL,
+ *  e4					[3] INTEGER (0..8191)			OPTIONAL,
+ *  e5					[4] INTEGER (0..8191)			OPTIONAL,
+ *  e6					[5] INTEGER (0..8191)			OPTIONAL,
+ *  e7					[6] INTEGER (0..8191)			OPTIONAL
+ *  }
  * ```
  *
  */

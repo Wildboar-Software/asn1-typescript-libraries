@@ -15,10 +15,10 @@ import { CAMEL_SCIBillingChargingCharacteristicsAlt, _decode_CAMEL_SCIBillingCha
  *
  * ```asn1
  * CAMEL-SCIBillingChargingCharacteristics ::= CHOICE {
- aOCBeforeAnswer			[0] AOCBeforeAnswer,
- aOCAfterAnswer			[1] AOCSubsequent,
- aOC-extension			[2]	CAMEL-SCIBillingChargingCharacteristicsAlt
- }
+ *  aOCBeforeAnswer			[0] AOCBeforeAnswer,
+ *  aOCAfterAnswer			[1] AOCSubsequent,
+ *  aOC-extension			[2]	CAMEL-SCIBillingChargingCharacteristicsAlt
+ *  }
  * ```
  *
  */

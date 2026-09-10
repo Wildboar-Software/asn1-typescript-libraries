@@ -14,9 +14,9 @@ import { type MT_SMSCause, _decode_MT_SMSCause, _encode_MT_SMSCause } from "./MT
  *
  * ```asn1
  * SEQUENCE {
- failureCause			[0] MT-SMSCause				OPTIONAL,
- ...
- }
+ *  failureCause			[0] MT-SMSCause				OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

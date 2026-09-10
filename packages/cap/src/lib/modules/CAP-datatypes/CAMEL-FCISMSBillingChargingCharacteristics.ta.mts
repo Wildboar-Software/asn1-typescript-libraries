@@ -13,12 +13,12 @@ import { CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1, _decod
  *
  * ```asn1
  * CAMEL-FCISMSBillingChargingCharacteristics {PARAMETERS-BOUND : bound} ::= CHOICE {
- fCIBCCCAMELsequence1		[0] SEQUENCE {
- freeFormatData			[0] OCTET STRING (SIZE(
- bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
- appendFreeFormatData		[1] AppendFreeFormatData DEFAULT overwrite
- }
- }
+ *  fCIBCCCAMELsequence1		[0] SEQUENCE {
+ *  freeFormatData			[0] OCTET STRING (SIZE(
+ *  bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
+ *  appendFreeFormatData		[1] AppendFreeFormatData DEFAULT overwrite
+ *  }
+ *  }
  * ```
  *
  */

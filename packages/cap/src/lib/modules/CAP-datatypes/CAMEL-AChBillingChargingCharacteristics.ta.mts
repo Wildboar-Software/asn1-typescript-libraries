@@ -13,15 +13,15 @@ import { CAMEL_AChBillingChargingCharacteristics_timeDurationCharging, _decode_C
  *
  * ```asn1
  * CAMEL-AChBillingChargingCharacteristics {PARAMETERS-BOUND : bound} ::= CHOICE {
- timeDurationCharging		[0] SEQUENCE {
- maxCallPeriodDuration		[0] INTEGER (1..864000),
- releaseIfdurationExceeded		[1] BOOLEAN DEFAULT FALSE,
- tariffSwitchInterval		[2] INTEGER (1..86400)			OPTIONAL,
- audibleIndicator			[3] AudibleIndicator DEFAULT tone: FALSE,	
- extensions				[4] Extensions {bound}			OPTIONAL,
- ...
- }
- }
+ *  timeDurationCharging		[0] SEQUENCE {
+ *  maxCallPeriodDuration		[0] INTEGER (1..864000),
+ *  releaseIfdurationExceeded		[1] BOOLEAN DEFAULT FALSE,
+ *  tariffSwitchInterval		[2] INTEGER (1..86400)			OPTIONAL,
+ *  audibleIndicator			[3] AudibleIndicator DEFAULT tone: FALSE,	
+ *  extensions				[4] Extensions {bound}			OPTIONAL,
+ *  ...
+ *  }
+ *  }
  * ```
  *
  */

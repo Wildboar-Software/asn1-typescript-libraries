@@ -14,9 +14,9 @@ import { type ElapsedTimeRollOver, _decode_ElapsedTimeRollOver, _encode_ElapsedT
  *
  * ```asn1
  * ChargingRollOver ::= CHOICE {
- transferredVolumeRollOver		[0] TransferredVolumeRollOver,
- elapsedTimeRollOver			[1]	ElapsedTimeRollOver
- }
+ *  transferredVolumeRollOver		[0] TransferredVolumeRollOver,
+ *  elapsedTimeRollOver			[1]	ElapsedTimeRollOver
+ *  }
  * ```
  *
  */

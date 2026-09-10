@@ -18,13 +18,13 @@ import { type DpSpecificCriteria, _decode_DpSpecificCriteria, _encode_DpSpecific
  *
  * ```asn1
  * BCSMEvent{PARAMETERS-BOUND : bound} ::= SEQUENCE {
- eventTypeBCSM			[0] EventTypeBCSM,
- monitorMode				[1] MonitorMode,
- legID				[2] LegID					OPTIONAL,
- dpSpecificCriteria			[30] DpSpecificCriteria {bound}		OPTIONAL,
- automaticRearm			[50] NULL					OPTIONAL,
- ...
- }
+ *  eventTypeBCSM			[0] EventTypeBCSM,
+ *  monitorMode				[1] MonitorMode,
+ *  legID				[2] LegID					OPTIONAL,
+ *  dpSpecificCriteria			[30] DpSpecificCriteria {bound}		OPTIONAL,
+ *  automaticRearm			[50] NULL					OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

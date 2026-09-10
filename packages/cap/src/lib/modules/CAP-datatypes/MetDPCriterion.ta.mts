@@ -16,18 +16,18 @@ import { MetDPCriterionAlt, _decode_MetDPCriterionAlt, _encode_MetDPCriterionAlt
  *
  * ```asn1
  * MetDPCriterion {PARAMETERS-BOUND : bound} ::= CHOICE {
- enteringCellGlobalId		[0] CellGlobalIdOrServiceAreaIdFixedLength,
- leavingCellGlobalId			[1] CellGlobalIdOrServiceAreaIdFixedLength,
- enteringServiceAreaId		[2] CellGlobalIdOrServiceAreaIdFixedLength,
- leavingServiceAreaId		[3] CellGlobalIdOrServiceAreaIdFixedLength,
- enteringLocationAreaId		[4] LAIFixedLength,
- leavingLocationAreaId		[5] LAIFixedLength,
- inter-SystemHandOverToUMTS		[6] NULL,
- inter-SystemHandOverToGSM		[7] NULL,
- inter-PLMNHandOver			[8] NULL,
- inter-MSCHandOver			[9] NULL,
- metDPCriterionAlt			[10] MetDPCriterionAlt {bound}
-}
+ *  enteringCellGlobalId		[0] CellGlobalIdOrServiceAreaIdFixedLength,
+ *  leavingCellGlobalId			[1] CellGlobalIdOrServiceAreaIdFixedLength,
+ *  enteringServiceAreaId		[2] CellGlobalIdOrServiceAreaIdFixedLength,
+ *  leavingServiceAreaId		[3] CellGlobalIdOrServiceAreaIdFixedLength,
+ *  enteringLocationAreaId		[4] LAIFixedLength,
+ *  leavingLocationAreaId		[5] LAIFixedLength,
+ *  inter-SystemHandOverToUMTS		[6] NULL,
+ *  inter-SystemHandOverToGSM		[7] NULL,
+ *  inter-PLMNHandOver			[8] NULL,
+ *  inter-MSCHandOver			[9] NULL,
+ *  metDPCriterionAlt			[10] MetDPCriterionAlt {bound}
+ * }
  * ```
  *
  */

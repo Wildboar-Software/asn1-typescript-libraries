@@ -15,23 +15,23 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * ForwardServiceInteractionInd ::= SEQUENCE {
- conferenceTreatmentIndicator	[1] OCTET STRING (SIZE(1))			OPTIONAL,
- 
- 
- 
- 
- callDiversionTreatmentIndicator	[2] OCTET STRING (SIZE(1))			OPTIONAL,
- 
- 
- 
- 
- callingPartyRestrictionIndicator	[4] OCTET STRING (SIZE(1))			OPTIONAL,
- 
- 
- 
- 
-...
- }
+ *  conferenceTreatmentIndicator	[1] OCTET STRING (SIZE(1))			OPTIONAL,
+ *  
+ *  
+ *  
+ *  
+ *  callDiversionTreatmentIndicator	[2] OCTET STRING (SIZE(1))			OPTIONAL,
+ *  
+ *  
+ *  
+ *  
+ *  callingPartyRestrictionIndicator	[4] OCTET STRING (SIZE(1))			OPTIONAL,
+ *  
+ *  
+ *  
+ *  
+ * ...
+ *  }
  * ```
  *
  */

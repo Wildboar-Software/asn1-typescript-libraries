@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * LocationNumber {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE (
- bound.&minLocationNumberLength .. bound.&maxLocationNumberLength))
+ *  bound.&minLocationNumberLength .. bound.&maxLocationNumberLength))
  * ```
  *
  */

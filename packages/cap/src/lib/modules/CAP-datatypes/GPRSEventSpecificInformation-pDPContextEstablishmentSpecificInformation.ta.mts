@@ -20,15 +20,15 @@ import { PDPInitiationType, _enum_for_PDPInitiationType, _decode_PDPInitiationTy
  *
  * ```asn1
  * SEQUENCE {
- accessPointName			[0]	AccessPointName {bound}		OPTIONAL,
- endUserAddress			[1]	EndUserAddress {bound}		OPTIONAL,
- qualityOfService		[2]	QualityOfService			OPTIONAL,
- locationInformationGPRS		[3] LocationInformationGPRS		OPTIONAL,
- timeAndTimeZone			[4]	TimeAndTimezone {bound}		OPTIONAL,
- pDPInitiationType		[5] PDPInitiationType			OPTIONAL,
- ...,
- secondaryPDP-context		[6] NULL				OPTIONAL
- }
+ *  accessPointName			[0]	AccessPointName {bound}		OPTIONAL,
+ *  endUserAddress			[1]	EndUserAddress {bound}		OPTIONAL,
+ *  qualityOfService		[2]	QualityOfService			OPTIONAL,
+ *  locationInformationGPRS		[3] LocationInformationGPRS		OPTIONAL,
+ *  timeAndTimeZone			[4]	TimeAndTimezone {bound}		OPTIONAL,
+ *  pDPInitiationType		[5] PDPInitiationType			OPTIONAL,
+ *  ...,
+ *  secondaryPDP-context		[6] NULL				OPTIONAL
+ *  }
  * ```
  *
  */

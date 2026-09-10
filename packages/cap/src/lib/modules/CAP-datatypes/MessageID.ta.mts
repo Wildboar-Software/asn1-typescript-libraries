@@ -15,19 +15,19 @@ import { MessageID_variableMessage, _decode_MessageID_variableMessage, _encode_M
  *
  * ```asn1
  * MessageID {PARAMETERS-BOUND : bound} ::= CHOICE {
- elementaryMessageID			[0] Integer4,
- text				[1] SEQUENCE {
- messageContent			[0] IA5String (SIZE(
- bound.&minMessageContentLength .. bound.&maxMessageContentLength)),
- attributes				[1] OCTET STRING (SIZE(
- bound.&minAttributesLength .. bound.&maxAttributesLength))		OPTIONAL
- },
- elementaryMessageIDs		[29] SEQUENCE SIZE (1.. bound.&numOfMessageIDs) OF Integer4,
- variableMessage			[30] SEQUENCE {
- elementaryMessageID			[0] Integer4,
- variableParts			[1] SEQUENCE SIZE (1..5) OF VariablePart {bound}
- }
- }
+ *  elementaryMessageID			[0] Integer4,
+ *  text				[1] SEQUENCE {
+ *  messageContent			[0] IA5String (SIZE(
+ *  bound.&minMessageContentLength .. bound.&maxMessageContentLength)),
+ *  attributes				[1] OCTET STRING (SIZE(
+ *  bound.&minAttributesLength .. bound.&maxAttributesLength))		OPTIONAL
+ *  },
+ *  elementaryMessageIDs		[29] SEQUENCE SIZE (1.. bound.&numOfMessageIDs) OF Integer4,
+ *  variableMessage			[30] SEQUENCE {
+ *  elementaryMessageID			[0] Integer4,
+ *  variableParts			[1] SEQUENCE SIZE (1..5) OF VariablePart {bound}
+ *  }
+ *  }
  * ```
  *
  */

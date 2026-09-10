@@ -15,26 +15,26 @@ import { DpSpecificInfoAlt_collectedInfoSpecificInfo, _decode_DpSpecificInfoAlt_
  *
  * ```asn1
  * DpSpecificInfoAlt {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- ...,
- oServiceChangeSpecificInfo		[0] SEQUENCE {
- ext-basicServiceCode		[0] Ext-BasicServiceCode		OPTIONAL,
- ...,
- initiatorOfServiceChange		[1] InitiatorOfServiceChange		OPTIONAL,
- natureOfServiceChange		[2] NatureOfServiceChange		OPTIONAL
- 
- }
- tServiceChangeSpecificInfo		[1] SEQUENCE {
- ext-basicServiceCode		[0] Ext-BasicServiceCode		OPTIONAL,
- ...,
- initiatorOfServiceChange		[1] InitiatorOfServiceChange		OPTIONAL,
- natureOfServiceChange		[2] NatureOfServiceChange		OPTIONAL
- }
- 
- collectedInfoSpecificInfo		[2]	SEQUENCE {
- calledPartyNumber			[0]	CalledPartyNumber			OPTIONAL,
- ...
- }
- }
+ *  ...,
+ *  oServiceChangeSpecificInfo		[0] SEQUENCE {
+ *  ext-basicServiceCode		[0] Ext-BasicServiceCode		OPTIONAL,
+ *  ...,
+ *  initiatorOfServiceChange		[1] InitiatorOfServiceChange		OPTIONAL,
+ *  natureOfServiceChange		[2] NatureOfServiceChange		OPTIONAL
+ *  
+ *  }
+ *  tServiceChangeSpecificInfo		[1] SEQUENCE {
+ *  ext-basicServiceCode		[0] Ext-BasicServiceCode		OPTIONAL,
+ *  ...,
+ *  initiatorOfServiceChange		[1] InitiatorOfServiceChange		OPTIONAL,
+ *  natureOfServiceChange		[2] NatureOfServiceChange		OPTIONAL
+ *  }
+ *  
+ *  collectedInfoSpecificInfo		[2]	SEQUENCE {
+ *  calledPartyNumber			[0]	CalledPartyNumber			OPTIONAL,
+ *  ...
+ *  }
+ *  }
  * ```
  *
  */

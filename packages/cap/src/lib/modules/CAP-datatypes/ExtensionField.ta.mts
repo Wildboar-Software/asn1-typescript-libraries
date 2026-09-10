@@ -15,12 +15,12 @@ import { CriticalityType, _enum_for_CriticalityType, ignore, _decode_Criticality
  *
  * ```asn1
  * ExtensionField ::= SEQUENCE {
- type				EXTENSION.&id ({SupportedExtensions}),
- 
- criticality				CriticalityType DEFAULT ignore,
- value				[1] EXTENSION.&ExtensionType ({SupportedExtensions}{@type}),
- ...
- }
+ *  type				EXTENSION.&id ({SupportedExtensions}),
+ *  
+ *  criticality				CriticalityType DEFAULT ignore,
+ *  value				[1] EXTENSION.&ExtensionType ({SupportedExtensions}{@type}),
+ *  ...
+ *  }
  * ```
  *
  */

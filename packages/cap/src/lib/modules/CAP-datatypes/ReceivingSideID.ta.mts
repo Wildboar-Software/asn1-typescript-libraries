@@ -13,8 +13,8 @@ import { type LegType, _decode_LegType, _encode_LegType } from "../Core-INAP-CS1
  *
  * ```asn1
  * ReceivingSideID ::= CHOICE {
- receivingSideID			[1] LegType
- }
+ *  receivingSideID			[1] LegType
+ *  }
  * ```
  *
  */

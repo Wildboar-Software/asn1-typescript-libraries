@@ -14,8 +14,8 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * BearerCapability {PARAMETERS-BOUND : bound} ::= CHOICE {
- bearerCap				[0] OCTET STRING (SIZE(2..bound.&maxBearerCapabilityLength))
- }
+ *  bearerCap				[0] OCTET STRING (SIZE(2..bound.&maxBearerCapabilityLength))
+ *  }
  * ```
  *
  */

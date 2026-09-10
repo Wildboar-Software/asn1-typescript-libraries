@@ -15,18 +15,18 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * BackwardServiceInteractionInd ::= SEQUENCE {
- conferenceTreatmentIndicator	[1] OCTET STRING (SIZE(1))			OPTIONAL,
- 
- 
- 
- 
- callCompletionTreatmentIndicator	[2] OCTET STRING (SIZE(1))			OPTIONAL,
- 
- 
- 
- 
- ...
- }
+ *  conferenceTreatmentIndicator	[1] OCTET STRING (SIZE(1))			OPTIONAL,
+ *  
+ *  
+ *  
+ *  
+ *  callCompletionTreatmentIndicator	[2] OCTET STRING (SIZE(1))			OPTIONAL,
+ *  
+ *  
+ *  
+ *  
+ *  ...
+ *  }
  * ```
  *
  */

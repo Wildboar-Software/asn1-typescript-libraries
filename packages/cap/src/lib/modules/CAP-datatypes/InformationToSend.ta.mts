@@ -14,9 +14,9 @@ import { Tone, _decode_Tone, _encode_Tone } from "./Tone.ta.mjs";
  *
  * ```asn1
  * InformationToSend {PARAMETERS-BOUND : bound} ::= CHOICE {
- inbandInfo				[0] InbandInfo {bound},
- tone				[1] Tone
- }
+ *  inbandInfo				[0] InbandInfo {bound},
+ *  tone				[1] Tone
+ *  }
  * ```
  *
  */

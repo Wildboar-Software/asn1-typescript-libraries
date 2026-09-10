@@ -15,10 +15,10 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  * ```asn1
  * CallSegmentFailure {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- callSegmentID			[0] CallSegmentID {bound}			OPTIONAL,
- cause				[2]	Cause {bound}				OPTIONAL,
- ...
- }
+ *  callSegmentID			[0] CallSegmentID {bound}			OPTIONAL,
+ *  cause				[2]	Cause {bound}				OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

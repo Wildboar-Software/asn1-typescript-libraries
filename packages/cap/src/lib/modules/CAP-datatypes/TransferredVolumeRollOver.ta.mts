@@ -14,12 +14,12 @@ import { TransferredVolumeRollOver_rO_VolumeIfTariffSwitch, _decode_TransferredV
  *
  * ```asn1
  * TransferredVolumeRollOver ::= CHOICE {
- rO-VolumeIfNoTariffSwitch		[0] INTEGER (0..255),
- rO-VolumeIfTariffSwitch		[1] SEQUENCE {
- rO-VolumeSinceLastTariffSwitch	[0]	INTEGER (0..255)			OPTIONAL,
- rO-VolumeTariffSwitchInterval	[1]	INTEGER (0..255)			OPTIONAL
- }
- }
+ *  rO-VolumeIfNoTariffSwitch		[0] INTEGER (0..255),
+ *  rO-VolumeIfTariffSwitch		[1] SEQUENCE {
+ *  rO-VolumeSinceLastTariffSwitch	[0]	INTEGER (0..255)			OPTIONAL,
+ *  rO-VolumeTariffSwitchInterval	[1]	INTEGER (0..255)			OPTIONAL
+ *  }
+ *  }
  * ```
  *
  */

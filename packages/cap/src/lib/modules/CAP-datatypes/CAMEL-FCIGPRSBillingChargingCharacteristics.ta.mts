@@ -13,14 +13,14 @@ import { CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1, _deco
  *
  * ```asn1
  * CAMEL-FCIGPRSBillingChargingCharacteristics {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- fCIBCCCAMELsequence1		[0] SEQUENCE {
- freeFormatData			[0] OCTET STRING (SIZE(
- bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
- pDPID				[1] PDPID OPTIONAL,
- appendFreeFormatData		[2] AppendFreeFormatData DEFAULT overwrite,
- ...
- }
- }
+ *  fCIBCCCAMELsequence1		[0] SEQUENCE {
+ *  freeFormatData			[0] OCTET STRING (SIZE(
+ *  bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
+ *  pDPID				[1] PDPID OPTIONAL,
+ *  appendFreeFormatData		[2] AppendFreeFormatData DEFAULT overwrite,
+ *  ...
+ *  }
+ *  }
  * ```
  *
  */

@@ -15,10 +15,10 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "./PDPID.ta.mjs";
  *
  * ```asn1
  * CAMEL-SCIGPRSBillingChargingCharacteristics ::= SEQUENCE {
- aOCGPRS				[0] AOCGPRS,
- pDPID				[1] PDPID					OPTIONAL,
- ...
- }
+ *  aOCGPRS				[0] AOCGPRS,
+ *  pDPID				[1] PDPID					OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

@@ -16,14 +16,14 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * MidCallControlInfo ::= SEQUENCE {
- minimumNumberOfDigits		[0]	INTEGER (1..30) DEFAULT 1,
- maximumNumberOfDigits		[1]	INTEGER (1..30) DEFAULT 30,
- endOfReplyDigit			[2]	OCTET STRING (SIZE (1..2))		OPTIONAL,
- cancelDigit				[3]	OCTET STRING (SIZE (1..2))		OPTIONAL,
- startDigit				[4]	OCTET STRING (SIZE (1..2))		OPTIONAL,
- interDigitTimeout			[6]	INTEGER (1..127) DEFAULT 10,
- ...
- }
+ *  minimumNumberOfDigits		[0]	INTEGER (1..30) DEFAULT 1,
+ *  maximumNumberOfDigits		[1]	INTEGER (1..30) DEFAULT 30,
+ *  endOfReplyDigit			[2]	OCTET STRING (SIZE (1..2))		OPTIONAL,
+ *  cancelDigit				[3]	OCTET STRING (SIZE (1..2))		OPTIONAL,
+ *  startDigit				[4]	OCTET STRING (SIZE (1..2))		OPTIONAL,
+ *  interDigitTimeout			[6]	INTEGER (1..127) DEFAULT 10,
+ *  ...
+ *  }
  * ```
  *
  */

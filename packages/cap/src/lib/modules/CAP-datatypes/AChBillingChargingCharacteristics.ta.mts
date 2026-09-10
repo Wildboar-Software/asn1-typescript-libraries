@@ -14,9 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * AChBillingChargingCharacteristics {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE
- (bound.&minAChBillingChargingLength .. bound.&maxAChBillingChargingLength))
- (CONSTRAINED BY {
- CAMEL-AChBillingChargingCharacteristics {bound} })
+ * (bound.&minAChBillingChargingLength .. bound.&maxAChBillingChargingLength))
+ * (CONSTRAINED BY {
+ * CAMEL-AChBillingChargingCharacteristics {bound} })
  * ```
  *
  */

@@ -11,12 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * MO-SMSCause ::= ENUMERATED {
- systemFailure			(0),
- unexpectedDataValue			(1),
- facilityNotSupported		(2),
- sM-DeliveryFailure			(3),
- releaseFromRadioInterface		(4)
- }
+ *  systemFailure			(0),
+ *  unexpectedDataValue			(1),
+ *  facilityNotSupported		(2),
+ *  sM-DeliveryFailure			(3),
+ *  releaseFromRadioInterface		(4)
+ *  }
  * ```
  *
  */

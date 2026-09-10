@@ -15,38 +15,38 @@ import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
  *
  * ```asn1
  * VariablePart {PARAMETERS-BOUND : bound} ::= CHOICE {
- integer				[0] Integer4,
- number				[1] Digits {bound},	
- time				[2] OCTET STRING (SIZE(2)),	
- date				[3] OCTET STRING (SIZE(4)),	
- price				[4] OCTET STRING (SIZE(4))
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-numOfInfoItems INTEGER ::= 4
+ *  integer				[0] Integer4,
+ *  number				[1] Digits {bound},	
+ *  time				[2] OCTET STRING (SIZE(2)),	
+ *  date				[3] OCTET STRING (SIZE(4)),	
+ *  price				[4] OCTET STRING (SIZE(4))
+ *  }
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * numOfInfoItems INTEGER ::= 4
  * ```
  *
  */

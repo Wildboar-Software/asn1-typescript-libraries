@@ -15,11 +15,11 @@ import { type ChangeOfPositionControlInfo, _decode_ChangeOfPositionControlInfo, 
  *
  * ```asn1
  * DpSpecificCriteriaAlt {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- ...,
- changeOfPositionControlInfo		[0]	ChangeOfPositionControlInfo {bound}
- numberOfDigits			[1]	NumberOfDigits				OPTIONAL, 
- interDigitTimeout			[2]	INTEGER (1..127)			OPTIONAL
- }
+ *  ...,
+ *  changeOfPositionControlInfo		[0]	ChangeOfPositionControlInfo {bound}
+ *  numberOfDigits			[1]	NumberOfDigits				OPTIONAL, 
+ *  interDigitTimeout			[2]	INTEGER (1..127)			OPTIONAL
+ *  }
  * ```
  *
  */

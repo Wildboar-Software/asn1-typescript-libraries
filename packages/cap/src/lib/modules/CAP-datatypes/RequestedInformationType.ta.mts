@@ -11,11 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * RequestedInformationType ::= ENUMERATED {
- callAttemptElapsedTime		(0),
- callStopTime			(1),
- callConnectedElapsedTime		(2),
- releaseCause			(30)
- }
+ *  callAttemptElapsedTime		(0),
+ *  callStopTime			(1),
+ *  callConnectedElapsedTime		(2),
+ *  releaseCause			(30)
+ *  }
  * ```
  *
  */

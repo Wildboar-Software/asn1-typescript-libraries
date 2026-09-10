@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * CalledPartyBCDNumber {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minCalledPartyBCDNumberLength .. bound.&maxCalledPartyBCDNumberLength))
+ *  bound.&minCalledPartyBCDNumberLength .. bound.&maxCalledPartyBCDNumberLength))
  * ```
  *
  */

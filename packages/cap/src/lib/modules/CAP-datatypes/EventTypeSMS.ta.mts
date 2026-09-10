@@ -11,13 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * EventTypeSMS ::= ENUMERATED {
- sms-CollectedInfo			(1),
- o-smsFailure			(2),
- o-smsSubmission			(3),
- sms-DeliveryRequested		(11),
- t-smsFailure			(12),
- t-smsDelivery			(13)
- }
+ *  sms-CollectedInfo			(1),
+ *  o-smsFailure			(2),
+ *  o-smsSubmission			(3),
+ *  sms-DeliveryRequested		(11),
+ *  t-smsFailure			(12),
+ *  t-smsDelivery			(13)
+ *  }
  * ```
  *
  */

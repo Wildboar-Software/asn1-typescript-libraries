@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * Carrier {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minCarrierLength .. bound.&maxCarrierLength))
+ *  bound.&minCarrierLength .. bound.&maxCarrierLength))
  * ```
  *
  */

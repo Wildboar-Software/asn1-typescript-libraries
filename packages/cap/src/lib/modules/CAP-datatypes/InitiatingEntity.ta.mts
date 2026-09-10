@@ -11,11 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * InitiatingEntity ::= ENUMERATED {
- mobileStation			(0),
- sgsn				(1),
- hlr					(2),
- ggsn				(3)
- }
+ *  mobileStation			(0),
+ *  sgsn				(1),
+ *  hlr					(2),
+ *  ggsn				(3)
+ *  }
  * ```
  *
  */

@@ -15,11 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * SEQUENCE {
- messageContent			[0] IA5String (SIZE(
- bound.&minMessageContentLength .. bound.&maxMessageContentLength)),
- attributes				[1] OCTET STRING (SIZE(
- bound.&minAttributesLength .. bound.&maxAttributesLength))		OPTIONAL
- }
+ *  messageContent			[0] IA5String (SIZE(
+ *  bound.&minMessageContentLength .. bound.&maxMessageContentLength)),
+ *  attributes				[1] OCTET STRING (SIZE(
+ *  bound.&minAttributesLength .. bound.&maxAttributesLength))		OPTIONAL
+ *  }
  * ```
  *
  */

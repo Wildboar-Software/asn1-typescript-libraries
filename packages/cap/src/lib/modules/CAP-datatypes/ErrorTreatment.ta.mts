@@ -11,10 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * ErrorTreatment ::= ENUMERATED {
- stdErrorAndInfo			(0),
- help				(1),
- repeatPrompt			(2)
- }
+ *  stdErrorAndInfo			(0),
+ *  help				(1),
+ *  repeatPrompt			(2)
+ *  }
  * ```
  *
  */

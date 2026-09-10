@@ -15,9 +15,9 @@ import { type VariablePart, _decode_VariablePart, _encode_VariablePart } from ".
  *
  * ```asn1
  * SEQUENCE {
- elementaryMessageID			[0] Integer4,
- variableParts			[1] SEQUENCE SIZE (1..5) OF VariablePart {bound}
- }
+ *  elementaryMessageID			[0] Integer4,
+ *  variableParts			[1] SEQUENCE SIZE (1..5) OF VariablePart {bound}
+ *  }
  * ```
  *
  */

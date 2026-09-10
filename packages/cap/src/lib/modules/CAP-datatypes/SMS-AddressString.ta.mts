@@ -12,15 +12,15 @@ import { type AddressString, _decode_AddressString, _encode_AddressString } from
  *
  * ```asn1
  * SMS-AddressString ::= AddressString (SIZE (1 .. maxSMS-AddressStringLength))
-
-
-
-
-
-
-
-
-maxSMS-AddressStringLength INTEGER ::= 11
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * maxSMS-AddressStringLength INTEGER ::= 11
  * ```
  *
  */

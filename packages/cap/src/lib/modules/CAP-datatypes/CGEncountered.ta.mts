@@ -11,10 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * CGEncountered ::= ENUMERATED {
- noCGencountered			(0),
- manualCGencountered			(1),
- scpOverload				(2)
- }
+ *  noCGencountered			(0),
+ *  manualCGencountered			(1),
+ *  scpOverload				(2)
+ *  }
  * ```
  *
  */

@@ -14,9 +14,9 @@ import { TimeIfTariffSwitch, _decode_TimeIfTariffSwitch, _encode_TimeIfTariffSwi
  *
  * ```asn1
  * TimeInformation ::= CHOICE {
- timeIfNoTariffSwitch		[0] TimeIfNoTariffSwitch,
- timeIfTariffSwitch			[1] TimeIfTariffSwitch
- }
+ *  timeIfNoTariffSwitch		[0] TimeIfNoTariffSwitch,
+ *  timeIfTariffSwitch			[1] TimeIfTariffSwitch
+ *  }
  * ```
  *
  */

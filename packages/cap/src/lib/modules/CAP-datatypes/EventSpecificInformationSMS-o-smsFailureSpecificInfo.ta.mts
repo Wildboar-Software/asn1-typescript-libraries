@@ -14,9 +14,9 @@ import { MO_SMSCause, _enum_for_MO_SMSCause, _decode_MO_SMSCause, _encode_MO_SMS
  *
  * ```asn1
  * SEQUENCE {
- failureCause			[0] MO-SMSCause				OPTIONAL,
- ...
- }
+ *  failureCause			[0] MO-SMSCause				OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

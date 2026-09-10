@@ -20,15 +20,15 @@ import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../M
  *
  * ```asn1
  * SEQUENCE {
- accessPointName			[0]	AccessPointName {bound}		OPTIONAL,
- chargingID			[1] GPRSChargingID			OPTIONAL,
- endUserAddress			[2]	EndUserAddress {bound}		OPTIONAL,
- qualityOfService		[3]	QualityOfService			OPTIONAL,
- locationInformationGPRS		[4] LocationInformationGPRS		OPTIONAL,
- timeAndTimeZone			[5]	TimeAndTimezone {bound}		OPTIONAL,
- ...,
- gGSNAddress			[6]	GSN-Address				OPTIONAL
- }
+ *  accessPointName			[0]	AccessPointName {bound}		OPTIONAL,
+ *  chargingID			[1] GPRSChargingID			OPTIONAL,
+ *  endUserAddress			[2]	EndUserAddress {bound}		OPTIONAL,
+ *  qualityOfService		[3]	QualityOfService			OPTIONAL,
+ *  locationInformationGPRS		[4] LocationInformationGPRS		OPTIONAL,
+ *  timeAndTimeZone			[5]	TimeAndTimezone {bound}		OPTIONAL,
+ *  ...,
+ *  gGSNAddress			[6]	GSN-Address				OPTIONAL
+ *  }
  * ```
  *
  */

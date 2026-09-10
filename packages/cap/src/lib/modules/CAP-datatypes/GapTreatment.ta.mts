@@ -14,9 +14,9 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  * ```asn1
  * GapTreatment {PARAMETERS-BOUND : bound} ::= CHOICE {
- informationToSend			[0] InformationToSend {bound},
- releaseCause			[1] Cause {bound}
- }
+ *  informationToSend			[0] InformationToSend {bound},
+ *  releaseCause			[1] Cause {bound}
+ *  }
  * ```
  *
  */

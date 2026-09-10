@@ -15,10 +15,10 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  * ```asn1
  * BCSM-Failure {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- legID				[0]	LegID					OPTIONAL,
- cause				[2]	Cause {bound}				OPTIONAL,
- ...
- }
+ *  legID				[0]	LegID					OPTIONAL,
+ *  cause				[2]	Cause {bound}				OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

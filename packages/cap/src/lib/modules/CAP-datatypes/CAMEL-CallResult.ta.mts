@@ -13,17 +13,17 @@ import { CAMEL_CallResult_timeDurationChargingResult, _decode_CAMEL_CallResult_t
  *
  * ```asn1
  * CAMEL-CallResult {PARAMETERS-BOUND : bound} ::= CHOICE {
- timeDurationChargingResult		[0] SEQUENCE {
- partyToCharge			[0] ReceivingSideID,
- timeInformation			[1] TimeInformation,
- legActive				[2] BOOLEAN DEFAULT TRUE,
- callLegReleasedAtTcpExpiry		[3] NULL				OPTIONAL,
- extensions				[4] Extensions {bound}			OPTIONAL,
- aChChargingAddress			[5] AChChargingAddress {bound}
- DEFAULT legID:receivingSideID:leg1,
- ...
- }
- }
+ *  timeDurationChargingResult		[0] SEQUENCE {
+ *  partyToCharge			[0] ReceivingSideID,
+ *  timeInformation			[1] TimeInformation,
+ *  legActive				[2] BOOLEAN DEFAULT TRUE,
+ *  callLegReleasedAtTcpExpiry		[3] NULL				OPTIONAL,
+ *  extensions				[4] Extensions {bound}			OPTIONAL,
+ *  aChChargingAddress			[5] AChChargingAddress {bound}
+ *  DEFAULT legID:receivingSideID:leg1,
+ *  ...
+ *  }
+ *  }
  * ```
  *
  */

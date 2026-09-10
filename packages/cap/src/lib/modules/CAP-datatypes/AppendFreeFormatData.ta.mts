@@ -11,9 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * AppendFreeFormatData ::= ENUMERATED {
- overwrite	(0),
- append	(1)
- }
+ *  overwrite	(0),
+ *  append	(1)
+ *  }
  * ```
  *
  */

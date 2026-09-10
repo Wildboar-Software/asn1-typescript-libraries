@@ -15,10 +15,10 @@ import { type Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS
  *
  * ```asn1
  * GPRS-QoS-Extension ::= SEQUENCE {
- supplement-to-long-QoS-format	[0] Ext2-QoS-Subscribed,
- ... ,
- additionalSupplement			[1] Ext3-QoS-Subscribed	OPTIONAL
- }
+ *  supplement-to-long-QoS-format	[0] Ext2-QoS-Subscribed,
+ *  ... ,
+ *  additionalSupplement			[1] Ext3-QoS-Subscribed	OPTIONAL
+ *  }
  * ```
  *
  */

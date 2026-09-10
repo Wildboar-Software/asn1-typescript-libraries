@@ -14,12 +14,12 @@ import { ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch, _decode_ElapsedTimeRollO
  *
  * ```asn1
  * ElapsedTimeRollOver ::= CHOICE {
- rO-TimeGPRSIfNoTariffSwitch		[0] INTEGER (0..255),
- rO-TimeGPRSIfTariffSwitch		[1] SEQUENCE {
- rO-TimeGPRSSinceLastTariffSwitch	[0] INTEGER (0..255)			OPTIONAL,
- rO-TimeGPRSTariffSwitchInterval	[1] INTEGER (0..255)			OPTIONAL
- }
- }
+ *  rO-TimeGPRSIfNoTariffSwitch		[0] INTEGER (0..255),
+ *  rO-TimeGPRSIfTariffSwitch		[1] SEQUENCE {
+ *  rO-TimeGPRSSinceLastTariffSwitch	[0] INTEGER (0..255)			OPTIONAL,
+ *  rO-TimeGPRSTariffSwitchInterval	[1] INTEGER (0..255)			OPTIONAL
+ *  }
+ *  }
  * ```
  *
  */

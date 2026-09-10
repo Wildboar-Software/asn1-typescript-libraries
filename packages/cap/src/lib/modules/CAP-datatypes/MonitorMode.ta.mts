@@ -11,10 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * MonitorMode ::= ENUMERATED {
- interrupted				(0),
- notifyAndContinue			(1),
- transparent				(2)
- }
+ *  interrupted				(0),
+ *  notifyAndContinue			(1),
+ *  transparent				(2)
+ *  }
  * ```
  *
  */

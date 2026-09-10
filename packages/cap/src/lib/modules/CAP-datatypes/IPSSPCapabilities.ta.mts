@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * IPSSPCapabilities {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minIPSSPCapabilitiesLength .. bound.&maxIPSSPCapabilitiesLength))
+ *  bound.&minIPSSPCapabilitiesLength .. bound.&maxIPSSPCapabilitiesLength))
  * ```
  *
  */

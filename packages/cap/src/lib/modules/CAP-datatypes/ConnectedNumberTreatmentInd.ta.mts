@@ -11,11 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * ConnectedNumberTreatmentInd ::= ENUMERATED {
- noINImpact				(0),
- presentationRestricted		(1),
- presentCalledINNumber		(2),
- presentCallINNumberRestricted	(3)
-}
+ *  noINImpact				(0),
+ *  presentationRestricted		(1),
+ *  presentCalledINNumber		(2),
+ *  presentCallINNumberRestricted	(3)
+ * }
  * ```
  *
  */

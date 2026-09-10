@@ -15,9 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * SEQUENCE {
- routeNotPermitted			[50] NULL				OPTIONAL,
- ...
- }
+ *  routeNotPermitted			[50] NULL				OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

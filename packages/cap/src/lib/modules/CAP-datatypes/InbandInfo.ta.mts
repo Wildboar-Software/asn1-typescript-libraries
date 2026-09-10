@@ -15,12 +15,12 @@ import { type MessageID, _decode_MessageID, _encode_MessageID } from "./MessageI
  *
  * ```asn1
  * InbandInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- messageID				[0] MessageID {bound},
- numberOfRepetitions			[1] INTEGER (1..127)			OPTIONAL,
- duration				[2] INTEGER (0..32767)			OPTIONAL,
- interval				[3] INTEGER (0..32767)			OPTIONAL,
-...
- }
+ *  messageID				[0] MessageID {bound},
+ *  numberOfRepetitions			[1] INTEGER (1..127)			OPTIONAL,
+ *  duration				[2] INTEGER (0..32767)			OPTIONAL,
+ *  interval				[3] INTEGER (0..32767)			OPTIONAL,
+ * ...
+ *  }
  * ```
  *
  */

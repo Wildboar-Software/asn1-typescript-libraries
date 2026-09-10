@@ -14,9 +14,9 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  *
  * ```asn1
  * SEQUENCE {
- calledPartyNumber			[0]	CalledPartyNumber			OPTIONAL,
- ...
- }
+ *  calledPartyNumber			[0]	CalledPartyNumber			OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

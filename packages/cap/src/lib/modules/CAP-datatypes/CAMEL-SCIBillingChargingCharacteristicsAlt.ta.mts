@@ -13,8 +13,8 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * CAMEL-SCIBillingChargingCharacteristicsAlt ::= SEQUENCE {
- ...
- }
+ *  ...
+ *  }
  * ```
  *
  */

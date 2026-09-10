@@ -14,9 +14,9 @@ import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_Locat
  *
  * ```asn1
  * SEQUENCE {
- locationInformationGPRS		[0] LocationInformationGPRS		OPTIONAL,
- ...
- }
+ *  locationInformationGPRS		[0] LocationInformationGPRS		OPTIONAL,
+ *  ...
+ *  }
  * ```
  *
  */

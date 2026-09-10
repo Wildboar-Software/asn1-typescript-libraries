@@ -11,8 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * TimerID ::= ENUMERATED {
- tssf				(0)
- }
+ *  tssf				(0)
+ *  }
  * ```
  *
  */

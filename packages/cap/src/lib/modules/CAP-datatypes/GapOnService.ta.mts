@@ -13,9 +13,9 @@ import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core
  *
  * ```asn1
  * GapOnService ::= SEQUENCE {
- serviceKey				[0] ServiceKey,
- ...
- }
+ *  serviceKey				[0] ServiceKey,
+ *  ...
+ *  }
  * ```
  *
  */

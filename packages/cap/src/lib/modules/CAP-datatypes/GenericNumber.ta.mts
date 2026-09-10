@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * GenericNumber {PARAMETERS-BOUND : bound} ::= OCTET STRING (SIZE(
- bound.&minGenericNumberLength .. bound.&maxGenericNumberLength))
+ *  bound.&minGenericNumberLength .. bound.&maxGenericNumberLength))
  * ```
  *
  */

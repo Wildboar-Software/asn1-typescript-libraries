@@ -15,9 +15,9 @@ import { type ScfID, _decode_ScfID, _encode_ScfID } from "./ScfID.ta.mjs";
  *
  * ```asn1
  * CompoundCriteria {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- basicGapCriteria			[0] BasicGapCriteria {bound},
- scfID				[1] ScfID {bound}				OPTIONAL
- }
+ *  basicGapCriteria			[0] BasicGapCriteria {bound},
+ *  scfID				[1] ScfID {bound}				OPTIONAL
+ *  }
  * ```
  *
  */
