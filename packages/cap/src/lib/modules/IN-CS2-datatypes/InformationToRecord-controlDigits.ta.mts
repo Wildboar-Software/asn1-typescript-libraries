@@ -11,6 +11,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -78,7 +79,20 @@ class InformationToRecord_controlDigits {
          * @readonly
          */
         readonly replayAllowed: OPTIONAL<BOOLEAN>
-    ) {}
+    ) {
+        if (endOfRecordingDigit !== undefined && (endOfRecordingDigit.length < 1 || endOfRecordingDigit.length > 2)) {
+            throw new ASN1SizeError("InformationToRecord_controlDigits.endOfRecordingDigit violates SIZE constraint");
+        }
+        if (cancelDigit !== undefined && (cancelDigit.length < 1 || cancelDigit.length > 2)) {
+            throw new ASN1SizeError("InformationToRecord_controlDigits.cancelDigit violates SIZE constraint");
+        }
+        if (replayDigit !== undefined && (replayDigit.length < 1 || replayDigit.length > 2)) {
+            throw new ASN1SizeError("InformationToRecord_controlDigits.replayDigit violates SIZE constraint");
+        }
+        if (restartRecordingDigit !== undefined && (restartRecordingDigit.length < 1 || restartRecordingDigit.length > 2)) {
+            throw new ASN1SizeError("InformationToRecord_controlDigits.restartRecordingDigit violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a InformationToRecord_controlDigits

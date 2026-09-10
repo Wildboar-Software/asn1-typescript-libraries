@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     OCTET_STRING,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -29,7 +30,17 @@ export class ForwardServiceInteractionInd {
         readonly callDiversionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
         readonly callingPartyRestrictionIndicator: OPTIONAL<OCTET_STRING>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("ForwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");
+        }
+        if (callDiversionTreatmentIndicator !== undefined && callDiversionTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("ForwardServiceInteractionInd.callDiversionTreatmentIndicator violates SIZE constraint");
+        }
+        if (callingPartyRestrictionIndicator !== undefined && callingPartyRestrictionIndicator.length !== 1) {
+            throw new ASN1SizeError("ForwardServiceInteractionInd.callingPartyRestrictionIndicator violates SIZE constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (ForwardServiceInteractionInd)]: (ForwardServiceInteractionInd)[_K] }): ForwardServiceInteractionInd {
         return new ForwardServiceInteractionInd(_o.conferenceTreatmentIndicator, _o.callDiversionTreatmentIndicator, _o.callingPartyRestrictionIndicator, _o._unrecognizedExtensionsList);

@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     OCTET_STRING,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -28,7 +29,14 @@ export class EndUserAddress {
         readonly pDPTypeOrganization: OCTET_STRING,
         readonly pDPTypeNumber: OCTET_STRING,
         readonly pDPAddress: OPTIONAL<OCTET_STRING>,
-    ) {}
+    ) {
+        if (pDPTypeOrganization.length !== 1) {
+            throw new ASN1SizeError("EndUserAddress.pDPTypeOrganization violates SIZE constraint");
+        }
+        if (pDPTypeNumber.length !== 1) {
+            throw new ASN1SizeError("EndUserAddress.pDPTypeNumber violates SIZE constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (EndUserAddress)]: (EndUserAddress)[_K] }): EndUserAddress {
         return new EndUserAddress(_o.pDPTypeOrganization, _o.pDPTypeNumber, _o.pDPAddress);

@@ -4,6 +4,7 @@ import {
     INTEGER,
     OCTET_STRING,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -45,7 +46,17 @@ export class CollectedDigits {
         readonly interruptableAnnInd: OPTIONAL<BOOLEAN>,
         readonly voiceInformation: OPTIONAL<BOOLEAN>,
         readonly voiceBack: OPTIONAL<BOOLEAN>,
-    ) {}
+    ) {
+        if (endOfReplyDigit !== undefined && (endOfReplyDigit.length < 1 || endOfReplyDigit.length > 2)) {
+            throw new ASN1SizeError("CollectedDigits.endOfReplyDigit violates SIZE constraint");
+        }
+        if (cancelDigit !== undefined && (cancelDigit.length < 1 || cancelDigit.length > 2)) {
+            throw new ASN1SizeError("CollectedDigits.cancelDigit violates SIZE constraint");
+        }
+        if (startDigit !== undefined && (startDigit.length < 1 || startDigit.length > 2)) {
+            throw new ASN1SizeError("CollectedDigits.startDigit violates SIZE constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (CollectedDigits)]: (CollectedDigits)[_K] }): CollectedDigits {
         return new CollectedDigits(_o.minimumNbOfDigits, _o.maximumNbOfDigits, _o.endOfReplyDigit, _o.cancelDigit, _o.startDigit, _o.firstDigitTimeOut, _o.interDigitTimeOut, _o.errorTreatment, _o.interruptableAnnInd, _o.voiceInformation, _o.voiceBack);

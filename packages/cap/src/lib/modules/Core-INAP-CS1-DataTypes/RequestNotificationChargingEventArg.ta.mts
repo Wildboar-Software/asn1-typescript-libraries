@@ -8,6 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargingEvent, _decode_ChargingEvent, _encode_ChargingEvent } from "../Core-INAP-CS1-DataTypes/ChargingEvent.ta.mjs";
@@ -38,7 +39,11 @@ let _cached_decoder_for_RequestNotificationChargingEventArg: $.ASN1Decoder<Reque
 export
 function _decode_RequestNotificationChargingEventArg (el: _Element): RequestNotificationChargingEventArg {
     if (!_cached_decoder_for_RequestNotificationChargingEventArg) { _cached_decoder_for_RequestNotificationChargingEventArg = $._decodeSequenceOf<ChargingEvent>(() => _decode_ChargingEvent); }
-    return _cached_decoder_for_RequestNotificationChargingEventArg(el);
+    const value = _cached_decoder_for_RequestNotificationChargingEventArg(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("RequestNotificationChargingEventArg violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RequestNotificationChargingEventArg: $.ASN1Encoder<RequestNotificationChargingEventArg> | null = null;

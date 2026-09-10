@@ -3,6 +3,7 @@ import {
     INTEGER,
     OCTET_STRING,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -36,7 +37,17 @@ export class MidCallControlInfo {
         readonly startDigit: OPTIONAL<OCTET_STRING>,
         readonly interDigitTimeout: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (endOfReplyDigit !== undefined && (endOfReplyDigit.length < 1 || endOfReplyDigit.length > 2)) {
+            throw new ASN1SizeError("MidCallControlInfo.endOfReplyDigit violates SIZE constraint");
+        }
+        if (cancelDigit !== undefined && (cancelDigit.length < 1 || cancelDigit.length > 2)) {
+            throw new ASN1SizeError("MidCallControlInfo.cancelDigit violates SIZE constraint");
+        }
+        if (startDigit !== undefined && (startDigit.length < 1 || startDigit.length > 2)) {
+            throw new ASN1SizeError("MidCallControlInfo.startDigit violates SIZE constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (MidCallControlInfo)]: (MidCallControlInfo)[_K] }): MidCallControlInfo {
         return new MidCallControlInfo(_o.minimumNumberOfDigits, _o.maximumNumberOfDigits, _o.endOfReplyDigit, _o.cancelDigit, _o.startDigit, _o.interDigitTimeout, _o._unrecognizedExtensionsList);

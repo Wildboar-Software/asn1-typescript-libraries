@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AlertingPattern = OCTET_STRING; // OctetStringType
-export const _decode_AlertingPattern = $._decodeOctetString;
+export const _decode_AlertingPattern = (el: _Element): AlertingPattern => {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 3) {
+        throw new ASN1SizeError("AlertingPattern violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_AlertingPattern = $._encodeOctetString;
 
 

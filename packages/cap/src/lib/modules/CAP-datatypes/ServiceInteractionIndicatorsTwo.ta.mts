@@ -3,6 +3,7 @@ import {
     OCTET_STRING,
     NULL,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -43,7 +44,17 @@ export class ServiceInteractionIndicatorsTwo {
         readonly cwTreatmentIndicator: OPTIONAL<OCTET_STRING>,
         readonly ectTreatmentIndicator: OPTIONAL<OCTET_STRING>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (holdTreatmentIndicator !== undefined && holdTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("ServiceInteractionIndicatorsTwo.holdTreatmentIndicator violates SIZE constraint");
+        }
+        if (cwTreatmentIndicator !== undefined && cwTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("ServiceInteractionIndicatorsTwo.cwTreatmentIndicator violates SIZE constraint");
+        }
+        if (ectTreatmentIndicator !== undefined && ectTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("ServiceInteractionIndicatorsTwo.ectTreatmentIndicator violates SIZE constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (ServiceInteractionIndicatorsTwo)]: (ServiceInteractionIndicatorsTwo)[_K] }): ServiceInteractionIndicatorsTwo {
         return new ServiceInteractionIndicatorsTwo(_o.forwardServiceInteractionInd, _o.backwardServiceInteractionInd, _o.bothwayThroughConnectionInd, _o.connectedNumberTreatmentInd, _o.nonCUGCall, _o.holdTreatmentIndicator, _o.cwTreatmentIndicator, _o.ectTreatmentIndicator, _o._unrecognizedExtensionsList);

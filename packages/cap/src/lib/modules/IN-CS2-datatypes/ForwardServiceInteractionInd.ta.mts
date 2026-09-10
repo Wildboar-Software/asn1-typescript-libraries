@@ -10,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -61,7 +62,17 @@ class ForwardServiceInteractionInd {
          * @readonly
          */
         readonly callOfferingTreatmentIndicator: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("ForwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");
+        }
+        if (callDiversionTreatmentIndicator !== undefined && callDiversionTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("ForwardServiceInteractionInd.callDiversionTreatmentIndicator violates SIZE constraint");
+        }
+        if (callOfferingTreatmentIndicator !== undefined && callOfferingTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("ForwardServiceInteractionInd.callOfferingTreatmentIndicator violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ForwardServiceInteractionInd

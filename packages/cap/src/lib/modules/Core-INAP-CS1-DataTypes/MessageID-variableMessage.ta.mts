@@ -8,6 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-DataTypes/Integer4.ta.mjs";
@@ -46,7 +47,11 @@ class MessageID_variableMessage {
          * @readonly
          */
         readonly variableParts: VariablePart[]
-    ) {}
+    ) {
+        if (variableParts.length < 1 || variableParts.length > 5) {
+            throw new ASN1SizeError("MessageID_variableMessage.variableParts violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a MessageID_variableMessage

@@ -10,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -51,7 +52,14 @@ class BackwardServiceInteractionInd {
          * @readonly
          */
         readonly callCompletionTreatmentIndicator: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("BackwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");
+        }
+        if (callCompletionTreatmentIndicator !== undefined && callCompletionTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("BackwardServiceInteractionInd.callCompletionTreatmentIndicator violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a BackwardServiceInteractionInd

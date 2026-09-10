@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     OCTET_STRING,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,7 +28,14 @@ export class BackwardServiceInteractionInd {
         readonly conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
         readonly callCompletionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("BackwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");
+        }
+        if (callCompletionTreatmentIndicator !== undefined && callCompletionTreatmentIndicator.length !== 1) {
+            throw new ASN1SizeError("BackwardServiceInteractionInd.callCompletionTreatmentIndicator violates SIZE constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (BackwardServiceInteractionInd)]: (BackwardServiceInteractionInd)[_K] }): BackwardServiceInteractionInd {
         return new BackwardServiceInteractionInd(_o.conferenceTreatmentIndicator, _o.callCompletionTreatmentIndicator, _o._unrecognizedExtensionsList);

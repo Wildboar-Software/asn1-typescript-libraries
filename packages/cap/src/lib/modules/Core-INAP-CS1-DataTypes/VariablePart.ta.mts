@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-DataTypes/Integer4.ta.mjs";
@@ -54,9 +55,27 @@ function _decode_VariablePart (el: _Element): VariablePart {
     if (!_cached_decoder_for_VariablePart) { _cached_decoder_for_VariablePart = $._decode_inextensible_choice<VariablePart>({
     "CONTEXT 0": [ "integer", $._decode_implicit<Integer4>(() => _decode_Integer4) ],
     "CONTEXT 1": [ "number_", $._decode_implicit<Digits>(() => _decode_Digits) ],
-    "CONTEXT 2": [ "time", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
-    "CONTEXT 3": [ "date", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
-    "CONTEXT 4": [ "price", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
+    "CONTEXT 2": [ "time", $._decode_implicit<OCTET_STRING>(() => (el: _Element): OCTET_STRING => {
+        const value = $._decodeOctetString(el);
+        if (value.length !== 2) {
+            throw new ASN1SizeError("VariablePart.time violates SIZE constraint");
+        }
+        return value;
+    }) ],
+    "CONTEXT 3": [ "date", $._decode_implicit<OCTET_STRING>(() => (el: _Element): OCTET_STRING => {
+        const value = $._decodeOctetString(el);
+        if (value.length !== 3) {
+            throw new ASN1SizeError("VariablePart.date violates SIZE constraint");
+        }
+        return value;
+    }) ],
+    "CONTEXT 4": [ "price", $._decode_implicit<OCTET_STRING>(() => (el: _Element): OCTET_STRING => {
+        const value = $._decodeOctetString(el);
+        if (value.length !== 4) {
+            throw new ASN1SizeError("VariablePart.price violates SIZE constraint");
+        }
+        return value;
+    }) ]
 }); }
     return _cached_decoder_for_VariablePart(el);
 }

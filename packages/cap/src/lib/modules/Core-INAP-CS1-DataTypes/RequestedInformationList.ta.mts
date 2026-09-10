@@ -8,6 +8,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformation, _decode_RequestedInformation, _encode_RequestedInformation } from "../Core-INAP-CS1-DataTypes/RequestedInformation.ta.mjs";
@@ -38,7 +39,11 @@ let _cached_decoder_for_RequestedInformationList: $.ASN1Decoder<RequestedInforma
 export
 function _decode_RequestedInformationList (el: _Element): RequestedInformationList {
     if (!_cached_decoder_for_RequestedInformationList) { _cached_decoder_for_RequestedInformationList = $._decodeSequenceOf<RequestedInformation>(() => _decode_RequestedInformation); }
-    return _cached_decoder_for_RequestedInformationList(el);
+    const value = _cached_decoder_for_RequestedInformationList(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("RequestedInformationList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RequestedInformationList: $.ASN1Encoder<RequestedInformationList> | null = null;

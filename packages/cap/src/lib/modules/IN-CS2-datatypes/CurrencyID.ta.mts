@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CurrencyID = PrintableString; // PrintableString
-export const _decode_CurrencyID = $._decodePrintableString;
+export const _decode_CurrencyID = (el: _Element): CurrencyID => {
+    const value = $._decodePrintableString(el);
+    if (value.length !== 3) {
+        throw new ASN1SizeError("CurrencyID violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_CurrencyID = $._encodePrintableString;
 
 

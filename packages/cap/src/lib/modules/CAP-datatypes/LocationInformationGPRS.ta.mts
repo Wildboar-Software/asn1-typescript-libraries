@@ -3,6 +3,7 @@ import {
     OCTET_STRING,
     NULL,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -45,7 +46,11 @@ export class LocationInformationGPRS {
         readonly sai_Present: OPTIONAL<NULL>,
         readonly userCSGInformation: OPTIONAL<UserCSGInformation>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (cellGlobalIdOrServiceAreaIdOrLAI !== undefined && (cellGlobalIdOrServiceAreaIdOrLAI.length < 5 || cellGlobalIdOrServiceAreaIdOrLAI.length > 7)) {
+            throw new ASN1SizeError("LocationInformationGPRS.cellGlobalIdOrServiceAreaIdOrLAI violates SIZE constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (LocationInformationGPRS)]: (LocationInformationGPRS)[_K] }): LocationInformationGPRS {
         return new LocationInformationGPRS(_o.cellGlobalIdOrServiceAreaIdOrLAI, _o.routeingAreaIdentity, _o.geographicalInformation, _o.sgsn_Number, _o.selectedLSAIdentity, _o.extensionContainer, _o.sai_Present, _o.userCSGInformation, _o._unrecognizedExtensionsList);

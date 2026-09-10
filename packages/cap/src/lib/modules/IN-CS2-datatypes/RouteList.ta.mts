@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +42,11 @@ let _cached_decoder_for_RouteList: $.ASN1Decoder<RouteList> | null = null;
 export
 function _decode_RouteList (el: _Element): RouteList {
     if (!_cached_decoder_for_RouteList) { _cached_decoder_for_RouteList = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString); }
-    return _cached_decoder_for_RouteList(el);
+    const value = _cached_decoder_for_RouteList(el);
+    if (value.length < 1 || value.length > 3) {
+        throw new ASN1SizeError("RouteList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RouteList: $.ASN1Encoder<RouteList> | null = null;

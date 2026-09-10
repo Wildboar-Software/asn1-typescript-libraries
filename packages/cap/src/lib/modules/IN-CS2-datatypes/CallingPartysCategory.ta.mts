@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CallingPartysCategory = OCTET_STRING; // OctetStringType
-export const _decode_CallingPartysCategory = $._decodeOctetString;
+export const _decode_CallingPartysCategory = (el: _Element): CallingPartysCategory => {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 1) {
+        throw new ASN1SizeError("CallingPartysCategory violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_CallingPartysCategory = $._encodeOctetString;
 
 

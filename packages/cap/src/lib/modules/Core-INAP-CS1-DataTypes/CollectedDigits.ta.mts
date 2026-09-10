@@ -12,6 +12,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment_stdErrorAndInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ErrorTreatment, _encode_ErrorTreatment } from "../Core-INAP-CS1-DataTypes/ErrorTreatment.ta.mjs";
@@ -111,7 +112,17 @@ class CollectedDigits {
          * @readonly
          */
         readonly voiceBack: OPTIONAL<BOOLEAN>
-    ) {}
+    ) {
+        if (endOfReplyDigit !== undefined && (endOfReplyDigit.length < 1 || endOfReplyDigit.length > 2)) {
+            throw new ASN1SizeError("CollectedDigits.endOfReplyDigit violates SIZE constraint");
+        }
+        if (cancelDigit !== undefined && (cancelDigit.length < 1 || cancelDigit.length > 2)) {
+            throw new ASN1SizeError("CollectedDigits.cancelDigit violates SIZE constraint");
+        }
+        if (startDigit !== undefined && (startDigit.length < 1 || startDigit.length > 2)) {
+            throw new ASN1SizeError("CollectedDigits.startDigit violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a CollectedDigits

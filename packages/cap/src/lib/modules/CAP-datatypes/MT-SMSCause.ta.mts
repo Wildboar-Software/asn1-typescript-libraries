@@ -1,6 +1,7 @@
 import {
     OCTET_STRING,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -19,5 +20,11 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type MT_SMSCause = OCTET_STRING;
-export const _decode_MT_SMSCause = $._decodeOctetString;
+export const _decode_MT_SMSCause = (el: _Element): MT_SMSCause => {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 1) {
+        throw new ASN1SizeError("MT_SMSCause violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_MT_SMSCause = $._encodeOctetString;
