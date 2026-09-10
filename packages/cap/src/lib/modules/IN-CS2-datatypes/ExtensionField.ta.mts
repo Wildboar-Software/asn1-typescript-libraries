@@ -12,8 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CriticalityType, _enum_for_CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_CriticalityType, _encode_CriticalityType } from "../IN-CS2-datatypes/CriticalityType.ta.mjs";
-// export { CriticalityType, _enum_for_CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, CriticalityType_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CriticalityType, _encode_CriticalityType } from "../IN-CS2-datatypes/CriticalityType.ta.mjs";
-
+import { type Code, _encode_Code, _decode_Code } from "@wildboar/rose";
 
 /**
  * @summary ExtensionField
@@ -30,6 +29,21 @@ import { CriticalityType, _enum_for_CriticalityType, CriticalityType_ignore /* I
  * }
  * ```
  * 
+ * Where the `EXTENSION` is defined as:
+ * 
+ * ```asn1
+ * EXTENSION ::= CLASS {
+ *   &ExtensionType  ,
+ *   &criticality    CriticalityType DEFAULT ignore,
+ *   &id             Code
+ * }
+ * WITH SYNTAX {
+ *   EXTENSION-SYNTAX &ExtensionType
+ *   [CRITICALITY &criticality]
+ *   IDENTIFIED BY &id
+ * }
+ * ```
+ * 
  * @class
  */
 export
@@ -40,7 +54,7 @@ class ExtensionField {
          * @public
          * @readonly
          */
-        readonly type_: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */,
+        readonly type_: Code,
         /**
          * @summary `criticality`.
          * @public
@@ -52,7 +66,7 @@ class ExtensionField {
          * @public
          * @readonly
          */
-        readonly value: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
+        readonly value: _Element
     ) {}
 
     /**
@@ -138,13 +152,13 @@ let _cached_decoder_for_ExtensionField: $.ASN1Decoder<ExtensionField> | null = n
 export
 function _decode_ExtensionField (el: _Element): ExtensionField {
     if (!_cached_decoder_for_ExtensionField) { _cached_decoder_for_ExtensionField = function (el: _Element): ExtensionField {
-    let type_!: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */;
+    let type_!: Code;
     let criticality: OPTIONAL<CriticalityType> = ExtensionField._default_value_for_criticality;
-    let value!: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */;
+    let value!: _Element;
     const callbacks: $.DecodingMap = {
-        "type": (_el: _Element): void => { type_ = $._decodeAny /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */(_el); },
+        "type": (_el: _Element): void => { type_ = _decode_Code(_el); },
         "criticality": (_el: _Element): void => { criticality = _decode_CriticalityType(_el); },
-        "value": (_el: _Element): void => { value = $._decode_implicit<_Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */>(() => $._decodeAny /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */)(_el); }
+        "value": (_el: _Element): void => { value = $._decode_implicit<_Element>(() => $._decodeAny)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ExtensionField,
@@ -175,9 +189,11 @@ function _encode_ExtensionField (value: ExtensionField, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_ExtensionField) { _cached_encoder_for_ExtensionField = function (value: ExtensionField): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeAny /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */(value.type_, $.BER),
-            /* IF_DEFAULT */ (value.criticality === undefined || $.deepEq(value.criticality, ExtensionField._default_value_for_criticality) ? undefined : _encode_CriticalityType(value.criticality, $.BER)),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeAny /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */, $.BER)(value.value, $.BER)
+            /* REQUIRED   */ _encode_Code(value.type_, $.BER),
+            /* IF_DEFAULT */ (value.criticality === undefined || $.deepEq(value.criticality, ExtensionField._default_value_for_criticality)
+                ? undefined
+                : _encode_CriticalityType(value.criticality, $.BER)),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeAny, $.BER)(value.value, $.BER)
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
