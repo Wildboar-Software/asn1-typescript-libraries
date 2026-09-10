@@ -13,7 +13,7 @@ import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_Locat
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * GPRSEventSpecificInformation-attachChangeOfPositionSpecificInformation {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  locationInformationGPRS		[0] LocationInformationGPRS		OPTIONAL,
  *  ...
  *  }

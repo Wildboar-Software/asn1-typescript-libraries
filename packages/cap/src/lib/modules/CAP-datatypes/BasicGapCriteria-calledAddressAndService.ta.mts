@@ -13,7 +13,7 @@ import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * BasicGapCriteria-calledAddressAndService {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  calledAddressValue			[0] Digits {bound},
  *  serviceKey				[1] ServiceKey,
  *  ...

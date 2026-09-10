@@ -13,7 +13,7 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * EventSpecificInformationBCSM-oDisconnectSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  releaseCause			[0] Cause {bound}			OPTIONAL,
  *  ...
  *  }

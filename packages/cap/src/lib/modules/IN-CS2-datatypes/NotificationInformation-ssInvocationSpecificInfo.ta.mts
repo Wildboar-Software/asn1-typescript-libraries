@@ -21,7 +21,7 @@ import { InvokableService, _enum_for_InvokableService, _decode_InvokableService,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-ssInvocationSpecificInfo ::= SEQUENCE {
+ * NotificationInformation-ssInvocationSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     invokedService  [0]  InvokableService,
  *     ...
  * }

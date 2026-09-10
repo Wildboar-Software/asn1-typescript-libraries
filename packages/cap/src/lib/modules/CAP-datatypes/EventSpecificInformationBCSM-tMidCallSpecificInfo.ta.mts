@@ -12,7 +12,7 @@ import { type EventSpecificInformationBCSM_tMidCallSpecificInfo_midCallEvents, _
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * EventSpecificInformationBCSM-tMidCallSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  midCallEvents			[1] CHOICE {
  *  dTMFDigitsCompleted			[3] Digits {bound},
  *  dTMFDigitsTimeOut			[4] Digits {bound}

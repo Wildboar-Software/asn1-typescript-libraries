@@ -22,7 +22,7 @@ import { type IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddre
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectToResourceArg-resourceAddress ::= CHOICE {
+ * ConnectToResourceArg-resourceAddress {PARAMETERS-BOUND : bound} ::= CHOICE {
  *     ipRoutingAddress            [0] IPRoutingAddress {bound},
  *     none                [3] NULL
  * }

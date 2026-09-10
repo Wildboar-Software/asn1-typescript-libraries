@@ -19,7 +19,7 @@ import { type AChChargingAddress, _decode_AChChargingAddress, _encode_AChChargin
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * CAMEL-CallResult-timeDurationChargingResult {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  partyToCharge			[0] ReceivingSideID,
  *  timeInformation			[1] TimeInformation,
  *  legActive				[2] BOOLEAN DEFAULT TRUE,

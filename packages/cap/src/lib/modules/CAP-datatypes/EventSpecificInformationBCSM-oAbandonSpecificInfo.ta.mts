@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * EventSpecificInformationBCSM-oAbandonSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  routeNotPermitted			[50] NULL				OPTIONAL,
  *  ...
  *  }

@@ -14,7 +14,7 @@ import { type MetDPCriteriaList, _decode_MetDPCriteriaList, _encode_MetDPCriteri
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * EventSpecificInformationBCSM-tChangeOfPositionSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  locationInformation			[50] LocationInformation		OPTIONAL,
  *  ...,
  *  metDPCriteriaList                   [51] MetDPCriteriaList {bound}		OPTIONAL

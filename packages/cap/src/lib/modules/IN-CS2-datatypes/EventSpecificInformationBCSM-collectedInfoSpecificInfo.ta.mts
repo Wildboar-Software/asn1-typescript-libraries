@@ -21,7 +21,7 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-collectedInfoSpecificInfo ::= SEQUENCE {
+ * EventSpecificInformationBCSM-collectedInfoSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     calledPartynumber  [0]  CalledPartyNumber{bound},
  *     ...
  * }

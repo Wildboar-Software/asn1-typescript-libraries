@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * MessageID-text {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  messageContent			[0] IA5String (SIZE(
  *  bound.&minMessageContentLength .. bound.&maxMessageContentLength)),
  *  attributes				[1] OCTET STRING (SIZE(

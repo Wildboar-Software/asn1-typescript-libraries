@@ -20,7 +20,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MidCallControlInfo-Item-midCallReportType ::= ENUMERATED {
+ * MidCallControlInfo-Item-midCallReportType {PARAMETERS-BOUND:bound} ::= ENUMERATED {
  *     inMonitoringState(0),
  *     inAnyState(1)
  * }

@@ -22,7 +22,7 @@ import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS2
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-callDurationSpecificInfo ::= SEQUENCE {
+ * NotificationInformation-callDurationSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     timeStamp  [0]  DateAndTime OPTIONAL,
  *     ...
  * }

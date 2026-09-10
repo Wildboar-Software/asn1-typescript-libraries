@@ -13,7 +13,7 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * DpSpecificInfoAlt-collectedInfoSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  calledPartyNumber			[0]	CalledPartyNumber			OPTIONAL,
  *  ...
  *  }

@@ -24,7 +24,7 @@ import { MidCallInfo, _decode_MidCallInfo, _encode_MidCallInfo } from "../IN-CS2
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-oMidCallSpecificInfo ::= SEQUENCE {
+ * EventSpecificInformationBCSM-oMidCallSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     connectTime   [0]  Integer4 OPTIONAL,
  *     oMidCallInfo  [1]  MidCallInfo{bound} OPTIONAL,
  *     ...

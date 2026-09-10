@@ -22,7 +22,7 @@ import { BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-oAnswerSpecificInfo ::= SEQUENCE {
+ * EventSpecificInformationBCSM-oAnswerSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     backwardGVNS  [0]  BackwardGVNS{bound} OPTIONAL,
  *     ...
  * }

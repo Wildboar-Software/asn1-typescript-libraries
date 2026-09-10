@@ -24,7 +24,7 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatype
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-oDisconnectSpecificInfo ::= SEQUENCE {
+ * EventSpecificInformationBCSM-oDisconnectSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     releaseCause  [0]  Cause{bound} OPTIONAL,
  *     connectTime   [1]  Integer4 OPTIONAL,
  *     ...

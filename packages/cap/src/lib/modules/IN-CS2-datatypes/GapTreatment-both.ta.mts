@@ -23,7 +23,7 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GapTreatment-both ::= SEQUENCE {
+ * GapTreatment-both {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     informationToSend  [0]  InformationToSend{bound},
  *     releaseCause       [1]  Cause{bound}
  * }

@@ -22,7 +22,7 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-tAbandon ::= SEQUENCE {
+ * EventSpecificInformationBCSM-tAbandon {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     abandonCause  [0]  Cause{bound} OPTIONAL,
  *     ...
  * }

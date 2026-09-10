@@ -23,7 +23,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * InformationToRecord-controlDigits ::= SEQUENCE {
+ * InformationToRecord-controlDigits {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     endOfRecordingDigit
  *     [0]  OCTET STRING(SIZE (1..2)) OPTIONAL,
  *     cancelDigit

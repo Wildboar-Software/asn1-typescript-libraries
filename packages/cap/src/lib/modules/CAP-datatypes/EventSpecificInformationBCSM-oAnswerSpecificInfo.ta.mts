@@ -16,7 +16,7 @@ import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_Ba
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * EventSpecificInformationBCSM-oAnswerSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  destinationAddress			[50] CalledPartyNumber {bound}		OPTIONAL,
  *  or-Call				[51] NULL				OPTIONAL,
  *  forwardedCall			[52] NULL				OPTIONAL,

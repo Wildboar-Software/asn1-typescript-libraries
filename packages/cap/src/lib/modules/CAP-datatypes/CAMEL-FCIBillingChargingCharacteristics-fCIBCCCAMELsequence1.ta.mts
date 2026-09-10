@@ -16,7 +16,7 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * CAMEL-FCIBillingChargingCharacteristics-fCIBCCCAMELsequence1 {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  freeFormatData			[0] OCTET STRING (SIZE(
  *  bound.&minFCIBillingChargingDataLength .. bound.&maxFCIBillingChargingDataLength)),
  *  partyToCharge			[1] SendingSideID DEFAULT sendingSideID: leg1,

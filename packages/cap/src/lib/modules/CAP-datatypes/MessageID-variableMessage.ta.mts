@@ -14,7 +14,7 @@ import { type VariablePart, _decode_VariablePart, _encode_VariablePart } from ".
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * MessageID-variableMessage {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  elementaryMessageID			[0] Integer4,
  *  variableParts			[1] SEQUENCE SIZE (1..5) OF VariablePart {bound}
  *  }

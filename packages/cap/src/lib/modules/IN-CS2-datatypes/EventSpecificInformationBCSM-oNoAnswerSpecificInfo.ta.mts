@@ -20,7 +20,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-oNoAnswerSpecificInfo ::= SEQUENCE {
+ * EventSpecificInformationBCSM-oNoAnswerSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     -- no specific info defined
  *     ...
  * }

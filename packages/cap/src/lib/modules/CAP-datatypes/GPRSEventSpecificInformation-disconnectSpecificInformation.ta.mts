@@ -14,7 +14,7 @@ import { InitiatingEntity, _enum_for_InitiatingEntity, _decode_InitiatingEntity,
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * GPRSEventSpecificInformation-disconnectSpecificInformation {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  initiatingEntity		[0] InitiatingEntity			OPTIONAL,
  *  ...,
  *  routeingAreaUpdate		[1]	NULL				OPTIONAL

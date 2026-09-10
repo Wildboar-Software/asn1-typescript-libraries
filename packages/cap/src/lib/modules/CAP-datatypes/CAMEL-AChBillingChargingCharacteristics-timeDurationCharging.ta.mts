@@ -16,7 +16,7 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "./Exten
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * CAMEL-AChBillingChargingCharacteristics-timeDurationCharging {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  maxCallPeriodDuration		[0] INTEGER (1..864000),
  *  releaseIfdurationExceeded		[1] BOOLEAN DEFAULT FALSE,
  *  tariffSwitchInterval		[2] INTEGER (1..86400)			OPTIONAL,

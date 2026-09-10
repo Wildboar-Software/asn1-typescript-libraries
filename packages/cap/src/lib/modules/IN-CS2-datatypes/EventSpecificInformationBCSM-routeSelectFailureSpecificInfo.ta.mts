@@ -22,7 +22,7 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-routeSelectFailureSpecificInfo ::= SEQUENCE {
+ * EventSpecificInformationBCSM-routeSelectFailureSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     failureCause  [0]  Cause{bound} OPTIONAL,
  *     ...
  * }

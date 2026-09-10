@@ -14,7 +14,7 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * EventSpecificInformationBCSM-tNoAnswerSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  callForwarded			[50] NULL				OPTIONAL,
  *  forwardingDestinationNumber		[52] CalledPartyNumber {bound}		OPTIONAL,
  *  ...

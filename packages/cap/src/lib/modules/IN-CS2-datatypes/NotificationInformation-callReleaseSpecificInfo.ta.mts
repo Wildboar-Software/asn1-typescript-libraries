@@ -24,7 +24,7 @@ import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS2
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-callReleaseSpecificInfo ::= SEQUENCE {
+ * NotificationInformation-callReleaseSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     releaseCause  [0]  Cause{bound} OPTIONAL,
  *     timeStamp     [1]  DateAndTime OPTIONAL,
  *     ...

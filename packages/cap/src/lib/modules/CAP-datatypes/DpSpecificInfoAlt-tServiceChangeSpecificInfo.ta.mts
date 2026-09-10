@@ -15,7 +15,7 @@ import { NatureOfServiceChange, _enum_for_NatureOfServiceChange, _decode_NatureO
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * DpSpecificInfoAlt-tServiceChangeSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  ext-basicServiceCode		[0] Ext-BasicServiceCode		OPTIONAL,
  *  ...,
  *  initiatorOfServiceChange		[1] InitiatorOfServiceChange		OPTIONAL,

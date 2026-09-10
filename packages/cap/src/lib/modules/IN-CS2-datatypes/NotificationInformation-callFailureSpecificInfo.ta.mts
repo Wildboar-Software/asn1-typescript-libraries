@@ -22,7 +22,7 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-callFailureSpecificInfo ::= SEQUENCE {
+ * NotificationInformation-callFailureSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     failureCause  [0]  Cause{bound} OPTIONAL,
  *     ...
  * }

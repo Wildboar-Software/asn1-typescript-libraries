@@ -22,7 +22,7 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-calledNumberSpecificInfo ::= SEQUENCE {
+ * NotificationInformation-calledNumberSpecificInfo {PARAMETERS-BOUND:bound} ::= SEQUENCE {
  *     calledNumber  [0]  CalledPartyNumber{bound} OPTIONAL,
  *     ...
  * }

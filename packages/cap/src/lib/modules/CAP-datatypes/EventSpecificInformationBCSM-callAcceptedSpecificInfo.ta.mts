@@ -13,7 +13,7 @@ import { LocationInformation, _decode_LocationInformation, _encode_LocationInfor
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * EventSpecificInformationBCSM-callAcceptedSpecificInfo {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  locationInformation			[50] LocationInformation		OPTIONAL,
  *  ...
  *  }

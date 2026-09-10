@@ -12,7 +12,7 @@ import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * CHOICE {
+ * EventSpecificInformationBCSM-oMidCallSpecificInfo-midCallEvents {PARAMETERS-BOUND : bound} ::= CHOICE {
  *  dTMFDigitsCompleted			[3] Digits {bound},
  *  dTMFDigitsTimeOut			[4] Digits {bound}
  *  }

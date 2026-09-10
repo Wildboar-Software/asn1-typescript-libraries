@@ -19,7 +19,7 @@ import { PDPInitiationType, _enum_for_PDPInitiationType, _decode_PDPInitiationTy
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * GPRSEventSpecificInformation-pDPContextEstablishmentSpecificInformation {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  accessPointName			[0]	AccessPointName {bound}		OPTIONAL,
  *  endUserAddress			[1]	EndUserAddress {bound}		OPTIONAL,
  *  qualityOfService		[2]	QualityOfService			OPTIONAL,

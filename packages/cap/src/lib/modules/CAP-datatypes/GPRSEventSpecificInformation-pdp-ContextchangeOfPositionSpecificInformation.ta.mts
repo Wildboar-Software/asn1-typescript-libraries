@@ -19,7 +19,7 @@ import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../M
  * ### ASN.1 Definition:
  *
  * ```asn1
- * SEQUENCE {
+ * GPRSEventSpecificInformation-pdp-ContextchangeOfPositionSpecificInformation {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *  accessPointName			[0]	AccessPointName {bound}		OPTIONAL,
  *  chargingID			[1]	GPRSChargingID			OPTIONAL,
  *  locationInformationGPRS		[2] LocationInformationGPRS		OPTIONAL,
