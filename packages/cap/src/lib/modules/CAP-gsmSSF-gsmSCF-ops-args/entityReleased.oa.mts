@@ -9,7 +9,7 @@ import { opcode_entityReleased } from "../CAP-operationcodes/opcode-entityReleas
  * ### ASN.1 Definition:
  *
  * ```asn1
- * entityReleased OPERATION ::= {
+ * entityReleased {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	EntityReleasedArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ALWAYS RESPONDS	FALSE

@@ -10,7 +10,7 @@ import { opcode_eventReportGPRS } from "../CAP-operationcodes/opcode-eventReport
  * ### ASN.1 Definition:
  *
  * ```asn1
- * eventReportGPRS OPERATION ::= {
+ * eventReportGPRS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	EventReportGPRSArg {bound}
  * 	RETURN RESULT	TRUE
  * 	ERRORS		{unknownPDPID}

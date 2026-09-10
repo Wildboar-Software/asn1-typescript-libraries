@@ -9,7 +9,7 @@ import { id_package_billing } from "../CAP-object-identifiers/id-package-billing
  * ### ASN.1 Definition:
  *
  * ```asn1
- * billingPackage OPERATION-PACKAGE ::= {
+ * billingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{furnishChargingInformation {bound}}
  * 	ID			id-package-billing}
  * ```

@@ -12,7 +12,7 @@ import { opcode_entityReleasedGPRS } from "../CAP-operationcodes/opcode-entityRe
  * ### ASN.1 Definition:
  *
  * ```asn1
- * entityReleasedGPRS OPERATION ::= {
+ * entityReleasedGPRS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	EntityReleasedGPRSArg {bound}
  * 	RETURN RESULT	TRUE
  * 	ERRORS		{missingParameter |

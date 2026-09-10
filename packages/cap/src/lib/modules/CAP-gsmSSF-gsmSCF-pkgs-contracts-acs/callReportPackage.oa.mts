@@ -10,7 +10,7 @@ import { id_package_callReport } from "../CAP-object-identifiers/id-package-call
  * ### ASN.1 Definition:
  *
  * ```asn1
- * callReportPackage OPERATION-PACKAGE ::= {
+ * callReportPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{callInformationRequest {bound}}
  * 	SUPPLIER INVOKES	{callInformationReport {bound}}
  * 	ID			id-package-callReport}

@@ -17,7 +17,7 @@ import { opcode_requestReportGPRSEvent } from "../CAP-operationcodes/opcode-requ
  * ### ASN.1 Definition:
  *
  * ```asn1
- * requestReportGPRSEvent OPERATION ::= {
+ * requestReportGPRSEvent {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	RequestReportGPRSEventArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

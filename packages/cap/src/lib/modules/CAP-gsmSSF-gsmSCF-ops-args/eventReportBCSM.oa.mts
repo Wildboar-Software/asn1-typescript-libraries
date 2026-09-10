@@ -9,7 +9,7 @@ import { opcode_eventReportBCSM } from "../CAP-operationcodes/opcode-eventReport
  * ### ASN.1 Definition:
  *
  * ```asn1
- * eventReportBCSM OPERATION ::= {
+ * eventReportBCSM {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	EventReportBCSMArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ALWAYS RESPONDS	FALSE

@@ -13,7 +13,7 @@ import { opcode_cancel } from "../CAP-operationcodes/opcode-cancel.va.mjs";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * cancel OPERATION ::= {
+ * cancel {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	CancelArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{cancelFailed |

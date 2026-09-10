@@ -9,7 +9,7 @@ import { id_package_smsBilling } from "../CAP-object-identifiers/id-package-smsB
  * ### ASN.1 Definition:
  *
  * ```asn1
- * smsBillingPackage OPERATION-PACKAGE ::= {
+ * smsBillingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{furnishChargingInformationSMS {bound}}
  * 	ID			id-package-smsBilling}
  * ```

@@ -9,7 +9,7 @@ import { id_package_cancel } from "../CAP-object-identifiers/id-package-cancel.v
  * ### ASN.1 Definition:
  *
  * ```asn1
- * cancelPackage OPERATION-PACKAGE ::= {
+ * cancelPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{cancel {bound}}
  * 	ID			id-package-cancel}
  * ```

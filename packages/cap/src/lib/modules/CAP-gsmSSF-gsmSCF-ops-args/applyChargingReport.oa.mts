@@ -18,7 +18,7 @@ import { opcode_applyChargingReport } from "../CAP-operationcodes/opcode-applyCh
  * ### ASN.1 Definition:
  *
  * ```asn1
- * applyChargingReport OPERATION ::= {
+ * applyChargingReport {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ApplyChargingReportArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

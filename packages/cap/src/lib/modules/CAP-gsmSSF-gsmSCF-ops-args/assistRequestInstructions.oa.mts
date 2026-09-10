@@ -16,7 +16,7 @@ import { opcode_assistRequestInstructions } from "../CAP-operationcodes/opcode-a
  * ### ASN.1 Definition:
  *
  * ```asn1
- * assistRequestInstructions OPERATION ::= {
+ * assistRequestInstructions {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	AssistRequestInstructionsArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingCustomerRecord |

@@ -9,7 +9,7 @@ import { id_package_assistConnectionEstablishment } from "../CAP-object-identifi
  * ### ASN.1 Definition:
  *
  * ```asn1
- * assistConnectionEstablishmentPackage OPERATION-PACKAGE ::= {
+ * assistConnectionEstablishmentPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{establishTemporaryConnection {bound}}
  * 	ID			id-package-assistConnectionEstablishment}
  * ```

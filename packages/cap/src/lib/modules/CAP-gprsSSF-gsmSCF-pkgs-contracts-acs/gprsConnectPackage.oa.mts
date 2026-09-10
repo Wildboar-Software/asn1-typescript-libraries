@@ -9,7 +9,7 @@ import { id_package_gprsConnect } from "../CAP-object-identifiers/id-package-gpr
  * ### ASN.1 Definition:
  *
  * ```asn1
- * gprsConnectPackage OPERATION-PACKAGE ::= {
+ * gprsConnectPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{connectGPRS {bound}}
  * 	ID			id-package-gprsConnect}
  * ```

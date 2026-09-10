@@ -16,7 +16,7 @@ import { opcode_dFCWithArgument } from "../CAP-operationcodes/opcode-dFCWithArgu
  * ### ASN.1 Definition:
  *
  * ```asn1
- * disconnectForwardConnectionWithArgument OPERATION ::= {
+ * disconnectForwardConnectionWithArgument {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	DisconnectForwardConnectionWithArgumentArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

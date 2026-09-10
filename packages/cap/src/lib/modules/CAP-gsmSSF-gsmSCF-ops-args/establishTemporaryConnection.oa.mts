@@ -17,7 +17,7 @@ import { opcode_establishTemporaryConnection } from "../CAP-operationcodes/opcod
  * ### ASN.1 Definition:
  *
  * ```asn1
- * establishTemporaryConnection OPERATION ::= {
+ * establishTemporaryConnection {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	EstablishTemporaryConnectionArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{eTCFailed |

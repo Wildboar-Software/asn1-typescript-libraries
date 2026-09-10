@@ -17,7 +17,7 @@ import { opcode_connect } from "../CAP-operationcodes/opcode-connect.va.mjs";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * connect OPERATION ::= {
+ * connect {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ConnectArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

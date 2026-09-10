@@ -9,7 +9,7 @@ import { id_package_gprsScfActivation } from "../CAP-object-identifiers/id-packa
  * ### ASN.1 Definition:
  *
  * ```asn1
- * gprsScfActivationPackage OPERATION-PACKAGE ::= {
+ * gprsScfActivationPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{initialDPGPRS {bound}}
  * 	ID			id-package-gprsScfActivation}
  * ```

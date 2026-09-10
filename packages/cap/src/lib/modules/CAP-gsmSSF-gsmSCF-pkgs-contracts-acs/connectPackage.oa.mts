@@ -9,7 +9,7 @@ import { id_package_connect } from "../CAP-object-identifiers/id-package-connect
  * ### ASN.1 Definition:
  *
  * ```asn1
- * connectPackage OPERATION-PACKAGE ::= {
+ * connectPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{connect {bound}}
  * 	ID			id-package-connect}
  * ```

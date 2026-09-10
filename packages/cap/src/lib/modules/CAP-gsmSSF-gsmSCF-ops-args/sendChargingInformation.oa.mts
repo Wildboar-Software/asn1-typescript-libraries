@@ -17,7 +17,7 @@ import { opcode_sendChargingInformation } from "../CAP-operationcodes/opcode-sen
  * ### ASN.1 Definition:
  *
  * ```asn1
- * sendChargingInformation OPERATION ::= {
+ * sendChargingInformation {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	SendChargingInformationArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

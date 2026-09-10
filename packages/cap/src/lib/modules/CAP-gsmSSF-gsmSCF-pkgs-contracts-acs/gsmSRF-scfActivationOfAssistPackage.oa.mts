@@ -9,7 +9,7 @@ import { id_package_gsmSRF_scfActivationOfAssist } from "../CAP-object-identifie
  * ### ASN.1 Definition:
  *
  * ```asn1
- * gsmSRF-scfActivationOfAssistPackage OPERATION-PACKAGE ::= {
+ * gsmSRF-scfActivationOfAssistPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{assistRequestInstructions {bound}}
  * 	ID			id-package-gsmSRF-scfActivationOfAssist}
  * ```

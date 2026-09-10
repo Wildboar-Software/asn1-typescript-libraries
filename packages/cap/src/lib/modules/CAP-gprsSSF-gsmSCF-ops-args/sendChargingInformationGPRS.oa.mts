@@ -17,7 +17,7 @@ import { opcode_sendChargingInformationGPRS } from "../CAP-operationcodes/opcode
  * ### ASN.1 Definition:
  *
  * ```asn1
- * sendChargingInformationGPRS OPERATION ::= {
+ * sendChargingInformationGPRS {PARAMETERS-BOUND: bound} OPERATION ::= {
  * 	ARGUMENT	SendChargingInformationGPRSArg { bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

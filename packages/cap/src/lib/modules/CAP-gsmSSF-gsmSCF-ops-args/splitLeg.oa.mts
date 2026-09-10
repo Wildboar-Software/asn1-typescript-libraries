@@ -16,7 +16,7 @@ import { opcode_splitLeg } from "../CAP-operationcodes/opcode-splitLeg.va.mjs";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * splitLeg OPERATION ::= {
+ * splitLeg {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	SplitLegArg {bound}
  * 	RETURN RESULT	TRUE
  * 	ERRORS		{missingParameter |

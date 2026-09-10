@@ -9,7 +9,7 @@ import { id_package_timer } from "../CAP-object-identifiers/id-package-timer.va.
  * ### ASN.1 Definition:
  *
  * ```asn1
- * timerPackage OPERATION-PACKAGE ::= {
+ * timerPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{resetTimer {bound}}
  * 	ID			id-package-timer}
  * ```

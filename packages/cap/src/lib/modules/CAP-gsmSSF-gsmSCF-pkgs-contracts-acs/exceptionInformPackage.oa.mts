@@ -9,7 +9,7 @@ import { id_package_exceptionInform } from "../CAP-object-identifiers/id-package
  * ### ASN.1 Definition:
  *
  * ```asn1
- * exceptionInformPackage OPERATION-PACKAGE ::= {
+ * exceptionInformPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{entityReleased {bound}}
  * 	ID			id-package-exceptionInform}
  * ```

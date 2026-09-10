@@ -9,7 +9,7 @@ import { id_package_gsmSRF_scfCancel } from "../CAP-object-identifiers/id-packag
  * ### ASN.1 Definition:
  *
  * ```asn1
- * gsmSRF-scfCancelPackage OPERATION-PACKAGE ::= {
+ * gsmSRF-scfCancelPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{cancel {bound}}
  * 	ID			id-package-gsmSRF-scfCancel}
  * ```

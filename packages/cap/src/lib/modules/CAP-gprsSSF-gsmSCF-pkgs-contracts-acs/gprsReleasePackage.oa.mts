@@ -9,7 +9,7 @@ import { id_package_gprsRelease } from "../CAP-object-identifiers/id-package-gpr
  * ### ASN.1 Definition:
  *
  * ```asn1
- * gprsReleasePackage OPERATION-PACKAGE ::= {
+ * gprsReleasePackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{releaseGPRS {bound}}
  * 	ID			id-package-gprsRelease}
  * ```

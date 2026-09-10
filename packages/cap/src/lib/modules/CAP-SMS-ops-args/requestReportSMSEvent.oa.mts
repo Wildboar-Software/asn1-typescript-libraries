@@ -16,7 +16,7 @@ import { opcode_requestReportSMSEvent } from "../CAP-operationcodes/opcode-reque
  * ### ASN.1 Definition:
  *
  * ```asn1
- * requestReportSMSEvent OPERATION ::= {
+ * requestReportSMSEvent {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	RequestReportSMSEventArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

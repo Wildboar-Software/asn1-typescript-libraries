@@ -9,7 +9,7 @@ import { id_package_scfActivation } from "../CAP-object-identifiers/id-package-s
  * ### ASN.1 Definition:
  *
  * ```asn1
- * scfActivationPackage OPERATION-PACKAGE ::= {
+ * scfActivationPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{initialDP {bound}}
  * 	ID			id-package-scfActivation}
  * ```

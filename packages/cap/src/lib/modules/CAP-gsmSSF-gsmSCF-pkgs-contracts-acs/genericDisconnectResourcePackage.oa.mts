@@ -10,7 +10,7 @@ import { id_package_genericDisconnectResource } from "../CAP-object-identifiers/
  * ### ASN.1 Definition:
  *
  * ```asn1
- * genericDisconnectResourcePackage OPERATION-PACKAGE ::= {
+ * genericDisconnectResourcePackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{disconnectForwardConnection |
  * 			disconnectForwardConnectionWithArgument {bound}}
  * 	ID			id-package-genericDisconnectResource}

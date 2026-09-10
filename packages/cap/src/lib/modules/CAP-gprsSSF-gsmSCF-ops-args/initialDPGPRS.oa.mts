@@ -17,7 +17,7 @@ import { opcode_initialDPGPRS } from "../CAP-operationcodes/opcode-initialDPGPRS
  * ### ASN.1 Definition:
  *
  * ```asn1
- * initialDPGPRS OPERATION ::= {
+ * initialDPGPRS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	InitialDPGPRSArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingCustomerRecord |

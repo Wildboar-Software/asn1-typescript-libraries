@@ -9,7 +9,7 @@ import { id_package_playTone } from "../CAP-object-identifiers/id-package-playTo
  * ### ASN.1 Definition:
  *
  * ```asn1
- * playTonePackage OPERATION-PACKAGE ::= {
+ * playTonePackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{playTone {bound}}
  * 	ID			id-package-playTone}
  * ```

@@ -9,7 +9,7 @@ import { id_package_signallingControl } from "../CAP-object-identifiers/id-packa
  * ### ASN.1 Definition:
  *
  * ```asn1
- * signallingControlPackage OPERATION-PACKAGE ::= {
+ * signallingControlPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{sendChargingInformation {bound}}
  * 	ID			id-package-signallingControl}
  * ```

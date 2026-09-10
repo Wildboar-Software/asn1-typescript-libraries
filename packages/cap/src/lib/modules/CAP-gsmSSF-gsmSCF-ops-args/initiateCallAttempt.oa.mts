@@ -17,7 +17,7 @@ import { opcode_initiateCallAttempt } from "../CAP-operationcodes/opcode-initiat
  * ### ASN.1 Definition:
  *
  * ```asn1
- * initiateCallAttempt OPERATION ::= {
+ * initiateCallAttempt {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	InitiateCallAttemptArg {bound}
  * 	RESULT		InitiateCallAttemptRes {bound}
  * 	ERRORS		{missingParameter |

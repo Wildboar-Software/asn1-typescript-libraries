@@ -17,7 +17,7 @@ import { opcode_playTone } from "../CAP-operationcodes/opcode-playTone.va.mjs";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * playTone OPERATION ::= {
+ * playTone {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	PlayToneArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

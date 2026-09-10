@@ -16,7 +16,7 @@ import { opcode_connectSMS } from "../CAP-operationcodes/opcode-connectSMS.va.mj
  * ### ASN.1 Definition:
  *
  * ```asn1
- * connectSMS OPERATION ::= {
+ * connectSMS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ConnectSMSArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

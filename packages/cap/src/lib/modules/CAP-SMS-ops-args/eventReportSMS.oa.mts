@@ -9,7 +9,7 @@ import { opcode_eventReportSMS } from "../CAP-operationcodes/opcode-eventReportS
  * ### ASN.1 Definition:
  *
  * ```asn1
- * eventReportSMS OPERATION ::= {
+ * eventReportSMS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	EventReportSMSArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ALWAYS RESPONDS	FALSE

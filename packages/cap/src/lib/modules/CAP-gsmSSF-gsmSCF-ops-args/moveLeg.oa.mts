@@ -16,7 +16,7 @@ import { opcode_moveLeg } from "../CAP-operationcodes/opcode-moveLeg.va.mjs";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * moveLeg OPERATION ::= {
+ * moveLeg {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	MoveLegArg {bound}
  * 	RETURN RESULT	TRUE
  * 	ERRORS		{missingParameter |

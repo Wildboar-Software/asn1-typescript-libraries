@@ -22,7 +22,7 @@ import { opcode_promptAndCollectUserInformation } from "../CAP-operationcodes/op
  * ### ASN.1 Definition:
  *
  * ```asn1
- * promptAndCollectUserInformation OPERATION ::= {
+ * promptAndCollectUserInformation {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	PromptAndCollectUserInformationArg {bound}
  * 	RESULT		ReceivedInformationArg {bound}
  * 	ERRORS		{canceled |

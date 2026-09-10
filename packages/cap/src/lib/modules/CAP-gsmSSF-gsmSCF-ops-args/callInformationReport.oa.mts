@@ -9,7 +9,7 @@ import { opcode_callInformationReport } from "../CAP-operationcodes/opcode-callI
  * ### ASN.1 Definition:
  *
  * ```asn1
- * callInformationReport OPERATION ::= {
+ * callInformationReport {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	CallInformationReportArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ALWAYS RESPONDS	FALSE

@@ -16,7 +16,7 @@ import { opcode_resetTimer } from "../CAP-operationcodes/opcode-resetTimer.va.mj
  * ### ASN.1 Definition:
  *
  * ```asn1
- * resetTimer OPERATION ::= {
+ * resetTimer {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ResetTimerArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

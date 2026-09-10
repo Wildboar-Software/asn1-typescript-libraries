@@ -9,7 +9,7 @@ import { id_package_smsActivation } from "../CAP-object-identifiers/id-package-s
  * ### ASN.1 Definition:
  *
  * ```asn1
- * smsActivationPackage OPERATION-PACKAGE ::= {
+ * smsActivationPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{initialDPSMS {bound}}
  * 	ID			id-package-smsActivation}
  * ```

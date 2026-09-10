@@ -11,7 +11,7 @@ import { id_package_specializedResourceControl } from "../CAP-object-identifiers
  * ### ASN.1 Definition:
  *
  * ```asn1
- * specializedResourceControlPackage OPERATION-PACKAGE ::= {
+ * specializedResourceControlPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{playAnnouncement {bound} |
  * 			promptAndCollectUserInformation {bound}}
  * 	SUPPLIER INVOKES	{specializedResourceReport}

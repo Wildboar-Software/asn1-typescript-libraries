@@ -10,7 +10,7 @@ import { id_package_smsEventHandling } from "../CAP-object-identifiers/id-packag
  * ### ASN.1 Definition:
  *
  * ```asn1
- * smsEventHandlingPackage OPERATION-PACKAGE ::= {
+ * smsEventHandlingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{requestReportSMSEvent {bound}}
  * 	SUPPLIER INVOKES	{eventReportSMS {bound}}
  * 	ID			id-package-smsEventHandling}

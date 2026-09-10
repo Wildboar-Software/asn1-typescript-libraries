@@ -15,7 +15,7 @@ import { opcode_resetTimerSMS } from "../CAP-operationcodes/opcode-resetTimerSMS
  * ### ASN.1 Definition:
  *
  * ```asn1
- * resetTimerSMS OPERATION ::= {
+ * resetTimerSMS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ResetTimerSMSArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

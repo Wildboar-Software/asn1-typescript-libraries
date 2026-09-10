@@ -9,7 +9,7 @@ import { id_package_nonAssistedConnectionEstablishment } from "../CAP-object-ide
  * ### ASN.1 Definition:
  *
  * ```asn1
- * nonAssistedConnectionEstablishmentPackage OPERATION-PACKAGE ::= {
+ * nonAssistedConnectionEstablishmentPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{connectToResource {bound}}
  * 	ID			id-package-nonAssistedConnectionEstablishment}
  * ```

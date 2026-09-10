@@ -12,7 +12,7 @@ import { id_package_cphResponse } from "../CAP-object-identifiers/id-package-cph
  * ### ASN.1 Definition:
  *
  * ```asn1
- * cphResponsePackage OPERATION-PACKAGE ::= {
+ * cphResponsePackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{continueWithArgument {bound} |
  * 			disconnectLeg {bound} |
  * 			moveLeg {bound} |

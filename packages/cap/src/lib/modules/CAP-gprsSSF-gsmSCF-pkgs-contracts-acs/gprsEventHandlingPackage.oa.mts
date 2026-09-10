@@ -10,7 +10,7 @@ import { id_package_gprsEventHandling } from "../CAP-object-identifiers/id-packa
  * ### ASN.1 Definition:
  *
  * ```asn1
- * gprsEventHandlingPackage OPERATION-PACKAGE ::= {
+ * gprsEventHandlingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{requestReportGPRSEvent {bound}}
  * 	SUPPLIER INVOKES	{eventReportGPRS {bound}}
  * 	ID			id-package-gprsEventHandling}

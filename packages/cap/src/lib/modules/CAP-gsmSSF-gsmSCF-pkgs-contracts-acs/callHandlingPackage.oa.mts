@@ -9,7 +9,7 @@ import { id_package_callHandling } from "../CAP-object-identifiers/id-package-ca
  * ### ASN.1 Definition:
  *
  * ```asn1
- * callHandlingPackage OPERATION-PACKAGE ::= {
+ * callHandlingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{releaseCall {bound}}
  * 	ID			id-package-callHandling}
  * ```

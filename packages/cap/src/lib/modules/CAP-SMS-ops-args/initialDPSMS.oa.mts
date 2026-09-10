@@ -17,7 +17,7 @@ import { opcode_initialDPSMS } from "../CAP-operationcodes/opcode-initialDPSMS.v
  * ### ASN.1 Definition:
  *
  * ```asn1
- * initialDPSMS OPERATION ::= {
+ * initialDPSMS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	InitialDPSMSArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingCustomerRecord |

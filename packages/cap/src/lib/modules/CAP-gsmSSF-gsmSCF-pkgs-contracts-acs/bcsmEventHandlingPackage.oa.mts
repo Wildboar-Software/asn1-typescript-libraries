@@ -10,7 +10,7 @@ import { id_package_bcsmEventHandling } from "../CAP-object-identifiers/id-packa
  * ### ASN.1 Definition:
  *
  * ```asn1
- * bcsmEventHandlingPackage OPERATION-PACKAGE ::= {
+ * bcsmEventHandlingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{requestReportBCSMEvent {bound}}
  * 	SUPPLIER INVOKES	{eventReportBCSM {bound}}
  * 	ID			id-package-bcsmEventHandling}

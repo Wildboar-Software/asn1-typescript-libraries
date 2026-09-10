@@ -11,7 +11,7 @@ import { id_package_ssfCallProcessing } from "../CAP-object-identifiers/id-packa
  * ### ASN.1 Definition:
  *
  * ```asn1
- * ssfCallProcessingPackage OPERATION-PACKAGE ::= {
+ * ssfCallProcessingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{ collectInformation | continueWithArgument {bound} | continue}
  * 	ID			id-package-ssfCallProcessing}
  * ```

@@ -15,7 +15,7 @@ import { opcode_furnishChargingInformation } from "../CAP-operationcodes/opcode-
  * ### ASN.1 Definition:
  *
  * ```asn1
- * furnishChargingInformation OPERATION ::= {
+ * furnishChargingInformation {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	FurnishChargingInformationArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

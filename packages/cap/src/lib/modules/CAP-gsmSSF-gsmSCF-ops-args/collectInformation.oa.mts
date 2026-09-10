@@ -16,7 +16,7 @@ import { opcode_collectInformation } from "../CAP-operationcodes/opcode-collectI
  * ### ASN.1 Definition:
  *
  * ```asn1
- * collectInformation OPERATION ::= {
+ * collectInformation {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT		CollectInformationArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS	{missingParameter |

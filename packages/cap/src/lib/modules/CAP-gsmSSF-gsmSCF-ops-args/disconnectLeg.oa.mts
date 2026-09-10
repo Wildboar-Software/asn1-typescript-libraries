@@ -16,7 +16,7 @@ import { opcode_disconnectLeg } from "../CAP-operationcodes/opcode-disconnectLeg
  * ### ASN.1 Definition:
  *
  * ```asn1
- * disconnectLeg OPERATION ::= {
+ * disconnectLeg {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	DisconnectLegArg {bound}
  * 	RETURN RESULT	TRUE
  * 	ERRORS		{missingParameter |

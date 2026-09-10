@@ -9,7 +9,7 @@ import { id_package_gprsExceptionInformation } from "../CAP-object-identifiers/i
  * ### ASN.1 Definition:
  *
  * ```asn1
- * gprsExceptionInformationPackage OPERATION-PACKAGE ::= {
+ * gprsExceptionInformationPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{entityReleasedGPRS {bound}}
  * 	ID			id-package-gprsExceptionInformation}
  * ```

@@ -17,7 +17,7 @@ import { opcode_requestReportBCSMEvent } from "../CAP-operationcodes/opcode-requ
  * ### ASN.1 Definition:
  *
  * ```asn1
- * requestReportBCSMEvent OPERATION ::= {
+ * requestReportBCSMEvent {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	RequestReportBCSMEventArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

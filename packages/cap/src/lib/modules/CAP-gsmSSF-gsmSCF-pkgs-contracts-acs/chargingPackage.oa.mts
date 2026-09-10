@@ -10,7 +10,7 @@ import { id_package_charging } from "../CAP-object-identifiers/id-package-chargi
  * ### ASN.1 Definition:
  *
  * ```asn1
- * chargingPackage OPERATION-PACKAGE ::= {
+ * chargingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{applyCharging {bound}}
  * 	SUPPLIER INVOKES	{applyChargingReport {bound}}
  * 	ID			id-package-charging}

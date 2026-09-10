@@ -9,7 +9,7 @@ import { opcode_releaseCall } from "../CAP-operationcodes/opcode-releaseCall.va.
  * ### ASN.1 Definition:
  *
  * ```asn1
- * releaseCall OPERATION ::= {
+ * releaseCall {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ReleaseCallArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ALWAYS RESPONDS	FALSE

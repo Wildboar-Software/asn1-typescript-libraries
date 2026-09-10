@@ -9,7 +9,7 @@ import { id_package_trafficManagement } from "../CAP-object-identifiers/id-packa
  * ### ASN.1 Definition:
  *
  * ```asn1
- * trafficManagementPackage OPERATION-PACKAGE ::= {
+ * trafficManagementPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{callGap {bound}}
  * 	ID			id-package-trafficManagement}
  * ```

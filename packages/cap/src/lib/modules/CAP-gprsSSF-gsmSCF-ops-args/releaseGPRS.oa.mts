@@ -12,7 +12,7 @@ import { opcode_releaseGPRS } from "../CAP-operationcodes/opcode-releaseGPRS.va.
  * ### ASN.1 Definition:
  *
  * ```asn1
- * releaseGPRS OPERATION ::= {
+ * releaseGPRS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ReleaseGPRSArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

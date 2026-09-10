@@ -18,7 +18,7 @@ import { opcode_callInformationRequest } from "../CAP-operationcodes/opcode-call
  * ### ASN.1 Definition:
  *
  * ```asn1
- * callInformationRequest OPERATION ::= {
+ * callInformationRequest {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	CallInformationRequestArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

@@ -9,7 +9,7 @@ import { id_package_smsConnect } from "../CAP-object-identifiers/id-package-smsC
  * ### ASN.1 Definition:
  *
  * ```asn1
- * smsConnectPackage OPERATION-PACKAGE ::= {
+ * smsConnectPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{connectSMS {bound}}
  * 	ID			id-package-smsConnect}
  * ```

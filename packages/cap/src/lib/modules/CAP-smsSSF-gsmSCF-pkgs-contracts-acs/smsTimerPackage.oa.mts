@@ -9,7 +9,7 @@ import { id_package_smsTimer } from "../CAP-object-identifiers/id-package-smsTim
  * ### ASN.1 Definition:
  *
  * ```asn1
- * smsTimerPackage OPERATION-PACKAGE ::= {
+ * smsTimerPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{resetTimerSMS {bound}}
  * 	ID			id-package-smsTimer}
  * ```

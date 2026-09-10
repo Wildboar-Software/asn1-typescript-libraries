@@ -16,7 +16,7 @@ import { opcode_connectToResource } from "../CAP-operationcodes/opcode-connectTo
  * ### ASN.1 Definition:
  *
  * ```asn1
- * connectToResource OPERATION ::= {
+ * connectToResource {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ConnectToResourceArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

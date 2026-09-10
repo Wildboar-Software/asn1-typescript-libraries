@@ -9,7 +9,7 @@ import { id_package_gprsBilling } from "../CAP-object-identifiers/id-package-gpr
  * ### ASN.1 Definition:
  *
  * ```asn1
- * gprsBillingPackage OPERATION-PACKAGE ::= {
+ * gprsBillingPackage {PARAMETERS-BOUND : bound} OPERATION-PACKAGE ::= {
  * 	CONSUMER INVOKES	{furnishChargingInformationGPRS {bound}}
  * 	ID			id-package-gprsBilling}
  * ```

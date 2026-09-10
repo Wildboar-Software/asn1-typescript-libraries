@@ -17,7 +17,7 @@ import { opcode_initialDP } from "../CAP-operationcodes/opcode-initialDP.va.mjs"
  * ### ASN.1 Definition:
  *
  * ```asn1
- * initialDP OPERATION ::= {
+ * initialDP {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	InitialDPArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingCustomerRecord |

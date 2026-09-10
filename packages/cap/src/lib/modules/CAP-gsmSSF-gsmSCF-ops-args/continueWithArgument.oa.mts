@@ -16,7 +16,7 @@ import { opcode_continueWithArgument } from "../CAP-operationcodes/opcode-contin
  * ### ASN.1 Definition:
  *
  * ```asn1
- * continueWithArgument OPERATION ::= {
+ * continueWithArgument {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	ContinueWithArgumentArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

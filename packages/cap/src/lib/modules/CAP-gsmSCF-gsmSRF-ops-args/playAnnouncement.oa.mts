@@ -20,7 +20,7 @@ import { opcode_playAnnouncement } from "../CAP-operationcodes/opcode-playAnnoun
  * ### ASN.1 Definition:
  *
  * ```asn1
- * playAnnouncement OPERATION ::= {
+ * playAnnouncement {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	PlayAnnouncementArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{canceled |

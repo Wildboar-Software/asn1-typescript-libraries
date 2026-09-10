@@ -9,7 +9,7 @@ import { opcode_callGap } from "../CAP-operationcodes/opcode-callGap.va.mjs";
  * ### ASN.1 Definition:
  *
  * ```asn1
- * callGap OPERATION ::= {
+ * callGap {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	CallGapArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ALWAYS RESPONDS FALSE

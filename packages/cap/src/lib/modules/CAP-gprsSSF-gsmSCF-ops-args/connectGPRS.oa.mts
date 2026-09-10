@@ -17,7 +17,7 @@ import { opcode_connectGPRS } from "../CAP-operationcodes/opcode-connectGPRS.va.
  * ### ASN.1 Definition:
  *
  * ```asn1
- * connectGPRS OPERATION ::= {
+ * connectGPRS {PARAMETERS-BOUND: bound} OPERATION ::= {
  * 	ARGUMENT	ConnectGPRSArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |

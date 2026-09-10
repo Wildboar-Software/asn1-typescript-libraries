@@ -15,7 +15,7 @@ import { opcode_furnishChargingInformationGPRS } from "../CAP-operationcodes/opc
  * ### ASN.1 Definition:
  *
  * ```asn1
- * furnishChargingInformationGPRS OPERATION ::= {
+ * furnishChargingInformationGPRS {PARAMETERS-BOUND : bound} OPERATION ::= {
  * 	ARGUMENT	FurnishChargingInformationGPRSArg {bound}
  * 	RETURN RESULT	FALSE
  * 	ERRORS		{missingParameter |
