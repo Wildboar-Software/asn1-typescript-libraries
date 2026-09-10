@@ -325,7 +325,12 @@ convention and the scope MUST be the project name (what Nx calls it).
    so that it looks "natural." Do **NOT** speculate on the ASN.1 if you cannot
    find it. Do **NOT** apply tags (e.g. `[0]`) that are not present in the
    original ASN.1. It is far worse to be wrong than to leave this unfixed; just
-   leave it alone if you are not confident that you can do it correctly.
+   leave it alone if you are not confident that you can do it correctly. Do not
+   remove comments from the original ASN.1, unless they are enormous (several
+   paragraphs); just include these comments in the `asn1` code fence to
+   truthfully represent what the original ASN.1 was. Convert block comments to
+   line comments, however, since block comments may cause JSDoc rendering
+   issues.
 7. Identify any types that have associated constraints in the ASN.1 and generate
    code to validate those constraints. If it is a `SET` or `SEQUENCE`, a `class`
    will have been generated, and you MAY add constraint-validation code to the
@@ -338,8 +343,10 @@ convention and the scope MUST be the project name (what Nx calls it).
    prohibited character is used. Throw `ASN1ConstructionError` if a `SET` or
    `SEQUENCE` has a malformed ordering or prohibited combination of components.
    Throw `ASN1OverflowError` if an `INTEGER` or `REAL` exceeds its range
-   constraints. Throw `ASN1Error` for anything else. You MUST NOT add validation
-   code to encoders.
+   constraints (for example, `INTEGER (0..127)`). Throw `ASN1Error` for anything
+   else. You MUST NOT add validation code to encoders. If a bound of a
+   constraint is defined as a constant (e.g. `ub-commonName`), import it and use
+   that for the check, rather than hard-coding a number literal.
 8. `ComponentSpec` can now supports optional trailing arguments. If you see it
    ending with one or more `undefined` arguments, please remove these to make
    the code size smaller. Do **NOT** alter any other arguments to the
