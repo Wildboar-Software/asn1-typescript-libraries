@@ -22,8 +22,8 @@ import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-phys
  * 
  * ```asn1
  * MicrophoneGainList-Item ::= SEQUENCE {
- *     auditoryApparatus [UNIVERSAL 4] AuditoryApparatusID,
- *     micGainAbs [UNIVERSAL 2] MicGainAbs OPTIONAL
+ *     auditoryApparatus AuditoryApparatusID,
+ *     micGainAbs MicGainAbs OPTIONAL
  * }
  * ```
  * 

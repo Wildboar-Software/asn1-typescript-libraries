@@ -21,9 +21,9 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  * 
  * ```asn1
  * CallBackList-Item ::= SEQUENCE {
- *     originatingDevice [UNIVERSAL 16] DeviceID,
- *     targetDevice [UNIVERSAL 16] DeviceID,
- *     callBackMessageIndicator [UNIVERSAL 1] BOOLEAN OPTIONAL
+ *     originatingDevice DeviceID,
+ *     targetDevice DeviceID,
+ *     callBackMessageIndicator BOOLEAN OPTIONAL
  * }
  * ```
  * 

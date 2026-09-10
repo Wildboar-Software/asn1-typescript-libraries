@@ -14,8 +14,8 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  * 
  * ```asn1
  * ConnectionList-Item-associatedNID ::= CHOICE {
- *     deviceID [UNIVERSAL 16],
- *     notKnown [UNIVERSAL 5]
+ *     deviceID DeviceID,
+ *     notKnown NULL
  * }
  * ```
  */

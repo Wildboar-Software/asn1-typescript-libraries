@@ -31,11 +31,11 @@ import { ConnectionModeBMap, _decode_ConnectionModeBMap, _encode_ConnectionModeB
  * 
  * ```asn1
  * MediaServiceCapsList-Item ::= SEQUENCE {
- *     mediaServiceType [UNIVERSAL 10] MediaServiceType,
- *     mediaServiceVersion [UNIVERSAL 2] INTEGER OPTIONAL,
- *     mediaServiceInstance [UNIVERSAL 4] MediaServiceInstanceID OPTIONAL,
- *     connectionMode [UNIVERSAL 3] ConnectionModeBMap OPTIONAL,
- *     mediaStreamIDSupported [UNIVERSAL 1] BOOLEAN
+ *     mediaServiceType MediaServiceType,
+ *     mediaServiceVersion INTEGER OPTIONAL,
+ *     mediaServiceInstance MediaServiceInstanceID OPTIONAL,
+ *     connectionMode ConnectionModeBMap OPTIONAL,
+ *     mediaStreamIDSupported BOOLEAN
  * }
  * ```
  * 

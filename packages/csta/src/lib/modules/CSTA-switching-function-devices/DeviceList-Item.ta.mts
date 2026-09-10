@@ -38,12 +38,12 @@ import { DeviceAttributes, _decode_DeviceAttributes, _encode_DeviceAttributes } 
  * 
  * ```asn1
  * DeviceList-Item ::= SEQUENCE {
- *     deviceID [UNIVERSAL 16] DeviceID,
+ *     deviceID DeviceID,
  *     deviceCategory [0] DeviceCategory OPTIONAL,
  *     namedDeviceTypes [1] NamedDeviceTypes OPTIONAL,
- *     deviceAttributes [UNIVERSAL 3] DeviceAttributes OPTIONAL,
- *     deviceModelName [UNIVERSAL 22] IA5String OPTIONAL,
- *     nidGroup [UNIVERSAL 16] DeviceID OPTIONAL
+ *     deviceAttributes DeviceAttributes OPTIONAL,
+ *     deviceModelName IA5String OPTIONAL,
+ *     nidGroup DeviceID OPTIONAL
  * }
  * ```
  * 

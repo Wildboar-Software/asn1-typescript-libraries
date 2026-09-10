@@ -21,8 +21,8 @@ import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CST
  * 
  * ```asn1
  * HookswitchStatusList-Item ::= SEQUENCE {
- *     hookswitch [UNIVERSAL 4] HookswitchID,
- *     hookswitchOnHook [UNIVERSAL 1] BOOLEAN
+ *     hookswitch HookswitchID,
+ *     hookswitchOnHook BOOLEAN
  * }
  * ```
  * 

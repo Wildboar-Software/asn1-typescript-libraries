@@ -25,10 +25,10 @@ import { LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physica
  * 
  * ```asn1
  * LampList-Item ::= SEQUENCE {
- *     lamp [UNIVERSAL 4] LampID,
+ *     lamp LampID,
  *     lampLabel [0] OCTET_STRING OPTIONAL,
  *     button [1] ButtonID OPTIONAL,
- *     lampColor [UNIVERSAL 2] LampColor OPTIONAL
+ *     lampColor LampColor OPTIONAL
  * }
  * ```
  * 

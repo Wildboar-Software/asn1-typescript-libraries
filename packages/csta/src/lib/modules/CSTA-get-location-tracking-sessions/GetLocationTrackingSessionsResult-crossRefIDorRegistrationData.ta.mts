@@ -16,8 +16,8 @@ import { LocationSessionInfoList, _decode_LocationSessionInfoList, _encode_Locat
  * 
  * ```asn1
  * GetLocationTrackingSessionsResult-crossRefIDorRegistrationData ::= CHOICE {
- *     serviceCrossRefID [UNIVERSAL 4],
- *     locationSessionInfoList [UNIVERSAL 16]
+ *     serviceCrossRefID ServiceCrossRefID,
+ *     locationSessionInfoList LocationSessionInfoList
  * }
  * ```
  */

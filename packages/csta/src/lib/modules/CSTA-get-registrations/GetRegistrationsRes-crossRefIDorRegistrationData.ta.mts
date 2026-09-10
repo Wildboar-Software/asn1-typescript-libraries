@@ -16,8 +16,8 @@ import { RegistrationList, _decode_RegistrationList, _encode_RegistrationList } 
  * 
  * ```asn1
  * GetRegistrationsRes-crossRefIDorRegistrationData ::= CHOICE {
- *     serviceCrossRefID [UNIVERSAL 4],
- *     registrationList [UNIVERSAL 16]
+ *     serviceCrossRefID ServiceCrossRefID,
+ *     registrationList RegistrationList
  * }
  * ```
  */

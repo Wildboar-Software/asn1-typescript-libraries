@@ -20,7 +20,7 @@ import {
  * 
  * ```asn1
  * GpLocationInfo-civicLocGml-civicLoc ::= SEQUENCE {
- *     country [UNIVERSAL 22] IA5String,
+ *     country IA5String,
  *     a1 [0] IA5String OPTIONAL,
  *     a2 [1] IA5String OPTIONAL,
  *     a3 [2] IA5String OPTIONAL,

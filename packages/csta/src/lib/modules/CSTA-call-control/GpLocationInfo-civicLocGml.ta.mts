@@ -25,8 +25,8 @@ import {
  * 
  * ```asn1
  * GpLocationInfo-civicLocGml ::= SEQUENCE {
- *     gmlFormat [UNIVERSAL 4] OCTET_STRING,
- *     civicLoc [UNIVERSAL 16] GpLocationInfo_civicLocGml_civicLoc OPTIONAL
+ *     gmlFormat OCTET STRING,
+ *     civicLoc GpLocationInfo_civicLocGml_civicLoc OPTIONAL
  * }
  * ```
  * 

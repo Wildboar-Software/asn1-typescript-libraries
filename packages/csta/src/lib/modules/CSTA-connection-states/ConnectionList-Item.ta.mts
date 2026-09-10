@@ -34,7 +34,7 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  *     oldConnection [1] ConnectionID OPTIONAL,
  *     endpoint [2] ConnectionList_Item_endpoint OPTIONAL,
  *     associatedNID [3] ConnectionList_Item_associatedNID OPTIONAL,
- *     resultingConnectionInfo [UNIVERSAL 16] ConnectionInformation OPTIONAL
+ *     resultingConnectionInfo ConnectionInformation OPTIONAL
  * }
  * ```
  * 

@@ -33,8 +33,8 @@ import { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-d
  * 
  * ```asn1
  * LampModeList-Item ::= SEQUENCE {
- *     lamp [UNIVERSAL 4] LampID,
- *     lampMode [UNIVERSAL 2] LampMode,
+ *     lamp LampID,
+ *     lampMode LampMode,
  *     lampBrightness [0] LampBrightness OPTIONAL,
  *     lampColor [1] LampColor OPTIONAL,
  *     button [2] ButtonID OPTIONAL
