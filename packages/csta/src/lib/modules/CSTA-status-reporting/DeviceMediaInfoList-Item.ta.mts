@@ -22,8 +22,8 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  * 
  * ```asn1
  * DeviceMediaInfoList-Item ::= SEQUENCE {
- *     mediaStreamID [UNIVERSAL 4] MediaStreamID OPTIONAL,
- *     connectionInformation [UNIVERSAL 16] ConnectionInformation OPTIONAL
+ *     mediaStreamID MediaStreamID OPTIONAL,
+ *     connectionInformation ConnectionInformation OPTIONAL
  * }
  * ```
  * 

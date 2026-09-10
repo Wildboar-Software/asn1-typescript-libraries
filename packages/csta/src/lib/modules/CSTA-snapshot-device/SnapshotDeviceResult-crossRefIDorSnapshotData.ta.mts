@@ -16,8 +16,8 @@ import { SnapshotDeviceData, _decode_SnapshotDeviceData, _encode_SnapshotDeviceD
  * 
  * ```asn1
  * SnapshotDeviceResult-crossRefIDorSnapshotData ::= CHOICE {
- *     serviceCrossRefID [UNIVERSAL 4],
- *     snapshotData [APPLICATION 22]
+ *     serviceCrossRefID ServiceCrossRefID,
+ *     snapshotData SnapshotDeviceData
  * }
  * ```
  */

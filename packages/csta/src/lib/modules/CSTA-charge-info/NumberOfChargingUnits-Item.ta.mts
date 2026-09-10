@@ -21,8 +21,8 @@ import {
  * 
  * ```asn1
  * NumberOfChargingUnits-Item ::= SEQUENCE {
- *     chargingUnits [UNIVERSAL 2] INTEGER,
- *     typeOfUnits [UNIVERSAL 4] OCTET_STRING OPTIONAL
+ *     chargingUnits INTEGER,
+ *     typeOfUnits OCTET STRING OPTIONAL
  * }
  * ```
  * 

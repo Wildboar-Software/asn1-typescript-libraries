@@ -38,12 +38,12 @@ import {
  * 
  * ```asn1
  * ForwardList-Item ::= SEQUENCE {
- *     forwardingType [UNIVERSAL 10] ForwardingType OPTIONAL,
- *     forwardStatus [UNIVERSAL 1] BOOLEAN,
- *     forwardDN [UNIVERSAL 16] DeviceID OPTIONAL,
- *     forwardDefault [UNIVERSAL 10] ForwardDefault OPTIONAL,
+ *     forwardingType ForwardingType OPTIONAL,
+ *     forwardStatus BOOLEAN,
+ *     forwardDN DeviceID OPTIONAL,
+ *     forwardDefault ForwardDefault OPTIONAL,
  *     ringDuration [0] INTEGER OPTIONAL,
- *     ringCount [UNIVERSAL 2] INTEGER OPTIONAL
+ *     ringCount INTEGER OPTIONAL
  * }
  * ```
  * 

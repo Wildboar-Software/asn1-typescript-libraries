@@ -26,14 +26,14 @@ import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-
  * 
  * ```asn1
  * ButtonList-Item ::= SEQUENCE {
- *     button [UNIVERSAL 4] ButtonID,
+ *     button ButtonID,
  *     buttonLabel [0] IA5String OPTIONAL,
  *     buttonLabelSettable [1] BOOLEAN OPTIONAL,
  *     buttonFunction [2] IA5String OPTIONAL,
  *     buttonAssociatedNumber [3] DeviceID OPTIONAL,
  *     buttonAssociatedNumberSettable [4] BOOLEAN OPTIONAL,
  *     buttonPressIndicator [5] BOOLEAN OPTIONAL,
- *     lampList [UNIVERSAL 16] LampID OPTIONAL
+ *     lampList SEQUENCE OF LampID OPTIONAL
  * }
  * ```
  * 

@@ -47,12 +47,12 @@ import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CST
  * 
  * ```asn1
  * AuditoryApparatusList-Item ::= SEQUENCE {
- *     auditoryApparatus [UNIVERSAL 4] AuditoryApparatusID,
- *     auditoryApparatusType [UNIVERSAL 10] AuditoryApparatusList_Item_auditoryApparatusType,
- *     speaker [UNIVERSAL 3] AuditoryApparatusList_Item_speaker,
- *     microphone [UNIVERSAL 3] AuditoryApparatusList_Item_microphone,
- *     hookswitch [UNIVERSAL 3] AuditoryApparatusList_Item_hookswitch,
- *     hookswitchID [UNIVERSAL 4] HookswitchID
+ *     auditoryApparatus AuditoryApparatusID,
+ *     auditoryApparatusType AuditoryApparatusList_Item_auditoryApparatusType,
+ *     speaker AuditoryApparatusList_Item_speaker,
+ *     microphone AuditoryApparatusList_Item_microphone,
+ *     hookswitch AuditoryApparatusList_Item_hookswitch,
+ *     hookswitchID HookswitchID
  * }
  * ```
  * 

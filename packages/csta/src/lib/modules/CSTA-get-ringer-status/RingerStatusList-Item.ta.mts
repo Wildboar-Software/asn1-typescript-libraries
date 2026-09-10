@@ -28,8 +28,8 @@ import {
  * 
  * ```asn1
  * RingerStatusList-Item ::= SEQUENCE {
- *     ringer [UNIVERSAL 4] RingerID,
- *     ringMode [UNIVERSAL 10] RingMode,
+ *     ringer RingerID,
+ *     ringMode RingMode,
  *     ringCount [0] INTEGER OPTIONAL,
  *     ringDuration [3] INTEGER OPTIONAL,
  *     ringPattern [1] INTEGER OPTIONAL,

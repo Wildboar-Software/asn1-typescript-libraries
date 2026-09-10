@@ -32,8 +32,8 @@ import {
  * 
  * ```asn1
  * DestinationDetection-Item ::= SEQUENCE {
- *     destinationCondition [UNIVERSAL 10] DestinationCondition,
- *     detectionAction [UNIVERSAL 10] DetectionAction
+ *     destinationCondition DestinationCondition,
+ *     detectionAction DetectionAction
  * }
  * ```
  * 

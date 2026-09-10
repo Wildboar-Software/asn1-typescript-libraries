@@ -29,15 +29,15 @@ import {
  * 
  * ```asn1
  * DisplayList-Item ::= SEQUENCE {
- *     displayID [UNIVERSAL 4] DisplayID,
- *     logicalRows [UNIVERSAL 2] INTEGER,
- *     logicalColumns [UNIVERSAL 2] INTEGER,
+ *     displayID DisplayID,
+ *     logicalRows INTEGER,
+ *     logicalColumns INTEGER,
  *     physicalRows [0] INTEGER OPTIONAL,
  *     physicalColumns [1] INTEGER OPTIONAL,
  *     physicalBaseRowNumber [2] INTEGER OPTIONAL,
  *     physicalBaseColumnNumber [3] INTEGER OPTIONAL,
- *     characterSet [UNIVERSAL 10] CharacterSet OPTIONAL,
- *     contentsOfDisplay [UNIVERSAL 22] IA5String
+ *     characterSet CharacterSet OPTIONAL,
+ *     contentsOfDisplay IA5String
  * }
  * ```
  * 

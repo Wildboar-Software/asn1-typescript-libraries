@@ -21,8 +21,8 @@ import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryAppar
  * 
  * ```asn1
  * MicrophoneMuteList-Item ::= SEQUENCE {
- *     auditoryApparatus [UNIVERSAL 4] AuditoryApparatusID,
- *     microphoneMuteOn [UNIVERSAL 1] BOOLEAN
+ *     auditoryApparatus AuditoryApparatusID,
+ *     microphoneMuteOn BOOLEAN
  * }
  * ```
  * 

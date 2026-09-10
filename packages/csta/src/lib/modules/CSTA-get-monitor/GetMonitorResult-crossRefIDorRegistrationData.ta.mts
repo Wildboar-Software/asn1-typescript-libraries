@@ -16,8 +16,8 @@ import { MonitorList, _decode_MonitorList, _encode_MonitorList } from "../CSTA-s
  * 
  * ```asn1
  * GetMonitorResult-crossRefIDorRegistrationData ::= CHOICE {
- *     serviceCrossRefID [UNIVERSAL 4],
- *     monitorList [UNIVERSAL 16]
+ *     serviceCrossRefID ServiceCrossRefID,
+ *     monitorList MonitorList
  * }
  * ```
  */
