@@ -14,11 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * MT-SMSCause ::= OCTET STRING (SIZE (1))
- * 
- * 
- * 
- * 
- * -– Refer to 3GPP TS 24.011 [10] for the encoding of RP-Cause values.
+ * -- Refer to 3GPP TS 24.011 [10] for the encoding of RP-Cause values.
  * ```
  *
  */

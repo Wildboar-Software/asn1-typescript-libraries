@@ -26,10 +26,7 @@ import { type EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.o
  *
  * ```asn1
  * primary-body-part-compression-indication EDIM-EXTENSION ::= {
- *   VALUE          CompressionParameter, -- as defined for IPM File Transfer Body
- *
- *
- *   -- Part
+ *   VALUE          CompressionParameter, -- as defined for IPM File Transfer Body Part
  *   CRITICALITY    TRUE
  *   IDENTIFIED BY  id-edi-compression
  * }

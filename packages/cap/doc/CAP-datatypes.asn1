@@ -579,7 +579,7 @@ DpSpecificCriteria {PARAMETERS-BOUND : bound}::= CHOICE {
 
 DpSpecificCriteriaAlt {PARAMETERS-BOUND : bound} ::= SEQUENCE {
 	...,
-	changeOfPositionControlInfo		[0]	ChangeOfPositionControlInfo {bound}
+	changeOfPositionControlInfo		[0]	ChangeOfPositionControlInfo {bound},
 	numberOfDigits			[1]	NumberOfDigits				OPTIONAL, 
 	interDigitTimeout			[2]	INTEGER (1..127)			OPTIONAL
 	}
@@ -593,7 +593,7 @@ DpSpecificInfoAlt {PARAMETERS-BOUND : bound} ::= SEQUENCE {
 	initiatorOfServiceChange		[1] InitiatorOfServiceChange		OPTIONAL,
 	natureOfServiceChange		[2] NatureOfServiceChange		OPTIONAL
 	
-	}
+	},
 	tServiceChangeSpecificInfo		[1] SEQUENCE {
 	ext-basicServiceCode		[0] Ext-BasicServiceCode		OPTIONAL,
 	...,
@@ -1180,7 +1180,7 @@ MT-SMSCause ::= OCTET STRING (SIZE (1))
 -- notification.
 -- If the delivery failure is due to RP-ERROR RPDU received from the MS,
 -- then MT-SMSCause shall be set to the RP-Cause component in the RP-ERROR RPDU.
--– Refer to 3GPP TS 24.011 [10] for the encoding of RP-Cause values.
+-- Refer to 3GPP TS 24.011 [10] for the encoding of RP-Cause values.
 -- Otherwise, if the delivery failure is due to internal failure in the MSC or SGSN
 -- or time-out from the MS, then MT-SMSCause shall be set to 'Protocol error,
 -- unspecified', as defined in 3GPP TS 24.011 [10].

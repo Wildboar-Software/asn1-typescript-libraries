@@ -20,41 +20,13 @@ import { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, _de
  * ```asn1
  * ServiceInteractionIndicatorsTwo ::= SEQUENCE {
  *  forwardServiceInteractionInd	[0]	ForwardServiceInteractionInd		OPTIONAL,
- *  
  *  backwardServiceInteractionInd	[1]	BackwardServiceInteractionInd		OPTIONAL,
- *  
  *  bothwayThroughConnectionInd		[2] BothwayThroughConnectionInd		OPTIONAL,
- *  
  *  connectedNumberTreatmentInd		[4]	ConnectedNumberTreatmentInd		OPTIONAL,
- *  
  *  nonCUGCall				[13] NULL					OPTIONAL,
- *  
- *  
- *  
- *  
- *  
- *  
- *  
- *  
- *  
  *  holdTreatmentIndicator		[50] OCTET STRING (SIZE(1))			OPTIONAL,
- *  
- *  
- *  
- *  
- *  
  *  cwTreatmentIndicator		[51] OCTET STRING (SIZE(1))			OPTIONAL,
- *  
- *  
- *  
- *  
- *  
  *  ectTreatmentIndicator		[52] OCTET STRING (SIZE(1))			OPTIONAL,
- *  
- *  
- *  
- *  
- *  
  *  ...
  *  }
  * ```

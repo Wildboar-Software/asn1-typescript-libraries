@@ -34,10 +34,7 @@ import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.
  * incomplete-copy X413ATTRIBUTE ::= {
  *   WITH ATTRIBUTE-SYNTAX  IncompleteCopy,
  *   NUMERATION
- *     single-valued, -- An equality match is specified for 1988
- *
- *
- *   -- Application Contexts
+ *     single-valued, -- An equality match is specified for 1988 Application Contexts
  *   ID                     id-hat-incomplete-copy
  * }
  * ```

@@ -37,8 +37,6 @@ import * as $ from '@wildboar/asn1/functional';
  *   -- but before handoff to user
  *   forwarding-error(5), -- EDI Forwarding was attempted, but failed
  *   security-error(6) -- security error
- *
- *
  * -- physical delivery errors indicated by "cannot-deliver-to-user"
  * }(0..ub-reason-code)
  * ```
