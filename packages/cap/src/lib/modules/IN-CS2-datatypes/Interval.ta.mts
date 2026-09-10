@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Interval = INTEGER;
-export const _decode_Interval = $._decodeInteger;
+export const _decode_Interval = (el: _Element): Interval => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < -1n || value > 60000n) : (value < -1 || value > 60000))) {
+        throw new ASN1OverflowError("Interval violates INTEGER constraint");
+    }
+    return value;
+};
 export const _encode_Interval = $._encodeInteger;
 
 

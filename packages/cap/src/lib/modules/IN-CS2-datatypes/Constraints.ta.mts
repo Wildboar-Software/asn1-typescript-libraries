@@ -10,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InfoType, _enum_for_InfoType, InfoType_numericString /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_InfoType, _encode_InfoType } from "../IN-CS2-datatypes/InfoType.ta.mjs";
@@ -60,7 +61,17 @@ class Constraints {
          * @readonly
          */
         readonly numberOfAllowedRetries: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if ((typeof maximumNumberOfDigits === "bigint" ? (maximumNumberOfDigits < 1n || maximumNumberOfDigits > 127n) : (maximumNumberOfDigits < 1 || maximumNumberOfDigits > 127))) {
+            throw new ASN1OverflowError("Constraints.maximumNumberOfDigits violates INTEGER constraint");
+        }
+        if ((typeof minimumNumberOfDigits === "bigint" ? (minimumNumberOfDigits < 1n || minimumNumberOfDigits > 127n) : (minimumNumberOfDigits < 1 || minimumNumberOfDigits > 127))) {
+            throw new ASN1OverflowError("Constraints.minimumNumberOfDigits violates INTEGER constraint");
+        }
+        if (numberOfAllowedRetries !== undefined && (typeof numberOfAllowedRetries === "bigint" ? (numberOfAllowedRetries < 0n || numberOfAllowedRetries > 127n) : (numberOfAllowedRetries < 0 || numberOfAllowedRetries > 127))) {
+            throw new ASN1OverflowError("Constraints.numberOfAllowedRetries violates INTEGER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a Constraints

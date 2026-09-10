@@ -4,6 +4,7 @@ import {
     OCTET_STRING,
     ASN1Element as _Element,
     ASN1SizeError,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -38,6 +39,15 @@ export class MidCallControlInfo {
         readonly interDigitTimeout: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        if (minimumNumberOfDigits !== undefined && (typeof minimumNumberOfDigits === "bigint" ? (minimumNumberOfDigits < 1n || minimumNumberOfDigits > 30n) : (minimumNumberOfDigits < 1 || minimumNumberOfDigits > 30))) {
+            throw new ASN1OverflowError("MidCallControlInfo.minimumNumberOfDigits violates INTEGER constraint");
+        }
+        if (maximumNumberOfDigits !== undefined && (typeof maximumNumberOfDigits === "bigint" ? (maximumNumberOfDigits < 1n || maximumNumberOfDigits > 30n) : (maximumNumberOfDigits < 1 || maximumNumberOfDigits > 30))) {
+            throw new ASN1OverflowError("MidCallControlInfo.maximumNumberOfDigits violates INTEGER constraint");
+        }
+        if (interDigitTimeout !== undefined && (typeof interDigitTimeout === "bigint" ? (interDigitTimeout < 1n || interDigitTimeout > 127n) : (interDigitTimeout < 1 || interDigitTimeout > 127))) {
+            throw new ASN1OverflowError("MidCallControlInfo.interDigitTimeout violates INTEGER constraint");
+        }
         if (endOfReplyDigit !== undefined && (endOfReplyDigit.length < 1 || endOfReplyDigit.length > 2)) {
             throw new ASN1SizeError("MidCallControlInfo.endOfReplyDigit violates SIZE constraint");
         }

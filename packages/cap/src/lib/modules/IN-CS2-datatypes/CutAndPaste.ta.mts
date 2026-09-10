@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CutAndPaste = INTEGER;
-export const _decode_CutAndPaste = $._decodeInteger;
+export const _decode_CutAndPaste = (el: _Element): CutAndPaste => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 22n) : (value < 0 || value > 22))) {
+        throw new ASN1OverflowError("CutAndPaste violates INTEGER constraint");
+    }
+    return value;
+};
 export const _encode_CutAndPaste = $._encodeInteger;
 
 

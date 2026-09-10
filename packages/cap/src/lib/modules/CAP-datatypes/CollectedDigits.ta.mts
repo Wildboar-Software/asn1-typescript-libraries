@@ -5,6 +5,7 @@ import {
     OCTET_STRING,
     ASN1Element as _Element,
     ASN1SizeError,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -47,6 +48,18 @@ export class CollectedDigits {
         readonly voiceInformation: OPTIONAL<BOOLEAN>,
         readonly voiceBack: OPTIONAL<BOOLEAN>,
     ) {
+        if (minimumNbOfDigits !== undefined && (typeof minimumNbOfDigits === "bigint" ? (minimumNbOfDigits < 1n || minimumNbOfDigits > 30n) : (minimumNbOfDigits < 1 || minimumNbOfDigits > 30))) {
+            throw new ASN1OverflowError("CollectedDigits.minimumNbOfDigits violates INTEGER constraint");
+        }
+        if ((typeof maximumNbOfDigits === "bigint" ? (maximumNbOfDigits < 1n || maximumNbOfDigits > 30n) : (maximumNbOfDigits < 1 || maximumNbOfDigits > 30))) {
+            throw new ASN1OverflowError("CollectedDigits.maximumNbOfDigits violates INTEGER constraint");
+        }
+        if (firstDigitTimeOut !== undefined && (typeof firstDigitTimeOut === "bigint" ? (firstDigitTimeOut < 1n || firstDigitTimeOut > 127n) : (firstDigitTimeOut < 1 || firstDigitTimeOut > 127))) {
+            throw new ASN1OverflowError("CollectedDigits.firstDigitTimeOut violates INTEGER constraint");
+        }
+        if (interDigitTimeOut !== undefined && (typeof interDigitTimeOut === "bigint" ? (interDigitTimeOut < 1n || interDigitTimeOut > 127n) : (interDigitTimeOut < 1 || interDigitTimeOut > 127))) {
+            throw new ASN1OverflowError("CollectedDigits.interDigitTimeOut violates INTEGER constraint");
+        }
         if (endOfReplyDigit !== undefined && (endOfReplyDigit.length < 1 || endOfReplyDigit.length > 2)) {
             throw new ASN1SizeError("CollectedDigits.endOfReplyDigit violates SIZE constraint");
         }

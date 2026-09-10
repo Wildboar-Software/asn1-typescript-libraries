@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -25,7 +26,14 @@ export class TransferredVolume_volumeIfTariffSwitch {
     constructor (
         readonly volumeSinceLastTariffSwitch: INTEGER,
         readonly volumeTariffSwitchInterval: OPTIONAL<INTEGER>,
-    ) {}
+    ) {
+        if ((typeof volumeSinceLastTariffSwitch === "bigint" ? (volumeSinceLastTariffSwitch < 0n || volumeSinceLastTariffSwitch > 4294967295n) : (volumeSinceLastTariffSwitch < 0 || volumeSinceLastTariffSwitch > 4294967295))) {
+            throw new ASN1OverflowError("TransferredVolume_volumeIfTariffSwitch.volumeSinceLastTariffSwitch violates INTEGER constraint");
+        }
+        if (volumeTariffSwitchInterval !== undefined && (typeof volumeTariffSwitchInterval === "bigint" ? (volumeTariffSwitchInterval < 0n || volumeTariffSwitchInterval > 4294967295n) : (volumeTariffSwitchInterval < 0 || volumeTariffSwitchInterval > 4294967295))) {
+            throw new ASN1OverflowError("TransferredVolume_volumeIfTariffSwitch.volumeTariffSwitchInterval violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (TransferredVolume_volumeIfTariffSwitch)]: (TransferredVolume_volumeIfTariffSwitch)[_K] }): TransferredVolume_volumeIfTariffSwitch {
         return new TransferredVolume_volumeIfTariffSwitch(_o.volumeSinceLastTariffSwitch, _o.volumeTariffSwitchInterval);

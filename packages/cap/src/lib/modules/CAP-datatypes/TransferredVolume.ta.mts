@@ -1,6 +1,7 @@
 import {
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,7 +32,13 @@ let _cached_decoder_for_TransferredVolume: $.ASN1Decoder<TransferredVolume> | nu
 export function _decode_TransferredVolume (el: _Element): TransferredVolume {
     if (!_cached_decoder_for_TransferredVolume) {
         _cached_decoder_for_TransferredVolume = $._decode_inextensible_choice<TransferredVolume>({
-    "CONTEXT 0": [ "volumeIfNoTariffSwitch", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 0": [ "volumeIfNoTariffSwitch", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 4294967295n) : (value < 0 || value > 4294967295))) {
+        throw new ASN1OverflowError("TransferredVolume.volumeIfNoTariffSwitch violates INTEGER constraint");
+    }
+    return value;
+}) ],
     "CONTEXT 1": [ "volumeIfTariffSwitch", $._decode_implicit<TransferredVolume_volumeIfTariffSwitch>(() => _decode_TransferredVolume_volumeIfTariffSwitch) ]
         });
     }

@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -25,7 +26,14 @@ export class ElapsedTime_timeGPRSIfTariffSwitch {
     constructor (
         readonly timeGPRSSinceLastTariffSwitch: INTEGER,
         readonly timeGPRSTariffSwitchInterval: OPTIONAL<INTEGER>,
-    ) {}
+    ) {
+        if ((typeof timeGPRSSinceLastTariffSwitch === "bigint" ? (timeGPRSSinceLastTariffSwitch < 0n || timeGPRSSinceLastTariffSwitch > 86400n) : (timeGPRSSinceLastTariffSwitch < 0 || timeGPRSSinceLastTariffSwitch > 86400))) {
+            throw new ASN1OverflowError("ElapsedTime_timeGPRSIfTariffSwitch.timeGPRSSinceLastTariffSwitch violates INTEGER constraint");
+        }
+        if (timeGPRSTariffSwitchInterval !== undefined && (typeof timeGPRSTariffSwitchInterval === "bigint" ? (timeGPRSTariffSwitchInterval < 0n || timeGPRSTariffSwitchInterval > 86400n) : (timeGPRSTariffSwitchInterval < 0 || timeGPRSTariffSwitchInterval > 86400))) {
+            throw new ASN1OverflowError("ElapsedTime_timeGPRSIfTariffSwitch.timeGPRSTariffSwitchInterval violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (ElapsedTime_timeGPRSIfTariffSwitch)]: (ElapsedTime_timeGPRSIfTariffSwitch)[_K] }): ElapsedTime_timeGPRSIfTariffSwitch {
         return new ElapsedTime_timeGPRSIfTariffSwitch(_o.timeGPRSSinceLastTariffSwitch, _o.timeGPRSTariffSwitchInterval);

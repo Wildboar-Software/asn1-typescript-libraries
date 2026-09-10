@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,7 +32,17 @@ export class InbandInfo {
         readonly duration: OPTIONAL<INTEGER>,
         readonly interval: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (numberOfRepetitions !== undefined && (typeof numberOfRepetitions === "bigint" ? (numberOfRepetitions < 1n || numberOfRepetitions > 127n) : (numberOfRepetitions < 1 || numberOfRepetitions > 127))) {
+            throw new ASN1OverflowError("InbandInfo.numberOfRepetitions violates INTEGER constraint");
+        }
+        if (duration !== undefined && (typeof duration === "bigint" ? (duration < 0n || duration > 32767n) : (duration < 0 || duration > 32767))) {
+            throw new ASN1OverflowError("InbandInfo.duration violates INTEGER constraint");
+        }
+        if (interval !== undefined && (typeof interval === "bigint" ? (interval < 0n || interval > 32767n) : (interval < 0 || interval > 32767))) {
+            throw new ASN1OverflowError("InbandInfo.interval violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (InbandInfo)]: (InbandInfo)[_K] }): InbandInfo {
         return new InbandInfo(_o.messageID, _o.numberOfRepetitions, _o.duration, _o.interval, _o._unrecognizedExtensionsList);

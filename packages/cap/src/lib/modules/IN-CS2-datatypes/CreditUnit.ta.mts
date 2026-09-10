@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CreditUnit = INTEGER;
-export const _decode_CreditUnit = $._decodeInteger;
+export const _decode_CreditUnit = (el: _Element): CreditUnit => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 65536n) : (value < 0 || value > 65536))) {
+        throw new ASN1OverflowError("CreditUnit violates INTEGER constraint");
+    }
+    return value;
+};
 export const _encode_CreditUnit = $._encodeInteger;
 
 

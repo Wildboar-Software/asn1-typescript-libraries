@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -28,7 +29,11 @@ export class DpSpecificCriteriaAlt {
         readonly changeOfPositionControlInfo: OPTIONAL<ChangeOfPositionControlInfo>,
         readonly interDigitTimeout: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (interDigitTimeout !== undefined && (typeof interDigitTimeout === "bigint" ? (interDigitTimeout < 1n || interDigitTimeout > 127n) : (interDigitTimeout < 1 || interDigitTimeout > 127))) {
+            throw new ASN1OverflowError("DpSpecificCriteriaAlt.interDigitTimeout violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (DpSpecificCriteriaAlt)]: (DpSpecificCriteriaAlt)[_K] }): DpSpecificCriteriaAlt {
         return new DpSpecificCriteriaAlt(_o.changeOfPositionControlInfo, _o.interDigitTimeout, _o._unrecognizedExtensionsList);

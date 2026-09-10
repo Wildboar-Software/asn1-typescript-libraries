@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ApplicationTimer = INTEGER;
-export const _decode_ApplicationTimer = $._decodeInteger;
+export const _decode_ApplicationTimer = (el: _Element): ApplicationTimer => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 2047n) : (value < 0 || value > 2047))) {
+        throw new ASN1OverflowError("ApplicationTimer violates INTEGER constraint");
+    }
+    return value;
+};
 export const _encode_ApplicationTimer = $._encodeInteger;
 
 

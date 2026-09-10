@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -25,7 +26,11 @@ export class AOCSubsequent {
     constructor (
         readonly cAI_GSM0224: CAI_GSM0224,
         readonly tariffSwitchInterval: OPTIONAL<INTEGER>,
-    ) {}
+    ) {
+        if (tariffSwitchInterval !== undefined && (typeof tariffSwitchInterval === "bigint" ? (tariffSwitchInterval < 1n || tariffSwitchInterval > 86400n) : (tariffSwitchInterval < 1 || tariffSwitchInterval > 86400))) {
+            throw new ASN1OverflowError("AOCSubsequent.tariffSwitchInterval violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (AOCSubsequent)]: (AOCSubsequent)[_K] }): AOCSubsequent {
         return new AOCSubsequent(_o.cAI_GSM0224, _o.tariffSwitchInterval);

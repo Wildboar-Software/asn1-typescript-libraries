@@ -13,6 +13,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
     ASN1SizeError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment_stdErrorAndInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ErrorTreatment, _encode_ErrorTreatment } from "../Core-INAP-CS1-DataTypes/ErrorTreatment.ta.mjs";
@@ -113,6 +114,18 @@ class CollectedDigits {
          */
         readonly voiceBack: OPTIONAL<BOOLEAN>
     ) {
+        if (minimumNbOfDigits !== undefined && (typeof minimumNbOfDigits === "bigint" ? (minimumNbOfDigits < 1n || minimumNbOfDigits > 127n) : (minimumNbOfDigits < 1 || minimumNbOfDigits > 127))) {
+            throw new ASN1OverflowError("CollectedDigits.minimumNbOfDigits violates INTEGER constraint");
+        }
+        if ((typeof maximumNbOfDigits === "bigint" ? (maximumNbOfDigits < 1n || maximumNbOfDigits > 127n) : (maximumNbOfDigits < 1 || maximumNbOfDigits > 127))) {
+            throw new ASN1OverflowError("CollectedDigits.maximumNbOfDigits violates INTEGER constraint");
+        }
+        if (firstDigitTimeOut !== undefined && (typeof firstDigitTimeOut === "bigint" ? (firstDigitTimeOut < 1n || firstDigitTimeOut > 127n) : (firstDigitTimeOut < 1 || firstDigitTimeOut > 127))) {
+            throw new ASN1OverflowError("CollectedDigits.firstDigitTimeOut violates INTEGER constraint");
+        }
+        if (interDigitTimeOut !== undefined && (typeof interDigitTimeOut === "bigint" ? (interDigitTimeOut < 1n || interDigitTimeOut > 127n) : (interDigitTimeOut < 1 || interDigitTimeOut > 127))) {
+            throw new ASN1OverflowError("CollectedDigits.interDigitTimeOut violates INTEGER constraint");
+        }
         if (endOfReplyDigit !== undefined && (endOfReplyDigit.length < 1 || endOfReplyDigit.length > 2)) {
             throw new ASN1SizeError("CollectedDigits.endOfReplyDigit violates SIZE constraint");
         }

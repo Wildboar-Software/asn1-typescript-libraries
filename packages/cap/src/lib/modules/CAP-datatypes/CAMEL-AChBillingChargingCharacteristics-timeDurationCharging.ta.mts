@@ -3,6 +3,7 @@ import {
     BOOLEAN,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -35,7 +36,14 @@ export class CAMEL_AChBillingChargingCharacteristics_timeDurationCharging {
         readonly audibleIndicator: OPTIONAL<AudibleIndicator>,
         readonly extensions: OPTIONAL<Extensions>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if ((typeof maxCallPeriodDuration === "bigint" ? (maxCallPeriodDuration < 1n || maxCallPeriodDuration > 864000n) : (maxCallPeriodDuration < 1 || maxCallPeriodDuration > 864000))) {
+            throw new ASN1OverflowError("CAMEL_AChBillingChargingCharacteristics_timeDurationCharging.maxCallPeriodDuration violates INTEGER constraint");
+        }
+        if (tariffSwitchInterval !== undefined && (typeof tariffSwitchInterval === "bigint" ? (tariffSwitchInterval < 1n || tariffSwitchInterval > 86400n) : (tariffSwitchInterval < 1 || tariffSwitchInterval > 86400))) {
+            throw new ASN1OverflowError("CAMEL_AChBillingChargingCharacteristics_timeDurationCharging.tariffSwitchInterval violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (CAMEL_AChBillingChargingCharacteristics_timeDurationCharging)]: (CAMEL_AChBillingChargingCharacteristics_timeDurationCharging)[_K] }): CAMEL_AChBillingChargingCharacteristics_timeDurationCharging {
         return new CAMEL_AChBillingChargingCharacteristics_timeDurationCharging(_o.maxCallPeriodDuration, _o.releaseIfdurationExceeded, _o.tariffSwitchInterval, _o.audibleIndicator, _o.extensions, _o._unrecognizedExtensionsList);

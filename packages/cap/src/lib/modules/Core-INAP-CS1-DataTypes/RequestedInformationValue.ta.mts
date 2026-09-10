@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../Core-INAP-CS1-DataTypes/DateAndTime.ta.mjs";
@@ -56,7 +57,13 @@ let _cached_decoder_for_RequestedInformationValue: $.ASN1Decoder<RequestedInform
 export
 function _decode_RequestedInformationValue (el: _Element): RequestedInformationValue {
     if (!_cached_decoder_for_RequestedInformationValue) { _cached_decoder_for_RequestedInformationValue = $._decode_inextensible_choice<RequestedInformationValue>({
-    "CONTEXT 0": [ "callAttemptElapsedTimeValue", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 0": [ "callAttemptElapsedTimeValue", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 255n) : (value < 0 || value > 255))) {
+        throw new ASN1OverflowError("RequestedInformationValue.callAttemptElapsedTimeValue violates INTEGER constraint");
+    }
+    return value;
+}) ],
     "CONTEXT 1": [ "callStopTimeValue", $._decode_implicit<DateAndTime>(() => _decode_DateAndTime) ],
     "CONTEXT 2": [ "callConnectedElapsedTimeValue", $._decode_implicit<Integer4>(() => _decode_Integer4) ],
     "CONTEXT 3": [ "calledAddressValue", $._decode_implicit<Digits>(() => _decode_Digits) ],

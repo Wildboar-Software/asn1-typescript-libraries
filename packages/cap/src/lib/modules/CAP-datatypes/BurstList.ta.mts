@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,7 +28,11 @@ export class BurstList {
         readonly warningPeriod: OPTIONAL<INTEGER>,
         readonly bursts: Burst,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (warningPeriod !== undefined && (typeof warningPeriod === "bigint" ? (warningPeriod < 1n || warningPeriod > 1200n) : (warningPeriod < 1 || warningPeriod > 1200))) {
+            throw new ASN1OverflowError("BurstList.warningPeriod violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (BurstList)]: (BurstList)[_K] }): BurstList {
         return new BurstList(_o.warningPeriod, _o.bursts, _o._unrecognizedExtensionsList);

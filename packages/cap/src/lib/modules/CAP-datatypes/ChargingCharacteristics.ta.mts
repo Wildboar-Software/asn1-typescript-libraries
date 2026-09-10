@@ -1,6 +1,7 @@
 import {
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -28,8 +29,20 @@ let _cached_decoder_for_ChargingCharacteristics: $.ASN1Decoder<ChargingCharacter
 export function _decode_ChargingCharacteristics (el: _Element): ChargingCharacteristics {
     if (!_cached_decoder_for_ChargingCharacteristics) {
         _cached_decoder_for_ChargingCharacteristics = $._decode_inextensible_choice<ChargingCharacteristics>({
-    "CONTEXT 0": [ "maxTransferredVolume", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
-    "CONTEXT 1": [ "maxElapsedTime", $._decode_implicit<INTEGER>(() => $._decodeInteger) ]
+    "CONTEXT 0": [ "maxTransferredVolume", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 1n || value > 4294967295n) : (value < 1 || value > 4294967295))) {
+        throw new ASN1OverflowError("ChargingCharacteristics.maxTransferredVolume violates INTEGER constraint");
+    }
+    return value;
+}) ],
+    "CONTEXT 1": [ "maxElapsedTime", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 1n || value > 86400n) : (value < 1 || value > 86400))) {
+        throw new ASN1OverflowError("ChargingCharacteristics.maxElapsedTime violates INTEGER constraint");
+    }
+    return value;
+}) ]
         });
     }
     return _cached_decoder_for_ChargingCharacteristics(el);

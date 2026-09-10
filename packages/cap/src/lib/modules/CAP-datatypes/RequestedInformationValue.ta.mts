@@ -1,6 +1,7 @@
 import {
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -33,9 +34,21 @@ let _cached_decoder_for_RequestedInformationValue: $.ASN1Decoder<RequestedInform
 export function _decode_RequestedInformationValue (el: _Element): RequestedInformationValue {
     if (!_cached_decoder_for_RequestedInformationValue) {
         _cached_decoder_for_RequestedInformationValue = $._decode_inextensible_choice<RequestedInformationValue>({
-    "CONTEXT 0": [ "callAttemptElapsedTimeValue", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 0": [ "callAttemptElapsedTimeValue", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 255n) : (value < 0 || value > 255))) {
+        throw new ASN1OverflowError("RequestedInformationValue.callAttemptElapsedTimeValue violates INTEGER constraint");
+    }
+    return value;
+}) ],
     "CONTEXT 1": [ "callStopTimeValue", $._decode_implicit<DateAndTime>(() => _decode_DateAndTime) ],
-    "CONTEXT 2": [ "callConnectedElapsedTimeValue", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 2": [ "callConnectedElapsedTimeValue", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 2147483647n) : (value < 0 || value > 2147483647))) {
+        throw new ASN1OverflowError("RequestedInformationValue.callConnectedElapsedTimeValue violates INTEGER constraint");
+    }
+    return value;
+}) ],
     "CONTEXT 30": [ "releaseCauseValue", $._decode_implicit<Cause>(() => _decode_Cause) ]
         });
     }

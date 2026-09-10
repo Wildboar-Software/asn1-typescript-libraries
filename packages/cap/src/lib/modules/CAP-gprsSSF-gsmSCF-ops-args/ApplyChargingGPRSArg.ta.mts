@@ -10,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../CAP-datatypes/ChargingCharacteristics.ta.mjs";
@@ -61,7 +62,11 @@ class ApplyChargingGPRSArg {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (tariffSwitchInterval !== undefined && (typeof tariffSwitchInterval === "bigint" ? (tariffSwitchInterval < 1n || tariffSwitchInterval > 86400n) : (tariffSwitchInterval < 1 || tariffSwitchInterval > 86400))) {
+            throw new ASN1OverflowError("ApplyChargingGPRSArg.tariffSwitchInterval violates INTEGER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ApplyChargingGPRSArg

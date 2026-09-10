@@ -10,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ElementaryMessageID, _decode_ElementaryMessageID, _encode_ElementaryMessageID } from "../IN-CS2-datatypes/ElementaryMessageID.ta.mjs";
@@ -72,7 +73,11 @@ class InformationToRecord {
          * @readonly
          */
         readonly controlDigits: InformationToRecord_controlDigits
-    ) {}
+    ) {
+        if (messageDeletionTimeOut !== undefined && (typeof messageDeletionTimeOut === "bigint" ? (messageDeletionTimeOut < 1n || messageDeletionTimeOut > 3600n) : (messageDeletionTimeOut < 1 || messageDeletionTimeOut > 3600))) {
+            throw new ASN1OverflowError("InformationToRecord.messageDeletionTimeOut violates INTEGER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a InformationToRecord

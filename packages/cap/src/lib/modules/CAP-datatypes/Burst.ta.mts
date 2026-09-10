@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -33,7 +34,23 @@ export class Burst {
         readonly toneDuration: OPTIONAL<INTEGER>,
         readonly toneInterval: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+    ) {
+        if (numberOfBursts !== undefined && (typeof numberOfBursts === "bigint" ? (numberOfBursts < 1n || numberOfBursts > 3n) : (numberOfBursts < 1 || numberOfBursts > 3))) {
+            throw new ASN1OverflowError("Burst.numberOfBursts violates INTEGER constraint");
+        }
+        if (burstInterval !== undefined && (typeof burstInterval === "bigint" ? (burstInterval < 1n || burstInterval > 1200n) : (burstInterval < 1 || burstInterval > 1200))) {
+            throw new ASN1OverflowError("Burst.burstInterval violates INTEGER constraint");
+        }
+        if (numberOfTonesInBurst !== undefined && (typeof numberOfTonesInBurst === "bigint" ? (numberOfTonesInBurst < 1n || numberOfTonesInBurst > 3n) : (numberOfTonesInBurst < 1 || numberOfTonesInBurst > 3))) {
+            throw new ASN1OverflowError("Burst.numberOfTonesInBurst violates INTEGER constraint");
+        }
+        if (toneDuration !== undefined && (typeof toneDuration === "bigint" ? (toneDuration < 1n || toneDuration > 20n) : (toneDuration < 1 || toneDuration > 20))) {
+            throw new ASN1OverflowError("Burst.toneDuration violates INTEGER constraint");
+        }
+        if (toneInterval !== undefined && (typeof toneInterval === "bigint" ? (toneInterval < 1n || toneInterval > 20n) : (toneInterval < 1 || toneInterval > 20))) {
+            throw new ASN1OverflowError("Burst.toneInterval violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (Burst)]: (Burst)[_K] }): Burst {
         return new Burst(_o.numberOfBursts, _o.burstInterval, _o.numberOfTonesInBurst, _o.toneDuration, _o.toneInterval, _o._unrecognizedExtensionsList);

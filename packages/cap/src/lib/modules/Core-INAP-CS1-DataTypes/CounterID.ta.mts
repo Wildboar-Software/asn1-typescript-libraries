@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CounterID = INTEGER;
-export const _decode_CounterID = $._decodeInteger;
+export const _decode_CounterID = (el: _Element): CounterID => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 99n) : (value < 0 || value > 99))) {
+        throw new ASN1OverflowError("CounterID violates INTEGER constraint");
+    }
+    return value;
+};
 export const _encode_CounterID = $._encodeInteger;
 
 

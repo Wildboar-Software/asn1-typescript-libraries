@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-DataTypes/Integer4.ta.mjs";
@@ -44,7 +45,13 @@ let _cached_decoder_for_FilteringCharacteristics: $.ASN1Decoder<FilteringCharact
 export
 function _decode_FilteringCharacteristics (el: _Element): FilteringCharacteristics {
     if (!_cached_decoder_for_FilteringCharacteristics) { _cached_decoder_for_FilteringCharacteristics = $._decode_inextensible_choice<FilteringCharacteristics>({
-    "CONTEXT 0": [ "interval", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 0": [ "interval", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < -1n || value > 32000n) : (value < -1 || value > 32000))) {
+        throw new ASN1OverflowError("FilteringCharacteristics.interval violates INTEGER constraint");
+    }
+    return value;
+}) ],
     "CONTEXT 1": [ "numberOfCalls", $._decode_implicit<Integer4>(() => _decode_Integer4) ]
 }); }
     return _cached_decoder_for_FilteringCharacteristics(el);

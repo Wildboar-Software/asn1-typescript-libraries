@@ -2,6 +2,7 @@ import {
     OPTIONAL,
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -25,7 +26,14 @@ export class TimeIfTariffSwitch {
     constructor (
         readonly timeSinceTariffSwitch: INTEGER,
         readonly tariffSwitchInterval: OPTIONAL<INTEGER>,
-    ) {}
+    ) {
+        if ((typeof timeSinceTariffSwitch === "bigint" ? (timeSinceTariffSwitch < 0n || timeSinceTariffSwitch > 864000n) : (timeSinceTariffSwitch < 0 || timeSinceTariffSwitch > 864000))) {
+            throw new ASN1OverflowError("TimeIfTariffSwitch.timeSinceTariffSwitch violates INTEGER constraint");
+        }
+        if (tariffSwitchInterval !== undefined && (typeof tariffSwitchInterval === "bigint" ? (tariffSwitchInterval < 1n || tariffSwitchInterval > 864000n) : (tariffSwitchInterval < 1 || tariffSwitchInterval > 864000))) {
+            throw new ASN1OverflowError("TimeIfTariffSwitch.tariffSwitchInterval violates INTEGER constraint");
+        }
+    }
 
     public static _from_object (_o: { [_K in keyof (TimeIfTariffSwitch)]: (TimeIfTariffSwitch)[_K] }): TimeIfTariffSwitch {
         return new TimeIfTariffSwitch(_o.timeSinceTariffSwitch, _o.tariffSwitchInterval);

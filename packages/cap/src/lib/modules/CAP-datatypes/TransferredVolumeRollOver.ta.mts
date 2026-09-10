@@ -1,6 +1,7 @@
 import {
     INTEGER,
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,7 +32,13 @@ let _cached_decoder_for_TransferredVolumeRollOver: $.ASN1Decoder<TransferredVolu
 export function _decode_TransferredVolumeRollOver (el: _Element): TransferredVolumeRollOver {
     if (!_cached_decoder_for_TransferredVolumeRollOver) {
         _cached_decoder_for_TransferredVolumeRollOver = $._decode_inextensible_choice<TransferredVolumeRollOver>({
-    "CONTEXT 0": [ "rO_VolumeIfNoTariffSwitch", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 0": [ "rO_VolumeIfNoTariffSwitch", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 255n) : (value < 0 || value > 255))) {
+        throw new ASN1OverflowError("TransferredVolumeRollOver.rO_VolumeIfNoTariffSwitch violates INTEGER constraint");
+    }
+    return value;
+}) ],
     "CONTEXT 1": [ "rO_VolumeIfTariffSwitch", $._decode_implicit<TransferredVolumeRollOver_rO_VolumeIfTariffSwitch>(() => _decode_TransferredVolumeRollOver_rO_VolumeIfTariffSwitch) ]
         });
     }

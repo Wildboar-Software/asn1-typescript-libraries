@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type MaximumNumberOfCounters = INTEGER;
-export const _decode_MaximumNumberOfCounters = $._decodeInteger;
+export const _decode_MaximumNumberOfCounters = (el: _Element): MaximumNumberOfCounters => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 1n || value > 100n) : (value < 1 || value > 100))) {
+        throw new ASN1OverflowError("MaximumNumberOfCounters violates INTEGER constraint");
+    }
+    return value;
+};
 export const _encode_MaximumNumberOfCounters = $._encodeInteger;
 
 

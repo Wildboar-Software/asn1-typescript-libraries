@@ -10,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS2-datatypes/MessageID.ta.mjs";
@@ -60,7 +61,17 @@ class InbandInfo {
          * @readonly
          */
         readonly interval: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if (numberOfRepetitions !== undefined && (typeof numberOfRepetitions === "bigint" ? (numberOfRepetitions < 1n || numberOfRepetitions > 127n) : (numberOfRepetitions < 1 || numberOfRepetitions > 127))) {
+            throw new ASN1OverflowError("InbandInfo.numberOfRepetitions violates INTEGER constraint");
+        }
+        if (duration !== undefined && (typeof duration === "bigint" ? (duration < 0n || duration > 32767n) : (duration < 0 || duration > 32767))) {
+            throw new ASN1OverflowError("InbandInfo.duration violates INTEGER constraint");
+        }
+        if (interval !== undefined && (typeof interval === "bigint" ? (interval < 0n || interval > 32767n) : (interval < 0 || interval > 32767))) {
+            throw new ASN1OverflowError("InbandInfo.interval violates INTEGER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a InbandInfo
