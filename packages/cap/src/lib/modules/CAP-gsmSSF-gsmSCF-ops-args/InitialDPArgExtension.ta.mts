@@ -201,7 +201,7 @@ const _root_component_type_list_1_spec_for_InitialDPArgExtension: $.ComponentSpe
     new $.ComponentSpec("bearerCapability2", true, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("ext-basicServiceCode2", true, $.hasTag(_TagClass.context, 7)),
     new $.ComponentSpec("highLayerCompatibility2", true, $.hasTag(_TagClass.context, 8)),
-    new $.ComponentSpec("lowLayerCompatibility", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("lowLayerCompatibility", true, $.hasTag(_TagClass.context, 9)),
     new $.ComponentSpec("lowLayerCompatibility2", true, $.hasTag(_TagClass.context, 10))
 ];
 
