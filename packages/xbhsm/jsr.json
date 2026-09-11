@@ -1,0 +1,21 @@
+{
+  "name": "@wildboar/xbhsm",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./XBHSM": "./src/lib/modules/XBHSM/index.mts",
+    "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}
