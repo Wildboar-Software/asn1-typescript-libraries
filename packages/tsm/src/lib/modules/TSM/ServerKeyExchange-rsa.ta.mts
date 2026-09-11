@@ -19,7 +19,10 @@ import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signatur
 /**
  * @summary ServerKeyExchange_rsa
  * @description
- * 
+ *
+ * RSA alternative of `ServerKeyExchange`: ephemeral RSA params and
+ * signature. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,20 @@ class ServerKeyExchange_rsa {
     constructor (
         /**
          * @summary `params`.
+         * @description
+         *
+         * Key-exchange parameters (RSA or DH). X.1084 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly params: ServerRSAParams,
         /**
          * @summary `signed_params`.
+         * @description
+         *
+         * Signature over those parameters (or anonymous). X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

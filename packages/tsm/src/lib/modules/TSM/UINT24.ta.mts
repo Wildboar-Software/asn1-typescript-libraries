@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UINT24
  * @description
- * 
+ *
+ * Unsigned 24-bit integer `0..16777215`. ITU-T Rec. X.1084 (05/2008)
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

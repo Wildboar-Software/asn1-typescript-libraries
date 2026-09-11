@@ -1,7 +1,17 @@
 /**
  * @description
  *
- * ASN.1 module `TSM`.
+ * ASN.1 module `TSM` from ITU-T Rec. X.1084 (05/2008) Annex A: Telebiometric
+ * Security Mechanism. Extends TLS 1.1 handshake and record formats
+ * ([IETF RFC 4346], [IETF RFC 4366]) so a client and verifier can negotiate
+ * biometric modality, BioAPI BSP/BFP, and one of nine authentication models
+ * (clause 7), then carry model-specific biometric transportation data
+ * (clause 11). Handshake types `biometric-client-hello` (100) and
+ * `biometric-server-hello` (101) are TSM additions; remaining handshake,
+ * alert, and cipher-suite values are TLS copies. Clause 10.1.1 numbers those
+ * two types 101 and 102; Annex A (this module) uses 100 and 101.
+ *
+ * @see https://www.itu.int/rec/T-REC-X.1084-200805-I
  */
 export * from "./Alert.ta.mjs";
 export * from "./AlertDescription.ta.mjs";

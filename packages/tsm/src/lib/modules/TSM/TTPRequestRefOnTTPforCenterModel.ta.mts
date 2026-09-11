@@ -17,7 +17,11 @@ import { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/Templ
 /**
  * @summary TTPRequestRefOnTTPforCenterModel
  * @description
- * 
+ *
+ * Verifier → TTP: template ID to retrieve the reference (Table 8).
+ * Transport between TTP and server must be protected. ITU-T Rec.
+ * X.1084 (05/2008) §11.6, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,11 @@ class TTPRequestRefOnTTPforCenterModel {
     constructor (
         /**
          * @summary `templateID`.
+         * @description
+         *
+         * Identifies the reference template (issuer, serial, metadata)
+         * for revocation without sending the template. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */

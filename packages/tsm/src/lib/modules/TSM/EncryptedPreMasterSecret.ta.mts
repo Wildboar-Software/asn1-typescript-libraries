@@ -19,7 +19,10 @@ import { PreMasterSecret, _decode_PreMasterSecret, _encode_PreMasterSecret } fro
 /**
  * @summary EncryptedPreMasterSecret
  * @description
- * 
+ *
+ * `ENCRYPTED{PreMasterSecret}`: RSA-encrypted premaster. ITU-T Rec.
+ * X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

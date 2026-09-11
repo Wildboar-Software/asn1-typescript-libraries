@@ -17,7 +17,10 @@ import { X509Certificate, _decode_X509Certificate, _encode_X509Certificate } fro
 /**
  * @summary Certificates
  * @description
- * 
+ *
+ * SEQUENCE OF DER-encoded X.509 certificates. ITU-T Rec. X.1084
+ * (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

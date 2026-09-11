@@ -27,7 +27,13 @@ import { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } fro
 /**
  * @summary ClientHello
  * @description
- * 
+ *
+ * TLS ClientHello (cipher suites, compression, optional TLS
+ * extensions). TSM biometric offers are a separate handshake
+ * (`BiometricClientHello`), not RFC 4366 hello extensions—X.1084 does
+ * not use RFC 4366 without IETF consensus. ITU-T Rec. X.1084 (05/2008)
+ * §10.3.1–§10.3.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,30 +56,51 @@ class ClientHello {
     constructor (
         /**
          * @summary `client_version`.
+         * @description
+         *
+         * Protocol version the client offers (TLS-style). X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly client_version: ProtocolVersion,
         /**
          * @summary `random`.
+         * @description
+         *
+         * Hello random (challenge). X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly random: ClientRandom,
         /**
          * @summary `session_id`.
+         * @description
+         *
+         * TLS session identifier (`UINT32` in Annex A). X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly session_id: SessionID,
         /**
          * @summary `cipher_suites`.
+         * @description
+         *
+         * Cipher suites the client offers, ordered by preference.
+         * X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly cipher_suites: CipherSuites,
         /**
          * @summary `compression_methods`.
+         * @description
+         *
+         * Compression methods the client offers. X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
@@ -86,6 +113,10 @@ class ClientHello {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `client_hello_extension_list`.
+         * @description
+         *
+         * TLS-style hello extensions. X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */

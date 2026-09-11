@@ -17,7 +17,10 @@ import { ClientCertificateType, _enum_for_ClientCertificateType, _decode_ClientC
 /**
  * @summary ClientCertificateTypes
  * @description
- * 
+ *
+ * SEQUENCE OF `ClientCertificateType` in CertificateRequest. ITU-T
+ * Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

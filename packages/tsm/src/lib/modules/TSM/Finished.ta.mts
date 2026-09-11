@@ -17,7 +17,11 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary Finished
  * @description
- * 
+ *
+ * TLS Finished: 12-octet `verify-data`. Distinct from Appendix I
+ * `BiometricFinished`, which is not in Annex A. ITU-T Rec. X.1084
+ * (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,10 @@ class Finished {
     constructor (
         /**
          * @summary `verify_data`.
+         * @description
+         *
+         * 12-octet TLS Finished verify-data. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

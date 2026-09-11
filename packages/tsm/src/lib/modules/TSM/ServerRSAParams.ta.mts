@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServerRSAParams
  * @description
- * 
+ *
+ * Ephemeral RSA modulus and exponent. Annex A constrains each INTEGER
+ * to `1..65535` (unlike TLS, which uses unbounded integers). ITU-T
+ * Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,20 @@ class ServerRSAParams {
     constructor (
         /**
          * @summary `rsa_modulus`.
+         * @description
+         *
+         * Ephemeral RSA modulus. Annex A constrains INTEGER to `1..65535`.
+         *
          * @public
          * @readonly
          */
         readonly rsa_modulus: INTEGER,
         /**
          * @summary `rsa_exponent`.
+         * @description
+         *
+         * Ephemeral RSA exponent. Annex A constrains INTEGER to `1..65535`.
+         *
          * @public
          * @readonly
          */

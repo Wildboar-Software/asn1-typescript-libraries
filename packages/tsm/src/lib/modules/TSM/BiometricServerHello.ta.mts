@@ -17,7 +17,13 @@ import { BiometricAuthenticationRequest, _decode_BiometricAuthenticationRequest,
 /**
  * @summary BiometricServerHello
  * @description
- * 
+ *
+ * Verifier → client: one method selected from `BiometricClientHello` plus
+ * decision-policy parameters (`requestFMR`, trial count, quality, optional
+ * download template). For the download model this also carries the
+ * reference template (Table 4). ITU-T Rec. X.1084 (05/2008) §10.1.3,
+ * §11.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +39,11 @@ class BiometricServerHello {
     constructor (
         /**
          * @summary `request`.
+         * @description
+         *
+         * Selected method and policy (FMR, trials, quality, optional
+         * template). X.1084 §10.1.3.
+         *
          * @public
          * @readonly
          */

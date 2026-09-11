@@ -19,7 +19,11 @@ import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 /**
  * @summary biometricServerHello
  * @description
- * 
+ *
+ * `HANDSHAKE` object for `BiometricServerHello`, id
+ * `biometric-server-hello` (101 in Annex A). Verifier → client after
+ * certificate messages. ITU-T Rec. X.1084 (05/2008) §10.1.3, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

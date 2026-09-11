@@ -17,7 +17,11 @@ import { UINT8, _decode_UINT8, _encode_UINT8 } from "../TSM/UINT8.ta.mjs";
 /**
  * @summary ProtocolIdentifier
  * @description
- * 
+ *
+ * `UINT8` that distinguishes TSM records from other record-layer
+ * protocols. Annex A does not assign a numeric value. ITU-T Rec.
+ * X.1084 (05/2008) §10.3.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

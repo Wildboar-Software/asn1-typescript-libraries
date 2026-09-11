@@ -19,7 +19,10 @@ import { DistinguishedNames, _decode_DistinguishedNames, _encode_DistinguishedNa
 /**
  * @summary CertificateRequest
  * @description
- * 
+ *
+ * TLS CertificateRequest: acceptable client cert types and CAs. ITU-T
+ * Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,20 @@ class CertificateRequest {
     constructor (
         /**
          * @summary `certificate_types`.
+         * @description
+         *
+         * Acceptable client certificate types. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly certificate_types: ClientCertificateTypes,
         /**
          * @summary `certificate_authorities`.
+         * @description
+         *
+         * Acceptable CA distinguished names. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

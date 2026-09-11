@@ -17,7 +17,10 @@ import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName
 /**
  * @summary DistinguishedNames
  * @description
- * 
+ *
+ * Acceptable certificate authorities in CertificateRequest. ITU-T Rec.
+ * X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

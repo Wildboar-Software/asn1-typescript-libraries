@@ -17,7 +17,11 @@ import { BioAPI_BIR, _decode_BioAPI_BIR, _encode_BioAPI_BIR } from "../BIP/BioAP
 /**
  * @summary SampleData
  * @description
- * 
+ *
+ * Captured biometric sample as a BioAPI BIR. BIR includes BSP/device
+ * information so the verifier can check sensor security and quality.
+ * [ISO/IEC 19784-1]; ITU-T Rec. X.1084 (05/2008) §11.3–§11.4, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

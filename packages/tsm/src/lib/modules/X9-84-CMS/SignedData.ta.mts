@@ -28,7 +28,12 @@ import { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../X9-84-
 /**
  * @summary SignedData
  * @description
- * 
+ *
+ * CMS signed data (ANSI X9.84). TSM uses this as `digitalSignature` (and
+ * related fields) to assure integrity of client, TTP, or verifier
+ * biometric processing. Structure is X9.84 CMS, not defined by X.1084.
+ * ITU-T Rec. X.1084 (05/2008) §11, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

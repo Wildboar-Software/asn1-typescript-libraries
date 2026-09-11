@@ -20,7 +20,11 @@ import { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../TSM/HASH.
 /**
  * @summary GenericBlockCipher
  * @description
- * 
+ *
+ * Block-cipher record fragment: content, MAC, and padding. Each
+ * padding octet holds (padding length − 1) so the fragment is a
+ * multiple of the block size. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,18 +46,30 @@ class GenericBlockCipher {
     constructor (
         /**
          * @summary `content`.
+         * @description
+         *
+         * Encrypted record payload, `SIZE(0..65535)`. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly content: Opaque,
         /**
          * @summary `mAC`.
+         * @description
+         *
+         * Record MAC, `HASH{Opaque}`. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly mAC: HASH<Opaque>,
         /**
          * @summary `padding`.
+         * @description
+         *
+         * Block padding: each octet is (padding length − 1). X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

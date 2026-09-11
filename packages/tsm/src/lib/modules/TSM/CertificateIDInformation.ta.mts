@@ -17,7 +17,12 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
 /**
  * @summary CertificateIDInformation
  * @description
- * 
+ *
+ * Alias of X.509 `CertificateSerialNumber`. Identifies a reference
+ * template for revocation checks without sending the template itself
+ * (privacy-protecting models). ITU-T Rec. X.1084 (05/2008) §11.1,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

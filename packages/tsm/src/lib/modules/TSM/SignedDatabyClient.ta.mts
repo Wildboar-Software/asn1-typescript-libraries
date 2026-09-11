@@ -19,7 +19,12 @@ import { SignedDataACBio, _decode_SignedDataACBio, _encode_SignedDataACBio } fro
 /**
  * @summary SignedDatabyClient
  * @description
- * 
+ *
+ * Client integrity evidence: X9.84 CMS `SignedData` or ISO/IEC 24761
+ * ACBio `SignedDataACBio`. Used in Appendix I `BiometricVerify`;
+ * Annex A defines the CHOICE. ITU-T Rec. X.1084 (05/2008) App. I.2,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,12 @@ import { TemplateInfo, _decode_TemplateInfo, _encode_TemplateInfo } from "../TSM
 /**
  * @summary TemplateID
  * @description
- * 
+ *
+ * Identifies a reference template via the biometric certificate's
+ * issuer and serial (X.509) plus `TemplateInfo`. Used for revocation
+ * without sending the template. ITU-T Rec. X.1084 (05/2008) §7, §11.1,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +44,31 @@ class TemplateID {
     constructor (
         /**
          * @summary `certificateIssuer`.
+         * @description
+         *
+         * Issuer `Name` of the biometric certificate (X.509). X.1084 §11.1.
+         *
          * @public
          * @readonly
          */
         readonly certificateIssuer: Name,
         /**
          * @summary `serialNumber`.
+         * @description
+         *
+         * Serial of the biometric certificate (X.509). X.1084 §11.1.
+         *
          * @public
          * @readonly
          */
         readonly serialNumber: CertificateSerialNumber,
         /**
          * @summary `templateInfo`.
+         * @description
+         *
+         * Modality, creator, creating BSP/BFP, and certificate serial.
+         * X.1084 §11.1.
+         *
          * @public
          * @readonly
          */

@@ -32,7 +32,13 @@ enum _enum_for_NetworkAuthenticationModel {
 /**
  * @summary NetworkAuthenticationModel
  * @description
- * 
+ *
+ * Which of the nine TSM models is offered or selected. Clause 7 combines
+ * template location (client / server / TTP) with comparison location
+ * (client / server / TTP). `no-value` (0) means no selection. Clause 10.1.2
+ * shows this as a `BIT STRING`; Annex A (this type) is `ENUMERATED`.
+ * ITU-T Rec. X.1084 (05/2008) §7, §10.1.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +65,7 @@ type NetworkAuthenticationModel = _enum_for_NetworkAuthenticationModel | ENUMERA
 
 /**
  * @summary NetworkAuthenticationModel_no_value
+ * @description No model selected (0). X.1084 Annex A.
  * @constant
  * @type {number}
  */
@@ -67,6 +74,7 @@ const NetworkAuthenticationModel_no_value: NetworkAuthenticationModel = 0; /* LO
 
 /**
  * @summary no_value
+ * @description No model selected (0). X.1084 Annex A.
  * @constant
  * @type {number}
  */
@@ -75,6 +83,11 @@ const no_value: NetworkAuthenticationModel = NetworkAuthenticationModel_no_value
 
 /**
  * @summary NetworkAuthenticationModel_local_model
+ * @description
+ *
+ * Template and comparison on the client; result (template ID, quality,
+ * score) sent to the verifier. Server trusts client processing. X.1084 §7
+ * (1), §11.1.
  * @constant
  * @type {number}
  */
@@ -83,6 +96,11 @@ const NetworkAuthenticationModel_local_model: NetworkAuthenticationModel = 1; /*
 
 /**
  * @summary local_model
+ * @description
+ *
+ * Template and comparison on the client; result (template ID, quality,
+ * score) sent to the verifier. Server trusts client processing. X.1084 §7
+ * (1), §11.1.
  * @constant
  * @type {number}
  */
@@ -91,6 +109,10 @@ const local_model: NetworkAuthenticationModel = NetworkAuthenticationModel_local
 
 /**
  * @summary NetworkAuthenticationModel_download_model
+ * @description
+ *
+ * Verifier stores the template and downloads it for client-side comparison
+ * (temporary-use terminals). X.1084 §7 (2), §11.2.
  * @constant
  * @type {number}
  */
@@ -99,6 +121,10 @@ const NetworkAuthenticationModel_download_model: NetworkAuthenticationModel = 2;
 
 /**
  * @summary download_model
+ * @description
+ *
+ * Verifier stores the template and downloads it for client-side comparison
+ * (temporary-use terminals). X.1084 §7 (2), §11.2.
  * @constant
  * @type {number}
  */
@@ -107,6 +133,10 @@ const download_model: NetworkAuthenticationModel = NetworkAuthenticationModel_do
 
 /**
  * @summary NetworkAuthenticationModel_attached_model
+ * @description
+ *
+ * Client holds the template and sample; both are sent; comparison is on
+ * the verifier. X.1084 §7 (3), §11.3.
  * @constant
  * @type {number}
  */
@@ -115,6 +145,10 @@ const NetworkAuthenticationModel_attached_model: NetworkAuthenticationModel = 3;
 
 /**
  * @summary attached_model
+ * @description
+ *
+ * Client holds the template and sample; both are sent; comparison is on
+ * the verifier. X.1084 §7 (3), §11.3.
  * @constant
  * @type {number}
  */
@@ -123,6 +157,10 @@ const attached_model: NetworkAuthenticationModel = NetworkAuthenticationModel_at
 
 /**
  * @summary NetworkAuthenticationModel_center_model
+ * @description
+ *
+ * Verifier stores the template; client sends only the sample; comparison
+ * on the verifier. ASN.1 spelling `center-model`. X.1084 §7 (4), §11.4.
  * @constant
  * @type {number}
  */
@@ -131,6 +169,10 @@ const NetworkAuthenticationModel_center_model: NetworkAuthenticationModel = 4; /
 
 /**
  * @summary center_model
+ * @description
+ *
+ * Verifier stores the template; client sends only the sample; comparison
+ * on the verifier. ASN.1 spelling `center-model`. X.1084 §7 (4), §11.4.
  * @constant
  * @type {number}
  */
@@ -139,6 +181,10 @@ const center_model: NetworkAuthenticationModel = NetworkAuthenticationModel_cent
 
 /**
  * @summary NetworkAuthenticationModel_ref_onttp_for_local_model
+ * @description
+ *
+ * TTP stores the template; client downloads it, compares locally, sends
+ * the result to the verifier. X.1084 §7 (5), §11.5.
  * @constant
  * @type {number}
  */
@@ -147,6 +193,10 @@ const NetworkAuthenticationModel_ref_onttp_for_local_model: NetworkAuthenticatio
 
 /**
  * @summary ref_onttp_for_local_model
+ * @description
+ *
+ * TTP stores the template; client downloads it, compares locally, sends
+ * the result to the verifier. X.1084 §7 (5), §11.5.
  * @constant
  * @type {number}
  */
@@ -155,6 +205,10 @@ const ref_onttp_for_local_model: NetworkAuthenticationModel = NetworkAuthenticat
 
 /**
  * @summary NetworkAuthenticationModel_ref_onttp_for_center_model
+ * @description
+ *
+ * TTP stores the template; verifier fetches it and compares the client's
+ * sample. X.1084 §7 (6), §11.6.
  * @constant
  * @type {number}
  */
@@ -163,6 +217,10 @@ const NetworkAuthenticationModel_ref_onttp_for_center_model: NetworkAuthenticati
 
 /**
  * @summary ref_onttp_for_center_model
+ * @description
+ *
+ * TTP stores the template; verifier fetches it and compares the client's
+ * sample. X.1084 §7 (6), §11.6.
  * @constant
  * @type {number}
  */
@@ -171,6 +229,10 @@ const ref_onttp_for_center_model: NetworkAuthenticationModel = NetworkAuthentica
 
 /**
  * @summary NetworkAuthenticationModel_comparison_outsourcing_by_client_model
+ * @description
+ *
+ * Client holds template and sample, sends both to TTP for comparison, then
+ * forwards the TTP result to the verifier. X.1084 §7 Table 1, §11.7.
  * @constant
  * @type {number}
  */
@@ -179,6 +241,10 @@ const NetworkAuthenticationModel_comparison_outsourcing_by_client_model: Network
 
 /**
  * @summary comparison_outsourcing_by_client_model
+ * @description
+ *
+ * Client holds template and sample, sends both to TTP for comparison, then
+ * forwards the TTP result to the verifier. X.1084 §7 Table 1, §11.7.
  * @constant
  * @type {number}
  */
@@ -187,6 +253,10 @@ const comparison_outsourcing_by_client_model: NetworkAuthenticationModel = Netwo
 
 /**
  * @summary NetworkAuthenticationModel_comparison_outsourcing_by_server_model
+ * @description
+ *
+ * Verifier holds the template; client sends the sample to the verifier,
+ * which outsources comparison to TTP. X.1084 §7 Table 1, §11.8.
  * @constant
  * @type {number}
  */
@@ -195,6 +265,10 @@ const NetworkAuthenticationModel_comparison_outsourcing_by_server_model: Network
 
 /**
  * @summary comparison_outsourcing_by_server_model
+ * @description
+ *
+ * Verifier holds the template; client sends the sample to the verifier,
+ * which outsources comparison to TTP. X.1084 §7 Table 1, §11.8.
  * @constant
  * @type {number}
  */
@@ -203,6 +277,10 @@ const comparison_outsourcing_by_server_model: NetworkAuthenticationModel = Netwo
 
 /**
  * @summary NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model
+ * @description
+ *
+ * TTP stores the template and compares; client sends the sample to TTP,
+ * then forwards the result to the verifier. X.1084 §7 Table 1, §11.9.1.
  * @constant
  * @type {number}
  */
@@ -211,6 +289,10 @@ const NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model:
 
 /**
  * @summary storage_comparison_outsourcing_by_client_model
+ * @description
+ *
+ * TTP stores the template and compares; client sends the sample to TTP,
+ * then forwards the result to the verifier. X.1084 §7 Table 1, §11.9.1.
  * @constant
  * @type {number}
  */
@@ -219,6 +301,11 @@ const storage_comparison_outsourcing_by_client_model: NetworkAuthenticationModel
 
 /**
  * @summary NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model
+ * @description
+ *
+ * TTP stores the template and compares; client sends the sample to the
+ * verifier, which forwards template ID + sample to TTP. X.1084 §7 Table 1,
+ * §11.9.2.
  * @constant
  * @type {number}
  */
@@ -227,6 +314,11 @@ const NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model:
 
 /**
  * @summary storage_comparison_outsourcing_by_server_model
+ * @description
+ *
+ * TTP stores the template and compares; client sends the sample to the
+ * verifier, which forwards template ID + sample to TTP. X.1084 §7 Table 1,
+ * §11.9.2.
  * @constant
  * @type {number}
  */

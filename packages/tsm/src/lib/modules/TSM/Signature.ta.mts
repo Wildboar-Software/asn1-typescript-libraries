@@ -20,7 +20,10 @@ import { Signature_dsa, _decode_Signature_dsa, _encode_Signature_dsa } from "../
 /**
  * @summary Signature
  * @description
- * 
+ *
+ * Signature over ServerKeyExchange params: anonymous, RSA (MD5+SHA-1),
+ * or DSA (SHA-1). Extensible. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

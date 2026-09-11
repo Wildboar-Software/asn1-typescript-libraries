@@ -17,7 +17,12 @@ import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../
 /**
  * @summary EXTENSION
  * @description
- * 
+ *
+ * TLS-style hello extension information object: unique
+ * `ExtensionType` `&id` and payload `&Type`. Object set `Extensions`
+ * is empty (`...`) in Annex A. ITU-T Rec. X.1084 (05/2008) §10.3.2,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,10 +59,12 @@ interface EXTENSION<
     }>;
     /**
      * @summary &id
+     * @description Unique TLS-style extension type. X.1084 §10.3.2.
      */
     readonly "&id"?: ExtensionType;
     /**
      * @summary &Type
+     * @description Extension payload type. X.1084 §10.3.2.
      */
     readonly "&Type": Type;
 };

@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServerHelloDone
  * @description
- * 
+ *
+ * TLS `server_hello_done` body: `NULL`. ITU-T Rec. X.1084 (05/2008)
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary HelloRequest
  * @description
- * 
+ *
+ * TLS `hello_request` body: `NULL`. Server may send to renegotiate.
+ * ITU-T Rec. X.1084 (05/2008) Annex A; [IETF RFC 4346].
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

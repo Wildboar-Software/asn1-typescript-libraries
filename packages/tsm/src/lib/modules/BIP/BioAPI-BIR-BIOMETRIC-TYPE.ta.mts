@@ -1,3 +1,10 @@
+/**
+ * @description
+ *
+ * BioAPI biometric-type bit string (face, finger, iris, …). TSM
+ * `BiometricType` is this type. [ISO/IEC 19784-1]; ITU-T Rec. X.1084
+ * (05/2008) §10.1.2.
+ */
 export {
     type BioAPI_BIR_BIOMETRIC_TYPE,
     BioAPI_BIR_BIOMETRIC_TYPE_typeMultipleBiometricTypes,

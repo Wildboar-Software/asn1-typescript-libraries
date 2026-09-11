@@ -17,7 +17,10 @@ import { BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "
 /**
  * @summary BSP_BFP_Schemas
  * @description
- * 
+ *
+ * One or more BSP/BFP schemas when capture, preprocess, and compare
+ * are split across providers. X.1084 §11.1 Table 3, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

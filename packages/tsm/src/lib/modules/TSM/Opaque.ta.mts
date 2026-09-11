@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Opaque
  * @description
- * 
+ *
+ * Uninterpreted octet string used for TLS-style randoms, MAC, padding,
+ * and application data. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ENCRYPTED
  * @description
- * 
+ *
+ * Ciphertext of `ToBeEnciphered` as `OCTET STRING(SIZE(0..255))` with
+ * a content constraint. Wraps `PreMasterSecret`. ITU-T Rec. X.1084
+ * (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

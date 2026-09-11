@@ -22,7 +22,11 @@ import { NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, _deco
 /**
  * @summary BiometricMethod
  * @description
- * 
+ *
+ * One offered or selected biometric configuration: modality, BioAPI
+ * BSP/BFP, authentication model, and TTP URI when a TTP model is used
+ * ([IETF RFC 3986]). ITU-T Rec. X.1084 (05/2008) §10.1.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +45,44 @@ class BiometricMethod {
     constructor (
         /**
          * @summary `biometricType`.
+         * @description
+         *
+         * BioAPI `BioAPI-BIR-BIOMETRIC-TYPE` (face, finger, iris, …).
+         * [ISO/IEC 19784-1]; X.1084 §10.1.2.
+         *
          * @public
          * @readonly
          */
         readonly biometricType: BiometricType,
         /**
          * @summary `biometricFunctionProvider`.
+         * @description
+         *
+         * BSP or BFP schema identifying capture / preprocess / compare
+         * functions. [ISO/IEC 19784-1]; X.1084 §10.1.2, §11.1 Table 3.
+         *
          * @public
          * @readonly
          */
         readonly biometricFunctionProvider: BSP_BFP_Schema,
         /**
          * @summary `networkAuthenticationModel`.
+         * @description
+         *
+         * One of the nine models in clause 7 (local, download, attached,
+         * centre, TTP variants, outsourcing). X.1084 §7, §10.1.2.
+         *
          * @public
          * @readonly
          */
         readonly networkAuthenticationModel: NetworkAuthenticationModel,
         /**
          * @summary `thirdPartyInfo`.
+         * @description
+         *
+         * Required for TTP models: TTP network address as a URI
+         * ([IETF RFC 3986]). X.1084 §10.1.2.
+         *
          * @public
          * @readonly
          */

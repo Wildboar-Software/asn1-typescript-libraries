@@ -20,7 +20,10 @@ import { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../TSM/HASH.
 /**
  * @summary GenericStreamCipher
  * @description
- * 
+ *
+ * Stream-cipher record fragment: content plus MAC (`HASH{Opaque}`).
+ * ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,20 @@ class GenericStreamCipher {
     constructor (
         /**
          * @summary `content`.
+         * @description
+         *
+         * Encrypted record payload, `SIZE(0..65535)`. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly content: Opaque,
         /**
          * @summary `mAC`.
+         * @description
+         *
+         * Record MAC, `HASH{Opaque}`. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

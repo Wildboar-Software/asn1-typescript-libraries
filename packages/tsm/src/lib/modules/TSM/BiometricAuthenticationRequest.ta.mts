@@ -25,7 +25,11 @@ import { XtsmTemplate, _decode_XtsmTemplate, _encode_XtsmTemplate } from "../TSM
 /**
  * @summary BiometricAuthenticationRequest
  * @description
- * 
+ *
+ * Verifier decision policy for the selected method: FMR (score) threshold,
+ * allowed trials, sample quality, and optional reference template for the
+ * download model. ITU-T Rec. X.1084 (05/2008) §9, §10.1.3, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +51,55 @@ class BiometricAuthenticationRequest {
     constructor (
         /**
          * @summary `biometricMethod`.
+         * @description
+         *
+         * Method chosen from the client's list. X.1084 §10.1.3.
+         *
          * @public
          * @readonly
          */
         readonly biometricMethod: BiometricMethod,
         /**
          * @summary `requestFMR`.
+         * @description
+         *
+         * Requested false-match rate. Annex A comment:
+         * 32-bit integer `requestFMR / (2^31-1)` as in [ISO/IEC 19784-1].
+         * X.1084 §10.1.3.
+         *
          * @public
          * @readonly
          */
         readonly requestFMR: BioAPI_FMR,
         /**
          * @summary `requestTrialNumber`.
+         * @description
+         *
+         * Allowed comparison attempts, `1..15`. Appendix I: decrement by one
+         * on retry with the same method. X.1084 §10.1.3, App. I.3.
+         *
          * @public
          * @readonly
          */
         readonly requestTrialNumber: INTEGER,
         /**
          * @summary `requestQuality`.
+         * @description
+         *
+         * Minimum sample quality `0..100`. X.1084 §9, §10.1.3.
+         *
          * @public
          * @readonly
          */
         readonly requestQuality: Quality,
         /**
          * @summary `requestTemplateData`.
+         * @description
+         *
+         * Present for download model: reference template sent verifier →
+         * client. Annex A notes "no value available" when unused. X.1084
+         * §11.2 Table 4.
+         *
          * @public
          * @readonly
          */

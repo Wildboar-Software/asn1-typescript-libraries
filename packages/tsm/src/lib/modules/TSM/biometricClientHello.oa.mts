@@ -19,7 +19,11 @@ import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 /**
  * @summary biometricClientHello
  * @description
- * 
+ *
+ * `HANDSHAKE` object for `BiometricClientHello`, id
+ * `biometric-client-hello` (100 in Annex A). Client → verifier after
+ * `ClientHello`. ITU-T Rec. X.1084 (05/2008) §10.1.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

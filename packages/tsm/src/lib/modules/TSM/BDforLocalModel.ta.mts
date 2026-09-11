@@ -22,7 +22,12 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
 /**
  * @summary BDforLocalModel
  * @description
- * 
+ *
+ * Biometric transportation data for the local model (client stores
+ * template and compares): process report, CMS signature over client
+ * processing, optional ACBio. ITU-T Rec. X.1084 (05/2008) §7 (1),
+ * §11.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +46,32 @@ class BDforLocalModel {
     constructor (
         /**
          * @summary `biometricClientProcess`.
+         * @description
+         *
+         * BSP/BFP, template ID, sample quality, and comparison score from
+         * the client. X.1084 §11.1 Table 3.
+         *
          * @public
          * @readonly
          */
         readonly biometricClientProcess: BiometricClientProcess,
         /**
          * @summary `digitalSignature`.
+         * @description
+         *
+         * CMS `SignedData` (X9.84) over the biometric process or payload.
+         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+         *
          * @public
          * @readonly
          */
         readonly digitalSignature: SignedData,
         /**
          * @summary `aCforBioOnClient`.
+         * @description
+         *
+         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */

@@ -19,7 +19,10 @@ import { GenericBlockCipher, _decode_GenericBlockCipher, _encode_GenericBlockCip
 /**
  * @summary TSMCipherText_fragment
  * @description
- * 
+ *
+ * Encrypted record payload: stream or block cipher encoding, selected by
+ * the negotiated cipher suite. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

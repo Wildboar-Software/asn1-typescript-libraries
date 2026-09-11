@@ -18,7 +18,10 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary Signature_dsa
  * @description
- * 
+ *
+ * DSA signature: SHA-1 hash (20 octets). ITU-T Rec. X.1084 (05/2008)
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +37,10 @@ class Signature_dsa {
     constructor (
         /**
          * @summary `sha_hash`.
+         * @description
+         *
+         * 20-octet SHA-1 digest. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

@@ -16,7 +16,10 @@ import { EXTENSION } from "../TSM/EXTENSION.oca.mjs";
 /**
  * @summary Extensions
  * @description
- * 
+ *
+ * Empty extensible `EXTENSION` object set. ITU-T Rec. X.1084 (05/2008)
+ * §10.3.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

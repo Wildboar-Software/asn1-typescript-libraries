@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServerDHParams
  * @description
- * 
+ *
+ * DH prime `p`, generator `g`, and public `Ys`. Annex A constrains
+ * each INTEGER to `1..65535`. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +39,30 @@ class ServerDHParams {
     constructor (
         /**
          * @summary `dh_p`.
+         * @description
+         *
+         * DH prime. Annex A constrains INTEGER to `1..65535`.
+         *
          * @public
          * @readonly
          */
         readonly dh_p: INTEGER,
         /**
          * @summary `dh_g`.
+         * @description
+         *
+         * DH generator. Annex A constrains INTEGER to `1..65535`.
+         *
          * @public
          * @readonly
          */
         readonly dh_g: INTEGER,
         /**
          * @summary `dh_Ys`.
+         * @description
+         *
+         * Server DH public value. Annex A constrains INTEGER to `1..65535`.
+         *
          * @public
          * @readonly
          */

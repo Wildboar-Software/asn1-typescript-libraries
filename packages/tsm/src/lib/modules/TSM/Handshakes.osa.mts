@@ -40,7 +40,11 @@ import { biometricServerHello } from "../TSM/biometricServerHello.oa.mjs";
 /**
  * @summary Handshakes
  * @description
- * 
+ *
+ * TSM handshake object set: TLS handshake types plus
+ * `biometricClientHello` and `biometricServerHello`. Extensible (`...`).
+ * ITU-T Rec. X.1084 (05/2008) §10.1.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

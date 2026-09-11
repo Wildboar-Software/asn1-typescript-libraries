@@ -22,7 +22,10 @@ enum _enum_for_ChangeCipherSpec {
 /**
  * @summary ChangeCipherSpec
  * @description
- * 
+ *
+ * TLS ChangeCipherSpec: only `change-cipher-spec` (1), extensible.
+ * ITU-T Rec. X.1084 (05/2008) §10.3.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +42,7 @@ type ChangeCipherSpec = _enum_for_ChangeCipherSpec | ENUMERATED;
 
 /**
  * @summary ChangeCipherSpec_change_cipher_spec
+ * @description Only defined CCS value (1). X.1084 §10.3.1.
  * @constant
  * @type {number}
  */
@@ -47,6 +51,7 @@ const ChangeCipherSpec_change_cipher_spec: ChangeCipherSpec = 1; /* LONG_NAMED_E
 
 /**
  * @summary change_cipher_spec
+ * @description Only defined CCS value (1). X.1084 §10.3.1.
  * @constant
  * @type {number}
  */

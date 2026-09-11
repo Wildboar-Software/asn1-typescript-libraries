@@ -17,7 +17,11 @@ import { HandshakeType, _decode_HandshakeType, _encode_HandshakeType } from "../
 /**
  * @summary HANDSHAKE
  * @description
- * 
+ *
+ * Information object class binding a handshake payload `&Type` to a unique
+ * `HandshakeType` `&id`. Extensible via `{Handshakes, ...}`. ITU-T Rec.
+ * X.1084 (05/2008) §10.1.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,10 +57,12 @@ interface HANDSHAKE<
     }>;
     /**
      * @summary &Type
+     * @description Handshake payload type identified by `&id`.
      */
     readonly "&Type": Type;
     /**
      * @summary &id
+     * @description Unique `HandshakeType` for this object.
      */
     readonly "&id"?: HandshakeType;
 };

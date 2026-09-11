@@ -19,7 +19,11 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary ServerRandom
  * @description
- * 
+ *
+ * Server random: GMT Unix time plus 57 opaque bytes. TLS uses 28
+ * random bytes; Annex A specifies `SIZE(28)` for the client and
+ * `SIZE(57)` for the server. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,21 @@ class ServerRandom {
     constructor (
         /**
          * @summary `gmt_unix_time`.
+         * @description
+         *
+         * GMT Unix time in seconds, as in TLS Random. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly gmt_unix_time: UINT32,
         /**
          * @summary `random_bytes`.
+         * @description
+         *
+         * Cryptographic random octets (28 for client, 57 for server in
+         * Annex A). X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

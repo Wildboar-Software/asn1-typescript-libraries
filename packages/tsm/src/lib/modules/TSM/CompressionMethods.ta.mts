@@ -17,7 +17,10 @@ import { CompressionMethod, _enum_for_CompressionMethod, _decode_CompressionMeth
 /**
  * @summary CompressionMethods
  * @description
- * 
+ *
+ * Client's offered compression methods, `SIZE(1..255)`. ITU-T Rec.
+ * X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

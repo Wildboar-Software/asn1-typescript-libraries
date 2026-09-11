@@ -23,7 +23,11 @@ import { ApplicationData, _decode_ApplicationData, _encode_ApplicationData } fro
 /**
  * @summary TSMPlainText_fragment
  * @description
- * 
+ *
+ * Plaintext record payload. Handshake alternative is named
+ * `biometric-handshake-opaque` but carries any `Handshake`, including TLS
+ * hellos. ITU-T Rec. X.1084 (05/2008) §10.3.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

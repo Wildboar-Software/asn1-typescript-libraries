@@ -23,7 +23,11 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
 /**
  * @summary BDforRefOnTTPforCenterModel
  * @description
- * 
+ *
+ * Reference-on-TTP for centre comparison: TTP URI plus client sample
+ * BIR; verifier fetches the template from TTP separately. ITU-T Rec.
+ * X.1084 (05/2008) §11.6, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +47,42 @@ class BDforRefOnTTPforCenterModel {
     constructor (
         /**
          * @summary `thirdPartyInfo`.
+         * @description
+         *
+         * TTP network address as a URI ([IETF RFC 3986]). X.1084 §10.1.2.
+         *
          * @public
          * @readonly
          */
         readonly thirdPartyInfo: UTF8String,
         /**
          * @summary `sampleData`.
+         * @description
+         *
+         * Captured sample as BioAPI BIR (includes BSP/device info).
+         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+         *
          * @public
          * @readonly
          */
         readonly sampleData: SampleData,
         /**
          * @summary `digitalSignature`.
+         * @description
+         *
+         * CMS `SignedData` (X9.84) over the biometric process or payload.
+         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+         *
          * @public
          * @readonly
          */
         readonly digitalSignature: SignedData,
         /**
          * @summary `aCforBioOnClient`.
+         * @description
+         *
+         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */

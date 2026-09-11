@@ -17,7 +17,11 @@ import { BioAPI_BIR_BIOMETRIC_TYPE, _decode_BioAPI_BIR_BIOMETRIC_TYPE, _encode_B
 /**
  * @summary BiometricType
  * @description
- * 
+ *
+ * Alias of BioAPI `BioAPI-BIR-BIOMETRIC-TYPE` (32-bit string: face,
+ * voice, finger, iris, …). [ISO/IEC 19784-1]; ITU-T Rec. X.1084
+ * (05/2008) §10.1.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

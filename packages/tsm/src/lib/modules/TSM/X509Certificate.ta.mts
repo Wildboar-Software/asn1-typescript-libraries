@@ -21,7 +21,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary X509Certificate
  * @description
- * 
+ *
+ * X.509 `Certificate` encoded with DER (`der` OID). ITU-T Rec. X.1084
+ * (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

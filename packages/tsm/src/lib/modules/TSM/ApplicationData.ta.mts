@@ -17,7 +17,12 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary ApplicationData
  * @description
- * 
+ *
+ * Record-layer application payload (`Opaque`). After the handshake,
+ * biometric transportation data for the negotiated model is carried
+ * here (clause 11; transfer encodings in Appendices I–II). ITU-T Rec.
+ * X.1084 (05/2008) §10, §10.3.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

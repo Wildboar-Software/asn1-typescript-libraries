@@ -25,7 +25,11 @@ enum _enum_for_ContentType {
 /**
  * @summary ContentType
  * @description
- * 
+ *
+ * TLS record content type on `TSMCipherText`: CCS (20), alert (21),
+ * handshake (22), application-data (23). Extensible. ITU-T Rec. X.1084
+ * (05/2008) §10.3.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,6 +49,7 @@ type ContentType = _enum_for_ContentType | ENUMERATED;
 
 /**
  * @summary ContentType_change_cipher_spec
+ * @description TLS CCS (20). X.1084 §10.3.1.
  * @constant
  * @type {number}
  */
@@ -53,6 +58,7 @@ const ContentType_change_cipher_spec: ContentType = 20; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary change_cipher_spec
+ * @description TLS CCS (20). X.1084 §10.3.1.
  * @constant
  * @type {number}
  */
@@ -61,6 +67,7 @@ const change_cipher_spec: ContentType = ContentType_change_cipher_spec; /* SHORT
 
 /**
  * @summary ContentType_alert
+ * @description TLS alert record (21). X.1084 §10.3.1.
  * @constant
  * @type {number}
  */
@@ -69,6 +76,7 @@ const ContentType_alert: ContentType = 21; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alert
+ * @description TLS alert record (21). X.1084 §10.3.1.
  * @constant
  * @type {number}
  */
@@ -77,6 +85,8 @@ const alert: ContentType = ContentType_alert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentType_handshake
+ * @description TLS handshake record (22), including biometric hellos.
+ * X.1084 §10.3.1.
  * @constant
  * @type {number}
  */
@@ -85,6 +95,8 @@ const ContentType_handshake: ContentType = 22; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handshake
+ * @description TLS handshake record (22), including biometric hellos.
+ * X.1084 §10.3.1.
  * @constant
  * @type {number}
  */
@@ -93,6 +105,8 @@ const handshake: ContentType = ContentType_handshake; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary ContentType_application_data
+ * @description TLS application-data (23). After handshake, carries
+ * biometric transportation data (clause 11). X.1084 §10, §10.3.1.
  * @constant
  * @type {number}
  */
@@ -101,6 +115,8 @@ const ContentType_application_data: ContentType = 23; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary application_data
+ * @description TLS application-data (23). After handshake, carries
+ * biometric transportation data (clause 11). X.1084 §10, §10.3.1.
  * @constant
  * @type {number}
  */

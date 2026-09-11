@@ -19,7 +19,10 @@ import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 /**
  * @summary finished
  * @description
- * 
+ *
+ * `HANDSHAKE` object: `Finished` identified by `finished` (20). ITU-T
+ * Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

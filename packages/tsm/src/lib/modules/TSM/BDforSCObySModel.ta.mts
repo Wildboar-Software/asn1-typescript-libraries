@@ -22,7 +22,11 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
 /**
  * @summary BDforSCObySModel
  * @description
- * 
+ *
+ * Storage-and-comparison outsourcing by server: client → verifier
+ * sample BIR plus integrity evidence (Table 19). ITU-T Rec. X.1084
+ * (05/2008) §11.9.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +45,31 @@ class BDforSCObySModel {
     constructor (
         /**
          * @summary `sampleData`.
+         * @description
+         *
+         * Captured sample as BioAPI BIR (includes BSP/device info).
+         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+         *
          * @public
          * @readonly
          */
         readonly sampleData: SampleData,
         /**
          * @summary `digitalSignatureByClient`.
+         * @description
+         *
+         * CMS `SignedData` over the client process. X.1084 §11.9.
+         *
          * @public
          * @readonly
          */
         readonly digitalSignatureByClient: SignedData,
         /**
          * @summary `aCforBioOnClient`.
+         * @description
+         *
+         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */
