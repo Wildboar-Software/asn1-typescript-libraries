@@ -21,7 +21,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AnswerCallArgument
  * @description
- * 
+ *
+ * Service request for Answer Call (ECMA-269 §17.1.3 / ECMA-285 §15.1.3). Names
+ * the alerting, queued, or initiated connection to connect.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +44,46 @@ class AnswerCallArgument {
     constructor (
         /**
          * @summary `callToBeAnswered`.
+         * @description
+         *
+         * Mandatory. Connection to answer. Initial state Alerting, Initiated,
+         * or Queued; final Connected (§17.1.3.3.1). May be the calling device
+         * (e.g. after Make Predictive Call).
+         *
          * @public
          * @readonly
          */
         readonly callToBeAnswered: ConnectionID,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data to attach to this call before any resulting
+         * state transitions (ECMA-269 §12.2.10). A null string clears existing
+         * data.
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent to parties in the call (§12.2.30). Not
+         * retained on a later conference or transferred call.
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and privateData
+         * parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

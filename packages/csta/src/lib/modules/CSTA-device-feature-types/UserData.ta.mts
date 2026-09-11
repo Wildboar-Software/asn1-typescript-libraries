@@ -8,7 +8,14 @@ import { OCTET_STRING, ASN1Element as _Element, ASN1TagClass as _TagClass } from
 /**
  * @summary UserData
  * @description
- * 
+ *
+ * Computing sub-domain to computing sub-domain data associated with a call.
+ * Maximum length from capability exchange. Distinct from Correlator Data.
+ * Tagged APPLICATION 29. ECMA-269 §12.2.30, §6.1.2.4.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

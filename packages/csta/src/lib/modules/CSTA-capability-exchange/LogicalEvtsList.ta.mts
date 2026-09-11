@@ -43,7 +43,13 @@ import { RouteingMode, _decode_RouteingMode, _encode_RouteingMode } from "../CST
 /**
  * @summary LogicalEvtsList
  * @description
- * 
+ * Logical Device Feature events the SF supports (ECMA-269 Annex C.15, ECMA-285
+ * §9.10). Omit unsupported events.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -74,90 +80,135 @@ class LogicalEvtsList {
          * @summary `agentBusy`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly agentBusy: OPTIONAL<AgentBusy>,
         /**
          * @summary `agentLoggedOff`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly agentLoggedOff: OPTIONAL<AgentLoggedOff>,
         /**
          * @summary `agentLoggedOn`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly agentLoggedOn: OPTIONAL<AgentLoggedOn>,
         /**
          * @summary `agentNotReady`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly agentNotReady: OPTIONAL<AgentNotReady>,
         /**
          * @summary `agentReady`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly agentReady: OPTIONAL<AgentReady>,
         /**
          * @summary `agentWorkingAfterCall`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly agentWorkingAfterCall: OPTIONAL<AgentWorkingAfterCall>,
         /**
          * @summary `autoAnswer`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly autoAnswer: OPTIONAL<AutoAnswer>,
         /**
          * @summary `autoWorkMode`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly autoWorkMode: OPTIONAL<AutoWorkMode>,
         /**
          * @summary `callBack`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly callBack: OPTIONAL<CallBackEvent>,
         /**
          * @summary `callBackMessage`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly callBackMessage: OPTIONAL<CallBackMessageEvent>,
         /**
          * @summary `callerIDStatus`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly callerIDStatus: OPTIONAL<CallerIDStatus>,
         /**
          * @summary `doNotDisturb`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly doNotDisturb: OPTIONAL<DoNotDisturb>,
         /**
          * @summary `forwarding`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly forwarding: OPTIONAL<Forwarding>,
         /**
          * @summary `presenceState`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly presenceState: OPTIONAL<PresenceStateEvent>,
         /**
          * @summary `routeingMode`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly routeingMode: OPTIONAL<RouteingMode>
     ) {}

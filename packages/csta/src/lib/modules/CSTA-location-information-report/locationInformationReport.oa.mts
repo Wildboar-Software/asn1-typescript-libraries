@@ -21,7 +21,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary locationInformationReport
  * @description
- * 
+ *
+ * Provides location information for a device in a location tracking session,
+ * subject to collection and reporting criteria. Absent `locationInfoList` means
+ * nothing to report (ECMA-269 §28.1.6).
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:535. Errors: `universalFailure` (ECMA-285 §26.1.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

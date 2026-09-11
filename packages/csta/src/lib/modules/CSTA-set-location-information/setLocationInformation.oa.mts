@@ -17,7 +17,20 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setLocationInformation
  * @description
- * 
+ *
+ * Associates application-specified location information with a device. Absent
+ * `locationInfo` clears stored location. `replaceMode` selects replace-all
+ * (default) or replace matching person/device/tuple components (ECMA-269
+ * §28.1.2 / §6.8.5).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:531. Errors: `universalFailure` (ECMA-285 §26.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

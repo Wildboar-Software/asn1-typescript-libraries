@@ -8,7 +8,14 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ComputingFunctionServicesC2
  * @description
- * 
+ *
+ * Phase II computing-function (routeing) services. Phase II (ECMA-218)
+ * compatibility BIT STRING in ACSE user-information. For Phase III and later,
+ * use Capability Exchange to learn supported services and events. ECMA-285
+ * §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,13 +32,16 @@ type ComputingFunctionServicesC2 = BIT_STRING;
 
 /**
  * @summary ComputingFunctionServicesC2_routeRequest
+ * @description Advertises `routeRequest` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const ComputingFunctionServicesC2_routeRequest: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeRequest
+ * @description Alias of {@link ComputingFunctionServicesC2_routeRequest}.
  * @constant
  */
 export
@@ -39,13 +49,16 @@ const routeRequest: number = ComputingFunctionServicesC2_routeRequest; /* SHORT_
 
 /**
  * @summary ComputingFunctionServicesC2_reRouteRequest
+ * @description Advertises `reRouteRequest` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const ComputingFunctionServicesC2_reRouteRequest: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary reRouteRequest
+ * @description Alias of {@link ComputingFunctionServicesC2_reRouteRequest}.
  * @constant
  */
 export
@@ -53,13 +66,17 @@ const reRouteRequest: number = ComputingFunctionServicesC2_reRouteRequest; /* SH
 
 /**
  * @summary ComputingFunctionServicesC2_routeSelectRequest
+ * @description
+ * Advertises `routeSelectRequest` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const ComputingFunctionServicesC2_routeSelectRequest: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeSelectRequest
+ * @description Alias of {@link ComputingFunctionServicesC2_routeSelectRequest}.
  * @constant
  */
 export
@@ -67,13 +84,17 @@ const routeSelectRequest: number = ComputingFunctionServicesC2_routeSelectReques
 
 /**
  * @summary ComputingFunctionServicesC2_routeUsedRequest
+ * @description
+ * Advertises `routeUsedRequest` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const ComputingFunctionServicesC2_routeUsedRequest: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeUsedRequest
+ * @description Alias of {@link ComputingFunctionServicesC2_routeUsedRequest}.
  * @constant
  */
 export
@@ -81,13 +102,17 @@ const routeUsedRequest: number = ComputingFunctionServicesC2_routeUsedRequest; /
 
 /**
  * @summary ComputingFunctionServicesC2_routeEndRequest
+ * @description
+ * Advertises `routeEndRequest` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const ComputingFunctionServicesC2_routeEndRequest: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeEndRequest
+ * @description Alias of {@link ComputingFunctionServicesC2_routeEndRequest}.
  * @constant
  */
 export

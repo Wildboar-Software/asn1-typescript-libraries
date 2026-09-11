@@ -8,7 +8,15 @@ import { IA5String, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LanguagePreferences
  * @description
- * 
+ *
+ * Preferred languages for the call: one or more RFC 3066 language tags,
+ * space-separated, in priority order (e.g. `en de nl`). May be set from
+ * signalling, on call creation, when a feature is applied, or via Associate
+ * Data. A null string clears it. On transfer/conference, tags from the old
+ * calls are combined in a switching-function-specific order. ECMA-269 §12.2.16.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

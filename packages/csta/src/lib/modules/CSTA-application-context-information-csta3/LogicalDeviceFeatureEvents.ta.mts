@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LogicalDeviceFeatureEvents
  * @description
- * 
+ *
+ * Logical device-feature events. BIT STRING advertised in ACSE user-information
+ * listing which CSTA services or events this association will use. ECMA-285
+ * §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,13 +41,17 @@ type LogicalDeviceFeatureEvents = BIT_STRING;
 
 /**
  * @summary LogicalDeviceFeatureEvents_agentBusy
+ * @description
+ * Advertises the `agentBusy` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_agentBusy: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary agentBusy
+ * @description Alias of {@link LogicalDeviceFeatureEvents_agentBusy}.
  * @constant
  */
 export
@@ -49,13 +59,17 @@ const agentBusy: number = LogicalDeviceFeatureEvents_agentBusy; /* SHORT_NAMED_B
 
 /**
  * @summary LogicalDeviceFeatureEvents_agentLoggedOn
+ * @description
+ * Advertises the `agentLoggedOn` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_agentLoggedOn: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary agentLoggedOn
+ * @description Alias of {@link LogicalDeviceFeatureEvents_agentLoggedOn}.
  * @constant
  */
 export
@@ -63,13 +77,17 @@ const agentLoggedOn: number = LogicalDeviceFeatureEvents_agentLoggedOn; /* SHORT
 
 /**
  * @summary LogicalDeviceFeatureEvents_agentLoggedOff
+ * @description
+ * Advertises the `agentLoggedOff` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_agentLoggedOff: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary agentLoggedOff
+ * @description Alias of {@link LogicalDeviceFeatureEvents_agentLoggedOff}.
  * @constant
  */
 export
@@ -77,13 +95,17 @@ const agentLoggedOff: number = LogicalDeviceFeatureEvents_agentLoggedOff; /* SHO
 
 /**
  * @summary LogicalDeviceFeatureEvents_agentNotReady
+ * @description
+ * Advertises the `agentNotReady` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_agentNotReady: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary agentNotReady
+ * @description Alias of {@link LogicalDeviceFeatureEvents_agentNotReady}.
  * @constant
  */
 export
@@ -91,13 +113,17 @@ const agentNotReady: number = LogicalDeviceFeatureEvents_agentNotReady; /* SHORT
 
 /**
  * @summary LogicalDeviceFeatureEvents_agentReady
+ * @description
+ * Advertises the `agentReady` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_agentReady: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary agentReady
+ * @description Alias of {@link LogicalDeviceFeatureEvents_agentReady}.
  * @constant
  */
 export
@@ -105,13 +131,19 @@ const agentReady: number = LogicalDeviceFeatureEvents_agentReady; /* SHORT_NAMED
 
 /**
  * @summary LogicalDeviceFeatureEvents_agentWorkingAfterCall
+ * @description
+ * Advertises the `agentWorkingAfterCall` event for this association. ECMA-285
+ * §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_agentWorkingAfterCall: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary agentWorkingAfterCall
+ * @description
+ * Alias of {@link LogicalDeviceFeatureEvents_agentWorkingAfterCall}.
  * @constant
  */
 export
@@ -119,13 +151,17 @@ const agentWorkingAfterCall: number = LogicalDeviceFeatureEvents_agentWorkingAft
 
 /**
  * @summary LogicalDeviceFeatureEvents_autoAnswer
+ * @description
+ * Advertises the `autoAnswer` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_autoAnswer: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary autoAnswer
+ * @description Alias of {@link LogicalDeviceFeatureEvents_autoAnswer}.
  * @constant
  */
 export
@@ -133,13 +169,17 @@ const autoAnswer: number = LogicalDeviceFeatureEvents_autoAnswer; /* SHORT_NAMED
 
 /**
  * @summary LogicalDeviceFeatureEvents_autoWorkMode
+ * @description
+ * Advertises the `autoWorkMode` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_autoWorkMode: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary autoWorkMode
+ * @description Alias of {@link LogicalDeviceFeatureEvents_autoWorkMode}.
  * @constant
  */
 export
@@ -147,13 +187,17 @@ const autoWorkMode: number = LogicalDeviceFeatureEvents_autoWorkMode; /* SHORT_N
 
 /**
  * @summary LogicalDeviceFeatureEvents_callBack
+ * @description
+ * Advertises the `callBack` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_callBack: number = 8; /* LONG_NAMED_BIT */
 
 /**
  * @summary callBack
+ * @description Alias of {@link LogicalDeviceFeatureEvents_callBack}.
  * @constant
  */
 export
@@ -161,13 +205,17 @@ const callBack: number = LogicalDeviceFeatureEvents_callBack; /* SHORT_NAMED_BIT
 
 /**
  * @summary LogicalDeviceFeatureEvents_callBackMessage
+ * @description
+ * Advertises the `callBackMessage` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_callBackMessage: number = 9; /* LONG_NAMED_BIT */
 
 /**
  * @summary callBackMessage
+ * @description Alias of {@link LogicalDeviceFeatureEvents_callBackMessage}.
  * @constant
  */
 export
@@ -175,13 +223,17 @@ const callBackMessage: number = LogicalDeviceFeatureEvents_callBackMessage; /* S
 
 /**
  * @summary LogicalDeviceFeatureEvents_callerIDStatus
+ * @description
+ * Advertises the `callerIDStatus` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_callerIDStatus: number = 10; /* LONG_NAMED_BIT */
 
 /**
  * @summary callerIDStatus
+ * @description Alias of {@link LogicalDeviceFeatureEvents_callerIDStatus}.
  * @constant
  */
 export
@@ -189,13 +241,17 @@ const callerIDStatus: number = LogicalDeviceFeatureEvents_callerIDStatus; /* SHO
 
 /**
  * @summary LogicalDeviceFeatureEvents_doNotDisturb
+ * @description
+ * Advertises the `doNotDisturb` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_doNotDisturb: number = 11; /* LONG_NAMED_BIT */
 
 /**
  * @summary doNotDisturb
+ * @description Alias of {@link LogicalDeviceFeatureEvents_doNotDisturb}.
  * @constant
  */
 export
@@ -203,13 +259,17 @@ const doNotDisturb: number = LogicalDeviceFeatureEvents_doNotDisturb; /* SHORT_N
 
 /**
  * @summary LogicalDeviceFeatureEvents_forwarding
+ * @description
+ * Advertises the `forwarding` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_forwarding: number = 12; /* LONG_NAMED_BIT */
 
 /**
  * @summary forwarding
+ * @description Alias of {@link LogicalDeviceFeatureEvents_forwarding}.
  * @constant
  */
 export
@@ -217,13 +277,17 @@ const forwarding: number = LogicalDeviceFeatureEvents_forwarding; /* SHORT_NAMED
 
 /**
  * @summary LogicalDeviceFeatureEvents_presenceState
+ * @description
+ * Advertises the `presenceState` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_presenceState: number = 14; /* LONG_NAMED_BIT */
 
 /**
  * @summary presenceState
+ * @description Alias of {@link LogicalDeviceFeatureEvents_presenceState}.
  * @constant
  */
 export
@@ -231,13 +295,17 @@ const presenceState: number = LogicalDeviceFeatureEvents_presenceState; /* SHORT
 
 /**
  * @summary LogicalDeviceFeatureEvents_routeingMode
+ * @description
+ * Advertises the `routeingMode` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LogicalDeviceFeatureEvents_routeingMode: number = 13; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeingMode
+ * @description Alias of {@link LogicalDeviceFeatureEvents_routeingMode}.
  * @constant
  */
 export

@@ -9,7 +9,15 @@ import { UniversalFailure, _decode_UniversalFailure, _encode_UniversalFailure } 
 /**
  * @summary ErrorValue
  * @description
- * 
+ *
+ * Alias of `UniversalFailure`. Error category plus a category-specific value in
+ * a negative acknowledgement. The server reports its best evaluation of why it
+ * could not carry out the request on the specified call, device, or connection.
+ * ECMA-269 §9.3, §12.2.14; ECMA-285 §9.19.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

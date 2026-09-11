@@ -27,7 +27,12 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary SnapshotDeviceResponseInfo
  * @description
- * 
+ *
+ * One call at a snapshotted device. 9th edition can include `callLinkageData`.
+ * ECMA-269 §16.1.4, §12.2.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,42 +53,74 @@ class SnapshotDeviceResponseInfo {
     constructor (
         /**
          * @summary `connectionIdentifier`.
+         * @description
+         *
+         * Connection of this call at the device. ECMA-269 §16.1.4.
+         *
          * @public
          * @readonly
          */
         readonly connectionIdentifier: ConnectionID,
         /**
          * @summary `endpointDevice`.
+         * @description
+         *
+         * DeviceID of the endpoint associated with the connection. ECMA-269
+         * §16.1.4.
+         *
          * @public
          * @readonly
          */
         readonly endpointDevice: OPTIONAL<SubjectDeviceID>,
         /**
          * @summary `localCallState`.
+         * @description
+         *
+         * Compound, simple, or unknown call state. ECMA-269 §6.1.4, §16.1.4.
+         *
          * @public
          * @readonly
          */
         readonly localCallState: CallState,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Mandatory if Dynamic Feature Availability is supported. ECMA-269
+         * §16.1.4, §12.2.25.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaServiceInfoList`.
+         * @description
+         *
+         * Media services bound to this connection. ECMA-269 §16.1.4.
+         *
          * @public
          * @readonly
          */
         readonly mediaServiceInfoList: OPTIONAL<DeviceMediaInfoList>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Media class of the call (not connection flow). ECMA-269 §16.1.4,
+         * §12.2.20.
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Global call / thread linkage for this call. ECMA-269 §16.1.4,
+         * §12.2.5.
+         *
          * @public
          * @readonly
          */

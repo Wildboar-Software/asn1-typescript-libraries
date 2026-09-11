@@ -21,7 +21,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MicrophoneGainEvent
  * @description
- * 
+ *
+ * Microphone Gain event (ECMA-269 §21.2.7 / ECMA-285 §19.2.7). Direction: SF→CF
+ * via Event Report. Microphone gain changed (telephone or Set Microphone Gain).
+ * Not generated when a Set request leaves the feature unchanged (ECMA-269
+ * §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +47,38 @@ class MicrophoneGainEvent {
     constructor (
         /**
          * @summary `invokingDevice`.
+         * @description
+         *
+         * Device where the feature was invoked.
          * @public
          * @readonly
          */
         readonly invokingDevice: SubjectDeviceID,
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Apparatus containing the microphone whose gain changed.
          * @public
          * @readonly
          */
         readonly auditoryApparatus: AuditoryApparatusID,
         /**
          * @summary `microphoneGain`.
+         * @description
+         *
+         * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
+         * increment/decrement by a switch-specified step.
          * @public
          * @readonly
          */
         readonly microphoneGain: MicrophoneGain,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

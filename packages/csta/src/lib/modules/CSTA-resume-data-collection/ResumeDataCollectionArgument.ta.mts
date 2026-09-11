@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ResumeDataCollectionArgument
  * @description
- * 
+ *
+ * Identifies the collection to resume (ECMA-269 §25.1.4.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class ResumeDataCollectionArgument {
     constructor (
         /**
          * @summary `dcollCrossRefID`.
+         * @description
+         *
+         * Cross-reference identifying this data collection (ECMA-269 §25).
+         *
          * @public
          * @readonly
          */
         readonly dcollCrossRefID: DcollCrossRefID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary synthesizeMessage
  * @description
- * 
+ *
+ * Constructs a voice message from a text message (ECMA-269 §26.1.17).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:510. Errors: `universalFailure` (ECMA-285 §24.1.17).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

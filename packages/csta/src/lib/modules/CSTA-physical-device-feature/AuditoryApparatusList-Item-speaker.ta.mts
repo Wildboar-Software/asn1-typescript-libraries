@@ -8,7 +8,11 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AuditoryApparatusList_Item_speaker
  * @description
- * 
+ *
+ * Speaker capabilities of an auditory apparatus. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +30,10 @@ type AuditoryApparatusList_Item_speaker = BIT_STRING;
 
 /**
  * @summary AuditoryApparatusList_Item_speaker_present
+ * @description
+ *
+ * Speaker is present. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -40,6 +48,10 @@ const present: number = AuditoryApparatusList_Item_speaker_present; /* SHORT_NAM
 
 /**
  * @summary AuditoryApparatusList_Item_speaker_volumeSettable
+ * @description
+ *
+ * Speaker volume can be set. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -54,6 +66,10 @@ const volumeSettable: number = AuditoryApparatusList_Item_speaker_volumeSettable
 
 /**
  * @summary AuditoryApparatusList_Item_speaker_volumeReadable
+ * @description
+ *
+ * Speaker volume can be read. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -68,6 +84,10 @@ const volumeReadable: number = AuditoryApparatusList_Item_speaker_volumeReadable
 
 /**
  * @summary AuditoryApparatusList_Item_speaker_muteSettable
+ * @description
+ *
+ * Speaker mute can be set. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -82,6 +102,10 @@ const muteSettable: number = AuditoryApparatusList_Item_speaker_muteSettable; /*
 
 /**
  * @summary AuditoryApparatusList_Item_speaker_muteReadable
+ * @description
+ *
+ * Speaker mute can be read. ECMA-285 §9.16.
+ *
  * @constant
  */
 export

@@ -60,7 +60,14 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary OriginatedEvent
  * @description
- * 
+ *
+ * Originated event payload (ECMA-269 §17.2.14 / ECMA-285 §15.2.14) for
+ * `cSTAEventReport`. Generated only when a monitor is on the initiating device
+ * (FR 1), or on a monitorable NID for external incoming (FR 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,126 +102,222 @@ class OriginatedEvent {
     constructor (
         /**
          * @summary `originatedConnection`.
+         * @description
+         *
+         * Mandatory. Connection at which the call originated.
+         *
          * @public
          * @readonly
          */
         readonly originatedConnection: ConnectionID,
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Mandatory. Calling device.
+         *
          * @public
          * @readonly
          */
         readonly callingDevice: SubjectDeviceID,
         /**
          * @summary `calledDevice`.
+         * @description
+         *
+         * Mandatory. Originally called device.
+         *
          * @public
          * @readonly
          */
         readonly calledDevice: CalledDeviceID,
         /**
          * @summary `originatingDevice`.
+         * @description
+         *
+         * Optional. Device that originated on behalf of the calling device (for
+         * example a group). Not a NID. Omitted for external incoming or when
+         * identical to the calling device.
+         *
          * @public
          * @readonly
          */
         readonly originatingDevice: OPTIONAL<DeviceID>,
         /**
          * @summary `localConnectionInfo`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.17). For the initiating
+         * device: Connected.
+         *
          * @public
          * @readonly
          */
         readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Conditional. Present when correlator data is associated with the call
+         * (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Mandatory. Table 17-178 lists Call Back, Conference, Consultation,
+         * Make Call, New Call, Normal, Transfer.
+         *
          * @public
          * @readonly
          */
         readonly cause: EventCause,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
+         * Feature Availability is supported.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `networkCallingDevice`.
+         * @description
+         *
+         * Optional. Original calling device from the network, external incoming
+         * only. Does not change while `associatedCallingDevice` remains.
+         *
          * @public
          * @readonly
          */
         readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
+         * @description
+         *
+         * Optional. Original called device from the network, external incoming
+         * only. Does not change while `associatedCallingDevice` remains.
+         *
          * @public
          * @readonly
          */
         readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
+         * @description
+         *
+         * Conditional. NID of the calling device for external incoming calls.
+         * Mandatory then; omitted otherwise.
+         *
          * @public
          * @readonly
          */
         readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDevice`.
+         * @description
+         *
+         * Conditional. NID of the called device for external outgoing
+         * (mandatory); optional for external incoming.
+         *
          * @public
          * @readonly
          */
         readonly associatedCalledDevice: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional media class and characteristics (§12.2.20).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional high-level call characteristics (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `originatedConnectionInfo`.
+         * @description
+         *
+         * Optional connection information. Omitted values are
+         * switching-function specific (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly originatedConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Conditional. Mandatory if call linkage is supported (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Optional subject or intent (§12.2.27).
+         *
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `messageInfo`.
+         * @description
+         *
+         * Optional message contents associated with the call.
+         *
          * @public
          * @readonly
          */
         readonly messageInfo: OPTIONAL<MessageInfo>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * Optional location information for devices in the call.
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and privateData
+         * parameters from the ECMA-269 event table.
+         *
          * @public
          * @readonly
          */
@@ -250,7 +353,8 @@ class OriginatedEvent {
  * @summary The Leading Root Component Types of OriginatedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -283,7 +387,8 @@ const _root_component_type_list_1_spec_for_OriginatedEvent: $.ComponentSpec[] = 
  * @summary The Trailing Root Component Types of OriginatedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -296,7 +401,8 @@ const _root_component_type_list_2_spec_for_OriginatedEvent: $.ComponentSpec[] = 
  * @summary The Extension Addition Component Types of OriginatedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -9,7 +9,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AnswerCallResult
  * @description
- * 
+ *
+ * Positive acknowledgement: `extensions` for security/private data, or `noData`
+ * (NULL) when none are returned. Atomic vs multi-step acknowledgement is
+ * advertised via capability exchange.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

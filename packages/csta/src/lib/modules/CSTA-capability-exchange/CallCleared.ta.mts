@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CallCleared
  * @description
- * 
+ * Capability bitmap for the Call Cleared event (ECMA-269 C.6.2, ECMA-285
+ * §9.10). Presence of this entry in `CallControlEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +36,9 @@ type CallCleared = BIT_STRING;
 /**
  * @summary CallCleared_correlatorData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `correlatorData` parameter
+ * (ECMA-269 C.6.2).
  */
 export
 const CallCleared_correlatorData: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +46,8 @@ const CallCleared_correlatorData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary correlatorData
  * @constant
+ * @description
+ * Alias of `CallCleared_correlatorData`.
  */
 export
 const correlatorData: number = CallCleared_correlatorData; /* SHORT_NAMED_BIT */
@@ -42,6 +55,9 @@ const correlatorData: number = CallCleared_correlatorData; /* SHORT_NAMED_BIT */
 /**
  * @summary CallCleared_userData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `userData` parameter (ECMA-269
+ * C.6.2).
  */
 export
 const CallCleared_userData: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +65,8 @@ const CallCleared_userData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary userData
  * @constant
+ * @description
+ * Alias of `CallCleared_userData`.
  */
 export
 const userData: number = CallCleared_userData; /* SHORT_NAMED_BIT */
@@ -56,6 +74,9 @@ const userData: number = CallCleared_userData; /* SHORT_NAMED_BIT */
 /**
  * @summary CallCleared_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.6.2).
  */
 export
 const CallCleared_mediaCallCharacteristics: number = 2; /* LONG_NAMED_BIT */
@@ -63,6 +84,8 @@ const CallCleared_mediaCallCharacteristics: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `CallCleared_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = CallCleared_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -70,6 +93,9 @@ const mediaCallCharacteristics: number = CallCleared_mediaCallCharacteristics; /
 /**
  * @summary CallCleared_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.6.2).
  */
 export
 const CallCleared_callCharacteristics: number = 3; /* LONG_NAMED_BIT */
@@ -77,6 +103,8 @@ const CallCleared_callCharacteristics: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `CallCleared_callCharacteristics`.
  */
 export
 const callCharacteristics: number = CallCleared_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -84,6 +112,9 @@ const callCharacteristics: number = CallCleared_callCharacteristics; /* SHORT_NA
 /**
  * @summary CallCleared_callLinkageData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callLinkageData` parameter
+ * (ECMA-269 C.6.2).
  */
 export
 const CallCleared_callLinkageData: number = 6; /* LONG_NAMED_BIT */
@@ -91,6 +122,8 @@ const CallCleared_callLinkageData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary callLinkageData
  * @constant
+ * @description
+ * Alias of `CallCleared_callLinkageData`.
  */
 export
 const callLinkageData: number = CallCleared_callLinkageData; /* SHORT_NAMED_BIT */
@@ -98,6 +131,9 @@ const callLinkageData: number = CallCleared_callLinkageData; /* SHORT_NAMED_BIT 
 /**
  * @summary CallCleared_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.6.2).
  */
 export
 const CallCleared_privateData: number = 4; /* LONG_NAMED_BIT */
@@ -105,6 +141,8 @@ const CallCleared_privateData: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `CallCleared_privateData`.
  */
 export
 const privateData: number = CallCleared_privateData; /* SHORT_NAMED_BIT */
@@ -112,6 +150,9 @@ const privateData: number = CallCleared_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary CallCleared_callIDOnly
  * @constant
+ * @description
+ * Bit set means the SF supports CallID-only ConnectionIDs for this service
+ * (ECMA-269 C.6.2).
  */
 export
 const CallCleared_callIDOnly: number = 5; /* LONG_NAMED_BIT */
@@ -119,6 +160,8 @@ const CallCleared_callIDOnly: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary callIDOnly
  * @constant
+ * @description
+ * Alias of `CallCleared_callIDOnly`.
  */
 export
 const callIDOnly: number = CallCleared_callIDOnly; /* SHORT_NAMED_BIT */

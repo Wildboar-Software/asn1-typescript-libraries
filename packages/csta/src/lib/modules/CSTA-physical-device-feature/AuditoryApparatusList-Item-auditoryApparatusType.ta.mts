@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType
  * @description
- * 
+ *
+ * Kind of auditory apparatus. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,7 +39,11 @@ enum _enum_for_AuditoryApparatusList_Item_auditoryApparatusType {
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType
  * @description
- * 
+ *
+ * Kind of auditory apparatus. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,7 +64,11 @@ type AuditoryApparatusList_Item_auditoryApparatusType = _enum_for_AuditoryAppara
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType
  * @description
- * 
+ *
+ * Kind of auditory apparatus. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +88,10 @@ const AuditoryApparatusList_Item_auditoryApparatusType = _enum_for_AuditoryAppar
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_speakerphone
+ * @description
+ *
+ * Speakerphone. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +108,10 @@ const speakerphone: AuditoryApparatusList_Item_auditoryApparatusType = AuditoryA
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_handset
+ * @description
+ *
+ * Handset. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +128,10 @@ const handset: AuditoryApparatusList_Item_auditoryApparatusType = AuditoryAppara
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_headset
+ * @description
+ *
+ * Headset. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -124,6 +148,10 @@ const headset: AuditoryApparatusList_Item_auditoryApparatusType = AuditoryAppara
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_speakerOnlyPhone
+ * @description
+ *
+ * Speaker-only phone. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -140,6 +168,10 @@ const speakerOnlyPhone: AuditoryApparatusList_Item_auditoryApparatusType = Audit
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_other
+ * @description
+ *
+ * Other apparatus type. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */

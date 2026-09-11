@@ -8,7 +8,15 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SignallingCondition
  * @description
- * 
+ *
+ * Call-progress trigger for Make Predictive Call
+ * (ECMA-269 §17.1.20 Table 17-110): `callDelivered`
+ * (delivered or answered, whichever first) or
+ * `callEstablished` (answered).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +36,15 @@ enum _enum_for_SignallingCondition {
 /**
  * @summary SignallingCondition
  * @description
- * 
+ *
+ * Call-progress trigger for Make Predictive Call
+ * (ECMA-269 §17.1.20 Table 17-110): `callDelivered`
+ * (delivered or answered, whichever first) or
+ * `callEstablished` (answered).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +61,15 @@ type SignallingCondition = _enum_for_SignallingCondition;
 /**
  * @summary SignallingCondition
  * @description
- * 
+ *
+ * Call-progress trigger for Make Predictive Call
+ * (ECMA-269 §17.1.20 Table 17-110): `callDelivered`
+ * (delivered or answered, whichever first) or
+ * `callEstablished` (answered).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

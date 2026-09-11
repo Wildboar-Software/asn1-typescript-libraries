@@ -22,7 +22,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary PlayMessageArgument
  * @description
- * 
+ *
+ * Message, connection, optional duration and termination (ECMA-269 §26.1.6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,30 +47,51 @@ class PlayMessageArgument {
     constructor (
         /**
          * @summary `messageToBePlayed`.
+         * @description
+         *
+         * Message to play (ECMA-269 §26.1.6.1).
+         *
          * @public
          * @readonly
          */
         readonly messageToBePlayed: MessageID,
         /**
          * @summary `overConnection`.
+         * @description
+         *
+         * Connection on which to play (ECMA-269 §26.1.6.1).
+         *
          * @public
          * @readonly
          */
         readonly overConnection: ConnectionID,
         /**
          * @summary `duration`.
+         * @description
+         *
+         * Play duration, when specified (ECMA-269 §26.1.6.1).
+         *
          * @public
          * @readonly
          */
         readonly duration: OPTIONAL<INTEGER>,
         /**
          * @summary `termination`.
+         * @description
+         *
+         * Conditions that stop playback (ECMA-269 §26.1.6.1).
+         *
          * @public
          * @readonly
          */
         readonly termination: OPTIONAL<TerminatingConditions>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

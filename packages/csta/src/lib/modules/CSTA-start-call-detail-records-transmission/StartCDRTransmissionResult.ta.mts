@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartCDRTransmissionResult
  * @description
- * 
+ *
+ * Returns `cdrCrossRefID` for later CDR services (ECMA-269 §27.1.4.2.1 / FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class StartCDRTransmissionResult {
     constructor (
         /**
          * @summary `cdrCrossRefID`.
+         * @description
+         *
+         * Identifier for this CDR transmission (ECMA-269 §27.1.4.2.1).
+         *
          * @public
          * @readonly
          */
         readonly cdrCrossRefID: CDRCrossRefID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

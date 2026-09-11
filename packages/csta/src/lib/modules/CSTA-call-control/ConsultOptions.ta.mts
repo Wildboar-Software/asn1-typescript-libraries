@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ConsultOptions
  * @description
- * 
+ *
+ * Potential action after Consultation Call or Alternate Call so the switch can
+ * allocate Transfer or Conference facilities. Does not restrict other services.
+ * Default Unrestricted. If the switch does not support this parameter,
+ * Unrestricted is implicit. ECMA-269 §17.1.10.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +39,14 @@ enum _enum_for_ConsultOptions {
 /**
  * @summary ConsultOptions
  * @description
- * 
+ *
+ * Potential action after Consultation Call or Alternate Call so the switch can
+ * allocate Transfer or Conference facilities. Does not restrict other services.
+ * Default Unrestricted. If the switch does not support this parameter,
+ * Unrestricted is implicit. ECMA-269 §17.1.10.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,7 +65,14 @@ type ConsultOptions = _enum_for_ConsultOptions;
 /**
  * @summary ConsultOptions
  * @description
- * 
+ *
+ * Potential action after Consultation Call or Alternate Call so the switch can
+ * allocate Transfer or Conference facilities. Does not restrict other services.
+ * Default Unrestricted. If the switch does not support this parameter,
+ * Unrestricted is implicit. ECMA-269 §17.1.10.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +90,10 @@ const ConsultOptions = _enum_for_ConsultOptions;
 
 /**
  * @summary ConsultOptions_unrestricted
+ * @description
+ *
+ * No restriction on a later Transfer or Conference. Default. ECMA-269 §17.1.10.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +110,10 @@ const unrestricted: ConsultOptions = ConsultOptions.unrestricted; /* SHORT_NAMED
 
 /**
  * @summary ConsultOptions_consultOnly
+ * @description
+ *
+ * Consultation only; not intending Transfer or Conference. ECMA-269 §17.1.10.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +130,10 @@ const consultOnly: ConsultOptions = ConsultOptions.consultOnly; /* SHORT_NAMED_E
 
 /**
  * @summary ConsultOptions_transferOnly
+ * @description
+ *
+ * Consultation intended to be completed by Transfer. ECMA-269 §17.1.10.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +150,10 @@ const transferOnly: ConsultOptions = ConsultOptions.transferOnly; /* SHORT_NAMED
 
 /**
  * @summary ConsultOptions_conferenceOnly
+ * @description
+ *
+ * Consultation intended to be completed by Conference. ECMA-269 §17.1.10.
+ *
  * @constant
  * @type {number}
  */

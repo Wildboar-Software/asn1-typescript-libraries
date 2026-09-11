@@ -1,7 +1,14 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-capability-exchange`.
+ * Capability-exchange parameter types (ECMA-285 §9.10): BIT STRING
+ * bitmaps and SEQUENCEs used by Get Switching Function Capabilities,
+ * Get Logical Device Information, and Get Physical Device Information
+ * (ECMA-269 §13, Annex C). Not the Get CSTA Features operation —
+ * that is `CSTA-get-csta-features-service`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export {
     type AcceptCall,

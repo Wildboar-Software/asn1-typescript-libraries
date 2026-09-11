@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ConcatenateMessageResult
  * @description
- * 
+ *
+ * Identifier of the resulting message, valid until deleted (ECMA-269
+ * §26.1.3.2.1 / FR 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,21 @@ class ConcatenateMessageResult {
     constructor (
         /**
          * @summary `concatenatedMessage`.
+         * @description
+         *
+         * Resulting MessageID (ECMA-269 §26.1.3.2.1).
+         *
          * @public
          * @readonly
          */
         readonly concatenatedMessage: MessageID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

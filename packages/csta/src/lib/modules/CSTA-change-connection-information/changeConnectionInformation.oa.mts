@@ -26,7 +26,15 @@ import {
 /**
  * @summary changeConnectionInformation
  * @description
- * 
+ *
+ * Change Connection Information (ECMA-269 §18.1.3 / ECMA-285 §16.1.3).
+ * Direction: CF→SF. ROSE local CODE 377. Errors: `universalFailure`. Updates
+ * `requestedConnectionInfo` on `connectionToBeChanged`.
+ * The ack returns the actual connection information applied.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

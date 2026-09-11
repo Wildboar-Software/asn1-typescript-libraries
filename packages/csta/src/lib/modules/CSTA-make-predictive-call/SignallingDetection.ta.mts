@@ -27,7 +27,15 @@ import {
 /**
  * @summary SignallingDetection
  * @description
- * 
+ *
+ * Call-progress condition and action for Make Predictive
+ * Call (ECMA-269 §17.1.20 Table 17-110). Completes the
+ * service when the named condition is met, or when a
+ * blocking event or Connection Cleared occurs instead.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,12 +51,24 @@ class SignallingDetection {
     constructor (
         /**
          * @summary `signallingCondition`.
+         * @description
+         *
+         * Mandatory. `callDelivered` or `callEstablished`
+         * before the action is processed.
+         *
          * @public
          * @readonly
          */
         readonly signallingCondition: SignallingCondition,
         /**
          * @summary `signallingConditionsAction`.
+         * @description
+         *
+         * Mandatory. `destinationDetection` follows
+         * `destinationDetection` entries;
+         * `remainConnected` keeps the called device and
+         * attempts the calling-device connection.
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary generateDigits
  * @description
- * 
+ *
+ * Generate Digits (ECMA-269 §18.1.4 / ECMA-285 §16.1.4). Direction: CF→SF. ROSE
+ * local CODE 232. Errors: `universalFailure`. Generates DTMF or rotary digits
+ * on `connectionToSendDigits`.
+ * Data Collection services report digits received, not generated.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

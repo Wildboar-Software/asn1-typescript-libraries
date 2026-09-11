@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallBackMessageResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Call Back Message Call-Related
+ * (ECMA-269 §17.1.5 / ECMA-285 §15.1.5). May identify the device
+ * where the message was left.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,21 @@ class CallBackMessageResult {
     constructor (
         /**
          * @summary `targetDevice`.
+         * @description
+         *
+         * Optional. Device at which the message was left.
+         *
          * @public
          * @readonly
          */
         readonly targetDevice: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

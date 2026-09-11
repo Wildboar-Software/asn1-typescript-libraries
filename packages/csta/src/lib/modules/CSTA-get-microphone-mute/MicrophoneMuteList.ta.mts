@@ -9,7 +9,12 @@ import { MicrophoneMuteList_Item, _decode_MicrophoneMuteList_Item, _encode_Micro
 /**
  * @summary MicrophoneMuteList
  * @description
- * 
+ *
+ * SEQUENCE OF microphone-mute entries (ECMA-269 §21.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

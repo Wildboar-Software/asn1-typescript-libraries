@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetAgentStateArgument
  * @description
- * 
+ *
+ * Get Agent State request (ECMA-269 §22.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,28 @@ class GetAgentStateArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose agent state is queried.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `acdGroup`.
+         * @description
+         *
+         * If provided, limit the result to this ACD group.
          * @public
          * @readonly
          */
         readonly acdGroup: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

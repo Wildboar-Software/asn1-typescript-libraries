@@ -59,7 +59,13 @@ import { SetSpeakerVolume, _decode_SetSpeakerVolume, _encode_SetSpeakerVolume } 
 /**
  * @summary PhysDevServList
  * @description
- * 
+ * Physical Device Feature services the SF supports (ECMA-269 Annex C.12,
+ * ECMA-285 §9.10). Omit unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,138 +104,207 @@ class PhysDevServList {
          * @summary `buttonPress`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly buttonPress: OPTIONAL<ButtonPress>,
         /**
          * @summary `getAuditoryApparatusInfo`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getAuditoryApparatusInfo: OPTIONAL<GetAuditoryApparatusInfo>,
         /**
          * @summary `getButtonInformation`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getButtonInformation: OPTIONAL<GetButtonInformation>,
         /**
          * @summary `getDisplay`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getDisplay: OPTIONAL<GetDisplay>,
         /**
          * @summary `getHookSwitchStatus`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getHookSwitchStatus: OPTIONAL<GetHookSwitchStatus>,
         /**
          * @summary `getLampInfo`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getLampInfo: OPTIONAL<GetLampInfo>,
         /**
          * @summary `getLampMode`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getLampMode: OPTIONAL<GetLampMode>,
         /**
          * @summary `getMessageWaitingIndicator`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getMessageWaitingIndicator: OPTIONAL<GetMessageWaitingIndicator>,
         /**
          * @summary `getMicrophoneGain`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getMicrophoneGain: OPTIONAL<GetMicrophoneGain>,
         /**
          * @summary `getMicrophoneMute`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getMicrophoneMute: OPTIONAL<GetMicrophoneMute>,
         /**
          * @summary `getRingerStatus`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getRingerStatus: OPTIONAL<GetRingerStatus>,
         /**
          * @summary `getSpeakerMute`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getSpeakerMute: OPTIONAL<GetSpeakerMute>,
         /**
          * @summary `getSpeakerVolume`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getSpeakerVolume: OPTIONAL<GetSpeakerVolume>,
         /**
          * @summary `setButtonInformation`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setButtonInformation: OPTIONAL<SetButtonInformation>,
         /**
          * @summary `setDisplay`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setDisplay: OPTIONAL<SetDisplay>,
         /**
          * @summary `setHookSwitchStatus`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setHookSwitchStatus: OPTIONAL<SetHookSwitchStatus>,
         /**
          * @summary `setLampMode`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setLampMode: OPTIONAL<SetLampMode>,
         /**
          * @summary `setMessageWaitingIndicator`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setMessageWaitingIndicator: OPTIONAL<SetMessageWaitingIndicator>,
         /**
          * @summary `setMicrophoneGain`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setMicrophoneGain: OPTIONAL<SetMicrophoneGain>,
         /**
          * @summary `setMicrophoneMute`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setMicrophoneMute: OPTIONAL<SetMicrophoneMute>,
         /**
          * @summary `setRingerStatus`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setRingerStatus: OPTIONAL<SetRingerStatus>,
         /**
          * @summary `setSpeakerMute`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setSpeakerMute: OPTIONAL<SetSpeakerMute>,
         /**
          * @summary `setSpeakerVolume`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setSpeakerVolume: OPTIONAL<SetSpeakerVolume>
     ) {}

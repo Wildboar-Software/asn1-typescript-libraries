@@ -79,7 +79,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLogicalDeviceInformationResult
  * @description
- * 
+ *
+ * Positive acknowledgement (ECMA-269 Table 13-5). Logical-element
+ * category, appearances, monitor filters, and per-device service/
+ * event bitmaps. `deviceCategory` defaults to station.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -128,210 +135,341 @@ class GetLogicalDeviceInformationResult {
     constructor (
         /**
          * @summary `deviceCategory`.
+         * @description
+         *
+         * Category of the queried device (station default, ACD, group,
+         * network interface, park, routeing, voice unit, IV variants,
+         * conference, other).
          * @public
          * @readonly
          */
         readonly deviceCategory: OPTIONAL<DeviceCategory>,
         /**
          * @summary `groupDeviceAttributes`.
+         * @description
+         *
+         * Group attributes (ACD, hunt, pick, user, agent, other). Shall
+         * be present iff `deviceCategory` is Group.
          * @public
          * @readonly
          */
         readonly groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>,
         /**
          * @summary `namedDeviceTypes`.
+         * @description
+         *
+         * Named device type assigned by the SF, if any.
          * @public
          * @readonly
          */
         readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
         /**
          * @summary `shortFormDeviceID`.
+         * @description
+         *
+         * Shorter DeviceID the SF may use for this device.
          * @public
          * @readonly
          */
         readonly shortFormDeviceID: OPTIONAL<DeviceID>,
         /**
          * @summary `hasPhysicalElement`.
+         * @description
+         *
+         * TRUE if this DeviceID also has a physical element; use Get
+         * Physical Device Information with the same identifier.
          * @public
          * @readonly
          */
         readonly hasPhysicalElement: BOOLEAN,
         /**
          * @summary `acdModels`.
+         * @description
+         *
+         * ACD models at this device (visible / non-visible ACD-related
+         * devices). Meaningful when the device is an ACD device.
          * @public
          * @readonly
          */
         readonly acdModels: ACDModels,
         /**
          * @summary `agentLogOnModels`.
+         * @description
+         *
+         * Agent log-on models at this device. Provided if configured at
+         * the logical element. Implicit one-step group log-on cannot
+         * coexist with log-on to an ACD device.
          * @public
          * @readonly
          */
         readonly agentLogOnModels: OPTIONAL<AgentLogOnModels>,
         /**
          * @summary `appearanceAddressable`.
+         * @description
+         *
+         * TRUE if appearances are addressable via CA or EXT in the SF
+         * representation DeviceID format.
          * @public
          * @readonly
          */
         readonly appearanceAddressable: BOOLEAN,
         /**
          * @summary `appearanceType`.
+         * @description
+         *
+         * Appearance model: selected/basic-standard, basic/exclusive-
+         * bridged, independent/interdependent shared-bridged.
          * @public
          * @readonly
          */
         readonly appearanceType: AppearanceType,
         /**
          * @summary `appearanceList`.
+         * @description
+         *
+         * Appearance suffix strings. Mandatory if appearances are
+         * addressable and Selected-Standard or Basic-Standard.
          * @public
          * @readonly
          */
         readonly appearanceList: OPTIONAL<IA5String[]>,
         /**
          * @summary `otherPhysicalDeviceList`.
+         * @description
+         *
+         * Other physical-element DeviceIDs associated with this logical
+         * appearance. Mandatory if addressable bridged appearances.
+         * Hybrid configs: order matches `appearanceList`.
          * @public
          * @readonly
          */
         readonly otherPhysicalDeviceList: OPTIONAL<DeviceID[]>,
         /**
          * @summary `miscMonitorCaps`.
+         * @description
+         *
+         * Special monitoring (group inclusive/exclusive, ACD inclusive/
+         * exclusive, bridged-appearance scope, etc.).
          * @public
          * @readonly
          */
         readonly miscMonitorCaps: OPTIONAL<MiscMonitorCaps>,
         /**
          * @summary `associatedGroupList`.
+         * @description
+         *
+         * Group DeviceIDs associated with this device.
          * @public
          * @readonly
          */
         readonly associatedGroupList: OPTIONAL<DeviceID[]>,
         /**
          * @summary `maxCallbacks`.
+         * @description
+         *
+         * Max concurrent callback registrations; omitted if unknown.
          * @public
          * @readonly
          */
         readonly maxCallbacks: OPTIONAL<INTEGER>,
         /**
          * @summary `maxAutoAnswerRings`.
+         * @description
+         *
+         * Max auto-answer rings; omitted if unknown.
          * @public
          * @readonly
          */
         readonly maxAutoAnswerRings: OPTIONAL<INTEGER>,
         /**
          * @summary `maxActiveCalls`.
+         * @description
+         *
+         * Max concurrent active calls; omitted if unknown.
          * @public
          * @readonly
          */
         readonly maxActiveCalls: OPTIONAL<INTEGER>,
         /**
          * @summary `maxHeldCalls`.
+         * @description
+         *
+         * Max concurrent held calls; omitted if unknown.
          * @public
          * @readonly
          */
         readonly maxHeldCalls: OPTIONAL<INTEGER>,
         /**
          * @summary `maxFwdSettings`.
+         * @description
+         *
+         * Max simultaneous user forwarding-type/destination settings;
+         * omitted if unknown.
          * @public
          * @readonly
          */
         readonly maxFwdSettings: OPTIONAL<INTEGER>,
         /**
          * @summary `maxDevicesInConf`.
+         * @description
+         *
+         * Max devices this device can conference into a call (minimum
+         * supplied value is 3); omitted if unknown.
          * @public
          * @readonly
          */
         readonly maxDevicesInConf: OPTIONAL<INTEGER>,
         /**
          * @summary `transAndConfSetup`.
+         * @description
+         *
+         * How this device sets up transfer/conference. Absent means
+         * Consultation Call only.
          * @public
          * @readonly
          */
         readonly transAndConfSetup: OPTIONAL<TransAndConfSetup>,
         /**
          * @summary `deviceOnDeviceMonitorFilter`.
+         * @description
+         *
+         * Full monitorFilter this device supports for device-type
+         * monitoring. Present iff that form is supported.
          * @public
          * @readonly
          */
         readonly deviceOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `deviceOnConnectionMonitorFilter`.
+         * @description
+         *
+         * MonitorFilter for connections at this device under device-type
+         * monitoring. Present iff supported.
          * @public
          * @readonly
          */
         readonly deviceOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnDeviceMonitorFilter`.
+         * @description
+         *
+         * MonitorFilter for call-type monitoring on the device. Present
+         * iff supported.
          * @public
          * @readonly
          */
         readonly callOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnConnectionMonitorFilter`.
+         * @description
+         *
+         * MonitorFilter for call-type monitoring of a connection at this
+         * device. Present iff supported.
          * @public
          * @readonly
          */
         readonly callOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `mediaClassSupport`.
+         * @description
+         *
+         * Media classes this device can host (audio, data, image, voice,
+         * chat, email, message, IM, SMS, MMS, other).
          * @public
          * @readonly
          */
         readonly mediaClassSupport: OPTIONAL<MonitorMediaClass>,
         /**
          * @summary `mediaServiceCapsList`.
+         * @description
+         *
+         * Media service type/version/instance and connection modes.
+         * Present iff the device supports media access.
          * @public
          * @readonly
          */
         readonly mediaServiceCapsList: OPTIONAL<MediaServiceCapsList>,
         /**
          * @summary `connectionRateList`.
+         * @description
+         *
+         * Supported connection rates; omitted if unknown.
          * @public
          * @readonly
          */
         readonly connectionRateList: OPTIONAL<ConnectionRateList>,
         /**
          * @summary `delayToleranceList`.
+         * @description
+         *
+         * Supported delay tolerances; omitted if unknown.
          * @public
          * @readonly
          */
         readonly delayToleranceList: OPTIONAL<DelayToleranceList>,
         /**
          * @summary `numberOfChannels`.
+         * @description
+         *
+         * Available channels; omitted means unknown but at least one.
          * @public
          * @readonly
          */
         readonly numberOfChannels: OPTIONAL<NumberOfChannels>,
         /**
          * @summary `maxChannelBind`.
+         * @description
+         *
+         * Max channels per connection; omitted means one.
          * @public
          * @readonly
          */
         readonly maxChannelBind: OPTIONAL<MaxChannelBind>,
         /**
          * @summary `routeingServList`.
+         * @description
+         *
+         * Routeing services this device supports (both directions when
+         * bi-directional). Route Mode is a logical-device feature.
          * @public
          * @readonly
          */
         readonly routeingServList: OPTIONAL<RouteingServList>,
         /**
          * @summary `logDevServList`.
+         * @description
+         *
+         * Logical-device service bitmaps (call control, call associated,
+         * logical features, media, I/O, data collection, voice, location).
          * @public
          * @readonly
          */
         readonly logDevServList: OPTIONAL<LogDevServList>,
         /**
          * @summary `logDevEvtsList`.
+         * @description
+         *
+         * Logical-device event bitmaps (call control, call associated,
+         * logical, media, voice).
          * @public
          * @readonly
          */
         readonly logDevEvtsList: OPTIONAL<LogDevEvtsList>,
         /**
          * @summary `deviceMaintEvtsList`.
+         * @description
+         *
+         * Device-maintenance events this device supports.
          * @public
          * @readonly
          */
         readonly deviceMaintEvtsList: OPTIONAL<DeviceMaintEvtsList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 13-5.
          * @public
          * @readonly
          */

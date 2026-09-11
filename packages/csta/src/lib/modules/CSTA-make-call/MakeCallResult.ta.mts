@@ -23,7 +23,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MakeCallResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Make Call (ECMA-269 §17.1.18 /
+ * ECMA-285 §15.1.18). Returns the calling device's connection.
+ * May include adjusted media/connection values for digital data.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +49,55 @@ class MakeCallResult {
     constructor (
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Mandatory. Calling device's connection in the new call.
+         * Same ConnectionID as Service Initiated when Make Call
+         * follows off-hook (FR 6).
+         *
          * @public
          * @readonly
          */
         readonly callingDevice: ConnectionID,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional. Media characteristics actually used; may be
+         * adjusted from the request (§12.2.20).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `initiatedCallInfo`.
+         * @description
+         *
+         * Optional connection information for the calling
+         * connection (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly initiatedCallInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional call-linkage identifiers (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

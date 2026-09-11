@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary joinCall
  * @description
- * 
+ *
+ * Join Call (ECMA-269 §17.1.17 / ECMA-285 §15.1.17). Invoked by
+ * the computing function on the switching function. Adds
+ * `joiningDevice` to `activeCall`. The resulting CallID is
+ * inherited from the original call (FR 6). Forwarding and DND at
+ * the joining device are not honoured (FR 5). ROSE local
+ * CODE 223. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

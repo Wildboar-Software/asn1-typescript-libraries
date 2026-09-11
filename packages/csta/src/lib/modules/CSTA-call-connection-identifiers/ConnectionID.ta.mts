@@ -13,7 +13,30 @@ import { ConnectionID_both, _decode_ConnectionID_both, _encode_ConnectionID_both
 /**
  * @summary ConnectionID
  * @description
- * 
+ *
+ * A device’s connection in a given call (`APPLICATION 11`;
+ * ECMA-269 §12.3.9, §6.1.3; ECMA-285 §9.3). The switching function
+ * allocates these; computing functions must not invent them
+ * (unpredictable results). IDs in events and positive
+ * acknowledgements always come from the switching function.
+ *
+ * - `both`: complete ID (`callID` + `deviceID`). Required format in
+ *   events/acks except Call Cleared and Failed, which may be
+ *   callID-only.
+ * - `deviceID`: DeviceID-only. If used, every ConnectionID parameter
+ *   on that service shall be this form. The DeviceID shall be
+ *   static. Acceptance is service-specific; otherwise negative ack.
+ * - `callID`: CallID-only. In events, only Call Cleared and Failed.
+ *   In services, only Clear Call, Monitor Start, or Snapshot Call;
+ *   otherwise negative ack.
+ *
+ * Extract a DeviceID from a ConnectionID for other services only if
+ * it is static and the switching function accepts it. Extract CallIDs
+ * to correlate event reports. Do not assume callID reuse.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

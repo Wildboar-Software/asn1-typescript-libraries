@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MonitorMediaClass
  * @description
- * 
+ *
+ * Media classes of calls to include when starting a monitor (same bits as
+ * `MediaClass`). ECMA-269 §12.2.20; ECMA-285 §9.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +38,10 @@ type MonitorMediaClass = BIT_STRING;
 
 /**
  * @summary MonitorMediaClass_voice
+ * @description
+ *
+ * Speech calls (e.g. standard telephones). ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -46,6 +56,10 @@ const voice: number = MonitorMediaClass_voice; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_data
+ * @description
+ *
+ * Digital data (circuit- or packet-switched), e.g. G4 FAX. ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -60,6 +74,11 @@ const data: number = MonitorMediaClass_data; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_image
+ * @description
+ *
+ * Imaging or high-speed circuit-switched data (e.g. video telephones, CODECs).
+ * ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -74,6 +93,10 @@ const image: number = MonitorMediaClass_image; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_audio
+ * @description
+ *
+ * 3.1 kHz audio excluding speech (e.g. G3 FAX). ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -88,6 +111,10 @@ const audio: number = MonitorMediaClass_audio; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_other
+ * @description
+ *
+ * A class not among the specified classes. ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -102,6 +129,10 @@ const other: number = MonitorMediaClass_other; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_notKnown
+ * @description
+ *
+ * Media class is not known. ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -116,6 +147,10 @@ const notKnown: number = MonitorMediaClass_notKnown; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_chat
+ * @description
+ *
+ * Interactive text messages; Data must also be set. ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -130,6 +165,10 @@ const chat: number = MonitorMediaClass_chat; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_email
+ * @description
+ *
+ * Non-interactive electronic mail. ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -144,6 +183,10 @@ const email: number = MonitorMediaClass_email; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_message
+ * @description
+ *
+ * Non-interactive displayed text (IM, SMS, etc.). ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -158,6 +201,10 @@ const message: number = MonitorMediaClass_message; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_im
+ * @description
+ *
+ * Instant Message (a Message class). ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -172,6 +219,10 @@ const im: number = MonitorMediaClass_im; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_sms
+ * @description
+ *
+ * Short Message Service (a Message class). ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export
@@ -186,6 +237,10 @@ const sms: number = MonitorMediaClass_sms; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MonitorMediaClass_mms
+ * @description
+ *
+ * Multimedia Message Service (a Message class). ECMA-269 §12.2.20.
+ *
  * @constant
  */
 export

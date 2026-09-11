@@ -39,7 +39,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MediaDetachedEvent
  * @description
- * 
+ *
+ * Media Detached event (ECMA-269 §19.2.2 / ECMA-285 §17.2.2). Direction: SF→CF
+ * via Event Report. Reports the media connection and service that were
+ * detached.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,66 +71,100 @@ class MediaDetachedEvent {
     constructor (
         /**
          * @summary `mediaConnection`.
+         * @description
+         *
+         * Connection that was bound to the media service.
          * @public
          * @readonly
          */
         readonly mediaConnection: ConnectionID,
         /**
          * @summary `mediaDevice`.
+         * @description
+         *
+         * Device identifier of the detached media service.
          * @public
          * @readonly
          */
         readonly mediaDevice: SubjectDeviceID,
         /**
          * @summary `mediaServiceType`.
+         * @description
+         *
+         * Media service type.
          * @public
          * @readonly
          */
         readonly mediaServiceType: MediaServiceType,
         /**
          * @summary `mediaServiceVersion`.
+         * @description
+         *
+         * Version of the media service.
          * @public
          * @readonly
          */
         readonly mediaServiceVersion: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaServiceInstanceID`.
+         * @description
+         *
+         * Instance that was detached.
          * @public
          * @readonly
          */
         readonly mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `mediaStreamID`.
+         * @description
+         *
+         * Stream ID that had been used, if supported.
          * @public
          * @readonly
          */
         readonly mediaStreamID: OPTIONAL<MediaStreamID>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Media characteristics of the call.
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Call characterisation bits.
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `localConnectionInfo`.
+         * @description
+         *
+         * Local connection state of the media connection.
          * @public
          * @readonly
          */
         readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `mediaConnectionInfo`.
+         * @description
+         *
+         * Connection information of the media connection.
          * @public
          * @readonly
          */
         readonly mediaConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `extension`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

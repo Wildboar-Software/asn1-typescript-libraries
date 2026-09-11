@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MicrophoneGain
  * @description
- * 
+ * Capability bitmap for the Microphone Gain event (ECMA-269 C.13.7, ECMA-285
+ * §9.10). Presence of this entry in `PhysDevEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +32,9 @@ type MicrophoneGain = BIT_STRING;
 /**
  * @summary MicrophoneGain_microphoneGainAbs
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.7).
  */
 export
 const MicrophoneGain_microphoneGainAbs: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +42,8 @@ const MicrophoneGain_microphoneGainAbs: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary microphoneGainAbs
  * @constant
+ * @description
+ * Alias of `MicrophoneGain_microphoneGainAbs`.
  */
 export
 const microphoneGainAbs: number = MicrophoneGain_microphoneGainAbs; /* SHORT_NAMED_BIT */
@@ -38,6 +51,9 @@ const microphoneGainAbs: number = MicrophoneGain_microphoneGainAbs; /* SHORT_NAM
 /**
  * @summary MicrophoneGain_microphoneGainInc
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.7).
  */
 export
 const MicrophoneGain_microphoneGainInc: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +61,8 @@ const MicrophoneGain_microphoneGainInc: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary microphoneGainInc
  * @constant
+ * @description
+ * Alias of `MicrophoneGain_microphoneGainInc`.
  */
 export
 const microphoneGainInc: number = MicrophoneGain_microphoneGainInc; /* SHORT_NAMED_BIT */
@@ -52,6 +70,9 @@ const microphoneGainInc: number = MicrophoneGain_microphoneGainInc; /* SHORT_NAM
 /**
  * @summary MicrophoneGain_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.13.7).
  */
 export
 const MicrophoneGain_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +80,8 @@ const MicrophoneGain_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `MicrophoneGain_privateData`.
  */
 export
 const privateData: number = MicrophoneGain_privateData; /* SHORT_NAMED_BIT */

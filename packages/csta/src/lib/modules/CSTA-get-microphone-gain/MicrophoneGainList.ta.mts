@@ -9,7 +9,12 @@ import { MicrophoneGainList_Item, _decode_MicrophoneGainList_Item, _encode_Micro
 /**
  * @summary MicrophoneGainList
  * @description
- * 
+ *
+ * SEQUENCE OF microphone-gain entries (ECMA-269 §21.1.9.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

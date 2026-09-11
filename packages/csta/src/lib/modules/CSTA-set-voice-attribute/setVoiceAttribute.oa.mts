@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setVoiceAttribute
  * @description
- * 
+ *
+ * Sets a voice attribute for a specified connection and optional message or
+ * resource (ECMA-269 §26.1.13).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:507. Errors: `universalFailure` (ECMA-285 §24.1.13).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

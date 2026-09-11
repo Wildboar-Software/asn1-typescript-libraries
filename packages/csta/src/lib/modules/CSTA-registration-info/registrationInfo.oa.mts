@@ -15,7 +15,12 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary registrationInfo
  * @description
- * 
+ *
+ * Switching-function-to-computing-function operation that delivers Registration
+ * Info segments. ECMA-269 §14.2.6.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,12 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CDRCrossRefID
  * @description
- * 
+ *
+ * Correlates subsequent CDR services to Start Call Detail Records Transmission.
+ * ECMA-269 §12.3.8.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

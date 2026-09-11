@@ -9,7 +9,21 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary LocalDeviceID
  * @description
- * 
+ *
+ * Device component of a `ConnectionID` (ECMA-269 §12.3.9, §6.1.1,
+ * §6.1.6; ECMA-285 §9.3).
+ *
+ * - `staticID`: stable `DeviceID` (e.g. E.164). Computing functions
+ *   may extract this for other DeviceID parameters only if the
+ *   switching function accepts it.
+ * - `dynamicID`: created when the device enters the call; constant
+ *   for that participation; invalid once the device leaves. Never a
+ *   dialable number; never used outside the ConnectionID. Used when
+ *   no unique static ID is available.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

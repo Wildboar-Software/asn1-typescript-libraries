@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary IORegisterCancelArgument
  * @description
- * 
+ *
+ * Identifies the I/O registration to cancel (ECMA-269 §24.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class IORegisterCancelArgument {
     constructor (
         /**
          * @summary `ioRegisterReqID`.
+         * @description
+         *
+         * I/O registration to cancel (ECMA-269 §24.1.3.1).
+         *
          * @public
          * @readonly
          */
         readonly ioRegisterReqID: IORegisterReqID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

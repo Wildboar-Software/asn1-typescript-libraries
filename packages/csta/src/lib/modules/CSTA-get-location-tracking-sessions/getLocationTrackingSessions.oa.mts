@@ -25,7 +25,20 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getLocationTrackingSessions
  * @description
- * 
+ *
+ * Obtains existing location tracking sessions for this application association.
+ * Either `locationSessionInfoList` is in this result, or `serviceCrossRefID`
+ * correlates later Location Session Info services — not both (ECMA-269
+ * §28.1.11).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:540. Errors: `universalFailure` (ECMA-285 §26.1.11).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

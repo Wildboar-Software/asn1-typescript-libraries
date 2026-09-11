@@ -11,7 +11,15 @@ import { LocationSessionInfoList, _decode_LocationSessionInfoList, _encode_Locat
 /**
  * @summary GetLocationTrackingSessionsResult_crossRefIDorRegistrationData
  * @description
- * 
+ *
+ * `serviceCrossRefID` when the SF will send Location Session Info segments;
+ * `locationSessionInfoList` when the whole list is in this acknowledgement
+ * (ECMA-269 §28.1.11.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

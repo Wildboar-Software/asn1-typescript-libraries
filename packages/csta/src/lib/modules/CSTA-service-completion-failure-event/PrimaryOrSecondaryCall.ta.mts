@@ -21,7 +21,12 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
 /**
  * @summary PrimaryOrSecondaryCall
  * @description
- * 
+ *
+ * Primary or secondary call endpoint in Service Completion Failure.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +44,36 @@ class PrimaryOrSecondaryCall {
     constructor (
         /**
          * @summary `deviceID`.
+         * @description
+         *
+         * Device of this endpoint.
          * @public
          * @readonly
          */
         readonly deviceID: DeviceID,
         /**
          * @summary `connectionID`.
+         * @description
+         *
+         * Connection of this endpoint.
          * @public
          * @readonly
          */
         readonly connectionID: ConnectionID,
         /**
          * @summary `localConnectionState`.
+         * @description
+         *
+         * Local connection state of this endpoint.
          * @public
          * @readonly
          */
         readonly localConnectionState: LocalConnectionState,
         /**
          * @summary `connectionInfo`.
+         * @description
+         *
+         * Connection information, if provided.
          * @public
          * @readonly
          */

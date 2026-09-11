@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary intrudeCall
  * @description
- * 
+ *
+ * Intrude Call (ECMA-269 §17.1.16 / ECMA-285 §15.1.16). Invoked
+ * by the computing function on the switching function. Adds the
+ * calling device to a call at a typically busy destination. If
+ * the called device has more than one call, the switching
+ * function chooses which to intrude upon (FR 3). Cancel via
+ * Clear Connection/Call or on-hook (FR 1). ROSE local CODE 222.
+ * Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

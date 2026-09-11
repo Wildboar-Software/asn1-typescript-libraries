@@ -17,7 +17,13 @@ import { DetachMediaService, _decode_DetachMediaService, _encode_DetachMediaServ
 /**
  * @summary MediaServList
  * @description
- * 
+ * Media Attachment services the SF supports (ECMA-269 Annex C.9, ECMA-285
+ * §9.10). Omit unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,18 @@ class MediaServList {
          * @summary `attachMediaService`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly attachMediaService: OPTIONAL<AttachMediaService>,
         /**
          * @summary `detachMediaService`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly detachMediaService: OPTIONAL<DetachMediaService>
     ) {}

@@ -17,7 +17,12 @@ import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-phys
 /**
  * @summary MicrophoneGainList_Item
  * @description
- * 
+ *
+ * Gain for one apparatus (ECMA-269 §21.1.9.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,19 @@ class MicrophoneGainList_Item {
     constructor (
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Apparatus that owns the microphone.
          * @public
          * @readonly
          */
         readonly auditoryApparatus: AuditoryApparatusID,
         /**
          * @summary `micGainAbs`.
+         * @description
+         *
+         * Absolute gain. 0 silence, 100 maximum; 1–99 device-specific. Absent:
+         * unknown.
          * @public
          * @readonly
          */

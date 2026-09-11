@@ -11,7 +11,14 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
 /**
  * @summary CallObject
  * @description
- * 
+ *
+ * `device`: next connection at that device (rejected if any call is already
+ * present). `call`: that connection (ECMA-269 §25.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

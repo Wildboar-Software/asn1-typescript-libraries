@@ -8,7 +8,14 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentLogOnModels
  * @description
- * 
+ * Agent log-on models supported at a device or in the SF. Implicit/one-step
+ * ACD-group log-on cannot be combined with log-on to an ACD device (ECMA-269
+ * §13.1.2.2.1 / §13.1.4.2.1, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +32,9 @@ type AgentLogOnModels = BIT_STRING;
 /**
  * @summary AgentLogOnModels_logOnToACDDevice
  * @constant
+ * @description
+ * Bit set means the SF supports Log On to an ACD device (ECMA-269 §13.1.4.2.1
+ * Table 13-9).
  */
 export
 const AgentLogOnModels_logOnToACDDevice: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +42,8 @@ const AgentLogOnModels_logOnToACDDevice: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary logOnToACDDevice
  * @constant
+ * @description
+ * Alias of `AgentLogOnModels_logOnToACDDevice`.
  */
 export
 const logOnToACDDevice: number = AgentLogOnModels_logOnToACDDevice; /* SHORT_NAMED_BIT */
@@ -39,6 +51,9 @@ const logOnToACDDevice: number = AgentLogOnModels_logOnToACDDevice; /* SHORT_NAM
 /**
  * @summary AgentLogOnModels_logOnToACDGroupExplOneStep
  * @constant
+ * @description
+ * Bit set means the SF supports Log On to an ACD Group (explicit/one step)
+ * (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const AgentLogOnModels_logOnToACDGroupExplOneStep: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +61,8 @@ const AgentLogOnModels_logOnToACDGroupExplOneStep: number = 1; /* LONG_NAMED_BIT
 /**
  * @summary logOnToACDGroupExplOneStep
  * @constant
+ * @description
+ * Alias of `AgentLogOnModels_logOnToACDGroupExplOneStep`.
  */
 export
 const logOnToACDGroupExplOneStep: number = AgentLogOnModels_logOnToACDGroupExplOneStep; /* SHORT_NAMED_BIT */
@@ -53,6 +70,9 @@ const logOnToACDGroupExplOneStep: number = AgentLogOnModels_logOnToACDGroupExplO
 /**
  * @summary AgentLogOnModels_logOnToACDGroupExplTwoSteps
  * @constant
+ * @description
+ * Bit set means the SF supports Log On to an ACD Group (explicit/two steps)
+ * (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const AgentLogOnModels_logOnToACDGroupExplTwoSteps: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +80,8 @@ const AgentLogOnModels_logOnToACDGroupExplTwoSteps: number = 2; /* LONG_NAMED_BI
 /**
  * @summary logOnToACDGroupExplTwoSteps
  * @constant
+ * @description
+ * Alias of `AgentLogOnModels_logOnToACDGroupExplTwoSteps`.
  */
 export
 const logOnToACDGroupExplTwoSteps: number = AgentLogOnModels_logOnToACDGroupExplTwoSteps; /* SHORT_NAMED_BIT */
@@ -67,6 +89,9 @@ const logOnToACDGroupExplTwoSteps: number = AgentLogOnModels_logOnToACDGroupExpl
 /**
  * @summary AgentLogOnModels_logOnToACDImplOneStep
  * @constant
+ * @description
+ * Bit set means the SF supports Log On to an ACD Group (implicit/one step)
+ * (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const AgentLogOnModels_logOnToACDImplOneStep: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +99,8 @@ const AgentLogOnModels_logOnToACDImplOneStep: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary logOnToACDImplOneStep
  * @constant
+ * @description
+ * Alias of `AgentLogOnModels_logOnToACDImplOneStep`.
  */
 export
 const logOnToACDImplOneStep: number = AgentLogOnModels_logOnToACDImplOneStep; /* SHORT_NAMED_BIT */

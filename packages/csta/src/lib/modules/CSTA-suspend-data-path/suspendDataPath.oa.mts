@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary suspendDataPath
  * @description
- * 
+ *
+ * Suspends a specified data path without destroying it. Bidirectional. Resume
+ * Data Path restores flow (ECMA-269 §24.2.10).
+ *
+ * Bidirectional: computing function or switching function may invoke.
+ *
+ * ROSE local:115. Errors: `universalFailure` (ECMA-285 §22.2.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

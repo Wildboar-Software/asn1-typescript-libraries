@@ -24,7 +24,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SystemStatusArg
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 14-12).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +46,29 @@ class SystemStatusArg {
     constructor (
         /**
          * @summary `sysStatRegisterID`.
+         * @description
+         *
+         * Mandatory if SF is the requester and registration is
+         * supported; otherwise absent.
          * @public
          * @readonly
          */
         readonly sysStatRegisterID: OPTIONAL<SysStatRegisterID>,
         /**
          * @summary `systemStatus`.
+         * @description
+         *
+         * Status of the function issuing this request. See §12.2.28.
          * @public
          * @readonly
          */
         readonly systemStatus: SystemStatus,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-12.
          * @public
          * @readonly
          */

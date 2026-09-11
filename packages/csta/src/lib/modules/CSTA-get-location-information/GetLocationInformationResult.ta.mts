@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLocationInformationResult
  * @description
- * 
+ *
+ * PIDF-LO location information (ECMA-269 §28.1.1.2.1 / §12.2.18).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class GetLocationInformationResult {
     constructor (
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * PIDF-LO for the device (ECMA-269 §12.2.18).
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: LocationInfo,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

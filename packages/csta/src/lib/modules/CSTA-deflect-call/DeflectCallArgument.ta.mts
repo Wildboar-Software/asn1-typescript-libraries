@@ -38,7 +38,15 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
 /**
  * @summary DeflectCallArgument
  * @description
- * 
+ *
+ * Service request for Deflect Call (ECMA-269 §17.1.11 /
+ * ECMA-285 §15.1.11). Names the connection to divert and at
+ * least one complete destination. Other calls at the same device
+ * are unaffected (FR 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,60 +71,110 @@ class DeflectCallArgument {
     constructor (
         /**
          * @summary `callToBeDiverted`.
+         * @description
+         *
+         * Mandatory. Connection to divert. Rejected if it is a
+         * shared-bridged appearance in the Queued (inactive) state
+         * (FR 5).
+         *
          * @public
          * @readonly
          */
         readonly callToBeDiverted: ConnectionID,
         /**
          * @summary `newDestination`.
+         * @description
+         *
+         * Mandatory. First destination. Must be a complete DeviceID
+         * (not null and not a Diallable Digits string ending in
+         * `;`) (FR 6). Active features at this device are honoured
+         * (FR 3).
+         *
          * @public
          * @readonly
          */
         readonly newDestination: DeviceID,
         /**
          * @summary `addNewDestinationsList`.
+         * @description
+         *
+         * Optional extra destinations (Case B). The switching
+         * function must emit call-control events for every
+         * destination or reject the request (FR 8).
+         *
          * @public
          * @readonly
          */
         readonly addNewDestinationsList: OPTIONAL<DeviceIDList>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data attached before resulting state
+         * transitions (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent with the deflection (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional call characteristics (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Optional subject or intent of the call (§12.2.27).
+         *
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Optional `EventCause` for underlying signalling
+         * (§12.2.15).
+         *
          * @public
          * @readonly
          */
         readonly reason: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

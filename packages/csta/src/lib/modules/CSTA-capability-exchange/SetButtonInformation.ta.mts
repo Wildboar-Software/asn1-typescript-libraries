@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SetButtonInformation
  * @description
- * 
+ * Capability bitmap for the Set Button Information service (ECMA-269 C.12.14,
+ * ECMA-285 §9.10). Presence of this entry in `PhysDevServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +35,9 @@ type SetButtonInformation = BIT_STRING;
 /**
  * @summary SetButtonInformation_buttonLabel
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.14).
  */
 export
 const SetButtonInformation_buttonLabel: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +45,8 @@ const SetButtonInformation_buttonLabel: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary buttonLabel
  * @constant
+ * @description
+ * Alias of `SetButtonInformation_buttonLabel`.
  */
 export
 const buttonLabel: number = SetButtonInformation_buttonLabel; /* SHORT_NAMED_BIT */
@@ -40,6 +54,9 @@ const buttonLabel: number = SetButtonInformation_buttonLabel; /* SHORT_NAMED_BIT
 /**
  * @summary SetButtonInformation_buttonAssociatedNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.14).
  */
 export
 const SetButtonInformation_buttonAssociatedNumber: number = 1; /* LONG_NAMED_BIT */
@@ -47,6 +64,8 @@ const SetButtonInformation_buttonAssociatedNumber: number = 1; /* LONG_NAMED_BIT
 /**
  * @summary buttonAssociatedNumber
  * @constant
+ * @description
+ * Alias of `SetButtonInformation_buttonAssociatedNumber`.
  */
 export
 const buttonAssociatedNumber: number = SetButtonInformation_buttonAssociatedNumber; /* SHORT_NAMED_BIT */
@@ -54,6 +73,9 @@ const buttonAssociatedNumber: number = SetButtonInformation_buttonAssociatedNumb
 /**
  * @summary SetButtonInformation_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.12.14).
  */
 export
 const SetButtonInformation_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -61,6 +83,8 @@ const SetButtonInformation_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SetButtonInformation_privateData`.
  */
 export
 const privateData: number = SetButtonInformation_privateData; /* SHORT_NAMED_BIT */
@@ -68,6 +92,9 @@ const privateData: number = SetButtonInformation_privateData; /* SHORT_NAMED_BIT
 /**
  * @summary SetButtonInformation_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.12.14).
  */
 export
 const SetButtonInformation_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
@@ -75,6 +102,8 @@ const SetButtonInformation_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SetButtonInformation_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SetButtonInformation_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -82,6 +111,9 @@ const privateDataInAck: number = SetButtonInformation_privateDataInAck; /* SHORT
 /**
  * @summary SetButtonInformation_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.12.14).
  */
 export
 const SetButtonInformation_ackModelMultiStep: number = 4; /* LONG_NAMED_BIT */
@@ -89,6 +121,8 @@ const SetButtonInformation_ackModelMultiStep: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `SetButtonInformation_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = SetButtonInformation_ackModelMultiStep; /* SHORT_NAMED_BIT */

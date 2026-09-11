@@ -22,7 +22,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary QueueArgument
  * @description
- * 
+ *
+ * Connection, message, optional resource and text (ECMA-269 §26.1.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,30 +47,53 @@ class QueueArgument {
     constructor (
         /**
          * @summary `overConnection`.
+         * @description
+         *
+         * Connection whose Prompt Queue receives the prompt (ECMA-269
+         * §26.1.8.1).
+         *
          * @public
          * @readonly
          */
         readonly overConnection: ConnectionID,
         /**
          * @summary `message`.
+         * @description
+         *
+         * Prompt to queue (ECMA-269 §26.1.8.1).
+         *
          * @public
          * @readonly
          */
         readonly message: MessageID,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `text`.
+         * @description
+         *
+         * Optional text associated with the queued prompt (ECMA-269 §26.1.8.1).
+         *
          * @public
          * @readonly
          */
         readonly text: OPTIONAL<IA5String>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

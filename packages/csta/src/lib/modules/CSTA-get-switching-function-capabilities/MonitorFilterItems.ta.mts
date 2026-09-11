@@ -15,7 +15,14 @@ import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../
 /**
  * @summary MonitorFilterItems
  * @description
- * 
+ *
+ * Complete monitorFilter values supported per monitor object/type
+ * (device-on-device, device-on-connection, call-on-device,
+ * call-on-connection). Table 13-9.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +40,36 @@ class MonitorFilterItems {
     constructor (
         /**
          * @summary `deviceOnDeviceMonitorFilter`.
+         * @description
+         *
+         * Device-type monitoring of a device.
          * @public
          * @readonly
          */
         readonly deviceOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `deviceOnConnectionMonitorFilter`.
+         * @description
+         *
+         * Device-type monitoring of a connection.
          * @public
          * @readonly
          */
         readonly deviceOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnDeviceMonitorFilter`.
+         * @description
+         *
+         * Call-type monitoring of a device.
          * @public
          * @readonly
          */
         readonly callOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnConnectionMonitorFilter`.
+         * @description
+         *
+         * Call-type monitoring of a connection.
          * @public
          * @readonly
          */

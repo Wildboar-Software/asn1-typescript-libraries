@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MediaServiceType
  * @description
- * 
+ *
+ * Which media service is (or was) attached to or detached from a call or
+ * connection. See ECMA-269 Table 6-10 for how `MediaStreamID` is interpreted
+ * per type. ECMA-269 §12.2.21.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,7 +108,13 @@ enum _enum_for_MediaServiceType {
 /**
  * @summary MediaServiceType
  * @description
- * 
+ *
+ * Which media service is (or was) attached to or detached from a call or
+ * connection. See ECMA-269 Table 6-10 for how `MediaStreamID` is interpreted
+ * per type. ECMA-269 §12.2.21.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -156,7 +168,13 @@ type MediaServiceType = _enum_for_MediaServiceType;
 /**
  * @summary MediaServiceType
  * @description
- * 
+ *
+ * Which media service is (or was) attached to or detached from a call or
+ * connection. See ECMA-269 Table 6-10 for how `MediaStreamID` is interpreted
+ * per type. ECMA-269 §12.2.21.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -209,6 +227,10 @@ const MediaServiceType = _enum_for_MediaServiceType;
 
 /**
  * @summary MediaServiceType_cstaVoiceUnit
+ * @description
+ *
+ * CSTA Voice Unit; stream ID is the connection ID. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -225,6 +247,10 @@ const cstaVoiceUnit: MediaServiceType = MediaServiceType.cstaVoiceUnit; /* SHORT
 
 /**
  * @summary MediaServiceType_dataModem
+ * @description
+ *
+ * Data modem; stream ID is the modem access address. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -241,6 +267,10 @@ const dataModem: MediaServiceType = MediaServiceType.dataModem; /* SHORT_NAMED_E
 
 /**
  * @summary MediaServiceType_digitalDataIsochronousIeee1394
+ * @description
+ *
+ * IEEE 1394 isochronous digital data. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -257,6 +287,10 @@ const digitalDataIsochronousIeee1394: MediaServiceType = MediaServiceType.digita
 
 /**
  * @summary MediaServiceType_digitalDataIsochronousGeoport
+ * @description
+ *
+ * GeoPort isochronous digital data. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -273,6 +307,10 @@ const digitalDataIsochronousGeoport: MediaServiceType = MediaServiceType.digital
 
 /**
  * @summary MediaServiceType_digitalDataIsochronousIeeeAtm
+ * @description
+ *
+ * ATM virtual channel/path. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -289,6 +327,10 @@ const digitalDataIsochronousIeeeAtm: MediaServiceType = MediaServiceType.digital
 
 /**
  * @summary MediaServiceType_digitalDataIsochronousIeeeIsdn
+ * @description
+ *
+ * ISDN bearer channel. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -305,6 +347,10 @@ const digitalDataIsochronousIeeeIsdn: MediaServiceType = MediaServiceType.digita
 
 /**
  * @summary MediaServiceType_digitalDataApi
+ * @description
+ *
+ * API digital-data stream (e.g. a socket). ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -321,6 +367,10 @@ const digitalDataApi: MediaServiceType = MediaServiceType.digitalDataApi; /* SHO
 
 /**
  * @summary MediaServiceType_ectfS100MediaServicesDefault
+ * @description
+ *
+ * ECTF S.100 Media Services CCR Resource ID. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -337,6 +387,10 @@ const ectfS100MediaServicesDefault: MediaServiceType = MediaServiceType.ectfS100
 
 /**
  * @summary MediaServiceType_ectfS100MediaServicesAppServices
+ * @description
+ *
+ * ECTF S.100 Application Service. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -353,6 +407,11 @@ const ectfS100MediaServicesAppServices: MediaServiceType = MediaServiceType.ectf
 
 /**
  * @summary MediaServiceType_cstaIVRScript1
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -369,6 +428,11 @@ const cstaIVRScript1: MediaServiceType = MediaServiceType.cstaIVRScript1; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript2
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -385,6 +449,11 @@ const cstaIVRScript2: MediaServiceType = MediaServiceType.cstaIVRScript2; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript3
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -401,6 +470,11 @@ const cstaIVRScript3: MediaServiceType = MediaServiceType.cstaIVRScript3; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript4
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -417,6 +491,11 @@ const cstaIVRScript4: MediaServiceType = MediaServiceType.cstaIVRScript4; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript5
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -433,6 +512,11 @@ const cstaIVRScript5: MediaServiceType = MediaServiceType.cstaIVRScript5; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript6
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -449,6 +533,11 @@ const cstaIVRScript6: MediaServiceType = MediaServiceType.cstaIVRScript6; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript7
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -465,6 +554,11 @@ const cstaIVRScript7: MediaServiceType = MediaServiceType.cstaIVRScript7; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript8
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -481,6 +575,11 @@ const cstaIVRScript8: MediaServiceType = MediaServiceType.cstaIVRScript8; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript9
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -497,6 +596,11 @@ const cstaIVRScript9: MediaServiceType = MediaServiceType.cstaIVRScript9; /* SHO
 
 /**
  * @summary MediaServiceType_cstaIVRScript10
+ * @description
+ *
+ * IVR script slot; media-stream attachment is vendor-specific. ECMA-269 Table
+ * 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -513,6 +617,10 @@ const cstaIVRScript10: MediaServiceType = MediaServiceType.cstaIVRScript10; /* S
 
 /**
  * @summary MediaServiceType_liveSoundCaptureAnalog
+ * @description
+ *
+ * Analog jack for live sound capture. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -529,6 +637,10 @@ const liveSoundCaptureAnalog: MediaServiceType = MediaServiceType.liveSoundCaptu
 
 /**
  * @summary MediaServiceType_liveSoundTransmitAnalog
+ * @description
+ *
+ * Analog jack for live sound transmit. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -545,6 +657,10 @@ const liveSoundTransmitAnalog: MediaServiceType = MediaServiceType.liveSoundTran
 
 /**
  * @summary MediaServiceType_liveSoundCaptureIeee1394
+ * @description
+ *
+ * IEEE 1394 live sound capture. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -561,6 +677,10 @@ const liveSoundCaptureIeee1394: MediaServiceType = MediaServiceType.liveSoundCap
 
 /**
  * @summary MediaServiceType_liveSoundTransmitIeee1394
+ * @description
+ *
+ * IEEE 1394 live sound transmit. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -577,6 +697,10 @@ const liveSoundTransmitIeee1394: MediaServiceType = MediaServiceType.liveSoundTr
 
 /**
  * @summary MediaServiceType_liveSoundCaptureTransmitGeoport
+ * @description
+ *
+ * GeoPort live sound capture and transmit. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -593,6 +717,10 @@ const liveSoundCaptureTransmitGeoport: MediaServiceType = MediaServiceType.liveS
 
 /**
  * @summary MediaServiceType_liveSoundCaptureTransmitAtm
+ * @description
+ *
+ * ATM live sound capture and transmit. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -609,6 +737,10 @@ const liveSoundCaptureTransmitAtm: MediaServiceType = MediaServiceType.liveSound
 
 /**
  * @summary MediaServiceType_liveSoundCaptureTransmitISDN
+ * @description
+ *
+ * ISDN live sound capture and transmit. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -625,6 +757,10 @@ const liveSoundCaptureTransmitISDN: MediaServiceType = MediaServiceType.liveSoun
 
 /**
  * @summary MediaServiceType_soundCaptureTransmitADPCM
+ * @description
+ *
+ * Rockwell ADPCM packet sound stream. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -641,6 +777,10 @@ const soundCaptureTransmitADPCM: MediaServiceType = MediaServiceType.soundCaptur
 
 /**
  * @summary MediaServiceType_soundCaptureTransmitApi
+ * @description
+ *
+ * API sound stream (e.g. MCI handle). ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -657,6 +797,10 @@ const soundCaptureTransmitApi: MediaServiceType = MediaServiceType.soundCaptureT
 
 /**
  * @summary MediaServiceType_usb
+ * @description
+ *
+ * USB endpoint. ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -673,6 +817,11 @@ const usb: MediaServiceType = MediaServiceType.usb; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary MediaServiceType_sfSpecific1
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -689,6 +838,11 @@ const sfSpecific1: MediaServiceType = MediaServiceType.sfSpecific1; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific2
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -705,6 +859,11 @@ const sfSpecific2: MediaServiceType = MediaServiceType.sfSpecific2; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific3
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -721,6 +880,11 @@ const sfSpecific3: MediaServiceType = MediaServiceType.sfSpecific3; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific4
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -737,6 +901,11 @@ const sfSpecific4: MediaServiceType = MediaServiceType.sfSpecific4; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific5
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -753,6 +922,11 @@ const sfSpecific5: MediaServiceType = MediaServiceType.sfSpecific5; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific6
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -769,6 +943,11 @@ const sfSpecific6: MediaServiceType = MediaServiceType.sfSpecific6; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific7
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -785,6 +964,11 @@ const sfSpecific7: MediaServiceType = MediaServiceType.sfSpecific7; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific8
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -801,6 +985,11 @@ const sfSpecific8: MediaServiceType = MediaServiceType.sfSpecific8; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific9
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */
@@ -817,6 +1006,11 @@ const sfSpecific9: MediaServiceType = MediaServiceType.sfSpecific9; /* SHORT_NAM
 
 /**
  * @summary MediaServiceType_sfSpecific10
+ * @description
+ *
+ * Switching-function-specific media service; attachment is vendor-specific.
+ * ECMA-269 Table 6-10.
+ *
  * @constant
  * @type {number}
  */

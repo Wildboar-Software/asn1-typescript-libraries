@@ -15,7 +15,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary routeEndRequest
  * @description
- * 
+ *
+ * Route End (ECMA-269 §20.2.2 / ECMA-285 §18.2.2). Direction: CF→SF or SF→CF.
+ * ROSE local CODE 35. Errors: `universalFailure`. Invalidates
+ * `routeingCrossRefID`. Does not clear the call.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

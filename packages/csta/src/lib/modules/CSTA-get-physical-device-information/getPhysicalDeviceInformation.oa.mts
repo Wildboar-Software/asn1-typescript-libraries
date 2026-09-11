@@ -25,7 +25,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getPhysicalDeviceInformation
  * @description
- * 
+ *
+ * Get Physical Device Information (ECMA-269 §13.1.3 / ECMA-285 §11.1.3).
+ * Direction: CF→SF. ROSE local CODE 202. Errors: `universalFailure`. Returns
+ * physical-element capabilities of `device`. Atomic
+ * acknowledgement. Rejected if the device has no physical element.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

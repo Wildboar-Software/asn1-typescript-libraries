@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary systemStatus
  * @description
- * 
+ *
+ * System Status (ECMA-269 §14.2.2 / ECMA-285 §12.2.2). Direction: CF→SF or
+ * SF→CF. ROSE local CODE 211. Errors: `universalFailure`. Reports the issuer's
+ * status (which may be unchanged). SF-
+ * initiated requests include `sysStatRegisterID` when
+ * registration is supported.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

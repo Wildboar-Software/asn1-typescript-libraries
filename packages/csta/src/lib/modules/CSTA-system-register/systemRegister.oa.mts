@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary systemRegister
  * @description
- * 
+ *
+ * System Register (ECMA-269 §14.1.2 / ECMA-285 §12.1.2). Direction: CF→SF. ROSE
+ * local CODE 207. Errors: `universalFailure`. Registers for System Status,
+ * Request System Status, Switching
+ * Function Capabilities Changed, and/or Switching Function
+ * Devices Changed. `requestedStatusFilter` is mandatory iff
+ * System Status is requested.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

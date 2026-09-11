@@ -21,7 +21,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetSpeakerVolumeArgument
  * @description
- * 
+ *
+ * Set Speaker Volume request (ECMA-269 §21.1.23.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +44,39 @@ class SetSpeakerVolumeArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Apparatus containing the speaker whose volume is set.
          * @public
          * @readonly
          */
         readonly auditoryApparatus: AuditoryApparatusID,
         /**
          * @summary `speakerVolume`.
+         * @description
+         *
+         * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
+         * increment/decrement by a switch-specified step.
          * @public
          * @readonly
          */
         readonly speakerVolume: Volume,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

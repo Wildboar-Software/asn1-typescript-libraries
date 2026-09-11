@@ -23,7 +23,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ButtonInformationEvent
  * @description
- * 
+ *
+ * Button Information event (ECMA-269 §21.2.1 / ECMA-285 §19.2.1). Direction:
+ * SF→CF via Event Report. Button info changed (Set Button Information or
+ * manual/management). At least one of `buttonLabel`, `buttonAssociatedNumber`,
+ * `buttonPressIndicator`. Not generated when a Set request leaves the feature
+ * unchanged (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,36 +52,56 @@ class ButtonInformationEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose button information changed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `button`.
+         * @description
+         *
+         * Button that changed. Reserved ButtonIDs in Table 12-3: `0`–`9`,
+         * `*`=10, `#`=11 (ECMA-269 §12.3.5).
          * @public
          * @readonly
          */
         readonly button: ButtonID,
         /**
          * @summary `buttonLabel`.
+         * @description
+         *
+         * Label by which the button may be referenced.
          * @public
          * @readonly
          */
         readonly buttonLabel: OPTIONAL<IA5String>,
         /**
          * @summary `buttonAssociatedNumber`.
+         * @description
+         *
+         * Diallable-digits number associated with the button.
          * @public
          * @readonly
          */
         readonly buttonAssociatedNumber: OPTIONAL<DeviceID>,
         /**
          * @summary `buttonPressIndicator`.
+         * @description
+         *
+         * TRUE if Button Press may press this button.
          * @public
          * @readonly
          */
         readonly buttonPressIndicator: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getDisplay
  * @description
- * 
+ *
+ * Get Display (ECMA-269 §21.1.4 / ECMA-285 §19.1.4). Direction: CF→SF. ROSE
+ * local CODE 263. Errors: `universalFailure`. Atomic acknowledgement.
+ * `contentsOfDisplay` always has `logicalRows * logicalColumns` characters
+ * (§21.1.4.3.4 FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

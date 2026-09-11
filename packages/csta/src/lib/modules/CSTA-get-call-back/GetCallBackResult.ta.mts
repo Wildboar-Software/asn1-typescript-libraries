@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetCallBackResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §22.1.8.2.1). Spec `callBackList` is conditional:
+ * present if at least one callback involves the device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,19 @@ class GetCallBackResult {
     constructor (
         /**
          * @summary `callBackList`.
+         * @description
+         *
+         * Callbacks involving the requested device.
          * @public
          * @readonly
          */
         readonly callBackList: CallBackList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

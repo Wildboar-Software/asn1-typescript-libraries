@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CancelCallBackArgument
  * @description
- * 
+ *
+ * Cancel Call Back request (ECMA-269 §22.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,29 @@ class CancelCallBackArgument {
     constructor (
         /**
          * @summary `originatingDevice`.
+         * @description
+         *
+         * Device that initiated the original Call Back.
          * @public
          * @readonly
          */
         readonly originatingDevice: DeviceID,
         /**
          * @summary `targetDevice`.
+         * @description
+         *
+         * Target of the original Call Back. Empty DeviceID cancels all Call
+         * Backs at the originator if supported.
          * @public
          * @readonly
          */
         readonly targetDevice: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

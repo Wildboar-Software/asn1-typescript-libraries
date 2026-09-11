@@ -21,7 +21,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MonitorInfoArgument
  * @description
- * 
+ *
+ * One Monitor Info segment: existing monitors at the time Get Monitors was
+ * positively acknowledged. No positive acknowledgement of its own. ECMA-269
+ * §15.1.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +46,52 @@ class MonitorInfoArgument {
     constructor (
         /**
          * @summary `serviceCrossRefID`.
+         * @description
+         *
+         * Associates this segment with the original request. ECMA-269
+         * segmented-response model.
+         *
          * @public
          * @readonly
          */
         readonly serviceCrossRefID: ServiceCrossRefID,
         /**
          * @summary `segmentID`.
+         * @description
+         *
+         * Segment number; each successive segment increments by one. ECMA-269.
+         *
          * @public
          * @readonly
          */
         readonly segmentID: OPTIONAL<INTEGER>,
         /**
          * @summary `lastSegment`.
+         * @description
+         *
+         * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
+         *
          * @public
          * @readonly
          */
         readonly lastSegment: BOOLEAN,
         /**
          * @summary `monitorList`.
+         * @description
+         *
+         * Zero or more monitors (cross-ref and monitor object). ECMA-269
+         * §15.1.5.
+         *
          * @public
          * @readonly
          */
         readonly monitorList: MonitorList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTA common arguments (security, private data, timestamps). ECMA-269.
+         *
          * @public
          * @readonly
          */

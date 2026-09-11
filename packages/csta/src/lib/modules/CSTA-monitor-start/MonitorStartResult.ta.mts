@@ -27,7 +27,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MonitorStartResult
  * @description
- * 
+ *
+ * Positive ack (Table 15-5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,30 +51,51 @@ class MonitorStartResult {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         *
+         * Unique on this association for the monitor's lifetime.
+         * Correlates events, Monitor Stop, and Change Monitor Filter.
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: MonitorCrossRefID,
         /**
          * @summary `actualmonitorFilter`.
+         * @description
+         *
+         * Events actually filtered. May be omitted if identical to the
+         * request. If the SF does not support this parameter, it does
+         * not filter — all advertised events are sent.
          * @public
          * @readonly
          */
         readonly actualmonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `actualMonitorMediaClass`.
+         * @description
+         *
+         * Media classes actually monitored.
          * @public
          * @readonly
          */
         readonly actualMonitorMediaClass: OPTIONAL<MonitorMediaClass>,
         /**
          * @summary `monitorExistingCalls`.
+         * @description
+         *
+         * For device objects: whether events are provided for calls
+         * already at the device. Absent (or unsupported) means the SF
+         * always reports those existing calls.
          * @public
          * @readonly
          */
         readonly monitorExistingCalls: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 15-5.
          * @public
          * @readonly
          */

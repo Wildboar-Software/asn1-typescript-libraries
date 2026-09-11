@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary resume
  * @description
- * 
+ *
+ * Voice Resume: restarts playing or recording of a previously suspended message
+ * (ECMA-269 §26.1.11).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:505. Errors: `universalFailure` (ECMA-285 §24.1.11).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

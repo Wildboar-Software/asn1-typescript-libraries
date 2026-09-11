@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary answerCall
  * @description
- * 
+ *
+ * Answer Call (ECMA-269 §17.1.3 / ECMA-285 §15.1.3). Invoked by the computing
+ * function on the switching function. Atomic vs multi-step acknowledgement is
+ * via capability exchange. Errors are `universalFailure` (§12.2.14).
+ * `callToBeAnswered` must be Alerting, Initiated, or Queued and becomes
+ * Connected. Other connections are unaffected. To clear an active call first,
+ * Clear Connection then Answer (FR 1). ROSE local CODE 2.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

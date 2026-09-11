@@ -24,7 +24,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary BackInServiceEvent
  * @description
- * 
+ *
+ * Back In Service event (ECMA-269 §23.1.1 / ECMA-285 §21.1.1). Direction: SF→CF
+ * via Event Report. Device returned to service and operating normally. Does not
+ * imply capabilities changed if Device Capabilities Changed is supported
+ * (§23.1.1.3 FR 1). Cause Normal = maintenance.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +49,28 @@ class BackInServiceEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device that is back in service.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Reason for the event.
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

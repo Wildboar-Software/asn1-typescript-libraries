@@ -8,7 +8,11 @@ import { IA5String, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LocCrossRefID
  * @description
- * 
+ *
+ * Location-tracking session cross-reference. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary InputOutputServicesC2
  * @description
- * 
+ *
+ * Phase II I/O services. Phase II (ECMA-218) compatibility BIT STRING in ACSE
+ * user-information. For Phase III and later, use Capability Exchange to learn
+ * supported services and events. ECMA-285 §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,13 +36,17 @@ type InputOutputServicesC2 = BIT_STRING;
 
 /**
  * @summary InputOutputServicesC2_startDataPathService
+ * @description
+ * Advertises `startDataPathService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_startDataPathService: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary startDataPathService
+ * @description Alias of {@link InputOutputServicesC2_startDataPathService}.
  * @constant
  */
 export
@@ -44,13 +54,17 @@ const startDataPathService: number = InputOutputServicesC2_startDataPathService;
 
 /**
  * @summary InputOutputServicesC2_stopDataPathService
+ * @description
+ * Advertises `stopDataPathService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_stopDataPathService: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary stopDataPathService
+ * @description Alias of {@link InputOutputServicesC2_stopDataPathService}.
  * @constant
  */
 export
@@ -58,13 +72,17 @@ const stopDataPathService: number = InputOutputServicesC2_stopDataPathService; /
 
 /**
  * @summary InputOutputServicesC2_sendDataService
+ * @description
+ * Advertises `sendDataService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_sendDataService: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary sendDataService
+ * @description Alias of {@link InputOutputServicesC2_sendDataService}.
  * @constant
  */
 export
@@ -72,13 +90,17 @@ const sendDataService: number = InputOutputServicesC2_sendDataService; /* SHORT_
 
 /**
  * @summary InputOutputServicesC2_sendMulticastDataService
+ * @description
+ * Advertises `sendMulticastDataService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_sendMulticastDataService: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary sendMulticastDataService
+ * @description Alias of {@link InputOutputServicesC2_sendMulticastDataService}.
  * @constant
  */
 export
@@ -86,13 +108,17 @@ const sendMulticastDataService: number = InputOutputServicesC2_sendMulticastData
 
 /**
  * @summary InputOutputServicesC2_sendBroadcastDataService
+ * @description
+ * Advertises `sendBroadcastDataService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_sendBroadcastDataService: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary sendBroadcastDataService
+ * @description Alias of {@link InputOutputServicesC2_sendBroadcastDataService}.
  * @constant
  */
 export
@@ -100,13 +126,17 @@ const sendBroadcastDataService: number = InputOutputServicesC2_sendBroadcastData
 
 /**
  * @summary InputOutputServicesC2_suspendDataPathService
+ * @description
+ * Advertises `suspendDataPathService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_suspendDataPathService: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary suspendDataPathService
+ * @description Alias of {@link InputOutputServicesC2_suspendDataPathService}.
  * @constant
  */
 export
@@ -114,13 +144,17 @@ const suspendDataPathService: number = InputOutputServicesC2_suspendDataPathServ
 
 /**
  * @summary InputOutputServicesC2_dataPathSuspendedService
+ * @description
+ * Advertises `dataPathSuspendedService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_dataPathSuspendedService: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary dataPathSuspendedService
+ * @description Alias of {@link InputOutputServicesC2_dataPathSuspendedService}.
  * @constant
  */
 export
@@ -128,13 +162,16 @@ const dataPathSuspendedService: number = InputOutputServicesC2_dataPathSuspended
 
 /**
  * @summary InputOutputServicesC2_resumeDataPath
+ * @description Advertises `resumeDataPath` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_resumeDataPath: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary resumeDataPath
+ * @description Alias of {@link InputOutputServicesC2_resumeDataPath}.
  * @constant
  */
 export
@@ -142,13 +179,17 @@ const resumeDataPath: number = InputOutputServicesC2_resumeDataPath; /* SHORT_NA
 
 /**
  * @summary InputOutputServicesC2_dataPathResumedService
+ * @description
+ * Advertises `dataPathResumedService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_dataPathResumedService: number = 8; /* LONG_NAMED_BIT */
 
 /**
  * @summary dataPathResumedService
+ * @description Alias of {@link InputOutputServicesC2_dataPathResumedService}.
  * @constant
  */
 export
@@ -156,13 +197,16 @@ const dataPathResumedService: number = InputOutputServicesC2_dataPathResumedServ
 
 /**
  * @summary InputOutputServicesC2_fastData
+ * @description Advertises `fastData` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const InputOutputServicesC2_fastData: number = 9; /* LONG_NAMED_BIT */
 
 /**
  * @summary fastData
+ * @description Alias of {@link InputOutputServicesC2_fastData}.
  * @constant
  */
 export

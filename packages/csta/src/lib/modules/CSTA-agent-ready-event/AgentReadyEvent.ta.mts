@@ -28,7 +28,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AgentReadyEvent
  * @description
- * 
+ *
+ * Agent Ready event (ECMA-269 §22.2.5 / ECMA-285 §20.2.5). Direction: SF→CF via
+ * Event Report. Agent prepared to handle ACD calls (may still have non-ACD
+ * calls). Auto-work timer, telephone, Set Agent State, or supervisor. May be
+ * reported for a monitor on the ACD device, ACD group, or agent device
+ * (§6.1.1.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +56,47 @@ class AgentReadyEvent {
     constructor (
         /**
          * @summary `agentDevice`.
+         * @description
+         *
+         * Device at which the agent entered Ready.
          * @public
          * @readonly
          */
         readonly agentDevice: SubjectDeviceID,
         /**
          * @summary `agentID`.
+         * @description
+         *
+         * Required if multiple agentIDs exist at the agent device.
          * @public
          * @readonly
          */
         readonly agentID: OPTIONAL<AgentID>,
         /**
          * @summary `acdGroup`.
+         * @description
+         *
+         * Present iff the event is associated with ACD group activity
+         * (§6.1.1.6.5); otherwise absent.
          * @public
          * @readonly
          */
         readonly acdGroup: OPTIONAL<DeviceID>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Reason for the event.
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

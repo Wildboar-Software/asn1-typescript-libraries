@@ -19,7 +19,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ParkCallResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Park Call (ECMA-269 §17.1.21 /
+ * ECMA-285 §15.1.21). May return the queued connection at the
+ * park-to device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +43,31 @@ class ParkCallResult {
     constructor (
         /**
          * @summary `parkedTo`.
+         * @description
+         *
+         * Optional. Connection at the park-to device (Queued).
+         *
          * @public
          * @readonly
          */
         readonly parkedTo: OPTIONAL<ConnectionID>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional call-linkage identifiers (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

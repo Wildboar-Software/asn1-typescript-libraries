@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RetrieveCallArgument
  * @description
- * 
+ *
+ * Service request for Retrieve Call (ECMA-269 §17.1.23 /
+ * ECMA-285 §15.1.23). Names the held connection to reconnect.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,22 @@ class RetrieveCallArgument {
     constructor (
         /**
          * @summary `callToBeRetrieved`.
+         * @description
+         *
+         * Mandatory. Held connection to retrieve. Required initial
+         * state Hold; final Connected (§17.1.23.3.1).
+         *
          * @public
          * @readonly
          */
         readonly callToBeRetrieved: ConnectionID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

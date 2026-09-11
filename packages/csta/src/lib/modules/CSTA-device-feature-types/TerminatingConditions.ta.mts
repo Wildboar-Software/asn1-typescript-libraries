@@ -8,7 +8,11 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary TerminatingConditions
  * @description
- * 
+ *
+ * Conditions that end a voice-unit play/record. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,13 +28,16 @@ type TerminatingConditions = BIT_STRING;
 
 /**
  * @summary TerminatingConditions_durationExceeded
+ * @description Stop when configured duration is exceeded. ECMA-285 §9.6.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const TerminatingConditions_durationExceeded: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary durationExceeded
+ * @description Alias of {@link TerminatingConditions_durationExceeded}.
  * @constant
  */
 export
@@ -38,13 +45,16 @@ const durationExceeded: number = TerminatingConditions_durationExceeded; /* SHOR
 
 /**
  * @summary TerminatingConditions_dTMFDigitDetected
+ * @description Stop when a DTMF digit is detected. ECMA-285 §9.6.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const TerminatingConditions_dTMFDigitDetected: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary dTMFDigitDetected
+ * @description Alias of {@link TerminatingConditions_dTMFDigitDetected}.
  * @constant
  */
 export
@@ -52,13 +62,16 @@ const dTMFDigitDetected: number = TerminatingConditions_dTMFDigitDetected; /* SH
 
 /**
  * @summary TerminatingConditions_endOfMessageDetected
+ * @description Stop when end of message is detected. ECMA-285 §9.6.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const TerminatingConditions_endOfMessageDetected: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary endOfMessageDetected
+ * @description Alias of {@link TerminatingConditions_endOfMessageDetected}.
  * @constant
  */
 export
@@ -66,13 +79,16 @@ const endOfMessageDetected: number = TerminatingConditions_endOfMessageDetected;
 
 /**
  * @summary TerminatingConditions_speechDetected
+ * @description Stop when speech is detected. ECMA-285 §9.6.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const TerminatingConditions_speechDetected: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary speechDetected
+ * @description Alias of {@link TerminatingConditions_speechDetected}.
  * @constant
  */
 export

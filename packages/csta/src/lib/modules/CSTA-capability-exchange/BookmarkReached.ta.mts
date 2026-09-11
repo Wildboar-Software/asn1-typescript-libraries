@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary BookmarkReached
  * @description
- * 
+ * Capability bitmap for the Bookmark Reached event (ECMA-269 C.20.1, ECMA-285
+ * §9.10). Presence of this entry in `VoiceUnitEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +33,9 @@ type BookmarkReached = BIT_STRING;
 /**
  * @summary BookmarkReached_resource
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `resource` parameter (ECMA-269
+ * C.20.1).
  */
 export
 const BookmarkReached_resource: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +43,8 @@ const BookmarkReached_resource: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary resource
  * @constant
+ * @description
+ * Alias of `BookmarkReached_resource`.
  */
 export
 const resource: number = BookmarkReached_resource; /* SHORT_NAMED_BIT */
@@ -39,6 +52,9 @@ const resource: number = BookmarkReached_resource; /* SHORT_NAMED_BIT */
 /**
  * @summary BookmarkReached_currentPosition
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.1).
  */
 export
 const BookmarkReached_currentPosition: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +62,8 @@ const BookmarkReached_currentPosition: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary currentPosition
  * @constant
+ * @description
+ * Alias of `BookmarkReached_currentPosition`.
  */
 export
 const currentPosition: number = BookmarkReached_currentPosition; /* SHORT_NAMED_BIT */
@@ -53,6 +71,9 @@ const currentPosition: number = BookmarkReached_currentPosition; /* SHORT_NAMED_
 /**
  * @summary BookmarkReached_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.1).
  */
 export
 const BookmarkReached_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +81,8 @@ const BookmarkReached_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `BookmarkReached_servicesPermitted`.
  */
 export
 const servicesPermitted: number = BookmarkReached_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -67,6 +90,9 @@ const servicesPermitted: number = BookmarkReached_servicesPermitted; /* SHORT_NA
 /**
  * @summary BookmarkReached_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.20.1).
  */
 export
 const BookmarkReached_privateData: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +100,8 @@ const BookmarkReached_privateData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `BookmarkReached_privateData`.
  */
 export
 const privateData: number = BookmarkReached_privateData; /* SHORT_NAMED_BIT */

@@ -23,7 +23,13 @@ import { ServiceCompletionFailure, _decode_ServiceCompletionFailure, _encode_Ser
 /**
  * @summary CallAssociatedEvtsList
  * @description
- * 
+ * Call Associated events the SF supports (ECMA-269 Annex C.8, ECMA-285 §9.10).
+ * Omit unsupported events.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,30 +50,45 @@ class CallAssociatedEvtsList {
          * @summary `callInformation`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly callInformation: OPTIONAL<CallInformation>,
         /**
          * @summary `charging`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly charging: OPTIONAL<Charging>,
         /**
          * @summary `digitsGenerated`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly digitsGenerated: OPTIONAL<DigitsGenerated>,
         /**
          * @summary `telephonyTonesGenerated`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly telephonyTonesGenerated: OPTIONAL<TelephonyTonesGenerated>,
         /**
          * @summary `serviceCompletionFailure`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly serviceCompletionFailure: OPTIONAL<ServiceCompletionFailure>
     ) {}

@@ -9,7 +9,13 @@ import { CalledDeviceID, _decode_CalledDeviceID, _encode_CalledDeviceID } from "
 /**
  * @summary CalledDevice
  * @description
- * 
+ *
+ * Synonym for `CalledDeviceID` (ECMA-285 §9.2). See that type for
+ * originally-called-device semantics (ECMA-269 §12.3.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -29,7 +29,14 @@ import { SpeakerVolumeEvent, _decode_SpeakerVolumeEvent, _encode_SpeakerVolumeEv
 /**
  * @summary PhysicalDeviceFeatureEvents
  * @description
- * 
+ *
+ * Physical device-feature event body of `cSTAEventReport` (ECMA-285 §10).
+ * Alternatives: Button Information, Button Press, Display Updated, Hookswitch,
+ * Lamp Mode, Message Waiting, Microphone Gain, Microphone Mute, Ringer Status,
+ * Speaker Mute, Speaker Volume.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

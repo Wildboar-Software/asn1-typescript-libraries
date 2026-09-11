@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ReqDeviceCategory
  * @description
- * 
+ *
+ * Requested category filter for Get Switching Function Devices
+ * (Table 13-10). Group values distinguish ACD, hunt, pick, user,
+ * and other.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,7 +69,14 @@ enum _enum_for_ReqDeviceCategory {
 /**
  * @summary ReqDeviceCategory
  * @description
- * 
+ *
+ * Requested category filter for Get Switching Function Devices
+ * (Table 13-10). Group values distinguish ACD, hunt, pick, user,
+ * and other.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,7 +110,14 @@ type ReqDeviceCategory = _enum_for_ReqDeviceCategory;
 /**
  * @summary ReqDeviceCategory
  * @description
- * 
+ *
+ * Requested category filter for Get Switching Function Devices
+ * (Table 13-10). Group values distinguish ACD, hunt, pick, user,
+ * and other.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

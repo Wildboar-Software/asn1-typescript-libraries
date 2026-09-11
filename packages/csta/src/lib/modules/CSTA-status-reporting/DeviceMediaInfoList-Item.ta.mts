@@ -17,7 +17,12 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
 /**
  * @summary DeviceMediaInfoList_Item
  * @description
- * 
+ *
+ * One media-service binding on a snapshotted device connection. ECMA-269
+ * §16.1.4.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,20 @@ class DeviceMediaInfoList_Item {
     constructor (
         /**
          * @summary `mediaStreamID`.
+         * @description
+         *
+         * Required if the switch provides mediaStreamID. ECMA-269 §16.1.4.
+         *
          * @public
          * @readonly
          */
         readonly mediaStreamID: OPTIONAL<MediaStreamID>,
         /**
          * @summary `connectionInformation`.
+         * @description
+         *
+         * Connection-level flow/channels. ECMA-269 §16.1.4, §12.2.8.
+         *
          * @public
          * @readonly
          */

@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SwitchingFunctionDevices
  * @description
- * 
+ * Capability bitmap for the Switching Function Devices service (ECMA-269 C.1.6,
+ * ECMA-285 §9.10). Presence of this entry in `CapExchangeServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +37,9 @@ type SwitchingFunctionDevices = BIT_STRING;
 /**
  * @summary SwitchingFunctionDevices_segmentID
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `segmentID` parameter (ECMA-269
+ * C.1.6).
  */
 export
 const SwitchingFunctionDevices_segmentID: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +47,8 @@ const SwitchingFunctionDevices_segmentID: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary segmentID
  * @constant
+ * @description
+ * Alias of `SwitchingFunctionDevices_segmentID`.
  */
 export
 const segmentID: number = SwitchingFunctionDevices_segmentID; /* SHORT_NAMED_BIT */
@@ -42,6 +56,9 @@ const segmentID: number = SwitchingFunctionDevices_segmentID; /* SHORT_NAMED_BIT
 /**
  * @summary SwitchingFunctionDevices_deviceListDeviceCategory
  * @constant
+ * @description
+ * Bit set means the SF supports optional device-list `deviceCategory` (ECMA-269
+ * C.1.6).
  */
 export
 const SwitchingFunctionDevices_deviceListDeviceCategory: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +66,8 @@ const SwitchingFunctionDevices_deviceListDeviceCategory: number = 1; /* LONG_NAM
 /**
  * @summary deviceListDeviceCategory
  * @constant
+ * @description
+ * Alias of `SwitchingFunctionDevices_deviceListDeviceCategory`.
  */
 export
 const deviceListDeviceCategory: number = SwitchingFunctionDevices_deviceListDeviceCategory; /* SHORT_NAMED_BIT */
@@ -56,6 +75,9 @@ const deviceListDeviceCategory: number = SwitchingFunctionDevices_deviceListDevi
 /**
  * @summary SwitchingFunctionDevices_deviceListNamedDeviceTypes
  * @constant
+ * @description
+ * Bit set means the SF supports optional device-list `namedDeviceTypes`
+ * (ECMA-269 C.1.6).
  */
 export
 const SwitchingFunctionDevices_deviceListNamedDeviceTypes: number = 2; /* LONG_NAMED_BIT */
@@ -63,6 +85,8 @@ const SwitchingFunctionDevices_deviceListNamedDeviceTypes: number = 2; /* LONG_N
 /**
  * @summary deviceListNamedDeviceTypes
  * @constant
+ * @description
+ * Alias of `SwitchingFunctionDevices_deviceListNamedDeviceTypes`.
  */
 export
 const deviceListNamedDeviceTypes: number = SwitchingFunctionDevices_deviceListNamedDeviceTypes; /* SHORT_NAMED_BIT */
@@ -70,6 +94,9 @@ const deviceListNamedDeviceTypes: number = SwitchingFunctionDevices_deviceListNa
 /**
  * @summary SwitchingFunctionDevices_deviceListDeviceAttributes
  * @constant
+ * @description
+ * Bit set means the SF supports optional device-list `deviceAttributes`
+ * (ECMA-269 C.1.6).
  */
 export
 const SwitchingFunctionDevices_deviceListDeviceAttributes: number = 3; /* LONG_NAMED_BIT */
@@ -77,6 +104,8 @@ const SwitchingFunctionDevices_deviceListDeviceAttributes: number = 3; /* LONG_N
 /**
  * @summary deviceListDeviceAttributes
  * @constant
+ * @description
+ * Alias of `SwitchingFunctionDevices_deviceListDeviceAttributes`.
  */
 export
 const deviceListDeviceAttributes: number = SwitchingFunctionDevices_deviceListDeviceAttributes; /* SHORT_NAMED_BIT */
@@ -84,6 +113,9 @@ const deviceListDeviceAttributes: number = SwitchingFunctionDevices_deviceListDe
 /**
  * @summary SwitchingFunctionDevices_deviceListDeviceModelName
  * @constant
+ * @description
+ * Bit set means the SF supports optional device-list `deviceModelName`
+ * (ECMA-269 C.1.6).
  */
 export
 const SwitchingFunctionDevices_deviceListDeviceModelName: number = 4; /* LONG_NAMED_BIT */
@@ -91,6 +123,8 @@ const SwitchingFunctionDevices_deviceListDeviceModelName: number = 4; /* LONG_NA
 /**
  * @summary deviceListDeviceModelName
  * @constant
+ * @description
+ * Alias of `SwitchingFunctionDevices_deviceListDeviceModelName`.
  */
 export
 const deviceListDeviceModelName: number = SwitchingFunctionDevices_deviceListDeviceModelName; /* SHORT_NAMED_BIT */
@@ -98,6 +132,9 @@ const deviceListDeviceModelName: number = SwitchingFunctionDevices_deviceListDev
 /**
  * @summary SwitchingFunctionDevices_deviceListNidGroup
  * @constant
+ * @description
+ * Bit set means the SF supports optional device-list NID group (ECMA-269
+ * C.1.6).
  */
 export
 const SwitchingFunctionDevices_deviceListNidGroup: number = 6; /* LONG_NAMED_BIT */
@@ -105,6 +142,8 @@ const SwitchingFunctionDevices_deviceListNidGroup: number = 6; /* LONG_NAMED_BIT
 /**
  * @summary deviceListNidGroup
  * @constant
+ * @description
+ * Alias of `SwitchingFunctionDevices_deviceListNidGroup`.
  */
 export
 const deviceListNidGroup: number = SwitchingFunctionDevices_deviceListNidGroup; /* SHORT_NAMED_BIT */
@@ -112,6 +151,9 @@ const deviceListNidGroup: number = SwitchingFunctionDevices_deviceListNidGroup; 
 /**
  * @summary SwitchingFunctionDevices_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.1.6).
  */
 export
 const SwitchingFunctionDevices_privateData: number = 5; /* LONG_NAMED_BIT */
@@ -119,6 +161,8 @@ const SwitchingFunctionDevices_privateData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SwitchingFunctionDevices_privateData`.
  */
 export
 const privateData: number = SwitchingFunctionDevices_privateData; /* SHORT_NAMED_BIT */

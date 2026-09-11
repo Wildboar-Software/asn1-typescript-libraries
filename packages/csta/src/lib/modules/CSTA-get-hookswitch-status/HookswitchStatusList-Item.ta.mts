@@ -16,7 +16,12 @@ import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CST
 /**
  * @summary HookswitchStatusList_Item
  * @description
- * 
+ *
+ * One hookswitch (ECMA-269 §21.1.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,18 @@ class HookswitchStatusList_Item {
     constructor (
         /**
          * @summary `hookswitch`.
+         * @description
+         *
+         * Hookswitch whose status is reported.
          * @public
          * @readonly
          */
         readonly hookswitch: HookswitchID,
         /**
          * @summary `hookswitchOnHook`.
+         * @description
+         *
+         * TRUE = on-hook; FALSE = off-hook.
          * @public
          * @readonly
          */

@@ -27,7 +27,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetCSTAFeatureResult
  * @description
- * 
+ *
+ * Positive acknowledgement (ECMA-269 Table 13-3). Lists services
+ * and events supported by some or all devices; use Get Logical or
+ * Physical Device Information for a specific device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,18 +75,34 @@ class GetCSTAFeatureResult {
     constructor (
         /**
          * @summary `supportedServices`.
+         * @description
+         *
+         * Mandatory bitmaps of supported services, grouped by category
+         * (capability exchange, system, monitoring, snapshot, call
+         * control, call associated, media, routeing, physical, logical,
+         * I/O, data collection, voice, CDR, vendor-specific, location).
+         * Omitted category or bit: not supported by any device.
          * @public
          * @readonly
          */
         readonly supportedServices: GetCSTAFeatureResult_supportedServices,
         /**
          * @summary `supportedEvents`.
+         * @description
+         *
+         * Optional bitmaps of supported events (call control, call
+         * associated, media, physical, logical, device maintenance,
+         * voice, vendor-specific). Omitted bit: not supported by any
+         * device.
          * @public
          * @readonly
          */
         readonly supportedEvents: OPTIONAL<GetCSTAFeatureResult_supportedEvents>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and privateData. ECMA-269 Table 13-3.
          * @public
          * @readonly
          */

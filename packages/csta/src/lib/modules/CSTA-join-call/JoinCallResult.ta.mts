@@ -21,7 +21,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary JoinCallResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Join Call (ECMA-269 §17.1.17 /
+ * ECMA-285 §15.1.17). Returns the joining device's connection in
+ * the conference (CallID inherited from `activeCall`).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +46,44 @@ class JoinCallResult {
     constructor (
         /**
          * @summary `conferencedCall`.
+         * @description
+         *
+         * Mandatory. Joining device's connection in the resulting
+         * conference.
+         *
          * @public
          * @readonly
          */
         readonly conferencedCall: ConnectionID,
         /**
          * @summary `conferencedCallInfo`.
+         * @description
+         *
+         * Optional connection information for `conferencedCall`
+         * (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly conferencedCallInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
+         * @description
+         *
+         * Optional call-linkage data pairing old and new call
+         * identities (§12.2.5, §12.3.9 FR 8).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

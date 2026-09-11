@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ReplaceMode
  * @description
- * 
+ *
+ * `replaceAll` (default) or `replacePortion` (ECMA-269 §28.1.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +34,13 @@ enum _enum_for_ReplaceMode {
 /**
  * @summary ReplaceMode
  * @description
- * 
+ *
+ * `replaceAll` (default) or `replacePortion` (ECMA-269 §28.1.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +57,13 @@ type ReplaceMode = _enum_for_ReplaceMode;
 /**
  * @summary ReplaceMode
  * @description
- * 
+ *
+ * `replaceAll` (default) or `replacePortion` (ECMA-269 §28.1.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,6 +79,10 @@ const ReplaceMode = _enum_for_ReplaceMode;
 
 /**
  * @summary ReplaceMode_replaceAll
+ * @description
+ *
+ * Replace all existing location information (default) (ECMA-269 §28.1.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +91,10 @@ const ReplaceMode_replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* LONG_NAME
 
 /**
  * @summary replaceAll
+ * @description
+ *
+ * Replace all existing location information (default) (ECMA-269 §28.1.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +103,11 @@ const replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary ReplaceMode_replacePortion
+ * @description
+ *
+ * Replace only equivalent person, device, or tuple components (ECMA-269
+ * §28.1.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +116,11 @@ const ReplaceMode_replacePortion: ReplaceMode = ReplaceMode.replacePortion; /* L
 
 /**
  * @summary replacePortion
+ * @description
+ *
+ * Replace only equivalent person, device, or tuple components (ECMA-269
+ * §28.1.2.1).
+ *
  * @constant
  * @type {number}
  */

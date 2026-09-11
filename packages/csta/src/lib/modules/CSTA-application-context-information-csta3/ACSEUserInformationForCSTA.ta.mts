@@ -11,7 +11,12 @@ import { NewACSEUserInformationForCSTA, _decode_NewACSEUserInformationForCSTA, _
 /**
  * @summary ACSEUserInformationForCSTA
  * @description
- * 
+ *
+ * CHOICE of Phase II (`oldDefinition`) or Phase III (`newDefinition`) ACSE
+ * user-information. ECMA-285 §8.2.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,14 @@ import { CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode
 /**
  * @summary NewACSEUserInformationForCSTA
  * @description
- * 
+ *
+ * Phase III ACSE user-information. `cSTAFunctionsRequiredByApplication` and
+ * `cSTAFunctionsThatCanBeSupplied` are Phase II (ECMA-218) compatibility; Phase
+ * III implementations should use Capability Exchange for supported services and
+ * events. ECMA-285 §8.2.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +51,30 @@ class NewACSEUserInformationForCSTA {
     constructor (
         /**
          * @summary `cSTAVersion`.
+         * @description Protocol versions offered or selected.
          * @public
          * @readonly
          */
         readonly cSTAVersion: CSTAVersion,
         /**
          * @summary `cSTAFunctionsRequiredByApplication`.
+         * @description
+         * Phase II functionality this application requires (optional).
          * @public
          * @readonly
          */
         readonly cSTAFunctionsRequiredByApplication: OPTIONAL<CSTAFunctionality>,
         /**
          * @summary `cSTAFunctionsThatCanBeSupplied`.
+         * @description
+         * Phase II functionality this application can supply (optional).
          * @public
          * @readonly
          */
         readonly cSTAFunctionsThatCanBeSupplied: OPTIONAL<CSTAFunctionality>,
         /**
          * @summary `cSTAPrivateDataVersionList`.
+         * @description Private-data versions for this association.
          * @public
          * @readonly
          */

@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary camponCall
  * @description
- * 
+ *
+ * Camp On Call (ECMA-269 §17.1.6 / ECMA-285 §15.1.6). Invoked by
+ * the computing function on the switching function. The called
+ * connection is typically Fail and becomes Queued; the calling
+ * connection stays Connected. Unlike Call Back, the original call
+ * is not cleared. Cancel via Clear Connection/Call or on-hook
+ * (FR 2). ROSE local CODE 217. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

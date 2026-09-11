@@ -15,7 +15,13 @@ import {
 /**
  * @summary MaxLengthParametersContinued
  * @description
- * 
+ * Additional SF maximum lengths in characters (ECMA-269 §13.1.4.2.1 Table 13-9,
+ * ECMA-285 §9.10). Zero means unsupported.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,36 +43,48 @@ class MaxLengthParametersContinued {
          * @summary `monitorCrossRefID`.
          * @public
          * @readonly
+         * @description
+         * max length of MonitorCrossRefID; 0 means unsupported
          */
         readonly monitorCrossRefID: INTEGER,
         /**
          * @summary `callQualifyingData`.
          * @public
          * @readonly
+         * @description
+         * max length of CallQualifyingData; 0 means unsupported
          */
         readonly callQualifyingData: INTEGER,
         /**
          * @summary `subDomainCallLinkageData`.
          * @public
          * @readonly
+         * @description
+         * max length of subDomainCallLinkageID; 0 means unsupported
          */
         readonly subDomainCallLinkageData: INTEGER,
         /**
          * @summary `subDomainThreadID`.
          * @public
          * @readonly
+         * @description
+         * max length of subDomainThreadID; 0 means unsupported
          */
         readonly subDomainThreadID: INTEGER,
         /**
          * @summary `ioData`.
          * @public
          * @readonly
+         * @description
+         * max length of ioData parameters; 0 means unsupported
          */
         readonly ioData: INTEGER,
         /**
          * @summary `messageInfo`.
          * @public
          * @readonly
+         * @description
+         * max length of MessageInfo; 0 means unsupported
          */
         readonly messageInfo: INTEGER
     ) {}

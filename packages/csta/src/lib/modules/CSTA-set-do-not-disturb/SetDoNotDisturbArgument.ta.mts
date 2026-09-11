@@ -20,7 +20,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetDoNotDisturbArgument
  * @description
- * 
+ *
+ * Set Do Not Disturb request (ECMA-269 §22.1.19.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +44,48 @@ class SetDoNotDisturbArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device on which to set DND.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `doNotDisturbOn`.
+         * @description
+         *
+         * FALSE = disable; TRUE = enable.
          * @public
          * @readonly
          */
         readonly doNotDisturbOn: BOOLEAN,
         /**
          * @summary `callOrigination`.
+         * @description
+         *
+         * Bitmap: Internal and/or External origination. Unsupported:
+         * SF-specific. Supported but omitted: all bits on.
          * @public
          * @readonly
          */
         readonly callOrigination: OPTIONAL<CallOrigination>,
         /**
          * @summary `callingDeviceList`.
+         * @description
+         *
+         * Calling devices from which DND is honoured. Supported but omitted:
+         * honour DND regardless of calling device.
          * @public
          * @readonly
          */
         readonly callingDeviceList: OPTIONAL<DeviceID[]>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

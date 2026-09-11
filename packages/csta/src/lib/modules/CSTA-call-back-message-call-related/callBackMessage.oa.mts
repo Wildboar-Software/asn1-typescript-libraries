@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary callBackMessage
  * @description
- * 
+ *
+ * Call Back Message Call-Related (ECMA-269 §17.1.5 / ECMA-285
+ * §15.1.5). Invoked by the computing function on the switching
+ * function. Unlike Call Back, the calling device does not retry; a
+ * message is left at the called device (FR 3). Content and
+ * notification method are switching-function defined (FR 4). ROSE
+ * local CODE 216. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

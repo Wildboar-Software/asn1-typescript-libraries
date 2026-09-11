@@ -8,7 +8,15 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CallQualifyingData
  * @description
- * 
+ *
+ * Wrap codes, walk-away codes, hold/transfer reasons, and
+ * similar text that qualifies how a user handled a call.
+ * Maximum size is given by capability exchange. Changes are
+ * reported by the Call Information event (manual entry or
+ * Associate Data). ECMA-269 §12.2.6.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

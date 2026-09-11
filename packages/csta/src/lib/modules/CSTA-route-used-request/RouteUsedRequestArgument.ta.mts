@@ -28,7 +28,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteUsedRequestArgument
  * @description
- * 
+ *
+ * SF request (ECMA-269 Table 20-13).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,48 +55,73 @@ class RouteUsedRequestArgument {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         *
+         * Dialogue whose actual destination is reported.
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: RouteingCrossRefID,
         /**
          * @summary `routeRegisterReqID`.
+         * @description
+         *
+         * Registration for this dialogue, if registration is used.
          * @public
          * @readonly
          */
         readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
         /**
          * @summary `routeUsed`.
+         * @description
+         *
+         * Actual destination used for the call.
          * @public
          * @readonly
          */
         readonly routeUsed: CalledDeviceID,
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Calling device, if provided.
          * @public
          * @readonly
          */
         readonly callingDevice: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `domain`.
+         * @description
+         *
+         * Whether the destination is in the SF's domain, if provided.
          * @public
          * @readonly
          */
         readonly domain: OPTIONAL<BOOLEAN>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Correlator data associated with the call.
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Call/thread linkage identifiers.
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

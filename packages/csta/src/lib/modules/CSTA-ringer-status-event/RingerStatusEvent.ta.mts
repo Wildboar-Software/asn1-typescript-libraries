@@ -29,7 +29,17 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RingerStatusEvent
  * @description
- * 
+ *
+ * Ringer Status event (ECMA-269 §21.2.9 / ECMA-285 §19.2.9). Direction: SF→CF
+ * via Event Report. Ringer status changed (Set Ringer Status or the switching
+ * function). Reports ringer status only — use call-control events (e.g.
+ * Delivered) for call activity. At least one of `ringMode`, `ringCount`,
+ * `ringPattern`, `ringVolume`, `ringDuration`. Not generated when a Set request
+ * leaves the feature unchanged (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,48 +61,76 @@ class RingerStatusEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose ringer status changed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `ringer`.
+         * @description
+         *
+         * Ringer that changed.
          * @public
          * @readonly
          */
         readonly ringer: RingerID,
         /**
          * @summary `ringMode`.
+         * @description
+         *
+         * `ringing` includes the quiet phase of a cycle; `not ringing` means
+         * not in an active cycle.
          * @public
          * @readonly
          */
         readonly ringMode: OPTIONAL<RingMode>,
         /**
          * @summary `ringCount`.
+         * @description
+         *
+         * Complete cycles 0–999; 1000 means greater than 999.
          * @public
          * @readonly
          */
         readonly ringCount: OPTIONAL<INTEGER>,
         /**
          * @summary `ringDuration`.
+         * @description
+         *
+         * Seconds ringing. Omit if `ringCount` is provided.
          * @public
          * @readonly
          */
         readonly ringDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `ringPattern`.
+         * @description
+         *
+         * Device-specific ringing pattern.
          * @public
          * @readonly
          */
         readonly ringPattern: OPTIONAL<INTEGER>,
         /**
          * @summary `ringVolume`.
+         * @description
+         *
+         * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
+         * increment/decrement by a switch-specified step. Loudness is
+         * ringer-specific.
          * @public
          * @readonly
          */
         readonly ringVolume: OPTIONAL<Volume>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -27,7 +27,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary TelephonyTonesGeneratedEvent
  * @description
- * 
+ *
+ * Telephony Tones Generated event (ECMA-269 §18.2.4 / ECMA-285 §16.2.4).
+ * Direction: SF→CF via Event Report. Omitted `toneGenerated` may mean
+ * generation stopped (e.g. after
+ * Cancel Telephony Tones), if the SF supports that report.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,42 +56,65 @@ class TelephonyTonesGeneratedEvent {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection on which the tone is generated.
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `toneGenerated`.
+         * @description
+         *
+         * Tone now being generated. Omitted may indicate generation
+         * stopped.
          * @public
          * @readonly
          */
         readonly toneGenerated: OPTIONAL<TelephonyTone>,
         /**
          * @summary `toneFrequency`.
+         * @description
+         *
+         * Only when `toneGenerated` is `other`.
          * @public
          * @readonly
          */
         readonly toneFrequency: OPTIONAL<INTEGER>,
         /**
          * @summary `toneDuration`.
+         * @description
+         *
+         * Only when `toneGenerated` is `other`.
          * @public
          * @readonly
          */
         readonly toneDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `pauseDuration`.
+         * @description
+         *
+         * Only when `toneGenerated` is `other`.
          * @public
          * @readonly
          */
         readonly pauseDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `connectionInfo`.
+         * @description
+         *
+         * Connection information for `connection`.
          * @public
          * @readonly
          */
         readonly connectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -8,7 +8,19 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CallCharacteristics
  * @description
- * 
+ *
+ * High-level characteristics of a call (ACD, priority,
+ * sensitivity, encryption). On an event, describes the call; on
+ * a service request, the characteristics to associate with the
+ * call. Multiple bits may be set. If several priority or
+ * sensitivity bits are set, the highest is suggested.
+ * Sensitivity, increasing: `privateCall`, `personalCall`,
+ * `sensitiveCall`, `confidentialCall`. Priority, increasing:
+ * `lowPriorityCall`, `priorityCall`, `highPriorityCall`.
+ * ECMA-269 §12.2.4.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +45,13 @@ type CallCharacteristics = BIT_STRING;
 
 /**
  * @summary CallCharacteristics_acdCall
+ * @description
+ *
+ * ACD call. Cleared once the call is no longer associated with
+ * the ACD. When a switch classifies a call as ACD (and when it
+ * ceases to be) is switching-function dependent.
+ * ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -47,6 +66,10 @@ const acdCall: number = CallCharacteristics_acdCall; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CallCharacteristics_lowPriorityCall
+ * @description
+ *
+ * Lowest of the three priority levels. ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -61,6 +84,10 @@ const lowPriorityCall: number = CallCharacteristics_lowPriorityCall; /* SHORT_NA
 
 /**
  * @summary CallCharacteristics_priorityCall
+ * @description
+ *
+ * Normal (middle) priority. ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -75,6 +102,10 @@ const priorityCall: number = CallCharacteristics_priorityCall; /* SHORT_NAMED_BI
 
 /**
  * @summary CallCharacteristics_highPriorityCall
+ * @description
+ *
+ * Highest of the three priority levels. ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -89,6 +120,11 @@ const highPriorityCall: number = CallCharacteristics_highPriorityCall; /* SHORT_
 
 /**
  * @summary CallCharacteristics_maintainanceCall
+ * @description
+ *
+ * Maintenance call. ASN.1 spelling `maintainanceCall` (typo in
+ * ECMA-285). ECMA-269 §12.2.4 (`maintenanceCall`).
+ *
  * @constant
  */
 export
@@ -103,6 +139,12 @@ const maintainanceCall: number = CallCharacteristics_maintainanceCall; /* SHORT_
 
 /**
  * @summary CallCharacteristics_directAgent
+ * @description
+ *
+ * Call placed directly to a device (e.g. ACD or station),
+ * possibly overriding agent states, forwarding, or DND.
+ * ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -117,6 +159,11 @@ const directAgent: number = CallCharacteristics_directAgent; /* SHORT_NAMED_BIT 
 
 /**
  * @summary CallCharacteristics_assistCall
+ * @description
+ *
+ * Call whose purpose is to request assistance. ECMA-269
+ * §12.2.4.
+ *
  * @constant
  */
 export
@@ -131,6 +178,12 @@ const assistCall: number = CallCharacteristics_assistCall; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CallCharacteristics_voiceUnitCall
+ * @description
+ *
+ * Call involving a Voice Unit (e.g. voice mail) or Interactive
+ * Voice Device. Cleared when that device leaves the call.
+ * ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -145,6 +198,10 @@ const voiceUnitCall: number = CallCharacteristics_voiceUnitCall; /* SHORT_NAMED_
 
 /**
  * @summary CallCharacteristics_privateCall
+ * @description
+ *
+ * Lowest sensitivity level. ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -159,6 +216,10 @@ const privateCall: number = CallCharacteristics_privateCall; /* SHORT_NAMED_BIT 
 
 /**
  * @summary CallCharacteristics_personalCall
+ * @description
+ *
+ * Sensitivity above `privateCall`. ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -173,6 +234,10 @@ const personalCall: number = CallCharacteristics_personalCall; /* SHORT_NAMED_BI
 
 /**
  * @summary CallCharacteristics_sensitiveCall
+ * @description
+ *
+ * Normal (third) sensitivity level. ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -187,6 +252,10 @@ const sensitiveCall: number = CallCharacteristics_sensitiveCall; /* SHORT_NAMED_
 
 /**
  * @summary CallCharacteristics_confidentialCall
+ * @description
+ *
+ * Highest sensitivity level. ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export
@@ -201,6 +270,12 @@ const confidentialCall: number = CallCharacteristics_confidentialCall; /* SHORT_
 
 /**
  * @summary CallCharacteristics_encryptedCall
+ * @description
+ *
+ * Payload/media (and possibly signalling) is encrypted. The
+ * mechanism (TLS, IPsec, SRTP, etc.) is implementation-specific.
+ * ECMA-269 §12.2.4.
+ *
  * @constant
  */
 export

@@ -28,7 +28,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary QueryVoiceAttributeArgument
  * @description
- * 
+ *
+ * Message, attribute, optional resource and connection. Connection is required
+ * if the attribute pertains to an Interactive Voice Device (ECMA-269
+ * §26.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +55,53 @@ class QueryVoiceAttributeArgument {
     constructor (
         /**
          * @summary `messageToQuery`.
+         * @description
+         *
+         * Message whose attribute is queried (ECMA-269 §26.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly messageToQuery: MessageID,
         /**
          * @summary `attributeToQuery`.
+         * @description
+         *
+         * Which attribute to read (ECMA-269 §26.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly attributeToQuery: AttributeToQuery,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Required if the attribute pertains to an Interactive Voice Device
+         * (ECMA-269 §26.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly connection: OPTIONAL<ConnectionID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

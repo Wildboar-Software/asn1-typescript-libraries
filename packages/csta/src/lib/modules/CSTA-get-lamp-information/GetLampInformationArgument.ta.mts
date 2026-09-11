@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLampInformationArgument
  * @description
- * 
+ *
+ * Get Lamp Information request (ECMA-269 §21.1.6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,30 @@ class GetLampInformationArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `lamp`.
+         * @description
+         *
+         * Lamp to query. Absent: all lamps, including those with no button
+         * (ECMA-269 §21.1.6.3.4 FR 1).
          * @public
          * @readonly
          */
         readonly lamp: OPTIONAL<LampID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary OutOfService
  * @description
- * 
+ * Capability bitmap for the Out of Service event (ECMA-269 C.16.3, ECMA-285
+ * §9.10). Presence of this entry in `DeviceMaintEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +31,9 @@ type OutOfService = BIT_STRING;
 /**
  * @summary OutOfService_cause
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `cause` parameter (ECMA-269
+ * C.16.3).
  */
 export
 const OutOfService_cause: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +41,8 @@ const OutOfService_cause: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary cause
  * @constant
+ * @description
+ * Alias of `OutOfService_cause`.
  */
 export
 const cause: number = OutOfService_cause; /* SHORT_NAMED_BIT */
@@ -37,6 +50,9 @@ const cause: number = OutOfService_cause; /* SHORT_NAMED_BIT */
 /**
  * @summary OutOfService_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.16.3).
  */
 export
 const OutOfService_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +60,8 @@ const OutOfService_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `OutOfService_privateData`.
  */
 export
 const privateData: number = OutOfService_privateData; /* SHORT_NAMED_BIT */

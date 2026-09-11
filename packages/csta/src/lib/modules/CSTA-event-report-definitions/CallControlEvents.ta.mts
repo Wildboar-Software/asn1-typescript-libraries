@@ -43,7 +43,15 @@ import { TransferredEvent, _decode_TransferredEvent, _encode_TransferredEvent } 
 /**
  * @summary CallControlEvents
  * @description
- * 
+ *
+ * Call-control event body of `cSTAEventReport` (ECMA-285 §10). Alternatives:
+ * Bridged, Call Cleared, Conferenced, Connection Cleared, Delivered, Digits
+ * Dialed, Diverted, Established, Failed, Held, Network Capabilities Changed,
+ * Network Reached, Offered, Originated, Queued, Retrieved, Service Initiated,
+ * Transferred.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

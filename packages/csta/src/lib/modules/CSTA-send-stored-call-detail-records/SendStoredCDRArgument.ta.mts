@@ -19,7 +19,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SendStoredCDRArgument
  * @description
- * 
+ *
+ * CDR session and optional time period (ECMA-269 §27.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,34 @@ class SendStoredCDRArgument {
     constructor (
         /**
          * @summary `cdrCrossRefID`.
+         * @description
+         *
+         * CDR transmission cross-reference from Start Call Detail Records
+         * Transmission (ECMA-269 §27.1.4).
+         *
          * @public
          * @readonly
          */
         readonly cdrCrossRefID: CDRCrossRefID,
         /**
          * @summary `timePeriod`.
+         * @description
+         *
+         * Interval (beginningOfCDR, endOfCDR) of recordCreationTime. If
+         * unsupported, all not-yet-transmitted stored records are sent
+         * (ECMA-269 §27.1.3.1 / FR 3).
+         *
          * @public
          * @readonly
          */
         readonly timePeriod: OPTIONAL<CDRTimePeriod>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

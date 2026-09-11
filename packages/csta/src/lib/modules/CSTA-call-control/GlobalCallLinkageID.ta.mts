@@ -8,7 +8,16 @@ import { OCTET_STRING, ASN1Element as _Element, ASN1TagClass as _TagClass } from
 /**
  * @summary GlobalCallLinkageID
  * @description
- * 
+ *
+ * Identifier of an end-to-end CSTA call. Choose either a
+ * switching-function-specific ID (unique only with the
+ * sub-domain name) or an H.225 globally unique ID (ITU-T Rec.
+ * H.225). If both the globally unique ID and the sub-domain
+ * name are present, the node-name field of the H.225 ID
+ * should match the sub-domain name. ECMA-269 §12.2.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

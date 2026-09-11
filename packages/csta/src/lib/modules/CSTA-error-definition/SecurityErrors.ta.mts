@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SecurityErrors
  * @description
- * 
+ *
+ * Security error (ECMA-269 §9.3.1, §12.2.14.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +36,11 @@ enum _enum_for_SecurityErrors {
 /**
  * @summary SecurityErrors
  * @description
- * 
+ *
+ * Security error (ECMA-269 §9.3.1, §12.2.14.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,7 +59,11 @@ type SecurityErrors = _enum_for_SecurityErrors;
 /**
  * @summary SecurityErrors
  * @description
- * 
+ *
+ * Security error (ECMA-269 §9.3.1, §12.2.14.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,14 +81,18 @@ const SecurityErrors = _enum_for_SecurityErrors;
 
 /**
  * @summary SecurityErrors_generic
+ * @description
+ * Security error; the server cannot be more specific. ECMA-269 §12.2.14.2.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SecurityErrors_generic: SecurityErrors = SecurityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
+ * @description Alias of {@link SecurityErrors_generic}.
  * @constant
  * @type {number}
  */
@@ -85,14 +101,18 @@ const generic: SecurityErrors = SecurityErrors.generic; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary SecurityErrors_sequenceNumberViolated
+ * @description
+ * Error in the operation's message sequence number. ECMA-269 §12.2.14.2.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SecurityErrors_sequenceNumberViolated: SecurityErrors = SecurityErrors.sequenceNumberViolated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequenceNumberViolated
+ * @description Alias of {@link SecurityErrors_sequenceNumberViolated}.
  * @constant
  * @type {number}
  */
@@ -101,14 +121,17 @@ const sequenceNumberViolated: SecurityErrors = SecurityErrors.sequenceNumberViol
 
 /**
  * @summary SecurityErrors_timeStampViolated
+ * @description Error in the operation's time stamp. ECMA-269 §12.2.14.2.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SecurityErrors_timeStampViolated: SecurityErrors = SecurityErrors.timeStampViolated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeStampViolated
+ * @description Alias of {@link SecurityErrors_timeStampViolated}.
  * @constant
  * @type {number}
  */
@@ -117,14 +140,17 @@ const timeStampViolated: SecurityErrors = SecurityErrors.timeStampViolated; /* S
 
 /**
  * @summary SecurityErrors_securityInfoViolated
+ * @description Error in the operation's security data. ECMA-269 §12.2.14.2.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SecurityErrors_securityInfoViolated: SecurityErrors = SecurityErrors.securityInfoViolated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary securityInfoViolated
+ * @description Alias of {@link SecurityErrors_securityInfoViolated}.
  * @constant
  * @type {number}
  */

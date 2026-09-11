@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary VoiceAttributesChangeEvent_mode
  * @description
- * 
+ *
+ * Listener mode after the change: automatic, single, or multiple (ECMA-269
+ * §26.2.17 / §26.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,7 +38,14 @@ enum _enum_for_VoiceAttributesChangeEvent_mode {
 /**
  * @summary VoiceAttributesChangeEvent_mode
  * @description
- * 
+ *
+ * Listener mode after the change: automatic, single, or multiple (ECMA-269
+ * §26.2.17 / §26.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,7 +64,14 @@ type VoiceAttributesChangeEvent_mode = _enum_for_VoiceAttributesChangeEvent_mode
 /**
  * @summary VoiceAttributesChangeEvent_mode
  * @description
- * 
+ *
+ * Listener mode after the change: automatic, single, or multiple (ECMA-269
+ * §26.2.17 / §26.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,6 +89,10 @@ const VoiceAttributesChangeEvent_mode = _enum_for_VoiceAttributesChangeEvent_mod
 
 /**
  * @summary VoiceAttributesChangeEvent_mode_automatic
+ * @description
+ *
+ * Listener automatic mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +101,10 @@ const VoiceAttributesChangeEvent_mode_automatic: VoiceAttributesChangeEvent_mode
 
 /**
  * @summary automatic
+ * @description
+ *
+ * Listener automatic mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +113,10 @@ const automatic: VoiceAttributesChangeEvent_mode = VoiceAttributesChangeEvent_mo
 
 /**
  * @summary VoiceAttributesChangeEvent_mode_single
+ * @description
+ *
+ * Listener single mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +125,10 @@ const VoiceAttributesChangeEvent_mode_single: VoiceAttributesChangeEvent_mode = 
 
 /**
  * @summary single
+ * @description
+ *
+ * Listener single mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +137,10 @@ const single: VoiceAttributesChangeEvent_mode = VoiceAttributesChangeEvent_mode.
 
 /**
  * @summary VoiceAttributesChangeEvent_mode_multiple
+ * @description
+ *
+ * Listener multiple mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +149,10 @@ const VoiceAttributesChangeEvent_mode_multiple: VoiceAttributesChangeEvent_mode 
 
 /**
  * @summary multiple
+ * @description
+ *
+ * Listener multiple mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */

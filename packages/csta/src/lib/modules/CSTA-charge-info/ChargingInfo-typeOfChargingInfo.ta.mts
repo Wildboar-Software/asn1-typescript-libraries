@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ChargingInfo_typeOfChargingInfo
  * @description
- * 
+ *
+ * Whether charging information is an intermediate or final total. ECMA-269
+ * §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,7 +34,12 @@ enum _enum_for_ChargingInfo_typeOfChargingInfo {
 /**
  * @summary ChargingInfo_typeOfChargingInfo
  * @description
- * 
+ *
+ * Whether charging information is an intermediate or final total. ECMA-269
+ * §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,7 +57,12 @@ type ChargingInfo_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInfo
 /**
  * @summary ChargingInfo_typeOfChargingInfo
  * @description
- * 
+ *
+ * Whether charging information is an intermediate or final total. ECMA-269
+ * §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,6 +79,10 @@ const ChargingInfo_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInf
 
 /**
  * @summary ChargingInfo_typeOfChargingInfo_subTotal
+ * @description
+ *
+ * Intermediate value during the call. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +99,10 @@ const subTotal: ChargingInfo_typeOfChargingInfo = ChargingInfo_typeOfChargingInf
 
 /**
  * @summary ChargingInfo_typeOfChargingInfo_total
+ * @description
+ *
+ * Charging information is complete. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */

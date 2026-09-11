@@ -29,7 +29,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary FastDataArgument
  * @description
- * 
+ *
+ * Object, optional path type, optional display attributes, and `ioData`
+ * (ECMA-269 §24.2.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,36 +56,66 @@ class FastDataArgument {
     constructor (
         /**
          * @summary `ioRegisterReqID`.
+         * @description
+         *
+         * I/O registration identifier. Mandatory if the switching function
+         * supports I/O registration and the data path was requested by the
+         * switching function; otherwise absent (ECMA-269 §6.2.2).
+         *
          * @public
          * @readonly
          */
         readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>,
         /**
          * @summary `object`.
+         * @description
+         *
+         * `DeviceID` or `ConnectionID` on which the ephemeral data path is
+         * started (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */
         readonly object: CSTAObject,
         /**
          * @summary `dataPathType`.
+         * @description
+         *
+         * `text` (digitally encoded text) or `voice` (digitally encoded voice)
+         * (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */
         readonly dataPathType: OPTIONAL<DataPathType>,
         /**
          * @summary `displayAttributes`.
+         * @description
+         *
+         * Only when `ioData` updates a device display (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */
         readonly displayAttributes: OPTIONAL<DisplayAttribute>,
         /**
          * @summary `ioData`.
+         * @description
+         *
+         * Payload. Spec table size is 240 characters; ASN.1 is `OCTET STRING`
+         * (ECMA-269 §24.2.3.1, ECMA-285 §22.2.3).
+         *
          * @public
          * @readonly
          */
         readonly ioData: OCTET_STRING,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

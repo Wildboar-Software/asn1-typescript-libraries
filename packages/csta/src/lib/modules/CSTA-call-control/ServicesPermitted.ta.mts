@@ -23,7 +23,19 @@ import { VoiceUnitServices, _decode_VoiceUnitServices, _encode_VoiceUnitServices
 /**
  * @summary ServicesPermitted
  * @description
- * 
+ *
+ * Which of a subset of CSTA services the switching function
+ * currently allows on a connection. On a call event this
+ * applies to the connection at the monitored device (like
+ * `localConnectionInfo`), which may not be the subject
+ * device. Only for events from device-type monitors. A bit
+ * set means that service is permitted; a later request may
+ * still fail due to dynamic conditions. With multiple
+ * connections at a device, this may not capture all
+ * interactions. ECMA-269 §12.2.25.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +54,51 @@ class ServicesPermitted {
     constructor (
         /**
          * @summary `callControlServices`.
+         * @description
+         *
+         * Permitted call-control services (ECMA-269 Table 17-1).
+         *
          * @public
          * @readonly
          */
         readonly callControlServices: CallControlServices,
         /**
          * @summary `callAssociatedServices`.
+         * @description
+         *
+         * Permitted call-associated services (ECMA-269 Table 18-1).
+         *
          * @public
          * @readonly
          */
         readonly callAssociatedServices: CallAssociatedServices,
         /**
          * @summary `mediaAttachmentServices`.
+         * @description
+         *
+         * Permitted media-attachment services (ECMA-269
+         * Table 19-1).
+         *
          * @public
          * @readonly
          */
         readonly mediaAttachmentServices: MediaAttachmentServices,
         /**
          * @summary `routeingServices`.
+         * @description
+         *
+         * Permitted routeing services (ECMA-269 Table 20-7).
+         *
          * @public
          * @readonly
          */
         readonly routeingServices: RouteingServices,
         /**
          * @summary `voiceUnitServices`.
+         * @description
+         *
+         * Permitted voice-unit services (ECMA-269 Table 26-1).
+         *
          * @public
          * @readonly
          */

@@ -25,7 +25,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary callBackMessageNonCallRelated
  * @description
- * 
+ *
+ * Call Back Message Non-Call-Related (ECMA-269 §22.1.2 / ECMA-285 §20.1.2).
+ * Direction: CF→SF. ROSE local CODE 301. Errors: `universalFailure`. Cancel
+ * with Cancel Call Back Message. CF cannot specify message content.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

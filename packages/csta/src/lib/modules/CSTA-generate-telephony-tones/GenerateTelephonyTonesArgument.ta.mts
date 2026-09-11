@@ -25,7 +25,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GenerateTelephonyTonesArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 18-18).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +48,37 @@ class GenerateTelephonyTonesArgument {
     constructor (
         /**
          * @summary `connectionToSendTone`.
+         * @description
+         *
+         * Connection on whose behalf the tone is generated.
          * @public
          * @readonly
          */
         readonly connectionToSendTone: ConnectionID,
         /**
          * @summary `toneToSend`.
+         * @description
+         *
+         * Telephony tone to generate.
          * @public
          * @readonly
          */
         readonly toneToSend: TelephonyTone,
         /**
          * @summary `toneDuration`.
+         * @description
+         *
+         * Duration of generation, if applicable.
          * @public
          * @readonly
          */
         readonly toneDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

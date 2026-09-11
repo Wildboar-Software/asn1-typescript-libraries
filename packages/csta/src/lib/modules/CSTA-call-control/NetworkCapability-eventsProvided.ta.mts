@@ -8,7 +8,12 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NetworkCapability_eventsProvided
  * @description
- * 
+ *
+ * Bitmap of Call Control events the reached network can provide. ECMA-269
+ * Network Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +44,11 @@ type NetworkCapability_eventsProvided = BIT_STRING;
 
 /**
  * @summary NetworkCapability_eventsProvided_bridged
+ * @description
+ *
+ * Network can report the `bridged` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -53,6 +63,11 @@ const bridged: number = NetworkCapability_eventsProvided_bridged; /* SHORT_NAMED
 
 /**
  * @summary NetworkCapability_eventsProvided_allCleared
+ * @description
+ *
+ * Network can report the `allCleared` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -67,6 +82,11 @@ const allCleared: number = NetworkCapability_eventsProvided_allCleared; /* SHORT
 
 /**
  * @summary NetworkCapability_eventsProvided_conferenced
+ * @description
+ *
+ * Network can report the `conferenced` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -81,6 +101,11 @@ const conferenced: number = NetworkCapability_eventsProvided_conferenced; /* SHO
 
 /**
  * @summary NetworkCapability_eventsProvided_connectionCleared
+ * @description
+ *
+ * Network can report the `connectionCleared` Call Control event. ECMA-269
+ * Network Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -95,6 +120,11 @@ const connectionCleared: number = NetworkCapability_eventsProvided_connectionCle
 
 /**
  * @summary NetworkCapability_eventsProvided_delivered
+ * @description
+ *
+ * Network can report the `delivered` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -109,6 +139,11 @@ const delivered: number = NetworkCapability_eventsProvided_delivered; /* SHORT_N
 
 /**
  * @summary NetworkCapability_eventsProvided_digitsDialed
+ * @description
+ *
+ * Network can report the `digitsDialed` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -123,6 +158,11 @@ const digitsDialed: number = NetworkCapability_eventsProvided_digitsDialed; /* S
 
 /**
  * @summary NetworkCapability_eventsProvided_diverted
+ * @description
+ *
+ * Network can report the `diverted` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -137,6 +177,11 @@ const diverted: number = NetworkCapability_eventsProvided_diverted; /* SHORT_NAM
 
 /**
  * @summary NetworkCapability_eventsProvided_established
+ * @description
+ *
+ * Network can report the `established` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -151,6 +196,11 @@ const established: number = NetworkCapability_eventsProvided_established; /* SHO
 
 /**
  * @summary NetworkCapability_eventsProvided_failed
+ * @description
+ *
+ * Network can report the `failed` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -165,6 +215,11 @@ const failed: number = NetworkCapability_eventsProvided_failed; /* SHORT_NAMED_B
 
 /**
  * @summary NetworkCapability_eventsProvided_held
+ * @description
+ *
+ * Network can report the `held` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -179,6 +234,11 @@ const held: number = NetworkCapability_eventsProvided_held; /* SHORT_NAMED_BIT *
 
 /**
  * @summary NetworkCapability_eventsProvided_networkCapabilitiesChange
+ * @description
+ *
+ * Network can report the `networkCapabilitiesChange` Call Control event.
+ * ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -193,6 +253,11 @@ const networkCapabilitiesChange: number = NetworkCapability_eventsProvided_netwo
 
 /**
  * @summary NetworkCapability_eventsProvided_networkReached
+ * @description
+ *
+ * Network can report the `networkReached` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -207,6 +272,11 @@ const networkReached: number = NetworkCapability_eventsProvided_networkReached; 
 
 /**
  * @summary NetworkCapability_eventsProvided_offered
+ * @description
+ *
+ * Network can report the `offered` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -221,6 +291,11 @@ const offered: number = NetworkCapability_eventsProvided_offered; /* SHORT_NAMED
 
 /**
  * @summary NetworkCapability_eventsProvided_originated
+ * @description
+ *
+ * Network can report the `originated` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -235,6 +310,11 @@ const originated: number = NetworkCapability_eventsProvided_originated; /* SHORT
 
 /**
  * @summary NetworkCapability_eventsProvided_queued
+ * @description
+ *
+ * Network can report the `queued` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -249,6 +329,11 @@ const queued: number = NetworkCapability_eventsProvided_queued; /* SHORT_NAMED_B
 
 /**
  * @summary NetworkCapability_eventsProvided_retrieved
+ * @description
+ *
+ * Network can report the `retrieved` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -263,6 +348,11 @@ const retrieved: number = NetworkCapability_eventsProvided_retrieved; /* SHORT_N
 
 /**
  * @summary NetworkCapability_eventsProvided_serviceInitiated
+ * @description
+ *
+ * Network can report the `serviceInitiated` Call Control event. ECMA-269
+ * Network Capabilities Changed.
+ *
  * @constant
  */
 export
@@ -277,6 +367,11 @@ const serviceInitiated: number = NetworkCapability_eventsProvided_serviceInitiat
 
 /**
  * @summary NetworkCapability_eventsProvided_transferred
+ * @description
+ *
+ * Network can report the `transferred` Call Control event. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  */
 export

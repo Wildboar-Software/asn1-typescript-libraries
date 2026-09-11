@@ -30,7 +30,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AgentLoggedOffEvent
  * @description
- * 
+ *
+ * Agent Logged Off event (ECMA-269 §22.2.2 / ECMA-285 §20.2.2). Direction:
+ * SF→CF via Event Report. Agent logged off an ACD device or group (telephone,
+ * Set Agent State, supervisor, or device left/deconfigured). May be reported
+ * for a monitor on the ACD device, ACD group, or agent device (§6.1.1.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,36 +58,56 @@ class AgentLoggedOffEvent {
     constructor (
         /**
          * @summary `agentDevice`.
+         * @description
+         *
+         * Device at which the agent logged off.
          * @public
          * @readonly
          */
         readonly agentDevice: SubjectDeviceID,
         /**
          * @summary `agentID`.
+         * @description
+         *
+         * Required if multiple agentIDs exist at the agent device.
          * @public
          * @readonly
          */
         readonly agentID: OPTIONAL<AgentID>,
         /**
          * @summary `acdGroup`.
+         * @description
+         *
+         * ACD group from which the agent logged off. Present iff the event is
+         * associated with ACD group activity (§6.1.1.6.5); otherwise absent.
          * @public
          * @readonly
          */
         readonly acdGroup: OPTIONAL<DeviceID>,
         /**
          * @summary `agentPassword`.
+         * @description
+         *
+         * Password used; the SF may omit it for security.
          * @public
          * @readonly
          */
         readonly agentPassword: OPTIONAL<AgentPassword>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Reason for the event.
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

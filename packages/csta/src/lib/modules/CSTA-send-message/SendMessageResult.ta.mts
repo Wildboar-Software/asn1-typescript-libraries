@@ -21,7 +21,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SendMessageResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Send Message (ECMA-269
+ * §17.1.24 / ECMA-285 §15.1.25). Acceptance only, not
+ * delivery. A Failed then Connection Cleared pair means a
+ * destination could not be diverted; that ConnectionID is
+ * still listed (FR 5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +48,46 @@ class SendMessageResult {
     constructor (
         /**
          * @summary `connectionList`.
+         * @description
+         *
+         * Mandatory. Connections created at the calling
+         * device. DeviceID may differ from the request when
+         * `callingDevice` named a group (Table 17-131).
+         *
          * @public
          * @readonly
          */
         readonly connectionList: ConnectionListItems,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Conditional. Required when media characteristics
+         * were adjusted; otherwise optional (Table 17-131).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `listOfCallLinkageData`.
+         * @description
+         *
+         * Optional. Call-linkage items in the same order as
+         * `connectionList` (Table 17-131, §12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly listOfCallLinkageData: OPTIONAL<CallLinkageDataListItems>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security
+         * and privateData parameters from the ECMA-269 service
+         * table.
+         *
          * @public
          * @readonly
          */

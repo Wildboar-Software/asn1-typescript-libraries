@@ -17,7 +17,13 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getMicrophoneGain
  * @description
- * 
+ *
+ * Get Microphone Gain (ECMA-269 §21.1.9 / ECMA-285 §19.1.9). Direction: CF→SF.
+ * ROSE local CODE 268. Errors: `universalFailure`. Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

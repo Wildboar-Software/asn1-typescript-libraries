@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NetworkCapability_networkType
  * @description
- * 
+ *
+ * Type of network reached (ISDN/non-ISDN, public or private). ECMA-269 Network
+ * Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,7 +40,12 @@ enum _enum_for_NetworkCapability_networkType {
 /**
  * @summary NetworkCapability_networkType
  * @description
- * 
+ *
+ * Type of network reached (ISDN/non-ISDN, public or private). ECMA-269 Network
+ * Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,7 +66,12 @@ type NetworkCapability_networkType = _enum_for_NetworkCapability_networkType;
 /**
  * @summary NetworkCapability_networkType
  * @description
- * 
+ *
+ * Type of network reached (ISDN/non-ISDN, public or private). ECMA-269 Network
+ * Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +91,10 @@ const NetworkCapability_networkType = _enum_for_NetworkCapability_networkType;
 
 /**
  * @summary NetworkCapability_networkType_iSDNPublic
+ * @description
+ *
+ * ISDN public network. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +111,10 @@ const iSDNPublic: NetworkCapability_networkType = NetworkCapability_networkType.
 
 /**
  * @summary NetworkCapability_networkType_nonISDNPublic
+ * @description
+ *
+ * Non-ISDN public network. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +131,10 @@ const nonISDNPublic: NetworkCapability_networkType = NetworkCapability_networkTy
 
 /**
  * @summary NetworkCapability_networkType_iSDNPrivate
+ * @description
+ *
+ * ISDN private network. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -124,6 +151,10 @@ const iSDNPrivate: NetworkCapability_networkType = NetworkCapability_networkType
 
 /**
  * @summary NetworkCapability_networkType_nonISDNPrivate
+ * @description
+ *
+ * Non-ISDN private network. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -140,6 +171,10 @@ const nonISDNPrivate: NetworkCapability_networkType = NetworkCapability_networkT
 
 /**
  * @summary NetworkCapability_networkType_other
+ * @description
+ *
+ * Other network type. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */

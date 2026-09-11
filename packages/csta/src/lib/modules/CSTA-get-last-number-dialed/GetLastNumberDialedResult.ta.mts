@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLastNumberDialedResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §22.1.12.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetLastNumberDialedResult {
     constructor (
         /**
          * @summary `numberDialed`.
+         * @description
+         *
+         * Last number dialled at the device.
          * @public
          * @readonly
          */
         readonly numberDialed: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

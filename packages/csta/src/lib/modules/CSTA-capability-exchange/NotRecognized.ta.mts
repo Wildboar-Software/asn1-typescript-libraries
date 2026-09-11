@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NotRecognized
  * @description
- * 
+ * Capability bitmap for the Not Recognized event (ECMA-269 C.20.6, ECMA-285
+ * §9.10). Presence of this entry in `VoiceUnitEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +34,9 @@ type NotRecognized = BIT_STRING;
 /**
  * @summary NotRecognized_resource
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `resource` parameter (ECMA-269
+ * C.20.6).
  */
 export
 const NotRecognized_resource: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +44,8 @@ const NotRecognized_resource: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary resource
  * @constant
+ * @description
+ * Alias of `NotRecognized_resource`.
  */
 export
 const resource: number = NotRecognized_resource; /* SHORT_NAMED_BIT */
@@ -40,6 +53,9 @@ const resource: number = NotRecognized_resource; /* SHORT_NAMED_BIT */
 /**
  * @summary NotRecognized_result
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.6).
  */
 export
 const NotRecognized_result: number = 1; /* LONG_NAMED_BIT */
@@ -47,6 +63,8 @@ const NotRecognized_result: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary result
  * @constant
+ * @description
+ * Alias of `NotRecognized_result`.
  */
 export
 const result: number = NotRecognized_result; /* SHORT_NAMED_BIT */
@@ -54,6 +72,9 @@ const result: number = NotRecognized_result; /* SHORT_NAMED_BIT */
 /**
  * @summary NotRecognized_cause
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `cause` parameter (ECMA-269
+ * C.20.6).
  */
 export
 const NotRecognized_cause: number = 2; /* LONG_NAMED_BIT */
@@ -61,6 +82,8 @@ const NotRecognized_cause: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary cause
  * @constant
+ * @description
+ * Alias of `NotRecognized_cause`.
  */
 export
 const cause: number = NotRecognized_cause; /* SHORT_NAMED_BIT */
@@ -68,6 +91,9 @@ const cause: number = NotRecognized_cause; /* SHORT_NAMED_BIT */
 /**
  * @summary NotRecognized_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.6).
  */
 export
 const NotRecognized_servicesPermitted: number = 3; /* LONG_NAMED_BIT */
@@ -75,6 +101,8 @@ const NotRecognized_servicesPermitted: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `NotRecognized_servicesPermitted`.
  */
 export
 const servicesPermitted: number = NotRecognized_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -82,6 +110,9 @@ const servicesPermitted: number = NotRecognized_servicesPermitted; /* SHORT_NAME
 /**
  * @summary NotRecognized_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.20.6).
  */
 export
 const NotRecognized_privateData: number = 4; /* LONG_NAMED_BIT */
@@ -89,6 +120,8 @@ const NotRecognized_privateData: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `NotRecognized_privateData`.
  */
 export
 const privateData: number = NotRecognized_privateData; /* SHORT_NAMED_BIT */

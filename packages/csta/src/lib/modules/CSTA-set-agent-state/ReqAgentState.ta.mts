@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ReqAgentState
  * @description
- * 
+ *
+ * Requested agent state for Set Agent State (ECMA-269 §22.1.15.1). Distinct
+ * from Get's `agentState` (no Busy).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +40,13 @@ enum _enum_for_ReqAgentState {
 /**
  * @summary ReqAgentState
  * @description
- * 
+ *
+ * Requested agent state for Set Agent State (ECMA-269 §22.1.15.1). Distinct
+ * from Get's `agentState` (no Busy).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +66,13 @@ type ReqAgentState = _enum_for_ReqAgentState;
 /**
  * @summary ReqAgentState
  * @description
- * 
+ *
+ * Requested agent state for Set Agent State (ECMA-269 §22.1.15.1). Distinct
+ * from Get's `agentState` (no Busy).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,6 +91,9 @@ const ReqAgentState = _enum_for_ReqAgentState;
 
 /**
  * @summary ReqAgentState_loggedOn
+ * @description
+ *
+ * Request that the agent be logged on.
  * @constant
  * @type {number}
  */
@@ -89,6 +110,9 @@ const loggedOn: ReqAgentState = ReqAgentState.loggedOn; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary ReqAgentState_loggedOff
+ * @description
+ *
+ * Request that the agent be logged off.
  * @constant
  * @type {number}
  */
@@ -105,6 +129,9 @@ const loggedOff: ReqAgentState = ReqAgentState.loggedOff; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ReqAgentState_notReady
+ * @description
+ *
+ * Place the agent in notReady.
  * @constant
  * @type {number}
  */
@@ -121,6 +148,9 @@ const notReady: ReqAgentState = ReqAgentState.notReady; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary ReqAgentState_ready
+ * @description
+ *
+ * Place the agent in ready.
  * @constant
  * @type {number}
  */
@@ -137,6 +167,9 @@ const ready: ReqAgentState = ReqAgentState.ready; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary ReqAgentState_workingAfterCall
+ * @description
+ *
+ * Place the agent in workingAfterCall.
  * @constant
  * @type {number}
  */

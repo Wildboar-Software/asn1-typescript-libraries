@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary stop
  * @description
- * 
+ *
+ * Voice Stop: halts the operation of a voice resource (ECMA-269 §26.1.15).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:508. Errors: `universalFailure` (ECMA-285 §24.1.15).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

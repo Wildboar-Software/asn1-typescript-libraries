@@ -9,7 +9,12 @@ import { GpLocationInfo, _decode_GpLocationInfo, _encode_GpLocationInfo } from "
 /**
  * @summary GpLocationInfoList
  * @description
- * 
+ *
+ * Sequence of GML/civic location chunks in a GEOPRIV
+ * `location-info` element. ECMA-269 §12.2.18; ECMA-285 §9.9.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

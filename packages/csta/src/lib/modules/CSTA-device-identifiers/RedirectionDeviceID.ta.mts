@@ -9,7 +9,27 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary RedirectionDeviceID
  * @description
- * 
+ *
+ * Last device known to the switching function from which the current
+ * call was routed — forwarded, diverted, or redirected
+ * (`APPLICATION 4`; ECMA-269 §12.3.24).
+ *
+ * - `numberdialed`: DeviceID of that last redirection device.
+ * - `notKnown`: call was redirected but the ID cannot be provided.
+ *   Immediate Forwarding (triggered before delivery) uses this in
+ *   the subsequent delivery event (§6.7.1).
+ * - `notRequired`: call has never been redirected.
+ * - `notSpecified`: switching function cannot tell whether the call
+ *   was ever redirected.
+ * - `restricted`: withheld for regulatory or privacy reasons.
+ *
+ * Kept until the call is established; updated to the last known hop
+ * if routed more than once. The last known device may be a single
+ * hop even if the call was routed several times.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,16 @@ import { OCTET_STRING, ASN1Element as _Element, ASN1TagClass as _TagClass } from
 /**
  * @summary IOCrossRefID
  * @description
- * 
+ *
+ * Identifies an I/O data path. Received in each I/O service request after Start
+ * Data Path. Valid only for the duration of that path. Unique within the I/O
+ * registration (`IORegisterReqID`); some switching functions make it unique
+ * across the sub-domain. `switchProvided` means the switching function started
+ * the path; `computerProvided` means the computing function did. ECMA-269
+ * §12.3.15.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

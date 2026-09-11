@@ -26,7 +26,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteSelectRequestArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 20-12).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,48 +53,74 @@ class RouteSelectRequestArgument {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         *
+         * Dialogue this destination answers.
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: RouteingCrossRefID,
         /**
          * @summary `routeRegisterReqID`.
+         * @description
+         *
+         * Registration for this dialogue, if registration is used.
          * @public
          * @readonly
          */
         readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
         /**
          * @summary `routeSelected`.
+         * @description
+         *
+         * Destination the SF should use.
          * @public
          * @readonly
          */
         readonly routeSelected: DeviceID,
         /**
          * @summary `alternateRoutes`.
+         * @description
+         *
+         * Further destinations the SF may try.
          * @public
          * @readonly
          */
         readonly alternateRoutes: OPTIONAL<DeviceID[]>,
         /**
          * @summary `remainRetries`.
+         * @description
+         *
+         * Remaining routes CF can still offer, or an indication that no
+         * count is available.
          * @public
          * @readonly
          */
         readonly remainRetries: OPTIONAL<RetryValue>,
         /**
          * @summary `routeUsedReq`.
+         * @description
+         *
+         * TRUE: SF should send Route Used with the actual destination.
          * @public
          * @readonly
          */
         readonly routeUsedReq: OPTIONAL<BOOLEAN>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Correlator data to associate with the call.
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

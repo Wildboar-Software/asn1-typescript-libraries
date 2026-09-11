@@ -15,7 +15,13 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary CallLinkageDataListItems
  * @description
- * 
+ *
+ * Call-linkage item paired with a Send Message connection
+ * (ECMA-269 §17.1.24 Table 17-131 / ECMA-285 §15.1.25).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +36,11 @@ class CallLinkageDataListItems {
     constructor (
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Mandatory. Global call data and thread data for
+         * the corresponding connection (§12.2.5).
+         *
          * @public
          * @readonly
          */

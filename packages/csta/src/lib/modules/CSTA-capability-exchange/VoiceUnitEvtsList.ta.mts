@@ -49,7 +49,13 @@ import { VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured
 /**
  * @summary VoiceUnitEvtsList
  * @description
- * 
+ * Voice events the SF supports (ECMA-269 Annex C.20, ECMA-285 §9.10). Omit
+ * unsupported events.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,108 +89,162 @@ class VoiceUnitEvtsList {
          * @summary `bookmarkReached`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly bookmarkReached: OPTIONAL<BookmarkReached>,
         /**
          * @summary `completed`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly completed: OPTIONAL<Completed>,
         /**
          * @summary `dtmfDetected`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly dtmfDetected: OPTIONAL<DtmfDetected>,
         /**
          * @summary `emptied`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly emptied: OPTIONAL<Emptied>,
         /**
          * @summary `interruptionDetected`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly interruptionDetected: OPTIONAL<InterruptionDetected>,
         /**
          * @summary `notRecognized`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly notRecognized: OPTIONAL<NotRecognized>,
         /**
          * @summary `play`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly play: OPTIONAL<Play>,
         /**
          * @summary `record`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly record: OPTIONAL<Record>,
         /**
          * @summary `recognized`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly recognized: OPTIONAL<Recognized>,
         /**
          * @summary `review`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly review: OPTIONAL<ReviewEvent>,
         /**
          * @summary `started`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly started: OPTIONAL<Started>,
         /**
          * @summary `silenceTimeoutExpired`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly silenceTimeoutExpired: OPTIONAL<SilenceTimeoutExpired>,
         /**
          * @summary `speechDetected`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly speechDetected: OPTIONAL<SpeechDetected>,
         /**
          * @summary `stop`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly stop: OPTIONAL<StopEvent>,
         /**
          * @summary `suspendPlay`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly suspendPlay: OPTIONAL<SuspendPlay>,
         /**
          * @summary `suspendRecord`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly suspendRecord: OPTIONAL<SuspendRecord>,
         /**
          * @summary `voiceAttribChanged`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly voiceAttribChanged: OPTIONAL<VoiceAttribChanged>,
         /**
          * @summary `voiceErrorOccured`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly voiceErrorOccured: OPTIONAL<VoiceErrorOccured>
     ) {}

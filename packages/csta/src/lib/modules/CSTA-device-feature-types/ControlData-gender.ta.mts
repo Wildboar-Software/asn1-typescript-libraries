@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ControlData_gender
  * @description
- * 
+ *
+ * Voice gender for Synthesize Message control data. ECMA-269 §26.1.17.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,7 +33,11 @@ enum _enum_for_ControlData_gender {
 /**
  * @summary ControlData_gender
  * @description
- * 
+ *
+ * Voice gender for Synthesize Message control data. ECMA-269 §26.1.17.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,7 +55,11 @@ type ControlData_gender = _enum_for_ControlData_gender;
 /**
  * @summary ControlData_gender
  * @description
- * 
+ *
+ * Voice gender for Synthesize Message control data. ECMA-269 §26.1.17.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,14 +76,17 @@ const ControlData_gender = _enum_for_ControlData_gender;
 
 /**
  * @summary ControlData_gender_male
+ * @description Male voice. ECMA-269 §26.1.17.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ControlData_gender_male: ControlData_gender = ControlData_gender.male; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary male
+ * @description Alias of {@link ControlData_gender_male}.
  * @constant
  * @type {number}
  */
@@ -80,14 +95,17 @@ const male: ControlData_gender = ControlData_gender.male; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ControlData_gender_female
+ * @description Female voice. ECMA-269 §26.1.17.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ControlData_gender_female: ControlData_gender = ControlData_gender.female; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary female
+ * @description Alias of {@link ControlData_gender_female}.
  * @constant
  * @type {number}
  */

@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AttributeToQuery
  * @description
- * 
+ *
+ * Voice attribute selector for Query Voice Attribute (ECMA-269 §26.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,7 +74,13 @@ enum _enum_for_AttributeToQuery {
 /**
  * @summary AttributeToQuery
  * @description
- * 
+ *
+ * Voice attribute selector for Query Voice Attribute (ECMA-269 §26.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -105,7 +117,13 @@ type AttributeToQuery = _enum_for_AttributeToQuery;
 /**
  * @summary AttributeToQuery
  * @description
- * 
+ *
+ * Voice attribute selector for Query Voice Attribute (ECMA-269 §26.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -141,6 +159,10 @@ const AttributeToQuery = _enum_for_AttributeToQuery;
 
 /**
  * @summary AttributeToQuery_encodingAlgorithm
+ * @description
+ *
+ * Encoding algorithm of the message (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +171,10 @@ const AttributeToQuery_encodingAlgorithm: AttributeToQuery = AttributeToQuery.en
 
 /**
  * @summary encodingAlgorithm
+ * @description
+ *
+ * Encoding algorithm of the message (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +183,10 @@ const encodingAlgorithm: AttributeToQuery = AttributeToQuery.encodingAlgorithm; 
 
 /**
  * @summary AttributeToQuery_samplingRate
+ * @description
+ *
+ * Sampling rate of the message (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +195,10 @@ const AttributeToQuery_samplingRate: AttributeToQuery = AttributeToQuery.samplin
 
 /**
  * @summary samplingRate
+ * @description
+ *
+ * Sampling rate of the message (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +207,10 @@ const samplingRate: AttributeToQuery = AttributeToQuery.samplingRate; /* SHORT_N
 
 /**
  * @summary AttributeToQuery_duration
+ * @description
+ *
+ * Duration in milliseconds (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +219,10 @@ const AttributeToQuery_duration: AttributeToQuery = AttributeToQuery.duration; /
 
 /**
  * @summary duration
+ * @description
+ *
+ * Duration in milliseconds (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +231,10 @@ const duration: AttributeToQuery = AttributeToQuery.duration; /* SHORT_NAMED_ENU
 
 /**
  * @summary AttributeToQuery_fileName
+ * @description
+ *
+ * Implementation-specific filename (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -197,6 +243,10 @@ const AttributeToQuery_fileName: AttributeToQuery = AttributeToQuery.fileName; /
 
 /**
  * @summary fileName
+ * @description
+ *
+ * Implementation-specific filename (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +255,10 @@ const fileName: AttributeToQuery = AttributeToQuery.fileName; /* SHORT_NAMED_ENU
 
 /**
  * @summary AttributeToQuery_currentPosition
+ * @description
+ *
+ * Position in milliseconds from the start (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -213,6 +267,10 @@ const AttributeToQuery_currentPosition: AttributeToQuery = AttributeToQuery.curr
 
 /**
  * @summary currentPosition
+ * @description
+ *
+ * Position in milliseconds from the start (Voice Unit) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +279,11 @@ const currentPosition: AttributeToQuery = AttributeToQuery.currentPosition; /* S
 
 /**
  * @summary AttributeToQuery_currentSpeed
+ * @description
+ *
+ * Percent of normal speed; 100 is normal, slowest reportable is 1% (ECMA-269
+ * §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -229,6 +292,11 @@ const AttributeToQuery_currentSpeed: AttributeToQuery = AttributeToQuery.current
 
 /**
  * @summary currentSpeed
+ * @description
+ *
+ * Percent of normal speed; 100 is normal, slowest reportable is 1% (ECMA-269
+ * §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +305,10 @@ const currentSpeed: AttributeToQuery = AttributeToQuery.currentSpeed; /* SHORT_N
 
 /**
  * @summary AttributeToQuery_currentVolume
+ * @description
+ *
+ * Absolute play volume 0..100 (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -245,6 +317,10 @@ const AttributeToQuery_currentVolume: AttributeToQuery = AttributeToQuery.curren
 
 /**
  * @summary currentVolume
+ * @description
+ *
+ * Absolute play volume 0..100 (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -253,6 +329,10 @@ const currentVolume: AttributeToQuery = AttributeToQuery.currentVolume; /* SHORT
 
 /**
  * @summary AttributeToQuery_currentLevel
+ * @description
+ *
+ * Recording gain 0..100 as queried currentGain (ECMA-269 §26.1.7.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -261,6 +341,10 @@ const AttributeToQuery_currentLevel: AttributeToQuery = AttributeToQuery.current
 
 /**
  * @summary currentLevel
+ * @description
+ *
+ * Recording gain 0..100 as queried currentGain (ECMA-269 §26.1.7.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -269,6 +353,10 @@ const currentLevel: AttributeToQuery = AttributeToQuery.currentLevel; /* SHORT_N
 
 /**
  * @summary AttributeToQuery_currentState
+ * @description
+ *
+ * Voice resource state (ECMA-269 §26.1.7.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -277,6 +365,10 @@ const AttributeToQuery_currentState: AttributeToQuery = AttributeToQuery.current
 
 /**
  * @summary currentState
+ * @description
+ *
+ * Voice resource state (ECMA-269 §26.1.7.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -285,6 +377,10 @@ const currentState: AttributeToQuery = AttributeToQuery.currentState; /* SHORT_N
 
 /**
  * @summary AttributeToQuery_grammars
+ * @description
+ *
+ * Grammars (URI list) for Listener, DTMF, or Prompt Queue (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -293,6 +389,10 @@ const AttributeToQuery_grammars: AttributeToQuery = AttributeToQuery.grammars; /
 
 /**
  * @summary grammars
+ * @description
+ *
+ * Grammars (URI list) for Listener, DTMF, or Prompt Queue (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -301,6 +401,10 @@ const grammars: AttributeToQuery = AttributeToQuery.grammars; /* SHORT_NAMED_ENU
 
 /**
  * @summary AttributeToQuery_language
+ * @description
+ *
+ * xml:lang language(s) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -309,6 +413,10 @@ const AttributeToQuery_language: AttributeToQuery = AttributeToQuery.language; /
 
 /**
  * @summary language
+ * @description
+ *
+ * xml:lang language(s) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -317,6 +425,10 @@ const language: AttributeToQuery = AttributeToQuery.language; /* SHORT_NAMED_ENU
 
 /**
  * @summary AttributeToQuery_mode
+ * @description
+ *
+ * Listener mode: automatic, single, or multiple (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -325,6 +437,10 @@ const AttributeToQuery_mode: AttributeToQuery = AttributeToQuery.mode; /* LONG_N
 
 /**
  * @summary mode
+ * @description
+ *
+ * Listener mode: automatic, single, or multiple (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -333,6 +449,10 @@ const mode: AttributeToQuery = AttributeToQuery.mode; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary AttributeToQuery_retainAudio
+ * @description
+ *
+ * Whether Listener audio is recorded (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -341,6 +461,10 @@ const AttributeToQuery_retainAudio: AttributeToQuery = AttributeToQuery.retainAu
 
 /**
  * @summary retainAudio
+ * @description
+ *
+ * Whether Listener audio is recorded (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -349,6 +473,10 @@ const retainAudio: AttributeToQuery = AttributeToQuery.retainAudio; /* SHORT_NAM
 
 /**
  * @summary AttributeToQuery_silenceTimeout
+ * @description
+ *
+ * Silence timeout in milliseconds (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -357,6 +485,10 @@ const AttributeToQuery_silenceTimeout: AttributeToQuery = AttributeToQuery.silen
 
 /**
  * @summary silenceTimeout
+ * @description
+ *
+ * Silence timeout in milliseconds (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -365,6 +497,10 @@ const silenceTimeout: AttributeToQuery = AttributeToQuery.silenceTimeout; /* SHO
 
 /**
  * @summary AttributeToQuery_maxTimeout
+ * @description
+ *
+ * Max timeout in milliseconds (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -373,6 +509,10 @@ const AttributeToQuery_maxTimeout: AttributeToQuery = AttributeToQuery.maxTimeou
 
 /**
  * @summary maxTimeout
+ * @description
+ *
+ * Max timeout in milliseconds (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -381,6 +521,10 @@ const maxTimeout: AttributeToQuery = AttributeToQuery.maxTimeout; /* SHORT_NAMED
 
 /**
  * @summary AttributeToQuery_babbleTimeout
+ * @description
+ *
+ * Babble timeout in milliseconds (Listener) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -389,6 +533,10 @@ const AttributeToQuery_babbleTimeout: AttributeToQuery = AttributeToQuery.babble
 
 /**
  * @summary babbleTimeout
+ * @description
+ *
+ * Babble timeout in milliseconds (Listener) (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -397,6 +545,10 @@ const babbleTimeout: AttributeToQuery = AttributeToQuery.babbleTimeout; /* SHORT
 
 /**
  * @summary AttributeToQuery_endSilence
+ * @description
+ *
+ * End-of-utterance / end-of-input silence in milliseconds (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -405,6 +557,10 @@ const AttributeToQuery_endSilence: AttributeToQuery = AttributeToQuery.endSilenc
 
 /**
  * @summary endSilence
+ * @description
+ *
+ * End-of-utterance / end-of-input silence in milliseconds (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -413,6 +569,11 @@ const endSilence: AttributeToQuery = AttributeToQuery.endSilence; /* SHORT_NAMED
 
 /**
  * @summary AttributeToQuery_rejectionThreshold
+ * @description
+ *
+ * Below this, Listener raises Not Recognized instead of Recognized (ECMA-269
+ * §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -421,6 +582,11 @@ const AttributeToQuery_rejectionThreshold: AttributeToQuery = AttributeToQuery.r
 
 /**
  * @summary rejectionThreshold
+ * @description
+ *
+ * Below this, Listener raises Not Recognized instead of Recognized (ECMA-269
+ * §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -429,6 +595,10 @@ const rejectionThreshold: AttributeToQuery = AttributeToQuery.rejectionThreshold
 
 /**
  * @summary AttributeToQuery_autoInterruptible
+ * @description
+ *
+ * Prompt stops on Listener or DTMF activity (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -437,6 +607,10 @@ const AttributeToQuery_autoInterruptible: AttributeToQuery = AttributeToQuery.au
 
 /**
  * @summary autoInterruptible
+ * @description
+ *
+ * Prompt stops on Listener or DTMF activity (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -445,6 +619,10 @@ const autoInterruptible: AttributeToQuery = AttributeToQuery.autoInterruptible; 
 
 /**
  * @summary AttributeToQuery_innerXml
+ * @description
+ *
+ * SSML document the Prompt is rendering (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -453,6 +631,10 @@ const AttributeToQuery_innerXml: AttributeToQuery = AttributeToQuery.innerXml; /
 
 /**
  * @summary innerXml
+ * @description
+ *
+ * SSML document the Prompt is rendering (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -461,6 +643,10 @@ const innerXml: AttributeToQuery = AttributeToQuery.innerXml; /* SHORT_NAMED_ENU
 
 /**
  * @summary AttributeToQuery_interDigitTimeout
+ * @description
+ *
+ * DTMF inter-digit timeout in milliseconds (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -469,6 +655,10 @@ const AttributeToQuery_interDigitTimeout: AttributeToQuery = AttributeToQuery.in
 
 /**
  * @summary interDigitTimeout
+ * @description
+ *
+ * DTMF inter-digit timeout in milliseconds (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -477,6 +667,10 @@ const interDigitTimeout: AttributeToQuery = AttributeToQuery.interDigitTimeout; 
 
 /**
  * @summary AttributeToQuery_preflush
+ * @description
+ *
+ * DTMF clears its buffer before interaction (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -485,6 +679,10 @@ const AttributeToQuery_preflush: AttributeToQuery = AttributeToQuery.preflush; /
 
 /**
  * @summary preflush
+ * @description
+ *
+ * DTMF clears its buffer before interaction (ECMA-269 §26.1.7.1).
+ *
  * @constant
  * @type {number}
  */

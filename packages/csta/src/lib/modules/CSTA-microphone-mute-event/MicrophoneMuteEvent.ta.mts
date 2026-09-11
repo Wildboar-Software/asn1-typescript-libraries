@@ -20,7 +20,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MicrophoneMuteEvent
  * @description
- * 
+ *
+ * Microphone Mute event (ECMA-269 §21.2.8 / ECMA-285 §19.2.8). Direction: SF→CF
+ * via Event Report. Microphone mute changed (telephone or Set Microphone Mute).
+ * Not generated when a Set request leaves the feature unchanged (ECMA-269
+ * §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +46,37 @@ class MicrophoneMuteEvent {
     constructor (
         /**
          * @summary `invokingDevice`.
+         * @description
+         *
+         * Device where the feature was invoked.
          * @public
          * @readonly
          */
         readonly invokingDevice: SubjectDeviceID,
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Apparatus whose mute status changed.
          * @public
          * @readonly
          */
         readonly auditoryApparatus: AuditoryApparatusID,
         /**
          * @summary `microphoneMuteOn`.
+         * @description
+         *
+         * FALSE = activated; TRUE = muted.
          * @public
          * @readonly
          */
         readonly microphoneMuteOn: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

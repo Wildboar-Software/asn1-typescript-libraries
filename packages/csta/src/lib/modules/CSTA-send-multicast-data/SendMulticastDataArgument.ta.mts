@@ -20,7 +20,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SendMulticastDataArgument
  * @description
- * 
+ *
+ * Target path list and payload (ECMA-269 §24.2.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +44,41 @@ class SendMulticastDataArgument {
     constructor (
         /**
          * @summary `ioCrossRefIDList`.
+         * @description
+         *
+         * Data paths to write (ECMA-269 §24.2.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ioCrossRefIDList: IOCrossRefID[],
         /**
          * @summary `ioData`.
+         * @description
+         *
+         * Data to send (ECMA-269 §24.2.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ioData: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `displayAttributes`.
+         * @description
+         *
+         * Only when sending to device displays (ECMA-269 §24.2.7.1).
+         *
          * @public
          * @readonly
          */
         readonly displayAttributes: OPTIONAL<DisplayAttributeList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

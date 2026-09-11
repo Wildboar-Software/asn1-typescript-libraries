@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AutoOriginate
  * @description
- * 
+ *
+ * Whether the originating (calling/joining) device is prompted or auto-answered
+ * (hands-free). Default is Prompt. Used on Make Call, Make Connection, Join
+ * Call, and similar. ECMA-269 §17.1.18.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +34,13 @@ enum _enum_for_AutoOriginate {
 /**
  * @summary AutoOriginate
  * @description
- * 
+ *
+ * Whether the originating (calling/joining) device is prompted or auto-answered
+ * (hands-free). Default is Prompt. Used on Make Call, Make Connection, Join
+ * Call, and similar. ECMA-269 §17.1.18.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +57,13 @@ type AutoOriginate = _enum_for_AutoOriginate;
 /**
  * @summary AutoOriginate
  * @description
- * 
+ *
+ * Whether the originating (calling/joining) device is prompted or auto-answered
+ * (hands-free). Default is Prompt. Used on Make Call, Make Connection, Join
+ * Call, and similar. ECMA-269 §17.1.18.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,6 +79,10 @@ const AutoOriginate = _enum_for_AutoOriginate;
 
 /**
  * @summary AutoOriginate_prompt
+ * @description
+ *
+ * Prompt the originating device. Default. ECMA-269 §17.1.18.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +99,10 @@ const prompt: AutoOriginate = AutoOriginate.prompt; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary AutoOriginate_doNotPrompt
+ * @description
+ *
+ * Do not prompt; auto-originate (hands-free). ECMA-269 §17.1.18.
+ *
  * @constant
  * @type {number}
  */

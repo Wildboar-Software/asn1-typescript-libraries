@@ -24,7 +24,13 @@ import {
 /**
  * @summary DisplayList_Item
  * @description
- * 
+ *
+ * One display. `contentsOfDisplay` always has `logicalRows * logicalColumns`
+ * characters (ECMA-269 §21.1.4.3.4 FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,54 +54,83 @@ class DisplayList_Item {
     constructor (
         /**
          * @summary `displayID`.
+         * @description
+         *
+         * Display this entry describes.
          * @public
          * @readonly
          */
         readonly displayID: DisplayID,
         /**
          * @summary `logicalRows`.
+         * @description
+         *
+         * Rows on the logical display.
          * @public
          * @readonly
          */
         readonly logicalRows: INTEGER,
         /**
          * @summary `logicalColumns`.
+         * @description
+         *
+         * Columns on the logical display.
          * @public
          * @readonly
          */
         readonly logicalColumns: INTEGER,
         /**
          * @summary `physicalRows`.
+         * @description
+         *
+         * Physical rows. Omit when equal to `logicalRows`.
          * @public
          * @readonly
          */
         readonly physicalRows: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalColumns`.
+         * @description
+         *
+         * Physical columns. Omit when equal to `logicalColumns`.
          * @public
          * @readonly
          */
         readonly physicalColumns: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseRowNumber`.
+         * @description
+         *
+         * Logical row shown at the first physical row. Omit when physical and
+         * logical row counts are equal.
          * @public
          * @readonly
          */
         readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseColumnNumber`.
+         * @description
+         *
+         * Logical column shown at the first physical column. Omit when physical
+         * and logical column counts are equal.
          * @public
          * @readonly
          */
         readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `characterSet`.
+         * @description
+         *
+         * ASCII (default), Unicode (UTF-8), or Proprietary.
          * @public
          * @readonly
          */
         readonly characterSet: OPTIONAL<CharacterSet>,
         /**
          * @summary `contentsOfDisplay`.
+         * @description
+         *
+         * Full logical display: rows concatenated, including spaces.
          * @public
          * @readonly
          */

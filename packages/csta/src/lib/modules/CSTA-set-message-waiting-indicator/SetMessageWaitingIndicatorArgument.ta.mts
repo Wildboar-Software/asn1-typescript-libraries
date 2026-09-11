@@ -18,7 +18,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetMessageWaitingIndicatorArgument
  * @description
- * 
+ *
+ * Set Message Waiting Indicator request (ECMA-269 §21.1.18.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +41,38 @@ class SetMessageWaitingIndicatorArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `messageWaitingOn`.
+         * @description
+         *
+         * FALSE = off; TRUE = on.
          * @public
          * @readonly
          */
         readonly messageWaitingOn: BOOLEAN,
         /**
          * @summary `deviceForMessage`.
+         * @description
+         *
+         * Device where the message is waiting.
          * @public
          * @readonly
          */
         readonly deviceForMessage: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

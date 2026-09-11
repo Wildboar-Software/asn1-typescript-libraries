@@ -28,7 +28,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ChargingEvent
  * @description
- * 
+ *
+ * Charging event (ECMA-269 §18.2.2 / ECMA-285 §16.2.2). Direction: SF→CF via
+ * Event Report. May be delivered after release when further charge information
+ * arrives.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +54,46 @@ class ChargingEvent {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection for which charging information was detected.
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `chargedDevice`.
+         * @description
+         *
+         * Device being charged.
          * @public
          * @readonly
          */
         readonly chargedDevice: DeviceID,
         /**
          * @summary `chargingInfo`.
+         * @description
+         *
+         * New charging information (e.g. PPM).
          * @public
          * @readonly
          */
         readonly chargingInfo: ChargingInfo,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Event cause, if provided.
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

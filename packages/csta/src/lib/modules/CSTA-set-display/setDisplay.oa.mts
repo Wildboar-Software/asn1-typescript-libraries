@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setDisplay
  * @description
- * 
+ *
+ * Set Display (ECMA-269 §21.1.15 / ECMA-285 §19.1.15). Direction: CF→SF. ROSE
+ * local CODE 274. Errors: `universalFailure`. Overflow is truncated. Null
+ * contentsOfDisplay clears from offset to end. If already at the requested
+ * value: positive ack and no event (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

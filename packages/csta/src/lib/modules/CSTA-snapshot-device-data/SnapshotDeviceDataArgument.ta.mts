@@ -21,7 +21,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SnapshotDeviceDataArgument
  * @description
- * 
+ *
+ * One Snapshot DeviceData segment: calls at the device and their local call
+ * state. ECMA-269 §16.1.4.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +45,52 @@ class SnapshotDeviceDataArgument {
     constructor (
         /**
          * @summary `serviceCrossRefID`.
+         * @description
+         *
+         * Associates this segment with the original request. ECMA-269
+         * segmented-response model.
+         *
          * @public
          * @readonly
          */
         readonly serviceCrossRefID: ServiceCrossRefID,
         /**
          * @summary `segmentID`.
+         * @description
+         *
+         * Segment number; each successive segment increments by one. ECMA-269.
+         *
          * @public
          * @readonly
          */
         readonly segmentID: OPTIONAL<INTEGER>,
         /**
          * @summary `lastSegment`.
+         * @description
+         *
+         * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
+         *
          * @public
          * @readonly
          */
         readonly lastSegment: BOOLEAN,
         /**
          * @summary `snapshotData`.
+         * @description
+         *
+         * Per-call snapshot rows (connection, call state, services, media,
+         * optional call linkage). ECMA-269 §16.1.4.
+         *
          * @public
          * @readonly
          */
         readonly snapshotData: SnapshotDeviceData,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTA common arguments (security, private data, timestamps). ECMA-269.
+         *
          * @public
          * @readonly
          */

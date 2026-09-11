@@ -8,7 +8,18 @@ import { OCTET_STRING, NULL, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SecurityInfo
  * @description
- * 
+ *
+ * Opaque security payload in `CSTASecurityData` (ECMA-269 §12.2.12;
+ * ECMA-285 §9.7). Used for access control or the current security
+ * policy; CSTA does not define the contents.
+ *
+ * - `string_`: octet string; max length from capabilities exchange.
+ * - `private_`: ASN.1 `NULL` placeholder; an implementation replaces
+ *   it with another valid ASN.1 type.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

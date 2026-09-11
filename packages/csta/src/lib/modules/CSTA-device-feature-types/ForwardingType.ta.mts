@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ForwardingType
  * @description
- * 
+ *
+ * Condition that triggers forwarding at a device. Immediate, Busy, No Answer,
+ * and DND may be combined with origination class (internal vs external).
+ * User-specified settings supersede switching-function defaults of the same
+ * type. ECMA-269 §6.7.1, §22.1.11.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +55,14 @@ enum _enum_for_ForwardingType {
 /**
  * @summary ForwardingType
  * @description
- * 
+ *
+ * Condition that triggers forwarding at a device. Immediate, Busy, No Answer,
+ * and DND may be combined with origination class (internal vs external).
+ * User-specified settings supersede switching-function defaults of the same
+ * type. ECMA-269 §6.7.1, §22.1.11.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,7 +89,14 @@ type ForwardingType = _enum_for_ForwardingType;
 /**
  * @summary ForwardingType
  * @description
- * 
+ *
+ * Condition that triggers forwarding at a device. Immediate, Busy, No Answer,
+ * and DND may be combined with origination class (internal vs external).
+ * User-specified settings supersede switching-function defaults of the same
+ * type. ECMA-269 §6.7.1, §22.1.11.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,14 +122,18 @@ const ForwardingType = _enum_for_ForwardingType;
 
 /**
  * @summary ForwardingType_forwardImmediate
+ * @description
+ * Redirect as soon as the call arrives (Immediate). ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardImmediate: ForwardingType = ForwardingType.forwardImmediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardImmediate
+ * @description Alias of {@link ForwardingType_forwardImmediate}.
  * @constant
  * @type {number}
  */
@@ -117,14 +142,18 @@ const forwardImmediate: ForwardingType = ForwardingType.forwardImmediate; /* SHO
 
 /**
  * @summary ForwardingType_forwardBusy
+ * @description
+ * Redirect if the device is busy with another call (Busy). ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardBusy: ForwardingType = ForwardingType.forwardBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardBusy
+ * @description Alias of {@link ForwardingType_forwardBusy}.
  * @constant
  * @type {number}
  */
@@ -133,14 +162,19 @@ const forwardBusy: ForwardingType = ForwardingType.forwardBusy; /* SHORT_NAMED_E
 
 /**
  * @summary ForwardingType_forwardNoAns
+ * @description
+ * Redirect if unanswered within a ring count or time (No Answer). ECMA-269
+ * §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardNoAns: ForwardingType = ForwardingType.forwardNoAns; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardNoAns
+ * @description Alias of {@link ForwardingType_forwardNoAns}.
  * @constant
  * @type {number}
  */
@@ -149,14 +183,18 @@ const forwardNoAns: ForwardingType = ForwardingType.forwardNoAns; /* SHORT_NAMED
 
 /**
  * @summary ForwardingType_forwardDND
+ * @description
+ * Redirect if Do Not Disturb is active at the device (DND). ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardDND: ForwardingType = ForwardingType.forwardDND; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardDND
+ * @description Alias of {@link ForwardingType_forwardDND}.
  * @constant
  * @type {number}
  */
@@ -165,14 +203,17 @@ const forwardDND: ForwardingType = ForwardingType.forwardDND; /* SHORT_NAMED_ENU
 
 /**
  * @summary ForwardingType_forwardBusyInt
+ * @description Busy forwarding for internal originations. ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardBusyInt: ForwardingType = ForwardingType.forwardBusyInt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardBusyInt
+ * @description Alias of {@link ForwardingType_forwardBusyInt}.
  * @constant
  * @type {number}
  */
@@ -181,14 +222,17 @@ const forwardBusyInt: ForwardingType = ForwardingType.forwardBusyInt; /* SHORT_N
 
 /**
  * @summary ForwardingType_forwardBusyExt
+ * @description Busy forwarding for external originations. ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardBusyExt: ForwardingType = ForwardingType.forwardBusyExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardBusyExt
+ * @description Alias of {@link ForwardingType_forwardBusyExt}.
  * @constant
  * @type {number}
  */
@@ -197,14 +241,17 @@ const forwardBusyExt: ForwardingType = ForwardingType.forwardBusyExt; /* SHORT_N
 
 /**
  * @summary ForwardingType_forwardNoAnsInt
+ * @description No-Answer forwarding for internal originations. ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardNoAnsInt: ForwardingType = ForwardingType.forwardNoAnsInt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardNoAnsInt
+ * @description Alias of {@link ForwardingType_forwardNoAnsInt}.
  * @constant
  * @type {number}
  */
@@ -213,14 +260,17 @@ const forwardNoAnsInt: ForwardingType = ForwardingType.forwardNoAnsInt; /* SHORT
 
 /**
  * @summary ForwardingType_forwardNoAnsExt
+ * @description No-Answer forwarding for external originations. ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardNoAnsExt: ForwardingType = ForwardingType.forwardNoAnsExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardNoAnsExt
+ * @description Alias of {@link ForwardingType_forwardNoAnsExt}.
  * @constant
  * @type {number}
  */
@@ -229,14 +279,17 @@ const forwardNoAnsExt: ForwardingType = ForwardingType.forwardNoAnsExt; /* SHORT
 
 /**
  * @summary ForwardingType_forwardImmInt
+ * @description Immediate forwarding for internal originations. ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardImmInt: ForwardingType = ForwardingType.forwardImmInt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardImmInt
+ * @description Alias of {@link ForwardingType_forwardImmInt}.
  * @constant
  * @type {number}
  */
@@ -245,14 +298,17 @@ const forwardImmInt: ForwardingType = ForwardingType.forwardImmInt; /* SHORT_NAM
 
 /**
  * @summary ForwardingType_forwardImmExt
+ * @description Immediate forwarding for external originations. ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardImmExt: ForwardingType = ForwardingType.forwardImmExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardImmExt
+ * @description Alias of {@link ForwardingType_forwardImmExt}.
  * @constant
  * @type {number}
  */
@@ -261,14 +317,17 @@ const forwardImmExt: ForwardingType = ForwardingType.forwardImmExt; /* SHORT_NAM
 
 /**
  * @summary ForwardingType_forwardDNDInt
+ * @description DND forwarding for internal originations. ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardDNDInt: ForwardingType = ForwardingType.forwardDNDInt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardDNDInt
+ * @description Alias of {@link ForwardingType_forwardDNDInt}.
  * @constant
  * @type {number}
  */
@@ -277,14 +336,17 @@ const forwardDNDInt: ForwardingType = ForwardingType.forwardDNDInt; /* SHORT_NAM
 
 /**
  * @summary ForwardingType_forwardDNDExt
+ * @description DND forwarding for external originations. ECMA-269 §6.7.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardingType_forwardDNDExt: ForwardingType = ForwardingType.forwardDNDExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardDNDExt
+ * @description Alias of {@link ForwardingType_forwardDNDExt}.
  * @constant
  * @type {number}
  */

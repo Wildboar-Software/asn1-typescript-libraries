@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallBackMessageArgument
  * @description
- * 
+ *
+ * Service request for Call Back Message Call-Related (ECMA-269
+ * §17.1.5 / ECMA-285 §15.1.5). Names the calling connection; the
+ * original call is then cleared.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,22 @@ class CallBackMessageArgument {
     constructor (
         /**
          * @summary `callbackMessageConnection`.
+         * @description
+         *
+         * Mandatory. Calling device's connection in the original
+         * call (Connected; becomes Null, possibly via Fail).
+         *
          * @public
          * @readonly
          */
         readonly callbackMessageConnection: ConnectionID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

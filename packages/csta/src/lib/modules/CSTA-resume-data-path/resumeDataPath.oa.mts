@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary resumeDataPath
  * @description
- * 
+ *
+ * Requests the switching function to resume a currently suspended data path.
+ * Some implementations also send Data Path Resumed (ECMA-269 §24.2.4).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:117. Errors: `universalFailure` (ECMA-285 §22.2.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

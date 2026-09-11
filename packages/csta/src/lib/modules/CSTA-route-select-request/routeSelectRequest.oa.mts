@@ -15,7 +15,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary routeSelectRequest
  * @description
- * 
+ *
+ * Route Select (ECMA-269 §20.2.5 / ECMA-285 §18.2.5). Direction: CF→SF. ROSE
+ * local CODE 33. Errors: `universalFailure`. `remainRetries` may be a count or
+ * noCountAvailable. Alternate
+ * routes may be supplied for subsequent Re-Route.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary IoRegisterCancel
  * @description
- * 
+ * Capability bitmap for the I/O Register Cancel service (ECMA-269 C.17.3,
+ * ECMA-285 §9.10). Presence of this entry in `IOServicesServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +32,9 @@ type IoRegisterCancel = BIT_STRING;
 /**
  * @summary IoRegisterCancel_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.17.3).
  */
 export
 const IoRegisterCancel_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +42,8 @@ const IoRegisterCancel_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `IoRegisterCancel_privateData`.
  */
 export
 const privateData: number = IoRegisterCancel_privateData; /* SHORT_NAMED_BIT */
@@ -37,6 +51,9 @@ const privateData: number = IoRegisterCancel_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary IoRegisterCancel_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.17.3).
  */
 export
 const IoRegisterCancel_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +61,8 @@ const IoRegisterCancel_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `IoRegisterCancel_privateDataInAck`.
  */
 export
 const privateDataInAck: number = IoRegisterCancel_privateDataInAck; /* SHORT_NAMED_BIT */

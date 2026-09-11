@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CancelTelephonyTones
  * @description
- * 
+ * Capability bitmap for the Cancel Telephony Tone service (ECMA-269 C.7.2,
+ * ECMA-285 §9.10). Presence of this entry in `CallAssociatedServList` means the
+ * SF supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +33,9 @@ type CancelTelephonyTones = BIT_STRING;
 /**
  * @summary CancelTelephonyTones_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.7.2).
  */
 export
 const CancelTelephonyTones_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +43,8 @@ const CancelTelephonyTones_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `CancelTelephonyTones_privateData`.
  */
 export
 const privateData: number = CancelTelephonyTones_privateData; /* SHORT_NAMED_BIT */
@@ -38,6 +52,9 @@ const privateData: number = CancelTelephonyTones_privateData; /* SHORT_NAMED_BIT
 /**
  * @summary CancelTelephonyTones_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.7.2).
  */
 export
 const CancelTelephonyTones_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +62,8 @@ const CancelTelephonyTones_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `CancelTelephonyTones_privateDataInAck`.
  */
 export
 const privateDataInAck: number = CancelTelephonyTones_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -52,6 +71,9 @@ const privateDataInAck: number = CancelTelephonyTones_privateDataInAck; /* SHORT
 /**
  * @summary CancelTelephonyTones_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.7.2).
  */
 export
 const CancelTelephonyTones_ackModelMultiStep: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +81,8 @@ const CancelTelephonyTones_ackModelMultiStep: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `CancelTelephonyTones_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = CancelTelephonyTones_ackModelMultiStep; /* SHORT_NAMED_BIT */

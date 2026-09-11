@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CallInformation
  * @description
- * 
+ * Capability bitmap for the Call Information event (ECMA-269 C.8.1, ECMA-285
+ * §9.10). Presence of this entry in `CallAssociatedEvtsList` means the SF
+ * supports that event. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +44,9 @@ type CallInformation = BIT_STRING;
 /**
  * @summary CallInformation_callingDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.1).
  */
 export
 const CallInformation_callingDevice: number = 0; /* LONG_NAMED_BIT */
@@ -43,6 +54,8 @@ const CallInformation_callingDevice: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary callingDevice
  * @constant
+ * @description
+ * Alias of `CallInformation_callingDevice`.
  */
 export
 const callingDevice: number = CallInformation_callingDevice; /* SHORT_NAMED_BIT */
@@ -50,6 +63,9 @@ const callingDevice: number = CallInformation_callingDevice; /* SHORT_NAMED_BIT 
 /**
  * @summary CallInformation_accountInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.1).
  */
 export
 const CallInformation_accountInfo: number = 1; /* LONG_NAMED_BIT */
@@ -57,6 +73,8 @@ const CallInformation_accountInfo: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary accountInfo
  * @constant
+ * @description
+ * Alias of `CallInformation_accountInfo`.
  */
 export
 const accountInfo: number = CallInformation_accountInfo; /* SHORT_NAMED_BIT */
@@ -64,6 +82,9 @@ const accountInfo: number = CallInformation_accountInfo; /* SHORT_NAMED_BIT */
 /**
  * @summary CallInformation_authorisatinonCode
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.1).
  */
 export
 const CallInformation_authorisatinonCode: number = 2; /* LONG_NAMED_BIT */
@@ -71,6 +92,8 @@ const CallInformation_authorisatinonCode: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary authorisatinonCode
  * @constant
+ * @description
+ * Alias of `CallInformation_authorisatinonCode`.
  */
 export
 const authorisatinonCode: number = CallInformation_authorisatinonCode; /* SHORT_NAMED_BIT */
@@ -78,6 +101,9 @@ const authorisatinonCode: number = CallInformation_authorisatinonCode; /* SHORT_
 /**
  * @summary CallInformation_correlatorData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `correlatorData` parameter
+ * (ECMA-269 C.8.1).
  */
 export
 const CallInformation_correlatorData: number = 3; /* LONG_NAMED_BIT */
@@ -85,6 +111,8 @@ const CallInformation_correlatorData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary correlatorData
  * @constant
+ * @description
+ * Alias of `CallInformation_correlatorData`.
  */
 export
 const correlatorData: number = CallInformation_correlatorData; /* SHORT_NAMED_BIT */
@@ -92,6 +120,9 @@ const correlatorData: number = CallInformation_correlatorData; /* SHORT_NAMED_BI
 /**
  * @summary CallInformation_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.1).
  */
 export
 const CallInformation_servicesPermitted: number = 4; /* LONG_NAMED_BIT */
@@ -99,6 +130,8 @@ const CallInformation_servicesPermitted: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `CallInformation_servicesPermitted`.
  */
 export
 const servicesPermitted: number = CallInformation_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -106,6 +139,9 @@ const servicesPermitted: number = CallInformation_servicesPermitted; /* SHORT_NA
 /**
  * @summary CallInformation_userData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `userData` parameter (ECMA-269
+ * C.8.1).
  */
 export
 const CallInformation_userData: number = 5; /* LONG_NAMED_BIT */
@@ -113,6 +149,8 @@ const CallInformation_userData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary userData
  * @constant
+ * @description
+ * Alias of `CallInformation_userData`.
  */
 export
 const userData: number = CallInformation_userData; /* SHORT_NAMED_BIT */
@@ -120,6 +158,9 @@ const userData: number = CallInformation_userData; /* SHORT_NAMED_BIT */
 /**
  * @summary CallInformation_callQualifyingData
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.1).
  */
 export
 const CallInformation_callQualifyingData: number = 6; /* LONG_NAMED_BIT */
@@ -127,6 +168,8 @@ const CallInformation_callQualifyingData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary callQualifyingData
  * @constant
+ * @description
+ * Alias of `CallInformation_callQualifyingData`.
  */
 export
 const callQualifyingData: number = CallInformation_callQualifyingData; /* SHORT_NAMED_BIT */
@@ -134,6 +177,9 @@ const callQualifyingData: number = CallInformation_callQualifyingData; /* SHORT_
 /**
  * @summary CallInformation_connectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.1).
  */
 export
 const CallInformation_connectionInfo: number = 7; /* LONG_NAMED_BIT */
@@ -141,6 +187,8 @@ const CallInformation_connectionInfo: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary connectionInfo
  * @constant
+ * @description
+ * Alias of `CallInformation_connectionInfo`.
  */
 export
 const connectionInfo: number = CallInformation_connectionInfo; /* SHORT_NAMED_BIT */
@@ -148,6 +196,9 @@ const connectionInfo: number = CallInformation_connectionInfo; /* SHORT_NAMED_BI
 /**
  * @summary CallInformation_callLinkageData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callLinkageData` parameter
+ * (ECMA-269 C.8.1).
  */
 export
 const CallInformation_callLinkageData: number = 10; /* LONG_NAMED_BIT */
@@ -155,6 +206,8 @@ const CallInformation_callLinkageData: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary callLinkageData
  * @constant
+ * @description
+ * Alias of `CallInformation_callLinkageData`.
  */
 export
 const callLinkageData: number = CallInformation_callLinkageData; /* SHORT_NAMED_BIT */
@@ -162,6 +215,9 @@ const callLinkageData: number = CallInformation_callLinkageData; /* SHORT_NAMED_
 /**
  * @summary CallInformation_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.8.1).
  */
 export
 const CallInformation_callCharacteristics: number = 11; /* LONG_NAMED_BIT */
@@ -169,6 +225,8 @@ const CallInformation_callCharacteristics: number = 11; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `CallInformation_callCharacteristics`.
  */
 export
 const callCharacteristics: number = CallInformation_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -176,6 +234,9 @@ const callCharacteristics: number = CallInformation_callCharacteristics; /* SHOR
 /**
  * @summary CallInformation_subjectOfCall
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `subjectOfCall` parameter
+ * (ECMA-269 C.8.1).
  */
 export
 const CallInformation_subjectOfCall: number = 12; /* LONG_NAMED_BIT */
@@ -183,6 +244,8 @@ const CallInformation_subjectOfCall: number = 12; /* LONG_NAMED_BIT */
 /**
  * @summary subjectOfCall
  * @constant
+ * @description
+ * Alias of `CallInformation_subjectOfCall`.
  */
 export
 const subjectOfCall: number = CallInformation_subjectOfCall; /* SHORT_NAMED_BIT */
@@ -190,6 +253,9 @@ const subjectOfCall: number = CallInformation_subjectOfCall; /* SHORT_NAMED_BIT 
 /**
  * @summary CallInformation_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 C.8.1).
  */
 export
 const CallInformation_languagePreferences: number = 13; /* LONG_NAMED_BIT */
@@ -197,6 +263,8 @@ const CallInformation_languagePreferences: number = 13; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `CallInformation_languagePreferences`.
  */
 export
 const languagePreferences: number = CallInformation_languagePreferences; /* SHORT_NAMED_BIT */
@@ -204,6 +272,9 @@ const languagePreferences: number = CallInformation_languagePreferences; /* SHOR
 /**
  * @summary CallInformation_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.8.1).
  */
 export
 const CallInformation_privateData: number = 8; /* LONG_NAMED_BIT */
@@ -211,6 +282,8 @@ const CallInformation_privateData: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `CallInformation_privateData`.
  */
 export
 const privateData: number = CallInformation_privateData; /* SHORT_NAMED_BIT */
@@ -218,6 +291,9 @@ const privateData: number = CallInformation_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary CallInformation_genCallInfoForOutdatedConnID
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.1).
  */
 export
 const CallInformation_genCallInfoForOutdatedConnID: number = 9; /* LONG_NAMED_BIT */
@@ -225,6 +301,8 @@ const CallInformation_genCallInfoForOutdatedConnID: number = 9; /* LONG_NAMED_BI
 /**
  * @summary genCallInfoForOutdatedConnID
  * @constant
+ * @description
+ * Alias of `CallInformation_genCallInfoForOutdatedConnID`.
  */
 export
 const genCallInfoForOutdatedConnID: number = CallInformation_genCallInfoForOutdatedConnID; /* SHORT_NAMED_BIT */
@@ -232,6 +310,9 @@ const genCallInfoForOutdatedConnID: number = CallInformation_genCallInfoForOutda
 /**
  * @summary CallInformation_deviceInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.1).
  */
 export
 const CallInformation_deviceInfo: number = 14; /* LONG_NAMED_BIT */
@@ -239,6 +320,8 @@ const CallInformation_deviceInfo: number = 14; /* LONG_NAMED_BIT */
 /**
  * @summary deviceInfo
  * @constant
+ * @description
+ * Alias of `CallInformation_deviceInfo`.
  */
 export
 const deviceInfo: number = CallInformation_deviceInfo; /* SHORT_NAMED_BIT */

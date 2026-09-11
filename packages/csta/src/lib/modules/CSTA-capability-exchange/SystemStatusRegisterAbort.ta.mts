@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SystemStatusRegisterAbort
  * @description
- * 
+ * Capability bitmap for the System Status Register Abort service (ECMA-269
+ * C.2.3, ECMA-285 §9.10). Presence of this entry in `SystemStatusServList`
+ * means the SF supports that service. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +32,9 @@ type SystemStatusRegisterAbort = BIT_STRING;
 /**
  * @summary SystemStatusRegisterAbort_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.2.3).
  */
 export
 const SystemStatusRegisterAbort_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +42,8 @@ const SystemStatusRegisterAbort_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SystemStatusRegisterAbort_privateData`.
  */
 export
 const privateData: number = SystemStatusRegisterAbort_privateData; /* SHORT_NAMED_BIT */
@@ -37,6 +51,9 @@ const privateData: number = SystemStatusRegisterAbort_privateData; /* SHORT_NAME
 /**
  * @summary SystemStatusRegisterAbort_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.2.3).
  */
 export
 const SystemStatusRegisterAbort_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +61,8 @@ const SystemStatusRegisterAbort_privateDataInAck: number = 1; /* LONG_NAMED_BIT 
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SystemStatusRegisterAbort_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SystemStatusRegisterAbort_privateDataInAck; /* SHORT_NAMED_BIT */

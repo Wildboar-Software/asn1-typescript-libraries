@@ -9,7 +9,18 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary ConnectionList_Item_endpoint
  * @description
- * 
+ *
+ * Far-end or internal device in a `ConnectionList` entry
+ * (ECMA-269 §12.2.9). Internal calls: device in the sub-domain.
+ * External calls: externally located device if known.
+ *
+ * - `deviceID`: identifier is provided (any Clause 10 format).
+ * - `notKnown`: switching function cannot provide it.
+ * - `restricted`: withheld for regulatory or privacy reasons.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

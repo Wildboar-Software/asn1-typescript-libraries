@@ -27,7 +27,16 @@ import {
 /**
  * @summary ConnectionInformation
  * @description
- * 
+ *
+ * Connection-level media attributes of the subject connection (the connection
+ * that is the focus of the event or positive acknowledgement): flow direction,
+ * channel count, and optional session description. Distinct from
+ * `MediaCallCharacteristics`, which describes the media class of the call as a
+ * whole. Initial values may be set on call-creation services; later changed
+ * with Change Connection Information. ECMA-269 §12.2.8.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,18 +57,33 @@ class ConnectionInformation {
     constructor (
         /**
          * @summary `flowDirection`.
+         * @description
+         *
+         * Transmit, Receive, Transmit and Receive, or None. Absent means
+         * unknown. ECMA-269 §12.2.8.
+         *
          * @public
          * @readonly
          */
         readonly flowDirection: OPTIONAL<ConnectionInformation_flowDirection>,
         /**
          * @summary `numberOfChannels`.
+         * @description
+         *
+         * Media-stream channels on this connection. Default (and when absent)
+         * is one. ECMA-269 §12.2.8.
+         *
          * @public
          * @readonly
          */
         readonly numberOfChannels: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaSessionInformation`.
+         * @description
+         *
+         * Protocol-specific session data (e.g. derived from SDP). Format and
+         * meaning are switching-function specific. ECMA-269 §12.2.8.
+         *
          * @public
          * @readonly
          */

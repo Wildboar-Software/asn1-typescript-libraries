@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setRingerStatus
  * @description
- * 
+ *
+ * Set Ringer Status (ECMA-269 §21.1.21 / ECMA-285 §19.1.21). Direction: CF→SF.
+ * ROSE local CODE 280. Errors: `universalFailure`. Pattern/volume apply only to
+ * this ringing cycle. `ringPattern` mandatory when `ringMode` is ringing. If
+ * already at the requested value: positive ack and no event (ECMA-269 §9.5.1 FR
+ * 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

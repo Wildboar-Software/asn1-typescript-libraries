@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ConnectionView
  * @description
- * 
+ *
+ * Primary/secondary oldCall in Conferenced/Transferred: `fixed`
+ * independent of monitor, `local` depends on monitored device
+ * (ECMA-269 Table 13-9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +35,14 @@ enum _enum_for_ConnectionView {
 /**
  * @summary ConnectionView
  * @description
- * 
+ *
+ * Primary/secondary oldCall in Conferenced/Transferred: `fixed`
+ * independent of monitor, `local` depends on monitored device
+ * (ECMA-269 Table 13-9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +59,14 @@ type ConnectionView = _enum_for_ConnectionView;
 /**
  * @summary ConnectionView
  * @description
- * 
+ *
+ * Primary/secondary oldCall in Conferenced/Transferred: `fixed`
+ * independent of monitor, `local` depends on monitored device
+ * (ECMA-269 Table 13-9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary makePredictiveCall
  * @description
- * 
+ *
+ * Make Predictive Call (ECMA-269 §17.1.20 / ECMA-285
+ * §15.1.20). Invoked by the computing function on the
+ * switching function. Creates the called-device connection
+ * first; later actions follow `signallingDetection` /
+ * `destinationDetection`. Multi-stage dialling is not
+ * supported (FR 9). ROSE local CODE 11. Errors are
+ * `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

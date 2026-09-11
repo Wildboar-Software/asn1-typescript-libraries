@@ -30,7 +30,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetLampModeArgument
  * @description
- * 
+ *
+ * Set Lamp Mode request (ECMA-269 §21.1.17.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,36 +55,59 @@ class SetLampModeArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `lamp`.
+         * @description
+         *
+         * LampID of the lamp to control.
          * @public
          * @readonly
          */
         readonly lamp: LampID,
         /**
          * @summary `lampMode`.
+         * @description
+         *
+         * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5 unused.
+         * 6–100 switching-function specific.
          * @public
          * @readonly
          */
         readonly lampMode: LampMode,
         /**
          * @summary `lampBrightness`.
+         * @description
+         *
+         * Intensity when on: unspecified/normal (default), dim, or bright.
+         * Visible levels are lamp-dependent.
          * @public
          * @readonly
          */
         readonly lampBrightness: OPTIONAL<LampBrightness>,
         /**
          * @summary `lampColor`.
+         * @description
+         *
+         * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unused. 6–100
+         * switching-function specific.
          * @public
          * @readonly
          */
         readonly lampColor: OPTIONAL<LampColor>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

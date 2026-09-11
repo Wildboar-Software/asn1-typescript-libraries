@@ -47,7 +47,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLocationTrackingCapabilitiesResult
  * @description
- * 
+ *
+ * Defaults, min/max, and booleans for collection type, interval,
+ * maxCollections, filters, reporting type, interval, count, and suspend/resume
+ * support (ECMA-269 §28.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,162 +106,274 @@ class GetLocationTrackingCapabilitiesResult {
     constructor (
         /**
          * @summary `collectionTypeDefault`.
+         * @description
+         *
+         * Default collectionType (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionTypeDefault: GetLocationTrackingCapabilitiesResult_collectionTypeDefault,
         /**
          * @summary `collectionTypePeriodic`.
+         * @description
+         *
+         * TRUE if periodic collection is supported (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionTypePeriodic: BOOLEAN,
         /**
          * @summary `collectionTypeUpdatesOnly`.
+         * @description
+         *
+         * TRUE if updates-only collection is supported (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionTypeUpdatesOnly: BOOLEAN,
         /**
          * @summary `collectionTypePeriodicWithUpdates`.
+         * @description
+         *
+         * TRUE if periodic-with-updates is supported (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionTypePeriodicWithUpdates: BOOLEAN,
         /**
          * @summary `collectionIntervalDefault`.
+         * @description
+         *
+         * Default collection interval (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionIntervalDefault: INTEGER,
         /**
          * @summary `collectionIntervalMin`.
+         * @description
+         *
+         * Minimum collection interval (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionIntervalMin: INTEGER,
         /**
          * @summary `collectionIntervalMax`.
+         * @description
+         *
+         * Maximum collection interval (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionIntervalMax: INTEGER,
         /**
          * @summary `maxCollectionsDefault`.
+         * @description
+         *
+         * Default max collections per hour (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly maxCollectionsDefault: INTEGER,
         /**
          * @summary `maxCollectionsMin`.
+         * @description
+         *
+         * Minimum maxCollections (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly maxCollectionsMin: INTEGER,
         /**
          * @summary `maxCollectionsMax`.
+         * @description
+         *
+         * Maximum maxCollections (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly maxCollectionsMax: INTEGER,
         /**
          * @summary `collectionFilterDefault`.
+         * @description
+         *
+         * Default collection filter (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionFilterDefault: GetLocationTrackingCapabilitiesResult_collectionFilterDefault,
         /**
          * @summary `collectionFilterHorizontal`.
+         * @description
+         *
+         * TRUE if horizontalMovement filter is supported (ECMA-269
+         * §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionFilterHorizontal: BOOLEAN,
         /**
          * @summary `collectionFilterVertical`.
+         * @description
+         *
+         * TRUE if verticalMovement filter is supported (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionFilterVertical: BOOLEAN,
         /**
          * @summary `collectionFilterCivicAddress`.
+         * @description
+         *
+         * TRUE if civic-address filter is supported (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionFilterCivicAddress: BOOLEAN,
         /**
          * @summary `reportingTypeDefault`.
+         * @description
+         *
+         * Default reportingType (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingTypeDefault: GetLocationTrackingCapabilitiesResult_reportingTypeDefault,
         /**
          * @summary `reportingTypeImmediate`.
+         * @description
+         *
+         * TRUE if immediate reporting is supported (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingTypeImmediate: BOOLEAN,
         /**
          * @summary `reportingTypePeriodic`.
+         * @description
+         *
+         * TRUE if periodic reporting is supported (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingTypePeriodic: BOOLEAN,
         /**
          * @summary `reportingTypeCount`.
+         * @description
+         *
+         * TRUE if count reporting is supported (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingTypeCount: INTEGER,
         /**
          * @summary `reportingIntervalDefault`.
+         * @description
+         *
+         * Default reporting interval (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingIntervalDefault: INTEGER,
         /**
          * @summary `reportingIntervalMin`.
+         * @description
+         *
+         * Minimum reporting interval (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingIntervalMin: INTEGER,
         /**
          * @summary `reportingIntervalMax`.
+         * @description
+         *
+         * Maximum reporting interval (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingIntervalMax: INTEGER,
         /**
          * @summary `reportingCountDefault`.
+         * @description
+         *
+         * Default reporting count (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingCountDefault: INTEGER,
         /**
          * @summary `reportingCountMin`.
+         * @description
+         *
+         * Minimum reporting count (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingCountMin: INTEGER,
         /**
          * @summary `reportingCountMax`.
+         * @description
+         *
+         * Maximum reporting count (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingCountMax: INTEGER,
         /**
          * @summary `supportsSuspendingTracking`.
+         * @description
+         *
+         * TRUE if Suspend Location Tracking Session is supported (ECMA-269
+         * §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly supportsSuspendingTracking: BOOLEAN,
         /**
          * @summary `supportsResumingTracking`.
+         * @description
+         *
+         * Capability flag from Table 28-21. The published table text repeats
+         * the Suspend service wording for this field (ECMA-269 §28.1.10.2.1).
+         *
          * @public
          * @readonly
          */
         readonly supportsResumingTracking: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Method
  * @description
- * 
+ *
+ * How location in a PIDF-LO was derived or discovered (e.g. GPS). Values are
+ * IANA method-tokens as listed in ECMA-285 §9.9. ECMA-269 §12.2.18.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -78,7 +84,13 @@ enum _enum_for_Method {
 /**
  * @summary Method
  * @description
- * 
+ *
+ * How location in a PIDF-LO was derived or discovered (e.g. GPS). Values are
+ * IANA method-tokens as listed in ECMA-285 §9.9. ECMA-269 §12.2.18.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -120,7 +132,13 @@ type Method = _enum_for_Method;
 /**
  * @summary Method
  * @description
- * 
+ *
+ * How location in a PIDF-LO was derived or discovered (e.g. GPS). Values are
+ * IANA method-tokens as listed in ECMA-285 §9.9. ECMA-269 §12.2.18.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -161,6 +179,11 @@ const Method = _enum_for_Method;
 
 /**
  * @summary Method_a_GPS
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +200,11 @@ const a_GPS: Method = Method.a_GPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_aOA
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +221,11 @@ const aOA: Method = Method.aOA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_cell
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -209,6 +242,11 @@ const cell: Method = Method.cell; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_derived
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -225,6 +263,11 @@ const derived: Method = Method.derived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_deviceAssistedAGps
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -241,6 +284,11 @@ const deviceAssistedAGps: Method = Method.deviceAssistedAGps; /* SHORT_NAMED_ENU
 
 /**
  * @summary Method_deviceBasedAGps
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -257,6 +305,11 @@ const deviceBasedAGps: Method = Method.deviceBasedAGps; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary Method_dHCP
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -273,6 +326,11 @@ const dHCP: Method = Method.dHCP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_gPS
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -289,6 +347,11 @@ const gPS: Method = Method.gPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_handsetAflt
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -305,6 +368,11 @@ const handsetAflt: Method = Method.handsetAflt; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary Method_handsetEflt
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -321,6 +389,11 @@ const handsetEflt: Method = Method.handsetEflt; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary Method_hybridAGps
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -337,6 +410,11 @@ const hybridAGps: Method = Method.hybridAGps; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_ipdl
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -353,6 +431,11 @@ const ipdl: Method = Method.ipdl; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_lldpMed
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -369,6 +452,11 @@ const lldpMed: Method = Method.lldpMed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_manual
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -385,6 +473,11 @@ const manual: Method = Method.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_mpl
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -401,6 +494,11 @@ const mpl: Method = Method.mpl; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_nmr
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -417,6 +515,11 @@ const nmr: Method = Method.nmr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_otdoa
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -433,6 +536,11 @@ const otdoa: Method = Method.otdoa; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_rfid
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -449,6 +557,11 @@ const rfid: Method = Method.rfid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_rssi
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -465,6 +578,11 @@ const rssi: Method = Method.rssi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_rssiRtt
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -481,6 +599,11 @@ const rssiRtt: Method = Method.rssiRtt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_rtt
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -497,6 +620,11 @@ const rtt: Method = Method.rtt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_ta
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -513,6 +641,11 @@ const ta: Method = Method.ta; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_taNmr
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -529,6 +662,11 @@ const taNmr: Method = Method.taNmr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_triangulation
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -545,6 +683,11 @@ const triangulation: Method = Method.triangulation; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary Method_utdoa
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -561,6 +704,11 @@ const utdoa: Method = Method.utdoa; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_wiremap
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */
@@ -577,6 +725,11 @@ const wiremap: Method = Method.wiremap; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Method_locMet80211
+ * @description
+ *
+ * IANA PIDF-LO method token for how this location was derived. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
  * @constant
  * @type {number}
  */

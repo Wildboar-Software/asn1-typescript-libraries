@@ -9,7 +9,12 @@ import { SpeakerVolumeList_Item, _decode_SpeakerVolumeList_Item, _encode_Speaker
 /**
  * @summary SpeakerVolumeList
  * @description
- * 
+ *
+ * SEQUENCE OF speaker-volume entries (ECMA-269 §21.1.13.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

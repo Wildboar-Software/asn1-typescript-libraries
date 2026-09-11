@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteRegisterCancelArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 20-5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class RouteRegisterCancelArgument {
     constructor (
         /**
          * @summary `routeRegisterReqID`.
+         * @description
+         *
+         * Registration to cancel.
          * @public
          * @readonly
          */
         readonly routeRegisterReqID: RouteRegisterReqID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

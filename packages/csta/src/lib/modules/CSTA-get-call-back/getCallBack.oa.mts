@@ -17,7 +17,13 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getCallBack
  * @description
- * 
+ *
+ * Get CallBack (ECMA-269 §22.1.8 / ECMA-285 §20.1.8). Direction: CF→SF. ROSE
+ * local CODE 378. Errors: `universalFailure`. Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

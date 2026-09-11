@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-get-switching-function-capabilities`.
+ * Get Switching Function Capabilities (ECMA-269 §13.1.4 /
+ * ECMA-285 §11.1.4). CF obtains the current sub-domain-wide
+ * capability set (profiles, DeviceID formats, service/event lists,
+ * thresholds). At least one CSTA profile shall be supported.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./AgentLogOnModels.ta.mjs";
 export * from "./AgentStateModels.ta.mjs";

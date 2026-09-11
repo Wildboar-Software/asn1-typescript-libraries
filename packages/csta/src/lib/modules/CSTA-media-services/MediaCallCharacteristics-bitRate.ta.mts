@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MediaCallCharacteristics_bitRate
  * @description
- * 
+ *
+ * Digital data bit-rate of the call. ECMA-269 §12.2.20.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,7 +33,11 @@ enum _enum_for_MediaCallCharacteristics_bitRate {
 /**
  * @summary MediaCallCharacteristics_bitRate
  * @description
- * 
+ *
+ * Digital data bit-rate of the call. ECMA-269 §12.2.20.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,7 +55,11 @@ type MediaCallCharacteristics_bitRate = _enum_for_MediaCallCharacteristics_bitRa
 /**
  * @summary MediaCallCharacteristics_bitRate
  * @description
- * 
+ *
+ * Digital data bit-rate of the call. ECMA-269 §12.2.20.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,6 +76,10 @@ const MediaCallCharacteristics_bitRate = _enum_for_MediaCallCharacteristics_bitR
 
 /**
  * @summary MediaCallCharacteristics_bitRate_constant
+ * @description
+ *
+ * Dedicated bandwidth and constant delivery rate. Default. ECMA-269 §12.2.20.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +96,10 @@ const constant: MediaCallCharacteristics_bitRate = MediaCallCharacteristics_bitR
 
 /**
  * @summary MediaCallCharacteristics_bitRate_variable
+ * @description
+ *
+ * Bit rate may vary during the call. ECMA-269 §12.2.20.
+ *
  * @constant
  * @type {number}
  */

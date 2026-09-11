@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getLastNumberDialed
  * @description
- * 
+ *
+ * Get Last Number Dialed (ECMA-269 §22.1.12 (Dialled) / ECMA-285 §20.1.12).
+ * Direction: CF→SF. ROSE local CODE 310. Errors: `universalFailure`. Atomic
+ * acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

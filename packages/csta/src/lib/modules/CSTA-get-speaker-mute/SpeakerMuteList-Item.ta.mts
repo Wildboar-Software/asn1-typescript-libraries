@@ -16,7 +16,12 @@ import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryAppar
 /**
  * @summary SpeakerMuteList_Item
  * @description
- * 
+ *
+ * Mute status for one speaker (ECMA-269 §21.1.12.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,18 @@ class SpeakerMuteList_Item {
     constructor (
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Apparatus that owns the speaker.
          * @public
          * @readonly
          */
         readonly auditoryApparatus: AuditoryApparatusID,
         /**
          * @summary `speakerMuteOn`.
+         * @description
+         *
+         * FALSE = speaker activated; TRUE = muted.
          * @public
          * @readonly
          */

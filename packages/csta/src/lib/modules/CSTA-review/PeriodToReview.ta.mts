@@ -8,7 +8,14 @@ import { INTEGER, NULL, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PeriodToReview
  * @description
- * 
+ *
+ * `startOfMessage` or `lengthOfReview` milliseconds toward the beginning before
+ * review (ECMA-269 §26.1.12.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,12 @@ import { EventSpecificInfo, _decode_EventSpecificInfo, _encode_EventSpecificInfo
 /**
  * @summary CSTAEventReportArgument
  * @description
- * 
+ *
+ * Argument of `cSTAEventReport`: monitor cross-reference plus the event body.
+ * ECMA-285 §5.4, §10.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,16 @@ class CSTAEventReportArgument {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         * MonitorCrossRefID correlating this report to a Monitor request or
+         * CSTA object (ECMA-285 §5.4).
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: MonitorCrossRefID,
         /**
          * @summary `eventSpecificInfo`.
+         * @description CHOICE selecting the event body.
          * @public
          * @readonly
          */

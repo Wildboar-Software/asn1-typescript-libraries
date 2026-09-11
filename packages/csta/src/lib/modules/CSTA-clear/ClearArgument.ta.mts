@@ -19,7 +19,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ClearArgument
  * @description
- * 
+ *
+ * Connection and optional resource to clear (ECMA-269 §26.1.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,33 @@ class ClearArgument {
     constructor (
         /**
          * @summary `overConnection`.
+         * @description
+         *
+         * Connection whose Listener, DTMF, or Prompt Queue is cleared (ECMA-269
+         * §26.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly overConnection: ConnectionID,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

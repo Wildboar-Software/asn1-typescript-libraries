@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary directedPickupCall
  * @description
- * 
+ *
+ * Directed Pickup Call (ECMA-269 §17.1.13 / ECMA-285 §15.1.13).
+ * Invoked by the computing function on the switching function.
+ * Unlike Deflect, the requesting device is immediately Connected
+ * (FR 1). CallID is unchanged (FR 3). Forwarding and DND at the
+ * destination are ignored (FR 2). Rejected if pickup and
+ * destination devices are the same (FR 6). ROSE local CODE 220.
+ * Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

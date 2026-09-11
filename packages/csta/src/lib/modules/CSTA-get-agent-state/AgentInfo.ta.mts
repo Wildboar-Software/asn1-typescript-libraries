@@ -36,7 +36,12 @@ import {
 /**
  * @summary AgentInfo
  * @description
- * 
+ *
+ * Per-ACD-group agent state (ECMA-269 §22.1.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,24 +59,38 @@ class AgentInfo {
     constructor (
         /**
          * @summary `acdGroup`.
+         * @description
+         *
+         * Mandatory in an entry when the list has more than one.
          * @public
          * @readonly
          */
         readonly acdGroup: OPTIONAL<DeviceID>,
         /**
          * @summary `agentState`.
+         * @description
+         *
+         * Busy, Not Ready, Null, Ready, or Working After Call.
          * @public
          * @readonly
          */
         readonly agentState: AgentState,
         /**
          * @summary `pendingAgentState`.
+         * @description
+         *
+         * Next state if `agentState` is Busy or Working After Call and the SF
+         * is delaying the transition: Working After Call, Not Ready, Ready, or
+         * Null.
          * @public
          * @readonly
          */
         readonly pendingAgentState: OPTIONAL<PendingAgentState>,
         /**
          * @summary `agentStateCondition`.
+         * @description
+         *
+         * Forced Pause or Other.
          * @public
          * @readonly
          */

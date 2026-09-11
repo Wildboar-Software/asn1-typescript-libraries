@@ -23,7 +23,12 @@ import {
 /**
  * @summary RingerStatusList_Item
  * @description
- * 
+ *
+ * One ringer (ECMA-269 §21.1.11.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,36 +49,58 @@ class RingerStatusList_Item {
     constructor (
         /**
          * @summary `ringer`.
+         * @description
+         *
+         * RingerID.
          * @public
          * @readonly
          */
         readonly ringer: RingerID,
         /**
          * @summary `ringMode`.
+         * @description
+         *
+         * `ringing` includes the quiet phase of a ring cycle; `not ringing`
+         * means not in an active cycle.
          * @public
          * @readonly
          */
         readonly ringMode: RingMode,
         /**
          * @summary `ringCount`.
+         * @description
+         *
+         * Complete ring cycles 0–999; 1000 means greater than 999. Do not send
+         * with `ringDuration`.
          * @public
          * @readonly
          */
         readonly ringCount: OPTIONAL<INTEGER>,
         /**
          * @summary `ringDuration`.
+         * @description
+         *
+         * Seconds ringing. Omit if `ringCount` is provided.
          * @public
          * @readonly
          */
         readonly ringDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `ringPattern`.
+         * @description
+         *
+         * Device-specific pattern. Held until reset by the switching function
+         * or Set Ringer Status.
          * @public
          * @readonly
          */
         readonly ringPattern: OPTIONAL<INTEGER>,
         /**
          * @summary `ringVolAbs`.
+         * @description
+         *
+         * Absolute volume. 0 silence, 100 maximum; 1–99 device-specific.
+         * Absent: unknown. Loudness is ringer-specific.
          * @public
          * @readonly
          */

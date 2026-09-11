@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PresenceStateEvent
  * @description
- * 
+ * Capability bitmap for the Presence State event (ECMA-269 C.15.14, ECMA-285
+ * §9.10). Presence of this entry in `LogicalEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +35,9 @@ type PresenceStateEvent = BIT_STRING;
 /**
  * @summary PresenceStateEvent_fromTime
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.15.14).
  */
 export
 const PresenceStateEvent_fromTime: number = 0; /* LONG_NAMED_BIT */
@@ -34,6 +45,8 @@ const PresenceStateEvent_fromTime: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary fromTime
  * @constant
+ * @description
+ * Alias of `PresenceStateEvent_fromTime`.
  */
 export
 const fromTime: number = PresenceStateEvent_fromTime; /* SHORT_NAMED_BIT */
@@ -41,6 +54,9 @@ const fromTime: number = PresenceStateEvent_fromTime; /* SHORT_NAMED_BIT */
 /**
  * @summary PresenceStateEvent_untilTime
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.15.14).
  */
 export
 const PresenceStateEvent_untilTime: number = 1; /* LONG_NAMED_BIT */
@@ -48,6 +64,8 @@ const PresenceStateEvent_untilTime: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary untilTime
  * @constant
+ * @description
+ * Alias of `PresenceStateEvent_untilTime`.
  */
 export
 const untilTime: number = PresenceStateEvent_untilTime; /* SHORT_NAMED_BIT */
@@ -55,6 +73,9 @@ const untilTime: number = PresenceStateEvent_untilTime; /* SHORT_NAMED_BIT */
 /**
  * @summary PresenceStateEvent_place
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.15.14).
  */
 export
 const PresenceStateEvent_place: number = 2; /* LONG_NAMED_BIT */
@@ -62,6 +83,8 @@ const PresenceStateEvent_place: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary place
  * @constant
+ * @description
+ * Alias of `PresenceStateEvent_place`.
  */
 export
 const place: number = PresenceStateEvent_place; /* SHORT_NAMED_BIT */
@@ -69,6 +92,9 @@ const place: number = PresenceStateEvent_place; /* SHORT_NAMED_BIT */
 /**
  * @summary PresenceStateEvent_mood
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.15.14).
  */
 export
 const PresenceStateEvent_mood: number = 3; /* LONG_NAMED_BIT */
@@ -76,6 +102,8 @@ const PresenceStateEvent_mood: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary mood
  * @constant
+ * @description
+ * Alias of `PresenceStateEvent_mood`.
  */
 export
 const mood: number = PresenceStateEvent_mood; /* SHORT_NAMED_BIT */
@@ -83,6 +111,9 @@ const mood: number = PresenceStateEvent_mood; /* SHORT_NAMED_BIT */
 /**
  * @summary PresenceStateEvent_namedPresenceState
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.15.14).
  */
 export
 const PresenceStateEvent_namedPresenceState: number = 4; /* LONG_NAMED_BIT */
@@ -90,6 +121,8 @@ const PresenceStateEvent_namedPresenceState: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary namedPresenceState
  * @constant
+ * @description
+ * Alias of `PresenceStateEvent_namedPresenceState`.
  */
 export
 const namedPresenceState: number = PresenceStateEvent_namedPresenceState; /* SHORT_NAMED_BIT */
@@ -97,6 +130,9 @@ const namedPresenceState: number = PresenceStateEvent_namedPresenceState; /* SHO
 /**
  * @summary PresenceStateEvent_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.15.14).
  */
 export
 const PresenceStateEvent_privateData: number = 5; /* LONG_NAMED_BIT */
@@ -104,6 +140,8 @@ const PresenceStateEvent_privateData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `PresenceStateEvent_privateData`.
  */
 export
 const privateData: number = PresenceStateEvent_privateData; /* SHORT_NAMED_BIT */

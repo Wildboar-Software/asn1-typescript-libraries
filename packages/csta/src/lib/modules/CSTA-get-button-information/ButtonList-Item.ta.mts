@@ -21,7 +21,12 @@ import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-
 /**
  * @summary ButtonList_Item
  * @description
- * 
+ *
+ * One button on the device (ECMA-269 §21.1.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,48 +49,75 @@ class ButtonList_Item {
     constructor (
         /**
          * @summary `button`.
+         * @description
+         *
+         * ButtonID of this entry. Reserved ButtonIDs in Table 12-3: `0`–`9`,
+         * `*`=10, `#`=11 (ECMA-269 §12.3.5).
          * @public
          * @readonly
          */
         readonly button: ButtonID,
         /**
          * @summary `buttonLabel`.
+         * @description
+         *
+         * Label by which the button may be referenced. Max length from
+         * capabilities exchange.
          * @public
          * @readonly
          */
         readonly buttonLabel: OPTIONAL<IA5String>,
         /**
          * @summary `buttonLabelSettable`.
+         * @description
+         *
+         * TRUE if Set Button Information may set the label.
          * @public
          * @readonly
          */
         readonly buttonLabelSettable: OPTIONAL<BOOLEAN>,
         /**
          * @summary `buttonFunction`.
+         * @description
+         *
+         * Function assigned to the button.
          * @public
          * @readonly
          */
         readonly buttonFunction: OPTIONAL<IA5String>,
         /**
          * @summary `buttonAssociatedNumber`.
+         * @description
+         *
+         * Diallable-digits DeviceID associated with the button (e.g.
+         * speed-dial).
          * @public
          * @readonly
          */
         readonly buttonAssociatedNumber: OPTIONAL<DeviceID>,
         /**
          * @summary `buttonAssociatedNumberSettable`.
+         * @description
+         *
+         * TRUE if Set Button Information may associate a number.
          * @public
          * @readonly
          */
         readonly buttonAssociatedNumberSettable: OPTIONAL<BOOLEAN>,
         /**
          * @summary `buttonPressIndicator`.
+         * @description
+         *
+         * TRUE (default) if Button Press may press this button.
          * @public
          * @readonly
          */
         readonly buttonPressIndicator: OPTIONAL<BOOLEAN>,
         /**
          * @summary `lampList`.
+         * @description
+         *
+         * Associated lamps. Empty: none.
          * @public
          * @readonly
          */

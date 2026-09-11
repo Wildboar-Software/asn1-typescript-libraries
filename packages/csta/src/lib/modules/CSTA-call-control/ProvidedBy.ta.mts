@@ -18,7 +18,13 @@ import { TelUri247Type, _decode_TelUri247Type, _encode_TelUri247Type } from "../
 /**
  * @summary ProvidedBy
  * @description
- * 
+ *
+ * Organization that supplied the location, to help locate a
+ * service provider if the location is wrong. ECMA-269
+ * §12.2.18; ECMA-285 §9.9.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,32 @@ class ProvidedBy {
     constructor (
         /**
          * @summary `dataproviderID`.
+         * @description
+         *
+         * NENA company identifier of the location provider.
+         * ECMA-285 §9.9.
+         *
          * @public
          * @readonly
          */
         readonly dataproviderID: NenaCompanyIDType,
         /**
          * @summary `telUri`.
+         * @description
+         *
+         * RFC 3966 `tel:` URI; ECMA-285 requires an emergency
+         * number available 24/7. ECMA-285 §9.9.
+         *
          * @public
          * @readonly
          */
         readonly telUri: TelUri247Type,
         /**
          * @summary `uRL`.
+         * @description
+         *
+         * URL for the location provider. ECMA-285 §9.9.
+         *
          * @public
          * @readonly
          */

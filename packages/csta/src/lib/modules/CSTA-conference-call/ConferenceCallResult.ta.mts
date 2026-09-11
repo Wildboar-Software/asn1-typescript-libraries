@@ -23,7 +23,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ConferenceCallResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Conference Call (ECMA-269 §17.1.9
+ * / ECMA-285 §15.1.9). Returns the new connection at the
+ * conferencing device and, when CallIDs change, the old-to-new
+ * connection list (§12.3.9 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +50,57 @@ class ConferenceCallResult {
     constructor (
         /**
          * @summary `conferenceCall`.
+         * @description
+         *
+         * Mandatory. New connection of the conferencing device in
+         * the resulting conference call.
+         *
          * @public
          * @readonly
          */
         readonly conferenceCall: ConnectionID,
         /**
          * @summary `connections`.
+         * @description
+         *
+         * Optional connection list for the resulting call. When
+         * new CallIDs are allocated, entries link old
+         * ConnectionIDs of remaining devices to replacements
+         * (§12.3.9 FR 8, §12.2.9).
+         *
          * @public
          * @readonly
          */
         readonly connections: OPTIONAL<ConnectionList>,
         /**
          * @summary `conferenceCallInfo`.
+         * @description
+         *
+         * Optional connection information (channels, flow) for
+         * `conferenceCall` (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly conferenceCallInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
+         * @description
+         *
+         * Optional call-linkage data pairing old and new call
+         * identities (§12.2.5, §12.3.9 FR 8).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

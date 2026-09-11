@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary cancelCallBackMessage
  * @description
- * 
+ *
+ * Cancel Call Back Message (ECMA-269 §22.1.4 / ECMA-285 §20.1.4). Direction:
+ * CF→SF. ROSE local CODE 303. Errors: `universalFailure`. Originating and
+ * target DeviceIDs shall be known to the SF.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

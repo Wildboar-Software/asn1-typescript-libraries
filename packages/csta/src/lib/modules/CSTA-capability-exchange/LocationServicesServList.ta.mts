@@ -41,7 +41,13 @@ import { LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessi
 /**
  * @summary LocationServicesServList
  * @description
- * 
+ * Location services the SF supports (ECMA-269 Annex C.22, ECMA-285 §9.10). Omit
+ * unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,72 +75,108 @@ class LocationServicesServList {
          * @summary `getLocationInformation`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getLocationInformation: OPTIONAL<GetLocationInformation>,
         /**
          * @summary `setLocationInformation`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly setLocationInformation: OPTIONAL<SetLocationInformation>,
         /**
          * @summary `locationTrackingSessionResumed`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly locationTrackingSessionResumed: OPTIONAL<LocationTrackingSessionResumed>,
         /**
          * @summary `locationTrackingSessionSuspended`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly locationTrackingSessionSuspended: OPTIONAL<LocationTrackingSessionSuspended>,
         /**
          * @summary `resumeLocationTrackingSession`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly resumeLocationTrackingSession: OPTIONAL<ResumeLocationTrackingSession>,
         /**
          * @summary `locationInformationReport`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly locationInformationReport: OPTIONAL<LocationInformationReport>,
         /**
          * @summary `startLocationTrackingSession`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly startLocationTrackingSession: OPTIONAL<StartLocationTrackingSession>,
         /**
          * @summary `stopLocationTrackingSession`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly stopLocationTrackingSession: OPTIONAL<StopLocationTrackingSession>,
         /**
          * @summary `suspendLocationTrackingSession`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly suspendLocationTrackingSession: OPTIONAL<SuspendLocationTrackingSession>,
         /**
          * @summary `getLocationTrackingCapabilities`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getLocationTrackingCapabilities: OPTIONAL<GetLocationTrackingCapabilities>,
         /**
          * @summary `getLocationTrackingSessions`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getLocationTrackingSessions: OPTIONAL<GetLocationTrackingSessions>,
         /**
          * @summary `locationSessionInfo`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly locationSessionInfo: OPTIONAL<LocationSessionInfo>
     ) {}

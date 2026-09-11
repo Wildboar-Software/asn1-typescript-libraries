@@ -15,7 +15,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary systemRegisterAbort
  * @description
- * 
+ *
+ * System Register Abort (ECMA-269 §14.1.3 / ECMA-285 §12.1.3). Direction:
+ * SF→CF. ROSE local CODE 208. Errors: `universalFailure`. Invalidates
+ * `sysStatRegisterID`. The SF may issue this whenever
+ * it can no longer maintain the registration. No positive ack;
+ * CF may send a negative ack.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

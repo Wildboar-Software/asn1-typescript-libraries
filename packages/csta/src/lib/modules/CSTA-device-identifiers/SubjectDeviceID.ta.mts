@@ -9,7 +9,18 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary SubjectDeviceID
  * @description
- * 
+ *
+ * Device that is the focus of the action reported by an event
+ * (`APPLICATION 3`; ECMA-269 §12.3.30).
+ *
+ * - `deviceIdentifier`: subject device is provided.
+ * - `notKnown`: switching function cannot provide the ID.
+ * - `restricted`: encoded in ECMA-285 §9.2; ECMA-269 §12.3.30 does
+ *   not assign this status.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

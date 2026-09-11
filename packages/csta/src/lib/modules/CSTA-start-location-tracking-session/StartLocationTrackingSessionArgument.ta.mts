@@ -34,7 +34,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartLocationTrackingSessionArgument
  * @description
- * 
+ *
+ * Device plus optional collection and reporting parameters; omitted optional
+ * values use SF defaults from capabilities exchange (ECMA-269 §28.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,54 +64,96 @@ class StartLocationTrackingSessionArgument {
     constructor (
         /**
          * @summary `locDevice`.
+         * @description
+         *
+         * Device whose location is tracked (ECMA-269 §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly locDevice: DeviceID,
         /**
          * @summary `collectionType`.
+         * @description
+         *
+         * How the SF collects location; default if omitted (ECMA-269
+         * §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionType: OPTIONAL<CollectionType>,
         /**
          * @summary `collectionInterval`.
+         * @description
+         *
+         * Seconds between collections when type is periodic or
+         * periodicWithUpdates (ECMA-269 §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionInterval: OPTIONAL<INTEGER>,
         /**
          * @summary `maxCollections`.
+         * @description
+         *
+         * Maximum collections per hour; excess is not collected until the next
+         * hour (ECMA-269 §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly maxCollections: OPTIONAL<INTEGER>,
         /**
          * @summary `collectionFilter`.
+         * @description
+         *
+         * Movement/civic filters; any match collects (ECMA-269 §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly collectionFilter: OPTIONAL<CollectionFilter>,
         /**
          * @summary `reportingType`.
+         * @description
+         *
+         * When collected location is reported (ECMA-269 §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingType: OPTIONAL<ReportingType>,
         /**
          * @summary `reportingInterval`.
+         * @description
+         *
+         * Seconds between reports when reportingType is periodic (ECMA-269
+         * §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingInterval: OPTIONAL<INTEGER>,
         /**
          * @summary `reportingCount`.
+         * @description
+         *
+         * Number of collected records before a report when reportingType is
+         * count (ECMA-269 §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly reportingCount: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

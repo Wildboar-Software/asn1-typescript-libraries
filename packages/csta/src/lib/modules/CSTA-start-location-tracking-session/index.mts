@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-start-location-tracking-session`.
+ * Start Location Tracking Session: create a session with collection vs
+ * reporting criteria; `locCrossRefID` identifies it (ECMA-269 §28.1.7 /
+ * §6.8.4.1, ECMA-285 §26.1.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./CollectionFilter.ta.mjs";
 export {

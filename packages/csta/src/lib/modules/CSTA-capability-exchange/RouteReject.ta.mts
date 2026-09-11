@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RouteReject
  * @description
- * 
+ * Capability bitmap for the Route Reject service (ECMA-269 C.11.6, ECMA-285
+ * §9.10). Presence of this entry in `RouteingServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +36,9 @@ type RouteReject = BIT_STRING;
 /**
  * @summary RouteReject_rejectCauseBusyOverflow
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.11.6).
  */
 export
 const RouteReject_rejectCauseBusyOverflow: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +46,8 @@ const RouteReject_rejectCauseBusyOverflow: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary rejectCauseBusyOverflow
  * @constant
+ * @description
+ * Alias of `RouteReject_rejectCauseBusyOverflow`.
  */
 export
 const rejectCauseBusyOverflow: number = RouteReject_rejectCauseBusyOverflow; /* SHORT_NAMED_BIT */
@@ -42,6 +55,9 @@ const rejectCauseBusyOverflow: number = RouteReject_rejectCauseBusyOverflow; /* 
 /**
  * @summary RouteReject_rejectCauseQueueTimeOverflow
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.11.6).
  */
 export
 const RouteReject_rejectCauseQueueTimeOverflow: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +65,8 @@ const RouteReject_rejectCauseQueueTimeOverflow: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary rejectCauseQueueTimeOverflow
  * @constant
+ * @description
+ * Alias of `RouteReject_rejectCauseQueueTimeOverflow`.
  */
 export
 const rejectCauseQueueTimeOverflow: number = RouteReject_rejectCauseQueueTimeOverflow; /* SHORT_NAMED_BIT */
@@ -56,6 +74,9 @@ const rejectCauseQueueTimeOverflow: number = RouteReject_rejectCauseQueueTimeOve
 /**
  * @summary RouteReject_rejectCauseCapacityOverflow
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.11.6).
  */
 export
 const RouteReject_rejectCauseCapacityOverflow: number = 2; /* LONG_NAMED_BIT */
@@ -63,6 +84,8 @@ const RouteReject_rejectCauseCapacityOverflow: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary rejectCauseCapacityOverflow
  * @constant
+ * @description
+ * Alias of `RouteReject_rejectCauseCapacityOverflow`.
  */
 export
 const rejectCauseCapacityOverflow: number = RouteReject_rejectCauseCapacityOverflow; /* SHORT_NAMED_BIT */
@@ -70,6 +93,9 @@ const rejectCauseCapacityOverflow: number = RouteReject_rejectCauseCapacityOverf
 /**
  * @summary RouteReject_rejectCauseCalendarOverflow
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.11.6).
  */
 export
 const RouteReject_rejectCauseCalendarOverflow: number = 3; /* LONG_NAMED_BIT */
@@ -77,6 +103,8 @@ const RouteReject_rejectCauseCalendarOverflow: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary rejectCauseCalendarOverflow
  * @constant
+ * @description
+ * Alias of `RouteReject_rejectCauseCalendarOverflow`.
  */
 export
 const rejectCauseCalendarOverflow: number = RouteReject_rejectCauseCalendarOverflow; /* SHORT_NAMED_BIT */
@@ -84,6 +112,9 @@ const rejectCauseCalendarOverflow: number = RouteReject_rejectCauseCalendarOverf
 /**
  * @summary RouteReject_rejectCauseUnknownOverflow
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.11.6).
  */
 export
 const RouteReject_rejectCauseUnknownOverflow: number = 4; /* LONG_NAMED_BIT */
@@ -91,6 +122,8 @@ const RouteReject_rejectCauseUnknownOverflow: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary rejectCauseUnknownOverflow
  * @constant
+ * @description
+ * Alias of `RouteReject_rejectCauseUnknownOverflow`.
  */
 export
 const rejectCauseUnknownOverflow: number = RouteReject_rejectCauseUnknownOverflow; /* SHORT_NAMED_BIT */
@@ -98,6 +131,9 @@ const rejectCauseUnknownOverflow: number = RouteReject_rejectCauseUnknownOverflo
 /**
  * @summary RouteReject_correlatorData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `correlatorData` parameter
+ * (ECMA-269 C.11.6).
  */
 export
 const RouteReject_correlatorData: number = 5; /* LONG_NAMED_BIT */
@@ -105,6 +141,8 @@ const RouteReject_correlatorData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary correlatorData
  * @constant
+ * @description
+ * Alias of `RouteReject_correlatorData`.
  */
 export
 const correlatorData: number = RouteReject_correlatorData; /* SHORT_NAMED_BIT */
@@ -112,6 +150,9 @@ const correlatorData: number = RouteReject_correlatorData; /* SHORT_NAMED_BIT */
 /**
  * @summary RouteReject_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.11.6).
  */
 export
 const RouteReject_privateData: number = 6; /* LONG_NAMED_BIT */
@@ -119,6 +160,8 @@ const RouteReject_privateData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `RouteReject_privateData`.
  */
 export
 const privateData: number = RouteReject_privateData; /* SHORT_NAMED_BIT */

@@ -15,7 +15,12 @@ import {
 /**
  * @summary NodeNumber
  * @description
- * 
+ *
+ * Originating node within a switching network, as up to three area values.
+ * ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +37,30 @@ class NodeNumber {
     constructor (
         /**
          * @summary `area0`.
+         * @description
+         *
+         * First originating-node area. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly area0: OPTIONAL<INTEGER>,
         /**
          * @summary `area1`.
+         * @description
+         *
+         * Second originating-node area. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly area1: OPTIONAL<INTEGER>,
         /**
          * @summary `area2`.
+         * @description
+         *
+         * Third originating-node area. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */

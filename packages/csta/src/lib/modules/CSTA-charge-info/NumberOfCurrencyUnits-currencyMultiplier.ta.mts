@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier
  * @description
- * 
+ *
+ * Currency unit multiplier. ECMA-269 §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +43,11 @@ enum _enum_for_NumberOfCurrencyUnits_currencyMultiplier {
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier
  * @description
- * 
+ *
+ * Currency unit multiplier. ECMA-269 §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,7 +70,11 @@ type NumberOfCurrencyUnits_currencyMultiplier = _enum_for_NumberOfCurrencyUnits_
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier
  * @description
- * 
+ *
+ * Currency unit multiplier. ECMA-269 §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -84,6 +96,10 @@ const NumberOfCurrencyUnits_currencyMultiplier = _enum_for_NumberOfCurrencyUnits
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_oneThousandth
+ * @description
+ *
+ * Multiplier 0.001. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +116,10 @@ const oneThousandth: NumberOfCurrencyUnits_currencyMultiplier = NumberOfCurrency
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_oneHundredth
+ * @description
+ *
+ * Multiplier 0.01. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +136,10 @@ const oneHundredth: NumberOfCurrencyUnits_currencyMultiplier = NumberOfCurrencyU
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_oneTenth
+ * @description
+ *
+ * Multiplier 0.1. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -132,6 +156,10 @@ const oneTenth: NumberOfCurrencyUnits_currencyMultiplier = NumberOfCurrencyUnits
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_one
+ * @description
+ *
+ * Multiplier 1. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -148,6 +176,10 @@ const one: NumberOfCurrencyUnits_currencyMultiplier = NumberOfCurrencyUnits_curr
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_ten
+ * @description
+ *
+ * Multiplier 10. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -164,6 +196,10 @@ const ten: NumberOfCurrencyUnits_currencyMultiplier = NumberOfCurrencyUnits_curr
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_hundred
+ * @description
+ *
+ * Multiplier 100. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -180,6 +216,10 @@ const hundred: NumberOfCurrencyUnits_currencyMultiplier = NumberOfCurrencyUnits_
 
 /**
  * @summary NumberOfCurrencyUnits_currencyMultiplier_thousand
+ * @description
+ *
+ * Multiplier 1000. ECMA-269 §12.2.7.
+ *
  * @constant
  * @type {number}
  */

@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ProgressIndicator_progressLocation
  * @description
- * 
+ *
+ * Location of a network progress/interworking indication. ECMA-269 Network
+ * Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +50,12 @@ enum _enum_for_ProgressIndicator_progressLocation {
 /**
  * @summary ProgressIndicator_progressLocation
  * @description
- * 
+ *
+ * Location of a network progress/interworking indication. ECMA-269 Network
+ * Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -71,7 +81,12 @@ type ProgressIndicator_progressLocation = _enum_for_ProgressIndicator_progressLo
 /**
  * @summary ProgressIndicator_progressLocation
  * @description
- * 
+ *
+ * Location of a network progress/interworking indication. ECMA-269 Network
+ * Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,6 +111,10 @@ const ProgressIndicator_progressLocation = _enum_for_ProgressIndicator_progressL
 
 /**
  * @summary ProgressIndicator_progressLocation_user
+ * @description
+ *
+ * User. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +131,11 @@ const user: ProgressIndicator_progressLocation = ProgressIndicator_progressLocat
 
 /**
  * @summary ProgressIndicator_progressLocation_privateNetServingLocal
+ * @description
+ *
+ * Private network serving the local user. ECMA-269 Network Capabilities
+ * Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -128,6 +152,10 @@ const privateNetServingLocal: ProgressIndicator_progressLocation = ProgressIndic
 
 /**
  * @summary ProgressIndicator_progressLocation_publicNetServingLocal
+ * @description
+ *
+ * Public network serving the local user. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +172,10 @@ const publicNetServingLocal: ProgressIndicator_progressLocation = ProgressIndica
 
 /**
  * @summary ProgressIndicator_progressLocation_transitNetwork
+ * @description
+ *
+ * Transit network. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -160,6 +192,11 @@ const transitNetwork: ProgressIndicator_progressLocation = ProgressIndicator_pro
 
 /**
  * @summary ProgressIndicator_progressLocation_publicNetServingRemote
+ * @description
+ *
+ * Public network serving the remote user. ECMA-269 Network Capabilities
+ * Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -176,6 +213,11 @@ const publicNetServingRemote: ProgressIndicator_progressLocation = ProgressIndic
 
 /**
  * @summary ProgressIndicator_progressLocation_privateNetServingRemote
+ * @description
+ *
+ * Private network serving the remote user. ECMA-269 Network Capabilities
+ * Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -192,6 +234,11 @@ const privateNetServingRemote: ProgressIndicator_progressLocation = ProgressIndi
 
 /**
  * @summary ProgressIndicator_progressLocation_localInterface
+ * @description
+ *
+ * Local interface controlled by the signalling link. ECMA-269 Network
+ * Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -208,6 +255,10 @@ const localInterface: ProgressIndicator_progressLocation = ProgressIndicator_pro
 
 /**
  * @summary ProgressIndicator_progressLocation_internationalNetwork
+ * @description
+ *
+ * International network. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -224,6 +275,10 @@ const internationalNetwork: ProgressIndicator_progressLocation = ProgressIndicat
 
 /**
  * @summary ProgressIndicator_progressLocation_networkBeyondInterwk
+ * @description
+ *
+ * Network beyond the interworking point. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */
@@ -240,6 +295,10 @@ const networkBeyondInterwk: ProgressIndicator_progressLocation = ProgressIndicat
 
 /**
  * @summary ProgressIndicator_progressLocation_other
+ * @description
+ *
+ * Other location. ECMA-269 Network Capabilities Changed.
+ *
  * @constant
  * @type {number}
  */

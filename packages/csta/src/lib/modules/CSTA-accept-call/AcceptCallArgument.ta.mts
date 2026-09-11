@@ -21,7 +21,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AcceptCallArgument
  * @description
- * 
+ *
+ * Service request for Accept Call (ECMA-269 §17.1.1 / ECMA-285 §15.1.1). Names
+ * the offered connection to accept and optional correlator/user data. To drop
+ * an active call first, Clear Connection that call, then Accept Call (FR 1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +45,45 @@ class AcceptCallArgument {
     constructor (
         /**
          * @summary `callToBeAccepted`.
+         * @description
+         *
+         * Mandatory. Offered connection to accept. Required initial state is
+         * Alerting in Offered mode only (§17.1.1.3.1).
+         *
          * @public
          * @readonly
          */
         readonly callToBeAccepted: ConnectionID,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data to attach to this call before any resulting
+         * state transitions (ECMA-269 §12.2.10). A null string clears existing
+         * data.
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent to parties in the call (§12.2.30). Not
+         * retained on a later conference or transferred call.
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and privateData
+         * parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

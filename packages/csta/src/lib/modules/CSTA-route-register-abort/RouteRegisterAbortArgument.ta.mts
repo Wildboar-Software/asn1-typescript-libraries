@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteRegisterAbortArgument
  * @description
- * 
+ *
+ * SF request (ECMA-269 Table 20-4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class RouteRegisterAbortArgument {
     constructor (
         /**
          * @summary `routeRegisterReqID`.
+         * @description
+         *
+         * Registration that was aborted.
          * @public
          * @readonly
          */
         readonly routeRegisterReqID: RouteRegisterReqID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

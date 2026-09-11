@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetAutoAnswer
  * @description
- * 
+ * Capability bitmap for the Get Auto Answer service (ECMA-269 C.14.6, ECMA-285
+ * §9.10). Presence of this entry in `LogicalServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +32,9 @@ type GetAutoAnswer = BIT_STRING;
 /**
  * @summary GetAutoAnswer_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.14.6).
  */
 export
 const GetAutoAnswer_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +42,8 @@ const GetAutoAnswer_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetAutoAnswer_privateData`.
  */
 export
 const privateData: number = GetAutoAnswer_privateData; /* SHORT_NAMED_BIT */
@@ -38,6 +51,9 @@ const privateData: number = GetAutoAnswer_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary GetAutoAnswer_numberOfRingsInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `numberOfRings` in the acknowledgement
+ * (ECMA-269 C.14.6).
  */
 export
 const GetAutoAnswer_numberOfRingsInAck: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +61,8 @@ const GetAutoAnswer_numberOfRingsInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary numberOfRingsInAck
  * @constant
+ * @description
+ * Alias of `GetAutoAnswer_numberOfRingsInAck`.
  */
 export
 const numberOfRingsInAck: number = GetAutoAnswer_numberOfRingsInAck; /* SHORT_NAMED_BIT */
@@ -52,6 +70,9 @@ const numberOfRingsInAck: number = GetAutoAnswer_numberOfRingsInAck; /* SHORT_NA
 /**
  * @summary GetAutoAnswer_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.14.6).
  */
 export
 const GetAutoAnswer_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +80,8 @@ const GetAutoAnswer_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetAutoAnswer_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetAutoAnswer_privateDataInAck; /* SHORT_NAMED_BIT */

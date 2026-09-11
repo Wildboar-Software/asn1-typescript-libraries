@@ -9,7 +9,12 @@ import { HookswitchStatusList_Item, _decode_HookswitchStatusList_Item, _encode_H
 /**
  * @summary HookswitchStatusList
  * @description
- * 
+ *
+ * SEQUENCE OF hookswitch status entries (ECMA-269 §21.1.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

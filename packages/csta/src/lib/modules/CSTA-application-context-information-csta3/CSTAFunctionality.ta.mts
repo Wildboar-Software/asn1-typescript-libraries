@@ -27,7 +27,13 @@ import { VoiceUnitServicesC2, _decode_VoiceUnitServicesC2, _encode_VoiceUnitServ
 /**
  * @summary CSTAFunctionality
  * @description
- * 
+ *
+ * Phase II service/event bitmaps grouped by category, used in ACSE
+ * user-information. Empty BIT STRING is the default for each component.
+ * ECMA-285 §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,42 +54,50 @@ class CSTAFunctionality {
     constructor (
         /**
          * @summary `switchingFunctionServices`.
+         * @description Switching-function services this association will use.
          * @public
          * @readonly
          */
         readonly switchingFunctionServices: OPTIONAL<SwitchingFunctionServicesC2>,
         /**
          * @summary `eventReportServices`.
+         * @description Event reports this association will use.
          * @public
          * @readonly
          */
         readonly eventReportServices: OPTIONAL<EventReportServicesC2>,
         /**
          * @summary `computingFunctionServices`.
+         * @description
+         * Computing-function (routeing) services this association will use.
          * @public
          * @readonly
          */
         readonly computingFunctionServices: OPTIONAL<ComputingFunctionServicesC2>,
         /**
          * @summary `bidirectionalServices`.
+         * @description Bidirectional services (escape, system status).
          * @public
          * @readonly
          */
         readonly bidirectionalServices: OPTIONAL<BidirectionalServicesC2>,
         /**
          * @summary `statusReportingServices`.
+         * @description Status-reporting services.
          * @public
          * @readonly
          */
         readonly statusReportingServices: OPTIONAL<StatusReportingServicesC2>,
         /**
          * @summary `inputOutputServices`.
+         * @description I/O data-path services.
          * @public
          * @readonly
          */
         readonly inputOutputServices: OPTIONAL<InputOutputServicesC2>,
         /**
          * @summary `voiceUnitServices`.
+         * @description Voice-unit services.
          * @public
          * @readonly
          */

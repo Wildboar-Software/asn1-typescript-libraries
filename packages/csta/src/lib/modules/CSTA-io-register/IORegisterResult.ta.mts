@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary IORegisterResult
  * @description
- * 
+ *
+ * Positive acknowledgement. `ioRegisterReqID` identifies the registration for
+ * later I/O services and cancel (ECMA-269 §24.1.1.2.1 / FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,22 @@ class IORegisterResult {
     constructor (
         /**
          * @summary `ioRegisterReqID`.
+         * @description
+         *
+         * Identifier for this I/O registration; used on later I/O services and
+         * I/O Register Cancel (ECMA-269 §24.1.1.3.4).
+         *
          * @public
          * @readonly
          */
         readonly ioRegisterReqID: IORegisterReqID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

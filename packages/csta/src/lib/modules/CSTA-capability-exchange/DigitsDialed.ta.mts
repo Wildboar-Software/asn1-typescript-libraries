@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DigitsDialed
  * @description
- * 
+ * Capability bitmap for the Digits Dialed event (ECMA-269 C.6.6, ECMA-285
+ * §9.10). Presence of this entry in `CallControlEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +37,9 @@ type DigitsDialed = BIT_STRING;
 /**
  * @summary DigitsDialed_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const DigitsDialed_servicesPermitted: number = 0; /* LONG_NAMED_BIT */
@@ -36,6 +47,8 @@ const DigitsDialed_servicesPermitted: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `DigitsDialed_servicesPermitted`.
  */
 export
 const servicesPermitted: number = DigitsDialed_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -43,6 +56,9 @@ const servicesPermitted: number = DigitsDialed_servicesPermitted; /* SHORT_NAMED
 /**
  * @summary DigitsDialed_netwCallingDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const DigitsDialed_netwCallingDevice: number = 1; /* LONG_NAMED_BIT */
@@ -50,6 +66,8 @@ const DigitsDialed_netwCallingDevice: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary netwCallingDevice
  * @constant
+ * @description
+ * Alias of `DigitsDialed_netwCallingDevice`.
  */
 export
 const netwCallingDevice: number = DigitsDialed_netwCallingDevice; /* SHORT_NAMED_BIT */
@@ -57,6 +75,9 @@ const netwCallingDevice: number = DigitsDialed_netwCallingDevice; /* SHORT_NAMED
 /**
  * @summary DigitsDialed_netwCalledDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const DigitsDialed_netwCalledDevice: number = 2; /* LONG_NAMED_BIT */
@@ -64,6 +85,8 @@ const DigitsDialed_netwCalledDevice: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary netwCalledDevice
  * @constant
+ * @description
+ * Alias of `DigitsDialed_netwCalledDevice`.
  */
 export
 const netwCalledDevice: number = DigitsDialed_netwCalledDevice; /* SHORT_NAMED_BIT */
@@ -71,6 +94,9 @@ const netwCalledDevice: number = DigitsDialed_netwCalledDevice; /* SHORT_NAMED_B
 /**
  * @summary DigitsDialed_diallingConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const DigitsDialed_diallingConnectionInfo: number = 3; /* LONG_NAMED_BIT */
@@ -78,6 +104,8 @@ const DigitsDialed_diallingConnectionInfo: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary diallingConnectionInfo
  * @constant
+ * @description
+ * Alias of `DigitsDialed_diallingConnectionInfo`.
  */
 export
 const diallingConnectionInfo: number = DigitsDialed_diallingConnectionInfo; /* SHORT_NAMED_BIT */
@@ -85,6 +113,9 @@ const diallingConnectionInfo: number = DigitsDialed_diallingConnectionInfo; /* S
 /**
  * @summary DigitsDialed_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 Annex C).
  */
 export
 const DigitsDialed_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
@@ -92,6 +123,8 @@ const DigitsDialed_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `DigitsDialed_callCharacteristics`.
  */
 export
 const callCharacteristics: number = DigitsDialed_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -99,6 +132,9 @@ const callCharacteristics: number = DigitsDialed_callCharacteristics; /* SHORT_N
 /**
  * @summary DigitsDialed_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 Annex C).
  */
 export
 const DigitsDialed_languagePreferences: number = 6; /* LONG_NAMED_BIT */
@@ -106,6 +142,8 @@ const DigitsDialed_languagePreferences: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `DigitsDialed_languagePreferences`.
  */
 export
 const languagePreferences: number = DigitsDialed_languagePreferences; /* SHORT_NAMED_BIT */
@@ -113,6 +151,9 @@ const languagePreferences: number = DigitsDialed_languagePreferences; /* SHORT_N
 /**
  * @summary DigitsDialed_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * Annex C).
  */
 export
 const DigitsDialed_privateData: number = 5; /* LONG_NAMED_BIT */
@@ -120,6 +161,8 @@ const DigitsDialed_privateData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `DigitsDialed_privateData`.
  */
 export
 const privateData: number = DigitsDialed_privateData; /* SHORT_NAMED_BIT */
@@ -127,6 +170,9 @@ const privateData: number = DigitsDialed_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary DigitsDialed_locationInfoList
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `locationInfoList` parameter
+ * (ECMA-269 Annex C).
  */
 export
 const DigitsDialed_locationInfoList: number = 7; /* LONG_NAMED_BIT */
@@ -134,6 +180,8 @@ const DigitsDialed_locationInfoList: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary locationInfoList
  * @constant
+ * @description
+ * Alias of `DigitsDialed_locationInfoList`.
  */
 export
 const locationInfoList: number = DigitsDialed_locationInfoList; /* SHORT_NAMED_BIT */

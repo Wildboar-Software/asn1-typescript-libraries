@@ -17,7 +17,20 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary escapeRegister
  * @description
- * 
+ *
+ * Registers the computing function for escape services. Required before
+ * receiving Escape requests if the SF supports escape registration. The
+ * computing function never needs a registration to send Escape (ECMA-269
+ * §29.1.1 / §9.4.2.1).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:365. Errors: `universalFailure` (ECMA-285 §27.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

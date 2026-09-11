@@ -24,7 +24,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DetachMediaServiceArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 19-6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +46,29 @@ class DetachMediaServiceArgument {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection at the media-access device if used; otherwise the
+         * connection at the detaching device.
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `mediaServiceType`.
+         * @description
+         *
+         * Media service type to detach.
          * @public
          * @readonly
          */
         readonly mediaServiceType: MediaServiceType,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

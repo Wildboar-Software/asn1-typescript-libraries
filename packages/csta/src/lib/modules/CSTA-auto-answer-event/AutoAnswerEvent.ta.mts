@@ -19,7 +19,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AutoAnswerEvent
  * @description
- * 
+ *
+ * Auto Answer event (ECMA-269 §22.2.7 / ECMA-285 §20.2.7). Direction: SF→CF via
+ * Event Report. Auto-answer on/off changed (telephone or Set Auto Answer). Not
+ * generated when a Set request leaves the feature unchanged (ECMA-269 §9.5.1 FR
+ * 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +45,37 @@ class AutoAnswerEvent {
     constructor (
         /**
          * @summary `invokingDevice`.
+         * @description
+         *
+         * Device whose auto-answer status changed.
          * @public
          * @readonly
          */
         readonly invokingDevice: SubjectDeviceID,
         /**
          * @summary `autoAnswerOn`.
+         * @description
+         *
+         * FALSE = disabled; TRUE = enabled.
          * @public
          * @readonly
          */
         readonly autoAnswerOn: BOOLEAN,
         /**
          * @summary `numberOfRings`.
+         * @description
+         *
+         * Rings before a call is auto-answered.
          * @public
          * @readonly
          */
         readonly numberOfRings: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

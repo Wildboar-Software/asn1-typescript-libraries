@@ -17,7 +17,27 @@ import { OtherPlan, _decode_OtherPlan, _encode_OtherPlan } from "../CSTA-device-
 /**
  * @summary DeviceID_deviceIdentifier
  * @description
- * 
+ *
+ * Choice of Device Identifier encodings for `DeviceID`
+ * (ECMA-269 §10, §12.3.11; ECMA-285 §9.2).
+ *
+ * - `dialingNumber`: Diallable Digits (§10.1.1). First character is
+ *   not `N`. May include keypad digits, `*#A-D`, and specials
+ *   (`!PT,W@$;+`). Length 0–64; empty is allowed in some
+ *   single-device working domains (§10.3).
+ * - `deviceNumber`: non-diallable integer (§10.1.3), e.g. trunks.
+ * - `implicitPublic` / `implicitPrivate`: implicit TON digit strings
+ *   in Switching Function Representation (§10.1.2).
+ * - `explicitPublic` / `explicitPrivate`: explicit `PublicTON` /
+ *   `PrivateTON`.
+ * - `other`: numbering plans outside public/private TON.
+ *
+ * URI Representation (§10.1.4) is a character string containing `:`;
+ * it is not a separate alternative.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,15 @@ import { LocalDeviceID, _decode_LocalDeviceID, _encode_LocalDeviceID } from "../
 /**
  * @summary ConnectionID_both
  * @description
- * 
+ *
+ * Complete `ConnectionID`: both `callID` and `deviceID`
+ * (ECMA-269 §12.3.9). This is the format the switching function
+ * always sends in events and positive acknowledgements, except Call
+ * Cleared and Failed, which may be callID-only.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +42,24 @@ class ConnectionID_both {
     constructor (
         /**
          * @summary `callID`.
+         * @description
+         *
+         * Switching-function identifier for the call. Unique among calls
+         * in the switching sub-domain. Max length from capabilities
+         * exchange (ECMA-269 §12.3.9, §6.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly callID: CallID,
         /**
          * @summary `deviceID`.
+         * @description
+         *
+         * Device in the connection: static (`DeviceID`) or dynamic
+         * (opaque, valid only for this participation)
+         * (ECMA-269 §12.3.9, §6.1.6).
+         *
          * @public
          * @readonly
          */

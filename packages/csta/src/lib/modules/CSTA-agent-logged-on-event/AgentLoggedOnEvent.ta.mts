@@ -30,7 +30,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AgentLoggedOnEvent
  * @description
- * 
+ *
+ * Agent Logged On event (ECMA-269 §22.2.3 / ECMA-285 §20.2.3). Direction: SF→CF
+ * via Event Report. Agent logged on to an ACD device or group and is ready to
+ * contribute; does not imply Ready for ACD calls. Telephone, Set Agent State,
+ * or auto log-on at start-up. May be reported for a monitor on the ACD device,
+ * ACD group, or agent device (§6.1.1.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,36 +59,56 @@ class AgentLoggedOnEvent {
     constructor (
         /**
          * @summary `agentDevice`.
+         * @description
+         *
+         * Device at which the agent logged on.
          * @public
          * @readonly
          */
         readonly agentDevice: SubjectDeviceID,
         /**
          * @summary `agentID`.
+         * @description
+         *
+         * Required if multiple agentIDs exist at the agent device.
          * @public
          * @readonly
          */
         readonly agentID: OPTIONAL<AgentID>,
         /**
          * @summary `acdGroup`.
+         * @description
+         *
+         * ACD group to which the agent logged on. Present iff the event is
+         * associated with ACD group activity (§6.1.1.6.5); otherwise absent.
          * @public
          * @readonly
          */
         readonly acdGroup: OPTIONAL<DeviceID>,
         /**
          * @summary `agentPassword`.
+         * @description
+         *
+         * Password used; the SF may omit it for security.
          * @public
          * @readonly
          */
         readonly agentPassword: OPTIONAL<AgentPassword>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Reason for the event.
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

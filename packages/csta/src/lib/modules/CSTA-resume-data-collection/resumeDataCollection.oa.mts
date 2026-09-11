@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary resumeDataCollection
  * @description
- * 
+ *
+ * Requests the switching function to resume a currently suspended data
+ * collection. Rejected if not suspended (ECMA-269 §25.1.4).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:346. Errors: `universalFailure` (ECMA-285 §23.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SubscribedResourceAvailabilityErrors
  * @description
- * 
+ *
+ * The request could not be fulfilled because a required resource must be
+ * purchased or contracted by the client (ECMA-269 §9.3.1, §12.2.14.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +39,12 @@ enum _enum_for_SubscribedResourceAvailabilityErrors {
 /**
  * @summary SubscribedResourceAvailabilityErrors
  * @description
- * 
+ *
+ * The request could not be fulfilled because a required resource must be
+ * purchased or contracted by the client (ECMA-269 §9.3.1, §12.2.14.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +64,12 @@ type SubscribedResourceAvailabilityErrors = _enum_for_SubscribedResourceAvailabi
 /**
  * @summary SubscribedResourceAvailabilityErrors
  * @description
- * 
+ *
+ * The request could not be fulfilled because a required resource must be
+ * purchased or contracted by the client (ECMA-269 §9.3.1, §12.2.14.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,14 +88,19 @@ const SubscribedResourceAvailabilityErrors = _enum_for_SubscribedResourceAvailab
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_generic
+ * @description
+ * A required resource must be purchased or contracted; the server cannot be
+ * more specific. ECMA-269 §12.2.14.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SubscribedResourceAvailabilityErrors_generic: SubscribedResourceAvailabilityErrors = SubscribedResourceAvailabilityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
+ * @description Alias of {@link SubscribedResourceAvailabilityErrors_generic}.
  * @constant
  * @type {number}
  */
@@ -89,14 +109,21 @@ const generic: SubscribedResourceAvailabilityErrors = SubscribedResourceAvailabi
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_objectMonitorLimitExceeded
+ * @description
+ * Would exceed the server's monitor limit for the specified object. ECMA-269
+ * §12.2.14.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SubscribedResourceAvailabilityErrors_objectMonitorLimitExceeded: SubscribedResourceAvailabilityErrors = SubscribedResourceAvailabilityErrors.objectMonitorLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary objectMonitorLimitExceeded
+ * @description
+ * Alias of {@link
+ * SubscribedResourceAvailabilityErrors_objectMonitorLimitExceeded}.
  * @constant
  * @type {number}
  */
@@ -105,14 +132,18 @@ const objectMonitorLimitExceeded: SubscribedResourceAvailabilityErrors = Subscri
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_trunkLimitExceeded
+ * @description Would exceed the server's trunk limit. ECMA-269 §12.2.14.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SubscribedResourceAvailabilityErrors_trunkLimitExceeded: SubscribedResourceAvailabilityErrors = SubscribedResourceAvailabilityErrors.trunkLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trunkLimitExceeded
+ * @description
+ * Alias of {@link SubscribedResourceAvailabilityErrors_trunkLimitExceeded}.
  * @constant
  * @type {number}
  */
@@ -121,14 +152,21 @@ const trunkLimitExceeded: SubscribedResourceAvailabilityErrors = SubscribedResou
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_outstandingReqLimitExceeded
+ * @description
+ * Would exceed the server's limit on outstanding service requests. ECMA-269
+ * §12.2.14.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SubscribedResourceAvailabilityErrors_outstandingReqLimitExceeded: SubscribedResourceAvailabilityErrors = SubscribedResourceAvailabilityErrors.outstandingReqLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outstandingReqLimitExceeded
+ * @description
+ * Alias of {@link
+ * SubscribedResourceAvailabilityErrors_outstandingReqLimitExceeded}.
  * @constant
  * @type {number}
  */
@@ -137,14 +175,20 @@ const outstandingReqLimitExceeded: SubscribedResourceAvailabilityErrors = Subscr
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_objectRegistrationLimitExceeded
+ * @description
+ * Would exceed the registration limit for this device. ECMA-269 §12.2.14.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SubscribedResourceAvailabilityErrors_objectRegistrationLimitExceeded: SubscribedResourceAvailabilityErrors = SubscribedResourceAvailabilityErrors.objectRegistrationLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary objectRegistrationLimitExceeded
+ * @description
+ * Alias of {@link
+ * SubscribedResourceAvailabilityErrors_objectRegistrationLimitExceeded}.
  * @constant
  * @type {number}
  */

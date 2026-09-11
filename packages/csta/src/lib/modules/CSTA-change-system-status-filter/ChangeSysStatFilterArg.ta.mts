@@ -24,7 +24,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ChangeSysStatFilterArg
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 14-2). Bits TRUE = filtered (not sent).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +46,30 @@ class ChangeSysStatFilterArg {
     constructor (
         /**
          * @summary `sysStatRegisterID`.
+         * @description
+         *
+         * Registration whose filter is changed. Mandatory.
          * @public
          * @readonly
          */
         readonly sysStatRegisterID: SysStatRegisterID,
         /**
          * @summary `requestedStatusFilter`.
+         * @description
+         *
+         * System Status types to filter: initializing, enabled, normal,
+         * messages lost, disabled, partially disabled, overload
+         * imminent/reached/relieved.
          * @public
          * @readonly
          */
         readonly requestedStatusFilter: SystemStatus,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-2.
          * @public
          * @readonly
          */

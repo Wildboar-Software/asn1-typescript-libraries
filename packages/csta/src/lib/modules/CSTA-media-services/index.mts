@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-media-services`.
+ * Media-service parameter types: media class of a call versus connection-level
+ * flow direction and channels, media service type/instance/stream IDs, and how
+ * a media access device is attached. ECMA-269 §12.2.8, §12.2.20–12.2.21,
+ * §12.3.18–12.3.19, §19.1.1; ECMA-285 §9.15.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
  */
 export * from "./ConnectionInformation-flowDirection.ta.mjs";
 export * from "./ConnectionInformation.ta.mjs";

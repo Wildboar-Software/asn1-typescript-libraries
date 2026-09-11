@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RingMode
  * @description
- * 
+ *
+ * Whether a ringer is ringing. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +32,11 @@ enum _enum_for_RingMode {
 /**
  * @summary RingMode
  * @description
- * 
+ *
+ * Whether a ringer is ringing. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +53,11 @@ type RingMode = _enum_for_RingMode;
 /**
  * @summary RingMode
  * @description
- * 
+ *
+ * Whether a ringer is ringing. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,6 +73,10 @@ const RingMode = _enum_for_RingMode;
 
 /**
  * @summary RingMode_ringing
+ * @description
+ *
+ * Ringer is ringing. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +93,10 @@ const ringing: RingMode = RingMode.ringing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RingMode_notRinging
+ * @description
+ *
+ * Ringer is not ringing. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */

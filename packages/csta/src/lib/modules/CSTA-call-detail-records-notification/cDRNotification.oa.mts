@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary cDRNotification
  * @description
- * 
+ *
+ * Notifies the computing function that it should obtain stored CDR information
+ * via Send Stored Call Detail Records (ECMA-269 §27.1.1).
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:360. Errors: `universalFailure` (ECMA-285 §25.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

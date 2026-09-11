@@ -19,7 +19,12 @@ import { SystemStatusServList, _decode_SystemStatusServList, _encode_SystemStatu
 /**
  * @summary StatusReportingServList
  * @description
- * 
+ *
+ * Monitoring, snapshot, and system-status service bitmaps.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,27 @@ class StatusReportingServList {
     constructor (
         /**
          * @summary `monitoringServices`.
+         * @description
+         *
+         * Monitoring services.
          * @public
          * @readonly
          */
         readonly monitoringServices: OPTIONAL<MonitoringServList>,
         /**
          * @summary `snapshotServices`.
+         * @description
+         *
+         * Snapshot services.
          * @public
          * @readonly
          */
         readonly snapshotServices: OPTIONAL<SnapshotServList>,
         /**
          * @summary `systemServices`.
+         * @description
+         *
+         * System status services.
          * @public
          * @readonly
          */

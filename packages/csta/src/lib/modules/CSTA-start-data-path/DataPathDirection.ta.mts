@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DataPathDirection
  * @description
- * 
+ *
+ * Direction of transfer on the data path (ECMA-269 §24.2.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +36,13 @@ enum _enum_for_DataPathDirection {
 /**
  * @summary DataPathDirection
  * @description
- * 
+ *
+ * Direction of transfer on the data path (ECMA-269 §24.2.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +60,13 @@ type DataPathDirection = _enum_for_DataPathDirection;
 /**
  * @summary DataPathDirection
  * @description
- * 
+ *
+ * Direction of transfer on the data path (ECMA-269 §24.2.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +83,10 @@ const DataPathDirection = _enum_for_DataPathDirection;
 
 /**
  * @summary DataPathDirection_computeFunctionToObject
+ * @description
+ *
+ * Computing function toward the identified object (ECMA-269 §24.2.8.1).
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +95,10 @@ const DataPathDirection_computeFunctionToObject: DataPathDirection = DataPathDir
 
 /**
  * @summary computeFunctionToObject
+ * @description
+ *
+ * Computing function toward the identified object (ECMA-269 §24.2.8.1).
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +107,10 @@ const computeFunctionToObject: DataPathDirection = DataPathDirection.computeFunc
 
 /**
  * @summary DataPathDirection_objectToComputeFunction
+ * @description
+ *
+ * Identified object toward the computing function (ECMA-269 §24.2.8.1).
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +119,10 @@ const DataPathDirection_objectToComputeFunction: DataPathDirection = DataPathDir
 
 /**
  * @summary objectToComputeFunction
+ * @description
+ *
+ * Identified object toward the computing function (ECMA-269 §24.2.8.1).
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +131,10 @@ const objectToComputeFunction: DataPathDirection = DataPathDirection.objectToCom
 
 /**
  * @summary DataPathDirection_bidirectional
+ * @description
+ *
+ * Both directions between computing function and object (ECMA-269 §24.2.8.1).
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +143,10 @@ const DataPathDirection_bidirectional: DataPathDirection = DataPathDirection.bid
 
 /**
  * @summary bidirectional
+ * @description
+ *
+ * Both directions between computing function and object (ECMA-269 §24.2.8.1).
+ *
  * @constant
  * @type {number}
  */

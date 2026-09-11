@@ -17,7 +17,13 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
 /**
  * @summary UsageRules
  * @description
- * 
+ *
+ * GEOPRIV usage-rules for PIDF-LO location: whether
+ * retransmission is allowed, when retention expires, and a
+ * ruleset URI. ECMA-269 §12.2.18; RFC 4119.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +41,42 @@ class UsageRules {
     constructor (
         /**
          * @summary `retransmissionAllowed`.
+         * @description
+         *
+         * Whether retransmission of this location is allowed.
+         * ECMA-269 §12.2.18.
+         *
          * @public
          * @readonly
          */
         readonly retransmissionAllowed: BOOLEAN,
         /**
          * @summary `retentionExpires`.
+         * @description
+         *
+         * When retention of this location must end. ECMA-269
+         * §12.2.18.
+         *
          * @public
          * @readonly
          */
         readonly retentionExpires: TimeInfo,
         /**
          * @summary `rulesetReference`.
+         * @description
+         *
+         * URI of the applicable ruleset. ECMA-285 §9.9.
+         *
          * @public
          * @readonly
          */
         readonly rulesetReference: IA5String,
         /**
          * @summary `noteWell`.
+         * @description
+         *
+         * Optional human-readable usage note. ECMA-285 §9.9.
+         *
          * @public
          * @readonly
          */

@@ -28,7 +28,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetDisplayArgument
  * @description
- * 
+ *
+ * Set Display request (ECMA-269 §21.1.15.1). ASN.1 `display` is spec
+ * `displayID`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,48 +56,81 @@ class SetDisplayArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `display`.
+         * @description
+         *
+         * Which display. Omit only if the device has exactly one display.
          * @public
          * @readonly
          */
         readonly display: OPTIONAL<DisplayID>,
         /**
          * @summary `physicalBaseRowNumber`.
+         * @description
+         *
+         * Logical row at the first physical row (scroll). Omit when physical
+         * rows equal logical rows. Changing it may be rejected if scrolling is
+         * unsupported (§21.1.15.3.4 FR 7).
          * @public
          * @readonly
          */
         readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseColumnNumber`.
+         * @description
+         *
+         * Logical column at the first physical column. Omit when physical
+         * columns equal logical columns.
          * @public
          * @readonly
          */
         readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `contentsOfDisplay`.
+         * @description
+         *
+         * Text to place: rows concatenated including spaces. Empty string
+         * clears from `offset` to end of display. Overflow is truncated.
          * @public
          * @readonly
          */
         readonly contentsOfDisplay: IA5String,
         /**
          * @summary `offset`.
+         * @description
+         *
+         * Character offset (not bytes) where text starts. 0 (default) through
+         * logicalColumns*logicalRows-1. CR/LF/Tab count toward offset and
+         * length.
          * @public
          * @readonly
          */
         readonly offset: OPTIONAL<INTEGER>,
         /**
          * @summary `characterSet`.
+         * @description
+         *
+         * ASCII (default), Unicode (UTF-8), or Proprietary. Unsupported
+         * characterSet: reject or interpret as default (§21.1.15.3.4 FR 8).
          * @public
          * @readonly
          */
         readonly characterSet: OPTIONAL<CharacterSet>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

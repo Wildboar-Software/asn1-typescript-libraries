@@ -46,7 +46,16 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary BridgedEvent
  * @description
- * 
+ *
+ * Bridged event payload (ECMA-269 §17.2.1 / ECMA-285
+ * §15.2.1) for `cSTAEventReport`. Reports that a shared-
+ * bridged appearance entered inactive (Queued) mode.
+ * `monitorCrossRefID` is on the event report, not this
+ * SEQUENCE.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -74,84 +83,153 @@ class BridgedEvent {
     constructor (
         /**
          * @summary `bridgedConnection`.
+         * @description
+         *
+         * Mandatory. Connection of the appearance placed in
+         * inactive mode.
+         *
          * @public
          * @readonly
          */
         readonly bridgedConnection: ConnectionID,
         /**
          * @summary `bridgedAppearance`.
+         * @description
+         *
+         * Mandatory. Appearance placed in inactive mode.
+         *
          * @public
          * @readonly
          */
         readonly bridgedAppearance: SubjectDeviceID,
         /**
          * @summary `localConnectionInfo`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.17). For
+         * the bridged appearance: Queued.
+         *
          * @public
          * @readonly
          */
         readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional current correlator data (§12.2.10). This
+         * event may omit it (FR 6).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Conditional. Present when user data is sent and
+         * supported (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Mandatory. Table 17-152 lists Normal.
+         *
          * @public
          * @readonly
          */
         readonly cause: EventCause,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.25).
+         * Mandatory if Dynamic Feature Availability is
+         * supported.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional media class and characteristics
+         * (§12.2.20).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional high-level call characteristics
+         * (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `bridgedConnectionInfo`.
+         * @description
+         *
+         * Optional connection information. Omitted values
+         * are switching-function specific (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly bridgedConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional global call data and thread data
+         * (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * Optional location information for devices in the
+         * call.
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the
+         * security and privateData parameters from the
+         * ECMA-269 event table.
+         *
          * @public
          * @readonly
          */

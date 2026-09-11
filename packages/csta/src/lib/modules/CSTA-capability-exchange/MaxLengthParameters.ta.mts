@@ -15,7 +15,15 @@ import {
 /**
  * @summary MaxLengthParameters
  * @description
- * 
+ * SF maximum lengths in characters for common parameter types in Get Switching
+ * Function Capabilities. The computing function must not send larger data. Zero
+ * means that parameter type is unsupported (ECMA-269 §13.1.4.2.1 Table 13-9,
+ * ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,72 +51,96 @@ class MaxLengthParameters {
          * @summary `accountInfo`.
          * @public
          * @readonly
+         * @description
+         * max length of AccountInfo; 0 means unsupported
          */
         readonly accountInfo: INTEGER,
         /**
          * @summary `authCode`.
          * @public
          * @readonly
+         * @description
+         * max length of AuthCode; 0 means unsupported
          */
         readonly authCode: INTEGER,
         /**
          * @summary `agentID`.
          * @public
          * @readonly
+         * @description
+         * max length of AgentID; 0 means unsupported
          */
         readonly agentID: INTEGER,
         /**
          * @summary `agentPassword`.
          * @public
          * @readonly
+         * @description
+         * max length of AgentPassword; 0 means unsupported
          */
         readonly agentPassword: INTEGER,
         /**
          * @summary `callIDInConnectionID`.
          * @public
          * @readonly
+         * @description
+         * max length of callID in ConnectionID; 0 means unsupported
          */
         readonly callIDInConnectionID: INTEGER,
         /**
          * @summary `correlatorData`.
          * @public
          * @readonly
+         * @description
+         * max length of CorrelatorData; 0 means unsupported
          */
         readonly correlatorData: INTEGER,
         /**
          * @summary `privateData`.
          * @public
          * @readonly
+         * @description
+         * max length of CSTAPrivateData; 0 means unsupported
          */
         readonly privateData: INTEGER,
         /**
          * @summary `deviceIdentifiers`.
          * @public
          * @readonly
+         * @description
+         * max length of Device Identifier types; 0 means unsupported
          */
         readonly deviceIdentifiers: INTEGER,
         /**
          * @summary `userData`.
          * @public
          * @readonly
+         * @description
+         * max length of UserData; 0 means unsupported
          */
         readonly userData: INTEGER,
         /**
          * @summary `buttonLabel`.
          * @public
          * @readonly
+         * @description
+         * max length of buttonLabel; 0 means unsupported
          */
         readonly buttonLabel: INTEGER,
         /**
          * @summary `lampLabel`.
          * @public
          * @readonly
+         * @description
+         * max length of lampLabel; 0 means unsupported
          */
         readonly lampLabel: INTEGER,
         /**
          * @summary `charactersToSend`.
          * @public
          * @readonly
+         * @description
+         * max length of charactersToSend (spec max 64); 0 means unsupported
          */
         readonly charactersToSend: INTEGER
     ) {}

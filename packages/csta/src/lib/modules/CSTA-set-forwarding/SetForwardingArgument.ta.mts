@@ -26,7 +26,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetForwardingArgument
  * @description
- * 
+ *
+ * Set Forwarding request (ECMA-269 §22.1.20.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,42 +52,68 @@ class SetForwardingArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device on which to set forwarding.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `forwardingType`.
+         * @description
+         *
+         * Required for user-specified settings; omit for SF default settings.
+         * Values: forwardImmediate, forwardBusy, forwardDND, forwardNoAns, and
+         * Int/Ext variants (§6.7.1).
          * @public
          * @readonly
          */
         readonly forwardingType: OPTIONAL<ForwardingType>,
         /**
          * @summary `activateForward`.
+         * @description
+         *
+         * FALSE = deactivate; TRUE = activate.
          * @public
          * @readonly
          */
         readonly activateForward: BOOLEAN,
         /**
          * @summary `forwardDN`.
+         * @description
+         *
+         * Forward destination. Required for user settings when activating; omit
+         * for SF default settings.
          * @public
          * @readonly
          */
         readonly forwardDN: OPTIONAL<DeviceID>,
         /**
          * @summary `ringCount`.
+         * @description
+         *
+         * Rings (1...100) before forward-no-answer. Only with activateForward
+         * TRUE and forwardNoAns{,Int,Ext}.
          * @public
          * @readonly
          */
         readonly ringCount: OPTIONAL<INTEGER>,
         /**
          * @summary `ringDuration`.
+         * @description
+         *
+         * Seconds before forward-no-answer. Omit if `ringCount` is provided.
          * @public
          * @readonly
          */
         readonly ringDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

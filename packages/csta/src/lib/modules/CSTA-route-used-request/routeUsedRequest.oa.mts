@@ -15,7 +15,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary routeUsedRequest
  * @description
- * 
+ *
+ * Route Used (ECMA-269 §20.2.6 / ECMA-285 §18.2.6). Direction: SF→CF. ROSE
+ * local CODE 34. Errors: `universalFailure`. Sent only when CF set
+ * `routeUsedReq` on Route Select.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -29,7 +29,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RecordMessageArgument
  * @description
- * 
+ *
+ * Connection, optional sampling, encoding, max duration, and termination
+ * (ECMA-269 §26.1.9.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,42 +57,72 @@ class RecordMessageArgument {
     constructor (
         /**
          * @summary `callToBeRecorded`.
+         * @description
+         *
+         * Connection from which to record (ECMA-269 §26.1.9.1).
+         *
          * @public
          * @readonly
          */
         readonly callToBeRecorded: ConnectionID,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `samplingRate`.
+         * @description
+         *
+         * Sampling rate (ECMA-269 §26.1.9.1).
+         *
          * @public
          * @readonly
          */
         readonly samplingRate: OPTIONAL<INTEGER>,
         /**
          * @summary `encodingAlgorithm`.
+         * @description
+         *
+         * Encoding for the recording (ECMA-269 §26.1.9.1).
+         *
          * @public
          * @readonly
          */
         readonly encodingAlgorithm: OPTIONAL<EncodingAlgorithm>,
         /**
          * @summary `maxDuration`.
+         * @description
+         *
+         * Maximum duration (ECMA-269 §26.1.9.1).
+         *
          * @public
          * @readonly
          */
         readonly maxDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `termination`.
+         * @description
+         *
+         * Conditions that stop recording (ECMA-269 §26.1.9.1).
+         *
          * @public
          * @readonly
          */
         readonly termination: OPTIONAL<TerminatingConditions>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

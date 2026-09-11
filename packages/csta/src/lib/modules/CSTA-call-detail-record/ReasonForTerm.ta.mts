@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ReasonForTerm
  * @description
- * 
+ *
+ * Why the recorded connection terminated. ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +38,11 @@ enum _enum_for_ReasonForTerm {
 /**
  * @summary ReasonForTerm
  * @description
- * 
+ *
+ * Why the recorded connection terminated. ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +62,11 @@ type ReasonForTerm = _enum_for_ReasonForTerm;
 /**
  * @summary ReasonForTerm
  * @description
- * 
+ *
+ * Why the recorded connection terminated. ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,6 +85,10 @@ const ReasonForTerm = _enum_for_ReasonForTerm;
 
 /**
  * @summary ReasonForTerm_normalClearing
+ * @description
+ *
+ * Normal clearing. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +105,10 @@ const normalClearing: ReasonForTerm = ReasonForTerm.normalClearing; /* SHORT_NAM
 
 /**
  * @summary ReasonForTerm_unsuccessfulCallAttempt
+ * @description
+ *
+ * Unsuccessful call attempt. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +125,10 @@ const unsuccessfulCallAttempt: ReasonForTerm = ReasonForTerm.unsuccessfulCallAtt
 
 /**
  * @summary ReasonForTerm_abnormalTermination
+ * @description
+ *
+ * Abnormal termination. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +145,10 @@ const abnormalTermination: ReasonForTerm = ReasonForTerm.abnormalTermination; /*
 
 /**
  * @summary ReasonForTerm_callTransferred
+ * @description
+ *
+ * Call transferred. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +165,10 @@ const callTransferred: ReasonForTerm = ReasonForTerm.callTransferred; /* SHORT_N
 
 /**
  * @summary ReasonForTerm_other
+ * @description
+ *
+ * Other termination reason. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */

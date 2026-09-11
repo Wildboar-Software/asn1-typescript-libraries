@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SendMessage
  * @description
- * 
+ * Capability bitmap for the Send Message service (ECMA-269 C.5.24, ECMA-285
+ * §9.10). Presence of this entry in `CallControlServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,6 +52,9 @@ type SendMessage = BIT_STRING;
 /**
  * @summary SendMessage_accountCode
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `accountCode` parameter (ECMA-269
+ * Annex C).
  */
 export
 const SendMessage_accountCode: number = 0; /* LONG_NAMED_BIT */
@@ -51,6 +62,8 @@ const SendMessage_accountCode: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary accountCode
  * @constant
+ * @description
+ * Alias of `SendMessage_accountCode`.
  */
 export
 const accountCode: number = SendMessage_accountCode; /* SHORT_NAMED_BIT */
@@ -58,6 +71,9 @@ const accountCode: number = SendMessage_accountCode; /* SHORT_NAMED_BIT */
 /**
  * @summary SendMessage_authCode
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `authCode` parameter (ECMA-269
+ * Annex C).
  */
 export
 const SendMessage_authCode: number = 1; /* LONG_NAMED_BIT */
@@ -65,6 +81,8 @@ const SendMessage_authCode: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary authCode
  * @constant
+ * @description
+ * Alias of `SendMessage_authCode`.
  */
 export
 const authCode: number = SendMessage_authCode; /* SHORT_NAMED_BIT */
@@ -72,6 +90,9 @@ const authCode: number = SendMessage_authCode; /* SHORT_NAMED_BIT */
 /**
  * @summary SendMessage_correlatorData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `correlatorData` parameter
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_correlatorData: number = 2; /* LONG_NAMED_BIT */
@@ -79,6 +100,8 @@ const SendMessage_correlatorData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary correlatorData
  * @constant
+ * @description
+ * Alias of `SendMessage_correlatorData`.
  */
 export
 const correlatorData: number = SendMessage_correlatorData; /* SHORT_NAMED_BIT */
@@ -86,6 +109,9 @@ const correlatorData: number = SendMessage_correlatorData; /* SHORT_NAMED_BIT */
 /**
  * @summary SendMessage_userData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `userData` parameter (ECMA-269
+ * Annex C).
  */
 export
 const SendMessage_userData: number = 3; /* LONG_NAMED_BIT */
@@ -93,6 +119,8 @@ const SendMessage_userData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary userData
  * @constant
+ * @description
+ * Alias of `SendMessage_userData`.
  */
 export
 const userData: number = SendMessage_userData; /* SHORT_NAMED_BIT */
@@ -100,6 +128,9 @@ const userData: number = SendMessage_userData; /* SHORT_NAMED_BIT */
 /**
  * @summary SendMessage_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
@@ -107,6 +138,8 @@ const SendMessage_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristics`.
  */
 export
 const callCharacteristics: number = SendMessage_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -114,6 +147,9 @@ const callCharacteristics: number = SendMessage_callCharacteristics; /* SHORT_NA
 /**
  * @summary SendMessage_callCharacteristicsACDCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `acdCall` (ECMA-269
+ * Annex C).
  */
 export
 const SendMessage_callCharacteristicsACDCall: number = 5; /* LONG_NAMED_BIT */
@@ -121,6 +157,8 @@ const SendMessage_callCharacteristicsACDCall: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristicsACDCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsACDCall`.
  */
 export
 const callCharacteristicsACDCall: number = SendMessage_callCharacteristicsACDCall; /* SHORT_NAMED_BIT */
@@ -128,6 +166,9 @@ const callCharacteristicsACDCall: number = SendMessage_callCharacteristicsACDCal
 /**
  * @summary SendMessage_callCharacteristicsLowPriorityCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `lowPriorityCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsLowPriorityCall: number = 6; /* LONG_NAMED_BIT */
@@ -135,6 +176,8 @@ const SendMessage_callCharacteristicsLowPriorityCall: number = 6; /* LONG_NAMED_
 /**
  * @summary callCharacteristicsLowPriorityCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsLowPriorityCall`.
  */
 export
 const callCharacteristicsLowPriorityCall: number = SendMessage_callCharacteristicsLowPriorityCall; /* SHORT_NAMED_BIT */
@@ -142,6 +185,9 @@ const callCharacteristicsLowPriorityCall: number = SendMessage_callCharacteristi
 /**
  * @summary SendMessage_callCharacteristicsPriorityCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `priorityCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsPriorityCall: number = 7; /* LONG_NAMED_BIT */
@@ -149,6 +195,8 @@ const SendMessage_callCharacteristicsPriorityCall: number = 7; /* LONG_NAMED_BIT
 /**
  * @summary callCharacteristicsPriorityCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsPriorityCall`.
  */
 export
 const callCharacteristicsPriorityCall: number = SendMessage_callCharacteristicsPriorityCall; /* SHORT_NAMED_BIT */
@@ -156,6 +204,9 @@ const callCharacteristicsPriorityCall: number = SendMessage_callCharacteristicsP
 /**
  * @summary SendMessage_callCharacteristicsHighPriorityCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `highPriorityCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsHighPriorityCall: number = 8; /* LONG_NAMED_BIT */
@@ -163,6 +214,8 @@ const SendMessage_callCharacteristicsHighPriorityCall: number = 8; /* LONG_NAMED
 /**
  * @summary callCharacteristicsHighPriorityCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsHighPriorityCall`.
  */
 export
 const callCharacteristicsHighPriorityCall: number = SendMessage_callCharacteristicsHighPriorityCall; /* SHORT_NAMED_BIT */
@@ -170,6 +223,9 @@ const callCharacteristicsHighPriorityCall: number = SendMessage_callCharacterist
 /**
  * @summary SendMessage_callCharacteristicsMaintenanceCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `maintenanceCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsMaintenanceCall: number = 9; /* LONG_NAMED_BIT */
@@ -177,6 +233,8 @@ const SendMessage_callCharacteristicsMaintenanceCall: number = 9; /* LONG_NAMED_
 /**
  * @summary callCharacteristicsMaintenanceCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsMaintenanceCall`.
  */
 export
 const callCharacteristicsMaintenanceCall: number = SendMessage_callCharacteristicsMaintenanceCall; /* SHORT_NAMED_BIT */
@@ -184,6 +242,9 @@ const callCharacteristicsMaintenanceCall: number = SendMessage_callCharacteristi
 /**
  * @summary SendMessage_callCharacteristicsDirectAgent
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `directAgent`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsDirectAgent: number = 10; /* LONG_NAMED_BIT */
@@ -191,6 +252,8 @@ const SendMessage_callCharacteristicsDirectAgent: number = 10; /* LONG_NAMED_BIT
 /**
  * @summary callCharacteristicsDirectAgent
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsDirectAgent`.
  */
 export
 const callCharacteristicsDirectAgent: number = SendMessage_callCharacteristicsDirectAgent; /* SHORT_NAMED_BIT */
@@ -198,6 +261,9 @@ const callCharacteristicsDirectAgent: number = SendMessage_callCharacteristicsDi
 /**
  * @summary SendMessage_callCharacteristicsAssistCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `assistCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsAssistCall: number = 11; /* LONG_NAMED_BIT */
@@ -205,6 +271,8 @@ const SendMessage_callCharacteristicsAssistCall: number = 11; /* LONG_NAMED_BIT 
 /**
  * @summary callCharacteristicsAssistCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsAssistCall`.
  */
 export
 const callCharacteristicsAssistCall: number = SendMessage_callCharacteristicsAssistCall; /* SHORT_NAMED_BIT */
@@ -212,6 +280,9 @@ const callCharacteristicsAssistCall: number = SendMessage_callCharacteristicsAss
 /**
  * @summary SendMessage_callCharacteristicsVoiceUnitCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `voiceUnitCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsVoiceUnitCall: number = 12; /* LONG_NAMED_BIT */
@@ -219,6 +290,8 @@ const SendMessage_callCharacteristicsVoiceUnitCall: number = 12; /* LONG_NAMED_B
 /**
  * @summary callCharacteristicsVoiceUnitCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsVoiceUnitCall`.
  */
 export
 const callCharacteristicsVoiceUnitCall: number = SendMessage_callCharacteristicsVoiceUnitCall; /* SHORT_NAMED_BIT */
@@ -226,6 +299,9 @@ const callCharacteristicsVoiceUnitCall: number = SendMessage_callCharacteristics
 /**
  * @summary SendMessage_callCharacteristicsPrivateCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `privateCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsPrivateCall: number = 13; /* LONG_NAMED_BIT */
@@ -233,6 +309,8 @@ const SendMessage_callCharacteristicsPrivateCall: number = 13; /* LONG_NAMED_BIT
 /**
  * @summary callCharacteristicsPrivateCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsPrivateCall`.
  */
 export
 const callCharacteristicsPrivateCall: number = SendMessage_callCharacteristicsPrivateCall; /* SHORT_NAMED_BIT */
@@ -240,6 +318,9 @@ const callCharacteristicsPrivateCall: number = SendMessage_callCharacteristicsPr
 /**
  * @summary SendMessage_callCharacteristicsPersonalCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `personalCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsPersonalCall: number = 14; /* LONG_NAMED_BIT */
@@ -247,6 +328,8 @@ const SendMessage_callCharacteristicsPersonalCall: number = 14; /* LONG_NAMED_BI
 /**
  * @summary callCharacteristicsPersonalCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsPersonalCall`.
  */
 export
 const callCharacteristicsPersonalCall: number = SendMessage_callCharacteristicsPersonalCall; /* SHORT_NAMED_BIT */
@@ -254,6 +337,9 @@ const callCharacteristicsPersonalCall: number = SendMessage_callCharacteristicsP
 /**
  * @summary SendMessage_callCharacteristicsSensitiveCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `sensitiveCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsSensitiveCall: number = 15; /* LONG_NAMED_BIT */
@@ -261,6 +347,8 @@ const SendMessage_callCharacteristicsSensitiveCall: number = 15; /* LONG_NAMED_B
 /**
  * @summary callCharacteristicsSensitiveCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsSensitiveCall`.
  */
 export
 const callCharacteristicsSensitiveCall: number = SendMessage_callCharacteristicsSensitiveCall; /* SHORT_NAMED_BIT */
@@ -268,6 +356,9 @@ const callCharacteristicsSensitiveCall: number = SendMessage_callCharacteristics
 /**
  * @summary SendMessage_callCharacteristicsConfidentialCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `confidentialCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsConfidentialCall: number = 16; /* LONG_NAMED_BIT */
@@ -275,6 +366,8 @@ const SendMessage_callCharacteristicsConfidentialCall: number = 16; /* LONG_NAME
 /**
  * @summary callCharacteristicsConfidentialCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsConfidentialCall`.
  */
 export
 const callCharacteristicsConfidentialCall: number = SendMessage_callCharacteristicsConfidentialCall; /* SHORT_NAMED_BIT */
@@ -282,6 +375,9 @@ const callCharacteristicsConfidentialCall: number = SendMessage_callCharacterist
 /**
  * @summary SendMessage_callCharacteristicsEncryptedCall
  * @constant
+ * @description
+ * Bit set means the SF supports `callCharacteristics` value `encryptedCall`
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_callCharacteristicsEncryptedCall: number = 17; /* LONG_NAMED_BIT */
@@ -289,6 +385,8 @@ const SendMessage_callCharacteristicsEncryptedCall: number = 17; /* LONG_NAMED_B
 /**
  * @summary callCharacteristicsEncryptedCall
  * @constant
+ * @description
+ * Alias of `SendMessage_callCharacteristicsEncryptedCall`.
  */
 export
 const callCharacteristicsEncryptedCall: number = SendMessage_callCharacteristicsEncryptedCall; /* SHORT_NAMED_BIT */
@@ -296,6 +394,9 @@ const callCharacteristicsEncryptedCall: number = SendMessage_callCharacteristics
 /**
  * @summary SendMessage_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 Annex C).
  */
 export
 const SendMessage_mediaCallCharacteristics: number = 18; /* LONG_NAMED_BIT */
@@ -303,6 +404,8 @@ const SendMessage_mediaCallCharacteristics: number = 18; /* LONG_NAMED_BIT */
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `SendMessage_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = SendMessage_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -310,6 +413,9 @@ const mediaCallCharacteristics: number = SendMessage_mediaCallCharacteristics; /
 /**
  * @summary SendMessage_subjectOfCall
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `subjectOfCall` parameter
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_subjectOfCall: number = 19; /* LONG_NAMED_BIT */
@@ -317,6 +423,8 @@ const SendMessage_subjectOfCall: number = 19; /* LONG_NAMED_BIT */
 /**
  * @summary subjectOfCall
  * @constant
+ * @description
+ * Alias of `SendMessage_subjectOfCall`.
  */
 export
 const subjectOfCall: number = SendMessage_subjectOfCall; /* SHORT_NAMED_BIT */
@@ -324,6 +432,9 @@ const subjectOfCall: number = SendMessage_subjectOfCall; /* SHORT_NAMED_BIT */
 /**
  * @summary SendMessage_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_languagePreferences: number = 20; /* LONG_NAMED_BIT */
@@ -331,6 +442,8 @@ const SendMessage_languagePreferences: number = 20; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `SendMessage_languagePreferences`.
  */
 export
 const languagePreferences: number = SendMessage_languagePreferences; /* SHORT_NAMED_BIT */
@@ -338,6 +451,9 @@ const languagePreferences: number = SendMessage_languagePreferences; /* SHORT_NA
 /**
  * @summary SendMessage_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * Annex C).
  */
 export
 const SendMessage_privateData: number = 21; /* LONG_NAMED_BIT */
@@ -345,6 +461,8 @@ const SendMessage_privateData: number = 21; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SendMessage_privateData`.
  */
 export
 const privateData: number = SendMessage_privateData; /* SHORT_NAMED_BIT */
@@ -352,6 +470,9 @@ const privateData: number = SendMessage_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary SendMessage_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 Annex C).
  */
 export
 const SendMessage_privateDataInAck: number = 22; /* LONG_NAMED_BIT */
@@ -359,6 +480,8 @@ const SendMessage_privateDataInAck: number = 22; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SendMessage_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SendMessage_privateDataInAck; /* SHORT_NAMED_BIT */

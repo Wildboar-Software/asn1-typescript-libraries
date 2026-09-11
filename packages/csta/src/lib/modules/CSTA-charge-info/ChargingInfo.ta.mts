@@ -25,7 +25,13 @@ import {
 /**
  * @summary ChargingInfo
  * @description
- * 
+ *
+ * Cumulative charging or currency units charged to a device for a call.
+ * Intermediate (during the call) or final (when the device leaves). ECMA-269
+ * §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,12 +49,20 @@ class ChargingInfo {
     constructor (
         /**
          * @summary `numberUnits`.
+         * @description
+         *
+         * Charging units or currency units. ECMA-269 §12.2.7.
+         *
          * @public
          * @readonly
          */
         readonly numberUnits: NumberUnits,
         /**
          * @summary `typeOfChargingInfo`.
+         * @description
+         *
+         * Sub-total (intermediate) or Total (complete). ECMA-269 §12.2.7.
+         *
          * @public
          * @readonly
          */

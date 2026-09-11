@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SetForwarding
  * @description
- * 
+ * Capability bitmap for the Set Forwarding service (ECMA-269 C.14.20, ECMA-285
+ * §9.10). Presence of this entry in `LogicalServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +47,9 @@ type SetForwarding = BIT_STRING;
 /**
  * @summary SetForwarding_forwardingTypeBusy
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeBusy: number = 0; /* LONG_NAMED_BIT */
@@ -46,6 +57,8 @@ const SetForwarding_forwardingTypeBusy: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeBusy
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeBusy`.
  */
 export
 const forwardingTypeBusy: number = SetForwarding_forwardingTypeBusy; /* SHORT_NAMED_BIT */
@@ -53,6 +66,9 @@ const forwardingTypeBusy: number = SetForwarding_forwardingTypeBusy; /* SHORT_NA
 /**
  * @summary SetForwarding_forwardingTypeBusyInt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeBusyInt: number = 1; /* LONG_NAMED_BIT */
@@ -60,6 +76,8 @@ const SetForwarding_forwardingTypeBusyInt: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeBusyInt
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeBusyInt`.
  */
 export
 const forwardingTypeBusyInt: number = SetForwarding_forwardingTypeBusyInt; /* SHORT_NAMED_BIT */
@@ -67,6 +85,9 @@ const forwardingTypeBusyInt: number = SetForwarding_forwardingTypeBusyInt; /* SH
 /**
  * @summary SetForwarding_forwardingTypeBusyExt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeBusyExt: number = 2; /* LONG_NAMED_BIT */
@@ -74,6 +95,8 @@ const SetForwarding_forwardingTypeBusyExt: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeBusyExt
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeBusyExt`.
  */
 export
 const forwardingTypeBusyExt: number = SetForwarding_forwardingTypeBusyExt; /* SHORT_NAMED_BIT */
@@ -81,6 +104,9 @@ const forwardingTypeBusyExt: number = SetForwarding_forwardingTypeBusyExt; /* SH
 /**
  * @summary SetForwarding_forwardingTypeDND
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeDND: number = 3; /* LONG_NAMED_BIT */
@@ -88,6 +114,8 @@ const SetForwarding_forwardingTypeDND: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeDND
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeDND`.
  */
 export
 const forwardingTypeDND: number = SetForwarding_forwardingTypeDND; /* SHORT_NAMED_BIT */
@@ -95,6 +123,9 @@ const forwardingTypeDND: number = SetForwarding_forwardingTypeDND; /* SHORT_NAME
 /**
  * @summary SetForwarding_forwardingTypeDNDInt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeDNDInt: number = 4; /* LONG_NAMED_BIT */
@@ -102,6 +133,8 @@ const SetForwarding_forwardingTypeDNDInt: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeDNDInt
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeDNDInt`.
  */
 export
 const forwardingTypeDNDInt: number = SetForwarding_forwardingTypeDNDInt; /* SHORT_NAMED_BIT */
@@ -109,6 +142,9 @@ const forwardingTypeDNDInt: number = SetForwarding_forwardingTypeDNDInt; /* SHOR
 /**
  * @summary SetForwarding_forwardingTypeDNDExt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeDNDExt: number = 5; /* LONG_NAMED_BIT */
@@ -116,6 +152,8 @@ const SetForwarding_forwardingTypeDNDExt: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeDNDExt
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeDNDExt`.
  */
 export
 const forwardingTypeDNDExt: number = SetForwarding_forwardingTypeDNDExt; /* SHORT_NAMED_BIT */
@@ -123,6 +161,9 @@ const forwardingTypeDNDExt: number = SetForwarding_forwardingTypeDNDExt; /* SHOR
 /**
  * @summary SetForwarding_forwardingTypeNoAns
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeNoAns: number = 6; /* LONG_NAMED_BIT */
@@ -130,6 +171,8 @@ const SetForwarding_forwardingTypeNoAns: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeNoAns
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeNoAns`.
  */
 export
 const forwardingTypeNoAns: number = SetForwarding_forwardingTypeNoAns; /* SHORT_NAMED_BIT */
@@ -137,6 +180,9 @@ const forwardingTypeNoAns: number = SetForwarding_forwardingTypeNoAns; /* SHORT_
 /**
  * @summary SetForwarding_forwardingTypeNoAnsInt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeNoAnsInt: number = 7; /* LONG_NAMED_BIT */
@@ -144,6 +190,8 @@ const SetForwarding_forwardingTypeNoAnsInt: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeNoAnsInt
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeNoAnsInt`.
  */
 export
 const forwardingTypeNoAnsInt: number = SetForwarding_forwardingTypeNoAnsInt; /* SHORT_NAMED_BIT */
@@ -151,6 +199,9 @@ const forwardingTypeNoAnsInt: number = SetForwarding_forwardingTypeNoAnsInt; /* 
 /**
  * @summary SetForwarding_forwardingTypeNoAnsExt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeNoAnsExt: number = 8; /* LONG_NAMED_BIT */
@@ -158,6 +209,8 @@ const SetForwarding_forwardingTypeNoAnsExt: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeNoAnsExt
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeNoAnsExt`.
  */
 export
 const forwardingTypeNoAnsExt: number = SetForwarding_forwardingTypeNoAnsExt; /* SHORT_NAMED_BIT */
@@ -165,6 +218,9 @@ const forwardingTypeNoAnsExt: number = SetForwarding_forwardingTypeNoAnsExt; /* 
 /**
  * @summary SetForwarding_forwardingTypeImmediate
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeImmediate: number = 9; /* LONG_NAMED_BIT */
@@ -172,6 +228,8 @@ const SetForwarding_forwardingTypeImmediate: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeImmediate
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeImmediate`.
  */
 export
 const forwardingTypeImmediate: number = SetForwarding_forwardingTypeImmediate; /* SHORT_NAMED_BIT */
@@ -179,6 +237,9 @@ const forwardingTypeImmediate: number = SetForwarding_forwardingTypeImmediate; /
 /**
  * @summary SetForwarding_forwardingTypeImmInt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeImmInt: number = 10; /* LONG_NAMED_BIT */
@@ -186,6 +247,8 @@ const SetForwarding_forwardingTypeImmInt: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeImmInt
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeImmInt`.
  */
 export
 const forwardingTypeImmInt: number = SetForwarding_forwardingTypeImmInt; /* SHORT_NAMED_BIT */
@@ -193,6 +256,9 @@ const forwardingTypeImmInt: number = SetForwarding_forwardingTypeImmInt; /* SHOR
 /**
  * @summary SetForwarding_forwardingTypeImmExt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardingTypeImmExt: number = 11; /* LONG_NAMED_BIT */
@@ -200,6 +266,8 @@ const SetForwarding_forwardingTypeImmExt: number = 11; /* LONG_NAMED_BIT */
 /**
  * @summary forwardingTypeImmExt
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardingTypeImmExt`.
  */
 export
 const forwardingTypeImmExt: number = SetForwarding_forwardingTypeImmExt; /* SHORT_NAMED_BIT */
@@ -207,6 +275,9 @@ const forwardingTypeImmExt: number = SetForwarding_forwardingTypeImmExt; /* SHOR
 /**
  * @summary SetForwarding_forwardDN
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_forwardDN: number = 12; /* LONG_NAMED_BIT */
@@ -214,6 +285,8 @@ const SetForwarding_forwardDN: number = 12; /* LONG_NAMED_BIT */
 /**
  * @summary forwardDN
  * @constant
+ * @description
+ * Alias of `SetForwarding_forwardDN`.
  */
 export
 const forwardDN: number = SetForwarding_forwardDN; /* SHORT_NAMED_BIT */
@@ -221,6 +294,9 @@ const forwardDN: number = SetForwarding_forwardDN; /* SHORT_NAMED_BIT */
 /**
  * @summary SetForwarding_ringCount
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_ringCount: number = 13; /* LONG_NAMED_BIT */
@@ -228,6 +304,8 @@ const SetForwarding_ringCount: number = 13; /* LONG_NAMED_BIT */
 /**
  * @summary ringCount
  * @constant
+ * @description
+ * Alias of `SetForwarding_ringCount`.
  */
 export
 const ringCount: number = SetForwarding_ringCount; /* SHORT_NAMED_BIT */
@@ -235,6 +313,9 @@ const ringCount: number = SetForwarding_ringCount; /* SHORT_NAMED_BIT */
 /**
  * @summary SetForwarding_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.14.20).
  */
 export
 const SetForwarding_privateData: number = 14; /* LONG_NAMED_BIT */
@@ -242,6 +323,8 @@ const SetForwarding_privateData: number = 14; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SetForwarding_privateData`.
  */
 export
 const privateData: number = SetForwarding_privateData; /* SHORT_NAMED_BIT */
@@ -249,6 +332,9 @@ const privateData: number = SetForwarding_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary SetForwarding_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_privateDataInAck: number = 15; /* LONG_NAMED_BIT */
@@ -256,6 +342,8 @@ const SetForwarding_privateDataInAck: number = 15; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SetForwarding_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SetForwarding_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -263,6 +351,9 @@ const privateDataInAck: number = SetForwarding_privateDataInAck; /* SHORT_NAMED_
 /**
  * @summary SetForwarding_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_ackModelMultiStep: number = 16; /* LONG_NAMED_BIT */
@@ -270,6 +361,8 @@ const SetForwarding_ackModelMultiStep: number = 16; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `SetForwarding_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = SetForwarding_ackModelMultiStep; /* SHORT_NAMED_BIT */
@@ -277,6 +370,9 @@ const ackModelMultiStep: number = SetForwarding_ackModelMultiStep; /* SHORT_NAME
 /**
  * @summary SetForwarding_ringDuration
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.14.20).
  */
 export
 const SetForwarding_ringDuration: number = 17; /* LONG_NAMED_BIT */
@@ -284,6 +380,8 @@ const SetForwarding_ringDuration: number = 17; /* LONG_NAMED_BIT */
 /**
  * @summary ringDuration
  * @constant
+ * @description
+ * Alias of `SetForwarding_ringDuration`.
  */
 export
 const ringDuration: number = SetForwarding_ringDuration; /* SHORT_NAMED_BIT */

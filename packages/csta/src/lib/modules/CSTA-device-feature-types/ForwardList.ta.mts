@@ -15,7 +15,13 @@ import { ForwardList_Item, _decode_ForwardList_Item, _encode_ForwardList_Item } 
 /**
  * @summary ForwardList
  * @description
- * 
+ *
+ * One structure per forwardingType / forwardDN combination (Get Forwarding /
+ * Set Forward / Forwarding event). ECMA-269 §22.1.11; ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

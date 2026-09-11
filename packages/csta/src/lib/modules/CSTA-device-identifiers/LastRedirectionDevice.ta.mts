@@ -9,7 +9,13 @@ import { RedirectionDeviceID, _decode_RedirectionDeviceID, _encode_RedirectionDe
 /**
  * @summary LastRedirectionDevice
  * @description
- * 
+ *
+ * Synonym for `RedirectionDeviceID` (ECMA-285 §9.2). See that type
+ * for last-redirection-device semantics (ECMA-269 §12.3.24).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

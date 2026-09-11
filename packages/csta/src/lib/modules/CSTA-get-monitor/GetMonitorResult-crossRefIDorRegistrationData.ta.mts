@@ -11,7 +11,14 @@ import { MonitorList, _decode_MonitorList, _encode_MonitorList } from "../CSTA-s
 /**
  * @summary GetMonitorResult_crossRefIDorRegistrationData
  * @description
- * 
+ *
+ * CHOICE: `serviceCrossRefID` correlates later Monitor Info
+ * (ECMA-269 §15.1.5, not this module); `monitorList` is the
+ * complete list in this ack.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

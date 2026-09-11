@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DetectionAction
  * @description
- * 
+ *
+ * Action after a Make Predictive Call destination condition
+ * (ECMA-269 §17.1.20 Table 17-110):
+ * `clearCalledConnection` or `remainConnected`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +35,14 @@ enum _enum_for_DetectionAction {
 /**
  * @summary DetectionAction
  * @description
- * 
+ *
+ * Action after a Make Predictive Call destination condition
+ * (ECMA-269 §17.1.20 Table 17-110):
+ * `clearCalledConnection` or `remainConnected`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +59,14 @@ type DetectionAction = _enum_for_DetectionAction;
 /**
  * @summary DetectionAction
  * @description
- * 
+ *
+ * Action after a Make Predictive Call destination condition
+ * (ECMA-269 §17.1.20 Table 17-110):
+ * `clearCalledConnection` or `remainConnected`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

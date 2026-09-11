@@ -17,7 +17,13 @@ import { MediaDetached, _decode_MediaDetached, _encode_MediaDetached } from "../
 /**
  * @summary MediaEvtsList
  * @description
- * 
+ * Media Attachment events the SF supports (ECMA-269 Annex C.10, ECMA-285
+ * §9.10). Omit unsupported events.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,18 @@ class MediaEvtsList {
          * @summary `mediaAttached`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly mediaAttached: OPTIONAL<MediaAttached>,
         /**
          * @summary `mediaDetached`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly mediaDetached: OPTIONAL<MediaDetached>
     ) {}

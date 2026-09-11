@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallBackNonCallRelatedArgument
  * @description
- * 
+ *
+ * Call Back Non-Call-Related request (ECMA-269 §22.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,28 @@ class CallBackNonCallRelatedArgument {
     constructor (
         /**
          * @summary `originatingDevice`.
+         * @description
+         *
+         * Originating device for the call-back call.
          * @public
          * @readonly
          */
         readonly originatingDevice: DeviceID,
         /**
          * @summary `targetDevice`.
+         * @description
+         *
+         * Target device for the call-back call.
          * @public
          * @readonly
          */
         readonly targetDevice: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

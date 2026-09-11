@@ -15,7 +15,15 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary CallLinkageDataList
  * @description
- * 
+ *
+ * Pair of new and old call-linkage values when linkage data
+ * changes (conference, transfer, or Call Information after an
+ * update in this or another sub-domain). The 9th edition also
+ * uses this on service results that detect linkage.
+ * ECMA-269 §6.1.2.7.4, §12.2.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +39,21 @@ class CallLinkageDataList {
     constructor (
         /**
          * @summary `newCallLinkageData`.
+         * @description
+         *
+         * Call linkage after the conference, transfer, or other
+         * update. ECMA-269 §12.2.5.
+         *
          * @public
          * @readonly
          */
         readonly newCallLinkageData: CallLinkageData,
         /**
          * @summary `oldCallLinkageData`.
+         * @description
+         *
+         * Call linkage before the update. ECMA-269 §12.2.5.
+         *
          * @public
          * @readonly
          */

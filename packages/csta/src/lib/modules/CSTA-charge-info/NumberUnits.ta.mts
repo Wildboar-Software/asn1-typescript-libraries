@@ -11,7 +11,11 @@ import { NumberOfCurrencyUnits, _decode_NumberOfCurrencyUnits, _encode_NumberOfC
 /**
  * @summary NumberUnits
  * @description
- * 
+ *
+ * Either a list of charging-unit counts or a currency amount. ECMA-269 §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

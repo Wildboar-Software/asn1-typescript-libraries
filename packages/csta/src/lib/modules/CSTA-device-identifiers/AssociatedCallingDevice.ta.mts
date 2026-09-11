@@ -9,7 +9,13 @@ import { AssociatedCallingDeviceID, _decode_AssociatedCallingDeviceID, _encode_A
 /**
  * @summary AssociatedCallingDevice
  * @description
- * 
+ *
+ * Synonym for `AssociatedCallingDeviceID` (ECMA-285 §9.2). See that
+ * type for NID-of-calling-device semantics (ECMA-269 §12.3.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,21 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary ioRegister
  * @description
- * 
+ *
+ * Registers the computing function as an I/O server for a specific device or
+ * for all devices in the switching sub-domain. Required before the computing
+ * function can receive I/O requests on switching-function-started data paths.
+ * Not used as `ioRegisterReqID` on computing-function-started data paths
+ * (ECMA-269 §24.1.1 / §6.2.2).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:340. Errors: `universalFailure` (ECMA-285 §22.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

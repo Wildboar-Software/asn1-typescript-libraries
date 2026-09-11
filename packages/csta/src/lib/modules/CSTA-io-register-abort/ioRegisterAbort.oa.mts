@@ -15,7 +15,20 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary ioRegisterAbort
  * @description
- * 
+ *
+ * Switching function asynchronously cancels an active I/O registration (for
+ * example when the associated device goes out of service) (ECMA-269 §24.1.2).
+ *
+ * Switching function → computing function.
+ *
+ * Unconfirmed (`ALWAYS RESPONDS FALSE`); no result.
+ *
+ * ROSE local:341. Errors: `universalFailure` (ECMA-285 §22.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary playMessage
  * @description
- * 
+ *
+ * Plays a voice message on a connection. Optional termination conditions stop
+ * playback if encountered (ECMA-269 §26.1.6).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:502. Errors: `universalFailure` (ECMA-285 §24.1.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

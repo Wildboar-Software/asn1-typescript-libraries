@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SetRouteingMode
  * @description
- * 
+ * Capability bitmap for the Set Routeing Mode service (ECMA-269 C.14.22,
+ * ECMA-285 §9.10). Presence of this entry in `LogicalServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +33,9 @@ type SetRouteingMode = BIT_STRING;
 /**
  * @summary SetRouteingMode_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.14.22).
  */
 export
 const SetRouteingMode_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +43,8 @@ const SetRouteingMode_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SetRouteingMode_privateData`.
  */
 export
 const privateData: number = SetRouteingMode_privateData; /* SHORT_NAMED_BIT */
@@ -38,6 +52,9 @@ const privateData: number = SetRouteingMode_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary SetRouteingMode_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.14.22).
  */
 export
 const SetRouteingMode_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +62,8 @@ const SetRouteingMode_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SetRouteingMode_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SetRouteingMode_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -52,6 +71,9 @@ const privateDataInAck: number = SetRouteingMode_privateDataInAck; /* SHORT_NAME
 /**
  * @summary SetRouteingMode_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.14.22).
  */
 export
 const SetRouteingMode_ackModelMultiStep: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +81,8 @@ const SetRouteingMode_ackModelMultiStep: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `SetRouteingMode_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = SetRouteingMode_ackModelMultiStep; /* SHORT_NAMED_BIT */

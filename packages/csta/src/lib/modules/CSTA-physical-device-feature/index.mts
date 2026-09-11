@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-physical-device-feature`.
+ * Physical-device feature types: identifiers for auditory apparatus, buttons
+ * (including reserved keypad 0–11), display, hookswitch, lamp, and ringer, plus
+ * lamp mode/color/brightness and speaker/microphone volume and gain. ECMA-269
+ * §12.3.4–5, §12.3.12, §12.3.14, §12.3.17, §12.3.26, clause 21; ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
  */
 export * from "./AuditoryApparatusID.ta.mjs";
 export * from "./AuditoryApparatusList-Item-auditoryApparatusType.ta.mjs";

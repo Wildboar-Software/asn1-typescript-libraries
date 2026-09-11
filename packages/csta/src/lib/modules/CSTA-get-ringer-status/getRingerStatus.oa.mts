@@ -17,7 +17,13 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getRingerStatus
  * @description
- * 
+ *
+ * Get Ringer Status (ECMA-269 §21.1.11 / ECMA-285 §19.1.11). Direction: CF→SF.
+ * ROSE local CODE 270. Errors: `universalFailure`. Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

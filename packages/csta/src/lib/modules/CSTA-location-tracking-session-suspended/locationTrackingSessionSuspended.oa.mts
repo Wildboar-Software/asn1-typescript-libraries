@@ -25,7 +25,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary locationTrackingSessionSuspended
  * @description
- * 
+ *
+ * Indicates a location tracking session has been suspended. Location is neither
+ * collected nor reported while suspended. Unreported collected PIDF-LO may
+ * appear in `locationInfoList` (ECMA-269 §28.1.4).
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:533. Errors: `universalFailure` (ECMA-285 §26.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -44,7 +44,14 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary RetrievedEvent
  * @description
- * 
+ *
+ * Retrieved event payload (ECMA-269 §17.2.16 / ECMA-285 §15.2.16) for
+ * `cSTAEventReport`. Alternate answering an alerting call uses Established
+ * instead (FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -71,78 +78,136 @@ class RetrievedEvent {
     constructor (
         /**
          * @summary `retrievedConnection`.
+         * @description
+         *
+         * Mandatory. Connection at which hold was deactivated.
+         *
          * @public
          * @readonly
          */
         readonly retrievedConnection: ConnectionID,
         /**
          * @summary `retrievingDevice`.
+         * @description
+         *
+         * Mandatory. Device at which hold was deactivated.
+         *
          * @public
          * @readonly
          */
         readonly retrievingDevice: SubjectDeviceID,
         /**
          * @summary `localConnectionInfo`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.17). For the retrieving
+         * device: Connected.
+         *
          * @public
          * @readonly
          */
         readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional current correlator data (§12.2.10). This event may omit it
+         * (FR 6).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Mandatory. Table 17-182 lists Alternate, Network Signal, Normal,
+         * Recall.
+         *
          * @public
          * @readonly
          */
         readonly cause: EventCause,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
+         * Feature Availability is supported.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional media class and characteristics (§12.2.20).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional high-level call characteristics (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `retrievedConnectionInfo`.
+         * @description
+         *
+         * Optional connection information. Omitted values are
+         * switching-function specific (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly retrievedConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional global call data and thread data (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * Optional location information for devices in the call.
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and privateData
+         * parameters from the ECMA-269 event table.
+         *
          * @public
          * @readonly
          */
@@ -178,7 +243,8 @@ class RetrievedEvent {
  * @summary The Leading Root Component Types of RetrievedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -203,7 +269,8 @@ const _root_component_type_list_1_spec_for_RetrievedEvent: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of RetrievedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -216,7 +283,8 @@ const _root_component_type_list_2_spec_for_RetrievedEvent: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of RetrievedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

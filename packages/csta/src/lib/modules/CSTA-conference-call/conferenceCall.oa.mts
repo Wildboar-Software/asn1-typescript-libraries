@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary conferenceCall
  * @description
- * 
+ *
+ * Conference Call (ECMA-269 §17.1.9 / ECMA-285 §15.1.9). Invoked
+ * by the computing function on the switching function. Merges
+ * `heldCall` and `activeCall` at the conferencing device; those
+ * ConnectionIDs are released and `conferenceCall` is created.
+ * Prepare via Consultation (consultOptions Conference Only or
+ * Unrestricted), Alternate, or other capability-advertised
+ * sequences (FR 2). ROSE local CODE 6. Errors are
+ * `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

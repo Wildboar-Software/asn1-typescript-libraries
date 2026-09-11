@@ -25,7 +25,20 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary locationTrackingSessionResumed
  * @description
- * 
+ *
+ * Indicates a previously suspended location tracking session has been resumed
+ * (after Resume Location Tracking Session or when the SF condition ends).
+ * Computing function should then Get Location Information for the latest
+ * location (ECMA-269 §28.1.3).
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:532. Errors: `universalFailure` (ECMA-285 §26.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

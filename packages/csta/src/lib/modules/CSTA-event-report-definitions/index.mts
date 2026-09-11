@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-event-report-definitions`.
+ * ROSE operation `cSTAEventReport` (local code 21) that carries all CSTA
+ * events. The cross-reference is `MonitorCrossRefID`; `EventSpecificInfo`
+ * selects the event body. ECMA-285 §5.4 / §10.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./CallAssociatedEvents.ta.mjs";
 export * from "./CallControlEvents.ta.mjs";

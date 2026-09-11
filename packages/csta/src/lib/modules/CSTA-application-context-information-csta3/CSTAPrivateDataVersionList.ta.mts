@@ -8,7 +8,12 @@ import { INTEGER, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CSTAPrivateDataVersionList
  * @description
- * 
+ *
+ * SEQUENCE OF INTEGER listing private-data versions for the association.
+ * ECMA-285 §8.2.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

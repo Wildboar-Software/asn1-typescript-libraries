@@ -8,7 +8,14 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RequestTypes
  * @description
- * 
+ *
+ * System services to register for (Table 14-4). Registration
+ * services themselves are CF→SF only; the registered services
+ * may be bi-directional (ECMA-269 §6.6.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

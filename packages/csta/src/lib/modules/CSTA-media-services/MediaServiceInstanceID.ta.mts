@@ -8,7 +8,12 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MediaServiceInstanceID
  * @description
- * 
+ *
+ * Identifies a particular media access service instance (e.g. a media access
+ * server or subsystem). ECMA-269 §12.3.18.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -24,7 +24,16 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
 /**
  * @summary DeviceHistory
  * @description
- * 
+ *
+ * Devices previously associated with the call, ordered from the first that left
+ * to the one that most recently left. A device is added when it is no longer
+ * associated (redirect, transfer, clear). Entries from outside the CSTA
+ * sub-domain may appear if known via the external network. Combined on
+ * transfer/conference in a switching-function-specific order. ECMA-269
+ * §12.2.13.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +50,28 @@ class DeviceHistory {
     constructor (
         /**
          * @summary `oldDeviceID`.
+         * @description
+         * Device that left the call. Should match the subject device in the
+         * Diverted, Transferred, or Connection Cleared event. May be Not Known,
+         * Restricted, Not Required, or Not Specified.
          * @public
          * @readonly
          */
         readonly oldDeviceID: DeviceID,
         /**
          * @summary `eventCause`.
+         * @description
+         * Why the device left or was redirected. Should match the cause in that
+         * leaving event.
          * @public
          * @readonly
          */
         readonly eventCause: OPTIONAL<EventCause>,
         /**
          * @summary `oldConnectionID`.
+         * @description
+         * Last ConnectionID for the device that left. Should match the subject
+         * connection in that leaving event.
          * @public
          * @readonly
          */

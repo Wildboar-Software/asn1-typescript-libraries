@@ -24,7 +24,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteRegisterResult
  * @description
- * 
+ *
+ * Positive ack (Table 20-3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +46,29 @@ class RouteRegisterResult {
     constructor (
         /**
          * @summary `routeRegisterReqID`.
+         * @description
+         *
+         * SF-allocated registration ID. Valid until Cancel or Abort.
+         * Unique across the CSTA service boundary.
          * @public
          * @readonly
          */
         readonly routeRegisterReqID: RouteRegisterReqID,
         /**
          * @summary `actualRouteingMediaClass`.
+         * @description
+         *
+         * Media classes actually registered.
          * @public
          * @readonly
          */
         readonly actualRouteingMediaClass: OPTIONAL<MediaClass>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

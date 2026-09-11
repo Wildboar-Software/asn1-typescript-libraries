@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-make-predictive-call`.
+ * Make Predictive Call (ECMA-269 §17.1.20 / ECMA-285
+ * §15.1.20): originate a call by first connecting the called
+ * device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./DefaultAction.ta.mjs";
 export * from "./DestinationCondition.ta.mjs";

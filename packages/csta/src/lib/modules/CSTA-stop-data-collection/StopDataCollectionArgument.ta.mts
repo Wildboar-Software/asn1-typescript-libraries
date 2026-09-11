@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StopDataCollectionArgument
  * @description
- * 
+ *
+ * Identifies the collection to terminate (ECMA-269 §25.1.6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class StopDataCollectionArgument {
     constructor (
         /**
          * @summary `dcollCrossRefID`.
+         * @description
+         *
+         * Collection to terminate (ECMA-269 §25.1.6.1).
+         *
          * @public
          * @readonly
          */
         readonly dcollCrossRefID: DcollCrossRefID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

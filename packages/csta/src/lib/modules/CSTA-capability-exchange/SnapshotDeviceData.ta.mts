@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SnapshotDeviceData
  * @description
- * 
+ * Capability bitmap for the Snapshot DeviceData service (ECMA-269 C.4.4,
+ * ECMA-285 §9.10). Presence of this entry in `SnapshotServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +42,9 @@ type SnapshotDeviceData = BIT_STRING;
 /**
  * @summary SnapshotDeviceData_segmentID
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `segmentID` parameter (ECMA-269
+ * C.4.4).
  */
 export
 const SnapshotDeviceData_segmentID: number = 0; /* LONG_NAMED_BIT */
@@ -40,6 +52,8 @@ const SnapshotDeviceData_segmentID: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary segmentID
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_segmentID`.
  */
 export
 const segmentID: number = SnapshotDeviceData_segmentID; /* SHORT_NAMED_BIT */
@@ -47,6 +61,9 @@ const segmentID: number = SnapshotDeviceData_segmentID; /* SHORT_NAMED_BIT */
 /**
  * @summary SnapshotDeviceData_localCallStateCompoundCallState
  * @constant
+ * @description
+ * Bit set means the SF supports `localCallState` value `compoundCallState`
+ * (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_localCallStateCompoundCallState: number = 1; /* LONG_NAMED_BIT */
@@ -54,6 +71,8 @@ const SnapshotDeviceData_localCallStateCompoundCallState: number = 1; /* LONG_NA
 /**
  * @summary localCallStateCompoundCallState
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_localCallStateCompoundCallState`.
  */
 export
 const localCallStateCompoundCallState: number = SnapshotDeviceData_localCallStateCompoundCallState; /* SHORT_NAMED_BIT */
@@ -61,6 +80,9 @@ const localCallStateCompoundCallState: number = SnapshotDeviceData_localCallStat
 /**
  * @summary SnapshotDeviceData_localCallStateSimpleCallState
  * @constant
+ * @description
+ * Bit set means the SF supports `localCallState` value `simpleCallState`
+ * (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_localCallStateSimpleCallState: number = 2; /* LONG_NAMED_BIT */
@@ -68,6 +90,8 @@ const SnapshotDeviceData_localCallStateSimpleCallState: number = 2; /* LONG_NAME
 /**
  * @summary localCallStateSimpleCallState
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_localCallStateSimpleCallState`.
  */
 export
 const localCallStateSimpleCallState: number = SnapshotDeviceData_localCallStateSimpleCallState; /* SHORT_NAMED_BIT */
@@ -75,6 +99,9 @@ const localCallStateSimpleCallState: number = SnapshotDeviceData_localCallStateS
 /**
  * @summary SnapshotDeviceData_localCallStateUnknown
  * @constant
+ * @description
+ * Bit set means the SF supports `localCallState` value `unknown` (ECMA-269
+ * C.4.4).
  */
 export
 const SnapshotDeviceData_localCallStateUnknown: number = 3; /* LONG_NAMED_BIT */
@@ -82,6 +109,8 @@ const SnapshotDeviceData_localCallStateUnknown: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary localCallStateUnknown
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_localCallStateUnknown`.
  */
 export
 const localCallStateUnknown: number = SnapshotDeviceData_localCallStateUnknown; /* SHORT_NAMED_BIT */
@@ -89,6 +118,9 @@ const localCallStateUnknown: number = SnapshotDeviceData_localCallStateUnknown; 
 /**
  * @summary SnapshotDeviceData_mediaServiceInformationList
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_mediaServiceInformationList: number = 4; /* LONG_NAMED_BIT */
@@ -96,6 +128,8 @@ const SnapshotDeviceData_mediaServiceInformationList: number = 4; /* LONG_NAMED_
 /**
  * @summary mediaServiceInformationList
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_mediaServiceInformationList`.
  */
 export
 const mediaServiceInformationList: number = SnapshotDeviceData_mediaServiceInformationList; /* SHORT_NAMED_BIT */
@@ -103,6 +137,9 @@ const mediaServiceInformationList: number = SnapshotDeviceData_mediaServiceInfor
 /**
  * @summary SnapshotDeviceData_mediaServiceVersion
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_mediaServiceVersion: number = 5; /* LONG_NAMED_BIT */
@@ -110,6 +147,8 @@ const SnapshotDeviceData_mediaServiceVersion: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary mediaServiceVersion
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_mediaServiceVersion`.
  */
 export
 const mediaServiceVersion: number = SnapshotDeviceData_mediaServiceVersion; /* SHORT_NAMED_BIT */
@@ -117,6 +156,9 @@ const mediaServiceVersion: number = SnapshotDeviceData_mediaServiceVersion; /* S
 /**
  * @summary SnapshotDeviceData_mediaServiceInstance
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_mediaServiceInstance: number = 6; /* LONG_NAMED_BIT */
@@ -124,6 +166,8 @@ const SnapshotDeviceData_mediaServiceInstance: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary mediaServiceInstance
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_mediaServiceInstance`.
  */
 export
 const mediaServiceInstance: number = SnapshotDeviceData_mediaServiceInstance; /* SHORT_NAMED_BIT */
@@ -131,6 +175,9 @@ const mediaServiceInstance: number = SnapshotDeviceData_mediaServiceInstance; /*
 /**
  * @summary SnapshotDeviceData_mediaStreamID
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_mediaStreamID: number = 7; /* LONG_NAMED_BIT */
@@ -138,6 +185,8 @@ const SnapshotDeviceData_mediaStreamID: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary mediaStreamID
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_mediaStreamID`.
  */
 export
 const mediaStreamID: number = SnapshotDeviceData_mediaStreamID; /* SHORT_NAMED_BIT */
@@ -145,6 +194,9 @@ const mediaStreamID: number = SnapshotDeviceData_mediaStreamID; /* SHORT_NAMED_B
 /**
  * @summary SnapshotDeviceData_connectionInformation
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_connectionInformation: number = 8; /* LONG_NAMED_BIT */
@@ -152,6 +204,8 @@ const SnapshotDeviceData_connectionInformation: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary connectionInformation
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_connectionInformation`.
  */
 export
 const connectionInformation: number = SnapshotDeviceData_connectionInformation; /* SHORT_NAMED_BIT */
@@ -159,6 +213,9 @@ const connectionInformation: number = SnapshotDeviceData_connectionInformation; 
 /**
  * @summary SnapshotDeviceData_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_mediaCallCharacteristics: number = 9; /* LONG_NAMED_BIT */
@@ -166,6 +223,8 @@ const SnapshotDeviceData_mediaCallCharacteristics: number = 9; /* LONG_NAMED_BIT
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = SnapshotDeviceData_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -173,6 +232,9 @@ const mediaCallCharacteristics: number = SnapshotDeviceData_mediaCallCharacteris
 /**
  * @summary SnapshotDeviceData_endpointDeviceID
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.4.4).
  */
 export
 const SnapshotDeviceData_endpointDeviceID: number = 11; /* LONG_NAMED_BIT */
@@ -180,6 +242,8 @@ const SnapshotDeviceData_endpointDeviceID: number = 11; /* LONG_NAMED_BIT */
 /**
  * @summary endpointDeviceID
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_endpointDeviceID`.
  */
 export
 const endpointDeviceID: number = SnapshotDeviceData_endpointDeviceID; /* SHORT_NAMED_BIT */
@@ -187,6 +251,9 @@ const endpointDeviceID: number = SnapshotDeviceData_endpointDeviceID; /* SHORT_N
 /**
  * @summary SnapshotDeviceData_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.4.4).
  */
 export
 const SnapshotDeviceData_privateData: number = 10; /* LONG_NAMED_BIT */
@@ -194,6 +261,8 @@ const SnapshotDeviceData_privateData: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SnapshotDeviceData_privateData`.
  */
 export
 const privateData: number = SnapshotDeviceData_privateData; /* SHORT_NAMED_BIT */

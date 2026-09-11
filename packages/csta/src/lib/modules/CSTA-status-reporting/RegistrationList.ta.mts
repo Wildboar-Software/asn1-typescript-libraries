@@ -9,7 +9,12 @@ import { RegistrationListEntry, _decode_RegistrationListEntry, _encode_Registrat
 /**
  * @summary RegistrationList
  * @description
- * 
+ *
+ * Existing registrations for Get Registrations / Registration Info. ECMA-269
+ * §14.2.6.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

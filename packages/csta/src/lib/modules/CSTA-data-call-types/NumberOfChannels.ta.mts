@@ -8,7 +8,13 @@ import { INTEGER, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NumberOfChannels
  * @description
- * 
+ *
+ * Available media-stream channels at a device. If omitted in capability
+ * exchange, the count is unknown but at least one. On a connection, absence
+ * means one channel. ECMA-269 §12.2.8, Get Logical Device Information.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

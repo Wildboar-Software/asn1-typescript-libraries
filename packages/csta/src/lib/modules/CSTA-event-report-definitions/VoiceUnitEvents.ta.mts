@@ -43,7 +43,15 @@ import { VoiceErrorOccuredEvent, _decode_VoiceErrorOccuredEvent, _encode_VoiceEr
 /**
  * @summary VoiceUnitEvents
  * @description
- * 
+ *
+ * Voice-unit event body of `cSTAEventReport` (ECMA-285 §10). Alternatives:
+ * Bookmark Reached, Completed, DTMF Detected, Emptied, Interruption Detected,
+ * Not Recognized, Play, Recognized, Record, Review, Started, Silence Timeout
+ * Expired, Speech Detected, Stop, Suspend Play, Suspend Record, Voice
+ * Attributes Change, Voice Error Occurred.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

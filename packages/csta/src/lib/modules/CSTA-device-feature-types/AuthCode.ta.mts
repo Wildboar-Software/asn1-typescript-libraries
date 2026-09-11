@@ -8,7 +8,14 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AuthCode
  * @description
- * 
+ *
+ * Authorization code the switching function uses to check whether the computing
+ * function may perform a given service. If required and missing or invalid, the
+ * service is rejected. May be omitted from events for security. Association
+ * completes before resulting state transitions. ECMA-269 §12.2.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

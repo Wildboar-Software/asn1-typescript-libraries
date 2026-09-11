@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary routeRegisterCancel
  * @description
- * 
+ *
+ * Route Register Cancel (ECMA-269 §20.1.3 / ECMA-285 §18.1.3). Direction:
+ * CF→SF. ROSE local CODE 250. Errors: `universalFailure`. Does not disable
+ * Route Mode; use Set Routeing Mode to suspend
+ * routeing without cancelling registration (§6.7.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

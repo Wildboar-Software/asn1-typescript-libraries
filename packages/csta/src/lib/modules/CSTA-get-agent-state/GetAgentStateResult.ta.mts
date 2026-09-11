@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetAgentStateResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §22.1.5.2.1). Max 32 list entries.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetAgentStateResult {
     constructor (
         /**
          * @summary `agentStateList`.
+         * @description
+         *
+         * Agent IDs and/or states and ACD groups for the device. SIZE (1..32).
          * @public
          * @readonly
          */
         readonly agentStateList: AgentStateList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

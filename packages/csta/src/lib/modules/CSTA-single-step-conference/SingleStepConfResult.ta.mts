@@ -21,7 +21,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SingleStepConfResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Single Step Conference
+ * (ECMA-269 §17.1.25 / ECMA-285 §15.1.24). The result CallID
+ * is the same as the original call.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +46,45 @@ class SingleStepConfResult {
     constructor (
         /**
          * @summary `conferencedCall`.
+         * @description
+         *
+         * Mandatory. Connection of `deviceToJoin` in the
+         * conferenced call. CallID matches the original call.
+         *
          * @public
          * @readonly
          */
         readonly conferencedCall: ConnectionID,
         /**
          * @summary `conferencedCallInfo`.
+         * @description
+         *
+         * Optional connection information for the joined
+         * connection (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly conferencedCallInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
+         * @description
+         *
+         * Optional call-linkage identifiers for the resulting
+         * connections (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security
+         * and privateData parameters from the ECMA-269 service
+         * table.
+         *
          * @public
          * @readonly
          */

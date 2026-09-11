@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary sendData
  * @description
- * 
+ *
+ * Sends data on a specified data path. Bidirectional (ECMA-269 §24.2.6).
+ *
+ * Bidirectional: computing function or switching function may invoke.
+ *
+ * ROSE local:112. Errors: `universalFailure` (ECMA-285 §22.2.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

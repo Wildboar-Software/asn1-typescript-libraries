@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SecurityMode
  * @description
- * 
+ *
+ * When the SF supplies securityInfo: all events, all acks, all
+ * service requests (Table 13-9). ASN.1 is ENUMERATED.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +36,13 @@ enum _enum_for_SecurityMode {
 /**
  * @summary SecurityMode
  * @description
- * 
+ *
+ * When the SF supplies securityInfo: all events, all acks, all
+ * service requests (Table 13-9). ASN.1 is ENUMERATED.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +60,13 @@ type SecurityMode = _enum_for_SecurityMode;
 /**
  * @summary SecurityMode
  * @description
- * 
+ *
+ * When the SF supplies securityInfo: all events, all acks, all
+ * service requests (Table 13-9). ASN.1 is ENUMERATED.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

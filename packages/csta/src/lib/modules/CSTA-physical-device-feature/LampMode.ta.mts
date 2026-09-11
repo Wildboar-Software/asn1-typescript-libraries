@@ -8,7 +8,12 @@ import { INTEGER, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LampMode
  * @description
- * 
+ *
+ * How a lamp is lit. Values 6–100 are switching-function specific. ECMA-269
+ * §21.1.17.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +31,10 @@ type LampMode = INTEGER;
 
 /**
  * @summary LampMode_brokenFlutter
+ * @description
+ *
+ * Broken flutter: superposition of wink and flutter (0). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +51,10 @@ const brokenFlutter: LampMode = LampMode_brokenFlutter; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary LampMode_flutter
+ * @description
+ *
+ * Flutter: fast on and off (1). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +71,10 @@ const flutter: LampMode = LampMode_flutter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_off
+ * @description
+ *
+ * Lamp is off (2). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +91,10 @@ const off: LampMode = LampMode_off; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_steady
+ * @description
+ *
+ * Lamp is continuously lit (3). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +111,10 @@ const steady: LampMode = LampMode_steady; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_wink
+ * @description
+ *
+ * Lamp is winking (4). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +131,11 @@ const wink: LampMode = LampMode_wink; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampMode_unknown
+ * @description
+ *
+ * Value 5 is not used as a lamp mode in §21.1.17; ECMA-285 names it `unknown`.
+ * ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */

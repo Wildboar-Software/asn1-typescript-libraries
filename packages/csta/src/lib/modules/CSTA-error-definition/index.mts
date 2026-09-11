@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-error-definition`.
+ * ROSE error `universalFailure` (local code 1) and the `UniversalFailure` /
+ * `ErrorValue` hierarchy returned in negative acknowledgements. Categories
+ * follow Figure 9-1. ECMA-269 §9.3, §12.2.14; ECMA-285 §9.19.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./ErrorValue.ta.mjs";
 export {

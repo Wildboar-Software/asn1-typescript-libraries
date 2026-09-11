@@ -22,7 +22,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DoNotDisturbEvent
  * @description
- * 
+ *
+ * Do Not Disturb event (ECMA-269 §22.2.12 / ECMA-285 §20.2.12). Direction:
+ * SF→CF via Event Report. Do-not-disturb changed (telephone or Set Do Not
+ * Disturb). Not generated when a Set request leaves the feature unchanged
+ * (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,30 +49,46 @@ class DoNotDisturbEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose DND feature changed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `doNotDisturbOn`.
+         * @description
+         *
+         * FALSE = disabled; TRUE = enabled.
          * @public
          * @readonly
          */
         readonly doNotDisturbOn: BOOLEAN,
         /**
          * @summary `callOrigination`.
+         * @description
+         *
+         * Internal and/or External origination bits, if supported.
          * @public
          * @readonly
          */
         readonly callOrigination: OPTIONAL<CallOrigination>,
         /**
          * @summary `callingDeviceList`.
+         * @description
+         *
+         * Calling devices from which DND is honoured, if present.
          * @public
          * @readonly
          */
         readonly callingDeviceList: OPTIONAL<DeviceID[]>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

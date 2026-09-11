@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary clear
  * @description
- * 
+ *
+ * Voice Clear: halts operations and releases data held by a Listener, DTMF, or
+ * Prompt Queue (ECMA-269 §26.1.2). Not Clear Call.
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:513. Errors: `universalFailure` (ECMA-285 §24.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

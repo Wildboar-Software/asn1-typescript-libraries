@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Started
  * @description
- * 
+ * Capability bitmap for the Started event (ECMA-269 C.20.13, ECMA-285 §9.10).
+ * Presence of this entry in `VoiceUnitEvtsList` means the SF supports that
+ * event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +33,9 @@ type Started = BIT_STRING;
 /**
  * @summary Started_resource
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `resource` parameter (ECMA-269
+ * C.20.13).
  */
 export
 const Started_resource: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +43,8 @@ const Started_resource: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary resource
  * @constant
+ * @description
+ * Alias of `Started_resource`.
  */
 export
 const resource: number = Started_resource; /* SHORT_NAMED_BIT */
@@ -39,6 +52,9 @@ const resource: number = Started_resource; /* SHORT_NAMED_BIT */
 /**
  * @summary Started_cause
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `cause` parameter (ECMA-269
+ * C.20.13).
  */
 export
 const Started_cause: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +62,8 @@ const Started_cause: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary cause
  * @constant
+ * @description
+ * Alias of `Started_cause`.
  */
 export
 const cause: number = Started_cause; /* SHORT_NAMED_BIT */
@@ -53,6 +71,9 @@ const cause: number = Started_cause; /* SHORT_NAMED_BIT */
 /**
  * @summary Started_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.13).
  */
 export
 const Started_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +81,8 @@ const Started_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `Started_servicesPermitted`.
  */
 export
 const servicesPermitted: number = Started_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -67,6 +90,9 @@ const servicesPermitted: number = Started_servicesPermitted; /* SHORT_NAMED_BIT 
 /**
  * @summary Started_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.20.13).
  */
 export
 const Started_privateData: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +100,8 @@ const Started_privateData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Started_privateData`.
  */
 export
 const privateData: number = Started_privateData; /* SHORT_NAMED_BIT */

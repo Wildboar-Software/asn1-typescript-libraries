@@ -9,7 +9,14 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary DeviceIDList
  * @description
- * 
+ *
+ * Additional destinations for Deflect Call Case B (ECMA-269
+ * §17.1.11 / ECMA-285 §15.1.11). Each DeviceID must be complete
+ * (FR 6). Used as `addNewDestinationsList`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

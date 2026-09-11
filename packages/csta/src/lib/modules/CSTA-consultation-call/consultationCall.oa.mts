@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary consultationCall
  * @description
- * 
+ *
+ * Consultation Call (ECMA-269 §17.1.10 / ECMA-285 §15.1.10).
+ * Invoked by the computing function on the switching function.
+ * `existingCall` must be Connected and becomes Hold; a new call
+ * is originated toward `consultedDevice`. `consultOptions`
+ * reserves transfer/conference facilities (FR 2–5).
+ * `consultedDevice` may be null or end with `;` for multi-stage
+ * dialling via Dial Digits (FR 6–7). ROSE local CODE 7. Errors
+ * are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

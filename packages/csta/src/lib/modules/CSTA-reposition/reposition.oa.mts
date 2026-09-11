@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary reposition
  * @description
- * 
+ *
+ * Moves the current position pointer forward or backward a specified amount in
+ * a message (ECMA-269 §26.1.10).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:504. Errors: `universalFailure` (ECMA-285 §24.1.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

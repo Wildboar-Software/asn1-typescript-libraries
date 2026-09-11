@@ -30,7 +30,12 @@ import {
 /**
  * @summary NumberOfCurrencyUnits
  * @description
- * 
+ *
+ * Cumulative currency: type, amount, and multiplier. A zero-length
+ * `currencyType` is the default currency. ECMA-269 §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,18 +61,31 @@ class NumberOfCurrencyUnits {
     constructor (
         /**
          * @summary `currencyType`.
+         * @description
+         *
+         * Currency type; empty means the default. Network-dependent. ECMA-269
+         * §12.2.7.
+         *
          * @public
          * @readonly
          */
         readonly currencyType: OCTET_STRING,
         /**
          * @summary `currencyAmount`.
+         * @description
+         *
+         * Cumulative currency units. ECMA-269 §12.2.7.
+         *
          * @public
          * @readonly
          */
         readonly currencyAmount: INTEGER,
         /**
          * @summary `currencyMultiplier`.
+         * @description
+         *
+         * 0.001, 0.01, 0.1, 1, 10, 100, or 1000. ECMA-269 §12.2.7.
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLogicalDeviceInformationArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 13-4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetLogicalDeviceInformationArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose logical element is queried. Mandatory.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 13-4.
          * @public
          * @readonly
          */

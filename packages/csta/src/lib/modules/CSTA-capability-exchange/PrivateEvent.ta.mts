@@ -8,7 +8,14 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PrivateEvent
  * @description
- * 
+ * Capability bitmap for the Private Event (ECMA-269 Annex C.24.1, ECMA-285
+ * §9.10). Presence in `VendorSpecificEvtsList` means the SF supports Private
+ * Event. This BIT STRING has no named bits in ECMA-285 §9.10.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

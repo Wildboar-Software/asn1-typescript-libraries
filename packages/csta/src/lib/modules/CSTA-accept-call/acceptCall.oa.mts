@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary acceptCall
  * @description
- * 
+ *
+ * Accept Call (ECMA-269 §17.1.1 / ECMA-285 §15.1.1). Invoked by the computing
+ * function on the switching function. Atomic vs multi-step acknowledgement is
+ * via capability exchange. Errors are `universalFailure` (§12.2.14).
+ * `callToBeAccepted` must be Alerting in Offered mode; it ends in Ringing or
+ * Entering Distribution. Other connections are unaffected. Typical monitor
+ * event is Delivered (Normal or Entering Distribution). ROSE local CODE 214.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

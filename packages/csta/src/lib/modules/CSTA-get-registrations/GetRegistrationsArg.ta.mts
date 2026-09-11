@@ -17,7 +17,13 @@ import { RegistrationTypeList, _decode_RegistrationTypeList, _encode_Registratio
 /**
  * @summary GetRegistrationsArg
  * @description
- * 
+ *
+ * Service request (Table 14-18). Omitted `requestedRegTypes`
+ * means all registration types the SF supports.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,20 @@ class GetRegistrationsArg {
     constructor (
         /**
          * @summary `requestedRegTypes`.
+         * @description
+         *
+         * Filter: EscapeRegister, IORegister, RouteRegister,
+         * SysStatRegister. Omitted: all supported types.
          * @public
          * @readonly
          */
         readonly requestedRegTypes: OPTIONAL<RegistrationTypeList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-18.
          * @public
          * @readonly
          */

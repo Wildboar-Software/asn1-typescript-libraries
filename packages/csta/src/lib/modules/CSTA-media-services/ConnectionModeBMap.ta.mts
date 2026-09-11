@@ -8,7 +8,14 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ConnectionModeBMap
  * @description
- * 
+ *
+ * Bitmap of supported media-service connection modes (same values as
+ * `ConnectionMode`). Used in capability exchange. ECMA-269 §19.1.1; ECMA-285
+ * §9.15.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +37,11 @@ type ConnectionModeBMap = BIT_STRING;
 
 /**
  * @summary ConnectionModeBMap_consultationConference
+ * @description
+ *
+ * Conference the MAD via Consultation Call and Conference Call. ECMA-269
+ * §19.1.1.
+ *
  * @constant
  */
 export
@@ -44,6 +56,11 @@ const consultationConference: number = ConnectionModeBMap_consultationConference
 
 /**
  * @summary ConnectionModeBMap_consultationConferenceHold
+ * @description
+ *
+ * Conference the MAD via Consultation Call and Hold (attaching device held).
+ * ECMA-269 §19.1.1.
+ *
  * @constant
  */
 export
@@ -58,6 +75,10 @@ const consultationConferenceHold: number = ConnectionModeBMap_consultationConfer
 
 /**
  * @summary ConnectionModeBMap_deflect
+ * @description
+ *
+ * Move the call to the MAD via Deflect Call. ECMA-269 §19.1.1.
+ *
  * @constant
  */
 export
@@ -72,6 +93,10 @@ const deflect: number = ConnectionModeBMap_deflect; /* SHORT_NAMED_BIT */
 
 /**
  * @summary ConnectionModeBMap_directedPickup
+ * @description
+ *
+ * Direct the call to the MAD via Directed Pickup. ECMA-269 §19.1.1.
+ *
  * @constant
  */
 export
@@ -86,6 +111,11 @@ const directedPickup: number = ConnectionModeBMap_directedPickup; /* SHORT_NAMED
 
 /**
  * @summary ConnectionModeBMap_join
+ * @description
+ *
+ * Add a device via Join Call; the application chooses the MAD. ECMA-269
+ * §19.1.1.
+ *
  * @constant
  */
 export
@@ -100,6 +130,10 @@ const join: number = ConnectionModeBMap_join; /* SHORT_NAMED_BIT */
 
 /**
  * @summary ConnectionModeBMap_singleStepConference
+ * @description
+ *
+ * Conference the MAD via Single Step Conference. ECMA-269 §19.1.1.
+ *
  * @constant
  */
 export
@@ -114,6 +148,10 @@ const singleStepConference: number = ConnectionModeBMap_singleStepConference; /*
 
 /**
  * @summary ConnectionModeBMap_singleStepConferenceHold
+ * @description
+ *
+ * Single Step Conference plus Hold at the attaching device. ECMA-269 §19.1.1.
+ *
  * @constant
  */
 export
@@ -128,6 +166,10 @@ const singleStepConferenceHold: number = ConnectionModeBMap_singleStepConference
 
 /**
  * @summary ConnectionModeBMap_singleStepTransfer
+ * @description
+ *
+ * Transfer the MAD in via Single Step Transfer. ECMA-269 §19.1.1.
+ *
  * @constant
  */
 export
@@ -142,6 +184,10 @@ const singleStepTransfer: number = ConnectionModeBMap_singleStepTransfer; /* SHO
 
 /**
  * @summary ConnectionModeBMap_transfer
+ * @description
+ *
+ * Transfer the MAD via Consultation Call and Transfer. ECMA-269 §19.1.1.
+ *
  * @constant
  */
 export
@@ -156,6 +202,11 @@ const transfer: number = ConnectionModeBMap_transfer; /* SHORT_NAMED_BIT */
 
 /**
  * @summary ConnectionModeBMap_direct
+ * @description
+ *
+ * Bind the media service to the existing connection; MAD already in the call.
+ * ECMA-269 §19.1.1.
+ *
  * @constant
  */
 export

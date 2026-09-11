@@ -33,7 +33,13 @@ import { RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } 
 /**
  * @summary SystemStatusServList
  * @description
- * 
+ * System Status services the SF supports (ECMA-269 Annex C.2, ECMA-285 §9.10).
+ * Omit unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,60 +65,90 @@ class SystemStatusServList {
          * @summary `changeSystemStatusFilter`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly changeSystemStatusFilter: OPTIONAL<ChangeSystemStatusFilter>,
         /**
          * @summary `systemRegister`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly systemRegister: OPTIONAL<SystemRegister>,
         /**
          * @summary `systemStatusRegisterAbort`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly systemStatusRegisterAbort: OPTIONAL<SystemStatusRegisterAbort>,
         /**
          * @summary `systemStatusRegisterCancel`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly systemStatusRegisterCancel: OPTIONAL<SystemStatusRegisterCancel>,
         /**
          * @summary `requestSystemStatus`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly requestSystemStatus: OPTIONAL<RequestSystemStatus>,
         /**
          * @summary `systemStatus`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly systemStatus: OPTIONAL<SystemStatus>,
         /**
          * @summary `swFunctionCapsChanged`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly swFunctionCapsChanged: OPTIONAL<SwFunctionCapsChanged>,
         /**
          * @summary `swFunctionDevicesChanged`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly swFunctionDevicesChanged: OPTIONAL<SwFunctionDevicesChanged>,
         /**
          * @summary `getRegistrations`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getRegistrations: OPTIONAL<GetRegistrations>,
         /**
          * @summary `registrationInfo`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly registrationInfo: OPTIONAL<RegistrationInfo>
     ) {}

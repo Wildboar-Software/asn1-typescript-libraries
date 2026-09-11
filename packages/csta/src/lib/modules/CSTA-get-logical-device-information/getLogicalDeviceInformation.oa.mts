@@ -25,7 +25,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getLogicalDeviceInformation
  * @description
- * 
+ *
+ * Get Logical Device Information (ECMA-269 §13.1.2 / ECMA-285 §11.1.2).
+ * Direction: CF→SF. ROSE local CODE 201. Errors: `universalFailure`. Returns
+ * the current logical-element capabilities of `device`.
+ * Atomic acknowledgement. No connection-state change.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

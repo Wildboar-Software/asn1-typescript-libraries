@@ -28,7 +28,12 @@ import { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-d
 /**
  * @summary LampModeList_Item
  * @description
- * 
+ *
+ * One lamp's mode (ECMA-269 §21.1.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,30 +53,49 @@ class LampModeList_Item {
     constructor (
         /**
          * @summary `lamp`.
+         * @description
+         *
+         * LampID of this lamp.
          * @public
          * @readonly
          */
         readonly lamp: LampID,
         /**
          * @summary `lampMode`.
+         * @description
+         *
+         * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5 unknown
+         * (Get/Event) or unused (Set). 6–100 switching-function specific.
          * @public
          * @readonly
          */
         readonly lampMode: LampMode,
         /**
          * @summary `lampBrightness`.
+         * @description
+         *
+         * Intensity when the lamp is on: unspecified/normal (default), dim, or
+         * bright. Visible levels are lamp-dependent.
          * @public
          * @readonly
          */
         readonly lampBrightness: OPTIONAL<LampBrightness>,
         /**
          * @summary `lampColor`.
+         * @description
+         *
+         * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (Get/Event
+         * default if absent) or unused (Set). 6–100 switching-function
+         * specific.
          * @public
          * @readonly
          */
         readonly lampColor: OPTIONAL<LampColor>,
         /**
          * @summary `button`.
+         * @description
+         *
+         * Associated button, if any.
          * @public
          * @readonly
          */

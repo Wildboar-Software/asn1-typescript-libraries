@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary transferCall
  * @description
- * 
+ *
+ * Transfer Call (ECMA-269 §17.1.27 / ECMA-285 §15.1.27). Invoked
+ * by the computing function on the switching function. Merges
+ * `heldCall` and `activeCall` at the transferring device and
+ * drops that device from the resulting call. Prepare via
+ * Consultation with consultOptions Transfer Only or Unrestricted
+ * (FR 1). Conference consultOptions yields a negative ack
+ * (FR 2). ROSE local CODE 16. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -31,7 +31,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary PlayEvent
  * @description
- * 
+ *
+ * Indicates that a message is being played. Reported to a computing function
+ * that has a device-type or call-type monitor. This module has no ROSE
+ * OPERATION; the payload is a voice-unit event alternative (ECMA-285 §24.2).
+ * (ECMA-269 §26.2.7, ECMA-285 §24.2.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,54 +63,92 @@ class PlayEvent {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection on which the message is playing (ECMA-269 §26.2.7).
+         *
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `message`.
+         * @description
+         *
+         * Message being played (ECMA-269 §26.2.7).
+         *
          * @public
          * @readonly
          */
         readonly message: MessageID,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `length`.
+         * @description
+         *
+         * Message length, when provided (ECMA-269 §26.2.7).
+         *
          * @public
          * @readonly
          */
         readonly length: OPTIONAL<INTEGER>,
         /**
          * @summary `currentPosition`.
+         * @description
+         *
+         * Current play position (ECMA-269 §26.2.7).
+         *
          * @public
          * @readonly
          */
         readonly currentPosition: OPTIONAL<INTEGER>,
         /**
          * @summary `speed`.
+         * @description
+         *
+         * Current play speed (ECMA-269 §26.2.7).
+         *
          * @public
          * @readonly
          */
         readonly speed: OPTIONAL<INTEGER>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Event cause, when the switching function supplies one.
+         *
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Services permitted on the connection after this event.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

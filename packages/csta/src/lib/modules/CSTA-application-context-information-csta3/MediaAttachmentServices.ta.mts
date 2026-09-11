@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MediaAttachmentServices
  * @description
- * 
+ *
+ * Media-attachment services. BIT STRING advertised in ACSE user-information
+ * listing which CSTA services or events this association will use. ECMA-285
+ * §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,13 +28,17 @@ type MediaAttachmentServices = BIT_STRING;
 
 /**
  * @summary MediaAttachmentServices_attachMediaService
+ * @description
+ * Advertises `attachMediaService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const MediaAttachmentServices_attachMediaService: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary attachMediaService
+ * @description Alias of {@link MediaAttachmentServices_attachMediaService}.
  * @constant
  */
 export
@@ -36,13 +46,17 @@ const attachMediaService: number = MediaAttachmentServices_attachMediaService; /
 
 /**
  * @summary MediaAttachmentServices_detachMediaService
+ * @description
+ * Advertises `detachMediaService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const MediaAttachmentServices_detachMediaService: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary detachMediaService
+ * @description Alias of {@link MediaAttachmentServices_detachMediaService}.
  * @constant
  */
 export

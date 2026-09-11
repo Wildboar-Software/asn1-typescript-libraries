@@ -17,7 +17,13 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getSpeakerMute
  * @description
- * 
+ *
+ * Get Speaker Mute (ECMA-269 §21.1.12 / ECMA-285 §19.1.12). Direction: CF→SF.
+ * ROSE local CODE 271. Errors: `universalFailure`. Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

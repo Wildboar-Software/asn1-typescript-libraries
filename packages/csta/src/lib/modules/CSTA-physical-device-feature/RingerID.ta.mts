@@ -8,7 +8,12 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RingerID
  * @description
- * 
+ *
+ * Ringer associated with a physical element. A device may have one or more
+ * ringers. ECMA-269 §12.3.26.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

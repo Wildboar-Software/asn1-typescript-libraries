@@ -26,7 +26,20 @@ import {
 /**
  * @summary startLocationTrackingSession
  * @description
- * 
+ *
+ * Starts location tracking for a CSTA device. The request separates collection
+ * criteria (how the SF gathers PIDF-LO) from reporting criteria (how it buffers
+ * before Location Information Report). Result includes `locCrossRefID` and the
+ * PIDF-LO profile (ECMA-269 §28.1.7 / §6.8.4.1).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:536. Errors: `universalFailure` (ECMA-285 §26.1.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

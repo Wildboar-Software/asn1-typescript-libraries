@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary dataPathSuspended
  * @description
- * 
+ *
+ * Informs the computing function that the switching function has suspended a
+ * data path without destroying it (ECMA-269 §24.2.2).
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:116. Errors: `universalFailure` (ECMA-285 §22.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

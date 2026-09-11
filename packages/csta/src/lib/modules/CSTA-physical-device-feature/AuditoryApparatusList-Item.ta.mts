@@ -42,7 +42,12 @@ import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CST
 /**
  * @summary AuditoryApparatusList_Item
  * @description
- * 
+ *
+ * One auditory apparatus and its speaker, microphone, and hookswitch
+ * capabilities. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,36 +68,64 @@ class AuditoryApparatusList_Item {
     constructor (
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Identifier of this apparatus. ECMA-269 §12.3.4.
+         *
          * @public
          * @readonly
          */
         readonly auditoryApparatus: AuditoryApparatusID,
         /**
          * @summary `auditoryApparatusType`.
+         * @description
+         *
+         * Speakerphone, handset, headset, speaker-only, or other. ECMA-285
+         * §9.16.
+         *
          * @public
          * @readonly
          */
         readonly auditoryApparatusType: AuditoryApparatusList_Item_auditoryApparatusType,
         /**
          * @summary `speaker`.
+         * @description
+         *
+         * Whether a speaker is present and volume/mute can be set or read.
+         * ECMA-285 §9.16.
+         *
          * @public
          * @readonly
          */
         readonly speaker: AuditoryApparatusList_Item_speaker,
         /**
          * @summary `microphone`.
+         * @description
+         *
+         * Whether a microphone is present and gain/mute can be set or read.
+         * ECMA-285 §9.16.
+         *
          * @public
          * @readonly
          */
         readonly microphone: AuditoryApparatusList_Item_microphone,
         /**
          * @summary `hookswitch`.
+         * @description
+         *
+         * Whether hookswitch can be set and whether it is on-hook. ECMA-285
+         * §9.16.
+         *
          * @public
          * @readonly
          */
         readonly hookswitch: AuditoryApparatusList_Item_hookswitch,
         /**
          * @summary `hookswitchID`.
+         * @description
+         *
+         * Hookswitch of this apparatus. ECMA-269 §12.3.14.
+         *
          * @public
          * @readonly
          */

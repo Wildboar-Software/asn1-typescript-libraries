@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary ioRegisterCancel
  * @description
- * 
+ *
+ * Cancels a previous I/O registration. After the positive acknowledgement the
+ * computing function receives no further I/O requests for that registration; it
+ * shall keep processing requests until that acknowledgement (ECMA-269 §24.1.3).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:342. Errors: `universalFailure` (ECMA-285 §22.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

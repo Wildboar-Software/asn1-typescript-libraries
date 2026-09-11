@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault
  * @description
- * 
+ *
+ * Default collection filter kind, or none (ECMA-269 §28.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,7 +39,13 @@ enum _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault {
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault
  * @description
- * 
+ *
+ * Default collection filter kind, or none (ECMA-269 §28.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,7 +65,13 @@ type GetLocationTrackingCapabilitiesResult_collectionFilterDefault = _enum_for_G
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault
  * @description
- * 
+ *
+ * Default collection filter kind, or none (ECMA-269 §28.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +90,10 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault = _enum_for_
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMovement
+ * @description
+ *
+ * Default filter is horizontal movement (ECMA-269 §28.1.10.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +102,10 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMo
 
 /**
  * @summary horizontalMovement
+ * @description
+ *
+ * Default filter is horizontal movement (ECMA-269 §28.1.10.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +114,10 @@ const horizontalMovement: GetLocationTrackingCapabilitiesResult_collectionFilter
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMovement
+ * @description
+ *
+ * Default filter is vertical movement (ECMA-269 §28.1.10.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +126,10 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMove
 
 /**
  * @summary verticalMovement
+ * @description
+ *
+ * Default filter is vertical movement (ECMA-269 §28.1.10.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +138,10 @@ const verticalMovement: GetLocationTrackingCapabilitiesResult_collectionFilterDe
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddressChange
+ * @description
+ *
+ * Default filter is civic-address change (ECMA-269 §28.1.10.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +150,10 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddress
 
 /**
  * @summary civicAddressChange
+ * @description
+ *
+ * Default filter is civic-address change (ECMA-269 §28.1.10.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -120,6 +162,10 @@ const civicAddressChange: GetLocationTrackingCapabilitiesResult_collectionFilter
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none
+ * @description
+ *
+ * No default collection filter (ECMA-269 §28.1.10.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -128,6 +174,10 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none: GetLoc
 
 /**
  * @summary none
+ * @description
+ *
+ * No default collection filter (ECMA-269 §28.1.10.2.1).
+ *
  * @constant
  * @type {number}
  */

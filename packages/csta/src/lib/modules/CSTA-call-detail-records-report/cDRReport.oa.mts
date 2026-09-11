@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary cDRReport
  * @description
- * 
+ *
+ * Provides CDR information to the computing function after end of call, or as
+ * stored records after Send Stored CDR (ECMA-269 §27.1.2).
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:361. Errors: `universalFailure` (ECMA-285 §25.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

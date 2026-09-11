@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetSpeakerMuteResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §21.1.12.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetSpeakerMuteResult {
     constructor (
         /**
          * @summary `speakerMuteList`.
+         * @description
+         *
+         * One entry per queried apparatus.
          * @public
          * @readonly
          */
         readonly speakerMuteList: SpeakerMuteList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

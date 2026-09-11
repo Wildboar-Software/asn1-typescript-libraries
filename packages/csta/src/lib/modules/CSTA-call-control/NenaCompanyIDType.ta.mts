@@ -8,7 +8,12 @@ import { IA5String, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NenaCompanyIDType
  * @description
- * 
+ *
+ * NENA company identifier of a location data provider.
+ * ECMA-285 §9.9.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

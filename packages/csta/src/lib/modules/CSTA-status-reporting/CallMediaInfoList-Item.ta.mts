@@ -27,7 +27,11 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
 /**
  * @summary CallMediaInfoList_Item
  * @description
- * 
+ *
+ * One media-service binding on a snapshotted call connection. ECMA-269 §16.1.3.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +51,52 @@ class CallMediaInfoList_Item {
     constructor (
         /**
          * @summary `mediaServiceType`.
+         * @description
+         *
+         * Media service type bound to the connection. ECMA-269 §16.1.3.
+         *
          * @public
          * @readonly
          */
         readonly mediaServiceType: MediaServiceType,
         /**
          * @summary `mediaServiceVersion`.
+         * @description
+         *
+         * Version of the media service. ECMA-269 §16.1.3.
+         *
          * @public
          * @readonly
          */
         readonly mediaServiceVersion: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaServiceInstance`.
+         * @description
+         *
+         * Media service instance bound to the connection. ECMA-269 §16.1.3.
+         *
          * @public
          * @readonly
          */
         readonly mediaServiceInstance: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `mediaStreamID`.
+         * @description
+         *
+         * Required if the switch provides mediaStreamID (capability exchange).
+         * ECMA-269 §16.1.3.
+         *
          * @public
          * @readonly
          */
         readonly mediaStreamID: OPTIONAL<MediaStreamID>,
         /**
          * @summary `connectionInformation`.
+         * @description
+         *
+         * Connection-level flow/channels for this binding. ECMA-269 §16.1.3,
+         * §12.2.8.
+         *
          * @public
          * @readonly
          */

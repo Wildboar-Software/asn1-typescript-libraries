@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary StartDataCollection
  * @description
- * 
+ * Capability bitmap for the Start Data Collection service (ECMA-269 C.18.5,
+ * ECMA-285 §9.10). Presence of this entry in `DataCollectionServList` means the
+ * SF supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +39,9 @@ type StartDataCollection = BIT_STRING;
 /**
  * @summary StartDataCollection_objectDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.18.5).
  */
 export
 const StartDataCollection_objectDevice: number = 0; /* LONG_NAMED_BIT */
@@ -37,6 +49,8 @@ const StartDataCollection_objectDevice: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary objectDevice
  * @constant
+ * @description
+ * Alias of `StartDataCollection_objectDevice`.
  */
 export
 const objectDevice: number = StartDataCollection_objectDevice; /* SHORT_NAMED_BIT */
@@ -44,6 +58,9 @@ const objectDevice: number = StartDataCollection_objectDevice; /* SHORT_NAMED_BI
 /**
  * @summary StartDataCollection_objectCall
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.18.5).
  */
 export
 const StartDataCollection_objectCall: number = 1; /* LONG_NAMED_BIT */
@@ -51,6 +68,8 @@ const StartDataCollection_objectCall: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary objectCall
  * @constant
+ * @description
+ * Alias of `StartDataCollection_objectCall`.
  */
 export
 const objectCall: number = StartDataCollection_objectCall; /* SHORT_NAMED_BIT */
@@ -58,6 +77,9 @@ const objectCall: number = StartDataCollection_objectCall; /* SHORT_NAMED_BIT */
 /**
  * @summary StartDataCollection_dataCollectionTypeDigits
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.18.5).
  */
 export
 const StartDataCollection_dataCollectionTypeDigits: number = 2; /* LONG_NAMED_BIT */
@@ -65,6 +87,8 @@ const StartDataCollection_dataCollectionTypeDigits: number = 2; /* LONG_NAMED_BI
 /**
  * @summary dataCollectionTypeDigits
  * @constant
+ * @description
+ * Alias of `StartDataCollection_dataCollectionTypeDigits`.
  */
 export
 const dataCollectionTypeDigits: number = StartDataCollection_dataCollectionTypeDigits; /* SHORT_NAMED_BIT */
@@ -72,6 +96,9 @@ const dataCollectionTypeDigits: number = StartDataCollection_dataCollectionTypeD
 /**
  * @summary StartDataCollection_dataCollectionTypeTones
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.18.5).
  */
 export
 const StartDataCollection_dataCollectionTypeTones: number = 3; /* LONG_NAMED_BIT */
@@ -79,6 +106,8 @@ const StartDataCollection_dataCollectionTypeTones: number = 3; /* LONG_NAMED_BIT
 /**
  * @summary dataCollectionTypeTones
  * @constant
+ * @description
+ * Alias of `StartDataCollection_dataCollectionTypeTones`.
  */
 export
 const dataCollectionTypeTones: number = StartDataCollection_dataCollectionTypeTones; /* SHORT_NAMED_BIT */
@@ -86,6 +115,9 @@ const dataCollectionTypeTones: number = StartDataCollection_dataCollectionTypeTo
 /**
  * @summary StartDataCollection_digitsReportingCriteriaNumChars
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.18.5).
  */
 export
 const StartDataCollection_digitsReportingCriteriaNumChars: number = 4; /* LONG_NAMED_BIT */
@@ -93,6 +125,8 @@ const StartDataCollection_digitsReportingCriteriaNumChars: number = 4; /* LONG_N
 /**
  * @summary digitsReportingCriteriaNumChars
  * @constant
+ * @description
+ * Alias of `StartDataCollection_digitsReportingCriteriaNumChars`.
  */
 export
 const digitsReportingCriteriaNumChars: number = StartDataCollection_digitsReportingCriteriaNumChars; /* SHORT_NAMED_BIT */
@@ -100,6 +134,9 @@ const digitsReportingCriteriaNumChars: number = StartDataCollection_digitsReport
 /**
  * @summary StartDataCollection_digitsReportingCriteriaFlushChar
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.18.5).
  */
 export
 const StartDataCollection_digitsReportingCriteriaFlushChar: number = 5; /* LONG_NAMED_BIT */
@@ -107,6 +144,8 @@ const StartDataCollection_digitsReportingCriteriaFlushChar: number = 5; /* LONG_
 /**
  * @summary digitsReportingCriteriaFlushChar
  * @constant
+ * @description
+ * Alias of `StartDataCollection_digitsReportingCriteriaFlushChar`.
  */
 export
 const digitsReportingCriteriaFlushChar: number = StartDataCollection_digitsReportingCriteriaFlushChar; /* SHORT_NAMED_BIT */
@@ -114,6 +153,9 @@ const digitsReportingCriteriaFlushChar: number = StartDataCollection_digitsRepor
 /**
  * @summary StartDataCollection_digitsReportingCriteriaTimeout
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.18.5).
  */
 export
 const StartDataCollection_digitsReportingCriteriaTimeout: number = 6; /* LONG_NAMED_BIT */
@@ -121,6 +163,8 @@ const StartDataCollection_digitsReportingCriteriaTimeout: number = 6; /* LONG_NA
 /**
  * @summary digitsReportingCriteriaTimeout
  * @constant
+ * @description
+ * Alias of `StartDataCollection_digitsReportingCriteriaTimeout`.
  */
 export
 const digitsReportingCriteriaTimeout: number = StartDataCollection_digitsReportingCriteriaTimeout; /* SHORT_NAMED_BIT */
@@ -128,6 +172,9 @@ const digitsReportingCriteriaTimeout: number = StartDataCollection_digitsReporti
 /**
  * @summary StartDataCollection_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.18.5).
  */
 export
 const StartDataCollection_privateData: number = 7; /* LONG_NAMED_BIT */
@@ -135,6 +182,8 @@ const StartDataCollection_privateData: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `StartDataCollection_privateData`.
  */
 export
 const privateData: number = StartDataCollection_privateData; /* SHORT_NAMED_BIT */
@@ -142,6 +191,9 @@ const privateData: number = StartDataCollection_privateData; /* SHORT_NAMED_BIT 
 /**
  * @summary StartDataCollection_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.18.5).
  */
 export
 const StartDataCollection_privateDataInAck: number = 8; /* LONG_NAMED_BIT */
@@ -149,6 +201,8 @@ const StartDataCollection_privateDataInAck: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `StartDataCollection_privateDataInAck`.
  */
 export
 const privateDataInAck: number = StartDataCollection_privateDataInAck; /* SHORT_NAMED_BIT */

@@ -26,7 +26,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetLocationInformationArgument
  * @description
- * 
+ *
+ * Device, optional PIDF-LO, optional replace mode (ECMA-269 §28.1.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +50,44 @@ class SetLocationInformationArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device to which location is associated (ECMA-269 §28.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * PIDF-LO to associate. If omitted, all existing location for the
+         * device is cleared (ECMA-269 §28.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: OPTIONAL<LocationInfo>,
         /**
          * @summary `replaceMode`.
+         * @description
+         *
+         * replaceAll (default) replaces all stored location; replacePortion
+         * replaces equivalent person/device/tuple components only (ECMA-269
+         * §28.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly replaceMode: OPTIONAL<ReplaceMode>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

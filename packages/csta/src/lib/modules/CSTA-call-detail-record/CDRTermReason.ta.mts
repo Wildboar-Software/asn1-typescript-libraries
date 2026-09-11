@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CDRTermReason
  * @description
- * 
+ *
+ * Why CDR transmission ended. ECMA-285 §9.11.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +36,11 @@ enum _enum_for_CDRTermReason {
 /**
  * @summary CDRTermReason
  * @description
- * 
+ *
+ * Why CDR transmission ended. ECMA-285 §9.11.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,7 +59,11 @@ type CDRTermReason = _enum_for_CDRTermReason;
 /**
  * @summary CDRTermReason
  * @description
- * 
+ *
+ * Why CDR transmission ended. ECMA-285 §9.11.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +81,10 @@ const CDRTermReason = _enum_for_CDRTermReason;
 
 /**
  * @summary CDRTermReason_endOfDataDetected
+ * @description
+ *
+ * End of stored CDR data. ECMA-285 §9.11.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +101,10 @@ const endOfDataDetected: CDRTermReason = CDRTermReason.endOfDataDetected; /* SHO
 
 /**
  * @summary CDRTermReason_errorDetected
+ * @description
+ *
+ * An error ended transmission. ECMA-285 §9.11.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +121,10 @@ const errorDetected: CDRTermReason = CDRTermReason.errorDetected; /* SHORT_NAMED
 
 /**
  * @summary CDRTermReason_thresholdReached
+ * @description
+ *
+ * A threshold ended transmission. ECMA-285 §9.11.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +141,10 @@ const thresholdReached: CDRTermReason = CDRTermReason.thresholdReached; /* SHORT
 
 /**
  * @summary CDRTermReason_other
+ * @description
+ *
+ * Other termination reason. ECMA-285 §9.11.
+ *
  * @constant
  * @type {number}
  */

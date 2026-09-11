@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ReconnectCallArgument
  * @description
- * 
+ *
+ * Service request for Reconnect Call (ECMA-269 §17.1.22 /
+ * ECMA-285 §15.1.22). Names the connection to clear and the held
+ * connection to retrieve at the same device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,33 @@ class ReconnectCallArgument {
     constructor (
         /**
          * @summary `activeCall`.
+         * @description
+         *
+         * Mandatory. Connection to clear. Initial Alerting,
+         * Connected, Initiated, Fail, or Queued; final Null.
+         *
          * @public
          * @readonly
          */
         readonly activeCall: ConnectionID,
         /**
          * @summary `heldCall`.
+         * @description
+         *
+         * Mandatory. Held connection to retrieve. Initial Hold;
+         * final Connected.
+         *
          * @public
          * @readonly
          */
         readonly heldCall: ConnectionID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

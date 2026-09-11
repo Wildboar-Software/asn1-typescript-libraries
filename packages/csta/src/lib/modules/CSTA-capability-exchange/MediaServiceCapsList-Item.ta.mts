@@ -26,7 +26,13 @@ import { ConnectionModeBMap, _decode_ConnectionModeBMap, _encode_ConnectionModeB
 /**
  * @summary MediaServiceCapsList_Item
  * @description
- * 
+ * One media-service capability row from `MediaServiceCapsList` (ECMA-269
+ * §13.1.4.2.1 Table 13-9, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,30 +54,41 @@ class MediaServiceCapsList_Item {
          * @summary `mediaServiceType`.
          * @public
          * @readonly
+         * @description
+         * Media service type identifying the service (ECMA-269 Table 13-9)
          */
         readonly mediaServiceType: MediaServiceType,
         /**
          * @summary `mediaServiceVersion`.
          * @public
          * @readonly
+         * @description
+         * Version of the media service
          */
         readonly mediaServiceVersion: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaServiceInstance`.
          * @public
          * @readonly
+         * @description
+         * Media service instance associated with the type/version
          */
         readonly mediaServiceInstance: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `connectionMode`.
          * @public
          * @readonly
+         * @description
+         * Supported connection modes (consultationConference, deflect, join,
+         * transfer, direct, etc.)
          */
         readonly connectionMode: OPTIONAL<ConnectionModeBMap>,
         /**
          * @summary `mediaStreamIDSupported`.
          * @public
          * @readonly
+         * @description
+         * TRUE if the SF provides `mediaStreamID` where specified
          */
         readonly mediaStreamIDSupported: BOOLEAN
     ) {}

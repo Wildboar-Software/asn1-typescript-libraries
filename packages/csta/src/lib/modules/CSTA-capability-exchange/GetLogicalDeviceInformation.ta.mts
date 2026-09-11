@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetLogicalDeviceInformation
  * @description
- * 
+ * Capability bitmap for the Get Logical Device Information service (ECMA-269
+ * C.1.2, ECMA-285 §9.10). Presence of this entry in `CapExchangeServList` means
+ * the SF supports that service. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,6 +52,9 @@ type GetLogicalDeviceInformation = BIT_STRING;
 /**
  * @summary GetLogicalDeviceInformation_privateDataInReq
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the service request
+ * (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_privateDataInReq: number = 0; /* LONG_NAMED_BIT */
@@ -50,6 +62,8 @@ const GetLogicalDeviceInformation_privateDataInReq: number = 0; /* LONG_NAMED_BI
 /**
  * @summary privateDataInReq
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_privateDataInReq`.
  */
 export
 const privateDataInReq: number = GetLogicalDeviceInformation_privateDataInReq; /* SHORT_NAMED_BIT */
@@ -57,6 +71,9 @@ const privateDataInReq: number = GetLogicalDeviceInformation_privateDataInReq; /
 /**
  * @summary GetLogicalDeviceInformation_namedDeviceTypeInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `namedDeviceTypes` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_namedDeviceTypeInAck: number = 1; /* LONG_NAMED_BIT */
@@ -64,6 +81,8 @@ const GetLogicalDeviceInformation_namedDeviceTypeInAck: number = 1; /* LONG_NAME
 /**
  * @summary namedDeviceTypeInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_namedDeviceTypeInAck`.
  */
 export
 const namedDeviceTypeInAck: number = GetLogicalDeviceInformation_namedDeviceTypeInAck; /* SHORT_NAMED_BIT */
@@ -71,6 +90,9 @@ const namedDeviceTypeInAck: number = GetLogicalDeviceInformation_namedDeviceType
 /**
  * @summary GetLogicalDeviceInformation_shortFormDeviceIDInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `shortFormDeviceID` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_shortFormDeviceIDInAck: number = 2; /* LONG_NAMED_BIT */
@@ -78,6 +100,8 @@ const GetLogicalDeviceInformation_shortFormDeviceIDInAck: number = 2; /* LONG_NA
 /**
  * @summary shortFormDeviceIDInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_shortFormDeviceIDInAck`.
  */
 export
 const shortFormDeviceIDInAck: number = GetLogicalDeviceInformation_shortFormDeviceIDInAck; /* SHORT_NAMED_BIT */
@@ -85,6 +109,9 @@ const shortFormDeviceIDInAck: number = GetLogicalDeviceInformation_shortFormDevi
 /**
  * @summary GetLogicalDeviceInformation_miscMonitorCapsInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `miscMonitorCaps` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_miscMonitorCapsInAck: number = 3; /* LONG_NAMED_BIT */
@@ -92,6 +119,8 @@ const GetLogicalDeviceInformation_miscMonitorCapsInAck: number = 3; /* LONG_NAME
 /**
  * @summary miscMonitorCapsInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_miscMonitorCapsInAck`.
  */
 export
 const miscMonitorCapsInAck: number = GetLogicalDeviceInformation_miscMonitorCapsInAck; /* SHORT_NAMED_BIT */
@@ -99,6 +128,9 @@ const miscMonitorCapsInAck: number = GetLogicalDeviceInformation_miscMonitorCaps
 /**
  * @summary GetLogicalDeviceInformation_maxCallBacksInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `maxCallbacks` in the acknowledgement
+ * (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_maxCallBacksInAck: number = 4; /* LONG_NAMED_BIT */
@@ -106,6 +138,8 @@ const GetLogicalDeviceInformation_maxCallBacksInAck: number = 4; /* LONG_NAMED_B
 /**
  * @summary maxCallBacksInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_maxCallBacksInAck`.
  */
 export
 const maxCallBacksInAck: number = GetLogicalDeviceInformation_maxCallBacksInAck; /* SHORT_NAMED_BIT */
@@ -113,6 +147,9 @@ const maxCallBacksInAck: number = GetLogicalDeviceInformation_maxCallBacksInAck;
 /**
  * @summary GetLogicalDeviceInformation_maxAutoAnswerRingsInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `maxAutoAnswerRings` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_maxAutoAnswerRingsInAck: number = 5; /* LONG_NAMED_BIT */
@@ -120,6 +157,8 @@ const GetLogicalDeviceInformation_maxAutoAnswerRingsInAck: number = 5; /* LONG_N
 /**
  * @summary maxAutoAnswerRingsInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_maxAutoAnswerRingsInAck`.
  */
 export
 const maxAutoAnswerRingsInAck: number = GetLogicalDeviceInformation_maxAutoAnswerRingsInAck; /* SHORT_NAMED_BIT */
@@ -127,6 +166,9 @@ const maxAutoAnswerRingsInAck: number = GetLogicalDeviceInformation_maxAutoAnswe
 /**
  * @summary GetLogicalDeviceInformation_maxActiveCallsInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `maxActiveCalls` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_maxActiveCallsInAck: number = 6; /* LONG_NAMED_BIT */
@@ -134,6 +176,8 @@ const GetLogicalDeviceInformation_maxActiveCallsInAck: number = 6; /* LONG_NAMED
 /**
  * @summary maxActiveCallsInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_maxActiveCallsInAck`.
  */
 export
 const maxActiveCallsInAck: number = GetLogicalDeviceInformation_maxActiveCallsInAck; /* SHORT_NAMED_BIT */
@@ -141,6 +185,9 @@ const maxActiveCallsInAck: number = GetLogicalDeviceInformation_maxActiveCallsIn
 /**
  * @summary GetLogicalDeviceInformation_maxHeldCallsInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `maxHeldCalls` in the acknowledgement
+ * (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_maxHeldCallsInAck: number = 7; /* LONG_NAMED_BIT */
@@ -148,6 +195,8 @@ const GetLogicalDeviceInformation_maxHeldCallsInAck: number = 7; /* LONG_NAMED_B
 /**
  * @summary maxHeldCallsInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_maxHeldCallsInAck`.
  */
 export
 const maxHeldCallsInAck: number = GetLogicalDeviceInformation_maxHeldCallsInAck; /* SHORT_NAMED_BIT */
@@ -155,6 +204,9 @@ const maxHeldCallsInAck: number = GetLogicalDeviceInformation_maxHeldCallsInAck;
 /**
  * @summary GetLogicalDeviceInformation_maxFwdSettingsInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `maxFwdSettings` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_maxFwdSettingsInAck: number = 8; /* LONG_NAMED_BIT */
@@ -162,6 +214,8 @@ const GetLogicalDeviceInformation_maxFwdSettingsInAck: number = 8; /* LONG_NAMED
 /**
  * @summary maxFwdSettingsInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_maxFwdSettingsInAck`.
  */
 export
 const maxFwdSettingsInAck: number = GetLogicalDeviceInformation_maxFwdSettingsInAck; /* SHORT_NAMED_BIT */
@@ -169,6 +223,9 @@ const maxFwdSettingsInAck: number = GetLogicalDeviceInformation_maxFwdSettingsIn
 /**
  * @summary GetLogicalDeviceInformation_maxDevicesInConfInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `maxDevicesInConf` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_maxDevicesInConfInAck: number = 9; /* LONG_NAMED_BIT */
@@ -176,6 +233,8 @@ const GetLogicalDeviceInformation_maxDevicesInConfInAck: number = 9; /* LONG_NAM
 /**
  * @summary maxDevicesInConfInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_maxDevicesInConfInAck`.
  */
 export
 const maxDevicesInConfInAck: number = GetLogicalDeviceInformation_maxDevicesInConfInAck; /* SHORT_NAMED_BIT */
@@ -183,6 +242,9 @@ const maxDevicesInConfInAck: number = GetLogicalDeviceInformation_maxDevicesInCo
 /**
  * @summary GetLogicalDeviceInformation_transAndConfSetupParameter
  * @constant
+ * @description
+ * Bit set means the SF supports optional `transAndConfSetup` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_transAndConfSetupParameter: number = 10; /* LONG_NAMED_BIT */
@@ -190,6 +252,8 @@ const GetLogicalDeviceInformation_transAndConfSetupParameter: number = 10; /* LO
 /**
  * @summary transAndConfSetupParameter
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_transAndConfSetupParameter`.
  */
 export
 const transAndConfSetupParameter: number = GetLogicalDeviceInformation_transAndConfSetupParameter; /* SHORT_NAMED_BIT */
@@ -197,6 +261,9 @@ const transAndConfSetupParameter: number = GetLogicalDeviceInformation_transAndC
 /**
  * @summary GetLogicalDeviceInformation_transAndConfSetupConsultationInAck
  * @constant
+ * @description
+ * Bit set means the SF supports `transAndConfSetup` consultationCall in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_transAndConfSetupConsultationInAck: number = 11; /* LONG_NAMED_BIT */
@@ -204,6 +271,8 @@ const GetLogicalDeviceInformation_transAndConfSetupConsultationInAck: number = 1
 /**
  * @summary transAndConfSetupConsultationInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_transAndConfSetupConsultationInAck`.
  */
 export
 const transAndConfSetupConsultationInAck: number = GetLogicalDeviceInformation_transAndConfSetupConsultationInAck; /* SHORT_NAMED_BIT */
@@ -211,6 +280,9 @@ const transAndConfSetupConsultationInAck: number = GetLogicalDeviceInformation_t
 /**
  * @summary GetLogicalDeviceInformation_transAndConfSetupHoldMakeInAck
  * @constant
+ * @description
+ * Bit set means the SF supports `transAndConfSetup` holdCallMakeCall in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_transAndConfSetupHoldMakeInAck: number = 12; /* LONG_NAMED_BIT */
@@ -218,6 +290,8 @@ const GetLogicalDeviceInformation_transAndConfSetupHoldMakeInAck: number = 12; /
 /**
  * @summary transAndConfSetupHoldMakeInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_transAndConfSetupHoldMakeInAck`.
  */
 export
 const transAndConfSetupHoldMakeInAck: number = GetLogicalDeviceInformation_transAndConfSetupHoldMakeInAck; /* SHORT_NAMED_BIT */
@@ -225,6 +299,9 @@ const transAndConfSetupHoldMakeInAck: number = GetLogicalDeviceInformation_trans
 /**
  * @summary GetLogicalDeviceInformation_transAndConfSetupAlternateInAck
  * @constant
+ * @description
+ * Bit set means the SF supports `transAndConfSetup` alternateCall in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_transAndConfSetupAlternateInAck: number = 13; /* LONG_NAMED_BIT */
@@ -232,6 +309,8 @@ const GetLogicalDeviceInformation_transAndConfSetupAlternateInAck: number = 13; 
 /**
  * @summary transAndConfSetupAlternateInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_transAndConfSetupAlternateInAck`.
  */
 export
 const transAndConfSetupAlternateInAck: number = GetLogicalDeviceInformation_transAndConfSetupAlternateInAck; /* SHORT_NAMED_BIT */
@@ -239,6 +318,9 @@ const transAndConfSetupAlternateInAck: number = GetLogicalDeviceInformation_tran
 /**
  * @summary GetLogicalDeviceInformation_transAndConfSetupTwoCallsHoldInAck
  * @constant
+ * @description
+ * Bit set means the SF supports `transAndConfSetup` twoCallsHold in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_transAndConfSetupTwoCallsHoldInAck: number = 14; /* LONG_NAMED_BIT */
@@ -246,6 +328,8 @@ const GetLogicalDeviceInformation_transAndConfSetupTwoCallsHoldInAck: number = 1
 /**
  * @summary transAndConfSetupTwoCallsHoldInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_transAndConfSetupTwoCallsHoldInAck`.
  */
 export
 const transAndConfSetupTwoCallsHoldInAck: number = GetLogicalDeviceInformation_transAndConfSetupTwoCallsHoldInAck; /* SHORT_NAMED_BIT */
@@ -253,6 +337,9 @@ const transAndConfSetupTwoCallsHoldInAck: number = GetLogicalDeviceInformation_t
 /**
  * @summary GetLogicalDeviceInformation_transAndConfSetupTwoCallsConnectedInAck
  * @constant
+ * @description
+ * Bit set means the SF supports `transAndConfSetup` twoCallsConnected in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_transAndConfSetupTwoCallsConnectedInAck: number = 15; /* LONG_NAMED_BIT */
@@ -260,6 +347,9 @@ const GetLogicalDeviceInformation_transAndConfSetupTwoCallsConnectedInAck: numbe
 /**
  * @summary transAndConfSetupTwoCallsConnectedInAck
  * @constant
+ * @description
+ * Alias of
+ * `GetLogicalDeviceInformation_transAndConfSetupTwoCallsConnectedInAck`.
  */
 export
 const transAndConfSetupTwoCallsConnectedInAck: number = GetLogicalDeviceInformation_transAndConfSetupTwoCallsConnectedInAck; /* SHORT_NAMED_BIT */
@@ -267,6 +357,9 @@ const transAndConfSetupTwoCallsConnectedInAck: number = GetLogicalDeviceInformat
 /**
  * @summary GetLogicalDeviceInformation_mediaClassSupportInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `mediaClassSupport` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_mediaClassSupportInAck: number = 16; /* LONG_NAMED_BIT */
@@ -274,6 +367,8 @@ const GetLogicalDeviceInformation_mediaClassSupportInAck: number = 16; /* LONG_N
 /**
  * @summary mediaClassSupportInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_mediaClassSupportInAck`.
  */
 export
 const mediaClassSupportInAck: number = GetLogicalDeviceInformation_mediaClassSupportInAck; /* SHORT_NAMED_BIT */
@@ -281,6 +376,9 @@ const mediaClassSupportInAck: number = GetLogicalDeviceInformation_mediaClassSup
 /**
  * @summary GetLogicalDeviceInformation_connectionRateListInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `connectionRateList` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_connectionRateListInAck: number = 17; /* LONG_NAMED_BIT */
@@ -288,6 +386,8 @@ const GetLogicalDeviceInformation_connectionRateListInAck: number = 17; /* LONG_
 /**
  * @summary connectionRateListInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_connectionRateListInAck`.
  */
 export
 const connectionRateListInAck: number = GetLogicalDeviceInformation_connectionRateListInAck; /* SHORT_NAMED_BIT */
@@ -295,6 +395,9 @@ const connectionRateListInAck: number = GetLogicalDeviceInformation_connectionRa
 /**
  * @summary GetLogicalDeviceInformation_delayToleranceListInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `delayToleranceList` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_delayToleranceListInAck: number = 18; /* LONG_NAMED_BIT */
@@ -302,6 +405,8 @@ const GetLogicalDeviceInformation_delayToleranceListInAck: number = 18; /* LONG_
 /**
  * @summary delayToleranceListInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_delayToleranceListInAck`.
  */
 export
 const delayToleranceListInAck: number = GetLogicalDeviceInformation_delayToleranceListInAck; /* SHORT_NAMED_BIT */
@@ -309,6 +414,9 @@ const delayToleranceListInAck: number = GetLogicalDeviceInformation_delayToleran
 /**
  * @summary GetLogicalDeviceInformation_numberOfChannelsInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `numberOfChannels` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_numberOfChannelsInAck: number = 19; /* LONG_NAMED_BIT */
@@ -316,6 +424,8 @@ const GetLogicalDeviceInformation_numberOfChannelsInAck: number = 19; /* LONG_NA
 /**
  * @summary numberOfChannelsInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_numberOfChannelsInAck`.
  */
 export
 const numberOfChannelsInAck: number = GetLogicalDeviceInformation_numberOfChannelsInAck; /* SHORT_NAMED_BIT */
@@ -323,6 +433,9 @@ const numberOfChannelsInAck: number = GetLogicalDeviceInformation_numberOfChanne
 /**
  * @summary GetLogicalDeviceInformation_maxChannelBindInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `maxChannelBind` in the
+ * acknowledgement (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_maxChannelBindInAck: number = 20; /* LONG_NAMED_BIT */
@@ -330,6 +443,8 @@ const GetLogicalDeviceInformation_maxChannelBindInAck: number = 20; /* LONG_NAME
 /**
  * @summary maxChannelBindInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_maxChannelBindInAck`.
  */
 export
 const maxChannelBindInAck: number = GetLogicalDeviceInformation_maxChannelBindInAck; /* SHORT_NAMED_BIT */
@@ -337,6 +452,9 @@ const maxChannelBindInAck: number = GetLogicalDeviceInformation_maxChannelBindIn
 /**
  * @summary GetLogicalDeviceInformation_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.1.2).
  */
 export
 const GetLogicalDeviceInformation_privateDataInAck: number = 21; /* LONG_NAMED_BIT */
@@ -344,6 +462,8 @@ const GetLogicalDeviceInformation_privateDataInAck: number = 21; /* LONG_NAMED_B
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetLogicalDeviceInformation_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetLogicalDeviceInformation_privateDataInAck; /* SHORT_NAMED_BIT */

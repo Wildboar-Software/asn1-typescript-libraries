@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ConcatenateMessageArgument
  * @description
- * 
+ *
+ * Ordered list of messages to concatenate (ECMA-269 §26.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class ConcatenateMessageArgument {
     constructor (
         /**
          * @summary `messagesToConcatenate`.
+         * @description
+         *
+         * Messages in concatenation order (ECMA-269 §26.1.3.1).
+         *
          * @public
          * @readonly
          */
         readonly messagesToConcatenate: MessageID[],
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

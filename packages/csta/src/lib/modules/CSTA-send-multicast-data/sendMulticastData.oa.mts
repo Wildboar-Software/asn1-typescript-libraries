@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary sendMulticastData
  * @description
- * 
+ *
+ * Writes to multiple data paths identified by `ioCrossRefIDList` (ECMA-269
+ * §24.2.7).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:113. Errors: `universalFailure` (ECMA-285 §22.2.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

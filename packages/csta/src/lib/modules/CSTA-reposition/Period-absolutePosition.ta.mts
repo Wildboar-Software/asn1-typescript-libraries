@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Period_absolutePosition
  * @description
- * 
+ *
+ * Start or end of the message (ECMA-269 §26.1.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,7 +35,13 @@ enum _enum_for_Period_absolutePosition {
 /**
  * @summary Period_absolutePosition
  * @description
- * 
+ *
+ * Start or end of the message (ECMA-269 §26.1.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,7 +59,13 @@ type Period_absolutePosition = _enum_for_Period_absolutePosition;
 /**
  * @summary Period_absolutePosition
  * @description
- * 
+ *
+ * Start or end of the message (ECMA-269 §26.1.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,6 +82,10 @@ const Period_absolutePosition = _enum_for_Period_absolutePosition;
 
 /**
  * @summary Period_absolutePosition_startOfMessage
+ * @description
+ *
+ * Beginning of the message (ECMA-269 §26.1.10).
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +94,10 @@ const Period_absolutePosition_startOfMessage: Period_absolutePosition = Period_a
 
 /**
  * @summary startOfMessage
+ * @description
+ *
+ * Beginning of the message (ECMA-269 §26.1.10).
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +106,10 @@ const startOfMessage: Period_absolutePosition = Period_absolutePosition.startOfM
 
 /**
  * @summary Period_absolutePosition_endOfMessage
+ * @description
+ *
+ * End of the message (ECMA-269 §26.1.10).
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +118,10 @@ const Period_absolutePosition_endOfMessage: Period_absolutePosition = Period_abs
 
 /**
  * @summary endOfMessage
+ * @description
+ *
+ * End of the message (ECMA-269 §26.1.10).
+ *
  * @constant
  * @type {number}
  */

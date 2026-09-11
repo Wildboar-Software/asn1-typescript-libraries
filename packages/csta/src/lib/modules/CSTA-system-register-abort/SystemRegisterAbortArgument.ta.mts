@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SystemRegisterAbortArgument
  * @description
- * 
+ *
+ * SF request (ECMA-269 Table 14-6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class SystemRegisterAbortArgument {
     constructor (
         /**
          * @summary `sysStatRegisterID`.
+         * @description
+         *
+         * Registration that was aborted. Mandatory.
          * @public
          * @readonly
          */
         readonly sysStatRegisterID: SysStatRegisterID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-6.
          * @public
          * @readonly
          */

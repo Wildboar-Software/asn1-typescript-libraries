@@ -45,7 +45,13 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
 /**
  * @summary SnapshotCallResult
  * @description
- * 
+ *
+ * Positive ack: call-wide parameters plus either inline snapshot
+ * data or a cross-ref for Snapshot CallData.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,84 +81,128 @@ class SnapshotCallResult {
     constructor (
         /**
          * @summary `crossRefIDorSnapshotData`.
+         * @description
+         *
+         * `serviceCrossRefID` if Snapshot CallData will follow;
+         * `snapshotData` if endpoint info is inline.
          * @public
          * @readonly
          */
         readonly crossRefIDorSnapshotData: SnapshotCallResult_crossRefIDorSnapshotData,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Media class and related call media data.
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Call characterisation bits, if the SF reports them.
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Calling device of the snapshotted call.
          * @public
          * @readonly
          */
         readonly callingDevice: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `calledDevice`.
+         * @description
+         *
+         * Called device of the snapshotted call.
          * @public
          * @readonly
          */
         readonly calledDevice: OPTIONAL<CalledDeviceID>,
         /**
          * @summary `associatedCallingDeviceID`.
+         * @description
+         *
+         * Associated calling device, if known.
          * @public
          * @readonly
          */
         readonly associatedCallingDeviceID: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDeviceID`.
+         * @description
+         *
+         * Associated called device, if known.
          * @public
          * @readonly
          */
         readonly associatedCalledDeviceID: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Correlator data associated with the call.
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Call/thread linkage identifiers.
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Subject/topic associated with the call.
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `messageInfo`.
+         * @description
+         *
+         * Message information associated with the call.
          * @public
          * @readonly
          */
         readonly messageInfo: OPTIONAL<MessageInfo>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Language preferences associated with the call.
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
+         * @description
+         *
+         * Device-history entries for the call.
          * @public
          * @readonly
          */
         readonly deviceHistory: OPTIONAL<DeviceHistory>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -45,7 +45,14 @@ import {
 /**
  * @summary MediaCallCharacteristics
  * @description
- * 
+ *
+ * Media class and digital-data QoS of the call as a whole (voice, data, image,
+ * etc.), not of one connection. A call belongs to at least one class and may
+ * belong to more than one. These characteristics apply to all connections of
+ * the call. ECMA-269 §12.2.20.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,36 +83,68 @@ class MediaCallCharacteristics {
     constructor (
         /**
          * @summary `mediaClass`.
+         * @description
+         *
+         * Bitmap of media classes. ECMA-269 §12.2.20.
+         *
          * @public
          * @readonly
          */
         readonly mediaClass: MediaClass,
         /**
          * @summary `connectionRate`.
+         * @description
+         *
+         * Digital data connection rate. Switching-function specific; 0 means
+         * digital data with unknown rate. ECMA-269 §12.2.20.
+         *
          * @public
          * @readonly
          */
         readonly connectionRate: OPTIONAL<INTEGER>,
         /**
          * @summary `bitRate`.
+         * @description
+         *
+         * Constant (default) or variable bit rate. Absent means constant.
+         * ECMA-269 §12.2.20.
+         *
          * @public
          * @readonly
          */
         readonly bitRate: OPTIONAL<MediaCallCharacteristics_bitRate>,
         /**
          * @summary `delayTolerance`.
+         * @description
+         *
+         * Maximum tolerated media-stream delay. For constant bit rate this is
+         * the actual delay; for variable, the maximum allowed. Absent means
+         * unknown. ECMA-269 §12.2.20.
+         *
          * @public
          * @readonly
          */
         readonly delayTolerance: OPTIONAL<INTEGER>,
         /**
          * @summary `switchingSubDomainCCIEType`.
+         * @description
+         *
+         * Type of private call-control IEs in
+         * `switchingSubDomainInformationElements` (ISDN, ATM, ISO-Ethernet TDM,
+         * RSVP, SIP, other). Absent means there are none. ECMA-269 §12.2.20.
+         *
          * @public
          * @readonly
          */
         readonly switchingSubDomainCCIEType: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>,
         /**
          * @summary `switchingSubDomainInformationElements`.
+         * @description
+         *
+         * Private IEs from the switching sub-domain. Mandatory when
+         * `switchingSubDomainCCIEType` is present; ignore otherwise. ECMA-269
+         * §12.2.20.
+         *
          * @public
          * @readonly
          */

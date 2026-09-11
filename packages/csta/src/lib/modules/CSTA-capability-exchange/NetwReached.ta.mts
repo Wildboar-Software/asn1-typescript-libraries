@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NetwReached
  * @description
- * 
+ * Capability bitmap for the Network Reached event (ECMA-269 C.6.12, ECMA-285
+ * §9.10). Presence of this entry in `CallControlEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +65,9 @@ type NetwReached = BIT_STRING;
 /**
  * @summary NetwReached_originatingNIDConnection
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_originatingNIDConnection: number = 0; /* LONG_NAMED_BIT */
@@ -64,6 +75,8 @@ const NetwReached_originatingNIDConnection: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary originatingNIDConnection
  * @constant
+ * @description
+ * Alias of `NetwReached_originatingNIDConnection`.
  */
 export
 const originatingNIDConnection: number = NetwReached_originatingNIDConnection; /* SHORT_NAMED_BIT */
@@ -71,6 +84,9 @@ const originatingNIDConnection: number = NetwReached_originatingNIDConnection; /
 /**
  * @summary NetwReached_userData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `userData` parameter (ECMA-269
+ * C.6.12).
  */
 export
 const NetwReached_userData: number = 1; /* LONG_NAMED_BIT */
@@ -78,6 +94,8 @@ const NetwReached_userData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary userData
  * @constant
+ * @description
+ * Alias of `NetwReached_userData`.
  */
 export
 const userData: number = NetwReached_userData; /* SHORT_NAMED_BIT */
@@ -85,6 +103,9 @@ const userData: number = NetwReached_userData; /* SHORT_NAMED_BIT */
 /**
  * @summary NetwReached_typeOfNetworkISDNPublic
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_typeOfNetworkISDNPublic: number = 2; /* LONG_NAMED_BIT */
@@ -92,6 +113,8 @@ const NetwReached_typeOfNetworkISDNPublic: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary typeOfNetworkISDNPublic
  * @constant
+ * @description
+ * Alias of `NetwReached_typeOfNetworkISDNPublic`.
  */
 export
 const typeOfNetworkISDNPublic: number = NetwReached_typeOfNetworkISDNPublic; /* SHORT_NAMED_BIT */
@@ -99,6 +122,9 @@ const typeOfNetworkISDNPublic: number = NetwReached_typeOfNetworkISDNPublic; /* 
 /**
  * @summary NetwReached_typeOfNetworkNonISDNPublic
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_typeOfNetworkNonISDNPublic: number = 3; /* LONG_NAMED_BIT */
@@ -106,6 +132,8 @@ const NetwReached_typeOfNetworkNonISDNPublic: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary typeOfNetworkNonISDNPublic
  * @constant
+ * @description
+ * Alias of `NetwReached_typeOfNetworkNonISDNPublic`.
  */
 export
 const typeOfNetworkNonISDNPublic: number = NetwReached_typeOfNetworkNonISDNPublic; /* SHORT_NAMED_BIT */
@@ -113,6 +141,9 @@ const typeOfNetworkNonISDNPublic: number = NetwReached_typeOfNetworkNonISDNPubli
 /**
  * @summary NetwReached_typeOfNetworkISDNPrivate
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_typeOfNetworkISDNPrivate: number = 4; /* LONG_NAMED_BIT */
@@ -120,6 +151,8 @@ const NetwReached_typeOfNetworkISDNPrivate: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary typeOfNetworkISDNPrivate
  * @constant
+ * @description
+ * Alias of `NetwReached_typeOfNetworkISDNPrivate`.
  */
 export
 const typeOfNetworkISDNPrivate: number = NetwReached_typeOfNetworkISDNPrivate; /* SHORT_NAMED_BIT */
@@ -127,6 +160,9 @@ const typeOfNetworkISDNPrivate: number = NetwReached_typeOfNetworkISDNPrivate; /
 /**
  * @summary NetwReached_typeOfNetworkNonISDNPrivate
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_typeOfNetworkNonISDNPrivate: number = 5; /* LONG_NAMED_BIT */
@@ -134,6 +170,8 @@ const NetwReached_typeOfNetworkNonISDNPrivate: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary typeOfNetworkNonISDNPrivate
  * @constant
+ * @description
+ * Alias of `NetwReached_typeOfNetworkNonISDNPrivate`.
  */
 export
 const typeOfNetworkNonISDNPrivate: number = NetwReached_typeOfNetworkNonISDNPrivate; /* SHORT_NAMED_BIT */
@@ -141,6 +179,9 @@ const typeOfNetworkNonISDNPrivate: number = NetwReached_typeOfNetworkNonISDNPriv
 /**
  * @summary NetwReached_typeOfNetworkOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_typeOfNetworkOther: number = 6; /* LONG_NAMED_BIT */
@@ -148,6 +189,8 @@ const NetwReached_typeOfNetworkOther: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary typeOfNetworkOther
  * @constant
+ * @description
+ * Alias of `NetwReached_typeOfNetworkOther`.
  */
 export
 const typeOfNetworkOther: number = NetwReached_typeOfNetworkOther; /* SHORT_NAMED_BIT */
@@ -155,6 +198,9 @@ const typeOfNetworkOther: number = NetwReached_typeOfNetworkOther; /* SHORT_NAME
 /**
  * @summary NetwReached_eventsProvidedParameter
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedParameter: number = 7; /* LONG_NAMED_BIT */
@@ -162,6 +208,8 @@ const NetwReached_eventsProvidedParameter: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedParameter
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedParameter`.
  */
 export
 const eventsProvidedParameter: number = NetwReached_eventsProvidedParameter; /* SHORT_NAMED_BIT */
@@ -169,6 +217,9 @@ const eventsProvidedParameter: number = NetwReached_eventsProvidedParameter; /* 
 /**
  * @summary NetwReached_eventsProvidedBridged
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedBridged: number = 8; /* LONG_NAMED_BIT */
@@ -176,6 +227,8 @@ const NetwReached_eventsProvidedBridged: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedBridged
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedBridged`.
  */
 export
 const eventsProvidedBridged: number = NetwReached_eventsProvidedBridged; /* SHORT_NAMED_BIT */
@@ -183,6 +236,9 @@ const eventsProvidedBridged: number = NetwReached_eventsProvidedBridged; /* SHOR
 /**
  * @summary NetwReached_eventsProvidedCallCleared
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedCallCleared: number = 9; /* LONG_NAMED_BIT */
@@ -190,6 +246,8 @@ const NetwReached_eventsProvidedCallCleared: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedCallCleared
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedCallCleared`.
  */
 export
 const eventsProvidedCallCleared: number = NetwReached_eventsProvidedCallCleared; /* SHORT_NAMED_BIT */
@@ -197,6 +255,9 @@ const eventsProvidedCallCleared: number = NetwReached_eventsProvidedCallCleared;
 /**
  * @summary NetwReached_eventsProvidedConferenced
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedConferenced: number = 10; /* LONG_NAMED_BIT */
@@ -204,6 +265,8 @@ const NetwReached_eventsProvidedConferenced: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedConferenced
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedConferenced`.
  */
 export
 const eventsProvidedConferenced: number = NetwReached_eventsProvidedConferenced; /* SHORT_NAMED_BIT */
@@ -211,6 +274,9 @@ const eventsProvidedConferenced: number = NetwReached_eventsProvidedConferenced;
 /**
  * @summary NetwReached_eventsProvidedConnectionCleared
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedConnectionCleared: number = 11; /* LONG_NAMED_BIT */
@@ -218,6 +284,8 @@ const NetwReached_eventsProvidedConnectionCleared: number = 11; /* LONG_NAMED_BI
 /**
  * @summary eventsProvidedConnectionCleared
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedConnectionCleared`.
  */
 export
 const eventsProvidedConnectionCleared: number = NetwReached_eventsProvidedConnectionCleared; /* SHORT_NAMED_BIT */
@@ -225,6 +293,9 @@ const eventsProvidedConnectionCleared: number = NetwReached_eventsProvidedConnec
 /**
  * @summary NetwReached_eventsProvidedDelivered
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedDelivered: number = 12; /* LONG_NAMED_BIT */
@@ -232,6 +303,8 @@ const NetwReached_eventsProvidedDelivered: number = 12; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedDelivered
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedDelivered`.
  */
 export
 const eventsProvidedDelivered: number = NetwReached_eventsProvidedDelivered; /* SHORT_NAMED_BIT */
@@ -239,6 +312,9 @@ const eventsProvidedDelivered: number = NetwReached_eventsProvidedDelivered; /* 
 /**
  * @summary NetwReached_eventsProvidedDigitsDialed
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedDigitsDialed: number = 13; /* LONG_NAMED_BIT */
@@ -246,6 +322,8 @@ const NetwReached_eventsProvidedDigitsDialed: number = 13; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedDigitsDialed
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedDigitsDialed`.
  */
 export
 const eventsProvidedDigitsDialed: number = NetwReached_eventsProvidedDigitsDialed; /* SHORT_NAMED_BIT */
@@ -253,6 +331,9 @@ const eventsProvidedDigitsDialed: number = NetwReached_eventsProvidedDigitsDiale
 /**
  * @summary NetwReached_eventsProvidedDiverted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedDiverted: number = 14; /* LONG_NAMED_BIT */
@@ -260,6 +341,8 @@ const NetwReached_eventsProvidedDiverted: number = 14; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedDiverted
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedDiverted`.
  */
 export
 const eventsProvidedDiverted: number = NetwReached_eventsProvidedDiverted; /* SHORT_NAMED_BIT */
@@ -267,6 +350,9 @@ const eventsProvidedDiverted: number = NetwReached_eventsProvidedDiverted; /* SH
 /**
  * @summary NetwReached_eventsProvidedEstablished
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedEstablished: number = 15; /* LONG_NAMED_BIT */
@@ -274,6 +360,8 @@ const NetwReached_eventsProvidedEstablished: number = 15; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedEstablished
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedEstablished`.
  */
 export
 const eventsProvidedEstablished: number = NetwReached_eventsProvidedEstablished; /* SHORT_NAMED_BIT */
@@ -281,6 +369,9 @@ const eventsProvidedEstablished: number = NetwReached_eventsProvidedEstablished;
 /**
  * @summary NetwReached_eventsProvidedFailed
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedFailed: number = 16; /* LONG_NAMED_BIT */
@@ -288,6 +379,8 @@ const NetwReached_eventsProvidedFailed: number = 16; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedFailed
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedFailed`.
  */
 export
 const eventsProvidedFailed: number = NetwReached_eventsProvidedFailed; /* SHORT_NAMED_BIT */
@@ -295,6 +388,9 @@ const eventsProvidedFailed: number = NetwReached_eventsProvidedFailed; /* SHORT_
 /**
  * @summary NetwReached_eventsProvidedHeld
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedHeld: number = 17; /* LONG_NAMED_BIT */
@@ -302,6 +398,8 @@ const NetwReached_eventsProvidedHeld: number = 17; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedHeld
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedHeld`.
  */
 export
 const eventsProvidedHeld: number = NetwReached_eventsProvidedHeld; /* SHORT_NAMED_BIT */
@@ -309,6 +407,9 @@ const eventsProvidedHeld: number = NetwReached_eventsProvidedHeld; /* SHORT_NAME
 /**
  * @summary NetwReached_eventsProvidedNetwCapsChanged
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedNetwCapsChanged: number = 18; /* LONG_NAMED_BIT */
@@ -316,6 +417,8 @@ const NetwReached_eventsProvidedNetwCapsChanged: number = 18; /* LONG_NAMED_BIT 
 /**
  * @summary eventsProvidedNetwCapsChanged
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedNetwCapsChanged`.
  */
 export
 const eventsProvidedNetwCapsChanged: number = NetwReached_eventsProvidedNetwCapsChanged; /* SHORT_NAMED_BIT */
@@ -323,6 +426,9 @@ const eventsProvidedNetwCapsChanged: number = NetwReached_eventsProvidedNetwCaps
 /**
  * @summary NetwReached_eventsProvidedNetwReached
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedNetwReached: number = 19; /* LONG_NAMED_BIT */
@@ -330,6 +436,8 @@ const NetwReached_eventsProvidedNetwReached: number = 19; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedNetwReached
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedNetwReached`.
  */
 export
 const eventsProvidedNetwReached: number = NetwReached_eventsProvidedNetwReached; /* SHORT_NAMED_BIT */
@@ -337,6 +445,9 @@ const eventsProvidedNetwReached: number = NetwReached_eventsProvidedNetwReached;
 /**
  * @summary NetwReached_eventsProvidedOffered
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedOffered: number = 20; /* LONG_NAMED_BIT */
@@ -344,6 +455,8 @@ const NetwReached_eventsProvidedOffered: number = 20; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedOffered
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedOffered`.
  */
 export
 const eventsProvidedOffered: number = NetwReached_eventsProvidedOffered; /* SHORT_NAMED_BIT */
@@ -351,6 +464,9 @@ const eventsProvidedOffered: number = NetwReached_eventsProvidedOffered; /* SHOR
 /**
  * @summary NetwReached_eventsProvidedOriginated
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedOriginated: number = 21; /* LONG_NAMED_BIT */
@@ -358,6 +474,8 @@ const NetwReached_eventsProvidedOriginated: number = 21; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedOriginated
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedOriginated`.
  */
 export
 const eventsProvidedOriginated: number = NetwReached_eventsProvidedOriginated; /* SHORT_NAMED_BIT */
@@ -365,6 +483,9 @@ const eventsProvidedOriginated: number = NetwReached_eventsProvidedOriginated; /
 /**
  * @summary NetwReached_eventsProvidedQueued
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedQueued: number = 22; /* LONG_NAMED_BIT */
@@ -372,6 +493,8 @@ const NetwReached_eventsProvidedQueued: number = 22; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedQueued
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedQueued`.
  */
 export
 const eventsProvidedQueued: number = NetwReached_eventsProvidedQueued; /* SHORT_NAMED_BIT */
@@ -379,6 +502,9 @@ const eventsProvidedQueued: number = NetwReached_eventsProvidedQueued; /* SHORT_
 /**
  * @summary NetwReached_eventsProvidedRetrieved
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedRetrieved: number = 23; /* LONG_NAMED_BIT */
@@ -386,6 +512,8 @@ const NetwReached_eventsProvidedRetrieved: number = 23; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedRetrieved
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedRetrieved`.
  */
 export
 const eventsProvidedRetrieved: number = NetwReached_eventsProvidedRetrieved; /* SHORT_NAMED_BIT */
@@ -393,6 +521,9 @@ const eventsProvidedRetrieved: number = NetwReached_eventsProvidedRetrieved; /* 
 /**
  * @summary NetwReached_eventsProvidedServiceInitiated
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedServiceInitiated: number = 24; /* LONG_NAMED_BIT */
@@ -400,6 +531,8 @@ const NetwReached_eventsProvidedServiceInitiated: number = 24; /* LONG_NAMED_BIT
 /**
  * @summary eventsProvidedServiceInitiated
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedServiceInitiated`.
  */
 export
 const eventsProvidedServiceInitiated: number = NetwReached_eventsProvidedServiceInitiated; /* SHORT_NAMED_BIT */
@@ -407,6 +540,9 @@ const eventsProvidedServiceInitiated: number = NetwReached_eventsProvidedService
 /**
  * @summary NetwReached_eventsProvidedTransferred
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_eventsProvidedTransferred: number = 25; /* LONG_NAMED_BIT */
@@ -414,6 +550,8 @@ const NetwReached_eventsProvidedTransferred: number = 25; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedTransferred
  * @constant
+ * @description
+ * Alias of `NetwReached_eventsProvidedTransferred`.
  */
 export
 const eventsProvidedTransferred: number = NetwReached_eventsProvidedTransferred; /* SHORT_NAMED_BIT */
@@ -421,6 +559,9 @@ const eventsProvidedTransferred: number = NetwReached_eventsProvidedTransferred;
 /**
  * @summary NetwReached_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_servicesPermitted: number = 26; /* LONG_NAMED_BIT */
@@ -428,6 +569,8 @@ const NetwReached_servicesPermitted: number = 26; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `NetwReached_servicesPermitted`.
  */
 export
 const servicesPermitted: number = NetwReached_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -435,6 +578,9 @@ const servicesPermitted: number = NetwReached_servicesPermitted; /* SHORT_NAMED_
 /**
  * @summary NetwReached_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.6.12).
  */
 export
 const NetwReached_mediaCallCharacteristics: number = 27; /* LONG_NAMED_BIT */
@@ -442,6 +588,8 @@ const NetwReached_mediaCallCharacteristics: number = 27; /* LONG_NAMED_BIT */
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `NetwReached_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = NetwReached_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -449,6 +597,9 @@ const mediaCallCharacteristics: number = NetwReached_mediaCallCharacteristics; /
 /**
  * @summary NetwReached_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.6.12).
  */
 export
 const NetwReached_callCharacteristics: number = 28; /* LONG_NAMED_BIT */
@@ -456,6 +607,8 @@ const NetwReached_callCharacteristics: number = 28; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `NetwReached_callCharacteristics`.
  */
 export
 const callCharacteristics: number = NetwReached_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -463,6 +616,9 @@ const callCharacteristics: number = NetwReached_callCharacteristics; /* SHORT_NA
 /**
  * @summary NetwReached_outboundConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_outboundConnectionInfo: number = 29; /* LONG_NAMED_BIT */
@@ -470,6 +626,8 @@ const NetwReached_outboundConnectionInfo: number = 29; /* LONG_NAMED_BIT */
 /**
  * @summary outboundConnectionInfo
  * @constant
+ * @description
+ * Alias of `NetwReached_outboundConnectionInfo`.
  */
 export
 const outboundConnectionInfo: number = NetwReached_outboundConnectionInfo; /* SHORT_NAMED_BIT */
@@ -477,6 +635,9 @@ const outboundConnectionInfo: number = NetwReached_outboundConnectionInfo; /* SH
 /**
  * @summary NetwReached_netwCallingDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_netwCallingDevice: number = 30; /* LONG_NAMED_BIT */
@@ -484,6 +645,8 @@ const NetwReached_netwCallingDevice: number = 30; /* LONG_NAMED_BIT */
 /**
  * @summary netwCallingDevice
  * @constant
+ * @description
+ * Alias of `NetwReached_netwCallingDevice`.
  */
 export
 const netwCallingDevice: number = NetwReached_netwCallingDevice; /* SHORT_NAMED_BIT */
@@ -491,6 +654,9 @@ const netwCallingDevice: number = NetwReached_netwCallingDevice; /* SHORT_NAMED_
 /**
  * @summary NetwReached_netwCalledDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.12).
  */
 export
 const NetwReached_netwCalledDevice: number = 31; /* LONG_NAMED_BIT */
@@ -498,6 +664,8 @@ const NetwReached_netwCalledDevice: number = 31; /* LONG_NAMED_BIT */
 /**
  * @summary netwCalledDevice
  * @constant
+ * @description
+ * Alias of `NetwReached_netwCalledDevice`.
  */
 export
 const netwCalledDevice: number = NetwReached_netwCalledDevice; /* SHORT_NAMED_BIT */
@@ -505,6 +673,9 @@ const netwCalledDevice: number = NetwReached_netwCalledDevice; /* SHORT_NAMED_BI
 /**
  * @summary NetwReached_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 C.6.12).
  */
 export
 const NetwReached_languagePreferences: number = 33; /* LONG_NAMED_BIT */
@@ -512,6 +683,8 @@ const NetwReached_languagePreferences: number = 33; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `NetwReached_languagePreferences`.
  */
 export
 const languagePreferences: number = NetwReached_languagePreferences; /* SHORT_NAMED_BIT */
@@ -519,6 +692,9 @@ const languagePreferences: number = NetwReached_languagePreferences; /* SHORT_NA
 /**
  * @summary NetwReached_deviceHistory
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `deviceHistory` parameter
+ * (ECMA-269 C.6.12).
  */
 export
 const NetwReached_deviceHistory: number = 34; /* LONG_NAMED_BIT */
@@ -526,6 +702,8 @@ const NetwReached_deviceHistory: number = 34; /* LONG_NAMED_BIT */
 /**
  * @summary deviceHistory
  * @constant
+ * @description
+ * Alias of `NetwReached_deviceHistory`.
  */
 export
 const deviceHistory: number = NetwReached_deviceHistory; /* SHORT_NAMED_BIT */
@@ -533,6 +711,9 @@ const deviceHistory: number = NetwReached_deviceHistory; /* SHORT_NAMED_BIT */
 /**
  * @summary NetwReached_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.6.12).
  */
 export
 const NetwReached_privateData: number = 32; /* LONG_NAMED_BIT */
@@ -540,6 +721,8 @@ const NetwReached_privateData: number = 32; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `NetwReached_privateData`.
  */
 export
 const privateData: number = NetwReached_privateData; /* SHORT_NAMED_BIT */
@@ -547,6 +730,9 @@ const privateData: number = NetwReached_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary NetwReached_locationInfoList
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `locationInfoList` parameter
+ * (ECMA-269 C.6.12).
  */
 export
 const NetwReached_locationInfoList: number = 35; /* LONG_NAMED_BIT */
@@ -554,6 +740,8 @@ const NetwReached_locationInfoList: number = 35; /* LONG_NAMED_BIT */
 /**
  * @summary locationInfoList
  * @constant
+ * @description
+ * Alias of `NetwReached_locationInfoList`.
  */
 export
 const locationInfoList: number = NetwReached_locationInfoList; /* SHORT_NAMED_BIT */

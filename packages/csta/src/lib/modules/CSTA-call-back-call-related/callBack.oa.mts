@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary callBack
  * @description
- * 
+ *
+ * Call Back Call-Related (ECMA-269 §17.1.4 / ECMA-285 §15.1.4).
+ * Invoked by the computing function on the switching function.
+ * Unlike Camp On, the original call is cleared rather than queued
+ * (FR 1). Only one Call Back (call- or non-call-related) may be
+ * outstanding per calling/called pair (FR 2). Cancel with Cancel
+ * Call Back. ROSE local CODE 215. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

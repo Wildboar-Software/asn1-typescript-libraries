@@ -36,7 +36,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ForwardingEvent
  * @description
- * 
+ *
+ * Forwarding event (ECMA-269 §22.2.13 / ECMA-285 §20.2.13). Direction: SF→CF
+ * via Event Report. Forwarding setting changed — not when a call is actually
+ * forwarded. One `forwardingType` per event; multiple types yield multiple
+ * events. Types in §6.7.1. Not generated when a Set request leaves the feature
+ * unchanged (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,48 +67,76 @@ class ForwardingEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose forwarding feature changed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `forwardingType`.
+         * @description
+         *
+         * Type that changed. User-specified: present. SF default settings:
+         * optional.
          * @public
          * @readonly
          */
         readonly forwardingType: OPTIONAL<ForwardingType>,
         /**
          * @summary `forwardStatus`.
+         * @description
+         *
+         * FALSE = deactivated; TRUE = active.
          * @public
          * @readonly
          */
         readonly forwardStatus: BOOLEAN,
         /**
          * @summary `forwardTo`.
+         * @description
+         *
+         * Forward destination (spec `forwardDN`). User settings: present; SF
+         * default: optional.
          * @public
          * @readonly
          */
         readonly forwardTo: OPTIONAL<DeviceID>,
         /**
          * @summary `forwardDefault`.
+         * @description
+         *
+         * defaultForwardingTypeAndForwardDN, defaultForwardingType, or
+         * defaultForwardDN. Absent (if supported): not a default setting.
          * @public
          * @readonly
          */
         readonly forwardDefault: OPTIONAL<ForwardDefault>,
         /**
          * @summary `ringCount`.
+         * @description
+         *
+         * Rings before forward-no-answer. Only for forwardNoAns{,Int,Ext}.
          * @public
          * @readonly
          */
         readonly ringCount: OPTIONAL<INTEGER>,
         /**
          * @summary `ringDuration`.
+         * @description
+         *
+         * Seconds before forward-no-answer. Omit if `ringCount` is provided.
          * @public
          * @readonly
          */
         readonly ringDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary makeCall
  * @description
- * 
+ *
+ * Make Call (ECMA-269 §17.1.18 / ECMA-285 §15.1.18). Invoked by
+ * the computing function on the switching function. Creates a
+ * call from `callingDevice` toward `calledDirectoryNumber`.
+ * Calling-device Forwarding/DND are not honoured (FR 4–5). A
+ * null or `;`-terminated called number stages dialling via Dial
+ * Digits (FR 7–8). If the device is already Initiated, the
+ * ConnectionID is reused when supported (FR 6). ROSE local
+ * CODE 10. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

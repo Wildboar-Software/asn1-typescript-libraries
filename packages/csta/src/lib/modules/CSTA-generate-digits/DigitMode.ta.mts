@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DigitMode
  * @description
- * 
+ *
+ * Digit generation mode: rotary pulse or DTMF (Table 18-14).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +33,12 @@ enum _enum_for_DigitMode {
 /**
  * @summary DigitMode
  * @description
- * 
+ *
+ * Digit generation mode: rotary pulse or DTMF (Table 18-14).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +55,12 @@ type DigitMode = _enum_for_DigitMode;
 /**
  * @summary DigitMode
  * @description
- * 
+ *
+ * Digit generation mode: rotary pulse or DTMF (Table 18-14).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetButtonInformationArgument
  * @description
- * 
+ *
+ * Get Button Information request (ECMA-269 §21.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,30 @@ class GetButtonInformationArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `button`.
+         * @description
+         *
+         * Button to query. Absent: all buttons. Reserved ButtonIDs in Table
+         * 12-3: `0`–`9`, `*`=10, `#`=11 (ECMA-269 §12.3.5).
          * @public
          * @readonly
          */
         readonly button: OPTIONAL<ButtonID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

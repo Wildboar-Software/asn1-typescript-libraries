@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary cancelTelephonyTones
  * @description
- * 
+ *
+ * Cancel Telephony Tones (ECMA-269 §18.1.2 / ECMA-285 §16.1.2). Direction:
+ * CF→SF. ROSE local CODE 231. Errors: `universalFailure`. Cancels telephony
+ * tone generation on `connectionToStopTone`.
+ * A Telephony Tones Generated event without `toneGenerated` may
+ * report that generation has stopped.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

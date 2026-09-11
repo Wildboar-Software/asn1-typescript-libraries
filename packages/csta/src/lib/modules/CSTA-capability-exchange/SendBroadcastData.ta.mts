@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SendBroadcastData
  * @description
- * 
+ * Capability bitmap for the Send Broadcast Data service (ECMA-269 C.17.8,
+ * ECMA-285 §9.10). Presence of this entry in `IOServicesServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +38,9 @@ type SendBroadcastData = BIT_STRING;
 /**
  * @summary SendBroadcastData_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.17.8).
  */
 export
 const SendBroadcastData_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -36,6 +48,8 @@ const SendBroadcastData_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SendBroadcastData_privateData`.
  */
 export
 const privateData: number = SendBroadcastData_privateData; /* SHORT_NAMED_BIT */
@@ -43,6 +57,9 @@ const privateData: number = SendBroadcastData_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary SendBroadcastData_dataPathTypeText
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.8).
  */
 export
 const SendBroadcastData_dataPathTypeText: number = 1; /* LONG_NAMED_BIT */
@@ -50,6 +67,8 @@ const SendBroadcastData_dataPathTypeText: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary dataPathTypeText
  * @constant
+ * @description
+ * Alias of `SendBroadcastData_dataPathTypeText`.
  */
 export
 const dataPathTypeText: number = SendBroadcastData_dataPathTypeText; /* SHORT_NAMED_BIT */
@@ -57,6 +76,9 @@ const dataPathTypeText: number = SendBroadcastData_dataPathTypeText; /* SHORT_NA
 /**
  * @summary SendBroadcastData_dataPathTypeVoice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.8).
  */
 export
 const SendBroadcastData_dataPathTypeVoice: number = 2; /* LONG_NAMED_BIT */
@@ -64,6 +86,8 @@ const SendBroadcastData_dataPathTypeVoice: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary dataPathTypeVoice
  * @constant
+ * @description
+ * Alias of `SendBroadcastData_dataPathTypeVoice`.
  */
 export
 const dataPathTypeVoice: number = SendBroadcastData_dataPathTypeVoice; /* SHORT_NAMED_BIT */
@@ -71,6 +95,9 @@ const dataPathTypeVoice: number = SendBroadcastData_dataPathTypeVoice; /* SHORT_
 /**
  * @summary SendBroadcastData_displayAttribPhyBaseRowNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.8).
  */
 export
 const SendBroadcastData_displayAttribPhyBaseRowNumber: number = 3; /* LONG_NAMED_BIT */
@@ -78,6 +105,8 @@ const SendBroadcastData_displayAttribPhyBaseRowNumber: number = 3; /* LONG_NAMED
 /**
  * @summary displayAttribPhyBaseRowNumber
  * @constant
+ * @description
+ * Alias of `SendBroadcastData_displayAttribPhyBaseRowNumber`.
  */
 export
 const displayAttribPhyBaseRowNumber: number = SendBroadcastData_displayAttribPhyBaseRowNumber; /* SHORT_NAMED_BIT */
@@ -85,6 +114,9 @@ const displayAttribPhyBaseRowNumber: number = SendBroadcastData_displayAttribPhy
 /**
  * @summary SendBroadcastData_displayAttribPhyBaseColumnNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.8).
  */
 export
 const SendBroadcastData_displayAttribPhyBaseColumnNumber: number = 4; /* LONG_NAMED_BIT */
@@ -92,6 +124,8 @@ const SendBroadcastData_displayAttribPhyBaseColumnNumber: number = 4; /* LONG_NA
 /**
  * @summary displayAttribPhyBaseColumnNumber
  * @constant
+ * @description
+ * Alias of `SendBroadcastData_displayAttribPhyBaseColumnNumber`.
  */
 export
 const displayAttribPhyBaseColumnNumber: number = SendBroadcastData_displayAttribPhyBaseColumnNumber; /* SHORT_NAMED_BIT */
@@ -99,6 +133,9 @@ const displayAttribPhyBaseColumnNumber: number = SendBroadcastData_displayAttrib
 /**
  * @summary SendBroadcastData_displayAttribOffset
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.8).
  */
 export
 const SendBroadcastData_displayAttribOffset: number = 5; /* LONG_NAMED_BIT */
@@ -106,6 +143,8 @@ const SendBroadcastData_displayAttribOffset: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary displayAttribOffset
  * @constant
+ * @description
+ * Alias of `SendBroadcastData_displayAttribOffset`.
  */
 export
 const displayAttribOffset: number = SendBroadcastData_displayAttribOffset; /* SHORT_NAMED_BIT */
@@ -113,6 +152,9 @@ const displayAttribOffset: number = SendBroadcastData_displayAttribOffset; /* SH
 /**
  * @summary SendBroadcastData_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.17.8).
  */
 export
 const SendBroadcastData_privateDataInAck: number = 6; /* LONG_NAMED_BIT */
@@ -120,6 +162,8 @@ const SendBroadcastData_privateDataInAck: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SendBroadcastData_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SendBroadcastData_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -127,6 +171,9 @@ const privateDataInAck: number = SendBroadcastData_privateDataInAck; /* SHORT_NA
 /**
  * @summary SendBroadcastData_supportsModifyingPosition
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.8).
  */
 export
 const SendBroadcastData_supportsModifyingPosition: number = 7; /* LONG_NAMED_BIT */
@@ -134,6 +181,8 @@ const SendBroadcastData_supportsModifyingPosition: number = 7; /* LONG_NAMED_BIT
 /**
  * @summary supportsModifyingPosition
  * @constant
+ * @description
+ * Alias of `SendBroadcastData_supportsModifyingPosition`.
  */
 export
 const supportsModifyingPosition: number = SendBroadcastData_supportsModifyingPosition; /* SHORT_NAMED_BIT */

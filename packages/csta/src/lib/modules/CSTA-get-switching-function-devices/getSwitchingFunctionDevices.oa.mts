@@ -25,7 +25,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getSwitchingFunctionDevices
  * @description
- * 
+ *
+ * Get Switching Function Devices (ECMA-269 §13.1.5 / ECMA-285 §11.1.5).
+ * Direction: CF→SF. ROSE local CODE 204. Errors: `universalFailure`. Multi-step
+ * acknowledgement: the positive result only returns
+ * `serviceCrossRefID`. Subsequent Switching Function Devices
+ * invocations (CODE 205, SF→CF) carry the device list, possibly
+ * segmented.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

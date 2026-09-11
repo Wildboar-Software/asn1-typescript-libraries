@@ -20,7 +20,24 @@ import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_Med
 /**
  * @summary DeviceID
  * @description
- * 
+ *
+ * Identifies or represents a CSTA device (ECMA-269 §12.3.11, §6.1.1).
+ * Mandatory `deviceIdentifier` uses a Clause 10 format. Optional
+ * `mediaCallCharacteristics` select or report media capability
+ * (§12.2.20). Max identifier length comes from capabilities exchange.
+ *
+ * Static IDs are stable across calls and associations (e.g. E.164).
+ * Dynamic IDs exist only inside a `ConnectionID` for that
+ * participation (§6.1.6, §12.3.9). Computing functions must not
+ * invent ConnectionIDs.
+ *
+ * Before sending IDs in service requests, check `deviceIDFormat`
+ * from capabilities exchange. The switching function may use any
+ * format in events and acknowledgements (§10.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,24 +62,46 @@ class DeviceID {
     constructor (
         /**
          * @summary `deviceIdentifier`.
+         * @description
+         *
+         * Mandatory identifier in a Clause 10 format (diallable digits,
+         * switching-function representation, device number, or URI as a
+         * colon-containing string). See `DeviceID_deviceIdentifier`.
+         *
          * @public
          * @readonly
          */
         readonly deviceIdentifier: DeviceID_deviceIdentifier,
         /**
          * @summary `privateNumber`.
+         * @description
+         *
+         * Number that is private and may be subject to presentation
+         * restriction (ECMA-269 §10.2). Distinct from the `restricted`
+         * status on role-specific device ID types.
+         *
          * @public
          * @readonly
          */
         readonly privateNumber: OPTIONAL<NumberDigits>,
         /**
          * @summary `privateName`.
+         * @description
+         *
+         * Name that is private and may be subject to presentation
+         * restriction (ECMA-269 §10.2).
+         *
          * @public
          * @readonly
          */
         readonly privateName: OPTIONAL<IA5String>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional media (voice, digital data, etc.) used to select a
+         * device or to report capability (ECMA-269 §12.3.11, §12.2.20).
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary associateData
  * @description
- * 
+ *
+ * Associate Data (ECMA-269 §18.1.1 / ECMA-285 §16.1.1). Direction: CF→SF. ROSE
+ * local CODE 230. Errors: `universalFailure`. Binds call-associated information
+ * to `existingCall`. Does not
+ * change connection state. A Call Information event reports the
+ * update when that event is monitored.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

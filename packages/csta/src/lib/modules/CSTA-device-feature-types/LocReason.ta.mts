@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LocReason
  * @description
- * 
+ *
+ * Reason associated with a location-tracking session change. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +32,11 @@ enum _enum_for_LocReason {
 /**
  * @summary LocReason
  * @description
- * 
+ *
+ * Reason associated with a location-tracking session change. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +53,11 @@ type LocReason = _enum_for_LocReason;
 /**
  * @summary LocReason
  * @description
- * 
+ *
+ * Reason associated with a location-tracking session change. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,14 +73,17 @@ const LocReason = _enum_for_LocReason;
 
 /**
  * @summary LocReason_connectionToDeviceOrNetworkRestored
+ * @description Connection to the device or network restored. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LocReason_connectionToDeviceOrNetworkRestored: LocReason = LocReason.connectionToDeviceOrNetworkRestored; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionToDeviceOrNetworkRestored
+ * @description Alias of {@link LocReason_connectionToDeviceOrNetworkRestored}.
  * @constant
  * @type {number}
  */
@@ -77,14 +92,17 @@ const connectionToDeviceOrNetworkRestored: LocReason = LocReason.connectionToDev
 
 /**
  * @summary LocReason_performanceConditionRelieved
+ * @description Performance condition relieved. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const LocReason_performanceConditionRelieved: LocReason = LocReason.performanceConditionRelieved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary performanceConditionRelieved
+ * @description Alias of {@link LocReason_performanceConditionRelieved}.
  * @constant
  * @type {number}
  */

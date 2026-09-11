@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PrivateDataInfoErrors
  * @description
- * 
+ *
+ * Error in CSTA Private Data of the service request. Why the private data is
+ * incorrect is outside this Standard (ECMA-269 §9.3.1, §12.2.14.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +31,12 @@ enum _enum_for_PrivateDataInfoErrors {
 /**
  * @summary PrivateDataInfoErrors
  * @description
- * 
+ *
+ * Error in CSTA Private Data of the service request. Why the private data is
+ * incorrect is outside this Standard (ECMA-269 §9.3.1, §12.2.14.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,7 +52,12 @@ type PrivateDataInfoErrors = _enum_for_PrivateDataInfoErrors;
 /**
  * @summary PrivateDataInfoErrors
  * @description
- * 
+ *
+ * Error in CSTA Private Data of the service request. Why the private data is
+ * incorrect is outside this Standard (ECMA-269 §9.3.1, §12.2.14.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,14 +72,19 @@ const PrivateDataInfoErrors = _enum_for_PrivateDataInfoErrors;
 
 /**
  * @summary PrivateDataInfoErrors_cSTAPrivateDataInfoError
+ * @description
+ * Error in the privateData parameter; the reason is implementation specific.
+ * ECMA-269 §12.2.14.7.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const PrivateDataInfoErrors_cSTAPrivateDataInfoError: PrivateDataInfoErrors = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSTAPrivateDataInfoError
+ * @description Alias of {@link PrivateDataInfoErrors_cSTAPrivateDataInfoError}.
  * @constant
  * @type {number}
  */

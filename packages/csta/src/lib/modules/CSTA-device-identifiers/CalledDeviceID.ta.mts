@@ -9,7 +9,24 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary CalledDeviceID
  * @description
- * 
+ *
+ * Originally called device associated with a call (`APPLICATION 2`;
+ * ECMA-269 §12.3.6). For external incoming calls this is DNIS, DID,
+ * or equivalent digits.
+ *
+ * - `deviceIdentifier`: originally called device is provided.
+ * - `notKnown`: switching function cannot provide the ID.
+ * - `restricted`: encoded in ECMA-285 §9.2; ECMA-269 §12.3.6 does
+ *   not assign this status.
+ *
+ * Never `notRequired` or `notSpecified`. After conference or
+ * transfer, take this from the secondary call. Unlike
+ * `NetworkCalledDeviceID`, this may change after transfer or
+ * conference.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

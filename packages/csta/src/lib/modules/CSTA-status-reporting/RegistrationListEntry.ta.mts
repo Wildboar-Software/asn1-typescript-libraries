@@ -23,7 +23,12 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary RegistrationListEntry
  * @description
- * 
+ *
+ * One registration: type, ID assigned at creation, and optional object.
+ * ECMA-269 §14.2.6.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +45,32 @@ class RegistrationListEntry {
     constructor (
         /**
          * @summary `registrationType`.
+         * @description
+         *
+         * Escape, I/O, routeing, or system-status registration. ECMA-269
+         * §14.2.6.
+         *
          * @public
          * @readonly
          */
         readonly registrationType: RegistrationType,
         /**
          * @summary `registrationID`.
+         * @description
+         *
+         * ID returned when the registration was created. ECMA-269 §14.2.6.
+         *
          * @public
          * @readonly
          */
         readonly registrationID: IA5String,
         /**
          * @summary `registrationObject`.
+         * @description
+         *
+         * Device associated with the registration, if it was created for a
+         * specific object. ECMA-269 §14.2.6.
+         *
          * @public
          * @readonly
          */

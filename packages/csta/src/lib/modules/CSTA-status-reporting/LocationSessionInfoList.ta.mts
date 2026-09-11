@@ -9,7 +9,12 @@ import { LocationSessionListEntry, _decode_LocationSessionListEntry, _encode_Loc
 /**
  * @summary LocationSessionInfoList
  * @description
- * 
+ *
+ * Existing location tracking sessions for Get Location Tracking Sessions /
+ * Location Session Info. ECMA-269 §28.1.12.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

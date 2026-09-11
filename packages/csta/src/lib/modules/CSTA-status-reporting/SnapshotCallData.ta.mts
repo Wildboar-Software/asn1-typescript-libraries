@@ -9,7 +9,13 @@ import { SnapshotCallResponseInfo, _decode_SnapshotCallResponseInfo, _encode_Sna
 /**
  * @summary SnapshotCallData
  * @description
- * 
+ *
+ * Per-endpoint rows of a Snapshot Call (or Snapshot CallData segment).
+ * Information about the call as a whole is in the Snapshot Call positive
+ * response. ECMA-269 §16.1.1, §16.1.3.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

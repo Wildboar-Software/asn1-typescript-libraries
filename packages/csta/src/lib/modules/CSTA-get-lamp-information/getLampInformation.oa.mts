@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getLampInformation
  * @description
- * 
+ *
+ * Get Lamp Information (ECMA-269 §21.1.6 / ECMA-285 §19.1.6). Direction: CF→SF.
+ * ROSE local CODE 265. Errors: `universalFailure`. Atomic acknowledgement.
+ * All-lamps includes lamps with no button (§21.1.6.3.4 FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

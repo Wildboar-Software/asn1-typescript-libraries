@@ -38,7 +38,15 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary CallClearedEvent
  * @description
- * 
+ *
+ * Call Cleared event payload (ECMA-269 §17.2.2 / ECMA-285
+ * §15.2.2) for `cSTAEventReport`. Sent only to call-type
+ * monitors (FR 2). Connection Cleared events for every
+ * device must precede it (FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,60 +70,111 @@ class CallClearedEvent {
     constructor (
         /**
          * @summary `clearedCall`.
+         * @description
+         *
+         * Mandatory. ConnectionID of the cleared call.
+         * DeviceID shall be omitted (Call-ID only).
+         *
          * @public
          * @readonly
          */
         readonly clearedCall: ConnectionID,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional current correlator data (§12.2.10). This
+         * event may omit it (FR 6).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Conditional. Present when user data is sent and
+         * supported (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Mandatory. Same cause as the last Connection
+         * Cleared for the call. Valid values are listed in
+         * Table 17-154.
+         *
          * @public
          * @readonly
          */
         readonly cause: EventCause,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional media class and characteristics
+         * (§12.2.20).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional high-level call characteristics
+         * (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional global call data and thread data
+         * (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * Optional location information for devices in the
+         * call.
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the
+         * security and privateData parameters from the
+         * ECMA-269 event table.
+         *
          * @public
          * @readonly
          */

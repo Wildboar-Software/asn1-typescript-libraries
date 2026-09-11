@@ -28,7 +28,17 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary VoiceErrorOccuredEvent
  * @description
- * 
+ *
+ * Indicates an error or exception has been encountered. The type name keeps the
+ * spec spelling "Occured". Reported to a computing function that has a
+ * device-type or call-type monitor. This module has no ROSE OPERATION; the
+ * payload is a voice-unit event alternative (ECMA-285 §24.2). (ECMA-269
+ * §26.2.18, ECMA-285 §24.2.18).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +57,52 @@ class VoiceErrorOccuredEvent {
     constructor (
         /**
          * @summary `overConnection`.
+         * @description
+         *
+         * Connection on which the voice error occurred (ECMA-269 §26.2.18).
+         *
          * @public
          * @readonly
          */
         readonly overConnection: ConnectionID,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Event cause, when the switching function supplies one.
+         *
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Services permitted on the connection after this event.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

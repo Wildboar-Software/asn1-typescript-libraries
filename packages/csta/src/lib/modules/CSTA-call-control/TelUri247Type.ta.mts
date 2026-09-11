@@ -8,7 +8,12 @@ import { IA5String, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary TelUri247Type
  * @description
- * 
+ *
+ * RFC 3966 `tel:` URI. ECMA-285 §9.9 requires an emergency
+ * number available 24/7 when used in `ProvidedBy`.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

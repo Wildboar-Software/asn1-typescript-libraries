@@ -17,7 +17,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ConferenceCallArgument
  * @description
- * 
+ *
+ * Service request for Conference Call (ECMA-269 §17.1.9 /
+ * ECMA-285 §15.1.9). Names the two connections at the
+ * conferencing device. Other calls at that device are unaffected
+ * (FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +42,33 @@ class ConferenceCallArgument {
     constructor (
         /**
          * @summary `heldCall`.
+         * @description
+         *
+         * Mandatory. Conferencing device's connection in the held
+         * (or otherwise first) call. Initial Connected or Hold.
+         *
          * @public
          * @readonly
          */
         readonly heldCall: ConnectionID,
         /**
          * @summary `activeCall`.
+         * @description
+         *
+         * Mandatory. Conferencing device's connection in the
+         * second call. Initial Connected or Hold.
+         *
          * @public
          * @readonly
          */
         readonly activeCall: ConnectionID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

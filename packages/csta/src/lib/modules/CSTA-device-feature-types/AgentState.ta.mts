@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentState
  * @description
- * 
+ *
+ * Agent state relative to an ACD device or ACD group. An agent may have several
+ * states across groups, or one state for all. This Standard does not restrict
+ * transitions; unsupported ones are rejected on Set Agent State. ECMA-269
+ * §6.1.1.6.4, §22.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +41,14 @@ enum _enum_for_AgentState {
 /**
  * @summary AgentState
  * @description
- * 
+ *
+ * Agent state relative to an ACD device or ACD group. An agent may have several
+ * states across groups, or one state for all. This Standard does not restrict
+ * transitions; unsupported ones are rejected on Set Agent State. ECMA-269
+ * §6.1.1.6.4, §22.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +68,14 @@ type AgentState = _enum_for_AgentState;
 /**
  * @summary AgentState
  * @description
- * 
+ *
+ * Agent state relative to an ACD device or ACD group. An agent may have several
+ * states across groups, or one state for all. This Standard does not restrict
+ * transitions; unsupported ones are rejected on Set Agent State. ECMA-269
+ * §6.1.1.6.4, §22.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,14 +94,20 @@ const AgentState = _enum_for_AgentState;
 
 /**
  * @summary AgentState_agentNotReady
+ * @description
+ * Logged on to an ACD device or group but not prepared to handle
+ * ACD-distributed calls. Non-ACD calls may still be received. Entry event:
+ * Agent Not Ready. ECMA-269 §6.1.1.6.4.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const AgentState_agentNotReady: AgentState = AgentState.agentNotReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentNotReady
+ * @description Alias of {@link AgentState_agentNotReady}.
  * @constant
  * @type {number}
  */
@@ -89,14 +116,19 @@ const agentNotReady: AgentState = AgentState.agentNotReady; /* SHORT_NAMED_ENUME
 
 /**
  * @summary AgentState_agentNull
+ * @description
+ * Not logged on to the ACD device or group at this device. Entry event: Agent
+ * Logged Off. ECMA-269 §6.1.1.6.4.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const AgentState_agentNull: AgentState = AgentState.agentNull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentNull
+ * @description Alias of {@link AgentState_agentNull}.
  * @constant
  * @type {number}
  */
@@ -105,14 +137,19 @@ const agentNull: AgentState = AgentState.agentNull; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary AgentState_agentReady
+ * @description
+ * Logged on and prepared to handle ACD calls, even if involved with non-ACD
+ * calls. Entry event: Agent Ready. ECMA-269 §6.1.1.6.4.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const AgentState_agentReady: AgentState = AgentState.agentReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentReady
+ * @description Alias of {@link AgentState_agentReady}.
  * @constant
  * @type {number}
  */
@@ -121,14 +158,19 @@ const agentReady: AgentState = AgentState.agentReady; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary AgentState_agentBusy
+ * @description
+ * Involved with an existing ACD call at the device, including a call on hold.
+ * Entry event: Agent Busy. ECMA-269 §6.1.1.6.4.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const AgentState_agentBusy: AgentState = AgentState.agentBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentBusy
+ * @description Alias of {@link AgentState_agentBusy}.
  * @constant
  * @type {number}
  */
@@ -137,14 +179,20 @@ const agentBusy: AgentState = AgentState.agentBusy; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary AgentState_agentWorkingAfterCall
+ * @description
+ * No longer connected to an ACD call but still occupied with work related to a
+ * previous ACD call. Cannot receive ACD calls. Entry event: Agent Working After
+ * Call. ECMA-269 §6.1.1.6.4.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const AgentState_agentWorkingAfterCall: AgentState = AgentState.agentWorkingAfterCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentWorkingAfterCall
+ * @description Alias of {@link AgentState_agentWorkingAfterCall}.
  * @constant
  * @type {number}
  */

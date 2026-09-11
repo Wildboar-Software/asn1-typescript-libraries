@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetSwitchingFunctionDevicesResult
  * @description
- * 
+ *
+ * Positive ack (Table 13-11). Correlates later Switching Function
+ * Devices segments. If no devices match, a following segment still
+ * arrives with an empty `deviceList`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,20 @@ class GetSwitchingFunctionDevicesResult {
     constructor (
         /**
          * @summary `serviceCrossRefID`.
+         * @description
+         *
+         * SF-allocated correlator for subsequent Switching Function
+         * Devices services (ECMA-269 §12.3.29).
          * @public
          * @readonly
          */
         readonly serviceCrossRefID: ServiceCrossRefID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 13-11.
          * @public
          * @readonly
          */

@@ -11,7 +11,14 @@ import { RegistrationList, _decode_RegistrationList, _encode_RegistrationList } 
 /**
  * @summary GetRegistrationsRes_crossRefIDorRegistrationData
  * @description
- * 
+ *
+ * CHOICE: `serviceCrossRefID` correlates later Registration Info
+ * (SF→CF, not this module); `registrationList` is the complete
+ * list in this ack.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

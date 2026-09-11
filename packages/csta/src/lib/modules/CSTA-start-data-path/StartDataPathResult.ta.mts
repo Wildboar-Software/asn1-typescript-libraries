@@ -19,7 +19,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartDataPathResult
  * @description
- * 
+ *
+ * Returns `ioCrossRefID` for the new path. Collection triggers may be echoed
+ * (ECMA-269 §24.2.8.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +45,53 @@ class StartDataPathResult {
     constructor (
         /**
          * @summary `ioCrossRefID`.
+         * @description
+         *
+         * Cross-reference for the created data path (ECMA-269 §24.2.8.2.1).
+         *
          * @public
          * @readonly
          */
         readonly ioCrossRefID: IOCrossRefID,
         /**
          * @summary `numberOfCharactersToCollect`.
+         * @description
+         *
+         * Send collected characters after this many (ECMA-269 §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly numberOfCharactersToCollect: OPTIONAL<INTEGER>,
         /**
          * @summary `terminationCharacter`.
+         * @description
+         *
+         * IA5 character that flushes collected characters onto the path
+         * (ECMA-269 §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly terminationCharacter: OPTIONAL<IA5String>,
         /**
          * @summary `timeout`.
+         * @description
+         *
+         * Seconds after which collected characters are sent (ECMA-269
+         * §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly timeout: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

@@ -49,7 +49,13 @@ import { Transferred, _decode_Transferred, _encode_Transferred } from "../CSTA-c
 /**
  * @summary CallControlEvtsList
  * @description
- * 
+ * Call Control events the SF supports (ECMA-269 Annex C.6, ECMA-285 §9.10).
+ * Omit unsupported events.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,108 +89,162 @@ class CallControlEvtsList {
          * @summary `bridged`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly bridged: OPTIONAL<Bridged>,
         /**
          * @summary `callCleared`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly callCleared: OPTIONAL<CallCleared>,
         /**
          * @summary `conferenced`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly conferenced: OPTIONAL<Conferenced>,
         /**
          * @summary `connectionCleared`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly connectionCleared: OPTIONAL<ConnectionCleared>,
         /**
          * @summary `delivered`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly delivered: OPTIONAL<Delivered>,
         /**
          * @summary `digitsDialed`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly digitsDialed: OPTIONAL<DigitsDialed>,
         /**
          * @summary `diverted`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly diverted: OPTIONAL<Diverted>,
         /**
          * @summary `established`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly established: OPTIONAL<Established>,
         /**
          * @summary `failed`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly failed: OPTIONAL<Failed>,
         /**
          * @summary `held`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly held: OPTIONAL<Held>,
         /**
          * @summary `netwCapsChanged`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly netwCapsChanged: OPTIONAL<NetwCapsChanged>,
         /**
          * @summary `netwReached`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly netwReached: OPTIONAL<NetwReached>,
         /**
          * @summary `offered`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly offered: OPTIONAL<Offered>,
         /**
          * @summary `originated`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly originated: OPTIONAL<Originated>,
         /**
          * @summary `queued`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly queued: OPTIONAL<Queued>,
         /**
          * @summary `retrieved`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly retrieved: OPTIONAL<Retrieved>,
         /**
          * @summary `serviceInitiated`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly serviceInitiated: OPTIONAL<ServiceInitiated>,
         /**
          * @summary `transferred`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly transferred: OPTIONAL<Transferred>
     ) {}

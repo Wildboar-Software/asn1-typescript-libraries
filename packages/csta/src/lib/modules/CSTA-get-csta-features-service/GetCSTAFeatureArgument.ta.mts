@@ -15,7 +15,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetCSTAFeatureArgument
  * @description
- * 
+ *
+ * Get CSTA Features request (ECMA-269 Table 13-2). No device or
+ * filter; the result is switching-function-wide.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +36,9 @@ class GetCSTAFeatureArgument {
     constructor (
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and privateData. ECMA-269 Table 13-2.
          * @public
          * @readonly
          */

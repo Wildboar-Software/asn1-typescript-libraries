@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary callBackNonCallRelated
  * @description
- * 
+ *
+ * Call Back Non-Call-Related (ECMA-269 §22.1.1 / ECMA-285 §20.1.1). Direction:
+ * CF→SF. ROSE local CODE 300. Errors: `universalFailure`. Cancel with Cancel
+ * Call Back. Duplicate pairs: SF option.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

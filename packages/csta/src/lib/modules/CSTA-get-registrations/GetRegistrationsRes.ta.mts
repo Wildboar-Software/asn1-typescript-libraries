@@ -21,7 +21,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetRegistrationsRes
  * @description
- * 
+ *
+ * Positive ack (Table 14-19): either a cross-ref or the list.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +44,20 @@ class GetRegistrationsRes {
     constructor (
         /**
          * @summary `crossRefIDorRegistrationData`.
+         * @description
+         *
+         * `serviceCrossRefID` if Registration Info will follow;
+         * `registrationList` if the data is inline. Mutually exclusive.
          * @public
          * @readonly
          */
         readonly crossRefIDorRegistrationData: GetRegistrationsRes_crossRefIDorRegistrationData,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-19.
          * @public
          * @readonly
          */

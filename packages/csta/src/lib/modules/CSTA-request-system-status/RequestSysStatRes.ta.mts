@@ -22,7 +22,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RequestSysStatRes
  * @description
- * 
+ *
+ * Positive ack (Table 14-11). Values: ECMA-269 §12.2.28.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +43,21 @@ class RequestSysStatRes {
     constructor (
         /**
          * @summary `systemStatus`.
+         * @description
+         *
+         * Status of the queried function: initializing, enabled, normal,
+         * messages lost, disabled, partially disabled, overload
+         * imminent/reached/relieved.
          * @public
          * @readonly
          */
         readonly systemStatus: SystemStatus,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-11.
          * @public
          * @readonly
          */

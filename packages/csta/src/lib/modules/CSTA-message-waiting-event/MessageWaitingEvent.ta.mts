@@ -20,7 +20,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MessageWaitingEvent
  * @description
- * 
+ *
+ * Message Waiting event (ECMA-269 §21.2.6 / ECMA-285 §19.2.6). Direction: SF→CF
+ * via Event Report. Message-waiting status changed (telephone or Set Message
+ * Waiting Indicator). ASN.1 `targetDevice` is spec `targetDevice`. Not
+ * generated when a Set request leaves the feature unchanged (ECMA-269 §9.5.1 FR
+ * 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +47,37 @@ class MessageWaitingEvent {
     constructor (
         /**
          * @summary `targetDevice`.
+         * @description
+         *
+         * Device whose message-waiting feature changed.
          * @public
          * @readonly
          */
         readonly targetDevice: SubjectDeviceID,
         /**
          * @summary `deviceForMessage`.
+         * @description
+         *
+         * Device where the message is waiting.
          * @public
          * @readonly
          */
         readonly deviceForMessage: OPTIONAL<DeviceID>,
         /**
          * @summary `messageWaitingOn`.
+         * @description
+         *
+         * FALSE = off; TRUE = on.
          * @public
          * @readonly
          */
         readonly messageWaitingOn: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

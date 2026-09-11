@@ -15,7 +15,11 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
 /**
  * @summary CDRTimePeriod
  * @description
- * 
+ *
+ * Inclusive time window for stored CDR retrieval. ECMA-285 §9.11.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +35,20 @@ class CDRTimePeriod {
     constructor (
         /**
          * @summary `beginningOfCDR`.
+         * @description
+         *
+         * Start of the CDR time window. ECMA-285 §9.11.
+         *
          * @public
          * @readonly
          */
         readonly beginningOfCDR: TimeInfo,
         /**
          * @summary `endOfCDR`.
+         * @description
+         *
+         * End of the CDR time window. ECMA-285 §9.11.
+         *
          * @public
          * @readonly
          */

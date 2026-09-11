@@ -15,7 +15,21 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary escapeRegisterAbort
  * @description
- * 
+ *
+ * Switching function asynchronously cancels an active escape registration (for
+ * example when vendor extensions are no longer available). No positive
+ * acknowledgement is defined (ECMA-269 §29.1.2).
+ *
+ * Switching function → computing function.
+ *
+ * Unconfirmed (`ALWAYS RESPONDS FALSE`); no result.
+ *
+ * ROSE local:366. Errors: `universalFailure` (ECMA-285 §27.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

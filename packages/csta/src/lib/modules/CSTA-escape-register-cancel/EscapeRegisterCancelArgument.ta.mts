@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary EscapeRegisterCancelArgument
  * @description
- * 
+ *
+ * Registration to cancel (ECMA-269 §29.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class EscapeRegisterCancelArgument {
     constructor (
         /**
          * @summary `escapeRegisterID`.
+         * @description
+         *
+         * Escape registration to cancel (ECMA-269 §29.1.3.1).
+         *
          * @public
          * @readonly
          */
         readonly escapeRegisterID: EscapeRegisterID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

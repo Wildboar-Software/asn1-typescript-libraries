@@ -25,7 +25,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SendBroadcastDataArgument
  * @description
- * 
+ *
+ * Payload plus optional path type and display attributes (ECMA-269 §24.2.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +49,43 @@ class SendBroadcastDataArgument {
     constructor (
         /**
          * @summary `ioData`.
+         * @description
+         *
+         * Data to send (ECMA-269 §24.2.5.1).
+         *
          * @public
          * @readonly
          */
         readonly ioData: OCTET_STRING,
         /**
          * @summary `dataPathType`.
+         * @description
+         *
+         * `text` (digitally encoded text) or `voice` (digitally encoded voice)
+         * (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */
         readonly dataPathType: OPTIONAL<DataPathType>,
         /**
          * @summary `displayAttributes`.
+         * @description
+         *
+         * Only when sending to device displays. Broadcast omits per-device
+         * displayID (ECMA-269 §24.2.5.1).
+         *
          * @public
          * @readonly
          */
         readonly displayAttributes: OPTIONAL<DisplayAttributeList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

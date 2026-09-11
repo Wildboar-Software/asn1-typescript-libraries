@@ -8,7 +8,20 @@ import { OCTET_STRING, NULL, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CSTAPrivateData
  * @description
- * 
+ *
+ * Non-standard parameters in CSTA messages (ECMA-269 §12.2.11;
+ * ECMA-285 §9.8). Max string length from capabilities exchange.
+ *
+ * - `string_`: opaque octet string.
+ * - `private_`: ASN.1 `NULL` placeholder; an implementation replaces
+ *   it with another valid ASN.1 type.
+ *
+ * If unrecognised, discard this parameter and process the rest of
+ * the message (ECMA-285 §5.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

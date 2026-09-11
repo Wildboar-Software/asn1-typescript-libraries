@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary IgnoreUnsupportedParameters
  * @description
- * 
+ * How the SF handles unsupported optional parameters in service requests
+ * (ECMA-269 §13.1.4.2.1 Table 13-9, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +34,13 @@ enum _enum_for_IgnoreUnsupportedParameters {
 /**
  * @summary IgnoreUnsupportedParameters
  * @description
- * 
+ * How the SF handles unsupported optional parameters in service requests
+ * (ECMA-269 §13.1.4.2.1 Table 13-9, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +57,13 @@ type IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;
 /**
  * @summary IgnoreUnsupportedParameters
  * @description
- * 
+ * How the SF handles unsupported optional parameters in service requests
+ * (ECMA-269 §13.1.4.2.1 Table 13-9, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +81,9 @@ const IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;
  * @summary IgnoreUnsupportedParameters_ignoreParameters
  * @constant
  * @type {number}
+ * @description
+ * SF treats unsupported optional parameters as absent (ECMA-269
+ * §13.1.2–13.1.4).
  */
 export
 const IgnoreUnsupportedParameters_ignoreParameters: IgnoreUnsupportedParameters = IgnoreUnsupportedParameters.ignoreParameters; /* LONG_NAMED_ENUMERATED_VALUE */
@@ -71,6 +92,8 @@ const IgnoreUnsupportedParameters_ignoreParameters: IgnoreUnsupportedParameters 
  * @summary ignoreParameters
  * @constant
  * @type {number}
+ * @description
+ * Alias of `IgnoreUnsupportedParameters_ignoreParameters`.
  */
 export
 const ignoreParameters: IgnoreUnsupportedParameters = IgnoreUnsupportedParameters.ignoreParameters; /* SHORT_NAMED_ENUMERATED_VALUE */
@@ -79,6 +102,9 @@ const ignoreParameters: IgnoreUnsupportedParameters = IgnoreUnsupportedParameter
  * @summary IgnoreUnsupportedParameters_rejectMessage
  * @constant
  * @type {number}
+ * @description
+ * SF negatively acknowledges requests with unsupported optional parameters
+ * (ECMA-269 §13.1.2–13.1.4).
  */
 export
 const IgnoreUnsupportedParameters_rejectMessage: IgnoreUnsupportedParameters = IgnoreUnsupportedParameters.rejectMessage; /* LONG_NAMED_ENUMERATED_VALUE */
@@ -87,6 +113,8 @@ const IgnoreUnsupportedParameters_rejectMessage: IgnoreUnsupportedParameters = I
  * @summary rejectMessage
  * @constant
  * @type {number}
+ * @description
+ * Alias of `IgnoreUnsupportedParameters_rejectMessage`.
  */
 export
 const rejectMessage: IgnoreUnsupportedParameters = IgnoreUnsupportedParameters.rejectMessage; /* SHORT_NAMED_ENUMERATED_VALUE */

@@ -9,7 +9,13 @@ import { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../CST
 /**
  * @summary LocationInfoList
  * @description
- * 
+ *
+ * Sequence of one or more PIDF-LO objects. Used when location
+ * is given for several devices in a call (e.g. call-control
+ * events). ECMA-269 §12.2.19.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

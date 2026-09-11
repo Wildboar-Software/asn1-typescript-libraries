@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary singleStepTrans
  * @description
- * 
+ *
+ * Single Step Transfer (ECMA-269 §17.1.26 / ECMA-285
+ * §15.1.26). Invoked by the computing function on the
+ * switching function. Replaces the transferring device on
+ * `activeCall` with `transferredTo`. `activeCall` moves from
+ * Connected, Alerting, Failed, Held, or Queued to Null. ROSE
+ * local CODE 50. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

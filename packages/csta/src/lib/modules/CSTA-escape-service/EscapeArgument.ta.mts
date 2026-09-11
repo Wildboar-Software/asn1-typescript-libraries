@@ -19,7 +19,14 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
 /**
  * @summary EscapeArgument
  * @description
- * 
+ *
+ * Optional escapeRegisterID (SF→CF only), optional security, and mandatory
+ * privateData (ECMA-269 §29.2.1.1 / §9.4.2.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +43,34 @@ class EscapeArgument {
     constructor (
         /**
          * @summary `escapeRegisterID`.
+         * @description
+         *
+         * Associated escape registration. Present on SF→CF invokes when
+         * registration is supported; a CF→SF request shall not include it
+         * (ECMA-269 §9.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly escapeRegisterID: OPTIONAL<EscapeRegisterID>,
         /**
          * @summary `security`.
+         * @description
+         *
+         * Timestamp, sequence number, and security information (ECMA-269
+         * service tables).
+         *
          * @public
          * @readonly
          */
         readonly security: OPTIONAL<CSTASecurityData>,
         /**
          * @summary `privateData`.
+         * @description
+         *
+         * Vendor-defined Escape parameters. CSTA does not specify the contents
+         * (ECMA-269 §9.4.1 / §9.4.2.3).
+         *
          * @public
          * @readonly
          */

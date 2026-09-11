@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CallAssociatedEvents
  * @description
- * 
+ *
+ * Call-associated events. BIT STRING advertised in ACSE user-information
+ * listing which CSTA services or events this association will use. ECMA-285
+ * §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,13 +31,17 @@ type CallAssociatedEvents = BIT_STRING;
 
 /**
  * @summary CallAssociatedEvents_callInformation
+ * @description
+ * Advertises the `callInformation` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CallAssociatedEvents_callInformation: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary callInformation
+ * @description Alias of {@link CallAssociatedEvents_callInformation}.
  * @constant
  */
 export
@@ -39,13 +49,17 @@ const callInformation: number = CallAssociatedEvents_callInformation; /* SHORT_N
 
 /**
  * @summary CallAssociatedEvents_charging
+ * @description
+ * Advertises the `charging` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CallAssociatedEvents_charging: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary charging
+ * @description Alias of {@link CallAssociatedEvents_charging}.
  * @constant
  */
 export
@@ -53,13 +67,18 @@ const charging: number = CallAssociatedEvents_charging; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CallAssociatedEvents_dTMFDigitsDetected
+ * @description
+ * Advertises the `dTMFDigitsDetected` event for this association. ECMA-285
+ * §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CallAssociatedEvents_dTMFDigitsDetected: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary dTMFDigitsDetected
+ * @description Alias of {@link CallAssociatedEvents_dTMFDigitsDetected}.
  * @constant
  */
 export
@@ -67,13 +86,18 @@ const dTMFDigitsDetected: number = CallAssociatedEvents_dTMFDigitsDetected; /* S
 
 /**
  * @summary CallAssociatedEvents_telephonyTonesDetected
+ * @description
+ * Advertises the `telephonyTonesDetected` event for this association. ECMA-285
+ * §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CallAssociatedEvents_telephonyTonesDetected: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary telephonyTonesDetected
+ * @description Alias of {@link CallAssociatedEvents_telephonyTonesDetected}.
  * @constant
  */
 export
@@ -81,13 +105,18 @@ const telephonyTonesDetected: number = CallAssociatedEvents_telephonyTonesDetect
 
 /**
  * @summary CallAssociatedEvents_serviceCompletionFailure
+ * @description
+ * Advertises the `serviceCompletionFailure` event for this association.
+ * ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CallAssociatedEvents_serviceCompletionFailure: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary serviceCompletionFailure
+ * @description Alias of {@link CallAssociatedEvents_serviceCompletionFailure}.
  * @constant
  */
 export

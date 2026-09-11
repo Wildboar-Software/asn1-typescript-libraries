@@ -8,7 +8,14 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary TransAndConfSetup
  * @description
- * 
+ * Ways the SF can set up a conference or transfer. Absent from Get Switching
+ * Function Capabilities means only Consultation Call (ECMA-269 §13.1.4.2.1
+ * Table 13-9, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +33,9 @@ type TransAndConfSetup = BIT_STRING;
 /**
  * @summary TransAndConfSetup_consultationCall
  * @constant
+ * @description
+ * Bit set means the SF supports set up via Consultation Call (ECMA-269
+ * §13.1.4.2.1 Table 13-9).
  */
 export
 const TransAndConfSetup_consultationCall: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +43,8 @@ const TransAndConfSetup_consultationCall: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary consultationCall
  * @constant
+ * @description
+ * Alias of `TransAndConfSetup_consultationCall`.
  */
 export
 const consultationCall: number = TransAndConfSetup_consultationCall; /* SHORT_NAMED_BIT */
@@ -40,6 +52,9 @@ const consultationCall: number = TransAndConfSetup_consultationCall; /* SHORT_NA
 /**
  * @summary TransAndConfSetup_holdCallMakeCall
  * @constant
+ * @description
+ * Bit set means the SF supports set up via Hold Call then Make Call (ECMA-269
+ * §13.1.4.2.1 Table 13-9).
  */
 export
 const TransAndConfSetup_holdCallMakeCall: number = 1; /* LONG_NAMED_BIT */
@@ -47,6 +62,8 @@ const TransAndConfSetup_holdCallMakeCall: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary holdCallMakeCall
  * @constant
+ * @description
+ * Alias of `TransAndConfSetup_holdCallMakeCall`.
  */
 export
 const holdCallMakeCall: number = TransAndConfSetup_holdCallMakeCall; /* SHORT_NAMED_BIT */
@@ -54,6 +71,9 @@ const holdCallMakeCall: number = TransAndConfSetup_holdCallMakeCall; /* SHORT_NA
 /**
  * @summary TransAndConfSetup_alternateCall
  * @constant
+ * @description
+ * Bit set means the SF supports set up via Alternate Call (ECMA-269 §13.1.4.2.1
+ * Table 13-9).
  */
 export
 const TransAndConfSetup_alternateCall: number = 2; /* LONG_NAMED_BIT */
@@ -61,6 +81,8 @@ const TransAndConfSetup_alternateCall: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary alternateCall
  * @constant
+ * @description
+ * Alias of `TransAndConfSetup_alternateCall`.
  */
 export
 const alternateCall: number = TransAndConfSetup_alternateCall; /* SHORT_NAMED_BIT */
@@ -68,6 +90,9 @@ const alternateCall: number = TransAndConfSetup_alternateCall; /* SHORT_NAMED_BI
 /**
  * @summary TransAndConfSetup_twoCallsInHold
  * @constant
+ * @description
+ * Bit set means the SF supports two calls in the initial state of Hold
+ * (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const TransAndConfSetup_twoCallsInHold: number = 3; /* LONG_NAMED_BIT */
@@ -75,6 +100,8 @@ const TransAndConfSetup_twoCallsInHold: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary twoCallsInHold
  * @constant
+ * @description
+ * Alias of `TransAndConfSetup_twoCallsInHold`.
  */
 export
 const twoCallsInHold: number = TransAndConfSetup_twoCallsInHold; /* SHORT_NAMED_BIT */
@@ -82,6 +109,9 @@ const twoCallsInHold: number = TransAndConfSetup_twoCallsInHold; /* SHORT_NAMED_
 /**
  * @summary TransAndConfSetup_twoCallsInConnected
  * @constant
+ * @description
+ * Bit set means the SF supports two calls in the initial state of Connected
+ * (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const TransAndConfSetup_twoCallsInConnected: number = 4; /* LONG_NAMED_BIT */
@@ -89,6 +119,8 @@ const TransAndConfSetup_twoCallsInConnected: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary twoCallsInConnected
  * @constant
+ * @description
+ * Alias of `TransAndConfSetup_twoCallsInConnected`.
  */
 export
 const twoCallsInConnected: number = TransAndConfSetup_twoCallsInConnected; /* SHORT_NAMED_BIT */

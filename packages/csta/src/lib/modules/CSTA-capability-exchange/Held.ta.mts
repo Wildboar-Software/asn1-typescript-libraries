@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Held
  * @description
- * 
+ * Capability bitmap for the Held event (ECMA-269 C.6.10, ECMA-285 §9.10).
+ * Presence of this entry in `CallControlEvtsList` means the SF supports that
+ * event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +38,9 @@ type Held = BIT_STRING;
 /**
  * @summary Held_correlatorData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `correlatorData` parameter
+ * (ECMA-269 C.6.10).
  */
 export
 const Held_correlatorData: number = 0; /* LONG_NAMED_BIT */
@@ -37,6 +48,8 @@ const Held_correlatorData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary correlatorData
  * @constant
+ * @description
+ * Alias of `Held_correlatorData`.
  */
 export
 const correlatorData: number = Held_correlatorData; /* SHORT_NAMED_BIT */
@@ -44,6 +57,9 @@ const correlatorData: number = Held_correlatorData; /* SHORT_NAMED_BIT */
 /**
  * @summary Held_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.10).
  */
 export
 const Held_servicesPermitted: number = 1; /* LONG_NAMED_BIT */
@@ -51,6 +67,8 @@ const Held_servicesPermitted: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `Held_servicesPermitted`.
  */
 export
 const servicesPermitted: number = Held_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -58,6 +76,9 @@ const servicesPermitted: number = Held_servicesPermitted; /* SHORT_NAMED_BIT */
 /**
  * @summary Held_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.6.10).
  */
 export
 const Held_mediaCallCharacteristics: number = 2; /* LONG_NAMED_BIT */
@@ -65,6 +86,8 @@ const Held_mediaCallCharacteristics: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `Held_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = Held_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -72,6 +95,9 @@ const mediaCallCharacteristics: number = Held_mediaCallCharacteristics; /* SHORT
 /**
  * @summary Held_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.6.10).
  */
 export
 const Held_callCharacteristics: number = 3; /* LONG_NAMED_BIT */
@@ -79,6 +105,8 @@ const Held_callCharacteristics: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `Held_callCharacteristics`.
  */
 export
 const callCharacteristics: number = Held_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -86,6 +114,9 @@ const callCharacteristics: number = Held_callCharacteristics; /* SHORT_NAMED_BIT
 /**
  * @summary Held_heldConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.10).
  */
 export
 const Held_heldConnectionInfo: number = 4; /* LONG_NAMED_BIT */
@@ -93,6 +124,8 @@ const Held_heldConnectionInfo: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary heldConnectionInfo
  * @constant
+ * @description
+ * Alias of `Held_heldConnectionInfo`.
  */
 export
 const heldConnectionInfo: number = Held_heldConnectionInfo; /* SHORT_NAMED_BIT */
@@ -100,6 +133,9 @@ const heldConnectionInfo: number = Held_heldConnectionInfo; /* SHORT_NAMED_BIT *
 /**
  * @summary Held_callLinkageData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callLinkageData` parameter
+ * (ECMA-269 C.6.10).
  */
 export
 const Held_callLinkageData: number = 6; /* LONG_NAMED_BIT */
@@ -107,6 +143,8 @@ const Held_callLinkageData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary callLinkageData
  * @constant
+ * @description
+ * Alias of `Held_callLinkageData`.
  */
 export
 const callLinkageData: number = Held_callLinkageData; /* SHORT_NAMED_BIT */
@@ -114,6 +152,9 @@ const callLinkageData: number = Held_callLinkageData; /* SHORT_NAMED_BIT */
 /**
  * @summary Held_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 C.6.10).
  */
 export
 const Held_languagePreferences: number = 7; /* LONG_NAMED_BIT */
@@ -121,6 +162,8 @@ const Held_languagePreferences: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `Held_languagePreferences`.
  */
 export
 const languagePreferences: number = Held_languagePreferences; /* SHORT_NAMED_BIT */
@@ -128,6 +171,9 @@ const languagePreferences: number = Held_languagePreferences; /* SHORT_NAMED_BIT
 /**
  * @summary Held_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.6.10).
  */
 export
 const Held_privateData: number = 5; /* LONG_NAMED_BIT */
@@ -135,6 +181,8 @@ const Held_privateData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Held_privateData`.
  */
 export
 const privateData: number = Held_privateData; /* SHORT_NAMED_BIT */
@@ -142,6 +190,9 @@ const privateData: number = Held_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary Held_locationInfoList
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `locationInfoList` parameter
+ * (ECMA-269 C.6.10).
  */
 export
 const Held_locationInfoList: number = 8; /* LONG_NAMED_BIT */
@@ -149,6 +200,8 @@ const Held_locationInfoList: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary locationInfoList
  * @constant
+ * @description
+ * Alias of `Held_locationInfoList`.
  */
 export
 const locationInfoList: number = Held_locationInfoList; /* SHORT_NAMED_BIT */

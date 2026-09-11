@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ForwardDefault
  * @description
- * 
+ *
+ * Marks forwardingType and/or forwardDN as switching-function default settings.
+ * If supported and omitted, the information is not a default. ECMA-269
+ * §22.1.11.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +36,13 @@ enum _enum_for_ForwardDefault {
 /**
  * @summary ForwardDefault
  * @description
- * 
+ *
+ * Marks forwardingType and/or forwardDN as switching-function default settings.
+ * If supported and omitted, the information is not a default. ECMA-269
+ * §22.1.11.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +60,13 @@ type ForwardDefault = _enum_for_ForwardDefault;
 /**
  * @summary ForwardDefault
  * @description
- * 
+ *
+ * Marks forwardingType and/or forwardDN as switching-function default settings.
+ * If supported and omitted, the information is not a default. ECMA-269
+ * §22.1.11.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,14 +83,19 @@ const ForwardDefault = _enum_for_ForwardDefault;
 
 /**
  * @summary ForwardDefault_forwardingTypeAndForwardDN
+ * @description
+ * Both forwardingType and forwardDN are switching-function defaults. ECMA-269
+ * §22.1.11.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardDefault_forwardingTypeAndForwardDN: ForwardDefault = ForwardDefault.forwardingTypeAndForwardDN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardingTypeAndForwardDN
+ * @description Alias of {@link ForwardDefault_forwardingTypeAndForwardDN}.
  * @constant
  * @type {number}
  */
@@ -81,14 +104,18 @@ const forwardingTypeAndForwardDN: ForwardDefault = ForwardDefault.forwardingType
 
 /**
  * @summary ForwardDefault_forwardingType
+ * @description
+ * forwardingType is a switching-function default. ECMA-269 §22.1.11.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardDefault_forwardingType: ForwardDefault = ForwardDefault.forwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardingType
+ * @description Alias of {@link ForwardDefault_forwardingType}.
  * @constant
  * @type {number}
  */
@@ -97,14 +124,17 @@ const forwardingType: ForwardDefault = ForwardDefault.forwardingType; /* SHORT_N
 
 /**
  * @summary ForwardDefault_forwardDN
+ * @description forwardDN is a switching-function default. ECMA-269 §22.1.11.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ForwardDefault_forwardDN: ForwardDefault = ForwardDefault.forwardDN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardDN
+ * @description Alias of {@link ForwardDefault_forwardDN}.
  * @constant
  * @type {number}
  */

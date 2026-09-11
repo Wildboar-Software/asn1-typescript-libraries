@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LampBrightness
  * @description
- * 
+ *
+ * Intensity while the lamp is on (as indicated by lamp mode). Visible levels
+ * are lamp-dependent. Default Unspecified/Normal. ECMA-269 §21.1.17.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +35,12 @@ enum _enum_for_LampBrightness {
 /**
  * @summary LampBrightness
  * @description
- * 
+ *
+ * Intensity while the lamp is on (as indicated by lamp mode). Visible levels
+ * are lamp-dependent. Default Unspecified/Normal. ECMA-269 §21.1.17.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +58,12 @@ type LampBrightness = _enum_for_LampBrightness;
 /**
  * @summary LampBrightness
  * @description
- * 
+ *
+ * Intensity while the lamp is on (as indicated by lamp mode). Visible levels
+ * are lamp-dependent. Default Unspecified/Normal. ECMA-269 §21.1.17.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +80,10 @@ const LampBrightness = _enum_for_LampBrightness;
 
 /**
  * @summary LampBrightness_unspecified
+ * @description
+ *
+ * Unspecified/Normal (default). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +100,10 @@ const unspecified: LampBrightness = LampBrightness.unspecified; /* SHORT_NAMED_E
 
 /**
  * @summary LampBrightness_dim
+ * @description
+ *
+ * Dim. ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +120,10 @@ const dim: LampBrightness = LampBrightness.dim; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary LampBrightness_bright
+ * @description
+ *
+ * Bright. ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */

@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DeviceMaintenanceEvents
  * @description
- * 
+ *
+ * Device-maintenance events. BIT STRING advertised in ACSE user-information
+ * listing which CSTA services or events this association will use. ECMA-285
+ * §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,13 +30,17 @@ type DeviceMaintenanceEvents = BIT_STRING;
 
 /**
  * @summary DeviceMaintenanceEvents_backInService
+ * @description
+ * Advertises the `backInService` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const DeviceMaintenanceEvents_backInService: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary backInService
+ * @description Alias of {@link DeviceMaintenanceEvents_backInService}.
  * @constant
  */
 export
@@ -38,13 +48,19 @@ const backInService: number = DeviceMaintenanceEvents_backInService; /* SHORT_NA
 
 /**
  * @summary DeviceMaintenanceEvents_deviceCapabilityChanged
+ * @description
+ * Advertises the `deviceCapabilityChanged` event for this association. ECMA-285
+ * §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const DeviceMaintenanceEvents_deviceCapabilityChanged: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary deviceCapabilityChanged
+ * @description
+ * Alias of {@link DeviceMaintenanceEvents_deviceCapabilityChanged}.
  * @constant
  */
 export
@@ -52,13 +68,17 @@ const deviceCapabilityChanged: number = DeviceMaintenanceEvents_deviceCapability
 
 /**
  * @summary DeviceMaintenanceEvents_outOfService
+ * @description
+ * Advertises the `outOfService` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const DeviceMaintenanceEvents_outOfService: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary outOfService
+ * @description Alias of {@link DeviceMaintenanceEvents_outOfService}.
  * @constant
  */
 export
@@ -66,13 +86,18 @@ const outOfService: number = DeviceMaintenanceEvents_outOfService; /* SHORT_NAME
 
 /**
  * @summary DeviceMaintenanceEvents_partiallyInService
+ * @description
+ * Advertises the `partiallyInService` event for this association. ECMA-285
+ * §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const DeviceMaintenanceEvents_partiallyInService: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary partiallyInService
+ * @description Alias of {@link DeviceMaintenanceEvents_partiallyInService}.
  * @constant
  */
 export

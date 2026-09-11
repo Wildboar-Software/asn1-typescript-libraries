@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ServiceCompletionFailure
  * @description
- * 
+ * Capability bitmap for the Service Completion Failure event (ECMA-269 C.8.5,
+ * ECMA-285 §9.10). Presence of this entry in `CallAssociatedEvtsList` means the
+ * SF supports that event. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +36,9 @@ type ServiceCompletionFailure = BIT_STRING;
 /**
  * @summary ServiceCompletionFailure_primaryCallConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.5).
  */
 export
 const ServiceCompletionFailure_primaryCallConnectionInfo: number = 0; /* LONG_NAMED_BIT */
@@ -34,6 +46,8 @@ const ServiceCompletionFailure_primaryCallConnectionInfo: number = 0; /* LONG_NA
 /**
  * @summary primaryCallConnectionInfo
  * @constant
+ * @description
+ * Alias of `ServiceCompletionFailure_primaryCallConnectionInfo`.
  */
 export
 const primaryCallConnectionInfo: number = ServiceCompletionFailure_primaryCallConnectionInfo; /* SHORT_NAMED_BIT */
@@ -41,6 +55,9 @@ const primaryCallConnectionInfo: number = ServiceCompletionFailure_primaryCallCo
 /**
  * @summary ServiceCompletionFailure_secondaryCallConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.5).
  */
 export
 const ServiceCompletionFailure_secondaryCallConnectionInfo: number = 1; /* LONG_NAMED_BIT */
@@ -48,6 +65,8 @@ const ServiceCompletionFailure_secondaryCallConnectionInfo: number = 1; /* LONG_
 /**
  * @summary secondaryCallConnectionInfo
  * @constant
+ * @description
+ * Alias of `ServiceCompletionFailure_secondaryCallConnectionInfo`.
  */
 export
 const secondaryCallConnectionInfo: number = ServiceCompletionFailure_secondaryCallConnectionInfo; /* SHORT_NAMED_BIT */
@@ -55,6 +74,9 @@ const secondaryCallConnectionInfo: number = ServiceCompletionFailure_secondaryCa
 /**
  * @summary ServiceCompletionFailure_otherDevicesPrimaryCallList
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.5).
  */
 export
 const ServiceCompletionFailure_otherDevicesPrimaryCallList: number = 2; /* LONG_NAMED_BIT */
@@ -62,6 +84,8 @@ const ServiceCompletionFailure_otherDevicesPrimaryCallList: number = 2; /* LONG_
 /**
  * @summary otherDevicesPrimaryCallList
  * @constant
+ * @description
+ * Alias of `ServiceCompletionFailure_otherDevicesPrimaryCallList`.
  */
 export
 const otherDevicesPrimaryCallList: number = ServiceCompletionFailure_otherDevicesPrimaryCallList; /* SHORT_NAMED_BIT */
@@ -69,6 +93,9 @@ const otherDevicesPrimaryCallList: number = ServiceCompletionFailure_otherDevice
 /**
  * @summary ServiceCompletionFailure_otherDevicesSecondaryCallList
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.8.5).
  */
 export
 const ServiceCompletionFailure_otherDevicesSecondaryCallList: number = 3; /* LONG_NAMED_BIT */
@@ -76,6 +103,8 @@ const ServiceCompletionFailure_otherDevicesSecondaryCallList: number = 3; /* LON
 /**
  * @summary otherDevicesSecondaryCallList
  * @constant
+ * @description
+ * Alias of `ServiceCompletionFailure_otherDevicesSecondaryCallList`.
  */
 export
 const otherDevicesSecondaryCallList: number = ServiceCompletionFailure_otherDevicesSecondaryCallList; /* SHORT_NAMED_BIT */
@@ -83,6 +112,9 @@ const otherDevicesSecondaryCallList: number = ServiceCompletionFailure_otherDevi
 /**
  * @summary ServiceCompletionFailure_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.8.5).
  */
 export
 const ServiceCompletionFailure_mediaCallCharacteristics: number = 4; /* LONG_NAMED_BIT */
@@ -90,6 +122,8 @@ const ServiceCompletionFailure_mediaCallCharacteristics: number = 4; /* LONG_NAM
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `ServiceCompletionFailure_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = ServiceCompletionFailure_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -97,6 +131,9 @@ const mediaCallCharacteristics: number = ServiceCompletionFailure_mediaCallChara
 /**
  * @summary ServiceCompletionFailure_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.8.5).
  */
 export
 const ServiceCompletionFailure_privateData: number = 5; /* LONG_NAMED_BIT */
@@ -104,6 +141,8 @@ const ServiceCompletionFailure_privateData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `ServiceCompletionFailure_privateData`.
  */
 export
 const privateData: number = ServiceCompletionFailure_privateData; /* SHORT_NAMED_BIT */

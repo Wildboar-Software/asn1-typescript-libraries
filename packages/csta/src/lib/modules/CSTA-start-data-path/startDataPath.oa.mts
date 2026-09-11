@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary startDataPath
  * @description
- * 
+ *
+ * Starts a data path on the specified device or connection. Bidirectional
+ * (ECMA-269 §24.2.8).
+ *
+ * Bidirectional: computing function or switching function may invoke.
+ *
+ * ROSE local:110. Errors: `universalFailure` (ECMA-285 §22.2.8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

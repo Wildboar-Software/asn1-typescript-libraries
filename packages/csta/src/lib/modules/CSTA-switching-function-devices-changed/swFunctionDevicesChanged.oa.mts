@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary swFunctionDevicesChanged
  * @description
- * 
+ *
+ * Switching Function Devices Changed (ECMA-269 §14.2.4 / ECMA-285 §12.2.4).
+ * Direction: SF→CF. ROSE local CODE 213. Errors: `universalFailure`. Sent
+ * whenever device-list information changes, whether or not
+ * Get Switching Function Devices was previously issued.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

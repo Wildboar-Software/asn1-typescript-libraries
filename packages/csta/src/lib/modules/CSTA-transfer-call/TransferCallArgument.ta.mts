@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary TransferCallArgument
  * @description
- * 
+ *
+ * Service request for Transfer Call (ECMA-269 §17.1.27 /
+ * ECMA-285 §15.1.27). Names the two connections at the
+ * transferring device (typically held primary and consultation).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,35 @@ class TransferCallArgument {
     constructor (
         /**
          * @summary `heldCall`.
+         * @description
+         *
+         * Mandatory. Transferring device's connection in the held
+         * (or first) call. Initial Connected or Hold; becomes
+         * Null.
+         *
          * @public
          * @readonly
          */
         readonly heldCall: ConnectionID,
         /**
          * @summary `activeCall`.
+         * @description
+         *
+         * Mandatory. Transferring device's connection in the
+         * consultation (or second) call. Initial Connected or
+         * Hold; becomes Null.
+         *
          * @public
          * @readonly
          */
         readonly activeCall: ConnectionID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

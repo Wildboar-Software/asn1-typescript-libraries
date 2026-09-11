@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DcollCause
  * @description
- * 
+ *
+ * Why this Data Collected is sent (ECMA-269 §25.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +38,13 @@ enum _enum_for_DcollCause {
 /**
  * @summary DcollCause
  * @description
- * 
+ *
+ * Why this Data Collected is sent (ECMA-269 §25.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,7 +63,13 @@ type DcollCause = _enum_for_DcollCause;
 /**
  * @summary DcollCause
  * @description
- * 
+ *
+ * Why this Data Collected is sent (ECMA-269 §25.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +87,10 @@ const DcollCause = _enum_for_DcollCause;
 
 /**
  * @summary DcollCause_flushCharReceived
+ * @description
+ *
+ * Specified flush character received (digits only) (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +99,10 @@ const DcollCause_flushCharReceived: DcollCause = DcollCause.flushCharReceived; /
 
 /**
  * @summary flushCharReceived
+ * @description
+ *
+ * Specified flush character received (digits only) (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +111,10 @@ const flushCharReceived: DcollCause = DcollCause.flushCharReceived; /* SHORT_NAM
 
 /**
  * @summary DcollCause_charCountReached
+ * @description
+ *
+ * Specified character count reached (digits only) (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +123,10 @@ const DcollCause_charCountReached: DcollCause = DcollCause.charCountReached; /* 
 
 /**
  * @summary charCountReached
+ * @description
+ *
+ * Specified character count reached (digits only) (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +135,10 @@ const charCountReached: DcollCause = DcollCause.charCountReached; /* SHORT_NAMED
 
 /**
  * @summary DcollCause_timeout
+ * @description
+ *
+ * A timeout occurred (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +147,10 @@ const DcollCause_timeout: DcollCause = DcollCause.timeout; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary timeout
+ * @description
+ *
+ * A timeout occurred (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +159,11 @@ const timeout: DcollCause = DcollCause.timeout; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary DcollCause_sfTerminated
+ * @description
+ *
+ * Switching function ended collection before other conditions (ECMA-269
+ * §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +172,11 @@ const DcollCause_sfTerminated: DcollCause = DcollCause.sfTerminated; /* LONG_NAM
 
 /**
  * @summary sfTerminated
+ * @description
+ *
+ * Switching function ended collection before other conditions (ECMA-269
+ * §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */

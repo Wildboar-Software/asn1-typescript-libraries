@@ -11,7 +11,13 @@ import { SnapshotDeviceData, _decode_SnapshotDeviceData, _encode_SnapshotDeviceD
 /**
  * @summary SnapshotDeviceResult_crossRefIDorSnapshotData
  * @description
- * 
+ *
+ * CHOICE: `serviceCrossRefID` for later Snapshot DeviceData
+ * (ECMA-269 §16.1.4); `snapshotData` for inline calls.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

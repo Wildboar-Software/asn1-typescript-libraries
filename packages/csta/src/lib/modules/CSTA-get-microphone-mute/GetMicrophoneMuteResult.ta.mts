@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetMicrophoneMuteResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §21.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetMicrophoneMuteResult {
     constructor (
         /**
          * @summary `microphoneMuteList`.
+         * @description
+         *
+         * One entry per queried apparatus.
          * @public
          * @readonly
          */
         readonly microphoneMuteList: MicrophoneMuteList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

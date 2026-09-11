@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary deflectCall
  * @description
- * 
+ *
+ * Deflect Call (ECMA-269 §17.1.11 / ECMA-285 §15.1.11). Invoked
+ * by the computing function on the switching function. Unlike
+ * Pickup, the new destination is not immediately connected
+ * (FR 1). CallID is unchanged (FR 4). Multiple destinations may
+ * alert together; answering one clears the others with cause
+ * Multiple Alerting (FR 9–10). ROSE local CODE 218. Errors are
+ * `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

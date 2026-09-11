@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setMicrophoneMute
  * @description
- * 
+ *
+ * Set Microphone Mute (ECMA-269 §21.1.20 / ECMA-285 §19.1.20). Direction:
+ * CF→SF. ROSE local CODE 279. Errors: `universalFailure`. Generates Microphone
+ * Mute. If already at the requested value: positive ack and no event (ECMA-269
+ * §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

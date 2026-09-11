@@ -23,7 +23,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DirectedPickupCallArgument
  * @description
- * 
+ *
+ * Service request for Directed Pickup Call (ECMA-269 §17.1.13 /
+ * ECMA-285 §15.1.13). Names the call to pick and the device that
+ * will be connected to it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +49,56 @@ class DirectedPickupCallArgument {
     constructor (
         /**
          * @summary `callToBePickedUp`.
+         * @description
+         *
+         * Mandatory. Connection to pick. Initial Alerting,
+         * Connected, Hold, or Queued; becomes Null at the original
+         * device (§17.1.13.3.1).
+         *
          * @public
          * @readonly
          */
         readonly callToBePickedUp: ConnectionID,
         /**
          * @summary `requestingDevice`.
+         * @description
+         *
+         * Mandatory. Device that will be Connected. Must differ
+         * from the pickup device (FR 6) and be a complete DeviceID
+         * (FR 5).
+         *
          * @public
          * @readonly
          */
         readonly requestingDevice: DeviceID,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data attached before resulting state
+         * transitions (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent with the pickup (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

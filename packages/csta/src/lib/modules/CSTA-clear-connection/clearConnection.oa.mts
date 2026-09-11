@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary clearConnection
  * @description
- * 
+ *
+ * Clear Connection (ECMA-269 §17.1.8 / ECMA-285 §15.1.8). Invoked
+ * by the computing function on the switching function. Releases
+ * `connectionToBeCleared` only. In a two-party call this may tear
+ * the call down; in a conference it drops one party. Outside
+ * devices may remain connected (FR 1). `reason` can be signalled
+ * to the peer (e.g. busy) (FR 4). ROSE local CODE 5. Errors are
+ * `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

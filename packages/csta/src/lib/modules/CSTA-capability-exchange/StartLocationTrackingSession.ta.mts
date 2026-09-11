@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary StartLocationTrackingSession
  * @description
- * 
+ * Capability bitmap for the Start Location Tracking Session service (ECMA-269
+ * C.22.7, ECMA-285 §9.10). Presence of this entry in `LocationServicesServList`
+ * means the SF supports that service. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +40,9 @@ type StartLocationTrackingSession = BIT_STRING;
 /**
  * @summary StartLocationTrackingSession_collectionType
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_collectionType: number = 0; /* LONG_NAMED_BIT */
@@ -38,6 +50,8 @@ const StartLocationTrackingSession_collectionType: number = 0; /* LONG_NAMED_BIT
 /**
  * @summary collectionType
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_collectionType`.
  */
 export
 const collectionType: number = StartLocationTrackingSession_collectionType; /* SHORT_NAMED_BIT */
@@ -45,6 +59,9 @@ const collectionType: number = StartLocationTrackingSession_collectionType; /* S
 /**
  * @summary StartLocationTrackingSession_collectionInterval
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_collectionInterval: number = 1; /* LONG_NAMED_BIT */
@@ -52,6 +69,8 @@ const StartLocationTrackingSession_collectionInterval: number = 1; /* LONG_NAMED
 /**
  * @summary collectionInterval
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_collectionInterval`.
  */
 export
 const collectionInterval: number = StartLocationTrackingSession_collectionInterval; /* SHORT_NAMED_BIT */
@@ -59,6 +78,9 @@ const collectionInterval: number = StartLocationTrackingSession_collectionInterv
 /**
  * @summary StartLocationTrackingSession_maxCollections
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_maxCollections: number = 2; /* LONG_NAMED_BIT */
@@ -66,6 +88,8 @@ const StartLocationTrackingSession_maxCollections: number = 2; /* LONG_NAMED_BIT
 /**
  * @summary maxCollections
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_maxCollections`.
  */
 export
 const maxCollections: number = StartLocationTrackingSession_maxCollections; /* SHORT_NAMED_BIT */
@@ -73,6 +97,9 @@ const maxCollections: number = StartLocationTrackingSession_maxCollections; /* S
 /**
  * @summary StartLocationTrackingSession_collectionFilter
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_collectionFilter: number = 3; /* LONG_NAMED_BIT */
@@ -80,6 +107,8 @@ const StartLocationTrackingSession_collectionFilter: number = 3; /* LONG_NAMED_B
 /**
  * @summary collectionFilter
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_collectionFilter`.
  */
 export
 const collectionFilter: number = StartLocationTrackingSession_collectionFilter; /* SHORT_NAMED_BIT */
@@ -87,6 +116,9 @@ const collectionFilter: number = StartLocationTrackingSession_collectionFilter; 
 /**
  * @summary StartLocationTrackingSession_reportingType
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_reportingType: number = 4; /* LONG_NAMED_BIT */
@@ -94,6 +126,8 @@ const StartLocationTrackingSession_reportingType: number = 4; /* LONG_NAMED_BIT 
 /**
  * @summary reportingType
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_reportingType`.
  */
 export
 const reportingType: number = StartLocationTrackingSession_reportingType; /* SHORT_NAMED_BIT */
@@ -101,6 +135,9 @@ const reportingType: number = StartLocationTrackingSession_reportingType; /* SHO
 /**
  * @summary StartLocationTrackingSession_reportingCount
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_reportingCount: number = 5; /* LONG_NAMED_BIT */
@@ -108,6 +145,8 @@ const StartLocationTrackingSession_reportingCount: number = 5; /* LONG_NAMED_BIT
 /**
  * @summary reportingCount
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_reportingCount`.
  */
 export
 const reportingCount: number = StartLocationTrackingSession_reportingCount; /* SHORT_NAMED_BIT */
@@ -115,6 +154,9 @@ const reportingCount: number = StartLocationTrackingSession_reportingCount; /* S
 /**
  * @summary StartLocationTrackingSession_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.22.7).
  */
 export
 const StartLocationTrackingSession_privateData: number = 6; /* LONG_NAMED_BIT */
@@ -122,6 +164,8 @@ const StartLocationTrackingSession_privateData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_privateData`.
  */
 export
 const privateData: number = StartLocationTrackingSession_privateData; /* SHORT_NAMED_BIT */
@@ -129,6 +173,9 @@ const privateData: number = StartLocationTrackingSession_privateData; /* SHORT_N
 /**
  * @summary StartLocationTrackingSession_piDFProfileOption1inAck
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_piDFProfileOption1inAck: number = 7; /* LONG_NAMED_BIT */
@@ -136,6 +183,8 @@ const StartLocationTrackingSession_piDFProfileOption1inAck: number = 7; /* LONG_
 /**
  * @summary piDFProfileOption1inAck
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_piDFProfileOption1inAck`.
  */
 export
 const piDFProfileOption1inAck: number = StartLocationTrackingSession_piDFProfileOption1inAck; /* SHORT_NAMED_BIT */
@@ -143,6 +192,9 @@ const piDFProfileOption1inAck: number = StartLocationTrackingSession_piDFProfile
 /**
  * @summary StartLocationTrackingSession_piDFProfileOption2inAck
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_piDFProfileOption2inAck: number = 8; /* LONG_NAMED_BIT */
@@ -150,6 +202,8 @@ const StartLocationTrackingSession_piDFProfileOption2inAck: number = 8; /* LONG_
 /**
  * @summary piDFProfileOption2inAck
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_piDFProfileOption2inAck`.
  */
 export
 const piDFProfileOption2inAck: number = StartLocationTrackingSession_piDFProfileOption2inAck; /* SHORT_NAMED_BIT */
@@ -157,6 +211,9 @@ const piDFProfileOption2inAck: number = StartLocationTrackingSession_piDFProfile
 /**
  * @summary StartLocationTrackingSession_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.22.7).
  */
 export
 const StartLocationTrackingSession_privateDataInAck: number = 9; /* LONG_NAMED_BIT */
@@ -164,6 +221,8 @@ const StartLocationTrackingSession_privateDataInAck: number = 9; /* LONG_NAMED_B
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `StartLocationTrackingSession_privateDataInAck`.
  */
 export
 const privateDataInAck: number = StartLocationTrackingSession_privateDataInAck; /* SHORT_NAMED_BIT */

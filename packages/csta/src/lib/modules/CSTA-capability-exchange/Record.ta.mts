@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Record
  * @description
- * 
+ * Capability bitmap for the Record event (ECMA-269 C.20.9, ECMA-285 §9.10).
+ * Presence of this entry in `VoiceUnitEvtsList` means the SF supports that
+ * event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +35,9 @@ type Record = BIT_STRING;
 /**
  * @summary Record_length
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.9).
  */
 export
 const Record_length: number = 0; /* LONG_NAMED_BIT */
@@ -34,6 +45,8 @@ const Record_length: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary length
  * @constant
+ * @description
+ * Alias of `Record_length`.
  */
 export
 const length: number = Record_length; /* SHORT_NAMED_BIT */
@@ -41,6 +54,9 @@ const length: number = Record_length; /* SHORT_NAMED_BIT */
 /**
  * @summary Record_currentPosition
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.9).
  */
 export
 const Record_currentPosition: number = 1; /* LONG_NAMED_BIT */
@@ -48,6 +64,8 @@ const Record_currentPosition: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary currentPosition
  * @constant
+ * @description
+ * Alias of `Record_currentPosition`.
  */
 export
 const currentPosition: number = Record_currentPosition; /* SHORT_NAMED_BIT */
@@ -55,6 +73,9 @@ const currentPosition: number = Record_currentPosition; /* SHORT_NAMED_BIT */
 /**
  * @summary Record_speed
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.9).
  */
 export
 const Record_speed: number = 2; /* LONG_NAMED_BIT */
@@ -62,6 +83,8 @@ const Record_speed: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary speed
  * @constant
+ * @description
+ * Alias of `Record_speed`.
  */
 export
 const speed: number = Record_speed; /* SHORT_NAMED_BIT */
@@ -69,6 +92,9 @@ const speed: number = Record_speed; /* SHORT_NAMED_BIT */
 /**
  * @summary Record_cause
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `cause` parameter (ECMA-269
+ * C.20.9).
  */
 export
 const Record_cause: number = 3; /* LONG_NAMED_BIT */
@@ -76,6 +102,8 @@ const Record_cause: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary cause
  * @constant
+ * @description
+ * Alias of `Record_cause`.
  */
 export
 const cause: number = Record_cause; /* SHORT_NAMED_BIT */
@@ -83,6 +111,9 @@ const cause: number = Record_cause; /* SHORT_NAMED_BIT */
 /**
  * @summary Record_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.9).
  */
 export
 const Record_servicesPermitted: number = 4; /* LONG_NAMED_BIT */
@@ -90,6 +121,8 @@ const Record_servicesPermitted: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `Record_servicesPermitted`.
  */
 export
 const servicesPermitted: number = Record_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -97,6 +130,9 @@ const servicesPermitted: number = Record_servicesPermitted; /* SHORT_NAMED_BIT *
 /**
  * @summary Record_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.20.9).
  */
 export
 const Record_privateData: number = 5; /* LONG_NAMED_BIT */
@@ -104,6 +140,8 @@ const Record_privateData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Record_privateData`.
  */
 export
 const privateData: number = Record_privateData; /* SHORT_NAMED_BIT */

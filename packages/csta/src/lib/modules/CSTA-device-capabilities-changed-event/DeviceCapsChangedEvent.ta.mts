@@ -24,7 +24,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DeviceCapsChangedEvent
  * @description
- * 
+ *
+ * Device Capabilities Changed event (ECMA-269 §23.1.2 / ECMA-285 §21.1.2).
+ * Direction: SF→CF via Event Report. Device-level information obtainable via
+ * Get Physical/Logical Device Information has changed. Generated whether or not
+ * that information was previously fetched (§23.1.2.3 FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +49,28 @@ class DeviceCapsChangedEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose capability information changed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Reason for the event.
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getAgentState
  * @description
- * 
+ *
+ * Get Agent State (ECMA-269 §22.1.5 / ECMA-285 §20.1.5). Direction: CF→SF. ROSE
+ * local CODE 304. Errors: `universalFailure`. Atomic acknowledgement. Optional
+ * `acdGroup` filters the result.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

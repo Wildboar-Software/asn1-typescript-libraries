@@ -16,7 +16,12 @@ import {
 /**
  * @summary MessageInfo
  * @description
- * 
+ *
+ * Message information associated with a call (display text for an instant
+ * message, or body/attachment parts of email). ECMA-269 §12.2.22.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +38,24 @@ class MessageInfo {
     constructor (
         /**
          * @summary `contents`.
+         * @description
+         * Contents of this part. Empty (but present) in an event means contents
+         * exist but are not included; Snapshot Call can obtain them.
          * @public
          * @readonly
          */
         readonly contents: IA5String,
         /**
          * @summary `contentTypeAndSubtype`.
+         * @description
+         * IANA media type and subtype. Default if omitted: `text/plain`.
          * @public
          * @readonly
          */
         readonly contentTypeAndSubtype: OPTIONAL<IA5String>,
         /**
          * @summary `contentsLength`.
+         * @description Length of the contents in bytes.
          * @public
          * @readonly
          */

@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getHookswitchStatus
  * @description
- * 
+ *
+ * Get Hookswitch Status (ECMA-269 §21.1.5 / ECMA-285 §19.1.5). Direction:
+ * CF→SF. ROSE local CODE 264. Errors: `universalFailure`. Atomic
+ * acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

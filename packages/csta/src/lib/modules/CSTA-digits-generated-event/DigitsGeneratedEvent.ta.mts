@@ -21,7 +21,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DigitsGeneratedEvent
  * @description
- * 
+ *
+ * Digits Generated event (ECMA-269 §18.2.3 / ECMA-285 §16.2.3). Direction:
+ * SF→CF via Event Report. Reports digits the SF generated, not digits detected
+ * inbound.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,36 +48,55 @@ class DigitsGeneratedEvent {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection at which digits were generated.
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `digitGeneratedList`.
+         * @description
+         *
+         * Digits that were generated.
          * @public
          * @readonly
          */
         readonly digitGeneratedList: IA5String,
         /**
          * @summary `digitDurationList`.
+         * @description
+         *
+         * Per-digit durations, if provided.
          * @public
          * @readonly
          */
         readonly digitDurationList: OPTIONAL<INTEGER[]>,
         /**
          * @summary `pauseDurationList`.
+         * @description
+         *
+         * Per-pause durations, if provided.
          * @public
          * @readonly
          */
         readonly pauseDurationList: OPTIONAL<INTEGER[]>,
         /**
          * @summary `connectionInfo`.
+         * @description
+         *
+         * Connection information for `connection`.
          * @public
          * @readonly
          */
         readonly connectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

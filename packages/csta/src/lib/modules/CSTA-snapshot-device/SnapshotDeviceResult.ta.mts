@@ -21,7 +21,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SnapshotDeviceResult
  * @description
- * 
+ *
+ * Positive ack: inline snapshot data or a cross-ref for DeviceData.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +44,20 @@ class SnapshotDeviceResult {
     constructor (
         /**
          * @summary `crossRefIDorSnapshotData`.
+         * @description
+         *
+         * `serviceCrossRefID` if Snapshot DeviceData will follow;
+         * `snapshotData` if inline.
          * @public
          * @readonly
          */
         readonly crossRefIDorSnapshotData: SnapshotDeviceResult_crossRefIDorSnapshotData,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

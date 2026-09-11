@@ -15,7 +15,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary routeRegisterAbort
  * @description
- * 
+ *
+ * Route Register Abort (ECMA-269 §20.1.2 / ECMA-285 §18.1.2). Direction: SF→CF.
+ * ROSE local CODE 249. Errors: `universalFailure`. Invalidates
+ * `routeRegisterReqID`. No positive ack.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

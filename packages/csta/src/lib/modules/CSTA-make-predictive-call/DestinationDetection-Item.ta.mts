@@ -27,7 +27,13 @@ import {
 /**
  * @summary DestinationDetection_Item
  * @description
- * 
+ *
+ * One destination-condition/action pair for Make Predictive
+ * Call (ECMA-269 §17.1.20 Table 17-110).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,12 +50,22 @@ class DestinationDetection_Item {
     constructor (
         /**
          * @summary `destinationCondition`.
+         * @description
+         *
+         * Mandatory. `humanVoice`, `answeringMachine`, or
+         * `facsimileMachine`.
+         *
          * @public
          * @readonly
          */
         readonly destinationCondition: DestinationCondition,
         /**
          * @summary `detectionAction`.
+         * @description
+         *
+         * Mandatory. `clearCalledConnection` or
+         * `remainConnected` when the condition is detected.
+         *
          * @public
          * @readonly
          */

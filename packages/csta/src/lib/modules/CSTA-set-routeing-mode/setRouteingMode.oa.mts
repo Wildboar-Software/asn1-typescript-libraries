@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setRouteingMode
  * @description
- * 
+ *
+ * Set Routeing Mode (ECMA-269 §22.1.22 / ECMA-285 §20.1.22). Direction: CF→SF.
+ * ROSE local CODE 318. Errors: `universalFailure`. Typically generates a
+ * Routeing Mode event. TRUE enables routeing
+ * requests from this device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

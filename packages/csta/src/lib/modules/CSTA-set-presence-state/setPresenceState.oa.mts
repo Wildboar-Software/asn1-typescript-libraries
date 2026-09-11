@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setPresenceState
  * @description
- * 
+ *
+ * Set Presence State (ECMA-269 §22.1.21 / ECMA-285 §20.1.21). Direction: CF→SF.
+ * ROSE local CODE 551. Errors: `universalFailure`. 9th-edition service. If
+ * already at the requested value: positive ack and no event (ECMA-269 §9.5.1 FR
+ * 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

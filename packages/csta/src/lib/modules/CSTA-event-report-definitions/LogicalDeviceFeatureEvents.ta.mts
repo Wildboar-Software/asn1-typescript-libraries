@@ -37,7 +37,14 @@ import { RouteingModeEvent, _decode_RouteingModeEvent, _encode_RouteingModeEvent
 /**
  * @summary LogicalDeviceFeatureEvents
  * @description
- * 
+ *
+ * Logical device-feature event body of `cSTAEventReport` (ECMA-285 §10).
+ * Alternatives: Agent Busy/Logged On/Logged Off/Not Ready/Ready/Working After
+ * Call, Auto Answer, Auto Work Mode, Call Back, Call Back Message, Caller ID
+ * Status, Do Not Disturb, Forwarding, Presence State, Routeing Mode.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

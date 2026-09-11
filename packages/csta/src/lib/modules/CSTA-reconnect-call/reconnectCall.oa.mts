@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary reconnectCall
  * @description
- * 
+ *
+ * Reconnect Call (ECMA-269 §17.1.22 / ECMA-285 §15.1.22). Invoked
+ * by the computing function on the switching function. Compound
+ * of Clear Connection on `activeCall` then Retrieve on `heldCall`
+ * (FR 1). `heldCall` must be Hold (becomes Connected);
+ * `activeCall` is Alerting, Connected, Initiated, Fail, or
+ * Queued (becomes Null). ROSE local CODE 13. Errors are
+ * `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

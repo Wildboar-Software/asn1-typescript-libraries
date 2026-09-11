@@ -33,7 +33,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MonitorStartArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 15-4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,30 +57,48 @@ class MonitorStartArgument {
     constructor (
         /**
          * @summary `monitorObject`.
+         * @description
+         *
+         * Call (`ConnectionID`) or device (`DeviceID`) to monitor.
          * @public
          * @readonly
          */
         readonly monitorObject: MonitorObject,
         /**
          * @summary `requestedMonitorFilter`.
+         * @description
+         *
+         * Events to filter out. Absent (or unsupported) means no
+         * filtering requested — all advertised events.
          * @public
          * @readonly
          */
         readonly requestedMonitorFilter: OPTIONAL<MonitorFilter>,
         /**
          * @summary `monitorType`.
+         * @description
+         *
+         * Call-type vs device-type monitor. See ECMA-269 §6.6.2.
          * @public
          * @readonly
          */
         readonly monitorType: OPTIONAL<MonitorType>,
         /**
          * @summary `requestedMonitorMediaClass`.
+         * @description
+         *
+         * Media classes to monitor. Absent: SF-dependent which classes
+         * are monitored.
          * @public
          * @readonly
          */
         readonly requestedMonitorMediaClass: OPTIONAL<MonitorMediaClass>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 15-4.
          * @public
          * @readonly
          */

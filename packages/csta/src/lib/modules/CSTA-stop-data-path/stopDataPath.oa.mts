@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary stopDataPath
  * @description
- * 
+ *
+ * Terminates an existing data path. Bidirectional. A suspended path may be
+ * stopped without Resume (ECMA-269 §24.2.9).
+ *
+ * Bidirectional: computing function or switching function may invoke.
+ *
+ * ROSE local:111. Errors: `universalFailure` (ECMA-285 §22.2.9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,7 +15,13 @@ import { PartiallyInServiceEvent, _decode_PartiallyInServiceEvent, _encode_Parti
 /**
  * @summary DeviceMaintenanceEvents
  * @description
- * 
+ *
+ * Device-maintenance event body of `cSTAEventReport` (ECMA-285 §10).
+ * Alternatives: Back In Service, Device Capability Changed, Out Of Service,
+ * Partially In Service.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

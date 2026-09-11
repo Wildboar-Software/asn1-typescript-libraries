@@ -39,7 +39,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MediaAttachedEvent
  * @description
- * 
+ *
+ * Media Attached event (ECMA-269 §19.2.1 / ECMA-285 §17.2.1). Direction: SF→CF
+ * via Event Report. Operational model follows the call-control service implied
+ * by
+ * `connectionMode`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,66 +72,100 @@ class MediaAttachedEvent {
     constructor (
         /**
          * @summary `mediaConnection`.
+         * @description
+         *
+         * Connection bound to the media service.
          * @public
          * @readonly
          */
         readonly mediaConnection: ConnectionID,
         /**
          * @summary `mediaDevice`.
+         * @description
+         *
+         * Device identifier of the attached media service.
          * @public
          * @readonly
          */
         readonly mediaDevice: SubjectDeviceID,
         /**
          * @summary `mediaServiceType`.
+         * @description
+         *
+         * Media service type.
          * @public
          * @readonly
          */
         readonly mediaServiceType: MediaServiceType,
         /**
          * @summary `mediaServiceVersion`.
+         * @description
+         *
+         * Version of the media service.
          * @public
          * @readonly
          */
         readonly mediaServiceVersion: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaServiceInstanceID`.
+         * @description
+         *
+         * Instance associated with the attachment.
          * @public
          * @readonly
          */
         readonly mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `mediaStreamID`.
+         * @description
+         *
+         * Stream ID for accessing the instance, if supported.
          * @public
          * @readonly
          */
         readonly mediaStreamID: OPTIONAL<MediaStreamID>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Media characteristics of the call.
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Call characterisation bits.
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `localConnectionInfo`.
+         * @description
+         *
+         * Local connection state of the media connection.
          * @public
          * @readonly
          */
         readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `mediaConnectionInfo`.
+         * @description
+         *
+         * Connection information of the media connection.
          * @public
          * @readonly
          */
         readonly mediaConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `extension`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

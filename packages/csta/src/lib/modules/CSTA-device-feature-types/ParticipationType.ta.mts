@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ParticipationType
  * @description
- * 
+ *
+ * How a device participates when joining a call (Intrude Call, Join Call,
+ * Single Step Conference, etc.). Also used to specify flowDirection. ECMA-269
+ * §12.2.8; ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +37,14 @@ enum _enum_for_ParticipationType {
 /**
  * @summary ParticipationType
  * @description
- * 
+ *
+ * How a device participates when joining a call (Intrude Call, Join Call,
+ * Single Step Conference, etc.). Also used to specify flowDirection. ECMA-269
+ * §12.2.8; ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +62,14 @@ type ParticipationType = _enum_for_ParticipationType;
 /**
  * @summary ParticipationType
  * @description
- * 
+ *
+ * How a device participates when joining a call (Intrude Call, Join Call,
+ * Single Step Conference, etc.). Also used to specify flowDirection. ECMA-269
+ * §12.2.8; ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,14 +86,17 @@ const ParticipationType = _enum_for_ParticipationType;
 
 /**
  * @summary ParticipationType_silent
+ * @description Silent participation. ECMA-269 §12.2.8.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ParticipationType_silent: ParticipationType = ParticipationType.silent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary silent
+ * @description Alias of {@link ParticipationType_silent}.
  * @constant
  * @type {number}
  */
@@ -81,14 +105,17 @@ const silent: ParticipationType = ParticipationType.silent; /* SHORT_NAMED_ENUME
 
 /**
  * @summary ParticipationType_active
+ * @description Active participation. ECMA-269 §12.2.8.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ParticipationType_active: ParticipationType = ParticipationType.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
+ * @description Alias of {@link ParticipationType_active}.
  * @constant
  * @type {number}
  */
@@ -97,14 +124,17 @@ const active: ParticipationType = ParticipationType.active; /* SHORT_NAMED_ENUME
 
 /**
  * @summary ParticipationType_none
+ * @description No participation. ECMA-269 §12.2.8.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const ParticipationType_none: ParticipationType = ParticipationType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
+ * @description Alias of {@link ParticipationType_none}.
  * @constant
  * @type {number}
  */

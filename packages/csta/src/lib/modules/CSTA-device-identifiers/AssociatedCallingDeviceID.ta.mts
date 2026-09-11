@@ -9,7 +9,26 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary AssociatedCallingDeviceID
  * @description
- * 
+ *
+ * Network Interface Device (trunk, CO line) in the switching
+ * sub-domain associated with the calling device on an external
+ * incoming call (`APPLICATION 5`; ECMA-269 §12.3.3). Present only
+ * for inbound calls that use an NID; shall be included on all
+ * external incoming calls.
+ *
+ * Not ANI/CLID/SID — that is `CallingDeviceID`.
+ *
+ * - `deviceIdentifier`: NID is provided.
+ * - `notKnown`: NID unknown, or multiple associated calling devices
+ *   (e.g. conference callback).
+ * - `restricted`: encoded in ECMA-285 §9.2; ECMA-269 §12.3.3 does
+ *   not assign this status.
+ *
+ * Never `notRequired` or `notSpecified`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

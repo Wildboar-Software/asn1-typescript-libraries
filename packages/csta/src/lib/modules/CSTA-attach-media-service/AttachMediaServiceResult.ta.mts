@@ -25,7 +25,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AttachMediaServiceResult
  * @description
- * 
+ *
+ * Positive ack (Table 19-3) with the bound media connection.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,36 +50,55 @@ class AttachMediaServiceResult {
     constructor (
         /**
          * @summary `mediaConnection`.
+         * @description
+         *
+         * Connection bound to the media service.
          * @public
          * @readonly
          */
         readonly mediaConnection: OPTIONAL<ConnectionID>,
         /**
          * @summary `mediaDevice`.
+         * @description
+         *
+         * Device identifier of the attached media service.
          * @public
          * @readonly
          */
         readonly mediaDevice: OPTIONAL<DeviceID>,
         /**
          * @summary `mediaServiceInstanceID`.
+         * @description
+         *
+         * Instance actually attached.
          * @public
          * @readonly
          */
         readonly mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `mediaConnectionInfo`.
+         * @description
+         *
+         * Connection information of the media connection.
          * @public
          * @readonly
          */
         readonly mediaConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Call linkage associated with the resulting call.
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

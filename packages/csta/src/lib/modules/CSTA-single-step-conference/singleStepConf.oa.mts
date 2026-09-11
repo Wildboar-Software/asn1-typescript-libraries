@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary singleStepConf
  * @description
- * 
+ *
+ * Single Step Conference (ECMA-269 §17.1.25 / ECMA-285
+ * §15.1.24). Invoked by the computing function on the switching
+ * function. Adds `deviceToJoin` to `activeCall` without a
+ * consultative call. Result CallID matches the original call.
+ * ROSE local CODE 20. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

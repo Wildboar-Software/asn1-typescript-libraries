@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary sendUserInfo
  * @description
- * 
+ *
+ * Send User Information (ECMA-269 §18.1.6 / ECMA-285 §16.1.6). Direction:
+ * CF→SF. ROSE local CODE 234. Errors: `universalFailure`. Sends `userData` from
+ * `existingCall`. Either connection of the
+ * call may be used as the identifier.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

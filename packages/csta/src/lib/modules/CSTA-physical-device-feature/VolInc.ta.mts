@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary VolInc
  * @description
- * 
+ *
+ * Relative speaker-volume step. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +32,11 @@ enum _enum_for_VolInc {
 /**
  * @summary VolInc
  * @description
- * 
+ *
+ * Relative speaker-volume step. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +53,11 @@ type VolInc = _enum_for_VolInc;
 /**
  * @summary VolInc
  * @description
- * 
+ *
+ * Relative speaker-volume step. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,6 +73,10 @@ const VolInc = _enum_for_VolInc;
 
 /**
  * @summary VolInc_increment
+ * @description
+ *
+ * Increase volume. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +93,10 @@ const increment: VolInc = VolInc.increment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VolInc_decrement
+ * @description
+ *
+ * Decrease volume. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */

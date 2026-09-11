@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary monitorStart
  * @description
- * 
+ *
+ * Monitor Start (ECMA-269 §15.1.2 / ECMA-285 §13.1.2). Direction: CF→SF. ROSE
+ * local CODE 71. Errors: `universalFailure`. SF allocates `crossRefIdentifier`
+ * unique for the association
+ * while the monitor lives. Events, Monitor Stop, and Change
+ * Monitor Filter use that ID. Monitor ends via Monitor Stop or
+ * when the object ceases to exist / leaves the sub-domain.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

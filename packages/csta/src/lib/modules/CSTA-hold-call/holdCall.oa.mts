@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary holdCall
  * @description
- * 
+ *
+ * Hold Call (ECMA-269 §17.1.15 / ECMA-285 §15.1.15). Invoked by
+ * the computing function on the switching function.
+ * `callToBeHeld` must be Connected and becomes Hold. Other
+ * connections in the call are unaffected. The switching function
+ * may time out a held call and recall (FR 1). ROSE local CODE 9.
+ * Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -62,7 +62,14 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary NetworkReachedEvent
  * @description
- * 
+ *
+ * Network Reached event payload (ECMA-269 §17.2.12 / ECMA-285 §15.2.12) for
+ * `cSTAEventReport`. After this event, later events for that NID use cause
+ * Network Signal or a more specific network cause (FR 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,138 +106,244 @@ class NetworkReachedEvent {
     constructor (
         /**
          * @summary `outboundConnection`.
+         * @description
+         *
+         * Mandatory. Outbound connection leaving the switching sub-domain.
+         *
          * @public
          * @readonly
          */
         readonly outboundConnection: ConnectionID,
         /**
          * @summary `networkInterfaceUsed`.
+         * @description
+         *
+         * Mandatory. Selected Network Interface Device.
+         *
          * @public
          * @readonly
          */
         readonly networkInterfaceUsed: SubjectDeviceID,
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Mandatory. Calling device. May change after transfer, forwarding, or
+         * conference.
+         *
          * @public
          * @readonly
          */
         readonly callingDevice: CallingDeviceID,
         /**
          * @summary `calledDevice`.
+         * @description
+         *
+         * Mandatory. Originally called device.
+         *
          * @public
          * @readonly
          */
         readonly calledDevice: CalledDeviceID,
         /**
          * @summary `lastRedirectionDevice`.
+         * @description
+         *
+         * Mandatory. Previously known redirected-from device. Used with `cause`
+         * to track diverted calls when Diverted is not sent to all monitors
+         * (§6.7.6).
+         *
          * @public
          * @readonly
          */
         readonly lastRedirectionDevice: RedirectionDeviceID,
         /**
          * @summary `originatingNIDConneciton`.
+         * @description
+         *
+         * Optional. Originating NID connection (ASN.1 spelling
+         * `originatingNIDConneciton` in this module). Omitted if more than one
+         * calling device.
+         *
          * @public
          * @readonly
          */
         readonly originatingNIDConneciton: OPTIONAL<ConnectionID>,
         /**
          * @summary `localConnectionInfo`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.17).
+         *
          * @public
          * @readonly
          */
         readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Conditional. Present when correlator data is associated with the call
+         * (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Conditional. Present when user data is sent and supported (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `networkCapability`.
+         * @description
+         *
+         * Optional. Network type and Call Control events supported by that
+         * network (Table 17-173).
+         *
          * @public
          * @readonly
          */
         readonly networkCapability: OPTIONAL<NetworkCapability>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Mandatory. Valid values are listed in Table 17-174.
+         *
          * @public
          * @readonly
          */
         readonly cause: EventCause,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
+         * Feature Availability is supported.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional media class and characteristics (§12.2.20).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional high-level call characteristics (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `outboundConnectionInfo`.
+         * @description
+         *
+         * Optional connection information. Omitted values are
+         * switching-function specific (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly outboundConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `networkCallingDevice`.
+         * @description
+         *
+         * Optional. Original calling device from the network, external incoming
+         * only. Does not change while `associatedCallingDevice` remains.
+         *
          * @public
          * @readonly
          */
         readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
+         * @description
+         *
+         * Optional. Original called device from the network, external incoming
+         * only. Does not change while `associatedCallingDevice` remains.
+         *
          * @public
          * @readonly
          */
         readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
+         * @description
+         *
+         * Conditional. NID of the calling device for external incoming calls.
+         * Mandatory then; omitted otherwise.
+         *
          * @public
          * @readonly
          */
         readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Conditional. Mandatory if call linkage is supported (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
+         * @description
+         *
+         * Optional devices previously associated with the call (redirecting,
+         * transferring, clearing).
+         *
          * @public
          * @readonly
          */
         readonly deviceHistory: OPTIONAL<DeviceHistory>,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * Optional location information for devices in the call.
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and privateData
+         * parameters from the ECMA-269 event table.
+         *
          * @public
          * @readonly
          */
@@ -266,7 +379,8 @@ class NetworkReachedEvent {
  * @summary The Leading Root Component Types of NetworkReachedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -301,7 +415,8 @@ const _root_component_type_list_1_spec_for_NetworkReachedEvent: $.ComponentSpec[
  * @summary The Trailing Root Component Types of NetworkReachedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -314,7 +429,8 @@ const _root_component_type_list_2_spec_for_NetworkReachedEvent: $.ComponentSpec[
  * @summary The Extension Addition Component Types of NetworkReachedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

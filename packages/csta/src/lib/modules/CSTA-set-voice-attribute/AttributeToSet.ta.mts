@@ -25,7 +25,16 @@ import {
 /**
  * @summary AttributeToSet
  * @description
- * 
+ *
+ * Which attribute to set. Alternatives match Query Voice Attribute (speed,
+ * volume, gain, grammars, language, mode, retainAudio, timeouts,
+ * rejectionThreshold, autoInterruptible, innerXML, interDigitTimeout, preflush)
+ * (ECMA-269 §26.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
