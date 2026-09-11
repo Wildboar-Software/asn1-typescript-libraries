@@ -22,6 +22,9 @@ import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_reso
  * @summary ConnectToResourceArg
  * @description
  * 
+ * Argument of ConnectToResource: where to attach the gsmSRF and which call
+ * segment. (3GPP TS 29.078 V19.0.0 clause 11.10.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,6 +47,12 @@ class ConnectToResourceArg {
     constructor (
         /**
          * @summary `resourceAddress`.
+         * @description
+         *
+         * Physical location of the gsmSRF: `ipRoutingAddress` (routing address
+         * to set up the connection) or `none` (connect the call segment to a
+         * predefined gsmSRF). (3GPP TS 29.078 V19.0.0 clause 11.10.1.1).
+         *
          * @public
          * @readonly
          */
@@ -56,12 +65,24 @@ class ConnectToResourceArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
+         * @description
+         *
+         * Controls through-connection to the Calling Party. The segment need
+         * not contain a calling-party leg. Assisting gsmSSF always assumes
+         * bothway through-connection and ignores this if received. (3GPP TS
+         * 29.078 V19.0.0 clause 11.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `callSegmentID`.
+         * @description
+         *
+         * Call segment to which ConnectToResource applies. (3GPP TS 29.078
+         * V19.0.0 clause 11.10.1.1).
+         *
          * @public
          * @readonly
          */

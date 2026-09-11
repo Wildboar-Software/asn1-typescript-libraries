@@ -60,6 +60,20 @@ import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT
  * @summary capSsfToScfGeneric
  * @description
  * 
+ * Generic gsmSSF-to-gsmSCF CS contract. Dialogue initiated by gsmSSF with
+ * `initialDP`. Initiator (gsmSSF) consumes `exceptionInformPackage` and
+ * `scfActivationPackage`. Responder (gsmSCF) consumes `activityTestPackage`,
+ * `assistConnectionEstablishmentPackage`, `bcsmEventHandlingPackage`,
+ * `billingPackage`, `callHandlingPackage`, `callReportPackage`,
+ * `cancelPackage`, `chargingPackage`, `connectPackage`, `cphResponsePackage`,
+ * `genericDisconnectResourcePackage`,
+ * `nonAssistedConnectionEstablishmentPackage`, `playTonePackage`,
+ * `signallingControlPackage`, `specializedResourceControlPackage` (defined in
+ * CAP-gsmSCF-gsmSRF-pkgs-contracts-acs), `ssfCallProcessingPackage`,
+ * `timerPackage`, `trafficManagementPackage`, and `scfCallInitiationPackage`.
+ * Used by `capssf-scfGenericAC`. Contract ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,11 @@ import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../CAP-
 /**
  * @summary ResetTimerGPRSArg
  * @description
- * 
+ *
+ * Argument of ResetTimerGPRS: which gprsSSF application timer to
+ * refresh and the new value. (3GPP TS 29.078 V19.0.0
+ * clause 13.13.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,22 @@ class ResetTimerGPRSArg {
     constructor (
         /**
          * @summary `timerID`.
+         * @description
+         *
+         * Which timer to reset. Only `tssf` is permitted. ASN.1 default
+         * `tssf`. (3GPP TS 29.078 V19.0.0 clause 13.13.1.1).
+         *
          * @public
          * @readonly
          */
         readonly timerID: OPTIONAL<TimerID>,
         /**
          * @summary `timervalue`.
+         * @description
+         *
+         * Value to which the timer shall be set.
+         * (3GPP TS 29.078 V19.0.0 clause 13.13.1.1).
+         *
          * @public
          * @readonly
          */

@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SGSNCapabilities
  * @description
  *
+ * SGSN capabilities (one octet). Bit 0: 0 = AoC not supported by SGSN, 1 = AoC
+ * supported. Bits 1–7 are reserved in CAP V.3. (3GPP TS 29.078 V19.0.0 clause
+ * 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

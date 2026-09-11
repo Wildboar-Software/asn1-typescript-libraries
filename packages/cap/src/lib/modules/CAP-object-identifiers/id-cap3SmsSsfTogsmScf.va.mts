@@ -17,7 +17,11 @@ import { id_contract3 } from "../CAP-object-identifiers/id-contract3.va.mjs";
 /**
  * @summary id_cap3SmsSsfTogsmScf
  * @description
- * 
+ *
+ * OID of the CAP3 SMS ssf→scf contract `cap3SmsSsfTogsmScf`
+ * (`{id-contract3 16}`). Used for gprsSSF/gsmSCF or gsmSSF/gsmSCF.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

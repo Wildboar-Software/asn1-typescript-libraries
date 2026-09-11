@@ -18,6 +18,13 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  * @summary LocationInformationGPRS
  * @description
  *
+ * GPRS location of the MS. `cellGlobalIdOrServiceAreaIdOrLAI` carries the value
+ * part of `CellGlobalIdOrServiceAreaIdFixedLength` or `LAIFixedLength`
+ * (excluding tags and lengths) as in 3GPP TS 29.002. `sai-Present` means that
+ * field contains a Service Area Identity. `userCSGInformation` is CSG ID,
+ * access mode, and CSG membership indication when access mode is Hybrid, as in
+ * 3GPP TS 23.060. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,13 +44,44 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  */
 export class LocationInformationGPRS {
     constructor (
+        /**
+         * @summary `cellGlobalIdOrServiceAreaIdOrLAI`.
+         * @description
+         *
+         * Value part of `CellGlobalIdOrServiceAreaIdFixedLength` or
+         * `LAIFixedLength` (no tags/lengths), 3GPP TS 29.002. (3GPP TS 29.078
+         * V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly cellGlobalIdOrServiceAreaIdOrLAI: OPTIONAL<OCTET_STRING>,
         readonly routeingAreaIdentity: OPTIONAL<RAIdentity>,
         readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
         readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
         readonly selectedLSAIdentity: OPTIONAL<LSAIdentity>,
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        /**
+         * @summary `sai_Present`.
+         * @description
+         *
+         * When present, `cellGlobalIdOrServiceAreaIdOrLAI` contains a Service Area
+         * Identity. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly sai_Present: OPTIONAL<NULL>,
+        /**
+         * @summary `userCSGInformation`.
+         * @description
+         *
+         * CSG ID, access mode, and CSG membership indication if access mode is
+         * Hybrid (3GPP TS 23.060). (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly userCSGInformation: OPTIONAL<UserCSGInformation>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {

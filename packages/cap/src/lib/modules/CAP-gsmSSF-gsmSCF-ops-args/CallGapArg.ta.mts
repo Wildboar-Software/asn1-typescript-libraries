@@ -23,6 +23,9 @@ import { type GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from ".
  * @summary CallGapArg
  * @description
  * 
+ * Argument of CallGap: criteria, indicators, and treatment for reducing the
+ * rate of service requests to gsmSCF. (3GPP TS 29.078 V19.0.0 clause 11.5.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +46,56 @@ class CallGapArg {
     constructor (
         /**
          * @summary `gapCriteria`.
+         * @description
+         *
+         * Which calls are subject to gapping. `basicGapCriteria`:
+         * `calledAddressValue` (leading dialled digits), `gapOnService`
+         * (Service Key), `calledAddressAndService`, or
+         * `callingAddressAndService` (for CF, the redirecting number in
+         * InitialDP is used). `compoundGapCriteria` adds `scfID` (fixed GT of
+         * the requesting gsmSCF; omitted means not dedicated to one gsmSCF).
+         * (3GPP TS 29.078 V19.0.0 clause 11.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gapCriteria: GapCriteria,
         /**
          * @summary `gapIndicators`.
+         * @description
+         *
+         * Gapping characteristics. `duration`: total active interval (0 removes
+         * gapping; 2 is network-specific; other values in seconds; −1 shall not
+         * be used). `gapInterval`: minimum time between allowed calls (0 = do
+         * not reject; 1 = reject all matching; other values in milliseconds).
+         * (3GPP TS 29.078 V19.0.0 clause 11.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gapIndicators: GapIndicators,
         /**
          * @summary `controlType`.
+         * @description
+         *
+         * `sCPOverloaded`: automatic congestion detection in the SCP.
+         * `manuallyInitiated`: from the service or (service) network management
+         * centre; has priority over `sCPOverloaded`. (3GPP TS 29.078 V19.0.0
+         * clause 11.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly controlType: OPTIONAL<ControlType>,
         /**
          * @summary `gapTreatment`.
+         * @description
+         *
+         * How calls stopped by gapping are treated. `informationToSend`
+         * (announcement or tone, then release) or `releaseCause` (ISUP cause in
+         * the release message). If absent, gsmSSF uses a network-operator
+         * default. (3GPP TS 29.078 V19.0.0 clause 11.5.1.1).
+         *
          * @public
          * @readonly
          */

@@ -6,6 +6,11 @@ import { id_package_gprsBilling } from "../CAP-object-identifiers/id-package-gpr
  * @summary gprsBillingPackage
  * @description
  *
+ * gprsSSF-gsmSCF billing package: gsmSCF (consumer) invokes
+ * `furnishChargingInformationGPRS`. Used in `capGprsSsfToScf` (responder) and
+ * `capGsmScfToGprsSsf` (initiator). Package OID updated in Rel-6.
+ * (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

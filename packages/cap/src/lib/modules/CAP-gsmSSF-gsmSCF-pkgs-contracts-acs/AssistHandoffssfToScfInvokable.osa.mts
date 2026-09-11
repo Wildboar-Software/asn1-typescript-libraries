@@ -30,6 +30,14 @@ import { specializedResourceReport } from "../CAP-gsmSCF-gsmSRF-ops-args/special
  * @summary AssistHandoffssfToScfInvokable
  * @description
  * 
+ * Operations that may be invoked in the assist-handoff gsmSSF-to-gsmSCF
+ * `TCMessage`: `activityTest`, `assistRequestInstructions`, `cancel`,
+ * `connectToResource`, `disconnectForwardConnection`, `playAnnouncement`,
+ * `promptAndCollectUserInformation`, `resetTimer`, `specializedResourceReport`.
+ * Bound set `cAPSpecificBoundSet`. Rel-6 imports version8(7) operations from
+ * CAP-gsmSSF-gsmSCF-ops-args and CAP-gsmSCF-gsmSRF-ops-args.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

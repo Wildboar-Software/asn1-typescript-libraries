@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `IN-CS2-datatypes`.
+ * ASN.1 module `IN-CS2-datatypes` (named `CS2-datatypes` in CAP IMPORTS).
+ * Imported by CAP V4 from EN 301 140-1. This package carries only the
+ * CS2 symbols CAP needs (e.g. `MiscCallInfo`, `CriticalityType`,
+ * `BothwayThroughConnectionInd`). Per-type semantics are in that ETSI
+ * spec, not 3GPP TS 29.078. (3GPP TS 29.078 V19.0.0 clause 2.1
+ * Table 2-1).
  */
 export * from "./AccessCode.ta.mjs";
 export * from "./AccountNumber.ta.mjs";

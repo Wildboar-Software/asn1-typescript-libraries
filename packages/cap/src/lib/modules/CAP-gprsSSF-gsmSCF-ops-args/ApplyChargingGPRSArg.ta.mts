@@ -21,7 +21,11 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
 /**
  * @summary ApplyChargingGPRSArg
  * @description
- * 
+ *
+ * Argument of ApplyChargingGPRS: volume or time threshold, optional
+ * tariff switch, and optional PDPID. (3GPP TS 29.078 V19.0.0
+ * clause 13.2.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +44,40 @@ class ApplyChargingGPRSArg {
     constructor (
         /**
          * @summary `chargingCharacteristics`.
+         * @description
+         *
+         * Choice for CSE control of session or PDP Context duration or
+         * volume: `maxTransferredVolume` (volume before
+         * ApplyChargingReportGPRS) or `maxElapsedTime` (period before
+         * ApplyChargingReportGPRS). Session charging is duration only.
+         * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
+         *
          * @public
          * @readonly
          */
         readonly chargingCharacteristics: ChargingCharacteristics,
         /**
          * @summary `tariffSwitchInterval`.
+         * @description
+         *
+         * Time until the next tariff switch, in 1-second units
+         * (1..86400). Elapsed-period measurement starts immediately
+         * after successful execution.
+         * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
+         *
          * @public
          * @readonly
          */
         readonly tariffSwitchInterval: OPTIONAL<INTEGER>,
         /**
          * @summary `pDPID`.
+         * @description
+         *
+         * Identifies the PDP Context, within a GPRS Session dialogue, to
+         * which the charging instruction applies. unknownPDPID if the
+         * gprsSSF does not know this PDPID.
+         * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
+         *
          * @public
          * @readonly
          */

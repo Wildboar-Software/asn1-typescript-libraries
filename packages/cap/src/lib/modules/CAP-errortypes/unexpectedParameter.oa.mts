@@ -21,7 +21,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unexpectedParameter
  * @description
- * 
+ *
+ * A valid but unexpected parameter was present in the operation argument;
+ * its presence is inconsistent with the other parameters. The responding
+ * entity cannot start the operation. Same FSM procedures as
+ * `missingParameter`. Local error code 16.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.14).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

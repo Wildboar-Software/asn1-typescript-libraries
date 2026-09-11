@@ -17,7 +17,15 @@ import { type FCISMSBillingChargingCharacteristics, _decode_FCISMSBillingChargin
 /**
  * @summary FurnishChargingInformationSMSArg
  * @description
- * 
+ *
+ * Argument of FurnishChargingInformationSMS: alias of
+ * `FCISMSBillingChargingCharacteristics`. Carries
+ * `fCIBCCCAMELsequence1` with `freeFormatData` (free-format
+ * billing/charging) and `appendFreeFormatData` (append vs
+ * overwrite previous free-format data; see 3GPP TS 23.078).
+ * Default subsequent FCI overwrites. (3GPP TS 29.078 V19.0.0
+ * clause 12.4.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

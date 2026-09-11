@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TransferredVolumeRollOver_rO_VolumeIfTariffSwitch
  * @description
  *
+ * `rO-VolumeSinceLastTariffSwitch` and `rO-VolumeTariffSwitchInterval` count
+ * parameter-range rollovers. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,7 +27,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class TransferredVolumeRollOver_rO_VolumeIfTariffSwitch {
     constructor (
+        /**
+         * @summary `rO_VolumeSinceLastTariffSwitch`.
+         * @description
+         *
+         * Count of parameter-range rollovers. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly rO_VolumeSinceLastTariffSwitch: OPTIONAL<INTEGER>,
+        /**
+         * @summary `rO_VolumeTariffSwitchInterval`.
+         * @description
+         *
+         * Count of parameter-range rollovers. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly rO_VolumeTariffSwitchInterval: OPTIONAL<INTEGER>,
     ) {
         if (rO_VolumeSinceLastTariffSwitch !== undefined && (typeof rO_VolumeSinceLastTariffSwitch === "bigint" ? (rO_VolumeSinceLastTariffSwitch < 0n || rO_VolumeSinceLastTariffSwitch > 255n) : (rO_VolumeSinceLastTariffSwitch < 0 || rO_VolumeSinceLastTariffSwitch > 255))) {

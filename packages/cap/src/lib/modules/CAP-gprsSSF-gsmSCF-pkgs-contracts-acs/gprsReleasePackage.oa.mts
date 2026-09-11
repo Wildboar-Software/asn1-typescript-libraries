@@ -6,6 +6,10 @@ import { id_package_gprsRelease } from "../CAP-object-identifiers/id-package-gpr
  * @summary gprsReleasePackage
  * @description
  *
+ * gprsSSF-gsmSCF release package: gsmSCF (consumer) invokes `releaseGPRS`. Used
+ * in `capGprsSsfToScf` (responder) and `capGsmScfToGprsSsf` (initiator).
+ * Package OID updated in Rel-6. (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

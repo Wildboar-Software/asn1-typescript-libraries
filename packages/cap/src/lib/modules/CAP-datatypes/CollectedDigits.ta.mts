@@ -38,14 +38,85 @@ export class CollectedDigits {
     constructor (
         readonly minimumNbOfDigits: OPTIONAL<INTEGER>,
         readonly maximumNbOfDigits: INTEGER,
+        /**
+         * @summary `endOfReplyDigit`.
+         * @description
+         *
+         * BCD, one digit per octet in the four LSBs. Over-decadic: `1011` (*),
+         * `1100` (#). Usage is service dependent.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly endOfReplyDigit: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `cancelDigit`.
+         * @description
+         *
+         * BCD, one digit per octet in the four LSBs. Over-decadic: `1011` (*),
+         * `1100` (#). Usage is service dependent.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly cancelDigit: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `startDigit`.
+         * @description
+         *
+         * BCD, one digit per octet in the four LSBs. Over-decadic: `1011` (*),
+         * `1100` (#). Usage is service dependent.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly startDigit: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `firstDigitTimeOut`.
+         * @description
+         *
+         * Measured in seconds. (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly firstDigitTimeOut: OPTIONAL<INTEGER>,
+        /**
+         * @summary `interDigitTimeOut`.
+         * @description
+         *
+         * Measured in seconds. (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly interDigitTimeOut: OPTIONAL<INTEGER>,
         readonly errorTreatment: OPTIONAL<ErrorTreatment>,
         readonly interruptableAnnInd: OPTIONAL<BOOLEAN>,
+        /**
+         * @summary `voiceInformation`.
+         * @description
+         *
+         * Support of voice recognition via this parameter is network operator
+         * specific. (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly voiceInformation: OPTIONAL<BOOLEAN>,
+        /**
+         * @summary `voiceBack`.
+         * @description
+         *
+         * Use of voiceBack is network operator specific.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly voiceBack: OPTIONAL<BOOLEAN>,
     ) {
         if (minimumNbOfDigits !== undefined && (typeof minimumNbOfDigits === "bigint" ? (minimumNbOfDigits < 1n || minimumNbOfDigits > 30n) : (minimumNbOfDigits < 1 || minimumNbOfDigits > 30))) {

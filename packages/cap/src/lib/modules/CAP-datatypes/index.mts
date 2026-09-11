@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-datatypes`.
+ * ASN.1 module `CAP-datatypes` — CAP V4 common datatypes from 3GPP TS 29.078
+ * V19.0.0 clause 5.1: charging (AOC, FCI/SCI OCTET STRING containers, tariff-
+ * switch volumes and times), BCSM/SMS/GPRS events and event-specific
+ * information, digits and addresses, call gapping, legs and call segments,
+ * SRF announcements/tones, GPRS QoS and location, and CAMEL vs network-based
+ * service-interaction indicators.
  */
 export * from "./AccessPointName.ta.mjs";
 export * from "./AChBillingChargingCharacteristics.ta.mjs";

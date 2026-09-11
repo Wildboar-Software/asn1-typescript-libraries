@@ -19,7 +19,11 @@ import { id_rosObject_smsSSF_V4 } from "../CAP-object-identifiers/id-rosObject-s
 /**
  * @summary smsSSF_V4
  * @description
- * 
+ *
+ * smsSSF ROS object for MT SMS control. INITIATES `cap4SMS` (no
+ * RESPONDS). Rel-6 uses the Rel-6 `cap4SMS` CONTRACT definition.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

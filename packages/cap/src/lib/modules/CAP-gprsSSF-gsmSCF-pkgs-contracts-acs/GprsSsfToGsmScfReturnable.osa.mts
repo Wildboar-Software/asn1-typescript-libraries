@@ -37,6 +37,14 @@ import { resetTimerGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/resetTimerGPRS.oa
  * @summary GprsSsfToGsmScfReturnable
  * @description
  * 
+ * Operations that may be returned in the gprsSSF-to-gsmSCF `TCMessage`:
+ * `activityTestGPRS`, `applyChargingGPRS`, `applyChargingReportGPRS`,
+ * `cancelGPRS`, `connectGPRS`, `continueGPRS`, `entityReleasedGPRS`,
+ * `furnishChargingInformationGPRS`, `initialDPGPRS`, `releaseGPRS`,
+ * `requestReportGPRSEvent`, `resetTimerGPRS`, `sendChargingInformationGPRS`.
+ * Bound set `cAPSpecificBoundSet` on the parameterized operations.
+ * (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

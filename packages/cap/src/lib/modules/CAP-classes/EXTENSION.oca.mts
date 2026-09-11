@@ -19,7 +19,13 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary EXTENSION
  * @description
- * 
+ *
+ * Information object class for network-operator CAP extensions.
+ * Only a Global OBJECT IDENTIFIER is used for `&id`; only `ignore` (0)
+ * is used for `&criticality`. ITU-T Q.1400 extension is for further
+ * study. The extension marker identifies future minor CAP additions.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,10 +69,18 @@ interface EXTENSION<
     readonly "&ExtensionType": ExtensionType;
     /**
      * @summary &criticality
+     * @description
+     *
+     * Only `ignore` (0) is used for CAP extensions.
+     * (3GPP TS 29.078 V19.0.0 clause 5.5).
      */
     readonly "&criticality"?: CriticalityType;
     /**
      * @summary &id
+     * @description
+     *
+     * Only a Global OBJECT IDENTIFIER is used (not a local integer).
+     * (3GPP TS 29.078 V19.0.0 clause 5.5).
      */
     readonly "&id"?: Code;
 };

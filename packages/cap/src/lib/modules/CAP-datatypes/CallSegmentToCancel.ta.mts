@@ -24,7 +24,27 @@ import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from
  */
 export class CallSegmentToCancel {
     constructor (
+        /**
+         * @summary `invokeID`.
+         * @description
+         *
+         * PlayAnnouncement or PromptAndCollectUserInformation invocation to
+         * cancel. (3GPP TS 29.078 V19.0.0 clause 11.8).
+         *
+         * @public
+         * @readonly
+         */
         readonly invokeID: OPTIONAL<InvokeID>,
+        /**
+         * @summary `callSegmentID`.
+         * @description
+         *
+         * Call Segment to which cancellation of the user-interaction operation
+         * applies. (3GPP TS 29.078 V19.0.0 clause 11.8).
+         *
+         * @public
+         * @readonly
+         */
         readonly callSegmentID: OPTIONAL<CallSegmentID>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

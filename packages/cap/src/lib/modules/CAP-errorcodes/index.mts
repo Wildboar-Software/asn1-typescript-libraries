@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-errorcodes`.
+ * ASN.1 module `CAP-errorcodes` (3GPP TS 29.078 V19.0.0 clause 5.4).
+ *
+ * Local ROS error codes for CAP operation errors defined in `CAP-errortypes`
+ * (clause 5.2). Codes 0–17 cover CS/SMS/SRF errors; 50–51 are GPRS/CS
+ * identifiers (`unknownPDPID`, `unknownCSID`).
  */
 export * from "./errcode-canceled.va.mjs";
 export * from "./errcode-cancelFailed.va.mjs";

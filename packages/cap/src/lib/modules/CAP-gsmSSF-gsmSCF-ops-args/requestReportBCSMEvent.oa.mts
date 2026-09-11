@@ -14,6 +14,14 @@ import { opcode_requestReportBCSMEvent } from "../CAP-operationcodes/opcode-requ
  * @summary requestReportBCSMEvent
  * @description
  *
+ * gsmSCF requests gsmSSF to monitor for call-related BCSM events (e.g. O_Busy,
+ * O_No_Answer) and notify gsmSCF when detected. Every EDP must be explicitly
+ * armed; no implicit arming after other operations. Multiple events may be
+ * requested in one operation; each is reported in a separate EventReportBCSM.
+ * gsmSCF → gsmSSF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode 23. Timer
+ * `Trrb` (short: 1 s–10 s; operator-defined within range). (3GPP TS 29.078
+ * V19.0.0 clauses 6.1.1 and 11.27).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

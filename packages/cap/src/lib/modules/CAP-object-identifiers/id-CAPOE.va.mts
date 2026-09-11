@@ -16,7 +16,11 @@ import {
 /**
  * @summary id_CAPOE
  * @description
- * 
+ *
+ * Root OID `{umts-network(1) cap4OE(23)}`. Parent of Rel-6 `id-acE`, `id-asE`,
+ * `id-contractE` and `id-packageE` arcs.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

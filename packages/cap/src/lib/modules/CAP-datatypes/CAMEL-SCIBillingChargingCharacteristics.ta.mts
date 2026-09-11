@@ -11,6 +11,11 @@ import { CAMEL_SCIBillingChargingCharacteristicsAlt, _decode_CAMEL_SCIBillingCha
  * @summary CAMEL_SCIBillingChargingCharacteristics
  * @description
  *
+ * `aOCBeforeAnswer`: send only if there is neither an active call leg, nor a
+ * Temporary Connection, nor a gsmSRF connection. `aOCAfterAnswer`: send only if
+ * one of those is already active. `aOC-extension` is reserved for future
+ * releases. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.29).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

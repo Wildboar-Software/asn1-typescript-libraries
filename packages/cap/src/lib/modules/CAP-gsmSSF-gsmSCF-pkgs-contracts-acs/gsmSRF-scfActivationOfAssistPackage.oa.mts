@@ -6,6 +6,11 @@ import { id_package_gsmSRF_scfActivationOfAssist } from "../CAP-object-identifie
  * @summary gsmSRF-scfActivationOfAssistPackage
  * @description
  *
+ * gsmSSF-gsmSCF assist activation package: the initiating gsmSSF or gsmSRF
+ * (consumer) invokes `assistRequestInstructions`. Used in
+ * `capAssistHandoffssfToScf` and `gsmSRF-gsmSCF-contract`. Package ID same as
+ * Rel-5. (3GPP TS 29.078 V19.0.0 clauses 6.1.2 and 6.2.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

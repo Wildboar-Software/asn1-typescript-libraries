@@ -14,6 +14,14 @@ import { opcode_initiateCallAttempt } from "../CAP-operationcodes/opcode-initiat
  * @summary initiateCallAttempt
  * @description
  *
+ * gsmSCF instructs gsmSSF to create a new call leg using gsmSCF-provided
+ * address information (e.g. wake-up call), or an additional party in a new Call
+ * Segment within an existing CSA. gsmSCF shall then arm O_Answer as EDP-R and
+ * the failure events (Route_Select_Failure, O_Busy, O_No_Answer) as EDP-R
+ * and/or EDP-N. gsmSCF → gsmSSF. Confirmed (`RESULT`). Local opcode 32. Timer
+ * `Tica` (short: 1 s–10 s; operator-defined within range). (3GPP TS 29.078
+ * V19.0.0 clauses 6.1.1 and 11.21).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

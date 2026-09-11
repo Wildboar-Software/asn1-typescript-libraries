@@ -19,7 +19,12 @@ import { id_CAP_U_ABORT_Reason } from "../CAP-U-ABORT-Data/id-CAP-U-ABORT-Reason
 /**
  * @summary cAP_U_ABORT_Reason_Abstract_Syntax
  * @description
- * 
+ *
+ * Abstract syntax of `CAP-U-ABORT-REASON`, identified by
+ * `id-CAP-U-ABORT-Reason`. Carried in the TC-U-ABORT User Information
+ * parameter.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.7 and 14.1.1.3.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,6 +8,11 @@ import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
  * @summary CorrelationID
  * @description
  *
+ * Used by the gsmSCF to correlate with a previous operation. Generic Number in
+ * AssistRequestInstructions; Generic Digits in EstablishTemporaryConnection
+ * (always BCD). May contain a Hex B address signal (Annex A.6).
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

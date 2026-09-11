@@ -20,6 +20,10 @@ import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects
  * @summary gprsActivityTestPackage
  * @description
  * 
+ * gprsSSF-gsmSCF activity test package: gsmSCF (consumer) invokes
+ * `activityTestGPRS`. Used in `capGsmScfToGprsSsf` (initiator) only. Package
+ * OID updated in Rel-6. (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -6,6 +6,14 @@ import { opcode_callInformationReport } from "../CAP-operationcodes/opcode-callI
  * @summary callInformationReport
  * @description
  *
+ * gsmSSF sends specific call information for a single call party, as requested
+ * by a prior CallInformationRequest. Sent at the end of that party's connection
+ * (release, abandon, busy/not reachable, no-answer, route select failure, or
+ * gsmSCF ReleaseCall). gsmSSF → gsmSCF. Unconfirmed (`RETURN RESULT FALSE`,
+ * `ALWAYS RESPONDS FALSE`). Local opcode 44. Timer `Tcirp` (short: 1 s–10 s;
+ * operator-defined within range). Class 4: operation-related error handling is
+ * not applicable. (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11.6).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -7,6 +7,12 @@ import { id_package_genericDisconnectResource } from "../CAP-object-identifiers/
  * @summary genericDisconnectResourcePackage
  * @description
  *
+ * gsmSSF-gsmSCF generic disconnect package: gsmSCF (consumer) invokes
+ * `disconnectForwardConnection` and `disconnectForwardConnectionWithArgument`.
+ * Used in `capSsfToScfGeneric`, `capAssistHandoffssfToScf`, and
+ * `capScfToSsfGeneric`. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

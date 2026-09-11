@@ -17,7 +17,11 @@ import { id_contractE } from "../CAP-object-identifiers/id-contractE.va.mjs";
 /**
  * @summary id_CAPAssistHandoffssfToScf
  * @description
- * 
+ *
+ * OID of the gsmSSF/gsmSCF assist-handoff contract `CAPAssistHandoffssfToScf`
+ * (`{id-contractE 5}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

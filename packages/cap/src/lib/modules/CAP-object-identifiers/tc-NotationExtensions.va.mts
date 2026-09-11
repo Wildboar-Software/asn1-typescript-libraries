@@ -17,7 +17,11 @@ import {
 /**
  * @summary tc_NotationExtensions
  * @description
- * 
+ *
+ * OID of the ITU-T Q.775 TCAP notation-extension module (`modules(2)
+ * notation-extension(4) version1(1)`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

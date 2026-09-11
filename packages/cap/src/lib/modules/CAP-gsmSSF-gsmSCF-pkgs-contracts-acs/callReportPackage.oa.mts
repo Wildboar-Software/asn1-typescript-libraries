@@ -7,6 +7,11 @@ import { id_package_callReport } from "../CAP-object-identifiers/id-package-call
  * @summary callReportPackage
  * @description
  *
+ * gsmSSF-gsmSCF call report package: gsmSCF (consumer) invokes
+ * `callInformationRequest`; gsmSSF (supplier) invokes `callInformationReport`.
+ * Used in `capSsfToScfGeneric` and `capScfToSsfGeneric`. Package ID same as
+ * Rel-5. (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

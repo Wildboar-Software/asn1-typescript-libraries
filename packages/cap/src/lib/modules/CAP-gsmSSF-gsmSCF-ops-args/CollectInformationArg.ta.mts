@@ -19,6 +19,10 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-
  * @summary CollectInformationArg
  * @description
  * 
+ * Argument of CollectInformation. Clause 11.8A.1.1 lists no parameters; the
+ * SEQUENCE exists for future extensibility. (3GPP TS 29.078 V19.0.0 clause
+ * 11.8A.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

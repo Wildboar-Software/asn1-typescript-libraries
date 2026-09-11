@@ -12,6 +12,12 @@ import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
  * @summary VariablePart
  * @description
  *
+ * Variable part of a message. `number` uses Generic Digits. Time is BCD HH:MM
+ * (SIZE 2): hours then minutes, low nibble = most significant digit of each
+ * pair. Date is BCD YYYYMMDD (SIZE 4). Price is BCD (SIZE 4): hundreds of
+ * thousands down to hundredths. Digit packing in an octet follows
+ * `TimeAndTimezone`. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

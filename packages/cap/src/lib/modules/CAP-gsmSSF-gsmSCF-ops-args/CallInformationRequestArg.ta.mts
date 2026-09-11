@@ -22,6 +22,9 @@ import { leg2 } from "../Core-INAP-CS1-DataTypes/leg2.va.mjs";
  * @summary CallInformationRequestArg
  * @description
  * 
+ * Argument of CallInformationRequest: which items gsmSSF shall record for one
+ * call party. (3GPP TS 29.078 V19.0.0 clause 11.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +43,16 @@ class CallInformationRequestArg {
     constructor (
         /**
          * @summary `requestedInformationTypeList`.
+         * @description
+         *
+         * Items to record. `callAttemptElapsedTime`: from end of CAP processing
+         * of Connect/Continue/ContinueWithArgument to answer (0 if requested
+         * for the calling party; unsuccessful setup stops the measurement).
+         * `callStopTime`: timestamp when the connection is released.
+         * `callConnectedElapsedTime`: called party, answer to release; calling
+         * party, InitialDP to release of that party. `releaseCause`: release
+         * cause for the call. (3GPP TS 29.078 V19.0.0 clause 11.7.1.1).
+         *
          * @public
          * @readonly
          */
@@ -52,6 +65,12 @@ class CallInformationRequestArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `legID`.
+         * @description
+         *
+         * Party for which information shall be collected. Sending Side LegID
+         * (gsmSCF → gsmSSF). Default `sendingSideID:leg2`. (3GPP TS 29.078
+         * V19.0.0 clauses 4.1.5 and 11.7.1.1).
+         *
          * @public
          * @readonly
          */

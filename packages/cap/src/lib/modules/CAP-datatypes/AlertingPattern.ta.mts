@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AlertingPattern
  * @description
  *
+ * Alerting pattern for the subscriber (distinctive ringing, tones, etc.). Last
+ * octet as 3GPP TS 29.002; leading two octets sent as 0 and ignored on receipt.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

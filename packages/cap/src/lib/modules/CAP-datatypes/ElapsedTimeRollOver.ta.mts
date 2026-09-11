@@ -11,6 +11,11 @@ import { ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch, _decode_ElapsedTimeRollO
  * @summary ElapsedTimeRollOver
  * @description
  *
+ * Counters of how many times the corresponding `ElapsedTime` parameter-range
+ * rolled over. `rO-TimeGPRSIfNoTariffSwitch` and the tariff-switch pair may be
+ * absent if no rollover occurred.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 13.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

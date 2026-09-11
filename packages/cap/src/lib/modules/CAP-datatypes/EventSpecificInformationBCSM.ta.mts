@@ -25,6 +25,11 @@ import { DpSpecificInfoAlt, _decode_DpSpecificInfoAlt, _encode_DpSpecificInfoAlt
  * @summary EventSpecificInformationBCSM
  * @description
  *
+ * Call-related information specific to the reported BCSM event. Alternatives
+ * map to DPs (route select failure, O/T busy, no-answer, answer, mid-call,
+ * disconnect, term seized, call accepted, abandon, change of position, or
+ * `dpSpecificInfoAlt`). (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

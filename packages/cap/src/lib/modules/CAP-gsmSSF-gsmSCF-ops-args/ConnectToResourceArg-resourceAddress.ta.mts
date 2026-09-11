@@ -19,6 +19,14 @@ import { type IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddre
  * @summary ConnectToResourceArg_resourceAddress
  * @description
  * 
+ * CHOICE locating the gsmSRF for ConnectToResource. (3GPP TS 29.078 V19.0.0
+ * clause 11.10.1.1).
+ *
+ * - `ipRoutingAddress`: Routing address to set up a connection towards the
+ *   gsmSRF.
+ *
+ * - `none`: Connect the call segment to a predefined gsmSRF.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,9 @@ import { type Interval, _decode_Interval, _encode_Interval } from "../Core-INAP-
  * @summary GapIndicators
  * @description
  *
+ * Call gapping characteristics. No call gapping when `gapInterval` equals 0.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.5)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -23,7 +26,31 @@ import { type Interval, _decode_Interval, _encode_Interval } from "../Core-INAP-
  */
 export class GapIndicators {
     constructor (
+        /**
+         * @summary `duration`.
+         * @description
+         *
+         * Total interval while CallGap for the specified criteria is active.
+         * 0 = remove gapping; 2 = network-specific duration; other values =
+         * seconds. -1 shall not be used. (3GPP TS 29.078 V19.0.0 clauses 5.1
+         * and 11.5)
+         *
+         * @public
+         * @readonly
+         */
         readonly duration: Duration,
+        /**
+         * @summary `gapInterval`.
+         * @description
+         *
+         * Minimum time between calls allowed through. 0 = calls meeting the
+         * criteria shall not be rejected (ASN.1: no call gapping); 1 = reject
+         * all matching calls; other values = milliseconds. (3GPP TS 29.078
+         * V19.0.0 clauses 5.1 and 11.5)
+         *
+         * @public
+         * @readonly
+         */
         readonly gapInterval: Interval,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

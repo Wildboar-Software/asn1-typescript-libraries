@@ -24,6 +24,19 @@ import { type ScfID, _decode_ScfID, _encode_ScfID } from "./ScfID.ta.mjs";
 export class CompoundCriteria {
     constructor (
         readonly basicGapCriteria: BasicGapCriteria,
+        /**
+         * @summary `scfID`.
+         * @description
+         *
+         * gsmSCF that requested gapping (e.g. GT calling party address per
+         * ITU-T Q.713). If absent, gapping is not dedicated to a specific
+         * gsmSCF. Restricted to a fixed GT string. Inter-network use needs
+         * bilateral agreement if length exceeds 10 bytes.
+         * (3GPP TS 29.078 V19.0.0 clause 11.5).
+         *
+         * @public
+         * @readonly
+         */
         readonly scfID: OPTIONAL<ScfID>,
     ) {}
 

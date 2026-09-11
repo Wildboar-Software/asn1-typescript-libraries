@@ -24,7 +24,27 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "./PDPID.ta.mjs";
  */
 export class CAMEL_SCIGPRSBillingChargingCharacteristics {
     constructor (
+        /**
+         * @summary `aOCGPRS`.
+         * @description
+         *
+         * Advice of Charge information to send to the MS (if the SGSN supports
+         * AoC). (3GPP TS 29.078 V19.0.0 clause 13.14).
+         *
+         * @public
+         * @readonly
+         */
         readonly aOCGPRS: AOCGPRS,
+        /**
+         * @summary `pDPID`.
+         * @description
+         *
+         * PDP Context within the GPRS session dialogue for which the AoC
+         * instruction applies. (3GPP TS 29.078 V19.0.0 clause 13.14).
+         *
+         * @public
+         * @readonly
+         */
         readonly pDPID: OPTIONAL<PDPID>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

@@ -17,7 +17,10 @@ import { id_CAP3 } from "../CAP-object-identifiers/id-CAP3.va.mjs";
 /**
  * @summary id_contract3
  * @description
- * 
+ *
+ * OID arc for CAP3 contracts under `id-CAP3` (`contract(26)`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

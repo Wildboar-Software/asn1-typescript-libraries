@@ -37,6 +37,9 @@ import { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/U
  * @summary InitialDPArgExtension
  * @description
  * 
+ * Extension SEQUENCE of InitialDPArg (GMSC/forwarding, terminal and CAMEL
+ * capability, SCUDIF, EDS flags). (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,90 +70,163 @@ class InitialDPArgExtension {
     constructor (
         /**
          * @summary `gmscAddress`.
+         * @description
+         *
+         * gmscId assigned to the GMSC. (3GPP TS 29.078 V19.0.0 clause
+         * 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gmscAddress: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `forwardingDestinationNumber`.
+         * @description
+         *
+         * Forwarding destination. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly forwardingDestinationNumber: OPTIONAL<CalledPartyNumber>,
         /**
          * @summary `ms_Classmark2`.
+         * @description
+         *
+         * MS Classmark 2 of the mobile subscriber for which the service is
+         * invoked. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly ms_Classmark2: OPTIONAL<MS_Classmark2>,
         /**
          * @summary `iMEI`.
+         * @description
+         *
+         * IMEI (with software version) of the mobile subscriber for which the
+         * service is invoked. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly iMEI: OPTIONAL<IMEI>,
         /**
          * @summary `supportedCamelPhases`.
+         * @description
+         *
+         * CAMEL phases supported in the GMSC or VMSC sending InitialDP. (3GPP
+         * TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly supportedCamelPhases: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `offeredCamel4Functionalities`.
+         * @description
+         *
+         * Offered CAMEL phase 4 functionalities. (3GPP TS 29.078 V19.0.0 clause
+         * 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly offeredCamel4Functionalities: OPTIONAL<OfferedCamel4Functionalities>,
         /**
          * @summary `bearerCapability2`.
+         * @description
+         *
+         * Bearer capability or transmission-medium requirements (second set).
+         * (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly bearerCapability2: OPTIONAL<BearerCapability>,
         /**
          * @summary `ext_basicServiceCode2`.
+         * @description
+         *
+         * Basic Service Code 2. Spec name `extBasicServiceCode2`. (3GPP TS
+         * 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly ext_basicServiceCode2: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `highLayerCompatibility2`.
+         * @description
+         *
+         * High layer compatibility 2 for a SCUDIF call. (3GPP TS 29.078 V19.0.0
+         * clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly highLayerCompatibility2: OPTIONAL<HighLayerCompatibility>,
         /**
          * @summary `lowLayerCompatibility`.
+         * @description
+         *
+         * Low layer compatibility. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly lowLayerCompatibility: OPTIONAL<LowLayerCompatibility>,
         /**
          * @summary `lowLayerCompatibility2`.
+         * @description
+         *
+         * Low layer compatibility 2 for a SCUDIF call. (3GPP TS 29.078 V19.0.0
+         * clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly lowLayerCompatibility2: OPTIONAL<LowLayerCompatibility>,
         /**
          * @summary `enhancedDialledServicesAllowed`.
+         * @description
+         *
+         * Presence means gsmSCF may use Enhanced Dialled Services (EDS) for
+         * this call. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly enhancedDialledServicesAllowed: OPTIONAL<NULL>,
         /**
          * @summary `uu_Data`.
+         * @description
+         *
+         * User-to-user signalling service related information. Spec name
+         * `UU-Data`. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly uu_Data: OPTIONAL<UU_Data>,
         /**
          * @summary `collectInformationAllowed`.
+         * @description
+         *
+         * Presence means gsmSCF may use CollectInformation for this call. (3GPP
+         * TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */
         readonly collectInformationAllowed: OPTIONAL<NULL>,
         /**
          * @summary `releaseCallArgExtensionAllowed`.
+         * @description
+         *
+         * Presence means gsmSCF may use Extensions in ReleaseCall for this
+         * call. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+         *
          * @public
          * @readonly
          */

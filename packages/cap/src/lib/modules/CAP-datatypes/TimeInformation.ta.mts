@@ -10,6 +10,9 @@ import { TimeIfTariffSwitch, _decode_TimeIfTariffSwitch, _encode_TimeIfTariffSwi
  * @summary TimeInformation
  * @description
  *
+ * Call duration information, with or without a tariff switch. (3GPP TS 29.078
+ * V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

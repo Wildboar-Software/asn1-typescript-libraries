@@ -6,6 +6,10 @@ import { id_package_gprsScfActivation } from "../CAP-object-identifiers/id-packa
  * @summary gprsScfActivationPackage
  * @description
  *
+ * gprsSSF-gsmSCF SCF activation package: gprsSSF (consumer) invokes
+ * `initialDPGPRS`. Used in `capGprsSsfToScf` (initiator). Package OID updated
+ * in Rel-6. (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

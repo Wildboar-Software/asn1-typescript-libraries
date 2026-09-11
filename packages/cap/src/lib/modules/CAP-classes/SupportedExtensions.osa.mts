@@ -18,7 +18,12 @@ import { firstExtension } from "../CAP-classes/firstExtension.oa.mjs";
 /**
  * @summary SupportedExtensions
  * @description
- * 
+ *
+ * Full set of network-operator `EXTENSION` objects. Ships with the
+ * example `firstExtension` plus an extension marker for operator
+ * additions.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

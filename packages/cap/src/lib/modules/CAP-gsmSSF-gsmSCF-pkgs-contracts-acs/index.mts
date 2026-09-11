@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-gsmSSF-gsmSCF-pkgs-contracts-acs`.
+ * ASN.1 module `CAP-gsmSSF-gsmSCF-pkgs-contracts-acs`: gsmSSF-gsmSCF
+ * circuit-switched operation packages, contracts (`capSsfToScfGeneric`,
+ * `capAssistHandoffssfToScf`, `capScfToSsfGeneric`), and application contexts
+ * (`capssf-scfGenericAC`, `capssf-scfAssistHandoffAC`, `capscf-ssfGenericAC`).
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
  */
 export * from "./activityTestPackage.oa.mjs";
 export * from "./assistConnectionEstablishmentPackage.oa.mjs";

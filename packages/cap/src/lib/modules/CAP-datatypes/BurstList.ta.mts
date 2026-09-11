@@ -25,6 +25,17 @@ import { Burst, _decode_Burst, _encode_Burst } from "./Burst.ta.mjs";
  */
 export class BurstList {
     constructor (
+        /**
+         * @summary `warningPeriod`.
+         * @description
+         *
+         * Time before Max Call Period Duration expiry when playing the burst
+         * list starts. Measured in 1 second units.
+         * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.2).
+         *
+         * @public
+         * @readonly
+         */
         readonly warningPeriod: OPTIONAL<INTEGER>,
         readonly bursts: Burst,
         readonly _unrecognizedExtensionsList: _Element[] = [],

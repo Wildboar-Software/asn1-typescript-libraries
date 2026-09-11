@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ForwardServiceInteractionInd
  * @description
  *
+ * Forward-direction CAMEL vs network-based service interaction (conference,
+ * call diversion, calling-party restriction). If a field is absent from Connect
+ * or ContinueWithArgument, the CAMEL service does not affect that treatment.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,8 +31,43 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class ForwardServiceInteractionInd {
     constructor (
+        /**
+         * @summary `conferenceTreatmentIndicator`.
+         * @description
+         *
+         * Accept conference request `'xxxx xx01'B`; reject `'xxxx xx10'B`. If
+         * absent from Connect or ContinueWithArgument, CAMEL does not affect
+         * conference treatment. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `callDiversionTreatmentIndicator`.
+         * @description
+         *
+         * Call diversion allowed `'xxxx xx01'B`; not allowed `'xxxx xx10'B`.
+         * If absent from Connect or ContinueWithArgument, CAMEL does not
+         * affect call diversion treatment. (3GPP TS 29.078 V19.0.0 clause
+         * 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly callDiversionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `callingPartyRestrictionIndicator`.
+         * @description
+         *
+         * No IN impact `'xxxx xx01'B`; presentation restricted `'xxxx xx10'B`.
+         * If absent from Connect or ContinueWithArgument, CAMEL does not
+         * affect calling-party restriction treatment. (3GPP TS 29.078 V19.0.0
+         * clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly callingPartyRestrictionIndicator: OPTIONAL<OCTET_STRING>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {

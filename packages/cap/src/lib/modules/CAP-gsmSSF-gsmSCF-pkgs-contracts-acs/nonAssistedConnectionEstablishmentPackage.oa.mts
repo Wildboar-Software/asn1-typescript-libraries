@@ -6,6 +6,11 @@ import { id_package_nonAssistedConnectionEstablishment } from "../CAP-object-ide
  * @summary nonAssistedConnectionEstablishmentPackage
  * @description
  *
+ * gsmSSF-gsmSCF non-assisted connection package: gsmSCF (consumer) invokes
+ * `connectToResource`. Used in `capSsfToScfGeneric`,
+ * `capAssistHandoffssfToScf`, and `capScfToSsfGeneric`. Package ID same as
+ * Rel-5. (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

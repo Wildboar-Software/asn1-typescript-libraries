@@ -17,6 +17,20 @@ import { opcode_playAnnouncement } from "../CAP-operationcodes/opcode-playAnnoun
  * @summary playAnnouncement
  * @description
  *
+ * Inband interaction with a CS user: play an announcement or tone.
+ * Used after Establish Temporary Connection (assist with a second
+ * gsmSSF) or Connect To Resource (no assist). Linked operation:
+ * SpecializedResourceReport. (3GPP TS 29.078 V19.0.0 clause 11.23).
+ *
+ * Direction: gsmSCF → gsmSRF. Confirmed (class 2). Local opcode 47.
+ * Timer Tpa (Long; 1 s–30 min, operator-defined). The timer must
+ * last long enough to correlate the linked SpecializedResourceReport.
+ *
+ * Cancel before or during processing reports `canceled`. For MS
+ * inband interaction the gsmSRF is usually collocated with the
+ * gsmSSF for standard tones/announcements; for ISDN it is always
+ * collocated. (3GPP TS 29.078 V19.0.0 clauses 6.2 and 11.23).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NAOliInfo
  * @description
  *
+ * North American Originating Line Information; same values as ANSI T1.113-1995,
+ * e.g. `'3D'H` (61) Cellular Service Type 1, `'3E'H` (62) Type 2, `'3F'H` (63)
+ * Cellular Service (roaming). (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

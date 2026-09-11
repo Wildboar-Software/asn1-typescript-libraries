@@ -16,7 +16,12 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary opcode_initialDPGPRS
  * @description
- * 
+ *
+ * Local opcode 78. Gprs Scf Activation package. `initialDPGPRS` on
+ * gprsSSF→gsmSCF.
+ * Timer `Tidpg` (short: 1 s–20 s; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 5.3 and 8.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,6 +14,19 @@ import { opcode_requestReportGPRSEvent } from "../CAP-operationcodes/opcode-requ
  * @summary requestReportGPRSEvent
  * @description
  *
+ * Requests the gprsSSF to monitor GPRS Session or PDP Context
+ * events (e.g. attach or PDP Context activation) and notify the
+ * gsmSCF when detected. Several events may be armed in one invoke;
+ * each is reported in a separate EventReportGPRS.
+ * (3GPP TS 29.078 V19.0.0 clause 13.12).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (class 2). Local opcode
+ * 81. Timer Trrqe (Short; 1–20 s, operator-defined).
+ *
+ * In Monitoring, only disarm (transparent) or notifyAndContinue
+ * are accepted. unknownPDPID if PDPID unknown.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

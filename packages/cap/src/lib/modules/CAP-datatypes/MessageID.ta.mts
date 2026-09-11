@@ -11,6 +11,11 @@ import { MessageID_variableMessage, _decode_MessageID_variableMessage, _encode_M
  * @summary MessageID
  * @description
  *
+ * Message(s) to send (elementary ID, vendor-specific `text`, a list of
+ * elementary IDs, or a variable message with up to five `VariablePart`s). Use
+ * of `text` is network operator/equipment vendor specific. (3GPP TS 29.078
+ * V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

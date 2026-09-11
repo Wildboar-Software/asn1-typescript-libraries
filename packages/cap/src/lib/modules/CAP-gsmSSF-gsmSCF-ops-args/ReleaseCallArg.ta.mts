@@ -20,6 +20,15 @@ import { AllCallSegmentsWithExtension, _decode_AllCallSegmentsWithExtension, _en
  * @summary ReleaseCallArg
  * @description
  * 
+ * Argument of ReleaseCall. CHOICE of cause for tearing down all parties. (3GPP
+ * TS 29.078 V19.0.0 clause 11.26.1.1).
+ *
+ * - `allCallSegments`: Cause given to gsmSSF for releasing the call (tones to
+ *   parties or cause in the release message). ASN.1 default decimal 31 (normal
+ *   unspecified).
+ *
+ * - `allCallSegmentsWithExtension`: Same cause, plus optional extensions.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

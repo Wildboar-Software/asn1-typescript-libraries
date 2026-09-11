@@ -13,6 +13,13 @@ import { opcode_continueWithArgument } from "../CAP-operationcodes/opcode-contin
  * @summary continueWithArgument
  * @description
  *
+ * gsmSCF requests gsmSSF to resume BCSM processing at the suspended DP, using
+ * modified call-setup information from gsmSCF. Provided parameters replace
+ * corresponding CCF signalling parameters; omitted ones retain CCF values.
+ * gsmSCF → gsmSSF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode 88. Timer
+ * `Tcwa` (short: 1 s–10 s; operator-defined within range). (3GPP TS 29.078
+ * V19.0.0 clauses 6.1.1 and 11.12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

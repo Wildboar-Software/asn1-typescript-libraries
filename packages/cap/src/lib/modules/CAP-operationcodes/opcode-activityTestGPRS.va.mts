@@ -16,7 +16,12 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary opcode_activityTestGPRS
  * @description
- * 
+ *
+ * Local opcode 70. Gprs Activity Test package. `activityTestGPRS` on
+ * gsmSCF→gprsSSF.
+ * Timer `Tatg` (short: 1 s–20 s; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 5.3 and 8.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

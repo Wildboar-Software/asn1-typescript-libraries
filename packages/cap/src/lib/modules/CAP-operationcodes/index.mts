@@ -1,7 +1,10 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-operationcodes`.
+ * ASN.1 module `CAP-operationcodes`. Local `Code` values for CAP operations,
+ * grouped by the identified operation packages (CS gsmSSF–gsmSCF,
+ * gsmSCF–gsmSRF, SMS, GPRS).
+ * (3GPP TS 29.078 V19.0.0 clause 5.3).
  */
 export * from "./opcode-activityTest.va.mjs";
 export * from "./opcode-activityTestGPRS.va.mjs";

@@ -9,6 +9,10 @@ import { CAMEL_CallResult_timeDurationChargingResult, _decode_CAMEL_CallResult_t
  * @summary CAMEL_CallResult
  * @description
  *
+ * `timeDurationChargingResult` is the ApplyChargingReport payload. Must include
+ * `partyToCharge` as in the related ApplyCharging so the gsmSCF can correlate
+ * the result. (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

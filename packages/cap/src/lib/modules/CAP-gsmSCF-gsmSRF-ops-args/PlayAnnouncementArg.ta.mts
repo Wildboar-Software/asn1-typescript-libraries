@@ -21,7 +21,12 @@ import { type InformationToSend, _decode_InformationToSend, _encode_InformationT
 /**
  * @summary PlayAnnouncementArg
  * @description
- * 
+ *
+ * Argument of PlayAnnouncement: what to play, whether the gsmSRF
+ * may disconnect after, and whether to notify start/completion via
+ * SpecializedResourceReport. (3GPP TS 29.078 V19.0.0
+ * clause 11.23.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,18 +48,44 @@ class PlayAnnouncementArg {
     constructor (
         /**
          * @summary `informationToSend`.
+         * @description
+         *
+         * Announcement or tone to send. `inbandInfo`: `messageID`
+         * (elementaryMessageID, text-to-speech, elementaryMessageIDs,
+         * or variableMessage), `numberOfRepetitions`, `duration`
+         * (seconds; 0 = endless repetition), `interval` (seconds
+         * between repetitions; only if numberOfRepetitions > 1).
+         * `tone`: `toneID` and `duration` (seconds; 0 = infinite).
+         * If neither duration nor numberOfRepetitions is specified,
+         * network-specific ending conditions apply.
+         * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
+         *
          * @public
          * @readonly
          */
         readonly informationToSend: InformationToSend,
         /**
          * @summary `disconnectFromIPForbidden`.
+         * @description
+         *
+         * TRUE (ASN.1 default): gsmSRF shall not initiate disconnect
+         * from the gsmSSF after the interaction. FALSE: gsmSRF may
+         * disconnect after all information has been sent.
+         * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
+         *
          * @public
          * @readonly
          */
         readonly disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
         /**
          * @summary `requestAnnouncementCompleteNotification`.
+         * @description
+         *
+         * TRUE (ASN.1 default): send SpecializedResourceReport with
+         * `allAnnouncementsComplete` when all information has been
+         * sent. FALSE: do not. (3GPP TS 29.078 V19.0.0
+         * clause 11.23.1.1).
+         *
          * @public
          * @readonly
          */
@@ -67,12 +98,25 @@ class PlayAnnouncementArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `callSegmentID`.
+         * @description
+         *
+         * Call Segment to which the user interaction applies.
+         * unknownCSID if the CSID is not known.
+         * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
+         *
          * @public
          * @readonly
          */
         readonly callSegmentID: OPTIONAL<CallSegmentID>,
         /**
          * @summary `requestAnnouncementStartedNotification`.
+         * @description
+         *
+         * TRUE: send SpecializedResourceReport with
+         * `firstAnnouncementStarted` when the first announcement or
+         * tone has started. ASN.1 default FALSE.
+         * (3GPP TS 29.078 V19.0.0 clause 11.23.1.1).
+         *
          * @public
          * @readonly
          */

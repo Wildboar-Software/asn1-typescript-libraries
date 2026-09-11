@@ -19,7 +19,10 @@ import { SMSEvent, _decode_SMSEvent, _encode_SMSEvent } from "../CAP-datatypes/S
 /**
  * @summary RequestReportSMSEventArg
  * @description
- * 
+ *
+ * Argument of RequestReportSMSEvent: SM events to arm or disarm.
+ * (3GPP TS 29.078 V19.0.0 clause 12.7.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +40,15 @@ class RequestReportSMSEventArg {
     constructor (
         /**
          * @summary `sMSEvents`.
+         * @description
+         *
+         * Event(s) for which a report is requested. Each `SMSEvent`
+         * carries `eventTypeSMS` (SMSCollectedInfo and
+         * SMSDeliveryRequested are not valid here) and `monitorMode`:
+         * interrupted → report as request; notifyAndContinue →
+         * notification; transparent → do not report.
+         * (3GPP TS 29.078 V19.0.0 clause 12.7.1.1).
+         *
          * @public
          * @readonly
          */

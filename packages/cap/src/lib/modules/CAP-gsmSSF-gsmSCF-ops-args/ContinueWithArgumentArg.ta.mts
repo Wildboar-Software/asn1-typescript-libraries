@@ -33,6 +33,10 @@ import { ContinueWithArgumentArgExtension, _decode_ContinueWithArgumentArgExtens
  * @summary ContinueWithArgumentArg
  * @description
  * 
+ * Argument of ContinueWithArgument: optional modified call-setup information
+ * applied when BCSM processing resumes. (3GPP TS 29.078 V19.0.0 clause
+ * 11.12.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,6 +66,11 @@ class ContinueWithArgumentArg {
     constructor (
         /**
          * @summary `alertingPattern`.
+         * @description
+         *
+         * Type of alerting to apply (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0
+         * clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
@@ -74,72 +83,137 @@ class ContinueWithArgumentArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
+         * @description
+         *
+         * Resolves interactions between CAMEL-based and network-based services.
+         * (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `callingPartysCategory`.
+         * @description
+         *
+         * Type of calling party (e.g. operator, pay phone, ordinary
+         * subscriber). (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly callingPartysCategory: OPTIONAL<CallingPartysCategory>,
         /**
          * @summary `genericNumbers`.
+         * @description
+         *
+         * Lets gsmSCF set the network Generic Number; used to transfer
+         * Additional Calling Party Number. (3GPP TS 29.078 V19.0.0 clause
+         * 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly genericNumbers: OPTIONAL<GenericNumbers>,
         /**
          * @summary `cug_Interlock`.
+         * @description
+         *
+         * Uniquely identifies a CUG within a network. (3GPP TS 29.078 V19.0.0
+         * clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly cug_Interlock: OPTIONAL<CUG_Interlock>,
         /**
          * @summary `cug_OutgoingAccess`.
+         * @description
+         *
+         * Presence means the calling user has subscribed to outgoing access
+         * inter-CUG accessibility. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly cug_OutgoingAccess: OPTIONAL<NULL>,
         /**
          * @summary `chargeNumber`.
+         * @description
+         *
+         * Number identifying the entity to be charged; chargeable number for a
+         * North American long-distance carrier (ANSI T1.113-1995). (3GPP TS
+         * 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly chargeNumber: OPTIONAL<ChargeNumber>,
         /**
          * @summary `carrier`.
+         * @description
+         *
+         * Carrier selection field (how the carrier is provided, e.g.
+         * pre-subscribed) followed by carrier ID digits for routing to a
+         * carrier. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly carrier: OPTIONAL<Carrier>,
         /**
          * @summary `suppressionOfAnnouncement`.
+         * @description
+         *
+         * Announcements and tones played in the exchange at unsuccessful
+         * call-setup attempts shall be suppressed. (3GPP TS 29.078 V19.0.0
+         * clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement>,
         /**
          * @summary `naOliInfo`.
+         * @description
+         *
+         * Originating line information identifying the charged-party number
+         * type to the carrier. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly naOliInfo: OPTIONAL<NAOliInfo>,
         /**
          * @summary `bor_InterrogationRequested`.
+         * @description
+         *
+         * Presence means Basic Optimal Routeing is requested for the call.
+         * (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly bor_InterrogationRequested: OPTIONAL<NULL>,
         /**
          * @summary `suppress_O_CSI`.
+         * @description
+         *
+         * Presence means O-CSI shall be suppressed for the forwarding or
+         * deflecting leg. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly suppress_O_CSI: OPTIONAL<NULL>,
         /**
          * @summary `continueWithArgumentArgExtension`.
+         * @description
+         *
+         * Extension SEQUENCE: suppress D-CSI, N-CSI, outgoing call barring, and
+         * the leg or Call Segment this ContinueWithArgument applies to. (3GPP
+         * TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */

@@ -16,7 +16,12 @@ import {
 /**
  * @summary gprsSSF_gsmSCF_Operations
  * @description
- * 
+ *
+ * OID of the CAP `gprsSSF-gsmSCF-Operations` module (`cap-GPRS-ops-args(107)
+ * version8(7)`). Updated to version8(7) in Rel-6 so other modules can IMPORT
+ * Rel-6 GPRS control operation definitions.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

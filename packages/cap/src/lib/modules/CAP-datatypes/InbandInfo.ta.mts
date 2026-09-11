@@ -12,6 +12,11 @@ import { type MessageID, _decode_MessageID, _encode_MessageID } from "./MessageI
  * @summary InbandInfo
  * @description
  *
+ * In-band announcement/message to send. `interval` is seconds between repeated
+ * announcements. `duration` is total time in seconds including repetitions and
+ * intervals (0 = infinite). End of announcement is whichever of duration or
+ * `numberOfRepetitions` comes first. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,7 +34,27 @@ export class InbandInfo {
     constructor (
         readonly messageID: MessageID,
         readonly numberOfRepetitions: OPTIONAL<INTEGER>,
+        /**
+         * @summary `duration`.
+         * @description
+         *
+         * Total time in seconds, including repetitions and intervals; 0 =
+         * infinite. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly duration: OPTIONAL<INTEGER>,
+        /**
+         * @summary `interval`.
+         * @description
+         *
+         * Time in seconds between each repeated announcement. (3GPP TS 29.078
+         * V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly interval: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {

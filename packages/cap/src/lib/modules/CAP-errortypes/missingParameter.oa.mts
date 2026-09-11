@@ -21,7 +21,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary missingParameter
  * @description
- * 
+ *
+ * An expected optional parameter that is essential for the application
+ * was not received; the responding entity cannot start the operation.
+ * Returned by gsmSCF, gsmSSF, gsmSRF, smsSSF, or gprsSSF. Receiving SSF
+ * goes Idle and applies default call/SMS/GPRS handling; a responding SSF
+ * stays in the same state. Local error code 7.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,12 @@ import { id_rosObject_gprsSSF } from "../CAP-object-identifiers/id-rosObject-gpr
 /**
  * @summary gprsSSF
  * @description
- * 
+ *
+ * gprsSSF ROS object. INITIATES `capGprsSsfToScf`; RESPONDS
+ * `capGsmScfToGprsSsf`. Rel-6 uses the Rel-6 CONTRACT definitions of those
+ * names.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,6 +22,16 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  */
 export class DpSpecificInfoAlt_collectedInfoSpecificInfo {
     constructor (
+        /**
+         * @summary `calledPartyNumber`.
+         * @description
+         *
+         * For Collected_Info, EventReportBCSM shall contain the
+         * CalledPartyNumber. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly calledPartyNumber: OPTIONAL<CalledPartyNumber>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

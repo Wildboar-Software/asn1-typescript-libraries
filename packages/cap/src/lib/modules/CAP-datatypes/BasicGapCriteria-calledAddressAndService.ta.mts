@@ -23,7 +23,28 @@ import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core
  */
 export class BasicGapCriteria_calledAddressAndService {
     constructor (
+        /**
+         * @summary `calledAddressValue`.
+         * @description
+         *
+         * Leading digits of the dialled number (from current call control).
+         * Incomplete numbers allowed; same-prefix handling is in the CallGap
+         * procedure. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.5).
+         *
+         * @public
+         * @readonly
+         */
         readonly calledAddressValue: Digits,
+        /**
+         * @summary `serviceKey`.
+         * @description
+         *
+         * Service Key that must also match for gapping to apply.
+         * (3GPP TS 29.078 V19.0.0 clause 11.5).
+         *
+         * @public
+         * @readonly
+         */
         readonly serviceKey: ServiceKey,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

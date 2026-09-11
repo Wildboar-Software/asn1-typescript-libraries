@@ -23,7 +23,25 @@ import { opcode_specializedResourceReport } from "../CAP-operationcodes/opcode-s
 /**
  * @summary specializedResourceReport
  * @description
- * 
+ *
+ * gsmSRF response to PlayAnnouncement or
+ * PromptAndCollectUserInformation when
+ * requestAnnouncementCompleteNotification or
+ * requestAnnouncementStartedNotification is TRUE.
+ * (3GPP TS 29.078 V19.0.0 clause 11.30).
+ *
+ * Direction: gsmSRF → gsmSCF. Unconfirmed (class 4). Local opcode
+ * 49. Timer Tsrr (Short; 1–10 s, operator-defined).
+ *
+ * `allAnnouncementsComplete`: all announcements and tones finished
+ * (PlayAnnouncement with requestAnnouncementCompleteNotification).
+ * `firstAnnouncementStarted`: first announcement or tone started
+ * (either operation with requestAnnouncementStartedNotification).
+ * If disconnectFromIPForbidden is FALSE, the gsmSRF then
+ * disconnects the bearer to the gsmSSF and goes Idle. Errors not
+ * applicable (class 4).
+ * (3GPP TS 29.078 V19.0.0 clauses 6.2 and 11.30).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

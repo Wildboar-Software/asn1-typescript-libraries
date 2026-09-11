@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Tone
  * @description
  *
+ * `duration` is the tone length in seconds; 0 indicates infinite duration.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -25,6 +28,16 @@ import * as $ from "@wildboar/asn1/functional";
 export class Tone {
     constructor (
         readonly toneID: INTEGER,
+        /**
+         * @summary `duration`.
+         * @description
+         *
+         * Tone length in seconds; 0 = infinite duration. (3GPP TS 29.078
+         * V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly duration: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

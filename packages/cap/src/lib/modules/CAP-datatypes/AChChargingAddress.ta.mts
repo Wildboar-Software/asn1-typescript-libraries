@@ -10,6 +10,14 @@ import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from
  * @summary AChChargingAddress
  * @description
  *
+ * `legID`: CSE control of call duration is associated with that leg (Sending
+ * Side LegID from gsmSCF). `srfConnection`: associated with the Temporary
+ * Connection or a gsmSRF connection. LegID 1 = calling party present at
+ * InitialDP; LegID 2 = called party from InitialDP +
+ * Connect/Continue/ContinueWithArgument; LegID > 2 = called party from
+ * InitiateCallAttempt + ContinueWithArgument.
+ * (3GPP TS 29.078 V19.0.0 clauses 11.2 and 4.1.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

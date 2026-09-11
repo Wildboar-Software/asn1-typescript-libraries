@@ -19,6 +19,21 @@ import { opcode_promptAndCollectUserInformation } from "../CAP-operationcodes/op
  * @summary promptAndCollectUserInformation
  * @description
  *
+ * Interacts with a call party to collect information (prompt plus
+ * digit/speech collection). Result is ReceivedInformationArg
+ * (`digitsResponse`). Linked operation: SpecializedResourceReport.
+ * (3GPP TS 29.078 V19.0.0 clause 11.25).
+ *
+ * Direction: gsmSCF → gsmSRF. Confirmed (class 1). Local opcode 48.
+ * Timer Tpc (Long; 1 s–30 min, operator-defined).
+ *
+ * Cancel before or during processing reports `canceled`.
+ * `errorTreatment` `reportErrorToSCF` maps to
+ * `improperCallerResponse`. `minimumNbOfDigits` >
+ * `maximumNbOfDigits` is an operation error. `help` /
+ * `repeatPrompt` error handling is done only once per invoke.
+ * (3GPP TS 29.078 V19.0.0 clauses 6.2 and 11.25).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

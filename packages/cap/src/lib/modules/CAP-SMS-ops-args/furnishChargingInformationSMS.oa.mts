@@ -11,6 +11,19 @@ import { opcode_furnishChargingInformationSMS } from "../CAP-operationcodes/opco
  * @summary furnishChargingInformationSMS
  * @description
  *
+ * Sends charging data to a CAMEL Logical SMS record (offline SM
+ * charging). The first invocation creates the record; later ones
+ * overwrite or append free-format data per appendFreeFormatData.
+ * (3GPP TS 29.078 V19.0.0 clause 12.4).
+ *
+ * Direction: gsmSCF → smsSSF (MSC or SGSN). Confirmed (class 2).
+ * Local opcode 61. Timer Tfcisms (Short; 1–20 s, operator-defined).
+ *
+ * Valid in Waiting_for_Instructions; no FSM state change. The
+ * logical record is associated with one or more physical CDRs
+ * (3GPP TS 32.250 / 32.251 / 22.115).
+ * (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

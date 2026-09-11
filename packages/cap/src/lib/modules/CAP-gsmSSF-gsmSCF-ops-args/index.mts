@@ -1,6 +1,9 @@
 /**
  * @description
  *
+ * gsmSSF–gsmSCF operations and arguments for circuit-switched call
+ * control (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11).
+ *
  * ASN.1 module `CAP-gsmSSF-gsmSCF-ops-args`.
  */
 export * from "./activityTest.oa.mjs";

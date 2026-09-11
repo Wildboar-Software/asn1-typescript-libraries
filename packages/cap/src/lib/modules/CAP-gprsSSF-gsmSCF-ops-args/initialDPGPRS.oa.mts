@@ -14,6 +14,21 @@ import { opcode_initialDPGPRS } from "../CAP-operationcodes/opcode-initialDPGPRS
  * @summary initialDPGPRS
  * @description
  *
+ * Sent after a TDP-R in the GPRS Session or PDP Context state
+ * machine to request gsmSCF instructions. Session TDPs: Attach,
+ * Change of Position Session. PDP Context TDPs: PDP Context
+ * Establishment, Establishment Acknowledgement, Change of Position
+ * Context. (3GPP TS 29.078 V19.0.0 clause 13.10).
+ *
+ * Direction: gprsSSF → gsmSCF. Confirmed (class 2). Local opcode
+ * 78. Timer Tidpg (Short; 1–20 s, operator-defined).
+ *
+ * Not sent if a GPRS dialogue already exists for that session (PDP
+ * TDP) or PDP Context (Establishment Ack TDP). gsmSCF address from
+ * CSI; Tssf started. Unreachable gsmSCF, Tssf expiry, or MS
+ * abandon before the TC dialogue: abort and apply Default GPRS
+ * Handling. (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

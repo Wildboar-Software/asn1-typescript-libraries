@@ -11,6 +11,11 @@ import { ElapsedTime_timeGPRSIfTariffSwitch, _decode_ElapsedTime_timeGPRSIfTarif
  * @summary ElapsedTime
  * @description
  *
+ * `timeGPRSIfNoTariffSwitch`: seconds; present if no tariff switch occurred for
+ * the GPRS session or PDP Context, else absent. `timeGPRSIfTariffSwitch`:
+ * present if a tariff switch occurred. Nested intervals are also in seconds.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 13.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

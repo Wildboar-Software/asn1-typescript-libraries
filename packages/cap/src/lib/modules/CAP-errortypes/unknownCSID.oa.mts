@@ -21,7 +21,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unknownCSID
  * @description
- * 
+ *
+ * gsmSSF returns this toward gsmSCF when the `callSegmentID` in the
+ * operation is unknown to the gsmSSF. Local error code 51.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.16).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

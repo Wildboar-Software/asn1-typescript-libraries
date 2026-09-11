@@ -21,7 +21,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unexpectedComponentSequence
  * @description
- * 
+ *
+ * An incorrect sequence of components was received (e.g.
+ * DisconnectForwardConnection followed by PlayAnnouncement), a SACF/MACF
+ * rule is violated, or the operation cannot execute in the current FSM
+ * state. A responding SSF/SRF stays in the same state; an invoking SSF
+ * that receives it goes Idle and applies default handling. Local error
+ * code 14.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -29,6 +29,10 @@ import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTw
  * @summary EstablishTemporaryConnectionArg
  * @description
  * 
+ * Argument of EstablishTemporaryConnection: assist/SRF routing address and
+ * optional correlation, SCF identity, and call-setup parameters. (3GPP TS
+ * 29.078 V19.0.0 clause 11.17.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,18 +59,44 @@ class EstablishTemporaryConnectionArg {
     constructor (
         /**
          * @summary `assistingSSPIPRoutingAddress`.
+         * @description
+         *
+         * Destination address of the gsmSRF for the assist procedure. May embed
+         * `correlationID` and `scfID` only if those are not sent as separate
+         * parameters. When connecting across PLMNs without a bilateral
+         * agreement to pass them separately, this address shall contain routing
+         * digits, correlationID, and scfID. (3GPP TS 29.078 V19.0.0 clause
+         * 11.17.1.1).
+         *
          * @public
          * @readonly
          */
         readonly assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress,
         /**
          * @summary `correlationID`.
+         * @description
+         *
+         * Lets gsmSCF associate AssistRequestInstructions from the assisting
+         * gsmSSF or gsmSRF with the initiating gsmSSF's request. Use only if
+         * not embedded in `assistingSSPIPRoutingAddress`. Mapping onto the
+         * signalling system is network-operator defined. (3GPP TS 29.078
+         * V19.0.0 clause 11.17.1.1).
+         *
          * @public
          * @readonly
          */
         readonly correlationID: OPTIONAL<CorrelationID>,
         /**
          * @summary `scfID`.
+         * @description
+         *
+         * gsmSCF identifier so the assisting gsmSSF knows where to send
+         * AssistRequestInstructions. Use only if not embedded in
+         * `assistingSSPIPRoutingAddress`. Across an inter-network boundary,
+         * encoding must be understood in both networks; length beyond 10 bytes
+         * requires bilateral agreement. (3GPP TS 29.078 V19.0.0 clause
+         * 11.17.1.1).
+         *
          * @public
          * @readonly
          */
@@ -79,42 +109,79 @@ class EstablishTemporaryConnectionArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `carrier`.
+         * @description
+         *
+         * Carrier selection field (how the carrier is provided, e.g.
+         * pre-subscribed) followed by carrier ID digits for routing to a
+         * carrier. (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
+         *
          * @public
          * @readonly
          */
         readonly carrier: OPTIONAL<Carrier>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
+         * @description
+         *
+         * Controls through-connection to the Calling Party. (3GPP TS 29.078
+         * V19.0.0 clause 11.17.1.1).
+         *
          * @public
          * @readonly
          */
         readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `callSegmentID`.
+         * @description
+         *
+         * Call Segment to which the temporary connection shall be established.
+         * (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
+         *
          * @public
          * @readonly
          */
         readonly callSegmentID: OPTIONAL<CallSegmentID>,
         /**
          * @summary `naOliInfo`.
+         * @description
+         *
+         * Originating line information identifying the charged-party number
+         * type to the carrier. (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
+         *
          * @public
          * @readonly
          */
         readonly naOliInfo: OPTIONAL<NAOliInfo>,
         /**
          * @summary `chargeNumber`.
+         * @description
+         *
+         * Number identifying the entity to be charged; chargeable number for a
+         * North American long-distance carrier (ANSI T1.113-1995). (3GPP TS
+         * 29.078 V19.0.0 clause 11.17.1.1).
+         *
          * @public
          * @readonly
          */
         readonly chargeNumber: OPTIONAL<ChargeNumber>,
         /**
          * @summary `originalCalledPartyID`.
+         * @description
+         *
+         * Identifies the original called party. (3GPP TS 29.078 V19.0.0 clause
+         * 11.17.1.1).
+         *
          * @public
          * @readonly
          */
         readonly originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
         /**
          * @summary `callingPartyNumber`.
+         * @description
+         *
+         * Identifies the calling party. (3GPP TS 29.078 V19.0.0 clause
+         * 11.17.1.1).
+         *
          * @public
          * @readonly
          */

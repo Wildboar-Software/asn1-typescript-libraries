@@ -10,6 +10,10 @@ import { CompoundCriteria, _decode_CompoundCriteria, _encode_CompoundCriteria } 
  * @summary GapCriteria
  * @description
  *
+ * Criteria for a call to be subject to CallGap: `basicGapCriteria` or
+ * `compoundGapCriteria` (basic criteria plus optional gsmSCF identity). (3GPP
+ * TS 29.078 V19.0.0 clauses 5.1 and 11.5)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

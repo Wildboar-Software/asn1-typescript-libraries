@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DateAndTime
  * @description
  *
+ * BCD-encoded. Per octet, bits 0-3 hold the first digit and bits 4-7 the second
+ * (same packing as `TimeAndTimezone`). Octet 1: millenium, century; 2: decade,
+ * year; 3: month; 4: day; 5: hours; 6: minutes; 7: seconds.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

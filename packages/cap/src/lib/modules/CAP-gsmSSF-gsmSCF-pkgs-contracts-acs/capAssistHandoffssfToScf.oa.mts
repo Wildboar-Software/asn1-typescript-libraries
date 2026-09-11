@@ -32,6 +32,16 @@ import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT
  * @summary capAssistHandoffssfToScf
  * @description
  * 
+ * Assist-handoff gsmSSF-to-gsmSCF CS contract. Dialogue initiated by gsmSSF
+ * with `assistRequestInstructions`. Initiator consumes
+ * `gsmSRF-scfActivationOfAssistPackage`. Responder (gsmSCF) consumes
+ * `activityTestPackage`, `cancelPackage`, `genericDisconnectResourcePackage`,
+ * `nonAssistedConnectionEstablishmentPackage`,
+ * `specializedResourceControlPackage` (defined in
+ * CAP-gsmSCF-gsmSRF-pkgs-contracts-acs), and `timerPackage`. Used by
+ * `capssf-scfAssistHandoffAC`. Contract ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

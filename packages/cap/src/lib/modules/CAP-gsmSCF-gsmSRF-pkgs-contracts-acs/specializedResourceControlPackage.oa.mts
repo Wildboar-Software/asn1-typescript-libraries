@@ -8,6 +8,12 @@ import { id_package_specializedResourceControl } from "../CAP-object-identifiers
  * @summary specializedResourceControlPackage
  * @description
  *
+ * gsmSRF-gsmSCF specialized resource control package: gsmSCF (consumer) invokes
+ * `playAnnouncement` and `promptAndCollectUserInformation`; gsmSRF (supplier)
+ * invokes `specializedResourceReport`. Used in `gsmSRF-gsmSCF-contract` and
+ * imported into the CS generic and assist-handoff contracts. Package ID same as
+ * Rel-5. (3GPP TS 29.078 V19.0.0 clauses 6.2.2 and 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

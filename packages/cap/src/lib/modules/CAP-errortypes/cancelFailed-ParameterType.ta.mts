@@ -18,7 +18,10 @@ import { cancelFailed_ParameterType_problem, _enum_for_cancelFailed_ParameterTyp
 /**
  * @summary cancelFailed_ParameterType
  * @description
- * 
+ *
+ * Parameter of `cancelFailed`: why Cancel failed, and which invocation.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +43,23 @@ class cancelFailed_ParameterType {
     constructor (
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why Cancel failed: `unknownOperation` (0), `tooLate` (1), or
+         * `operationNotCancellable` (2).
+         * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+         *
          * @public
          * @readonly
          */
         readonly problem: cancelFailed_ParameterType_problem,
         /**
          * @summary `operation`.
+         * @description
+         *
+         * InvokeID of the operation that failed to cancel.
+         * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.2).
+         *
          * @public
          * @readonly
          */

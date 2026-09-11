@@ -11,6 +11,9 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  * @summary BCSM_Failure
  * @description
  *
+ * EntityReleased alternative: a leg (BCSM) was released.
+ * (3GPP TS 29.078 V19.0.0 clause 11.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,7 +27,29 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  */
 export class BCSM_Failure {
     constructor (
+        /**
+         * @summary `legID`.
+         * @description
+         *
+         * Released leg. Receiving Side LegID (gsmSSF → gsmSCF). LegID 1 =
+         * calling party; 2 = called party from InitialDP; > 2 = called party
+         * from InitiateCallAttempt.
+         * (3GPP TS 29.078 V19.0.0 clauses 11.16 and 4.1.5).
+         *
+         * @public
+         * @readonly
+         */
         readonly legID: OPTIONAL<LegID>,
+        /**
+         * @summary `cause`.
+         * @description
+         *
+         * Cause for releasing this BCSM. gsmSCF may use it to decide further
+         * call handling. (3GPP TS 29.078 V19.0.0 clause 11.16).
+         *
+         * @public
+         * @readonly
+         */
         readonly cause: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

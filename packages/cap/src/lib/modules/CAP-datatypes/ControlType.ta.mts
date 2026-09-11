@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ControlType
  * @description
  *
+ * Reason for activating CallGap. `sCPOverloaded`: automatic congestion
+ * detection in the SCP. `manuallyInitiated`: service / NMC / SMC detected
+ * congestion or another situation needing manual control; has priority over
+ * `sCPOverloaded`. (3GPP TS 29.078 V19.0.0 clause 11.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

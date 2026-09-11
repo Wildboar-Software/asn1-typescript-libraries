@@ -12,6 +12,13 @@ import { opcode_furnishChargingInformation } from "../CAP-operationcodes/opcode-
  * @summary furnishChargingInformation
  * @description
  *
+ * gsmSCF writes CAMEL-specific free-format charging data into a logical call
+ * record for off-line charging. The first FCI for a leg creates the record;
+ * later FCIs append or overwrite per `appendFreeFormatData`. gsmSCF → gsmSSF.
+ * Unconfirmed (`RETURN RESULT FALSE`). Local opcode 34. Timer `Tfci` (short: 1
+ * s–10 s; operator-defined within range). (3GPP TS 29.078 V19.0.0 clauses 6.1.1
+ * and 11.19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

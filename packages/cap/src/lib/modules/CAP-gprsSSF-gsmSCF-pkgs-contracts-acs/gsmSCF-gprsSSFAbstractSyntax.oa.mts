@@ -20,6 +20,10 @@ import { id_as_gsmSCF_gprsSSF_AS } from "../CAP-object-identifiers/id-as-gsmSCF-
  * @summary gsmSCF_gprsSSFAbstractSyntax
  * @description
  * 
+ * Abstract syntax for `cap-gsmscf-gprsssfAC` (CAP from gsmSCF to gprsSSF). Type
+ * is `GenericGsmSCF-gprsSSF-PDUs`. Bound set `cAPSpecificBoundSet`.
+ * Abstract-syntax OID updated in Rel-6. (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

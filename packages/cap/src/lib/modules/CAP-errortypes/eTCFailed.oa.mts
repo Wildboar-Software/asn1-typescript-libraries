@@ -21,7 +21,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary eTCFailed
  * @description
- * 
+ *
+ * gsmSSF returns this toward gsmSCF when EstablishTemporaryConnection to an
+ * assisting gsmSSF or gsmSRF failed (e.g. ISUP backwards release after IAM).
+ * gsmSSF stays in Waiting_for_Instructions. Local error code 3.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

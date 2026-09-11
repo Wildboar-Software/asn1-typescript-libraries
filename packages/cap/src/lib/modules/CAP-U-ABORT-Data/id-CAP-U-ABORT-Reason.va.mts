@@ -16,7 +16,12 @@ import {
 /**
  * @summary id_CAP_U_ABORT_Reason
  * @description
- * 
+ *
+ * OID identifying `CAP-U-ABORT-REASON` in TC-U-ABORT User Information:
+ * `{itu-t(0) identified-organization(4) etsi(0) mobileDomain(0)
+ * umts-Network(1) as(1) cap-u-abort-reason(2) version3(2)}`.
+ * (3GPP TS 29.078 V19.0.0 clause 5.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

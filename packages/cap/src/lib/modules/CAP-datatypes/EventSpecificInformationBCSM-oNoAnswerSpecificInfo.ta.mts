@@ -9,6 +9,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EventSpecificInformationBCSM_oNoAnswerSpecificInfo
  * @description
  *
+ * No specific info defined. For O_No_Answer, EventReportBCSM
+ * eventSpecificInformationBCSM shall be empty (including when triggered by ISUP
+ * release or TNRy expiry). (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

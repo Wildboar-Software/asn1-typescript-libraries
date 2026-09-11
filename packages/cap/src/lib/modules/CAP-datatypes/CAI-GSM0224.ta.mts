@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CAI_GSM0224
  * @description
  *
+ * Charge Advice Information to the Mobile Station. Parameter usage is in 3GPP
+ * TS 22.024 (`e1`..`e7`). (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

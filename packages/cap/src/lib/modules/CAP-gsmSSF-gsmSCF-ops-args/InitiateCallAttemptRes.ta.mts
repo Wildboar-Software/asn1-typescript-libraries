@@ -23,6 +23,9 @@ import { OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _en
  * @summary InitiateCallAttemptRes
  * @description
  * 
+ * Result of InitiateCallAttempt: CAMEL capability of the receiving gsmSSF.
+ * (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,12 +45,22 @@ class InitiateCallAttemptRes {
     constructor (
         /**
          * @summary `supportedCamelPhases`.
+         * @description
+         *
+         * CAMEL phases supported in the gsmSSF that received
+         * InitiateCallAttempt. (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.2).
+         *
          * @public
          * @readonly
          */
         readonly supportedCamelPhases: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `offeredCamel4Functionalities`.
+         * @description
+         *
+         * Offered CAMEL phase 4 functionalities. (3GPP TS 29.078 V19.0.0 clause
+         * 11.21.1.1.2).
+         *
          * @public
          * @readonly
          */
@@ -60,6 +73,11 @@ class InitiateCallAttemptRes {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `releaseCallArgExtensionAllowed`.
+         * @description
+         *
+         * Presence means gsmSCF may use Extensions in ReleaseCall for this
+         * call. (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.2).
+         *
          * @public
          * @readonly
          */

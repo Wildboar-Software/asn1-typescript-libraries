@@ -28,6 +28,14 @@ import { type APPLICATION_CONTEXT } from "../TC-Notation-Extensions/APPLICATION-
  * @summary capssf_scfAssistHandoffAC
  * @description
  * 
+ * Assist-handoff gsmSSF-to-gsmSCF CS application context. Contract
+ * `capAssistHandoffssfToScf`; structured dialogue; abstract syntaxes
+ * `dialogue-abstract-syntax` and `assistHandoff-gsmSSF-scfAbstractSyntax`. CAP
+ * V4 Rel-5 and Rel-6 share this AC name; the contract and abstract syntaxes are
+ * Rel-6 definitions. If the proposed AC is acceptable, it must be reflected in
+ * the first backwards message; the gsmSCF shall not return an alternate AC.
+ * (3GPP TS 29.078 V19.0.0 clauses 6.1.2 and 4.2.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

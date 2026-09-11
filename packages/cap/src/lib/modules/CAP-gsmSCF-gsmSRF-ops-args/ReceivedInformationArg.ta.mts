@@ -17,7 +17,12 @@ import { type Digits, _decode_Digits, _encode_Digits } from "../CAP-datatypes/Di
 /**
  * @summary ReceivedInformationArg
  * @description
- * 
+ *
+ * Result of PromptAndCollectUserInformation: digits collected from
+ * the end-user (`digitsResponse`), including startDigit and
+ * endOfReplyDigit if received. (3GPP TS 29.078 V19.0.0
+ * clause 11.25.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

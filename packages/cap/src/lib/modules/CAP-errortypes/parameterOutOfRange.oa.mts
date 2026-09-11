@@ -21,7 +21,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary parameterOutOfRange
  * @description
- * 
+ *
+ * A parameter value in the operation argument is out of range, so the
+ * responding entity cannot start the operation. Same FSM procedures as
+ * `missingParameter`. Local error code 8.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

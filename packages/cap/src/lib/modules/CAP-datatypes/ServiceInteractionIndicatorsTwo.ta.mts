@@ -16,6 +16,10 @@ import { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, _de
  * @summary ServiceInteractionIndicatorsTwo
  * @description
  *
+ * Resolves interactions between CAMEL and network-based services. Each
+ * indicator applies only to the operations noted on the fields. (3GPP TS 29.078
+ * V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,13 +39,102 @@ import { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, _de
  */
 export class ServiceInteractionIndicatorsTwo {
     constructor (
+        /**
+         * @summary `forwardServiceInteractionInd`.
+         * @description
+         *
+         * Applicable to InitialDP, Connect and ContinueWithArgument. (3GPP TS
+         * 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly forwardServiceInteractionInd: OPTIONAL<ForwardServiceInteractionInd>,
+        /**
+         * @summary `backwardServiceInteractionInd`.
+         * @description
+         *
+         * Applicable to Connect and ContinueWithArgument. (3GPP TS 29.078 V19.0.0
+         * clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly backwardServiceInteractionInd: OPTIONAL<BackwardServiceInteractionInd>,
+        /**
+         * @summary `bothwayThroughConnectionInd`.
+         * @description
+         *
+         * Applicable to ConnectToResource and EstablishTemporaryConnection. (3GPP
+         * TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly bothwayThroughConnectionInd: OPTIONAL<BothwayThroughConnectionInd>,
+        /**
+         * @summary `connectedNumberTreatmentInd`.
+         * @description
+         *
+         * Applicable to Connect and ContinueWithArgument. (3GPP TS 29.078 V19.0.0
+         * clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly connectedNumberTreatmentInd: OPTIONAL<ConnectedNumberTreatmentInd>,
+        /**
+         * @summary `nonCUGCall`.
+         * @description
+         *
+         * Applicable to Connect and ContinueWithArgument. Present: no CUG
+         * parameters shall be used (non-CUG call). Absent: continue with modified
+         * CUG information (if CUG Interlock Code and/or Outgoing Access Indicator
+         * are present), original CUG information (if neither is present), or the
+         * original non-CUG call. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly nonCUGCall: OPTIONAL<NULL>,
+        /**
+         * @summary `holdTreatmentIndicator`.
+         * @description
+         *
+         * Applicable to InitialDP, Connect and ContinueWithArgument. Accept hold
+         * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
+         * ContinueWithArgument, CAMEL does not affect call-hold treatment. (3GPP TS
+         * 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly holdTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `cwTreatmentIndicator`.
+         * @description
+         *
+         * Applicable to InitialDP, Connect and ContinueWithArgument. Accept CW
+         * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
+         * ContinueWithArgument, CAMEL does not affect call-waiting treatment. (3GPP
+         * TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly cwTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `ectTreatmentIndicator`.
+         * @description
+         *
+         * Applicable to InitialDP, Connect and ContinueWithArgument. Accept ECT
+         * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
+         * ContinueWithArgument, CAMEL does not affect explicit call transfer
+         * treatment. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly ectTreatmentIndicator: OPTIONAL<OCTET_STRING>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {

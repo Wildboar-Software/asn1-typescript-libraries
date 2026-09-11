@@ -11,6 +11,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LegType
  * @description
  *
+ * Sending Side LegID is always gsmSCF → gsmSSF; Receiving Side LegID is
+ * always gsmSSF → gsmSCF.
+ *
+ * Leg 1 = calling party present when InitialDP is sent. Leg 2 = called party
+ * created by InitialDP plus Connect, Continue, or ContinueWithArgument. Leg > 2
+ * = called party created by InitiateCallAttempt plus ContinueWithArgument.
+ * (3GPP TS 29.078 V19.0.0 clause 4.1.5)
+ *
+ * ASN.1 values: `leg1` = `'01'H`, `leg2` = `'02'H`. (3GPP TS 29.078 V19.0.0
+ * clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

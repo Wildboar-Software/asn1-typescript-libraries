@@ -28,6 +28,13 @@ import { type APPLICATION_CONTEXT } from "../TC-Notation-Extensions/APPLICATION-
  * @summary cap_gprssf_scfAC
  * @description
  * 
+ * gprsSSF-to-gsmSCF application context. Contract `capGprsSsfToScf`; structured
+ * dialogue; abstract syntaxes `dialogue-abstract-syntax` and
+ * `gprsSSF-gsmSCFAbstractSyntax`. Rel-6 updates the AC definition but keeps the
+ * Rel-5 APPLICATION CONTEXT NAME. If the proposed AC is acceptable, it must be
+ * reflected in the first backwards message; the gsmSCF shall not return an
+ * alternate AC. (3GPP TS 29.078 V19.0.0 clauses 8.2 and 4.2.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

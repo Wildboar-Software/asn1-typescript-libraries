@@ -20,6 +20,9 @@ import { AllCallSegments, _decode_AllCallSegments, _encode_AllCallSegments } fro
  * @summary AllCallSegmentsWithExtension
  * @description
  * 
+ * ReleaseCall alternative: cause for all segments plus optional extensions.
+ * (3GPP TS 29.078 V19.0.0 clause 11.26.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +39,12 @@ class AllCallSegmentsWithExtension {
     constructor (
         /**
          * @summary `allCallSegments`.
+         * @description
+         *
+         * Cause for releasing the call (tones or release-message cause).
+         * Default decimal 31 (normal unspecified). (3GPP TS 29.078 V19.0.0
+         * clause 11.26.1.1).
+         *
          * @public
          * @readonly
          */

@@ -6,6 +6,13 @@ import { opcode_callGap } from "../CAP-operationcodes/opcode-callGap.va.mjs";
  * @summary callGap
  * @description
  *
+ * gsmSCF requests gsmSSF to reduce the rate at which specific service requests
+ * are sent to gsmSCF. May be sent only in a dialogue opened by InitialDP.
+ * gsmSCF → gsmSSF. Unconfirmed (`RETURN RESULT FALSE`, `ALWAYS RESPONDS
+ * FALSE`). Local opcode 41. Timer `Tcg` (short: 1 s–10 s; operator-defined
+ * within range). Class 4: operation-related error handling is not applicable.
+ * (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

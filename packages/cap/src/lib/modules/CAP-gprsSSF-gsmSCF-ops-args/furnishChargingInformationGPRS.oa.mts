@@ -12,6 +12,19 @@ import { opcode_furnishChargingInformationGPRS } from "../CAP-operationcodes/opc
  * @summary furnishChargingInformationGPRS
  * @description
  *
+ * Sends charging data to a CAMEL Logical GPRS record (offline
+ * session or PDP Context charging). The first invocation creates
+ * the record; later ones overwrite or append free-format data per
+ * appendFreeFormatData. (3GPP TS 29.078 V19.0.0 clause 13.9).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (class 2). Local opcode
+ * 77. Timer Tfcig (Short; 1–20 s, operator-defined).
+ *
+ * Valid in Waiting_for_Instructions or Monitoring; no FSM state
+ * change. unknownPDPID if PDPID unknown. Logical records associate
+ * with physical CDRs (3GPP TS 32.250 / 22.115).
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

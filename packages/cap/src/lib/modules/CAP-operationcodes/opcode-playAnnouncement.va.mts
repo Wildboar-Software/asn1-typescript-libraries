@@ -16,7 +16,12 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary opcode_playAnnouncement
  * @description
- * 
+ *
+ * Local opcode 47. Specialized resource control package. `playAnnouncement` on
+ * gsmSCF→gsmSRF.
+ * Timer `Tpa` (long: 1 s–30 min; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 5.3 and 6.2, Table 6-2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

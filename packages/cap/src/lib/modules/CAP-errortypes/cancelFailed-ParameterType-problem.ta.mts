@@ -16,7 +16,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary cancelFailed_ParameterType_problem
  * @description
- * 
+ *
+ * `cancelFailed`.`problem`: `unknownOperation` (0) InvokeID unknown or the
+ * operation already completed; `tooLate` (1) InvokeID known but execution
+ * can no longer be cancelled (e.g. announcement finished but
+ * SpecializedResourceReport not yet sent; conditions are implementation
+ * dependent); `operationNotCancellable` (2) InvokeID points to an
+ * operation the gsmSCF is not allowed to cancel.
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +47,15 @@ enum _enum_for_cancelFailed_ParameterType_problem {
 /**
  * @summary cancelFailed_ParameterType_problem
  * @description
- * 
+ *
+ * `cancelFailed`.`problem`: `unknownOperation` (0) InvokeID unknown or the
+ * operation already completed; `tooLate` (1) InvokeID known but execution
+ * can no longer be cancelled (e.g. announcement finished but
+ * SpecializedResourceReport not yet sent; conditions are implementation
+ * dependent); `operationNotCancellable` (2) InvokeID points to an
+ * operation the gsmSCF is not allowed to cancel.
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +74,15 @@ type cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_p
 /**
  * @summary cancelFailed_ParameterType_problem
  * @description
- * 
+ *
+ * `cancelFailed`.`problem`: `unknownOperation` (0) InvokeID unknown or the
+ * operation already completed; `tooLate` (1) InvokeID known but execution
+ * can no longer be cancelled (e.g. announcement finished but
+ * SpecializedResourceReport not yet sent; conditions are implementation
+ * dependent); `operationNotCancellable` (2) InvokeID points to an
+ * operation the gsmSCF is not allowed to cancel.
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +100,12 @@ const cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_
 
 /**
  * @summary cancelFailed_ParameterType_problem_unknownOperation
+ * @description
+ *
+ * InvokeID of the operation to cancel is not known to the gsmSRF (may
+ * also happen when the operation has already completed).
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +114,12 @@ const cancelFailed_ParameterType_problem_unknownOperation: cancelFailed_Paramete
 
 /**
  * @summary unknownOperation
+ * @description
+ *
+ * InvokeID of the operation to cancel is not known to the gsmSRF (may
+ * also happen when the operation has already completed).
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +128,13 @@ const unknownOperation: cancelFailed_ParameterType_problem = cancelFailed_Parame
 
 /**
  * @summary cancelFailed_ParameterType_problem_tooLate
+ * @description
+ *
+ * InvokeID is known but execution is in a state that cannot be cancelled
+ * anymore (e.g. announcement finished but SpecializedResourceReport not
+ * yet sent). Conditions for `tooLate` are implementation dependent.
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +143,13 @@ const cancelFailed_ParameterType_problem_tooLate: cancelFailed_ParameterType_pro
 
 /**
  * @summary tooLate
+ * @description
+ *
+ * InvokeID is known but execution is in a state that cannot be cancelled
+ * anymore (e.g. announcement finished but SpecializedResourceReport not
+ * yet sent). Conditions for `tooLate` are implementation dependent.
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +158,11 @@ const tooLate: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_p
 
 /**
  * @summary cancelFailed_ParameterType_problem_operationNotCancellable
+ * @description
+ *
+ * InvokeID points to a CAP operation the gsmSCF is not allowed to cancel.
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +171,11 @@ const cancelFailed_ParameterType_problem_operationNotCancellable: cancelFailed_P
 
 /**
  * @summary operationNotCancellable
+ * @description
+ *
+ * InvokeID points to a CAP operation the gsmSCF is not allowed to cancel.
+ * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+ *
  * @constant
  * @type {number}
  */

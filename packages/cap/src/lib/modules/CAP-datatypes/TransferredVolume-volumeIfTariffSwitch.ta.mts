@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TransferredVolume_volumeIfTariffSwitch
  * @description
  *
+ * `volumeSinceLastTariffSwitch` and `volumeTariffSwitchInterval` are measured
+ * in bytes. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,7 +27,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class TransferredVolume_volumeIfTariffSwitch {
     constructor (
+        /**
+         * @summary `volumeSinceLastTariffSwitch`.
+         * @description
+         *
+         * Measured in bytes. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly volumeSinceLastTariffSwitch: INTEGER,
+        /**
+         * @summary `volumeTariffSwitchInterval`.
+         * @description
+         *
+         * Measured in bytes. (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly volumeTariffSwitchInterval: OPTIONAL<INTEGER>,
     ) {
         if ((typeof volumeSinceLastTariffSwitch === "bigint" ? (volumeSinceLastTariffSwitch < 0n || volumeSinceLastTariffSwitch > 4294967295n) : (volumeSinceLastTariffSwitch < 0 || volumeSinceLastTariffSwitch > 4294967295))) {

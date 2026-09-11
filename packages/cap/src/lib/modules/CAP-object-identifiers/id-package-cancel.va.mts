@@ -17,7 +17,10 @@ import { id_packageE } from "../CAP-object-identifiers/id-packageE.va.mjs";
 /**
  * @summary id_package_cancel
  * @description
- * 
+ *
+ * OID of the gsmSSF/gsmSCF `cancel` operation package (`{id-packageE 36}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

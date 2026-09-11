@@ -9,6 +9,17 @@ import { opcode_releaseGPRS } from "../CAP-operationcodes/opcode-releaseGPRS.va.
  * @summary releaseGPRS
  * @description
  *
+ * Tears down an existing GPRS Session or PDP Context at any phase.
+ * (3GPP TS 29.078 V19.0.0 clause 13.11).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (class 2). Local opcode
+ * 79. Timer Trg (Short; 1–20 s, operator-defined).
+ *
+ * Requires a control relationship; tearing down a PDP Context or
+ * forcing detach requires an armed EDP-R for that entity. Sends
+ * pending reports, releases resources, disarms EDPs. unknownPDPID
+ * if PDPID unknown. (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.11).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

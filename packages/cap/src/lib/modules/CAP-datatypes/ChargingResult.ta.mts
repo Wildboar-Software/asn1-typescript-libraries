@@ -10,6 +10,11 @@ import { type ElapsedTime, _decode_ElapsedTime, _encode_ElapsedTime } from "./El
  * @summary ChargingResult
  * @description
  *
+ * `transferredVolume` if ApplyChargingGPRS requested volume; `elapsedTime` if
+ * it requested duration. Presence of nested no-tariff-switch vs tariff-switch
+ * alternatives depends on whether a tariff switch occurred.
+ * (3GPP TS 29.078 V19.0.0 clause 13.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

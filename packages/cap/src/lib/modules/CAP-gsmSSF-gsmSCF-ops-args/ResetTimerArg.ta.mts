@@ -22,6 +22,9 @@ import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../CAP-
  * @summary ResetTimerArg
  * @description
  * 
+ * Argument of ResetTimer: which Tssf instance to refresh. (3GPP TS 29.078
+ * V19.0.0 clause 11.28.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,12 +44,22 @@ class ResetTimerArg {
     constructor (
         /**
          * @summary `timerID`.
+         * @description
+         *
+         * Which timer to reset. Only permissible value is `tssf` (ASN.1
+         * default). (3GPP TS 29.078 V19.0.0 clause 11.28.1.1).
+         *
          * @public
          * @readonly
          */
         readonly timerID: OPTIONAL<TimerID>,
         /**
          * @summary `timervalue`.
+         * @description
+         *
+         * Value to which the timer shall be set. Spec name `timerValue`. (3GPP
+         * TS 29.078 V19.0.0 clause 11.28.1.1).
+         *
          * @public
          * @readonly
          */
@@ -59,6 +72,11 @@ class ResetTimerArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `callSegmentID`.
+         * @description
+         *
+         * Call Segment in gsmSSF for which the timer shall be reset. (3GPP TS
+         * 29.078 V19.0.0 clause 11.28.1.1).
+         *
          * @public
          * @readonly
          */

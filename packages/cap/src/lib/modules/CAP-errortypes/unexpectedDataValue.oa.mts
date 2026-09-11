@@ -21,7 +21,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unexpectedDataValue
  * @description
- * 
+ *
+ * A parameter has an unexpected data value (e.g. route number expected
+ * but billing number received). Does not overlap with
+ * `parameterOutOfRange` (example: DateAndTime for 32 January). Same FSM
+ * procedures as `missingParameter`. Local error code 15.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

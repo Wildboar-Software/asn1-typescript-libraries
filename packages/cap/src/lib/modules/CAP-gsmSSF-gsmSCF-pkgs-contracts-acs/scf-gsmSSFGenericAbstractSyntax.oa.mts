@@ -20,6 +20,11 @@ import { id_as_scf_gsmSSFGenericAS } from "../CAP-object-identifiers/id-as-scf-g
  * @summary scf_gsmSSFGenericAbstractSyntax
  * @description
  * 
+ * Abstract syntax for `capscf-ssfGenericAC` (CAP from gsmSCF to gsmSSF). Type
+ * is `GenericSCF-gsmSSF-PDUs`. Bound set `cAPSpecificBoundSet`. Rel-6 imports
+ * operation definitions as version8(7). Abstract-syntax ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -6,6 +6,10 @@ import { id_package_smsConnect } from "../CAP-object-identifiers/id-package-smsC
  * @summary smsConnectPackage
  * @description
  *
+ * smsSSF-gsmSCF connect package: gsmSCF (consumer) invokes `connectSMS`. Used
+ * in `cap3SMS` and `cap4SMS`. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 7.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

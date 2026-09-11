@@ -6,6 +6,14 @@ import { opcode_entityReleased } from "../CAP-operationcodes/opcode-entityReleas
  * @summary entityReleased
  * @description
  *
+ * CSA informs gsmSCF that a Call Segment or BCSM was released due to error or
+ * exception, when that fact cannot be conveyed by TC_ABORT or TC_END because
+ * other entities in the CSA still need the dialogue. Not used if the last Call
+ * Segment in the CSA was released. gsmSSF → gsmSCF. Unconfirmed (`RETURN RESULT
+ * FALSE`, `ALWAYS RESPONDS FALSE`). Local opcode 96. Timer `Ter` (short: 1 s–10
+ * s; operator-defined within range). Class 4. (3GPP TS 29.078 V19.0.0 clauses
+ * 6.1.1 and 11.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,12 @@ import { opcode_callInformationRequest } from "../CAP-operationcodes/opcode-call
  * @summary callInformationRequest
  * @description
  *
+ * gsmSCF requests gsmSSF to record specific information about a single call
+ * party and later report it with CallInformationReport. gsmSCF → gsmSSF.
+ * Unconfirmed (`RETURN RESULT FALSE`). Local opcode 45. Timer `Tcirq` (short: 1
+ * s–10 s; operator-defined within range). (3GPP TS 29.078 V19.0.0 clauses 6.1.1
+ * and 11.7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

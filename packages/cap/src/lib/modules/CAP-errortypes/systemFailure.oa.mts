@@ -22,7 +22,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary systemFailure
  * @description
- * 
+ *
+ * The operation could not be completed due to a system failure at the
+ * serving physical entity. Recovery is not expected within the current
+ * call instance. Returned by gsmSCF, gsmSSF, gsmSRF, smsSSF, or gprsSSF.
+ * Parameter is `UnavailableNetworkResource`. Local error code 11.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.9).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

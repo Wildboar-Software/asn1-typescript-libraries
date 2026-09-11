@@ -17,7 +17,11 @@ import { id_CAP } from "../CAP-object-identifiers/id-CAP.va.mjs";
 /**
  * @summary id_rosObject
  * @description
- * 
+ *
+ * OID arc for CAP ROS objects under `id-CAP` (`rosObject(25)`). Values are
+ * identical to ITU-T Recommendation Q.1218.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

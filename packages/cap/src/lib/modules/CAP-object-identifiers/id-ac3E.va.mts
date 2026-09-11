@@ -17,7 +17,10 @@ import { id_CAP3OE } from "../CAP-object-identifiers/id-CAP3OE.va.mjs";
 /**
  * @summary id_ac3E
  * @description
- * 
+ *
+ * OID arc for CAP3 application contexts under `id-CAP3OE` (`ac(3)`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

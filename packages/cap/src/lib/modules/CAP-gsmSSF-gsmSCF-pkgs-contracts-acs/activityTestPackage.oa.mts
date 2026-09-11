@@ -20,6 +20,11 @@ import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects
  * @summary activityTestPackage
  * @description
  * 
+ * gsmSSF-gsmSCF activity test package: gsmSCF (consumer) invokes
+ * `activityTest`. Used in `capSsfToScfGeneric`, `capAssistHandoffssfToScf`, and
+ * `capScfToSsfGeneric`. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

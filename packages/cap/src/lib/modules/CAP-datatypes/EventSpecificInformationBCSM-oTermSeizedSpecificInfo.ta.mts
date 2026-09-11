@@ -10,6 +10,9 @@ import { LocationInformation, _decode_LocationInformation, _encode_LocationInfor
  * @summary EventSpecificInformationBCSM_oTermSeizedSpecificInfo
  * @description
  *
+ * EventReportBCSM information for O_Term_Seized.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -22,6 +25,15 @@ import { LocationInformation, _decode_LocationInformation, _encode_LocationInfor
  */
 export class EventSpecificInformationBCSM_oTermSeizedSpecificInfo {
     constructor (
+        /**
+         * @summary `locationInformation`.
+         * @description
+         *
+         * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly locationInformation: OPTIONAL<LocationInformation>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

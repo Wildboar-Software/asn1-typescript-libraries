@@ -9,6 +9,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EventSpecificInformationSMS_t_smsDeliverySpecificInfo
  * @description
  *
+ * MT-SMS delivery EventReportSMS alternative. No specific info is defined.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

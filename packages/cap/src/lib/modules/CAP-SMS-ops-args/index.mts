@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-SMS-ops-args`.
+ * ASN.1 module `CAP-SMS-ops-args`: operations and arguments for the
+ * smsSSF–gsmSCF interface (MO-SMS and MT-SMS). smsSSF may sit in
+ * the MSC or the SGSN. CAP V3 AC `cap3-sms-AC` is for MO-SMS; CAP
+ * V4 AC `cap4-sms-AC` is for MT-SMS. OPTIONAL parameter presence
+ * is specified in the 3GPP TS 23.078 information flows.
+ * (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12).
  */
 export * from "./connectSMS.oa.mjs";
 export * from "./ConnectSMSArg.ta.mjs";

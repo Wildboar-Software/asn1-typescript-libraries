@@ -20,6 +20,11 @@ import { id_as_assistHandoff_gsmSSF_scfAS } from "../CAP-object-identifiers/id-a
  * @summary assistHandoff_gsmSSF_scfAbstractSyntax
  * @description
  * 
+ * Abstract syntax for `capssf-scfAssistHandoffAC` (CAP from assist gsmSSF to
+ * gsmSCF). Type is `AssistHandoffsSF-gsmSCF-PDUs`. Bound set
+ * `cAPSpecificBoundSet`. Rel-6 imports operation definitions as version8(7).
+ * Abstract-syntax ID same as Rel-5. (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,7 +16,10 @@ import {
 /**
  * @summary classes
  * @description
- * 
+ *
+ * OID of the CAP `CAP-classes` module (`cap-classes(54) version8(7)`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

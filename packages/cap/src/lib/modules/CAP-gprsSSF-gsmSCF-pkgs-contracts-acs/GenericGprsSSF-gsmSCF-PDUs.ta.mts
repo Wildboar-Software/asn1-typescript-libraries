@@ -18,6 +18,12 @@ import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages
  * @summary GenericGprsSSF_gsmSCF_PDUs
  * @description
  * 
+ * `TCMessage` for the gprsSSF-to-gsmSCF dialogue. Invokable and returnable sets
+ * are `GprsSsfToGsmScfInvokable` and `GprsSsfToGsmScfReturnable`. Bound set
+ * `cAPSpecificBoundSet`. Used by `gprsSSF-gsmSCFAbstractSyntax`.
+ * Abstract-syntax definitions updated in Rel-6.
+ * (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

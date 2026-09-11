@@ -19,7 +19,11 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
 /**
  * @summary ReleaseGPRSArg
  * @description
- * 
+ *
+ * Argument of ReleaseGPRS: cause of the tear-down and optional
+ * PDPID of the PDP Context to release. (3GPP TS 29.078 V19.0.0
+ * clause 13.11.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,25 @@ class ReleaseGPRSArg {
     constructor (
         /**
          * @summary `gprsCause`.
+         * @description
+         *
+         * Reason for releasing the GPRS Session or a specific PDP
+         * Context. The gprsSSF may use this for indications to the MS
+         * or the cause in the release message (spec: gPRSCause).
+         * (3GPP TS 29.078 V19.0.0 clause 13.11.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gprsCause: GPRSCause,
         /**
          * @summary `pDPID`.
+         * @description
+         *
+         * Identifies the PDP Context, within a GPRS Session dialogue,
+         * which shall be released. unknownPDPID if unknown.
+         * (3GPP TS 29.078 V19.0.0 clause 13.11.1.1).
+         *
          * @public
          * @readonly
          */

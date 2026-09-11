@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EndUserAddress
  * @description
  *
+ * End-user address. Encoding is 3GPP TS 29.060.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,8 +29,38 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class EndUserAddress {
     constructor (
+        /**
+         * @summary `pDPTypeOrganization`.
+         * @description
+         *
+         * Encode in the four LSBs (3GPP TS 29.060). Sender sets the four MSBs
+         * to 1; receiver ignores them. (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly pDPTypeOrganization: OCTET_STRING,
+        /**
+         * @summary `pDPTypeNumber`.
+         * @description
+         *
+         * PDP type number; 3GPP TS 29.060 encoding.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly pDPTypeNumber: OCTET_STRING,
+        /**
+         * @summary `pDPAddress`.
+         * @description
+         *
+         * PDP address; 3GPP TS 29.060 encoding. Size is `PARAMETERS-BOUND`
+         * min/max PDPAddressLength. (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly pDPAddress: OPTIONAL<OCTET_STRING>,
     ) {
         if (pDPTypeOrganization.length !== 1) {

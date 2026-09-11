@@ -39,7 +39,24 @@ import { opcode_applyChargingGPRS } from "../CAP-operationcodes/opcode-applyChar
 /**
  * @summary applyChargingGPRS
  * @description
- * 
+ *
+ * Interacts with gprsSSF CSE control of GPRS session or PDP
+ * Context duration and volume. Feedback is ApplyChargingReportGPRS.
+ * (3GPP TS 29.078 V19.0.0 clause 13.2).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (class 2). Local opcode
+ * 71. Timer Tacg (Short; 1–20 s, operator-defined).
+ *
+ * PDP Context dialogue: instruction applies to that PDP Context;
+ * volume and duration thresholds are defined separately (two ops
+ * if both). GPRS Session dialogue: may apply to the session
+ * (duration only) or one PDP Context (duration and/or volume).
+ * unknownPDPID if the PDPID is unknown. TaskRefused if a period
+ * or volume is already pending, a tariffSwitchInterval is already
+ * pending, the PDP Context is already disconnected, or the
+ * subscriber is already detached.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

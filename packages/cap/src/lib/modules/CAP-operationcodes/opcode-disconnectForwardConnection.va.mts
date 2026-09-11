@@ -16,7 +16,12 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary opcode_disconnectForwardConnection
  * @description
- * 
+ *
+ * Local opcode 18. Generic disconnect resource package.
+ * `disconnectForwardConnection` on gsmSCF→gsmSSF.
+ * Timer `Tdfc` (short: 1 s–10 s; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 5.3 and 6.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

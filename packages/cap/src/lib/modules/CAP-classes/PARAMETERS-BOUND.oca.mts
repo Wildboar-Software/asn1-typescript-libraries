@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PARAMETERS_BOUND
  * @description
- * 
+ *
+ * Information object class of size bounds used to instantiate
+ * parameterized CAP types (OCTET STRING lengths and SEQUENCE OF
+ * maxima). The CAP instantiation is `cAPSpecificBoundSet`. Rel-6 did
+ * not change Rel-5 bound values.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

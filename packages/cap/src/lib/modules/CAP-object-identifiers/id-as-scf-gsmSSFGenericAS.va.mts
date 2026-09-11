@@ -17,7 +17,11 @@ import { id_asE } from "../CAP-object-identifiers/id-asE.va.mjs";
 /**
  * @summary id_as_scf_gsmSSFGenericAS
  * @description
- * 
+ *
+ * OID of the gsmSCF/gsmSSF generic abstract syntax `scf-gsmSSFGenericAS`
+ * (`{id-asE 7}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

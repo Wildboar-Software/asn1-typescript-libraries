@@ -19,7 +19,10 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
 /**
  * @summary RequestReportGPRSEventArg
  * @description
- * 
+ *
+ * Argument of RequestReportGPRSEvent: GPRS events to arm or disarm
+ * and optional PDPID. (3GPP TS 29.078 V19.0.0 clause 13.12.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,26 @@ class RequestReportGPRSEventArg {
     constructor (
         /**
          * @summary `gPRSEvent`.
+         * @description
+         *
+         * Event(s) for which a report is requested. Each `GPRSEvent`
+         * carries `gPRSEventType` and `monitorMode`: interrupted →
+         * report as request; notifyAndContinue → notification;
+         * transparent → do not report.
+         * (3GPP TS 29.078 V19.0.0 clause 13.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gPRSEvent: GPRSEvent[],
         /**
          * @summary `pDPID`.
+         * @description
+         *
+         * Identifies the PDP Context, within a GPRS Session dialogue,
+         * for which event reporting is requested. unknownPDPID if
+         * unknown. (3GPP TS 29.078 V19.0.0 clause 13.12.1.1).
+         *
          * @public
          * @readonly
          */

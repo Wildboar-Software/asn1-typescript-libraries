@@ -42,7 +42,14 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta
 /**
  * @summary InitialDPSMSArg
  * @description
- * 
+ *
+ * Argument of InitialDPSMS after a TDP-R. Analogous to CS
+ * InitialDP: identifies the IN service and provides available SM
+ * and subscriber context. OPTIONAL presence follows 3GPP TS
+ * 23.078 IFs. UserCSGInformation is carried in LocationInformation
+ * (CS) or LocationInformationGPRS (GPRS); encoding as in 3GPP TS
+ * 29.002. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -79,78 +86,149 @@ class InitialDPSMSArg {
     constructor (
         /**
          * @summary `serviceKey`.
+         * @description
+         *
+         * Requested IN service / SLP inside the gsmSCF; not used for
+         * gsmSCF addressing. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly serviceKey: ServiceKey,
         /**
          * @summary `destinationSubscriberNumber`.
+         * @description
+         *
+         * ISDN number of the entity receiving the SM, or destination
+         * address of the destination subscriber, in an MO-SMS
+         * procedure. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly destinationSubscriberNumber: OPTIONAL<CalledPartyBCDNumber>,
         /**
          * @summary `callingPartyNumber`.
+         * @description
+         *
+         * MO-SMS: MSISDN of the subscriber. MT-SMS: originating address
+         * of the submitter. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly callingPartyNumber: OPTIONAL<SMS_AddressString>,
         /**
          * @summary `eventTypeSMS`.
+         * @description
+         *
+         * Armed smsSSF FSM DP that resulted in this InitialDPSMS
+         * (spec: eventType). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly eventTypeSMS: OPTIONAL<EventTypeSMS>,
         /**
          * @summary `iMSI`.
+         * @description
+         *
+         * IMSI of the mobile subscriber for whom the CAMEL service is
+         * invoked. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly iMSI: OPTIONAL<IMSI>,
         /**
          * @summary `locationInformationMSC`.
+         * @description
+         *
+         * Location of the MSC of the served subscriber. Include only
+         * when InitialDPSMS is sent from the MSC (spec:
+         * locationInformationInMSC). UserCSGInformation may be nested
+         * (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly locationInformationMSC: OPTIONAL<LocationInformation>,
         /**
          * @summary `locationInformationGPRS`.
+         * @description
+         *
+         * Location of the SGSN of the served subscriber. Include only
+         * when InitialDPSMS is sent from the SGSN (spec:
+         * locationInformationInSGSN). UserCSGInformation may be nested
+         * (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `sMSCAddress`.
+         * @description
+         *
+         * Address of the SMSC to which the Short Message is intended to
+         * be submitted. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly sMSCAddress: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `timeAndTimezone`.
+         * @description
+         *
+         * Time the smsSSF was triggered and the time zone of the
+         * invoking smsSSF. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly timeAndTimezone: OPTIONAL<TimeAndTimezone>,
         /**
          * @summary `tPShortMessageSpecificInfo`.
+         * @description
+         *
+         * First octet of the TPDU. See 3GPP TS 23.040 for TPDU types.
+         * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly tPShortMessageSpecificInfo: OPTIONAL<TPShortMessageSpecificInfo>,
         /**
          * @summary `tPProtocolIdentifier`.
+         * @description
+         *
+         * Protocol used above the SM-Transfer Layer.
+         * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly tPProtocolIdentifier: OPTIONAL<TPProtocolIdentifier>,
         /**
          * @summary `tPDataCodingScheme`.
+         * @description
+         *
+         * Data coding scheme of the TP-User-Data in the TPDU. May
+         * indicate a message class (e.g. originator of the SM).
+         * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly tPDataCodingScheme: OPTIONAL<TPDataCodingScheme>,
         /**
          * @summary `tPValidityPeriod`.
+         * @description
+         *
+         * Length of the validity period, or absolute time of validity
+         * period termination. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
@@ -163,42 +241,81 @@ class InitialDPSMSArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `smsReferenceNumber`.
+         * @description
+         *
+         * SMS Reference Number assigned to the Short Message by the MSC
+         * or SGSN. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly smsReferenceNumber: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `mscAddress`.
+         * @description
+         *
+         * E.164 address of the MSC. Present if SMS processing is in the
+         * MSC; otherwise absent. (3GPP TS 29.078 V19.0.0
+         * clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly mscAddress: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `sgsn_Number`.
+         * @description
+         *
+         * Global Title of the SGSN. Present if SMS processing is in the
+         * SGSN; otherwise absent. (3GPP TS 29.078 V19.0.0
+         * clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `ms_Classmark2`.
+         * @description
+         *
+         * MS Classmark 2 of the mobile subscriber for which the service
+         * is invoked. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly ms_Classmark2: OPTIONAL<MS_Classmark2>,
         /**
          * @summary `gPRSMSClass`.
+         * @description
+         *
+         * GPRS MS capabilities of the mobile subscriber for which the
+         * CAMEL service is invoked. (3GPP TS 29.078 V19.0.0
+         * clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gPRSMSClass: OPTIONAL<GPRSMSClass>,
         /**
          * @summary `iMEI`.
+         * @description
+         *
+         * IMEI (with software version) of the mobile subscriber for
+         * which the service is invoked. (3GPP TS 29.078 V19.0.0
+         * clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly iMEI: OPTIONAL<IMEI>,
         /**
          * @summary `calledPartyNumber`.
+         * @description
+         *
+         * Served subscriber in an MT-SMS procedure.
+         * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+         *
          * @public
          * @readonly
          */

@@ -28,8 +28,40 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  */
 export class CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
     constructor (
+        /**
+         * @summary `freeFormatData`.
+         * @description
+         *
+         * Free-format billing and/or charging characteristics.
+         * (3GPP TS 29.078 V19.0.0 clause 11.19).
+         *
+         * @public
+         * @readonly
+         */
         readonly freeFormatData: OCTET_STRING,
+        /**
+         * @summary `partyToCharge`.
+         * @description
+         *
+         * Party to bill and/or charge. Sending Side LegID; default
+         * `sendingSideID:leg1`.
+         * (3GPP TS 29.078 V19.0.0 clauses 11.19 and 4.1.5).
+         *
+         * @public
+         * @readonly
+         */
         readonly partyToCharge: OPTIONAL<SendingSideID>,
+        /**
+         * @summary `appendFreeFormatData`.
+         * @description
+         *
+         * Whether previous FCI free format data is appended or overwritten.
+         * Default `overwrite`. See 3GPP TS 23.078.
+         * (3GPP TS 29.078 V19.0.0 clause 11.19).
+         *
+         * @public
+         * @readonly
+         */
         readonly appendFreeFormatData: OPTIONAL<AppendFreeFormatData>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

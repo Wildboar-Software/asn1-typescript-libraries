@@ -11,6 +11,12 @@ import { DpSpecificCriteriaAlt, _decode_DpSpecificCriteriaAlt, _encode_DpSpecifi
  * @summary DpSpecificCriteria
  * @description
  *
+ * `applicationTimer`: No_Answer timer in the gsmSSF (seconds). If the user does
+ * not answer in time, gsmSSF reports the event. `midCallControlInfo`: criterion
+ * for detecting DTMF during a call. `dpSpecificCriteriaAlt`: other criteria in
+ * future releases; reception shall be treated like no DpSpecificCriteria.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

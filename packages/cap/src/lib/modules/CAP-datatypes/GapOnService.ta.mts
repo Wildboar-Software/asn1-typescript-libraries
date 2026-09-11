@@ -9,6 +9,9 @@ import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core
  * @summary GapOnService
  * @description
  *
+ * Apply CallGap when the Service Key of a service-initiation attempt matches
+ * `serviceKey`. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.5)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

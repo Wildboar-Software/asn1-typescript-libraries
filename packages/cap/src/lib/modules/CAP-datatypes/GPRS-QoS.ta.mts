@@ -10,6 +10,11 @@ import { type Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Su
  * @summary GPRS_QoS
  * @description
  *
+ * `short-QoS-format` (`QoS-Subscribed`) is pre-GSM Release 99;
+ * `long-QoS-format` (`Ext-QoS-Subscribed`) is GSM Release 99 and beyond. Which
+ * format is sent is whichever is available in the SGSN at send time. Encoding:
+ * 3GPP TS 29.002. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

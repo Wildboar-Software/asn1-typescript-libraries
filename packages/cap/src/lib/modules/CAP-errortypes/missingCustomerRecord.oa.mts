@@ -21,7 +21,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary missingCustomerRecord
  * @description
- * 
+ *
+ * gsmSCF indicates the SLP could not be found: no customer record, or the
+ * SLPI identified by `correlationID` in AssistRequestInstructions no
+ * longer exists. Returned toward gsmSSF, gprsSSF, smsSSF, or gsmSRF.
+ * Receiving SSF goes Idle and applies default CSI handling; gsmSRF
+ * disconnects. Local error code 6.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

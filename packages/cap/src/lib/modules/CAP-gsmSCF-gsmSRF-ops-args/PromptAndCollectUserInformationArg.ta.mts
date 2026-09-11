@@ -22,7 +22,12 @@ import { type InformationToSend, _decode_InformationToSend, _encode_InformationT
 /**
  * @summary PromptAndCollectUserInformationArg
  * @description
- * 
+ *
+ * Argument of PromptAndCollectUserInformation: collection criteria
+ * (`collectedInfo` / collectedDigits), optional prompt
+ * (`informationToSend`), disconnect policy, and start notification.
+ * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +49,52 @@ class PromptAndCollectUserInformationArg {
     constructor (
         /**
          * @summary `collectedInfo`.
+         * @description
+         *
+         * Collection criteria (`collectedDigits`). Constraints:
+         * `maximumNbOfDigits` ≥ `minimumNbOfDigits` (else operation
+         * error). `endOfReplyDigit` / `cancelDigit` / `startDigit`
+         * as specified in clause 11.25.1.1. `firstDigitTimeOut`:
+         * first digit (or startDigit) must arrive before expiry;
+         * absent → gsmSRF default. `interDigitTimeOut`: subsequent
+         * digits; reset on each digit; expiry with fewer than min
+         * digits is unsuccessful, with min..max is successful;
+         * absent → gsmSRF default. `errorTreatment`:
+         * reportErrorToSCF → ImproperCallerResponse; help → network
+         * default announcement; repeatPrompt → repeat the prompt
+         * (help/repeatPrompt once per invoke).
+         * `interruptableAnnInd`: TRUE interrupts the announcement on
+         * first digit. `voiceInformation`: TRUE → speech (gsmSRF
+         * speech-to-digits); FALSE → DTMF. `voiceBack`: TRUE
+         * announces valid digits back (not invalid, not endOfReply).
+         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+         *
          * @public
          * @readonly
          */
         readonly collectedInfo: CollectedInfo,
         /**
          * @summary `disconnectFromIPForbidden`.
+         * @description
+         *
+         * TRUE (ASN.1 default): gsmSRF shall not initiate disconnect
+         * after the interaction. FALSE: gsmSRF may disconnect.
+         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+         *
          * @public
          * @readonly
          */
         readonly disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
         /**
          * @summary `informationToSend`.
+         * @description
+         *
+         * Optional announcement or tone to play before/during
+         * collection. Same `inbandInfo` / `tone` structure as
+         * PlayAnnouncement: duration 0 = endless/infinite;
+         * interval only if numberOfRepetitions > 1.
+         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+         *
          * @public
          * @readonly
          */
@@ -68,12 +107,25 @@ class PromptAndCollectUserInformationArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `callSegmentID`.
+         * @description
+         *
+         * Call Segment to which the user interaction applies.
+         * unknownCSID if the CSID is not known.
+         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+         *
          * @public
          * @readonly
          */
         readonly callSegmentID: OPTIONAL<CallSegmentID>,
         /**
          * @summary `requestAnnouncementStartedNotification`.
+         * @description
+         *
+         * TRUE: send SpecializedResourceReport with
+         * `firstAnnouncementStarted` when the first announcement or
+         * tone has started. ASN.1 default FALSE.
+         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+         *
          * @public
          * @readonly
          */

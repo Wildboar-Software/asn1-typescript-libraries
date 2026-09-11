@@ -7,6 +7,21 @@ import { opcode_eventReportGPRS } from "../CAP-operationcodes/opcode-eventReport
  * @summary eventReportGPRS
  * @description
  *
+ * Notifies the gsmSCF of a GPRS Session or PDP Context event
+ * previously armed by RequestReportGPRSEvent.
+ * (3GPP TS 29.078 V19.0.0 clause 13.8).
+ *
+ * Direction: gprsSSF → gsmSCF. Confirmed (class 1). Local opcode
+ * 80. Timer Tereg (Short; 1–20 s, operator-defined).
+ *
+ * Notification with remaining EDPs or pending reports stays in
+ * Monitoring; otherwise Idle. Request (interrupted) →
+ * Waiting_for_Instructions and processing is interrupted. An
+ * EDP-R that releases the session or PDP Context disarms all
+ * related EDPs. Timer expiry or Tssf expiry on a request: abort
+ * TC and apply default GPRS handling. Only error: unknownPDPID.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

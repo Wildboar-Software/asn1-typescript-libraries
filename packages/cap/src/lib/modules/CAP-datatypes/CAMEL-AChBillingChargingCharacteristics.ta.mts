@@ -9,6 +9,9 @@ import { CAMEL_AChBillingChargingCharacteristics_timeDurationCharging, _decode_C
  * @summary CAMEL_AChBillingChargingCharacteristics
  * @description
  *
+ * BER payload of `AChBillingChargingCharacteristics`. `timeDurationCharging` is
+ * CSE control of call duration. (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

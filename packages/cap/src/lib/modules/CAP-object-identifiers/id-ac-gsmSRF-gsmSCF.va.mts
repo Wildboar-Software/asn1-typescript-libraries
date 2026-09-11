@@ -17,7 +17,10 @@ import { id_ac } from "../CAP-object-identifiers/id-ac.va.mjs";
 /**
  * @summary id_ac_gsmSRF_gsmSCF
  * @description
- * 
+ *
+ * OID of the gsmSRF/gsmSCF application context `gsmSRF-gsmSCF` (`{id-ac 14}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

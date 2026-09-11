@@ -18,7 +18,15 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-D
 /**
  * @summary CAP_GPRS_ReferenceNumber
  * @description
- * 
+ *
+ * Identifies the SGSN–gsmSCF relationship. A GPRS dialogue may span
+ * multiple consecutive TC dialogues. One Integer4 is assigned by the
+ * SGSN (unique in that SGSN) and the other by the gsmSCF (unique in that
+ * gsmSCF). Rel-6 definitions are unchanged from Rel-5. Carried in TC
+ * User Information on TC-BEGIN and the first TC-CONTINUE after
+ * InitialDPGPRS; not needed on later CONTINUE in an open TC dialogue.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1.1 and 14.1.4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +43,27 @@ class CAP_GPRS_ReferenceNumber {
     constructor (
         /**
          * @summary `destinationReference`.
+         * @description
+         *
+         * Process identity at the destination. On the first TC-CONTINUE after
+         * InitialDPGPRS, gsmSCF sets this to the SGSN Process Id. A subsequent
+         * TC-BEGIN that opens a new TC dialogue includes the previously
+         * received destinationReference.
+         * (3GPP TS 29.078 V19.0.0 clauses 8.1.1 and 14.1.4.1.2).
+         *
          * @public
          * @readonly
          */
         readonly destinationReference: OPTIONAL<Integer4>,
         /**
          * @summary `originationReference`.
+         * @description
+         *
+         * Process identity assigned by the sender. On InitialDPGPRS, gprsSSF
+         * sets this to the SGSN Process Id. gsmSCF sets this to the SCF Process
+         * Id on the first TC-CONTINUE.
+         * (3GPP TS 29.078 V19.0.0 clauses 8.1.1 and 14.1.4.1.2).
+         *
          * @public
          * @readonly
          */

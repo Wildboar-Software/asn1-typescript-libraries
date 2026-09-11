@@ -19,7 +19,11 @@ import { id_rosObject_gsmSRF } from "../CAP-object-identifiers/id-rosObject-gsmS
 /**
  * @summary gsmSRF
  * @description
- * 
+ *
+ * gsmSRF ROS object. INITIATES `gsmSRF-gsmSCF-contract` (no RESPONDS).
+ * Rel-6 uses the Rel-6 CONTRACT definition of that name.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

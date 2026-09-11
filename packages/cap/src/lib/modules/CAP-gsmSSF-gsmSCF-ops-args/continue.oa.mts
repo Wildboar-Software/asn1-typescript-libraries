@@ -22,6 +22,13 @@ import { opcode_continue } from "../CAP-operationcodes/opcode-continue.va.mjs";
  * @summary continue_
  * @description
  * 
+ * gsmSCF requests gsmSSF to resume BCSM processing at the DP where call
+ * processing was suspended, without substituting new data from gsmSCF. No
+ * argument. gsmSCF → gsmSSF. Unconfirmed (`RETURN RESULT FALSE`, `ALWAYS
+ * RESPONDS FALSE`). Local opcode 31. Timer `Tcue` (short: 1 s–10 s;
+ * operator-defined within range). Class 4: operation-related error handling is
+ * not applicable. (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

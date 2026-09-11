@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-gprsSSF-gsmSCF-pkgs-contracts-acs`.
+ * ASN.1 module `CAP-gprsSSF-gsmSCF-pkgs-contracts-acs`: gprsSSF-gsmSCF
+ * packages, contracts (`capGprsSsfToScf` initiated by gprsSSF,
+ * `capGsmScfToGprsSsf` initiated by gsmSCF), and application contexts
+ * (`cap-gprssf-scfAC`, `cap-gsmscf-gprsssfAC`).
+ * (3GPP TS 29.078 V19.0.0 clause 8.2).
  */
 export * from "./cap-gprssf-scfAC.oa.mjs";
 export * from "./cap-gsmscf-gprsssfAC.oa.mjs";

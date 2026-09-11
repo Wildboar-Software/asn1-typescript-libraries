@@ -10,6 +10,9 @@ import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_Monito
  * @summary GPRSEvent
  * @description
  *
+ * GPRS event information for monitoring (event type plus `MonitorMode`). (3GPP
+ * TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -22,7 +25,26 @@ import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_Monito
  */
 export class GPRSEvent {
     constructor (
+        /**
+         * @summary `gPRSEventType`.
+         * @description
+         *
+         * GPRS DP to arm or report. (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly gPRSEventType: GPRSEventType,
+        /**
+         * @summary `monitorMode`.
+         * @description
+         *
+         * Whether the gprsSSF notifies the gsmSCF of the event.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly monitorMode: MonitorMode,
     ) {}
 

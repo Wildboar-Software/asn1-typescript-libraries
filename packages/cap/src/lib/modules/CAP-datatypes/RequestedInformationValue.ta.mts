@@ -12,6 +12,9 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  * @summary RequestedInformationValue
  * @description
  *
+ * `callAttemptElapsedTimeValue` is in seconds. `callConnectedElapsedTimeValue`
+ * is in 100 millisecond units. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

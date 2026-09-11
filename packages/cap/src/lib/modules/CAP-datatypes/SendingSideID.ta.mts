@@ -9,6 +9,9 @@ import { type LegType, _decode_LegType, _encode_LegType } from "../Core-INAP-CS1
  * @summary SendingSideID
  * @description
  *
+ * LegID in operations sent from gsmSCF to gsmSSF (Sending Side LegID). Never
+ * used gsmSSF → gsmSCF. (3GPP TS 29.078 V19.0.0 clause 4.1.5)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

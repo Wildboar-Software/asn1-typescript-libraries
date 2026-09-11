@@ -15,6 +15,14 @@ import { opcode_applyCharging } from "../CAP-operationcodes/opcode-applyCharging
  * @summary applyCharging
  * @description
  *
+ * gsmSCF uses this to interact with gsmSSF "CSE control of call duration".
+ * ApplyChargingReport is the feedback. gsmSCF → gsmSSF. Unconfirmed (`RETURN
+ * RESULT FALSE`). Local opcode 35. Timer `Tac` (short: 1 s–10 s;
+ * operator-defined within range). `taskRefused` if a previous call-period
+ * duration is pending for this leg or srfConnection, or a tariffSwitchInterval
+ * is given while one is already pending. (3GPP TS 29.078 V19.0.0 clauses 6.1.1
+ * and 11.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -22,7 +22,12 @@ import { QualityOfService, _decode_QualityOfService, _encode_QualityOfService } 
 /**
  * @summary ApplyChargingReportGPRSArg
  * @description
- * 
+ *
+ * Argument of ApplyChargingReportGPRS: charging result (volume or
+ * time, with or without tariff switch), optional QoS, whether the
+ * session/PDP is still active, PDPID, and rollover counts.
+ * (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,30 +48,68 @@ class ApplyChargingReportGPRSArg {
     constructor (
         /**
          * @summary `chargingResult`.
+         * @description
+         *
+         * Charging previously requested by ApplyChargingGPRS. Choice of
+         * `transferredVolume` (`volumeIfNoTariffSwitch`, or
+         * `volumeIfTariffSwitch` with volumeSinceLastTariffSwitch and
+         * optional VolumeTariffSwitchInterval) or `elapsedTime`
+         * (`timeGPRSIfNoTariffSwitch` or `timeGPRSIfTariffSwitch` with
+         * timeGPRSSinceLastTariffSwitch and optional
+         * timeGPRSTariffSwitchInterval).
+         * (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+         *
          * @public
          * @readonly
          */
         readonly chargingResult: ChargingResult,
         /**
          * @summary `qualityOfService`.
+         * @description
+         *
+         * QoS negotiated among user, SGSN, and GGSN. Present only when
+         * this report was triggered by a QoS change.
+         * `negotiated-QoS-Extension` may supplement `negotiated-QoS`.
+         * (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+         *
          * @public
          * @readonly
          */
         readonly qualityOfService: OPTIONAL<QualityOfService>,
         /**
          * @summary `active`.
+         * @description
+         *
+         * Whether the GPRS Session or PDP Context is still active.
+         * ASN.1 default TRUE. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+         *
          * @public
          * @readonly
          */
         readonly active: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pDPID`.
+         * @description
+         *
+         * Identifies the PDP Context, within a GPRS Session dialogue,
+         * for which this charging report is valid. unknownPDPID if
+         * unknown. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+         *
          * @public
          * @readonly
          */
         readonly pDPID: OPTIONAL<PDPID>,
         /**
          * @summary `chargingRollOver`.
+         * @description
+         *
+         * Rollovers of ChargingResult counters due to limited value
+         * ranges. Choice of transferredVolumeRollOver
+         * (rO-VolumeIfNoTariffSwitch or rO-VolumeIfTariffSwitch) or
+         * elapsedTimeRollOver (rO-TimeGPRSIfNoTariffSwitch or
+         * rO-TimeGPRSIfTariffSwitch). Absent subfields mean no
+         * rollover. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+         *
          * @public
          * @readonly
          */

@@ -6,6 +6,10 @@ import { id_package_gsmSRF_scfCancel } from "../CAP-object-identifiers/id-packag
  * @summary gsmSRF-scfCancelPackage
  * @description
  *
+ * gsmSRF-gsmSCF cancel package: gsmSCF (consumer) invokes `cancel`. Used in
+ * `gsmSRF-gsmSCF-contract`. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.2.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

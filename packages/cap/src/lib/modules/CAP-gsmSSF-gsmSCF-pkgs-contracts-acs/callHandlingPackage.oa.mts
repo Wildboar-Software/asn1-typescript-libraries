@@ -6,6 +6,10 @@ import { id_package_callHandling } from "../CAP-object-identifiers/id-package-ca
  * @summary callHandlingPackage
  * @description
  *
+ * gsmSSF-gsmSCF call handling package: gsmSCF (consumer) invokes `releaseCall`.
+ * Used in `capSsfToScfGeneric` and `capScfToSsfGeneric`. Package ID same as
+ * Rel-5. (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

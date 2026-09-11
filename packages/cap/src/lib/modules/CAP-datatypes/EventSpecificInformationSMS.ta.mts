@@ -12,6 +12,10 @@ import { EventSpecificInformationSMS_t_smsDeliverySpecificInfo, _decode_EventSpe
  * @summary EventSpecificInformationSMS
  * @description
  *
+ * SMS-event-specific information in EventReportSMS.
+ * `o-smsSubmissionSpecificInfo` and `t-smsDeliverySpecificInfo` have no
+ * specific info defined. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

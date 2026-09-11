@@ -46,6 +46,19 @@ import { disconnectForwardConnection } from "../CAP-gsmSSF-gsmSCF-ops-args/disco
  * @summary ScfToSsfGenericInvokable
  * @description
  * 
+ * Operations that may be invoked in the gsmSCF-to-gsmSSF generic CS
+ * `TCMessage`: `activityTest`, `applyCharging`, `applyChargingReport`,
+ * `callInformationRequest`, `cancel`, `collectInformation`, `connect`,
+ * `connectToResource`, `continue`, `continueWithArgument`,
+ * `disconnectForwardConnection`, `disconnectForwardConnectionWithArgument`,
+ * `disconnectLeg`, `establishTemporaryConnection`,
+ * `furnishChargingInformation`, `initiateCallAttempt`, `moveLeg`, `playTone`,
+ * `releaseCall`, `requestReportBCSMEvent`, `resetTimer`,
+ * `sendChargingInformation`, `splitLeg`, `playAnnouncement`,
+ * `promptAndCollectUserInformation`. Bound set `cAPSpecificBoundSet`. Rel-6
+ * imports version8(7) operations from CAP-gsmSSF-gsmSCF-ops-args and
+ * CAP-gsmSCF-gsmSRF-ops-args. (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

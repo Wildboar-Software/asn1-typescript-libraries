@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TariffSwitchInterval
  * @description
  *
+ * Tariff switch interval in 1 second units (1..86400). (3GPP TS 29.078 V19.0.0
+ * clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

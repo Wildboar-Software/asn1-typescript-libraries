@@ -23,7 +23,12 @@ import { id_rosObject_gsmSSF } from "../CAP-object-identifiers/id-rosObject-gsmS
 /**
  * @summary gsmSSF
  * @description
- * 
+ *
+ * gsmSSF ROS object. INITIATES `capSsfToScfGeneric` and
+ * `capAssistHandoffssfToScf`; RESPONDS `capScfToSsfGeneric`. Rel-6 uses
+ * the Rel-6 CONTRACT definitions of those names.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,6 +9,21 @@ import { opcode_entityReleasedGPRS } from "../CAP-operationcodes/opcode-entityRe
  * @summary entityReleasedGPRS
  * @description
  *
+ * Informs the gsmSCF that the GPRS Session detached or a PDP
+ * Context disconnected when the associated DP (Detach or PDP
+ * Context Disconnection) is not armed. Independent of which
+ * entity initiated the release and of the cause. Pending reports
+ * for the terminated session or PDP Context are sent first.
+ * (3GPP TS 29.078 V19.0.0 clause 13.7).
+ *
+ * Direction: gprsSSF → gsmSCF. Confirmed (class 1). Local opcode
+ * 76. Timer Terg (Short; 1–20 s, operator-defined).
+ *
+ * Disarms EDPs and releases resources for the indicated entity.
+ * Timer expiry: abort TC, terminate GPRS dialogue, apply default
+ * GPRS handling. unknownPDPID if PDPID unknown.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

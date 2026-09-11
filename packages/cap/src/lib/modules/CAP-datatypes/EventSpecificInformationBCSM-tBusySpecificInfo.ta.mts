@@ -12,6 +12,9 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  * @summary EventSpecificInformationBCSM_tBusySpecificInfo
  * @description
  *
+ * EventReportBCSM information for T_Busy, if available.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,9 +30,52 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  */
 export class EventSpecificInformationBCSM_tBusySpecificInfo {
     constructor (
+        /**
+         * @summary `busyCause`.
+         * @description
+         *
+         * If ISUP release: copy of that cause. If MAP error: mapped ISUP cause.
+         * If forwarding/deflection at GMSC/VMSC: mapping in 3GPP TS 23.078; at
+         * GMSC reflects forwarding reason (absent 20 or busy 17) and
+         * `callForwarded` is also present. If omitted, gsmSCF shall assume
+         * busy. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly busyCause: OPTIONAL<Cause>,
+        /**
+         * @summary `callForwarded`.
+         * @description
+         *
+         * Busy event triggered by call forwarding at GMSC or VMSC.
+         * (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly callForwarded: OPTIONAL<NULL>,
+        /**
+         * @summary `routeNotPermitted`.
+         * @description
+         *
+         * Busy because call forwarding was not invoked in this GMSC due to
+         * Basic Optimal Routeing rules. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly routeNotPermitted: OPTIONAL<NULL>,
+        /**
+         * @summary `forwardingDestinationNumber`.
+         * @description
+         *
+         * Forwarding destination, if available.
+         * (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly forwardingDestinationNumber: OPTIONAL<CalledPartyNumber>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

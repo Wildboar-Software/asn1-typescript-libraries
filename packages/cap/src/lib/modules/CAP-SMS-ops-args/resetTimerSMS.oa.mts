@@ -12,6 +12,17 @@ import { opcode_resetTimerSMS } from "../CAP-operationcodes/opcode-resetTimerSMS
  * @summary resetTimerSMS
  * @description
  *
+ * Refreshes the Tssf application timer so it does not expire at
+ * the smsSSF. (3GPP TS 29.078 V19.0.0 clause 12.8).
+ *
+ * Direction: gsmSCF → smsSSF. Confirmed (class 2). Local opcode
+ * 67. Timer Trtsms (Short; 1–20 s, operator-defined).
+ *
+ * Valid while SM processing is suspended at a DP in
+ * Waiting_for_Instructions. Tssf is loaded with timerValue and
+ * restarted; no FSM state change. Only timerID `tssf` is
+ * permitted. (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

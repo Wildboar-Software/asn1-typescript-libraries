@@ -7,6 +7,11 @@ import { id_package_charging } from "../CAP-object-identifiers/id-package-chargi
  * @summary chargingPackage
  * @description
  *
+ * gsmSSF-gsmSCF charging package: gsmSCF (consumer) invokes `applyCharging`;
+ * gsmSSF (supplier) invokes `applyChargingReport`. Used in `capSsfToScfGeneric`
+ * and `capScfToSsfGeneric`. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

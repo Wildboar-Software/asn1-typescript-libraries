@@ -14,6 +14,13 @@ import { opcode_initialDP } from "../CAP-operationcodes/opcode-initialDP.va.mjs"
  * @summary initialDP
  * @description
  *
+ * gsmSSF uses this after a TDP-R in the BCSM to request gsmSCF instructions to
+ * complete the call. gsmSSF → gsmSCF. Unconfirmed (`RETURN RESULT FALSE`).
+ * Local opcode 0. Timer `Tidp` (short: 1 s–10 s; operator-defined within
+ * range). Tssf is started when this is sent. If gsmSCF is unreachable, apply
+ * Default Call Handling from CSI. (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and
+ * 11.20).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

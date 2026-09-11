@@ -11,6 +11,9 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  * @summary EventSpecificInformationBCSM_tNoAnswerSpecificInfo
  * @description
  *
+ * EventReportBCSM information for T_No_Answer.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,7 +27,29 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  */
 export class EventSpecificInformationBCSM_tNoAnswerSpecificInfo {
     constructor (
+        /**
+         * @summary `callForwarded`.
+         * @description
+         *
+         * Present with `forwardingDestinationNumber` when No_Answer is
+         * triggered by call forwarding at GMSC or VMSC. Absent (empty specific
+         * info) if triggered by ISUP release or TNRy expiry.
+         * (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly callForwarded: OPTIONAL<NULL>,
+        /**
+         * @summary `forwardingDestinationNumber`.
+         * @description
+         *
+         * Forwarding destination when the event is due to call forwarding.
+         * (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly forwardingDestinationNumber: OPTIONAL<CalledPartyNumber>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

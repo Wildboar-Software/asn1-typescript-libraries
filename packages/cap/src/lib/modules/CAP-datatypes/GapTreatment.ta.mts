@@ -10,6 +10,10 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  * @summary GapTreatment
  * @description
  *
+ * How calls stopped by CallGap are treated: play `informationToSend` (then
+ * release) or release with `releaseCause`. Default Cause is the same as in
+ * ISUP. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.5)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -18,6 +18,12 @@ import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages
  * @summary GenericSCF_gsmSSF_PDUs
  * @description
  * 
+ * `TCMessage` for the gsmSCF-to-gsmSSF generic CS dialogue. Invokable and
+ * returnable sets are `ScfToSsfGenericInvokable` and
+ * `ScfToSsfGenericReturnable`. Bound set `cAPSpecificBoundSet`. Rel-6 uses
+ * version8(7) operation definitions. Used by `scf-gsmSSFGenericAbstractSyntax`.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

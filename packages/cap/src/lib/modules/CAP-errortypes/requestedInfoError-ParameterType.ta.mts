@@ -16,7 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary requestedInfoError_ParameterType
  * @description
- * 
+ *
+ * Parameter of `requestedInfoError`: `unknownRequestedInfo` (1) or
+ * `requestedInfoNotAvailable` (2). gsmSSF reports that CallInformationRequest
+ * data is unknown or not available.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +42,12 @@ enum _enum_for_requestedInfoError_ParameterType {
 /**
  * @summary requestedInfoError_ParameterType
  * @description
- * 
+ *
+ * Parameter of `requestedInfoError`: `unknownRequestedInfo` (1) or
+ * `requestedInfoNotAvailable` (2). gsmSSF reports that CallInformationRequest
+ * data is unknown or not available.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +65,12 @@ type requestedInfoError_ParameterType = _enum_for_requestedInfoError_ParameterTy
 /**
  * @summary requestedInfoError_ParameterType
  * @description
- * 
+ *
+ * Parameter of `requestedInfoError`: `unknownRequestedInfo` (1) or
+ * `requestedInfoNotAvailable` (2). gsmSSF reports that CallInformationRequest
+ * data is unknown or not available.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +87,11 @@ const requestedInfoError_ParameterType = _enum_for_requestedInfoError_ParameterT
 
 /**
  * @summary requestedInfoError_ParameterType_unknownRequestedInfo
+ * @description
+ *
+ * Requested information is not known to the gsmSSF.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.8).
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +100,11 @@ const requestedInfoError_ParameterType_unknownRequestedInfo: requestedInfoError_
 
 /**
  * @summary unknownRequestedInfo
+ * @description
+ *
+ * Requested information is not known to the gsmSSF.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.8).
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +113,11 @@ const unknownRequestedInfo: requestedInfoError_ParameterType = requestedInfoErro
 
 /**
  * @summary requestedInfoError_ParameterType_requestedInfoNotAvailable
+ * @description
+ *
+ * Requested information is not available at the gsmSSF.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.8).
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +126,11 @@ const requestedInfoError_ParameterType_requestedInfoNotAvailable: requestedInfoE
 
 /**
  * @summary requestedInfoNotAvailable
+ * @description
+ *
+ * Requested information is not available at the gsmSSF.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.8).
+ *
  * @constant
  * @type {number}
  */

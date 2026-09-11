@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary errcode_missingCustomerRecord
  * @description
- * 
+ *
+ * Local error code 6 for `missingCustomerRecord`.
+ * (3GPP TS 29.078 V19.0.0 clause 5.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

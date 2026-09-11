@@ -16,7 +16,13 @@ import {
 /**
  * @summary gsmSSF_gsmSCF_Protocol
  * @description
- * 
+ *
+ * OID of the CAP `gsmSSF-gsmSCF-Protocol` module
+ * (`cap-gsmSSF-gsmSCF-pkgs-contracts-acs(102) version8(7)`). Updated to
+ * version8(7) in Rel-6 so other modules can IMPORT Rel-6 call-control protocol
+ * definitions.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

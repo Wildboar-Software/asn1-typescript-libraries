@@ -10,6 +10,10 @@ import { BurstList, _decode_BurstList, _encode_BurstList } from "./BurstList.ta.
  * @summary AudibleIndicator
  * @description
  *
+ * `tone`: play a warning tone when the predefined warning-tone timer expires
+ * (`FALSE` means no tone). `burstList`: play a gsmSCF-defined burst sequence
+ * when that timer expires. (3GPP TS 29.078 V19.0.0 clause 11.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

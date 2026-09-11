@@ -23,6 +23,9 @@ import { leg1 } from "../Core-INAP-CS1-DataTypes/leg1.va.mjs";
  * @summary ApplyChargingArg
  * @description
  * 
+ * Argument of ApplyCharging: CSE control of call duration for a leg or SRF
+ * connection. (3GPP TS 29.078 V19.0.0 clause 11.2.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,12 +46,28 @@ class ApplyChargingArg {
     constructor (
         /**
          * @summary `aChBillingChargingCharacteristics`.
+         * @description
+         *
+         * Parameters for CSE control of call duration (`timeDurationCharging`):
+         * `maxCallPeriodDuration` (period before an ApplyChargingReport);
+         * `releaseIfdurationExceeded`; `audibleIndicator` (`tone` or
+         * `burstlist` with `warningPeriod`, `burst`, `burstInterval`,
+         * `toneInBurst`, `toneDuration`, `toneInterval`); and
+         * `tariffSwitchInterval` (elapsed-tariff timing starts after successful
+         * execution). (3GPP TS 29.078 V19.0.0 clause 11.2.1.1).
+         *
          * @public
          * @readonly
          */
         readonly aChBillingChargingCharacteristics: AChBillingChargingCharacteristics,
         /**
          * @summary `partyToCharge`.
+         * @description
+         *
+         * Party in the call to which ApplyCharging shall be applied. Default
+         * `sendingSideID:leg1` (calling party; clause 4.1.5). (3GPP TS 29.078
+         * V19.0.0 clauses 4.1.5 and 11.2.1.1).
+         *
          * @public
          * @readonly
          */
@@ -61,6 +80,13 @@ class ApplyChargingArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `aChChargingAddress`.
+         * @description
+         *
+         * Call party to which CSE control of call duration applies: `legID`
+         * (specified leg) or `srfConnection` (temporary connection or gsmSRF).
+         * Default `legID:sendingSideID:leg1`. (3GPP TS 29.078 V19.0.0 clause
+         * 11.2.1.1).
+         *
          * @public
          * @readonly
          */

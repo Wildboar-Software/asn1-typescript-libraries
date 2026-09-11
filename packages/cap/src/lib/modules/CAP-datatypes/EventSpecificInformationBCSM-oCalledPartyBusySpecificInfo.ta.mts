@@ -10,6 +10,9 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  * @summary EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo
  * @description
  *
+ * EventReportBCSM information for O_Busy.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -22,6 +25,18 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  */
 export class EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo {
     constructor (
+        /**
+         * @summary `busyCause`.
+         * @description
+         *
+         * If triggered by ISUP release, a copy of that cause (e.g. subscriber
+         * absent 20, user busy 17). If triggered by a MAP error (e.g. Absent
+         * subscriber), mapped to the corresponding ISUP cause. If omitted,
+         * gsmSCF shall assume busy. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly busyCause: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

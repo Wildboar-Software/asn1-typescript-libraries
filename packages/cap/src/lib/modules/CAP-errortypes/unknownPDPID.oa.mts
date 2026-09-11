@@ -21,7 +21,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unknownPDPID
  * @description
- * 
+ *
+ * gsmSCF or gprsSSF returns this when the `PDPId` in the operation argument
+ * is unknown to the receiving entity. Local error code 50.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.17).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

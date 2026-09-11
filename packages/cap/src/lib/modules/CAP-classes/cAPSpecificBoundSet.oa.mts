@@ -15,7 +15,24 @@ import { type PARAMETERS_BOUND } from "../CAP-classes/PARAMETERS-BOUND.oca.mjs";
 /**
  * @summary cAPSpecificBoundSet
  * @description
- * 
+ *
+ * CAP instantiation of `PARAMETERS-BOUND`. Rel-6 did not change Rel-5
+ * bound values. ScfID maximum length shall be 10 unless the operator
+ * defined format requires a higher maximum (bound is 25).
+ *
+ * Lengths: APN 1..100; AChBillingCharging 5..177; attributes 2..10;
+ * bearerCapability max 11; CalledPartyBCD 1..41; CalledPartyNumber
+ * 2..18; CallingPartyNumber 2..10; CallResult 12..193; Carrier 4..4;
+ * Cause 2..32; Digits 2..16; FCIBillingChargingData 1..160;
+ * FCIBillingCharging 5..225; GenericNumber 3..11; GPRSCause 1..1;
+ * IPSSPCapabilities 1..4; LocationNumber 2..10; LLC 1..16;
+ * MessageContent 1..127; OriginalCalledPartyID 2..10; PDPAddress 1..63;
+ * RedirectingID 2..10; ScfID 2..25; SCIBillingCharging 4..225;
+ * TimeAndTimezone 8..8. Counts: BCSM events 30; change-of-position 10;
+ * CSs 127; SMS events 10; GPRS events 10; extensions 10; generic numbers
+ * 5; message IDs 16.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

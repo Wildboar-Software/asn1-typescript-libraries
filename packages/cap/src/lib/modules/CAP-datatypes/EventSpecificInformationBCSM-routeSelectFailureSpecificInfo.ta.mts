@@ -10,6 +10,9 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  * @summary EventSpecificInformationBCSM_routeSelectFailureSpecificInfo
  * @description
  *
+ * EventReportBCSM information for Route_Select_Failure.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -22,6 +25,15 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  */
 export class EventSpecificInformationBCSM_routeSelectFailureSpecificInfo {
     constructor (
+        /**
+         * @summary `failureCause`.
+         * @description
+         *
+         * Present if available. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly failureCause: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

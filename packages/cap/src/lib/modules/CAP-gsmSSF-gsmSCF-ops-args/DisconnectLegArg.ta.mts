@@ -21,6 +21,9 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  * @summary DisconnectLegArg
  * @description
  * 
+ * Argument of DisconnectLeg: which leg to release and optional cause. (3GPP TS
+ * 29.078 V19.0.0 clause 11.15.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,23 @@ class DisconnectLegArg {
     constructor (
         /**
          * @summary `legToBeReleased`.
+         * @description
+         *
+         * Call leg to release. Sending Side LegID (gsmSCF → gsmSSF). (3GPP TS
+         * 29.078 V19.0.0 clauses 4.1.5 and 11.15.1.1).
+         *
          * @public
          * @readonly
          */
         readonly legToBeReleased: LegID,
         /**
          * @summary `releaseCause`.
+         * @description
+         *
+         * May be used by the MSC to generate specific tones to the party being
+         * released, or to fill the cause in the release message. (3GPP TS
+         * 29.078 V19.0.0 clause 11.15.1.1).
+         *
          * @public
          * @readonly
          */

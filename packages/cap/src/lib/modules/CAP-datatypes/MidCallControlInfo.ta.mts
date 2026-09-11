@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MidCallControlInfo
  * @description
  *
+ * DTMF collection during a call. `endOfReplyDigit`, `cancelDigit` and
+ * `startDigit` are BCD, one digit per octet in the four least significant bits;
+ * over-decadic: `1011`B (*), `1100`B (#). Only digits 0–9, '*' and '#' are
+ * allowed. The collected-digits string reported to the gsmSCF includes
+ * `endOfReplyDigit` and `startDigit` if present. `interDigitTimeout` is
+ * seconds. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -31,11 +38,71 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class MidCallControlInfo {
     constructor (
+        /**
+         * @summary `minimumNumberOfDigits`.
+         * @description
+         *
+         * Minimum number of digits that shall be collected. (3GPP TS 29.078 V19.0.0
+         * clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly minimumNumberOfDigits: OPTIONAL<INTEGER>,
+        /**
+         * @summary `maximumNumberOfDigits`.
+         * @description
+         *
+         * Maximum number of digits that shall be collected. (3GPP TS 29.078 V19.0.0
+         * clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly maximumNumberOfDigits: OPTIONAL<INTEGER>,
+        /**
+         * @summary `endOfReplyDigit`.
+         * @description
+         *
+         * Digit string that denotes the end of digits to be collected (included in
+         * the report to the gsmSCF). (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly endOfReplyDigit: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `cancelDigit`.
+         * @description
+         *
+         * Digit string that erases input and restarts collection. (3GPP TS 29.078
+         * V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly cancelDigit: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `startDigit`.
+         * @description
+         *
+         * Digit string that denotes the start of digits to be collected (included
+         * in the report to the gsmSCF). (3GPP TS 29.078 V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly startDigit: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `interDigitTimeout`.
+         * @description
+         *
+         * Maximum duration in seconds between successive digits. (3GPP TS 29.078
+         * V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly interDigitTimeout: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {

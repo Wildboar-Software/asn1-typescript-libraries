@@ -6,6 +6,10 @@ import { id_package_smsActivation } from "../CAP-object-identifiers/id-package-s
  * @summary smsActivationPackage
  * @description
  *
+ * smsSSF-gsmSCF activation package: smsSSF (consumer) invokes `initialDPSMS`.
+ * Used in `cap3SMS` (MO-SMS) and `cap4SMS` (MT-SMS). Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 7.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

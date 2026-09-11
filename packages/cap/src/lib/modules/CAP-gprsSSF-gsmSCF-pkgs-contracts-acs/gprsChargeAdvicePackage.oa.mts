@@ -6,6 +6,11 @@ import { id_package_gprsChargeAdvice } from "../CAP-object-identifiers/id-packag
  * @summary gprsChargeAdvicePackage
  * @description
  *
+ * gprsSSF-gsmSCF charge-advice package: gsmSCF (consumer) invokes
+ * `sendChargingInformationGPRS`. Used in `capGprsSsfToScf` (responder) and
+ * `capGsmScfToGprsSsf` (initiator). Package OID updated in Rel-6.
+ * (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

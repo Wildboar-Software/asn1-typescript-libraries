@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ApplicationTimer
  * @description
  *
+ * Timer set by the gsmSCF in the gsmSSF, in seconds (0..2047). Used as the
+ * No_Answer timer in `DpSpecificCriteria`; shall be shorter than the network
+ * No_Answer timer. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.27).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

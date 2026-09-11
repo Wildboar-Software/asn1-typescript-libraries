@@ -13,6 +13,13 @@ import { opcode_dFCWithArgument } from "../CAP-operationcodes/opcode-dFCWithArgu
  * @summary disconnectForwardConnectionWithArgument
  * @description
  *
+ * gsmSCF disconnects a specified call segment from a gsmSRF or assisting gsmSSF
+ * previously connected by ConnectToResource or EstablishTemporaryConnection.
+ * Does not release the gsmSSF–end-user connection. gsmSCF → gsmSSF. Unconfirmed
+ * (`RETURN RESULT FALSE`). Local opcode 86. Timer `Tdfcwa` (short: 1 s–10 s;
+ * operator-defined within range). (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and
+ * 11.14).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

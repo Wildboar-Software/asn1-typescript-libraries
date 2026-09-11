@@ -20,6 +20,10 @@ import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects
  * @summary smsReleasePackage
  * @description
  * 
+ * smsSSF-gsmSCF release package: gsmSCF (consumer) invokes `releaseSMS`. Used
+ * in `cap3SMS` and `cap4SMS`. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

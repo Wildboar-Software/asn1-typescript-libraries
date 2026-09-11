@@ -20,6 +20,11 @@ import { id_as_smsSSF_gsmSCF_AS } from "../CAP-object-identifiers/id-as-smsSSF-g
  * @summary sms_AbstractSyntax
  * @description
  * 
+ * Abstract syntax for `cap3-sms-AC` and `cap4-sms-AC` (CAP from smsSSF to
+ * gsmSCF). Type is `Generic-sms-PDUs`. Bound set `cAPSpecificBoundSet`. Rel-6
+ * imports operation definitions as version8(7). Abstract-syntax ID same as
+ * Rel-5. (3GPP TS 29.078 V19.0.0 clause 7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

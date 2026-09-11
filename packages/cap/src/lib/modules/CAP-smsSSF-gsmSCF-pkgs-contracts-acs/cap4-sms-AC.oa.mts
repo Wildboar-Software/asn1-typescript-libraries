@@ -28,6 +28,14 @@ import { type APPLICATION_CONTEXT } from "../TC-Notation-Extensions/APPLICATION-
  * @summary cap4_sms_AC
  * @description
  * 
+ * CAMEL MT-SMS application context. Contract `cap4SMS`; structured dialogue;
+ * abstract syntaxes `dialogue-abstract-syntax` and `sms-AbstractSyntax` (shared
+ * with `cap3-sms-AC`). Rel-6 uses the same AC version as Rel-5; the contract
+ * and abstract syntaxes are Rel-6 definitions. If the proposed AC is
+ * acceptable, it must be reflected in the first backwards message; the gsmSCF
+ * shall not return an alternate AC.
+ * (3GPP TS 29.078 V19.0.0 clauses 7.2 and 4.2.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

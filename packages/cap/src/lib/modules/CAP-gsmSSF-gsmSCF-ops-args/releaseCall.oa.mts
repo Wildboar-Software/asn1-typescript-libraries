@@ -6,6 +6,12 @@ import { opcode_releaseCall } from "../CAP-operationcodes/opcode-releaseCall.va.
  * @summary releaseCall
  * @description
  *
+ * gsmSCF tears down an existing call at any phase for all parties. gsmSCF →
+ * gsmSSF. Unconfirmed (`RETURN RESULT FALSE`, `ALWAYS RESPONDS FALSE`). Local
+ * opcode 22. Timer `Trc` (short: 1 s–10 s; operator-defined within range).
+ * Class 4: operation-related error handling is not applicable. (3GPP TS 29.078
+ * V19.0.0 clauses 6.1.1 and 11.26).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

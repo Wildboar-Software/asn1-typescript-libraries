@@ -19,6 +19,15 @@ import { CallSegmentFailure, _decode_CallSegmentFailure, _encode_CallSegmentFail
  * @summary EntityReleasedArg
  * @description
  * 
+ * Argument of EntityReleased. CHOICE of which logical entity failed. (3GPP TS
+ * 29.078 V19.0.0 clause 11.16.1.1).
+ *
+ * - `callSegmentFailure` (`CSFailure`): Call Segment released; contains
+ *   `callSegmentID` and `cause` (gsmSCF may use the cause for further
+ *   handling).
+ *
+ * - `bCSM_Failure` (`BCSMFailure`): Leg released; contains `legID` and `cause`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

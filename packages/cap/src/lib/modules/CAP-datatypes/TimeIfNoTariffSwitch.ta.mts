@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TimeIfNoTariffSwitch
  * @description
  *
+ * Call duration with no tariff switch, in 100 millisecond intervals
+ * (0..864000). (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

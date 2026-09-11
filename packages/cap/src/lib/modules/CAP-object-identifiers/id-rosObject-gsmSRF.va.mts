@@ -17,7 +17,10 @@ import { id_rosObject } from "../CAP-object-identifiers/id-rosObject.va.mjs";
 /**
  * @summary id_rosObject_gsmSRF
  * @description
- * 
+ *
+ * OID of the gsmSRF ROS object (`{id-rosObject 6}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

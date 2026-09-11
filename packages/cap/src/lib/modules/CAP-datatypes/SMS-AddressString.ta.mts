@@ -9,6 +9,11 @@ import { type AddressString, _decode_AddressString, _encode_AddressString } from
  * @summary SMS_AddressString
  * @description
  *
+ * CallingPartyNumber for MT-SMS. For MO-SMS the maximum number of digits shall
+ * be 16. May contain an alphanumeric string: nature of address `'101'B` per
+ * 3GPP TS 23.040; address coded with the GSM 7-bit default alphabet and SMS
+ * packing rules of 3GPP TS 23.038. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

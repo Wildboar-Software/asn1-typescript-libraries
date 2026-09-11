@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `Remote-Operations-Information-Objects`.
+ * ASN.1 module `Remote-Operations-Information-Objects`, imported by
+ * CAP V4 from ITU-T X.880 (`OPERATION`, `ERROR`, `CONTRACT`,
+ * `OPERATION-PACKAGE`, `ROS-OBJECT-CLASS`, `Code`). Per-type semantics
+ * are in X.880, not 3GPP TS 29.078.
+ * (3GPP TS 29.078 V19.0.0 clause 2.1 Table 2-1).
  */
 export * from "./Code.ta.mjs";
 export * from "./CONNECTION-PACKAGE.oca.mjs";

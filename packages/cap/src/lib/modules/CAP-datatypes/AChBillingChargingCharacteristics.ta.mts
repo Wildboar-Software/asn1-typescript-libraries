@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AChBillingChargingCharacteristics
  * @description
  *
+ * OCTET STRING carrying BER-encoded `CAMEL-AChBillingChargingCharacteristics`.
+ * Tells the gsmSSF what charging info to collect and when to send
+ * ApplyChargingReport. UserDefinedConstraint violation is an ASN.1 syntax
+ * error. (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

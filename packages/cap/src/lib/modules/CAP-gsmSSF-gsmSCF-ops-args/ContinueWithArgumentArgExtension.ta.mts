@@ -20,6 +20,9 @@ import { type LegOrCallSegment, _decode_LegOrCallSegment, _encode_LegOrCallSegme
  * @summary ContinueWithArgumentArgExtension
  * @description
  * 
+ * Extension fields of ContinueWithArgumentArg. (3GPP TS 29.078 V19.0.0 clause
+ * 11.12.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +42,44 @@ class ContinueWithArgumentArgExtension {
     constructor (
         /**
          * @summary `suppress_D_CSI`.
+         * @description
+         *
+         * Presence means D-CSI shall be suppressed for the leg. (3GPP TS 29.078
+         * V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly suppress_D_CSI: OPTIONAL<NULL>,
         /**
          * @summary `suppress_N_CSI`.
+         * @description
+         *
+         * Presence means N-CSI shall be suppressed for the leg or
+         * trunk-originated call. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly suppress_N_CSI: OPTIONAL<NULL>,
         /**
          * @summary `suppressOutgoingCallBarring`.
+         * @description
+         *
+         * Presence means outgoing call barrings shall be suppressed for the
+         * leg. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */
         readonly suppressOutgoingCallBarring: OPTIONAL<NULL>,
         /**
          * @summary `legOrCallSegment`.
+         * @description
+         *
+         * Leg or Call Segment to which ContinueWithArgument applies. (3GPP TS
+         * 29.078 V19.0.0 clause 11.12.1.1).
+         *
          * @public
          * @readonly
          */

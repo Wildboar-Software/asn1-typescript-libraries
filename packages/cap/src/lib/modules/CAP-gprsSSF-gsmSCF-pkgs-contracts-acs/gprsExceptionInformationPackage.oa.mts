@@ -6,6 +6,10 @@ import { id_package_gprsExceptionInformation } from "../CAP-object-identifiers/i
  * @summary gprsExceptionInformationPackage
  * @description
  *
+ * gprsSSF-gsmSCF exception information package: gprsSSF (consumer) invokes
+ * `entityReleasedGPRS`. Used in `capGprsSsfToScf` (initiator). Package OID
+ * updated in Rel-6. (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

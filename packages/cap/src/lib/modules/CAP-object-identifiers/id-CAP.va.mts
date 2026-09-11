@@ -16,7 +16,11 @@ import {
 /**
  * @summary id_CAP
  * @description
- * 
+ *
+ * Root OID `{umts-network(1) cap4(22)}` for CAP version 4. Parent of `id-ac`,
+ * `id-as`, `id-rosObject`, `id-contract` and `id-package`.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

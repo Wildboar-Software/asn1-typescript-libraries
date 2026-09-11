@@ -17,7 +17,10 @@ import { id_as } from "../CAP-object-identifiers/id-as.va.mjs";
 /**
  * @summary id_as_gprsSSF_gsmSCF_AS
  * @description
- * 
+ *
+ * OID of the gprsSSF/gsmSCF abstract syntax `gprsSSF-gsmSCF-AS` (`{id-as 50}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

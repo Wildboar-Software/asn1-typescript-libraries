@@ -6,6 +6,10 @@ import { id_package_trafficManagement } from "../CAP-object-identifiers/id-packa
  * @summary trafficManagementPackage
  * @description
  *
+ * gsmSSF-gsmSCF traffic management package: gsmSCF (consumer) invokes
+ * `callGap`. Used in `capSsfToScfGeneric` only. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

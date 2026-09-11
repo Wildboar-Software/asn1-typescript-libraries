@@ -12,6 +12,14 @@ import { BasicGapCriteria_callingAddressAndService, _decode_BasicGapCriteria_cal
  * @summary BasicGapCriteria
  * @description
  *
+ * `calledAddressValue` / `callingAddressValue` may be incomplete (leading
+ * digits only). Same-prefix handling is in the CallGap procedure.
+ * `gapOnService` gaps on Service Key alone. Combined alternatives also require
+ * a matching Service Key. Priority if several criteria match:
+ * calledAddressAndService or calledAddressValue, then callingAddressAndService,
+ * then gapOnService; longest matching number wins.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

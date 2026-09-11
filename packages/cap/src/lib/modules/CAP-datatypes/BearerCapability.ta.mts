@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BearerCapability
  * @description
  *
+ * Bearer capability toward the user. `bearerCap` is ISUP User Service
+ * Information encoded as ETSI EN 300 356-1.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

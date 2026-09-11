@@ -12,6 +12,11 @@ import { ChangeOfLocationAlt, _decode_ChangeOfLocationAlt, _encode_ChangeOfLocat
  * @summary ChangeOfLocation
  * @description
  *
+ * `cellGlobalId` shall contain a Cell Global Identification. `serviceAreaId`
+ * shall contain a Service Area Identification. Other alternatives: location
+ * area, inter-system / inter-PLMN / inter-MSC handover, or
+ * `changeOfLocationAlt`. (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

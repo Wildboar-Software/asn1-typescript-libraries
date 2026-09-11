@@ -14,6 +14,18 @@ import { opcode_connectGPRS } from "../CAP-operationcodes/opcode-connectGPRS.va.
  * @summary connectGPRS
  * @description
  *
+ * Provides an APN for the gprsSSF to use when establishing a PDP
+ * Context. (3GPP TS 29.078 V19.0.0 clause 13.5).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (class 2). Local opcode
+ * 74. Timer Tcong (Short; 1–20 s, operator-defined).
+ *
+ * Valid in a control relationship at DP PDP_Context_Establishment
+ * while Waiting_for_Instructions. Stops Tssf. No implicit DP
+ * arming or disarming. FSM → Idle if no EDPs armed, else
+ * Monitoring. unknownPDPID if PDPID unknown.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

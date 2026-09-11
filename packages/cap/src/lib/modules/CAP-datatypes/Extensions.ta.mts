@@ -9,6 +9,9 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * @summary Extensions
  * @description
  *
+ * SEQUENCE OF `ExtensionField` (argument-datatype extensions; content is
+ * network operator specific). (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

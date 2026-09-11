@@ -6,6 +6,14 @@ import { opcode_eventReportBCSM } from "../CAP-operationcodes/opcode-eventReport
  * @summary eventReportBCSM
  * @description
  *
+ * gsmSSF notifies gsmSCF of a call-related BCSM event previously armed by
+ * RequestReportBCSMEvent (e.g. O_Busy, O_No_Answer). gsmSSF → gsmSCF.
+ * Unconfirmed (`RETURN RESULT FALSE`, `ALWAYS RESPONDS FALSE`). Local opcode
+ * 24. Timer `Terb` (short: 1 s–10 s; operator-defined within range). If the
+ * report is a request and Tssf expires, gsmSSF aborts the TC dialogue and
+ * applies Default Call Handling. Class 4: operation-related error handling is
+ * not applicable. (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

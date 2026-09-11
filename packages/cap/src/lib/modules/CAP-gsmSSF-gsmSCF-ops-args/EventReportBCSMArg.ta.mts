@@ -23,6 +23,9 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
  * @summary EventReportBCSMArg
  * @description
  * 
+ * Argument of EventReportBCSM: which armed BCSM event occurred and
+ * event-specific information. (3GPP TS 29.078 V19.0.0 clause 11.18.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +46,59 @@ class EventReportBCSMArg {
     constructor (
         /**
          * @summary `eventTypeBCSM`.
+         * @description
+         *
+         * Type of BCSM event being reported. (3GPP TS 29.078 V19.0.0 clause
+         * 11.18.1.1).
+         *
          * @public
          * @readonly
          */
         readonly eventTypeBCSM: EventTypeBCSM,
         /**
          * @summary `eventSpecificInformationBCSM`.
+         * @description
+         *
+         * Call-related information specific to the event. Collected_Info:
+         * CalledPartyNumber. Route_Select_Failure: FailureCause if available.
+         * O_Busy: BusyCause if available (ISUP release cause, or MAP error
+         * mapped to ISUP; if none, gsmSCF assumes busy). T_Busy: optional
+         * CallForwarded, ForwardingDestinationNumber, RouteNotPermitted,
+         * BusyCause. O_No_Answer: empty. T_No_Answer: optional CallForwarded
+         * and ForwardingDestinationNumber. O_Answer/T_Answer: destination
+         * address, OR indicator, forwarding indicator, charge indicator,
+         * Extended Basic Service Code(s) for SCUDIF. O/T_Mid_Call: detected
+         * digit string. Call_Accepted, O_Term_Seized, O/T_Change_Of_Position:
+         * locationInformation. O/T_Disconnect: releaseCause if available.
+         * O_Abandon: optional routeNotPermitted. O/T_Service_Change: Extended
+         * Basic Service Code, initiator, nature of change. (3GPP TS 29.078
+         * V19.0.0 clause 11.18.1.1).
+         *
          * @public
          * @readonly
          */
         readonly eventSpecificInformationBCSM: OPTIONAL<EventSpecificInformationBCSM>,
         /**
          * @summary `legID`.
+         * @description
+         *
+         * Party for which the event is reported. gsmSSF shall use
+         * `receivingSideID` only. If omitted, default LegIDs from tables 11-1
+         * and 11-2 apply. Always included for O_Disconnect and T_Disconnect.
+         * (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and 11.18.1.1).
+         *
          * @public
          * @readonly
          */
         readonly legID: OPTIONAL<ReceivingSideID>,
         /**
          * @summary `miscCallInfo`.
+         * @description
+         *
+         * DP-related information. `messageType`: `request` if armed with
+         * monitorMode interrupted; `notification` if notifyAndContinue. Default
+         * `{messageType request}`. (3GPP TS 29.078 V19.0.0 clause 11.18.1.1).
+         *
          * @public
          * @readonly
          */

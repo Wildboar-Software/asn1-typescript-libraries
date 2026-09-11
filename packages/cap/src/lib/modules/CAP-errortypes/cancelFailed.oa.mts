@@ -23,7 +23,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary cancelFailed
  * @description
- * 
+ *
+ * gsmSRF returns this toward gsmSCF when Cancel of a specific operation was
+ * not successful. Parameter SEQUENCE: `problem` (why) and `operation`
+ * (InvokeID of the operation that failed to cancel). SRSM stays in User
+ * Interaction or Idle. Local error code 1.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

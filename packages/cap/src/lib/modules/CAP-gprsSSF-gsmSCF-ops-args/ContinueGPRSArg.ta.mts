@@ -18,7 +18,11 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
 /**
  * @summary ContinueGPRSArg
  * @description
- * 
+ *
+ * Argument of ContinueGPRS. Optional PDPID identifies the PDP
+ * Context that shall continue. (3GPP TS 29.078 V19.0.0
+ * clause 13.6.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,12 @@ class ContinueGPRSArg {
     constructor (
         /**
          * @summary `pDPID`.
+         * @description
+         *
+         * Identifies the PDP Context within the control relationship
+         * for which processing shall continue. unknownPDPID if
+         * unknown. (3GPP TS 29.078 V19.0.0 clause 13.6.1.1).
+         *
          * @public
          * @readonly
          */

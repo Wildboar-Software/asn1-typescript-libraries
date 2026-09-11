@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-object-identifiers`.
+ * ASN.1 module `CAP-object-identifiers`. Assigns object identifiers for
+ * Modules, Packages, Contracts and ACs used by CAP.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
  */
 export * from "./classes.va.mjs";
 export * from "./datatypes.va.mjs";

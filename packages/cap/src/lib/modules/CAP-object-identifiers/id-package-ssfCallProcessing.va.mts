@@ -17,7 +17,11 @@ import { id_packageE } from "../CAP-object-identifiers/id-packageE.va.mjs";
 /**
  * @summary id_package_ssfCallProcessing
  * @description
- * 
+ *
+ * OID of the gsmSSF/gsmSCF `ssfCallProcessing` operation package
+ * (`{id-packageE 24}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

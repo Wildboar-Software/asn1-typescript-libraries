@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MessageID_text
  * @description
  *
+ * `text` alternative of `MessageID`. Use is network operator/equipment vendor
+ * specific. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -27,8 +27,39 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  */
 export class CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
     constructor (
+        /**
+         * @summary `freeFormatData`.
+         * @description
+         *
+         * Free-format billing and/or charging characteristics.
+         * (3GPP TS 29.078 V19.0.0 clause 13.9).
+         *
+         * @public
+         * @readonly
+         */
         readonly freeFormatData: OCTET_STRING,
+        /**
+         * @summary `pDPID`.
+         * @description
+         *
+         * PDP Context Logical GPRS record to which the free format data
+         * belongs. (3GPP TS 29.078 V19.0.0 clause 13.9).
+         *
+         * @public
+         * @readonly
+         */
         readonly pDPID: OPTIONAL<PDPID>,
+        /**
+         * @summary `appendFreeFormatData`.
+         * @description
+         *
+         * Whether previous FCI free format data is appended or overwritten.
+         * Default `overwrite`. Refer to 3GPP TS 23.078.
+         * (3GPP TS 29.078 V19.0.0 clause 13.9).
+         *
+         * @public
+         * @readonly
+         */
         readonly appendFreeFormatData: OPTIONAL<AppendFreeFormatData>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

@@ -13,6 +13,12 @@ import { opcode_moveLeg } from "../CAP-operationcodes/opcode-moveLeg.va.mjs";
  * @summary moveLeg
  * @description
  *
+ * gsmSCF moves a leg from its current Call Segment to CSID1 within the same
+ * call segment association. Return Result is sent immediately after successful
+ * execution. gsmSCF → gsmSSF. Confirmed (`RETURN RESULT TRUE`). Local opcode
+ * 93. Timer `Tml` (short: 1 s–10 s; operator-defined within range). (3GPP TS
+ * 29.078 V19.0.0 clauses 6.1.1 and 11.22).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

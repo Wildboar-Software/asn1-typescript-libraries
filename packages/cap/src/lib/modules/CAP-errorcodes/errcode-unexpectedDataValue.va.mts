@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary errcode_unexpectedDataValue
  * @description
- * 
+ *
+ * Local error code 15 for `unexpectedDataValue`.
+ * (3GPP TS 29.078 V19.0.0 clause 5.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

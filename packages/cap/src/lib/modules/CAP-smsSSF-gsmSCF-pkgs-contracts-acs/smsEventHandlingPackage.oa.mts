@@ -7,6 +7,11 @@ import { id_package_smsEventHandling } from "../CAP-object-identifiers/id-packag
  * @summary smsEventHandlingPackage
  * @description
  *
+ * smsSSF-gsmSCF event handling package: gsmSCF (consumer) invokes
+ * `requestReportSMSEvent`; smsSSF (supplier) invokes `eventReportSMS`. Used in
+ * `cap3SMS` and `cap4SMS`. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 7.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

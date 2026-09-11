@@ -21,7 +21,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unavailableResource
  * @description
- * 
+ *
+ * gsmSRF returns this toward gsmSCF when it cannot play the requested
+ * announcement or collect user information and cannot be replaced;
+ * reattempt is not possible. SRSM stays in User Interaction. Local error
+ * code 13.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

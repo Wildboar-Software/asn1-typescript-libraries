@@ -24,7 +24,30 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class ElapsedTime_timeGPRSIfTariffSwitch {
     constructor (
+        /**
+         * @summary `timeGPRSSinceLastTariffSwitch`.
+         * @description
+         *
+         * Elapsed time since the event that started time count or the last
+         * tariff switch, in seconds.
+         * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 13.3).
+         *
+         * @public
+         * @readonly
+         */
         readonly timeGPRSSinceLastTariffSwitch: INTEGER,
+        /**
+         * @summary `timeGPRSTariffSwitchInterval`.
+         * @description
+         *
+         * Present only if a tariff switch was detected after the event that
+         * started time count in the current period. Time between that event or
+         * the previous switch and the last switch, in seconds.
+         * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 13.3).
+         *
+         * @public
+         * @readonly
+         */
         readonly timeGPRSTariffSwitchInterval: OPTIONAL<INTEGER>,
     ) {
         if ((typeof timeGPRSSinceLastTariffSwitch === "bigint" ? (timeGPRSSinceLastTariffSwitch < 0n || timeGPRSSinceLastTariffSwitch > 86400n) : (timeGPRSSinceLastTariffSwitch < 0 || timeGPRSSinceLastTariffSwitch > 86400))) {

@@ -28,10 +28,60 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class Burst {
     constructor (
+        /**
+         * @summary `numberOfBursts`.
+         * @description
+         *
+         * Number of bursts that form the burst list.
+         * (3GPP TS 29.078 V19.0.0 clause 11.2).
+         *
+         * @public
+         * @readonly
+         */
         readonly numberOfBursts: OPTIONAL<INTEGER>,
+        /**
+         * @summary `burstInterval`.
+         * @description
+         *
+         * Interval between successive bursts, in 100 ms units.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly burstInterval: OPTIONAL<INTEGER>,
+        /**
+         * @summary `numberOfTonesInBurst`.
+         * @description
+         *
+         * Number of tones played in each burst.
+         * (3GPP TS 29.078 V19.0.0 clause 11.2).
+         *
+         * @public
+         * @readonly
+         */
         readonly numberOfTonesInBurst: OPTIONAL<INTEGER>,
+        /**
+         * @summary `toneDuration`.
+         * @description
+         *
+         * How long each tone is played, in 100 ms units.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly toneDuration: OPTIONAL<INTEGER>,
+        /**
+         * @summary `toneInterval`.
+         * @description
+         *
+         * Interval between successive tones in a burst, in 100 ms units.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly toneInterval: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {

@@ -17,7 +17,11 @@ import { id_asE } from "../CAP-object-identifiers/id-asE.va.mjs";
 /**
  * @summary id_as_assistHandoff_gsmSSF_scfAS
  * @description
- * 
+ *
+ * OID of the gsmSSF/gsmSCF assist-handoff abstract syntax
+ * `assistHandoff-gsmSSF-scfAS` (`{id-asE 6}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

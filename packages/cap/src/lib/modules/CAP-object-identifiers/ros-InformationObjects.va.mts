@@ -17,7 +17,11 @@ import {
 /**
  * @summary ros_InformationObjects
  * @description
- * 
+ *
+ * OID of the joint ISO/ITU-T Remote Operations information-objects module
+ * (`remote-operations(4) informationObjects(5) version1(0)`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

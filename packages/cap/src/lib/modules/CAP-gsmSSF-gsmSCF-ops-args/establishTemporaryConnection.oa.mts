@@ -14,6 +14,15 @@ import { opcode_establishTemporaryConnection } from "../CAP-operationcodes/opcod
  * @summary establishTemporaryConnection
  * @description
  *
+ * gsmSCF creates a temporary connection from the initiating gsmSSF to an
+ * assisting gsmSSF (assist procedure) or to a gsmSRF in a separately
+ * addressable PE (e.g. play announcement, collect user information). gsmSCF →
+ * gsmSSF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode 17. Timer `Tetc`
+ * (medium: 1 s–60 s; operator-defined within range). Failures before the assist
+ * gsmSSF or gsmSRF accepts setup are reported as `eTCFailed`. The operation
+ * timer shall be longer than the maximum signalling time to accept the
+ * connection. (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11.17).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

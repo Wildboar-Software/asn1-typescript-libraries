@@ -10,6 +10,10 @@ import { Tone, _decode_Tone, _encode_Tone } from "./Tone.ta.mjs";
  * @summary InformationToSend
  * @description
  *
+ * Announcement (`inbandInfo`) or `tone` to send to the calling party (e.g.
+ * CallGap treatment; at end of information sending the gapped call is
+ * released). (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.5)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

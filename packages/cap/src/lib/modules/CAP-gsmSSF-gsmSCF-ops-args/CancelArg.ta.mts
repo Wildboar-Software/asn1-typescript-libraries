@@ -20,6 +20,18 @@ import { type InvokeID, _decode_InvokeID, _encode_InvokeID } from "../CAP-dataty
  * @summary CancelArg
  * @description
  * 
+ * Argument of Cancel. CHOICE of which previous request(s) to cancel. (3GPP TS
+ * 29.078 V19.0.0 clause 11.8.1.1).
+ *
+ * - `invokeID`: Operation invocation to cancel (PromptAndCollectUserInformation
+ *   or PlayAnnouncement). Same invoke id as the operation being cancelled.
+ *
+ * - `allRequests`: Disarm all armed EDPs and cancel pending ApplyChargingReport
+ *   and CallInformationReport (gsmSSF).
+ *
+ * - `callSegmentToCancel`: User-interaction cancel for a Call Segment
+ *   (`invokeID` and `callSegmentID` of the PA/PACUI to abort).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

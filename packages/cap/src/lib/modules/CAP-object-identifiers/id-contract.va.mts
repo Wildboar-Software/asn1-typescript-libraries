@@ -17,7 +17,11 @@ import { id_CAP } from "../CAP-object-identifiers/id-CAP.va.mjs";
 /**
  * @summary id_contract
  * @description
- * 
+ *
+ * OID arc for CAP contracts under `id-CAP` (`contract(26)`). Values are
+ * identical to ITU-T Recommendation Q.1218.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

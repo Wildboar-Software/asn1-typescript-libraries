@@ -13,6 +13,12 @@ import { opcode_disconnectLeg } from "../CAP-operationcodes/opcode-disconnectLeg
  * @summary disconnectLeg
  * @description
  *
+ * gsmSCF releases a specific leg and retains any other legs. Return Result is
+ * sent immediately after successful execution. gsmSCF → gsmSSF. Confirmed
+ * (`RETURN RESULT TRUE`). Local opcode 90. Timer `Tdl` (short: 1 s–10 s;
+ * operator-defined within range). (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and
+ * 11.15).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -6,6 +6,10 @@ import { id_package_timer } from "../CAP-object-identifiers/id-package-timer.va.
  * @summary timerPackage
  * @description
  *
+ * gsmSSF-gsmSCF timer package: gsmSCF (consumer) invokes `resetTimer`. Used in
+ * `capSsfToScfGeneric`, `capAssistHandoffssfToScf`, and `capScfToSsfGeneric`.
+ * Package ID same as Rel-5. (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

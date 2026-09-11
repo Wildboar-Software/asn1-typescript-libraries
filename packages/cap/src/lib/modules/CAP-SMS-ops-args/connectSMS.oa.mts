@@ -13,6 +13,20 @@ import { opcode_connectSMS } from "../CAP-operationcodes/opcode-connectSMS.va.mj
  * @summary connectSMS
  * @description
  *
+ * Requests the smsSSF to continue SM processing with modified
+ * information (route to a destination or deliver to the served
+ * subscriber). (3GPP TS 29.078 V19.0.0 clause 12.1).
+ *
+ * Direction: gsmSCF → smsSSF (MSC or SGSN). Confirmed (class 2).
+ * Local opcode 62. Timer Tconsms (Short; 1–20 s, operator-defined).
+ *
+ * Valid at DP SMS_Collected_Info or SMS_Delivery_Requested while
+ * Waiting_for_Instructions. Supplied callingPartysNumber,
+ * destinationSubscriberNumber, or smscAddress replace subsequent
+ * processing values. No implicit DP arming or disarming. FSM goes
+ * Idle if no EDPs armed, else Monitoring.
+ * (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

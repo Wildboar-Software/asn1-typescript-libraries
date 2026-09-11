@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EventSpecificInformationBCSM_oAbandonSpecificInfo
  * @description
  *
+ * EventReportBCSM information for O_Abandon, if available.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -23,6 +26,17 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class EventSpecificInformationBCSM_oAbandonSpecificInfo {
     constructor (
+        /**
+         * @summary `routeNotPermitted`.
+         * @description
+         *
+         * O-Abandon triggered because call set-up shall not be invoked in this
+         * MSC due to Basic Optimal Routeing rules.
+         * (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly routeNotPermitted: OPTIONAL<NULL>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

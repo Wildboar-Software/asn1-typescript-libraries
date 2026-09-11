@@ -9,6 +9,9 @@ import { CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1, _deco
  * @summary CAMEL_FCIGPRSBillingChargingCharacteristics
  * @description
  *
+ * BER payload of `FCIGPRSBillingChargingCharacteristics`. Contains
+ * `fCIBCCCAMELsequence1`. (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

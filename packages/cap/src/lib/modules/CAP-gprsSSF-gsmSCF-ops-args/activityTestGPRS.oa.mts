@@ -21,7 +21,21 @@ import { opcode_activityTestGPRS } from "../CAP-operationcodes/opcode-activityTe
 /**
  * @summary activityTestGPRS
  * @description
- * 
+ *
+ * Checks that the gsmSCF–gprsSSF relationship still exists. The
+ * identified gprsSSF instance returns a result if it does; if the
+ * operation timer expires, the gsmSCF assumes the peer has failed.
+ * Opens a new SS7 dialogue. (3GPP TS 29.078 V19.0.0 clause 13.1).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (returns result). Local
+ * opcode 70. Timer Tatg (Short; 1–20 s, operator-defined).
+ *
+ * No argument. Requires an existing relationship, gprsSSME in Idle
+ * Management, and no active TC dialogue. Overlapping active TC
+ * dialogue → U-Abort with overlapping-dialogue. No gprsSSF for the
+ * GPRS-ReferenceNumber → UAbort. Temporary TC dialogue is closed
+ * after the result. (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

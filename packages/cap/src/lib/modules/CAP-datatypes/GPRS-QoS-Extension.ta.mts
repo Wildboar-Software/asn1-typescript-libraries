@@ -11,6 +11,14 @@ import { type Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS
  * @summary GPRS_QoS_Extension
  * @description
  *
+ * Supplement to long-format GPRS QoS (`Ext2-QoS-Subscribed`, optional
+ * `Ext3-QoS-Subscribed`). May accompany requested, subscribed or
+ * negotiated `GPRS-QoS` on InitialDPGPRS, EventReportGPRS and
+ * ApplyChargingReportGPRS. Encoding of the MAP QoS types is in
+ * 3GPP TS 29.002.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.1, 13.3.1.1, 13.8.1.1 and
+ * 13.10.1.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,8 +32,33 @@ import { type Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS
  */
 export class GPRS_QoS_Extension {
     constructor (
+        /**
+         * @summary `supplement_to_long_QoS_format`.
+         * @description
+         *
+         * `Ext2-QoS-Subscribed` supplement to long-format GPRS QoS.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly supplement_to_long_QoS_format: Ext2_QoS_Subscribed,
+        /**
+         * @summary `additionalSupplement`.
+         * @description
+         *
+         * Optional `Ext3-QoS-Subscribed` further supplement.
+         * (3GPP TS 29.078 V19.0.0 clause 5.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly additionalSupplement: OPTIONAL<Ext3_QoS_Subscribed>,
+        /**
+         * @summary Extensions that are not recognized.
+         * @public
+         * @readonly
+         */
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

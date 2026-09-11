@@ -21,7 +21,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unknownLegID
  * @description
- * 
+ *
+ * gsmSSF returns this toward gsmSCF when the `LegID` in the operation is
+ * unknown to the gsmSSF. Local error code 17.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.15).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

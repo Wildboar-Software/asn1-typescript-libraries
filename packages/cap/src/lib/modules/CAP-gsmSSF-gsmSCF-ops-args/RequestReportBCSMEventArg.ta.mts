@@ -20,6 +20,9 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-
  * @summary RequestReportBCSMEventArg
  * @description
  * 
+ * Argument of RequestReportBCSMEvent: BCSM events gsmSSF shall arm, disarm, or
+ * report. (3GPP TS 29.078 V19.0.0 clause 11.27.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +41,19 @@ class RequestReportBCSMEventArg {
     constructor (
         /**
          * @summary `bcsmEvents`.
+         * @description
+         *
+         * Events to report. Each `BCSMEvent` has `eventTypeBCSM`; `monitorMode`
+         * (interrupted = request, notifyAndContinue = notification, transparent
+         * = do not report); `legID` as Sending Side LegID (gsmSCF → gsmSSF;
+         * defaults from tables 11-1/11-2; always included for O_Disconnect and
+         * T_Disconnect); `dPSpecificCriteria` (`numberOfDigits` and
+         * `interDigitTimeout` for CollectedInfo, `applicationTimer` No_Answer
+         * timer shorter than the network timer, `midCallControlInfo`,
+         * `changeOfPositionControlInfo`); `automaticRearm` (NULL) to rearm the
+         * DP whenever encountered. (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and
+         * 11.27.1.1).
+         *
          * @public
          * @readonly
          */

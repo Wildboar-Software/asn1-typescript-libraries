@@ -7,6 +7,11 @@ import { id_package_bcsmEventHandling } from "../CAP-object-identifiers/id-packa
  * @summary bcsmEventHandlingPackage
  * @description
  *
+ * gsmSSF-gsmSCF BCSM event handling package: gsmSCF (consumer) invokes
+ * `requestReportBCSMEvent`; gsmSSF (supplier) invokes `eventReportBCSM`. Used
+ * in `capSsfToScfGeneric` and `capScfToSsfGeneric`. Package ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

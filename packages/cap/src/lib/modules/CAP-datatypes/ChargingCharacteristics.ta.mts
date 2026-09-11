@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ChargingCharacteristics
  * @description
  *
+ * GPRS charging limit for ApplyChargingGPRS. `maxTransferredVolume` is bytes
+ * (1..4294967295). `maxElapsedTime` is seconds (1..86400).
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

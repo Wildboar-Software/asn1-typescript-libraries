@@ -17,7 +17,12 @@ import { type RPCause, _decode_RPCause, _encode_RPCause } from "../CAP-datatypes
 /**
  * @summary ReleaseSMSArg
  * @description
- * 
+ *
+ * Argument of ReleaseSMS: alias of `RPCause`. Reason for
+ * releasing this SM. MO-SMS: sent to the served subscriber in
+ * the RP-ERROR RPDU. MT-SMS: sent to the SMS-GMSC in the
+ * RP-ERROR RPDU. (3GPP TS 29.078 V19.0.0 clause 12.6.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

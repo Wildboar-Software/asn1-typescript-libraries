@@ -16,7 +16,12 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary opcode_specializedResourceReport
  * @description
- * 
+ *
+ * Local opcode 49. Specialized resource control package.
+ * `specializedResourceReport` on gsmSRF→gsmSCF.
+ * Timer `Tsrr` (short: 1 s–10 s; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 5.3 and 6.2, Table 6-2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

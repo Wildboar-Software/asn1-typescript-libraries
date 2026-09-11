@@ -12,6 +12,9 @@ import { NatureOfServiceChange, _enum_for_NatureOfServiceChange, _decode_NatureO
  * @summary DpSpecificInfoAlt_oServiceChangeSpecificInfo
  * @description
  *
+ * EventReportBCSM information for O_Service_Change.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,8 +30,37 @@ import { NatureOfServiceChange, _enum_for_NatureOfServiceChange, _decode_NatureO
  */
 export class DpSpecificInfoAlt_oServiceChangeSpecificInfo {
     constructor (
+        /**
+         * @summary `ext_basicServiceCode`.
+         * @description
+         *
+         * Extended Basic Service Code for SCUDIF calls (3GPP TS 23.172).
+         * (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly ext_basicServiceCode: OPTIONAL<Ext_BasicServiceCode>,
+        /**
+         * @summary `initiatorOfServiceChange`.
+         * @description
+         *
+         * Initiator of the service change.
+         * (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly initiatorOfServiceChange: OPTIONAL<InitiatorOfServiceChange>,
+        /**
+         * @summary `natureOfServiceChange`.
+         * @description
+         *
+         * Nature of the service change. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly natureOfServiceChange: OPTIONAL<NatureOfServiceChange>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

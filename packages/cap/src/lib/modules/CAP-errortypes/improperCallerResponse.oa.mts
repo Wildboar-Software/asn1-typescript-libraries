@@ -21,7 +21,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary improperCallerResponse
  * @description
- * 
+ *
+ * gsmSRF returns this toward gsmSCF when collected user input does not
+ * match the format required by PromptAndCollectUserInformation. SRSM
+ * stays in User Interaction and waits for a new PACUI or
+ * PlayAnnouncement. Local error code 4.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

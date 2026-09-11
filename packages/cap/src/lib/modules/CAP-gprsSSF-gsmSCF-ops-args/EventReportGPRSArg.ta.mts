@@ -21,7 +21,11 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
 /**
  * @summary EventReportGPRSArg
  * @description
- * 
+ *
+ * Argument of EventReportGPRS: event type, DP-related misc info,
+ * event-specific information, and optional PDPID.
+ * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +45,57 @@ class EventReportGPRSArg {
     constructor (
         /**
          * @summary `gPRSEventType`.
+         * @description
+         *
+         * Type of GPRS Session or PDP Context event being reported.
+         * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gPRSEventType: GPRSEventType,
         /**
          * @summary `miscGPRSInfo`.
+         * @description
+         *
+         * DP-related information. `messageType` is a request if
+         * RequestReportGPRSEvent used monitorMode interrupted, or a
+         * notification if notifyAndContinue. ASN.1 default
+         * `{messageType request}`.
+         * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+         *
          * @public
          * @readonly
          */
         readonly miscGPRSInfo: OPTIONAL<MiscCallInfo>,
         /**
          * @summary `gPRSEventSpecificInformation`.
+         * @description
+         *
+         * Event-specific information. Change of Position Session:
+         * locationInformationGPRS. Change of Position Context: APN,
+         * chargingID, location, endUserAddress, QoS, timeAndTimeZone,
+         * gGSNAddress, secondaryPDP-context. Detach / PDP Disconnect:
+         * initiatingEntity and conditionally routeingAreaUpdate.
+         * Establishment: APN, endUserAddress, pDPInitiationType, QoS
+         * (requested + subscribed), location, time, secondaryPDP-context.
+         * Establishment Ack: plus chargingID, negotiated QoS,
+         * gGSNAddress. Optional IEs per 3GPP TS 23.078 6.6.1.4 and
+         * 3GPP TS 22.078 annex "GPRS Information provided to the CSE".
+         * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gPRSEventSpecificInformation: OPTIONAL<GPRSEventSpecificInformation>,
         /**
          * @summary `pDPID`.
+         * @description
+         *
+         * Identifies the PDP Context, within a GPRS Session dialogue,
+         * for which the event is reported. unknownPDPID if unknown.
+         * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+         *
          * @public
          * @readonly
          */

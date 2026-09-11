@@ -13,6 +13,12 @@ import { opcode_collectInformation } from "../CAP-operationcodes/opcode-collectI
  * @summary collectInformation
  * @description
  *
+ * gsmSCF requests gsmSSF to collect additional digits from the calling party
+ * (TO calls). gsmSCF shall arm Collected_Info as EDP-R before sending this.
+ * gsmSCF → gsmSSF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode 27. Timer
+ * `Tci` (short: 1 s–10 s; operator-defined within range). (3GPP TS 29.078
+ * V19.0.0 clauses 6.1.1 and 11.8A).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

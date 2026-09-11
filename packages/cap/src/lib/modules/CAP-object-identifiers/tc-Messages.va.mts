@@ -17,7 +17,11 @@ import {
 /**
  * @summary tc_Messages
  * @description
- * 
+ *
+ * OID of the ITU-T Q.773 TCAP messages module (`modules(2) messages(1)
+ * version3(3)`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

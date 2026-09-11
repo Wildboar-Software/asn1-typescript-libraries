@@ -11,6 +11,10 @@ import { DpSpecificInfoAlt_collectedInfoSpecificInfo, _decode_DpSpecificInfoAlt_
  * @summary DpSpecificInfoAlt
  * @description
  *
+ * Reserved for extension in future releases. Currently carries o/t
+ * service-change info (SCUDIF) and collected-info `calledPartyNumber`.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

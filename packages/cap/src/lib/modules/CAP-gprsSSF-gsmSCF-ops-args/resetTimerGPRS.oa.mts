@@ -37,7 +37,19 @@ import { opcode_resetTimerGPRS } from "../CAP-operationcodes/opcode-resetTimerGP
 /**
  * @summary resetTimerGPRS
  * @description
- * 
+ *
+ * Refreshes the Tssf application timer so it does not time out at
+ * the gprsSSF. (3GPP TS 29.078 V19.0.0 clause 13.13).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (class 2). Local opcode
+ * 82. Timer Trtg (Short; 1–20 s, operator-defined).
+ *
+ * Valid while session or PDP Context processing is suspended at a
+ * DP in Waiting_for_Instructions. Tssf is loaded with timerValue
+ * and restarted; no FSM state change. Only timerID `tssf` is
+ * permitted. unknownPDPID if PDPID unknown.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

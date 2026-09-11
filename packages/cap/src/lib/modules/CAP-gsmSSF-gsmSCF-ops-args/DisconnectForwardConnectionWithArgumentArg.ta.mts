@@ -20,6 +20,9 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-
  * @summary DisconnectForwardConnectionWithArgumentArg
  * @description
  * 
+ * Argument of DisconnectForwardConnectionWithArgument: which call segment to
+ * detach from the resource. (3GPP TS 29.078 V19.0.0 clause 11.14.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +40,11 @@ class DisconnectForwardConnectionWithArgumentArg {
     constructor (
         /**
          * @summary `callSegmentID`.
+         * @description
+         *
+         * Call Segment to disconnect from the gsmSRF or assisting gsmSSF. (3GPP
+         * TS 29.078 V19.0.0 clause 11.14.1.1).
+         *
          * @public
          * @readonly
          */

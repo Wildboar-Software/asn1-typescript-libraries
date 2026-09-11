@@ -17,7 +17,11 @@ import { id_package } from "../CAP-object-identifiers/id-package.va.mjs";
 /**
  * @summary id_package_nonAssistedConnectionEstablishment
  * @description
- * 
+ *
+ * OID of the gsmSSF/gsmSCF `nonAssistedConnectionEstablishment` operation
+ * package (`{id-package 18}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

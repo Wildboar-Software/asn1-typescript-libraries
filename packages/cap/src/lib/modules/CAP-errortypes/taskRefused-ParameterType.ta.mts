@@ -16,7 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary taskRefused_ParameterType
  * @description
- * 
+ *
+ * Parameter of `taskRefused`: `generic` (0), `unobtainable` (1),
+ * `congestion` (2). Includes congestion and unobtainable address as used
+ * e.g. on Connect.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +44,12 @@ enum _enum_for_taskRefused_ParameterType {
 /**
  * @summary taskRefused_ParameterType
  * @description
- * 
+ *
+ * Parameter of `taskRefused`: `generic` (0), `unobtainable` (1),
+ * `congestion` (2). Includes congestion and unobtainable address as used
+ * e.g. on Connect.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +68,12 @@ type taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
 /**
  * @summary taskRefused_ParameterType
  * @description
- * 
+ *
+ * Parameter of `taskRefused`: `generic` (0), `unobtainable` (1),
+ * `congestion` (2). Includes congestion and unobtainable address as used
+ * e.g. on Connect.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +91,11 @@ const taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
 
 /**
  * @summary taskRefused_ParameterType_generic
+ * @description
+ *
+ * Generic refusal; the entity will not perform the task at this time.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +104,11 @@ const taskRefused_ParameterType_generic: taskRefused_ParameterType = taskRefused
 
 /**
  * @summary generic
+ * @description
+ *
+ * Generic refusal; the entity will not perform the task at this time.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +117,11 @@ const generic: taskRefused_ParameterType = taskRefused_ParameterType.generic; /*
 
 /**
  * @summary taskRefused_ParameterType_unobtainable
+ * @description
+ *
+ * Unobtainable address, as used e.g. on Connect.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +130,11 @@ const taskRefused_ParameterType_unobtainable: taskRefused_ParameterType = taskRe
 
 /**
  * @summary unobtainable
+ * @description
+ *
+ * Unobtainable address, as used e.g. on Connect.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +143,11 @@ const unobtainable: taskRefused_ParameterType = taskRefused_ParameterType.unobta
 
 /**
  * @summary taskRefused_ParameterType_congestion
+ * @description
+ *
+ * Congestion at the serving entity.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +156,11 @@ const taskRefused_ParameterType_congestion: taskRefused_ParameterType = taskRefu
 
 /**
  * @summary congestion
+ * @description
+ *
+ * Congestion at the serving entity.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * @constant
  * @type {number}
  */

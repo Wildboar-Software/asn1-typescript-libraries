@@ -7,6 +7,12 @@ import { id_package_gprsEventHandling } from "../CAP-object-identifiers/id-packa
  * @summary gprsEventHandlingPackage
  * @description
  *
+ * gprsSSF-gsmSCF event handling package: consumer invokes
+ * `requestReportGPRSEvent`; supplier invokes `eventReportGPRS`. Present as both
+ * initiator and responder consumer in `capGprsSsfToScf`, and as initiator
+ * consumer in `capGsmScfToGprsSsf`. Package OID updated in Rel-6.
+ * (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

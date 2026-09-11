@@ -11,6 +11,10 @@ import { CriticalityType, _enum_for_CriticalityType, ignore, _decode_Criticality
  * @summary ExtensionField
  * @description
  *
+ * One extension of an argument data type. `type` identifies an `EXTENSION`
+ * value; content is network operator specific. (3GPP TS 29.078 V19.0.0 clause
+ * 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -26,6 +30,16 @@ import { CriticalityType, _enum_for_CriticalityType, ignore, _decode_Criticality
  */
 export class ExtensionField {
     constructor (
+        /**
+         * @summary `type`.
+         * @description
+         *
+         * Shall identify the value of an `EXTENSION` type. (3GPP TS 29.078
+         * V19.0.0 clause 5.1)
+         *
+         * @public
+         * @readonly
+         */
         readonly type_: Code,
         readonly criticality: OPTIONAL<CriticalityType>,
         readonly value: _Element,

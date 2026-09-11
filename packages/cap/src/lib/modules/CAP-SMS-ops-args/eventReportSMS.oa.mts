@@ -6,6 +6,18 @@ import { opcode_eventReportSMS } from "../CAP-operationcodes/opcode-eventReportS
  * @summary eventReportSMS
  * @description
  *
+ * Notifies the gsmSCF of an SM-related FSM event previously armed
+ * by RequestReportSMSEvent (submission, delivery, or failure).
+ * (3GPP TS 29.078 V19.0.0 clause 12.3).
+ *
+ * Direction: smsSSF → gsmSCF. Unconfirmed (class 4). Local opcode
+ * 64. Timer Terbsms (Short; 1–20 s, operator-defined).
+ *
+ * Invoked from Monitoring when an armed EDP is met. Implicit EDP
+ * disarming applies. Notification with no remaining EDPs → Idle;
+ * otherwise Waiting_for_Instructions. Errors not applicable
+ * (class 4). (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

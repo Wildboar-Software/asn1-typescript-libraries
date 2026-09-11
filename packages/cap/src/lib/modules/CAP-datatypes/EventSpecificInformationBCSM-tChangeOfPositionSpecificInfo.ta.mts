@@ -11,6 +11,9 @@ import { type MetDPCriteriaList, _decode_MetDPCriteriaList, _encode_MetDPCriteri
  * @summary EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo
  * @description
  *
+ * EventReportBCSM information for T_Change_Of_Position.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,6 +27,15 @@ import { type MetDPCriteriaList, _decode_MetDPCriteriaList, _encode_MetDPCriteri
  */
 export class EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo {
     constructor (
+        /**
+         * @summary `locationInformation`.
+         * @description
+         *
+         * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly locationInformation: OPTIONAL<LocationInformation>,
         readonly metDPCriteriaList: OPTIONAL<MetDPCriteriaList>,
         readonly _unrecognizedExtensionsList: _Element[] = [],

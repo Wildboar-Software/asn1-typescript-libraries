@@ -16,7 +16,12 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary opcode_assistRequestInstructions
  * @description
- * 
+ *
+ * Local opcode 16. gsmSCF/gsmSRF activation of assist package.
+ * `assistRequestInstructions` on gsmSSF→gsmSCF or gsmSRF→gsmSCF.
+ * Timer `Tari` (short: 1 s–10 s; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 5.3 and 6.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

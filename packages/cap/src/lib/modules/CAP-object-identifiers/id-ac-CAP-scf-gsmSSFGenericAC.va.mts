@@ -17,7 +17,11 @@ import { id_acE } from "../CAP-object-identifiers/id-acE.va.mjs";
 /**
  * @summary id_ac_CAP_scf_gsmSSFGenericAC
  * @description
- * 
+ *
+ * OID of the gsmSCF/gsmSSF generic application context
+ * `CAP-scf-gsmSSFGenericAC` (`{id-acE 8}`).
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

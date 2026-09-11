@@ -18,7 +18,11 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
 /**
  * @summary CancelGPRSArg
  * @description
- * 
+ *
+ * Argument of CancelGPRS. Optional PDPID scopes disarming and
+ * report cancellation to one PDP Context in a GPRS Session
+ * dialogue. (3GPP TS 29.078 V19.0.0 clause 13.4.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,13 @@ class CancelGPRSArg {
     constructor (
         /**
          * @summary `pDPID`.
+         * @description
+         *
+         * Identifies the PDP Context, within a GPRS Session dialogue,
+         * for which armed EDPs shall be disarmed and pending reports
+         * cancelled. Absent: apply to the GPRS Session. unknownPDPID
+         * if unknown. (3GPP TS 29.078 V19.0.0 clause 13.4.1.1).
+         *
          * @public
          * @readonly
          */

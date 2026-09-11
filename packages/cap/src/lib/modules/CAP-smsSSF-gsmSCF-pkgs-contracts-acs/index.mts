@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-smsSSF-gsmSCF-pkgs-contracts-acs`.
+ * ASN.1 module `CAP-smsSSF-gsmSCF-pkgs-contracts-acs`: smsSSF-gsmSCF packages,
+ * contracts (`cap3SMS` for MO-SMS, `cap4SMS` for MT-SMS), and application
+ * contexts (`cap3-sms-AC`, `cap4-sms-AC`). (3GPP TS 29.078 V19.0.0 clause 7.2).
  */
 export * from "./cap3-sms-AC.oa.mjs";
 export * from "./cap3SMS.oa.mjs";

@@ -21,6 +21,9 @@ import { type LegOrCallSegment, _decode_LegOrCallSegment, _encode_LegOrCallSegme
  * @summary PlayToneArg
  * @description
  * 
+ * Argument of PlayTone: target leg or Call Segment and the burst sequence to
+ * play on the MSC tone generator. (3GPP TS 29.078 V19.0.0 clause 11.24.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,27 @@ class PlayToneArg {
     constructor (
         /**
          * @summary `legOrCallSegment`.
+         * @description
+         *
+         * Leg or Call Segment to which PlayTone applies. (3GPP TS 29.078
+         * V19.0.0 clause 11.24.1.1).
+         *
          * @public
          * @readonly
          */
         readonly legOrCallSegment: LegOrCallSegment,
         /**
          * @summary `bursts`.
+         * @description
+         *
+         * Variable sequence of tones. `numberOfBursts` (1..3, default 1);
+         * `burstInterval` between successive bursts (1..1200, default 2);
+         * `numberOfTonesInBurst` (1..3, default 3); `toneDuration` of a single
+         * tone (1..20, default 2); `toneInterval` between successive tones
+         * (1..20, default 2). `burstInterval`, `toneDuration`, and
+         * `toneInterval` are in 100 ms units. (3GPP TS 29.078 V19.0.0 clause
+         * 11.24.1.1).
+         *
          * @public
          * @readonly
          */

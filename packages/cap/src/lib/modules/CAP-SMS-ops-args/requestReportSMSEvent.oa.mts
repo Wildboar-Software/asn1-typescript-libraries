@@ -13,6 +13,19 @@ import { opcode_requestReportSMSEvent } from "../CAP-operationcodes/opcode-reque
  * @summary requestReportSMSEvent
  * @description
  *
+ * Requests the smsSSF to monitor SM-related FSM events (failure,
+ * delivery, or submission) and notify the gsmSCF when detected.
+ * Several events may be armed in one invoke; each is reported in a
+ * separate EventReportSMS. (3GPP TS 29.078 V19.0.0 clause 12.7).
+ *
+ * Direction: gsmSCF → smsSSF (MSC or SGSN). Confirmed (class 2).
+ * Local opcode 63. Timer Trrbsms (Short; 1–20 s, operator-defined).
+ *
+ * Valid in a control relationship while Waiting_for_Instructions;
+ * no FSM state change. SMSCollectedInfo and SMSDeliveryRequested
+ * are not valid eventTypeSMS values here.
+ * (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12.7).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -14,6 +14,13 @@ import { opcode_sendChargingInformation } from "../CAP-operationcodes/opcode-sen
  * @summary sendChargingInformation
  * @description
  *
+ * gsmSCF instructs gsmSSF on Advice of Charge information (e-parameters) to
+ * send to the MS. May be invoked multiple times. For MO and MT in the VMSC; for
+ * MT, CSE e-parameters are not used by the MS if call forwarding or a follow-on
+ * call occurs. gsmSCF → gsmSSF. Unconfirmed (`RETURN RESULT FALSE`). Local
+ * opcode 46. Timer `Tsci` (short: 1 s–10 s; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11.29).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

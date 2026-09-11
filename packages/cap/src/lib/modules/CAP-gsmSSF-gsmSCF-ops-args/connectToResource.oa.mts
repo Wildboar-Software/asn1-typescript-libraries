@@ -13,6 +13,12 @@ import { opcode_connectToResource } from "../CAP-operationcodes/opcode-connectTo
  * @summary connectToResource
  * @description
  *
+ * gsmSCF connects a call segment from gsmSSF to a specialized resource. After
+ * success, gsmSSF relays gsmSRF operations and responses. gsmSCF → gsmSSF.
+ * Unconfirmed (`RETURN RESULT FALSE`). Local opcode 19. Timer `Tctr` (short: 1
+ * s–10 s; operator-defined within range). (3GPP TS 29.078 V19.0.0 clauses 6.1.1
+ * and 11.10).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -21,7 +21,12 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
 /**
  * @summary ConnectSMSArg
  * @description
- * 
+ *
+ * Argument of ConnectSMS: replacement calling party, destination,
+ * and SMSC address for subsequent SM routing or delivery.
+ * OPTIONAL presence follows 3GPP TS 23.078 IFs.
+ * (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +46,34 @@ class ConnectSMSArg {
     constructor (
         /**
          * @summary `callingPartysNumber`.
+         * @description
+         *
+         * Sets the Calling Party Number used in the network (originating
+         * address shown to the receiving party).
+         * (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly callingPartysNumber: OPTIONAL<SMS_AddressString>,
         /**
          * @summary `destinationSubscriberNumber`.
+         * @description
+         *
+         * Destination address to which the SMSC shall route the Short
+         * Message. (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly destinationSubscriberNumber: OPTIONAL<CalledPartyBCDNumber>,
         /**
          * @summary `sMSCAddress`.
+         * @description
+         *
+         * SMSC address towards which the Short Message shall be routed.
+         * (3GPP TS 29.078 V19.0.0 clause 12.1.1.1).
+         *
          * @public
          * @readonly
          */

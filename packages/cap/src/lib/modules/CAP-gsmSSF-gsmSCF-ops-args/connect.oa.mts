@@ -14,6 +14,13 @@ import { opcode_connect } from "../CAP-operationcodes/opcode-connect.va.mjs";
  * @summary connect
  * @description
  *
+ * gsmSCF requests gsmSSF to route or forward the call to a specified
+ * destination. Provided parameters replace the corresponding CCF signalling
+ * parameters in the O-BCSM; omitted parameters keep their CCF values. gsmSCF →
+ * gsmSSF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode 20. Timer `Tcon`
+ * (short: 1 s–10 s; operator-defined within range). (3GPP TS 29.078 V19.0.0
+ * clauses 6.1.1 and 11.9).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -16,7 +16,12 @@ import {
 /**
  * @summary sms_Operations
  * @description
- * 
+ *
+ * OID of the CAP `sms-Operations` module (`cap-SMS-ops-args(105) version8(7)`).
+ * Updated to version8(7) in Rel-6 so other modules can IMPORT Rel-6 SMS control
+ * operation definitions.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

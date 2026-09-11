@@ -19,7 +19,11 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
 /**
  * @summary EntityReleasedGPRSArg
  * @description
- * 
+ *
+ * Argument of EntityReleasedGPRS: cause of the detach or PDP
+ * Context disconnect, and optional PDPID of the terminated
+ * context. (3GPP TS 29.078 V19.0.0 clause 13.7.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,25 @@ class EntityReleasedGPRSArg {
     constructor (
         /**
          * @summary `gPRSCause`.
+         * @description
+         *
+         * Reason for discontinuing the PDP Context or GPRS Session. The
+         * gsmSCF may use this when sending
+         * FurnishChargingInformationGPRS.
+         * (3GPP TS 29.078 V19.0.0 clause 13.7.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gPRSCause: GPRSCause,
         /**
          * @summary `pDPID`.
+         * @description
+         *
+         * Identifies the PDP Context within the GPRS Session dialogue
+         * that has terminated. unknownPDPID if unknown.
+         * (3GPP TS 29.078 V19.0.0 clause 13.7.1.1).
+         *
          * @public
          * @readonly
          */

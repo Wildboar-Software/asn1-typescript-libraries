@@ -30,6 +30,12 @@ import { resetTimerSMS } from "../CAP-SMS-ops-args/resetTimerSMS.oa.mjs";
  * @summary SmsInvokable
  * @description
  * 
+ * Operations that may be invoked in the smsSSF-to-gsmSCF `TCMessage`:
+ * `connectSMS`, `eventReportSMS`, `furnishChargingInformationSMS`,
+ * `initialDPSMS`, `requestReportSMSEvent`, `resetTimerSMS`. Bound set
+ * `cAPSpecificBoundSet`. Rel-6 imports version8(7) operations from
+ * CAP-SMS-ops-args. (3GPP TS 29.078 V19.0.0 clause 7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

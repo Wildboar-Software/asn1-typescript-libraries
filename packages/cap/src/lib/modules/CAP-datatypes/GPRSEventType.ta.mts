@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GPRSEventType
  * @description
  *
+ * GPRS detection point: attach, attach change of position, detach, PDP
+ * context establishment / acknowledgement / disconnect, and PDP
+ * context change of position. Used in InitialDPGPRS,
+ * RequestReportGPRSEvent and EventReportGPRS.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.1, 13.8, 13.10 and 13.12).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

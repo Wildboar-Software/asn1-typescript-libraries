@@ -6,6 +6,10 @@ import { id_package_gprsConnect } from "../CAP-object-identifiers/id-package-gpr
  * @summary gprsConnectPackage
  * @description
  *
+ * gprsSSF-gsmSCF connect package: gsmSCF (consumer) invokes `connectGPRS`. Used
+ * in `capGprsSsfToScf` (responder). Package OID updated in Rel-6.
+ * (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

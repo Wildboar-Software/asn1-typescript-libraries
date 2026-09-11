@@ -11,6 +11,10 @@ import { AOCSubsequent, _decode_AOCSubsequent, _encode_AOCSubsequent } from "./A
  * @summary AOCBeforeAnswer
  * @description
  *
+ * Advice of Charge before Answer. Used in SendChargingInformation only if there
+ * is neither an active call leg, nor a Temporary Connection, nor a gsmSRF
+ * connection. (3GPP TS 29.078 V19.0.0 clause 11.29).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -23,7 +27,29 @@ import { AOCSubsequent, _decode_AOCSubsequent, _encode_AOCSubsequent } from "./A
  */
 export class AOCBeforeAnswer {
     constructor (
+        /**
+         * @summary `aOCInitial`.
+         * @description
+         *
+         * CAI elements (3GPP TS 22.024) sent to the MS when Answer is detected
+         * and a tariff switch for CSE control of e-parameters has not yet
+         * occurred. (3GPP TS 29.078 V19.0.0 clause 11.29).
+         *
+         * @public
+         * @readonly
+         */
         readonly aOCInitial: CAI_GSM0224,
+        /**
+         * @summary `aOCSubsequent`.
+         * @description
+         *
+         * CAI after a tariff switch for CSE control of e-parameters, or when
+         * Answer is detected and that switch has already occurred.
+         * (3GPP TS 29.078 V19.0.0 clause 11.29).
+         *
+         * @public
+         * @readonly
+         */
         readonly aOCSubsequent: OPTIONAL<AOCSubsequent>,
     ) {}
 

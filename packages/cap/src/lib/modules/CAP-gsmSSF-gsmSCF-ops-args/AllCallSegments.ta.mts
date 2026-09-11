@@ -18,6 +18,10 @@ import { type Cause, _decode_Cause, _encode_Cause } from "../CAP-datatypes/Cause
  * @summary AllCallSegments
  * @description
  * 
+ * Cause for releasing all call segments. gsmSSF may use it for tones to the
+ * parties or the cause in the release message. Default decimal 31 (normal
+ * unspecified). (3GPP TS 29.078 V19.0.0 clause 11.26.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

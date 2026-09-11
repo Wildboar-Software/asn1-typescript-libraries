@@ -26,6 +26,13 @@ import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT
  * @summary gsmSRF_gsmSCF_contract
  * @description
  * 
+ * gsmSRF-to-gsmSCF CS contract. Initiator (gsmSRF) consumes
+ * `gsmSRF-scfActivationOfAssistPackage` (defined in
+ * CAP-gsmSSF-gsmSCF-pkgs-contracts-acs). Responder (gsmSCF) consumes
+ * `specializedResourceControlPackage`, `activityTestPackage`, and
+ * `gsmSRF-scfCancelPackage`. Used by `gsmSRF-gsmSCF-ac`. Contract ID same as
+ * Rel-5. (3GPP TS 29.078 V19.0.0 clause 6.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -28,6 +28,15 @@ import { opcode_disconnectForwardConnection } from "../CAP-operationcodes/opcode
  * @summary disconnectForwardConnection
  * @description
  * 
+ * gsmSCF clears a forward temporary connection to a gsmSRF (previously
+ * ConnectToResource or EstablishTemporaryConnection) or the assist path between
+ * initiating gsmSSF and assisting gsmSSF. Does not release the gsmSSF–end-user
+ * connection. Shall not be used when a CallSegmentID is required (use
+ * DisconnectForwardConnectionWithArgument). gsmSCF → gsmSSF. Unconfirmed
+ * (`RETURN RESULT FALSE`). Local opcode 18. Timer `Tdfc` (short: 1 s–10 s;
+ * operator-defined within range). (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and
+ * 11.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SpecializedResourceReportArg
  * @description
- * 
+ *
+ * Argument of SpecializedResourceReport. Choice:
+ * `allAnnouncementsComplete` — all announcements and tones are
+ * complete; `firstAnnouncementStarted` — the first announcement
+ * or tone has started. (3GPP TS 29.078 V19.0.0 clause 11.30.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -39,7 +39,21 @@ import { opcode_applyChargingReportGPRS } from "../CAP-operationcodes/opcode-app
 /**
  * @summary applyChargingReportGPRS
  * @description
- * 
+ *
+ * Reports charging information previously requested by
+ * ApplyChargingGPRS. Timing/volume count starts on Attach, PDP
+ * Context Establishment Acknowledgement, or Inter-SGSN RA Update
+ * acceptance. Report on PDP Disconnect, Detach, chargeable QoS
+ * change, or when transferredVolume / elapsedTime is reached.
+ * (3GPP TS 29.078 V19.0.0 clause 13.3).
+ *
+ * Direction: gprsSSF → gsmSCF. Confirmed (class 1). Local opcode
+ * 72. Timer Tacrg (Short; 1–20 s, operator-defined).
+ *
+ * Timer expiry: abort TC dialogue, terminate GPRS dialogue, apply
+ * default GPRS handling from CSI. unknownPDPID if PDPID unknown.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

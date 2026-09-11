@@ -10,6 +10,9 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  * @summary EventSpecificInformationBCSM_oDisconnectSpecificInfo
  * @description
  *
+ * EventReportBCSM information for O_Disconnect.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -22,6 +25,15 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  */
 export class EventSpecificInformationBCSM_oDisconnectSpecificInfo {
     constructor (
+        /**
+         * @summary `releaseCause`.
+         * @description
+         *
+         * Present if available. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly releaseCause: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

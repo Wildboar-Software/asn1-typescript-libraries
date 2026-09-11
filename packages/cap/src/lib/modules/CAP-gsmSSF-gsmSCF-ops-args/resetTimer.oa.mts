@@ -13,6 +13,11 @@ import { opcode_resetTimer } from "../CAP-operationcodes/opcode-resetTimer.va.mj
  * @summary resetTimer
  * @description
  *
+ * gsmSCF refreshes the Tssf application timer in gsmSSF to avoid timeout.
+ * gsmSCF → gsmSSF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode 33. Timer
+ * `Trt` (short: 1 s–10 s; operator-defined within range). (3GPP TS 29.078
+ * V19.0.0 clauses 6.1.1 and 11.28).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

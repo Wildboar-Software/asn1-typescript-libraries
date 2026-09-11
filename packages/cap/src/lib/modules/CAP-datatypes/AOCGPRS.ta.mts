@@ -23,7 +23,31 @@ import { AOCSubsequent, _decode_AOCSubsequent, _encode_AOCSubsequent } from "./A
  */
 export class AOCGPRS {
     constructor (
+        /**
+         * @summary `aOCInitial`.
+         * @description
+         *
+         * CAI elements (3GPP TS 22.024) sent when Activate PDP Context Accept
+         * or Attach Accept is sent and a tariff switch has not yet occurred.
+         * May also be sent later (e.g. QoS or RAI change).
+         * (3GPP TS 29.078 V19.0.0 clause 13.14).
+         *
+         * @public
+         * @readonly
+         */
         readonly aOCInitial: CAI_GSM0224,
+        /**
+         * @summary `aOCSubsequent`.
+         * @description
+         *
+         * CAI sent when Activate PDP Context Accept or Attach Accept is
+         * detected and a tariff switch has already occurred, or when that
+         * accept was previously detected and a tariff switch occurs.
+         * (3GPP TS 29.078 V19.0.0 clause 13.14).
+         *
+         * @public
+         * @readonly
+         */
         readonly aOCSubsequent: OPTIONAL<AOCSubsequent>,
     ) {}
 

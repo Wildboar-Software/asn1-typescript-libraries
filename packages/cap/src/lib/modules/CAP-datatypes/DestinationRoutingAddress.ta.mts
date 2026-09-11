@@ -9,6 +9,9 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  * @summary DestinationRoutingAddress
  * @description
  *
+ * Called Party Number. SEQUENCE SIZE(1) OF `CalledPartyNumber`.
+ * (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

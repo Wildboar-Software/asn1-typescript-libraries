@@ -42,7 +42,15 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta
 /**
  * @summary InitialDPGPRSArg
  * @description
- * 
+ *
+ * Argument of InitialDPGPRS after a TDP-R. Analogous to CS
+ * InitialDP: identifies the IN service and provides available
+ * session or PDP Context context. OPTIONAL presence follows 3GPP
+ * TS 23.078 IFs. RouteingAreaIdentity is not used (ignore if
+ * received; RAI is in LocationInformationGPRS). CSGInformation is
+ * in LocationInformationGPRS (3GPP TS 29.002).
+ * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,84 +84,162 @@ class InitialDPGPRSArg {
     constructor (
         /**
          * @summary `serviceKey`.
+         * @description
+         *
+         * Requested IN service / SLP inside the gsmSCF; not used for
+         * SCP addressing. (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly serviceKey: ServiceKey,
         /**
          * @summary `gPRSEventType`.
+         * @description
+         *
+         * Armed GPRS Attach/Detach or PDP Context FSM DP that resulted
+         * in this InitialDPGPRS. (3GPP TS 29.078 V19.0.0
+         * clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gPRSEventType: GPRSEventType,
         /**
          * @summary `mSISDN`.
+         * @description
+         *
+         * MSISDN of the mobile subscriber for which the CAMEL service
+         * is invoked. (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly mSISDN: ISDN_AddressString,
         /**
          * @summary `iMSI`.
+         * @description
+         *
+         * IMSI of the mobile subscriber for which the CAMEL service is
+         * invoked. (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly iMSI: IMSI,
         /**
          * @summary `timeAndTimeZone`.
+         * @description
+         *
+         * Time the gprsSSF was triggered and the time zone of the
+         * invoking gprsSSF. (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly timeAndTimeZone: TimeAndTimezone,
         /**
          * @summary `gPRSMSClass`.
+         * @description
+         *
+         * MS capabilities of the mobile subscriber for which the CAMEL
+         * service is invoked. (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gPRSMSClass: OPTIONAL<GPRSMSClass>,
         /**
          * @summary `endUserAddress`.
+         * @description
+         *
+         * PDP type, PDP type organisation, and the actual PDP address.
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly endUserAddress: OPTIONAL<EndUserAddress>,
         /**
          * @summary `qualityOfService`.
+         * @description
+         *
+         * QoS. PDP Context Establishment TDP: Requested + Subscribed
+         * (optional requested/subscribed-QoS-Extension). Establishment
+         * Ack or Change of Position Context TDP: plus Negotiated QoS
+         * (optional negotiated-QoS-Extension).
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly qualityOfService: OPTIONAL<QualityOfService>,
         /**
          * @summary `accessPointName`.
+         * @description
+         *
+         * Requested address the MS wants to connect to.
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly accessPointName: OPTIONAL<AccessPointName>,
         /**
          * @summary `routeingAreaIdentity`.
+         * @description
+         *
+         * Not used. The receiving entity shall ignore this if received;
+         * RAI is conveyed in LocationInformationGPRS.
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly routeingAreaIdentity: OPTIONAL<RAIdentity>,
         /**
          * @summary `chargingID`.
+         * @description
+         *
+         * Charging ID that, together with gGSNAddress, uniquely
+         * identifies the PDP Context.
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly chargingID: OPTIONAL<GPRSChargingID>,
         /**
          * @summary `sGSNCapabilities`.
+         * @description
+         *
+         * Capabilities the SGSN can provide for CAMEL service control.
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly sGSNCapabilities: OPTIONAL<SGSNCapabilities>,
         /**
          * @summary `locationInformationGPRS`.
+         * @description
+         *
+         * Location of the sending MS (spec: locationInformationInSGSN).
+         * Also carries RAI and CSGInformation (3GPP TS 29.002).
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `pDPInitiationType`.
+         * @description
+         *
+         * Whether the PDP Context was established by a network-initiated
+         * request or a subscriber request.
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
@@ -166,18 +252,35 @@ class InitialDPGPRSArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `gGSNAddress`.
+         * @description
+         *
+         * IP address of the GGSN where the PDP Context terminates. Used
+         * with chargingID to uniquely identify the PDP Context.
+         * (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gGSNAddress: OPTIONAL<GSN_Address>,
         /**
          * @summary `secondaryPDP_context`.
+         * @description
+         *
+         * Present if the PDP Context is requested as a secondary PDP
+         * Context. (3GPP TS 29.078 V19.0.0 clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */
         readonly secondaryPDP_context: OPTIONAL<NULL>,
         /**
          * @summary `iMEI`.
+         * @description
+         *
+         * IMEI (with software version) of the mobile subscriber for
+         * which the service is invoked. (3GPP TS 29.078 V19.0.0
+         * clause 13.10.1.1).
+         *
          * @public
          * @readonly
          */

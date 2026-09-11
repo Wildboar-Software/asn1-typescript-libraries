@@ -14,6 +14,20 @@ import { opcode_sendChargingInformationGPRS } from "../CAP-operationcodes/opcode
  * @summary sendChargingInformationGPRS
  * @description
  *
+ * Instructs the gprsSSF on Advice of Charge information to send to
+ * the MS (if the SGSN supports AoC). May be invoked more than
+ * once. (3GPP TS 29.078 V19.0.0 clause 13.14).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (class 2). Local opcode
+ * 83. Timer Tscig (Short; 1–20 s, operator-defined).
+ *
+ * With CSE control of duration/volume, send ApplyChargingGPRS then
+ * this operation in the same TC-CONTINUE or TC-BEGIN.
+ * tariffSwitchInterval may appear in one of the two, not both
+ * (prefer ApplyChargingGPRS). TaskRefused if a
+ * tariffSwitchInterval is already pending. unknownPDPID if PDPID
+ * unknown. (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.14).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

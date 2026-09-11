@@ -9,6 +9,10 @@ import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
  * @summary EventSpecificInformationBCSM_oMidCallSpecificInfo_midCallEvents
  * @description
  *
+ * `dTMFDigitsCompleted` or `dTMFDigitsTimeOut`: detected digit string per the
+ * RequestReportBCSMEvent criterion. Encoded as Generic Digits (see `Digits`);
+ * may include `*`, `#`, a–d. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

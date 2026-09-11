@@ -19,7 +19,11 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
 /**
  * @summary ConnectGPRSArg
  * @description
- * 
+ *
+ * Argument of ConnectGPRS: APN to use for PDP Context
+ * establishment, and optional PDPID. (3GPP TS 29.078 V19.0.0
+ * clause 13.5.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,24 @@ class ConnectGPRSArg {
     constructor (
         /**
          * @summary `accessPointName`.
+         * @description
+         *
+         * Access Point Name towards which the PDP Context shall be
+         * established. See 3GPP TS 29.060.
+         * (3GPP TS 29.078 V19.0.0 clause 13.5.1.1).
+         *
          * @public
          * @readonly
          */
         readonly accessPointName: AccessPointName,
         /**
          * @summary `pdpID`.
+         * @description
+         *
+         * Identifies the PDP Context, within a GPRS Session dialogue,
+         * for which this APN shall be used (spec: pDPID). unknownPDPID
+         * if unknown. (3GPP TS 29.078 V19.0.0 clause 13.5.1.1).
+         *
          * @public
          * @readonly
          */

@@ -21,7 +21,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary canceled
  * @description
- * 
+ *
+ * gsmSRF returns this toward gsmSCF when Cancel of PlayAnnouncement or
+ * PromptAndCollectUserInformation succeeded. Those are the only operations
+ * that may be cancelled. SRSM stays in User Interaction; the cancelled
+ * operation is aborted and the next buffered PA/PACUI (if any) runs. If
+ * the indicated operation had already executed, `cancelFailed` is returned
+ * instead. Local error code 0.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

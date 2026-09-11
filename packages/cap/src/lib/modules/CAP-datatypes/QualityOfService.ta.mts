@@ -11,6 +11,15 @@ import { GPRS_QoS_Extension, _decode_GPRS_QoS_Extension, _encode_GPRS_QoS_Extens
  * @summary QualityOfService
  * @description
  *
+ * Requested, subscribed and negotiated GPRS QoS. Which components are
+ * present depends on the triggering TDP: PDP Context Establishment
+ * carries requested + subscribed; Establishment Acknowledgement and
+ * Change of Position Context also carry negotiated. Extension fields
+ * may supplement the corresponding `GPRS-QoS`. On
+ * ApplyChargingReportGPRS, present only if the report was triggered by
+ * a QoS change (negotiated QoS among user, SGSN and GGSN).
+ * (3GPP TS 29.078 V19.0.0 clauses 13.3.1.1, 13.8.1.1 and 13.10.1.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -28,12 +37,84 @@ import { GPRS_QoS_Extension, _decode_GPRS_QoS_Extension, _encode_GPRS_QoS_Extens
  */
 export class QualityOfService {
     constructor (
+        /**
+         * @summary `requested_QoS`.
+         * @description
+         *
+         * Requested QoS. Present for PDP Context Establishment and
+         * Establishment Acknowledgement / Change of Position Context.
+         * (3GPP TS 29.078 V19.0.0 clauses 13.8.1.1 and 13.10.1.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly requested_QoS: OPTIONAL<GPRS_QoS>,
+        /**
+         * @summary `subscribed_QoS`.
+         * @description
+         *
+         * Subscribed QoS. Present with the same TDPs as
+         * `requested_QoS`. (3GPP TS 29.078 V19.0.0 clauses 13.8.1.1 and
+         * 13.10.1.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly subscribed_QoS: OPTIONAL<GPRS_QoS>,
+        /**
+         * @summary `negotiated_QoS`.
+         * @description
+         *
+         * Negotiated QoS among user, SGSN and GGSN. On event report /
+         * InitialDPGPRS, for Establishment Acknowledgement and Change
+         * of Position Context. On ApplyChargingReportGPRS, when the
+         * report was caused by a QoS change.
+         * (3GPP TS 29.078 V19.0.0 clauses 13.3.1.1, 13.8.1.1 and
+         * 13.10.1.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly negotiated_QoS: OPTIONAL<GPRS_QoS>,
+        /**
+         * @summary `requested_QoS_Extension`.
+         * @description
+         *
+         * Optional supplement to `requested_QoS`.
+         * (3GPP TS 29.078 V19.0.0 clauses 13.8.1.1 and 13.10.1.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly requested_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>,
+        /**
+         * @summary `subscribed_QoS_Extension`.
+         * @description
+         *
+         * Optional supplement to `subscribed_QoS`.
+         * (3GPP TS 29.078 V19.0.0 clauses 13.8.1.1 and 13.10.1.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly subscribed_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>,
+        /**
+         * @summary `negotiated_QoS_Extension`.
+         * @description
+         *
+         * Optional supplement to `negotiated_QoS`.
+         * (3GPP TS 29.078 V19.0.0 clauses 13.3.1.1, 13.8.1.1 and
+         * 13.10.1.1).
+         *
+         * @public
+         * @readonly
+         */
         readonly negotiated_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>,
+        /**
+         * @summary Extensions that are not recognized.
+         * @public
+         * @readonly
+         */
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

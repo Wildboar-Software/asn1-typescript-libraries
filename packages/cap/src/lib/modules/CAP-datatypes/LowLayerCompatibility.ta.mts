@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LowLayerCompatibility
  * @description
  *
+ * Low Layer Compatibility for the calling party. Encoding: value part of 3GPP
+ * TS 24.008 (omit IEI and length). (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

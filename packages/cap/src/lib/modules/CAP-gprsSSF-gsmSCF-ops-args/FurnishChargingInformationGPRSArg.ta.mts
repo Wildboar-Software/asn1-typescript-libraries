@@ -17,7 +17,14 @@ import { type FCIGPRSBillingChargingCharacteristics, _decode_FCIGPRSBillingCharg
 /**
  * @summary FurnishChargingInformationGPRSArg
  * @description
- * 
+ *
+ * Argument of FurnishChargingInformationGPRS: alias of
+ * `FCIGPRSBillingChargingCharacteristics`. Carries
+ * `fCIBCCCAMELsequence1` with `freeFormatData`,
+ * `appendFreeFormatData` (append vs overwrite; see 3GPP TS
+ * 23.078), and `pDPID` (which PDP Context's logical GPRS record).
+ * (3GPP TS 29.078 V19.0.0 clause 13.9.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,10 @@ import { TransferredVolumeRollOver_rO_VolumeIfTariffSwitch, _decode_TransferredV
  * @summary TransferredVolumeRollOver
  * @description
  *
+ * Rollover counters for volume parameters (`rO-VolumeIfNoTariffSwitch`,
+ * `rO-VolumeSinceLastTariffSwitch`, `rO-VolumeTariffSwitchInterval`). (3GPP TS
+ * 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

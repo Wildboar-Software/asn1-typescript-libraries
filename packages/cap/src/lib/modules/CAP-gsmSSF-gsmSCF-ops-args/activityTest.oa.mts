@@ -22,6 +22,14 @@ import { opcode_activityTest } from "../CAP-operationcodes/opcode-activityTest.v
  * @summary activityTest
  * @description
  * 
+ * gsmSCF uses this to check that a relationship still exists with the gsmSSF,
+ * assist gsmSSF, or gsmSRF. If the relationship is alive, the receiver returns
+ * a result; if timer `Tat` expires, gsmSCF assumes the receiver has failed.
+ * gsmSCF → gsmSSF (also gsmSRF / assist gsmSSF). Confirmed (`RETURN RESULT
+ * TRUE`). Local opcode 55. Timer `Tat` (short: 1 s–10 s; operator-defined
+ * within range). Class 3: operation-related error handling is not applicable.
+ * (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

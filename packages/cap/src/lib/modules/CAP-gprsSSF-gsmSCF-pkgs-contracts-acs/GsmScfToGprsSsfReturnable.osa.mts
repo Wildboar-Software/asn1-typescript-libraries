@@ -28,6 +28,12 @@ import { cancelGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/cancelGPRS.oa.mjs";
  * @summary GsmScfToGprsSsfReturnable
  * @description
  * 
+ * Operations that may be returned in the gsmSCF-to-gprsSSF `TCMessage`:
+ * `activityTestGPRS`, `applyChargingGPRS`, `cancelGPRS`,
+ * `furnishChargingInformationGPRS`, `releaseGPRS`, `requestReportGPRSEvent`,
+ * `sendChargingInformationGPRS`. Bound set `cAPSpecificBoundSet` on the
+ * parameterized operations. (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

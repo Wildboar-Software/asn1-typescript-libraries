@@ -13,6 +13,12 @@ import { opcode_assistRequestInstructions } from "../CAP-operationcodes/opcode-a
  * @summary assistRequestInstructions
  * @description
  *
+ * Sent by an assist gsmSSF or a gsmSRF when it receives an assist indication
+ * from an initiating gsmSSF (typically after EstablishTemporaryConnection).
+ * gsmSSF/gsmSRF → gsmSCF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode 16.
+ * Timer `Tari` (short: 1 s–10 s; operator-defined within range). (3GPP TS
+ * 29.078 V19.0.0 clauses 6.1.1 and 11.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

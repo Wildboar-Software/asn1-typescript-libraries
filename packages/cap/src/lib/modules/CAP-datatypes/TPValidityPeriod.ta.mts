@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TPValidityPeriod
  * @description
  *
+ * Length of the validity period or absolute time of validity-period
+ * termination, as specified in 3GPP TS 23.040. Length is either 1 octet or 7
+ * octets. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

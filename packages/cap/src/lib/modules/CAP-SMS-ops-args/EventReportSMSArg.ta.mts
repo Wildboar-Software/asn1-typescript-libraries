@@ -21,7 +21,11 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
 /**
  * @summary EventReportSMSArg
  * @description
- * 
+ *
+ * Argument of EventReportSMS: which SM event occurred and
+ * event-specific information. (3GPP TS 29.078 V19.0.0
+ * clause 12.3.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +45,38 @@ class EventReportSMSArg {
     constructor (
         /**
          * @summary `eventTypeSMS`.
+         * @description
+         *
+         * Type of SM event being reported.
+         * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
+         *
          * @public
          * @readonly
          */
         readonly eventTypeSMS: EventTypeSMS,
         /**
          * @summary `eventSpecificInformationSMS`.
+         * @description
+         *
+         * Event-specific SM information. For O_SMS_Failure: O-SMSCause
+         * if available. For T_SMS_Failure: T-SMSCause if available. For
+         * O_SMS_Submitted and T_SMS_Delivery: empty.
+         * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
+         *
          * @public
          * @readonly
          */
         readonly eventSpecificInformationSMS: OPTIONAL<EventSpecificInformationSMS>,
         /**
          * @summary `miscCallInfo`.
+         * @description
+         *
+         * DP-related information. `messageType` is a request if the
+         * corresponding RequestReportSMSEvent used monitorMode
+         * interrupted, or a notification if notifyAndContinue. ASN.1
+         * default `{messageType request}`.
+         * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
+         *
          * @public
          * @readonly
          */

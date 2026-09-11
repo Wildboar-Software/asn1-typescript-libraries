@@ -12,6 +12,11 @@ import { MetDPCriterionAlt, _decode_MetDPCriterionAlt, _encode_MetDPCriterionAlt
  * @summary MetDPCriterion
  * @description
  *
+ * Change-of-position criterion that was met. `enteringCellGlobalId` /
+ * `leavingCellGlobalId` contain a Cell Global Identification.
+ * `enteringServiceAreaId` / `leavingServiceAreaId` contain a Service Area
+ * Identification. (3GPP TS 29.078 V19.0.0 clause 5.1)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

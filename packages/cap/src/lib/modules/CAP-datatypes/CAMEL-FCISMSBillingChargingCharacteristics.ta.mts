@@ -9,6 +9,9 @@ import { CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1, _decod
  * @summary CAMEL_FCISMSBillingChargingCharacteristics
  * @description
  *
+ * BER payload of `FCISMSBillingChargingCharacteristics`. Single alternative
+ * `fCIBCCCAMELsequence1`. (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

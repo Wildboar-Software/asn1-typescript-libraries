@@ -18,6 +18,14 @@ import { type CallResult, _decode_CallResult, _encode_CallResult } from "../CAP-
  * @summary ApplyChargingReportArg
  * @description
  * 
+ * Argument of ApplyChargingReport: alias of `CallResult`. Reports charging data
+ * previously requested by ApplyCharging. `timeDurationChargingResult` may
+ * include `timeIfNoTariffSwitch` or `timeIfTariffSwitch`
+ * (`timeSinceLastTariffSwitch` and tariff-switch interval), echoed
+ * `partyToCharge` and `aChChargingAddress` for correlation, `legActive`, and
+ * `callLegReleasedAtTcpExpiry`. If Answer was not detected, elapsed time is 0.
+ * (3GPP TS 29.078 V19.0.0 clause 11.3.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

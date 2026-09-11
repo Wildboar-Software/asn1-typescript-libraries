@@ -23,7 +23,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary requestedInfoError
  * @description
- * 
+ *
+ * gsmSSF returns this toward gsmSCF when information requested by
+ * CallInformationRequest is unknown to the gsmSSF or not available.
+ * Parameter: `unknownRequestedInfo` (1) or `requestedInfoNotAvailable`
+ * (2). Local error code 10.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

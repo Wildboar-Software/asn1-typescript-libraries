@@ -17,7 +17,11 @@ import { id_acE } from "../CAP-object-identifiers/id-acE.va.mjs";
 /**
  * @summary id_ac_cap4_sms_AC
  * @description
- * 
+ *
+ * OID of the CAP4 SMS application context `cap4-sms-AC` (`{id-acE 61}`). Used
+ * for gprsSSF/gsmSCF or gsmSSF/gsmSCF SMS.
+ * (3GPP TS 29.078 V19.0.0 clause 5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

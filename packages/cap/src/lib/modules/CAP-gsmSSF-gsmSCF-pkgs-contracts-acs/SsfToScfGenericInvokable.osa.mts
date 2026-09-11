@@ -50,6 +50,20 @@ import { specializedResourceReport } from "../CAP-gsmSCF-gsmSRF-ops-args/special
  * @summary SsfToScfGenericInvokable
  * @description
  * 
+ * Operations that may be invoked in the gsmSSF-to-gsmSCF generic CS
+ * `TCMessage`: `activityTest`, `applyCharging`, `applyChargingReport`,
+ * `callInformationReport`, `callInformationRequest`, `cancel`, `connect`,
+ * `continueWithArgument`, `connectToResource`, `collectInformation`,
+ * `disconnectForwardConnection`, `disconnectForwardConnectionWithArgument`,
+ * `disconnectLeg`, `entityReleased`, `establishTemporaryConnection`,
+ * `eventReportBCSM`, `furnishChargingInformation`, `initialDP`,
+ * `initiateCallAttempt`, `moveLeg`, `releaseCall`, `requestReportBCSMEvent`,
+ * `resetTimer`, `sendChargingInformation`, `splitLeg`, `playAnnouncement`,
+ * `playTone`, `promptAndCollectUserInformation`, `specializedResourceReport`.
+ * Bound set `cAPSpecificBoundSet`. Rel-6 imports version8(7) operations from
+ * CAP-gsmSSF-gsmSCF-ops-args and CAP-gsmSCF-gsmSRF-ops-args.
+ * (3GPP TS 29.078 V19.0.0 clause 6.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

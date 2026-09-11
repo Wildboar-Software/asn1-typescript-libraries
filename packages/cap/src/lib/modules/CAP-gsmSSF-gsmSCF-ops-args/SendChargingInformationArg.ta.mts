@@ -21,6 +21,9 @@ import { type SendingSideID, _decode_SendingSideID, _encode_SendingSideID } from
  * @summary SendChargingInformationArg
  * @description
  * 
+ * Argument of SendChargingInformation: Advice of Charge CAI elements and the
+ * party to send them to. (3GPP TS 29.078 V19.0.0 clause 11.29.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,30 @@ class SendChargingInformationArg {
     constructor (
         /**
          * @summary `sCIBillingChargingCharacteristics`.
+         * @description
+         *
+         * Choice of two lists (3GPP TS 22.024 CAI). `aOCBeforeAnswer` (no
+         * active call leg, Temporary Connection, or gsmSRF): `aOCInitial` at
+         * Answer if no e-parameter tariff switch yet; `aOCSubsequent`
+         * (`cAIElements` plus `tariffSwitchInterval` for CSE control of
+         * e-parameters). `aOCAfterAnswer` when a call leg, Temporary
+         * Connection, or gsmSRF is already active. Tariff-switch measurement
+         * starts after successful execution. (3GPP TS 29.078 V19.0.0 clause
+         * 11.29.1.1).
+         *
          * @public
          * @readonly
          */
         readonly sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics,
         /**
          * @summary `partyToCharge`.
+         * @description
+         *
+         * Where charging information shall be sent (spec parameter `legID`).
+         * For MO, only leg 1; for MT in the VMSC, only the CAMEL subscriber's
+         * leg. Sending Side LegID. (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and
+         * 11.29.1.1).
+         *
          * @public
          * @readonly
          */

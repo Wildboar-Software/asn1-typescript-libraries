@@ -23,7 +23,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary taskRefused
  * @description
- * 
+ *
+ * An entity normally capable of the task cannot or chooses not to perform
+ * it at this time (e.g. congestion or unobtainable address on Connect).
+ * Recovery is expected within the current call instance. Also returned
+ * if MoveLeg or SplitLeg is requested while user interaction is in
+ * progress in an affected Call Segment. Parameter: `generic` (0),
+ * `unobtainable` (1), `congestion` (2). Local error code 12.
+ * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

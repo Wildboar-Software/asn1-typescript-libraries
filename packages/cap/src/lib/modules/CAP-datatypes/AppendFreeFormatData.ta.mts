@@ -7,6 +7,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AppendFreeFormatData
  * @description
  *
+ * `overwrite` (0) replaces previous FurnishChargingInformation free format
+ * data; `append` (1) appends to it. Usage details in 3GPP TS 23.078.
+ * (3GPP TS 29.078 V19.0.0 clause 11.19).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

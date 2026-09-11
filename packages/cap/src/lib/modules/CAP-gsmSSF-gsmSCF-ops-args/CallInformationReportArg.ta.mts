@@ -22,6 +22,9 @@ import { leg2 } from "../Core-INAP-CS1-DataTypes/leg2.va.mjs";
  * @summary CallInformationReportArg
  * @description
  * 
+ * Argument of CallInformationReport: recorded items for one call party, sent at
+ * the end of that party's connection. (3GPP TS 29.078 V19.0.0 clause 11.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +43,11 @@ class CallInformationReportArg {
     constructor (
         /**
          * @summary `requestedInformationList`.
+         * @description
+         *
+         * Types and values gsmSSF sends, matching the previously requested
+         * information. (3GPP TS 29.078 V19.0.0 clause 11.6.1.1).
+         *
          * @public
          * @readonly
          */
@@ -52,6 +60,13 @@ class CallInformationReportArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `legID`.
+         * @description
+         *
+         * Party for which the information was collected. Receiving Side LegID
+         * (gsmSSF → gsmSCF). Default `receivingSideID:leg2` (called party from
+         * InitialDP + Connect/Continue/ContinueWithArgument). (3GPP TS 29.078
+         * V19.0.0 clauses 4.1.5 and 11.6.1.1).
+         *
          * @public
          * @readonly
          */

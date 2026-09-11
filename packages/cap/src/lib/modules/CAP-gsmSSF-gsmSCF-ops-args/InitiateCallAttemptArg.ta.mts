@@ -28,6 +28,9 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
  * @summary InitiateCallAttemptArg
  * @description
  * 
+ * Argument of InitiateCallAttempt: address and identifiers for the new call leg
+ * / Call Segment. (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +54,12 @@ class InitiateCallAttemptArg {
     constructor (
         /**
          * @summary `destinationRoutingAddress`.
+         * @description
+         *
+         * Called party number towards which the call shall be routed. Spec name
+         * `destinationRouteingAddress`. (3GPP TS 29.078 V19.0.0 clause
+         * 11.21.1.1.1).
+         *
          * @public
          * @readonly
          */
@@ -63,36 +72,67 @@ class InitiateCallAttemptArg {
         readonly extensions: OPTIONAL<Extensions>,
         /**
          * @summary `legToBeCreated`.
+         * @description
+         *
+         * LegID to assign to the newly created party. Sending Side LegID;
+         * values > 2 are called parties created by ICA + ContinueWithArgument.
+         * (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and 11.21.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly legToBeCreated: OPTIONAL<LegID>,
         /**
          * @summary `newCallSegment`.
+         * @description
+         *
+         * Call Segment ID to assign to the newly created Call Segment. (3GPP TS
+         * 29.078 V19.0.0 clause 11.21.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly newCallSegment: OPTIONAL<CallSegmentID>,
         /**
          * @summary `callingPartyNumber`.
+         * @description
+         *
+         * Number to regard as the calling party for the created call. (3GPP TS
+         * 29.078 V19.0.0 clause 11.21.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>,
         /**
          * @summary `callReferenceNumber`.
+         * @description
+         *
+         * Call reference number assigned to the call by the gsmSCF. (3GPP TS
+         * 29.078 V19.0.0 clause 11.21.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly callReferenceNumber: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `gsmSCFAddress`.
+         * @description
+         *
+         * Address of the gsmSCF initiating the operation. (3GPP TS 29.078
+         * V19.0.0 clause 11.21.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly gsmSCFAddress: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `suppress_T_CSI`.
+         * @description
+         *
+         * Presence means T-CSI for the served subscriber shall be suppressed
+         * for this call leg. (3GPP TS 29.078 V19.0.0 clause 11.21.1.1.1).
+         *
          * @public
          * @readonly
          */

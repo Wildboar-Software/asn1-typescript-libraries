@@ -14,6 +14,8 @@ import { type DpSpecificCriteria, _decode_DpSpecificCriteria, _encode_DpSpecific
  * @summary BCSMEvent
  * @description
  *
+ * BCSM event information for monitoring. (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,8 +34,29 @@ export class BCSMEvent {
     constructor (
         readonly eventTypeBCSM: EventTypeBCSM,
         readonly monitorMode: MonitorMode,
+        /**
+         * @summary `legID`.
+         * @description
+         *
+         * Leg to monitor. Sending Side LegID (gsmSCF → gsmSSF). LegID 1 =
+         * calling party; 2 = called party from InitialDP; > 2 = called party
+         * from InitiateCallAttempt. (3GPP TS 29.078 V19.0.0 clause 4.1.5).
+         *
+         * @public
+         * @readonly
+         */
         readonly legID: OPTIONAL<LegID>,
         readonly dpSpecificCriteria: OPTIONAL<DpSpecificCriteria>,
+        /**
+         * @summary `automaticRearm`.
+         * @description
+         *
+         * gsmSSF shall rearm the DP whenever it is encountered.
+         * (3GPP TS 29.078 V19.0.0 clause 11.27).
+         *
+         * @public
+         * @readonly
+         */
         readonly automaticRearm: OPTIONAL<NULL>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

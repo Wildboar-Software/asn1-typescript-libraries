@@ -23,7 +23,20 @@ import { opcode_releaseSMS } from "../CAP-operationcodes/opcode-releaseSMS.va.mj
 /**
  * @summary releaseSMS
  * @description
- * 
+ *
+ * Tears down an SM submission or delivery attempt. Allowed in a
+ * control relationship only (not a monitor relationship).
+ * (3GPP TS 29.078 V19.0.0 clause 12.6).
+ *
+ * Direction: gsmSCF → smsSSF (MSC or SGSN). Unconfirmed (class 4).
+ * Local opcode 66. Timer Trelsms (Short; 1–20 s, operator-defined).
+ *
+ * Valid in Waiting_for_Instructions at DP SMS_Collected_Info or
+ * SMS_Delivery_Requested. FSM → Idle; all EDPs disarmed; MSC/SGSN
+ * SM resources released. rPCause goes to the subscriber (MO) or
+ * SMS-GMSC (MT) in the RP-ERROR RPDU. Errors not applicable
+ * (class 4). (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

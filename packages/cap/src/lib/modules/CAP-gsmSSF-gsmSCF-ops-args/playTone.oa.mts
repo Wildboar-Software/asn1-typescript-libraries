@@ -14,6 +14,13 @@ import { opcode_playTone } from "../CAP-operationcodes/opcode-playTone.va.mjs";
  * @summary playTone
  * @description
  *
+ * gsmSCF instructs gsmSSF to play tones to a leg or a Call Segment using the
+ * MSC's tone generator. If a Call Segment is indicated, tones are played to all
+ * active legs in that segment; if a leg is indicated, only that leg. gsmSCF →
+ * gsmSSF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode 97. Timer `Tpt`
+ * (short: 1 s–10 s; operator-defined within range). (3GPP TS 29.078 V19.0.0
+ * clauses 6.1.1 and 11.24).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

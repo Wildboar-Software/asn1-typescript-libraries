@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PDPID
  * @description
  *
+ * PDP Identifier: a counter identifying a specific PDP Context within a
+ * gprsSSF–gsmSCF control relationship. If the receiving entity does not know
+ * the PDPID it returns `unknownPDPID` (PDPID not known). (3GPP TS 29.078
+ * V19.0.0 clauses 5.1 and 5.2)
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

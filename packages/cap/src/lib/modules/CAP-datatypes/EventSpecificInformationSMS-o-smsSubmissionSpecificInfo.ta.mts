@@ -9,6 +9,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EventSpecificInformationSMS_o_smsSubmissionSpecificInfo
  * @description
  *
+ * No specific info defined. (3GPP TS 29.078 V19.0.0 clause 5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

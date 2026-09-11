@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CAP-gprsSSF-gsmSCF-ops-args`.
+ * ASN.1 module `CAP-gprsSSF-gsmSCF-ops-args`: operations and
+ * arguments for the gprsSSF–gsmSCF interface (GPRS session and PDP
+ * Context control). OPTIONAL parameter presence is specified in
+ * the 3GPP TS 23.078 information flows. unknownPDPID is used when
+ * a supplied PDPID is not known to the gprsSSF.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13).
  */
 export * from "./activityTestGPRS.oa.mjs";
 export * from "./applyChargingGPRS.oa.mjs";

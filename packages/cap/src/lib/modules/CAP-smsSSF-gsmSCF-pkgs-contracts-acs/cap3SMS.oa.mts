@@ -33,6 +33,13 @@ import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT
  * @summary cap3SMS
  * @description
  * 
+ * MO-SMS contract (`smsSSF-V3` initiates this). Dialogue initiated by gsmSSF or
+ * gprsSSF with `initialDPSMS`. Initiator consumes `smsActivationPackage`.
+ * Responder (gsmSCF) consumes `smsConnectPackage`, `smsReleasePackage`,
+ * `smsEventHandlingPackage`, `smsTimerPackage`, `smsBillingPackage`, and
+ * `smsProcessingPackage`. Used by `cap3-sms-AC`. Contract ID same as Rel-5.
+ * (3GPP TS 29.078 V19.0.0 clause 7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

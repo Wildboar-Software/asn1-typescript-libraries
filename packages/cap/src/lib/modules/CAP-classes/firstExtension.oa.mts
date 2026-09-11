@@ -21,7 +21,12 @@ import { type EXTENSION } from "../CAP-classes/EXTENSION.oca.mjs";
 /**
  * @summary firstExtension
  * @description
- * 
+ *
+ * Example `EXTENSION` only (`NULL`, criticality `ignore`, identified by
+ * global OID `{itu-t(0) identified-organization(4) organisation(0)
+ * gsm(1) capextension(2)}`). Not a real network-operator extension.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

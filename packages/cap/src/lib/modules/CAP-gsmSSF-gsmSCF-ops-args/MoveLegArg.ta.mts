@@ -20,6 +20,9 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  * @summary MoveLegArg
  * @description
  * 
+ * Argument of MoveLeg: which leg to move to CSID1. (3GPP TS 29.078 V19.0.0
+ * clause 11.22.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +40,11 @@ class MoveLegArg {
     constructor (
         /**
          * @summary `legIDToMove`.
+         * @description
+         *
+         * Leg that shall be moved to CSID1. Sending Side LegID. (3GPP TS 29.078
+         * V19.0.0 clauses 4.1.5 and 11.22.1.1).
+         *
          * @public
          * @readonly
          */

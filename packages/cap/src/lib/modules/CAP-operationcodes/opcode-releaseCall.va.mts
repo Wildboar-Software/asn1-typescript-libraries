@@ -16,7 +16,12 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary opcode_releaseCall
  * @description
- * 
+ *
+ * Local opcode 22. Call handling package (elementary gsmSSF function).
+ * `releaseCall` on gsmSCF→gsmSSF.
+ * Timer `Trc` (short: 1 s–10 s; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 5.3 and 6.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

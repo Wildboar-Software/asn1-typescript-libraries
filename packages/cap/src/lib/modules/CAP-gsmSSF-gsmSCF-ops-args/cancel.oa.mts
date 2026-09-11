@@ -10,6 +10,16 @@ import { opcode_cancel } from "../CAP-operationcodes/opcode-cancel.va.mjs";
  * @summary cancel
  * @description
  *
+ * gsmSCF cancels a correlated previous user-interaction operation, or disarms
+ * all armed EDPs and pending reports. Cancels PlayAnnouncement or
+ * PromptAndCollectUserInformation toward gsmSRF (signalled via error `Canceled`
+ * to that operation's invoker). With `allRequests`, gsmSSF disarms all EDPs and
+ * cancels pending ApplyChargingReport and CallInformationReport. gsmSCF →
+ * gsmSSF or gsmSCF → gsmSRF. Unconfirmed (`RETURN RESULT FALSE`). Local opcode
+ * 53. Timer `Tcan` (short: 1 s–10 s; operator-defined within range). Return
+ * error is not applicable for `allRequests`. (3GPP TS 29.078 V19.0.0 clauses
+ * 6.1.1 and 11.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

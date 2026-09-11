@@ -41,6 +41,17 @@ import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT
  * @summary capGprsSsfToScf
  * @description
  * 
+ * gprsSSF-to-gsmSCF GPRS contract. Dialogue initiated by gprsSSF with
+ * `initialDPGPRS`, `applyChargingReportGPRS`, `entityReleasedGPRS`, or
+ * `eventReportGPRS`. Initiator consumes `gprsScfActivationPackage`,
+ * `gprsEventHandlingPackage`, `gprsChargingPackage`, and
+ * `gprsExceptionInformationPackage`. Responder (gsmSCF) consumes
+ * `gprsConnectPackage`, `gprsProcessingPackage`, `gprsReleasePackage`,
+ * `gprsEventHandlingPackage`, `gprsTimerPackage`, `gprsBillingPackage`,
+ * `gprsChargingPackage`, `gprsCancelPackage`, and `gprsChargeAdvicePackage`.
+ * Used by `cap-gprssf-scfAC`. Contract OID updated in Rel-6.
+ * (3GPP TS 29.078 V19.0.0 clause 8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

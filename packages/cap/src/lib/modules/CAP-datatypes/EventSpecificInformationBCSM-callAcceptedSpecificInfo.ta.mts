@@ -10,6 +10,9 @@ import { LocationInformation, _decode_LocationInformation, _encode_LocationInfor
  * @summary EventSpecificInformationBCSM_callAcceptedSpecificInfo
  * @description
  *
+ * EventReportBCSM information for Call_Accepted.
+ * (3GPP TS 29.078 V19.0.0 clause 11.18).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -22,6 +25,15 @@ import { LocationInformation, _decode_LocationInformation, _encode_LocationInfor
  */
 export class EventSpecificInformationBCSM_callAcceptedSpecificInfo {
     constructor (
+        /**
+         * @summary `locationInformation`.
+         * @description
+         *
+         * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
+         *
+         * @public
+         * @readonly
+         */
         readonly locationInformation: OPTIONAL<LocationInformation>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

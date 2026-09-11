@@ -11,6 +11,9 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  * @summary CallSegmentFailure
  * @description
  *
+ * EntityReleased alternative: a Call Segment was released.
+ * (3GPP TS 29.078 V19.0.0 clause 11.16).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -24,7 +27,26 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  */
 export class CallSegmentFailure {
     constructor (
+        /**
+         * @summary `callSegmentID`.
+         * @description
+         *
+         * Released Call Segment. (3GPP TS 29.078 V19.0.0 clause 11.16).
+         *
+         * @public
+         * @readonly
+         */
         readonly callSegmentID: OPTIONAL<CallSegmentID>,
+        /**
+         * @summary `cause`.
+         * @description
+         *
+         * Cause for releasing this Call Segment. gsmSCF may use it to decide
+         * further call handling. (3GPP TS 29.078 V19.0.0 clause 11.16).
+         *
+         * @public
+         * @readonly
+         */
         readonly cause: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}

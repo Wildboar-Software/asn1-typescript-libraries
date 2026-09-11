@@ -15,6 +15,14 @@ import { opcode_applyChargingReport } from "../CAP-operationcodes/opcode-applyCh
  * @summary applyChargingReport
  * @description
  *
+ * gsmSSF reports charging-related information requested by a prior
+ * ApplyCharging. On a CPH connection-configuration change this also tells
+ * gsmSCF that supervision of that part of the connection is finished (durations
+ * in later AC/ACR cycles are not accumulated). gsmSSF → gsmSCF. Unconfirmed
+ * (`RETURN RESULT FALSE`). Local opcode 36. Timer `Tacr` (short: 1 s–10 s;
+ * operator-defined within range). (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and
+ * 11.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

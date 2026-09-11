@@ -14,6 +14,20 @@ import { opcode_initialDPSMS } from "../CAP-operationcodes/opcode-initialDPSMS.v
  * @summary initialDPSMS
  * @description
  *
+ * Sent after a TDP-R in the smsSSF FSM to request gsmSCF
+ * instructions to complete MO submission to the SMSC or MT
+ * delivery to the served subscriber.
+ * (3GPP TS 29.078 V19.0.0 clause 12.5).
+ *
+ * Direction: smsSSF (MSC or SGSN) → gsmSCF. Confirmed (class 2).
+ * Local opcode 60. Timer Tidpsms (Short; 1–20 s, operator-defined).
+ *
+ * gsmSCF address comes from MO-SMS-CSI or MT-SMS-CSI. Starts Tssf
+ * to bound suspension. If gsmSCF is unreachable or Tssf expires,
+ * apply Default SMS Handling from CSI. MO abandon before the TC
+ * dialogue is established aborts to TC.
+ * (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12.5).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

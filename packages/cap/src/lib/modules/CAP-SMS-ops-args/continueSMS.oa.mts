@@ -21,7 +21,19 @@ import { opcode_continueSMS } from "../CAP-operationcodes/opcode-continueSMS.va.
 /**
  * @summary continueSMS
  * @description
- * 
+ *
+ * Requests the smsSSF to proceed at the DP where it suspended,
+ * without substituting gsmSCF data. (3GPP TS 29.078 V19.0.0
+ * clause 12.2).
+ *
+ * Direction: gsmSCF → smsSSF. Unconfirmed (class 4). Local opcode
+ * 65. Timer Tcuesms (Short; 1–20 s, operator-defined).
+ *
+ * No argument. Valid while Waiting_for_Instructions at any DP.
+ * FSM goes Monitoring if at least one EDP is armed, else Idle.
+ * Operation-related errors are not applicable (class 4).
+ * (3GPP TS 29.078 V19.0.0 clauses 7.1 and 12.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

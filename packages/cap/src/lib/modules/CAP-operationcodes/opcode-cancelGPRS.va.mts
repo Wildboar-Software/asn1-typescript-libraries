@@ -16,7 +16,11 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary opcode_cancelGPRS
  * @description
- * 
+ *
+ * Local opcode 73. Gprs Cancel package. `cancelGPRS` on gsmSCF→gprsSSF.
+ * Timer `Tcag` (short: 1 s–20 s; operator-defined within range).
+ * (3GPP TS 29.078 V19.0.0 clauses 5.3 and 8.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

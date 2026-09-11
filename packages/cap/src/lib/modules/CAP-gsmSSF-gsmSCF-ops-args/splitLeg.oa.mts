@@ -13,6 +13,12 @@ import { opcode_splitLeg } from "../CAP-operationcodes/opcode-splitLeg.va.mjs";
  * @summary splitLeg
  * @description
  *
+ * gsmSCF separates one party from its source Call Segment and places it in a
+ * new target Call Segment in the same CSA. Return Result is sent immediately
+ * after successful execution. gsmSCF → gsmSSF. Confirmed (`RETURN RESULT
+ * TRUE`). Local opcode 95. Timer `Tsl` (short: 1 s–10 s; operator-defined
+ * within range). (3GPP TS 29.078 V19.0.0 clauses 6.1.1 and 11.31).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

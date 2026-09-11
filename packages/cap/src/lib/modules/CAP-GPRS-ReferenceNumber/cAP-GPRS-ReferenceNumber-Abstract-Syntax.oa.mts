@@ -19,7 +19,12 @@ import { id_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/id-CAP-
 /**
  * @summary cAP_GPRS_ReferenceNumber_Abstract_Syntax
  * @description
- * 
+ *
+ * Abstract syntax of `CAP-GPRS-ReferenceNumber`, identified by
+ * `id-CAP-GPRS-ReferenceNumber`. Carried in TC User Information on the
+ * gprsSSF–gsmSCF interface.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1.1 and 14.1.1.3.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -29,7 +29,22 @@ import { opcode_cancelGPRS } from "../CAP-operationcodes/opcode-cancelGPRS.va.mj
 /**
  * @summary cancelGPRS
  * @description
- * 
+ *
+ * Disarms all pending EDPs and cancels all pending reports for a
+ * GPRS Session or a specific PDP Context, allowing the gprsSSF
+ * FSM to go Idle. Cannot cancel a previous operation.
+ * (3GPP TS 29.078 V19.0.0 clause 13.4).
+ *
+ * Direction: gsmSCF → gprsSSF. Confirmed (class 2). Local opcode
+ * 73. Timer Tcag (Short; 1–20 s, operator-defined).
+ *
+ * If pDPID is present, cancelling applies to that PDP Context
+ * only. From Monitoring with nothing left armed/pending → Idle;
+ * from Waiting_for_Instructions remains there. The session or PDP
+ * Context, if still active, is then treated as non-CAMEL.
+ * unknownPDPID if PDPID unknown.
+ * (3GPP TS 29.078 V19.0.0 clauses 8.1 and 13.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
