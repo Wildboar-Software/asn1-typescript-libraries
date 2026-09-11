@@ -75,7 +75,10 @@ import { maxNumOfLIPAAllowedAPN } from "./maxNumOfLIPAAllowedAPN.va.mjs";
 /**
  * @summary LIPA_AllowedAPNList
  * @description
- * 
+ *
+ * APNs for which LIPA is allowed for a CSG subscription (SIZE 1..50). (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -79,7 +79,15 @@ import { Ext_SupportedFeatures, Ext_SupportedFeatures_unlicensedSpectrumAsSecond
 /**
  * @summary SGSN_Capability
  * @description
- * 
+ *
+ * SGSN (and MME/IWF) capabilities reported in Update GPRS Location: SoLSA,
+ * Super-Charger, GPRS enhancements, CAMEL, LCS, RAT types, supported features,
+ * T-ADS, IMS VoPS, Reset-Ids, and related indicators. `supportedFeatures`,
+ * `t-adsDataRetrieval`, homogeneous IMS VoPS support / update, and
+ * `ext-SupportedFeatures` also apply to MME/IWF.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.7.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -113,6 +121,13 @@ class SGSN_Capability {
     constructor (
         /**
          * @summary `solsaSupportIndicator`.
+         * @description
+         *
+         * SoLSA is supported. If absent and the subscriber is allowed only in
+         * subscribed LSAs, HLR shall reject roaming.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */
@@ -125,90 +140,189 @@ class SGSN_Capability {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `superChargerSupportedInServingNetworkEntity`.
+         * @description
+         *
+         * Super-Charger support and whether subscription data were retained
+         * (Age Indicator) or data are required. Absent means Super-Charger is
+         * not supported.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.71 and 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly superChargerSupportedInServingNetworkEntity: OPTIONAL<SuperChargerInfo>,
         /**
          * @summary `gprsEnhancementsSupportIndicator`.
+         * @description
+         *
+         * SGSN supports GPRS enhancements. If present, HLR may send extension
+         * QoS (and ext-2/3/4) in PDP contexts.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.73 and 8.1.7.3).
+         *
          * @public
          * @readonly
          */
         readonly gprsEnhancementsSupportIndicator: OPTIONAL<NULL>,
         /**
          * @summary `supportedCamelPhases`.
+         * @description
+         *
+         * CAMEL phases supported. Present if a phase other than phase 1 is
+         * supported. SGSN can only support phase 3 or greater.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.36, 8.1.2.3 and 8.1.7.3).
+         *
          * @public
          * @readonly
          */
         readonly supportedCamelPhases: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `supportedLCS_CapabilitySets`.
+         * @description
+         *
+         * LCS capability sets supported. If sent with no set marked, LCS is not
+         * supported. If absent from a VLR, at most set1; if absent from an
+         * SGSN, no LCS. SGSN shall not indicate set1.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.17 and 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>,
         /**
          * @summary `offeredCamel4CSIs`.
+         * @description
+         *
+         * CAMEL phase 4 CSIs offered (3GPP TS 23.078).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.36D).
+         *
          * @public
          * @readonly
          */
         readonly offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `smsCallBarringSupportIndicator`.
+         * @description
+         *
+         * SGSN supports call barring for SMS.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.92).
+         *
          * @public
          * @readonly
          */
         readonly smsCallBarringSupportIndicator: OPTIONAL<NULL>,
         /**
          * @summary `supportedRAT_TypesIndicator`.
+         * @description
+         *
+         * Access technologies served by the MSC/VLR, SGSN, or MME.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.98).
+         *
          * @public
          * @readonly
          */
         readonly supportedRAT_TypesIndicator: OPTIONAL<SupportedRAT_Types>,
         /**
          * @summary `supportedFeatures`.
+         * @description
+         *
+         * Supported features as in 3GPP TS 29.272. Also applied to MME/IWF.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly supportedFeatures: OPTIONAL<SupportedFeatures>,
         /**
          * @summary `t_adsDataRetrieval`.
+         * @description
+         *
+         * Support of T-ADS data retrieval. Also applied to MME/IWF.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly t_adsDataRetrieval: OPTIONAL<NULL>,
         /**
          * @summary `homogeneousSupportOfIMSVoiceOverPSSessions`.
+         * @description
+         *
+         * `true`: homogeneous support of IMS VoPS in the complete SGSN or MME
+         * area; `false`: homogeneous non-support. Also applied to MME/IWF.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly homogeneousSupportOfIMSVoiceOverPSSessions: OPTIONAL<BOOLEAN>,
         /**
          * @summary `cancellationTypeInitialAttach`.
+         * @description
+         *
+         * SGSN/MME supports Cancel Location cancellation type
+         * `initialAttachProcedure`.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.52).
+         *
          * @public
          * @readonly
          */
         readonly cancellationTypeInitialAttach: OPTIONAL<NULL>,
         /**
          * @summary `msisdn_lessOperation_Supported`.
+         * @description
+         *
+         * Support of MSISDN-less operation.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly msisdn_lessOperation_Supported: OPTIONAL<NULL>,
         /**
          * @summary `updateofHomogeneousSupportOfIMSVoiceOverPSSessions`.
+         * @description
+         *
+         * Update of homogeneous IMS VoPS support. Also applied to MME/IWF.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly updateofHomogeneousSupportOfIMSVoiceOverPSSessions: OPTIONAL<NULL>,
         /**
          * @summary `reset_ids_Supported`.
+         * @description
+         *
+         * SGSN/MME supports Reset-Ids.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+         *
          * @public
          * @readonly
          */
         readonly reset_ids_Supported: OPTIONAL<NULL>,
         /**
          * @summary `ext_SupportedFeatures`.
+         * @description
+         *
+         * Additional supported features (e.g. unlicensed spectrum as secondary
+         * RAT). Also applied to MME/IWF.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

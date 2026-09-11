@@ -73,7 +73,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GlobalCellId
  * @description
- * 
+ *
+ * Cell Global Identification as in 3GPP TS 23.003. Size 5..7 octets.
+ *
+ * - octet 1 bits 4321: MCC 1st digit; bits 8765: MCC 2nd digit
+ * - octet 2 bits 4321: MCC 3rd digit; bits 8765: MNC 3rd digit or filler 1111
+ *   for 2-digit MNCs
+ * - octet 3 bits 4321: MNC 1st digit; bits 8765: MNC 2nd digit
+ * - octets 4-5: Location Area Code as in 3GPP TS 24.008
+ * - octets 6-7: Cell Identity (CI) as in 3GPP TS 24.008
+ *
+ * Used e.g. as serving / target cell Id.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8, 7.6.2.8 and 7.6.2.37).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

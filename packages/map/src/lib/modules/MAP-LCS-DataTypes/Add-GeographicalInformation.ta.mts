@@ -75,7 +75,12 @@ import { maxAdd_GeographicalInformation } from "./maxAdd-GeographicalInformation
 /**
  * @summary Add_GeographicalInformation
  * @description
- * 
+ *
+ * Any 3GPP TS 23.032 shape. Discarded if a valid Ext-GeographicalInformation is
+ * in the same message. Invalid shape/length treated as invalid data if not
+ * received with a valid Ext-GeographicalInformation (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.11.21 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

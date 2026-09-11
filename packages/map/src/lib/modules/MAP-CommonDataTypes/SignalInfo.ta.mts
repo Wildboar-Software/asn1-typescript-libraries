@@ -75,7 +75,14 @@ import { maxSignalInfoLength } from "./maxSignalInfoLength.va.mjs";
 /**
  * @summary SignalInfo
  * @description
- * 
+ *
+ * Opaque octets of external signal information. Size 1..`maxSignalInfoLength`
+ * (200). The named value is a theoretical maximum for one instance without
+ * network-layer segmentation; the actual maximum may be lower when other
+ * information elements share the same component.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

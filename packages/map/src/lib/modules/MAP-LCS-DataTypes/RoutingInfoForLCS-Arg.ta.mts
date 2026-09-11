@@ -74,7 +74,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary RoutingInfoForLCS_Arg
  * @description
- * 
+ *
+ * Argument of MAP-SEND-ROUTING-INFO-FOR-LCS: GMLC to HLR for routing to VMSC,
+ * SGSN, MME or 3GPP AAA server (3GPP TS 29.002 V19.1.0 clauses 13A.1 and
+ * 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +96,30 @@ class RoutingInfoForLCS_Arg {
     constructor (
         /**
          * @summary `mlcNumber`.
+         * @description
+         *
+         * GMLC number.
+         *
          * @public
          * @readonly
          */
         readonly mlcNumber: ISDN_AddressString,
         /**
          * @summary `targetMS`.
+         * @description
+         *
+         * Target subscriber identity.
+         *
          * @public
          * @readonly
          */
         readonly targetMS: SubscriberIdentity,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

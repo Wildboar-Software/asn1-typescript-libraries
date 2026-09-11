@@ -75,7 +75,11 @@ import { maxNumOfHLR_Id } from "./maxNumOfHLR-Id.va.mjs";
 /**
  * @summary HLR_List
  * @description
- * 
+ *
+ * List of 1..`maxNumOfHLR-Id` (50) HLR identities.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

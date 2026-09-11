@@ -80,7 +80,12 @@ import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 /**
  * @summary prepareGroupCall
  * @description
- * 
+ *
+ * MAP_PREPARE_GROUP_CALL: Anchor MSC informs the Relay MSC about a group call
+ * set-up. Confirmed. Typical path: Anchor MSC→Relay MSC. Local opcode 39. Timer
+ * class `m` (15 s to 30 s). Distinctive error: `noGroupCallNumberAvailable`.
+ * (3GPP TS 29.002 V19.1.0 clauses 10.4.1, 17.1.2, 17.3.2.30 and 17.6.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

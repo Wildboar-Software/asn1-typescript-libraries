@@ -73,7 +73,11 @@ import { OverrideCategory, _enum_for_OverrideCategory, OverrideCategory_override
 /**
  * @summary ClipData
  * @description
- * 
+ *
+ * CLIP supplementary service data (SS-Status, override category, optional
+ * notification-to-CSE) returned in any-time subscription interrogation /
+ * modification (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2, 7.6.4.4 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,12 +101,21 @@ class ClipData {
         readonly ss_Status: Ext_SS_Status,
         /**
          * @summary `overrideCategory`.
+         * @description
+         *
+         * CLIP override category (3GPP TS 29.002 V19.1.0 clauses 7.6.4.4 and
+         * 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly overrideCategory: OverrideCategory,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

@@ -79,7 +79,12 @@ enum _enum_for_MT_SMS_TPDU_Type {
 /**
  * @summary MT_SMS_TPDU_Type
  * @description
- * 
+ *
+ * MT-SMS TPDU type used as CAMEL TDP criterion. In CAMEL phase 4,
+ * `sms-SUBMIT-REPORT` shall not be used; a `TPDU-TypeCriterion` containing it
+ * shall be wholly ignored. Other unknown values cause the whole criterion
+ * sequence to be ignored. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +102,10 @@ type MT_SMS_TPDU_Type = _enum_for_MT_SMS_TPDU_Type | ENUMERATED;
 
 /**
  * @summary MT_SMS_TPDU_Type_sms_DELIVER
+ * @description
+ *
+ * SMS-DELIVER. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +114,10 @@ const MT_SMS_TPDU_Type_sms_DELIVER: MT_SMS_TPDU_Type = 0; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary sms_DELIVER
+ * @description
+ *
+ * SMS-DELIVER. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +126,11 @@ const sms_DELIVER: MT_SMS_TPDU_Type = MT_SMS_TPDU_Type_sms_DELIVER; /* SHORT_NAM
 
 /**
  * @summary MT_SMS_TPDU_Type_sms_SUBMIT_REPORT
+ * @description
+ *
+ * Shall not be used in CAMEL phase 4; a criterion containing it shall be wholly
+ * ignored. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +139,11 @@ const MT_SMS_TPDU_Type_sms_SUBMIT_REPORT: MT_SMS_TPDU_Type = 1; /* LONG_NAMED_EN
 
 /**
  * @summary sms_SUBMIT_REPORT
+ * @description
+ *
+ * Shall not be used in CAMEL phase 4; a criterion containing it shall be wholly
+ * ignored. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +152,10 @@ const sms_SUBMIT_REPORT: MT_SMS_TPDU_Type = MT_SMS_TPDU_Type_sms_SUBMIT_REPORT; 
 
 /**
  * @summary MT_SMS_TPDU_Type_sms_STATUS_REPORT
+ * @description
+ *
+ * SMS-STATUS-REPORT. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +164,10 @@ const MT_SMS_TPDU_Type_sms_STATUS_REPORT: MT_SMS_TPDU_Type = 2; /* LONG_NAMED_EN
 
 /**
  * @summary sms_STATUS_REPORT
+ * @description
+ *
+ * SMS-STATUS-REPORT. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */

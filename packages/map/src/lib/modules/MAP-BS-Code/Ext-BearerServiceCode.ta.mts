@@ -73,7 +73,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_BearerServiceCode
  * @description
- * 
+ *
+ * Identifies a single bearer service, a group of bearer services, or all bearer
+ * services, as defined in 3GPP TS 22.002. Used only for subscriber profile
+ * management. Includes all values defined for `BearerServiceCode` (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.3 and 17.7.10).
+ *
+ * Octet 1 has the same layout as `BearerServiceCode`. Octets 2-5 are reserved
+ * for future use; if received they shall be treated according to the exception
+ * handling defined for the operation that uses this type.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

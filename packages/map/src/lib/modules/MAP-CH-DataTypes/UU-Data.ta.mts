@@ -74,7 +74,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary UU_Data
  * @description
- * 
+ *
+ * User-to-user data (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,24 +95,40 @@ class UU_Data {
     constructor (
         /**
          * @summary `uuIndicator`.
+         * @description
+         *
+         * Coded according to ETS 300 356 (clause 17.7.3).
+         *
          * @public
          * @readonly
          */
         readonly uuIndicator: OPTIONAL<UUIndicator>,
         /**
          * @summary `uui`.
+         * @description
+         *
+         * UUI octets according to ETS 300 356, size 1..131.
+         *
          * @public
          * @readonly
          */
         readonly uui: OPTIONAL<UUI>,
         /**
          * @summary `uusCFInteraction`.
+         * @description
+         *
+         * UUS / call forwarding interaction.
+         *
          * @public
          * @readonly
          */
         readonly uusCFInteraction: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

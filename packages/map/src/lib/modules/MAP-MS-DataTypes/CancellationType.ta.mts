@@ -79,7 +79,20 @@ enum _enum_for_CancellationType {
 /**
  * @summary CancellationType
  * @description
- * 
+ *
+ * Reason for location cancellation, defined in 3GPP TS 23.060. Mandatory when
+ * Cancel Location is sent to the SGSN or IWF. The HLR shall not send values
+ * other than those listed. The HLR shall not send `initialAttachProcedure` to
+ * an SGSN unless that SGSN indicated support in UpdateGprsLocation or the HLR
+ * knows the SGSN supports it; otherwise the HLR shall send `updateProcedure`
+ * and delete the stored SGSN-Number (3GPP TS 29.002 V19.1.0 clauses 7.6.3.52,
+ * 8.1.3.3 and 17.7.1).
+ *
+ * If the VLR receives this parameter and does not understand it, it shall
+ * ignore it and should assume an Update procedure. If the SGSN receives
+ * `initialAttachProcedure`, it shall follow 3GPP TS 23.060 and shall not delete
+ * the subscription data (3GPP TS 29.002 V19.1.0 clause 8.1.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

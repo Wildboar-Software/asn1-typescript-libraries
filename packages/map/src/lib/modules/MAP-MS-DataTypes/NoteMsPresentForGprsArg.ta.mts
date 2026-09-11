@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary NoteMsPresentForGprsArg
  * @description
- * 
+ *
+ * Argument of MAP_NOTE_MS_PRESENT_FOR_GPRS. The HLR informs the GGSN that the
+ * MS is present for GPRS again. `ggsn-Address` shall be present if a
+ * protocol-converting GSN is used between GGSN and HLR. (3GPP TS 29.002 V19.1.0
+ * clauses 13.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,18 +98,32 @@ class NoteMsPresentForGprsArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Subscriber identity. (3GPP TS 29.002 V19.1.0 clauses 13.3.3 and
+         * 7.6.2.1)
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `sgsn_Address`.
+         * @description
+         *
+         * SGSN address. (3GPP TS 29.002 V19.1.0 clauses 13.3.3 and 7.6.2.39)
+         *
          * @public
          * @readonly
          */
         readonly sgsn_Address: GSN_Address,
         /**
          * @summary `ggsn_Address`.
+         * @description
+         *
+         * Shall be present if a protocol-converting GSN is used between GGSN
+         * and HLR. (3GPP TS 29.002 V19.1.0 clause 13.3.3)
+         *
          * @public
          * @readonly
          */

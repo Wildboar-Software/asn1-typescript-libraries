@@ -82,7 +82,11 @@ import { TraceDepthExtension, _enum_for_TraceDepthExtension, TraceDepthExtension
 /**
  * @summary TracePropagationList
  * @description
- * 
+ *
+ * UMTS trace parameters from one MSC to another in inter-MSC
+ * handover/relocation. Same TraceDepthExtension sending rule as
+ * `TraceDepthList` (3GPP TS 29.002 V19.1.0 clauses 7.6.10.10 and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -113,90 +117,150 @@ class TracePropagationList {
     constructor (
         /**
          * @summary `traceReference`.
+         * @description
+         *
+         * GSM-only trace reference.
+         *
          * @public
          * @readonly
          */
         readonly traceReference: OPTIONAL<TraceReference>,
         /**
          * @summary `traceType`.
+         * @description
+         *
+         * GSM-only trace type.
+         *
          * @public
          * @readonly
          */
         readonly traceType: OPTIONAL<TraceType>,
         /**
          * @summary `traceReference2`.
+         * @description
+         *
+         * UMTS trace reference.
+         *
          * @public
          * @readonly
          */
         readonly traceReference2: OPTIONAL<TraceReference2>,
         /**
          * @summary `traceRecordingSessionReference`.
+         * @description
+         *
+         * Trace recording session reference.
+         *
          * @public
          * @readonly
          */
         readonly traceRecordingSessionReference: OPTIONAL<TraceRecordingSessionReference>,
         /**
          * @summary `rnc_TraceDepth`.
+         * @description
+         *
+         * RNC trace depth.
+         *
          * @public
          * @readonly
          */
         readonly rnc_TraceDepth: OPTIONAL<TraceDepth>,
         /**
          * @summary `rnc_InterfaceList`.
+         * @description
+         *
+         * RNC interfaces.
+         *
          * @public
          * @readonly
          */
         readonly rnc_InterfaceList: OPTIONAL<RNC_InterfaceList>,
         /**
          * @summary `msc_s_TraceDepth`.
+         * @description
+         *
+         * MSC-S trace depth.
+         *
          * @public
          * @readonly
          */
         readonly msc_s_TraceDepth: OPTIONAL<TraceDepth>,
         /**
          * @summary `msc_s_InterfaceList`.
+         * @description
+         *
+         * MSC-S interfaces.
+         *
          * @public
          * @readonly
          */
         readonly msc_s_InterfaceList: OPTIONAL<MSC_S_InterfaceList>,
         /**
          * @summary `msc_s_EventList`.
+         * @description
+         *
+         * MSC-S events.
+         *
          * @public
          * @readonly
          */
         readonly msc_s_EventList: OPTIONAL<MSC_S_EventList>,
         /**
          * @summary `mgw_TraceDepth`.
+         * @description
+         *
+         * MGW trace depth.
+         *
          * @public
          * @readonly
          */
         readonly mgw_TraceDepth: OPTIONAL<TraceDepth>,
         /**
          * @summary `mgw_InterfaceList`.
+         * @description
+         *
+         * MGW interfaces.
+         *
          * @public
          * @readonly
          */
         readonly mgw_InterfaceList: OPTIONAL<MGW_InterfaceList>,
         /**
          * @summary `mgw_EventList`.
+         * @description
+         *
+         * MGW events.
+         *
          * @public
          * @readonly
          */
         readonly mgw_EventList: OPTIONAL<MGW_EventList>,
         /**
          * @summary `rnc_TraceDepthExtension`.
+         * @description
+         *
+         * RNC depth extension; send matching TraceDepth too.
+         *
          * @public
          * @readonly
          */
         readonly rnc_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `msc_s_TraceDepthExtension`.
+         * @description
+         *
+         * MSC-S depth extension; send matching TraceDepth too.
+         *
          * @public
          * @readonly
          */
         readonly msc_s_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `mgw_TraceDepthExtension`.
+         * @description
+         *
+         * MGW depth extension; send matching TraceDepth too.
+         *
          * @public
          * @readonly
          */

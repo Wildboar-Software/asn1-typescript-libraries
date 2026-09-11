@@ -73,7 +73,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MM_Code
  * @description
- * 
+ *
+ * Mobility Management event reported in MAP_NOTE_MM_EVENT. CAMEL phase 4 CS
+ * codes: location-update in same VLR `00000000`B, to other VLR `00000001`B,
+ * IMSI-Attach `00000010`B, MS-initiated IMSI-Detach `00000011`B,
+ * network-initiated IMSI-Detach `00000100`B. PS codes: RA update in same SGSN
+ * `10000000`B, to other SGSN from new SGSN `10000001`B, to other SGSN
+ * disconnect-by-detach `10000010`B, GPRS-Attach `10000011`B, MS-initiated
+ * GPRS-Detach `10000100`B, network-initiated GPRS-Detach `10000101`B, transfer
+ * to not-reachable-for-paging `10000110`B. MSC/SGSN shall ignore other codes
+ * for their domain. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

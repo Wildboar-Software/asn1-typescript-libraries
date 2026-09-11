@@ -80,7 +80,14 @@ import { unknownEquipment } from "../MAP-Errors/unknownEquipment.oa.mjs";
 /**
  * @summary checkIMEI
  * @description
- * 
+ *
+ * MAP_CHECK_IMEI: request a check of IMEI (MSC/VLR, MSC↔EIR, SGSN↔EIR,
+ * IWF↔EIR). If the IMEI is not available in the MSC or SGSN it is requested
+ * from the MS and transferred to the EIR. May also request BMUEF from the EIR.
+ * Confirmed. Typical MAP path: MSC→EIR or SGSN→EIR. Local opcode 43. Timer
+ * class `m` (15 s to 30 s). Distinctive error: `unknownEquipment`. (3GPP TS
+ * 29.002 V19.1.0 clauses 8.7.1.1, 17.1.2, 17.3.2.14 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -75,7 +75,11 @@ import { maxNumOfPrivacyClass } from "./maxNumOfPrivacyClass.va.mjs";
 /**
  * @summary LCS_PrivacyExceptionList
  * @description
- * 
+ *
+ * Classes of LCS Client allowed to locate a target MS (SIZE 1..4). Each entry
+ * has SS-Code and LCS privacy-exception parameters. (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.62 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

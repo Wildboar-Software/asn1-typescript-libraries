@@ -73,7 +73,12 @@ import { TBCD_STRING, _decode_TBCD_STRING, _encode_TBCD_STRING } from "../MAP-Co
 /**
  * @summary Long_GroupId
  * @description
- * 
+ *
+ * Group Identification as in 3GPP TS 23.003 and 3GPP TS 43.068/43.069.
+ * TBCD-STRING SIZE (4). If shorter than eight characters, TBCD filler `1111`
+ * fills unused half-octets. (3GPP TS 29.002 V19.1.0 clauses 7.6.2.33 and
+ * 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

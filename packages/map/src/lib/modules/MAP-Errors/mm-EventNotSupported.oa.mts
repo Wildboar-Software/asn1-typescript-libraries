@@ -76,6 +76,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary mm_EventNotSupported
  * @description
  * 
+ * Mobility Management user error. Not listed under clause 7.6.1.4; returned as
+ * user error MM-EventNotSupported on MAP-NOTE-MM-EVENT (3GPP TS 29.002 V19.1.0
+ * clauses 8.1.8.3 and 17.6.6).
+ *
+ * Local code 59. Optional parameter `MM-EventNotSupported-Param` (3GPP TS
+ * 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

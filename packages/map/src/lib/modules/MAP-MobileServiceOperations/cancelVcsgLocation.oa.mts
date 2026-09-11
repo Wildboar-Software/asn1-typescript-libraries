@@ -79,7 +79,14 @@ import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 /**
  * @summary cancelVcsgLocation
  * @description
- * 
+ *
+ * MAP_CANCEL_VCSG_LOCATION: CSS asks the VLR or SGSN to delete a roaming user
+ * record (CSG subscription data and CSS number). Invoked on removal of CSG data
+ * or MS registration in the CSS, including registration without CSG data.
+ * Confirmed. Typical path: CSS→VLR or CSS→SGSN. Local opcode 36. Timer class
+ * `m` (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses 8.1.10.1, 17.1.2,
+ * 17.3.2.53 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

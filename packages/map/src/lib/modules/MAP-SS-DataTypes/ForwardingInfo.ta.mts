@@ -73,7 +73,10 @@ import { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_Forwardin
 /**
  * @summary ForwardingInfo
  * @description
- * 
+ *
+ * Call-forwarding SS-Code plus forwarding features per basic service group
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.4.15 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class ForwardingInfo {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the call forwarding service (clause 7.6.4.1).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: OPTIONAL<SS_Code>,
         /**
          * @summary `forwardingFeatureList`.
+         * @description
+         *
+         * One item per Basic Service Group (clause 7.6.4.15).
+         *
          * @public
          * @readonly
          */

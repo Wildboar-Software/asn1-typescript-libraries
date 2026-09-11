@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary Ext_CallBarInfo
  * @description
- * 
+ *
+ * Extensible call barring information for each call barring service: SS-Code
+ * and a list of extensible call barring features. Included in Insert Subscriber
+ * Data at location updating, restoration or when changed. Not used by the CSS
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.20 and 8.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +97,22 @@ class Ext_CallBarInfo {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the call barring service (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.20).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `callBarringFeatureList`.
+         * @description
+         *
+         * Extensible call barring features, one item per Basic Service Group
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.20).
+         *
          * @public
          * @readonly
          */

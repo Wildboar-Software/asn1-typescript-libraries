@@ -81,7 +81,12 @@ enum _enum_for_GPRS_TriggerDetectionPoint {
 /**
  * @summary GPRS_TriggerDetectionPoint
  * @description
- * 
+ *
+ * GPRS CAMEL trigger detection point (attach, attach change of position, PDP
+ * context establishment / acknowledgement / change of position). For
+ * GPRS-CamelTDPData containing any other value, the receiver shall ignore the
+ * whole GPRS-CamelTDPData sequence (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

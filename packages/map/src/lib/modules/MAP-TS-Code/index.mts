@@ -2,6 +2,13 @@
  * @description
  *
  * ASN.1 module `MAP-TS-Code`.
+ *
+ * Named `TeleserviceCode` and `Ext-TeleserviceCode` values for a single
+ * teleservice, a group of teleservices, or all teleservices (3GPP TS 22.003).
+ * `TeleserviceCode` is used only for supplementary service management;
+ * `Ext-TeleserviceCode` only for subscriber profile management. One octet: bits
+ * 8-5 are the group and bits 4-1 the specific service (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.4, 7.6.4.39 and 17.7.9).
  */
 export * from "./Ext-TeleserviceCode.ta.mjs";
 export * from "./TeleserviceCode.ta.mjs";

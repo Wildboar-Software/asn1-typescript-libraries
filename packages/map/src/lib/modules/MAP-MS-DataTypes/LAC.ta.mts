@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LAC
  * @description
- * 
+ *
+ * Location Area Code of the Location Area Identification in 3GPP TS 23.003;
+ * coded as in 3GPP TS 24.008 (2 octets). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

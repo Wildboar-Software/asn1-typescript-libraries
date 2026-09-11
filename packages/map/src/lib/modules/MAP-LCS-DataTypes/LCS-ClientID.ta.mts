@@ -78,7 +78,9 @@ import { LCSRequestorID, _decode_LCSRequestorID, _encode_LCSRequestorID } from "
 /**
  * @summary LCS_ClientID
  * @description
- * 
+ *
+ * LCS client identity (3GPP TS 29.002 V19.1.0 clauses 7.6.11.4 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,42 +102,70 @@ class LCS_ClientID {
     constructor (
         /**
          * @summary `lcsClientType`.
+         * @description
+         *
+         * Emergency, value-added, PLMN operator, or lawful intercept.
+         *
          * @public
          * @readonly
          */
         readonly lcsClientType: LCSClientType,
         /**
          * @summary `lcsClientExternalID`.
+         * @description
+         *
+         * External client identity.
+         *
          * @public
          * @readonly
          */
         readonly lcsClientExternalID: OPTIONAL<LCSClientExternalID>,
         /**
          * @summary `lcsClientDialedByMS`.
+         * @description
+         *
+         * Number dialled by the MS.
+         *
          * @public
          * @readonly
          */
         readonly lcsClientDialedByMS: OPTIONAL<AddressString>,
         /**
          * @summary `lcsClientInternalID`.
+         * @description
+         *
+         * Internal client identity.
+         *
          * @public
          * @readonly
          */
         readonly lcsClientInternalID: OPTIONAL<LCSClientInternalID>,
         /**
          * @summary `lcsClientName`.
+         * @description
+         *
+         * Client name.
+         *
          * @public
          * @readonly
          */
         readonly lcsClientName: OPTIONAL<LCSClientName>,
         /**
          * @summary `lcsAPN`.
+         * @description
+         *
+         * APN.
+         *
          * @public
          * @readonly
          */
         readonly lcsAPN: OPTIONAL<APN>,
         /**
          * @summary `lcsRequestorID`.
+         * @description
+         *
+         * Requestor identity.
+         *
          * @public
          * @readonly
          */

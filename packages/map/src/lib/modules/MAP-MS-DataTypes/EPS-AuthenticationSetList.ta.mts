@@ -73,7 +73,10 @@ import { EPC_AV, _decode_EPC_AV, _encode_EPC_AV } from "../MAP-MS-DataTypes/EPC-
 /**
  * @summary EPS_AuthenticationSetList
  * @description
- * 
+ *
+ * List of EPS authentication vectors (EPC-AV) returned toward an MME/IWF (3GPP
+ * TS 29.002 V19.1.0 clauses 8.5.2.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

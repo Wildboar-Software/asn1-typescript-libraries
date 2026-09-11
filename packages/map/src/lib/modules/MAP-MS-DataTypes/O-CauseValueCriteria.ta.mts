@@ -75,7 +75,10 @@ import { maxNumOfCAMEL_O_CauseValueCriteria } from "./maxNumOfCAMEL-O-CauseValue
 /**
  * @summary O_CauseValueCriteria
  * @description
- * 
+ *
+ * Q.763 cause values used as O-BCSM CAMEL TDP criteria (SIZE 1..5). (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

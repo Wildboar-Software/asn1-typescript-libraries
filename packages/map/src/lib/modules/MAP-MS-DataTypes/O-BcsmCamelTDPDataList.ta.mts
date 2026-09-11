@@ -75,7 +75,12 @@ import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 /**
  * @summary O_BcsmCamelTDPDataList
  * @description
- * 
+ *
+ * O-BCSM CAMEL TDP data (SIZE 1..10). Shall not contain more than one instance
+ * with the same `o-BcsmTriggerDetectionPoint`. For CAMEL phase 2 only one
+ * instance is allowed, with DP2 (`collectedInfo`). (3GPP TS 29.002 V19.1.0
+ * clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NoReplyConditionTime
  * @description
- * 
+ *
+ * INTEGER (5..30) seconds for call forwarding on no reply (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.4.7 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

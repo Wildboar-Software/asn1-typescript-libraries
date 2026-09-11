@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IK
  * @description
- * 
+ *
+ * UMTS Integrity Key (16 octets). (3GPP TS 29.002 V19.1.0 clauses 7.6.7.5B
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

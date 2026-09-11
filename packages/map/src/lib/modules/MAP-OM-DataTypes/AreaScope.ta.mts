@@ -77,7 +77,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary AreaScope
  * @description
- * 
+ *
+ * MDT area: CGI, E-UTRAN CGI, RAI, LAI, TAI lists (3GPP TS 29.002 V19.1.0
+ * clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,36 +101,60 @@ class AreaScope {
     constructor (
         /**
          * @summary `cgi_List`.
+         * @description
+         *
+         * Up to 32 GERAN cell IDs.
+         *
          * @public
          * @readonly
          */
         readonly cgi_List: OPTIONAL<CGI_List>,
         /**
          * @summary `e_utran_cgi_List`.
+         * @description
+         *
+         * Up to 32 E-UTRAN CGIs.
+         *
          * @public
          * @readonly
          */
         readonly e_utran_cgi_List: OPTIONAL<E_UTRAN_CGI_List>,
         /**
          * @summary `routingAreaId_List`.
+         * @description
+         *
+         * Up to 8 RAIs.
+         *
          * @public
          * @readonly
          */
         readonly routingAreaId_List: OPTIONAL<RoutingAreaId_List>,
         /**
          * @summary `locationAreaId_List`.
+         * @description
+         *
+         * Up to 8 LAIs.
+         *
          * @public
          * @readonly
          */
         readonly locationAreaId_List: OPTIONAL<LocationAreaId_List>,
         /**
          * @summary `trackingAreaId_List`.
+         * @description
+         *
+         * Up to 8 TAIs.
+         *
          * @public
          * @readonly
          */
         readonly trackingAreaId_List: OPTIONAL<TrackingAreaId_List>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

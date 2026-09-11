@@ -72,7 +72,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IMS_VoiceOverPS_SessionsInd
  * @description
- * 
+ *
+ * Whether IMS voice over PS sessions is supported for the subscriber. `unknown`
+ * shall not be used in ProvideSubscriberInfoRes. (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,7 +99,11 @@ enum _enum_for_IMS_VoiceOverPS_SessionsInd {
 /**
  * @summary IMS_VoiceOverPS_SessionsInd
  * @description
- * 
+ *
+ * Whether IMS voice over PS sessions is supported for the subscriber. `unknown`
+ * shall not be used in ProvideSubscriberInfoRes. (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -114,7 +122,11 @@ type IMS_VoiceOverPS_SessionsInd = _enum_for_IMS_VoiceOverPS_SessionsInd;
 /**
  * @summary IMS_VoiceOverPS_SessionsInd
  * @description
- * 
+ *
+ * Whether IMS voice over PS sessions is supported for the subscriber. `unknown`
+ * shall not be used in ProvideSubscriberInfoRes. (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -132,6 +144,11 @@ const IMS_VoiceOverPS_SessionsInd = _enum_for_IMS_VoiceOverPS_SessionsInd;
 
 /**
  * @summary IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported
+ * @description
+ *
+ * IMS voice over PS sessions not supported. (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -140,6 +157,11 @@ const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported: IMS_Voice
 
 /**
  * @summary imsVoiceOverPS_SessionsNotSupported
+ * @description
+ *
+ * IMS voice over PS sessions not supported. (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -148,6 +170,10 @@ const imsVoiceOverPS_SessionsNotSupported: IMS_VoiceOverPS_SessionsInd = IMS_Voi
 
 /**
  * @summary IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported
+ * @description
+ *
+ * IMS voice over PS sessions supported. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -156,6 +182,10 @@ const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported: IMS_VoiceOve
 
 /**
  * @summary imsVoiceOverPS_SessionsSupported
+ * @description
+ *
+ * IMS voice over PS sessions supported. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -164,6 +194,11 @@ const imsVoiceOverPS_SessionsSupported: IMS_VoiceOverPS_SessionsInd = IMS_VoiceO
 
 /**
  * @summary IMS_VoiceOverPS_SessionsInd_unknown
+ * @description
+ *
+ * Shall not be used within ProvideSubscriberInfoRes. (3GPP TS 29.002 V19.1.0
+ * clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -172,6 +207,11 @@ const IMS_VoiceOverPS_SessionsInd_unknown: IMS_VoiceOverPS_SessionsInd = IMS_Voi
 
 /**
  * @summary unknown
+ * @description
+ *
+ * Shall not be used within ProvideSubscriberInfoRes. (3GPP TS 29.002 V19.1.0
+ * clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */

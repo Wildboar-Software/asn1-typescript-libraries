@@ -74,7 +74,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ModificationRequestFor_CH_Info
  * @description
- * 
+ *
+ * CSE request to modify call-hold supplementary-service data in
+ * MAP_ANY_TIME_MODIFICATION. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.82, 8.11.4,
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +96,22 @@ class ModificationRequestFor_CH_Info {
     constructor (
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly ss_Status: OPTIONAL<Ext_SS_Status>,
         /**
          * @summary `modifyNotificationToCSE`.
+         * @description
+         *
+         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+         *
          * @public
          * @readonly
          */

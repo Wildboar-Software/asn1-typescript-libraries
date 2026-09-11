@@ -75,7 +75,12 @@ import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";
 /**
  * @summary PDP_ContextInfoList
  * @description
- * 
+ *
+ * List of PDP context information associated with a PS subscriber state that
+ * has active PDP contexts.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

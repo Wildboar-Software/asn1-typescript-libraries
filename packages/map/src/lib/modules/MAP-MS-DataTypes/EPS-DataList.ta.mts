@@ -75,7 +75,10 @@ import { maxNumOfAPN_Configurations } from "./maxNumOfAPN-Configurations.va.mjs"
 /**
  * @summary EPS_DataList
  * @description
- * 
+ *
+ * List of APN-Configurations in an APN-ConfigurationProfile (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.46A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

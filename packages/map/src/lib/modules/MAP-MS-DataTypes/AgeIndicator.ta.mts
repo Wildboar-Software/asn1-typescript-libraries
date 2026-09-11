@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AgeIndicator
  * @description
- * 
+ *
+ * Used by the HLR to determine the validity of subscription data retained by
+ * the serving network entity in a Super-Charged network. Internal structure is
+ * implementation specific (3GPP TS 29.002 V19.1.0 clauses 7.6.3.72 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

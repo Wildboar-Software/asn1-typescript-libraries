@@ -72,7 +72,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ActivateTraceModeRes
  * @description
- * 
+ *
+ * Result of MAP-ACTIVATE-TRACE-MODE (3GPP TS 29.002 V19.1.0 clauses 9.1.1 and
+ * 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,21 @@ class ActivateTraceModeRes {
     constructor (
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `traceSupportIndicator`.
+         * @description
+         *
+         * UMTS trace parameters supported in the VLR or SGSN (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.10.9 and 9.1.1.3).
+         *
          * @public
          * @readonly
          */

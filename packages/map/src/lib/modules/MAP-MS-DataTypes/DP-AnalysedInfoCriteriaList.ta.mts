@@ -75,7 +75,10 @@ import { maxNumOfDP_AnalysedInfoCriteria } from "./maxNumOfDP-AnalysedInfoCriter
 /**
  * @summary DP_AnalysedInfoCriteriaList
  * @description
- * 
+ *
+ * List of DP-AnalysedInfo criteria for D-CSI (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.5.7A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

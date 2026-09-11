@@ -75,7 +75,12 @@ import { maxNumOfCAMEL_T_CauseValueCriteria } from "./maxNumOfCAMEL-T-CauseValue
 /**
  * @summary T_CauseValueCriteria
  * @description
- * 
+ *
+ * Cause values that arm a terminating CAMEL TDP. Cause-value use refers to
+ * ITU-T Recommendation Q.850.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

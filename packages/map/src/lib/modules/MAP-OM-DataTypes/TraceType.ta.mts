@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TraceType
  * @description
- * 
+ *
+ * INTEGER (0..255). Fully defined in 3GPP TS 52.008 (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.10.3 and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

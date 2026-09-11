@@ -81,7 +81,12 @@ import { MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _enco
 /**
  * @summary VlrCamelSubscriptionInfo
  * @description
- * 
+ *
+ * CAMEL services invoked in the MSC or VLR: O-CSI, SS-CSI, TIF-CSI, M-CSI,
+ * MO/MT-SMS-CSI, VT-CSI, D-CSI, and related TDP criteria.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.35 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,6 +114,12 @@ class VlrCamelSubscriptionInfo {
     constructor (
         /**
          * @summary `o_CSI`.
+         * @description
+         *
+         * Originating CAMEL services as in 3GPP TS 23.078.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7).
+         *
          * @public
          * @readonly
          */
@@ -121,60 +132,120 @@ class VlrCamelSubscriptionInfo {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ss_CSI`.
+         * @description
+         *
+         * Supplementary-service CAMEL subscription.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ss_CSI: OPTIONAL<SS_CSI>,
         /**
          * @summary `o_BcsmCamelTDP_CriteriaList`.
+         * @description
+         *
+         * Criteria for originating BCSM CAMEL TDPs.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
         /**
          * @summary `tif_CSI`.
+         * @description
+         *
+         * Translation Information Flag CSI.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly tif_CSI: OPTIONAL<NULL>,
         /**
          * @summary `m_CSI`.
+         * @description
+         *
+         * Mobility management CAMEL CSI for the VLR.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly m_CSI: OPTIONAL<M_CSI>,
         /**
          * @summary `mo_sms_CSI`.
+         * @description
+         *
+         * Mobile originating SMS CAMEL services.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.76).
+         *
          * @public
          * @readonly
          */
         readonly mo_sms_CSI: OPTIONAL<SMS_CSI>,
         /**
          * @summary `vt_CSI`.
+         * @description
+         *
+         * Terminating CAMEL services in the VMSC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7C).
+         *
          * @public
          * @readonly
          */
         readonly vt_CSI: OPTIONAL<T_CSI>,
         /**
          * @summary `t_BCSM_CAMEL_TDP_CriteriaList`.
+         * @description
+         *
+         * Criteria for terminating BCSM CAMEL TDPs.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
         /**
          * @summary `d_CSI`.
+         * @description
+         *
+         * Originating CAMEL dialled services as in 3GPP TS 23.078.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7A).
+         *
          * @public
          * @readonly
          */
         readonly d_CSI: OPTIONAL<D_CSI>,
         /**
          * @summary `mt_sms_CSI`.
+         * @description
+         *
+         * Mobile terminating SMS CAMEL services.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.76a).
+         *
          * @public
          * @readonly
          */
         readonly mt_sms_CSI: OPTIONAL<SMS_CSI>,
         /**
          * @summary `mt_smsCAMELTDP_CriteriaList`.
+         * @description
+         *
+         * Criteria for MT-SMS CAMEL TDPs.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

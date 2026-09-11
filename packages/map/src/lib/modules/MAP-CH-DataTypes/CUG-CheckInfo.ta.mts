@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CUG_CheckInfo
  * @description
- * 
+ *
+ * CUG interlock and optional outgoing access (3GPP TS 29.002 V19.1.0 clauses
+ * 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,18 +94,30 @@ class CUG_CheckInfo {
     constructor (
         /**
          * @summary `cug_Interlock`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly cug_Interlock: CUG_Interlock,
         /**
          * @summary `cug_OutgoingAccess`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly cug_OutgoingAccess: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

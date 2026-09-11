@@ -79,7 +79,13 @@ import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 /**
  * @summary mt_ForwardSM_VGCS
  * @description
- * 
+ *
+ * MAP_MT_FORWARD_SM_FOR_VGCS: SMS-GMSC forwards a mobile-terminated short
+ * message into an ongoing voice group call at the Group Call Anchor MSC.
+ * Confirmed. Typical path: SMS-GMSC→MSC. Local opcode 21. Timer class `ml` (1
+ * min to 10 min). (3GPP TS 29.002 V19.1.0 clauses 12.10.1, 17.1.2, 17.3.2.51
+ * and 17.6.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

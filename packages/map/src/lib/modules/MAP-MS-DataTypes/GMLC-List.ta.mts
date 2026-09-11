@@ -75,7 +75,12 @@ import { maxNumOfGMLC } from "./maxNumOfGMLC.va.mjs";
 /**
  * @summary GMLC_List
  * @description
- * 
+ *
+ * Addresses of all GMLCs permitted to issue a call/session unrelated or
+ * call/session related MT-LR for this MS (3GPP TS 23.271). If segmentation is
+ * used, the complete GMLC-List shall be sent in one segment (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.61 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -72,7 +72,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MAP_CloseInfo
  * @description
- * 
+ *
+ * User information of MAP-CLOSE, which releases a previously established MAP
+ * dialogue. Unconfirmed; either MAP service-user may invoke it. Release method
+ * (normal release versus prearranged end) is not carried in this PDU (3GPP TS
+ * 29.002 V19.1.0 clauses 7.3.2 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +95,10 @@ class MAP_CloseInfo {
     constructor (
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+         *
          * @public
          * @readonly
          */

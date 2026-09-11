@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary maxNumOfHLR_Id
  * @description
- * 
+ *
+ * Maximum number of `HLR-Id` values in `HLR-List`. (3GPP TS 29.002 V19.1.0
+ * clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

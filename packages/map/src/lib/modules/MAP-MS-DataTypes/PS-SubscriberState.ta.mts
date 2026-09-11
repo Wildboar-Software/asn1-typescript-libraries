@@ -73,7 +73,12 @@ import { NotReachableReason, _enum_for_NotReachableReason, NotReachableReason_ms
 /**
  * @summary PS_SubscriberState
  * @description
- * 
+ *
+ * Packet-switched subscriber state from SGSN or MME (via IWF). If the HLR
+ * receives this from a VLR, it shall discard it.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

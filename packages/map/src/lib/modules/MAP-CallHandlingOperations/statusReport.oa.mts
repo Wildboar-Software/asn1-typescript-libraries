@@ -81,7 +81,12 @@ import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 /**
  * @summary statusReport
  * @description
- * 
+ *
+ * MAP_STATUS_REPORT: VLR reports an event or call outcome to the HLR.
+ * Confirmed. Typical path: VLR→HLR. Local opcode 74. Timer class `m` (15 s to
+ * 30 s). (3GPP TS 29.002 V19.1.0 clauses 10.11.1, 17.1.2, 17.3.2.37 and
+ * 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

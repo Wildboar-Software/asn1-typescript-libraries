@@ -75,7 +75,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CallBarringData
  * @description
- * 
+ *
+ * Call barring data for CSE: extensible call barring feature list and
+ * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.83).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +98,11 @@ class CallBarringData {
     constructor (
         /**
          * @summary `callBarringFeatureList`.
+         * @description
+         *
+         * Extensible call barring feature list (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.83).
+         *
          * @public
          * @readonly
          */
@@ -113,6 +121,10 @@ class CallBarringData {
         readonly wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.83).
+         *
          * @public
          * @readonly
          */

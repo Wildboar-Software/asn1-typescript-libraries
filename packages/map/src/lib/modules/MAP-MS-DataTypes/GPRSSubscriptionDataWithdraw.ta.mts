@@ -72,7 +72,13 @@ import { ContextIdList, _decode_ContextIdList, _encode_ContextIdList } from "../
 /**
  * @summary GPRSSubscriptionDataWithdraw
  * @description
- * 
+ *
+ * Indicates that GPRS Subscription Data shall be deleted from the SGSN: either
+ * all GPRS data or only PDP contexts whose identifiers are listed. Used only by
+ * the SGSN; if the VLR receives this parameter it shall ignore it. Not
+ * applicable for the CSS (3GPP TS 29.002 V19.1.0 clauses 7.6.3.45, 7.6.3.53 and
+ * 8.8.2.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

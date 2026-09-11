@@ -73,7 +73,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PLMN_Id
  * @description
- * 
+ *
+ * PLMN identity. Size 3 octets.
+ *
+ * - octet 1 bits 4321: MCC 1st digit; bits 8765: MCC 2nd digit
+ * - octet 2 bits 4321: MCC 3rd digit; bits 8765: MNC 3rd digit or filler 1111
+ *   for 2-digit MNCs
+ * - octet 3 bits 4321: MNC 1st digit; bits 8765: MNC 2nd digit
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

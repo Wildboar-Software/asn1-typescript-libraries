@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RequestedEquipmentInfo
  * @description
- * 
+ *
+ * Which equipment information Check IMEI should return (equipment status and/or
+ * UESBI-Iu). Unknown bits shall be discarded by the receiver.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.7.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -78,7 +78,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ModificationRequestFor_CB_Info
  * @description
- * 
+ *
+ * CSE request to modify call-barring supplementary-service data in
+ * MAP_ANY_TIME_MODIFICATION. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.82, 8.11.4,
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,36 +104,65 @@ class ModificationRequestFor_CB_Info {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the supplementary service (clause 7.6.4.1). (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Extensible basic service group to which the modification applies.
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly ss_Status: OPTIONAL<Ext_SS_Status>,
         /**
          * @summary `password`.
+         * @description
+         *
+         * Call-barring password. (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly password: OPTIONAL<Password>,
         /**
          * @summary `wrongPasswordAttemptsCounter`.
+         * @description
+         *
+         * Wrong-password attempts counter. (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter>,
         /**
          * @summary `modifyNotificationToCSE`.
+         * @description
+         *
+         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+         *
          * @public
          * @readonly
          */

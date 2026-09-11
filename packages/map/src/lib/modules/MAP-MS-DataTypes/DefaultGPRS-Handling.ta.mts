@@ -78,7 +78,12 @@ enum _enum_for_DefaultGPRS_Handling {
 /**
  * @summary DefaultGPRS_Handling
  * @description
- * 
+ *
+ * Default GPRS session handling if GPRS CAMEL service is not available.
+ * Exception handling: values 2-31 shall be treated as continueTransaction;
+ * values greater than 31 shall be treated as releaseTransaction (3GPP TS 29.002
+ * V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -74,7 +74,15 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CheckIMEI_Arg
  * @description
- * 
+ *
+ * Argument of MAP_CHECK_IMEI, used between VLR and MSC, MSC and EIR, SGSN and
+ * EIR, and IWF and EIR to request an IMEI check, and optionally to request
+ * BMUEF from the EIR. Requested Equipment Info indicates whether Equipment
+ * Status, BMUEF or both is requested. IMEI shall not be included between VLR
+ * and MSC; one of IMEI and IMEISV is mandatory from MSC/SGSN/IWF to EIR. IMEISV
+ * shall be present if BMUEF is requested (3GPP TS 29.002 V19.1.0 clauses
+ * 8.7.1.1 and 8.7.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +100,23 @@ class CheckIMEI_Arg {
     constructor (
         /**
          * @summary `imei`.
+         * @description
+         *
+         * Shall not be included between VLR and MSC. One of IMEI and IMEISV is
+         * mandatory from MSC/SGSN/IWF to EIR (3GPP TS 29.002 V19.1.0 clauses
+         * 8.7.1.3 and 7.6.2.3).
+         *
          * @public
          * @readonly
          */
         readonly imei: IMEI,
         /**
          * @summary `requestedEquipmentInfo`.
+         * @description
+         *
+         * Indicates whether Equipment Status or BMUEF or both is requested
+         * (3GPP TS 29.002 V19.1.0 clause 8.7.1.3).
+         *
          * @public
          * @readonly
          */

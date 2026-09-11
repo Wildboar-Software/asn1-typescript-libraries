@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary roamingNumberEnquiryContext_v3
  * @description
- * 
+ *
+ * Roaming number enquiry between HLR and VLR. Initiator is HLR; responder is
+ * VLR. Version 3; v2 and v1 equivalents exist (3GPP TS 29.002 V19.1.0 clause
+ * 17.3.2.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

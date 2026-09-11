@@ -80,7 +80,11 @@ import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode
 /**
  * @summary MT_ForwardSM_Arg
  * @description
- * 
+ *
+ * Argument of MAP-MT-FORWARD-SHORT-MESSAGE: SMS-GMSC to serving MSC, SGSN or
+ * IP-SM-GW (optionally via SMS Router) (3GPP TS 29.002 V19.1.0 clauses 12.9 and
+ * 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -107,72 +111,120 @@ class MT_ForwardSM_Arg {
     constructor (
         /**
          * @summary `sm_RP_DA`.
+         * @description
+         *
+         * Destination address.
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_DA: SM_RP_DA,
         /**
          * @summary `sm_RP_OA`.
+         * @description
+         *
+         * Originating address (typically SC).
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_OA: SM_RP_OA,
         /**
          * @summary `sm_RP_UI`.
+         * @description
+         *
+         * Short message TPDU.
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_UI: SignalInfo,
         /**
          * @summary `moreMessagesToSend`.
+         * @description
+         *
+         * More MT SMs to follow.
+         *
          * @public
          * @readonly
          */
         readonly moreMessagesToSend: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `smDeliveryTimer`.
+         * @description
+         *
+         * Value used by the SMS-GMSC (clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly smDeliveryTimer: OPTIONAL<SM_DeliveryTimerValue>,
         /**
          * @summary `smDeliveryStartTime`.
+         * @description
+         *
+         * Start time of the delivery timer.
+         *
          * @public
          * @readonly
          */
         readonly smDeliveryStartTime: OPTIONAL<Time>,
         /**
          * @summary `smsOverIP_OnlyIndicator`.
+         * @description
+         *
+         * SMS over IP only.
+         *
          * @public
          * @readonly
          */
         readonly smsOverIP_OnlyIndicator: OPTIONAL<NULL>,
         /**
          * @summary `correlationID`.
+         * @description
+         *
+         * HLR / SIP URI correlation.
+         *
          * @public
          * @readonly
          */
         readonly correlationID: OPTIONAL<CorrelationID>,
         /**
          * @summary `maximumRetransmissionTime`.
+         * @description
+         *
+         * Maximum retransmission time.
+         *
          * @public
          * @readonly
          */
         readonly maximumRetransmissionTime: OPTIONAL<Time>,
         /**
          * @summary `smsGmscAddress`.
+         * @description
+         *
+         * SMS-GMSC ISDN address.
+         *
          * @public
          * @readonly
          */
         readonly smsGmscAddress: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `smsGmscDiameterAddress`.
+         * @description
+         *
+         * SMS-GMSC Diameter address.
+         *
          * @public
          * @readonly
          */

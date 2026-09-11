@@ -72,7 +72,12 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary shortMsgMT_RelayContext_v3
  * @description
- * 
+ *
+ * Mobile terminating short message relay between GMSC and MSC or GMSC and SGSN.
+ * Initiator is GMSC; responder is MSC or SGSN. For GMSC–SGSN, versions 2 and 3
+ * and the equivalent v1 AC apply. v2 equivalent exists; v1 uses
+ * `shortMsg-Relay` version 1 (3GPP TS 29.002 V19.1.0 clause 17.3.2.26).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

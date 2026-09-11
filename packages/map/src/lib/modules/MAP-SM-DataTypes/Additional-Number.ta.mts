@@ -72,7 +72,10 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
 /**
  * @summary Additional_Number
  * @description
- * 
+ *
+ * CHOICE: `msc-Number` may be MSC, SMS Router or MME for MT SMS; `sgsn-Number`
+ * may be SGSN or SMS Router (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

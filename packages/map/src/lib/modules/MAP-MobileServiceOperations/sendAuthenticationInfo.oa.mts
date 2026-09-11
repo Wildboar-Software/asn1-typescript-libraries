@@ -81,7 +81,16 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary sendAuthenticationInfo
  * @description
- * 
+ *
+ * MAP_SEND_AUTHENTICATION_INFO: VLR, SGSN, or BSF retrieves authentication
+ * information (and, for SGSN, possibly UE Usage Type) from the HLR; also
+ * IWF↔IWF and IWF↔HSS in EPS. VLR/SGSN request up to five vectors; BSF requests
+ * one. Vector type follows requesting node (triplets/quintuplets vs EPS).
+ * Confirmed. Typical path: VLR→HLR or SGSN→HLR. Local opcode 56. Timer class
+ * `m` (15 s to 30 s). Within a dialogue the argument shall not be present in
+ * subsequent invokes (discard if received). (3GPP TS 29.002 V19.1.0 clauses
+ * 8.5.2.1, 17.1.2, 17.3.2.15 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

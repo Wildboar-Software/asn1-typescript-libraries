@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary VSTK
  * @description
- * 
+ *
+ * 16-octet VGCS/VBS Short Term Key (3GPP TS 43.020) (3GPP TS 29.002 V19.1.0
+ * clauses 10.4.3 and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

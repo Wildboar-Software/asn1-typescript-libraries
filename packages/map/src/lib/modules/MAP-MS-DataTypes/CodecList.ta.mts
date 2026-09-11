@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CodecList
  * @description
- * 
+ *
+ * Iu codec list. Codecs are sent in priority order where codec1 has highest
+ * priority (3GPP TS 29.002 V19.1.0 clauses 7.6.6.17 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

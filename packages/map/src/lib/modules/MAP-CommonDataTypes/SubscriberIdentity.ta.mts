@@ -73,7 +73,11 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
 /**
  * @summary SubscriberIdentity
  * @description
- * 
+ *
+ * Subscriber identity as IMSI or MSISDN (`ISDN-AddressString`).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8, 7.6.2.1 and 7.6.2.17).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,12 @@ import { AuthenticationQuintuplet, _decode_AuthenticationQuintuplet, _encode_Aut
 /**
  * @summary QuintupletList
  * @description
- * 
+ *
+ * One to five UMTS authentication quintuplets (RAND, XRES, CK, IK, AUTN). Order
+ * is chronological; the first quintuplet is the oldest.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.7.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

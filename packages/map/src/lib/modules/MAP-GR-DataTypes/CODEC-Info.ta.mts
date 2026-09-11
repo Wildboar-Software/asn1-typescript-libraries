@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CODEC_Info
  * @description
- * 
+ *
+ * Channel type including element identifier and length as in 3GPP TS 48.008
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

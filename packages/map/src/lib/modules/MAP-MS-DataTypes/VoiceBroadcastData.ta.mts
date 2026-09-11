@@ -74,7 +74,14 @@ import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP
 /**
  * @summary VoiceBroadcastData
  * @description
- * 
+ *
+ * One VBS group subscription. If `longGroupId` is present, `groupId` shall be
+ * six TBCD fillers (`1111`). Data containing a long Group Id shall not be sent
+ * to VLRs that did not indicate long Group ID support in Update Location or
+ * Restore Data.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.40 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,12 +101,26 @@ class VoiceBroadcastData {
     constructor (
         /**
          * @summary `groupid`.
+         * @description
+         *
+         * Group Identification as in 3GPP TS 23.003. Filled with six TBCD
+         * fillers (`1111`) if `longGroupId` is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.33 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly groupid: GroupId,
         /**
          * @summary `broadcastInitEntitlement`.
+         * @description
+         *
+         * Subscriber may initiate voice broadcast calls for this group, not
+         * only listen.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.40).
+         *
          * @public
          * @readonly
          */
@@ -112,6 +133,14 @@ class VoiceBroadcastData {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longGroupId`.
+         * @description
+         *
+         * Long Group Identification as in 3GPP TS 23.003 and 43.068/43.069.
+         * Shall not be sent to VLRs that did not indicate long Group ID
+         * support.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

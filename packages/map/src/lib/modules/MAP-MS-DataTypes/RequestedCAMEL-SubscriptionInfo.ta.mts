@@ -72,7 +72,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RequestedCAMEL_SubscriptionInfo
  * @description
- * 
+ *
+ * Which CAMEL Subscription Information is requested or modified
+ * (O/T/VT/TIF/GPRS/MO-SMS/SS/M/D-CSI).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.78, 8.11.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,7 +111,12 @@ enum _enum_for_RequestedCAMEL_SubscriptionInfo {
 /**
  * @summary RequestedCAMEL_SubscriptionInfo
  * @description
- * 
+ *
+ * Which CAMEL Subscription Information is requested or modified
+ * (O/T/VT/TIF/GPRS/MO-SMS/SS/M/D-CSI).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.78, 8.11.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -130,7 +140,12 @@ type RequestedCAMEL_SubscriptionInfo = _enum_for_RequestedCAMEL_SubscriptionInfo
 /**
  * @summary RequestedCAMEL_SubscriptionInfo
  * @description
- * 
+ *
+ * Which CAMEL Subscription Information is requested or modified
+ * (O/T/VT/TIF/GPRS/MO-SMS/SS/M/D-CSI).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.78, 8.11.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

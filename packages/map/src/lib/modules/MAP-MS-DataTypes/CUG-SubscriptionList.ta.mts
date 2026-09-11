@@ -75,7 +75,13 @@ import { maxNumOfCUG } from "./maxNumOfCUG.va.mjs";
 /**
  * @summary CUG_SubscriptionList
  * @description
- * 
+ *
+ * List of CUG subscriptions. At location updating, restoration or CUG data
+ * change the HLR shall include the complete list; the first
+ * insertSubscriberData message in a dialogue that contains CUG information
+ * shall include a non-empty list (3GPP TS 29.002 V19.1.0 clauses 7.6.3.22 and
+ * 8.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

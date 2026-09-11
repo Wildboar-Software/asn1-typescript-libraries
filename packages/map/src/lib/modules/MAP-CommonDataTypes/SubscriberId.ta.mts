@@ -73,7 +73,11 @@ import { TMSI, _decode_TMSI, _encode_TMSI } from "../MAP-CommonDataTypes/TMSI.ta
 /**
  * @summary SubscriberId
  * @description
- * 
+ *
+ * Subscriber identity as IMSI or TMSI.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8, 7.6.2.1 and 7.6.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

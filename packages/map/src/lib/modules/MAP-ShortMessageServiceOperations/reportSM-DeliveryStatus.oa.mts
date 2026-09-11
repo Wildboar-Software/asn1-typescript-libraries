@@ -81,7 +81,13 @@ import { messageWaitingListFull } from "../MAP-Errors/messageWaitingListFull.oa.
 /**
  * @summary reportSM_DeliveryStatus
  * @description
- * 
+ *
+ * MAP_REPORT_SM_DELIVERY_STATUS: GMSC or IP-SM-GW sets Message Waiting Data in
+ * the HLR, or informs the HLR of successful SM transfer after polling.
+ * Confirmed. Typical path: GMSC→HLR. Local opcode 47. Timer class `s` (3 s to
+ * 10 s). Distinctive error: `messageWaitingListFull`. (3GPP TS 29.002 V19.1.0
+ * clauses 12.3.1, 17.1.2, 17.3.2.21 and 17.6.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

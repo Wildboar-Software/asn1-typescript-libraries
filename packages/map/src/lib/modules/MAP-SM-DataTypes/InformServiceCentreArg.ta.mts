@@ -75,7 +75,11 @@ import { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _en
 /**
  * @summary InformServiceCentreArg
  * @description
- * 
+ *
+ * Argument of MAP-INFORM-SERVICE-CENTRE: HLR to SMS-GMSC (via SMS Router if
+ * present). Unconfirmed. Informs stored MSISDN, MCEF/MNRF/MNRG/MNR5G/MNR5GN3G
+ * and SC inclusion in MWD (3GPP TS 29.002 V19.1.0 clauses 12.6 and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,42 +105,71 @@ class InformServiceCentreArg {
     constructor (
         /**
          * @summary `storedMSISDN`.
+         * @description
+         *
+         * MSISDN stored in MWD if different from SRI-for-SM (clause 12.6.1).
+         *
          * @public
          * @readonly
          */
         readonly storedMSISDN: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `mw_Status`.
+         * @description
+         *
+         * MCEF, MNRF, MNRG, MNR5G, MNR5GN3G and SC-address inclusion.
+         *
          * @public
          * @readonly
          */
         readonly mw_Status: OPTIONAL<MW_Status>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `absentSubscriberDiagnosticSM`.
+         * @description
+         *
+         * If one MNRR: that value. If two: MSC MNRR (clause 12.6.1).
+         *
          * @public
          * @readonly
          */
         readonly absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `additionalAbsentSubscriberDiagnosticSM`.
+         * @description
+         *
+         * Present only if absentSubscriberDiagnosticSM is present. GPRS
+         * diagnostic; the other is non-GPRS (clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `smsf3gppAbsentSubscriberDiagnosticSM`.
+         * @description
+         *
+         * 3GPP-SMSF absent-subscriber diagnostic.
+         *
          * @public
          * @readonly
          */
         readonly smsf3gppAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `smsfNon3gppAbsentSubscriberDiagnosticSM`.
+         * @description
+         *
+         * Non-3GPP-SMSF absent-subscriber diagnostic.
+         *
          * @public
          * @readonly
          */

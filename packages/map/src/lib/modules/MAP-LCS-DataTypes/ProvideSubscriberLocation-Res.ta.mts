@@ -86,7 +86,14 @@ import { UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress
 /**
  * @summary ProvideSubscriberLocation_Res
  * @description
- * 
+ *
+ * Result of MAP-PROVIDE-SUBSCRIBER-LOCATION. If deferredmt-lrResponseIndicator
+ * is set, locationEstimate is ignored. add-LocationEstimate shall not be sent
+ * to a node that did not indicate supported shapes. If supportedGADShapes was
+ * received and the encoded shape is not marked, reject with
+ * FacilityNotSupported / shapeOfLocationEstimateNotSupported (3GPP TS 29.002
+ * V19.1.0 clauses 13A.2 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -118,108 +125,192 @@ class ProvideSubscriberLocation_Res {
     constructor (
         /**
          * @summary `locationEstimate`.
+         * @description
+         *
+         * Location estimate as in 3GPP TS 23.032 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.11).
+         *
          * @public
          * @readonly
          */
         readonly locationEstimate: Ext_GeographicalInformation,
         /**
          * @summary `ageOfLocationEstimate`.
+         * @description
+         *
+         * How long ago the estimate was obtained (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.1).
+         *
          * @public
          * @readonly
          */
         readonly ageOfLocationEstimate: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `add_LocationEstimate`.
+         * @description
+         *
+         * Any 3GPP TS 23.032 shape (3GPP TS 29.002 V19.1.0 clause 7.6.11.21).
+         *
          * @public
          * @readonly
          */
         readonly add_LocationEstimate: OPTIONAL<Add_GeographicalInformation>,
         /**
          * @summary `deferredmt_lrResponseIndicator`.
+         * @description
+         *
+         * Response to a deferred MT-LR (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.2).
+         *
          * @public
          * @readonly
          */
         readonly deferredmt_lrResponseIndicator: OPTIONAL<NULL>,
         /**
          * @summary `geranPositioningData`.
+         * @description
+         *
+         * GERAN positioning data, 3GPP TS 49.031 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.11A).
+         *
          * @public
          * @readonly
          */
         readonly geranPositioningData: OPTIONAL<PositioningDataInformation>,
         /**
          * @summary `utranPositioningData`.
+         * @description
+         *
+         * UTRAN positioningDataDiscriminator and set, 3GPP TS 25.413 (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.11.11B).
+         *
          * @public
          * @readonly
          */
         readonly utranPositioningData: OPTIONAL<UtranPositioningDataInfo>,
         /**
          * @summary `cellIdOrSai`.
+         * @description
+         *
+         * CGI (GERAN) or SAI (UTRAN) (3GPP TS 29.002 V19.1.0 clause 7.6.11.22).
+         *
          * @public
          * @readonly
          */
         readonly cellIdOrSai: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
         /**
          * @summary `sai_Present`.
+         * @description
+         *
+         * cellIdOrSai contains a Service Area Identity.
+         *
          * @public
          * @readonly
          */
         readonly sai_Present: OPTIONAL<NULL>,
         /**
          * @summary `accuracyFulfilmentIndicator`.
+         * @description
+         *
+         * Whether requested accuracy was fulfilled (3GPP TS 29.002 V19.1.0
+         * clause 7.6.11.28).
+         *
          * @public
          * @readonly
          */
         readonly accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator>,
         /**
          * @summary `velocityEstimate`.
+         * @description
+         *
+         * Velocity as in 3GPP TS 23.032 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.27).
+         *
          * @public
          * @readonly
          */
         readonly velocityEstimate: OPTIONAL<VelocityEstimate>,
         /**
          * @summary `mo_lrShortCircuitIndicator`.
+         * @description
+         *
+         * MO-LR short circuit (3GPP TS 29.002 V19.1.0 clause 7.6.11.29).
+         *
          * @public
          * @readonly
          */
         readonly mo_lrShortCircuitIndicator: OPTIONAL<NULL>,
         /**
          * @summary `geranGANSSpositioningData`.
+         * @description
+         *
+         * GERAN GANSS data, 3GPP TS 49.031 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.11C).
+         *
          * @public
          * @readonly
          */
         readonly geranGANSSpositioningData: OPTIONAL<GeranGANSSpositioningData>,
         /**
          * @summary `utranGANSSpositioningData`.
+         * @description
+         *
+         * UTRAN GANSS-PositioningDataSet, 3GPP TS 25.413 (3GPP TS 29.002
+         * V19.1.0 clause 7.6.11.11D).
+         *
          * @public
          * @readonly
          */
         readonly utranGANSSpositioningData: OPTIONAL<UtranGANSSpositioningData>,
         /**
          * @summary `targetServingNodeForHandover`.
+         * @description
+         *
+         * Serving node after handover.
+         *
          * @public
          * @readonly
          */
         readonly targetServingNodeForHandover: OPTIONAL<ServingNodeAddress>,
         /**
          * @summary `utranAdditionalPositioningData`.
+         * @description
+         *
+         * Additional-PositioningDataSet, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0
+         * clause 7.6.11.11E).
+         *
          * @public
          * @readonly
          */
         readonly utranAdditionalPositioningData: OPTIONAL<UtranAdditionalPositioningData>,
         /**
          * @summary `utranBaroPressureMeas`.
+         * @description
+         *
+         * Barometric pressure, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.11F).
+         *
          * @public
          * @readonly
          */
         readonly utranBaroPressureMeas: OPTIONAL<UtranBaroPressureMeas>,
         /**
          * @summary `utranCivicAddress`.
+         * @description
+         *
+         * Civic address, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.11G).
+         *
          * @public
          * @readonly
          */

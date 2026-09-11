@@ -72,7 +72,10 @@ import { BearerServiceCode, _decode_BearerServiceCode, _encode_BearerServiceCode
 /**
  * @summary general_padAccessCA
  * @description
- * 
+ *
+ * General PAD access CA. Specific service. Bit pattern `'00100111'B` (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

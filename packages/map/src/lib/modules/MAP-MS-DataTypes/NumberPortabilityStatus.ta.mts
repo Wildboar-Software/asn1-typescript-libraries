@@ -81,7 +81,12 @@ enum _enum_for_NumberPortabilityStatus {
 /**
  * @summary NumberPortabilityStatus
  * @description
- * 
+ *
+ * Number portability status of the subscriber (3GPP TS 23.066). Unknown values:
+ * ignore the whole parameter. `ownNumberNotPortedOut` and
+ * `foreignNumberPortedIn` may only be included in Any Time Interrogation. (3GPP
+ * TS 29.002 V19.1.0 clauses 7.6.5.14 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,6 +107,10 @@ type NumberPortabilityStatus = _enum_for_NumberPortabilityStatus | ENUMERATED;
 
 /**
  * @summary NumberPortabilityStatus_notKnownToBePorted
+ * @description
+ *
+ * Not known to be ported. (3GPP TS 29.002 V19.1.0 clause 7.6.5.14)
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +119,10 @@ const NumberPortabilityStatus_notKnownToBePorted: NumberPortabilityStatus = 0; /
 
 /**
  * @summary notKnownToBePorted
+ * @description
+ *
+ * Not known to be ported. (3GPP TS 29.002 V19.1.0 clause 7.6.5.14)
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +131,10 @@ const notKnownToBePorted: NumberPortabilityStatus = NumberPortabilityStatus_notK
 
 /**
  * @summary NumberPortabilityStatus_ownNumberPortedOut
+ * @description
+ *
+ * Own number ported out. (3GPP TS 29.002 V19.1.0 clause 7.6.5.14)
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +143,10 @@ const NumberPortabilityStatus_ownNumberPortedOut: NumberPortabilityStatus = 1; /
 
 /**
  * @summary ownNumberPortedOut
+ * @description
+ *
+ * Own number ported out. (3GPP TS 29.002 V19.1.0 clause 7.6.5.14)
+ *
  * @constant
  * @type {number}
  */
@@ -134,6 +155,11 @@ const ownNumberPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_ownN
 
 /**
  * @summary NumberPortabilityStatus_foreignNumberPortedToForeignNetwork
+ * @description
+ *
+ * Foreign number ported to a foreign network. (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.5.14)
+ *
  * @constant
  * @type {number}
  */
@@ -142,6 +168,11 @@ const NumberPortabilityStatus_foreignNumberPortedToForeignNetwork: NumberPortabi
 
 /**
  * @summary foreignNumberPortedToForeignNetwork
+ * @description
+ *
+ * Foreign number ported to a foreign network. (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.5.14)
+ *
  * @constant
  * @type {number}
  */
@@ -150,6 +181,11 @@ const foreignNumberPortedToForeignNetwork: NumberPortabilityStatus = NumberPorta
 
 /**
  * @summary NumberPortabilityStatus_ownNumberNotPortedOut
+ * @description
+ *
+ * Own number not ported out. May only be included in Any Time Interrogation.
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -158,6 +194,11 @@ const NumberPortabilityStatus_ownNumberNotPortedOut: NumberPortabilityStatus = 4
 
 /**
  * @summary ownNumberNotPortedOut
+ * @description
+ *
+ * Own number not ported out. May only be included in Any Time Interrogation.
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -166,6 +207,11 @@ const ownNumberNotPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_o
 
 /**
  * @summary NumberPortabilityStatus_foreignNumberPortedIn
+ * @description
+ *
+ * Foreign number ported in. May only be included in Any Time Interrogation.
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -174,6 +220,11 @@ const NumberPortabilityStatus_foreignNumberPortedIn: NumberPortabilityStatus = 5
 
 /**
  * @summary foreignNumberPortedIn
+ * @description
+ *
+ * Foreign number ported in. May only be included in Any Time Interrogation.
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */

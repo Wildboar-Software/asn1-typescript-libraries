@@ -80,6 +80,9 @@ enum _enum_for_UnknownSubscriberDiagnostic {
  * @summary UnknownSubscriberDiagnostic
  * @description
  * 
+ * Diagnostic on `UnknownSubscriberParam`. If unknown values are received they
+ * shall be discarded (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +100,10 @@ type UnknownSubscriberDiagnostic = _enum_for_UnknownSubscriberDiagnostic | ENUME
 
 /**
  * @summary UnknownSubscriberDiagnostic_imsiUnknown
+ * @description
+ *
+ * `imsiUnknown` (0) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +112,10 @@ const UnknownSubscriberDiagnostic_imsiUnknown: UnknownSubscriberDiagnostic = 0; 
 
 /**
  * @summary imsiUnknown
+ * @description
+ *
+ * `imsiUnknown` (0) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +124,10 @@ const imsiUnknown: UnknownSubscriberDiagnostic = UnknownSubscriberDiagnostic_ims
 
 /**
  * @summary UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown
+ * @description
+ *
+ * `gprs-eps-SubscriptionUnknown` (1) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +136,10 @@ const UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown: UnknownSubscribe
 
 /**
  * @summary gprs_eps_SubscriptionUnknown
+ * @description
+ *
+ * `gprs-eps-SubscriptionUnknown` (1) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +148,10 @@ const gprs_eps_SubscriptionUnknown: UnknownSubscriberDiagnostic = UnknownSubscri
 
 /**
  * @summary UnknownSubscriberDiagnostic_npdbMismatch
+ * @description
+ *
+ * `npdbMismatch` (2) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +160,10 @@ const UnknownSubscriberDiagnostic_npdbMismatch: UnknownSubscriberDiagnostic = 2;
 
 /**
  * @summary npdbMismatch
+ * @description
+ *
+ * `npdbMismatch` (2) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */

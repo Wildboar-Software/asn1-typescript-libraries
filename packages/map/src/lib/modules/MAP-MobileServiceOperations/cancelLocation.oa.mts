@@ -79,7 +79,15 @@ import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 /**
  * @summary cancelLocation
  * @description
- * 
+ *
+ * MAP_CANCEL_LOCATION: HLR asks the VLR (or SGSN) to delete a subscriber
+ * record, typically when the MS moves VLR/SGSN area or on operator enforcement.
+ * In EPS, used HSS↔IWF and IWF↔IWF to delete the MME/SGSN record or to release
+ * bearers without deleting it; may also request an immediate re-attach.
+ * Confirmed. Typical path: HLR→VLR or HLR→SGSN. Local opcode 3. Timer class `m`
+ * (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses 8.1.3.1, 17.1.2, 17.3.2.3 and
+ * 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

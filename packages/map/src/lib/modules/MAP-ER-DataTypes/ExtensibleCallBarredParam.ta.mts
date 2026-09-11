@@ -74,6 +74,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary ExtensibleCallBarredParam
  * @description
  * 
+ * Version 3-and-higher alternative of `CallBarredParam`.
+ * `unauthorisedMessageOriginator` and `anonymousCallRejection` shall be
+ * mutually exclusive (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,6 +96,11 @@ class ExtensibleCallBarredParam {
     constructor (
         /**
          * @summary `callBarringCause`.
+         * @description
+         *
+         * Subscriber barring service active, or operator barring (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.1.4).
+         *
          * @public
          * @readonly
          */
@@ -104,12 +113,24 @@ class ExtensibleCallBarredParam {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `unauthorisedMessageOriginator`.
+         * @description
+         *
+         * Barring of Mobile Terminating Short Message due to "Unauthorised
+         * Message Originator". Mutually exclusive with `anonymousCallRejection`
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+         *
          * @public
          * @readonly
          */
         readonly unauthorisedMessageOriginator: OPTIONAL<NULL>,
         /**
          * @summary `anonymousCallRejection`.
+         * @description
+         *
+         * Call rejected due to the ACR supplementary service. Mutually
+         * exclusive with `unauthorisedMessageOriginator` (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.1.4 and 17.7.7).
+         *
          * @public
          * @readonly
          */

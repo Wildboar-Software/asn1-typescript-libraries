@@ -74,7 +74,13 @@ import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_Camel
 /**
  * @summary T_CSI
  * @description
- * 
+ *
+ * Terminating CAMEL services in the GMSC (T-CSI) or VMSC (VT-CSI), as in 3GPP
+ * TS 23.078. `notificationToCSE` and `csi-Active` shall not be present when
+ * sent to VLR/GMSC (ATSI/ATM ack/NSDC only). T-CSI shall not be segmented.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.7B, 7.6.5.7C and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,6 +100,12 @@ class T_CSI {
     constructor (
         /**
          * @summary `t_BcsmCamelTDPDataList`.
+         * @description
+         *
+         * Terminating BCSM CAMEL TDP data. T-CSI shall not be segmented.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -106,18 +118,39 @@ class T_CSI {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `camelCapabilityHandling`.
+         * @description
+         *
+         * CAMEL phase of this CSI: 1-4. Values greater than 4 shall be treated
+         * as CAMEL phase 4.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+         * be included only in ATSI/ATM ack/NSDC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly notificationToCSE: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
+         * @description
+         *
+         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+         * be included only in ATSI/ATM ack/NSDC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

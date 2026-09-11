@@ -75,7 +75,14 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary forwardCheckSS_Indication
  * @description
- * 
+ *
+ * MAP_FORWARD_CHECK_SS_INDICATION: optional HLR indication that SS parameters
+ * may have been altered (e.g. after restart). If received, the VLR forwards it
+ * to the MSC and the MS. Sent only after successful subscriber-data retrieval
+ * embedded in MAP_UPDATE_LOCATION. Non-confirmed (no argument). Typical path:
+ * HLR→VLR. Local opcode 38. Timer class `s` (3 s to 10 s). (3GPP TS 29.002
+ * V19.1.0 clauses 8.10.2.1, 17.1.2, 17.3.2.2 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

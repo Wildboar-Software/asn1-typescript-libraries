@@ -75,6 +75,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary SM_DeliveryFailureCause
  * @description
  * 
+ * Required parameter of `sm-DeliveryFailure`. Optional `diagnosticInfo` is
+ * coded as specified in 3GPP TS 23.040 under SMS-SUBMIT-REPORT and
+ * SMS-DELIVERY-REPORT, and shall be forwarded in the
+ * MAP_MO_FORWARD_SHORT_MESSAGE and MAP_MT_FORWARD_SHORT_MESSAGE response when
+ * included (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +98,23 @@ class SM_DeliveryFailureCause {
     constructor (
         /**
          * @summary `sm_EnumeratedDeliveryFailureCause`.
+         * @description
+         *
+         * Enumerated delivery-failure reason (3GPP TS 29.002 V19.1.0 clauses
+         * 7.6.1.4 and 17.7.7).
+         *
          * @public
          * @readonly
          */
         readonly sm_EnumeratedDeliveryFailureCause: SM_EnumeratedDeliveryFailureCause,
         /**
          * @summary `diagnosticInfo`.
+         * @description
+         *
+         * Detailed diagnostic information coded as specified in 3GPP TS 23.040
+         * under SMS-SUBMIT-REPORT and SMS-DELIVERY-REPORT (3GPP TS 29.002
+         * V19.1.0 clause 7.6.1.4).
+         *
          * @public
          * @readonly
          */

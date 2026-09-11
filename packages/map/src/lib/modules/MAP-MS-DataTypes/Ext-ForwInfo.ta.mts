@@ -74,7 +74,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary Ext_ForwInfo
  * @description
- * 
+ *
+ * Extensible forwarding information: SS-Code of the relevant call forwarding
+ * service and, if required, a list of extensible forwarding features. Used only
+ * by the VLR in Insert Subscriber Data; if the SGSN or IWF receives this
+ * parameter it shall ignore it. Not used by the CSS (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.15 and 8.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +98,22 @@ class Ext_ForwInfo {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the relevant call forwarding service (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.15).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `forwardingFeatureList`.
+         * @description
+         *
+         * Extensible forwarding features, one item per Basic Service Group
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.15).
+         *
          * @public
          * @readonly
          */

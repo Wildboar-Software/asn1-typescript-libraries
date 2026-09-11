@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary APN
  * @description
- * 
+ *
+ * Access Point Name: DNS name of a GGSN as defined in 3GPP TS 23.060. Octets
+ * are coded according to 3GPP TS 23.003 (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.2.42 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

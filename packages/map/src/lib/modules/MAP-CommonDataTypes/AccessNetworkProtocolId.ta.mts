@@ -78,7 +78,13 @@ enum _enum_for_AccessNetworkProtocolId {
 /**
  * @summary AccessNetworkProtocolId
  * @description
- * 
+ *
+ * Access-network protocol of `AccessNetworkSignalInfo`: 3GPP TS 48.006
+ * (`ts3G-48006`) or 3GPP TS 25.413 (`ts3G-25413`). Any other value: ignore the
+ * whole `AccessNetworkSignalInfo` sequence.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +101,11 @@ type AccessNetworkProtocolId = _enum_for_AccessNetworkProtocolId | ENUMERATED;
 
 /**
  * @summary AccessNetworkProtocolId_ts3G_48006
+ * @description
+ *
+ * 3GPP TS 48.006 (value 1). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.1).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +114,11 @@ const AccessNetworkProtocolId_ts3G_48006: AccessNetworkProtocolId = 1; /* LONG_N
 
 /**
  * @summary ts3G_48006
+ * @description
+ *
+ * 3GPP TS 48.006 (value 1). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.1).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +127,11 @@ const ts3G_48006: AccessNetworkProtocolId = AccessNetworkProtocolId_ts3G_48006; 
 
 /**
  * @summary AccessNetworkProtocolId_ts3G_25413
+ * @description
+ *
+ * 3GPP TS 25.413 (value 2). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.1).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +140,11 @@ const AccessNetworkProtocolId_ts3G_25413: AccessNetworkProtocolId = 2; /* LONG_N
 
 /**
  * @summary ts3G_25413
+ * @description
+ *
+ * 3GPP TS 25.413 (value 2). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.1).
+ *
  * @constant
  * @type {number}
  */

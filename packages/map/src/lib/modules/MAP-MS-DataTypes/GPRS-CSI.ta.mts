@@ -74,7 +74,16 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary GPRS_CSI
  * @description
- * 
+ *
+ * GPRS CAMEL Subscription Information; identifies the subscriber as having GPRS
+ * CAMEL services as defined in 3GPP TS 23.078.
+ *
+ * `notificationToCSE` and `csi-Active` shall not be present when GPRS-CSI is
+ * sent to SGSN; they may only be included in ATSI/ATM ack/NSDC.
+ * GPRS-CamelTDPData and camelCapabilityHandling shall be present. If segmented,
+ * gprs-CamelTDPDataList and camelCapabilityHandling shall be present in the
+ * first segment (3GPP TS 29.002 V19.1.0 clauses 7.6.3.77 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,12 +103,24 @@ class GPRS_CSI {
     constructor (
         /**
          * @summary `gprs_CamelTDPDataList`.
+         * @description
+         *
+         * Shall be present in the GPRS-CSI sequence. If segmented, shall be
+         * present in the first segment. Shall not contain more than one
+         * instance with the same trigger detection point (3GPP TS 29.002
+         * V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly gprs_CamelTDPDataList: OPTIONAL<GPRS_CamelTDPDataList>,
         /**
          * @summary `camelCapabilityHandling`.
+         * @description
+         *
+         * Shall be present in the GPRS-CSI sequence. If segmented, shall be
+         * present in the first segment (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -112,12 +133,22 @@ class GPRS_CSI {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Shall not be present when GPRS-CSI is sent to SGSN. May only be
+         * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly notificationToCSE: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
+         * @description
+         *
+         * Shall not be present when GPRS-CSI is sent to SGSN. May only be
+         * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

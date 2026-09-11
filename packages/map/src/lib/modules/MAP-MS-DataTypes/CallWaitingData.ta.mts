@@ -72,7 +72,10 @@ import { Ext_CwFeatureList, _decode_Ext_CwFeatureList, _encode_Ext_CwFeatureList
 /**
  * @summary CallWaitingData
  * @description
- * 
+ *
+ * Call Waiting data for CSE: extensible CW feature list and optional
+ * notification-to-CSE (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +98,10 @@ class CallWaitingData {
         readonly cwFeatureList: Ext_CwFeatureList,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

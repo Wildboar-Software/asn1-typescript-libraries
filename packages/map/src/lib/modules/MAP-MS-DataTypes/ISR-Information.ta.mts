@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ISR_Information
  * @description
- * 
+ *
+ * Idle Mode Signalling Reduction information. Unknown bit assignments shall be
+ * discarded by the receiver. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,6 +91,10 @@ type ISR_Information = BIT_STRING;
 
 /**
  * @summary ISR_Information_updateLocation
+ * @description
+ *
+ * Update Location related to ISR. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  */
 export
@@ -95,6 +102,10 @@ const ISR_Information_updateLocation: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary updateLocation
+ * @description
+ *
+ * Update Location related to ISR. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  */
 export
@@ -102,6 +113,10 @@ const updateLocation: number = ISR_Information_updateLocation; /* SHORT_NAMED_BI
 
 /**
  * @summary ISR_Information_cancelSGSN
+ * @description
+ *
+ * Cancel SGSN related to ISR. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  */
 export
@@ -109,6 +124,10 @@ const ISR_Information_cancelSGSN: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary cancelSGSN
+ * @description
+ *
+ * Cancel SGSN related to ISR. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  */
 export
@@ -116,6 +135,10 @@ const cancelSGSN: number = ISR_Information_cancelSGSN; /* SHORT_NAMED_BIT */
 
 /**
  * @summary ISR_Information_initialAttachIndicator
+ * @description
+ *
+ * Initial attach indicator. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  */
 export
@@ -123,6 +146,10 @@ const ISR_Information_initialAttachIndicator: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary initialAttachIndicator
+ * @description
+ *
+ * Initial attach indicator. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  */
 export

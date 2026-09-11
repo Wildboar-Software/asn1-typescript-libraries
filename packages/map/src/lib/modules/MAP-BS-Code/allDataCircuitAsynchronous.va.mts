@@ -72,7 +72,14 @@ import { BearerServiceCode, _decode_BearerServiceCode, _encode_BearerServiceCode
 /**
  * @summary allDataCircuitAsynchronous
  * @description
- * 
+ *
+ * All data circuit asynchronous. Group code. Bit pattern `'01010000'B`.
+ * Non-hierarchical compound bearer service group defined in 3GPP TS 22.030.
+ * Used only in call-independent supplementary service operations; not used in
+ * InsertSubscriberData or DeleteSubscriberData. Covers `allDataCDA-Services`,
+ * `allAlternateSpeech-DataCDA` and `allSpeechFollowedByDataCDA` (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

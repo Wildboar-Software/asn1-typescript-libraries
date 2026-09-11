@@ -75,7 +75,12 @@ import { maxNumOfPLMNClient } from "./maxNumOfPLMNClient.va.mjs";
 /**
  * @summary PLMNClientList
  * @description
- * 
+ *
+ * Internal LCS clients of the PLMN operator privacy class. Size 1..5. May be
+ * sent only for SS-code `plmnoperator`.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.65 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,12 @@ import { CSG_SubscriptionData, _decode_CSG_SubscriptionData, _encode_CSG_Subscri
 /**
  * @summary VPLMN_CSG_SubscriptionDataList
  * @description
- * 
+ *
+ * VPLMN CSG subscription data provided by the CSS to VLR or SGSN at VCSG
+ * location updating or when that data changes.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.8.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

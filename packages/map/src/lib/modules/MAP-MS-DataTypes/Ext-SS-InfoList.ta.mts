@@ -75,7 +75,10 @@ import { maxNumOfSS } from "../MAP-SS-DataTypes/maxNumOfSS.va.mjs";
 /**
  * @summary Ext_SS_InfoList
  * @description
- * 
+ *
+ * List of extensible SS-Info parameters in Insert Subscriber Data (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.14 and 8.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

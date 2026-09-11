@@ -74,7 +74,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CallReportData
  * @description
- * 
+ *
+ * Call monitoring mode and outcome (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +94,30 @@ class CallReportData {
     constructor (
         /**
          * @summary `monitoringMode`.
+         * @description
+         *
+         * a-side or b-side.
+         *
          * @public
          * @readonly
          */
         readonly monitoringMode: OPTIONAL<MonitoringMode>,
         /**
          * @summary `callOutcome`.
+         * @description
+         *
+         * success, failure or busy.
+         *
          * @public
          * @readonly
          */
         readonly callOutcome: OPTIONAL<CallOutcome>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SupportedGADShapes
  * @description
- * 
+ *
+ * Mark all 3GPP TS 23.032 shapes supported. Bits 7–15 ignored. If omitted,
+ * assume ellipsoid point variants and ellipsoid arc (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.11.20 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,6 +96,10 @@ type SupportedGADShapes = BIT_STRING;
 
 /**
  * @summary SupportedGADShapes_ellipsoidPoint
+ * @description
+ *
+ * `ellipsoidPoint (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -99,6 +107,10 @@ const SupportedGADShapes_ellipsoidPoint: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary ellipsoidPoint
+ * @description
+ *
+ * `ellipsoidPoint (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -106,6 +118,11 @@ const ellipsoidPoint: number = SupportedGADShapes_ellipsoidPoint; /* SHORT_NAMED
 
 /**
  * @summary SupportedGADShapes_ellipsoidPointWithUncertaintyCircle
+ * @description
+ *
+ * `ellipsoidPointWithUncertaintyCircle (1)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * @constant
  */
 export
@@ -113,6 +130,11 @@ const SupportedGADShapes_ellipsoidPointWithUncertaintyCircle: number = 1; /* LON
 
 /**
  * @summary ellipsoidPointWithUncertaintyCircle
+ * @description
+ *
+ * `ellipsoidPointWithUncertaintyCircle (1)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * @constant
  */
 export
@@ -120,6 +142,11 @@ const ellipsoidPointWithUncertaintyCircle: number = SupportedGADShapes_ellipsoid
 
 /**
  * @summary SupportedGADShapes_ellipsoidPointWithUncertaintyEllipse
+ * @description
+ *
+ * `ellipsoidPointWithUncertaintyEllipse (2)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * @constant
  */
 export
@@ -127,6 +154,11 @@ const SupportedGADShapes_ellipsoidPointWithUncertaintyEllipse: number = 2; /* LO
 
 /**
  * @summary ellipsoidPointWithUncertaintyEllipse
+ * @description
+ *
+ * `ellipsoidPointWithUncertaintyEllipse (2)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * @constant
  */
 export
@@ -134,6 +166,10 @@ const ellipsoidPointWithUncertaintyEllipse: number = SupportedGADShapes_ellipsoi
 
 /**
  * @summary SupportedGADShapes_polygon
+ * @description
+ *
+ * `polygon (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -141,6 +177,10 @@ const SupportedGADShapes_polygon: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary polygon
+ * @description
+ *
+ * `polygon (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -148,6 +188,10 @@ const polygon: number = SupportedGADShapes_polygon; /* SHORT_NAMED_BIT */
 
 /**
  * @summary SupportedGADShapes_ellipsoidPointWithAltitude
+ * @description
+ *
+ * `ellipsoidPointWithAltitude (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -155,6 +199,10 @@ const SupportedGADShapes_ellipsoidPointWithAltitude: number = 4; /* LONG_NAMED_B
 
 /**
  * @summary ellipsoidPointWithAltitude
+ * @description
+ *
+ * `ellipsoidPointWithAltitude (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -162,6 +210,11 @@ const ellipsoidPointWithAltitude: number = SupportedGADShapes_ellipsoidPointWith
 
 /**
  * @summary SupportedGADShapes_ellipsoidPointWithAltitudeAndUncertaintyElipsoid
+ * @description
+ *
+ * `ellipsoidPointWithAltitudeAndUncertaintyElipsoid (5)` (3GPP TS 29.002
+ * V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -169,6 +222,11 @@ const SupportedGADShapes_ellipsoidPointWithAltitudeAndUncertaintyElipsoid: numbe
 
 /**
  * @summary ellipsoidPointWithAltitudeAndUncertaintyElipsoid
+ * @description
+ *
+ * `ellipsoidPointWithAltitudeAndUncertaintyElipsoid (5)` (3GPP TS 29.002
+ * V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -176,6 +234,10 @@ const ellipsoidPointWithAltitudeAndUncertaintyElipsoid: number = SupportedGADSha
 
 /**
  * @summary SupportedGADShapes_ellipsoidArc
+ * @description
+ *
+ * `ellipsoidArc (6)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -183,6 +245,10 @@ const SupportedGADShapes_ellipsoidArc: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary ellipsoidArc
+ * @description
+ *
+ * `ellipsoidArc (6)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export

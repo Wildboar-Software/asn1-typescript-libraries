@@ -75,7 +75,10 @@ import { maxNumOfLSAs } from "./maxNumOfLSAs.va.mjs";
 /**
  * @summary LSADataList
  * @description
- * 
+ *
+ * LSA data entries (SIZE 1..20) in `LSAInformation`. (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.56 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

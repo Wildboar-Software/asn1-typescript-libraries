@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-ER-DataTypes`.
+ * ASN.1 module `MAP-ER-DataTypes` (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
+ * Parameter types carried by MAP user errors defined in `MAP-Errors` (clause
+ * 17.6.6), including diagnostics, version-dependent CHOICE alternatives, and
+ * exception handling. User-error meanings are in clause 7.6.1.4.
  */
 export * from "./ATI-NotAllowedParam.ta.mjs";
 export * from "./ATM-NotAllowedParam.ta.mjs";

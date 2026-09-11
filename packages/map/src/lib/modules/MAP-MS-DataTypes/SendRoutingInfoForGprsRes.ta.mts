@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SendRoutingInfoForGprsRes
  * @description
- * 
+ *
+ * MAP_SEND_ROUTING_INFO_FOR_GPRS result: SGSN address, optional GGSN address,
+ * and Mobile Not Reachable Reason.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 13.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,18 +98,38 @@ class SendRoutingInfoForGprsRes {
     constructor (
         /**
          * @summary `sgsn_Address`.
+         * @description
+         *
+         * IP address of an SGSN as in 3GPP TS 23.003. In EPS, may be an IWF
+         * address.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.39).
+         *
          * @public
          * @readonly
          */
         readonly sgsn_Address: GSN_Address,
         /**
          * @summary `ggsn_Address`.
+         * @description
+         *
+         * IP address of a GGSN as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.40).
+         *
          * @public
          * @readonly
          */
         readonly ggsn_Address: OPTIONAL<GSN_Address>,
         /**
          * @summary `mobileNotReachableReason`.
+         * @description
+         *
+         * Reason the MS is absent when SM delivery failed at MSC, SGSN, or both
+         * (3GPP TS 23.040).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.51).
+         *
          * @public
          * @readonly
          */

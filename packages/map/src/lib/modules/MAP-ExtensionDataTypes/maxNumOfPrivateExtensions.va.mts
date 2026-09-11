@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary maxNumOfPrivateExtensions
  * @description
- * 
+ *
+ * Maximum number of private extensions in `PrivateExtensionList` (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MSNetworkCapability
  * @description
- * 
+ *
+ * Value part of the MS Network Capability IE in 3GPP TS 24.008 (SIZE 1..8).
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

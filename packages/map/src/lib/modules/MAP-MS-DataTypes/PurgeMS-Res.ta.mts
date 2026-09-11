@@ -72,7 +72,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary PurgeMS_Res
  * @description
- * 
+ *
+ * MAP_PURGE_MS result. Freeze TMSI if the received VLR number matches the
+ * stored VLR number; freeze P-TMSI if the SGSN number matches; freeze M-TMSI if
+ * the IWF number matches.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.6.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +97,26 @@ class PurgeMS_Res {
     constructor (
         /**
          * @summary `freezeTMSI`.
+         * @description
+         *
+         * VLR shall freeze the TMSI. Present if the received VLR number matches
+         * the stored VLR number.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
+         *
          * @public
          * @readonly
          */
         readonly freezeTMSI: OPTIONAL<NULL>,
         /**
          * @summary `freezeP_TMSI`.
+         * @description
+         *
+         * SGSN shall freeze the P-TMSI. Present if the received SGSN number
+         * matches the stored SGSN number.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
+         *
          * @public
          * @readonly
          */
@@ -109,6 +129,13 @@ class PurgeMS_Res {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `freezeM_TMSI`.
+         * @description
+         *
+         * IWF shall freeze the M-TMSI. Present if the received node number
+         * matches the stored IWF number.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.6.3).
+         *
          * @public
          * @readonly
          */

@@ -73,7 +73,9 @@ import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataType
 /**
  * @summary MDT_Allowed_PLMNId_List
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..16) OF PLMN-Id (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

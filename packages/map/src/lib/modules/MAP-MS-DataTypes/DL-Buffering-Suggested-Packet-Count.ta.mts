@@ -73,7 +73,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DL_Buffering_Suggested_Packet_Count
  * @description
- * 
+ *
+ * Suggested downlink buffering packet count. The MME (via IWF) and SGSN may
+ * take it into account, in addition to local policies, to decide extended
+ * buffering of downlink packets at the SGW for High Latency Communication (3GPP
+ * TS 29.272). If the VLR receives this parameter it shall ignore it. Values are
+ * defined in 3GPP TS 29.272 (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and
+ * 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

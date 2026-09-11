@@ -76,7 +76,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary O_BcsmCamelTDPData
  * @description
- * 
+ *
+ * One originating BCSM CAMEL trigger: detection point, service key, gsmSCF
+ * address, and default call handling. Sequences with an unknown detection-point
+ * value shall be ignored as a whole. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,24 +101,42 @@ class O_BcsmCamelTDPData {
     constructor (
         /**
          * @summary `o_BcsmTriggerDetectionPoint`.
+         * @description
+         *
+         * `collectedInfo` (2) or `routeSelectFailure` (4); other values: ignore
+         * this sequence. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly o_BcsmTriggerDetectionPoint: O_BcsmTriggerDetectionPoint,
         /**
          * @summary `serviceKey`.
+         * @description
+         *
+         * CAMEL service key. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly serviceKey: ServiceKey,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * gsmSCF address. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly gsmSCF_Address: ISDN_AddressString,
         /**
          * @summary `defaultCallHandling`.
+         * @description
+         *
+         * Default call handling if the gsmSCF is not reachable. (3GPP TS 29.002
+         * V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

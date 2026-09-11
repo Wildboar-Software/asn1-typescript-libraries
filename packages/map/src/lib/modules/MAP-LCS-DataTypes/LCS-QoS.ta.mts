@@ -76,7 +76,10 @@ import { LCS_QoS_Class, _enum_for_LCS_QoS_Class, LCS_QoS_Class_bestEffort /* IMP
 /**
  * @summary LCS_QoS
  * @description
- * 
+ *
+ * QoS for a location request. `lcs-qos-class` may only be included in an MO-LR
+ * request sent by the UE (3GPP TS 29.002 V19.1.0 clauses 7.6.11.8 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,42 +101,71 @@ class LCS_QoS {
     constructor (
         /**
          * @summary `horizontal_accuracy`.
+         * @description
+         *
+         * Required horizontal accuracy (clause 7.6.11.8).
+         *
          * @public
          * @readonly
          */
         readonly horizontal_accuracy: OPTIONAL<Horizontal_Accuracy>,
         /**
          * @summary `verticalCoordinateRequest`.
+         * @description
+         *
+         * Vertical coordinate required (clause 7.6.11.8).
+         *
          * @public
          * @readonly
          */
         readonly verticalCoordinateRequest: OPTIONAL<NULL>,
         /**
          * @summary `vertical_accuracy`.
+         * @description
+         *
+         * Optional required vertical accuracy (clause 7.6.11.8).
+         *
          * @public
          * @readonly
          */
         readonly vertical_accuracy: OPTIONAL<Vertical_Accuracy>,
         /**
          * @summary `responseTime`.
+         * @description
+         *
+         * low delay or delay tolerant (clause 7.6.11.8).
+         *
          * @public
          * @readonly
          */
         readonly responseTime: OPTIONAL<ResponseTime>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `velocityRequest`.
+         * @description
+         *
+         * Return velocity if available (clause 7.6.11.8).
+         *
          * @public
          * @readonly
          */
         readonly velocityRequest: OPTIONAL<NULL>,
         /**
          * @summary `lcs_qos_class`.
+         * @description
+         *
+         * best effort or assured; MO-LR from UE only (clauses 7.6.11.8 and
+         * 17.7.13).
+         *
          * @public
          * @readonly
          */

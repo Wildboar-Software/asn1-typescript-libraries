@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RadioResourceInformation
  * @description
- * 
+ *
+ * Channel Type information element from 3GPP TS 48.008. In Prepare HO, included
+ * if the access network protocol is RANAP and the UE also supports GSM. Not
+ * sent if `RadioResourceList` is sent.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.10 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

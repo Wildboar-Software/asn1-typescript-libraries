@@ -84,7 +84,14 @@ import { ussd_Busy } from "../MAP-Errors/ussd-Busy.oa.mjs";
 /**
  * @summary unstructuredSS_Notify
  * @description
- * 
+ *
+ * MAP_UNSTRUCTURED_SS_NOTIFY: invoking entity requires a notification to be
+ * sent to the mobile user for unstructured SS handling. Used gsmSCF↔HLR,
+ * HLR↔VLR and VLR↔MSC. Confirmed (result empty; errors present). Local opcode
+ * 61. Timer class `ml` (1 min to 10 min). Distinctive errors:
+ * `unknownAlphabet`, `ussd-Busy`. (3GPP TS 29.002 V19.1.0 clauses 11.11.1,
+ * 17.1.2, 17.3.2.20 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

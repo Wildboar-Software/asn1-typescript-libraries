@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary unknownOrUnreachableLCSClient
  * @description
  * 
+ * Location services user error: Unknown or unreachable LCS Client (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 58. Optional parameter `UnknownOrUnreachableLCSClient-Param` (3GPP
+ * TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

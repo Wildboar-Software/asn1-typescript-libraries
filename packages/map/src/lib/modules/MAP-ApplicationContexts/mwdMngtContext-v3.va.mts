@@ -72,7 +72,12 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary mwdMngtContext_v3
  * @description
- * 
+ *
+ * Short message waiting data management between VLR and HLR or SGSN and HLR.
+ * Initiator is VLR or SGSN; responder is HLR. For SGSN–HLR only version 3
+ * applies. v2 and v1 equivalents exist (3GPP TS 29.002 V19.1.0 clause
+ * 17.3.2.25).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -81,7 +81,10 @@ import { ENB_InterfaceList, ENB_InterfaceList_s1_mme /* IMPORTED_LONG_NAMED_BIT 
 /**
  * @summary TraceInterfaceList
  * @description
- * 
+ *
+ * Interfaces or protocols per NE. See 3GPP TS 32.422 (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.10.7 and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,60 +109,100 @@ class TraceInterfaceList {
     constructor (
         /**
          * @summary `msc_s_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly msc_s_List: OPTIONAL<MSC_S_InterfaceList>,
         /**
          * @summary `mgw_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly mgw_List: OPTIONAL<MGW_InterfaceList>,
         /**
          * @summary `sgsn_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly sgsn_List: OPTIONAL<SGSN_InterfaceList>,
         /**
          * @summary `ggsn_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly ggsn_List: OPTIONAL<GGSN_InterfaceList>,
         /**
          * @summary `rnc_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly rnc_List: OPTIONAL<RNC_InterfaceList>,
         /**
          * @summary `bmsc_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly bmsc_List: OPTIONAL<BMSC_InterfaceList>,
         /**
          * @summary `mme_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly mme_List: OPTIONAL<MME_InterfaceList>,
         /**
          * @summary `sgw_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly sgw_List: OPTIONAL<SGW_InterfaceList>,
         /**
          * @summary `pgw_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly pgw_List: OPTIONAL<PGW_InterfaceList>,
         /**
          * @summary `eNB_List`.
+         * @description
+         *
+         * Interface list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */

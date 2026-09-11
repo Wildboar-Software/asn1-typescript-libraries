@@ -75,7 +75,10 @@ import { maxNumOfDispatchers } from "./maxNumOfDispatchers.va.mjs";
 /**
  * @summary DispatcherList
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..maxNumOfDispatchers) OF ISDN-AddressString (3GPP TS 29.002
+ * V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,13 @@ import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_Teleservi
 /**
  * @summary Ext_BasicServiceCode
  * @description
- * 
+ *
+ * Extensible Basic Service Group for subscriber-profile management: an
+ * extensible bearer service (3GPP TS 22.002) or extensible teleservice (3GPP TS
+ * 22.003). Neither alternative denotes all extensible bearer and teleservices.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.3.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

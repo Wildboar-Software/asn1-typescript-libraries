@@ -84,7 +84,11 @@ import { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-C
 /**
  * @summary CAMEL_SubscriptionInfo
  * @description
- * 
+ *
+ * CSI that can be controlled by the CSE, including O-CSI, D-CSI, T-CSI, VT-CSI,
+ * GPRS-CSI, SMS CSI, SS-CSI, M-CSI, MG-CSI and IM-CSI variants (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.78, 7.6.5.7 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -123,6 +127,11 @@ class CAMEL_SubscriptionInfo {
     constructor (
         /**
          * @summary `o_CSI`.
+         * @description
+         *
+         * Originating CAMEL services as defined in 3GPP TS 23.078 (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.5.7).
+         *
          * @public
          * @readonly
          */
@@ -135,12 +144,22 @@ class CAMEL_SubscriptionInfo {
         readonly o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
         /**
          * @summary `d_CSI`.
+         * @description
+         *
+         * Originating CAMEL dialled services as defined in 3GPP TS 23.078 (3GPP
+         * TS 29.002 V19.1.0 clause 7.6.5.7A).
+         *
          * @public
          * @readonly
          */
         readonly d_CSI: OPTIONAL<D_CSI>,
         /**
          * @summary `t_CSI`.
+         * @description
+         *
+         * Terminating CAMEL services in the GMSC as defined in 3GPP TS 23.078
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7B).
+         *
          * @public
          * @readonly
          */
@@ -153,6 +172,11 @@ class CAMEL_SubscriptionInfo {
         readonly t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
         /**
          * @summary `vt_CSI`.
+         * @description
+         *
+         * Terminating CAMEL services in the VMSC as defined in 3GPP TS 23.078
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7C).
+         *
          * @public
          * @readonly
          */
@@ -177,6 +201,11 @@ class CAMEL_SubscriptionInfo {
         readonly tif_CSI_NotificationToCSE: OPTIONAL<NULL>,
         /**
          * @summary `gprs_CSI`.
+         * @description
+         *
+         * GPRS CAMEL services as defined in 3GPP TS 23.078 (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.77).
+         *
          * @public
          * @readonly
          */
@@ -231,6 +260,11 @@ class CAMEL_SubscriptionInfo {
         readonly mg_csi: OPTIONAL<MG_CSI>,
         /**
          * @summary `o_IM_CSI`.
+         * @description
+         *
+         * Originating IM CN CAMEL services as defined in 3GPP TS 23.278 (3GPP
+         * TS 29.002 V19.1.0 clause 7.6.5.7D).
+         *
          * @public
          * @readonly
          */
@@ -243,12 +277,22 @@ class CAMEL_SubscriptionInfo {
         readonly o_IM_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
         /**
          * @summary `d_IM_CSI`.
+         * @description
+         *
+         * Originating IM CN CAMEL dialled services as defined in 3GPP TS 23.278
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7E).
+         *
          * @public
          * @readonly
          */
         readonly d_IM_CSI: OPTIONAL<D_CSI>,
         /**
          * @summary `vt_IM_CSI`.
+         * @description
+         *
+         * Terminating IM CN CAMEL services as defined in 3GPP TS 23.278 (3GPP
+         * TS 29.002 V19.1.0 clause 7.6.5.7F).
+         *
          * @public
          * @readonly
          */

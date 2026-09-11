@@ -72,7 +72,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SendEndSignal_Res
  * @description
- * 
+ *
+ * MAP_SEND_END_SIGNAL result from MSC-A telling MSC-B that all resources for
+ * the call can be released (call released in MSC-A, or handed over/relocated
+ * from MSC-B).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.4.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -81,7 +81,13 @@ import { subsequentHandoverFailure } from "../MAP-Errors/subsequentHandoverFailu
 /**
  * @summary prepareSubsequentHandover
  * @description
- * 
+ *
+ * MAP_PREPARE_SUBSEQUENT_HANDOVER: MSC-B informs MSC-A (E-interface) that
+ * handover or relocation to MSC-A or a third MSC (MSC-B') is required.
+ * Confirmed. Typical path: MSC-B→MSC-A. Local opcode 69. Timer class `m` (15 s
+ * to 30 s). Distinctive errors: `unknownMSC`, `subsequentHandoverFailure`.
+ * (3GPP TS 29.002 V19.1.0 clauses 8.4.5.1, 17.1.2, 17.3.2.12 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,14 @@ import { TBCD_STRING, _decode_TBCD_STRING, _encode_TBCD_STRING } from "../MAP-Co
 /**
  * @summary IMEI
  * @description
- * 
+ *
+ * International Mobile Station Equipment Identity and Software Version Number
+ * (SVN) as in 3GPP TS 23.003. `TBCD-STRING` of 8 octets. If the SVN is not
+ * present the last octet shall contain digit 0 and a filler. If present, the
+ * SVN shall be in the last octet.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.3, 7.6.2.3a and 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

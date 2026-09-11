@@ -75,7 +75,11 @@ import { AdditionalDispatcherList, _decode_AdditionalDispatcherList, _encode_Add
 /**
  * @summary MT_ForwardSM_VGCS_Res
  * @description
- * 
+ *
+ * Result of MAP-MT-FORWARD-SM-FOR-VGCS. `additionalDispatcherList` shall be
+ * absent if dispatcherList is absent or contains fewer than 5 numbers (3GPP TS
+ * 29.002 V19.1.0 clauses 12.10 and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,30 +99,51 @@ class MT_ForwardSM_VGCS_Res {
     constructor (
         /**
          * @summary `sm_RP_UI`.
+         * @description
+         *
+         * Optional TPDU.
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_UI: OPTIONAL<SignalInfo>,
         /**
          * @summary `dispatcherList`.
+         * @description
+         *
+         * Up to 5 dispatcher ISDN addresses.
+         *
          * @public
          * @readonly
          */
         readonly dispatcherList: OPTIONAL<DispatcherList>,
         /**
          * @summary `ongoingCall`.
+         * @description
+         *
+         * Call is ongoing.
+         *
          * @public
          * @readonly
          */
         readonly ongoingCall: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalDispatcherList`.
+         * @description
+         *
+         * Absent if dispatcherList is absent or has fewer than 5 addresses
+         * (clause 17.7.6).
+         *
          * @public
          * @readonly
          */

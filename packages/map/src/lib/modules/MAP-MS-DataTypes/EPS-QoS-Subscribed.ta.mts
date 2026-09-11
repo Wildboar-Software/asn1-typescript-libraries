@@ -74,7 +74,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary EPS_QoS_Subscribed
  * @description
- * 
+ *
+ * Subscribed EPS QoS: QoS Class Identifier (values defined in 3GPP TS 29.212)
+ * and Allocation-Retention-Priority (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +95,22 @@ class EPS_QoS_Subscribed {
     constructor (
         /**
          * @summary `qos_Class_Identifier`.
+         * @description
+         *
+         * QoS Class Identifier; values are defined in 3GPP TS 29.212 (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos_Class_Identifier: QoS_Class_Identifier,
         /**
          * @summary `allocation_Retention_Priority`.
+         * @description
+         *
+         * EPS allocation/retention priority (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1).
+         *
          * @public
          * @readonly
          */

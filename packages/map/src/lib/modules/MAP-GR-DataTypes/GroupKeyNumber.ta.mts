@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GroupKeyNumber
  * @description
- * 
+ *
+ * INTEGER (0..15). Broadcast VK-Id; values 2–15 reserved (3GPP TS 29.002
+ * V19.1.0 clauses 10.4.3 and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

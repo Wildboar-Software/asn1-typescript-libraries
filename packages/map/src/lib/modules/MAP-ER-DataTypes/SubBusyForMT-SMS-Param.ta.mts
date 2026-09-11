@@ -73,6 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary SubBusyForMT_SMS_Param
  * @description
  * 
+ * Optional parameter of `subscriberBusyForMT-SMS`. If `gprsConnectionSuspended`
+ * is not understood it shall be discarded (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +99,11 @@ class SubBusyForMT_SMS_Param {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsConnectionSuspended`.
+         * @description
+         *
+         * If this component is not understood it shall be discarded (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.7).
+         *
          * @public
          * @readonly
          */

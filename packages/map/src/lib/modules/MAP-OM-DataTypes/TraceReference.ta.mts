@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TraceReference
  * @description
- * 
+ *
+ * OCTET STRING (1..2). GSM-only tracing as in 3GPP TS 52.008; managed by OMC/EM
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.2 and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -75,7 +75,13 @@ import { maxExt_GeographicalInformation } from "./maxExt-GeographicalInformation
 /**
  * @summary Ext_GeographicalInformation
  * @description
- * 
+ *
+ * 3GPP TS 23.032 shapes allowed: ellipsoid point with uncertainty
+ * circle/ellipse, with altitude and uncertainty ellipsoid, ellipsoid arc,
+ * ellipsoid point. Other type-of-shape invalid. One-octet value discarded if
+ * Add-GeographicalInformation is in the same message; otherwise invalid (3GPP
+ * TS 29.002 V19.1.0 clauses 7.6.11.11 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

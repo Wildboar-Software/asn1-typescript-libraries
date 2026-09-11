@@ -75,7 +75,11 @@ import { GenericServiceInfo, _decode_GenericServiceInfo, _encode_GenericServiceI
 /**
  * @summary InterrogateSS_Res
  * @description
- * 
+ *
+ * Result of MAP_INTERROGATE_SS: status, basic service list, forwarding
+ * features, or generic service info. MSC–VLR and VLR–HLR (3GPP TS 29.002
+ * V19.1.0 clauses 11.5 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

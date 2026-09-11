@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_NoRepCondTime
  * @description
- * 
+ *
+ * Extensible no-reply condition timer for call forwarding on no reply. Only
+ * values 5-30 are used. Values 1-4 shall be mapped to 5; values 31-100 shall be
+ * mapped to 30 (3GPP TS 29.002 V19.1.0 clauses 7.6.3.19 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

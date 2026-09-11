@@ -73,6 +73,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary NoGroupCallNbParam
  * @description
  * 
+ * Optional parameter of `noGroupCallNumberAvailable` (3GPP TS 29.002 V19.1.0
+ * clauses 10.4.3 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SM_RP_SMEA
  * @description
- * 
+ *
+ * OCTET STRING (1..12): 3GPP TS 23.040 address field (length, type-of-address,
+ * value) (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

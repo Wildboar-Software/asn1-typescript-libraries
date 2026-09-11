@@ -76,6 +76,17 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary subscriberBusyForMT_SMS
  * @description
  * 
+ * Returned when the mobile terminated short message transfer cannot be
+ * completed because another MT SM transfer is going on and the delivery node
+ * does not support message buffering; or another MT SM transfer is going on and
+ * it is not possible to buffer the message for later delivery; or the message
+ * was buffered but it is not possible to deliver the message before the expiry
+ * of the buffering time defined in 3GPP TS 23.040 (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
+ * Local code 31. Optional parameter `SubBusyForMT-SMS-Param` (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

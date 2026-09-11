@@ -72,7 +72,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MAP_AcceptInfo
  * @description
- * 
+ *
+ * User information when a MAP dialogue is accepted (MAP-OPEN Result indicates
+ * the peer accepts the dialogue). (3GPP TS 29.002 V19.1.0 clauses 7.3.1 and
+ * 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +94,10 @@ class MAP_AcceptInfo {
     constructor (
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+         *
          * @public
          * @readonly
          */

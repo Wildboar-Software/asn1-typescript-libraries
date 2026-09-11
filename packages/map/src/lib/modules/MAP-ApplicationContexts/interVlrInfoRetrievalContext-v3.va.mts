@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary interVlrInfoRetrievalContext_v3
  * @description
- * 
+ *
+ * Information retrieval between VLRs. Initiator is VLR; responder is VLR.
+ * Version 3; a v2 equivalent exists. The v1 equivalent uses `infoRetrieval`
+ * version 1 (3GPP TS 29.002 V19.1.0 clause 17.3.2.16).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

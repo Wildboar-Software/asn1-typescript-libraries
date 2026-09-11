@@ -74,7 +74,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary APN_ConfigurationProfile
  * @description
- * 
+ *
+ * Profile of APN-Configurations the subscriber has subscribed to, including the
+ * default context. If segmentation is used, `completeDataListIncluded` may only
+ * be present in the first segment. See 3GPP TS 29.272 for
+ * `additionalDefaultContext` (3GPP TS 29.002 V19.1.0 clauses 7.6.3.46A and
+ * 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -104,6 +110,11 @@ class APN_ConfigurationProfile {
         readonly defaultContext: ContextId,
         /**
          * @summary `completeDataListIncluded`.
+         * @description
+         *
+         * If segmentation is used, may only be present in the first segment
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -122,6 +133,10 @@ class APN_ConfigurationProfile {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalDefaultContext`.
+         * @description
+         *
+         * See 3GPP TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

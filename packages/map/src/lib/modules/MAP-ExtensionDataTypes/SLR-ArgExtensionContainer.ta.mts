@@ -73,7 +73,11 @@ import { SLR_Arg_PCS_Extensions, _decode_SLR_Arg_PCS_Extensions, _encode_SLR_Arg
 /**
  * @summary SLR_ArgExtensionContainer
  * @description
- * 
+ *
+ * Extension container specific to Subscriber Location Report argument, with
+ * `SLR-Arg-PCS-Extensions` in place of generic `PCS-Extensions` (3GPP TS 29.002
+ * V19.1.0 clauses 17.7.11 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +94,23 @@ class SLR_ArgExtensionContainer {
     constructor (
         /**
          * @summary `privateExtensionList`.
+         * @description
+         *
+         * Private extensions. Unsupported private extensions shall be discarded
+         * if received (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly privateExtensionList: OPTIONAL<PrivateExtensionList>,
         /**
          * @summary `slr_Arg_PCS_Extensions`.
+         * @description
+         *
+         * PCS extensions for Subscriber Location Report argument, including
+         * optional `na-ESRK-Request` (3GPP TS 29.002 V19.1.0 clauses 17.7.11
+         * and 7.6.11.19).
+         *
          * @public
          * @readonly
          */

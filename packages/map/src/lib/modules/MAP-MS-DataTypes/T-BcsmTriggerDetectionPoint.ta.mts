@@ -79,7 +79,12 @@ enum _enum_for_T_BcsmTriggerDetectionPoint {
 /**
  * @summary T_BcsmTriggerDetectionPoint
  * @description
- * 
+ *
+ * Terminating BCSM CAMEL TDP. For T-BcsmCamelTDPData with any other value than
+ * those listed, the receiver shall ignore the whole sequence.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

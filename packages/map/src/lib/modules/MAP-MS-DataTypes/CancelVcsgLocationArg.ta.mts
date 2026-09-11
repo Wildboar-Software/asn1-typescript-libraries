@@ -73,7 +73,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CancelVcsgLocationArg
  * @description
- * 
+ *
+ * Argument of MAP_CANCEL_VCSG_LOCATION. Used between CSS and VLR, and CSS and
+ * SGSN, to delete a roaming user record including CSG subscription data and the
+ * CSS number. Invoked on removal of CSG subscription data in CSS or of the MS
+ * registration, including registration without CSG data (3GPP TS 29.002 V19.1.0
+ * clause 8.1.10.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,6 +97,11 @@ class CancelVcsgLocationArg {
     constructor (
         /**
          * @summary `identity`.
+         * @description
+         *
+         * IMSI of the subscriber whose VCSG roaming record is to be deleted
+         * (3GPP TS 29.002 V19.1.0 clauses 8.1.10.3 and 7.6.2.1).
+         *
          * @public
          * @readonly
          */

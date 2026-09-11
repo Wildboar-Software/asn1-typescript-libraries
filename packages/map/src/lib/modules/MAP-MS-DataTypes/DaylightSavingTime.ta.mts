@@ -72,7 +72,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DaylightSavingTime
  * @description
- * 
+ *
+ * Daylight Saving Time (in steps of 1 hour) used to adjust for summertime the
+ * time zone of the location where the UE is attached in the visited network.
+ * Returned in MAP-ANY-TIME-INTERROGATION. See 3GPP TS 29.272 (3GPP TS 29.002
+ * V19.1.0 clauses 8.11.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,7 +100,12 @@ enum _enum_for_DaylightSavingTime {
 /**
  * @summary DaylightSavingTime
  * @description
- * 
+ *
+ * Daylight Saving Time (in steps of 1 hour) used to adjust for summertime the
+ * time zone of the location where the UE is attached in the visited network.
+ * Returned in MAP-ANY-TIME-INTERROGATION. See 3GPP TS 29.272 (3GPP TS 29.002
+ * V19.1.0 clauses 8.11.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -114,7 +124,12 @@ type DaylightSavingTime = _enum_for_DaylightSavingTime;
 /**
  * @summary DaylightSavingTime
  * @description
- * 
+ *
+ * Daylight Saving Time (in steps of 1 hour) used to adjust for summertime the
+ * time zone of the location where the UE is attached in the visited network.
+ * Returned in MAP-ANY-TIME-INTERROGATION. See 3GPP TS 29.272 (3GPP TS 29.002
+ * V19.1.0 clauses 8.11.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

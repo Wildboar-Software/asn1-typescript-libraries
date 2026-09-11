@@ -87,7 +87,13 @@ import { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP
 /**
  * @summary PDP_ContextInfo
  * @description
- * 
+ *
+ * Active or subscribed PDP context returned in subscriber-info enquiry (PS
+ * subscriber state). Nested QoS IEs (`qos2`/`qos3`/`qos4`) may be present only
+ * if the previous QoS IE of the same kind is present.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -149,102 +155,207 @@ class PDP_ContextInfo {
     constructor (
         /**
          * @summary `pdp_ContextIdentifier`.
+         * @description
+         *
+         * Identifies the PDP context.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.55).
+         *
          * @public
          * @readonly
          */
         readonly pdp_ContextIdentifier: ContextId,
         /**
          * @summary `pdp_ContextActive`.
+         * @description
+         *
+         * PDP context is currently active.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly pdp_ContextActive: OPTIONAL<NULL>,
         /**
          * @summary `pdp_Type`.
+         * @description
+         *
+         * PDP protocol type as in 3GPP TS 23.060 / 29.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.44).
+         *
          * @public
          * @readonly
          */
         readonly pdp_Type: PDP_Type,
         /**
          * @summary `pdp_Address`.
+         * @description
+         *
+         * PDP address as in 3GPP TS 23.060 / 29.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.45).
+         *
          * @public
          * @readonly
          */
         readonly pdp_Address: OPTIONAL<PDP_Address>,
         /**
          * @summary `apn_Subscribed`.
+         * @description
+         *
+         * Subscribed APN.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.42).
+         *
          * @public
          * @readonly
          */
         readonly apn_Subscribed: OPTIONAL<APN>,
         /**
          * @summary `apn_InUse`.
+         * @description
+         *
+         * APN currently in use.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.42).
+         *
          * @public
          * @readonly
          */
         readonly apn_InUse: OPTIONAL<APN>,
         /**
          * @summary `nsapi`.
+         * @description
+         *
+         * Network-layer Service Access Point Identifier.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly nsapi: OPTIONAL<NSAPI>,
         /**
          * @summary `transactionId`.
+         * @description
+         *
+         * Session-management transaction identifier value part (3GPP TS
+         * 24.008).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly transactionId: OPTIONAL<TransactionId>,
         /**
          * @summary `teid_ForGnAndGp`.
+         * @description
+         *
+         * GTP TEID for Gn/Gp.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly teid_ForGnAndGp: OPTIONAL<TEID>,
         /**
          * @summary `teid_ForIu`.
+         * @description
+         *
+         * GTP TEID for Iu.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly teid_ForIu: OPTIONAL<TEID>,
         /**
          * @summary `ggsn_Address`.
+         * @description
+         *
+         * IP address of a GGSN as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.40).
+         *
          * @public
          * @readonly
          */
         readonly ggsn_Address: OPTIONAL<GSN_Address>,
         /**
          * @summary `qos_Subscribed`.
+         * @description
+         *
+         * Subscribed QoS for the PDP context, as in 3GPP TS 23.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.47).
+         *
          * @public
          * @readonly
          */
         readonly qos_Subscribed: OPTIONAL<Ext_QoS_Subscribed>,
         /**
          * @summary `qos_Requested`.
+         * @description
+         *
+         * Requested QoS. `qos2`/`qos3`/`qos4-Requested` may be present only if
+         * this and the previous extension are present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos_Requested: OPTIONAL<Ext_QoS_Subscribed>,
         /**
          * @summary `qos_Negotiated`.
+         * @description
+         *
+         * Negotiated QoS. `qos2`/`qos3`/`qos4-Negotiated` may be present only
+         * if this and the previous extension are present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos_Negotiated: OPTIONAL<Ext_QoS_Subscribed>,
         /**
          * @summary `chargingId`.
+         * @description
+         *
+         * GPRS charging identifier.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly chargingId: OPTIONAL<GPRSChargingID>,
         /**
          * @summary `chargingCharacteristics`.
+         * @description
+         *
+         * Charging characteristics of this PDP context.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.55).
+         *
          * @public
          * @readonly
          */
         readonly chargingCharacteristics: OPTIONAL<ChargingCharacteristics>,
         /**
          * @summary `rnc_Address`.
+         * @description
+         *
+         * Address of the RNC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -257,66 +368,143 @@ class PDP_ContextInfo {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `qos2_Subscribed`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos2_Subscribed: OPTIONAL<Ext2_QoS_Subscribed>,
         /**
          * @summary `qos2_Requested`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos2_Requested: OPTIONAL<Ext2_QoS_Subscribed>,
         /**
          * @summary `qos2_Negotiated`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos2_Negotiated: OPTIONAL<Ext2_QoS_Subscribed>,
         /**
          * @summary `qos3_Subscribed`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos3_Subscribed: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary `qos3_Requested`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos3_Requested: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary `qos3_Negotiated`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos3_Negotiated: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary `qos4_Subscribed`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos4_Subscribed: OPTIONAL<Ext4_QoS_Subscribed>,
         /**
          * @summary `qos4_Requested`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos4_Requested: OPTIONAL<Ext4_QoS_Subscribed>,
         /**
          * @summary `qos4_Negotiated`.
+         * @description
+         *
+         * Nested QoS extension; present only if the previous QoS IE of the same
+         * kind is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly qos4_Negotiated: OPTIONAL<Ext4_QoS_Subscribed>,
         /**
          * @summary `ext_pdp_Type`.
+         * @description
+         *
+         * IPv4v6 PDP type (3GPP TS 29.060) if dual-stack UEs can access the
+         * PDP.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ext_pdp_Type: OPTIONAL<Ext_PDP_Type>,
         /**
          * @summary `ext_pdp_Address`.
+         * @description
+         *
+         * Additional IP address for dual-stack static assignment. Present only
+         * if `pdp-Address` is present; different address types.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.45A and 17.7.1).
+         *
          * @public
          * @readonly
          */

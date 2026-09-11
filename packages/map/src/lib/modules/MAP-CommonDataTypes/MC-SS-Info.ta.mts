@@ -76,7 +76,14 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MC_SS_Info
  * @description
- * 
+ *
+ * Multicall (MC) supplementary-service information: SS-Code, SS-Status, and
+ * bearer counts (`MaxMC-Bearers` / `MC-Bearers`). Multicall Bearer Information
+ * is the number of simultaneous bearers supported per user by the serving
+ * network.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8, 7.6.2.52 and 7.6.4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,30 +103,54 @@ class MC_SS_Info {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the Multicall supplementary service. (3GPP TS 29.002
+         * V19.1.0 clause 7.6.4.1).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * State of the Multicall SS as in 3GPP TS 23.011. (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.17).
+         *
          * @public
          * @readonly
          */
         readonly ss_Status: Ext_SS_Status,
         /**
          * @summary `nbrSB`.
+         * @description
+         *
+         * Maximum number of multicall bearers (2..7). (3GPP TS 29.002 V19.1.0
+         * clause 17.7.8).
+         *
          * @public
          * @readonly
          */
         readonly nbrSB: MaxMC_Bearers,
         /**
          * @summary `nbrUser`.
+         * @description
+         *
+         * Number of multicall bearers for the user (1..7). (3GPP TS 29.002
+         * V19.1.0 clauses 17.7.8 and 7.6.2.52).
+         *
          * @public
          * @readonly
          */
         readonly nbrUser: MC_Bearers,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+         *
          * @public
          * @readonly
          */

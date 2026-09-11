@@ -72,7 +72,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TBCD_STRING
  * @description
- * 
+ *
+ * Telephony Binary Coded Decimal String: digits 0-9, `*`, `#`, a, b, c; two
+ * digits per octet. Digit encodings: 0000-1001 (0-9), 1010 (`*`), 1011 (`#`),
+ * 1100 (a), 1101 (b), 1110 (c). 1111 is filler when there is an odd number of
+ * digits.
+ *
+ * Bits 4321 of octet n encode digit 2(n-1)+1 (the earlier digit of the pair).
+ * Bits 8765 of octet n encode digit 2n (the later digit).
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

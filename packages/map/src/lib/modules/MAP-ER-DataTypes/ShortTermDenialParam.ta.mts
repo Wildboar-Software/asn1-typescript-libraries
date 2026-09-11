@@ -73,6 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ShortTermDenialParam
  * @description
  * 
+ * Optional parameter of `shortTermDenial`. Supplementary-service errors are
+ * defined in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

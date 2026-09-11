@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CommonComponentId
  * @description
- * 
+ *
+ * INTEGER (0..9) used as an OID arc selector under `gsm-NetworkId` (`ac-Id`,
+ * `as-Id`, `ase-Id`, `moduleId`, `er-Id`) in `MobileDomainDefinitions` (3GPP TS
+ * 29.002 V19.1.0 clause 17.1.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -85,7 +85,16 @@ import { absentSubscriberSM } from "../MAP-Errors/absentSubscriberSM.oa.mjs";
 /**
  * @summary sendRoutingInfoForSM
  * @description
- * 
+ *
+ * MAP_SEND_ROUTING_INFO_FOR_SM: GMSC retrieves routing information from the HLR
+ * to route an SM to the serving MSC or MME (not both), or SGSN, or (T4-device
+ * triggering via IMS) IP-SM-GW, or SMSF. Also GMSC↔SMS Router↔HLR to enforce
+ * delivery via the receiving MS HPLMN, and HLR↔IP-SM-GW for MT-SM via IMS
+ * (other than T4). Also used with an IWF on S6c. Confirmed. Typical path:
+ * GMSC→HLR. Local opcode 45. Timer class `m` (15 s to 30 s). Distinctive error:
+ * `absentSubscriberSM`. (3GPP TS 29.002 V19.1.0 clauses 12.1.1, 17.1.2,
+ * 17.3.2.21 and 17.6.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -79,7 +79,10 @@ enum _enum_for_CallOutcome {
 /**
  * @summary CallOutcome
  * @description
- * 
+ *
+ * 3–10 map to success; 11–20 to failure; >20 to busy (3GPP TS 29.002 V19.1.0
+ * clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +100,10 @@ type CallOutcome = _enum_for_CallOutcome | ENUMERATED;
 
 /**
  * @summary CallOutcome_success
+ * @description
+ *
+ * `success (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +112,10 @@ const CallOutcome_success: CallOutcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
+ * @description
+ *
+ * `success (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +124,10 @@ const success: CallOutcome = CallOutcome_success; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary CallOutcome_failure
+ * @description
+ *
+ * `failure (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +136,10 @@ const CallOutcome_failure: CallOutcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
+ * @description
+ *
+ * `failure (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +148,10 @@ const failure: CallOutcome = CallOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary CallOutcome_busy
+ * @description
+ *
+ * `busy (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +160,10 @@ const CallOutcome_busy: CallOutcome = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
+ * @description
+ *
+ * `busy (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */

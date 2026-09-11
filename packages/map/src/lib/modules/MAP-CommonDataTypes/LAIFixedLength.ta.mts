@@ -73,7 +73,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LAIFixedLength
  * @description
- * 
+ *
+ * Location Area Identification as in 3GPP TS 23.003. Size 5 octets.
+ *
+ * - octet 1 bits 4321: MCC 1st digit; bits 8765: MCC 2nd digit
+ * - octet 2 bits 4321: MCC 3rd digit; bits 8765: MNC 3rd digit or filler 1111
+ *   for 2-digit MNCs
+ * - octet 3 bits 4321: MNC 1st digit; bits 8765: MNC 2nd digit
+ * - octets 4-5: Location Area Code as in 3GPP TS 24.008
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

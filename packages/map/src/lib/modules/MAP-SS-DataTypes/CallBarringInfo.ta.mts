@@ -73,7 +73,10 @@ import { CallBarringFeatureList, _decode_CallBarringFeatureList, _encode_CallBar
 /**
  * @summary CallBarringInfo
  * @description
- * 
+ *
+ * Call-barring SS-Code plus features per Basic Service Group (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.4.18 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class CallBarringInfo {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the call barring service (clause 7.6.4.1).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: OPTIONAL<SS_Code>,
         /**
          * @summary `callBarringFeatureList`.
+         * @description
+         *
+         * One item per Basic Service Group (clause 7.6.4.18).
+         *
          * @public
          * @readonly
          */

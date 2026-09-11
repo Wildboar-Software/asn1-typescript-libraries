@@ -87,7 +87,15 @@ enum _enum_for_AccessType {
 /**
  * @summary AccessType
  * @description
- * 
+ *
+ * Indicates whether authentication was initiated due to a call, emergency call,
+ * location updating, supplementary service, short message, GPRS attach, routing
+ * area updating, service request, PDP context activation or deactivation, or
+ * GPRS detach (3GPP TS 29.002 V19.1.0 clause 7.6.7.11).
+ *
+ * Exception handling: received values greater than 10 shall be ignored (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -74,7 +74,9 @@ import { LCS_FormatIndicator, _enum_for_LCS_FormatIndicator, LCS_FormatIndicator
 /**
  * @summary LCSRequestorID
  * @description
- * 
+ *
+ * Requestor identity (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +94,30 @@ class LCSRequestorID {
     constructor (
         /**
          * @summary `dataCodingScheme`.
+         * @description
+         *
+         * USSD DCS.
+         *
          * @public
          * @readonly
          */
         readonly dataCodingScheme: USSD_DataCodingScheme,
         /**
          * @summary `requestorIDString`.
+         * @description
+         *
+         * Requestor ID string, 1..63.
+         *
          * @public
          * @readonly
          */
         readonly requestorIDString: RequestorIDString,
         /**
          * @summary `lcs_FormatIndicator`.
+         * @description
+         *
+         * Format of the requestor ID.
+         *
          * @public
          * @readonly
          */

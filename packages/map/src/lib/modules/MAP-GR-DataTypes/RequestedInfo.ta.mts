@@ -78,7 +78,11 @@ enum _enum_for_RequestedInfo {
 /**
  * @summary RequestedInfo
  * @description
- * 
+ *
+ * Info requested in MAP_SEND_GROUP_CALL_INFO. Unrecognized values shall be
+ * rejected with unexpected data value (3GPP TS 29.002 V19.1.0 clauses 10.7A.3
+ * and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +99,11 @@ type RequestedInfo = _enum_for_RequestedInfo | ENUMERATED;
 
 /**
  * @summary RequestedInfo_anchorMSC_AddressAndASCI_CallReference
+ * @description
+ *
+ * `anchorMSC-AddressAndASCI-CallReference (0)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.12).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +112,11 @@ const RequestedInfo_anchorMSC_AddressAndASCI_CallReference: RequestedInfo = 0; /
 
 /**
  * @summary anchorMSC_AddressAndASCI_CallReference
+ * @description
+ *
+ * `anchorMSC-AddressAndASCI-CallReference (0)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.12).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +125,11 @@ const anchorMSC_AddressAndASCI_CallReference: RequestedInfo = RequestedInfo_anch
 
 /**
  * @summary RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription
+ * @description
+ *
+ * `imsiAndAdditionalInfoAndAdditionalSubscription (1)` (3GPP TS 29.002 V19.1.0
+ * clause 17.7.12).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +138,11 @@ const RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription: RequestedInf
 
 /**
  * @summary imsiAndAdditionalInfoAndAdditionalSubscription
+ * @description
+ *
+ * `imsiAndAdditionalInfoAndAdditionalSubscription (1)` (3GPP TS 29.002 V19.1.0
+ * clause 17.7.12).
+ *
  * @constant
  * @type {number}
  */

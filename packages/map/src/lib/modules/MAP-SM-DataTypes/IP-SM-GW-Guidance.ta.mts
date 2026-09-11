@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary IP_SM_GW_Guidance
  * @description
- * 
+ *
+ * Minimum and recommended SM delivery timer values from IP-SM-GW (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,18 +94,30 @@ class IP_SM_GW_Guidance {
     constructor (
         /**
          * @summary `minimumDeliveryTimeValue`.
+         * @description
+         *
+         * Minimum SM-DeliveryTimerValue (30..600).
+         *
          * @public
          * @readonly
          */
         readonly minimumDeliveryTimeValue: SM_DeliveryTimerValue,
         /**
          * @summary `recommendedDeliveryTimeValue`.
+         * @description
+         *
+         * Recommended SM-DeliveryTimerValue (30..600).
+         *
          * @public
          * @readonly
          */
         readonly recommendedDeliveryTimeValue: SM_DeliveryTimerValue,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

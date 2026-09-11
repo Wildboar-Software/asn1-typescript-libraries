@@ -73,7 +73,9 @@ import { CamelRoutingInfo, _decode_CamelRoutingInfo, _encode_CamelRoutingInfo } 
 /**
  * @summary ExtendedRoutingInfo
  * @description
- * 
+ *
+ * RoutingInfo or CAMEL routing info (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

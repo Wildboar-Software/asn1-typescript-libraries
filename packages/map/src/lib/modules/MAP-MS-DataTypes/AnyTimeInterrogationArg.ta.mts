@@ -75,7 +75,14 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary AnyTimeInterrogationArg
  * @description
- * 
+ *
+ * Argument of MAP-ANY-TIME-INTERROGATION. Used by the gsmSCF to request
+ * subscriber state, location, time zone or T-ADS data from the HLR, location
+ * from the GMLC, or MNP information from the NPLR; also used by the Presence
+ * Network Agent toward the HLR (see 3GPP TS 23.141). The HLR or GMLC may screen
+ * using gsmSCF-Address. Parameter presence is specified in 3GPP TS 23.018 and
+ * TS 23.078 (3GPP TS 29.002 V19.1.0 clauses 8.11.1.1 and 8.11.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,18 +101,37 @@ class AnyTimeInterrogationArg {
     constructor (
         /**
          * @summary `subscriberIdentity`.
+         * @description
+         *
+         * IMSI or MSISDN identifying the subscriber. One of IMSI and MSISDN is
+         * used according to 3GPP TS 23.018 / TS 23.078 (3GPP TS 29.002 V19.1.0
+         * clauses 8.11.1.2 and 7.6.2).
+         *
          * @public
          * @readonly
          */
         readonly subscriberIdentity: SubscriberIdentity,
         /**
          * @summary `requestedInfo`.
+         * @description
+         *
+         * Information requested (state, location, T-ADS data, MNP, etc.). When
+         * used to the HLR, subscriber state, location, Time Zone or T-ADS data
+         * may be requested; to the GMLC only location; to the NPLR only MNP
+         * information (3GPP TS 29.002 V19.1.0 clauses 8.11.1.1 and 7.6.3.31).
+         *
          * @public
          * @readonly
          */
         readonly requestedInfo: RequestedInfo,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * Address of the interrogating gsmSCF (international E.164). The HLR or
+         * GMLC may use it to screen the request. gsmSCF-Address is mandatory
+         * (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2, 8.11.1.3 and 7.6.2.58).
+         *
          * @public
          * @readonly
          */

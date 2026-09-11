@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UUI
  * @description
- * 
+ *
+ * OCTET STRING (1..131) coded according to ETS 300 356 (3GPP TS 29.002 V19.1.0
+ * clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

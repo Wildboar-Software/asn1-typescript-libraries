@@ -75,7 +75,13 @@ import { maxNumOfBasicServices } from "./maxNumOfBasicServices.va.mjs";
 /**
  * @summary BasicServiceList
  * @description
- * 
+ *
+ * List of extensible basic service parameters used when one, several or all
+ * basic services are withdrawn. If the VLR or SGSN receives an unsupported
+ * value it shall ignore that value. Used by the VLR and SGSN; if the IWF
+ * receives it, it shall ignore it. Not applicable for the CSS (3GPP TS 29.002
+ * V19.1.0 clauses 8.8.2.3 and 7.6.3.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

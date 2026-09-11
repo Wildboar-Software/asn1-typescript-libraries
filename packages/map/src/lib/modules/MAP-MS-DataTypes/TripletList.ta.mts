@@ -73,7 +73,11 @@ import { AuthenticationTriplet, _decode_AuthenticationTriplet, _encode_Authentic
 /**
  * @summary TripletList
  * @description
- * 
+ *
+ * One to five GSM authentication triplets (RAND, SRES, Kc).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.7.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -74,6 +74,10 @@ import { ExtensibleCallBarredParam, _decode_ExtensibleCallBarredParam, _encode_E
  * @summary CallBarredParam
  * @description
  * 
+ * Parameter of `callBarred`. Alternative `callBarringCause` must not be used in
+ * version 3 and higher; `extensibleCallBarredParam` must not be used in version
+ * <3 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

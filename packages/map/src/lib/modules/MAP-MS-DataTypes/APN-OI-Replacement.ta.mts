@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary APN_OI_Replacement
  * @description
- * 
+ *
+ * APN Operator Identifier replacement, coded as an APN Operator Identifier
+ * according to 3GPP TS 23.003. UE-level replacement appears in GPRS/EPS
+ * subscription data; APN-level replacement in a PDP-Context or
+ * APN-Configuration has higher priority (3GPP TS 29.002 V19.1.0 clauses 17.7.1
+ * and 7.6.2.42).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

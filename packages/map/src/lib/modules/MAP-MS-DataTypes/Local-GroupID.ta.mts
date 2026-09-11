@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Local_GroupID
  * @description
- * 
+ *
+ * Local group ID defined by an operator identified by the PLMN-ID (SIZE 1..10).
+ * Details in 3GPP TS 29.272. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.102 and
+ * 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

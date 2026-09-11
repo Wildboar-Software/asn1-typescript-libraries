@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TMSI
  * @description
- * 
+ *
+ * Temporary Mobile Subscriber Identity as in 3GPP TS 23.003. Size 1..4 octets.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.2 and 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

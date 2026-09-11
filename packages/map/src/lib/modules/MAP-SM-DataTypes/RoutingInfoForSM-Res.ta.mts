@@ -75,7 +75,10 @@ import { IP_SM_GW_Guidance, _decode_IP_SM_GW_Guidance, _encode_IP_SM_GW_Guidance
 /**
  * @summary RoutingInfoForSM_Res
  * @description
- * 
+ *
+ * Result of MAP-SEND-ROUTING-INFO-FOR-SM (3GPP TS 29.002 V19.1.0 clauses 12.1
+ * and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,24 +97,40 @@ class RoutingInfoForSM_Res {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Subscriber IMSI.
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `locationInfoWithLMSI`.
+         * @description
+         *
+         * Serving node number(s) and optional LMSI.
+         *
          * @public
          * @readonly
          */
         readonly locationInfoWithLMSI: LocationInfoWithLMSI,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ip_sm_gwGuidance`.
+         * @description
+         *
+         * IP-SM-GW delivery timer guidance.
+         *
          * @public
          * @readonly
          */

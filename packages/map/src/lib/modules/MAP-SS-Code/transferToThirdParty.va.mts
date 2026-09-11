@@ -72,7 +72,11 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
 /**
  * @summary transferToThirdParty
  * @description
- * 
+ *
+ * Allow an MS to request transfer of its location to another LCS client.
+ * Specific service. Bit pattern `'11000011'B`. Transfer to Third Party MO-LR
+ * class (3GPP TS 29.002 V19.1.0 clauses 7.6.4.45 and 17.7.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -75,7 +75,10 @@ import { maxNumOfCamelDestinationNumbers } from "./maxNumOfCamelDestinationNumbe
 /**
  * @summary DestinationNumberList
  * @description
- * 
+ *
+ * CAMEL dialled-number list. The receiving entity shall not check the format of
+ * a number in the list (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

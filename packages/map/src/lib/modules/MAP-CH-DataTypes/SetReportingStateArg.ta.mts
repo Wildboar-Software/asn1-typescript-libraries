@@ -75,7 +75,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SetReportingStateArg
  * @description
- * 
+ *
+ * Argument of MAP_SET_REPORTING_STATE: HLR to VLR (3GPP TS 29.002 V19.1.0
+ * clauses 10.10 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,24 +97,40 @@ class SetReportingStateArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Subscriber IMSI.
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `lmsi`.
+         * @description
+         *
+         * LMSI.
+         *
          * @public
          * @readonly
          */
         readonly lmsi: OPTIONAL<LMSI>,
         /**
          * @summary `ccbs_Monitoring`.
+         * @description
+         *
+         * Start or stop CCBS monitoring.
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Monitoring: OPTIONAL<ReportingState>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

@@ -73,7 +73,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_TeleserviceCode
  * @description
- * 
+ *
+ * Identifies a single teleservice, a group of teleservices, or all
+ * teleservices, as defined in 3GPP TS 22.003. Used only for subscriber profile
+ * management. Includes all values defined for `TeleserviceCode` (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.4 and 17.7.9).
+ *
+ * Octet 1 has the same layout as `TeleserviceCode`. Octets 2-5 are reserved for
+ * future use; if received they shall be treated according to the exception
+ * handling defined for the operation that uses this type.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

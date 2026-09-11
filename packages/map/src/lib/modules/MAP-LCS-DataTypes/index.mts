@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-LCS-DataTypes`.
+ * ASN.1 module `MAP-LCS-DataTypes` (clause 17.7.13). Types for routing info for
+ * LCS, provide subscriber location, and subscriber location report (3GPP TS
+ * 29.002 V19.1.0 clauses 17.7.13, 7.6.11 and 13A).
  */
 export * from "./AccuracyFulfilmentIndicator.ta.mjs";
 export * from "./Add-GeographicalInformation.ta.mjs";

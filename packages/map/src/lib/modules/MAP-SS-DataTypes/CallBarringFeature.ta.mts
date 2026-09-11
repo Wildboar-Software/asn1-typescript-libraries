@@ -73,7 +73,10 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
 /**
  * @summary CallBarringFeature
  * @description
- * 
+ *
+ * Call barring status for one Basic Service Group (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.4.19 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class CallBarringFeature {
     constructor (
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Basic Service Group (clause 7.6.4.40).
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<BasicServiceCode>,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS-Status (clause 7.6.4.2).
+         *
          * @public
          * @readonly
          */

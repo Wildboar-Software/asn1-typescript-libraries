@@ -72,7 +72,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ProtocolId
  * @description
- * 
+ *
+ * Protocol to which the associated External Signal Information conforms.
+ * Defined values: 04.08 (`gsm-0408`), 08.06 (`gsm-0806`), and ETS 300 102-1 /
+ * EDSS1 (`ets-300102-1`). Value 3 (`gsm-BSSMAP`) is reserved and must not be
+ * used.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,7 +104,14 @@ enum _enum_for_ProtocolId {
 /**
  * @summary ProtocolId
  * @description
- * 
+ *
+ * Protocol to which the associated External Signal Information conforms.
+ * Defined values: 04.08 (`gsm-0408`), 08.06 (`gsm-0806`), and ETS 300 102-1 /
+ * EDSS1 (`ets-300102-1`). Value 3 (`gsm-BSSMAP`) is reserved and must not be
+ * used.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -117,7 +131,14 @@ type ProtocolId = _enum_for_ProtocolId;
 /**
  * @summary ProtocolId
  * @description
- * 
+ *
+ * Protocol to which the associated External Signal Information conforms.
+ * Defined values: 04.08 (`gsm-0408`), 08.06 (`gsm-0806`), and ETS 300 102-1 /
+ * EDSS1 (`ets-300102-1`). Value 3 (`gsm-BSSMAP`) is reserved and must not be
+ * used.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -136,6 +157,11 @@ const ProtocolId = _enum_for_ProtocolId;
 
 /**
  * @summary ProtocolId_gsm_0408
+ * @description
+ *
+ * 04.08 protocol (value 1). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.7).
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +170,11 @@ const ProtocolId_gsm_0408: ProtocolId = ProtocolId.gsm_0408; /* LONG_NAMED_ENUME
 
 /**
  * @summary gsm_0408
+ * @description
+ *
+ * 04.08 protocol (value 1). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.7).
+ *
  * @constant
  * @type {number}
  */
@@ -152,6 +183,11 @@ const gsm_0408: ProtocolId = ProtocolId.gsm_0408; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary ProtocolId_gsm_0806
+ * @description
+ *
+ * 08.06 protocol (value 2). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.7).
+ *
  * @constant
  * @type {number}
  */
@@ -160,6 +196,11 @@ const ProtocolId_gsm_0806: ProtocolId = ProtocolId.gsm_0806; /* LONG_NAMED_ENUME
 
 /**
  * @summary gsm_0806
+ * @description
+ *
+ * 08.06 protocol (value 2). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.7).
+ *
  * @constant
  * @type {number}
  */
@@ -168,6 +209,10 @@ const gsm_0806: ProtocolId = ProtocolId.gsm_0806; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary ProtocolId_gsm_BSSMAP
+ * @description
+ *
+ * Reserved; must not be used (value 3). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -176,6 +221,10 @@ const ProtocolId_gsm_BSSMAP: ProtocolId = ProtocolId.gsm_BSSMAP; /* LONG_NAMED_E
 
 /**
  * @summary gsm_BSSMAP
+ * @description
+ *
+ * Reserved; must not be used (value 3). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -184,6 +233,11 @@ const gsm_BSSMAP: ProtocolId = ProtocolId.gsm_BSSMAP; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary ProtocolId_ets_300102_1
+ * @description
+ *
+ * ETS 300 102-1 (EDSS1) (value 4). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.7).
+ *
  * @constant
  * @type {number}
  */
@@ -192,6 +246,11 @@ const ProtocolId_ets_300102_1: ProtocolId = ProtocolId.ets_300102_1; /* LONG_NAM
 
 /**
  * @summary ets_300102_1
+ * @description
+ *
+ * ETS 300 102-1 (EDSS1) (value 4). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+ * 7.6.9.7).
+ *
  * @constant
  * @type {number}
  */

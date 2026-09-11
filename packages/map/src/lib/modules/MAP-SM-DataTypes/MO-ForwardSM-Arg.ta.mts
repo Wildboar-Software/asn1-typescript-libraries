@@ -78,7 +78,10 @@ import { SM_DeliveryOutcome, _enum_for_SM_DeliveryOutcome, SM_DeliveryOutcome_me
 /**
  * @summary MO_ForwardSM_Arg
  * @description
- * 
+ *
+ * Argument of MAP-MO-FORWARD-SHORT-MESSAGE: serving MSC, SGSN or IP-SM-GW to
+ * SMS-IWMSC (3GPP TS 29.002 V19.1.0 clauses 12.2 and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,42 +104,70 @@ class MO_ForwardSM_Arg {
     constructor (
         /**
          * @summary `sm_RP_DA`.
+         * @description
+         *
+         * Destination address (IMSI, LMSI, SC or none).
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_DA: SM_RP_DA,
         /**
          * @summary `sm_RP_OA`.
+         * @description
+         *
+         * Originating address (MSISDN, SC or none).
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_OA: SM_RP_OA,
         /**
          * @summary `sm_RP_UI`.
+         * @description
+         *
+         * Short message TPDU (SignalInfo).
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_UI: SignalInfo,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Subscriber IMSI if present.
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `correlationID`.
+         * @description
+         *
+         * HLR / SIP URI correlation.
+         *
          * @public
          * @readonly
          */
         readonly correlationID: OPTIONAL<CorrelationID>,
         /**
          * @summary `sm_DeliveryOutcome`.
+         * @description
+         *
+         * Delivery outcome when reporting via this operation.
+         *
          * @public
          * @readonly
          */

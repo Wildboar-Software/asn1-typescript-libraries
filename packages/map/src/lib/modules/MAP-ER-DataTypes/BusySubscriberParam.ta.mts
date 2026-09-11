@@ -73,6 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary BusySubscriberParam
  * @description
  * 
+ * Optional parameter of `busySubscriber`. May indicate that the subscriber was
+ * busy due to CCBS and that CCBS is possible (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,12 +100,22 @@ class BusySubscriberParam {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ccbs_Possible`.
+         * @description
+         *
+         * Subscriber busy due to CCBS and CCBS is possible (3GPP TS 29.002
+         * V19.1.0 clause 7.6.1.4).
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Possible: OPTIONAL<NULL>,
         /**
          * @summary `ccbs_Busy`.
+         * @description
+         *
+         * CCBS-busy qualifier on `busySubscriber` (3GPP TS 29.002 V19.1.0
+         * clause 17.7.7).
+         *
          * @public
          * @readonly
          */

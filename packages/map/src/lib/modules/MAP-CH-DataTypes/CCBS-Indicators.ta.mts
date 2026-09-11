@@ -72,7 +72,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CCBS_Indicators
  * @description
- * 
+ *
+ * CCBS possible and keep-CCBS-call (3GPP TS 23.093) (3GPP TS 29.002 V19.1.0
+ * clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,18 +93,30 @@ class CCBS_Indicators {
     constructor (
         /**
          * @summary `ccbs_Possible`.
+         * @description
+         *
+         * See 3GPP TS 23.093 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Possible: OPTIONAL<NULL>,
         /**
          * @summary `keepCCBS_CallIndicator`.
+         * @description
+         *
+         * See 3GPP TS 23.093 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly keepCCBS_CallIndicator: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

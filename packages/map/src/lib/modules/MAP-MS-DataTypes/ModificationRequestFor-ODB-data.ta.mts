@@ -74,7 +74,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ModificationRequestFor_ODB_data
  * @description
- * 
+ *
+ * CSE request to modify operator determined barring data in
+ * MAP_ANY_TIME_MODIFICATION. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.81a, 8.11.4,
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +96,22 @@ class ModificationRequestFor_ODB_data {
     constructor (
         /**
          * @summary `odb_data`.
+         * @description
+         *
+         * ODB data to be modified by the CSE. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.81a)
+         *
          * @public
          * @readonly
          */
         readonly odb_data: OPTIONAL<ODB_Data>,
         /**
          * @summary `modifyNotificationToCSE`.
+         * @description
+         *
+         * Activate or deactivate notification to the CSE for ODB data. (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.3.81a)
+         *
          * @public
          * @readonly
          */

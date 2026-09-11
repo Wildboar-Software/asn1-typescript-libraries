@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ODB_Info
  * @description
- * 
+ *
+ * ODB data plus Notification to CSE flag, used toward the gsmSCF. (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.88 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +94,21 @@ class ODB_Info {
     constructor (
         /**
          * @summary `odb_Data`.
+         * @description
+         *
+         * ODB general and optional HPLMN-specific data. (3GPP TS 29.002 V19.1.0
+         * clause 7.6.3.85)
+         *
          * @public
          * @readonly
          */
         readonly odb_Data: ODB_Data,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Notification-to-CSE flag. (3GPP TS 29.002 V19.1.0 clause 7.6.3.88)
+         *
          * @public
          * @readonly
          */

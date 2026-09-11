@@ -74,6 +74,9 @@ import { UnknownSubscriberDiagnostic, _enum_for_UnknownSubscriberDiagnostic, Unk
  * @summary UnknownSubscriberParam
  * @description
  * 
+ * Optional parameter of `unknownSubscriber`. Must not be used in version <3
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,6 +99,11 @@ class UnknownSubscriberParam {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `unknownSubscriberDiagnostic`.
+         * @description
+         *
+         * Further diagnostic. Unknown values shall be discarded (3GPP TS 29.002
+         * V19.1.0 clause 17.7.7).
+         *
          * @public
          * @readonly
          */

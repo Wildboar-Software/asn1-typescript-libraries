@@ -75,7 +75,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary StatusReportArg
  * @description
- * 
+ *
+ * Argument of MAP_STATUS_REPORT: VLR to HLR (3GPP TS 29.002 V19.1.0 clauses
+ * 10.11 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,24 +97,40 @@ class StatusReportArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Subscriber IMSI.
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `eventReportData`.
+         * @description
+         *
+         * CCBS subscriber status event.
+         *
          * @public
          * @readonly
          */
         readonly eventReportData: OPTIONAL<EventReportData>,
         /**
          * @summary `callReportdata`.
+         * @description
+         *
+         * Call monitoring outcome.
+         *
          * @public
          * @readonly
          */
         readonly callReportdata: OPTIONAL<CallReportData>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

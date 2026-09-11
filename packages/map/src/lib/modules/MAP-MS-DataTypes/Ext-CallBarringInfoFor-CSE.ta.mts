@@ -76,7 +76,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary Ext_CallBarringInfoFor_CSE
  * @description
- * 
+ *
+ * Call barring information for CSE: SS-Code, feature list, password,
+ * wrong-password-attempt counter and notification-to-CSE flag (3GPP TS 29.002
+ * V19.1.0 clause 7.6.3.79).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,30 +101,53 @@ class Ext_CallBarringInfoFor_CSE {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the call barring service (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.79).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `callBarringFeatureList`.
+         * @description
+         *
+         * Extensible call barring features, one item per Basic Service Group
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
+         *
          * @public
          * @readonly
          */
         readonly callBarringFeatureList: Ext_CallBarFeatureList,
         /**
          * @summary `password`.
+         * @description
+         *
+         * Call barring password (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
+         *
          * @public
          * @readonly
          */
         readonly password: OPTIONAL<Password>,
         /**
          * @summary `wrongPasswordAttemptsCounter`.
+         * @description
+         *
+         * Wrong password attempt counter (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.79).
+         *
          * @public
          * @readonly
          */
         readonly wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Notification-to-CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.79).
+         *
          * @public
          * @readonly
          */

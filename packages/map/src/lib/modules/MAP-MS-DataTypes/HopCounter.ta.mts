@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary HopCounter
  * @description
- * 
+ *
+ * Loop-prevention counter for MAP_SEND_IDENTIFICATION. Use is specified in 3GPP
+ * TS 23.012. (3GPP TS 29.002 V19.1.0 clauses 8.1.4.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

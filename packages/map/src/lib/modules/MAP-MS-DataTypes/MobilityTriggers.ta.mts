@@ -75,7 +75,10 @@ import { maxNumOfMobilityTriggers } from "./maxNumOfMobilityTriggers.va.mjs";
 /**
  * @summary MobilityTriggers
  * @description
- * 
+ *
+ * MM events (MM-Code values) that trigger reporting under M-CSI or MG-CSI (SIZE
+ * 1..10). (3GPP TS 29.002 V19.1.0 clauses 8.1.8 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

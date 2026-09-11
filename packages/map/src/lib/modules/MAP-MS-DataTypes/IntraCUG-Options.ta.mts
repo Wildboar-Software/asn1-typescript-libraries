@@ -72,7 +72,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IntraCUG_Options
  * @description
- * 
+ *
+ * Whether the subscriber may originate or receive calls within the CUG: no
+ * restrictions, incoming barred, or outgoing barred. (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.28 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +98,11 @@ enum _enum_for_IntraCUG_Options {
 /**
  * @summary IntraCUG_Options
  * @description
- * 
+ *
+ * Whether the subscriber may originate or receive calls within the CUG: no
+ * restrictions, incoming barred, or outgoing barred. (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.28 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +120,11 @@ type IntraCUG_Options = _enum_for_IntraCUG_Options;
 /**
  * @summary IntraCUG_Options
  * @description
- * 
+ *
+ * Whether the subscriber may originate or receive calls within the CUG: no
+ * restrictions, incoming barred, or outgoing barred. (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.28 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -129,6 +141,10 @@ const IntraCUG_Options = _enum_for_IntraCUG_Options;
 
 /**
  * @summary IntraCUG_Options_noCUG_Restrictions
+ * @description
+ *
+ * No CUG restrictions. (3GPP TS 29.002 V19.1.0 clause 7.6.3.28)
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +153,10 @@ const IntraCUG_Options_noCUG_Restrictions: IntraCUG_Options = IntraCUG_Options.n
 
 /**
  * @summary noCUG_Restrictions
+ * @description
+ *
+ * No CUG restrictions. (3GPP TS 29.002 V19.1.0 clause 7.6.3.28)
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +165,10 @@ const noCUG_Restrictions: IntraCUG_Options = IntraCUG_Options.noCUG_Restrictions
 
 /**
  * @summary IntraCUG_Options_cugIC_CallBarred
+ * @description
+ *
+ * CUG incoming calls barred. (3GPP TS 29.002 V19.1.0 clause 7.6.3.28)
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +177,10 @@ const IntraCUG_Options_cugIC_CallBarred: IntraCUG_Options = IntraCUG_Options.cug
 
 /**
  * @summary cugIC_CallBarred
+ * @description
+ *
+ * CUG incoming calls barred. (3GPP TS 29.002 V19.1.0 clause 7.6.3.28)
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +189,10 @@ const cugIC_CallBarred: IntraCUG_Options = IntraCUG_Options.cugIC_CallBarred; /*
 
 /**
  * @summary IntraCUG_Options_cugOG_CallBarred
+ * @description
+ *
+ * CUG outgoing calls barred. (3GPP TS 29.002 V19.1.0 clause 7.6.3.28)
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +201,10 @@ const IntraCUG_Options_cugOG_CallBarred: IntraCUG_Options = IntraCUG_Options.cug
 
 /**
  * @summary cugOG_CallBarred
+ * @description
+ *
+ * CUG outgoing calls barred. (3GPP TS 29.002 V19.1.0 clause 7.6.3.28)
+ *
  * @constant
  * @type {number}
  */

@@ -77,7 +77,13 @@ import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataType
 /**
  * @summary getPassword
  * @description
- * 
+ *
+ * MAP_GET_PASSWORD: HLR, having received a subscriber request for an SS
+ * operation that requires a password, obtains the password. Used HLR→VLR and
+ * VLR→MSC; the VLR relays to the MSC. Confirmed. Typical MAP path: HLR→VLR.
+ * Local opcode 18. Timer class `m` (15 s to 30 s). No user errors in the ASN.1.
+ * (3GPP TS 29.002 V19.1.0 clauses 11.8.1, 17.1.2, 17.3.2.19 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

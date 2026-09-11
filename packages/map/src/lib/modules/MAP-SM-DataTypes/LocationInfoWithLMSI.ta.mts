@@ -76,7 +76,12 @@ import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode
 /**
  * @summary LocationInfoWithLMSI
  * @description
- * 
+ *
+ * Serving node for MT SM. At most one of gprs/ims/smsf-3gpp/smsf-non-3gpp
+ * indicators. Absence of all means MSC/MME. additionalNumber and thirdNumber
+ * shall not both contain the same type of number (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -134,96 +139,165 @@ class LocationInfoWithLMSI {
     constructor (
         /**
          * @summary `networkNode_Number`.
+         * @description
+         *
+         * MSC/MME, or SMSF if an smsf-*-address-indicator is present; HLR may
+         * use this for 3GPP-SMSF (clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly networkNode_Number: ISDN_AddressString,
         /**
          * @summary `lmsi`.
+         * @description
+         *
+         * Local Mobile Station Identity if available.
+         *
          * @public
          * @readonly
          */
         readonly lmsi: OPTIONAL<LMSI>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsNodeIndicator`.
+         * @description
+         *
+         * Set only if the SGSN number is sent as Network Node Number. Shall not
+         * both be present with imsNodeIndicator (clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly gprsNodeIndicator: OPTIONAL<NULL>,
         /**
          * @summary `additional_Number`.
+         * @description
+         *
+         * MSC, SMS Router, MME or SGSN/SMS Router; HLR may use for
+         * Non-3GPP-SMSF (clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly additional_Number: OPTIONAL<Additional_Number>,
         /**
          * @summary `networkNodeDiameterAddress`.
+         * @description
+         *
+         * Diameter address of networkNode-Number.
+         *
          * @public
          * @readonly
          */
         readonly networkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `additionalNetworkNodeDiameterAddress`.
+         * @description
+         *
+         * Diameter address of additional-Number.
+         *
          * @public
          * @readonly
          */
         readonly additionalNetworkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `thirdNumber`.
+         * @description
+         *
+         * Third serving-node number; not the same type as additional-Number.
+         *
          * @public
          * @readonly
          */
         readonly thirdNumber: OPTIONAL<Additional_Number>,
         /**
          * @summary `thirdNetworkNodeDiameterAddress`.
+         * @description
+         *
+         * Diameter address of thirdNumber.
+         *
          * @public
          * @readonly
          */
         readonly thirdNetworkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `imsNodeIndicator`.
+         * @description
+         *
+         * Network node is an IMS node. Not with gprsNodeIndicator.
+         *
          * @public
          * @readonly
          */
         readonly imsNodeIndicator: OPTIONAL<NULL>,
         /**
          * @summary `smsf_3gpp_Number`.
+         * @description
+         *
+         * Absent if smsf-supportIndicator was not in the request.
+         *
          * @public
          * @readonly
          */
         readonly smsf_3gpp_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `smsf_3gpp_DiameterAddress`.
+         * @description
+         *
+         * Absent if smsf-supportIndicator was not in the request.
+         *
          * @public
          * @readonly
          */
         readonly smsf_3gpp_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `smsf_non_3gpp_Number`.
+         * @description
+         *
+         * Absent if smsf-supportIndicator was not in the request.
+         *
          * @public
          * @readonly
          */
         readonly smsf_non_3gpp_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `smsf_non_3gpp_DiameterAddress`.
+         * @description
+         *
+         * Absent if smsf-supportIndicator was not in the request.
+         *
          * @public
          * @readonly
          */
         readonly smsf_non_3gpp_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `smsf_3gpp_address_indicator`.
+         * @description
+         *
+         * networkNode-Number (and Diameter address) is an SMSF for 3GPP access
+         * (clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly smsf_3gpp_address_indicator: OPTIONAL<NULL>,
         /**
          * @summary `smsf_non_3gpp_address_indicator`.
+         * @description
+         *
+         * networkNode-Number (and Diameter address) is an SMSF for non-3GPP
+         * access (clause 17.7.6).
+         *
          * @public
          * @readonly
          */

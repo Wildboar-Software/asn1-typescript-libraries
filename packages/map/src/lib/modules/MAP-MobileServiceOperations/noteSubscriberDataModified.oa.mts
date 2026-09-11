@@ -80,7 +80,14 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary noteSubscriberDataModified
  * @description
- * 
+ *
+ * MAP_NOTE_SUBSCRIBER_DATA_MODIFIED: HLR informs the gsmSCF that subscriber
+ * data have been modified (IM-SSF may take the gsmSCF role in an IM CN). Also
+ * used to inform a service-related entity (e.g. IP-SM-GW) that the UE has
+ * become reachable. Typical path: HLR→gsmSCF. Local opcode 5. Timer class `m`
+ * (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses 8.11.5.1, 17.1.2, 17.3.2.48
+ * and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,9 @@ import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP
 /**
  * @summary CGI_List
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..32) OF GlobalCellId (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

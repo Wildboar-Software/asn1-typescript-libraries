@@ -89,7 +89,13 @@ import { numberOfPW_AttemptsViolation } from "../MAP-Errors/numberOfPW-AttemptsV
 /**
  * @summary activateSS
  * @description
- * 
+ *
+ * MAP_ACTIVATE_SS: activate a supplementary service. Used MSC→VLR and VLR→HLR;
+ * the VLR relays to the HLR. Confirmed. Typical MAP path: VLR→HLR. Local opcode
+ * 12. Timer class `m` (15 s to 30 s). Distinctive errors: `negativePW-Check`,
+ * `numberOfPW-AttemptsViolation`. (3GPP TS 29.002 V19.1.0 clauses 11.3.1,
+ * 17.1.2, 17.3.2.19 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

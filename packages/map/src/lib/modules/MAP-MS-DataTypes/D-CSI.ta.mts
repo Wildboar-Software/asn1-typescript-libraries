@@ -74,7 +74,18 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary D_CSI
  * @description
- * 
+ *
+ * Dialled Services CAMEL Subscription Information: originating CAMEL dialled
+ * services as defined in 3GPP TS 23.078.
+ *
+ * `notificationToCSE` and `csi-Active` shall not be present when D-CSI is sent
+ * to VLR/GMSC; they may only be included in ATSI/ATM ack/NSDC.
+ * DP-AnalysedInfoCriteria and camelCapabilityHandling shall be present in the
+ * sequence. If segmented, the first segment shall contain
+ * dp-AnalysedInfoCriteriaList and camelCapabilityHandling; subsequent segments
+ * shall not contain camelCapabilityHandling (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.5.7A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,12 +105,24 @@ class D_CSI {
     constructor (
         /**
          * @summary `dp_AnalysedInfoCriteriaList`.
+         * @description
+         *
+         * Shall be present in the D-CSI sequence. If segmented, the first
+         * segment shall contain this list (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly dp_AnalysedInfoCriteriaList: OPTIONAL<DP_AnalysedInfoCriteriaList>,
         /**
          * @summary `camelCapabilityHandling`.
+         * @description
+         *
+         * Shall be present in the D-CSI sequence. If segmented, only the first
+         * segment shall contain this parameter (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -112,12 +135,22 @@ class D_CSI {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Shall not be present when D-CSI is sent to VLR/GMSC. May only be
+         * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly notificationToCSE: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
+         * @description
+         *
+         * Shall not be present when D-CSI is sent to VLR/GMSC. May only be
+         * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

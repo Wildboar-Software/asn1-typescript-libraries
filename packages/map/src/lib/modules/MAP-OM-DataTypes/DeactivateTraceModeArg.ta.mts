@@ -75,7 +75,10 @@ import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } fro
 /**
  * @summary DeactivateTraceModeArg
  * @description
- * 
+ *
+ * Argument of MAP-DEACTIVATE-TRACE-MODE: VLR or SGSN to HLR (3GPP TS 29.002
+ * V19.1.0 clauses 9.1.2 and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,24 +98,40 @@ class DeactivateTraceModeArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Mandatory in a stand-alone operation (clause 9.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `traceReference`.
+         * @description
+         *
+         * GSM-only trace reference (clauses 7.6.10.2 and 9.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly traceReference: TraceReference,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `traceReference2`.
+         * @description
+         *
+         * UMTS trace reference (clauses 7.6.10.2A and 9.1.2.3).
+         *
          * @public
          * @readonly
          */

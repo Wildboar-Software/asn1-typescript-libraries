@@ -72,7 +72,11 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
 /**
  * @summary boicExHC
  * @description
- * 
+ *
+ * Barring of outgoing international calls except those directed to the home
+ * PLMN Country. Specific service. Bit pattern `'10010100'B` (3GPP TS 29.002
+ * V19.1.0 clause 17.7.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

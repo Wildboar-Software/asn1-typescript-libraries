@@ -73,6 +73,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary FacilityNotSupParam
  * @description
  * 
+ * Optional parameter of `facilityNotSupported`. Must not be used in version <3.
+ * May indicate Shape of location estimate not supported, or Needed LCS
+ * capability not supported in serving node (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,12 +101,22 @@ class FacilityNotSupParam {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `shapeOfLocationEstimateNotSupported`.
+         * @description
+         *
+         * Requested facility not supported: Shape of location estimate not
+         * supported (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+         *
          * @public
          * @readonly
          */
         readonly shapeOfLocationEstimateNotSupported: OPTIONAL<NULL>,
         /**
          * @summary `neededLcsCapabilityNotSupportedInServingNode`.
+         * @description
+         *
+         * Requested facility not supported: Needed LCS capability not supported
+         * in serving node (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+         *
          * @public
          * @readonly
          */

@@ -84,7 +84,14 @@ import { unknownOrUnreachableLCSClient } from "../MAP-Errors/unknownOrUnreachabl
 /**
  * @summary subscriberLocationReport
  * @description
- * 
+ *
+ * MAP_SUBSCRIBER_LOCATION_REPORT: VMSC or SGSN provides the location of a
+ * target MS to a GMLC when a location request is implicitly administered or was
+ * made earlier. Confirmed. Typical path: MSC→GMLC or SGSN→GMLC. Local opcode
+ * 86. Timer class `m` (15 s to 30 s). Distinctive error:
+ * `unknownOrUnreachableLCSClient`. (3GPP TS 29.002 V19.1.0 clauses 13A.3.1,
+ * 17.1.2, 17.3.2.40 and 17.6.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

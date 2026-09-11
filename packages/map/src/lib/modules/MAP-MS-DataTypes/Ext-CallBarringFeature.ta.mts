@@ -74,7 +74,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary Ext_CallBarringFeature
  * @description
- * 
+ *
+ * Status of a call barring service for a Basic Service Group: extensible Basic
+ * Service Group and provisioned SS-Status (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.3.21).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +96,21 @@ class Ext_CallBarringFeature {
     constructor (
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Extensible Basic Service Group (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.21).
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * Provisioned SS-Status (3GPP TS 29.002 V19.1.0 clause 7.6.3.21).
+         *
          * @public
          * @readonly
          */

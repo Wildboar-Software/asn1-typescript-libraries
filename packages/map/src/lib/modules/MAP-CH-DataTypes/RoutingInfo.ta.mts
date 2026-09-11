@@ -73,7 +73,10 @@ import { ForwardingData, _decode_ForwardingData, _encode_ForwardingData } from "
 /**
  * @summary RoutingInfo
  * @description
- * 
+ *
+ * Roaming number or forwarding data (3GPP TS 29.002 V19.1.0 clauses 10.1.3 and
+ * 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

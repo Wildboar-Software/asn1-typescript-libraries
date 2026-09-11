@@ -72,7 +72,10 @@ import { BearerServiceCode, _decode_BearerServiceCode, _encode_BearerServiceCode
 /**
  * @summary padAccessCA_300bps
  * @description
- * 
+ *
+ * PAD access CA 300 bps. Specific service. Bit pattern `'00100001'B` (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

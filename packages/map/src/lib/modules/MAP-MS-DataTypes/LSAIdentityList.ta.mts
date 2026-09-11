@@ -75,7 +75,10 @@ import { maxNumOfLSAs } from "./maxNumOfLSAs.va.mjs";
 /**
  * @summary LSAIdentityList
  * @description
- * 
+ *
+ * LSA identities to withdraw (SIZE 1..20) in `LSAInformationWithdraw`. (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.58 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

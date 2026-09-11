@@ -76,7 +76,12 @@ import { ProcessAccessSignalling_Arg, _decode_ProcessAccessSignalling_Arg, _enco
 /**
  * @summary processAccessSignalling
  * @description
- * 
+ *
+ * MAP_PROCESS_ACCESS_SIGNALLING: MSC-B passes information received on the
+ * A-interface or Iu-interface to MSC-A (E-interface). Non-confirmed (argument
+ * only). Typical path: MSC-B→MSC-A. Local opcode 33. Timer class `s` (3 s to 10
+ * s). (3GPP TS 29.002 V19.1.0 clauses 8.4.3.1, 17.1.2, 17.3.2.12 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

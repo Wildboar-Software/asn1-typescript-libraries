@@ -75,7 +75,10 @@ import { maxEventSpecification } from "./maxEventSpecification.va.mjs";
 /**
  * @summary SS_EventSpecification
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..maxEventSpecification) OF AddressString (3GPP TS 29.002
+ * V19.1.0 clause 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

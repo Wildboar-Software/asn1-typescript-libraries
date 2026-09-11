@@ -78,7 +78,11 @@ import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode
 /**
  * @summary AlertServiceCentreArg
  * @description
- * 
+ *
+ * Argument of MAP-ALERT-SERVICE-CENTRE: HLR to IWMSC when a subscriber in MWD
+ * becomes active or has memory; also MME/SGSN/MSC Deployment Option 2 to
+ * SMS-GMSC (3GPP TS 29.002 V19.1.0 clauses 12.5 and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -105,72 +109,120 @@ class AlertServiceCentreArg {
     constructor (
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * Subscriber MSISDN in Message Waiting Data.
+         *
          * @public
          * @readonly
          */
         readonly msisdn: ISDN_AddressString,
         /**
          * @summary `serviceCentreAddress`.
+         * @description
+         *
+         * Service Centre to alert.
+         *
          * @public
          * @readonly
          */
         readonly serviceCentreAddress: AddressString,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI if present.
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `correlationID`.
+         * @description
+         *
+         * HLR / SIP URI correlation.
+         *
          * @public
          * @readonly
          */
         readonly correlationID: OPTIONAL<CorrelationID>,
         /**
          * @summary `maximumUeAvailabilityTime`.
+         * @description
+         *
+         * Maximum UE availability time.
+         *
          * @public
          * @readonly
          */
         readonly maximumUeAvailabilityTime: OPTIONAL<Time>,
         /**
          * @summary `smsGmscAlertEvent`.
+         * @description
+         *
+         * MS available for MT SMS, or under a new serving node.
+         *
          * @public
          * @readonly
          */
         readonly smsGmscAlertEvent: OPTIONAL<SmsGmsc_Alert_Event>,
         /**
          * @summary `smsGmscDiameterAddress`.
+         * @description
+         *
+         * SMS-GMSC Diameter address.
+         *
          * @public
          * @readonly
          */
         readonly smsGmscDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `newSGSNNumber`.
+         * @description
+         *
+         * New SGSN number when the MS moved.
+         *
          * @public
          * @readonly
          */
         readonly newSGSNNumber: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `newSGSNDiameterAddress`.
+         * @description
+         *
+         * New SGSN Diameter address.
+         *
          * @public
          * @readonly
          */
         readonly newSGSNDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `newMMENumber`.
+         * @description
+         *
+         * New MME number when the MS moved.
+         *
          * @public
          * @readonly
          */
         readonly newMMENumber: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `newMMEDiameterAddress`.
+         * @description
+         *
+         * New MME Diameter address.
+         *
          * @public
          * @readonly
          */
         readonly newMMEDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `newMSCNumber`.
+         * @description
+         *
+         * New MSC number when the MS moved.
+         *
          * @public
          * @readonly
          */

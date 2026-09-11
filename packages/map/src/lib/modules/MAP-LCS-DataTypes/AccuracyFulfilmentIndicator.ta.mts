@@ -78,7 +78,9 @@ enum _enum_for_AccuracyFulfilmentIndicator {
 /**
  * @summary AccuracyFulfilmentIndicator
  * @description
- * 
+ *
+ * See 3GPP TS 23.271 (3GPP TS 29.002 V19.1.0 clauses 7.6.11.28 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +97,10 @@ type AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator | ENUME
 
 /**
  * @summary AccuracyFulfilmentIndicator_requestedAccuracyFulfilled
+ * @description
+ *
+ * `requestedAccuracyFulfilled (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.28).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +109,10 @@ const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled: AccuracyFulfilment
 
 /**
  * @summary requestedAccuracyFulfilled
+ * @description
+ *
+ * `requestedAccuracyFulfilled (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.28).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +121,11 @@ const requestedAccuracyFulfilled: AccuracyFulfilmentIndicator = AccuracyFulfilme
 
 /**
  * @summary AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled
+ * @description
+ *
+ * `requestedAccuracyNotFulfilled (1)` (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.11.28).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +134,11 @@ const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled: AccuracyFulfilm
 
 /**
  * @summary requestedAccuracyNotFulfilled
+ * @description
+ *
+ * `requestedAccuracyNotFulfilled (1)` (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.11.28).
+ *
  * @constant
  * @type {number}
  */

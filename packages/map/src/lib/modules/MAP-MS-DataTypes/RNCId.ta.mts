@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RNCId
  * @description
- * 
+ *
+ * Identity of the RNC to which a call has to be relocated. Octets 1-3: MCC/MNC
+ * (TBCD; filler `1111` for 2-digit MNC); octets 4-5: LAC (3GPP TS 24.008);
+ * octets 6-7: RNC Id or Extended RNC Id (3GPP TS 25.413).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

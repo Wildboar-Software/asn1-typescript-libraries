@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary OverrideCategory
  * @description
- * 
+ *
+ * Override Category subscription option: enabled or disabled (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.4.4 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +95,10 @@ enum _enum_for_OverrideCategory {
 /**
  * @summary OverrideCategory
  * @description
- * 
+ *
+ * Override Category subscription option: enabled or disabled (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.4.4 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +115,10 @@ type OverrideCategory = _enum_for_OverrideCategory;
 /**
  * @summary OverrideCategory
  * @description
- * 
+ *
+ * Override Category subscription option: enabled or disabled (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.4.4 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +134,10 @@ const OverrideCategory = _enum_for_OverrideCategory;
 
 /**
  * @summary OverrideCategory_overrideEnabled
+ * @description
+ *
+ * `overrideEnabled (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.4).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +146,10 @@ const OverrideCategory_overrideEnabled: OverrideCategory = OverrideCategory.over
 
 /**
  * @summary overrideEnabled
+ * @description
+ *
+ * `overrideEnabled (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.4).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +158,10 @@ const overrideEnabled: OverrideCategory = OverrideCategory.overrideEnabled; /* S
 
 /**
  * @summary OverrideCategory_overrideDisabled
+ * @description
+ *
+ * `overrideDisabled (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.4).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +170,10 @@ const OverrideCategory_overrideDisabled: OverrideCategory = OverrideCategory.ove
 
 /**
  * @summary overrideDisabled
+ * @description
+ *
+ * `overrideDisabled (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.4).
+ *
  * @constant
  * @type {number}
  */

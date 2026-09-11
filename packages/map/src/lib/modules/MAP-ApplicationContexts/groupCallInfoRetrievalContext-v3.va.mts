@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary groupCallInfoRetrievalContext_v3
  * @description
- * 
+ *
+ * Group call and broadcast call between group call serving MSC and visited MSC.
+ * Either side may be initiator or responder. Version 3 only (3GPP TS 29.002
+ * V19.1.0 clause 17.3.2.30A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

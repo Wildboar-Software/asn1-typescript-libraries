@@ -77,7 +77,15 @@ import { LocationInformationEPS, _decode_LocationInformationEPS, _encode_Locatio
 /**
  * @summary PurgeMS_Arg
  * @description
- * 
+ *
+ * MAP_PURGE_MS request. VLR or SGSN (or IWF in EPS) asks the HLR to mark the MS
+ * not reachable for MT call, MT SM, or network-requested PDP-context
+ * activation. Invoked when the subscriber record is deleted (MMI or
+ * inactivity). Shall not be used if both entities support Super-Charger. VLR
+ * number present if the sender is VLR; SGSN number if the sender is SGSN.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.6 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,18 +107,36 @@ class PurgeMS_Arg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `vlr_Number`.
+         * @description
+         *
+         * ISDN number of a VLR.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
+         *
          * @public
          * @readonly
          */
         readonly vlr_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `sgsn_Number`.
+         * @description
+         *
+         * ISDN number of an SGSN. In EPS, may be an IWF number.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.38).
+         *
          * @public
          * @readonly
          */
@@ -123,18 +149,36 @@ class PurgeMS_Arg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `locationInformation`.
+         * @description
+         *
+         * CS location of the served subscriber as in 3GPP TS 23.018.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30).
+         *
          * @public
          * @readonly
          */
         readonly locationInformation: OPTIONAL<LocationInformation>,
         /**
          * @summary `locationInformationGPRS`.
+         * @description
+         *
+         * GPRS location of the served subscriber as in 3GPP TS 23.078.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30a).
+         *
          * @public
          * @readonly
          */
         readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `locationInformationEPS`.
+         * @description
+         *
+         * EPS location of the served subscriber, from the MME via IWF.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30b).
+         *
          * @public
          * @readonly
          */

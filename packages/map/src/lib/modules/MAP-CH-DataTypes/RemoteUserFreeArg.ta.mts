@@ -77,7 +77,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary RemoteUserFreeArg
  * @description
- * 
+ *
+ * Argument of MAP_REMOTE_USER_FREE: HLR to VLR when B is idle so A can be
+ * notified (3GPP TS 29.002 V19.1.0 clauses 10.12 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,42 +102,70 @@ class RemoteUserFreeArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * A-subscriber IMSI.
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `callInfo`.
+         * @description
+         *
+         * Call information.
+         *
          * @public
          * @readonly
          */
         readonly callInfo: ExternalSignalInfo,
         /**
          * @summary `ccbs_Feature`.
+         * @description
+         *
+         * CCBS feature.
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Feature: CCBS_Feature,
         /**
          * @summary `translatedB_Number`.
+         * @description
+         *
+         * Translated B-number.
+         *
          * @public
          * @readonly
          */
         readonly translatedB_Number: ISDN_AddressString,
         /**
          * @summary `replaceB_Number`.
+         * @description
+         *
+         * Replace B-number.
+         *
          * @public
          * @readonly
          */
         readonly replaceB_Number: OPTIONAL<NULL>,
         /**
          * @summary `alertingPattern`.
+         * @description
+         *
+         * Alerting pattern.
+         *
          * @public
          * @readonly
          */
         readonly alertingPattern: OPTIONAL<AlertingPattern>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

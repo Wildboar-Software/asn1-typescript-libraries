@@ -76,6 +76,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary unidentifiedSubscriber
  * @description
  * 
+ * Returned if the subscriber is not contained in the database and it has not or
+ * cannot be established whether or not a subscription exists (3GPP TS 29.002
+ * V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 5. Optional parameter `UnidentifiedSubParam` must not be used in
+ * version <3 (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

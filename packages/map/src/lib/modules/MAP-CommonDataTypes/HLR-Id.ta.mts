@@ -72,7 +72,12 @@ import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta
 /**
  * @summary HLR_Id
  * @description
- * 
+ *
+ * HLR identity: leading digits of IMSI (MCC, MNC, leading digits of MSIN)
+ * forming the HLR Id defined in 3GPP TS 23.003 / CCITT E.212.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.15 and 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

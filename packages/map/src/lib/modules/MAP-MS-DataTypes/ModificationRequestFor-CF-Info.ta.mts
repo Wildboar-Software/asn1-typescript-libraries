@@ -79,7 +79,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ModificationRequestFor_CF_Info
  * @description
- * 
+ *
+ * CSE request to modify call-forwarding supplementary-service data in
+ * MAP_ANY_TIME_MODIFICATION. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.82, 8.11.4,
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,42 +106,77 @@ class ModificationRequestFor_CF_Info {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the supplementary service (clause 7.6.4.1). (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Extensible basic service group to which the modification applies.
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly ss_Status: OPTIONAL<Ext_SS_Status>,
         /**
          * @summary `forwardedToNumber`.
+         * @description
+         *
+         * Forwarded-to number. (3GPP TS 29.002 V19.1.0 clauses 7.6.2.22 and
+         * 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly forwardedToNumber: OPTIONAL<AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
+         * @description
+         *
+         * Forwarded-to subaddress. (3GPP TS 29.002 V19.1.0 clauses 7.6.2.23 and
+         * 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `noReplyConditionTime`.
+         * @description
+         *
+         * No-reply condition timer. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.19
+         * and 7.6.3.82)
+         *
          * @public
          * @readonly
          */
         readonly noReplyConditionTime: OPTIONAL<Ext_NoRepCondTime>,
         /**
          * @summary `modifyNotificationToCSE`.
+         * @description
+         *
+         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+         *
          * @public
          * @readonly
          */

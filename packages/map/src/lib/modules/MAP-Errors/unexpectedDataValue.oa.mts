@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary unexpectedDataValue
  * @description
  * 
+ * Returned when the data type is formally correct but its value or presence is
+ * unexpected in the current context (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 36. Optional parameter `UnexpectedDataParam` must not be used in
+ * version <3 (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

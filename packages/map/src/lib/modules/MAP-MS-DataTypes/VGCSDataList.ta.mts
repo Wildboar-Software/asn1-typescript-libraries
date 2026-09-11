@@ -75,7 +75,11 @@ import { maxNumOfVGCSGroupIds } from "./maxNumOfVGCSGroupIds.va.mjs";
 /**
  * @summary VGCSDataList
  * @description
- * 
+ *
+ * Voice Group Call Service groups the subscriber may belong to.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.39 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

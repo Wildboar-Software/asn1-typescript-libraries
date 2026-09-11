@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UE_UsageType
  * @description
- * 
+ *
+ * Usage characteristics of the UE for Dedicated Core Network selection. 4
+ * octets as in 3GPP TS 29.272. Shall not be sent to VLRs, nor to SGSNs that did
+ * not indicate DCN support in GPRS Location Update.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.3, 8.8.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

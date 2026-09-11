@@ -73,7 +73,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary RestoreDataRes
  * @description
- * 
+ *
+ * MAP_RESTORE_DATA result. HLR number is mandatory on success. MS Not Reachable
+ * Flag may be returned.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.10.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +96,25 @@ class RestoreDataRes {
     constructor (
         /**
          * @summary `hlr_Number`.
+         * @description
+         *
+         * ISDN number of an HLR. Mandatory in a successful Update Location,
+         * Update GPRS Location, or Restore Data result.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
+         *
          * @public
          * @readonly
          */
         readonly hlr_Number: ISDN_AddressString,
         /**
          * @summary `msNotReachable`.
+         * @description
+         *
+         * MS Not Reachable Flag returned after Restore Data.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.10.3).
+         *
          * @public
          * @readonly
          */

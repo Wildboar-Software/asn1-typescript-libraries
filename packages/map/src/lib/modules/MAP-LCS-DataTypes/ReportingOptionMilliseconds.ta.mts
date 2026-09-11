@@ -73,7 +73,10 @@ import { ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _
 /**
  * @summary ReportingOptionMilliseconds
  * @description
- * 
+ *
+ * Product shall not exceed 8639999000 for OMA MLP/RLP (3GPP TS 29.002 V19.1.0
+ * clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class ReportingOptionMilliseconds {
     constructor (
         /**
          * @summary `reportingAmountMilliseconds`.
+         * @description
+         *
+         * 1..maxReportingAmountMilliseconds.
+         *
          * @public
          * @readonly
          */
         readonly reportingAmountMilliseconds: ReportingAmountMilliseconds,
         /**
          * @summary `reportingIntervalMilliseconds`.
+         * @description
+         *
+         * 1..maxReportingIntervalMilliseconds.
+         *
          * @public
          * @readonly
          */

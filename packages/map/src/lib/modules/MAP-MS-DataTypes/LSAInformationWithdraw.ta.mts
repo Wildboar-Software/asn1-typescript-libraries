@@ -72,7 +72,11 @@ import { LSAIdentityList, _decode_LSAIdentityList, _encode_LSAIdentityList } fro
 /**
  * @summary LSAInformationWithdraw
  * @description
- * 
+ *
+ * Indicates that LSA information shall be deleted from the VLR or SGSN: all LSA
+ * data, or a list of LSA identities. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.58
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -75,7 +75,11 @@ import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 /**
  * @summary T_BCSM_CAMEL_TDP_CriteriaList
  * @description
- * 
+ *
+ * List of terminating BCSM CAMEL TDP criteria associated with T-CSI / VT-CSI.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

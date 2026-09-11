@@ -76,6 +76,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary absentSubscriberSM
  * @description
  * 
+ * Returned when the mobile terminated short message transfer cannot be
+ * completed because the network cannot contact the subscriber. Diagnostic
+ * information regarding the reason for the subscriber's absence may be included
+ * (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 6. Optional parameter `AbsentSubscriberSM-Param` (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -75,7 +75,11 @@ import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";
 /**
  * @summary ContextId
  * @description
- * 
+ *
+ * Identifies a PDP context (or EPS APN configuration) for the subscriber.
+ * INTEGER 1..maxNumOfPDP-Contexts (3GPP TS 29.002 V19.1.0 clauses 7.6.3.55 and
+ * 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

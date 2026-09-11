@@ -72,7 +72,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LIPA_Permission
  * @description
- * 
+ *
+ * LIPA permission for a PDP context / APN configuration. The SGSN handles this
+ * as specified in 3GPP TS 29.272 clause 5.2.1.1.2. (3GPP TS 29.002 V19.1.0
+ * clauses 8.8.1.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,7 +99,11 @@ enum _enum_for_LIPA_Permission {
 /**
  * @summary LIPA_Permission
  * @description
- * 
+ *
+ * LIPA permission for a PDP context / APN configuration. The SGSN handles this
+ * as specified in 3GPP TS 29.272 clause 5.2.1.1.2. (3GPP TS 29.002 V19.1.0
+ * clauses 8.8.1.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -114,7 +122,11 @@ type LIPA_Permission = _enum_for_LIPA_Permission;
 /**
  * @summary LIPA_Permission
  * @description
- * 
+ *
+ * LIPA permission for a PDP context / APN configuration. The SGSN handles this
+ * as specified in 3GPP TS 29.272 clause 5.2.1.1.2. (3GPP TS 29.002 V19.1.0
+ * clauses 8.8.1.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -132,6 +144,10 @@ const LIPA_Permission = _enum_for_LIPA_Permission;
 
 /**
  * @summary LIPA_Permission_lipaProhibited
+ * @description
+ *
+ * LIPA prohibited. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -140,6 +156,10 @@ const LIPA_Permission_lipaProhibited: LIPA_Permission = LIPA_Permission.lipaProh
 
 /**
  * @summary lipaProhibited
+ * @description
+ *
+ * LIPA prohibited. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -148,6 +168,10 @@ const lipaProhibited: LIPA_Permission = LIPA_Permission.lipaProhibited; /* SHORT
 
 /**
  * @summary LIPA_Permission_lipaOnly
+ * @description
+ *
+ * LIPA only. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -156,6 +180,10 @@ const LIPA_Permission_lipaOnly: LIPA_Permission = LIPA_Permission.lipaOnly; /* L
 
 /**
  * @summary lipaOnly
+ * @description
+ *
+ * LIPA only. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -164,6 +192,10 @@ const lipaOnly: LIPA_Permission = LIPA_Permission.lipaOnly; /* SHORT_NAMED_ENUME
 
 /**
  * @summary LIPA_Permission_lipaConditional
+ * @description
+ *
+ * LIPA conditional. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -172,6 +204,10 @@ const LIPA_Permission_lipaConditional: LIPA_Permission = LIPA_Permission.lipaCon
 
 /**
  * @summary lipaConditional
+ * @description
+ *
+ * LIPA conditional. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */

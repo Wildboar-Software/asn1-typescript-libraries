@@ -73,7 +73,13 @@ import { TBCD_STRING, _decode_TBCD_STRING, _encode_TBCD_STRING } from "../MAP-Co
 /**
  * @summary ASCI_CallReference
  * @description
- * 
+ *
+ * ASCI (VGCS/VBS) call reference. `TBCD-STRING` of 1..8 octets. Digits of
+ * VGCS/VBS-area and Group-ID are concatenated in that order if there is a
+ * VGCS/VBS-area.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.2.33).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

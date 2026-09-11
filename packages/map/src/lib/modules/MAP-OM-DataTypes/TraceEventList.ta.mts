@@ -79,7 +79,10 @@ import { PGW_EventList, PGW_EventList_pdn_connectionCreation /* IMPORTED_LONG_NA
 /**
  * @summary TraceEventList
  * @description
- * 
+ *
+ * Events per NE that trigger a Trace Recording Session. See 3GPP TS 32.422
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.8 and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,48 +105,80 @@ class TraceEventList {
     constructor (
         /**
          * @summary `msc_s_List`.
+         * @description
+         *
+         * Event list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly msc_s_List: OPTIONAL<MSC_S_EventList>,
         /**
          * @summary `mgw_List`.
+         * @description
+         *
+         * Event list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly mgw_List: OPTIONAL<MGW_EventList>,
         /**
          * @summary `sgsn_List`.
+         * @description
+         *
+         * Event list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly sgsn_List: OPTIONAL<SGSN_EventList>,
         /**
          * @summary `ggsn_List`.
+         * @description
+         *
+         * Event list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly ggsn_List: OPTIONAL<GGSN_EventList>,
         /**
          * @summary `bmsc_List`.
+         * @description
+         *
+         * Event list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly bmsc_List: OPTIONAL<BMSC_EventList>,
         /**
          * @summary `mme_List`.
+         * @description
+         *
+         * Event list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly mme_List: OPTIONAL<MME_EventList>,
         /**
          * @summary `sgw_List`.
+         * @description
+         *
+         * Event list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */
         readonly sgw_List: OPTIONAL<SGW_EventList>,
         /**
          * @summary `pgw_List`.
+         * @description
+         *
+         * Event list for this NE (clause 17.7.2).
+         *
          * @public
          * @readonly
          */

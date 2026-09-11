@@ -85,6 +85,9 @@ enum _enum_for_UnauthorizedLCSClient_Diagnostic {
  * @summary UnauthorizedLCSClient_Diagnostic
  * @description
  * 
+ * Diagnostic on `UnauthorizedLCSClient-Param`. Any unrecognized value shall be
+ * ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -107,6 +110,10 @@ type UnauthorizedLCSClient_Diagnostic = _enum_for_UnauthorizedLCSClient_Diagnost
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_noAdditionalInformation
+ * @description
+ *
+ * NoAdditional Information (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +122,10 @@ const UnauthorizedLCSClient_Diagnostic_noAdditionalInformation: UnauthorizedLCSC
 
 /**
  * @summary noAdditionalInformation
+ * @description
+ *
+ * NoAdditional Information (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +134,11 @@ const noAdditionalInformation: UnauthorizedLCSClient_Diagnostic = UnauthorizedLC
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList
+ * @description
+ *
+ * Client not in MS Privacy Exception List (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +147,11 @@ const UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList: Unauth
 
 /**
  * @summary clientNotInMSPrivacyExceptionList
+ * @description
+ *
+ * Client not in MS Privacy Exception List (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +160,10 @@ const clientNotInMSPrivacyExceptionList: UnauthorizedLCSClient_Diagnostic = Unau
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_callToClientNotSetup
+ * @description
+ *
+ * Call to Client not setup (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +172,10 @@ const UnauthorizedLCSClient_Diagnostic_callToClientNotSetup: UnauthorizedLCSClie
 
 /**
  * @summary callToClientNotSetup
+ * @description
+ *
+ * Call to Client not setup (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +184,10 @@ const callToClientNotSetup: UnauthorizedLCSClient_Diagnostic = UnauthorizedLCSCl
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable
+ * @description
+ *
+ * Privacy override not applicable (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +196,10 @@ const UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable: Unauthorize
 
 /**
  * @summary privacyOverrideNotApplicable
+ * @description
+ *
+ * Privacy override not applicable (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -171,6 +208,11 @@ const privacyOverrideNotApplicable: UnauthorizedLCSClient_Diagnostic = Unauthori
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements
+ * @description
+ *
+ * Disallowed by Local Regulatory Requirements (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -179,6 +221,11 @@ const UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements: 
 
 /**
  * @summary disallowedByLocalRegulatoryRequirements
+ * @description
+ *
+ * Disallowed by Local Regulatory Requirements (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -187,6 +234,10 @@ const disallowedByLocalRegulatoryRequirements: UnauthorizedLCSClient_Diagnostic 
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass
+ * @description
+ *
+ * Unauthorised Privacy Class (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -195,6 +246,10 @@ const UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass: UnauthorizedLCS
 
 /**
  * @summary unauthorizedPrivacyClass
+ * @description
+ *
+ * Unauthorised Privacy Class (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -203,6 +258,11 @@ const unauthorizedPrivacyClass: UnauthorizedLCSClient_Diagnostic = UnauthorizedL
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalClient
+ * @description
+ *
+ * Unauthorised Call/Session Unrelated External Client (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -211,6 +271,11 @@ const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalC
 
 /**
  * @summary unauthorizedCallSessionUnrelatedExternalClient
+ * @description
+ *
+ * Unauthorised Call/Session Unrelated External Client (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -219,6 +284,11 @@ const unauthorizedCallSessionUnrelatedExternalClient: UnauthorizedLCSClient_Diag
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient
+ * @description
+ *
+ * Unauthorised Call/Session Related External Client (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -227,6 +297,11 @@ const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalCli
 
 /**
  * @summary unauthorizedCallSessionRelatedExternalClient
+ * @description
+ *
+ * Unauthorised Call/Session Related External Client (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */

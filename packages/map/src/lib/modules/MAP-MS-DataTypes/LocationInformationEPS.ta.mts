@@ -78,7 +78,11 @@ import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } 
 /**
  * @summary LocationInformationEPS
  * @description
- * 
+ *
+ * MME (via IWF) location of the served subscriber. `currentLocationRetrieved`
+ * shall be present if the location was retrieved after successful paging. (3GPP
+ * TS 29.002 V19.1.0 clauses 7.6.2.30b and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,12 +105,20 @@ class LocationInformationEPS {
     constructor (
         /**
          * @summary `e_utranCellGlobalIdentity`.
+         * @description
+         *
+         * E-UTRAN Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly e_utranCellGlobalIdentity: OPTIONAL<E_UTRAN_CGI>,
         /**
          * @summary `trackingAreaIdentity`.
+         * @description
+         *
+         * Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
@@ -119,30 +131,54 @@ class LocationInformationEPS {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `geographicalInformation`.
+         * @description
+         *
+         * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
         /**
          * @summary `geodeticInformation`.
+         * @description
+         *
+         * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
+         * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly geodeticInformation: OPTIONAL<GeodeticInformation>,
         /**
          * @summary `currentLocationRetrieved`.
+         * @description
+         *
+         * Shall be present if the location was retrieved after successful
+         * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly currentLocationRetrieved: OPTIONAL<NULL>,
         /**
          * @summary `ageOfLocationInformation`.
+         * @description
+         *
+         * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `mme_Name`.
+         * @description
+         *
+         * Diameter identity of the serving MME. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.2.65)
+         *
          * @public
          * @readonly
          */

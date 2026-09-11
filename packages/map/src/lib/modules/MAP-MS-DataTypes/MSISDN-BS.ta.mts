@@ -74,7 +74,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MSISDN_BS
  * @description
- * 
+ *
+ * MSISDN with optional basic-service list, used when interrogating subscription
+ * information. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +95,21 @@ class MSISDN_BS {
     constructor (
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * MSISDN. (3GPP TS 29.002 V19.1.0 clause 7.6.2.17)
+         *
          * @public
          * @readonly
          */
         readonly msisdn: ISDN_AddressString,
         /**
          * @summary `basicServiceList`.
+         * @description
+         *
+         * Basic services associated with this MSISDN. (3GPP TS 29.002 V19.1.0
+         * clause 17.7.1)
+         *
          * @public
          * @readonly
          */

@@ -72,7 +72,12 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
 /**
  * @summary autonomousSelfLocation
  * @description
- * 
+ *
+ * Allow an MS to perform self location without interaction with the PLMN for a
+ * predetermined period of time. Specific service. Bit pattern `'11000010'B`.
+ * Autonomous Self Location MO-LR class (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.4.45 and 17.7.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

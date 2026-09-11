@@ -73,7 +73,11 @@ import { CliRestrictionOption, _enum_for_CliRestrictionOption, CliRestrictionOpt
 /**
  * @summary ClirData
  * @description
- * 
+ *
+ * CLIR supplementary service data (SS-Status, optional CLI restriction option,
+ * optional notification-to-CSE) returned in any-time subscription interrogation
+ * / modification (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2, 7.6.4.5 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,12 +101,21 @@ class ClirData {
         readonly ss_Status: Ext_SS_Status,
         /**
          * @summary `cliRestrictionOption`.
+         * @description
+         *
+         * CLI restriction option (3GPP TS 29.002 V19.1.0 clauses 7.6.4.5 and
+         * 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly cliRestrictionOption: OPTIONAL<CliRestrictionOption>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

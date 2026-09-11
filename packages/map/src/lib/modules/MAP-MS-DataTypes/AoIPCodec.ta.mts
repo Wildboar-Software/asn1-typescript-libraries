@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AoIPCodec
  * @description
- * 
+ *
+ * AoIP speech codec element. Octet 1 is coded as Speech Codec Elements in 3GPP
+ * TS 48.008 except FI, PI, PT and TF bits shall be set to 0. Optional octets
+ * 2-3 define supported AMR codec configurations as in 3GPP TS 48.008 (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.6.22 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

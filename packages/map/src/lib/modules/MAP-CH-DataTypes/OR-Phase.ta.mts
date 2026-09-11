@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary OR_Phase
  * @description
- * 
+ *
+ * INTEGER (1..127) optimal-routeing capability (3GPP TS 29.002 V19.1.0 clauses
+ * 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

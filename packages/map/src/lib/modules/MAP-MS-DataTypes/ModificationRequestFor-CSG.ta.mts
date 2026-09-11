@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ModificationRequestFor_CSG
  * @description
- * 
+ *
+ * Request to modify CSG-related notification in MAP_ANY_TIME_MODIFICATION.
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.4 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +93,11 @@ class ModificationRequestFor_CSG {
     constructor (
         /**
          * @summary `modifyNotificationToCSE`.
+         * @description
+         *
+         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+         *
          * @public
          * @readonly
          */

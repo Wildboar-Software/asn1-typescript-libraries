@@ -82,7 +82,10 @@ enum _enum_for_LocationEstimateType {
 /**
  * @summary LocationEstimateType
  * @description
- * 
+ *
+ * Unrecognized values in ProvideSubscriberLocation-Arg: reject with unexpected
+ * data value (3GPP TS 29.002 V19.1.0 clauses 7.6.11.12 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,6 +106,10 @@ type LocationEstimateType = _enum_for_LocationEstimateType | ENUMERATED;
 
 /**
  * @summary LocationEstimateType_currentLocation
+ * @description
+ *
+ * `currentLocation (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.12).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +118,10 @@ const LocationEstimateType_currentLocation: LocationEstimateType = 0; /* LONG_NA
 
 /**
  * @summary currentLocation
+ * @description
+ *
+ * `currentLocation (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.12).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +130,10 @@ const currentLocation: LocationEstimateType = LocationEstimateType_currentLocati
 
 /**
  * @summary LocationEstimateType_currentOrLastKnownLocation
+ * @description
+ *
+ * `currentOrLastKnownLocation (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.12).
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +142,10 @@ const LocationEstimateType_currentOrLastKnownLocation: LocationEstimateType = 1;
 
 /**
  * @summary currentOrLastKnownLocation
+ * @description
+ *
+ * `currentOrLastKnownLocation (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.12).
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +154,11 @@ const currentOrLastKnownLocation: LocationEstimateType = LocationEstimateType_cu
 
 /**
  * @summary LocationEstimateType_initialLocation
+ * @description
+ *
+ * `initialLocation (2)` emergency services (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.11.12).
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +167,11 @@ const LocationEstimateType_initialLocation: LocationEstimateType = 2; /* LONG_NA
 
 /**
  * @summary initialLocation
+ * @description
+ *
+ * `initialLocation (2)` emergency services (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.11.12).
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +180,10 @@ const initialLocation: LocationEstimateType = LocationEstimateType_initialLocati
 
 /**
  * @summary LocationEstimateType_activateDeferredLocation
+ * @description
+ *
+ * `activateDeferredLocation (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +192,10 @@ const LocationEstimateType_activateDeferredLocation: LocationEstimateType = 3; /
 
 /**
  * @summary activateDeferredLocation
+ * @description
+ *
+ * `activateDeferredLocation (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +204,10 @@ const activateDeferredLocation: LocationEstimateType = LocationEstimateType_acti
 
 /**
  * @summary LocationEstimateType_cancelDeferredLocation
+ * @description
+ *
+ * `cancelDeferredLocation (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +216,10 @@ const LocationEstimateType_cancelDeferredLocation: LocationEstimateType = 4; /* 
 
 /**
  * @summary cancelDeferredLocation
+ * @description
+ *
+ * `cancelDeferredLocation (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +228,10 @@ const cancelDeferredLocation: LocationEstimateType = LocationEstimateType_cancel
 
 /**
  * @summary LocationEstimateType_notificationVerificationOnly
+ * @description
+ *
+ * `notificationVerificationOnly (5)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.12).
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +240,10 @@ const LocationEstimateType_notificationVerificationOnly: LocationEstimateType = 
 
 /**
  * @summary notificationVerificationOnly
+ * @description
+ *
+ * `notificationVerificationOnly (5)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.12).
+ *
  * @constant
  * @type {number}
  */

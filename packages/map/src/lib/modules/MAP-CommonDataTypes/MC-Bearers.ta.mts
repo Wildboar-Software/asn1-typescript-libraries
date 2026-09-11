@@ -75,7 +75,12 @@ import { maxNumOfMC_Bearers } from "./maxNumOfMC-Bearers.va.mjs";
 /**
  * @summary MC_Bearers
  * @description
- * 
+ *
+ * Number of multicall bearers. Integer 1..`maxNumOfMC-Bearers` (7). Related to
+ * simultaneous bearers supported per user by the serving network.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.2.52).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

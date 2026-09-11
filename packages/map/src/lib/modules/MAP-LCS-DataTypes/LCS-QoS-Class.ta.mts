@@ -78,7 +78,10 @@ enum _enum_for_LCS_QoS_Class {
 /**
  * @summary LCS_QoS_Class
  * @description
- * 
+ *
+ * Unrecognized value treated as bestEffort (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.11.8 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +98,10 @@ type LCS_QoS_Class = _enum_for_LCS_QoS_Class | ENUMERATED;
 
 /**
  * @summary LCS_QoS_Class_bestEffort
+ * @description
+ *
+ * `bestEffort (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +110,10 @@ const LCS_QoS_Class_bestEffort: LCS_QoS_Class = 0; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary bestEffort
+ * @description
+ *
+ * `bestEffort (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +122,10 @@ const bestEffort: LCS_QoS_Class = LCS_QoS_Class_bestEffort; /* SHORT_NAMED_ENUME
 
 /**
  * @summary LCS_QoS_Class_assured
+ * @description
+ *
+ * `assured (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +134,10 @@ const LCS_QoS_Class_assured: LCS_QoS_Class = 1; /* LONG_NAMED_ENUMERATED_VALUE *
 
 /**
  * @summary assured
+ * @description
+ *
+ * `assured (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+ *
  * @constant
  * @type {number}
  */

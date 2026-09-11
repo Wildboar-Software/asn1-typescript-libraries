@@ -81,7 +81,12 @@ import { Ext_SupportedFeatures, Ext_SupportedFeatures_unlicensedSpectrumAsSecond
 /**
  * @summary InsertSubscriberDataRes
  * @description
- * 
+ *
+ * Result of MAP_INSERT_SUBSCRIBER_DATA. The VLR/SGSN/IWF returns unsupported
+ * teleservice, bearer-service, SS-Code, and ODB categories,
+ * regional-subscription outcome, and offered CAMEL phases/CSIs. (3GPP TS 29.002
+ * V19.1.0 clauses 8.8.1 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,36 +111,68 @@ class InsertSubscriberDataRes {
     constructor (
         /**
          * @summary `teleserviceList`.
+         * @description
+         *
+         * Extensible teleservices from the request that the VLR/SGSN/IWF does
+         * not support/allocate. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+         *
          * @public
          * @readonly
          */
         readonly teleserviceList: OPTIONAL<TeleserviceList>,
         /**
          * @summary `bearerServiceList`.
+         * @description
+         *
+         * Extensible bearer services from the request that the VLR does not
+         * support/allocate. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+         *
          * @public
          * @readonly
          */
         readonly bearerServiceList: OPTIONAL<BearerServiceList>,
         /**
          * @summary `ss_List`.
+         * @description
+         *
+         * SS-Codes provided to the subscriber but not supported/allocated by
+         * the VLR/SGSN/IWF. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+         *
          * @public
          * @readonly
          */
         readonly ss_List: OPTIONAL<SS_List>,
         /**
          * @summary `odb_GeneralData`.
+         * @description
+         *
+         * ODB general categories not supported/allocated by the VLR/SGSN/IWF.
+         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+         *
          * @public
          * @readonly
          */
         readonly odb_GeneralData: OPTIONAL<ODB_GeneralData>,
         /**
          * @summary `regionalSubscriptionResponse`.
+         * @description
+         *
+         * MSC/SGSN/MME area entirely restricted, too many zone codes, zone code
+         * conflict, or regional subscription not supported. (3GPP TS 29.002
+         * V19.1.0 clauses 8.8.1.3 and 7.6.3.12)
+         *
          * @public
          * @readonly
          */
         readonly regionalSubscriptionResponse: OPTIONAL<RegionalSubscriptionResponse>,
         /**
          * @summary `supportedCamelPhases`.
+         * @description
+         *
+         * CAMEL phases supported in the VLR or SGSN (3GPP TS 23.078). A node
+         * supporting none may omit this. An IWF shall omit it. (3GPP TS 29.002
+         * V19.1.0 clause 8.8.1.3)
+         *
          * @public
          * @readonly
          */
@@ -148,18 +185,33 @@ class InsertSubscriberDataRes {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `offeredCamel4CSIs`.
+         * @description
+         *
+         * CAMEL phase 4 CSIs offered in the VMSC/VLR or SGSN. An IWF shall omit
+         * this. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.36D)
+         *
          * @public
          * @readonly
          */
         readonly offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `supportedFeatures`.
+         * @description
+         *
+         * IWF forwards feature-support indications received from MME or SGSN
+         * via S6a/S6d. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+         *
          * @public
          * @readonly
          */
         readonly supportedFeatures: OPTIONAL<SupportedFeatures>,
         /**
          * @summary `ext_SupportedFeatures`.
+         * @description
+         *
+         * Extended feature-support indications forwarded by an IWF from
+         * S6a/S6d. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+         *
          * @public
          * @readonly
          */

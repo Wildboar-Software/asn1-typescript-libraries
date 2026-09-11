@@ -73,7 +73,12 @@ import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-
 /**
  * @summary RelocationNumber
  * @description
- * 
+ *
+ * Handover number paired with a RAB Identity so the call can be related to the
+ * radio access bearer.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.19A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +96,24 @@ class RelocationNumber {
     constructor (
         /**
          * @summary `handoverNumber`.
+         * @description
+         *
+         * Number allocated for handover or relocation.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.21).
+         *
          * @public
          * @readonly
          */
         readonly handoverNumber: ISDN_AddressString,
         /**
          * @summary `rab_Id`.
+         * @description
+         *
+         * Radio access bearer identifier as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.57).
+         *
          * @public
          * @readonly
          */

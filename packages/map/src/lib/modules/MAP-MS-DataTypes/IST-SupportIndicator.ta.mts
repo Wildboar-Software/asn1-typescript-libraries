@@ -78,7 +78,12 @@ enum _enum_for_IST_SupportIndicator {
 /**
  * @summary IST_SupportIndicator
  * @description
- * 
+ *
+ * Degree of IST functionality supported by the VMSC or GMSC: basic IST, or IST
+ * command service (also terminate all calls for the subscriber). Received
+ * values greater than 1 shall be mapped to `istCommandSupported`. (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.69 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +100,10 @@ type IST_SupportIndicator = _enum_for_IST_SupportIndicator | ENUMERATED;
 
 /**
  * @summary IST_SupportIndicator_basicISTSupported
+ * @description
+ *
+ * Basic IST functionality. (3GPP TS 29.002 V19.1.0 clause 7.6.3.69)
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +112,10 @@ const IST_SupportIndicator_basicISTSupported: IST_SupportIndicator = 0; /* LONG_
 
 /**
  * @summary basicISTSupported
+ * @description
+ *
+ * Basic IST functionality. (3GPP TS 29.002 V19.1.0 clause 7.6.3.69)
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +124,12 @@ const basicISTSupported: IST_SupportIndicator = IST_SupportIndicator_basicISTSup
 
 /**
  * @summary IST_SupportIndicator_istCommandSupported
+ * @description
+ *
+ * IST command service in addition to basic IST, including terminating all calls
+ * for the identified subscriber. Received values > 1 map to this. (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.69 and 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +138,12 @@ const IST_SupportIndicator_istCommandSupported: IST_SupportIndicator = 1; /* LON
 
 /**
  * @summary istCommandSupported
+ * @description
+ *
+ * IST command service in addition to basic IST, including terminating all calls
+ * for the identified subscriber. Received values > 1 map to this. (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.69 and 17.7.1)
+ *
  * @constant
  * @type {number}
  */

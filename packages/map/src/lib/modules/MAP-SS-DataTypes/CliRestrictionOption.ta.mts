@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CliRestrictionOption
  * @description
- * 
+ *
+ * CLIR restriction mode: permanent, temporary default restricted, or temporary
+ * default allowed (3GPP TS 29.002 V19.1.0 clauses 7.6.4.5 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +97,10 @@ enum _enum_for_CliRestrictionOption {
 /**
  * @summary CliRestrictionOption
  * @description
- * 
+ *
+ * CLIR restriction mode: permanent, temporary default restricted, or temporary
+ * default allowed (3GPP TS 29.002 V19.1.0 clauses 7.6.4.5 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +118,10 @@ type CliRestrictionOption = _enum_for_CliRestrictionOption;
 /**
  * @summary CliRestrictionOption
  * @description
- * 
+ *
+ * CLIR restriction mode: permanent, temporary default restricted, or temporary
+ * default allowed (3GPP TS 29.002 V19.1.0 clauses 7.6.4.5 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -129,6 +138,10 @@ const CliRestrictionOption = _enum_for_CliRestrictionOption;
 
 /**
  * @summary CliRestrictionOption_permanent
+ * @description
+ *
+ * `permanent (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.5).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +150,10 @@ const CliRestrictionOption_permanent: CliRestrictionOption = CliRestrictionOptio
 
 /**
  * @summary permanent
+ * @description
+ *
+ * `permanent (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.5).
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +162,10 @@ const permanent: CliRestrictionOption = CliRestrictionOption.permanent; /* SHORT
 
 /**
  * @summary CliRestrictionOption_temporaryDefaultRestricted
+ * @description
+ *
+ * `temporaryDefaultRestricted (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.5).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +174,10 @@ const CliRestrictionOption_temporaryDefaultRestricted: CliRestrictionOption = Cl
 
 /**
  * @summary temporaryDefaultRestricted
+ * @description
+ *
+ * `temporaryDefaultRestricted (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.5).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +186,10 @@ const temporaryDefaultRestricted: CliRestrictionOption = CliRestrictionOption.te
 
 /**
  * @summary CliRestrictionOption_temporaryDefaultAllowed
+ * @description
+ *
+ * `temporaryDefaultAllowed (2)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.5).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +198,10 @@ const CliRestrictionOption_temporaryDefaultAllowed: CliRestrictionOption = CliRe
 
 /**
  * @summary temporaryDefaultAllowed
+ * @description
+ *
+ * `temporaryDefaultAllowed (2)` (3GPP TS 29.002 V19.1.0 clause 7.6.4.5).
+ *
  * @constant
  * @type {number}
  */

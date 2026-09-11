@@ -73,6 +73,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary ATI_NotAllowedParam
  * @description
  * 
+ * Optional parameter of `ati-NotAllowed` (3GPP TS 29.002 V19.1.0 clauses
+ * 8.11.1.3 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

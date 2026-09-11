@@ -75,7 +75,10 @@ import { maxNumOfCamelBasicServiceCriteria } from "./maxNumOfCamelBasicServiceCr
 /**
  * @summary BasicServiceCriteria
  * @description
- * 
+ *
+ * CAMEL TDP criteria: a list of extensible basic service codes (SIZE
+ * 1..maxNumOfCamelBasicServiceCriteria) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

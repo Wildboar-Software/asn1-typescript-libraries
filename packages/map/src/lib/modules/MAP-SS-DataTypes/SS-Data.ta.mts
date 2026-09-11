@@ -77,7 +77,10 @@ import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-Commo
 /**
  * @summary SS_Data
  * @description
- * 
+ *
+ * Information to characterise one SS: code, status, subscription option, basic
+ * service groups (3GPP TS 29.002 V19.1.0 clauses 7.6.4.3 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,36 +102,60 @@ class SS_Data {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code (clause 7.6.4.1).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: OPTIONAL<SS_Code>,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS-Status if applicable (clause 7.6.4.2).
+         *
          * @public
          * @readonly
          */
         readonly ss_Status: OPTIONAL<SS_Status>,
         /**
          * @summary `ss_SubscriptionOption`.
+         * @description
+         *
+         * Override category or CLI restriction (clauses 7.6.4.4–7.6.4.5).
+         *
          * @public
          * @readonly
          */
         readonly ss_SubscriptionOption: OPTIONAL<SS_SubscriptionOption>,
         /**
          * @summary `basicServiceGroupList`.
+         * @description
+         *
+         * Basic Service Group codes (clause 7.6.4.40).
+         *
          * @public
          * @readonly
          */
         readonly basicServiceGroupList: OPTIONAL<BasicServiceGroupList>,
         /**
          * @summary `defaultPriority`.
+         * @description
+         *
+         * Default eMLPP priority.
+         *
          * @public
          * @readonly
          */
         readonly defaultPriority: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `nbrUser`.
+         * @description
+         *
+         * Multicall bearers.
+         *
          * @public
          * @readonly
          */

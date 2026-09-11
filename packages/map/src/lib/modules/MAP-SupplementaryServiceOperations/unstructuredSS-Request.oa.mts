@@ -85,7 +85,13 @@ import { ussd_Busy } from "../MAP-Errors/ussd-Busy.oa.mjs";
 /**
  * @summary unstructuredSS_Request
  * @description
- * 
+ *
+ * MAP_UNSTRUCTURED_SS_REQUEST: invoking entity requires information from the
+ * mobile user for unstructured SS handling. Used gsmSCF↔HLR, HLR↔VLR and
+ * VLR↔MSC. Confirmed. Local opcode 60. Timer class `ml` (1 min to 10 min).
+ * Distinctive errors: `unknownAlphabet`, `ussd-Busy`. (3GPP TS 29.002 V19.1.0
+ * clauses 11.10.1, 17.1.2, 17.3.2.20 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ChosenChannelInfo
  * @description
- * 
+ *
+ * Chosen Channel information element as coded in 3GPP TS 48.008 (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.6.10B and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary forwardingViolation
  * @description
  * 
+ * Returned when the call has already been forwarded the maximum number of times
+ * that is allowed (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 14. Optional parameter `ForwardingViolationParam` (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

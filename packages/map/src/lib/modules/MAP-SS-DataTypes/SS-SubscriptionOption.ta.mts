@@ -73,7 +73,10 @@ import { OverrideCategory, _enum_for_OverrideCategory, OverrideCategory_override
 /**
  * @summary SS_SubscriptionOption
  * @description
- * 
+ *
+ * CLI restriction option or Override category (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.4.4–7.6.4.5 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

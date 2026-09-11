@@ -73,7 +73,10 @@ import { LCSCodewordString, _decode_LCSCodewordString, _encode_LCSCodewordString
 /**
  * @summary LCSCodeword
  * @description
- * 
+ *
+ * Codeword for the positioning request as in 3GPP TS 23.271 (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.11.18 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class LCSCodeword {
     constructor (
         /**
          * @summary `dataCodingScheme`.
+         * @description
+         *
+         * USSD DCS.
+         *
          * @public
          * @readonly
          */
         readonly dataCodingScheme: USSD_DataCodingScheme,
         /**
          * @summary `lcsCodewordString`.
+         * @description
+         *
+         * Codeword string, 1..20.
+         *
          * @public
          * @readonly
          */

@@ -73,7 +73,11 @@ import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } 
 /**
  * @summary SS_ForBS_Code
  * @description
- * 
+ *
+ * SS-Code with optional basic service, used by
+ * erase/activate/deactivate/interrogate (3GPP TS 29.002 V19.1.0 clauses
+ * 11.2–11.5 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,18 +95,30 @@ class SS_ForBS_Code {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code (clause 7.6.4.1).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Basic service group if applicable.
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<BasicServiceCode>,
         /**
          * @summary `longFTN_Supported`.
+         * @description
+         *
+         * Long Forwarded-to Number supported.
+         *
          * @public
          * @readonly
          */

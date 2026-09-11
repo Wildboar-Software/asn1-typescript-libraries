@@ -72,7 +72,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary WLAN_Offloadability_Indication
  * @description
- * 
+ *
+ * Whether WLAN offload is allowed or not allowed for a RAT. Defined in 3GPP TS
+ * 29.272.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.101 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +97,12 @@ enum _enum_for_WLAN_Offloadability_Indication {
 /**
  * @summary WLAN_Offloadability_Indication
  * @description
- * 
+ *
+ * Whether WLAN offload is allowed or not allowed for a RAT. Defined in 3GPP TS
+ * 29.272.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.101 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +119,12 @@ type WLAN_Offloadability_Indication = _enum_for_WLAN_Offloadability_Indication;
 /**
  * @summary WLAN_Offloadability_Indication
  * @description
- * 
+ *
+ * Whether WLAN offload is allowed or not allowed for a RAT. Defined in 3GPP TS
+ * 29.272.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.101 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

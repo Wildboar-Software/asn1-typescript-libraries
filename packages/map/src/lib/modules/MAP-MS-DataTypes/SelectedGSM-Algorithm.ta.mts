@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SelectedGSM_Algorithm
  * @description
- * 
+ *
+ * GSM algorithm selected by the GSM BSC controlled by MSC-B. Coded as the
+ * Algorithm identifier octet from Chosen Encryption Algorithm in 3GPP TS
+ * 48.008. A node shall mark only the selected GSM algorithm.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.15 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -74,6 +74,10 @@ import { ExtensibleSystemFailureParam, _decode_ExtensibleSystemFailureParam, _en
  * @summary SystemFailureParam
  * @description
  * 
+ * Optional parameter of `systemFailure`. Alternative `networkResource` must not
+ * be used in version 3; `extensibleSystemFailureParam` must not be used in
+ * version <3 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

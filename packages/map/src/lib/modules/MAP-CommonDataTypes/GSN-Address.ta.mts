@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GSN_Address
  * @description
- * 
+ *
+ * GPRS Support Node address (SGSN or GGSN IP address as in 3GPP TS 23.003).
+ * Size 5..17 octets. Used e.g. as SGSN address, GGSN address, and GMLC
+ * addresses.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8, 7.6.2.39, 7.6.2.40 and 7.6.2.59).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

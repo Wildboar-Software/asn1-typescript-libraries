@@ -78,6 +78,10 @@ enum _enum_for_AdditionalRoamingNotAllowedCause {
  * @summary AdditionalRoamingNotAllowedCause
  * @description
  * 
+ * Additional cause on `RoamingNotAllowedParam`. If this parameter is received
+ * by the MSC/VLR or SGSN, `roamingNotAllowedCause` shall be discarded (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +97,10 @@ type AdditionalRoamingNotAllowedCause = _enum_for_AdditionalRoamingNotAllowedCau
 
 /**
  * @summary AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed
+ * @description
+ *
+ * `supportedRAT-TypesNotAllowed` (0) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +109,10 @@ const AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed: AdditionalR
 
 /**
  * @summary supportedRAT_TypesNotAllowed
+ * @description
+ *
+ * `supportedRAT-TypesNotAllowed` (0) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */

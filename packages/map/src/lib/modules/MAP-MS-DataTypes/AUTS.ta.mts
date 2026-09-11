@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AUTS
  * @description
- * 
+ *
+ * UMTS resynchronisation token (3GPP TS 29.002 V19.1.0 clauses 7.6.7.6B and
+ * 17.7.1). Encoded as an OCTET STRING of 14 octets.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -72,7 +72,10 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary locationSvcGatewayContext_v3
  * @description
- * 
+ *
+ * Location service gateway procedures. Initiator is GMLC; responder is HLR
+ * (3GPP TS 29.002 V19.1.0 clause 17.3.2.39).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

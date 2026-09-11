@@ -75,7 +75,17 @@ import { maxFTN_AddressLength } from "./maxFTN-AddressLength.va.mjs";
 /**
  * @summary FTN_AddressString
  * @description
- * 
+ *
+ * Forwarded-to number. `AddressString` of size 1..`maxFTN-AddressLength` (15).
+ * If NAI is international, the first digits are the country code (CC) and
+ * network destination code (NDC) as for E.164.
+ *
+ * A subaddress may be appended (see `ISDN-SubaddressString`). For subscribers
+ * with originating CAMEL Phase 2 or higher, this address need not be in E.164
+ * international format.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8, 7.6.2.22 and 7.6.2.22A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

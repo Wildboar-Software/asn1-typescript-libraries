@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SupportedFeatures
  * @description
- * 
+ *
+ * Features supported by SGSN or MME/IWF. Definition and usage in 3GPP TS
+ * 29.272. Further features are in `Ext-SupportedFeatures`. Size 26..40 bits.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.7 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

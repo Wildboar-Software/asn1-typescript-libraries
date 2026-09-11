@@ -75,7 +75,12 @@ import { maxNumOfIntegrityInfo } from "./maxNumOfIntegrityInfo.va.mjs";
 /**
  * @summary IntegrityProtectionInformation
  * @description
- * 
+ *
+ * Integrity Protection Information element of 3GPP TS 25.413, encoded as in
+ * that specification. OCTET STRING SIZE (18..100). Padding bits, if needed, are
+ * in the least significant bits of the last octet. Used in handover. (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.6.8 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

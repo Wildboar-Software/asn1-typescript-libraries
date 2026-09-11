@@ -73,7 +73,13 @@ import { Reset_Id, _decode_Reset_Id, _encode_Reset_Id } from "../MAP-MS-DataType
 /**
  * @summary Reset_Id_List
  * @description
- * 
+ *
+ * List of 1..50 Reset-Ids. Present in MAP_RESET only if Reset-Ids are supported
+ * by both HLR/HSS and VLR, SGSN, or MME (via IWF). Shall not be present
+ * together with HLR Id list.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.10.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

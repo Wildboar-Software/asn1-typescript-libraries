@@ -76,6 +76,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary illegalEquipment
  * @description
  * 
+ * Returned when the IMEI check procedure has shown that the IMEI is
+ * prohibited-listed or not permitted-listed (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
+ * Local code 12. Optional parameter `IllegalEquipmentParam` must not be used in
+ * version <3 (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

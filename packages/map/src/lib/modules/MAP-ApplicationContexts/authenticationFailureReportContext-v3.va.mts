@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary authenticationFailureReportContext_v3
  * @description
- * 
+ *
+ * Authentication failure reporting between VLR and HLR or SGSN and HLR.
+ * Initiator is VLR or SGSN; responder is HLR. Version 3 only (3GPP TS 29.002
+ * V19.1.0 clause 17.3.2.49).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

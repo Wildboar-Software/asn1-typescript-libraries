@@ -73,7 +73,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary FailureReportRes
  * @description
- * 
+ *
+ * Result of MAP_FAILURE_REPORT, optionally returning a GGSN address. User
+ * errors: system failure, data missing, unexpected data value, unknown
+ * subscriber (3GPP TS 29.002 V19.1.0 clauses 13.2.2 and 13.2.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +94,11 @@ class FailureReportRes {
     constructor (
         /**
          * @summary `ggsn_Address`.
+         * @description
+         *
+         * GGSN IP-address as defined in 3GPP TS 23.003 (3GPP TS 29.002 V19.1.0
+         * clauses 13.2.2 and 7.6.2.40).
+         *
          * @public
          * @readonly
          */

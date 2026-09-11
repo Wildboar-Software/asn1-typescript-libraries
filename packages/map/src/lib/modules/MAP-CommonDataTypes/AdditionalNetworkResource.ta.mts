@@ -84,7 +84,13 @@ enum _enum_for_AdditionalNetworkResource {
 /**
  * @summary AdditionalNetworkResource
  * @description
- * 
+ *
+ * Further network-resource class: SGSN, GGSN, GMLC, gsmSCF, NPLR, AuC. The
+ * ASN.1 also defines `ue` (6) and `mme` (7) after the extension marker. If an
+ * unknown value is received it shall be ignored.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.10.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -107,6 +113,10 @@ type AdditionalNetworkResource = _enum_for_AdditionalNetworkResource | ENUMERATE
 
 /**
  * @summary AdditionalNetworkResource_sgsn
+ * @description
+ *
+ * SGSN (value 0). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +125,10 @@ const AdditionalNetworkResource_sgsn: AdditionalNetworkResource = 0; /* LONG_NAM
 
 /**
  * @summary sgsn
+ * @description
+ *
+ * SGSN (value 0). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +137,10 @@ const sgsn: AdditionalNetworkResource = AdditionalNetworkResource_sgsn; /* SHORT
 
 /**
  * @summary AdditionalNetworkResource_ggsn
+ * @description
+ *
+ * GGSN (value 1). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +149,10 @@ const AdditionalNetworkResource_ggsn: AdditionalNetworkResource = 1; /* LONG_NAM
 
 /**
  * @summary ggsn
+ * @description
+ *
+ * GGSN (value 1). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +161,10 @@ const ggsn: AdditionalNetworkResource = AdditionalNetworkResource_ggsn; /* SHORT
 
 /**
  * @summary AdditionalNetworkResource_gmlc
+ * @description
+ *
+ * GMLC (value 2). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +173,10 @@ const AdditionalNetworkResource_gmlc: AdditionalNetworkResource = 2; /* LONG_NAM
 
 /**
  * @summary gmlc
+ * @description
+ *
+ * GMLC (value 2). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +185,10 @@ const gmlc: AdditionalNetworkResource = AdditionalNetworkResource_gmlc; /* SHORT
 
 /**
  * @summary AdditionalNetworkResource_gsmSCF
+ * @description
+ *
+ * gsmSCF (value 3). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +197,10 @@ const AdditionalNetworkResource_gsmSCF: AdditionalNetworkResource = 3; /* LONG_N
 
 /**
  * @summary gsmSCF
+ * @description
+ *
+ * gsmSCF (value 3). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -171,6 +209,10 @@ const gsmSCF: AdditionalNetworkResource = AdditionalNetworkResource_gsmSCF; /* S
 
 /**
  * @summary AdditionalNetworkResource_nplr
+ * @description
+ *
+ * NPLR (value 4). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -179,6 +221,10 @@ const AdditionalNetworkResource_nplr: AdditionalNetworkResource = 4; /* LONG_NAM
 
 /**
  * @summary nplr
+ * @description
+ *
+ * NPLR (value 4). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -187,6 +233,10 @@ const nplr: AdditionalNetworkResource = AdditionalNetworkResource_nplr; /* SHORT
 
 /**
  * @summary AdditionalNetworkResource_auc
+ * @description
+ *
+ * AuC (value 5). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -195,6 +245,10 @@ const AdditionalNetworkResource_auc: AdditionalNetworkResource = 5; /* LONG_NAME
 
 /**
  * @summary auc
+ * @description
+ *
+ * AuC (value 5). (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+ *
  * @constant
  * @type {number}
  */
@@ -203,6 +257,11 @@ const auc: AdditionalNetworkResource = AdditionalNetworkResource_auc; /* SHORT_N
 
 /**
  * @summary AdditionalNetworkResource_ue
+ * @description
+ *
+ * UE (value 6). Unknown received values shall be ignored. (3GPP TS 29.002
+ * V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -211,6 +270,11 @@ const AdditionalNetworkResource_ue: AdditionalNetworkResource = 6; /* LONG_NAMED
 
 /**
  * @summary ue
+ * @description
+ *
+ * UE (value 6). Unknown received values shall be ignored. (3GPP TS 29.002
+ * V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -219,6 +283,11 @@ const ue: AdditionalNetworkResource = AdditionalNetworkResource_ue; /* SHORT_NAM
 
 /**
  * @summary AdditionalNetworkResource_mme
+ * @description
+ *
+ * MME (value 7). Unknown received values shall be ignored. (3GPP TS 29.002
+ * V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -227,6 +296,11 @@ const AdditionalNetworkResource_mme: AdditionalNetworkResource = 7; /* LONG_NAME
 
 /**
  * @summary mme
+ * @description
+ *
+ * MME (value 7). Unknown received values shall be ignored. (3GPP TS 29.002
+ * V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */

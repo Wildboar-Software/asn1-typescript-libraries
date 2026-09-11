@@ -75,7 +75,10 @@ import { maxNumOfExt_BasicServiceGroups } from "./maxNumOfExt-BasicServiceGroups
 /**
  * @summary Ext_BasicServiceGroupList
  * @description
- * 
+ *
+ * List of extensible basic service groups, e.g. in a CUG subscription (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.5 and 7.6.3.23).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

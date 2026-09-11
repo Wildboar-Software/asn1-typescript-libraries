@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-CH-DataTypes`.
+ * ASN.1 module `MAP-CH-DataTypes` (clause 17.7.3). Types for call handling:
+ * send routing info, roaming number, resume call handling, CCBS reporting, IST,
+ * and release resources (3GPP TS 29.002 V19.1.0 clauses 17.7.3 and 10).
  */
 export * from "./AllowedServices.ta.mjs";
 export * from "./CCBS-Indicators.ta.mjs";

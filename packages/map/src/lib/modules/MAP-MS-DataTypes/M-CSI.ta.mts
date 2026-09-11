@@ -75,7 +75,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary M_CSI
  * @description
- * 
+ *
+ * Mobility CAMEL Subscription Information: MM events to report from the VLR to
+ * the gsmSCF (or Presence Network Agent). `notificationToCSE` and `csi-Active`
+ * shall not be present when M-CSI is sent to the VLR; they may appear only in
+ * ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clauses 8.1.8 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,18 +101,32 @@ class M_CSI {
     constructor (
         /**
          * @summary `mobilityTriggers`.
+         * @description
+         *
+         * CS-domain MM events to report (CAMEL phase 4 MM-Code values). (3GPP
+         * TS 29.002 V19.1.0 clauses 8.1.8.3 and 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly mobilityTriggers: MobilityTriggers,
         /**
          * @summary `serviceKey`.
+         * @description
+         *
+         * Service key for the gsmSCF. (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
+         *
          * @public
          * @readonly
          */
         readonly serviceKey: ServiceKey,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * gsmSCF address to which MM events are reported. (3GPP TS 29.002
+         * V19.1.0 clause 8.1.8)
+         *
          * @public
          * @readonly
          */
@@ -120,12 +139,22 @@ class M_CSI {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Shall not be present when M-CSI is sent to the VLR; may appear only
+         * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly notificationToCSE: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
+         * @description
+         *
+         * Shall not be present when M-CSI is sent to the VLR; may appear only
+         * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

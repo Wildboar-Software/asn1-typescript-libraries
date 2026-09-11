@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary equipmentMngtContext_v3
  * @description
- * 
+ *
+ * Equipment checking between MSC and EIR or SGSN and EIR. Initiator is MSC or
+ * SGSN; responder is EIR. For SGSN–EIR, versions 1–3 apply. v2 and v1
+ * equivalents exist (3GPP TS 29.002 V19.1.0 clause 17.3.2.14).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

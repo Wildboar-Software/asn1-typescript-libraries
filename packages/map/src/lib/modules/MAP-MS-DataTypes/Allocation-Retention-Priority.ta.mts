@@ -72,7 +72,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary Allocation_Retention_Priority
  * @description
- * 
+ *
+ * EPS allocation/retention priority: priority level with optional pre-emption
+ * capability and pre-emption vulnerability (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.3.75C, 7.6.3.87 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,18 +95,31 @@ class Allocation_Retention_Priority {
     constructor (
         /**
          * @summary `priority_level`.
+         * @description
+         *
+         * Priority Level of Evolved Allocation/Retention Priority (3GPP TS
+         * 29.060) (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75C and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly priority_level: INTEGER,
         /**
          * @summary `pre_emption_capability`.
+         * @description
+         *
+         * Preemption Capability (3GPP TS 29.002 V19.1.0 clause 7.6.3.75C).
+         *
          * @public
          * @readonly
          */
         readonly pre_emption_capability: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pre_emption_vulnerability`.
+         * @description
+         *
+         * Preemption Vulnerability (3GPP TS 29.002 V19.1.0 clause 7.6.3.75C).
+         *
          * @public
          * @readonly
          */

@@ -76,6 +76,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary informationNotAvailable
  * @description
  * 
+ * Any-time information handling user error. Not listed under clause 7.6.1.4;
+ * returned as user error Information Not Available on
+ * MAP-ANY-TIME-SUBSCRIPTION-INTERROGATION and MAP-ANY-TIME-MODIFICATION (3GPP
+ * TS 29.002 V19.1.0 clauses 8.11.3.3, 8.11.4.3 and 17.6.6).
+ *
+ * Local code 62. Optional parameter `InformationNotAvailableParam` (3GPP TS
+ * 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

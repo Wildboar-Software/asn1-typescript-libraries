@@ -73,7 +73,10 @@ import { CCBS_Data, _decode_CCBS_Data, _encode_CCBS_Data } from "../MAP-SS-DataT
 /**
  * @summary RegisterCC_EntryArg
  * @description
- * 
+ *
+ * Argument of MAP_REGISTER_CC_ENTRY: MSC–VLR and VLR–HLR (3GPP TS 29.002
+ * V19.1.0 clauses 11.13 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class RegisterCC_EntryArg {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * Call-completion SS-Code.
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `ccbs_Data`.
+         * @description
+         *
+         * CCBS registration data.
+         *
          * @public
          * @readonly
          */

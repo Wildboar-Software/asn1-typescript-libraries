@@ -73,7 +73,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SS_Code
  * @description
- * 
+ *
+ * Identifies a single supplementary service, a group of supplementary services,
+ * or all supplementary services, as defined in 3GPP TS 22.004. MAP includes
+ * CLIP, CLIR, COLP, COLR, CNAP, all call forwarding services (including Call
+ * Deflection), CW, HOLD, MPTY, CUG, all charging services, all call restriction
+ * services, ECT, eMLPP, CCBS-A, CCBS-B, all LCS privacy exceptions, MO-LR, and
+ * Multicall (3GPP TS 29.002 V19.1.0 clauses 7.6.4.1 and 17.7.5).
+ *
+ * One octet: bits 8-5 are the group; bits 4-1 are the specific service.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -77,7 +77,10 @@ import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-Commo
 /**
  * @summary GenericServiceInfo
  * @description
- * 
+ *
+ * Interrogation result for generic SS data including CLIR, eMLPP and CCBS (3GPP
+ * TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,48 +103,80 @@ class GenericServiceInfo {
     constructor (
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS-Status (clause 7.6.4.2).
+         *
          * @public
          * @readonly
          */
         readonly ss_Status: SS_Status,
         /**
          * @summary `cliRestrictionOption`.
+         * @description
+         *
+         * CLIR restriction mode (clause 7.6.4.5).
+         *
          * @public
          * @readonly
          */
         readonly cliRestrictionOption: OPTIONAL<CliRestrictionOption>,
         /**
          * @summary `maximumEntitledPriority`.
+         * @description
+         *
+         * Maximum entitled eMLPP priority.
+         *
          * @public
          * @readonly
          */
         readonly maximumEntitledPriority: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `defaultPriority`.
+         * @description
+         *
+         * Default eMLPP priority.
+         *
          * @public
          * @readonly
          */
         readonly defaultPriority: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `ccbs_FeatureList`.
+         * @description
+         *
+         * CCBS features, at most 5.
+         *
          * @public
          * @readonly
          */
         readonly ccbs_FeatureList: OPTIONAL<CCBS_FeatureList>,
         /**
          * @summary `nbrSB`.
+         * @description
+         *
+         * Maximum Multicall bearers.
+         *
          * @public
          * @readonly
          */
         readonly nbrSB: OPTIONAL<MaxMC_Bearers>,
         /**
          * @summary `nbrUser`.
+         * @description
+         *
+         * Multicall user bearers.
+         *
          * @public
          * @readonly
          */
         readonly nbrUser: OPTIONAL<MC_Bearers>,
         /**
          * @summary `nbrSN`.
+         * @description
+         *
+         * Multicall SN bearers.
+         *
          * @public
          * @readonly
          */

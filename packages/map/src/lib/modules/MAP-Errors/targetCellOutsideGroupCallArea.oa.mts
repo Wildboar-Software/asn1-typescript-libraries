@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary targetCellOutsideGroupCallArea
  * @description
  * 
+ * Handover user error: target cell outside group call area (3GPP TS 29.002
+ * V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 42. Optional parameter `TargetCellOutsideGCA-Param` (3GPP TS
+ * 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

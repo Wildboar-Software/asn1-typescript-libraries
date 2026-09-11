@@ -78,7 +78,14 @@ enum _enum_for_SMS_TriggerDetectionPoint {
 /**
  * @summary SMS_TriggerDetectionPoint
  * @description
- * 
+ *
+ * SMS CAMEL TDP. Receiver shall ignore a whole SMS-CAMEL-TDP-Data or
+ * MT-smsCAMELTDP-Criteria sequence with any other value than those listed. In
+ * mo-sms-CSI only `sms-CollectedInfo` is valid; in mt-sms-CSI and MT-sms
+ * criteria only `sms-DeliveryRequest` is valid.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

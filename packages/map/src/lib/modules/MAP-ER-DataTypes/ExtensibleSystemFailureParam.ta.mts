@@ -76,6 +76,12 @@ import { FailureCauseParam, _enum_for_FailureCauseParam, FailureCauseParam_limit
  * @summary ExtensibleSystemFailureParam
  * @description
  * 
+ * Version 3-and-higher alternative of `SystemFailureParam`. The type of entity
+ * or network resource may be indicated by `networkResource` or
+ * `additionalNetworkResource`. `failureCauseParam` shall be included if and
+ * only if the problem is in the entity reporting the error (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.1.4, 7.6.10.1, 7.6.10.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,6 +100,12 @@ class ExtensibleSystemFailureParam {
     constructor (
         /**
          * @summary `networkResource`.
+         * @description
+         *
+         * Class or type of network resource: PLMN, HLR, VLR (current or
+         * previous), MSC (controlling or current), EIR, or radio sub-system
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+         *
          * @public
          * @readonly
          */
@@ -106,12 +118,22 @@ class ExtensibleSystemFailureParam {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalNetworkResource`.
+         * @description
+         *
+         * Class or type of additional network resource: SGSN, GGSN, GMLC,
+         * gsmSCF, NPLR, or AuC (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+         *
          * @public
          * @readonly
          */
         readonly additionalNetworkResource: OPTIONAL<AdditionalNetworkResource>,
         /**
          * @summary `failureCauseParam`.
+         * @description
+         *
+         * Shall be included if and only if the problem is in the entity
+         * reporting the error (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+         *
          * @public
          * @readonly
          */

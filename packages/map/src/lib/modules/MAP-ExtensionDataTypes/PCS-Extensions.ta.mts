@@ -72,7 +72,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PCS_Extensions
  * @description
- * 
+ *
+ * PCS Extension Container. Only an extension marker is defined here; PCS
+ * extensions shall be included in this container (3GPP TS 29.002 V19.1.0
+ * clauses 17.1.4 and 17.7.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

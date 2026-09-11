@@ -73,7 +73,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AgeOfLocationInformation
  * @description
- * 
+ *
+ * Elapsed time in minutes since the last network contact of the mobile station
+ * (actuality of the location information). 0 means the MS is currently in
+ * contact with the network. 32767 means the location information is at least
+ * 32767 minutes old. Related to Age of Location Estimate in LCS.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.11.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

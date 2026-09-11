@@ -73,7 +73,10 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
 /**
  * @summary EraseCC_EntryRes
  * @description
- * 
+ *
+ * Result of MAP_ERASE_CC_ENTRY (3GPP TS 29.002 V19.1.0 clauses 11.14 and
+ * 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class EraseCC_EntryRes {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the erased service.
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * Resulting SS-Status if present.
+         *
          * @public
          * @readonly
          */

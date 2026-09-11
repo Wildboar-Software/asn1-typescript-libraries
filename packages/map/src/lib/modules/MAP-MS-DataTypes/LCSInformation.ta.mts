@@ -74,7 +74,15 @@ import { MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataT
 /**
  * @summary LCSInformation
  * @description
- * 
+ *
+ * LCS subscription data: GMLC list, privacy exception list, MO-LR list, and
+ * optional additional privacy exception list. The additional list may be sent
+ * only if the primary list is present and contains four `LCS-PrivacyClass`
+ * instances; otherwise the receiver shall discard it. The same SS-Code in both
+ * lists shall cause Unexpected Data Value. At restoration/location updating the
+ * HLR sends the complete LCS data. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.60,
+ * 8.8.1.3, and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,24 +101,46 @@ class LCSInformation {
     constructor (
         /**
          * @summary `gmlc_List`.
+         * @description
+         *
+         * GMLCs permitted to issue call/session related or unrelated MT-LR for
+         * this MS (3GPP TS 23.271). (3GPP TS 29.002 V19.1.0 clause 7.6.3.61)
+         *
          * @public
          * @readonly
          */
         readonly gmlc_List: OPTIONAL<GMLC_List>,
         /**
          * @summary `lcs_PrivacyExceptionList`.
+         * @description
+         *
+         * Privacy-exception classes (up to four). (3GPP TS 29.002 V19.1.0
+         * clause 7.6.3.62)
+         *
          * @public
          * @readonly
          */
         readonly lcs_PrivacyExceptionList: OPTIONAL<LCS_PrivacyExceptionList>,
         /**
          * @summary `molr_List`.
+         * @description
+         *
+         * MO-LR classes for which a subscription exists. (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.65A)
+         *
          * @public
          * @readonly
          */
         readonly molr_List: OPTIONAL<MOLR_List>,
         /**
          * @summary `add_lcs_PrivacyExceptionList`.
+         * @description
+         *
+         * May be sent only if `lcs-PrivacyExceptionList` is present and
+         * contains four `LCS-PrivacyClass` instances; otherwise discarded.
+         * Duplicate SS-Code with the primary list yields Unexpected Data Value.
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.62A and 17.7.1)
+         *
          * @public
          * @readonly
          */

@@ -76,7 +76,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CUG_Subscription
  * @description
- * 
+ *
+ * Basic CUG subscription: CUG index, CUG interlock, Intra CUG restrictions and
+ * Basic Service Group List (3GPP TS 29.002 V19.1.0 clause 7.6.3.23).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,24 +99,44 @@ class CUG_Subscription {
     constructor (
         /**
          * @summary `cug_Index`.
+         * @description
+         *
+         * CUG index defined in ETS 300 138 (3GPP TS 29.002 V19.1.0 clauses
+         * 7.6.3.23 and 7.6.3.25).
+         *
          * @public
          * @readonly
          */
         readonly cug_Index: CUG_Index,
         /**
          * @summary `cug_Interlock`.
+         * @description
+         *
+         * CUG interlock code defined in ETS 300 138 (3GPP TS 29.002 V19.1.0
+         * clauses 7.6.3.23 and 7.6.3.24).
+         *
          * @public
          * @readonly
          */
         readonly cug_Interlock: CUG_Interlock,
         /**
          * @summary `intraCUG_Options`.
+         * @description
+         *
+         * Intra CUG restrictions (3GPP TS 29.002 V19.1.0 clauses 7.6.3.23 and
+         * 7.6.3.28).
+         *
          * @public
          * @readonly
          */
         readonly intraCUG_Options: IntraCUG_Options,
         /**
          * @summary `basicServiceGroupList`.
+         * @description
+         *
+         * Basic Service Group List for this CUG (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.23).
+         *
          * @public
          * @readonly
          */

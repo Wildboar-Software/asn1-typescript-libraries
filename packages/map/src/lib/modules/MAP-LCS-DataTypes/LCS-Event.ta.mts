@@ -82,7 +82,11 @@ enum _enum_for_LCS_Event {
 /**
  * @summary LCS_Event
  * @description
- * 
+ *
+ * deferredmt-lrResponse delivers an estimate for an LDR from MT-LR activate
+ * deferred location or deferred MO-LR TTTP. Unrecognized value: reject with
+ * unexpected data value (3GPP TS 29.002 V19.1.0 clauses 7.6.11.5 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,6 +107,10 @@ type LCS_Event = _enum_for_LCS_Event | ENUMERATED;
 
 /**
  * @summary LCS_Event_emergencyCallOrigination
+ * @description
+ *
+ * `emergencyCallOrigination (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +119,10 @@ const LCS_Event_emergencyCallOrigination: LCS_Event = 0; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary emergencyCallOrigination
+ * @description
+ *
+ * `emergencyCallOrigination (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +131,10 @@ const emergencyCallOrigination: LCS_Event = LCS_Event_emergencyCallOrigination; 
 
 /**
  * @summary LCS_Event_emergencyCallRelease
+ * @description
+ *
+ * `emergencyCallRelease (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +143,10 @@ const LCS_Event_emergencyCallRelease: LCS_Event = 1; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary emergencyCallRelease
+ * @description
+ *
+ * `emergencyCallRelease (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +155,10 @@ const emergencyCallRelease: LCS_Event = LCS_Event_emergencyCallRelease; /* SHORT
 
 /**
  * @summary LCS_Event_mo_lr
+ * @description
+ *
+ * `mo-lr (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +167,10 @@ const LCS_Event_mo_lr: LCS_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mo_lr
+ * @description
+ *
+ * `mo-lr (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +179,10 @@ const mo_lr: LCS_Event = LCS_Event_mo_lr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_deferredmt_lrResponse
+ * @description
+ *
+ * `deferredmt-lrResponse (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +191,10 @@ const LCS_Event_deferredmt_lrResponse: LCS_Event = 3; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary deferredmt_lrResponse
+ * @description
+ *
+ * `deferredmt-lrResponse (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +203,10 @@ const deferredmt_lrResponse: LCS_Event = LCS_Event_deferredmt_lrResponse; /* SHO
 
 /**
  * @summary LCS_Event_deferredmo_lrTTTPInitiation
+ * @description
+ *
+ * `deferredmo-lrTTTPInitiation (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +215,10 @@ const LCS_Event_deferredmo_lrTTTPInitiation: LCS_Event = 4; /* LONG_NAMED_ENUMER
 
 /**
  * @summary deferredmo_lrTTTPInitiation
+ * @description
+ *
+ * `deferredmo-lrTTTPInitiation (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +227,10 @@ const deferredmo_lrTTTPInitiation: LCS_Event = LCS_Event_deferredmo_lrTTTPInitia
 
 /**
  * @summary LCS_Event_emergencyCallHandover
+ * @description
+ *
+ * `emergencyCallHandover (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +239,10 @@ const LCS_Event_emergencyCallHandover: LCS_Event = 5; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary emergencyCallHandover
+ * @description
+ *
+ * `emergencyCallHandover (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */

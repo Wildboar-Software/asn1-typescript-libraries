@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CS_AllocationRetentionPriority
  * @description
- * 
+ *
+ * Allocation/retention priority for Circuit Switched, corresponding to 3GPP TS
+ * 23.107. Encodes each priority level as the binary value of the priority
+ * level. Used only by the VLR; if the SGSN or IWF receives this parameter it
+ * shall ignore it (3GPP TS 29.002 V19.1.0 clauses 7.6.3.87, 8.8.1.3 and
+ * 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

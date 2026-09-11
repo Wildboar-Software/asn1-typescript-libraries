@@ -75,7 +75,10 @@ import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } 
 /**
  * @summary CCBS_Feature
  * @description
- * 
+ *
+ * One CCBS request: index, B-subscriber identities, basic service (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,24 +97,40 @@ class CCBS_Feature {
     constructor (
         /**
          * @summary `ccbs_Index`.
+         * @description
+         *
+         * Index 1..5 of the CCBS request.
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Index: OPTIONAL<CCBS_Index>,
         /**
          * @summary `b_subscriberNumber`.
+         * @description
+         *
+         * B-subscriber ISDN number.
+         *
          * @public
          * @readonly
          */
         readonly b_subscriberNumber: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `b_subscriberSubaddress`.
+         * @description
+         *
+         * B-subscriber subaddress.
+         *
          * @public
          * @readonly
          */
         readonly b_subscriberSubaddress: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `basicServiceGroup`.
+         * @description
+         *
+         * Basic service group.
+         *
          * @public
          * @readonly
          */

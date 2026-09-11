@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CUG_Info
  * @description
- * 
+ *
+ * Overall CUG information: CUG subscription list and CUG feature list. Used
+ * only by the VLR in Insert Subscriber Data; if the SGSN or IWF receives this
+ * parameter it shall ignore it (3GPP TS 29.002 V19.1.0 clauses 7.6.3.22 and
+ * 8.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +97,23 @@ class CUG_Info {
     constructor (
         /**
          * @summary `cug_SubscriptionList`.
+         * @description
+         *
+         * Complete CUG subscription list; first ISD in a dialogue that contains
+         * CUG information shall include a non-empty list (3GPP TS 29.002
+         * V19.1.0 clause 8.8.1.3).
+         *
          * @public
          * @readonly
          */
         readonly cug_SubscriptionList: CUG_SubscriptionList,
         /**
          * @summary `cug_FeatureList`.
+         * @description
+         *
+         * If omitted, VLR applies defaults: no outgoing access, no incoming
+         * access, no preferential CUG (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+         *
          * @public
          * @readonly
          */

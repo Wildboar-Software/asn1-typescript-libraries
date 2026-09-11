@@ -72,7 +72,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GuidanceInfo
  * @description
- * 
+ *
+ * Guidance when a password is requested: enter password (old), enter new
+ * password, or enter new password again. Delivery method (display,
+ * announcement) is not specified here (3GPP TS 29.002 V19.1.0 clauses 7.6.4.22
+ * and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +99,12 @@ enum _enum_for_GuidanceInfo {
 /**
  * @summary GuidanceInfo
  * @description
- * 
+ *
+ * Guidance when a password is requested: enter password (old), enter new
+ * password, or enter new password again. Delivery method (display,
+ * announcement) is not specified here (3GPP TS 29.002 V19.1.0 clauses 7.6.4.22
+ * and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +122,12 @@ type GuidanceInfo = _enum_for_GuidanceInfo;
 /**
  * @summary GuidanceInfo
  * @description
- * 
+ *
+ * Guidance when a password is requested: enter password (old), enter new
+ * password, or enter new password again. Delivery method (display,
+ * announcement) is not specified here (3GPP TS 29.002 V19.1.0 clauses 7.6.4.22
+ * and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -129,6 +144,10 @@ const GuidanceInfo = _enum_for_GuidanceInfo;
 
 /**
  * @summary GuidanceInfo_enterPW
+ * @description
+ *
+ * `enterPW (0)`: check old password (3GPP TS 29.002 V19.1.0 clause 7.6.4.22).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +156,10 @@ const GuidanceInfo_enterPW: GuidanceInfo = GuidanceInfo.enterPW; /* LONG_NAMED_E
 
 /**
  * @summary enterPW
+ * @description
+ *
+ * `enterPW (0)`: check old password (3GPP TS 29.002 V19.1.0 clause 7.6.4.22).
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +168,11 @@ const enterPW: GuidanceInfo = GuidanceInfo.enterPW; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary GuidanceInfo_enterNewPW
+ * @description
+ *
+ * `enterNewPW (1)`: first new password (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.4.22).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +181,11 @@ const GuidanceInfo_enterNewPW: GuidanceInfo = GuidanceInfo.enterNewPW; /* LONG_N
 
 /**
  * @summary enterNewPW
+ * @description
+ *
+ * `enterNewPW (1)`: first new password (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.4.22).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +194,11 @@ const enterNewPW: GuidanceInfo = GuidanceInfo.enterNewPW; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary GuidanceInfo_enterNewPW_Again
+ * @description
+ *
+ * `enterNewPW-Again (2)`: verify new password (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.4.22).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +207,11 @@ const GuidanceInfo_enterNewPW_Again: GuidanceInfo = GuidanceInfo.enterNewPW_Agai
 
 /**
  * @summary enterNewPW_Again
+ * @description
+ *
+ * `enterNewPW-Again (2)`: verify new password (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.4.22).
+ *
  * @constant
  * @type {number}
  */

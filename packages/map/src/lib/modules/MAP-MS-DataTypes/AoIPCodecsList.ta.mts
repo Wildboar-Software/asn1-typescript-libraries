@@ -73,7 +73,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary AoIPCodecsList
  * @description
- * 
+ *
+ * AoIP codec list for inter-MSC handover with AoIP access, as AoIP-Supported
+ * Codecs List (Anchor) in 3GPP TS 23.009. Codecs are sent in priority order
+ * where codec1 has highest priority (3GPP TS 29.002 V19.1.0 clauses 7.6.6.22
+ * and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +102,11 @@ class AoIPCodecsList {
     constructor (
         /**
          * @summary `codec1`.
+         * @description
+         *
+         * Highest-priority codec; codecs are sent in priority order (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

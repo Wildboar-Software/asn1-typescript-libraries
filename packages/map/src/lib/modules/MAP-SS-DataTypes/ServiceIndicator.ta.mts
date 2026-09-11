@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServiceIndicator
  * @description
- * 
+ *
+ * BIT STRING: `clir-invoked (0)`, `camel-invoked (1)`. Bits 2–31 ignored if not
+ * understood (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -87,6 +90,10 @@ type ServiceIndicator = BIT_STRING;
 
 /**
  * @summary ServiceIndicator_clir_invoked
+ * @description
+ *
+ * `clir-invoked (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  */
 export
@@ -94,6 +101,10 @@ const ServiceIndicator_clir_invoked: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary clir_invoked
+ * @description
+ *
+ * `clir-invoked (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  */
 export
@@ -101,6 +112,10 @@ const clir_invoked: number = ServiceIndicator_clir_invoked; /* SHORT_NAMED_BIT *
 
 /**
  * @summary ServiceIndicator_camel_invoked
+ * @description
+ *
+ * `camel-invoked (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  */
 export
@@ -108,6 +123,10 @@ const ServiceIndicator_camel_invoked: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary camel_invoked
+ * @description
+ *
+ * `camel-invoked (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  */
 export

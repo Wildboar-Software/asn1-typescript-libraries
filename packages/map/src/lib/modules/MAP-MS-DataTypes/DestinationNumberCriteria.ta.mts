@@ -74,7 +74,12 @@ import { DestinationNumberLengthList, _decode_DestinationNumberLengthList, _enco
 /**
  * @summary DestinationNumberCriteria
  * @description
- * 
+ *
+ * CAMEL destination-number TDP criteria: match type plus a destination number
+ * list and/or destination number length list. One or both of
+ * destinationNumberList and destinationNumberLengthList shall be present (3GPP
+ * TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,12 +105,23 @@ class DestinationNumberCriteria {
         readonly matchType: MatchType,
         /**
          * @summary `destinationNumberList`.
+         * @description
+         *
+         * One or both of destinationNumberList and destinationNumberLengthList
+         * shall be present. The receiver shall not check number format (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly destinationNumberList: OPTIONAL<DestinationNumberList>,
         /**
          * @summary `destinationNumberLengthList`.
+         * @description
+         *
+         * One or both of destinationNumberList and destinationNumberLengthList
+         * shall be present (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

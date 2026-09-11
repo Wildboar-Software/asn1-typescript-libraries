@@ -75,7 +75,13 @@ import { maxNumOfTeleservices } from "./maxNumOfTeleservices.va.mjs";
 /**
  * @summary TeleserviceList
  * @description
- * 
+ *
+ * Provisioned teleservices for subscriber-profile management. A teleservice may
+ * be a single service, a set, or all teleservices as in 3GPP TS 22.003.
+ * Exception handling for unsupported codes: clause 8.8.1.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.4, 8.8.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

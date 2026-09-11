@@ -76,6 +76,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary unauthorizedLCSClient
  * @description
  * 
+ * Location services user error. Detailed reasons: NoAdditional Information;
+ * Client not in MS Privacy Exception List; Call to Client not setup; Disallowed
+ * by Local Regulatory Requirements; Unauthorised Privacy Class; Unauthorised
+ * Call/Session Unrelated External Client; Unauthorised Call/Session Related
+ * External Client; Privacy override not applicable (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
+ * Local code 53. Optional parameter `UnauthorizedLCSClient-Param` (3GPP TS
+ * 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

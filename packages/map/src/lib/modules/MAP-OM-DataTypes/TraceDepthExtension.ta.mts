@@ -79,7 +79,10 @@ enum _enum_for_TraceDepthExtension {
 /**
  * @summary TraceDepthExtension
  * @description
- * 
+ *
+ * Without vendor-specific extension. mediumWithout… applies only to RNC; others
+ * apply minimumWithout… (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +100,11 @@ type TraceDepthExtension = _enum_for_TraceDepthExtension | ENUMERATED;
 
 /**
  * @summary TraceDepthExtension_minimumWithoutVendorSpecificExtension
+ * @description
+ *
+ * `minimumWithoutVendorSpecificExtension (0)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +113,11 @@ const TraceDepthExtension_minimumWithoutVendorSpecificExtension: TraceDepthExten
 
 /**
  * @summary minimumWithoutVendorSpecificExtension
+ * @description
+ *
+ * `minimumWithoutVendorSpecificExtension (0)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +126,11 @@ const minimumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExt
 
 /**
  * @summary TraceDepthExtension_mediumWithoutVendorSpecificExtension
+ * @description
+ *
+ * `mediumWithoutVendorSpecificExtension (1)` RNC only (3GPP TS 29.002 V19.1.0
+ * clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +139,11 @@ const TraceDepthExtension_mediumWithoutVendorSpecificExtension: TraceDepthExtens
 
 /**
  * @summary mediumWithoutVendorSpecificExtension
+ * @description
+ *
+ * `mediumWithoutVendorSpecificExtension (1)` RNC only (3GPP TS 29.002 V19.1.0
+ * clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +152,11 @@ const mediumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExte
 
 /**
  * @summary TraceDepthExtension_maximumWithoutVendorSpecificExtension
+ * @description
+ *
+ * `maximumWithoutVendorSpecificExtension (2)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +165,11 @@ const TraceDepthExtension_maximumWithoutVendorSpecificExtension: TraceDepthExten
 
 /**
  * @summary maximumWithoutVendorSpecificExtension
+ * @description
+ *
+ * `maximumWithoutVendorSpecificExtension (2)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.2).
+ *
  * @constant
  * @type {number}
  */

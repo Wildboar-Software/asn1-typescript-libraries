@@ -81,7 +81,15 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary restoreData
  * @description
- * 
+ *
+ * MAP_RESTORE_DATA: VLR, on MAP_PROVIDE_ROAMING_NUMBER or
+ * MAP-MT-FORWARD-SHORT-MESSAGE for an unknown IMSI (or known IMSI with
+ * "Subscriber Data Confirmed by HLR" not confirmed), updates LMSI in the HLR if
+ * provided and requests all IMSI-record data. HLR returns `systemFailure` if
+ * the subscriber is not registered on the VLR. Confirmed. Typical path:
+ * VLR→HLR. Local opcode 57. Timer class `m` (15 s to 30 s). (3GPP TS 29.002
+ * V19.1.0 clauses 8.10.3.1, 17.1.2, 17.3.2.2 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

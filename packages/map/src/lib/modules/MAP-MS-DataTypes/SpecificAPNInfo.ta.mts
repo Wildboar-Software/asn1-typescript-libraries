@@ -74,7 +74,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SpecificAPNInfo
  * @description
- * 
+ *
+ * PDN GW identity associated with a specific APN in EPS subscription data.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +96,24 @@ class SpecificAPNInfo {
     constructor (
         /**
          * @summary `apn`.
+         * @description
+         *
+         * APN as in 3GPP TS 23.060 (DNS name of a GGSN / PDN connection).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.42).
+         *
          * @public
          * @readonly
          */
         readonly apn: APN,
         /**
          * @summary `pdn_gw_Identity`.
+         * @description
+         *
+         * PDN GW identity for this APN.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

@@ -77,7 +77,10 @@ import { CCBS_RequestState, _enum_for_CCBS_RequestState, CCBS_RequestState_reque
 /**
  * @summary SS_InvocationNotificationArg
  * @description
- * 
+ *
+ * Argument of MAP SS invocation notification: MSC–gsmSCF for CD, ECT or MPTY;
+ * HLR–gsmSCF for CCBS (3GPP TS 29.002 V19.1.0 clauses 11.12 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -105,42 +108,71 @@ class SS_InvocationNotificationArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Subscriber IMSI.
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * Subscriber MSISDN.
+         *
          * @public
          * @readonly
          */
         readonly msisdn: ISDN_AddressString,
         /**
          * @summary `ss_Event`.
+         * @description
+         *
+         * Allowed SS-Code values: ect `00110001`B, multiPTY `01010001`B, cd
+         * `00100100`B, ccbs `01000100`B (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+         *
          * @public
          * @readonly
          */
         readonly ss_Event: SS_Code,
         /**
          * @summary `ss_EventSpecification`.
+         * @description
+         *
+         * Event-specific addresses, at most 2.
+         *
          * @public
          * @readonly
          */
         readonly ss_EventSpecification: OPTIONAL<SS_EventSpecification>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `b_subscriberNumber`.
+         * @description
+         *
+         * B-subscriber number when applicable.
+         *
          * @public
          * @readonly
          */
         readonly b_subscriberNumber: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `ccbs_RequestState`.
+         * @description
+         *
+         * CCBS request state when the event is CCBS.
+         *
          * @public
          * @readonly
          */

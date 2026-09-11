@@ -73,7 +73,9 @@ import { AreaIdentification, _decode_AreaIdentification, _encode_AreaIdentificat
 /**
  * @summary Area
  * @description
- * 
+ *
+ * Area type and identification (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +92,20 @@ class Area {
     constructor (
         /**
          * @summary `areaType`.
+         * @description
+         *
+         * countryCode, plmnId, LAI, RAI, CGI or utranCellId.
+         *
          * @public
          * @readonly
          */
         readonly areaType: AreaType,
         /**
          * @summary `areaIdentification`.
+         * @description
+         *
+         * 2..7 octets; MCC/MNC plus LAC/RAC/CI/UC-Id (clause 17.7.13).
+         *
          * @public
          * @readonly
          */

@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SupportedCamelPhases
  * @description
- * 
+ *
+ * CAMEL phases supported by the node. A node shall mark all phases it supports.
+ * Other bits shall be discarded. Must be present in Update Location if a CAMEL
+ * phase other than phase 1 is supported.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.36H, 8.1.2.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

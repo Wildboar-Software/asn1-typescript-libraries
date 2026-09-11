@@ -74,7 +74,11 @@ import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
 /**
  * @summary AuthenticationTriplet
  * @description
- * 
+ *
+ * One GSM authentication vector: Rand, Sres and Kc (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.7.1 and 17.7.1). Returned when the requesting node is not an MME
+ * and the user is a GSM subscriber (3GPP TS 29.002 V19.1.0 clause 8.5.2.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +96,32 @@ class AuthenticationTriplet {
     constructor (
         /**
          * @summary `rand`.
+         * @description
+         *
+         * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.7.2).
+         *
          * @public
          * @readonly
          */
         readonly rand: RAND,
         /**
          * @summary `sres`.
+         * @description
+         *
+         * Response to an authentication request (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.7.3).
+         *
          * @public
          * @readonly
          */
         readonly sres: SRES,
         /**
          * @summary `kc`.
+         * @description
+         *
+         * Ciphering key (3GPP TS 29.002 V19.1.0 clause 7.6.7.4).
+         *
          * @public
          * @readonly
          */

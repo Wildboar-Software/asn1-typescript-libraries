@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary dataMissing
  * @description
  * 
+ * Returned when an optional parameter required by the context is missing (3GPP
+ * TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 35. Optional parameter `DataMissingParam` must not be used in
+ * version <3 (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

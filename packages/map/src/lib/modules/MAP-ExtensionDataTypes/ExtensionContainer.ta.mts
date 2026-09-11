@@ -73,7 +73,14 @@ import { PCS_Extensions, _decode_PCS_Extensions, _encode_PCS_Extensions } from "
 /**
  * @summary ExtensionContainer
  * @description
- * 
+ *
+ * Container for extensions defined outside TS 29.002. `privateExtensionList`
+ * holds private extensions (network operators, manufacturers, regional bodies).
+ * For ACs of version 3 or higher, private extensions shall be included only
+ * here. `pcs-Extensions` holds PCS extensions. Private extensions shall not be
+ * included in v2 supplementary service operations (3GPP TS 29.002 V19.1.0
+ * clauses 17.1.4 and 17.7.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +97,23 @@ class ExtensionContainer {
     constructor (
         /**
          * @summary `privateExtensionList`.
+         * @description
+         *
+         * Private extensions defined outside this specification. Unsupported
+         * private extensions shall be discarded if received (3GPP TS 29.002
+         * V19.1.0 clauses 17.1.4 and 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly privateExtensionList: OPTIONAL<PrivateExtensionList>,
         /**
          * @summary `pcs_Extensions`.
+         * @description
+         *
+         * PCS extensions. PCS extensions shall be included in the PCS Extension
+         * Container (3GPP TS 29.002 V19.1.0 clauses 17.1.4 and 17.7.11).
+         *
          * @public
          * @readonly
          */

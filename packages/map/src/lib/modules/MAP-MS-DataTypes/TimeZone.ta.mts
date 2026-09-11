@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TimeZone
  * @description
- * 
+ *
+ * Time zone of the visited-network location where the UE is attached, including
+ * daylight-saving adjustment. 2..3 octets; details in 3GPP TS 29.272.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.2.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

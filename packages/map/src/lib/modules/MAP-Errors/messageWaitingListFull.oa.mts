@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary messageWaitingListFull
  * @description
  * 
+ * Returned when no further SC address can be added to the message waiting list
+ * (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 33. Optional parameter `MessageWaitListFullParam` (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

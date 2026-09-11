@@ -73,7 +73,13 @@ import { TeleserviceCode, _decode_TeleserviceCode, _encode_TeleserviceCode } fro
 /**
  * @summary BasicServiceCode
  * @description
- * 
+ *
+ * Basic Service Group for supplementary-service management: a bearer service
+ * (3GPP TS 22.002) or a teleservice (3GPP TS 22.003). Neither alternative
+ * denotes the group containing all bearer services and all teleservices.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.4.40).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

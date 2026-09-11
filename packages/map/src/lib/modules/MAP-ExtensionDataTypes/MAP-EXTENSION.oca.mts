@@ -72,7 +72,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MAP_EXTENSION
  * @description
- * 
+ *
+ * Information object class for private MAP extensions. The extension OID shall
+ * not exceed 16 octets and shall not have more than 16 components (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -105,10 +109,19 @@ interface MAP_EXTENSION<
     }>;
     /**
      * @summary &ExtensionType
+     * @description
+     *
+     * Optional type of a private MAP extension, selected by `&extensionId`
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.11).
      */
     readonly "&ExtensionType": ExtensionType;
     /**
      * @summary &extensionId
+     * @description
+     *
+     * OID identifying a private MAP extension. Length shall not exceed 16
+     * octets and the number of components shall not exceed 16 (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.11).
      */
     readonly "&extensionId"?: OBJECT_IDENTIFIER;
 };

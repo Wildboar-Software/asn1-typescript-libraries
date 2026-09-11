@@ -75,7 +75,11 @@ import { maxUSSD_StringLength } from "./maxUSSD-StringLength.va.mjs";
 /**
  * @summary USSD_String
  * @description
- * 
+ *
+ * OCTET STRING (1..maxUSSD-StringLength). Structure depends on
+ * `USSD-DataCodingScheme` (3GPP TS 23.038) (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.4.37 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Group_Service_ID
  * @description
- * 
+ *
+ * Group Service identity. Values are defined in 3GPP TS 29.272 (3GPP TS 29.002
+ * V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

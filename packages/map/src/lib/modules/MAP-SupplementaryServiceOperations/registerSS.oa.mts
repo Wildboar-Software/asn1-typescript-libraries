@@ -86,7 +86,12 @@ import { ss_Incompatibility } from "../MAP-Errors/ss-Incompatibility.oa.mjs";
 /**
  * @summary registerSS
  * @description
- * 
+ *
+ * MAP_REGISTER_SS: register data related to a supplementary service. Used
+ * MSC→VLR and VLR→HLR; the VLR relays to the HLR. Confirmed. Typical MAP path:
+ * VLR→HLR. Local opcode 10. Timer class `m` (15 s to 30 s). (3GPP TS 29.002
+ * V19.1.0 clauses 11.1.1, 17.1.2, 17.3.2.19 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

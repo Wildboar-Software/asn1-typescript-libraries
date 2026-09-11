@@ -74,7 +74,17 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary Ext_ExternalSignalInfo
  * @description
- * 
+ *
+ * Additional external signal information. For SCUDIF, protocol ID and IEs match
+ * Network Signal Information 2 (clause 7.6.9.8A). Additional signal info uses
+ * protocol ETS 300 356 and may carry Calling Party Number and Generic Number
+ * (clause 7.6.9.10).
+ *
+ * If `ext-ProtocolId` is any value other than those listed, the receiver shall
+ * ignore the whole `Ext-ExternalSignalInfo` sequence.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8, 7.6.9.8A and 7.6.9.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,18 +104,34 @@ class Ext_ExternalSignalInfo {
     constructor (
         /**
          * @summary `ext_ProtocolId`.
+         * @description
+         *
+         * Shall be `ets-300356` for additional signal info. Any other value:
+         * ignore the whole sequence. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+         * 7.6.9.10).
+         *
          * @public
          * @readonly
          */
         readonly ext_ProtocolId: Ext_ProtocolId,
         /**
          * @summary `signalInfo`.
+         * @description
+         *
+         * Additional signal information (clause 7.6.9.10): Calling Party Number
+         * and/or Generic Number as in ETS 300 356, in either order. (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.9.10).
+         *
          * @public
          * @readonly
          */
         readonly signalInfo: SignalInfo,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+         *
          * @public
          * @readonly
          */

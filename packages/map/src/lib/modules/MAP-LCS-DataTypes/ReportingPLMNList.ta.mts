@@ -72,7 +72,10 @@ import { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../MAP-LCS-DataTyp
 /**
  * @summary ReportingPLMNList
  * @description
- * 
+ *
+ * PLMNs for subsequent periodic MO-LR TTTP (3GPP TS 23.271) (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.11.30 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,12 +92,20 @@ class ReportingPLMNList {
     constructor (
         /**
          * @summary `plmn_ListPrioritized`.
+         * @description
+         *
+         * PLMN list is prioritized.
+         *
          * @public
          * @readonly
          */
         readonly plmn_ListPrioritized: OPTIONAL<NULL>,
         /**
          * @summary `plmn_List`.
+         * @description
+         *
+         * 1..20 reporting PLMNs.
+         *
          * @public
          * @readonly
          */

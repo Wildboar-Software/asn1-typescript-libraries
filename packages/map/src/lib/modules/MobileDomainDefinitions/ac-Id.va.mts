@@ -72,7 +72,10 @@ import { CommonComponentId, _decode_CommonComponentId, _encode_CommonComponentId
 /**
  * @summary ac_Id
  * @description
- * 
+ *
+ * Application-context arc: `map-ac OBJECT IDENTIFIER ::= {gsm-NetworkId ac-Id}`
+ * (3GPP TS 29.002 V19.1.0 clause 17.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

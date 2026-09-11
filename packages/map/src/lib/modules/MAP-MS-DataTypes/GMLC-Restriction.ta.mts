@@ -78,7 +78,11 @@ enum _enum_for_GMLC_Restriction {
 /**
  * @summary GMLC_Restriction
  * @description
- * 
+ *
+ * GMLC restriction for an external LCS client: gmlc-List or home-Country. At
+ * reception of any other value the receiver shall ignore GMLC-Restriction (3GPP
+ * TS 29.002 V19.1.0 clauses 7.6.3.64 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

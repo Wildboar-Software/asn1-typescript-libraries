@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SS_Status
  * @description
- * 
+ *
+ * One octet: bits 8–5 unused; bits 4–1 are Q, P, R, A bits of SS state as in
+ * 3GPP TS 23.011 (3GPP TS 29.002 V19.1.0 clauses 7.6.4.2 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

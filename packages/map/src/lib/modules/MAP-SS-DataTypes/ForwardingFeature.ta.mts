@@ -78,7 +78,12 @@ import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString
 /**
  * @summary ForwardingFeature
  * @description
- * 
+ *
+ * Forwarding data for one SS and Basic Service Group. If a forwarded-to number
+ * is required: VLR with Long FTN uses `longForwardedToNumber` only; otherwise
+ * `forwardedToNumber` only (3GPP TS 29.002 V19.1.0 clauses 7.6.4.16 and
+ * 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,42 +105,71 @@ class ForwardingFeature {
     constructor (
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Basic Service Group (clause 7.6.4.40).
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<BasicServiceCode>,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS state as in 3GPP TS 23.011 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.4.2).
+         *
          * @public
          * @readonly
          */
         readonly ss_Status: OPTIONAL<SS_Status>,
         /**
          * @summary `forwardedToNumber`.
+         * @description
+         *
+         * Forwarded-to number (clause 7.6.2.22).
+         *
          * @public
          * @readonly
          */
         readonly forwardedToNumber: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
+         * @description
+         *
+         * Forwarded-to subaddress (clause 7.6.2.23).
+         *
          * @public
          * @readonly
          */
         readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `forwardingOptions`.
+         * @description
+         *
+         * Notification and forwarding reason (clause 7.6.4.6).
+         *
          * @public
          * @readonly
          */
         readonly forwardingOptions: OPTIONAL<ForwardingOptions>,
         /**
          * @summary `noReplyConditionTime`.
+         * @description
+         *
+         * CFNRy timer (clause 7.6.4.7).
+         *
          * @public
          * @readonly
          */
         readonly noReplyConditionTime: OPTIONAL<NoReplyConditionTime>,
         /**
          * @summary `longForwardedToNumber`.
+         * @description
+         *
+         * Long forwarded-to number (clause 7.6.2.22A).
+         *
          * @public
          * @readonly
          */

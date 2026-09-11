@@ -73,7 +73,10 @@ import { EDRX_Cycle_Length_Value, _decode_EDRX_Cycle_Length_Value, _encode_EDRX_
 /**
  * @summary EDRX_Cycle_Length
  * @description
- * 
+ *
+ * Subscribed eDRX cycle length applicable to a specific RAT Type (3GPP TS
+ * 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,22 @@ class EDRX_Cycle_Length {
     constructor (
         /**
          * @summary `rat_Type`.
+         * @description
+         *
+         * RAT type to which this subscribed eDRX cycle length applies (3GPP TS
+         * 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly rat_Type: Used_RAT_Type,
         /**
          * @summary `eDRX_Cycle_Length_Value`.
+         * @description
+         *
+         * Subscribed eDRX cycle length value (3GPP TS 29.272 clause 7.3.216)
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

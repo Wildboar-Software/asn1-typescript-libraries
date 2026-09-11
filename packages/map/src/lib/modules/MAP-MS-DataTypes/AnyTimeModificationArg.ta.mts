@@ -86,7 +86,16 @@ import { ModificationRequestFor_ECT_Info, _decode_ModificationRequestFor_ECT_Inf
 /**
  * @summary AnyTimeModificationArg
  * @description
- * 
+ *
+ * Argument of MAP-ANY-TIME-MODIFICATION. Used by the gsmSCF to modify HLR
+ * information; by the Presence Network Agent to activate or deactivate MM-event
+ * reporting from VLR or SGSN (3GPP TS 23.141); by a Service Related Entity
+ * (e.g. IP-SM-GW) to activate one-time UE-reachability subscription in
+ * MME/SGSN; and by IP-SM-GW to update the IP-SM-GW Number and retrieve the SC
+ * Address. The HLR may screen using gsmSCF-Address, which shall be in
+ * international E.164 format (3GPP TS 29.002 V19.1.0 clauses 8.11.4.1 and
+ * 8.11.4.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -117,30 +126,56 @@ class AnyTimeModificationArg {
     constructor (
         /**
          * @summary `subscriberIdentity`.
+         * @description
+         *
+         * Identity of the subscriber whose data is to be modified (3GPP TS
+         * 29.002 V19.1.0 clauses 8.11.4.2 and 7.6.2).
+         *
          * @public
          * @readonly
          */
         readonly subscriberIdentity: SubscriberIdentity,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * Address of the interrogating gsmSCF in international E.164 format. If
+         * used by IP-SM-GW, contains the IP-SM-GW address. The HLR may use it
+         * to screen the request (3GPP TS 29.002 V19.1.0 clause 8.11.4.3).
+         *
          * @public
          * @readonly
          */
         readonly gsmSCF_Address: ISDN_AddressString,
         /**
          * @summary `modificationRequestFor_CF_Info`.
+         * @description
+         *
+         * Modification request for call-forwarding SS information (3GPP TS
+         * 29.002 V19.1.0 clauses 8.11.4.2 and 7.6.3.82).
+         *
          * @public
          * @readonly
          */
         readonly modificationRequestFor_CF_Info: OPTIONAL<ModificationRequestFor_CF_Info>,
         /**
          * @summary `modificationRequestFor_CB_Info`.
+         * @description
+         *
+         * Modification request for call-barring SS information (3GPP TS 29.002
+         * V19.1.0 clauses 8.11.4.2 and 7.6.3.82).
+         *
          * @public
          * @readonly
          */
         readonly modificationRequestFor_CB_Info: OPTIONAL<ModificationRequestFor_CB_Info>,
         /**
          * @summary `modificationRequestFor_CSI`.
+         * @description
+         *
+         * Modification request for CSI (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2
+         * and 7.6.3.81).
+         *
          * @public
          * @readonly
          */
@@ -153,30 +188,55 @@ class AnyTimeModificationArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longFTN_Supported`.
+         * @description
+         *
+         * Indicates support of Long Forwarded-to Numbers (3GPP TS 29.002
+         * V19.1.0 clauses 8.11.4.2 and 7.6.2.22B).
+         *
          * @public
          * @readonly
          */
         readonly longFTN_Supported: OPTIONAL<NULL>,
         /**
          * @summary `modificationRequestFor_ODB_data`.
+         * @description
+         *
+         * Modification request for ODB data (3GPP TS 29.002 V19.1.0 clause
+         * 8.11.4.2).
+         *
          * @public
          * @readonly
          */
         readonly modificationRequestFor_ODB_data: OPTIONAL<ModificationRequestFor_ODB_data>,
         /**
          * @summary `modificationRequestFor_IP_SM_GW_Data`.
+         * @description
+         *
+         * Used by IP-SM-GW to update the IP-SM-GW Number stored in the HLR and
+         * to retrieve the SC Address (3GPP TS 29.002 V19.1.0 clause 8.11.4.1).
+         *
          * @public
          * @readonly
          */
         readonly modificationRequestFor_IP_SM_GW_Data: OPTIONAL<ModificationRequestFor_IP_SM_GW_Data>,
         /**
          * @summary `activationRequestForUE_reachability`.
+         * @description
+         *
+         * One-time subscription of UE-reachability in MME (3GPP TS 23.204) and
+         * SGSN (3GPP TS 23.060) (3GPP TS 29.002 V19.1.0 clause 8.11.4.1).
+         *
          * @public
          * @readonly
          */
         readonly activationRequestForUE_reachability: OPTIONAL<RequestedServingNode>,
         /**
          * @summary `modificationRequestFor_CSG`.
+         * @description
+         *
+         * Used by the gsmSCF to request notification of modification of CSG
+         * subscription data (3GPP TS 29.002 V19.1.0 clause 8.11.4.3).
+         *
          * @public
          * @readonly
          */

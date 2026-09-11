@@ -78,7 +78,9 @@ enum _enum_for_RAN_Technology {
 /**
  * @summary RAN_Technology
  * @description
- * 
+ *
+ * gsm or umts (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +97,10 @@ type RAN_Technology = _enum_for_RAN_Technology | ENUMERATED;
 
 /**
  * @summary RAN_Technology_gsm
+ * @description
+ *
+ * `gsm (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +109,10 @@ const RAN_Technology_gsm: RAN_Technology = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm
+ * @description
+ *
+ * `gsm (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +121,10 @@ const gsm: RAN_Technology = RAN_Technology_gsm; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary RAN_Technology_umts
+ * @description
+ *
+ * `umts (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +133,10 @@ const RAN_Technology_umts: RAN_Technology = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts
+ * @description
+ *
+ * `umts (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */

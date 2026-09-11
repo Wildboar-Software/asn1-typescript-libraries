@@ -81,7 +81,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SendGroupCallInfoArg
  * @description
- * 
+ *
+ * Argument of MAP_SEND_GROUP_CALL_INFO in a RANflex configuration (3GPP TS
+ * 23.236) between visited MSC and group call serving MSC (3GPP TS 29.002
+ * V19.1.0 clauses 10.7A and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,60 +110,102 @@ class SendGroupCallInfoArg {
     constructor (
         /**
          * @summary `requestedInfo`.
+         * @description
+         *
+         * See 3GPP TS 43.068 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly requestedInfo: RequestedInfo,
         /**
          * @summary `groupId`.
+         * @description
+         *
+         * See 3GPP TS 43.068 and 43.069. If prefixes are used with group IDs,
+         * the most significant digit contains the prefix (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly groupId: Long_GroupId,
         /**
          * @summary `teleservice`.
+         * @description
+         *
+         * VBS or VGCS (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly teleservice: Ext_TeleserviceCode,
         /**
          * @summary `cellId`.
+         * @description
+         *
+         * Initiating service subscriber's current cell (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly cellId: OPTIONAL<GlobalCellId>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * In the request: call originator. In the response: uplink requesting
+         * subscriber (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `tmsi`.
+         * @description
+         *
+         * See clause 7.6.2 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly tmsi: OPTIONAL<TMSI>,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * See 3GPP TS 43.068 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly additionalInfo: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `talkerPriority`.
+         * @description
+         *
+         * See 3GPP TS 43.068 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly talkerPriority: OPTIONAL<TalkerPriority>,
         /**
          * @summary `cksn`.
+         * @description
+         *
+         * See clause 7.6.7 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly cksn: OPTIONAL<Cksn>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

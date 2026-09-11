@@ -73,7 +73,12 @@ import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta
 /**
  * @summary IMSI_WithLMSI
  * @description
- * 
+ *
+ * IMSI paired with the VLR-allocated LMSI. LMSI value `00000000` indicates that
+ * the LMSI is not in use. LMSI shall not be sent to the SGSN.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.2.16).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +96,23 @@ class IMSI_WithLMSI {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI of the subscriber (3GPP TS 23.003). (3GPP TS 29.002 V19.1.0
+         * clause 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `lmsi`.
+         * @description
+         *
+         * VLR-allocated LMSI. Value `00000000` means LMSI is not in use. Shall
+         * not be sent to the SGSN. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+         * 7.6.2.16).
+         *
          * @public
          * @readonly
          */

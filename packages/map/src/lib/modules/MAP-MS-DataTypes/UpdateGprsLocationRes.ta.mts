@@ -73,7 +73,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary UpdateGprsLocationRes
  * @description
- * 
+ *
+ * MAP_UPDATE_GPRS_LOCATION result. HLR number is mandatory on successful
+ * updating. May indicate ADD capability, SGSN-MME separation support, and MME
+ * registered for SMS.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.7 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +99,13 @@ class UpdateGprsLocationRes {
     constructor (
         /**
          * @summary `hlr_Number`.
+         * @description
+         *
+         * ISDN number of an HLR. Mandatory in a successful Update Location,
+         * Update GPRS Location, or Restore Data result.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
+         *
          * @public
          * @readonly
          */
@@ -105,18 +118,36 @@ class UpdateGprsLocationRes {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `add_Capability`.
+         * @description
+         *
+         * HLR supports the Automatic Device Detection function.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly add_Capability: OPTIONAL<NULL>,
         /**
          * @summary `sgsn_mmeSeparationSupported`.
+         * @description
+         *
+         * HLR/HSS supports separate SGSN and MME registrations.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+         *
          * @public
          * @readonly
          */
         readonly sgsn_mmeSeparationSupported: OPTIONAL<NULL>,
         /**
          * @summary `mmeRegisteredforSMS`.
+         * @description
+         *
+         * MME is registered for MT SMS.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+         *
          * @public
          * @readonly
          */

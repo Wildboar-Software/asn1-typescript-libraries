@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CallDiversionTreatmentIndicator
  * @description
- * 
+ *
+ * One octet: xxxx xx01 allowed, xxxx xx10 not allowed; network default allowed
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CamelCapabilityHandling
  * @description
- * 
+ *
+ * CAMEL phase indicated by the CSI: 1 = phase 1, 2 = phase 2, 3 = phase 3, 4 =
+ * phase 4. Reception of values greater than 4 shall be treated as CAMEL phase 4
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

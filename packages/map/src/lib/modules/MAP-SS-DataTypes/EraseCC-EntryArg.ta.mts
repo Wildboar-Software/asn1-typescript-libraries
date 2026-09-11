@@ -73,7 +73,10 @@ import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-Da
 /**
  * @summary EraseCC_EntryArg
  * @description
- * 
+ *
+ * Argument of MAP_ERASE_CC_ENTRY: MSC–VLR and VLR–HLR (3GPP TS 29.002 V19.1.0
+ * clauses 11.14 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class EraseCC_EntryArg {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * Call-completion SS-Code.
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `ccbs_Index`.
+         * @description
+         *
+         * CCBS request index to erase, if present.
+         *
          * @public
          * @readonly
          */

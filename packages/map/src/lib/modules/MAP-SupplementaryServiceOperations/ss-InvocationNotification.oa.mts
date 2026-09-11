@@ -80,7 +80,13 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary ss_InvocationNotification
  * @description
- * 
+ *
+ * MAP_SS_INVOCATION_NOTIFY: MSC informs gsmSCF when the subscriber invokes Call
+ * Deflection (CD), Explicit Call Transfer (ECT) or Multi Party (MPTY). HLR
+ * informs gsmSCF when the subscriber invokes CCBS. Typical path: MSC→gsmSCF or
+ * HLR→gsmSCF. Local opcode 72. Timer class `m` (15 s to 30 s). (3GPP TS 29.002
+ * V19.1.0 clauses 11.12.1, 17.1.2, 17.3.2.36 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

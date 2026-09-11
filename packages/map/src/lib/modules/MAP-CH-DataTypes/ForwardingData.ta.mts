@@ -76,7 +76,11 @@ import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString
 /**
  * @summary ForwardingData
  * @description
- * 
+ *
+ * Forwarded-to destination, reason/options, optional subaddress. From a CAMEL
+ * Phase 2 HLR to a CAMEL Phase 2 GMSC, the GMSC shall not check the number
+ * format (3GPP TS 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,30 +103,51 @@ class ForwardingData {
     constructor (
         /**
          * @summary `forwardedToNumber`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 and Use and presence as in 3GPP
+         * TS 23.079 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly forwardedToNumber: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
+         * @description
+         *
+         * Optional forwarded-to subaddress.
+         *
          * @public
          * @readonly
          */
         readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `forwardingOptions`.
+         * @description
+         *
+         * Notification to calling party and redirecting presentation.
+         *
          * @public
          * @readonly
          */
         readonly forwardingOptions: OPTIONAL<ForwardingOptions>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longForwardedToNumber`.
+         * @description
+         *
+         * Long forwarded-to number if used.
+         *
          * @public
          * @readonly
          */

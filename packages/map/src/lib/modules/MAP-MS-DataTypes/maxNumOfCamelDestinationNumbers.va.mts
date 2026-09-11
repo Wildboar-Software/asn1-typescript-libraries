@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary maxNumOfCamelDestinationNumbers
  * @description
- * 
+ *
+ * Upper bound of DestinationNumberList (10). (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

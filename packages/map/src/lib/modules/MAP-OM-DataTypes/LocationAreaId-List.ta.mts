@@ -73,7 +73,10 @@ import { LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "
 /**
  * @summary LocationAreaId_List
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..8) OF LAIFixedLength (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

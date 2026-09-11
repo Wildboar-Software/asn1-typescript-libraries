@@ -1,7 +1,14 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-MS-DataTypes`.
+ * MAP mobile-service data types (location management, handover,
+ * authentication, subscriber data, CAMEL, GPRS/EPS) from
+ * 3GPP TS 29.002 V19.1.0 clause 17.7.1. Used by clause 8 mobility
+ * services. Parameter semantics are in clause 7.6; GPRS routing also
+ * uses these types (clause 13).
+ *
+ * ASN.1 module `MAP-MS-DataTypes` (OID `map-MS-DataTypes (11)`
+ * version22).
  */
 export * from "./ADD-Info.ta.mjs";
 export * from "./AMBR.ta.mjs";

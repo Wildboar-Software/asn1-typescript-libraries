@@ -81,7 +81,12 @@ enum _enum_for_LCSClientInternalID {
 /**
  * @summary LCSClientInternalID
  * @description
- * 
+ *
+ * Internal LCS client identity (PLMN-operator classes). For a CAMEL phase 3
+ * PLMN operator client, `targetMSsubscribedService` shall be used.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,6 +106,10 @@ type LCSClientInternalID = _enum_for_LCSClientInternalID | ENUMERATED;
 
 /**
  * @summary LCSClientInternalID_broadcastService
+ * @description
+ *
+ * Broadcast service (value 0). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +118,10 @@ const LCSClientInternalID_broadcastService: LCSClientInternalID = 0; /* LONG_NAM
 
 /**
  * @summary broadcastService
+ * @description
+ *
+ * Broadcast service (value 0). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +130,10 @@ const broadcastService: LCSClientInternalID = LCSClientInternalID_broadcastServi
 
 /**
  * @summary LCSClientInternalID_o_andM_HPLMN
+ * @description
+ *
+ * O&M in the HPLMN (value 1). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +142,10 @@ const LCSClientInternalID_o_andM_HPLMN: LCSClientInternalID = 1; /* LONG_NAMED_E
 
 /**
  * @summary o_andM_HPLMN
+ * @description
+ *
+ * O&M in the HPLMN (value 1). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +154,10 @@ const o_andM_HPLMN: LCSClientInternalID = LCSClientInternalID_o_andM_HPLMN; /* S
 
 /**
  * @summary LCSClientInternalID_o_andM_VPLMN
+ * @description
+ *
+ * O&M in the VPLMN (value 2). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +166,10 @@ const LCSClientInternalID_o_andM_VPLMN: LCSClientInternalID = 2; /* LONG_NAMED_E
 
 /**
  * @summary o_andM_VPLMN
+ * @description
+ *
+ * O&M in the VPLMN (value 2). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +178,10 @@ const o_andM_VPLMN: LCSClientInternalID = LCSClientInternalID_o_andM_VPLMN; /* S
 
 /**
  * @summary LCSClientInternalID_anonymousLocation
+ * @description
+ *
+ * Anonymous location (value 3). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +190,10 @@ const LCSClientInternalID_anonymousLocation: LCSClientInternalID = 3; /* LONG_NA
 
 /**
  * @summary anonymousLocation
+ * @description
+ *
+ * Anonymous location (value 3). (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +202,11 @@ const anonymousLocation: LCSClientInternalID = LCSClientInternalID_anonymousLoca
 
 /**
  * @summary LCSClientInternalID_targetMSsubscribedService
+ * @description
+ *
+ * Target-MS subscribed service (value 4). Shall be used for a CAMEL phase 3
+ * PLMN operator client. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +215,11 @@ const LCSClientInternalID_targetMSsubscribedService: LCSClientInternalID = 4; /*
 
 /**
  * @summary targetMSsubscribedService
+ * @description
+ *
+ * Target-MS subscribed service (value 4). Shall be used for a CAMEL phase 3
+ * PLMN operator client. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * @constant
  * @type {number}
  */

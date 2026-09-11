@@ -72,7 +72,10 @@ import { PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction, Privacy
 /**
  * @summary LCS_PrivacyCheck
  * @description
- * 
+ *
+ * Requested privacy-check actions from MSC/SGSN provided by H-GMLC (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.11.24 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,12 +92,20 @@ class LCS_PrivacyCheck {
     constructor (
         /**
          * @summary `callSessionUnrelated`.
+         * @description
+         *
+         * Action for call/session unrelated.
+         *
          * @public
          * @readonly
          */
         readonly callSessionUnrelated: PrivacyCheckRelatedAction,
         /**
          * @summary `callSessionRelated`.
+         * @description
+         *
+         * Optional action for call/session related.
+         *
          * @public
          * @readonly
          */

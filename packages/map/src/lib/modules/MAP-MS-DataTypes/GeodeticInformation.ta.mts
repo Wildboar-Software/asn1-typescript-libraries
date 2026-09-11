@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GeodeticInformation
  * @description
- * 
+ *
+ * Calling Geodetic Location defined in ITU-T Q.763 (1999). Only ellipsoid point
+ * with uncertainty circle is allowed. Structure: screening and presentation
+ * indicators (1 octet), type of shape (1), latitude (3), longitude (3),
+ * uncertainty code (1), confidence (1) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

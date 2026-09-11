@@ -73,7 +73,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary UpdateLocationRes
  * @description
- * 
+ *
+ * MAP_UPDATE_LOCATION result. HLR number is mandatory on successful updating.
+ * May report ADD and Paging Area capability (the HLR reports the same
+ * paging-area capability for all subscribers).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,6 +98,13 @@ class UpdateLocationRes {
     constructor (
         /**
          * @summary `hlr_Number`.
+         * @description
+         *
+         * ISDN number of an HLR. Mandatory in a successful Update Location,
+         * Update GPRS Location, or Restore Data result.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
+         *
          * @public
          * @readonly
          */
@@ -104,12 +117,25 @@ class UpdateLocationRes {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `add_Capability`.
+         * @description
+         *
+         * HLR supports the Automatic Device Detection function.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly add_Capability: OPTIONAL<NULL>,
         /**
          * @summary `pagingArea_Capability`.
+         * @description
+         *
+         * HLR supports the Paging Area function. Reported the same for all
+         * subscribers.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */

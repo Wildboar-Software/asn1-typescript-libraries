@@ -83,7 +83,13 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary sendGroupCallInfo
  * @description
- * 
+ *
+ * MAP_SEND_GROUP_CALL_INFO: used in a RANflex configuration (3GPP TS 23.236)
+ * between the subscriber's visited MSC and the group-call serving MSC of the
+ * subscriber's location area. Confirmed. Either peer may initiate. Local opcode
+ * 84. Timer class `m` (15 s to 30 s). Distinctive error: `ongoingGroupCall`.
+ * (3GPP TS 29.002 V19.1.0 clauses 10.7A.1, 17.1.2, 17.3.2.30A and 17.6.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SupportedRAT_Types
  * @description
- * 
+ *
+ * Access technologies served by the MSC/VLR, SGSN, or MME. Bits 6-7 shall be
+ * ignored if received and not understood.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.98 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

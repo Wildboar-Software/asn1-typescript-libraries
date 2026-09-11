@@ -73,7 +73,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ODB_HPLMN_Data
  * @description
- * 
+ *
+ * ODB categories that apply only when the subscriber is registered in the HPLMN
+ * (types 1-4). Transferred to VLR/SGSN/IWF only in the HPLMN when Subscriber
+ * Status is Operator Determined Barring. If that status is set and this
+ * parameter is absent, no HPLMN-specific ODB shall be applied. Unknown bits
+ * shall be treated as unsupported. When removed from the HLR,
+ * NoteSubscriberDataModified shall set all bits to `0`. (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.10, 8.8.1.3, and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,6 +97,11 @@ type ODB_HPLMN_Data = BIT_STRING;
 
 /**
  * @summary ODB_HPLMN_Data_plmn_SpecificBarringType1
+ * @description
+ *
+ * Operator Determined Barring Type 1, applicable only in the HPLMN. (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.3.10)
+ *
  * @constant
  */
 export
@@ -96,6 +109,11 @@ const ODB_HPLMN_Data_plmn_SpecificBarringType1: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary plmn_SpecificBarringType1
+ * @description
+ *
+ * Operator Determined Barring Type 1, applicable only in the HPLMN. (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.3.10)
+ *
  * @constant
  */
 export
@@ -103,6 +121,11 @@ const plmn_SpecificBarringType1: number = ODB_HPLMN_Data_plmn_SpecificBarringTyp
 
 /**
  * @summary ODB_HPLMN_Data_plmn_SpecificBarringType2
+ * @description
+ *
+ * Operator Determined Barring Type 2, applicable only in the HPLMN. (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.3.10)
+ *
  * @constant
  */
 export
@@ -110,6 +133,11 @@ const ODB_HPLMN_Data_plmn_SpecificBarringType2: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary plmn_SpecificBarringType2
+ * @description
+ *
+ * Operator Determined Barring Type 2, applicable only in the HPLMN. (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.3.10)
+ *
  * @constant
  */
 export
@@ -117,6 +145,11 @@ const plmn_SpecificBarringType2: number = ODB_HPLMN_Data_plmn_SpecificBarringTyp
 
 /**
  * @summary ODB_HPLMN_Data_plmn_SpecificBarringType3
+ * @description
+ *
+ * Operator Determined Barring Type 3, applicable only in the HPLMN. (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.3.10)
+ *
  * @constant
  */
 export
@@ -124,6 +157,11 @@ const ODB_HPLMN_Data_plmn_SpecificBarringType3: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary plmn_SpecificBarringType3
+ * @description
+ *
+ * Operator Determined Barring Type 3, applicable only in the HPLMN. (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.3.10)
+ *
  * @constant
  */
 export
@@ -131,6 +169,11 @@ const plmn_SpecificBarringType3: number = ODB_HPLMN_Data_plmn_SpecificBarringTyp
 
 /**
  * @summary ODB_HPLMN_Data_plmn_SpecificBarringType4
+ * @description
+ *
+ * Operator Determined Barring Type 4, applicable only in the HPLMN. (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.3.10)
+ *
  * @constant
  */
 export
@@ -138,6 +181,11 @@ const ODB_HPLMN_Data_plmn_SpecificBarringType4: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary plmn_SpecificBarringType4
+ * @description
+ *
+ * Operator Determined Barring Type 4, applicable only in the HPLMN. (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.3.10)
+ *
  * @constant
  */
 export

@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SubscribedPeriodicRAUTAUtimer
  * @description
- * 
+ *
+ * Subscribed periodic TAU/RAU timer in seconds, as in 3GPP TS 24.008.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

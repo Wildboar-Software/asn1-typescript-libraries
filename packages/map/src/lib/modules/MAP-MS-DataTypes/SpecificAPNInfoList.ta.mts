@@ -75,7 +75,11 @@ import { maxNumOfSpecificAPNInfos } from "./maxNumOfSpecificAPNInfos.va.mjs";
 /**
  * @summary SpecificAPNInfoList
  * @description
- * 
+ *
+ * List of up to 50 per-APN PDN GW identities.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

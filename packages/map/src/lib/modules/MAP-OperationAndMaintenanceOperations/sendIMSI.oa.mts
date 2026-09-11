@@ -80,7 +80,12 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary sendIMSI
  * @description
- * 
+ *
+ * MAP_SEND_IMSI: VLR fetches the IMSI from the HLR for an O&M procedure in the
+ * VPLMN when only the MSISDN is known. Confirmed. Typical path: VLR→HLR. Local
+ * opcode 58. Timer class `m` (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses
+ * 9.2.1.1, 17.1.2, 17.3.2.13 and 17.6.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ForwardingReason
  * @description
- * 
+ *
+ * notReachable, busy, or noReply. Use and presence as in 3GPP TS 23.079 (3GPP
+ * TS 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +97,10 @@ enum _enum_for_ForwardingReason {
 /**
  * @summary ForwardingReason
  * @description
- * 
+ *
+ * notReachable, busy, or noReply. Use and presence as in 3GPP TS 23.079 (3GPP
+ * TS 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +118,10 @@ type ForwardingReason = _enum_for_ForwardingReason;
 /**
  * @summary ForwardingReason
  * @description
- * 
+ *
+ * notReachable, busy, or noReply. Use and presence as in 3GPP TS 23.079 (3GPP
+ * TS 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -129,6 +138,10 @@ const ForwardingReason = _enum_for_ForwardingReason;
 
 /**
  * @summary ForwardingReason_notReachable
+ * @description
+ *
+ * `notReachable (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +150,10 @@ const ForwardingReason_notReachable: ForwardingReason = ForwardingReason.notReac
 
 /**
  * @summary notReachable
+ * @description
+ *
+ * `notReachable (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +162,10 @@ const notReachable: ForwardingReason = ForwardingReason.notReachable; /* SHORT_N
 
 /**
  * @summary ForwardingReason_busy
+ * @description
+ *
+ * `busy (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +174,10 @@ const ForwardingReason_busy: ForwardingReason = ForwardingReason.busy; /* LONG_N
 
 /**
  * @summary busy
+ * @description
+ *
+ * `busy (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +186,10 @@ const busy: ForwardingReason = ForwardingReason.busy; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary ForwardingReason_noReply
+ * @description
+ *
+ * `noReply (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +198,10 @@ const ForwardingReason_noReply: ForwardingReason = ForwardingReason.noReply; /* 
 
 /**
  * @summary noReply
+ * @description
+ *
+ * `noReply (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */

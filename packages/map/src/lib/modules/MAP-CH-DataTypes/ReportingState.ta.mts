@@ -78,7 +78,10 @@ enum _enum_for_ReportingState {
 /**
  * @summary ReportingState
  * @description
- * 
+ *
+ * stopMonitoring (0) or startMonitoring (1). Values 2–10 map to stopMonitoring;
+ * >10 map to startMonitoring (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +98,10 @@ type ReportingState = _enum_for_ReportingState | ENUMERATED;
 
 /**
  * @summary ReportingState_stopMonitoring
+ * @description
+ *
+ * `stopMonitoring (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +110,10 @@ const ReportingState_stopMonitoring: ReportingState = 0; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary stopMonitoring
+ * @description
+ *
+ * `stopMonitoring (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +122,10 @@ const stopMonitoring: ReportingState = ReportingState_stopMonitoring; /* SHORT_N
 
 /**
  * @summary ReportingState_startMonitoring
+ * @description
+ *
+ * `startMonitoring (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +134,10 @@ const ReportingState_startMonitoring: ReportingState = 1; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary startMonitoring
+ * @description
+ *
+ * `startMonitoring (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */

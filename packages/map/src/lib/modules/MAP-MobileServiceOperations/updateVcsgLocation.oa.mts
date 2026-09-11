@@ -80,7 +80,14 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary updateVcsgLocation
  * @description
- * 
+ *
+ * MAP_UPDATE_VCSG_LOCATION: VLR or SGSN registers the MS in the CSS when the
+ * VPLMN supports Autonomous CSG Roaming, the HPLMN has enabled it, the MS
+ * requested attach or LA/RA update to a CSG cell, and the VLR/SGSN has not yet
+ * registered the MS in the CSS. Confirmed. Typical path: VLR→CSS or SGSN→CSS.
+ * Local opcode 53. Timer class `m` (15 s to 30 s). (3GPP TS 29.002 V19.1.0
+ * clauses 8.1.9.1, 17.1.2, 17.3.2.52 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

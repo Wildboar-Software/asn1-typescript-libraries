@@ -79,7 +79,14 @@ import { unidentifiedSubscriber } from "../MAP-Errors/unidentifiedSubscriber.oa.
 /**
  * @summary sendIdentification
  * @description
- * 
+ *
+ * MAP_SEND_IDENTIFICATION: a VLR retrieves IMSI and authentication data from a
+ * previous VLR for a subscriber registering afresh; may also send the MSC
+ * number to the previous VLR. Confirmed. Typical path: VLR→VLR. Local opcode
+ * 55. Timer class `s` (3 s to 10 s). Distinctive error:
+ * `unidentifiedSubscriber`. (3GPP TS 29.002 V19.1.0 clauses 8.1.4.1, 17.1.2,
+ * 17.3.2.16 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

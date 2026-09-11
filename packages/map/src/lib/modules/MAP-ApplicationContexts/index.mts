@@ -1,7 +1,10 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-ApplicationContexts`.
+ * ASN.1 module `MAP-ApplicationContexts` (clauses 17.3 and 17.3.3).
+ * Application-context-names assigned under `map-ac`. Each AC is used in
+ * MAP-OPEN; v1 ACs use TC v1 facilities; other ACs use TC v2 and require
+ * `map-DialogueAS` (3GPP TS 29.002 V19.1.0 clauses 17.3.1, 17.3.2 and 17.1.5).
  */
 export * from "./anyTimeInfoEnquiryContext-v3.va.mjs";
 export * from "./anyTimeInfoHandlingContext-v3.va.mjs";

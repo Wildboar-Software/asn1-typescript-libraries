@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Cksn
  * @description
- * 
+ *
+ * Ciphering key sequence number. Internal structure is defined in 3GPP TS
+ * 24.008 (3GPP TS 29.002 V19.1.0 clauses 7.6.7.6 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

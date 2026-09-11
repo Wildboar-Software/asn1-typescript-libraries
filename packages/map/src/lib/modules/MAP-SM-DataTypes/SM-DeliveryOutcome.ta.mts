@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SM_DeliveryOutcome
  * @description
- * 
+ *
+ * memoryCapacityExceeded, absentSubscriber, or successfulTransfer (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +97,10 @@ enum _enum_for_SM_DeliveryOutcome {
 /**
  * @summary SM_DeliveryOutcome
  * @description
- * 
+ *
+ * memoryCapacityExceeded, absentSubscriber, or successfulTransfer (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +118,10 @@ type SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
 /**
  * @summary SM_DeliveryOutcome
  * @description
- * 
+ *
+ * memoryCapacityExceeded, absentSubscriber, or successfulTransfer (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -129,6 +138,10 @@ const SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
 
 /**
  * @summary SM_DeliveryOutcome_memoryCapacityExceeded
+ * @description
+ *
+ * `memoryCapacityExceeded (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +150,10 @@ const SM_DeliveryOutcome_memoryCapacityExceeded: SM_DeliveryOutcome = SM_Deliver
 
 /**
  * @summary memoryCapacityExceeded
+ * @description
+ *
+ * `memoryCapacityExceeded (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +162,10 @@ const memoryCapacityExceeded: SM_DeliveryOutcome = SM_DeliveryOutcome.memoryCapa
 
 /**
  * @summary SM_DeliveryOutcome_absentSubscriber
+ * @description
+ *
+ * `absentSubscriber (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +174,10 @@ const SM_DeliveryOutcome_absentSubscriber: SM_DeliveryOutcome = SM_DeliveryOutco
 
 /**
  * @summary absentSubscriber
+ * @description
+ *
+ * `absentSubscriber (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +186,10 @@ const absentSubscriber: SM_DeliveryOutcome = SM_DeliveryOutcome.absentSubscriber
 
 /**
  * @summary SM_DeliveryOutcome_successfulTransfer
+ * @description
+ *
+ * `successfulTransfer (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +198,10 @@ const SM_DeliveryOutcome_successfulTransfer: SM_DeliveryOutcome = SM_DeliveryOut
 
 /**
  * @summary successfulTransfer
+ * @description
+ *
+ * `successfulTransfer (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */

@@ -91,7 +91,13 @@ import { PDN_ConnectionContinuity, _enum_for_PDN_ConnectionContinuity, PDN_Conne
 /**
  * @summary APN_Configuration
  * @description
- * 
+ *
+ * One APN configuration in EPS subscription data: PDN type, APN, EPS QoS,
+ * optional PDN GW identity and related flags. APN-level `apn-oi-Replacement` in
+ * this structure refers to the APN-level replacement. Absence of
+ * `pdn-ConnectionContinuity` leaves handling to local VPLMN policy (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.46A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -210,6 +216,11 @@ class APN_Configuration {
         readonly servedPartyIP_IPv6_Address: OPTIONAL<PDP_Address>,
         /**
          * @summary `apn_oi_Replacement`.
+         * @description
+         *
+         * APN-level APN-OI replacement; higher priority than UE-level
+         * replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -264,6 +275,11 @@ class APN_Configuration {
         readonly sCEF_ID: OPTIONAL<FQDN>,
         /**
          * @summary `pdn_ConnectionContinuity`.
+         * @description
+         *
+         * Absence indicates handling is left to local VPLMN policy (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

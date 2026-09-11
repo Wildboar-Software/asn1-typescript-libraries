@@ -75,7 +75,10 @@ import { maxNumOfBasicServiceGroups } from "./maxNumOfBasicServiceGroups.va.mjs"
 /**
  * @summary CallBarringFeatureList
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..maxNumOfBasicServiceGroups) OF `CallBarringFeature` (3GPP
+ * TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

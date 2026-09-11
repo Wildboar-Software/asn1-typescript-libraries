@@ -76,6 +76,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary or_NotAllowed
  * @description
  * 
+ * Returned when the entity which sends the error does not support optimal
+ * routeing, or the HLR will not accept an optimal routeing interrogation from
+ * the GMSC, or the call cannot be optimally routed because it would contravene
+ * optimal routeing constraints (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 48. Optional parameter `OR-NotAllowedParam` (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

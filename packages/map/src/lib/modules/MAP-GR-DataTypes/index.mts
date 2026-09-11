@@ -1,7 +1,10 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-GR-DataTypes`.
+ * ASN.1 module `MAP-GR-DataTypes` (clause 17.7.12). Argument and result types
+ * for VGCS/VBS group-call operations: prepare, process/forward signalling,
+ * end-signal, and send group-call info (3GPP TS 29.002 V19.1.0 clauses 17.7.12
+ * and 10.4–10.7A).
  */
 export * from "./CODEC-Info.ta.mjs";
 export * from "./CipheringAlgorithm.ta.mjs";

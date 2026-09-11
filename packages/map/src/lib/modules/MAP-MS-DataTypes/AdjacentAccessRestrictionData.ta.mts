@@ -74,7 +74,11 @@ import { Ext_AccessRestrictionData, Ext_AccessRestrictionData_nrAsSecondaryRATNo
 /**
  * @summary AdjacentAccessRestrictionData
  * @description
- * 
+ *
+ * Access restriction data applicable to an adjacent PLMN, pairing a PLMN Id
+ * with AccessRestrictionData and optional Ext-AccessRestrictionData (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.97 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,12 +102,22 @@ class AdjacentAccessRestrictionData {
         readonly plmnId: PLMN_Id,
         /**
          * @summary `accessRestrictionData`.
+         * @description
+         *
+         * Access restriction data for this adjacent PLMN (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.3.97 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly accessRestrictionData: AccessRestrictionData,
         /**
          * @summary `ext_AccessRestrictionData`.
+         * @description
+         *
+         * Additional access restrictions for this adjacent PLMN (3GPP TS 29.002
+         * V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

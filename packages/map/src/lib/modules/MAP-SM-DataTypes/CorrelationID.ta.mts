@@ -73,7 +73,10 @@ import { SIP_URI, _decode_SIP_URI, _encode_SIP_URI } from "../MAP-SM-DataTypes/S
 /**
  * @summary CorrelationID
  * @description
- * 
+ *
+ * HLR identity and optional SIP URIs (RFC 3261) (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,18 +93,30 @@ class CorrelationID {
     constructor (
         /**
          * @summary `hlr_id`.
+         * @description
+         *
+         * HLR identity.
+         *
          * @public
          * @readonly
          */
         readonly hlr_id: OPTIONAL<HLR_Id>,
         /**
          * @summary `sip_uri_A`.
+         * @description
+         *
+         * SIP URI A; octets as in IETF RFC 3261.
+         *
          * @public
          * @readonly
          */
         readonly sip_uri_A: OPTIONAL<SIP_URI>,
         /**
          * @summary `sip_uri_B`.
+         * @description
+         *
+         * SIP URI B; octets as in IETF RFC 3261.
+         *
          * @public
          * @readonly
          */

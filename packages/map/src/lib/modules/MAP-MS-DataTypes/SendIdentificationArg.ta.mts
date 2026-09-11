@@ -78,7 +78,14 @@ import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta
 /**
  * @summary SendIdentificationArg
  * @description
- * 
+ *
+ * MAP_SEND_IDENTIFICATION request from a VLR to a previous VLR to retrieve IMSI
+ * and authentication data for a subscriber registering afresh. May also send
+ * the MSC number. `numberOfRequestedVectors` shall be in the first request of a
+ * dialogue only; if received later it shall be discarded.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.4 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,18 +113,39 @@ class SendIdentificationArg {
     constructor (
         /**
          * @summary `tmsi`.
+         * @description
+         *
+         * Temporary Mobile Subscriber Identity as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.2).
+         *
          * @public
          * @readonly
          */
         readonly tmsi: TMSI,
         /**
          * @summary `numberOfRequestedVectors`.
+         * @description
+         *
+         * How many authentication vectors (1..5) the requester is prepared to
+         * receive. HLR shall not return more. Present in the first request of a
+         * dialogue only.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.3 and 8.1.4).
+         *
          * @public
          * @readonly
          */
         readonly numberOfRequestedVectors: OPTIONAL<NumberOfRequestedVectors>,
         /**
          * @summary `segmentationProhibited`.
+         * @description
+         *
+         * If present, the requester does not allow MAP-user segmentation of the
+         * response. May be present only in the first request of a dialogue.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+         *
          * @public
          * @readonly
          */
@@ -130,36 +158,74 @@ class SendIdentificationArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `msc_Number`.
+         * @description
+         *
+         * ISDN number of an MSC. In Update Location, used for short-message
+         * delivery; MSRN is requested from the VLR for each incoming call
+         * set-up.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.11 and 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly msc_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `previous_LAI`.
+         * @description
+         *
+         * Location area from which the subscriber has roamed.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.4).
+         *
          * @public
          * @readonly
          */
         readonly previous_LAI: OPTIONAL<LAIFixedLength>,
         /**
          * @summary `hopCounter`.
+         * @description
+         *
+         * Hop count (0..3) for the identification request chain.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly hopCounter: OPTIONAL<HopCounter>,
         /**
          * @summary `mtRoamingForwardingSupported`.
+         * @description
+         *
+         * Sender supports MT Roaming Forwarding.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.20).
+         *
          * @public
          * @readonly
          */
         readonly mtRoamingForwardingSupported: OPTIONAL<NULL>,
         /**
          * @summary `newVLR_Number`.
+         * @description
+         *
+         * ISDN number of the new VLR.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
+         *
          * @public
          * @readonly
          */
         readonly newVLR_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `new_lmsi`.
+         * @description
+         *
+         * LMSI allocated by the new VLR.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
+         *
          * @public
          * @readonly
          */

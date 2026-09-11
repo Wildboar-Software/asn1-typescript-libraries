@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-SM-DataTypes`.
+ * ASN.1 module `MAP-SM-DataTypes` (clause 17.7.6). Types for short-message
+ * routing, MO/MT relay (including VGCS), delivery status, alerting, and
+ * message-waiting (3GPP TS 29.002 V19.1.0 clauses 17.7.6 and 12).
  */
 export * from "./Additional-Number.ta.mjs";
 export * from "./AdditionalDispatcherList.ta.mjs";

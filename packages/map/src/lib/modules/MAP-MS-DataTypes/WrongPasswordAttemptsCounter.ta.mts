@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary WrongPasswordAttemptsCounter
  * @description
- * 
+ *
+ * Count of consecutive wrong password attempts (0..4), used when modifying
+ * call-barring data.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

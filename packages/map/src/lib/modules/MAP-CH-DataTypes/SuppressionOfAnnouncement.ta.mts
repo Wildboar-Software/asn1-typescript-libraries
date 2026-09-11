@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SuppressionOfAnnouncement
  * @description
- * 
+ *
+ * NULL. Use and presence as in 3GPP TS 23.078 (3GPP TS 29.002 V19.1.0 clauses
+ * 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -72,7 +72,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary JobType
  * @description
- * 
+ *
+ * MDT job type (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,7 +98,9 @@ enum _enum_for_JobType {
 /**
  * @summary JobType
  * @description
- * 
+ *
+ * MDT job type (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -115,7 +119,9 @@ type JobType = _enum_for_JobType;
 /**
  * @summary JobType
  * @description
- * 
+ *
+ * MDT job type (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -133,6 +139,10 @@ const JobType = _enum_for_JobType;
 
 /**
  * @summary JobType_immediate_MDT_only
+ * @description
+ *
+ * `immediate-MDT-only (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +151,10 @@ const JobType_immediate_MDT_only: JobType = JobType.immediate_MDT_only; /* LONG_
 
 /**
  * @summary immediate_MDT_only
+ * @description
+ *
+ * `immediate-MDT-only (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +163,10 @@ const immediate_MDT_only: JobType = JobType.immediate_MDT_only; /* SHORT_NAMED_E
 
 /**
  * @summary JobType_logged_MDT_only
+ * @description
+ *
+ * `logged-MDT-only (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +175,10 @@ const JobType_logged_MDT_only: JobType = JobType.logged_MDT_only; /* LONG_NAMED_
 
 /**
  * @summary logged_MDT_only
+ * @description
+ *
+ * `logged-MDT-only (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +187,10 @@ const logged_MDT_only: JobType = JobType.logged_MDT_only; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary JobType_trace_only
+ * @description
+ *
+ * `trace-only (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +199,10 @@ const JobType_trace_only: JobType = JobType.trace_only; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary trace_only
+ * @description
+ *
+ * `trace-only (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +211,10 @@ const trace_only: JobType = JobType.trace_only; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary JobType_immediate_MDT_and_trace
+ * @description
+ *
+ * `immediate-MDT-and-trace (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +223,10 @@ const JobType_immediate_MDT_and_trace: JobType = JobType.immediate_MDT_and_trace
 
 /**
  * @summary immediate_MDT_and_trace
+ * @description
+ *
+ * `immediate-MDT-and-trace (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */

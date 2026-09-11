@@ -72,7 +72,12 @@ import { NotReachableReason, _enum_for_NotReachableReason, NotReachableReason_ms
 /**
  * @summary SubscriberState
  * @description
- * 
+ *
+ * Circuit-switched MS state as in 3GPP TS 23.018. HLR shall discard this IE if
+ * received from an SGSN or MME (via IWF).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.30 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

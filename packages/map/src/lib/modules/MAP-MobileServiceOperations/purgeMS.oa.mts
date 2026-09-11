@@ -80,7 +80,14 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary purgeMS
  * @description
- * 
+ *
+ * MAP_PURGE_MS: VLR (or SGSN) tells the HLR to mark the MS unreachable for MT
+ * call / MT SM / network-requested PDP activation when the subscriber record is
+ * deleted (MMI or inactivity). Shall not be used if both peers support
+ * Super-Charger. Also used IWF↔IWF and IWF↔HSS in EPS. Confirmed. Typical path:
+ * VLR→HLR or SGSN→HLR. Local opcode 67. Timer class `m` (15 s to 30 s). (3GPP
+ * TS 29.002 V19.1.0 clauses 8.1.6.1, 17.1.2, 17.3.2.27 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

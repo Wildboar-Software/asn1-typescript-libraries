@@ -75,7 +75,10 @@ import { maxNumOfExt_BasicServiceGroups } from "./maxNumOfExt-BasicServiceGroups
 /**
  * @summary Ext_CwFeatureList
  * @description
- * 
+ *
+ * List of Call Waiting features (SIZE 1..maxNumOfExt-BasicServiceGroups) (3GPP
+ * TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

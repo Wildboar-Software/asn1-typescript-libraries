@@ -72,7 +72,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CancelLocationRes
  * @description
- * 
+ *
+ * Result of MAP_CANCEL_LOCATION. On failure the VLR, SGSN or IWF returns
+ * unexpected data value or data missing (3GPP TS 29.002 V19.1.0 clauses 8.1.3.2
+ * and 8.1.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

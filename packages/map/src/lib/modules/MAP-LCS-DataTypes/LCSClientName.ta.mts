@@ -74,7 +74,10 @@ import { LCS_FormatIndicator, _enum_for_LCS_FormatIndicator, LCS_FormatIndicator
 /**
  * @summary LCSClientName
  * @description
- * 
+ *
+ * USSD DCS shall indicate default alphabet `00001111`B (3GPP TS 29.002 V19.1.0
+ * clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +95,30 @@ class LCSClientName {
     constructor (
         /**
          * @summary `dataCodingScheme`.
+         * @description
+         *
+         * Shall be default alphabet 00001111B (clause 17.7.13).
+         *
          * @public
          * @readonly
          */
         readonly dataCodingScheme: USSD_DataCodingScheme,
         /**
          * @summary `nameString`.
+         * @description
+         *
+         * Client name string, 1..63.
+         *
          * @public
          * @readonly
          */
         readonly nameString: NameString,
         /**
          * @summary `lcs_FormatIndicator`.
+         * @description
+         *
+         * logicalName, e-mail, MSISDN, URL or SIP URL.
+         *
          * @public
          * @readonly
          */

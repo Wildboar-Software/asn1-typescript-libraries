@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NIDD_Mechanism
  * @description
- * 
+ *
+ * Non-IP Data Delivery mechanism. When this IE is absent, the default is
+ * `sGi-based-data-delivery`. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,7 +98,10 @@ enum _enum_for_NIDD_Mechanism {
 /**
  * @summary NIDD_Mechanism
  * @description
- * 
+ *
+ * Non-IP Data Delivery mechanism. When this IE is absent, the default is
+ * `sGi-based-data-delivery`. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -115,7 +121,10 @@ type NIDD_Mechanism = _enum_for_NIDD_Mechanism;
 /**
  * @summary NIDD_Mechanism
  * @description
- * 
+ *
+ * Non-IP Data Delivery mechanism. When this IE is absent, the default is
+ * `sGi-based-data-delivery`. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -134,6 +143,10 @@ const NIDD_Mechanism = _enum_for_NIDD_Mechanism;
 
 /**
  * @summary NIDD_Mechanism_sGi_based_data_delivery
+ * @description
+ *
+ * Default when the IE is absent. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -142,6 +155,10 @@ const NIDD_Mechanism_sGi_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sG
 
 /**
  * @summary sGi_based_data_delivery
+ * @description
+ *
+ * Default when the IE is absent. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -150,6 +167,10 @@ const sGi_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sGi_based_data_de
 
 /**
  * @summary NIDD_Mechanism_sCEF_based_data_delivery
+ * @description
+ *
+ * SCEF-based NIDD. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -158,6 +179,10 @@ const NIDD_Mechanism_sCEF_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.s
 
 /**
  * @summary sCEF_based_data_delivery
+ * @description
+ *
+ * SCEF-based NIDD. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */

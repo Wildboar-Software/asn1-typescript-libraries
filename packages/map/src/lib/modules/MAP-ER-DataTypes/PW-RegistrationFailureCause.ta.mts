@@ -73,6 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PW_RegistrationFailureCause
  * @description
  * 
+ * Required parameter of `pw-RegistrationFailure`. Supplementary-service errors
+ * are defined in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +99,10 @@ enum _enum_for_PW_RegistrationFailureCause {
  * @summary PW_RegistrationFailureCause
  * @description
  * 
+ * Required parameter of `pw-RegistrationFailure`. Supplementary-service errors
+ * are defined in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -113,6 +121,10 @@ type PW_RegistrationFailureCause = _enum_for_PW_RegistrationFailureCause;
  * @summary PW_RegistrationFailureCause
  * @description
  * 
+ * Required parameter of `pw-RegistrationFailure`. Supplementary-service errors
+ * are defined in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -129,6 +141,11 @@ const PW_RegistrationFailureCause = _enum_for_PW_RegistrationFailureCause;
 
 /**
  * @summary PW_RegistrationFailureCause_undetermined
+ * @description
+ *
+ * `undetermined` (0). Supplementary-service errors are defined in 3GPP TS
+ * 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +154,11 @@ const PW_RegistrationFailureCause_undetermined: PW_RegistrationFailureCause = PW
 
 /**
  * @summary undetermined
+ * @description
+ *
+ * `undetermined` (0). Supplementary-service errors are defined in 3GPP TS
+ * 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +167,11 @@ const undetermined: PW_RegistrationFailureCause = PW_RegistrationFailureCause.un
 
 /**
  * @summary PW_RegistrationFailureCause_invalidFormat
+ * @description
+ *
+ * `invalidFormat` (1). Supplementary-service errors are defined in 3GPP TS
+ * 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +180,11 @@ const PW_RegistrationFailureCause_invalidFormat: PW_RegistrationFailureCause = P
 
 /**
  * @summary invalidFormat
+ * @description
+ *
+ * `invalidFormat` (1). Supplementary-service errors are defined in 3GPP TS
+ * 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +193,11 @@ const invalidFormat: PW_RegistrationFailureCause = PW_RegistrationFailureCause.i
 
 /**
  * @summary PW_RegistrationFailureCause_newPasswordsMismatch
+ * @description
+ *
+ * `newPasswordsMismatch` (2). Supplementary-service errors are defined in 3GPP
+ * TS 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +206,11 @@ const PW_RegistrationFailureCause_newPasswordsMismatch: PW_RegistrationFailureCa
 
 /**
  * @summary newPasswordsMismatch
+ * @description
+ *
+ * `newPasswordsMismatch` (2). Supplementary-service errors are defined in 3GPP
+ * TS 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * @constant
  * @type {number}
  */

@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AUTN
  * @description
- * 
+ *
+ * UMTS/EPS Authentication Token (3GPP TS 29.002 V19.1.0 clauses 7.6.7.5C and
+ * 17.7.1). Encoded as an OCTET STRING of 16 octets.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

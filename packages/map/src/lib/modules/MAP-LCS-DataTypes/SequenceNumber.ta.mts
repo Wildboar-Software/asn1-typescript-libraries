@@ -75,7 +75,11 @@ import { maxReportingAmount } from "./maxReportingAmount.va.mjs";
 /**
  * @summary SequenceNumber
  * @description
- * 
+ *
+ * INTEGER (1..maxReportingAmount). First report is 1; H-GMLC knows the
+ * procedure is complete when it reaches reportingAmount (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.11.32 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NAEA_CIC
  * @description
- * 
+ *
+ * Carrier Identification Code. Size 3 octets. Internal structure is the Carrier
+ * Identification parameter in ANSI T1.113.3. Carrier codes "000"-"999" may be
+ * encoded as 3 digits or as 4 digits "0000"-"0999". Codes "1000"-"9999" are
+ * encoded using 4 digits.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.2.34).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

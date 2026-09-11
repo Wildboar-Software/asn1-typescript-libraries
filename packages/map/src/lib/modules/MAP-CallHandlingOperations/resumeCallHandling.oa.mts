@@ -81,7 +81,13 @@ import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 /**
  * @summary resumeCallHandling
  * @description
- * 
+ *
+ * MAP_RESUME_CALL_HANDLING: terminating VMSC asks the GMSC to resume handling
+ * the call and forward it to the specified destination. Confirmed. Typical
+ * path: VMSC→GMSC. Local opcode 6. Timer class `m` (15 s to 30 s). Distinctive
+ * error: `forwardingFailed`. (3GPP TS 29.002 V19.1.0 clauses 10.3.1, 17.1.2,
+ * 17.3.2.7 and 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ZoneCode
  * @description
- * 
+ *
+ * Identifies location, routing, or tracking areas into which the subscriber is
+ * allowed or not allowed to roam (regional subscription). Internal structure in
+ * 3GPP TS 23.003. Two octets.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.28 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

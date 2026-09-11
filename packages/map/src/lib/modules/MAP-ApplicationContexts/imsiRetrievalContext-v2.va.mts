@@ -72,7 +72,10 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary imsiRetrievalContext_v2
  * @description
- * 
+ *
+ * IMSI retrieval between HLR and VLR. Initiator is VLR; responder is HLR.
+ * Version 2 only (3GPP TS 29.002 V19.1.0 clause 17.3.2.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

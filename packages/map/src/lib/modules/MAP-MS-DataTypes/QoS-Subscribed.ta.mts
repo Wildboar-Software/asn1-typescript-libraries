@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary QoS_Subscribed
  * @description
- * 
+ *
+ * Quality of service subscribed for a PDP context, as in 3GPP TS 23.060. Octets
+ * follow 3GPP TS 24.008 Quality of Service octets 3-5.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.47 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

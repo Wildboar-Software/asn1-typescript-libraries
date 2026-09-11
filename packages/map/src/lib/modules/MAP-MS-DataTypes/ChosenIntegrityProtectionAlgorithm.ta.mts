@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ChosenIntegrityProtectionAlgorithm
  * @description
- * 
+ *
+ * Chosen UMTS integrity protection algorithm: one octet containing a complete
+ * IntegrityProtectionAlgorithm as defined in 3GPP TS 25.413. Padding bits are
+ * in the least significant bits (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

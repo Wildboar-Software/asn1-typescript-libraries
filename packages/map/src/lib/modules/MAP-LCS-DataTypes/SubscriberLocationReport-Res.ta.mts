@@ -76,7 +76,11 @@ import { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_Reference
 /**
  * @summary SubscriberLocationReport_Res
  * @description
- * 
+ *
+ * Result of MAP-SUBSCRIBER-LOCATION-REPORT. na-ESRK and na-ESRD are mutually
+ * exclusive; receiving both is treated as a return error (3GPP TS 29.002
+ * V19.1.0 clauses 13A.3 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,42 +102,70 @@ class SubscriberLocationReport_Res {
     constructor (
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `na_ESRK`.
+         * @description
+         *
+         * NA-ESRK; not with na-ESRD (3GPP TS 29.002 V19.1.0 clause 7.6.11.14).
+         *
          * @public
          * @readonly
          */
         readonly na_ESRK: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `na_ESRD`.
+         * @description
+         *
+         * NA-ESRD; not with na-ESRK (3GPP TS 29.002 V19.1.0 clause 7.6.11.13).
+         *
          * @public
          * @readonly
          */
         readonly na_ESRD: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `h_gmlc_Address`.
+         * @description
+         *
+         * Home GMLC.
+         *
          * @public
          * @readonly
          */
         readonly h_gmlc_Address: OPTIONAL<GSN_Address>,
         /**
          * @summary `mo_lrShortCircuitIndicator`.
+         * @description
+         *
+         * MO-LR short circuit (3GPP TS 29.002 V19.1.0 clause 7.6.11.29).
+         *
          * @public
          * @readonly
          */
         readonly mo_lrShortCircuitIndicator: OPTIONAL<NULL>,
         /**
          * @summary `reportingPLMNList`.
+         * @description
+         *
+         * Reporting PLMN list (3GPP TS 29.002 V19.1.0 clause 7.6.11.30).
+         *
          * @public
          * @readonly
          */
         readonly reportingPLMNList: OPTIONAL<ReportingPLMNList>,
         /**
          * @summary `lcs_ReferenceNumber`.
+         * @description
+         *
+         * Deferred MT-LR reference (3GPP TS 29.002 V19.1.0 clause 7.6.11.23).
+         *
          * @public
          * @readonly
          */

@@ -72,7 +72,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SendGroupCallEndSignalRes
  * @description
- * 
+ *
+ * Result: Anchor MSC informs Relay MSC that call resources may be released
+ * because the call was released in the Anchor MSC (3GPP TS 29.002 V19.1.0
+ * clauses 10.7 and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,6 +92,10 @@ class SendGroupCallEndSignalRes {
     constructor (
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

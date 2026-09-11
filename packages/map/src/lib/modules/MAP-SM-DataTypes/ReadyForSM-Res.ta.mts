@@ -72,7 +72,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ReadyForSM_Res
  * @description
- * 
+ *
+ * Result of MAP-READY-FOR-SM (3GPP TS 29.002 V19.1.0 clauses 12.4 and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,6 +90,10 @@ class ReadyForSM_Res {
     constructor (
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
