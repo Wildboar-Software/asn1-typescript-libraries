@@ -8,6 +8,14 @@ import { type BHSM_PSID } from "../XBHSM/BHSM-PSID.oca.mjs";
  * @summary bioRef
  * @description
  *
+ * `BHSM-PSID` information object: a `BIT STRING` identified by
+ * `{bhsmpsid 3}` (`1.0.17922.2.1.3`). Only named object in
+ * `SupportedBHSM-PSID`
+ * ([ITU-T X.1085](https://www.itu.int/rec/T-REC-X.1085-201610-I)
+ * | ISO/IEC 17922 Annex A.3). The spec does not describe the
+ * BIT STRING contents or how this object is used beyond the
+ * ASN.1 assignment.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

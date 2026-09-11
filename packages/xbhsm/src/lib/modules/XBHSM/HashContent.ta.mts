@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary HashContent
  * @description
  *
+ * Inputs to the PSID hash: biometric reference `BR` and random
+ * number `R`. Clause 8.1.2.2 computes `PSID = h(BR, R)`
+ * ([ITU-T X.1085](https://www.itu.int/rec/T-REC-X.1085-201610-I)
+ * | ISO/IEC 17922 Annex A.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -27,12 +32,27 @@ export class HashContent {
     constructor(
         /**
          * @summary `bR`.
+         * @description
+         *
+         * Biometric reference extracted from the captured
+         * biometric information. Any modality (fingerprint,
+         * face, iris, etc.) may be used. Encoding shall follow
+         * an appropriate part of ISO/IEC 19794; a Biometric
+         * Information Record (BIR) per ISO/IEC 19785-1 is
+         * recommended (Annex A.3). How a BIR or 19794 record
+         * is represented in this `PrintableString` is not
+         * specified.
          * @public
          * @readonly
          */
         readonly bR: PrintableString,
         /**
          * @summary `randomNum`.
+         * @description
+         *
+         * Random number `R` mixed with the biometric reference
+         * when generating the PSID. A secure random number of
+         * at least 160 bits shall be used (clause 8.1.2.2).
          * @public
          * @readonly
          */

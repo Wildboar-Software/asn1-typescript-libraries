@@ -6,6 +6,11 @@ import { bioRef } from "../XBHSM/bioRef.oa.mjs";
  * @summary SupportedBHSM_PSID
  * @description
  *
+ * Extensible `BHSM-PSID` information-object set. The published
+ * module contains only `bioRef`
+ * ([ITU-T X.1085](https://www.itu.int/rec/T-REC-X.1085-201610-I)
+ * | ISO/IEC 17922 Annex A.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

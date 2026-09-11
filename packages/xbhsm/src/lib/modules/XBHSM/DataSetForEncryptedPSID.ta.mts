@@ -21,6 +21,17 @@ import {
  * @summary DataSetForEncryptedPSID
  * @description
  *
+ * Certification-request payload that carries an encrypted
+ * pseudonymous identifier (EPSID) to the CA
+ * ([ITU-T X.1085](https://www.itu.int/rec/T-REC-X.1085-201610-I)
+ * | ISO/IEC 17922 clause 8.3, Annex A.2). Formed as
+ * `EPSID = E(PSID)` with the CA public key from its
+ * key-distribution certificate (clause 8.1.3). Clause 8.1.3
+ * requires the certification-request EPSID to follow the
+ * Annex A format; this type is that format (clause 8.3).
+ * Annex A.2 says PKCS #10 `attributes` can include an OID
+ * for `EncryptedPsid`.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -37,18 +48,34 @@ export class DataSetForEncryptedPSID {
     constructor(
         /**
          * @summary `version`.
+         * @description
+         *
+         * Version of this Recommendation | International
+         * Standard. Use `0` (`v1`) for X.1085 (10/2016) |
+         * ISO/IEC 17922:2017 (clause 8.3). DEFAULT 0.
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<INTEGER>,
         /**
          * @summary `psidEncAlg`.
+         * @description
+         *
+         * Asymmetric encryption algorithm and parameters used
+         * to encrypt the PSID. Should match the algorithm in
+         * the CA's certificate (clause 8.3). The key is taken
+         * from the CA's key-distribution certificate
+         * (clause 8.1.3).
          * @public
          * @readonly
          */
         readonly psidEncAlg: PSIDEncryptionAlgorithm,
         /**
          * @summary `encryptedPsid`.
+         * @description
+         *
+         * PSID ciphertext under the CA public key
+         * (`EPSID = E(PSID)`, clauses 8.1.3 and 8.3).
          * @public
          * @readonly
          */
@@ -81,6 +108,10 @@ export class DataSetForEncryptedPSID {
 
     /**
      * @summary Getter that returns the default value for `version`.
+     * @description
+     *
+     * `0` (`v1`) when this edition of the Recommendation is
+     * referenced (clause 8.3).
      * @public
      * @static
      * @method

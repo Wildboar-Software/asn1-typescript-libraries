@@ -20,6 +20,35 @@ import {
  * @summary PSID
  * @description
  *
+ * Pseudonymous identifier (PSID; PI in ISO/IEC 24745) that
+ * binds the BHSM user to an X.509 certificate without placing
+ * the raw biometric reference in the certificate
+ * ([ITU-T X.1085](https://www.itu.int/rec/T-REC-X.1085-201610-I)
+ * | ISO/IEC 17922 clauses 3.2.3, 4 note 1, 6.3, 8.1.2).
+ * Generated as `PSID = h(BR, R)` (clause 8.1.2.2). Shall be
+ * unique in the BHSM's context of use, and the certificate
+ * value shall match the value stored in the BHSM
+ * (clause 8.1.2.1). The user's distinguished name may be the
+ * same as the PSID (clause 8.1.3).
+ *
+ * The CA inserts the PSID into `subjectAltName` as a
+ * `directoryName` (clauses 7.2.1 g, 8.1.4, Annex A.3). This
+ * ASN.1 type carries `hashAlg` and `hashContent` (the BR and
+ * `R`); clause 8.1.2.2 defines the identifier as the hash of
+ * those inputs. The spec does not say whether the digest, this
+ * structure, or both appear in `subjectAltName`.
+ *
+ * After local biometric authentication, the BHSM signs the
+ * concatenation of PSID and challenge `Ra`; the authentication
+ * server compares that PSID with the one in the certificate
+ * (clauses 7.3.1, 8.2). Only the PSID should leave the BHSM
+ * during enrolment and authentication (clause 6.3).
+ *
+ * Annex A.3 also mentions `realName` (UTF8String name of the
+ * certificate owner) and `userInfo` for additional
+ * identification including the PSID; those fields are not
+ * defined in the XBHSM ASN.1 module.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +64,20 @@ export class PSID {
     constructor(
         /**
          * @summary `hashAlg`.
+         * @description
+         *
+         * Hash algorithm and parameters used to generate the
+         * PSID (Annex A.3).
          * @public
          * @readonly
          */
         readonly hashAlg: HashAlgorithm,
         /**
          * @summary `hashContent`.
+         * @description
+         *
+         * Hash inputs: biometric reference `BR` and random
+         * number `R` (Annex A.3; clause 8.1.2.2).
          * @public
          * @readonly
          */
