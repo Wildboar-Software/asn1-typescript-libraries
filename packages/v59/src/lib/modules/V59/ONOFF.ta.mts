@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ONOFF
  * @description
- * 
+ *
+ * Annex A helper CHOICE: `dISABLED`(0) / `eNABLED`(1). Not used by the clause 6
+ * object classes. ITU-T Rec. V.59 (11/2000) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

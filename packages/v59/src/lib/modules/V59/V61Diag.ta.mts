@@ -15,7 +15,11 @@ import { V61Diag_Item, _decode_V61Diag_Item, _encode_V61Diag_Item } from "../V59
 /**
  * @summary V61Diag
  * @description
- * 
+ *
+ * High-level V.61 ASVD diagnostics (Tag-ID `25xx`). This object class is for
+ * further study; Annex A is an extension-only SEQUENCE. ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.8.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

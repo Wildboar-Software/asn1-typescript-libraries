@@ -17,7 +17,10 @@ import { ModeCapability_Item_protocolmode, _decode_ModeCapability_Item_protocolm
 /**
  * @summary ModeCapability_Item
  * @description
- * 
+ *
+ * Supported modulation modes and error-control/compression protocols. ITU-T
+ * Rec. V.59 (11/2000) §6.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,12 +56,21 @@ class ModeCapability_Item {
     constructor (
         /**
          * @summary `modulationMode`.
+         * @description
+         *
+         * Per-modulation capability codes (Tag-IDs `0900`…`2300` plus
+         * `otherModMode` `0101`). ITU-T Rec. V.59 (11/2000) §6.6.
          * @public
          * @readonly
          */
         readonly modulationMode: ModeCapability_Item_modulationMode,
         /**
          * @summary `protocolmode`.
+         * @description
+         *
+         * Per-protocol capability: V.42 (`2F00`), V.42 bis (`3000`), V.44
+         * (`300A`), optional `otherProtMode` (`0102`). ITU-T Rec. V.59
+         * (11/2000) §6.6.
          * @public
          * @readonly
          */

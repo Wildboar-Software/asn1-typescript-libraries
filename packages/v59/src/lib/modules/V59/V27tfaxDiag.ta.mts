@@ -15,7 +15,10 @@ import { V27tfaxDiag_Item, _decode_V27tfaxDiag_Item, _encode_V27tfaxDiag_Item } 
 /**
  * @summary V27tfaxDiag
  * @description
- * 
+ *
+ * High-level V.27 ter facsimile diagnostics (Tag-ID `18xx`). ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.8.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

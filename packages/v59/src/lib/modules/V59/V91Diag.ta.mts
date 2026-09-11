@@ -15,7 +15,10 @@ import { V91Diag_Item, _decode_V91Diag_Item, _encode_V91Diag_Item } from "../V59
 /**
  * @summary V91Diag
  * @description
- * 
+ *
+ * High-level V.91 diagnostics (Tag-ID `0Axx`). ITU-T Rec. V.59 (11/2000) §6.3,
+ * §6.8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

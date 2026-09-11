@@ -16,7 +16,11 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary NSMDiag_Item
  * @description
- * 
+ *
+ * Manufacturer-defined diagnostics for proprietary modes. Example:
+ * `proprietaryMode{SuperTurbo+}` with `fieldData{2300;FE6B;+1;0.34}`. ITU-T
+ * Rec. V.59 (11/2000) §6.8.18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,21 @@ class NSMDiag_Item {
     constructor (
         /**
          * @summary `proprietaryMode`.
+         * @description
+         *
+         * Name of the proprietary mode(s) whose diagnostics are in `fieldData`.
+         * IA5 `simpleText` (§6.2.1). Tag-ID `2601`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.18.
          * @public
          * @readonly
          */
         readonly proprietaryMode: OPTIONAL<V59String>,
         /**
          * @summary `fieldData`.
+         * @description
+         *
+         * Delimited manufacturer-defined diagnostic objects. IA5String SIZE
+         * 1..256. Tag-ID `2602`. ITU-T Rec. V.59 (11/2000) §6.8.18.
          * @public
          * @readonly
          */

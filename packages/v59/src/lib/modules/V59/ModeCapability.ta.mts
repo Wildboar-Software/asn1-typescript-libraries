@@ -15,7 +15,11 @@ import { ModeCapability_Item, _decode_ModeCapability_Item, _encode_ModeCapabilit
 /**
  * @summary ModeCapability
  * @description
- * 
+ *
+ * High-level modem capability (Tag-ID `01xx` in §6.3; named `ModemCapability`
+ * in the Tag-ID table). Each modulation/protocol uses Table 5 codes. ITU-T Rec.
+ * V.59 (11/2000) §6.3, §6.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

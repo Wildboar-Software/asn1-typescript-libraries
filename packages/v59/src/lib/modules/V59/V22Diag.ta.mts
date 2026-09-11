@@ -15,7 +15,10 @@ import { V22Diag_Item, _decode_V22Diag_Item, _encode_V22Diag_Item } from "../V59
 /**
  * @summary V22Diag
  * @description
- * 
+ *
+ * High-level V.22 / V.22 bis diagnostics (Tag-ID `0Exx`). ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.8.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

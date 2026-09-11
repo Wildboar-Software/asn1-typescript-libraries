@@ -22,7 +22,10 @@ import { V34HdxDiag_Item_cCrate, _enum_for_V34HdxDiag_Item_cCrate, _decode_V34Hd
 /**
  * @summary V34HdxDiag_Item
  * @description
- * 
+ *
+ * V.34 HDX INFO/MP, precoder, rates, and control-channel data rate. ITU-T Rec.
+ * V.59 (11/2000) §6.8.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,84 +54,159 @@ class V34HdxDiag_Item {
     constructor (
         /**
          * @summary `modeV34H`.
+         * @description
+         *
+         * V.34 half-duplex operating-mode capability. Table 5/V.59:
+         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+         * `disabled`(3) supported but off. Tag-ID `1500`. ITU-T Rec. V.59
+         * (11/2000) §6.8.11.
          * @public
          * @readonly
          */
         readonly modeV34H: Capabilities,
         /**
          * @summary `iNFO0Tx`.
+         * @description
+         *
+         * INFO0 sequence transmitted. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Common Tag-ID `41`. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly iNFO0Tx: V59String,
         /**
          * @summary `iNFO0Rx`.
+         * @description
+         *
+         * INFO0 sequence received. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Common Tag-ID `42`. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly iNFO0Rx: V59String,
         /**
          * @summary `iNFOh`.
+         * @description
+         *
+         * INFO sequence transmitted by the source or received by the recipient.
+         * Hex `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
+         * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
+         * Tag-ID `1501`. ITU-T Rec. V.59 (11/2000) §6.8.11.
          * @public
          * @readonly
          */
         readonly iNFOh: V59String,
         /**
          * @summary `mPh`.
+         * @description
+         *
+         * MP sequence transmitted by the source or received by the recipient.
+         * Type-1 precoder coefficients are not included. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. Tag-ID
+         * `1502`. ITU-T Rec. V.59 (11/2000) §6.8.11.
          * @public
          * @readonly
          */
         readonly mPh: V59String,
         /**
          * @summary `precodeCoeffTx`.
+         * @description
+         *
+         * Transmitter precoder coefficients, taken out of a type-1 MP sequence
+         * as real/imaginary hex pairs: `h(1);h(2);h(3)` with commas inside each
+         * pair. 16-bit coefficients. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Tag-ID `43`. ITU-T Rec. V.59 (11/2000)
+         * §6.4.
          * @public
          * @readonly
          */
         readonly precodeCoeffTx: OPTIONAL<V59String>,
         /**
          * @summary `v34TxLevel`.
+         * @description
+         *
+         * V.34 HDX transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.11.
          * @public
          * @readonly
          */
         readonly v34TxLevel: TxPowerLevel,
         /**
          * @summary `symbolRate`.
+         * @description
+         *
+         * Symbol rate used (Tag-ID `1548`). Encoded as `V59String` in Annex A.
+         * ITU-T Rec. V.59 (11/2000) §6.8.11.
          * @public
          * @readonly
          */
         readonly symbolRate: OPTIONAL<V59String>,
         /**
          * @summary `carrierFreq`.
+         * @description
+         *
+         * Carrier frequency used (Tag-ID `154A`). Encoded as `V59String` in
+         * Annex A. ITU-T Rec. V.59 (11/2000) §6.8.11.
          * @public
          * @readonly
          */
         readonly carrierFreq: OPTIONAL<V59String>,
         /**
          * @summary `dataHistory`.
+         * @description
+         *
+         * Data-rate history (Tag-ID `154C`). IA5 `simpleText` (§6.2.1). History
+         * lists oldest event first, most recent last (§6.2.6). ITU-T Rec. V.59
+         * (11/2000) §6.8.11.
          * @public
          * @readonly
          */
         readonly dataHistory: OPTIONAL<V59String>,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxLevelEstimate: OPTIONAL<V59String>,
         /**
          * @summary `noiseEstimate`.
+         * @description
+         *
+         * Noise level with units (e.g. `-55dBm`, `35dBrn`). IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4F`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly noiseEstimate: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
+         * @description
+         *
+         * Receiver signal quality at start and, if available, near end of call.
+         * Fractional form 1.0 best / 0.0 worst (e.g. `0.445;0.312`), or a
+         * proprietary integer as text. IA5 `simpleText` (§6.2.1). Tag-ID `50`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxSignalQuality: OPTIONAL<V59String>,
         /**
          * @summary `cCrate`.
+         * @description
+         *
+         * Control-channel data rate (Table 14/V.59). Tag-ID `1503`. ITU-T Rec.
+         * V.59 (11/2000) §6.8.11.
          * @public
          * @readonly
          */

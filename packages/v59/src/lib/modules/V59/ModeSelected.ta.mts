@@ -15,7 +15,10 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary ModeSelected
  * @description
- * 
+ *
+ * High-level selected-mode object (Tag-ID `02xx`). ITU-T Rec. V.59 (11/2000)
+ * §6.3, §6.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +33,13 @@ class ModeSelected {
     constructor (
         /**
          * @summary `modulationHistory`.
+         * @description
+         *
+         * Modulations used for the past call as V-series numbers in a delimited
+         * list; a short string may name a proprietary mode. Example:
+         * `V.90;V.34`. IA5 `simpleText` (§6.2.1). History lists oldest event
+         * first, most recent last (§6.2.6). Tag-ID `0201`. ITU-T Rec. V.59
+         * (11/2000) §6.7.
          * @public
          * @readonly
          */

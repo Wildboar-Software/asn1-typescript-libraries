@@ -15,7 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ErrorControl_Item_v42featureNegotiation
  * @description
- * 
+ *
+ * V.42 features as a packed BIT STRING (Table 19/V.59). `1` =
+ * available/enabled. Bit 0 is LSB when displayed (ITU-T Rec. V.59 Cor.1
+ * (07/2001)). ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +35,10 @@ type ErrorControl_Item_v42featureNegotiation = BIT_STRING;
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_singleSREJ
+ * @description
+ *
+ * Bit 0: Single selective reject enabled. Table 19/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.12.
  * @constant
  */
 export
@@ -45,6 +53,10 @@ const singleSREJ: number = ErrorControl_Item_v42featureNegotiation_singleSREJ; /
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_multipleSREJ
+ * @description
+ *
+ * Bit 1: Multiple selective reject enabled. Table 19/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.12.
  * @constant
  */
 export
@@ -59,6 +71,10 @@ const multipleSREJ: number = ErrorControl_Item_v42featureNegotiation_multipleSRE
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_hDLCBalMode
+ * @description
+ *
+ * Bit 2: Normal error-control (HDLC balanced) enabled. Table 19/V.59. ITU-T
+ * Rec. V.59 (11/2000) §6.12.
  * @constant
  */
 export
@@ -73,6 +89,9 @@ const hDLCBalMode: number = ErrorControl_Item_v42featureNegotiation_hDLCBalMode;
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_testFrameSup
+ * @description
+ *
+ * Bit 3: TEST frame supported. Table 19/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  */
 export
@@ -87,6 +106,9 @@ const testFrameSup: number = ErrorControl_Item_v42featureNegotiation_testFrameSu
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_fcs16
+ * @description
+ *
+ * Bit 4: 16-bit FCS enabled. Table 19/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  */
 export
@@ -101,6 +123,9 @@ const fcs16: number = ErrorControl_Item_v42featureNegotiation_fcs16; /* SHORT_NA
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_fcs32
+ * @description
+ *
+ * Bit 5: 32-bit FCS enabled. Table 19/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  */
 export
@@ -115,6 +140,10 @@ const fcs32: number = ErrorControl_Item_v42featureNegotiation_fcs32; /* SHORT_NA
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_v42phaseDetused
+ * @description
+ *
+ * Bit 6: V.42 detection phase used. Table 19/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
  * @constant
  */
 export
@@ -129,6 +158,10 @@ const v42phaseDetused: number = ErrorControl_Item_v42featureNegotiation_v42phase
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_odpAdpbypassed
+ * @description
+ *
+ * Bit 7: ODP/ADP bypassed by another mechanism (e.g. V.92). Table 19/V.59.
+ * ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  */
 export
@@ -143,6 +176,10 @@ const odpAdpbypassed: number = ErrorControl_Item_v42featureNegotiation_odpAdpbyp
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_v42fallbackDisc
+ * @description
+ *
+ * Bit 8: Disconnect if V.42 negotiation fails. Table 19/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.12.
  * @constant
  */
 export
@@ -157,6 +194,10 @@ const v42fallbackDisc: number = ErrorControl_Item_v42featureNegotiation_v42fallb
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_v42fallbackBuf
+ * @description
+ *
+ * Bit 9: V.14 buffered mode if V.42 negotiation fails. Table 19/V.59. ITU-T
+ * Rec. V.59 (11/2000) §6.12.
  * @constant
  */
 export
@@ -171,6 +212,10 @@ const v42fallbackBuf: number = ErrorControl_Item_v42featureNegotiation_v42fallba
 
 /**
  * @summary ErrorControl_Item_v42featureNegotiation_v42fallbackUnBuf
+ * @description
+ *
+ * Bit 10: V.14 unbuffered mode if V.42 negotiation fails. Table 19/V.59. ITU-T
+ * Rec. V.59 (11/2000) §6.12.
  * @constant
  */
 export

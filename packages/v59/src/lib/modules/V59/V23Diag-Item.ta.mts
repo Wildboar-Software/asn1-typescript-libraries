@@ -23,7 +23,10 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary V23Diag_Item
  * @description
- * 
+ *
+ * V.23 duplex indication, data rates, and receive level. ITU-T Rec. V.59
+ * (11/2000) §6.8.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,36 +46,63 @@ class V23Diag_Item {
     constructor (
         /**
          * @summary `modeV23`.
+         * @description
+         *
+         * V.23 operating-mode capability. Table 5/V.59: `notSupported`(0),
+         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+         * off. Tag-ID `0F00`. ITU-T Rec. V.59 (11/2000) §6.8.9.
          * @public
          * @readonly
          */
         readonly modeV23: Capabilities,
         /**
          * @summary `v23TxLevel`.
+         * @description
+         *
+         * V.23 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.9.
          * @public
          * @readonly
          */
         readonly v23TxLevel: TxPowerLevel,
         /**
          * @summary `duplex`.
+         * @description
+         *
+         * Duplex mode of operation. Tag-ID `0F01`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.9.
          * @public
          * @readonly
          */
         readonly duplex: BOOLEAN,
         /**
          * @summary `transmitDataRate`.
+         * @description
+         *
+         * Local transmitter data signalling rate (Table 13/V.59). Tag-ID
+         * `0F02`. ITU-T Rec. V.59 (11/2000) §6.8.9.
          * @public
          * @readonly
          */
         readonly transmitDataRate: V23Drate,
         /**
          * @summary `receiveDataRate`.
+         * @description
+         *
+         * Local receiver data signalling rate (Table 13/V.59). Annex A
+         * identifier is `receiveDataRate` (Tag-ID `0F03`). ITU-T Rec. V.59
+         * (11/2000) §6.8.9.
          * @public
          * @readonly
          */
         readonly receiveDataRate: V23Drate,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */

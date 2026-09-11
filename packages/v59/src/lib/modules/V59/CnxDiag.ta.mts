@@ -15,7 +15,10 @@ import { CnxDiag_Item, _decode_CnxDiag_Item, _encode_CnxDiag_Item } from "../V59
 /**
  * @summary CnxDiag
  * @description
- * 
+ *
+ * High-level connection statistics for the previous call (Tag-ID `2Cxx`). ITU-T
+ * Rec. V.59 (11/2000) §6.3, §6.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

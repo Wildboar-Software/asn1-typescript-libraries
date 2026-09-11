@@ -22,7 +22,10 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary V18Diag_Item
  * @description
- * 
+ *
+ * V.18 mode achieved on the last call, transmit power, and receive level. Mode
+ * definitions are in ITU-T V.18. ITU-T Rec. V.59 (11/2000) §6.8.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +47,42 @@ class V18Diag_Item {
     constructor (
         /**
          * @summary `modeV18`.
+         * @description
+         *
+         * V.18 operating-mode capability. Table 5/V.59: `notSupported`(0),
+         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+         * off. Tag-ID `2300`. ITU-T Rec. V.59 (11/2000) §6.8.15.
          * @public
          * @readonly
          */
         readonly modeV18: Capabilities,
         /**
          * @summary `v18used`.
+         * @description
+         *
+         * V.18 mode achieved on the last call (Table 15/V.59). Tag-ID `2301`.
+         * ITU-T Rec. V.59 (11/2000) §6.8.15.
          * @public
          * @readonly
          */
         readonly v18used: V18Diag_Item_v18used,
         /**
          * @summary `v18TxLevel`.
+         * @description
+         *
+         * V.18 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.15.
          * @public
          * @readonly
          */
         readonly v18TxLevel: TxPowerLevel,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */

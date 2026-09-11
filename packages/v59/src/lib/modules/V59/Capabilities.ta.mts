@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Capabilities
  * @description
- * 
+ *
+ * Whether a modulation or protocol mode is present and selected. Table 5/V.59:
+ * `notSupported`(0), `default`(1) preferred, `enabled`(2), `disabled`(3)
+ * supported but off. INTEGER alternative values must match the named code.
+ * ITU-T Rec. V.59 (11/2000) §6.6 Table 5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

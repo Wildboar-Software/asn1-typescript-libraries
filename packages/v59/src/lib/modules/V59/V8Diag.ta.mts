@@ -15,7 +15,10 @@ import { V8Diag_Item, _decode_V8Diag_Item, _encode_V8Diag_Item } from "../V59/V8
 /**
  * @summary V8Diag
  * @description
- * 
+ *
+ * High-level V.8 diagnostics (Tag-ID `07xx`). ITU-T Rec. V.59 (11/2000) §6.3,
+ * §6.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

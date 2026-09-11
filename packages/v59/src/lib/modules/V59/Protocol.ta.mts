@@ -15,7 +15,11 @@ import { Protocol_Item, _decode_Protocol_Item, _encode_Protocol_Item } from "../
 /**
  * @summary Protocol
  * @description
- * 
+ *
+ * High-level protocol-performance wrapper grouping error-control and
+ * compression diagnostics from the last connection. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,7 +20,10 @@ import { ErrorControl_Item_ecStatistics, _decode_ErrorControl_Item_ecStatistics,
 /**
  * @summary ErrorControl_Item
  * @description
- * 
+ *
+ * Negotiated V.42 features, frame/window sizes, and optional throughput/error
+ * counters. ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,72 +61,125 @@ class ErrorControl_Item {
     constructor (
         /**
          * @summary `protocolNegotiation`.
+         * @description
+         *
+         * Error-control protocol used (Table 18/V.59): `disabled`(0),
+         * `lapm`(1), `v42annexA`(2). Tag-ID `2F01`. ITU-T Rec. V.59 (11/2000)
+         * §6.12.
          * @public
          * @readonly
          */
         readonly protocolNegotiation: ErrorControl_Item_protocolNegotiation,
         /**
          * @summary `v42featureNegotiation`.
+         * @description
+         *
+         * V.42 feature flags (Table 19/V.59). Bit 0 is LSB when displayed
+         * (ITU-T Rec. V.59 Cor.1 (07/2001) §6.2.3). Tag-ID `2F02` (named
+         * `v42featureNegotiation` per ITU-T Rec. V.59 Cor.2 (03/2002) clause
+         * 4.3). ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly v42featureNegotiation: ErrorControl_Item_v42featureNegotiation,
         /**
          * @summary `txFrameSize`.
+         * @description
+         *
+         * Negotiated transmitter frame size in octets (1..65535 in Annex A).
+         * Tag-ID `2F03`. ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly txFrameSize: INTEGER,
         /**
          * @summary `rxFrameSize`.
+         * @description
+         *
+         * Negotiated receive frame size in octets (1..65535). Tag-ID `2F04`.
+         * ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly rxFrameSize: INTEGER,
         /**
          * @summary `txWindow`.
+         * @description
+         *
+         * Transmit window size in octets (1..65535). Tag-ID `2F05`. ITU-T Rec.
+         * V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly txWindow: INTEGER,
         /**
          * @summary `rxWindow`.
+         * @description
+         *
+         * Receive window size in octets (1..65535). Tag-ID `2F06`. ITU-T Rec.
+         * V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly rxWindow: INTEGER,
         /**
          * @summary `linkTimeout`.
+         * @description
+         *
+         * Timeouts incurred by the end of the connection (0..511). Tag-ID
+         * `2F07`. ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly linkTimeout: OPTIONAL<INTEGER>,
         /**
          * @summary `ecStatistics`.
+         * @description
+         *
+         * V.42-style frame counters similar to §3.5/V.58. ITU-T Rec. V.59
+         * (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly ecStatistics: ErrorControl_Item_ecStatistics,
         /**
          * @summary `txErrors`.
+         * @description
+         *
+         * REJ, SREJ, or similar frames received from the remote end (0..65535).
+         * Tag-ID `2F0C`. ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly txErrors: OPTIONAL<INTEGER>,
         /**
          * @summary `rxErrors`.
+         * @description
+         *
+         * Errored frames received (bad FCS, unknown address, out of sequence,
+         * etc.). Tag-ID `2F0D`. ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly rxErrors: OPTIONAL<INTEGER>,
         /**
          * @summary `txThroughput`.
+         * @description
+         *
+         * Average throughput at the input to the error-control entity, rounded,
+         * in bit/s. Annex A constrains 0..32767 (clause 6.12 prose allows a
+         * larger range; ASN.1 governs per ITU-T Rec. V.59 Cor.2 (03/2002)).
+         * Tag-ID `2F0E`. ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly txThroughput: OPTIONAL<INTEGER>,
         /**
          * @summary `rxThroughput`.
+         * @description
+         *
+         * Average receive throughput, same definition as `txThroughput`. Tag-ID
+         * `2F0F`. ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */

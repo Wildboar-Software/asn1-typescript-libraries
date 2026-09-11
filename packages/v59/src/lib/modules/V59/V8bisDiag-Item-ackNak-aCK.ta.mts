@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V8bisDiag_Item_ackNak_aCK
  * @description
- * 
+ *
+ * Table 10/V.59: `nONE`(0) no ACK, `aCK1`(1), `aCK2`(2). ITU-T Rec. V.59
+ * (11/2000) §6.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V34HdxDiag_Item_cCrate
  * @description
- * 
+ *
+ * Table 14/V.59: `t12R12`(0) 1200/1200, `t24R24`(1) 2400/2400, `t12R24`(2) Tx
+ * 1200 / Rx 2400, `t24R12`(3) Tx 2400 / Rx 1200 bit/s. ITU-T Rec. V.59
+ * (11/2000) §6.8.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +38,11 @@ enum _enum_for_V34HdxDiag_Item_cCrate {
 /**
  * @summary V34HdxDiag_Item_cCrate
  * @description
- * 
+ *
+ * Table 14/V.59: `t12R12`(0) 1200/1200, `t24R24`(1) 2400/2400, `t12R24`(2) Tx
+ * 1200 / Rx 2400, `t24R12`(3) Tx 2400 / Rx 1200 bit/s. ITU-T Rec. V.59
+ * (11/2000) §6.8.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +57,11 @@ type V34HdxDiag_Item_cCrate = _enum_for_V34HdxDiag_Item_cCrate;
 /**
  * @summary V34HdxDiag_Item_cCrate
  * @description
- * 
+ *
+ * Table 14/V.59: `t12R12`(0) 1200/1200, `t24R24`(1) 2400/2400, `t12R24`(2) Tx
+ * 1200 / Rx 2400, `t24R12`(3) Tx 2400 / Rx 1200 bit/s. ITU-T Rec. V.59
+ * (11/2000) §6.8.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +75,10 @@ const V34HdxDiag_Item_cCrate = _enum_for_V34HdxDiag_Item_cCrate;
 
 /**
  * @summary V34HdxDiag_Item_cCrate_t12R12
+ * @description
+ *
+ * Control channel 1200 bit/s both ways. Table 14/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.11.
  * @constant
  * @type {number}
  */
@@ -79,6 +95,10 @@ const t12R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t12R12; /* SHORT_N
 
 /**
  * @summary V34HdxDiag_Item_cCrate_t24R24
+ * @description
+ *
+ * Control channel 2400 bit/s both ways. Table 14/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.11.
  * @constant
  * @type {number}
  */
@@ -95,6 +115,10 @@ const t24R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t24R24; /* SHORT_N
 
 /**
  * @summary V34HdxDiag_Item_cCrate_t12R24
+ * @description
+ *
+ * Control channel Tx 1200 / Rx 2400 bit/s. Table 14/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.11.
  * @constant
  * @type {number}
  */
@@ -111,6 +135,10 @@ const t12R24: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t12R24; /* SHORT_N
 
 /**
  * @summary V34HdxDiag_Item_cCrate_t24R12
+ * @description
+ *
+ * Control channel Tx 2400 / Rx 1200 bit/s. Table 14/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.11.
  * @constant
  * @type {number}
  */

@@ -20,7 +20,10 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary V29faxDiag_Item
  * @description
- * 
+ *
+ * V.29 capability, transmit power, and receive level. ITU-T Rec. V.59 (11/2000)
+ * §6.8.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +40,32 @@ class V29faxDiag_Item {
     constructor (
         /**
          * @summary `modeV29`.
+         * @description
+         *
+         * V.29 operating-mode capability. Table 5/V.59: `notSupported`(0),
+         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+         * off. Tag-ID `1700`. ITU-T Rec. V.59 (11/2000) §6.8.13.
          * @public
          * @readonly
          */
         readonly modeV29: Capabilities,
         /**
          * @summary `v29TxLevel`.
+         * @description
+         *
+         * V.29 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.13.
          * @public
          * @readonly
          */
         readonly v29TxLevel: TxPowerLevel,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */

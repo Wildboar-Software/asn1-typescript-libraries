@@ -17,7 +17,10 @@ import { CallTerminateCode, _decode_CallTerminateCode, _encode_CallTerminateCode
 /**
  * @summary CallProgress_Item
  * @description
- * 
+ *
+ * How far call setup got and why the call ended. ITU-T Rec. V.59 (11/2000)
+ * §6.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +36,20 @@ class CallProgress_Item {
     constructor (
         /**
          * @summary `callProgressResult`.
+         * @description
+         *
+         * Result of the previous call (Table 16/V.59). Tag-ID `2E01`. ITU-T
+         * Rec. V.59 (11/2000) §6.11.
          * @public
          * @readonly
          */
         readonly callProgressResult: CallProgressRes,
         /**
          * @summary `callTerminate`.
+         * @description
+         *
+         * Reason the last call ended (Table 17/V.59 / ITU-T Rec. V.59 Cor.2
+         * (03/2002) clause 3). Tag-ID `2E02`. ITU-T Rec. V.59 (11/2000) §6.11.
          * @public
          * @readonly
          */

@@ -15,7 +15,10 @@ import { V23Diag_Item, _decode_V23Diag_Item, _encode_V23Diag_Item } from "../V59
 /**
  * @summary V23Diag
  * @description
- * 
+ *
+ * High-level V.23 diagnostics (Tag-ID `0Fxx`). ITU-T Rec. V.59 (11/2000) §6.3,
+ * §6.8.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

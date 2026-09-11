@@ -15,7 +15,10 @@ import { DTEDCE_Item, _decode_DTEDCE_Item, _encode_DTEDCE_Item } from "../V59/DT
 /**
  * @summary DTEDCE
  * @description
- * 
+ *
+ * High-level DTE/DCE interface diagnostics (Tag-ID `31xx`). ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,7 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ErrorControl_Item_ecStatistics
  * @description
- * 
+ *
+ * Optional V.42 frame counters analogous to §3.5/V.58. ITU-T Rec. V.59
+ * (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +36,40 @@ class ErrorControl_Item_ecStatistics {
     constructor (
         /**
          * @summary `framesSentAck`.
+         * @description
+         *
+         * User-data frames transmitted for which acknowledgement was received
+         * (0..65535). Tag-ID `2F08`. ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly framesSentAck: OPTIONAL<INTEGER>,
         /**
          * @summary `framesRetransmitted`.
+         * @description
+         *
+         * User-data frames retransmitted (0..65535). Tag-ID `2F09`. ITU-T Rec.
+         * V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly framesRetransmitted: OPTIONAL<INTEGER>,
         /**
          * @summary `framesReceivedAck`.
+         * @description
+         *
+         * User-data frames received for which acknowledgement was sent
+         * (0..65535). Tag-ID `2F0A`. ITU-T Rec. V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly framesReceivedAck: OPTIONAL<INTEGER>,
         /**
          * @summary `framesReceivedDiscard`.
+         * @description
+         *
+         * Frames discarded (0..65535). Tag-ID `2F0B`. ITU-T Rec. V.59 (11/2000)
+         * §6.12.
          * @public
          * @readonly
          */

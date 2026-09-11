@@ -15,7 +15,10 @@ import { V8bisDiag_Item, _decode_V8bisDiag_Item, _encode_V8bisDiag_Item } from "
 /**
  * @summary V8bisDiag
  * @description
- * 
+ *
+ * High-level V.8 bis diagnostics (Tag-ID `08xx`). ITU-T Rec. V.59 (11/2000)
+ * §6.3, §6.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

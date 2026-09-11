@@ -25,7 +25,10 @@ import { V8bisDiag_Item_ackNak, _decode_V8bisDiag_Item_ackNak, _encode_V8bisDiag
 /**
  * @summary V8bisDiag_Item
  * @description
- * 
+ *
+ * V.8 bis transaction type and MR/CR/CL/CLR/ES/ACK/NAK sequences from the
+ * previous connection. ITU-T Rec. V.59 (11/2000) §6.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,42 +67,68 @@ class V8bisDiag_Item {
     constructor (
         /**
          * @summary `v8bisTransaction`.
+         * @description
+         *
+         * V.8 bis transaction type used, INTEGER 1..13. Tag-ID `0801`. ITU-T
+         * Rec. V.59 (11/2000) §6.8.2.
          * @public
          * @readonly
          */
         readonly v8bisTransaction: INTEGER,
         /**
          * @summary `mR`.
+         * @description
+         *
+         * MR type and sequence. Tag-IDs `0802`/`0803`. ITU-T Rec. V.59
+         * (11/2000) §6.8.2.
          * @public
          * @readonly
          */
         readonly mR: V8bisDiag_Item_mR,
         /**
          * @summary `cR`.
+         * @description
+         *
+         * CR type and sequence. Tag-IDs `0804`/`0805`. ITU-T Rec. V.59
+         * (11/2000) §6.8.2.
          * @public
          * @readonly
          */
         readonly cR: V8bisDiag_Item_cR,
         /**
          * @summary `cL`.
+         * @description
+         *
+         * CL sequence. Tag-ID `0806`. ITU-T Rec. V.59 (11/2000) §6.8.2.
          * @public
          * @readonly
          */
         readonly cL: V8bisDiag_Item_cL,
         /**
          * @summary `cLR`.
+         * @description
+         *
+         * CLR sequence. Tag-ID `0807`. ITU-T Rec. V.59 (11/2000) §6.8.2.
          * @public
          * @readonly
          */
         readonly cLR: V8bisDiag_Item_cLR,
         /**
          * @summary `eS`.
+         * @description
+         *
+         * ES type and sequence. Tag-IDs `0808`/`0809`. ITU-T Rec. V.59
+         * (11/2000) §6.8.2.
          * @public
          * @readonly
          */
         readonly eS: V8bisDiag_Item_eS,
         /**
          * @summary `ackNak`.
+         * @description
+         *
+         * ACK and NAK message types. Tag-IDs `080A`/`080B`. ITU-T Rec. V.59
+         * (11/2000) §6.8.2.
          * @public
          * @readonly
          */

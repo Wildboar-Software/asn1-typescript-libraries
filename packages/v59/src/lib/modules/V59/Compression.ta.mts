@@ -15,7 +15,10 @@ import { Compression_Item, _decode_Compression_Item, _encode_Compression_Item } 
 /**
  * @summary Compression
  * @description
- * 
+ *
+ * Compression diagnostics (Tag-ID `30xx`). ITU-T Rec. V.59 (11/2000) §6.3,
+ * §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

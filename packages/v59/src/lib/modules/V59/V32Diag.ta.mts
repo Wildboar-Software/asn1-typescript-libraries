@@ -15,7 +15,10 @@ import { V32Diag_Item, _decode_V32Diag_Item, _encode_V32Diag_Item } from "../V59
 /**
  * @summary V32Diag
  * @description
- * 
+ *
+ * High-level V.32 / V.32 bis diagnostics (Tag-ID `0Dxx`). ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.8.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

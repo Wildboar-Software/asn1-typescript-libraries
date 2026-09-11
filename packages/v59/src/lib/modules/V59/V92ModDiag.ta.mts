@@ -15,7 +15,11 @@ import { V92ModDiag_Item, _decode_V92ModDiag_Item, _encode_V92ModDiag_Item } fro
 /**
  * @summary V92ModDiag
  * @description
- * 
+ *
+ * High-level V.92 diagnostics (Tag-ID `0Bxx`): modulation, short Phase 1,
+ * call-waiting detect, and modem-on-hold. ITU-T Rec. V.59 (11/2000) §6.3,
+ * §6.8.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

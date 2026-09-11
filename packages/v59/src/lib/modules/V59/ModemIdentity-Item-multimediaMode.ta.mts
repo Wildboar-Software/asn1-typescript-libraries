@@ -15,7 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ModemIdentity_Item_multimediaMode
  * @description
- * 
+ *
+ * Multimedia capability BIT STRING (Table 4/V.59). Bit 0 is LSB when displayed
+ * (ITU-T Rec. V.59 Cor.1 (07/2001) §6.2.3). ITU-T Rec. V.59 (11/2000) §6.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,9 @@ type ModemIdentity_Item_multimediaMode = BIT_STRING;
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_dataMode
+ * @description
+ *
+ * Bit 0: Data mode. Table 4/V.59. ITU-T Rec. V.59 (11/2000) §6.5.
  * @constant
  */
 export
@@ -43,6 +49,10 @@ const dataMode: number = ModemIdentity_Item_multimediaMode_dataMode; /* SHORT_NA
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_faxT30
+ * @description
+ *
+ * Bit 1: Facsimile per ITU-T T.30. Table 4/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.5.
  * @constant
  */
 export
@@ -57,6 +67,10 @@ const faxT30: number = ModemIdentity_Item_multimediaMode_faxT30; /* SHORT_NAMED_
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_faxT30C
+ * @description
+ *
+ * Bit 2: Facsimile per Annex C/T.30. Table 4/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.5.
  * @constant
  */
 export
@@ -71,6 +85,10 @@ const faxT30C: number = ModemIdentity_Item_multimediaMode_faxT30C; /* SHORT_NAME
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_fAXT30F
+ * @description
+ *
+ * Bit 3: Facsimile per Annex F/T.30. Table 4/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.5.
  * @constant
  */
 export
@@ -85,6 +103,10 @@ const fAXT30F: number = ModemIdentity_Item_multimediaMode_fAXT30F; /* SHORT_NAME
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_voiceV253
+ * @description
+ *
+ * Bit 4: Voice function and control per ITU-T V.253. Table 4/V.59. ITU-T Rec.
+ * V.59 (11/2000) §6.5.
  * @constant
  */
 export
@@ -99,6 +121,10 @@ const voiceV253: number = ModemIdentity_Item_multimediaMode_voiceV253; /* SHORT_
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_sVDV70
+ * @description
+ *
+ * Bit 5: Simultaneous voice and data per ITU-T V.70. Table 4/V.59. ITU-T Rec.
+ * V.59 (11/2000) §6.5.
  * @constant
  */
 export
@@ -113,6 +139,10 @@ const sVDV70: number = ModemIdentity_Item_multimediaMode_sVDV70; /* SHORT_NAMED_
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_sVDV61
+ * @description
+ *
+ * Bit 6: Simultaneous voice and data per ITU-T V.61. Table 4/V.59. ITU-T Rec.
+ * V.59 (11/2000) §6.5.
  * @constant
  */
 export
@@ -127,6 +157,10 @@ const sVDV61: number = ModemIdentity_Item_multimediaMode_sVDV61; /* SHORT_NAMED_
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_vidTelH324
+ * @description
+ *
+ * Bit 7: Video telephony per ITU-T H.324. Table 4/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.5.
  * @constant
  */
 export
@@ -141,6 +175,10 @@ const vidTelH324: number = ModemIdentity_Item_multimediaMode_vidTelH324; /* SHOR
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_v80other
+ * @description
+ *
+ * Bit 8: Other V.80-type functionality. Table 4/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.5.
  * @constant
  */
 export
@@ -155,6 +193,9 @@ const v80other: number = ModemIdentity_Item_multimediaMode_v80other; /* SHORT_NA
 
 /**
  * @summary ModemIdentity_Item_multimediaMode_v18Text
+ * @description
+ *
+ * Bit 9: V.18 text telephone. Table 4/V.59. ITU-T Rec. V.59 (11/2000) §6.5.
  * @constant
  */
 export

@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V8bisDiag_Item_eS_eSType
  * @description
- * 
+ *
+ * Table 9/V.59: `nONE`(0) no ES, `i`(1) ESi, `r`(2) ESr. ITU-T Rec. V.59
+ * (11/2000) §6.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

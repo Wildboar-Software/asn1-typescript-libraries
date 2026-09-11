@@ -16,7 +16,10 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary TxPowerLevel_Item
  * @description
- * 
+ *
+ * Configured and estimated transmit power for one modulation. ITU-T Rec. V.59
+ * (11/2000) §6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +36,32 @@ class TxPowerLevel_Item {
     constructor (
         /**
          * @summary `initialTxPower`.
+         * @description
+         *
+         * Initial transmit power as configured, including units (e.g. `-9dBm`,
+         * `-80dBrn`). IA5 `simpleText` (§6.2.1). Tag-ID `45`. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly initialTxPower: V59String,
         /**
          * @summary `txPowerDrop`.
+         * @description
+         *
+         * Transmit-power reduction if used by the modulation; NULL/absent if
+         * not. IA5 `simpleText` (§6.2.1). Tag-ID `46`. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly txPowerDrop: OPTIONAL<V59String>,
         /**
          * @summary `txPower`.
+         * @description
+         *
+         * Estimated transmit power. IA5 `simpleText` (§6.2.1). Tag-ID `47`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */

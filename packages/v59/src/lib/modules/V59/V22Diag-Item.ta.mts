@@ -20,7 +20,10 @@ import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59
 /**
  * @summary V22Diag_Item
  * @description
- * 
+ *
+ * V.22/V.22 bis data-rate history, two-bit rate sequence, and line estimates.
+ * ITU-T Rec. V.59 (11/2000) §6.8.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,42 +44,78 @@ class V22Diag_Item {
     constructor (
         /**
          * @summary `modeV22B`.
+         * @description
+         *
+         * V.22 or V.22 bis operating-mode capability. Table 5/V.59:
+         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+         * `disabled`(3) supported but off. Tag-ID `0E00`. ITU-T Rec. V.59
+         * (11/2000) §6.8.8.
          * @public
          * @readonly
          */
         readonly modeV22B: Capabilities,
         /**
          * @summary `dataRateHistory`.
+         * @description
+         *
+         * Data-rate history (uses common Tag-ID `4C`). IA5 `simpleText`
+         * (§6.2.1). History lists oldest event first, most recent last
+         * (§6.2.6). ITU-T Rec. V.59 (11/2000) §6.4, §6.8.8.
          * @public
          * @readonly
          */
         readonly dataRateHistory: V59String,
         /**
          * @summary `v22TxLevel`.
+         * @description
+         *
+         * V.22 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.8.
          * @public
          * @readonly
          */
         readonly v22TxLevel: TxPowerLevel,
         /**
          * @summary `v22RateSeq`.
+         * @description
+         *
+         * Result of the two-bit V.22 bis rate sequence. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. Tag-ID
+         * `0E01`. ITU-T Rec. V.59 (11/2000) §6.8.8.
          * @public
          * @readonly
          */
         readonly v22RateSeq: V59String,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxLevelEstimate: OPTIONAL<V59String>,
         /**
          * @summary `noiseEstimate`.
+         * @description
+         *
+         * Noise level with units (e.g. `-55dBm`, `35dBrn`). IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4F`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly noiseEstimate: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
+         * @description
+         *
+         * Receiver signal quality at start and, if available, near end of call.
+         * Fractional form 1.0 best / 0.0 worst (e.g. `0.445;0.312`), or a
+         * proprietary integer as text. IA5 `simpleText` (§6.2.1). Tag-ID `50`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */

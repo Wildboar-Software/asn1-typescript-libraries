@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V59String
  * @description
- * 
+ *
+ * Default IA5 diagnostic string (1..40 octets) unless a field specifies another
+ * size. Presentation in clause 6 is `simpleText` or hex `dataSequence`. ITU-T
+ * Rec. V.59 (11/2000) §6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

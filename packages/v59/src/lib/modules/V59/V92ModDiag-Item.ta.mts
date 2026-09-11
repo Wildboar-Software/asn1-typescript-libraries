@@ -27,7 +27,10 @@ import { V92ModDiag_Item_lastMOHaction, _enum_for_V92ModDiag_Item_lastMOHaction,
 /**
  * @summary V92ModDiag_Item
  * @description
- * 
+ *
+ * V.92 sequences, PCM codec laws, short Phase 1 (QC*), and modem-on-hold (MH*)
+ * results. ITU-T Rec. V.59 (11/2000) §6.8.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,270 +92,513 @@ class V92ModDiag_Item {
     constructor (
         /**
          * @summary `modeV92`.
+         * @description
+         *
+         * V.92 operating-mode capability. Table 5/V.59: `notSupported`(0),
+         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+         * off. Tag-ID `0B00`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly modeV92: Capabilities,
         /**
          * @summary `iNFO0d`.
+         * @description
+         *
+         * INFO0 sequence (Annex A name `iNFO0d`; §6.8.5 table lists
+         * `iNFO0_TX`). Hex `dataSequence` (§6.2.2): first bit in time is the
+         * LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `0B41`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.5.
          * @public
          * @readonly
          */
         readonly iNFO0d: V59String,
         /**
          * @summary `iNFO0a`.
+         * @description
+         *
+         * INFO0 sequence (Annex A name `iNFO0a`; §6.8.5 table lists
+         * `iNFO0_RX`). Hex `dataSequence` (§6.2.2): first bit in time is the
+         * LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `0B42`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.5.
          * @public
          * @readonly
          */
         readonly iNFO0a: V59String,
         /**
          * @summary `iNFO1d`.
+         * @description
+         *
+         * INFO1d when in V.92, depending on APCM or DPCM. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. Tag-ID
+         * `0B01`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly iNFO1d: V59String,
         /**
          * @summary `iNFO1a_US`.
+         * @description
+         *
+         * INFO1a when PCM encoding was selected for upstream, depending on APCM
+         * or DPCM. Hex `dataSequence` (§6.2.2): first bit in time is the LSB of
+         * each hex word; omit start/stop/fill bits and CRCs; `;` delimits N-bit
+         * words. Tag-ID `0B02`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly iNFO1a_US: V59String,
         /**
          * @summary `iNFO1a_SP2`.
+         * @description
+         *
+         * INFO1a when Short Phase 2 was used, depending on APCM or DPCM. Hex
+         * `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
+         * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
+         * Tag-ID `0B03`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly iNFO1a_SP2: V59String,
         /**
          * @summary `jA`.
+         * @description
+         *
+         * JA sequence in V.92, depending on APCM or DPCM. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. Tag-ID
+         * `0B04`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly jA: V59String,
         /**
          * @summary `jD`.
+         * @description
+         *
+         * JD sequence in V.92, depending on APCM or DPCM. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. Tag-ID
+         * `0B05`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly jD: V59String,
         /**
          * @summary `jDP`.
+         * @description
+         *
+         * JDp sequence in V.92. Hex `dataSequence` (§6.2.2): first bit in time
+         * is the LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `0B06`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.5.
          * @public
          * @readonly
          */
         readonly jDP: V59String,
         /**
          * @summary `cP`.
+         * @description
+         *
+         * Last CP sequence. Hex `dataSequence` (§6.2.2): first bit in time is
+         * the LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `0B54` (ITU-T Rec. V.59 Cor.1 (07/2001)
+         * clause 4; the 11/2000 table omitted the last digit). ITU-T Rec. V.59
+         * (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly cP: V59String,
         /**
          * @summary `v92TxLevel`.
+         * @description
+         *
+         * V.92 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.5.
          * @public
          * @readonly
          */
         readonly v92TxLevel: TxPowerLevel,
         /**
          * @summary `v92SymbolRate`.
+         * @description
+         *
+         * V.92 symbol rate (Table 1/V.59). Tag-ID `0B48`. ITU-T Rec. V.59
+         * (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly v92SymbolRate: OPTIONAL<SymbolRate>,
         /**
          * @summary `txDataHistory`.
+         * @description
+         *
+         * Transmitter primary data rates used. Example:
+         * `45333;44000;33333;33600`. IA5 `simpleText` (§6.2.1). History lists
+         * oldest event first, most recent last (§6.2.6). Tag-ID `4C`. ITU-T
+         * Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly txDataHistory: V59String,
         /**
          * @summary `rxDataHistory`.
+         * @description
+         *
+         * Receiver primary data rates used (same format as `txDataHistory`).
+         * History lists oldest event first, most recent last (§6.2.6). Tag-ID
+         * `4D`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxDataHistory: V59String,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxLevelEstimate: OPTIONAL<V59String>,
         /**
          * @summary `noiseEstimate`.
+         * @description
+         *
+         * Noise level with units (e.g. `-55dBm`, `35dBrn`). IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4F`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly noiseEstimate: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
+         * @description
+         *
+         * Receiver signal quality at start and, if available, near end of call.
+         * Fractional form 1.0 best / 0.0 worst (e.g. `0.445;0.312`), or a
+         * proprietary integer as text. IA5 `simpleText` (§6.2.1). Tag-ID `50`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxSignalQuality: OPTIONAL<V59String>,
         /**
          * @summary `nearEchoEstimate`.
+         * @description
+         *
+         * Near-end echo at start and, if available, end of call. Units in the
+         * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `51`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly nearEchoEstimate: OPTIONAL<V59String>,
         /**
          * @summary `farEchoEstimate`.
+         * @description
+         *
+         * Far-end echo at start and, if available, end of call. Units in the
+         * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `52`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly farEchoEstimate: OPTIONAL<V59String>,
         /**
          * @summary `roundTripDelay`.
+         * @description
+         *
+         * Round-trip delay with units (`25ms`, `0.025s`, or `166T` where T is
+         * symbol periods). IA5 `simpleText` (§6.2.1). Tag-ID `53`. ITU-T Rec.
+         * V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly roundTripDelay: OPTIONAL<V59String>,
         /**
          * @summary `rBSpattern`.
+         * @description
+         *
+         * Robbed-bit signalling pattern: packed 6 bits, `1` = robbed. Cyclic;
+         * not aligned to network framing. Bit 0 is LSB when displayed (ITU-T
+         * Rec. V.59 Cor.1 (07/2001) §6.2.3). Table 3/V.59. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rBSpattern: OPTIONAL<RobBitPatt>,
         /**
          * @summary `digitalPadLoss`.
+         * @description
+         *
+         * Estimated downstream digital attenuation, in dB or as a decimal
+         * fraction (e.g. `3dB`, `0.5011`). IA5 `simpleText` (§6.2.1). Tag-ID
+         * `56`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly digitalPadLoss: OPTIONAL<V59String>,
         /**
          * @summary `localCodecLaw`.
+         * @description
+         *
+         * Codec companding: `TRUE` = A-law, `FALSE` = µ-law. ITU-T Rec. V.59
+         * (11/2000) §6.8.4.
          * @public
          * @readonly
          */
         readonly localCodecLaw: OPTIONAL<BOOLEAN>,
         /**
          * @summary `remoteCodecLaw`.
+         * @description
+         *
+         * Remote transmitter codec: `TRUE` = A-law, `FALSE` = µ-law. ITU-T Rec.
+         * V.59 (11/2000) §6.8.4.
          * @public
          * @readonly
          */
         readonly remoteCodecLaw: OPTIONAL<BOOLEAN>,
         /**
          * @summary `sP1Enable`.
+         * @description
+         *
+         * V.92 short Phase 1 procedures enabled. Tag-ID `0B10`. ITU-T Rec. V.59
+         * (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly sP1Enable: BOOLEAN,
         /**
          * @summary `lastCallSP1`.
+         * @description
+         *
+         * Previous connection used V.92 short Phase 1. Tag-ID `0B11`. ITU-T
+         * Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly lastCallSP1: BOOLEAN,
         /**
          * @summary `qC1a`.
+         * @description
+         *
+         * QC1A sequence if short Phase 1 is enabled, depending on APCM or DPCM.
+         * Hex `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
+         * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
+         * SIZE 1..10. Tag-ID `0B12`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly qC1a: IA5String,
         /**
          * @summary `qC1d`.
+         * @description
+         *
+         * QC1d sequence if short Phase 1 is enabled, depending on APCM or DPCM.
+         * Hex `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
+         * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
+         * SIZE 1..10. Tag-ID `0B13`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly qC1d: IA5String,
         /**
          * @summary `qC2a`.
+         * @description
+         *
+         * QC2A sequence if short Phase 1 is enabled. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. SIZE 1..2.
+         * Tag-ID `0B14`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly qC2a: IA5String,
         /**
          * @summary `qC2d`.
+         * @description
+         *
+         * QC2d sequence if short Phase 1 is enabled. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. SIZE 1..2.
+         * Tag-ID `0B15`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly qC2d: IA5String,
         /**
          * @summary `qCA1a`.
+         * @description
+         *
+         * QCA1a sequence if short Phase 1 is enabled. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. SIZE 1..10.
+         * Tag-ID `0B16`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly qCA1a: IA5String,
         /**
          * @summary `qCA1d`.
+         * @description
+         *
+         * QCA1d sequence if short Phase 1 is enabled. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. SIZE 1..10.
+         * Tag-ID `0B17`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly qCA1d: IA5String,
         /**
          * @summary `qCA2a`.
+         * @description
+         *
+         * QCA2a sequence if short Phase 1 is enabled. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. SIZE 1..2.
+         * Tag-ID `0B18`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly qCA2a: IA5String,
         /**
          * @summary `qCA2d`.
+         * @description
+         *
+         * QCA2d sequence if short Phase 1 is enabled. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. SIZE 1..2.
+         * Tag-ID `0B19`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly qCA2d: IA5String,
         /**
          * @summary `cWDEnable`.
+         * @description
+         *
+         * Call-waiting detect enabled. Tag-ID `0B20`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.5.
          * @public
          * @readonly
          */
         readonly cWDEnable: BOOLEAN,
         /**
          * @summary `mOHEnable`.
+         * @description
+         *
+         * Modem-on-hold procedures enabled (V.92). Tag-ID `0B21`. ITU-T Rec.
+         * V.59 (11/2000) §3.5, §6.8.5.
          * @public
          * @readonly
          */
         readonly mOHEnable: BOOLEAN,
         /**
          * @summary `lastMOHaction`.
+         * @description
+         *
+         * Result of the last modem-on-hold transaction if MoH is enabled (Table
+         * 12/V.59). Tag-ID `0B22`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly lastMOHaction: V92ModDiag_Item_lastMOHaction,
         /**
          * @summary `mohTimeout`.
+         * @description
+         *
+         * Time allocated by the digital PCM modem for modem-on-hold. IA5
+         * `simpleText` (§6.2.1). Tag-ID `0B23`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.5.
          * @public
          * @readonly
          */
         readonly mohTimeout: V59String,
         /**
          * @summary `lastMOHduration`.
+         * @description
+         *
+         * Duration of the last on-hold occurrence. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `0B24`. ITU-T Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly lastMOHduration: V59String,
         /**
          * @summary `mHreq`.
+         * @description
+         *
+         * MHreq sequence if MoH is enabled. Hex `dataSequence` (§6.2.2): first
+         * bit in time is the LSB of each hex word; omit start/stop/fill bits
+         * and CRCs; `;` delimits N-bit words. SIZE 1..5. Tag-ID `0B25`. ITU-T
+         * Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly mHreq: IA5String,
         /**
          * @summary `mHack`.
+         * @description
+         *
+         * MHack sequence if MoH is enabled. Hex `dataSequence` (§6.2.2): first
+         * bit in time is the LSB of each hex word; omit start/stop/fill bits
+         * and CRCs; `;` delimits N-bit words. SIZE 1..5. Tag-ID `0B26`. ITU-T
+         * Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly mHack: IA5String,
         /**
          * @summary `mHnak`.
+         * @description
+         *
+         * MHnak sequence if MoH is enabled. Hex `dataSequence` (§6.2.2): first
+         * bit in time is the LSB of each hex word; omit start/stop/fill bits
+         * and CRCs; `;` delimits N-bit words. SIZE 1..5. Tag-ID `0B27`. ITU-T
+         * Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly mHnak: IA5String,
         /**
          * @summary `mHcld`.
+         * @description
+         *
+         * MHcld sequence if MoH is enabled. Hex `dataSequence` (§6.2.2): first
+         * bit in time is the LSB of each hex word; omit start/stop/fill bits
+         * and CRCs; `;` delimits N-bit words. SIZE 1..5. Tag-ID `0B28`. ITU-T
+         * Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly mHcld: IA5String,
         /**
          * @summary `mHcda`.
+         * @description
+         *
+         * MHcda sequence if MoH is enabled. Hex `dataSequence` (§6.2.2): first
+         * bit in time is the LSB of each hex word; omit start/stop/fill bits
+         * and CRCs; `;` delimits N-bit words. SIZE 1..5. Tag-ID `0B29`. ITU-T
+         * Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */
         readonly mHcda: IA5String,
         /**
          * @summary `mHfrr`.
+         * @description
+         *
+         * MHFrr sequence if MoH is enabled. Hex `dataSequence` (§6.2.2): first
+         * bit in time is the LSB of each hex word; omit start/stop/fill bits
+         * and CRCs; `;` delimits N-bit words. SIZE 1..5. Tag-ID `0B2A`. ITU-T
+         * Rec. V.59 (11/2000) §6.8.5.
          * @public
          * @readonly
          */

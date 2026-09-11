@@ -20,7 +20,10 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary V32Diag_Item
  * @description
- * 
+ *
+ * V.32/V.32 bis rate sequences, data-rate history, and line estimates. ITU-T
+ * Rec. V.59 (11/2000) §6.8.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,72 +49,135 @@ class V32Diag_Item {
     constructor (
         /**
          * @summary `modeV32B`.
+         * @description
+         *
+         * V.32 or V.32 bis operating-mode capability. Table 5/V.59:
+         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+         * `disabled`(3) supported but off. Tag-ID `0D00`. ITU-T Rec. V.59
+         * (11/2000) §6.8.7.
          * @public
          * @readonly
          */
         readonly modeV32B: Capabilities,
         /**
          * @summary `v32TxLevel`.
+         * @description
+         *
+         * V.32 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.7.
          * @public
          * @readonly
          */
         readonly v32TxLevel: TxPowerLevel,
         /**
          * @summary `v32txRateSeq`.
+         * @description
+         *
+         * Rate sequence transmitted. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Tag-ID `0D01`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.7.
          * @public
          * @readonly
          */
         readonly v32txRateSeq: V59String,
         /**
          * @summary `v32rxRateSeq`.
+         * @description
+         *
+         * Rate sequence received. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Tag-ID `0D02`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.7.
          * @public
          * @readonly
          */
         readonly v32rxRateSeq: V59String,
         /**
          * @summary `txDataHistory`.
+         * @description
+         *
+         * Transmitter primary data rates used. Example:
+         * `45333;44000;33333;33600`. IA5 `simpleText` (§6.2.1). History lists
+         * oldest event first, most recent last (§6.2.6). Tag-ID `4C`. ITU-T
+         * Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly txDataHistory: V59String,
         /**
          * @summary `rxDataHistory`.
+         * @description
+         *
+         * Receiver primary data rates used (same format as `txDataHistory`).
+         * History lists oldest event first, most recent last (§6.2.6). Tag-ID
+         * `4D`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxDataHistory: V59String,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxLevelEstimate: OPTIONAL<V59String>,
         /**
          * @summary `noiseEstimate`.
+         * @description
+         *
+         * Noise level with units (e.g. `-55dBm`, `35dBrn`). IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4F`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly noiseEstimate: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
+         * @description
+         *
+         * Receiver signal quality at start and, if available, near end of call.
+         * Fractional form 1.0 best / 0.0 worst (e.g. `0.445;0.312`), or a
+         * proprietary integer as text. IA5 `simpleText` (§6.2.1). Tag-ID `50`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxSignalQuality: OPTIONAL<V59String>,
         /**
          * @summary `nearEchoEstimate`.
+         * @description
+         *
+         * Near-end echo at start and, if available, end of call. Units in the
+         * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `51`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly nearEchoEstimate: OPTIONAL<V59String>,
         /**
          * @summary `farEchoEstimate`.
+         * @description
+         *
+         * Far-end echo at start and, if available, end of call. Units in the
+         * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `52`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly farEchoEstimate: OPTIONAL<V59String>,
         /**
          * @summary `roundTripDelay`.
+         * @description
+         *
+         * Round-trip delay with units (`25ms`, `0.025s`, or `166T` where T is
+         * symbol periods). IA5 `simpleText` (§6.2.1). Tag-ID `53`. ITU-T Rec.
+         * V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */

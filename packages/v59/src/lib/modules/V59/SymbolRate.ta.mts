@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SymbolRate
  * @description
- * 
+ *
+ * Symbol rate used on a connection (Table 1/V.59). `sR8000` means PCM encoding
+ * in that direction. Annex A codes (ASN.1 governs per ITU-T Rec. V.59 Cor.2
+ * (03/2002)): 8000→0, 3429→1, 3200→2, 3000→3, 2800→4, 2743→5, 2400→6, 1600→7,
+ * 1200→8, 600→9. ITU-T Rec. V.59 (11/2000) §6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

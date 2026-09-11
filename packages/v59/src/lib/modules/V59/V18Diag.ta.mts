@@ -15,7 +15,10 @@ import { V18Diag_Item, _decode_V18Diag_Item, _encode_V18Diag_Item } from "../V59
 /**
  * @summary V18Diag
  * @description
- * 
+ *
+ * High-level V.18 text-telephone diagnostics (Tag-ID `23xx`). ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.8.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,7 +16,9 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary V8bisDiag_Item_eS
  * @description
- * 
+ *
+ * ES type and exchanged sequence. ITU-T Rec. V.59 (11/2000) §6.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +36,22 @@ class V8bisDiag_Item_eS {
     constructor (
         /**
          * @summary `eSType`.
+         * @description
+         *
+         * ES type (Table 9/V.59). Tag-ID `0808`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.2.
          * @public
          * @readonly
          */
         readonly eSType: V8bisDiag_Item_eS_eSType,
         /**
          * @summary `eSSequence`.
+         * @description
+         *
+         * ES sequence transmitted or received. Hex `dataSequence` (§6.2.2):
+         * first bit in time is the LSB of each hex word; omit start/stop/fill
+         * bits and CRCs; `;` delimits N-bit words. Tag-ID `0809`. ITU-T Rec.
+         * V.59 (11/2000) §6.8.2.
          * @public
          * @readonly
          */

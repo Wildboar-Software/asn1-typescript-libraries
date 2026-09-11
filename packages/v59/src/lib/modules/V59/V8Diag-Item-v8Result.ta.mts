@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V8Diag_Item_v8Result
  * @description
- * 
+ *
+ * Table 6/V.59: `v8ComNeg`(0) common mode negotiated, `v8NoComNeg`(1) no common
+ * mode, `v8NoNegAuto`(2) no V.8; modem auto-moded. ITU-T Rec. V.59 (11/2000)
+ * §6.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,7 +37,11 @@ enum _enum_for_V8Diag_Item_v8Result {
 /**
  * @summary V8Diag_Item_v8Result
  * @description
- * 
+ *
+ * Table 6/V.59: `v8ComNeg`(0) common mode negotiated, `v8NoComNeg`(1) no common
+ * mode, `v8NoNegAuto`(2) no V.8; modem auto-moded. ITU-T Rec. V.59 (11/2000)
+ * §6.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +56,11 @@ type V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
 /**
  * @summary V8Diag_Item_v8Result
  * @description
- * 
+ *
+ * Table 6/V.59: `v8ComNeg`(0) common mode negotiated, `v8NoComNeg`(1) no common
+ * mode, `v8NoNegAuto`(2) no V.8; modem auto-moded. ITU-T Rec. V.59 (11/2000)
+ * §6.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,6 +74,9 @@ const V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
 
 /**
  * @summary V8Diag_Item_v8Result_v8ComNeg
+ * @description
+ *
+ * Common mode negotiated. Table 6/V.59. ITU-T Rec. V.59 (11/2000) §6.8.1.
  * @constant
  * @type {number}
  */
@@ -78,6 +93,9 @@ const v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8ComNeg; /* SHORT_N
 
 /**
  * @summary V8Diag_Item_v8Result_v8NoComNeg
+ * @description
+ *
+ * No common mode negotiated. Table 6/V.59. ITU-T Rec. V.59 (11/2000) §6.8.1.
  * @constant
  * @type {number}
  */
@@ -94,6 +112,10 @@ const v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoComNeg; /* SHO
 
 /**
  * @summary V8Diag_Item_v8Result_v8NoNegAuto
+ * @description
+ *
+ * No V.8 negotiation; modem auto-moded. Table 6/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.8.1.
  * @constant
  * @type {number}
  */

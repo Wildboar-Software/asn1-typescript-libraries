@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Compression_Item_v42bisCompressionActive
  * @description
- * 
+ *
+ * V.42 bis P0 (Table 21/V.59): `none`(0) not selected, `initOnly`(1)
+ * initiator→responder only, `respOnly`(2) responder→initiator only, `both`(3)
+ * both directions. ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +38,11 @@ enum _enum_for_Compression_Item_v42bisCompressionActive {
 /**
  * @summary Compression_Item_v42bisCompressionActive
  * @description
- * 
+ *
+ * V.42 bis P0 (Table 21/V.59): `none`(0) not selected, `initOnly`(1)
+ * initiator→responder only, `respOnly`(2) responder→initiator only, `both`(3)
+ * both directions. ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +57,11 @@ type Compression_Item_v42bisCompressionActive = _enum_for_Compression_Item_v42bi
 /**
  * @summary Compression_Item_v42bisCompressionActive
  * @description
- * 
+ *
+ * V.42 bis P0 (Table 21/V.59): `none`(0) not selected, `initOnly`(1)
+ * initiator→responder only, `respOnly`(2) responder→initiator only, `both`(3)
+ * both directions. ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +75,9 @@ const Compression_Item_v42bisCompressionActive = _enum_for_Compression_Item_v42b
 
 /**
  * @summary Compression_Item_v42bisCompressionActive_none
+ * @description
+ *
+ * V.42 bis not selected. Table 21/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -79,6 +94,10 @@ const none: Compression_Item_v42bisCompressionActive = Compression_Item_v42bisCo
 
 /**
  * @summary Compression_Item_v42bisCompressionActive_initOnly
+ * @description
+ *
+ * V.42 bis initiator→responder only. Table 21/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
  * @constant
  * @type {number}
  */
@@ -95,6 +114,10 @@ const initOnly: Compression_Item_v42bisCompressionActive = Compression_Item_v42b
 
 /**
  * @summary Compression_Item_v42bisCompressionActive_respOnly
+ * @description
+ *
+ * V.42 bis responder→initiator only. Table 21/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
  * @constant
  * @type {number}
  */
@@ -111,6 +134,9 @@ const respOnly: Compression_Item_v42bisCompressionActive = Compression_Item_v42b
 
 /**
  * @summary Compression_Item_v42bisCompressionActive_both
+ * @description
+ *
+ * V.42 bis both directions. Table 21/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */

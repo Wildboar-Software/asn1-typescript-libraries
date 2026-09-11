@@ -15,7 +15,10 @@ import { CallProgress_Item, _decode_CallProgress_Item, _encode_CallProgress_Item
 /**
  * @summary CallProgress
  * @description
- * 
+ *
+ * High-level previous-call progress and termination (Tag-ID `2Exx`). ITU-T Rec.
+ * V.59 (11/2000) §6.3, §6.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

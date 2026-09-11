@@ -15,7 +15,10 @@ import { V29faxDiag_Item, _decode_V29faxDiag_Item, _encode_V29faxDiag_Item } fro
 /**
  * @summary V29faxDiag
  * @description
- * 
+ *
+ * High-level V.29 facsimile diagnostics (Tag-ID `17xx`). ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.8.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

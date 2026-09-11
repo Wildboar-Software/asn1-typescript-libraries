@@ -17,7 +17,10 @@ import { V8Diag_Item_v8Result, _enum_for_V8Diag_Item_v8Result, _decode_V8Diag_It
 /**
  * @summary V8Diag_Item
  * @description
- * 
+ *
+ * CI, CM, JM exchanged sequences and V.8 negotiation result. ITU-T Rec. V.59
+ * (11/2000) §6.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +38,46 @@ class V8Diag_Item {
     constructor (
         /**
          * @summary `ci`.
+         * @description
+         *
+         * CI sequence: transmitted if calling, received if answering. Hex
+         * `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
+         * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
+         * Tag-ID `0701`. ITU-T Rec. V.59 (11/2000) §6.8.1.
          * @public
          * @readonly
          */
         readonly ci: V59String,
         /**
          * @summary `cm`.
+         * @description
+         *
+         * CM sequence: transmitted if calling, received if answering. Hex
+         * `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
+         * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
+         * Tag-ID `0702`. ITU-T Rec. V.59 (11/2000) §6.8.1.
          * @public
          * @readonly
          */
         readonly cm: V59String,
         /**
          * @summary `jm`.
+         * @description
+         *
+         * JM sequence: transmitted if answering, received if calling. Hex
+         * `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
+         * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
+         * Tag-ID `0703`. ITU-T Rec. V.59 (11/2000) §6.8.1.
          * @public
          * @readonly
          */
         readonly jm: V59String,
         /**
          * @summary `v8Result`.
+         * @description
+         *
+         * V.8 negotiation result (Table 6/V.59). Tag-ID `0704`. ITU-T Rec. V.59
+         * (11/2000) §6.8.1.
          * @public
          * @readonly
          */

@@ -15,7 +15,11 @@ import { V70Diag_Item, _decode_V70Diag_Item, _encode_V70Diag_Item } from "../V59
 /**
  * @summary V70Diag
  * @description
- * 
+ *
+ * High-level V.70 DSVD diagnostics (Tag-ID `24xx`). This object class is for
+ * further study; Annex A is an extension-only SEQUENCE. ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.8.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CallProgressRes
  * @description
- * 
+ *
+ * Result of the previous call (Table 16/V.59). Codes: `noPrevCall`(0),
+ * `noDialTone`(1), `noRingBack`(2), `reOrderTone`(3), `busyTone`(4),
+ * `voiceDetected`(5), `aNSdetected`(6) V.25 ANS, `aNSamDetected`(7) V.8 ANSam,
+ * `v8bisDetected`(8), `txpDetected`(9) text telephone, `unKnownSig`(20),
+ * `connected`(40). ITU-T Rec. V.59 (11/2000) §6.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
