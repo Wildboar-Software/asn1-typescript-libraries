@@ -1,21 +1,42 @@
 {
-  "name": "@wildboar/mms",
-  "version": "0.0.1",
-  "private": true,
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "development": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
+    "name": "@wildboar/mms",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/acse": "npm:@jsr/wildboar__acse@2.x.x"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./ACSE-1": "./src/lib/modules/ACSE-1/index.mts",
+        "./ISO-9506-MMS-1": "./src/lib/modules/ISO-9506-MMS-1/index.mts",
+        "./ISO-9506-MMS-1A": "./src/lib/modules/ISO-9506-MMS-1A/index.mts",
+        "./MMS-Environment-1": "./src/lib/modules/MMS-Environment-1/index.mts",
+        "./MMS-Object-Module-1": "./src/lib/modules/MMS-Object-Module-1/index.mts",
+        "./MMS-SCI-Module-1": "./src/lib/modules/MMS-SCI-Module-1/index.mts"
     }
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  }
 }
