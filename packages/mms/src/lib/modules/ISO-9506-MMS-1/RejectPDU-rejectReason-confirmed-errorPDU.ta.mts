@@ -113,14 +113,7 @@ const RejectPDU_rejectReason_confirmed_errorPDU_value_out_of_range: RejectPDU_re
  */
 export
 const value_out_of_range: RejectPDU_rejectReason_confirmed_errorPDU = RejectPDU_rejectReason_confirmed_errorPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RejectPDU_rejectReason_confirmed_errorPDU = (el: _Element): RejectPDU_rejectReason_confirmed_errorPDU => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 4) {
-        throw new ASN1OverflowError("RejectPDU_rejectReason_confirmed_errorPDU violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_RejectPDU_rejectReason_confirmed_errorPDU = $._decodeInteger;
 export const _encode_RejectPDU_rejectReason_confirmed_errorPDU = $._encodeInteger;
 
 

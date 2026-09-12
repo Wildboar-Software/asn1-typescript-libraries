@@ -373,13 +373,7 @@ const AdditionalSupportOptions_alterEventConditionListMonitoring: number = 22; /
  */
 export
 const alterEventConditionListMonitoring: number = AdditionalSupportOptions_alterEventConditionListMonitoring; /* SHORT_NAMED_BIT */
-export const _decode_AdditionalSupportOptions = (el: _Element): AdditionalSupportOptions => {
-    const value = $._decodeBitString(el);
-    if (value.length !== 23) {
-        throw new ASN1SizeError("AdditionalSupportOptions violates SIZE constraint");
-    }
-    return value;
-};
+export const _decode_AdditionalSupportOptions = $._decodeBitString;
 export const _encode_AdditionalSupportOptions = $._encodeBitString;
 
 

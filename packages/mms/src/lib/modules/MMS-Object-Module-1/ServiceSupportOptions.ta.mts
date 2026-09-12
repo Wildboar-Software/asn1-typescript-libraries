@@ -1438,13 +1438,7 @@ const ServiceSupportOptions_reconfigureProgramInvocation: number = 92; /* LONG_N
  */
 export
 const reconfigureProgramInvocation: number = ServiceSupportOptions_reconfigureProgramInvocation; /* SHORT_NAMED_BIT */
-export const _decode_ServiceSupportOptions = (el: _Element): ServiceSupportOptions => {
-    const value = $._decodeBitString(el);
-    if (value.length !== 93) {
-        throw new ASN1SizeError("ServiceSupportOptions violates SIZE constraint");
-    }
-    return value;
-};
+export const _decode_ServiceSupportOptions = $._decodeBitString;
 export const _encode_ServiceSupportOptions = $._encodeBitString;
 
 

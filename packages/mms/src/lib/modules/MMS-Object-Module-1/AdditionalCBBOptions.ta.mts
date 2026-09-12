@@ -73,13 +73,7 @@ const AdditionalCBBOptions_recl: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const recl: number = AdditionalCBBOptions_recl; /* SHORT_NAMED_BIT */
-export const _decode_AdditionalCBBOptions = (el: _Element): AdditionalCBBOptions => {
-    const value = $._decodeBitString(el);
-    if (value.length !== 3) {
-        throw new ASN1SizeError("AdditionalCBBOptions violates SIZE constraint");
-    }
-    return value;
-};
+export const _decode_AdditionalCBBOptions = $._decodeBitString;
 export const _encode_AdditionalCBBOptions = $._encodeBitString;
 
 

@@ -79,14 +79,7 @@ const Control_State_controlled: Control_State = 2; /* LONG_NAMED_INTEGER_VALUE *
  */
 export
 const controlled: Control_State = Control_State_controlled; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_Control_State = (el: _Element): Control_State => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 2) {
-        throw new ASN1OverflowError("Control_State violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_Control_State = $._decodeInteger;
 export const _encode_Control_State = $._encodeInteger;
 
 

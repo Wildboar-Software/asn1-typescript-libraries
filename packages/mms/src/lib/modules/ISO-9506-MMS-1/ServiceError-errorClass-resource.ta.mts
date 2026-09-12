@@ -130,14 +130,7 @@ const ServiceError_errorClass_resource_capability_unknown: ServiceError_errorCla
  */
 export
 const capability_unknown: ServiceError_errorClass_resource = ServiceError_errorClass_resource_capability_unknown; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_resource = (el: _Element): ServiceError_errorClass_resource => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 5) {
-        throw new ASN1OverflowError("ServiceError_errorClass_resource violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ServiceError_errorClass_resource = $._decodeInteger;
 export const _encode_ServiceError_errorClass_resource = $._encodeInteger;
 
 

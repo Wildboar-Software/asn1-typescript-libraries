@@ -79,14 +79,7 @@ const Running_Mode_step_limited: Running_Mode = 2; /* LONG_NAMED_INTEGER_VALUE *
  */
 export
 const step_limited: Running_Mode = Running_Mode_step_limited; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_Running_Mode = (el: _Element): Running_Mode => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 2) {
-        throw new ASN1OverflowError("Running_Mode violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_Running_Mode = $._decodeInteger;
 export const _encode_Running_Mode = $._encodeInteger;
 
 

@@ -96,14 +96,7 @@ const AlarmAckRule_ack_all: AlarmAckRule = 3; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const ack_all: AlarmAckRule = AlarmAckRule_ack_all; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AlarmAckRule = (el: _Element): AlarmAckRule => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 3) {
-        throw new ASN1OverflowError("AlarmAckRule violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_AlarmAckRule = $._decodeInteger;
 export const _encode_AlarmAckRule = $._encodeInteger;
 
 

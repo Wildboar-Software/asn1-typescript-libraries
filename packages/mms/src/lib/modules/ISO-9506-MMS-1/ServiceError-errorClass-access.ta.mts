@@ -113,14 +113,7 @@ const ServiceError_errorClass_access_object_invalidated: ServiceError_errorClass
  */
 export
 const object_invalidated: ServiceError_errorClass_access = ServiceError_errorClass_access_object_invalidated; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_access = (el: _Element): ServiceError_errorClass_access => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 4) {
-        throw new ASN1OverflowError("ServiceError_errorClass_access violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ServiceError_errorClass_access = $._decodeInteger;
 export const _encode_ServiceError_errorClass_access = $._encodeInteger;
 
 

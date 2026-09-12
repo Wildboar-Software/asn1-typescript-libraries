@@ -87,13 +87,7 @@ const ExtendedStatus_localControl: number = 3; /* LONG_NAMED_BIT */
  */
 export
 const localControl: number = ExtendedStatus_localControl; /* SHORT_NAMED_BIT */
-export const _decode_ExtendedStatus = (el: _Element): ExtendedStatus => {
-    const value = $._decodeBitString(el);
-    if (value.length !== 4) {
-        throw new ASN1SizeError("ExtendedStatus violates SIZE constraint");
-    }
-    return value;
-};
+export const _decode_ExtendedStatus = $._decodeBitString;
 export const _encode_ExtendedStatus = $._encodeBitString;
 
 

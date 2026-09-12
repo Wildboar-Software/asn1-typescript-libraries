@@ -198,14 +198,7 @@ const ServiceError_errorClass_file_insufficient_space_in_filestore: ServiceError
  */
 export
 const insufficient_space_in_filestore: ServiceError_errorClass_file = ServiceError_errorClass_file_insufficient_space_in_filestore; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_file = (el: _Element): ServiceError_errorClass_file => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 9) {
-        throw new ASN1OverflowError("ServiceError_errorClass_file violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ServiceError_errorClass_file = $._decodeInteger;
 export const _encode_ServiceError_errorClass_file = $._encodeInteger;
 
 

@@ -62,14 +62,7 @@ const ServiceError_errorClass_conclude_further_communication_required: ServiceEr
  */
 export
 const further_communication_required: ServiceError_errorClass_conclude = ServiceError_errorClass_conclude_further_communication_required; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_conclude = (el: _Element): ServiceError_errorClass_conclude => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 1) {
-        throw new ASN1OverflowError("ServiceError_errorClass_conclude violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ServiceError_errorClass_conclude = $._decodeInteger;
 export const _encode_ServiceError_errorClass_conclude = $._encodeInteger;
 
 

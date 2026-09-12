@@ -62,14 +62,7 @@ const RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID: RejectPDU_rejec
  */
 export
 const invalid_invokeID: RejectPDU_rejectReason_cancel_requestPDU = RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RejectPDU_rejectReason_cancel_requestPDU = (el: _Element): RejectPDU_rejectReason_cancel_requestPDU => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 1) {
-        throw new ASN1OverflowError("RejectPDU_rejectReason_cancel_requestPDU violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_RejectPDU_rejectReason_cancel_requestPDU = $._decodeInteger;
 export const _encode_RejectPDU_rejectReason_cancel_requestPDU = $._encodeInteger;
 
 

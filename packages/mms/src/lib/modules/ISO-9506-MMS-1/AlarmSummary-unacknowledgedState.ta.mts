@@ -96,14 +96,7 @@ const AlarmSummary_unacknowledgedState_both: AlarmSummary_unacknowledgedState = 
  */
 export
 const both: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_both; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AlarmSummary_unacknowledgedState = (el: _Element): AlarmSummary_unacknowledgedState => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 3) {
-        throw new ASN1OverflowError("AlarmSummary_unacknowledgedState violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_AlarmSummary_unacknowledgedState = $._decodeInteger;
 export const _encode_AlarmSummary_unacknowledgedState = $._encodeInteger;
 
 

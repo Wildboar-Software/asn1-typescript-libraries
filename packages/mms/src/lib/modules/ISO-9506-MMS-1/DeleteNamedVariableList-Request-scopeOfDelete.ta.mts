@@ -96,14 +96,7 @@ const DeleteNamedVariableList_Request_scopeOfDelete_vmd: DeleteNamedVariableList
  */
 export
 const vmd: DeleteNamedVariableList_Request_scopeOfDelete = DeleteNamedVariableList_Request_scopeOfDelete_vmd; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DeleteNamedVariableList_Request_scopeOfDelete = (el: _Element): DeleteNamedVariableList_Request_scopeOfDelete => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 3) {
-        throw new ASN1OverflowError("DeleteNamedVariableList_Request_scopeOfDelete violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_DeleteNamedVariableList_Request_scopeOfDelete = $._decodeInteger;
 export const _encode_DeleteNamedVariableList_Request_scopeOfDelete = $._encodeInteger;
 
 

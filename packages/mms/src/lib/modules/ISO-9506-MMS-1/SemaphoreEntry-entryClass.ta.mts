@@ -62,14 +62,7 @@ const SemaphoreEntry_entryClass_modifier: SemaphoreEntry_entryClass = 1; /* LONG
  */
 export
 const modifier: SemaphoreEntry_entryClass = SemaphoreEntry_entryClass_modifier; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_SemaphoreEntry_entryClass = (el: _Element): SemaphoreEntry_entryClass => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 1) {
-        throw new ASN1OverflowError("SemaphoreEntry_entryClass violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_SemaphoreEntry_entryClass = $._decodeInteger;
 export const _encode_SemaphoreEntry_entryClass = $._encodeInteger;
 
 

@@ -114,14 +114,7 @@ const ServiceError_errorClass_service_object_constraint_conflict: ServiceError_e
  */
 export
 const object_constraint_conflict: ServiceError_errorClass_service = ServiceError_errorClass_service_object_constraint_conflict; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_service = (el: _Element): ServiceError_errorClass_service => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 5) {
-        throw new ASN1OverflowError("ServiceError_errorClass_service violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ServiceError_errorClass_service = $._decodeInteger;
 export const _encode_ServiceError_errorClass_service = $._encodeInteger;
 
 

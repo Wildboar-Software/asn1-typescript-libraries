@@ -147,14 +147,7 @@ const ULState_u4: ULState = 6; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const u4: ULState = ULState_u4; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ULState = (el: _Element): ULState => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 6) {
-        throw new ASN1OverflowError("ULState violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ULState = $._decodeInteger;
 export const _encode_ULState = $._encodeInteger;
 
 

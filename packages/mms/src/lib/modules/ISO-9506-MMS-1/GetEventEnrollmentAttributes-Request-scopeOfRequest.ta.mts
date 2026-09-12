@@ -96,14 +96,7 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_ea: GetEventEnrollment
  */
 export
 const ea: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnrollmentAttributes_Request_scopeOfRequest_ea; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest = (el: _Element): GetEventEnrollmentAttributes_Request_scopeOfRequest => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 3) {
-        throw new ASN1OverflowError("GetEventEnrollmentAttributes_Request_scopeOfRequest violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest = $._decodeInteger;
 export const _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest = $._encodeInteger;
 
 

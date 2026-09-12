@@ -131,14 +131,7 @@ const ServiceError_errorClass_initiate_nesting_level_insufficient: ServiceError_
  */
 export
 const nesting_level_insufficient: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate_nesting_level_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_initiate = (el: _Element): ServiceError_errorClass_initiate => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 7) {
-        throw new ASN1OverflowError("ServiceError_errorClass_initiate violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ServiceError_errorClass_initiate = $._decodeInteger;
 export const _encode_ServiceError_errorClass_initiate = $._encodeInteger;
 
 

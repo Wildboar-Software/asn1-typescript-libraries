@@ -62,14 +62,7 @@ const ObjectClass_csObjectClass_unitControl: ObjectClass_csObjectClass = 1; /* L
  */
 export
 const unitControl: ObjectClass_csObjectClass = ObjectClass_csObjectClass_unitControl; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ObjectClass_csObjectClass = (el: _Element): ObjectClass_csObjectClass => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 1) {
-        throw new ASN1OverflowError("ObjectClass_csObjectClass violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ObjectClass_csObjectClass = $._decodeInteger;
 export const _encode_ObjectClass_csObjectClass = $._encodeInteger;
 
 

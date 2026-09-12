@@ -113,14 +113,7 @@ const ServiceError_errorClass_vmd_state_state_machine_id_invalid: ServiceError_e
  */
 export
 const state_machine_id_invalid: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_state_state_machine_id_invalid; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_vmd_state = (el: _Element): ServiceError_errorClass_vmd_state => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 4) {
-        throw new ASN1OverflowError("ServiceError_errorClass_vmd_state violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ServiceError_errorClass_vmd_state = $._decodeInteger;
 export const _encode_ServiceError_errorClass_vmd_state = $._encodeInteger;
 
 

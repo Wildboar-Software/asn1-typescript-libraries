@@ -130,14 +130,7 @@ const VMDState_manualInterventionRequired: VMDState = 5; /* LONG_NAMED_INTEGER_V
  */
 export
 const manualInterventionRequired: VMDState = VMDState_manualInterventionRequired; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_VMDState = (el: _Element): VMDState => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 5) {
-        throw new ASN1OverflowError("VMDState violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_VMDState = $._decodeInteger;
 export const _encode_VMDState = $._encodeInteger;
 
 

@@ -96,14 +96,7 @@ const StatusResponse_vmdLogicalStatus_support_services_allowed: StatusResponse_v
  */
 export
 const support_services_allowed: StatusResponse_vmdLogicalStatus = StatusResponse_vmdLogicalStatus_support_services_allowed; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_StatusResponse_vmdLogicalStatus = (el: _Element): StatusResponse_vmdLogicalStatus => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 3) {
-        throw new ASN1OverflowError("StatusResponse_vmdLogicalStatus violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_StatusResponse_vmdLogicalStatus = $._decodeInteger;
 export const _encode_StatusResponse_vmdLogicalStatus = $._encodeInteger;
 
 

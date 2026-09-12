@@ -79,14 +79,7 @@ const ServiceError_errorClass_cancel_cancel_not_possible: ServiceError_errorClas
  */
 export
 const cancel_not_possible: ServiceError_errorClass_cancel = ServiceError_errorClass_cancel_cancel_not_possible; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_cancel = (el: _Element): ServiceError_errorClass_cancel => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 2) {
-        throw new ASN1OverflowError("ServiceError_errorClass_cancel violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_ServiceError_errorClass_cancel = $._decodeInteger;
 export const _encode_ServiceError_errorClass_cancel = $._encodeInteger;
 
 

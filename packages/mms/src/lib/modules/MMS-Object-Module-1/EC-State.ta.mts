@@ -79,14 +79,7 @@ const EC_State_active: EC_State = 2; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const active: EC_State = EC_State_active; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_EC_State = (el: _Element): EC_State => {
-    const value = $._decodeInteger(el);
-    const n = typeof value === "bigint" ? Number(value) : value;
-    if (n < 0 || n > 2) {
-        throw new ASN1OverflowError("EC_State violates INTEGER range constraint");
-    }
-    return value;
-};
+export const _decode_EC_State = $._decodeInteger;
 export const _encode_EC_State = $._encodeInteger;
 
 
