@@ -1,7 +1,6 @@
 /* eslint-disable */
 import {
     INTEGER,
-    ENUMERATED,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,7 +75,7 @@ interface SEMAPHORE {
     /**
      * @summary &class
      */
-    readonly "&class"?: ENUMERATED;
+    readonly "&class"?: SEMAPHORE_class;
     /**
      * @summary &numberOfTokens
      */
@@ -102,5 +101,55 @@ interface SEMAPHORE {
      */
     readonly "&eventCondition"?: ObjectName;
 }
+
+/**
+ * @summary SEMAPHORE_class
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * SEMAPHORE.&class ::= ENUMERATED {
+ *     token,
+ *     pool }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_SEMAPHORE_class {
+    token = 0,
+    pool = 1,
+}
+
+/**
+ * @summary SEMAPHORE_class
+ * @enum {number}
+ */
+export
+type SEMAPHORE_class = _enum_for_SEMAPHORE_class;
+
+/**
+ * @summary SEMAPHORE_class
+ * @enum {number}
+ */
+export
+const SEMAPHORE_class = _enum_for_SEMAPHORE_class;
+
+/**
+ * @summary SEMAPHORE_class_token
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_class_token: SEMAPHORE_class = SEMAPHORE_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary SEMAPHORE_class_pool
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_class_pool: SEMAPHORE_class = SEMAPHORE_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

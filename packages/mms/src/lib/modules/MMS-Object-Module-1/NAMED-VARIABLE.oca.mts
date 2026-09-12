@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -90,7 +89,7 @@ interface NAMED_VARIABLE {
     /**
      * @summary &accessMethod
      */
-    readonly "&accessMethod"?: ENUMERATED;
+    readonly "&accessMethod"?: NAMED_VARIABLE_accessMethod;
     /**
      * @summary &address
      */
@@ -102,21 +101,62 @@ interface NAMED_VARIABLE {
 }
 
 /**
- * @summary NAMED-VARIABLE.&accessMethod public
- * @constant
+ * @summary NAMED_VARIABLE_accessMethod
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * NAMED-VARIABLE.&accessMethod ::= ENUMERATED {
+ *     public,
+ *     anythingElse,
+ *     ... }
+ * ```
+ *
+ * @enum {number}
  */
-export const NAMED_VARIABLE_accessMethod_public: ENUMERATED = 0;
+export
+enum _enum_for_NAMED_VARIABLE_accessMethod {
+    public = 0,
+    anythingElse = 1,
+}
 
 /**
- * @summary NAMED-VARIABLE.&accessMethod anythingElse
- * @constant
+ * @summary NAMED_VARIABLE_accessMethod
+ * @enum {number}
  */
-export const NAMED_VARIABLE_accessMethod_anythingElse: ENUMERATED = 1;
+export
+type NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
+
+/**
+ * @summary NAMED_VARIABLE_accessMethod
+ * @enum {number}
+ */
+export
+const NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
+
+/**
+ * @summary NAMED_VARIABLE_accessMethod_public
+ * @constant
+ * @type {number}
+ */
+export
+const NAMED_VARIABLE_accessMethod_public: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary NAMED_VARIABLE_accessMethod_anythingElse
+ * @constant
+ * @type {number}
+ */
+export
+const NAMED_VARIABLE_accessMethod_anythingElse: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.anythingElse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary anythingElse
  * @constant
+ * @type {number}
  */
-export const anythingElse: ENUMERATED = NAMED_VARIABLE_accessMethod_anythingElse;
+export
+const anythingElse: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.anythingElse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

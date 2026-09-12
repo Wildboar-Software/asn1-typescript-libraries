@@ -4,7 +4,6 @@ import {
     INTEGER,
     OCTET_STRING,
     NULL,
-    ENUMERATED,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -91,7 +90,7 @@ interface SEMAPHORE_ENTRY {
     /**
      * @summary &class
      */
-    readonly "&class"?: ENUMERATED;
+    readonly "&class"?: SEMAPHORE_ENTRY_class;
     /**
      * @summary &semaphore
      */
@@ -119,7 +118,7 @@ interface SEMAPHORE_ENTRY {
     /**
      * @summary &entryState
      */
-    readonly "&entryState"?: ENUMERATED;
+    readonly "&entryState"?: SEMAPHORE_ENTRY_entryState;
     /**
      * @summary &remainingAcqDelay
      */
@@ -136,6 +135,116 @@ interface SEMAPHORE_ENTRY {
      * @summary &relinquishIfLost
      */
     readonly "&relinquishIfLost"?: BOOLEAN;
-};
+}
+
+/**
+ * @summary SEMAPHORE_ENTRY_class
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * SEMAPHORE-ENTRY.&class ::= ENUMERATED {
+ *     simple,
+ *     modifier }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_SEMAPHORE_ENTRY_class {
+    simple = 0,
+    modifier = 1,
+}
+
+/**
+ * @summary SEMAPHORE_ENTRY_class
+ * @enum {number}
+ */
+export
+type SEMAPHORE_ENTRY_class = _enum_for_SEMAPHORE_ENTRY_class;
+
+/**
+ * @summary SEMAPHORE_ENTRY_class
+ * @enum {number}
+ */
+export
+const SEMAPHORE_ENTRY_class = _enum_for_SEMAPHORE_ENTRY_class;
+
+/**
+ * @summary SEMAPHORE_ENTRY_class_simple
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_ENTRY_class_simple: SEMAPHORE_ENTRY_class = SEMAPHORE_ENTRY_class.simple; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary SEMAPHORE_ENTRY_class_modifier
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_ENTRY_class_modifier: SEMAPHORE_ENTRY_class = SEMAPHORE_ENTRY_class.modifier; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary SEMAPHORE_ENTRY_entryState
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * SEMAPHORE-ENTRY.&entryState ::= ENUMERATED {
+ *     queued,
+ *     owner,
+ *     hung }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_SEMAPHORE_ENTRY_entryState {
+    queued = 0,
+    owner = 1,
+    hung = 2,
+}
+
+/**
+ * @summary SEMAPHORE_ENTRY_entryState
+ * @enum {number}
+ */
+export
+type SEMAPHORE_ENTRY_entryState = _enum_for_SEMAPHORE_ENTRY_entryState;
+
+/**
+ * @summary SEMAPHORE_ENTRY_entryState
+ * @enum {number}
+ */
+export
+const SEMAPHORE_ENTRY_entryState = _enum_for_SEMAPHORE_ENTRY_entryState;
+
+/**
+ * @summary SEMAPHORE_ENTRY_entryState_queued
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_ENTRY_entryState_queued: SEMAPHORE_ENTRY_entryState = SEMAPHORE_ENTRY_entryState.queued; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary SEMAPHORE_ENTRY_entryState_owner
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_ENTRY_entryState_owner: SEMAPHORE_ENTRY_entryState = SEMAPHORE_ENTRY_entryState.owner; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary SEMAPHORE_ENTRY_entryState_hung
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_ENTRY_entryState_hung: SEMAPHORE_ENTRY_entryState = SEMAPHORE_ENTRY_entryState.hung; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +76,47 @@ interface UNNAMED_VARIABLE {
     /**
      * @summary &accessMethod
      */
-    readonly "&accessMethod"?: ENUMERATED;
+    readonly "&accessMethod"?: UNNAMED_VARIABLE_accessMethod;
 }
+
+/**
+ * @summary UNNAMED_VARIABLE_accessMethod
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * UNNAMED-VARIABLE.&accessMethod ::= ENUMERATED {
+ *     public }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_UNNAMED_VARIABLE_accessMethod {
+    public = 0,
+}
+
+/**
+ * @summary UNNAMED_VARIABLE_accessMethod
+ * @enum {number}
+ */
+export
+type UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
+
+/**
+ * @summary UNNAMED_VARIABLE_accessMethod
+ * @enum {number}
+ */
+export
+const UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
+
+/**
+ * @summary UNNAMED_VARIABLE_accessMethod_public
+ * @constant
+ * @type {number}
+ */
+export
+const UNNAMED_VARIABLE_accessMethod_public: UNNAMED_VARIABLE_accessMethod = UNNAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

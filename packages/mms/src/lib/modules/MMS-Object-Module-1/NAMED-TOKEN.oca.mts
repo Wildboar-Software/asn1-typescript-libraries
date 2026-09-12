@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -55,7 +54,57 @@ interface NAMED_TOKEN {
     /**
      * @summary &state
      */
-    readonly "&state"?: ENUMERATED;
+    readonly "&state"?: NAMED_TOKEN_state;
 }
+
+/**
+ * @summary NAMED_TOKEN_state
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * NAMED-TOKEN.&state ::= ENUMERATED {
+ *     free,
+ *     owned }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_NAMED_TOKEN_state {
+    free = 0,
+    owned = 1,
+}
+
+/**
+ * @summary NAMED_TOKEN_state
+ * @enum {number}
+ */
+export
+type NAMED_TOKEN_state = _enum_for_NAMED_TOKEN_state;
+
+/**
+ * @summary NAMED_TOKEN_state
+ * @enum {number}
+ */
+export
+const NAMED_TOKEN_state = _enum_for_NAMED_TOKEN_state;
+
+/**
+ * @summary NAMED_TOKEN_state_free
+ * @constant
+ * @type {number}
+ */
+export
+const NAMED_TOKEN_state_free: NAMED_TOKEN_state = NAMED_TOKEN_state.free; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary NAMED_TOKEN_state_owned
+ * @constant
+ * @type {number}
+ */
+export
+const NAMED_TOKEN_state_owned: NAMED_TOKEN_state = NAMED_TOKEN_state.owned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

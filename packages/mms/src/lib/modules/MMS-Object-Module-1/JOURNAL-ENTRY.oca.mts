@@ -3,7 +3,6 @@ import {
     OPTIONAL,
     INTEGER,
     OCTET_STRING,
-    ENUMERATED,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -103,7 +102,7 @@ interface JOURNAL_ENTRY {
     /**
      * @summary &informationType
      */
-    readonly "&informationType"?: ENUMERATED;
+    readonly "&informationType"?: JOURNAL_ENTRY_informationType;
     /**
      * @summary &textComment
      */
@@ -116,6 +115,66 @@ interface JOURNAL_ENTRY {
      * @summary &journalVariables
      */
     readonly "&journalVariables"?: Journal_Variable[];
-};
+}
+
+/**
+ * @summary JOURNAL_ENTRY_informationType
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * JOURNAL-ENTRY.&informationType ::= ENUMERATED {
+ *     annotation,
+ *     event-data,
+ *     data }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_JOURNAL_ENTRY_informationType {
+    annotation = 0,
+    event_data = 1,
+    data = 2,
+}
+
+/**
+ * @summary JOURNAL_ENTRY_informationType
+ * @enum {number}
+ */
+export
+type JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
+
+/**
+ * @summary JOURNAL_ENTRY_informationType
+ * @enum {number}
+ */
+export
+const JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
+
+/**
+ * @summary JOURNAL_ENTRY_informationType_annotation
+ * @constant
+ * @type {number}
+ */
+export
+const JOURNAL_ENTRY_informationType_annotation: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.annotation; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary JOURNAL_ENTRY_informationType_event_data
+ * @constant
+ * @type {number}
+ */
+export
+const JOURNAL_ENTRY_informationType_event_data: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.event_data; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary JOURNAL_ENTRY_informationType_data
+ * @constant
+ * @type {number}
+ */
+export
+const JOURNAL_ENTRY_informationType_data: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

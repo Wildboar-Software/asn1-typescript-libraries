@@ -3,7 +3,6 @@ import {
     BOOLEAN,
     INTEGER,
     NULL,
-    ENUMERATED,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -164,7 +163,7 @@ interface EVENT_ENROLLMENT {
     /**
      * @summary &ackState
      */
-    readonly "&ackState"?: ENUMERATED;
+    readonly "&ackState"?: EVENT_ENROLLMENT_ackState;
     /**
      * @summary &lastState
      */
@@ -173,6 +172,66 @@ interface EVENT_ENROLLMENT {
      * @summary &displayEnhancement
      */
     readonly "&displayEnhancement"?: ({ text: MMSString } | { number_: INTEGER } | { none: NULL });
-};
+}
+
+/**
+ * @summary EVENT_ENROLLMENT_ackState
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * EVENT-ENROLLMENT.&ackState ::= ENUMERATED {
+ *     acked,
+ *     noAckA,
+ *     noAckI }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_EVENT_ENROLLMENT_ackState {
+    acked = 0,
+    noAckA = 1,
+    noAckI = 2,
+}
+
+/**
+ * @summary EVENT_ENROLLMENT_ackState
+ * @enum {number}
+ */
+export
+type EVENT_ENROLLMENT_ackState = _enum_for_EVENT_ENROLLMENT_ackState;
+
+/**
+ * @summary EVENT_ENROLLMENT_ackState
+ * @enum {number}
+ */
+export
+const EVENT_ENROLLMENT_ackState = _enum_for_EVENT_ENROLLMENT_ackState;
+
+/**
+ * @summary EVENT_ENROLLMENT_ackState_acked
+ * @constant
+ * @type {number}
+ */
+export
+const EVENT_ENROLLMENT_ackState_acked: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.acked; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary EVENT_ENROLLMENT_ackState_noAckA
+ * @constant
+ * @type {number}
+ */
+export
+const EVENT_ENROLLMENT_ackState_noAckA: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.noAckA; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary EVENT_ENROLLMENT_ackState_noAckI
+ * @constant
+ * @type {number}
+ */
+export
+const EVENT_ENROLLMENT_ackState_noAckI: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.noAckI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

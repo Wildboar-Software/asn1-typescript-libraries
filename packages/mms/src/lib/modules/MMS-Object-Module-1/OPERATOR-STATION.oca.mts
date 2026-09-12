@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,7 +75,7 @@ interface OPERATOR_STATION {
     /**
      * @summary &stationType
      */
-    readonly "&stationType"?: ENUMERATED;
+    readonly "&stationType"?: OPERATOR_STATION_stationType;
     /**
      * @summary &inputBuffer
      */
@@ -88,7 +87,147 @@ interface OPERATOR_STATION {
     /**
      * @summary &state
      */
-    readonly "&state"?: ENUMERATED;
+    readonly "&state"?: OPERATOR_STATION_state;
 }
+
+/**
+ * @summary OPERATOR_STATION_stationType
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * OPERATOR-STATION.&stationType ::= ENUMERATED {
+ *     entry,
+ *     display,
+ *     entry-display }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_OPERATOR_STATION_stationType {
+    entry = 0,
+    display = 1,
+    entry_display = 2,
+}
+
+/**
+ * @summary OPERATOR_STATION_stationType
+ * @enum {number}
+ */
+export
+type OPERATOR_STATION_stationType = _enum_for_OPERATOR_STATION_stationType;
+
+/**
+ * @summary OPERATOR_STATION_stationType
+ * @enum {number}
+ */
+export
+const OPERATOR_STATION_stationType = _enum_for_OPERATOR_STATION_stationType;
+
+/**
+ * @summary OPERATOR_STATION_stationType_entry
+ * @constant
+ * @type {number}
+ */
+export
+const OPERATOR_STATION_stationType_entry: OPERATOR_STATION_stationType = OPERATOR_STATION_stationType.entry; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary OPERATOR_STATION_stationType_display
+ * @constant
+ * @type {number}
+ */
+export
+const OPERATOR_STATION_stationType_display: OPERATOR_STATION_stationType = OPERATOR_STATION_stationType.display; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary OPERATOR_STATION_stationType_entry_display
+ * @constant
+ * @type {number}
+ */
+export
+const OPERATOR_STATION_stationType_entry_display: OPERATOR_STATION_stationType = OPERATOR_STATION_stationType.entry_display; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary OPERATOR_STATION_state
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * OPERATOR-STATION.&state ::= ENUMERATED {
+ *     idle,
+ *     display-prompt-data,
+ *     waiting-for-input,
+ *     input-buffer-filled,
+ *     output-buffers-filled }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_OPERATOR_STATION_state {
+    idle = 0,
+    display_prompt_data = 1,
+    waiting_for_input = 2,
+    input_buffer_filled = 3,
+    output_buffers_filled = 4,
+}
+
+/**
+ * @summary OPERATOR_STATION_state
+ * @enum {number}
+ */
+export
+type OPERATOR_STATION_state = _enum_for_OPERATOR_STATION_state;
+
+/**
+ * @summary OPERATOR_STATION_state
+ * @enum {number}
+ */
+export
+const OPERATOR_STATION_state = _enum_for_OPERATOR_STATION_state;
+
+/**
+ * @summary OPERATOR_STATION_state_idle
+ * @constant
+ * @type {number}
+ */
+export
+const OPERATOR_STATION_state_idle: OPERATOR_STATION_state = OPERATOR_STATION_state.idle; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary OPERATOR_STATION_state_display_prompt_data
+ * @constant
+ * @type {number}
+ */
+export
+const OPERATOR_STATION_state_display_prompt_data: OPERATOR_STATION_state = OPERATOR_STATION_state.display_prompt_data; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary OPERATOR_STATION_state_waiting_for_input
+ * @constant
+ * @type {number}
+ */
+export
+const OPERATOR_STATION_state_waiting_for_input: OPERATOR_STATION_state = OPERATOR_STATION_state.waiting_for_input; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary OPERATOR_STATION_state_input_buffer_filled
+ * @constant
+ * @type {number}
+ */
+export
+const OPERATOR_STATION_state_input_buffer_filled: OPERATOR_STATION_state = OPERATOR_STATION_state.input_buffer_filled; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary OPERATOR_STATION_state_output_buffers_filled
+ * @constant
+ * @type {number}
+ */
+export
+const OPERATOR_STATION_state_output_buffers_filled: OPERATOR_STATION_state = OPERATOR_STATION_state.output_buffers_filled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */
