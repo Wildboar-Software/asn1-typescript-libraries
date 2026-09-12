@@ -188,6 +188,30 @@
     },
     {
       "path": "./packages/map"
+    },
+    {
+      "path": "./packages/scpp"
+    },
+    {
+      "path": "./packages/csta"
+    },
+    {
+      "path": "./packages/tsm"
+    },
+    {
+      "path": "./packages/v59"
+    },
+    {
+      "path": "./packages/x790"
+    },
+    {
+      "path": "./packages/xbhsm"
+    },
+    {
+      "path": "./packages/cap"
+    },
+    {
+      "path": "./packages/mms"
     }
   ],
   "compilerOptions": {

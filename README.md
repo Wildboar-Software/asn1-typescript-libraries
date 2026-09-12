@@ -101,3 +101,9 @@ import { Certificate } from "@wildboar/x500/AuthenticationFramework";
 
 - CINF and RINF may be useful for the OID registry.
 - Error in `attributeDescriptor` in `AttributeCertificateDefinitions`: `&id` enclosed in unnecessary `{}`.
+
+## Adding a new package
+
+```bash
+nx g @nx/js:lib libs/my-lib
+```

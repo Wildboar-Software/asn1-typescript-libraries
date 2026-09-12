@@ -1,0 +1,232 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Release_request_reason, Release_request_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, Release_request_reason_urgent /* IMPORTED_LONG_NAMED_INTEGER */, urgent /* IMPORTED_SHORT_NAMED_INTEGER */, Release_request_reason_user_defined /* IMPORTED_LONG_NAMED_INTEGER */, user_defined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Release_request_reason, _encode_Release_request_reason } from "../ACSE-1/Release-request-reason.ta.mjs";
+// export { Release_request_reason, Release_request_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, Release_request_reason_urgent /* IMPORTED_LONG_NAMED_INTEGER */, urgent /* IMPORTED_SHORT_NAMED_INTEGER */, Release_request_reason_user_defined /* IMPORTED_LONG_NAMED_INTEGER */, user_defined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Release_request_reason, _encode_Release_request_reason } from "../ACSE-1/Release-request-reason.ta.mjs";
+import { Association_information, _decode_Association_information, _encode_Association_information } from "../ACSE-1/Association-information.ta.mjs";
+// export { Association_information, _decode_Association_information, _encode_Association_information } from "../ACSE-1/Association-information.ta.mjs";
+
+
+/**
+ * @summary RLRQ_apdu
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RLRQ-apdu ::= [APPLICATION 2] IMPLICIT SEQUENCE {
+ *   reason            [0] IMPLICIT Release-request-reason OPTIONAL,
+ *   ...,
+ *   ...,
+ *   user-information  [30] IMPLICIT Association-information OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class RLRQ_apdu {
+    constructor (
+        /**
+         * @summary `reason`.
+         * @public
+         * @readonly
+         */
+        readonly reason: OPTIONAL<Release_request_reason>,
+        /**
+         * @summary Extensions that are not recognized.
+         * @public
+         * @readonly
+         */
+        readonly _unrecognizedExtensionsList: _Element[] = [],
+        /**
+         * @summary `user_information`.
+         * @public
+         * @readonly
+         */
+        readonly user_information: OPTIONAL<Association_information>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a RLRQ_apdu
+     * @description
+     * 
+     * This takes an `object` and converts it to a `RLRQ_apdu`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `RLRQ_apdu`.
+     * @returns {RLRQ_apdu}
+     */
+    public static _from_object (_o: { [_K in keyof (RLRQ_apdu)]: (RLRQ_apdu)[_K] }): RLRQ_apdu {
+        return new RLRQ_apdu(_o.reason, _o._unrecognizedExtensionsList, _o.user_information);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of RLRQ_apdu
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_RLRQ_apdu: $.ComponentSpec[] = [
+    new $.ComponentSpec("reason", true, $.hasTag(_TagClass.context, 0))
+];
+
+/**
+ * @summary The Trailing Root Component Types of RLRQ_apdu
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_RLRQ_apdu: $.ComponentSpec[] = [
+    new $.ComponentSpec("user-information", true, $.hasTag(_TagClass.context, 30))
+];
+
+/**
+ * @summary The Extension Addition Component Types of RLRQ_apdu
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_RLRQ_apdu: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_RLRQ_apdu: $.ASN1Decoder<RLRQ_apdu> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) RLRQ_apdu
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_RLRQ_apdu (el: _Element): RLRQ_apdu {
+    if (!_cached_decoder_for_RLRQ_apdu) { _cached_decoder_for_RLRQ_apdu = $._decode_implicit<RLRQ_apdu>(() => function (el: _Element): RLRQ_apdu {
+    let reason: OPTIONAL<Release_request_reason>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    let user_information: OPTIONAL<Association_information>;
+    const callbacks: $.DecodingMap = {
+        "reason": (_el: _Element): void => { reason = $._decode_implicit<Release_request_reason>(() => _decode_Release_request_reason)(_el); },
+        "user-information": (_el: _Element): void => { user_information = $._decode_implicit<Association_information>(() => _decode_Association_information)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_RLRQ_apdu,
+        _extension_additions_list_spec_for_RLRQ_apdu,
+        _root_component_type_list_2_spec_for_RLRQ_apdu,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new RLRQ_apdu(
+        reason,
+        _unrecognizedExtensionsList,
+        user_information
+    );
+}); }
+    return _cached_decoder_for_RLRQ_apdu(el);
+}
+
+let _cached_encoder_for_RLRQ_apdu: $.ASN1Encoder<RLRQ_apdu> | null = null;
+
+/**
+ * @summary Encodes a(n) RLRQ_apdu into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The RLRQ_apdu, encoded as an ASN.1 Element.
+ */
+export
+function _encode_RLRQ_apdu (value: RLRQ_apdu, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RLRQ_apdu) { _cached_encoder_for_RLRQ_apdu = $._encode_implicit(_TagClass.application, 2, () => function (value: RLRQ_apdu, elGetter: $.ASN1Encoder<RLRQ_apdu>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_ABSENT  */ ((value.reason === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_Release_request_reason, $.BER)(value.reason, $.BER))
+        ],
+        (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
+        [
+            /* IF_ABSENT  */ ((value.user_information === undefined) ? undefined : $._encode_implicit(_TagClass.context, 30, () => _encode_Association_information, $.BER)(value.user_information, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}, $.BER); }
+    return _cached_encoder_for_RLRQ_apdu(value, elGetter);
+}
+
+
+/* eslint-enable */

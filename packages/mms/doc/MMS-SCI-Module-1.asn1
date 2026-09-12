@@ -1,0 +1,606 @@
+MMS-SCI-Module-1 { iso standard 9506 part(2) mms-file-record-version1(2) }
+DEFINITIONS ::= BEGIN
+
+IMPORTS ApplicationReference
+   FROM MMS-Environment-1 { iso standard 9506 part(2) mms-environment-version1(4) }
+   AccessCondition,
+   AdditionalCBBOptions,
+   AdditionalSupportOptions,
+   Address,
+   AlarmAckRule,
+   Control-State,
+   DomainState,
+   EC-Class,
+   EC-State,
+   EE-Duration,
+   EE-Class,
+   LogicalStatus,
+   Modifier,
+   ParameterSupportOptions,
+   PhysicalStatus,
+   Priority,
+   ProgramInvocationState,
+   ServiceSupportOptions,
+   Severity,
+   Transitions,
+   TypeDescription
+   FROM MMS-Object-Module-1 { iso standard 9506 part(1) mms-object-model1(1) }
+
+   AlternateAccess,
+   ConfirmedServiceRequest,
+   AttachToEventCondition,
+   AttachToSemaphore,
+   Data,
+   EE-State,
+   Identifier,
+   Integer8,
+   Integer32,
+   MMSString,
+   MMS255String,
+   ObjectName,
+   TimeOfDay,
+   TypeSpecification,
+   Unsigned32,
+   Unsigned8
+   FROM ISO-9506-MMS-1 { iso standard 9506 part(2) mms-abstract-syntax-version1(1) }
+   ;
+
+-- Implemented as a modification to the original ISO 9506.
+-- Provides the same encoding while using BER, but without the
+-- non-standard conditional syntax used in the specification.
+-- Encode {} to represent NULL.
+MaybeAddress ::= SEQUENCE {
+    address Address OPTIONAL
+}
+
+-- Deviation from ISO 9506.
+-- Provides the same encoding while using BER, but without the
+-- non-standard conditional syntax used in the specification.
+-- Encode {} to represent NULL (in the cases where it is used).
+NullableBitString ::= OCTET STRING (CONSTRAINED BY {
+    -- Zero octets to represent the NULL value --
+    -- Anything else MUST be a valid BIT STRING according to the encoding rules used --
+})
+
+-- Deviation from ISO 9506.
+NullableAdditionalSupportOptions ::= NullableBitString
+-- Deviation from ISO 9506.
+NullableAdditionalCBBOptions ::= NullableBitString
+
+SCI-Information ::= SEQUENCE {
+   partOne          [0] IMPLICIT VMD-File,
+   partTwo          [1] IMPLICIT Service-and-Parameter-CBBs
+}
+
+VMD-File ::= SEQUENCE {
+    executiveFunction   [0] IMPLICIT ApplicationReference,
+    vendorName          [1] MMSString,
+    modelName           [2] MMSString,
+    revision            [3] MMSString,
+    abstractSyntaxes    [4] IMPLICIT OBJECT IDENTIFIER,
+    -- no TRANSACTIONs,
+    -- no APPLICATION-ASSOCIATIONs,
+    accessControl       [5] IMPLICIT Access-Control-List-instance,
+    logicalStatus       [6] IMPLICIT LogicalStatus,
+    capabilities        [7] IMPLICIT SEQUENCE OF MMSString,
+    physicalStatus      [8] IMPLICIT PhysicalStatus,
+    local-detail        [9] IMPLICIT BIT STRING,
+    accessControlLists  [10] IMPLICIT SEQUENCE OF Access-Control-List-instance,
+    domains             [11] IMPLICIT SEQUENCE OF Domain-instance,
+    programInvocations  [12] IMPLICIT SEQUENCE OF Program-Invocation-instance,
+    unitControls        [13] IMPLICIT SEQUENCE OF Unit-Control-instance,
+    -- Deviations from ISO 9506: Just use {} to encode the NULL variants.
+    -- This will produce the same encoding if using BER / DER / CER.
+    unnamedVariables    [14] IMPLICIT SEQUENCE OF Unnamed-Variable-instance,
+    -- unnamedVariables    [14] IMPLICIT NULL,
+    namedVariables      [15] IMPLICIT SEQUENCE OF Named-Variable-instance,
+    -- namedVariables      [15] IMPLICIT NULL,
+    namedVariableLists  [16] IMPLICIT SEQUENCE OF Named-Variable-List-instance,
+    -- namedVariableLists  [16] IMPLICIT NULL,
+    namedTypes          [17] IMPLICIT SEQUENCE OF Named-Type-instance,
+    -- namedTypes          [17] IMPLICIT NULL,
+    dataExchanges       [18] IMPLICIT SEQUENCE OF Data-Exchange-instance,
+    semaphores          [19] IMPLICIT SEQUENCE OF Semaphore-instance,
+    operatorStations    [20] IMPLICIT SEQUENCE OF Operator-Station-instance,
+    eventConditions     [21] IMPLICIT SEQUENCE OF Event-Condition-instance,
+    eventActions        [22] IMPLICIT SEQUENCE OF Event-Action-instance,
+    eventEnrollments    [23] IMPLICIT SEQUENCE OF Event-Enrollment-instance,
+    eventConditionLists [24] IMPLICIT SEQUENCE OF Event-Condition-List-instance,
+    -- eventConditionLists [24] IMPLICIT NULL,
+    journals            [25] IMPLICIT SEQUENCE OF Journal-instance,
+    ...,
+    selected-Program-Invocation   CHOICE {
+        selectedProgram [26] IMPLICIT Program-Invocation-instance,
+        noneSelected    [27] IMPLICIT NULL
+    }
+}
+
+Access-Control-List-instance ::= SEQUENCE {
+    name                   [0] IMPLICIT Identifier,
+    definition             CHOICE {
+        reference              [1] IMPLICIT OBJECT IDENTIFIER,
+        details                [2] IMPLICIT SEQUENCE {
+            accessControl
+                [3] IMPLICIT Access-Control-List-instance,
+            readAccessCondition
+                [4] AccessCondition OPTIONAL,
+            storeAccessCondition
+                [5] AccessCondition OPTIONAL,
+            writeAccessCondition
+                [6] AccessCondition OPTIONAL,
+            loadAccessCondition
+                [7] AccessCondition OPTIONAL,
+            executeAccessCondition
+                [8] AccessCondition OPTIONAL,
+            deleteAccessCondition
+                [9] AccessCondition OPTIONAL,
+            editAccessCondition
+                [10] AccessCondition OPTIONAL,
+    --
+    -- The following fields are used to record lists of objects placed
+    -- under the control of this ACCESS-CONTROL-LIST object.
+    -- They will be referred to collectively as the Controlled Object Lists
+    --
+            accessControlLists
+                [11] IMPLICIT SEQUENCE OF Access-Control-List-instance,
+            domains
+                [12] IMPLICIT SEQUENCE OF Domain-instance,
+            programInvocations
+                [13] IMPLICIT SEQUENCE OF Program-Invocation-instance,
+            unitControls
+                [14] IMPLICIT SEQUENCE OF Unit-Control-instance
+    ,         unnamedVariables
+                [15] IMPLICIT SEQUENCE OF Unnamed-Variable-instance
+    ,         unnamedVariables
+                [15] IMPLICIT NULL
+    ,         namedVariables
+                [16] IMPLICIT SEQUENCE OF Named-Variable-instance
+    ,         namedVariableLists
+                [17] IMPLICIT SEQUENCE OF Named-Variable-List-instance
+    ,         namedVariableLists
+                [17] IMPLICIT NULL
+    ,         namedTypes
+                [18] IMPLICIT SEQUENCE OF Named-Type-instance
+    ,         namedVariables
+                [16] IMPLICIT NULL,
+            namedVariableLists
+                [17] IMPLICIT NULL,
+            namedTypes
+                [18] IMPLICIT NULL
+    ,         dataExchanges
+                [19] IMPLICIT SEQUENCE OF Data-Exchange-instance,
+            semaphores
+                [20] IMPLICIT SEQUENCE OF Semaphore-instance,
+            operatorStations
+                [21] IMPLICIT SEQUENCE OF Operator-Station-instance,
+            eventConditions
+                [22] IMPLICIT SEQUENCE OF Event-Condition-instance,
+            eventActions
+                [23] IMPLICIT SEQUENCE OF Event-Action-instance,
+            eventEnrollments
+                [24] IMPLICIT SEQUENCE OF Event-Enrollment-instance,
+            journals
+                [25] IMPLICIT SEQUENCE OF Journal-instance,
+            ...
+    ,         eventConditionLists
+                [26] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+            }  }  }
+
+Domain-instance ::= SEQUENCE {
+    name                [0] IMPLICIT Identifier,
+    definition          CHOICE {
+        reference           [1] IMPLICIT OBJECT IDENTIFIER,
+        details             [2] IMPLICIT SEQUENCE {
+            capabilities        [3] IMPLICIT SEQUENCE OF MMSString,
+            state               [4] IMPLICIT DomainState,
+    -- The aAssociation is not included
+            accessControl
+                [5] IMPLICIT Access-Control-List-instance,
+    sharable                   [6] IMPLICIT BOOLEAN,
+    programInvocations
+                [7] IMPLICIT SEQUENCE OF Program-Invocation-instance
+    -- uploadsInProgress  is not included
+    ,  namedVariables
+                [8] IMPLICIT SEQUENCE OF Named-Variable-instance
+    ,  namedVariableLists
+                [9] IMPLICIT SEQUENCE OF Named-Variable-List-instance
+    ,  namedVariableLists
+                [9] IMPLICIT NULL
+    ,  namedTypes
+                [10] IMPLICIT SEQUENCE OF Named-Type-instance
+    ,  namedVariables
+                [8] IMPLICIT NULL,
+    namedVariableLists
+                [9] IMPLICIT NULL,
+    namedTypes
+                [10] IMPLICIT NULL
+    ,  eventConditions
+                [11] IMPLICIT SEQUENCE OF Event-Condition-instance,
+    eventActions
+                [12] IMPLICIT SEQUENCE OF Event-Action-instance,
+    eventEnrollments
+                [13] IMPLICIT SEQUENCE OF Event-Enrollment-instance
+    ,  eventConditionLists
+                [14] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+            }  }  }
+
+Program-Invocation-instance ::= SEQUENCE {
+    name                   [0] IMPLICIT Identifier,
+    definition             CHOICE {
+        reference           [1] IMPLICIT OBJECT IDENTIFIER,
+        details                [2] IMPLICIT SEQUENCE {
+            programInvocationState
+                [3] IMPLICIT ProgramInvocationState,
+            domains
+                [4] IMPLICIT SEQUENCE OF Domain-instance,
+            accessControl
+                [5] IMPLICIT SEQUENCE OF Access-Control-List-instance,
+            reusable
+                [6] IMPLICIT BOOLEAN,
+            monitor
+                [7] IMPLICIT BOOLEAN,
+    -- The following three fields shall all be present if the value of
+    -- monitor is true.
+    -- If present, the &name field of each object instance
+    -- shall have a value equal to the
+    -- &name field of this instance of the PROGRAM-INVOCATION.
+        eventCondition
+                [8] IMPLICIT SEQUENCE OF Event-Condition-instance OPTIONAL,
+        eventAction
+                [9] IMPLICIT SEQUENCE OF Event-Action-instance OPTIONAL,
+        eventEnrollment
+                [10] IMPLICIT SEQUENCE OF Event-Enrollment-instance OPTIONAL,
+        executionArgument
+                [11] MMSString,
+        ...
+    ,      control
+                [12] IMPLICIT Control-State,
+        controlling-Program-Invocation
+                [13] IMPLICIT Program-Invocation-instance,
+    -- The following field shall be present
+    -- if and only if the value of the &control field is controlling.
+        controlled-Program-Invocations
+                [14] IMPLICIT SEQUENCE OF Program-Invocation-instance OPTIONAL
+            }  }  }
+
+Unit-Control-instance ::= SEQUENCE {
+    name             [0] IMPLICIT Identifier,
+    definition       CHOICE {
+        reference        [1] IMPLICIT OBJECT IDENTIFIER,
+        details             [2] IMPLICIT SEQUENCE {
+            accessControl
+                [3] IMPLICIT Access-Control-List-instance,
+            domains
+                [4] IMPLICIT SEQUENCE OF Domain-instance,
+            programInvocations
+                [5] IMPLICIT SEQUENCE OF Program-Invocation-instance
+            }  }  }
+
+Unnamed-Variable-instance ::= SEQUENCE {
+    address             [0] Address,
+    accessControl       [1] IMPLICIT Access-Control-List-instance,
+    typeDescription     [2] TypeDescription
+}
+
+Nullable-Unnamed-Variable-instance ::= SEQUENCE {
+    address             [0] Address OPTIONAL,
+    accessControl       [1] IMPLICIT Access-Control-List-instance OPTIONAL,
+    typeDescription     [2] TypeDescription OPTIONAL
+}
+
+Named-Variable-Definition-Details ::= SEQUENCE {
+    accessControl   [3] IMPLICIT Access-Control-List-instance,
+    typeDescription [4] TypeDescription,
+    -- NOTE: Deviation from the original ISO 9506, but should
+    -- produce the same exact encoding.
+    address         [5] IMPLICIT MaybeAddress OPTIONAL,
+    meaning         [6] IMPLICIT VisibleString OPTIONAL
+}
+
+Named-Variable-Definition ::= CHOICE {
+    reference       [1] IMPLICIT OBJECT IDENTIFIER,
+    details         [2] IMPLICIT Named-Variable-Definition-Details
+}
+
+Named-Variable-instance ::= SEQUENCE {
+    name            [0] ObjectName,
+    definition      Named-Variable-Definition
+}
+
+Nullable-Named-Variable-instance ::= SEQUENCE {
+    name            [0] ObjectName OPTIONAL,
+    definition      Named-Variable-Definition OPTIONAL
+}
+
+Named-Variable-List-instance ::= SEQUENCE {
+    name                [0] ObjectName,
+    definition          CHOICE {
+        reference           [1] IMPLICIT OBJECT IDENTIFIER,
+        details                [2] IMPLICIT SEQUENCE {
+            accessControl
+                [3] IMPLICIT Access-Control-List-instance,
+            listOfVariables
+                [4] IMPLICIT SEQUENCE OF Variable-List-Item-instance
+            }  }  }
+
+Variable-List-Item-instance  ::= SEQUENCE {
+    -- NOTE: The following two non-comment lines are deviations from ISO 9506.
+    -- Types were changed so no non-standard conditional syntax in the ASN.1
+    -- is needed. Encode NULL as the empty sequence {}, which should produce
+    -- the same exact encoding.
+    unnamedItem      [0] IMPLICIT Nullable-Unnamed-Variable-instance OPTIONAL,
+    namedItem        [1] IMPLICIT Nullable-Named-Variable-instance OPTIONAL,
+    alternateAccess  [2] IMPLICIT AlternateAccess OPTIONAL
+}
+
+Named-Type-instance ::= SEQUENCE {
+    name                [0] ObjectName,
+    definition          CHOICE {
+        reference           [1] IMPLICIT OBJECT IDENTIFIER,
+        details             [2] IMPLICIT SEQUENCE {
+            accessControl    [3] IMPLICIT Access-Control-List-instance,
+            typeDescription  [4] TypeDescription,
+            meaning          [5] IMPLICIT VisibleString OPTIONAL
+        }  }  }
+
+Data-Exchange-instance ::= SEQUENCE {
+    name                [0] IMPLICIT Identifier,
+    definition          CHOICE {
+        reference           [1] IMPLICIT OBJECT IDENTIFIER,
+        details             [2] IMPLICIT SEQUENCE {
+            accessControl       [3] IMPLICIT Access-Control-List-instance,
+            request             [4] IMPLICIT SEQUENCE OF TypeDescription,
+            response            [5] IMPLICIT SEQUENCE OF TypeDescription,
+            linked              [6] IMPLICIT BOOLEAN,
+    -- The following attribute shall appear if an only if the value of &linked is true.
+            programInvocation   [7] IMPLICIT Program-Invocation-instance OPTIONAL
+            }  }  }
+
+Semaphore-instance ::= SEQUENCE {
+    name             [0] IMPLICIT Identifier,
+    definition       CHOICE {
+        reference        [1] IMPLICIT OBJECT IDENTIFIER,
+        details          [2] IMPLICIT SEQUENCE {
+            accessControl    [3] IMPLICIT Access-Control-List-instance,
+            class            [4] IMPLICIT ENUMERATED {
+                token,
+                pool },
+    -- If the value of &class is token, the following field shall appear
+            numberOfTokens   [5] IMPLICIT INTEGER OPTIONAL,
+    -- If the value of &class is pool, the following field shall appear
+            namedTokens      [6] IMPLICIT SEQUENCE OF VisibleString OPTIONAL,
+            eventCondition   [7] IMPLICIT Event-Condition-instance
+            }  }  }
+
+Operator-Station-instance ::= SEQUENCE {
+    name             [0] IMPLICIT Identifier,
+    definition       CHOICE {
+        reference        [1] IMPLICIT OBJECT IDENTIFIER,
+        details          [2] IMPLICIT SEQUENCE {
+            accessControl    [3] IMPLICIT Access-Control-List-instance,
+            stationType      [4] IMPLICIT ENUMERATED {
+                entry,
+                display,
+                entry-display }
+            }  }  }
+
+Event-Condition-instance ::= SEQUENCE {
+    name                [0] ObjectName,
+    definition          CHOICE {
+        reference           [1] IMPLICIT OBJECT IDENTIFIER,
+        details             [2] IMPLICIT SEQUENCE {
+            accessControl       [3] IMPLICIT Access-Control-List-instance,
+            ecClass             [4] IMPLICIT EC-Class,
+            ecState             [5] IMPLICIT EC-State,
+            priority            [6] IMPLICIT Priority,
+            severity            [7] IMPLICIT Severity,
+            eventEnrollments    [8] IMPLICIT SEQUENCE OF Event-Enrollment-instance,
+    -- The following fields shall be present
+    -- if and only if the value of &ecClass is monitored.
+            enabled             [9] IMPLICIT BOOLEAN OPTIONAL,
+            alarmSummaryReports [10] IMPLICIT BOOLEAN OPTIONAL,
+            monitoredVariable   CHOICE {
+                named               [11] IMPLICIT Named-Variable-instance,
+                unnamed             [12] IMPLICIT Unnamed-Variable-instance,
+                unspecified         [13] IMPLICIT NULL } OPTIONAL,
+            evaluationInterval  [14] IMPLICIT INTEGER OPTIONAL,
+            ...
+    ,         displayEnhancement  CHOICE {
+                text                [15] MMSString
+    ,            number              [16] IMPLICIT INTEGER
+    ,            none                [17] IMPLICIT NULL
+                },
+            group-Priority-Override    CHOICE {
+                priority            [18] IMPLICIT Priority,
+                undefined           [19] IMPLICIT NULL
+                } OPTIONAL,
+            referencingEventConditionLists
+                    [20] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+            }  }  }
+
+Event-Action-instance ::= SEQUENCE {
+    name                   [0] ObjectName,
+    definition             CHOICE {
+        reference           [1] IMPLICIT OBJECT IDENTIFIER,
+        details                [2] IMPLICIT SEQUENCE {
+            accessControl          [3] IMPLICIT Access-Control-List-instance,
+            confirmedServiceRequest    [4] ConfirmedServiceRequest,
+            modifiers              [5] IMPLICIT SEQUENCE OF Modifier,
+            eventEnrollments       [6] IMPLICIT SEQUENCE OF Event-Enrollment-instance
+            }  }  }
+
+Event-Enrollment-instance ::= SEQUENCE {
+    name                   [0] ObjectName,
+    definition             CHOICE {
+        reference              [1] IMPLICIT OBJECT IDENTIFIER,
+        details                [2] IMPLICIT SEQUENCE {
+            accessControl          [3] IMPLICIT Access-Control-List-instance,
+            eeClass                [4] IMPLICIT EE-Class ,
+            eventCondition         [5] IMPLICIT Event-Condition-instance,
+            ecTransitions          [6] IMPLICIT Transitions,
+    -- The following parameter is present if and only if the
+    -- value of &eeClass is modifier.
+            remainingDelay         CHOICE {
+                time                   [7] IMPLICIT INTEGER,
+                forever                [8] IMPLICIT NULL } OPTIONAL,
+    -- The remaining parameters are present if and only if the
+    -- value of &eeClass is notification.
+            eventAction            [9] IMPLICIT Event-Action-instance OPTIONAL,
+            duration               [10] IMPLICIT EE-Duration OPTIONAL,
+            clientApplication      [11] IMPLICIT ApplicationReference OPTIONAL,
+            aaRule                 [12] IMPLICIT AlarmAckRule OPTIONAL,
+            ...
+    ,         displayEnhancement     CHOICE {
+                text                   [13] MMSString
+    ,            number                 [14] IMPLICIT INTEGER
+    ,            none                   [15] IMPLICIT NULL
+                }
+            }  }  }
+
+Event-Condition-List-instance ::= SEQUENCE {
+    name                [0] ObjectName,
+    definition          CHOICE {
+    reference              [1] IMPLICIT OBJECT IDENTIFIER,
+    details                [2] IMPLICIT SEQUENCE {
+        accessControl
+            [3] IMPLICIT Access-Control-List-instance,
+        eventConditions
+            [4] IMPLICIT SEQUENCE OF Event-Condition-instance
+    ,      eventConditionLists
+            [5] IMPLICIT SEQUENCE OF Event-Condition-List-instance,
+        referencingEventConditionLists
+            [6] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+            }  }  }
+
+Journal-instance ::= SEQUENCE {
+   name                [0] ObjectName,
+   definition          CHOICE {
+       reference           [1] IMPLICIT OBJECT IDENTIFIER,
+       details             [2] IMPLICIT SEQUENCE {
+          accessControl       [3] IMPLICIT Access-Control-List-instance,
+          entries             [4] IMPLICIT SEQUENCE OF Journal-Entry-instance
+          }  }  }
+
+Journal-Entry-instance ::= SEQUENCE {
+    journal                [0] IMPLICIT Journal-instance,
+    entry                  [1] IMPLICIT OCTET STRING,
+    clientApplication      [2] IMPLICIT ApplicationReference,
+    timeStamp              [3] IMPLICIT TimeOfDay,
+    orderOfReceipt         [4] IMPLICIT INTEGER,
+    informationType        [5] IMPLICIT ENUMERATED {
+        annotation,
+        event-data,
+        data },
+    -- The following attribute shall appear if and only if the
+    -- value of &informationType is annotation.
+    textComment            [6] MMS255String OPTIONAL,
+    --The following attribute shall appear if and only if the
+    -- value of &informationType is event-data.
+    eventTransitionRecord  [7] IMPLICIT SEQUENCE {
+        name                   [8] ObjectName,
+        currentState           [9] IMPLICIT EC-State
+        } OPTIONAL,
+    -- The following attribute shall appear if and only if the
+    -- value of &informationType is data or event-data.
+    journalVariables       [10] IMPLICIT SEQUENCE OF SEQUENCE {
+            variableTag            [11] MMS255String,
+            valueSpecification     [12] Data
+            } OPTIONAL
+}
+
+Service-and-Parameter-CBBs ::= SEQUENCE {
+    services-Client            [0] IMPLICIT ServiceSupportOptions,
+    services-Server            [1] IMPLICIT ServiceSupportOptions,
+    parameters                 [2] IMPLICIT ParameterSupportOptions,
+    nest                       [3] IMPLICIT INTEGER,
+    extendedServices-Client    [4] IMPLICIT NullableAdditionalSupportOptions,
+    extendedServices-Server    [5] IMPLICIT NullableAdditionalSupportOptions,
+    extendedParameters         [6] IMPLICIT NullableAdditionalCBBOptions,
+    generalManagement          [7] IMPLICIT GeneralManagementParameters,
+    vMDSupport                 [8] IMPLICIT VMDSupportParameters,
+    domainManagement           [9] IMPLICIT DomainManagementParameters,
+    programInvocation          [10] IMPLICIT ProgramInvocationManagementParameters,
+    variableAccess             [11] IMPLICIT VariableAccessParameters,
+    dataParameters             [12] IMPLICIT DataParameters,
+    semaphoreManagement        [13] IMPLICIT SemaphoreManagementParameters,
+    operatorCommunication      [14] IMPLICIT OperatorCommunicationParameters,
+    errors                     [15] IMPLICIT ErrorParameters,
+    fileManagement             [16] IMPLICIT FileManagementParameters
+}
+
+GeneralManagementParameters ::= SEQUENCE {
+    localDetail            [0] MMSString,
+    supportForTime         [1] IMPLICIT SEQUENCE {
+        timeOfDay              [2] IMPLICIT BOOLEAN,
+        timeSequence           [3] IMPLICIT BOOLEAN
+        },
+    granularityOfTime      [4] IMPLICIT INTEGER
+}
+
+VMDSupportParameters ::=     SEQUENCE {
+   localDetail                [0] MMSString,
+   extendedDerivation         [1] MMSString
+             -- method used to perform extended derivation
+}
+
+DomainManagementParameters ::= SEQUENCE {
+   loadDataOctet                 [0] MMSString,
+       -- description of the format of Load Data if the octet string form is used
+   loadDataSyntax                [1] IMPLICIT SEQUENCE OF OBJECT IDENTIFIER,
+       -- identifier of the Abstract Syntaxes used
+   maxUploads                    [2] IMPLICIT INTEGER
+}
+
+ProgramInvocationManagementParameters ::= SEQUENCE {
+   executionArgMaxSize           [0] IMPLICIT INTEGER,
+   executionArgParseRules        [1] MMSString,
+   executionArgSyntaxes          [2] IMPLICIT SEQUENCE OF OBJECT IDENTIFIER,
+   programLoction                [3] MMSString,
+       -- syntax of the program Location notation
+   stepMode                      [4] IMPLICIT BOOLEAN
+       -- if true, step Mode is supported
+}
+
+VariableAccessParameters ::= SEQUENCE {
+   uninterruptibleAccess      [0] MMSString,
+        -- conditions under which it is guaranteed
+   singleMode                 [1] IMPLICIT BOOLEAN,
+   unnamedMode                [2] IMPLICIT BOOLEAN
+}
+
+DataParameters ::= SEQUENCE {
+    bit-string                 [0] IMPLICIT INTEGER OPTIONAL,
+    integer                       [1] IMPLICIT INTEGER OPTIONAL,
+    unsigned                   [2] IMPLICIT INTEGER OPTIONAL,
+    floating-point             [3] IMPLICIT SEQUENCE {
+        total                      [4] IMPLICIT INTEGER,
+        exponent                   [5] IMPLICIT INTEGER } OPTIONAL,
+    octet-string               [10] IMPLICIT INTEGER OPTIONAL,
+    visible-string             [11] IMPLICIT INTEGER OPTIONAL,
+    binary-time                [12] IMPLICIT BOOLEAN OPTIONAL,
+    bcd                        [13] IMPLICIT INTEGER OPTIONAL,
+    mmsString                  [14] IMPLICIT INTEGER OPTIONAL
+}
+
+SemaphoreManagementParameters ::= SEQUENCE {
+    algorithm           [0] IMPLICIT MMSString
+    -- method of processing the &priority field
+}
+
+OperatorCommunicationParameters ::= SEQUENCE {
+   input-time-out         [0] IMPLICIT INTEGER
+}
+
+ErrorParameters ::= SEQUENCE {
+    additionalCode         [0] MMSString,
+    additionalDetial       [1] IMPLICIT SEQUENCE {
+        size                   [2] IMPLICIT INTEGER,
+        syntax                 [3] MMSString
+    }
+}
+
+FileManagementParameters ::= SEQUENCE {
+    fileName         [0] MMSString
+}
+
+END
