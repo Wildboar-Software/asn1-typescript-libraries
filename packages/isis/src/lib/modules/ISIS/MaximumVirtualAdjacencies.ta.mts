@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MaximumVirtualAdjacencies
  * @description
  *
+ * Maximum number of virtual adjacencies that may be created to repair a
+ * partitioned Level 1 area. Resource-limiting: implementations may refuse to
+ * decrease it below the number currently in use while the object is enabled.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.10, 11.2.2.3 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

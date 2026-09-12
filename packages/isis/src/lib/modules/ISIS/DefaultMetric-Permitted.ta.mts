@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DefaultMetric_Permitted
  * @description
  *
+ * Permitted values for a default-metric attribute: 1 through `maxLinkMetric`
+ * (63). Zero is excluded because the default metric is mandatory on a circuit.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.2, 11.2.5.1 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

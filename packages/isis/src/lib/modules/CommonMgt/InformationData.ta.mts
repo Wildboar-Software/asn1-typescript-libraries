@@ -19,6 +19,11 @@ import {
  * @summary InformationData
  * @description
  *
+ * Optional additional parameters of a `communicationsInformation` event, and
+ * the `informationData` log-record attribute.
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.1, E.1.9 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

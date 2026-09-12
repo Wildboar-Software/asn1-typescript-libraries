@@ -15,6 +15,10 @@ import {
  * @summary l1IntermediateSystemPriority_Default
  * @description
  *
+ * Default LAN Level 1 Designated IS priority: 64 (mid-range of 1–127).
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.5.2 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

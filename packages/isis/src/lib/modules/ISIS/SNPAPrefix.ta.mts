@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SNPAPrefix
  * @description
  *
+ * Prefix concatenated with bits extracted from the destination NSAP DSP (those
+ * indicated by 1-bits in `sNPAMask`) to form the next-hop SNPA when
+ * `mappingType` is `extractDSP`.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.1, 11.2.12.2 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

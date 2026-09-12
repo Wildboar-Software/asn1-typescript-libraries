@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary IntermediateSystemPriority
  * @description
  *
+ * Priority for becoming LAN Designated Intermediate System (1–127; higher
+ * wins). Used as `l1IntermediateSystemPriority` /
+ * `l2IntermediateSystemPriority` on a broadcast circuit and as
+ * `priorityOfNeighbour` on a broadcast IS adjacency. Default is 64.
+ *
+ * (ISO/IEC 10589:2002 clauses 9.5, 11.2.5.9 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

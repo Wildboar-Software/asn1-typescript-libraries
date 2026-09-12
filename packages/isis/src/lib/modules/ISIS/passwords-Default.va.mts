@@ -22,6 +22,10 @@ import {
  * @summary passwords_Default
  * @description
  *
+ * Default receive-password set: empty (no authentication check).
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.3 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

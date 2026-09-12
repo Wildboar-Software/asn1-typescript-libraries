@@ -15,6 +15,10 @@ import { isisoi } from '../ISIS/isisoi.va.mjs';
  * @summary noi
  * @description
  *
+ * GDMO notification registration arc `{isisoi notification(10)}`.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

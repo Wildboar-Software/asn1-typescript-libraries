@@ -15,6 +15,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MappingType
  * @description
  *
+ * How the next-hop SNPA for a reachable address prefix is derived at a domain
+ * boundary. Selects the `explicitSNPA-P` or `extractDSP-P` conditional package.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.1, 11.2.12 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +39,11 @@ export enum _enum_for_MappingType {
  * @summary MappingType
  * @description
  *
+ * How the next-hop SNPA for a reachable address prefix is derived at a domain
+ * boundary. Selects the `explicitSNPA-P` or `extractDSP-P` conditional package.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.1, 11.2.12 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,6 +58,11 @@ export type MappingType = _enum_for_MappingType;
  * @summary MappingType
  * @description
  *
+ * How the next-hop SNPA for a reachable address prefix is derived at a domain
+ * boundary. Selects the `explicitSNPA-P` or `extractDSP-P` conditional package.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.1, 11.2.12 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,6 +75,12 @@ export const MappingType = _enum_for_MappingType;
 
 /**
  * @summary MappingType_none
+ * @description
+ *
+ * No SNPA mapping.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +97,13 @@ export const none: MappingType =
 
 /**
  * @summary MappingType_explicit
+ * @description
+ *
+ * SNPA address or set of addresses is pre-configured on the reachable address
+ * (`sNPAAddresses`).
+ *
+ * (ISO/IEC 10589:2002 clause 8.1).
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +120,13 @@ export const explicit: MappingType =
 
 /**
  * @summary MappingType_extractIDI
+ * @description
+ *
+ * SNPA is embedded in the IDI of the destination NSAP (ISO 8348 encoding).
+ * Usable with X.121, F.69, E.163 and E.164 IDIs.
+ *
+ * (ISO/IEC 10589:2002 clause 8.1).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +143,13 @@ export const extractIDI: MappingType =
 
 /**
  * @summary MappingType_extractDSP
+ * @description
+ *
+ * All or a suffix of the SNPA is taken from the DSP using `sNPAMask` and then
+ * prefixed with `sNPAPrefix`.
+ *
+ * (ISO/IEC 10589:2002 clause 8.1).
+ *
  * @constant
  * @type {number}
  */

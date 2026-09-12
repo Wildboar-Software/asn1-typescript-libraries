@@ -15,6 +15,14 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary manualAddressDroppedFromArea
  * @description
  *
+ * `specificProblems` value when a `manualAreaAddresses` entry is omitted from
+ * `areaAddresses` / `partitionAreaAddresses` because more than
+ * `maximumAreaAddresses` distinct addresses exist. The dropped address is
+ * `notificationAreaAddress`. Generated once per drop, not while dropped.
+ * probableCause `configurationOrCustomisationError`; severity Major.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.1.5 and 11.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

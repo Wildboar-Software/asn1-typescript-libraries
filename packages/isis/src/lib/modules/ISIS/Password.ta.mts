@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Password
  * @description
  *
+ * Authentication password (0–254 octets). Used as a transmit password in Level
+ * 1 or Level 2 LSP/SNP PDUs (`areaTransmitPassword`, `domainTransmitPassword`)
+ * or in IIH PDUs (`circuitTransmitPassword`). Empty default means no password.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.3, 11.2.5.8 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

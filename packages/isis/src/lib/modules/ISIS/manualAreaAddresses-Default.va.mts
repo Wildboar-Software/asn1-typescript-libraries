@@ -22,6 +22,11 @@ import {
  * @summary manualAreaAddresses_Default
  * @description
  *
+ * Default `manualAreaAddresses`: empty set. At least one area address must be
+ * supplied in operation; the set cannot exceed `maximumAreaAddresses` members.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.1.5, 11.2.4 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

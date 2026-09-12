@@ -15,6 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AdjacencyState
  * @description
  *
+ * State of an adjacency managed object (not the X.731 operational state).
+ * `Down` is reported in the stateChange notification when the adjacency is
+ * deleted.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.2, 11.2.6 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -34,6 +40,12 @@ export enum _enum_for_AdjacencyState {
  * @summary AdjacencyState
  * @description
  *
+ * State of an adjacency managed object (not the X.731 operational state).
+ * `Down` is reported in the stateChange notification when the adjacency is
+ * deleted.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.2, 11.2.6 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -48,6 +60,12 @@ export type AdjacencyState = _enum_for_AdjacencyState;
  * @summary AdjacencyState
  * @description
  *
+ * State of an adjacency managed object (not the X.731 operational state).
+ * `Down` is reported in the stateChange notification when the adjacency is
+ * deleted.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.2, 11.2.6 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -60,6 +78,13 @@ export const AdjacencyState = _enum_for_AdjacencyState;
 
 /**
  * @summary AdjacencyState_initializing
+ * @description
+ *
+ * Adjacency exists but has not yet come up (for example after receiving an ISH
+ * while neighbour type is still unknown).
+ *
+ * (ISO/IEC 10589:2002 clause 8.2.2).
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +101,12 @@ export const initializing: AdjacencyState =
 
 /**
  * @summary AdjacencyState_up
+ * @description
+ *
+ * Adjacency is up and may be used for forwarding.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.2 and 11.2.6.4).
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +123,12 @@ export const up: AdjacencyState =
 
 /**
  * @summary AdjacencyState_failed
+ * @description
+ *
+ * Adjacency failed to initialise.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +145,12 @@ export const failed: AdjacencyState =
 
 /**
  * @summary AdjacencyState_down
+ * @description
+ *
+ * Adjacency is down; reported when the adjacency is deleted.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.6).
+ *
  * @constant
  * @type {number}
  */

@@ -15,6 +15,12 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @summary fupoi
  * @description
  *
+ * GMI functional-unit-package arc `{cmoi functionalUnitPackage(1)}`.
+ * `informationEventReports` is assigned under this arc for negotiating the
+ * communications-information functional unit.
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.13 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

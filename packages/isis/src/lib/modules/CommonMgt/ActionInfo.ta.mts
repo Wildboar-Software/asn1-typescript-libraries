@@ -19,6 +19,10 @@ import {
  * @summary ActionInfo
  * @description
  *
+ * Confirmed-action argument: a set of `Parameter` values.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

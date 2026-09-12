@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ResponseCode
  * @description
  *
+ * Action-reply response code (OBJECT IDENTIFIER). Specific values are
+ * registered under `responseCode`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

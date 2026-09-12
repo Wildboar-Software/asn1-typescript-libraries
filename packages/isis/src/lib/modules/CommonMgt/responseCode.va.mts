@@ -15,6 +15,11 @@ import { proi } from '../CommonMgt/proi.va.mjs';
  * @summary responseCode
  * @description
  *
+ * Arc under which action response-code values are registered: `{proi
+ * responseCode(1001)}`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

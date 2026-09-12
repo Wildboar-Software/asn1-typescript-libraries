@@ -19,6 +19,11 @@ import {
  * @summary sNPAMask_Default
  * @description
  *
+ * Default DSP bit-mask for `extractDSP` SNPA derivation: empty (no bits
+ * selected).
+ *
+ * (ISO/IEC 10589:2002 clauses 8.1, 11.2.12.2 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

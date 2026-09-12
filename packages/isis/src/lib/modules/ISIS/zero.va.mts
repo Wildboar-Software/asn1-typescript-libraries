@@ -15,6 +15,10 @@ import {
  * @summary zero
  * @description
  *
+ * INTEGER value 0 from the ISIS ASN.1 module.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

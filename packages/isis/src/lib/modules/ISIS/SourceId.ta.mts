@@ -16,6 +16,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary SourceId
  * @description
  *
+ * Source identifier carried in notifications about a received PDU or LSP (for
+ * example ID-length mismatch, maximum-area-addresses mismatch, or the LSP that
+ * precipitated database overload). For an LSP this is the Source ID portion of
+ * the LSP ID.
+ *
+ * (ISO/IEC 10589:2002 clauses 9.8, 11.2.1.3 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

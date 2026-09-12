@@ -22,6 +22,11 @@ import {
  * @summary neighbourSNPAAddress_Default
  * @description
  *
+ * Default neighbour SNPA on a static circuit: DTE-address type with empty
+ * address octets.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.5.5 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

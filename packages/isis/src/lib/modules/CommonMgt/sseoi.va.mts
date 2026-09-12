@@ -15,6 +15,10 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @summary sseoi
  * @description
  *
+ * GMI standard-specific extensions arc `{cmoi standardSpecificExtensions(0)}`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

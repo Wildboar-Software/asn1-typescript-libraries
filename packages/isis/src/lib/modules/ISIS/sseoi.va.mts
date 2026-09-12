@@ -15,6 +15,11 @@ import { isisoi } from '../ISIS/isisoi.va.mjs';
  * @summary sseoi
  * @description
  *
+ * GDMO standard-specific extensions arc `{isisoi
+ * standardSpecificExtensions(0)}`. Parent of `se` (specificProblems).
+ *
+ * (ISO/IEC 10589:2002 clause 11.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

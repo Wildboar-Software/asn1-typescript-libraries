@@ -15,6 +15,12 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary rejectedAdjacency
  * @description
  *
+ * `specificProblems` value when a new adjacency cannot be created for lack of
+ * resources. Neighbour ID is `notificationSystemId`. probableCause
+ * `resourceAtOrNearingCapacity`; severity Major.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

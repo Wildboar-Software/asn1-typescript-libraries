@@ -15,6 +15,12 @@ import {
  * @summary externalDomain_Default
  * @description
  *
+ * Default of `externalDomain`: TRUE, meaning intra-domain IS-IS PDUs are
+ * neither transmitted nor interpreted on the circuit (typical for a
+ * domain-boundary linkage that uses reachable addresses instead).
+ *
+ * (ISO/IEC 10589:2002 clauses 8.1, 11.2.5.9 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

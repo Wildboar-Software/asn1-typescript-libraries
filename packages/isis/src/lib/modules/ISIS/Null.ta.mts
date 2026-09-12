@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Null
  * @description
  *
+ * NULL syntax for GDMO specific-error parameters `constraintViolation` (REPLACE
+ * refused, e.g. while enabled) and `reservedName` (CREATE using a name reserved
+ * for automatic adjacencies).
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.1.3 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

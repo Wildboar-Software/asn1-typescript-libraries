@@ -19,6 +19,14 @@ import {
  * @summary completeSNPInterval_Default
  * @description
  *
+ * Default interval between Complete Sequence Numbers PDUs originated by a
+ * Designated IS on a broadcast circuit: 10 s.
+ *
+ * GMI `Timer` encoding: value = mantissa × 10^exponent seconds (ISO/IEC
+ * 10589:2002 Annex E.1.9).
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.4 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

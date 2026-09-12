@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ProtocolMachineId
  * @description
  *
+ * Naming attribute of a connectionless or connection-mode protocol machine
+ * (`clProtocolMachineId` / `coProtocolMachineId`).
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.9 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

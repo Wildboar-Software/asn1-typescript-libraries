@@ -15,6 +15,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary VirtualLinkChange
  * @description
  *
+ * `notificationVirtualLinkChange` payload: whether a Level 1 partition-repair
+ * virtual link between two Level 2 ISs was created or deleted. Reported with
+ * `notificationVirtualLinkAddress` (remote NET). Relative order per virtual
+ * link must be preserved.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.10, 11.2.2.3 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +39,13 @@ export enum _enum_for_VirtualLinkChange {
  * @summary VirtualLinkChange
  * @description
  *
+ * `notificationVirtualLinkChange` payload: whether a Level 1 partition-repair
+ * virtual link between two Level 2 ISs was created or deleted. Reported with
+ * `notificationVirtualLinkAddress` (remote NET). Relative order per virtual
+ * link must be preserved.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.10, 11.2.2.3 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +60,13 @@ export type VirtualLinkChange = _enum_for_VirtualLinkChange;
  * @summary VirtualLinkChange
  * @description
  *
+ * `notificationVirtualLinkChange` payload: whether a Level 1 partition-repair
+ * virtual link between two Level 2 ISs was created or deleted. Reported with
+ * `notificationVirtualLinkAddress` (remote NET). Relative order per virtual
+ * link must be preserved.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.10, 11.2.2.3 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,6 +79,12 @@ export const VirtualLinkChange = _enum_for_VirtualLinkChange;
 
 /**
  * @summary VirtualLinkChange_deleted
+ * @description
+ *
+ * Virtual link was deleted.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.2.3).
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +101,12 @@ export const deleted: VirtualLinkChange =
 
 /**
  * @summary VirtualLinkChange_created
+ * @description
+ *
+ * Virtual link was created.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.2.3).
+ *
  * @constant
  * @type {number}
  */

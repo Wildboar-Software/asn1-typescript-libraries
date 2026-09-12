@@ -15,6 +15,10 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @summary aoi
  * @description
  *
+ * GMI attribute registration arc `{cmoi attribute(7)}`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

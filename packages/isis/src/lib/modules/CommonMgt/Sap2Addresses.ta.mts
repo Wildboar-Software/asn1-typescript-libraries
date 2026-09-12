@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Sap2Addresses
  * @description
  *
+ * Set of addresses of a SAP (`sap2Addresses` attribute).
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.9 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

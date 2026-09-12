@@ -20,6 +20,12 @@ import {
  * @summary ProviderObjects
  * @description
  *
+ * Set of local distinguished names of provider-side objects (`localSapNames`,
+ * `providerEntityNames`, `underlyingConnectionNames`). Only the
+ * localDistinguishedName form of ObjectInstance is used.
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.9 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

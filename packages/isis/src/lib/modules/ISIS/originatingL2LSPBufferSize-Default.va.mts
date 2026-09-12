@@ -15,6 +15,11 @@ import { receiveLSPBufferSize } from '../ISIS/receiveLSPBufferSize.va.mjs';
  * @summary originatingL2LSPBufferSize_Default
  * @description
  *
+ * Default maximum size of originated Level 2 LSPs and SNPs:
+ * `receiveLSPBufferSize` (1492).
+ *
+ * (ISO/IEC 10589:2002 clauses 7.5, 11.2.2.2 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -15,6 +15,11 @@ import {
  * @summary maxPathMetric
  * @description
  *
+ * Architectural constant: maximum total metric for a complete path. Upper bound
+ * of `PathMetric`.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.5 table 2 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

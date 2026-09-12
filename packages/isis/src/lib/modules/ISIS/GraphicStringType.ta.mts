@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary GraphicStringType
  * @description
  *
+ * GraphicString alias. Syntax of `adjacencyId`: unique among adjacencies of a
+ * linkage. Names with leading string `Auto` are reserved for protocol-created
+ * adjacencies.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.6.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

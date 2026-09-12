@@ -25,6 +25,13 @@ import {
  * @summary CommunicationsInformation
  * @description
  *
+ * INFORMATION SYNTAX of the `communicationsInformation` notification:
+ * informational protocol events that do not require manager action (faults use
+ * X.733 / ISO/IEC 10164-4 event types instead). IS-IS uses this for
+ * sequence-number skip, DIS change, and partition virtual-link change.
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.12 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -39,12 +46,25 @@ export class CommunicationsInformation {
   constructor(
     /**
      * @summary `informationType`.
+     * @description
+     *
+     * Identifies the event (IS-IS values such as `sequenceNumberSkip` are OIDs
+     * under `se`).
+     *
+     * (ISO/IEC 10589:2002 Annex E.1.12).
+     *
      * @public
      * @readonly
      */
     readonly informationType: InformationType,
     /**
      * @summary `informationData`.
+     * @description
+     *
+     * Optional additional parameters of the event.
+     *
+     * (ISO/IEC 10589:2002 Annex E.1.12).
+     *
      * @public
      * @readonly
      */

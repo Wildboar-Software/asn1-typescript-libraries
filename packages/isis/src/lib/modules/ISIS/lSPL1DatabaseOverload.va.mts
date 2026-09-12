@@ -15,6 +15,13 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary lSPL1DatabaseOverload
  * @description
  *
+ * `specificProblems` value when `l1State` changes between On and Waiting.
+ * Resulting state is `notificationOverloadStateChange`; if Waiting,
+ * `notificationSourceId` is the precipitating LSP. probableCause
+ * `resourceAtOrNearingCapacity`; severity Major. No Cleared alarm is generated.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19 and 11.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

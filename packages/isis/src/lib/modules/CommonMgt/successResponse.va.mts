@@ -15,6 +15,11 @@ import { responseCode } from '../CommonMgt/responseCode.va.mjs';
  * @summary successResponse
  * @description
  *
+ * Action-reply `responseCode` when `activate` / `deactivate` / `shutdown`
+ * successfully initiated the requested state change.
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.11 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

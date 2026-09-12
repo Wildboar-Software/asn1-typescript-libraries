@@ -15,6 +15,10 @@ import {
  * @summary maximumPathSplits_Default
  * @description
  *
+ * Default `maximumPathSplits`: 2.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.4 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

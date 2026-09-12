@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary PARAMETER
  * @description
  *
+ * Information object class for GDMO parameters: a unique OID and an open type.
+ * WITH SYNTAX `{PARAMETER &id INFO &Type}`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -53,10 +58,20 @@ export interface PARAMETER<Type = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
   >;
   /**
    * @summary &id
+   * @description
+   *
+   * Unique object identifier of the parameter.
+   *
+   * (ISO/IEC 10589:2002 Annex E.2).
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
   /**
    * @summary &Type
+   * @description
+   *
+   * ASN.1 type of the parameter information.
+   *
+   * (ISO/IEC 10589:2002 Annex E.2).
    */
   readonly '&Type': Type;
 }

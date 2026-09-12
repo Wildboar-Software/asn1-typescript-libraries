@@ -15,6 +15,10 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @summary moi
  * @description
  *
+ * GMI managed-object-class registration arc `{cmoi managedObjectClass(3)}`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

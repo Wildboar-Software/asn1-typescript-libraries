@@ -16,6 +16,10 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Sap1Address
  * @description
  *
+ * Address of a layer-1-style SAP (`sap1Address` attribute).
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.9 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

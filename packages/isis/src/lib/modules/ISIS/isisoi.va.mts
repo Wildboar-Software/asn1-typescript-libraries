@@ -16,6 +16,11 @@ import { nl } from "@wildboar/nlm";
  * @summary isisoi
  * @description
  *
+ * Root OID of IS-IS management information: `{nl iSIS(1)}`, i.e.
+ * `{joint-iso-itu-t network-layer(13) management(0) iSIS(1)}`.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.3 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

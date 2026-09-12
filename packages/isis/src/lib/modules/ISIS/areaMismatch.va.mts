@@ -15,6 +15,14 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary areaMismatch
  * @description
  *
+ * `specificProblems` value when two Level 1 ISs fail to initialise because they
+ * share no area address. Report neighbour area addresses and system ID via
+ * `notificationAreaAddresses` and `notificationSystemId`. probableCause
+ * `configurationOrCustomisationError`; severity Major; counted in
+ * `initialisationFailures`.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.1.5 and 11.2.5.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
