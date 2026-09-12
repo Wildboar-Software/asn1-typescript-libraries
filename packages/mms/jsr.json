@@ -1,0 +1,25 @@
+{
+  "name": "@wildboar/mms",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./ACSE-1": "./src/lib/modules/ACSE-1/index.mts",
+    "./ISO-9506-MMS-1": "./src/lib/modules/ISO-9506-MMS-1/index.mts",
+    "./ISO-9506-MMS-1A": "./src/lib/modules/ISO-9506-MMS-1A/index.mts",
+    "./MMS-Environment-1": "./src/lib/modules/MMS-Environment-1/index.mts",
+    "./MMS-Object-Module-1": "./src/lib/modules/MMS-Object-Module-1/index.mts",
+    "./MMS-SCI-Module-1": "./src/lib/modules/MMS-SCI-Module-1/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}
