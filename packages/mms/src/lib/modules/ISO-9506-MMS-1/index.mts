@@ -230,7 +230,6 @@ export {
     EE_State_activeAcked,
     activeAcked,
     EE_State_undefined,
-    undefined,
     _decode_EE_State,
     _encode_EE_State,
 } from "./EE-State.ta.mjs";
