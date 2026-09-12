@@ -152,7 +152,10 @@ interface JOURNAL_ENTRY {
      * @summary &orderOfReceipt
      */
     readonly "&orderOfReceipt"?: INTEGER;
-    // FIXME: &informationType;
+    /**
+     * @summary &informationType
+     */
+    readonly "&informationType"?: ENUMERATED;
     /**
      * @summary &textComment
      */

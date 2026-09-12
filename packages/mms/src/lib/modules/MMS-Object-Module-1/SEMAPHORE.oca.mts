@@ -127,7 +127,10 @@ interface SEMAPHORE {
      * @summary &accessControl
      */
     readonly "&accessControl"?: Identifier;
-    // FIXME: &class;
+    /**
+     * @summary &class
+     */
+    readonly "&class"?: ENUMERATED;
     /**
      * @summary &numberOfTokens
      */
@@ -152,6 +155,6 @@ interface SEMAPHORE {
      * @summary &eventCondition
      */
     readonly "&eventCondition"?: ObjectName;
-};
+}
 
 /* eslint-enable */

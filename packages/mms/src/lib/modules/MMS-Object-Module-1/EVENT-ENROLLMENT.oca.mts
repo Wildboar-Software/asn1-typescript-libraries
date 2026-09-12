@@ -213,7 +213,10 @@ interface EVENT_ENROLLMENT {
      * @summary &timeIdleAck
      */
     readonly "&timeIdleAck"?: EventTime;
-    // FIXME: &ackState;
+    /**
+     * @summary &ackState
+     */
+    readonly "&ackState"?: ENUMERATED;
     /**
      * @summary &lastState
      */

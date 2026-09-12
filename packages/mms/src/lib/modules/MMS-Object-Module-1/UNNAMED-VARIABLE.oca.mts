@@ -129,7 +129,10 @@ interface UNNAMED_VARIABLE {
      * @summary &value
      */
     readonly "&value"?: Data;
-    // FIXME: &accessMethod;
-};
+    /**
+     * @summary &accessMethod
+     */
+    readonly "&accessMethod"?: ENUMERATED;
+}
 
 /* eslint-enable */

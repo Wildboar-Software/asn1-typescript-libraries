@@ -128,7 +128,10 @@ interface OPERATOR_STATION {
      * @summary &accessControl
      */
     readonly "&accessControl"?: Identifier;
-    // FIXME: &stationType;
+    /**
+     * @summary &stationType
+     */
+    readonly "&stationType"?: ENUMERATED;
     /**
      * @summary &inputBuffer
      */
@@ -137,7 +140,10 @@ interface OPERATOR_STATION {
      * @summary &outputBuffers
      */
     readonly "&outputBuffers"?: MMSString[];
-    // FIXME: &state;
-};
+    /**
+     * @summary &state
+     */
+    readonly "&state"?: ENUMERATED;
+}
 
 /* eslint-enable */

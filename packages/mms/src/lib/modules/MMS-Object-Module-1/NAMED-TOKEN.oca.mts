@@ -107,7 +107,10 @@ interface NAMED_TOKEN {
      * @summary &name
      */
     readonly "&name"?: Identifier;
-    // FIXME: &state;
-};
+    /**
+     * @summary &state
+     */
+    readonly "&state"?: ENUMERATED;
+}
 
 /* eslint-enable */

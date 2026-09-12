@@ -142,7 +142,10 @@ interface NAMED_VARIABLE {
      * @summary &value
      */
     readonly "&value"?: Data;
-    // FIXME: &accessMethod;
+    /**
+     * @summary &accessMethod
+     */
+    readonly "&accessMethod"?: ENUMERATED;
     /**
      * @summary &address
      */
@@ -151,6 +154,24 @@ interface NAMED_VARIABLE {
      * @summary &meaning
      */
     readonly "&meaning"?: ObjectName;
-};
+}
+
+/**
+ * @summary NAMED-VARIABLE.&accessMethod public
+ * @constant
+ */
+export const NAMED_VARIABLE_accessMethod_public: ENUMERATED = 0;
+
+/**
+ * @summary NAMED-VARIABLE.&accessMethod anythingElse
+ * @constant
+ */
+export const NAMED_VARIABLE_accessMethod_anythingElse: ENUMERATED = 1;
+
+/**
+ * @summary anythingElse
+ * @constant
+ */
+export const anythingElse: ENUMERATED = NAMED_VARIABLE_accessMethod_anythingElse;
 
 /* eslint-enable */

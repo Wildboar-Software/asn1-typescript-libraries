@@ -139,7 +139,10 @@ interface SEMAPHORE_ENTRY {
      * @summary &entryID
      */
     readonly "&entryID"?: OCTET_STRING;
-    // FIXME: &class;
+    /**
+     * @summary &class
+     */
+    readonly "&class"?: ENUMERATED;
     /**
      * @summary &semaphore
      */
@@ -164,7 +167,10 @@ interface SEMAPHORE_ENTRY {
      * @summary &priority
      */
     readonly "&priority"?: Priority;
-    // FIXME: &entryState;
+    /**
+     * @summary &entryState
+     */
+    readonly "&entryState"?: ENUMERATED;
     /**
      * @summary &remainingAcqDelay
      */
