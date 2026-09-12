@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -76,7 +22,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass-access ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass-access ::= INTEGER {
+ *     other (0),
+ *     object-access-unsupported (1),
+ *     object-non-existent (2),
+ *     object-access-denied (3),
+ *     object-invalidated (4)
+ * } (0..4)
  * ```
  */
 export
@@ -161,35 +113,8 @@ const ServiceError_errorClass_access_object_invalidated: ServiceError_errorClass
  */
 export
 const object_invalidated: ServiceError_errorClass_access = ServiceError_errorClass_access_object_invalidated; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_access: $.ASN1Decoder<ServiceError_errorClass_access> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_access
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_access (el: _Element): ServiceError_errorClass_access {
-    if (!_cached_decoder_for_ServiceError_errorClass_access) { _cached_decoder_for_ServiceError_errorClass_access = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_access(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_access: $.ASN1Encoder<ServiceError_errorClass_access> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_access into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_access, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_access (value: ServiceError_errorClass_access, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_access) { _cached_encoder_for_ServiceError_errorClass_access = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_access(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_access = $._decodeInteger;
+export const _encode_ServiceError_errorClass_access = $._encodeInteger;
 
 
 /* eslint-enable */

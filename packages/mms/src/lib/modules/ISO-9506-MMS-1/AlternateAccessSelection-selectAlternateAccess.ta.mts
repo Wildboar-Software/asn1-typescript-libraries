@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -79,7 +23,21 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AlternateAccessSelection-selectAlternateAccess ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AlternateAccessSelection-selectAlternateAccess ::= SEQUENCE {
+ *     accessSelection CHOICE {
+ *         component [0] IMPLICIT Identifier,
+ *         component [0] IMPLICIT NULL,
+ *         index [1] IMPLICIT Unsigned32,
+ *         indexRange [2] IMPLICIT SEQUENCE {
+ *             lowIndex [0] IMPLICIT Unsigned32,
+ *             numberOfElements [1] IMPLICIT Unsigned32
+ *         },
+ *         index [1] IMPLICIT NULL,
+ *         indexRange [2] IMPLICIT NULL,
+ *         allElements [3] IMPLICIT NULL
+ *     },
+ *     alternateAccess AlternateAccess
+ * }
  * ```
  * 
  * @class
@@ -201,7 +159,7 @@ let _cached_encoder_for_AlternateAccessSelection_selectAlternateAccess: $.ASN1En
  */
 export
 function _encode_AlternateAccessSelection_selectAlternateAccess (value: AlternateAccessSelection_selectAlternateAccess, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AlternateAccessSelection_selectAlternateAccess) { _cached_encoder_for_AlternateAccessSelection_selectAlternateAccess = function (value: AlternateAccessSelection_selectAlternateAccess, elGetter: $.ASN1Encoder<AlternateAccessSelection_selectAlternateAccess>): _Element {
+    if (!_cached_encoder_for_AlternateAccessSelection_selectAlternateAccess) { _cached_encoder_for_AlternateAccessSelection_selectAlternateAccess = function (value: AlternateAccessSelection_selectAlternateAccess): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AlternateAccessSelection_selectAlternateAccess_accessSelection(value.accessSelection, $.BER),

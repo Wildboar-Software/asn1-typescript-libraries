@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -142,7 +86,10 @@ interface NAMED_VARIABLE {
      * @summary &value
      */
     readonly "&value"?: Data;
-    // FIXME: &accessMethod;
+    /**
+     * @summary &accessMethod
+     */
+    readonly "&accessMethod"?: NAMED_VARIABLE_accessMethod;
     /**
      * @summary &address
      */
@@ -151,6 +98,65 @@ interface NAMED_VARIABLE {
      * @summary &meaning
      */
     readonly "&meaning"?: ObjectName;
-};
+}
+
+/**
+ * @summary NAMED_VARIABLE_accessMethod
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * NAMED-VARIABLE.&accessMethod ::= ENUMERATED {
+ *     public,
+ *     anythingElse,
+ *     ... }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_NAMED_VARIABLE_accessMethod {
+    public = 0,
+    anythingElse = 1,
+}
+
+/**
+ * @summary NAMED_VARIABLE_accessMethod
+ * @enum {number}
+ */
+export
+type NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
+
+/**
+ * @summary NAMED_VARIABLE_accessMethod
+ * @enum {number}
+ */
+export
+const NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
+
+/**
+ * @summary NAMED_VARIABLE_accessMethod_public
+ * @constant
+ * @type {number}
+ */
+export
+const NAMED_VARIABLE_accessMethod_public: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary NAMED_VARIABLE_accessMethod_anythingElse
+ * @constant
+ * @type {number}
+ */
+export
+const NAMED_VARIABLE_accessMethod_anythingElse: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.anythingElse; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary anythingElse
+ * @constant
+ * @type {number}
+ */
+export
+const anythingElse: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.anythingElse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

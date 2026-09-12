@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectClass_basicObjectClass, ObjectClass_basicObjectClass_namedVariable /* IMPORTED_LONG_NAMED_INTEGER */, namedVariable /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_scatteredAccess /* IMPORTED_LONG_NAMED_INTEGER */, scatteredAccess /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_namedVariableList /* IMPORTED_LONG_NAMED_INTEGER */, namedVariableList /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_namedType /* IMPORTED_LONG_NAMED_INTEGER */, namedType /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_semaphore /* IMPORTED_LONG_NAMED_INTEGER */, semaphore /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_eventCondition /* IMPORTED_LONG_NAMED_INTEGER */, eventCondition /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_eventAction /* IMPORTED_LONG_NAMED_INTEGER */, eventAction /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_eventEnrollment /* IMPORTED_LONG_NAMED_INTEGER */, eventEnrollment /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_journal /* IMPORTED_LONG_NAMED_INTEGER */, journal /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_domain /* IMPORTED_LONG_NAMED_INTEGER */, domain /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_programInvocation /* IMPORTED_LONG_NAMED_INTEGER */, programInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_operatorStation /* IMPORTED_LONG_NAMED_INTEGER */, operatorStation /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_dataExchange /* IMPORTED_LONG_NAMED_INTEGER */, dataExchange /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_accessControlList /* IMPORTED_LONG_NAMED_INTEGER */, accessControlList /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ObjectClass_basicObjectClass, _encode_ObjectClass_basicObjectClass } from "../ISO-9506-MMS-1/ObjectClass-basicObjectClass.ta.mjs";
+import { ObjectClass_basicObjectClass, _decode_ObjectClass_basicObjectClass, _encode_ObjectClass_basicObjectClass } from "../ISO-9506-MMS-1/ObjectClass-basicObjectClass.ta.mjs";
 // export { ObjectClass_basicObjectClass, ObjectClass_basicObjectClass_namedVariable /* IMPORTED_LONG_NAMED_INTEGER */, namedVariable /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_scatteredAccess /* IMPORTED_LONG_NAMED_INTEGER */, scatteredAccess /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_namedVariableList /* IMPORTED_LONG_NAMED_INTEGER */, namedVariableList /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_namedType /* IMPORTED_LONG_NAMED_INTEGER */, namedType /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_semaphore /* IMPORTED_LONG_NAMED_INTEGER */, semaphore /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_eventCondition /* IMPORTED_LONG_NAMED_INTEGER */, eventCondition /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_eventAction /* IMPORTED_LONG_NAMED_INTEGER */, eventAction /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_eventEnrollment /* IMPORTED_LONG_NAMED_INTEGER */, eventEnrollment /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_journal /* IMPORTED_LONG_NAMED_INTEGER */, journal /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_domain /* IMPORTED_LONG_NAMED_INTEGER */, domain /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_programInvocation /* IMPORTED_LONG_NAMED_INTEGER */, programInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_operatorStation /* IMPORTED_LONG_NAMED_INTEGER */, operatorStation /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_dataExchange /* IMPORTED_LONG_NAMED_INTEGER */, dataExchange /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_basicObjectClass_accessControlList /* IMPORTED_LONG_NAMED_INTEGER */, accessControlList /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ObjectClass_basicObjectClass, _encode_ObjectClass_basicObjectClass } from "../ISO-9506-MMS-1/ObjectClass-basicObjectClass.ta.mjs";
-import { ObjectClass_csObjectClass, ObjectClass_csObjectClass_eventConditionList /* IMPORTED_LONG_NAMED_INTEGER */, eventConditionList /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_csObjectClass_unitControl /* IMPORTED_LONG_NAMED_INTEGER */, unitControl /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ObjectClass_csObjectClass, _encode_ObjectClass_csObjectClass } from "../ISO-9506-MMS-1/ObjectClass-csObjectClass.ta.mjs";
+import { ObjectClass_csObjectClass, _decode_ObjectClass_csObjectClass, _encode_ObjectClass_csObjectClass } from "../ISO-9506-MMS-1/ObjectClass-csObjectClass.ta.mjs";
 // export { ObjectClass_csObjectClass, ObjectClass_csObjectClass_eventConditionList /* IMPORTED_LONG_NAMED_INTEGER */, eventConditionList /* IMPORTED_SHORT_NAMED_INTEGER */, ObjectClass_csObjectClass_unitControl /* IMPORTED_LONG_NAMED_INTEGER */, unitControl /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ObjectClass_csObjectClass, _encode_ObjectClass_csObjectClass } from "../ISO-9506-MMS-1/ObjectClass-csObjectClass.ta.mjs";
 
 

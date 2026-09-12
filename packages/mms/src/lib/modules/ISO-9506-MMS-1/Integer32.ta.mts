@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -81,35 +27,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Integer32 = INTEGER;
-
-let _cached_decoder_for_Integer32: $.ASN1Decoder<Integer32> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Integer32
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Integer32 (el: _Element): Integer32 {
-    if (!_cached_decoder_for_Integer32) { _cached_decoder_for_Integer32 = $._decodeInteger; }
-    return _cached_decoder_for_Integer32(el);
-}
-
-let _cached_encoder_for_Integer32: $.ASN1Encoder<Integer32> | null = null;
-
-/**
- * @summary Encodes a(n) Integer32 into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Integer32, encoded as an ASN.1 Element.
- */
-export
-function _encode_Integer32 (value: Integer32, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Integer32) { _cached_encoder_for_Integer32 = $._encodeInteger; }
-    return _cached_encoder_for_Integer32(value, elGetter);
-}
+export const _decode_Integer32 = (el: _Element): Integer32 => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < -2147483648 || n > 2147483647) {
+        throw new ASN1OverflowError("Integer32 violates INTEGER range constraint");
+    }
+    return value;
+};
+export const _encode_Integer32 = $._encodeInteger;
 
 
 /* eslint-enable */

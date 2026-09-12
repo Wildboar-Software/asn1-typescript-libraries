@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -79,7 +24,22 @@ import { CS_GetProgramInvocationAttributes_Response_control_controlled, _decode_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-GetProgramInvocationAttributes-Response-control ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-GetProgramInvocationAttributes-Response-control ::= CHOICE {
+ *     controlling [0] IMPLICIT SEQUENCE {
+ *         controlledPI [0] IMPLICIT SEQUENCE OF Identifier,
+ *         programLocation [1] IMPLICIT VisibleString OPTIONAL,
+ *         runningMode [2] CHOICE {
+ *             freeRunning [0] IMPLICIT NULL,
+ *             cycleLimited [1] IMPLICIT INTEGER,
+ *             stepLimited [2] IMPLICIT INTEGER
+ *         }
+ *     },
+ *     controlled [1] CHOICE {
+ *         controllingPI [0] IMPLICIT Identifier,
+ *         none [1] IMPLICIT NULL
+ *     },
+ *     normal [2] IMPLICIT NULL
+ * }
  * ```
  */
 export

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -76,7 +22,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ObjectClass-csObjectClass ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ObjectClass-csObjectClass ::= INTEGER {
+ *     eventConditionList (0),
+ *     unitControl (1)
+ * } (0..1)
  * ```
  */
 export
@@ -113,35 +62,8 @@ const ObjectClass_csObjectClass_unitControl: ObjectClass_csObjectClass = 1; /* L
  */
 export
 const unitControl: ObjectClass_csObjectClass = ObjectClass_csObjectClass_unitControl; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ObjectClass_csObjectClass: $.ASN1Decoder<ObjectClass_csObjectClass> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ObjectClass_csObjectClass
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ObjectClass_csObjectClass (el: _Element): ObjectClass_csObjectClass {
-    if (!_cached_decoder_for_ObjectClass_csObjectClass) { _cached_decoder_for_ObjectClass_csObjectClass = $._decodeInteger; }
-    return _cached_decoder_for_ObjectClass_csObjectClass(el);
-}
-
-let _cached_encoder_for_ObjectClass_csObjectClass: $.ASN1Encoder<ObjectClass_csObjectClass> | null = null;
-
-/**
- * @summary Encodes a(n) ObjectClass_csObjectClass into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ObjectClass_csObjectClass, encoded as an ASN.1 Element.
- */
-export
-function _encode_ObjectClass_csObjectClass (value: ObjectClass_csObjectClass, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ObjectClass_csObjectClass) { _cached_encoder_for_ObjectClass_csObjectClass = $._encodeInteger; }
-    return _cached_encoder_for_ObjectClass_csObjectClass(value, elGetter);
-}
+export const _decode_ObjectClass_csObjectClass = $._decodeInteger;
+export const _encode_ObjectClass_csObjectClass = $._encodeInteger;
 
 
 /* eslint-enable */

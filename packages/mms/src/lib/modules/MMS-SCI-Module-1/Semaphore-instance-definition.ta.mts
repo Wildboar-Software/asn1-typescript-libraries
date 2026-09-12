@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,21 @@ import { Semaphore_instance_definition_details, _decode_Semaphore_instance_defin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Semaphore-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Semaphore-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         class [4] IMPLICIT ENUMERATED {
+ *             token,
+ *             pool
+ *         },
+ *         -- If the value of &class is token, the following field shall appear
+ *         numberOfTokens [5] IMPLICIT INTEGER OPTIONAL,
+ *         -- If the value of &class is pool, the following field shall appear
+ *         namedTokens [6] IMPLICIT SEQUENCE OF VisibleString OPTIONAL,
+ *         eventCondition [7] IMPLICIT Event-Condition-instance
+ *     }
+ * }
  * ```
  */
 export

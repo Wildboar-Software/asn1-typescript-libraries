@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,10 @@ import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-95
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetAccessControlListAttributes-Response-references-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GetAccessControlListAttributes-Response-references-Item ::= SEQUENCE {
+ *     objectClass [0] ObjectClass,
+ *     objectCount [1] IMPLICIT INTEGER
+ * }
  * ```
  * 
  * @class
@@ -199,7 +147,7 @@ let _cached_encoder_for_GetAccessControlListAttributes_Response_references_Item:
  */
 export
 function _encode_GetAccessControlListAttributes_Response_references_Item (value: GetAccessControlListAttributes_Response_references_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetAccessControlListAttributes_Response_references_Item) { _cached_encoder_for_GetAccessControlListAttributes_Response_references_Item = function (value: GetAccessControlListAttributes_Response_references_Item, elGetter: $.ASN1Encoder<GetAccessControlListAttributes_Response_references_Item>): _Element {
+    if (!_cached_encoder_for_GetAccessControlListAttributes_Response_references_Item) { _cached_encoder_for_GetAccessControlListAttributes_Response_references_Item = function (value: GetAccessControlListAttributes_Response_references_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ObjectClass, $.BER)(value.objectClass, $.BER),

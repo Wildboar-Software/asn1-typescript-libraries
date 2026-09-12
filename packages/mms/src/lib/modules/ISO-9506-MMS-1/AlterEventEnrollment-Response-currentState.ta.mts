@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EE_State, EE_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, idle /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_active /* IMPORTED_LONG_NAMED_INTEGER */, active /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_activeNoAckA /* IMPORTED_LONG_NAMED_INTEGER */, activeNoAckA /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleNoAckI /* IMPORTED_LONG_NAMED_INTEGER */, idleNoAckI /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleNoAckA /* IMPORTED_LONG_NAMED_INTEGER */, idleNoAckA /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleAcked /* IMPORTED_LONG_NAMED_INTEGER */, idleAcked /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_activeAcked /* IMPORTED_LONG_NAMED_INTEGER */, activeAcked /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_undefined /* IMPORTED_LONG_NAMED_INTEGER */, undefined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/EE-State.ta.mjs";
+import { EE_State, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/EE-State.ta.mjs";
 // export { EE_State, EE_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, idle /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_active /* IMPORTED_LONG_NAMED_INTEGER */, active /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_activeNoAckA /* IMPORTED_LONG_NAMED_INTEGER */, activeNoAckA /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleNoAckI /* IMPORTED_LONG_NAMED_INTEGER */, idleNoAckI /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleNoAckA /* IMPORTED_LONG_NAMED_INTEGER */, idleNoAckA /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleAcked /* IMPORTED_LONG_NAMED_INTEGER */, idleAcked /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_activeAcked /* IMPORTED_LONG_NAMED_INTEGER */, activeAcked /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_undefined /* IMPORTED_LONG_NAMED_INTEGER */, undefined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/EE-State.ta.mjs";
 
 
@@ -77,7 +22,10 @@ import { EE_State, EE_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AlterEventEnrollment-Response-currentState ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AlterEventEnrollment-Response-currentState ::= CHOICE {
+ *     state [0] IMPLICIT EE-State,
+ *     undefined [1] IMPLICIT NULL
+ * }
  * ```
  */
 export

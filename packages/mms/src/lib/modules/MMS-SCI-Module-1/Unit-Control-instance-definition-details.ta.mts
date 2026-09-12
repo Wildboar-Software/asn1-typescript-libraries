@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -81,7 +25,11 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Unit-Control-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Unit-Control-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     domains [4] IMPLICIT SEQUENCE OF Domain-instance,
+ *     programInvocations [5] IMPLICIT SEQUENCE OF Program-Invocation-instance
+ * }
  * ```
  * 
  * @class
@@ -214,7 +162,7 @@ let _cached_encoder_for_Unit_Control_instance_definition_details: $.ASN1Encoder<
  */
 export
 function _encode_Unit_Control_instance_definition_details (value: Unit_Control_instance_definition_details, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Unit_Control_instance_definition_details) { _cached_encoder_for_Unit_Control_instance_definition_details = function (value: Unit_Control_instance_definition_details, elGetter: $.ASN1Encoder<Unit_Control_instance_definition_details>): _Element {
+    if (!_cached_encoder_for_Unit_Control_instance_definition_details) { _cached_encoder_for_Unit_Control_instance_definition_details = function (value: Unit_Control_instance_definition_details): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => _encode_Access_Control_List_instance, $.BER)(value.accessControl, $.BER),

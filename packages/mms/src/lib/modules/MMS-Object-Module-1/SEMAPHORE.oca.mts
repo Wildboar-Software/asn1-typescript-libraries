@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -127,7 +72,10 @@ interface SEMAPHORE {
      * @summary &accessControl
      */
     readonly "&accessControl"?: Identifier;
-    // FIXME: &class;
+    /**
+     * @summary &class
+     */
+    readonly "&class"?: SEMAPHORE_class;
     /**
      * @summary &numberOfTokens
      */
@@ -152,6 +100,56 @@ interface SEMAPHORE {
      * @summary &eventCondition
      */
     readonly "&eventCondition"?: ObjectName;
-};
+}
+
+/**
+ * @summary SEMAPHORE_class
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * SEMAPHORE.&class ::= ENUMERATED {
+ *     token,
+ *     pool }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_SEMAPHORE_class {
+    token = 0,
+    pool = 1,
+}
+
+/**
+ * @summary SEMAPHORE_class
+ * @enum {number}
+ */
+export
+type SEMAPHORE_class = _enum_for_SEMAPHORE_class;
+
+/**
+ * @summary SEMAPHORE_class
+ * @enum {number}
+ */
+export
+const SEMAPHORE_class = _enum_for_SEMAPHORE_class;
+
+/**
+ * @summary SEMAPHORE_class_token
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_class_token: SEMAPHORE_class = SEMAPHORE_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary SEMAPHORE_class_pool
+ * @constant
+ * @type {number}
+ */
+export
+const SEMAPHORE_class_pool: SEMAPHORE_class = SEMAPHORE_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

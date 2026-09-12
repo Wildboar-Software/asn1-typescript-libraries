@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,31 @@ import { Program_Invocation_instance_definition_details, _decode_Program_Invocat
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Program-Invocation-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Program-Invocation-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         programInvocationState [3] IMPLICIT ProgramInvocationState,
+ *         domains [4] IMPLICIT SEQUENCE OF Domain-instance,
+ *         accessControl [5] IMPLICIT SEQUENCE OF Access-Control-List-instance,
+ *         reusable [6] IMPLICIT BOOLEAN,
+ *         monitor [7] IMPLICIT BOOLEAN,
+ *         -- The following three fields shall all be present if the value of
+ *         -- monitor is true.
+ *         -- If present, the &name field of each object instance
+ *         -- shall have a value equal to the
+ *         -- &name field of this instance of the PROGRAM-INVOCATION.
+ *         eventCondition [8] IMPLICIT SEQUENCE OF Event-Condition-instance OPTIONAL,
+ *         eventAction [9] IMPLICIT SEQUENCE OF Event-Action-instance OPTIONAL,
+ *         eventEnrollment [10] IMPLICIT SEQUENCE OF Event-Enrollment-instance OPTIONAL,
+ *         executionArgument [11] MMSString,
+ *         ...,
+ *         control [12] IMPLICIT Control-State,
+ *         controlling-Program-Invocation [13] IMPLICIT Program-Invocation-instance,
+ *         -- The following field shall be present
+ *         -- if and only if the value of the &control field is controlling.
+ *         controlled-Program-Invocations [14] IMPLICIT SEQUENCE OF Program-Invocation-instance OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

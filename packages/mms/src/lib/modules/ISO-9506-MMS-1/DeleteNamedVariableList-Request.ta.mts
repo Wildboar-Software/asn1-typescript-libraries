@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DeleteNamedVariableList_Request_scopeOfDelete, DeleteNamedVariableList_Request_scopeOfDelete_specific /* IMPORTED_LONG_NAMED_INTEGER */, specific /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteNamedVariableList_Request_scopeOfDelete_aa_specific /* IMPORTED_LONG_NAMED_INTEGER */, aa_specific /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteNamedVariableList_Request_scopeOfDelete_domain /* IMPORTED_LONG_NAMED_INTEGER */, domain /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteNamedVariableList_Request_scopeOfDelete_vmd /* IMPORTED_LONG_NAMED_INTEGER */, vmd /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteNamedVariableList_Request_scopeOfDelete, _encode_DeleteNamedVariableList_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteNamedVariableList-Request-scopeOfDelete.ta.mjs";
+import { DeleteNamedVariableList_Request_scopeOfDelete, specific /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteNamedVariableList_Request_scopeOfDelete, _encode_DeleteNamedVariableList_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteNamedVariableList-Request-scopeOfDelete.ta.mjs";
 // export { DeleteNamedVariableList_Request_scopeOfDelete, DeleteNamedVariableList_Request_scopeOfDelete_specific /* IMPORTED_LONG_NAMED_INTEGER */, specific /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteNamedVariableList_Request_scopeOfDelete_aa_specific /* IMPORTED_LONG_NAMED_INTEGER */, aa_specific /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteNamedVariableList_Request_scopeOfDelete_domain /* IMPORTED_LONG_NAMED_INTEGER */, domain /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteNamedVariableList_Request_scopeOfDelete_vmd /* IMPORTED_LONG_NAMED_INTEGER */, vmd /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteNamedVariableList_Request_scopeOfDelete, _encode_DeleteNamedVariableList_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteNamedVariableList-Request-scopeOfDelete.ta.mjs";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 // export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
@@ -228,7 +173,7 @@ let _cached_encoder_for_DeleteNamedVariableList_Request: $.ASN1Encoder<DeleteNam
  */
 export
 function _encode_DeleteNamedVariableList_Request (value: DeleteNamedVariableList_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeleteNamedVariableList_Request) { _cached_encoder_for_DeleteNamedVariableList_Request = function (value: DeleteNamedVariableList_Request, elGetter: $.ASN1Encoder<DeleteNamedVariableList_Request>): _Element {
+    if (!_cached_encoder_for_DeleteNamedVariableList_Request) { _cached_encoder_for_DeleteNamedVariableList_Request = function (value: DeleteNamedVariableList_Request): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.scopeOfDelete === undefined || $.deepEq(value.scopeOfDelete, DeleteNamedVariableList_Request._default_value_for_scopeOfDelete) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_DeleteNamedVariableList_Request_scopeOfDelete, $.BER)(value.scopeOfDelete, $.BER)),

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -227,43 +172,10 @@ const activeAcked: EE_State = EE_State_activeAcked; /* SHORT_NAMED_INTEGER_VALUE
  */
 export
 const EE_State_undefined: EE_State = 8; /* LONG_NAMED_INTEGER_VALUE */
-
-/**
- * @summary EE_State_undefined
- * @constant
- * @type {number}
- */
-export
-const undefined: EE_State = EE_State_undefined; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EE_State: $.ASN1Decoder<EE_State> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EE_State
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EE_State (el: _Element): EE_State {
-    if (!_cached_decoder_for_EE_State) { _cached_decoder_for_EE_State = $._decodeInteger; }
-    return _cached_decoder_for_EE_State(el);
-}
-
-let _cached_encoder_for_EE_State: $.ASN1Encoder<EE_State> | null = null;
-
-/**
- * @summary Encodes a(n) EE_State into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EE_State, encoded as an ASN.1 Element.
- */
-export
-function _encode_EE_State (value: EE_State, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EE_State) { _cached_encoder_for_EE_State = $._encodeInteger; }
-    return _cached_encoder_for_EE_State(value, elGetter);
-}
+/* The compiler also emitted `export const undefined = EE_State_undefined`,
+ * which shadows the JavaScript global and is omitted. Use EE_State_undefined. */
+export const _decode_EE_State = $._decodeInteger;
+export const _encode_EE_State = $._encodeInteger;
 
 
 /* eslint-enable */

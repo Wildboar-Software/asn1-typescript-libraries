@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -76,7 +22,24 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ObjectClass-basicObjectClass ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ObjectClass-basicObjectClass ::= INTEGER {
+ *     namedVariable (0) -- value 1 is reserved for definition in Annex E
+ *     ,
+ *     scatteredAccess (1),
+ *     namedVariableList (2),
+ *     namedType (3),
+ *     semaphore (4),
+ *     eventCondition (5),
+ *     eventAction (6),
+ *     eventEnrollment (7),
+ *     journal (8),
+ *     domain (9),
+ *     programInvocation (10),
+ *     operatorStation (11),
+ *     dataExchange (12),
+ *     -- Shall not appear in minor version 1
+ *     accessControlList (13) -- Shall not appear in minor version 1 or 2
+ * } (0..13)
  * ```
  */
 export
@@ -305,35 +268,8 @@ const ObjectClass_basicObjectClass_accessControlList: ObjectClass_basicObjectCla
  */
 export
 const accessControlList: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_accessControlList; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ObjectClass_basicObjectClass: $.ASN1Decoder<ObjectClass_basicObjectClass> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ObjectClass_basicObjectClass
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ObjectClass_basicObjectClass (el: _Element): ObjectClass_basicObjectClass {
-    if (!_cached_decoder_for_ObjectClass_basicObjectClass) { _cached_decoder_for_ObjectClass_basicObjectClass = $._decodeInteger; }
-    return _cached_decoder_for_ObjectClass_basicObjectClass(el);
-}
-
-let _cached_encoder_for_ObjectClass_basicObjectClass: $.ASN1Encoder<ObjectClass_basicObjectClass> | null = null;
-
-/**
- * @summary Encodes a(n) ObjectClass_basicObjectClass into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ObjectClass_basicObjectClass, encoded as an ASN.1 Element.
- */
-export
-function _encode_ObjectClass_basicObjectClass (value: ObjectClass_basicObjectClass, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ObjectClass_basicObjectClass) { _cached_encoder_for_ObjectClass_basicObjectClass = $._encodeInteger; }
-    return _cached_encoder_for_ObjectClass_basicObjectClass(value, elGetter);
-}
+export const _decode_ObjectClass_basicObjectClass = $._decodeInteger;
+export const _encode_ObjectClass_basicObjectClass = $._encodeInteger;
 
 
 /* eslint-enable */

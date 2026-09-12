@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,7 +21,7 @@ import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS
 // export { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
 import { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
 // export { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
-import { EC_State, EC_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled /* IMPORTED_SHORT_NAMED_INTEGER */, EC_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, idle /* IMPORTED_SHORT_NAMED_INTEGER */, EC_State_active /* IMPORTED_LONG_NAMED_INTEGER */, active /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
+import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
 // export { EC_State, EC_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled /* IMPORTED_SHORT_NAMED_INTEGER */, EC_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, idle /* IMPORTED_SHORT_NAMED_INTEGER */, EC_State_active /* IMPORTED_LONG_NAMED_INTEGER */, active /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
 import { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } from "../MMS-Object-Module-1/Journal-Variable.ta.mjs";
 // export { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } from "../MMS-Object-Module-1/Journal-Variable.ta.mjs";
@@ -152,7 +99,10 @@ interface JOURNAL_ENTRY {
      * @summary &orderOfReceipt
      */
     readonly "&orderOfReceipt"?: INTEGER;
-    // FIXME: &informationType;
+    /**
+     * @summary &informationType
+     */
+    readonly "&informationType"?: JOURNAL_ENTRY_informationType;
     /**
      * @summary &textComment
      */
@@ -165,6 +115,66 @@ interface JOURNAL_ENTRY {
      * @summary &journalVariables
      */
     readonly "&journalVariables"?: Journal_Variable[];
-};
+}
+
+/**
+ * @summary JOURNAL_ENTRY_informationType
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * JOURNAL-ENTRY.&informationType ::= ENUMERATED {
+ *     annotation,
+ *     event-data,
+ *     data }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_JOURNAL_ENTRY_informationType {
+    annotation = 0,
+    event_data = 1,
+    data = 2,
+}
+
+/**
+ * @summary JOURNAL_ENTRY_informationType
+ * @enum {number}
+ */
+export
+type JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
+
+/**
+ * @summary JOURNAL_ENTRY_informationType
+ * @enum {number}
+ */
+export
+const JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
+
+/**
+ * @summary JOURNAL_ENTRY_informationType_annotation
+ * @constant
+ * @type {number}
+ */
+export
+const JOURNAL_ENTRY_informationType_annotation: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.annotation; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary JOURNAL_ENTRY_informationType_event_data
+ * @constant
+ * @type {number}
+ */
+export
+const JOURNAL_ENTRY_informationType_event_data: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.event_data; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary JOURNAL_ENTRY_informationType_data
+ * @constant
+ * @type {number}
+ */
+export
+const JOURNAL_ENTRY_informationType_data: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

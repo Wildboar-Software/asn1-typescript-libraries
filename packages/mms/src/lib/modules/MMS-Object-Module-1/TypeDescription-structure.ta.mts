@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +23,13 @@ import { TypeDescription_structure_components_Item, _decode_TypeDescription_stru
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TypeDescription-structure ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TypeDescription-structure ::= SEQUENCE {
+ *     packed [0] IMPLICIT BOOLEAN DEFAULT FALSE,
+ *     components [1] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         componentName [0] IMPLICIT Identifier OPTIONAL,
+ *         componentType [1] TypeSpecification
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -206,7 +158,7 @@ let _cached_encoder_for_TypeDescription_structure: $.ASN1Encoder<TypeDescription
  */
 export
 function _encode_TypeDescription_structure (value: TypeDescription_structure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TypeDescription_structure) { _cached_encoder_for_TypeDescription_structure = function (value: TypeDescription_structure, elGetter: $.ASN1Encoder<TypeDescription_structure>): _Element {
+    if (!_cached_encoder_for_TypeDescription_structure) { _cached_encoder_for_TypeDescription_structure = function (value: TypeDescription_structure): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.packed === undefined || $.deepEq(value.packed, TypeDescription_structure._default_value_for_packed) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeBoolean, $.BER)(value.packed, $.BER)),

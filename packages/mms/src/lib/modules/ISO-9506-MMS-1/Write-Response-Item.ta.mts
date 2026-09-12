@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DataAccessError, DataAccessError_object_invalidated /* IMPORTED_LONG_NAMED_INTEGER */, object_invalidated /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_hardware_fault /* IMPORTED_LONG_NAMED_INTEGER */, hardware_fault /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_temporarily_unavailable /* IMPORTED_LONG_NAMED_INTEGER */, temporarily_unavailable /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_access_denied /* IMPORTED_LONG_NAMED_INTEGER */, object_access_denied /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_undefined /* IMPORTED_LONG_NAMED_INTEGER */, object_undefined /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_invalid_address /* IMPORTED_LONG_NAMED_INTEGER */, invalid_address /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_type_unsupported /* IMPORTED_LONG_NAMED_INTEGER */, type_unsupported /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_type_inconsistent /* IMPORTED_LONG_NAMED_INTEGER */, type_inconsistent /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_attribute_inconsistent /* IMPORTED_LONG_NAMED_INTEGER */, object_attribute_inconsistent /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_access_unsupported /* IMPORTED_LONG_NAMED_INTEGER */, object_access_unsupported /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_non_existent /* IMPORTED_LONG_NAMED_INTEGER */, object_non_existent /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_value_invalid /* IMPORTED_LONG_NAMED_INTEGER */, object_value_invalid /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DataAccessError, _encode_DataAccessError } from "../ISO-9506-MMS-1/DataAccessError.ta.mjs";
+import { DataAccessError, _decode_DataAccessError, _encode_DataAccessError } from "../ISO-9506-MMS-1/DataAccessError.ta.mjs";
 // export { DataAccessError, DataAccessError_object_invalidated /* IMPORTED_LONG_NAMED_INTEGER */, object_invalidated /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_hardware_fault /* IMPORTED_LONG_NAMED_INTEGER */, hardware_fault /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_temporarily_unavailable /* IMPORTED_LONG_NAMED_INTEGER */, temporarily_unavailable /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_access_denied /* IMPORTED_LONG_NAMED_INTEGER */, object_access_denied /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_undefined /* IMPORTED_LONG_NAMED_INTEGER */, object_undefined /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_invalid_address /* IMPORTED_LONG_NAMED_INTEGER */, invalid_address /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_type_unsupported /* IMPORTED_LONG_NAMED_INTEGER */, type_unsupported /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_type_inconsistent /* IMPORTED_LONG_NAMED_INTEGER */, type_inconsistent /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_attribute_inconsistent /* IMPORTED_LONG_NAMED_INTEGER */, object_attribute_inconsistent /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_access_unsupported /* IMPORTED_LONG_NAMED_INTEGER */, object_access_unsupported /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_non_existent /* IMPORTED_LONG_NAMED_INTEGER */, object_non_existent /* IMPORTED_SHORT_NAMED_INTEGER */, DataAccessError_object_value_invalid /* IMPORTED_LONG_NAMED_INTEGER */, object_value_invalid /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DataAccessError, _encode_DataAccessError } from "../ISO-9506-MMS-1/DataAccessError.ta.mjs";
 
 
@@ -77,7 +22,10 @@ import { DataAccessError, DataAccessError_object_invalidated /* IMPORTED_LONG_NA
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Write-Response-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Write-Response-Item ::= CHOICE {
+ *     failure [0] IMPLICIT DataAccessError,
+ *     success [1] IMPLICIT NULL
+ * }
  * ```
  */
 export

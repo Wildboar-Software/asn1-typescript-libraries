@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,10 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ErrorParameters-additionalDetial ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ErrorParameters-additionalDetial ::= SEQUENCE {
+ *     size [2] IMPLICIT INTEGER,
+ *     syntax [3] MMSString
+ * }
  * ```
  * 
  * @class
@@ -199,7 +147,7 @@ let _cached_encoder_for_ErrorParameters_additionalDetial: $.ASN1Encoder<ErrorPar
  */
 export
 function _encode_ErrorParameters_additionalDetial (value: ErrorParameters_additionalDetial, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ErrorParameters_additionalDetial) { _cached_encoder_for_ErrorParameters_additionalDetial = function (value: ErrorParameters_additionalDetial, elGetter: $.ASN1Encoder<ErrorParameters_additionalDetial>): _Element {
+    if (!_cached_encoder_for_ErrorParameters_additionalDetial) { _cached_encoder_for_ErrorParameters_additionalDetial = function (value: ErrorParameters_additionalDetial): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.size, $.BER),

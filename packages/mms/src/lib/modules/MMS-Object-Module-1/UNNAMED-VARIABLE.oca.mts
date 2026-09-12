@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -129,7 +73,50 @@ interface UNNAMED_VARIABLE {
      * @summary &value
      */
     readonly "&value"?: Data;
-    // FIXME: &accessMethod;
-};
+    /**
+     * @summary &accessMethod
+     */
+    readonly "&accessMethod"?: UNNAMED_VARIABLE_accessMethod;
+}
+
+/**
+ * @summary UNNAMED_VARIABLE_accessMethod
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * UNNAMED-VARIABLE.&accessMethod ::= ENUMERATED {
+ *     public }
+ * ```
+ *
+ * @enum {number}
+ */
+export
+enum _enum_for_UNNAMED_VARIABLE_accessMethod {
+    public = 0,
+}
+
+/**
+ * @summary UNNAMED_VARIABLE_accessMethod
+ * @enum {number}
+ */
+export
+type UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
+
+/**
+ * @summary UNNAMED_VARIABLE_accessMethod
+ * @enum {number}
+ */
+export
+const UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
+
+/**
+ * @summary UNNAMED_VARIABLE_accessMethod_public
+ * @constant
+ * @type {number}
+ */
+export
+const UNNAMED_VARIABLE_accessMethod_public: UNNAMED_VARIABLE_accessMethod = UNNAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

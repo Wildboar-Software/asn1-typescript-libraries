@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -76,7 +22,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass-service ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass-service ::= INTEGER {
+ *     other (0),
+ *     primitives-out-of-sequence (1),
+ *     object-state-conflict (2),
+ *     -- Value 3 reserved for further definition
+ *     continuation-invalid (4),
+ *     object-constraint-conflict (5)
+ * } (0..5)
  * ```
  */
 export
@@ -161,35 +114,8 @@ const ServiceError_errorClass_service_object_constraint_conflict: ServiceError_e
  */
 export
 const object_constraint_conflict: ServiceError_errorClass_service = ServiceError_errorClass_service_object_constraint_conflict; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_service: $.ASN1Decoder<ServiceError_errorClass_service> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_service
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_service (el: _Element): ServiceError_errorClass_service {
-    if (!_cached_decoder_for_ServiceError_errorClass_service) { _cached_decoder_for_ServiceError_errorClass_service = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_service(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_service: $.ASN1Encoder<ServiceError_errorClass_service> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_service into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_service, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_service (value: ServiceError_errorClass_service, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_service) { _cached_encoder_for_ServiceError_errorClass_service = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_service(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_service = $._decodeInteger;
+export const _encode_ServiceError_errorClass_service = $._encodeInteger;
 
 
 /* eslint-enable */
