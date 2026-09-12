@@ -76,85 +76,61 @@ class Domain_instance_definition_details {
          * @readonly
          */
         readonly capabilities: MMSString[],
-        /**
+/**
          * @summary `state`.
          * @public
          * @readonly
          */
         readonly state: DomainState,
-        /**
+/**
          * @summary `accessControl`.
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
-        /**
+/**
          * @summary `sharable`.
          * @public
          * @readonly
          */
         readonly sharable: BOOLEAN,
-        /**
+/**
          * @summary `programInvocations`.
          * @public
          * @readonly
          */
         readonly programInvocations: Program_Invocation_instance[],
-        /**
+/**
          * @summary `namedVariables`.
          * @public
          * @readonly
          */
-        readonly namedVariables: Named_Variable_instance[],
-        /**
+        readonly namedVariables: Named_Variable_instance[] | NULL,
+/**
          * @summary `namedVariableLists`.
          * @public
          * @readonly
          */
-        readonly namedVariableLists: Named_Variable_List_instance[],
-        /**
-         * @summary `namedVariableLists`.
-         * @public
-         * @readonly
-         */
-        readonly namedVariableLists: NULL,
-        /**
+        readonly namedVariableLists: Named_Variable_List_instance[] | NULL,
+/**
          * @summary `namedTypes`.
          * @public
          * @readonly
          */
-        readonly namedTypes: Named_Type_instance[],
-        /**
-         * @summary `namedVariables`.
-         * @public
-         * @readonly
-         */
-        readonly namedVariables: NULL,
-        /**
-         * @summary `namedVariableLists`.
-         * @public
-         * @readonly
-         */
-        readonly namedVariableLists: NULL,
-        /**
-         * @summary `namedTypes`.
-         * @public
-         * @readonly
-         */
-        readonly namedTypes: NULL,
-        /**
+        readonly namedTypes: Named_Type_instance[] | NULL,
+/**
          * @summary `eventConditions`.
          * @public
          * @readonly
          */
         readonly eventConditions: Event_Condition_instance[],
-        /**
+/**
          * @summary `eventActions`.
          * @public
          * @readonly
          */
         readonly eventActions: Event_Action_instance[],
-        /**
+/**
          * @summary `eventEnrollments`.
          * @public
          * @readonly
@@ -181,7 +157,7 @@ class Domain_instance_definition_details {
      * @returns {Domain_instance_definition_details}
      */
     public static _from_object (_o: { [_K in keyof (Domain_instance_definition_details)]: (Domain_instance_definition_details)[_K] }): Domain_instance_definition_details {
-        return new Domain_instance_definition_details(_o.capabilities, _o.state, _o.accessControl, _o.sharable, _o.programInvocations, _o.namedVariables, _o.namedVariableLists, _o.namedVariableLists, _o.namedTypes, _o.namedVariables, _o.namedVariableLists, _o.namedTypes, _o.eventConditions, _o.eventActions, _o.eventEnrollments, _o.eventConditionLists);
+        return new Domain_instance_definition_details(_o.capabilities, _o.state, _o.accessControl, _o.sharable, _o.programInvocations, _o.namedVariables, _o.namedVariableLists, _o.namedTypes, _o.eventConditions, _o.eventActions, _o.eventEnrollments, _o.eventConditionLists);
     }
 
 
@@ -202,10 +178,6 @@ const _root_component_type_list_1_spec_for_Domain_instance_definition_details: $
     new $.ComponentSpec("accessControl", false, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("sharable", false, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("programInvocations", false, $.hasTag(_TagClass.context, 7)),
-    new $.ComponentSpec("namedVariables", false, $.hasTag(_TagClass.context, 8)),
-    new $.ComponentSpec("namedVariableLists", false, $.hasTag(_TagClass.context, 9)),
-    new $.ComponentSpec("namedVariableLists", false, $.hasTag(_TagClass.context, 9)),
-    new $.ComponentSpec("namedTypes", false, $.hasTag(_TagClass.context, 10)),
     new $.ComponentSpec("namedVariables", false, $.hasTag(_TagClass.context, 8)),
     new $.ComponentSpec("namedVariableLists", false, $.hasTag(_TagClass.context, 9)),
     new $.ComponentSpec("namedTypes", false, $.hasTag(_TagClass.context, 10)),
@@ -252,58 +224,44 @@ let _cached_decoder_for_Domain_instance_definition_details: $.ASN1Decoder<Domain
 export
 function _decode_Domain_instance_definition_details (el: _Element): Domain_instance_definition_details {
     if (!_cached_decoder_for_Domain_instance_definition_details) { _cached_decoder_for_Domain_instance_definition_details = function (el: _Element): Domain_instance_definition_details {
-    const sequence: _Element[] = el.sequence;
-    if (sequence.length < 16) {
-        throw new _ConstructionError("Domain-instance-definition-details contained only " + sequence.length.toString() + " elements.");
-    }
-    sequence[0].name = "capabilities";
-    sequence[1].name = "state";
-    sequence[2].name = "accessControl";
-    sequence[3].name = "sharable";
-    sequence[4].name = "programInvocations";
-    sequence[5].name = "namedVariables";
-    sequence[6].name = "namedVariableLists";
-    sequence[7].name = "namedVariableLists";
-    sequence[8].name = "namedTypes";
-    sequence[9].name = "namedVariables";
-    sequence[10].name = "namedVariableLists";
-    sequence[11].name = "namedTypes";
-    sequence[12].name = "eventConditions";
-    sequence[13].name = "eventActions";
-    sequence[14].name = "eventEnrollments";
-    sequence[15].name = "eventConditionLists";
     let capabilities!: MMSString[];
     let state!: DomainState;
     let accessControl!: Access_Control_List_instance;
     let sharable!: BOOLEAN;
     let programInvocations!: Program_Invocation_instance[];
-    let namedVariables!: Named_Variable_instance[];
-    let namedVariableLists!: Named_Variable_List_instance[];
-    let namedVariableLists!: NULL;
-    let namedTypes!: Named_Type_instance[];
-    let namedVariables!: NULL;
-    let namedVariableLists!: NULL;
-    let namedTypes!: NULL;
+    let namedVariables!: Named_Variable_instance[] | NULL;
+    let namedVariableLists!: Named_Variable_List_instance[] | NULL;
+    let namedTypes!: Named_Type_instance[] | NULL;
     let eventConditions!: Event_Condition_instance[];
     let eventActions!: Event_Action_instance[];
     let eventEnrollments!: Event_Enrollment_instance[];
     let eventConditionLists!: Event_Condition_List_instance[];
-    capabilities = $._decode_implicit<MMSString[]>(() => $._decodeSequenceOf<MMSString>(() => _decode_MMSString))(sequence[0]);
-    state = $._decode_implicit<DomainState>(() => _decode_DomainState)(sequence[1]);
-    accessControl = $._decode_implicit<Access_Control_List_instance>(() => _decode_Access_Control_List_instance)(sequence[2]);
-    sharable = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[3]);
-    programInvocations = $._decode_implicit<Program_Invocation_instance[]>(() => $._decodeSequenceOf<Program_Invocation_instance>(() => _decode_Program_Invocation_instance))(sequence[4]);
-    namedVariables = $._decode_implicit<Named_Variable_instance[]>(() => $._decodeSequenceOf<Named_Variable_instance>(() => _decode_Named_Variable_instance))(sequence[5]);
-    namedVariableLists = $._decode_implicit<Named_Variable_List_instance[]>(() => $._decodeSequenceOf<Named_Variable_List_instance>(() => _decode_Named_Variable_List_instance))(sequence[6]);
-    namedVariableLists = $._decode_implicit<NULL>(() => $._decodeNull)(sequence[7]);
-    namedTypes = $._decode_implicit<Named_Type_instance[]>(() => $._decodeSequenceOf<Named_Type_instance>(() => _decode_Named_Type_instance))(sequence[8]);
-    namedVariables = $._decode_implicit<NULL>(() => $._decodeNull)(sequence[9]);
-    namedVariableLists = $._decode_implicit<NULL>(() => $._decodeNull)(sequence[10]);
-    namedTypes = $._decode_implicit<NULL>(() => $._decodeNull)(sequence[11]);
-    eventConditions = $._decode_implicit<Event_Condition_instance[]>(() => $._decodeSequenceOf<Event_Condition_instance>(() => _decode_Event_Condition_instance))(sequence[12]);
-    eventActions = $._decode_implicit<Event_Action_instance[]>(() => $._decodeSequenceOf<Event_Action_instance>(() => _decode_Event_Action_instance))(sequence[13]);
-    eventEnrollments = $._decode_implicit<Event_Enrollment_instance[]>(() => $._decodeSequenceOf<Event_Enrollment_instance>(() => _decode_Event_Enrollment_instance))(sequence[14]);
-    eventConditionLists = $._decode_implicit<Event_Condition_List_instance[]>(() => $._decodeSequenceOf<Event_Condition_List_instance>(() => _decode_Event_Condition_List_instance))(sequence[15]);
+    const callbacks: $.DecodingMap = {
+        "capabilities": (_el: _Element): void => { capabilities = $._decode_implicit<MMSString[]>(() => $._decodeSequenceOf<MMSString>(() => _decode_MMSString))(_el); },
+        "state": (_el: _Element): void => { state = $._decode_implicit<DomainState>(() => _decode_DomainState)(_el); },
+        "accessControl": (_el: _Element): void => { accessControl = $._decode_implicit<Access_Control_List_instance>(() => _decode_Access_Control_List_instance)(_el); },
+        "sharable": (_el: _Element): void => { sharable = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
+        "programInvocations": (_el: _Element): void => { programInvocations = $._decode_implicit<Program_Invocation_instance[]>(() => $._decodeSequenceOf<Program_Invocation_instance>(() => _decode_Program_Invocation_instance))(_el); },
+        "namedVariables": (_el: _Element): void => { namedVariables = ((_el.construction === _Construction.primitive && _el.value.length === 0)
+            ? $._decode_implicit<NULL>(() => $._decodeNull)(_el)
+            : $._decode_implicit<Named_Variable_instance[]>(() => $._decodeSequenceOf<Named_Variable_instance>(() => _decode_Named_Variable_instance))(_el)); },
+        "namedVariableLists": (_el: _Element): void => { namedVariableLists = ((_el.construction === _Construction.primitive && _el.value.length === 0)
+            ? $._decode_implicit<NULL>(() => $._decodeNull)(_el)
+            : $._decode_implicit<Named_Variable_List_instance[]>(() => $._decodeSequenceOf<Named_Variable_List_instance>(() => _decode_Named_Variable_List_instance))(_el)); },
+        "namedTypes": (_el: _Element): void => { namedTypes = ((_el.construction === _Construction.primitive && _el.value.length === 0)
+            ? $._decode_implicit<NULL>(() => $._decodeNull)(_el)
+            : $._decode_implicit<Named_Type_instance[]>(() => $._decodeSequenceOf<Named_Type_instance>(() => _decode_Named_Type_instance))(_el)); },
+        "eventConditions": (_el: _Element): void => { eventConditions = $._decode_implicit<Event_Condition_instance[]>(() => $._decodeSequenceOf<Event_Condition_instance>(() => _decode_Event_Condition_instance))(_el); },
+        "eventActions": (_el: _Element): void => { eventActions = $._decode_implicit<Event_Action_instance[]>(() => $._decodeSequenceOf<Event_Action_instance>(() => _decode_Event_Action_instance))(_el); },
+        "eventEnrollments": (_el: _Element): void => { eventEnrollments = $._decode_implicit<Event_Enrollment_instance[]>(() => $._decodeSequenceOf<Event_Enrollment_instance>(() => _decode_Event_Enrollment_instance))(_el); },
+        "eventConditionLists": (_el: _Element): void => { eventConditionLists = $._decode_implicit<Event_Condition_List_instance[]>(() => $._decodeSequenceOf<Event_Condition_List_instance>(() => _decode_Event_Condition_List_instance))(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_Domain_instance_definition_details,
+        _extension_additions_list_spec_for_Domain_instance_definition_details,
+        _root_component_type_list_2_spec_for_Domain_instance_definition_details,
+        () => { /* no unrecognized extensions */ },
+    );
     return new Domain_instance_definition_details(
         capabilities,
         state,
@@ -312,16 +270,11 @@ function _decode_Domain_instance_definition_details (el: _Element): Domain_insta
         programInvocations,
         namedVariables,
         namedVariableLists,
-        namedVariableLists,
-        namedTypes,
-        namedVariables,
-        namedVariableLists,
         namedTypes,
         eventConditions,
         eventActions,
         eventEnrollments,
         eventConditionLists,
-
     );
 }; }
     return _cached_decoder_for_Domain_instance_definition_details(el);
@@ -346,13 +299,13 @@ function _encode_Domain_instance_definition_details (value: Domain_instance_defi
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 5, () => _encode_Access_Control_List_instance, $.BER)(value.accessControl, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 6, () => $._encodeBoolean, $.BER)(value.sharable, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 7, () => $._encodeSequenceOf<Program_Invocation_instance>(() => _encode_Program_Invocation_instance, $.BER), $.BER)(value.programInvocations, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<Named_Variable_instance>(() => _encode_Named_Variable_instance, $.BER), $.BER)(value.namedVariables, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<Named_Variable_List_instance>(() => _encode_Named_Variable_List_instance, $.BER), $.BER)(value.namedVariableLists, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeNull, $.BER)(value.namedVariableLists, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<Named_Type_instance>(() => _encode_Named_Type_instance, $.BER), $.BER)(value.namedTypes, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER)(value.namedVariables, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeNull, $.BER)(value.namedVariableLists, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 10, () => $._encodeNull, $.BER)(value.namedTypes, $.BER),
+            /* REQUIRED   */ ((value.namedVariables === null) ? $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER)(value.namedVariables, $.BER) : $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<Named_Variable_instance>(() => _encode_Named_Variable_instance, $.BER), $.BER)(value.namedVariables, $.BER)),
+            /* REQUIRED   */ ((value.namedVariableLists === null) ? $._encode_implicit(_TagClass.context, 9, () => $._encodeNull, $.BER)(value.namedVariableLists, $.BER) : $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<Named_Variable_List_instance>(() => _encode_Named_Variable_List_instance, $.BER), $.BER)(value.namedVariableLists, $.BER)),
+
+            /* REQUIRED   */ ((value.namedTypes === null) ? $._encode_implicit(_TagClass.context, 10, () => $._encodeNull, $.BER)(value.namedTypes, $.BER) : $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<Named_Type_instance>(() => _encode_Named_Type_instance, $.BER), $.BER)(value.namedTypes, $.BER)),
+
+
+
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 11, () => $._encodeSequenceOf<Event_Condition_instance>(() => _encode_Event_Condition_instance, $.BER), $.BER)(value.eventConditions, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 12, () => $._encodeSequenceOf<Event_Action_instance>(() => _encode_Event_Action_instance, $.BER), $.BER)(value.eventActions, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 13, () => $._encodeSequenceOf<Event_Enrollment_instance>(() => _encode_Event_Enrollment_instance, $.BER), $.BER)(value.eventEnrollments, $.BER),

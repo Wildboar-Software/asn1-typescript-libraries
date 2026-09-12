@@ -15,6 +15,7 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 // export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { AccessCondition_user, _decode_AccessCondition_user, _encode_AccessCondition_user } from "../MMS-Object-Module-1/AccessCondition-user.ta.mjs";
 // export { AccessCondition_user, _decode_AccessCondition_user, _encode_AccessCondition_user } from "../MMS-Object-Module-1/AccessCondition-user.ta.mjs";
+import { Authentication_value, _decode_Authentication_value, _encode_Authentication_value } from "../ACSE-1/Authentication-value.ta.mjs";
 
 
 // TODO: CHECK_RECURSIVE_DEFINITION

@@ -49,8 +49,8 @@ const m_powerProblem: NAMED_VARIABLE = {
     },
     encoderFor: {
     },
-    "&name": { vmd_specific: "M_powerProblem" } /* OBJECT_FIELD_SETTING */,
-    "&accessControl": "M_ReadOnly" /* OBJECT_FIELD_SETTING */,
+    "&name": { vmd_specific: { notChar: "M_powerProblem" } } /* OBJECT_FIELD_SETTING */,
+    "&accessControl": { notChar: "M_ReadOnly" } /* OBJECT_FIELD_SETTING */,
     "&typeDescription": { boolean_: null } /* OBJECT_FIELD_SETTING */,
     "&accessMethod": anythingElse /* OBJECT_FIELD_SETTING */,
     "&value": { boolean_: false } /* OBJECT_FIELD_SETTING */,

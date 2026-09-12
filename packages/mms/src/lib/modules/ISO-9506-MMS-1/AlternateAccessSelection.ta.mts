@@ -71,9 +71,6 @@ function _decode_AlternateAccessSelection (el: _Element): AlternateAccessSelecti
     if (!_cached_decoder_for_AlternateAccessSelection) { _cached_decoder_for_AlternateAccessSelection = $._decode_inextensible_choice<AlternateAccessSelection>({
     "CONTEXT 0": [ "selectAlternateAccess", $._decode_implicit<AlternateAccessSelection_selectAlternateAccess>(() => _decode_AlternateAccessSelection_selectAlternateAccess) ],
     "CONTEXT 1": [ "selectAccess", _decode_AlternateAccessSelection_selectAccess ],
-    "CONTEXT 1": [ "selectAccess", _decode_AlternateAccessSelection_selectAccess ],
-    "CONTEXT 2": [ "selectAccess", _decode_AlternateAccessSelection_selectAccess ],
-    "CONTEXT 3": [ "selectAccess", _decode_AlternateAccessSelection_selectAccess ],
     "CONTEXT 2": [ "selectAccess", _decode_AlternateAccessSelection_selectAccess ],
     "CONTEXT 3": [ "selectAccess", _decode_AlternateAccessSelection_selectAccess ],
     "CONTEXT 4": [ "selectAccess", _decode_AlternateAccessSelection_selectAccess ]

@@ -50,9 +50,6 @@ function _decode_AlternateAccess_Item (el: _Element): AlternateAccess_Item {
     if (!_cached_decoder_for_AlternateAccess_Item) { _cached_decoder_for_AlternateAccess_Item = $._decode_inextensible_choice<AlternateAccess_Item>({
     "CONTEXT 0": [ "unnamed", _decode_AlternateAccessSelection ],
     "CONTEXT 1": [ "unnamed", _decode_AlternateAccessSelection ],
-    "CONTEXT 1": [ "unnamed", _decode_AlternateAccessSelection ],
-    "CONTEXT 2": [ "unnamed", _decode_AlternateAccessSelection ],
-    "CONTEXT 3": [ "unnamed", _decode_AlternateAccessSelection ],
     "CONTEXT 2": [ "unnamed", _decode_AlternateAccessSelection ],
     "CONTEXT 3": [ "unnamed", _decode_AlternateAccessSelection ],
     "CONTEXT 4": [ "unnamed", _decode_AlternateAccessSelection ],

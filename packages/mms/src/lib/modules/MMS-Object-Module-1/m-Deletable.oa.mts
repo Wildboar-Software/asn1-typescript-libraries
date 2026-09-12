@@ -44,8 +44,8 @@ const m_Deletable: ACCESS_CONTROL_LIST = {
     },
     encoderFor: {
     },
-    "&name": "M_Deletable" /* OBJECT_FIELD_SETTING */,
-    "&accessControl": "M_Never" /* OBJECT_FIELD_SETTING */,
+    "&name": { notChar: "M_Deletable" } /* OBJECT_FIELD_SETTING */,
+    "&accessControl": { notChar: "M_Never" } /* OBJECT_FIELD_SETTING */,
     "&AccessControlLists": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
     "&Domains": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
     "&ProgramInvocations": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,

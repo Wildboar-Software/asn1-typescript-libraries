@@ -62,8 +62,8 @@ const m_Violation: EVENT_CONDITION = {
     },
     encoderFor: {
     },
-    "&name": { vmd_specific: "M_Violation" } /* OBJECT_FIELD_SETTING */,
-    "&accessControl": "M_Never" /* OBJECT_FIELD_SETTING */,
+    "&name": { vmd_specific: { notChar: "M_Violation" } } /* OBJECT_FIELD_SETTING */,
+    "&accessControl": { notChar: "M_Never" } /* OBJECT_FIELD_SETTING */,
     "&ecClass": network_triggered /* OBJECT_FIELD_SETTING */,
     "&ecState": active /* OBJECT_FIELD_SETTING */,
     "&priority": normalPriority /* OBJECT_FIELD_SETTING */,

@@ -61,12 +61,15 @@ let _cached_decoder_for_AlternateAccessSelection_selectAlternateAccess_accessSel
 export
 function _decode_AlternateAccessSelection_selectAlternateAccess_accessSelection (el: _Element): AlternateAccessSelection_selectAlternateAccess_accessSelection {
     if (!_cached_decoder_for_AlternateAccessSelection_selectAlternateAccess_accessSelection) { _cached_decoder_for_AlternateAccessSelection_selectAlternateAccess_accessSelection = $._decode_inextensible_choice<AlternateAccessSelection_selectAlternateAccess_accessSelection>({
-    "CONTEXT 0": [ "component", $._decode_explicit<Identifier>(() => _decode_Identifier) ],
-    "CONTEXT 0": [ "component", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 1": [ "index", $._decode_implicit<Unsigned32>(() => _decode_Unsigned32) ],
-    "CONTEXT 2": [ "indexRange", $._decode_implicit<AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange>(() => _decode_AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange) ],
-    "CONTEXT 1": [ "index", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 2": [ "indexRange", $._decode_implicit<NULL>(() => $._decodeNull) ],
+    "CONTEXT 0": [ "component", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_explicit<Identifier>(() => _decode_Identifier)(el)) ],
+    "CONTEXT 1": [ "index", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Unsigned32>(() => _decode_Unsigned32)(el)) ],
+    "CONTEXT 2": [ "indexRange", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange>(() => _decode_AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange)(el)) ],
     "CONTEXT 3": [ "allElements", $._decode_implicit<NULL>(() => $._decodeNull) ]
 }); }
     return _cached_decoder_for_AlternateAccessSelection_selectAlternateAccess_accessSelection(el);
@@ -84,13 +87,16 @@ let _cached_encoder_for_AlternateAccessSelection_selectAlternateAccess_accessSel
 export
 function _encode_AlternateAccessSelection_selectAlternateAccess_accessSelection (value: AlternateAccessSelection_selectAlternateAccess_accessSelection, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_AlternateAccessSelection_selectAlternateAccess_accessSelection) { _cached_encoder_for_AlternateAccessSelection_selectAlternateAccess_accessSelection = $._encode_choice<AlternateAccessSelection_selectAlternateAccess_accessSelection>({
-    "component": $._encode_explicit(_TagClass.context, 0, () => _encode_Identifier, $.BER),
-    "component": $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER),
-    "index": $._encode_implicit(_TagClass.context, 1, () => _encode_Unsigned32, $.BER),
-    "indexRange": $._encode_implicit(_TagClass.context, 2, () => _encode_AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange, $.BER),
-    "index": $._encode_implicit(_TagClass.context, 1, () => $._encodeNull, $.BER),
-    "indexRange": $._encode_implicit(_TagClass.context, 2, () => $._encodeNull, $.BER),
-    "allElements": $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER),
+    "component": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_explicit(_TagClass.context, 0, () => _encode_Identifier, $.BER)(value, elGetter)),
+    "index": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 1, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 1, () => _encode_Unsigned32, $.BER)(value, elGetter)),
+    "indexRange": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 2, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 2, () => _encode_AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange, $.BER)(value, elGetter)),
+    "allElements": $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER)
 }, $.BER); }
     return _cached_encoder_for_AlternateAccessSelection_selectAlternateAccess_accessSelection(value, elGetter);
 }

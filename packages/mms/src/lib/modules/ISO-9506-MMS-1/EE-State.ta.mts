@@ -172,14 +172,8 @@ const activeAcked: EE_State = EE_State_activeAcked; /* SHORT_NAMED_INTEGER_VALUE
  */
 export
 const EE_State_undefined: EE_State = 8; /* LONG_NAMED_INTEGER_VALUE */
-
-/**
- * @summary EE_State_undefined
- * @constant
- * @type {number}
- */
-export
-const undefined: EE_State = EE_State_undefined; /* SHORT_NAMED_INTEGER_VALUE */
+/* The compiler also emitted `export const undefined = EE_State_undefined`,
+ * which shadows the JavaScript global and is omitted. Use EE_State_undefined. */
 export const _decode_EE_State = $._decodeInteger;
 export const _encode_EE_State = $._encodeInteger;
 

@@ -49,8 +49,8 @@ const m_ELT: NAMED_VARIABLE = {
     },
     encoderFor: {
     },
-    "&name": { vmd_specific: "M_ELT" } /* OBJECT_FIELD_SETTING */,
-    "&accessControl": "M_ReadOnly" /* OBJECT_FIELD_SETTING */,
+    "&name": { vmd_specific: { notChar: "M_ELT" } } /* OBJECT_FIELD_SETTING */,
+    "&accessControl": { notChar: "M_ReadOnly" } /* OBJECT_FIELD_SETTING */,
     "&typeDescription": { integer: 32 } /* OBJECT_FIELD_SETTING */,
     "&accessMethod": anythingElse /* OBJECT_FIELD_SETTING */,
     "&value": { integer: 0 } /* OBJECT_FIELD_SETTING */,

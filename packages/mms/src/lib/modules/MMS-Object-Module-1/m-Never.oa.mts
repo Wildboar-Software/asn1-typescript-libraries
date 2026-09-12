@@ -53,8 +53,8 @@ const m_Never: ACCESS_CONTROL_LIST = {
     },
     encoderFor: {
     },
-    "&name": "M_Never" /* OBJECT_FIELD_SETTING */,
-    "&accessControl": "M_Never" /* OBJECT_FIELD_SETTING */,
+    "&name": { notChar: "M_Never" } /* OBJECT_FIELD_SETTING */,
+    "&accessControl": { notChar: "M_Never" } /* OBJECT_FIELD_SETTING */,
     "&deleteAccessCondition": { never: null } /* OBJECT_FIELD_SETTING */,
     "&editAccessCondition": { never: null } /* OBJECT_FIELD_SETTING */,
     "&AccessControlLists": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,

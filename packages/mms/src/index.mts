@@ -7,7 +7,7 @@
  * root does not re-export every module.
  *
  * Association Control Service Element types used by MMS (`AP-title`,
- * `AP-invocation-identifier`, `AE-qualifier`, `AE-invocation-identifier`)
- * are re-exported from `@wildboar/acse`.
+ * `AP-invocation-identifier`, `AE-qualifier`, `AE-invocation-identifier`,
+ * `Authentication-value`) are re-exported from `@wildboar/acse`.
  */
 export {};

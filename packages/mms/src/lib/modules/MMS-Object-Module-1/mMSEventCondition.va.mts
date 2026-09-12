@@ -28,7 +28,7 @@ import {
  */
 export
 const mMSEventCondition: OBJECT_IDENTIFIER = _OID.fromParts([
-    standard,
+    0 /* standard */,
     9506,
     /* part */ 1,
     /* symbols-version1 */ 5,

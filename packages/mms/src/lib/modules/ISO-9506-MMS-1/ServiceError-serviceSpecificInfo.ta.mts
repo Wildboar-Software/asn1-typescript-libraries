@@ -111,30 +111,42 @@ let _cached_decoder_for_ServiceError_serviceSpecificInfo: $.ASN1Decoder<ServiceE
 export
 function _decode_ServiceError_serviceSpecificInfo (el: _Element): ServiceError_serviceSpecificInfo {
     if (!_cached_decoder_for_ServiceError_serviceSpecificInfo) { _cached_decoder_for_ServiceError_serviceSpecificInfo = $._decode_inextensible_choice<ServiceError_serviceSpecificInfo>({
-    "CONTEXT 0": [ "obtainFile", $._decode_implicit<ObtainFile_Error>(() => _decode_ObtainFile_Error) ],
-    "CONTEXT 0": [ "obtainFile", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 1": [ "start", $._decode_implicit<Start_Error>(() => _decode_Start_Error) ],
-    "CONTEXT 1": [ "start", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 2": [ "stop", $._decode_implicit<Stop_Error>(() => _decode_Stop_Error) ],
-    "CONTEXT 2": [ "stop", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 3": [ "resume", $._decode_implicit<Resume_Error>(() => _decode_Resume_Error) ],
-    "CONTEXT 3": [ "resume", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 4": [ "reset", $._decode_implicit<Reset_Error>(() => _decode_Reset_Error) ],
-    "CONTEXT 4": [ "reset", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 5": [ "deleteVariableAccess", $._decode_implicit<DeleteVariableAccess_Error>(() => _decode_DeleteVariableAccess_Error) ],
-    "CONTEXT 5": [ "deleteVariableAccess", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 6": [ "deleteNamedVariableList", $._decode_implicit<DeleteNamedVariableList_Error>(() => _decode_DeleteNamedVariableList_Error) ],
-    "CONTEXT 6": [ "deleteNamedVariableList", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 7": [ "deleteNamedType", $._decode_implicit<DeleteNamedType_Error>(() => _decode_DeleteNamedType_Error) ],
-    "CONTEXT 7": [ "deleteNamedType", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 8": [ "defineEventEnrollment_Error", $._decode_explicit<DefineEventEnrollment_Error>(() => _decode_DefineEventEnrollment_Error) ],
-    "CONTEXT 8": [ "defineEventEnrollment_Error", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 9": [ "fileRename", $._decode_implicit<FileRename_Error>(() => _decode_FileRename_Error) ],
-    "CONTEXT 9": [ "fileRename", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 10": [ "additionalService", $._decode_explicit<AdditionalService_Error>(() => _decode_AdditionalService_Error) ],
-    "CONTEXT 10": [ "additionalService", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 11": [ "changeAccessControl", $._decode_implicit<ChangeAccessControl_Error>(() => _decode_ChangeAccessControl_Error) ],
-    "CONTEXT 11": [ "changeAccessControl", $._decode_implicit<NULL>(() => $._decodeNull) ]
+    "CONTEXT 0": [ "obtainFile", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<ObtainFile_Error>(() => _decode_ObtainFile_Error)(el)) ],
+    "CONTEXT 1": [ "start", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Start_Error>(() => _decode_Start_Error)(el)) ],
+    "CONTEXT 2": [ "stop", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Stop_Error>(() => _decode_Stop_Error)(el)) ],
+    "CONTEXT 3": [ "resume", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Resume_Error>(() => _decode_Resume_Error)(el)) ],
+    "CONTEXT 4": [ "reset", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Reset_Error>(() => _decode_Reset_Error)(el)) ],
+    "CONTEXT 5": [ "deleteVariableAccess", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<DeleteVariableAccess_Error>(() => _decode_DeleteVariableAccess_Error)(el)) ],
+    "CONTEXT 6": [ "deleteNamedVariableList", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<DeleteNamedVariableList_Error>(() => _decode_DeleteNamedVariableList_Error)(el)) ],
+    "CONTEXT 7": [ "deleteNamedType", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<DeleteNamedType_Error>(() => _decode_DeleteNamedType_Error)(el)) ],
+    "CONTEXT 8": [ "defineEventEnrollment_Error", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_explicit<DefineEventEnrollment_Error>(() => _decode_DefineEventEnrollment_Error)(el)) ],
+    "CONTEXT 9": [ "fileRename", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<FileRename_Error>(() => _decode_FileRename_Error)(el)) ],
+    "CONTEXT 10": [ "additionalService", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_explicit<AdditionalService_Error>(() => _decode_AdditionalService_Error)(el)) ],
+    "CONTEXT 11": [ "changeAccessControl", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<ChangeAccessControl_Error>(() => _decode_ChangeAccessControl_Error)(el)) ]
 }); }
     return _cached_decoder_for_ServiceError_serviceSpecificInfo(el);
 }
@@ -151,30 +163,42 @@ let _cached_encoder_for_ServiceError_serviceSpecificInfo: $.ASN1Encoder<ServiceE
 export
 function _encode_ServiceError_serviceSpecificInfo (value: ServiceError_serviceSpecificInfo, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_ServiceError_serviceSpecificInfo) { _cached_encoder_for_ServiceError_serviceSpecificInfo = $._encode_choice<ServiceError_serviceSpecificInfo>({
-    "obtainFile": $._encode_implicit(_TagClass.context, 0, () => _encode_ObtainFile_Error, $.BER),
-    "obtainFile": $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER),
-    "start": $._encode_implicit(_TagClass.context, 1, () => _encode_Start_Error, $.BER),
-    "start": $._encode_implicit(_TagClass.context, 1, () => $._encodeNull, $.BER),
-    "stop": $._encode_implicit(_TagClass.context, 2, () => _encode_Stop_Error, $.BER),
-    "stop": $._encode_implicit(_TagClass.context, 2, () => $._encodeNull, $.BER),
-    "resume": $._encode_implicit(_TagClass.context, 3, () => _encode_Resume_Error, $.BER),
-    "resume": $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER),
-    "reset": $._encode_implicit(_TagClass.context, 4, () => _encode_Reset_Error, $.BER),
-    "reset": $._encode_implicit(_TagClass.context, 4, () => $._encodeNull, $.BER),
-    "deleteVariableAccess": $._encode_implicit(_TagClass.context, 5, () => _encode_DeleteVariableAccess_Error, $.BER),
-    "deleteVariableAccess": $._encode_implicit(_TagClass.context, 5, () => $._encodeNull, $.BER),
-    "deleteNamedVariableList": $._encode_implicit(_TagClass.context, 6, () => _encode_DeleteNamedVariableList_Error, $.BER),
-    "deleteNamedVariableList": $._encode_implicit(_TagClass.context, 6, () => $._encodeNull, $.BER),
-    "deleteNamedType": $._encode_implicit(_TagClass.context, 7, () => _encode_DeleteNamedType_Error, $.BER),
-    "deleteNamedType": $._encode_implicit(_TagClass.context, 7, () => $._encodeNull, $.BER),
-    "defineEventEnrollment_Error": $._encode_explicit(_TagClass.context, 8, () => _encode_DefineEventEnrollment_Error, $.BER),
-    "defineEventEnrollment_Error": $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER),
-    "fileRename": $._encode_implicit(_TagClass.context, 9, () => _encode_FileRename_Error, $.BER),
-    "fileRename": $._encode_implicit(_TagClass.context, 9, () => $._encodeNull, $.BER),
-    "additionalService": $._encode_explicit(_TagClass.context, 10, () => _encode_AdditionalService_Error, $.BER),
-    "additionalService": $._encode_implicit(_TagClass.context, 10, () => $._encodeNull, $.BER),
-    "changeAccessControl": $._encode_implicit(_TagClass.context, 11, () => _encode_ChangeAccessControl_Error, $.BER),
-    "changeAccessControl": $._encode_implicit(_TagClass.context, 11, () => $._encodeNull, $.BER),
+    "obtainFile": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 0, () => _encode_ObtainFile_Error, $.BER)(value, elGetter)),
+    "start": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 1, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 1, () => _encode_Start_Error, $.BER)(value, elGetter)),
+    "stop": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 2, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 2, () => _encode_Stop_Error, $.BER)(value, elGetter)),
+    "resume": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 3, () => _encode_Resume_Error, $.BER)(value, elGetter)),
+    "reset": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 4, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 4, () => _encode_Reset_Error, $.BER)(value, elGetter)),
+    "deleteVariableAccess": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 5, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 5, () => _encode_DeleteVariableAccess_Error, $.BER)(value, elGetter)),
+    "deleteNamedVariableList": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 6, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 6, () => _encode_DeleteNamedVariableList_Error, $.BER)(value, elGetter)),
+    "deleteNamedType": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 7, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 7, () => _encode_DeleteNamedType_Error, $.BER)(value, elGetter)),
+    "defineEventEnrollment_Error": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_explicit(_TagClass.context, 8, () => _encode_DefineEventEnrollment_Error, $.BER)(value, elGetter)),
+    "fileRename": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 9, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 9, () => _encode_FileRename_Error, $.BER)(value, elGetter)),
+    "additionalService": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 10, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_explicit(_TagClass.context, 10, () => _encode_AdditionalService_Error, $.BER)(value, elGetter)),
+    "changeAccessControl": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 11, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 11, () => _encode_ChangeAccessControl_Error, $.BER)(value, elGetter))
 }, $.BER); }
     return _cached_encoder_for_ServiceError_serviceSpecificInfo(value, elGetter);
 }

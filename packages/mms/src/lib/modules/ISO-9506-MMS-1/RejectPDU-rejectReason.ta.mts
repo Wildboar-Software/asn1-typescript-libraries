@@ -149,12 +149,15 @@ function _decode_RejectPDU_rejectReason (el: _Element): RejectPDU_rejectReason {
     "CONTEXT 3": [ "confirmed_errorPDU", $._decode_implicit<RejectPDU_rejectReason_confirmed_errorPDU>(() => _decode_RejectPDU_rejectReason_confirmed_errorPDU) ],
     "CONTEXT 4": [ "unconfirmedPDU", $._decode_implicit<RejectPDU_rejectReason_unconfirmedPDU>(() => _decode_RejectPDU_rejectReason_unconfirmedPDU) ],
     "CONTEXT 5": [ "pdu_error", $._decode_implicit<RejectPDU_rejectReason_pdu_error>(() => _decode_RejectPDU_rejectReason_pdu_error) ],
-    "CONTEXT 6": [ "cancel_requestPDU", $._decode_implicit<RejectPDU_rejectReason_cancel_requestPDU>(() => _decode_RejectPDU_rejectReason_cancel_requestPDU) ],
-    "CONTEXT 7": [ "cancel_responsePDU", $._decode_implicit<RejectPDU_rejectReason_cancel_responsePDU>(() => _decode_RejectPDU_rejectReason_cancel_responsePDU) ],
-    "CONTEXT 8": [ "cancel_errorPDU", $._decode_implicit<RejectPDU_rejectReason_cancel_errorPDU>(() => _decode_RejectPDU_rejectReason_cancel_errorPDU) ],
-    "CONTEXT 6": [ "cancel_requestPDU", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 7": [ "cancel_responsePDU", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 8": [ "cancel_errorPDU", $._decode_implicit<NULL>(() => $._decodeNull) ],
+    "CONTEXT 6": [ "cancel_requestPDU", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<RejectPDU_rejectReason_cancel_requestPDU>(() => _decode_RejectPDU_rejectReason_cancel_requestPDU)(el)) ],
+    "CONTEXT 7": [ "cancel_responsePDU", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<RejectPDU_rejectReason_cancel_responsePDU>(() => _decode_RejectPDU_rejectReason_cancel_responsePDU)(el)) ],
+    "CONTEXT 8": [ "cancel_errorPDU", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<RejectPDU_rejectReason_cancel_errorPDU>(() => _decode_RejectPDU_rejectReason_cancel_errorPDU)(el)) ],
     "CONTEXT 9": [ "conclude_requestPDU", $._decode_implicit<RejectPDU_rejectReason_conclude_requestPDU>(() => _decode_RejectPDU_rejectReason_conclude_requestPDU) ],
     "CONTEXT 10": [ "conclude_responsePDU", $._decode_implicit<RejectPDU_rejectReason_conclude_responsePDU>(() => _decode_RejectPDU_rejectReason_conclude_responsePDU) ],
     "CONTEXT 11": [ "conclude_errorPDU", $._decode_implicit<RejectPDU_rejectReason_conclude_errorPDU>(() => _decode_RejectPDU_rejectReason_conclude_errorPDU) ]
@@ -179,15 +182,18 @@ function _encode_RejectPDU_rejectReason (value: RejectPDU_rejectReason, elGetter
     "confirmed_errorPDU": $._encode_implicit(_TagClass.context, 3, () => _encode_RejectPDU_rejectReason_confirmed_errorPDU, $.BER),
     "unconfirmedPDU": $._encode_implicit(_TagClass.context, 4, () => _encode_RejectPDU_rejectReason_unconfirmedPDU, $.BER),
     "pdu_error": $._encode_implicit(_TagClass.context, 5, () => _encode_RejectPDU_rejectReason_pdu_error, $.BER),
-    "cancel_requestPDU": $._encode_implicit(_TagClass.context, 6, () => _encode_RejectPDU_rejectReason_cancel_requestPDU, $.BER),
-    "cancel_responsePDU": $._encode_implicit(_TagClass.context, 7, () => _encode_RejectPDU_rejectReason_cancel_responsePDU, $.BER),
-    "cancel_errorPDU": $._encode_implicit(_TagClass.context, 8, () => _encode_RejectPDU_rejectReason_cancel_errorPDU, $.BER),
-    "cancel_requestPDU": $._encode_implicit(_TagClass.context, 6, () => $._encodeNull, $.BER),
-    "cancel_responsePDU": $._encode_implicit(_TagClass.context, 7, () => $._encodeNull, $.BER),
-    "cancel_errorPDU": $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER),
+    "cancel_requestPDU": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 6, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 6, () => _encode_RejectPDU_rejectReason_cancel_requestPDU, $.BER)(value, elGetter)),
+    "cancel_responsePDU": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 7, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 7, () => _encode_RejectPDU_rejectReason_cancel_responsePDU, $.BER)(value, elGetter)),
+    "cancel_errorPDU": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 8, () => _encode_RejectPDU_rejectReason_cancel_errorPDU, $.BER)(value, elGetter)),
     "conclude_requestPDU": $._encode_implicit(_TagClass.context, 9, () => _encode_RejectPDU_rejectReason_conclude_requestPDU, $.BER),
     "conclude_responsePDU": $._encode_implicit(_TagClass.context, 10, () => _encode_RejectPDU_rejectReason_conclude_responsePDU, $.BER),
-    "conclude_errorPDU": $._encode_implicit(_TagClass.context, 11, () => _encode_RejectPDU_rejectReason_conclude_errorPDU, $.BER),
+    "conclude_errorPDU": $._encode_implicit(_TagClass.context, 11, () => _encode_RejectPDU_rejectReason_conclude_errorPDU, $.BER)
 }, $.BER); }
     return _cached_encoder_for_RejectPDU_rejectReason(value, elGetter);
 }

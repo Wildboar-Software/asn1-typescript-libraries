@@ -177,10 +177,12 @@ function _decode_ServiceError_errorClass (el: _Element): ServiceError_errorClass
     "CONTEXT 7": [ "access", $._decode_implicit<ServiceError_errorClass_access>(() => _decode_ServiceError_errorClass_access) ],
     "CONTEXT 8": [ "initiate", $._decode_implicit<ServiceError_errorClass_initiate>(() => _decode_ServiceError_errorClass_initiate) ],
     "CONTEXT 9": [ "conclude", $._decode_implicit<ServiceError_errorClass_conclude>(() => _decode_ServiceError_errorClass_conclude) ],
-    "CONTEXT 10": [ "cancel", $._decode_implicit<ServiceError_errorClass_cancel>(() => _decode_ServiceError_errorClass_cancel) ],
-    "CONTEXT 10": [ "cancel", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 11": [ "file", $._decode_implicit<ServiceError_errorClass_file>(() => _decode_ServiceError_errorClass_file) ],
-    "CONTEXT 11": [ "file", $._decode_implicit<NULL>(() => $._decodeNull) ],
+    "CONTEXT 10": [ "cancel", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<ServiceError_errorClass_cancel>(() => _decode_ServiceError_errorClass_cancel)(el)) ],
+    "CONTEXT 11": [ "file", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<ServiceError_errorClass_file>(() => _decode_ServiceError_errorClass_file)(el)) ],
     "CONTEXT 12": [ "others", $._decode_implicit<INTEGER>(() => $._decodeInteger) ]
 }); }
     return _cached_decoder_for_ServiceError_errorClass(el);
@@ -208,11 +210,13 @@ function _encode_ServiceError_errorClass (value: ServiceError_errorClass, elGett
     "access": $._encode_implicit(_TagClass.context, 7, () => _encode_ServiceError_errorClass_access, $.BER),
     "initiate": $._encode_implicit(_TagClass.context, 8, () => _encode_ServiceError_errorClass_initiate, $.BER),
     "conclude": $._encode_implicit(_TagClass.context, 9, () => _encode_ServiceError_errorClass_conclude, $.BER),
-    "cancel": $._encode_implicit(_TagClass.context, 10, () => _encode_ServiceError_errorClass_cancel, $.BER),
-    "cancel": $._encode_implicit(_TagClass.context, 10, () => $._encodeNull, $.BER),
-    "file": $._encode_implicit(_TagClass.context, 11, () => _encode_ServiceError_errorClass_file, $.BER),
-    "file": $._encode_implicit(_TagClass.context, 11, () => $._encodeNull, $.BER),
-    "others": $._encode_implicit(_TagClass.context, 12, () => $._encodeInteger, $.BER),
+    "cancel": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 10, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 10, () => _encode_ServiceError_errorClass_cancel, $.BER)(value, elGetter)),
+    "file": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 11, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 11, () => _encode_ServiceError_errorClass_file, $.BER)(value, elGetter)),
+    "others": $._encode_implicit(_TagClass.context, 12, () => $._encodeInteger, $.BER)
 }, $.BER); }
     return _cached_encoder_for_ServiceError_errorClass(value, elGetter);
 }

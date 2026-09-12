@@ -48,8 +48,8 @@ const m_ReadOnly: ACCESS_CONTROL_LIST = {
     },
     encoderFor: {
     },
-    "&name": "M_ReadOnly" /* OBJECT_FIELD_SETTING */,
-    "&accessControl": "M_Never" /* OBJECT_FIELD_SETTING */,
+    "&name": { notChar: "M_ReadOnly" } /* OBJECT_FIELD_SETTING */,
+    "&accessControl": { notChar: "M_Never" } /* OBJECT_FIELD_SETTING */,
     "&writeAccessCondition": { never: null } /* OBJECT_FIELD_SETTING */,
     "&deleteAccessCondition": { never: null } /* OBJECT_FIELD_SETTING */,
     "&editAccessCondition": { never: null } /* OBJECT_FIELD_SETTING */,

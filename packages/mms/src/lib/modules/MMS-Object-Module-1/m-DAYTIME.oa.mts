@@ -49,11 +49,11 @@ const m_DAYTIME: NAMED_VARIABLE = {
     },
     encoderFor: {
     },
-    "&name": { vmd_specific: "M_DAYTIME" } /* OBJECT_FIELD_SETTING */,
-    "&accessControl": "M_NonDeletable" /* OBJECT_FIELD_SETTING */,
+    "&name": { vmd_specific: { notChar: "M_DAYTIME" } } /* OBJECT_FIELD_SETTING */,
+    "&accessControl": { notChar: "M_NonDeletable" } /* OBJECT_FIELD_SETTING */,
     "&typeDescription": { generalized_time: null } /* OBJECT_FIELD_SETTING */,
     "&accessMethod": anythingElse /* OBJECT_FIELD_SETTING */,
-    "&value": { generalized_time: "299107311200" } /* OBJECT_FIELD_SETTING */,
+    "&value": { generalized_time: new Date(Date.UTC(2991, 6, 31, 12, 0)) } /* OBJECT_FIELD_SETTING */,
 };
 
 /* eslint-enable */

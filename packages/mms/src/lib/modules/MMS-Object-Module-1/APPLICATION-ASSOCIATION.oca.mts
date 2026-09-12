@@ -13,6 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
+import { Authentication_value } from "../ACSE-1/Authentication-value.ta.mjs";
 // export { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 import { TRANSACTION } from "../MMS-Object-Module-1/TRANSACTION.oca.mjs";
 // export { TRANSACTION } from "../MMS-Object-Module-1/TRANSACTION.oca.mjs";
