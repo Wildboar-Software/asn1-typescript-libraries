@@ -88,7 +88,7 @@ describe("ISO-9506 MMS types", () => {
 
     test("round-trips ApplicationReference with an ACSE AP-title", () => {
         const original = new ApplicationReference(
-            { ap_title_form2: new _OID([1, 3, 9999, 1]) },
+            { ap_title_form2: _OID.fromParts([1, 3, 9999, 1]) },
             7,
             undefined,
             undefined
