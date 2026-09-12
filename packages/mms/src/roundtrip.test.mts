@@ -34,6 +34,16 @@ import {
     _encode_ApplicationReference,
     _decode_ApplicationReference,
 } from "./lib/modules/MMS-Environment-1/ApplicationReference.ta.mjs";
+import {
+    type AlternateAccessSelection_selectAccess,
+    _encode_AlternateAccessSelection_selectAccess,
+    _decode_AlternateAccessSelection_selectAccess,
+} from "./lib/modules/ISO-9506-MMS-1/AlternateAccessSelection-selectAccess.ta.mjs";
+import {
+    type ServiceError_errorClass,
+    _encode_ServiceError_errorClass,
+    _decode_ServiceError_errorClass,
+} from "./lib/modules/ISO-9506-MMS-1/ServiceError-errorClass.ta.mjs";
 
 describe("ISO-9506 MMS types", () => {
     test("round-trips an Identifier", () => {
@@ -88,5 +98,39 @@ describe("ISO-9506 MMS types", () => {
         );
         expect(decoded.ap_invocation_id).toBe(7);
         expect(decoded.ap_title).toEqual(original.ap_title);
+    });
+
+    test("round-trips AlternateAccessSelection-selectAccess Identifier and NULL", () => {
+        const named: AlternateAccessSelection_selectAccess = {
+            component: { notChar: "slotA" },
+        };
+        expect(
+            _decode_AlternateAccessSelection_selectAccess(
+                _encode_AlternateAccessSelection_selectAccess(named, $.BER)
+            )
+        ).toEqual(named);
+        const empty: AlternateAccessSelection_selectAccess = {
+            component: null,
+        };
+        expect(
+            _decode_AlternateAccessSelection_selectAccess(
+                _encode_AlternateAccessSelection_selectAccess(empty, $.BER)
+            )
+        ).toEqual(empty);
+    });
+
+    test("round-trips ServiceError-errorClass cancel INTEGER and NULL", () => {
+        const coded: ServiceError_errorClass = { cancel: 1 };
+        expect(
+            _decode_ServiceError_errorClass(
+                _encode_ServiceError_errorClass(coded, $.BER)
+            )
+        ).toEqual(coded);
+        const absent: ServiceError_errorClass = { cancel: null };
+        expect(
+            _decode_ServiceError_errorClass(
+                _encode_ServiceError_errorClass(absent, $.BER)
+            )
+        ).toEqual(absent);
     });
 });
