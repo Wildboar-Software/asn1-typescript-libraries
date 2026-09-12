@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GetEventEnrollmentAttributes_Request_scopeOfRequest, GetEventEnrollmentAttributes_Request_scopeOfRequest_specific /* IMPORTED_LONG_NAMED_INTEGER */, specific /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_client /* IMPORTED_LONG_NAMED_INTEGER */, client /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_ec /* IMPORTED_LONG_NAMED_INTEGER */, ec /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_ea /* IMPORTED_LONG_NAMED_INTEGER */, ea /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
+import { GetEventEnrollmentAttributes_Request_scopeOfRequest, client /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
 // export { GetEventEnrollmentAttributes_Request_scopeOfRequest, GetEventEnrollmentAttributes_Request_scopeOfRequest_specific /* IMPORTED_LONG_NAMED_INTEGER */, specific /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_client /* IMPORTED_LONG_NAMED_INTEGER */, client /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_ec /* IMPORTED_LONG_NAMED_INTEGER */, ec /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_ea /* IMPORTED_LONG_NAMED_INTEGER */, ea /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 // export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
@@ -262,7 +207,7 @@ let _cached_encoder_for_GetEventEnrollmentAttributes_Request: $.ASN1Encoder<GetE
  */
 export
 function _encode_GetEventEnrollmentAttributes_Request (value: GetEventEnrollmentAttributes_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetEventEnrollmentAttributes_Request) { _cached_encoder_for_GetEventEnrollmentAttributes_Request = function (value: GetEventEnrollmentAttributes_Request, elGetter: $.ASN1Encoder<GetEventEnrollmentAttributes_Request>): _Element {
+    if (!_cached_encoder_for_GetEventEnrollmentAttributes_Request) { _cached_encoder_for_GetEventEnrollmentAttributes_Request = function (value: GetEventEnrollmentAttributes_Request): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.scopeOfRequest === undefined || $.deepEq(value.scopeOfRequest, GetEventEnrollmentAttributes_Request._default_value_for_scopeOfRequest) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest, $.BER)(value.scopeOfRequest, $.BER)),

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -152,7 +97,6 @@ const _extension_additions_list_spec_for_ImplicitNullable: $.ComponentSpec[] = [
     
 ];
 
-let _cached_decoder_for_ImplicitNullable: $.ASN1Decoder<ImplicitNullable<T>> | null = null;
 
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) ImplicitNullable
@@ -178,7 +122,6 @@ function _get_decoder_for_ImplicitNullable<T>(_decode_T: $.ASN1Decoder<T>): $.AS
 };
 }
 
-let _cached_encoder_for_ImplicitNullable: $.ASN1Encoder<ImplicitNullable<T>> | null = null;
 
 /**
  * @summary Returns a function that will encode a(n) ImplicitNullable into an ASN.1 Element.
@@ -187,7 +130,7 @@ let _cached_encoder_for_ImplicitNullable: $.ASN1Encoder<ImplicitNullable<T>> | n
  */
 export
 function _get_encoder_for_ImplicitNullable<T>(_encode_T: $.ASN1Encoder<T>): $.ASN1Encoder<ImplicitNullable<T>> {
-    return function (value: ImplicitNullable<T>, elGetter: $.ASN1Encoder<ImplicitNullable<T>>): _Element {
+    return function (value: ImplicitNullable<T>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.present === undefined) ? undefined : _encode_T(value.present, $.BER))

@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -72,7 +19,7 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
 // export { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
 // export { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
-import { Journal_Entry_instance_informationType, _enum_for_Journal_Entry_instance_informationType, Journal_Entry_instance_informationType_annotation /* IMPORTED_LONG_ENUMERATION_ITEM */, annotation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Journal_Entry_instance_informationType_event_data /* IMPORTED_LONG_ENUMERATION_ITEM */, event_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, Journal_Entry_instance_informationType_data /* IMPORTED_LONG_ENUMERATION_ITEM */, data /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Journal_Entry_instance_informationType, _encode_Journal_Entry_instance_informationType } from "../MMS-SCI-Module-1/Journal-Entry-instance-informationType.ta.mjs";
+import { Journal_Entry_instance_informationType, _enum_for_Journal_Entry_instance_informationType, _decode_Journal_Entry_instance_informationType, _encode_Journal_Entry_instance_informationType } from "../MMS-SCI-Module-1/Journal-Entry-instance-informationType.ta.mjs";
 // export { Journal_Entry_instance_informationType, _enum_for_Journal_Entry_instance_informationType, Journal_Entry_instance_informationType_annotation /* IMPORTED_LONG_ENUMERATION_ITEM */, annotation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Journal_Entry_instance_informationType_event_data /* IMPORTED_LONG_ENUMERATION_ITEM */, event_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, Journal_Entry_instance_informationType_data /* IMPORTED_LONG_ENUMERATION_ITEM */, data /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Journal_Entry_instance_informationType, _encode_Journal_Entry_instance_informationType } from "../MMS-SCI-Module-1/Journal-Entry-instance-informationType.ta.mjs";
 import { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
 // export { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
@@ -313,7 +260,7 @@ let _cached_encoder_for_Journal_Entry_instance: $.ASN1Encoder<Journal_Entry_inst
  */
 export
 function _encode_Journal_Entry_instance (value: Journal_Entry_instance, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Journal_Entry_instance) { _cached_encoder_for_Journal_Entry_instance = function (value: Journal_Entry_instance, elGetter: $.ASN1Encoder<Journal_Entry_instance>): _Element {
+    if (!_cached_encoder_for_Journal_Entry_instance) { _cached_encoder_for_Journal_Entry_instance = function (value: Journal_Entry_instance): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Journal_instance, $.BER)(value.journal, $.BER),

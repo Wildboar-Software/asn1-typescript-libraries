@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,13 +20,13 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
 // export { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
 // export { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
-import { EC_State, EC_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, EC_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, EC_State_active /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
+import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
 // export { EC_State, EC_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, EC_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, EC_State_active /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
 import { EN_Additional_Detail, _decode_EN_Additional_Detail, _encode_EN_Additional_Detail } from "../ISO-9506-MMS-1/EN-Additional-Detail.ta.mjs";
 // export { EN_Additional_Detail, _decode_EN_Additional_Detail, _encode_EN_Additional_Detail } from "../ISO-9506-MMS-1/EN-Additional-Detail.ta.mjs";
-import { AlarmAckRule, AlarmAckRule_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, AlarmAckRule_simple /* IMPORTED_LONG_NAMED_INTEGER */, simple /* IMPORTED_SHORT_NAMED_INTEGER */, AlarmAckRule_ack_active /* IMPORTED_LONG_NAMED_INTEGER */, ack_active /* IMPORTED_SHORT_NAMED_INTEGER */, AlarmAckRule_ack_all /* IMPORTED_LONG_NAMED_INTEGER */, ack_all /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
+import { AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
 // export { AlarmAckRule, AlarmAckRule_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, AlarmAckRule_simple /* IMPORTED_LONG_NAMED_INTEGER */, simple /* IMPORTED_SHORT_NAMED_INTEGER */, AlarmAckRule_ack_active /* IMPORTED_LONG_NAMED_INTEGER */, ack_active /* IMPORTED_SHORT_NAMED_INTEGER */, AlarmAckRule_ack_all /* IMPORTED_LONG_NAMED_INTEGER */, ack_all /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
-import { EE_State, EE_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, EE_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, EE_State_active /* IMPORTED_LONG_NAMED_INTEGER */, EE_State_activeNoAckA /* IMPORTED_LONG_NAMED_INTEGER */, activeNoAckA /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleNoAckI /* IMPORTED_LONG_NAMED_INTEGER */, idleNoAckI /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleNoAckA /* IMPORTED_LONG_NAMED_INTEGER */, idleNoAckA /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleAcked /* IMPORTED_LONG_NAMED_INTEGER */, idleAcked /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_activeAcked /* IMPORTED_LONG_NAMED_INTEGER */, activeAcked /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_undefined /* IMPORTED_LONG_NAMED_INTEGER */, undefined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/EE-State.ta.mjs";
+import { EE_State, undefined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/EE-State.ta.mjs";
 // export { EE_State, EE_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, EE_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, EE_State_active /* IMPORTED_LONG_NAMED_INTEGER */, EE_State_activeNoAckA /* IMPORTED_LONG_NAMED_INTEGER */, activeNoAckA /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleNoAckI /* IMPORTED_LONG_NAMED_INTEGER */, idleNoAckI /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleNoAckA /* IMPORTED_LONG_NAMED_INTEGER */, idleNoAckA /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_idleAcked /* IMPORTED_LONG_NAMED_INTEGER */, idleAcked /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_activeAcked /* IMPORTED_LONG_NAMED_INTEGER */, activeAcked /* IMPORTED_SHORT_NAMED_INTEGER */, EE_State_undefined /* IMPORTED_LONG_NAMED_INTEGER */, undefined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/EE-State.ta.mjs";
 import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
 // export { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
@@ -334,7 +280,7 @@ let _cached_encoder_for_AlarmEnrollmentSummary: $.ASN1Encoder<AlarmEnrollmentSum
  */
 export
 function _encode_AlarmEnrollmentSummary (value: AlarmEnrollmentSummary, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AlarmEnrollmentSummary) { _cached_encoder_for_AlarmEnrollmentSummary = function (value: AlarmEnrollmentSummary, elGetter: $.ASN1Encoder<AlarmEnrollmentSummary>): _Element {
+    if (!_cached_encoder_for_AlarmEnrollmentSummary) { _cached_encoder_for_AlarmEnrollmentSummary = function (value: AlarmEnrollmentSummary): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ObjectName, $.BER)(value.eventEnrollmentName, $.BER),
