@@ -325,35 +325,8 @@ const ParameterSupportOptions_char: number = 17; /* LONG_NAMED_BIT */
  */
 export
 const char: number = ParameterSupportOptions_char; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ParameterSupportOptions: $.ASN1Decoder<ParameterSupportOptions> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ParameterSupportOptions
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ParameterSupportOptions (el: _Element): ParameterSupportOptions {
-    if (!_cached_decoder_for_ParameterSupportOptions) { _cached_decoder_for_ParameterSupportOptions = $._decodeBitString; }
-    return _cached_decoder_for_ParameterSupportOptions(el);
-}
-
-let _cached_encoder_for_ParameterSupportOptions: $.ASN1Encoder<ParameterSupportOptions> | null = null;
-
-/**
- * @summary Encodes a(n) ParameterSupportOptions into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ParameterSupportOptions, encoded as an ASN.1 Element.
- */
-export
-function _encode_ParameterSupportOptions (value: ParameterSupportOptions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterSupportOptions) { _cached_encoder_for_ParameterSupportOptions = $._encodeBitString; }
-    return _cached_encoder_for_ParameterSupportOptions(value, elGetter);
-}
+export const _decode_ParameterSupportOptions = $._decodeBitString;
+export const _encode_ParameterSupportOptions = $._encodeBitString;
 
 
 /* eslint-enable */

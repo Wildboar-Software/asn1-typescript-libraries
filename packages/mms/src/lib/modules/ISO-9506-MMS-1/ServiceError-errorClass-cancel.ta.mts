@@ -129,35 +129,8 @@ const ServiceError_errorClass_cancel_cancel_not_possible: ServiceError_errorClas
  */
 export
 const cancel_not_possible: ServiceError_errorClass_cancel = ServiceError_errorClass_cancel_cancel_not_possible; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_cancel: $.ASN1Decoder<ServiceError_errorClass_cancel> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_cancel
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_cancel (el: _Element): ServiceError_errorClass_cancel {
-    if (!_cached_decoder_for_ServiceError_errorClass_cancel) { _cached_decoder_for_ServiceError_errorClass_cancel = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_cancel(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_cancel: $.ASN1Encoder<ServiceError_errorClass_cancel> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_cancel into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_cancel, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_cancel (value: ServiceError_errorClass_cancel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_cancel) { _cached_encoder_for_ServiceError_errorClass_cancel = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_cancel(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_cancel = $._decodeInteger;
+export const _encode_ServiceError_errorClass_cancel = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -145,35 +145,8 @@ const DeleteNamedVariableList_Request_scopeOfDelete_vmd: DeleteNamedVariableList
  */
 export
 const vmd: DeleteNamedVariableList_Request_scopeOfDelete = DeleteNamedVariableList_Request_scopeOfDelete_vmd; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DeleteNamedVariableList_Request_scopeOfDelete: $.ASN1Decoder<DeleteNamedVariableList_Request_scopeOfDelete> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DeleteNamedVariableList_Request_scopeOfDelete
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DeleteNamedVariableList_Request_scopeOfDelete (el: _Element): DeleteNamedVariableList_Request_scopeOfDelete {
-    if (!_cached_decoder_for_DeleteNamedVariableList_Request_scopeOfDelete) { _cached_decoder_for_DeleteNamedVariableList_Request_scopeOfDelete = $._decodeInteger; }
-    return _cached_decoder_for_DeleteNamedVariableList_Request_scopeOfDelete(el);
-}
-
-let _cached_encoder_for_DeleteNamedVariableList_Request_scopeOfDelete: $.ASN1Encoder<DeleteNamedVariableList_Request_scopeOfDelete> | null = null;
-
-/**
- * @summary Encodes a(n) DeleteNamedVariableList_Request_scopeOfDelete into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeleteNamedVariableList_Request_scopeOfDelete, encoded as an ASN.1 Element.
- */
-export
-function _encode_DeleteNamedVariableList_Request_scopeOfDelete (value: DeleteNamedVariableList_Request_scopeOfDelete, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeleteNamedVariableList_Request_scopeOfDelete) { _cached_encoder_for_DeleteNamedVariableList_Request_scopeOfDelete = $._encodeInteger; }
-    return _cached_encoder_for_DeleteNamedVariableList_Request_scopeOfDelete(value, elGetter);
-}
+export const _decode_DeleteNamedVariableList_Request_scopeOfDelete = $._decodeInteger;
+export const _encode_DeleteNamedVariableList_Request_scopeOfDelete = $._encodeInteger;
 
 
 /* eslint-enable */

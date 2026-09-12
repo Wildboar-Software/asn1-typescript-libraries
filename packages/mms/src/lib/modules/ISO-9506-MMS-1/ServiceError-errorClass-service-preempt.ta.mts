@@ -145,35 +145,8 @@ const ServiceError_errorClass_service_preempt_cancel: ServiceError_errorClass_se
  */
 export
 const cancel: ServiceError_errorClass_service_preempt = ServiceError_errorClass_service_preempt_cancel; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_service_preempt: $.ASN1Decoder<ServiceError_errorClass_service_preempt> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_service_preempt
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_service_preempt (el: _Element): ServiceError_errorClass_service_preempt {
-    if (!_cached_decoder_for_ServiceError_errorClass_service_preempt) { _cached_decoder_for_ServiceError_errorClass_service_preempt = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_service_preempt(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_service_preempt: $.ASN1Encoder<ServiceError_errorClass_service_preempt> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_service_preempt into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_service_preempt, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_service_preempt (value: ServiceError_errorClass_service_preempt, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_service_preempt) { _cached_encoder_for_ServiceError_errorClass_service_preempt = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_service_preempt(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_service_preempt = $._decodeInteger;
+export const _encode_ServiceError_errorClass_service_preempt = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Stop_Response = NULL; // NullType
-
-let _cached_decoder_for_Stop_Response: $.ASN1Decoder<Stop_Response> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Stop_Response
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Stop_Response (el: _Element): Stop_Response {
-    if (!_cached_decoder_for_Stop_Response) { _cached_decoder_for_Stop_Response = $._decodeNull; }
-    return _cached_decoder_for_Stop_Response(el);
-}
-
-let _cached_encoder_for_Stop_Response: $.ASN1Encoder<Stop_Response> | null = null;
-
-/**
- * @summary Encodes a(n) Stop_Response into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Stop_Response, encoded as an ASN.1 Element.
- */
-export
-function _encode_Stop_Response (value: Stop_Response, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Stop_Response) { _cached_encoder_for_Stop_Response = $._encodeNull; }
-    return _cached_encoder_for_Stop_Response(value, elGetter);
-}
+export const _decode_Stop_Response = $._decodeNull;
+export const _encode_Stop_Response = $._encodeNull;
 
 
 /* eslint-enable */

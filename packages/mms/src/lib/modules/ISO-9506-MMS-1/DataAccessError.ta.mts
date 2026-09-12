@@ -286,35 +286,8 @@ const DataAccessError_object_value_invalid: DataAccessError = 11; /* LONG_NAMED_
  */
 export
 const object_value_invalid: DataAccessError = DataAccessError_object_value_invalid; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DataAccessError: $.ASN1Decoder<DataAccessError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DataAccessError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DataAccessError (el: _Element): DataAccessError {
-    if (!_cached_decoder_for_DataAccessError) { _cached_decoder_for_DataAccessError = $._decodeInteger; }
-    return _cached_decoder_for_DataAccessError(el);
-}
-
-let _cached_encoder_for_DataAccessError: $.ASN1Encoder<DataAccessError> | null = null;
-
-/**
- * @summary Encodes a(n) DataAccessError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DataAccessError, encoded as an ASN.1 Element.
- */
-export
-function _encode_DataAccessError (value: DataAccessError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DataAccessError) { _cached_encoder_for_DataAccessError = $._encodeInteger; }
-    return _cached_encoder_for_DataAccessError(value, elGetter);
-}
+export const _decode_DataAccessError = $._decodeInteger;
+export const _encode_DataAccessError = $._encodeInteger;
 
 
 /* eslint-enable */

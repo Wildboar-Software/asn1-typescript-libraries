@@ -235,35 +235,8 @@ const EE_State_undefined: EE_State = 8; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const undefined: EE_State = EE_State_undefined; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EE_State: $.ASN1Decoder<EE_State> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EE_State
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EE_State (el: _Element): EE_State {
-    if (!_cached_decoder_for_EE_State) { _cached_decoder_for_EE_State = $._decodeInteger; }
-    return _cached_decoder_for_EE_State(el);
-}
-
-let _cached_encoder_for_EE_State: $.ASN1Encoder<EE_State> | null = null;
-
-/**
- * @summary Encodes a(n) EE_State into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EE_State, encoded as an ASN.1 Element.
- */
-export
-function _encode_EE_State (value: EE_State, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EE_State) { _cached_encoder_for_EE_State = $._encodeInteger; }
-    return _cached_encoder_for_EE_State(value, elGetter);
-}
+export const _decode_EE_State = $._decodeInteger;
+export const _encode_EE_State = $._encodeInteger;
 
 
 /* eslint-enable */

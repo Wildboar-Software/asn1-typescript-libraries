@@ -127,35 +127,8 @@ const AdditionalCBBOptions_recl: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const recl: number = AdditionalCBBOptions_recl; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_AdditionalCBBOptions: $.ASN1Decoder<AdditionalCBBOptions> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AdditionalCBBOptions
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AdditionalCBBOptions (el: _Element): AdditionalCBBOptions {
-    if (!_cached_decoder_for_AdditionalCBBOptions) { _cached_decoder_for_AdditionalCBBOptions = $._decodeBitString; }
-    return _cached_decoder_for_AdditionalCBBOptions(el);
-}
-
-let _cached_encoder_for_AdditionalCBBOptions: $.ASN1Encoder<AdditionalCBBOptions> | null = null;
-
-/**
- * @summary Encodes a(n) AdditionalCBBOptions into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AdditionalCBBOptions, encoded as an ASN.1 Element.
- */
-export
-function _encode_AdditionalCBBOptions (value: AdditionalCBBOptions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalCBBOptions) { _cached_encoder_for_AdditionalCBBOptions = $._encodeBitString; }
-    return _cached_encoder_for_AdditionalCBBOptions(value, elGetter);
-}
+export const _decode_AdditionalCBBOptions = $._decodeBitString;
+export const _encode_AdditionalCBBOptions = $._encodeBitString;
 
 
 /* eslint-enable */

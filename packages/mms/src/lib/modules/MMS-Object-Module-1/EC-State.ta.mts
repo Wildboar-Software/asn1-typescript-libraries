@@ -133,35 +133,8 @@ const EC_State_active: EC_State = 2; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const active: EC_State = EC_State_active; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EC_State: $.ASN1Decoder<EC_State> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EC_State
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EC_State (el: _Element): EC_State {
-    if (!_cached_decoder_for_EC_State) { _cached_decoder_for_EC_State = $._decodeInteger; }
-    return _cached_decoder_for_EC_State(el);
-}
-
-let _cached_encoder_for_EC_State: $.ASN1Encoder<EC_State> | null = null;
-
-/**
- * @summary Encodes a(n) EC_State into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EC_State, encoded as an ASN.1 Element.
- */
-export
-function _encode_EC_State (value: EC_State, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EC_State) { _cached_encoder_for_EC_State = $._encodeInteger; }
-    return _cached_encoder_for_EC_State(value, elGetter);
-}
+export const _decode_EC_State = $._decodeInteger;
+export const _encode_EC_State = $._encodeInteger;
 
 
 /* eslint-enable */

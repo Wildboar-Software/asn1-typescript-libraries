@@ -141,35 +141,8 @@ const ExtendedStatus_localControl: number = 3; /* LONG_NAMED_BIT */
  */
 export
 const localControl: number = ExtendedStatus_localControl; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ExtendedStatus: $.ASN1Decoder<ExtendedStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ExtendedStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ExtendedStatus (el: _Element): ExtendedStatus {
-    if (!_cached_decoder_for_ExtendedStatus) { _cached_decoder_for_ExtendedStatus = $._decodeBitString; }
-    return _cached_decoder_for_ExtendedStatus(el);
-}
-
-let _cached_encoder_for_ExtendedStatus: $.ASN1Encoder<ExtendedStatus> | null = null;
-
-/**
- * @summary Encodes a(n) ExtendedStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExtendedStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_ExtendedStatus (value: ExtendedStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtendedStatus) { _cached_encoder_for_ExtendedStatus = $._encodeBitString; }
-    return _cached_encoder_for_ExtendedStatus(value, elGetter);
-}
+export const _decode_ExtendedStatus = $._decodeBitString;
+export const _encode_ExtendedStatus = $._encodeBitString;
 
 
 /* eslint-enable */

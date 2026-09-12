@@ -1492,35 +1492,8 @@ const ServiceSupportOptions_reconfigureProgramInvocation: number = 92; /* LONG_N
  */
 export
 const reconfigureProgramInvocation: number = ServiceSupportOptions_reconfigureProgramInvocation; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ServiceSupportOptions: $.ASN1Decoder<ServiceSupportOptions> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceSupportOptions
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceSupportOptions (el: _Element): ServiceSupportOptions {
-    if (!_cached_decoder_for_ServiceSupportOptions) { _cached_decoder_for_ServiceSupportOptions = $._decodeBitString; }
-    return _cached_decoder_for_ServiceSupportOptions(el);
-}
-
-let _cached_encoder_for_ServiceSupportOptions: $.ASN1Encoder<ServiceSupportOptions> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceSupportOptions into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceSupportOptions, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceSupportOptions (value: ServiceSupportOptions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceSupportOptions) { _cached_encoder_for_ServiceSupportOptions = $._encodeBitString; }
-    return _cached_encoder_for_ServiceSupportOptions(value, elGetter);
-}
+export const _decode_ServiceSupportOptions = $._decodeBitString;
+export const _encode_ServiceSupportOptions = $._encodeBitString;
 
 
 /* eslint-enable */

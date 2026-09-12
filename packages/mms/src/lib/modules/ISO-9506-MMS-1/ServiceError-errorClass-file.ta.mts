@@ -241,35 +241,8 @@ const ServiceError_errorClass_file_insufficient_space_in_filestore: ServiceError
  */
 export
 const insufficient_space_in_filestore: ServiceError_errorClass_file = ServiceError_errorClass_file_insufficient_space_in_filestore; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_file: $.ASN1Decoder<ServiceError_errorClass_file> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_file
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_file (el: _Element): ServiceError_errorClass_file {
-    if (!_cached_decoder_for_ServiceError_errorClass_file) { _cached_decoder_for_ServiceError_errorClass_file = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_file(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_file: $.ASN1Encoder<ServiceError_errorClass_file> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_file into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_file, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_file (value: ServiceError_errorClass_file, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_file) { _cached_encoder_for_ServiceError_errorClass_file = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_file(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_file = $._decodeInteger;
+export const _encode_ServiceError_errorClass_file = $._encodeInteger;
 
 
 /* eslint-enable */

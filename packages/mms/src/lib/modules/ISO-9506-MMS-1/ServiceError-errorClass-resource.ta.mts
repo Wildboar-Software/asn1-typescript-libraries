@@ -177,35 +177,8 @@ const ServiceError_errorClass_resource_capability_unknown: ServiceError_errorCla
  */
 export
 const capability_unknown: ServiceError_errorClass_resource = ServiceError_errorClass_resource_capability_unknown; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_resource: $.ASN1Decoder<ServiceError_errorClass_resource> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_resource
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_resource (el: _Element): ServiceError_errorClass_resource {
-    if (!_cached_decoder_for_ServiceError_errorClass_resource) { _cached_decoder_for_ServiceError_errorClass_resource = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_resource(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_resource: $.ASN1Encoder<ServiceError_errorClass_resource> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_resource into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_resource, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_resource (value: ServiceError_errorClass_resource, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_resource) { _cached_encoder_for_ServiceError_errorClass_resource = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_resource(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_resource = $._decodeInteger;
+export const _encode_ServiceError_errorClass_resource = $._encodeInteger;
 
 
 /* eslint-enable */

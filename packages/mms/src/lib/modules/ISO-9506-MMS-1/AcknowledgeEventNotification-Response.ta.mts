@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AcknowledgeEventNotification_Response = NULL; // NullType
-
-let _cached_decoder_for_AcknowledgeEventNotification_Response: $.ASN1Decoder<AcknowledgeEventNotification_Response> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AcknowledgeEventNotification_Response
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AcknowledgeEventNotification_Response (el: _Element): AcknowledgeEventNotification_Response {
-    if (!_cached_decoder_for_AcknowledgeEventNotification_Response) { _cached_decoder_for_AcknowledgeEventNotification_Response = $._decodeNull; }
-    return _cached_decoder_for_AcknowledgeEventNotification_Response(el);
-}
-
-let _cached_encoder_for_AcknowledgeEventNotification_Response: $.ASN1Encoder<AcknowledgeEventNotification_Response> | null = null;
-
-/**
- * @summary Encodes a(n) AcknowledgeEventNotification_Response into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AcknowledgeEventNotification_Response, encoded as an ASN.1 Element.
- */
-export
-function _encode_AcknowledgeEventNotification_Response (value: AcknowledgeEventNotification_Response, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AcknowledgeEventNotification_Response) { _cached_encoder_for_AcknowledgeEventNotification_Response = $._encodeNull; }
-    return _cached_encoder_for_AcknowledgeEventNotification_Response(value, elGetter);
-}
+export const _decode_AcknowledgeEventNotification_Response = $._decodeNull;
+export const _encode_AcknowledgeEventNotification_Response = $._encodeNull;
 
 
 /* eslint-enable */

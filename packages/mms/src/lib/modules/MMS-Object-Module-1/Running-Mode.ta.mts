@@ -133,35 +133,8 @@ const Running_Mode_step_limited: Running_Mode = 2; /* LONG_NAMED_INTEGER_VALUE *
  */
 export
 const step_limited: Running_Mode = Running_Mode_step_limited; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_Running_Mode: $.ASN1Decoder<Running_Mode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Running_Mode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Running_Mode (el: _Element): Running_Mode {
-    if (!_cached_decoder_for_Running_Mode) { _cached_decoder_for_Running_Mode = $._decodeInteger; }
-    return _cached_decoder_for_Running_Mode(el);
-}
-
-let _cached_encoder_for_Running_Mode: $.ASN1Encoder<Running_Mode> | null = null;
-
-/**
- * @summary Encodes a(n) Running_Mode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Running_Mode, encoded as an ASN.1 Element.
- */
-export
-function _encode_Running_Mode (value: Running_Mode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Running_Mode) { _cached_encoder_for_Running_Mode = $._encodeInteger; }
-    return _cached_encoder_for_Running_Mode(value, elGetter);
-}
+export const _decode_Running_Mode = $._decodeInteger;
+export const _encode_Running_Mode = $._encodeInteger;
 
 
 /* eslint-enable */

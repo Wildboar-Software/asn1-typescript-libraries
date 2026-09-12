@@ -165,35 +165,8 @@ const Operator_Station_instance_definition_details_stationType_entry_display: Op
  */
 export
 const entry_display: Operator_Station_instance_definition_details_stationType = Operator_Station_instance_definition_details_stationType.entry_display; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Operator_Station_instance_definition_details_stationType: $.ASN1Decoder<Operator_Station_instance_definition_details_stationType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Operator_Station_instance_definition_details_stationType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Operator_Station_instance_definition_details_stationType (el: _Element): Operator_Station_instance_definition_details_stationType {
-    if (!_cached_decoder_for_Operator_Station_instance_definition_details_stationType) { _cached_decoder_for_Operator_Station_instance_definition_details_stationType = $._decodeEnumerated; }
-    return _cached_decoder_for_Operator_Station_instance_definition_details_stationType(el);
-}
-
-let _cached_encoder_for_Operator_Station_instance_definition_details_stationType: $.ASN1Encoder<Operator_Station_instance_definition_details_stationType> | null = null;
-
-/**
- * @summary Encodes a(n) Operator_Station_instance_definition_details_stationType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Operator_Station_instance_definition_details_stationType, encoded as an ASN.1 Element.
- */
-export
-function _encode_Operator_Station_instance_definition_details_stationType (value: Operator_Station_instance_definition_details_stationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Operator_Station_instance_definition_details_stationType) { _cached_encoder_for_Operator_Station_instance_definition_details_stationType = $._encodeEnumerated; }
-    return _cached_encoder_for_Operator_Station_instance_definition_details_stationType(value, elGetter);
-}
+export const _decode_Operator_Station_instance_definition_details_stationType = $._decodeEnumerated;
+export const _encode_Operator_Station_instance_definition_details_stationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

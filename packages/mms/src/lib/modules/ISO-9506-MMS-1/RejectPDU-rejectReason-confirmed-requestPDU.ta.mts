@@ -225,35 +225,8 @@ const RejectPDU_rejectReason_confirmed_requestPDU_value_out_of_range: RejectPDU_
  */
 export
 const value_out_of_range: RejectPDU_rejectReason_confirmed_requestPDU = RejectPDU_rejectReason_confirmed_requestPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_RejectPDU_rejectReason_confirmed_requestPDU: $.ASN1Decoder<RejectPDU_rejectReason_confirmed_requestPDU> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RejectPDU_rejectReason_confirmed_requestPDU
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RejectPDU_rejectReason_confirmed_requestPDU (el: _Element): RejectPDU_rejectReason_confirmed_requestPDU {
-    if (!_cached_decoder_for_RejectPDU_rejectReason_confirmed_requestPDU) { _cached_decoder_for_RejectPDU_rejectReason_confirmed_requestPDU = $._decodeInteger; }
-    return _cached_decoder_for_RejectPDU_rejectReason_confirmed_requestPDU(el);
-}
-
-let _cached_encoder_for_RejectPDU_rejectReason_confirmed_requestPDU: $.ASN1Encoder<RejectPDU_rejectReason_confirmed_requestPDU> | null = null;
-
-/**
- * @summary Encodes a(n) RejectPDU_rejectReason_confirmed_requestPDU into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RejectPDU_rejectReason_confirmed_requestPDU, encoded as an ASN.1 Element.
- */
-export
-function _encode_RejectPDU_rejectReason_confirmed_requestPDU (value: RejectPDU_rejectReason_confirmed_requestPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RejectPDU_rejectReason_confirmed_requestPDU) { _cached_encoder_for_RejectPDU_rejectReason_confirmed_requestPDU = $._encodeInteger; }
-    return _cached_encoder_for_RejectPDU_rejectReason_confirmed_requestPDU(value, elGetter);
-}
+export const _decode_RejectPDU_rejectReason_confirmed_requestPDU = $._decodeInteger;
+export const _encode_RejectPDU_rejectReason_confirmed_requestPDU = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Unsigned8 = INTEGER;
-
-let _cached_decoder_for_Unsigned8: $.ASN1Decoder<Unsigned8> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Unsigned8
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Unsigned8 (el: _Element): Unsigned8 {
-    if (!_cached_decoder_for_Unsigned8) { _cached_decoder_for_Unsigned8 = $._decodeInteger; }
-    return _cached_decoder_for_Unsigned8(el);
-}
-
-let _cached_encoder_for_Unsigned8: $.ASN1Encoder<Unsigned8> | null = null;
-
-/**
- * @summary Encodes a(n) Unsigned8 into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Unsigned8, encoded as an ASN.1 Element.
- */
-export
-function _encode_Unsigned8 (value: Unsigned8, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Unsigned8) { _cached_encoder_for_Unsigned8 = $._encodeInteger; }
-    return _cached_encoder_for_Unsigned8(value, elGetter);
-}
+export const _decode_Unsigned8 = $._decodeInteger;
+export const _encode_Unsigned8 = $._encodeInteger;
 
 
 /* eslint-enable */

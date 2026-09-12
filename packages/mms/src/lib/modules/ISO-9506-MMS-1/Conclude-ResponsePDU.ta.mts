@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Conclude_ResponsePDU = NULL; // NullType
-
-let _cached_decoder_for_Conclude_ResponsePDU: $.ASN1Decoder<Conclude_ResponsePDU> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Conclude_ResponsePDU
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Conclude_ResponsePDU (el: _Element): Conclude_ResponsePDU {
-    if (!_cached_decoder_for_Conclude_ResponsePDU) { _cached_decoder_for_Conclude_ResponsePDU = $._decodeNull; }
-    return _cached_decoder_for_Conclude_ResponsePDU(el);
-}
-
-let _cached_encoder_for_Conclude_ResponsePDU: $.ASN1Encoder<Conclude_ResponsePDU> | null = null;
-
-/**
- * @summary Encodes a(n) Conclude_ResponsePDU into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Conclude_ResponsePDU, encoded as an ASN.1 Element.
- */
-export
-function _encode_Conclude_ResponsePDU (value: Conclude_ResponsePDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Conclude_ResponsePDU) { _cached_encoder_for_Conclude_ResponsePDU = $._encodeNull; }
-    return _cached_encoder_for_Conclude_ResponsePDU(value, elGetter);
-}
+export const _decode_Conclude_ResponsePDU = $._decodeNull;
+export const _encode_Conclude_ResponsePDU = $._encodeNull;
 
 
 /* eslint-enable */

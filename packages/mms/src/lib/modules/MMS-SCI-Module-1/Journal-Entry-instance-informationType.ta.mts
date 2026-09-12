@@ -165,35 +165,8 @@ const Journal_Entry_instance_informationType_data: Journal_Entry_instance_inform
  */
 export
 const data: Journal_Entry_instance_informationType = Journal_Entry_instance_informationType.data; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Journal_Entry_instance_informationType: $.ASN1Decoder<Journal_Entry_instance_informationType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Journal_Entry_instance_informationType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Journal_Entry_instance_informationType (el: _Element): Journal_Entry_instance_informationType {
-    if (!_cached_decoder_for_Journal_Entry_instance_informationType) { _cached_decoder_for_Journal_Entry_instance_informationType = $._decodeEnumerated; }
-    return _cached_decoder_for_Journal_Entry_instance_informationType(el);
-}
-
-let _cached_encoder_for_Journal_Entry_instance_informationType: $.ASN1Encoder<Journal_Entry_instance_informationType> | null = null;
-
-/**
- * @summary Encodes a(n) Journal_Entry_instance_informationType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Journal_Entry_instance_informationType, encoded as an ASN.1 Element.
- */
-export
-function _encode_Journal_Entry_instance_informationType (value: Journal_Entry_instance_informationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Journal_Entry_instance_informationType) { _cached_encoder_for_Journal_Entry_instance_informationType = $._encodeEnumerated; }
-    return _cached_encoder_for_Journal_Entry_instance_informationType(value, elGetter);
-}
+export const _decode_Journal_Entry_instance_informationType = $._decodeEnumerated;
+export const _encode_Journal_Entry_instance_informationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

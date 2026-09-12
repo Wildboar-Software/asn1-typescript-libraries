@@ -161,35 +161,8 @@ const RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range: RejectPDU_reject
  */
 export
 const value_out_of_range: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_RejectPDU_rejectReason_unconfirmedPDU: $.ASN1Decoder<RejectPDU_rejectReason_unconfirmedPDU> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RejectPDU_rejectReason_unconfirmedPDU
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RejectPDU_rejectReason_unconfirmedPDU (el: _Element): RejectPDU_rejectReason_unconfirmedPDU {
-    if (!_cached_decoder_for_RejectPDU_rejectReason_unconfirmedPDU) { _cached_decoder_for_RejectPDU_rejectReason_unconfirmedPDU = $._decodeInteger; }
-    return _cached_decoder_for_RejectPDU_rejectReason_unconfirmedPDU(el);
-}
-
-let _cached_encoder_for_RejectPDU_rejectReason_unconfirmedPDU: $.ASN1Encoder<RejectPDU_rejectReason_unconfirmedPDU> | null = null;
-
-/**
- * @summary Encodes a(n) RejectPDU_rejectReason_unconfirmedPDU into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RejectPDU_rejectReason_unconfirmedPDU, encoded as an ASN.1 Element.
- */
-export
-function _encode_RejectPDU_rejectReason_unconfirmedPDU (value: RejectPDU_rejectReason_unconfirmedPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RejectPDU_rejectReason_unconfirmedPDU) { _cached_encoder_for_RejectPDU_rejectReason_unconfirmedPDU = $._encodeInteger; }
-    return _cached_encoder_for_RejectPDU_rejectReason_unconfirmedPDU(value, elGetter);
-}
+export const _decode_RejectPDU_rejectReason_unconfirmedPDU = $._decodeInteger;
+export const _encode_RejectPDU_rejectReason_unconfirmedPDU = $._encodeInteger;
 
 
 /* eslint-enable */

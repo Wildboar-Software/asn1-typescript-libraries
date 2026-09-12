@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ProblematicThereforeAnyType = _Element; // ObjectClassFieldType
-
-let _cached_decoder_for_ProblematicThereforeAnyType: $.ASN1Decoder<ProblematicThereforeAnyType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ProblematicThereforeAnyType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ProblematicThereforeAnyType (el: _Element): ProblematicThereforeAnyType {
-    if (!_cached_decoder_for_ProblematicThereforeAnyType) { _cached_decoder_for_ProblematicThereforeAnyType = $._decodeAny; }
-    return _cached_decoder_for_ProblematicThereforeAnyType(el);
-}
-
-let _cached_encoder_for_ProblematicThereforeAnyType: $.ASN1Encoder<ProblematicThereforeAnyType> | null = null;
-
-/**
- * @summary Encodes a(n) ProblematicThereforeAnyType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProblematicThereforeAnyType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ProblematicThereforeAnyType (value: ProblematicThereforeAnyType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProblematicThereforeAnyType) { _cached_encoder_for_ProblematicThereforeAnyType = $._encodeAny; }
-    return _cached_encoder_for_ProblematicThereforeAnyType(value, elGetter);
-}
+export const _decode_ProblematicThereforeAnyType = $._decodeAny;
+export const _encode_ProblematicThereforeAnyType = $._encodeAny;
 
 
 /* eslint-enable */

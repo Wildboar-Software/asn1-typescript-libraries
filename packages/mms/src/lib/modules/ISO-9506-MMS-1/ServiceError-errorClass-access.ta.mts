@@ -161,35 +161,8 @@ const ServiceError_errorClass_access_object_invalidated: ServiceError_errorClass
  */
 export
 const object_invalidated: ServiceError_errorClass_access = ServiceError_errorClass_access_object_invalidated; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_access: $.ASN1Decoder<ServiceError_errorClass_access> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_access
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_access (el: _Element): ServiceError_errorClass_access {
-    if (!_cached_decoder_for_ServiceError_errorClass_access) { _cached_decoder_for_ServiceError_errorClass_access = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_access(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_access: $.ASN1Encoder<ServiceError_errorClass_access> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_access into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_access, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_access (value: ServiceError_errorClass_access, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_access) { _cached_encoder_for_ServiceError_errorClass_access = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_access(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_access = $._decodeInteger;
+export const _encode_ServiceError_errorClass_access = $._encodeInteger;
 
 
 /* eslint-enable */

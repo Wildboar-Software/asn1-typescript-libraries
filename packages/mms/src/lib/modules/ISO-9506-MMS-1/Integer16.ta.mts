@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Integer16 = INTEGER;
-
-let _cached_decoder_for_Integer16: $.ASN1Decoder<Integer16> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Integer16
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Integer16 (el: _Element): Integer16 {
-    if (!_cached_decoder_for_Integer16) { _cached_decoder_for_Integer16 = $._decodeInteger; }
-    return _cached_decoder_for_Integer16(el);
-}
-
-let _cached_encoder_for_Integer16: $.ASN1Encoder<Integer16> | null = null;
-
-/**
- * @summary Encodes a(n) Integer16 into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Integer16, encoded as an ASN.1 Element.
- */
-export
-function _encode_Integer16 (value: Integer16, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Integer16) { _cached_encoder_for_Integer16 = $._encodeInteger; }
-    return _cached_encoder_for_Integer16(value, elGetter);
-}
+export const _decode_Integer16 = $._decodeInteger;
+export const _encode_Integer16 = $._encodeInteger;
 
 
 /* eslint-enable */

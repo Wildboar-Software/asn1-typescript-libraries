@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AddToUnitControl_Response = NULL; // NullType
-
-let _cached_decoder_for_AddToUnitControl_Response: $.ASN1Decoder<AddToUnitControl_Response> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AddToUnitControl_Response
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AddToUnitControl_Response (el: _Element): AddToUnitControl_Response {
-    if (!_cached_decoder_for_AddToUnitControl_Response) { _cached_decoder_for_AddToUnitControl_Response = $._decodeNull; }
-    return _cached_decoder_for_AddToUnitControl_Response(el);
-}
-
-let _cached_encoder_for_AddToUnitControl_Response: $.ASN1Encoder<AddToUnitControl_Response> | null = null;
-
-/**
- * @summary Encodes a(n) AddToUnitControl_Response into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AddToUnitControl_Response, encoded as an ASN.1 Element.
- */
-export
-function _encode_AddToUnitControl_Response (value: AddToUnitControl_Response, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddToUnitControl_Response) { _cached_encoder_for_AddToUnitControl_Response = $._encodeNull; }
-    return _cached_encoder_for_AddToUnitControl_Response(value, elGetter);
-}
+export const _decode_AddToUnitControl_Response = $._decodeNull;
+export const _encode_AddToUnitControl_Response = $._encodeNull;
 
 
 /* eslint-enable */

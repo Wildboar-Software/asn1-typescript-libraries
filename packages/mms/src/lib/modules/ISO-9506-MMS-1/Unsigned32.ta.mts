@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Unsigned32 = INTEGER;
-
-let _cached_decoder_for_Unsigned32: $.ASN1Decoder<Unsigned32> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Unsigned32
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Unsigned32 (el: _Element): Unsigned32 {
-    if (!_cached_decoder_for_Unsigned32) { _cached_decoder_for_Unsigned32 = $._decodeInteger; }
-    return _cached_decoder_for_Unsigned32(el);
-}
-
-let _cached_encoder_for_Unsigned32: $.ASN1Encoder<Unsigned32> | null = null;
-
-/**
- * @summary Encodes a(n) Unsigned32 into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Unsigned32, encoded as an ASN.1 Element.
- */
-export
-function _encode_Unsigned32 (value: Unsigned32, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Unsigned32) { _cached_encoder_for_Unsigned32 = $._encodeInteger; }
-    return _cached_encoder_for_Unsigned32(value, elGetter);
-}
+export const _decode_Unsigned32 = $._decodeInteger;
+export const _encode_Unsigned32 = $._encodeInteger;
 
 
 /* eslint-enable */

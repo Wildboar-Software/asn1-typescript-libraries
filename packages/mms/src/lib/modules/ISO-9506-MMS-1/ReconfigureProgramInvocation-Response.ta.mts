@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ReconfigureProgramInvocation_Response = NULL; // NullType
-
-let _cached_decoder_for_ReconfigureProgramInvocation_Response: $.ASN1Decoder<ReconfigureProgramInvocation_Response> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReconfigureProgramInvocation_Response
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReconfigureProgramInvocation_Response (el: _Element): ReconfigureProgramInvocation_Response {
-    if (!_cached_decoder_for_ReconfigureProgramInvocation_Response) { _cached_decoder_for_ReconfigureProgramInvocation_Response = $._decodeNull; }
-    return _cached_decoder_for_ReconfigureProgramInvocation_Response(el);
-}
-
-let _cached_encoder_for_ReconfigureProgramInvocation_Response: $.ASN1Encoder<ReconfigureProgramInvocation_Response> | null = null;
-
-/**
- * @summary Encodes a(n) ReconfigureProgramInvocation_Response into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReconfigureProgramInvocation_Response, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReconfigureProgramInvocation_Response (value: ReconfigureProgramInvocation_Response, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReconfigureProgramInvocation_Response) { _cached_encoder_for_ReconfigureProgramInvocation_Response = $._encodeNull; }
-    return _cached_encoder_for_ReconfigureProgramInvocation_Response(value, elGetter);
-}
+export const _decode_ReconfigureProgramInvocation_Response = $._decodeNull;
+export const _encode_ReconfigureProgramInvocation_Response = $._encodeNull;
 
 
 /* eslint-enable */

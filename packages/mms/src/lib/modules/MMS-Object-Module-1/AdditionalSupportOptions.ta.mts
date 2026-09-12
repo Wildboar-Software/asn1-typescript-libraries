@@ -427,35 +427,8 @@ const AdditionalSupportOptions_alterEventConditionListMonitoring: number = 22; /
  */
 export
 const alterEventConditionListMonitoring: number = AdditionalSupportOptions_alterEventConditionListMonitoring; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_AdditionalSupportOptions: $.ASN1Decoder<AdditionalSupportOptions> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AdditionalSupportOptions
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AdditionalSupportOptions (el: _Element): AdditionalSupportOptions {
-    if (!_cached_decoder_for_AdditionalSupportOptions) { _cached_decoder_for_AdditionalSupportOptions = $._decodeBitString; }
-    return _cached_decoder_for_AdditionalSupportOptions(el);
-}
-
-let _cached_encoder_for_AdditionalSupportOptions: $.ASN1Encoder<AdditionalSupportOptions> | null = null;
-
-/**
- * @summary Encodes a(n) AdditionalSupportOptions into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AdditionalSupportOptions, encoded as an ASN.1 Element.
- */
-export
-function _encode_AdditionalSupportOptions (value: AdditionalSupportOptions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalSupportOptions) { _cached_encoder_for_AdditionalSupportOptions = $._encodeBitString; }
-    return _cached_encoder_for_AdditionalSupportOptions(value, elGetter);
-}
+export const _decode_AdditionalSupportOptions = $._decodeBitString;
+export const _encode_AdditionalSupportOptions = $._encodeBitString;
 
 
 /* eslint-enable */

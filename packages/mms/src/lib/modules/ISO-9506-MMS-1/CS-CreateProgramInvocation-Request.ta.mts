@@ -133,35 +133,8 @@ const CS_CreateProgramInvocation_Request_controlled: CS_CreateProgramInvocation_
  */
 export
 const controlled: CS_CreateProgramInvocation_Request = CS_CreateProgramInvocation_Request_controlled; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_CS_CreateProgramInvocation_Request: $.ASN1Decoder<CS_CreateProgramInvocation_Request> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CS_CreateProgramInvocation_Request
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CS_CreateProgramInvocation_Request (el: _Element): CS_CreateProgramInvocation_Request {
-    if (!_cached_decoder_for_CS_CreateProgramInvocation_Request) { _cached_decoder_for_CS_CreateProgramInvocation_Request = $._decodeInteger; }
-    return _cached_decoder_for_CS_CreateProgramInvocation_Request(el);
-}
-
-let _cached_encoder_for_CS_CreateProgramInvocation_Request: $.ASN1Encoder<CS_CreateProgramInvocation_Request> | null = null;
-
-/**
- * @summary Encodes a(n) CS_CreateProgramInvocation_Request into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CS_CreateProgramInvocation_Request, encoded as an ASN.1 Element.
- */
-export
-function _encode_CS_CreateProgramInvocation_Request (value: CS_CreateProgramInvocation_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CS_CreateProgramInvocation_Request) { _cached_encoder_for_CS_CreateProgramInvocation_Request = $._encodeInteger; }
-    return _cached_encoder_for_CS_CreateProgramInvocation_Request(value, elGetter);
-}
+export const _decode_CS_CreateProgramInvocation_Request = $._decodeInteger;
+export const _encode_CS_CreateProgramInvocation_Request = $._encodeInteger;
 
 
 /* eslint-enable */

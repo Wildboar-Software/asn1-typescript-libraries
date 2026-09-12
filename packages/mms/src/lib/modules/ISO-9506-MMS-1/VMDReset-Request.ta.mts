@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type VMDReset_Request = BOOLEAN; // BooleanType
-
-let _cached_decoder_for_VMDReset_Request: $.ASN1Decoder<VMDReset_Request> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) VMDReset_Request
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_VMDReset_Request (el: _Element): VMDReset_Request {
-    if (!_cached_decoder_for_VMDReset_Request) { _cached_decoder_for_VMDReset_Request = $._decodeBoolean; }
-    return _cached_decoder_for_VMDReset_Request(el);
-}
-
-let _cached_encoder_for_VMDReset_Request: $.ASN1Encoder<VMDReset_Request> | null = null;
-
-/**
- * @summary Encodes a(n) VMDReset_Request into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VMDReset_Request, encoded as an ASN.1 Element.
- */
-export
-function _encode_VMDReset_Request (value: VMDReset_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VMDReset_Request) { _cached_encoder_for_VMDReset_Request = $._encodeBoolean; }
-    return _cached_encoder_for_VMDReset_Request(value, elGetter);
-}
+export const _decode_VMDReset_Request = $._decodeBoolean;
+export const _encode_VMDReset_Request = $._encodeBoolean;
 
 
 /* eslint-enable */

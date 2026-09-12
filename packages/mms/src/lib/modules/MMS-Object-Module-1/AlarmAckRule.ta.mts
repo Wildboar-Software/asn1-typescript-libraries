@@ -150,35 +150,8 @@ const AlarmAckRule_ack_all: AlarmAckRule = 3; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const ack_all: AlarmAckRule = AlarmAckRule_ack_all; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AlarmAckRule: $.ASN1Decoder<AlarmAckRule> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AlarmAckRule
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AlarmAckRule (el: _Element): AlarmAckRule {
-    if (!_cached_decoder_for_AlarmAckRule) { _cached_decoder_for_AlarmAckRule = $._decodeInteger; }
-    return _cached_decoder_for_AlarmAckRule(el);
-}
-
-let _cached_encoder_for_AlarmAckRule: $.ASN1Encoder<AlarmAckRule> | null = null;
-
-/**
- * @summary Encodes a(n) AlarmAckRule into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AlarmAckRule, encoded as an ASN.1 Element.
- */
-export
-function _encode_AlarmAckRule (value: AlarmAckRule, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AlarmAckRule) { _cached_encoder_for_AlarmAckRule = $._encodeInteger; }
-    return _cached_encoder_for_AlarmAckRule(value, elGetter);
-}
+export const _decode_AlarmAckRule = $._decodeInteger;
+export const _encode_AlarmAckRule = $._encodeInteger;
 
 
 /* eslint-enable */

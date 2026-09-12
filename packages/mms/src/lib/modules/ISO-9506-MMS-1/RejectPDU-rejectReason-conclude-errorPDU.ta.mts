@@ -129,35 +129,8 @@ const RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range: RejectPDU_rej
  */
 export
 const value_out_of_range: RejectPDU_rejectReason_conclude_errorPDU = RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_RejectPDU_rejectReason_conclude_errorPDU: $.ASN1Decoder<RejectPDU_rejectReason_conclude_errorPDU> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RejectPDU_rejectReason_conclude_errorPDU
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RejectPDU_rejectReason_conclude_errorPDU (el: _Element): RejectPDU_rejectReason_conclude_errorPDU {
-    if (!_cached_decoder_for_RejectPDU_rejectReason_conclude_errorPDU) { _cached_decoder_for_RejectPDU_rejectReason_conclude_errorPDU = $._decodeInteger; }
-    return _cached_decoder_for_RejectPDU_rejectReason_conclude_errorPDU(el);
-}
-
-let _cached_encoder_for_RejectPDU_rejectReason_conclude_errorPDU: $.ASN1Encoder<RejectPDU_rejectReason_conclude_errorPDU> | null = null;
-
-/**
- * @summary Encodes a(n) RejectPDU_rejectReason_conclude_errorPDU into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RejectPDU_rejectReason_conclude_errorPDU, encoded as an ASN.1 Element.
- */
-export
-function _encode_RejectPDU_rejectReason_conclude_errorPDU (value: RejectPDU_rejectReason_conclude_errorPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RejectPDU_rejectReason_conclude_errorPDU) { _cached_encoder_for_RejectPDU_rejectReason_conclude_errorPDU = $._encodeInteger; }
-    return _cached_encoder_for_RejectPDU_rejectReason_conclude_errorPDU(value, elGetter);
-}
+export const _decode_RejectPDU_rejectReason_conclude_errorPDU = $._decodeInteger;
+export const _encode_RejectPDU_rejectReason_conclude_errorPDU = $._encodeInteger;
 
 
 /* eslint-enable */

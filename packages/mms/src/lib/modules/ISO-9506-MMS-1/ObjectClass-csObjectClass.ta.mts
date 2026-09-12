@@ -113,35 +113,8 @@ const ObjectClass_csObjectClass_unitControl: ObjectClass_csObjectClass = 1; /* L
  */
 export
 const unitControl: ObjectClass_csObjectClass = ObjectClass_csObjectClass_unitControl; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ObjectClass_csObjectClass: $.ASN1Decoder<ObjectClass_csObjectClass> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ObjectClass_csObjectClass
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ObjectClass_csObjectClass (el: _Element): ObjectClass_csObjectClass {
-    if (!_cached_decoder_for_ObjectClass_csObjectClass) { _cached_decoder_for_ObjectClass_csObjectClass = $._decodeInteger; }
-    return _cached_decoder_for_ObjectClass_csObjectClass(el);
-}
-
-let _cached_encoder_for_ObjectClass_csObjectClass: $.ASN1Encoder<ObjectClass_csObjectClass> | null = null;
-
-/**
- * @summary Encodes a(n) ObjectClass_csObjectClass into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ObjectClass_csObjectClass, encoded as an ASN.1 Element.
- */
-export
-function _encode_ObjectClass_csObjectClass (value: ObjectClass_csObjectClass, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ObjectClass_csObjectClass) { _cached_encoder_for_ObjectClass_csObjectClass = $._encodeInteger; }
-    return _cached_encoder_for_ObjectClass_csObjectClass(value, elGetter);
-}
+export const _decode_ObjectClass_csObjectClass = $._decodeInteger;
+export const _encode_ObjectClass_csObjectClass = $._encodeInteger;
 
 
 /* eslint-enable */

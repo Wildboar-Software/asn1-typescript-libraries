@@ -148,35 +148,8 @@ const Semaphore_instance_definition_details_class_pool: Semaphore_instance_defin
  */
 export
 const pool: Semaphore_instance_definition_details_class = Semaphore_instance_definition_details_class.pool; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Semaphore_instance_definition_details_class: $.ASN1Decoder<Semaphore_instance_definition_details_class> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Semaphore_instance_definition_details_class
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Semaphore_instance_definition_details_class (el: _Element): Semaphore_instance_definition_details_class {
-    if (!_cached_decoder_for_Semaphore_instance_definition_details_class) { _cached_decoder_for_Semaphore_instance_definition_details_class = $._decodeEnumerated; }
-    return _cached_decoder_for_Semaphore_instance_definition_details_class(el);
-}
-
-let _cached_encoder_for_Semaphore_instance_definition_details_class: $.ASN1Encoder<Semaphore_instance_definition_details_class> | null = null;
-
-/**
- * @summary Encodes a(n) Semaphore_instance_definition_details_class into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Semaphore_instance_definition_details_class, encoded as an ASN.1 Element.
- */
-export
-function _encode_Semaphore_instance_definition_details_class (value: Semaphore_instance_definition_details_class, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Semaphore_instance_definition_details_class) { _cached_encoder_for_Semaphore_instance_definition_details_class = $._encodeEnumerated; }
-    return _cached_encoder_for_Semaphore_instance_definition_details_class(value, elGetter);
-}
+export const _decode_Semaphore_instance_definition_details_class = $._decodeEnumerated;
+export const _encode_Semaphore_instance_definition_details_class = $._encodeEnumerated;
 
 
 /* eslint-enable */

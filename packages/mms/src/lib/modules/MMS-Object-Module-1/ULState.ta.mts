@@ -201,35 +201,8 @@ const ULState_u4: ULState = 6; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const u4: ULState = ULState_u4; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ULState: $.ASN1Decoder<ULState> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ULState
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ULState (el: _Element): ULState {
-    if (!_cached_decoder_for_ULState) { _cached_decoder_for_ULState = $._decodeInteger; }
-    return _cached_decoder_for_ULState(el);
-}
-
-let _cached_encoder_for_ULState: $.ASN1Encoder<ULState> | null = null;
-
-/**
- * @summary Encodes a(n) ULState into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ULState, encoded as an ASN.1 Element.
- */
-export
-function _encode_ULState (value: ULState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ULState) { _cached_encoder_for_ULState = $._encodeInteger; }
-    return _cached_encoder_for_ULState(value, elGetter);
-}
+export const _decode_ULState = $._decodeInteger;
+export const _encode_ULState = $._encodeInteger;
 
 
 /* eslint-enable */

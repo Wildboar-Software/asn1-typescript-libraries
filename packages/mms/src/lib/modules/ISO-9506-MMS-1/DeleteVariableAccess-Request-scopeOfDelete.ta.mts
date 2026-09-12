@@ -145,35 +145,8 @@ const DeleteVariableAccess_Request_scopeOfDelete_vmd: DeleteVariableAccess_Reque
  */
 export
 const vmd: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAccess_Request_scopeOfDelete_vmd; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DeleteVariableAccess_Request_scopeOfDelete: $.ASN1Decoder<DeleteVariableAccess_Request_scopeOfDelete> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DeleteVariableAccess_Request_scopeOfDelete
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DeleteVariableAccess_Request_scopeOfDelete (el: _Element): DeleteVariableAccess_Request_scopeOfDelete {
-    if (!_cached_decoder_for_DeleteVariableAccess_Request_scopeOfDelete) { _cached_decoder_for_DeleteVariableAccess_Request_scopeOfDelete = $._decodeInteger; }
-    return _cached_decoder_for_DeleteVariableAccess_Request_scopeOfDelete(el);
-}
-
-let _cached_encoder_for_DeleteVariableAccess_Request_scopeOfDelete: $.ASN1Encoder<DeleteVariableAccess_Request_scopeOfDelete> | null = null;
-
-/**
- * @summary Encodes a(n) DeleteVariableAccess_Request_scopeOfDelete into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeleteVariableAccess_Request_scopeOfDelete, encoded as an ASN.1 Element.
- */
-export
-function _encode_DeleteVariableAccess_Request_scopeOfDelete (value: DeleteVariableAccess_Request_scopeOfDelete, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeleteVariableAccess_Request_scopeOfDelete) { _cached_encoder_for_DeleteVariableAccess_Request_scopeOfDelete = $._encodeInteger; }
-    return _cached_encoder_for_DeleteVariableAccess_Request_scopeOfDelete(value, elGetter);
-}
+export const _decode_DeleteVariableAccess_Request_scopeOfDelete = $._decodeInteger;
+export const _encode_DeleteVariableAccess_Request_scopeOfDelete = $._encodeInteger;
 
 
 /* eslint-enable */

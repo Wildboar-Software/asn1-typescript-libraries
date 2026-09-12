@@ -161,35 +161,8 @@ const ServiceError_errorClass_vmd_state_state_machine_id_invalid: ServiceError_e
  */
 export
 const state_machine_id_invalid: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_state_state_machine_id_invalid; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_vmd_state: $.ASN1Decoder<ServiceError_errorClass_vmd_state> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_vmd_state
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_vmd_state (el: _Element): ServiceError_errorClass_vmd_state {
-    if (!_cached_decoder_for_ServiceError_errorClass_vmd_state) { _cached_decoder_for_ServiceError_errorClass_vmd_state = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_vmd_state(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_vmd_state: $.ASN1Encoder<ServiceError_errorClass_vmd_state> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_vmd_state into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_vmd_state, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_vmd_state (value: ServiceError_errorClass_vmd_state, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_vmd_state) { _cached_encoder_for_ServiceError_errorClass_vmd_state = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_vmd_state(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_vmd_state = $._decodeInteger;
+export const _encode_ServiceError_errorClass_vmd_state = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type InitiateDownloadSequence_Response = NULL; // NullType
-
-let _cached_decoder_for_InitiateDownloadSequence_Response: $.ASN1Decoder<InitiateDownloadSequence_Response> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) InitiateDownloadSequence_Response
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InitiateDownloadSequence_Response (el: _Element): InitiateDownloadSequence_Response {
-    if (!_cached_decoder_for_InitiateDownloadSequence_Response) { _cached_decoder_for_InitiateDownloadSequence_Response = $._decodeNull; }
-    return _cached_decoder_for_InitiateDownloadSequence_Response(el);
-}
-
-let _cached_encoder_for_InitiateDownloadSequence_Response: $.ASN1Encoder<InitiateDownloadSequence_Response> | null = null;
-
-/**
- * @summary Encodes a(n) InitiateDownloadSequence_Response into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InitiateDownloadSequence_Response, encoded as an ASN.1 Element.
- */
-export
-function _encode_InitiateDownloadSequence_Response (value: InitiateDownloadSequence_Response, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiateDownloadSequence_Response) { _cached_encoder_for_InitiateDownloadSequence_Response = $._encodeNull; }
-    return _cached_encoder_for_InitiateDownloadSequence_Response(value, elGetter);
-}
+export const _decode_InitiateDownloadSequence_Response = $._decodeNull;
+export const _encode_InitiateDownloadSequence_Response = $._encodeNull;
 
 
 /* eslint-enable */

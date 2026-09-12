@@ -113,35 +113,8 @@ const RejectPDU_rejectReason_conclude_responsePDU_invalid_result: RejectPDU_reje
  */
 export
 const invalid_result: RejectPDU_rejectReason_conclude_responsePDU = RejectPDU_rejectReason_conclude_responsePDU_invalid_result; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_RejectPDU_rejectReason_conclude_responsePDU: $.ASN1Decoder<RejectPDU_rejectReason_conclude_responsePDU> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RejectPDU_rejectReason_conclude_responsePDU
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RejectPDU_rejectReason_conclude_responsePDU (el: _Element): RejectPDU_rejectReason_conclude_responsePDU {
-    if (!_cached_decoder_for_RejectPDU_rejectReason_conclude_responsePDU) { _cached_decoder_for_RejectPDU_rejectReason_conclude_responsePDU = $._decodeInteger; }
-    return _cached_decoder_for_RejectPDU_rejectReason_conclude_responsePDU(el);
-}
-
-let _cached_encoder_for_RejectPDU_rejectReason_conclude_responsePDU: $.ASN1Encoder<RejectPDU_rejectReason_conclude_responsePDU> | null = null;
-
-/**
- * @summary Encodes a(n) RejectPDU_rejectReason_conclude_responsePDU into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RejectPDU_rejectReason_conclude_responsePDU, encoded as an ASN.1 Element.
- */
-export
-function _encode_RejectPDU_rejectReason_conclude_responsePDU (value: RejectPDU_rejectReason_conclude_responsePDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RejectPDU_rejectReason_conclude_responsePDU) { _cached_encoder_for_RejectPDU_rejectReason_conclude_responsePDU = $._encodeInteger; }
-    return _cached_encoder_for_RejectPDU_rejectReason_conclude_responsePDU(value, elGetter);
-}
+export const _decode_RejectPDU_rejectReason_conclude_responsePDU = $._decodeInteger;
+export const _encode_RejectPDU_rejectReason_conclude_responsePDU = $._encodeInteger;
 
 
 /* eslint-enable */

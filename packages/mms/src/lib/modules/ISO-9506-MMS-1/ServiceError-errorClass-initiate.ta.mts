@@ -177,35 +177,8 @@ const ServiceError_errorClass_initiate_nesting_level_insufficient: ServiceError_
  */
 export
 const nesting_level_insufficient: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate_nesting_level_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_initiate: $.ASN1Decoder<ServiceError_errorClass_initiate> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_initiate
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_initiate (el: _Element): ServiceError_errorClass_initiate {
-    if (!_cached_decoder_for_ServiceError_errorClass_initiate) { _cached_decoder_for_ServiceError_errorClass_initiate = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_initiate(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_initiate: $.ASN1Encoder<ServiceError_errorClass_initiate> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_initiate into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_initiate, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_initiate (value: ServiceError_errorClass_initiate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_initiate) { _cached_encoder_for_ServiceError_errorClass_initiate = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_initiate(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_initiate = $._decodeInteger;
+export const _encode_ServiceError_errorClass_initiate = $._encodeInteger;
 
 
 /* eslint-enable */

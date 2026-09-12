@@ -187,35 +187,8 @@ const Transitions_any_to_deleted: number = 6; /* LONG_NAMED_BIT */
  */
 export
 const any_to_deleted: number = Transitions_any_to_deleted; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_Transitions: $.ASN1Decoder<Transitions> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Transitions
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Transitions (el: _Element): Transitions {
-    if (!_cached_decoder_for_Transitions) { _cached_decoder_for_Transitions = $._decodeBitString; }
-    return _cached_decoder_for_Transitions(el);
-}
-
-let _cached_encoder_for_Transitions: $.ASN1Encoder<Transitions> | null = null;
-
-/**
- * @summary Encodes a(n) Transitions into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Transitions, encoded as an ASN.1 Element.
- */
-export
-function _encode_Transitions (value: Transitions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Transitions) { _cached_encoder_for_Transitions = $._encodeBitString; }
-    return _cached_encoder_for_Transitions(value, elGetter);
-}
+export const _decode_Transitions = $._decodeBitString;
+export const _encode_Transitions = $._encodeBitString;
 
 
 /* eslint-enable */

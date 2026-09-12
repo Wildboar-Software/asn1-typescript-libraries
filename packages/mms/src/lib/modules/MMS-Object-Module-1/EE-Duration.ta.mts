@@ -116,35 +116,8 @@ const EE_Duration_permanent: EE_Duration = 1; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const permanent: EE_Duration = EE_Duration_permanent; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EE_Duration: $.ASN1Decoder<EE_Duration> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EE_Duration
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EE_Duration (el: _Element): EE_Duration {
-    if (!_cached_decoder_for_EE_Duration) { _cached_decoder_for_EE_Duration = $._decodeInteger; }
-    return _cached_decoder_for_EE_Duration(el);
-}
-
-let _cached_encoder_for_EE_Duration: $.ASN1Encoder<EE_Duration> | null = null;
-
-/**
- * @summary Encodes a(n) EE_Duration into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EE_Duration, encoded as an ASN.1 Element.
- */
-export
-function _encode_EE_Duration (value: EE_Duration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EE_Duration) { _cached_encoder_for_EE_Duration = $._encodeInteger; }
-    return _cached_encoder_for_EE_Duration(value, elGetter);
-}
+export const _decode_EE_Duration = $._decodeInteger;
+export const _encode_EE_Duration = $._encodeInteger;
 
 
 /* eslint-enable */

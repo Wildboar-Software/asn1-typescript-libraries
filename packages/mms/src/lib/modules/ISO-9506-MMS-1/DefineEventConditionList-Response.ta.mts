@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DefineEventConditionList_Response = NULL; // NullType
-
-let _cached_decoder_for_DefineEventConditionList_Response: $.ASN1Decoder<DefineEventConditionList_Response> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DefineEventConditionList_Response
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DefineEventConditionList_Response (el: _Element): DefineEventConditionList_Response {
-    if (!_cached_decoder_for_DefineEventConditionList_Response) { _cached_decoder_for_DefineEventConditionList_Response = $._decodeNull; }
-    return _cached_decoder_for_DefineEventConditionList_Response(el);
-}
-
-let _cached_encoder_for_DefineEventConditionList_Response: $.ASN1Encoder<DefineEventConditionList_Response> | null = null;
-
-/**
- * @summary Encodes a(n) DefineEventConditionList_Response into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DefineEventConditionList_Response, encoded as an ASN.1 Element.
- */
-export
-function _encode_DefineEventConditionList_Response (value: DefineEventConditionList_Response, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DefineEventConditionList_Response) { _cached_encoder_for_DefineEventConditionList_Response = $._encodeNull; }
-    return _cached_encoder_for_DefineEventConditionList_Response(value, elGetter);
-}
+export const _decode_DefineEventConditionList_Response = $._decodeNull;
+export const _encode_DefineEventConditionList_Response = $._encodeNull;
 
 
 /* eslint-enable */

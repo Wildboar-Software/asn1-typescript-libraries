@@ -129,35 +129,8 @@ const GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all: GetAlarmEnrol
  */
 export
 const all: GetAlarmEnrollmentSummary_Request_acknowledgementFilter = GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_GetAlarmEnrollmentSummary_Request_acknowledgementFilter: $.ASN1Decoder<GetAlarmEnrollmentSummary_Request_acknowledgementFilter> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) GetAlarmEnrollmentSummary_Request_acknowledgementFilter
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter (el: _Element): GetAlarmEnrollmentSummary_Request_acknowledgementFilter {
-    if (!_cached_decoder_for_GetAlarmEnrollmentSummary_Request_acknowledgementFilter) { _cached_decoder_for_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = $._decodeInteger; }
-    return _cached_decoder_for_GetAlarmEnrollmentSummary_Request_acknowledgementFilter(el);
-}
-
-let _cached_encoder_for_GetAlarmEnrollmentSummary_Request_acknowledgementFilter: $.ASN1Encoder<GetAlarmEnrollmentSummary_Request_acknowledgementFilter> | null = null;
-
-/**
- * @summary Encodes a(n) GetAlarmEnrollmentSummary_Request_acknowledgementFilter into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GetAlarmEnrollmentSummary_Request_acknowledgementFilter, encoded as an ASN.1 Element.
- */
-export
-function _encode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter (value: GetAlarmEnrollmentSummary_Request_acknowledgementFilter, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetAlarmEnrollmentSummary_Request_acknowledgementFilter) { _cached_encoder_for_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = $._encodeInteger; }
-    return _cached_encoder_for_GetAlarmEnrollmentSummary_Request_acknowledgementFilter(value, elGetter);
-}
+export const _decode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = $._decodeInteger;
+export const _encode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = $._encodeInteger;
 
 
 /* eslint-enable */

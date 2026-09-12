@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Status_Request = BOOLEAN; // BooleanType
-
-let _cached_decoder_for_Status_Request: $.ASN1Decoder<Status_Request> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Status_Request
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Status_Request (el: _Element): Status_Request {
-    if (!_cached_decoder_for_Status_Request) { _cached_decoder_for_Status_Request = $._decodeBoolean; }
-    return _cached_decoder_for_Status_Request(el);
-}
-
-let _cached_encoder_for_Status_Request: $.ASN1Encoder<Status_Request> | null = null;
-
-/**
- * @summary Encodes a(n) Status_Request into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Status_Request, encoded as an ASN.1 Element.
- */
-export
-function _encode_Status_Request (value: Status_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Status_Request) { _cached_encoder_for_Status_Request = $._encodeBoolean; }
-    return _cached_encoder_for_Status_Request(value, elGetter);
-}
+export const _decode_Status_Request = $._decodeBoolean;
+export const _encode_Status_Request = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -145,35 +145,8 @@ const StatusResponse_vmdPhysicalStatus_needs_commissioning: StatusResponse_vmdPh
  */
 export
 const needs_commissioning: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysicalStatus_needs_commissioning; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_StatusResponse_vmdPhysicalStatus: $.ASN1Decoder<StatusResponse_vmdPhysicalStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) StatusResponse_vmdPhysicalStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_StatusResponse_vmdPhysicalStatus (el: _Element): StatusResponse_vmdPhysicalStatus {
-    if (!_cached_decoder_for_StatusResponse_vmdPhysicalStatus) { _cached_decoder_for_StatusResponse_vmdPhysicalStatus = $._decodeInteger; }
-    return _cached_decoder_for_StatusResponse_vmdPhysicalStatus(el);
-}
-
-let _cached_encoder_for_StatusResponse_vmdPhysicalStatus: $.ASN1Encoder<StatusResponse_vmdPhysicalStatus> | null = null;
-
-/**
- * @summary Encodes a(n) StatusResponse_vmdPhysicalStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StatusResponse_vmdPhysicalStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_StatusResponse_vmdPhysicalStatus (value: StatusResponse_vmdPhysicalStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StatusResponse_vmdPhysicalStatus) { _cached_encoder_for_StatusResponse_vmdPhysicalStatus = $._encodeInteger; }
-    return _cached_encoder_for_StatusResponse_vmdPhysicalStatus(value, elGetter);
-}
+export const _decode_StatusResponse_vmdPhysicalStatus = $._decodeInteger;
+export const _encode_StatusResponse_vmdPhysicalStatus = $._encodeInteger;
 
 
 /* eslint-enable */

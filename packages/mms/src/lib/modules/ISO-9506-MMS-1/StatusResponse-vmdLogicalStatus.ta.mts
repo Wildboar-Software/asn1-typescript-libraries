@@ -145,35 +145,8 @@ const StatusResponse_vmdLogicalStatus_support_services_allowed: StatusResponse_v
  */
 export
 const support_services_allowed: StatusResponse_vmdLogicalStatus = StatusResponse_vmdLogicalStatus_support_services_allowed; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_StatusResponse_vmdLogicalStatus: $.ASN1Decoder<StatusResponse_vmdLogicalStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) StatusResponse_vmdLogicalStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_StatusResponse_vmdLogicalStatus (el: _Element): StatusResponse_vmdLogicalStatus {
-    if (!_cached_decoder_for_StatusResponse_vmdLogicalStatus) { _cached_decoder_for_StatusResponse_vmdLogicalStatus = $._decodeInteger; }
-    return _cached_decoder_for_StatusResponse_vmdLogicalStatus(el);
-}
-
-let _cached_encoder_for_StatusResponse_vmdLogicalStatus: $.ASN1Encoder<StatusResponse_vmdLogicalStatus> | null = null;
-
-/**
- * @summary Encodes a(n) StatusResponse_vmdLogicalStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StatusResponse_vmdLogicalStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_StatusResponse_vmdLogicalStatus (value: StatusResponse_vmdLogicalStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StatusResponse_vmdLogicalStatus) { _cached_encoder_for_StatusResponse_vmdLogicalStatus = $._encodeInteger; }
-    return _cached_encoder_for_StatusResponse_vmdLogicalStatus(value, elGetter);
-}
+export const _decode_StatusResponse_vmdLogicalStatus = $._decodeInteger;
+export const _encode_StatusResponse_vmdLogicalStatus = $._encodeInteger;
 
 
 /* eslint-enable */

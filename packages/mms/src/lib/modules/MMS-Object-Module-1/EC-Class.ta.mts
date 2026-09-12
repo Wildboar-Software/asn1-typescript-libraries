@@ -116,35 +116,8 @@ const EC_Class_monitored: EC_Class = 1; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const monitored: EC_Class = EC_Class_monitored; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EC_Class: $.ASN1Decoder<EC_Class> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EC_Class
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EC_Class (el: _Element): EC_Class {
-    if (!_cached_decoder_for_EC_Class) { _cached_decoder_for_EC_Class = $._decodeInteger; }
-    return _cached_decoder_for_EC_Class(el);
-}
-
-let _cached_encoder_for_EC_Class: $.ASN1Encoder<EC_Class> | null = null;
-
-/**
- * @summary Encodes a(n) EC_Class into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EC_Class, encoded as an ASN.1 Element.
- */
-export
-function _encode_EC_Class (value: EC_Class, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EC_Class) { _cached_encoder_for_EC_Class = $._encodeInteger; }
-    return _cached_encoder_for_EC_Class(value, elGetter);
-}
+export const _decode_EC_Class = $._decodeInteger;
+export const _encode_EC_Class = $._encodeInteger;
 
 
 /* eslint-enable */

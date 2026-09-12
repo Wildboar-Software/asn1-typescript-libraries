@@ -113,35 +113,8 @@ const ServiceError_errorClass_conclude_further_communication_required: ServiceEr
  */
 export
 const further_communication_required: ServiceError_errorClass_conclude = ServiceError_errorClass_conclude_further_communication_required; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_conclude: $.ASN1Decoder<ServiceError_errorClass_conclude> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_conclude
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_conclude (el: _Element): ServiceError_errorClass_conclude {
-    if (!_cached_decoder_for_ServiceError_errorClass_conclude) { _cached_decoder_for_ServiceError_errorClass_conclude = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_conclude(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_conclude: $.ASN1Encoder<ServiceError_errorClass_conclude> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_conclude into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_conclude, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_conclude (value: ServiceError_errorClass_conclude, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_conclude) { _cached_encoder_for_ServiceError_errorClass_conclude = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_conclude(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_conclude = $._decodeInteger;
+export const _encode_ServiceError_errorClass_conclude = $._encodeInteger;
 
 
 /* eslint-enable */

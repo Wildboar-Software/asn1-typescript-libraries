@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type VMDStop_Request = NULL; // NullType
-
-let _cached_decoder_for_VMDStop_Request: $.ASN1Decoder<VMDStop_Request> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) VMDStop_Request
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_VMDStop_Request (el: _Element): VMDStop_Request {
-    if (!_cached_decoder_for_VMDStop_Request) { _cached_decoder_for_VMDStop_Request = $._decodeNull; }
-    return _cached_decoder_for_VMDStop_Request(el);
-}
-
-let _cached_encoder_for_VMDStop_Request: $.ASN1Encoder<VMDStop_Request> | null = null;
-
-/**
- * @summary Encodes a(n) VMDStop_Request into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VMDStop_Request, encoded as an ASN.1 Element.
- */
-export
-function _encode_VMDStop_Request (value: VMDStop_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VMDStop_Request) { _cached_encoder_for_VMDStop_Request = $._encodeNull; }
-    return _cached_encoder_for_VMDStop_Request(value, elGetter);
-}
+export const _decode_VMDStop_Request = $._decodeNull;
+export const _encode_VMDStop_Request = $._encodeNull;
 
 
 /* eslint-enable */

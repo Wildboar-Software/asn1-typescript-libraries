@@ -193,35 +193,8 @@ const ServiceError_errorClass_definition_object_attribute_inconsistent: ServiceE
  */
 export
 const object_attribute_inconsistent: ServiceError_errorClass_definition = ServiceError_errorClass_definition_object_attribute_inconsistent; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_definition: $.ASN1Decoder<ServiceError_errorClass_definition> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_definition
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_definition (el: _Element): ServiceError_errorClass_definition {
-    if (!_cached_decoder_for_ServiceError_errorClass_definition) { _cached_decoder_for_ServiceError_errorClass_definition = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_definition(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_definition: $.ASN1Encoder<ServiceError_errorClass_definition> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_definition into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_definition, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_definition (value: ServiceError_errorClass_definition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_definition) { _cached_encoder_for_ServiceError_errorClass_definition = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_definition(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_definition = $._decodeInteger;
+export const _encode_ServiceError_errorClass_definition = $._encodeInteger;
 
 
 /* eslint-enable */

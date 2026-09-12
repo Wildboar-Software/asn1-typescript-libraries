@@ -161,35 +161,8 @@ const ServiceError_errorClass_service_object_constraint_conflict: ServiceError_e
  */
 export
 const object_constraint_conflict: ServiceError_errorClass_service = ServiceError_errorClass_service_object_constraint_conflict; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceError_errorClass_service: $.ASN1Decoder<ServiceError_errorClass_service> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceError_errorClass_service
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceError_errorClass_service (el: _Element): ServiceError_errorClass_service {
-    if (!_cached_decoder_for_ServiceError_errorClass_service) { _cached_decoder_for_ServiceError_errorClass_service = $._decodeInteger; }
-    return _cached_decoder_for_ServiceError_errorClass_service(el);
-}
-
-let _cached_encoder_for_ServiceError_errorClass_service: $.ASN1Encoder<ServiceError_errorClass_service> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceError_errorClass_service into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceError_errorClass_service, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceError_errorClass_service (value: ServiceError_errorClass_service, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceError_errorClass_service) { _cached_encoder_for_ServiceError_errorClass_service = $._encodeInteger; }
-    return _cached_encoder_for_ServiceError_errorClass_service(value, elGetter);
-}
+export const _decode_ServiceError_errorClass_service = $._decodeInteger;
+export const _encode_ServiceError_errorClass_service = $._encodeInteger;
 
 
 /* eslint-enable */
