@@ -77,7 +77,10 @@ import { DataAccessError, DataAccessError_object_invalidated /* IMPORTED_LONG_NA
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Write-Response-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Write-Response-Item ::= CHOICE {
+ *     failure [0] IMPLICIT DataAccessError,
+ *     success [1] IMPLICIT NULL
+ * }
  * ```
  */
 export

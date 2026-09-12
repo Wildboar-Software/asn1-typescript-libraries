@@ -99,7 +99,33 @@ import { ChangeAccessControl_Error, _decode_ChangeAccessControl_Error, _encode_C
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-serviceSpecificInfo ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-serviceSpecificInfo ::= CHOICE {
+ *     obtainFile [0] IMPLICIT ObtainFile-Error,
+ *     obtainFile [0] IMPLICIT NULL,
+ *     start [1] IMPLICIT Start-Error,
+ *     start [1] IMPLICIT NULL,
+ *     stop [2] IMPLICIT Stop-Error,
+ *     stop [2] IMPLICIT NULL,
+ *     resume [3] IMPLICIT Resume-Error,
+ *     resume [3] IMPLICIT NULL,
+ *     reset [4] IMPLICIT Reset-Error,
+ *     reset [4] IMPLICIT NULL,
+ *     deleteVariableAccess [5] IMPLICIT DeleteVariableAccess-Error,
+ *     deleteVariableAccess [5] IMPLICIT NULL,
+ *     deleteNamedVariableList [6] IMPLICIT DeleteNamedVariableList-Error,
+ *     deleteNamedVariableList [6] IMPLICIT NULL,
+ *     deleteNamedType [7] IMPLICIT DeleteNamedType-Error,
+ *     deleteNamedType [7] IMPLICIT NULL,
+ *     defineEventEnrollment-Error [8] DefineEventEnrollment-Error,
+ *     defineEventEnrollment-Error [8] IMPLICIT NULL -- [9] Reserved for use by annex D
+ *     ,
+ *     fileRename [9] IMPLICIT FileRename-Error,
+ *     fileRename [9] IMPLICIT NULL,
+ *     additionalService [10] AdditionalService-Error,
+ *     additionalService [10] IMPLICIT NULL,
+ *     changeAccessControl [11] IMPLICIT ChangeAccessControl-Error,
+ *     changeAccessControl [11] IMPLICIT NULL
+ * }
  * ```
  */
 export

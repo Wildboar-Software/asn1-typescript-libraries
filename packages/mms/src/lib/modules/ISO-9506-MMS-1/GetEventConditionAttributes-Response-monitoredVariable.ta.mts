@@ -77,7 +77,10 @@ import { VariableSpecification, _decode_VariableSpecification, _encode_VariableS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetEventConditionAttributes-Response-monitoredVariable ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * GetEventConditionAttributes-Response-monitoredVariable ::= CHOICE {
+ *     variableReference [0] VariableSpecification,
+ *     undefined [1] IMPLICIT NULL
+ * }
  * ```
  */
 export

@@ -81,7 +81,15 @@ import { CS_Status_Response_fullResponse_selectedProgramInvocation, _decode_CS_S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-Status-Response-fullResponse ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-Status-Response-fullResponse ::= SEQUENCE {
+ *     operationState [0] IMPLICIT OperationState,
+ *     extendedStatus [1] IMPLICIT ExtendedStatus,
+ *     extendedStatusMask [2] IMPLICIT ExtendedStatus DEFAULT '1111'B,
+ *     selectedProgramInvocation CHOICE {
+ *         programInvocation [3] IMPLICIT Identifier,
+ *         noneSelected [4] IMPLICIT NULL
+ *     }
+ * }
  * ```
  * 
  * @class

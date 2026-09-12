@@ -79,7 +79,19 @@ import { ChangeAccessControl_Request_scopeOfChange_listOfObjects_objectScope, _d
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ChangeAccessControl-Request-scopeOfChange-listOfObjects ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ChangeAccessControl-Request-scopeOfChange-listOfObjects ::= SEQUENCE {
+ *     objectClass [0] ObjectClass,
+ *     objectScope [1] CHOICE {
+ *         specific [0] IMPLICIT SEQUENCE OF ObjectName,
+ *         -- Names of the objects (of class objectClass)
+ *         -- whose access is to be changed
+ *         aa-specific [1] IMPLICIT NULL,
+ *         domain [2] IMPLICIT Identifier,
+ *         -- Name of the Domain whose elements
+ *         -- are to be changed
+ *         vmd [3] IMPLICIT NULL
+ *     }
+ * }
  * ```
  * 
  * @class

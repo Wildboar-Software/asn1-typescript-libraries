@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass-cancel ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass-cancel ::= INTEGER {
+ *     other (0),
+ *     invoke-id-unknown (1),
+ *     cancel-not-possible (2)
+ * } (0..2)
  * ```
  */
 export

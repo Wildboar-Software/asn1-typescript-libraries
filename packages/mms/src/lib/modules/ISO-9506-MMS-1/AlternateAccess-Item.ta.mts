@@ -79,7 +79,13 @@ import { AlternateAccess_Item_named, _decode_AlternateAccess_Item_named, _encode
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AlternateAccess-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AlternateAccess-Item ::= CHOICE {
+ *     unnamed AlternateAccessSelection,
+ *     named [5] IMPLICIT SEQUENCE {
+ *         componentName [0] IMPLICIT Identifier,
+ *         access AlternateAccessSelection
+ *     }
+ * }
  * ```
  */
 export

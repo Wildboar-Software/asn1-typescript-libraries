@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Operator-Station-instance-definition-details-stationType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Operator-Station-instance-definition-details-stationType ::= ENUMERATED {
+ *     entry,
+ *     display,
+ *     entry-display
+ * }
  * ```
  * 
  * @enum {number}
@@ -95,7 +99,11 @@ enum _enum_for_Operator_Station_instance_definition_details_stationType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Operator-Station-instance-definition-details-stationType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Operator-Station-instance-definition-details-stationType ::= ENUMERATED {
+ *     entry,
+ *     display,
+ *     entry-display
+ * }
  * ```
  * 
  * @enum {number}
@@ -110,7 +118,11 @@ type Operator_Station_instance_definition_details_stationType = _enum_for_Operat
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Operator-Station-instance-definition-details-stationType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Operator-Station-instance-definition-details-stationType ::= ENUMERATED {
+ *     entry,
+ *     display,
+ *     entry-display
+ * }
  * ```
  * 
  * @enum {number}

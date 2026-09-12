@@ -79,7 +79,10 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetNamedVariableListAttributes-Response-listOfVariable-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GetNamedVariableListAttributes-Response-listOfVariable-Item ::= SEQUENCE {
+ *     variableSpecification VariableSpecification,
+ *     alternateAccess [5] IMPLICIT AlternateAccess OPTIONAL
+ * }
  * ```
  * 
  * @class

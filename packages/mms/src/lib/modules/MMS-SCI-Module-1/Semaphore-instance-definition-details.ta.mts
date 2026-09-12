@@ -81,7 +81,18 @@ import { Event_Condition_instance, _decode_Event_Condition_instance, _encode_Eve
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Semaphore-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Semaphore-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     class [4] IMPLICIT ENUMERATED {
+ *         token,
+ *         pool
+ *     },
+ *     -- If the value of &class is token, the following field shall appear
+ *     numberOfTokens [5] IMPLICIT INTEGER OPTIONAL,
+ *     -- If the value of &class is pool, the following field shall appear
+ *     namedTokens [6] IMPLICIT SEQUENCE OF VisibleString OPTIONAL,
+ *     eventCondition [7] IMPLICIT Event-Condition-instance
+ * }
  * ```
  * 
  * @class

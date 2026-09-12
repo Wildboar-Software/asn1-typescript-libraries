@@ -79,7 +79,10 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetAccessControlListAttributes-Request-namedObject ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GetAccessControlListAttributes-Request-namedObject ::= SEQUENCE {
+ *     objectClass [0] ObjectClass,
+ *     objectName [1] ObjectName
+ * }
  * ```
  * 
  * @class

@@ -79,7 +79,16 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ChangeAccessControl-Request-scopeOfChange-listOfObjects-objectScope ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ChangeAccessControl-Request-scopeOfChange-listOfObjects-objectScope ::= CHOICE {
+ *     specific [0] IMPLICIT SEQUENCE OF ObjectName,
+ *     -- Names of the objects (of class objectClass)
+ *     -- whose access is to be changed
+ *     aa-specific [1] IMPLICIT NULL,
+ *     domain [2] IMPLICIT Identifier,
+ *     -- Name of the Domain whose elements
+ *     -- are to be changed
+ *     vmd [3] IMPLICIT NULL
+ * }
  * ```
  */
 export

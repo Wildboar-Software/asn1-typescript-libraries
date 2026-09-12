@@ -77,7 +77,10 @@ import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-95
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetAccessControlListAttributes-Response-references-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GetAccessControlListAttributes-Response-references-Item ::= SEQUENCE {
+ *     objectClass [0] ObjectClass,
+ *     objectCount [1] IMPLICIT INTEGER
+ * }
  * ```
  * 
  * @class

@@ -81,7 +81,12 @@ import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Condition-List-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Condition-List-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     eventConditions [4] IMPLICIT SEQUENCE OF Event-Condition-instance,
+ *     eventConditionLists [5] IMPLICIT SEQUENCE OF Event-Condition-List-instance,
+ *     referencingEventConditionLists [6] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+ * }
  * ```
  * 
  * @class

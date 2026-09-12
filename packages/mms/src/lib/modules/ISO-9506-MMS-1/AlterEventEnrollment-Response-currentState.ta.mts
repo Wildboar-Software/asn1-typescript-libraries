@@ -77,7 +77,10 @@ import { EE_State, EE_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AlterEventEnrollment-Response-currentState ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AlterEventEnrollment-Response-currentState ::= CHOICE {
+ *     state [0] IMPLICIT EE-State,
+ *     undefined [1] IMPLICIT NULL
+ * }
  * ```
  */
 export

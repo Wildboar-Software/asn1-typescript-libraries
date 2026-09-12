@@ -81,7 +81,18 @@ import { AlternateAccessSelection_selectAccess_indexRange, _decode_AlternateAcce
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AlternateAccessSelection-selectAccess ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AlternateAccessSelection-selectAccess ::= CHOICE {
+ *     component [1] IMPLICIT Identifier,
+ *     component [1] IMPLICIT NULL,
+ *     index [2] IMPLICIT Unsigned32,
+ *     indexRange [3] IMPLICIT SEQUENCE {
+ *         lowIndex [0] IMPLICIT Unsigned32,
+ *         numberOfElements [1] IMPLICIT Unsigned32
+ *     },
+ *     index [2] IMPLICIT NULL,
+ *     indexRange [3] IMPLICIT NULL,
+ *     allElements [4] IMPLICIT NULL
+ * }
  * ```
  */
 export

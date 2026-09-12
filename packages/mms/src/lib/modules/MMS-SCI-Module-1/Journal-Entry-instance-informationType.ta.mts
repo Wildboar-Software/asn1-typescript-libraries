@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Journal-Entry-instance-informationType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Journal-Entry-instance-informationType ::= ENUMERATED {
+ *     annotation,
+ *     event-data,
+ *     data
+ * }
  * ```
  * 
  * @enum {number}
@@ -95,7 +99,11 @@ enum _enum_for_Journal_Entry_instance_informationType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Journal-Entry-instance-informationType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Journal-Entry-instance-informationType ::= ENUMERATED {
+ *     annotation,
+ *     event-data,
+ *     data
+ * }
  * ```
  * 
  * @enum {number}
@@ -110,7 +118,11 @@ type Journal_Entry_instance_informationType = _enum_for_Journal_Entry_instance_i
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Journal-Entry-instance-informationType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Journal-Entry-instance-informationType ::= ENUMERATED {
+ *     annotation,
+ *     event-data,
+ *     data
+ * }
  * ```
  * 
  * @enum {number}

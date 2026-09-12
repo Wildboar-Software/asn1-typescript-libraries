@@ -79,7 +79,14 @@ import { Operator_Station_instance_definition_details_stationType, _enum_for_Ope
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Operator-Station-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Operator-Station-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     stationType [4] IMPLICIT ENUMERATED {
+ *         entry,
+ *         display,
+ *         entry-display
+ *     }
+ * }
  * ```
  * 
  * @class

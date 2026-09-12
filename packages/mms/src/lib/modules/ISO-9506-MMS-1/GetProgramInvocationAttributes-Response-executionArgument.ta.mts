@@ -77,7 +77,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetProgramInvocationAttributes-Response-executionArgument ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * GetProgramInvocationAttributes-Response-executionArgument ::= CHOICE {
+ *     simpleString [5] IMPLICIT MMSString,
+ *     encodedString EXTERNAL,
+ *     enmbeddedString EMBEDDED PDV
+ * }
  * ```
  */
 export

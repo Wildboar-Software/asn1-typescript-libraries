@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GeneralManagementParameters-supportForTime ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GeneralManagementParameters-supportForTime ::= SEQUENCE {
+ *     timeOfDay [2] IMPLICIT BOOLEAN,
+ *     timeSequence [3] IMPLICIT BOOLEAN
+ * }
  * ```
  * 
  * @class

@@ -97,7 +97,78 @@ import { RejectPDU_rejectReason_conclude_errorPDU, RejectPDU_rejectReason_conclu
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RejectPDU-rejectReason ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RejectPDU-rejectReason ::= CHOICE {
+ *     confirmed-requestPDU [1] IMPLICIT INTEGER {
+ *         other (0),
+ *         unrecognized-service (1),
+ *         unrecognized-modifier (2),
+ *         invalid-invokeID (3),
+ *         invalid-argument (4),
+ *         invalid-modifier (5),
+ *         max-serv-outstanding-exceeded (6),
+ *         -- Value 7 reserved for further definition
+ *         max-recursion-exceeded (8),
+ *         value-out-of-range (9)
+ *     } (0..9),
+ *     confirmed-responsePDU [2] IMPLICIT INTEGER {
+ *         other (0),
+ *         unrecognized-service (1),
+ *         invalid-invokeID (2),
+ *         invalid-result (3),
+ *         -- Value 4 reserved for further definition
+ *         max-recursion-exceeded (5),
+ *         value-out-of-range (6)
+ *     } (0..6),
+ *     confirmed-errorPDU [3] IMPLICIT INTEGER {
+ *         other (0),
+ *         unrecognized-service (1),
+ *         invalid-invokeID (2),
+ *         invalid-serviceError (3),
+ *         value-out-of-range (4)
+ *     } (0..4),
+ *     unconfirmedPDU [4] IMPLICIT INTEGER {
+ *         other (0),
+ *         unrecognized-service (1),
+ *         invalid-argument (2),
+ *         max-recursion-exceeded (3),
+ *         value-out-of-range (4)
+ *     } (0..4),
+ *     pdu-error [5] IMPLICIT INTEGER {
+ *         unknown-pdu-type (0),
+ *         invalid-pdu (1),
+ *         illegal-acse-mapping (2)
+ *     },
+ *     cancel-requestPDU [6] IMPLICIT INTEGER {
+ *         other (0),
+ *         invalid-invokeID (1)
+ *     } (0..1),
+ *     cancel-responsePDU [7] IMPLICIT INTEGER {
+ *         other (0),
+ *         invalid-invokeID (1)
+ *     } (0..1),
+ *     cancel-errorPDU [8] IMPLICIT INTEGER {
+ *         other (0),
+ *         invalid-invokeID (1),
+ *         invalid-serviceError (2),
+ *         value-out-of-range (3)
+ *     } (0..3),
+ *     cancel-requestPDU [6] IMPLICIT NULL,
+ *     cancel-responsePDU [7] IMPLICIT NULL,
+ *     cancel-errorPDU [8] IMPLICIT NULL,
+ *     conclude-requestPDU [9] IMPLICIT INTEGER {
+ *         other (0),
+ *         invalid-argument (1)
+ *     } (0..1),
+ *     conclude-responsePDU [10] IMPLICIT INTEGER {
+ *         other (0),
+ *         invalid-result (1)
+ *     } (0..1),
+ *     conclude-errorPDU [11] IMPLICIT INTEGER {
+ *         other (0),
+ *         invalid-serviceError (1),
+ *         value-out-of-range (2)
+ *     } (0..2)
+ * }
  * ```
  */
 export

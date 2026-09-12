@@ -99,7 +99,97 @@ import { ServiceError_errorClass_file, ServiceError_errorClass_file_other /* IMP
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass ::= CHOICE {
+ *     vmd-state [0] IMPLICIT INTEGER {
+ *         other (0),
+ *         vmd-state-conflict (1),
+ *         vmd-operational-problem (2),
+ *         domain-transfer-problem (3),
+ *         state-machine-id-invalid (4)
+ *     } (0..4),
+ *     application-reference [1] IMPLICIT INTEGER {
+ *         other (0),
+ *         application-unreachable (1),
+ *         connection-lost (2),
+ *         application-reference-invalid (3),
+ *         context-unsupported (4)
+ *     } (0..4),
+ *     definition [2] IMPLICIT INTEGER {
+ *         other (0),
+ *         object-undefined (1),
+ *         invalid-address (2),
+ *         type-unsupported (3),
+ *         type-inconsistent (4),
+ *         object-exists (5),
+ *         object-attribute-inconsistent (6)
+ *     } (0..6),
+ *     resource [3] IMPLICIT INTEGER {
+ *         other (0),
+ *         memory-unavailable (1),
+ *         processor-resource-unavailable (2),
+ *         mass-storage-unavailable (3),
+ *         capability-unavailable (4),
+ *         capability-unknown (5)
+ *     } (0..5),
+ *     service [4] IMPLICIT INTEGER {
+ *         other (0),
+ *         primitives-out-of-sequence (1),
+ *         object-state-conflict (2),
+ *         -- Value 3 reserved for further definition
+ *         continuation-invalid (4),
+ *         object-constraint-conflict (5)
+ *     } (0..5),
+ *     service-preempt [5] IMPLICIT INTEGER {
+ *         other (0),
+ *         timeout (1),
+ *         deadlock (2),
+ *         cancel (3)
+ *     } (0..3),
+ *     time-resolution [6] IMPLICIT INTEGER {
+ *         other (0),
+ *         unsupportable-time-resolution (1)
+ *     } (0..1),
+ *     access [7] IMPLICIT INTEGER {
+ *         other (0),
+ *         object-access-unsupported (1),
+ *         object-non-existent (2),
+ *         object-access-denied (3),
+ *         object-invalidated (4)
+ *     } (0..4),
+ *     initiate [8] IMPLICIT INTEGER {
+ *         other (0),
+ *         -- Values 1 and 2 are reserved for further definition
+ *         max-services-outstanding-calling-insufficient (3),
+ *         max-services-outstanding-called-insufficient (4),
+ *         service-CBB-insufficient (5),
+ *         parameter-CBB-insufficient (6),
+ *         nesting-level-insufficient (7)
+ *     } (0..7),
+ *     conclude [9] IMPLICIT INTEGER {
+ *         other (0),
+ *         further-communication-required (1)
+ *     } (0..1),
+ *     cancel [10] IMPLICIT INTEGER {
+ *         other (0),
+ *         invoke-id-unknown (1),
+ *         cancel-not-possible (2)
+ *     } (0..2),
+ *     cancel [10] IMPLICIT NULL,
+ *     file [11] IMPLICIT INTEGER {
+ *         other (0),
+ *         filename-ambiguous (1),
+ *         file-busy (2),
+ *         filename-syntax-error (3),
+ *         content-type-invalid (4),
+ *         position-invalid (5),
+ *         file-access-denied (6),
+ *         file-non-existent (7),
+ *         duplicate-filename (8),
+ *         insufficient-space-in-filestore (9)
+ *     } (0..9),
+ *     file [11] IMPLICIT NULL,
+ *     others [12] IMPLICIT INTEGER
+ * }
  * ```
  */
 export

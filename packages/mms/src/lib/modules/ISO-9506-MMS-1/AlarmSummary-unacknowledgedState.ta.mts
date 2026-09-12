@@ -76,7 +76,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AlarmSummary-unacknowledgedState ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * AlarmSummary-unacknowledgedState ::= INTEGER {
+ *     none (0),
+ *     active (1),
+ *     idle (2),
+ *     both (3)
+ * } (0..3)
  * ```
  */
 export

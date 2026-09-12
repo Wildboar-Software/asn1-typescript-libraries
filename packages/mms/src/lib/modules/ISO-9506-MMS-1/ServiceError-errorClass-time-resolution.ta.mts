@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass-time-resolution ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass-time-resolution ::= INTEGER {
+ *     other (0),
+ *     unsupportable-time-resolution (1)
+ * } (0..1)
  * ```
  */
 export

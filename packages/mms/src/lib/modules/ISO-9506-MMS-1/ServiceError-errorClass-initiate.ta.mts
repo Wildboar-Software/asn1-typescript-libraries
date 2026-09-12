@@ -76,7 +76,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass-initiate ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass-initiate ::= INTEGER {
+ *     other (0),
+ *     -- Values 1 and 2 are reserved for further definition
+ *     max-services-outstanding-calling-insufficient (3),
+ *     max-services-outstanding-called-insufficient (4),
+ *     service-CBB-insufficient (5),
+ *     parameter-CBB-insufficient (6),
+ *     nesting-level-insufficient (7)
+ * } (0..7)
  * ```
  */
 export

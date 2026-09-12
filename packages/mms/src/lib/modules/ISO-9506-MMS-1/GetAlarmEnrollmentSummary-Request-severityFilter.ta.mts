@@ -77,7 +77,10 @@ import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetAlarmEnrollmentSummary-Request-severityFilter ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GetAlarmEnrollmentSummary-Request-severityFilter ::= SEQUENCE {
+ *     mostSevere [0] IMPLICIT Unsigned8,
+ *     leastSevere [1] IMPLICIT Unsigned8
+ * }
  * ```
  * 
  * @class

@@ -79,7 +79,11 @@ import { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventNotification-actionResult-successOrFailure-success ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventNotification-actionResult-successOrFailure-success ::= SEQUENCE {
+ *     confirmedServiceResponse ConfirmedServiceResponse,
+ *     cs-Response-Detail [79] Response-Detail OPTIONAL -- shall not be transmitted if value is the
+ *     -- value of a tagged type derived from NULL
+ * }
  * ```
  * 
  * @class

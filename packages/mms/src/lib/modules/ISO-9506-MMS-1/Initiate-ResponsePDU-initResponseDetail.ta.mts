@@ -85,7 +85,15 @@ import { AdditionalCBBOptions, AdditionalCBBOptions_des /* IMPORTED_LONG_NAMED_B
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Initiate-ResponsePDU-initResponseDetail ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Initiate-ResponsePDU-initResponseDetail ::= SEQUENCE {
+ *     negotiatedVersionNumber [0] IMPLICIT Integer16,
+ *     negotiatedParameterCBB [1] IMPLICIT ParameterSupportOptions,
+ *     servicesSupportedCalled [2] IMPLICIT ServiceSupportOptions,
+ *     ...,
+ *     additionalSupportedCalled [3] IMPLICIT AdditionalSupportOptions,
+ *     additionalCbbSupportedCalled [4] IMPLICIT AdditionalCBBOptions,
+ *     privilegeClassIdentityCalled [5] IMPLICIT VisibleString
+ * }
  * ```
  * 
  * @class

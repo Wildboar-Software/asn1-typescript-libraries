@@ -77,7 +77,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Enrollment-instance-definition-details-displayEnhancement ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Enrollment-instance-definition-details-displayEnhancement ::= CHOICE {
+ *     text [13] MMSString,
+ *     number [14] IMPLICIT INTEGER,
+ *     none [15] IMPLICIT NULL
+ * }
  * ```
  */
 export

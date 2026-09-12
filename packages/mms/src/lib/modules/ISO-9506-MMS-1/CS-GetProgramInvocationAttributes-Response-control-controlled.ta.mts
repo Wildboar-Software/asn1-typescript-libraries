@@ -77,7 +77,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-GetProgramInvocationAttributes-Response-control-controlled ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-GetProgramInvocationAttributes-Response-control-controlled ::= CHOICE {
+ *     controllingPI [0] IMPLICIT Identifier,
+ *     none [1] IMPLICIT NULL
+ * }
  * ```
  */
 export

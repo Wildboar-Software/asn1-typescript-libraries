@@ -79,7 +79,11 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TypeDescription-array ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TypeDescription-array ::= SEQUENCE {
+ *     packed [0] IMPLICIT BOOLEAN DEFAULT FALSE,
+ *     numberOfElements [1] IMPLICIT Unsigned32,
+ *     elementType [2] TypeSpecification
+ * }
  * ```
  * 
  * @class

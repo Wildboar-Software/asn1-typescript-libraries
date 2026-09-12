@@ -79,7 +79,10 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Journal-Entry-instance-journalVariables-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Journal-Entry-instance-journalVariables-Item ::= SEQUENCE {
+ *     variableTag [11] MMS255String,
+ *     valueSpecification [12] Data
+ * }
  * ```
  * 
  * @class

@@ -77,7 +77,10 @@ import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Modu
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Condition-instance-definition-details-group-Priority-Override ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Condition-instance-definition-details-group-Priority-Override ::= CHOICE {
+ *     priority [18] IMPLICIT Priority,
+ *     undefined [19] IMPLICIT NULL
+ * }
  * ```
  */
 export

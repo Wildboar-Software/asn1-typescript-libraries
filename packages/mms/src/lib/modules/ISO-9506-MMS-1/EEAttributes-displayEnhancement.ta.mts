@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EEAttributes-displayEnhancement ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EEAttributes-displayEnhancement ::= CHOICE {
+ *     string [0] IMPLICIT VisibleString,
+ *     index [1] IMPLICIT INTEGER,
+ *     noEnhancement NULL
+ * }
  * ```
  */
 export

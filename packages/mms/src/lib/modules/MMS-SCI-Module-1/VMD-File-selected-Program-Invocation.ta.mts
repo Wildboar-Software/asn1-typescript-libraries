@@ -77,7 +77,10 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * VMD-File-selected-Program-Invocation ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * VMD-File-selected-Program-Invocation ::= CHOICE {
+ *     selectedProgram [26] IMPLICIT Program-Invocation-instance,
+ *     noneSelected [27] IMPLICIT NULL
+ * }
  * ```
  */
 export

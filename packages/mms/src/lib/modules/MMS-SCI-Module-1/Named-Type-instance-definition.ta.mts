@@ -77,7 +77,14 @@ import { Named_Type_instance_definition_details, _decode_Named_Type_instance_def
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Named-Type-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Named-Type-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         typeDescription [4] TypeDescription,
+ *         meaning [5] IMPLICIT VisibleString OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

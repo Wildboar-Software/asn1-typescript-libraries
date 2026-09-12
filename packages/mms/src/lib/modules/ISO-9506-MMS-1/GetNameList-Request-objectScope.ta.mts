@@ -77,7 +77,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetNameList-Request-objectScope ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * GetNameList-Request-objectScope ::= CHOICE {
+ *     vmdSpecific [0] IMPLICIT NULL,
+ *     domainSpecific [1] IMPLICIT Identifier,
+ *     aaSpecific [2] IMPLICIT NULL
+ * }
  * ```
  */
 export

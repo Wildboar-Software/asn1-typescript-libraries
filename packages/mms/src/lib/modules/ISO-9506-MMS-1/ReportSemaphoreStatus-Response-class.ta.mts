@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReportSemaphoreStatus-Response-class ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ReportSemaphoreStatus-Response-class ::= INTEGER {
+ *     token (0),
+ *     pool (1)
+ * } (0..1)
  * ```
  */
 export

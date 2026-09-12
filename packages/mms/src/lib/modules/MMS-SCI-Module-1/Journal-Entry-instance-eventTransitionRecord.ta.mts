@@ -79,7 +79,10 @@ import { EC_State, EC_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Journal-Entry-instance-eventTransitionRecord ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Journal-Entry-instance-eventTransitionRecord ::= SEQUENCE {
+ *     name [8] ObjectName,
+ *     currentState [9] IMPLICIT EC-State
+ * }
  * ```
  * 
  * @class

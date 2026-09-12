@@ -79,7 +79,22 @@ import { CS_GetProgramInvocationAttributes_Response_control_controlled, _decode_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-GetProgramInvocationAttributes-Response-control ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-GetProgramInvocationAttributes-Response-control ::= CHOICE {
+ *     controlling [0] IMPLICIT SEQUENCE {
+ *         controlledPI [0] IMPLICIT SEQUENCE OF Identifier,
+ *         programLocation [1] IMPLICIT VisibleString OPTIONAL,
+ *         runningMode [2] CHOICE {
+ *             freeRunning [0] IMPLICIT NULL,
+ *             cycleLimited [1] IMPLICIT INTEGER,
+ *             stepLimited [2] IMPLICIT INTEGER
+ *         }
+ *     },
+ *     controlled [1] CHOICE {
+ *         controllingPI [0] IMPLICIT Identifier,
+ *         none [1] IMPLICIT NULL
+ *     },
+ *     normal [2] IMPLICIT NULL
+ * }
  * ```
  */
 export

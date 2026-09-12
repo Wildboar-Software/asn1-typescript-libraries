@@ -77,7 +77,10 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AlternateAccessSelection-selectAccess-indexRange ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AlternateAccessSelection-selectAccess-indexRange ::= SEQUENCE {
+ *     lowIndex [0] IMPLICIT Unsigned32,
+ *     numberOfElements [1] IMPLICIT Unsigned32
+ * }
  * ```
  * 
  * @class

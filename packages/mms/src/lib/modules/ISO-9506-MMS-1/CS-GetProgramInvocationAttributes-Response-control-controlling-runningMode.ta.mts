@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-GetProgramInvocationAttributes-Response-control-controlling-runningMode ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-GetProgramInvocationAttributes-Response-control-controlling-runningMode ::= CHOICE {
+ *     freeRunning [0] IMPLICIT NULL,
+ *     cycleLimited [1] IMPLICIT INTEGER,
+ *     stepLimited [2] IMPLICIT INTEGER
+ * }
  * ```
  */
 export

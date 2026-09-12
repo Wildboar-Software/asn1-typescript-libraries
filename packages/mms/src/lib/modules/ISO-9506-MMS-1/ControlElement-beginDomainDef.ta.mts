@@ -81,7 +81,12 @@ import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ControlElement-beginDomainDef ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ControlElement-beginDomainDef ::= SEQUENCE {
+ *     domainName [1] IMPLICIT Identifier,
+ *     capabilities [2] IMPLICIT SEQUENCE OF MMSString,
+ *     sharable [3] IMPLICIT BOOLEAN,
+ *     loadData [4] LoadData OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -77,7 +77,12 @@ import { CS_Resume_Request_controlling_modeType, _decode_CS_Resume_Request_contr
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-Resume-Request-controlling ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-Resume-Request-controlling ::= SEQUENCE {
+ *     modeType CHOICE {
+ *         continueMode [0] IMPLICIT NULL,
+ *         changeMode [1] StartCount
+ *     }
+ * }
  * ```
  * 
  * @class

@@ -77,7 +77,15 @@ import { AccessCondition, _decode_AccessCondition, _encode_AccessCondition } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetAccessControlListAttributes-Response-accessControlListElements ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GetAccessControlListAttributes-Response-accessControlListElements ::= SEQUENCE {
+ *     readAccessCondition [0] AccessCondition OPTIONAL,
+ *     storeAccessCondition [1] AccessCondition OPTIONAL,
+ *     writeAccessCondition [2] AccessCondition OPTIONAL,
+ *     loadAccessCondition [3] AccessCondition OPTIONAL,
+ *     executeAccessCondition [4] AccessCondition OPTIONAL,
+ *     deleteAccessCondition [5] AccessCondition OPTIONAL,
+ *     editAccessCondition [6] AccessCondition OPTIONAL
+ * }
  * ```
  * 
  * @class

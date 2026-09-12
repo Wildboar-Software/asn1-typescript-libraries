@@ -76,7 +76,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass-definition ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass-definition ::= INTEGER {
+ *     other (0),
+ *     object-undefined (1),
+ *     invalid-address (2),
+ *     type-unsupported (3),
+ *     type-inconsistent (4),
+ *     object-exists (5),
+ *     object-attribute-inconsistent (6)
+ * } (0..6)
  * ```
  */
 export

@@ -77,7 +77,17 @@ import { Data_Exchange_instance_definition_details, _decode_Data_Exchange_instan
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Data-Exchange-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Data-Exchange-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         request [4] IMPLICIT SEQUENCE OF TypeDescription,
+ *         response [5] IMPLICIT SEQUENCE OF TypeDescription,
+ *         linked [6] IMPLICIT BOOLEAN,
+ *         -- The following attribute shall appear if an only if the value of &linked is true.
+ *         programInvocation [7] IMPLICIT Program-Invocation-instance OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

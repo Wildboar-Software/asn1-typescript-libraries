@@ -77,7 +77,13 @@ import { Journal_instance_definition_details, _decode_Journal_instance_definitio
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Journal-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Journal-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         entries [4] IMPLICIT SEQUENCE OF Journal-Entry-instance
+ *     }
+ * }
  * ```
  */
 export

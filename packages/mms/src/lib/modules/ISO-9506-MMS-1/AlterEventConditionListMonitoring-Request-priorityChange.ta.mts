@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AlterEventConditionListMonitoring-Request-priorityChange ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AlterEventConditionListMonitoring-Request-priorityChange ::= CHOICE {
+ *     priorityValue [0] IMPLICIT INTEGER,
+ *     priorityReset [1] IMPLICIT NULL
+ * }
  * ```
  */
 export

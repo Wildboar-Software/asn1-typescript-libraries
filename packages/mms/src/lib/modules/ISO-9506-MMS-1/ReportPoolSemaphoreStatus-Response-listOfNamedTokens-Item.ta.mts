@@ -77,7 +77,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReportPoolSemaphoreStatus-Response-listOfNamedTokens-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ReportPoolSemaphoreStatus-Response-listOfNamedTokens-Item ::= CHOICE {
+ *     freeNamedToken [0] IMPLICIT Identifier,
+ *     ownedNamedToken [1] IMPLICIT Identifier,
+ *     hungNamedToken [2] IMPLICIT Identifier
+ * }
  * ```
  */
 export

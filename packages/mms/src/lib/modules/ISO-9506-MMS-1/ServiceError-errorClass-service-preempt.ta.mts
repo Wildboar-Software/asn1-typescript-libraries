@@ -76,7 +76,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass-service-preempt ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass-service-preempt ::= INTEGER {
+ *     other (0),
+ *     timeout (1),
+ *     deadlock (2),
+ *     cancel (3)
+ * } (0..3)
  * ```
  */
 export

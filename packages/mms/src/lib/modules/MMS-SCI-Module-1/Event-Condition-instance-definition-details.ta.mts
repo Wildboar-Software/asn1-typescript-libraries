@@ -95,7 +95,35 @@ import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Condition-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Condition-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     ecClass [4] IMPLICIT EC-Class,
+ *     ecState [5] IMPLICIT EC-State,
+ *     priority [6] IMPLICIT Priority,
+ *     severity [7] IMPLICIT Severity,
+ *     eventEnrollments [8] IMPLICIT SEQUENCE OF Event-Enrollment-instance,
+ *     -- The following fields shall be present
+ *     -- if and only if the value of &ecClass is monitored.
+ *     enabled [9] IMPLICIT BOOLEAN OPTIONAL,
+ *     alarmSummaryReports [10] IMPLICIT BOOLEAN OPTIONAL,
+ *     monitoredVariable CHOICE {
+ *         named [11] IMPLICIT Named-Variable-instance,
+ *         unnamed [12] IMPLICIT Unnamed-Variable-instance,
+ *         unspecified [13] IMPLICIT NULL
+ *     } OPTIONAL,
+ *     evaluationInterval [14] IMPLICIT INTEGER OPTIONAL,
+ *     ...,
+ *     displayEnhancement CHOICE {
+ *         text [15] MMSString,
+ *         number [16] IMPLICIT INTEGER,
+ *         none [17] IMPLICIT NULL
+ *     },
+ *     group-Priority-Override CHOICE {
+ *         priority [18] IMPLICIT Priority,
+ *         undefined [19] IMPLICIT NULL
+ *     } OPTIONAL,
+ *     referencingEventConditionLists [20] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+ * }
  * ```
  * 
  * @class

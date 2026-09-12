@@ -79,7 +79,11 @@ import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Named-Type-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Named-Type-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     typeDescription [4] TypeDescription,
+ *     meaning [5] IMPLICIT VisibleString OPTIONAL
+ * }
  * ```
  * 
  * @class

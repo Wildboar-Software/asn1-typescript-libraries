@@ -79,7 +79,10 @@ import { Variable_List_Item_instance, _decode_Variable_List_Item_instance, _enco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Named-Variable-List-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Named-Variable-List-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     listOfVariables [4] IMPLICIT SEQUENCE OF Variable-List-Item-instance
+ * }
  * ```
  * 
  * @class

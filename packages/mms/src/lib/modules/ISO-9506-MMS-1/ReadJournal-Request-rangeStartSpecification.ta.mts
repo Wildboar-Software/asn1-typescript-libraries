@@ -77,7 +77,10 @@ import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReadJournal-Request-rangeStartSpecification ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ReadJournal-Request-rangeStartSpecification ::= CHOICE {
+ *     startingTime [0] IMPLICIT TimeOfDay,
+ *     startingEntry [1] IMPLICIT OCTET STRING
+ * }
  * ```
  */
 export

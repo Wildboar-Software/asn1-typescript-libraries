@@ -77,7 +77,29 @@ import { Domain_instance_definition_details, _decode_Domain_instance_definition_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Domain-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Domain-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         capabilities [3] IMPLICIT SEQUENCE OF MMSString,
+ *         state [4] IMPLICIT DomainState,
+ *         -- The aAssociation is not included
+ *         accessControl [5] IMPLICIT Access-Control-List-instance,
+ *         sharable [6] IMPLICIT BOOLEAN,
+ *         programInvocations [7] IMPLICIT SEQUENCE OF Program-Invocation-instance -- uploadsInProgress  is not included
+ *         ,
+ *         namedVariables [8] IMPLICIT SEQUENCE OF Named-Variable-instance,
+ *         namedVariableLists [9] IMPLICIT SEQUENCE OF Named-Variable-List-instance,
+ *         namedVariableLists [9] IMPLICIT NULL,
+ *         namedTypes [10] IMPLICIT SEQUENCE OF Named-Type-instance,
+ *         namedVariables [8] IMPLICIT NULL,
+ *         namedVariableLists [9] IMPLICIT NULL,
+ *         namedTypes [10] IMPLICIT NULL,
+ *         eventConditions [11] IMPLICIT SEQUENCE OF Event-Condition-instance,
+ *         eventActions [12] IMPLICIT SEQUENCE OF Event-Action-instance,
+ *         eventEnrollments [13] IMPLICIT SEQUENCE OF Event-Enrollment-instance,
+ *         eventConditionLists [14] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+ *     }
+ * }
  * ```
  */
 export

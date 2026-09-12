@@ -76,7 +76,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * StatusResponse-vmdPhysicalStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * StatusResponse-vmdPhysicalStatus ::= INTEGER {
+ *     operational (0),
+ *     partially-operational (1),
+ *     inoperable (2),
+ *     needs-commissioning (3)
+ * } (0..3)
  * ```
  */
 export

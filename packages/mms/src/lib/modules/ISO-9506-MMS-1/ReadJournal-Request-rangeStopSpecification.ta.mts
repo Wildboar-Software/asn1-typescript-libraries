@@ -79,7 +79,10 @@ import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReadJournal-Request-rangeStopSpecification ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ReadJournal-Request-rangeStopSpecification ::= CHOICE {
+ *     endingTime [0] IMPLICIT TimeOfDay,
+ *     numberOfEntries [1] IMPLICIT Integer32
+ * }
  * ```
  */
 export

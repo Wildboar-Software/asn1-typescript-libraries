@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-AlterEventEnrollment-Request-changeDisplay ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-AlterEventEnrollment-Request-changeDisplay ::= CHOICE {
+ *     string [0] IMPLICIT VisibleString,
+ *     index [1] IMPLICIT INTEGER,
+ *     noEnhancement [2] NULL
+ * }
  * ```
  */
 export

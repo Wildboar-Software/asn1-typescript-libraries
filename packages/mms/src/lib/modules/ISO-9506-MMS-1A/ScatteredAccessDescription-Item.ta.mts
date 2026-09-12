@@ -81,7 +81,11 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ScatteredAccessDescription-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ScatteredAccessDescription-Item ::= SEQUENCE {
+ *     componentName [0] IMPLICIT Identifier OPTIONAL,
+ *     variableSpecification [1] VariableSpecification,
+ *     alternateAccess [2] IMPLICIT AlternateAccess OPTIONAL
+ * }
  * ```
  * 
  * @class

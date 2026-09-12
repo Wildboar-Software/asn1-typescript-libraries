@@ -77,7 +77,14 @@ import { Unit_Control_instance_definition_details, _decode_Unit_Control_instance
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Unit-Control-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Unit-Control-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         domains [4] IMPLICIT SEQUENCE OF Domain-instance,
+ *         programInvocations [5] IMPLICIT SEQUENCE OF Program-Invocation-instance
+ *     }
+ * }
  * ```
  */
 export

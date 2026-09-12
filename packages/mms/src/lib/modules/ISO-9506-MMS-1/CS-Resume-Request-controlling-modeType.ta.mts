@@ -77,7 +77,10 @@ import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-Resume-Request-controlling-modeType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-Resume-Request-controlling-modeType ::= CHOICE {
+ *     continueMode [0] IMPLICIT NULL,
+ *     changeMode [1] StartCount
+ * }
  * ```
  */
 export

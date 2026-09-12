@@ -77,7 +77,15 @@ import { Event_Action_instance_definition_details, _decode_Event_Action_instance
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Action-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Action-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         confirmedServiceRequest [4] ConfirmedServiceRequest,
+ *         modifiers [5] IMPLICIT SEQUENCE OF Modifier,
+ *         eventEnrollments [6] IMPLICIT SEQUENCE OF Event-Enrollment-instance
+ *     }
+ * }
  * ```
  */
 export

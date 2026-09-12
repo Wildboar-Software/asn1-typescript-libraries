@@ -77,7 +77,15 @@ import { Event_Condition_List_instance_definition_details, _decode_Event_Conditi
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Condition-List-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Condition-List-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         eventConditions [4] IMPLICIT SEQUENCE OF Event-Condition-instance,
+ *         eventConditionLists [5] IMPLICIT SEQUENCE OF Event-Condition-List-instance,
+ *         referencingEventConditionLists [6] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+ *     }
+ * }
  * ```
  */
 export

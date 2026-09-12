@@ -77,7 +77,10 @@ import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-Start-Request-controlling ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-Start-Request-controlling ::= SEQUENCE {
+ *     startLocation [0] IMPLICIT VisibleString OPTIONAL,
+ *     startCount [1] StartCount DEFAULT cycleCount: 1
+ * }
  * ```
  * 
  * @class

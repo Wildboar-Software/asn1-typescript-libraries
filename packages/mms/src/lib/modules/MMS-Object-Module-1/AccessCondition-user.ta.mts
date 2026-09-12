@@ -77,7 +77,10 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AccessCondition-user ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AccessCondition-user ::= CHOICE {
+ *     association ApplicationReference,
+ *     none NULL
+ * }
  * ```
  */
 export

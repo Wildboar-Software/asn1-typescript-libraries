@@ -76,7 +76,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RejectPDU-rejectReason-confirmed-responsePDU ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * RejectPDU-rejectReason-confirmed-responsePDU ::= INTEGER {
+ *     other (0),
+ *     unrecognized-service (1),
+ *     invalid-invokeID (2),
+ *     invalid-result (3),
+ *     -- Value 4 reserved for further definition
+ *     max-recursion-exceeded (5),
+ *     value-out-of-range (6)
+ * } (0..6)
  * ```
  */
 export

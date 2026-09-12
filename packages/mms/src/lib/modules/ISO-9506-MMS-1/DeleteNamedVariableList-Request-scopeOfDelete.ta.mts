@@ -76,7 +76,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DeleteNamedVariableList-Request-scopeOfDelete ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DeleteNamedVariableList-Request-scopeOfDelete ::= INTEGER {
+ *     specific (0),
+ *     aa-specific (1),
+ *     domain (2),
+ *     vmd (3)
+ * } (0..3)
  * ```
  */
 export

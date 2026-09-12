@@ -95,7 +95,30 @@ import { Event_Enrollment_instance_definition_details_displayEnhancement, _decod
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Enrollment-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Enrollment-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     eeClass [4] IMPLICIT EE-Class,
+ *     eventCondition [5] IMPLICIT Event-Condition-instance,
+ *     ecTransitions [6] IMPLICIT Transitions,
+ *     -- The following parameter is present if and only if the
+ *     -- value of &eeClass is modifier.
+ *     remainingDelay CHOICE {
+ *         time [7] IMPLICIT INTEGER,
+ *         forever [8] IMPLICIT NULL
+ *     } OPTIONAL,
+ *     -- The remaining parameters are present if and only if the
+ *     -- value of &eeClass is notification.
+ *     eventAction [9] IMPLICIT Event-Action-instance OPTIONAL,
+ *     duration [10] IMPLICIT EE-Duration OPTIONAL,
+ *     clientApplication [11] IMPLICIT ApplicationReference OPTIONAL,
+ *     aaRule [12] IMPLICIT AlarmAckRule OPTIONAL,
+ *     ...,
+ *     displayEnhancement CHOICE {
+ *         text [13] MMSString,
+ *         number [14] IMPLICIT INTEGER,
+ *         none [15] IMPLICIT NULL
+ *     }
+ * }
  * ```
  * 
  * @class

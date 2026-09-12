@@ -93,7 +93,28 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Program-Invocation-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Program-Invocation-instance-definition-details ::= SEQUENCE {
+ *     programInvocationState [3] IMPLICIT ProgramInvocationState,
+ *     domains [4] IMPLICIT SEQUENCE OF Domain-instance,
+ *     accessControl [5] IMPLICIT SEQUENCE OF Access-Control-List-instance,
+ *     reusable [6] IMPLICIT BOOLEAN,
+ *     monitor [7] IMPLICIT BOOLEAN,
+ *     -- The following three fields shall all be present if the value of
+ *     -- monitor is true.
+ *     -- If present, the &name field of each object instance
+ *     -- shall have a value equal to the
+ *     -- &name field of this instance of the PROGRAM-INVOCATION.
+ *     eventCondition [8] IMPLICIT SEQUENCE OF Event-Condition-instance OPTIONAL,
+ *     eventAction [9] IMPLICIT SEQUENCE OF Event-Action-instance OPTIONAL,
+ *     eventEnrollment [10] IMPLICIT SEQUENCE OF Event-Enrollment-instance OPTIONAL,
+ *     executionArgument [11] MMSString,
+ *     ...,
+ *     control [12] IMPLICIT Control-State,
+ *     controlling-Program-Invocation [13] IMPLICIT Program-Invocation-instance,
+ *     -- The following field shall be present
+ *     -- if and only if the value of the &control field is controlling.
+ *     controlled-Program-Invocations [14] IMPLICIT SEQUENCE OF Program-Invocation-instance OPTIONAL
+ * }
  * ```
  * 
  * @class

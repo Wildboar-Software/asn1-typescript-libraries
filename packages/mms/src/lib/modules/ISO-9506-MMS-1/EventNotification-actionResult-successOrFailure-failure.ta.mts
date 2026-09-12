@@ -79,7 +79,10 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventNotification-actionResult-successOrFailure-failure ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventNotification-actionResult-successOrFailure-failure ::= SEQUENCE {
+ *     modifierPosition [0] IMPLICIT Unsigned32 OPTIONAL,
+ *     serviceError [1] IMPLICIT ServiceError
+ * }
  * ```
  * 
  * @class

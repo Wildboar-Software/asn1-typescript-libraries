@@ -76,7 +76,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceError-errorClass-vmd-state ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceError-errorClass-vmd-state ::= INTEGER {
+ *     other (0),
+ *     vmd-state-conflict (1),
+ *     vmd-operational-problem (2),
+ *     domain-transfer-problem (3),
+ *     state-machine-id-invalid (4)
+ * } (0..4)
  * ```
  */
 export

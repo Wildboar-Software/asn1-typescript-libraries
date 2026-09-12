@@ -76,7 +76,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetEventEnrollmentAttributes-Request-scopeOfRequest ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * GetEventEnrollmentAttributes-Request-scopeOfRequest ::= INTEGER {
+ *     specific (0),
+ *     client (1),
+ *     ec (2),
+ *     ea (3)
+ * } (0..3)
  * ```
  */
 export

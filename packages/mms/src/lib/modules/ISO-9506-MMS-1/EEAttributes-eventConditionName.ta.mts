@@ -77,7 +77,10 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EEAttributes-eventConditionName ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EEAttributes-eventConditionName ::= CHOICE {
+ *     eventCondition [0] ObjectName,
+ *     undefined [1] IMPLICIT NULL
+ * }
  * ```
  */
 export

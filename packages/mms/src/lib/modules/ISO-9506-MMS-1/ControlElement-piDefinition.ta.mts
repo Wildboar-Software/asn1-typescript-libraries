@@ -79,7 +79,13 @@ import { ProgramInvocationState, ProgramInvocationState_non_existent /* IMPORTED
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ControlElement-piDefinition ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ControlElement-piDefinition ::= SEQUENCE {
+ *     piName [0] IMPLICIT Identifier,
+ *     listOfDomains [1] IMPLICIT SEQUENCE OF Identifier,
+ *     reusable [2] IMPLICIT BOOLEAN DEFAULT TRUE,
+ *     monitorType [3] IMPLICIT BOOLEAN OPTIONAL,
+ *     pIState [4] IMPLICIT ProgramInvocationState OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ObjectClass-csObjectClass ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ObjectClass-csObjectClass ::= INTEGER {
+ *     eventConditionList (0),
+ *     unitControl (1)
+ * } (0..1)
  * ```
  */
 export

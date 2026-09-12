@@ -77,7 +77,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ObjectName-domain-specific ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ObjectName-domain-specific ::= SEQUENCE {
+ *     domainID Identifier,
+ *     itemID Identifier
+ * }
  * ```
  * 
  * @class

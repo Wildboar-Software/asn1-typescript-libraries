@@ -79,7 +79,11 @@ import { Unnamed_Variable_instance, _decode_Unnamed_Variable_instance, _encode_U
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Condition-instance-definition-details-monitoredVariable ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Condition-instance-definition-details-monitoredVariable ::= CHOICE {
+ *     named [11] IMPLICIT Named-Variable-instance,
+ *     unnamed [12] IMPLICIT Unnamed-Variable-instance,
+ *     unspecified [13] IMPLICIT NULL
+ * }
  * ```
  */
 export

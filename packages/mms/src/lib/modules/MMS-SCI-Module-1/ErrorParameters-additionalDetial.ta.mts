@@ -77,7 +77,10 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ErrorParameters-additionalDetial ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ErrorParameters-additionalDetial ::= SEQUENCE {
+ *     size [2] IMPLICIT INTEGER,
+ *     syntax [3] MMSString
+ * }
  * ```
  * 
  * @class

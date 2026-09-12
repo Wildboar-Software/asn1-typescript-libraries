@@ -77,7 +77,21 @@ import { Semaphore_instance_definition_details, _decode_Semaphore_instance_defin
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Semaphore-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Semaphore-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         class [4] IMPLICIT ENUMERATED {
+ *             token,
+ *             pool
+ *         },
+ *         -- If the value of &class is token, the following field shall appear
+ *         numberOfTokens [5] IMPLICIT INTEGER OPTIONAL,
+ *         -- If the value of &class is pool, the following field shall appear
+ *         namedTokens [6] IMPLICIT SEQUENCE OF VisibleString OPTIONAL,
+ *         eventCondition [7] IMPLICIT Event-Condition-instance
+ *     }
+ * }
  * ```
  */
 export

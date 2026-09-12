@@ -76,7 +76,24 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ObjectClass-basicObjectClass ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ObjectClass-basicObjectClass ::= INTEGER {
+ *     namedVariable (0) -- value 1 is reserved for definition in Annex E
+ *     ,
+ *     scatteredAccess (1),
+ *     namedVariableList (2),
+ *     namedType (3),
+ *     semaphore (4),
+ *     eventCondition (5),
+ *     eventAction (6),
+ *     eventEnrollment (7),
+ *     journal (8),
+ *     domain (9),
+ *     programInvocation (10),
+ *     operatorStation (11),
+ *     dataExchange (12),
+ *     -- Shall not appear in minor version 1
+ *     accessControlList (13) -- Shall not appear in minor version 1 or 2
+ * } (0..13)
  * ```
  */
 export

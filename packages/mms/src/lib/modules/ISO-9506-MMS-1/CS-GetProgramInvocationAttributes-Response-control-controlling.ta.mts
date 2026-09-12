@@ -79,7 +79,15 @@ import { CS_GetProgramInvocationAttributes_Response_control_controlling_runningM
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CS-GetProgramInvocationAttributes-Response-control-controlling ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CS-GetProgramInvocationAttributes-Response-control-controlling ::= SEQUENCE {
+ *     controlledPI [0] IMPLICIT SEQUENCE OF Identifier,
+ *     programLocation [1] IMPLICIT VisibleString OPTIONAL,
+ *     runningMode [2] CHOICE {
+ *         freeRunning [0] IMPLICIT NULL,
+ *         cycleLimited [1] IMPLICIT INTEGER,
+ *         stepLimited [2] IMPLICIT INTEGER
+ *     }
+ * }
  * ```
  * 
  * @class

@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetAlarmSummary-Request-acknowledgementFilter ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * GetAlarmSummary-Request-acknowledgementFilter ::= INTEGER {
+ *     not-acked (0),
+ *     acked (1),
+ *     all (2)
+ * } (0..2)
  * ```
  */
 export

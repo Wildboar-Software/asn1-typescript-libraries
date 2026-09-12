@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Enrollment-instance-definition-details-remainingDelay ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Enrollment-instance-definition-details-remainingDelay ::= CHOICE {
+ *     time [7] IMPLICIT INTEGER,
+ *     forever [8] IMPLICIT NULL
+ * }
  * ```
  */
 export

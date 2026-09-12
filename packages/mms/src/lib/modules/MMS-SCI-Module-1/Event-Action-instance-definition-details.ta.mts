@@ -83,7 +83,12 @@ import { Event_Enrollment_instance, _decode_Event_Enrollment_instance, _encode_E
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-Action-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Event-Action-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     confirmedServiceRequest [4] ConfirmedServiceRequest,
+ *     modifiers [5] IMPLICIT SEQUENCE OF Modifier,
+ *     eventEnrollments [6] IMPLICIT SEQUENCE OF Event-Enrollment-instance
+ * }
  * ```
  * 
  * @class

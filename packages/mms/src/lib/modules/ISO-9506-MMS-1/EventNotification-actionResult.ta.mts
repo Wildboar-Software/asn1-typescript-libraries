@@ -79,7 +79,20 @@ import { EventNotification_actionResult_successOrFailure, _decode_EventNotificat
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventNotification-actionResult ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventNotification-actionResult ::= SEQUENCE {
+ *     eventActionName ObjectName,
+ *     successOrFailure CHOICE {
+ *         success [0] IMPLICIT SEQUENCE {
+ *             confirmedServiceResponse ConfirmedServiceResponse,
+ *             cs-Response-Detail [79] Response-Detail OPTIONAL -- shall not be transmitted if value is the
+ *             -- value of a tagged type derived from NULL
+ *         },
+ *         failure [1] IMPLICIT SEQUENCE {
+ *             modifierPosition [0] IMPLICIT Unsigned32 OPTIONAL,
+ *             serviceError [1] IMPLICIT ServiceError
+ *         }
+ *     }
+ * }
  * ```
  * 
  * @class

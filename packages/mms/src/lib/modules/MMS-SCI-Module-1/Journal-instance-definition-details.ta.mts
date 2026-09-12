@@ -79,7 +79,10 @@ import { Journal_Entry_instance, _decode_Journal_Entry_instance, _encode_Journal
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Journal-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Journal-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     entries [4] IMPLICIT SEQUENCE OF Journal-Entry-instance
+ * }
  * ```
  * 
  * @class

@@ -77,7 +77,13 @@ import { TypeDescription_structure_components_Item, _decode_TypeDescription_stru
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TypeDescription-structure ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TypeDescription-structure ::= SEQUENCE {
+ *     packed [0] IMPLICIT BOOLEAN DEFAULT FALSE,
+ *     components [1] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         componentName [0] IMPLICIT Identifier OPTIONAL,
+ *         componentType [1] TypeSpecification
+ *     }
+ * }
  * ```
  * 
  * @class

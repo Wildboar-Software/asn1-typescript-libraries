@@ -77,7 +77,46 @@ import { Access_Control_List_instance_definition_details, _decode_Access_Control
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Access-Control-List-instance-definition ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Access-Control-List-instance-definition ::= CHOICE {
+ *     reference [1] IMPLICIT OBJECT IDENTIFIER,
+ *     details [2] IMPLICIT SEQUENCE {
+ *         accessControl [3] IMPLICIT Access-Control-List-instance,
+ *         readAccessCondition [4] AccessCondition OPTIONAL,
+ *         storeAccessCondition [5] AccessCondition OPTIONAL,
+ *         writeAccessCondition [6] AccessCondition OPTIONAL,
+ *         loadAccessCondition [7] AccessCondition OPTIONAL,
+ *         executeAccessCondition [8] AccessCondition OPTIONAL,
+ *         deleteAccessCondition [9] AccessCondition OPTIONAL,
+ *         editAccessCondition [10] AccessCondition OPTIONAL,
+ *         --
+ *         -- The following fields are used to record lists of objects placed
+ *         -- under the control of this ACCESS-CONTROL-LIST object.
+ *         -- They will be referred to collectively as the Controlled Object Lists
+ *         --
+ *         accessControlLists [11] IMPLICIT SEQUENCE OF Access-Control-List-instance,
+ *         domains [12] IMPLICIT SEQUENCE OF Domain-instance,
+ *         programInvocations [13] IMPLICIT SEQUENCE OF Program-Invocation-instance,
+ *         unitControls [14] IMPLICIT SEQUENCE OF Unit-Control-instance,
+ *         unnamedVariables [15] IMPLICIT SEQUENCE OF Unnamed-Variable-instance,
+ *         unnamedVariables [15] IMPLICIT NULL,
+ *         namedVariables [16] IMPLICIT SEQUENCE OF Named-Variable-instance,
+ *         namedVariableLists [17] IMPLICIT SEQUENCE OF Named-Variable-List-instance,
+ *         namedVariableLists [17] IMPLICIT NULL,
+ *         namedTypes [18] IMPLICIT SEQUENCE OF Named-Type-instance,
+ *         namedVariables [16] IMPLICIT NULL,
+ *         namedVariableLists [17] IMPLICIT NULL,
+ *         namedTypes [18] IMPLICIT NULL,
+ *         dataExchanges [19] IMPLICIT SEQUENCE OF Data-Exchange-instance,
+ *         semaphores [20] IMPLICIT SEQUENCE OF Semaphore-instance,
+ *         operatorStations [21] IMPLICIT SEQUENCE OF Operator-Station-instance,
+ *         eventConditions [22] IMPLICIT SEQUENCE OF Event-Condition-instance,
+ *         eventActions [23] IMPLICIT SEQUENCE OF Event-Action-instance,
+ *         eventEnrollments [24] IMPLICIT SEQUENCE OF Event-Enrollment-instance,
+ *         journals [25] IMPLICIT SEQUENCE OF Journal-instance,
+ *         ...,
+ *         eventConditionLists [26] IMPLICIT SEQUENCE OF Event-Condition-List-instance
+ *     }
+ * }
  * ```
  */
 export

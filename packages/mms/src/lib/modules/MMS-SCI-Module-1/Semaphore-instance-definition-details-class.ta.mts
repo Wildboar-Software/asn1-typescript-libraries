@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Semaphore-instance-definition-details-class ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Semaphore-instance-definition-details-class ::= ENUMERATED {
+ *     token,
+ *     pool
+ * }
  * ```
  * 
  * @enum {number}
@@ -94,7 +97,10 @@ enum _enum_for_Semaphore_instance_definition_details_class {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Semaphore-instance-definition-details-class ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Semaphore-instance-definition-details-class ::= ENUMERATED {
+ *     token,
+ *     pool
+ * }
  * ```
  * 
  * @enum {number}
@@ -109,7 +115,10 @@ type Semaphore_instance_definition_details_class = _enum_for_Semaphore_instance_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Semaphore-instance-definition-details-class ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Semaphore-instance-definition-details-class ::= ENUMERATED {
+ *     token,
+ *     pool
+ * }
  * ```
  * 
  * @enum {number}

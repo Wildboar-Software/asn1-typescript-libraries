@@ -81,7 +81,14 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Data-Exchange-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Data-Exchange-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     request [4] IMPLICIT SEQUENCE OF TypeDescription,
+ *     response [5] IMPLICIT SEQUENCE OF TypeDescription,
+ *     linked [6] IMPLICIT BOOLEAN,
+ *     -- The following attribute shall appear if an only if the value of &linked is true.
+ *     programInvocation [7] IMPLICIT Program-Invocation-instance OPTIONAL
+ * }
  * ```
  * 
  * @class

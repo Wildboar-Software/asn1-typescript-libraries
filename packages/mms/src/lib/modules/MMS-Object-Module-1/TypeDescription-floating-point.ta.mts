@@ -77,7 +77,14 @@ import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TypeDescription-floating-point ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TypeDescription-floating-point ::= SEQUENCE {
+ *     format-width Unsigned8,
+ *     -- number of bits of
+ *     -- floating point value
+ *     -- including sign, exponent,
+ *     -- and fraction
+ *     exponent-width Unsigned8 -- size of exponent in bits
+ * }
  * ```
  * 
  * @class

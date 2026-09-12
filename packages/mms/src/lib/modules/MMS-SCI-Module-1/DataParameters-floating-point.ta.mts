@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DataParameters-floating-point ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DataParameters-floating-point ::= SEQUENCE {
+ *     total [4] IMPLICIT INTEGER,
+ *     exponent [5] IMPLICIT INTEGER
+ * }
  * ```
  * 
  * @class

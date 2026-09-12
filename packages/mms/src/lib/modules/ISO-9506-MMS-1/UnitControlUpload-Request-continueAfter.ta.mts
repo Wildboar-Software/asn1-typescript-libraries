@@ -77,7 +77,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UnitControlUpload-Request-continueAfter ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * UnitControlUpload-Request-continueAfter ::= CHOICE {
+ *     domain [1] IMPLICIT Identifier,
+ *     ulsmID [2] IMPLICIT INTEGER,
+ *     programInvocation [3] IMPLICIT Identifier
+ * }
  * ```
  */
 export

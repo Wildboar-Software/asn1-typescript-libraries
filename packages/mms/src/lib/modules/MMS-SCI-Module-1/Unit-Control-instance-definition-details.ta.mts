@@ -81,7 +81,11 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Unit-Control-instance-definition-details ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Unit-Control-instance-definition-details ::= SEQUENCE {
+ *     accessControl [3] IMPLICIT Access-Control-List-instance,
+ *     domains [4] IMPLICIT SEQUENCE OF Domain-instance,
+ *     programInvocations [5] IMPLICIT SEQUENCE OF Program-Invocation-instance
+ * }
  * ```
  * 
  * @class

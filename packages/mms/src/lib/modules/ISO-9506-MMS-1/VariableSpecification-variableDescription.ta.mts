@@ -79,7 +79,10 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * VariableSpecification-variableDescription ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * VariableSpecification-variableDescription ::= SEQUENCE {
+ *     address Address,
+ *     typeSpecification TypeSpecification
+ * }
  * ```
  * 
  * @class

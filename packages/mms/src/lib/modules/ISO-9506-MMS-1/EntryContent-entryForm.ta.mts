@@ -79,7 +79,16 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryContent-entryForm ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EntryContent-entryForm ::= CHOICE {
+ *     data [2] IMPLICIT SEQUENCE {
+ *         event [0] IMPLICIT SEQUENCE {
+ *             eventConditionName [0] ObjectName,
+ *             currentState [1] IMPLICIT EC-State
+ *         } OPTIONAL,
+ *         listOfVariables [1] IMPLICIT SEQUENCE OF Journal-Variable OPTIONAL
+ *     },
+ *     annotation [3] MMSString
+ * }
  * ```
  */
 export

@@ -79,7 +79,13 @@ import { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryContent-entryForm-data ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EntryContent-entryForm-data ::= SEQUENCE {
+ *     event [0] IMPLICIT SEQUENCE {
+ *         eventConditionName [0] ObjectName,
+ *         currentState [1] IMPLICIT EC-State
+ *     } OPTIONAL,
+ *     listOfVariables [1] IMPLICIT SEQUENCE OF Journal-Variable OPTIONAL
+ * }
  * ```
  * 
  * @class
