@@ -105,139 +105,139 @@ class Access_Control_List_instance_definition_details {
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
-/**
+        /**
          * @summary `readAccessCondition`.
          * @public
          * @readonly
          */
         readonly readAccessCondition: OPTIONAL<AccessCondition>,
-/**
+        /**
          * @summary `storeAccessCondition`.
          * @public
          * @readonly
          */
         readonly storeAccessCondition: OPTIONAL<AccessCondition>,
-/**
+        /**
          * @summary `writeAccessCondition`.
          * @public
          * @readonly
          */
         readonly writeAccessCondition: OPTIONAL<AccessCondition>,
-/**
+        /**
          * @summary `loadAccessCondition`.
          * @public
          * @readonly
          */
         readonly loadAccessCondition: OPTIONAL<AccessCondition>,
-/**
+        /**
          * @summary `executeAccessCondition`.
          * @public
          * @readonly
          */
         readonly executeAccessCondition: OPTIONAL<AccessCondition>,
-/**
+        /**
          * @summary `deleteAccessCondition`.
          * @public
          * @readonly
          */
         readonly deleteAccessCondition: OPTIONAL<AccessCondition>,
-/**
+        /**
          * @summary `editAccessCondition`.
          * @public
          * @readonly
          */
         readonly editAccessCondition: OPTIONAL<AccessCondition>,
-/**
+        /**
          * @summary `accessControlLists`.
          * @public
          * @readonly
          */
         readonly accessControlLists: Access_Control_List_instance[],
-/**
+        /**
          * @summary `domains`.
          * @public
          * @readonly
          */
         readonly domains: Domain_instance[],
-/**
+        /**
          * @summary `programInvocations`.
          * @public
          * @readonly
          */
         readonly programInvocations: Program_Invocation_instance[],
-/**
+        /**
          * @summary `unitControls`.
          * @public
          * @readonly
          */
         readonly unitControls: Unit_Control_instance[],
-/**
+        /**
          * @summary `unnamedVariables`.
          * @public
          * @readonly
          */
         readonly unnamedVariables: Unnamed_Variable_instance[] | NULL,
-/**
+        /**
          * @summary `namedVariables`.
          * @public
          * @readonly
          */
         readonly namedVariables: Named_Variable_instance[] | NULL,
-/**
+        /**
          * @summary `namedVariableLists`.
          * @public
          * @readonly
          */
         readonly namedVariableLists: Named_Variable_List_instance[] | NULL,
-/**
+        /**
          * @summary `namedTypes`.
          * @public
          * @readonly
          */
         readonly namedTypes: Named_Type_instance[] | NULL,
-/**
+        /**
          * @summary `dataExchanges`.
          * @public
          * @readonly
          */
         readonly dataExchanges: Data_Exchange_instance[],
-/**
+        /**
          * @summary `semaphores`.
          * @public
          * @readonly
          */
         readonly semaphores: Semaphore_instance[],
-/**
+        /**
          * @summary `operatorStations`.
          * @public
          * @readonly
          */
         readonly operatorStations: Operator_Station_instance[],
-/**
+        /**
          * @summary `eventConditions`.
          * @public
          * @readonly
          */
         readonly eventConditions: Event_Condition_instance[],
-/**
+        /**
          * @summary `eventActions`.
          * @public
          * @readonly
          */
         readonly eventActions: Event_Action_instance[],
-/**
+        /**
          * @summary `eventEnrollments`.
          * @public
          * @readonly
          */
         readonly eventEnrollments: Event_Enrollment_instance[],
-/**
+        /**
          * @summary `journals`.
          * @public
          * @readonly
          */
         readonly journals: Journal_instance[],
-/**
+        /**
          * @summary `eventConditionLists`.
          * @public
          * @readonly

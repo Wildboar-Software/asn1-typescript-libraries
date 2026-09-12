@@ -76,61 +76,61 @@ class Domain_instance_definition_details {
          * @readonly
          */
         readonly capabilities: MMSString[],
-/**
+        /**
          * @summary `state`.
          * @public
          * @readonly
          */
         readonly state: DomainState,
-/**
+        /**
          * @summary `accessControl`.
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
-/**
+        /**
          * @summary `sharable`.
          * @public
          * @readonly
          */
         readonly sharable: BOOLEAN,
-/**
+        /**
          * @summary `programInvocations`.
          * @public
          * @readonly
          */
         readonly programInvocations: Program_Invocation_instance[],
-/**
+        /**
          * @summary `namedVariables`.
          * @public
          * @readonly
          */
         readonly namedVariables: Named_Variable_instance[] | NULL,
-/**
+        /**
          * @summary `namedVariableLists`.
          * @public
          * @readonly
          */
         readonly namedVariableLists: Named_Variable_List_instance[] | NULL,
-/**
+        /**
          * @summary `namedTypes`.
          * @public
          * @readonly
          */
         readonly namedTypes: Named_Type_instance[] | NULL,
-/**
+        /**
          * @summary `eventConditions`.
          * @public
          * @readonly
          */
         readonly eventConditions: Event_Condition_instance[],
-/**
+        /**
          * @summary `eventActions`.
          * @public
          * @readonly
          */
         readonly eventActions: Event_Action_instance[],
-/**
+        /**
          * @summary `eventEnrollments`.
          * @public
          * @readonly
@@ -301,11 +301,7 @@ function _encode_Domain_instance_definition_details (value: Domain_instance_defi
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 7, () => $._encodeSequenceOf<Program_Invocation_instance>(() => _encode_Program_Invocation_instance, $.BER), $.BER)(value.programInvocations, $.BER),
             /* REQUIRED   */ ((value.namedVariables === null) ? $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER)(value.namedVariables, $.BER) : $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<Named_Variable_instance>(() => _encode_Named_Variable_instance, $.BER), $.BER)(value.namedVariables, $.BER)),
             /* REQUIRED   */ ((value.namedVariableLists === null) ? $._encode_implicit(_TagClass.context, 9, () => $._encodeNull, $.BER)(value.namedVariableLists, $.BER) : $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<Named_Variable_List_instance>(() => _encode_Named_Variable_List_instance, $.BER), $.BER)(value.namedVariableLists, $.BER)),
-
             /* REQUIRED   */ ((value.namedTypes === null) ? $._encode_implicit(_TagClass.context, 10, () => $._encodeNull, $.BER)(value.namedTypes, $.BER) : $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<Named_Type_instance>(() => _encode_Named_Type_instance, $.BER), $.BER)(value.namedTypes, $.BER)),
-
-
-
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 11, () => $._encodeSequenceOf<Event_Condition_instance>(() => _encode_Event_Condition_instance, $.BER), $.BER)(value.eventConditions, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 12, () => $._encodeSequenceOf<Event_Action_instance>(() => _encode_Event_Action_instance, $.BER), $.BER)(value.eventActions, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 13, () => $._encodeSequenceOf<Event_Enrollment_instance>(() => _encode_Event_Enrollment_instance, $.BER), $.BER)(value.eventEnrollments, $.BER),
