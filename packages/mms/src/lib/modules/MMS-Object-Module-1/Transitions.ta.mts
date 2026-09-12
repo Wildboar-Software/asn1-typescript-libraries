@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -187,7 +188,13 @@ const Transitions_any_to_deleted: number = 6; /* LONG_NAMED_BIT */
  */
 export
 const any_to_deleted: number = Transitions_any_to_deleted; /* SHORT_NAMED_BIT */
-export const _decode_Transitions = $._decodeBitString;
+export const _decode_Transitions = (el: _Element): Transitions => {
+    const value = $._decodeBitString(el);
+    if (value.length !== 7) {
+        throw new ASN1SizeError("Transitions violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_Transitions = $._encodeBitString;
 
 

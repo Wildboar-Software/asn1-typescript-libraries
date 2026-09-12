@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -236,7 +237,14 @@ const RejectPDU_rejectReason_confirmed_requestPDU_value_out_of_range: RejectPDU_
  */
 export
 const value_out_of_range: RejectPDU_rejectReason_confirmed_requestPDU = RejectPDU_rejectReason_confirmed_requestPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RejectPDU_rejectReason_confirmed_requestPDU = $._decodeInteger;
+export const _decode_RejectPDU_rejectReason_confirmed_requestPDU = (el: _Element): RejectPDU_rejectReason_confirmed_requestPDU => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 9) {
+        throw new ASN1OverflowError("RejectPDU_rejectReason_confirmed_requestPDU violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_RejectPDU_rejectReason_confirmed_requestPDU = $._encodeInteger;
 
 

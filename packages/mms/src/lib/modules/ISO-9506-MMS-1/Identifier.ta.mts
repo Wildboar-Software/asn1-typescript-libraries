@@ -64,8 +64,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
+    ASN1CharactersError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { maxIdentifier } from "../ISO-9506-MMS-1/maxIdentifier.va.mjs";
 
 
 
@@ -107,7 +110,20 @@ function _decode_Identifier (el: _Element): Identifier {
     "UNIVERSAL 12": [ "ifChar", $._decodeUTF8String ],
     "UNIVERSAL 26": [ "notChar", $._decodeVisibleString ]
 }); }
-    return _cached_decoder_for_Identifier(el);
+    const value = _cached_decoder_for_Identifier(el);
+    if ("ifChar" in value) {
+        if (value.ifChar.length < 1 || value.ifChar.length > maxIdentifier) {
+            throw new ASN1SizeError("Identifier.ifChar violates SIZE constraint");
+        }
+    } else {
+        if (value.notChar.length < 1 || value.notChar.length > maxIdentifier) {
+            throw new ASN1SizeError("Identifier.notChar violates SIZE constraint");
+        }
+        if (/[^A-Za-z0-9$_]/.test(value.notChar)) {
+            throw new ASN1CharactersError("Identifier.notChar contains a prohibited character");
+        }
+    }
+    return value;
 }
 
 let _cached_encoder_for_Identifier: $.ASN1Encoder<Identifier> | null = null;

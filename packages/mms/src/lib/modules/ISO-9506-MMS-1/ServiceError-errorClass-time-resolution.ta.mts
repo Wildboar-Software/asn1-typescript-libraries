@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -116,7 +117,14 @@ const ServiceError_errorClass_time_resolution_unsupportable_time_resolution: Ser
  */
 export
 const unsupportable_time_resolution: ServiceError_errorClass_time_resolution = ServiceError_errorClass_time_resolution_unsupportable_time_resolution; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_time_resolution = $._decodeInteger;
+export const _decode_ServiceError_errorClass_time_resolution = (el: _Element): ServiceError_errorClass_time_resolution => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 1) {
+        throw new ASN1OverflowError("ServiceError_errorClass_time_resolution violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_ServiceError_errorClass_time_resolution = $._encodeInteger;
 
 

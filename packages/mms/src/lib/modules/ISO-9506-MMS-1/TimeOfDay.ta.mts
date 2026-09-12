@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -81,7 +82,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TimeOfDay = OCTET_STRING; // OctetStringType
-export const _decode_TimeOfDay = $._decodeOctetString;
+export const _decode_TimeOfDay = (el: _Element): TimeOfDay => {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 4 && value.length !== 6) {
+        throw new ASN1SizeError("TimeOfDay violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_TimeOfDay = $._encodeOctetString;
 
 

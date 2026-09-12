@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -81,7 +82,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Severity = INTEGER;
-export const _decode_Severity = $._decodeInteger;
+export const _decode_Severity = (el: _Element): Severity => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 127) {
+        throw new ASN1OverflowError("Severity violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_Severity = $._encodeInteger;
 
 

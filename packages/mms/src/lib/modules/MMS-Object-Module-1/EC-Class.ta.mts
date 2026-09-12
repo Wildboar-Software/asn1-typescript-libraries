@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -116,7 +117,14 @@ const EC_Class_monitored: EC_Class = 1; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const monitored: EC_Class = EC_Class_monitored; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_EC_Class = $._decodeInteger;
+export const _decode_EC_Class = (el: _Element): EC_Class => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 1) {
+        throw new ASN1OverflowError("EC_Class violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_EC_Class = $._encodeInteger;
 
 

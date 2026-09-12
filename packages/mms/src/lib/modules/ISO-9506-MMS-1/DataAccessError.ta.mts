@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -286,7 +287,14 @@ const DataAccessError_object_value_invalid: DataAccessError = 11; /* LONG_NAMED_
  */
 export
 const object_value_invalid: DataAccessError = DataAccessError_object_value_invalid; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DataAccessError = $._decodeInteger;
+export const _decode_DataAccessError = (el: _Element): DataAccessError => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 11) {
+        throw new ASN1OverflowError("DataAccessError violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_DataAccessError = $._encodeInteger;
 
 

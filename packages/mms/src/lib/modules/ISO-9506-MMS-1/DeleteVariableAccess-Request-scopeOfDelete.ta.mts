@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -150,7 +151,14 @@ const DeleteVariableAccess_Request_scopeOfDelete_vmd: DeleteVariableAccess_Reque
  */
 export
 const vmd: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAccess_Request_scopeOfDelete_vmd; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DeleteVariableAccess_Request_scopeOfDelete = $._decodeInteger;
+export const _decode_DeleteVariableAccess_Request_scopeOfDelete = (el: _Element): DeleteVariableAccess_Request_scopeOfDelete => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 3) {
+        throw new ASN1OverflowError("DeleteVariableAccess_Request_scopeOfDelete violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_DeleteVariableAccess_Request_scopeOfDelete = $._encodeInteger;
 
 

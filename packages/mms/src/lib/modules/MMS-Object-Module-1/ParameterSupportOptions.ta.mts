@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -325,7 +326,13 @@ const ParameterSupportOptions_char: number = 17; /* LONG_NAMED_BIT */
  */
 export
 const char: number = ParameterSupportOptions_char; /* SHORT_NAMED_BIT */
-export const _decode_ParameterSupportOptions = $._decodeBitString;
+export const _decode_ParameterSupportOptions = (el: _Element): ParameterSupportOptions => {
+    const value = $._decodeBitString(el);
+    if (value.length !== 18) {
+        throw new ASN1SizeError("ParameterSupportOptions violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_ParameterSupportOptions = $._encodeBitString;
 
 

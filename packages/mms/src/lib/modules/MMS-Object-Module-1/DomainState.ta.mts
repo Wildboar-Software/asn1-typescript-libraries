@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -337,7 +338,14 @@ const DomainState_d9: DomainState = 15; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const d9: DomainState = DomainState_d9; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DomainState = $._decodeInteger;
+export const _decode_DomainState = (el: _Element): DomainState => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 15) {
+        throw new ASN1OverflowError("DomainState violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_DomainState = $._encodeInteger;
 
 

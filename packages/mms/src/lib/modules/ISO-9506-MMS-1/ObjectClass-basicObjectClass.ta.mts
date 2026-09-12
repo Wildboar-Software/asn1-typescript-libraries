@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -322,7 +323,14 @@ const ObjectClass_basicObjectClass_accessControlList: ObjectClass_basicObjectCla
  */
 export
 const accessControlList: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_accessControlList; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ObjectClass_basicObjectClass = $._decodeInteger;
+export const _decode_ObjectClass_basicObjectClass = (el: _Element): ObjectClass_basicObjectClass => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 13) {
+        throw new ASN1OverflowError("ObjectClass_basicObjectClass violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_ObjectClass_basicObjectClass = $._encodeInteger;
 
 

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -235,7 +236,14 @@ const ProgramInvocationState_resetting: ProgramInvocationState = 8; /* LONG_NAME
  */
 export
 const resetting: ProgramInvocationState = ProgramInvocationState_resetting; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ProgramInvocationState = $._decodeInteger;
+export const _decode_ProgramInvocationState = (el: _Element): ProgramInvocationState => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 8) {
+        throw new ASN1OverflowError("ProgramInvocationState violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_ProgramInvocationState = $._encodeInteger;
 
 

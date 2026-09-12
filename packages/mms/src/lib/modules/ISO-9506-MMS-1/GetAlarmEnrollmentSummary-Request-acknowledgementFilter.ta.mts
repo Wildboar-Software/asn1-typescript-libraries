@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -133,7 +134,14 @@ const GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all: GetAlarmEnrol
  */
 export
 const all: GetAlarmEnrollmentSummary_Request_acknowledgementFilter = GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = $._decodeInteger;
+export const _decode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = (el: _Element): GetAlarmEnrollmentSummary_Request_acknowledgementFilter => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 2) {
+        throw new ASN1OverflowError("GetAlarmEnrollmentSummary_Request_acknowledgementFilter violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_GetAlarmEnrollmentSummary_Request_acknowledgementFilter = $._encodeInteger;
 
 

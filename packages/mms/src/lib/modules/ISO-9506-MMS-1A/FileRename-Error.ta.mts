@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -116,7 +117,14 @@ const FileRename_Error_destination_file: FileRename_Error = 1; /* LONG_NAMED_INT
  */
 export
 const destination_file: FileRename_Error = FileRename_Error_destination_file; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_FileRename_Error = $._decodeInteger;
+export const _decode_FileRename_Error = (el: _Element): FileRename_Error => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 1) {
+        throw new ASN1OverflowError("FileRename_Error violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_FileRename_Error = $._encodeInteger;
 
 

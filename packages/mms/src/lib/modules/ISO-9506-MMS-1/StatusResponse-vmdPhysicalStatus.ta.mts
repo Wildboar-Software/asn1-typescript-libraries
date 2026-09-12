@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -150,7 +151,14 @@ const StatusResponse_vmdPhysicalStatus_needs_commissioning: StatusResponse_vmdPh
  */
 export
 const needs_commissioning: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysicalStatus_needs_commissioning; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_StatusResponse_vmdPhysicalStatus = $._decodeInteger;
+export const _decode_StatusResponse_vmdPhysicalStatus = (el: _Element): StatusResponse_vmdPhysicalStatus => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 3) {
+        throw new ASN1OverflowError("StatusResponse_vmdPhysicalStatus violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_StatusResponse_vmdPhysicalStatus = $._encodeInteger;
 
 

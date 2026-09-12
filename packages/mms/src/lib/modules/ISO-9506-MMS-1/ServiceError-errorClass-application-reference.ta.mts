@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -167,7 +168,14 @@ const ServiceError_errorClass_application_reference_context_unsupported: Service
  */
 export
 const context_unsupported: ServiceError_errorClass_application_reference = ServiceError_errorClass_application_reference_context_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_application_reference = $._decodeInteger;
+export const _decode_ServiceError_errorClass_application_reference = (el: _Element): ServiceError_errorClass_application_reference => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 4) {
+        throw new ASN1OverflowError("ServiceError_errorClass_application_reference violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_ServiceError_errorClass_application_reference = $._encodeInteger;
 
 

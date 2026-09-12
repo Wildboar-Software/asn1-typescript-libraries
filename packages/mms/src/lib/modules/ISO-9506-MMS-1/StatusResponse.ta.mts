@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StatusResponse_vmdLogicalStatus, StatusResponse_vmdLogicalStatus_state_changes_allowed /* IMPORTED_LONG_NAMED_INTEGER */, state_changes_allowed /* IMPORTED_SHORT_NAMED_INTEGER */, StatusResponse_vmdLogicalStatus_no_state_changes_allowed /* IMPORTED_LONG_NAMED_INTEGER */, no_state_changes_allowed /* IMPORTED_SHORT_NAMED_INTEGER */, StatusResponse_vmdLogicalStatus_limited_services_permitted /* IMPORTED_LONG_NAMED_INTEGER */, limited_services_permitted /* IMPORTED_SHORT_NAMED_INTEGER */, StatusResponse_vmdLogicalStatus_support_services_allowed /* IMPORTED_LONG_NAMED_INTEGER */, support_services_allowed /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_StatusResponse_vmdLogicalStatus, _encode_StatusResponse_vmdLogicalStatus } from "../ISO-9506-MMS-1/StatusResponse-vmdLogicalStatus.ta.mjs";
@@ -119,7 +120,11 @@ class StatusResponse {
          * @readonly
          */
         readonly localDetail: OPTIONAL<BIT_STRING>
-    ) {}
+    ) {
+        if (localDetail && localDetail.length > 128) {
+            throw new ASN1SizeError("StatusResponse.localDetail violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a StatusResponse

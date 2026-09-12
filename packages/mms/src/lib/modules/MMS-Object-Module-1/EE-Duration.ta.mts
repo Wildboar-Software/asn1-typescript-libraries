@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -116,7 +117,14 @@ const EE_Duration_permanent: EE_Duration = 1; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const permanent: EE_Duration = EE_Duration_permanent; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_EE_Duration = $._decodeInteger;
+export const _decode_EE_Duration = (el: _Element): EE_Duration => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 1) {
+        throw new ASN1OverflowError("EE_Duration violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_EE_Duration = $._encodeInteger;
 
 

@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -116,7 +117,14 @@ const ReportSemaphoreStatus_Response_class_pool: ReportSemaphoreStatus_Response_
  */
 export
 const pool: ReportSemaphoreStatus_Response_class = ReportSemaphoreStatus_Response_class_pool; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ReportSemaphoreStatus_Response_class = $._decodeInteger;
+export const _decode_ReportSemaphoreStatus_Response_class = (el: _Element): ReportSemaphoreStatus_Response_class => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 1) {
+        throw new ASN1OverflowError("ReportSemaphoreStatus_Response_class violates INTEGER range constraint");
+    }
+    return value;
+};
 export const _encode_ReportSemaphoreStatus_Response_class = $._encodeInteger;
 
 
