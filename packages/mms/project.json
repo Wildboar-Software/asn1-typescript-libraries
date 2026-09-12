@@ -1,0 +1,25 @@
+{
+  "name": "mms",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/mms/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/mms",
+        "tsConfig": "packages/mms/tsconfig.lib.json",
+        "packageJson": "packages/mms/package.json",
+        "main": "packages/mms/src/index.mts",
+        "assets": [
+          "packages/mms/*.md",
+          "packages/mms/LICENSE.txt",
+          "packages/mms/package.json"
+        ]
+      }
+    }
+  }
+}

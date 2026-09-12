@@ -1,0 +1,60 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+// export { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+
+
+/**
+ * @summary DeleteVariableAccess_Error
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * DeleteVariableAccess-Error  ::=  Unsigned32
+ * ```
+ */
+export
+type DeleteVariableAccess_Error = Unsigned32; // DefinedType
+
+let _cached_decoder_for_DeleteVariableAccess_Error: $.ASN1Decoder<DeleteVariableAccess_Error> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) DeleteVariableAccess_Error
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_DeleteVariableAccess_Error (el: _Element): DeleteVariableAccess_Error {
+    if (!_cached_decoder_for_DeleteVariableAccess_Error) { _cached_decoder_for_DeleteVariableAccess_Error = _decode_Unsigned32; }
+    return _cached_decoder_for_DeleteVariableAccess_Error(el);
+}
+
+let _cached_encoder_for_DeleteVariableAccess_Error: $.ASN1Encoder<DeleteVariableAccess_Error> | null = null;
+
+/**
+ * @summary Encodes a(n) DeleteVariableAccess_Error into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The DeleteVariableAccess_Error, encoded as an ASN.1 Element.
+ */
+export
+function _encode_DeleteVariableAccess_Error (value: DeleteVariableAccess_Error, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DeleteVariableAccess_Error) { _cached_encoder_for_DeleteVariableAccess_Error = _encode_Unsigned32; }
+    return _cached_encoder_for_DeleteVariableAccess_Error(value, elGetter);
+}
+
+
+/* eslint-enable */
