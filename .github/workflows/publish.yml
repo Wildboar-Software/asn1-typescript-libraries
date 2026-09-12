@@ -46,6 +46,7 @@ jobs:
           - "ldap"
           # - "m3100"
           - "map"
+          - "mms"
           - "nlm"
           - "ocsp"
           - "or-address"
