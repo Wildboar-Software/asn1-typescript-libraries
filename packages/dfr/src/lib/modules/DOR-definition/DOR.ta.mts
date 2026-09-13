@@ -100,7 +100,7 @@ class DOR {
      * @static
      * @method
      */
-    public static get _default_value_for_quality_of_service () { return Quality_of_Service._from_object({  }); }
+    public static get _default_value_for_quality_of_service (): Quality_of_Service { return new Quality_of_Service(Quality_of_Service._default_value_for_qoS_level, Quality_of_Service._default_value_for_usage_of_reference); }
 }
 
 /**

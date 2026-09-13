@@ -97,7 +97,7 @@ class CommonListSearchResult {
      * @static
      * @method
      */
-    public static get _default_value_for_warnings () { return [  ]; }        /**
+    public static get _default_value_for_warnings (): Warning[] { return []; }        /**
          * @summary The enum used as the type of the component `limit_encountered`
          * @public
          * @static

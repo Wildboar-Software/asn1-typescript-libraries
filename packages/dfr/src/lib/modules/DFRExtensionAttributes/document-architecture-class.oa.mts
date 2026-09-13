@@ -16,6 +16,10 @@ import { DocumentArchitectureClass, _decode_DocumentArchitectureClass, _encode_D
 // export { DocumentArchitectureClass, DocumentArchitectureClass_formatted /* IMPORTED_LONG_NAMED_INTEGER */, formatted /* IMPORTED_SHORT_NAMED_INTEGER */, DocumentArchitectureClass_processable /* IMPORTED_LONG_NAMED_INTEGER */, processable /* IMPORTED_SHORT_NAMED_INTEGER */, DocumentArchitectureClass_formatted_processable /* IMPORTED_LONG_NAMED_INTEGER */, formatted_processable /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DocumentArchitectureClass, _encode_DocumentArchitectureClass } from "../DFRExtensionAttributes/DocumentArchitectureClass.ta.mjs";
 import { id_att_document_architecture_class } from "../DFRObjectIdentifiers/id-att-document-architecture-class.va.mjs";
 // export { id_att_document_architecture_class } from "../DFRObjectIdentifiers/id-att-document-architecture-class.va.mjs";
+import {
+    integerMatch,
+    integerOrderingMatch,
+} from "@wildboar/x500/SelectedAttributeTypes";
 
 
 /**

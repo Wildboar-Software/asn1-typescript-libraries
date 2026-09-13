@@ -16,6 +16,9 @@ import { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _en
 // export { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
 import { id_att_dfr_parent_identification } from "../DFRObjectIdentifiers/id-att-dfr-parent-identification.va.mjs";
 // export { id_att_dfr_parent_identification } from "../DFRObjectIdentifiers/id-att-dfr-parent-identification.va.mjs";
+import {
+    octetStringMatch,
+} from "@wildboar/x500/SelectedAttributeTypes";
 
 
 /**

@@ -107,7 +107,7 @@ class CommonUpdateResult {
      * @static
      * @method
      */
-    public static get _default_value_for_warnings () { return [  ]; }        /**
+    public static get _default_value_for_warnings (): Warning[] { return []; }        /**
          * @summary The enum used as the type of the component `referent_altered`
          * @public
          * @static

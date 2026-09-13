@@ -71,7 +71,7 @@ class Quality_of_Service {
      * @static
      * @method
      */
-    public static get _default_value_for_qoS_level () { return { level_1: null }; }
+    public static get _default_value_for_qoS_level (): QoS_level { return { level_1: null }; }
     /**
      * @summary Getter that returns the default value for `usage_of_reference`.
      * @public

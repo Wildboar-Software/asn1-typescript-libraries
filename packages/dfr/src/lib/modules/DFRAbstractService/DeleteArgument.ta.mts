@@ -116,7 +116,7 @@ class DeleteArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_error_handling () { return { all_or_nothing: null }; }
+    public static get _default_value_for_error_handling (): ErrorHandlingMode { return { all_or_nothing: null }; }
     /**
      * @summary Getter that returns the default value for `priority`.
      * @public

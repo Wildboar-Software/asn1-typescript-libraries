@@ -28,7 +28,7 @@ import { ID, _decode_ID, _encode_ID } from "../DFRProtocolObjectIdentifiers/ID.t
  */
 export
 const id_dfr_protocol: ID = _OID.fromParts([
-    standard,
+    /* standard */ 0,
     10166,
     /* part-2 */ 2,
 ], iso);

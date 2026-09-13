@@ -16,6 +16,10 @@ import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATIO
 // export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_att_dfr_attributes_create_date_and_time } from "../DFRObjectIdentifiers/id-att-dfr-attributes-create-date-and-time.va.mjs";
 // export { id_att_dfr_attributes_create_date_and_time } from "../DFRObjectIdentifiers/id-att-dfr-attributes-create-date-and-time.va.mjs";
+import {
+    generalizedTimeMatch,
+    generalizedTimeOrderingMatch,
+} from "@wildboar/x500/SelectedAttributeTypes";
 
 
 /**
