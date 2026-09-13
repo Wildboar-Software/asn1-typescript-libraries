@@ -67,7 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AbandonProblem, _enum_for_AbandonProblem, AbandonProblem_no_such_operation /* IMPORTED_LONG_ENUMERATION_ITEM */, no_such_operation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbandonProblem_too_late /* IMPORTED_LONG_ENUMERATION_ITEM */, too_late /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbandonProblem_cannot_abandon /* IMPORTED_LONG_ENUMERATION_ITEM */, cannot_abandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AbandonProblem, _encode_AbandonProblem } from "../DFRAbstractService/AbandonProblem.ta.mjs";
-// export { AbandonProblem, _enum_for_AbandonProblem, AbandonProblem_no_such_operation /* IMPORTED_LONG_ENUMERATION_ITEM */, no_such_operation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbandonProblem_too_late /* IMPORTED_LONG_ENUMERATION_ITEM */, too_late /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbandonProblem_cannot_abandon /* IMPORTED_LONG_ENUMERATION_ITEM */, cannot_abandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AbandonProblem, _encode_AbandonProblem } from "../DFRAbstractService/AbandonProblem.ta.mjs";
+import {
+    type InvokeId,
+    _decode_InvokeId,
+    _encode_InvokeId,
+} from "../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs";
 
 
 /**
@@ -135,7 +139,7 @@ class abandonFailed_ParameterType {
 export
 const _root_component_type_list_1_spec_for_abandonFailed_ParameterType: $.ComponentSpec[] = [
     new $.ComponentSpec("problem", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: operation COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("operation", false, $.hasTag(_TagClass.context, 1)),
 ];
 
 /**

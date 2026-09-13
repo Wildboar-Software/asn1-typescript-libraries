@@ -67,7 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AE_title, _decode_AE_title, _encode_AE_title } from "../DOR-definition/AE-title.ta.mjs";
-// export { AE_title, _decode_AE_title, _encode_AE_title } from "../DOR-definition/AE-title.ta.mjs";
+import {
+    PresentationAddress,
+    _decode_PresentationAddress,
+    _encode_PresentationAddress,
+} from "@wildboar/x500/SelectedAttributeTypes";
 
 
 /**
@@ -139,7 +143,7 @@ class Locational_identifier {
  */
 export
 const _root_component_type_list_1_spec_for_Locational_identifier: $.ComponentSpec[] = [
-    /* FIXME: presentation-address COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("presentation-address", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("ae-title", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("application-contexts", false, $.hasTag(_TagClass.universal, 17))
 ];

@@ -67,7 +67,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
-// export { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
+import {
+    type InvokeId,
+    _decode_InvokeId,
+    _encode_InvokeId,
+} from "../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs";
 
 
 /**
