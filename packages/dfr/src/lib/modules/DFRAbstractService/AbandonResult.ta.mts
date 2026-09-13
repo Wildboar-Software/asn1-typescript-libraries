@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AbandonResult = NULL; // NullType
-
-let _cached_decoder_for_AbandonResult: $.ASN1Decoder<AbandonResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AbandonResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AbandonResult (el: _Element): AbandonResult {
-    if (!_cached_decoder_for_AbandonResult) { _cached_decoder_for_AbandonResult = $._decodeNull; }
-    return _cached_decoder_for_AbandonResult(el);
-}
-
-let _cached_encoder_for_AbandonResult: $.ASN1Encoder<AbandonResult> | null = null;
-
-/**
- * @summary Encodes a(n) AbandonResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AbandonResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_AbandonResult (value: AbandonResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AbandonResult) { _cached_encoder_for_AbandonResult = $._encodeNull; }
-    return _cached_encoder_for_AbandonResult(value, elGetter);
-}
+export const _decode_AbandonResult = $._decodeNull;
+export const _encode_AbandonResult = $._encodeNull;
 
 
 /* eslint-enable */

@@ -157,35 +157,8 @@ const VersionConstraint_version_unambiguity: VersionConstraint = VersionConstrai
  */
 export
 const version_unambiguity: VersionConstraint = VersionConstraint.version_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_VersionConstraint: $.ASN1Decoder<VersionConstraint> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) VersionConstraint
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_VersionConstraint (el: _Element): VersionConstraint {
-    if (!_cached_decoder_for_VersionConstraint) { _cached_decoder_for_VersionConstraint = $._decodeEnumerated; }
-    return _cached_decoder_for_VersionConstraint(el);
-}
-
-let _cached_encoder_for_VersionConstraint: $.ASN1Encoder<VersionConstraint> | null = null;
-
-/**
- * @summary Encodes a(n) VersionConstraint into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VersionConstraint, encoded as an ASN.1 Element.
- */
-export
-function _encode_VersionConstraint (value: VersionConstraint, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VersionConstraint) { _cached_encoder_for_VersionConstraint = $._encodeEnumerated; }
-    return _cached_encoder_for_VersionConstraint(value, elGetter);
-}
+export const _decode_VersionConstraint = $._decodeEnumerated;
+export const _encode_VersionConstraint = $._encodeEnumerated;
 
 
 /* eslint-enable */

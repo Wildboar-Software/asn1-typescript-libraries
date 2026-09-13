@@ -250,35 +250,8 @@ const EntryInformationSelection_read_selector_attr_and_dor_to_entire_object: Ent
  */
 export
 const attr_and_dor_to_entire_object: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attr_and_dor_to_entire_object; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EntryInformationSelection_read_selector: $.ASN1Decoder<EntryInformationSelection_read_selector> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EntryInformationSelection_read_selector
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EntryInformationSelection_read_selector (el: _Element): EntryInformationSelection_read_selector {
-    if (!_cached_decoder_for_EntryInformationSelection_read_selector) { _cached_decoder_for_EntryInformationSelection_read_selector = $._decodeEnumerated; }
-    return _cached_decoder_for_EntryInformationSelection_read_selector(el);
-}
-
-let _cached_encoder_for_EntryInformationSelection_read_selector: $.ASN1Encoder<EntryInformationSelection_read_selector> | null = null;
-
-/**
- * @summary Encodes a(n) EntryInformationSelection_read_selector into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EntryInformationSelection_read_selector, encoded as an ASN.1 Element.
- */
-export
-function _encode_EntryInformationSelection_read_selector (value: EntryInformationSelection_read_selector, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EntryInformationSelection_read_selector) { _cached_encoder_for_EntryInformationSelection_read_selector = $._encodeEnumerated; }
-    return _cached_encoder_for_EntryInformationSelection_read_selector(value, elGetter);
-}
+export const _decode_EntryInformationSelection_read_selector = $._decodeEnumerated;
+export const _encode_EntryInformationSelection_read_selector = $._encodeEnumerated;
 
 
 /* eslint-enable */

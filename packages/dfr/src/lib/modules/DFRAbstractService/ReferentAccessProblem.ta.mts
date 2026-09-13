@@ -249,35 +249,8 @@ const ReferentAccessProblem_reference_content_empty: ReferentAccessProblem = Ref
  */
 export
 const reference_content_empty: ReferentAccessProblem = ReferentAccessProblem.reference_content_empty; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ReferentAccessProblem: $.ASN1Decoder<ReferentAccessProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReferentAccessProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReferentAccessProblem (el: _Element): ReferentAccessProblem {
-    if (!_cached_decoder_for_ReferentAccessProblem) { _cached_decoder_for_ReferentAccessProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_ReferentAccessProblem(el);
-}
-
-let _cached_encoder_for_ReferentAccessProblem: $.ASN1Encoder<ReferentAccessProblem> | null = null;
-
-/**
- * @summary Encodes a(n) ReferentAccessProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReferentAccessProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReferentAccessProblem (value: ReferentAccessProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReferentAccessProblem) { _cached_encoder_for_ReferentAccessProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_ReferentAccessProblem(value, elGetter);
-}
+export const _decode_ReferentAccessProblem = $._decodeEnumerated;
+export const _encode_ReferentAccessProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -157,35 +157,8 @@ const Direction_descending: Direction = Direction.descending; /* LONG_NAMED_ENUM
  */
 export
 const descending: Direction = Direction.descending; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Direction: $.ASN1Decoder<Direction> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Direction
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Direction (el: _Element): Direction {
-    if (!_cached_decoder_for_Direction) { _cached_decoder_for_Direction = $._decodeEnumerated; }
-    return _cached_decoder_for_Direction(el);
-}
-
-let _cached_encoder_for_Direction: $.ASN1Encoder<Direction> | null = null;
-
-/**
- * @summary Encodes a(n) Direction into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Direction, encoded as an ASN.1 Element.
- */
-export
-function _encode_Direction (value: Direction, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Direction) { _cached_encoder_for_Direction = $._encodeEnumerated; }
-    return _cached_encoder_for_Direction(value, elGetter);
-}
+export const _decode_Direction = $._decodeEnumerated;
+export const _encode_Direction = $._encodeEnumerated;
 
 
 /* eslint-enable */

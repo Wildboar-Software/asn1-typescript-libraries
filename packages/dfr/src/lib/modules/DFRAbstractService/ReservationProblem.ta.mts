@@ -217,35 +217,8 @@ const ReservationProblem_reservation_not_changed: ReservationProblem = Reservati
  */
 export
 const reservation_not_changed: ReservationProblem = ReservationProblem.reservation_not_changed; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ReservationProblem: $.ASN1Decoder<ReservationProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReservationProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReservationProblem (el: _Element): ReservationProblem {
-    if (!_cached_decoder_for_ReservationProblem) { _cached_decoder_for_ReservationProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_ReservationProblem(el);
-}
-
-let _cached_encoder_for_ReservationProblem: $.ASN1Encoder<ReservationProblem> | null = null;
-
-/**
- * @summary Encodes a(n) ReservationProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReservationProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReservationProblem (value: ReservationProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReservationProblem) { _cached_encoder_for_ReservationProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_ReservationProblem(value, elGetter);
-}
+export const _decode_ReservationProblem = $._decodeEnumerated;
+export const _encode_ReservationProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */

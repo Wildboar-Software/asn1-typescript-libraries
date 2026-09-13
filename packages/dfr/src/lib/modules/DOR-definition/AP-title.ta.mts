@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AP_title = _Element; // ObjectClassFieldType
-
-let _cached_decoder_for_AP_title: $.ASN1Decoder<AP_title> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AP_title
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AP_title (el: _Element): AP_title {
-    if (!_cached_decoder_for_AP_title) { _cached_decoder_for_AP_title = $._decodeAny; }
-    return _cached_decoder_for_AP_title(el);
-}
-
-let _cached_encoder_for_AP_title: $.ASN1Encoder<AP_title> | null = null;
-
-/**
- * @summary Encodes a(n) AP_title into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AP_title, encoded as an ASN.1 Element.
- */
-export
-function _encode_AP_title (value: AP_title, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AP_title) { _cached_encoder_for_AP_title = $._encodeAny; }
-    return _cached_encoder_for_AP_title(value, elGetter);
-}
+export const _decode_AP_title = $._decodeAny;
+export const _encode_AP_title = $._encodeAny;
 
 
 /* eslint-enable */

@@ -197,35 +197,8 @@ const InterServerAccessProblem_referent_store_security_problem: InterServerAcces
  */
 export
 const referent_store_security_problem: InterServerAccessProblem = InterServerAccessProblem.referent_store_security_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_InterServerAccessProblem: $.ASN1Decoder<InterServerAccessProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) InterServerAccessProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InterServerAccessProblem (el: _Element): InterServerAccessProblem {
-    if (!_cached_decoder_for_InterServerAccessProblem) { _cached_decoder_for_InterServerAccessProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_InterServerAccessProblem(el);
-}
-
-let _cached_encoder_for_InterServerAccessProblem: $.ASN1Encoder<InterServerAccessProblem> | null = null;
-
-/**
- * @summary Encodes a(n) InterServerAccessProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InterServerAccessProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_InterServerAccessProblem (value: InterServerAccessProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InterServerAccessProblem) { _cached_encoder_for_InterServerAccessProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_InterServerAccessProblem(value, elGetter);
-}
+export const _decode_InterServerAccessProblem = $._decodeEnumerated;
+export const _encode_InterServerAccessProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */

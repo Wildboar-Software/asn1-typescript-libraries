@@ -197,35 +197,8 @@ const NameProblem_inappropriate_object_class: NameProblem = NameProblem.inapprop
  */
 export
 const inappropriate_object_class: NameProblem = NameProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_NameProblem: $.ASN1Decoder<NameProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NameProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NameProblem (el: _Element): NameProblem {
-    if (!_cached_decoder_for_NameProblem) { _cached_decoder_for_NameProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_NameProblem(el);
-}
-
-let _cached_encoder_for_NameProblem: $.ASN1Encoder<NameProblem> | null = null;
-
-/**
- * @summary Encodes a(n) NameProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NameProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_NameProblem (value: NameProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NameProblem) { _cached_encoder_for_NameProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_NameProblem(value, elGetter);
-}
+export const _decode_NameProblem = $._decodeEnumerated;
+export const _encode_NameProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */

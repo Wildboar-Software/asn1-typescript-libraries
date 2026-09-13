@@ -177,35 +177,8 @@ const AccessProblem_externally_located_object: AccessProblem = AccessProblem.ext
  */
 export
 const externally_located_object: AccessProblem = AccessProblem.externally_located_object; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_AccessProblem: $.ASN1Decoder<AccessProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AccessProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AccessProblem (el: _Element): AccessProblem {
-    if (!_cached_decoder_for_AccessProblem) { _cached_decoder_for_AccessProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_AccessProblem(el);
-}
-
-let _cached_encoder_for_AccessProblem: $.ASN1Encoder<AccessProblem> | null = null;
-
-/**
- * @summary Encodes a(n) AccessProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccessProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_AccessProblem (value: AccessProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessProblem) { _cached_encoder_for_AccessProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_AccessProblem(value, elGetter);
-}
+export const _decode_AccessProblem = $._decodeEnumerated;
+export const _encode_AccessProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */

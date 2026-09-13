@@ -133,35 +133,8 @@ const DocumentArchitectureClass_formatted_processable: DocumentArchitectureClass
  */
 export
 const formatted_processable: DocumentArchitectureClass = DocumentArchitectureClass_formatted_processable; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DocumentArchitectureClass: $.ASN1Decoder<DocumentArchitectureClass> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DocumentArchitectureClass
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DocumentArchitectureClass (el: _Element): DocumentArchitectureClass {
-    if (!_cached_decoder_for_DocumentArchitectureClass) { _cached_decoder_for_DocumentArchitectureClass = $._decodeInteger; }
-    return _cached_decoder_for_DocumentArchitectureClass(el);
-}
-
-let _cached_encoder_for_DocumentArchitectureClass: $.ASN1Encoder<DocumentArchitectureClass> | null = null;
-
-/**
- * @summary Encodes a(n) DocumentArchitectureClass into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DocumentArchitectureClass, encoded as an ASN.1 Element.
- */
-export
-function _encode_DocumentArchitectureClass (value: DocumentArchitectureClass, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DocumentArchitectureClass) { _cached_encoder_for_DocumentArchitectureClass = $._encodeInteger; }
-    return _cached_encoder_for_DocumentArchitectureClass(value, elGetter);
-}
+export const _decode_DocumentArchitectureClass = $._decodeInteger;
+export const _encode_DocumentArchitectureClass = $._encodeInteger;
 
 
 /* eslint-enable */

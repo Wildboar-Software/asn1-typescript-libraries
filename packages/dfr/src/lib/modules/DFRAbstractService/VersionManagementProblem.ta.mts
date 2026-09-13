@@ -157,35 +157,8 @@ const VersionManagementProblem_belongs_to_another_conceptual_document: VersionMa
  */
 export
 const belongs_to_another_conceptual_document: VersionManagementProblem = VersionManagementProblem.belongs_to_another_conceptual_document; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_VersionManagementProblem: $.ASN1Decoder<VersionManagementProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) VersionManagementProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_VersionManagementProblem (el: _Element): VersionManagementProblem {
-    if (!_cached_decoder_for_VersionManagementProblem) { _cached_decoder_for_VersionManagementProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_VersionManagementProblem(el);
-}
-
-let _cached_encoder_for_VersionManagementProblem: $.ASN1Encoder<VersionManagementProblem> | null = null;
-
-/**
- * @summary Encodes a(n) VersionManagementProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VersionManagementProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_VersionManagementProblem (value: VersionManagementProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VersionManagementProblem) { _cached_encoder_for_VersionManagementProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_VersionManagementProblem(value, elGetter);
-}
+export const _decode_VersionManagementProblem = $._decodeEnumerated;
+export const _encode_VersionManagementProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */

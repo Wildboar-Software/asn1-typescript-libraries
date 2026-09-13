@@ -277,35 +277,8 @@ const ServiceProblem_function_set_violation: ServiceProblem = ServiceProblem.fun
  */
 export
 const function_set_violation: ServiceProblem = ServiceProblem.function_set_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ServiceProblem: $.ASN1Decoder<ServiceProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceProblem (el: _Element): ServiceProblem {
-    if (!_cached_decoder_for_ServiceProblem) { _cached_decoder_for_ServiceProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_ServiceProblem(el);
-}
-
-let _cached_encoder_for_ServiceProblem: $.ASN1Encoder<ServiceProblem> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceProblem (value: ServiceProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceProblem) { _cached_encoder_for_ServiceProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_ServiceProblem(value, elGetter);
-}
+export const _decode_ServiceProblem = $._decodeEnumerated;
+export const _encode_ServiceProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */

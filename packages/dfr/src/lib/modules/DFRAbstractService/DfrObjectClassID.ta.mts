@@ -86,35 +86,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DfrObjectClassID = OBJECT_IDENTIFIER; // ObjectIdentifierType
-
-let _cached_decoder_for_DfrObjectClassID: $.ASN1Decoder<DfrObjectClassID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DfrObjectClassID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DfrObjectClassID (el: _Element): DfrObjectClassID {
-    if (!_cached_decoder_for_DfrObjectClassID) { _cached_decoder_for_DfrObjectClassID = $._decodeObjectIdentifier; }
-    return _cached_decoder_for_DfrObjectClassID(el);
-}
-
-let _cached_encoder_for_DfrObjectClassID: $.ASN1Encoder<DfrObjectClassID> | null = null;
-
-/**
- * @summary Encodes a(n) DfrObjectClassID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DfrObjectClassID, encoded as an ASN.1 Element.
- */
-export
-function _encode_DfrObjectClassID (value: DfrObjectClassID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DfrObjectClassID) { _cached_encoder_for_DfrObjectClassID = $._encodeObjectIdentifier; }
-    return _cached_encoder_for_DfrObjectClassID(value, elGetter);
-}
+export const _decode_DfrObjectClassID = $._decodeObjectIdentifier;
+export const _encode_DfrObjectClassID = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

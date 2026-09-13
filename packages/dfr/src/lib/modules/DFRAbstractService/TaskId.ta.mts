@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TaskId = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_TaskId: $.ASN1Decoder<TaskId> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TaskId
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TaskId (el: _Element): TaskId {
-    if (!_cached_decoder_for_TaskId) { _cached_decoder_for_TaskId = $._decodeOctetString; }
-    return _cached_decoder_for_TaskId(el);
-}
-
-let _cached_encoder_for_TaskId: $.ASN1Encoder<TaskId> | null = null;
-
-/**
- * @summary Encodes a(n) TaskId into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TaskId, encoded as an ASN.1 Element.
- */
-export
-function _encode_TaskId (value: TaskId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TaskId) { _cached_encoder_for_TaskId = $._encodeOctetString; }
-    return _cached_encoder_for_TaskId(value, elGetter);
-}
+export const _decode_TaskId = $._decodeOctetString;
+export const _encode_TaskId = $._encodeOctetString;
 
 
 /* eslint-enable */

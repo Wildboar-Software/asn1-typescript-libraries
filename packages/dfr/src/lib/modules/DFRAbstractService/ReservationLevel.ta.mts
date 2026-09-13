@@ -217,35 +217,8 @@ const ReservationLevel_read_only2: ReservationLevel = ReservationLevel.read_only
  */
 export
 const read_only2: ReservationLevel = ReservationLevel.read_only2; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ReservationLevel: $.ASN1Decoder<ReservationLevel> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReservationLevel
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReservationLevel (el: _Element): ReservationLevel {
-    if (!_cached_decoder_for_ReservationLevel) { _cached_decoder_for_ReservationLevel = $._decodeEnumerated; }
-    return _cached_decoder_for_ReservationLevel(el);
-}
-
-let _cached_encoder_for_ReservationLevel: $.ASN1Encoder<ReservationLevel> | null = null;
-
-/**
- * @summary Encodes a(n) ReservationLevel into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReservationLevel, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReservationLevel (value: ReservationLevel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReservationLevel) { _cached_encoder_for_ReservationLevel = $._encodeEnumerated; }
-    return _cached_encoder_for_ReservationLevel(value, elGetter);
-}
+export const _decode_ReservationLevel = $._decodeEnumerated;
+export const _encode_ReservationLevel = $._encodeEnumerated;
 
 
 /* eslint-enable */

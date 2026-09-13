@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AuthenticationAttribute = EXTERNAL; // ExternalType
-
-let _cached_decoder_for_AuthenticationAttribute: $.ASN1Decoder<AuthenticationAttribute> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthenticationAttribute
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AuthenticationAttribute (el: _Element): AuthenticationAttribute {
-    if (!_cached_decoder_for_AuthenticationAttribute) { _cached_decoder_for_AuthenticationAttribute = $._decodeExternal; }
-    return _cached_decoder_for_AuthenticationAttribute(el);
-}
-
-let _cached_encoder_for_AuthenticationAttribute: $.ASN1Encoder<AuthenticationAttribute> | null = null;
-
-/**
- * @summary Encodes a(n) AuthenticationAttribute into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthenticationAttribute, encoded as an ASN.1 Element.
- */
-export
-function _encode_AuthenticationAttribute (value: AuthenticationAttribute, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticationAttribute) { _cached_encoder_for_AuthenticationAttribute = $._encodeExternal; }
-    return _cached_encoder_for_AuthenticationAttribute(value, elGetter);
-}
+export const _decode_AuthenticationAttribute = $._decodeExternal;
+export const _encode_AuthenticationAttribute = $._encodeExternal;
 
 
 /* eslint-enable */

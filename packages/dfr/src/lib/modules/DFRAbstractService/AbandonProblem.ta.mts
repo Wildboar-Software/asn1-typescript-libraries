@@ -177,35 +177,8 @@ const AbandonProblem_cannot_abandon: AbandonProblem = AbandonProblem.cannot_aban
  */
 export
 const cannot_abandon: AbandonProblem = AbandonProblem.cannot_abandon; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_AbandonProblem: $.ASN1Decoder<AbandonProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AbandonProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AbandonProblem (el: _Element): AbandonProblem {
-    if (!_cached_decoder_for_AbandonProblem) { _cached_decoder_for_AbandonProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_AbandonProblem(el);
-}
-
-let _cached_encoder_for_AbandonProblem: $.ASN1Encoder<AbandonProblem> | null = null;
-
-/**
- * @summary Encodes a(n) AbandonProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AbandonProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_AbandonProblem (value: AbandonProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AbandonProblem) { _cached_encoder_for_AbandonProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_AbandonProblem(value, elGetter);
-}
+export const _decode_AbandonProblem = $._decodeEnumerated;
+export const _encode_AbandonProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */

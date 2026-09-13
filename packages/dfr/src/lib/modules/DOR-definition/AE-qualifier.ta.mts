@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AE_qualifier = _Element; // ObjectClassFieldType
-
-let _cached_decoder_for_AE_qualifier: $.ASN1Decoder<AE_qualifier> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AE_qualifier
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AE_qualifier (el: _Element): AE_qualifier {
-    if (!_cached_decoder_for_AE_qualifier) { _cached_decoder_for_AE_qualifier = $._decodeAny; }
-    return _cached_decoder_for_AE_qualifier(el);
-}
-
-let _cached_encoder_for_AE_qualifier: $.ASN1Encoder<AE_qualifier> | null = null;
-
-/**
- * @summary Encodes a(n) AE_qualifier into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AE_qualifier, encoded as an ASN.1 Element.
- */
-export
-function _encode_AE_qualifier (value: AE_qualifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AE_qualifier) { _cached_encoder_for_AE_qualifier = $._encodeAny; }
-    return _cached_encoder_for_AE_qualifier(value, elGetter);
-}
+export const _decode_AE_qualifier = $._decodeAny;
+export const _encode_AE_qualifier = $._encodeAny;
 
 
 /* eslint-enable */

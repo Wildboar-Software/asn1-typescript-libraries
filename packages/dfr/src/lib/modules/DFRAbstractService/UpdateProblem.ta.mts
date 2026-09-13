@@ -237,35 +237,8 @@ const UpdateProblem_reference_loop_detected: UpdateProblem = UpdateProblem.refer
  */
 export
 const reference_loop_detected: UpdateProblem = UpdateProblem.reference_loop_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_UpdateProblem: $.ASN1Decoder<UpdateProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UpdateProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UpdateProblem (el: _Element): UpdateProblem {
-    if (!_cached_decoder_for_UpdateProblem) { _cached_decoder_for_UpdateProblem = $._decodeEnumerated; }
-    return _cached_decoder_for_UpdateProblem(el);
-}
-
-let _cached_encoder_for_UpdateProblem: $.ASN1Encoder<UpdateProblem> | null = null;
-
-/**
- * @summary Encodes a(n) UpdateProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UpdateProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_UpdateProblem (value: UpdateProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UpdateProblem) { _cached_encoder_for_UpdateProblem = $._encodeEnumerated; }
-    return _cached_encoder_for_UpdateProblem(value, elGetter);
-}
+export const _decode_UpdateProblem = $._decodeEnumerated;
+export const _encode_UpdateProblem = $._encodeEnumerated;
 
 
 /* eslint-enable */
