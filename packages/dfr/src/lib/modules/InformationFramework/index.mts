@@ -9,7 +9,5 @@ export * from "./AttributeType.ta.mjs";
 export * from "./AttributeUsage.ta.mjs";
 export * from "./AttributeValue.ta.mjs";
 export * from "./DistinguishedName.ta.mjs";
-export * from "./MATCHING-RULE.oca.mjs";
-export * from "./SYNTAX-NAME.oca.mjs";
 export * from "./distinguishedNameMatch.oa.mjs";
 export * from "./objectIdentifierMatch.oa.mjs";
