@@ -1,0 +1,34 @@
+{
+  "name": "@wildboar/dfr",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./DFRAbstractService": "./src/lib/modules/DFRAbstractService/index.mts",
+    "./DFRAccessProtocol": "./src/lib/modules/DFRAccessProtocol/index.mts",
+    "./DFRBasicAttributes": "./src/lib/modules/DFRBasicAttributes/index.mts",
+    "./DFRExtensionAttributes": "./src/lib/modules/DFRExtensionAttributes/index.mts",
+    "./DFRObjectIdentifiers": "./src/lib/modules/DFRObjectIdentifiers/index.mts",
+    "./DFRProtocolObjectIdentifiers": "./src/lib/modules/DFRProtocolObjectIdentifiers/index.mts",
+    "./DOR-definition": "./src/lib/modules/DOR-definition/index.mts",
+    "./DirectoryAbstractService": "./src/lib/modules/DirectoryAbstractService/index.mts",
+    "./InformationFramework": "./src/lib/modules/InformationFramework/index.mts",
+    "./Remote-Operations-Abstract-Syntaxes": "./src/lib/modules/Remote-Operations-Abstract-Syntaxes/index.mts",
+    "./Remote-Operations-Generic-ROS-PDUs": "./src/lib/modules/Remote-Operations-Generic-ROS-PDUs/index.mts",
+    "./Remote-Operations-Information-Objects": "./src/lib/modules/Remote-Operations-Information-Objects/index.mts",
+    "./Remote-Operations-Information-Objects-extensions": "./src/lib/modules/Remote-Operations-Information-Objects-extensions/index.mts",
+    "./Remote-Operations-Realizations": "./src/lib/modules/Remote-Operations-Realizations/index.mts",
+    "./Remote-Operations-Useful-Definitions": "./src/lib/modules/Remote-Operations-Useful-Definitions/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}
