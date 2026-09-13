@@ -79,7 +79,10 @@ import { InterServerAccessProblem, _enum_for_InterServerAccessProblem, InterServ
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * interServerAccessError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * interServerAccessError-ParameterType ::= SEQUENCE {
+ *         entry   [0] DfrEntryName, -- of the reference
+ *         problem [1] InterServerAccessProblem
+ *     }
  * ```
  * 
  * @class

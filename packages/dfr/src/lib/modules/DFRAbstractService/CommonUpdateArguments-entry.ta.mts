@@ -79,7 +79,10 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CommonUpdateArguments-entry ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CommonUpdateArguments-entry ::= CHOICE {
+ *             local           [1] DfrEntryName,
+ *             external        [2] DOR
+ *         }
  * ```
  */
 export

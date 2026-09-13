@@ -77,7 +77,9 @@ import { SecurityProblem, _enum_for_SecurityProblem, SecurityProblem_inappropria
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * securityError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * securityError-ParameterType ::= SEQUENCE {
+ *         problem [0] SecurityProblem
+ *     }
  * ```
  * 
  * @class

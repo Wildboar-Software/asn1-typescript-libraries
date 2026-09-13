@@ -79,7 +79,17 @@ import { SearchDomain_Item_scope, _decode_SearchDomain_Item_scope, _encode_Searc
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SearchDomain-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SearchDomain-Item ::= CHOICE {
+ *         previous-result [0] DfrEntryName,
+ *         -- specifies an entry of "DFR-Search-Result-List" class
+ *         scope           [1] SEQUENCE {
+ *             root                [0] DfrEntryName,
+ *             descent-depth       [1] INTEGER OPTIONAL,
+ *             -- default means the whole subtree
+ *             dereferencing-depth [2] INTEGER DEFAULT 0
+ *             -- default means no dereferencing
+ *         }
+ *     }
  * ```
  */
 export

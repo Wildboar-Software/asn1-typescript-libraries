@@ -79,7 +79,11 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryModification-copy-attributes-from ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EntryModification-copy-attributes-from ::= SEQUENCE {
+ *             source                  [0] SourceEntry,
+ *             -- as default all copyable attributes
+ *             attribute-selection     [1] SET OF AttributeType OPTIONAL
+ *         }
  * ```
  * 
  * @class

@@ -79,7 +79,10 @@ import { Direction, _enum_for_Direction, Direction_ascending /* IMPORTED_LONG_EN
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OrderingAttributes-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * OrderingAttributes-Item ::= SEQUENCE {
+ *         attribute   [0] AttributeType,
+ *         direction   [1] Direction
+ *     }
  * ```
  * 
  * @class

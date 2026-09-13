@@ -79,7 +79,10 @@ import { NameProblem, _enum_for_NameProblem, NameProblem_invalid_upi /* IMPORTED
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * nameError-ParameterType-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * nameError-ParameterType-Item ::= SEQUENCE {
+ *         entry       [0] DfrEntryName,
+ *         problem     [1] NameProblem
+ *     }
  * ```
  * 
  * @class

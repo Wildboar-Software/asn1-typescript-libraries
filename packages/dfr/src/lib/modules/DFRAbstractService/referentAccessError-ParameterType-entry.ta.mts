@@ -77,7 +77,10 @@ import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFR
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * referentAccessError-ParameterType-entry ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * referentAccessError-ParameterType-entry ::= CHOICE {
+ *             dfr-entry   [0] DfrEntryName,
+ *             dor         [1] NULL
+ *         }
  * ```
  */
 export

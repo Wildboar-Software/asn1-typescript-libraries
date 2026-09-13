@@ -76,7 +76,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryInformationSelection-read-selector ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EntryInformationSelection-read-selector ::= ENUMERATED {
+ *         attributes-only                 (0),
+ *         attributes-and-content          (1),
+ *         content-only                    (2),
+ *         dor-to-attr-only                (3),
+ *         attr-and-dor-to-content         (4),
+ *         dor-to-content-only             (5),
+ *         dor-to-entire-object            (6),
+ *         attr-and-dor-to-entire-object   (7)
+ *     }
  * ```
  * 
  * @enum {number}
@@ -100,7 +109,16 @@ enum _enum_for_EntryInformationSelection_read_selector {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryInformationSelection-read-selector ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EntryInformationSelection-read-selector ::= ENUMERATED {
+ *         attributes-only                 (0),
+ *         attributes-and-content          (1),
+ *         content-only                    (2),
+ *         dor-to-attr-only                (3),
+ *         attr-and-dor-to-content         (4),
+ *         dor-to-content-only             (5),
+ *         dor-to-entire-object            (6),
+ *         attr-and-dor-to-entire-object   (7)
+ *     }
  * ```
  * 
  * @enum {number}
@@ -115,7 +133,16 @@ type EntryInformationSelection_read_selector = _enum_for_EntryInformationSelecti
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryInformationSelection-read-selector ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EntryInformationSelection-read-selector ::= ENUMERATED {
+ *         attributes-only                 (0),
+ *         attributes-and-content          (1),
+ *         content-only                    (2),
+ *         dor-to-attr-only                (3),
+ *         attr-and-dor-to-content         (4),
+ *         dor-to-content-only             (5),
+ *         dor-to-entire-object            (6),
+ *         attr-and-dor-to-entire-object   (7)
+ *     }
  * ```
  * 
  * @enum {number}

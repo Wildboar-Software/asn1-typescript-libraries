@@ -77,7 +77,9 @@ import { ServiceProblem, _enum_for_ServiceProblem, ServiceProblem_server_busy /*
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * serviceError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * serviceError-ParameterType ::= SEQUENCE {
+ *         problem [0] ServiceProblem
+ *     }
  * ```
  * 
  * @class

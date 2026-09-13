@@ -77,7 +77,13 @@ import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFR
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SearchDomain-Item-scope ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SearchDomain-Item-scope ::= SEQUENCE {
+ *             root                [0] DfrEntryName,
+ *             descent-depth       [1] INTEGER OPTIONAL,
+ *             -- default means the whole subtree
+ *             dereferencing-depth [2] INTEGER DEFAULT 0
+ *             -- default means no dereferencing
+ *         }
  * ```
  * 
  * @class

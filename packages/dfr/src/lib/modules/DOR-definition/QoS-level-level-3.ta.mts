@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * QoS-level-level-3 ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * QoS-level-level-3 ::= SEQUENCE {
+ *     produce-time   GeneralizedTime,
+ *     fidelity-time  GeneralizedTime
+ * }
  * ```
  * 
  * @class

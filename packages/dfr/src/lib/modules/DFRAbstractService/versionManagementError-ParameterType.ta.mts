@@ -79,7 +79,11 @@ import { VersionManagementProblem, _enum_for_VersionManagementProblem, VersionMa
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * versionManagementError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * versionManagementError-ParameterType ::= SEQUENCE {
+ *         entry   [0] DfrEntryName,
+ *         -- of the entry itself or of its potential previous version
+ *         problem [1] VersionManagementProblem
+ *     }
  * ```
  * 
  * @class

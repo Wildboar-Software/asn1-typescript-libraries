@@ -79,7 +79,10 @@ import { AccessProblem, _enum_for_AccessProblem, AccessProblem_inappropriate_obj
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * accessError-ParameterType-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * accessError-ParameterType-Item ::= SEQUENCE {
+ *         entry       [0] DfrEntryName,
+ *         problem     [1] AccessProblem
+ *     }
  * ```
  * 
  * @class

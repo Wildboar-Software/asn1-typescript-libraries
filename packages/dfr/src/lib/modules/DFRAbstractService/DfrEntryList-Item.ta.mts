@@ -81,7 +81,12 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationF
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DfrEntryList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DfrEntryList-Item ::= SEQUENCE {
+ *         upi                 [0] DfrUniquePermanentIdentifier,
+ *         class               [1] DfrObjectClass,
+ *         ordering-attribute  [2] SEQUENCE OF Attribute OPTIONAL, -- ordered as specified in the OrderingRule
+ *         other-attributes    [3] SEQUENCE OF Attribute OPTIONAL
+ *     }
  * ```
  * 
  * @class

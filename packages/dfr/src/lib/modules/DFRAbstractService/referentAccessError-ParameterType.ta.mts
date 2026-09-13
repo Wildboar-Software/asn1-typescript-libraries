@@ -79,7 +79,13 @@ import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, ReferentAccessP
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * referentAccessError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * referentAccessError-ParameterType ::= SEQUENCE {
+ *         entry   [0] CHOICE {
+ *             dfr-entry   [0] DfrEntryName,
+ *             dor         [1] NULL
+ *         },
+ *         problem [1] ReferentAccessProblem
+ *     }
  * ```
  * 
  * @class

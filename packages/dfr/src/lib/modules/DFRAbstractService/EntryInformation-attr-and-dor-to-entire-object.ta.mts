@@ -79,7 +79,10 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryInformation-attr-and-dor-to-entire-object ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EntryInformation-attr-and-dor-to-entire-object ::= SEQUENCE {
+ *             attributes              [0] DfrEntryAttributes,
+ *             dor-to-entire-object    [1] DOR
+ *         }
  * ```
  * 
  * @class

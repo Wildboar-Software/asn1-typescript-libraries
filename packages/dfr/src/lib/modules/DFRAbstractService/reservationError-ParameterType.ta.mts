@@ -79,7 +79,10 @@ import { ReservationProblem, _enum_for_ReservationProblem, ReservationProblem_ca
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * reservationError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * reservationError-ParameterType ::= SEQUENCE {
+ *         entry   [0] DfrEntryName,
+ *         problem [1] ReservationProblem
+ *     }
  * ```
  * 
  * @class

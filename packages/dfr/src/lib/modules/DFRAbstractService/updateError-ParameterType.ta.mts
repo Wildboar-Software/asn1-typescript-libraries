@@ -79,7 +79,10 @@ import { UpdateProblem, _enum_for_UpdateProblem, UpdateProblem_inappropriate_obj
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * updateError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * updateError-ParameterType ::= SEQUENCE {
+ *         entry       [0] DfrEntryName,
+ *         problem     [1] UpdateProblem
+ *     }
  * ```
  * 
  * @class

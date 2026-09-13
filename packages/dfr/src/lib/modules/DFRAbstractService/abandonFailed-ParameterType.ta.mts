@@ -81,7 +81,10 @@ import {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * abandonFailed-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * abandonFailed-ParameterType ::= SET {
+ *         problem     [0] AbandonProblem,
+ *         operation   [1] InvokeId
+ *     }
  * ```
  * 
  * @class

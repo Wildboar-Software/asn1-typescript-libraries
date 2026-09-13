@@ -81,7 +81,11 @@ import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * attributeError-ParameterType-problems-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * attributeError-ParameterType-problems-Item ::= SEQUENCE {
+ *             problem     [0] AttributeProblem,
+ *             type        [1] AttributeType,
+ *             value       [2] AttributeValue OPTIONAL
+ *         }
  * ```
  * 
  * @class

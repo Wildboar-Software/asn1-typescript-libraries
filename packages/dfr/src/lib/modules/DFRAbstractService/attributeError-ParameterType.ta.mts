@@ -79,7 +79,14 @@ import { attributeError_ParameterType_problems_Item, _decode_attributeError_Para
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * attributeError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * attributeError-ParameterType ::= SEQUENCE {
+ *         entry       [0] DfrEntryName OPTIONAL,
+ *         problems    [1] SEQUENCE OF SEQUENCE {
+ *             problem     [0] AttributeProblem,
+ *             type        [1] AttributeType,
+ *             value       [2] AttributeValue OPTIONAL
+ *         }
+ *     }
  * ```
  * 
  * @class

@@ -79,7 +79,10 @@ import { DfrPathName, _decode_DfrPathName, _encode_DfrPathName } from "../DFRAbs
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DfrEntryName-relative-path-name ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DfrEntryName-relative-path-name ::= SEQUENCE {
+ *             base        [0] DfrUniquePermanentIdentifier,
+ *             path        [1] DfrPathName
+ *         }
  * ```
  * 
  * @class
