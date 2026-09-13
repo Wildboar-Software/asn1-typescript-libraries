@@ -191,7 +191,20 @@ class MoveArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (entry === undefined) {
+            throw new _ConstructionError("MoveArgument.entry shall be present");
+        }
+        if (destination === undefined) {
+            throw new _ConstructionError("MoveArgument.destination shall be present");
+        }
+        if (reference_qos !== undefined) {
+            throw new _ConstructionError("MoveArgument.reference-qos shall be absent");
+        }
+        if (error_handling !== undefined) {
+            throw new _ConstructionError("MoveArgument.error-handling shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a MoveArgument

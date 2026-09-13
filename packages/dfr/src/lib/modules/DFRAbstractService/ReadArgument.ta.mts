@@ -202,7 +202,17 @@ class ReadArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (entry === undefined) {
+            throw new _ConstructionError("ReadArgument.entry shall be present");
+        }
+        if (selection === undefined) {
+            throw new _ConstructionError("ReadArgument.selection shall be present");
+        }
+        if (error_handling !== undefined) {
+            throw new _ConstructionError("ReadArgument.error-handling shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ReadArgument

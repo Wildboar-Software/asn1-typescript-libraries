@@ -87,7 +87,19 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DfrDocumentContent = EXTERNAL; // ExternalType
-export const _decode_DfrDocumentContent = $._decodeExternal;
+export const _decode_DfrDocumentContent = (el: _Element): DfrDocumentContent => {
+    const value = $._decodeExternal(el);
+    if (value.directReference === undefined) {
+        throw new _ConstructionError("DfrDocumentContent.direct-reference shall be present");
+    }
+    if (value.indirectReference !== undefined) {
+        throw new _ConstructionError("DfrDocumentContent.indirect-reference shall be absent");
+    }
+    if (value.encoding instanceof Uint8ClampedArray) {
+        throw new _ConstructionError("DfrDocumentContent.encoding.arbitrary shall be absent");
+    }
+    return value;
+};
 export const _encode_DfrDocumentContent = $._encodeExternal;
 
 

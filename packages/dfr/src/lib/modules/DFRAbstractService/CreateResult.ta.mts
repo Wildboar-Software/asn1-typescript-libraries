@@ -83,8 +83,6 @@ import { CommonUpdateResult, _decode_CommonUpdateResult, _encode_CommonUpdateRes
 export
 type CreateResult = CommonUpdateResult; // DefinedType
 
-let _cached_decoder_for_CreateResult: $.ASN1Decoder<CreateResult> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CreateResult
  * @function
@@ -93,8 +91,14 @@ let _cached_decoder_for_CreateResult: $.ASN1Decoder<CreateResult> | null = null;
  */
 export
 function _decode_CreateResult (el: _Element): CreateResult {
-    if (!_cached_decoder_for_CreateResult) { _cached_decoder_for_CreateResult = _decode_CommonUpdateResult; }
-    return _cached_decoder_for_CreateResult(el);
+    const value = _decode_CommonUpdateResult(el);
+    if (value.warnings !== undefined) {
+        throw new _ConstructionError("CreateResult.warnings shall be absent");
+    }
+    if (value.reference_qos !== undefined) {
+        throw new _ConstructionError("CreateResult.reference-qos shall be absent");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CreateResult: $.ASN1Encoder<CreateResult> | null = null;

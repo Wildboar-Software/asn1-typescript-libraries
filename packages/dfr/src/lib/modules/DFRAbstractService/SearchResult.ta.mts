@@ -135,7 +135,11 @@ class SearchResult {
          * @readonly
          */
         readonly removed_entries: OPTIONAL<DfrEntryList>
-    ) {}
+    ) {
+        if (warnings !== undefined) {
+            throw new _ConstructionError("SearchResult.warnings shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SearchResult

@@ -191,7 +191,17 @@ class CopyArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (entry === undefined) {
+            throw new _ConstructionError("CopyArgument.entry shall be present");
+        }
+        if (destination === undefined) {
+            throw new _ConstructionError("CopyArgument.destination shall be present");
+        }
+        if (reference_qos !== undefined) {
+            throw new _ConstructionError("CopyArgument.reference-qos shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a CopyArgument

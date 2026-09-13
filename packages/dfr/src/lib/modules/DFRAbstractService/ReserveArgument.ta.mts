@@ -140,7 +140,14 @@ class ReserveArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (reservation === undefined) {
+            throw new _ConstructionError("ReserveArgument.reservation shall be present");
+        }
+        if (error_handling !== undefined) {
+            throw new _ConstructionError("ReserveArgument.error-handling shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ReserveArgument

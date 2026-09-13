@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1Error,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs";
@@ -83,8 +84,6 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Remote-Operatio
 export
 type DFR_InvokeIDSet = InvokeId; // DefinedType
 
-let _cached_decoder_for_DFR_InvokeIDSet: $.ASN1Decoder<DFR_InvokeIDSet> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DFR_InvokeIDSet
  * @function
@@ -93,8 +92,11 @@ let _cached_decoder_for_DFR_InvokeIDSet: $.ASN1Decoder<DFR_InvokeIDSet> | null =
  */
 export
 function _decode_DFR_InvokeIDSet (el: _Element): DFR_InvokeIDSet {
-    if (!_cached_decoder_for_DFR_InvokeIDSet) { _cached_decoder_for_DFR_InvokeIDSet = _decode_InvokeId; }
-    return _cached_decoder_for_DFR_InvokeIDSet(el);
+    const value = _decode_InvokeId(el);
+    if ("absent" in value) {
+        throw new ASN1Error("DFR-InvokeIDSet excludes InvokeId.absent");
+    }
+    return value;
 }
 
 let _cached_encoder_for_DFR_InvokeIDSet: $.ASN1Encoder<DFR_InvokeIDSet> | null = null;

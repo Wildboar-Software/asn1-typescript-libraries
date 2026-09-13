@@ -83,8 +83,6 @@ import { CommonUpdateResult, _decode_CommonUpdateResult, _encode_CommonUpdateRes
 export
 type MoveResult = CommonUpdateResult; // DefinedType
 
-let _cached_decoder_for_MoveResult: $.ASN1Decoder<MoveResult> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MoveResult
  * @function
@@ -93,8 +91,14 @@ let _cached_decoder_for_MoveResult: $.ASN1Decoder<MoveResult> | null = null;
  */
 export
 function _decode_MoveResult (el: _Element): MoveResult {
-    if (!_cached_decoder_for_MoveResult) { _cached_decoder_for_MoveResult = _decode_CommonUpdateResult; }
-    return _cached_decoder_for_MoveResult(el);
+    const value = _decode_CommonUpdateResult(el);
+    if (value.warnings !== undefined) {
+        throw new _ConstructionError("MoveResult.warnings shall be absent");
+    }
+    if (value.reference_qos !== undefined) {
+        throw new _ConstructionError("MoveResult.reference-qos shall be absent");
+    }
+    return value;
 }
 
 let _cached_encoder_for_MoveResult: $.ASN1Encoder<MoveResult> | null = null;

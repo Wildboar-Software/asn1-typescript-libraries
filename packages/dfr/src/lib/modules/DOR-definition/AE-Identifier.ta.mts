@@ -109,7 +109,11 @@ class AE_Identifier {
          * @readonly
          */
         readonly indirect_logical_identifier: OPTIONAL<DistinguishedName>
-    ) {}
+    ) {
+        if (locational_identifier === undefined && direct_logical_identifier === undefined && indirect_logical_identifier === undefined) {
+            throw new _ConstructionError("AE-Identifier shall contain at least one component");
+        }
+    }
 
     /**
      * @summary Restructures an object into a AE_Identifier

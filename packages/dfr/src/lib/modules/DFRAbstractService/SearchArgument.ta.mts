@@ -206,7 +206,11 @@ class SearchArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (error_handling !== undefined) {
+            throw new _ConstructionError("SearchArgument.error-handling shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SearchArgument

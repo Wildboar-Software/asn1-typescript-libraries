@@ -210,7 +210,23 @@ class CreateArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (object_class === undefined) {
+            throw new _ConstructionError("CreateArgument.object-class shall be present");
+        }
+        if (entry !== undefined) {
+            throw new _ConstructionError("CreateArgument.entry shall be absent");
+        }
+        if (destination === undefined) {
+            throw new _ConstructionError("CreateArgument.destination shall be present");
+        }
+        if (reference_qos !== undefined) {
+            throw new _ConstructionError("CreateArgument.reference-qos shall be absent");
+        }
+        if (error_handling !== undefined) {
+            throw new _ConstructionError("CreateArgument.error-handling shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a CreateArgument

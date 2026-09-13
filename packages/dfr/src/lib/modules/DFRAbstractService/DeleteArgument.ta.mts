@@ -140,7 +140,14 @@ class DeleteArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (reservation !== undefined) {
+            throw new _ConstructionError("DeleteArgument.reservation shall be absent");
+        }
+        if (error_handling !== undefined) {
+            throw new _ConstructionError("DeleteArgument.error-handling shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a DeleteArgument

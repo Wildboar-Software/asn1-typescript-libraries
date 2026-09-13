@@ -193,7 +193,26 @@ class ModifyArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (entry === undefined) {
+            throw new _ConstructionError("ModifyArgument.entry shall be present");
+        }
+        if (destination !== undefined) {
+            throw new _ConstructionError("ModifyArgument.destination shall be absent");
+        }
+        if (position !== undefined) {
+            throw new _ConstructionError("ModifyArgument.position shall be absent");
+        }
+        if (modifications === undefined) {
+            throw new _ConstructionError("ModifyArgument.modifications shall be present");
+        }
+        if (reference_qos !== undefined) {
+            throw new _ConstructionError("ModifyArgument.reference-qos shall be absent");
+        }
+        if (error_handling !== undefined) {
+            throw new _ConstructionError("ModifyArgument.error-handling shall be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ModifyArgument

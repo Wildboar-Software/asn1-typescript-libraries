@@ -169,7 +169,11 @@ class ListArgument {
          * @readonly
          */
         readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        if (selection === undefined) {
+            throw new _ConstructionError("ListArgument.selection shall be present");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ListArgument
