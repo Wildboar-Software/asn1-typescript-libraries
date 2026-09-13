@@ -33,6 +33,7 @@ jobs:
           - "copp"
           - "crmf"
           - "device-owner-attribute"
+          - "dfr"
           - "ec-private-key"
           - "ers"
           - "ess"
