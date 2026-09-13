@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
     GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CommonListSearchResult, _decode_CommonListSearchResult, _encode_CommonListSearchResult } from "../DFRAbstractService/CommonListSearchResult.ta.mjs";
+import { _decode_CommonListSearchResult, _encode_CommonListSearchResult } from "../DFRAbstractService/CommonListSearchResult.ta.mjs";
 // export { CommonListSearchResult, _decode_CommonListSearchResult, _encode_CommonListSearchResult } from "../DFRAbstractService/CommonListSearchResult.ta.mjs";
 import { OrderingRule, _decode_OrderingRule, _encode_OrderingRule } from "../DFRAbstractService/OrderingRule.ta.mjs";
 // export { OrderingRule, _decode_OrderingRule, _encode_OrderingRule } from "../DFRAbstractService/OrderingRule.ta.mjs";
@@ -74,7 +21,7 @@ import { SearchDomain, _decode_SearchDomain, _encode_SearchDomain } from "../DFR
 // export { SearchDomain, _decode_SearchDomain, _encode_SearchDomain } from "../DFRAbstractService/SearchDomain.ta.mjs";
 import { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "../DFRAbstractService/SearchCriteria.ta.mjs";
 // export { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "../DFRAbstractService/SearchCriteria.ta.mjs";
-import { LimitEncountered, _enum_for_LimitEncountered, LimitEncountered_time_limit /* IMPORTED_LONG_ENUMERATION_ITEM */, time_limit /* IMPORTED_SHORT_ENUMERATION_ITEM */, LimitEncountered_count_limit /* IMPORTED_LONG_ENUMERATION_ITEM */, count_limit /* IMPORTED_SHORT_ENUMERATION_ITEM */, LimitEncountered_length_exceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, length_exceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LimitEncountered, _encode_LimitEncountered } from "../DFRAbstractService/LimitEncountered.ta.mjs";
+import { LimitEncountered, _enum_for_LimitEncountered, _decode_LimitEncountered, _encode_LimitEncountered } from "../DFRAbstractService/LimitEncountered.ta.mjs";
 // export { LimitEncountered, _enum_for_LimitEncountered, LimitEncountered_time_limit /* IMPORTED_LONG_ENUMERATION_ITEM */, time_limit /* IMPORTED_SHORT_ENUMERATION_ITEM */, LimitEncountered_count_limit /* IMPORTED_LONG_ENUMERATION_ITEM */, count_limit /* IMPORTED_SHORT_ENUMERATION_ITEM */, LimitEncountered_length_exceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, length_exceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LimitEncountered, _encode_LimitEncountered } from "../DFRAbstractService/LimitEncountered.ta.mjs";
 import { DfrEntryList, _decode_DfrEntryList, _encode_DfrEntryList } from "../DFRAbstractService/DfrEntryList.ta.mjs";
 // export { DfrEntryList, _decode_DfrEntryList, _encode_DfrEntryList } from "../DFRAbstractService/DfrEntryList.ta.mjs";
@@ -313,7 +260,7 @@ let _cached_encoder_for_ListResult: $.ASN1Encoder<ListResult> | null = null;
  */
 export
 function _encode_ListResult (value: ListResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ListResult) { _cached_encoder_for_ListResult = function (value: ListResult, elGetter: $.ASN1Encoder<ListResult>): _Element {
+    if (!_cached_encoder_for_ListResult) { _cached_encoder_for_ListResult = function (value: ListResult): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.number_of_entries, $.BER),
