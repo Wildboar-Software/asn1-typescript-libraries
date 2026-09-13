@@ -1,0 +1,25 @@
+{
+  "name": "dfr",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/dfr/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/dfr",
+        "tsConfig": "packages/dfr/tsconfig.lib.json",
+        "packageJson": "packages/dfr/package.json",
+        "main": "packages/dfr/src/index.mts",
+        "assets": [
+          "packages/dfr/*.md",
+          "packages/dfr/LICENSE.txt",
+          "packages/dfr/package.json"
+        ]
+      }
+    }
+  }
+}
