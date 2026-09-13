@@ -170,7 +170,7 @@ class CopyArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_error_handling () { return all_or_nothing; }
+    public static get _default_value_for_error_handling () { return { all_or_nothing: null }; }
     /**
      * @summary Getter that returns the default value for `priority`.
      * @public

@@ -168,7 +168,7 @@ class CreateArgument {
         if (reference_qos !== undefined) {
             throw new _ConstructionError("CreateArgument.reference-qos shall be absent");
         }
-        if (error_handling !== undefined) {
+        if (error_handling !== undefined && !("all_or_nothing" in error_handling)) {
             throw new _ConstructionError("CreateArgument.error-handling shall be absent");
         }
     }
@@ -195,7 +195,7 @@ class CreateArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_error_handling () { return all_or_nothing; }
+    public static get _default_value_for_error_handling () { return { all_or_nothing: null }; }
     /**
      * @summary Getter that returns the default value for `priority`.
      * @public

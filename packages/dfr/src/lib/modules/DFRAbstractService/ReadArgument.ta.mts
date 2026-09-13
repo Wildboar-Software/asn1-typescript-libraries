@@ -155,7 +155,7 @@ class ReadArgument {
         if (selection === undefined) {
             throw new _ConstructionError("ReadArgument.selection shall be present");
         }
-        if (error_handling !== undefined) {
+        if (error_handling !== undefined && !("all_or_nothing" in error_handling)) {
             throw new _ConstructionError("ReadArgument.error-handling shall be absent");
         }
     }
@@ -189,7 +189,7 @@ class ReadArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_error_handling () { return all_or_nothing; }
+    public static get _default_value_for_error_handling () { return { all_or_nothing: null }; }
     /**
      * @summary Getter that returns the default value for `priority`.
      * @public
