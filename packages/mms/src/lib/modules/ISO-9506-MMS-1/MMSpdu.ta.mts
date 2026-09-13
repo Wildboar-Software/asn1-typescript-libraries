@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -16,8 +17,16 @@ import { Confirmed_ResponsePDU, _decode_Confirmed_ResponsePDU, _encode_Confirmed
 // export { Confirmed_ResponsePDU, _decode_Confirmed_ResponsePDU, _encode_Confirmed_ResponsePDU } from "../ISO-9506-MMS-1/Confirmed-ResponsePDU.ta.mjs";
 import { Confirmed_ErrorPDU, _decode_Confirmed_ErrorPDU, _encode_Confirmed_ErrorPDU } from "../ISO-9506-MMS-1/Confirmed-ErrorPDU.ta.mjs";
 // export { Confirmed_ErrorPDU, _decode_Confirmed_ErrorPDU, _encode_Confirmed_ErrorPDU } from "../ISO-9506-MMS-1/Confirmed-ErrorPDU.ta.mjs";
+import { Unconfirmed_PDU, _decode_Unconfirmed_PDU, _encode_Unconfirmed_PDU } from "../ISO-9506-MMS-1/Unconfirmed-PDU.ta.mjs";
+// export { Unconfirmed_PDU, _decode_Unconfirmed_PDU, _encode_Unconfirmed_PDU } from "../ISO-9506-MMS-1/Unconfirmed-PDU.ta.mjs";
 import { RejectPDU, _decode_RejectPDU, _encode_RejectPDU } from "../ISO-9506-MMS-1/RejectPDU.ta.mjs";
 // export { RejectPDU, _decode_RejectPDU, _encode_RejectPDU } from "../ISO-9506-MMS-1/RejectPDU.ta.mjs";
+import { Cancel_RequestPDU, _decode_Cancel_RequestPDU, _encode_Cancel_RequestPDU } from "../ISO-9506-MMS-1/Cancel-RequestPDU.ta.mjs";
+// export { Cancel_RequestPDU, _decode_Cancel_RequestPDU, _encode_Cancel_RequestPDU } from "../ISO-9506-MMS-1/Cancel-RequestPDU.ta.mjs";
+import { Cancel_ResponsePDU, _decode_Cancel_ResponsePDU, _encode_Cancel_ResponsePDU } from "../ISO-9506-MMS-1/Cancel-ResponsePDU.ta.mjs";
+// export { Cancel_ResponsePDU, _decode_Cancel_ResponsePDU, _encode_Cancel_ResponsePDU } from "../ISO-9506-MMS-1/Cancel-ResponsePDU.ta.mjs";
+import { Cancel_ErrorPDU, _decode_Cancel_ErrorPDU, _encode_Cancel_ErrorPDU } from "../ISO-9506-MMS-1/Cancel-ErrorPDU.ta.mjs";
+// export { Cancel_ErrorPDU, _decode_Cancel_ErrorPDU, _encode_Cancel_ErrorPDU } from "../ISO-9506-MMS-1/Cancel-ErrorPDU.ta.mjs";
 import { Initiate_RequestPDU, _decode_Initiate_RequestPDU, _encode_Initiate_RequestPDU } from "../ISO-9506-MMS-1/Initiate-RequestPDU.ta.mjs";
 // export { Initiate_RequestPDU, _decode_Initiate_RequestPDU, _encode_Initiate_RequestPDU } from "../ISO-9506-MMS-1/Initiate-RequestPDU.ta.mjs";
 import { Initiate_ResponsePDU, _decode_Initiate_ResponsePDU, _encode_Initiate_ResponsePDU } from "../ISO-9506-MMS-1/Initiate-ResponsePDU.ta.mjs";
@@ -39,26 +48,25 @@ import { Conclude_ErrorPDU, _decode_Conclude_ErrorPDU, _encode_Conclude_ErrorPDU
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMSpdu  ::=  CHOICE {
+ * MMSpdu ::= CHOICE {
  *     confirmed-RequestPDU       [0] IMPLICIT Confirmed-RequestPDU,
  *     confirmed-ResponsePDU      [1] IMPLICIT Confirmed-ResponsePDU,
  *     confirmed-ErrorPDU         [2] IMPLICIT Confirmed-ErrorPDU,
- *     -- unconfirmed-PDU            [3] IMPLICIT Unconfirmed-PDU,
- *     -- unconfirmed-PDU            [3] IMPLICIT NULL,
+ *     unconfirmed-PDU            [3] IMPLICIT Unconfirmed-PDU,
+ *     unconfirmed-PDU            [3] IMPLICIT NULL,
  *     rejectPDU                  [4] IMPLICIT RejectPDU,
- *     -- cancel-RequestPDU          [5] IMPLICIT Cancel-RequestPDU,
- *     -- cancel-ResponsePDU         [6] IMPLICIT Cancel-ResponsePDU,
- *     -- cancel-ErrorPDU            [7] IMPLICIT Cancel-ErrorPDU,
- *     -- cancel-RequestPDU          [5] IMPLICIT NULL,
- *     -- cancel-ResponsePDU         [6] IMPLICIT NULL,
- *     -- cancel-ErrorPDU            [7] IMPLICIT NULL,
+ *     cancel-RequestPDU          [5] IMPLICIT Cancel-RequestPDU,
+ *     cancel-ResponsePDU         [6] IMPLICIT Cancel-ResponsePDU,
+ *     cancel-ErrorPDU            [7] IMPLICIT Cancel-ErrorPDU,
+ *     cancel-RequestPDU          [5] IMPLICIT NULL,
+ *     cancel-ResponsePDU         [6] IMPLICIT NULL,
+ *     cancel-ErrorPDU            [7] IMPLICIT NULL,
  *     initiate-RequestPDU        [8] IMPLICIT Initiate-RequestPDU,
  *     initiate-ResponsePDU       [9] IMPLICIT Initiate-ResponsePDU,
  *     initiate-ErrorPDU          [10] IMPLICIT Initiate-ErrorPDU,
  *     conclude-RequestPDU        [11] IMPLICIT Conclude-RequestPDU,
  *     conclude-ResponsePDU       [12] IMPLICIT Conclude-ResponsePDU,
- *     conclude-ErrorPDU          [13] IMPLICIT Conclude-ErrorPDU,
- *     ...
+ *     conclude-ErrorPDU          [13] IMPLICIT Conclude-ErrorPDU
  * }
  * ```
  */
@@ -67,14 +75,21 @@ type MMSpdu =
     { confirmed_RequestPDU: Confirmed_RequestPDU } /* CHOICE_ALT_ROOT */
     | { confirmed_ResponsePDU: Confirmed_ResponsePDU } /* CHOICE_ALT_ROOT */
     | { confirmed_ErrorPDU: Confirmed_ErrorPDU } /* CHOICE_ALT_ROOT */
+    | { unconfirmed_PDU: Unconfirmed_PDU } /* CHOICE_ALT_ROOT */
+    | { unconfirmed_PDU: NULL } /* CHOICE_ALT_ROOT */
     | { rejectPDU: RejectPDU } /* CHOICE_ALT_ROOT */
+    | { cancel_RequestPDU: Cancel_RequestPDU } /* CHOICE_ALT_ROOT */
+    | { cancel_RequestPDU: NULL } /* CHOICE_ALT_ROOT */
+    | { cancel_ResponsePDU: Cancel_ResponsePDU } /* CHOICE_ALT_ROOT */
+    | { cancel_ResponsePDU: NULL } /* CHOICE_ALT_ROOT */
+    | { cancel_ErrorPDU: Cancel_ErrorPDU } /* CHOICE_ALT_ROOT */
+    | { cancel_ErrorPDU: NULL } /* CHOICE_ALT_ROOT */
     | { initiate_RequestPDU: Initiate_RequestPDU } /* CHOICE_ALT_ROOT */
     | { initiate_ResponsePDU: Initiate_ResponsePDU } /* CHOICE_ALT_ROOT */
     | { initiate_ErrorPDU: Initiate_ErrorPDU } /* CHOICE_ALT_ROOT */
     | { conclude_RequestPDU: Conclude_RequestPDU } /* CHOICE_ALT_ROOT */
     | { conclude_ResponsePDU: Conclude_ResponsePDU } /* CHOICE_ALT_ROOT */
-    | { conclude_ErrorPDU: Conclude_ErrorPDU } /* CHOICE_ALT_ROOT */
-    | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
+    | { conclude_ErrorPDU: Conclude_ErrorPDU } /* CHOICE_ALT_ROOT */;
 
 let _cached_decoder_for_MMSpdu: $.ASN1Decoder<MMSpdu> | null = null;
 
@@ -86,11 +101,23 @@ let _cached_decoder_for_MMSpdu: $.ASN1Decoder<MMSpdu> | null = null;
  */
 export
 function _decode_MMSpdu (el: _Element): MMSpdu {
-    if (!_cached_decoder_for_MMSpdu) { _cached_decoder_for_MMSpdu = $._decode_extensible_choice<MMSpdu>({
+    if (!_cached_decoder_for_MMSpdu) { _cached_decoder_for_MMSpdu = $._decode_inextensible_choice<MMSpdu>({
     "CONTEXT 0": [ "confirmed_RequestPDU", $._decode_implicit<Confirmed_RequestPDU>(() => _decode_Confirmed_RequestPDU) ],
     "CONTEXT 1": [ "confirmed_ResponsePDU", $._decode_implicit<Confirmed_ResponsePDU>(() => _decode_Confirmed_ResponsePDU) ],
     "CONTEXT 2": [ "confirmed_ErrorPDU", $._decode_implicit<Confirmed_ErrorPDU>(() => _decode_Confirmed_ErrorPDU) ],
+    "CONTEXT 3": [ "unconfirmed_PDU", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Unconfirmed_PDU>(() => _decode_Unconfirmed_PDU)(el)) ],
     "CONTEXT 4": [ "rejectPDU", $._decode_implicit<RejectPDU>(() => _decode_RejectPDU) ],
+    "CONTEXT 5": [ "cancel_RequestPDU", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Cancel_RequestPDU>(() => _decode_Cancel_RequestPDU)(el)) ],
+    "CONTEXT 6": [ "cancel_ResponsePDU", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Cancel_ResponsePDU>(() => _decode_Cancel_ResponsePDU)(el)) ],
+    "CONTEXT 7": [ "cancel_ErrorPDU", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<Cancel_ErrorPDU>(() => _decode_Cancel_ErrorPDU)(el)) ],
     "CONTEXT 8": [ "initiate_RequestPDU", $._decode_implicit<Initiate_RequestPDU>(() => _decode_Initiate_RequestPDU) ],
     "CONTEXT 9": [ "initiate_ResponsePDU", $._decode_implicit<Initiate_ResponsePDU>(() => _decode_Initiate_ResponsePDU) ],
     "CONTEXT 10": [ "initiate_ErrorPDU", $._decode_implicit<Initiate_ErrorPDU>(() => _decode_Initiate_ErrorPDU) ],
@@ -116,7 +143,19 @@ function _encode_MMSpdu (value: MMSpdu, elGetter: $.ASN1Encoder<any>): _Element 
     "confirmed_RequestPDU": $._encode_implicit(_TagClass.context, 0, () => _encode_Confirmed_RequestPDU, $.BER),
     "confirmed_ResponsePDU": $._encode_implicit(_TagClass.context, 1, () => _encode_Confirmed_ResponsePDU, $.BER),
     "confirmed_ErrorPDU": $._encode_implicit(_TagClass.context, 2, () => _encode_Confirmed_ErrorPDU, $.BER),
+    "unconfirmed_PDU": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 3, () => _encode_Unconfirmed_PDU, $.BER)(value, elGetter)),
     "rejectPDU": $._encode_implicit(_TagClass.context, 4, () => _encode_RejectPDU, $.BER),
+    "cancel_RequestPDU": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 5, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 5, () => _encode_Cancel_RequestPDU, $.BER)(value, elGetter)),
+    "cancel_ResponsePDU": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 6, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 6, () => _encode_Cancel_ResponsePDU, $.BER)(value, elGetter)),
+    "cancel_ErrorPDU": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 7, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 7, () => _encode_Cancel_ErrorPDU, $.BER)(value, elGetter)),
     "initiate_RequestPDU": $._encode_implicit(_TagClass.context, 8, () => _encode_Initiate_RequestPDU, $.BER),
     "initiate_ResponsePDU": $._encode_implicit(_TagClass.context, 9, () => _encode_Initiate_ResponsePDU, $.BER),
     "initiate_ErrorPDU": $._encode_implicit(_TagClass.context, 10, () => _encode_Initiate_ErrorPDU, $.BER),

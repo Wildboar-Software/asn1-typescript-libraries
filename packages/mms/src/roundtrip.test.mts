@@ -44,6 +44,57 @@ import {
     _encode_ServiceError_errorClass,
     _decode_ServiceError_errorClass,
 } from "./lib/modules/ISO-9506-MMS-1/ServiceError-errorClass.ta.mjs";
+import {
+    type MMSpdu,
+    _encode_MMSpdu,
+    _decode_MMSpdu,
+} from "./lib/modules/ISO-9506-MMS-1/MMSpdu.ta.mjs";
+import {
+    type ConfirmedServiceRequest,
+    _encode_ConfirmedServiceRequest,
+    _decode_ConfirmedServiceRequest,
+} from "./lib/modules/ISO-9506-MMS-1/ConfirmedServiceRequest.ta.mjs";
+import {
+    type AdditionalService_Request,
+    _encode_AdditionalService_Request,
+    _decode_AdditionalService_Request,
+} from "./lib/modules/ISO-9506-MMS-1/AdditionalService-Request.ta.mjs";
+import {
+    type UnconfirmedService,
+    _encode_UnconfirmedService,
+    _decode_UnconfirmedService,
+} from "./lib/modules/ISO-9506-MMS-1/UnconfirmedService.ta.mjs";
+import {
+    type Request_Detail,
+    _encode_Request_Detail,
+    _decode_Request_Detail,
+} from "./lib/modules/ISO-9506-MMS-1/Request-Detail.ta.mjs";
+import {
+    type AdditionalService_Error,
+    _encode_AdditionalService_Error,
+    _decode_AdditionalService_Error,
+} from "./lib/modules/ISO-9506-MMS-1/AdditionalService-Error.ta.mjs";
+import {
+    StartUnitControl_Error,
+} from "./lib/modules/ISO-9506-MMS-1/StartUnitControl-Error.ta.mjs";
+import {
+    type VariableSpecification,
+    _encode_VariableSpecification,
+    _decode_VariableSpecification,
+} from "./lib/modules/ISO-9506-MMS-1/VariableSpecification.ta.mjs";
+import {
+    type ConfirmedServiceResponse,
+    _encode_ConfirmedServiceResponse,
+    _decode_ConfirmedServiceResponse,
+} from "./lib/modules/ISO-9506-MMS-1/ConfirmedServiceResponse.ta.mjs";
+import {
+    Identify_Response,
+} from "./lib/modules/ISO-9506-MMS-1/Identify-Response.ta.mjs";
+import {
+    type AdditionalService_Response,
+    _encode_AdditionalService_Response,
+    _decode_AdditionalService_Response,
+} from "./lib/modules/ISO-9506-MMS-1/AdditionalService-Response.ta.mjs";
 
 describe("ISO-9506 MMS types", () => {
     test("round-trips an Identifier", () => {
@@ -132,5 +183,139 @@ describe("ISO-9506 MMS types", () => {
                 _encode_ServiceError_errorClass(absent, $.BER)
             )
         ).toEqual(absent);
+    });
+
+    test("round-trips MMSpdu cancel-RequestPDU INTEGER and NULL", () => {
+        const coded: MMSpdu = { cancel_RequestPDU: 7 };
+        expect(_decode_MMSpdu(_encode_MMSpdu(coded, $.BER))).toEqual(coded);
+        const absent: MMSpdu = { cancel_RequestPDU: null };
+        expect(_decode_MMSpdu(_encode_MMSpdu(absent, $.BER))).toEqual(absent);
+    });
+
+    test("round-trips ConfirmedServiceRequest status BOOLEAN and NULL", () => {
+        const coded: ConfirmedServiceRequest = { status: true };
+        expect(
+            _decode_ConfirmedServiceRequest(
+                _encode_ConfirmedServiceRequest(coded, $.BER)
+            )
+        ).toEqual(coded);
+        const absent: ConfirmedServiceRequest = { status: null };
+        expect(
+            _decode_ConfirmedServiceRequest(
+                _encode_ConfirmedServiceRequest(absent, $.BER)
+            )
+        ).toEqual(absent);
+    });
+
+    test("round-trips AdditionalService-Request VMDReset BOOLEAN and NULL", () => {
+        const coded: AdditionalService_Request = { vMDReset: false };
+        expect(
+            _decode_AdditionalService_Request(
+                _encode_AdditionalService_Request(coded, $.BER)
+            )
+        ).toEqual(coded);
+        const absent: AdditionalService_Request = { vMDReset: null };
+        expect(
+            _decode_AdditionalService_Request(
+                _encode_AdditionalService_Request(absent, $.BER)
+            )
+        ).toEqual(absent);
+    });
+
+    test("round-trips UnconfirmedService informationReport NULL", () => {
+        const absent: UnconfirmedService = { informationReport: null };
+        expect(
+            _decode_UnconfirmedService(
+                _encode_UnconfirmedService(absent, $.BER)
+            )
+        ).toEqual(absent);
+    });
+
+    test("round-trips Request-Detail createProgramInvocation INTEGER and NULL", () => {
+        const coded: Request_Detail = { createProgramInvocation: 1 };
+        expect(
+            _decode_Request_Detail(_encode_Request_Detail(coded, $.BER))
+        ).toEqual(coded);
+        const absent: Request_Detail = { createProgramInvocation: null };
+        expect(
+            _decode_Request_Detail(_encode_Request_Detail(absent, $.BER))
+        ).toEqual(absent);
+    });
+
+    test("round-trips AdditionalService-Error startUC SEQUENCE and NULL", () => {
+        const coded: AdditionalService_Error = {
+            startUC: new StartUnitControl_Error(),
+        };
+        const decoded = _decode_AdditionalService_Error(
+            _encode_AdditionalService_Error(coded, $.BER)
+        );
+        expect("startUC" in decoded).toBe(true);
+        if ("startUC" in decoded && decoded.startUC !== null) {
+            expect(decoded.startUC.programInvocationName).toBeUndefined();
+            expect(decoded.startUC.programInvocationState).toBeUndefined();
+        }
+        const absent: AdditionalService_Error = { startUC: null };
+        expect(
+            _decode_AdditionalService_Error(
+                _encode_AdditionalService_Error(absent, $.BER)
+            )
+        ).toEqual(absent);
+    });
+
+    test("round-trips VariableSpecification scatteredAccessDescription SEQUENCE OF and NULL", () => {
+        const empty: VariableSpecification = { scatteredAccessDescription: [] };
+        expect(
+            _decode_VariableSpecification(
+                _encode_VariableSpecification(empty, $.BER)
+            )
+        ).toEqual(empty);
+        const absent: VariableSpecification = {
+            scatteredAccessDescription: null,
+        };
+        expect(
+            _decode_VariableSpecification(
+                _encode_VariableSpecification(absent, $.BER)
+            )
+        ).toEqual(absent);
+    });
+
+    test("round-trips ConfirmedServiceResponse identify SEQUENCE and NULL", () => {
+        const coded: ConfirmedServiceResponse = {
+            identify: new Identify_Response(
+                { notChar: "Wildboar" },
+                { notChar: "MMS" },
+                { notChar: "1.0" }
+            ),
+        };
+        const decoded = _decode_ConfirmedServiceResponse(
+            _encode_ConfirmedServiceResponse(coded, $.BER)
+        );
+        expect("identify" in decoded).toBe(true);
+        if ("identify" in decoded && decoded.identify !== null) {
+            expect(decoded.identify.vendorName).toEqual({ notChar: "Wildboar" });
+            expect(decoded.identify.modelName).toEqual({ notChar: "MMS" });
+            expect(decoded.identify.revision).toEqual({ notChar: "1.0" });
+        }
+        const absent: ConfirmedServiceResponse = { identify: null };
+        expect(
+            _decode_ConfirmedServiceResponse(
+                _encode_ConfirmedServiceResponse(absent, $.BER)
+            )
+        ).toEqual(absent);
+    });
+
+    test("round-trips AdditionalService-Response vMDReset NULL and select NULL", () => {
+        const absent: AdditionalService_Response = { vMDReset: null };
+        expect(
+            _decode_AdditionalService_Response(
+                _encode_AdditionalService_Response(absent, $.BER)
+            )
+        ).toEqual(absent);
+        const alsoAbsent: AdditionalService_Response = { select: null };
+        expect(
+            _decode_AdditionalService_Response(
+                _encode_AdditionalService_Response(alsoAbsent, $.BER)
+            )
+        ).toEqual(alsoAbsent);
     });
 });

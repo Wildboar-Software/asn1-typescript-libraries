@@ -1,0 +1,311 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary ServiceProblem
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ServiceProblem  ::=  ENUMERATED {
+ *     server-busy                 (1), -- please wait and repeat
+ *     server-unavailable          (2), -- please unbind
+ *     operation-too-complex       (3), -- e.g. search-criteria
+ *     resource-limit-exceeded     (4), -- e-g. Lohen creating a bulky object
+ *     maximum-length-exceeded     (5), -- in an abstract operation
+ *     cannot-continue             (6), -- e-g. search-domain altered
+ *     unclassified-server-error   (7), -- implementation specific
+ *     function-set-violation      (8)  -- see 8.4
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_ServiceProblem {
+    server_busy = 1,
+    server_unavailable = 2,
+    operation_too_complex = 3,
+    resource_limit_exceeded = 4,
+    maximum_length_exceeded = 5,
+    cannot_continue = 6,
+    unclassified_server_error = 7,
+    function_set_violation = 8,
+}
+
+/**
+ * @summary ServiceProblem
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ServiceProblem  ::=  ENUMERATED {
+ *     server-busy                 (1), -- please wait and repeat
+ *     server-unavailable          (2), -- please unbind
+ *     operation-too-complex       (3), -- e.g. search-criteria
+ *     resource-limit-exceeded     (4), -- e-g. Lohen creating a bulky object
+ *     maximum-length-exceeded     (5), -- in an abstract operation
+ *     cannot-continue             (6), -- e-g. search-domain altered
+ *     unclassified-server-error   (7), -- implementation specific
+ *     function-set-violation      (8)  -- see 8.4
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type ServiceProblem = _enum_for_ServiceProblem;
+
+/**
+ * @summary ServiceProblem
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ServiceProblem  ::=  ENUMERATED {
+ *     server-busy                 (1), -- please wait and repeat
+ *     server-unavailable          (2), -- please unbind
+ *     operation-too-complex       (3), -- e.g. search-criteria
+ *     resource-limit-exceeded     (4), -- e-g. Lohen creating a bulky object
+ *     maximum-length-exceeded     (5), -- in an abstract operation
+ *     cannot-continue             (6), -- e-g. search-domain altered
+ *     unclassified-server-error   (7), -- implementation specific
+ *     function-set-violation      (8)  -- see 8.4
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const ServiceProblem = _enum_for_ServiceProblem;
+
+/**
+ * @summary ServiceProblem_server_busy
+ * @constant
+ * @type {number}
+ */
+export
+const ServiceProblem_server_busy: ServiceProblem = ServiceProblem.server_busy; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary server_busy
+ * @constant
+ * @type {number}
+ */
+export
+const server_busy: ServiceProblem = ServiceProblem.server_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ServiceProblem_server_unavailable
+ * @constant
+ * @type {number}
+ */
+export
+const ServiceProblem_server_unavailable: ServiceProblem = ServiceProblem.server_unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary server_unavailable
+ * @constant
+ * @type {number}
+ */
+export
+const server_unavailable: ServiceProblem = ServiceProblem.server_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ServiceProblem_operation_too_complex
+ * @constant
+ * @type {number}
+ */
+export
+const ServiceProblem_operation_too_complex: ServiceProblem = ServiceProblem.operation_too_complex; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary operation_too_complex
+ * @constant
+ * @type {number}
+ */
+export
+const operation_too_complex: ServiceProblem = ServiceProblem.operation_too_complex; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ServiceProblem_resource_limit_exceeded
+ * @constant
+ * @type {number}
+ */
+export
+const ServiceProblem_resource_limit_exceeded: ServiceProblem = ServiceProblem.resource_limit_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary resource_limit_exceeded
+ * @constant
+ * @type {number}
+ */
+export
+const resource_limit_exceeded: ServiceProblem = ServiceProblem.resource_limit_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ServiceProblem_maximum_length_exceeded
+ * @constant
+ * @type {number}
+ */
+export
+const ServiceProblem_maximum_length_exceeded: ServiceProblem = ServiceProblem.maximum_length_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary maximum_length_exceeded
+ * @constant
+ * @type {number}
+ */
+export
+const maximum_length_exceeded: ServiceProblem = ServiceProblem.maximum_length_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ServiceProblem_cannot_continue
+ * @constant
+ * @type {number}
+ */
+export
+const ServiceProblem_cannot_continue: ServiceProblem = ServiceProblem.cannot_continue; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary cannot_continue
+ * @constant
+ * @type {number}
+ */
+export
+const cannot_continue: ServiceProblem = ServiceProblem.cannot_continue; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ServiceProblem_unclassified_server_error
+ * @constant
+ * @type {number}
+ */
+export
+const ServiceProblem_unclassified_server_error: ServiceProblem = ServiceProblem.unclassified_server_error; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary unclassified_server_error
+ * @constant
+ * @type {number}
+ */
+export
+const unclassified_server_error: ServiceProblem = ServiceProblem.unclassified_server_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ServiceProblem_function_set_violation
+ * @constant
+ * @type {number}
+ */
+export
+const ServiceProblem_function_set_violation: ServiceProblem = ServiceProblem.function_set_violation; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary function_set_violation
+ * @constant
+ * @type {number}
+ */
+export
+const function_set_violation: ServiceProblem = ServiceProblem.function_set_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+let _cached_decoder_for_ServiceProblem: $.ASN1Decoder<ServiceProblem> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) ServiceProblem
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_ServiceProblem (el: _Element): ServiceProblem {
+    if (!_cached_decoder_for_ServiceProblem) { _cached_decoder_for_ServiceProblem = $._decodeEnumerated; }
+    return _cached_decoder_for_ServiceProblem(el);
+}
+
+let _cached_encoder_for_ServiceProblem: $.ASN1Encoder<ServiceProblem> | null = null;
+
+/**
+ * @summary Encodes a(n) ServiceProblem into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The ServiceProblem, encoded as an ASN.1 Element.
+ */
+export
+function _encode_ServiceProblem (value: ServiceProblem, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ServiceProblem) { _cached_encoder_for_ServiceProblem = $._encodeEnumerated; }
+    return _cached_encoder_for_ServiceProblem(value, elGetter);
+}
+
+
+/* eslint-enable */

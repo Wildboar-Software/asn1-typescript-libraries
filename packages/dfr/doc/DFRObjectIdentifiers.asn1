@@ -1,0 +1,113 @@
+DFRObjectIdentifiers
+{iso standard(0) 10166 part-1(1) modules(0) object-identifiers(0)}
+DEFINITIONS ::=
+BEGIN
+
+ID ::= OBJECT IDENTIFIER
+
+id-dfr ID ::= { iso standard(0) 10166 part-1(1)}
+
+-- Categories
+
+id-mod         ID ::= {id-dfr 0} -- modules
+id-ot          ID ::= {id-dfr 1} -- objects
+id-pt          ID ::= {id-dfr 2} -- ports
+id-dfr-oc      ID ::= {id-dfr 3} -- Object classes
+id-dfr-bas-att ID ::= {id-dfr 4} -- dfr basic attributes
+id-dfr-ext-att ID ::= {id-dfr 5} -- dfr extension attributes
+id-dfr-att-syn ID ::= {id-dfr 6} -- dfr attribute syntaxes
+
+-- Modules
+
+id-mod-object-identifiers   ID ::= {id-mod 0}
+id-mod-abstract-Service     ID ::= {id-mod 1}
+id-mod-basic-attributes     ID ::= {id-mod 2}
+id-mod-extension-attributes ID ::= {id-mod 3}
+
+-- Objects
+
+id-dfr-server ID ::= {id-ot 0}
+id-dfr-user   ID ::= {id-ot 1}
+
+-- Ports
+
+id-pt-dfr ID ::= {id-pt 0}
+
+-- DFR Object Classes
+
+id-dfr-document             ID ::= {id-dfr-oc 0}
+id-dfr-root-group           ID ::= {id-dfr-oc 1}
+id-dfr-proper-group         ID ::= {id-dfr-oc 2}
+id-dfr-reference            ID ::= {id-dfr-oc 3}
+id-dfr-search-result-list   ID ::= {id-dfr-oc 4}
+
+-- DFR-Basic-Attributes Identification
+
+-- id-dfr-basic-attributes ID ::= {id-dfr-bas-att}
+
+-- Attribute Types
+
+id-att-dfr-upi                              ID ::= {id-dfr-bas-att  0}
+id-att-dfr-object-class                     ID ::= {id-dfr-bas-att  1}
+id-att-dfr-document-type                    ID ::= {id-dfr-bas-att  2}
+id-att-dfr-title                            ID ::= {id-dfr-bas-att  3}
+id-att-dfr-pathname                         ID ::= {id-dfr-bas-att  4}
+id-att-dfr-parent-identification            ID ::= {id-dfr-bas-att  5}
+id-att-dfr-referent-deleted                 ID ::= {id-dfr-bas-att  6}
+id-att-dfr-membership-criteria              ID ::= {id-dfr-bas-att  7}
+id-att-dfr-ordering                         ID ::= {id-dfr-bas-att  8}
+id-att-dfr-resource-limit                   ID ::= {id-dfr-bas-att  9}
+id-att-dfr-resource-used                    ID ::= {id-dfr-bas-att 10}
+id-att-dfr-number-of-group-members          ID ::= {id-dfr-bas-att 11}
+id-att-version-name                         ID ::= {id-dfr-bas-att 12}
+id-att-dfr-previous-versions                ID ::= {id-dfr-bas-att 13}
+id-att-dfr-next-versions                    ID ::= {id-dfr-bas-att 14}
+id-att-dfr-version-root                     ID ::= {id-dfr-bas-att 15}
+id-att-dfr-external-location                ID ::= {id-dfr-bas-att 16}
+id-att-user-reference                       ID ::= {id-dfr-bas-att 17}
+id-att-user-reference-to-other-objects      ID ::= {id-dfr-bas-att 18}
+id-att-dfr-attributes-create-date-and-time  ID ::= {id-dfr-bas-att 19}
+id-att-dfr-content-create-date-and-time     ID ::= {id-dfr-bas-att 20}
+id-att-dfr-created-by                       ID ::= {id-dfr-bas-att 21}
+id-att-dfr-attributes-modify-date-and-time  ID ::= {id-dfr-bas-att 22}
+id-att-dfr-content-modify-date-and-time     ID ::= {id-dfr-bas-att 23}
+id-att-dfr-attributes-modified-by           ID ::= {id-dfr-bas-att 24}
+id-att-dfr-content-modified-by              ID ::= {id-dfr-bas-att 25}
+id-att-document-date-and-time               ID ::= {id-dfr-bas-att 26}
+id-att-dfr-reservation                      ID ::= {id-dfr-bas-att 27}
+id-att-dfr-reserved-by                      ID ::= {id-dfr-bas-att 28}
+id-att-dfr-access-list                      ID ::= {id-dfr-bas-att 29}
+
+-- DFR-Extension-Attributes Identification
+
+-- id-dfr-extension-attributes ID ::= {id-dfr-ext-att}
+
+--Attribute Types
+
+id-att-other-titles                 ID ::= {id-dfr-ext-att  0}
+id-att-subject                      ID ::= {id-dfr-ext-att  1}
+id-att-document-type                ID ::= {id-dfr-ext-att  2}
+id-att-document-architecture-class  ID ::= {id-dfr-ext-att  3}
+id-att-keywords                     ID ::= {id-dfr-ext-att  4}
+id-att-creation-date-and-time       ID ::= {id-dfr-ext-att  5}
+id-att-purge-date-and-time          ID ::= {id-dfr-ext-att  6}
+id-att-revision-date-and-time       ID ::= {id-dfr-ext-att  7}
+id-att-organizations                ID ::= {id-dfr-ext-att  8}
+id-att-preparers                    ID ::= {id-dfr-ext-att  9}
+id-att-owners                       ID ::= {id-dfr-ext-att 10}
+id-att-authors                      ID ::= {id-dfr-ext-att 11}
+id-att-status                       ID ::= {id-dfr-ext-att 12}
+id-att-user-specific-codes          ID ::= {id-dfr-ext-att 13}
+id-att-superseded-documents         ID ::= {id-dfr-ext-att 14}
+id-att-number-of-pages              ID ::= {id-dfr-ext-att 15}
+id-att-languages                    ID ::= {id-dfr-ext-att 16}
+
+--Attribute Syntaxes
+
+id-dfr-att-syn-int              ID ::= {id-dfr-att-syn 1}
+id-dfr-att-syn-bool             ID ::= {id-dfr-att-syn 2}
+id-dfr-att-syn-gen-time         ID ::= {id-dfr-att-syn 3}
+id-dfr-att-syn-case-ign         ID ::= {id-dfr-att-syn 4}
+id-dfr-att-syn-case-ign-list    ID ::= {id-dfr-att-syn 5}
+
+END

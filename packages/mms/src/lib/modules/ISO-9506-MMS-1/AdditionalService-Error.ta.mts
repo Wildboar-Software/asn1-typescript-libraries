@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -43,9 +44,9 @@ import { LoadUnitControlFromFile_Error, _decode_LoadUnitControlFromFile_Error, _
  *         removeECLReference            [2] IMPLICIT ImplicitNullable{RemoveEventConditionListReference-Error},
  *         initiateUC                    [3] IMPLICIT ImplicitNullable{InitiateUnitControl-Error},
  *         startUC                       [4] IMPLICIT StartUnitControl-Error,
- *         -- startUC                       [4] IMPLICIT NULL,
+ *         startUC                       [4] IMPLICIT NULL,
  *         stopUC                        [5] IMPLICIT StopUnitControl-Error,
- *         -- stopUC                        [5] IMPLICIT NULL,
+ *         stopUC                        [5] IMPLICIT NULL,
  *         deleteUC                      [6] IMPLICIT ImplicitNullable{DeleteUnitControl-Error},
  *         loadUCFromFile                [7] IMPLICIT ImplicitNullable{LoadUnitControlFromFile-Error}
  * }
@@ -58,7 +59,9 @@ type AdditionalService_Error =
     | { removeECLReference: ImplicitNullable<RemoveEventConditionListReference_Error> } /* CHOICE_ALT_ROOT */
     | { initiateUC: ImplicitNullable<InitiateUnitControl_Error> } /* CHOICE_ALT_ROOT */
     | { startUC: StartUnitControl_Error } /* CHOICE_ALT_ROOT */
+    | { startUC: NULL } /* CHOICE_ALT_ROOT */
     | { stopUC: StopUnitControl_Error } /* CHOICE_ALT_ROOT */
+    | { stopUC: NULL } /* CHOICE_ALT_ROOT */
     | { deleteUC: ImplicitNullable<DeleteUnitControl_Error> } /* CHOICE_ALT_ROOT */
     | { loadUCFromFile: ImplicitNullable<LoadUnitControlFromFile_Error> } /* CHOICE_ALT_ROOT */;
 
@@ -77,8 +80,12 @@ function _decode_AdditionalService_Error (el: _Element): AdditionalService_Error
     "CONTEXT 1": [ "addECLReference", $._decode_implicit<ImplicitNullable<AddEventConditionListReference_Error>>(() => _get_decoder_for_ImplicitNullable<AddEventConditionListReference_Error>(_decode_AddEventConditionListReference_Error)) ],
     "CONTEXT 2": [ "removeECLReference", $._decode_implicit<ImplicitNullable<RemoveEventConditionListReference_Error>>(() => _get_decoder_for_ImplicitNullable<RemoveEventConditionListReference_Error>(_decode_RemoveEventConditionListReference_Error)) ],
     "CONTEXT 3": [ "initiateUC", $._decode_implicit<ImplicitNullable<InitiateUnitControl_Error>>(() => _get_decoder_for_ImplicitNullable<InitiateUnitControl_Error>(_decode_InitiateUnitControl_Error)) ],
-    "CONTEXT 4": [ "startUC", $._decode_implicit<StartUnitControl_Error>(() => _decode_StartUnitControl_Error) ],
-    "CONTEXT 5": [ "stopUC", $._decode_implicit<StopUnitControl_Error>(() => _decode_StopUnitControl_Error) ],
+    "CONTEXT 4": [ "startUC", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<StartUnitControl_Error>(() => _decode_StartUnitControl_Error)(el)) ],
+    "CONTEXT 5": [ "stopUC", (el: _Element) => ((el.construction === _Construction.primitive && el.value.length === 0)
+        ? $._decode_implicit<NULL>(() => $._decodeNull)(el)
+        : $._decode_implicit<StopUnitControl_Error>(() => _decode_StopUnitControl_Error)(el)) ],
     "CONTEXT 6": [ "deleteUC", $._decode_implicit<ImplicitNullable<DeleteUnitControl_Error>>(() => _get_decoder_for_ImplicitNullable<DeleteUnitControl_Error>(_decode_DeleteUnitControl_Error)) ],
     "CONTEXT 7": [ "loadUCFromFile", $._decode_implicit<ImplicitNullable<LoadUnitControlFromFile_Error>>(() => _get_decoder_for_ImplicitNullable<LoadUnitControlFromFile_Error>(_decode_LoadUnitControlFromFile_Error)) ]
 }); }
@@ -101,8 +108,12 @@ function _encode_AdditionalService_Error (value: AdditionalService_Error, elGett
     "addECLReference": $._encode_implicit(_TagClass.context, 1, () => _get_encoder_for_ImplicitNullable<AddEventConditionListReference_Error>(_encode_AddEventConditionListReference_Error), $.BER),
     "removeECLReference": $._encode_implicit(_TagClass.context, 2, () => _get_encoder_for_ImplicitNullable<RemoveEventConditionListReference_Error>(_encode_RemoveEventConditionListReference_Error), $.BER),
     "initiateUC": $._encode_implicit(_TagClass.context, 3, () => _get_encoder_for_ImplicitNullable<InitiateUnitControl_Error>(_encode_InitiateUnitControl_Error), $.BER),
-    "startUC": $._encode_implicit(_TagClass.context, 4, () => _encode_StartUnitControl_Error, $.BER),
-    "stopUC": $._encode_implicit(_TagClass.context, 5, () => _encode_StopUnitControl_Error, $.BER),
+    "startUC": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 4, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 4, () => _encode_StartUnitControl_Error, $.BER)(value, elGetter)),
+    "stopUC": (value: any, elGetter: $.ASN1Encoder<any>): _Element => (value === null
+        ? $._encode_implicit(_TagClass.context, 5, () => $._encodeNull, $.BER)(value, elGetter)
+        : $._encode_implicit(_TagClass.context, 5, () => _encode_StopUnitControl_Error, $.BER)(value, elGetter)),
     "deleteUC": $._encode_implicit(_TagClass.context, 6, () => _get_encoder_for_ImplicitNullable<DeleteUnitControl_Error>(_encode_DeleteUnitControl_Error), $.BER),
     "loadUCFromFile": $._encode_implicit(_TagClass.context, 7, () => _get_encoder_for_ImplicitNullable<LoadUnitControlFromFile_Error>(_encode_LoadUnitControlFromFile_Error), $.BER),
 }, $.BER); }

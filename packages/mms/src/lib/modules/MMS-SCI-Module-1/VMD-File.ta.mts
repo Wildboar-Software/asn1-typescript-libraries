@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     BIT_STRING,
+    NULL,
     OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -80,16 +81,14 @@ import { VMD_File_selected_Program_Invocation, _decode_VMD_File_selected_Program
  *     domains             [11] IMPLICIT SEQUENCE OF Domain-instance,
  *     programInvocations  [12] IMPLICIT SEQUENCE OF Program-Invocation-instance,
  *     unitControls        [13] IMPLICIT SEQUENCE OF Unit-Control-instance,
- *     -- Deviations from ISO 9506: Just use {} to encode the NULL variants.
- *     -- This will produce the same encoding if using BER / DER / CER.
  *     unnamedVariables    [14] IMPLICIT SEQUENCE OF Unnamed-Variable-instance,
- *     -- unnamedVariables    [14] IMPLICIT NULL,
+ *     unnamedVariables    [14] IMPLICIT NULL,
  *     namedVariables      [15] IMPLICIT SEQUENCE OF Named-Variable-instance,
- *     -- namedVariables      [15] IMPLICIT NULL,
+ *     namedVariables      [15] IMPLICIT NULL,
  *     namedVariableLists  [16] IMPLICIT SEQUENCE OF Named-Variable-List-instance,
- *     -- namedVariableLists  [16] IMPLICIT NULL,
+ *     namedVariableLists  [16] IMPLICIT NULL,
  *     namedTypes          [17] IMPLICIT SEQUENCE OF Named-Type-instance,
- *     -- namedTypes          [17] IMPLICIT NULL,
+ *     namedTypes          [17] IMPLICIT NULL,
  *     dataExchanges       [18] IMPLICIT SEQUENCE OF Data-Exchange-instance,
  *     semaphores          [19] IMPLICIT SEQUENCE OF Semaphore-instance,
  *     operatorStations    [20] IMPLICIT SEQUENCE OF Operator-Station-instance,
@@ -97,7 +96,7 @@ import { VMD_File_selected_Program_Invocation, _decode_VMD_File_selected_Program
  *     eventActions        [22] IMPLICIT SEQUENCE OF Event-Action-instance,
  *     eventEnrollments    [23] IMPLICIT SEQUENCE OF Event-Enrollment-instance,
  *     eventConditionLists [24] IMPLICIT SEQUENCE OF Event-Condition-List-instance,
- *     -- eventConditionLists [24] IMPLICIT NULL,
+ *     eventConditionLists [24] IMPLICIT NULL,
  *     journals            [25] IMPLICIT SEQUENCE OF Journal-instance,
  *     ...,
  *     selected-Program-Invocation   CHOICE {
@@ -201,25 +200,25 @@ class VMD_File {
          * @public
          * @readonly
          */
-        readonly unnamedVariables: Unnamed_Variable_instance[],
+        readonly unnamedVariables: Unnamed_Variable_instance[] | NULL,
         /**
          * @summary `namedVariables`.
          * @public
          * @readonly
          */
-        readonly namedVariables: Named_Variable_instance[],
+        readonly namedVariables: Named_Variable_instance[] | NULL,
         /**
          * @summary `namedVariableLists`.
          * @public
          * @readonly
          */
-        readonly namedVariableLists: Named_Variable_List_instance[],
+        readonly namedVariableLists: Named_Variable_List_instance[] | NULL,
         /**
          * @summary `namedTypes`.
          * @public
          * @readonly
          */
-        readonly namedTypes: Named_Type_instance[],
+        readonly namedTypes: Named_Type_instance[] | NULL,
         /**
          * @summary `dataExchanges`.
          * @public
@@ -261,7 +260,7 @@ class VMD_File {
          * @public
          * @readonly
          */
-        readonly eventConditionLists: Event_Condition_List_instance[],
+        readonly eventConditionLists: Event_Condition_List_instance[] | NULL,
         /**
          * @summary `journals`.
          * @public
@@ -390,17 +389,17 @@ function _decode_VMD_File (el: _Element): VMD_File {
     let domains!: Domain_instance[];
     let programInvocations!: Program_Invocation_instance[];
     let unitControls!: Unit_Control_instance[];
-    let unnamedVariables!: Unnamed_Variable_instance[];
-    let namedVariables!: Named_Variable_instance[];
-    let namedVariableLists!: Named_Variable_List_instance[];
-    let namedTypes!: Named_Type_instance[];
+    let unnamedVariables!: Unnamed_Variable_instance[] | NULL;
+    let namedVariables!: Named_Variable_instance[] | NULL;
+    let namedVariableLists!: Named_Variable_List_instance[] | NULL;
+    let namedTypes!: Named_Type_instance[] | NULL;
     let dataExchanges!: Data_Exchange_instance[];
     let semaphores!: Semaphore_instance[];
     let operatorStations!: Operator_Station_instance[];
     let eventConditions!: Event_Condition_instance[];
     let eventActions!: Event_Action_instance[];
     let eventEnrollments!: Event_Enrollment_instance[];
-    let eventConditionLists!: Event_Condition_List_instance[];
+    let eventConditionLists!: Event_Condition_List_instance[] | NULL;
     let journals!: Journal_instance[];
     let selected_Program_Invocation!: VMD_File_selected_Program_Invocation;
     let _unrecognizedExtensionsList: _Element[] = [];
@@ -419,17 +418,27 @@ function _decode_VMD_File (el: _Element): VMD_File {
         "domains": (_el: _Element): void => { domains = $._decode_implicit<Domain_instance[]>(() => $._decodeSequenceOf<Domain_instance>(() => _decode_Domain_instance))(_el); },
         "programInvocations": (_el: _Element): void => { programInvocations = $._decode_implicit<Program_Invocation_instance[]>(() => $._decodeSequenceOf<Program_Invocation_instance>(() => _decode_Program_Invocation_instance))(_el); },
         "unitControls": (_el: _Element): void => { unitControls = $._decode_implicit<Unit_Control_instance[]>(() => $._decodeSequenceOf<Unit_Control_instance>(() => _decode_Unit_Control_instance))(_el); },
-        "unnamedVariables": (_el: _Element): void => { unnamedVariables = $._decode_implicit<Unnamed_Variable_instance[]>(() => $._decodeSequenceOf<Unnamed_Variable_instance>(() => _decode_Unnamed_Variable_instance))(_el); },
-        "namedVariables": (_el: _Element): void => { namedVariables = $._decode_implicit<Named_Variable_instance[]>(() => $._decodeSequenceOf<Named_Variable_instance>(() => _decode_Named_Variable_instance))(_el); },
-        "namedVariableLists": (_el: _Element): void => { namedVariableLists = $._decode_implicit<Named_Variable_List_instance[]>(() => $._decodeSequenceOf<Named_Variable_List_instance>(() => _decode_Named_Variable_List_instance))(_el); },
-        "namedTypes": (_el: _Element): void => { namedTypes = $._decode_implicit<Named_Type_instance[]>(() => $._decodeSequenceOf<Named_Type_instance>(() => _decode_Named_Type_instance))(_el); },
+        "unnamedVariables": (_el: _Element): void => { unnamedVariables = ((_el.construction === _Construction.primitive && _el.value.length === 0)
+            ? $._decode_implicit<NULL>(() => $._decodeNull)(_el)
+            : $._decode_implicit<Unnamed_Variable_instance[]>(() => $._decodeSequenceOf<Unnamed_Variable_instance>(() => _decode_Unnamed_Variable_instance))(_el)); },
+        "namedVariables": (_el: _Element): void => { namedVariables = ((_el.construction === _Construction.primitive && _el.value.length === 0)
+            ? $._decode_implicit<NULL>(() => $._decodeNull)(_el)
+            : $._decode_implicit<Named_Variable_instance[]>(() => $._decodeSequenceOf<Named_Variable_instance>(() => _decode_Named_Variable_instance))(_el)); },
+        "namedVariableLists": (_el: _Element): void => { namedVariableLists = ((_el.construction === _Construction.primitive && _el.value.length === 0)
+            ? $._decode_implicit<NULL>(() => $._decodeNull)(_el)
+            : $._decode_implicit<Named_Variable_List_instance[]>(() => $._decodeSequenceOf<Named_Variable_List_instance>(() => _decode_Named_Variable_List_instance))(_el)); },
+        "namedTypes": (_el: _Element): void => { namedTypes = ((_el.construction === _Construction.primitive && _el.value.length === 0)
+            ? $._decode_implicit<NULL>(() => $._decodeNull)(_el)
+            : $._decode_implicit<Named_Type_instance[]>(() => $._decodeSequenceOf<Named_Type_instance>(() => _decode_Named_Type_instance))(_el)); },
         "dataExchanges": (_el: _Element): void => { dataExchanges = $._decode_implicit<Data_Exchange_instance[]>(() => $._decodeSequenceOf<Data_Exchange_instance>(() => _decode_Data_Exchange_instance))(_el); },
         "semaphores": (_el: _Element): void => { semaphores = $._decode_implicit<Semaphore_instance[]>(() => $._decodeSequenceOf<Semaphore_instance>(() => _decode_Semaphore_instance))(_el); },
         "operatorStations": (_el: _Element): void => { operatorStations = $._decode_implicit<Operator_Station_instance[]>(() => $._decodeSequenceOf<Operator_Station_instance>(() => _decode_Operator_Station_instance))(_el); },
         "eventConditions": (_el: _Element): void => { eventConditions = $._decode_implicit<Event_Condition_instance[]>(() => $._decodeSequenceOf<Event_Condition_instance>(() => _decode_Event_Condition_instance))(_el); },
         "eventActions": (_el: _Element): void => { eventActions = $._decode_implicit<Event_Action_instance[]>(() => $._decodeSequenceOf<Event_Action_instance>(() => _decode_Event_Action_instance))(_el); },
         "eventEnrollments": (_el: _Element): void => { eventEnrollments = $._decode_implicit<Event_Enrollment_instance[]>(() => $._decodeSequenceOf<Event_Enrollment_instance>(() => _decode_Event_Enrollment_instance))(_el); },
-        "eventConditionLists": (_el: _Element): void => { eventConditionLists = $._decode_implicit<Event_Condition_List_instance[]>(() => $._decodeSequenceOf<Event_Condition_List_instance>(() => _decode_Event_Condition_List_instance))(_el); },
+        "eventConditionLists": (_el: _Element): void => { eventConditionLists = ((_el.construction === _Construction.primitive && _el.value.length === 0)
+            ? $._decode_implicit<NULL>(() => $._decodeNull)(_el)
+            : $._decode_implicit<Event_Condition_List_instance[]>(() => $._decodeSequenceOf<Event_Condition_List_instance>(() => _decode_Event_Condition_List_instance))(_el)); },
         "journals": (_el: _Element): void => { journals = $._decode_implicit<Journal_instance[]>(() => $._decodeSequenceOf<Journal_instance>(() => _decode_Journal_instance))(_el); },
         "selected-Program-Invocation": (_el: _Element): void => { selected_Program_Invocation = _decode_VMD_File_selected_Program_Invocation(_el); }
     };
@@ -501,17 +510,17 @@ function _encode_VMD_File (value: VMD_File, elGetter: $.ASN1Encoder<any>): _Elem
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 11, () => $._encodeSequenceOf<Domain_instance>(() => _encode_Domain_instance, $.BER), $.BER)(value.domains, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 12, () => $._encodeSequenceOf<Program_Invocation_instance>(() => _encode_Program_Invocation_instance, $.BER), $.BER)(value.programInvocations, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 13, () => $._encodeSequenceOf<Unit_Control_instance>(() => _encode_Unit_Control_instance, $.BER), $.BER)(value.unitControls, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 14, () => $._encodeSequenceOf<Unnamed_Variable_instance>(() => _encode_Unnamed_Variable_instance, $.BER), $.BER)(value.unnamedVariables, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 15, () => $._encodeSequenceOf<Named_Variable_instance>(() => _encode_Named_Variable_instance, $.BER), $.BER)(value.namedVariables, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 16, () => $._encodeSequenceOf<Named_Variable_List_instance>(() => _encode_Named_Variable_List_instance, $.BER), $.BER)(value.namedVariableLists, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 17, () => $._encodeSequenceOf<Named_Type_instance>(() => _encode_Named_Type_instance, $.BER), $.BER)(value.namedTypes, $.BER),
+            /* REQUIRED   */ ((value.unnamedVariables === null) ? $._encode_implicit(_TagClass.context, 14, () => $._encodeNull, $.BER)(value.unnamedVariables, $.BER) : $._encode_implicit(_TagClass.context, 14, () => $._encodeSequenceOf<Unnamed_Variable_instance>(() => _encode_Unnamed_Variable_instance, $.BER), $.BER)(value.unnamedVariables, $.BER)),
+            /* REQUIRED   */ ((value.namedVariables === null) ? $._encode_implicit(_TagClass.context, 15, () => $._encodeNull, $.BER)(value.namedVariables, $.BER) : $._encode_implicit(_TagClass.context, 15, () => $._encodeSequenceOf<Named_Variable_instance>(() => _encode_Named_Variable_instance, $.BER), $.BER)(value.namedVariables, $.BER)),
+            /* REQUIRED   */ ((value.namedVariableLists === null) ? $._encode_implicit(_TagClass.context, 16, () => $._encodeNull, $.BER)(value.namedVariableLists, $.BER) : $._encode_implicit(_TagClass.context, 16, () => $._encodeSequenceOf<Named_Variable_List_instance>(() => _encode_Named_Variable_List_instance, $.BER), $.BER)(value.namedVariableLists, $.BER)),
+            /* REQUIRED   */ ((value.namedTypes === null) ? $._encode_implicit(_TagClass.context, 17, () => $._encodeNull, $.BER)(value.namedTypes, $.BER) : $._encode_implicit(_TagClass.context, 17, () => $._encodeSequenceOf<Named_Type_instance>(() => _encode_Named_Type_instance, $.BER), $.BER)(value.namedTypes, $.BER)),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 18, () => $._encodeSequenceOf<Data_Exchange_instance>(() => _encode_Data_Exchange_instance, $.BER), $.BER)(value.dataExchanges, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 19, () => $._encodeSequenceOf<Semaphore_instance>(() => _encode_Semaphore_instance, $.BER), $.BER)(value.semaphores, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 20, () => $._encodeSequenceOf<Operator_Station_instance>(() => _encode_Operator_Station_instance, $.BER), $.BER)(value.operatorStations, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 21, () => $._encodeSequenceOf<Event_Condition_instance>(() => _encode_Event_Condition_instance, $.BER), $.BER)(value.eventConditions, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 22, () => $._encodeSequenceOf<Event_Action_instance>(() => _encode_Event_Action_instance, $.BER), $.BER)(value.eventActions, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 23, () => $._encodeSequenceOf<Event_Enrollment_instance>(() => _encode_Event_Enrollment_instance, $.BER), $.BER)(value.eventEnrollments, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 24, () => $._encodeSequenceOf<Event_Condition_List_instance>(() => _encode_Event_Condition_List_instance, $.BER), $.BER)(value.eventConditionLists, $.BER),
+            /* REQUIRED   */ ((value.eventConditionLists === null) ? $._encode_implicit(_TagClass.context, 24, () => $._encodeNull, $.BER)(value.eventConditionLists, $.BER) : $._encode_implicit(_TagClass.context, 24, () => $._encodeSequenceOf<Event_Condition_List_instance>(() => _encode_Event_Condition_List_instance, $.BER), $.BER)(value.eventConditionLists, $.BER)),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 25, () => $._encodeSequenceOf<Journal_instance>(() => _encode_Journal_instance, $.BER), $.BER)(value.journals, $.BER)
         ],
         [

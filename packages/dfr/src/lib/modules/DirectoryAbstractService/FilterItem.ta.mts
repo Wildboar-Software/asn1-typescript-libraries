@@ -1,0 +1,172 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { AttributeValueAssertion, _decode_AttributeValueAssertion, _encode_AttributeValueAssertion } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
+// export { AttributeValueAssertion, _decode_AttributeValueAssertion, _encode_AttributeValueAssertion } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
+import { FilterItem_substrings, _decode_FilterItem_substrings, _encode_FilterItem_substrings } from "../DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+// export { FilterItem_substrings, _decode_FilterItem_substrings, _encode_FilterItem_substrings } from "../DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import { MatchingRuleAssertion, _decode_MatchingRuleAssertion, _encode_MatchingRuleAssertion } from "../DirectoryAbstractService/MatchingRuleAssertion.ta.mjs";
+// export { MatchingRuleAssertion, _decode_MatchingRuleAssertion, _encode_MatchingRuleAssertion } from "../DirectoryAbstractService/MatchingRuleAssertion.ta.mjs";
+import { AttributeTypeAssertion, _decode_AttributeTypeAssertion, _encode_AttributeTypeAssertion } from "../InformationFramework/AttributeTypeAssertion.ta.mjs";
+// export { AttributeTypeAssertion, _decode_AttributeTypeAssertion, _encode_AttributeTypeAssertion } from "../InformationFramework/AttributeTypeAssertion.ta.mjs";
+
+
+/**
+ * @summary FilterItem
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * FilterItem  ::=  CHOICE {
+ *   equality          [0]  AttributeValueAssertion,
+ *   substrings        [1]  SEQUENCE {
+ *     type                   ATTRIBUTE.&id({SupportedAttributes}),
+ *     strings                SEQUENCE OF CHOICE {
+ *       initial           [0]  ATTRIBUTE.&Type
+ *                               ({SupportedAttributes}{@substrings.type}),
+ *       any               [1]  ATTRIBUTE.&Type
+ *                               ({SupportedAttributes}{@substrings.type}),
+ *       final             [2]  ATTRIBUTE.&Type
+ *                               ({SupportedAttributes}{@substrings.type}),
+ *       control                Attribute{{SupportedAttributes}},
+ *                     -- Used to specify interpretation of following items
+ *       ... },
+ *     ... },
+ *   greaterOrEqual    [2]  AttributeValueAssertion,
+ *   lessOrEqual       [3]  AttributeValueAssertion,
+ *   present           [4]  AttributeType,
+ *   approximateMatch  [5]  AttributeValueAssertion,
+ *   extensibleMatch   [6]  MatchingRuleAssertion,
+ *   contextPresent    [7]  AttributeTypeAssertion,
+ *   ... }
+ * ```
+ */
+export
+type FilterItem =
+    { equality: AttributeValueAssertion } /* CHOICE_ALT_ROOT */
+    | { substrings: FilterItem_substrings } /* CHOICE_ALT_ROOT */
+    | { greaterOrEqual: AttributeValueAssertion } /* CHOICE_ALT_ROOT */
+    | { lessOrEqual: AttributeValueAssertion } /* CHOICE_ALT_ROOT */
+    | { present: AttributeType } /* CHOICE_ALT_ROOT */
+    | { approximateMatch: AttributeValueAssertion } /* CHOICE_ALT_ROOT */
+    | { extensibleMatch: MatchingRuleAssertion } /* CHOICE_ALT_ROOT */
+    | { contextPresent: AttributeTypeAssertion } /* CHOICE_ALT_ROOT */
+    | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
+
+let _cached_decoder_for_FilterItem: $.ASN1Decoder<FilterItem> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) FilterItem
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_FilterItem (el: _Element): FilterItem {
+    if (!_cached_decoder_for_FilterItem) { _cached_decoder_for_FilterItem = $._decode_extensible_choice<FilterItem>({
+    "CONTEXT 0": [ "equality", $._decode_implicit<AttributeValueAssertion>(() => _decode_AttributeValueAssertion) ],
+    "CONTEXT 1": [ "substrings", $._decode_implicit<FilterItem_substrings>(() => _decode_FilterItem_substrings) ],
+    "CONTEXT 2": [ "greaterOrEqual", $._decode_implicit<AttributeValueAssertion>(() => _decode_AttributeValueAssertion) ],
+    "CONTEXT 3": [ "lessOrEqual", $._decode_implicit<AttributeValueAssertion>(() => _decode_AttributeValueAssertion) ],
+    "CONTEXT 4": [ "present", $._decode_implicit<AttributeType>(() => _decode_AttributeType) ],
+    "CONTEXT 5": [ "approximateMatch", $._decode_implicit<AttributeValueAssertion>(() => _decode_AttributeValueAssertion) ],
+    "CONTEXT 6": [ "extensibleMatch", $._decode_implicit<MatchingRuleAssertion>(() => _decode_MatchingRuleAssertion) ],
+    "CONTEXT 7": [ "contextPresent", $._decode_implicit<AttributeTypeAssertion>(() => _decode_AttributeTypeAssertion) ]
+}); }
+    return _cached_decoder_for_FilterItem(el);
+}
+
+let _cached_encoder_for_FilterItem: $.ASN1Encoder<FilterItem> | null = null;
+
+/**
+ * @summary Encodes a(n) FilterItem into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The FilterItem, encoded as an ASN.1 Element.
+ */
+export
+function _encode_FilterItem (value: FilterItem, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FilterItem) { _cached_encoder_for_FilterItem = $._encode_choice<FilterItem>({
+    "equality": $._encode_implicit(_TagClass.context, 0, () => _encode_AttributeValueAssertion, $.BER),
+    "substrings": $._encode_implicit(_TagClass.context, 1, () => _encode_FilterItem_substrings, $.BER),
+    "greaterOrEqual": $._encode_implicit(_TagClass.context, 2, () => _encode_AttributeValueAssertion, $.BER),
+    "lessOrEqual": $._encode_implicit(_TagClass.context, 3, () => _encode_AttributeValueAssertion, $.BER),
+    "present": $._encode_implicit(_TagClass.context, 4, () => _encode_AttributeType, $.BER),
+    "approximateMatch": $._encode_implicit(_TagClass.context, 5, () => _encode_AttributeValueAssertion, $.BER),
+    "extensibleMatch": $._encode_implicit(_TagClass.context, 6, () => _encode_MatchingRuleAssertion, $.BER),
+    "contextPresent": $._encode_implicit(_TagClass.context, 7, () => _encode_AttributeTypeAssertion, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_FilterItem(value, elGetter);
+}
+
+
+/* eslint-enable */

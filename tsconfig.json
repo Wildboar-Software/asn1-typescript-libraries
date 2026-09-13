@@ -212,6 +212,9 @@
     },
     {
       "path": "./packages/mms"
+    },
+    {
+      "path": "./packages/dfr"
     }
   ],
   "compilerOptions": {
