@@ -43,7 +43,7 @@ describe("DFR encode/decode round-trips", () => {
                         [new Uint8Array([0x49, 0x00, 0x11])],
                     ),
                     undefined,
-                    [new ObjectIdentifier([1, 3, 9999, 1])],
+                    [ObjectIdentifier.fromParts([1, 3, 9999, 1])],
                 ),
                 undefined,
                 undefined,
@@ -52,7 +52,7 @@ describe("DFR encode/decode round-trips", () => {
                 new Uint8Array([0xaa, 0xbb]),
                 new Uint8Array([0x01, 0x02, 0x03]),
             ),
-            new ObjectIdentifier([1, 0, 10166, 2]),
+            ObjectIdentifier.fromParts([1, 0, 10166, 2]),
             new Quality_of_Service(
                 Quality_of_Service._default_value_for_qoS_level,
                 Quality_of_Service._default_value_for_usage_of_reference,
@@ -92,7 +92,7 @@ describe("DFR encode/decode round-trips", () => {
             undefined,
             {
                 document_content: new External(
-                    new ObjectIdentifier([1, 2, 840, 113549, 1, 7, 1]),
+                    ObjectIdentifier.fromParts([1, 2, 840, 113549, 1, 7, 1]),
                     undefined,
                     undefined,
                     new Uint8Array([0x04, 0x02, 0x48, 0x69]),
