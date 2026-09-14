@@ -24,6 +24,21 @@ import { _decode_Certificate } from "../../modules/AuthenticationFramework/Certi
 import compareElements from "../../comparators/compareElements.mjs";
 import { normalizePeriod } from "../../utils/normalizePeriod.mjs";
 
+/**
+ * @summary DER-hash key for a `Period` after X.520 clause 10.2
+ *  canonicalization.
+ * @description
+ *
+ * Used so `timeSpecificationMatch` can compare `SET OF Period` as a
+ * set of equivalent encodings. `normalizePeriod` is applied first so
+ * INTEGER vs BIT STRING and complete-set vs `allWeeks`/`allMonths`
+ * compare equal when they denote the same times.
+ *
+ * @param {Period} period A stored or asserted periodic component.
+ * @returns {string} Base64 of the DER encoding of the canonical `Period`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function periodHashKey(period: Period): string {
     const encoding = _encode_Period(normalizePeriod(period), DER).toBytes();
     return Buffer.from(

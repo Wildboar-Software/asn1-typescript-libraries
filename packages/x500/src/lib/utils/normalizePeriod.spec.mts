@@ -16,6 +16,13 @@ import {
 import { Period_months_bitMonth_january } from "../modules/SelectedAttributeTypes/Period-months-bitMonth.ta.mjs";
 import normalizePeriod from "./normalizePeriod.mjs";
 
+/**
+ * @summary Build a named BIT STRING with `TRUE_BIT` at the given indices.
+ * @param {number[]} indices Named-bit positions to set.
+ * @returns {Uint8ClampedArray} A BIT STRING long enough for the last index.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function bits(...indices: number[]): Uint8ClampedArray {
     const last = Math.max(-1, ...indices);
     const out = new Uint8ClampedArray(last + 1);
@@ -25,14 +32,35 @@ function bits(...indices: number[]): Uint8ClampedArray {
     return out;
 }
 
+/**
+ * @summary DER-encode a `Period` after `normalizePeriod`.
+ * @param {Period} period The value to canonicalize and encode.
+ * @returns {Uint8Array} DER contents of the canonical `Period`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function der(period: Period): Uint8Array {
     return _encode_Period(normalizePeriod(period), DER).toBytes();
 }
 
+/**
+ * @summary Assert two `Period` values have the same canonical DER.
+ * @param {Period} a One `Period`.
+ * @param {Period} b The other `Period`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function expectSame(a: Period, b: Period): void {
     expect(der(a)).toEqual(der(b));
 }
 
+/**
+ * @summary Assert two `Period` values have different canonical DER.
+ * @param {Period} a One `Period`.
+ * @param {Period} b The other `Period`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function expectDifferent(a: Period, b: Period): void {
     expect(der(a)).not.toEqual(der(b));
 }

@@ -22,6 +22,13 @@ import timeSpecificationMatch from "./timeSpecificationMatch.mjs";
 
 const ALG = new AlgorithmIdentifier(ObjectIdentifier.fromString("1.2.840.113549.1.1.11"));
 
+/**
+ * @summary Build a named BIT STRING with `TRUE_BIT` at the given indices.
+ * @param {number[]} indices Named-bit positions to set.
+ * @returns {Uint8ClampedArray} A BIT STRING long enough for the last index.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function bits(...indices: number[]): Uint8ClampedArray {
     const last = Math.max(-1, ...indices);
     const out = new Uint8ClampedArray(last + 1);
@@ -31,6 +38,13 @@ function bits(...indices: number[]): Uint8ClampedArray {
     return out;
 }
 
+/**
+ * @summary Attribute certificate whose `timeSpecification` is one `Period`.
+ * @param {Period} period The stored periodic value.
+ * @returns {ASN1Element} Encoded `AttributeCertificate` for the matcher.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function acWithPeriod(period: Period) {
     const ts = new TimeSpecification({ periodic: [period] });
     const extn = _encode_TimeSpecification(ts, DER);
@@ -55,6 +69,13 @@ function acWithPeriod(period: Period) {
     );
 }
 
+/**
+ * @summary Presented `TimeSpecification` containing one `Period`.
+ * @param {Period} period The asserted periodic value.
+ * @returns {ASN1Element} Encoded `TimeSpecification` assertion.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function assertionWithPeriod(period: Period) {
     return _encode_TimeSpecification(new TimeSpecification({ periodic: [period] }), DER);
 }
