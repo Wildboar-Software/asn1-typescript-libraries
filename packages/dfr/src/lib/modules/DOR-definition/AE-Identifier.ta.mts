@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -109,7 +54,11 @@ class AE_Identifier {
          * @readonly
          */
         readonly indirect_logical_identifier: OPTIONAL<DistinguishedName>
-    ) {}
+    ) {
+        if (locational_identifier === undefined && direct_logical_identifier === undefined && indirect_logical_identifier === undefined) {
+            throw new _ConstructionError("AE-Identifier shall contain at least one component");
+        }
+    }
 
     /**
      * @summary Restructures an object into a AE_Identifier
@@ -216,7 +165,7 @@ let _cached_encoder_for_AE_Identifier: $.ASN1Encoder<AE_Identifier> | null = nul
  */
 export
 function _encode_AE_Identifier (value: AE_Identifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AE_Identifier) { _cached_encoder_for_AE_Identifier = function (value: AE_Identifier, elGetter: $.ASN1Encoder<AE_Identifier>): _Element {
+    if (!_cached_encoder_for_AE_Identifier) { _cached_encoder_for_AE_Identifier = function (value: AE_Identifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.locational_identifier === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_Locational_identifier, $.BER)(value.locational_identifier, $.BER)),

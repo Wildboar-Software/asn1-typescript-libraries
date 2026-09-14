@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
     GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -83,7 +29,14 @@ import { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DfrSearchResultListContent-produced ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DfrSearchResultListContent-produced ::= SEQUENCE {
+ *             start-date-and-time     [0] GeneralizedTime,
+ *             end-date-and-time       [1] GeneralizedTime,
+ *             object-list             [2] DfrEntryList,
+ *             ordering                [3] OrderingRule OPTIONAL,
+ *             search-domain           [4] SearchDomain,
+ *             search-criteria         [5] SearchCriteria
+ *         }
  * ```
  * 
  * @class
@@ -246,7 +199,7 @@ let _cached_encoder_for_DfrSearchResultListContent_produced: $.ASN1Encoder<DfrSe
  */
 export
 function _encode_DfrSearchResultListContent_produced (value: DfrSearchResultListContent_produced, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DfrSearchResultListContent_produced) { _cached_encoder_for_DfrSearchResultListContent_produced = function (value: DfrSearchResultListContent_produced, elGetter: $.ASN1Encoder<DfrSearchResultListContent_produced>): _Element {
+    if (!_cached_encoder_for_DfrSearchResultListContent_produced) { _cached_encoder_for_DfrSearchResultListContent_produced = function (value: DfrSearchResultListContent_produced): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGeneralizedTime, $.BER)(value.start_date_and_time, $.BER),

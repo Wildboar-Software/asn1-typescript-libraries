@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -83,8 +27,6 @@ import { CommonUpdateResult, _decode_CommonUpdateResult, _encode_CommonUpdateRes
 export
 type ReadResult = CommonUpdateResult; // DefinedType
 
-let _cached_decoder_for_ReadResult: $.ASN1Decoder<ReadResult> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReadResult
  * @function
@@ -93,8 +35,14 @@ let _cached_decoder_for_ReadResult: $.ASN1Decoder<ReadResult> | null = null;
  */
 export
 function _decode_ReadResult (el: _Element): ReadResult {
-    if (!_cached_decoder_for_ReadResult) { _cached_decoder_for_ReadResult = _decode_CommonUpdateResult; }
-    return _cached_decoder_for_ReadResult(el);
+    const value = _decode_CommonUpdateResult(el);
+    if (value.entry_information === undefined) {
+        throw new _ConstructionError("ReadResult.entry-information shall be present");
+    }
+    if (value.warnings !== undefined) {
+        throw new _ConstructionError("ReadResult.warnings shall be absent");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ReadResult: $.ASN1Encoder<ReadResult> | null = null;

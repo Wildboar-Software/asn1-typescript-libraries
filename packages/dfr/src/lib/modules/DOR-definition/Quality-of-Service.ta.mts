@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -126,7 +71,7 @@ class Quality_of_Service {
      * @static
      * @method
      */
-    public static get _default_value_for_qoS_level () { return { level_1: null }; }
+    public static get _default_value_for_qoS_level (): QoS_level { return { level_1: null }; }
     /**
      * @summary Getter that returns the default value for `usage_of_reference`.
      * @public
@@ -218,7 +163,7 @@ let _cached_encoder_for_Quality_of_Service: $.ASN1Encoder<Quality_of_Service> | 
  */
 export
 function _encode_Quality_of_Service (value: Quality_of_Service, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Quality_of_Service) { _cached_encoder_for_Quality_of_Service = function (value: Quality_of_Service, elGetter: $.ASN1Encoder<Quality_of_Service>): _Element {
+    if (!_cached_encoder_for_Quality_of_Service) { _cached_encoder_for_Quality_of_Service = function (value: Quality_of_Service): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.qoS_level === undefined || $.deepEq(value.qoS_level, Quality_of_Service._default_value_for_qoS_level) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_QoS_level, $.BER)(value.qoS_level, $.BER)),

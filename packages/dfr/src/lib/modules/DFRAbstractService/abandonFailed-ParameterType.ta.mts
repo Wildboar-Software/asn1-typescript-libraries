@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,8 +10,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AbandonProblem, _enum_for_AbandonProblem, AbandonProblem_no_such_operation /* IMPORTED_LONG_ENUMERATION_ITEM */, no_such_operation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbandonProblem_too_late /* IMPORTED_LONG_ENUMERATION_ITEM */, too_late /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbandonProblem_cannot_abandon /* IMPORTED_LONG_ENUMERATION_ITEM */, cannot_abandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AbandonProblem, _encode_AbandonProblem } from "../DFRAbstractService/AbandonProblem.ta.mjs";
-// export { AbandonProblem, _enum_for_AbandonProblem, AbandonProblem_no_such_operation /* IMPORTED_LONG_ENUMERATION_ITEM */, no_such_operation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbandonProblem_too_late /* IMPORTED_LONG_ENUMERATION_ITEM */, too_late /* IMPORTED_SHORT_ENUMERATION_ITEM */, AbandonProblem_cannot_abandon /* IMPORTED_LONG_ENUMERATION_ITEM */, cannot_abandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AbandonProblem, _encode_AbandonProblem } from "../DFRAbstractService/AbandonProblem.ta.mjs";
+import { AbandonProblem, _enum_for_AbandonProblem, _decode_AbandonProblem, _encode_AbandonProblem } from "../DFRAbstractService/AbandonProblem.ta.mjs";
+import {
+    type InvokeId,
+    _decode_InvokeId,
+    _encode_InvokeId,
+} from "../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs";
 
 
 /**
@@ -77,7 +25,10 @@ import { AbandonProblem, _enum_for_AbandonProblem, AbandonProblem_no_such_operat
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * abandonFailed-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * abandonFailed-ParameterType ::= SET {
+ *         problem     [0] AbandonProblem,
+ *         operation   [1] InvokeId
+ *     }
  * ```
  * 
  * @class
@@ -135,7 +86,7 @@ class abandonFailed_ParameterType {
 export
 const _root_component_type_list_1_spec_for_abandonFailed_ParameterType: $.ComponentSpec[] = [
     new $.ComponentSpec("problem", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: operation COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("operation", false, $.hasTag(_TagClass.context, 1)),
 ];
 
 /**
@@ -210,7 +161,7 @@ let _cached_encoder_for_abandonFailed_ParameterType: $.ASN1Encoder<abandonFailed
  */
 export
 function _encode_abandonFailed_ParameterType (value: abandonFailed_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_abandonFailed_ParameterType) { _cached_encoder_for_abandonFailed_ParameterType = function (value: abandonFailed_ParameterType, elGetter: $.ASN1Encoder<abandonFailed_ParameterType>): _Element {
+    if (!_cached_encoder_for_abandonFailed_ParameterType) { _cached_encoder_for_abandonFailed_ParameterType = function (value: abandonFailed_ParameterType): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_AbandonProblem, $.BER)(value.problem, $.BER),

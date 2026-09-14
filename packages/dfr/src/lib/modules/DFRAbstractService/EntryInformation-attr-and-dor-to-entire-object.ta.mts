@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -79,7 +23,10 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryInformation-attr-and-dor-to-entire-object ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EntryInformation-attr-and-dor-to-entire-object ::= SEQUENCE {
+ *             attributes              [0] DfrEntryAttributes,
+ *             dor-to-entire-object    [1] DOR
+ *         }
  * ```
  * 
  * @class
@@ -201,7 +148,7 @@ let _cached_encoder_for_EntryInformation_attr_and_dor_to_entire_object: $.ASN1En
  */
 export
 function _encode_EntryInformation_attr_and_dor_to_entire_object (value: EntryInformation_attr_and_dor_to_entire_object, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EntryInformation_attr_and_dor_to_entire_object) { _cached_encoder_for_EntryInformation_attr_and_dor_to_entire_object = function (value: EntryInformation_attr_and_dor_to_entire_object, elGetter: $.ASN1Encoder<EntryInformation_attr_and_dor_to_entire_object>): _Element {
+    if (!_cached_encoder_for_EntryInformation_attr_and_dor_to_entire_object) { _cached_encoder_for_EntryInformation_attr_and_dor_to_entire_object = function (value: EntryInformation_attr_and_dor_to_entire_object): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_DfrEntryAttributes, $.BER)(value.attributes, $.BER),

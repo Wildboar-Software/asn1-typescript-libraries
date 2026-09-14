@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 // export { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
-import { UpdateProblem, _enum_for_UpdateProblem, UpdateProblem_inappropriate_object_class /* IMPORTED_LONG_ENUMERATION_ITEM */, inappropriate_object_class /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_insufficient_access_rights /* IMPORTED_LONG_ENUMERATION_ITEM */, insufficient_access_rights /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_reserved_by_a_user /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved_by_a_user /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_illegal_content_modification /* IMPORTED_LONG_ENUMERATION_ITEM */, illegal_content_modification /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_group_membership_criteria_violation /* IMPORTED_LONG_ENUMERATION_ITEM */, group_membership_criteria_violation /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_reference_loop_detected /* IMPORTED_LONG_ENUMERATION_ITEM */, reference_loop_detected /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UpdateProblem, _encode_UpdateProblem } from "../DFRAbstractService/UpdateProblem.ta.mjs";
+import { UpdateProblem, _enum_for_UpdateProblem, _decode_UpdateProblem, _encode_UpdateProblem } from "../DFRAbstractService/UpdateProblem.ta.mjs";
 // export { UpdateProblem, _enum_for_UpdateProblem, UpdateProblem_inappropriate_object_class /* IMPORTED_LONG_ENUMERATION_ITEM */, inappropriate_object_class /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_insufficient_access_rights /* IMPORTED_LONG_ENUMERATION_ITEM */, insufficient_access_rights /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_reserved_by_a_user /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved_by_a_user /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_illegal_content_modification /* IMPORTED_LONG_ENUMERATION_ITEM */, illegal_content_modification /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_group_membership_criteria_violation /* IMPORTED_LONG_ENUMERATION_ITEM */, group_membership_criteria_violation /* IMPORTED_SHORT_ENUMERATION_ITEM */, UpdateProblem_reference_loop_detected /* IMPORTED_LONG_ENUMERATION_ITEM */, reference_loop_detected /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UpdateProblem, _encode_UpdateProblem } from "../DFRAbstractService/UpdateProblem.ta.mjs";
 
 
@@ -79,7 +23,10 @@ import { UpdateProblem, _enum_for_UpdateProblem, UpdateProblem_inappropriate_obj
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * updateError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * updateError-ParameterType ::= SEQUENCE {
+ *         entry       [0] DfrEntryName,
+ *         problem     [1] UpdateProblem
+ *     }
  * ```
  * 
  * @class
@@ -207,7 +154,7 @@ let _cached_encoder_for_updateError_ParameterType: $.ASN1Encoder<updateError_Par
  */
 export
 function _encode_updateError_ParameterType (value: updateError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_updateError_ParameterType) { _cached_encoder_for_updateError_ParameterType = function (value: updateError_ParameterType, elGetter: $.ASN1Encoder<updateError_ParameterType>): _Element {
+    if (!_cached_encoder_for_updateError_ParameterType) { _cached_encoder_for_updateError_ParameterType = function (value: updateError_ParameterType): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_DfrEntryName, $.BER)(value.entry, $.BER),

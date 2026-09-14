@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,7 +13,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AE_title, _decode_AE_title, _encode_AE_title } from "../DOR-definition/AE-title.ta.mjs";
-// export { AE_title, _decode_AE_title, _encode_AE_title } from "../DOR-definition/AE-title.ta.mjs";
+import {
+    PresentationAddress,
+    _decode_PresentationAddress,
+    _encode_PresentationAddress,
+} from "@wildboar/x500/SelectedAttributeTypes";
 
 
 /**
@@ -139,7 +89,7 @@ class Locational_identifier {
  */
 export
 const _root_component_type_list_1_spec_for_Locational_identifier: $.ComponentSpec[] = [
-    /* FIXME: presentation-address COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("presentation-address", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("ae-title", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("application-contexts", false, $.hasTag(_TagClass.universal, 17))
 ];
@@ -215,7 +165,7 @@ let _cached_encoder_for_Locational_identifier: $.ASN1Encoder<Locational_identifi
  */
 export
 function _encode_Locational_identifier (value: Locational_identifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Locational_identifier) { _cached_encoder_for_Locational_identifier = function (value: Locational_identifier, elGetter: $.ASN1Encoder<Locational_identifier>): _Element {
+    if (!_cached_encoder_for_Locational_identifier) { _cached_encoder_for_Locational_identifier = function (value: Locational_identifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_PresentationAddress, $.BER)(value.presentation_address, $.BER),

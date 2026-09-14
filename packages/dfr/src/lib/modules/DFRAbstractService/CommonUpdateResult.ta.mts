@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,7 +21,7 @@ import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/Ta
 // export { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
 import { Quality_of_Service, _decode_Quality_of_Service, _encode_Quality_of_Service } from "../DOR-definition/Quality-of-Service.ta.mjs";
 // export { Quality_of_Service, _decode_Quality_of_Service, _encode_Quality_of_Service } from "../DOR-definition/Quality-of-Service.ta.mjs";
-import { ReferentStatus, _enum_for_ReferentStatus, ReferentStatus_not_changed_since_produce /* IMPORTED_LONG_ENUMERATION_ITEM */, not_changed_since_produce /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferentStatus_changed_since_produce /* IMPORTED_LONG_ENUMERATION_ITEM */, changed_since_produce /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReferentStatus, _encode_ReferentStatus } from "../DFRAbstractService/ReferentStatus.ta.mjs";
+import { ReferentStatus, _enum_for_ReferentStatus, _decode_ReferentStatus, _encode_ReferentStatus } from "../DFRAbstractService/ReferentStatus.ta.mjs";
 // export { ReferentStatus, _enum_for_ReferentStatus, ReferentStatus_not_changed_since_produce /* IMPORTED_LONG_ENUMERATION_ITEM */, not_changed_since_produce /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferentStatus_changed_since_produce /* IMPORTED_LONG_ENUMERATION_ITEM */, changed_since_produce /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReferentStatus, _encode_ReferentStatus } from "../DFRAbstractService/ReferentStatus.ta.mjs";
 
 
@@ -162,7 +107,7 @@ class CommonUpdateResult {
      * @static
      * @method
      */
-    public static get _default_value_for_warnings () { return [  ]; }        /**
+    public static get _default_value_for_warnings (): Warning[] { return []; }        /**
          * @summary The enum used as the type of the component `referent_altered`
          * @public
          * @static
@@ -269,7 +214,7 @@ let _cached_encoder_for_CommonUpdateResult: $.ASN1Encoder<CommonUpdateResult> | 
  */
 export
 function _encode_CommonUpdateResult (value: CommonUpdateResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommonUpdateResult) { _cached_encoder_for_CommonUpdateResult = function (value: CommonUpdateResult, elGetter: $.ASN1Encoder<CommonUpdateResult>): _Element {
+    if (!_cached_encoder_for_CommonUpdateResult) { _cached_encoder_for_CommonUpdateResult = function (value: CommonUpdateResult): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_DfrUniquePermanentIdentifier, $.BER)(value.upi, $.BER),

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SecurityProblem, _enum_for_SecurityProblem, SecurityProblem_inappropriate_authentication /* IMPORTED_LONG_ENUMERATION_ITEM */, inappropriate_authentication /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityProblem_invalid_creds /* IMPORTED_LONG_ENUMERATION_ITEM */, invalid_creds /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityProblem_invalid_privilege /* IMPORTED_LONG_ENUMERATION_ITEM */, invalid_privilege /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityProblem_invalid_pac /* IMPORTED_LONG_ENUMERATION_ITEM */, invalid_pac /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityProblem_already_active /* IMPORTED_LONG_ENUMERATION_ITEM */, already_active /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SecurityProblem, _encode_SecurityProblem } from "../DFRAbstractService/SecurityProblem.ta.mjs";
+import { SecurityProblem, _enum_for_SecurityProblem, _decode_SecurityProblem, _encode_SecurityProblem } from "../DFRAbstractService/SecurityProblem.ta.mjs";
 // export { SecurityProblem, _enum_for_SecurityProblem, SecurityProblem_inappropriate_authentication /* IMPORTED_LONG_ENUMERATION_ITEM */, inappropriate_authentication /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityProblem_invalid_creds /* IMPORTED_LONG_ENUMERATION_ITEM */, invalid_creds /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityProblem_invalid_privilege /* IMPORTED_LONG_ENUMERATION_ITEM */, invalid_privilege /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityProblem_invalid_pac /* IMPORTED_LONG_ENUMERATION_ITEM */, invalid_pac /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityProblem_already_active /* IMPORTED_LONG_ENUMERATION_ITEM */, already_active /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SecurityProblem, _encode_SecurityProblem } from "../DFRAbstractService/SecurityProblem.ta.mjs";
 
 
@@ -77,7 +21,9 @@ import { SecurityProblem, _enum_for_SecurityProblem, SecurityProblem_inappropria
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * securityError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * securityError-ParameterType ::= SEQUENCE {
+ *         problem [0] SecurityProblem
+ *     }
  * ```
  * 
  * @class
@@ -194,7 +140,7 @@ let _cached_encoder_for_securityError_ParameterType: $.ASN1Encoder<securityError
  */
 export
 function _encode_securityError_ParameterType (value: securityError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_securityError_ParameterType) { _cached_encoder_for_securityError_ParameterType = function (value: securityError_ParameterType, elGetter: $.ASN1Encoder<securityError_ParameterType>): _Element {
+    if (!_cached_encoder_for_securityError_ParameterType) { _cached_encoder_for_securityError_ParameterType = function (value: securityError_ParameterType): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SecurityProblem, $.BER)(value.problem, $.BER)

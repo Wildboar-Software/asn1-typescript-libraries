@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,23 @@ import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFR
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SearchArgument-search-mode ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SearchArgument-search-mode ::= CHOICE {
+ *         continue            [0] DfrEntryName,
+ *         -- Continue the search with all Options (search domain,
+ *         -- search criteria and continuation context) from the
+ *         -- search result list specified by the DfrEntryName.
+ *         -- The result will be added to the present content of
+ *         -- this search result list.
+ *         update              [1] DfrEntryName,
+ *         -- The present content of the search result list
+ *         -- is verified and possibly updated.
+ *         new-search-stored   [2] DfrEntryName,
+ *         -- All Options are supplied by the requestor in the
+ *         -- subsequent Parameters; they are stored in the search
+ *         -- result List specified, where the result is then
+ *         -- also stored.
+ *         non-stored-search   [3] NULL
+ *     }
  * ```
  */
 export

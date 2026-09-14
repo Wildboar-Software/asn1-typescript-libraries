@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,7 +20,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryInformationSelection-read-selector ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EntryInformationSelection-read-selector ::= ENUMERATED {
+ *         attributes-only                 (0),
+ *         attributes-and-content          (1),
+ *         content-only                    (2),
+ *         dor-to-attr-only                (3),
+ *         attr-and-dor-to-content         (4),
+ *         dor-to-content-only             (5),
+ *         dor-to-entire-object            (6),
+ *         attr-and-dor-to-entire-object   (7)
+ *     }
  * ```
  * 
  * @enum {number}
@@ -100,7 +53,16 @@ enum _enum_for_EntryInformationSelection_read_selector {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryInformationSelection-read-selector ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EntryInformationSelection-read-selector ::= ENUMERATED {
+ *         attributes-only                 (0),
+ *         attributes-and-content          (1),
+ *         content-only                    (2),
+ *         dor-to-attr-only                (3),
+ *         attr-and-dor-to-content         (4),
+ *         dor-to-content-only             (5),
+ *         dor-to-entire-object            (6),
+ *         attr-and-dor-to-entire-object   (7)
+ *     }
  * ```
  * 
  * @enum {number}
@@ -115,7 +77,16 @@ type EntryInformationSelection_read_selector = _enum_for_EntryInformationSelecti
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryInformationSelection-read-selector ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EntryInformationSelection-read-selector ::= ENUMERATED {
+ *         attributes-only                 (0),
+ *         attributes-and-content          (1),
+ *         content-only                    (2),
+ *         dor-to-attr-only                (3),
+ *         attr-and-dor-to-content         (4),
+ *         dor-to-content-only             (5),
+ *         dor-to-entire-object            (6),
+ *         attr-and-dor-to-entire-object   (7)
+ *     }
  * ```
  * 
  * @enum {number}
@@ -250,35 +221,8 @@ const EntryInformationSelection_read_selector_attr_and_dor_to_entire_object: Ent
  */
 export
 const attr_and_dor_to_entire_object: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attr_and_dor_to_entire_object; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EntryInformationSelection_read_selector: $.ASN1Decoder<EntryInformationSelection_read_selector> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EntryInformationSelection_read_selector
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EntryInformationSelection_read_selector (el: _Element): EntryInformationSelection_read_selector {
-    if (!_cached_decoder_for_EntryInformationSelection_read_selector) { _cached_decoder_for_EntryInformationSelection_read_selector = $._decodeEnumerated; }
-    return _cached_decoder_for_EntryInformationSelection_read_selector(el);
-}
-
-let _cached_encoder_for_EntryInformationSelection_read_selector: $.ASN1Encoder<EntryInformationSelection_read_selector> | null = null;
-
-/**
- * @summary Encodes a(n) EntryInformationSelection_read_selector into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EntryInformationSelection_read_selector, encoded as an ASN.1 Element.
- */
-export
-function _encode_EntryInformationSelection_read_selector (value: EntryInformationSelection_read_selector, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EntryInformationSelection_read_selector) { _cached_encoder_for_EntryInformationSelection_read_selector = $._encodeEnumerated; }
-    return _cached_encoder_for_EntryInformationSelection_read_selector(value, elGetter);
-}
+export const _decode_EntryInformationSelection_read_selector = $._decodeEnumerated;
+export const _encode_EntryInformationSelection_read_selector = $._encodeEnumerated;
 
 
 /* eslint-enable */
