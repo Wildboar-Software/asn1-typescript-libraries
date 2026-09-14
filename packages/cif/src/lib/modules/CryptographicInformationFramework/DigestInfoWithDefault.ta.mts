@@ -77,7 +77,7 @@ class DigestInfoWithDefault {
      * @static
      * @method
      */
-    public static get _default_value_for_digestAlg () { return alg_id_sha1; }
+    public static get _default_value_for_digestAlg (): AlgorithmIdentifier { return alg_id_sha1; }
 }
 
 /**

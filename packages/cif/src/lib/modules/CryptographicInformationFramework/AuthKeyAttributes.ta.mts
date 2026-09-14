@@ -77,7 +77,7 @@ class AuthKeyAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_derivedKey () { return true; }
+    public static get _default_value_for_derivedKey (): BOOLEAN { return true; }
 }
 
 /**

@@ -120,7 +120,7 @@ class CommonCertificateAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_authority () { return false; }
+    public static get _default_value_for_authority (): BOOLEAN { return false; }
 }
 
 /**
