@@ -148,35 +148,8 @@ const FingerPrintInformation_hand_right: FingerPrintInformation_hand = FingerPri
  */
 export
 const right: FingerPrintInformation_hand = FingerPrintInformation_hand.right; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_FingerPrintInformation_hand: $.ASN1Decoder<FingerPrintInformation_hand> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FingerPrintInformation_hand
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FingerPrintInformation_hand (el: _Element): FingerPrintInformation_hand {
-    if (!_cached_decoder_for_FingerPrintInformation_hand) { _cached_decoder_for_FingerPrintInformation_hand = $._decodeEnumerated; }
-    return _cached_decoder_for_FingerPrintInformation_hand(el);
-}
-
-let _cached_encoder_for_FingerPrintInformation_hand: $.ASN1Encoder<FingerPrintInformation_hand> | null = null;
-
-/**
- * @summary Encodes a(n) FingerPrintInformation_hand into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FingerPrintInformation_hand, encoded as an ASN.1 Element.
- */
-export
-function _encode_FingerPrintInformation_hand (value: FingerPrintInformation_hand, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FingerPrintInformation_hand) { _cached_encoder_for_FingerPrintInformation_hand = $._encodeEnumerated; }
-    return _cached_encoder_for_FingerPrintInformation_hand(value, elGetter);
-}
+export const _decode_FingerPrintInformation_hand = $._decodeEnumerated;
+export const _encode_FingerPrintInformation_hand = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DSAPublicKey = INTEGER;
-
-let _cached_decoder_for_DSAPublicKey: $.ASN1Decoder<DSAPublicKey> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DSAPublicKey
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DSAPublicKey (el: _Element): DSAPublicKey {
-    if (!_cached_decoder_for_DSAPublicKey) { _cached_decoder_for_DSAPublicKey = $._decodeInteger; }
-    return _cached_decoder_for_DSAPublicKey(el);
-}
-
-let _cached_encoder_for_DSAPublicKey: $.ASN1Encoder<DSAPublicKey> | null = null;
-
-/**
- * @summary Encodes a(n) DSAPublicKey into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DSAPublicKey, encoded as an ASN.1 Element.
- */
-export
-function _encode_DSAPublicKey (value: DSAPublicKey, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DSAPublicKey) { _cached_encoder_for_DSAPublicKey = $._encodeInteger; }
-    return _cached_encoder_for_DSAPublicKey(value, elGetter);
-}
+export const _decode_DSAPublicKey = $._decodeInteger;
+export const _encode_DSAPublicKey = $._encodeInteger;
 
 
 /* eslint-enable */

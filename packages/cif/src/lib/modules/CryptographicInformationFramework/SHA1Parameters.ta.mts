@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type SHA1Parameters = NULL; // NullType
-
-let _cached_decoder_for_SHA1Parameters: $.ASN1Decoder<SHA1Parameters> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SHA1Parameters
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SHA1Parameters (el: _Element): SHA1Parameters {
-    if (!_cached_decoder_for_SHA1Parameters) { _cached_decoder_for_SHA1Parameters = $._decodeNull; }
-    return _cached_decoder_for_SHA1Parameters(el);
-}
-
-let _cached_encoder_for_SHA1Parameters: $.ASN1Encoder<SHA1Parameters> | null = null;
-
-/**
- * @summary Encodes a(n) SHA1Parameters into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SHA1Parameters, encoded as an ASN.1 Element.
- */
-export
-function _encode_SHA1Parameters (value: SHA1Parameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SHA1Parameters) { _cached_encoder_for_SHA1Parameters = $._encodeNull; }
-    return _cached_encoder_for_SHA1Parameters(value, elGetter);
-}
+export const _decode_SHA1Parameters = $._decodeNull;
+export const _encode_SHA1Parameters = $._encodeNull;
 
 
 /* eslint-enable */

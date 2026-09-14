@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DHPublicNumber = INTEGER;
-
-let _cached_decoder_for_DHPublicNumber: $.ASN1Decoder<DHPublicNumber> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DHPublicNumber
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DHPublicNumber (el: _Element): DHPublicNumber {
-    if (!_cached_decoder_for_DHPublicNumber) { _cached_decoder_for_DHPublicNumber = $._decodeInteger; }
-    return _cached_decoder_for_DHPublicNumber(el);
-}
-
-let _cached_encoder_for_DHPublicNumber: $.ASN1Encoder<DHPublicNumber> | null = null;
-
-/**
- * @summary Encodes a(n) DHPublicNumber into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DHPublicNumber, encoded as an ASN.1 Element.
- */
-export
-function _encode_DHPublicNumber (value: DHPublicNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DHPublicNumber) { _cached_encoder_for_DHPublicNumber = $._encodeInteger; }
-    return _cached_encoder_for_DHPublicNumber(value, elGetter);
-}
+export const _decode_DHPublicNumber = $._decodeInteger;
+export const _encode_DHPublicNumber = $._encodeInteger;
 
 
 /* eslint-enable */

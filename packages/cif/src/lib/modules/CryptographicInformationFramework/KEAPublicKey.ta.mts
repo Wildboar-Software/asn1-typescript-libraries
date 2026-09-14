@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type KEAPublicKey = INTEGER;
-
-let _cached_decoder_for_KEAPublicKey: $.ASN1Decoder<KEAPublicKey> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) KEAPublicKey
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_KEAPublicKey (el: _Element): KEAPublicKey {
-    if (!_cached_decoder_for_KEAPublicKey) { _cached_decoder_for_KEAPublicKey = $._decodeInteger; }
-    return _cached_decoder_for_KEAPublicKey(el);
-}
-
-let _cached_encoder_for_KEAPublicKey: $.ASN1Encoder<KEAPublicKey> | null = null;
-
-/**
- * @summary Encodes a(n) KEAPublicKey into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The KEAPublicKey, encoded as an ASN.1 Element.
- */
-export
-function _encode_KEAPublicKey (value: KEAPublicKey, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KEAPublicKey) { _cached_encoder_for_KEAPublicKey = $._encodeInteger; }
-    return _cached_encoder_for_KEAPublicKey(value, elGetter);
-}
+export const _decode_KEAPublicKey = $._decodeInteger;
+export const _encode_KEAPublicKey = $._encodeInteger;
 
 
 /* eslint-enable */

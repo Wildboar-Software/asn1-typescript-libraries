@@ -247,35 +247,8 @@ const AccessMode_ext_auth: number = 10; /* LONG_NAMED_BIT */
  */
 export
 const ext_auth: number = AccessMode_ext_auth; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_AccessMode: $.ASN1Decoder<AccessMode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AccessMode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AccessMode (el: _Element): AccessMode {
-    if (!_cached_decoder_for_AccessMode) { _cached_decoder_for_AccessMode = $._decodeBitString; }
-    return _cached_decoder_for_AccessMode(el);
-}
-
-let _cached_encoder_for_AccessMode: $.ASN1Encoder<AccessMode> | null = null;
-
-/**
- * @summary Encodes a(n) AccessMode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccessMode, encoded as an ASN.1 Element.
- */
-export
-function _encode_AccessMode (value: AccessMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessMode) { _cached_encoder_for_AccessMode = $._encodeBitString; }
-    return _cached_encoder_for_AccessMode(value, elGetter);
-}
+export const _decode_AccessMode = $._decodeBitString;
+export const _encode_AccessMode = $._encodeBitString;
 
 
 /* eslint-enable */

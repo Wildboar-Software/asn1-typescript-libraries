@@ -179,35 +179,8 @@ const PasswordType_iso9564_1: PasswordType = 4; /* LONG_NAMED_ENUMERATED_VALUE *
  */
 export
 const iso9564_1: PasswordType = PasswordType_iso9564_1; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_PasswordType: $.ASN1Decoder<PasswordType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PasswordType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PasswordType (el: _Element): PasswordType {
-    if (!_cached_decoder_for_PasswordType) { _cached_decoder_for_PasswordType = $._decodeEnumerated; }
-    return _cached_decoder_for_PasswordType(el);
-}
-
-let _cached_encoder_for_PasswordType: $.ASN1Encoder<PasswordType> | null = null;
-
-/**
- * @summary Encodes a(n) PasswordType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PasswordType, encoded as an ASN.1 Element.
- */
-export
-function _encode_PasswordType (value: PasswordType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PasswordType) { _cached_encoder_for_PasswordType = $._encodeEnumerated; }
-    return _cached_encoder_for_PasswordType(value, elGetter);
-}
+export const _decode_PasswordType = $._decodeEnumerated;
+export const _encode_PasswordType = $._encodeEnumerated;
 
 
 /* eslint-enable */

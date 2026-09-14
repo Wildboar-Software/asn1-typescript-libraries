@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type KeyReference = INTEGER;
-
-let _cached_decoder_for_KeyReference: $.ASN1Decoder<KeyReference> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) KeyReference
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_KeyReference (el: _Element): KeyReference {
-    if (!_cached_decoder_for_KeyReference) { _cached_decoder_for_KeyReference = $._decodeInteger; }
-    return _cached_decoder_for_KeyReference(el);
-}
-
-let _cached_encoder_for_KeyReference: $.ASN1Encoder<KeyReference> | null = null;
-
-/**
- * @summary Encodes a(n) KeyReference into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The KeyReference, encoded as an ASN.1 Element.
- */
-export
-function _encode_KeyReference (value: KeyReference, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KeyReference) { _cached_encoder_for_KeyReference = $._encodeInteger; }
-    return _cached_encoder_for_KeyReference(value, elGetter);
-}
+export const _decode_KeyReference = $._decodeInteger;
+export const _encode_KeyReference = $._encodeInteger;
 
 
 /* eslint-enable */

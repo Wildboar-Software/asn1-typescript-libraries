@@ -217,35 +217,8 @@ const Operations_derive_key: number = 8; /* LONG_NAMED_BIT */
  */
 export
 const derive_key: number = Operations_derive_key; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_Operations: $.ASN1Decoder<Operations> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Operations
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Operations (el: _Element): Operations {
-    if (!_cached_decoder_for_Operations) { _cached_decoder_for_Operations = $._decodeBitString; }
-    return _cached_decoder_for_Operations(el);
-}
-
-let _cached_encoder_for_Operations: $.ASN1Encoder<Operations> | null = null;
-
-/**
- * @summary Encodes a(n) Operations into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Operations, encoded as an ASN.1 Element.
- */
-export
-function _encode_Operations (value: Operations, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Operations) { _cached_encoder_for_Operations = $._encodeBitString; }
-    return _cached_encoder_for_Operations(value, elGetter);
-}
+export const _decode_Operations = $._decodeBitString;
+export const _encode_Operations = $._encodeBitString;
 
 
 /* eslint-enable */

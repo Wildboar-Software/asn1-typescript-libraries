@@ -148,35 +148,8 @@ const IrisInformation_eye_right: IrisInformation_eye = IrisInformation_eye.right
  */
 export
 const right: IrisInformation_eye = IrisInformation_eye.right; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_IrisInformation_eye: $.ASN1Decoder<IrisInformation_eye> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IrisInformation_eye
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IrisInformation_eye (el: _Element): IrisInformation_eye {
-    if (!_cached_decoder_for_IrisInformation_eye) { _cached_decoder_for_IrisInformation_eye = $._decodeEnumerated; }
-    return _cached_decoder_for_IrisInformation_eye(el);
-}
-
-let _cached_encoder_for_IrisInformation_eye: $.ASN1Encoder<IrisInformation_eye> | null = null;
-
-/**
- * @summary Encodes a(n) IrisInformation_eye into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IrisInformation_eye, encoded as an ASN.1 Element.
- */
-export
-function _encode_IrisInformation_eye (value: IrisInformation_eye, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IrisInformation_eye) { _cached_encoder_for_IrisInformation_eye = $._encodeEnumerated; }
-    return _cached_encoder_for_IrisInformation_eye(value, elGetter);
-}
+export const _decode_IrisInformation_eye = $._decodeEnumerated;
+export const _encode_IrisInformation_eye = $._encodeEnumerated;
 
 
 /* eslint-enable */

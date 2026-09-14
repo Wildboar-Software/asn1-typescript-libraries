@@ -127,35 +127,8 @@ const CardFlags_prnGeneration: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const prnGeneration: number = CardFlags_prnGeneration; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_CardFlags: $.ASN1Decoder<CardFlags> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CardFlags
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CardFlags (el: _Element): CardFlags {
-    if (!_cached_decoder_for_CardFlags) { _cached_decoder_for_CardFlags = $._decodeBitString; }
-    return _cached_decoder_for_CardFlags(el);
-}
-
-let _cached_encoder_for_CardFlags: $.ASN1Encoder<CardFlags> | null = null;
-
-/**
- * @summary Encodes a(n) CardFlags into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CardFlags, encoded as an ASN.1 Element.
- */
-export
-function _encode_CardFlags (value: CardFlags, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CardFlags) { _cached_encoder_for_CardFlags = $._encodeBitString; }
-    return _cached_encoder_for_CardFlags(value, elGetter);
-}
+export const _decode_CardFlags = $._decodeBitString;
+export const _encode_CardFlags = $._encodeBitString;
 
 
 /* eslint-enable */

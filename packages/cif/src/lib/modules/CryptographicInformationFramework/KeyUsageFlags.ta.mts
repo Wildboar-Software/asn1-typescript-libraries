@@ -232,35 +232,8 @@ const KeyUsageFlags_nonRepudiation: number = 9; /* LONG_NAMED_BIT */
  */
 export
 const nonRepudiation: number = KeyUsageFlags_nonRepudiation; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_KeyUsageFlags: $.ASN1Decoder<KeyUsageFlags> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) KeyUsageFlags
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_KeyUsageFlags (el: _Element): KeyUsageFlags {
-    if (!_cached_decoder_for_KeyUsageFlags) { _cached_decoder_for_KeyUsageFlags = $._decodeBitString; }
-    return _cached_decoder_for_KeyUsageFlags(el);
-}
-
-let _cached_encoder_for_KeyUsageFlags: $.ASN1Encoder<KeyUsageFlags> | null = null;
-
-/**
- * @summary Encodes a(n) KeyUsageFlags into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The KeyUsageFlags, encoded as an ASN.1 Element.
- */
-export
-function _encode_KeyUsageFlags (value: KeyUsageFlags, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KeyUsageFlags) { _cached_encoder_for_KeyUsageFlags = $._encodeBitString; }
-    return _cached_encoder_for_KeyUsageFlags(value, elGetter);
-}
+export const _decode_KeyUsageFlags = $._decodeBitString;
+export const _encode_KeyUsageFlags = $._encodeBitString;
 
 
 /* eslint-enable */

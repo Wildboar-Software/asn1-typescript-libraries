@@ -197,35 +197,8 @@ const LifeCycleStatus_proprietary: LifeCycleStatus = 5; /* LONG_NAMED_ENUMERATED
  */
 export
 const proprietary: LifeCycleStatus = LifeCycleStatus_proprietary; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_LifeCycleStatus: $.ASN1Decoder<LifeCycleStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) LifeCycleStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_LifeCycleStatus (el: _Element): LifeCycleStatus {
-    if (!_cached_decoder_for_LifeCycleStatus) { _cached_decoder_for_LifeCycleStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_LifeCycleStatus(el);
-}
-
-let _cached_encoder_for_LifeCycleStatus: $.ASN1Encoder<LifeCycleStatus> | null = null;
-
-/**
- * @summary Encodes a(n) LifeCycleStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LifeCycleStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_LifeCycleStatus (value: LifeCycleStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LifeCycleStatus) { _cached_encoder_for_LifeCycleStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_LifeCycleStatus(value, elGetter);
-}
+export const _decode_LifeCycleStatus = $._decodeEnumerated;
+export const _encode_LifeCycleStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

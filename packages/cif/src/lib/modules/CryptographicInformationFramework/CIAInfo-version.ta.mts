@@ -113,35 +113,8 @@ const CIAInfo_version_v2: CIAInfo_version = 1; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const v2: CIAInfo_version = CIAInfo_version_v2; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_CIAInfo_version: $.ASN1Decoder<CIAInfo_version> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CIAInfo_version
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CIAInfo_version (el: _Element): CIAInfo_version {
-    if (!_cached_decoder_for_CIAInfo_version) { _cached_decoder_for_CIAInfo_version = $._decodeInteger; }
-    return _cached_decoder_for_CIAInfo_version(el);
-}
-
-let _cached_encoder_for_CIAInfo_version: $.ASN1Encoder<CIAInfo_version> | null = null;
-
-/**
- * @summary Encodes a(n) CIAInfo_version into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CIAInfo_version, encoded as an ASN.1 Element.
- */
-export
-function _encode_CIAInfo_version (value: CIAInfo_version, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CIAInfo_version) { _cached_encoder_for_CIAInfo_version = $._encodeInteger; }
-    return _cached_encoder_for_CIAInfo_version(value, elGetter);
-}
+export const _decode_CIAInfo_version = $._decodeInteger;
+export const _encode_CIAInfo_version = $._encodeInteger;
 
 
 /* eslint-enable */

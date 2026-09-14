@@ -187,35 +187,8 @@ const BiometricFlags_confidentiality_protected: number = 10; /* LONG_NAMED_BIT *
  */
 export
 const confidentiality_protected: number = BiometricFlags_confidentiality_protected; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_BiometricFlags: $.ASN1Decoder<BiometricFlags> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) BiometricFlags
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_BiometricFlags (el: _Element): BiometricFlags {
-    if (!_cached_decoder_for_BiometricFlags) { _cached_decoder_for_BiometricFlags = $._decodeBitString; }
-    return _cached_decoder_for_BiometricFlags(el);
-}
-
-let _cached_encoder_for_BiometricFlags: $.ASN1Encoder<BiometricFlags> | null = null;
-
-/**
- * @summary Encodes a(n) BiometricFlags into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BiometricFlags, encoded as an ASN.1 Element.
- */
-export
-function _encode_BiometricFlags (value: BiometricFlags, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BiometricFlags) { _cached_encoder_for_BiometricFlags = $._encodeBitString; }
-    return _cached_encoder_for_BiometricFlags(value, elGetter);
-}
+export const _decode_BiometricFlags = $._decodeBitString;
+export const _encode_BiometricFlags = $._encodeBitString;
 
 
 /* eslint-enable */

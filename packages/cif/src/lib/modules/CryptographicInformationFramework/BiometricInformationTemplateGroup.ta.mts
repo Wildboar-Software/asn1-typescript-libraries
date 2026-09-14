@@ -81,35 +81,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type BiometricInformationTemplateGroup = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_BiometricInformationTemplateGroup: $.ASN1Decoder<BiometricInformationTemplateGroup> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) BiometricInformationTemplateGroup
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_BiometricInformationTemplateGroup (el: _Element): BiometricInformationTemplateGroup {
-    if (!_cached_decoder_for_BiometricInformationTemplateGroup) { _cached_decoder_for_BiometricInformationTemplateGroup = $._decodeOctetString; }
-    return _cached_decoder_for_BiometricInformationTemplateGroup(el);
-}
-
-let _cached_encoder_for_BiometricInformationTemplateGroup: $.ASN1Encoder<BiometricInformationTemplateGroup> | null = null;
-
-/**
- * @summary Encodes a(n) BiometricInformationTemplateGroup into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BiometricInformationTemplateGroup, encoded as an ASN.1 Element.
- */
-export
-function _encode_BiometricInformationTemplateGroup (value: BiometricInformationTemplateGroup, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BiometricInformationTemplateGroup) { _cached_encoder_for_BiometricInformationTemplateGroup = $._encodeOctetString; }
-    return _cached_encoder_for_BiometricInformationTemplateGroup(value, elGetter);
-}
+export const _decode_BiometricInformationTemplateGroup = $._decodeOctetString;
+export const _encode_BiometricInformationTemplateGroup = $._encodeOctetString;
 
 
 /* eslint-enable */

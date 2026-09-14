@@ -157,35 +157,8 @@ const CommunicationMode_contactC6: number = 4; /* LONG_NAMED_BIT */
  */
 export
 const contactC6: number = CommunicationMode_contactC6; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_CommunicationMode: $.ASN1Decoder<CommunicationMode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CommunicationMode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CommunicationMode (el: _Element): CommunicationMode {
-    if (!_cached_decoder_for_CommunicationMode) { _cached_decoder_for_CommunicationMode = $._decodeBitString; }
-    return _cached_decoder_for_CommunicationMode(el);
-}
-
-let _cached_encoder_for_CommunicationMode: $.ASN1Encoder<CommunicationMode> | null = null;
-
-/**
- * @summary Encodes a(n) CommunicationMode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CommunicationMode, encoded as an ASN.1 Element.
- */
-export
-function _encode_CommunicationMode (value: CommunicationMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommunicationMode) { _cached_encoder_for_CommunicationMode = $._encodeBitString; }
-    return _cached_encoder_for_CommunicationMode(value, elGetter);
-}
+export const _decode_CommunicationMode = $._decodeBitString;
+export const _encode_CommunicationMode = $._encodeBitString;
 
 
 /* eslint-enable */
