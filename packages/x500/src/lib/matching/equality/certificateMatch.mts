@@ -84,6 +84,18 @@ const CP_OID: string = id_ce_certificatePolicies.toString();
 const NC_OID: string = id_ce_nameConstraints.toString();
 const ANY_POLICY_OID: string = anyPolicy.toString();
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.2 component matching.
+ *
+ * TRUE if every present `CertificateAssertion` component matches
+ * the corresponding part of `cert`. Absent assertion components
+ * are ignored. Extension-based components fail if the extension is
+ * missing where the spec requires it (e.g. subject key identifier,
+ * certificate policies). `keyUsage` and `privateKeyValid` succeed
+ * if the corresponding extension is absent. `policy` also succeeds
+ * if either side contains `anyPolicy`. `pathToName` fails if name
+ * constraints inhibit a path to the presented name.
+ */
 export
 function evaluateCertificateAssertion (
     assertion: CertificateAssertion,
@@ -400,6 +412,14 @@ function evaluateCertificateAssertion (
     return true;
 }
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.2 `certificateMatch`.
+ *
+ * Selects one or more `Certificate` values by the characteristics
+ * present in `CertificateAssertion`. TRUE iff all presented
+ * components match as described by
+ * {@link evaluateCertificateAssertion}.
+ */
 export
 const certificateMatch : EqualityMatcher = (
     assertion: ASN1Element,

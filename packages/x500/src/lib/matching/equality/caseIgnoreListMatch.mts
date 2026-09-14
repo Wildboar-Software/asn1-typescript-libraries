@@ -6,6 +6,14 @@ import {
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 import { prepString } from "../../utils/prepString.mjs";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.7 `caseIgnoreListMatch`.
+ *
+ * Equality of a SEQUENCE OF `UnboundedDirectoryString` (e.g.
+ * postal address lines). TRUE iff both sequences have the same
+ * number of strings and corresponding strings match as for
+ * `caseIgnoreMatch` (case and insignificant spaces ignored).
+ */
 export
 const caseIgnoreListMatch: EqualityMatcher = (
     assertion: ASN1Element,

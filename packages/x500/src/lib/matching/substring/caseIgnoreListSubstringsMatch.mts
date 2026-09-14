@@ -9,21 +9,15 @@ import {
     _decode_SubstringAssertion,
 } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 
-// SubstringAssertion ::= SEQUENCE OF CHOICE {
-//     initial  [0]  UnboundedDirectoryString,
-//     any      [1]  UnboundedDirectoryString,
-//     final    [2]  UnboundedDirectoryString,
-//       -- at most one initial and one final component
-//     control       Attribute{{SupportedAttributes}},
-//       -- Used to specify interpretation of the following items
-//     ... }
-
-// caseIgnoreListSubstringsMatch MATCHING-RULE ::= {
-//     SYNTAX       SubstringAssertion
-//     LDAP-SYNTAX  substringAssertion.&id
-//     LDAP-NAME    {"caseIgnoreListSubstringsMatch"}
-//     ID           id-mr-caseIgnoreListSubstringsMatch }
-
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.8
+ * `caseIgnoreListSubstringsMatch`.
+ *
+ * Presented `SubstringAssertion` is matched against the
+ * concatenation of stored `UnboundedDirectoryString` values, using
+ * `caseIgnoreSubstringsMatch`. An `initial`/`any`/`final` piece
+ * must not span more than one stored string.
+ */
 export
 const caseIgnoreListSubstringsMatch: SubstringsMatcher = (
     assertion: ASN1Element,

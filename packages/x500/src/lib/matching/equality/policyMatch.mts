@@ -5,6 +5,12 @@ import {
     _decode_PolicySyntax,
 } from "../../modules/AuthenticationFramework/PolicySyntax.ta.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.8 `policyMatch`.
+ *
+ * Equality for `CertificatePolicy` or `privPolicy`. TRUE iff the
+ * presented `PolicyID` equals the stored `policyIdentifier`.
+ */
 export
 const policyMatch: EqualityMatcher = (
     assertion: ASN1Element,

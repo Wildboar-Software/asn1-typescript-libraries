@@ -11,6 +11,16 @@ import {
 } from "../../modules/AuthenticationFramework/CertificatePair.ta.mjs";
 import { Buffer } from "node:buffer";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.3
+ * `certificatePairExactMatch`.
+ *
+ * Uniquely selects a single `CertificatePair`. Present
+ * `issuedToThisCAAssertion` / `issuedByThisCAAssertion` components
+ * must match the corresponding certificates as for
+ * `certificateExactMatch`. At least one of those components must
+ * be present.
+ */
 export
 const certificatePairExactMatch: EqualityMatcher = (
     assertion: ASN1Element,

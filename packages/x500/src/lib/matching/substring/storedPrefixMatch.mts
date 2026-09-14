@@ -7,9 +7,15 @@ import {
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 import { prepString } from "../../utils/prepString.mjs";
 
-// This is technically a substring matching rule, even though the selection is
-// ignored. See ITU Recommendation Q.1551's `providerId` attribute type as
-// evidence.
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.9 `storedPrefixMatch`.
+ *
+ * TRUE iff the *stored* `UnboundedDirectoryString` is an initial
+ * substring of the *presented* value (reversed from ordinary
+ * substring match). Case and insignificant spaces are ignored
+ * (clause 7.6). Typical use: stored area codes vs a presented
+ * telephone number.
+ */
 export
 const storedPrefixMatch: SubstringsMatcher = (
     assertion: ASN1Element,

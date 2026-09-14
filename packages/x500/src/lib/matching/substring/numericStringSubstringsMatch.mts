@@ -2,6 +2,13 @@ import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.6
+ * `numericStringSubstringsMatch`.
+ *
+ * Same as `caseIgnoreSubstringsMatch` except all spaces are
+ * removed from both strings (clause 7.6.2).
+ */
 export
 const numericStringSubstringsMatch: SubstringsMatcher = (
     assertion: ASN1Element,

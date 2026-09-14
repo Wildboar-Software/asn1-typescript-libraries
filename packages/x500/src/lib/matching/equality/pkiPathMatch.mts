@@ -13,6 +13,14 @@ import type {
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import compareName from "../../comparators/compareName.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.9 `pkiPathMatch`.
+ *
+ * Selects a stored `pkiPath` beginning at a trusted CA and ending
+ * at a given subject. TRUE iff `firstIssuer` matches the issuer of
+ * the first certificate in the SEQUENCE and `lastSubject` matches
+ * the subject of the last. FALSE if either comparison fails.
+ */
 export
 const pkiPathMatch: EqualityMatcher = (
     assertion: ASN1Element,

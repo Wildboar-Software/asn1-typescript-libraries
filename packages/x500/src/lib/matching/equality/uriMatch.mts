@@ -4,6 +4,14 @@ import { URL, domainToASCII } from "node:url";
 import { normalize } from "node:path/posix";
 import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.9.1 `uriMatch`.
+ *
+ * Equality of URI strings after RFC 3986 clause 6.2.2
+ * normalization: percent-encoding case and unreserved decoding,
+ * path-segment `.` / `..` collapse, and scheme-based removal of
+ * empty or default components (including default ports).
+ */
 export
 const uriMatch: EqualityMatcher = (
     assertion: ASN1Element,

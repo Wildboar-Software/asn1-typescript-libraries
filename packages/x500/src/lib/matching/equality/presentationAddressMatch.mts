@@ -16,6 +16,14 @@ function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefin
     );
 }
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.10
+ * `presentationAddressMatch`.
+ *
+ * TRUE iff the P/S/T selectors of presented and stored
+ * `PresentationAddress` are equal and the presented `nAddresses`
+ * are a subset of the stored ones.
+ */
 export
 const presentationAddressMatch: EqualityMatcher = (
     assertion: ASN1Element,

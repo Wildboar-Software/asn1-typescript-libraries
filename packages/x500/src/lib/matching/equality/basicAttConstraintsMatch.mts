@@ -16,6 +16,15 @@ import type {
 } from "../../modules/AuthenticationFramework/Extension.ta.mjs";
 import { DERElement } from "@wildboar/asn1";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 17.5.2.1.2
+ * `basicAttConstraintsMatch`.
+ *
+ * TRUE iff the stored AC contains `basicAttConstraints` and every
+ * component present in the presented
+ * `BasicAttConstraintsSyntax` matches the corresponding stored
+ * component (`authority`, optional `pathLenConstraint`).
+ */
 export
 const basicAttConstraintsMatch: EqualityMatcher = (
     assertion: ASN1Element,

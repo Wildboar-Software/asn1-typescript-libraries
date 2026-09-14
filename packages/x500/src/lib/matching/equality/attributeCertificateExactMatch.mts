@@ -3,13 +3,13 @@ import type { ASN1Element } from "@wildboar/asn1";
 import { Buffer } from "node:buffer";
 
 /**
- * In this matching rule, we only check the signature value, since it is
- * virtually impossible for two different certificates to have the same
- * signature.
+ * Rec. ITU-T X.509 (10/2019), clause 19.3.1
+ * `attributeCertificateExactMatch`.
  *
- * @param assertion
- * @param value
- * @returns
+ * Uniquely selects an `AttributeCertificate`. TRUE iff serial
+ * number and issuer (`AttCertIssuer`) in
+ * `AttributeCertificateExactAssertion` equal those in the stored
+ * certificate.
  */
 export
 const attributeCertificateExactMatch: EqualityMatcher = (

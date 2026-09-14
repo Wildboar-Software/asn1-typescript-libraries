@@ -23,7 +23,6 @@ import { Buffer } from "node:buffer";
 import { _decode_Certificate } from "packages/pki-stub/src/index.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
 
-// TODO: Normalize periods first
 function periodHashKey(period: Period): string {
     const encoding = _encode_Period(period, DER).toBytes();
     return Buffer.from(
@@ -33,14 +32,15 @@ function periodHashKey(period: Period): string {
     ).toString("base64");
 }
 
-// timeSpecificationMatch MATCHING-RULE ::= {
-//   SYNTAX  TimeSpecification
-//   ID      id-mr-timeSpecMatch }
-
-// This matching rule returns TRUE if the attribute/public-key certificate as stored in a directory contains the
-// timeSpecification extension and if components that are present in the presented value match the corresponding
-// components of the stored attribute/public-key certificate timeSpecification extension.
-
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 17.1.2.1.2
+ * `timeSpecificationMatch`.
+ *
+ * TRUE iff the stored attribute certificate or public-key
+ * certificate contains the `timeSpecification` extension and every
+ * component present in the presented `TimeSpecification` matches
+ * the corresponding stored extension component.
+ */
 export
 const timeSpecificationMatch: EqualityMatcher = (
     assertion: ASN1Element,

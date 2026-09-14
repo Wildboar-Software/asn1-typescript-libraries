@@ -11,6 +11,13 @@ import {
 import compareAttCertIssuer from "../../comparators/compareAttCertIssuer.mjs";
 import compareHolder from "../../comparators/compareHolder.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 19.3.3 `holderIssuerMatch`.
+ *
+ * TRUE iff every present `HolderIssuerAssertion` component (`holder`
+ * and/or `issuer`) equals the corresponding component of the
+ * stored `AttributeCertificate`.
+ */
 export
 const holderIssuerMatch: EqualityMatcher = (
     assertion: ASN1Element,

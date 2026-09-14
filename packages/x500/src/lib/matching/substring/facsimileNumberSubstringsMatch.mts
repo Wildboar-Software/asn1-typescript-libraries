@@ -11,6 +11,15 @@ import {
 } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.14
+ * `facsimileNumberSubstringsMatch`.
+ *
+ * Substring-matches the first (`telephoneNumber`) element of a
+ * facsimile sequence; `parameters` is not evaluated. Matching of
+ * that number is as for telephone-number matching (hyphens and
+ * spaces insignificant).
+ */
 export
 const facsimileNumberSubstringsMatch: SubstringsMatcher = (
     assertion: ASN1Element,

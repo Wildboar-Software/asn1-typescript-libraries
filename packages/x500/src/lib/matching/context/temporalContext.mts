@@ -21,6 +21,7 @@ function xor (a: boolean, b: boolean): boolean {
     return ((a && !b) || (!a && b));
 }
 
+/** True if `time` falls in one occurrence of `period` (clause 10.2). */
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number = 0): boolean {
     const adjustedTime = addHours(time, -timezone);
     const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedTime);
@@ -34,6 +35,7 @@ function timeFallsWithinPeriod (time: Date, period: Period, timezone: number = 0
     );
 }
 
+/** `now`/`at` evaluation: the instant must lie in the specification. */
 function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification): boolean {
     const result = ((): boolean => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
@@ -55,6 +57,10 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
     return xor(result, spec.notThisTime);
 }
 
+/**
+ * `between` evaluation: overlap, or containment when `entirely` is
+ * TRUE. `notThisTime` inverts the result (clause 10.2).
+ */
 function timeSpecificationContains (spec: TimeSpecification, start: Date, end: Date, entirely: boolean = false): boolean {
     const result = ((): boolean => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
@@ -106,6 +112,18 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
     return xor(result, spec.notThisTime);
 }
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 10.2 `temporalContext`.
+ *
+ * Associates an attribute value with a `TimeSpecification`
+ * (absolute span or periodic set; optional timezone and
+ * `notThisTime` negation). A `TimeAssertion` matches if the times
+ * overlap: `now`/`at` must fall within the stored specification;
+ * `between` overlaps unless `entirely` is TRUE, in which case the
+ * whole asserted band must lie inside the stored times. Missing
+ * timezone is interpreted in the DSA's zone. Periodic SET OF is a
+ * logical OR.
+ */
 export
 const evaluateTemporalContext: EqualityMatcher = (
     assertion: ASN1Element,

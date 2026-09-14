@@ -17,6 +17,15 @@ import type {
 import compareRoleSpecCertIdentifier from "../../comparators/compareRoleSpecCertIdentifier.mjs";
 import { DERElement } from "@wildboar/asn1";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 17.4.2.1.2
+ * `roleSpecCertIdMatch`.
+ *
+ * TRUE iff the stored AC contains `roleSpecCertIdentifier` and
+ * every component present in the presented
+ * `RoleSpecCertIdentifierSyntax` matches the corresponding stored
+ * component.
+ */
 export
 const roleSpecCertIdMatch: EqualityMatcher = (
     assertion: ASN1Element,

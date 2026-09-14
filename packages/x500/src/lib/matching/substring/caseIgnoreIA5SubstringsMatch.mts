@@ -7,6 +7,15 @@ import {
 } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.11.3
+ * `caseIgnoreIA5SubstringsMatch` (LDAP-defined).
+ *
+ * Substring match of an IA5String stored value against a
+ * `SubstringAssertion` after string preparation (clause 7.2). Same
+ * partitioning rules as `caseIgnoreSubstringsMatch` (clause
+ * 8.1.3).
+ */
 export
 const caseIgnoreIA5SubstringsMatch: SubstringsMatcher = (
     assertion: ASN1Element,
