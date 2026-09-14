@@ -20,9 +20,10 @@ import {
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import { Buffer } from "node:buffer";
+import { normalizePeriod } from "../../utils/normalizePeriod.mjs";
 
 function periodHashKey(period: Period): string {
-    const encoding = _encode_Period(period, DER).toBytes();
+    const encoding = _encode_Period(normalizePeriod(period), DER).toBytes();
     return Buffer.from(
         encoding.buffer,
         encoding.byteOffset,
