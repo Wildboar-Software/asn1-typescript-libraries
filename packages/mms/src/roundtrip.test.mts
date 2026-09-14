@@ -89,12 +89,17 @@ import {
 } from "./lib/modules/ISO-9506-MMS-1/ConfirmedServiceResponse.ta.mjs";
 import {
     Identify_Response,
+    _encode_Identify_Response,
+    _decode_Identify_Response,
 } from "./lib/modules/ISO-9506-MMS-1/Identify-Response.ta.mjs";
 import {
     type AdditionalService_Response,
     _encode_AdditionalService_Response,
     _decode_AdditionalService_Response,
 } from "./lib/modules/ISO-9506-MMS-1/AdditionalService-Response.ta.mjs";
+import {
+    RejectPDU,
+} from "./lib/modules/ISO-9506-MMS-1/RejectPDU.ta.mjs";
 
 describe("ISO-9506 MMS types", () => {
     test("round-trips an Identifier", () => {
@@ -279,43 +284,68 @@ describe("ISO-9506 MMS types", () => {
         ).toEqual(absent);
     });
 
-    test("round-trips ConfirmedServiceResponse identify SEQUENCE and NULL", () => {
+    test("round-trips ConfirmedServiceResponse identify as ASN1Element", () => {
+        const identify = new Identify_Response(
+            { notChar: "Wildboar" },
+            { notChar: "MMS" },
+            { notChar: "1.0" }
+        );
         const coded: ConfirmedServiceResponse = {
-            identify: new Identify_Response(
-                { notChar: "Wildboar" },
-                { notChar: "MMS" },
-                { notChar: "1.0" }
-            ),
+            identify: _encode_Identify_Response(identify, $.BER),
         };
         const decoded = _decode_ConfirmedServiceResponse(
             _encode_ConfirmedServiceResponse(coded, $.BER)
         );
         expect("identify" in decoded).toBe(true);
-        if ("identify" in decoded && decoded.identify !== null) {
-            expect(decoded.identify.vendorName).toEqual({ notChar: "Wildboar" });
-            expect(decoded.identify.modelName).toEqual({ notChar: "MMS" });
-            expect(decoded.identify.revision).toEqual({ notChar: "1.0" });
+        if ("identify" in decoded) {
+            const value = _decode_Identify_Response(decoded.identify);
+            expect(value.vendorName).toEqual({ notChar: "Wildboar" });
+            expect(value.modelName).toEqual({ notChar: "MMS" });
+            expect(value.revision).toEqual({ notChar: "1.0" });
         }
-        const absent: ConfirmedServiceResponse = { identify: null };
+    });
+
+    test("round-trips ConfirmedServiceResponse rename NULL and RejectPDU", () => {
+        const absent: ConfirmedServiceResponse = { rename: null };
         expect(
             _decode_ConfirmedServiceResponse(
                 _encode_ConfirmedServiceResponse(absent, $.BER)
             )
         ).toEqual(absent);
+        const reject = new RejectPDU(undefined, { confirmed_responsePDU: 1 });
+        const decoded = _decode_ConfirmedServiceResponse(
+            _encode_ConfirmedServiceResponse({ rename: reject }, $.BER)
+        );
+        expect("rename" in decoded).toBe(true);
+        if ("rename" in decoded) {
+            expect(decoded.rename).toBeInstanceOf(RejectPDU);
+            if (decoded.rename instanceof RejectPDU) {
+                expect(decoded.rename.rejectReason).toEqual({
+                    confirmed_responsePDU: 1,
+                });
+            }
+        }
     });
 
-    test("round-trips AdditionalService-Response vMDReset NULL and select NULL", () => {
-        const absent: AdditionalService_Response = { vMDReset: null };
+    test("round-trips AdditionalService-Response select NULL and RejectPDU", () => {
+        const absent: AdditionalService_Response = { select: null };
         expect(
             _decode_AdditionalService_Response(
                 _encode_AdditionalService_Response(absent, $.BER)
             )
         ).toEqual(absent);
-        const alsoAbsent: AdditionalService_Response = { select: null };
-        expect(
-            _decode_AdditionalService_Response(
-                _encode_AdditionalService_Response(alsoAbsent, $.BER)
-            )
-        ).toEqual(alsoAbsent);
+        const reject = new RejectPDU(undefined, { confirmed_responsePDU: 3 });
+        const decoded = _decode_AdditionalService_Response(
+            _encode_AdditionalService_Response({ select: reject }, $.BER)
+        );
+        expect("select" in decoded).toBe(true);
+        if ("select" in decoded) {
+            expect(decoded.select).toBeInstanceOf(RejectPDU);
+            if (decoded.select instanceof RejectPDU) {
+                expect(decoded.select.rejectReason).toEqual({
+                    confirmed_responsePDU: 3,
+                });
+            }
+        }
     });
 });
