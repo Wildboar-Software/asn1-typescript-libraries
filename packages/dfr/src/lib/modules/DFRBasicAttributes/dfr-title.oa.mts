@@ -21,7 +21,11 @@ import { id_att_dfr_title } from "../DFRObjectIdentifiers/id-att-dfr-title.va.mj
 /**
  * @summary dfr_title
  * @description
- * 
+ *
+ * User-specified name. Required on Create (ISO/IEC 10166-1:1991/Cor.2:1994
+ * §8.2.1). caseIgnoreStringSyntax. Single-valued. Copied by Copy. ISO/IEC
+ * 10166-1:1991 §9.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

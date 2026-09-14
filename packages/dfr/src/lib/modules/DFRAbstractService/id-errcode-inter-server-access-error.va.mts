@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary id_errcode_inter_server_access_error
  * @description
- * 
+ *
+ * Local ROSE error code 6 for `interServerAccessError`. ISO/IEC 10166-1:1991
+ * §8.3.6. ISO/IEC 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,10 @@ import { VersionManagementProblem, _enum_for_VersionManagementProblem, _decode_V
 /**
  * @summary versionManagementError_ParameterType
  * @description
- * 
+ *
+ * The entry (or its intended previous version) and the problem. ISO/IEC
+ * 10166-1:1991 §8.3.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,18 @@ class versionManagementError_ParameterType {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Entry or potential previous version.
          * @public
          * @readonly
          */
         readonly entry: DfrEntryName,
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why versioning failed.
          * @public
          * @readonly
          */

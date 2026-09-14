@@ -45,7 +45,13 @@ import { id_opcode_create } from "../DFRAbstractService/id-opcode-create.va.mjs"
 /**
  * @summary create
  * @description
- * 
+ *
+ * Place a new object in a parent group. User must supply `dfr-title`; a
+ * document must also have `dfr-document-type` (ISO/IEC 10166-1:1991/Cor.2:1994
+ * §8.2.1). Content is optional for a document, mandatory for a reference, and
+ * forbidden for a group or SRL. Default access-list is creator as sole owner.
+ * ISO/IEC 10166-1:1991 §8.2.1. Local opcode 1 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

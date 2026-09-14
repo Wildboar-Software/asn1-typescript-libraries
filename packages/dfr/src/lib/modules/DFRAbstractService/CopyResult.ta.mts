@@ -17,7 +17,11 @@ import { CommonUpdateResult, _decode_CommonUpdateResult, _encode_CommonUpdateRes
 /**
  * @summary CopyResult
  * @description
- * 
+ *
+ * UPI of the copy, optional read-back, warnings for descendants not copied,
+ * optional `referent-altered` (not when a group was copied). ISO/IEC
+ * 10166-1:1991 §8.2.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,10 @@ import { NameProblem, _enum_for_NameProblem, _decode_NameProblem, _encode_NamePr
 /**
  * @summary nameError_ParameterType_Item
  * @description
- * 
+ *
+ * One name problem, with the name as the user supplied it. ISO/IEC
+ * 10166-1:1991 §8.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,18 @@ class nameError_ParameterType_Item {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Name that failed.
          * @public
          * @readonly
          */
         readonly entry: DfrEntryName,
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why.
          * @public
          * @readonly
          */

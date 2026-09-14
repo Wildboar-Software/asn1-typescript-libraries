@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary InterServerAccessProblem
  * @description
- * 
+ *
+ * Why an external referent store could not be used. ISO/IEC 10166-1:1991
+ * §8.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,7 +44,10 @@ enum _enum_for_InterServerAccessProblem {
 /**
  * @summary InterServerAccessProblem
  * @description
- * 
+ *
+ * Why an external referent store could not be used. ISO/IEC 10166-1:1991
+ * §8.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +67,10 @@ type InterServerAccessProblem = _enum_for_InterServerAccessProblem;
 /**
  * @summary InterServerAccessProblem
  * @description
- * 
+ *
+ * Why an external referent store could not be used. ISO/IEC 10166-1:1991
+ * §8.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,6 +89,9 @@ const InterServerAccessProblem = _enum_for_InterServerAccessProblem;
 
 /**
  * @summary InterServerAccessProblem_referent_store_not_found
+ * @description
+ *
+ * Accessee identification in the DOR (or Directory) is bad.
  * @constant
  * @type {number}
  */
@@ -88,6 +100,9 @@ const InterServerAccessProblem_referent_store_not_found: InterServerAccessProble
 
 /**
  * @summary referent_store_not_found
+ * @description
+ *
+ * Accessee identification in the DOR (or Directory) is bad.
  * @constant
  * @type {number}
  */
@@ -96,6 +111,9 @@ const referent_store_not_found: InterServerAccessProblem = InterServerAccessProb
 
 /**
  * @summary InterServerAccessProblem_referent_store_unreachable
+ * @description
+ *
+ * No protocol in common with the accessee.
  * @constant
  * @type {number}
  */
@@ -104,6 +122,9 @@ const InterServerAccessProblem_referent_store_unreachable: InterServerAccessProb
 
 /**
  * @summary referent_store_unreachable
+ * @description
+ *
+ * No protocol in common with the accessee.
  * @constant
  * @type {number}
  */
@@ -112,6 +133,9 @@ const referent_store_unreachable: InterServerAccessProblem = InterServerAccessPr
 
 /**
  * @summary InterServerAccessProblem_referent_store_unavailable
+ * @description
+ *
+ * Accessee temporarily unavailable.
  * @constant
  * @type {number}
  */
@@ -120,6 +144,9 @@ const InterServerAccessProblem_referent_store_unavailable: InterServerAccessProb
 
 /**
  * @summary referent_store_unavailable
+ * @description
+ *
+ * Accessee temporarily unavailable.
  * @constant
  * @type {number}
  */
@@ -128,6 +155,9 @@ const referent_store_unavailable: InterServerAccessProblem = InterServerAccessPr
 
 /**
  * @summary InterServerAccessProblem_referent_store_security_problem
+ * @description
+ *
+ * User or accessor lacks rights at the accessee.
  * @constant
  * @type {number}
  */
@@ -136,6 +166,9 @@ const InterServerAccessProblem_referent_store_security_problem: InterServerAcces
 
 /**
  * @summary referent_store_security_problem
+ * @description
+ *
+ * User or accessor lacks rights at the accessee.
  * @constant
  * @type {number}
  */

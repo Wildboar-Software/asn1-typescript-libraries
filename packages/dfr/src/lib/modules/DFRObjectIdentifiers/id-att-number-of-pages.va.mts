@@ -18,7 +18,10 @@ import { id_dfr_ext_att } from "../DFRObjectIdentifiers/id-dfr-ext-att.va.mjs";
 /**
  * @summary id_att_number_of_pages
  * @description
- * 
+ *
+ * Attribute type OID of `number-of-pages`. ISO/IEC 10166-1:1991 §9.3.16, Annex
+ * B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

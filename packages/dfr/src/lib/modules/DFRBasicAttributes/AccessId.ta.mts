@@ -17,7 +17,10 @@ import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName
 /**
  * @summary AccessId
  * @description
- * 
+ *
+ * Directory DistinguishedName of a security subject on an access-list. ISO/IEC
+ * 10166-1:1991 §6.3.8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

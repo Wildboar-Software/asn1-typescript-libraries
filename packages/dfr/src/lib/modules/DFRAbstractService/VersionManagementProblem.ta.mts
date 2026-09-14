@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary VersionManagementProblem
  * @description
- * 
+ *
+ * Why versioning failed. ISO/IEC 10166-1:1991 §8.3.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +39,9 @@ enum _enum_for_VersionManagementProblem {
 /**
  * @summary VersionManagementProblem
  * @description
- * 
+ *
+ * Why versioning failed. ISO/IEC 10166-1:1991 §8.3.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +59,9 @@ type VersionManagementProblem = _enum_for_VersionManagementProblem;
 /**
  * @summary VersionManagementProblem
  * @description
- * 
+ *
+ * Why versioning failed. ISO/IEC 10166-1:1991 §8.3.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +78,9 @@ const VersionManagementProblem = _enum_for_VersionManagementProblem;
 
 /**
  * @summary VersionManagementProblem_inappropriate_object_class
+ * @description
+ *
+ * Only documents can be versions.
  * @constant
  * @type {number}
  */
@@ -80,6 +89,9 @@ const VersionManagementProblem_inappropriate_object_class: VersionManagementProb
 
 /**
  * @summary inappropriate_object_class
+ * @description
+ *
+ * Only documents can be versions.
  * @constant
  * @type {number}
  */
@@ -88,6 +100,10 @@ const inappropriate_object_class: VersionManagementProblem = VersionManagementPr
 
 /**
  * @summary VersionManagementProblem_belongs_to_another_conceptual_document
+ * @description
+ *
+ * Entry is already a version of another conceptual-document, or listed
+ * previous versions are not all of the same one.
  * @constant
  * @type {number}
  */
@@ -96,6 +112,10 @@ const VersionManagementProblem_belongs_to_another_conceptual_document: VersionMa
 
 /**
  * @summary belongs_to_another_conceptual_document
+ * @description
+ *
+ * Entry is already a version of another conceptual-document, or listed
+ * previous versions are not all of the same one.
  * @constant
  * @type {number}
  */

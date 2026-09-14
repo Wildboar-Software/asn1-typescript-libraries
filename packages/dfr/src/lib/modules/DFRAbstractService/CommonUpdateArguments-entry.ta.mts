@@ -19,7 +19,10 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 /**
  * @summary CommonUpdateArguments_entry
  * @description
- * 
+ *
+ * Source of the entry being copied/moved/read/modified: a local `DfrEntryName`
+ * or a DOR for an external object. ISO/IEC 10166-1:1991 §8.1.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

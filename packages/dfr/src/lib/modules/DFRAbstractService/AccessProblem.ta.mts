@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccessProblem
  * @description
- * 
+ *
+ * Why access to a named entry failed. ISO/IEC 10166-1:1991 §8.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +41,9 @@ enum _enum_for_AccessProblem {
 /**
  * @summary AccessProblem
  * @description
- * 
+ *
+ * Why access to a named entry failed. ISO/IEC 10166-1:1991 §8.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +62,9 @@ type AccessProblem = _enum_for_AccessProblem;
 /**
  * @summary AccessProblem
  * @description
- * 
+ *
+ * Why access to a named entry failed. ISO/IEC 10166-1:1991 §8.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +82,9 @@ const AccessProblem = _enum_for_AccessProblem;
 
 /**
  * @summary AccessProblem_inappropriate_object_class
+ * @description
+ *
+ * Named object has the wrong class.
  * @constant
  * @type {number}
  */
@@ -84,6 +93,9 @@ const AccessProblem_inappropriate_object_class: AccessProblem = AccessProblem.in
 
 /**
  * @summary inappropriate_object_class
+ * @description
+ *
+ * Named object has the wrong class.
  * @constant
  * @type {number}
  */
@@ -92,6 +104,9 @@ const inappropriate_object_class: AccessProblem = AccessProblem.inappropriate_ob
 
 /**
  * @summary AccessProblem_reserved_by_a_user
+ * @description
+ *
+ * Entry or its parent is reserved by this or another user.
  * @constant
  * @type {number}
  */
@@ -100,6 +115,9 @@ const AccessProblem_reserved_by_a_user: AccessProblem = AccessProblem.reserved_b
 
 /**
  * @summary reserved_by_a_user
+ * @description
+ *
+ * Entry or its parent is reserved by this or another user.
  * @constant
  * @type {number}
  */
@@ -108,6 +126,9 @@ const reserved_by_a_user: AccessProblem = AccessProblem.reserved_by_a_user; /* S
 
 /**
  * @summary AccessProblem_externally_located_object
+ * @description
+ *
+ * Entry is in another store and unsuitable for this operation.
  * @constant
  * @type {number}
  */
@@ -116,6 +137,9 @@ const AccessProblem_externally_located_object: AccessProblem = AccessProblem.ext
 
 /**
  * @summary externally_located_object
+ * @description
+ *
+ * Entry is in another store and unsuitable for this operation.
  * @constant
  * @type {number}
  */

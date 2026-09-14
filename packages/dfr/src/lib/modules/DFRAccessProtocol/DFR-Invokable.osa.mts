@@ -36,7 +36,10 @@ import { abandon } from "../DFRAbstractService/abandon.oa.mjs";
 /**
  * @summary DFR_Invokable
  * @description
- * 
+ *
+ * Operations the DFR-User (consumer) may invoke. ISO/IEC 10166-2:1991 §5.2,
+ * §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

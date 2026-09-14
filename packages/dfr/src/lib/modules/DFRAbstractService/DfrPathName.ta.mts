@@ -17,7 +17,14 @@ import { DfrTitle, _decode_DfrTitle, _encode_DfrTitle } from "../DFRAbstractServ
 /**
  * @summary DfrPathName
  * @description
- * 
+ *
+ * Sequence of `DfrTitle` values identifying an entry. After Cor.1 this is the
+ * titles of the entry and all ancestors, from the root down. Unambiguous only
+ * if title uniqueness is enforced (local or global). ISO/IEC 10166-1:1991
+ * §8.1.4; ISO/IEC 10166-1:1991/Cor.1:1994 §8.1.4, §9.2.5. Cor.3 removed the
+ * convention that a root group's pathname is empty (ISO/IEC
+ * 10166-1:1991/Cor.3:1994 §9.2.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

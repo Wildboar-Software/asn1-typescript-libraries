@@ -19,7 +19,10 @@ import { QoS_level_level_3, _decode_QoS_level_level_3, _encode_QoS_level_level_3
 /**
  * @summary QoS_level
  * @description
- * 
+ *
+ * QoS level of a DOR (ISO/IEC 10031-2). DFR reports referent-modified relative
+ * to produce-time stored here. ISO/IEC 10166-1:1991 §8.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

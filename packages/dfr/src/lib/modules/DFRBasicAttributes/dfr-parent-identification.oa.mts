@@ -24,7 +24,10 @@ import {
 /**
  * @summary dfr_parent_identification
  * @description
- * 
+ *
+ * UPI of the parent group. Root group: empty OCTET STRING. Server-maintained.
+ * Not copied by Copy. ISO/IEC 10166-1:1991 §9.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

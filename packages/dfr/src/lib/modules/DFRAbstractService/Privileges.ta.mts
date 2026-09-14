@@ -18,7 +18,12 @@ import { PrivilegeAttributeCertificate, _decode_PrivilegeAttributeCertificate, _
 /**
  * @summary Privileges
  * @description
- * 
+ *
+ * Per-operation PACs. `operation-Pac` supplements or replaces bind privileges
+ * for this request (policy-defined), including when one association is
+ * multiplexed among users. `proxy-pac` is presented onward as an
+ * operation-Pac. ISO/IEC 10166-1:1991 §8.1.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +46,9 @@ class Privileges {
         readonly operation_pac: OPTIONAL<PrivilegeAttributeCertificate>,
         /**
          * @summary `proxy_pac`.
+         * @description
+         *
+         * PAC the server may use as accessor toward another AE.
          * @public
          * @readonly
          */

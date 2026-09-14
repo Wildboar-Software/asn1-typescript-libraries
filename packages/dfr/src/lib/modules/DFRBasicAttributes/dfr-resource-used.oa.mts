@@ -25,7 +25,11 @@ import {
 /**
  * @summary dfr_resource_used
  * @description
- * 
+ *
+ * Resources consumed (e.g. storage). Integer; semantics
+ * implementation-specific. Server-maintained. Copied by Copy. ISO/IEC
+ * 10166-1:1991 §9.2.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

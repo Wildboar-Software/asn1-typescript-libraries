@@ -19,7 +19,9 @@ import { ReservationProblem, _enum_for_ReservationProblem, _decode_ReservationPr
 /**
  * @summary reservationError_ParameterType
  * @description
- * 
+ *
+ * Entry and reservation problem. ISO/IEC 10166-1:1991 §8.3.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +38,18 @@ class reservationError_ParameterType {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Entry whose reservation could not be changed.
          * @public
          * @readonly
          */
         readonly entry: DfrEntryName,
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why.
          * @public
          * @readonly
          */

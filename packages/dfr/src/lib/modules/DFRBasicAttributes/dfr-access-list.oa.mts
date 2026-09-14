@@ -21,7 +21,11 @@ import { id_att_dfr_access_list } from "../DFRObjectIdentifiers/id-att-dfr-acces
 /**
  * @summary dfr_access_list
  * @description
- * 
+ *
+ * Security subjects and their AccessRights (the CAP). Full value visible with
+ * extended-read; only the caller's own element with read. Only an owner may
+ * modify it. Multi-valued. ISO/IEC 10166-1:1991 §9.2.30, §6.3.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

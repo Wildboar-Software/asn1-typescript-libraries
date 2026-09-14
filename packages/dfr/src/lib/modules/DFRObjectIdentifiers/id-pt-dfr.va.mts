@@ -18,7 +18,9 @@ import { id_pt } from "../DFRObjectIdentifiers/id-pt.va.mjs";
 /**
  * @summary id_pt_dfr
  * @description
- * 
+ *
+ * DFR port. {id-pt 0}. ISO/IEC 10166-1:1991 Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

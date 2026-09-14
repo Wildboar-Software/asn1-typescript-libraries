@@ -18,7 +18,9 @@ import { id_dfr_oc } from "../DFRObjectIdentifiers/id-dfr-oc.va.mjs";
 /**
  * @summary id_dfr_root_group
  * @description
- * 
+ *
+ * Root-group object class. {id-dfr-oc 1}. ISO/IEC 10166-1:1991 Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -27,7 +27,13 @@ import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERAT
 /**
  * @summary DfrBindArgument
  * @description
- * 
+ *
+ * Bind argument: initiator name, credentials, optional retrieve restrictions
+ * (until unbind), optional configuration request, OSI bind-security, default
+ * priority, and whether DORs may be produced or consumed. ISO/IEC 10166-1:1991
+ * §7.1.1. Cor.1: a document type outside `allowed-document-types` is always an
+ * error (ISO/IEC 10166-1:1991/Cor.1:1994 §7.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,30 +56,51 @@ class DfrBindArgument {
     constructor (
         /**
          * @summary `initiator_name`.
+         * @description
+         *
+         * Directory distinguished name of the initiator.
          * @public
          * @readonly
          */
         readonly initiator_name: DistinguishedName,
         /**
          * @summary `credentials`.
+         * @description
+         *
+         * Simple password or a PAC from authentication done outside DFR.
+         * Syntax of authentication credentials is out of scope of ISO/IEC
+         * 10166-1:1991. §7.1.1.
          * @public
          * @readonly
          */
         readonly credentials: Credentials,
         /**
          * @summary `retrieve_restrictions`.
+         * @description
+         *
+         * Caps on returned document types and PDU length for the association.
+         * Default: no restriction. ISO/IEC 10166-1:1991 §7.1.1; ISO/IEC
+         * 10166-1:1991/Cor.1:1994.
          * @public
          * @readonly
          */
         readonly retrieve_restrictions: OPTIONAL<Restrictions>,
         /**
          * @summary `dfr_configuration_request`.
+         * @description
+         *
+         * If true, the result reports supported constraints, document types,
+         * and function-set. Default false. ISO/IEC 10166-1:1991 §7.1.1.
          * @public
          * @readonly
          */
         readonly dfr_configuration_request: OPTIONAL<BOOLEAN>,
         /**
          * @summary `bind_security`.
+         * @description
+         *
+         * OSI security services for the bind (peer authentication,
+         * confidentiality, integrity). EXTERNAL. ISO/IEC 10166-1:1991 §7.1.1.
          * @public
          * @readonly
          */
@@ -86,12 +113,20 @@ class DfrBindArgument {
         readonly priority: OPTIONAL<Priority>,
         /**
          * @summary `dor_for_produce_operations`.
+         * @description
+         *
+         * Request that the server be willing to return a DOR. Whether it
+         * commits is in the result. Default true. ISO/IEC 10166-1:1991 §7.1.1.
          * @public
          * @readonly
          */
         readonly dor_for_produce_operations: OPTIONAL<BOOLEAN>,
         /**
          * @summary `dor_for_consume_operations`.
+         * @description
+         *
+         * Request that the server accept a DOR in operation arguments. Default
+         * true. ISO/IEC 10166-1:1991 §7.1.1.
          * @public
          * @readonly
          */

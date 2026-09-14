@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Requested_QoS_level
  * @description
- * 
+ *
+ * QoS requested when DFR produces a DOR (`reference-qos` on Read and other
+ * produce-operations). ISO/IEC 10166-1:1991 §8.1.5.7, §6.3.3. Actual QoS
+ * returned may differ (ISO/IEC 10166-1:1991 §8.2.5.2). Details: ISO/IEC
+ * 10031-2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

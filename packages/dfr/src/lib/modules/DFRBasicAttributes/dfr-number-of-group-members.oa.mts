@@ -25,7 +25,10 @@ import {
 /**
  * @summary dfr_number_of_group_members
  * @description
- * 
+ *
+ * Member count of a group. Server-maintained. Copied by Copy. ISO/IEC
+ * 10166-1:1991 §9.2.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

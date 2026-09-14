@@ -19,7 +19,9 @@ import { UpdateProblem, _enum_for_UpdateProblem, _decode_UpdateProblem, _encode_
 /**
  * @summary updateError_ParameterType
  * @description
- * 
+ *
+ * Entry and update problem. ISO/IEC 10166-1:1991 §8.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +38,18 @@ class updateError_ParameterType {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Entry that could not be updated.
          * @public
          * @readonly
          */
         readonly entry: DfrEntryName,
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why.
          * @public
          * @readonly
          */

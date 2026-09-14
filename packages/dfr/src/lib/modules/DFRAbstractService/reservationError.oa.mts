@@ -23,7 +23,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary reservationError
  * @description
- * 
+ *
+ * Cannot reserve or unreserve as requested. No read right ⇒ nameError instead
+ * of cannot-reserve. ISO/IEC 10166-1:1991 §8.3.7. Local error 7 (ISO/IEC
+ * 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NameProblem
  * @description
- * 
+ *
+ * Why a DfrEntryName failed. ISO/IEC 10166-1:1991 §8.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,7 +43,9 @@ enum _enum_for_NameProblem {
 /**
  * @summary NameProblem
  * @description
- * 
+ *
+ * Why a DfrEntryName failed. ISO/IEC 10166-1:1991 §8.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +65,9 @@ type NameProblem = _enum_for_NameProblem;
 /**
  * @summary NameProblem
  * @description
- * 
+ *
+ * Why a DfrEntryName failed. ISO/IEC 10166-1:1991 §8.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,6 +86,10 @@ const NameProblem = _enum_for_NameProblem;
 
 /**
  * @summary NameProblem_invalid_upi
+ * @description
+ *
+ * UPI never assigned, or the object was deleted; also used to hide an
+ * unreadable entry.
  * @constant
  * @type {number}
  */
@@ -88,6 +98,10 @@ const NameProblem_invalid_upi: NameProblem = NameProblem.invalid_upi; /* LONG_NA
 
 /**
  * @summary invalid_upi
+ * @description
+ *
+ * UPI never assigned, or the object was deleted; also used to hide an
+ * unreadable entry.
  * @constant
  * @type {number}
  */
@@ -96,6 +110,10 @@ const invalid_upi: NameProblem = NameProblem.invalid_upi; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary NameProblem_invalid_path_name
+ * @description
+ *
+ * Absolute or relative path matches no entry; also used to hide an unreadable
+ * entry.
  * @constant
  * @type {number}
  */
@@ -104,6 +122,10 @@ const NameProblem_invalid_path_name: NameProblem = NameProblem.invalid_path_name
 
 /**
  * @summary invalid_path_name
+ * @description
+ *
+ * Absolute or relative path matches no entry; also used to hide an unreadable
+ * entry.
  * @constant
  * @type {number}
  */
@@ -112,6 +134,9 @@ const invalid_path_name: NameProblem = NameProblem.invalid_path_name; /* SHORT_N
 
 /**
  * @summary NameProblem_ambiguous_path_name
+ * @description
+ *
+ * Path matches more than one entry (titles not unique).
  * @constant
  * @type {number}
  */
@@ -120,6 +145,9 @@ const NameProblem_ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_
 
 /**
  * @summary ambiguous_path_name
+ * @description
+ *
+ * Path matches more than one entry (titles not unique).
  * @constant
  * @type {number}
  */
@@ -128,6 +156,10 @@ const ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_name; /* SHO
 
 /**
  * @summary NameProblem_inappropriate_object_class
+ * @description
+ *
+ * Named object has the wrong class for the operation (e.g. a document in
+ * List).
  * @constant
  * @type {number}
  */
@@ -136,6 +168,10 @@ const NameProblem_inappropriate_object_class: NameProblem = NameProblem.inapprop
 
 /**
  * @summary inappropriate_object_class
+ * @description
+ *
+ * Named object has the wrong class for the operation (e.g. a document in
+ * List).
  * @constant
  * @type {number}
  */

@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Direction
  * @description
- * 
+ *
+ * Sort direction. Character ordering uses an unspecified collating sequence.
+ * ISO/IEC 10166-1:1991 §8.1.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +40,10 @@ enum _enum_for_Direction {
 /**
  * @summary Direction
  * @description
- * 
+ *
+ * Sort direction. Character ordering uses an unspecified collating sequence.
+ * ISO/IEC 10166-1:1991 §8.1.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +61,10 @@ type Direction = _enum_for_Direction;
 /**
  * @summary Direction
  * @description
- * 
+ *
+ * Sort direction. Character ordering uses an unspecified collating sequence.
+ * ISO/IEC 10166-1:1991 §8.1.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +81,9 @@ const Direction = _enum_for_Direction;
 
 /**
  * @summary Direction_ascending
+ * @description
+ *
+ * Ascending key order.
  * @constant
  * @type {number}
  */
@@ -80,6 +92,9 @@ const Direction_ascending: Direction = Direction.ascending; /* LONG_NAMED_ENUMER
 
 /**
  * @summary ascending
+ * @description
+ *
+ * Ascending key order.
  * @constant
  * @type {number}
  */
@@ -88,6 +103,9 @@ const ascending: Direction = Direction.ascending; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary Direction_descending
+ * @description
+ *
+ * Descending key order.
  * @constant
  * @type {number}
  */
@@ -96,6 +114,9 @@ const Direction_descending: Direction = Direction.descending; /* LONG_NAMED_ENUM
 
 /**
  * @summary descending
+ * @description
+ *
+ * Descending key order.
  * @constant
  * @type {number}
  */

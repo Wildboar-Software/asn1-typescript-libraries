@@ -18,7 +18,9 @@ import { id_dfr_protocol } from "../DFRProtocolObjectIdentifiers/id-dfr-protocol
 /**
  * @summary id_ase
  * @description
- * 
+ *
+ * ASE arc. {id-dfr-protocol 3}. ISO/IEC 10166-2:1991 Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

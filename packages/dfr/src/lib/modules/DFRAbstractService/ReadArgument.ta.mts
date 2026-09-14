@@ -47,7 +47,12 @@ import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstra
 /**
  * @summary ReadArgument
  * @description
- * 
+ *
+ * `entry` and `selection` required. If `entry` is a DOR, selection must not
+ * request a DOR. `dereferencing` true reads the referent (references only).
+ * `token` is used only when dereferencing a DOR that had a token at
+ * produce-time. ISO/IEC 10166-1:1991 §8.2.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,84 +71,145 @@ class ReadArgument {
     constructor (
         /**
          * @summary `object_class`.
+         * @description
+         *
+         * Class of the DFR-Object. Mandatory on Create; optional elsewhere and
+         * then used only to validate the named entry. ISO/IEC 10166-1:1991
+         * §8.1.5.1.
          * @public
          * @readonly
          */
         readonly object_class: OPTIONAL<DfrObjectClass> /* REPLICATED_COMPONENT */,
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Local name or DOR of the object to copy, move, read, modify, delete,
+         * list, reserve, etc. Absent on Create. ISO/IEC 10166-1:1991 §8.1.5.2.
          * @public
          * @readonly
          */
         readonly entry: OPTIONAL<CommonUpdateArguments_entry> /* REPLICATED_COMPONENT */,
         /**
          * @summary `destination`.
+         * @description
+         *
+         * Not applicable to Read. ISO/IEC 10166-1:1991 §8.1.5.3.
          * @public
          * @readonly
          */
         readonly destination: OPTIONAL<DfrEntryName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `position`.
+         * @description
+         *
+         * Not applicable to Read. ISO/IEC 10166-1:1991 §8.1.5.4.
          * @public
          * @readonly
          */
         readonly position: OPTIONAL<GroupMemberPosition> /* REPLICATED_COMPONENT */,
         /**
          * @summary `modifications`.
+         * @description
+         *
+         * Not applicable to Read. ISO/IEC 10166-1:1991 §8.1.5.5.
          * @public
          * @readonly
          */
         readonly modifications: OPTIONAL<EntryModification[]> /* REPLICATED_COMPONENT */,
         /**
          * @summary `selection`.
+         * @description
+         *
+         * Which attributes and/or content (or a produced DOR) to read back in
+         * the result. Mandatory on Read. ISO/IEC 10166-1:1991 §8.1.5.6.
          * @public
          * @readonly
          */
         readonly selection: OPTIONAL<EntryInformationSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reference_qos`.
+         * @description
+         *
+         * Requested DOR quality of service when a DOR is to be produced.
+         * ISO/IEC 10166-1:1991 §8.1.5.7.
          * @public
          * @readonly
          */
         readonly reference_qos: OPTIONAL<Requested_QoS_level> /* REPLICATED_COMPONENT */,
         /**
          * @summary `dereferencing`.
+         * @description
+         *
+         * If true, return selected items from the referent rather than the
+         * named reference. ISO/IEC 10166-1:1991 §8.2.5.1.
          * @public
          * @readonly
          */
         readonly dereferencing: OPTIONAL<BOOLEAN>,
         /**
          * @summary `token`.
+         * @description
+         *
+         * Optional DOR token when dereferencing. ISO/IEC 10166-1:1991
+         * §8.2.5.1.
          * @public
          * @readonly
          */
         readonly token: OPTIONAL<Token>,
         /**
          * @summary `task_id`.
+         * @description
+         *
+         * Optional identifier for this invocation, so it can later be
+         * abandoned or continued. Must not be reused until the operation
+         * completes or is abandoned. A List/Search continuation value returned
+         * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
          * @public
          * @readonly
          */
         readonly task_id: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reservation`.
+         * @description
+         *
+         * Requested reservation of the object this operation applies to. Omit
+         * to leave the current reservation unchanged. Raising the level or
+         * committing is done first; lowering an uncommitted reservation is
+         * done last. ISO/IEC 10166-1:1991 §8.1.3.2, §8.2.9.
          * @public
          * @readonly
          */
         readonly reservation: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
         /**
          * @summary `error_handling`.
+         * @description
+         *
+         * Constrained absent on this operation (not a List or Copy-of-group).
+         * ISO/IEC 10166-1:1991 §8.1.3.3.
          * @public
          * @readonly
          */
         readonly error_handling: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
         /**
          * @summary `priority`.
+         * @description
+         *
+         * Operational priority for a loaded server; overrides the bind default
+         * (`medium`). The server need not honour it. Unrelated to
+         * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
          * @public
          * @readonly
          */
         readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
         /**
          * @summary `privileges`.
+         * @description
+         *
+         * Per-operation PACs that modify bind privileges for this request only
+         * (`operation-Pac`) and/or a `proxy-pac` the server may present when
+         * accessing another application on the user's behalf. ISO/IEC
+         * 10166-1:1991 §8.1.3.5.
          * @public
          * @readonly
          */

@@ -21,7 +21,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary dfrBindError
  * @description
- * 
+ *
+ * ERROR reported when DfrBind fails. ISO/IEC 10166-1:1991 §7.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

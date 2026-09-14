@@ -1,7 +1,8 @@
 /**
  * @description
  *
- * ASN.1 module `Remote-Operations-Information-Objects`.
+ * ROSE information objects (OPERATION, ERROR, CONTRACT, …) used to realize the
+ * DFR port. ISO/IEC 9072-1; ISO/IEC 10166-2:1991 §5–§6.
  */
 export * from "./CONNECTION-PACKAGE.oca.mjs";
 export * from "./CONTRACT.oca.mjs";

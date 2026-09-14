@@ -18,7 +18,9 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Remote-Operatio
 /**
  * @summary DFR_InvokeIDSet
  * @description
- * 
+ *
+ * Invoke-id set used in DFR ROSE PDUs. ISO/IEC 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

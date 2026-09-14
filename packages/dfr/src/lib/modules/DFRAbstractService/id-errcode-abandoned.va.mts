@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary id_errcode_abandoned
  * @description
- * 
+ *
+ * Local ROSE error code 12 for `abandoned`. ISO/IEC 10166-1:1991 §8.3.12.
+ * ISO/IEC 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

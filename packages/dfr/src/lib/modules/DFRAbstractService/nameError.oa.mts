@@ -24,7 +24,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary nameError
  * @description
- * 
+ *
+ * Bad or hidden name. If the user has no read right, problem 1 or 2 is
+ * reported so the entry's existence stays hidden. Several named entries may be
+ * listed, but only this error type is returned. ISO/IEC 10166-1:1991 §8.3.2.
+ * Local error 2 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

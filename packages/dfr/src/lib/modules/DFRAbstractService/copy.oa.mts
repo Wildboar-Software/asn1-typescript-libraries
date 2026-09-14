@@ -45,7 +45,13 @@ import { id_opcode_copy } from "../DFRAbstractService/id-opcode-copy.va.mjs";
 /**
  * @summary copy
  * @description
- * 
+ *
+ * Copy an object into a destination group (new UPI). Existing references keep
+ * pointing at the original. Cannot copy a group from another store. Copied
+ * access-list is not taken from the original: user-supplied or defaulted to
+ * requestor as owner, then applied to the copy and all copied descendants.
+ * ISO/IEC 10166-1:1991 §8.2.3. Local opcode 3 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

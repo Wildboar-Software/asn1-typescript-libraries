@@ -18,7 +18,12 @@ import { DfrSearchResultListContent_produced, _decode_DfrSearchResultListContent
 /**
  * @summary DfrSearchResultListContent
  * @description
- * 
+ *
+ * Stored Search result: `empty` until a search has been produced; otherwise
+ * timestamps, matching entries, optional ordering, and the domain/criteria
+ * used so the search can be continued or updated. ISO/IEC 10166-1:1991
+ * §6.3.5.1, §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

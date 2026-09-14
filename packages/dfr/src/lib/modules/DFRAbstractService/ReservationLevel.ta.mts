@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReservationLevel
  * @description
- * 
+ *
+ * Increasing restriction on concurrent use. Attributes remain readable at
+ * every level. Reserving a reference does not reserve the referent. ISO/IEC
+ * 10166-1:1991 §8.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +47,11 @@ enum _enum_for_ReservationLevel {
 /**
  * @summary ReservationLevel
  * @description
- * 
+ *
+ * Increasing restriction on concurrent use. Attributes remain readable at
+ * every level. Reserving a reference does not reserve the referent. ISO/IEC
+ * 10166-1:1991 §8.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,7 +72,11 @@ type ReservationLevel = _enum_for_ReservationLevel;
 /**
  * @summary ReservationLevel
  * @description
- * 
+ *
+ * Increasing restriction on concurrent use. Attributes remain readable at
+ * every level. Reserving a reference does not reserve the referent. ISO/IEC
+ * 10166-1:1991 §8.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -84,6 +96,9 @@ const ReservationLevel = _enum_for_ReservationLevel;
 
 /**
  * @summary ReservationLevel_unreserved
+ * @description
+ *
+ * No extra restriction beyond access lists.
  * @constant
  * @type {number}
  */
@@ -92,6 +107,9 @@ const ReservationLevel_unreserved: ReservationLevel = ReservationLevel.unreserve
 
 /**
  * @summary unreserved
+ * @description
+ *
+ * No extra restriction beyond access lists.
  * @constant
  * @type {number}
  */
@@ -100,6 +118,11 @@ const unreserved: ReservationLevel = ReservationLevel.unreserved; /* SHORT_NAMED
 
 /**
  * @summary ReservationLevel_exclusive_write
+ * @description
+ *
+ * Others cannot delete, modify, or directly move the object; cannot insert
+ * into / remove from a reserved group. Nested groups' descendants are not
+ * reserved.
  * @constant
  * @type {number}
  */
@@ -108,6 +131,11 @@ const ReservationLevel_exclusive_write: ReservationLevel = ReservationLevel.excl
 
 /**
  * @summary exclusive_write
+ * @description
+ *
+ * Others cannot delete, modify, or directly move the object; cannot insert
+ * into / remove from a reserved group. Nested groups' descendants are not
+ * reserved.
  * @constant
  * @type {number}
  */
@@ -116,6 +144,10 @@ const exclusive_write: ReservationLevel = ReservationLevel.exclusive_write; /* S
 
 /**
  * @summary ReservationLevel_exclusive_access
+ * @description
+ *
+ * exclusive-write plus others cannot read/copy content, list a group, or use
+ * an SRL in Search.
  * @constant
  * @type {number}
  */
@@ -124,6 +156,10 @@ const ReservationLevel_exclusive_access: ReservationLevel = ReservationLevel.exc
 
 /**
  * @summary exclusive_access
+ * @description
+ *
+ * exclusive-write plus others cannot read/copy content, list a group, or use
+ * an SRL in Search.
  * @constant
  * @type {number}
  */
@@ -132,6 +168,9 @@ const exclusive_access: ReservationLevel = ReservationLevel.exclusive_access; /*
 
 /**
  * @summary ReservationLevel_read_only1
+ * @description
+ *
+ * exclusive-write restrictions apply to others and to the reserver.
  * @constant
  * @type {number}
  */
@@ -140,6 +179,9 @@ const ReservationLevel_read_only1: ReservationLevel = ReservationLevel.read_only
 
 /**
  * @summary read_only1
+ * @description
+ *
+ * exclusive-write restrictions apply to others and to the reserver.
  * @constant
  * @type {number}
  */
@@ -148,6 +190,9 @@ const read_only1: ReservationLevel = ReservationLevel.read_only1; /* SHORT_NAMED
 
 /**
  * @summary ReservationLevel_read_only2
+ * @description
+ *
+ * Others see exclusive-access; the reserver sees exclusive-write restrictions.
  * @constant
  * @type {number}
  */
@@ -156,6 +201,9 @@ const ReservationLevel_read_only2: ReservationLevel = ReservationLevel.read_only
 
 /**
  * @summary read_only2
+ * @description
+ *
+ * Others see exclusive-access; the reserver sees exclusive-write restrictions.
  * @constant
  * @type {number}
  */

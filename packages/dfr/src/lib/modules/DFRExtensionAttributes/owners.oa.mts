@@ -21,7 +21,11 @@ import { id_att_owners } from "../DFRObjectIdentifiers/id-att-owners.va.mjs";
 /**
  * @summary owners
  * @description
- * 
+ *
+ * Persons/organizations responsible for the content (ODA "owners", not DFR
+ * access-list owners). May be taken from the ODA Document Profile (ISO
+ * 8613-4). User-assigned, copied by Copy. ISO/IEC 10166-1:1991 §9.3.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

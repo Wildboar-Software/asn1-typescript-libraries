@@ -18,7 +18,10 @@ import { id_dfr_ext_att } from "../DFRObjectIdentifiers/id-dfr-ext-att.va.mjs";
 /**
  * @summary id_att_user_specific_codes
  * @description
- * 
+ *
+ * Attribute type OID of `user-specific-codes`. ISO/IEC 10166-1:1991 §9.3.14,
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

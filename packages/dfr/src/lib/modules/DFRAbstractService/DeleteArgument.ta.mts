@@ -30,7 +30,10 @@ import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstra
 /**
  * @summary DeleteArgument
  * @description
- * 
+ *
+ * Identifies the entry to delete. No reservation or error-handling components.
+ * ISO/IEC 10166-1:1991 §8.2.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,36 +54,65 @@ class DeleteArgument {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Local name of the entry to delete. Group delete is recursive and
+         * needs sufficient rights on every descendant. Deleting a reference
+         * does not affect the referent. ISO/IEC 10166-1:1991 §8.2.2.
          * @public
          * @readonly
          */
         readonly entry: DfrEntryName,
         /**
          * @summary `task_id`.
+         * @description
+         *
+         * Optional identifier for this invocation, so it can later be
+         * abandoned or continued. Must not be reused until the operation
+         * completes or is abandoned. A List/Search continuation value returned
+         * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
          * @public
          * @readonly
          */
         readonly task_id: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reservation`.
+         * @description
+         *
+         * Constrained absent. ISO/IEC 10166-1:1991 §8.2.2.1.
          * @public
          * @readonly
          */
         readonly reservation: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
         /**
          * @summary `error_handling`.
+         * @description
+         *
+         * Constrained absent on this operation (not a List or Copy-of-group).
+         * ISO/IEC 10166-1:1991 §8.1.3.3.
          * @public
          * @readonly
          */
         readonly error_handling: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
         /**
          * @summary `priority`.
+         * @description
+         *
+         * Operational priority for a loaded server; overrides the bind default
+         * (`medium`). The server need not honour it. Unrelated to
+         * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
          * @public
          * @readonly
          */
         readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
         /**
          * @summary `privileges`.
+         * @description
+         *
+         * Per-operation PACs that modify bind privileges for this request only
+         * (`operation-Pac`) and/or a `proxy-pac` the server may present when
+         * accessing another application on the user's behalf. ISO/IEC
+         * 10166-1:1991 §8.1.3.5.
          * @public
          * @readonly
          */

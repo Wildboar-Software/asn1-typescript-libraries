@@ -19,7 +19,10 @@ import { SearchDomain_Item_scope, _decode_SearchDomain_Item_scope, _encode_Searc
 /**
  * @summary SearchDomain_Item
  * @description
- * 
+ *
+ * One subdomain: a previous search-result-list, or a group scope. ISO/IEC
+ * 10166-1:1991 §8.1.6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,9 @@ import { id_mod } from "../DFRObjectIdentifiers/id-mod.va.mjs";
 /**
  * @summary id_mod_abstract_Service
  * @description
- * 
+ *
+ * DFRAbstractService module. {id-mod 1}. ISO/IEC 10166-1:1991 Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

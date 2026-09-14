@@ -1,7 +1,7 @@
 /**
  * @description
  *
- * ASN.1 module `Remote-Operations-Generic-ROS-PDUs`.
+ * Generic ROS PDUs used as DFR-PDUs. ISO/IEC 9072-1; ISO/IEC 10166-2:1991 §6.
  */
 export * from "./Bind.ta.mjs";
 export * from "./InvokeId.ta.mjs";

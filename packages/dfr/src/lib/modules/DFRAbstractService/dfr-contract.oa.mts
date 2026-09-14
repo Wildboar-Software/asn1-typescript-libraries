@@ -19,7 +19,10 @@ import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT
 /**
  * @summary dfr_contract
  * @description
- * 
+ *
+ * Association contract: DFR connection package plus initiator as consumer of
+ * the DFR port. ISO/IEC 10166-2:1991 §5–§6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

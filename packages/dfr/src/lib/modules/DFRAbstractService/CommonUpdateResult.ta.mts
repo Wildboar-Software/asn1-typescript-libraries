@@ -28,7 +28,10 @@ import { ReferentStatus, _enum_for_ReferentStatus, _decode_ReferentStatus, _enco
 /**
  * @summary CommonUpdateResult
  * @description
- * 
+ *
+ * Shared result of Create, Copy, Move, Read, and Modify. Operations subtype
+ * which optional components appear. ISO/IEC 10166-1:1991 §8.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,36 +52,63 @@ class CommonUpdateResult {
     constructor (
         /**
          * @summary `upi`.
+         * @description
+         *
+         * Server-assigned unique permanent identifier of the entry this result
+         * concerns. ISO/IEC 10166-1:1991 §6.3, §8.1.5.
          * @public
          * @readonly
          */
         readonly upi: DfrUniquePermanentIdentifier,
         /**
          * @summary `entry_information`.
+         * @description
+         *
+         * Items requested by `selection` that are present and accessible.
+         * Present iff `selection` was specified. ISO/IEC 10166-1:1991
+         * §8.1.5.6.
          * @public
          * @readonly
          */
         readonly entry_information: OPTIONAL<EntryInformation>,
         /**
          * @summary `warnings`.
+         * @description
+         *
+         * Access problems for members that were skipped. Never reported if the
+         * user has no read right to the entry. ISO/IEC 10166-1:1991 §8.1.3.3.
          * @public
          * @readonly
          */
         readonly warnings: OPTIONAL<Warning[]>,
         /**
          * @summary `continuation`.
+         * @description
+         *
+         * Optional TaskId in the CommonUpdateResult ASN.1. The specification
+         * only describes using a continuation TaskId on List and Search
+         * results (§8.1.6.1). ISO/IEC 10166-1:1991 §8.1.5.
          * @public
          * @readonly
          */
         readonly continuation: OPTIONAL<TaskId>,
         /**
          * @summary `reference_qos`.
+         * @description
+         *
+         * QoS the server assigned to a produced DOR. May differ from the
+         * requested `reference-qos`. Present only if a DOR was requested.
+         * ISO/IEC 10166-1:1991 §8.1.5, §8.2.5.2.
          * @public
          * @readonly
          */
         readonly reference_qos: OPTIONAL<Quality_of_Service>,
         /**
          * @summary `referent_altered`.
+         * @description
+         *
+         * Whether a Referent used as a copy source changed after DOR
+         * produce-time. ISO/IEC 10166-1:1991 §8.1.5.
          * @public
          * @readonly
          */

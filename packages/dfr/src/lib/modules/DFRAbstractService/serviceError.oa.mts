@@ -23,7 +23,10 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary serviceError
  * @description
- * 
+ *
+ * Service cannot be provided; not due to a bad request or rights. ISO/IEC
+ * 10166-1:1991 §8.3.10. Local error 10 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

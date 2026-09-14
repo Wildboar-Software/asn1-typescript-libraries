@@ -19,7 +19,10 @@ import { id_dfr_server } from "../DFRObjectIdentifiers/id-dfr-server.va.mjs";
 /**
  * @summary dfr_server
  * @description
- * 
+ *
+ * ROS-OBJECT-CLASS of the DFR-Server (supplier). ISO/IEC 10166-1:1991 §3.2.31.
+ * Annex B: `id-dfr-server`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

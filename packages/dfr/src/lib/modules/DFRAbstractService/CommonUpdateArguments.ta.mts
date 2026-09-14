@@ -30,7 +30,10 @@ import { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS
 /**
  * @summary CommonUpdateArguments
  * @description
- * 
+ *
+ * Shared arguments of Create, Copy, Move, Read, and Modify. Each operation
+ * subtypes which components are present. ISO/IEC 10166-1:1991 §8.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,42 +58,73 @@ class CommonUpdateArguments {
     constructor (
         /**
          * @summary `object_class`.
+         * @description
+         *
+         * Class of the DFR-Object. Mandatory on Create; optional elsewhere and
+         * then used only to validate the named entry. ISO/IEC 10166-1:1991
+         * §8.1.5.1.
          * @public
          * @readonly
          */
         readonly object_class: OPTIONAL<DfrObjectClass>,
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Local name or DOR of the object to copy, move, read, modify, delete,
+         * list, reserve, etc. Absent on Create. ISO/IEC 10166-1:1991 §8.1.5.2.
          * @public
          * @readonly
          */
         readonly entry: OPTIONAL<CommonUpdateArguments_entry>,
         /**
          * @summary `destination`.
+         * @description
+         *
+         * Parent group that will hold the created, copied, or moved entry.
+         * Required for those operations. ISO/IEC 10166-1:1991 §8.1.5.3.
          * @public
          * @readonly
          */
         readonly destination: OPTIONAL<DfrEntryName>,
         /**
          * @summary `position`.
+         * @description
+         *
+         * Where to insert the new member in the destination group
+         * (`first`/`last`/`before`/`after`). Forbidden if the parent has
+         * `dfr-ordering`; the server then places the member by that rule.
+         * ISO/IEC 10166-1:1991 §8.1.5.4.
          * @public
          * @readonly
          */
         readonly position: OPTIONAL<GroupMemberPosition>,
         /**
          * @summary `modifications`.
+         * @description
+         *
+         * Ordered updates to attributes and/or content. Mandatory on Modify;
+         * optional on Create, Copy, and Move. ISO/IEC 10166-1:1991 §8.1.5.5.
          * @public
          * @readonly
          */
         readonly modifications: OPTIONAL<EntryModification[]>,
         /**
          * @summary `selection`.
+         * @description
+         *
+         * Which attributes and/or content (or a produced DOR) to read back in
+         * the result. Mandatory on Read. ISO/IEC 10166-1:1991 §8.1.5.6.
          * @public
          * @readonly
          */
         readonly selection: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary `reference_qos`.
+         * @description
+         *
+         * Requested DOR quality of service when a DOR is to be produced.
+         * ISO/IEC 10166-1:1991 §8.1.5.7.
          * @public
          * @readonly
          */

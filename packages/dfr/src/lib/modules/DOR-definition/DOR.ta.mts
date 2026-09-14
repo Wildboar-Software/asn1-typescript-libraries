@@ -25,7 +25,13 @@ import { Token, _decode_Token, _encode_Token } from "../DOR-definition/Token.ta.
 /**
  * @summary DOR
  * @description
- * 
+ *
+ * Distinguished Object Reference (ISO/IEC 10031-2). DFR uses a DOR as
+ * DFR-Reference content and for immediate produce/consume of attributes,
+ * content, or a whole object. Token is optional for remote access;
+ * DfrReferenceContent requires token ABSENT. Component semantics are ISO/IEC
+ * 10031-2 (not in the 10166 texts). ISO/IEC 10166-1:1991 §6.3.3, §8.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,30 +54,48 @@ class DOR {
     constructor (
         /**
          * @summary `ae_identifier`.
+         * @description
+         *
+         * AE that holds the value. Mandatory for DFR produce and consume
+         * operations (ISO/IEC 10031-2 comment in the ASN.1).
          * @public
          * @readonly
          */
         readonly ae_identifier: OPTIONAL<AE_Identifier>,
         /**
          * @summary `local_reference`.
+         * @description
+         *
+         * Pointer to the value in that AE.
          * @public
          * @readonly
          */
         readonly local_reference: Local_reference,
         /**
          * @summary `data_object_type`.
+         * @description
+         *
+         * Abstract/transfer syntax of the referenced value. For a
+         * DFR-Reference, a DfrObjectClassID. ISO/IEC 10166-1:1991 §6.3.3.1.
          * @public
          * @readonly
          */
         readonly data_object_type: OBJECT_IDENTIFIER,
         /**
          * @summary `quality_of_service`.
+         * @description
+         *
+         * QoS of this reference (ISO/IEC 10031-2).
          * @public
          * @readonly
          */
         readonly quality_of_service: OPTIONAL<Quality_of_Service>,
         /**
          * @summary `token`.
+         * @description
+         *
+         * Optional access token for a remote referent. Absent in
+         * DfrReferenceContent. ISO/IEC 10166-1:1991 §6.3.3.
          * @public
          * @readonly
          */

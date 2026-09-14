@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Altered_value
  * @description
- * 
+ *
+ * DOR altered-value flag (ISO/IEC 10031-2). Related to DFR `referent-altered`.
+ * ISO/IEC 10166-1:1991 §8.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,7 +39,10 @@ enum _enum_for_Altered_value {
 /**
  * @summary Altered_value
  * @description
- * 
+ *
+ * DOR altered-value flag (ISO/IEC 10031-2). Related to DFR `referent-altered`.
+ * ISO/IEC 10166-1:1991 §8.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,7 +58,10 @@ type Altered_value = _enum_for_Altered_value;
 /**
  * @summary Altered_value
  * @description
- * 
+ *
+ * DOR altered-value flag (ISO/IEC 10031-2). Related to DFR `referent-altered`.
+ * ISO/IEC 10166-1:1991 §8.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

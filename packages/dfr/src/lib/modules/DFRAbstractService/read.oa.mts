@@ -41,7 +41,12 @@ import { id_opcode_read } from "../DFRAbstractService/id-opcode-read.va.mjs";
 /**
  * @summary read
  * @description
- * 
+ *
+ * Return selected attributes and/or content. Content of a group or SRL shall
+ * not be requested; use List. With `dereferencing`, read the referent of a
+ * reference (an ROA-operation). ISO/IEC 10166-1:1991 §8.2.5. Local opcode 5
+ * (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

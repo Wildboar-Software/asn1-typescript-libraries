@@ -25,7 +25,10 @@ import { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "
 /**
  * @summary DfrSearchResultListContent_produced
  * @description
- * 
+ *
+ * Non-empty search-result-list content after Search has run. ISO/IEC
+ * 10166-1:1991 §6.3.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,36 +49,54 @@ class DfrSearchResultListContent_produced {
     constructor (
         /**
          * @summary `start_date_and_time`.
+         * @description
+         *
+         * When this search result was produced.
          * @public
          * @readonly
          */
         readonly start_date_and_time: GeneralizedTime,
         /**
          * @summary `end_date_and_time`.
+         * @description
+         *
+         * When production of this result finished.
          * @public
          * @readonly
          */
         readonly end_date_and_time: GeneralizedTime,
         /**
          * @summary `object_list`.
+         * @description
+         *
+         * Matching entries (UPI, class, optional keys).
          * @public
          * @readonly
          */
         readonly object_list: DfrEntryList,
         /**
          * @summary `ordering`.
+         * @description
+         *
+         * Ordering stored with the result, if any.
          * @public
          * @readonly
          */
         readonly ordering: OPTIONAL<OrderingRule>,
         /**
          * @summary `search_domain`.
+         * @description
+         *
+         * Domain that was searched.
          * @public
          * @readonly
          */
         readonly search_domain: SearchDomain,
         /**
          * @summary `search_criteria`.
+         * @description
+         *
+         * Filter that selected the entries.
          * @public
          * @readonly
          */

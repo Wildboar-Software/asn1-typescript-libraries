@@ -18,7 +18,9 @@ import { id_ase } from "../DFRProtocolObjectIdentifiers/id-ase.va.mjs";
 /**
  * @summary id_are_dfrse
  * @description
- * 
+ *
+ * DFRSE ASE. {id-ase 0}. ISO/IEC 10166-2:1991 Annex A (id-are-dfrse).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,12 @@ import { id_att_version_name } from "../DFRObjectIdentifiers/id-att-version-name
 /**
  * @summary version_name
  * @description
- * 
+ *
+ * Free-form user label, primarily for versioned documents; also allowed on any
+ * document or a reference (usually copied from the referent). May come from
+ * the ODA Document Profile. Not copied by Copy. ISO/IEC 10166-1:1991 §9.2.13,
+ * §6.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

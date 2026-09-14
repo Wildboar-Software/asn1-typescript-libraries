@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `DFRExtensionAttributes`.
+ * Optional DFR-Extension-Attribute-Set (mostly ODA profile mappings).
+ * Negotiated at bind via a separate abstract syntax. ISO/IEC 10166-1:1991
+ * §9.1, §9.3, Annex E. ISO/IEC 10166-2:1991 §6.
  */
 export * from "./DocumentArchitectureClass.ta.mjs";
 export * from "./Person.ta.mjs";

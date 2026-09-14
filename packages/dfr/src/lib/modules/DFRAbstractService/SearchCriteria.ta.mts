@@ -17,7 +17,11 @@ import { Filter, _decode_Filter, _encode_Filter } from "../DirectoryAbstractServ
 /**
  * @summary SearchCriteria
  * @description
- * 
+ *
+ * Directory Filter applied to each entry in the search domain. TRUE ⇒ the
+ * entry is a hit. Same as ISO/IEC 9594-3 Filter. ISO/IEC 10166-1:1991 §3.2.28,
+ * §8.1.6.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

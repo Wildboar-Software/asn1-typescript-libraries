@@ -18,7 +18,10 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
 /**
  * @summary TypeAndAttribute
  * @description
- * 
+ *
+ * A document type this server stores, with the extension attributes it
+ * supports for that type. ISO/IEC 10166-1:1991 §7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,18 @@ class TypeAndAttribute {
     constructor (
         /**
          * @summary `document_types`.
+         * @description
+         *
+         * Document-type object identifier.
          * @public
          * @readonly
          */
         readonly document_types: OBJECT_IDENTIFIER,
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * Extension attribute types supported for that type.
          * @public
          * @readonly
          */

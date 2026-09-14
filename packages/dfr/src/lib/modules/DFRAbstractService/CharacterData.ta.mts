@@ -20,7 +20,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CharacterData
  * @description
- * 
+ *
+ * String used for titles and many attributes: GraphicString, T.61,
+ * PrintableString, or GeneralString. Case-ignore matching treats
+ * leading/trailing/multiple spaces as insignificant. ISO/IEC 10166-1:1991
+ * §8.1.4, §9.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

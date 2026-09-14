@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AuthenticationAttribute
  * @description
- * 
+ *
+ * Unconstrained confirmation of an authentication check, returned in
+ * DfrBindResult. EXTERNAL. ISO/IEC 10166-1:1991 §7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

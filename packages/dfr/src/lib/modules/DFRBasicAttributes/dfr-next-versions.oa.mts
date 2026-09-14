@@ -24,7 +24,11 @@ import {
 /**
  * @summary dfr_next_versions
  * @description
- * 
+ *
+ * UPIs of later versions. Server-maintained when versions are declared or
+ * discarded. Users must not modify it. Read filtered by access rights. Not
+ * copied by Copy. Documents only. ISO/IEC 10166-1:1991 §9.2.15, §6.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

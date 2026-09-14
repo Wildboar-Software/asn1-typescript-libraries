@@ -17,7 +17,12 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 /**
  * @summary DfrReferenceContent
  * @description
- * 
+ *
+ * DOR identifying the referent. `token` is absent. `data-object-type` is a
+ * `DfrObjectClassID` (document, root-group, proper-group, or
+ * search-result-list — not a reference). Component semantics are ISO/IEC
+ * 10031-2; DFR usage is ISO/IEC 10166-1:1991 §6.3.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

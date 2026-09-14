@@ -17,7 +17,9 @@ import { SecurityProblem, _enum_for_SecurityProblem, _decode_SecurityProblem, _e
 /**
  * @summary securityError_ParameterType
  * @description
- * 
+ *
+ * Security problem only (no entry). ISO/IEC 10166-1:1991 §8.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +35,9 @@ class securityError_ParameterType {
     constructor (
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why security checks failed.
          * @public
          * @readonly
          */

@@ -22,7 +22,12 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationF
 /**
  * @summary DfrEntryList_Item
  * @description
- * 
+ *
+ * One listed/found entry. UPI and class always present. `ordering-attribute`
+ * follows the OrderingRule if one was used. `other-attributes` are those
+ * requested; they are not stored in SRL content. ISO/IEC 10166-1:1991
+ * §8.1.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +46,36 @@ class DfrEntryList_Item {
     constructor (
         /**
          * @summary `upi`.
+         * @description
+         *
+         * UPI of the listed object.
          * @public
          * @readonly
          */
         readonly upi: DfrUniquePermanentIdentifier,
         /**
          * @summary `class_`.
+         * @description
+         *
+         * Object class.
          * @public
          * @readonly
          */
         readonly class_: DfrObjectClass,
         /**
          * @summary `ordering_attribute`.
+         * @description
+         *
+         * Key values in OrderingRule order.
          * @public
          * @readonly
          */
         readonly ordering_attribute: OPTIONAL<Attribute[]>,
         /**
          * @summary `other_attributes`.
+         * @description
+         *
+         * Additionally selected attributes.
          * @public
          * @readonly
          */

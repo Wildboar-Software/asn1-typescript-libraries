@@ -18,7 +18,9 @@ import { id_dfr } from "../DFRObjectIdentifiers/id-dfr.va.mjs";
 /**
  * @summary id_ot
  * @description
- * 
+ *
+ * ROS-object OIDs (server, user). {id-dfr 1}. ISO/IEC 10166-1:1991 Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

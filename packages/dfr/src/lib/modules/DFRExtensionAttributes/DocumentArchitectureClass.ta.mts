@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DocumentArchitectureClass
  * @description
- * 
+ *
+ * INTEGER naming an ODA document architecture class, used as the syntax of
+ * `document-architecture-class`. ISO/IEC 10166-1:1991 §9.3.4. The three named
+ * values are those of ISO 8613; ISO/IEC 10166-1:1991 does not further define
+ * them.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +38,9 @@ type DocumentArchitectureClass = INTEGER;
 
 /**
  * @summary DocumentArchitectureClass_formatted
+ * @description
+ *
+ * ODA formatted class (0).
  * @constant
  * @type {number}
  */
@@ -41,6 +49,9 @@ const DocumentArchitectureClass_formatted: DocumentArchitectureClass = 0; /* LON
 
 /**
  * @summary DocumentArchitectureClass_formatted
+ * @description
+ *
+ * ODA formatted class (0).
  * @constant
  * @type {number}
  */
@@ -49,6 +60,9 @@ const formatted: DocumentArchitectureClass = DocumentArchitectureClass_formatted
 
 /**
  * @summary DocumentArchitectureClass_processable
+ * @description
+ *
+ * ODA processable class (1).
  * @constant
  * @type {number}
  */
@@ -57,6 +71,9 @@ const DocumentArchitectureClass_processable: DocumentArchitectureClass = 1; /* L
 
 /**
  * @summary DocumentArchitectureClass_processable
+ * @description
+ *
+ * ODA processable class (1).
  * @constant
  * @type {number}
  */
@@ -65,6 +82,9 @@ const processable: DocumentArchitectureClass = DocumentArchitectureClass_process
 
 /**
  * @summary DocumentArchitectureClass_formatted_processable
+ * @description
+ *
+ * ODA formatted-processable class (2).
  * @constant
  * @type {number}
  */
@@ -73,6 +93,9 @@ const DocumentArchitectureClass_formatted_processable: DocumentArchitectureClass
 
 /**
  * @summary DocumentArchitectureClass_formatted_processable
+ * @description
+ *
+ * ODA formatted-processable class (2).
  * @constant
  * @type {number}
  */

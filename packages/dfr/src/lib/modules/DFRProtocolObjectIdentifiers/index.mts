@@ -1,7 +1,8 @@
 /**
  * @description
  *
- * ASN.1 module `DFRProtocolObjectIdentifiers`.
+ * Object identifiers assigned by ISO/IEC 10166-2:1991 Annex A (application
+ * contexts, abstract syntaxes, ASE). `id-as-acse` follows Cor.1.
  */
 export * from "./ID.ta.mjs";
 export * from "./id-ac-dfr-access.va.mjs";

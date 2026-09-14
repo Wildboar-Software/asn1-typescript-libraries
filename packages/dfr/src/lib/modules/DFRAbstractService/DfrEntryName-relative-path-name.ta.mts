@@ -19,7 +19,10 @@ import { DfrPathName, _decode_DfrPathName, _encode_DfrPathName } from "../DFRAbs
 /**
  * @summary DfrEntryName_relative_path_name
  * @description
- * 
+ *
+ * Path from an intermediate group (`base` UPI) rather than the root. Useful as
+ * a working domain. ISO/IEC 10166-1:1991 §8.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,18 @@ class DfrEntryName_relative_path_name {
     constructor (
         /**
          * @summary `base`.
+         * @description
+         *
+         * UPI of the group the relative path starts from.
          * @public
          * @readonly
          */
         readonly base: DfrUniquePermanentIdentifier,
         /**
          * @summary `path`.
+         * @description
+         *
+         * Titles from that group down to the target.
          * @public
          * @readonly
          */

@@ -1,7 +1,8 @@
 /**
  * @description
  *
- * ASN.1 module `DFRObjectIdentifiers`.
+ * Object identifiers assigned by ISO/IEC 10166-1:1991 Annex B (modules,
+ * objects, ports, classes, attributes, syntaxes).
  */
 export * from "./ID.ta.mjs";
 export * from "./id-att-authors.va.mjs";

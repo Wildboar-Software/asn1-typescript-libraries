@@ -18,7 +18,10 @@ import { id_as } from "../DFRProtocolObjectIdentifiers/id-as.va.mjs";
 /**
  * @summary id_as_dfr_ext_attr
  * @description
- * 
+ *
+ * Extension-attribute abstract syntax. {id-as 2}. ISO/IEC 10166-2:1991 Annex
+ * A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

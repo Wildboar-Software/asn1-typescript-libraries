@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ErrorHandlingMode
  * @description
- * 
+ *
+ * How List and Copy-of-group treat inaccessible members. Default
+ * `all-or-nothing`. `report-n-warnings` INTEGER is the max warnings to return
+ * (0 = run to completion with no warnings). Only those two operations are
+ * "multiple". ISO/IEC 10166-1:1991 §8.1.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

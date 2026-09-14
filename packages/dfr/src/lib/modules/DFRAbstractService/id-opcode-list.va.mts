@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary id_opcode_list
  * @description
- * 
+ *
+ * Local ROSE operation code 7 for `list`. ISO/IEC 10166-1:1991 §8.2.7. ISO/IEC
+ * 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

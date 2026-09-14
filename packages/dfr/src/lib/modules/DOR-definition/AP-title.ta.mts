@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AP_title
  * @description
- * 
+ *
+ * AP-title used inside AE-Identifier (ISO/IEC 10031-2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary QoS_level_level_3
  * @description
- * 
+ *
+ * DOR QoS level 3 (ISO/IEC 10031-2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

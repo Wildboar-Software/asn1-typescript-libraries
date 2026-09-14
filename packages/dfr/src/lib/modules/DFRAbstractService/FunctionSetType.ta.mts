@@ -16,7 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FunctionSetType
  * @description
- * 
+ *
+ * Installed usage type of the store, reported at bind. Group Create, Delete,
+ * Copy, Move, Modify exist only in full-set. Group Read, List, Search exist in
+ * pre-defined-store and full-set. ISO/IEC 10166-1:1991 §8.4. Violating the set
+ * is `serviceError` function-set-violation.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +44,12 @@ enum _enum_for_FunctionSetType {
 /**
  * @summary FunctionSetType
  * @description
- * 
+ *
+ * Installed usage type of the store, reported at bind. Group Create, Delete,
+ * Copy, Move, Modify exist only in full-set. Group Read, List, Search exist in
+ * pre-defined-store and full-set. ISO/IEC 10166-1:1991 §8.4. Violating the set
+ * is `serviceError` function-set-violation.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +68,12 @@ type FunctionSetType = _enum_for_FunctionSetType;
 /**
  * @summary FunctionSetType
  * @description
- * 
+ *
+ * Installed usage type of the store, reported at bind. Group Create, Delete,
+ * Copy, Move, Modify exist only in full-set. Group Read, List, Search exist in
+ * pre-defined-store and full-set. ISO/IEC 10166-1:1991 §8.4. Violating the set
+ * is `serviceError` function-set-violation.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +91,9 @@ const FunctionSetType = _enum_for_FunctionSetType;
 
 /**
  * @summary FunctionSetType_flat_store
+ * @description
+ *
+ * Only the root group; no proper groups.
  * @constant
  * @type {number}
  */
@@ -84,6 +102,9 @@ const FunctionSetType_flat_store: FunctionSetType = FunctionSetType.flat_store; 
 
 /**
  * @summary flat_store
+ * @description
+ *
+ * Only the root group; no proper groups.
  * @constant
  * @type {number}
  */
@@ -92,6 +113,9 @@ const flat_store: FunctionSetType = FunctionSetType.flat_store; /* SHORT_NAMED_E
 
 /**
  * @summary FunctionSetType_pre_defined_store
+ * @description
+ *
+ * Groups exist but users cannot create or delete groups.
  * @constant
  * @type {number}
  */
@@ -100,6 +124,9 @@ const FunctionSetType_pre_defined_store: FunctionSetType = FunctionSetType.pre_d
 
 /**
  * @summary pre_defined_store
+ * @description
+ *
+ * Groups exist but users cannot create or delete groups.
  * @constant
  * @type {number}
  */
@@ -108,6 +135,9 @@ const pre_defined_store: FunctionSetType = FunctionSetType.pre_defined_store; /*
 
 /**
  * @summary FunctionSetType_full_set
+ * @description
+ *
+ * Users may create, modify, and delete groups.
  * @constant
  * @type {number}
  */
@@ -116,6 +146,9 @@ const FunctionSetType_full_set: FunctionSetType = FunctionSetType.full_set; /* L
 
 /**
  * @summary full_set
+ * @description
+ *
+ * Users may create, modify, and delete groups.
  * @constant
  * @type {number}
  */

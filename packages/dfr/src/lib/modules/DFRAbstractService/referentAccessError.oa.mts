@@ -23,7 +23,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary referentAccessError
  * @description
- * 
+ *
+ * Problem accessing a referent through a reference or DOR. `referent-modified`
+ * is a warning (does not abort) when copying or listing a group. ISO/IEC
+ * 10166-1:1991 §8.3.5; ISO/IEC 10166-1:1991/Cor.2:1994
+ * (`referent-no-longer-exists`). Local error 5 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

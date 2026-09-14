@@ -18,7 +18,9 @@ import { id_mod } from "../DFRProtocolObjectIdentifiers/id-mod.va.mjs";
 /**
  * @summary id_mod_access_protocol
  * @description
- * 
+ *
+ * DFRAccessProtocol module. {id-mod 1}. ISO/IEC 10166-2:1991 Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

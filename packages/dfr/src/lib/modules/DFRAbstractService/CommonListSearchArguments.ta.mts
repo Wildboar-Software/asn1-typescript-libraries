@@ -23,7 +23,10 @@ import { OrderingRule, _decode_OrderingRule, _encode_OrderingRule } from "../DFR
 /**
  * @summary CommonListSearchArguments
  * @description
- * 
+ *
+ * Shared List/Search arguments. Tags are [1]..[4] (ISO/IEC
+ * 10166-1:1991/Cor.1:1994 §8.1.6). ISO/IEC 10166-1:1991 §8.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +45,42 @@ class CommonListSearchArguments {
     constructor (
         /**
          * @summary `continue_`.
+         * @description
+         *
+         * If true, resume the List/Search identified by `task-id` instead of
+         * starting over. ISO/IEC 10166-1:1991 §8.1.6.1.
          * @public
          * @readonly
          */
         readonly continue_: OPTIONAL<BOOLEAN>,
         /**
          * @summary `limits`.
+         * @description
+         *
+         * Optional count and/or time caps for this List/Search. ISO/IEC
+         * 10166-1:1991 §8.1.6.1.
          * @public
          * @readonly
          */
         readonly limits: OPTIONAL<Limits>,
         /**
          * @summary `selection`.
+         * @description
+         *
+         * Which attributes of each listed or found entry to return. Required
+         * on List; optional on Search. UPI and object-class are always
+         * returned. ISO/IEC 10166-1:1991 §8.1.6.2, §8.2.7.1, §8.2.8.1.
          * @public
          * @readonly
          */
         readonly selection: OPTIONAL<AttributeSelection>,
         /**
          * @summary `ordering`.
+         * @description
+         *
+         * Sort keys and directions. Overrides the group's `dfr-ordering` for
+         * this request. Only attributes that MATCH FOR ORDERING may be used.
+         * ISO/IEC 10166-1:1991 §8.1.6.3.
          * @public
          * @readonly
          */

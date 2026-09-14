@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ROAProtocols
  * @description
- * 
+ *
+ * ROA application-context OIDs this server supports as accessee or accessor
+ * for DOR transfer. ISO/IEC 10166-1:1991 §7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

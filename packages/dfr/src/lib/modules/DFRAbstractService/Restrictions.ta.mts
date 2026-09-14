@@ -19,7 +19,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Restrictions
  * @description
- * 
+ *
+ * Retrieve restrictions for the association: allowed document types and
+ * maximum argument/result length. Missing component = no restriction. A
+ * disallowed document type is an error (ISO/IEC 10166-1:1991/Cor.1:1994
+ * §7.1.1). ISO/IEC 10166-1:1991 §7.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,20 @@ class Restrictions {
     constructor (
         /**
          * @summary `allowed_document_types`.
+         * @description
+         *
+         * Document-type OIDs the user will accept. Others cause an error.
+         * ISO/IEC 10166-1:1991 §7.1.1; ISO/IEC 10166-1:1991/Cor.1:1994.
          * @public
          * @readonly
          */
         readonly allowed_document_types: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `maximum_length`.
+         * @description
+         *
+         * Max argument or result length. Exceeding it is `serviceError`
+         * maximum-length-exceeded.
          * @public
          * @readonly
          */

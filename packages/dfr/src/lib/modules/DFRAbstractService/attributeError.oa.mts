@@ -23,7 +23,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary attributeError
  * @description
- * 
+ *
+ * Problems reading or modifying attributes, including search and
+ * membership-criteria Filters. `entry` is omitted on Create when the
+ * `attributes` component is at fault, and on Search when `search-criteria` is
+ * at fault. ISO/IEC 10166-1:1991 §8.3.1. Local error 1 (ISO/IEC 10166-2:1991
+ * §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

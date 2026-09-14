@@ -27,7 +27,12 @@ import { EntryInformation_attr_and_dor_to_entire_object, _decode_EntryInformatio
 /**
  * @summary EntryInformation
  * @description
- * 
+ *
+ * Read-back payload matching the selection. Present in a result iff selection
+ * was specified. `attributes-and-content` is a `DfrEntry` (ISO/IEC
+ * 10166-1:1991/Cor.1:1994 §8.1.5). DOR alternatives are for
+ * produce-operations. ISO/IEC 10166-1:1991 §8.1.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

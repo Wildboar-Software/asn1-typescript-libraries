@@ -23,7 +23,10 @@ import { id_att_dfr_created_by } from "../DFRObjectIdentifiers/id-att-dfr-create
 /**
  * @summary dfr_created_by
  * @description
- * 
+ *
+ * User who created the object; unchanged by Move. Readable only with
+ * extended-read. Not copied by Copy. ISO/IEC 10166-1:1991 §9.2.22.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

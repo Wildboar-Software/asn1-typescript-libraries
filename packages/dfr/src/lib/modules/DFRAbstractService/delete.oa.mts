@@ -37,7 +37,13 @@ import { id_opcode_delete } from "../DFRAbstractService/id-opcode-delete.va.mjs"
 /**
  * @summary delete_
  * @description
- * 
+ *
+ * Remove an entry from its parent and the store. The UPI becomes invalid.
+ * Deleting a group deletes descendants if the user has sufficient rights to
+ * all of them. Deleting a reference does not affect the referent. Fails if the
+ * object or any descendant is reserved by another user. ISO/IEC 10166-1:1991
+ * §8.2.2. Local opcode 2 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -37,7 +37,10 @@ import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects
 /**
  * @summary dfr
  * @description
- * 
+ *
+ * DFR port operation package: the user (consumer) invokes Create through
+ * Abandon. ISO/IEC 10166-1:1991 §8.2. ISO/IEC 10166-2:1991 §5.2, §6 (dFRSE).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

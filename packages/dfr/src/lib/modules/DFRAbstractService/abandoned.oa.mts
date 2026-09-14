@@ -21,7 +21,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary abandoned
  * @description
- * 
+ *
+ * The abandoned operation's completion. Not a failure of that operation; it is
+ * the success report of Abandon. Cannot occur if Abandon reported
+ * abandonFailed. ISO/IEC 10166-1:1991 §8.3.12. Local error 12 (ISO/IEC
+ * 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

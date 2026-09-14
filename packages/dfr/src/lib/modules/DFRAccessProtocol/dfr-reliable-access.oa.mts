@@ -29,7 +29,10 @@ import { type APPLICATION_CONTEXT } from "../Remote-Operations-Information-Objec
 /**
  * @summary dfr_reliable_access
  * @description
- * 
+ *
+ * Same contract with RTSE for reliable APDU transfer. ROSE maps onto RTSE.
+ * ISO/IEC 10166-2:1991 §5.1, §6, §7.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

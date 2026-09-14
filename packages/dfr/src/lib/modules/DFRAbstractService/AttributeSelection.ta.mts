@@ -18,7 +18,11 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
 /**
  * @summary AttributeSelection
  * @description
- * 
+ *
+ * Which attributes of listed/read entries to return. `minimum` means UPI and
+ * object-class only (always returned anyway on List/Search). `ordered` also
+ * sets delivery order. ISO/IEC 10166-1:1991 §8.1.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

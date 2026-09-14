@@ -39,7 +39,12 @@ import { id_opcode_list } from "../DFRAbstractService/id-opcode-list.va.mjs";
 /**
  * @summary list
  * @description
- * 
+ *
+ * Return selected attributes of members of a group (not descendants) or of
+ * entries identified by an SRL. Inaccessible members are omitted (subject to
+ * error-handling). ISO/IEC 10166-1:1991 §8.2.7. Local opcode 7 (ISO/IEC
+ * 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

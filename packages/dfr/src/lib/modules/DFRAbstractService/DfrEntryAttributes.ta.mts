@@ -17,7 +17,11 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationF
 /**
  * @summary DfrEntryAttributes
  * @description
- * 
+ *
+ * SET OF Directory `Attribute` values describing a DFR-Entry. ISO/IEC
+ * 10166-1:1991 §6.3, §8.1.1. Attribute types are ISO/IEC 9594-2 as used by
+ * DFR.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

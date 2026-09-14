@@ -21,7 +21,12 @@ import { id_att_user_reference } from "../DFRObjectIdentifiers/id-att-user-refer
 /**
  * @summary user_reference
  * @description
- * 
+ *
+ * User-specific identifier of this object. Paired with
+ * `user-reference-to-other-objects` for user-level links (e.g. Search). May
+ * come from the ODA Document Profile. Copied by Copy. ISO/IEC 10166-1:1991
+ * §9.2.18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

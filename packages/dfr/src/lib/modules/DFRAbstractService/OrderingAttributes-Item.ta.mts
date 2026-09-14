@@ -19,7 +19,9 @@ import { Direction, _enum_for_Direction, _decode_Direction, _encode_Direction } 
 /**
  * @summary OrderingAttributes_Item
  * @description
- * 
+ *
+ * One sort key. ISO/IEC 10166-1:1991 §8.1.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +38,18 @@ class OrderingAttributes_Item {
     constructor (
         /**
          * @summary `attribute`.
+         * @description
+         *
+         * Attribute type; must MATCH FOR ORDERING.
          * @public
          * @readonly
          */
         readonly attribute: AttributeType,
         /**
          * @summary `direction`.
+         * @description
+         *
+         * ascending or descending.
          * @public
          * @readonly
          */

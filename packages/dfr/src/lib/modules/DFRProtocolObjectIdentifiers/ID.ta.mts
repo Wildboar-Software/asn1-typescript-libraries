@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ID
  * @description
- * 
+ *
+ * OBJECT IDENTIFIER alias for Part 2 assignments. ISO/IEC 10166-2:1991 Annex
+ * A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

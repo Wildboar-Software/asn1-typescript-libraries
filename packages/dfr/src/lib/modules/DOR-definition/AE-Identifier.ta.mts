@@ -20,7 +20,11 @@ import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName
 /**
  * @summary AE_Identifier
  * @description
- * 
+ *
+ * Application-entity identifier in a DOR. For a local DFR-Reference,
+ * identifies the DFR-Server that holds both reference and referent. ISO/IEC
+ * 10166-1:1991 §6.3.3. Details: ISO/IEC 10031-2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

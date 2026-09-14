@@ -18,7 +18,10 @@ import { id_dfr_bas_att } from "../DFRObjectIdentifiers/id-dfr-bas-att.va.mjs";
 /**
  * @summary id_att_dfr_number_of_group_members
  * @description
- * 
+ *
+ * Attribute type OID of `dfr-number-of-group-members`. ISO/IEC 10166-1:1991
+ * §9.2.12, Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

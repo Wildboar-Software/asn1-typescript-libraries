@@ -17,7 +17,9 @@ import { OrderingAttributes_Item, _decode_OrderingAttributes_Item, _encode_Order
 /**
  * @summary OrderingAttributes
  * @description
- * 
+ *
+ * SEQUENCE OF ordering keys. ISO/IEC 10166-1:1991 §8.1.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,7 +20,10 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
 /**
  * @summary EntryModification_copy_attributes_from
  * @description
- * 
+ *
+ * Copy attributes from a `SourceEntry`. Default: all attributes Copy would
+ * auto-copy. ISO/IEC 10166-1:1991 §8.1.5.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +41,18 @@ class EntryModification_copy_attributes_from {
     constructor (
         /**
          * @summary `source`.
+         * @description
+         *
+         * Where to copy from.
          * @public
          * @readonly
          */
         readonly source: SourceEntry,
         /**
          * @summary `attribute_selection`.
+         * @description
+         *
+         * Attribute types to copy; omit for the default set.
          * @public
          * @readonly
          */

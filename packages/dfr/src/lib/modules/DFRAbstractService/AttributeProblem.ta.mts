@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AttributeProblem
  * @description
- * 
+ *
+ * Reason an attribute could not be used. ISO/IEC 10166-1:1991 §8.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,7 +55,9 @@ enum _enum_for_AttributeProblem {
 /**
  * @summary AttributeProblem
  * @description
- * 
+ *
+ * Reason an attribute could not be used. ISO/IEC 10166-1:1991 §8.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -79,7 +83,9 @@ type AttributeProblem = _enum_for_AttributeProblem;
 /**
  * @summary AttributeProblem
  * @description
- * 
+ *
+ * Reason an attribute could not be used. ISO/IEC 10166-1:1991 §8.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -104,6 +110,9 @@ const AttributeProblem = _enum_for_AttributeProblem;
 
 /**
  * @summary AttributeProblem_no_such_attribute
+ * @description
+ *
+ * Named entry lacks a requested attribute.
  * @constant
  * @type {number}
  */
@@ -112,6 +121,9 @@ const AttributeProblem_no_such_attribute: AttributeProblem = AttributeProblem.no
 
 /**
  * @summary no_such_attribute
+ * @description
+ *
+ * Named entry lacks a requested attribute.
  * @constant
  * @type {number}
  */
@@ -120,6 +132,9 @@ const no_such_attribute: AttributeProblem = AttributeProblem.no_such_attribute; 
 
 /**
  * @summary AttributeProblem_invalid_attribute_syntax
+ * @description
+ *
+ * Value does not match the attribute syntax.
  * @constant
  * @type {number}
  */
@@ -128,6 +143,9 @@ const AttributeProblem_invalid_attribute_syntax: AttributeProblem = AttributePro
 
 /**
  * @summary invalid_attribute_syntax
+ * @description
+ *
+ * Value does not match the attribute syntax.
  * @constant
  * @type {number}
  */
@@ -136,6 +154,9 @@ const invalid_attribute_syntax: AttributeProblem = AttributeProblem.invalid_attr
 
 /**
  * @summary AttributeProblem_undefined_attribute_type
+ * @description
+ *
+ * Attribute type is not defined.
  * @constant
  * @type {number}
  */
@@ -144,6 +165,9 @@ const AttributeProblem_undefined_attribute_type: AttributeProblem = AttributePro
 
 /**
  * @summary undefined_attribute_type
+ * @description
+ *
+ * Attribute type is not defined.
  * @constant
  * @type {number}
  */
@@ -152,6 +176,9 @@ const undefined_attribute_type: AttributeProblem = AttributeProblem.undefined_at
 
 /**
  * @summary AttributeProblem_inappropriate_matching
+ * @description
+ *
+ * Matching rule not defined for this type (e.g. in a Filter).
  * @constant
  * @type {number}
  */
@@ -160,6 +187,9 @@ const AttributeProblem_inappropriate_matching: AttributeProblem = AttributeProbl
 
 /**
  * @summary inappropriate_matching
+ * @description
+ *
+ * Matching rule not defined for this type (e.g. in a Filter).
  * @constant
  * @type {number}
  */
@@ -168,6 +198,9 @@ const inappropriate_matching: AttributeProblem = AttributeProblem.inappropriate_
 
 /**
  * @summary AttributeProblem_constraint_violation
+ * @description
+ *
+ * Value breaks a static constraint (size, functional profile).
  * @constant
  * @type {number}
  */
@@ -176,6 +209,9 @@ const AttributeProblem_constraint_violation: AttributeProblem = AttributeProblem
 
 /**
  * @summary constraint_violation
+ * @description
+ *
+ * Value breaks a static constraint (size, functional profile).
  * @constant
  * @type {number}
  */
@@ -184,6 +220,9 @@ const constraint_violation: AttributeProblem = AttributeProblem.constraint_viola
 
 /**
  * @summary AttributeProblem_attribute_or_value_already_exists
+ * @description
+ *
+ * Adding an attribute or value that is already present.
  * @constant
  * @type {number}
  */
@@ -192,6 +231,9 @@ const AttributeProblem_attribute_or_value_already_exists: AttributeProblem = Att
 
 /**
  * @summary attribute_or_value_already_exists
+ * @description
+ *
+ * Adding an attribute or value that is already present.
  * @constant
  * @type {number}
  */
@@ -200,6 +242,10 @@ const attribute_or_value_already_exists: AttributeProblem = AttributeProblem.att
 
 /**
  * @summary AttributeProblem_illegal_modification
+ * @description
+ *
+ * Attempt to change a server-assigned or otherwise frozen attribute; see
+ * clause 9.
  * @constant
  * @type {number}
  */
@@ -208,6 +254,10 @@ const AttributeProblem_illegal_modification: AttributeProblem = AttributeProblem
 
 /**
  * @summary illegal_modification
+ * @description
+ *
+ * Attempt to change a server-assigned or otherwise frozen attribute; see
+ * clause 9.
  * @constant
  * @type {number}
  */
@@ -216,6 +266,10 @@ const illegal_modification: AttributeProblem = AttributeProblem.illegal_modifica
 
 /**
  * @summary AttributeProblem_inconsistent_with_other_attributes
+ * @description
+ *
+ * Conflicts with other attributes of the same object, unless later
+ * modifications in the same operation remove the clash.
  * @constant
  * @type {number}
  */
@@ -224,6 +278,10 @@ const AttributeProblem_inconsistent_with_other_attributes: AttributeProblem = At
 
 /**
  * @summary inconsistent_with_other_attributes
+ * @description
+ *
+ * Conflicts with other attributes of the same object, unless later
+ * modifications in the same operation remove the clash.
  * @constant
  * @type {number}
  */
@@ -232,6 +290,9 @@ const inconsistent_with_other_attributes: AttributeProblem = AttributeProblem.in
 
 /**
  * @summary AttributeProblem_undefined_for_this_object_class
+ * @description
+ *
+ * Type not defined for this class (not used during List/Search examination).
  * @constant
  * @type {number}
  */
@@ -240,6 +301,9 @@ const AttributeProblem_undefined_for_this_object_class: AttributeProblem = Attri
 
 /**
  * @summary undefined_for_this_object_class
+ * @description
+ *
+ * Type not defined for this class (not used during List/Search examination).
  * @constant
  * @type {number}
  */
@@ -248,6 +312,9 @@ const undefined_for_this_object_class: AttributeProblem = AttributeProblem.undef
 
 /**
  * @summary AttributeProblem_unsupported_document_type
+ * @description
+ *
+ * Document type was not agreed at bind.
  * @constant
  * @type {number}
  */
@@ -256,6 +323,9 @@ const AttributeProblem_unsupported_document_type: AttributeProblem = AttributePr
 
 /**
  * @summary unsupported_document_type
+ * @description
+ *
+ * Document type was not agreed at bind.
  * @constant
  * @type {number}
  */

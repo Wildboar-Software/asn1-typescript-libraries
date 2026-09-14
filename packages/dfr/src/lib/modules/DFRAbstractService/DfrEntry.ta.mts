@@ -19,7 +19,13 @@ import { DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } 
 /**
  * @summary DfrEntry
  * @description
- * 
+ *
+ * A DFR-Object together with the attributes that locate it in the store
+ * hierarchy. Create returns selected parts of the new entry. ISO/IEC
+ * 10166-1:1991 §3.2.14, §6.3. Cor.1 replaces `DfrObject` with `DfrEntry` in
+ * `EntryInformation.attributes-and-content` (ISO/IEC 10166-1:1991/Cor.1:1994
+ * §8.1.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,18 @@ class DfrEntry {
     constructor (
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * Attributes of this entry, including hierarchy.
          * @public
          * @readonly
          */
         readonly attributes: DfrEntryAttributes,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Class-specific content (document, group, reference, or SRL).
          * @public
          * @readonly
          */

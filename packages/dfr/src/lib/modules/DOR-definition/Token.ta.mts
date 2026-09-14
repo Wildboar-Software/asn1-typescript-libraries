@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Token
  * @description
- * 
+ *
+ * Optional DOR access token. Used when Read dereferences a DOR that had a
+ * token at produce-time. Not stored in DfrReferenceContent. ISO/IEC
+ * 10166-1:1991 §6.3.3, §8.2.5.1. Details: ISO/IEC 10031-2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

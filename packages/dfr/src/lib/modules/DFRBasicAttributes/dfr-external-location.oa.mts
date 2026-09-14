@@ -21,7 +21,10 @@ import { id_att_dfr_external_location } from "../DFRObjectIdentifiers/id-att-dfr
 /**
  * @summary dfr_external_location
  * @description
- * 
+ *
+ * User description of an object stored outside any DFR store. Copied by Copy.
+ * ISO/IEC 10166-1:1991 §9.2.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

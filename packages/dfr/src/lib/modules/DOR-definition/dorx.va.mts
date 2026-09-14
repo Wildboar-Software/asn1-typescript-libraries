@@ -17,7 +17,9 @@ import {
 /**
  * @summary dorx
  * @description
- * 
+ *
+ * DOR module OID arc (ISO/IEC 10031-2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

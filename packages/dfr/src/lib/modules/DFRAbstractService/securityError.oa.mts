@@ -23,7 +23,10 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary securityError
  * @description
- * 
+ *
+ * Bad security parameters at bind or on an operation that carries Privileges.
+ * ISO/IEC 10166-1:1991 §8.3.9. Local error 9 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

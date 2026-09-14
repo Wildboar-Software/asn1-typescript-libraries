@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `DFRAbstractService`.
+ * Abstract service of Document Filing and Retrieval: bind/unbind, Create
+ * through Abandon, shared argument types, and errors. ISO/IEC 10166-1:1991
+ * clauses 6–8 and Annex C, as corrected by Cor.1–Cor.4.
  */
 export * from "./AbandonArgument.ta.mjs";
 export * from "./AbandonProblem.ta.mjs";

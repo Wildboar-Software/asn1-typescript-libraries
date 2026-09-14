@@ -17,7 +17,11 @@ import { ID, _decode_ID, _encode_ID } from "../DFRProtocolObjectIdentifiers/ID.t
 /**
  * @summary id_as_acse
  * @description
- * 
+ *
+ * ACSE abstract syntax. Originally {id-as 0}; ISO/IEC 10166-2:1991 Cor.1
+ * assigns joint-iso-ccitt association-control(2) abstract-syntax(1) apdus(0)
+ * version1(1) (ISO 8650). Cor.2 deletes the local aCSE-as alias from clause 6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ID
  * @description
- * 
+ *
+ * OBJECT IDENTIFIER alias used throughout DFR OID assignments. ISO/IEC
+ * 10166-1:1991 Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

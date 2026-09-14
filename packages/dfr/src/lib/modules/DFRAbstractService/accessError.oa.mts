@@ -24,7 +24,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary accessError
  * @description
- * 
+ *
+ * Cannot access a named entry (wrong class, reserved, or external and
+ * unsuitable). ISO/IEC 10166-1:1991 §8.3.3. Local error 3 (ISO/IEC
+ * 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

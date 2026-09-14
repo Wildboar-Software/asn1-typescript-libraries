@@ -21,7 +21,12 @@ import { DfrEntryName_relative_path_name, _decode_DfrEntryName_relative_path_nam
 /**
  * @summary DfrEntryName
  * @description
- * 
+ *
+ * How an operation names an entry: UPI (always valid if the object exists and
+ * is readable), absolute path-name, or path relative to a base UPI. Path names
+ * need title uniqueness. A user without read right gets `nameError` so the
+ * entry stays hidden. ISO/IEC 10166-1:1991 §8.1.4, §8.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

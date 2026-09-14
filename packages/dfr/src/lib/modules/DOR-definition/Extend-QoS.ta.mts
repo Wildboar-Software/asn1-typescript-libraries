@@ -20,7 +20,9 @@ import { Single_use_of_reference, _decode_Single_use_of_reference, _encode_Singl
 /**
  * @summary Extend_QoS
  * @description
- * 
+ *
+ * DOR extend-QoS (ISO/IEC 10031-2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

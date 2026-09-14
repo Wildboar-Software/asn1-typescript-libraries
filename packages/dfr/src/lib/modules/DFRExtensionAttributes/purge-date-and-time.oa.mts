@@ -25,7 +25,11 @@ import {
 /**
  * @summary purge_date_and_time
  * @description
- * 
+ *
+ * After this instant the document may be purged from the store. May be taken
+ * from the ODA Document Profile (ISO 8613-4). User-assigned, copied by Copy.
+ * ISO/IEC 10166-1:1991 §9.3.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

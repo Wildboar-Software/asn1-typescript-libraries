@@ -21,7 +21,10 @@ import { id_att_dfr_reservation } from "../DFRObjectIdentifiers/id-att-dfr-reser
 /**
  * @summary dfr_reservation
  * @description
- * 
+ *
+ * Current reservation of the object. Server-maintained. Equality and ordering
+ * match. Not copied by Copy. ISO/IEC 10166-1:1991 §9.2.28, §8.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

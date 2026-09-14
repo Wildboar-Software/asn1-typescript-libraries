@@ -28,7 +28,13 @@ import { SourceEntry, _decode_SourceEntry, _encode_SourceEntry } from "../DFRAbs
 /**
  * @summary EntryModification
  * @description
- * 
+ *
+ * One step of an ordered update: put/remove/copy a whole attribute, add/remove
+ * values of a multi-valued attribute, or put/remove/copy content. Content of a
+ * search-result-list must not be modified this way (use Search). Source and
+ * sink object classes must match when copying content. ISO/IEC 10166-1:1991
+ * §8.1.5.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

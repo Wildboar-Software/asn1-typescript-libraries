@@ -25,7 +25,10 @@ import {
 /**
  * @summary document_date_and_time
  * @description
- * 
+ *
+ * Date/time the user associates with the document or reference. May come from
+ * the ODA Document Profile. Copied by Copy. ISO/IEC 10166-1:1991 §9.2.27.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

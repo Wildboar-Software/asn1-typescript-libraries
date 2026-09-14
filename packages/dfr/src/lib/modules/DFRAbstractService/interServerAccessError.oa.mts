@@ -23,7 +23,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary interServerAccessError
  * @description
- * 
+ *
+ * Accessor DFR-Server failed to reach an external referent's store. Not
+ * specific to the ROA protocol. ISO/IEC 10166-1:1991 §8.3.6. Local error 6
+ * (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

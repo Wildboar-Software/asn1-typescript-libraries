@@ -19,7 +19,10 @@ import { id_as_dfrse } from "../DFRProtocolObjectIdentifiers/id-as-dfrse.va.mjs"
 /**
  * @summary dfrse_basic_abstract_syntax
  * @description
- * 
+ *
+ * Abstract syntax of DFR-PDUs (ROSE + DFRSE + basic attributes). ISO/IEC
+ * 10166-2:1991 §6 (`id-as-dfrse`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

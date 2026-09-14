@@ -23,7 +23,12 @@ import { DfrSearchResultListContent, _decode_DfrSearchResultListContent, _encode
 /**
  * @summary DfrObjectContent
  * @description
- * 
+ *
+ * Prime content of a DFR-Object; the alternative depends on class. Document
+ * content is uninterpreted. Group content is member UPIs. Reference content is
+ * a DOR. Search-result-list content is the stored search. ISO/IEC 10166-1:1991
+ * §3.2.10, §6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DfrUniquePermanentIdentifier
  * @description
- * 
+ *
+ * Server-assigned octet string that uniquely identifies one DFR-Object for the
+ * life of that server, including among deleted objects. Opaque to the user;
+ * never reused. Primary access name. ISO/IEC 10166-1:1991 §3.2.32, §6.3,
+ * §9.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

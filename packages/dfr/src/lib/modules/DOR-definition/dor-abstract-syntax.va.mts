@@ -17,7 +17,9 @@ import { dorx } from "../DOR-definition/dorx.va.mjs";
 /**
  * @summary dor_abstract_syntax
  * @description
- * 
+ *
+ * DOR abstract syntax (ISO/IEC 10031-2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,7 +22,11 @@ import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, _decode_Referen
 /**
  * @summary Warning
  * @description
- * 
+ *
+ * One skipped entry during List/Copy, with an access or referent- access
+ * problem. Not sent if the user has no read right to it. ISO/IEC 10166-1:1991
+ * §8.1.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +44,27 @@ class Warning {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Entry that could not be processed.
          * @public
          * @readonly
          */
         readonly entry: DfrEntryName,
         /**
          * @summary `accessl`.
+         * @description
+         *
+         * AccessProblem; see ISO/IEC 10166-1:1991 §8.3.3.
          * @public
          * @readonly
          */
         readonly accessl: OPTIONAL<AccessProblem>,
         /**
          * @summary `access2`.
+         * @description
+         *
+         * ReferentAccessProblem; see ISO/IEC 10166-1:1991 §8.3.5.
          * @public
          * @readonly
          */

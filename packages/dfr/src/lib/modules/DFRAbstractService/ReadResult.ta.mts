@@ -17,7 +17,11 @@ import { CommonUpdateResult, _decode_CommonUpdateResult, _encode_CommonUpdateRes
 /**
  * @summary ReadResult
  * @description
- * 
+ *
+ * UPI, required `entry-information`, optional server-chosen reference-qos if a
+ * DOR was requested, optional `referent-altered` when dereferencing. ISO/IEC
+ * 10166-1:1991 §8.2.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,11 @@ import { id_att_user_reference_to_other_objects } from "../DFRObjectIdentifiers/
 /**
  * @summary user_reference_to_other_objects
  * @description
- * 
+ *
+ * User-specific identifiers of other objects (values of their
+ * `user-reference`). Multi-valued. Copied by Copy. ISO/IEC 10166-1:1991
+ * §9.2.19.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

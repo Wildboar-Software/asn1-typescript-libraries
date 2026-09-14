@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DfrObjectClassID
  * @description
- * 
+ *
+ * Object identifier naming a DFR object class. Used as `data-object-type` in a
+ * DFR-Reference's DOR so the referent class is visible without opening the
+ * referent. ISO/IEC 10166-1:1991 §6.3.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

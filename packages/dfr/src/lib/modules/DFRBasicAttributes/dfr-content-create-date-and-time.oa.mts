@@ -25,7 +25,10 @@ import {
 /**
  * @summary dfr_content_create_date_and_time
  * @description
- * 
+ *
+ * When content was first stored. Server-set. Not copied by Copy. ISO/IEC
+ * 10166-1:1991 §9.2.21.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

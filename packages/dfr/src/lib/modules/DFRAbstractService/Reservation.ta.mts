@@ -21,7 +21,12 @@ import { ReservationStatus, _enum_for_ReservationStatus, ReservationStatus_uncom
 /**
  * @summary Reservation
  * @description
- * 
+ *
+ * Reservation to apply: optional expiry, level, and committed vs uncommitted.
+ * Committed reservations are owner-only and cannot be withdrawn (only
+ * increased / extended). Omit the parameter in an operation to leave the
+ * current reservation unchanged. ISO/IEC 10166-1:1991 §8.1.3.2, §8.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +44,28 @@ class Reservation {
     constructor (
         /**
          * @summary `reservation_duration`.
+         * @description
+         *
+         * When the reservation ends. Omit for indefinite duration.
          * @public
          * @readonly
          */
         readonly reservation_duration: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `reservation_level`.
+         * @description
+         *
+         * unreserved .. read-only2. ISO/IEC 10166-1:1991 §8.1.3.2.
          * @public
          * @readonly
          */
         readonly reservation_level: ReservationLevel,
         /**
          * @summary `reservation_Status`.
+         * @description
+         *
+         * uncommitted (default) or committed. Committed cannot be downgraded
+         * or uncommitted.
          * @public
          * @readonly
          */

@@ -17,7 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReserveResult
  * @description
- * 
+ *
+ * NULL. ISO/IEC 10166-1:1991 §8.2.9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

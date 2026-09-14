@@ -21,7 +21,12 @@ import { id_att_document_type } from "../DFRObjectIdentifiers/id-att-document-ty
 /**
  * @summary document_type
  * @description
- * 
+ *
+ * Informal document kind (memorandum, letter, report, …), not a document-class
+ * description. Distinct from `dfr-document-type`. May be taken from the ODA
+ * Document Profile (ISO 8613-4). User-assigned, copied by Copy. ISO/IEC
+ * 10166-1:1991 §9.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

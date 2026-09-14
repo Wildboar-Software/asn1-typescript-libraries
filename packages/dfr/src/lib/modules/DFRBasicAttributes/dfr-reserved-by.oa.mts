@@ -23,7 +23,10 @@ import { id_att_dfr_reserved_by } from "../DFRObjectIdentifiers/id-att-dfr-reser
 /**
  * @summary dfr_reserved_by
  * @description
- * 
+ *
+ * Security subject holding the reservation; absent if unreserved.
+ * Extended-read only. ISO/IEC 10166-1:1991 §9.2.29.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

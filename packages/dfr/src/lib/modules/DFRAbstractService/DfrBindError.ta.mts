@@ -19,7 +19,11 @@ import { SecurityProblem, _enum_for_SecurityProblem, _decode_SecurityProblem, _e
 /**
  * @summary DfrBindError
  * @description
- * 
+ *
+ * Bind failure: `security-error` if credentials cannot grant access;
+ * `service-error` if the server cannot establish the association. Same problem
+ * codes as the operation errors. ISO/IEC 10166-1:1991 §7.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

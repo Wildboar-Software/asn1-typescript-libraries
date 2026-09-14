@@ -18,7 +18,11 @@ import { CharacterData, _decode_CharacterData, _encode_CharacterData } from "../
 /**
  * @summary Person
  * @description
- * 
+ *
+ * Person (and optional organization) used by preparers, owners, and authors.
+ * Cor.1 removes IMPLICIT on the components. ISO/IEC 10166-1:1991 §9.4.2.4;
+ * ISO/IEC 10166-1:1991/Cor.1:1994.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +42,45 @@ class Person {
     constructor (
         /**
          * @summary `surname`.
+         * @description
+         *
+         * Family name.
          * @public
          * @readonly
          */
         readonly surname: OPTIONAL<CharacterData>,
         /**
          * @summary `givenname`.
+         * @description
+         *
+         * Given name.
          * @public
          * @readonly
          */
         readonly givenname: OPTIONAL<CharacterData>,
         /**
          * @summary `initials`.
+         * @description
+         *
+         * Initials.
          * @public
          * @readonly
          */
         readonly initials: OPTIONAL<CharacterData>,
         /**
          * @summary `title`.
+         * @description
+         *
+         * Courtesy or job title.
          * @public
          * @readonly
          */
         readonly title: OPTIONAL<CharacterData>,
         /**
          * @summary `organization`.
+         * @description
+         *
+         * Associated organization.
          * @public
          * @readonly
          */

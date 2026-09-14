@@ -47,7 +47,12 @@ import { id_opcode_modify } from "../DFRAbstractService/id-opcode-modify.va.mjs"
 /**
  * @summary modify
  * @description
- * 
+ *
+ * Change attributes and/or content of an existing entry. Unspecified
+ * attributes are left unchanged. Content may be replaced only on a document,
+ * wholly, either explicitly or from a source entry. ISO/IEC 10166-1:1991
+ * §8.2.6. Local opcode 6 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

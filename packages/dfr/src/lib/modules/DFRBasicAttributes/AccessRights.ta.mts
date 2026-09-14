@@ -16,7 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccessRights
  * @description
- * 
+ *
+ * Increasing privilege on a DFR-Object. Each level includes the one below.
+ * Creator/copier is entered as owner. Without at least read on a group,
+ * descendants cannot be reached via that group (UPI access may still work).
+ * ISO/IEC 10166-1:1991 §6.3.8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +48,12 @@ enum _enum_for_AccessRights {
 /**
  * @summary AccessRights
  * @description
- * 
+ *
+ * Increasing privilege on a DFR-Object. Each level includes the one below.
+ * Creator/copier is entered as owner. Without at least read on a group,
+ * descendants cannot be reached via that group (UPI access may still work).
+ * ISO/IEC 10166-1:1991 §6.3.8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,7 +74,12 @@ type AccessRights = _enum_for_AccessRights;
 /**
  * @summary AccessRights
  * @description
- * 
+ *
+ * Increasing privilege on a DFR-Object. Each level includes the one below.
+ * Creator/copier is entered as owner. Without at least read on a group,
+ * descendants cannot be reached via that group (UPI access may still work).
+ * ISO/IEC 10166-1:1991 §6.3.8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -84,6 +99,11 @@ const AccessRights = _enum_for_AccessRights;
 
 /**
  * @summary AccessRights_read
+ * @description
+ *
+ * Read, Copy, Search, List on content and attributes except others'
+ * access-list entries and the *-By attributes. Hits without read are
+ * omitted from Search/List. ISO/IEC 10166-1:1991 §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -92,6 +112,11 @@ const AccessRights_read: AccessRights = AccessRights.read; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary read
+ * @description
+ *
+ * Read, Copy, Search, List on content and attributes except others'
+ * access-list entries and the *-By attributes. Hits without read are
+ * omitted from Search/List. ISO/IEC 10166-1:1991 §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -100,6 +125,10 @@ const read: AccessRights = AccessRights.read; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessRights_extended_read
+ * @description
+ *
+ * read plus the full access-list and all other attributes. ISO/IEC
+ * 10166-1:1991 §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -108,6 +137,10 @@ const AccessRights_extended_read: AccessRights = AccessRights.extended_read; /* 
 
 /**
  * @summary extended_read
+ * @description
+ *
+ * read plus the full access-list and all other attributes. ISO/IEC
+ * 10166-1:1991 §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -116,6 +149,12 @@ const extended_read: AccessRights = AccessRights.extended_read; /* SHORT_NAMED_E
 
 /**
  * @summary AccessRights_read_modify
+ * @description
+ *
+ * extended-read plus uncommitted reserve/unreserve and modify of
+ * content/attributes except the access-list. Inserting group members
+ * allowed; operations on existing members still use those members'
+ * lists. ISO/IEC 10166-1:1991 §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -124,6 +163,12 @@ const AccessRights_read_modify: AccessRights = AccessRights.read_modify; /* LONG
 
 /**
  * @summary read_modify
+ * @description
+ *
+ * extended-read plus uncommitted reserve/unreserve and modify of
+ * content/attributes except the access-list. Inserting group members
+ * allowed; operations on existing members still use those members'
+ * lists. ISO/IEC 10166-1:1991 §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -132,6 +177,11 @@ const read_modify: AccessRights = AccessRights.read_modify; /* SHORT_NAMED_ENUME
 
 /**
  * @summary AccessRights_read_modify_delete
+ * @description
+ *
+ * read-modify plus delete/move. Deleting a group tree requires this
+ * right on every descendant; moving a group does not. ISO/IEC
+ * 10166-1:1991 §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -140,6 +190,11 @@ const AccessRights_read_modify_delete: AccessRights = AccessRights.read_modify_d
 
 /**
  * @summary read_modify_delete
+ * @description
+ *
+ * read-modify plus delete/move. Deleting a group tree requires this
+ * right on every descendant; moving a group does not. ISO/IEC
+ * 10166-1:1991 §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -148,6 +203,11 @@ const read_modify_delete: AccessRights = AccessRights.read_modify_delete; /* SHO
 
 /**
  * @summary AccessRights_owner
+ * @description
+ *
+ * read-modify-delete plus modify the access-list and apply a committed
+ * reservation. Auto-granted to the creator. ISO/IEC 10166-1:1991
+ * §6.3.8.3.
  * @constant
  * @type {number}
  */
@@ -156,6 +216,11 @@ const AccessRights_owner: AccessRights = AccessRights.owner; /* LONG_NAMED_ENUME
 
 /**
  * @summary owner
+ * @description
+ *
+ * read-modify-delete plus modify the access-list and apply a committed
+ * reservation. Auto-granted to the creator. ISO/IEC 10166-1:1991
+ * §6.3.8.3.
  * @constant
  * @type {number}
  */

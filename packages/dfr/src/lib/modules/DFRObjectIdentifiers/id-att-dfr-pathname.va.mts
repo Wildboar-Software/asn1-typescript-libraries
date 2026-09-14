@@ -18,7 +18,9 @@ import { id_dfr_bas_att } from "../DFRObjectIdentifiers/id-dfr-bas-att.va.mjs";
 /**
  * @summary id_att_dfr_pathname
  * @description
- * 
+ *
+ * Attribute type OID of `dfr-pathname`. ISO/IEC 10166-1:1991 §9.2.5, Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

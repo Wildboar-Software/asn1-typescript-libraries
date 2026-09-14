@@ -18,7 +18,9 @@ import { id_dfr_bas_att } from "../DFRObjectIdentifiers/id-dfr-bas-att.va.mjs";
 /**
  * @summary id_att_version_name
  * @description
- * 
+ *
+ * Attribute type OID of `version-name`. ISO/IEC 10166-1:1991 §9.2.13, Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,7 +20,11 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 /**
  * @summary SourceEntry
  * @description
- * 
+ *
+ * Source of attributes or content: parent group, referent (references only;
+ * may pull a remote referent via the stored DOR), unique previous version, an
+ * explicit entry, or a DOR. ISO/IEC 10166-1:1991 §8.1.5.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

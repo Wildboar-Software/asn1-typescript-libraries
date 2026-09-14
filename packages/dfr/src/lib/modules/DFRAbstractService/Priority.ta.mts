@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Priority
  * @description
- * 
+ *
+ * DFR operational priority (`low`/`medium`/`high`), not ROSE INTEGER Priority.
+ * Bind default is medium; an operation may override it. Granting it is
+ * server-specific. ISO/IEC 10166-1:1991 §8.1.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +43,11 @@ enum _enum_for_Priority {
 /**
  * @summary Priority
  * @description
- * 
+ *
+ * DFR operational priority (`low`/`medium`/`high`), not ROSE INTEGER Priority.
+ * Bind default is medium; an operation may override it. Granting it is
+ * server-specific. ISO/IEC 10166-1:1991 §8.1.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +66,11 @@ type Priority = _enum_for_Priority;
 /**
  * @summary Priority
  * @description
- * 
+ *
+ * DFR operational priority (`low`/`medium`/`high`), not ROSE INTEGER Priority.
+ * Bind default is medium; an operation may override it. Granting it is
+ * server-specific. ISO/IEC 10166-1:1991 §8.1.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +88,9 @@ const Priority = _enum_for_Priority;
 
 /**
  * @summary Priority_low
+ * @description
+ *
+ * Lowest DFR operational priority.
  * @constant
  * @type {number}
  */
@@ -84,6 +99,9 @@ const Priority_low: Priority = Priority.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
+ * @description
+ *
+ * Lowest DFR operational priority.
  * @constant
  * @type {number}
  */
@@ -92,6 +110,9 @@ const low: Priority = Priority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_medium
+ * @description
+ *
+ * Default at bind and on operations.
  * @constant
  * @type {number}
  */
@@ -100,6 +121,9 @@ const Priority_medium: Priority = Priority.medium; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary medium
+ * @description
+ *
+ * Default at bind and on operations.
  * @constant
  * @type {number}
  */
@@ -108,6 +132,9 @@ const medium: Priority = Priority.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_high
+ * @description
+ *
+ * Highest DFR operational priority.
  * @constant
  * @type {number}
  */
@@ -116,6 +143,9 @@ const Priority_high: Priority = Priority.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
+ * @description
+ *
+ * Highest DFR operational priority.
  * @constant
  * @type {number}
  */

@@ -19,7 +19,12 @@ import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFR
 /**
  * @summary SearchDomain_Item_scope
  * @description
- * 
+ *
+ * Search a group's object-tree. Omit `descent-depth` for the whole subtree.
+ * `dereferencing-depth` default 0 means do not follow references. Depth
+ * counting continues into a referent group from the reference's level. ISO/IEC
+ * 10166-1:1991 §8.1.6.4, §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +44,27 @@ class SearchDomain_Item_scope {
     constructor (
         /**
          * @summary `root`.
+         * @description
+         *
+         * Starting group.
          * @public
          * @readonly
          */
         readonly root: DfrEntryName,
         /**
          * @summary `descent_depth`.
+         * @description
+         *
+         * Max descendant levels; omit for the whole tree.
          * @public
          * @readonly
          */
         readonly descent_depth: OPTIONAL<INTEGER>,
         /**
          * @summary `dereferencing_depth`.
+         * @description
+         *
+         * How many reference hops to follow (default 0).
          * @public
          * @readonly
          */

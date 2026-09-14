@@ -24,7 +24,10 @@ import {
 /**
  * @summary dfr_object_class
  * @description
- * 
+ *
+ * Class of this object. Assigned by owners. Equality match. Single-valued.
+ * Copied by Copy. ISO/IEC 10166-1:1991 §9.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

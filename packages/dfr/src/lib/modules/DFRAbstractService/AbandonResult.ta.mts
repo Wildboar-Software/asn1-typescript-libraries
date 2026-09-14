@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AbandonResult
  * @description
- * 
+ *
+ * NULL. Success is reported as `abandoned` on the target operation, not as
+ * this result. ISO/IEC 10166-1:1991 §8.2.10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

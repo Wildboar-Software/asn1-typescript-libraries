@@ -18,7 +18,21 @@ import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFR
 /**
  * @summary SearchArgument_search_mode
  * @description
- * 
+ *
+ * How this Search runs. ISO/IEC 10166-1:1991 §8.2.8.1.
+ *
+ * - `continue_`: reuse domain, criteria, and continuation from
+ *   the named SRL; append hits to that SRL.
+ * - `update`: verify and refresh the named SRL's current content.
+ * - `new_search_stored`: caller supplies options; store them and
+ *   the result in the named SRL.
+ * - `non_stored_search`: caller supplies options; result is
+ *   returned only, not stored.
+ *
+ * `search-domain` and `search-criteria` shall be present for
+ * `new_search_stored` and `non_stored_search`, and absent for
+ * `continue_` and `update`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

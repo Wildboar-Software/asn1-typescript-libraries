@@ -19,7 +19,10 @@ import { InterServerAccessProblem, _enum_for_InterServerAccessProblem, _decode_I
 /**
  * @summary interServerAccessError_ParameterType
  * @description
- * 
+ *
+ * The local reference and the inter-server problem. ISO/IEC 10166-1:1991
+ * §8.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,18 @@ class interServerAccessError_ParameterType {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Local DFR-Reference whose remote access failed.
          * @public
          * @readonly
          */
         readonly entry: DfrEntryName,
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why the accessee could not be used.
          * @public
          * @readonly
          */

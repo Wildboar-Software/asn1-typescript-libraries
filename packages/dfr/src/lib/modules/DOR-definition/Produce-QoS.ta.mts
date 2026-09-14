@@ -20,7 +20,10 @@ import { Single_use_of_reference, _decode_Single_use_of_reference, _encode_Singl
 /**
  * @summary Produce_QoS
  * @description
- * 
+ *
+ * DOR produce-QoS (ISO/IEC 10031-2). DFR produce-operations may request QoS.
+ * ISO/IEC 10166-1:1991 §6.3.3.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

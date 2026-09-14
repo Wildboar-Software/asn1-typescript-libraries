@@ -20,7 +20,10 @@ import { type CONNECTION_PACKAGE } from "../Remote-Operations-Information-Object
 /**
  * @summary dfr_conn_pkg
  * @description
- * 
+ *
+ * Connection package for DfrBind / DfrUnbind. ISO/IEC 10166-1:1991 §7. ISO/IEC
+ * 10166-2:1991 §5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

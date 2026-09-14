@@ -25,7 +25,11 @@ import {
 /**
  * @summary revision_date_and_time
  * @description
- * 
+ *
+ * When a revision of this object occurred. May be taken from the ODA Document
+ * Profile (ISO 8613-4). User-assigned, copied by Copy. ISO/IEC 10166-1:1991
+ * §9.3.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

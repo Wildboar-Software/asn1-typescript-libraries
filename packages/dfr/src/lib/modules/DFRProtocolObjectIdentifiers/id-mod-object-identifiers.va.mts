@@ -18,7 +18,9 @@ import { id_mod } from "../DFRProtocolObjectIdentifiers/id-mod.va.mjs";
 /**
  * @summary id_mod_object_identifiers
  * @description
- * 
+ *
+ * This protocol OID module. {id-mod 0}. ISO/IEC 10166-2:1991 Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

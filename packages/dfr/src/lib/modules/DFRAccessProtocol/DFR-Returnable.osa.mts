@@ -36,7 +36,10 @@ import { abandon } from "../DFRAbstractService/abandon.oa.mjs";
 /**
  * @summary DFR_Returnable
  * @description
- * 
+ *
+ * Operations whose results/errors the DFR-Server may return. ISO/IEC
+ * 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

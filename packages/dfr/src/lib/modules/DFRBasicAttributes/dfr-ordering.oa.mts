@@ -21,7 +21,10 @@ import { id_att_dfr_ordering } from "../DFRObjectIdentifiers/id-att-dfr-ordering
 /**
  * @summary dfr_ordering
  * @description
- * 
+ *
+ * Default List order of group members (`OrderingRule`). Only on groups.
+ * User-managed. Copied by Copy. ISO/IEC 10166-1:1991 §9.2.9, §8.1.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

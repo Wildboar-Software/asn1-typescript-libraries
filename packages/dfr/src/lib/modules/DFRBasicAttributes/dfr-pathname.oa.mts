@@ -21,7 +21,13 @@ import { id_att_dfr_pathname } from "../DFRObjectIdentifiers/id-att-dfr-pathname
 /**
  * @summary dfr_pathname
  * @description
- * 
+ *
+ * Titles of the object and its ancestors from the root down (ISO/IEC
+ * 10166-1:1991/Cor.1:1994 §9.2.5). Present only if the store enforces title
+ * uniqueness. Server-maintained. Not copied by Copy. Cor.3 removed the empty
+ * sequence convention for the root group. ISO/IEC 10166-1:1991 §9.2.5; ISO/IEC
+ * 10166-1:1991/Cor.3:1994.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

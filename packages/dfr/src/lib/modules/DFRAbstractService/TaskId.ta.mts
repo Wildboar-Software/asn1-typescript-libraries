@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TaskId
  * @description
- * 
+ *
+ * OCTET STRING identifying an operation for Abandon or for continuing
+ * List/Search after a limit. ISO/IEC 10166-1:1991 §8.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

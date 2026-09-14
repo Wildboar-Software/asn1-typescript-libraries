@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReferentStatus
  * @description
- * 
+ *
+ * Whether a Referent used via DOR changed after produce-time. ISO/IEC
+ * 10166-1:1991 §8.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +40,10 @@ enum _enum_for_ReferentStatus {
 /**
  * @summary ReferentStatus
  * @description
- * 
+ *
+ * Whether a Referent used via DOR changed after produce-time. ISO/IEC
+ * 10166-1:1991 §8.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +61,10 @@ type ReferentStatus = _enum_for_ReferentStatus;
 /**
  * @summary ReferentStatus
  * @description
- * 
+ *
+ * Whether a Referent used via DOR changed after produce-time. ISO/IEC
+ * 10166-1:1991 §8.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +81,9 @@ const ReferentStatus = _enum_for_ReferentStatus;
 
 /**
  * @summary ReferentStatus_not_changed_since_produce
+ * @description
+ *
+ * Referent unchanged since the DOR was produced.
  * @constant
  * @type {number}
  */
@@ -80,6 +92,9 @@ const ReferentStatus_not_changed_since_produce: ReferentStatus = ReferentStatus.
 
 /**
  * @summary not_changed_since_produce
+ * @description
+ *
+ * Referent unchanged since the DOR was produced.
  * @constant
  * @type {number}
  */
@@ -88,6 +103,9 @@ const not_changed_since_produce: ReferentStatus = ReferentStatus.not_changed_sin
 
 /**
  * @summary ReferentStatus_changed_since_produce
+ * @description
+ *
+ * Referent modified after DOR produce-time.
  * @constant
  * @type {number}
  */
@@ -96,6 +114,9 @@ const ReferentStatus_changed_since_produce: ReferentStatus = ReferentStatus.chan
 
 /**
  * @summary changed_since_produce
+ * @description
+ *
+ * Referent modified after DOR produce-time.
  * @constant
  * @type {number}
  */

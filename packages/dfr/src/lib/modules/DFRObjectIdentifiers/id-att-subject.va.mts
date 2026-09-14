@@ -18,7 +18,9 @@ import { id_dfr_ext_att } from "../DFRObjectIdentifiers/id-dfr-ext-att.va.mjs";
 /**
  * @summary id_att_subject
  * @description
- * 
+ *
+ * Attribute type OID of `subject`. ISO/IEC 10166-1:1991 §9.3.2, Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

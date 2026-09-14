@@ -23,7 +23,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary versionManagementError
  * @description
- * 
+ *
+ * Failed to declare a new version or to copy from the unique previous version.
+ * No read right on a previous version ⇒ nameError. ISO/IEC 10166-1:1991
+ * §8.3.8. Local error 8 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

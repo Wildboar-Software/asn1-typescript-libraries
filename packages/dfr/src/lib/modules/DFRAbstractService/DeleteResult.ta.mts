@@ -17,7 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeleteResult
  * @description
- * 
+ *
+ * NULL. Success has no parameters. ISO/IEC 10166-1:1991 §8.2.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

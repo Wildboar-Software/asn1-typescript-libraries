@@ -24,7 +24,13 @@ import {
 /**
  * @summary dfr_previous_versions
  * @description
- * 
+ *
+ * UPIs of previous versions. User-assigned when declaring a version; server
+ * may update until this document itself becomes a previous version, then
+ * frozen. Server drops deleted previous versions. Read returns only documents
+ * the user can read. Not copied by Copy. Documents only. ISO/IEC 10166-1:1991
+ * §9.2.14, §6.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

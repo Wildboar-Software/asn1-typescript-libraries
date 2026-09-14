@@ -27,7 +27,11 @@ import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/Ta
 /**
  * @summary SearchResult
  * @description
- * 
+ *
+ * Common list/search result without warnings, plus `removed-entries` in update
+ * mode (UPI, class, optional ordering keys of entries dropped from the
+ * previous SRL). ISO/IEC 10166-1:1991 §8.2.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,36 +51,59 @@ class SearchResult {
     constructor (
         /**
          * @summary `number_of_entries`.
+         * @description
+         *
+         * How many entries are returned in `entry-list`. ISO/IEC 10166-1:1991
+         * §8.1.6.
          * @public
          * @readonly
          */
         readonly number_of_entries: INTEGER /* REPLICATED_COMPONENT */,
         /**
          * @summary `limit_encountered`.
+         * @description
+         *
+         * Which limit stopped the operation. Absent if none was hit. ISO/IEC
+         * 10166-1:1991 §8.1.6.1.
          * @public
          * @readonly
          */
         readonly limit_encountered: OPTIONAL<LimitEncountered> /* REPLICATED_COMPONENT */,
         /**
          * @summary `entry_list`.
+         * @description
+         *
+         * Matching or listed entries in the requested order. UPI and object
+         * class are always present. ISO/IEC 10166-1:1991 §8.1.6.2.
          * @public
          * @readonly
          */
         readonly entry_list: DfrEntryList /* REPLICATED_COMPONENT */,
         /**
          * @summary `warnings`.
+         * @description
+         *
+         * Access problems for members that were skipped. Never reported if the
+         * user has no read right to the entry. ISO/IEC 10166-1:1991 §8.1.3.3.
          * @public
          * @readonly
          */
         readonly warnings: OPTIONAL<Warning[]> /* REPLICATED_COMPONENT */,
         /**
          * @summary `continuation`.
+         * @description
+         *
+         * TaskId to resume this List/Search after a limit. Present only with
+         * `limit-encountered`. ISO/IEC 10166-1:1991 §8.1.6.1.
          * @public
          * @readonly
          */
         readonly continuation: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `removed_entries`.
+         * @description
+         *
+         * Entries removed from the SRL in update mode.
          * @public
          * @readonly
          */

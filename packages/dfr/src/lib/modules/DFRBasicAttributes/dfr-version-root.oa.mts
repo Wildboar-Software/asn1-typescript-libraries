@@ -24,7 +24,11 @@ import {
 /**
  * @summary dfr_version_root
  * @description
- * 
+ *
+ * UPI of the first document of a conceptual-document. Copied onto every later
+ * version; remains valid if that original is deleted. Server-assigned. Not
+ * copied by Copy. ISO/IEC 10166-1:1991 §9.2.16, §6.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

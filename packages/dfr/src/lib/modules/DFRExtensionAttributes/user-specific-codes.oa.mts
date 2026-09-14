@@ -21,7 +21,11 @@ import { id_att_user_specific_codes } from "../DFRObjectIdentifiers/id-att-user-
 /**
  * @summary user_specific_codes
  * @description
- * 
+ *
+ * User codes (contract, project, budget, …). Multi-valued. May be taken from
+ * the ODA Document Profile (ISO 8613-4). User-assigned, copied by Copy.
+ * ISO/IEC 10166-1:1991 §9.3.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

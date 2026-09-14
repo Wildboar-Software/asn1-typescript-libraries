@@ -22,7 +22,9 @@ import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "
 /**
  * @summary attributeError_ParameterType_problems_Item
  * @description
- * 
+ *
+ * One attribute problem. ISO/IEC 10166-1:1991 §8.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +42,27 @@ class attributeError_ParameterType_problems_Item {
     constructor (
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why the attribute failed.
          * @public
          * @readonly
          */
         readonly problem: AttributeProblem,
         /**
          * @summary `type_`.
+         * @description
+         *
+         * Attribute type involved.
          * @public
          * @readonly
          */
         readonly type_: AttributeType,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Value, when needed to disambiguate.
          * @public
          * @readonly
          */

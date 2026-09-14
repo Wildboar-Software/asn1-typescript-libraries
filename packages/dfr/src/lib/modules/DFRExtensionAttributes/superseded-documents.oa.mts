@@ -21,7 +21,11 @@ import { id_att_superseded_documents } from "../DFRObjectIdentifiers/id-att-supe
 /**
  * @summary superseded_documents
  * @description
- * 
+ *
+ * References to documents this one supersedes. Multi-valued. May be taken from
+ * the ODA Document Profile (ISO 8613-4). User-assigned, copied by Copy.
+ * ISO/IEC 10166-1:1991 §9.3.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

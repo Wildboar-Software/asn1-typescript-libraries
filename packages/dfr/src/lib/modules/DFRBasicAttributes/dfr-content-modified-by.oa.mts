@@ -23,7 +23,10 @@ import { id_att_dfr_content_modified_by } from "../DFRObjectIdentifiers/id-att-d
 /**
  * @summary dfr_content_modified_by
  * @description
- * 
+ *
+ * User who last modified content. Extended-read only. Not copied by Copy.
+ * ISO/IEC 10166-1:1991 §9.2.26.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

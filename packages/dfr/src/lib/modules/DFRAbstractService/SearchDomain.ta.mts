@@ -17,7 +17,11 @@ import { SearchDomain_Item, _decode_SearchDomain_Item, _encode_SearchDomain_Item
 /**
  * @summary SearchDomain
  * @description
- * 
+ *
+ * SEQUENCE OF subdomains: previous SRL and/or a group subtree with descent and
+ * dereferencing depths. Bound to this document store; external referents are
+ * never dereferenced. ISO/IEC 10166-1:1991 §8.1.6.4, §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

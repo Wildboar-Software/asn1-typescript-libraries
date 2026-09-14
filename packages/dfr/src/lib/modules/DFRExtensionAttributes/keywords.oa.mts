@@ -21,7 +21,11 @@ import { id_att_keywords } from "../DFRObjectIdentifiers/id-att-keywords.va.mjs"
 /**
  * @summary keywords
  * @description
- * 
+ *
+ * Character strings for associating related content. Multi-valued. May be
+ * taken from the ODA Document Profile (ISO 8613-4). User-assigned, copied by
+ * Copy. ISO/IEC 10166-1:1991 §9.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

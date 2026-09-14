@@ -19,7 +19,10 @@ import { AccessRights, _enum_for_AccessRights, _decode_AccessRights, _encode_Acc
 /**
  * @summary DfrAccessListElement
  * @description
- * 
+ *
+ * One access-list entry: subject plus rights. ISO/IEC 10166-1:1991 §6.3.8.3,
+ * §9.2.30.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,18 @@ class DfrAccessListElement {
     constructor (
         /**
          * @summary `access_id`.
+         * @description
+         *
+         * Distinguished name of the security subject.
          * @public
          * @readonly
          */
         readonly access_id: AccessId,
         /**
          * @summary `access_rights`.
+         * @description
+         *
+         * Granted AccessRights.
          * @public
          * @readonly
          */

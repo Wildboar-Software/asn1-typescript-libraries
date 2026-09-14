@@ -20,7 +20,11 @@ import { Single_use_of_reference, _decode_Single_use_of_reference, _encode_Singl
 /**
  * @summary Quality_of_Service
  * @description
- * 
+ *
+ * QoS attached to a produced DOR and returned in CommonUpdateResult.
+ * `referent-modified` uses produce-time from the qos-level of reference
+ * content. ISO/IEC 10166-1:1991 §8.1.5, §8.3.5. Details: ISO/IEC 10031-2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

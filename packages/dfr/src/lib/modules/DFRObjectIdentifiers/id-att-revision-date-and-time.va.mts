@@ -18,7 +18,10 @@ import { id_dfr_ext_att } from "../DFRObjectIdentifiers/id-dfr-ext-att.va.mjs";
 /**
  * @summary id_att_revision_date_and_time
  * @description
- * 
+ *
+ * Attribute type OID of `revision-date-and-time`. ISO/IEC 10166-1:1991 §9.3.8,
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

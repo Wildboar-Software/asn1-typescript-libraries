@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LimitEncountered
  * @description
- * 
+ *
+ * Which cap stopped List/Search. `length-exceeded` is the bind maximum-length.
+ * ISO/IEC 10166-1:1991 §8.1.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +42,10 @@ enum _enum_for_LimitEncountered {
 /**
  * @summary LimitEncountered
  * @description
- * 
+ *
+ * Which cap stopped List/Search. `length-exceeded` is the bind maximum-length.
+ * ISO/IEC 10166-1:1991 §8.1.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +64,10 @@ type LimitEncountered = _enum_for_LimitEncountered;
 /**
  * @summary LimitEncountered
  * @description
- * 
+ *
+ * Which cap stopped List/Search. `length-exceeded` is the bind maximum-length.
+ * ISO/IEC 10166-1:1991 §8.1.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +85,9 @@ const LimitEncountered = _enum_for_LimitEncountered;
 
 /**
  * @summary LimitEncountered_time_limit
+ * @description
+ *
+ * Search time-limit reached.
  * @constant
  * @type {number}
  */
@@ -84,6 +96,9 @@ const LimitEncountered_time_limit: LimitEncountered = LimitEncountered.time_limi
 
 /**
  * @summary time_limit
+ * @description
+ *
+ * Search time-limit reached.
  * @constant
  * @type {number}
  */
@@ -92,6 +107,9 @@ const time_limit: LimitEncountered = LimitEncountered.time_limit; /* SHORT_NAMED
 
 /**
  * @summary LimitEncountered_count_limit
+ * @description
+ *
+ * Count-limit reached.
  * @constant
  * @type {number}
  */
@@ -100,6 +118,9 @@ const LimitEncountered_count_limit: LimitEncountered = LimitEncountered.count_li
 
 /**
  * @summary count_limit
+ * @description
+ *
+ * Count-limit reached.
  * @constant
  * @type {number}
  */
@@ -108,6 +129,9 @@ const count_limit: LimitEncountered = LimitEncountered.count_limit; /* SHORT_NAM
 
 /**
  * @summary LimitEncountered_length_exceeded
+ * @description
+ *
+ * Bind maximum-length would be exceeded.
  * @constant
  * @type {number}
  */
@@ -116,6 +140,9 @@ const LimitEncountered_length_exceeded: LimitEncountered = LimitEncountered.leng
 
 /**
  * @summary length_exceeded
+ * @description
+ *
+ * Bind maximum-length would be exceeded.
  * @constant
  * @type {number}
  */

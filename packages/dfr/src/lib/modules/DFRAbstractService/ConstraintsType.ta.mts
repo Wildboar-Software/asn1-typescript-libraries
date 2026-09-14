@@ -19,7 +19,10 @@ import { VersionConstraint, _enum_for_VersionConstraint, _decode_VersionConstrai
 /**
  * @summary ConstraintsType
  * @description
- * 
+ *
+ * Store-wide uniqueness rules reported at bind if configuration was requested.
+ * ISO/IEC 10166-1:1991 §7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,18 @@ class ConstraintsType {
     constructor (
         /**
          * @summary `name_constraint`.
+         * @description
+         *
+         * Uniqueness rule for `dfr-title`.
          * @public
          * @readonly
          */
         readonly name_constraint: NameConstraint,
         /**
          * @summary `version_constraint`.
+         * @description
+         *
+         * Uniqueness rule for `version-name`.
          * @public
          * @readonly
          */

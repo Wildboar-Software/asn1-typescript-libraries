@@ -25,7 +25,11 @@ import {
 /**
  * @summary dfr_attributes_modify_date_and_time
  * @description
- * 
+ *
+ * When user-visible attributes last changed. Set at Create, then maintained by
+ * the server. Not updated for server-only table-3 changes. Not copied by Copy.
+ * ISO/IEC 10166-1:1991 §9.2.23.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

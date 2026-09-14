@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Limits
  * @description
- * 
+ *
+ * Caps for List/Search. `time-limit` applies to Search. ISO/IEC 10166-1:1991
+ * §8.1.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,18 @@ class Limits {
     constructor (
         /**
          * @summary `time_limit`.
+         * @description
+         *
+         * Max execution time for Search.
          * @public
          * @readonly
          */
         readonly time_limit: OPTIONAL<INTEGER>,
         /**
          * @summary `count_limit`.
+         * @description
+         *
+         * Max entries to return this invocation.
          * @public
          * @readonly
          */

@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReservationProblem
  * @description
- * 
+ *
+ * Why Reserve failed. ISO/IEC 10166-1:1991 §8.3.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +45,9 @@ enum _enum_for_ReservationProblem {
 /**
  * @summary ReservationProblem
  * @description
- * 
+ *
+ * Why Reserve failed. ISO/IEC 10166-1:1991 §8.3.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,7 +68,9 @@ type ReservationProblem = _enum_for_ReservationProblem;
 /**
  * @summary ReservationProblem
  * @description
- * 
+ *
+ * Why Reserve failed. ISO/IEC 10166-1:1991 §8.3.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -84,6 +90,9 @@ const ReservationProblem = _enum_for_ReservationProblem;
 
 /**
  * @summary ReservationProblem_cannot_reserve
+ * @description
+ *
+ * Insufficient rights for the requested level/status.
  * @constant
  * @type {number}
  */
@@ -92,6 +101,9 @@ const ReservationProblem_cannot_reserve: ReservationProblem = ReservationProblem
 
 /**
  * @summary cannot_reserve
+ * @description
+ *
+ * Insufficient rights for the requested level/status.
  * @constant
  * @type {number}
  */
@@ -100,6 +112,9 @@ const cannot_reserve: ReservationProblem = ReservationProblem.cannot_reserve; /*
 
 /**
  * @summary ReservationProblem_already_reserved
+ * @description
+ *
+ * Another user already holds a reservation.
  * @constant
  * @type {number}
  */
@@ -108,6 +123,9 @@ const ReservationProblem_already_reserved: ReservationProblem = ReservationProbl
 
 /**
  * @summary already_reserved
+ * @description
+ *
+ * Another user already holds a reservation.
  * @constant
  * @type {number}
  */
@@ -116,6 +134,9 @@ const already_reserved: ReservationProblem = ReservationProblem.already_reserved
 
 /**
  * @summary ReservationProblem_not_yet_reserved
+ * @description
+ *
+ * Unreserve requested but the entry is not reserved.
  * @constant
  * @type {number}
  */
@@ -124,6 +145,9 @@ const ReservationProblem_not_yet_reserved: ReservationProblem = ReservationProbl
 
 /**
  * @summary not_yet_reserved
+ * @description
+ *
+ * Unreserve requested but the entry is not reserved.
  * @constant
  * @type {number}
  */
@@ -132,6 +156,9 @@ const not_yet_reserved: ReservationProblem = ReservationProblem.not_yet_reserved
 
 /**
  * @summary ReservationProblem_cannot_unreserve
+ * @description
+ *
+ * Reservation status is committed.
  * @constant
  * @type {number}
  */
@@ -140,6 +167,9 @@ const ReservationProblem_cannot_unreserve: ReservationProblem = ReservationProbl
 
 /**
  * @summary cannot_unreserve
+ * @description
+ *
+ * Reservation status is committed.
  * @constant
  * @type {number}
  */
@@ -148,6 +178,10 @@ const cannot_unreserve: ReservationProblem = ReservationProblem.cannot_unreserve
 
 /**
  * @summary ReservationProblem_reservation_not_changed
+ * @description
+ *
+ * Cannot lower a committed reservation, or cannot switch committed to
+ * uncommitted.
  * @constant
  * @type {number}
  */
@@ -156,6 +190,10 @@ const ReservationProblem_reservation_not_changed: ReservationProblem = Reservati
 
 /**
  * @summary reservation_not_changed
+ * @description
+ *
+ * Cannot lower a committed reservation, or cannot switch committed to
+ * uncommitted.
  * @constant
  * @type {number}
  */

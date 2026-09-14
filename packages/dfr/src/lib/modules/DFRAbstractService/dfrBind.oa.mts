@@ -25,7 +25,12 @@ import { dfrBindError } from "../DFRAbstractService/dfrBindError.oa.mjs";
 /**
  * @summary dfrBind
  * @description
- * 
+ *
+ * Bind of the DFR port: authenticate the user, negotiate retrieve
+ * restrictions, DOR produce/consume, and optional configuration. Only the
+ * DFR-User may establish the association. ISO/IEC 10166-1:1991 §7.1. ISO/IEC
+ * 10166-2:1991 §5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

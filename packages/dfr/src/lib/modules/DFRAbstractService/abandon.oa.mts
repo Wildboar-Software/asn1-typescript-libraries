@@ -27,7 +27,11 @@ import { id_opcode_abandon } from "../DFRAbstractService/id-opcode-abandon.va.mj
 /**
  * @summary abandon
  * @description
- * 
+ *
+ * Stop an outstanding operation or discard List/Search continuation state. On
+ * success the abandoned operation reports `abandoned` rather than a result.
+ * ISO/IEC 10166-1:1991 §8.2.10. Local opcode 10 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

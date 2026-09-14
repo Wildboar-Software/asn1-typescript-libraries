@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary id_errcode_security_error
  * @description
- * 
+ *
+ * Local ROSE error code 9 for `securityError`. ISO/IEC 10166-1:1991 §8.3.9.
+ * ISO/IEC 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

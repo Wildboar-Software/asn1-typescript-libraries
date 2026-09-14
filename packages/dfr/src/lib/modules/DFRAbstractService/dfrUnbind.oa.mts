@@ -21,7 +21,10 @@ import { emptyUnbind } from "../Remote-Operations-Useful-Definitions/emptyUnbind
 /**
  * @summary dfrUnbind
  * @description
- * 
+ *
+ * Release the DFR port. Drops retrieve-restrictions from bind. No arguments or
+ * errors. Does not change reservations. ISO/IEC 10166-1:1991 §7.2, §8.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

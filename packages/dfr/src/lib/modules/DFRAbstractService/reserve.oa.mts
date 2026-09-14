@@ -35,7 +35,12 @@ import { id_opcode_reserve } from "../DFRAbstractService/id-opcode-reserve.va.mj
 /**
  * @summary reserve
  * @description
- * 
+ *
+ * Change reservation level/status of one entry. Never blocks reading
+ * attributes. Unbind does not clear reservations. Reserving a reference does
+ * not reserve the referent. ISO/IEC 10166-1:1991 §8.2.9. Local opcode 9
+ * (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -47,7 +47,14 @@ import { id_opcode_move } from "../DFRAbstractService/id-opcode-move.va.mjs";
 /**
  * @summary move
  * @description
- * 
+ *
+ * Move an object to another group in the same store. UPI and existing
+ * references remain valid. Access-list unchanged unless modified. Moving a
+ * group moves descendants regardless of their access-lists or reservations.
+ * Root group cannot be moved. Requires read-modify-delete on the object or an
+ * ancestor. ISO/IEC 10166-1:1991 §8.2.4. Local opcode 4 (ISO/IEC 10166-2:1991
+ * §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

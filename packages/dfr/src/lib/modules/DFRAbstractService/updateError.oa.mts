@@ -23,7 +23,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary updateError
  * @description
- * 
+ *
+ * Problem modifying an entry, including implicit parent-group updates, delete,
+ * and move. ISO/IEC 10166-1:1991 §8.3.4. Local error 4 (ISO/IEC 10166-2:1991
+ * §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

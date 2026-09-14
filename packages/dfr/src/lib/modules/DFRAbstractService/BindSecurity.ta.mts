@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BindSecurity
  * @description
- * 
+ *
+ * OSI security services requested for bind. EXTERNAL. ISO/IEC 10166-1:1991
+ * §7.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

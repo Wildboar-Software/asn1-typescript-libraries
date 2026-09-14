@@ -29,7 +29,12 @@ import { type APPLICATION_CONTEXT } from "../Remote-Operations-Information-Objec
 /**
  * @summary dfr_access
  * @description
- * 
+ *
+ * Application context without RTSE: ACSE + ROSE, initiator consumes the DFR
+ * port. Abstract syntaxes: ACSE, DFRSE (with basic attributes), and optional
+ * extension-attribute syntax (negotiable). ISO/IEC 10166-2:1991 §6. Other
+ * attribute-set syntaxes may also be negotiated.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

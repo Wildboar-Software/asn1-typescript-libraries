@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UpdateProblem
  * @description
- * 
+ *
+ * Why an update failed. ISO/IEC 10166-1:1991 §8.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +47,9 @@ enum _enum_for_UpdateProblem {
 /**
  * @summary UpdateProblem
  * @description
- * 
+ *
+ * Why an update failed. ISO/IEC 10166-1:1991 §8.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,7 +71,9 @@ type UpdateProblem = _enum_for_UpdateProblem;
 /**
  * @summary UpdateProblem
  * @description
- * 
+ *
+ * Why an update failed. ISO/IEC 10166-1:1991 §8.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,6 +94,9 @@ const UpdateProblem = _enum_for_UpdateProblem;
 
 /**
  * @summary UpdateProblem_inappropriate_object_class
+ * @description
+ *
+ * Wrong class for the requested update.
  * @constant
  * @type {number}
  */
@@ -96,6 +105,9 @@ const UpdateProblem_inappropriate_object_class: UpdateProblem = UpdateProblem.in
 
 /**
  * @summary inappropriate_object_class
+ * @description
+ *
+ * Wrong class for the requested update.
  * @constant
  * @type {number}
  */
@@ -104,6 +116,9 @@ const inappropriate_object_class: UpdateProblem = UpdateProblem.inappropriate_ob
 
 /**
  * @summary UpdateProblem_insufficient_access_rights
+ * @description
+ *
+ * Not allowed to modify. No read right ⇒ nameError instead.
  * @constant
  * @type {number}
  */
@@ -112,6 +127,9 @@ const UpdateProblem_insufficient_access_rights: UpdateProblem = UpdateProblem.in
 
 /**
  * @summary insufficient_access_rights
+ * @description
+ *
+ * Not allowed to modify. No read right ⇒ nameError instead.
  * @constant
  * @type {number}
  */
@@ -120,6 +138,9 @@ const insufficient_access_rights: UpdateProblem = UpdateProblem.insufficient_acc
 
 /**
  * @summary UpdateProblem_reserved_by_a_user
+ * @description
+ *
+ * Entry or parent reserved by this or another user.
  * @constant
  * @type {number}
  */
@@ -128,6 +149,9 @@ const UpdateProblem_reserved_by_a_user: UpdateProblem = UpdateProblem.reserved_b
 
 /**
  * @summary reserved_by_a_user
+ * @description
+ *
+ * Entry or parent reserved by this or another user.
  * @constant
  * @type {number}
  */
@@ -136,6 +160,9 @@ const reserved_by_a_user: UpdateProblem = UpdateProblem.reserved_by_a_user; /* S
 
 /**
  * @summary UpdateProblem_illegal_content_modification
+ * @description
+ *
+ * Content of this class is not user-modifiable (e.g. SRL).
  * @constant
  * @type {number}
  */
@@ -144,6 +171,9 @@ const UpdateProblem_illegal_content_modification: UpdateProblem = UpdateProblem.
 
 /**
  * @summary illegal_content_modification
+ * @description
+ *
+ * Content of this class is not user-modifiable (e.g. SRL).
  * @constant
  * @type {number}
  */
@@ -152,6 +182,10 @@ const illegal_content_modification: UpdateProblem = UpdateProblem.illegal_conten
 
 /**
  * @summary UpdateProblem_group_membership_criteria_violation
+ * @description
+ *
+ * New/modified member fails the group's filter, or changing the filter would
+ * exclude existing members.
  * @constant
  * @type {number}
  */
@@ -160,6 +194,10 @@ const UpdateProblem_group_membership_criteria_violation: UpdateProblem = UpdateP
 
 /**
  * @summary group_membership_criteria_violation
+ * @description
+ *
+ * New/modified member fails the group's filter, or changing the filter would
+ * exclude existing members.
  * @constant
  * @type {number}
  */
@@ -168,6 +206,11 @@ const group_membership_criteria_violation: UpdateProblem = UpdateProblem.group_m
 
 /**
  * @summary UpdateProblem_reference_loop_detected
+ * @description
+ *
+ * Create/modify of a reference would close a reference or membership loop.
+ * Servers need not detect every loop at creation, but navigation must still
+ * work.
  * @constant
  * @type {number}
  */
@@ -176,6 +219,11 @@ const UpdateProblem_reference_loop_detected: UpdateProblem = UpdateProblem.refer
 
 /**
  * @summary reference_loop_detected
+ * @description
+ *
+ * Create/modify of a reference would close a reference or membership loop.
+ * Servers need not detect every loop at creation, but navigation must still
+ * work.
  * @constant
  * @type {number}
  */

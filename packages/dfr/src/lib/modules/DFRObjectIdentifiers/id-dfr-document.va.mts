@@ -18,7 +18,9 @@ import { id_dfr_oc } from "../DFRObjectIdentifiers/id-dfr-oc.va.mjs";
 /**
  * @summary id_dfr_document
  * @description
- * 
+ *
+ * Document object class. {id-dfr-oc 0}. ISO/IEC 10166-1:1991 §6.3.2, Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

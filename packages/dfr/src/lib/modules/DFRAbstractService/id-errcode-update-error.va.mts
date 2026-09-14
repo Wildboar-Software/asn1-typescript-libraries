@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary id_errcode_update_error
  * @description
- * 
+ *
+ * Local ROSE error code 4 for `updateError`. ISO/IEC 10166-1:1991 §8.3.4.
+ * ISO/IEC 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DfrDocumentContent
  * @description
- * 
+ *
+ * Uninterpreted document body as EXTERNAL. `direct-reference` is present and
+ * equals `dfr-document-type`; `indirect-reference` and `encoding.arbitrary`
+ * are absent. ISO/IEC 10166-1:1991 §6.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

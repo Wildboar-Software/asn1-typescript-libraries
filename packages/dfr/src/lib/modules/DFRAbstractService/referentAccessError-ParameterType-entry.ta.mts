@@ -18,7 +18,10 @@ import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFR
 /**
  * @summary referentAccessError_ParameterType_entry
  * @description
- * 
+ *
+ * Identifies the reference that could not be followed: local DfrEntryName or a
+ * consumed DOR. ISO/IEC 10166-1:1991 §8.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

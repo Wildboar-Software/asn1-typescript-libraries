@@ -1,7 +1,8 @@
 /**
  * @description
  *
- * ASN.1 module `DFRAccessProtocol`.
+ * DFR access protocol: application contexts (with/without RTSE), DFR-PDUs, and
+ * DFRSE abstract syntaxes. ISO/IEC 10166-2:1991 clauses 5–7.
  */
 export * from "./DFR-Invokable.osa.mjs";
 export * from "./DFR-InvokeIDSet.ta.mjs";

@@ -19,7 +19,11 @@ import { PrivilegeAttributeCertificate, _decode_PrivilegeAttributeCertificate, _
 /**
  * @summary Credentials
  * @description
- * 
+ *
+ * Bind credentials: `simple` password for initial authentication, or
+ * `certified` PAC when authentication already happened outside DFR. ISO/IEC
+ * 10166-1:1991 §7.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

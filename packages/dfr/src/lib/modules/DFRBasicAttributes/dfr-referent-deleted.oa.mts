@@ -24,7 +24,11 @@ import {
 /**
  * @summary dfr_referent_deleted
  * @description
- * 
+ *
+ * TRUE on a reference once the server notices the referent is gone. Removed
+ * when the user retargets the reference. Server-assigned. Copied by Copy.
+ * ISO/IEC 10166-1:1991 §9.2.7, §6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

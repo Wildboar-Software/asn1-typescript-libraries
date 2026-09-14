@@ -21,7 +21,10 @@ import {
 /**
  * @summary abandonFailed_ParameterType
  * @description
- * 
+ *
+ * Why Abandon failed, and the invoke-id of the target. ISO/IEC 10166-1:1991
+ * §8.3.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +41,18 @@ class abandonFailed_ParameterType {
     constructor (
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why abandon failed.
          * @public
          * @readonly
          */
         readonly problem: AbandonProblem,
         /**
          * @summary `operation`.
+         * @description
+         *
+         * Invoke-id of the operation that was not abandoned.
          * @public
          * @readonly
          */

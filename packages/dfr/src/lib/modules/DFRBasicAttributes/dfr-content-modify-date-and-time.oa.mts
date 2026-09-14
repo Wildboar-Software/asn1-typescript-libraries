@@ -25,7 +25,10 @@ import {
 /**
  * @summary dfr_content_modify_date_and_time
  * @description
- * 
+ *
+ * When content last changed. Set at Create, then server-maintained. Not copied
+ * by Copy. ISO/IEC 10166-1:1991 §9.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,7 +20,12 @@ import { AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelect
 /**
  * @summary EntryInformationSelection
  * @description
- * 
+ *
+ * What to return from the involved entry. Default read-selector is
+ * attributes-only. `attribute-selection` is allowed only for selectors 0, 1,
+ * 4, and 7; otherwise it shall be absent. Empty selection is an empty set.
+ * ISO/IEC 10166-1:1991 §8.1.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,12 +51,18 @@ class EntryInformationSelection {
     constructor (
         /**
          * @summary `read_selector`.
+         * @description
+         *
+         * Attributes, content, DOR, or combinations.
          * @public
          * @readonly
          */
         readonly read_selector: OPTIONAL<EntryInformationSelection_read_selector>,
         /**
          * @summary `attribute_selection`.
+         * @description
+         *
+         * Which attributes, and optionally in what order.
          * @public
          * @readonly
          */

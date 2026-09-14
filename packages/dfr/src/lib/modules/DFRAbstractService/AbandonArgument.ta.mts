@@ -21,7 +21,10 @@ import {
 /**
  * @summary AbandonArgument
  * @description
- * 
+ *
+ * Identify the target by `task-id` (also used to drop continuation state) or
+ * by ROSE `invoke-id`. ISO/IEC 10166-1:1991 §8.2.10.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

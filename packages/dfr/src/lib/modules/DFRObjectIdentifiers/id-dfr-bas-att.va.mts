@@ -18,7 +18,9 @@ import { id_dfr } from "../DFRObjectIdentifiers/id-dfr.va.mjs";
 /**
  * @summary id_dfr_bas_att
  * @description
- * 
+ *
+ * Basic-attribute types. {id-dfr 4}. ISO/IEC 10166-1:1991 Annex B / §9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,11 @@ import { id_as_dfr_ext_attr } from "../DFRProtocolObjectIdentifiers/id-as-dfr-ex
 /**
  * @summary dfrse_ext_abstract_syntax
  * @description
- * 
+ *
+ * Optional abstract syntax for the DFR-Extension-Attribute-Set. Negotiated at
+ * association establishment. ISO/IEC 10166-2:1991 §6; ISO/IEC 10166-1:1991
+ * §9.1 note 2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

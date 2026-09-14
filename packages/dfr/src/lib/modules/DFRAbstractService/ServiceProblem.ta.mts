@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServiceProblem
  * @description
- * 
+ *
+ * Operational failure. ISO/IEC 10166-1:1991 §8.3.10, §8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +51,9 @@ enum _enum_for_ServiceProblem {
 /**
  * @summary ServiceProblem
  * @description
- * 
+ *
+ * Operational failure. ISO/IEC 10166-1:1991 §8.3.10, §8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,7 +77,9 @@ type ServiceProblem = _enum_for_ServiceProblem;
 /**
  * @summary ServiceProblem
  * @description
- * 
+ *
+ * Operational failure. ISO/IEC 10166-1:1991 §8.3.10, §8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,6 +102,9 @@ const ServiceProblem = _enum_for_ServiceProblem;
 
 /**
  * @summary ServiceProblem_server_busy
+ * @description
+ *
+ * Too busy; retry shortly.
  * @constant
  * @type {number}
  */
@@ -104,6 +113,9 @@ const ServiceProblem_server_busy: ServiceProblem = ServiceProblem.server_busy; /
 
 /**
  * @summary server_busy
+ * @description
+ *
+ * Too busy; retry shortly.
  * @constant
  * @type {number}
  */
@@ -112,6 +124,9 @@ const server_busy: ServiceProblem = ServiceProblem.server_busy; /* SHORT_NAMED_E
 
 /**
  * @summary ServiceProblem_server_unavailable
+ * @description
+ *
+ * Currently unavailable; unbind.
  * @constant
  * @type {number}
  */
@@ -120,6 +135,9 @@ const ServiceProblem_server_unavailable: ServiceProblem = ServiceProblem.server_
 
 /**
  * @summary server_unavailable
+ * @description
+ *
+ * Currently unavailable; unbind.
  * @constant
  * @type {number}
  */
@@ -128,6 +146,9 @@ const server_unavailable: ServiceProblem = ServiceProblem.server_unavailable; /*
 
 /**
  * @summary ServiceProblem_operation_too_complex
+ * @description
+ *
+ * Too complex (e.g. search-criteria nesting).
  * @constant
  * @type {number}
  */
@@ -136,6 +157,9 @@ const ServiceProblem_operation_too_complex: ServiceProblem = ServiceProblem.oper
 
 /**
  * @summary operation_too_complex
+ * @description
+ *
+ * Too complex (e.g. search-criteria nesting).
  * @constant
  * @type {number}
  */
@@ -144,6 +168,9 @@ const operation_too_complex: ServiceProblem = ServiceProblem.operation_too_compl
 
 /**
  * @summary ServiceProblem_resource_limit_exceeded
+ * @description
+ *
+ * Store-wide or per-user resource limit.
  * @constant
  * @type {number}
  */
@@ -152,6 +179,9 @@ const ServiceProblem_resource_limit_exceeded: ServiceProblem = ServiceProblem.re
 
 /**
  * @summary resource_limit_exceeded
+ * @description
+ *
+ * Store-wide or per-user resource limit.
  * @constant
  * @type {number}
  */
@@ -160,6 +190,9 @@ const resource_limit_exceeded: ServiceProblem = ServiceProblem.resource_limit_ex
 
 /**
  * @summary ServiceProblem_maximum_length_exceeded
+ * @description
+ *
+ * Argument or result exceeds bind maximum-length.
  * @constant
  * @type {number}
  */
@@ -168,6 +201,9 @@ const ServiceProblem_maximum_length_exceeded: ServiceProblem = ServiceProblem.ma
 
 /**
  * @summary maximum_length_exceeded
+ * @description
+ *
+ * Argument or result exceeds bind maximum-length.
  * @constant
  * @type {number}
  */
@@ -176,6 +212,9 @@ const maximum_length_exceeded: ServiceProblem = ServiceProblem.maximum_length_ex
 
 /**
  * @summary ServiceProblem_cannot_continue
+ * @description
+ *
+ * Store changed; List/Search cannot resume.
  * @constant
  * @type {number}
  */
@@ -184,6 +223,9 @@ const ServiceProblem_cannot_continue: ServiceProblem = ServiceProblem.cannot_con
 
 /**
  * @summary cannot_continue
+ * @description
+ *
+ * Store changed; List/Search cannot resume.
  * @constant
  * @type {number}
  */
@@ -192,6 +234,9 @@ const cannot_continue: ServiceProblem = ServiceProblem.cannot_continue; /* SHORT
 
 /**
  * @summary ServiceProblem_unclassified_server_error
+ * @description
+ *
+ * Implementation-specific; not otherwise classified.
  * @constant
  * @type {number}
  */
@@ -200,6 +245,9 @@ const ServiceProblem_unclassified_server_error: ServiceProblem = ServiceProblem.
 
 /**
  * @summary unclassified_server_error
+ * @description
+ *
+ * Implementation-specific; not otherwise classified.
  * @constant
  * @type {number}
  */
@@ -208,6 +256,9 @@ const unclassified_server_error: ServiceProblem = ServiceProblem.unclassified_se
 
 /**
  * @summary ServiceProblem_function_set_violation
+ * @description
+ *
+ * Operation not allowed in this store's function-set (§8.4).
  * @constant
  * @type {number}
  */
@@ -216,6 +267,9 @@ const ServiceProblem_function_set_violation: ServiceProblem = ServiceProblem.fun
 
 /**
  * @summary function_set_violation
+ * @description
+ *
+ * Operation not allowed in this store's function-set (§8.4).
  * @constant
  * @type {number}
  */

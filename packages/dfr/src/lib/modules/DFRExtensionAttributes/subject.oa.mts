@@ -21,7 +21,11 @@ import { id_att_subject } from "../DFRObjectIdentifiers/id-att-subject.va.mjs";
 /**
  * @summary subject
  * @description
- * 
+ *
+ * Subject of the object. Single-valued. May be taken from the ODA Document
+ * Profile (ISO 8613-4). User-assigned, copied by Copy. ISO/IEC 10166-1:1991
+ * §9.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

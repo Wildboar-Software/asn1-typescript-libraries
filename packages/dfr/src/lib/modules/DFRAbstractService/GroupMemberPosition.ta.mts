@@ -18,7 +18,10 @@ import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFR
 /**
  * @summary GroupMemberPosition
  * @description
- * 
+ *
+ * Insertion point in the destination group. Illegal if the group has
+ * `dfr-ordering`. ISO/IEC 10166-1:1991 §8.1.5.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

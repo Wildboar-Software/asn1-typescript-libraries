@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReservationStatus
  * @description
- * 
+ *
+ * Quality of a reservation. `committed` is owner-only and survives until
+ * expiry; it cannot be withdrawn. ISO/IEC 10166-1:1991 §8.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +40,10 @@ enum _enum_for_ReservationStatus {
 /**
  * @summary ReservationStatus
  * @description
- * 
+ *
+ * Quality of a reservation. `committed` is owner-only and survives until
+ * expiry; it cannot be withdrawn. ISO/IEC 10166-1:1991 §8.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +61,10 @@ type ReservationStatus = _enum_for_ReservationStatus;
 /**
  * @summary ReservationStatus
  * @description
- * 
+ *
+ * Quality of a reservation. `committed` is owner-only and survives until
+ * expiry; it cannot be withdrawn. ISO/IEC 10166-1:1991 §8.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +81,9 @@ const ReservationStatus = _enum_for_ReservationStatus;
 
 /**
  * @summary ReservationStatus_uncommitted
+ * @description
+ *
+ * Reserver may unreserve or lower the level.
  * @constant
  * @type {number}
  */
@@ -80,6 +92,9 @@ const ReservationStatus_uncommitted: ReservationStatus = ReservationStatus.uncom
 
 /**
  * @summary uncommitted
+ * @description
+ *
+ * Reserver may unreserve or lower the level.
  * @constant
  * @type {number}
  */
@@ -88,6 +103,10 @@ const uncommitted: ReservationStatus = ReservationStatus.uncommitted; /* SHORT_N
 
 /**
  * @summary ReservationStatus_committed
+ * @description
+ *
+ * Owner-only. Level may only increase; duration may only extend. Cannot become
+ * uncommitted.
  * @constant
  * @type {number}
  */
@@ -96,6 +115,10 @@ const ReservationStatus_committed: ReservationStatus = ReservationStatus.committ
 
 /**
  * @summary committed
+ * @description
+ *
+ * Owner-only. Level may only increase; duration may only extend. Cannot become
+ * uncommitted.
  * @constant
  * @type {number}
  */

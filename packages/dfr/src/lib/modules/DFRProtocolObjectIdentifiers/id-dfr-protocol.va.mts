@@ -17,7 +17,10 @@ import { ID, _decode_ID, _encode_ID } from "../DFRProtocolObjectIdentifiers/ID.t
 /**
  * @summary id_dfr_protocol
  * @description
- * 
+ *
+ * Root of Part 2 OIDs: {iso standard 10166 part-2(2)}. ISO/IEC 10166-2:1991
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

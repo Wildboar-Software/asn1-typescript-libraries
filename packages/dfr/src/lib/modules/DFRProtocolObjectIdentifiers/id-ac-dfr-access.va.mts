@@ -18,7 +18,10 @@ import { id_ac } from "../DFRProtocolObjectIdentifiers/id-ac.va.mjs";
 /**
  * @summary id_ac_dfr_access
  * @description
- * 
+ *
+ * Application context without RTSE. {id-ac 0}. ISO/IEC 10166-2:1991 §6, Annex
+ * A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

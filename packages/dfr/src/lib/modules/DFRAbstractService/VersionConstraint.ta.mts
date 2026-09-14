@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary VersionConstraint
  * @description
- * 
+ *
+ * Whether `version-name` is unique among versions of one conceptual-document.
+ * ISO/IEC 10166-1:1991 §7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +40,10 @@ enum _enum_for_VersionConstraint {
 /**
  * @summary VersionConstraint
  * @description
- * 
+ *
+ * Whether `version-name` is unique among versions of one conceptual-document.
+ * ISO/IEC 10166-1:1991 §7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +61,10 @@ type VersionConstraint = _enum_for_VersionConstraint;
 /**
  * @summary VersionConstraint
  * @description
- * 
+ *
+ * Whether `version-name` is unique among versions of one conceptual-document.
+ * ISO/IEC 10166-1:1991 §7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +81,9 @@ const VersionConstraint = _enum_for_VersionConstraint;
 
 /**
  * @summary VersionConstraint_no_version_constraint
+ * @description
+ *
+ * Version-names need not be unique.
  * @constant
  * @type {number}
  */
@@ -80,6 +92,9 @@ const VersionConstraint_no_version_constraint: VersionConstraint = VersionConstr
 
 /**
  * @summary no_version_constraint
+ * @description
+ *
+ * Version-names need not be unique.
  * @constant
  * @type {number}
  */
@@ -88,6 +103,10 @@ const no_version_constraint: VersionConstraint = VersionConstraint.no_version_co
 
 /**
  * @summary VersionConstraint_version_unambiguity
+ * @description
+ *
+ * Each version of a conceptual-document has a unique version-name in that
+ * conceptual-document.
  * @constant
  * @type {number}
  */
@@ -96,6 +115,10 @@ const VersionConstraint_version_unambiguity: VersionConstraint = VersionConstrai
 
 /**
  * @summary version_unambiguity
+ * @description
+ *
+ * Each version of a conceptual-document has a unique version-name in that
+ * conceptual-document.
  * @constant
  * @type {number}
  */

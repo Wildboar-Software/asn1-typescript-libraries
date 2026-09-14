@@ -20,7 +20,10 @@ import { attributeError_ParameterType_problems_Item, _decode_attributeError_Para
 /**
  * @summary attributeError_ParameterType
  * @description
- * 
+ *
+ * Named entry (optional) and one or more attribute problems. ISO/IEC
+ * 10166-1:1991 §8.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,12 +44,18 @@ class attributeError_ParameterType {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Entry being processed; omitted in some Create/Search cases.
          * @public
          * @readonly
          */
         readonly entry: OPTIONAL<DfrEntryName>,
         /**
          * @summary `problems`.
+         * @description
+         *
+         * Each item is type, problem, and optional value.
          * @public
          * @readonly
          */

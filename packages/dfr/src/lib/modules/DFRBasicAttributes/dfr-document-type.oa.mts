@@ -23,7 +23,12 @@ import { id_att_dfr_document_type } from "../DFRObjectIdentifiers/id-att-dfr-doc
 /**
  * @summary dfr_document_type
  * @description
- * 
+ *
+ * OID of the document content representation (e.g. ODA, SGML) in the DFR
+ * access protocol. On a reference, present only if the referent is a document.
+ * User-assigned. Required when creating a document (ISO/IEC
+ * 10166-1:1991/Cor.2:1994 §8.2.1). ISO/IEC 10166-1:1991 §9.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

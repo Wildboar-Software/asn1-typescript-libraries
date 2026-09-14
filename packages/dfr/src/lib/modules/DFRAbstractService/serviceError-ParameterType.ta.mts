@@ -17,7 +17,9 @@ import { ServiceProblem, _enum_for_ServiceProblem, _decode_ServiceProblem, _enco
 /**
  * @summary serviceError_ParameterType
  * @description
- * 
+ *
+ * Service problem only. ISO/IEC 10166-1:1991 §8.3.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +35,9 @@ class serviceError_ParameterType {
     constructor (
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Operational reason the request failed.
          * @public
          * @readonly
          */

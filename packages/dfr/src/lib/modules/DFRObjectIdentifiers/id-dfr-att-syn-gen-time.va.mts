@@ -18,7 +18,10 @@ import { id_dfr_att_syn } from "../DFRObjectIdentifiers/id-dfr-att-syn.va.mjs";
 /**
  * @summary id_dfr_att_syn_gen_time
  * @description
- * 
+ *
+ * GeneralizedTime attribute syntax. {id-dfr-att-syn 3}. ISO/IEC 10166-1:1991
+ * §9.4.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReferentAccessProblem
  * @description
- * 
+ *
+ * Why the referent could not be used. ISO/IEC 10166-1:1991 §8.3.5; ISO/IEC
+ * 10166-1:1991/Cor.2:1994.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +52,10 @@ enum _enum_for_ReferentAccessProblem {
 /**
  * @summary ReferentAccessProblem
  * @description
- * 
+ *
+ * Why the referent could not be used. ISO/IEC 10166-1:1991 §8.3.5; ISO/IEC
+ * 10166-1:1991/Cor.2:1994.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,7 +81,10 @@ type ReferentAccessProblem = _enum_for_ReferentAccessProblem;
 /**
  * @summary ReferentAccessProblem
  * @description
- * 
+ *
+ * Why the referent could not be used. ISO/IEC 10166-1:1991 §8.3.5; ISO/IEC
+ * 10166-1:1991/Cor.2:1994.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,6 +109,9 @@ const ReferentAccessProblem = _enum_for_ReferentAccessProblem;
 
 /**
  * @summary ReferentAccessProblem_inappropriate_object_class
+ * @description
+ *
+ * Referent has the wrong class (e.g. reading content of a group).
  * @constant
  * @type {number}
  */
@@ -108,6 +120,9 @@ const ReferentAccessProblem_inappropriate_object_class: ReferentAccessProblem = 
 
 /**
  * @summary inappropriate_object_class
+ * @description
+ *
+ * Referent has the wrong class (e.g. reading content of a group).
  * @constant
  * @type {number}
  */
@@ -116,6 +131,9 @@ const inappropriate_object_class: ReferentAccessProblem = ReferentAccessProblem.
 
 /**
  * @summary ReferentAccessProblem_insufficient_access_rights
+ * @description
+ *
+ * User lacks rights on the referent.
  * @constant
  * @type {number}
  */
@@ -124,6 +142,9 @@ const ReferentAccessProblem_insufficient_access_rights: ReferentAccessProblem = 
 
 /**
  * @summary insufficient_access_rights
+ * @description
+ *
+ * User lacks rights on the referent.
  * @constant
  * @type {number}
  */
@@ -132,6 +153,9 @@ const insufficient_access_rights: ReferentAccessProblem = ReferentAccessProblem.
 
 /**
  * @summary ReferentAccessProblem_reserved_by_a_user
+ * @description
+ *
+ * Referent or its parent is reserved.
  * @constant
  * @type {number}
  */
@@ -140,6 +164,9 @@ const ReferentAccessProblem_reserved_by_a_user: ReferentAccessProblem = Referent
 
 /**
  * @summary reserved_by_a_user
+ * @description
+ *
+ * Referent or its parent is reserved.
  * @constant
  * @type {number}
  */
@@ -148,6 +175,9 @@ const reserved_by_a_user: ReferentAccessProblem = ReferentAccessProblem.reserved
 
 /**
  * @summary ReferentAccessProblem_referent_no_longer_exists
+ * @description
+ *
+ * Dangling reference; referent was deleted. ISO/IEC 10166-1:1991/Cor.2:1994.
  * @constant
  * @type {number}
  */
@@ -156,6 +186,9 @@ const ReferentAccessProblem_referent_no_longer_exists: ReferentAccessProblem = R
 
 /**
  * @summary referent_no_longer_exists
+ * @description
+ *
+ * Dangling reference; referent was deleted. ISO/IEC 10166-1:1991/Cor.2:1994.
  * @constant
  * @type {number}
  */
@@ -164,6 +197,10 @@ const referent_no_longer_exists: ReferentAccessProblem = ReferentAccessProblem.r
 
 /**
  * @summary ReferentAccessProblem_referent_modified
+ * @description
+ *
+ * Referent changed after DOR produce-time (qos-level). When copying/listing a
+ * group this is a warning only.
  * @constant
  * @type {number}
  */
@@ -172,6 +209,10 @@ const ReferentAccessProblem_referent_modified: ReferentAccessProblem = ReferentA
 
 /**
  * @summary referent_modified
+ * @description
+ *
+ * Referent changed after DOR produce-time (qos-level). When copying/listing a
+ * group this is a warning only.
  * @constant
  * @type {number}
  */
@@ -180,6 +221,9 @@ const referent_modified: ReferentAccessProblem = ReferentAccessProblem.referent_
 
 /**
  * @summary ReferentAccessProblem_reference_content_empty
+ * @description
+ *
+ * Reference has no UPI; it is only a placeholder.
  * @constant
  * @type {number}
  */
@@ -188,6 +232,9 @@ const ReferentAccessProblem_reference_content_empty: ReferentAccessProblem = Ref
 
 /**
  * @summary reference_content_empty
+ * @description
+ *
+ * Reference has no UPI; it is only a placeholder.
  * @constant
  * @type {number}
  */

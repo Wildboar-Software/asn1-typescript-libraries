@@ -18,7 +18,9 @@ import { id_dfr_att_syn } from "../DFRObjectIdentifiers/id-dfr-att-syn.va.mjs";
 /**
  * @summary id_dfr_att_syn_bool
  * @description
- * 
+ *
+ * Boolean attribute syntax. {id-dfr-att-syn 2}. ISO/IEC 10166-1:1991 §9.4.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

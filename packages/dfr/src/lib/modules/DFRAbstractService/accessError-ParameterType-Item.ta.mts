@@ -19,7 +19,9 @@ import { AccessProblem, _enum_for_AccessProblem, _decode_AccessProblem, _encode_
 /**
  * @summary accessError_ParameterType_Item
  * @description
- * 
+ *
+ * One access problem. ISO/IEC 10166-1:1991 §8.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +38,18 @@ class accessError_ParameterType_Item {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * Entry that could not be accessed.
          * @public
          * @readonly
          */
         readonly entry: DfrEntryName,
         /**
          * @summary `problem`.
+         * @description
+         *
+         * Why.
          * @public
          * @readonly
          */

@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Local_reference
  * @description
- * 
+ *
+ * DOR local-reference: pointer to the value inside the identified AE. For a
+ * DFR-Reference this points at the referent. ISO/IEC 10166-1:1991 §6.3.3.1.
+ * Details: ISO/IEC 10031-2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

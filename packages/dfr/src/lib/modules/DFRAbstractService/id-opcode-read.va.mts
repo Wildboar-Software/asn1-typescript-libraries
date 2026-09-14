@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary id_opcode_read
  * @description
- * 
+ *
+ * Local ROSE operation code 5 for `read`. ISO/IEC 10166-1:1991 §8.2.5. ISO/IEC
+ * 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

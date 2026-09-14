@@ -19,7 +19,10 @@ import { AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../DOR
 /**
  * @summary AE_title
  * @description
- * 
+ *
+ * AE-title used inside AE-Identifier (ISO/IEC 10031-2; used by DFR DORs).
+ * ISO/IEC 10166-1:1991 §6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

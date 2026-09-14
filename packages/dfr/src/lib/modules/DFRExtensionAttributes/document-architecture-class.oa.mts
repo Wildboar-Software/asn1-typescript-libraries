@@ -25,7 +25,11 @@ import {
 /**
  * @summary document_architecture_class
  * @description
- * 
+ *
+ * ODA architecture class: formatted, processable, or formatted-processable.
+ * Equality and ordering match. May be taken from the ODA Document Profile (ISO
+ * 8613-4). User-assigned, copied by Copy. ISO/IEC 10166-1:1991 §9.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

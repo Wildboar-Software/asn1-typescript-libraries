@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NameConstraint
  * @description
- * 
+ *
+ * Whether `dfr-title` uniqueness is enforced: none, unique within the parent
+ * group, or unique in the whole store. Path names are unambiguous only if at
+ * least local uniqueness holds. ISO/IEC 10166-1:1991 §7.1.2, §8.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +43,11 @@ enum _enum_for_NameConstraint {
 /**
  * @summary NameConstraint
  * @description
- * 
+ *
+ * Whether `dfr-title` uniqueness is enforced: none, unique within the parent
+ * group, or unique in the whole store. Path names are unambiguous only if at
+ * least local uniqueness holds. ISO/IEC 10166-1:1991 §7.1.2, §8.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +66,11 @@ type NameConstraint = _enum_for_NameConstraint;
 /**
  * @summary NameConstraint
  * @description
- * 
+ *
+ * Whether `dfr-title` uniqueness is enforced: none, unique within the parent
+ * group, or unique in the whole store. Path names are unambiguous only if at
+ * least local uniqueness holds. ISO/IEC 10166-1:1991 §7.1.2, §8.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +88,9 @@ const NameConstraint = _enum_for_NameConstraint;
 
 /**
  * @summary NameConstraint_no_name_constraint
+ * @description
+ *
+ * Titles need not be unique.
  * @constant
  * @type {number}
  */
@@ -84,6 +99,9 @@ const NameConstraint_no_name_constraint: NameConstraint = NameConstraint.no_name
 
 /**
  * @summary no_name_constraint
+ * @description
+ *
+ * Titles need not be unique.
  * @constant
  * @type {number}
  */
@@ -92,6 +110,9 @@ const no_name_constraint: NameConstraint = NameConstraint.no_name_constraint; /*
 
 /**
  * @summary NameConstraint_local_unambiguity
+ * @description
+ *
+ * Title unique among siblings in the parent group.
  * @constant
  * @type {number}
  */
@@ -100,6 +121,9 @@ const NameConstraint_local_unambiguity: NameConstraint = NameConstraint.local_un
 
 /**
  * @summary local_unambiguity
+ * @description
+ *
+ * Title unique among siblings in the parent group.
  * @constant
  * @type {number}
  */
@@ -108,6 +132,9 @@ const local_unambiguity: NameConstraint = NameConstraint.local_unambiguity; /* S
 
 /**
  * @summary NameConstraint_global_unambiguity
+ * @description
+ *
+ * Title unique in the whole document store.
  * @constant
  * @type {number}
  */
@@ -116,6 +143,9 @@ const NameConstraint_global_unambiguity: NameConstraint = NameConstraint.global_
 
 /**
  * @summary global_unambiguity
+ * @description
+ *
+ * Title unique in the whole document store.
  * @constant
  * @type {number}
  */

@@ -19,7 +19,10 @@ import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, _decode_Referen
 /**
  * @summary referentAccessError_ParameterType
  * @description
- * 
+ *
+ * Reference (by name or as a DOR) and the referent problem. ISO/IEC
+ * 10166-1:1991 §8.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,18 @@ class referentAccessError_ParameterType {
     constructor (
         /**
          * @summary `entry`.
+         * @description
+         *
+         * The reference, as a DfrEntryName or a DOR.
          * @public
          * @readonly
          */
         readonly entry: referentAccessError_ParameterType_entry,
         /**
          * @summary `problem`.
+         * @description
+         *
+         * What failed about the referent.
          * @public
          * @readonly
          */

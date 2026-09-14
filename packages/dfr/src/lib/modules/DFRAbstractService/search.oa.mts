@@ -41,7 +41,12 @@ import { id_opcode_search } from "../DFRAbstractService/id-opcode-search.va.mjs"
 /**
  * @summary search
  * @description
- * 
+ *
+ * Find entries in a domain that satisfy a Filter. Hits may be returned and/or
+ * stored in an SRL. `updateError` concerns filling that SRL. External
+ * references are never dereferenced. ISO/IEC 10166-1:1991 §8.2.8. Local opcode
+ * 8 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

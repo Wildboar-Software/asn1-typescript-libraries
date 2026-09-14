@@ -18,7 +18,10 @@ import { id_dfr_ext_att } from "../DFRObjectIdentifiers/id-dfr-ext-att.va.mjs";
 /**
  * @summary id_att_creation_date_and_time
  * @description
- * 
+ *
+ * Attribute type OID of `creation-date-and-time`. ISO/IEC 10166-1:1991 §9.3.6,
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

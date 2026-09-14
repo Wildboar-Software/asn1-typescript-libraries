@@ -17,7 +17,10 @@ import { CommonUpdateResult, _decode_CommonUpdateResult, _encode_CommonUpdateRes
 /**
  * @summary MoveResult
  * @description
- * 
+ *
+ * Same UPI, optional read-back, optional `referent-altered`. No warnings or
+ * reference-qos. ISO/IEC 10166-1:1991 §8.2.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

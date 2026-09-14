@@ -18,7 +18,10 @@ import { id_dfr_bas_att } from "../DFRObjectIdentifiers/id-dfr-bas-att.va.mjs";
 /**
  * @summary id_att_user_reference_to_other_objects
  * @description
- * 
+ *
+ * Attribute type OID of `user-reference-to-other-objects`. ISO/IEC
+ * 10166-1:1991 §9.2.19, Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

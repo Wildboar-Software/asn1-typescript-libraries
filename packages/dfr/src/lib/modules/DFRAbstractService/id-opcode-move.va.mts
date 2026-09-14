@@ -16,7 +16,10 @@ import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Informati
 /**
  * @summary id_opcode_move
  * @description
- * 
+ *
+ * Local ROSE operation code 4 for `move`. ISO/IEC 10166-1:1991 §8.2.4. ISO/IEC
+ * 10166-2:1991 §6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

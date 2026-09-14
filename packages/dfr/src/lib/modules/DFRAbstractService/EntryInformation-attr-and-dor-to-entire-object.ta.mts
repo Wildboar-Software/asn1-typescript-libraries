@@ -19,7 +19,9 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 /**
  * @summary EntryInformation_attr_and_dor_to_entire_object
  * @description
- * 
+ *
+ * Attributes plus a DOR to the entire object. ISO/IEC 10166-1:1991 §8.1.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +38,18 @@ class EntryInformation_attr_and_dor_to_entire_object {
     constructor (
         /**
          * @summary `attributes`.
+         * @description
+         *
+         * Selected attributes.
          * @public
          * @readonly
          */
         readonly attributes: DfrEntryAttributes,
         /**
          * @summary `dor_to_entire_object`.
+         * @description
+         *
+         * DOR locating the whole object.
          * @public
          * @readonly
          */

@@ -18,7 +18,10 @@ import { id_dfr_bas_att } from "../DFRObjectIdentifiers/id-dfr-bas-att.va.mjs";
 /**
  * @summary id_att_dfr_created_by
  * @description
- * 
+ *
+ * Attribute type OID of `dfr-created-by`. ISO/IEC 10166-1:1991 §9.2.22, Annex
+ * B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

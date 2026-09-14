@@ -20,7 +20,10 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
 /**
  * @summary EntryModification_add_values_from
  * @description
- * 
+ *
+ * Append values of multi-valued attributes from a `SourceEntry`. Default: all
+ * multi-valued attributes. ISO/IEC 10166-1:1991 §8.1.5.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +41,18 @@ class EntryModification_add_values_from {
     constructor (
         /**
          * @summary `source`.
+         * @description
+         *
+         * Where to take values from.
          * @public
          * @readonly
          */
         readonly source: SourceEntry,
         /**
          * @summary `attribute_selection`.
+         * @description
+         *
+         * Which multi-valued types; omit for all.
          * @public
          * @readonly
          */

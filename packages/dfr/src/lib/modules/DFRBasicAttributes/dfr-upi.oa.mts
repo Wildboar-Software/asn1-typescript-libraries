@@ -24,7 +24,11 @@ import {
 /**
  * @summary dfr_upi
  * @description
- * 
+ *
+ * Server-assigned unique identifier of the object. Opaque, immutable for the
+ * object's life, unique even among deleted objects. Equality match.
+ * Single-valued. Not copied by Copy. ISO/IEC 10166-1:1991 §9.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -25,7 +25,11 @@ import {
 /**
  * @summary dfr_resource_limit
  * @description
- * 
+ *
+ * Maximum resource for this object (content, object-tree if a group, and
+ * attributes). Integer; semantics implementation-specific. Owner-managed.
+ * Copied by Copy. ISO/IEC 10166-1:1991 §9.2.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -23,7 +23,9 @@ import {
 /**
  * @summary Locational_identifier
  * @description
- * 
+ *
+ * Locational identifier inside a DOR AE-Identifier (ISO/IEC 10031-2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

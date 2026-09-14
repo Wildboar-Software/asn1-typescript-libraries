@@ -17,7 +17,11 @@ import { CharacterData, _decode_CharacterData, _encode_CharacterData } from "../
 /**
  * @summary DfrTitle
  * @description
- * 
+ *
+ * User-specified name of a DFR-Object (`dfr-title`). Path names are sequences
+ * of titles. Compared with caseIgnoreStringSyntax. ISO/IEC 10166-1:1991
+ * §8.1.4, §9.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

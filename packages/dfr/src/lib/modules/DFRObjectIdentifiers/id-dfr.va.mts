@@ -17,7 +17,10 @@ import { ID, _decode_ID, _encode_ID } from "../DFRObjectIdentifiers/ID.ta.mjs";
 /**
  * @summary id_dfr
  * @description
- * 
+ *
+ * Root of Part 1 OIDs: {iso standard 10166 part-1(1)}. ISO/IEC 10166-1:1991
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

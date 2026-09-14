@@ -23,7 +23,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary abandonFailed
  * @description
- * 
+ *
+ * Abandon itself failed (unknown operation, too late, or
+ * implementation-specific). Named Abandon-failed (ISO/IEC
+ * 10166-1:1991/Cor.1:1994 §8.3.11). ISO/IEC 10166-1:1991 §8.3.11. Local error
+ * 11 (ISO/IEC 10166-2:1991 §6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

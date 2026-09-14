@@ -19,7 +19,11 @@ import { OrderingAttributes, _decode_OrderingAttributes, _encode_OrderingAttribu
 /**
  * @summary OrderingRule
  * @description
- * 
+ *
+ * Sort specification for List/Search. If `list-attributes` is true, key values
+ * are returned on each entry. Stored on an SRL when results are stored.
+ * ISO/IEC 10166-1:1991 §8.1.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,18 @@ class OrderingRule {
     constructor (
         /**
          * @summary `list_attributes`.
+         * @description
+         *
+         * If true, return ordering key values.
          * @public
          * @readonly
          */
         readonly list_attributes: OPTIONAL<BOOLEAN>,
         /**
          * @summary `ordering_attributes`.
+         * @description
+         *
+         * Keys and directions, major to minor.
          * @public
          * @readonly
          */

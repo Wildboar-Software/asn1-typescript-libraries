@@ -1,7 +1,8 @@
 /**
  * @description
  *
- * ASN.1 module `DFRBasicAttributes`.
+ * Mandatory DFR-Basic-Attribute-Set. Every server supports these. ISO/IEC
+ * 10166-1:1991 §9.2, Annex D.
  */
 export * from "./AccessId.ta.mjs";
 export {

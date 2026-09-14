@@ -18,7 +18,10 @@ import { id_as } from "../DFRProtocolObjectIdentifiers/id-as.va.mjs";
 /**
  * @summary id_as_dfrse
  * @description
- * 
+ *
+ * DFRSE (plus ROSE and basic attributes) syntax. {id-as 1}. ISO/IEC
+ * 10166-2:1991 Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

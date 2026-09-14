@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EntryInformationSelection_read_selector
  * @description
- * 
+ *
+ * Whether values or a produced DOR are wanted, and whether they cover
+ * attributes, content, or the whole object. Content DOR is only for a
+ * document. ISO/IEC 10166-1:1991 §8.1.5.6, §6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +53,11 @@ enum _enum_for_EntryInformationSelection_read_selector {
 /**
  * @summary EntryInformationSelection_read_selector
  * @description
- * 
+ *
+ * Whether values or a produced DOR are wanted, and whether they cover
+ * attributes, content, or the whole object. Content DOR is only for a
+ * document. ISO/IEC 10166-1:1991 §8.1.5.6, §6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,7 +81,11 @@ type EntryInformationSelection_read_selector = _enum_for_EntryInformationSelecti
 /**
  * @summary EntryInformationSelection_read_selector
  * @description
- * 
+ *
+ * Whether values or a produced DOR are wanted, and whether they cover
+ * attributes, content, or the whole object. Content DOR is only for a
+ * document. ISO/IEC 10166-1:1991 §8.1.5.6, §6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,11 @@ import { id_att_organizations } from "../DFRObjectIdentifiers/id-att-organizatio
 /**
  * @summary organizations
  * @description
- * 
+ *
+ * Originating organization(s). Multi-valued. May be taken from the ODA
+ * Document Profile (ISO 8613-4). User-assigned, copied by Copy. ISO/IEC
+ * 10166-1:1991 §9.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -23,7 +23,10 @@ import { Unbind, _decode_Unbind, _encode_Unbind } from "../Remote-Operations-Gen
 /**
  * @summary DFR_PDUs
  * @description
- * 
+ *
+ * DFR access APDUs: ROS invoke/result/error, Bind, or Unbind. Supports the
+ * abstract service of ISO/IEC 10166-1:1991. ISO/IEC 10166-2:1991 §5–§6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

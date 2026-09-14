@@ -18,7 +18,9 @@ import { id_ac } from "../DFRProtocolObjectIdentifiers/id-ac.va.mjs";
 /**
  * @summary id_ac_dfr_reliable_access
  * @description
- * 
+ *
+ * Application context with RTSE. {id-ac 1}. ISO/IEC 10166-2:1991 §6, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

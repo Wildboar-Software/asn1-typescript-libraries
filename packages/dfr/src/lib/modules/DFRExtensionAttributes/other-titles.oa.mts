@@ -21,7 +21,10 @@ import { id_att_other_titles } from "../DFRObjectIdentifiers/id-att-other-titles
 /**
  * @summary other_titles
  * @description
- * 
+ *
+ * Alternative titles. Multi-valued. May be taken from the ODA Document Profile
+ * (ISO 8613-4). User-assigned, copied by Copy. ISO/IEC 10166-1:1991 §9.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -25,7 +25,10 @@ import {
 /**
  * @summary dfr_attributes_create_date_and_time
  * @description
- * 
+ *
+ * When mandatory attributes were first stored. Set by the server on Create.
+ * Not copied by Copy. ISO/IEC 10166-1:1991 §9.2.20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

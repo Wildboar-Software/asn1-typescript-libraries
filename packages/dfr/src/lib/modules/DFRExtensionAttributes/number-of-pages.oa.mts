@@ -25,7 +25,11 @@ import {
 /**
  * @summary number_of_pages
  * @description
- * 
+ *
+ * Pages in the specific layout structure, if any. Equality and ordering match.
+ * May be taken from the ODA Document Profile (ISO 8613-4). User-assigned,
+ * copied by Copy. ISO/IEC 10166-1:1991 §9.3.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

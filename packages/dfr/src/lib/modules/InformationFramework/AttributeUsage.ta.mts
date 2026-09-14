@@ -1,3 +1,8 @@
+/**
+ * Directory `AttributeUsage` (ISO/IEC 9594-2). DFR attributes use
+ * the ATTRIBUTE macro; usage defaults follow the Directory.
+ * ISO/IEC 10166-1:1991 §5.1, §9.
+ */
 export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,

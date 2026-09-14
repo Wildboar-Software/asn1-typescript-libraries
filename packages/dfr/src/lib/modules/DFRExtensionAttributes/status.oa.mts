@@ -21,7 +21,11 @@ import { id_att_status } from "../DFRObjectIdentifiers/id-att-status.va.mjs";
 /**
  * @summary status
  * @description
- * 
+ *
+ * Document status (e.g. working paper, draft proposal). May be taken from the
+ * ODA Document Profile (ISO 8613-4). User-assigned, copied by Copy. ISO/IEC
+ * 10166-1:1991 §9.3.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

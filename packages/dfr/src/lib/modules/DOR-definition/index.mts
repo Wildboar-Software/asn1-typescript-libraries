@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `DOR-definition`.
+ * Distinguished Object Reference types from ISO/IEC 10031-2, used by DFR for
+ * reference content and produce/consume operations. ISO/IEC 10166-1:1991
+ * §6.3.3. Full DOR semantics are ISO/IEC 10031-2.
  */
 export * from "./AE-Identifier.ta.mjs";
 export * from "./AE-qualifier.ta.mjs";

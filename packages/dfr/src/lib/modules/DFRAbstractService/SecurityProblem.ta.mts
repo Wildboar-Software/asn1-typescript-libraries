@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SecurityProblem
  * @description
- * 
+ *
+ * Why credentials or privileges were rejected. ISO/IEC 10166-1:1991 §8.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +45,9 @@ enum _enum_for_SecurityProblem {
 /**
  * @summary SecurityProblem
  * @description
- * 
+ *
+ * Why credentials or privileges were rejected. ISO/IEC 10166-1:1991 §8.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,7 +68,9 @@ type SecurityProblem = _enum_for_SecurityProblem;
 /**
  * @summary SecurityProblem
  * @description
- * 
+ *
+ * Why credentials or privileges were rejected. ISO/IEC 10166-1:1991 §8.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -84,6 +90,9 @@ const SecurityProblem = _enum_for_SecurityProblem;
 
 /**
  * @summary SecurityProblem_inappropriate_authentication
+ * @description
+ *
+ * Credential protection level does not match what was requested.
  * @constant
  * @type {number}
  */
@@ -92,6 +101,9 @@ const SecurityProblem_inappropriate_authentication: SecurityProblem = SecurityPr
 
 /**
  * @summary inappropriate_authentication
+ * @description
+ *
+ * Credential protection level does not match what was requested.
  * @constant
  * @type {number}
  */
@@ -100,6 +112,9 @@ const inappropriate_authentication: SecurityProblem = SecurityProblem.inappropri
 
 /**
  * @summary SecurityProblem_invalid_creds
+ * @description
+ *
+ * Simple credentials were invalid.
  * @constant
  * @type {number}
  */
@@ -108,6 +123,9 @@ const SecurityProblem_invalid_creds: SecurityProblem = SecurityProblem.invalid_c
 
 /**
  * @summary invalid_creds
+ * @description
+ *
+ * Simple credentials were invalid.
  * @constant
  * @type {number}
  */
@@ -116,6 +134,9 @@ const invalid_creds: SecurityProblem = SecurityProblem.invalid_creds; /* SHORT_N
 
 /**
  * @summary SecurityProblem_invalid_privilege
+ * @description
+ *
+ * Privileges inside the PAC are invalid.
  * @constant
  * @type {number}
  */
@@ -124,6 +145,9 @@ const SecurityProblem_invalid_privilege: SecurityProblem = SecurityProblem.inval
 
 /**
  * @summary invalid_privilege
+ * @description
+ *
+ * Privileges inside the PAC are invalid.
  * @constant
  * @type {number}
  */
@@ -148,6 +172,9 @@ const invalid_pac: SecurityProblem = SecurityProblem.invalid_pac; /* SHORT_NAMED
 
 /**
  * @summary SecurityProblem_already_active
+ * @description
+ *
+ * This user is already bound to the server.
  * @constant
  * @type {number}
  */
@@ -156,6 +183,9 @@ const SecurityProblem_already_active: SecurityProblem = SecurityProblem.already_
 
 /**
  * @summary already_active
+ * @description
+ *
+ * This user is already bound to the server.
  * @constant
  * @type {number}
  */

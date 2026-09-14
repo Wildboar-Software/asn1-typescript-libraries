@@ -17,7 +17,11 @@ import { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _en
 /**
  * @summary DfrGroupContent
  * @description
- * 
+ *
+ * Sequence of member UPIs of a group (root or proper). Create of a group does
+ * not supply content; members are added later. ISO/IEC 10166-1:1991 §3.2.17,
+ * §6.3.4.1, §8.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

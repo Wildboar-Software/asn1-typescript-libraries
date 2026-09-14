@@ -17,7 +17,9 @@ import { DfrEntryList_Item, _decode_DfrEntryList_Item, _encode_DfrEntryList_Item
 /**
  * @summary DfrEntryList
  * @description
- * 
+ *
+ * SEQUENCE OF listed or matching entries. ISO/IEC 10166-1:1991 §8.1.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,10 @@ import { id_att_dfr_membership_criteria } from "../DFRObjectIdentifiers/id-att-d
 /**
  * @summary dfr_membership_criteria
  * @description
- * 
+ *
+ * Filter constraining who may be a member of this group. User- managed. Only
+ * on groups. Copied by Copy. ISO/IEC 10166-1:1991 §9.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

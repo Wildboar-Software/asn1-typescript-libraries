@@ -19,7 +19,10 @@ import { id_dfr_user } from "../DFRObjectIdentifiers/id-dfr-user.va.mjs";
 /**
  * @summary dfr_user
  * @description
- * 
+ *
+ * ROS-OBJECT-CLASS of the DFR-User (consumer). ISO/IEC 10166-1:1991 §3.2.33.
+ * Annex B: `id-dfr-user`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
