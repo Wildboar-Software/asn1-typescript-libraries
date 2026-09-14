@@ -81,7 +81,22 @@ import { Path_efidOrTagChoice_appTagRef, _decode_Path_efidOrTagChoice_appTagRef,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Path-efidOrTagChoice ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Path-efidOrTagChoice ::= CHOICE {
+ *     efidOrPath      OCTET STRING,
+ *     tagRef          [0] SEQUENCE {
+ *         tag         OCTET STRING,
+ *         efidOrPath  OCTET STRING OPTIONAL
+ *     },
+ *     appFileRef      [1] SEQUENCE {
+ *         aid         [APPLICATION 15] OCTET STRING,
+ *         efidOrpath  OCTET STRING
+ *     },
+ *     appTagRef       [2] SEQUENCE {
+ *         aid         [APPLICATION 15] OCTET STRING,
+ *         tag         OCTET STRING,
+ *         efidOrPath  OCTET STRING OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Path-efidOrTagChoice-tagRef ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Path-efidOrTagChoice-tagRef ::= SEQUENCE {
+ *     tag         OCTET STRING,
+ *     efidOrPath  OCTET STRING OPTIONAL
+ * }
  * ```
  * 
  * @class

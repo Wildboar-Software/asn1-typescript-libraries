@@ -77,7 +77,9 @@ import { id_sha1 } from "../CryptographicInformationFramework/id-sha1.va.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DigestAlgorithms-Union0-Intersection0-Element ::= {} -- REMOVED_FROM_UNNESTING --
+ * DigestAlgorithms-Union0-Intersection0-Element ::= {
+ *     NULL IDENTIFIED BY sha-1
+ * }
  * ```
  * 
  * @constant

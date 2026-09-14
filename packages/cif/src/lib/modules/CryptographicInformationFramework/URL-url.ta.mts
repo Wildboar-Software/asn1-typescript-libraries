@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * URL-url ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * URL-url ::= CHOICE {
+ *     printable PrintableString,
+ *     ia5       IA5String
+ * }
  * ```
  */
 export

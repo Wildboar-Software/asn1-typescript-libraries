@@ -77,7 +77,10 @@ import { DigestInfoWithDefault, _decode_DigestInfoWithDefault, _encode_DigestInf
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * URL-urlWithDigest ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * URL-urlWithDigest ::= SEQUENCE {
+ *     url     IA5String,
+ *     digest  DigestInfoWithDefault
+ * }
  * ```
  * 
  * @class

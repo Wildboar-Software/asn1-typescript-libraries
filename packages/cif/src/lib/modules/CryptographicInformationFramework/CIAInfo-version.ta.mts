@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CIAInfo-version ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CIAInfo-version ::= INTEGER { v1(0), v2(1) } (v1 | v2, ...)
  * ```
  */
 export

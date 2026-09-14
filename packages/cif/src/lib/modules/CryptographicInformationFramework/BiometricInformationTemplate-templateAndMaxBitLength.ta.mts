@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BiometricInformationTemplate-templateAndMaxBitLength ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BiometricInformationTemplate-templateAndMaxBitLength ::= SEQUENCE {
+ *     maxBITLength                  INTEGER OPTIONAL,
+ *     biometricInformationTemplate  OCTET STRING
+ *     -- Shall contain an ISO/IEC 7816-11 BiometricInformationTemplate value
+ * }
  * ```
  * 
  * @class

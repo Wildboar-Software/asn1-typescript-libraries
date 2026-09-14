@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IrisInformation-eye ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IrisInformation-eye ::= ENUMERATED { left, right }
  * ```
  * 
  * @enum {number}
@@ -94,7 +94,7 @@ enum _enum_for_IrisInformation_eye {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IrisInformation-eye ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IrisInformation-eye ::= ENUMERATED { left, right }
  * ```
  * 
  * @enum {number}
@@ -109,7 +109,7 @@ type IrisInformation_eye = _enum_for_IrisInformation_eye;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IrisInformation-eye ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IrisInformation-eye ::= ENUMERATED { left, right }
  * ```
  * 
  * @enum {number}

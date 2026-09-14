@@ -76,7 +76,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * KeyUsageConstraints-keyUsageConstraintsFlag ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * KeyUsageConstraints-keyUsageConstraintsFlag ::= BIT STRING {
+ *     immediateUsage (0)
+ * }
  * ```
  */
 export

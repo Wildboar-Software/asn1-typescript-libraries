@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FingerPrintInformation-hand ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * FingerPrintInformation-hand ::= ENUMERATED { left, right }
  * ```
  * 
  * @enum {number}
@@ -94,7 +94,7 @@ enum _enum_for_FingerPrintInformation_hand {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FingerPrintInformation-hand ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * FingerPrintInformation-hand ::= ENUMERATED { left, right }
  * ```
  * 
  * @enum {number}
@@ -109,7 +109,7 @@ type FingerPrintInformation_hand = _enum_for_FingerPrintInformation_hand;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FingerPrintInformation-hand ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * FingerPrintInformation-hand ::= ENUMERATED { left, right }
  * ```
  * 
  * @enum {number}

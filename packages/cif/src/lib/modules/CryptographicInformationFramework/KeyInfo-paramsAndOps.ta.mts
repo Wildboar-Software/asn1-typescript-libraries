@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * KeyInfo-paramsAndOps ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * KeyInfo-paramsAndOps ::= SEQUENCE {
+ *     parameters  ParameterType,
+ *     operations  OperationsType OPTIONAL
+ * }
  * ```
  * 
  * @class
