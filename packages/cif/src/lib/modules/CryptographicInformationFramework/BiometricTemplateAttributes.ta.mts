@@ -113,7 +113,9 @@ class BiometricTemplateAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_bioReference () { return 0; }
+    public static get _default_value_for_bioReference (): Reference {
+        return { uniqueByteRef: 0 };
+    }
 }
 
 /**
