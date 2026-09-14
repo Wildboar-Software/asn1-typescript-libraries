@@ -67,6 +67,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ALGORITHM_IDENTIFIER } from "../CryptographicInformationFramework/ALGORITHM-IDENTIFIER.oca.mjs";
+import { id_sha1 } from "../CryptographicInformationFramework/id-sha1.va.mjs";
 
 
 /**
@@ -92,7 +93,7 @@ const DigestAlgorithms_Union0_Intersection0_Element: ALGORITHM_IDENTIFIER<NULL> 
     encoderFor: {
         "&Type": $._encodeNull,
     },
-    "&id": sha_1 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&id": id_sha1 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
 

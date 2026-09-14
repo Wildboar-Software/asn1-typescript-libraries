@@ -90,6 +90,6 @@ import { DigestAlgorithms_Union0_Intersection0_Element } from "../CryptographicI
  * 
  */
 export
-const DigestAlgorithms: (ALGORITHM_IDENTIFIER)[] = [ ...DigestAlgorithms_Union0_Intersection0_Element, ];
+const DigestAlgorithms: ALGORITHM_IDENTIFIER[] = [ DigestAlgorithms_Union0_Intersection0_Element, ];
 
 /* eslint-enable */

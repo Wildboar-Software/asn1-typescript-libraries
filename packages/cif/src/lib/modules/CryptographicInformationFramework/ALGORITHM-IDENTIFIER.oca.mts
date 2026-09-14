@@ -70,6 +70,6 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-type ALGORITHM_IDENTIFIER = TYPE_IDENTIFIER;
+type ALGORITHM_IDENTIFIER<Type = any> = TYPE_IDENTIFIER<Type>;
 
 /* eslint-enable */
