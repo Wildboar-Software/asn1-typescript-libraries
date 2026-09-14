@@ -147,8 +147,8 @@ export
 const _root_component_type_list_1_spec_for_CIO: $.ComponentSpec[] = [
     new $.ComponentSpec("commonObjectAttributes", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("classAttributes", false, $.hasAnyTag),
-    /* FIXME: subClassAttributes COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: typeAttributes COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("subClassAttributes", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("typeAttributes", false, $.hasTag(_TagClass.context, 1)),
 ];
 
 /**
